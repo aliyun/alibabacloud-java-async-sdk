@@ -1,108 +1,108 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScrollDomainListRequest} extends {@link RequestModel}
  *
  * <p>ScrollDomainListRequest</p>
  */
 public class ScrollDomainListRequest extends Request {
-    @Query
-    @NameInMap("DomainGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainGroupId")
     private Long domainGroupId;
 
-    @Query
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private Integer domainStatus;
 
-    @Query
-    @NameInMap("EndExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndExpirationDate")
     private Long endExpirationDate;
 
-    @Query
-    @NameInMap("EndLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndLength")
     private Integer endLength;
 
-    @Query
-    @NameInMap("EndRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndRegistrationDate")
     private Long endRegistrationDate;
 
-    @Query
-    @NameInMap("Excluded")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Excluded")
     private String excluded;
 
-    @Query
-    @NameInMap("ExcludedPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludedPrefix")
     private Boolean excludedPrefix;
 
-    @Query
-    @NameInMap("ExcludedSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludedSuffix")
     private Boolean excludedSuffix;
 
-    @Query
-    @NameInMap("Form")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Form")
     private Integer form;
 
-    @Query
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Query
-    @NameInMap("KeyWordPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWordPrefix")
     private Boolean keyWordPrefix;
 
-    @Query
-    @NameInMap("KeyWordSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWordSuffix")
     private Boolean keyWordSuffix;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductDomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductDomainType")
     private String productDomainType;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ScrollId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScrollId")
     private String scrollId;
 
-    @Query
-    @NameInMap("StartExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartExpirationDate")
     private Long startExpirationDate;
 
-    @Query
-    @NameInMap("StartLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartLength")
     private Integer startLength;
 
-    @Query
-    @NameInMap("StartRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartRegistrationDate")
     private Long startRegistrationDate;
 
-    @Query
-    @NameInMap("Suffixs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Suffixs")
     private String suffixs;
 
-    @Query
-    @NameInMap("TradeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TradeType")
     private Integer tradeType;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private ScrollDomainListRequest(Builder builder) {
@@ -363,7 +363,10 @@ public class ScrollDomainListRequest extends Request {
         } 
 
         /**
-         * DomainGroupId.
+         * <p>The ID of the domain name group. You can call the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> operation to obtain the ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder domainGroupId(Long domainGroupId) {
             this.putQueryParameter("DomainGroupId", domainGroupId);
@@ -372,7 +375,21 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * DomainStatus.
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: All.</li>
+         * <li><strong>1</strong>: The domain name needs to be renewed.</li>
+         * <li><strong>2</strong>: The domain name needs to be redeemed.</li>
+         * <li><strong>3</strong>: The domain name is normal.</li>
+         * <li><strong>4</strong>: The domain name is being transferred from Alibaba Cloud.</li>
+         * <li><strong>5</strong>: The information about the domain name registrant is being modified.</li>
+         * <li><strong>6</strong>: Real-name verification is not performed on the domain name.</li>
+         * <li><strong>7</strong>: Real-name verification for the domain name fails. Real-name reverification is required.</li>
+         * <li><strong>8</strong>: The domain name is being reviewed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder domainStatus(Integer domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -381,7 +398,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * EndExpirationDate.
+         * <p>The end of the time range to query domain names based on expiration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541520000000</p>
          */
         public Builder endExpirationDate(Long endExpirationDate) {
             this.putQueryParameter("EndExpirationDate", endExpirationDate);
@@ -390,7 +410,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * EndLength.
+         * <p>The end of domain name length to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder endLength(Integer endLength) {
             this.putQueryParameter("EndLength", endLength);
@@ -399,7 +422,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * EndRegistrationDate.
+         * <p>The end of the time range to query domain names based on registration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541520000000</p>
          */
         public Builder endRegistrationDate(Long endRegistrationDate) {
             this.putQueryParameter("EndRegistrationDate", endRegistrationDate);
@@ -408,7 +434,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Excluded.
+         * <p>The keyword that is used to exclude domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder excluded(String excluded) {
             this.putQueryParameter("Excluded", excluded);
@@ -417,7 +446,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ExcludedPrefix.
+         * <p>Specifies whether to exclude the prefix keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder excludedPrefix(Boolean excludedPrefix) {
             this.putQueryParameter("ExcludedPrefix", excludedPrefix);
@@ -426,7 +458,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ExcludedSuffix.
+         * <p>Specifies whether to exclude the suffix keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder excludedSuffix(Boolean excludedSuffix) {
             this.putQueryParameter("ExcludedSuffix", excludedSuffix);
@@ -435,7 +470,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Form.
+         * <p>The composition of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder form(Integer form) {
             this.putQueryParameter("Form", form);
@@ -444,7 +482,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -453,7 +494,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * KeyWordPrefix.
+         * <p>Specifies whether the keyword is the prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keyWordPrefix(Boolean keyWordPrefix) {
             this.putQueryParameter("KeyWordPrefix", keyWordPrefix);
@@ -462,7 +506,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * KeyWordSuffix.
+         * <p>Specifies whether the keyword is the suffix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder keyWordSuffix(Boolean keyWordSuffix) {
             this.putQueryParameter("KeyWordSuffix", keyWordSuffix);
@@ -471,7 +518,15 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -480,7 +535,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -489,7 +547,16 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ProductDomainType.
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>New gTLD</strong></li>
+         * <li><strong>gTLD</strong></li>
+         * <li><strong>ccTLD</strong></li>
+         * <li><strong>other</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gTLD</p>
          */
         public Builder productDomainType(String productDomainType) {
             this.putQueryParameter("ProductDomainType", productDomainType);
@@ -498,7 +565,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw6bpc6n7zai</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -507,7 +577,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ScrollId.
+         * <p>The scroll ID. This parameter is a technical parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder scrollId(String scrollId) {
             this.putQueryParameter("ScrollId", scrollId);
@@ -516,7 +589,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * StartExpirationDate.
+         * <p>The beginning of the time range to query domain names based on expiration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541520000000</p>
          */
         public Builder startExpirationDate(Long startExpirationDate) {
             this.putQueryParameter("StartExpirationDate", startExpirationDate);
@@ -525,7 +601,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * StartLength.
+         * <p>The start of the domain name length to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder startLength(Integer startLength) {
             this.putQueryParameter("StartLength", startLength);
@@ -534,7 +613,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * StartRegistrationDate.
+         * <p>The beginning of the time range to query domain names based on registration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541520000000</p>
          */
         public Builder startRegistrationDate(Long startRegistrationDate) {
             this.putQueryParameter("StartRegistrationDate", startRegistrationDate);
@@ -543,7 +625,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Suffixs.
+         * <p>The suffixes of domain names to be queried. Separate multiple suffixes with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com</p>
          */
         public Builder suffixs(String suffixs) {
             this.putQueryParameter("Suffixs", suffixs);
@@ -552,7 +637,17 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * TradeType.
+         * <p>The publishing status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: The domain name is published at a fixed price.</li>
+         * <li><strong>3</strong>: The domain name is published with the price negotiable.</li>
+         * <li><strong>4</strong>: The domain name is published for bidding.</li>
+         * <li><strong>6</strong>: The domain name is published with price push.</li>
+         * <li><strong>-1</strong>: The domain name is not published.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tradeType(Integer tradeType) {
             this.putQueryParameter("TradeType", tradeType);
@@ -561,7 +656,10 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

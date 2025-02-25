@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpsecServerRequest} extends {@link RequestModel}
  *
  * <p>CreateIpsecServerRequest</p>
  */
 public class CreateIpsecServerRequest extends Request {
-    @Query
-    @NameInMap("ClientIpPool")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIpPool")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientIpPool;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private String dryRun;
 
-    @Query
-    @NameInMap("EffectImmediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectImmediately")
     private Boolean effectImmediately;
 
-    @Query
-    @NameInMap("IkeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IkeConfig")
     private String ikeConfig;
 
-    @Query
-    @NameInMap("IpSecServerName")
-    @Validation(maxLength = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpSecServerName")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
     private String ipSecServerName;
 
-    @Query
-    @NameInMap("IpsecConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpsecConfig")
     private String ipsecConfig;
 
-    @Query
-    @NameInMap("LocalSubnet")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalSubnet")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localSubnet;
 
-    @Query
-    @NameInMap("Psk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Psk")
     private String psk;
 
-    @Query
-    @NameInMap("PskEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PskEnabled")
     private Boolean pskEnabled;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
     private CreateIpsecServerRequest(Builder builder) {
@@ -213,10 +218,14 @@ public class CreateIpsecServerRequest extends Request {
         } 
 
         /**
-         * The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client.
-         * <p>
+         * <p>The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client.</p>
+         * <blockquote>
+         * <p> The client CIDR block must not overlap with the CIDR blocks of the VPC.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The client CIDR block must not overlap with the CIDR blocks of the VPC.
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder clientIpPool(String clientIpPool) {
             this.putQueryParameter("ClientIpPool", clientIpPool);
@@ -225,12 +234,14 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>d7d24a21-f4ba-4454-9173-b38****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -239,11 +250,14 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * Specifies whether to only precheck this request. Valid values:
-         * <p>
+         * <p>Specifies whether to only precheck this request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without creating the IPsec server. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. This is the default value. If the request passes the precheck, the system creates the IPsec server.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request without creating the IPsec server. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. This is the default value. If the request passes the precheck, the system creates the IPsec server.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -252,11 +266,14 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * Specify whether to start connection negotiations immediately. Valid values:
-         * <p>
+         * <p>Specify whether to start connection negotiations immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: immediately initiates negotiations after the configuration is complete.</li>
+         * <li><strong>false</strong> (default): initiates negotiations when inbound traffic is detected. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: immediately initiates negotiations after the configuration is complete.
-         * *   **false** (default): initiates negotiations when inbound traffic is detected. This is the default value.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder effectImmediately(Boolean effectImmediately) {
             this.putQueryParameter("EffectImmediately", effectImmediately);
@@ -265,17 +282,20 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The configuration of Phase 1 negotiation. Valid values:
-         * <p>
+         * <p>The configuration of Phase 1 negotiation. Valid values:</p>
+         * <ul>
+         * <li><strong>IkeVersion</strong>: the IKE version. Valid values: <strong>ikev1</strong> and <strong>ikev2</strong>. Default value: <strong>ikev2</strong>.</li>
+         * <li><strong>IkeMode</strong>: the IKE negotiation mode. Default value: <strong>main</strong>.</li>
+         * <li><strong>IkeEncAlg</strong>: the encryption algorithm that is used in Phase 1 negotiation. Default value: <strong>aes</strong>.</li>
+         * <li><strong>IkeAuthAlg</strong>: the authentication algorithm that is used in Phase 1 negotiation. Default value: <strong>sha1</strong>.</li>
+         * <li><strong>IkePfs</strong>: the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiation. Default value: <strong>group2</strong>.</li>
+         * <li><strong>IkeLifetime</strong>: the security association (SA) lifetime determined by Phase 1 negotiation. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+         * <li><strong>LocalId</strong>: the identifier of the IPsec server. The value can be a fully qualified domain name (FQDN) or an IP address. The default value is the public IP address of the VPN gateway.</li>
+         * <li><strong>RemoteId</strong>: the peer identifier. The value can be an FQDN or an IP address. The default value is empty.</li>
+         * </ul>
          * 
-         * *   **IkeVersion**: the IKE version. Valid values: **ikev1** and **ikev2**. Default value: **ikev2**.
-         * *   **IkeMode**: the IKE negotiation mode. Default value: **main**.
-         * *   **IkeEncAlg**: the encryption algorithm that is used in Phase 1 negotiation. Default value: **aes**.
-         * *   **IkeAuthAlg**: the authentication algorithm that is used in Phase 1 negotiation. Default value: **sha1**.
-         * *   **IkePfs**: the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiation. Default value: **group2**.
-         * *   **IkeLifetime**: the security association (SA) lifetime determined by Phase 1 negotiation. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
-         * *   **LocalId**: the identifier of the IPsec server. The value can be a fully qualified domain name (FQDN) or an IP address. The default value is the public IP address of the VPN gateway.
-         * *   **RemoteId**: the peer identifier. The value can be an FQDN or an IP address. The default value is empty.
+         * <strong>example:</strong>
+         * <p>{&quot;IkeVersion&quot;:&quot;ikev2&quot;,&quot;IkeMode&quot;:&quot;main&quot;,&quot;IkeEncAlg&quot;:&quot;aes&quot;,&quot;IkeAuthAlg&quot;:&quot;sha1&quot;,&quot;IkePfs&quot;:&quot;group2&quot;,&quot;IkeLifetime&quot;:86400}</p>
          */
         public Builder ikeConfig(String ikeConfig) {
             this.putQueryParameter("IkeConfig", ikeConfig);
@@ -284,10 +304,11 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The IPsec server name.
-         * <p>
+         * <p>The name of the IPsec server.</p>
+         * <p>The name must be 1 to 100 characters in length.</p>
          * 
-         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ipSecServerName(String ipSecServerName) {
             this.putQueryParameter("IpSecServerName", ipSecServerName);
@@ -296,13 +317,16 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The configuration of Phase 2 negotiation. Valid values:
-         * <p>
+         * <p>The configuration of Phase 2 negotiation. Valid values:</p>
+         * <ul>
+         * <li><strong>IpsecEncAlg</strong>: the encryption algorithm that is used in Phase 2 negotiation. Default value: <strong>aes</strong>.</li>
+         * <li><strong>IpsecAuthAlg</strong>: the authentication algorithm that is used in Phase 2 negotiation. Default value: <strong>sha1</strong>.</li>
+         * <li><strong>IpsecPfs</strong>: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiation. Default value: <strong>group2</strong>.</li>
+         * <li><strong>IpsecLifetime</strong>: the SA lifetime determined by Phase 2 negotiation. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+         * </ul>
          * 
-         * *   **IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiation. Default value: **aes**.
-         * *   **IpsecAuthAlg**: the authentication algorithm that is used in Phase 2 negotiation. Default value: **sha1**.
-         * *   **IpsecPfs**: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiation. Default value: **group2**.
-         * *   **IpsecLifetime**: the SA lifetime determined by Phase 2 negotiation. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
+         * <strong>example:</strong>
+         * <p>{&quot;IpsecEncAlg&quot;:&quot;aes&quot;,&quot;IpsecAuthAlg&quot;:&quot;sha1&quot;,&quot;IpsecPfs&quot;:&quot;group2&quot;,&quot;IpsecLifetime&quot;:86400}</p>
          */
         public Builder ipsecConfig(String ipsecConfig) {
             this.putQueryParameter("IpsecConfig", ipsecConfig);
@@ -311,10 +335,12 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The local CIDR blocks, which are the CIDR blocks of the virtual private cloud (VPC) for the client to access.
-         * <p>
+         * <p>The local CIDR blocks, which are the CIDR blocks of the virtual private cloud (VPC) for the client to access.</p>
+         * <p>Multiple CIDR blocks are separated with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Multiple CIDR blocks are separated with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         public Builder localSubnet(String localSubnet) {
             this.putQueryParameter("LocalSubnet", localSubnet);
@@ -323,14 +349,15 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The pre-shared key.
-         * <p>
+         * <p>The pre-shared key.</p>
+         * <p>The pre-shared key that is used for authentication between the IPsec-VPN server and the client. It must be 1 to 100 characters in length.</p>
+         * <p>If you do not specify a pre-shared key, the system randomly generates a 16-bit string as the pre-shared key. You can call <a href="https://help.aliyun.com/document_detail/2794120.html">ListIpsecServers</a> to query keys generated by the system.</p>
+         * <blockquote>
+         * <p>The pre-shared key of the IPsec server key must be the same as that of the client. Otherwise, the connection between the IPsec server and the client cannot be established.</p>
+         * </blockquote>
          * 
-         * The pre-shared key is used for identity authentication between the IPsec server and the client. The key must be 1 to 100 characters in length.
-         * 
-         * If you do not specify a pre-shared key, the system randomly generates a 16-character string as the pre-shared key. You can call the [ListIpsecServers](~~205453~~) operation to query the pre-shared keys that are generated by the system.
-         * 
-         * >  The pre-shared key of the IPsec server must be the same as the client key. Otherwise, the IPsec server cannot be connected to the client.
+         * <strong>example:</strong>
+         * <p>Cfd123****</p>
          */
         public Builder psk(String psk) {
             this.putQueryParameter("Psk", psk);
@@ -339,7 +366,13 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable pre-shared key authentication. If you set the value to **true**, pre-shared key authentication is enabled.
+         * <p>Indicates whether pre-shared key authentication is enabled. If you set the value to <strong>true</strong>, pre-shared key authentication is enabled.</p>
+         * <blockquote>
+         * <p> This parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pskEnabled(Boolean pskEnabled) {
             this.putQueryParameter("PskEnabled", pskEnabled);
@@ -348,7 +381,11 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPN gateway is deployed.
+         * <p>The ID of the region where the VPN gateway is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -357,7 +394,11 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp17lofy9fd0dnvzv****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

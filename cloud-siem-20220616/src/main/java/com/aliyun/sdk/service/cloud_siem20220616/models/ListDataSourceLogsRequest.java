@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceLogsRequest</p>
  */
 public class ListDataSourceLogsRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("DataSourceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceInstanceId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListDataSourceLogsRequest(Builder builder) {
@@ -99,7 +98,7 @@ public class ListDataSourceLogsRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the cloud account.
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -108,7 +107,12 @@ public class ListDataSourceLogsRequest extends Request {
         }
 
         /**
-         * CloudCode.
+         * The code that is used for multi-cloud environments. Valid values:
+         * <p>
+         * 
+         * *   qcloud: Tencent Cloud
+         * *   aliyun: Alibaba Cloud
+         * *   hcloud: Huawei Cloud
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -117,7 +121,7 @@ public class ListDataSourceLogsRequest extends Request {
         }
 
         /**
-         * DataSourceInstanceId.
+         * The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.
          */
         public Builder dataSourceInstanceId(String dataSourceInstanceId) {
             this.putBodyParameter("DataSourceInstanceId", dataSourceInstanceId);
@@ -126,7 +130,11 @@ public class ListDataSourceLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

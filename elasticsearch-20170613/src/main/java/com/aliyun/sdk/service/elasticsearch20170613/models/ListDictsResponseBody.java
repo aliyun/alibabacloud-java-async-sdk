@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDictsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDictsResponseBody</p>
  */
 public class ListDictsResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListDictsResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListDictsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,10 @@ public class ListDictsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2937F832-F39E-41EF-89BA-B528342A2A3A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class ListDictsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -91,8 +94,14 @@ public class ListDictsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDictsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDictsResponseBody</p>
+     */
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
 
         private Headers(Builder builder) {
@@ -118,7 +127,10 @@ public class ListDictsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -132,20 +144,26 @@ public class ListDictsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDictsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDictsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("downloadUrl")
+        @com.aliyun.core.annotation.NameInMap("downloadUrl")
         private String downloadUrl;
 
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {
@@ -207,7 +225,10 @@ public class ListDictsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The link that is used to download the dictionary over the Internet. The link is valid for 90s.
+             * <p>The link that is used to download the dictionary over the Internet. The link is valid for 90s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&OSSAccessKeyId=LTAI*****V9&Signature=PNPO********BBGsJDO4V3VfU4sE%3D">http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&amp;OSSAccessKeyId=LTAI*****V9&amp;Signature=PNPO********BBGsJDO4V3VfU4sE%3D</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -215,7 +236,10 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the dictionary file. Unit: byte.
+             * <p>The size of the dictionary file. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -223,7 +247,10 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dictionary file.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +258,10 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -239,11 +269,14 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IK dictionary. Valid values:
-             * <p>
+             * <p>The type of the IK dictionary. Valid values:</p>
+             * <ul>
+             * <li>MAIN: main dictionary</li>
+             * <li>STOP: stopword list</li>
+             * </ul>
              * 
-             * *   MAIN: main dictionary
-             * *   STOP: stopword list
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder type(String type) {
                 this.type = type;

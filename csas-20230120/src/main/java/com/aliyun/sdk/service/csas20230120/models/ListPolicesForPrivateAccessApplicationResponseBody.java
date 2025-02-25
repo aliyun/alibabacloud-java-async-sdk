@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPolicesForPrivateAccessApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ListPolicesForPrivateAccessApplicationResponseBody</p>
  */
 public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel {
-    @NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    @com.aliyun.core.annotation.NameInMap("Applications")
+    private java.util.List<Applications> applications;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPolicesForPrivateAccessApplicationResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -46,13 +51,13 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
 
         /**
          * Applications.
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
@@ -71,17 +76,23 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListPolicesForPrivateAccessApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForPrivateAccessApplicationResponseBody</p>
+     */
     public static class CustomUserAttributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CustomUserAttributes(Builder builder) {
@@ -172,35 +183,41 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicesForPrivateAccessApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForPrivateAccessApplicationResponseBody</p>
+     */
     public static class Policies extends TeaModel {
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CustomUserAttributes")
-        private java.util.List < CustomUserAttributes> customUserAttributes;
+        @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
+        private java.util.List<CustomUserAttributes> customUserAttributes;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PolicyAction")
+        @com.aliyun.core.annotation.NameInMap("PolicyAction")
         private String policyAction;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
         private Policies(Builder builder) {
@@ -241,7 +258,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         /**
          * @return customUserAttributes
          */
-        public java.util.List < CustomUserAttributes> getCustomUserAttributes() {
+        public java.util.List<CustomUserAttributes> getCustomUserAttributes() {
             return this.customUserAttributes;
         }
 
@@ -297,7 +314,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public static final class Builder {
             private String applicationType; 
             private String createTime; 
-            private java.util.List < CustomUserAttributes> customUserAttributes; 
+            private java.util.List<CustomUserAttributes> customUserAttributes; 
             private String description; 
             private String name; 
             private String policyAction; 
@@ -325,7 +342,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             /**
              * CustomUserAttributes.
              */
-            public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
+            public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
                 return this;
             }
@@ -393,12 +410,18 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListPolicesForPrivateAccessApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicesForPrivateAccessApplicationResponseBody</p>
+     */
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("Policies")
-        private java.util.List < Policies> policies;
+        @com.aliyun.core.annotation.NameInMap("Policies")
+        private java.util.List<Policies> policies;
 
         private Applications(Builder builder) {
             this.applicationId = builder.applicationId;
@@ -423,13 +446,13 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         /**
          * @return policies
          */
-        public java.util.List < Policies> getPolicies() {
+        public java.util.List<Policies> getPolicies() {
             return this.policies;
         }
 
         public static final class Builder {
             private String applicationId; 
-            private java.util.List < Policies> policies; 
+            private java.util.List<Policies> policies; 
 
             /**
              * ApplicationId.
@@ -442,7 +465,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             /**
              * Policies.
              */
-            public Builder policies(java.util.List < Policies> policies) {
+            public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
                 return this;
             }

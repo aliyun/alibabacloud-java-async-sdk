@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendJobRequest} extends {@link RequestModel}
  *
  * <p>SuspendJobRequest</p>
  */
 public class SuspendJobRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Suspend")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Suspend")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean suspend;
 
     private SuspendJobRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class SuspendJobRequest extends Request {
         } 
 
         /**
-         * The ID of the job template.
+         * <p>The ID of the job template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ee1a7a07-abcb-4652-a1d3-2d57f415****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +88,11 @@ public class SuspendJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to suspend the job template.
+         * <p>Specifies whether to suspend the job template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder suspend(Boolean suspend) {
             this.putQueryParameter("Suspend", suspend);

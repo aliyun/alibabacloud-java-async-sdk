@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceStatisticsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceStatisticsRequest</p>
  */
 public class ListInstanceStatisticsRequest extends Request {
-    @Query
-    @NameInMap("WorkspaceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceIds;
 
     private ListInstanceStatisticsRequest(Builder builder) {
@@ -55,7 +60,10 @@ public class ListInstanceStatisticsRequest extends Request {
         } 
 
         /**
-         * WorkspaceIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27218,34956</p>
          */
         public Builder workspaceIds(String workspaceIds) {
             this.putQueryParameter("WorkspaceIds", workspaceIds);

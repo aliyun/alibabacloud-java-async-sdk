@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLoadBalancerListenerRequest} extends {@link RequestModel}
  *
  * <p>DeleteLoadBalancerListenerRequest</p>
  */
 public class DeleteLoadBalancerListenerRequest extends Request {
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535, minimum = 1)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
     private DeleteLoadBalancerListenerRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class DeleteLoadBalancerListenerRequest extends Request {
         } 
 
         /**
-         * ListenerPort.
+         * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -93,7 +102,20 @@ public class DeleteLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * <p>The frontend protocol that is used by the ELB instance.</p>
+         * <blockquote>
+         * <p> This parameter is required if the same port is used by listeners that use different protocols.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>tcp</li>
+         * <li>udp</li>
+         * <li>http</li>
+         * <li>https</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -102,7 +124,11 @@ public class DeleteLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * <p>The ID of the ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5snthcyu1x10g7tywj7iu****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

@@ -105,17 +105,17 @@ public class SubmitCleanTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitCleanTaskRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.expandType = response.expandType;
-            this.jobId = response.jobId;
-            this.parentJobId = response.parentJobId;
+        private Builder(SubmitCleanTaskRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.expandType = request.expandType;
+            this.jobId = request.jobId;
+            this.parentJobId = request.parentJobId;
         } 
 
         /**
-         * DbName.
+         * The name of the database that is scaled out.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -124,7 +124,7 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -133,7 +133,11 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * ExpandType.
+         * The scale-out type. Valid values:
+         * <p>
+         * 
+         * *   smooth_expand: smooth scale-out
+         * *   hot_expand: hot-spot scale-out
          */
         public Builder expandType(String expandType) {
             this.putQueryParameter("ExpandType", expandType);
@@ -142,7 +146,7 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID of the scale-out task. The value of this parameter is the same as that of the ParentJobId parameter.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -151,7 +155,7 @@ public class SubmitCleanTaskRequest extends Request {
         }
 
         /**
-         * ParentJobId.
+         * The ID of the scale-out task. This parameter is returned if you send a request for the smooth scale-out task.
          */
         public Builder parentJobId(String parentJobId) {
             this.putQueryParameter("ParentJobId", parentJobId);

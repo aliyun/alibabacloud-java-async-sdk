@@ -1,113 +1,118 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityGroupRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityGroupRuleRequest</p>
  */
 public class ModifySecurityGroupRuleRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DestCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestCidrIp")
     private String destCidrIp;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("Ipv6DestCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6DestCidrIp")
     private String ipv6DestCidrIp;
 
-    @Query
-    @NameInMap("Ipv6SourceCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6SourceCidrIp")
     private String ipv6SourceCidrIp;
 
-    @Query
-    @NameInMap("NicType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NicType")
     private String nicType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @Query
-    @NameInMap("PortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRange")
     private String portRange;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupRuleId")
     private String securityGroupRuleId;
 
-    @Query
-    @NameInMap("SourceCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
     private String sourceCidrIp;
 
-    @Query
-    @NameInMap("SourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceGroupId")
     private String sourceGroupId;
 
-    @Query
-    @NameInMap("SourceGroupOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceGroupOwnerAccount")
     private String sourceGroupOwnerAccount;
 
-    @Query
-    @NameInMap("SourceGroupOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceGroupOwnerId")
     private Long sourceGroupOwnerId;
 
-    @Query
-    @NameInMap("SourcePortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePortRange")
     private String sourcePortRange;
 
-    @Query
-    @NameInMap("SourcePrefixListId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePrefixListId")
     private String sourcePrefixListId;
 
     private ModifySecurityGroupRuleRequest(Builder builder) {
@@ -387,7 +392,10 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -396,7 +404,10 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The description of the security group rule. The description must be 1 to 512 characters in length.
+         * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a new security group rule.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -405,10 +416,11 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The destination IPv4 CIDR block. IPv4 CIDR blocks and addresses are supported.
-         * <p>
+         * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>By default, this parameter is left empty.</p>
          * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -417,14 +429,17 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The transport layer protocol of the security group rule. The values of this parameter are not case-sensitive. Valid values:
-         * <p>
+         * <p>The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:</p>
+         * <ul>
+         * <li>ICMP</li>
+         * <li>GRE</li>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * <li>ALL: All protocols are supported.</li>
+         * </ul>
          * 
-         * *   ICMP
-         * *   GRE
-         * *   TCP
-         * *   UDP
-         * *   ALL: All protocols are supported.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -433,12 +448,14 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The destination IPv6 CIDR block. IPv6 CIDR blocks and addresses are supported.
-         * <p>
+         * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+         * <blockquote>
+         * <p> Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and <code>DestCidrIp</code>.</p>
+         * </blockquote>
+         * <p>By default, this parameter is left empty.</p>
          * 
-         * > Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.
-         * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>2001:db8:1234:1a00::***</p>
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);
@@ -447,12 +464,14 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The source IPv6 CIDR block to which you want to control access. IPv6 CIDR blocks and addresses are supported.
-         * <p>
+         * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+         * <blockquote>
+         * <p> Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and <code>SourceCidrIp</code>.</p>
+         * </blockquote>
+         * <p>By default, this parameter is left empty.</p>
          * 
-         * > Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.
-         * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>2001:db8:1233:1a00::***</p>
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -461,9 +480,13 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * You cannot modify this parameter when you modify a security group rule by specifying its ID.\
-         * <p>
-         * You can add a new rule that meets your business requirements and delete the original rule.
+         * <p>The type of the network interface controller (NIC).</p>
+         * <blockquote>
+         * <p> You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -490,13 +513,15 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The action of the security group rule that determines whether to allow access. Valid values:
-         * <p>
+         * <p>The action of the security group rule. Valid values:</p>
+         * <ul>
+         * <li>accept: allows access.</li>
+         * <li>drop: denies access and returns no responses.</li>
+         * </ul>
+         * <p>Default value: accept.</p>
          * 
-         * *   accept: allows access.
-         * *   drop: denies access and returns no responses.
-         * 
-         * Default value: accept.
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -505,13 +530,16 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The range of destination ports that correspond to the transport layer protocol. Valid values:
-         * <p>
+         * <p>The range of destination ports that correspond to the transport layer protocol. Valid values:</p>
+         * <ul>
+         * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+         * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+         * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+         * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+         * </ul>
          * 
-         * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-         * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
-         * *   If you set IpProtocol to GRE, the port number range is -1/-1.
-         * *   If you set IpProtocol to ALL, the port number range is -1/-1.
+         * <strong>example:</strong>
+         * <p>80/80</p>
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -520,10 +548,11 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The priority of the security group rule. Valid values: 1 to 100.
-         * <p>
+         * <p>The priority of the security group rule. Valid values: 1 to 100.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -532,7 +561,11 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -559,7 +592,11 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The security group ID.
+         * <p>The security group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -568,9 +605,10 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The security group rule ID.\
-         * <p>
-         * This parameter is required when you modify a security group rule based on the security group rule ID.
+         * <p>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2679845.html">DescribeSecurityGroupAttribute</a> operation to query the IDs of security group rules in a security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgr-bp67acfmxa123b***</p>
          */
         public Builder securityGroupRuleId(String securityGroupRuleId) {
             this.putQueryParameter("SecurityGroupRuleId", securityGroupRuleId);
@@ -579,10 +617,11 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The source IPv4 CIDR block to which you want to control access. IPv4 CIDR blocks and addresses are supported.
-         * <p>
+         * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>By default, this parameter is left empty.</p>
          * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -591,11 +630,14 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The source security group ID. You must specify either `SourceGroupId` or `SourceCidrIp` or specify both of them.
-         * <p>
+         * <p>The source security group ID. You must specify either <code>SourceGroupId</code> or <code>SourceCidrIp</code> or specify both of them.</p>
+         * <ul>
+         * <li>If <code>SourceGroupId</code> is specified but <code>SourceCidrIp</code> is not specified, the value of <code>NicType</code> must be set to intranet.</li>
+         * <li>If both <code>SourceGroupId</code> and <code>SourceCidrIp</code> are specified, the value of <code>SourceCidrIp</code> prevails by default.</li>
+         * </ul>
          * 
-         * *   If `SourceGroupId` is specified but `SourceCidrIp` is not specified, the value of `NicType` must be set to intranet.
-         * *   If both `SourceGroupId` and `SourceCidrIp` are specified, the value of `SourceCidrIp` prevails by default.
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxa123b****</p>
          */
         public Builder sourceGroupId(String sourceGroupId) {
             this.putQueryParameter("SourceGroupId", sourceGroupId);
@@ -604,11 +646,14 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.
-         * <p>
+         * <p>The Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.</p>
+         * <ul>
+         * <li>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access permissions are configured for another security group managed by your account.</li>
+         * <li>If <code>SourceCidrIp</code> is specified, <code>SourceGroupOwnerAccount</code> is ignored.</li>
+         * </ul>
          * 
-         * *   If both `SourceGroupOwnerId` and `SourceGroupOwnerAccount` are empty, access permissions are configured for another security group managed by your account.
-         * *   If `SourceCidrIp` is specified, `SourceGroupOwnerAccount` is ignored.
+         * <strong>example:</strong>
+         * <p><a href="mailto:EcsforCloud@Alibaba.com">EcsforCloud@Alibaba.com</a></p>
          */
         public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
             this.putQueryParameter("SourceGroupOwnerAccount", sourceGroupOwnerAccount);
@@ -617,11 +662,14 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account that manages the source security group when you configure a security group rule across accounts.</p>
+         * <ul>
+         * <li>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access permissions are configured for another security group managed by your account.</li>
+         * <li>If <code>SourceCidrIp</code> is specified, <code>SourceGroupOwnerId</code> is ignored.</li>
+         * </ul>
          * 
-         * *   If both `SourceGroupOwnerId` and `SourceGroupOwnerAccount` are empty, access permissions are configured for another security group managed by your account.
-         * *   If `SourceCidrIp` is specified, `SourceGroupOwnerId` is ignored.
+         * <strong>example:</strong>
+         * <p>12345678910</p>
          */
         public Builder sourceGroupOwnerId(Long sourceGroupOwnerId) {
             this.putQueryParameter("SourceGroupOwnerId", sourceGroupOwnerId);
@@ -630,13 +678,16 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The range of source ports that correspond to the transport layer protocol. Valid values:
-         * <p>
+         * <p>The range of source ports that correspond to the transport layer protocol. Valid values:</p>
+         * <ul>
+         * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+         * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+         * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+         * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+         * </ul>
          * 
-         * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-         * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
-         * *   If you set IpProtocol to GRE, the port number range is -1/-1.
-         * *   If you set IpProtocol to ALL, the port number range is -1/-1.
+         * <strong>example:</strong>
+         * <p>80/80</p>
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
@@ -645,10 +696,11 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The ID of the source prefix list to which you want to control access. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
-         * <p>
+         * <p>The ID of the source prefix list to which you want to control access. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
+         * <p>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</p>
          * 
-         * If you specify `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId`, this parameter is ignored.
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
         public Builder sourcePrefixListId(String sourcePrefixListId) {
             this.putQueryParameter("SourcePrefixListId", sourcePrefixListId);

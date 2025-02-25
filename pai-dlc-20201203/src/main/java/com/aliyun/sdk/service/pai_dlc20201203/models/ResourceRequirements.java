@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResourceRequirements} extends {@link TeaModel}
  *
  * <p>ResourceRequirements</p>
  */
 public class ResourceRequirements extends TeaModel {
-    @NameInMap("Limits")
-    private java.util.Map < String, String > limits;
+    @com.aliyun.core.annotation.NameInMap("Limits")
+    private java.util.Map<String, String> limits;
 
-    @NameInMap("Requests")
-    private java.util.Map < String, String > requests;
+    @com.aliyun.core.annotation.NameInMap("Requests")
+    private java.util.Map<String, String> requests;
 
     private ResourceRequirements(Builder builder) {
         this.limits = builder.limits;
@@ -34,25 +39,25 @@ public class ResourceRequirements extends TeaModel {
     /**
      * @return limits
      */
-    public java.util.Map < String, String > getLimits() {
+    public java.util.Map<String, String> getLimits() {
         return this.limits;
     }
 
     /**
      * @return requests
      */
-    public java.util.Map < String, String > getRequests() {
+    public java.util.Map<String, String> getRequests() {
         return this.requests;
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > limits; 
-        private java.util.Map < String, String > requests; 
+        private java.util.Map<String, String> limits; 
+        private java.util.Map<String, String> requests; 
 
         /**
          * Limits.
          */
-        public Builder limits(java.util.Map < String, String > limits) {
+        public Builder limits(java.util.Map<String, String> limits) {
             this.limits = limits;
             return this;
         }
@@ -60,7 +65,7 @@ public class ResourceRequirements extends TeaModel {
         /**
          * Requests.
          */
-        public Builder requests(java.util.Map < String, String > requests) {
+        public Builder requests(java.util.Map<String, String> requests) {
             this.requests = requests;
             return this;
         }

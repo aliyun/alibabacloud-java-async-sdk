@@ -1,45 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspaceIntegrationDataSource} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspaceIntegrationDataSource</p>
  */
 public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
-    @NameInMap("clusterType")
+    @com.aliyun.core.annotation.NameInMap("clusterType")
     private String clusterType;
 
-    @NameInMap("datasourceId")
+    @com.aliyun.core.annotation.NameInMap("datasourceId")
     private String datasourceId;
 
-    @NameInMap("datasourceName")
+    @com.aliyun.core.annotation.NameInMap("datasourceName")
     private String datasourceName;
 
-    @NameInMap("datasourceUrl")
+    @com.aliyun.core.annotation.NameInMap("datasourceUrl")
     private String datasourceUrl;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("exploreUrl")
+    @com.aliyun.core.annotation.NameInMap("exploreUrl")
     private String exploreUrl;
 
-    @NameInMap("folderUrl")
+    @com.aliyun.core.annotation.NameInMap("extra")
+    private java.util.Map<String, String> extra;
+
+    @com.aliyun.core.annotation.NameInMap("folderUrl")
     private String folderUrl;
 
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private GrafanaWorkspaceIntegrationDataSource(Builder builder) {
@@ -49,6 +57,7 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
         this.datasourceUrl = builder.datasourceUrl;
         this.description = builder.description;
         this.exploreUrl = builder.exploreUrl;
+        this.extra = builder.extra;
         this.folderUrl = builder.folderUrl;
         this.regionId = builder.regionId;
         this.status = builder.status;
@@ -106,6 +115,13 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
     }
 
     /**
+     * @return extra
+     */
+    public java.util.Map<String, String> getExtra() {
+        return this.extra;
+    }
+
+    /**
      * @return folderUrl
      */
     public String getFolderUrl() {
@@ -140,6 +156,7 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
         private String datasourceUrl; 
         private String description; 
         private String exploreUrl; 
+        private java.util.Map<String, String> extra; 
         private String folderUrl; 
         private String regionId; 
         private String status; 
@@ -190,6 +207,14 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
          */
         public Builder exploreUrl(String exploreUrl) {
             this.exploreUrl = exploreUrl;
+            return this;
+        }
+
+        /**
+         * extra.
+         */
+        public Builder extra(java.util.Map<String, String> extra) {
+            this.extra = extra;
             return this;
         }
 

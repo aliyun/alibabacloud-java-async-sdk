@@ -1,66 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutCustomEventRuleRequest} extends {@link RequestModel}
  *
  * <p>PutCustomEventRuleRequest</p>
  */
 public class PutCustomEventRuleRequest extends Request {
-    @Query
-    @NameInMap("ContactGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroups;
 
-    @Query
-    @NameInMap("EffectiveInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
     private String effectiveInterval;
 
-    @Query
-    @NameInMap("EmailSubject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailSubject")
     private String emailSubject;
 
-    @Query
-    @NameInMap("EventName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventName;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Level")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String level;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String threshold;
 
-    @Query
-    @NameInMap("Webhook")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Webhook")
     private String webhook;
 
     private PutCustomEventRuleRequest(Builder builder) {
@@ -201,7 +201,11 @@ public class PutCustomEventRuleRequest extends Request {
         } 
 
         /**
-         * The alert contact group that receives alert notifications. Separate multiple contact groups with commas (,).
+         * <p>The alert contact group that receives alert notifications. Separate multiple contact groups with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -210,7 +214,10 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.
+         * <p>The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-23:59</p>
          */
         public Builder effectiveInterval(String effectiveInterval) {
             this.putQueryParameter("EffectiveInterval", effectiveInterval);
@@ -219,7 +226,7 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The subject of the alert notification email.
+         * <p>The subject of the alert notification email.</p>
          */
         public Builder emailSubject(String emailSubject) {
             this.putQueryParameter("EmailSubject", emailSubject);
@@ -228,7 +235,11 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The name of the custom event. For more information about how to obtain the event name, see [DescribeCustomEventAttribute](~~115262~~).
+         * <p>The name of the custom event. For more information about how to obtain the event name, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HostDown</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -237,10 +248,14 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application group. For more information about how to obtain the group ID, see [DescribeCustomEventAttribute](~~115262~~).
-         * <p>
+         * <p>The ID of the application group. For more information about how to obtain the group ID, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</p>
+         * <blockquote>
+         * <p> The value 0 indicates that the reported custom event does not belong to any application Group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The value 0 indicates that the reported custom event does not belong to any application Group.
+         * <strong>example:</strong>
+         * <p>7378****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -249,12 +264,16 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The level of the alert. Valid values:
-         * <p>
+         * <p>The level of the alert. Valid values:</p>
+         * <ul>
+         * <li>CRITICAL: critical issue</li>
+         * <li>WARN: warning</li>
+         * <li>INFO: information</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CRITICAL: critical issue
-         * *   WARN: warning
-         * *   INFO: information
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -263,7 +282,10 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The cycle that is used to aggregate monitoring data of the custom event. Unit: seconds. Set the value to an integral multiple of 60. Default value: 300.
+         * <p>The cycle that is used to aggregate monitoring data of the custom event. Unit: seconds. Set the value to an integral multiple of 60. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -272,10 +294,14 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
+         * <p>The ID of the alert rule.</p>
+         * <blockquote>
+         * <p> You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.
+         * <strong>example:</strong>
+         * <p>CustomRuleId1</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -284,7 +310,11 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
+         * <p>The name of the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CustomeRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -293,7 +323,11 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The alert threshold.
+         * <p>The alert threshold.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder threshold(String threshold) {
             this.putQueryParameter("Threshold", threshold);
@@ -302,7 +336,10 @@ public class PutCustomEventRuleRequest extends Request {
         }
 
         /**
-         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         public Builder webhook(String webhook) {
             this.putQueryParameter("Webhook", webhook);

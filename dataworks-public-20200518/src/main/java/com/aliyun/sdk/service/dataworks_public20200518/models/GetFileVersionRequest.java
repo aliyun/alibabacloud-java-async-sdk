@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileVersionRequest} extends {@link RequestModel}
  *
  * <p>GetFileVersionRequest</p>
  */
 public class GetFileVersionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long fileId;
 
-    @Body
-    @NameInMap("FileVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer fileVersion;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
     private GetFileVersionRequest(Builder builder) {
@@ -112,7 +117,7 @@ public class GetFileVersionRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +126,11 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * The ID of the file. You can call the [ListFiles](~~173942~~) operation to query the ID.
+         * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);
@@ -130,7 +139,11 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * The file version whose details you want to query.
+         * <p>The file version whose details you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder fileVersion(Integer fileVersion) {
             this.putBodyParameter("FileVersion", fileVersion);
@@ -139,7 +152,10 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.
+         * <p>The DataWorks workspace ID. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace page and view the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -148,10 +164,11 @@ public class GetFileVersionRequest extends Request {
         }
 
         /**
-         * The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.
-         * <p>
+         * <p>The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.</p>
+         * <p>You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</p>
          * 
-         * You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

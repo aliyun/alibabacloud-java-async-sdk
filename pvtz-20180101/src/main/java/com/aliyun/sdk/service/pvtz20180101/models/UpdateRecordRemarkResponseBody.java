@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecordRemarkResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateRecordRemarkResponseBody</p>
  */
 public class UpdateRecordRemarkResponseBody extends TeaModel {
-    @NameInMap("RecordId")
+    @com.aliyun.core.annotation.NameInMap("RecordId")
     private Long recordId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateRecordRemarkResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpdateRecordRemarkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RecordId.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202991****</p>
          */
         public Builder recordId(Long recordId) {
             this.recordId = recordId;
@@ -58,7 +61,10 @@ public class UpdateRecordRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

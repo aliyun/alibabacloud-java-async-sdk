@@ -1,79 +1,97 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferVersionRequest} extends {@link RequestModel}
  *
  * <p>TransferVersionRequest</p>
  */
 public class TransferVersionRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableWriteWindows")
+    private String disableWriteWindows;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceAccount;
 
-    @Query
-    @NameInMap("SourcePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceClusterName")
+    private String sourceClusterName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourcePassword;
 
-    @Query
-    @NameInMap("TargetAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceShards")
+    private String sourceShards;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetAccount;
 
-    @Query
-    @NameInMap("TargetDbClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDbClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetDbClusterId;
 
-    @Query
-    @NameInMap("TargetPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetPassword;
 
     private TransferVersionRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.disableWriteWindows = builder.disableWriteWindows;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -82,7 +100,9 @@ public class TransferVersionRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceAccount = builder.sourceAccount;
+        this.sourceClusterName = builder.sourceClusterName;
         this.sourcePassword = builder.sourcePassword;
+        this.sourceShards = builder.sourceShards;
         this.targetAccount = builder.targetAccount;
         this.targetDbClusterId = builder.targetDbClusterId;
         this.targetPassword = builder.targetPassword;
@@ -106,6 +126,13 @@ public class TransferVersionRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return disableWriteWindows
+     */
+    public String getDisableWriteWindows() {
+        return this.disableWriteWindows;
     }
 
     /**
@@ -165,10 +192,24 @@ public class TransferVersionRequest extends Request {
     }
 
     /**
+     * @return sourceClusterName
+     */
+    public String getSourceClusterName() {
+        return this.sourceClusterName;
+    }
+
+    /**
      * @return sourcePassword
      */
     public String getSourcePassword() {
         return this.sourcePassword;
+    }
+
+    /**
+     * @return sourceShards
+     */
+    public String getSourceShards() {
+        return this.sourceShards;
     }
 
     /**
@@ -194,6 +235,7 @@ public class TransferVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<TransferVersionRequest, Builder> {
         private String DBClusterId; 
+        private String disableWriteWindows; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -202,7 +244,9 @@ public class TransferVersionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String sourceAccount; 
+        private String sourceClusterName; 
         private String sourcePassword; 
+        private String sourceShards; 
         private String targetAccount; 
         private String targetDbClusterId; 
         private String targetPassword; 
@@ -214,6 +258,7 @@ public class TransferVersionRequest extends Request {
         private Builder(TransferVersionRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.disableWriteWindows = request.disableWriteWindows;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -222,18 +267,33 @@ public class TransferVersionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceAccount = request.sourceAccount;
+            this.sourceClusterName = request.sourceClusterName;
             this.sourcePassword = request.sourcePassword;
+            this.sourceShards = request.sourceShards;
             this.targetAccount = request.targetAccount;
             this.targetDbClusterId = request.targetDbClusterId;
             this.targetPassword = request.targetPassword;
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1tm8zf130ew****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DisableWriteWindows.
+         */
+        public Builder disableWriteWindows(String disableWriteWindows) {
+            this.putQueryParameter("DisableWriteWindows", disableWriteWindows);
+            this.disableWriteWindows = disableWriteWindows;
             return this;
         }
 
@@ -256,7 +316,10 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -265,7 +328,15 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,7 +345,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -301,7 +376,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * SourceAccount.
+         * <p>The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder sourceAccount(String sourceAccount) {
             this.putQueryParameter("SourceAccount", sourceAccount);
@@ -310,7 +389,20 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * SourcePassword.
+         * SourceClusterName.
+         */
+        public Builder sourceClusterName(String sourceClusterName) {
+            this.putQueryParameter("SourceClusterName", sourceClusterName);
+            this.sourceClusterName = sourceClusterName;
+            return this;
+        }
+
+        /**
+         * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Aa</p>
          */
         public Builder sourcePassword(String sourcePassword) {
             this.putQueryParameter("SourcePassword", sourcePassword);
@@ -319,7 +411,20 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * TargetAccount.
+         * SourceShards.
+         */
+        public Builder sourceShards(String sourceShards) {
+            this.putQueryParameter("SourceShards", sourceShards);
+            this.sourceShards = sourceShards;
+            return this;
+        }
+
+        /**
+         * <p>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder targetAccount(String targetAccount) {
             this.putQueryParameter("TargetAccount", targetAccount);
@@ -328,7 +433,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * TargetDbClusterId.
+         * <p>The ID of the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp14b39djx7zg****</p>
          */
         public Builder targetDbClusterId(String targetDbClusterId) {
             this.putQueryParameter("TargetDbClusterId", targetDbClusterId);
@@ -337,7 +446,11 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * TargetPassword.
+         * <p>The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456Ff</p>
          */
         public Builder targetPassword(String targetPassword) {
             this.putQueryParameter("TargetPassword", targetPassword);

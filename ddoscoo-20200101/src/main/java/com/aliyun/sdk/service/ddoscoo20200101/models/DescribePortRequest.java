@@ -1,42 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortRequest} extends {@link RequestModel}
  *
  * <p>DescribePortRequest</p>
  */
 public class DescribePortRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
     private Integer frontendPort;
 
-    @Query
-    @NameInMap("FrontendProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendProtocol")
     private String frontendProtocol;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribePortRequest(Builder builder) {
@@ -136,7 +139,10 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * The forwarding port to query. Valid values: **0** to **65535**.
+         * <p>The forwarding port to query. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder frontendPort(Integer frontendPort) {
             this.putQueryParameter("FrontendPort", frontendPort);
@@ -145,11 +151,14 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * The type of the forwarding protocol to query. Valid values:
-         * <p>
+         * <p>The type of the forwarding protocol to query. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
          * 
-         * *   **tcp**
-         * *   **udp**
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder frontendProtocol(String frontendProtocol) {
             this.putQueryParameter("FrontendProtocol", frontendProtocol);
@@ -158,10 +167,14 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * The ID of the instance to query.
-         * <p>
+         * <p>The ID of the instance to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-7e225i41****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +183,10 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * The number of the page to return. For example, if you want to obtain results on the first page, set the value to **1**.
+         * <p>The page number. For example, if you want to obtain results on the first page, set the value to <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +195,10 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

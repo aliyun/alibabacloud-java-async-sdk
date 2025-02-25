@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitCheckResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitCheckResponseBody</p>
  */
 public class SubmitCheckResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private SubmitCheckResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class SubmitCheckResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The data returned if the call is successful.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class SubmitCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE8369A6-A843-5E1B-A613-78E6920D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class SubmitCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the configuration assessment task.
+         * <p>The ID of the configuration assessment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5fe3f65d-4012-455d-8232-2a98a858****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -91,12 +102,22 @@ public class SubmitCheckResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitCheckResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("OperateCode")
+        @com.aliyun.core.annotation.NameInMap("OperateCode")
         private String operateCode;
+
+        @com.aliyun.core.annotation.NameInMap("ThrottlingTimeSecond")
+        private Integer throttlingTimeSecond;
 
         private Data(Builder builder) {
             this.operateCode = builder.operateCode;
+            this.throttlingTimeSecond = builder.throttlingTimeSecond;
         }
 
         public static Builder builder() {
@@ -114,17 +135,40 @@ public class SubmitCheckResponseBody extends TeaModel {
             return this.operateCode;
         }
 
+        /**
+         * @return throttlingTimeSecond
+         */
+        public Integer getThrottlingTimeSecond() {
+            return this.throttlingTimeSecond;
+        }
+
         public static final class Builder {
             private String operateCode; 
+            private Integer throttlingTimeSecond; 
 
             /**
-             * The operation code of the configuration assessment task.
-             * <p>
+             * <p>The operation code of the configuration assessment task.</p>
+             * <ul>
+             * <li><strong>Throttling</strong>: frequency limit</li>
+             * <li><strong>AuthorizationExhaust</strong>: insufficient quota</li>
+             * </ul>
              * 
-             * *   **Throttling**: frequency limit
+             * <strong>example:</strong>
+             * <p>Throttling</p>
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;
+                return this;
+            }
+
+            /**
+             * <p>The throttling duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
+             */
+            public Builder throttlingTimeSecond(Integer throttlingTimeSecond) {
+                this.throttlingTimeSecond = throttlingTimeSecond;
                 return this;
             }
 

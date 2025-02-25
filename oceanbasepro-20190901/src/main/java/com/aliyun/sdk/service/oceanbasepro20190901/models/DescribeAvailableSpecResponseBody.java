@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableSpecResponseBody</p>
  */
 public class DescribeAvailableSpecResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableSpecResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
     } 
 
     public static class DiskSizeRange extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Long max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Long min;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private Long step;
 
         private DiskSizeRange(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
     }
     public static class LogDiskSizeRange extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Long max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Long min;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private Long step;
 
         private LogDiskSizeRange(Builder builder) {
@@ -234,23 +233,27 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
     }
     public static class AvailableSpecifications extends TeaModel {
-        @NameInMap("DiskSizeRange")
+        @com.aliyun.core.annotation.NameInMap("DiskSizeRange")
         private DiskSizeRange diskSizeRange;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("DiskTypes")
+        private java.util.List < String > diskTypes;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("LogDiskSizeRange")
+        @com.aliyun.core.annotation.NameInMap("LogDiskSizeRange")
         private LogDiskSizeRange logDiskSizeRange;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private java.util.List < Integer > nodeNum;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
         private AvailableSpecifications(Builder builder) {
             this.diskSizeRange = builder.diskSizeRange;
+            this.diskTypes = builder.diskTypes;
             this.instanceClass = builder.instanceClass;
             this.logDiskSizeRange = builder.logDiskSizeRange;
             this.nodeNum = builder.nodeNum;
@@ -270,6 +273,13 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
          */
         public DiskSizeRange getDiskSizeRange() {
             return this.diskSizeRange;
+        }
+
+        /**
+         * @return diskTypes
+         */
+        public java.util.List < String > getDiskTypes() {
+            return this.diskTypes;
         }
 
         /**
@@ -302,6 +312,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
         public static final class Builder {
             private DiskSizeRange diskSizeRange; 
+            private java.util.List < String > diskTypes; 
             private String instanceClass; 
             private LogDiskSizeRange logDiskSizeRange; 
             private java.util.List < Integer > nodeNum; 
@@ -312,6 +323,14 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
              */
             public Builder diskSizeRange(DiskSizeRange diskSizeRange) {
                 this.diskSizeRange = diskSizeRange;
+                return this;
+            }
+
+            /**
+             * DiskTypes.
+             */
+            public Builder diskTypes(java.util.List < String > diskTypes) {
+                this.diskTypes = diskTypes;
                 return this;
             }
 
@@ -355,7 +374,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AvailableSpecifications")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpecifications")
         private java.util.List < AvailableSpecifications> availableSpecifications;
 
         private Data(Builder builder) {

@@ -62,10 +62,10 @@ public class DescribeStoreConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStoreConfigRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.storeId = response.storeId;
+        private Builder(DescribeStoreConfigRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.storeId = request.storeId;
         } 
 
         /**

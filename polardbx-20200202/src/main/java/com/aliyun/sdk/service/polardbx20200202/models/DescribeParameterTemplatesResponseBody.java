@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterTemplatesResponseBody</p>
  */
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterTemplatesResponseBody(Builder builder) {
@@ -71,23 +76,29 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterTemplatesResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("Dynamic")
+        @com.aliyun.core.annotation.NameInMap("Dynamic")
         private Integer dynamic;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
-        @NameInMap("Revisable")
+        @com.aliyun.core.annotation.NameInMap("Revisable")
         private Integer revisable;
 
         private Parameters(Builder builder) {
@@ -212,18 +223,24 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterTemplatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ParameterCount")
+        @com.aliyun.core.annotation.NameInMap("ParameterCount")
         private Integer parameterCount;
 
-        @NameInMap("Parameters")
-        private java.util.List < Parameters> parameters;
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private java.util.List<Parameters> parameters;
 
         private Data(Builder builder) {
             this.engine = builder.engine;
@@ -264,7 +281,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
@@ -272,7 +289,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String engine; 
             private String engineVersion; 
             private Integer parameterCount; 
-            private java.util.List < Parameters> parameters; 
+            private java.util.List<Parameters> parameters; 
 
             /**
              * Engine.
@@ -301,7 +318,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             /**
              * Parameters.
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }

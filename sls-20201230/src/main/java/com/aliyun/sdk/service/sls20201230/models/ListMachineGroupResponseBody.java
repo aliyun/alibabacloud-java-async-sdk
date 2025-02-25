@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListMachineGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListMachineGroupResponseBody</p>
  */
 public class ListMachineGroupResponseBody extends TeaModel {
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
-    @NameInMap("machinegroups")
-    private java.util.List < String > machinegroups;
+    @com.aliyun.core.annotation.NameInMap("machinegroups")
+    private java.util.List<String> machinegroups;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
 
     private ListMachineGroupResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
     /**
      * @return machinegroups
      */
-    public java.util.List < String > getMachinegroups() {
+    public java.util.List<String> getMachinegroups() {
         return this.machinegroups;
     }
 
@@ -58,11 +63,14 @@ public class ListMachineGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < String > machinegroups; 
+        private java.util.List<String> machinegroups; 
         private Integer total; 
 
         /**
-         * The number of machine groups that are returned on the current page.
+         * <p>The number of machine groups that are returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,15 +78,21 @@ public class ListMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The machine groups that meet the query conditions.
+         * <p>The machine groups that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ &quot;test-machine-group-1&quot;, &quot;test-machine-group-2&quot; ]</p>
          */
-        public Builder machinegroups(java.util.List < String > machinegroups) {
+        public Builder machinegroups(java.util.List<String> machinegroups) {
             this.machinegroups = machinegroups;
             return this;
         }
 
         /**
-         * The total number of machine groups that meet the query conditions.
+         * <p>The total number of machine groups that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Integer total) {
             this.total = total;

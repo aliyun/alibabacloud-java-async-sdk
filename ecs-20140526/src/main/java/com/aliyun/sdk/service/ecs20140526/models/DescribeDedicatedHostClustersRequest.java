@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedHostClustersRequest</p>
  */
 public class DescribeDedicatedHostClustersRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DedicatedHostClusterIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterIds")
     private String dedicatedHostClusterIds;
 
-    @Query
-    @NameInMap("DedicatedHostClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterName")
     private String dedicatedHostClusterName;
 
-    @Query
-    @NameInMap("LockReason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LockReason")
     private String lockReason;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeDedicatedHostClustersRequest(Builder builder) {
@@ -200,7 +205,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -225,7 +230,7 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -261,7 +266,10 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The IDs of dedicated host clusters. The value can be a JSON array that consists of up to 100 dedicated host cluster IDs in the format of `["dc-xxxxxxxxx", "dc-yyyyyyyyy", ... "dc-zzzzzzzzz"]`. Separate the IDs with commas (,).
+         * <p>The list of host group IDs. The value can be a JSON array consisting of multiple IDs in the <code>[&quot;dc-xxxxxxxxx&quot;, &quot;dc-yyyyyyyyy&quot;,..., &quot;dc-zzzzzzzzz&quot;]</code> format. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;dc-bp12wlf6am0vz9v2****&quot;, &quot;dc-bp12wlf6am0vz9v3****&quot;]</p>
          */
         public Builder dedicatedHostClusterIds(String dedicatedHostClusterIds) {
             this.putQueryParameter("DedicatedHostClusterIds", dedicatedHostClusterIds);
@@ -270,7 +278,10 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The name of the dedicated host cluster.
+         * <p>The name of the host group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDDHCluster</p>
          */
         public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
             this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
@@ -279,7 +290,12 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * >  This parameter is unavailable for use.
+         * <blockquote>
+         * <p> This parameter is unavailable for use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -306,12 +322,12 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -320,12 +336,12 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -334,7 +350,11 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -343,10 +363,13 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the dedicated host cluster belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.  
-         * <p>
+         * <p>The resource group ID of the host group. You can use a resource group ID to filter no more than 1,000 host groups.</p>
+         * <blockquote>
+         * <p> A default resource group is not supported.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -373,7 +396,12 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * >  This parameter is unavailable for use.
+         * <blockquote>
+         * <p> This parameter is unavailable for use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -382,16 +410,19 @@ public class DescribeDedicatedHostClustersRequest extends Request {
         }
 
         /**
-         * The list of the tags.
+         * <p>The tags of the host group.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The zone ID of the dedicated host cluster. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -406,11 +437,17 @@ public class DescribeDedicatedHostClustersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedHostClustersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostClustersRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -445,10 +482,11 @@ public class DescribeDedicatedHostClustersRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * <p>
+             * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length, and can neither contain <code>http://</code> or <code>https://</code> nor <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>You can filter no more than 1,000 host groups, regardless of how many tags are used. To query more than 1,000 host groups, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> API operation.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -456,7 +494,10 @@ public class DescribeDedicatedHostClustersRequest extends Request {
             }
 
             /**
-             * The value of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The tag value. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

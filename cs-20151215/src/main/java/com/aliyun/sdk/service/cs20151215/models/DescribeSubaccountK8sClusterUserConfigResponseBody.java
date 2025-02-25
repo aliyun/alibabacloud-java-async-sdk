@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubaccountK8sClusterUserConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSubaccountK8sClusterUserConfigResponseBody</p>
  */
 public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel {
-    @NameInMap("config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @NameInMap("expiration")
+    @com.aliyun.core.annotation.NameInMap("expiration")
     private String expiration;
 
     private DescribeSubaccountK8sClusterUserConfigResponseBody(Builder builder) {
@@ -51,7 +56,11 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
         private String expiration; 
 
         /**
-         * The cluster kubeconfig file. For more information about the content of the kubeconfig file, see [Configure cluster credentials](~~86494~~).
+         * <p>The cluster kubeconfig file. For more information about the content of the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: v1****</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -59,7 +68,10 @@ public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel
         }
 
         /**
-         * The expiration date of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.
+         * <p>The expiration date of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-10T09:56:17Z</p>
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;

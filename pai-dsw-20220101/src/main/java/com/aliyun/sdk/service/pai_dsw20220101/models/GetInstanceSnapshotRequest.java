@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceSnapshotRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceSnapshotRequest</p>
  */
 public class GetInstanceSnapshotRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("SnapshotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
 
     private GetInstanceSnapshotRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class GetInstanceSnapshotRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -79,7 +87,10 @@ public class GetInstanceSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snp-05cexxxxxxxxx</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putPathParameter("SnapshotId", snapshotId);

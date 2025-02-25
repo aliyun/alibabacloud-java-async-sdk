@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeDomainOfDnsProductResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeDomainOfDnsProductResponseBody</p>
  */
 public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
-    @NameInMap("OriginalDomain")
+    @com.aliyun.core.annotation.NameInMap("OriginalDomain")
     private String originalDomain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ChangeDomainOfDnsProductResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The original domain name that was bound to the instance. If the value of this parameter is empty, the instance is bound with a domain name for the first time.
+         * <p>The domain name that is originally bound to the instance. If no value is returned for this parameter, the instance is bound to a domain name for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>originaldomain.com</p>
          */
         public Builder originalDomain(String originalDomain) {
             this.originalDomain = originalDomain;
@@ -58,7 +66,10 @@ public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,58 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAddCdnDomainRequest} extends {@link RequestModel}
  *
  * <p>BatchAddCdnDomainRequest</p>
  */
 public class BatchAddCdnDomainRequest extends Request {
-    @Query
-    @NameInMap("CdnType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdnType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdnType;
 
-    @Query
-    @NameInMap("CheckUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckUrl")
     private String checkUrl;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Sources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sources;
 
-    @Query
-    @NameInMap("TopLevelDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopLevelDomain")
     private String topLevelDomain;
 
     private BatchAddCdnDomainRequest(Builder builder) {
@@ -183,12 +183,16 @@ public class BatchAddCdnDomainRequest extends Request {
         } 
 
         /**
-         * The workload type of the domain name to accelerate. Valid values:
-         * <p>
+         * <p>The workload type of the domain name to accelerate. Valid values:</p>
+         * <ul>
+         * <li><strong>web</strong>: images and small files</li>
+         * <li><strong>download</strong>: large files</li>
+         * <li><strong>video</strong>: on-demand video and audio streaming</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **web**: images and small files
-         * *   **download**: large files
-         * *   **video**: on-demand video and audio streaming
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         public Builder cdnType(String cdnType) {
             this.putQueryParameter("CdnType", cdnType);
@@ -197,7 +201,10 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * The URL that is used for health checks.
+         * <p>The URL that is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>url</p>
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -206,7 +213,11 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * The domain names that you want to add to Alibaba Cloud CDN. Separate domain names with commas (,).
+         * <p>The domain names that you want to add to Alibaba Cloud CDN. Separate domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -233,7 +244,10 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.
+         * <p>The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyuji4b6r4**</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -242,12 +256,15 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * The acceleration region. Default value: domestic. Valid values:
-         * <p>
+         * <p>The acceleration region. Default value: domestic. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: global (excluding the Chinese mainland)</li>
+         * <li><strong>global</strong>: global</li>
+         * </ul>
          * 
-         * *   **domestic**: Chinese mainland
-         * *   **overseas**: global (excluding the Chinese mainland)
-         * *   **global**: global
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -265,7 +282,19 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
+         * <p>The information about the addresses of origin servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;content&quot;: &quot;192.0.2.0&quot;,
+         *             &quot;type&quot;: &quot;ipaddr&quot;,
+         *             &quot;priority&quot;: &quot;20&quot;,
+         *             &quot;port&quot;: 80,
+         *             &quot;weight&quot;: &quot;15&quot;
+         *       }
+         * ]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -274,7 +303,10 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * The top-level domain.
+         * <p>The top-level domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

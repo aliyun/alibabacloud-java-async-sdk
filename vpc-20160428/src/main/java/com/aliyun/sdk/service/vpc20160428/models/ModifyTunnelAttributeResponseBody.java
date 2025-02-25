@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTunnelAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyTunnelAttributeResponseBody</p>
  */
 public class ModifyTunnelAttributeResponseBody extends TeaModel {
-    @NameInMap("CustomerGatewayId")
+    @com.aliyun.core.annotation.NameInMap("CustomerGatewayId")
     private String customerGatewayId;
 
-    @NameInMap("EnableDpd")
+    @com.aliyun.core.annotation.NameInMap("EnableDpd")
     private Boolean enableDpd;
 
-    @NameInMap("EnableNatTraversal")
+    @com.aliyun.core.annotation.NameInMap("EnableNatTraversal")
     private Boolean enableNatTraversal;
 
-    @NameInMap("InternetIp")
+    @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
-    @NameInMap("RemoteCaCertificate")
+    @com.aliyun.core.annotation.NameInMap("RemoteCaCertificate")
     private String remoteCaCertificate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("TunnelBgpConfig")
+    @com.aliyun.core.annotation.NameInMap("TunnelBgpConfig")
     private TunnelBgpConfig tunnelBgpConfig;
 
-    @NameInMap("TunnelId")
+    @com.aliyun.core.annotation.NameInMap("TunnelId")
     private String tunnelId;
 
-    @NameInMap("TunnelIkeConfig")
+    @com.aliyun.core.annotation.NameInMap("TunnelIkeConfig")
     private TunnelIkeConfig tunnelIkeConfig;
 
-    @NameInMap("TunnelIpsecConfig")
+    @com.aliyun.core.annotation.NameInMap("TunnelIpsecConfig")
     private TunnelIpsecConfig tunnelIpsecConfig;
 
-    @NameInMap("ZoneNo")
+    @com.aliyun.core.annotation.NameInMap("ZoneNo")
     private String zoneNo;
 
     private ModifyTunnelAttributeResponseBody(Builder builder) {
@@ -182,7 +187,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         private String zoneNo; 
 
         /**
-         * The ID of the customer gateway associated with the customer gateway.
+         * <p>The ID of the customer gateway associated with the customer gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cgw-p0wx48ayhrygitm80****</p>
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -190,11 +198,14 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether DPD is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether DPD is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.enableDpd = enableDpd;
@@ -202,11 +213,14 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether NAT traversal is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether NAT traversal is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.enableNatTraversal = enableNatTraversal;
@@ -214,7 +228,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel IP address.
+         * <p>The tunnel IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.XX.XX.87</p>
          */
         public Builder internetIp(String internetIp) {
             this.internetIp = internetIp;
@@ -222,7 +239,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The peer CA certificate when a VPN gateway that uses an SM certificate is used to create the IPsec connection.
+         * <p>The peer CA certificate when a VPN gateway that uses an SM certificate is used to create the IPsec connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</p>
          */
         public Builder remoteCaCertificate(String remoteCaCertificate) {
             this.remoteCaCertificate = remoteCaCertificate;
@@ -230,7 +250,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F36FF0-9544-3AEE-8673-A4647D50064C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,11 +261,14 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel role. Valid values:
-         * <p>
+         * <p>The tunnel role. Valid values:</p>
+         * <ul>
+         * <li><strong>master</strong></li>
+         * <li><strong>slave</strong></li>
+         * </ul>
          * 
-         * *   **master**
-         * *   **slave**
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -250,12 +276,15 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel status. Valid values:
-         * <p>
+         * <p>The tunnel status. Valid values:</p>
+         * <ul>
+         * <li><strong>active</strong></li>
+         * <li><strong>updating</strong></li>
+         * <li><strong>deleting</strong></li>
+         * </ul>
          * 
-         * *   **active**
-         * *   **updating**
-         * *   **deleting**
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -263,7 +292,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The BGP configuration.
+         * <p>The BGP configuration.</p>
          */
         public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
             this.tunnelBgpConfig = tunnelBgpConfig;
@@ -271,7 +300,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel ID.
+         * <p>The tunnel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tun-gbyz2e070xzo93****</p>
          */
         public Builder tunnelId(String tunnelId) {
             this.tunnelId = tunnelId;
@@ -279,7 +311,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of IKE Phase 1.
+         * <p>The Phase 1 configuration.</p>
          */
         public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
             this.tunnelIkeConfig = tunnelIkeConfig;
@@ -287,7 +319,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of IPsec Phase 2.
+         * <p>The configurations of IPsec Phase 2.</p>
          */
         public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
             this.tunnelIpsecConfig = tunnelIpsecConfig;
@@ -295,7 +327,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tunnel zone.
+         * <p>The tunnel zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneNo(String zoneNo) {
             this.zoneNo = zoneNo;
@@ -308,23 +343,29 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTunnelAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTunnelAttributeResponseBody</p>
+     */
     public static class TunnelBgpConfig extends TeaModel {
-        @NameInMap("EnableBgp")
+        @com.aliyun.core.annotation.NameInMap("EnableBgp")
         private Boolean enableBgp;
 
-        @NameInMap("LocalAsn")
+        @com.aliyun.core.annotation.NameInMap("LocalAsn")
         private Long localAsn;
 
-        @NameInMap("LocalBgpIp")
+        @com.aliyun.core.annotation.NameInMap("LocalBgpIp")
         private String localBgpIp;
 
-        @NameInMap("PeerAsn")
+        @com.aliyun.core.annotation.NameInMap("PeerAsn")
         private Long peerAsn;
 
-        @NameInMap("PeerBgpIp")
+        @com.aliyun.core.annotation.NameInMap("PeerBgpIp")
         private String peerBgpIp;
 
-        @NameInMap("TunnelCidr")
+        @com.aliyun.core.annotation.NameInMap("TunnelCidr")
         private String tunnelCidr;
 
         private TunnelBgpConfig(Builder builder) {
@@ -395,11 +436,14 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String tunnelCidr; 
 
             /**
-             * Indicates whether the BGP feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the BGP feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableBgp(Boolean enableBgp) {
                 this.enableBgp = enableBgp;
@@ -407,7 +451,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The local ASN.
+             * <p>The local ASN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65530</p>
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -415,7 +462,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP IP address of the tunnel.
+             * <p>The BGP IP address of the tunnel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169.254.11.1</p>
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -423,7 +473,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The peer ASN.
+             * <p>The peer ASN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65531</p>
              */
             public Builder peerAsn(Long peerAsn) {
                 this.peerAsn = peerAsn;
@@ -431,7 +484,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP IP address of the peer.
+             * <p>The BGP IP address of the peer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169.254.11.2</p>
              */
             public Builder peerBgpIp(String peerBgpIp) {
                 this.peerBgpIp = peerBgpIp;
@@ -439,7 +495,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block to which the tunnel BGP IP address belongs.
+             * <p>The CIDR block to which the tunnel BGP IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169.254.11.0/30</p>
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;
@@ -453,32 +512,38 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyTunnelAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTunnelAttributeResponseBody</p>
+     */
     public static class TunnelIkeConfig extends TeaModel {
-        @NameInMap("IkeAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
 
-        @NameInMap("IkeEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeEncAlg")
         private String ikeEncAlg;
 
-        @NameInMap("IkeLifetime")
+        @com.aliyun.core.annotation.NameInMap("IkeLifetime")
         private Long ikeLifetime;
 
-        @NameInMap("IkeMode")
+        @com.aliyun.core.annotation.NameInMap("IkeMode")
         private String ikeMode;
 
-        @NameInMap("IkePfs")
+        @com.aliyun.core.annotation.NameInMap("IkePfs")
         private String ikePfs;
 
-        @NameInMap("IkeVersion")
+        @com.aliyun.core.annotation.NameInMap("IkeVersion")
         private String ikeVersion;
 
-        @NameInMap("LocalId")
+        @com.aliyun.core.annotation.NameInMap("LocalId")
         private String localId;
 
-        @NameInMap("Psk")
+        @com.aliyun.core.annotation.NameInMap("Psk")
         private String psk;
 
-        @NameInMap("RemoteId")
+        @com.aliyun.core.annotation.NameInMap("RemoteId")
         private String remoteId;
 
         private TunnelIkeConfig(Builder builder) {
@@ -576,7 +641,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * The IKE authentication algorithm.
+             * <p>The IKE authentication algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -584,7 +652,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE encryption algorithm.
+             * <p>The IKE encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -592,7 +663,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE lifetime. Unit: seconds.
+             * <p>The IKE lifetime. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -600,11 +674,14 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values:
-             * <p>
+             * <p>The IKE negotiation mode.</p>
+             * <ul>
+             * <li><strong>main:</strong> This mode offers higher security during negotiations.</li>
+             * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+             * </ul>
              * 
-             * *   **main:** This mode offers higher security during negotiations.
-             * *   **aggressive:** This mode is faster and has a higher success rate.
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -612,7 +689,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group.
+             * <p>The DH group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -620,13 +700,15 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE version. Valid values:
-             * <p>
+             * <p>The IKE version.</p>
+             * <ul>
+             * <li><strong>ikev1</strong></li>
+             * <li><strong>ikev2</strong></li>
+             * </ul>
+             * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios with multiple CIDR blocks.</p>
              * 
-             * *   **ikev1**
-             * *   **ikev2**
-             * 
-             * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+             * <strong>example:</strong>
+             * <p>ikev2</p>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -634,7 +716,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel identifier. The identifier supports FQDNs and IP addresses. The default value is the tunnel IP address.
+             * <p>The tunnel identifier. The identifier supports FQDNs and IP addresses. The default value is the tunnel IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.XX.XX.87</p>
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -642,7 +727,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The pre-shared key.
+             * <p>The pre-shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456****</p>
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -650,7 +738,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The peer identifier. The identifier supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.
+             * <p>The peer identifier. The identifier supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.XX.XX.207</p>
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -664,17 +755,23 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyTunnelAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyTunnelAttributeResponseBody</p>
+     */
     public static class TunnelIpsecConfig extends TeaModel {
-        @NameInMap("IpsecAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
 
-        @NameInMap("IpsecEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecEncAlg")
         private String ipsecEncAlg;
 
-        @NameInMap("IpsecLifetime")
+        @com.aliyun.core.annotation.NameInMap("IpsecLifetime")
         private Long ipsecLifetime;
 
-        @NameInMap("IpsecPfs")
+        @com.aliyun.core.annotation.NameInMap("IpsecPfs")
         private String ipsecPfs;
 
         private TunnelIpsecConfig(Builder builder) {
@@ -727,7 +824,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * The IPsec authentication algorithm.
+             * <p>The IPsec authentication algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -735,7 +835,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec encryption algorithm.
+             * <p>The IPsec encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -743,7 +846,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec lifetime. Unit: seconds.
+             * <p>The IPsec lifetime. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -751,7 +857,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group.
+             * <p>The DH group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;

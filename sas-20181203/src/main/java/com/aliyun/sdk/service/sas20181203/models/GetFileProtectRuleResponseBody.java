@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileProtectRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileProtectRuleResponseBody</p>
  */
 public class GetFileProtectRuleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileProtectRuleResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0DF9057-67C5-574D-A2D2-0CA9AC74C4D3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,41 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileProtectRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileProtectRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("AlertLevel")
+        @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private Integer alertLevel;
 
-        @NameInMap("FileOps")
-        private java.util.List < String > fileOps;
+        @com.aliyun.core.annotation.NameInMap("FileOps")
+        private java.util.List<String> fileOps;
 
-        @NameInMap("FilePaths")
-        private java.util.List < String > filePaths;
+        @com.aliyun.core.annotation.NameInMap("FilePaths")
+        private java.util.List<String> filePaths;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ProcPaths")
-        private java.util.List < String > procPaths;
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("ProcPaths")
+        private java.util.List<String> procPaths;
+
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SwitchId")
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
         private Data(Builder builder) {
@@ -105,6 +122,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             this.fileOps = builder.fileOps;
             this.filePaths = builder.filePaths;
             this.id = builder.id;
+            this.platform = builder.platform;
             this.procPaths = builder.procPaths;
             this.ruleName = builder.ruleName;
             this.status = builder.status;
@@ -136,14 +154,14 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         /**
          * @return fileOps
          */
-        public java.util.List < String > getFileOps() {
+        public java.util.List<String> getFileOps() {
             return this.fileOps;
         }
 
         /**
          * @return filePaths
          */
-        public java.util.List < String > getFilePaths() {
+        public java.util.List<String> getFilePaths() {
             return this.filePaths;
         }
 
@@ -155,9 +173,16 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return procPaths
          */
-        public java.util.List < String > getProcPaths() {
+        public java.util.List<String> getProcPaths() {
             return this.procPaths;
         }
 
@@ -185,20 +210,24 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String action; 
             private Integer alertLevel; 
-            private java.util.List < String > fileOps; 
-            private java.util.List < String > filePaths; 
+            private java.util.List<String> fileOps; 
+            private java.util.List<String> filePaths; 
             private Long id; 
-            private java.util.List < String > procPaths; 
+            private String platform; 
+            private java.util.List<String> procPaths; 
             private String ruleName; 
             private Integer status; 
             private String switchId; 
 
             /**
-             * The handling method of the rule. Valid values:
-             * <p>
+             * <p>The handling method of the rule. Valid values:</p>
+             * <ol>
+             * <li>pass: allow</li>
+             * <li>alert</li>
+             * </ol>
              * 
-             * 1.  pass: allow
-             * 2.  alert
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -206,13 +235,16 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of alerts. Valid values:
-             * <p>
+             * <p>The severity of alerts. Valid values:</p>
+             * <ul>
+             * <li>0: does not generate alerts</li>
+             * <li>1: sends notifications</li>
+             * <li>2: suspicious</li>
+             * <li>3: high-risk</li>
+             * </ul>
              * 
-             * *   0: does not generate alerts
-             * *   1: sends notifications
-             * *   2: suspicious
-             * *   3: high-risk
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alertLevel(Integer alertLevel) {
                 this.alertLevel = alertLevel;
@@ -220,23 +252,26 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The operations performed on the files.
+             * <p>The operations performed on the files.</p>
              */
-            public Builder fileOps(java.util.List < String > fileOps) {
+            public Builder fileOps(java.util.List<String> fileOps) {
                 this.fileOps = fileOps;
                 return this;
             }
 
             /**
-             * The paths to the monitored files.
+             * <p>The paths to the monitored files.</p>
              */
-            public Builder filePaths(java.util.List < String > filePaths) {
+            public Builder filePaths(java.util.List<String> filePaths) {
                 this.filePaths = filePaths;
                 return this;
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44616</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -244,15 +279,33 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The paths to the monitored processes.
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
-            public Builder procPaths(java.util.List < String > procPaths) {
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * <p>The paths to the monitored processes.</p>
+             */
+            public Builder procPaths(java.util.List<String> procPaths) {
                 this.procPaths = procPaths;
                 return this;
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-000</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -260,11 +313,14 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ol>
+             * <li>0: disabled</li>
+             * <li>1: enabled</li>
+             * </ol>
              * 
-             * 1.  0: disabled
-             * 2.  1: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -272,7 +328,10 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the rule.
+             * <p>The switch ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

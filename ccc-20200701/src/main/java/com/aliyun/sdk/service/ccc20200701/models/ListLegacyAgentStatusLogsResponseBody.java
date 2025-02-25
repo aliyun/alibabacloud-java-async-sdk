@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLegacyAgentStatusLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLegacyAgentStatusLogsResponseBody</p>
  */
 public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListLegacyAgentStatusLogsResponseBody(Builder builder) {
@@ -151,83 +156,89 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLegacyAgentStatusLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyAgentStatusLogsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AgentDropCall")
+        @com.aliyun.core.annotation.NameInMap("AgentDropCall")
         private String agentDropCall;
 
-        @NameInMap("AgentNo")
+        @com.aliyun.core.annotation.NameInMap("AgentNo")
         private String agentNo;
 
-        @NameInMap("AliHangupCause")
+        @com.aliyun.core.annotation.NameInMap("AliHangupCause")
         private String aliHangupCause;
 
-        @NameInMap("CallDir")
+        @com.aliyun.core.annotation.NameInMap("CallDir")
         private String callDir;
 
-        @NameInMap("CallId")
+        @com.aliyun.core.annotation.NameInMap("CallId")
         private String callId;
 
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("CalleeId")
+        @com.aliyun.core.annotation.NameInMap("CalleeId")
         private String calleeId;
 
-        @NameInMap("CallerId")
+        @com.aliyun.core.annotation.NameInMap("CallerId")
         private String callerId;
 
-        @NameInMap("ConnId")
+        @com.aliyun.core.annotation.NameInMap("ConnId")
         private String connId;
 
-        @NameInMap("Extend1")
+        @com.aliyun.core.annotation.NameInMap("Extend1")
         private String extend1;
 
-        @NameInMap("Extend2")
+        @com.aliyun.core.annotation.NameInMap("Extend2")
         private String extend2;
 
-        @NameInMap("Extend3")
+        @com.aliyun.core.annotation.NameInMap("Extend3")
         private String extend3;
 
-        @NameInMap("Extend4")
+        @com.aliyun.core.annotation.NameInMap("Extend4")
         private String extend4;
 
-        @NameInMap("GroupNo")
+        @com.aliyun.core.annotation.NameInMap("GroupNo")
         private String groupNo;
 
-        @NameInMap("MonitedAgentNo")
+        @com.aliyun.core.annotation.NameInMap("MonitedAgentNo")
         private String monitedAgentNo;
 
-        @NameInMap("MonitedAgentPhoneNo")
+        @com.aliyun.core.annotation.NameInMap("MonitedAgentPhoneNo")
         private String monitedAgentPhoneNo;
 
-        @NameInMap("OutboundScenario")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
-        @NameInMap("PhoneNo")
+        @com.aliyun.core.annotation.NameInMap("PhoneNo")
         private String phoneNo;
 
-        @NameInMap("StatisticDate")
+        @com.aliyun.core.annotation.NameInMap("StatisticDate")
         private String statisticDate;
 
-        @NameInMap("StatisticTime")
+        @com.aliyun.core.annotation.NameInMap("StatisticTime")
         private Integer statisticTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetRequest")
+        @com.aliyun.core.annotation.NameInMap("TargetRequest")
         private String targetRequest;
 
-        @NameInMap("TargetSelect")
+        @com.aliyun.core.annotation.NameInMap("TargetSelect")
         private String targetSelect;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TransferNo")
+        @com.aliyun.core.annotation.NameInMap("TransferNo")
         private String transferNo;
 
-        @NameInMap("TransferNumber")
+        @com.aliyun.core.annotation.NameInMap("TransferNumber")
         private String transferNumber;
 
         private List(Builder builder) {
@@ -692,17 +703,23 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLegacyAgentStatusLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyAgentStatusLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -723,7 +740,7 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -749,7 +766,7 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -757,7 +774,7 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

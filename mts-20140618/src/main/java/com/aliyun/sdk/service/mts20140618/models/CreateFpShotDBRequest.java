@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFpShotDBRequest} extends {@link RequestModel}
  *
  * <p>CreateFpShotDBRequest</p>
  */
 public class CreateFpShotDBRequest extends Request {
-    @Query
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ModelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelId")
     private Integer modelId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateFpShotDBRequest(Builder builder) {
@@ -153,7 +153,10 @@ public class CreateFpShotDBRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The configurations of the media fingerprint library. By default, this parameter is left empty. You can customize the configurations based on your business requirements. The value must be a string in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -162,7 +165,10 @@ public class CreateFpShotDBRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the media fingerprint library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The library is a text fingerprint library.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -171,7 +177,10 @@ public class CreateFpShotDBRequest extends Request {
         }
 
         /**
-         * ModelId.
+         * <p>The model ID of the media fingerprint library. To create a text fingerprint library, set the parameter to <strong>11</strong>. To create a video fingerprint library, set the parameter to <strong>12</strong>. To create an audio fingerprint library, set the parameter to <strong>13</strong>. To create an image fingerprint library, set the parameter to <strong>14</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder modelId(Integer modelId) {
             this.putQueryParameter("ModelId", modelId);
@@ -180,7 +189,11 @@ public class CreateFpShotDBRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the media fingerprint library.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

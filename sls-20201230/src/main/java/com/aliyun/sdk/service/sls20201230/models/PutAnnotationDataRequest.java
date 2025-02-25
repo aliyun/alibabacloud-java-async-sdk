@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link PutAnnotationDataRequest} extends {@link RequestModel}
  *
  * <p>PutAnnotationDataRequest</p>
  */
 public class PutAnnotationDataRequest extends Request {
-    @Path
-    @NameInMap("datasetId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("datasetId")
     private String datasetId;
 
-    @Query
-    @NameInMap("annotationdataId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("annotationdataId")
     private String annotationdataId;
 
-    @Body
-    @NameInMap("mlDataParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mlDataParam")
     private MLDataParam mlDataParam;
 
-    @Body
-    @NameInMap("rawLog")
-    private java.util.List < java.util.Map<String, String>> rawLog;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rawLog")
+    private java.util.List<java.util.Map<String, String>> rawLog;
 
     private PutAnnotationDataRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class PutAnnotationDataRequest extends Request {
     /**
      * @return rawLog
      */
-    public java.util.List < java.util.Map<String, String>> getRawLog() {
+    public java.util.List<java.util.Map<String, String>> getRawLog() {
         return this.rawLog;
     }
 
@@ -81,7 +86,7 @@ public class PutAnnotationDataRequest extends Request {
         private String datasetId; 
         private String annotationdataId; 
         private MLDataParam mlDataParam; 
-        private java.util.List < java.util.Map<String, String>> rawLog; 
+        private java.util.List<java.util.Map<String, String>> rawLog; 
 
         private Builder() {
             super();
@@ -96,7 +101,10 @@ public class PutAnnotationDataRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * <p>The unique identifier of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8cc4eb51a85e823471cdb368fae9be</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -105,7 +113,10 @@ public class PutAnnotationDataRequest extends Request {
         }
 
         /**
-         * annotationdataId.
+         * <p>The unique identifier of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2156d560fc7c01420542df92cd6365ds</p>
          */
         public Builder annotationdataId(String annotationdataId) {
             this.putQueryParameter("annotationdataId", annotationdataId);
@@ -114,7 +125,7 @@ public class PutAnnotationDataRequest extends Request {
         }
 
         /**
-         * mlDataParam.
+         * <p>The data structure of the request.</p>
          */
         public Builder mlDataParam(MLDataParam mlDataParam) {
             this.putBodyParameter("mlDataParam", mlDataParam);
@@ -123,9 +134,9 @@ public class PutAnnotationDataRequest extends Request {
         }
 
         /**
-         * rawLog.
+         * <p>The raw log data.</p>
          */
-        public Builder rawLog(java.util.List < java.util.Map<String, String>> rawLog) {
+        public Builder rawLog(java.util.List<java.util.Map<String, String>> rawLog) {
             this.putBodyParameter("rawLog", rawLog);
             this.rawLog = rawLog;
             return this;

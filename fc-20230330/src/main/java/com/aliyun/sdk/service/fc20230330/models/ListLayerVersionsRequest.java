@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLayerVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListLayerVersionsRequest</p>
  */
 public class ListLayerVersionsRequest extends Request {
-    @Path
-    @NameInMap("layerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("layerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String layerName;
 
-    @Query
-    @NameInMap("limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("startVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startVersion")
     private String startVersion;
 
     private ListLayerVersionsRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class ListLayerVersionsRequest extends Request {
         } 
 
         /**
-         * layerName.
+         * <p>The layer name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-layer</p>
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -92,7 +96,10 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The number of versions to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -101,7 +108,10 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * startVersion.
+         * <p>The initial version of the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder startVersion(String startVersion) {
             this.putQueryParameter("startVersion", startVersion);

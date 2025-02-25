@@ -1,32 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConnectionTicketResponseBody} extends {@link TeaModel}
  *
  * <p>GetConnectionTicketResponseBody</p>
  */
 public class GetConnectionTicketResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    private String desktopId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskCode")
+    private String taskCode;
+
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskMessage")
+    private String taskMessage;
+
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @NameInMap("Ticket")
+    @com.aliyun.core.annotation.NameInMap("Ticket")
     private String ticket;
 
     private GetConnectionTicketResponseBody(Builder builder) {
+        this.desktopId = builder.desktopId;
         this.requestId = builder.requestId;
+        this.taskCode = builder.taskCode;
         this.taskId = builder.taskId;
+        this.taskMessage = builder.taskMessage;
         this.taskStatus = builder.taskStatus;
         this.ticket = builder.ticket;
     }
@@ -40,6 +57,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     /**
+     * @return desktopId
+     */
+    public String getDesktopId() {
+        return this.desktopId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,10 +71,24 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     /**
+     * @return taskCode
+     */
+    public String getTaskCode() {
+        return this.taskCode;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
         return this.taskId;
+    }
+
+    /**
+     * @return taskMessage
+     */
+    public String getTaskMessage() {
+        return this.taskMessage;
     }
 
     /**
@@ -68,13 +106,27 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String desktopId; 
         private String requestId; 
+        private String taskCode; 
         private String taskId; 
+        private String taskMessage; 
         private String taskStatus; 
         private String ticket; 
 
         /**
-         * The ID of the request.
+         * DesktopId.
+         */
+        public Builder desktopId(String desktopId) {
+            this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +134,18 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the desktop connection task.
+         * TaskCode.
+         */
+        public Builder taskCode(String taskCode) {
+            this.taskCode = taskCode;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the cloud computer connection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -90,52 +153,41 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task.
-         * <p>
+         * TaskMessage.
+         */
+        public Builder taskMessage(String taskMessage) {
+            this.taskMessage = taskMessage;
+            return this;
+        }
+
+        /**
+         * <p>The task status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>FAILED: The credential fails to be obtained.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   FAILED
+         * <!-- -->
+         * </li>
+         * <li><p>RUNNING: The credential is being obtained.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     :
+         * <!-- -->
+         * </li>
+         * <li><p>FINISHED: The credential is obtained.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     Failed to obtain the token
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   RUNNING
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The token is being obtained
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   FINISHED
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The token-based logon is successful
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -143,18 +195,20 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * The credentials that are used to connect to the cloud desktop. To use the credentials, you must decode the credentials in Base64, save the credentials as a xxx.ica file, and then open the file. Sample Python code:
-         * <p>
+         * <p>The credential that is returned to connect to the cloud computer. Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
+         * <pre><code>import base64
+         * response = {
+         *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
+         *     &quot;RequestId&quot;: &quot;1CBAFFAB-B697-4049-A9B1-67E1FC5F****&quot;,
+         * }
+         * f = open (\&quot;xxx.ica\&quot;, \&quot;w\&quot;)
+         * out = base64.b64decode(response[\&quot;Ticket\&quot;])
+         * f.write(out)
+         * f.close()
+         * </code></pre>
          * 
-         *     import base64
-         *     response = {
-         *         "Ticket": "XXXX",
-         *         "RequestId": "XXX-XXX",
-         *     }
-         *     f = open (\"xxx.ica\", \"w\")
-         *     out = base64.b64decode(response[\"Ticket\"])
-         *     f.write(out)
-         *     f.close()
+         * <strong>example:</strong>
+         * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

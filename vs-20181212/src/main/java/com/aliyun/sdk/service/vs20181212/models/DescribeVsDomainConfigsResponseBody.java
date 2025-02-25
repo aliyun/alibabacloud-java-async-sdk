@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainConfigsResponseBody</p>
  */
 public class DescribeVsDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainConfigs")
-    private java.util.List < DomainConfigs> domainConfigs;
+    @com.aliyun.core.annotation.NameInMap("DomainConfigs")
+    private java.util.List<DomainConfigs> domainConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsDomainConfigsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     /**
      * @return domainConfigs
      */
-    public java.util.List < DomainConfigs> getDomainConfigs() {
+    public java.util.List<DomainConfigs> getDomainConfigs() {
         return this.domainConfigs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainConfigs> domainConfigs; 
+        private java.util.List<DomainConfigs> domainConfigs; 
         private String requestId; 
 
         /**
          * DomainConfigs.
          */
-        public Builder domainConfigs(java.util.List < DomainConfigs> domainConfigs) {
+        public Builder domainConfigs(java.util.List<DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainConfigsResponseBody</p>
+     */
     public static class FunctionArgs extends TeaModel {
-        @NameInMap("ArgName")
+        @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
 
-        @NameInMap("ArgValue")
+        @com.aliyun.core.annotation.NameInMap("ArgValue")
         private String argValue;
 
         private FunctionArgs(Builder builder) {
@@ -132,17 +143,23 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainConfigsResponseBody</p>
+     */
     public static class DomainConfigs extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("FunctionArgs")
-        private java.util.List < FunctionArgs> functionArgs;
+        @com.aliyun.core.annotation.NameInMap("FunctionArgs")
+        private java.util.List<FunctionArgs> functionArgs;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DomainConfigs(Builder builder) {
@@ -170,7 +187,7 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         /**
          * @return functionArgs
          */
-        public java.util.List < FunctionArgs> getFunctionArgs() {
+        public java.util.List<FunctionArgs> getFunctionArgs() {
             return this.functionArgs;
         }
 
@@ -190,7 +207,7 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String configId; 
-            private java.util.List < FunctionArgs> functionArgs; 
+            private java.util.List<FunctionArgs> functionArgs; 
             private String functionName; 
             private String status; 
 
@@ -205,7 +222,7 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             /**
              * FunctionArgs.
              */
-            public Builder functionArgs(java.util.List < FunctionArgs> functionArgs) {
+            public Builder functionArgs(java.util.List<FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
                 return this;
             }

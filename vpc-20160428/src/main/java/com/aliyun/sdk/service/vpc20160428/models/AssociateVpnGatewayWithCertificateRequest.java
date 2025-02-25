@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateVpnGatewayWithCertificateRequest} extends {@link RequestModel}
  *
  * <p>AssociateVpnGatewayWithCertificateRequest</p>
  */
 public class AssociateVpnGatewayWithCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertificateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateId;
 
-    @Query
-    @NameInMap("CertificateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
     private AssociateVpnGatewayWithCertificateRequest(Builder builder) {
@@ -128,7 +133,11 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bfe4218-ea1d****</p>
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -137,11 +146,15 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * The type of the certificate. Valid values:
-         * <p>
+         * <p>The type of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>Encryption</strong></li>
+         * <li><strong>Signature</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Encryption**
-         * *   **Signature**
+         * <strong>example:</strong>
+         * <p>Signature</p>
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -150,12 +163,14 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,11 +179,14 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request passes the dry run, a request ID is returned. Otherwise, an error message is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request passes the dry run, a request ID is returned. Otherwise, an error message is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -177,10 +195,12 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * The region ID of the VPN gateway.
-         * <p>
+         * <p>The region ID of the VPN gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,10 +209,14 @@ public class AssociateVpnGatewayWithCertificateRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
-         * <p>
+         * <p>The ID of the VPN gateway.</p>
+         * <blockquote>
+         * <p>You can associate only VPN gateways of the SM type with certificates.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can associate only VPN gateways of the SM type with certificates.
+         * <strong>example:</strong>
+         * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

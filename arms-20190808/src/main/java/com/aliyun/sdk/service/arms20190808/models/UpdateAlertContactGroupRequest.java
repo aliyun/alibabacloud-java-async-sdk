@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertContactGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateAlertContactGroupRequest</p>
  */
 public class UpdateAlertContactGroupRequest extends Request {
-    @Query
-    @NameInMap("ContactGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long contactGroupId;
 
-    @Query
-    @NameInMap("ContactGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroupName;
 
-    @Query
-    @NameInMap("ContactIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactIds")
     private String contactIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateAlertContactGroupRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class UpdateAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact group.
+         * <p>The ID of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putQueryParameter("ContactGroupId", contactGroupId);
@@ -108,7 +117,11 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The name of the alert contact group.
+         * <p>The name of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -117,7 +130,10 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The ID of the alert contact.
+         * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123 234 345</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -126,7 +142,11 @@ public class UpdateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

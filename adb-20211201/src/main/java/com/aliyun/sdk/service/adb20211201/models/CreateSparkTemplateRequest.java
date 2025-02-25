@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSparkTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateSparkTemplateRequest</p>
  */
 public class CreateSparkTemplateRequest extends Request {
-    @Body
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String name;
 
-    @Body
-    @NameInMap("ParentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long parentId;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateSparkTemplateRequest(Builder builder) {
@@ -114,14 +119,18 @@ public class CreateSparkTemplateRequest extends Request {
         } 
 
         /**
-         * The type of the application. Valid values:
-         * <p>
+         * <p>The application type. Valid values:</p>
+         * <ul>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>STREAMING</strong></li>
+         * <li><strong>BATCH</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You do not need to specify this parameter when Type is set to folder.</p>
+         * </blockquote>
          * 
-         * *   **SQL**: SQL application
-         * *   **STREAMING**: streaming application
-         * *   **BATCH**: batch application
-         * 
-         * >  This parameter is not required if the application template is of the folder type.
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -130,7 +139,11 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -139,7 +152,11 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * The name of the application template. The name can be up to 64 characters in length.
+         * <p>The name of the application template. The name can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batchfile</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -148,7 +165,14 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the directory to which the application template belongs.
+         * <p>The ID of the directory to which the application template belongs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/456218.html">GetSparkTemplateFolderTree</a> operation to query the directory ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("ParentId", parentId);
@@ -157,11 +181,15 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * The type of the application template. Valid values:
-         * <p>
+         * <p>The type of the application template. Valid values:</p>
+         * <ul>
+         * <li><strong>folder</strong>: directory.</li>
+         * <li><strong>file</strong>: application.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **folder**: directory
-         * *   **file**: application
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

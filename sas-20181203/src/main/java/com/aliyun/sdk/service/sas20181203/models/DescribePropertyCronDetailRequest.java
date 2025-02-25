@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyCronDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyCronDetailRequest</p>
  */
 public class DescribePropertyCronDetailRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribePropertyCronDetailRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +155,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether fuzzy search by path to the scheduled task is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+         * <p>Specifies whether fuzzy search by path to the scheduled task is supported. If you want to use fuzzy search, set the parameter to <strong>1</strong>. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -156,7 +167,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +179,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * <p>The name or IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -174,7 +191,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The path to the scheduled task.
+         * <p>The path to the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/cron.d/root</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -183,7 +203,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The username of the account that runs the scheduled task.
+         * <p>The username of the account that runs the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
@@ -192,7 +215,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

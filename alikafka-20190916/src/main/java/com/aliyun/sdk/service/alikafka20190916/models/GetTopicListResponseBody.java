@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicListResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicListResponseBody</p>
  */
 public class GetTopicListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TopicList")
+    @com.aliyun.core.annotation.NameInMap("TopicList")
     private TopicList topicList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private GetTopicListResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class GetTopicListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +138,10 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -138,7 +149,10 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +160,10 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +171,10 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0D3DC5B-5C37-47AD-9F22-1F559880****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +182,10 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +193,7 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the topic.
+         * <p>The topics.</p>
          */
         public Builder topicList(TopicList topicList) {
             this.topicList = topicList;
@@ -178,7 +201,10 @@ public class GetTopicListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of topics.
+         * <p>The number of topics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -191,11 +217,17 @@ public class GetTopicListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicListResponseBody</p>
+     */
     public static class TagVO extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagVO(Builder builder) {
@@ -230,7 +262,10 @@ public class GetTopicListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -238,7 +273,10 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,9 +290,15 @@ public class GetTopicListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagVO")
-        private java.util.List < TagVO> tagVO;
+        @com.aliyun.core.annotation.NameInMap("TagVO")
+        private java.util.List<TagVO> tagVO;
 
         private Tags(Builder builder) {
             this.tagVO = builder.tagVO;
@@ -271,17 +315,17 @@ public class GetTopicListResponseBody extends TeaModel {
         /**
          * @return tagVO
          */
-        public java.util.List < TagVO> getTagVO() {
+        public java.util.List<TagVO> getTagVO() {
             return this.tagVO;
         }
 
         public static final class Builder {
-            private java.util.List < TagVO> tagVO; 
+            private java.util.List<TagVO> tagVO; 
 
             /**
              * TagVO.
              */
-            public Builder tagVO(java.util.List < TagVO> tagVO) {
+            public Builder tagVO(java.util.List<TagVO> tagVO) {
                 this.tagVO = tagVO;
                 return this;
             }
@@ -293,42 +337,51 @@ public class GetTopicListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicListResponseBody</p>
+     */
     public static class TopicVO extends TeaModel {
-        @NameInMap("AutoCreate")
+        @com.aliyun.core.annotation.NameInMap("AutoCreate")
         private Boolean autoCreate;
 
-        @NameInMap("CompactTopic")
+        @com.aliyun.core.annotation.NameInMap("CompactTopic")
         private Boolean compactTopic;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LocalTopic")
+        @com.aliyun.core.annotation.NameInMap("LocalTopic")
         private Boolean localTopic;
 
-        @NameInMap("PartitionNum")
+        @com.aliyun.core.annotation.NameInMap("PartitionNum")
         private Integer partitionNum;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusName")
+        @com.aliyun.core.annotation.NameInMap("StatusName")
         private String statusName;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
+
+        @com.aliyun.core.annotation.NameInMap("TopicConfig")
+        private String topicConfig;
 
         private TopicVO(Builder builder) {
             this.autoCreate = builder.autoCreate;
@@ -343,6 +396,7 @@ public class GetTopicListResponseBody extends TeaModel {
             this.statusName = builder.statusName;
             this.tags = builder.tags;
             this.topic = builder.topic;
+            this.topicConfig = builder.topicConfig;
         }
 
         public static Builder builder() {
@@ -437,6 +491,13 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.topic;
         }
 
+        /**
+         * @return topicConfig
+         */
+        public String getTopicConfig() {
+            return this.topicConfig;
+        }
+
         public static final class Builder {
             private Boolean autoCreate; 
             private Boolean compactTopic; 
@@ -450,9 +511,13 @@ public class GetTopicListResponseBody extends TeaModel {
             private String statusName; 
             private Tags tags; 
             private String topic; 
+            private String topicConfig; 
 
             /**
-             * AutoCreate.
+             * <p>Indicates whether the topic was automatically created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoCreate(Boolean autoCreate) {
                 this.autoCreate = autoCreate;
@@ -460,11 +525,14 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The log cleanup policy that is used for the topic. This parameter is returned when the **LocalTopic** parameter is set to **true**. Valid values:
-             * <p>
+             * <p>The log cleanup policy for the topic. This parameter is returned only if <strong>LocalTopic</strong> is set to <strong>true</strong>. Valid values:</p>
+             * <ul>
+             * <li>false: the default log cleanup policy.</li>
+             * <li>true: the Apache Kafka log compaction policy.</li>
+             * </ul>
              * 
-             * *   false: The topic uses the default log cleanup policy.
-             * *   true: The topic uses the log compaction policy.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder compactTopic(Boolean compactTopic) {
                 this.compactTopic = compactTopic;
@@ -472,7 +540,10 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the topic was created. Unit: milliseconds.
+             * <p>The timestamp that indicates when the topic was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1576563109000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -480,7 +551,10 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka_pre-cn-0pp1954n****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -488,11 +562,14 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of storage used by the topic. Valid values:
-             * <p>
+             * <p>The storage type that is used for the topic. Valid values:</p>
+             * <ul>
+             * <li>false: cloud storage</li>
+             * <li>true: local storage</li>
+             * </ul>
              * 
-             * *   false: The topic uses cloud storage.
-             * *   true: The topic uses local storage.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder localTopic(Boolean localTopic) {
                 this.localTopic = localTopic;
@@ -500,7 +577,10 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of partitions in the topic.
+             * <p>The number of partitions in the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder partitionNum(Integer partitionNum) {
                 this.partitionNum = partitionNum;
@@ -508,7 +588,10 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance to which the topics that you want to query belong.
+             * <p>The ID of the region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -516,11 +599,14 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the topic. Valid values:
-             * <p>
+             * <p>The topic description. Valid values:</p>
+             * <ul>
+             * <li>The description can contain only letters, digits, hyphens (-), and underscores (_).</li>
+             * <li>The description must be 3 to 64 characters in length.</li>
+             * </ul>
              * 
-             * *   The description contains only letters, digits, hyphens (-), and underscores (\_).
-             * *   The description is 3 to 64 characters in length.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -528,12 +614,12 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the topic. Valid values:
-             * <p>
+             * <p>The topic status. Valid value:</p>
+             * <p><strong>0</strong>: running.</p>
+             * <p>If the topic is deleted, this parameter is not returned.</p>
              * 
-             * **0:** indicates that the topic is running.
-             * 
-             * If the topic is deleted, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -541,12 +627,12 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the topic. Valid values:
-             * <p>
+             * <p>The topic status. Valid value:</p>
+             * <p><strong>Running</strong>.</p>
+             * <p>If the topic is deleted, this parameter is not returned.</p>
              * 
-             * **Running**
-             * 
-             * If the topic is deleted, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -554,7 +640,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -562,14 +648,28 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic. Valid values:
-             * <p>
+             * <p>The topic name. Valid values:</p>
+             * <ul>
+             * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+             * <li>The name must be 3 to 64 characters in length. If the name contains more than 64 characters, the system automatically truncates the name.</li>
+             * </ul>
              * 
-             * *   The name contains only letters, digits, hyphens (-), and underscores (\_).
-             * *   The name is 3 to 64 characters in length. If the name that you specified contains more than 64 characters, the returned name is automatically truncated.
+             * <strong>example:</strong>
+             * <p>topic_name</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * <p>The topic configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;replication-factor&quot;:3}</p>
+             */
+            public Builder topicConfig(String topicConfig) {
+                this.topicConfig = topicConfig;
                 return this;
             }
 
@@ -580,9 +680,15 @@ public class GetTopicListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTopicListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicListResponseBody</p>
+     */
     public static class TopicList extends TeaModel {
-        @NameInMap("TopicVO")
-        private java.util.List < TopicVO> topicVO;
+        @com.aliyun.core.annotation.NameInMap("TopicVO")
+        private java.util.List<TopicVO> topicVO;
 
         private TopicList(Builder builder) {
             this.topicVO = builder.topicVO;
@@ -599,17 +705,17 @@ public class GetTopicListResponseBody extends TeaModel {
         /**
          * @return topicVO
          */
-        public java.util.List < TopicVO> getTopicVO() {
+        public java.util.List<TopicVO> getTopicVO() {
             return this.topicVO;
         }
 
         public static final class Builder {
-            private java.util.List < TopicVO> topicVO; 
+            private java.util.List<TopicVO> topicVO; 
 
             /**
              * TopicVO.
              */
-            public Builder topicVO(java.util.List < TopicVO> topicVO) {
+            public Builder topicVO(java.util.List<TopicVO> topicVO) {
                 this.topicVO = topicVO;
                 return this;
             }

@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateAutoSnapshotPolicyRequest</p>
  */
 public class CreateAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RepeatWeekdays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatWeekdays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > repeatWeekdays;
 
-    @Query
-    @NameInMap("RetentionDays")
-    @Validation(required = true, maximum = 65536)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65536)
     private Integer retentionDays;
 
-    @Query
-    @NameInMap("TimePoints")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimePoints")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > timePoints;
 
     private CreateAutoSnapshotPolicyRequest(Builder builder) {
@@ -115,7 +115,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * 自动快照策略名称
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policyTest</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -124,7 +127,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +139,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * 重复星期
+         * <p>This parameter is required.</p>
          */
         public Builder repeatWeekdays(java.util.List < String > repeatWeekdays) {
             String repeatWeekdaysShrink = shrink(repeatWeekdays, "RepeatWeekdays", "json");
@@ -143,7 +149,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * 保留天数
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -152,7 +161,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * 重复时间
+         * <p>This parameter is required.</p>
          */
         public Builder timePoints(java.util.List < String > timePoints) {
             String timePointsShrink = shrink(timePoints, "TimePoints", "json");

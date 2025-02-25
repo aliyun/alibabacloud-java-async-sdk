@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupLogsResponseBody</p>
  */
 public class DescribeBackupLogsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private String pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private String totalRecordCount;
 
     private DescribeBackupLogsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * The details of the backup logs.
+         * <p>The details of the backup logs.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADAC63DB-0691-4ECE-949A-FAEA68******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,29 +148,35 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupLogsResponseBody</p>
+     */
     public static class BackupLog extends TeaModel {
-        @NameInMap("BackupLogEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupLogEndTime")
         private String backupLogEndTime;
 
-        @NameInMap("BackupLogId")
+        @com.aliyun.core.annotation.NameInMap("BackupLogId")
         private String backupLogId;
 
-        @NameInMap("BackupLogName")
+        @com.aliyun.core.annotation.NameInMap("BackupLogName")
         private String backupLogName;
 
-        @NameInMap("BackupLogSize")
+        @com.aliyun.core.annotation.NameInMap("BackupLogSize")
         private String backupLogSize;
 
-        @NameInMap("BackupLogStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupLogStartTime")
         private String backupLogStartTime;
 
-        @NameInMap("DownloadLink")
+        @com.aliyun.core.annotation.NameInMap("DownloadLink")
         private String downloadLink;
 
-        @NameInMap("IntranetDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("IntranetDownloadLink")
         private String intranetDownloadLink;
 
-        @NameInMap("LinkExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("LinkExpiredTime")
         private String linkExpiredTime;
 
         private BackupLog(Builder builder) {
@@ -242,7 +265,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             private String linkExpiredTime; 
 
             /**
-             * The time when the backup task ended. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the backup task ended. The time follows the ISO 8601 standard in the <code>YYYY-MM-DD\&quot;T\&quot;HH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-12T03:55:31Z</p>
              */
             public Builder backupLogEndTime(String backupLogEndTime) {
                 this.backupLogEndTime = backupLogEndTime;
@@ -250,7 +276,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup log.
+             * <p>The ID of the backup log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111111111</p>
              */
             public Builder backupLogId(String backupLogId) {
                 this.backupLogId = backupLogId;
@@ -258,7 +287,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backup log.
+             * <p>The name of the backup log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ib_logfile1</p>
              */
             public Builder backupLogName(String backupLogName) {
                 this.backupLogName = backupLogName;
@@ -266,7 +298,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the backup log. Unit: bytes.
+             * <p>The size of the backup log. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1073741824</p>
              */
             public Builder backupLogSize(String backupLogSize) {
                 this.backupLogSize = backupLogSize;
@@ -274,7 +309,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the backup task started. The time follows the ISO 8601 standard in the <code>YYYY-MM-DD\&quot;T\&quot;HH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-12T03:54:43Z</p>
              */
             public Builder backupLogStartTime(String backupLogStartTime) {
                 this.backupLogStartTime = backupLogStartTime;
@@ -282,7 +320,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL used to download the backup log.
+             * <p>The public URL used to download the backup log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://***********.oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -290,7 +331,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL used to download the backup log.
+             * <p>The internal URL used to download the backup log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://***********.oss-cn-hangzhou-internal.aliyuncs.com</p>
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -298,7 +342,10 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the download URL expires.
+             * <p>The time when the download URL expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-14T08:40:50Z</p>
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -312,9 +359,15 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupLogsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BackupLog")
-        private java.util.List < BackupLog> backupLog;
+        @com.aliyun.core.annotation.NameInMap("BackupLog")
+        private java.util.List<BackupLog> backupLog;
 
         private Items(Builder builder) {
             this.backupLog = builder.backupLog;
@@ -331,17 +384,17 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         /**
          * @return backupLog
          */
-        public java.util.List < BackupLog> getBackupLog() {
+        public java.util.List<BackupLog> getBackupLog() {
             return this.backupLog;
         }
 
         public static final class Builder {
-            private java.util.List < BackupLog> backupLog; 
+            private java.util.List<BackupLog> backupLog; 
 
             /**
              * BackupLog.
              */
-            public Builder backupLog(java.util.List < BackupLog> backupLog) {
+            public Builder backupLog(java.util.List<BackupLog> backupLog) {
                 this.backupLog = backupLog;
                 return this;
             }

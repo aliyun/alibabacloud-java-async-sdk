@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCapResponseBody</p>
  */
 public class DescribeCapResponseBody extends TeaModel {
-    @NameInMap("CapUrl")
+    @com.aliyun.core.annotation.NameInMap("CapUrl")
     private CapUrl capUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCapResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeCapResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CapUrl.
+         * The download link to the traffic data that is captured when a DDoS attack event occurs.
          */
         public Builder capUrl(CapUrl capUrl) {
             this.capUrl = capUrl;
@@ -58,7 +57,7 @@ public class DescribeCapResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,7 +71,7 @@ public class DescribeCapResponseBody extends TeaModel {
     } 
 
     public static class CapUrl extends TeaModel {
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private CapUrl(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeCapResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Url.
+             * The download link to the traffic data.
              */
             public Builder url(String url) {
                 this.url = url;

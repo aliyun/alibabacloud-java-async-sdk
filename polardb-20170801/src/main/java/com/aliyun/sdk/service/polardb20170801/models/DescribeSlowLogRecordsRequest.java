@@ -1,69 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlowLogRecordsRequest</p>
  */
 public class DescribeSlowLogRecordsRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    private String nodeId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 30)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SQLHASH")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SQLHASH")
     private String SQLHASH;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeSlowLogRecordsRequest(Builder builder) {
@@ -71,6 +80,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.DBName = builder.DBName;
         this.endTime = builder.endTime;
+        this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -114,6 +124,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     /**
@@ -183,6 +200,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         private String DBClusterId; 
         private String DBName; 
         private String endTime; 
+        private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -202,6 +220,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.DBName = request.DBName;
             this.endTime = request.endTime;
+            this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -214,10 +233,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of cluster.
-         * <p>
+         * <p>Cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface to view all cluster information in the target region, including the Cluster ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -226,7 +249,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>Database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -235,14 +261,30 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. The interval between the start time and end time must be within 24 hours. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
-         * <p>
+         * <p>End time of the query, which must be later than the start time, and the time interval between the start and end times must not exceed 24 hours. The format is <code>YYYY-MM-DDThh:mmZ</code> (UTC time).</p>
+         * <blockquote>
+         * <p>The input is UTC time (i.e., 0 timezone). If your service is currently in a different timezone, please perform a time conversion. For example, if the current timezone of your service is Beijing Time (UTC+8) at 12:00, and you need to query the slow logs between 08:00-12:00 Beijing Time, you should input 00:00-04:00.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > This parameter must be set to a time value in UTC (UTC+0 time zone). If your service resides in another time zone, convert the time value. For example, if the local time in the time zone where your service resides is 12:00 (UTC +8) and you want to query slow query logs at 08:00 (UTC +8) to 12:00, set this parameter to a time value that ranges from 00:00, set this parameter to 04:00.
+         * <strong>example:</strong>
+         * <p>2022-11-16T04:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-**********</p>
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
             return this;
         }
 
@@ -265,10 +307,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is larger than 0.
-         * <p>
+         * <p>The page number. The value must be an integer that is greater than 0.</p>
+         * <p>Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -277,14 +320,16 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -293,10 +338,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>Region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface to view the available regions under the target account, including the Region ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available for your account, such as the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -323,7 +372,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.
+         * <p>Unique identifier of the SQL statement in the slow log statistics, which can be used to obtain the detailed slow logs for that SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U2FsdGVk****</p>
          */
         public Builder SQLHASH(String SQLHASH) {
             this.putQueryParameter("SQLHASH", SQLHASH);
@@ -332,14 +384,17 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
-         * <p>
+         * <p>Start time of the query. The format is <code>YYYY-MM-DDThh:mmZ</code> (UTC time).</p>
+         * <blockquote>
+         * <ul>
+         * <li>Supports viewing slow log information up to 30 days.</li>
+         * <li>The input is UTC time (i.e., 0 timezone). If your service is currently in a different timezone, please perform a time conversion. For example, if the current timezone of your service is Beijing Time (UTC+8) at 12:00, and you need to query the slow logs between 08:00-12:00 Beijing Time, you should input 00:00-04:00.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   You can specify a time range of up to 30 days.
-         * 
-         * *   This parameter must be set to a time value in UTC (UTC+0 time zone). If your service resides in another time zone, convert the time value. For example, if the local time in the time zone where your service resides is 12:00 (UTC +8) and you want to query slow query logs at 08:00 (UTC +8) to 12:00, set this parameter to a time value that ranges from 00:00, set this parameter to 04:00.
+         * <strong>example:</strong>
+         * <p>2022-11-15T16:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

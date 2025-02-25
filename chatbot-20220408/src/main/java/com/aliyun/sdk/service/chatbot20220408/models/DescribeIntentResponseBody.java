@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIntentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIntentResponseBody</p>
  */
 public class DescribeIntentResponseBody extends TeaModel {
-    @NameInMap("AliasName")
+    @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateUserId")
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
     private String createUserId;
 
-    @NameInMap("CreateUserName")
+    @com.aliyun.core.annotation.NameInMap("CreateUserName")
     private String createUserName;
 
-    @NameInMap("IntentId")
+    @com.aliyun.core.annotation.NameInMap("IntentId")
     private Long intentId;
 
-    @NameInMap("IntentName")
+    @com.aliyun.core.annotation.NameInMap("IntentName")
     private String intentName;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
-    @NameInMap("ModifyUserId")
+    @com.aliyun.core.annotation.NameInMap("ModifyUserId")
     private String modifyUserId;
 
-    @NameInMap("ModifyUserName")
+    @com.aliyun.core.annotation.NameInMap("ModifyUserName")
     private String modifyUserName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlotInfos")
+    @com.aliyun.core.annotation.NameInMap("SlotInfos")
     private java.util.List < SlotInfos> slotInfos;
 
     private DescribeIntentResponseBody(Builder builder) {
@@ -251,23 +251,29 @@ public class DescribeIntentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIntentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIntentResponseBody</p>
+     */
     public static class SlotInfos extends TeaModel {
-        @NameInMap("Array")
+        @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
 
-        @NameInMap("Encrypt")
+        @com.aliyun.core.annotation.NameInMap("Encrypt")
         private Boolean encrypt;
 
-        @NameInMap("Interactive")
+        @com.aliyun.core.annotation.NameInMap("Interactive")
         private Boolean interactive;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SlotId")
+        @com.aliyun.core.annotation.NameInMap("SlotId")
         private String slotId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SlotInfos(Builder builder) {

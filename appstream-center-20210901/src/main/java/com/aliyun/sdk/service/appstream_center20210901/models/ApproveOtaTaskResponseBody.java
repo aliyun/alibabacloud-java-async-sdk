@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApproveOtaTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ApproveOtaTaskResponseBody</p>
  */
 public class ApproveOtaTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ApproveOtaTaskResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class ApproveOtaTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The execution result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OtaTask.Running</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +78,10 @@ public class ApproveOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the value of <code>Code</code> is <code>success</code>, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task is running and cannot be sumitted.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +89,10 @@ public class ApproveOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Body
-    @NameInMap("region_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("region_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("resource_ids")
-    @Validation(required = true)
-    private java.util.List < String > resourceIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resource_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceIds;
 
-    @Body
-    @NameInMap("resource_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resource_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Body
-    @NameInMap("tags")
-    @Validation(required = true)
-    private java.util.List < Tag > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Tag> tags;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -63,7 +68,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -77,15 +82,15 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -100,7 +105,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the resource.
+         * <p>The ID of the region in which the resource resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -109,16 +118,21 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources that you want to label.
+         * <p>The list of resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("resource_ids", resourceIds);
             this.resourceIds = resourceIds;
             return this;
         }
 
         /**
-         * The type of resource that you want to label. Set the value to `CLUSTER`.
+         * <p>The type of resources that you want to label. Valid value: <code>CLUSTER</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resource_type", resourceType);
@@ -127,14 +141,15 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Note:
-         * <p>
-         * 
-         * *   A value cannot be empty and can contain up to 128 characters.
-         * *   A key or value must not start with `aliyun` or `acs:`.
-         * *   A key or value must not contain `http://` or `https://`.
+         * <p>The tags that you want to add to the resources in key-value pairs. You can add up to 20 key-value pairs. Note:</p>
+         * <ul>
+         * <li>The values must not be empty strings. A value must be 1 to 128 characters in length.</li>
+         * <li>A key or value must not start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>A key or value must not contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;

@@ -1,49 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Ticket} extends {@link TeaModel}
  *
  * <p>Ticket</p>
  */
 public class Ticket extends TeaModel {
-    @NameInMap("callerUid")
+    @com.aliyun.core.annotation.NameInMap("callerUid")
     private Long callerUid;
 
-    @NameInMap("createDate")
+    @com.aliyun.core.annotation.NameInMap("createDate")
     private String createDate;
 
-    @NameInMap("expirationTime")
+    @com.aliyun.core.annotation.NameInMap("expirationTime")
     private Long expirationTime;
 
-    @NameInMap("expireDate")
+    @com.aliyun.core.annotation.NameInMap("expireDate")
     private String expireDate;
 
-    @NameInMap("extra")
+    @com.aliyun.core.annotation.NameInMap("extra")
     private String extra;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("number")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.NameInMap("number")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer number;
 
-    @NameInMap("ticket")
+    @com.aliyun.core.annotation.NameInMap("sharingTo")
+    private String sharingTo;
+
+    @com.aliyun.core.annotation.NameInMap("ticket")
     private String ticket;
 
-    @NameInMap("ticketId")
+    @com.aliyun.core.annotation.NameInMap("ticketId")
     private String ticketId;
 
-    @NameInMap("usedNumber")
+    @com.aliyun.core.annotation.NameInMap("usedNumber")
     private Integer usedNumber;
 
-    @NameInMap("valid")
+    @com.aliyun.core.annotation.NameInMap("valid")
     private Boolean valid;
 
     private Ticket(Builder builder) {
@@ -54,6 +62,7 @@ public class Ticket extends TeaModel {
         this.extra = builder.extra;
         this.name = builder.name;
         this.number = builder.number;
+        this.sharingTo = builder.sharingTo;
         this.ticket = builder.ticket;
         this.ticketId = builder.ticketId;
         this.usedNumber = builder.usedNumber;
@@ -118,6 +127,13 @@ public class Ticket extends TeaModel {
     }
 
     /**
+     * @return sharingTo
+     */
+    public String getSharingTo() {
+        return this.sharingTo;
+    }
+
+    /**
      * @return ticket
      */
     public String getTicket() {
@@ -153,6 +169,7 @@ public class Ticket extends TeaModel {
         private String extra; 
         private String name; 
         private Integer number; 
+        private String sharingTo; 
         private String ticket; 
         private String ticketId; 
         private Integer usedNumber; 
@@ -211,6 +228,14 @@ public class Ticket extends TeaModel {
          */
         public Builder number(Integer number) {
             this.number = number;
+            return this;
+        }
+
+        /**
+         * sharingTo.
+         */
+        public Builder sharingTo(String sharingTo) {
+            this.sharingTo = sharingTo;
             return this;
         }
 

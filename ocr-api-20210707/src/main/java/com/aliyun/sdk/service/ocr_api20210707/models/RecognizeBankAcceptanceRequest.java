@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeBankAcceptanceRequest} extends {@link RequestModel}
  *
  * <p>RecognizeBankAcceptanceRequest</p>
  */
 public class RecognizeBankAcceptanceRequest extends Request {
-    @Query
-    @NameInMap("Url")
-    @Validation(maxLength = 2048)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeBankAcceptanceRequest(Builder builder) {

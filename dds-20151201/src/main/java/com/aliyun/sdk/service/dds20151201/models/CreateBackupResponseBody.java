@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBackupResponseBody</p>
  */
 public class CreateBackupResponseBody extends TeaModel {
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBackupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5664****</p>
          */
         public Builder backupId(String backupId) {
             this.backupId = backupId;
@@ -58,7 +66,10 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7016B12F-7F64-40A4-BAFF-013F02AC82FC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

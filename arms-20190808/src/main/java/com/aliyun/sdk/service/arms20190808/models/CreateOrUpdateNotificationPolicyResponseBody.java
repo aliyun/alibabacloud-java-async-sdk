@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
  */
 public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
-    @NameInMap("NotificationPolicy")
+    @com.aliyun.core.annotation.NameInMap("NotificationPolicy")
     private NotificationPolicy notificationPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateNotificationPolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array of notification policy objects.
+         * <p>An array of notification policy objects.</p>
          */
         public Builder notificationPolicy(NotificationPolicy notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
@@ -58,7 +63,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,15 +79,21 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
+     */
     public static class GroupRule extends TeaModel {
-        @NameInMap("GroupInterval")
+        @com.aliyun.core.annotation.NameInMap("GroupInterval")
         private Long groupInterval;
 
-        @NameInMap("GroupWait")
+        @com.aliyun.core.annotation.NameInMap("GroupWait")
         private Long groupWait;
 
-        @NameInMap("GroupingFields")
-        private java.util.List < String > groupingFields;
+        @com.aliyun.core.annotation.NameInMap("GroupingFields")
+        private java.util.List<String> groupingFields;
 
         private GroupRule(Builder builder) {
             this.groupInterval = builder.groupInterval;
@@ -112,17 +126,20 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         /**
          * @return groupingFields
          */
-        public java.util.List < String > getGroupingFields() {
+        public java.util.List<String> getGroupingFields() {
             return this.groupingFields;
         }
 
         public static final class Builder {
             private Long groupInterval; 
             private Long groupWait; 
-            private java.util.List < String > groupingFields; 
+            private java.util.List<String> groupingFields; 
 
             /**
-             * The time interval of grouping. Unit: seconds. Default value: 30.
+             * <p>The time interval of grouping. Unit: seconds. Default value: 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -130,7 +147,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The waiting time for grouping. Unit: seconds. Default value: 5.
+             * <p>The waiting time for grouping. Unit: seconds. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder groupWait(Long groupWait) {
                 this.groupWait = groupWait;
@@ -138,9 +158,13 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used for grouping.
+             * <p>An array of alert event group objects.</p>
+             * <ul>
+             * <li>If you do not specify the groupingFields field, all alerts will be sent to contacts based on <code>alertname</code>.</li>
+             * <li>If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.</li>
+             * </ul>
              */
-            public Builder groupingFields(java.util.List < String > groupingFields) {
+            public Builder groupingFields(java.util.List<String> groupingFields) {
                 this.groupingFields = groupingFields;
                 return this;
             }
@@ -152,14 +176,20 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
+     */
     public static class MatchingConditions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MatchingConditions(Builder builder) {
@@ -203,7 +233,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the matching condition.
+             * <p>The key of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>altertname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,15 +244,18 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator of the matching condition. Valid values:
-             * <p>
+             * <p>The logical operator of the matching condition. Valid values:</p>
+             * <ul>
+             * <li><code>eq</code>: equal to</li>
+             * <li><code>neq</code>: not equal to</li>
+             * <li><code>in</code>: contains</li>
+             * <li><code>nin</code>: does not contain</li>
+             * <li><code>re</code>: regular expression match</li>
+             * <li><code>nre</code>: regular expression mismatch</li>
+             * </ul>
              * 
-             * *   `eq`: equal to
-             * *   `neq`: not equal to
-             * *   `in`: contains
-             * *   `nin`: does not contain
-             * *   `re`: regular expression match
-             * *   `nre`: regular expression mismatch
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -227,7 +263,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the matching condition.
+             * <p>The value of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -241,9 +280,15 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
+     */
     public static class MatchingRules extends TeaModel {
-        @NameInMap("MatchingConditions")
-        private java.util.List < MatchingConditions> matchingConditions;
+        @com.aliyun.core.annotation.NameInMap("MatchingConditions")
+        private java.util.List<MatchingConditions> matchingConditions;
 
         private MatchingRules(Builder builder) {
             this.matchingConditions = builder.matchingConditions;
@@ -260,17 +305,17 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         /**
          * @return matchingConditions
          */
-        public java.util.List < MatchingConditions> getMatchingConditions() {
+        public java.util.List<MatchingConditions> getMatchingConditions() {
             return this.matchingConditions;
         }
 
         public static final class Builder {
-            private java.util.List < MatchingConditions> matchingConditions; 
+            private java.util.List<MatchingConditions> matchingConditions; 
 
             /**
-             * An array of alert event matching condition objects.
+             * <p>The matching conditions.</p>
              */
-            public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
+            public Builder matchingConditions(java.util.List<MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
                 return this;
             }
@@ -282,17 +327,23 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
+     */
     public static class NotifyObjects extends TeaModel {
-        @NameInMap("NotifyChannels")
-        private java.util.List < String > notifyChannels;
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
+        private java.util.List<String> notifyChannels;
 
-        @NameInMap("NotifyObjectId")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjectId")
         private Long notifyObjectId;
 
-        @NameInMap("NotifyObjectName")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjectName")
         private String notifyObjectName;
 
-        @NameInMap("NotifyObjectType")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjectType")
         private String notifyObjectType;
 
         private NotifyObjects(Builder builder) {
@@ -313,7 +364,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         /**
          * @return notifyChannels
          */
-        public java.util.List < String > getNotifyChannels() {
+        public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
         }
 
@@ -339,21 +390,24 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > notifyChannels; 
+            private java.util.List<String> notifyChannels; 
             private Long notifyObjectId; 
             private String notifyObjectName; 
             private String notifyObjectType; 
 
             /**
-             * 通知对象为联系人时的单独的联系方式
+             * <p>The notification methods specified for a contact.</p>
              */
-            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+            public Builder notifyChannels(java.util.List<String> notifyChannels) {
                 this.notifyChannels = notifyChannels;
                 return this;
             }
 
             /**
-             * The ID of the notification contact.
+             * <p>The ID of the notification object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder notifyObjectId(Long notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -361,7 +415,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the notification contact.
+             * <p>The name of the notification object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder notifyObjectName(String notifyObjectName) {
                 this.notifyObjectName = notifyObjectName;
@@ -369,13 +426,18 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the notification contact. Valid values: 
-             * <p>
+             * <p>The type of the notification object. Valid values:</p>
+             * <ul>
+             * <li>CONTACT: contact</li>
+             * <li>CONTACT_GROUP: contact group</li>
+             * <li>ARMS_CONTACT: ARMS contact</li>
+             * <li>ARMS_CONTACT_GROUP: ARMS contact group</li>
+             * <li>DING_ROBOT_GROUP: DingTalk, Lark, WeCom, or IM robot</li>
+             * <li>CONTACT_SCHEDULE: user on duty defined by a schedule</li>
+             * </ul>
              * 
-             * - CONTACT: an individual contact
-             * - CONTACT_GROUP: a contact group
-             * - DING_ROBOT: an instant messaging (IM) robot
-             * - CONTACT_SCHEDULE: a person on duty based on an established schedule
+             * <strong>example:</strong>
+             * <p>CONTACT</p>
              */
             public Builder notifyObjectType(String notifyObjectType) {
                 this.notifyObjectType = notifyObjectType;
@@ -389,17 +451,23 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
+     */
     public static class NotifyRule extends TeaModel {
-        @NameInMap("NotifyChannels")
-        private java.util.List < String > notifyChannels;
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
+        private java.util.List<String> notifyChannels;
 
-        @NameInMap("NotifyEndTime")
+        @com.aliyun.core.annotation.NameInMap("NotifyEndTime")
         private String notifyEndTime;
 
-        @NameInMap("NotifyObjects")
-        private java.util.List < NotifyObjects> notifyObjects;
+        @com.aliyun.core.annotation.NameInMap("NotifyObjects")
+        private java.util.List<NotifyObjects> notifyObjects;
 
-        @NameInMap("NotifyStartTime")
+        @com.aliyun.core.annotation.NameInMap("NotifyStartTime")
         private String notifyStartTime;
 
         private NotifyRule(Builder builder) {
@@ -420,7 +488,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         /**
          * @return notifyChannels
          */
-        public java.util.List < String > getNotifyChannels() {
+        public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
         }
 
@@ -434,7 +502,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         /**
          * @return notifyObjects
          */
-        public java.util.List < NotifyObjects> getNotifyObjects() {
+        public java.util.List<NotifyObjects> getNotifyObjects() {
             return this.notifyObjects;
         }
 
@@ -446,28 +514,24 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > notifyChannels; 
+            private java.util.List<String> notifyChannels; 
             private String notifyEndTime; 
-            private java.util.List < NotifyObjects> notifyObjects; 
+            private java.util.List<NotifyObjects> notifyObjects; 
             private String notifyStartTime; 
 
             /**
-             * The notification methods. Valid values: 
-             * <p>
-             * 
-             * - `dingTalk`: DingTalk
-             * - `email`: email
-             * - `sms`: text message
-             * - `tts`: phone call
-             * - `webhook`: webhook
+             * <p>The notification method.</p>
              */
-            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+            public Builder notifyChannels(java.util.List<String> notifyChannels) {
                 this.notifyChannels = notifyChannels;
                 return this;
             }
 
             /**
-             * The end time of the notification window.
+             * <p>The end time of the notification window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59</p>
              */
             public Builder notifyEndTime(String notifyEndTime) {
                 this.notifyEndTime = notifyEndTime;
@@ -475,15 +539,18 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of notification contact objects.
+             * <p>An array of notification objects.</p>
              */
-            public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
+            public Builder notifyObjects(java.util.List<NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
                 return this;
             }
 
             /**
-             * The start time of the notification window.
+             * <p>The start time of the notification window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder notifyStartTime(String notifyStartTime) {
                 this.notifyStartTime = notifyStartTime;
@@ -497,32 +564,38 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
+     */
     public static class NotifyTemplate extends TeaModel {
-        @NameInMap("EmailContent")
+        @com.aliyun.core.annotation.NameInMap("EmailContent")
         private String emailContent;
 
-        @NameInMap("EmailRecoverContent")
+        @com.aliyun.core.annotation.NameInMap("EmailRecoverContent")
         private String emailRecoverContent;
 
-        @NameInMap("EmailRecoverTitle")
+        @com.aliyun.core.annotation.NameInMap("EmailRecoverTitle")
         private String emailRecoverTitle;
 
-        @NameInMap("EmailTitle")
+        @com.aliyun.core.annotation.NameInMap("EmailTitle")
         private String emailTitle;
 
-        @NameInMap("RobotContent")
+        @com.aliyun.core.annotation.NameInMap("RobotContent")
         private String robotContent;
 
-        @NameInMap("SmsContent")
+        @com.aliyun.core.annotation.NameInMap("SmsContent")
         private String smsContent;
 
-        @NameInMap("SmsRecoverContent")
+        @com.aliyun.core.annotation.NameInMap("SmsRecoverContent")
         private String smsRecoverContent;
 
-        @NameInMap("TtsContent")
+        @com.aliyun.core.annotation.NameInMap("TtsContent")
         private String ttsContent;
 
-        @NameInMap("TtsRecoverContent")
+        @com.aliyun.core.annotation.NameInMap("TtsRecoverContent")
         private String ttsRecoverContent;
 
         private NotifyTemplate(Builder builder) {
@@ -620,7 +693,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String ttsRecoverContent; 
 
             /**
-             * The content of the alert notification sent through email.
+             * <p>The content of the alert notification sent through email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} &lt;a href=&quot;{{.generatorURL}}&quot; &gt;Link&lt;/a&gt; {{end}} {{end}}</p>
              */
             public Builder emailContent(String emailContent) {
                 this.emailContent = emailContent;
@@ -628,7 +704,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert resolution notification sent through email.
+             * <p>The content of the alert resolution notification sent through email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} &lt;a href=&quot;{{.generatorURL}}&quot; &gt;Link&lt;/a&gt; {{end}} {{end}}</p>
              */
             public Builder emailRecoverContent(String emailRecoverContent) {
                 this.emailRecoverContent = emailRecoverContent;
@@ -636,7 +715,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the alert resolution notification sent through email.
+             * <p>The title of the alert resolution notification sent through email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{{ .commonLabels.alertname }}</p>
              */
             public Builder emailRecoverTitle(String emailRecoverTitle) {
                 this.emailRecoverTitle = emailRecoverTitle;
@@ -644,7 +726,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the alert notification sent through email.
+             * <p>The title of the alert notification sent through email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{{ .commonLabels.alertname }}</p>
              */
             public Builder emailTitle(String emailTitle) {
                 this.emailTitle = emailTitle;
@@ -652,7 +737,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert notification sent by the IM robot.
+             * <p>The content of the alert notification sent by the IM robot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }}&gt; {{.annotations.message}} {{if .generatorURL }} [Link]({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}</p>
              */
             public Builder robotContent(String robotContent) {
                 this.robotContent = robotContent;
@@ -660,7 +748,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert notification sent through text message.
+             * <p>The content of the alert notification sent through text message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;SmsContent&gt;Notification on the occurrence of a {{ .level }} alert. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/SmsContent&gt;</p>
              */
             public Builder smsContent(String smsContent) {
                 this.smsContent = smsContent;
@@ -668,7 +759,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert resolution notification sent through text message.
+             * <p>The content of the alert resolution notification sent through text message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;SmsRecoverContent&gt;Alert resolution notification. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/SmsRecoverContent&gt;</p>
              */
             public Builder smsRecoverContent(String smsRecoverContent) {
                 this.smsRecoverContent = smsRecoverContent;
@@ -676,7 +770,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert notification by phone.
+             * <p>The content of the alert notification by phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;TtsContent&gt;Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/TtsContent&gt;</p>
              */
             public Builder ttsContent(String ttsContent) {
                 this.ttsContent = ttsContent;
@@ -684,7 +781,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the alert resolution notification by phone.
+             * <p>The content of the alert resolution notification by phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;TtsRecoverContent&gt;Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}&lt;/TtsRecoverContent&gt;</p>
              */
             public Builder ttsRecoverContent(String ttsRecoverContent) {
                 this.ttsRecoverContent = ttsRecoverContent;
@@ -698,42 +798,51 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateNotificationPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
+     */
     public static class NotificationPolicy extends TeaModel {
-        @NameInMap("DirectedMode")
+        @com.aliyun.core.annotation.NameInMap("DirectedMode")
         private Boolean directedMode;
 
-        @NameInMap("EscalationPolicyId")
+        @com.aliyun.core.annotation.NameInMap("EscalationPolicyId")
         private Long escalationPolicyId;
 
-        @NameInMap("GroupRule")
+        @com.aliyun.core.annotation.NameInMap("GroupRule")
         private GroupRule groupRule;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IntegrationId")
+        @com.aliyun.core.annotation.NameInMap("IntegrationId")
         private Long integrationId;
 
-        @NameInMap("MatchingRules")
-        private java.util.List < MatchingRules> matchingRules;
+        @com.aliyun.core.annotation.NameInMap("MatchingRules")
+        private java.util.List<MatchingRules> matchingRules;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyRule")
+        @com.aliyun.core.annotation.NameInMap("NotifyRule")
         private NotifyRule notifyRule;
 
-        @NameInMap("NotifyTemplate")
+        @com.aliyun.core.annotation.NameInMap("NotifyTemplate")
         private NotifyTemplate notifyTemplate;
 
-        @NameInMap("Repeat")
+        @com.aliyun.core.annotation.NameInMap("Repeat")
         private Boolean repeat;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
-        @NameInMap("SendRecoverMessage")
+        @com.aliyun.core.annotation.NameInMap("SendRecoverMessage")
         private Boolean sendRecoverMessage;
+
+        @com.aliyun.core.annotation.NameInMap("State")
+        private String state;
 
         private NotificationPolicy(Builder builder) {
             this.directedMode = builder.directedMode;
@@ -748,6 +857,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             this.repeat = builder.repeat;
             this.repeatInterval = builder.repeatInterval;
             this.sendRecoverMessage = builder.sendRecoverMessage;
+            this.state = builder.state;
         }
 
         public static Builder builder() {
@@ -796,7 +906,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         /**
          * @return matchingRules
          */
-        public java.util.List < MatchingRules> getMatchingRules() {
+        public java.util.List<MatchingRules> getMatchingRules() {
             return this.matchingRules;
         }
 
@@ -842,22 +952,33 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             return this.sendRecoverMessage;
         }
 
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
         public static final class Builder {
             private Boolean directedMode; 
             private Long escalationPolicyId; 
             private GroupRule groupRule; 
             private Long id; 
             private Long integrationId; 
-            private java.util.List < MatchingRules> matchingRules; 
+            private java.util.List<MatchingRules> matchingRules; 
             private String name; 
             private NotifyRule notifyRule; 
             private NotifyTemplate notifyTemplate; 
             private Boolean repeat; 
             private Long repeatInterval; 
             private Boolean sendRecoverMessage; 
+            private String state; 
 
             /**
-             * 极简模式
+             * <p>Specifies whether to enable simple mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder directedMode(Boolean directedMode) {
                 this.directedMode = directedMode;
@@ -865,7 +986,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the escalation policy.
+             * <p>The ID of the escalation policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder escalationPolicyId(Long escalationPolicyId) {
                 this.escalationPolicyId = escalationPolicyId;
@@ -873,7 +997,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of alert event group objects.
+             * <p>An array of alert event group objects.</p>
              */
             public Builder groupRule(GroupRule groupRule) {
                 this.groupRule = groupRule;
@@ -881,7 +1005,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the notification policy.
+             * <p>The ID of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -889,7 +1016,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The integration ID of the ticket system to which alerts are pushed.
+             * <p>The integration ID of the ticket system to which alerts are pushed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder integrationId(Long integrationId) {
                 this.integrationId = integrationId;
@@ -897,15 +1027,18 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of alert event matching rule objects.
+             * <p>The matching rules.</p>
              */
-            public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
+            public Builder matchingRules(java.util.List<MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
                 return this;
             }
 
             /**
-             * The name of the notification policy.
+             * <p>The name of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>notificationpolicy_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -913,7 +1046,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of notification rule objects.
+             * <p>An array of notification rule objects.</p>
              */
             public Builder notifyRule(NotifyRule notifyRule) {
                 this.notifyRule = notifyRule;
@@ -921,7 +1054,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of notification template objects.
+             * <p>The notification template.</p>
              */
             public Builder notifyTemplate(NotifyTemplate notifyTemplate) {
                 this.notifyTemplate = notifyTemplate;
@@ -929,11 +1062,14 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:  
-             * <p>
+             * <p>Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The system resends a notification for a long-lasting unresolved alert at a specified time interval.</li>
+             * <li><code>false</code>: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.</li>
+             * </ul>
              * 
-             * - `true`: The system resends a notification for a long-lasting unresolved alert at a specified time interval.
-             * - `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder repeat(Boolean repeat) {
                 this.repeat = repeat;
@@ -941,7 +1077,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
+             * <p>The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -949,14 +1088,28 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:   
-             * <p>
+             * <p>Indicates whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. ARMS notifies contacts when the alert status changes to Resolved.</p>
+             * <ul>
+             * <li><code>true</code>: The system sends a notification.</li>
+             * <li><code>false</code>: The system does not send a notification.</li>
+             * </ul>
              * 
-             * - `true`: The system sends a notification.
-             * - `false`: The system does not send a notification.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
                 this.sendRecoverMessage = sendRecoverMessage;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the notification policy is enabled. Valid values: enable and disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
+             */
+            public Builder state(String state) {
+                this.state = state;
                 return this;
             }
 

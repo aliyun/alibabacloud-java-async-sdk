@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagKeysResponseBody</p>
  */
 public class ListTagKeysResponseBody extends TeaModel {
-    @NameInMap("Keys")
-    private java.util.List < String > keys;
+    @com.aliyun.core.annotation.NameInMap("Keys")
+    private java.util.List<String> keys;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListTagKeysResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     /**
      * @return keys
      */
-    public java.util.List < String > getKeys() {
+    public java.util.List<String> getKeys() {
         return this.keys;
     }
 
@@ -68,21 +73,24 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > keys; 
+        private java.util.List<String> keys; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
-        public Builder keys(java.util.List < String > keys) {
+        public Builder keys(java.util.List<String> keys) {
             this.keys = keys;
             return this;
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +98,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page.
+         * <p>The token that is used to retrieve the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87y29h80h20h3f2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +109,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36210B73-8262-4D08-9D3A-7F96789733C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

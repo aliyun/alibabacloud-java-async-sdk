@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadStreamByURLResponseBody} extends {@link TeaModel}
  *
  * <p>UploadStreamByURLResponseBody</p>
  */
 public class UploadStreamByURLResponseBody extends TeaModel {
-    @NameInMap("FileURL")
+    @com.aliyun.core.annotation.NameInMap("FileURL")
     private String fileURL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceURL")
+    @com.aliyun.core.annotation.NameInMap("SourceURL")
     private String sourceURL;
 
-    @NameInMap("StreamJobId")
+    @com.aliyun.core.annotation.NameInMap("StreamJobId")
     private String streamJobId;
 
     private UploadStreamByURLResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         private String streamJobId; 
 
         /**
-         * The URL of the OSS object.
+         * <p>The URL of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://outin-31059bcee7810a200163e1c8dba****.oss-cn-shanghai.aliyuncs.com/lesson-01.mp4">http://outin-31059bcee7810a200163e1c8dba****.oss-cn-shanghai.aliyuncs.com/lesson-01.mp4</a></p>
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -82,7 +90,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7AE96389-DF1E-598D-816B-7B40F13B4620</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +101,10 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the input stream. This parameter is used when you call the [GetURLUploadInfos](~~106830~~) operation.
+         * <p>The URL of the input stream. This parameter is used when you call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/lesson-01.mp4">https://example.com/lesson-01.mp4</a></p>
          */
         public Builder sourceURL(String sourceURL) {
             this.sourceURL = sourceURL;
@@ -98,10 +112,11 @@ public class UploadStreamByURLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stream upload job. This parameter is used when you call the [GetURLUploadInfos](~~106830~~) operation.
-         * <p>
+         * <p>The ID of the stream upload job. This parameter is used when you call the <a href="https://help.aliyun.com/document_detail/106830.html">GetURLUploadInfos</a> operation.</p>
+         * <p>In ApsaraVideo VOD, you can upload only one transcoded stream in an upload job. For more information, see the PlayInfo: the playback information about a video stream section in <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a>.</p>
          * 
-         * In ApsaraVideo VOD, you can upload only one transcoded stream in an upload job. For more information, see the PlayInfo: the playback information about a video stream section in [Basic structures](~~52839~~).
+         * <strong>example:</strong>
+         * <p>e304b34fb3d959f92baef97b6496****</p>
          */
         public Builder streamJobId(String streamJobId) {
             this.streamJobId = streamJobId;

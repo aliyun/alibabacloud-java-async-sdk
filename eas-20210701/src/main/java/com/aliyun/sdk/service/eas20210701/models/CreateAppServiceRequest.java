@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateAppServiceRequest</p>
  */
 public class CreateAppServiceRequest extends Request {
-    @Query
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @Body
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @Body
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @Body
-    @NameInMap("Config")
-    private java.util.Map < String, ? > config;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private java.util.Map<String, ?> config;
 
-    @Body
-    @NameInMap("Replicas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Replicas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer replicas;
 
-    @Body
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Body
-    @NameInMap("ServiceSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceSpec;
 
     private CreateAppServiceRequest(Builder builder) {
@@ -104,7 +109,7 @@ public class CreateAppServiceRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, ? > getConfig() {
+    public java.util.Map<String, ?> getConfig() {
         return this.config;
     }
 
@@ -134,7 +139,7 @@ public class CreateAppServiceRequest extends Request {
         private String workspaceId; 
         private String appType; 
         private String appVersion; 
-        private java.util.Map < String, ? > config; 
+        private java.util.Map<String, ?> config; 
         private Integer replicas; 
         private String serviceName; 
         private String serviceSpec; 
@@ -156,7 +161,10 @@ public class CreateAppServiceRequest extends Request {
         } 
 
         /**
-         * QuotaId.
+         * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef</p>
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -165,7 +173,10 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -174,7 +185,20 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>The application service type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>LLM</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LLM</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -183,7 +207,10 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder appVersion(String appVersion) {
             this.putBodyParameter("AppVersion", appVersion);
@@ -192,16 +219,20 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The additional configurations that are required for service deployment.</p>
          */
-        public Builder config(java.util.Map < String, ? > config) {
+        public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("Config", config);
             this.config = config;
             return this;
         }
 
         /**
-         * Replicas.
+         * <p>The number of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);
@@ -210,7 +241,11 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);
@@ -219,7 +254,23 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * ServiceSpec.
+         * <p>The service specifications. Valid values:</p>
+         * <ul>
+         * <li>llama_7b_fp16</li>
+         * <li>llama_7b_int8</li>
+         * <li>llama_13b_fp16</li>
+         * <li>llama_7b_int8</li>
+         * <li>chatglm_6b_fp16</li>
+         * <li>chatglm_6b_int8</li>
+         * <li>chatglm2_6b_fp16</li>
+         * <li>baichuan_7b_int8</li>
+         * <li>baichuan_13b_fp16</li>
+         * <li>baichuan_7b_fp16</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llama_7b_fp16</p>
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putBodyParameter("ServiceSpec", serviceSpec);

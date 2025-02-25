@@ -1,46 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubnetRequest} extends {@link RequestModel}
  *
  * <p>CreateSubnetRequest</p>
  */
 public class CreateSubnetRequest extends Request {
-    @Body
-    @NameInMap("Cidr")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cidr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidr;
 
-    @Body
-    @NameInMap("Name")
-    private String name;
-
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubnetName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String subnetName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Body
-    @NameInMap("VpdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpdId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpdId;
 
-    @Body
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateSubnetRequest(Builder builder) {
         super(builder);
         this.cidr = builder.cidr;
-        this.name = builder.name;
         this.regionId = builder.regionId;
+        this.subnetName = builder.subnetName;
+        this.tag = builder.tag;
         this.type = builder.type;
         this.vpdId = builder.vpdId;
         this.zoneId = builder.zoneId;
@@ -67,17 +82,24 @@ public class CreateSubnetRequest extends Request {
     }
 
     /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return subnetName
+     */
+    public String getSubnetName() {
+        return this.subnetName;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -103,8 +125,9 @@ public class CreateSubnetRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSubnetRequest, Builder> {
         private String cidr; 
-        private String name; 
         private String regionId; 
+        private String subnetName; 
+        private java.util.List<Tag> tag; 
         private String type; 
         private String vpdId; 
         private String zoneId; 
@@ -116,15 +139,24 @@ public class CreateSubnetRequest extends Request {
         private Builder(CreateSubnetRequest request) {
             super(request);
             this.cidr = request.cidr;
-            this.name = request.name;
             this.regionId = request.regionId;
+            this.subnetName = request.subnetName;
+            this.tag = request.tag;
             this.type = request.type;
             this.vpdId = request.vpdId;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * 网段
+         * <p>The CIDR block of the Subnet.</p>
+         * <ul>
+         * <li>The network segment of the subnet must be a proper subset of the network segment of Lingjun to which it belongs, and the mask must be between 16 bits and 29 bits, which can provide 8 to 65536 addresses. For example, the CIDR block of the Lingjun CIDR block is 192.168.0.0/16, and the CIDR blocks of the subnets under the Lingjun CIDR block are 192.168.0.0/17 to 192.168.0.0/29.</li>
+         * <li>The first and last three IP addresses of each subnet segment are reserved by the system. For example, the CIDR blocks of the subnet are 192.168.1.0/24,192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/16</p>
          */
         public Builder cidr(String cidr) {
             this.putBodyParameter("Cidr", cidr);
@@ -133,16 +165,11 @@ public class CreateSubnetRequest extends Request {
         }
 
         /**
-         * Subnet名称
-         */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * 地域
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,7 +178,38 @@ public class CreateSubnetRequest extends Request {
         }
 
         /**
-         * Subnet类型，非必选
+         * <p>Lingjun subnet instance name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-1</p>
+         */
+        public Builder subnetName(String subnetName) {
+            this.putBodyParameter("SubnetName", subnetName);
+            this.subnetName = subnetName;
+            return this;
+        }
+
+        /**
+         * <p>The tag information.</p>
+         * <p>You can specify up to 20 tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>Lingjun Subnet Usage Type; optional; optional. Valid values:</p>
+         * <ul>
+         * <li><strong>If you do not set this field for a common type</strong></li>
+         * <li><strong>OOB</strong> :OOB type</li>
+         * <li><strong>LB</strong>: LB type</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OOB</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -160,7 +218,11 @@ public class CreateSubnetRequest extends Request {
         }
 
         /**
-         * 所属VPD
+         * <p>The ID of the Lingjun CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-xcuhjyrj</p>
          */
         public Builder vpdId(String vpdId) {
             this.putBodyParameter("VpdId", vpdId);
@@ -169,7 +231,11 @@ public class CreateSubnetRequest extends Request {
         }
 
         /**
-         * 可用区
+         * <p>The zone ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);
@@ -184,4 +250,81 @@ public class CreateSubnetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSubnetRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSubnetRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag key of the VPN attachment.</p>
+             * <p>You cannot specify an empty string as a tag key. It can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+             * <p>You can specify at most 20 tag keys in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-subnet</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value of the VPN connection.</p>
+             * <p>The tag value can be empty or a string of up to 128 characters. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+             * <p>Each key-value pair must be unique. You can specify values for at most 20 tag keys in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet-tag-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

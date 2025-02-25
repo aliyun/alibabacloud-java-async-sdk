@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerSpecResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancerSpecResponseBody</p>
  */
 public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
-    @NameInMap("LoadBalancerSpecs")
-    private java.util.List < LoadBalancerSpecs> loadBalancerSpecs;
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSpecs")
+    private java.util.List<LoadBalancerSpecs> loadBalancerSpecs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLoadBalancerSpecResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     /**
      * @return loadBalancerSpecs
      */
-    public java.util.List < LoadBalancerSpecs> getLoadBalancerSpecs() {
+    public java.util.List<LoadBalancerSpecs> getLoadBalancerSpecs() {
         return this.loadBalancerSpecs;
     }
 
@@ -79,22 +84,25 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LoadBalancerSpecs> loadBalancerSpecs; 
+        private java.util.List<LoadBalancerSpecs> loadBalancerSpecs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * LoadBalancerSpecs.
+         * <p>The specifications. Valid values:</p>
          */
-        public Builder loadBalancerSpecs(java.util.List < LoadBalancerSpecs> loadBalancerSpecs) {
+        public Builder loadBalancerSpecs(java.util.List<LoadBalancerSpecs> loadBalancerSpecs) {
             this.loadBalancerSpecs = loadBalancerSpecs;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancerSpecResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerSpecResponseBody</p>
+     */
     public static class LoadBalancerSpecs extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("LoadBalancerSpec")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
         private String loadBalancerSpec;
 
         private LoadBalancerSpecs(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             private String loadBalancerSpec; 
 
             /**
-             * DisplayName.
+             * <p>The display name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elb.s1.small</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -178,7 +204,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerSpec.
+             * <p>The specifications of the ELB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elb.s1.small</p>
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;

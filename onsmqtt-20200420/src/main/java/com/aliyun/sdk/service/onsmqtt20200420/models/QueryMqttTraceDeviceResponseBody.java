@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMqttTraceDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMqttTraceDeviceResponseBody</p>
  */
 public class QueryMqttTraceDeviceResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("DeviceInfoList")
-    private java.util.List < DeviceInfoList> deviceInfoList;
+    @com.aliyun.core.annotation.NameInMap("DeviceInfoList")
+    private java.util.List<DeviceInfoList> deviceInfoList;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private QueryMqttTraceDeviceResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
     /**
      * @return deviceInfoList
      */
-    public java.util.List < DeviceInfoList> getDeviceInfoList() {
+    public java.util.List<DeviceInfoList> getDeviceInfoList() {
         return this.deviceInfoList;
     }
 
@@ -80,13 +85,16 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < DeviceInfoList> deviceInfoList; 
+        private java.util.List<DeviceInfoList> deviceInfoList; 
         private Integer pageSize; 
         private String requestId; 
         private Long total; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceInfoList.
+         * <p>The details of the action on the device.</p>
          */
-        public Builder deviceInfoList(java.util.List < DeviceInfoList> deviceInfoList) {
+        public Builder deviceInfoList(java.util.List<DeviceInfoList> deviceInfoList) {
             this.deviceInfoList = deviceInfoList;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>317076B7-F946-46BC-A98F-4CF9777C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of returned actions on the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -131,20 +148,26 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMqttTraceDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMqttTraceDeviceResponseBody</p>
+     */
     public static class DeviceInfoList extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionCode")
+        @com.aliyun.core.annotation.NameInMap("ActionCode")
         private String actionCode;
 
-        @NameInMap("ActionInfo")
+        @com.aliyun.core.annotation.NameInMap("ActionInfo")
         private String actionInfo;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private DeviceInfoList(Builder builder) {
@@ -206,7 +229,15 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * Action.
+             * <p>The action on the device. Valid values:</p>
+             * <ul>
+             * <li><strong>connect</strong>: The ApsaraMQ for MQTT client requests a connection to the ApsaraMQ for MQTT broker.</li>
+             * <li><strong>close</strong>: The TCP connection is closed.</li>
+             * <li><strong>disconnect</strong>: The ApsaraMQ for MQTT client requests a disconnection from the ApsaraMQ for MQTT broker.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>connect</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -214,7 +245,15 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ActionCode.
+             * <p>The returned code for the action on the device. Valid values:</p>
+             * <ul>
+             * <li><strong>mqtt.trace.action.connect</strong>: This value is returned if the value of Action is <strong>connect</strong>.</li>
+             * <li><strong>mqtt.trace.action.close</strong>: This value is returned if the value of Action is <strong>close</strong>.</li>
+             * <li><strong>mqtt.trace.action.disconnect</strong>: This value is returned if the value of Action is <strong>disconnect</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mqtt.trace.action.connect</p>
              */
             public Builder actionCode(String actionCode) {
                 this.actionCode = actionCode;
@@ -222,7 +261,21 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ActionInfo.
+             * <p>The returned information for the action on the device. Valid values:</p>
+             * <ul>
+             * <li><strong>accepted</strong>: The ApsaraMQ for MQTT broker accepts the connection request from the ApsaraMQ for MQTT client.</li>
+             * <li><strong>not authorized</strong>: The TCP connection is closed because the permission verification of the client to access the instance fails.</li>
+             * <li><strong>clientId conflict</strong>: The TCP connection is closed due to a conflict in the ID of the ApsaraMQ for MQTT client.</li>
+             * <li><strong>resource auth failed</strong>: The TCP connection is closed because the permission verification for the ApsaraMQ for MQTT client to access the topic or group fails.</li>
+             * <li><strong>no heart</strong>: The TCP connection is closed because no heartbeat is detected on the client.</li>
+             * <li><strong>closed by client</strong>: The TCP connection is closed because an exception occurs on the client.</li>
+             * <li><strong>disconnected by client</strong>: The client requests a disconnection.</li>
+             * <li><strong>invalid param</strong>: The TCP connection is closed due to invalid request parameters.</li>
+             * <li><strong>Socket IOException</strong>: The TCP connection is closed due to network jitter or packet loss.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -230,7 +283,10 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c69fe839209547fa9d073781b9cd****</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -238,7 +294,10 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the action occurred on the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-21 15:51:54.867</p>
              */
             public Builder time(String time) {
                 this.time = time;

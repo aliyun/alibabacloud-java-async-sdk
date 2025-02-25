@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceCountsResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceCountsResponseBody</p>
  */
 public class GetResourceCountsResponseBody extends TeaModel {
-    @NameInMap("Filters")
+    @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List < Filters> filters;
 
-    @NameInMap("GroupByKey")
+    @com.aliyun.core.annotation.NameInMap("GroupByKey")
     private String groupByKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceCounts")
+    @com.aliyun.core.annotation.NameInMap("ResourceCounts")
     private java.util.List < ResourceCounts> resourceCounts;
 
     private GetResourceCountsResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
         private java.util.List < ResourceCounts> resourceCounts; 
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.filters = filters;
@@ -82,7 +82,10 @@ public class GetResourceCountsResponseBody extends TeaModel {
         }
 
         /**
-         * The dimension by which resources are queried.
+         * <p>The dimension by which resources are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceType</p>
          */
         public Builder groupByKey(String groupByKey) {
             this.groupByKey = groupByKey;
@@ -90,7 +93,10 @@ public class GetResourceCountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D98D9B0-318D-56A4-910C-93B5F945AF2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
         }
 
         /**
-         * The numbers of resources.
+         * <p>The numbers of resources.</p>
          */
         public Builder resourceCounts(java.util.List < ResourceCounts> resourceCounts) {
             this.resourceCounts = resourceCounts;
@@ -111,11 +117,17 @@ public class GetResourceCountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceCountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceCountsResponseBody</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private Filters(Builder builder) {
@@ -150,7 +162,10 @@ public class GetResourceCountsResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * The key of the filter condition.
+             * <p>The key of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,7 +173,7 @@ public class GetResourceCountsResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the filter condition.
+             * <p>The values of the filter condition.</p>
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -172,11 +187,17 @@ public class GetResourceCountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceCountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceCountsResponseBody</p>
+     */
     public static class ResourceCounts extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private ResourceCounts(Builder builder) {
@@ -211,7 +232,10 @@ public class GetResourceCountsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The number of resources.
+             * <p>The number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -219,7 +243,10 @@ public class GetResourceCountsResponseBody extends TeaModel {
             }
 
             /**
-             * The group name.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::NetworkInterface</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

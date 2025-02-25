@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVirtualPhysicalConnectionsRequest} extends {@link RequestModel}
  *
  * <p>ListVirtualPhysicalConnectionsRequest</p>
  */
 public class ListVirtualPhysicalConnectionsRequest extends Request {
-    @Query
-    @NameInMap("IsConfirmed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsConfirmed")
     private Boolean isConfirmed;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PhysicalConnectionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
     private String physicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @Query
-    @NameInMap("VirtualPhysicalConnectionAliUids")
-    private java.util.List < String > virtualPhysicalConnectionAliUids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionAliUids")
+    private java.util.List<String> virtualPhysicalConnectionAliUids;
 
-    @Query
-    @NameInMap("VirtualPhysicalConnectionBusinessStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionBusinessStatus")
     private String virtualPhysicalConnectionBusinessStatus;
 
-    @Query
-    @NameInMap("VirtualPhysicalConnectionIds")
-    private java.util.List < String > virtualPhysicalConnectionIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionIds")
+    private java.util.List<String> virtualPhysicalConnectionIds;
 
-    @Query
-    @NameInMap("VirtualPhysicalConnectionStatuses")
-    private java.util.List < String > virtualPhysicalConnectionStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionStatuses")
+    private java.util.List<String> virtualPhysicalConnectionStatuses;
 
-    @Query
-    @NameInMap("VlanIds")
-    private java.util.List < String > vlanIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VlanIds")
+    private java.util.List<String> vlanIds;
 
     private ListVirtualPhysicalConnectionsRequest(Builder builder) {
         super(builder);
@@ -135,14 +140,14 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return virtualPhysicalConnectionAliUids
      */
-    public java.util.List < String > getVirtualPhysicalConnectionAliUids() {
+    public java.util.List<String> getVirtualPhysicalConnectionAliUids() {
         return this.virtualPhysicalConnectionAliUids;
     }
 
@@ -156,21 +161,21 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
     /**
      * @return virtualPhysicalConnectionIds
      */
-    public java.util.List < String > getVirtualPhysicalConnectionIds() {
+    public java.util.List<String> getVirtualPhysicalConnectionIds() {
         return this.virtualPhysicalConnectionIds;
     }
 
     /**
      * @return virtualPhysicalConnectionStatuses
      */
-    public java.util.List < String > getVirtualPhysicalConnectionStatuses() {
+    public java.util.List<String> getVirtualPhysicalConnectionStatuses() {
         return this.virtualPhysicalConnectionStatuses;
     }
 
     /**
      * @return vlanIds
      */
-    public java.util.List < String > getVlanIds() {
+    public java.util.List<String> getVlanIds() {
         return this.vlanIds;
     }
 
@@ -181,12 +186,12 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         private String physicalConnectionId; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > virtualPhysicalConnectionAliUids; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> virtualPhysicalConnectionAliUids; 
         private String virtualPhysicalConnectionBusinessStatus; 
-        private java.util.List < String > virtualPhysicalConnectionIds; 
-        private java.util.List < String > virtualPhysicalConnectionStatuses; 
-        private java.util.List < String > vlanIds; 
+        private java.util.List<String> virtualPhysicalConnectionIds; 
+        private java.util.List<String> virtualPhysicalConnectionStatuses; 
+        private java.util.List<String> vlanIds; 
 
         private Builder() {
             super();
@@ -209,11 +214,14 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         } 
 
         /**
-         * Specifies whether the hosted connection is accepted by the tenant. Valid values:
-         * <p>
+         * <p>Specifies whether the hosted connection is accepted by the tenant. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isConfirmed(Boolean isConfirmed) {
             this.putQueryParameter("IsConfirmed", isConfirmed);
@@ -222,7 +230,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -231,11 +242,14 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>dd20****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -244,10 +258,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit over which the hosted connections are created.
-         * <p>
+         * <p>The ID of the Express Connect circuit over which the hosted connections are created.</p>
+         * <p>Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.</p>
          * 
-         * Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.
+         * <strong>example:</strong>
+         * <p>pc-bp1ciz7ekd2grn1as****</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -256,10 +271,12 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The region ID of the hosted connection.
-         * <p>
+         * <p>The region ID of the hosted connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +285,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the hosted connection belongs.
+         * <p>The ID of the resource group to which the hosted connection belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -277,30 +297,36 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * The information about the Alibaba Cloud account that owns the hosted connection.
+         * <p>The information about the Alibaba Cloud account that owns the hosted connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>189xxx</p>
          */
-        public Builder virtualPhysicalConnectionAliUids(java.util.List < String > virtualPhysicalConnectionAliUids) {
+        public Builder virtualPhysicalConnectionAliUids(java.util.List<String> virtualPhysicalConnectionAliUids) {
             this.putQueryParameter("VirtualPhysicalConnectionAliUids", virtualPhysicalConnectionAliUids);
             this.virtualPhysicalConnectionAliUids = virtualPhysicalConnectionAliUids;
             return this;
         }
 
         /**
-         * The business status of the hosted connection. Valid values:
-         * <p>
+         * <p>The business status of the hosted connection. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * <li><strong>SecurityLocked</strong></li>
+         * </ul>
          * 
-         * *   **Normal**
-         * *   **FinancialLocked**
-         * *   **SecurityLocked**
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder virtualPhysicalConnectionBusinessStatus(String virtualPhysicalConnectionBusinessStatus) {
             this.putQueryParameter("VirtualPhysicalConnectionBusinessStatus", virtualPhysicalConnectionBusinessStatus);
@@ -309,27 +335,36 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The information about the hosted connection.
+         * <p>The information about the hosted connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxx</p>
          */
-        public Builder virtualPhysicalConnectionIds(java.util.List < String > virtualPhysicalConnectionIds) {
+        public Builder virtualPhysicalConnectionIds(java.util.List<String> virtualPhysicalConnectionIds) {
             this.putQueryParameter("VirtualPhysicalConnectionIds", virtualPhysicalConnectionIds);
             this.virtualPhysicalConnectionIds = virtualPhysicalConnectionIds;
             return this;
         }
 
         /**
-         * The business status of the hosted connection.
+         * <p>The business status of the hosted connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxx</p>
          */
-        public Builder virtualPhysicalConnectionStatuses(java.util.List < String > virtualPhysicalConnectionStatuses) {
+        public Builder virtualPhysicalConnectionStatuses(java.util.List<String> virtualPhysicalConnectionStatuses) {
             this.putQueryParameter("VirtualPhysicalConnectionStatuses", virtualPhysicalConnectionStatuses);
             this.virtualPhysicalConnectionStatuses = virtualPhysicalConnectionStatuses;
             return this;
         }
 
         /**
-         * The VLAN ID of the hosted connection.
+         * <p>The VLAN ID of the hosted connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxx</p>
          */
-        public Builder vlanIds(java.util.List < String > vlanIds) {
+        public Builder vlanIds(java.util.List<String> vlanIds) {
             this.putQueryParameter("VlanIds", vlanIds);
             this.vlanIds = vlanIds;
             return this;
@@ -342,11 +377,17 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListVirtualPhysicalConnectionsRequest} extends {@link TeaModel}
+     *
+     * <p>ListVirtualPhysicalConnectionsRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -381,10 +422,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,10 +434,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

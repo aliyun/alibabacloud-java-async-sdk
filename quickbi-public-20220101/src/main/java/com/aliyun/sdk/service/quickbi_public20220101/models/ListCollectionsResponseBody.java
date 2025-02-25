@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCollectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCollectionsResponseBody</p>
  */
 public class ListCollectionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCollectionsResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListCollectionsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,11 +63,14 @@ public class ListCollectionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162A632E-0A88-51CF-98F8-94FDEE82DB7D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +80,16 @@ public class ListCollectionsResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The primary key ID of the favorite record.
+         * <p>The primary key ID of the favorite record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,26 +102,32 @@ public class ListCollectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCollectionsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("FavoriteId")
+        @com.aliyun.core.annotation.NameInMap("FavoriteId")
         private Integer favoriteId;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("WorksId")
+        @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;
 
-        @NameInMap("WorksName")
+        @com.aliyun.core.annotation.NameInMap("WorksName")
         private String worksName;
 
-        @NameInMap("WorksType")
+        @com.aliyun.core.annotation.NameInMap("WorksType")
         private String worksType;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Result(Builder builder) {

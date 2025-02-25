@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHubClustersResponseBody</p>
  */
 public class DescribeHubClustersResponseBody extends TeaModel {
-    @NameInMap("Clusters")
+    @com.aliyun.core.annotation.NameInMap("Clusters")
     private java.util.List < Clusters> clusters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHubClustersResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clusters.
+         * The information about clusters.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +57,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     } 
 
     public static class ApiServer extends TeaModel {
-        @NameInMap("ApiServerEipId")
+        @com.aliyun.core.annotation.NameInMap("ApiServerEipId")
         private String apiServerEipId;
 
-        @NameInMap("EnabledPublic")
+        @com.aliyun.core.annotation.NameInMap("EnabledPublic")
         private Boolean enabledPublic;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
         private ApiServer(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String loadBalancerId; 
 
             /**
-             * ApiServerEipId.
+             * The elastic IP address (EIP) ID.
              */
             public Builder apiServerEipId(String apiServerEipId) {
                 this.apiServerEipId = apiServerEipId;
@@ -130,7 +129,11 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledPublic.
+             * Indicates whether the public endpoint is enabled for the API server. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enabledPublic(Boolean enabledPublic) {
                 this.enabledPublic = enabledPublic;
@@ -138,7 +141,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * The ID of the Server Load Balancer (SLB) instance that is associated with the cluster.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -152,35 +155,102 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ClusterInfo extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterSpec")
+        @com.aliyun.core.annotation.NameInMap("ClusterSpec")
         private String clusterSpec;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
+        private String resourceGroupID;
+
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ClusterInfo(Builder builder) {
@@ -191,7 +261,9 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             this.name = builder.name;
             this.profile = builder.profile;
             this.regionId = builder.regionId;
+            this.resourceGroupID = builder.resourceGroupID;
             this.state = builder.state;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
             this.version = builder.version;
         }
@@ -254,10 +326,24 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupID
+         */
+        public String getResourceGroupID() {
+            return this.resourceGroupID;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
             return this.state;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -282,12 +368,14 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String name; 
             private String profile; 
             private String regionId; 
+            private String resourceGroupID; 
             private String state; 
+            private java.util.List < Tags> tags; 
             private String updateTime; 
             private String version; 
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -295,7 +383,10 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterSpec.
+             * The specifications of the cluster.
+             * <p>
+             * 
+             * *   Only ack.pro.small may be returned.
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -303,7 +394,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the cluster was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -311,7 +402,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that is returned if the cluster failed to be created.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -319,7 +410,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The cluster name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +418,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The configurations of the cluster.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -335,7 +426,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -343,7 +434,24 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The resource group ID.
+             */
+            public Builder resourceGroupID(String resourceGroupID) {
+                this.resourceGroupID = resourceGroupID;
+                return this;
+            }
+
+            /**
+             * The state of the cluster. Valid values:
+             * <p>
+             * 
+             * *   initial: The cluster is being initialized.
+             * *   failed: The cluster failed to be created.
+             * *   running: The cluster is running
+             * *   inactive: The cluster is not activated.
+             * *   deleting: The cluster is being deleted.
+             * *   delete_failed: The cluster failed to be deleted.
+             * *   deleted: The cluster is deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -351,7 +459,15 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The time when the cluster was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -359,7 +475,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the cluster.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -374,16 +490,16 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Conditions(Builder builder) {
@@ -436,7 +552,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -444,7 +560,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the deletion condition.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -452,7 +568,12 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the cluster that the deletion condition indicates. Valid values:
+             * <p>
+             * 
+             * *   True: The cluster cannot be deleted.
+             * *   False: The cluster can be deleted.
+             * *   Unknow: Whether the cluster can be deleted is unknown.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -460,7 +581,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of deletion condition.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -475,10 +596,10 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Endpoints extends TeaModel {
-        @NameInMap("IntranetApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("IntranetApiServerEndpoint")
         private String intranetApiServerEndpoint;
 
-        @NameInMap("PublicApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PublicApiServerEndpoint")
         private String publicApiServerEndpoint;
 
         private Endpoints(Builder builder) {
@@ -513,7 +634,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String publicApiServerEndpoint; 
 
             /**
-             * IntranetApiServerEndpoint.
+             * The internal endpoint of the API server.
              */
             public Builder intranetApiServerEndpoint(String intranetApiServerEndpoint) {
                 this.intranetApiServerEndpoint = intranetApiServerEndpoint;
@@ -521,7 +642,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * PublicApiServerEndpoint.
+             * The public endpoint of the API server.
              */
             public Builder publicApiServerEndpoint(String publicApiServerEndpoint) {
                 this.publicApiServerEndpoint = publicApiServerEndpoint;
@@ -536,13 +657,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class LogConfig extends TeaModel {
-        @NameInMap("EnableLog")
+        @com.aliyun.core.annotation.NameInMap("EnableLog")
         private Boolean enableLog;
 
-        @NameInMap("LogProject")
+        @com.aliyun.core.annotation.NameInMap("LogProject")
         private String logProject;
 
-        @NameInMap("LogStoreTTL")
+        @com.aliyun.core.annotation.NameInMap("LogStoreTTL")
         private String logStoreTTL;
 
         private LogConfig(Builder builder) {
@@ -586,7 +707,11 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String logStoreTTL; 
 
             /**
-             * EnableLog.
+             * Indicates whether the audit logging feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableLog(Boolean enableLog) {
                 this.enableLog = enableLog;
@@ -594,7 +719,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LogProject.
+             * The name of the project in Simple Log Service.
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -602,7 +727,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreTTL.
+             * The number of days that logs are retained by Simple Log Service.
              */
             public Builder logStoreTTL(String logStoreTTL) {
                 this.logStoreTTL = logStoreTTL;
@@ -617,10 +742,10 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class MeshConfig extends TeaModel {
-        @NameInMap("EnableMesh")
+        @com.aliyun.core.annotation.NameInMap("EnableMesh")
         private Boolean enableMesh;
 
-        @NameInMap("MeshId")
+        @com.aliyun.core.annotation.NameInMap("MeshId")
         private String meshId;
 
         private MeshConfig(Builder builder) {
@@ -655,7 +780,11 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String meshId; 
 
             /**
-             * EnableMesh.
+             * Indicates whether ASM is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableMesh(Boolean enableMesh) {
                 this.enableMesh = enableMesh;
@@ -663,7 +792,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MeshId.
+             * The ASM instance ID.
              */
             public Builder meshId(String meshId) {
                 this.meshId = meshId;
@@ -678,16 +807,16 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("ClusterDomain")
+        @com.aliyun.core.annotation.NameInMap("ClusterDomain")
         private String clusterDomain;
 
-        @NameInMap("SecurityGroupIDs")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIDs")
         private java.util.List < String > securityGroupIDs;
 
-        @NameInMap("VSwitches")
+        @com.aliyun.core.annotation.NameInMap("VSwitches")
         private java.util.List < String > vSwitches;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Network(Builder builder) {
@@ -740,7 +869,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterDomain.
+             * The domain name of the cluster.
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -748,7 +877,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIDs.
+             * The security group IDs.
              */
             public Builder securityGroupIDs(java.util.List < String > securityGroupIDs) {
                 this.securityGroupIDs = securityGroupIDs;
@@ -756,7 +885,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitches.
+             * The IDs of vSwitches to which the cluster belongs.
              */
             public Builder vSwitches(java.util.List < String > vSwitches) {
                 this.vSwitches = vSwitches;
@@ -764,7 +893,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the cluster belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -779,25 +908,25 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Clusters extends TeaModel {
-        @NameInMap("ApiServer")
+        @com.aliyun.core.annotation.NameInMap("ApiServer")
         private ApiServer apiServer;
 
-        @NameInMap("ClusterInfo")
+        @com.aliyun.core.annotation.NameInMap("ClusterInfo")
         private ClusterInfo clusterInfo;
 
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private Endpoints endpoints;
 
-        @NameInMap("LogConfig")
+        @com.aliyun.core.annotation.NameInMap("LogConfig")
         private LogConfig logConfig;
 
-        @NameInMap("MeshConfig")
+        @com.aliyun.core.annotation.NameInMap("MeshConfig")
         private MeshConfig meshConfig;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
         private Clusters(Builder builder) {
@@ -877,7 +1006,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private Network network; 
 
             /**
-             * ApiServer.
+             * The information about the API server.
              */
             public Builder apiServer(ApiServer apiServer) {
                 this.apiServer = apiServer;
@@ -885,7 +1014,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterInfo.
+             * The details of the cluster.
              */
             public Builder clusterInfo(ClusterInfo clusterInfo) {
                 this.clusterInfo = clusterInfo;
@@ -893,7 +1022,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Conditions.
+             * The deletion conditions of the cluster.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -901,7 +1030,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The endpoints of the cluster.
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -909,7 +1038,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LogConfig.
+             * The logging configurations.
              */
             public Builder logConfig(LogConfig logConfig) {
                 this.logConfig = logConfig;
@@ -917,7 +1046,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MeshConfig.
+             * The configurations of Alibaba Cloud Service Mesh (ASM).
              */
             public Builder meshConfig(MeshConfig meshConfig) {
                 this.meshConfig = meshConfig;
@@ -925,7 +1054,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network configurations of the cluster.
              */
             public Builder network(Network network) {
                 this.network = network;

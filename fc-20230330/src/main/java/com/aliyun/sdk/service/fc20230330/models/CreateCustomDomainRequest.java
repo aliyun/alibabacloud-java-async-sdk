@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomDomainRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomDomainRequest</p>
  */
 public class CreateCustomDomainRequest extends Request {
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CreateCustomDomainInput body;
 
     private CreateCustomDomainRequest(Builder builder) {
@@ -55,7 +55,8 @@ public class CreateCustomDomainRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The information about the custom domain name.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(CreateCustomDomainInput body) {
             this.putBodyParameter("body", body);

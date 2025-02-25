@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDnsHostResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDnsHostResponseBody</p>
  */
 public class QueryDnsHostResponseBody extends TeaModel {
-    @NameInMap("DnsHostList")
+    @com.aliyun.core.annotation.NameInMap("DnsHostList")
     private java.util.List < DnsHostList> dnsHostList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDnsHostResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class QueryDnsHostResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDnsHostResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDnsHostResponseBody</p>
+     */
     public static class DnsHostList extends TeaModel {
-        @NameInMap("DnsName")
+        @com.aliyun.core.annotation.NameInMap("DnsName")
         private String dnsName;
 
-        @NameInMap("IpList")
+        @com.aliyun.core.annotation.NameInMap("IpList")
         private java.util.List < String > ipList;
 
         private DnsHostList(Builder builder) {

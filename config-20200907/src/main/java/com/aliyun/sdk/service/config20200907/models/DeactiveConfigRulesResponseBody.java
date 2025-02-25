@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeactiveConfigRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DeactiveConfigRulesResponseBody</p>
  */
 public class DeactiveConfigRulesResponseBody extends TeaModel {
-    @NameInMap("OperateRuleResult")
+    @com.aliyun.core.annotation.NameInMap("OperateRuleResult")
     private OperateRuleResult operateRuleResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeactiveConfigRulesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results of the operations to disable the specified rules.
+         * <p>The results of the operations that are performed to disable the specified rules.</p>
          */
         public Builder operateRuleResult(OperateRuleResult operateRuleResult) {
             this.operateRuleResult = operateRuleResult;
@@ -58,7 +63,10 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54FA74D9-45D4-4CA5-9BE1-97F6EA19AF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeactiveConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeactiveConfigRulesResponseBody</p>
+     */
     public static class OperateRuleItemList extends TeaModel {
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private OperateRuleItemList(Builder builder) {
@@ -122,7 +136,10 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The ID of the rule.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-19a56457e0d90058****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -130,14 +147,14 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>If the rule is disabled, no error code is returned.</li>
+             * <li>If the rule fails to be disabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+             * </ul>
              * 
-             * *   If the rule is disabled, no error code is returned.
-             * 
-             * <!---->
-             * 
-             * *   If the rule fails to be disabled, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+             * <strong>example:</strong>
+             * <p>ConfigRuleCanNotDelete</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -145,11 +162,14 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true: The operation is successful.
-             * *   false: The operation fails.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -163,9 +183,15 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeactiveConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeactiveConfigRulesResponseBody</p>
+     */
     public static class OperateRuleResult extends TeaModel {
-        @NameInMap("OperateRuleItemList")
-        private java.util.List < OperateRuleItemList> operateRuleItemList;
+        @com.aliyun.core.annotation.NameInMap("OperateRuleItemList")
+        private java.util.List<OperateRuleItemList> operateRuleItemList;
 
         private OperateRuleResult(Builder builder) {
             this.operateRuleItemList = builder.operateRuleItemList;
@@ -182,17 +208,17 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
         /**
          * @return operateRuleItemList
          */
-        public java.util.List < OperateRuleItemList> getOperateRuleItemList() {
+        public java.util.List<OperateRuleItemList> getOperateRuleItemList() {
             return this.operateRuleItemList;
         }
 
         public static final class Builder {
-            private java.util.List < OperateRuleItemList> operateRuleItemList; 
+            private java.util.List<OperateRuleItemList> operateRuleItemList; 
 
             /**
-             * The result of the operation to disable the rule.
+             * <p>The operations that are performed to disable the rule.</p>
              */
-            public Builder operateRuleItemList(java.util.List < OperateRuleItemList> operateRuleItemList) {
+            public Builder operateRuleItemList(java.util.List<OperateRuleItemList> operateRuleItemList) {
                 this.operateRuleItemList = operateRuleItemList;
                 return this;
             }

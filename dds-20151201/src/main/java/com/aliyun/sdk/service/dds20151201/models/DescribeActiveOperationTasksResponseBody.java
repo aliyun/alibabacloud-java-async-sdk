@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActiveOperationTasksResponseBody</p>
  */
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeActiveOperationTasksResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,22 +84,25 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalRecordCount; 
 
         /**
-         * The list of O\&M tasks.
+         * <p>The O&amp;M tasks.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111E7B16-0A87-4CBA-B271-F34AD61E099F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,83 +148,89 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeActiveOperationTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActiveOperationTasksResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AllowCancel")
+        @com.aliyun.core.annotation.NameInMap("AllowCancel")
         private String allowCancel;
 
-        @NameInMap("AllowChange")
+        @com.aliyun.core.annotation.NameInMap("AllowChange")
         private String allowChange;
 
-        @NameInMap("ChangeLevel")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevel")
         private String changeLevel;
 
-        @NameInMap("ChangeLevelEn")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevelEn")
         private String changeLevelEn;
 
-        @NameInMap("ChangeLevelZh")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevelZh")
         private String changeLevelZh;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CurrentAVZ")
+        @com.aliyun.core.annotation.NameInMap("CurrentAVZ")
         private String currentAVZ;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbVersion")
+        @com.aliyun.core.annotation.NameInMap("DbVersion")
         private String dbVersion;
 
-        @NameInMap("Deadline")
+        @com.aliyun.core.annotation.NameInMap("Deadline")
         private String deadline;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("ImpactEn")
+        @com.aliyun.core.annotation.NameInMap("ImpactEn")
         private String impactEn;
 
-        @NameInMap("ImpactZh")
+        @com.aliyun.core.annotation.NameInMap("ImpactZh")
         private String impactZh;
 
-        @NameInMap("InsComment")
+        @com.aliyun.core.annotation.NameInMap("InsComment")
         private String insComment;
 
-        @NameInMap("InsName")
+        @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PrepareInterval")
+        @com.aliyun.core.annotation.NameInMap("PrepareInterval")
         private String prepareInterval;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResultInfo")
+        @com.aliyun.core.annotation.NameInMap("ResultInfo")
         private String resultInfo;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubInsNames")
-        private java.util.List < String > subInsNames;
+        @com.aliyun.core.annotation.NameInMap("SubInsNames")
+        private java.util.List<String> subInsNames;
 
-        @NameInMap("SwitchTime")
+        @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeEn")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeEn")
         private String taskTypeEn;
 
-        @NameInMap("TaskTypeZh")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeZh")
         private String taskTypeZh;
 
         private Items(Builder builder) {
@@ -397,7 +420,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * @return subInsNames
          */
-        public java.util.List < String > getSubInsNames() {
+        public java.util.List<String> getSubInsNames() {
             return this.subInsNames;
         }
 
@@ -451,14 +474,17 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             private String resultInfo; 
             private String startTime; 
             private Integer status; 
-            private java.util.List < String > subInsNames; 
+            private java.util.List<String> subInsNames; 
             private String switchTime; 
             private String taskType; 
             private String taskTypeEn; 
             private String taskTypeZh; 
 
             /**
-             * N/A
+             * <p>N/A</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder allowCancel(String allowCancel) {
                 this.allowCancel = allowCancel;
@@ -466,11 +492,14 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the time can be changed. Valid values:
-             * <p>
+             * <p>Indicates whether the modification operation is allowed.</p>
+             * <ul>
+             * <li><strong>0</strong>: The modification operation is not allowed.</li>
+             * <li><strong>1</strong>: The modification operation is allowed.</li>
+             * </ul>
              * 
-             * *   **0**: The time cannot be changed.
-             * *   **1**: The time can be changed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder allowChange(String allowChange) {
                 this.allowChange = allowChange;
@@ -478,7 +507,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The change type.
+             * <p>The change level of the O&amp;M task.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder changeLevel(String changeLevel) {
                 this.changeLevel = changeLevel;
@@ -486,7 +518,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * N/A
+             * <p>N/A</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder changeLevelEn(String changeLevelEn) {
                 this.changeLevelEn = changeLevelEn;
@@ -494,7 +529,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The change type in Chinese.
+             * <p>The task type in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder changeLevelZh(String changeLevelZh) {
                 this.changeLevelZh = changeLevelZh;
@@ -502,7 +540,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-14 10:48:43</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -510,7 +551,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * N/A
+             * <p>N/A</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder currentAVZ(String currentAVZ) {
                 this.currentAVZ = currentAVZ;
@@ -518,7 +562,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongoDb</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -526,7 +573,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * <p>The version of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -534,7 +584,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task.
+             * <p>The end time of the O&amp;M task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646014421633</p>
              */
             public Builder deadline(String deadline) {
                 this.deadline = deadline;
@@ -542,7 +595,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -550,7 +606,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * N/A
+             * <p>N/A</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder impactEn(String impactEn) {
                 this.impactEn = impactEn;
@@ -558,7 +617,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * N/A
+             * <p>N/A</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder impactZh(String impactZh) {
                 this.impactZh = impactZh;
@@ -566,7 +628,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder insComment(String insComment) {
                 this.insComment = insComment;
@@ -574,7 +639,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -582,7 +650,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was modified. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.
+             * <p>The time when the task is modified. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-24T09:48:01Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -590,7 +661,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The required preparation period between the task start time and the switchover time. The time is displayed in the *HH:mm:ss* format.
+             * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the <em>HH:mm:ss</em> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder prepareInterval(String prepareInterval) {
                 this.prepareInterval = prepareInterval;
@@ -598,7 +672,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the instance.
+             * <p>The region of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -606,7 +683,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The result information. This parameter can be ignored.
+             * <p>The result information. The value of this parameter can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -614,7 +694,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the task. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.
+             * <p>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em> T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-24T06:01:05Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -622,7 +705,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * N/A
+             * <p>N/A</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -630,15 +716,18 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the subinstances.
+             * <p>The subinstances.</p>
              */
-            public Builder subInsNames(java.util.List < String > subInsNames) {
+            public Builder subInsNames(java.util.List<String> subInsNames) {
                 this.subInsNames = subInsNames;
                 return this;
             }
 
             /**
-             * The time when the task was interrupted. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in Coordinated Universal Time (UTC).
+             * <p>The switchover point in time in which disconnection may occur. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-24T11:20:00Z</p>
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -646,7 +735,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -654,7 +746,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * N/A
+             * <p>N/A</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder taskTypeEn(String taskTypeEn) {
                 this.taskTypeEn = taskTypeEn;
@@ -662,7 +757,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task in Chinese.
+             * <p>The task type in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder taskTypeZh(String taskTypeZh) {
                 this.taskTypeZh = taskTypeZh;

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPolicyRequest</p>
  */
 public class DescribeBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupPolicyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPolicyMode")
     private String backupPolicyMode;
 
-    @Query
-    @NameInMap("CompressType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompressType")
     private String compressType;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReleasedKeepPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleasedKeepPolicy")
     private String releasedKeepPolicy;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeBackupPolicyRequest(Builder builder) {
@@ -153,11 +158,14 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The backup type. Valid values:
-         * <p>
+         * <p>The backup type. Valid values:</p>
+         * <ul>
+         * <li><strong>DataBackupPolicy</strong>: data backup</li>
+         * <li><strong>LogBackupPolicy</strong>: log backup</li>
+         * </ul>
          * 
-         * *   **DataBackupPolicy**: data backup
-         * *   **LogBackupPolicy**: log backup
+         * <strong>example:</strong>
+         * <p>DataBackupPolicy</p>
          */
         public Builder backupPolicyMode(String backupPolicyMode) {
             this.putQueryParameter("BackupPolicyMode", backupPolicyMode);
@@ -166,14 +174,17 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * The method that is used to compress backup data. Valid values:
-         * <p>
+         * <p>The method that is used to compress backup data. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Backup data is not compressed.</li>
+         * <li><strong>1</strong>: Backup data is compressed by using zlib.</li>
+         * <li><strong>2</strong>: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</li>
+         * <li><strong>4</strong>: Backup data is compressed by using QuickLZ and can be used to restore individual databases or tables.</li>
+         * <li><strong>8</strong>: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables.</li>
+         * </ul>
          * 
-         * *   **0**: Backup data is not compressed.
-         * *   **1**: Backup data is compressed by using zlib.
-         * *   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.
-         * *   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.
-         * *   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder compressType(String compressType) {
             this.putQueryParameter("CompressType", compressType);
@@ -182,7 +193,11 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -209,12 +224,15 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy that is used to retain archived backup files if the instance is released. Valid values:
-         * <p>
+         * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
+         * <ul>
+         * <li><strong>None</strong>: No archived backup files are retained.</li>
+         * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
+         * <li><strong>All</strong>: All archived backup files are retained.</li>
+         * </ul>
          * 
-         * *   **None**: No archived backup files are retained.
-         * *   **Lastest**: Only the last archived backup file is retained.
-         * *   **All**: All archived backup files are retained.
+         * <strong>example:</strong>
+         * <p>Lastest</p>
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.putQueryParameter("ReleasedKeepPolicy", releasedKeepPolicy);

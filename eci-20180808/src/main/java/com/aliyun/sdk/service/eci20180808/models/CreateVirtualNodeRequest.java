@@ -1,98 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualNodeRequest} extends {@link RequestModel}
  *
  * <p>CreateVirtualNodeRequest</p>
  */
 public class CreateVirtualNodeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterDNS")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterDNS")
     private String clusterDNS;
 
-    @Query
-    @NameInMap("ClusterDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterDomain")
     private String clusterDomain;
 
-    @Query
-    @NameInMap("CustomResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomResources")
     private String customResources;
 
-    @Query
-    @NameInMap("EipInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipInstanceId")
     private String eipInstanceId;
 
-    @Query
-    @NameInMap("EnablePublicNetwork")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnablePublicNetwork")
     private Boolean enablePublicNetwork;
 
-    @Query
-    @NameInMap("KubeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KubeConfig")
     private String kubeConfig;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Taint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Taint")
     private java.util.List < Taint> taint;
 
-    @Query
-    @NameInMap("TlsBootstrapEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsBootstrapEnabled")
     private Boolean tlsBootstrapEnabled;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VirtualNodeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualNodeName")
     private String virtualNodeName;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateVirtualNodeRequest(Builder builder) {
@@ -323,7 +323,10 @@ public class CreateVirtualNodeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -332,7 +335,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The IP address of the DNS server. If dnsPolicy=ClusterFirst is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).
+         * <p>The IP address of the DNS server. If dnsPolicy=ClusterFirst is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.1.XX.XX</p>
          */
         public Builder clusterDNS(String clusterDNS) {
             this.putQueryParameter("ClusterDNS", clusterDNS);
@@ -341,7 +347,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The domain name of the cluster. If this parameter is specified, in addition to the search domain of the host, Kubelet configures all containers to search for the specified domain name.
+         * <p>The domain name of the cluster. If this parameter is specified, in addition to the search domain of the host, Kubelet configures all containers to search for the specified domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder clusterDomain(String clusterDomain) {
             this.putQueryParameter("ClusterDomain", clusterDomain);
@@ -350,7 +359,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the Resource name = Number of resources format to specify custom resources. Separate multiple resources with commas (,).
+         * <p>The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the Resource name = Number of resources format to specify custom resources. Separate multiple resources with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1.com=100,example2.com=200</p>
          */
         public Builder customResources(String customResources) {
             this.putQueryParameter("CustomResources", customResources);
@@ -359,7 +371,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The ID of the elastic IP address (EIP).
+         * <p>The ID of the elastic IP address (EIP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-uf66jeqopgqa9hdn****</p>
          */
         public Builder eipInstanceId(String eipInstanceId) {
             this.putQueryParameter("EipInstanceId", eipInstanceId);
@@ -368,10 +383,11 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access for the VNode. Default value: false.
-         * <p>
+         * <p>Specifies whether to enable Internet access for the VNode. Default value: false.</p>
+         * <p>If the value of this parameter is true, the VNode exposes a public IP address to external services.</p>
          * 
-         * If the value of this parameter is true, the VNode exposes a public IP address to external services.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enablePublicNetwork(Boolean enablePublicNetwork) {
             this.putQueryParameter("EnablePublicNetwork", enablePublicNetwork);
@@ -380,7 +396,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * KubeConfig of the Kubernetes cluster to which the VNode is to be connected. The value must be Base64-encoded.
+         * <p>The KubeConfig of the Kubernetes cluster with which the VNode is connected. The value must be Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JTVDbmFwaVZlcnNpb24lM0ElMjB2MSU1Q25jbHVzdGVycyUzQSU1Q24tJTIwY2x1c3RlciUzQSU1Q24uLi******</p>
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -407,7 +426,11 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual node.
+         * <p>The region ID of the virtual node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -416,7 +439,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uf66jeqopgqa9hdn****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -443,7 +469,11 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The ID of the security group. The VNode and the elastic container instances in the VNode are added to the security group.
+         * <p>The ID of the security group. The VNode and the elastic container instances in the VNode are added to the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2ze81zoc3yl7a3we****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -452,7 +482,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags to add to the VNode. You can add up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -461,7 +491,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * Taint.
+         * <p>The taints of the VNode. You can configure up to 20 taints.</p>
          */
         public Builder taint(java.util.List < Taint> taint) {
             this.putQueryParameter("Taint", taint);
@@ -470,13 +500,15 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable TLS bootstrapping. If you set this parameter to true, use the KubeConfig certificate for TLS bootstrapping. Valid values:
-         * <p>
+         * <p>Specifies whether to enable TLS bootstrapping. If you set this parameter to true, use the KubeConfig certificate for TLS bootstrapping. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * - true
-         * - false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder tlsBootstrapEnabled(Boolean tlsBootstrapEnabled) {
             this.putQueryParameter("TlsBootstrapEnabled", tlsBootstrapEnabled);
@@ -485,10 +517,12 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch. The vSwitch is connected to the VNode and the elastic container instances in the VNode.
-         * <p>
+         * <p>The ID of the vSwitch. The vSwitch is connected to the VNode and the elastic container instances in the VNode.</p>
+         * <p>You can specify 1 to 10 vSwitches for a VPC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can specify 1 to 10 vSwitches for a VPC.
+         * <strong>example:</strong>
+         * <p>vsw-2ze23nqzig8inprou****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -497,7 +531,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * he name of the VNode. The name must be 2 to 128 characters in length, and can contain lowercase letters, digits, periods (.), and hyphens (-).
+         * <p>The name of the VNode. The name must be 2 to 128 characters in length, and can contain lowercase letters, digits, periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNode</p>
          */
         public Builder virtualNodeName(String virtualNodeName) {
             this.putQueryParameter("VirtualNodeName", virtualNodeName);
@@ -506,7 +543,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * The zone ID of the VNode.
+         * <p>The zone ID of the VNode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -521,11 +561,17 @@ public class CreateVirtualNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVirtualNodeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualNodeRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -560,7 +606,10 @@ public class CreateVirtualNodeRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -568,7 +617,10 @@ public class CreateVirtualNodeRequest extends Request {
             }
 
             /**
-             * The value of tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -582,14 +634,20 @@ public class CreateVirtualNodeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVirtualNodeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualNodeRequest</p>
+     */
     public static class Taint extends TeaModel {
-        @NameInMap("Effect")
+        @com.aliyun.core.annotation.NameInMap("Effect")
         private String effect;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Taint(Builder builder) {
@@ -633,12 +691,15 @@ public class CreateVirtualNodeRequest extends Request {
             private String value; 
 
             /**
-             * The effect of taint N. Valid values of N: 1 to 20. Valid values:
-             * <p>
+             * <p>The effect of the taint. Valid values:</p>
+             * <ul>
+             * <li>NoSchedule: does not schedule pods to run on the VNodes that have the taint.</li>
+             * <li>NoExecute: evicts existing pods on the VNodes that have the taint while not scheduling pods to run on the VNodes.</li>
+             * <li>PreferNoSchedule: avoids scheduling pods to run on the VNodes that have the taint.</li>
+             * </ul>
              * 
-             * - NoSchedule: No pods are scheduled to the nodes that have the taint.
-             * - NoExecute: Existing pods in the node are evicted while no pods are scheduled to the nodes that have the taint.
-             * - PreferNoSchedule: Pods are preferentially not scheduled to the nodes that have the taint.
+             * <strong>example:</strong>
+             * <p>NoSchedule</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -646,7 +707,10 @@ public class CreateVirtualNodeRequest extends Request {
             }
 
             /**
-             * The key of taint.
+             * <p>The key of the taint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -654,7 +718,10 @@ public class CreateVirtualNodeRequest extends Request {
             }
 
             /**
-             * The value of taint.
+             * <p>The value of the taint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,85 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCircuitBreakerRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateCircuitBreakerRuleRequest</p>
  */
 public class CreateCircuitBreakerRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enable;
 
-    @Query
-    @NameInMap("HalfOpenBaseAmountPerStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HalfOpenBaseAmountPerStep")
     private Integer halfOpenBaseAmountPerStep;
 
-    @Query
-    @NameInMap("HalfOpenRecoveryStepNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HalfOpenRecoveryStepNum")
     private Integer halfOpenRecoveryStepNum;
 
-    @Query
-    @NameInMap("MaxAllowedRtMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxAllowedRtMs")
     private Integer maxAllowedRtMs;
 
-    @Query
-    @NameInMap("MinRequestAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinRequestAmount")
     private Integer minRequestAmount;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Resource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resource;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private Integer resourceType;
 
-    @Query
-    @NameInMap("RetryTimeoutMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryTimeoutMs")
     private Integer retryTimeoutMs;
 
-    @Query
-    @NameInMap("StatIntervalMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatIntervalMs")
     private Integer statIntervalMs;
 
-    @Query
-    @NameInMap("Strategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Strategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer strategy;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float threshold;
 
     private CreateCircuitBreakerRuleRequest(Builder builder) {
@@ -270,11 +275,14 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -283,7 +291,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522bXXXXX</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -292,7 +303,11 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -301,26 +316,27 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule.
-         * <p>
+         * <p>Specifies whether to enable the rule.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -329,7 +345,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The minimum number of requests that can be passed in each step after circuit breaking recovers. Default value: 1.
+         * <p>The minimum number of requests that can be passed in each step after circuit breaking recovers. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder halfOpenBaseAmountPerStep(Integer halfOpenBaseAmountPerStep) {
             this.putQueryParameter("HalfOpenBaseAmountPerStep", halfOpenBaseAmountPerStep);
@@ -338,7 +357,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The number of circuit breaking recovery steps. Default value: 1.
+         * <p>The number of circuit breaking recovery steps. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder halfOpenRecoveryStepNum(Integer halfOpenRecoveryStepNum) {
             this.putQueryParameter("HalfOpenRecoveryStepNum", halfOpenRecoveryStepNum);
@@ -347,7 +369,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
+         * <p>The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxAllowedRtMs(Integer maxAllowedRtMs) {
             this.putQueryParameter("MaxAllowedRtMs", maxAllowedRtMs);
@@ -356,7 +381,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The minimum number of requests to trigger circuit breaking. If the number of requests in the current time window is less than the value of this parameter, circuit breaking is not triggered even if the circuit breaking rule is met. Default value: 10.
+         * <p>The minimum number of requests to trigger circuit breaking. If the number of requests in the current time window is less than the value of this parameter, circuit breaking is not triggered even if the circuit breaking rule is met. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minRequestAmount(Integer minRequestAmount) {
             this.putQueryParameter("MinRequestAmount", minRequestAmount);
@@ -365,7 +393,11 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the application belongs.
+         * <p>The microservice namespace to which the application belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -374,7 +406,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The region in which the instance resides.
+         * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -383,7 +418,11 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The name of the interface to which the rule applies. The interface name must be the same as the name on the interface details page in the console.
+         * <p>The name of the interface to which the rule applies. The interface name must be the same as the name on the interface details page in the console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -392,7 +431,18 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: custom interface</li>
+         * <li>1: web</li>
+         * <li>2: RPC</li>
+         * <li>3: route</li>
+         * <li>4: SQL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -401,7 +451,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period. The value must be an integral multiple of 1,000. Default value: 10000. This value indicates 10 seconds.
+         * <p>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period. The value must be an integral multiple of 1,000. Default value: 10000. This value indicates 10 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder retryTimeoutMs(Integer retryTimeoutMs) {
             this.putQueryParameter("RetryTimeoutMs", retryTimeoutMs);
@@ -410,7 +463,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The length of the time window. Unit: milliseconds. The valid range is from 1 second to 120 minutes. The default value is 20000. This value indicates 20 seconds.
+         * <p>The length of the time window. Unit: milliseconds. The valid range is from 1 second to 120 minutes. The default value is 20000. This value indicates 20 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000</p>
          */
         public Builder statIntervalMs(Integer statIntervalMs) {
             this.putQueryParameter("StatIntervalMs", statIntervalMs);
@@ -419,34 +475,31 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * The threshold type.
-         * <p>
+         * <p>The threshold type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>0</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   0
+         * <p>slow call proportion</p>
+         * <!-- -->
+         * </li>
+         * <li><p>1</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>abnormal proportion</p>
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         *     slow call proportion
-         * 
-         *     <!-- -->
-         * 
-         * *   1
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     abnormal proportion
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder strategy(Integer strategy) {
             this.putQueryParameter("Strategy", strategy);
@@ -455,7 +508,11 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.
+         * <p>A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);

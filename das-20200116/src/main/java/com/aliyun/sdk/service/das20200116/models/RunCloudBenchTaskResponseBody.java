@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCloudBenchTaskResponseBody} extends {@link TeaModel}
  *
  * <p>RunCloudBenchTaskResponseBody</p>
  */
 public class RunCloudBenchTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private RunCloudBenchTaskResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information, including the error codes and the number of returned entries.
+         * <p>The detailed information, including the error codes and the number of returned entries.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,23 +155,29 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunCloudBenchTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCloudBenchTaskResponseBody</p>
+     */
     public static class PreCheckItem extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private String details;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PreCheckItem(Builder builder) {
@@ -225,7 +248,10 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The HTTP status code returned.
+             * <p>The HTTP status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -233,7 +259,10 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information of the check item.
+             * <p>The detailed information of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Data&quot;: { &quot;total&quot;: 1, &quot;list&quot;:[...] }, &quot;Code&quot;: 200, &quot;Success&quot;: true }</p>
              */
             public Builder details(String details) {
                 this.details = details;
@@ -241,10 +270,13 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
-             * <p>
+             * <p>The returned message.</p>
+             * <blockquote>
+             * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+             * </blockquote>
              * 
-             * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -252,14 +284,17 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item. Valid values:
-             * <p>
+             * <p>The name of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>SqlArchiveStatusChecker</strong>: checks whether SQL Explorer is available.</li>
+             * <li><strong>BenchClientEnvChecker</strong>: checks whether the runtime environment for programs on the stress testing client is available.</li>
+             * <li><strong>SpecChecker</strong>: checks whether the destination instance type and the instance type of the stress testing client support this API operation.</li>
+             * <li><strong>SourceInstanceChecker</strong>: checks whether the account of the source instance is available and whether the source instance is connected to the destination instance.</li>
+             * <li><strong>BenchTargetChecker</strong>: checks whether the account of the destination instance is available and whether the source instance is connected to the destination instance.</li>
+             * </ul>
              * 
-             * * **SqlArchiveStatusChecker**: checks whether SQL Explorer is available.
-             * * **BenchClientEnvChecker**: checks whether the runtime environment for programs on the stress testing client is available.
-             * * **SpecChecker**: checks whether the destination instance type and the instance type of the stress testing client support this API operation.
-             * * **SourceInstanceChecker**: checks whether the account of the source instance is available and whether the source instance is connected to the destination instance.
-             * * **BenchTargetChecker**: checks whether the account of the destination instance is available and whether the source instance is connected to the destination instance.
+             * <strong>example:</strong>
+             * <p>BenchTargetChecker</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -267,7 +302,10 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the check item. Valid values: **0** to **10**.
+             * <p>The sequence number of the check item. Valid values: <strong>0</strong> to <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -275,13 +313,16 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong>: The task is successful.</li>
+             * <li><strong>IGNORED</strong>: The task is ignored.</li>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>EXCEPTION</strong>: An error occurred.</li>
+             * </ul>
              * 
-             * *   **SUCCESS**: The task is successful.
-             * *   **IGNORED**: The task is ignored.
-             * *   **RUNNING**: The task is running.
-             * *   **EXCEPTION**: An error occurred.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -295,9 +336,15 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunCloudBenchTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunCloudBenchTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PreCheckItem")
-        private java.util.List < PreCheckItem> preCheckItem;
+        @com.aliyun.core.annotation.NameInMap("PreCheckItem")
+        private java.util.List<PreCheckItem> preCheckItem;
 
         private Data(Builder builder) {
             this.preCheckItem = builder.preCheckItem;
@@ -314,17 +361,17 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         /**
          * @return preCheckItem
          */
-        public java.util.List < PreCheckItem> getPreCheckItem() {
+        public java.util.List<PreCheckItem> getPreCheckItem() {
             return this.preCheckItem;
         }
 
         public static final class Builder {
-            private java.util.List < PreCheckItem> preCheckItem; 
+            private java.util.List<PreCheckItem> preCheckItem; 
 
             /**
              * PreCheckItem.
              */
-            public Builder preCheckItem(java.util.List < PreCheckItem> preCheckItem) {
+            public Builder preCheckItem(java.util.List<PreCheckItem> preCheckItem) {
                 this.preCheckItem = preCheckItem;
                 return this;
             }

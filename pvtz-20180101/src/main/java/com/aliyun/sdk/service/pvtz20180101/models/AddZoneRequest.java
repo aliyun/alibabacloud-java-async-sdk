@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddZoneRequest} extends {@link RequestModel}
  *
  * <p>AddZoneRequest</p>
  */
 public class AddZoneRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsGroup")
+    private String dnsGroup;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ProxyPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyPattern")
     private String proxyPattern;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ZoneName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneName")
     private String zoneName;
 
-    @Query
-    @NameInMap("ZoneTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneTag")
     private String zoneTag;
 
-    @Query
-    @NameInMap("ZoneType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneType")
     private String zoneType;
 
     private AddZoneRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dnsGroup = builder.dnsGroup;
         this.lang = builder.lang;
         this.proxyPattern = builder.proxyPattern;
         this.resourceGroupId = builder.resourceGroupId;
@@ -69,6 +74,13 @@ public class AddZoneRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dnsGroup
+     */
+    public String getDnsGroup() {
+        return this.dnsGroup;
     }
 
     /**
@@ -115,6 +127,7 @@ public class AddZoneRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddZoneRequest, Builder> {
         private String clientToken; 
+        private String dnsGroup; 
         private String lang; 
         private String proxyPattern; 
         private String resourceGroupId; 
@@ -129,6 +142,7 @@ public class AddZoneRequest extends Request {
         private Builder(AddZoneRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dnsGroup = request.dnsGroup;
             this.lang = request.lang;
             this.proxyPattern = request.proxyPattern;
             this.resourceGroupId = request.resourceGroupId;
@@ -138,7 +152,10 @@ public class AddZoneRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21079fa016944979537637959d09bc</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,7 +164,35 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL_ZONE</strong>: the regular module. DNS results are stored in the cache module and DNS requests are sent to the regular module if the DNS requests do not match the DNS records in the cache module. DNS record updates take effect based on the time to live (TTL) value. The regular module does not support DNS resolution over user-defined lines or based on weight values.</li>
+         * <li><strong>FAST_ZONE</strong>: the acceleration module. It directly responds to DNS requests with the lowest latency and updates DNS records in real time. The acceleration module supports DNS resolution over user-defined lines or based on weight values.</li>
+         * </ul>
+         * <p>Default value: <strong>NORMAL_ZONE</strong>.</p>
+         * <blockquote>
+         * <p> The DNS results returned by the built-in authoritative acceleration module are not stored in the cache module because the built-in authoritative acceleration module is located before the cache module. As a result, you are charged more for DNS requests.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FAST_ZONE</p>
+         */
+        public Builder dnsGroup(String dnsGroup) {
+            this.putQueryParameter("DnsGroup", dnsGroup);
+            this.dnsGroup = dnsGroup;
+            return this;
+        }
+
+        /**
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -156,7 +201,15 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ProxyPattern.
+         * <p>Specifies whether to enable the recursive resolution proxy for subdomain names. Valid values:</p>
+         * <ul>
+         * <li><strong>ZONE</strong>: disables the recursive resolution proxy for subdomain names. In this case, NXDOMAIN is returned if the queried subdomain name does not exist in the zone.</li>
+         * <li><strong>RECORD</strong>: enables the recursive resolution proxy for subdomain names. In this case, if the queried subdomain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
+         * </ul>
+         * <p>Default value: <strong>ZONE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZONE</p>
          */
         public Builder proxyPattern(String proxyPattern) {
             this.putQueryParameter("ProxyPattern", proxyPattern);
@@ -165,7 +218,10 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmykd63gt****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -174,7 +230,10 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ZoneName.
+         * <p>The name of the zone to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder zoneName(String zoneName) {
             this.putQueryParameter("ZoneName", zoneName);
@@ -183,7 +242,10 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ZoneTag.
+         * <p>This parameter is not available. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BLINK</p>
          */
         public Builder zoneTag(String zoneTag) {
             this.putQueryParameter("ZoneTag", zoneTag);
@@ -192,7 +254,10 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ZoneType.
+         * <p>This parameter is not available. You can ignore it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_PRODUCT_ZONE</p>
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);

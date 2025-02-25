@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoleZoneInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRoleZoneInfoResponseBody</p>
  */
 public class DescribeRoleZoneInfoResponseBody extends TeaModel {
-    @NameInMap("Node")
+    @com.aliyun.core.annotation.NameInMap("Node")
     private Node node;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRoleZoneInfoResponseBody(Builder builder) {
@@ -86,11 +86,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The role of the node. Valid values:
-         * <p>
-         * 
-         * *   **master**: master node
-         * *   **slave**: replica node
+         * <p>Details about each node in an ApsaraDB for Redis instance.</p>
          */
         public Builder node(Node node) {
             this.node = node;
@@ -98,7 +94,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,11 +105,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the bandwidth of the node is increased. Valid values:
-         * <p>
+         * <p>The number of entries returned per page.</p>
          * 
-         * *   **true**: The bandwidth of the node is not increased.
-         * *   **false**: The bandwidth of the node is increased.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +116,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is used only for internal maintenance of ApsaraDB for Redis instances.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224B97FB-A275-4EAC-86E9-8922FEA2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,10 +127,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the node is a read replica. If the node is a read replica, **3** is returned.
-         * <p>
+         * <p>The total number of entries returned.</p>
          * 
-         * >  If the node is not a read replica, no value is returned.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,41 +143,47 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRoleZoneInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRoleZoneInfoResponseBody</p>
+     */
     public static class NodeInfo extends TeaModel {
-        @NameInMap("CurrentBandWidth")
+        @com.aliyun.core.annotation.NameInMap("CurrentBandWidth")
         private Long currentBandWidth;
 
-        @NameInMap("CurrentMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentMinorVersion")
         private String currentMinorVersion;
 
-        @NameInMap("CustinsId")
+        @com.aliyun.core.annotation.NameInMap("CustinsId")
         private String custinsId;
 
-        @NameInMap("DefaultBandWidth")
+        @com.aliyun.core.annotation.NameInMap("DefaultBandWidth")
         private Long defaultBandWidth;
 
-        @NameInMap("InsName")
+        @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
 
-        @NameInMap("InsType")
+        @com.aliyun.core.annotation.NameInMap("InsType")
         private Integer insType;
 
-        @NameInMap("IsLatestVersion")
+        @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
         private Integer isLatestVersion;
 
-        @NameInMap("IsOpenBandWidthService")
+        @com.aliyun.core.annotation.NameInMap("IsOpenBandWidthService")
         private Boolean isOpenBandWidthService;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NodeInfo(Builder builder) {
@@ -301,7 +308,16 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The number of the returned page.
+             * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
+             * <blockquote>
+             * <ul>
+             * <li>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to specify the increased bandwidth.</li>
+             * <li>You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder currentBandWidth(Long currentBandWidth) {
                 this.currentBandWidth = currentBandWidth;
@@ -309,7 +325,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.
+             * <p>The minor version of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redis-5.0_0.3.10</p>
              */
             public Builder currentMinorVersion(String currentMinorVersion) {
                 this.currentMinorVersion = currentMinorVersion;
@@ -317,7 +336,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CustinsId.
+             * <p>The ID of the data shard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30381****</p>
              */
             public Builder custinsId(String custinsId) {
                 this.custinsId = custinsId;
@@ -325,12 +347,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
-             * <p>
+             * <p>The default bandwidth of the node. Unit: MB/s.</p>
              * 
-             * *   **db**: data node.
-             * *   **proxy**: proxy node.
-             * *   **normal**: regular node. This value is returned when the instance runs in the standard architecture.
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder defaultBandWidth(Long defaultBandWidth) {
                 this.defaultBandWidth = defaultBandWidth;
@@ -338,13 +358,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the minor version is the latest version. Valid values:
-             * <p>
+             * <p>The ID of the node.</p>
              * 
-             * *   **0**: The minor version is not the latest version.
-             * *   **1**: The minor version is the latest version.
-             * 
-             * >  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
+             * <strong>example:</strong>
+             * <p>r-t4nlenc2p04uvb****</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -352,7 +369,13 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Details about each node in an ApsaraDB for Redis instance.
+             * <p>Indicates whether the node is a read replica. If the node is a read replica, <strong>3</strong> is returned.</p>
+             * <blockquote>
+             * <p> If the node is not a read replica, no value is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder insType(Integer insType) {
                 this.insType = insType;
@@ -360,7 +383,17 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>Indicates whether the minor version is the latest version. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The minor version is not the latest version.</li>
+             * <li><strong>1</strong>: The minor version is the latest version.</li>
+             * </ul>
+             * <blockquote>
+             * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> operation.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isLatestVersion(Integer isLatestVersion) {
                 this.isLatestVersion = isLatestVersion;
@@ -368,7 +401,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeRoleZoneInfo
+             * <p>Indicates whether the bandwidth of the node is increased. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The bandwidth of the node is not increased.</li>
+             * <li><strong>false</strong>: The bandwidth of the node is increased.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isOpenBandWidthService(Boolean isOpenBandWidthService) {
                 this.isOpenBandWidthService = isOpenBandWidthService;
@@ -376,7 +416,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>This parameter is used only for internal maintenance of ApsaraDB for Redis instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10065****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -384,7 +427,15 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: data node.</li>
+             * <li><strong>proxy</strong>: proxy node.</li>
+             * <li><strong>normal</strong>: regular node. This value is returned when the instance runs in the standard architecture.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -392,7 +443,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: master node</li>
+             * <li><strong>slave</strong>: replica node</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -400,7 +458,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Queries information about the type, minor version, and bandwidth of specific nodes in an ApsaraDB for Redis instance, and zones where the nodes are deployed.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -414,8 +475,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRoleZoneInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRoleZoneInfoResponseBody</p>
+     */
     public static class Node extends TeaModel {
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private java.util.List < NodeInfo> nodeInfo;
 
         private Node(Builder builder) {

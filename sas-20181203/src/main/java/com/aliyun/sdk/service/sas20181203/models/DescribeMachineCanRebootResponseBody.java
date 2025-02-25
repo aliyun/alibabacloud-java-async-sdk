@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMachineCanRebootResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMachineCanRebootResponseBody</p>
  */
 public class DescribeMachineCanRebootResponseBody extends TeaModel {
-    @NameInMap("CanReboot")
+    @com.aliyun.core.annotation.NameInMap("CanReboot")
     private Boolean canReboot;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMachineCanRebootResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the server can be restarted. Valid values:
-         * <p>
+         * <p>Indicates whether the server can be restarted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canReboot(Boolean canReboot) {
             this.canReboot = canReboot;
@@ -62,7 +70,10 @@ public class DescribeMachineCanRebootResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

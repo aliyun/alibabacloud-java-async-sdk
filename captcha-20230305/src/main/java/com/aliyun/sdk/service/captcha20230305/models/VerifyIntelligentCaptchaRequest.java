@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.captcha20230305.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyIntelligentCaptchaRequest} extends {@link RequestModel}
  *
  * <p>VerifyIntelligentCaptchaRequest</p>
  */
 public class VerifyIntelligentCaptchaRequest extends Request {
-    @Body
-    @NameInMap("CaptchaVerifyParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CaptchaVerifyParam")
     private String captchaVerifyParam;
 
-    @Body
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
     private VerifyIntelligentCaptchaRequest(Builder builder) {

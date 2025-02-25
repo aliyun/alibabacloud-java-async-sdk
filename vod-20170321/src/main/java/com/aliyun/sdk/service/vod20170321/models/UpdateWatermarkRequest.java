@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWatermarkRequest} extends {@link RequestModel}
  *
  * <p>UpdateWatermarkRequest</p>
  */
 public class UpdateWatermarkRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("WatermarkConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String watermarkConfig;
 
-    @Query
-    @NameInMap("WatermarkId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String watermarkId;
 
     private UpdateWatermarkRequest(Builder builder) {
@@ -84,10 +89,15 @@ public class UpdateWatermarkRequest extends Request {
         } 
 
         /**
-         * The name of the watermark. Only letters and digits are supported.
-         * <p>
-         * *   The name can be up to 128 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * <p>The name of the watermark template to which you want to change.</p>
+         * <ul>
+         * <li>Only letters and digits are supported.</li>
+         * <li>The name cannot exceed 128 bytes.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -96,9 +106,11 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
-         * <p>
-         * > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+         * <p>The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see <a href="~~98618#section-h01-44s-2lr~~">WatermarkConfig</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Width&quot;:&quot;55&quot;,&quot;Height&quot;:&quot;55&quot;,&quot;Dx&quot;:&quot;9&quot;,&quot;Dy&quot;:&quot;9&quot;,&quot;ReferPos&quot;:&quot;BottonLeft&quot;,&quot;Type&quot;:&quot;Image&quot;}</p>
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);
@@ -107,7 +119,15 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * The ID of the watermark.
+         * <p>The ID of the watermark template. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:</p>
+         * <ul>
+         * <li>Obtain the watermark template ID from the response to the <a href="~~AddWatermark~~">AddWatermark</a> operation that you call to create a watermark template.</li>
+         * <li>Obtain the watermark template ID from the response to the <a href="~~ListWatermark~~">ListWatermark</a> operation that you call to query all watermark templates within your account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af2afe4761992c*****bd947dae97337</p>
          */
         public Builder watermarkId(String watermarkId) {
             this.putQueryParameter("WatermarkId", watermarkId);

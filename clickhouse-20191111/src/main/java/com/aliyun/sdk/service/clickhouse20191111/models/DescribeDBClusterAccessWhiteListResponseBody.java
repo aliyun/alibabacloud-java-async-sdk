@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
  */
 public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
-    @NameInMap("DBClusterAccessWhiteList")
+    @com.aliyun.core.annotation.NameInMap("DBClusterAccessWhiteList")
     private DBClusterAccessWhiteList DBClusterAccessWhiteList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterAccessWhiteListResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterAccessWhiteList.
+         * <p>The details about the IP address whitelist.</p>
          */
         public Builder DBClusterAccessWhiteList(DBClusterAccessWhiteList DBClusterAccessWhiteList) {
             this.DBClusterAccessWhiteList = DBClusterAccessWhiteList;
@@ -58,7 +63,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>905F13A4-5097-4897-A84D-527EC75FFF4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
+     */
     public static class IPArray extends TeaModel {
-        @NameInMap("DBClusterIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
 
-        @NameInMap("DBClusterIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayName")
         private String DBClusterIPArrayName;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
         private IPArray(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * DBClusterIPArrayAttribute.
+             * <p>The attribute of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -130,7 +147,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterIPArrayName.
+             * <p>The name of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -138,7 +158,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The IP addresses in the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx,192.168.xx.xx</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -152,9 +175,15 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
+     */
     public static class DBClusterAccessWhiteList extends TeaModel {
-        @NameInMap("IPArray")
-        private java.util.List < IPArray> IPArray;
+        @com.aliyun.core.annotation.NameInMap("IPArray")
+        private java.util.List<IPArray> IPArray;
 
         private DBClusterAccessWhiteList(Builder builder) {
             this.IPArray = builder.IPArray;
@@ -171,17 +200,17 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         /**
          * @return IPArray
          */
-        public java.util.List < IPArray> getIPArray() {
+        public java.util.List<IPArray> getIPArray() {
             return this.IPArray;
         }
 
         public static final class Builder {
-            private java.util.List < IPArray> IPArray; 
+            private java.util.List<IPArray> IPArray; 
 
             /**
              * IPArray.
              */
-            public Builder IPArray(java.util.List < IPArray> IPArray) {
+            public Builder IPArray(java.util.List<IPArray> IPArray) {
                 this.IPArray = IPArray;
                 return this;
             }

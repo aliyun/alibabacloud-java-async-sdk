@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstancesResponseBody</p>
  */
 public class CreateInstancesResponseBody extends TeaModel {
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private InstanceIds instanceIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateInstancesResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class CreateInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of instances that were created.
+         * <p>The IDs of instances that were created.</p>
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -70,7 +70,10 @@ public class CreateInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20905403119****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +81,10 @@ public class CreateInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,8 +97,14 @@ public class CreateInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInstancesResponseBody</p>
+     */
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private java.util.List < String > instanceId;
 
         private InstanceIds(Builder builder) {

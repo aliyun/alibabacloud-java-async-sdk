@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCnameReusesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCnameReusesResponseBody</p>
  */
 public class DescribeCnameReusesResponseBody extends TeaModel {
-    @NameInMap("CnameReuses")
-    private java.util.List < CnameReuses> cnameReuses;
+    @com.aliyun.core.annotation.NameInMap("CnameReuses")
+    private java.util.List<CnameReuses> cnameReuses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCnameReusesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     /**
      * @return cnameReuses
      */
-    public java.util.List < CnameReuses> getCnameReuses() {
+    public java.util.List<CnameReuses> getCnameReuses() {
         return this.cnameReuses;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CnameReuses> cnameReuses; 
+        private java.util.List<CnameReuses> cnameReuses; 
         private String requestId; 
 
         /**
          * CnameReuses.
          */
-        public Builder cnameReuses(java.util.List < CnameReuses> cnameReuses) {
+        public Builder cnameReuses(java.util.List<CnameReuses> cnameReuses) {
             this.cnameReuses = cnameReuses;
             return this;
         }
@@ -71,14 +76,20 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCnameReusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCnameReusesResponseBody</p>
+     */
     public static class CnameReuses extends TeaModel {
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
         private CnameReuses(Builder builder) {

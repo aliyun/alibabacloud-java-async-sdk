@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateADConnectorDirectoryRequest} extends {@link RequestModel}
  *
  * <p>CreateADConnectorDirectoryRequest</p>
  */
 public class CreateADConnectorDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("DirectoryName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryName;
 
-    @Query
-    @NameInMap("DnsAddress")
-    @Validation(required = true)
-    private java.util.List < String > dnsAddress;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> dnsAddress;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("DomainPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainPassword;
 
-    @Query
-    @NameInMap("DomainUserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainUserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainUserName;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("MfaEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MfaEnabled")
     private Boolean mfaEnabled;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Specification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Specification")
     private Long specification;
 
-    @Query
-    @NameInMap("SubDomainDnsAddress")
-    private java.util.List < String > subDomainDnsAddress;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainDnsAddress")
+    private java.util.List<String> subDomainDnsAddress;
 
-    @Query
-    @NameInMap("SubDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainName")
     private String subDomainName;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
-    private java.util.List < String > vSwitchId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> vSwitchId;
 
     private CreateADConnectorDirectoryRequest(Builder builder) {
         super(builder);
@@ -118,7 +123,7 @@ public class CreateADConnectorDirectoryRequest extends Request {
     /**
      * @return dnsAddress
      */
-    public java.util.List < String > getDnsAddress() {
+    public java.util.List<String> getDnsAddress() {
         return this.dnsAddress;
     }
 
@@ -174,7 +179,7 @@ public class CreateADConnectorDirectoryRequest extends Request {
     /**
      * @return subDomainDnsAddress
      */
-    public java.util.List < String > getSubDomainDnsAddress() {
+    public java.util.List<String> getSubDomainDnsAddress() {
         return this.subDomainDnsAddress;
     }
 
@@ -188,14 +193,14 @@ public class CreateADConnectorDirectoryRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
     public static final class Builder extends Request.Builder<CreateADConnectorDirectoryRequest, Builder> {
         private String desktopAccessType; 
         private String directoryName; 
-        private java.util.List < String > dnsAddress; 
+        private java.util.List<String> dnsAddress; 
         private String domainName; 
         private String domainPassword; 
         private String domainUserName; 
@@ -203,9 +208,9 @@ public class CreateADConnectorDirectoryRequest extends Request {
         private Boolean mfaEnabled; 
         private String regionId; 
         private Long specification; 
-        private java.util.List < String > subDomainDnsAddress; 
+        private java.util.List<String> subDomainDnsAddress; 
         private String subDomainName; 
-        private java.util.List < String > vSwitchId; 
+        private java.util.List<String> vSwitchId; 
 
         private Builder() {
             super();
@@ -229,7 +234,33 @@ public class CreateADConnectorDirectoryRequest extends Request {
         } 
 
         /**
-         * The AD trust password.
+         * <p>The method in which the cloud computer is connected.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>VPC</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Internet (default)</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Any</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -238,7 +269,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The directory name. The name must be 2 to 255 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDirectoryName</p>
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -247,16 +282,24 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The fully qualified domain name (FQDN) of the enterprise AD system. The value must contain the hostname and the domain name. You can register each FQDN only once.
+         * <p>The IP address of the DNS server corresponding to the enterprise AD. You can specify only one IP address. Make sure that the specified IP address is accessible in the network of the selected vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>127.0.**.**</code></p>
          */
-        public Builder dnsAddress(java.util.List < String > dnsAddress) {
+        public Builder dnsAddress(java.util.List<String> dnsAddress) {
             this.putQueryParameter("DnsAddress", dnsAddress);
             this.dnsAddress = dnsAddress;
             return this;
         }
 
         /**
-         * The IP address of the DNS server of the enterprise AD system.
+         * <p>The fully qualified domain name (FQDN) of the enterprise AD system. The value must contain the hostname and the domain name. You can register each FQDN only once.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>corp.example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -265,7 +308,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.
+         * <p>The password of the domain administrator. The password can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder domainPassword(String domainPassword) {
             this.putQueryParameter("DomainPassword", domainPassword);
@@ -274,7 +321,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The name of the AD directory. The name must be 2 to 255 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <p>The username of the domain administrator. The username can be up to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sAMAccountName</p>
          */
         public Builder domainUserName(String domainUserName) {
             this.putQueryParameter("DomainUserName", domainUserName);
@@ -283,9 +334,27 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The DNS address of the enterprise AD subdomain.\
-         * <p>
-         * If you specify the `SubDomainName` parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.
+         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><!-- -->
+         * 
+         * <p>true</p>
+         * <!-- -->
+         * 
+         * <p>(default)</p>
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
+         * 
+         * <p>false</p>
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -294,7 +363,29 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The information that is returned.
+         * <p>Specifies whether to enable Multi-Factor Authentication (MFA). After you enable MFA, all AD users in the directory must enter a dynamic verification code generated by the virtual MFA device in addition to a correct password when they log on to a cloud computer.</p>
+         * <blockquote>
+         * <p> When end users log on to a cloud computer for the first time, they must bind an MFA device.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
+         * 
+         * <p>false (default)</p>
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -303,7 +394,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the AD directory.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -312,7 +407,15 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The password of the domain administrator. The password can be up to 64 characters in length.
+         * <p>The type of the AD connector.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1 (General)</li>
+         * <li>2 (Advanced)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder specification(Long specification) {
             this.putQueryParameter("Specification", specification);
@@ -321,16 +424,22 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * Details of the vSwitch IDs. You can specify only one vSwitch ID.
+         * <p>The DNS address of the existing AD subdomain.<br>If you specify the <code>SubDomainName</code> parameter but you do not specify this parameter, the DNS address of the subdomain is the same as the DNS address of the parent domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>127.0.**.**</code></p>
          */
-        public Builder subDomainDnsAddress(java.util.List < String > subDomainDnsAddress) {
+        public Builder subDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
             this.putQueryParameter("SubDomainDnsAddress", subDomainDnsAddress);
             this.subDomainDnsAddress = subDomainDnsAddress;
             return this;
         }
 
         /**
-         * The FQDN of the enterprise AD subdomain. The value must contain the hostname and the subdomain name.
+         * <p>The FQDN of the enterprise AD subdomain. The value must contain the hostname and the subdomain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>child.example.com</p>
          */
         public Builder subDomainName(String subDomainName) {
             this.putQueryParameter("SubDomainName", subDomainName);
@@ -339,9 +448,13 @@ public class CreateADConnectorDirectoryRequest extends Request {
         }
 
         /**
-         * The username of the domain administrator. The username can be up to 64 characters in length.
+         * <p>Details of the vSwitch IDs. You can specify only one vSwitch ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp19ocz3erfx15uon****</p>
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
             return this;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGovernanceTaskResponseBody</p>
  */
 public class DescribeGovernanceTaskResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeGovernanceTaskResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
     } 
 
     public static class AnchorPeers extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private AnchorPeers(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class OrdererNodes extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Certificate")
+        @com.aliyun.core.annotation.NameInMap("Certificate")
         private String certificate;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Tlsroot")
+        @com.aliyun.core.annotation.NameInMap("Tlsroot")
         private String tlsroot;
 
         private OrdererNodes(Builder builder) {
@@ -274,28 +273,28 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class AddedOrganizations extends TeaModel {
-        @NameInMap("AnchorPeers")
+        @com.aliyun.core.annotation.NameInMap("AnchorPeers")
         private java.util.List < AnchorPeers> anchorPeers;
 
-        @NameInMap("Crls")
+        @com.aliyun.core.annotation.NameInMap("Crls")
         private String crls;
 
-        @NameInMap("MspId")
+        @com.aliyun.core.annotation.NameInMap("MspId")
         private String mspId;
 
-        @NameInMap("MspType")
+        @com.aliyun.core.annotation.NameInMap("MspType")
         private String mspType;
 
-        @NameInMap("Orderer")
+        @com.aliyun.core.annotation.NameInMap("Orderer")
         private Boolean orderer;
 
-        @NameInMap("OrdererNodes")
+        @com.aliyun.core.annotation.NameInMap("OrdererNodes")
         private java.util.List < OrdererNodes> ordererNodes;
 
-        @NameInMap("RootCertificates")
+        @com.aliyun.core.annotation.NameInMap("RootCertificates")
         private String rootCertificates;
 
-        @NameInMap("TlsRootCertificates")
+        @com.aliyun.core.annotation.NameInMap("TlsRootCertificates")
         private String tlsRootCertificates;
 
         private AddedOrganizations(Builder builder) {
@@ -455,19 +454,19 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class Cs extends TeaModel {
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Cs(Builder builder) {
@@ -576,13 +575,13 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class ChaincodeSpecPkg extends TeaModel {
-        @NameInMap("Cs")
+        @com.aliyun.core.annotation.NameInMap("Cs")
         private Cs cs;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Sha256")
+        @com.aliyun.core.annotation.NameInMap("Sha256")
         private String sha256;
 
         private ChaincodeSpecPkg(Builder builder) {
@@ -657,13 +656,13 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class OrdererConfig extends TeaModel {
-        @NameInMap("BatchTimeout")
+        @com.aliyun.core.annotation.NameInMap("BatchTimeout")
         private String batchTimeout;
 
-        @NameInMap("MaxMessageCount")
+        @com.aliyun.core.annotation.NameInMap("MaxMessageCount")
         private Integer maxMessageCount;
 
-        @NameInMap("PreferredMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("PreferredMaxBytes")
         private Integer preferredMaxBytes;
 
         private OrdererConfig(Builder builder) {
@@ -738,10 +737,10 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class RemovedOrganizationsAnchorPeers extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private RemovedOrganizationsAnchorPeers(Builder builder) {
@@ -799,16 +798,16 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class RemovedOrganizationsOrdererNodes extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Certificate")
+        @com.aliyun.core.annotation.NameInMap("Certificate")
         private String certificate;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Tlsroot")
+        @com.aliyun.core.annotation.NameInMap("Tlsroot")
         private String tlsroot;
 
         private RemovedOrganizationsOrdererNodes(Builder builder) {
@@ -900,28 +899,28 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class RemovedOrganizations extends TeaModel {
-        @NameInMap("AnchorPeers")
+        @com.aliyun.core.annotation.NameInMap("AnchorPeers")
         private java.util.List < RemovedOrganizationsAnchorPeers> anchorPeers;
 
-        @NameInMap("Crls")
+        @com.aliyun.core.annotation.NameInMap("Crls")
         private String crls;
 
-        @NameInMap("MspId")
+        @com.aliyun.core.annotation.NameInMap("MspId")
         private String mspId;
 
-        @NameInMap("MspType")
+        @com.aliyun.core.annotation.NameInMap("MspType")
         private String mspType;
 
-        @NameInMap("Orderer")
+        @com.aliyun.core.annotation.NameInMap("Orderer")
         private Boolean orderer;
 
-        @NameInMap("OrdererNodes")
+        @com.aliyun.core.annotation.NameInMap("OrdererNodes")
         private java.util.List < RemovedOrganizationsOrdererNodes> ordererNodes;
 
-        @NameInMap("RootCertificates")
+        @com.aliyun.core.annotation.NameInMap("RootCertificates")
         private String rootCertificates;
 
-        @NameInMap("TlsRootCertificates")
+        @com.aliyun.core.annotation.NameInMap("TlsRootCertificates")
         private String tlsRootCertificates;
 
         private RemovedOrganizations(Builder builder) {
@@ -1081,22 +1080,22 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("AddedOrganizations")
+        @com.aliyun.core.annotation.NameInMap("AddedOrganizations")
         private java.util.List < AddedOrganizations> addedOrganizations;
 
-        @NameInMap("ChaincodeSpecPkg")
+        @com.aliyun.core.annotation.NameInMap("ChaincodeSpecPkg")
         private ChaincodeSpecPkg chaincodeSpecPkg;
 
-        @NameInMap("OrdererConfig")
+        @com.aliyun.core.annotation.NameInMap("OrdererConfig")
         private OrdererConfig ordererConfig;
 
-        @NameInMap("Raw")
+        @com.aliyun.core.annotation.NameInMap("Raw")
         private String raw;
 
-        @NameInMap("RemovedOrganizations")
+        @com.aliyun.core.annotation.NameInMap("RemovedOrganizations")
         private java.util.List < RemovedOrganizations> removedOrganizations;
 
-        @NameInMap("RwSets")
+        @com.aliyun.core.annotation.NameInMap("RwSets")
         private String rwSets;
 
         private Content(Builder builder) {
@@ -1222,28 +1221,28 @@ public class DescribeGovernanceTaskResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Result(Builder builder) {

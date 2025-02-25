@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTensorboardsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTensorboardsResponseBody</p>
  */
 public class ListTensorboardsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tensorboards")
-    private java.util.List < Tensorboard > tensorboards;
+    @com.aliyun.core.annotation.NameInMap("Tensorboards")
+    private java.util.List<Tensorboard> tensorboards;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListTensorboardsResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
     /**
      * @return tensorboards
      */
-    public java.util.List < Tensorboard > getTensorboards() {
+    public java.util.List<Tensorboard> getTensorboards() {
         return this.tensorboards;
     }
 
@@ -58,7 +63,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tensorboard > tensorboards; 
+        private java.util.List<Tensorboard> tensorboards; 
         private Long totalCount; 
 
         /**
@@ -72,7 +77,7 @@ public class ListTensorboardsResponseBody extends TeaModel {
         /**
          * Tensorboards.
          */
-        public Builder tensorboards(java.util.List < Tensorboard > tensorboards) {
+        public Builder tensorboards(java.util.List<Tensorboard> tensorboards) {
             this.tensorboards = tensorboards;
             return this;
         }

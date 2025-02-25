@@ -1,67 +1,92 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BlindTransferRequest} extends {@link RequestModel}
  *
  * <p>BlindTransferRequest</p>
  */
 public class BlindTransferRequest extends Request {
-    @Query
-    @NameInMap("CallPriority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallPriority")
     private Integer callPriority;
 
-    @Query
-    @NameInMap("ContactFlowVariables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowVariables")
     private String contactFlowVariables;
 
-    @Query
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueuingOverflowThreshold")
+    private Long queuingOverflowThreshold;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueuingTimeoutSeconds")
+    private Long queuingTimeoutSeconds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutingType")
+    private String routingType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private String skillGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
-    @Query
-    @NameInMap("StrategyParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyParams")
     private String strategyParams;
 
-    @Query
-    @NameInMap("TimeoutSeconds")
-    @Validation(maximum = 120, minimum = 3)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private String tags;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 120, minimum = 3)
     private Integer timeoutSeconds;
 
-    @Query
-    @NameInMap("Transferee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transferee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transferee;
 
-    @Query
-    @NameInMap("TransfereeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransfereeType")
     private String transfereeType;
 
-    @Query
-    @NameInMap("Transferor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transferor")
     private String transferor;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private BlindTransferRequest(Builder builder) {
@@ -71,8 +96,13 @@ public class BlindTransferRequest extends Request {
         this.deviceId = builder.deviceId;
         this.instanceId = builder.instanceId;
         this.jobId = builder.jobId;
+        this.queuingOverflowThreshold = builder.queuingOverflowThreshold;
+        this.queuingTimeoutSeconds = builder.queuingTimeoutSeconds;
+        this.routingType = builder.routingType;
+        this.skillGroupId = builder.skillGroupId;
         this.strategyName = builder.strategyName;
         this.strategyParams = builder.strategyParams;
+        this.tags = builder.tags;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.transferee = builder.transferee;
         this.transfereeType = builder.transfereeType;
@@ -129,6 +159,34 @@ public class BlindTransferRequest extends Request {
     }
 
     /**
+     * @return queuingOverflowThreshold
+     */
+    public Long getQueuingOverflowThreshold() {
+        return this.queuingOverflowThreshold;
+    }
+
+    /**
+     * @return queuingTimeoutSeconds
+     */
+    public Long getQueuingTimeoutSeconds() {
+        return this.queuingTimeoutSeconds;
+    }
+
+    /**
+     * @return routingType
+     */
+    public String getRoutingType() {
+        return this.routingType;
+    }
+
+    /**
+     * @return skillGroupId
+     */
+    public String getSkillGroupId() {
+        return this.skillGroupId;
+    }
+
+    /**
      * @return strategyName
      */
     public String getStrategyName() {
@@ -140,6 +198,13 @@ public class BlindTransferRequest extends Request {
      */
     public String getStrategyParams() {
         return this.strategyParams;
+    }
+
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
     }
 
     /**
@@ -183,8 +248,13 @@ public class BlindTransferRequest extends Request {
         private String deviceId; 
         private String instanceId; 
         private String jobId; 
+        private Long queuingOverflowThreshold; 
+        private Long queuingTimeoutSeconds; 
+        private String routingType; 
+        private String skillGroupId; 
         private String strategyName; 
         private String strategyParams; 
+        private String tags; 
         private Integer timeoutSeconds; 
         private String transferee; 
         private String transfereeType; 
@@ -202,8 +272,13 @@ public class BlindTransferRequest extends Request {
             this.deviceId = request.deviceId;
             this.instanceId = request.instanceId;
             this.jobId = request.jobId;
+            this.queuingOverflowThreshold = request.queuingOverflowThreshold;
+            this.queuingTimeoutSeconds = request.queuingTimeoutSeconds;
+            this.routingType = request.routingType;
+            this.skillGroupId = request.skillGroupId;
             this.strategyName = request.strategyName;
             this.strategyParams = request.strategyParams;
+            this.tags = request.tags;
             this.timeoutSeconds = request.timeoutSeconds;
             this.transferee = request.transferee;
             this.transfereeType = request.transfereeType;
@@ -239,7 +314,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -248,11 +326,50 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * QueuingOverflowThreshold.
+         */
+        public Builder queuingOverflowThreshold(Long queuingOverflowThreshold) {
+            this.putQueryParameter("QueuingOverflowThreshold", queuingOverflowThreshold);
+            this.queuingOverflowThreshold = queuingOverflowThreshold;
+            return this;
+        }
+
+        /**
+         * QueuingTimeoutSeconds.
+         */
+        public Builder queuingTimeoutSeconds(Long queuingTimeoutSeconds) {
+            this.putQueryParameter("QueuingTimeoutSeconds", queuingTimeoutSeconds);
+            this.queuingTimeoutSeconds = queuingTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * RoutingType.
+         */
+        public Builder routingType(String routingType) {
+            this.putQueryParameter("RoutingType", routingType);
+            this.routingType = routingType;
+            return this;
+        }
+
+        /**
+         * SkillGroupId.
+         */
+        public Builder skillGroupId(String skillGroupId) {
+            this.putQueryParameter("SkillGroupId", skillGroupId);
+            this.skillGroupId = skillGroupId;
             return this;
         }
 
@@ -275,6 +392,15 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * TimeoutSeconds.
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
@@ -284,7 +410,10 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
-         * Transferee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder transferee(String transferee) {
             this.putQueryParameter("Transferee", transferee);

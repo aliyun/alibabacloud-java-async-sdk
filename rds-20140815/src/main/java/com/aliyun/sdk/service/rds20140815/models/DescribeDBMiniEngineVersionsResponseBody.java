@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBMiniEngineVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBMiniEngineVersionsResponseBody</p>
  */
 public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("MaxRecordsPerPage")
+    @com.aliyun.core.annotation.NameInMap("MaxRecordsPerPage")
     private Integer maxRecordsPerPage;
 
-    @NameInMap("MinorVersionItems")
-    private java.util.List < MinorVersionItems> minorVersionItems;
+    @com.aliyun.core.annotation.NameInMap("MinorVersionItems")
+    private java.util.List<MinorVersionItems> minorVersionItems;
 
-    @NameInMap("PageNumbers")
+    @com.aliyun.core.annotation.NameInMap("PageNumbers")
     private Integer pageNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBMiniEngineVersionsResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     /**
      * @return minorVersionItems
      */
-    public java.util.List < MinorVersionItems> getMinorVersionItems() {
+    public java.util.List<MinorVersionItems> getMinorVersionItems() {
         return this.minorVersionItems;
     }
 
@@ -92,13 +97,16 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     public static final class Builder {
         private String DBInstanceId; 
         private Integer maxRecordsPerPage; 
-        private java.util.List < MinorVersionItems> minorVersionItems; 
+        private java.util.List<MinorVersionItems> minorVersionItems; 
         private Integer pageNumbers; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,7 +114,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
             this.maxRecordsPerPage = maxRecordsPerPage;
@@ -114,15 +125,18 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the minor engine version.
+         * <p>The details of the minor engine version.</p>
          */
-        public Builder minorVersionItems(java.util.List < MinorVersionItems> minorVersionItems) {
+        public Builder minorVersionItems(java.util.List<MinorVersionItems> minorVersionItems) {
             this.minorVersionItems = minorVersionItems;
             return this;
         }
 
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.pageNumbers = pageNumbers;
@@ -130,7 +144,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFB6083A-7699-489B-8278-C0CB4793A96E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,41 +171,47 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBMiniEngineVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBMiniEngineVersionsResponseBody</p>
+     */
     public static class MinorVersionItems extends TeaModel {
-        @NameInMap("CommunityMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("CommunityMinorVersion")
         private String communityMinorVersion;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("ExpireStatus")
+        @com.aliyun.core.annotation.NameInMap("ExpireStatus")
         private String expireStatus;
 
-        @NameInMap("IsHotfixVersion")
+        @com.aliyun.core.annotation.NameInMap("IsHotfixVersion")
         private Boolean isHotfixVersion;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseType")
+        @com.aliyun.core.annotation.NameInMap("ReleaseType")
         private String releaseType;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private MinorVersionItems(Builder builder) {
@@ -310,10 +336,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](~~126002~~).
-             * <p>
+             * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes for AliPG</a>.</p>
+             * <blockquote>
+             * <p> This parameter is available only for instances that run <strong>PostgreSQL</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only for instances that run **PostgreSQL**.
+             * <strong>example:</strong>
+             * <p>13.6</p>
              */
             public Builder communityMinorVersion(String communityMinorVersion) {
                 this.communityMinorVersion = communityMinorVersion;
@@ -321,7 +350,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine that corresponds to the minor engine version.
+             * <p>The database engine that corresponds to the minor engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -329,7 +361,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version that corresponds to the minor engine version.
+             * <p>The database engine version that corresponds to the minor engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -337,7 +372,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The expiration time of the minor engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20231213</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -345,13 +383,17 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration status of the minor engine version. Valid values:
-             * <p>
+             * <p>The expiration status of the minor engine version. Valid values:</p>
+             * <ul>
+             * <li><strong>vaild</strong></li>
+             * <li><strong>expired</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+             * </blockquote>
              * 
-             * *   **vaild**
-             * *   **expired**
-             * 
-             * >  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.
+             * <strong>example:</strong>
+             * <p>vaild</p>
              */
             public Builder expireStatus(String expireStatus) {
                 this.expireStatus = expireStatus;
@@ -359,7 +401,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. You do not need to specify this parameter.
+             * <p>An internal parameter. You do not need to specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isHotfixVersion(Boolean isHotfixVersion) {
                 this.isHotfixVersion = isHotfixVersion;
@@ -367,7 +412,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The minor engine version.
+             * <p>The minor engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_20220731</p>
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -375,12 +423,15 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The RDS edition of the instance that runs the minor engine version. Valid values:
-             * <p>
+             * <p>The RDS edition of the instance that runs the minor engine version. Valid values:</p>
+             * <ul>
+             * <li><strong>Basic</strong>: RDS Basic Edition</li>
+             * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+             * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+             * </ul>
              * 
-             * *   **Basic**: RDS Basic Edition
-             * *   **HighAvailability**: RDS High-availability Edition
-             * *   **Finance**: RDS Enterprise Edition
+             * <strong>example:</strong>
+             * <p>HighAvailability</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -388,7 +439,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the release notes for the minor engine version.
+             * <p>The URL of the release notes for the minor engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com">https://example.com</a></p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -396,11 +450,14 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The release type. Valid values:
-             * <p>
+             * <p>The release type. Valid values:</p>
+             * <ul>
+             * <li><strong>LTS</strong>: a long-term version</li>
+             * <li><strong>BETA</strong>: a preview version</li>
+             * </ul>
              * 
-             * *   **LTS**: a long-term version
-             * *   **BETA**: a preview version
+             * <strong>example:</strong>
+             * <p>BETA</p>
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -408,13 +465,17 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the minor engine version. Valid values:
-             * <p>
+             * <p>The status of the minor engine version. Valid values:</p>
+             * <ul>
+             * <li><strong>Offline</strong>: discontinued</li>
+             * <li><strong>Online</strong>: available</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+             * </blockquote>
              * 
-             * *   **Offline**: Discontinued
-             * *   **online**: Available
-             * 
-             * >  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -422,13 +483,17 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that corresponds to the minor engine version. Valid values:
-             * <p>
+             * <p>The tag that corresponds to the minor engine version. Valid values:</p>
+             * <ul>
+             * <li><strong>pgsql_docker_image</strong>: tag of common instances</li>
+             * <li><strong>pgsql_babelfish_image</strong>: tag of instances for which Babelfish is enabled</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only for instances that run <strong>PostgreSQL</strong>.</p>
+             * </blockquote>
              * 
-             * *   **pgsql_docker_image**: tag of the common instance
-             * *   **pgsql_babelfish_image**: tag of the instance for which Babelfish is enabled
-             * 
-             * >  This parameter is available only for instances that run **PostgreSQL**.
+             * <strong>example:</strong>
+             * <p>pgsql_babelfish_image</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

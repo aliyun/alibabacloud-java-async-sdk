@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanSpecificationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticPlanSpecificationsRequest</p>
  */
 public class DescribeElasticPlanSpecificationsRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeElasticPlanSpecificationsRequest(Builder builder) {
@@ -84,10 +89,14 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <strong>example:</strong>
+         * <p>amv-wz9509beptiz****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -96,11 +105,18 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</p>
+         * </li>
+         * </ul>
          * 
-         * > *   This parameter is required only when you query the resource specifications that can be scaled for an interactive resource group.
-         * > *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a specific cluster.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -109,11 +125,15 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
         }
 
         /**
-         * The type of the scaling plan. Valid values:
-         * <p>
+         * <p>The type of the scaling plan. Valid values:</p>
+         * <ul>
+         * <li>EXECUTOR: the interactive resource group type, which specifies the computing resource type.</li>
+         * <li>WORKER: the elastic I/O unit (EIU) type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
-         * *   WORKER: EIUs.
+         * <strong>example:</strong>
+         * <p>EXECUTOR</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

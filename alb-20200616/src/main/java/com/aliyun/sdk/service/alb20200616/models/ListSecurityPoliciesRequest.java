@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecurityPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListSecurityPoliciesRequest</p>
  */
 public class ListSecurityPoliciesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityPolicyIds")
-    private java.util.List < String > securityPolicyIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyIds")
+    private java.util.List<String> securityPolicyIds;
 
-    @Query
-    @NameInMap("SecurityPolicyNames")
-    private java.util.List < String > securityPolicyNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyNames")
+    private java.util.List<String> securityPolicyNames;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ListSecurityPoliciesRequest(Builder builder) {
         super(builder);
@@ -84,21 +89,21 @@ public class ListSecurityPoliciesRequest extends Request {
     /**
      * @return securityPolicyIds
      */
-    public java.util.List < String > getSecurityPolicyIds() {
+    public java.util.List<String> getSecurityPolicyIds() {
         return this.securityPolicyIds;
     }
 
     /**
      * @return securityPolicyNames
      */
-    public java.util.List < String > getSecurityPolicyNames() {
+    public java.util.List<String> getSecurityPolicyNames() {
         return this.securityPolicyNames;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -106,9 +111,9 @@ public class ListSecurityPoliciesRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < String > securityPolicyIds; 
-        private java.util.List < String > securityPolicyNames; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> securityPolicyIds; 
+        private java.util.List<String> securityPolicyNames; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -125,7 +130,10 @@ public class ListSecurityPoliciesRequest extends Request {
         } 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -134,11 +142,14 @@ public class ListSecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -147,7 +158,10 @@ public class ListSecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -156,27 +170,27 @@ public class ListSecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The security policy IDs. You can specify up to 20 IDs.
+         * <p>The security policy IDs. You can specify at most 20 security policies.</p>
          */
-        public Builder securityPolicyIds(java.util.List < String > securityPolicyIds) {
+        public Builder securityPolicyIds(java.util.List<String> securityPolicyIds) {
             this.putQueryParameter("SecurityPolicyIds", securityPolicyIds);
             this.securityPolicyIds = securityPolicyIds;
             return this;
         }
 
         /**
-         * The names of the security policies. You can specify up to 10 names.
+         * <p>The names of the security policies. You can specify up to 10 names.</p>
          */
-        public Builder securityPolicyNames(java.util.List < String > securityPolicyNames) {
+        public Builder securityPolicyNames(java.util.List<String> securityPolicyNames) {
             this.putQueryParameter("SecurityPolicyNames", securityPolicyNames);
             this.securityPolicyNames = securityPolicyNames;
             return this;
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -189,11 +203,17 @@ public class ListSecurityPoliciesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecurityPoliciesRequest} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPoliciesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -228,7 +248,10 @@ public class ListSecurityPoliciesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +259,10 @@ public class ListSecurityPoliciesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

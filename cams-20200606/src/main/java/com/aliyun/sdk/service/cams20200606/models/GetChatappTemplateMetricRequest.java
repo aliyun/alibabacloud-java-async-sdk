@@ -1,50 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappTemplateMetricRequest} extends {@link RequestModel}
  *
  * <p>GetChatappTemplateMetricRequest</p>
  */
 public class GetChatappTemplateMetricRequest extends Request {
-    @Query
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Query
-    @NameInMap("End")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long end;
 
-    @Query
-    @NameInMap("Granularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
     private String granularity;
 
-    @Query
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private GetChatappTemplateMetricRequest(Builder builder) {
@@ -155,7 +155,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the ISV account.
+         * <p>The space ID of the RAM user within the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -164,7 +167,11 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The end of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1693407714687</p>
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -173,10 +180,15 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * Metric granularity. Valid values:
-         * <p>
+         * <p>The granularity of the metric.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DAILY</li>
+         * <li>HALF_HOUR</li>
+         * </ul>
          * 
-         * - DAILY
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -185,7 +197,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.
+         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdi3kksloslikdkkdk</p>
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -194,7 +209,10 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+         * <p>The template language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -203,7 +221,11 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1693107714687</p>
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);
@@ -212,7 +234,11 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The code of the message template.
+         * <p>The template code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>744c4b5c79c9432497a075bdfca36bf5</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -221,10 +247,15 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The type of the message template. Valid values:
-         * <p>
+         * <p>The template type. If you do not specify this parameter, the default value WHATSAPP is used.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>VIBER</li>
+         * <li>WHATSAPP</li>
+         * </ul>
          * 
-         * *   **WHATSAPP**
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

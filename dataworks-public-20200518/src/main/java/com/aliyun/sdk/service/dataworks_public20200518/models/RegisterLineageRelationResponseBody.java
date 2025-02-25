@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterLineageRelationResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterLineageRelationResponseBody</p>
  */
 public class RegisterLineageRelationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("LineageRelation")
+    @com.aliyun.core.annotation.NameInMap("LineageRelation")
     private LineageRelation lineageRelation;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private RegisterLineageRelationResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010210001</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The entity of lineage not exist, xxx</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +136,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * LineageRelation.
+         * <p>The lineage.</p>
          */
         public Builder lineageRelation(LineageRelation lineageRelation) {
             this.lineageRelation = lineageRelation;
@@ -130,7 +144,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE50E05E-028C-182B-9xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,14 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,14 +175,20 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RegisterLineageRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RegisterLineageRelationResponseBody</p>
+     */
     public static class LineageRelation extends TeaModel {
-        @NameInMap("DestEntityQualifiedName")
+        @com.aliyun.core.annotation.NameInMap("DestEntityQualifiedName")
         private String destEntityQualifiedName;
 
-        @NameInMap("RelationshipGuid")
+        @com.aliyun.core.annotation.NameInMap("RelationshipGuid")
         private String relationshipGuid;
 
-        @NameInMap("SrcEntityQualifiedName")
+        @com.aliyun.core.annotation.NameInMap("SrcEntityQualifiedName")
         private String srcEntityQualifiedName;
 
         private LineageRelation(Builder builder) {
@@ -202,7 +232,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             private String srcEntityQualifiedName; 
 
             /**
-             * DestEntityQualifiedName.
+             * <p>The unique identifier of the destination entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom-report.month_stat_user</p>
              */
             public Builder destEntityQualifiedName(String destEntityQualifiedName) {
                 this.destEntityQualifiedName = destEntityQualifiedName;
@@ -210,7 +243,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RelationshipGuid.
+             * <p>The ID of the lineage between entities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dfsldfdlsfdsaaaabbbb</p>
              */
             public Builder relationshipGuid(String relationshipGuid) {
                 this.relationshipGuid = relationshipGuid;
@@ -218,7 +254,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             }
 
             /**
-             * SrcEntityQualifiedName.
+             * <p>The unique identifier of the source entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute-table.project.table</p>
              */
             public Builder srcEntityQualifiedName(String srcEntityQualifiedName) {
                 this.srcEntityQualifiedName = srcEntityQualifiedName;

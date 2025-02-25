@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyDomainOwnerRequest} extends {@link RequestModel}
  *
  * <p>VerifyDomainOwnerRequest</p>
  */
 public class VerifyDomainOwnerRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("VerifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifyType;
 
     private VerifyDomainOwnerRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class VerifyDomainOwnerRequest extends Request {
         } 
 
         /**
-         * The domain name of which you want to verify the ownership. You can specify only one domain name.
+         * <p>The domain name of which you want to verify the ownership. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -79,11 +83,15 @@ public class VerifyDomainOwnerRequest extends Request {
         }
 
         /**
-         * The verification method. Valid values:
-         * <p>
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>dnsCheck</strong>: by DNS record</li>
+         * <li><strong>fileCheck</strong>: by verification file</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **dnsCheck**: by DNS record
-         * *   **fileCheck**: by verification file
+         * <strong>example:</strong>
+         * <p>dnsCheck</p>
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

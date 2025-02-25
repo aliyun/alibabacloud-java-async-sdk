@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataServicePublishedApiResponseBody</p>
  */
 public class GetDataServicePublishedApiResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataServicePublishedApiResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The latest information of the API in the published state.
+         * <p>The latest information about the API in the published state.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,14 +171,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class RegistrationErrorCodes extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ErrorSolution")
+        @com.aliyun.core.annotation.NameInMap("ErrorSolution")
         private String errorSolution;
 
         private RegistrationErrorCodes(Builder builder) {
@@ -202,7 +228,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String errorSolution; 
 
             /**
-             * The error code returned.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid.Tenant.ConnectionNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -210,7 +239,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The connection does not exist.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -218,7 +250,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The solution used to fix the error.
+             * <p>The solution used to fix the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>retry</p>
              */
             public Builder errorSolution(String errorSolution) {
                 this.errorSolution = errorSolution;
@@ -232,29 +267,35 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class RegistrationRequestParameters extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("IsRequiredParameter")
+        @com.aliyun.core.annotation.NameInMap("IsRequiredParameter")
         private Boolean isRequiredParameter;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterOperator")
+        @com.aliyun.core.annotation.NameInMap("ParameterOperator")
         private Integer parameterOperator;
 
-        @NameInMap("ParameterPosition")
+        @com.aliyun.core.annotation.NameInMap("ParameterPosition")
         private Integer parameterPosition;
 
         private RegistrationRequestParameters(Builder builder) {
@@ -343,7 +384,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Integer parameterPosition; 
 
             /**
-             * The default value.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default1</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -351,7 +395,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The sample value.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example1</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -359,7 +406,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRequiredParameter(Boolean isRequiredParameter) {
                 this.isRequiredParameter = isRequiredParameter;
@@ -367,7 +417,24 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter. Valid values: 0, 1, 2, 3, 4, and 5. The value 0 indicates the STRING data type, the value 1 indicates the INT data type, the value 2 indicates the LONG data type, the value 3 indicates the FLOAT data type, the value 4 indicates the DOUBLE data type, and the value 5 indicates the BOOLEAN data type.
+             * <p>The data type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>0: String</li>
+             * <li>1: Int</li>
+             * <li>2: Long</li>
+             * <li>3: Float</li>
+             * <li>4: Double</li>
+             * <li>5: Boolean</li>
+             * <li>6: StringList</li>
+             * <li>7: IntList</li>
+             * <li>8: LongList</li>
+             * <li>9: FloatList</li>
+             * <li>10: DoubleList</li>
+             * <li>11: BooleanList</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterDataType(Integer parameterDataType) {
                 this.parameterDataType = parameterDataType;
@@ -375,7 +442,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description1</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -383,7 +453,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name1</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -391,7 +464,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The operator used for the value of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the operator is Equal, the value 1 indicates that the operator is Like, the value 2 indicates that the operator is Const, and the value 3 indicates that the operator is In. APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.
+             * <p>The operator used for the value of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates the Equal operator. The value 1 indicates the Like operator. The value 2 indicates the Const operator. The value 3 indicates the In operator. APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterOperator(Integer parameterOperator) {
                 this.parameterOperator = parameterOperator;
@@ -399,7 +475,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the parameter is in the URL path of the request, the value 1 indicates that the parameter is in the Query parameter of the request URL, the value 2 indicates that the parameter is in the request header, and the value 3 indicates that the parameter is in the request body. APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.
+             * <p>The position of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the parameter is in the URL path of the request. The value 1 indicates that the parameter is in the Query parameter of the request URL. The value 2 indicates that the parameter is in the request header. The value 3 indicates that the parameter is in the request body. APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterPosition(Integer parameterPosition) {
                 this.parameterPosition = parameterPosition;
@@ -413,29 +492,35 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class RegistrationDetails extends TeaModel {
-        @NameInMap("FailedResultSample")
+        @com.aliyun.core.annotation.NameInMap("FailedResultSample")
         private String failedResultSample;
 
-        @NameInMap("RegistrationErrorCodes")
-        private java.util.List < RegistrationErrorCodes> registrationErrorCodes;
+        @com.aliyun.core.annotation.NameInMap("RegistrationErrorCodes")
+        private java.util.List<RegistrationErrorCodes> registrationErrorCodes;
 
-        @NameInMap("RegistrationRequestParameters")
-        private java.util.List < RegistrationRequestParameters> registrationRequestParameters;
+        @com.aliyun.core.annotation.NameInMap("RegistrationRequestParameters")
+        private java.util.List<RegistrationRequestParameters> registrationRequestParameters;
 
-        @NameInMap("ServiceContentType")
+        @com.aliyun.core.annotation.NameInMap("ServiceContentType")
         private Integer serviceContentType;
 
-        @NameInMap("ServiceHost")
+        @com.aliyun.core.annotation.NameInMap("ServiceHost")
         private String serviceHost;
 
-        @NameInMap("ServicePath")
+        @com.aliyun.core.annotation.NameInMap("ServicePath")
         private String servicePath;
 
-        @NameInMap("ServiceRequestBodyDescription")
+        @com.aliyun.core.annotation.NameInMap("ServiceRequestBodyDescription")
         private String serviceRequestBodyDescription;
 
-        @NameInMap("SuccessfulResultSample")
+        @com.aliyun.core.annotation.NameInMap("SuccessfulResultSample")
         private String successfulResultSample;
 
         private RegistrationDetails(Builder builder) {
@@ -467,14 +552,14 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         /**
          * @return registrationErrorCodes
          */
-        public java.util.List < RegistrationErrorCodes> getRegistrationErrorCodes() {
+        public java.util.List<RegistrationErrorCodes> getRegistrationErrorCodes() {
             return this.registrationErrorCodes;
         }
 
         /**
          * @return registrationRequestParameters
          */
-        public java.util.List < RegistrationRequestParameters> getRegistrationRequestParameters() {
+        public java.util.List<RegistrationRequestParameters> getRegistrationRequestParameters() {
             return this.registrationRequestParameters;
         }
 
@@ -515,8 +600,8 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
 
         public static final class Builder {
             private String failedResultSample; 
-            private java.util.List < RegistrationErrorCodes> registrationErrorCodes; 
-            private java.util.List < RegistrationRequestParameters> registrationRequestParameters; 
+            private java.util.List<RegistrationErrorCodes> registrationErrorCodes; 
+            private java.util.List<RegistrationRequestParameters> registrationRequestParameters; 
             private Integer serviceContentType; 
             private String serviceHost; 
             private String servicePath; 
@@ -524,7 +609,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String successfulResultSample; 
 
             /**
-             * The sample error response of the API.
+             * <p>The sample error response of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;success&quot;: false}</p>
              */
             public Builder failedResultSample(String failedResultSample) {
                 this.failedResultSample = failedResultSample;
@@ -532,23 +620,26 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The error codes returned for the API generated by registration.
+             * <p>The error codes returned for the API generated by registration.</p>
              */
-            public Builder registrationErrorCodes(java.util.List < RegistrationErrorCodes> registrationErrorCodes) {
+            public Builder registrationErrorCodes(java.util.List<RegistrationErrorCodes> registrationErrorCodes) {
                 this.registrationErrorCodes = registrationErrorCodes;
                 return this;
             }
 
             /**
-             * The request parameters of the API generated by registration.
+             * <p>The request parameters of the API generated by registration.</p>
              */
-            public Builder registrationRequestParameters(java.util.List < RegistrationRequestParameters> registrationRequestParameters) {
+            public Builder registrationRequestParameters(java.util.List<RegistrationRequestParameters> registrationRequestParameters) {
                 this.registrationRequestParameters = registrationRequestParameters;
                 return this;
             }
 
             /**
-             * The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.
+             * <p>The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serviceContentType(Integer serviceContentType) {
                 this.serviceContentType = serviceContentType;
@@ -556,7 +647,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the backend service.
+             * <p>The URL of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.aliyundoc.com">http://example.aliyundoc.com</a></p>
              */
             public Builder serviceHost(String serviceHost) {
                 this.serviceHost = serviceHost;
@@ -564,7 +658,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the backend service.
+             * <p>The path of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/index</p>
              */
             public Builder servicePath(String servicePath) {
                 this.servicePath = servicePath;
@@ -572,7 +669,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the request body initiated to call the backend service.
+             * <p>The description of the request body initiated to call the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;abc&quot;:1}</p>
              */
             public Builder serviceRequestBodyDescription(String serviceRequestBodyDescription) {
                 this.serviceRequestBodyDescription = serviceRequestBodyDescription;
@@ -580,7 +680,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The sample success response of the API.
+             * <p>The sample success response of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;success&quot;: true}</p>
              */
             public Builder successfulResultSample(String successfulResultSample) {
                 this.successfulResultSample = successfulResultSample;
@@ -594,11 +697,17 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class ScriptConnection extends TeaModel {
-        @NameInMap("ConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionId")
         private Long connectionId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private ScriptConnection(Builder builder) {
@@ -633,7 +742,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The ID of the data source.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder connectionId(Long connectionId) {
                 this.connectionId = connectionId;
@@ -641,7 +753,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table in the data source.
+             * <p>The name of the table in the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -655,14 +770,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class ScriptErrorCodes extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ErrorSolution")
+        @com.aliyun.core.annotation.NameInMap("ErrorSolution")
         private String errorSolution;
 
         private ScriptErrorCodes(Builder builder) {
@@ -706,7 +827,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String errorSolution; 
 
             /**
-             * The error code returned.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -714,7 +838,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fail to call</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -722,7 +849,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The solution used to fix the error.
+             * <p>The solution used to fix the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>retry</p>
              */
             public Builder errorSolution(String errorSolution) {
                 this.errorSolution = errorSolution;
@@ -736,29 +866,35 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class ScriptRequestParameters extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("IsRequiredParameter")
+        @com.aliyun.core.annotation.NameInMap("IsRequiredParameter")
         private Boolean isRequiredParameter;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterOperator")
+        @com.aliyun.core.annotation.NameInMap("ParameterOperator")
         private Integer parameterOperator;
 
-        @NameInMap("ParameterPosition")
+        @com.aliyun.core.annotation.NameInMap("ParameterPosition")
         private Integer parameterPosition;
 
         private ScriptRequestParameters(Builder builder) {
@@ -847,7 +983,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Integer parameterPosition; 
 
             /**
-             * The default value.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default1</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -855,7 +994,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The sample value.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example1</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -863,7 +1005,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRequiredParameter(Boolean isRequiredParameter) {
                 this.isRequiredParameter = isRequiredParameter;
@@ -871,15 +1016,24 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter. Valid values:
-             * <p>
+             * <p>The data type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>0: String</li>
+             * <li>1: Int</li>
+             * <li>2: Long</li>
+             * <li>3: Float</li>
+             * <li>4: Double</li>
+             * <li>5: Boolean</li>
+             * <li>6: StringList</li>
+             * <li>7: IntList</li>
+             * <li>8: LongList</li>
+             * <li>9: FloatList</li>
+             * <li>10: DoubleList</li>
+             * <li>11: BooleanList</li>
+             * </ul>
              * 
-             * *   0: indicates the STRING data type.
-             * *   1: indicates the INT data type.
-             * *   2: indicates the LONG data type.
-             * *   3: indicates the FLOAT data type.
-             * *   4: indicates the DOUBLE data type.
-             * *   5: indicates the BOOLEAN data type.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterDataType(Integer parameterDataType) {
                 this.parameterDataType = parameterDataType;
@@ -887,7 +1041,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description1</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -895,7 +1052,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -903,15 +1063,17 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The operator used for the value of the parameter. Valid values:
-             * <p>
+             * <p>The operator used for the value of the parameter. Valid values:</p>
+             * <ul>
+             * <li>0: Equal</li>
+             * <li>1: Like</li>
+             * <li>2: Const</li>
+             * <li>3: In</li>
+             * </ul>
+             * <p>APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.</p>
              * 
-             * *   0: indicates that the operator is Equal.
-             * *   1: indicates that the operator is Like.
-             * *   2: indicates that the operator is Const.
-             * *   3: indicates that the operator is In.
-             * 
-             * APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterOperator(Integer parameterOperator) {
                 this.parameterOperator = parameterOperator;
@@ -919,15 +1081,17 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the parameter. Valid values:
-             * <p>
+             * <p>The position of the parameter. Valid values:</p>
+             * <ul>
+             * <li>0: indicates that the parameter is in the URL path of the request.</li>
+             * <li>1: indicates that the parameter is in the Query parameter of the request URL.</li>
+             * <li>2: indicates that the parameter is in the request header.</li>
+             * <li>3: indicates that the parameter is in the request body.</li>
+             * </ul>
+             * <p>APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.</p>
              * 
-             * *   0: indicates that the parameter is in the URL path of the request.
-             * *   1: indicates that the parameter is in the Query parameter of the request URL.
-             * *   2: indicates that the parameter is in the request header.
-             * *   3: indicates that the parameter is in the request body.
-             * 
-             * APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterPosition(Integer parameterPosition) {
                 this.parameterPosition = parameterPosition;
@@ -941,17 +1105,23 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class ScriptResponseParameters extends TeaModel {
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private ScriptResponseParameters(Builder builder) {
@@ -1004,7 +1174,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String parameterName; 
 
             /**
-             * The sample value.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example2</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -1012,7 +1185,24 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter. Valid values: 0, 1, 2, 3, 4, and 5. The value 0 indicates the STRING data type, the value 1 indicates the INT data type, the value 2 indicates the LONG data type, the value 3 indicates the FLOAT data type, the value 4 indicates the DOUBLE data type, and the value 5 indicates the BOOLEAN data type.
+             * <p>The data type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>0: String</li>
+             * <li>1: Int</li>
+             * <li>2: Long</li>
+             * <li>3: Float</li>
+             * <li>4: Double</li>
+             * <li>5: Boolean</li>
+             * <li>6: StringList</li>
+             * <li>7: IntList</li>
+             * <li>8: LongList</li>
+             * <li>9: FloatList</li>
+             * <li>10: DoubleList</li>
+             * <li>11: BooleanList</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterDataType(Integer parameterDataType) {
                 this.parameterDataType = parameterDataType;
@@ -1020,7 +1210,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description2</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -1028,7 +1221,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param2</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -1042,29 +1238,35 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class ScriptDetails extends TeaModel {
-        @NameInMap("FailedResultSample")
+        @com.aliyun.core.annotation.NameInMap("FailedResultSample")
         private String failedResultSample;
 
-        @NameInMap("IsPagedResponse")
+        @com.aliyun.core.annotation.NameInMap("IsPagedResponse")
         private Boolean isPagedResponse;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
-        @NameInMap("ScriptConnection")
+        @com.aliyun.core.annotation.NameInMap("ScriptConnection")
         private ScriptConnection scriptConnection;
 
-        @NameInMap("ScriptErrorCodes")
-        private java.util.List < ScriptErrorCodes> scriptErrorCodes;
+        @com.aliyun.core.annotation.NameInMap("ScriptErrorCodes")
+        private java.util.List<ScriptErrorCodes> scriptErrorCodes;
 
-        @NameInMap("ScriptRequestParameters")
-        private java.util.List < ScriptRequestParameters> scriptRequestParameters;
+        @com.aliyun.core.annotation.NameInMap("ScriptRequestParameters")
+        private java.util.List<ScriptRequestParameters> scriptRequestParameters;
 
-        @NameInMap("ScriptResponseParameters")
-        private java.util.List < ScriptResponseParameters> scriptResponseParameters;
+        @com.aliyun.core.annotation.NameInMap("ScriptResponseParameters")
+        private java.util.List<ScriptResponseParameters> scriptResponseParameters;
 
-        @NameInMap("SuccessfulResultSample")
+        @com.aliyun.core.annotation.NameInMap("SuccessfulResultSample")
         private String successfulResultSample;
 
         private ScriptDetails(Builder builder) {
@@ -1117,21 +1319,21 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         /**
          * @return scriptErrorCodes
          */
-        public java.util.List < ScriptErrorCodes> getScriptErrorCodes() {
+        public java.util.List<ScriptErrorCodes> getScriptErrorCodes() {
             return this.scriptErrorCodes;
         }
 
         /**
          * @return scriptRequestParameters
          */
-        public java.util.List < ScriptRequestParameters> getScriptRequestParameters() {
+        public java.util.List<ScriptRequestParameters> getScriptRequestParameters() {
             return this.scriptRequestParameters;
         }
 
         /**
          * @return scriptResponseParameters
          */
-        public java.util.List < ScriptResponseParameters> getScriptResponseParameters() {
+        public java.util.List<ScriptResponseParameters> getScriptResponseParameters() {
             return this.scriptResponseParameters;
         }
 
@@ -1147,13 +1349,16 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Boolean isPagedResponse; 
             private String script; 
             private ScriptConnection scriptConnection; 
-            private java.util.List < ScriptErrorCodes> scriptErrorCodes; 
-            private java.util.List < ScriptRequestParameters> scriptRequestParameters; 
-            private java.util.List < ScriptResponseParameters> scriptResponseParameters; 
+            private java.util.List<ScriptErrorCodes> scriptErrorCodes; 
+            private java.util.List<ScriptRequestParameters> scriptRequestParameters; 
+            private java.util.List<ScriptResponseParameters> scriptResponseParameters; 
             private String successfulResultSample; 
 
             /**
-             * The sample error response of the API.
+             * <p>The sample error response of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;success&quot;: false}</p>
              */
             public Builder failedResultSample(String failedResultSample) {
                 this.failedResultSample = failedResultSample;
@@ -1161,7 +1366,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the entries were returned by page.
+             * <p>Indicates whether the entries were returned by page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPagedResponse(Boolean isPagedResponse) {
                 this.isPagedResponse = isPagedResponse;
@@ -1169,7 +1377,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL script.
+             * <p>The SQL script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select a from t</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -1177,7 +1388,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data source information of the API generated in script mode.
+             * <p>The data source information of the API generated in script mode.</p>
              */
             public Builder scriptConnection(ScriptConnection scriptConnection) {
                 this.scriptConnection = scriptConnection;
@@ -1185,31 +1396,34 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The error codes returned for the API generated in script mode.
+             * <p>The error codes returned for the API generated in script mode.</p>
              */
-            public Builder scriptErrorCodes(java.util.List < ScriptErrorCodes> scriptErrorCodes) {
+            public Builder scriptErrorCodes(java.util.List<ScriptErrorCodes> scriptErrorCodes) {
                 this.scriptErrorCodes = scriptErrorCodes;
                 return this;
             }
 
             /**
-             * The request parameters of the API generated in script mode.
+             * <p>The request parameters of the API generated in script mode.</p>
              */
-            public Builder scriptRequestParameters(java.util.List < ScriptRequestParameters> scriptRequestParameters) {
+            public Builder scriptRequestParameters(java.util.List<ScriptRequestParameters> scriptRequestParameters) {
                 this.scriptRequestParameters = scriptRequestParameters;
                 return this;
             }
 
             /**
-             * The response parameters of the API generated in script mode.
+             * <p>The response parameters of the API generated in script mode.</p>
              */
-            public Builder scriptResponseParameters(java.util.List < ScriptResponseParameters> scriptResponseParameters) {
+            public Builder scriptResponseParameters(java.util.List<ScriptResponseParameters> scriptResponseParameters) {
                 this.scriptResponseParameters = scriptResponseParameters;
                 return this;
             }
 
             /**
-             * The sample success response of the API.
+             * <p>The sample success response of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;success&quot;: true}</p>
              */
             public Builder successfulResultSample(String successfulResultSample) {
                 this.successfulResultSample = successfulResultSample;
@@ -1223,11 +1437,17 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class WizardConnection extends TeaModel {
-        @NameInMap("ConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionId")
         private Long connectionId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private WizardConnection(Builder builder) {
@@ -1262,7 +1482,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The ID of the data source.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder connectionId(Long connectionId) {
                 this.connectionId = connectionId;
@@ -1270,7 +1493,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table in the data source.
+             * <p>The name of the table in the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1284,14 +1510,20 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class WizardErrorCodes extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ErrorSolution")
+        @com.aliyun.core.annotation.NameInMap("ErrorSolution")
         private String errorSolution;
 
         private WizardErrorCodes(Builder builder) {
@@ -1335,7 +1567,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String errorSolution; 
 
             /**
-             * The error code returned.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -1343,7 +1578,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fail to call</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1351,7 +1589,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The solution used to fix the error.
+             * <p>The solution used to fix the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>retry</p>
              */
             public Builder errorSolution(String errorSolution) {
                 this.errorSolution = errorSolution;
@@ -1365,29 +1606,35 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class WizardRequestParameters extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("IsRequiredParameter")
+        @com.aliyun.core.annotation.NameInMap("IsRequiredParameter")
         private Boolean isRequiredParameter;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterOperator")
+        @com.aliyun.core.annotation.NameInMap("ParameterOperator")
         private Integer parameterOperator;
 
-        @NameInMap("ParameterPosition")
+        @com.aliyun.core.annotation.NameInMap("ParameterPosition")
         private Integer parameterPosition;
 
         private WizardRequestParameters(Builder builder) {
@@ -1476,7 +1723,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Integer parameterPosition; 
 
             /**
-             * The default value.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default1</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -1484,7 +1734,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The sample value.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example1</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -1492,7 +1745,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRequiredParameter(Boolean isRequiredParameter) {
                 this.isRequiredParameter = isRequiredParameter;
@@ -1500,7 +1756,24 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter. Valid values: 0, 1, 2, 3, 4, and 5. The value 0 indicates the STRING data type, the value 1 indicates the INT data type, the value 2 indicates the LONG data type, the value 3 indicates the FLOAT data type, the value 4 indicates the DOUBLE data type, and the value 5 indicates the BOOLEAN data type.
+             * <p>The data type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>0: String</li>
+             * <li>1: Int</li>
+             * <li>2: Long</li>
+             * <li>3: Float</li>
+             * <li>4: Double</li>
+             * <li>5: Boolean</li>
+             * <li>6: StringList</li>
+             * <li>7: IntList</li>
+             * <li>8: LongList</li>
+             * <li>9: FloatList</li>
+             * <li>10: DoubleList</li>
+             * <li>11: BooleanList</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterDataType(Integer parameterDataType) {
                 this.parameterDataType = parameterDataType;
@@ -1508,7 +1781,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description1</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -1516,7 +1792,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -1524,7 +1803,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The operator used for the value of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the operator is Equal, the value 1 indicates that the operator is Like, the value 2 indicates that the operator is Const, and the value 3 indicates that the operator is In. APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.
+             * <p>The operator used for the value of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates the Equal operator. The value 1 indicates the Like operator. The value 2 indicates the Const operator. The value 3 indicates the In operator. APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterOperator(Integer parameterOperator) {
                 this.parameterOperator = parameterOperator;
@@ -1532,7 +1814,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the parameter is in the URL path of the request, the value 1 indicates that the parameter is in the Query parameter of the request URL, the value 2 indicates that the parameter is in the request header, and the value 3 indicates that the parameter is in the request body. APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.
+             * <p>The position of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the parameter is in the URL path of the request. The value 1 indicates that the parameter is in the Query parameter of the request URL. The value 2 indicates that the parameter is in the request header. The value 3 indicates that the parameter is in the request body. APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterPosition(Integer parameterPosition) {
                 this.parameterPosition = parameterPosition;
@@ -1546,17 +1831,23 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class WizardResponseParameters extends TeaModel {
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private WizardResponseParameters(Builder builder) {
@@ -1609,7 +1900,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String parameterName; 
 
             /**
-             * The sample value.
+             * <p>The sample value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example2</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -1617,7 +1911,24 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter. Valid values: 0, 1, 2, 3, 4, and 5. The value 0 indicates the STRING data type, the value 1 indicates the INT data type, the value 2 indicates the LONG data type, the value 3 indicates the FLOAT data type, the value 4 indicates the DOUBLE data type, and the value 5 indicates the BOOLEAN data type.
+             * <p>The data type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>0: String</li>
+             * <li>1: Int</li>
+             * <li>2: Long</li>
+             * <li>3: Float</li>
+             * <li>4: Double</li>
+             * <li>5: Boolean</li>
+             * <li>6: StringList</li>
+             * <li>7: IntList</li>
+             * <li>8: LongList</li>
+             * <li>9: FloatList</li>
+             * <li>10: DoubleList</li>
+             * <li>11: BooleanList</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parameterDataType(Integer parameterDataType) {
                 this.parameterDataType = parameterDataType;
@@ -1625,7 +1936,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description2</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -1633,7 +1947,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param2</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -1647,27 +1964,33 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class WizardDetails extends TeaModel {
-        @NameInMap("FailedResultSample")
+        @com.aliyun.core.annotation.NameInMap("FailedResultSample")
         private String failedResultSample;
 
-        @NameInMap("IsPagedResponse")
+        @com.aliyun.core.annotation.NameInMap("IsPagedResponse")
         private Boolean isPagedResponse;
 
-        @NameInMap("SuccessfulResultSample")
+        @com.aliyun.core.annotation.NameInMap("SuccessfulResultSample")
         private String successfulResultSample;
 
-        @NameInMap("WizardConnection")
+        @com.aliyun.core.annotation.NameInMap("WizardConnection")
         private WizardConnection wizardConnection;
 
-        @NameInMap("WizardErrorCodes")
-        private java.util.List < WizardErrorCodes> wizardErrorCodes;
+        @com.aliyun.core.annotation.NameInMap("WizardErrorCodes")
+        private java.util.List<WizardErrorCodes> wizardErrorCodes;
 
-        @NameInMap("WizardRequestParameters")
-        private java.util.List < WizardRequestParameters> wizardRequestParameters;
+        @com.aliyun.core.annotation.NameInMap("WizardRequestParameters")
+        private java.util.List<WizardRequestParameters> wizardRequestParameters;
 
-        @NameInMap("WizardResponseParameters")
-        private java.util.List < WizardResponseParameters> wizardResponseParameters;
+        @com.aliyun.core.annotation.NameInMap("WizardResponseParameters")
+        private java.util.List<WizardResponseParameters> wizardResponseParameters;
 
         private WizardDetails(Builder builder) {
             this.failedResultSample = builder.failedResultSample;
@@ -1718,21 +2041,21 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         /**
          * @return wizardErrorCodes
          */
-        public java.util.List < WizardErrorCodes> getWizardErrorCodes() {
+        public java.util.List<WizardErrorCodes> getWizardErrorCodes() {
             return this.wizardErrorCodes;
         }
 
         /**
          * @return wizardRequestParameters
          */
-        public java.util.List < WizardRequestParameters> getWizardRequestParameters() {
+        public java.util.List<WizardRequestParameters> getWizardRequestParameters() {
             return this.wizardRequestParameters;
         }
 
         /**
          * @return wizardResponseParameters
          */
-        public java.util.List < WizardResponseParameters> getWizardResponseParameters() {
+        public java.util.List<WizardResponseParameters> getWizardResponseParameters() {
             return this.wizardResponseParameters;
         }
 
@@ -1741,12 +2064,15 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private Boolean isPagedResponse; 
             private String successfulResultSample; 
             private WizardConnection wizardConnection; 
-            private java.util.List < WizardErrorCodes> wizardErrorCodes; 
-            private java.util.List < WizardRequestParameters> wizardRequestParameters; 
-            private java.util.List < WizardResponseParameters> wizardResponseParameters; 
+            private java.util.List<WizardErrorCodes> wizardErrorCodes; 
+            private java.util.List<WizardRequestParameters> wizardRequestParameters; 
+            private java.util.List<WizardResponseParameters> wizardResponseParameters; 
 
             /**
-             * The sample error response of the API.
+             * <p>The sample error response of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;success&quot;: false}</p>
              */
             public Builder failedResultSample(String failedResultSample) {
                 this.failedResultSample = failedResultSample;
@@ -1754,7 +2080,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the entries were returned by page.
+             * <p>Indicates whether the entries were returned by page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPagedResponse(Boolean isPagedResponse) {
                 this.isPagedResponse = isPagedResponse;
@@ -1762,7 +2091,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The sample success response of the API.
+             * <p>The sample success response of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;success&quot;: true}</p>
              */
             public Builder successfulResultSample(String successfulResultSample) {
                 this.successfulResultSample = successfulResultSample;
@@ -1770,7 +2102,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data source information of the API generated in wizard mode.
+             * <p>The data source information of the API generated in wizard mode.</p>
              */
             public Builder wizardConnection(WizardConnection wizardConnection) {
                 this.wizardConnection = wizardConnection;
@@ -1778,25 +2110,25 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The error codes returned for the API generated in wizard mode.
+             * <p>The error codes returned for the API generated in wizard mode.</p>
              */
-            public Builder wizardErrorCodes(java.util.List < WizardErrorCodes> wizardErrorCodes) {
+            public Builder wizardErrorCodes(java.util.List<WizardErrorCodes> wizardErrorCodes) {
                 this.wizardErrorCodes = wizardErrorCodes;
                 return this;
             }
 
             /**
-             * The request parameters of the API generated in wizard mode.
+             * <p>The request parameters of the API generated in wizard mode.</p>
              */
-            public Builder wizardRequestParameters(java.util.List < WizardRequestParameters> wizardRequestParameters) {
+            public Builder wizardRequestParameters(java.util.List<WizardRequestParameters> wizardRequestParameters) {
                 this.wizardRequestParameters = wizardRequestParameters;
                 return this;
             }
 
             /**
-             * The response parameters of the API generated in wizard mode.
+             * <p>The response parameters of the API generated in wizard mode.</p>
              */
-            public Builder wizardResponseParameters(java.util.List < WizardResponseParameters> wizardResponseParameters) {
+            public Builder wizardResponseParameters(java.util.List<WizardResponseParameters> wizardResponseParameters) {
                 this.wizardResponseParameters = wizardResponseParameters;
                 return this;
             }
@@ -1808,68 +2140,74 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataServicePublishedApiResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServicePublishedApiResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
 
-        @NameInMap("ApiMode")
+        @com.aliyun.core.annotation.NameInMap("ApiMode")
         private Integer apiMode;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiPath")
+        @com.aliyun.core.annotation.NameInMap("ApiPath")
         private String apiPath;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OperatorId")
+        @com.aliyun.core.annotation.NameInMap("OperatorId")
         private String operatorId;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Protocols")
-        private java.util.List < Integer > protocols;
+        @com.aliyun.core.annotation.NameInMap("Protocols")
+        private java.util.List<Integer> protocols;
 
-        @NameInMap("RegistrationDetails")
+        @com.aliyun.core.annotation.NameInMap("RegistrationDetails")
         private RegistrationDetails registrationDetails;
 
-        @NameInMap("RequestMethod")
+        @com.aliyun.core.annotation.NameInMap("RequestMethod")
         private Integer requestMethod;
 
-        @NameInMap("ResponseContentType")
+        @com.aliyun.core.annotation.NameInMap("ResponseContentType")
         private Integer responseContentType;
 
-        @NameInMap("ScriptDetails")
+        @com.aliyun.core.annotation.NameInMap("ScriptDetails")
         private ScriptDetails scriptDetails;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
-        @NameInMap("VisibleRange")
+        @com.aliyun.core.annotation.NameInMap("VisibleRange")
         private Integer visibleRange;
 
-        @NameInMap("WizardDetails")
+        @com.aliyun.core.annotation.NameInMap("WizardDetails")
         private WizardDetails wizardDetails;
 
         private Data(Builder builder) {
@@ -1984,7 +2322,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         /**
          * @return protocols
          */
-        public java.util.List < Integer > getProtocols() {
+        public java.util.List<Integer> getProtocols() {
             return this.protocols;
         }
 
@@ -2063,7 +2401,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private String modifiedTime; 
             private String operatorId; 
             private Long projectId; 
-            private java.util.List < Integer > protocols; 
+            private java.util.List<Integer> protocols; 
             private RegistrationDetails registrationDetails; 
             private Integer requestMethod; 
             private Integer responseContentType; 
@@ -2075,7 +2413,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             private WizardDetails wizardDetails; 
 
             /**
-             * The ID of the DataService Studio API.
+             * <p>The ID of the DataService Studio API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -2083,7 +2424,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the API. Valid values: 0, 1, and 2. The value 0 indicates that the API is generated in wizard mode. The value 1 indicates that the API is generated in script mode. The value 2 indicates that the API is generated by registration.
+             * <p>The type of the API. Valid values: 0, 1, and 2. The value 0 indicates that the API is generated in wizard mode. The value 1 indicates that the API is generated in script mode. The value 2 indicates that the API is generated by registration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder apiMode(Integer apiMode) {
                 this.apiMode = apiMode;
@@ -2091,7 +2435,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name of the test API</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -2099,7 +2446,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the API.
+             * <p>The path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/1</p>
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;
@@ -2107,7 +2457,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -2115,7 +2468,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the creator of the API.
+             * <p>The ID of the Alibaba Cloud account used by the creator of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -2123,7 +2479,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description of the test API</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2131,7 +2490,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab12**</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -2139,7 +2501,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API was last modified.
+             * <p>The time when the API was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-23T00:21:01+0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2147,7 +2512,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who last modified the API.
+             * <p>The ID of the Alibaba Cloud account used by the user who last modified the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345678</p>
              */
             public Builder operatorId(String operatorId) {
                 this.operatorId = operatorId;
@@ -2155,7 +2523,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -2163,15 +2534,15 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The list of fields.
+             * <p>The protocol used by the API. Valid values: 0 and 1. The value 0 indicates HTTP. The value 1 indicates HTTPS. Multiple protocols are presented in a list.</p>
              */
-            public Builder protocols(java.util.List < Integer > protocols) {
+            public Builder protocols(java.util.List<Integer> protocols) {
                 this.protocols = protocols;
                 return this;
             }
 
             /**
-             * The details of the API generated by registration. This parameter is returned only if the API is generated by registration.
+             * <p>The details of the API generated by registration. This parameter is returned only if the API is generated by registration.</p>
              */
             public Builder registrationDetails(RegistrationDetails registrationDetails) {
                 this.registrationDetails = registrationDetails;
@@ -2179,7 +2550,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The request method of the API. Valid values: 0, 1, 2, and 3. The value 0 indicates the GET method, the value 1 indicates the POST method, the value 2 indicates the PUT method, and the value 3 indicates the DELETE method. APIs generated in wizard or script mode support the GET and POST methods. APIs generated by registration support the GET, POST, PUT, and DELETE methods.
+             * <p>The request method of the API. Valid values: 0, 1, 2, and 3. The value 0 indicates the GET method, the value 1 indicates the POST method, the value 2 indicates the PUT method, and the value 3 indicates the DELETE method. APIs generated in wizard or script mode support the GET and POST methods. APIs generated by registration support the GET, POST, PUT, and DELETE methods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder requestMethod(Integer requestMethod) {
                 this.requestMethod = requestMethod;
@@ -2187,7 +2561,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.
+             * <p>The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder responseContentType(Integer responseContentType) {
                 this.responseContentType = responseContentType;
@@ -2195,7 +2572,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the API generated in script mode. This parameter is returned only if the API is generated in script mode.
+             * <p>The details of the API generated in script mode. This parameter is returned only if the API is generated in script mode.</p>
              */
             public Builder scriptDetails(ScriptDetails scriptDetails) {
                 this.scriptDetails = scriptDetails;
@@ -2203,7 +2580,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.
+             * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -2211,7 +2591,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -2219,7 +2602,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the API request. Unit: milliseconds.
+             * <p>The timeout period of the API request. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -2227,7 +2613,10 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The scope in which the API is visible. Valid values: 0 and 1. The value 0 indicates that the API is visible to the members in a specific workspace. The value 1 indicates that the API is visible only to the API creator.
+             * <p>The scope in which the API is visible. Valid values: 0 and 1. The value 0 indicates that the API is visible to the members in a specific workspace. The value 1 indicates that the API is visible only to the API creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder visibleRange(Integer visibleRange) {
                 this.visibleRange = visibleRange;
@@ -2235,7 +2624,7 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the API generated in wizard mode. This parameter is returned only if the API is generated in wizard mode.
+             * <p>The details of the API generated in wizard mode. This parameter is returned only if the API is generated in wizard mode.</p>
              */
             public Builder wizardDetails(WizardDetails wizardDetails) {
                 this.wizardDetails = wizardDetails;

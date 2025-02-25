@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSubImagesKvInfoKvDetailsValue} extends {@link TeaModel}
  *
  * <p>DataSubImagesKvInfoKvDetailsValue</p>
  */
 public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
-    @NameInMap("KeyName")
+    @com.aliyun.core.annotation.NameInMap("KeyName")
     private String keyName;
 
-    @NameInMap("KeyConfidence")
+    @com.aliyun.core.annotation.NameInMap("KeyConfidence")
     private Integer keyConfidence;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
-    @NameInMap("ValueConfidence")
+    @com.aliyun.core.annotation.NameInMap("ValueConfidence")
     private Integer valueConfidence;
 
-    @NameInMap("ValuePoints")
+    @com.aliyun.core.annotation.NameInMap("ValuePoints")
     private java.util.List < ValuePoints> valuePoints;
 
-    @NameInMap("ValueRect")
+    @com.aliyun.core.annotation.NameInMap("ValueRect")
     private ValueRect valueRect;
 
-    @NameInMap("ValueAngle")
+    @com.aliyun.core.annotation.NameInMap("ValueAngle")
     private Integer valueAngle;
 
     private DataSubImagesKvInfoKvDetailsValue(Builder builder) {
@@ -171,11 +171,17 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataSubImagesKvInfoKvDetailsValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesKvInfoKvDetailsValue</p>
+     */
     public static class ValuePoints extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Integer y;
 
         private ValuePoints(Builder builder) {
@@ -232,17 +238,23 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataSubImagesKvInfoKvDetailsValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesKvInfoKvDetailsValue</p>
+     */
     public static class ValueRect extends TeaModel {
-        @NameInMap("CenterX")
+        @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
 
-        @NameInMap("CenterY")
+        @com.aliyun.core.annotation.NameInMap("CenterY")
         private Integer centerY;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
         private ValueRect(Builder builder) {

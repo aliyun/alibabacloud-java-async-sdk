@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEncryptionKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEncryptionKeyResponseBody</p>
  */
 public class DescribeEncryptionKeyResponseBody extends TeaModel {
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @NameInMap("DeleteDate")
+    @com.aliyun.core.annotation.NameInMap("DeleteDate")
     private String deleteDate;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @NameInMap("EncryptionKeyStatus")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKeyStatus")
     private String encryptionKeyStatus;
 
-    @NameInMap("EncryptionName")
+    @com.aliyun.core.annotation.NameInMap("EncryptionName")
     private String encryptionName;
 
-    @NameInMap("KeyUsage")
+    @com.aliyun.core.annotation.NameInMap("KeyUsage")
     private String keyUsage;
 
-    @NameInMap("MaterialExpireTime")
+    @com.aliyun.core.annotation.NameInMap("MaterialExpireTime")
     private String materialExpireTime;
 
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
     private DescribeEncryptionKeyResponseBody(Builder builder) {
@@ -158,7 +158,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         private String roleArn; 
 
         /**
-         * The ID of the Alibaba Cloud account that is used to create the custom key.
+         * <p>The ID of the Alibaba Cloud account that is used to create the custom key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17649847********</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -166,10 +169,13 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the custom key is expected to be deleted. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-         * <p>
+         * <p>The time when the custom key is expected to be deleted. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p>If the return value is an empty string, the custom key cannot be automatically deleted.</p>
+         * </blockquote>
          * 
-         * > If the return value is an empty string, the custom key cannot be automatically deleted.
+         * <strong>example:</strong>
+         * <p>2021-09-24T18:22:03Z</p>
          */
         public Builder deleteDate(String deleteDate) {
             this.deleteDate = deleteDate;
@@ -177,7 +183,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the custom key. By default, an empty string is returned.
+         * <p>The description of the custom key. By default, an empty string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -185,7 +194,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the custom key.
+         * <p>The ID of the custom key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad463061-992d-4195-8a94-ed63********</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -193,11 +205,14 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the custom key. Valid values:
-         * <p>
+         * <p>The state of the custom key. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: The custom key is available.</li>
+         * <li><strong>Disabled</strong>: The custom key is unavailable.</li>
+         * </ul>
          * 
-         * *   **Enabled**: The custom key is available.
-         * *   **Disabled**: The custom key is unavailable.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder encryptionKeyStatus(String encryptionKeyStatus) {
             this.encryptionKeyStatus = encryptionKeyStatus;
@@ -205,7 +220,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The encryption algorithm.
+         * <p>The encryption algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES-CTR-256</p>
          */
         public Builder encryptionName(String encryptionName) {
             this.encryptionName = encryptionName;
@@ -213,7 +231,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The purpose of the custom key. A value of `ENCRYPT/DECRYPT` indicates encryption and decryption.
+         * <p>The purpose of the custom key. A value of <code>ENCRYPT/DECRYPT</code> indicates encryption and decryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENCRYPT/DECRYPT</p>
          */
         public Builder keyUsage(String keyUsage) {
             this.keyUsage = keyUsage;
@@ -221,10 +242,13 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the custom key expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-         * <p>
+         * <p>The time when the custom key expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p>If the return value is an empty string, the custom key does not expire.</p>
+         * </blockquote>
          * 
-         * > If the return value is an empty string, the custom key does not expire.
+         * <strong>example:</strong>
+         * <p>2021-09-24T18:22:03Z</p>
          */
         public Builder materialExpireTime(String materialExpireTime) {
             this.materialExpireTime = materialExpireTime;
@@ -232,7 +256,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The source of the custom key. A value of **Aliyun_KMS** indicates [Key Management Service (KMS)](~~28935~~) of Alibaba Cloud.
+         * <p>The source of the custom key. A value of <strong>Aliyun_KMS</strong> indicates <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> of Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun_KMS</p>
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -240,7 +267,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A931CE5-C926-5E09-B0EC-6299C4A6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +278,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAIJobRequest} extends {@link RequestModel}
  *
  * <p>ListAIJobRequest</p>
  */
 public class ListAIJobRequest extends Request {
-    @Query
-    @NameInMap("JobIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobIds;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
     private ListAIJobRequest(Builder builder) {
@@ -111,10 +116,14 @@ public class ListAIJobRequest extends Request {
         } 
 
         /**
-         * The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the [GetPlayInfo](~~56124~~) operation.
-         * <p>
+         * <p>The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation.</p>
+         * <blockquote>
+         * <p> You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>a718a3a1e8bb42ee3bc88921e94****,aasdcsfg782740asd3****,k2l3ibaskod98wrns9d****</p>
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);

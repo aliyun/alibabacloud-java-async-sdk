@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineItemListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageBaselineItemListRequest</p>
  */
 public class DescribeImageBaselineItemListRequest extends Request {
-    @Query
-    @NameInMap("BaselineClassKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaselineClassKey")
     private String baselineClassKey;
 
-    @Query
-    @NameInMap("BaselineNameKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaselineNameKey")
     private String baselineNameKey;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("ImageUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageUuid;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ScanRange")
-    private java.util.List < String > scanRange;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRange")
+    private java.util.List<String> scanRange;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Uuids")
-    private java.util.List < String > uuids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
+    private java.util.List<String> uuids;
 
     private DescribeImageBaselineItemListRequest(Builder builder) {
         super(builder);
@@ -120,7 +125,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
     /**
      * @return scanRange
      */
-    public java.util.List < String > getScanRange() {
+    public java.util.List<String> getScanRange() {
         return this.scanRange;
     }
 
@@ -134,7 +139,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
     /**
      * @return uuids
      */
-    public java.util.List < String > getUuids() {
+    public java.util.List<String> getUuids() {
         return this.uuids;
     }
 
@@ -145,9 +150,9 @@ public class DescribeImageBaselineItemListRequest extends Request {
         private String imageUuid; 
         private String lang; 
         private Integer pageSize; 
-        private java.util.List < String > scanRange; 
+        private java.util.List<String> scanRange; 
         private String status; 
-        private java.util.List < String > uuids; 
+        private java.util.List<String> uuids; 
 
         private Builder() {
             super();
@@ -167,7 +172,10 @@ public class DescribeImageBaselineItemListRequest extends Request {
         } 
 
         /**
-         * The key of the baseline type.
+         * <p>The key of the baseline type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         public Builder baselineClassKey(String baselineClassKey) {
             this.putQueryParameter("BaselineClassKey", baselineClassKey);
@@ -176,7 +184,10 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * The key of the baseline name.
+         * <p>The key of the baseline name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey pair leak</p>
          */
         public Builder baselineNameKey(String baselineNameKey) {
             this.putQueryParameter("BaselineNameKey", baselineNameKey);
@@ -185,7 +196,10 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -194,7 +208,11 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * The UUID of the image.
+         * <p>The UUID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b5c7193300da2070220038718ad****</p>
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -203,11 +221,14 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -216,7 +237,10 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,22 +249,25 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * The types of the assets that are scanned.
+         * <p>The types of the assets that are scanned.</p>
          */
-        public Builder scanRange(java.util.List < String > scanRange) {
+        public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
             return this;
         }
 
         /**
-         * The status of the baseline risk item. Valid values:
-         * <p>
+         * <p>The status of the baseline risk item. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unfixed</li>
+         * <li><strong>1</strong>: fixed</li>
+         * <li><strong>2</strong>: pending verification</li>
+         * <li><strong>3</strong>: fixing failed</li>
+         * </ul>
          * 
-         * *   **0**: unfixed
-         * *   **1**: fixed
-         * *   **2**: pending verification
-         * *   **3**: fixing failed
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -249,9 +276,9 @@ public class DescribeImageBaselineItemListRequest extends Request {
         }
 
         /**
-         * The UUIDs of images.
+         * <p>The UUIDs of images.</p>
          */
-        public Builder uuids(java.util.List < String > uuids) {
+        public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);
             this.uuids = uuids;
             return this;

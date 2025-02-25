@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAIMediaAuditJobRequest} extends {@link RequestModel}
  *
  * <p>GetAIMediaAuditJobRequest</p>
  */
 public class GetAIMediaAuditJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private GetAIMediaAuditJobRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetAIMediaAuditJobRequest extends Request {
         } 
 
         /**
-         * The ID of the intelligent review job.
+         * <p>The ID of the intelligent review job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdbc266af6894*****943a70176d92e9</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

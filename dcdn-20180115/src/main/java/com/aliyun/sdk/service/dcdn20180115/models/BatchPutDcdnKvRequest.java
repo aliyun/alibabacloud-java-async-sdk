@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchPutDcdnKvRequest} extends {@link RequestModel}
  *
  * <p>BatchPutDcdnKvRequest</p>
  */
 public class BatchPutDcdnKvRequest extends Request {
-    @Query
-    @NameInMap("KvList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KvList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < KvList> kvList;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private BatchPutDcdnKvRequest(Builder builder) {
@@ -70,17 +70,21 @@ public class BatchPutDcdnKvRequest extends Request {
         } 
 
         /**
-         * KvList.
+         * <p>This parameter is required.</p>
          */
         public Builder kvList(java.util.List < KvList> kvList) {
             String kvListShrink = shrink(kvList, "KvList", "json");
-            this.putQueryParameter("KvList", kvListShrink);
+            this.putBodyParameter("KvList", kvListShrink);
             this.kvList = kvList;
             return this;
         }
 
         /**
-         * Namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -95,19 +99,25 @@ public class BatchPutDcdnKvRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchPutDcdnKvRequest} extends {@link TeaModel}
+     *
+     * <p>BatchPutDcdnKvRequest</p>
+     */
     public static class KvList extends TeaModel {
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private Long expiration;
 
-        @NameInMap("ExpirationTtl")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTtl")
         private Long expirationTtl;
 
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private KvList(Builder builder) {
@@ -176,7 +186,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -184,7 +194,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;

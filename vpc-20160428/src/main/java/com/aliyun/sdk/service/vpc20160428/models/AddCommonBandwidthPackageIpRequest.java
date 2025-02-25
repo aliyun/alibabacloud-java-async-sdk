@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCommonBandwidthPackageIpRequest} extends {@link RequestModel}
  *
  * <p>AddCommonBandwidthPackageIpRequest</p>
  */
 public class AddCommonBandwidthPackageIpRequest extends Request {
-    @Query
-    @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bandwidthPackageId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("IpInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipInstanceId;
 
-    @Query
-    @NameInMap("IpType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpType")
     private String ipType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private AddCommonBandwidthPackageIpRequest(Builder builder) {
@@ -169,7 +174,11 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         } 
 
         /**
-         * The ID of the Internet Shared Bandwidth instance.
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-2ze2ic1xd2qeqasdf****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -178,12 +187,14 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,10 +203,12 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * The EIP ID.
-         * <p>
+         * <p>The EIP ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query EIP IDs.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeEipAddresses](~~36018~~) operation to query EIP IDs.
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7uqwed****</p>
          */
         public Builder ipInstanceId(String ipInstanceId) {
             this.putQueryParameter("IpInstanceId", ipInstanceId);
@@ -204,7 +217,10 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * The type of IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.
+         * <p>The type of IP address. Set the value to <strong>EIP</strong> to associate EIPs with the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -231,10 +247,12 @@ public class AddCommonBandwidthPackageIpRequest extends Request {
         }
 
         /**
-         * The region ID of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The region ID of the Internet Shared Bandwidth instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

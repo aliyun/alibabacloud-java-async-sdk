@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppsResponseBody</p>
  */
 public class DescribeAppsResponseBody extends TeaModel {
-    @NameInMap("AppList")
+    @com.aliyun.core.annotation.NameInMap("AppList")
     private AppList appList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeAppsResponseBody(Builder builder) {
@@ -111,9 +116,15 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class ServiceAreas extends TeaModel {
-        @NameInMap("ServiceArea")
-        private java.util.List < String > serviceArea;
+        @com.aliyun.core.annotation.NameInMap("ServiceArea")
+        private java.util.List<String> serviceArea;
 
         private ServiceAreas(Builder builder) {
             this.serviceArea = builder.serviceArea;
@@ -130,17 +141,17 @@ public class DescribeAppsResponseBody extends TeaModel {
         /**
          * @return serviceArea
          */
-        public java.util.List < String > getServiceArea() {
+        public java.util.List<String> getServiceArea() {
             return this.serviceArea;
         }
 
         public static final class Builder {
-            private java.util.List < String > serviceArea; 
+            private java.util.List<String> serviceArea; 
 
             /**
              * ServiceArea.
              */
-            public Builder serviceArea(java.util.List < String > serviceArea) {
+            public Builder serviceArea(java.util.List<String> serviceArea) {
                 this.serviceArea = serviceArea;
                 return this;
             }
@@ -152,27 +163,36 @@ public class DescribeAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class App extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ServiceAreas")
+        @com.aliyun.core.annotation.NameInMap("ServiceAreas")
         private ServiceAreas serviceAreas;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
 
         private App(Builder builder) {
             this.appId = builder.appId;
@@ -182,6 +202,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.serviceAreas = builder.serviceAreas;
             this.status = builder.status;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -241,6 +262,13 @@ public class DescribeAppsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appName; 
@@ -249,6 +277,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String createTime; 
             private ServiceAreas serviceAreas; 
             private Integer status; 
+            private String version; 
 
             /**
              * AppId.
@@ -306,6 +335,14 @@ public class DescribeAppsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
             public App build() {
                 return new App(this);
             } 
@@ -313,9 +350,15 @@ public class DescribeAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class AppList extends TeaModel {
-        @NameInMap("App")
-        private java.util.List < App> app;
+        @com.aliyun.core.annotation.NameInMap("App")
+        private java.util.List<App> app;
 
         private AppList(Builder builder) {
             this.app = builder.app;
@@ -332,17 +375,17 @@ public class DescribeAppsResponseBody extends TeaModel {
         /**
          * @return app
          */
-        public java.util.List < App> getApp() {
+        public java.util.List<App> getApp() {
             return this.app;
         }
 
         public static final class Builder {
-            private java.util.List < App> app; 
+            private java.util.List<App> app; 
 
             /**
              * App.
              */
-            public Builder app(java.util.List < App> app) {
+            public Builder app(java.util.List<App> app) {
                 this.app = app;
                 return this;
             }

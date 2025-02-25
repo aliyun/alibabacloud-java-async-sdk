@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDeviceInternetPortRequest} extends {@link RequestModel}
  *
  * <p>DeleteDeviceInternetPortRequest</p>
  */
 public class DeleteDeviceInternetPortRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NatType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natType;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
     private DeleteDeviceInternetPortRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class DeleteDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance. You can specify the ID of the server or container.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5scdmgpdegymqyugf85q66l1a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +103,15 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * NatType.
+         * <p>The type of the NAT gateway. The value must be of the enumerated data type. Valid values:</p>
+         * <ul>
+         * <li>SNAT</li>
+         * <li>DNAT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DNAT</p>
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -103,7 +120,11 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5rfzxah5gzfo869fl6epvon3y</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

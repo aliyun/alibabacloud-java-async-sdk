@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateMaterialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateMaterialsResponseBody</p>
  */
 public class GetTemplateMaterialsResponseBody extends TeaModel {
-    @NameInMap("MaterialUrls")
+    @com.aliyun.core.annotation.NameInMap("MaterialUrls")
     private String materialUrls;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTemplateMaterialsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetTemplateMaterialsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaterialUrls.
+         * <p>The URLs of the associated materials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;music.mp3&quot;:&quot;<a href="https://bucket.oss-cn-shanghai.aliyuncs.com/music.mp3?sign=xxx%22,%22config.json%22:%22https://bucket.oss-cn-shanghai.aliyuncs.com/config.json?sign=xxx%22,%22assets/1.jpg%22:%22https://bucket.oss-cn-shanghai.aliyuncs.com/assets/1.jpg?sign=xxx%22%7D">https://bucket.oss-cn-shanghai.aliyuncs.com/music.mp3?sign=xxx&quot;,&quot;config.json&quot;:&quot;https://bucket.oss-cn-shanghai.aliyuncs.com/config.json?sign=xxx&quot;,&quot;assets/1.jpg&quot;:&quot;https://bucket.oss-cn-shanghai.aliyuncs.com/assets/1.jpg?sign=xxx&quot;}</a></p>
          */
         public Builder materialUrls(String materialUrls) {
             this.materialUrls = materialUrls;
@@ -58,7 +66,10 @@ public class GetTemplateMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

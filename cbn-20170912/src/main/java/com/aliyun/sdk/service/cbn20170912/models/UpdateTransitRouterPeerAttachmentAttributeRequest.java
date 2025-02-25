@@ -1,73 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTransitRouterPeerAttachmentAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateTransitRouterPeerAttachmentAttributeRequest</p>
  */
 public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
-    @Query
-    @NameInMap("AutoPublishRouteEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
     private Boolean autoPublishRouteEnabled;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(maximum = 100000000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 100000000)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("BandwidthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthType")
     private String bandwidthType;
 
-    @Query
-    @NameInMap("CenBandwidthPackageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageId")
     private String cenBandwidthPackageId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DefaultLinkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultLinkType")
     private String defaultLinkType;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
     private String transitRouterAttachmentDescription;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
     private String transitRouterAttachmentName;
 
     private UpdateTransitRouterPeerAttachmentAttributeRequest(Builder builder) {
@@ -238,11 +243,14 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): no</li>
+         * <li><strong>true</strong>: yes</li>
+         * </ul>
          * 
-         * *   **false** (default): no
-         * *   **true**: yes
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
             this.putQueryParameter("AutoPublishRouteEnabled", autoPublishRouteEnabled);
@@ -251,11 +259,14 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
-         * <p>
+         * <p>The bandwidth value of the inter-region connection. Unit: Mbit/s.</p>
+         * <ul>
+         * <li>This parameter specifies the maximum bandwidth value for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>BandwidthPackage</strong>.</li>
+         * <li>This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>.</li>
+         * </ul>
          * 
-         * *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
-         * *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -264,11 +275,14 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The bandwidth allocation method. Valid values:
-         * <p>
+         * <p>The bandwidth allocation method. Valid values:</p>
+         * <ul>
+         * <li><strong>BandwidthPackage</strong>: allocates bandwidth from a bandwidth plan.</li>
+         * <li><strong>DataTransfer</strong>: bandwidth is billed based on the pay-by-data-transfer metering method.</li>
+         * </ul>
          * 
-         * *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-         * *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
+         * <strong>example:</strong>
+         * <p>BandwidthPackage</p>
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -277,10 +291,13 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
-         * <p>
+         * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
+         * <blockquote>
+         * <p> If you set <strong>BandwidthType</strong> to <strong>DataTransfer</strong>, you do not need to set this parameter.</p>
+         * </blockquote>
          * 
-         * > If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
+         * <strong>example:</strong>
+         * <p>cenbwp-3xrxupouolw5ou****</p>
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -289,12 +306,14 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -303,7 +322,12 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * DefaultLinkType.
+         * <p>The default line type.</p>
+         * <p>Valid values: Platinum and Gold.</p>
+         * <p>Platinum is supported only when BandwidthType is set to DataTransfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Gold</p>
          */
         public Builder defaultLinkType(String defaultLinkType) {
             this.putQueryParameter("DefaultLinkType", defaultLinkType);
@@ -312,11 +336,14 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:
-         * <p>
+         * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</li>
+         * </ul>
          * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -361,10 +388,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the inter-region connection.
-         * <p>
+         * <p>The new description of the inter-region connection.</p>
+         * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>testdesc</p>
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -373,7 +401,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the inter-region connection.
+         * <p>The ID of the inter-region connection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-ft94dcrbc3e5taun3x</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -382,10 +414,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the inter-region connection.
-         * <p>
+         * <p>The new name of the inter-region connection.</p>
+         * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

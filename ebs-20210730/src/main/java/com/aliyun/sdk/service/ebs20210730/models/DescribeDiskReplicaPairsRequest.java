@@ -1,61 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskReplicaPairsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiskReplicaPairsRequest</p>
  */
 public class DescribeDiskReplicaPairsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PairIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PairIds")
     private String pairIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicaGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaGroupId")
     private String replicaGroupId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Site")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Site")
     private String site;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeDiskReplicaPairsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
+        this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -85,6 +95,13 @@ public class DescribeDiskReplicaPairsRequest extends Request {
      */
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -146,12 +163,13 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeDiskReplicaPairsRequest, Builder> {
         private Long maxResults; 
+        private String name; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -160,7 +178,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         private String replicaGroupId; 
         private String resourceGroupId; 
         private String site; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -169,6 +187,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         private Builder(DescribeDiskReplicaPairsRequest request) {
             super(request);
             this.maxResults = request.maxResults;
+            this.name = request.name;
             this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -181,12 +200,12 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries per page. You can use this parameter together with NextToken.</p>
+         * <p>Valid values: 1 to 500.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 500.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -195,7 +214,22 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaPairs operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+         * <p>The name of the replication pair. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name***</p>
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -204,7 +238,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -213,10 +250,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * 
-         * Valid values: 1 to 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,10 +262,11 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The IDs of replication pairs. You can specify the IDs of one or more replication pairs and separate the IDs with commas (,). Example: `pair-cn-dsa****,pair-cn-asd****`.
-         * <p>
+         * <p>The IDs of replication pairs. You can specify the IDs of one or more replication pairs and separate the IDs with commas (,). Example: <code>pair-cn-dsa****,pair-cn-asd****</code>.</p>
+         * <p>This parameter is empty by default, which indicates that all replication pairs in the specified region are queried. You can specify a maximum of 100 replication pair IDs.</p>
          * 
-         * This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.
+         * <strong>example:</strong>
+         * <p>pair-cn-dsa****</p>
          */
         public Builder pairIds(String pairIds) {
             this.putQueryParameter("PairIds", pairIds);
@@ -237,7 +275,11 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The region ID of the primary or secondary disk in the replication pair. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
+         * <p>The region ID of the primary or secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -246,12 +288,14 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The ID of the replication pair-consistent group. You can specify the ID of a replication pair-consistent group to query the replication pairs that are added to this group. Example: `pg-****`.
-         * <p>
+         * <p>The ID of the replication pair-consistent group. You can specify the ID of a replication pair-consistent group to query the replication pairs in the group. Example: <code>pg-****</code>.</p>
+         * <p>This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.</p>
+         * <blockquote>
+         * <p> If this parameter is set to<code>-</code>, replication pairs that are not added to any replication pair-consistent groups are returned.</p>
+         * </blockquote>
          * 
-         * This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.
-         * 
-         * >  If you set this parameter to `-`, replication pairs that are not added to replication pair-consistent groups are queried.
+         * <strong>example:</strong>
+         * <p>pg-****</p>
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);
@@ -260,7 +304,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the replication pair belongs.
+         * <p>The ID of the resource group to which the replication pair belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvs******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -269,13 +316,15 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The type of the site from which the information of replication pairs is retrieved. Valid values:
-         * <p>
+         * <p>The type of the site from which the information of replication pairs is retrieved. Valid value:</p>
+         * <ul>
+         * <li>production: primary site</li>
+         * <li>backup: secondary site</li>
+         * </ul>
+         * <p>Default value: production.</p>
          * 
-         * *   production: primary site
-         * *   backup: secondary site
-         * 
-         * Default value: production.
+         * <strong>example:</strong>
+         * <p>production</p>
          */
         public Builder site(String site) {
             this.putQueryParameter("Site", site);
@@ -284,9 +333,9 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The resource tags. You can specify up to 20 tags.
+         * <p>The tags. Up to 20 tags are supported.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -299,11 +348,17 @@ public class DescribeDiskReplicaPairsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiskReplicaPairsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDiskReplicaPairsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -338,7 +393,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the replication pair.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -346,7 +404,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the replication pair.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

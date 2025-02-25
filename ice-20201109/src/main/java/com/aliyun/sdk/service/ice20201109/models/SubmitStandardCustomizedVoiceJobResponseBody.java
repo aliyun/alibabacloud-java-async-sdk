@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitStandardCustomizedVoiceJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitStandardCustomizedVoiceJobResponseBody</p>
  */
 public class SubmitStandardCustomizedVoiceJobResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SubmitStandardCustomizedVoiceJobResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class SubmitStandardCustomizedVoiceJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class SubmitStandardCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,14 @@ public class SubmitStandardCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,8 +106,14 @@ public class SubmitStandardCustomizedVoiceJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitStandardCustomizedVoiceJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitStandardCustomizedVoiceJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private Data(Builder builder) {
@@ -118,7 +139,10 @@ public class SubmitStandardCustomizedVoiceJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * JobId.
+             * <p>The ID of the human voice cloning job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

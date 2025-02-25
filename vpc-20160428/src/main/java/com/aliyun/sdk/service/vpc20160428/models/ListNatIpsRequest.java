@@ -1,73 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNatIpsRequest} extends {@link RequestModel}
  *
  * <p>ListNatIpsRequest</p>
  */
 public class ListNatIpsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("NatIpCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIpCidr")
     private String natIpCidr;
 
-    @Query
-    @NameInMap("NatIpIds")
-    private java.util.List < String > natIpIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIpIds")
+    private java.util.List<String> natIpIds;
 
-    @Query
-    @NameInMap("NatIpName")
-    private java.util.List < String > natIpName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIpName")
+    private java.util.List<String> natIpName;
 
-    @Query
-    @NameInMap("NatIpStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIpStatus")
     private String natIpStatus;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListNatIpsRequest(Builder builder) {
@@ -139,14 +144,14 @@ public class ListNatIpsRequest extends Request {
     /**
      * @return natIpIds
      */
-    public java.util.List < String > getNatIpIds() {
+    public java.util.List<String> getNatIpIds() {
         return this.natIpIds;
     }
 
     /**
      * @return natIpName
      */
-    public java.util.List < String > getNatIpName() {
+    public java.util.List<String> getNatIpName() {
         return this.natIpName;
     }
 
@@ -205,8 +210,8 @@ public class ListNatIpsRequest extends Request {
         private String maxResults; 
         private String natGatewayId; 
         private String natIpCidr; 
-        private java.util.List < String > natIpIds; 
-        private java.util.List < String > natIpName; 
+        private java.util.List<String> natIpIds; 
+        private java.util.List<String> natIpName; 
         private String natIpStatus; 
         private String nextToken; 
         private String ownerAccount; 
@@ -238,12 +243,14 @@ public class ListNatIpsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -252,11 +259,14 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * Specifies whether to only precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether to only precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks the API request. IP addresses are not queried. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, the corresponding error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: checks the API request. IP addresses are not queried. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, the corresponding error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -265,7 +275,10 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -274,7 +287,11 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway.
+         * <p>The ID of the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-gw8v16wgvtq26vh59****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -283,7 +300,10 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * The CIDR block to which the IP address belongs.
+         * <p>The CIDR block to which the IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         public Builder natIpCidr(String natIpCidr) {
             this.putQueryParameter("NatIpCidr", natIpCidr);
@@ -292,30 +312,39 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * The ID of the IP address. Valid values of **N**: **1** to **20**.
+         * <p>The ID of the IP address. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcnatip-gw8a863sut1zijxh0****</p>
          */
-        public Builder natIpIds(java.util.List < String > natIpIds) {
+        public Builder natIpIds(java.util.List<String> natIpIds) {
             this.putQueryParameter("NatIpIds", natIpIds);
             this.natIpIds = natIpIds;
             return this;
         }
 
         /**
-         * The name of the IP address. Valid values of **N**: **1** to **20**.
+         * <p>The name of the IP address. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
-        public Builder natIpName(java.util.List < String > natIpName) {
+        public Builder natIpName(java.util.List<String> natIpName) {
             this.putQueryParameter("NatIpName", natIpName);
             this.natIpName = natIpName;
             return this;
         }
 
         /**
-         * The status of the IP address. Valid values:
-         * <p>
+         * <p>The status of the IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Creating</strong></li>
+         * </ul>
          * 
-         * *   **Available**
-         * *   **Deleting**
-         * *   **Creating**
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder natIpStatus(String natIpStatus) {
             this.putQueryParameter("NatIpStatus", natIpStatus);
@@ -324,11 +353,14 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -355,10 +387,12 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NAT gateway is deployed.
-         * <p>
+         * <p>The ID of the region where the NAT gateway is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

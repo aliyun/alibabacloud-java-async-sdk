@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindInputBucketResponseBody} extends {@link TeaModel}
  *
  * <p>BindInputBucketResponseBody</p>
  */
 public class BindInputBucketResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BindInputBucketResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class BindInputBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AEA0480-32F4-1656-92B3-F4D4CDE6BBB3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

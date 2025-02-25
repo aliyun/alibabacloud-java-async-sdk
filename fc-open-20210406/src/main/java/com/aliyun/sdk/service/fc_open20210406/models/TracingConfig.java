@@ -52,7 +52,7 @@ public class TracingConfig extends TeaModel {
         private String type; 
 
         /**
-         * 链路追踪参数。当协议类型为 Jaeger 时，参数为 map[string]string，其中 key 为 "endpoint"，value 为您的链路追踪内网接入点。例如 endpoint: http://tracing-analysis-dc-hz.aliyuncs.com/adapt_xxx/api/otlp/traces
+         * params.
          */
         public Builder params(java.util.Map < String, String > params) {
             this.params = params;
@@ -60,7 +60,7 @@ public class TracingConfig extends TeaModel {
         }
 
         /**
-         * 链路追踪协议类型，目前只支持 Jaeger
+         * type.
          */
         public Builder type(String type) {
             this.type = type;

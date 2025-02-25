@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHostWebShellResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHostWebShellResponseBody</p>
  */
 public class DescribeHostWebShellResponseBody extends TeaModel {
-    @NameInMap("LoginUrl")
+    @com.aliyun.core.annotation.NameInMap("LoginUrl")
     private String loginUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHostWebShellResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeHostWebShellResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The webshell URL.
+         * <p>The webshell URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder loginUrl(String loginUrl) {
             this.loginUrl = loginUrl;
@@ -58,7 +66,10 @@ public class DescribeHostWebShellResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>842B73C8-5776-4BD9-9872-69C8C46DD7D3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

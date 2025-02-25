@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelOnceTaskRequest} extends {@link RequestModel}
  *
  * <p>CancelOnceTaskRequest</p>
  */
 public class CancelOnceTaskRequest extends Request {
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private CancelOnceTaskRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class CancelOnceTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
-         * <p>
+         * <p>The ID of the task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GenerateOnceTask~~">GenerateOnceTask</a> operation to query the IDs of tasks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [GenerateOnceTask](~~GenerateOnceTask~~) operation to query the IDs of tasks.
+         * <strong>example:</strong>
+         * <p>ec9c0d88f36cc27765a98c554ee2****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

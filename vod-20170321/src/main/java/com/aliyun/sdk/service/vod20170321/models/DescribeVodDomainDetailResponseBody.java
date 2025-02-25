@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodDomainDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodDomainDetailResponseBody</p>
  */
 public class DescribeVodDomainDetailResponseBody extends TeaModel {
-    @NameInMap("DomainDetail")
+    @com.aliyun.core.annotation.NameInMap("DomainDetail")
     private DomainDetail domainDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainDetailResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The basic information about the domain name for CDN.
+         * <p>The basic information about the domain name for CDN.</p>
          */
         public Builder domainDetail(DomainDetail domainDetail) {
             this.domainDetail = domainDetail;
@@ -58,7 +63,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09ABE829-6CD3-4FE0-556113E2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,21 +79,30 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainDetailResponseBody</p>
+     */
     public static class Source extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private String enabled;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        private String weight;
 
         private Source(Builder builder) {
             this.content = builder.content;
@@ -93,6 +110,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             this.port = builder.port;
             this.priority = builder.priority;
             this.type = builder.type;
+            this.weight = builder.weight;
         }
 
         public static Builder builder() {
@@ -138,15 +156,26 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return weight
+         */
+        public String getWeight() {
+            return this.weight;
+        }
+
         public static final class Builder {
             private String content; 
             private String enabled; 
             private Integer port; 
             private String priority; 
             private String type; 
+            private String weight; 
 
             /**
-             * The address of the origin server.
+             * <p>The address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****.oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -154,10 +183,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the origin server. Valid values:
-             * <p>
-             * *   **online**: indicates that the origin server is enabled.
-             * *   **offline**: indicates that the origin server is disabled.
+             * <p>The status of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: indicates that the origin server is enabled.</li>
+             * <li><strong>offline</strong>: indicates that the origin server is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -165,7 +198,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port number. Valid values: 443 and 80.
+             * <p>The port number. Valid values: 443 and 80.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -173,7 +209,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the origin server.
+             * <p>The priority of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -181,14 +220,29 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the origin server. Valid values:
-             * <p>
-             * *   **ipaddr**: a server that you can access by using an IP address.
-             * *   **domain**: a server that you can access by using a domain name.
-             * *   **oss**: the URL of an Object Storage Service (OSS) bucket.
+             * <p>The type of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>ipaddr</strong>: a server that you can access by using an IP address.</li>
+             * <li><strong>domain</strong>: a server that you can access by using a domain name.</li>
+             * <li><strong>oss</strong>: the URL of an Object Storage Service (OSS) bucket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder weight(String weight) {
+                this.weight = weight;
                 return this;
             }
 
@@ -199,9 +253,15 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainDetailResponseBody</p>
+     */
     public static class Sources extends TeaModel {
-        @NameInMap("Source")
-        private java.util.List < Source> source;
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private java.util.List<Source> source;
 
         private Sources(Builder builder) {
             this.source = builder.source;
@@ -218,17 +278,17 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         /**
          * @return source
          */
-        public java.util.List < Source> getSource() {
+        public java.util.List<Source> getSource() {
             return this.source;
         }
 
         public static final class Builder {
-            private java.util.List < Source> source; 
+            private java.util.List<Source> source; 
 
             /**
              * Source.
              */
-            public Builder source(java.util.List < Source> source) {
+            public Builder source(java.util.List<Source> source) {
                 this.source = source;
                 return this;
             }
@@ -240,41 +300,47 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodDomainDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodDomainDetailResponseBody</p>
+     */
     public static class DomainDetail extends TeaModel {
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("SSLProtocol")
+        @com.aliyun.core.annotation.NameInMap("SSLProtocol")
         private String SSLProtocol;
 
-        @NameInMap("SSLPub")
+        @com.aliyun.core.annotation.NameInMap("SSLPub")
         private String SSLPub;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("Sources")
+        @com.aliyun.core.annotation.NameInMap("Sources")
         private Sources sources;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private DomainDetail(Builder builder) {
@@ -399,7 +465,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The name of the certificate. The value of this parameter is returned if HTTPS is enabled.
+             * <p>The name of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCertName</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -407,7 +476,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.
+             * <p>The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com.w.alikunlun.net</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -415,7 +487,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the domain name for CDN.
+             * <p>The description of the domain name for CDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -423,7 +498,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name for CDN.
+             * <p>The domain name for CDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -431,14 +509,18 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name for CDN. Value values:
-             * <p>
-             * *   **online**: indicates that the domain name is enabled.
-             * *   **offline**: indicates that the domain name is disabled.
-             * *   **configuring**: indicates that the domain name is being configured.
-             * *   **configure_failed**: indicates that the domain name failed to be configured.
-             * *   **checking**: indicates that the domain name is under review.
-             * *   **check_failed**: indicates that the domain name failed the review.
+             * <p>The status of the domain name for CDN. Value values:</p>
+             * <ul>
+             * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
+             * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
+             * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
+             * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
+             * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
+             * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -446,7 +528,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-27T06:51:26Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -454,7 +539,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-27T06:55:26Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -462,10 +550,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:
-             * <p>
-             * *   **on**: indicates that the SSL certificate is enabled.
-             * *   **off**: indicates that the SSL certificate is disabled.
+             * <p>Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: indicates that the SSL certificate is enabled.</li>
+             * <li><strong>off</strong>: indicates that the SSL certificate is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -473,7 +565,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public key of the certificate. The value of this parameter is returned if HTTPS is enabled.
+             * <p>The public key of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourSSLPub</p>
              */
             public Builder SSLPub(String SSLPub) {
                 this.SSLPub = SSLPub;
@@ -481,11 +576,15 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:
-             * <p>
-             * *   **domestic**: mainland China. This is the default value.
-             * *   **overseas**: outside mainland China.
-             * *   **global**: regions in and outside mainland China.
+             * <p>This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</p>
+             * <ul>
+             * <li><strong>domestic</strong>: mainland China. This is the default value.</li>
+             * <li><strong>overseas</strong>: outside mainland China.</li>
+             * <li><strong>global</strong>: regions in and outside mainland China.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domestic</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -493,7 +592,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * <p>The information about the origin server.</p>
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -501,7 +600,10 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the origin server.
+             * <p>The weight of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;

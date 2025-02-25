@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDNSSLBStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDNSSLBStatusRequest</p>
  */
 public class SetDNSSLBStatusRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @Query
-    @NameInMap("Open")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Open")
     private Boolean open;
 
-    @Query
-    @NameInMap("SubDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subDomain;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SetDNSSLBStatusRequest(Builder builder) {
@@ -139,7 +144,10 @@ public class SetDNSSLBStatusRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -148,7 +156,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The language of the subdomain.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -157,7 +168,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * Line.
+         * <p>The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Mobile.</p>
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -166,11 +180,14 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable weighted round-robin. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable weighted round-robin. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables weighted round-robin.</li>
+         * <li><strong>false</strong>: disables weighted round-robin.</li>
+         * </ul>
          * 
-         * *   **true**: enables weighted round-robin. This is the default value.
-         * *   **false**: disables weighted round-robin.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder open(Boolean open) {
             this.putQueryParameter("Open", open);
@@ -179,7 +196,11 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The subdomain for which you want to configure weighted round-robin. Do not set the value to a string such as aliyun.com. Instead, set the value to @.aliyun.com.
+         * <p>The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -188,7 +209,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The type of the DNS record. Valid values: A and AAAA. Default value: A.
+         * <p>The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -197,7 +221,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The IP address of the client that you use to configure weighted round-robin.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

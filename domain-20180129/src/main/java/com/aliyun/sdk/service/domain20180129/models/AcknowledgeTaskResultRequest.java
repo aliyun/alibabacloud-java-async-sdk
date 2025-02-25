@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AcknowledgeTaskResultRequest} extends {@link RequestModel}
  *
  * <p>AcknowledgeTaskResultRequest</p>
  */
 public class AcknowledgeTaskResultRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("TaskDetailNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskDetailNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > taskDetailNo;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private AcknowledgeTaskResultRequest(Builder builder) {
@@ -92,7 +92,10 @@ public class AcknowledgeTaskResultRequest extends Request {
         }
 
         /**
-         * TaskDetailNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2659c29493e94416b297a7691340ccc4</p>
          */
         public Builder taskDetailNo(java.util.List < String > taskDetailNo) {
             this.putQueryParameter("TaskDetailNo", taskDetailNo);

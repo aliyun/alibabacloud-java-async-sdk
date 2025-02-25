@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoadBalancerRequest} extends {@link RequestModel}
  *
  * <p>CreateLoadBalancerRequest</p>
  */
 public class CreateLoadBalancerRequest extends Request {
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @Query
-    @NameInMap("LoadBalancerSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerSpec;
 
-    @Query
-    @NameInMap("NetworkId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     private CreateLoadBalancerRequest(Builder builder) {
@@ -129,7 +134,11 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -138,7 +147,13 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * <p>The name of the ELB instance. The name must be 1 to 80 characters in length. If you leave this parameter empty, the system randomly allocates a name as the value of this parameter.</p>
+         * <blockquote>
+         * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gcs-pre-websocket-eslb-telecom</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -147,7 +162,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * LoadBalancerSpec.
+         * <p>The specification of the ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elb.s2.medium</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
@@ -156,7 +175,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * <p>The network ID of the created ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5sax03dh2eyagujgsn7z9****</p>
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -165,7 +188,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing method of the cluster. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -174,7 +201,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch to which the internal-facing ELB instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5s78haoys9oylle6ln71m****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

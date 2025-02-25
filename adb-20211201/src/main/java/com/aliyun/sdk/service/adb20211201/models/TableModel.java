@@ -1,159 +1,164 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TableModel} extends {@link TeaModel}
  *
  * <p>TableModel</p>
  */
 public class TableModel extends TeaModel {
-    @NameInMap("ArchiveType")
+    @com.aliyun.core.annotation.NameInMap("ArchiveType")
     private String archiveType;
 
-    @NameInMap("BlockSize")
+    @com.aliyun.core.annotation.NameInMap("BlockSize")
     private Long blockSize;
 
-    @NameInMap("Bucket")
+    @com.aliyun.core.annotation.NameInMap("Bucket")
     private Long bucket;
 
-    @NameInMap("BucketCount")
+    @com.aliyun.core.annotation.NameInMap("BucketCount")
     private Long bucketCount;
 
-    @NameInMap("Cols")
-    private java.util.List < FieldSchemaModel > cols;
+    @com.aliyun.core.annotation.NameInMap("Cols")
+    private java.util.List<FieldSchemaModel> cols;
 
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @NameInMap("Compression")
+    @com.aliyun.core.annotation.NameInMap("Compression")
     private String compression;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CurrentVersion")
+    @com.aliyun.core.annotation.NameInMap("CurrentVersion")
     private Long currentVersion;
 
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @NameInMap("DictEncode")
+    @com.aliyun.core.annotation.NameInMap("DictEncode")
     private Boolean dictEncode;
 
-    @NameInMap("DistributeColumns")
-    private java.util.List < FieldSchemaModel > distributeColumns;
+    @com.aliyun.core.annotation.NameInMap("DistributeColumns")
+    private java.util.List<FieldSchemaModel> distributeColumns;
 
-    @NameInMap("DistributeType")
+    @com.aliyun.core.annotation.NameInMap("DistributeType")
     private String distributeType;
 
-    @NameInMap("EnableDfs")
+    @com.aliyun.core.annotation.NameInMap("EnableDfs")
     private Boolean enableDfs;
 
-    @NameInMap("HotPartitionCount")
+    @com.aliyun.core.annotation.NameInMap("HotPartitionCount")
     private Long hotPartitionCount;
 
-    @NameInMap("Indexes")
-    private java.util.List < CstoreIndexModel > indexes;
+    @com.aliyun.core.annotation.NameInMap("Indexes")
+    private java.util.List<CstoreIndexModel> indexes;
 
-    @NameInMap("IsAllIndex")
+    @com.aliyun.core.annotation.NameInMap("IsAllIndex")
     private Boolean isAllIndex;
 
-    @NameInMap("IsFulltextDict")
+    @com.aliyun.core.annotation.NameInMap("IsFulltextDict")
     private Boolean isFulltextDict;
 
-    @NameInMap("MaxColumnId")
+    @com.aliyun.core.annotation.NameInMap("MaxColumnId")
     private Long maxColumnId;
 
-    @NameInMap("Parameters")
-    private java.util.Map < String, String > parameters;
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, String> parameters;
 
-    @NameInMap("PartitionColumn")
+    @com.aliyun.core.annotation.NameInMap("PartitionColumn")
     private String partitionColumn;
 
-    @NameInMap("PartitionCount")
+    @com.aliyun.core.annotation.NameInMap("PartitionCount")
     private Long partitionCount;
 
-    @NameInMap("PartitionKeys")
-    private java.util.List < FieldSchemaModel > partitionKeys;
+    @com.aliyun.core.annotation.NameInMap("PartitionKeys")
+    private java.util.List<FieldSchemaModel> partitionKeys;
 
-    @NameInMap("PartitionType")
+    @com.aliyun.core.annotation.NameInMap("PartitionType")
     private String partitionType;
 
-    @NameInMap("PhysicalDatabaseName")
+    @com.aliyun.core.annotation.NameInMap("PhysicalDatabaseName")
     private String physicalDatabaseName;
 
-    @NameInMap("PhysicalTableName")
+    @com.aliyun.core.annotation.NameInMap("PhysicalTableName")
     private String physicalTableName;
 
-    @NameInMap("PreviousVersion")
+    @com.aliyun.core.annotation.NameInMap("PreviousVersion")
     private Long previousVersion;
 
-    @NameInMap("RawTableName")
+    @com.aliyun.core.annotation.NameInMap("RawTableName")
     private String rawTableName;
 
-    @NameInMap("RouteColumns")
-    private java.util.List < FieldSchemaModel > routeColumns;
+    @com.aliyun.core.annotation.NameInMap("RouteColumns")
+    private java.util.List<FieldSchemaModel> routeColumns;
 
-    @NameInMap("RouteEffectiveColumn")
+    @com.aliyun.core.annotation.NameInMap("RouteEffectiveColumn")
     private FieldSchemaModel routeEffectiveColumn;
 
-    @NameInMap("RouteType")
+    @com.aliyun.core.annotation.NameInMap("RouteType")
     private String routeType;
 
-    @NameInMap("RtEngineType")
+    @com.aliyun.core.annotation.NameInMap("RtEngineType")
     private String rtEngineType;
 
-    @NameInMap("RtIndexAll")
+    @com.aliyun.core.annotation.NameInMap("RtIndexAll")
     private Boolean rtIndexAll;
 
-    @NameInMap("RtModeType")
+    @com.aliyun.core.annotation.NameInMap("RtModeType")
     private String rtModeType;
 
-    @NameInMap("Sd")
+    @com.aliyun.core.annotation.NameInMap("Sd")
     private StorageDescriptorModel sd;
 
-    @NameInMap("StoragePolicy")
+    @com.aliyun.core.annotation.NameInMap("StoragePolicy")
     private String storagePolicy;
 
-    @NameInMap("SubpartitionColumn")
+    @com.aliyun.core.annotation.NameInMap("SubpartitionColumn")
     private String subpartitionColumn;
 
-    @NameInMap("SubpartitionCount")
+    @com.aliyun.core.annotation.NameInMap("SubpartitionCount")
     private Long subpartitionCount;
 
-    @NameInMap("SubpartitionType")
+    @com.aliyun.core.annotation.NameInMap("SubpartitionType")
     private String subpartitionType;
 
-    @NameInMap("TableEngineName")
+    @com.aliyun.core.annotation.NameInMap("TableEngineName")
     private String tableEngineName;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("TableType")
+    @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
-    @NameInMap("TblId")
+    @com.aliyun.core.annotation.NameInMap("TblId")
     private Long tblId;
 
-    @NameInMap("Temporary")
+    @com.aliyun.core.annotation.NameInMap("Temporary")
     private Boolean temporary;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("ViewExpandedText")
+    @com.aliyun.core.annotation.NameInMap("ViewExpandedText")
     private String viewExpandedText;
 
-    @NameInMap("ViewOriginalText")
+    @com.aliyun.core.annotation.NameInMap("ViewOriginalText")
     private String viewOriginalText;
 
-    @NameInMap("ViewSecurityMode")
+    @com.aliyun.core.annotation.NameInMap("ViewSecurityMode")
     private String viewSecurityMode;
 
     private TableModel(Builder builder) {
@@ -246,7 +251,7 @@ public class TableModel extends TeaModel {
     /**
      * @return cols
      */
-    public java.util.List < FieldSchemaModel > getCols() {
+    public java.util.List<FieldSchemaModel> getCols() {
         return this.cols;
     }
 
@@ -295,7 +300,7 @@ public class TableModel extends TeaModel {
     /**
      * @return distributeColumns
      */
-    public java.util.List < FieldSchemaModel > getDistributeColumns() {
+    public java.util.List<FieldSchemaModel> getDistributeColumns() {
         return this.distributeColumns;
     }
 
@@ -323,7 +328,7 @@ public class TableModel extends TeaModel {
     /**
      * @return indexes
      */
-    public java.util.List < CstoreIndexModel > getIndexes() {
+    public java.util.List<CstoreIndexModel> getIndexes() {
         return this.indexes;
     }
 
@@ -351,7 +356,7 @@ public class TableModel extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
@@ -372,7 +377,7 @@ public class TableModel extends TeaModel {
     /**
      * @return partitionKeys
      */
-    public java.util.List < FieldSchemaModel > getPartitionKeys() {
+    public java.util.List<FieldSchemaModel> getPartitionKeys() {
         return this.partitionKeys;
     }
 
@@ -414,7 +419,7 @@ public class TableModel extends TeaModel {
     /**
      * @return routeColumns
      */
-    public java.util.List < FieldSchemaModel > getRouteColumns() {
+    public java.util.List<FieldSchemaModel> getRouteColumns() {
         return this.routeColumns;
     }
 
@@ -556,31 +561,31 @@ public class TableModel extends TeaModel {
         private Long blockSize; 
         private Long bucket; 
         private Long bucketCount; 
-        private java.util.List < FieldSchemaModel > cols; 
+        private java.util.List<FieldSchemaModel> cols; 
         private String comment; 
         private String compression; 
         private String createTime; 
         private Long currentVersion; 
         private String dbName; 
         private Boolean dictEncode; 
-        private java.util.List < FieldSchemaModel > distributeColumns; 
+        private java.util.List<FieldSchemaModel> distributeColumns; 
         private String distributeType; 
         private Boolean enableDfs; 
         private Long hotPartitionCount; 
-        private java.util.List < CstoreIndexModel > indexes; 
+        private java.util.List<CstoreIndexModel> indexes; 
         private Boolean isAllIndex; 
         private Boolean isFulltextDict; 
         private Long maxColumnId; 
-        private java.util.Map < String, String > parameters; 
+        private java.util.Map<String, String> parameters; 
         private String partitionColumn; 
         private Long partitionCount; 
-        private java.util.List < FieldSchemaModel > partitionKeys; 
+        private java.util.List<FieldSchemaModel> partitionKeys; 
         private String partitionType; 
         private String physicalDatabaseName; 
         private String physicalTableName; 
         private Long previousVersion; 
         private String rawTableName; 
-        private java.util.List < FieldSchemaModel > routeColumns; 
+        private java.util.List<FieldSchemaModel> routeColumns; 
         private FieldSchemaModel routeEffectiveColumn; 
         private String routeType; 
         private String rtEngineType; 
@@ -636,7 +641,7 @@ public class TableModel extends TeaModel {
         /**
          * Cols.
          */
-        public Builder cols(java.util.List < FieldSchemaModel > cols) {
+        public Builder cols(java.util.List<FieldSchemaModel> cols) {
             this.cols = cols;
             return this;
         }
@@ -692,7 +697,7 @@ public class TableModel extends TeaModel {
         /**
          * DistributeColumns.
          */
-        public Builder distributeColumns(java.util.List < FieldSchemaModel > distributeColumns) {
+        public Builder distributeColumns(java.util.List<FieldSchemaModel> distributeColumns) {
             this.distributeColumns = distributeColumns;
             return this;
         }
@@ -724,7 +729,7 @@ public class TableModel extends TeaModel {
         /**
          * Indexes.
          */
-        public Builder indexes(java.util.List < CstoreIndexModel > indexes) {
+        public Builder indexes(java.util.List<CstoreIndexModel> indexes) {
             this.indexes = indexes;
             return this;
         }
@@ -756,7 +761,7 @@ public class TableModel extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -780,7 +785,7 @@ public class TableModel extends TeaModel {
         /**
          * PartitionKeys.
          */
-        public Builder partitionKeys(java.util.List < FieldSchemaModel > partitionKeys) {
+        public Builder partitionKeys(java.util.List<FieldSchemaModel> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
@@ -828,7 +833,7 @@ public class TableModel extends TeaModel {
         /**
          * RouteColumns.
          */
-        public Builder routeColumns(java.util.List < FieldSchemaModel > routeColumns) {
+        public Builder routeColumns(java.util.List<FieldSchemaModel> routeColumns) {
             this.routeColumns = routeColumns;
             return this;
         }

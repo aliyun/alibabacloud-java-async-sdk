@@ -1,48 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceRequest</p>
  */
 public class CreateResourceRequest extends Request {
-    @Body
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @Body
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Body
-    @NameInMap("EcsInstanceCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceCount")
     private Integer ecsInstanceCount;
 
-    @Body
-    @NameInMap("EcsInstanceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceType")
     private String ecsInstanceType;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map<String, String> labels;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Body
-    @NameInMap("SelfManagedResourceOptions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SelfManagedResourceOptions")
     private SelfManagedResourceOptions selfManagedResourceOptions;
 
-    @Body
-    @NameInMap("SystemDiskSize")
-    @Validation(maximum = 2000, minimum = 200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.Validation(maximum = 2000, minimum = 200)
     private Integer systemDiskSize;
 
-    @Body
-    @NameInMap("Zone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
     private CreateResourceRequest(Builder builder) {
@@ -51,6 +60,7 @@ public class CreateResourceRequest extends Request {
         this.chargeType = builder.chargeType;
         this.ecsInstanceCount = builder.ecsInstanceCount;
         this.ecsInstanceType = builder.ecsInstanceType;
+        this.labels = builder.labels;
         this.resourceType = builder.resourceType;
         this.selfManagedResourceOptions = builder.selfManagedResourceOptions;
         this.systemDiskSize = builder.systemDiskSize;
@@ -99,6 +109,13 @@ public class CreateResourceRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -131,6 +148,7 @@ public class CreateResourceRequest extends Request {
         private String chargeType; 
         private Integer ecsInstanceCount; 
         private String ecsInstanceType; 
+        private java.util.Map<String, String> labels; 
         private String resourceType; 
         private SelfManagedResourceOptions selfManagedResourceOptions; 
         private Integer systemDiskSize; 
@@ -146,6 +164,7 @@ public class CreateResourceRequest extends Request {
             this.chargeType = request.chargeType;
             this.ecsInstanceCount = request.ecsInstanceCount;
             this.ecsInstanceType = request.ecsInstanceType;
+            this.labels = request.labels;
             this.resourceType = request.resourceType;
             this.selfManagedResourceOptions = request.selfManagedResourceOptions;
             this.systemDiskSize = request.systemDiskSize;
@@ -153,7 +172,14 @@ public class CreateResourceRequest extends Request {
         } 
 
         /**
-         * AutoRenewal.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putBodyParameter("AutoRenewal", autoRenewal);
@@ -162,7 +188,17 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: the subscription billing method.</li>
+         * <li>PostPaid: the pay-as-you-go billing method.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -171,7 +207,13 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * EcsInstanceCount.
+         * <p>The number of ECS instances.</p>
+         * <blockquote>
+         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -180,7 +222,13 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * EcsInstanceType.
+         * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.8xlarge</p>
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -189,7 +237,26 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * Labels.
+         */
+        public Builder labels(java.util.Map<String, String> labels) {
+            this.putBodyParameter("Labels", labels);
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li>Dedicated: the dedicated resource group.</li>
+         * <li>SelfManaged: the self-managed resource group.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you use a self-managed resource group, you must configure a whitelist.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -198,7 +265,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * SelfManagedResourceOptions.
+         * <p>The configurations of the self-managed resource group.</p>
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -207,7 +274,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -216,7 +286,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * Zone.
+         * <p>The ID of the zone in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-f</p>
          */
         public Builder zone(String zone) {
             this.putBodyParameter("Zone", zone);
@@ -231,17 +304,23 @@ public class CreateResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceRequest</p>
+     */
     public static class NodeTolerations extends TeaModel {
-        @NameInMap("effect")
+        @com.aliyun.core.annotation.NameInMap("effect")
         private String effect;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private NodeTolerations(Builder builder) {
@@ -294,7 +373,16 @@ public class CreateResourceRequest extends Request {
             private String value; 
 
             /**
-             * effect.
+             * <p>The result.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PreferNoSchedule</li>
+             * <li>NoSchedule</li>
+             * <li>NoExecute</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSchedule</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -302,7 +390,10 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * key.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -310,7 +401,15 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * operator.
+             * <p>The relationship between key names and key values.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Equal</li>
+             * <li>Exists</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -318,7 +417,10 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The key value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -332,17 +434,23 @@ public class CreateResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceRequest</p>
+     */
     public static class SelfManagedResourceOptions extends TeaModel {
-        @NameInMap("ExternalClusterId")
+        @com.aliyun.core.annotation.NameInMap("ExternalClusterId")
         private String externalClusterId;
 
-        @NameInMap("NodeMatchLabels")
-        private java.util.Map < String, String > nodeMatchLabels;
+        @com.aliyun.core.annotation.NameInMap("NodeMatchLabels")
+        private java.util.Map<String, String> nodeMatchLabels;
 
-        @NameInMap("NodeTolerations")
-        private java.util.List < NodeTolerations> nodeTolerations;
+        @com.aliyun.core.annotation.NameInMap("NodeTolerations")
+        private java.util.List<NodeTolerations> nodeTolerations;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private SelfManagedResourceOptions(Builder builder) {
@@ -370,14 +478,14 @@ public class CreateResourceRequest extends Request {
         /**
          * @return nodeMatchLabels
          */
-        public java.util.Map < String, String > getNodeMatchLabels() {
+        public java.util.Map<String, String> getNodeMatchLabels() {
             return this.nodeMatchLabels;
         }
 
         /**
          * @return nodeTolerations
          */
-        public java.util.List < NodeTolerations> getNodeTolerations() {
+        public java.util.List<NodeTolerations> getNodeTolerations() {
             return this.nodeTolerations;
         }
 
@@ -390,12 +498,15 @@ public class CreateResourceRequest extends Request {
 
         public static final class Builder {
             private String externalClusterId; 
-            private java.util.Map < String, String > nodeMatchLabels; 
-            private java.util.List < NodeTolerations> nodeTolerations; 
+            private java.util.Map<String, String> nodeMatchLabels; 
+            private java.util.List<NodeTolerations> nodeTolerations; 
             private String roleName; 
 
             /**
-             * ExternalClusterId.
+             * <p>The ID of the self-managed cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cf0386f250f2545689ca7fdd1cd******</p>
              */
             public Builder externalClusterId(String externalClusterId) {
                 this.externalClusterId = externalClusterId;
@@ -403,23 +514,26 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * NodeMatchLabels.
+             * <p>The tag key-value pairs for nodes.</p>
              */
-            public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
+            public Builder nodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
                 return this;
             }
 
             /**
-             * NodeTolerations.
+             * <p>Tolerations for nodes.</p>
              */
-            public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
+            public Builder nodeTolerations(java.util.List<NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
                 return this;
             }
 
             /**
-             * RoleName.
+             * <p>The name of the RAM user to which the permissions on Elastic Algorithm Service of Platform for AI (PAI-EAS) are granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clusterrole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTokenResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTokenResponseBody</p>
  */
 public class QueryTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TokenStatus")
+    @com.aliyun.core.annotation.NameInMap("TokenStatus")
     private Boolean tokenStatus;
 
     private QueryTokenResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class QueryTokenResponseBody extends TeaModel {
         private Boolean tokenStatus; 
 
         /**
-         * RequestId.
+         * <p>The unique ID that the system generates for the request. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C8AADD0-6A95-436D-AFA0-3405CCE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,14 @@ public class QueryTokenResponseBody extends TeaModel {
         }
 
         /**
-         * TokenStatus.
+         * <p>The status of the queried token. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates the token is valid.</li>
+         * <li><strong>false</strong>: indicates the token is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tokenStatus(Boolean tokenStatus) {
             this.tokenStatus = tokenStatus;

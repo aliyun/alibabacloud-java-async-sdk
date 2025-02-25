@@ -1,34 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceHistoryEventsResponseBody</p>
  */
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
-    @NameInMap("InstanceSystemEventSet")
+    @com.aliyun.core.annotation.NameInMap("InstanceSystemEventSet")
     private InstanceSystemEventSet instanceSystemEventSet;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceHistoryEventsResponseBody(Builder builder) {
         this.instanceSystemEventSet = builder.instanceSystemEventSet;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +57,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
      */
     public InstanceSystemEventSet getInstanceSystemEventSet() {
         return this.instanceSystemEventSet;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,13 +96,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private InstanceSystemEventSet instanceSystemEventSet; 
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The information about instance system events.
+         * <p>Details about the instance system events.</p>
          */
         public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
@@ -94,7 +111,18 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +130,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +141,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +152,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances returned.
+         * <p>The total number of instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +168,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class EventCycleStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EventCycleStatus(Builder builder) {
@@ -170,7 +213,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The state code of the system event.
+             * <p>The state code of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -178,7 +224,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The state name of the system event.
+             * <p>The state name of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Executed</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -192,11 +241,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class EventType extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EventType(Builder builder) {
@@ -231,7 +286,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the system event type.
+             * <p>The code of the system event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -239,7 +297,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system event type.
+             * <p>The name of the system event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceExpiration.Stop</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -253,20 +314,26 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class InactiveDisk extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeviceCategory")
+        @com.aliyun.core.annotation.NameInMap("DeviceCategory")
         private String deviceCategory;
 
-        @NameInMap("DeviceSize")
+        @com.aliyun.core.annotation.NameInMap("DeviceSize")
         private String deviceSize;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private String releaseTime;
 
         private InactiveDisk(Builder builder) {
@@ -328,7 +395,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String releaseTime; 
 
             /**
-             * The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-30T06:32:31Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -336,17 +406,20 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the disk. Valid values:
-             * <p>
+             * <p>The category of the disk. Valid values:</p>
+             * <ul>
+             * <li>cloud: basic disk</li>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: Enterprise SSD (ESSD)</li>
+             * <li>local_ssd_pro: I/O-intensive local disk</li>
+             * <li>local_hdd_pro: throughput-intensive local disk</li>
+             * <li>ephemeral: retired local disk</li>
+             * <li>ephemeral_ssd: retired local SSD</li>
+             * </ul>
              * 
-             * *   cloud: basic disk
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
-             * *   local_ssd_pro: I/O-intensive local disk
-             * *   local_hdd_pro: throughput-intensive local disk
-             * *   ephemeral: retired local disk
-             * *   ephemeral_ssd: retired local SSD
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -354,7 +427,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GiB.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -362,11 +438,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk. Valid values:
-             * <p>
+             * <p>The type of the disk. Valid values:</p>
+             * <ul>
+             * <li>system: system disk</li>
+             * <li>data: data disk</li>
+             * </ul>
              * 
-             * *   system: system disk
-             * *   data: data disk
+             * <strong>example:</strong>
+             * <p>data</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -374,7 +453,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the disk was released. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-30T06:32:31Z</p>
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -388,9 +470,15 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class InactiveDisks extends TeaModel {
-        @NameInMap("InactiveDisk")
-        private java.util.List < InactiveDisk> inactiveDisk;
+        @com.aliyun.core.annotation.NameInMap("InactiveDisk")
+        private java.util.List<InactiveDisk> inactiveDisk;
 
         private InactiveDisks(Builder builder) {
             this.inactiveDisk = builder.inactiveDisk;
@@ -407,17 +495,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * @return inactiveDisk
          */
-        public java.util.List < InactiveDisk> getInactiveDisk() {
+        public java.util.List<InactiveDisk> getInactiveDisk() {
             return this.inactiveDisk;
         }
 
         public static final class Builder {
-            private java.util.List < InactiveDisk> inactiveDisk; 
+            private java.util.List<InactiveDisk> inactiveDisk; 
 
             /**
              * InactiveDisk.
              */
-            public Builder inactiveDisk(java.util.List < InactiveDisk> inactiveDisk) {
+            public Builder inactiveDisk(java.util.List<InactiveDisk> inactiveDisk) {
                 this.inactiveDisk = inactiveDisk;
                 return this;
             }
@@ -429,9 +517,15 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class MigrationOptions extends TeaModel {
-        @NameInMap("MigrationOption")
-        private java.util.List < String > migrationOption;
+        @com.aliyun.core.annotation.NameInMap("MigrationOption")
+        private java.util.List<String> migrationOption;
 
         private MigrationOptions(Builder builder) {
             this.migrationOption = builder.migrationOption;
@@ -448,17 +542,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * @return migrationOption
          */
-        public java.util.List < String > getMigrationOption() {
+        public java.util.List<String> getMigrationOption() {
             return this.migrationOption;
         }
 
         public static final class Builder {
-            private java.util.List < String > migrationOption; 
+            private java.util.List<String> migrationOption; 
 
             /**
              * MigrationOption.
              */
-            public Builder migrationOption(java.util.List < String > migrationOption) {
+            public Builder migrationOption(java.util.List<String> migrationOption) {
                 this.migrationOption = migrationOption;
                 return this;
             }
@@ -470,47 +564,53 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class ExtendedAttribute extends TeaModel {
-        @NameInMap("CanAccept")
+        @com.aliyun.core.annotation.NameInMap("CanAccept")
         private String canAccept;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostType")
+        @com.aliyun.core.annotation.NameInMap("HostType")
         private String hostType;
 
-        @NameInMap("InactiveDisks")
+        @com.aliyun.core.annotation.NameInMap("InactiveDisks")
         private InactiveDisks inactiveDisks;
 
-        @NameInMap("MigrationOptions")
+        @com.aliyun.core.annotation.NameInMap("MigrationOptions")
         private MigrationOptions migrationOptions;
 
-        @NameInMap("OnlineRepairPolicy")
+        @com.aliyun.core.annotation.NameInMap("OnlineRepairPolicy")
         private String onlineRepairPolicy;
 
-        @NameInMap("PunishDomain")
+        @com.aliyun.core.annotation.NameInMap("PunishDomain")
         private String punishDomain;
 
-        @NameInMap("PunishType")
+        @com.aliyun.core.annotation.NameInMap("PunishType")
         private String punishType;
 
-        @NameInMap("PunishUrl")
+        @com.aliyun.core.annotation.NameInMap("PunishUrl")
         private String punishUrl;
 
-        @NameInMap("Rack")
+        @com.aliyun.core.annotation.NameInMap("Rack")
         private String rack;
 
-        @NameInMap("ResponseResult")
+        @com.aliyun.core.annotation.NameInMap("ResponseResult")
         private String responseResult;
 
         private ExtendedAttribute(Builder builder) {
@@ -653,7 +753,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String responseResult; 
 
             /**
-             * Indicates whether the event can be handled.
+             * <p>Indicates whether the event can be handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canAccept(String canAccept) {
                 this.canAccept = canAccept;
@@ -661,7 +764,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the security violation.
+             * <p>The code of the security violation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PR111</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -669,7 +775,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The device name of the local disk.
+             * <p>The device name of the local disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/vda</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -677,7 +786,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the local disk.
+             * <p>The ID of the local disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-diskid1</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -685,7 +797,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dh-bp1ewce1gk3iwv2****</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -693,11 +808,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the host. Valid values:
-             * <p>
+             * <p>The type of the host. Valid values:</p>
+             * <ul>
+             * <li>ddh: dedicated host</li>
+             * <li>managehost: physical machine in a smart hosting pool</li>
+             * </ul>
              * 
-             * - ddh: dedicated host
-             * - managehost: physical machine in a smart hosting pool
+             * <strong>example:</strong>
+             * <p>ddh</p>
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -705,7 +823,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the inactive disks that have been released and must be cleared.
+             * <p>The inactive disks that were released and whose data must be cleared.</p>
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -713,7 +831,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The migration solution of the instance. Valid value: MigrationPlan, which indicates that instances can be migrated only by using migration plans.
+             * <p>The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.</p>
              */
             public Builder migrationOptions(MigrationOptions migrationOptions) {
                 this.migrationOptions = migrationOptions;
@@ -721,7 +839,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.
+             * <p>The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IsolateOnly</p>
              */
             public Builder onlineRepairPolicy(String onlineRepairPolicy) {
                 this.onlineRepairPolicy = onlineRepairPolicy;
@@ -729,7 +850,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The illegal domain name.
+             * <p>The illegal domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1228.test.com</p>
              */
             public Builder punishDomain(String punishDomain) {
                 this.punishDomain = punishDomain;
@@ -737,7 +861,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the penalty.
+             * <p>The type of the penalty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs_message_alert</p>
              */
             public Builder punishType(String punishType) {
                 this.punishType = punishType;
@@ -745,7 +872,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The illegal URL.
+             * <p>The illegal URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://1228.test.com/1">http://1228.test.com/1</a></p>
              */
             public Builder punishUrl(String punishUrl) {
                 this.punishUrl = punishUrl;
@@ -753,7 +883,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The rack number of the cloud box.
+             * <p>The rack number of the cloud box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A01</p>
              */
             public Builder rack(String rack) {
                 this.rack = rack;
@@ -761,11 +894,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The response result of the event. Valid values:
-             * <p>
+             * <p>The response result of the event. Valid values:</p>
+             * <ul>
+             * <li>true: The event was handled.</li>
+             * <li>false: The event failed to be handled.</li>
+             * </ul>
              * 
-             * - true: The event was handled.
-             * - false: The event failed to be handled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder responseResult(String responseResult) {
                 this.responseResult = responseResult;
@@ -779,38 +915,47 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class InstanceSystemEventType extends TeaModel {
-        @NameInMap("EventCycleStatus")
+        @com.aliyun.core.annotation.NameInMap("EventCycleStatus")
         private EventCycleStatus eventCycleStatus;
 
-        @NameInMap("EventFinishTime")
+        @com.aliyun.core.annotation.NameInMap("EventFinishTime")
         private String eventFinishTime;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventPublishTime")
+        @com.aliyun.core.annotation.NameInMap("EventPublishTime")
         private String eventPublishTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private EventType eventType;
 
-        @NameInMap("ExtendedAttribute")
+        @com.aliyun.core.annotation.NameInMap("ExtendedAttribute")
         private ExtendedAttribute extendedAttribute;
 
-        @NameInMap("ImpactLevel")
+        @com.aliyun.core.annotation.NameInMap("ImpactLevel")
         private String impactLevel;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NotBefore")
+        @com.aliyun.core.annotation.NameInMap("NotBefore")
         private String notBefore;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
+        private String reasonCode;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private InstanceSystemEventType(Builder builder) {
@@ -824,6 +969,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.notBefore = builder.notBefore;
             this.reason = builder.reason;
+            this.reasonCode = builder.reasonCode;
             this.resourceType = builder.resourceType;
         }
 
@@ -906,6 +1052,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -923,10 +1076,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String instanceId; 
             private String notBefore; 
             private String reason; 
+            private String reasonCode; 
             private String resourceType; 
 
             /**
-             * The lifecycle state of the system event.
+             * <p>The lifecycle status of the system event.</p>
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -934,7 +1088,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the system event ended. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the system event ended. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-01T06:35:31Z</p>
              */
             public Builder eventFinishTime(String eventFinishTime) {
                 this.eventFinishTime = eventFinishTime;
@@ -942,7 +1099,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the system event.
+             * <p>The ID of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-uf64yvznlao4jl2c****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -950,7 +1110,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the system event was published. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the system event was published. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-30T06:32:31Z</p>
              */
             public Builder eventPublishTime(String eventPublishTime) {
                 this.eventPublishTime = eventPublishTime;
@@ -958,7 +1121,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the system event.
+             * <p>The type of the system event.</p>
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -966,7 +1129,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The extended attribute of the system event.
+             * <p>The extended attribute of the system event.</p>
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -974,7 +1137,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The impact level of the system event.
+             * <p>The impact level of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -982,7 +1148,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf678mass4zvr9n1****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -990,7 +1159,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The scheduled start time of the system event. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-06T00:00:00Z</p>
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -998,7 +1170,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the system event was scheduled.
+             * <p>The reason why the system event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System maintenance is scheduled due to ***.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1006,12 +1181,26 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
-             * <p>
+             * <p>The reason code category for the system event.</p>
              * 
-             * *   instance: ECS instance
-             * *   ddh: dedicated host
-             * *   managehost: physical machine in a smart hosting pool
+             * <strong>example:</strong>
+             * <p>VPCMigrationEcs</p>
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
+                return this;
+            }
+
+            /**
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li>instance: ECS instance</li>
+             * <li>ddh: dedicated host</li>
+             * <li>managehost: physical machine in a smart hosting pool</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1025,9 +1214,15 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceHistoryEventsResponseBody</p>
+     */
     public static class InstanceSystemEventSet extends TeaModel {
-        @NameInMap("InstanceSystemEventType")
-        private java.util.List < InstanceSystemEventType> instanceSystemEventType;
+        @com.aliyun.core.annotation.NameInMap("InstanceSystemEventType")
+        private java.util.List<InstanceSystemEventType> instanceSystemEventType;
 
         private InstanceSystemEventSet(Builder builder) {
             this.instanceSystemEventType = builder.instanceSystemEventType;
@@ -1044,17 +1239,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * @return instanceSystemEventType
          */
-        public java.util.List < InstanceSystemEventType> getInstanceSystemEventType() {
+        public java.util.List<InstanceSystemEventType> getInstanceSystemEventType() {
             return this.instanceSystemEventType;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceSystemEventType> instanceSystemEventType; 
+            private java.util.List<InstanceSystemEventType> instanceSystemEventType; 
 
             /**
              * InstanceSystemEventType.
              */
-            public Builder instanceSystemEventType(java.util.List < InstanceSystemEventType> instanceSystemEventType) {
+            public Builder instanceSystemEventType(java.util.List<InstanceSystemEventType> instanceSystemEventType) {
                 this.instanceSystemEventType = instanceSystemEventType;
                 return this;
             }

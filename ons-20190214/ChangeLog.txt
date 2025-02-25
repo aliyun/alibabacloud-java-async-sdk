@@ -1,3 +1,6 @@
+2024-11-27 Version: 2.0.0
+- Generated java-async 2019-02-14 for Ons.
+
 2023-02-02 Version: 1.0.0
 - Add OnsMessageDetail for query message body.
 

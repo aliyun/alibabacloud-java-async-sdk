@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafDomainResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafDomainResponseBody</p>
  */
 public class DescribeDcdnWafDomainResponseBody extends TeaModel {
-    @NameInMap("OutPutDomains")
+    @com.aliyun.core.annotation.NameInMap("OutPutDomains")
     private java.util.List < OutPutDomains> outPutDomains;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDcdnWafDomainResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
          */
         public Builder outPutDomains(java.util.List < OutPutDomains> outPutDomains) {
             this.outPutDomains = outPutDomains;
@@ -70,7 +70,10 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-802B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The number of accelerated domain names returned.
+         * <p>The number of accelerated domain names returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +97,26 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafDomainResponseBody</p>
+     */
     public static class OutPutDomains extends TeaModel {
-        @NameInMap("AclStatus")
+        @com.aliyun.core.annotation.NameInMap("AclStatus")
         private Integer aclStatus;
 
-        @NameInMap("CcStatus")
+        @com.aliyun.core.annotation.NameInMap("CcStatus")
         private Integer ccStatus;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WafStatus")
+        @com.aliyun.core.annotation.NameInMap("WafStatus")
         private Integer wafStatus;
 
         private OutPutDomains(Builder builder) {
@@ -166,11 +178,14 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             private Integer wafStatus; 
 
             /**
-             * The status of the ACL. Valid values:
-             * <p>
+             * <p>The status of the ACL. Valid values:</p>
+             * <ul>
+             * <li>0: disabled</li>
+             * <li>1: enabled</li>
+             * </ul>
              * 
-             * *   0: disabled
-             * *   1: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder aclStatus(Integer aclStatus) {
                 this.aclStatus = aclStatus;
@@ -178,11 +193,14 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The status of protection against HTTP flood attacks. Valid values:
-             * <p>
+             * <p>The status of protection against HTTP flood attacks. Valid values:</p>
+             * <ul>
+             * <li>0: disabled</li>
+             * <li>1: enabled</li>
+             * </ul>
              * 
-             * *   0: disabled
-             * *   1: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ccStatus(Integer ccStatus) {
                 this.ccStatus = ccStatus;
@@ -190,7 +208,10 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that has WAF enabled.
+             * <p>The domain name that has WAF enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -198,12 +219,15 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the domain name. Valid values:
-             * <p>
+             * <p>The status of the domain name. Valid values:</p>
+             * <ul>
+             * <li>1: The domain name is added to WAF, or the domain name is valid.</li>
+             * <li>10: The domain name is being added to WAF.</li>
+             * <li>11: The domain name failed to be added to WAF.</li>
+             * </ul>
              * 
-             * *   1: The domain name is added to WAF, or the domain name is valid.
-             * *   10: The domain name is being added to WAF.
-             * *   11: The domain name failed to be added to WAF.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -211,11 +235,14 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * The status of WAF. Valid values:
-             * <p>
+             * <p>The status of WAF. Valid values:</p>
+             * <ul>
+             * <li>0: disabled</li>
+             * <li>1: enabled</li>
+             * </ul>
              * 
-             * *   0: disabled
-             * *   1: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder wafStatus(Integer wafStatus) {
                 this.wafStatus = wafStatus;

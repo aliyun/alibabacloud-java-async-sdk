@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindDirectoryRequest} extends {@link RequestModel}
  *
  * <p>UnbindDirectoryRequest</p>
  */
 public class UnbindDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("DirectoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private UnbindDirectoryRequest(Builder builder) {
@@ -76,15 +81,18 @@ public class UnbindDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindDirectoryRequest response) {
-            super(response);
-            this.deviceId = response.deviceId;
-            this.directoryId = response.directoryId;
-            this.ownerId = response.ownerId;
+        private Builder(UnbindDirectoryRequest request) {
+            super(request);
+            this.deviceId = request.deviceId;
+            this.directoryId = request.directoryId;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DeviceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34871************3380-cn-qingdao</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -93,7 +101,10 @@ public class UnbindDirectoryRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3998**************9488-cn-qingdao</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

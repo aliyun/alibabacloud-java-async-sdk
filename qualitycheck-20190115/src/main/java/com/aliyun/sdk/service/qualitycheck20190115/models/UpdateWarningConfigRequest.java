@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWarningConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateWarningConfigRequest</p>
  */
 public class UpdateWarningConfigRequest extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Query
-    @NameInMap("JsonStr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JsonStr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
     private UpdateWarningConfigRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class UpdateWarningConfigRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -78,7 +83,10 @@ public class UpdateWarningConfigRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ridList&quot;:[18130],&quot;configName&quot;:&quot;0310&quot;,&quot;channels&quot;:[{&quot;type&quot;:1,&quot;url&quot;:&quot;<a href="https://sca.console.aliyun.com/#/warningConfig%22%7D%5D,%22configId%22:29%7D">https://sca.console.aliyun.com/#/warningConfig&quot;}],&quot;configId&quot;:29}</a></p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

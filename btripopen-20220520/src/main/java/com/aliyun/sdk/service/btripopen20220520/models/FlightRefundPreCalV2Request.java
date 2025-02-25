@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightRefundPreCalV2Request} extends {@link RequestModel}
  *
  * <p>FlightRefundPreCalV2Request</p>
  */
 public class FlightRefundPreCalV2Request extends Request {
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private String orderId;
 
-    @Query
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Query
-    @NameInMap("passenger_segment_relations")
-    private java.util.List < PassengerSegmentRelations> passengerSegmentRelations;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_relations")
+    private java.util.List<PassengerSegmentRelations> passengerSegmentRelations;
 
-    @Query
-    @NameInMap("pre_cal_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pre_cal_type")
     private Integer preCalType;
 
-    @Query
-    @NameInMap("ticket_nos")
-    private java.util.List < String > ticketNos;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ticket_nos")
+    private java.util.List<String> ticketNos;
 
-    @Query
-    @NameInMap("voluntary")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("voluntary")
     private Boolean voluntary;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightRefundPreCalV2Request(Builder builder) {
@@ -93,7 +98,7 @@ public class FlightRefundPreCalV2Request extends Request {
     /**
      * @return passengerSegmentRelations
      */
-    public java.util.List < PassengerSegmentRelations> getPassengerSegmentRelations() {
+    public java.util.List<PassengerSegmentRelations> getPassengerSegmentRelations() {
         return this.passengerSegmentRelations;
     }
 
@@ -107,7 +112,7 @@ public class FlightRefundPreCalV2Request extends Request {
     /**
      * @return ticketNos
      */
-    public java.util.List < String > getTicketNos() {
+    public java.util.List<String> getTicketNos() {
         return this.ticketNos;
     }
 
@@ -129,9 +134,9 @@ public class FlightRefundPreCalV2Request extends Request {
         private String isvName; 
         private String orderId; 
         private String outOrderId; 
-        private java.util.List < PassengerSegmentRelations> passengerSegmentRelations; 
+        private java.util.List<PassengerSegmentRelations> passengerSegmentRelations; 
         private Integer preCalType; 
-        private java.util.List < String > ticketNos; 
+        private java.util.List<String> ticketNos; 
         private Boolean voluntary; 
         private String xAcsBtripCorpToken; 
 
@@ -181,7 +186,7 @@ public class FlightRefundPreCalV2Request extends Request {
         /**
          * passenger_segment_relations.
          */
-        public Builder passengerSegmentRelations(java.util.List < PassengerSegmentRelations> passengerSegmentRelations) {
+        public Builder passengerSegmentRelations(java.util.List<PassengerSegmentRelations> passengerSegmentRelations) {
             String passengerSegmentRelationsShrink = shrink(passengerSegmentRelations, "passenger_segment_relations", "json");
             this.putQueryParameter("passenger_segment_relations", passengerSegmentRelationsShrink);
             this.passengerSegmentRelations = passengerSegmentRelations;
@@ -200,7 +205,7 @@ public class FlightRefundPreCalV2Request extends Request {
         /**
          * ticket_nos.
          */
-        public Builder ticketNos(java.util.List < String > ticketNos) {
+        public Builder ticketNos(java.util.List<String> ticketNos) {
             String ticketNosShrink = shrink(ticketNos, "ticket_nos", "json");
             this.putQueryParameter("ticket_nos", ticketNosShrink);
             this.ticketNos = ticketNos;
@@ -232,12 +237,18 @@ public class FlightRefundPreCalV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightRefundPreCalV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightRefundPreCalV2Request</p>
+     */
     public static class PassengerSegmentRelations extends TeaModel {
-        @NameInMap("passenger_id")
+        @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
 
-        @NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        @com.aliyun.core.annotation.NameInMap("segment_id_list")
+        private java.util.List<String> segmentIdList;
 
         private PassengerSegmentRelations(Builder builder) {
             this.passengerId = builder.passengerId;
@@ -262,13 +273,13 @@ public class FlightRefundPreCalV2Request extends Request {
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
             private String passengerId; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * passenger_id.
@@ -281,7 +292,7 @@ public class FlightRefundPreCalV2Request extends Request {
             /**
              * segment_id_list.
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }

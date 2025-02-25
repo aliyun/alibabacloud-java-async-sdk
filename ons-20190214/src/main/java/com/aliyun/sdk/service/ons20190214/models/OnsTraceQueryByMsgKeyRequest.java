@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTraceQueryByMsgKeyRequest} extends {@link RequestModel}
  *
  * <p>OnsTraceQueryByMsgKeyRequest</p>
  */
 public class OnsTraceQueryByMsgKeyRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MsgKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MsgKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String msgKey;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private OnsTraceQueryByMsgKeyRequest(Builder builder) {
@@ -114,7 +114,11 @@ public class OnsTraceQueryByMsgKeyRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         * <p>The start of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570852800000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -123,7 +127,11 @@ public class OnsTraceQueryByMsgKeyRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         * <p>The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1570968000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -132,7 +140,10 @@ public class OnsTraceQueryByMsgKeyRequest extends Request {
         }
 
         /**
-         * The ID of the Message Queue for Apache RocketMQ instance that contains the specified topic.
+         * <p>The ID of the ApsaraMQ for RocketMQ instance that contains the specified topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_111111111111_DOxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,7 +152,11 @@ public class OnsTraceQueryByMsgKeyRequest extends Request {
         }
 
         /**
-         * The key of the messages that you want to query.
+         * <p>The key of the message that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORDERID_100</p>
          */
         public Builder msgKey(String msgKey) {
             this.putQueryParameter("MsgKey", msgKey);
@@ -150,7 +165,11 @@ public class OnsTraceQueryByMsgKeyRequest extends Request {
         }
 
         /**
-         * The topic that contains the messages you want to query.
+         * <p>The topic that contains the message you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

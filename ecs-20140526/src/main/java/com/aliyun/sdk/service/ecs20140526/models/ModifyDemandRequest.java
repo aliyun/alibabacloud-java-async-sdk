@@ -1,85 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDemandRequest} extends {@link RequestModel}
  *
  * <p>ModifyDemandRequest</p>
  */
 public class ModifyDemandRequest extends Request {
-    @Query
-    @NameInMap("Amount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
     private Integer amount;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DemandDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DemandDescription")
     private String demandDescription;
 
-    @Query
-    @NameInMap("DemandId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DemandId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String demandId;
 
-    @Query
-    @NameInMap("DemandName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DemandName")
     private String demandName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private ModifyDemandRequest(Builder builder) {
@@ -280,7 +285,10 @@ public class ModifyDemandRequest extends Request {
         } 
 
         /**
-         * The number of instances. Valid values: 1 to 100000.
+         * <p>The number of instances. Valid values: 1 to 100000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -289,7 +297,10 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -298,7 +309,10 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The description of the demand. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.
+         * <p>The description of the demand. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDemandDescription</p>
          */
         public Builder demandDescription(String demandDescription) {
             this.putQueryParameter("DemandDescription", demandDescription);
@@ -307,7 +321,11 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The ID of the demand that you want to modify.
+         * <p>The ID of the demand that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed-bp11n21kq00sl71p****</p>
          */
         public Builder demandId(String demandId) {
             this.putQueryParameter("DemandId", demandId);
@@ -316,10 +334,11 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
-         * <p>
+         * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <a href="http://https://">http:// or https://</a>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The default value is the instance type name.</p>
          * 
-         * The default value is the instance type name.
+         * <strong>example:</strong>
+         * <p>testDemandName</p>
          */
         public Builder demandName(String demandName) {
             this.putQueryParameter("DemandName", demandName);
@@ -328,14 +347,13 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~)standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
-         * <p>
+         * <p>The end time of the subscription period. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+         * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).</p>
+         * <p>The value of EndTime must be later than the value of StartTime.</p>
+         * <p>in most cases, the interval between StartTime and EndTime cannot be more than 10 days.</p>
          * 
-         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).
-         * 
-         * The value of EndTime must be later than the value of StartTime.
-         * 
-         * in most cases, the interval between StartTime and EndTime cannot be more than 10 days.
+         * <strong>example:</strong>
+         * <p>2019-12-10 12:05:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -344,11 +362,14 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid (default): pay-as-you-go</li>
+         * </ul>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid (default): pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -357,7 +378,10 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of the specified instance type. To learn how to select instance types, see [Select instance types](~~58291~~).
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the performance data of the specified instance type. To learn how to select instance types, see <a href="https://help.aliyun.com/document_detail/58291.html">Select instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -384,11 +408,14 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The subscription period of the resource. Unit: month. You must specify this parameter. This parameter is valid only if you set `InstanceChargeType` to PrePaid. Valid values:
-         * <p>
+         * <p>The subscription period of the resource. Unit: month. You must specify this parameter. This parameter is valid only if you set <code>InstanceChargeType</code> to PrePaid. Valid values:</p>
+         * <ul>
+         * <li>Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.</li>
+         * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+         * </ul>
          * 
-         * *   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.
-         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -397,12 +424,15 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period of the resource. Valid values:
-         * <p>
+         * <p>The unit of the subscription period of the resource. Valid values:</p>
+         * <ul>
+         * <li>Day</li>
+         * <li>Week</li>
+         * <li>Month. This is the default value.</li>
+         * </ul>
          * 
-         * *   Day
-         * *   Week
-         * *   Month. This is the default value.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -411,7 +441,11 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -438,14 +472,13 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
-         * <p>
+         * <p>The start time of the subscription period. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+         * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).</p>
+         * <p>The value of EndTime must be later than the value of StartTime.</p>
+         * <p>In most cases, the interval between StartTime and EndTime cannot be more than 10 days.</p>
          * 
-         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).
-         * 
-         * The value of EndTime must be later than the value of StartTime.
-         * 
-         * In most cases, the interval between StartTime and EndTime cannot be more than 10 days.
+         * <strong>example:</strong>
+         * <p>2019-12-01 12:05:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -454,10 +487,11 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
-         * <p>
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * <p>This parameter is empty by default. If you leave this parameter empty, the system randomly selects a zone.</p>
          * 
-         * This parameter is empty by default. If you leave this parameter empty, the system randomly selects a zone.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

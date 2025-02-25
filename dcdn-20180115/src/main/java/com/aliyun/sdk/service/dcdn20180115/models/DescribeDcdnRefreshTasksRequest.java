@@ -1,61 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnRefreshTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnRefreshTasksRequest</p>
  */
 public class DescribeDcdnRefreshTasksRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("ObjectPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectPath")
     private String objectPath;
 
-    @Query
-    @NameInMap("ObjectType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
     private String objectType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 42949672)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 42949672)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DescribeDcdnRefreshTasksRequest(Builder builder) {
@@ -196,7 +196,10 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -205,10 +208,13 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2017-01-01T12:13:20Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -217,7 +223,10 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The path of the object. The path is used as a condition for exact matching.
+         * <p>The path of the object. The path is used as a condition for exact matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/examplefile.txt">http://example.com/examplefile.txt</a></p>
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -226,15 +235,16 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task.</p>
+         * <ul>
+         * <li><strong>file</strong>: URL-based refresh</li>
+         * <li><strong>directory</strong>: directory-based refresh</li>
+         * <li><strong>preload</strong>: URL-based prefetch</li>
+         * </ul>
+         * <p>If you set <strong>DomainName</strong> or <strong>Status</strong>, you must also set this parameter.</p>
          * 
-         * *   **file**: URL-based refresh
-         * *   **directory**: directory-based refresh
-         * *   **regex**: regular expression-based refresh
-         * *   **preload**: URL-based prefetch
-         * 
-         * If you set **DomainName** or **Status**, you must also set this parameter.
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -252,7 +262,10 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**.
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -261,7 +274,10 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -279,7 +295,10 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-01T12:12:20Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -288,12 +307,15 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task.</p>
+         * <ul>
+         * <li><strong>Complete</strong>: The task is complete.</li>
+         * <li><strong>Refreshing</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
          * 
-         * *   **Complete**: The task is complete.
-         * *   **Refreshing**: The task is in progress.
-         * *   **Failed**: The task failed.
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -302,7 +324,10 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The ID of the task. A task ID is assigned when you create a refresh or prefetch task.
+         * <p>The ID of the task. A task ID is assigned when you create a refresh or prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>704225667</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

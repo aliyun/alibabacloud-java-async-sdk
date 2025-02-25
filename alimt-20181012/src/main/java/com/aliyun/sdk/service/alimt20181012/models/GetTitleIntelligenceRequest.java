@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTitleIntelligenceRequest</p>
  */
 public class GetTitleIntelligenceRequest extends Request {
-    @Body
-    @NameInMap("CatLevelThreeId")
-    @Validation(required = true, maximum = 99999999999D)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CatLevelThreeId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999999D)
     private Long catLevelThreeId;
 
-    @Body
-    @NameInMap("CatLevelTwoId")
-    @Validation(required = true, maximum = 99999999999D)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CatLevelTwoId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999999D)
     private Long catLevelTwoId;
 
-    @Body
-    @NameInMap("Extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extra")
     private String extra;
 
-    @Body
-    @NameInMap("Keywords")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keywords")
     private String keywords;
 
-    @Body
-    @NameInMap("Platform")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String platform;
 
     private GetTitleIntelligenceRequest(Builder builder) {

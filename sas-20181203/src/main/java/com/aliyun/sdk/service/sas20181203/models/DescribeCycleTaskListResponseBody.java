@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCycleTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCycleTaskListResponseBody</p>
  */
 public class DescribeCycleTaskListResponseBody extends TeaModel {
-    @NameInMap("CycleScheduleResponseList")
-    private java.util.List < CycleScheduleResponseList> cycleScheduleResponseList;
+    @com.aliyun.core.annotation.NameInMap("CycleScheduleResponseList")
+    private java.util.List<CycleScheduleResponseList> cycleScheduleResponseList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCycleTaskListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
     /**
      * @return cycleScheduleResponseList
      */
-    public java.util.List < CycleScheduleResponseList> getCycleScheduleResponseList() {
+    public java.util.List<CycleScheduleResponseList> getCycleScheduleResponseList() {
         return this.cycleScheduleResponseList;
     }
 
@@ -57,20 +62,20 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CycleScheduleResponseList> cycleScheduleResponseList; 
+        private java.util.List<CycleScheduleResponseList> cycleScheduleResponseList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * An array that consists of periodic scan tasks.
+         * <p>An array that consists of periodic scan tasks.</p>
          */
-        public Builder cycleScheduleResponseList(java.util.List < CycleScheduleResponseList> cycleScheduleResponseList) {
+        public Builder cycleScheduleResponseList(java.util.List<CycleScheduleResponseList> cycleScheduleResponseList) {
             this.cycleScheduleResponseList = cycleScheduleResponseList;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,41 +99,47 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCycleTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCycleTaskListResponseBody</p>
+     */
     public static class CycleScheduleResponseList extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("FirstDateStr")
+        @com.aliyun.core.annotation.NameInMap("FirstDateStr")
         private Long firstDateStr;
 
-        @NameInMap("IntervalPeriod")
+        @com.aliyun.core.annotation.NameInMap("IntervalPeriod")
         private Integer intervalPeriod;
 
-        @NameInMap("LastTaskId")
+        @com.aliyun.core.annotation.NameInMap("LastTaskId")
         private String lastTaskId;
 
-        @NameInMap("NextStartTimeStr")
+        @com.aliyun.core.annotation.NameInMap("NextStartTimeStr")
         private Long nextStartTimeStr;
 
-        @NameInMap("Param")
+        @com.aliyun.core.annotation.NameInMap("Param")
         private String param;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("TargetEndTime")
+        @com.aliyun.core.annotation.NameInMap("TargetEndTime")
         private Integer targetEndTime;
 
-        @NameInMap("TargetStartTime")
+        @com.aliyun.core.annotation.NameInMap("TargetStartTime")
         private Integer targetStartTime;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private CycleScheduleResponseList(Builder builder) {
@@ -250,7 +264,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The configuration ID.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2cdbdeba8dd70586d5814d4cbf21****</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -258,11 +275,14 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration for the task interval was enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the configuration for the task interval was enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>0</strong>: disabled.</li>
+             * </ul>
              * 
-             * *   **1**: enabled.
-             * *   **0**: disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -270,7 +290,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task first started.
+             * <p>The time when the task first started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1667491200000</p>
              */
             public Builder firstDateStr(Long firstDateStr) {
                 this.firstDateStr = firstDateStr;
@@ -278,7 +301,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The interval between which two consecutive tasks are run.
+             * <p>The interval between which two consecutive tasks are run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder intervalPeriod(Integer intervalPeriod) {
                 this.intervalPeriod = intervalPeriod;
@@ -286,7 +312,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the last task.
+             * <p>The ID of the last task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38730bb078f4a1461d4ed283994c****</p>
              */
             public Builder lastTaskId(String lastTaskId) {
                 this.lastTaskId = lastTaskId;
@@ -294,7 +323,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the next task starts. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the next task starts. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671184531000</p>
              */
             public Builder nextStartTimeStr(Long nextStartTimeStr) {
                 this.nextStartTimeStr = nextStartTimeStr;
@@ -302,7 +334,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information.
+             * <p>The extended information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;userAgreement&quot;:&quot;yes&quot;,&quot;lang&quot;:&quot;zh&quot;}</p>
              */
             public Builder param(String param) {
                 this.param = param;
@@ -310,11 +345,14 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the scan interval. Valid values:
-             * <p>
+             * <p>The unit of the scan interval. Valid values:</p>
+             * <ul>
+             * <li><strong>day</strong></li>
+             * <li><strong>hour</strong></li>
+             * </ul>
              * 
-             * *   **day**
-             * *   **hour**
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -322,7 +360,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task. The time must be a time frame.
+             * <p>The end time of the task. The time must be a time frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder targetEndTime(Integer targetEndTime) {
                 this.targetEndTime = targetEndTime;
@@ -330,7 +371,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the task. The start time must be a time frame.
+             * <p>The start time of the task. The start time must be a time frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder targetStartTime(Integer targetStartTime) {
                 this.targetStartTime = targetStartTime;
@@ -338,7 +382,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE_SCAN</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -346,7 +393,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE_SCAN</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -360,17 +410,23 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCycleTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCycleTaskListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -423,7 +479,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -431,7 +490,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -439,7 +501,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -447,7 +512,10 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

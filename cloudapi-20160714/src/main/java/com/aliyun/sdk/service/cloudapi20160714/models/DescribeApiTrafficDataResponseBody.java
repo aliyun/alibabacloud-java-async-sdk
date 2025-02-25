@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiTrafficDataResponseBody</p>
  */
 public class DescribeApiTrafficDataResponseBody extends TeaModel {
-    @NameInMap("CallDownloads")
+    @com.aliyun.core.annotation.NameInMap("CallDownloads")
     private CallDownloads callDownloads;
 
-    @NameInMap("CallUploads")
+    @com.aliyun.core.annotation.NameInMap("CallUploads")
     private CallUploads callUploads;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApiTrafficDataResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned downlink traffic data of API calls. It is an array consisting of MonitorItem data.
+         * <p>The returned downlink traffic data of API calls. It is an array consisting of MonitorItem data.</p>
          */
         public Builder callDownloads(CallDownloads callDownloads) {
             this.callDownloads = callDownloads;
@@ -70,7 +75,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The returned uplink traffic data of API calls. It is an array consisting of MonitorItem data.
+         * <p>The returned uplink traffic data of API calls. It is an array consisting of MonitorItem data.</p>
          */
         public Builder callUploads(CallUploads callUploads) {
             this.callUploads = callUploads;
@@ -78,7 +83,10 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +99,17 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiTrafficDataResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -130,7 +144,10 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-28T08:20:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +155,10 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The value corresponding to the monitoring metric.
+             * <p>The value corresponding to the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -152,9 +172,15 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiTrafficDataResponseBody</p>
+     */
     public static class CallDownloads extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private CallDownloads(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -171,17 +197,17 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }
@@ -193,11 +219,17 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiTrafficDataResponseBody</p>
+     */
     public static class CallUploadsMonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private CallUploadsMonitorItem(Builder builder) {
@@ -232,7 +264,10 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-28T08:20:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -240,7 +275,10 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The value corresponding to the monitoring metric.
+             * <p>The value corresponding to the monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>670</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -254,9 +292,15 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiTrafficDataResponseBody</p>
+     */
     public static class CallUploads extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < CallUploadsMonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<CallUploadsMonitorItem> monitorItem;
 
         private CallUploads(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -273,17 +317,17 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < CallUploadsMonitorItem> getMonitorItem() {
+        public java.util.List<CallUploadsMonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < CallUploadsMonitorItem> monitorItem; 
+            private java.util.List<CallUploadsMonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < CallUploadsMonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<CallUploadsMonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

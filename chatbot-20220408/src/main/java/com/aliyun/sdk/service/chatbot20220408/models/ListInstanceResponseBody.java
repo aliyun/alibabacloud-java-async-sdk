@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceResponseBody</p>
  */
 public class ListInstanceResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListInstanceResponseBody(Builder builder) {
@@ -131,26 +131,32 @@ public class ListInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Avatar")
+        @com.aliyun.core.annotation.NameInMap("Avatar")
         private String avatar;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Introduction")
+        @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
-        @NameInMap("LanguageCode")
+        @com.aliyun.core.annotation.NameInMap("LanguageCode")
         private String languageCode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RobotType")
+        @com.aliyun.core.annotation.NameInMap("RobotType")
         private String robotType;
 
         private Instances(Builder builder) {

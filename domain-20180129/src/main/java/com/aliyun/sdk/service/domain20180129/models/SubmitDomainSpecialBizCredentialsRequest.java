@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDomainSpecialBizCredentialsRequest} extends {@link RequestModel}
  *
  * <p>SubmitDomainSpecialBizCredentialsRequest</p>
  */
 public class SubmitDomainSpecialBizCredentialsRequest extends Request {
-    @Body
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private Long bizId;
 
-    @Body
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private String credentials;
 
-    @Body
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SubmitDomainSpecialBizCredentialsRequest(Builder builder) {
@@ -96,7 +96,10 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219</p>
          */
         public Builder bizId(Long bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -105,7 +108,7 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         }
 
         /**
-         * Credentials.
+         * <p>The certificate information.</p>
          */
         public Builder credentials(String credentials) {
             this.putBodyParameter("Credentials", credentials);
@@ -114,7 +117,10 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;addTransferLock&quot;:true}</p>
          */
         public Builder extend(String extend) {
             this.putBodyParameter("Extend", extend);
@@ -123,7 +129,10 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

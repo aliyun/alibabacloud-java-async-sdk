@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitoringAgentProcessRequest} extends {@link RequestModel}
  *
  * <p>DeleteMonitoringAgentProcessRequest</p>
  */
 public class DeleteMonitoringAgentProcessRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ProcessId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessId")
     private String processId;
 
-    @Query
-    @NameInMap("ProcessName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessName")
     private String processName;
 
     private DeleteMonitoringAgentProcessRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class DeleteMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-KpVny6l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,10 +96,13 @@ public class DeleteMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The process ID.
-         * <p>
+         * <p>The process ID.</p>
+         * <blockquote>
+         * <p>You must configure either <code>ProcessId</code> or <code>ProcessName</code>.</p>
+         * </blockquote>
          * 
-         * > You must configure either `ProcessId` or `ProcessName`.
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -104,10 +111,13 @@ public class DeleteMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The process name.
-         * <p>
+         * <p>The process name.</p>
+         * <blockquote>
+         * <p>You must configure either <code>ProcessId</code> or <code>ProcessName</code>.</p>
+         * </blockquote>
          * 
-         * > You must configure either `ProcessId` or `ProcessName`.
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);

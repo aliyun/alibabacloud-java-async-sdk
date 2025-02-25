@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnCertificateDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnCertificateDetailResponseBody</p>
  */
 public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private Long certId;
 
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnCertificateDetailResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the certificate.
+         * <p>The content of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----xxx-----END CERTIFICATE-----</p>
          */
         public Builder cert(String cert) {
             this.cert = cert;
@@ -94,7 +97,10 @@ public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder certId(Long certId) {
             this.certId = certId;
@@ -102,7 +108,10 @@ public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the certificate.
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -110,7 +119,10 @@ public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the certificate.
+         * <p>The key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak1htyxxxx</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -118,7 +130,10 @@ public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7C69682-7F88-40DD-A198-10D0309E439B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

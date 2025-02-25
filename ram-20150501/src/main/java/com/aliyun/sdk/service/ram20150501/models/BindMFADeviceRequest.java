@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindMFADeviceRequest} extends {@link RequestModel}
  *
  * <p>BindMFADeviceRequest</p>
  */
 public class BindMFADeviceRequest extends Request {
-    @Query
-    @NameInMap("AuthenticationCode1")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationCode1")
     private String authenticationCode1;
 
-    @Query
-    @NameInMap("AuthenticationCode2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationCode2")
     private String authenticationCode2;
 
-    @Query
-    @NameInMap("SerialNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SerialNumber")
     private String serialNumber;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private BindMFADeviceRequest(Builder builder) {
@@ -87,16 +92,19 @@ public class BindMFADeviceRequest extends Request {
             super();
         } 
 
-        private Builder(BindMFADeviceRequest response) {
-            super(response);
-            this.authenticationCode1 = response.authenticationCode1;
-            this.authenticationCode2 = response.authenticationCode2;
-            this.serialNumber = response.serialNumber;
-            this.userName = response.userName;
+        private Builder(BindMFADeviceRequest request) {
+            super(request);
+            this.authenticationCode1 = request.authenticationCode1;
+            this.authenticationCode2 = request.authenticationCode2;
+            this.serialNumber = request.serialNumber;
+            this.userName = request.userName;
         } 
 
         /**
-         * AuthenticationCode1.
+         * <p>The first authentication code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11****</p>
          */
         public Builder authenticationCode1(String authenticationCode1) {
             this.putQueryParameter("AuthenticationCode1", authenticationCode1);
@@ -105,7 +113,10 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * AuthenticationCode2.
+         * <p>The second authentication code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33****</p>
          */
         public Builder authenticationCode2(String authenticationCode2) {
             this.putQueryParameter("AuthenticationCode2", authenticationCode2);
@@ -114,7 +125,10 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * SerialNumber.
+         * <p>The serial number of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:mfa/device002</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);
@@ -123,7 +137,10 @@ public class BindMFADeviceRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

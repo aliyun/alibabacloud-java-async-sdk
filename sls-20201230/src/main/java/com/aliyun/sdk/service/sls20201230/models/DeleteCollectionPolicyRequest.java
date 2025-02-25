@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link DeleteCollectionPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteCollectionPolicyRequest</p>
  */
 public class DeleteCollectionPolicyRequest extends Request {
-    @Path
-    @NameInMap("policyName")
-    @Validation(required = true, maxLength = 63, minLength = 3)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("policyName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 63, minLength = 3)
     private String policyName;
 
-    @Query
-    @NameInMap("dataCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataCode")
     private String dataCode;
 
-    @Query
-    @NameInMap("productCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("productCode")
     private String productCode;
 
     private DeleteCollectionPolicyRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class DeleteCollectionPolicyRequest extends Request {
         } 
 
         /**
-         * policyName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your_log_policy</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policyName", policyName);

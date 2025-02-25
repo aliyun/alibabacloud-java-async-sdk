@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCustomPortsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebCustomPortsResponseBody</p>
  */
 public class DescribeWebCustomPortsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WebCustomPorts")
-    private java.util.List < WebCustomPorts> webCustomPorts;
+    @com.aliyun.core.annotation.NameInMap("WebCustomPorts")
+    private java.util.List<WebCustomPorts> webCustomPorts;
 
     private DescribeWebCustomPortsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
     /**
      * @return webCustomPorts
      */
-    public java.util.List < WebCustomPorts> getWebCustomPorts() {
+    public java.util.List<WebCustomPorts> getWebCustomPorts() {
         return this.webCustomPorts;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < WebCustomPorts> webCustomPorts; 
+        private java.util.List<WebCustomPorts> webCustomPorts; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of information about supported custom ports that are used by a website.
+         * <p>An array consisting of information about supported custom ports that are used by a website.</p>
          */
-        public Builder webCustomPorts(java.util.List < WebCustomPorts> webCustomPorts) {
+        public Builder webCustomPorts(java.util.List<WebCustomPorts> webCustomPorts) {
             this.webCustomPorts = webCustomPorts;
             return this;
         }
@@ -71,11 +79,17 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebCustomPortsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCustomPortsResponseBody</p>
+     */
     public static class WebCustomPorts extends TeaModel {
-        @NameInMap("ProxyPorts")
-        private java.util.List < String > proxyPorts;
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
+        private java.util.List<String> proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private WebCustomPorts(Builder builder) {
@@ -94,7 +108,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         /**
          * @return proxyPorts
          */
-        public java.util.List < String > getProxyPorts() {
+        public java.util.List<String> getProxyPorts() {
             return this.proxyPorts;
         }
 
@@ -106,23 +120,26 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > proxyPorts; 
+            private java.util.List<String> proxyPorts; 
             private String proxyType; 
 
             /**
-             * An array that consists of supported custom ports.
+             * <p>An array that consists of supported custom ports.</p>
              */
-            public Builder proxyPorts(java.util.List < String > proxyPorts) {
+            public Builder proxyPorts(java.util.List<String> proxyPorts) {
                 this.proxyPorts = proxyPorts;
                 return this;
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>http</strong></li>
+             * <li><strong>https</strong></li>
+             * </ul>
              * 
-             * *   **http**
-             * *   **https**
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;

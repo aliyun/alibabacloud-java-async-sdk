@@ -1,72 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnUserDomainsRequest</p>
  */
 public class DescribeDcdnUserDomainsRequest extends Request {
-    @Query
-    @NameInMap("ChangeEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeEndTime")
     private String changeEndTime;
 
-    @Query
-    @NameInMap("ChangeStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeStartTime")
     private String changeStartTime;
 
-    @Query
-    @NameInMap("CheckDomainShow")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckDomainShow")
     private Boolean checkDomainShow;
 
-    @Query
-    @NameInMap("Coverage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Coverage")
     private String coverage;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(maxLength = 6800)
     private String domainName;
 
-    @Query
-    @NameInMap("DomainSearchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainSearchType")
     private String domainSearchType;
 
-    @Query
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private String domainStatus;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("WebSiteType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebSiteType")
     private String webSiteType;
 
     private DescribeDcdnUserDomainsRequest(Builder builder) {
@@ -237,10 +238,13 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2018-05-10T14:00:00Z</p>
          */
         public Builder changeEndTime(String changeEndTime) {
             this.putQueryParameter("ChangeEndTime", changeEndTime);
@@ -249,7 +253,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-10T12:00:00Z</p>
          */
         public Builder changeStartTime(String changeStartTime) {
             this.putQueryParameter("ChangeStartTime", changeStartTime);
@@ -258,11 +265,14 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:
-         * <p>
+         * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
+         * <ul>
+         * <li>true: displays domain names.</li>
+         * <li>false: does not display detailed information.</li>
+         * </ul>
          * 
-         * *   true: displays domain names.
-         * *   false: does not display detailed information.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkDomainShow(Boolean checkDomainShow) {
             this.putQueryParameter("CheckDomainShow", checkDomainShow);
@@ -271,12 +281,15 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The acceleration region. By default, all acceleration regions are queried.
-         * <p>
+         * <p>The acceleration region. By default, all acceleration regions are queried.</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * <li><strong>global</strong>: global</li>
+         * </ul>
          * 
-         * *   **domestic**: Chinese mainland
-         * *   **overseas**: outside the Chinese mainland
-         * *   **global**: global
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -285,7 +298,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The accelerated domain names. If you do not set this parameter, configurations of all domain names that match the conditions are returned.
+         * <p>The accelerated domain names. If you do not set this parameter, configurations of all domain names that match the conditions are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -294,15 +310,19 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The search method. Default value: full_match. Valid values:
-         * <p>
+         * <p>The search method. Default value: full_match. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy_match</strong>: fuzzy match</li>
+         * <li><strong>pre_match</strong>: prefix match</li>
+         * <li><strong>suf_match</strong>: suffix match</li>
+         * <li><strong>full_match</strong> (default): exact match</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
+         * </blockquote>
          * 
-         * *   **fuzzy_match**: fuzzy match
-         * *   **pre_match**: prefix match
-         * *   **suf_match**: suffix match
-         * *   **full_match** (default): exact match
-         * 
-         * > If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.
+         * <strong>example:</strong>
+         * <p>fuzzy_match</p>
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -311,15 +331,18 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The status of the domain name. Valid values:
-         * <p>
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * <li><strong>configuring</strong>: configuring</li>
+         * <li><strong>configure_failed</strong>: configuration failed</li>
+         * <li><strong>checking</strong>: reviewing</li>
+         * <li><strong>check_failed:</strong> review failed</li>
+         * </ul>
          * 
-         * *   **online**: enabled
-         * *   **offline**: disabled
-         * *   **configuring**: configuring
-         * *   **configure_failed**: configuration failed
-         * *   **checking**: reviewing
-         * *   **check_failed:** review failed
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -337,7 +360,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of returned pages. Valid values: **1** to **100000**.
+         * <p>The number of returned pages. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -346,7 +372,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Valid values: **1** to **500**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -355,7 +384,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv6jutt**</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -373,7 +405,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -382,7 +414,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * WebSiteType.
+         * <p>The business type of the domain. Separate multiple values with commas (,). Default value: <strong>dynamic</strong>. To query common domains, keep the default value. To query domains of the computing business type, enter <strong>computing_routine</strong> or <strong>computing_image</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>computing_routine</p>
          */
         public Builder webSiteType(String webSiteType) {
             this.putQueryParameter("WebSiteType", webSiteType);
@@ -397,11 +432,17 @@ public class DescribeDcdnUserDomainsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnUserDomainsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserDomainsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -436,7 +477,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. Valid values of N: **1** to **20**. You can call the TagDcdnResources operation to set a tag for a domain name.
+             * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. You can call the TagDcdnResources operation to set a tag for a domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -444,7 +488,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
             }
 
             /**
-             * The tag value. Valid values of N: **1** to **20**.
+             * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

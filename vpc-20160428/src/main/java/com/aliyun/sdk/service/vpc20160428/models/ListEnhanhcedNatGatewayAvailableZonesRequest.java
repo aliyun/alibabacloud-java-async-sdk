@@ -1,45 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnhanhcedNatGatewayAvailableZonesRequest} extends {@link RequestModel}
  *
  * <p>ListEnhanhcedNatGatewayAvailableZonesRequest</p>
  */
 public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListEnhanhcedNatGatewayAvailableZonesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.filter = builder.filter;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -65,6 +75,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return filter
+     */
+    public java.util.List<Filter> getFilter() {
+        return this.filter;
     }
 
     /**
@@ -104,6 +121,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEnhanhcedNatGatewayAvailableZonesRequest, Builder> {
         private String acceptLanguage; 
+        private java.util.List<Filter> filter; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -117,6 +135,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         private Builder(ListEnhanhcedNatGatewayAvailableZonesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.filter = request.filter;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -125,15 +144,27 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         } 
 
         /**
-         * The language to display the results. Valid values:
-         * <p>
+         * <p>The language to display the results. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong> (default): Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh-CN** (default): Chinese
-         * *   **en-US**: English
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * <p>The filter information. You can specify a filter key and a filter value.</p>
+         */
+        public Builder filter(java.util.List<Filter> filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
             return this;
         }
 
@@ -156,12 +187,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * The ID of the region that you want to query.
-         * <p>
+         * <p>The ID of the region that you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-         * 
-         * In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.
+         * <strong>example:</strong>
+         * <p>me-east-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,4 +226,80 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnhanhcedNatGatewayAvailableZonesRequest} extends {@link TeaModel}
+     *
+     * <p>ListEnhanhcedNatGatewayAvailableZonesRequest</p>
+     */
+    public static class Filter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Filter(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The filter key. Only <strong>PrivateLinkEnabled</strong> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateLinkEnabled</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the filter key.</p>
+             * <blockquote>
+             * <p> If the filter key is set to <strong>PrivateLinkEnabled</strong>, you must specify a filter value. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Filter build() {
+                return new Filter(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchNodesByOutputResponseBody} extends {@link TeaModel}
  *
  * <p>SearchNodesByOutputResponseBody</p>
  */
 public class SearchNodesByOutputResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.Map<String, ?> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SearchNodesByOutputResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -98,15 +103,18 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The map returned. The key in the map indicates an output name, and the value in the map indicates the information about the node that generates the output.</p>
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDFSDFSDF-asdfDFSDF-SDFSDf-SDfSFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

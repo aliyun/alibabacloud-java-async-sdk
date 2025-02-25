@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchBindTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>BatchBindTemplateResponseBody</p>
  */
 public class BatchBindTemplateResponseBody extends TeaModel {
-    @NameInMap("Bindings")
-    private java.util.List < Bindings> bindings;
+    @com.aliyun.core.annotation.NameInMap("Bindings")
+    private java.util.List<Bindings> bindings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchBindTemplateResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class BatchBindTemplateResponseBody extends TeaModel {
     /**
      * @return bindings
      */
-    public java.util.List < Bindings> getBindings() {
+    public java.util.List<Bindings> getBindings() {
         return this.bindings;
     }
 
@@ -46,13 +51,13 @@ public class BatchBindTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Bindings> bindings; 
+        private java.util.List<Bindings> bindings; 
         private String requestId; 
 
         /**
          * Bindings.
          */
-        public Builder bindings(java.util.List < Bindings> bindings) {
+        public Builder bindings(java.util.List<Bindings> bindings) {
             this.bindings = bindings;
             return this;
         }
@@ -71,17 +76,23 @@ public class BatchBindTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchBindTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchBindTemplateResponseBody</p>
+     */
     public static class Bindings extends TeaModel {
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private Bindings(Builder builder) {

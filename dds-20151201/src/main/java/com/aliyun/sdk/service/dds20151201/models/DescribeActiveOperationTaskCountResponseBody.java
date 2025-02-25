@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTaskCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActiveOperationTaskCountResponseBody</p>
  */
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
-    @NameInMap("NeedPop")
+    @com.aliyun.core.annotation.NameInMap("NeedPop")
     private Integer needPop;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskCount")
+    @com.aliyun.core.annotation.NameInMap("TaskCount")
     private Integer taskCount;
 
     private DescribeActiveOperationTaskCountResponseBody(Builder builder) {
@@ -62,11 +67,14 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         private Integer taskCount; 
 
         /**
-         * Indicates whether any O&M tasks need pop-up windows to notify users actions. Valid values: 
-         * <p>
+         * <p>Indicates whether any O&amp;M tasks need pop-up windows to notify users actions. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: No O&amp;M tasks need pop-up windows to notify users actions.</li>
+         * <li><strong>1</strong>: Some O&amp;M tasks need pop-up windows to notify users actions.</li>
+         * </ul>
          * 
-         * - **0**: No O&M tasks need pop-up windows to notify users actions.
-         * - **1**: Some O&M tasks need pop-up windows to notify users actions.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder needPop(Integer needPop) {
             this.needPop = needPop;
@@ -74,7 +82,10 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>770D7F11-21A2-402B-9DF6-D1A620570EF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +93,10 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of pending O&M tasks.
+         * <p>The number of pending O&amp;M tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskCount(Integer taskCount) {
             this.taskCount = taskCount;

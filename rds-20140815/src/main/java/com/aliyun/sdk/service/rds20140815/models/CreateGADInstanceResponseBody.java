@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGADInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGADInstanceResponseBody</p>
  */
 public class CreateGADInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private CreateGADInstanceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateGADInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,14 +79,20 @@ public class CreateGADInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGADInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGADInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CreateMemberCount")
+        @com.aliyun.core.annotation.NameInMap("CreateMemberCount")
         private String createMemberCount;
 
-        @NameInMap("GadInstanceName")
+        @com.aliyun.core.annotation.NameInMap("GadInstanceName")
         private String gadInstanceName;
 
-        @NameInMap("TaskID")
+        @com.aliyun.core.annotation.NameInMap("TaskID")
         private String taskID;
 
         private Result(Builder builder) {
@@ -122,7 +136,10 @@ public class CreateGADInstanceResponseBody extends TeaModel {
             private String taskID; 
 
             /**
-             * The number of unit nodes that are created by calling this operation.
+             * <p>The number of unit nodes that are created by calling this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder createMemberCount(String createMemberCount) {
                 this.createMemberCount = createMemberCount;
@@ -130,7 +147,10 @@ public class CreateGADInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the global active database cluster.
+             * <p>The ID of the global active database cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gad-rm-bp1npi2j8********</p>
              */
             public Builder gadInstanceName(String gadInstanceName) {
                 this.gadInstanceName = gadInstanceName;
@@ -138,7 +158,10 @@ public class CreateGADInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5374xxxx</p>
              */
             public Builder taskID(String taskID) {
                 this.taskID = taskID;

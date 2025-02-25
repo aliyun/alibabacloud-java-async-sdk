@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUniBackupDatabaseRequest} extends {@link RequestModel}
  *
  * <p>DescribeUniBackupDatabaseRequest</p>
  */
 public class DescribeUniBackupDatabaseRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DatabaseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseType")
     private String databaseType;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private String queryType;
 
-    @Query
-    @NameInMap("UniRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniRegionId")
     private String uniRegionId;
 
     private DescribeUniBackupDatabaseRequest(Builder builder) {
@@ -124,7 +129,10 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,12 +141,15 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The type of the database. Valid values:
-         * <p>
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>MYSQL</strong></li>
+         * <li><strong>MSSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
          * 
-         * *   **MYSQL**
-         * *   **MSSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -147,7 +158,10 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the Elastic Compute Service (ECS) instance.
+         * <p>The name of the Elastic Compute Service (ECS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -156,10 +170,13 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,11 +185,14 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The condition that is used to query the database. Valid values:
-         * <p>
+         * <p>The condition that is used to query the database. Valid values:</p>
+         * <ul>
+         * <li><strong>create</strong>: newly created</li>
+         * <li><strong>restore</strong>: restored</li>
+         * </ul>
          * 
-         * *   **create**: newly created
-         * *   **restore**: restored
+         * <strong>example:</strong>
+         * <p>create</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -181,7 +201,10 @@ public class DescribeUniBackupDatabaseRequest extends Request {
         }
 
         /**
-         * The region ID of the server that hosts the database.
+         * <p>The region ID of the server that hosts the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);

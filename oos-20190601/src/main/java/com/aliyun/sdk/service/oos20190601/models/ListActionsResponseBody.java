@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListActionsResponseBody</p>
  */
 public class ListActionsResponseBody extends TeaModel {
-    @NameInMap("Actions")
-    private java.util.List < Actions> actions;
+    @com.aliyun.core.annotation.NameInMap("Actions")
+    private java.util.List<Actions> actions;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListActionsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListActionsResponseBody extends TeaModel {
     /**
      * @return actions
      */
-    public java.util.List < Actions> getActions() {
+    public java.util.List<Actions> getActions() {
         return this.actions;
     }
 
@@ -68,21 +73,24 @@ public class ListActionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Actions> actions; 
+        private java.util.List<Actions> actions; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The details of the actions.
+         * <p>The details of the actions.</p>
          */
-        public Builder actions(java.util.List < Actions> actions) {
+        public Builder actions(java.util.List<Actions> actions) {
             this.actions = actions;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +98,10 @@ public class ListActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +109,10 @@ public class ListActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9154C02-F847-4563-BB6A-6DD01A4F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,26 +125,32 @@ public class ListActionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActionsResponseBody</p>
+     */
     public static class Actions extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("OOSActionName")
+        @com.aliyun.core.annotation.NameInMap("OOSActionName")
         private String OOSActionName;
 
-        @NameInMap("Popularity")
+        @com.aliyun.core.annotation.NameInMap("Popularity")
         private Integer popularity;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
         private Actions(Builder builder) {
@@ -210,23 +230,29 @@ public class ListActionsResponseBody extends TeaModel {
             private String templateVersion; 
 
             /**
-             * The type of the action.
-             * <p>
+             * <p>The type of the action.</p>
+             * <ol>
+             * <li><p>Atomic actions</p>
+             * <ul>
+             * <li>Atomic.API</li>
+             * <li>Atomic.Trigger</li>
+             * <li>Atomic.Control</li>
+             * <li>Atomic.Embedded</li>
+             * </ul>
+             * </li>
+             * <li><p>Cloud product actions</p>
+             * <ul>
+             * <li>Product.ECS</li>
+             * <li>Product.RDS</li>
+             * <li>Product.VPC</li>
+             * <li>Product.FC</li>
+             * <li>...</li>
+             * </ul>
+             * </li>
+             * </ol>
              * 
-             * 1.  Atomic actions
-             * 
-             *     *   Atomic.API
-             *     *   Atomic.Trigger
-             *     *   Atomic.Control
-             *     *   Atomic.Embedded
-             * 
-             * 2.  Cloud product actions
-             * 
-             *     *   Product.ECS
-             *     *   Product.RDS
-             *     *   Product.VPC
-             *     *   Product.FC
-             *     *   ...
+             * <strong>example:</strong>
+             * <p>ACS::Template</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -234,7 +260,10 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the action was created.
+             * <p>The time when the action was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-16T10:26:14Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -242,7 +271,10 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the action.
+             * <p>The description of the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReplaceSystemDisk</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,7 +282,10 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the action.
+             * <p>The name of the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::ReplaceSystemDisk</p>
              */
             public Builder OOSActionName(String OOSActionName) {
                 this.OOSActionName = OOSActionName;
@@ -258,7 +293,10 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the action is used.
+             * <p>The number of times that the action is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder popularity(Integer popularity) {
                 this.popularity = popularity;
@@ -266,7 +304,10 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the action.
+             * <p>The parameters of the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;ImageId&quot;: { &quot;Description&quot;: &quot;The mirror ID you will use when resetting the system&quot;, &quot;Type&quot;: &quot;String&quot; }, &quot;InstanceId&quot;: { &quot;Description&quot;: &quot;the instance id that you will handle .&quot;, &quot;Type&quot;: &quot;String&quot; } }</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -274,10 +315,13 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the template that corresponds to the action.
-             * <p>
+             * <p>The version of the template that corresponds to the action.</p>
+             * <blockquote>
+             * <p> For atomic actions, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  For atomic actions, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;

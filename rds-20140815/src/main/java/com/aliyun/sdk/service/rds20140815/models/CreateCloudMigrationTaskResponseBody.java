@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudMigrationTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudMigrationTaskResponseBody</p>
  */
 public class CreateCloudMigrationTaskResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private CreateCloudMigrationTaskResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +90,10 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +101,10 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440437220</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -98,7 +112,10 @@ public class CreateCloudMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

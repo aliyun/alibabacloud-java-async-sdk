@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCdnSubTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateCdnSubTaskRequest</p>
  */
 public class UpdateCdnSubTaskRequest extends Request {
-    @Body
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Body
-    @NameInMap("ReportIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReportIds")
     private String reportIds;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private UpdateCdnSubTaskRequest(Builder builder) {
@@ -96,7 +96,10 @@ public class UpdateCdnSubTaskRequest extends Request {
         } 
 
         /**
-         * The domain name that you want to track. You can specify up to 500 domain names in each request. If you specify multiple domain names, separate them with commas (,). If you do not specify a domain name, operations reports are updated for all domain names in your Alibaba Cloud account.
+         * <p>The domain name that you want to track. You can specify up to 500 domain names in each request. If you specify multiple domain names, separate them with commas (,). If you do not specify a domain name, operations reports are updated for all domain names in your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -105,7 +108,10 @@ public class UpdateCdnSubTaskRequest extends Request {
         }
 
         /**
-         * The end time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-17T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -114,7 +120,10 @@ public class UpdateCdnSubTaskRequest extends Request {
         }
 
         /**
-         * The IDs of operations reports that you want to update. Separate IDs with commas (,).
+         * <p>The IDs of operations reports that you want to update. Separate IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder reportIds(String reportIds) {
             this.putBodyParameter("ReportIds", reportIds);
@@ -123,7 +132,10 @@ public class UpdateCdnSubTaskRequest extends Request {
         }
 
         /**
-         * The start time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The start time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-17T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupIdRequest} extends {@link RequestModel}
  *
  * <p>ListGroupIdRequest</p>
  */
 public class ListGroupIdRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private ListGroupIdRequest(Builder builder) {
@@ -49,13 +54,17 @@ public class ListGroupIdRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupIdRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(ListGroupIdRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for MQTT instance whose groups you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-0pp1ldu****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

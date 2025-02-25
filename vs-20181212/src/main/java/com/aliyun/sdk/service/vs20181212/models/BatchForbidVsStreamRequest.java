@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchForbidVsStreamRequest} extends {@link RequestModel}
  *
  * <p>BatchForbidVsStreamRequest</p>
  */
 public class BatchForbidVsStreamRequest extends Request {
-    @Query
-    @NameInMap("Channel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channel;
 
-    @Query
-    @NameInMap("ControlStreamAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlStreamAction")
     private String controlStreamAction;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("LiveStreamType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveStreamType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String liveStreamType;
 
-    @Query
-    @NameInMap("Oneshot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Oneshot")
     private String oneshot;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResumeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResumeTime")
     private String resumeTime;
 
     private BatchForbidVsStreamRequest(Builder builder) {
@@ -129,19 +134,22 @@ public class BatchForbidVsStreamRequest extends Request {
             super();
         } 
 
-        private Builder(BatchForbidVsStreamRequest response) {
-            super(response);
-            this.channel = response.channel;
-            this.controlStreamAction = response.controlStreamAction;
-            this.domainName = response.domainName;
-            this.liveStreamType = response.liveStreamType;
-            this.oneshot = response.oneshot;
-            this.ownerId = response.ownerId;
-            this.resumeTime = response.resumeTime;
+        private Builder(BatchForbidVsStreamRequest request) {
+            super(request);
+            this.channel = request.channel;
+            this.controlStreamAction = request.controlStreamAction;
+            this.domainName = request.domainName;
+            this.liveStreamType = request.liveStreamType;
+            this.oneshot = request.oneshot;
+            this.ownerId = request.ownerId;
+            this.resumeTime = request.resumeTime;
         } 
 
         /**
-         * Channel.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live/stream1,live/stream2</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -159,7 +167,10 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -168,7 +179,10 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * LiveStreamType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>publisher</p>
          */
         public Builder liveStreamType(String liveStreamType) {
             this.putQueryParameter("LiveStreamType", liveStreamType);

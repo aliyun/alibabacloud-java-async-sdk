@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveSnapshotFilesRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveSnapshotFilesRequest</p>
  */
 public class DeleteLiveSnapshotFilesRequest extends Request {
-    @Query
-    @NameInMap("CreateTimestampList")
-    @Validation(required = true)
-    private java.util.List < Long > createTimestampList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimestampList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> createTimestampList;
 
-    @Query
-    @NameInMap("DeleteOriginalFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteOriginalFile")
     private Boolean deleteOriginalFile;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private DeleteLiveSnapshotFilesRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
     /**
      * @return createTimestampList
      */
-    public java.util.List < Long > getCreateTimestampList() {
+    public java.util.List<Long> getCreateTimestampList() {
         return this.createTimestampList;
     }
 
@@ -68,7 +73,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLiveSnapshotFilesRequest, Builder> {
-        private java.util.List < Long > createTimestampList; 
+        private java.util.List<Long> createTimestampList; 
         private Boolean deleteOriginalFile; 
         private String jobId; 
 
@@ -84,9 +89,10 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
         } 
 
         /**
-         * CreateTimestampList.
+         * <p>The list of timestamps when the jobs were created. The values are UNIX timestamps representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A maximum of 200 jobs can be deleted at a time.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder createTimestampList(java.util.List < Long > createTimestampList) {
+        public Builder createTimestampList(java.util.List<Long> createTimestampList) {
             String createTimestampListShrink = shrink(createTimestampList, "CreateTimestampList", "json");
             this.putQueryParameter("CreateTimestampList", createTimestampListShrink);
             this.createTimestampList = createTimestampList;
@@ -94,7 +100,10 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
         }
 
         /**
-         * DeleteOriginalFile.
+         * <p>Specifies whether to delete the original files at the same time. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteOriginalFile(Boolean deleteOriginalFile) {
             this.putQueryParameter("DeleteOriginalFile", deleteOriginalFile);
@@ -103,7 +112,11 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the snapshot job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

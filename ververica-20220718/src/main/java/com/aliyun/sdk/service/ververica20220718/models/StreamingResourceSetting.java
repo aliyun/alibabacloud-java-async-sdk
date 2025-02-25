@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StreamingResourceSetting} extends {@link TeaModel}
  *
  * <p>StreamingResourceSetting</p>
  */
 public class StreamingResourceSetting extends TeaModel {
-    @NameInMap("basicResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("basicResourceSetting")
     private BasicResourceSetting basicResourceSetting;
 
-    @NameInMap("expertResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("expertResourceSetting")
     private ExpertResourceSetting expertResourceSetting;
 
-    @NameInMap("resourceSettingMode")
+    @com.aliyun.core.annotation.NameInMap("resourceSettingMode")
     private String resourceSettingMode;
 
     private StreamingResourceSetting(Builder builder) {

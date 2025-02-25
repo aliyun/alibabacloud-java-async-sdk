@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomMetricListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomMetricListRequest</p>
  */
 public class DescribeCustomMetricListRequest extends Request {
-    @Query
-    @NameInMap("Dimension")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimension")
     private String dimension;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Md5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Md5")
     private String md5;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private DescribeCustomMetricListRequest(Builder builder) {
@@ -124,7 +124,10 @@ public class DescribeCustomMetricListRequest extends Request {
         } 
 
         /**
-         * The dimensions that specify the resources for which you want to query custom metrics.
+         * <p>The dimensions based on which the resources are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{sampleName1=value1&amp;sampleName2=value2}</p>
          */
         public Builder dimension(String dimension) {
             this.putQueryParameter("Dimension", dimension);
@@ -133,10 +136,11 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
-         * <p>
+         * <p>The ID of the application group.</p>
+         * <p>For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
          * 
-         * For more information, see [DescribeMonitorGroups](~~115032~~).
+         * <strong>example:</strong>
+         * <p>7378****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -145,7 +149,10 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported custom metrics.
+         * <p>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97c25982d9745a231276bff27469****</p>
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -154,7 +161,10 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The name of the custom metric.
+         * <p>The name of the custom metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -163,10 +173,11 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,10 +186,11 @@ public class DescribeCustomMetricListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Pages start from page 1. Default value: 10.</p>
          * 
-         * Pages start from page 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

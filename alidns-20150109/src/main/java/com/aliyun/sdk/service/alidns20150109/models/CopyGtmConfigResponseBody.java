@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyGtmConfigResponseBody} extends {@link TeaModel}
  *
  * <p>CopyGtmConfigResponseBody</p>
  */
 public class CopyGtmConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CopyGtmConfigResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class CopyGtmConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSimilarIncidentStatisticsRequest</p>
  */
 public class GetSimilarIncidentStatisticsRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("createTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String createTime;
 
-    @Body
-    @NameInMap("events")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("events")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > events;
 
-    @Body
-    @NameInMap("incidentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long incidentId;
 
-    @Body
-    @NameInMap("incidentTitle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentTitle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String incidentTitle;
 
-    @Body
-    @NameInMap("relatedServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long relatedServiceId;
 
     private GetSimilarIncidentStatisticsRequest(Builder builder) {

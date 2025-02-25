@@ -50,7 +50,7 @@ public class EnableInstanceIpv6AddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The result of the request.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class EnableInstanceIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

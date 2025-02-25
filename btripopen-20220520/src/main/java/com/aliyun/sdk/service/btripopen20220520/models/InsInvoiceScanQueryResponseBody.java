@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
  *
  * <p>InsInvoiceScanQueryResponseBody</p>
  */
 public class InsInvoiceScanQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private InsInvoiceScanQueryResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +146,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210e847f16611516748613869de4f6</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,32 +162,38 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsInvoiceScanQueryResponseBody</p>
+     */
     public static class InvoiceDetails extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("item_name")
+        @com.aliyun.core.annotation.NameInMap("item_name")
         private String itemName;
 
-        @NameInMap("quantity")
+        @com.aliyun.core.annotation.NameInMap("quantity")
         private String quantity;
 
-        @NameInMap("specification")
+        @com.aliyun.core.annotation.NameInMap("specification")
         private String specification;
 
-        @NameInMap("tax")
+        @com.aliyun.core.annotation.NameInMap("tax")
         private String tax;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
-        @NameInMap("unit_price")
+        @com.aliyun.core.annotation.NameInMap("unit_price")
         private String unitPrice;
 
         private InvoiceDetails(Builder builder) {
@@ -274,7 +291,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String unitPrice; 
 
             /**
-             * 金额
+             * <p>金额</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75.21</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -282,7 +302,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 行号
+             * <p>行号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -290,7 +313,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 货物或应税劳务、服务名称
+             * <p>货物或应税劳务、服务名称</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -298,7 +321,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 数量
+             * <p>数量</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quantity(String quantity) {
                 this.quantity = quantity;
@@ -306,7 +332,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 规格型号
+             * <p>规格型号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66PT11230069</p>
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -314,7 +343,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税额
+             * <p>税额</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.79</p>
              */
             public Builder tax(String tax) {
                 this.tax = tax;
@@ -322,7 +354,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -330,7 +365,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 单位
+             * <p>单位</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -338,7 +373,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 单价
+             * <p>单价</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75.21</p>
              */
             public Builder unitPrice(String unitPrice) {
                 this.unitPrice = unitPrice;
@@ -352,125 +390,144 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsInvoiceScanQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("amount_with_tax")
+        @com.aliyun.core.annotation.NameInMap("amount_with_tax")
         private String amountWithTax;
 
-        @NameInMap("amount_without_tax")
+        @com.aliyun.core.annotation.NameInMap("amount_without_tax")
         private String amountWithoutTax;
 
-        @NameInMap("bill_date")
+        @com.aliyun.core.annotation.NameInMap("bill_date")
         private String billDate;
 
-        @NameInMap("check_code")
+        @com.aliyun.core.annotation.NameInMap("category")
+        private Integer category;
+
+        @com.aliyun.core.annotation.NameInMap("check_code")
         private String checkCode;
 
-        @NameInMap("cost_center")
+        @com.aliyun.core.annotation.NameInMap("cost_center")
         private String costCenter;
 
-        @NameInMap("department")
+        @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
-        @NameInMap("drawer")
+        @com.aliyun.core.annotation.NameInMap("drawer")
         private String drawer;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("insurance_company")
+        @com.aliyun.core.annotation.NameInMap("insurance_company")
         private String insuranceCompany;
 
-        @NameInMap("insurance_order_id")
+        @com.aliyun.core.annotation.NameInMap("insurance_order_id")
         private String insuranceOrderId;
 
-        @NameInMap("insurance_type")
+        @com.aliyun.core.annotation.NameInMap("insurance_type")
         private String insuranceType;
 
-        @NameInMap("invoice_code")
+        @com.aliyun.core.annotation.NameInMap("invoice_code")
         private String invoiceCode;
 
-        @NameInMap("invoice_day")
+        @com.aliyun.core.annotation.NameInMap("invoice_day")
         private String invoiceDay;
 
-        @NameInMap("invoice_details")
-        private java.util.List < InvoiceDetails> invoiceDetails;
+        @com.aliyun.core.annotation.NameInMap("invoice_details")
+        private java.util.List<InvoiceDetails> invoiceDetails;
 
-        @NameInMap("invoice_location")
+        @com.aliyun.core.annotation.NameInMap("invoice_location")
         private String invoiceLocation;
 
-        @NameInMap("invoice_no")
+        @com.aliyun.core.annotation.NameInMap("invoice_no")
         private String invoiceNo;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("machine_code")
+        @com.aliyun.core.annotation.NameInMap("invoice_type")
+        private Integer invoiceType;
+
+        @com.aliyun.core.annotation.NameInMap("machine_code")
         private String machineCode;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("ofd_oss_url")
+        private String ofdOssUrl;
+
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
-        @NameInMap("oss_url")
+        @com.aliyun.core.annotation.NameInMap("oss_url")
         private String ossUrl;
 
-        @NameInMap("passenger")
+        @com.aliyun.core.annotation.NameInMap("passenger")
         private String passenger;
 
-        @NameInMap("password_area")
+        @com.aliyun.core.annotation.NameInMap("password_area")
         private String passwordArea;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("purchaser_bank_account_info")
+        @com.aliyun.core.annotation.NameInMap("purchaser_bank_account_info")
         private String purchaserBankAccountInfo;
 
-        @NameInMap("purchaser_contact_info")
+        @com.aliyun.core.annotation.NameInMap("purchaser_contact_info")
         private String purchaserContactInfo;
 
-        @NameInMap("purchaser_name")
+        @com.aliyun.core.annotation.NameInMap("purchaser_name")
         private String purchaserName;
 
-        @NameInMap("purchaser_tax_no")
+        @com.aliyun.core.annotation.NameInMap("purchaser_tax_no")
         private String purchaserTaxNo;
 
-        @NameInMap("recipient")
+        @com.aliyun.core.annotation.NameInMap("recipient")
         private String recipient;
 
-        @NameInMap("remarks")
+        @com.aliyun.core.annotation.NameInMap("remarks")
         private String remarks;
 
-        @NameInMap("reviewer")
+        @com.aliyun.core.annotation.NameInMap("reviewer")
         private String reviewer;
 
-        @NameInMap("seller_bank_account_info")
+        @com.aliyun.core.annotation.NameInMap("seller_bank_account_info")
         private String sellerBankAccountInfo;
 
-        @NameInMap("seller_contact_info")
+        @com.aliyun.core.annotation.NameInMap("seller_contact_info")
         private String sellerContactInfo;
 
-        @NameInMap("seller_name")
+        @com.aliyun.core.annotation.NameInMap("seller_name")
         private String sellerName;
 
-        @NameInMap("seller_tax_no")
+        @com.aliyun.core.annotation.NameInMap("seller_tax_no")
         private String sellerTaxNo;
 
-        @NameInMap("smart_check_code")
+        @com.aliyun.core.annotation.NameInMap("smart_check_code")
         private String smartCheckCode;
 
-        @NameInMap("tax_amount")
+        @com.aliyun.core.annotation.NameInMap("tax_amount")
         private String taxAmount;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("total_amount_in_words")
+        @com.aliyun.core.annotation.NameInMap("total_amount_in_words")
         private String totalAmountInWords;
+
+        @com.aliyun.core.annotation.NameInMap("xml_oss_url")
+        private String xmlOssUrl;
 
         private Items(Builder builder) {
             this.amountWithTax = builder.amountWithTax;
             this.amountWithoutTax = builder.amountWithoutTax;
             this.billDate = builder.billDate;
+            this.category = builder.category;
             this.checkCode = builder.checkCode;
             this.costCenter = builder.costCenter;
             this.department = builder.department;
@@ -485,7 +542,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             this.invoiceLocation = builder.invoiceLocation;
             this.invoiceNo = builder.invoiceNo;
             this.invoiceTitle = builder.invoiceTitle;
+            this.invoiceType = builder.invoiceType;
             this.machineCode = builder.machineCode;
+            this.ofdOssUrl = builder.ofdOssUrl;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passenger = builder.passenger;
@@ -506,6 +565,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
             this.totalAmountInWords = builder.totalAmountInWords;
+            this.xmlOssUrl = builder.xmlOssUrl;
         }
 
         public static Builder builder() {
@@ -535,6 +595,13 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getBillDate() {
             return this.billDate;
+        }
+
+        /**
+         * @return category
+         */
+        public Integer getCategory() {
+            return this.category;
         }
 
         /**
@@ -610,7 +677,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         /**
          * @return invoiceDetails
          */
-        public java.util.List < InvoiceDetails> getInvoiceDetails() {
+        public java.util.List<InvoiceDetails> getInvoiceDetails() {
             return this.invoiceDetails;
         }
 
@@ -636,10 +703,24 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return invoiceType
+         */
+        public Integer getInvoiceType() {
+            return this.invoiceType;
+        }
+
+        /**
          * @return machineCode
          */
         public String getMachineCode() {
             return this.machineCode;
+        }
+
+        /**
+         * @return ofdOssUrl
+         */
+        public String getOfdOssUrl() {
+            return this.ofdOssUrl;
         }
 
         /**
@@ -782,10 +863,18 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.totalAmountInWords;
         }
 
+        /**
+         * @return xmlOssUrl
+         */
+        public String getXmlOssUrl() {
+            return this.xmlOssUrl;
+        }
+
         public static final class Builder {
             private String amountWithTax; 
             private String amountWithoutTax; 
             private String billDate; 
+            private Integer category; 
             private String checkCode; 
             private String costCenter; 
             private String department; 
@@ -796,11 +885,13 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String insuranceType; 
             private String invoiceCode; 
             private String invoiceDay; 
-            private java.util.List < InvoiceDetails> invoiceDetails; 
+            private java.util.List<InvoiceDetails> invoiceDetails; 
             private String invoiceLocation; 
             private String invoiceNo; 
             private String invoiceTitle; 
+            private Integer invoiceType; 
             private String machineCode; 
+            private String ofdOssUrl; 
             private Long orderId; 
             private String ossUrl; 
             private String passenger; 
@@ -821,6 +912,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String taxAmount; 
             private String taxRate; 
             private String totalAmountInWords; 
+            private String xmlOssUrl; 
 
             /**
              * amount_with_tax.
@@ -847,7 +939,18 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 校验码
+             * category.
+             */
+            public Builder category(Integer category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>校验码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07122942791187744475</p>
              */
             public Builder checkCode(String checkCode) {
                 this.checkCode = checkCode;
@@ -871,7 +974,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 开票人
+             * <p>开票人</p>
              */
             public Builder drawer(String drawer) {
                 this.drawer = drawer;
@@ -879,7 +982,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 应用ID
+             * <p>应用ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>566</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -927,15 +1033,15 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票明细
+             * <p>发票明细</p>
              */
-            public Builder invoiceDetails(java.util.List < InvoiceDetails> invoiceDetails) {
+            public Builder invoiceDetails(java.util.List<InvoiceDetails> invoiceDetails) {
                 this.invoiceDetails = invoiceDetails;
                 return this;
             }
 
             /**
-             * 发票地区
+             * <p>发票地区</p>
              */
             public Builder invoiceLocation(String invoiceLocation) {
                 this.invoiceLocation = invoiceLocation;
@@ -951,7 +1057,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 发票抬头
+             * <p>发票抬头</p>
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -959,10 +1065,29 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 机器码
+             * invoice_type.
+             */
+            public Builder invoiceType(Integer invoiceType) {
+                this.invoiceType = invoiceType;
+                return this;
+            }
+
+            /**
+             * <p>机器码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>661619906841</p>
              */
             public Builder machineCode(String machineCode) {
                 this.machineCode = machineCode;
+                return this;
+            }
+
+            /**
+             * ofd_oss_url.
+             */
+            public Builder ofdOssUrl(String ofdOssUrl) {
+                this.ofdOssUrl = ofdOssUrl;
                 return this;
             }
 
@@ -991,7 +1116,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 密码区
+             * <p>密码区</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;87*&gt;&gt;53&gt;5023&gt;-446&gt;/4+83/5* *&gt;5/81&lt;75/1931&gt;4&gt;&gt;</p>
              */
             public Builder passwordArea(String passwordArea) {
                 this.passwordArea = passwordArea;
@@ -1007,7 +1135,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方银行信息
+             * <p>购方银行信息</p>
              */
             public Builder purchaserBankAccountInfo(String purchaserBankAccountInfo) {
                 this.purchaserBankAccountInfo = purchaserBankAccountInfo;
@@ -1015,7 +1143,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 购方联系方式
+             * <p>购方联系方式</p>
              */
             public Builder purchaserContactInfo(String purchaserContactInfo) {
                 this.purchaserContactInfo = purchaserContactInfo;
@@ -1039,7 +1167,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 收款人
+             * <p>收款人</p>
              */
             public Builder recipient(String recipient) {
                 this.recipient = recipient;
@@ -1047,7 +1175,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * <p>备注</p>
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -1055,7 +1183,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 复核人
+             * <p>复核人</p>
              */
             public Builder reviewer(String reviewer) {
                 this.reviewer = reviewer;
@@ -1063,7 +1191,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销售方银行信息
+             * <p>销售方银行信息</p>
              */
             public Builder sellerBankAccountInfo(String sellerBankAccountInfo) {
                 this.sellerBankAccountInfo = sellerBankAccountInfo;
@@ -1071,7 +1199,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 销售方联系方式
+             * <p>销售方联系方式</p>
              */
             public Builder sellerContactInfo(String sellerContactInfo) {
                 this.sellerContactInfo = sellerContactInfo;
@@ -1095,7 +1223,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 校验码
+             * <p>校验码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4475</p>
              */
             public Builder smartCheckCode(String smartCheckCode) {
                 this.smartCheckCode = smartCheckCode;
@@ -1111,7 +1242,10 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -1119,10 +1253,18 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 大写金额
+             * <p>大写金额</p>
              */
             public Builder totalAmountInWords(String totalAmountInWords) {
                 this.totalAmountInWords = totalAmountInWords;
+                return this;
+            }
+
+            /**
+             * xml_oss_url.
+             */
+            public Builder xmlOssUrl(String xmlOssUrl) {
+                this.xmlOssUrl = xmlOssUrl;
                 return this;
             }
 
@@ -1133,20 +1275,26 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsInvoiceScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsInvoiceScanQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<Items> items;
 
-        @NameInMap("page_no")
+        @com.aliyun.core.annotation.NameInMap("page_no")
         private Integer pageNo;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_page")
+        @com.aliyun.core.annotation.NameInMap("total_page")
         private Integer totalPage;
 
-        @NameInMap("total_size")
+        @com.aliyun.core.annotation.NameInMap("total_size")
         private Integer totalSize;
 
         private Module(Builder builder) {
@@ -1168,7 +1316,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1201,7 +1349,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer totalPage; 
@@ -1210,7 +1358,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

@@ -1,76 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserDomainsRequest</p>
  */
 public class DescribeUserDomainsRequest extends Request {
-    @Query
-    @NameInMap("CdnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdnType")
     private String cdnType;
 
-    @Query
-    @NameInMap("ChangeEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeEndTime")
     private String changeEndTime;
 
-    @Query
-    @NameInMap("ChangeStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeStartTime")
     private String changeStartTime;
 
-    @Query
-    @NameInMap("CheckDomainShow")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckDomainShow")
     private Boolean checkDomainShow;
 
-    @Query
-    @NameInMap("Coverage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Coverage")
     private String coverage;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(maxLength = 6800)
     private String domainName;
 
-    @Query
-    @NameInMap("DomainSearchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainSearchType")
     private String domainSearchType;
 
-    @Query
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private String domainStatus;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeUserDomainsRequest(Builder builder) {
@@ -251,14 +252,16 @@ public class DescribeUserDomainsRequest extends Request {
         } 
 
         /**
-         * The type of workload accelerated by Alibaba Cloud CDN. Separate types with commas (,). Valid values:
-         * <p>
+         * <p>The type of workload accelerated by Alibaba Cloud CDN. Separate types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>web</strong>: images and small files</li>
+         * <li><strong>download</strong>: large files</li>
+         * <li><strong>video</strong>: on-demand video and audio streaming</li>
+         * </ul>
+         * <p>If you do not set this parameter, all service types are queried.</p>
          * 
-         * *   **web**: images and small files
-         * *   **download**: large files
-         * *   **video**: on-demand video and audio streaming
-         * 
-         * If you do not set this parameter, all service types are queried.
+         * <strong>example:</strong>
+         * <p>download,web,video</p>
          */
         public Builder cdnType(String cdnType) {
             this.putQueryParameter("CdnType", cdnType);
@@ -267,10 +270,13 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2019-10-10T12:14:58Z</p>
          */
         public Builder changeEndTime(String changeEndTime) {
             this.putQueryParameter("ChangeEndTime", changeEndTime);
@@ -279,7 +285,10 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-10T12:14:55Z</p>
          */
         public Builder changeStartTime(String changeStartTime) {
             this.putQueryParameter("ChangeStartTime", changeStartTime);
@@ -288,11 +297,14 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:
-         * <p>
+         * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkDomainShow(Boolean checkDomainShow) {
             this.putQueryParameter("CheckDomainShow", checkDomainShow);
@@ -301,12 +313,15 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The acceleration region. By default, all acceleration regions are queried. Valid values:
-         * <p>
+         * <p>The acceleration region. By default, all acceleration regions are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>global</strong>: global</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * </ul>
          * 
-         * *   **domestic**: Chinese mainland
-         * *   **global**: global
-         * *   **overseas**: outside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -315,7 +330,10 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The accelerated domain. If you do not set this parameter, all domain names that match the conditions are returned.
+         * <p>The accelerated domain. If you do not set this parameter, all domain names that match the conditions are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -324,15 +342,19 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The search mode. Valid values:
-         * <p>
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy_match</strong>: fuzzy match</li>
+         * <li><strong>pre_match</strong>: prefix match</li>
+         * <li><strong>suf_match</strong>: suffix match</li>
+         * <li><strong>full_match</strong> (default): exact match</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
+         * </blockquote>
          * 
-         * *   **fuzzy_match**: fuzzy match
-         * *   **pre_match**: prefix match
-         * *   **suf_match**: suffix match
-         * *   **full_match** (default): exact match
-         * 
-         * > If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.
+         * <strong>example:</strong>
+         * <p>fuzzy_match</p>
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -341,19 +363,21 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The status of the domain name. Valid values:
-         * <p>
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * <li><strong>configuring</strong></li>
+         * <li><strong>configure_failed</strong></li>
+         * <li><strong>checking</strong></li>
+         * <li><strong>check_failed</strong></li>
+         * <li><strong>stopping</strong></li>
+         * <li><strong>deleting</strong></li>
+         * </ul>
+         * <p>If you do not set this parameter, domain names in all states are queried.</p>
          * 
-         * *   **online**
-         * *   **offline**
-         * *   **configuring**
-         * *   **configure_failed**
-         * *   **checking**
-         * *   **check_failed**
-         * *   **stopping**
-         * *   **deleting**
-         * 
-         * If you do not set this parameter, domain names in all states are queried.
+         * <strong>example:</strong>
+         * <p>configure_failed</p>
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -371,7 +395,10 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**.
+         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -380,7 +407,10 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 50**. Default value: **20**. Maximum value: **50**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>. Maximum value: <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -389,7 +419,10 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. By default, all IDs are queried.
+         * <p>The ID of the resource group. By default, all IDs are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd1234abcd1234</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -407,7 +440,10 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The information about the origin server.
+         * <p>The information about the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.source.com</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -416,7 +452,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The list of tags. Maximum number of elements in the list: 20
+         * <p>The list of tags. Maximum number of elements in the list: 20</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -431,11 +467,17 @@ public class DescribeUserDomainsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserDomainsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeUserDomainsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -470,10 +512,11 @@ public class DescribeUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag.
-             * <p>
+             * <p>The key of a tag.</p>
+             * <p>By default, all tag keys are queried.</p>
              * 
-             * By default, all tag keys are queried.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -481,10 +524,11 @@ public class DescribeUserDomainsRequest extends Request {
             }
 
             /**
-             * The value of the tag.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>By default, all tag values are queried.</p>
              * 
-             * By default, all tag values are queried.
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

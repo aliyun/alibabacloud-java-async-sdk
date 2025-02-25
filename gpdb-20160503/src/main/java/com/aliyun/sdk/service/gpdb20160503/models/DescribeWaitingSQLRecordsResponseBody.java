@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWaitingSQLRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWaitingSQLRecordsResponseBody</p>
  */
 public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWaitingSQLRecordsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,21 +73,24 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The list of lock diagnostics records.
+         * <p>The list of lock diagnostics records.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -111,29 +125,35 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWaitingSQLRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWaitingSQLRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("PID")
+        @com.aliyun.core.annotation.NameInMap("PID")
         private String PID;
 
-        @NameInMap("SQLStmt")
+        @com.aliyun.core.annotation.NameInMap("SQLStmt")
         private String SQLStmt;
 
-        @NameInMap("SessionID")
+        @com.aliyun.core.annotation.NameInMap("SessionID")
         private String sessionID;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
-        @NameInMap("WaitingTime")
+        @com.aliyun.core.annotation.NameInMap("WaitingTime")
         private Long waitingTime;
 
         private Items(Builder builder) {
@@ -222,7 +242,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             private Long waitingTime; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -230,7 +253,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process that uniquely identifies the query.
+             * <p>The ID of the process that uniquely identifies the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder PID(String PID) {
                 this.PID = PID;
@@ -238,7 +264,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement of the query.
+             * <p>The SQL statement of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Select * from t1,t2 where t1.id=t2.id;</p>
              */
             public Builder SQLStmt(String SQLStmt) {
                 this.SQLStmt = SQLStmt;
@@ -246,7 +275,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session that contains the query.
+             * <p>The ID of the session that contains the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder sessionID(String sessionID) {
                 this.sessionID = sessionID;
@@ -254,7 +286,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the query. This value is in the timestamp format. Unit: milliseconds.
+             * <p>The start time of the query. This value is in the timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660902033374</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -262,11 +297,14 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The waiting state of the query. Valid values:
-             * <p>
+             * <p>The waiting state of the query. Valid values:</p>
+             * <ul>
+             * <li><strong>LockWaiting</strong></li>
+             * <li><strong>ResourceWaiting</strong></li>
+             * </ul>
              * 
-             * *   **LockWaiting**
-             * *   **ResourceWaiting**
+             * <strong>example:</strong>
+             * <p>LockWaiting</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -274,7 +312,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account that is used to perform the query.
+             * <p>The database account that is used to perform the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -282,7 +323,10 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The waiting period of the query. Unit: milliseconds.
+             * <p>The waiting period of the query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26911000</p>
              */
             public Builder waitingTime(Long waitingTime) {
                 this.waitingTime = waitingTime;

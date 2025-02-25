@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AccosicateNetworkAcl  AccosicateNetworkAclRequest
+     * @return AccosicateNetworkAclResponse
+     */
     @Override
     public CompletableFuture<AccosicateNetworkAclResponse> accosicateNetworkAcl(AccosicateNetworkAclRequest request) {
         try {
@@ -53,6 +57,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddBackendServers  AddBackendServersRequest
+     * @return AddBackendServersResponse
+     */
     @Override
     public CompletableFuture<AddBackendServersResponse> addBackendServers(AddBackendServersRequest request) {
         try {
@@ -67,6 +81,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddDeviceInternetPort  AddDeviceInternetPortRequest
+     * @return AddDeviceInternetPortResponse
+     */
     @Override
     public CompletableFuture<AddDeviceInternetPortResponse> addDeviceInternetPort(AddDeviceInternetPortRequest request) {
         try {
@@ -81,6 +99,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h1><a href="#"></a>Usage notes</h1>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second.</li>
+     * <li>You can call this operation up to 5 times per second per user.</li>
+     * <li>Internal networks and IPv4 addresses are not supported.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddNetworkInterfaceToInstance  AddNetworkInterfaceToInstanceRequest
+     * @return AddNetworkInterfaceToInstanceResponse
+     */
     @Override
     public CompletableFuture<AddNetworkInterfaceToInstanceResponse> addNetworkInterfaceToInstance(AddNetworkInterfaceToInstanceRequest request) {
         try {
@@ -95,6 +125,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddSnatIpForSnatEntry  AddSnatIpForSnatEntryRequest
+     * @return AddSnatIpForSnatEntryResponse
+     */
     @Override
     public CompletableFuture<AddSnatIpForSnatEntryResponse> addSnatIpForSnatEntry(AddSnatIpForSnatEntryRequest request) {
         try {
@@ -109,6 +143,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssignPrivateIpAddresses  AssignPrivateIpAddressesRequest
+     * @return AssignPrivateIpAddressesResponse
+     */
     @Override
     public CompletableFuture<AssignPrivateIpAddressesResponse> assignPrivateIpAddresses(AssignPrivateIpAddressesRequest request) {
         try {
@@ -123,6 +161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateEnsEipAddress  AssociateEnsEipAddressRequest
+     * @return AssociateEnsEipAddressResponse
+     */
     @Override
     public CompletableFuture<AssociateEnsEipAddressResponse> associateEnsEipAddress(AssociateEnsEipAddressRequest request) {
         try {
@@ -137,6 +179,42 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>When you call this operation to associate an HAVIP, take note of the following items:</p>
+     * <ul>
+     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
+     * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
+     * <li>The ENS instance must be in the Running or Stopped state.</li>
+     * <li>The HAVIP must be in the Available or InUse state.</li>
+     * <li>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<ul>
+     * <li>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></li>
+     * <li>If the HAVIP is in the InUse state, the HAVIP is associated.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateHaVip  AssociateHaVipRequest
+     * @return AssociateHaVipResponse
+     */
+    @Override
+    public CompletableFuture<AssociateHaVipResponse> associateHaVip(AssociateHaVipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AssociateHaVip").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AssociateHaVipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AssociateHaVipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AttachDisk  AttachDiskRequest
+     * @return AttachDiskResponse
+     */
     @Override
     public CompletableFuture<AttachDiskResponse> attachDisk(AttachDiskRequest request) {
         try {
@@ -151,6 +229,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h1><a href="#"></a>Usage notes</h1>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>After you execute the command, the instance restarts loading.</li>
+     * <li>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachEnsInstances  AttachEnsInstancesRequest
+     * @return AttachEnsInstancesResponse
+     */
     @Override
     public CompletableFuture<AttachEnsInstancesResponse> attachEnsInstances(AttachEnsInstancesRequest request) {
         try {
@@ -165,6 +255,56 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachInstanceSDG  AttachInstanceSDGRequest
+     * @return AttachInstanceSDGResponse
+     */
+    @Override
+    public CompletableFuture<AttachInstanceSDGResponse> attachInstanceSDG(AttachInstanceSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachInstanceSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachInstanceSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachInstanceSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following limits:</p>
+     * <ul>
+     * <li>The ENI must be in the Available state.</li>
+     * <li>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</li>
+     * <li>The instance must be in the Stopped state.</li>
+     * <li>A maximum of 10 ENIs can be attached to an instance.</li>
+     * <li>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachNetworkInterface  AttachNetworkInterfaceRequest
+     * @return AttachNetworkInterfaceResponse
+     */
+    @Override
+    public CompletableFuture<AttachNetworkInterfaceResponse> attachNetworkInterface(AttachNetworkInterfaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachNetworkInterface").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachNetworkInterfaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachNetworkInterfaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AuthorizeSecurityGroup  AuthorizeSecurityGroupRequest
+     * @return AuthorizeSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<AuthorizeSecurityGroupResponse> authorizeSecurityGroup(AuthorizeSecurityGroupRequest request) {
         try {
@@ -179,6 +319,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.</p>
+     * 
+     * @param request the request parameters of AuthorizeSecurityGroupEgress  AuthorizeSecurityGroupEgressRequest
+     * @return AuthorizeSecurityGroupEgressResponse
+     */
     @Override
     public CompletableFuture<AuthorizeSecurityGroupEgressResponse> authorizeSecurityGroupEgress(AuthorizeSecurityGroupEgressRequest request) {
         try {
@@ -193,6 +340,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CleanDistData  CleanDistDataRequest
+     * @return CleanDistDataResponse
+     */
     @Override
     public CompletableFuture<CleanDistDataResponse> cleanDistData(CleanDistDataRequest request) {
         try {
@@ -207,6 +358,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopySDG  CopySDGRequest
+     * @return CopySDGResponse
+     */
+    @Override
+    public CompletableFuture<CopySDGResponse> copySDG(CopySDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CopySDG").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CopySDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CopySDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CopySnapshot  CopySnapshotRequest
+     * @return CopySnapshotResponse
+     */
+    @Override
+    public CompletableFuture<CopySnapshotResponse> copySnapshot(CopySnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CopySnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CopySnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CopySnapshotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateARMServerInstances  CreateARMServerInstancesRequest
+     * @return CreateARMServerInstancesResponse
+     */
     @Override
     public CompletableFuture<CreateARMServerInstancesResponse> createARMServerInstances(CreateARMServerInstancesRequest request) {
         try {
@@ -221,6 +412,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApplication  CreateApplicationRequest
+     * @return CreateApplicationResponse
+     */
     @Override
     public CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request) {
         try {
@@ -235,6 +430,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateClassicNetwork  CreateClassicNetworkRequest
+     * @return CreateClassicNetworkResponse
+     */
     @Override
     public CompletableFuture<CreateClassicNetworkResponse> createClassicNetwork(CreateClassicNetworkRequest request) {
         try {
@@ -249,6 +448,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateCluster  CreateClusterRequest
+     * @return CreateClusterResponse
+     */
+    @Override
+    public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateDisk  CreateDiskRequest
+     * @return CreateDiskResponse
+     */
     @Override
     public CompletableFuture<CreateDiskResponse> createDisk(CreateDiskRequest request) {
         try {
@@ -263,6 +490,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 5,000 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 50 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateEipInstance  CreateEipInstanceRequest
+     * @return CreateEipInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateEipInstanceResponse> createEipInstance(CreateEipInstanceRequest request) {
         try {
@@ -277,6 +514,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEnsRouteEntry  CreateEnsRouteEntryRequest
+     * @return CreateEnsRouteEntryResponse
+     */
     @Override
     public CompletableFuture<CreateEnsRouteEntryResponse> createEnsRouteEntry(CreateEnsRouteEntryRequest request) {
         try {
@@ -291,6 +532,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEnsSaleControl  CreateEnsSaleControlRequest
+     * @return CreateEnsSaleControlResponse
+     */
     @Override
     public CompletableFuture<CreateEnsSaleControlResponse> createEnsSaleControl(CreateEnsSaleControlRequest request) {
         try {
@@ -305,6 +550,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEnsService  CreateEnsServiceRequest
+     * @return CreateEnsServiceResponse
+     */
     @Override
     public CompletableFuture<CreateEnsServiceResponse> createEnsService(CreateEnsServiceRequest request) {
         try {
@@ -319,6 +568,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateEpnInstance  CreateEpnInstanceRequest
+     * @return CreateEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateEpnInstanceResponse> createEpnInstance(CreateEpnInstanceRequest request) {
         try {
@@ -333,6 +586,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFileSystem  CreateFileSystemRequest
+     * @return CreateFileSystemResponse
+     */
     @Override
     public CompletableFuture<CreateFileSystemResponse> createFileSystem(CreateFileSystemRequest request) {
         try {
@@ -347,6 +604,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateForwardEntry  CreateForwardEntryRequest
+     * @return CreateForwardEntryResponse
+     */
     @Override
     public CompletableFuture<CreateForwardEntryResponse> createForwardEntry(CreateForwardEntryRequest request) {
         try {
@@ -361,6 +622,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHaVip  CreateHaVipRequest
+     * @return CreateHaVipResponse
+     */
+    @Override
+    public CompletableFuture<CreateHaVipResponse> createHaVip(CreateHaVipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateHaVip").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateHaVipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateHaVipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateImage  CreateImageRequest
+     * @return CreateImageResponse
+     */
     @Override
     public CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request) {
         try {
@@ -375,6 +658,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</li>
+     * <li>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -389,6 +683,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstanceActiveOpsTask  CreateInstanceActiveOpsTaskRequest
+     * @return CreateInstanceActiveOpsTaskResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceActiveOpsTaskResponse> createInstanceActiveOpsTask(CreateInstanceActiveOpsTaskRequest request) {
         try {
@@ -403,6 +701,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>An SSH key pair consists of a public key and a private key. ENS stores the public key and returns the unencrypted private key that is PEM-encoded in the PKCS#8 format. You must securely lock away the private key.</p>
+     * 
+     * @param request the request parameters of CreateKeyPair  CreateKeyPairRequest
+     * @return CreateKeyPairResponse
+     */
     @Override
     public CompletableFuture<CreateKeyPairResponse> createKeyPair(CreateKeyPairRequest request) {
         try {
@@ -417,6 +722,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 5 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateLoadBalancer  CreateLoadBalancerRequest
+     * @return CreateLoadBalancerResponse
+     */
     @Override
     public CompletableFuture<CreateLoadBalancerResponse> createLoadBalancer(CreateLoadBalancerRequest request) {
         try {
@@ -431,6 +746,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateLoadBalancerHTTPListener  CreateLoadBalancerHTTPListenerRequest
+     * @return CreateLoadBalancerHTTPListenerResponse
+     */
     @Override
     public CompletableFuture<CreateLoadBalancerHTTPListenerResponse> createLoadBalancerHTTPListener(CreateLoadBalancerHTTPListenerRequest request) {
         try {
@@ -445,6 +770,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateLoadBalancerHTTPSListener  CreateLoadBalancerHTTPSListenerRequest
+     * @return CreateLoadBalancerHTTPSListenerResponse
+     */
     @Override
     public CompletableFuture<CreateLoadBalancerHTTPSListenerResponse> createLoadBalancerHTTPSListener(CreateLoadBalancerHTTPSListenerRequest request) {
         try {
@@ -459,6 +794,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateLoadBalancerTCPListener  CreateLoadBalancerTCPListenerRequest
+     * @return CreateLoadBalancerTCPListenerResponse
+     */
     @Override
     public CompletableFuture<CreateLoadBalancerTCPListenerResponse> createLoadBalancerTCPListener(CreateLoadBalancerTCPListenerRequest request) {
         try {
@@ -473,6 +818,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateLoadBalancerUDPListener  CreateLoadBalancerUDPListenerRequest
+     * @return CreateLoadBalancerUDPListenerResponse
+     */
     @Override
     public CompletableFuture<CreateLoadBalancerUDPListenerResponse> createLoadBalancerUDPListener(CreateLoadBalancerUDPListenerRequest request) {
         try {
@@ -487,6 +842,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Precautions</h2>
+     * <p>After you call this operation, a mount target is not immediately created. Therefore, we recommend that you call the DescribeMountTargets operation to query the status of the mount target. If the mount target is in the Active state, you can then mount the file system. Otherwise, the file system may fail to be mounted.</p>
+     * 
+     * @param request the request parameters of CreateMountTarget  CreateMountTargetRequest
+     * @return CreateMountTargetResponse
+     */
     @Override
     public CompletableFuture<CreateMountTargetResponse> createMountTarget(CreateMountTargetRequest request) {
         try {
@@ -501,6 +864,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNatGateway  CreateNatGatewayRequest
+     * @return CreateNatGatewayResponse
+     */
     @Override
     public CompletableFuture<CreateNatGatewayResponse> createNatGateway(CreateNatGatewayRequest request) {
         try {
@@ -515,6 +882,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 5 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateNetwork  CreateNetworkRequest
+     * @return CreateNetworkResponse
+     */
     @Override
     public CompletableFuture<CreateNetworkResponse> createNetwork(CreateNetworkRequest request) {
         try {
@@ -529,6 +906,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNetworkAcl  CreateNetworkAclRequest
+     * @return CreateNetworkAclResponse
+     */
     @Override
     public CompletableFuture<CreateNetworkAclResponse> createNetworkAcl(CreateNetworkAclRequest request) {
         try {
@@ -543,6 +924,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNetworkAclEntry  CreateNetworkAclEntryRequest
+     * @return CreateNetworkAclEntryResponse
+     */
     @Override
     public CompletableFuture<CreateNetworkAclEntryResponse> createNetworkAclEntry(CreateNetworkAclEntryRequest request) {
         try {
@@ -557,6 +942,55 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNetworkInterface  CreateNetworkInterfaceRequest
+     * @return CreateNetworkInterfaceResponse
+     */
+    @Override
+    public CompletableFuture<CreateNetworkInterfaceResponse> createNetworkInterface(CreateNetworkInterfaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateNetworkInterface").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateNetworkInterfaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateNetworkInterfaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</p>
+     * <ul>
+     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</li>
+     * <li>Install applications on and deliver files to AIC Instance A (InstanceId).</li>
+     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</li>
+     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateSDG  CreateSDGRequest
+     * @return CreateSDGResponse
+     */
+    @Override
+    public CompletableFuture<CreateSDGResponse> createSDG(CreateSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSDG").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSecurityGroup  CreateSecurityGroupRequest
+     * @return CreateSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<CreateSecurityGroupResponse> createSecurityGroup(CreateSecurityGroupRequest request) {
         try {
@@ -571,6 +1005,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSnapshotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSnatEntry  CreateSnatEntryRequest
+     * @return CreateSnatEntryResponse
+     */
     @Override
     public CompletableFuture<CreateSnatEntryResponse> createSnatEntry(CreateSnatEntryRequest request) {
         try {
@@ -585,6 +1041,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateStorageGateway  CreateStorageGatewayRequest
+     * @return CreateStorageGatewayResponse
+     */
+    @Override
+    public CompletableFuture<CreateStorageGatewayResponse> createStorageGateway(CreateStorageGatewayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateStorageGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateStorageGatewayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateStorageGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateStorageVolume  CreateStorageVolumeRequest
+     * @return CreateStorageVolumeResponse
+     */
+    @Override
+    public CompletableFuture<CreateStorageVolumeResponse> createStorageVolume(CreateStorageVolumeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateStorageVolume").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateStorageVolumeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateStorageVolumeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateVSwitch  CreateVSwitchRequest
+     * @return CreateVSwitchResponse
+     */
     @Override
     public CompletableFuture<CreateVSwitchResponse> createVSwitch(CreateVSwitchRequest request) {
         try {
@@ -599,6 +1095,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     */
     @Override
     public CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request) {
         try {
@@ -613,6 +1113,52 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</p>
+     * <ul>
+     * <li>You cannot delete buckets that store objects. You can only delete empty buckets.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteBucket  DeleteBucketRequest
+     * @return DeleteBucketResponse
+     */
+    @Override
+    public CompletableFuture<DeleteBucketResponse> deleteBucket(DeleteBucketRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteBucket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteBucketResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteBucketResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteBucketLifecycle  DeleteBucketLifecycleRequest
+     * @return DeleteBucketLifecycleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteBucketLifecycleResponse> deleteBucketLifecycle(DeleteBucketLifecycleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteBucketLifecycle").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteBucketLifecycleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteBucketLifecycleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDeviceInternetPort  DeleteDeviceInternetPortRequest
+     * @return DeleteDeviceInternetPortResponse
+     */
     @Override
     public CompletableFuture<DeleteDeviceInternetPortResponse> deleteDeviceInternetPort(DeleteDeviceInternetPortRequest request) {
         try {
@@ -627,6 +1173,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>When you release a disk, the disk must be in the Available state.</p>
+     * 
+     * @param request the request parameters of DeleteDisk  DeleteDiskRequest
+     * @return DeleteDiskResponse
+     */
     @Override
     public CompletableFuture<DeleteDiskResponse> deleteDisk(DeleteDiskRequest request) {
         try {
@@ -641,6 +1194,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEip  DeleteEipRequest
+     * @return DeleteEipResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEipResponse> deleteEip(DeleteEipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteEip").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEnsRouteEntry  DeleteEnsRouteEntryRequest
+     * @return DeleteEnsRouteEntryResponse
+     */
     @Override
     public CompletableFuture<DeleteEnsRouteEntryResponse> deleteEnsRouteEntry(DeleteEnsRouteEntryRequest request) {
         try {
@@ -655,6 +1230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEnsSaleConditionControl  DeleteEnsSaleConditionControlRequest
+     * @return DeleteEnsSaleConditionControlResponse
+     */
     @Override
     public CompletableFuture<DeleteEnsSaleConditionControlResponse> deleteEnsSaleConditionControl(DeleteEnsSaleConditionControlRequest request) {
         try {
@@ -669,6 +1248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteEnsSaleControl  DeleteEnsSaleControlRequest
+     * @return DeleteEnsSaleControlResponse
+     */
     @Override
     public CompletableFuture<DeleteEnsSaleControlResponse> deleteEnsSaleControl(DeleteEnsSaleControlRequest request) {
         try {
@@ -683,6 +1266,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can delete an EPN instance only when the instance group information is empty.</p>
+     * 
+     * @param request the request parameters of DeleteEpnInstance  DeleteEpnInstanceRequest
+     * @return DeleteEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteEpnInstanceResponse> deleteEpnInstance(DeleteEpnInstanceRequest request) {
         try {
@@ -697,6 +1287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFileSystem  DeleteFileSystemRequest
+     * @return DeleteFileSystemResponse
+     */
     @Override
     public CompletableFuture<DeleteFileSystemResponse> deleteFileSystem(DeleteFileSystemRequest request) {
         try {
@@ -711,6 +1305,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteForwardEntry  DeleteForwardEntryRequest
+     * @return DeleteForwardEntryResponse
+     */
     @Override
     public CompletableFuture<DeleteForwardEntryResponse> deleteForwardEntry(DeleteForwardEntryRequest request) {
         try {
@@ -725,6 +1323,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHaVips  DeleteHaVipsRequest
+     * @return DeleteHaVipsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteHaVipsResponse> deleteHaVips(DeleteHaVipsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteHaVips").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteHaVipsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteHaVipsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteImage  DeleteImageRequest
+     * @return DeleteImageResponse
+     */
     @Override
     public CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request) {
         try {
@@ -739,6 +1359,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</p>
+     * <ul>
+     * <li>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<strong>KeyPairName</strong>) is returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteKeyPairs  DeleteKeyPairsRequest
+     * @return DeleteKeyPairsResponse
+     */
     @Override
     public CompletableFuture<DeleteKeyPairsResponse> deleteKeyPairs(DeleteKeyPairsRequest request) {
         try {
@@ -753,6 +1383,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteLoadBalancerListener  DeleteLoadBalancerListenerRequest
+     * @return DeleteLoadBalancerListenerResponse
+     */
     @Override
     public CompletableFuture<DeleteLoadBalancerListenerResponse> deleteLoadBalancerListener(DeleteLoadBalancerListenerRequest request) {
         try {
@@ -767,6 +1407,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</p>
+     * 
+     * @param request the request parameters of DeleteMountTarget  DeleteMountTargetRequest
+     * @return DeleteMountTargetResponse
+     */
     @Override
     public CompletableFuture<DeleteMountTargetResponse> deleteMountTarget(DeleteMountTargetRequest request) {
         try {
@@ -781,6 +1428,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNatGateway  DeleteNatGatewayRequest
+     * @return DeleteNatGatewayResponse
+     */
     @Override
     public CompletableFuture<DeleteNatGatewayResponse> deleteNatGateway(DeleteNatGatewayRequest request) {
         try {
@@ -795,6 +1446,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetwork  DeleteNetworkRequest
+     * @return DeleteNetworkResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkResponse> deleteNetwork(DeleteNetworkRequest request) {
         try {
@@ -809,6 +1464,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkAcl  DeleteNetworkAclRequest
+     * @return DeleteNetworkAclResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkAclResponse> deleteNetworkAcl(DeleteNetworkAclRequest request) {
         try {
@@ -823,6 +1482,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkAclEntry  DeleteNetworkAclEntryRequest
+     * @return DeleteNetworkAclEntryResponse
+     */
     @Override
     public CompletableFuture<DeleteNetworkAclEntryResponse> deleteNetworkAclEntry(DeleteNetworkAclEntryRequest request) {
         try {
@@ -837,6 +1500,70 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNetworkInterfaces  DeleteNetworkInterfacesRequest
+     * @return DeleteNetworkInterfacesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteNetworkInterfacesResponse> deleteNetworkInterfaces(DeleteNetworkInterfacesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteNetworkInterfaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteNetworkInterfacesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteNetworkInterfacesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteObject  DeleteObjectRequest
+     * @return DeleteObjectResponse
+     */
+    @Override
+    public CompletableFuture<DeleteObjectResponse> deleteObject(DeleteObjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteObject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteObjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteObjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</p>
+     * 
+     * @param request the request parameters of DeleteSDG  DeleteSDGRequest
+     * @return DeleteSDGResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSDGResponse> deleteSDG(DeleteSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you delete a security group, make sure that no instances exist in the security group.</p>
+     * 
+     * @param request the request parameters of DeleteSecurityGroup  DeleteSecurityGroupRequest
+     * @return DeleteSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteSecurityGroupResponse> deleteSecurityGroup(DeleteSecurityGroupRequest request) {
         try {
@@ -851,6 +1578,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSnapshotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSnatEntry  DeleteSnatEntryRequest
+     * @return DeleteSnatEntryResponse
+     */
     @Override
     public CompletableFuture<DeleteSnatEntryResponse> deleteSnatEntry(DeleteSnatEntryRequest request) {
         try {
@@ -865,6 +1614,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSnatIpForSnatEntry  DeleteSnatIpForSnatEntryRequest
+     * @return DeleteSnatIpForSnatEntryResponse
+     */
     @Override
     public CompletableFuture<DeleteSnatIpForSnatEntryResponse> deleteSnatIpForSnatEntry(DeleteSnatIpForSnatEntryRequest request) {
         try {
@@ -879,6 +1632,49 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteStorageGateway  DeleteStorageGatewayRequest
+     * @return DeleteStorageGatewayResponse
+     */
+    @Override
+    public CompletableFuture<DeleteStorageGatewayResponse> deleteStorageGateway(DeleteStorageGatewayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteStorageGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteStorageGatewayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteStorageGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteStorageVolume  DeleteStorageVolumeRequest
+     * @return DeleteStorageVolumeResponse
+     */
+    @Override
+    public CompletableFuture<DeleteStorageVolumeResponse> deleteStorageVolume(DeleteStorageVolumeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteStorageVolume").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteStorageVolumeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteStorageVolumeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you delete a vSwitch, make sure that no instances exist in the vSwitch.</p>
+     * 
+     * @param request the request parameters of DeleteVSwitch  DeleteVSwitchRequest
+     * @return DeleteVSwitchResponse
+     */
     @Override
     public CompletableFuture<DeleteVSwitchResponse> deleteVSwitch(DeleteVSwitchRequest request) {
         try {
@@ -893,6 +1689,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeployInstanceSDG  DeployInstanceSDGRequest
+     * @return DeployInstanceSDGResponse
+     */
+    @Override
+    public CompletableFuture<DeployInstanceSDGResponse> deployInstanceSDG(DeployInstanceSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeployInstanceSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeployInstanceSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeployInstanceSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeploySDG  DeploySDGRequest
+     * @return DeploySDGResponse
+     */
+    @Override
+    public CompletableFuture<DeploySDGResponse> deploySDG(DeploySDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeploySDG").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeploySDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeploySDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAICImages  DescribeAICImagesRequest
+     * @return DescribeAICImagesResponse
+     */
     @Override
     public CompletableFuture<DescribeAICImagesResponse> describeAICImages(DescribeAICImagesRequest request) {
         try {
@@ -907,6 +1743,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeARMServerInstances  DescribeARMServerInstancesRequest
+     * @return DescribeARMServerInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeARMServerInstancesResponse> describeARMServerInstances(DescribeARMServerInstancesRequest request) {
         try {
@@ -921,6 +1761,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplication  DescribeApplicationRequest
+     * @return DescribeApplicationResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationResponse> describeApplication(DescribeApplicationRequest request) {
         try {
@@ -935,20 +1779,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeApplicationResourceSummaryResponse> describeApplicationResourceSummary(DescribeApplicationResourceSummaryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeApplicationResourceSummary").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApplicationResourceSummaryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeApplicationResourceSummaryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeAvailableResource  DescribeAvailableResourceRequest
+     * @return DescribeAvailableResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request) {
         try {
@@ -963,6 +1797,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAvailableResourceInfo  DescribeAvailableResourceInfoRequest
+     * @return DescribeAvailableResourceInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeAvailableResourceInfoResponse> describeAvailableResourceInfo(DescribeAvailableResourceInfoRequest request) {
         try {
@@ -977,6 +1815,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBandWithdChargeType  DescribeBandWithdChargeTypeRequest
+     * @return DescribeBandWithdChargeTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeBandWithdChargeTypeResponse> describeBandWithdChargeType(DescribeBandWithdChargeTypeRequest request) {
         try {
@@ -991,6 +1833,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBandwitdhByInternetChargeType  DescribeBandwitdhByInternetChargeTypeRequest
+     * @return DescribeBandwitdhByInternetChargeTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeBandwitdhByInternetChargeTypeResponse> describeBandwitdhByInternetChargeType(DescribeBandwitdhByInternetChargeTypeRequest request) {
         try {
@@ -1005,6 +1851,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCloudDiskAvailableResourceInfo  DescribeCloudDiskAvailableResourceInfoRequest
+     * @return DescribeCloudDiskAvailableResourceInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeCloudDiskAvailableResourceInfoResponse> describeCloudDiskAvailableResourceInfo(DescribeCloudDiskAvailableResourceInfoRequest request) {
         try {
@@ -1019,6 +1869,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCloudDiskTypes  DescribeCloudDiskTypesRequest
+     * @return DescribeCloudDiskTypesResponse
+     */
     @Override
     public CompletableFuture<DescribeCloudDiskTypesResponse> describeCloudDiskTypes(DescribeCloudDiskTypesRequest request) {
         try {
@@ -1033,6 +1887,52 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * 
+     * @param request the request parameters of DescribeCluster  DescribeClusterRequest
+     * @return DescribeClusterResponse
+     */
+    @Override
+    public CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * 
+     * @param request the request parameters of DescribeClusterKubeConfig  DescribeClusterKubeConfigRequest
+     * @return DescribeClusterKubeConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeClusterKubeConfigResponse> describeClusterKubeConfig(DescribeClusterKubeConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClusterKubeConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterKubeConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClusterKubeConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCreatePrePaidInstanceResult  DescribeCreatePrePaidInstanceResultRequest
+     * @return DescribeCreatePrePaidInstanceResultResponse
+     */
     @Override
     public CompletableFuture<DescribeCreatePrePaidInstanceResultResponse> describeCreatePrePaidInstanceResult(DescribeCreatePrePaidInstanceResultRequest request) {
         try {
@@ -1047,6 +1947,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDataDistResult  DescribeDataDistResultRequest
+     * @return DescribeDataDistResultResponse
+     */
     @Override
     public CompletableFuture<DescribeDataDistResultResponse> describeDataDistResult(DescribeDataDistResultRequest request) {
         try {
@@ -1061,6 +1965,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDataDownloadURL  DescribeDataDownloadURLRequest
+     * @return DescribeDataDownloadURLResponse
+     */
     @Override
     public CompletableFuture<DescribeDataDownloadURLResponse> describeDataDownloadURL(DescribeDataDownloadURLRequest request) {
         try {
@@ -1075,6 +1983,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDataPushResult  DescribeDataPushResultRequest
+     * @return DescribeDataPushResultResponse
+     */
     @Override
     public CompletableFuture<DescribeDataPushResultResponse> describeDataPushResult(DescribeDataPushResultRequest request) {
         try {
@@ -1089,6 +2001,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeviceService  DescribeDeviceServiceRequest
+     * @return DescribeDeviceServiceResponse
+     */
     @Override
     public CompletableFuture<DescribeDeviceServiceResponse> describeDeviceService(DescribeDeviceServiceRequest request) {
         try {
@@ -1103,6 +2019,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiskIopsList  DescribeDiskIopsListRequest
+     * @return DescribeDiskIopsListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDiskIopsListResponse> describeDiskIopsList(DescribeDiskIopsListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDiskIopsList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDiskIopsListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDiskIopsListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDisks  DescribeDisksRequest
+     * @return DescribeDisksResponse
+     */
     @Override
     public CompletableFuture<DescribeDisksResponse> describeDisks(DescribeDisksRequest request) {
         try {
@@ -1117,20 +2055,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeEipAddressesResponse> describeEipAddresses(DescribeEipAddressesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeEipAddresses").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEipAddressesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeEipAddressesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeElbAvailableResourceInfo  DescribeElbAvailableResourceInfoRequest
+     * @return DescribeElbAvailableResourceInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeElbAvailableResourceInfoResponse> describeElbAvailableResourceInfo(DescribeElbAvailableResourceInfoRequest request) {
         try {
@@ -1145,6 +2073,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsCommodityCode  DescribeEnsCommodityCodeRequest
+     * @return DescribeEnsCommodityCodeResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsCommodityCodeResponse> describeEnsCommodityCode(DescribeEnsCommodityCodeRequest request) {
         try {
@@ -1159,6 +2091,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsCommodityModuleCode  DescribeEnsCommodityModuleCodeRequest
+     * @return DescribeEnsCommodityModuleCodeResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsCommodityModuleCodeResponse> describeEnsCommodityModuleCode(DescribeEnsCommodityModuleCodeRequest request) {
         try {
@@ -1173,6 +2109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsEipAddresses  DescribeEnsEipAddressesRequest
+     * @return DescribeEnsEipAddressesResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsEipAddressesResponse> describeEnsEipAddresses(DescribeEnsEipAddressesRequest request) {
         try {
@@ -1187,6 +2127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsNetDistrict  DescribeEnsNetDistrictRequest
+     * @return DescribeEnsNetDistrictResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsNetDistrictResponse> describeEnsNetDistrict(DescribeEnsNetDistrictRequest request) {
         try {
@@ -1201,6 +2145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsNetLevel  DescribeEnsNetLevelRequest
+     * @return DescribeEnsNetLevelResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsNetLevelResponse> describeEnsNetLevel(DescribeEnsNetLevelRequest request) {
         try {
@@ -1215,6 +2163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsNetSaleDistrict  DescribeEnsNetSaleDistrictRequest
+     * @return DescribeEnsNetSaleDistrictResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsNetSaleDistrictResponse> describeEnsNetSaleDistrict(DescribeEnsNetSaleDistrictRequest request) {
         try {
@@ -1229,6 +2181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsRegionIdIpv6Info  DescribeEnsRegionIdIpv6InfoRequest
+     * @return DescribeEnsRegionIdIpv6InfoResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsRegionIdIpv6InfoResponse> describeEnsRegionIdIpv6Info(DescribeEnsRegionIdIpv6InfoRequest request) {
         try {
@@ -1244,8 +2200,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ****
-      *
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of DescribeEnsRegionIdResource  DescribeEnsRegionIdResourceRequest
+     * @return DescribeEnsRegionIdResourceResponse
      */
     @Override
     public CompletableFuture<DescribeEnsRegionIdResourceResponse> describeEnsRegionIdResource(DescribeEnsRegionIdResourceRequest request) {
@@ -1261,6 +2220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsRegions  DescribeEnsRegionsRequest
+     * @return DescribeEnsRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsRegionsResponse> describeEnsRegions(DescribeEnsRegionsRequest request) {
         try {
@@ -1275,6 +2238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsResourceUsage  DescribeEnsResourceUsageRequest
+     * @return DescribeEnsResourceUsageResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsResourceUsageResponse> describeEnsResourceUsage(DescribeEnsResourceUsageRequest request) {
         try {
@@ -1289,6 +2256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsRouteEntryList  DescribeEnsRouteEntryListRequest
+     * @return DescribeEnsRouteEntryListResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsRouteEntryListResponse> describeEnsRouteEntryList(DescribeEnsRouteEntryListRequest request) {
         try {
@@ -1303,6 +2274,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsRouteTables  DescribeEnsRouteTablesRequest
+     * @return DescribeEnsRouteTablesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeEnsRouteTablesResponse> describeEnsRouteTables(DescribeEnsRouteTablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeEnsRouteTables").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEnsRouteTablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEnsRouteTablesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeEnsSaleControl  DescribeEnsSaleControlRequest
+     * @return DescribeEnsSaleControlResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsSaleControlResponse> describeEnsSaleControl(DescribeEnsSaleControlRequest request) {
         try {
@@ -1317,6 +2310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsSaleControlAvailableResource  DescribeEnsSaleControlAvailableResourceRequest
+     * @return DescribeEnsSaleControlAvailableResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsSaleControlAvailableResourceResponse> describeEnsSaleControlAvailableResource(DescribeEnsSaleControlAvailableResourceRequest request) {
         try {
@@ -1331,6 +2328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEnsSaleControlStock  DescribeEnsSaleControlStockRequest
+     * @return DescribeEnsSaleControlStockResponse
+     */
     @Override
     public CompletableFuture<DescribeEnsSaleControlStockResponse> describeEnsSaleControlStock(DescribeEnsSaleControlStockRequest request) {
         try {
@@ -1345,6 +2346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEpnBandWidthData  DescribeEpnBandWidthDataRequest
+     * @return DescribeEpnBandWidthDataResponse
+     */
     @Override
     public CompletableFuture<DescribeEpnBandWidthDataResponse> describeEpnBandWidthData(DescribeEpnBandWidthDataRequest request) {
         try {
@@ -1359,6 +2364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEpnBandwitdhByInternetChargeType  DescribeEpnBandwitdhByInternetChargeTypeRequest
+     * @return DescribeEpnBandwitdhByInternetChargeTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeEpnBandwitdhByInternetChargeTypeResponse> describeEpnBandwitdhByInternetChargeType(DescribeEpnBandwitdhByInternetChargeTypeRequest request) {
         try {
@@ -1373,6 +2382,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>In internal networking mode, the value of Instances is empty in the response. In public networking mode, the value of VSwitches is empty in the response.</p>
+     * 
+     * @param request the request parameters of DescribeEpnInstanceAttribute  DescribeEpnInstanceAttributeRequest
+     * @return DescribeEpnInstanceAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeEpnInstanceAttributeResponse> describeEpnInstanceAttribute(DescribeEpnInstanceAttributeRequest request) {
         try {
@@ -1387,6 +2403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEpnInstances  DescribeEpnInstancesRequest
+     * @return DescribeEpnInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeEpnInstancesResponse> describeEpnInstances(DescribeEpnInstancesRequest request) {
         try {
@@ -1401,6 +2421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEpnMeasurementData  DescribeEpnMeasurementDataRequest
+     * @return DescribeEpnMeasurementDataResponse
+     */
     @Override
     public CompletableFuture<DescribeEpnMeasurementDataResponse> describeEpnMeasurementData(DescribeEpnMeasurementDataRequest request) {
         try {
@@ -1415,6 +2439,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</p>
+     * <ul>
+     * <li>Empty strings are returned for images that are not exported.</li>
+     * <li>The download links may become invalid if you delete objects in OSS.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeExportImageInfo  DescribeExportImageInfoRequest
+     * @return DescribeExportImageInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeExportImageInfoResponse> describeExportImageInfo(DescribeExportImageInfoRequest request) {
         try {
@@ -1429,6 +2464,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExportImageStatus  DescribeExportImageStatusRequest
+     * @return DescribeExportImageStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeExportImageStatusResponse> describeExportImageStatus(DescribeExportImageStatusRequest request) {
         try {
@@ -1443,6 +2482,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFileSystems  DescribeFileSystemsRequest
+     * @return DescribeFileSystemsResponse
+     */
     @Override
     public CompletableFuture<DescribeFileSystemsResponse> describeFileSystems(DescribeFileSystemsRequest request) {
         try {
@@ -1457,6 +2500,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeForwardTableEntries  DescribeForwardTableEntriesRequest
+     * @return DescribeForwardTableEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeForwardTableEntriesResponse> describeForwardTableEntries(DescribeForwardTableEntriesRequest request) {
         try {
@@ -1471,6 +2518,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHaVips  DescribeHaVipsRequest
+     * @return DescribeHaVipsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHaVipsResponse> describeHaVips(DescribeHaVipsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHaVips").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHaVipsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHaVipsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeImageInfos  DescribeImageInfosRequest
+     * @return DescribeImageInfosResponse
+     */
     @Override
     public CompletableFuture<DescribeImageInfosResponse> describeImageInfos(DescribeImageInfosRequest request) {
         try {
@@ -1485,6 +2554,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageSharePermission  DescribeImageSharePermissionRequest
+     * @return DescribeImageSharePermissionResponse
+     */
     @Override
     public CompletableFuture<DescribeImageSharePermissionResponse> describeImageSharePermission(DescribeImageSharePermissionRequest request) {
         try {
@@ -1499,6 +2572,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImages  DescribeImagesRequest
+     * @return DescribeImagesResponse
+     */
     @Override
     public CompletableFuture<DescribeImagesResponse> describeImages(DescribeImagesRequest request) {
         try {
@@ -1513,6 +2590,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceAutoRenewAttribute  DescribeInstanceAutoRenewAttributeRequest
+     * @return DescribeInstanceAutoRenewAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceAutoRenewAttributeResponse> describeInstanceAutoRenewAttribute(DescribeInstanceAutoRenewAttributeRequest request) {
         try {
@@ -1527,6 +2608,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceBandwidthDetail  DescribeInstanceBandwidthDetailRequest
+     * @return DescribeInstanceBandwidthDetailResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceBandwidthDetailResponse> describeInstanceBandwidthDetail(DescribeInstanceBandwidthDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInstanceBandwidthDetail").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceBandwidthDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceBandwidthDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceMonitorData  DescribeInstanceMonitorDataRequest
+     * @return DescribeInstanceMonitorDataResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceMonitorDataResponse> describeInstanceMonitorData(DescribeInstanceMonitorDataRequest request) {
         try {
@@ -1541,6 +2644,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceSDGStatus  DescribeInstanceSDGStatusRequest
+     * @return DescribeInstanceSDGStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceSDGStatusResponse> describeInstanceSDGStatus(DescribeInstanceSDGStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInstanceSDGStatus").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceSDGStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceSDGStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceSpec  DescribeInstanceSpecRequest
+     * @return DescribeInstanceSpecResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceSpecResponse> describeInstanceSpec(DescribeInstanceSpecRequest request) {
         try {
@@ -1555,6 +2680,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceTypes  DescribeInstanceTypesRequest
+     * @return DescribeInstanceTypesResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceTypesResponse> describeInstanceTypes(DescribeInstanceTypesRequest request) {
         try {
@@ -1569,6 +2698,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceVncUrl  DescribeInstanceVncUrlRequest
+     * @return DescribeInstanceVncUrlResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceVncUrlResponse> describeInstanceVncUrl(DescribeInstanceVncUrlRequest request) {
         try {
@@ -1583,6 +2716,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 800 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per user.</li>
+     * <li>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request) {
         try {
@@ -1597,6 +2741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeKeyPairs  DescribeKeyPairsRequest
+     * @return DescribeKeyPairsResponse
+     */
     @Override
     public CompletableFuture<DescribeKeyPairsResponse> describeKeyPairs(DescribeKeyPairsRequest request) {
         try {
@@ -1611,6 +2759,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeLoadBalancerAttribute  DescribeLoadBalancerAttributeRequest
+     * @return DescribeLoadBalancerAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeLoadBalancerAttributeResponse> describeLoadBalancerAttribute(DescribeLoadBalancerAttributeRequest request) {
         try {
@@ -1625,6 +2783,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeLoadBalancerHTTPListenerAttribute  DescribeLoadBalancerHTTPListenerAttributeRequest
+     * @return DescribeLoadBalancerHTTPListenerAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeLoadBalancerHTTPListenerAttributeResponse> describeLoadBalancerHTTPListenerAttribute(DescribeLoadBalancerHTTPListenerAttributeRequest request) {
         try {
@@ -1639,6 +2807,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeLoadBalancerHTTPSListenerAttribute  DescribeLoadBalancerHTTPSListenerAttributeRequest
+     * @return DescribeLoadBalancerHTTPSListenerAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeLoadBalancerHTTPSListenerAttributeResponse> describeLoadBalancerHTTPSListenerAttribute(DescribeLoadBalancerHTTPSListenerAttributeRequest request) {
         try {
@@ -1653,6 +2831,52 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeLoadBalancerListenMonitor  DescribeLoadBalancerListenMonitorRequest
+     * @return DescribeLoadBalancerListenMonitorResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLoadBalancerListenMonitorResponse> describeLoadBalancerListenMonitor(DescribeLoadBalancerListenMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLoadBalancerListenMonitor").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLoadBalancerListenMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLoadBalancerListenMonitorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLoadBalancerListeners  DescribeLoadBalancerListenersRequest
+     * @return DescribeLoadBalancerListenersResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLoadBalancerListenersResponse> describeLoadBalancerListeners(DescribeLoadBalancerListenersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLoadBalancerListeners").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLoadBalancerListenersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLoadBalancerListenersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLoadBalancerSpec  DescribeLoadBalancerSpecRequest
+     * @return DescribeLoadBalancerSpecResponse
+     */
     @Override
     public CompletableFuture<DescribeLoadBalancerSpecResponse> describeLoadBalancerSpec(DescribeLoadBalancerSpecRequest request) {
         try {
@@ -1667,6 +2891,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeLoadBalancerTCPListenerAttribute  DescribeLoadBalancerTCPListenerAttributeRequest
+     * @return DescribeLoadBalancerTCPListenerAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeLoadBalancerTCPListenerAttributeResponse> describeLoadBalancerTCPListenerAttribute(DescribeLoadBalancerTCPListenerAttributeRequest request) {
         try {
@@ -1681,6 +2915,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeLoadBalancerUDPListenerAttribute  DescribeLoadBalancerUDPListenerAttributeRequest
+     * @return DescribeLoadBalancerUDPListenerAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeLoadBalancerUDPListenerAttributeResponse> describeLoadBalancerUDPListenerAttribute(DescribeLoadBalancerUDPListenerAttributeRequest request) {
         try {
@@ -1695,6 +2939,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeLoadBalancers  DescribeLoadBalancersRequest
+     * @return DescribeLoadBalancersResponse
+     */
     @Override
     public CompletableFuture<DescribeLoadBalancersResponse> describeLoadBalancers(DescribeLoadBalancersRequest request) {
         try {
@@ -1709,6 +2963,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMeasurementData  DescribeMeasurementDataRequest
+     * @return DescribeMeasurementDataResponse
+     */
     @Override
     public CompletableFuture<DescribeMeasurementDataResponse> describeMeasurementData(DescribeMeasurementDataRequest request) {
         try {
@@ -1723,6 +2981,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMountTargets  DescribeMountTargetsRequest
+     * @return DescribeMountTargetsResponse
+     */
     @Override
     public CompletableFuture<DescribeMountTargetsResponse> describeMountTargets(DescribeMountTargetsRequest request) {
         try {
@@ -1737,6 +2999,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNCInformation  DescribeNCInformationRequest
+     * @return DescribeNCInformationResponse
+     */
     @Override
     public CompletableFuture<DescribeNCInformationResponse> describeNCInformation(DescribeNCInformationRequest request) {
         try {
@@ -1751,6 +3017,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNatGateways  DescribeNatGatewaysRequest
+     * @return DescribeNatGatewaysResponse
+     */
     @Override
     public CompletableFuture<DescribeNatGatewaysResponse> describeNatGateways(DescribeNatGatewaysRequest request) {
         try {
@@ -1765,6 +3035,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkAcls  DescribeNetworkAclsRequest
+     * @return DescribeNetworkAclsResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkAclsResponse> describeNetworkAcls(DescribeNetworkAclsRequest request) {
         try {
@@ -1779,6 +3053,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeNetworkAttribute  DescribeNetworkAttributeRequest
+     * @return DescribeNetworkAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkAttributeResponse> describeNetworkAttribute(DescribeNetworkAttributeRequest request) {
         try {
@@ -1793,6 +3077,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNetworkInterfaces  DescribeNetworkInterfacesRequest
+     * @return DescribeNetworkInterfacesResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworkInterfacesResponse> describeNetworkInterfaces(DescribeNetworkInterfacesRequest request) {
         try {
@@ -1807,6 +3095,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeNetworks  DescribeNetworksRequest
+     * @return DescribeNetworksResponse
+     */
     @Override
     public CompletableFuture<DescribeNetworksResponse> describeNetworks(DescribeNetworksRequest request) {
         try {
@@ -1821,6 +3119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePrePaidInstanceStock  DescribePrePaidInstanceStockRequest
+     * @return DescribePrePaidInstanceStockResponse
+     */
     @Override
     public CompletableFuture<DescribePrePaidInstanceStockResponse> describePrePaidInstanceStock(DescribePrePaidInstanceStockRequest request) {
         try {
@@ -1835,6 +3137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePrice  DescribePriceRequest
+     * @return DescribePriceResponse
+     */
     @Override
     public CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request) {
         try {
@@ -1849,20 +3155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeRegionBandwidthQuotaResponse> describeRegionBandwidthQuota(DescribeRegionBandwidthQuotaRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRegionBandwidthQuota").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRegionBandwidthQuotaResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeRegionBandwidthQuotaResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeRegionIsps  DescribeRegionIspsRequest
+     * @return DescribeRegionIspsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionIspsResponse> describeRegionIsps(DescribeRegionIspsRequest request) {
         try {
@@ -1877,6 +3173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegionResource  DescribeRegionResourceRequest
+     * @return DescribeRegionResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionResourceResponse> describeRegionResource(DescribeRegionResourceRequest request) {
         try {
@@ -1891,6 +3191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeReservedResource  DescribeReservedResourceRequest
+     * @return DescribeReservedResourceResponse
+     */
     @Override
     public CompletableFuture<DescribeReservedResourceResponse> describeReservedResource(DescribeReservedResourceRequest request) {
         try {
@@ -1905,6 +3209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeResourceTimeline  DescribeResourceTimelineRequest
+     * @return DescribeResourceTimelineResponse
+     */
     @Override
     public CompletableFuture<DescribeResourceTimelineResponse> describeResourceTimeline(DescribeResourceTimelineRequest request) {
         try {
@@ -1919,6 +3227,82 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSDG  DescribeSDGRequest
+     * @return DescribeSDGResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSDGResponse> describeSDG(DescribeSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSDGDeploymentStatus  DescribeSDGDeploymentStatusRequest
+     * @return DescribeSDGDeploymentStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSDGDeploymentStatusResponse> describeSDGDeploymentStatus(DescribeSDGDeploymentStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSDGDeploymentStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSDGDeploymentStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSDGDeploymentStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSDGs  DescribeSDGsRequest
+     * @return DescribeSDGsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSDGsResponse> describeSDGs(DescribeSDGsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSDGs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSDGsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSDGsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSecondaryPublicIpAddresses  DescribeSecondaryPublicIpAddressesRequest
+     * @return DescribeSecondaryPublicIpAddressesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSecondaryPublicIpAddressesResponse> describeSecondaryPublicIpAddresses(DescribeSecondaryPublicIpAddressesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSecondaryPublicIpAddresses").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSecondaryPublicIpAddressesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSecondaryPublicIpAddressesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSecurityGroupAttribute  DescribeSecurityGroupAttributeRequest
+     * @return DescribeSecurityGroupAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityGroupAttributeResponse> describeSecurityGroupAttribute(DescribeSecurityGroupAttributeRequest request) {
         try {
@@ -1933,6 +3317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityGroups  DescribeSecurityGroupsRequest
+     * @return DescribeSecurityGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityGroupsResponse> describeSecurityGroups(DescribeSecurityGroupsRequest request) {
         try {
@@ -1947,6 +3335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSelfImages  DescribeSelfImagesRequest
+     * @return DescribeSelfImagesResponse
+     */
     @Override
     public CompletableFuture<DescribeSelfImagesResponse> describeSelfImages(DescribeSelfImagesRequest request) {
         try {
@@ -1961,6 +3353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServcieSchedule  DescribeServcieScheduleRequest
+     * @return DescribeServcieScheduleResponse
+     */
     @Override
     public CompletableFuture<DescribeServcieScheduleResponse> describeServcieSchedule(DescribeServcieScheduleRequest request) {
         try {
@@ -1975,6 +3371,76 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeServerLoadBalancerListenMonitor  DescribeServerLoadBalancerListenMonitorRequest
+     * @return DescribeServerLoadBalancerListenMonitorResponse
+     */
+    @Override
+    public CompletableFuture<DescribeServerLoadBalancerListenMonitorResponse> describeServerLoadBalancerListenMonitor(DescribeServerLoadBalancerListenMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeServerLoadBalancerListenMonitor").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeServerLoadBalancerListenMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeServerLoadBalancerListenMonitorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeServerLoadBalancerMonitor  DescribeServerLoadBalancerMonitorRequest
+     * @return DescribeServerLoadBalancerMonitorResponse
+     */
+    @Override
+    public CompletableFuture<DescribeServerLoadBalancerMonitorResponse> describeServerLoadBalancerMonitor(DescribeServerLoadBalancerMonitorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeServerLoadBalancerMonitor").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeServerLoadBalancerMonitorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeServerLoadBalancerMonitorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSnapshots  DescribeSnapshotsRequest
+     * @return DescribeSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSnapshots").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSnapshotsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSnatAttribute  DescribeSnatAttributeRequest
+     * @return DescribeSnatAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeSnatAttributeResponse> describeSnatAttribute(DescribeSnatAttributeRequest request) {
         try {
@@ -1989,6 +3455,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSnatTableEntries  DescribeSnatTableEntriesRequest
+     * @return DescribeSnatTableEntriesResponse
+     */
     @Override
     public CompletableFuture<DescribeSnatTableEntriesResponse> describeSnatTableEntries(DescribeSnatTableEntriesRequest request) {
         try {
@@ -2003,6 +3473,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStorageGateway  DescribeStorageGatewayRequest
+     * @return DescribeStorageGatewayResponse
+     */
+    @Override
+    public CompletableFuture<DescribeStorageGatewayResponse> describeStorageGateway(DescribeStorageGatewayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeStorageGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeStorageGatewayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeStorageGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeStorageVolume  DescribeStorageVolumeRequest
+     * @return DescribeStorageVolumeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeStorageVolumeResponse> describeStorageVolume(DescribeStorageVolumeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeStorageVolume").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeStorageVolumeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeStorageVolumeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeUserBandWidthData  DescribeUserBandWidthDataRequest
+     * @return DescribeUserBandWidthDataResponse
+     */
     @Override
     public CompletableFuture<DescribeUserBandWidthDataResponse> describeUserBandWidthData(DescribeUserBandWidthDataRequest request) {
         try {
@@ -2017,6 +3527,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @return DescribeVSwitchesResponse
+     */
     @Override
     public CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request) {
         try {
@@ -2031,34 +3545,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeWorkflowResponse> describeWorkflow(DescribeWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeWorkflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeWorkflowResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeWorkflowActivityResponse> describeWorkflowActivity(DescribeWorkflowActivityRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeWorkflowActivity").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWorkflowActivityResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeWorkflowActivityResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DetachDisk  DetachDiskRequest
+     * @return DetachDiskResponse
+     */
     @Override
     public CompletableFuture<DetachDiskResponse> detachDisk(DetachDiskRequest request) {
         try {
@@ -2073,6 +3563,55 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachInstanceSDG  DetachInstanceSDGRequest
+     * @return DetachInstanceSDGResponse
+     */
+    @Override
+    public CompletableFuture<DetachInstanceSDGResponse> detachInstanceSDG(DetachInstanceSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DetachInstanceSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetachInstanceSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DetachInstanceSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You cannot detach a primary ENI from an instance.</li>
+     * <li>The ENI must be in the InUse state.</li>
+     * <li>The instances are in the Stopped state.</li>
+     * <li>This operation is an asynchronous operation. After this operation is called to detach an ENI, you can check the state of the ENI to determine whether the ENI is detached.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DetachNetworkInterface  DetachNetworkInterfaceRequest
+     * @return DetachNetworkInterfaceResponse
+     */
+    @Override
+    public CompletableFuture<DetachNetworkInterfaceResponse> detachNetworkInterface(DetachNetworkInterfaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DetachNetworkInterface").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetachNetworkInterfaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DetachNetworkInterfaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DistApplicationData  DistApplicationDataRequest
+     * @return DistApplicationDataResponse
+     */
     @Override
     public CompletableFuture<DistApplicationDataResponse> distApplicationData(DistApplicationDataRequest request) {
         try {
@@ -2087,6 +3626,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportBillDetailData  ExportBillDetailDataRequest
+     * @return ExportBillDetailDataResponse
+     */
     @Override
     public CompletableFuture<ExportBillDetailDataResponse> exportBillDetailData(ExportBillDetailDataRequest request) {
         try {
@@ -2101,6 +3644,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportImage  ExportImageRequest
+     * @return ExportImageResponse
+     */
     @Override
     public CompletableFuture<ExportImageResponse> exportImage(ExportImageRequest request) {
         try {
@@ -2115,6 +3662,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportMeasurementData  ExportMeasurementDataRequest
+     * @return ExportMeasurementDataResponse
+     */
     @Override
     public CompletableFuture<ExportMeasurementDataResponse> exportMeasurementData(ExportMeasurementDataRequest request) {
         try {
@@ -2129,6 +3680,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBucketAcl  GetBucketAclRequest
+     * @return GetBucketAclResponse
+     */
+    @Override
+    public CompletableFuture<GetBucketAclResponse> getBucketAcl(GetBucketAclRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBucketAcl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBucketAclResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBucketAclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBucketInfo  GetBucketInfoRequest
+     * @return GetBucketInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetBucketInfoResponse> getBucketInfo(GetBucketInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBucketInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBucketInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBucketInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBucketLifecycle  GetBucketLifecycleRequest
+     * @return GetBucketLifecycleResponse
+     */
+    @Override
+    public CompletableFuture<GetBucketLifecycleResponse> getBucketLifecycle(GetBucketLifecycleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBucketLifecycle").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBucketLifecycleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBucketLifecycleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDeviceInternetPort  GetDeviceInternetPortRequest
+     * @return GetDeviceInternetPortResponse
+     */
     @Override
     public CompletableFuture<GetDeviceInternetPortResponse> getDeviceInternetPort(GetDeviceInternetPortRequest request) {
         try {
@@ -2143,6 +3752,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOssStorageAndAccByBuckets  GetOssStorageAndAccByBucketsRequest
+     * @return GetOssStorageAndAccByBucketsResponse
+     */
     @Override
     public CompletableFuture<GetOssStorageAndAccByBucketsResponse> getOssStorageAndAccByBuckets(GetOssStorageAndAccByBucketsRequest request) {
         try {
@@ -2157,6 +3770,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>The query and aggregation granularity of bandwidth and storage usage cannot exceed one day. Data aggregation is to collect the maximum values of usage data within a period of time.</p>
+     * 
+     * @param request the request parameters of GetOssUsageData  GetOssUsageDataRequest
+     * @return GetOssUsageDataResponse
+     */
     @Override
     public CompletableFuture<GetOssUsageDataResponse> getOssUsageData(GetOssUsageDataRequest request) {
         try {
@@ -2171,6 +3791,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</p>
+     * <ul>
+     * <li>The key pair can be only in the ssh-rsa format.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ImportKeyPair  ImportKeyPairRequest
+     * @return ImportKeyPairResponse
+     */
     @Override
     public CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request) {
         try {
@@ -2185,6 +3815,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of JoinPublicIpsToEpnInstance  JoinPublicIpsToEpnInstanceRequest
+     * @return JoinPublicIpsToEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<JoinPublicIpsToEpnInstanceResponse> joinPublicIpsToEpnInstance(JoinPublicIpsToEpnInstanceRequest request) {
         try {
@@ -2199,6 +3833,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</p>
+     * 
+     * @param request the request parameters of JoinSecurityGroup  JoinSecurityGroupRequest
+     * @return JoinSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<JoinSecurityGroupResponse> joinSecurityGroup(JoinSecurityGroupRequest request) {
         try {
@@ -2213,6 +3854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of JoinVSwitchesToEpnInstance  JoinVSwitchesToEpnInstanceRequest
+     * @return JoinVSwitchesToEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<JoinVSwitchesToEpnInstanceResponse> joinVSwitchesToEpnInstance(JoinVSwitchesToEpnInstanceRequest request) {
         try {
@@ -2227,6 +3872,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you remove an instance from a security group, the instance must be in the Stopped or Running state.</p>
+     * 
+     * @param request the request parameters of LeaveSecurityGroup  LeaveSecurityGroupRequest
+     * @return LeaveSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<LeaveSecurityGroupResponse> leaveSecurityGroup(LeaveSecurityGroupRequest request) {
         try {
@@ -2241,6 +3893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplications  ListApplicationsRequest
+     * @return ListApplicationsResponse
+     */
     @Override
     public CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request) {
         try {
@@ -2255,6 +3911,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBuckets  ListBucketsRequest
+     * @return ListBucketsResponse
+     */
+    @Override
+    public CompletableFuture<ListBucketsResponse> listBuckets(ListBucketsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBuckets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBucketsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBucketsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListObjects  ListObjectsRequest
+     * @return ListObjectsResponse
+     */
+    @Override
+    public CompletableFuture<ListObjectsResponse> listObjects(ListObjectsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListObjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListObjectsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListObjectsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyEnsEipAddressAttribute  ModifyEnsEipAddressAttributeRequest
+     * @return ModifyEnsEipAddressAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyEnsEipAddressAttributeResponse> modifyEnsEipAddressAttribute(ModifyEnsEipAddressAttributeRequest request) {
         try {
@@ -2269,6 +3983,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyEpnInstance  ModifyEpnInstanceRequest
+     * @return ModifyEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<ModifyEpnInstanceResponse> modifyEpnInstance(ModifyEpnInstanceRequest request) {
         try {
@@ -2283,6 +4001,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyFileSystem  ModifyFileSystemRequest
+     * @return ModifyFileSystemResponse
+     */
     @Override
     public CompletableFuture<ModifyFileSystemResponse> modifyFileSystem(ModifyFileSystemRequest request) {
         try {
@@ -2297,6 +4019,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyForwardEntry  ModifyForwardEntryRequest
+     * @return ModifyForwardEntryResponse
+     */
     @Override
     public CompletableFuture<ModifyForwardEntryResponse> modifyForwardEntry(ModifyForwardEntryRequest request) {
         try {
@@ -2311,6 +4037,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyHaVipAttribute  ModifyHaVipAttributeRequest
+     * @return ModifyHaVipAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyHaVipAttributeResponse> modifyHaVipAttribute(ModifyHaVipAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyHaVipAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyHaVipAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyHaVipAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyImageAttribute  ModifyImageAttributeRequest
+     * @return ModifyImageAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyImageAttributeResponse> modifyImageAttribute(ModifyImageAttributeRequest request) {
         try {
@@ -2325,6 +4073,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyImageSharePermission  ModifyImageSharePermissionRequest
+     * @return ModifyImageSharePermissionResponse
+     */
     @Override
     public CompletableFuture<ModifyImageSharePermissionResponse> modifyImageSharePermission(ModifyImageSharePermissionRequest request) {
         try {
@@ -2339,6 +4091,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  If an instance is in the Starting state, you cannot reset the password of the instance.</p>
+     * <ul>
+     * <li>When the instance is in the Running state, you cannot change the password of the instance.</li>
+     * <li>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyInstanceAttribute  ModifyInstanceAttributeRequest
+     * @return ModifyInstanceAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceAttributeResponse> modifyInstanceAttribute(ModifyInstanceAttributeRequest request) {
         try {
@@ -2353,6 +4116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceAutoRenewAttribute  ModifyInstanceAutoRenewAttributeRequest
+     * @return ModifyInstanceAutoRenewAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceAutoRenewAttributeResponse> modifyInstanceAutoRenewAttribute(ModifyInstanceAutoRenewAttributeRequest request) {
         try {
@@ -2367,6 +4134,56 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceBootConfiguration  ModifyInstanceBootConfigurationRequest
+     * @return ModifyInstanceBootConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInstanceBootConfigurationResponse> modifyInstanceBootConfiguration(ModifyInstanceBootConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstanceBootConfiguration").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceBootConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceBootConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
+     * The instances must be in the Running or Stopped state, and you have no overdue payments for them.</p>
+     * 
+     * @param request the request parameters of ModifyInstanceChargeType  ModifyInstanceChargeTypeRequest
+     * @return ModifyInstanceChargeTypeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInstanceChargeTypeResponse> modifyInstanceChargeType(ModifyInstanceChargeTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstanceChargeType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceChargeTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceChargeTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyLoadBalancerAttribute  ModifyLoadBalancerAttributeRequest
+     * @return ModifyLoadBalancerAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyLoadBalancerAttributeResponse> modifyLoadBalancerAttribute(ModifyLoadBalancerAttributeRequest request) {
         try {
@@ -2381,6 +4198,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 5 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyNetworkAttribute  ModifyNetworkAttributeRequest
+     * @return ModifyNetworkAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyNetworkAttributeResponse> modifyNetworkAttribute(ModifyNetworkAttributeRequest request) {
         try {
@@ -2395,6 +4222,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyNetworkInterfaceAttribute  ModifyNetworkInterfaceAttributeRequest
+     * @return ModifyNetworkInterfaceAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyNetworkInterfaceAttributeResponse> modifyNetworkInterfaceAttribute(ModifyNetworkInterfaceAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyNetworkInterfaceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyNetworkInterfaceAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyNetworkInterfaceAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyPrepayInstanceSpec  ModifyPrepayInstanceSpecRequest
+     * @return ModifyPrepayInstanceSpecResponse
+     */
     @Override
     public CompletableFuture<ModifyPrepayInstanceSpecResponse> modifyPrepayInstanceSpec(ModifyPrepayInstanceSpecRequest request) {
         try {
@@ -2409,6 +4258,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 5 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifySecurityGroupAttribute  ModifySecurityGroupAttributeRequest
+     * @return ModifySecurityGroupAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifySecurityGroupAttributeResponse> modifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest request) {
         try {
@@ -2423,6 +4282,52 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySnapshotAttribute  ModifySnapshotAttributeRequest
+     * @return ModifySnapshotAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifySnapshotAttributeResponse> modifySnapshotAttribute(ModifySnapshotAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySnapshotAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySnapshotAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySnapshotAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySnatEntry  ModifySnatEntryRequest
+     * @return ModifySnatEntryResponse
+     */
+    @Override
+    public CompletableFuture<ModifySnatEntryResponse> modifySnatEntry(ModifySnatEntryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySnatEntry").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySnatEntryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySnatEntryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 5 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyVSwitchAttribute  ModifyVSwitchAttributeRequest
+     * @return ModifyVSwitchAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifyVSwitchAttributeResponse> modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request) {
         try {
@@ -2437,6 +4342,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MountInstanceSDG  MountInstanceSDGRequest
+     * @return MountInstanceSDGResponse
+     */
+    @Override
+    public CompletableFuture<MountInstanceSDGResponse> mountInstanceSDG(MountInstanceSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MountInstanceSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MountInstanceSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MountInstanceSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PreloadRegionSDG  PreloadRegionSDGRequest
+     * @return PreloadRegionSDGResponse
+     */
+    @Override
+    public CompletableFuture<PreloadRegionSDGResponse> preloadRegionSDG(PreloadRegionSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PreloadRegionSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreloadRegionSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreloadRegionSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PrepareUpload  PrepareUploadRequest
+     * @return PrepareUploadResponse
+     */
+    @Override
+    public CompletableFuture<PrepareUploadResponse> prepareUpload(PrepareUploadRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PrepareUpload").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PrepareUploadResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PrepareUploadResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PushApplicationData  PushApplicationDataRequest
+     * @return PushApplicationDataResponse
+     */
     @Override
     public CompletableFuture<PushApplicationDataResponse> pushApplicationData(PushApplicationDataRequest request) {
         try {
@@ -2451,6 +4414,70 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PutBucket  PutBucketRequest
+     * @return PutBucketResponse
+     */
+    @Override
+    public CompletableFuture<PutBucketResponse> putBucket(PutBucketRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutBucket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutBucketResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PutBucketAcl  PutBucketAclRequest
+     * @return PutBucketAclResponse
+     */
+    @Override
+    public CompletableFuture<PutBucketAclResponse> putBucketAcl(PutBucketAclRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutBucketAcl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketAclResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutBucketAclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can configure up to 1,000 rules.</p>
+     * <ul>
+     * <li>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of PutBucketLifecycle  PutBucketLifecycleRequest
+     * @return PutBucketLifecycleResponse
+     */
+    @Override
+    public CompletableFuture<PutBucketLifecycleResponse> putBucketLifecycle(PutBucketLifecycleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutBucketLifecycle").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketLifecycleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutBucketLifecycleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReInitDisk  ReInitDiskRequest
+     * @return ReInitDiskResponse
+     */
     @Override
     public CompletableFuture<ReInitDiskResponse> reInitDisk(ReInitDiskRequest request) {
         try {
@@ -2465,6 +4492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebootAICInstance  RebootAICInstanceRequest
+     * @return RebootAICInstanceResponse
+     */
     @Override
     public CompletableFuture<RebootAICInstanceResponse> rebootAICInstance(RebootAICInstanceRequest request) {
         try {
@@ -2479,6 +4510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebootARMServerInstance  RebootARMServerInstanceRequest
+     * @return RebootARMServerInstanceResponse
+     */
     @Override
     public CompletableFuture<RebootARMServerInstanceResponse> rebootARMServerInstance(RebootARMServerInstanceRequest request) {
         try {
@@ -2493,6 +4528,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  Only instances that are in the Running state can be restarted.</p>
+     * <ul>
+     * <li>If the operation is successful, the status of the instance becomes Starting.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RebootInstance  RebootInstanceRequest
+     * @return RebootInstanceResponse
+     */
     @Override
     public CompletableFuture<RebootInstanceResponse> rebootInstance(RebootInstanceRequest request) {
         try {
@@ -2507,6 +4552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebootInstances  RebootInstancesRequest
+     * @return RebootInstancesResponse
+     */
     @Override
     public CompletableFuture<RebootInstancesResponse> rebootInstances(RebootInstancesRequest request) {
         try {
@@ -2521,6 +4570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecoverAICInstance  RecoverAICInstanceRequest
+     * @return RecoverAICInstanceResponse
+     */
     @Override
     public CompletableFuture<RecoverAICInstanceResponse> recoverAICInstance(RecoverAICInstanceRequest request) {
         try {
@@ -2535,6 +4588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReinitInstance  ReinitInstanceRequest
+     * @return ReinitInstanceResponse
+     */
     @Override
     public CompletableFuture<ReinitInstanceResponse> reinitInstance(ReinitInstanceRequest request) {
         try {
@@ -2549,6 +4606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReinitInstances  ReinitInstancesRequest
+     * @return ReinitInstancesResponse
+     */
     @Override
     public CompletableFuture<ReinitInstancesResponse> reinitInstances(ReinitInstancesRequest request) {
         try {
@@ -2563,6 +4624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseAICInstance  ReleaseAICInstanceRequest
+     * @return ReleaseAICInstanceResponse
+     */
     @Override
     public CompletableFuture<ReleaseAICInstanceResponse> releaseAICInstance(ReleaseAICInstanceRequest request) {
         try {
@@ -2577,6 +4642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseARMServerInstance  ReleaseARMServerInstanceRequest
+     * @return ReleaseARMServerInstanceResponse
+     */
     @Override
     public CompletableFuture<ReleaseARMServerInstanceResponse> releaseARMServerInstance(ReleaseARMServerInstanceRequest request) {
         try {
@@ -2591,6 +4660,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10,000 times per second per account.</p>
+     * <ul>
+     * <li>The maximum number of times that each user can call this operation per second is 50.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
+     * @return ReleaseInstanceResponse
+     */
     @Override
     public CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request) {
         try {
@@ -2605,6 +4684,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleasePostPaidInstance  ReleasePostPaidInstanceRequest
+     * @return ReleasePostPaidInstanceResponse
+     */
     @Override
     public CompletableFuture<ReleasePostPaidInstanceResponse> releasePostPaidInstance(ReleasePostPaidInstanceRequest request) {
         try {
@@ -2619,6 +4702,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleasePrePaidInstance  ReleasePrePaidInstanceRequest
+     * @return ReleasePrePaidInstanceResponse
+     */
     @Override
     public CompletableFuture<ReleasePrePaidInstanceResponse> releasePrePaidInstance(ReleasePrePaidInstanceRequest request) {
         try {
@@ -2633,6 +4720,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveBackendServers  RemoveBackendServersRequest
+     * @return RemoveBackendServersResponse
+     */
     @Override
     public CompletableFuture<RemoveBackendServersResponse> removeBackendServers(RemoveBackendServersRequest request) {
         try {
@@ -2647,6 +4744,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveInstanceSDG  RemoveInstanceSDGRequest
+     * @return RemoveInstanceSDGResponse
+     */
+    @Override
+    public CompletableFuture<RemoveInstanceSDGResponse> removeInstanceSDG(RemoveInstanceSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveInstanceSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveInstanceSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveInstanceSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemovePublicIpsFromEpnInstance  RemovePublicIpsFromEpnInstanceRequest
+     * @return RemovePublicIpsFromEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<RemovePublicIpsFromEpnInstanceResponse> removePublicIpsFromEpnInstance(RemovePublicIpsFromEpnInstanceRequest request) {
         try {
@@ -2661,6 +4780,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveSDG  RemoveSDGRequest
+     * @return RemoveSDGResponse
+     */
+    @Override
+    public CompletableFuture<RemoveSDGResponse> removeSDG(RemoveSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveSDG").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveVSwitchesFromEpnInstance  RemoveVSwitchesFromEpnInstanceRequest
+     * @return RemoveVSwitchesFromEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<RemoveVSwitchesFromEpnInstanceResponse> removeVSwitchesFromEpnInstance(RemoveVSwitchesFromEpnInstanceRequest request) {
         try {
@@ -2675,6 +4816,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewARMServerInstance  RenewARMServerInstanceRequest
+     * @return RenewARMServerInstanceResponse
+     */
     @Override
     public CompletableFuture<RenewARMServerInstanceResponse> renewARMServerInstance(RenewARMServerInstanceRequest request) {
         try {
@@ -2689,6 +4834,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
     @Override
     public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
         try {
@@ -2703,6 +4852,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RescaleApplication  RescaleApplicationRequest
+     * @return RescaleApplicationResponse
+     */
     @Override
     public CompletableFuture<RescaleApplicationResponse> rescaleApplication(RescaleApplicationRequest request) {
         try {
@@ -2717,6 +4870,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RescaleDeviceService  RescaleDeviceServiceRequest
+     * @return RescaleDeviceServiceResponse
+     */
     @Override
     public CompletableFuture<RescaleDeviceServiceResponse> rescaleDeviceService(RescaleDeviceServiceRequest request) {
         try {
@@ -2731,6 +4888,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetAICInstance  ResetAICInstanceRequest
+     * @return ResetAICInstanceResponse
+     */
     @Override
     public CompletableFuture<ResetAICInstanceResponse> resetAICInstance(ResetAICInstanceRequest request) {
         try {
@@ -2745,6 +4906,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetDeviceInstance  ResetDeviceInstanceRequest
+     * @return ResetDeviceInstanceResponse
+     */
     @Override
     public CompletableFuture<ResetDeviceInstanceResponse> resetDeviceInstance(ResetDeviceInstanceRequest request) {
         try {
@@ -2759,6 +4924,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>The disk must be in the In Use (In_Use) or Unattached (Available) state.</li>
+     * <li>The instance to which the disk is attached must be in the Stopped (Stopped) state. You can call the <a href="~~StopInstance~~">StopInstance</a> operation to stop an instance.</li>
+     * <li>The specified snapshot must be created from the disk specified by the DiskId parameter.</li>
+     * <li>If the response contains <code>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</code> when you query information about an ENS instance by calling the <a href="~~DescribeInstances~~">DescribeInstances</a> operation, the instance is locked for security reasons and no operations are allowed on the instance.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ResetDisk  ResetDiskRequest
+     * @return ResetDiskResponse
+     */
     @Override
     public CompletableFuture<ResetDiskResponse> resetDisk(ResetDiskRequest request) {
         try {
@@ -2773,6 +4951,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeDisk  ResizeDiskRequest
+     * @return ResizeDiskResponse
+     */
     @Override
     public CompletableFuture<ResizeDiskResponse> resizeDisk(ResizeDiskRequest request) {
         try {
@@ -2787,6 +4969,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartDeviceInstance  RestartDeviceInstanceRequest
+     * @return RestartDeviceInstanceResponse
+     */
     @Override
     public CompletableFuture<RestartDeviceInstanceResponse> restartDeviceInstance(RestartDeviceInstanceRequest request) {
         try {
@@ -2801,34 +4987,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<RestartWorkflowResponse> restartWorkflow(RestartWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartWorkflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RestartWorkflowResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<RetryWorkflowResponse> retryWorkflow(RetryWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RetryWorkflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RetryWorkflowResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * <b>description</b> :
+     * <p>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</p>
+     * <ul>
+     * <li>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</li>
+     * <li>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RevokeSecurityGroup  RevokeSecurityGroupRequest
+     * @return RevokeSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<RevokeSecurityGroupResponse> revokeSecurityGroup(RevokeSecurityGroupRequest request) {
         try {
@@ -2843,6 +5012,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of RevokeSecurityGroupEgress  RevokeSecurityGroupEgressRequest
+     * @return RevokeSecurityGroupEgressResponse
+     */
     @Override
     public CompletableFuture<RevokeSecurityGroupEgressResponse> revokeSecurityGroupEgress(RevokeSecurityGroupEgressRequest request) {
         try {
@@ -2857,6 +5035,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RollbackApplication  RollbackApplicationRequest
+     * @return RollbackApplicationResponse
+     */
     @Override
     public CompletableFuture<RollbackApplicationResponse> rollbackApplication(RollbackApplicationRequest request) {
         try {
@@ -2871,20 +5053,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<RollbackWorkflowResponse> rollbackWorkflow(RollbackWorkflowRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RollbackWorkflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RollbackWorkflowResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RollbackWorkflowResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of RunInstances  RunInstancesRequest
+     * @return RunInstancesResponse
+     */
     @Override
     public CompletableFuture<RunInstancesResponse> runInstances(RunInstancesRequest request) {
         try {
@@ -2899,6 +5071,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunServiceSchedule  RunServiceScheduleRequest
+     * @return RunServiceScheduleResponse
+     */
     @Override
     public CompletableFuture<RunServiceScheduleResponse> runServiceSchedule(RunServiceScheduleRequest request) {
         try {
@@ -2913,6 +5089,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSDG  SaveSDGRequest
+     * @return SaveSDGResponse
+     */
+    @Override
+    public CompletableFuture<SaveSDGResponse> saveSDG(SaveSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveSDG").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetBackendServers  SetBackendServersRequest
+     * @return SetBackendServersResponse
+     */
     @Override
     public CompletableFuture<SetBackendServersResponse> setBackendServers(SetBackendServersRequest request) {
         try {
@@ -2927,6 +5131,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetLoadBalancerHTTPListenerAttribute  SetLoadBalancerHTTPListenerAttributeRequest
+     * @return SetLoadBalancerHTTPListenerAttributeResponse
+     */
     @Override
     public CompletableFuture<SetLoadBalancerHTTPListenerAttributeResponse> setLoadBalancerHTTPListenerAttribute(SetLoadBalancerHTTPListenerAttributeRequest request) {
         try {
@@ -2941,6 +5155,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetLoadBalancerHTTPSListenerAttribute  SetLoadBalancerHTTPSListenerAttributeRequest
+     * @return SetLoadBalancerHTTPSListenerAttributeResponse
+     */
     @Override
     public CompletableFuture<SetLoadBalancerHTTPSListenerAttributeResponse> setLoadBalancerHTTPSListenerAttribute(SetLoadBalancerHTTPSListenerAttributeRequest request) {
         try {
@@ -2955,6 +5179,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetLoadBalancerStatus  SetLoadBalancerStatusRequest
+     * @return SetLoadBalancerStatusResponse
+     */
     @Override
     public CompletableFuture<SetLoadBalancerStatusResponse> setLoadBalancerStatus(SetLoadBalancerStatusRequest request) {
         try {
@@ -2969,6 +5203,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetLoadBalancerTCPListenerAttribute  SetLoadBalancerTCPListenerAttributeRequest
+     * @return SetLoadBalancerTCPListenerAttributeResponse
+     */
     @Override
     public CompletableFuture<SetLoadBalancerTCPListenerAttributeResponse> setLoadBalancerTCPListenerAttribute(SetLoadBalancerTCPListenerAttributeRequest request) {
         try {
@@ -2984,8 +5228,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetLoadBalancerUDPListenerAttribute  SetLoadBalancerUDPListenerAttributeRequest
+     * @return SetLoadBalancerUDPListenerAttributeResponse
      */
     @Override
     public CompletableFuture<SetLoadBalancerUDPListenerAttributeResponse> setLoadBalancerUDPListenerAttribute(SetLoadBalancerUDPListenerAttributeRequest request) {
@@ -3001,6 +5251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartEpnInstance  StartEpnInstanceRequest
+     * @return StartEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<StartEpnInstanceResponse> startEpnInstance(StartEpnInstanceRequest request) {
         try {
@@ -3015,6 +5269,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call the operation only when the instance is in the Stopped state.</p>
+     * <ul>
+     * <li>If the operation is successful, the status of the instance becomes Starting.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of StartInstance  StartInstanceRequest
+     * @return StartInstanceResponse
+     */
     @Override
     public CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request) {
         try {
@@ -3029,6 +5293,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartInstances  StartInstancesRequest
+     * @return StartInstancesResponse
+     */
     @Override
     public CompletableFuture<StartInstancesResponse> startInstances(StartInstancesRequest request) {
         try {
@@ -3043,6 +5311,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of StartLoadBalancerListener  StartLoadBalancerListenerRequest
+     * @return StartLoadBalancerListenerResponse
+     */
     @Override
     public CompletableFuture<StartLoadBalancerListenerResponse> startLoadBalancerListener(StartLoadBalancerListenerRequest request) {
         try {
@@ -3057,6 +5335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartSnatIpForSnatEntry  StartSnatIpForSnatEntryRequest
+     * @return StartSnatIpForSnatEntryResponse
+     */
     @Override
     public CompletableFuture<StartSnatIpForSnatEntryResponse> startSnatIpForSnatEntry(StartSnatIpForSnatEntryRequest request) {
         try {
@@ -3071,6 +5353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopEpnInstance  StopEpnInstanceRequest
+     * @return StopEpnInstanceResponse
+     */
     @Override
     public CompletableFuture<StopEpnInstanceResponse> stopEpnInstance(StopEpnInstanceRequest request) {
         try {
@@ -3085,6 +5371,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation to stop instances that are only in the Running state.</p>
+     * <ul>
+     * <li>If the call is successful, the state of the instance becomes Stopping.</li>
+     * <li>Once the instance is stopped, the state of the instance becomes Stopped.</li>
+     * <li>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of StopInstance  StopInstanceRequest
+     * @return StopInstanceResponse
+     */
     @Override
     public CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request) {
         try {
@@ -3099,6 +5397,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopInstances  StopInstancesRequest
+     * @return StopInstancesResponse
+     */
     @Override
     public CompletableFuture<StopInstancesResponse> stopInstances(StopInstancesRequest request) {
         try {
@@ -3113,6 +5415,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of StopLoadBalancerListener  StopLoadBalancerListenerRequest
+     * @return StopLoadBalancerListenerResponse
+     */
     @Override
     public CompletableFuture<StopLoadBalancerListenerResponse> stopLoadBalancerListener(StopLoadBalancerListenerRequest request) {
         try {
@@ -3127,6 +5439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopSnatIpForSnatEntry  StopSnatIpForSnatEntryRequest
+     * @return StopSnatIpForSnatEntryResponse
+     */
     @Override
     public CompletableFuture<StopSnatIpForSnatEntryResponse> stopSnatIpForSnatEntry(StopSnatIpForSnatEntryRequest request) {
         try {
@@ -3141,20 +5457,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you add tags to a resource, Alibaba Cloud checks the number of existing tags on the resource. If the number exceeds the upper limit, an error message is returned. Only instance resources, such as virtual machines and bare machines, are supported.</p>
+     * 
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
-    public CompletableFuture<TerminateWorkflowResponse> terminateWorkflow(TerminateWorkflowRequest request) {
+    public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TerminateWorkflow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TerminateWorkflowResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourcesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<TerminateWorkflowResponse> future = new CompletableFuture<>();
+            CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of UnAssociateEnsEipAddress  UnAssociateEnsEipAddressRequest
+     * @return UnAssociateEnsEipAddressResponse
+     */
     @Override
     public CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request) {
         try {
@@ -3169,6 +5496,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnassignPrivateIpAddresses  UnassignPrivateIpAddressesRequest
+     * @return UnassignPrivateIpAddressesResponse
+     */
     @Override
     public CompletableFuture<UnassignPrivateIpAddressesResponse> unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request) {
         try {
@@ -3183,6 +5514,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnassociateHaVip  UnassociateHaVipRequest
+     * @return UnassociateHaVipResponse
+     */
+    @Override
+    public CompletableFuture<UnassociateHaVipResponse> unassociateHaVip(UnassociateHaVipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnassociateHaVip").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnassociateHaVipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnassociateHaVipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnassociateNetworkAcl  UnassociateNetworkAclRequest
+     * @return UnassociateNetworkAclResponse
+     */
     @Override
     public CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request) {
         try {
@@ -3197,6 +5550,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnloadRegionSDG  UnloadRegionSDGRequest
+     * @return UnloadRegionSDGResponse
+     */
+    @Override
+    public CompletableFuture<UnloadRegionSDGResponse> unloadRegionSDG(UnloadRegionSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnloadRegionSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnloadRegionSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnloadRegionSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnmountInstanceSDG  UnmountInstanceSDGRequest
+     * @return UnmountInstanceSDGResponse
+     */
+    @Override
+    public CompletableFuture<UnmountInstanceSDGResponse> unmountInstanceSDG(UnmountInstanceSDGRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnmountInstanceSDG").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnmountInstanceSDGResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnmountInstanceSDGResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UntagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEnsSaleControl  UpdateEnsSaleControlRequest
+     * @return UpdateEnsSaleControlResponse
+     */
     @Override
     public CompletableFuture<UpdateEnsSaleControlResponse> updateEnsSaleControl(UpdateEnsSaleControlRequest request) {
         try {
@@ -3211,6 +5622,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeAICInstanceImage  UpgradeAICInstanceImageRequest
+     * @return UpgradeAICInstanceImageResponse
+     */
     @Override
     public CompletableFuture<UpgradeAICInstanceImageResponse> upgradeAICInstanceImage(UpgradeAICInstanceImageRequest request) {
         try {
@@ -3225,6 +5640,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeApplication  UpgradeApplicationRequest
+     * @return UpgradeApplicationResponse
+     */
     @Override
     public CompletableFuture<UpgradeApplicationResponse> upgradeApplication(UpgradeApplicationRequest request) {
         try {

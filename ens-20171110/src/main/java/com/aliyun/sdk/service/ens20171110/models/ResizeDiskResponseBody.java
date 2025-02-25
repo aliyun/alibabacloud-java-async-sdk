@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeDiskResponseBody} extends {@link TeaModel}
  *
  * <p>ResizeDiskResponseBody</p>
  */
 public class ResizeDiskResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ResizeDiskResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ResizeDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21522202681****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +66,10 @@ public class ResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>689412F2-8402-181E-8C87-1EF62331DCC4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

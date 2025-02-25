@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePackageStateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePackageStateResponseBody</p>
  */
 public class DescribePackageStateResponseBody extends TeaModel {
-    @NameInMap("IssuedCount")
+    @com.aliyun.core.annotation.NameInMap("IssuedCount")
     private Long issuedCount;
 
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("UsedCount")
+    @com.aliyun.core.annotation.NameInMap("UsedCount")
     private Long usedCount;
 
     private DescribePackageStateResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribePackageStateResponseBody extends TeaModel {
         private Long usedCount; 
 
         /**
-         * IssuedCount.
+         * <p>The number of issued certificates of the specified specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder issuedCount(Long issuedCount) {
             this.issuedCount = issuedCount;
@@ -94,7 +102,27 @@ public class DescribePackageStateResponseBody extends TeaModel {
         }
 
         /**
-         * ProductCode.
+         * <p>The specifications of the certificate resource plan. Valid values:</p>
+         * <ul>
+         * <li><strong>digicert-free-1-free</strong>: DigiCert single-domain DV certificate in a three-month free trial, available only on the China site (aliyun.com).</li>
+         * <li><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).</li>
+         * <li><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</li>
+         * <li><strong>symantec-ov-1-personal</strong>: DigiCert single-domain OV certificate.</li>
+         * <li><strong>symantec-ov-w-personal</strong>: DigiCert wildcard OV certificate.</li>
+         * <li><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</li>
+         * <li><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</li>
+         * <li><strong>geotrust-ov-1-personal</strong>: GeoTrust single-domain OV certificate.</li>
+         * <li><strong>geotrust-ov-w-personal</strong>: GeoTrust wildcard OV certificate.</li>
+         * <li><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</li>
+         * <li><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</li>
+         * <li><strong>globalsign-ov-1-personal</strong>: GlobalSign single-domain OV certificate.</li>
+         * <li><strong>globalsign-ov-w-advanced</strong>: GlobalSign wildcard OV certificate.</li>
+         * <li><strong>cfca-ov-1-personal</strong>: CFCA single-domain OV certificate, available only on the China site (aliyun.com).</li>
+         * <li><strong>cfca-ev-w-advanced</strong>: CFCA wildcard OV certificate, available only on the China site (aliyun.com).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>symantec-free-1-free</p>
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -102,7 +130,10 @@ public class DescribePackageStateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CFA380-1C58-45C7-8075-06215F3DB681</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +141,10 @@ public class DescribePackageStateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of purchased certificate resource plans of the specified specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +152,13 @@ public class DescribePackageStateResponseBody extends TeaModel {
         }
 
         /**
-         * UsedCount.
+         * <p>The number of certificate applications that you submitted for certificates of the specified specifications.</p>
+         * <blockquote>
+         * <p>: A successful call of the <a href="https://help.aliyun.com/document_detail/204087.html">CreateCertificateForPackageRequest</a>, <a href="https://help.aliyun.com/document_detail/164105.html">CreateCertificateRequest</a>, or <a href="https://help.aliyun.com/document_detail/178732.html">CreateCertificateWithCsrRequest</a> operation is counted as one a certificate application, regardless of whether the certificate is issued.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder usedCount(Long usedCount) {
             this.usedCount = usedCount;

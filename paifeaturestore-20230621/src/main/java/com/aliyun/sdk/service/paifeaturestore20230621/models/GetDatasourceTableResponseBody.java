@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatasourceTableResponseBody} extends {@link TeaModel}
  *
  * <p>GetDatasourceTableResponseBody</p>
  */
 public class GetDatasourceTableResponseBody extends TeaModel {
-    @NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    private java.util.List<Fields> fields;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private GetDatasourceTableResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class GetDatasourceTableResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -57,14 +62,14 @@ public class GetDatasourceTableResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String requestId; 
         private String tableName; 
 
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -91,14 +96,20 @@ public class GetDatasourceTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDatasourceTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasourceTableResponseBody</p>
+     */
     public static class Fields extends TeaModel {
-        @NameInMap("Attributes")
-        private java.util.List < String > attributes;
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private java.util.List<String> attributes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {
@@ -118,7 +129,7 @@ public class GetDatasourceTableResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -137,14 +148,14 @@ public class GetDatasourceTableResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private String name; 
             private String type; 
 
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }

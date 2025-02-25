@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateParameterGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateParameterGroupResponseBody</p>
  */
 public class CreateParameterGroupResponseBody extends TeaModel {
-    @NameInMap("ParameterGroupId")
+    @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
     private String parameterGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateParameterGroupResponseBody(Builder builder) {
@@ -50,10 +55,13 @@ public class CreateParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the parameter template.
-         * <p>
+         * <p>The ID of the parameter template.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeParameterGroups](~~207178~~) operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.
+         * <strong>example:</strong>
+         * <p>pcpg-**************</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.parameterGroupId = parameterGroupId;
@@ -61,7 +69,10 @@ public class CreateParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>514D1D87-E243-4A5F-A87D-2785C3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

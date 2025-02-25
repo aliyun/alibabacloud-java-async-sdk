@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpsecServerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIpsecServerResponseBody</p>
  */
 public class CreateIpsecServerResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("IpsecServerId")
+    @com.aliyun.core.annotation.NameInMap("IpsecServerId")
     private String ipsecServerId;
 
-    @NameInMap("IpsecServerName")
+    @com.aliyun.core.annotation.NameInMap("IpsecServerName")
     private String ipsecServerName;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private CreateIpsecServerResponseBody(Builder builder) {
@@ -98,10 +103,11 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         private String vpnGatewayId; 
 
         /**
-         * The time when the IPsec server was created.
-         * <p>
+         * <p>The time when the IPsec server was created.</p>
+         * <p>T is used as a delimiter. Z indicates that the time is in UTC.</p>
          * 
-         * T is used as a delimiter. Z indicates that the time is in UTC.
+         * <strong>example:</strong>
+         * <p>2021-02-22T03:24:28Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -109,7 +115,10 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The IPsec server ID.
+         * <p>The IPsec server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iss-bp1jougp8cfsbo8y9****</p>
          */
         public Builder ipsecServerId(String ipsecServerId) {
             this.ipsecServerId = ipsecServerId;
@@ -117,7 +126,10 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The IPsec server name.
+         * <p>The IPsec server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ipsecServerName(String ipsecServerName) {
             this.ipsecServerName = ipsecServerName;
@@ -125,7 +137,10 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the VPN gateway is deployed.
+         * <p>The ID of the region where the VPN gateway is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -133,7 +148,10 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>690A967E-D4CD-4B69-8C78-94FE828BA10B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +159,10 @@ public class CreateIpsecServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp17lofy9fd0dnvzv****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;

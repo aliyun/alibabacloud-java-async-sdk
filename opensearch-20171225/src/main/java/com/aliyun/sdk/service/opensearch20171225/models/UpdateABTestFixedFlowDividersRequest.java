@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateABTestFixedFlowDividersRequest</p>
  */
 public class UpdateABTestFixedFlowDividersRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("sceneId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("sceneId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Integer sceneId;
 
-    @Path
-    @NameInMap("groupId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Integer groupId;
 
-    @Path
-    @NameInMap("experimentId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("experimentId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Integer experimentId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < String > body;
 
     private UpdateABTestFixedFlowDividersRequest(Builder builder) {
@@ -114,7 +113,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -123,7 +122,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * 20404
+         * The scenario ID.
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -132,7 +131,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * 13467
+         * The ID of the test group.
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -141,7 +140,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * 12889
+         * The test ID.
          */
         public Builder experimentId(Integer experimentId) {
             this.putPathParameter("experimentId", experimentId);
@@ -150,7 +149,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.List < String > body) {
             this.putBodyParameter("body", body);

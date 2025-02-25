@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDevicesRequest} extends {@link RequestModel}
  *
  * <p>AddDevicesRequest</p>
  */
 public class AddDevicesRequest extends Request {
-    @Query
-    @NameInMap("ClientType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer clientType;
 
-    @Query
-    @NameInMap("DeviceIds")
-    @Validation(required = true)
-    private java.util.List < String > deviceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceIds;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private AddDevicesRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class AddDevicesRequest extends Request {
     /**
      * @return deviceIds
      */
-    public java.util.List < String > getDeviceIds() {
+    public java.util.List<String> getDeviceIds() {
         return this.deviceIds;
     }
 
@@ -69,7 +74,7 @@ public class AddDevicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddDevicesRequest, Builder> {
         private Integer clientType; 
-        private java.util.List < String > deviceIds; 
+        private java.util.List<String> deviceIds; 
         private String regionId; 
 
         private Builder() {
@@ -84,11 +89,16 @@ public class AddDevicesRequest extends Request {
         } 
 
         /**
-         * The type of the Alibaba Cloud Workspace client that runs on the device.
-         * <p>
+         * <p>The type of the client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: hardware client.</li>
+         * <li>2: software client.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: the hardware client
-         * *   2: the software client
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder clientType(Integer clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -97,16 +107,20 @@ public class AddDevicesRequest extends Request {
         }
 
         /**
-         * The list of devices.
+         * <p>The IDs of the devices. You can specify up to 200 IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceIds(java.util.List < String > deviceIds) {
+        public Builder deviceIds(java.util.List<String> deviceIds) {
             this.putQueryParameter("DeviceIds", deviceIds);
             this.deviceIds = deviceIds;
             return this;
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

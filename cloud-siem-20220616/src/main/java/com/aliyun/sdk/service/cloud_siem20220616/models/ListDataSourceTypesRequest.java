@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceTypesRequest</p>
  */
 public class ListDataSourceTypesRequest extends Request {
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListDataSourceTypesRequest(Builder builder) {
@@ -69,7 +68,13 @@ public class ListDataSourceTypesRequest extends Request {
         } 
 
         /**
-         * CloudCode.
+         * The code of the third-party cloud service.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   qcloud
+         * *   hcloud
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -78,7 +83,11 @@ public class ListDataSourceTypesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

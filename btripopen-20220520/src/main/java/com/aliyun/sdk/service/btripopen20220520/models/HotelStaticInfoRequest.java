@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelStaticInfoRequest} extends {@link RequestModel}
  *
  * <p>HotelStaticInfoRequest</p>
  */
 public class HotelStaticInfoRequest extends Request {
-    @Query
-    @NameInMap("hotel_ids")
-    @Validation(required = true)
-    private java.util.List < String > hotelIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hotel_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> hotelIds;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelStaticInfoRequest(Builder builder) {
@@ -43,7 +48,7 @@ public class HotelStaticInfoRequest extends Request {
     /**
      * @return hotelIds
      */
-    public java.util.List < String > getHotelIds() {
+    public java.util.List<String> getHotelIds() {
         return this.hotelIds;
     }
 
@@ -55,7 +60,7 @@ public class HotelStaticInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<HotelStaticInfoRequest, Builder> {
-        private java.util.List < String > hotelIds; 
+        private java.util.List<String> hotelIds; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -69,9 +74,9 @@ public class HotelStaticInfoRequest extends Request {
         } 
 
         /**
-         * hotel_ids.
+         * <p>This parameter is required.</p>
          */
-        public Builder hotelIds(java.util.List < String > hotelIds) {
+        public Builder hotelIds(java.util.List<String> hotelIds) {
             String hotelIdsShrink = shrink(hotelIds, "hotel_ids", "json");
             this.putQueryParameter("hotel_ids", hotelIdsShrink);
             this.hotelIds = hotelIds;

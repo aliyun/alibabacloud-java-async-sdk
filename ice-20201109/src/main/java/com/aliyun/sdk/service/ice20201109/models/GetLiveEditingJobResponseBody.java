@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveEditingJobResponseBody</p>
  */
 public class GetLiveEditingJobResponseBody extends TeaModel {
-    @NameInMap("LiveEditingJob")
+    @com.aliyun.core.annotation.NameInMap("LiveEditingJob")
     private LiveEditingJob liveEditingJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLiveEditingJobResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LiveEditingJob.
+         * <p>The information about the live editing job.</p>
          */
         public Builder liveEditingJob(LiveEditingJob liveEditingJob) {
             this.liveEditingJob = liveEditingJob;
@@ -58,7 +63,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class LiveStreamConfig extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private LiveStreamConfig(Builder builder) {
@@ -122,7 +136,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             private String streamName; 
 
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -130,7 +147,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -138,7 +158,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>streamName</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -152,8 +175,14 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class MediaProduceConfig extends TeaModel {
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
         private MediaProduceConfig(Builder builder) {
@@ -179,7 +208,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             private String mode; 
 
             /**
-             * Mode.
+             * <p>The editing mode. Default value: Accurate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accurate</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -193,26 +225,32 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class OutputMediaConfig extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private Long bitrate;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("MediaURL")
+        @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("VodTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("VodTemplateGroupId")
         private String vodTemplateGroupId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private OutputMediaConfig(Builder builder) {
@@ -292,7 +330,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the output file. Unit: Kbit/s. You can leave this parameter empty. The default value is the maximum bitrate of the input materials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bitrate(Long bitrate) {
                 this.bitrate = bitrate;
@@ -300,7 +341,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>If OutputMediaTarget is set to vod-media, this parameter indicates the file name of the output file. The value contains the file name extension but not the path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.mp4</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -308,7 +352,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the output file. You can leave this parameter empty. The default value is the maximum height of the input materials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -316,7 +363,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaURL.
+             * <p>The URL of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://testice-testbucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://testice-testbucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
              */
             public Builder mediaURL(String mediaURL) {
                 this.mediaURL = mediaURL;
@@ -324,7 +374,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * StorageLocation.
+             * <p>If OutputMediaTarget is set to vod-media, this parameter indicates the storage location of the media asset in ApsaraVideo VOD. The storage location is the path of the file in ApsaraVideo VOD, excluding the prefix http://. Example: outin-xxxxxx.oss-cn-shanghai.aliyuncs.com.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>outin-xxxxxx.oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -332,7 +385,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * VodTemplateGroupId.
+             * <p>The ID of the VOD transcoding template group. If VOD transcoding is not required, set the value to VOD_NO_TRANSCODE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VOD_NO_TRANSCODE</p>
              */
             public Builder vodTemplateGroupId(String vodTemplateGroupId) {
                 this.vodTemplateGroupId = vodTemplateGroupId;
@@ -340,7 +396,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the output file. You can leave this parameter empty. The default value is the maximum width of the input materials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>640</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -354,50 +413,56 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveEditingJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveEditingJobResponseBody</p>
+     */
     public static class LiveEditingJob extends TeaModel {
-        @NameInMap("Clips")
+        @com.aliyun.core.annotation.NameInMap("Clips")
         private String clips;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("LiveStreamConfig")
+        @com.aliyun.core.annotation.NameInMap("LiveStreamConfig")
         private LiveStreamConfig liveStreamConfig;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaProduceConfig")
+        @com.aliyun.core.annotation.NameInMap("MediaProduceConfig")
         private MediaProduceConfig mediaProduceConfig;
 
-        @NameInMap("MediaURL")
+        @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OutputMediaConfig")
+        @com.aliyun.core.annotation.NameInMap("OutputMediaConfig")
         private OutputMediaConfig outputMediaConfig;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private LiveEditingJob(Builder builder) {
@@ -549,7 +614,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Clips.
+             * <p>The clips.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;StartTime&quot;: &quot; 2021-06-21T08:01:00Z&quot;,  &quot;EndTime&quot;: &quot; 2021-06-21T08:03:00Z&quot; }]</p>
              */
             public Builder clips(String clips) {
                 this.clips = clips;
@@ -557,7 +625,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The response code. Note: Pay attention to this parameter if the job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -565,7 +636,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * <p>The time when the live editing job was completed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:52Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -573,7 +647,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the live editing job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:40Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -581,7 +658,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the live editing job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -589,7 +669,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * LiveStreamConfig.
+             * <p>The live editing configurations.</p>
              */
             public Builder liveStreamConfig(LiveStreamConfig liveStreamConfig) {
                 this.liveStreamConfig = liveStreamConfig;
@@ -597,7 +677,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>0cc6ba49eab379332c5b</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -605,7 +688,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaProduceConfig.
+             * <p>The production configurations.</p>
              */
             public Builder mediaProduceConfig(MediaProduceConfig mediaProduceConfig) {
                 this.mediaProduceConfig = mediaProduceConfig;
@@ -613,7 +696,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaURL.
+             * <p>The URL of the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4</a></p>
              */
             public Builder mediaURL(String mediaURL) {
                 this.mediaURL = mediaURL;
@@ -621,7 +707,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The returned message. Note: Pay attention to this parameter if the job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specific parameter LiveStreamConfig is not valid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -629,7 +718,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the live editing job was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-23T13:33:49Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -637,7 +729,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputMediaConfig.
+             * <p>The storage configurations of the output file.</p>
              */
             public Builder outputMediaConfig(OutputMediaConfig outputMediaConfig) {
                 this.outputMediaConfig = outputMediaConfig;
@@ -645,7 +737,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the live editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -653,7 +748,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the live editing job. Valid values: Init, Queuing, Processing, Success, and Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -661,7 +759,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key&quot;: &quot;value&quot;}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

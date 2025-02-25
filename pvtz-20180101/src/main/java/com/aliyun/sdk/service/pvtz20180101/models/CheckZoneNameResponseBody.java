@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckZoneNameResponseBody} extends {@link TeaModel}
  *
  * <p>CheckZoneNameResponseBody</p>
  */
 public class CheckZoneNameResponseBody extends TeaModel {
-    @NameInMap("Check")
+    @com.aliyun.core.annotation.NameInMap("Check")
     private Boolean check;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckZoneNameResponseBody(Builder builder) {
@@ -62,7 +62,14 @@ public class CheckZoneNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Check.
+         * <p>Indicates whether the zone name can be added. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder check(Boolean check) {
             this.check = check;
@@ -70,7 +77,10 @@ public class CheckZoneNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA29B88F-A571-4123-80D5-768AC2F7F806</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +88,10 @@ public class CheckZoneNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

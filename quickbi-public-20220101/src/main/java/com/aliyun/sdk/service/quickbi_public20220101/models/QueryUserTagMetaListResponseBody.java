@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserTagMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserTagMetaListResponseBody</p>
  */
 public class QueryUserTagMetaListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryUserTagMetaListResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -72,13 +77,16 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * Queries the metadata list of member tags in an organization.
+         * <p>Queries the metadata list of member tags in an organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,14 +99,20 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserTagMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserTagMetaListResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("TagDescription")
+        @com.aliyun.core.annotation.NameInMap("TagDescription")
         private String tagDescription;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private Result(Builder builder) {

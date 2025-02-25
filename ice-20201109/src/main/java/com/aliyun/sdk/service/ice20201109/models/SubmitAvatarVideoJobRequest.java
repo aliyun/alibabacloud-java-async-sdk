@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAvatarVideoJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitAvatarVideoJobRequest</p>
  */
 public class SubmitAvatarVideoJobRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EditingConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EditingConfig")
     private String editingConfig;
 
-    @Query
-    @NameInMap("InputConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputConfig")
     private String inputConfig;
 
-    @Query
-    @NameInMap("OutputConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputConfig")
     private String outputConfig;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitAvatarVideoJobRequest(Builder builder) {
@@ -142,7 +147,10 @@ public class SubmitAvatarVideoJobRequest extends Request {
         }
 
         /**
-         * InputConfig.
+         * <p>The input configurations of the video rendering job for an avatar. You can specify text, the Object Storage Service (OSS) URL of an audio file, or the ID of a media asset. The audio file must be in the MP3 or WAV format.</p>
+         * <blockquote>
+         * <p> The text must be at least five words in length.</p>
+         * </blockquote>
          */
         public Builder inputConfig(String inputConfig) {
             this.putQueryParameter("InputConfig", inputConfig);

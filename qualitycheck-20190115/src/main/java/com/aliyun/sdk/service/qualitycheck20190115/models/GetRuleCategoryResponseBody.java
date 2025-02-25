@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRuleCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetRuleCategoryResponseBody</p>
  */
 public class GetRuleCategoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleCategoryResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class GetRuleCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRuleCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleCategoryResponseBody</p>
+     */
     public static class RuleCountInfo extends TeaModel {
-        @NameInMap("Select")
+        @com.aliyun.core.annotation.NameInMap("Select")
         private Boolean select;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private RuleCountInfo(Builder builder) {
@@ -212,9 +223,15 @@ public class GetRuleCategoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRuleCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuleCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("RuleCountInfo")
-        private java.util.List < RuleCountInfo> ruleCountInfo;
+        @com.aliyun.core.annotation.NameInMap("RuleCountInfo")
+        private java.util.List<RuleCountInfo> ruleCountInfo;
 
         private Data(Builder builder) {
             this.ruleCountInfo = builder.ruleCountInfo;
@@ -231,17 +248,17 @@ public class GetRuleCategoryResponseBody extends TeaModel {
         /**
          * @return ruleCountInfo
          */
-        public java.util.List < RuleCountInfo> getRuleCountInfo() {
+        public java.util.List<RuleCountInfo> getRuleCountInfo() {
             return this.ruleCountInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleCountInfo> ruleCountInfo; 
+            private java.util.List<RuleCountInfo> ruleCountInfo; 
 
             /**
              * RuleCountInfo.
              */
-            public Builder ruleCountInfo(java.util.List < RuleCountInfo> ruleCountInfo) {
+            public Builder ruleCountInfo(java.util.List<RuleCountInfo> ruleCountInfo) {
                 this.ruleCountInfo = ruleCountInfo;
                 return this;
             }

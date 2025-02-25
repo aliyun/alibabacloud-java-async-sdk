@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterNamesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterNamesResponseBody</p>
  */
 public class ListClusterNamesResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private ListClusterNamesResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6E3D968-529C-5C40-AFDD-133A8B8FD930</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>The result set.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,14 +79,20 @@ public class ListClusterNamesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterNamesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterNamesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {
@@ -122,7 +136,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * description.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +147,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25030</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -138,7 +158,10 @@ public class ListClusterNamesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_index</p>
              */
             public Builder name(String name) {
                 this.name = name;

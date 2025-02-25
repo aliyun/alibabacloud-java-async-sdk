@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCampaignResponseBody} extends {@link TeaModel}
  *
  * <p>GetCampaignResponseBody</p>
  */
 public class GetCampaignResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCampaignResponseBody(Builder builder) {
@@ -111,71 +116,80 @@ public class GetCampaignResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCampaignResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCampaignResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ActualEndTime")
+        @com.aliyun.core.annotation.NameInMap("ActualEndTime")
         private Long actualEndTime;
 
-        @NameInMap("ActualStartTime")
+        @com.aliyun.core.annotation.NameInMap("ActualStartTime")
         private Long actualStartTime;
 
-        @NameInMap("CampaignId")
+        @com.aliyun.core.annotation.NameInMap("CampaignId")
         private String campaignId;
 
-        @NameInMap("CasesAborted")
+        @com.aliyun.core.annotation.NameInMap("CasesAborted")
         private Long casesAborted;
 
-        @NameInMap("CasesConnected")
+        @com.aliyun.core.annotation.NameInMap("CasesConnected")
         private Long casesConnected;
 
-        @NameInMap("CasesUncompleted")
+        @com.aliyun.core.annotation.NameInMap("CasesUncompleted")
         private Long casesUncompleted;
 
-        @NameInMap("CasesUncompletedAfterAttempt")
+        @com.aliyun.core.annotation.NameInMap("CasesUncompletedAfterAttempt")
         private String casesUncompletedAfterAttempt;
 
-        @NameInMap("CasesUncompletedAfterAttempted")
+        @com.aliyun.core.annotation.NameInMap("CasesUncompletedAfterAttempted")
         private Long casesUncompletedAfterAttempted;
 
-        @NameInMap("CompletionRate")
+        @com.aliyun.core.annotation.NameInMap("CompletionRate")
         private Float completionRate;
 
-        @NameInMap("MaxAttemptCount")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+        private String contactFlowId;
+
+        @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
 
-        @NameInMap("MinAttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
         private Long minAttemptInterval;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PlanedEndTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedEndTime")
         private Long planedEndTime;
 
-        @NameInMap("PlanedStartTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedStartTime")
         private Long planedStartTime;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("Simulation")
+        @com.aliyun.core.annotation.NameInMap("Simulation")
         private Boolean simulation;
 
-        @NameInMap("SimulationParameters")
+        @com.aliyun.core.annotation.NameInMap("SimulationParameters")
         private String simulationParameters;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StrategyParameters")
+        @com.aliyun.core.annotation.NameInMap("StrategyParameters")
         private String strategyParameters;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("TotalCases")
+        @com.aliyun.core.annotation.NameInMap("TotalCases")
         private Long totalCases;
 
         private Data(Builder builder) {
@@ -188,6 +202,7 @@ public class GetCampaignResponseBody extends TeaModel {
             this.casesUncompletedAfterAttempt = builder.casesUncompletedAfterAttempt;
             this.casesUncompletedAfterAttempted = builder.casesUncompletedAfterAttempted;
             this.completionRate = builder.completionRate;
+            this.contactFlowId = builder.contactFlowId;
             this.maxAttemptCount = builder.maxAttemptCount;
             this.minAttemptInterval = builder.minAttemptInterval;
             this.name = builder.name;
@@ -272,6 +287,13 @@ public class GetCampaignResponseBody extends TeaModel {
          */
         public Float getCompletionRate() {
             return this.completionRate;
+        }
+
+        /**
+         * @return contactFlowId
+         */
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         /**
@@ -375,6 +397,7 @@ public class GetCampaignResponseBody extends TeaModel {
             private String casesUncompletedAfterAttempt; 
             private Long casesUncompletedAfterAttempted; 
             private Float completionRate; 
+            private String contactFlowId; 
             private Long maxAttemptCount; 
             private Long minAttemptInterval; 
             private String name; 
@@ -458,6 +481,14 @@ public class GetCampaignResponseBody extends TeaModel {
              */
             public Builder completionRate(Float completionRate) {
                 this.completionRate = completionRate;
+                return this;
+            }
+
+            /**
+             * ContactFlowId.
+             */
+            public Builder contactFlowId(String contactFlowId) {
+                this.contactFlowId = contactFlowId;
                 return this;
             }
 

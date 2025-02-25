@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskReplicaGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateDiskReplicaGroupRequest</p>
  */
 public class CreateDiskReplicaGroupRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DestinationRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationRegionId;
 
-    @Query
-    @NameInMap("DestinationZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationZoneId;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String groupName;
 
-    @Query
-    @NameInMap("RPO")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RPO")
     private Long RPO;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceZoneId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateDiskReplicaGroupRequest(Builder builder) {
         super(builder);
@@ -162,7 +167,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -177,7 +182,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String sourceZoneId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -199,10 +204,13 @@ public class CreateDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * The bandwidth value. Unit: Kbit/s.
-         * <p>
+         * <p>The bandwidth value. Unit: Mbit/s.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
-         * >  This parameter is unavailable.
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -211,7 +219,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -220,7 +231,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The description of the replication pair-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the replication pair-consistent group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -229,7 +243,11 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the secondary site.
+         * <p>The region ID of the secondary site.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -238,7 +256,11 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary site.
+         * <p>The zone ID of the secondary site.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-e</p>
          */
         public Builder destinationZoneId(String destinationZoneId) {
             this.putQueryParameter("DestinationZoneId", destinationZoneId);
@@ -247,7 +269,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myreplicagrouptest</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -256,7 +281,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The RPO of the replication pair-consistent group. Unit: seconds. Set the value to 900.
+         * <p>The RPO of the replication pair-consistent group. Unit: seconds. Valid value: 900.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -265,7 +293,11 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the replication pair-consistent group. The primary site is deployed in this region.
+         * <p>The ID of the region in which to create the replication pair-consistent group. The primary site is deployed in the specified region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,7 +306,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the replication group.
+         * <p>The ID of the resource group to which the replication pair-consistent group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvs*******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -283,7 +318,11 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary site.
+         * <p>The zone ID of the primary site.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-f</p>
          */
         public Builder sourceZoneId(String sourceZoneId) {
             this.putQueryParameter("SourceZoneId", sourceZoneId);
@@ -292,9 +331,9 @@ public class CreateDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The resource tags. You can specify up to 20 tags.
+         * <p>The tags. Up to 20 tags are supported.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -307,11 +346,17 @@ public class CreateDiskReplicaGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDiskReplicaGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDiskReplicaGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -346,7 +391,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <p>The key of tag N of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,7 +402,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
+             * <p>The value of tag N of the replication pair-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

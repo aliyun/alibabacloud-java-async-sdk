@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeActiveOperationTasksRequest</p>
  */
 public class DescribeActiveOperationTasksRequest extends Request {
-    @Query
-    @NameInMap("AllowCancel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowCancel")
     private Integer allowCancel;
 
-    @Query
-    @NameInMap("AllowChange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowChange")
     private Integer allowChange;
 
-    @Query
-    @NameInMap("ChangeLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeLevel")
     private String changeLevel;
 
-    @Query
-    @NameInMap("DbType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbType")
     private String dbType;
 
-    @Query
-    @NameInMap("InsName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InsName")
     private String insName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductId")
     private String productId;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Query
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
     private DescribeActiveOperationTasksRequest(Builder builder) {
@@ -252,7 +257,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * Specifies whether the task can be canceled.
+         * <p>Specifies whether to allow the cancellation operation. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The cancellation operation is not allowed.</li>
+         * <li><strong>1</strong>: The cancellation operation is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -261,7 +273,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether the time can be changed. Valid values: -**0**: The time cannot be changed. **1**: The time can be changed.
+         * <p>Specifies whether to allow the modification operation. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The modification operation is not allowed.</li>
+         * <li><strong>1</strong>: The modification operation is allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowChange(Integer allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -270,7 +289,15 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The change type.
+         * <p>The type of task configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong> (default): The configurations of all O&amp;M tasks are changed.</li>
+         * <li><strong>S0</strong>: The configurations of tasks initiated to fix exceptions are changed.</li>
+         * <li><strong>S1</strong>: The configurations of system O&amp;M tasks are changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -279,7 +306,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -288,7 +318,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp16aaccfe10e3e4</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -315,7 +348,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -324,7 +360,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Valid values: **30, 50, and 100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -333,7 +372,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -342,7 +384,13 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The region of the instance.
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> If you set the Region parameter to <strong>all</strong>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <strong>taskType</strong> parameter to <strong>all</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -369,7 +417,16 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Specifies the status of the task. Valid values: **0**: The task is waiting to be run. **1**: The task is running. **2**: The task is run. **3**: The task failed to be run.
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: waiting for execution</li>
+         * <li><strong>1</strong>: being executed</li>
+         * <li><strong>2</strong>: successful</li>
+         * <li><strong>3</strong>: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -378,7 +435,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The task type.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

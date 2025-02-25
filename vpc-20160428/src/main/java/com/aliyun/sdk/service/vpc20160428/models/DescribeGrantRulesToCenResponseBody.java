@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGrantRulesToCenResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGrantRulesToCenResponseBody</p>
  */
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
-    @NameInMap("CenGrantRules")
+    @com.aliyun.core.annotation.NameInMap("CenGrantRules")
     private CenGrantRules cenGrantRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeGrantRulesToCenResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the authorization.
+         * <p>The information about the authorization.</p>
          */
         public Builder cenGrantRules(CenGrantRules cenGrantRules) {
             this.cenGrantRules = cenGrantRules;
@@ -94,7 +99,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5BB78C8-5F41-464F-B9FF-5E0A7198BA26</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGrantRulesToCenResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGrantRulesToCenResponseBody</p>
+     */
     public static class CbnGrantRule extends TeaModel {
-        @NameInMap("CenInstanceId")
+        @com.aliyun.core.annotation.NameInMap("CenInstanceId")
         private String cenInstanceId;
 
-        @NameInMap("CenOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
         private CbnGrantRule(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private String creationTime; 
 
             /**
-             * The ID of the authorized CEN instance.
+             * <p>The ID of the authorized CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-9gsm1q2yh1prpt****</p>
              */
             public Builder cenInstanceId(String cenInstanceId) {
                 this.cenInstanceId = cenInstanceId;
@@ -190,7 +216,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.
+             * <p>The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132193271328****</p>
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -198,7 +227,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-15T09:26:36Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -212,9 +244,15 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGrantRulesToCenResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGrantRulesToCenResponseBody</p>
+     */
     public static class CenGrantRules extends TeaModel {
-        @NameInMap("CbnGrantRule")
-        private java.util.List < CbnGrantRule> cbnGrantRule;
+        @com.aliyun.core.annotation.NameInMap("CbnGrantRule")
+        private java.util.List<CbnGrantRule> cbnGrantRule;
 
         private CenGrantRules(Builder builder) {
             this.cbnGrantRule = builder.cbnGrantRule;
@@ -231,17 +269,17 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         /**
          * @return cbnGrantRule
          */
-        public java.util.List < CbnGrantRule> getCbnGrantRule() {
+        public java.util.List<CbnGrantRule> getCbnGrantRule() {
             return this.cbnGrantRule;
         }
 
         public static final class Builder {
-            private java.util.List < CbnGrantRule> cbnGrantRule; 
+            private java.util.List<CbnGrantRule> cbnGrantRule; 
 
             /**
              * CbnGrantRule.
              */
-            public Builder cbnGrantRule(java.util.List < CbnGrantRule> cbnGrantRule) {
+            public Builder cbnGrantRule(java.util.List<CbnGrantRule> cbnGrantRule) {
                 this.cbnGrantRule = cbnGrantRule;
                 return this;
             }

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteCORSRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteCORSRequest</p>
  */
 public class UpdateGatewayRouteCORSRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("CorsJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorsJSON")
     private CorsJSON corsJSON;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
     private UpdateGatewayRouteCORSRequest(Builder builder) {
@@ -110,12 +115,15 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         } 
 
         /**
-         * The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
-         * <p>
+         * <p>The language of the response. In compliance with <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>, the backend service must return a response based on the language used by the user.</p>
+         * <ul>
+         * <li>No default value.</li>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
          * 
-         * *   No default value.
-         * *   zh-CN: Chinese
-         * *   en-US: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -124,7 +132,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * The information about the CORS policy.
+         * <p>The information about the CORS policy.</p>
          */
         public Builder corsJSON(CorsJSON corsJSON) {
             String corsJSONShrink = shrink(corsJSON, "CorsJSON", "json");
@@ -134,7 +142,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -143,7 +154,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-f70a6ddf2f0941a2bb997b2d16028f37</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -152,7 +166,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * The ID of the associated record.
+         * <p>The ID of the associated record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -167,29 +184,35 @@ public class UpdateGatewayRouteCORSRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayRouteCORSRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteCORSRequest</p>
+     */
     public static class CorsJSON extends TeaModel {
-        @NameInMap("AllowCredentials")
+        @com.aliyun.core.annotation.NameInMap("AllowCredentials")
         private Boolean allowCredentials;
 
-        @NameInMap("AllowHeaders")
+        @com.aliyun.core.annotation.NameInMap("AllowHeaders")
         private String allowHeaders;
 
-        @NameInMap("AllowMethods")
+        @com.aliyun.core.annotation.NameInMap("AllowMethods")
         private String allowMethods;
 
-        @NameInMap("AllowOrigins")
+        @com.aliyun.core.annotation.NameInMap("AllowOrigins")
         private String allowOrigins;
 
-        @NameInMap("ExposeHeaders")
+        @com.aliyun.core.annotation.NameInMap("ExposeHeaders")
         private String exposeHeaders;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Long unitNum;
 
         private CorsJSON(Builder builder) {
@@ -278,7 +301,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             private Long unitNum; 
 
             /**
-             * The credentials allowed.
+             * <p>The credentials allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowCredentials(Boolean allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -286,7 +312,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * The request headers allowed.
+             * <p>The request headers allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content-type</p>
              */
             public Builder allowHeaders(String allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -294,7 +323,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * The HTTP methods allowed.
+             * <p>The HTTP methods allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET,POST</p>
              */
             public Builder allowMethods(String allowMethods) {
                 this.allowMethods = allowMethods;
@@ -302,7 +334,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * The origins from which access is allowed.
+             * <p>The origins from which access is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://api.aliyun-inc.com/">https://api.aliyun-inc.com/</a></p>
              */
             public Builder allowOrigins(String allowOrigins) {
                 this.allowOrigins = allowOrigins;
@@ -310,7 +345,12 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * The response headers allowed.
+             * <p>The response headers allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder exposeHeaders(String exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
@@ -318,7 +358,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * The status of the policy.
+             * <p>The status of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -326,7 +369,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * The unit of time.
+             * <p>The unit of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -334,7 +380,10 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * The value of time.
+             * <p>The value of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder unitNum(Long unitNum) {
                 this.unitNum = unitNum;

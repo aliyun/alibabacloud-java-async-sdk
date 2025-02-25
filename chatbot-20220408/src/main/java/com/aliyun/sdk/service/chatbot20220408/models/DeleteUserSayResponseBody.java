@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserSayResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteUserSayResponseBody</p>
  */
 public class DeleteUserSayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserSayId")
+    @com.aliyun.core.annotation.NameInMap("UserSayId")
     private Long userSayId;
 
     private DeleteUserSayResponseBody(Builder builder) {

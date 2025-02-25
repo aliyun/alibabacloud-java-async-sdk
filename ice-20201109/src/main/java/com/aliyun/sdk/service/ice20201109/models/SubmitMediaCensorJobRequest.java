@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaCensorJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitMediaCensorJobRequest</p>
  */
 public class SubmitMediaCensorJobRequest extends Request {
-    @Query
-    @NameInMap("Barrages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Barrages")
     private String barrages;
 
-    @Query
-    @NameInMap("CoverImages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverImages")
     private String coverImages;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
     private Input input;
 
-    @Query
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
-    @Query
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitMediaCensorJobRequest(Builder builder) {
@@ -180,7 +185,13 @@ public class SubmitMediaCensorJobRequest extends Request {
         } 
 
         /**
-         * Barrages.
+         * <p>The live comments of the video.</p>
+         * <blockquote>
+         * <p> If this parameter is specified, the system checks the live comments specified by this parameter instead of the live comments of the input file specified by Media.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hello world</p>
          */
         public Builder barrages(String barrages) {
             this.putQueryParameter("Barrages", barrages);
@@ -189,7 +200,13 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * CoverImages.
+         * <p>The Object Storage Service (OSS) objects that are used as the thumbnails. Specify the thumbnails in a JSON array. A maximum of five thumbnails are supported.</p>
+         * <blockquote>
+         * <p> If this parameter is specified, the system checks the thumbnails specified by this parameter instead of the thumbnails of the input file specified by <strong>Media</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Bucket&quot;:&quot;example-bucket-<strong><strong>&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example-</strong></strong>.jpeg&quot;,&quot;RoleArn&quot;:&quot;acs:ram::1997018457688683:role/AliyunICEDefaultRole&quot;}]</p>
          */
         public Builder coverImages(String coverImages) {
             this.putQueryParameter("CoverImages", coverImages);
@@ -198,7 +215,13 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The video description, which can be up to 128 bytes in length.</p>
+         * <blockquote>
+         * <p> If this parameter is specified, the system checks the description specified by this parameter instead of the description of the input file specified by Media.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -207,7 +230,7 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The information about the file to be moderated.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -217,7 +240,10 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * NotifyUrl.
+         * <p>The callback URL. Simple Message Queue (SMQ, formerly MNS) and HTTP callbacks are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mns://125340688170****.oss-cn-shanghai.aliyuncs.com/queues/example-pipeline</p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putQueryParameter("NotifyUrl", notifyUrl);
@@ -226,7 +252,14 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>The output snapshots. The moderation job generates output snapshots and the result JSON file in the path corresponding to the input file.</p>
+         * <ul>
+         * <li>File name format of output snapshots: oss://bucket/snapshot-{Count}.jpg. In the path, bucket indicates an OSS bucket that resides in the same region as the current project, and {Count} is the sequence number of the snapshot.</li>
+         * <li>The detailed moderation results are stored in the {jobId}.output file in the same OSS folder as the output snapshots. For more information about the parameters in the output file, see <a href="https://help.aliyun.com/document_detail/609211.html">Output parameters of media moderation jobs</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://sashimi-cn-shanghai/censor/snapshot-{Count}.jpg</p>
          */
         public Builder output(String output) {
             this.putQueryParameter("Output", output);
@@ -235,7 +268,7 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling configurations.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -245,7 +278,10 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID. If this parameter is not specified, the default template is used for moderation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000001-100060</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -254,7 +290,13 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The video title, which can be up to 64 bytes in length.</p>
+         * <blockquote>
+         * <p> If this parameter is specified, the system checks the title specified by this parameter instead of the title of the input file specified by Media.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello World</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -263,7 +305,10 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data, which can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDatatestid-001-****</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -278,11 +323,17 @@ public class SubmitMediaCensorJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitMediaCensorJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitMediaCensorJobRequest</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Input(Builder builder) {
@@ -317,7 +368,13 @@ public class SubmitMediaCensorJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
+             * <p>1. oss://bucket/object</p>
+             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * <p>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1b1b9cd148034739af413150fded****</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -325,7 +382,12 @@ public class SubmitMediaCensorJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <p>OSS: OSS object.</p>
+             * <p>Media: media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -339,11 +401,17 @@ public class SubmitMediaCensorJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitMediaCensorJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitMediaCensorJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {
@@ -378,7 +446,10 @@ public class SubmitMediaCensorJobRequest extends Request {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5246b8d12a62433ab77845074039****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -386,7 +457,10 @@ public class SubmitMediaCensorJobRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The job priority. A larger value indicates a higher priority. Valid values: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

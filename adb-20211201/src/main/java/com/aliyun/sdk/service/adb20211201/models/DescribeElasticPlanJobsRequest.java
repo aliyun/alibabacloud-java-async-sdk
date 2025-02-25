@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticPlanJobsRequest</p>
  */
 public class DescribeElasticPlanJobsRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("ElasticPlanName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanName")
     private String elasticPlanName;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeElasticPlanJobsRequest(Builder builder) {
@@ -141,10 +146,14 @@ public class DescribeElasticPlanJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <strong>example:</strong>
+         * <p>amv-wz9509beptiz****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,11 +162,18 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The name of the scaling plan.
-         * <p>
+         * <p>The name of the scaling plan.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you do not specify this parameter, all scaling plans of the cluster are queried.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/601334.html">DescribeElasticPlans</a> operation to query the names of scaling plans.</p>
+         * </li>
+         * </ul>
          * 
-         * > *   If you do not specify this parameter, all scaling plans of the cluster are queried.
-         * > *   You can call the [DescribeElasticPlans](~~601334~~) operation to query the name of a scaling plan.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -166,7 +182,11 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +195,11 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The number of scaling plan jobs to return per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,11 +208,18 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you do not specify this parameter, the scaling plans of all resource groups are queried, including the interactive resource group and elastic I/O unit (EIU) types.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name for a cluster.</p>
+         * </li>
+         * </ul>
          * 
-         * > *   If you do not specify this parameter, the scaling plans of all resource groups are queried, including interactive resource groups and elastic I/O units (EIUs).
-         * > *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a specific cluster.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -197,10 +228,10 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The time to enable the scaling plan job.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2022-01-01T12:01:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -209,18 +240,18 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The state of the scaling plan job.
-         * <p>
+         * <p>The state of the scaling plan job. Valid values:</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>SUCCESSFUL</li>
+         * <li>FAILED</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the scaling plans in all states are queried.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   RUNNING: The job is running.
-         * 
-         * *   SUCCESSFUL: The job is successfully run.
-         * 
-         * *   FAILED: The job fails.
-         * 
-         * > If you do not specify this parameter, scaling plan jobs in all states are queried.
+         * <strong>example:</strong>
+         * <p>SUCCESSFUL</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

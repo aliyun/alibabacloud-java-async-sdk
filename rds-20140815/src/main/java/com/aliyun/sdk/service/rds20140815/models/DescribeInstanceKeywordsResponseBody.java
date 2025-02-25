@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceKeywordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceKeywordsResponseBody</p>
  */
 public class DescribeInstanceKeywordsResponseBody extends TeaModel {
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Words")
+    @com.aliyun.core.annotation.NameInMap("Words")
     private Words words;
 
     private DescribeInstanceKeywordsResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         private Words words; 
 
         /**
-         * The type of reserved keyword returned.
+         * <p>The type of reserved keyword returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -70,7 +78,10 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of reserved keywords.
+         * <p>The reserved keywords.</p>
          */
         public Builder words(Words words) {
             this.words = words;
@@ -91,9 +102,15 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceKeywordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceKeywordsResponseBody</p>
+     */
     public static class Words extends TeaModel {
-        @NameInMap("word")
-        private java.util.List < String > word;
+        @com.aliyun.core.annotation.NameInMap("word")
+        private java.util.List<String> word;
 
         private Words(Builder builder) {
             this.word = builder.word;
@@ -110,17 +127,17 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         /**
          * @return word
          */
-        public java.util.List < String > getWord() {
+        public java.util.List<String> getWord() {
             return this.word;
         }
 
         public static final class Builder {
-            private java.util.List < String > word; 
+            private java.util.List<String> word; 
 
             /**
              * word.
              */
-            public Builder word(java.util.List < String > word) {
+            public Builder word(java.util.List<String> word) {
                 this.word = word;
                 return this;
             }

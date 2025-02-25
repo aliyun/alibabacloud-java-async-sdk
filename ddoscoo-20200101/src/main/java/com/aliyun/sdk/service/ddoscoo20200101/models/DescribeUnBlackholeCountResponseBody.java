@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUnBlackholeCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUnBlackholeCountResponseBody</p>
  */
 public class DescribeUnBlackholeCountResponseBody extends TeaModel {
-    @NameInMap("RemainCount")
+    @com.aliyun.core.annotation.NameInMap("RemainCount")
     private Integer remainCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeUnBlackholeCountResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The remaining quota that you can deactivate blackhole filtering.
+         * <p>The remaining quota that you can deactivate blackhole filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder remainCount(Integer remainCount) {
             this.remainCount = remainCount;
@@ -70,7 +78,10 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232929FA-40B6-4C53-9476-EE335ABA44CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class DescribeUnBlackholeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total quota that you can deactivate blackhole filtering.
+         * <p>The total quota that you can deactivate blackhole filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

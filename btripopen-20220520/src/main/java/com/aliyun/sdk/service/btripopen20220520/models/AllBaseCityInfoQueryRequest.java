@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllBaseCityInfoQueryRequest} extends {@link RequestModel}
  *
  * <p>AllBaseCityInfoQueryRequest</p>
  */
 public class AllBaseCityInfoQueryRequest extends Request {
-    @Header
-    @NameInMap("x-acs-btrip-access-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-access-token")
     private String xAcsBtripAccessToken;
 
     private AllBaseCityInfoQueryRequest(Builder builder) {

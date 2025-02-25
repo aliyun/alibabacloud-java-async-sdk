@@ -1,73 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointServicesRequest} extends {@link RequestModel}
  *
  * <p>ListVpcEndpointServicesRequest</p>
  */
 public class ListVpcEndpointServicesRequest extends Request {
-    @Query
-    @NameInMap("AutoAcceptEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
+    private String addressIpVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoAcceptEnabled")
     private Boolean autoAcceptEnabled;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ServiceBusinessStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceBusinessStatus")
     private String serviceBusinessStatus;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("ServiceResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceResourceType")
     private String serviceResourceType;
 
-    @Query
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private String serviceStatus;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneAffinityEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
     private ListVpcEndpointServicesRequest(Builder builder) {
         super(builder);
+        this.addressIpVersion = builder.addressIpVersion;
         this.autoAcceptEnabled = builder.autoAcceptEnabled;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -94,6 +104,13 @@ public class ListVpcEndpointServicesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addressIpVersion
+     */
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     /**
@@ -176,7 +193,7 @@ public class ListVpcEndpointServicesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -188,6 +205,7 @@ public class ListVpcEndpointServicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListVpcEndpointServicesRequest, Builder> {
+        private String addressIpVersion; 
         private Boolean autoAcceptEnabled; 
         private Integer maxResults; 
         private String nextToken; 
@@ -199,7 +217,7 @@ public class ListVpcEndpointServicesRequest extends Request {
         private String serviceName; 
         private String serviceResourceType; 
         private String serviceStatus; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Boolean zoneAffinityEnabled; 
 
         private Builder() {
@@ -208,6 +226,7 @@ public class ListVpcEndpointServicesRequest extends Request {
 
         private Builder(ListVpcEndpointServicesRequest request) {
             super(request);
+            this.addressIpVersion = request.addressIpVersion;
             this.autoAcceptEnabled = request.autoAcceptEnabled;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -224,7 +243,23 @@ public class ListVpcEndpointServicesRequest extends Request {
         } 
 
         /**
-         * AutoAcceptEnabled.
+         * AddressIpVersion.
+         */
+        public Builder addressIpVersion(String addressIpVersion) {
+            this.putQueryParameter("AddressIpVersion", addressIpVersion);
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.putQueryParameter("AutoAcceptEnabled", autoAcceptEnabled);
@@ -233,7 +268,10 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -242,7 +280,14 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+         * <li>If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -251,7 +296,12 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the endpoint service.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +310,10 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -269,7 +322,10 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The service resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -278,7 +334,14 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceBusinessStatus.
+         * <p>The service state of the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The endpoint service runs as expected.</li>
+         * <li><strong>FinancialLocked</strong>: The endpoint service is locked due to overdue payments.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder serviceBusinessStatus(String serviceBusinessStatus) {
             this.putQueryParameter("ServiceBusinessStatus", serviceBusinessStatus);
@@ -287,7 +350,10 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p>The endpoint service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -296,7 +362,10 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The name of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -305,7 +374,14 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceResourceType.
+         * <p>The type of the service resource. Valid values:</p>
+         * <ul>
+         * <li><strong>slb</strong>: a Classic Load Balancer (CLB) instance</li>
+         * <li><strong>alb</strong>: an Application Load Balancer (ALB) instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         public Builder serviceResourceType(String serviceResourceType) {
             this.putQueryParameter("ServiceResourceType", serviceResourceType);
@@ -314,7 +390,16 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceStatus.
+         * <p>The state of the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The endpoint service is being created.</li>
+         * <li><strong>Pending</strong>: The endpoint service is being modified.</li>
+         * <li><strong>Active</strong>: The endpoint service is available.</li>
+         * <li><strong>Deleting</strong>: The endpoint service is being deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder serviceStatus(String serviceStatus) {
             this.putQueryParameter("ServiceStatus", serviceStatus);
@@ -323,16 +408,23 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * ZoneAffinityEnabled.
+         * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.putQueryParameter("ZoneAffinityEnabled", zoneAffinityEnabled);
@@ -347,11 +439,17 @@ public class ListVpcEndpointServicesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcEndpointServicesRequest} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointServicesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -386,7 +484,11 @@ public class ListVpcEndpointServicesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +496,11 @@ public class ListVpcEndpointServicesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

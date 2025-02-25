@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAICImagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAICImagesResponseBody</p>
  */
 public class DescribeAICImagesResponseBody extends TeaModel {
-    @NameInMap("Images")
-    private java.util.List < Images> images;
+    @com.aliyun.core.annotation.NameInMap("Images")
+    private java.util.List<Images> images;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAICImagesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -79,22 +84,25 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Images.
+         * <p>The information about the images.</p>
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,11 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +122,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72DC6C0A-D9A8-5345-A2BE-FE354CC728A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +133,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,23 +149,29 @@ public class DescribeAICImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAICImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAICImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Images(Builder builder) {
@@ -218,7 +242,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * CreationTime.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-22 10:54:34</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -226,7 +253,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test operation of console</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +264,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID of the AIC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-ad0ddaddc2d54adeaa09b7c0f1e****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -242,7 +275,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the AIC image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****.alibaba-inc.com/aic/socimage:test</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -250,7 +286,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the image. <strong>Available</strong> is returned for this parameter. Available indicates that the image is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +297,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The username of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder user(String user) {
                 this.user = user;

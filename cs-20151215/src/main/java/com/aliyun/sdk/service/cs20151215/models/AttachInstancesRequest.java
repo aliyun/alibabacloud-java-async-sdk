@@ -1,73 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachInstancesRequest} extends {@link RequestModel}
  *
  * <p>AttachInstancesRequest</p>
  */
 public class AttachInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("cpu_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu_policy")
     private String cpuPolicy;
 
-    @Body
-    @NameInMap("format_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk")
     private Boolean formatDisk;
 
-    @Body
-    @NameInMap("image_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_id")
     private String imageId;
 
-    @Body
-    @NameInMap("instances")
-    @Validation(required = true)
-    private java.util.List < String > instances;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instances")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instances;
 
-    @Body
-    @NameInMap("is_edge_worker")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_edge_worker")
     private Boolean isEdgeWorker;
 
-    @Body
-    @NameInMap("keep_instance_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep_instance_name")
     private Boolean keepInstanceName;
 
-    @Body
-    @NameInMap("key_pair")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("key_pair")
     private String keyPair;
 
-    @Body
-    @NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
     private String nodepoolId;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @Body
-    @NameInMap("rds_instances")
-    private java.util.List < String > rdsInstances;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rds_instances")
+    private java.util.List<String> rdsInstances;
 
-    @Body
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private Runtime runtime;
 
-    @Body
-    @NameInMap("tags")
-    private java.util.List < Tag > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tag> tags;
 
-    @Body
-    @NameInMap("user_data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_data")
     private String userData;
 
     private AttachInstancesRequest(Builder builder) {
@@ -132,7 +137,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < String > getInstances() {
+    public java.util.List<String> getInstances() {
         return this.instances;
     }
 
@@ -174,7 +179,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return rdsInstances
      */
-    public java.util.List < String > getRdsInstances() {
+    public java.util.List<String> getRdsInstances() {
         return this.rdsInstances;
     }
 
@@ -188,7 +193,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -204,15 +209,15 @@ public class AttachInstancesRequest extends Request {
         private String cpuPolicy; 
         private Boolean formatDisk; 
         private String imageId; 
-        private java.util.List < String > instances; 
+        private java.util.List<String> instances; 
         private Boolean isEdgeWorker; 
         private Boolean keepInstanceName; 
         private String keyPair; 
         private String nodepoolId; 
         private String password; 
-        private java.util.List < String > rdsInstances; 
+        private java.util.List<String> rdsInstances; 
         private Runtime runtime; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
         private String userData; 
 
         private Builder() {
@@ -238,7 +243,11 @@ public class AttachInstancesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c106f377e16f34eb1808d6b9362c9****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -247,15 +256,18 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
-         * <p>
+         * <p>The CPU management policy of the node. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <ul>
+         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: uses default CPU affinity.</li>
+         * </ul>
+         * <p>Default value: <code>none</code></p>
+         * <blockquote>
+         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * </blockquote>
          * 
-         * *   `static`: This policy allows pods with specific resource characteristics on the node to be configured with enhanced CPU affinity and exclusivity.
-         * *   `none`: The default CPU affinity is used.
-         * 
-         * Default value: `none`.
-         * 
-         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -264,20 +276,23 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to store container data and images on data disks. Valid values:
-         * <p>
+         * <p>Specifies whether to store container data and images on data disks. Valid value:</p>
+         * <ul>
+         * <li><code>true</code>: stores container data and images on data disks.</li>
+         * <li><code>false</code>: does not store container data or images on data disks.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * <p>How data disks are attached:</p>
+         * <ul>
+         * <li>If the ECS instance is already attached with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4. Then, the system uses the disk to store the data in the /var/lib/docker and /var/lib/kubelet directories.</li>
+         * <li>If no data disk is attached to the ECS instance, the system does not purchase a new data disk.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you choose to store container data and images on data disks and a data disk is already attached to the ECS instance, the original data on this data disk is cleared. You can back up the disk to prevent data loss.</p>
+         * </blockquote>
          * 
-         * *   `true`: stores container data and images on data disks.
-         * *   `false`: does not store container data or images on data disks.
-         * 
-         * Default value: `false`.
-         * 
-         * How a data disk is mounted:
-         * 
-         * *   If the ECS instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.
-         * *   If no data disk is attached to the ECS instances, the system does not purchase a new data disk.
-         * 
-         * >  If you choose to store container data and images on data disks and a data disk is already mounted to the ECS instance, the original data on this data disk will be cleared. You can back up the disk to avoid data loss.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -286,14 +301,18 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the custom image. If you do not set this parameter, the default system image is used.
-         * <p>
+         * <p>The custom image ID. If you do not specify this parameter, the default system image is used.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you specify a custom image, the custom image is used to deploy the operating system on the system disk of the node.</p>
+         * </li>
+         * <li><p>This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If you specify a custom image, the custom image is used to deploy the operating systems on the system disks of the nodes.
-         * 
-         * *   This parameter is not supported after you specify `nodepool_id`.
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -302,24 +321,28 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The ECS instances to be added.
+         * <p>The ECS instances that you want to add.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder instances(java.util.List < String > instances) {
+        public Builder instances(java.util.List<String> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
             return this;
         }
 
         /**
-         * Specifies whether the nodes that you want to add are Edge Node Service (ENS) nodes. Valid values:
-         * <p>
+         * <p>Specifies whether the node that you want to add is an Edge Node Service (ENS) node. Valid value:</p>
+         * <ul>
+         * <li><code>true</code>: the node that you want to add is an ENS node.</li>
+         * <li><code>false</code>: the node that you want to add is not an ENS node.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * <blockquote>
+         * <p> If the node that you want to add is an ENS node, you must set the value to <code>true</code>. This allows you to identify the node.</p>
+         * </blockquote>
          * 
-         * *   `true`: The nodes that you want to add are ENS nodes.
-         * *   `false`: The nodes that you want to add are not ENS nodes.
-         * 
-         * Default value: `false`.
-         * 
-         * >  If the nodes that you want to add are ENS nodes, you must set this parameter to `true`. This allows you to identify these nodes.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isEdgeWorker(Boolean isEdgeWorker) {
             this.putBodyParameter("is_edge_worker", isEdgeWorker);
@@ -328,13 +351,15 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the instance name. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the instance name. Valid value:</p>
+         * <ul>
+         * <li><code>true</code>: retains the instance name.</li>
+         * <li><code>false</code>: does not retain the instance name.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: retains the instance name.
-         * *   `false`: does not retain the instance name.
-         * 
-         * Default value: `true`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -343,10 +368,13 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The name of the key pair that is used to log on to the ECS instances. You must set key_pair or `login_password`.
-         * <p>
+         * <p>The name of the key pair used to log on to the ECS instances. You must specify this parameter or <code>login_password</code>.</p>
+         * <blockquote>
+         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
+         * <strong>example:</strong>
+         * <p>secrity-key</p>
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -355,7 +383,10 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The node pool ID. If you do not set this parameter, the nodes are added to the default node pool.
+         * <p>The ID of the node pool to which the node is added. If you do not specify this parameter, the node is added to the default node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np615c0e0966124216a0412e10afe0****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -364,10 +395,11 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The SSH logon password that is used to log on to the ECS instances. You must set login_password or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It cannot contain backslashes (\\) or double quotation marks (").
-         * <p>
+         * <p>The SSH logon password used to log on to the ECS instances. You must specify this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password cannot contain backslashes (\) or double quotation marks (&quot;).</p>
+         * <p>The password is encrypted during data transfer to ensure security.</p>
          * 
-         * For security considerations, the password is encrypted during data transfer.
+         * <strong>example:</strong>
+         * <p>Hello1234</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -376,19 +408,19 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * A list of ApsaraDB RDS instances.
+         * <p>A list of ApsaraDB RDS instances.</p>
          */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+        public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
             this.rdsInstances = rdsInstances;
             return this;
         }
 
         /**
-         * The container runtime.
-         * <p>
-         * 
-         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
+         * <p>The container runtime.</p>
+         * <blockquote>
+         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * </blockquote>
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -397,25 +429,29 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The labels that you want to add to nodes. You must add labels based on the following rules:
-         * <p>
-         * 
-         * *   Each label is a case-sensitive key-value pair. You can add up to 20 labels.
-         * *   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
-         * 
-         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
+         * <p>The labels that you want to add to the node. When you add labels to a node, the following rules apply:</p>
+         * <ul>
+         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+         * <li>The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * </blockquote>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * User-defined data. For more information, see [Generate user data](~~49121~~).
-         * <p>
+         * <p>The user-defined data on the node. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Use instance user data to automatically run commands or scripts on instance startup</a>.</p>
+         * <blockquote>
+         * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not supported if you specify the `nodepool_id` parameter.
+         * <strong>example:</strong>
+         * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFDSyEi</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);

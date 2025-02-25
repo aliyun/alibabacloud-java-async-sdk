@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCenChildInstanceRouteEntriesToAttachmentResponseBody} extends {@link TeaModel}
  *
  * <p>ListCenChildInstanceRouteEntriesToAttachmentResponseBody</p>
  */
 public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteEntry")
-    private java.util.List < RouteEntry> routeEntry;
+    @com.aliyun.core.annotation.NameInMap("RouteEntry")
+    private java.util.List<RouteEntry> routeEntry;
 
     private ListCenChildInstanceRouteEntriesToAttachmentResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,21 +57,24 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
     /**
      * @return routeEntry
      */
-    public java.util.List < RouteEntry> getRouteEntry() {
+    public java.util.List<RouteEntry> getRouteEntry() {
         return this.routeEntry;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < RouteEntry> routeEntry; 
+        private java.util.List<RouteEntry> routeEntry; 
 
         /**
-         * The token that determines the start point of the next query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is not returned, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +82,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>530BC816-F575-412A-AAB2-435125D26328</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,9 +93,9 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         }
 
         /**
-         * The detailed information about the route.
+         * <p>The detailed information about the route.</p>
          */
-        public Builder routeEntry(java.util.List < RouteEntry> routeEntry) {
+        public Builder routeEntry(java.util.List<RouteEntry> routeEntry) {
             this.routeEntry = routeEntry;
             return this;
         }
@@ -95,23 +106,29 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link ListCenChildInstanceRouteEntriesToAttachmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCenChildInstanceRouteEntriesToAttachmentResponseBody</p>
+     */
     public static class RouteEntry extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("ChildInstanceRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceRouteTableId")
         private String childInstanceRouteTableId;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
         private RouteEntry(Builder builder) {
@@ -182,7 +199,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             private String transitRouterAttachmentId; 
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-9adwg6ghpq8oq4dp7q</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -190,7 +210,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * The ID of the route table configured on the network instance.
+             * <p>The ID of the route table configured on the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp1tlaj1c4nxr2t3e****</p>
              */
             public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
                 this.childInstanceRouteTableId = childInstanceRouteTableId;
@@ -198,7 +221,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * The destination CIDR block of the route.
+             * <p>The destination CIDR block of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -206,7 +232,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. A value of TR indicates that the route is hosted on a transit router.
+             * <p>Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. A value of TR indicates that the route is hosted on a transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TR</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -214,12 +243,15 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * The status of the route. Valid values:
-             * <p>
+             * <p>The status of the route. Valid values:</p>
+             * <ul>
+             * <li><strong>Available</strong>: The route is available.</li>
+             * <li><strong>Pending</strong>: The route is being configured.</li>
+             * <li><strong>Modifying</strong>: the route is being modified.</li>
+             * </ul>
              * 
-             * *   **Available**: The route is available.
-             * *   **Pending**: The route is being configured.
-             * *   **Modifying**: the route is being modified.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -227,7 +259,10 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
             }
 
             /**
-             * The ID of the network instance connection.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-y463sghkkv1loe****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;

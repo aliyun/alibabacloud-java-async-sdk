@@ -179,19 +179,19 @@ public class ListScalingGroupV2Request extends Request {
             super();
         } 
 
-        private Builder(ListScalingGroupV2Request response) {
-            super(response);
-            this.clusterBizId = response.clusterBizId;
-            this.currentSize = response.currentSize;
-            this.limit = response.limit;
-            this.orderField = response.orderField;
-            this.orderMode = response.orderMode;
-            this.pageCount = response.pageCount;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListScalingGroupV2Request request) {
+            super(request);
+            this.clusterBizId = request.clusterBizId;
+            this.currentSize = request.currentSize;
+            this.limit = request.limit;
+            this.orderField = request.orderField;
+            this.orderMode = request.orderMode;
+            this.pageCount = request.pageCount;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDevicesResponseBody</p>
  */
 public class DescribeDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
-    private java.util.List < Devices> devices;
+    @com.aliyun.core.annotation.NameInMap("Devices")
+    private java.util.List<Devices> devices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDevicesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
     /**
      * @return devices
      */
-    public java.util.List < Devices> getDevices() {
+    public java.util.List<Devices> getDevices() {
         return this.devices;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Devices> devices; 
+        private java.util.List<Devices> devices; 
         private String requestId; 
 
         /**
-         * Details of the devices that are returned.
+         * <p>The information about devices that you queried.</p>
          */
-        public Builder devices(java.util.List < Devices> devices) {
+        public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BEFE642-A383-4A18-8939-FB7DE452****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class EndUserList extends TeaModel {
-        @NameInMap("AdDomain")
+        @com.aliyun.core.annotation.NameInMap("AdDomain")
         private String adDomain;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private EndUserList(Builder builder) {
@@ -134,7 +148,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * The address of the AD workspace.
+             * <p>The address of the AD office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xn--0zw****</p>
              */
             public Builder adDomain(String adDomain) {
                 this.adDomain = adDomain;
@@ -142,7 +159,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The ID of the convenient office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -150,7 +170,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>moli</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -158,7 +181,15 @@ public class DescribeDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account.
+             * <p>The account type of the user.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AD: enterprise AD account.</li>
+             * <li>SIMPLE: convenience account</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -172,12 +203,18 @@ public class DescribeDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class Devices extends TeaModel {
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("EndUserList")
-        private java.util.List < EndUserList> endUserList;
+        @com.aliyun.core.annotation.NameInMap("EndUserList")
+        private java.util.List<EndUserList> endUserList;
 
         private Devices(Builder builder) {
             this.deviceId = builder.deviceId;
@@ -202,16 +239,19 @@ public class DescribeDevicesResponseBody extends TeaModel {
         /**
          * @return endUserList
          */
-        public java.util.List < EndUserList> getEndUserList() {
+        public java.util.List<EndUserList> getEndUserList() {
             return this.endUserList;
         }
 
         public static final class Builder {
             private String deviceId; 
-            private java.util.List < EndUserList> endUserList; 
+            private java.util.List<EndUserList> endUserList; 
 
             /**
-             * The ID of the device.
+             * <p>The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5F52817BE267A43C608D245070D2****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -219,9 +259,9 @@ public class DescribeDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The users who are bound to the device.
+             * <p>The users who are bound to the device.</p>
              */
-            public Builder endUserList(java.util.List < EndUserList> endUserList) {
+            public Builder endUserList(java.util.List<EndUserList> endUserList) {
                 this.endUserList = endUserList;
                 return this;
             }

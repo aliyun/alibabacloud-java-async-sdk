@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddFCTriggerRequest} extends {@link RequestModel}
  *
  * <p>AddFCTriggerRequest</p>
  */
 public class AddFCTriggerRequest extends Request {
-    @Body
-    @NameInMap("EventMetaName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventMetaName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventMetaName;
 
-    @Body
-    @NameInMap("EventMetaVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventMetaVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventMetaVersion;
 
-    @Body
-    @NameInMap("FunctionARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FunctionARN")
     private String functionARN;
 
-    @Body
-    @NameInMap("Notes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Notes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notes;
 
-    @Body
-    @NameInMap("RoleARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleARN;
 
-    @Body
-    @NameInMap("SourceARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceARN;
 
-    @Query
-    @NameInMap("TriggerARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerARN;
 
     private AddFCTriggerRequest(Builder builder) {
@@ -144,7 +144,11 @@ public class AddFCTriggerRequest extends Request {
         } 
 
         /**
-         * The name of the event.
+         * <p>The name of the event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogFileCreated</p>
          */
         public Builder eventMetaName(String eventMetaName) {
             this.putBodyParameter("EventMetaName", eventMetaName);
@@ -153,7 +157,11 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * The version of the event.
+         * <p>The version of the event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder eventMetaVersion(String eventMetaVersion) {
             this.putBodyParameter("EventMetaVersion", eventMetaVersion);
@@ -162,7 +170,10 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * The feature trigger.
+         * <p>The feature trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:1223455566666:123:services/myservice/functions/myfunction</p>
          */
         public Builder functionARN(String functionARN) {
             this.putBodyParameter("FunctionARN", functionARN);
@@ -171,7 +182,11 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * The remarks.
+         * <p>The remarks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("Notes", notes);
@@ -180,7 +195,11 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * The assigned Resource Access Management (RAM) role.
+         * <p>The assigned Resource Access Management (RAM) role.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:: 1234567890:role/aliyuncdneventnotificationrole</p>
          */
         public Builder roleARN(String roleARN) {
             this.putBodyParameter("RoleARN", roleARN);
@@ -189,7 +208,11 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * The resources and filters for event listening.
+         * <p>The resources and filters for event listening.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:cdn:*:1234567890:domain/example.com</p>
          */
         public Builder sourceARN(String sourceARN) {
             this.putBodyParameter("SourceARN", sourceARN);
@@ -198,7 +221,11 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * The trigger that corresponds to the Function Compute service.
+         * <p>The trigger that corresponds to the Function Compute service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-beijing: 1234567890:services/FCTestService/functions/printEvent/triggers/testtrigger</p>
          */
         public Builder triggerARN(String triggerARN) {
             this.putQueryParameter("TriggerARN", triggerARN);

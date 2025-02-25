@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchStopDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>BatchStopDevicesResponseBody</p>
  */
 public class BatchStopDevicesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
-    private java.util.List < Results> results;
+    @com.aliyun.core.annotation.NameInMap("Results")
+    private java.util.List<Results> results;
 
     private BatchStopDevicesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class BatchStopDevicesResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         /**
          * Results.
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -71,14 +76,20 @@ public class BatchStopDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchStopDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchStopDevicesResponseBody</p>
+     */
     public static class Streams extends TeaModel {
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Streams(Builder builder) {
@@ -152,12 +163,18 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchStopDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchStopDevicesResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Streams")
-        private java.util.List < Streams> streams;
+        @com.aliyun.core.annotation.NameInMap("Streams")
+        private java.util.List<Streams> streams;
 
         private Results(Builder builder) {
             this.id = builder.id;
@@ -182,13 +199,13 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         /**
          * @return streams
          */
-        public java.util.List < Streams> getStreams() {
+        public java.util.List<Streams> getStreams() {
             return this.streams;
         }
 
         public static final class Builder {
             private String id; 
-            private java.util.List < Streams> streams; 
+            private java.util.List<Streams> streams; 
 
             /**
              * Id.
@@ -201,7 +218,7 @@ public class BatchStopDevicesResponseBody extends TeaModel {
             /**
              * Streams.
              */
-            public Builder streams(java.util.List < Streams> streams) {
+            public Builder streams(java.util.List<Streams> streams) {
                 this.streams = streams;
                 return this;
             }

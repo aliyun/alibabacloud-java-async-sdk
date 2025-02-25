@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableMetricsResponseBody</p>
  */
 public class DescribeAvailableMetricsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeAvailableMetricsResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -69,12 +74,15 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceName; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
         private Integer totalRecordCount; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1*****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,15 +90,18 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the Enhanced Monitoring metric.
+         * <p>Details of the Enhanced Monitoring metric.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CD61041-35F7-10F7-BE94-33A48B221218</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of enhanced monitoring metrics that are available for the instance.
+         * <p>The total number of enhanced monitoring metrics that are available for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -111,32 +125,38 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableMetricsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
 
-        @NameInMap("GroupKey")
+        @com.aliyun.core.annotation.NameInMap("GroupKey")
         private String groupKey;
 
-        @NameInMap("GroupKeyType")
+        @com.aliyun.core.annotation.NameInMap("GroupKeyType")
         private String groupKeyType;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("MetricsKey")
+        @com.aliyun.core.annotation.NameInMap("MetricsKey")
         private String metricsKey;
 
-        @NameInMap("MetricsKeyAlias")
+        @com.aliyun.core.annotation.NameInMap("MetricsKeyAlias")
         private String metricsKeyAlias;
 
-        @NameInMap("SortRule")
+        @com.aliyun.core.annotation.NameInMap("SortRule")
         private Integer sortRule;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Items(Builder builder) {
@@ -234,7 +254,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The description of the Enhanced Monitoring metric.
+             * <p>The description of the Enhanced Monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OS CPU utilization, equal to the number of OS-consumed CPUs divided by the total number of CPUs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,11 +265,14 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the Enhanced Monitoring metric. Valid values:
-             * <p>
+             * <p>The category of the Enhanced Monitoring metric. Valid values:</p>
+             * <ul>
+             * <li><strong>os</strong>: OS metric</li>
+             * <li><strong>db</strong>: database metric</li>
+             * </ul>
              * 
-             * *   **os**: OS metric
-             * *   **db**: database metric
+             * <strong>example:</strong>
+             * <p>os</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -254,7 +280,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the group to which the Enhanced Monitoring metric belongs.
+             * <p>The key of the group to which the Enhanced Monitoring metric belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>os.cpu_usage</p>
              */
             public Builder groupKey(String groupKey) {
                 this.groupKey = groupKey;
@@ -262,7 +291,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the Enhanced Monitoring metric belongs.
+             * <p>The name of the group to which the Enhanced Monitoring metric belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU Utilization Rate</p>
              */
             public Builder groupKeyType(String groupKeyType) {
                 this.groupKeyType = groupKeyType;
@@ -270,12 +302,15 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to aggregate the monitoring data of the Enhanced Monitoring metric. Valid values:
-             * <p>
+             * <p>The method that is used to aggregate the monitoring data of the Enhanced Monitoring metric. Valid values:</p>
+             * <ul>
+             * <li><strong>avg</strong>: The system calculates the average value of the Enhanced Monitoring metric.</li>
+             * <li><strong>min</strong>: The system calculates the minimum value of the Enhanced Monitoring metric.</li>
+             * <li><strong>max</strong>: The system calculates the maximum value of the Enhanced Monitoring metric.</li>
+             * </ul>
              * 
-             * *   **avg**: The system calculates the average value of the Enhanced Monitoring metric.
-             * *   **min**: The system calculates the minimum value of the Enhanced Monitoring metric.
-             * *   **max**: The system calculates the maximum value of the Enhanced Monitoring metric.
+             * <strong>example:</strong>
+             * <p>avg</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -283,7 +318,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the Enhanced Monitoring metric.
+             * <p>The key of the Enhanced Monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>os.cpu_usage.sys.avg</p>
              */
             public Builder metricsKey(String metricsKey) {
                 this.metricsKey = metricsKey;
@@ -291,7 +329,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the Enhanced Monitoring metric.
+             * <p>The alias of the Enhanced Monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_sys_per_core</p>
              */
             public Builder metricsKeyAlias(String metricsKeyAlias) {
                 this.metricsKeyAlias = metricsKeyAlias;
@@ -299,7 +340,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the Enhanced Monitoring metric.
+             * <p>The serial number of the Enhanced Monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sortRule(Integer sortRule) {
                 this.sortRule = sortRule;
@@ -307,7 +351,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the Enhanced Monitoring metric.
+             * <p>The unit of the Enhanced Monitoring metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

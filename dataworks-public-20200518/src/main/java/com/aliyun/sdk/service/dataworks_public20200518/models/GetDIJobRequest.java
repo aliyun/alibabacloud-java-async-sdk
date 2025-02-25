@@ -1,29 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDIJobRequest} extends {@link RequestModel}
  *
  * <p>GetDIJobRequest</p>
  */
 public class GetDIJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DIJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DIJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long DIJobId;
 
-    @Body
-    @NameInMap("WithDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WithDetails")
     private Boolean withDetails;
 
     private GetDIJobRequest(Builder builder) {
@@ -84,7 +88,7 @@ public class GetDIJobRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -93,7 +97,11 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * <p>The ID of the synchronization task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11588</p>
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -102,7 +110,10 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * WithDetails.
+         * <p>Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withDetails(Boolean withDetails) {
             this.putBodyParameter("WithDetails", withDetails);

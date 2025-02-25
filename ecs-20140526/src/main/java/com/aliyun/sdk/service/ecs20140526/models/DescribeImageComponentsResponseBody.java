@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageComponentsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageComponentsResponseBody</p>
  */
 public class DescribeImageComponentsResponseBody extends TeaModel {
-    @NameInMap("ImageComponent")
+    @com.aliyun.core.annotation.NameInMap("ImageComponent")
     private ImageComponent imageComponent;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageComponentsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the image components.
+         * <p>The information about the image components.</p>
          */
         public Builder imageComponent(ImageComponent imageComponent) {
             this.imageComponent = imageComponent;
@@ -94,7 +99,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the returned value, see the &quot;Usage notes&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of image components returned.
+         * <p>The total number of image components returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,166 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsResponseBody</p>
+     */
+    public static class Parameter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Parameter(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private String name; 
+            private String type; 
+
+            /**
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The type of the parameter.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>String</li>
+             * <li>Number</li>
+             * <li>Boolean</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Parameter build() {
+                return new Parameter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImageComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsResponseBody</p>
+     */
+    public static class Parameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Parameter")
+        private java.util.List<Parameter> parameter;
+
+        private Parameters(Builder builder) {
+            this.parameter = builder.parameter;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameter
+         */
+        public java.util.List<Parameter> getParameter() {
+            return this.parameter;
+        }
+
+        public static final class Builder {
+            private java.util.List<Parameter> parameter; 
+
+            /**
+             * Parameter.
+             */
+            public Builder parameter(java.util.List<Parameter> parameter) {
+                this.parameter = parameter;
+                return this;
+            }
+
+            public Parameters build() {
+                return new Parameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImageComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -170,7 +342,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the image component.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +353,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the image component.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,9 +370,15 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -211,17 +395,17 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -233,45 +417,59 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsResponseBody</p>
+     */
     public static class ImageComponentSet extends TeaModel {
-        @NameInMap("ComponentType")
+        @com.aliyun.core.annotation.NameInMap("ComponentType")
         private String componentType;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("ComponentVersion")
+        private String componentVersion;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageComponentId")
+        @com.aliyun.core.annotation.NameInMap("ImageComponentId")
         private String imageComponentId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private Parameters parameters;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SystemType")
+        @com.aliyun.core.annotation.NameInMap("SystemType")
         private String systemType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private ImageComponentSet(Builder builder) {
             this.componentType = builder.componentType;
+            this.componentVersion = builder.componentVersion;
             this.content = builder.content;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.imageComponentId = builder.imageComponentId;
             this.name = builder.name;
             this.owner = builder.owner;
+            this.parameters = builder.parameters;
             this.resourceGroupId = builder.resourceGroupId;
             this.systemType = builder.systemType;
             this.tags = builder.tags;
@@ -290,6 +488,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
          */
         public String getComponentType() {
             return this.componentType;
+        }
+
+        /**
+         * @return componentVersion
+         */
+        public String getComponentVersion() {
+            return this.componentVersion;
         }
 
         /**
@@ -335,6 +540,13 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return parameters
+         */
+        public Parameters getParameters() {
+            return this.parameters;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -357,18 +569,23 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String componentType; 
+            private String componentVersion; 
             private String content; 
             private String creationTime; 
             private String description; 
             private String imageComponentId; 
             private String name; 
             private String owner; 
+            private Parameters parameters; 
             private String resourceGroupId; 
             private String systemType; 
             private Tags tags; 
 
             /**
-             * The type of the image component.
+             * <p>The type of the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Build</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -376,7 +593,21 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the image component.
+             * <p>The version number of the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
+             */
+            public Builder componentVersion(String componentVersion) {
+                this.componentVersion = componentVersion;
+                return this;
+            }
+
+            /**
+             * <p>The content of the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RESTART</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -384,7 +615,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image component was created.
+             * <p>The time when the image component was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-24T06:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -392,7 +626,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image component.
+             * <p>The description of the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -400,7 +637,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image component.
+             * <p>The ID of the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ic-bp67acfmxazb4p****</p>
              */
             public Builder imageComponentId(String imageComponentId) {
                 this.imageComponentId = imageComponentId;
@@ -408,7 +648,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image component.
+             * <p>The name of the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testComponent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -416,11 +659,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image component. Valid values:
-             * <p>
+             * <p>The type of the image component. Valid values:</p>
+             * <ul>
+             * <li>SELF: the custom component that you created.</li>
+             * <li>ALIYUN: the system component provided by Alibaba Cloud.</li>
+             * </ul>
              * 
-             * *   SELF: the custom component that you created.
-             * *   ALIYUN: the system component provided by Alibaba Cloud.
+             * <strong>example:</strong>
+             * <p>SELF</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -428,7 +674,18 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The parameters contained in the image component.</p>
+             */
+            public Builder parameters(Parameters parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group to which the image component belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -436,7 +693,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type supported by the image component.
+             * <p>The type of the operating system supported by the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder systemType(String systemType) {
                 this.systemType = systemType;
@@ -444,7 +704,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the image component.
+             * <p>The tags of the image component.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -458,9 +718,15 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsResponseBody</p>
+     */
     public static class ImageComponent extends TeaModel {
-        @NameInMap("ImageComponentSet")
-        private java.util.List < ImageComponentSet> imageComponentSet;
+        @com.aliyun.core.annotation.NameInMap("ImageComponentSet")
+        private java.util.List<ImageComponentSet> imageComponentSet;
 
         private ImageComponent(Builder builder) {
             this.imageComponentSet = builder.imageComponentSet;
@@ -477,17 +743,17 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         /**
          * @return imageComponentSet
          */
-        public java.util.List < ImageComponentSet> getImageComponentSet() {
+        public java.util.List<ImageComponentSet> getImageComponentSet() {
             return this.imageComponentSet;
         }
 
         public static final class Builder {
-            private java.util.List < ImageComponentSet> imageComponentSet; 
+            private java.util.List<ImageComponentSet> imageComponentSet; 
 
             /**
              * ImageComponentSet.
              */
-            public Builder imageComponentSet(java.util.List < ImageComponentSet> imageComponentSet) {
+            public Builder imageComponentSet(java.util.List<ImageComponentSet> imageComponentSet) {
                 this.imageComponentSet = imageComponentSet;
                 return this;
             }

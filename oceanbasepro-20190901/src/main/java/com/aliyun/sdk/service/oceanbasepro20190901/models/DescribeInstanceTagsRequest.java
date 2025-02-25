@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTagsRequest</p>
  */
 public class DescribeInstanceTagsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Body
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
     private DescribeInstanceTagsRequest(Builder builder) {
@@ -92,7 +90,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The list of cluster IDs.
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);
@@ -101,7 +99,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * The returned response.
+         * The tags.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateProblemPictureUploadSignRequest</p>
  */
 public class GenerateProblemPictureUploadSignRequest extends Request {
-    @Body
-    @NameInMap("fileName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fileName")
     private String fileName;
 
-    @Body
-    @NameInMap("fileSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fileSize")
     private Long fileSize;
 
-    @Body
-    @NameInMap("fileType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fileType")
     private String fileType;
 
-    @Body
-    @NameInMap("problemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemId")
     private Long problemId;
 
     private GenerateProblemPictureUploadSignRequest(Builder builder) {

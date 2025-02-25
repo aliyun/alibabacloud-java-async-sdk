@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvadeEventListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInvadeEventListResponseBody</p>
  */
 public class DescribeInvadeEventListResponseBody extends TeaModel {
-    @NameInMap("EventList")
-    private java.util.List < EventList> eventList;
+    @com.aliyun.core.annotation.NameInMap("EventList")
+    private java.util.List<EventList> eventList;
 
-    @NameInMap("HighLevelPercent")
+    @com.aliyun.core.annotation.NameInMap("HighLevelPercent")
     private Integer highLevelPercent;
 
-    @NameInMap("LowLevelPercent")
+    @com.aliyun.core.annotation.NameInMap("LowLevelPercent")
     private Integer lowLevelPercent;
 
-    @NameInMap("MiddleLevelPercent")
+    @com.aliyun.core.annotation.NameInMap("MiddleLevelPercent")
     private Integer middleLevelPercent;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInvadeEventListResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     /**
      * @return eventList
      */
-    public java.util.List < EventList> getEventList() {
+    public java.util.List<EventList> getEventList() {
         return this.eventList;
     }
 
@@ -90,7 +95,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EventList> eventList; 
+        private java.util.List<EventList> eventList; 
         private Integer highLevelPercent; 
         private Integer lowLevelPercent; 
         private Integer middleLevelPercent; 
@@ -98,15 +103,18 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of breach awareness events.
+         * <p>An array that consists of breach awareness events.</p>
          */
-        public Builder eventList(java.util.List < EventList> eventList) {
+        public Builder eventList(java.util.List<EventList> eventList) {
             this.eventList = eventList;
             return this;
         }
 
         /**
-         * The percentage of high-risk events.
+         * <p>The percentage of high-risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder highLevelPercent(Integer highLevelPercent) {
             this.highLevelPercent = highLevelPercent;
@@ -114,7 +122,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of low-risk events.
+         * <p>The percentage of low-risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder lowLevelPercent(Integer lowLevelPercent) {
             this.lowLevelPercent = lowLevelPercent;
@@ -122,7 +133,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of medium-risk events.
+         * <p>The percentage of medium-risk events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder middleLevelPercent(Integer middleLevelPercent) {
             this.middleLevelPercent = middleLevelPercent;
@@ -130,7 +144,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -138,7 +152,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,53 +168,59 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvadeEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvadeEventListResponseBody</p>
+     */
     public static class EventList extends TeaModel {
-        @NameInMap("AssetsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AssetsInstanceId")
         private String assetsInstanceId;
 
-        @NameInMap("AssetsInstanceName")
+        @com.aliyun.core.annotation.NameInMap("AssetsInstanceName")
         private String assetsInstanceName;
 
-        @NameInMap("AssetsType")
+        @com.aliyun.core.annotation.NameInMap("AssetsType")
         private String assetsType;
 
-        @NameInMap("EventKey")
+        @com.aliyun.core.annotation.NameInMap("EventKey")
         private String eventKey;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventSrc")
+        @com.aliyun.core.annotation.NameInMap("EventSrc")
         private String eventSrc;
 
-        @NameInMap("EventUuid")
+        @com.aliyun.core.annotation.NameInMap("EventUuid")
         private String eventUuid;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Integer firstTime;
 
-        @NameInMap("IsIgnore")
+        @com.aliyun.core.annotation.NameInMap("IsIgnore")
         private Boolean isIgnore;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Integer lastTime;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private String memberUid;
 
-        @NameInMap("PrivateIP")
+        @com.aliyun.core.annotation.NameInMap("PrivateIP")
         private String privateIP;
 
-        @NameInMap("ProcessStatus")
+        @com.aliyun.core.annotation.NameInMap("ProcessStatus")
         private Integer processStatus;
 
-        @NameInMap("PublicIP")
+        @com.aliyun.core.annotation.NameInMap("PublicIP")
         private String publicIP;
 
-        @NameInMap("PublicIpType")
+        @com.aliyun.core.annotation.NameInMap("PublicIpType")
         private String publicIpType;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private EventList(Builder builder) {
@@ -358,7 +381,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             private Integer riskLevel; 
 
             /**
-             * The ID of the affected asset.
+             * <p>The ID of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-ECS****</p>
              */
             public Builder assetsInstanceId(String assetsInstanceId) {
                 this.assetsInstanceId = assetsInstanceId;
@@ -366,7 +392,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the affected asset.
+             * <p>The name of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_test</p>
              */
             public Builder assetsInstanceName(String assetsInstanceName) {
                 this.assetsInstanceName = assetsInstanceName;
@@ -374,20 +403,23 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the affected asset. Valid values:
-             * <p>
+             * <p>The type of the affected asset. Valid values:</p>
+             * <ul>
+             * <li><strong>BastionHostIP</strong>: the egress IP address of a bastion host</li>
+             * <li><strong>BastionHostIngressIP</strong>: the ingress IP address of a bastion host</li>
+             * <li><strong>EcsEIP</strong>: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</li>
+             * <li><strong>EcsPublicIP</strong>: the public IP address of an ECS instance</li>
+             * <li><strong>EIP</strong>: the EIP</li>
+             * <li><strong>EniEIP</strong>: the EIP of an elastic network interface (ENI)</li>
+             * <li><strong>NatEIP</strong>: the EIP of a NAT gateway</li>
+             * <li><strong>SlbEIP</strong>: the EIP of a Server Load Balancer (SLB) instance</li>
+             * <li><strong>SlbPublicIP</strong>: the public IP address of an SLB instance</li>
+             * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway</li>
+             * <li><strong>HAVIP</strong>: the high-availability virtual IP address (HAVIP)</li>
+             * </ul>
              * 
-             * *   **BastionHostIP**: the egress IP address of a bastion host
-             * *   **BastionHostIngressIP**: the ingress IP address of a bastion host
-             * *   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance
-             * *   **EcsPublicIP**: the public IP address of an ECS instance
-             * *   **EIP**: the EIP
-             * *   **EniEIP**: the EIP of an elastic network interface (ENI)
-             * *   **NatEIP**: the EIP of a NAT gateway
-             * *   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
-             * *   **SlbPublicIP**: the public IP address of an SLB instance
-             * *   **NatPublicIP**: the public IP address of a NAT gateway
-             * *   **HAVIP**: the high-availability virtual IP address (HAVIP)
+             * <strong>example:</strong>
+             * <p>EcsPublicIp</p>
              */
             public Builder assetsType(String assetsType) {
                 this.assetsType = assetsType;
@@ -395,7 +427,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the breach awareness event.
+             * <p>The ID of the breach awareness event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
              */
             public Builder eventKey(String eventKey) {
                 this.eventKey = eventKey;
@@ -403,7 +438,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the breach awareness event.
+             * <p>The name of the breach awareness event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>event_test</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -411,11 +449,14 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the breach awareness event. Valid values:
-             * <p>
+             * <p>The type of the breach awareness event. Valid values:</p>
+             * <ul>
+             * <li><strong>IPS</strong>: intrusion prevention event</li>
+             * <li><strong>offline</strong>: disconnection event</li>
+             * </ul>
              * 
-             * *   **IPS**: intrusion prevention event
-             * *   **offline**: disconnection event
+             * <strong>example:</strong>
+             * <p>IPS</p>
              */
             public Builder eventSrc(String eventSrc) {
                 this.eventSrc = eventSrc;
@@ -423,7 +464,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the breach awareness event.
+             * <p>The UUID of the breach awareness event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fadd-dfdd-****</p>
              */
             public Builder eventUuid(String eventUuid) {
                 this.eventUuid = eventUuid;
@@ -431,7 +475,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the breach awareness event first occurred. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the breach awareness event first occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656750960</p>
              */
             public Builder firstTime(Integer firstTime) {
                 this.firstTime = firstTime;
@@ -439,11 +486,14 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the breach awareness event is ignored. Valid values:
-             * <p>
+             * <p>Indicates whether the breach awareness event is ignored. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The breach awareness event is ignored.</li>
+             * <li><strong>false</strong>: The breach awareness event is not ignored.</li>
+             * </ul>
              * 
-             * *   **true**: The breach awareness event is ignored.
-             * *   **false**: The breach awareness event is not ignored.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isIgnore(Boolean isIgnore) {
                 this.isIgnore = isIgnore;
@@ -451,7 +501,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the breach awareness event last occurred. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the breach awareness event last occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656837360</p>
              */
             public Builder lastTime(Integer lastTime) {
                 this.lastTime = lastTime;
@@ -459,7 +512,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member.
+             * <p>The ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135809047715****</p>
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -467,7 +523,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the affected asset.
+             * <p>The private IP address of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder privateIP(String privateIP) {
                 this.privateIP = privateIP;
@@ -475,11 +534,14 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The handling status of the breach awareness event. Valid values:
-             * <p>
+             * <p>The handling status of the breach awareness event. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled</li>
+             * <li><strong>20</strong>: handled</li>
+             * </ul>
              * 
-             * *   **0**: unhandled
-             * *   **20**: handled
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder processStatus(Integer processStatus) {
                 this.processStatus = processStatus;
@@ -487,7 +549,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the affected asset.
+             * <p>The public IP address of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>198.51.XX.XX</p>
              */
             public Builder publicIP(String publicIP) {
                 this.publicIP = publicIP;
@@ -495,20 +560,23 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the affected asset. Valid values:
-             * <p>
+             * <p>The type of the affected asset. Valid values:</p>
+             * <ul>
+             * <li><strong>BastionHostIP</strong>: the egress IP address of a bastion host</li>
+             * <li><strong>BastionHostIngressIP</strong>: the ingress IP address of a bastion host</li>
+             * <li><strong>EcsEIP</strong>: the EIP of an ECS instance</li>
+             * <li><strong>EcsPublicIP</strong>: the public IP address of an ECS instance</li>
+             * <li><strong>EIP</strong>: the EIP</li>
+             * <li><strong>EniEIP</strong>: the EIP of an ENI</li>
+             * <li><strong>NatEIP</strong>: the EIP of a NAT gateway</li>
+             * <li><strong>SlbEIP</strong>: the EIP of an SLB instance</li>
+             * <li><strong>SlbPublicIP</strong>: the public IP address of an SLB instance</li>
+             * <li><strong>NatPublicIP</strong>: the public IP address of a NAT gateway</li>
+             * <li><strong>HAVIP</strong>: the HAVIP</li>
+             * </ul>
              * 
-             * *   **BastionHostIP**: the egress IP address of a bastion host
-             * *   **BastionHostIngressIP**: the ingress IP address of a bastion host
-             * *   **EcsEIP**: the EIP of an ECS instance
-             * *   **EcsPublicIP**: the public IP address of an ECS instance
-             * *   **EIP**: the EIP
-             * *   **EniEIP**: the EIP of an ENI
-             * *   **NatEIP**: the EIP of a NAT gateway
-             * *   **SlbEIP**: the EIP of an SLB instance
-             * *   **SlbPublicIP**: the public IP address of an SLB instance
-             * *   **NatPublicIP**: the public IP address of a NAT gateway
-             * *   **HAVIP**: the HAVIP
+             * <strong>example:</strong>
+             * <p>EcsPublicIp</p>
              */
             public Builder publicIpType(String publicIpType) {
                 this.publicIpType = publicIpType;
@@ -516,12 +584,15 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: low</li>
+             * <li><strong>2</strong>: medium</li>
+             * <li><strong>3</strong>: high</li>
+             * </ul>
              * 
-             * *   **1**: low
-             * *   **2**: medium
-             * *   **3**: high
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -535,14 +606,20 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInvadeEventListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvadeEventListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -586,7 +663,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -594,7 +674,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -602,7 +685,10 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of breach awareness events.
+             * <p>The total number of breach awareness events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

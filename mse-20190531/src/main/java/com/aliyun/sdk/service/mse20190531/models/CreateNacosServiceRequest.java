@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNacosServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateNacosServiceRequest</p>
  */
 public class CreateNacosServiceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("Ephemeral")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ephemeral")
     private Boolean ephemeral;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("ProtectThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectThreshold")
     private String protectThreshold;
 
-    @Query
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
     private CreateNacosServiceRequest(Builder builder) {
@@ -153,11 +158,14 @@ public class CreateNacosServiceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -166,10 +174,13 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+         * </blockquote>
          * 
-         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+         * <strong>example:</strong>
+         * <p>mse-3691a080</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -178,11 +189,14 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is marked as a temporary node. Valid values:
-         * <p>
+         * <p>Specifies whether the instance is marked as a temporary node. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
          * 
-         * *   `true`: yes
-         * *   `false`: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ephemeral(Boolean ephemeral) {
             this.putQueryParameter("Ephemeral", ephemeral);
@@ -191,7 +205,10 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -200,10 +217,13 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+         * </blockquote>
          * 
-         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +232,10 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>production</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -221,7 +244,10 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The protection threshold.
+         * <p>The protection threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder protectThreshold(String protectThreshold) {
             this.putQueryParameter("ProtectThreshold", protectThreshold);
@@ -230,7 +256,11 @@ public class CreateNacosServiceRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibabacloud.hipstershop.cartserviceapi.service.CartService</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFunctionResourceRequest</p>
  */
 public class CreateFunctionResourceRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Body
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private CreateFunctionResourceRequest(Builder builder) {
@@ -126,7 +125,7 @@ public class CreateFunctionResourceRequest extends Request {
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -135,7 +134,7 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -144,7 +143,7 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * Data.
+         * The resource data. The data structure varies with the resource type.
          */
         public Builder data(Data data) {
             this.putBodyParameter("Data", data);
@@ -153,7 +152,7 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the resource.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -162,7 +161,7 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * The name of the resource.
          */
         public Builder resourceName(String resourceName) {
             this.putBodyParameter("ResourceName", resourceName);
@@ -171,7 +170,26 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   feature_generator
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   raw_file
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -187,10 +205,10 @@ public class CreateFunctionResourceRequest extends Request {
     } 
 
     public static class Features extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Features(Builder builder) {
@@ -225,7 +243,7 @@ public class CreateFunctionResourceRequest extends Request {
             private String type; 
 
             /**
-             * Name.
+             * The name of the feature.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +251,26 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the feature.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   item
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   user
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -248,7 +285,7 @@ public class CreateFunctionResourceRequest extends Request {
 
     }
     public static class Input extends TeaModel {
-        @NameInMap("Features")
+        @com.aliyun.core.annotation.NameInMap("Features")
         private java.util.List < Features> features;
 
         private Input(Builder builder) {
@@ -274,7 +311,7 @@ public class CreateFunctionResourceRequest extends Request {
             private java.util.List < Features> features; 
 
             /**
-             * Features.
+             * The input features.
              */
             public Builder features(java.util.List < Features> features) {
                 this.features = features;
@@ -289,13 +326,13 @@ public class CreateFunctionResourceRequest extends Request {
 
     }
     public static class Generators extends TeaModel {
-        @NameInMap("Generator")
+        @com.aliyun.core.annotation.NameInMap("Generator")
         private String generator;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
         private Generators(Builder builder) {
@@ -339,7 +376,58 @@ public class CreateFunctionResourceRequest extends Request {
             private String output; 
 
             /**
-             * Generator.
+             * The type of the feature generator.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   lookup
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   sequence
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   overlap
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   raw
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   combo
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   id
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder generator(String generator) {
                 this.generator = generator;
@@ -347,7 +435,7 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * Input.
+             * The input.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -355,7 +443,7 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * Output.
+             * The name of the output feature.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -370,10 +458,10 @@ public class CreateFunctionResourceRequest extends Request {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Generators")
+        @com.aliyun.core.annotation.NameInMap("Generators")
         private java.util.List < Generators> generators;
 
         private Data(Builder builder) {
@@ -408,7 +496,7 @@ public class CreateFunctionResourceRequest extends Request {
             private java.util.List < Generators> generators; 
 
             /**
-             * Content.
+             * The content of the file that corresponds to a resource of the raw_file type.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -416,7 +504,7 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * Generators.
+             * The feature generators that correspond to resources of the feature_generator type.
              */
             public Builder generators(java.util.List < Generators> generators) {
                 this.generators = generators;

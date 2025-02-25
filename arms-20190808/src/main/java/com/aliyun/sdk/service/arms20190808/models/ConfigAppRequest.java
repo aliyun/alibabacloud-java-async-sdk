@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigAppRequest} extends {@link RequestModel}
  *
  * <p>ConfigAppRequest</p>
  */
 public class ConfigAppRequest extends Request {
-    @Query
-    @NameInMap("AppIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appIds;
 
-    @Query
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private String enable;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ConfigAppRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class ConfigAppRequest extends Request {
         } 
 
         /**
-         * The process identifier (PID) of the application. Separate multiple PIDs with commas (,).
+         * <p>The process identifier (PID) of the application. Separate multiple PIDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iioe7jcnuk@582846f37******,atc889zkcf@d8deedfa9bf******</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -107,11 +116,14 @@ public class ConfigAppRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on or off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.
-         * <p>
+         * <p>Specifies whether to turn on or off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.</p>
+         * <ul>
+         * <li><code>true</code>: turns on the switch</li>
+         * <li><code>false</code>: turns off the switch</li>
+         * </ul>
          * 
-         * *   `true`: turns on the switch
-         * *   `false`: turns off the switch
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -120,7 +132,11 @@ public class ConfigAppRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +145,10 @@ public class ConfigAppRequest extends Request {
         }
 
         /**
-         * The type of the application. Set the value to **TRACE**.
+         * <p>The type of the application. Set the value to <strong>TRACE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

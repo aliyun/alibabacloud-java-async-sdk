@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTopicRequest} extends {@link RequestModel}
  *
  * <p>DeleteTopicRequest</p>
  */
 public class DeleteTopicRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TopicName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
     private DeleteTopicRequest(Builder builder) {
@@ -78,7 +83,11 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * <p>The name of the topic that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-testAccMNSTopic-112965059402264645</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

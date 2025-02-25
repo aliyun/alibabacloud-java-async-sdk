@@ -1,76 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteTableListRequest} extends {@link RequestModel}
  *
  * <p>DescribeRouteTableListRequest</p>
  */
 public class DescribeRouteTableListRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
     private String routeTableId;
 
-    @Query
-    @NameInMap("RouteTableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableName")
     private String routeTableName;
 
-    @Query
-    @NameInMap("RouteTableType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableType")
     private String routeTableType;
 
-    @Query
-    @NameInMap("RouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterId")
     private String routerId;
 
-    @Query
-    @NameInMap("RouterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterType")
     private String routerType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeRouteTableListRequest(Builder builder) {
@@ -199,7 +204,7 @@ public class DescribeRouteTableListRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -224,7 +229,7 @@ public class DescribeRouteTableListRequest extends Request {
         private String routeTableType; 
         private String routerId; 
         private String routerType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -269,7 +274,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -278,7 +286,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -287,10 +298,12 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC to which the route table belongs.
-         * <p>
+         * <p>The region ID of the VPC to which the route table belongs.</p>
+         * <p>You can call <a href="https://www.alibabacloud.com/help/vpc/developer-reference/api-vpc-2016-04-28-describeregions">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>ap-southeast-6</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +312,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the route table to be queried belongs.
+         * <p>The ID of the resource group to which the route table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -326,7 +342,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the route table that you want to query.
+         * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -335,7 +354,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The name of the route table that you want to query.
+         * <p>The name of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -344,7 +366,14 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * RouteTableType.
+         * <p>The type of the route table.</p>
+         * <ul>
+         * <li><strong>System</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder routeTableType(String routeTableType) {
             this.putQueryParameter("RouteTableType", routeTableType);
@@ -353,7 +382,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the router to which the route table belongs.
+         * <p>The ID of vRouter to which the route table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1lhl0taikrteen8****</p>
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -362,11 +394,14 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The type of the router to which the route table belongs. Valid values:
-         * <p>
+         * <p>The type of the router to which the route table belongs. Valid value:</p>
+         * <ul>
+         * <li><strong>VRouter</strong> (default): a vRouter</li>
+         * <li><strong>VBR</strong>: a VBR</li>
+         * </ul>
          * 
-         * *   **VRouter** (default)
-         * *   **VBR**
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -375,19 +410,20 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the route table belongs.
-         * <p>
+         * <p>The ID of the VPC to which the route table belongs. </p>
+         * <p>When this parameter is set, the value of <strong>RouterType</strong> is automatically assigned to <strong>VRouter</strong>.</p>
          * 
-         * After this parameter is specified, the value of the **RouterType** parameter is automatically set to **VRouter**.
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -402,11 +438,17 @@ public class DescribeRouteTableListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouteTableListRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTableListRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -441,10 +483,11 @@ public class DescribeRouteTableListRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -452,10 +495,11 @@ public class DescribeRouteTableListRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

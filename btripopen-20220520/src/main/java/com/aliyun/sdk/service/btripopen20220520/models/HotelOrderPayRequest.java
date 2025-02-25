@@ -1,51 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderPayRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderPayRequest</p>
  */
 public class HotelOrderPayRequest extends Request {
-    @Body
-    @NameInMap("btrip_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long btripOrderId;
 
-    @Body
-    @NameInMap("btrip_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
 
-    @Body
-    @NameInMap("company_pay_fee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("company_pay_fee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long companyPayFee;
 
-    @Body
-    @NameInMap("person_pay_fee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("person_pay_fee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long personPayFee;
 
-    @Body
-    @NameInMap("third_pay_account")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_pay_account")
     private String thirdPayAccount;
 
-    @Body
-    @NameInMap("third_trade_no")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_trade_no")
     private String thirdTradeNo;
 
-    @Body
-    @NameInMap("total_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long totalPrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelOrderPayRequest(Builder builder) {
@@ -156,7 +162,11 @@ public class HotelOrderPayRequest extends Request {
         } 
 
         /**
-         * 供应商订单号（取自创单返回的订单号）
+         * <p>供应商订单号（取自创单返回的订单号）</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1002202194207077022</p>
          */
         public Builder btripOrderId(Long btripOrderId) {
             this.putBodyParameter("btrip_order_id", btripOrderId);
@@ -165,7 +175,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23918781</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putBodyParameter("btrip_user_id", btripUserId);
@@ -174,7 +187,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * company_pay_fee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder companyPayFee(Long companyPayFee) {
             this.putBodyParameter("company_pay_fee", companyPayFee);
@@ -183,7 +199,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * person_pay_fee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder personPayFee(Long personPayFee) {
             this.putBodyParameter("person_pay_fee", personPayFee);
@@ -210,7 +229,10 @@ public class HotelOrderPayRequest extends Request {
         }
 
         /**
-         * total_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalPrice(Long totalPrice) {
             this.putBodyParameter("total_price", totalPrice);

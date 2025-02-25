@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancePerformanceResponseBody</p>
  */
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PerformanceKeys")
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBInstancePerformanceResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The end of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The end of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13T11:58Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -82,7 +90,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the performance metrics.
+         * <p>The details of performance metrics.</p>
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -90,7 +98,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A300BC7-6D8F-527F-A2DB-A7768D26E9AC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * <p>The beginning of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13T10:58Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -111,11 +125,17 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceValue extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PerformanceValue(Builder builder) {
@@ -150,7 +170,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The date and time when the metric value was generated.
+             * <p>The date and time when the metric value was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-13T10:58:00Z</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -158,7 +181,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the performance metric.
+             * <p>The value of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.23</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -172,9 +198,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceValues extends TeaModel {
-        @NameInMap("PerformanceValue")
-        private java.util.List < PerformanceValue> performanceValue;
+        @com.aliyun.core.annotation.NameInMap("PerformanceValue")
+        private java.util.List<PerformanceValue> performanceValue;
 
         private PerformanceValues(Builder builder) {
             this.performanceValue = builder.performanceValue;
@@ -191,17 +223,17 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         /**
          * @return performanceValue
          */
-        public java.util.List < PerformanceValue> getPerformanceValue() {
+        public java.util.List<PerformanceValue> getPerformanceValue() {
             return this.performanceValue;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceValue> performanceValue; 
+            private java.util.List<PerformanceValue> performanceValue; 
 
             /**
              * PerformanceValue.
              */
-            public Builder performanceValue(java.util.List < PerformanceValue> performanceValue) {
+            public Builder performanceValue(java.util.List<PerformanceValue> performanceValue) {
                 this.performanceValue = performanceValue;
                 return this;
             }
@@ -213,17 +245,23 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceKey extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("PerformanceValues")
+        @com.aliyun.core.annotation.NameInMap("PerformanceValues")
         private PerformanceValues performanceValues;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("ValueFormat")
+        @com.aliyun.core.annotation.NameInMap("ValueFormat")
         private String valueFormat;
 
         private PerformanceKey(Builder builder) {
@@ -276,7 +314,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String valueFormat; 
 
             /**
-             * The performance metric.
+             * <p>The performance metrics that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CpuUsage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -284,7 +325,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the performance metric values.
+             * <p>The details of the performance metric values.</p>
              */
             public Builder performanceValues(PerformanceValues performanceValues) {
                 this.performanceValues = performanceValues;
@@ -292,7 +333,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the performance metric.
+             * <p>The unit of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -300,10 +344,11 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with **\&amp;** symbols.
-             * <p>
+             * <p>The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &amp;).</p>
+             * <p>For example, if you query disk space usage, the returned value of the <strong>ValueFormat</strong> parameter is <strong>ins_size&amp;data_size&amp;log_size</strong>.</p>
              * 
-             * For example, if you query disk usage, the returned **ValueFormat** value is in the **ins_size\&amp;data_size\&amp;log_size** format.
+             * <strong>example:</strong>
+             * <p>cpu_usage</p>
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;
@@ -317,9 +362,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("PerformanceKey")
-        private java.util.List < PerformanceKey> performanceKey;
+        @com.aliyun.core.annotation.NameInMap("PerformanceKey")
+        private java.util.List<PerformanceKey> performanceKey;
 
         private PerformanceKeys(Builder builder) {
             this.performanceKey = builder.performanceKey;
@@ -336,17 +387,17 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         /**
          * @return performanceKey
          */
-        public java.util.List < PerformanceKey> getPerformanceKey() {
+        public java.util.List<PerformanceKey> getPerformanceKey() {
             return this.performanceKey;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceKey> performanceKey; 
+            private java.util.List<PerformanceKey> performanceKey; 
 
             /**
              * PerformanceKey.
              */
-            public Builder performanceKey(java.util.List < PerformanceKey> performanceKey) {
+            public Builder performanceKey(java.util.List<PerformanceKey> performanceKey) {
                 this.performanceKey = performanceKey;
                 return this;
             }

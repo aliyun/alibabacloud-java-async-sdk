@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateSilencePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateSilencePolicyResponseBody</p>
  */
 public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SilencePolicy")
+    @com.aliyun.core.annotation.NameInMap("SilencePolicy")
     private SilencePolicy silencePolicy;
 
     private CreateOrUpdateSilencePolicyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         private SilencePolicy silencePolicy; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A list of silence policies.
+         * <p>A list of silence policies.</p>
          */
         public Builder silencePolicy(SilencePolicy silencePolicy) {
             this.silencePolicy = silencePolicy;
@@ -71,14 +79,20 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateSilencePolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSilencePolicyResponseBody</p>
+     */
     public static class MatchingConditions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MatchingConditions(Builder builder) {
@@ -122,7 +136,10 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the matching condition.
+             * <p>The key of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>altertname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -130,15 +147,18 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator of the matching condition. Valid values:
-             * <p>
+             * <p>The logical operator of the matching condition. Valid values:</p>
+             * <ul>
+             * <li><code>eq</code>: equal to</li>
+             * <li><code>neq</code>: not equal to</li>
+             * <li><code>in</code>: contains</li>
+             * <li><code>nin</code>: does not contain</li>
+             * <li><code>re</code>: regular expression match</li>
+             * <li><code>nre</code>: regular expression mismatch</li>
+             * </ul>
              * 
-             * *   `eq`: equal to
-             * *   `neq`: not equal to
-             * *   `in`: contains
-             * *   `nin`: does not contain
-             * *   `re`: regular expression match
-             * *   `nre`: regular expression mismatch
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -146,7 +166,10 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the matching condition.
+             * <p>The value of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -160,9 +183,15 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSilencePolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSilencePolicyResponseBody</p>
+     */
     public static class MatchingRules extends TeaModel {
-        @NameInMap("MatchingConditions")
-        private java.util.List < MatchingConditions> matchingConditions;
+        @com.aliyun.core.annotation.NameInMap("MatchingConditions")
+        private java.util.List<MatchingConditions> matchingConditions;
 
         private MatchingRules(Builder builder) {
             this.matchingConditions = builder.matchingConditions;
@@ -179,17 +208,17 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         /**
          * @return matchingConditions
          */
-        public java.util.List < MatchingConditions> getMatchingConditions() {
+        public java.util.List<MatchingConditions> getMatchingConditions() {
             return this.matchingConditions;
         }
 
         public static final class Builder {
-            private java.util.List < MatchingConditions> matchingConditions; 
+            private java.util.List<MatchingConditions> matchingConditions; 
 
             /**
-             * A list of matching conditions.
+             * <p>A list of matching conditions.</p>
              */
-            public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
+            public Builder matchingConditions(java.util.List<MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
                 return this;
             }
@@ -201,20 +230,42 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateOrUpdateSilencePolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateSilencePolicyResponseBody</p>
+     */
     public static class SilencePolicy extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTimeType")
+        private String effectiveTimeType;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MatchingRules")
-        private java.util.List < MatchingRules> matchingRules;
+        @com.aliyun.core.annotation.NameInMap("MatchingRules")
+        private java.util.List<MatchingRules> matchingRules;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("State")
+        private String state;
+
+        @com.aliyun.core.annotation.NameInMap("TimePeriod")
+        private String timePeriod;
+
+        @com.aliyun.core.annotation.NameInMap("TimeSlots")
+        private String timeSlots;
+
         private SilencePolicy(Builder builder) {
+            this.effectiveTimeType = builder.effectiveTimeType;
             this.id = builder.id;
             this.matchingRules = builder.matchingRules;
             this.name = builder.name;
+            this.state = builder.state;
+            this.timePeriod = builder.timePeriod;
+            this.timeSlots = builder.timeSlots;
         }
 
         public static Builder builder() {
@@ -223,6 +274,13 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
         public static SilencePolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return effectiveTimeType
+         */
+        public String getEffectiveTimeType() {
+            return this.effectiveTimeType;
         }
 
         /**
@@ -235,7 +293,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         /**
          * @return matchingRules
          */
-        public java.util.List < MatchingRules> getMatchingRules() {
+        public java.util.List<MatchingRules> getMatchingRules() {
             return this.matchingRules;
         }
 
@@ -246,13 +304,49 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
+        /**
+         * @return timePeriod
+         */
+        public String getTimePeriod() {
+            return this.timePeriod;
+        }
+
+        /**
+         * @return timeSlots
+         */
+        public String getTimeSlots() {
+            return this.timeSlots;
+        }
+
         public static final class Builder {
+            private String effectiveTimeType; 
             private Long id; 
-            private java.util.List < MatchingRules> matchingRules; 
+            private java.util.List<MatchingRules> matchingRules; 
             private String name; 
+            private String state; 
+            private String timePeriod; 
+            private String timeSlots; 
 
             /**
-             * The ID of the silence policy.
+             * EffectiveTimeType.
+             */
+            public Builder effectiveTimeType(String effectiveTimeType) {
+                this.effectiveTimeType = effectiveTimeType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the silence policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -260,18 +354,48 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * A list of matching rules.
+             * <p>A list of matching rules.</p>
              */
-            public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
+            public Builder matchingRules(java.util.List<MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
                 return this;
             }
 
             /**
-             * The name of the silence policy.
+             * <p>The name of the silence policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>silencepolicy_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable the silence policy. Valid values: enable and disable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * TimePeriod.
+             */
+            public Builder timePeriod(String timePeriod) {
+                this.timePeriod = timePeriod;
+                return this;
+            }
+
+            /**
+             * TimeSlots.
+             */
+            public Builder timeSlots(String timeSlots) {
+                this.timeSlots = timeSlots;
                 return this;
             }
 

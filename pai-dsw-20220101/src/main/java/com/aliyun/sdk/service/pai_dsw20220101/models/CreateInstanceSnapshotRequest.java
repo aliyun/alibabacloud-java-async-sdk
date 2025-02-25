@@ -1,43 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceSnapshotRequest</p>
  */
 public class CreateInstanceSnapshotRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludePaths")
+    private java.util.List<String> excludePaths;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrl;
 
-    @Body
-    @NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
 
-    @Body
-    @NameInMap("SnapshotDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Overwrite")
+    private Boolean overwrite;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SnapshotDescription")
     private String snapshotDescription;
 
-    @Body
-    @NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotName;
 
     private CreateInstanceSnapshotRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.excludePaths = builder.excludePaths;
         this.imageUrl = builder.imageUrl;
         this.labels = builder.labels;
+        this.overwrite = builder.overwrite;
         this.snapshotDescription = builder.snapshotDescription;
         this.snapshotName = builder.snapshotName;
     }
@@ -63,6 +80,13 @@ public class CreateInstanceSnapshotRequest extends Request {
     }
 
     /**
+     * @return excludePaths
+     */
+    public java.util.List<String> getExcludePaths() {
+        return this.excludePaths;
+    }
+
+    /**
      * @return imageUrl
      */
     public String getImageUrl() {
@@ -72,8 +96,15 @@ public class CreateInstanceSnapshotRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return overwrite
+     */
+    public Boolean getOverwrite() {
+        return this.overwrite;
     }
 
     /**
@@ -92,8 +123,10 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceSnapshotRequest, Builder> {
         private String instanceId; 
+        private java.util.List<String> excludePaths; 
         private String imageUrl; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
+        private Boolean overwrite; 
         private String snapshotDescription; 
         private String snapshotName; 
 
@@ -104,14 +137,19 @@ public class CreateInstanceSnapshotRequest extends Request {
         private Builder(CreateInstanceSnapshotRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.excludePaths = request.excludePaths;
             this.imageUrl = request.imageUrl;
             this.labels = request.labels;
+            this.overwrite = request.overwrite;
             this.snapshotDescription = request.snapshotDescription;
             this.snapshotName = request.snapshotName;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +158,19 @@ public class CreateInstanceSnapshotRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * ExcludePaths.
+         */
+        public Builder excludePaths(java.util.List<String> excludePaths) {
+            this.putBodyParameter("ExcludePaths", excludePaths);
+            this.excludePaths = excludePaths;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putBodyParameter("ImageUrl", imageUrl);
@@ -131,9 +181,18 @@ public class CreateInstanceSnapshotRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * Overwrite.
+         */
+        public Builder overwrite(Boolean overwrite) {
+            this.putBodyParameter("Overwrite", overwrite);
+            this.overwrite = overwrite;
             return this;
         }
 
@@ -147,7 +206,10 @@ public class CreateInstanceSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>training_data_env</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putBodyParameter("SnapshotName", snapshotName);
@@ -162,11 +224,17 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceSnapshotRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceSnapshotRequest</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {

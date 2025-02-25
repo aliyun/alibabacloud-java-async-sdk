@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PrincipalPrivilegeSet</p>
  */
 public class PrincipalPrivilegeSet extends TeaModel {
-    @NameInMap("GroupPrivileges")
+    @com.aliyun.core.annotation.NameInMap("GroupPrivileges")
     private java.util.Map < String, java.util.List<PrivilegeGrantInfo>> groupPrivileges;
 
-    @NameInMap("RolePrivileges")
+    @com.aliyun.core.annotation.NameInMap("RolePrivileges")
     private java.util.Map < String, java.util.List<PrivilegeGrantInfo>> rolePrivileges;
 
-    @NameInMap("UserPrivileges")
+    @com.aliyun.core.annotation.NameInMap("UserPrivileges")
     private java.util.Map < String, java.util.List<PrivilegeGrantInfo>> userPrivileges;
 
     private PrincipalPrivilegeSet(Builder builder) {

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveClusterRequest} extends {@link RequestModel}
  *
  * <p>RemoveClusterRequest</p>
  */
 public class RemoveClusterRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("clusterName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("clusterName")
     private String clusterName;
 
     private RemoveClusterRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class RemoveClusterRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2iv7sq01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +87,10 @@ public class RemoveClusterRequest extends Request {
         }
 
         /**
-         * clusterName.
+         * <p>The name of the cluster</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj_vpc_domain_2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);

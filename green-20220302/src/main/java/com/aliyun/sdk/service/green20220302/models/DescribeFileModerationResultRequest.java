@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileModerationResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeFileModerationResultRequest</p>
  */
 public class DescribeFileModerationResultRequest extends Request {
-    @Body
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
-    @Body
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
     private DescribeFileModerationResultRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class DescribeFileModerationResultRequest extends Request {
         } 
 
         /**
-         * Service.
+         * <p>The type of the moderation service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document_detection</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -77,7 +85,13 @@ public class DescribeFileModerationResultRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <ul>
+         * <li>taskId: required. The URL of the object that you want to moderate. Make sure that the URL can be accessed over the Internet.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;taskId&quot;:&quot;vi_f_hPgx9PFIQISdlfA888hOFG-1yJq8v&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAmortizedCostByConsumePeriodResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAmortizedCostByConsumePeriodResponseBody</p>
  */
 public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeInstanceAmortizedCostByConsumePeriodResponseBody(Builder builder) {
@@ -131,182 +136,201 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAmortizedCostByConsumePeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAmortizedCostByConsumePeriodResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AmortizationPeriod")
+        @com.aliyun.core.annotation.NameInMap("AfterDiscountAmount")
+        private Double afterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("AmortizationPeriod")
         private String amortizationPeriod;
 
-        @NameInMap("AmortizationStatus")
+        @com.aliyun.core.annotation.NameInMap("AmortizationStatus")
         private String amortizationStatus;
 
-        @NameInMap("BillAccountID")
+        @com.aliyun.core.annotation.NameInMap("BillAccountID")
         private Long billAccountID;
 
-        @NameInMap("BillAccountName")
+        @com.aliyun.core.annotation.NameInMap("BillAccountName")
         private String billAccountName;
 
-        @NameInMap("BillOwnerID")
+        @com.aliyun.core.annotation.NameInMap("BillOwnerID")
         private Long billOwnerID;
 
-        @NameInMap("BillOwnerName")
+        @com.aliyun.core.annotation.NameInMap("BillOwnerName")
         private String billOwnerName;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("ConsumePeriod")
+        @com.aliyun.core.annotation.NameInMap("ConsumePeriod")
         private String consumePeriod;
 
-        @NameInMap("CostUnit")
+        @com.aliyun.core.annotation.NameInMap("CostUnit")
         private String costUnit;
 
-        @NameInMap("CostUnitCode")
+        @com.aliyun.core.annotation.NameInMap("CostUnitCode")
         private String costUnitCode;
 
-        @NameInMap("CurrentAmortizationDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationAfterDiscountAmount")
+        private Double currentAmortizationAfterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByCashCoupons")
         private Double currentAmortizationDeductedByCashCoupons;
 
-        @NameInMap("CurrentAmortizationDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByCoupons")
         private Double currentAmortizationDeductedByCoupons;
 
-        @NameInMap("CurrentAmortizationDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByPrepaidCard")
         private Double currentAmortizationDeductedByPrepaidCard;
 
-        @NameInMap("CurrentAmortizationExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationExpenditureAmount")
         private Double currentAmortizationExpenditureAmount;
 
-        @NameInMap("CurrentAmortizationInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationInvoiceDiscount")
         private Double currentAmortizationInvoiceDiscount;
 
-        @NameInMap("CurrentAmortizationPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationPretaxAmount")
         private Double currentAmortizationPretaxAmount;
 
-        @NameInMap("CurrentAmortizationPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationPretaxGrossAmount")
         private Double currentAmortizationPretaxGrossAmount;
 
-        @NameInMap("CurrentAmortizationRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationRoundDownDiscount")
         private Double currentAmortizationRoundDownDiscount;
 
-        @NameInMap("DeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCashCoupons")
         private Double deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCoupons")
         private Double deductedByCoupons;
 
-        @NameInMap("DeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("DeductedByPrepaidCard")
         private Double deductedByPrepaidCard;
 
-        @NameInMap("ExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("ExpenditureAmount")
         private Double expenditureAmount;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InternetIP")
+        @com.aliyun.core.annotation.NameInMap("InternetIP")
         private String internetIP;
 
-        @NameInMap("IntranetIP")
+        @com.aliyun.core.annotation.NameInMap("IntranetIP")
         private String intranetIP;
 
-        @NameInMap("InvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("InvoiceDiscount")
         private Double invoiceDiscount;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private Double pretaxAmount;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private Double pretaxGrossAmount;
 
-        @NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedAfterDiscountAmount")
+        private Double previouslyAmortizedAfterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
         private Double previouslyAmortizedDeductedByCashCoupons;
 
-        @NameInMap("PreviouslyAmortizedDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByCoupons")
         private Double previouslyAmortizedDeductedByCoupons;
 
-        @NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
         private Double previouslyAmortizedDeductedByPrepaidCard;
 
-        @NameInMap("PreviouslyAmortizedExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedExpenditureAmount")
         private Double previouslyAmortizedExpenditureAmount;
 
-        @NameInMap("PreviouslyAmortizedInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedInvoiceDiscount")
         private Double previouslyAmortizedInvoiceDiscount;
 
-        @NameInMap("PreviouslyAmortizedPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedPretaxAmount")
         private Double previouslyAmortizedPretaxAmount;
 
-        @NameInMap("PreviouslyAmortizedPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedPretaxGrossAmount")
         private Double previouslyAmortizedPretaxGrossAmount;
 
-        @NameInMap("PreviouslyAmortizedRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedRoundDownDiscount")
         private Double previouslyAmortizedRoundDownDiscount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductDetail")
+        @com.aliyun.core.annotation.NameInMap("ProductDetail")
         private String productDetail;
 
-        @NameInMap("ProductDetailCode")
+        @com.aliyun.core.annotation.NameInMap("ProductDetailCode")
         private String productDetailCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RemainingAmortizationDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationAfterDiscountAmount")
+        private Double remainingAmortizationAfterDiscountAmount;
+
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByCashCoupons")
         private Double remainingAmortizationDeductedByCashCoupons;
 
-        @NameInMap("RemainingAmortizationDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByCoupons")
         private Double remainingAmortizationDeductedByCoupons;
 
-        @NameInMap("RemainingAmortizationDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByPrepaidCard")
         private Double remainingAmortizationDeductedByPrepaidCard;
 
-        @NameInMap("RemainingAmortizationExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationExpenditureAmount")
         private Double remainingAmortizationExpenditureAmount;
 
-        @NameInMap("RemainingAmortizationInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationInvoiceDiscount")
         private Double remainingAmortizationInvoiceDiscount;
 
-        @NameInMap("RemainingAmortizationPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationPretaxAmount")
         private Double remainingAmortizationPretaxAmount;
 
-        @NameInMap("RemainingAmortizationPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationPretaxGrossAmount")
         private Double remainingAmortizationPretaxGrossAmount;
 
-        @NameInMap("RemainingAmortizationRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationRoundDownDiscount")
         private Double remainingAmortizationRoundDownDiscount;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("RoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("RoundDownDiscount")
         private Double roundDownDiscount;
 
-        @NameInMap("SplitAccountName")
+        @com.aliyun.core.annotation.NameInMap("SplitAccountName")
         private String splitAccountName;
 
-        @NameInMap("SplitItemID")
+        @com.aliyun.core.annotation.NameInMap("SplitItemID")
         private String splitItemID;
 
-        @NameInMap("SplitItemName")
+        @com.aliyun.core.annotation.NameInMap("SplitItemName")
         private String splitItemName;
 
-        @NameInMap("SplitProductDetail")
+        @com.aliyun.core.annotation.NameInMap("SplitProductDetail")
         private String splitProductDetail;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private Items(Builder builder) {
+            this.afterDiscountAmount = builder.afterDiscountAmount;
             this.amortizationPeriod = builder.amortizationPeriod;
             this.amortizationStatus = builder.amortizationStatus;
             this.billAccountID = builder.billAccountID;
@@ -317,6 +341,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             this.consumePeriod = builder.consumePeriod;
             this.costUnit = builder.costUnit;
             this.costUnitCode = builder.costUnitCode;
+            this.currentAmortizationAfterDiscountAmount = builder.currentAmortizationAfterDiscountAmount;
             this.currentAmortizationDeductedByCashCoupons = builder.currentAmortizationDeductedByCashCoupons;
             this.currentAmortizationDeductedByCoupons = builder.currentAmortizationDeductedByCoupons;
             this.currentAmortizationDeductedByPrepaidCard = builder.currentAmortizationDeductedByPrepaidCard;
@@ -335,6 +360,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             this.invoiceDiscount = builder.invoiceDiscount;
             this.pretaxAmount = builder.pretaxAmount;
             this.pretaxGrossAmount = builder.pretaxGrossAmount;
+            this.previouslyAmortizedAfterDiscountAmount = builder.previouslyAmortizedAfterDiscountAmount;
             this.previouslyAmortizedDeductedByCashCoupons = builder.previouslyAmortizedDeductedByCashCoupons;
             this.previouslyAmortizedDeductedByCoupons = builder.previouslyAmortizedDeductedByCoupons;
             this.previouslyAmortizedDeductedByPrepaidCard = builder.previouslyAmortizedDeductedByPrepaidCard;
@@ -348,6 +374,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             this.productDetailCode = builder.productDetailCode;
             this.productName = builder.productName;
             this.region = builder.region;
+            this.remainingAmortizationAfterDiscountAmount = builder.remainingAmortizationAfterDiscountAmount;
             this.remainingAmortizationDeductedByCashCoupons = builder.remainingAmortizationDeductedByCashCoupons;
             this.remainingAmortizationDeductedByCoupons = builder.remainingAmortizationDeductedByCoupons;
             this.remainingAmortizationDeductedByPrepaidCard = builder.remainingAmortizationDeductedByPrepaidCard;
@@ -373,6 +400,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return afterDiscountAmount
+         */
+        public Double getAfterDiscountAmount() {
+            return this.afterDiscountAmount;
         }
 
         /**
@@ -443,6 +477,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
          */
         public String getCostUnitCode() {
             return this.costUnitCode;
+        }
+
+        /**
+         * @return currentAmortizationAfterDiscountAmount
+         */
+        public Double getCurrentAmortizationAfterDiscountAmount() {
+            return this.currentAmortizationAfterDiscountAmount;
         }
 
         /**
@@ -572,6 +613,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
+         * @return previouslyAmortizedAfterDiscountAmount
+         */
+        public Double getPreviouslyAmortizedAfterDiscountAmount() {
+            return this.previouslyAmortizedAfterDiscountAmount;
+        }
+
+        /**
          * @return previouslyAmortizedDeductedByCashCoupons
          */
         public Double getPreviouslyAmortizedDeductedByCashCoupons() {
@@ -660,6 +708,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
          */
         public String getRegion() {
             return this.region;
+        }
+
+        /**
+         * @return remainingAmortizationAfterDiscountAmount
+         */
+        public Double getRemainingAmortizationAfterDiscountAmount() {
+            return this.remainingAmortizationAfterDiscountAmount;
         }
 
         /**
@@ -782,6 +837,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         public static final class Builder {
+            private Double afterDiscountAmount; 
             private String amortizationPeriod; 
             private String amortizationStatus; 
             private Long billAccountID; 
@@ -792,6 +848,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String consumePeriod; 
             private String costUnit; 
             private String costUnitCode; 
+            private Double currentAmortizationAfterDiscountAmount; 
             private Double currentAmortizationDeductedByCashCoupons; 
             private Double currentAmortizationDeductedByCoupons; 
             private Double currentAmortizationDeductedByPrepaidCard; 
@@ -810,6 +867,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private Double invoiceDiscount; 
             private Double pretaxAmount; 
             private Double pretaxGrossAmount; 
+            private Double previouslyAmortizedAfterDiscountAmount; 
             private Double previouslyAmortizedDeductedByCashCoupons; 
             private Double previouslyAmortizedDeductedByCoupons; 
             private Double previouslyAmortizedDeductedByPrepaidCard; 
@@ -823,6 +881,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String productDetailCode; 
             private String productName; 
             private String region; 
+            private Double remainingAmortizationAfterDiscountAmount; 
             private Double remainingAmortizationDeductedByCashCoupons; 
             private Double remainingAmortizationDeductedByCoupons; 
             private Double remainingAmortizationDeductedByPrepaidCard; 
@@ -840,6 +899,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String subscriptionType; 
             private String tag; 
             private String zone; 
+
+            /**
+             * AfterDiscountAmount.
+             */
+            public Builder afterDiscountAmount(Double afterDiscountAmount) {
+                this.afterDiscountAmount = afterDiscountAmount;
+                return this;
+            }
 
             /**
              * AmortizationPeriod.
@@ -918,6 +985,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              */
             public Builder costUnitCode(String costUnitCode) {
                 this.costUnitCode = costUnitCode;
+                return this;
+            }
+
+            /**
+             * CurrentAmortizationAfterDiscountAmount.
+             */
+            public Builder currentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
+                this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
                 return this;
             }
 
@@ -1066,6 +1141,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
+             * PreviouslyAmortizedAfterDiscountAmount.
+             */
+            public Builder previouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
+                this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
+                return this;
+            }
+
+            /**
              * PreviouslyAmortizedDeductedByCashCoupons.
              */
             public Builder previouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
@@ -1166,6 +1249,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * RemainingAmortizationAfterDiscountAmount.
+             */
+            public Builder remainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
+                this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
                 return this;
             }
 
@@ -1312,23 +1403,29 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAmortizedCostByConsumePeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAmortizedCostByConsumePeriodResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountID")
+        @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -1365,7 +1462,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1393,7 +1490,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         public static final class Builder {
             private String accountID; 
             private String accountName; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
@@ -1417,7 +1514,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

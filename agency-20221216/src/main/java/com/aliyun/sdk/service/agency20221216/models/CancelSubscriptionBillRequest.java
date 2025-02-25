@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelSubscriptionBillRequest} extends {@link RequestModel}
  *
  * <p>CancelSubscriptionBillRequest</p>
  */
 public class CancelSubscriptionBillRequest extends Request {
-    @Query
-    @NameInMap("SubscribeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscribeType;
 
     private CancelSubscriptionBillRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class CancelSubscriptionBillRequest extends Request {
         } 
 
         /**
-         * The type of the bill to which you want to cancel the subscription. Valid values: PartnerBillingItemDetailForBillingPeriod, PartnerBillingItemDetailMonthly, PartnerInstanceDetailForBillingPeriod, and PartnerInstanceDetailMonthly.
+         * <p>The type of the bill to which you want to cancel the subscription. Valid values: PartnerBillingItemDetailForBillingPeriod, PartnerBillingItemDetailMonthly, PartnerInstanceDetailForBillingPeriod, and PartnerInstanceDetailMonthly.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PartnerBillingItemDetailForBillingPeriod</p>
          */
         public Builder subscribeType(String subscribeType) {
             this.putQueryParameter("SubscribeType", subscribeType);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateProblemMeasureRequest</p>
  */
 public class UpdateProblemMeasureRequest extends Request {
-    @Body
-    @NameInMap("checkStandard")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("checkStandard")
     private String checkStandard;
 
-    @Body
-    @NameInMap("checkUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("checkUserId")
     private Long checkUserId;
 
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @Body
-    @NameInMap("directorId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("directorId")
     private Long directorId;
 
-    @Body
-    @NameInMap("measureId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("measureId")
     private Long measureId;
 
-    @Body
-    @NameInMap("planFinishTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("planFinishTime")
     private String planFinishTime;
 
-    @Body
-    @NameInMap("problemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemId")
     private Long problemId;
 
-    @Body
-    @NameInMap("stalkerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("stalkerId")
     private Long stalkerId;
 
-    @Body
-    @NameInMap("status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @Body
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
     private Integer type;
 
     private UpdateProblemMeasureRequest(Builder builder) {

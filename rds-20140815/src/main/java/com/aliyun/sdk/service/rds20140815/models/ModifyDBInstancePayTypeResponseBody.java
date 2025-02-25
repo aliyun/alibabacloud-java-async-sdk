@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstancePayTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstancePayTypeResponseBody</p>
  */
 public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
     private ModifyDBInstancePayTypeResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
         private Long orderId; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100789370230206</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

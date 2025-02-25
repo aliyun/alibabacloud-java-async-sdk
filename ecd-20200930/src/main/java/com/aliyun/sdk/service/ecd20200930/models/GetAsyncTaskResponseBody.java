@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsyncTaskResponseBody</p>
  */
 public class GetAsyncTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetAsyncTaskResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -111,26 +125,32 @@ public class GetAsyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAsyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AsyncTaskId")
+        @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
 
-        @NameInMap("ConsumedProcess")
+        @com.aliyun.core.annotation.NameInMap("ConsumedProcess")
         private String consumedProcess;
 
-        @NameInMap("ErrCode")
+        @com.aliyun.core.annotation.NameInMap("ErrCode")
         private Long errCode;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalProcess")
+        @com.aliyun.core.annotation.NameInMap("TotalProcess")
         private Long totalProcess;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {
@@ -210,7 +230,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * AsyncTaskId.
+             * <p>The asynchronous task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000e89fb-cf8f-11e9-8ab4-b6e98080****</p>
              */
             public Builder asyncTaskId(String asyncTaskId) {
                 this.asyncTaskId = asyncTaskId;
@@ -218,7 +241,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumedProcess.
+             * <p>The total number of asynchronous tasks that are processed. Example: the number of files that are packaged and downloaded on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder consumedProcess(String consumedProcess) {
                 this.consumedProcess = consumedProcess;
@@ -226,7 +252,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrCode.
+             * <p>The error code of the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternalError</p>
              */
             public Builder errCode(Long errCode) {
                 this.errCode = errCode;
@@ -234,7 +263,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message of the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The request has been failed due to some unknown error. Please try again later.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -242,7 +274,40 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Failed: The task failed.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Running: The task was running.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>PartialSucceed: The task did not completely succeed.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Succeed: The task succeeded.</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +315,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalProcess.
+             * <p>The total number of asynchronous tasks to be processed, such as the amount of files to be downloaded and packaged on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder totalProcess(Long totalProcess) {
                 this.totalProcess = totalProcess;
@@ -258,7 +326,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL to download data generated by the asynchronous task. Example: the URL to package and download tasks on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

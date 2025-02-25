@@ -18,6 +18,12 @@ public class CreateTrailResponseBody extends TeaModel {
     @NameInMap("HomeRegion")
     private String homeRegion;
 
+    @NameInMap("MaxComputeProjectArn")
+    private String maxComputeProjectArn;
+
+    @NameInMap("MaxComputeWriteRoleArn")
+    private String maxComputeWriteRoleArn;
+
     @NameInMap("Name")
     private String name;
 
@@ -45,6 +51,8 @@ public class CreateTrailResponseBody extends TeaModel {
     private CreateTrailResponseBody(Builder builder) {
         this.eventRW = builder.eventRW;
         this.homeRegion = builder.homeRegion;
+        this.maxComputeProjectArn = builder.maxComputeProjectArn;
+        this.maxComputeWriteRoleArn = builder.maxComputeWriteRoleArn;
         this.name = builder.name;
         this.ossBucketName = builder.ossBucketName;
         this.ossKeyPrefix = builder.ossKeyPrefix;
@@ -75,6 +83,20 @@ public class CreateTrailResponseBody extends TeaModel {
      */
     public String getHomeRegion() {
         return this.homeRegion;
+    }
+
+    /**
+     * @return maxComputeProjectArn
+     */
+    public String getMaxComputeProjectArn() {
+        return this.maxComputeProjectArn;
+    }
+
+    /**
+     * @return maxComputeWriteRoleArn
+     */
+    public String getMaxComputeWriteRoleArn() {
+        return this.maxComputeWriteRoleArn;
     }
 
     /**
@@ -136,6 +158,8 @@ public class CreateTrailResponseBody extends TeaModel {
     public static final class Builder {
         private String eventRW; 
         private String homeRegion; 
+        private String maxComputeProjectArn; 
+        private String maxComputeWriteRoleArn; 
         private String name; 
         private String ossBucketName; 
         private String ossKeyPrefix; 
@@ -158,6 +182,22 @@ public class CreateTrailResponseBody extends TeaModel {
          */
         public Builder homeRegion(String homeRegion) {
             this.homeRegion = homeRegion;
+            return this;
+        }
+
+        /**
+         * MaxComputeProjectArn.
+         */
+        public Builder maxComputeProjectArn(String maxComputeProjectArn) {
+            this.maxComputeProjectArn = maxComputeProjectArn;
+            return this;
+        }
+
+        /**
+         * MaxComputeWriteRoleArn.
+         */
+        public Builder maxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
+            this.maxComputeWriteRoleArn = maxComputeWriteRoleArn;
             return this;
         }
 

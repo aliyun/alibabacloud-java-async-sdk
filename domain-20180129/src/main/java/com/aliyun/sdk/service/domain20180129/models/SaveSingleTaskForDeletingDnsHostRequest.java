@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForDeletingDnsHostRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForDeletingDnsHostRequest</p>
  */
 public class SaveSingleTaskForDeletingDnsHostRequest extends Request {
-    @Query
-    @NameInMap("DnsName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dnsName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveSingleTaskForDeletingDnsHostRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class SaveSingleTaskForDeletingDnsHostRequest extends Request {
         } 
 
         /**
-         * DnsName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns1</p>
          */
         public Builder dnsName(String dnsName) {
             this.putQueryParameter("DnsName", dnsName);
@@ -107,7 +110,10 @@ public class SaveSingleTaskForDeletingDnsHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2019270W570xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

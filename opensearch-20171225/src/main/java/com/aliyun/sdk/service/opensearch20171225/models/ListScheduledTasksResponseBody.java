@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListScheduledTasksResponseBody</p>
  */
 public class ListScheduledTasksResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < java.util.Map<String, ?>> result;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListScheduledTasksResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,10 +69,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the scheduled tasks.
-         * <p>
-         * 
-         * For more information, see [ScheduledTask](~~173610~~).
+         * result.
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;
@@ -81,7 +77,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned scheduled tasks.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

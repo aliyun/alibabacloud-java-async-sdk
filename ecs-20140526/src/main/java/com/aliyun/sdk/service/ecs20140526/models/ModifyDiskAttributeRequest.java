@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDiskAttributeRequest</p>
  */
 public class ModifyDiskAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("BurstingEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
     private Boolean burstingEnabled;
 
-    @Query
-    @NameInMap("DeleteAutoSnapshot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteAutoSnapshot")
     private Boolean deleteAutoSnapshot;
 
-    @Query
-    @NameInMap("DeleteWithInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
     private Boolean deleteWithInstance;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DiskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
     private String diskId;
 
-    @Query
-    @NameInMap("DiskIds")
-    private java.util.List < String > diskIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskIds")
+    private java.util.List<String> diskIds;
 
-    @Query
-    @NameInMap("DiskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskName")
     private String diskName;
 
-    @Query
-    @NameInMap("EnableAutoSnapshot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutoSnapshot")
     private Boolean enableAutoSnapshot;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDiskAttributeRequest(Builder builder) {
@@ -144,7 +149,7 @@ public class ModifyDiskAttributeRequest extends Request {
     /**
      * @return diskIds
      */
-    public java.util.List < String > getDiskIds() {
+    public java.util.List<String> getDiskIds() {
         return this.diskIds;
     }
 
@@ -204,7 +209,7 @@ public class ModifyDiskAttributeRequest extends Request {
         private Boolean deleteWithInstance; 
         private String description; 
         private String diskId; 
-        private java.util.List < String > diskIds; 
+        private java.util.List<String> diskIds; 
         private String diskName; 
         private Boolean enableAutoSnapshot; 
         private String ownerAccount; 
@@ -245,11 +250,14 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the performance burst feature for data disk N. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+         * <ul>
+         * <li>true: encrypts the disk.</li>
+         * <li>false: does not encrypt the disk.</li>
+         * </ul>
          * 
-         * *   true: encrypts the disk.
-         * *   false: does not encrypt the disk.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -258,7 +266,10 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.
+         * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
             this.putQueryParameter("DeleteAutoSnapshot", deleteAutoSnapshot);
@@ -267,13 +278,15 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.
-         * <p>
+         * <p>Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+         * <p>An error is returned if you set <code>DeleteWithInstance</code> to <code>false</code> in one of the following cases:</p>
+         * <ul>
+         * <li>The disk is a local disk.</li>
+         * <li>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</li>
+         * </ul>
          * 
-         * An error is returned if you set `DeleteWithInstance` to `false` in one of the following cases:
-         * 
-         * *   The disk is a local disk.
-         * *   The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -282,7 +295,10 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * The description of the disk. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * <p>The description of the disk. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -291,10 +307,13 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the disk.
-         * <p>
+         * <p>The ID of the disk.</p>
+         * <blockquote>
+         * <p>You can specify the <code>DiskId</code> parameter or the <code>DiskIds.N</code> parameter, but you cannot specify both parameters at the same time.</p>
+         * </blockquote>
          * 
-         * > You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.
+         * <strong>example:</strong>
+         * <p>d-bp1famypsnar20bv****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -303,19 +322,25 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * The ID of disk N. Valid values of N: 0 to 100.
-         * <p>
+         * <p>The ID of disk N. Valid values of N: 0 to 100.</p>
+         * <blockquote>
+         * <p>You can specify the <code>DiskId</code> parameter or the <code>DiskIds.N</code> parameter, but you cannot specify both parameters at the same time.</p>
+         * </blockquote>
          * 
-         * > You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.
+         * <strong>example:</strong>
+         * <p>d-bp1famypsnar20bv****</p>
          */
-        public Builder diskIds(java.util.List < String > diskIds) {
+        public Builder diskIds(java.util.List<String> diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
             this.diskIds = diskIds;
             return this;
         }
 
         /**
-         * The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyDiskName</p>
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -324,15 +349,18 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the automatic snapshot policy feature for the cloud disk.
-         * <p>
+         * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+         * <blockquote>
+         * <p> By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.</p>
+         * </blockquote>
          * 
-         * *   true: enables the automatic snapshot policy feature for the cloud disk.
-         * *   false: disables the automatic snapshot policy feature for the cloud disk.
-         * 
-         * This parameter is empty by default, which indicates that the current value remains unchanged.
-         * 
-         * > By default, the automatic snapshot policy feature is enabled for new disks. You need to only apply an automatic snapshot policy to a disk for the policy to take effect.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
             this.putQueryParameter("EnableAutoSnapshot", enableAutoSnapshot);
@@ -359,7 +387,10 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

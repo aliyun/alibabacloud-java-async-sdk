@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetaTableResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMetaTableResponseBody</p>
  */
 public class UpdateMetaTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UpdateResult")
+    @com.aliyun.core.annotation.NameInMap("UpdateResult")
     private Boolean updateResult;
 
     private UpdateMetaTableResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpdateMetaTableResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class UpdateMetaTableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the metadata information about the table is updated.
+         * <p>Indicates whether the metadata information about the table was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

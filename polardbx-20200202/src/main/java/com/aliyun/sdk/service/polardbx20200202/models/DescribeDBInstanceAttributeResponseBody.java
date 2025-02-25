@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceAttributeResponseBody</p>
  */
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("DBInstance")
+    @com.aliyun.core.annotation.NameInMap("DBInstance")
     private DBInstance DBInstance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceAttributeResponseBody(Builder builder) {
@@ -71,23 +76,29 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class ConnAddrs extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private ConnAddrs(Builder builder) {
@@ -182,7 +193,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -212,23 +226,29 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class DBNodes extends TeaModel {
-        @NameInMap("ComputeNodeId")
+        @com.aliyun.core.annotation.NameInMap("ComputeNodeId")
         private String computeNodeId;
 
-        @NameInMap("DataNodeId")
+        @com.aliyun.core.annotation.NameInMap("DataNodeId")
         private String dataNodeId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNodes(Builder builder) {
@@ -353,11 +373,104 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
+    public static class GdnMemberList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MemberName")
+        private String memberName;
+
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private String role;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private GdnMemberList(Builder builder) {
+            this.memberName = builder.memberName;
+            this.role = builder.role;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GdnMemberList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return memberName
+         */
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String memberName; 
+            private String role; 
+            private String status; 
+
+            /**
+             * MemberName.
+             */
+            public Builder memberName(String memberName) {
+                this.memberName = memberName;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public GdnMemberList build() {
+                return new GdnMemberList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class TagSet extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagSet(Builder builder) {
@@ -414,158 +527,179 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class DBInstance extends TeaModel {
-        @NameInMap("CanNotCreateColumnar")
+        @com.aliyun.core.annotation.NameInMap("CanNotCreateColumnar")
         private Boolean canNotCreateColumnar;
 
-        @NameInMap("CnNodeClassCode")
+        @com.aliyun.core.annotation.NameInMap("CnNodeClassCode")
         private String cnNodeClassCode;
 
-        @NameInMap("CnNodeCount")
+        @com.aliyun.core.annotation.NameInMap("CnNodeCount")
         private Integer cnNodeCount;
 
-        @NameInMap("ColumnarInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ColumnarInstanceName")
         private String columnarInstanceName;
 
-        @NameInMap("ColumnarReadDBInstances")
-        private java.util.List < String > columnarReadDBInstances;
+        @com.aliyun.core.annotation.NameInMap("ColumnarReadDBInstances")
+        private java.util.List<String> columnarReadDBInstances;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ConnAddrs")
-        private java.util.List < ConnAddrs> connAddrs;
+        @com.aliyun.core.annotation.NameInMap("ConnAddrs")
+        private java.util.List<ConnAddrs> connAddrs;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodeCount")
+        @com.aliyun.core.annotation.NameInMap("DBNodeCount")
         private Integer DBNodeCount;
 
-        @NameInMap("DBNodes")
-        private java.util.List < DBNodes> DBNodes;
+        @com.aliyun.core.annotation.NameInMap("DBNodes")
+        private java.util.List<DBNodes> DBNodes;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DifferentDNSpec")
+        @com.aliyun.core.annotation.NameInMap("DifferentDNSpec")
         private Boolean differentDNSpec;
 
-        @NameInMap("DnNodeClassCode")
+        @com.aliyun.core.annotation.NameInMap("DnNodeClassCode")
         private String dnNodeClassCode;
 
-        @NameInMap("DnNodeCount")
+        @com.aliyun.core.annotation.NameInMap("DnNodeCount")
         private Integer dnNodeCount;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("GdnInstanceName")
+        private String gdnInstanceName;
+
+        @com.aliyun.core.annotation.NameInMap("GdnMemberList")
+        private java.util.List<GdnMemberList> gdnMemberList;
+
+        @com.aliyun.core.annotation.NameInMap("GdnRole")
+        private String gdnRole;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("KindCode")
+        @com.aliyun.core.annotation.NameInMap("KindCode")
         private Integer kindCode;
 
-        @NameInMap("LTSVersions")
-        @Validation(required = true)
-        private java.util.List < String > LTSVersions;
+        @com.aliyun.core.annotation.NameInMap("LTSVersions")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> LTSVersions;
 
-        @NameInMap("LatestMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("LatestMinorVersion")
         private String latestMinorVersion;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("PrimaryZone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PrimaryInstanceId")
+        private String primaryInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryZone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String primaryZone;
 
-        @NameInMap("ReadDBInstances")
-        private java.util.List < String > readDBInstances;
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstances")
+        private java.util.List<String> readDBInstances;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RightsSeparationEnabled")
+        @com.aliyun.core.annotation.NameInMap("RightsSeparationEnabled")
         private Boolean rightsSeparationEnabled;
 
-        @NameInMap("RightsSeparationStatus")
+        @com.aliyun.core.annotation.NameInMap("RightsSeparationStatus")
         private String rightsSeparationStatus;
 
-        @NameInMap("SecondaryZone")
+        @com.aliyun.core.annotation.NameInMap("SecondaryZone")
         private String secondaryZone;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SpecCategory")
+        private String specCategory;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageUsed")
+        @com.aliyun.core.annotation.NameInMap("StorageUsed")
         private Long storageUsed;
 
-        @NameInMap("TagSet")
-        private java.util.List < TagSet> tagSet;
+        @com.aliyun.core.annotation.NameInMap("TagSet")
+        private java.util.List<TagSet> tagSet;
 
-        @NameInMap("TertiaryZone")
+        @com.aliyun.core.annotation.NameInMap("TertiaryZone")
         private String tertiaryZone;
 
-        @NameInMap("TopologyType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TopologyType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String topologyType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstance(Builder builder) {
@@ -591,6 +725,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.expireDate = builder.expireDate;
             this.expired = builder.expired;
+            this.gdnInstanceName = builder.gdnInstanceName;
+            this.gdnMemberList = builder.gdnMemberList;
+            this.gdnRole = builder.gdnRole;
             this.id = builder.id;
             this.kindCode = builder.kindCode;
             this.LTSVersions = builder.LTSVersions;
@@ -602,6 +739,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.network = builder.network;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.primaryInstanceId = builder.primaryInstanceId;
             this.primaryZone = builder.primaryZone;
             this.readDBInstances = builder.readDBInstances;
             this.regionId = builder.regionId;
@@ -610,6 +748,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.rightsSeparationStatus = builder.rightsSeparationStatus;
             this.secondaryZone = builder.secondaryZone;
             this.series = builder.series;
+            this.specCategory = builder.specCategory;
             this.status = builder.status;
             this.storageUsed = builder.storageUsed;
             this.tagSet = builder.tagSet;
@@ -660,7 +799,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return columnarReadDBInstances
          */
-        public java.util.List < String > getColumnarReadDBInstances() {
+        public java.util.List<String> getColumnarReadDBInstances() {
             return this.columnarReadDBInstances;
         }
 
@@ -674,7 +813,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return connAddrs
          */
-        public java.util.List < ConnAddrs> getConnAddrs() {
+        public java.util.List<ConnAddrs> getConnAddrs() {
             return this.connAddrs;
         }
 
@@ -716,7 +855,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return DBNodes
          */
-        public java.util.List < DBNodes> getDBNodes() {
+        public java.util.List<DBNodes> getDBNodes() {
             return this.DBNodes;
         }
 
@@ -784,6 +923,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return gdnInstanceName
+         */
+        public String getGdnInstanceName() {
+            return this.gdnInstanceName;
+        }
+
+        /**
+         * @return gdnMemberList
+         */
+        public java.util.List<GdnMemberList> getGdnMemberList() {
+            return this.gdnMemberList;
+        }
+
+        /**
+         * @return gdnRole
+         */
+        public String getGdnRole() {
+            return this.gdnRole;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
@@ -800,7 +960,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return LTSVersions
          */
-        public java.util.List < String > getLTSVersions() {
+        public java.util.List<String> getLTSVersions() {
             return this.LTSVersions;
         }
 
@@ -861,6 +1021,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryInstanceId
+         */
+        public String getPrimaryInstanceId() {
+            return this.primaryInstanceId;
+        }
+
+        /**
          * @return primaryZone
          */
         public String getPrimaryZone() {
@@ -870,7 +1037,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return readDBInstances
          */
-        public java.util.List < String > getReadDBInstances() {
+        public java.util.List<String> getReadDBInstances() {
             return this.readDBInstances;
         }
 
@@ -917,6 +1084,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return specCategory
+         */
+        public String getSpecCategory() {
+            return this.specCategory;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -933,7 +1107,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return tagSet
          */
-        public java.util.List < TagSet> getTagSet() {
+        public java.util.List<TagSet> getTagSet() {
             return this.tagSet;
         }
 
@@ -984,15 +1158,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String cnNodeClassCode; 
             private Integer cnNodeCount; 
             private String columnarInstanceName; 
-            private java.util.List < String > columnarReadDBInstances; 
+            private java.util.List<String> columnarReadDBInstances; 
             private String commodityCode; 
-            private java.util.List < ConnAddrs> connAddrs; 
+            private java.util.List<ConnAddrs> connAddrs; 
             private String connectionString; 
             private String createTime; 
             private String DBInstanceType; 
             private String DBNodeClass; 
             private Integer DBNodeCount; 
-            private java.util.List < DBNodes> DBNodes; 
+            private java.util.List<DBNodes> DBNodes; 
             private String DBType; 
             private String DBVersion; 
             private String description; 
@@ -1002,9 +1176,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String engine; 
             private String expireDate; 
             private String expired; 
+            private String gdnInstanceName; 
+            private java.util.List<GdnMemberList> gdnMemberList; 
+            private String gdnRole; 
             private String id; 
             private Integer kindCode; 
-            private java.util.List < String > LTSVersions; 
+            private java.util.List<String> LTSVersions; 
             private String latestMinorVersion; 
             private String lockMode; 
             private String maintainEndTime; 
@@ -1013,17 +1190,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String network; 
             private String payType; 
             private String port; 
+            private String primaryInstanceId; 
             private String primaryZone; 
-            private java.util.List < String > readDBInstances; 
+            private java.util.List<String> readDBInstances; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean rightsSeparationEnabled; 
             private String rightsSeparationStatus; 
             private String secondaryZone; 
             private String series; 
+            private String specCategory; 
             private String status; 
             private Long storageUsed; 
-            private java.util.List < TagSet> tagSet; 
+            private java.util.List<TagSet> tagSet; 
             private String tertiaryZone; 
             private String topologyType; 
             private String type; 
@@ -1066,7 +1245,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * ColumnarReadDBInstances.
              */
-            public Builder columnarReadDBInstances(java.util.List < String > columnarReadDBInstances) {
+            public Builder columnarReadDBInstances(java.util.List<String> columnarReadDBInstances) {
                 this.columnarReadDBInstances = columnarReadDBInstances;
                 return this;
             }
@@ -1082,7 +1261,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * ConnAddrs.
              */
-            public Builder connAddrs(java.util.List < ConnAddrs> connAddrs) {
+            public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
                 return this;
             }
@@ -1130,7 +1309,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * DBNodes.
              */
-            public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
+            public Builder DBNodes(java.util.List<DBNodes> DBNodes) {
                 this.DBNodes = DBNodes;
                 return this;
             }
@@ -1208,6 +1387,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * GdnInstanceName.
+             */
+            public Builder gdnInstanceName(String gdnInstanceName) {
+                this.gdnInstanceName = gdnInstanceName;
+                return this;
+            }
+
+            /**
+             * GdnMemberList.
+             */
+            public Builder gdnMemberList(java.util.List<GdnMemberList> gdnMemberList) {
+                this.gdnMemberList = gdnMemberList;
+                return this;
+            }
+
+            /**
+             * GdnRole.
+             */
+            public Builder gdnRole(String gdnRole) {
+                this.gdnRole = gdnRole;
+                return this;
+            }
+
+            /**
              * Id.
              */
             public Builder id(String id) {
@@ -1224,9 +1427,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LTSVersions.
+             * <p>This parameter is required.</p>
              */
-            public Builder LTSVersions(java.util.List < String > LTSVersions) {
+            public Builder LTSVersions(java.util.List<String> LTSVersions) {
                 this.LTSVersions = LTSVersions;
                 return this;
             }
@@ -1296,7 +1499,16 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 主可用区。
+             * PrimaryInstanceId.
+             */
+            public Builder primaryInstanceId(String primaryInstanceId) {
+                this.primaryInstanceId = primaryInstanceId;
+                return this;
+            }
+
+            /**
+             * <p>主可用区。</p>
+             * <p>This parameter is required.</p>
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -1306,7 +1518,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * ReadDBInstances.
              */
-            public Builder readDBInstances(java.util.List < String > readDBInstances) {
+            public Builder readDBInstances(java.util.List<String> readDBInstances) {
                 this.readDBInstances = readDBInstances;
                 return this;
             }
@@ -1344,7 +1556,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 次可用区。
+             * <p>次可用区。</p>
              */
             public Builder secondaryZone(String secondaryZone) {
                 this.secondaryZone = secondaryZone;
@@ -1356,6 +1568,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder series(String series) {
                 this.series = series;
+                return this;
+            }
+
+            /**
+             * SpecCategory.
+             */
+            public Builder specCategory(String specCategory) {
+                this.specCategory = specCategory;
                 return this;
             }
 
@@ -1378,13 +1598,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * TagSet.
              */
-            public Builder tagSet(java.util.List < TagSet> tagSet) {
+            public Builder tagSet(java.util.List<TagSet> tagSet) {
                 this.tagSet = tagSet;
                 return this;
             }
 
             /**
-             * 第三可用区。
+             * <p>第三可用区。</p>
              */
             public Builder tertiaryZone(String tertiaryZone) {
                 this.tertiaryZone = tertiaryZone;
@@ -1392,11 +1612,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 拓扑类型：
-             * <p>
-             * 
-             * - **3azones**：三可用区；
-             * - **1azone**：单可用区。
+             * <p>拓扑类型：</p>
+             * <ul>
+             * <li><strong>3azones</strong>：三可用区；</li>
+             * <li><strong>1azone</strong>：单可用区。</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              */
             public Builder topologyType(String topologyType) {
                 this.topologyType = topologyType;
@@ -1412,7 +1633,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;

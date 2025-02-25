@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourceInput} extends {@link TeaModel}
  *
  * <p>TagResourceInput</p>
  */
 public class TagResourceInput extends TeaModel {
-    @NameInMap("resourceArn")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("resourceArn")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String resourceArn;
 
-    @NameInMap("tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, String > tags;
 
     private TagResourceInput(Builder builder) {
@@ -52,7 +52,10 @@ public class TagResourceInput extends TeaModel {
         private java.util.Map < String, String > tags; 
 
         /**
-         * resourceArn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:xxx:functions/f1</p>
          */
         public Builder resourceArn(String resourceArn) {
             this.resourceArn = resourceArn;
@@ -60,7 +63,7 @@ public class TagResourceInput extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.Map < String, String > tags) {
             this.tags = tags;

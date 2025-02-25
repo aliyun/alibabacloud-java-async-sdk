@@ -1,61 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FilterUsersRequest} extends {@link RequestModel}
  *
  * <p>FilterUsersRequest</p>
  */
 public class FilterUsersRequest extends Request {
-    @Query
-    @NameInMap("ExcludeEndUserIds")
-    private java.util.List < String > excludeEndUserIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeEndUserIds")
+    private java.util.List<String> excludeEndUserIds;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("IncludeDesktopCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDesktopCount")
     private Boolean includeDesktopCount;
 
-    @Query
-    @NameInMap("IncludeDesktopGroupCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDesktopGroupCount")
     private Boolean includeDesktopGroupCount;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsQueryAllSubOrgs")
+    private Boolean isQueryAllSubOrgs;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderParam")
     private OrderParam orderParam;
 
-    @Query
-    @NameInMap("OrgId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrgId")
     private String orgId;
 
-    @Query
-    @NameInMap("OwnerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerType")
     private String ownerType;
 
-    @Query
-    @NameInMap("PropertyFilterParam")
-    private java.util.List < PropertyFilterParam> propertyFilterParam;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PropertyFilterParam")
+    private java.util.List<PropertyFilterParam> propertyFilterParam;
 
-    @Query
-    @NameInMap("PropertyKeyValueFilterParam")
-    private java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PropertyKeyValueFilterParam")
+    private java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
 
     private FilterUsersRequest(Builder builder) {
         super(builder);
@@ -63,6 +76,7 @@ public class FilterUsersRequest extends Request {
         this.filter = builder.filter;
         this.includeDesktopCount = builder.includeDesktopCount;
         this.includeDesktopGroupCount = builder.includeDesktopGroupCount;
+        this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orderParam = builder.orderParam;
@@ -70,6 +84,7 @@ public class FilterUsersRequest extends Request {
         this.ownerType = builder.ownerType;
         this.propertyFilterParam = builder.propertyFilterParam;
         this.propertyKeyValueFilterParam = builder.propertyKeyValueFilterParam;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -88,7 +103,7 @@ public class FilterUsersRequest extends Request {
     /**
      * @return excludeEndUserIds
      */
-    public java.util.List < String > getExcludeEndUserIds() {
+    public java.util.List<String> getExcludeEndUserIds() {
         return this.excludeEndUserIds;
     }
 
@@ -111,6 +126,13 @@ public class FilterUsersRequest extends Request {
      */
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    /**
+     * @return isQueryAllSubOrgs
+     */
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     /**
@@ -151,29 +173,38 @@ public class FilterUsersRequest extends Request {
     /**
      * @return propertyFilterParam
      */
-    public java.util.List < PropertyFilterParam> getPropertyFilterParam() {
+    public java.util.List<PropertyFilterParam> getPropertyFilterParam() {
         return this.propertyFilterParam;
     }
 
     /**
      * @return propertyKeyValueFilterParam
      */
-    public java.util.List < PropertyKeyValueFilterParam> getPropertyKeyValueFilterParam() {
+    public java.util.List<PropertyKeyValueFilterParam> getPropertyKeyValueFilterParam() {
         return this.propertyKeyValueFilterParam;
     }
 
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<FilterUsersRequest, Builder> {
-        private java.util.List < String > excludeEndUserIds; 
+        private java.util.List<String> excludeEndUserIds; 
         private String filter; 
         private Boolean includeDesktopCount; 
         private Boolean includeDesktopGroupCount; 
+        private Boolean isQueryAllSubOrgs; 
         private Long maxResults; 
         private String nextToken; 
         private OrderParam orderParam; 
         private String orgId; 
         private String ownerType; 
-        private java.util.List < PropertyFilterParam> propertyFilterParam; 
-        private java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam; 
+        private java.util.List<PropertyFilterParam> propertyFilterParam; 
+        private java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam; 
+        private Integer status; 
 
         private Builder() {
             super();
@@ -185,6 +216,7 @@ public class FilterUsersRequest extends Request {
             this.filter = request.filter;
             this.includeDesktopCount = request.includeDesktopCount;
             this.includeDesktopGroupCount = request.includeDesktopGroupCount;
+            this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orderParam = request.orderParam;
@@ -192,19 +224,23 @@ public class FilterUsersRequest extends Request {
             this.ownerType = request.ownerType;
             this.propertyFilterParam = request.propertyFilterParam;
             this.propertyKeyValueFilterParam = request.propertyKeyValueFilterParam;
+            this.status = request.status;
         } 
 
         /**
-         * The list of usernames to be precisely excluded.
+         * <p>The list of usernames to be precisely excluded.</p>
          */
-        public Builder excludeEndUserIds(java.util.List < String > excludeEndUserIds) {
+        public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putQueryParameter("ExcludeEndUserIds", excludeEndUserIds);
             this.excludeEndUserIds = excludeEndUserIds;
             return this;
         }
 
         /**
-         * The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (\*) are supported for this parameter. For example, if you set this parameter to a\*m, the usernames or an email addresses that start with a or end with m are returned.
+         * <p>The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (*) are supported for this parameter. For example, if you set this parameter to a*m, the usernames or an email addresses that start with a or end with m are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -213,7 +249,26 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * Specifies whether to return information about cloud desktops that are assigned to the convenience user.
+         * <p>Specifies whether to return the number of cloud desktops that are assigned to the convenience user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeDesktopCount(Boolean includeDesktopCount) {
             this.putQueryParameter("IncludeDesktopCount", includeDesktopCount);
@@ -222,7 +277,26 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the number of desktop groups that are assigned to the user.
+         * <p>Specifies whether to return the number of cloud desktop pools that are assigned to the convenience user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeDesktopGroupCount(Boolean includeDesktopGroupCount) {
             this.putQueryParameter("IncludeDesktopGroupCount", includeDesktopGroupCount);
@@ -231,7 +305,19 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.
+         * IsQueryAllSubOrgs.
+         */
+        public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+            this.putQueryParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
+            this.isQueryAllSubOrgs = isQueryAllSubOrgs;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,7 +326,10 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,7 +338,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The parameter that supports to sort query results.
+         * <p>The parameters that are used to sort query results.</p>
          */
         public Builder orderParam(OrderParam orderParam) {
             String orderParamShrink = shrink(orderParam, "OrderParam", "json");
@@ -259,7 +348,10 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The ID of the organization.
+         * <p>The ID of the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-aliyun-wy-org-id</p>
          */
         public Builder orgId(String orgId) {
             this.putQueryParameter("OrgId", orgId);
@@ -268,7 +360,10 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The type of the account ownership.
+         * <p>The type of the account ownership.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder ownerType(String ownerType) {
             this.putQueryParameter("OwnerType", ownerType);
@@ -277,20 +372,29 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The list of properties for fuzzy search.
+         * <p>The list of properties for fuzzy search.</p>
          */
-        public Builder propertyFilterParam(java.util.List < PropertyFilterParam> propertyFilterParam) {
+        public Builder propertyFilterParam(java.util.List<PropertyFilterParam> propertyFilterParam) {
             this.putQueryParameter("PropertyFilterParam", propertyFilterParam);
             this.propertyFilterParam = propertyFilterParam;
             return this;
         }
 
         /**
-         * The list of property names and property values.
+         * <p>The list of property names and property values.</p>
          */
-        public Builder propertyKeyValueFilterParam(java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
+        public Builder propertyKeyValueFilterParam(java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
             this.putQueryParameter("PropertyKeyValueFilterParam", propertyKeyValueFilterParam);
             this.propertyKeyValueFilterParam = propertyKeyValueFilterParam;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
@@ -301,11 +405,17 @@ public class FilterUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FilterUsersRequest} extends {@link TeaModel}
+     *
+     * <p>FilterUsersRequest</p>
+     */
     public static class OrderParam extends TeaModel {
-        @NameInMap("OrderField")
+        @com.aliyun.core.annotation.NameInMap("OrderField")
         private String orderField;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
         private OrderParam(Builder builder) {
@@ -340,34 +450,16 @@ public class FilterUsersRequest extends Request {
             private String orderType; 
 
             /**
-             * The way to sort query results.
-             * <p>
+             * <p>The parameter based on which to sort query results.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>EndUserId: the username.</li>
+             * <li>id: the ID of the user primary key.</li>
+             * <li>gmt_created: the time when the convenience user was created.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   EndUserId
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   id
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   gmt_created
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder orderField(String orderField) {
                 this.orderField = orderField;
@@ -375,26 +467,26 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * Specifies whether to sort query results in ascending or descending order. Valid values:
-             * <p>
+             * <p>Specifies whether to sort query results in ascending or descending order.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>ASC: ascending</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   ASC: ascending
+             * <!-- -->
+             * </li>
+             * <li><p>DESC (default): descending</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   DESC (default): descending
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>ASC</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -408,11 +500,17 @@ public class FilterUsersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FilterUsersRequest} extends {@link TeaModel}
+     *
+     * <p>FilterUsersRequest</p>
+     */
     public static class PropertyFilterParam extends TeaModel {
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyValueIds")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueIds")
         private String propertyValueIds;
 
         private PropertyFilterParam(Builder builder) {
@@ -447,7 +545,10 @@ public class FilterUsersRequest extends Request {
             private String propertyValueIds; 
 
             /**
-             * The ID of the property.
+             * <p>The ID of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -455,7 +556,10 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * The IDs of the property values.
+             * <p>The IDs of the property values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder propertyValueIds(String propertyValueIds) {
                 this.propertyValueIds = propertyValueIds;
@@ -469,11 +573,17 @@ public class FilterUsersRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FilterUsersRequest} extends {@link TeaModel}
+     *
+     * <p>FilterUsersRequest</p>
+     */
     public static class PropertyKeyValueFilterParam extends TeaModel {
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("PropertyValues")
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
         private String propertyValues;
 
         private PropertyKeyValueFilterParam(Builder builder) {
@@ -508,7 +618,10 @@ public class FilterUsersRequest extends Request {
             private String propertyValues; 
 
             /**
-             * The property name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job</p>
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -516,7 +629,10 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * The property values.
+             * <p>The property values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder propertyValues(String propertyValues) {
                 this.propertyValues = propertyValues;

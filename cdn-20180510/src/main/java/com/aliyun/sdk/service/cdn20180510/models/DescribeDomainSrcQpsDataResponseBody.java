@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSrcQpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSrcQpsDataResponseBody</p>
  */
 public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SrcQpsDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("SrcQpsDataPerInterval")
     private SrcQpsDataPerInterval srcQpsDataPerInterval;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainSrcQpsDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CBCD6AD-B016-42E5-AE0B-B3731DE8F755</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The back-to-origin bandwidth information at each interval.
+         * <p>The back-to-origin bandwidth information at each interval.</p>
          */
         public Builder srcQpsDataPerInterval(SrcQpsDataPerInterval srcQpsDataPerInterval) {
             this.srcQpsDataPerInterval = srcQpsDataPerInterval;
@@ -138,7 +150,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:33:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,11 +166,17 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSrcQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcQpsDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -190,7 +211,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T21:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +222,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS value.
+             * <p>The QPS value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,8 +239,14 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainSrcQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSrcQpsDataResponseBody</p>
+     */
     public static class SrcQpsDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private SrcQpsDataPerInterval(Builder builder) {

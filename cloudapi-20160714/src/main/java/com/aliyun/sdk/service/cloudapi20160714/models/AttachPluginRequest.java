@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachPluginRequest} extends {@link RequestModel}
  *
  * <p>AttachPluginRequest</p>
  */
 public class AttachPluginRequest extends Request {
-    @Query
-    @NameInMap("ApiId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
     private String apiId;
 
-    @Query
-    @NameInMap("ApiIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiIds")
     private String apiIds;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("PluginId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pluginId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stageName;
 
     private AttachPluginRequest(Builder builder) {
@@ -126,7 +131,10 @@ public class AttachPluginRequest extends Request {
         } 
 
         /**
-         * The number of the API to be bound.
+         * <p>The number of the API to be bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8afff6c8c4c6447abb035812e4d66b65</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -135,7 +143,10 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The number of the API to be operated. Separate multiple numbers with commas (,). A maximum of 100 numbers can be entered.
+         * <p>The number of the API to be operated. Separate multiple numbers with commas (,). A maximum of 100 numbers can be entered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder apiIds(String apiIds) {
             this.putQueryParameter("ApiIds", apiIds);
@@ -144,7 +155,10 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The ID of the API group that contains the API to which the plug-in is to be bound.
+         * <p>The ID of the API group that contains the API to which the plug-in is to be bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>285bb759342649a1b70c2093a772e087</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -153,7 +167,11 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The ID of the plug-in to be bound.
+         * <p>The ID of the plug-in to be bound.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a3f1a5279434f2ba74ccd91c295af9f</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -171,12 +189,16 @@ public class AttachPluginRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
-         * <p>
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>PRE: the pre-release environment</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RELEASE**
-         * *   **PRE: the pre-release environment**
-         * *   **TEST**
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

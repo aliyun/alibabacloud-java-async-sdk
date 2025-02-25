@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAttributesInput} extends {@link TeaModel}
  *
  * <p>UpdateAttributesInput</p>
  */
 public class UpdateAttributesInput extends TeaModel {
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("httpTriggerConfig")
+    @com.aliyun.core.annotation.NameInMap("httpTriggerConfig")
     private HTTPTriggerConfig httpTriggerConfig;
 
-    @NameInMap("versionID")
+    @com.aliyun.core.annotation.NameInMap("versionID")
     private String versionID;
 
     private UpdateAttributesInput(Builder builder) {

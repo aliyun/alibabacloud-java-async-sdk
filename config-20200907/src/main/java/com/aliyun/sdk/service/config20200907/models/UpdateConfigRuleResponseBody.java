@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConfigRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateConfigRuleResponseBody</p>
  */
 public class UpdateConfigRuleResponseBody extends TeaModel {
-    @NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
     private String configRuleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateConfigRuleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpdateConfigRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-a260626622af0005****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.configRuleId = configRuleId;
@@ -58,7 +66,10 @@ public class UpdateConfigRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

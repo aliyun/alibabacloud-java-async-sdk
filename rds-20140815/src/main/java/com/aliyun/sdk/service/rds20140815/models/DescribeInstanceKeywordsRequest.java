@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceKeywordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceKeywordsRequest</p>
  */
 public class DescribeInstanceKeywordsRequest extends Request {
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeInstanceKeywordsRequest(Builder builder) {
@@ -110,11 +115,17 @@ public class DescribeInstanceKeywordsRequest extends Request {
         } 
 
         /**
-         * The type of reserved keyword to query. Valid values:
-         * <p>
+         * <p>The type of reserved keyword to query. Valid values:</p>
+         * <ul>
+         * <li><strong>account</strong></li>
+         * <li><strong>database</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **account**
-         * *   **database**
+         * <strong>example:</strong>
+         * <p>account</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

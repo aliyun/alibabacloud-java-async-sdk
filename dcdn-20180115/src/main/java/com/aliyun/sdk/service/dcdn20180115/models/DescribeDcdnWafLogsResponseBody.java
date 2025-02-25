@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafLogsResponseBody</p>
  */
 public class DescribeDcdnWafLogsResponseBody extends TeaModel {
-    @NameInMap("DomainLogDetails")
+    @com.aliyun.core.annotation.NameInMap("DomainLogDetails")
     private java.util.List < DomainLogDetails> domainLogDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafLogsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about logs returned.
+         * <p>Details about logs returned.</p>
          */
         public Builder domainLogDetails(java.util.List < DomainLogDetails> domainLogDetails) {
             this.domainLogDetails = domainLogDetails;
@@ -58,7 +58,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0985A362-C81E-5A56-891D-90226BEECA7C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafLogsResponseBody</p>
+     */
     public static class LogInfos extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("LogName")
+        @com.aliyun.core.annotation.NameInMap("LogName")
         private String logName;
 
-        @NameInMap("LogPath")
+        @com.aliyun.core.annotation.NameInMap("LogPath")
         private String logPath;
 
-        @NameInMap("LogSize")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
         private Long logSize;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private LogInfos(Builder builder) {
@@ -146,7 +155,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The end of the time range during which data was queried.
+             * <p>The end of the time range during which data was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-05-23T14:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -154,7 +166,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log file.
+             * <p>The name of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo.aliyundoc.com_2015_05_23_2100_2200.xxxxxx.gz</p>
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -162,7 +177,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the log file.
+             * <p>The path of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guide.aliyundoc.com-hangzhou.xxx</p>
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -170,7 +188,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the log file. Unit: bytes.
+             * <p>The size of the log file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>258</p>
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -178,7 +199,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which data was queried.
+             * <p>The beginning of the time range during which data was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-05-23T13:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -192,14 +216,20 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafLogsResponseBody</p>
+     */
     public static class PageInfos extends TeaModel {
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageInfos(Builder builder) {
@@ -243,7 +273,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageIndex(Long pageIndex) {
                 this.pageIndex = pageIndex;
@@ -251,7 +284,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -259,7 +295,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -273,17 +312,23 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafLogsResponseBody</p>
+     */
     public static class DomainLogDetails extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("LogCount")
+        @com.aliyun.core.annotation.NameInMap("LogCount")
         private Long logCount;
 
-        @NameInMap("LogInfos")
+        @com.aliyun.core.annotation.NameInMap("LogInfos")
         private java.util.List < LogInfos> logInfos;
 
-        @NameInMap("PageInfos")
+        @com.aliyun.core.annotation.NameInMap("PageInfos")
         private PageInfos pageInfos;
 
         private DomainLogDetails(Builder builder) {
@@ -336,7 +381,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             private PageInfos pageInfos; 
 
             /**
-             * The WAF domain name.
+             * <p>The WAF domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -344,7 +392,10 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned on the current page.
+             * <p>The total number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -352,7 +403,7 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The log information.
+             * <p>The log information.</p>
              */
             public Builder logInfos(java.util.List < LogInfos> logInfos) {
                 this.logInfos = logInfos;
@@ -360,7 +411,7 @@ public class DescribeDcdnWafLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The page information.
+             * <p>The page information.</p>
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;

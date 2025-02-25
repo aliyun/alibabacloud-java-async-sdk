@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceMemberAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceMemberAttributesRequest</p>
  */
 public class ModifyInstanceMemberAttributesRequest extends Request {
-    @Query
-    @NameInMap("Members")
-    @Validation(required = true)
-    private java.util.List < Members> members;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Members")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Members> members;
 
     private ModifyInstanceMemberAttributesRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceMemberAttributesRequest, Builder> {
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
 
         private Builder() {
             super();
@@ -55,9 +60,10 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
         } 
 
         /**
-         * The members that to be modified.
+         * <p>The members that to be modified.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             this.putQueryParameter("Members", members);
             this.members = members;
             return this;
@@ -70,13 +76,19 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceMemberAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceMemberAttributesRequest</p>
+     */
     public static class Members extends TeaModel {
-        @NameInMap("MemberDesc")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MemberDesc")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String memberDesc;
 
-        @NameInMap("MemberUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long memberUid;
 
         private Members(Builder builder) {
@@ -111,7 +123,11 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
             private Long memberUid; 
 
             /**
-             * The remarks of the member in Cloud Firewall.
+             * <p>The remarks of the member in Cloud Firewall.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>renewal</p>
              */
             public Builder memberDesc(String memberDesc) {
                 this.memberDesc = memberDesc;
@@ -119,7 +135,11 @@ public class ModifyInstanceMemberAttributesRequest extends Request {
             }
 
             /**
-             * The UID of the member in Cloud Firewall.
+             * <p>The UID of the member in Cloud Firewall.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123412341234****</p>
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;

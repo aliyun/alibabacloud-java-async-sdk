@@ -62,7 +62,7 @@ public class SetBackupPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class SetBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the backup policy was successfully configured.
          */
         public Builder result(String result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class SetBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the database creation failure records were removed from the DRDS instance.
          */
         public Builder success(Boolean success) {
             this.success = success;

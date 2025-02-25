@@ -1,36 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaDBInfoRequest} extends {@link RequestModel}
  *
  * <p>GetMetaDBInfoRequest</p>
  */
 public class GetMetaDBInfoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppGuid")
     private String appGuid;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @Query
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
     private GetMetaDBInfoRequest(Builder builder) {
@@ -111,7 +115,7 @@ public class GetMetaDBInfoRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -120,7 +124,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The compute engine instance ID. Specify the ID in the <code>Engine type.Engine name</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.some_engine_name</p>
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -129,7 +136,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The business data returned.
+         * <p>The E-MapReduce (EMR) cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -138,7 +148,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The comment.
+         * <p>The type of the data source. Valid values: odps and emr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -147,7 +160,10 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The type of the metadatabase. Only hive is supported.
+         * <p>The name of the metadatabase of the EMR cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);

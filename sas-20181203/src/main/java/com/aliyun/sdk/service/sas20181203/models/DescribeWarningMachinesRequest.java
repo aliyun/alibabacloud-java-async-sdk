@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWarningMachinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeWarningMachinesRequest</p>
  */
 public class DescribeWarningMachinesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ContainerFieldName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldName")
     private String containerFieldName;
 
-    @Query
-    @NameInMap("ContainerFieldValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldValue")
     private String containerFieldValue;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("HaveRisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaveRisk")
     private Integer haveRisk;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MachineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineName")
     private String machineName;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long riskId;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private Long strategyId;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
-    @Query
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
     private DescribeWarningMachinesRequest(Builder builder) {
@@ -237,10 +242,13 @@ public class DescribeWarningMachinesRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>c7e3c5b420a7947c2933303144688****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -249,16 +257,19 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The name of the field that is used to search for the container. Valid values:
-         * <p>
+         * <p>The name of the field that is used to search for the container. Valid values:</p>
+         * <ul>
+         * <li><strong>CONTAINER_ID</strong>: the ID of the container</li>
+         * <li><strong>IMAGE</strong>: the name of the image</li>
+         * <li><strong>NAMESPACE</strong>: the namespace</li>
+         * <li><strong>NODE_NAME</strong>: the name of the node</li>
+         * <li><strong>POD_IP</strong>: the IP address of the pod</li>
+         * <li><strong>HOST_IP</strong>: the IP address of the host</li>
+         * <li><strong>INSTANCE_ID</strong>: the ID of the instance</li>
+         * </ul>
          * 
-         * *   **CONTAINER_ID**: the ID of the container
-         * *   **IMAGE**: the name of the image
-         * *   **NAMESPACE**: the namespace
-         * *   **NODE_NAME**: the name of the node
-         * *   **POD_IP**: the IP address of the pod
-         * *   **HOST_IP**: the IP address of the host
-         * *   **INSTANCE_ID**: the ID of the instance
+         * <strong>example:</strong>
+         * <p>containerId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -267,7 +278,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The value of the field that is used to search for the container.
+         * <p>The value of the field that is used to search for the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8bb3ef0f5ccf45508f0fd1ffc200****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -276,7 +290,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -285,10 +302,13 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
-         * <p>
+         * <p>The ID of the asset group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAllGroups](~~130972~~) operation to query the IDs of asset groups.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -297,11 +317,14 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * Specifies whether risks were detected. Valid values:
-         * <p>
+         * <p>Specifies whether risks were detected. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder haveRisk(Integer haveRisk) {
             this.putQueryParameter("HaveRisk", haveRisk);
@@ -310,11 +333,14 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -323,7 +349,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The name of the server on which the baseline check is performed.
+         * <p>The name of the server on which the baseline check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oracle-win-001****</p>
          */
         public Builder machineName(String machineName) {
             this.putQueryParameter("MachineName", machineName);
@@ -332,7 +361,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**, which indicates that 10 entries of server information are displayed on each page. A maximum of 100 entries can be returned per page.
+         * <p>The number of entries per page. Default value: <strong>10</strong>, which indicates that 10 entries of server information are displayed on each page. A maximum of 100 entries can be returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -341,10 +373,14 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The ID of the risk item.
-         * <p>
+         * <p>The ID of the risk item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
+         * <strong>example:</strong>
+         * <p>196</p>
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -353,7 +389,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -362,7 +401,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
+         * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -371,11 +413,14 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
-         * <p>
+         * <p>The type of the query condition. Valid values:</p>
+         * <ul>
+         * <li><strong>containerId</strong>: the ID of the container</li>
+         * <li><strong>uuid</strong>: the UUID of the asset</li>
+         * </ul>
          * 
-         * *   **containerId**: the ID of the container
-         * *   **uuid**: the UUID of the asset
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -384,7 +429,10 @@ public class DescribeWarningMachinesRequest extends Request {
         }
 
         /**
-         * The UUID of the server on which the baseline check is performed. Separate multiple UUIDs with commas (,).
+         * <p>The UUID of the server on which the baseline check is performed. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9888955c-0076-49da-bd9c-34f5492b****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

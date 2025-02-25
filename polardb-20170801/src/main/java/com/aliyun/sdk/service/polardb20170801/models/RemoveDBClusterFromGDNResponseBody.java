@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveDBClusterFromGDNResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveDBClusterFromGDNResponseBody</p>
  */
 public class RemoveDBClusterFromGDNResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RemoveDBClusterFromGDNResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class RemoveDBClusterFromGDNResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F2E75F-AE67-4FB2-821F-A81237EACD15</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

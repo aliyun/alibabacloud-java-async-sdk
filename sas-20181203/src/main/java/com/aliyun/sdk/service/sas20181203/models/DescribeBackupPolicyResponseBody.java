@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupPolicyDetail")
+    @com.aliyun.core.annotation.NameInMap("BackupPolicyDetail")
     private BackupPolicyDetail backupPolicyDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the anti-ransomware policy.
+         * <p>The details of the anti-ransomware policy.</p>
          */
         public Builder backupPolicyDetail(BackupPolicyDetail backupPolicyDetail) {
             this.backupPolicyDetail = backupPolicyDetail;
@@ -58,7 +63,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,30 +79,36 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
     public static class BackupPolicyDetail extends TeaModel {
-        @NameInMap("ClientStatus")
+        @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PolicyVersion")
+        @com.aliyun.core.annotation.NameInMap("PolicyVersion")
         private String policyVersion;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UuidList")
-        private java.util.List < String > uuidList;
+        @com.aliyun.core.annotation.NameInMap("UuidList")
+        private java.util.List<String> uuidList;
 
         private BackupPolicyDetail(Builder builder) {
             this.clientStatus = builder.clientStatus;
@@ -167,7 +181,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         /**
          * @return uuidList
          */
-        public java.util.List < String > getUuidList() {
+        public java.util.List<String> getUuidList() {
             return this.uuidList;
         }
 
@@ -179,14 +193,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String policyVersion; 
             private String regionId; 
             private String status; 
-            private java.util.List < String > uuidList; 
+            private java.util.List<String> uuidList; 
 
             /**
-             * The status of the anti-ransomware agent. Valid values:
-             * <p>
+             * <p>The status of the anti-ransomware agent. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong>: normal</li>
+             * <li><strong>exception</strong>: abnormal</li>
+             * </ul>
              * 
-             * *   **running**: normal
-             * *   **exception**: abnormal
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -194,7 +211,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware policy.
+             * <p>The ID of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51880</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -202,7 +222,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the anti-ransomware policy.
+             * <p>The name of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testBuckUp</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,35 +233,84 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * *   **IsDefault**: the type of the anti-ransomware policy. Valid values:
-             * <p>
+             * <ul>
+             * <li><p><strong>IsDefault</strong>: the type of the anti-ransomware policy. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: recommended policy</li>
+             * <li><strong>0</strong>: custom policy</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>Include</strong>: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to [].</p>
+             * </li>
+             * <li><p><strong>Source</strong>: the directory that you want to protect. If you want to protect all directories, set this field to [].</p>
+             * </li>
+             * <li><p><strong>ExcludeSystemPath</strong>: specifies whether to exclude a specific directory from the anti-ransomware policy. If you want to exclude a directory, set this field to <strong>true</strong>. If you do not want to exclude a directory, leave this field empty.</p>
+             * </li>
+             * <li><p><strong>Exclude</strong>: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to [].</p>
+             * </li>
+             * <li><p><strong>Schedule</strong>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:</p>
+             * <ul>
+             * <li>If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</li>
+             * <li>If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>Retention</strong>: the period during which backup data is retained. Unit: days. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
+             * </li>
+             * <li><p><strong>SpeedLimiter</strong>: the limit on the network bandwidth for data backup tasks. If you set this field to 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</p>
+             * </li>
+             * <li><p><strong>UseVss</strong>: specifies whether to enable the VSS feature. The feature is available only for Windows servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</p>
+             * </blockquote>
              * 
-             *     *   **1**: recommended policy
-             *     *   **0**: custom policy
-             * 
-             * *   **Include**: the format of the files that you want to protect. If you want to protect the files in all formats, set this field to \[].
-             * 
-             * *   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to \[].
-             * 
-             * *   **ExcludeSystemPath**: specifies whether to exclude a specific directory from the anti-ransomware policy. If you want to exclude a directory, set this field to **true**. If you do not want to exclude a directory, leave this field empty.
-             * 
-             * *   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. If you do not want to exclude a directory, set this field to \[].
-             * 
-             * *   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:
-             * 
-             *     *   If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.
-             *     *   If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.
-             * 
-             * *   **Retention**: the period during which backup data is retained. Unit: days. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.
-             * 
-             * *   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If you set this field to 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.
-             * 
-             * *   **UseVss**: specifies whether to enable the VSS feature. The feature is available only for Windows servers. Valid values:
-             * 
-             *     *   **true**: yes
-             *     *   **false**: no
-             * 
-             * >  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;Exclude&quot;: [
+             *             &quot;/bin/&quot;,
+             *             &quot;/usr/bin/&quot;,
+             *             &quot;/sbin/&quot;,
+             *             &quot;/boot/&quot;,
+             *             &quot;/proc/&quot;,
+             *             &quot;/sys/&quot;,
+             *             &quot;/srv/&quot;,
+             *             &quot;/lib/&quot;,
+             *             &quot;/selinux/&quot;,
+             *             &quot;/usr/sbin/&quot;,
+             *             &quot;/run/&quot;,
+             *             &quot;/lib32/&quot;,
+             *             &quot;/lib64/&quot;,
+             *             &quot;/lost+found/&quot;,
+             *             &quot;/var/lib/kubelet/&quot;,
+             *             &quot;/var/lib/ntp/proc&quot;,
+             *             &quot;/var/lib/container&quot;,
+             *             &quot;Windows\&quot;,
+             *             &quot;Python27\&quot;,
+             *             &quot;Program Files (x86)\&quot;,
+             *             &quot;Program Files\&quot;,
+             *             &quot;Boot\&quot;,
+             *             &quot;$RECYCLE.BIN&quot;,
+             *             &quot;System Volume Information\&quot;,
+             *             &quot;Users\Administrator\NTUSER.DAT*&quot;,
+             *             &quot;ProgramData\&quot;,
+             *             &quot;pagefile.sys&quot;,
+             *             &quot;Users\Default\NTUSER.DAT*&quot;,
+             *             &quot;Users\Administrator\ntuser.*&quot;
+             *       ],
+             *       &quot;ExcludeSystemPath&quot;: true,
+             *       &quot;Include&quot;: [],
+             *       &quot;IsDefault&quot;: 1,
+             *       &quot;Retention&quot;: 7,
+             *       &quot;Schedule&quot;: &quot;I|1630689360|PT24H&quot;,
+             *       &quot;Source&quot;: [],
+             *       &quot;SpeedLimiter&quot;: &quot;&quot;,
+             *       &quot;UseVss&quot;: true
+             * }</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -246,11 +318,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the anti-ransomware policy.
-             * <p>
+             * <p>The version of the anti-ransomware policy.</p>
+             * <ul>
+             * <li><strong>1.0.0</strong></li>
+             * <li><strong>2.0.0</strong></li>
+             * </ul>
              * 
-             * *   **1.0.0**
-             * *   **2.0.0**
+             * <strong>example:</strong>
+             * <p>2.0.0</p>
              */
             public Builder policyVersion(String policyVersion) {
                 this.policyVersion = policyVersion;
@@ -258,7 +333,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which backup data is stored.
+             * <p>The ID of the region in which backup data is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -266,12 +344,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the anti-ransomware policy. Valid values:
-             * <p>
+             * <p>The status of the anti-ransomware policy. Valid values:</p>
+             * <ul>
+             * <li><strong>enabled</strong>: The anti-ransomware policy is manually enabled.</li>
+             * <li><strong>disabled</strong>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</li>
+             * <li><strong>closed</strong>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</li>
+             * </ul>
              * 
-             * *   **enabled**: The anti-ransomware policy is manually enabled.
-             * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
-             * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
+             * <strong>example:</strong>
+             * <p>closed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -279,9 +360,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the UUIDs of the servers to which the anti-ransomware policy is applied.
+             * <p>An array consisting of the UUIDs of the servers to which the anti-ransomware policy is applied.</p>
              */
-            public Builder uuidList(java.util.List < String > uuidList) {
+            public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
                 return this;
             }

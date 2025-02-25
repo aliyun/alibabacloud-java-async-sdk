@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIPv6TranslatorEntryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIPv6TranslatorEntryResponseBody</p>
  */
 public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
-    @NameInMap("Ipv6TranslatorEntryId")
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
     private String ipv6TranslatorEntryId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateIPv6TranslatorEntryResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the IPv6 Translation Service instance.
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transentry-xxxxxxxx</p>
          */
         public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
             this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
@@ -58,7 +66,10 @@ public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DCE5D25-FFC9-492A-8371-12A4E0EE2E05</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

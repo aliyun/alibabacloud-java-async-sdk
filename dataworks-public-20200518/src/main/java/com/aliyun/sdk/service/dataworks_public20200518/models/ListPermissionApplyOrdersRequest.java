@@ -1,67 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPermissionApplyOrdersRequest} extends {@link RequestModel}
  *
  * <p>ListPermissionApplyOrdersRequest</p>
  */
 public class ListPermissionApplyOrdersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("EngineType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineType;
 
-    @Query
-    @NameInMap("FlowStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowStatus")
     private Integer flowStatus;
 
-    @Query
-    @NameInMap("MaxComputeProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeProjectName")
     private String maxComputeProjectName;
 
-    @Query
-    @NameInMap("OrderType")
-    @Validation(required = true, maximum = 1, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1, minimum = 1)
     private Integer orderType;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryType")
-    @Validation(required = true, maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
     private Integer queryType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private Integer workspaceId;
 
     private ListPermissionApplyOrdersRequest(Builder builder) {
@@ -212,7 +216,11 @@ public class ListPermissionApplyOrdersRequest extends Request {
         } 
 
         /**
-         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system determines the value of this parameter based on the endpoint that is used to call the operation.
+         * <p>The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system determines the value of this parameter based on the endpoint that is used to call the operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -221,7 +229,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The end time. You can query all permission request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.
+         * <p>The end of the time range to query. You can query all the permissions request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1617200471885</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -230,7 +241,11 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.
+         * <p>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -239,13 +254,25 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The status of the permission request order. Valid values:
-         * <p>
+         * <p>The status of the permission request order. Valid values:</p>
+         * <ul>
+         * <li>1: to be processed</li>
+         * <li>2: approved and authorized</li>
+         * <li>3: approved but authorization failed</li>
+         * <li>4: rejected</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0</li>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>4</li>
+         * <li>5</li>
+         * </ul>
          * 
-         * *   1: pending approval
-         * *   2: approved and authorized
-         * *   3: approved but authorization failed
-         * *   4: rejected
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder flowStatus(Integer flowStatus) {
             this.putQueryParameter("FlowStatus", flowStatus);
@@ -254,7 +281,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute project to which the permission request order belongs. If you do not specify the parameter, the permission request orders of all MaxCompute projects are returned.
+         * <p>The name of the MaxCompute project with which the permission request order is associated. If you do not specify the parameter, the permission request orders of all MaxCompute projects are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aMaxComputeProject</p>
          */
         public Builder maxComputeProjectName(String maxComputeProjectName) {
             this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
@@ -263,7 +293,11 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.
+         * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderType(Integer orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -272,7 +306,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -281,7 +318,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,11 +330,15 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The query type of the permission request order. Valid values:
-         * <p>
+         * <p>The query type of the permission request order. Valid values:</p>
+         * <ul>
+         * <li>0: The permission request orders you submitted.</li>
+         * <li>1: The permission request orders you approved.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: The permission request orders you submitted.
-         * *   1: The permission request orders you approved.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder queryType(Integer queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -303,7 +347,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The start time. You can query all permission request orders that have been submitted after the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders are queried.
+         * <p>The beginning of the time range to query. You can query all the permissions request orders that have been submitted after the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616200471885</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -312,7 +359,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The name of the table with which the permission request order is associated. If you do not specify the parameter, the permission request orders of all tables are returned.
+         * <p>The name of the table with which the permission request order is associated. If you do not specify the parameter, the permission request orders of all tables are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aTableName</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -321,7 +371,10 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the permission request order belongs. If you do not specify the parameter, the permission request orders of all workspaces are returned. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+         * <p>The ID of the DataWorks workspace that is associated with the permission request order. If you do not specify the parameter, the permission request orders of all workspaces are returned. You can go to the Workspace page in the DataWorks console to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(Integer workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

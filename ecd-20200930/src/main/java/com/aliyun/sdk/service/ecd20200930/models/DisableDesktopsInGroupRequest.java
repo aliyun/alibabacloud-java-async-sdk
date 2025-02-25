@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableDesktopsInGroupRequest} extends {@link RequestModel}
  *
  * <p>DisableDesktopsInGroupRequest</p>
  */
 public class DisableDesktopsInGroupRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("DesktopIds")
-    @Validation(required = true)
-    private java.util.List < String > desktopIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> desktopIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DisableDesktopsInGroupRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class DisableDesktopsInGroupRequest extends Request {
     /**
      * @return desktopIds
      */
-    public java.util.List < String > getDesktopIds() {
+    public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
     }
 
@@ -70,7 +75,7 @@ public class DisableDesktopsInGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<DisableDesktopsInGroupRequest, Builder> {
         private String desktopGroupId; 
-        private java.util.List < String > desktopIds; 
+        private java.util.List<String> desktopIds; 
         private String regionId; 
 
         private Builder() {
@@ -85,7 +90,11 @@ public class DisableDesktopsInGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group.
+         * <p>The ID of the desktop group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2i8qxpv6t1a03****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -94,16 +103,21 @@ public class DisableDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * DisableDesktopsInGroup
+         * <p>The IDs of cloud desktops.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder desktopIds(java.util.List < String > desktopIds) {
+        public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
             this.desktopIds = desktopIds;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

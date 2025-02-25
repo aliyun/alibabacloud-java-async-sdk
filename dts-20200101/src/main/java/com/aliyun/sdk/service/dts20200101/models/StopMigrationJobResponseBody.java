@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopMigrationJobResponseBody} extends {@link TeaModel}
  *
  * <p>StopMigrationJobResponseBody</p>
  */
 public class StopMigrationJobResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private StopMigrationJobResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class StopMigrationJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code returned if the call failed.
+         * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query all data migration instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -82,7 +90,10 @@ public class StopMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -90,7 +101,10 @@ public class StopMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C306C198-7807-409D-930A-D6CE6C32****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +112,10 @@ public class StopMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

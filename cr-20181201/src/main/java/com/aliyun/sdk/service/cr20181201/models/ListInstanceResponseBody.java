@@ -171,6 +171,67 @@ public class ListInstanceResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Instances extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
@@ -199,6 +260,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         private Instances(Builder builder) {
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
@@ -209,6 +273,7 @@ public class ListInstanceResponseBody extends TeaModel {
             this.modifiedTime = builder.modifiedTime;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -282,6 +347,13 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String instanceId; 
@@ -292,6 +364,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String modifiedTime; 
             private String regionId; 
             private String resourceGroupId; 
+            private java.util.List < Tags> tags; 
 
             /**
              * The time when the instance was created.
@@ -362,6 +435,14 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRetcodeAppResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRetcodeAppResponseBody</p>
  */
 public class CreateRetcodeAppResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetcodeAppDataBean")
+    @com.aliyun.core.annotation.NameInMap("RetcodeAppDataBean")
     private RetcodeAppDataBean retcodeAppDataBean;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateRetcodeAppResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bdidt76ehx@d5cf1cd3f7df411</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +125,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +136,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5EC8221-08F2-4C95-9AF1-49FD998C647A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The return detail.
+         * <p>The information of the Browser Monitoring task.</p>
          */
         public Builder retcodeAppDataBean(RetcodeAppDataBean retcodeAppDataBean) {
             this.retcodeAppDataBean = retcodeAppDataBean;
@@ -138,11 +155,14 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,11 +175,17 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRetcodeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRetcodeAppResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -194,7 +220,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -202,7 +231,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -216,9 +248,15 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRetcodeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRetcodeAppResponseBody</p>
+     */
     public static class RetcodeAppDataBeanTags extends TeaModel {
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private RetcodeAppDataBeanTags(Builder builder) {
             this.tags = builder.tags;
@@ -235,17 +273,17 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -257,17 +295,23 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRetcodeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRetcodeAppResponseBody</p>
+     */
     public static class RetcodeAppDataBean extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private RetcodeAppDataBeanTags tags;
 
         private RetcodeAppDataBean(Builder builder) {
@@ -320,7 +364,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             private RetcodeAppDataBeanTags tags; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135143</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -328,7 +375,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * PID.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aokcdqn3ly@a195c6d6421****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -336,10 +386,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
-             * <p>
+             * <p>The ID of the resource group.</p>
              * 
-             * If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.
+             * <strong>example:</strong>
+             * <p>rg-acfmxyexli2****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -347,7 +397,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags of the task.</p>
              */
             public Builder tags(RetcodeAppDataBeanTags tags) {
                 this.tags = tags;

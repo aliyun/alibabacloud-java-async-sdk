@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEdgeMachineResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEdgeMachineResponseBody</p>
  */
 public class CreateEdgeMachineResponseBody extends TeaModel {
-    @NameInMap("edge_machine_id")
+    @com.aliyun.core.annotation.NameInMap("edge_machine_id")
     private String edgeMachineId;
 
-    @NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
     private CreateEdgeMachineResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cloud-native box.
+         * <p>The ID of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc0725ddf688744979cd98445f67e****</p>
          */
         public Builder edgeMachineId(String edgeMachineId) {
             this.edgeMachineId = edgeMachineId;
@@ -58,7 +66,10 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;request_id&quot;: &quot;6e7b377a-c5ed-4388-8026-689e1b34****&quot;,</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

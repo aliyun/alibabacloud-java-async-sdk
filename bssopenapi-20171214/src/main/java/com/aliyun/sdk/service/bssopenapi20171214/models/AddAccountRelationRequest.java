@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>AddAccountRelationRequest</p>
  */
 public class AddAccountRelationRequest extends Request {
-    @Query
-    @NameInMap("ChildNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildNick")
     private String childNick;
 
-    @Query
-    @NameInMap("ChildUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long childUserId;
 
-    @Query
-    @NameInMap("ParentUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long parentUserId;
 
-    @Query
-    @NameInMap("PermissionCodes")
-    private java.util.List < String > permissionCodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
+    private java.util.List<String> permissionCodes;
 
-    @Query
-    @NameInMap("RelationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relationType;
 
-    @Query
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
-    @Query
-    @NameInMap("RoleCodes")
-    private java.util.List < String > roleCodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleCodes")
+    private java.util.List<String> roleCodes;
 
     private AddAccountRelationRequest(Builder builder) {
         super(builder);
@@ -92,7 +97,7 @@ public class AddAccountRelationRequest extends Request {
     /**
      * @return permissionCodes
      */
-    public java.util.List < String > getPermissionCodes() {
+    public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
     }
 
@@ -113,7 +118,7 @@ public class AddAccountRelationRequest extends Request {
     /**
      * @return roleCodes
      */
-    public java.util.List < String > getRoleCodes() {
+    public java.util.List<String> getRoleCodes() {
         return this.roleCodes;
     }
 
@@ -121,10 +126,10 @@ public class AddAccountRelationRequest extends Request {
         private String childNick; 
         private Long childUserId; 
         private Long parentUserId; 
-        private java.util.List < String > permissionCodes; 
+        private java.util.List<String> permissionCodes; 
         private String relationType; 
         private String requestId; 
-        private java.util.List < String > roleCodes; 
+        private java.util.List<String> roleCodes; 
 
         private Builder() {
             super();
@@ -142,7 +147,10 @@ public class AddAccountRelationRequest extends Request {
         } 
 
         /**
-         * The display name of the member. This helps clarify the scenario in which the account is used.
+         * <p>The display name of the member. This helps clarify the scenario in which the account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx project</p>
          */
         public Builder childNick(String childNick) {
             this.putQueryParameter("ChildNick", childNick);
@@ -151,7 +159,11 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the member.
+         * <p>The ID of the Alibaba Cloud account that is used as the member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512996702208737</p>
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -160,7 +172,11 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the management account.
+         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738376485192612</p>
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -169,25 +185,33 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The permissions that can be granted to the member. Valid values:
-         * <p>
+         * <p>The permissions that can be granted to the member. Valid values:</p>
+         * <ul>
+         * <li>SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.</li>
+         * <li>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.</li>
+         * <li>FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.</li>
+         * <li>FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.</li>
+         * <li>CHECK_FINANCE_INFO: requests to view information about the financial relationship.</li>
+         * <li>MANAGE_TARGET_INVOICE: allows the member to manage invoices.</li>
+         * <li>CHECK_TARGET_CONSUMPTION: allows the member to view the bills.</li>
+         * </ul>
+         * <p>The params[PermissionCodes, RoleCodes] can not be null at the same time.</p>
          * 
-         * *   SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.
-         * *   SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.
-         * *   FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.
-         * *   FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.
-         * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
-         * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
-         * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
+         * <strong>example:</strong>
+         * <p>CHECK_TARGET_CONSUMPTION</p>
          */
-        public Builder permissionCodes(java.util.List < String > permissionCodes) {
+        public Builder permissionCodes(java.util.List<String> permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
             this.permissionCodes = permissionCodes;
             return this;
         }
 
         /**
-         * The type of the financial relationship. Set the value to enterprise_group.
+         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise_group</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -196,7 +220,11 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32324242444</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -205,9 +233,12 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * The roles that can be assigned to the member. Set the value to trusteeship.
+         * <p>The roles that can be assigned to the member. Set the value to trusteeship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trusteeship</p>
          */
-        public Builder roleCodes(java.util.List < String > roleCodes) {
+        public Builder roleCodes(java.util.List<String> roleCodes) {
             this.putQueryParameter("RoleCodes", roleCodes);
             this.roleCodes = roleCodes;
             return this;

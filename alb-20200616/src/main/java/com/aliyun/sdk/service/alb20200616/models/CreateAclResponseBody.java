@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAclResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAclResponseBody</p>
  */
 public class CreateAclResponseBody extends TeaModel {
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAclResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACL ID.
+         * <p>The ID of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -70,7 +78,10 @@ public class CreateAclResponseBody extends TeaModel {
         }
 
         /**
-         * The asynchronous task ID.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -78,7 +89,10 @@ public class CreateAclResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

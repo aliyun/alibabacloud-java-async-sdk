@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMachineGroupRequest} extends {@link RequestModel}
  *
  * <p>GetMachineGroupRequest</p>
  */
 public class GetMachineGroupRequest extends Request {
-    @Path
-    @NameInMap("MachineGroupID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("MachineGroupID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String machineGroupID;
 
     private GetMachineGroupRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class GetMachineGroupRequest extends Request {
         } 
 
         /**
-         * MachineGroupID.
+         * <p>This parameter is required.</p>
          */
         public Builder machineGroupID(String machineGroupID) {
             this.putPathParameter("MachineGroupID", machineGroupID);

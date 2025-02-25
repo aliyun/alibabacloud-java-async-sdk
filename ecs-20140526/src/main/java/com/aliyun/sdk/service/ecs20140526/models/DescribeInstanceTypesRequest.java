@@ -1,196 +1,230 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceTypesRequest</p>
  */
 public class DescribeInstanceTypesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("CpuArchitecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
     private String cpuArchitecture;
 
-    @Query
-    @NameInMap("GPUSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuArchitectures")
+    private java.util.List<String> cpuArchitectures;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GPUSpec")
     private String GPUSpec;
 
-    @Query
-    @NameInMap("InstanceCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuSpecs")
+    private java.util.List<String> gpuSpecs;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceCategories")
+    private java.util.List<String> instanceCategories;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceCategory")
     private String instanceCategory;
 
-    @Query
-    @NameInMap("InstanceFamilyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
     private String instanceFamilyLevel;
 
-    @Query
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
+    private java.util.List<String> instanceTypeFamilies;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @Query
-    @NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+    private java.util.List<String> instanceTypes;
 
-    @Query
-    @NameInMap("LocalStorageCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalStorageCategories")
+    private java.util.List<String> localStorageCategories;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalStorageCategory")
     private String localStorageCategory;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 1600, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1600, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("MaximumCpuCoreCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumCpuCoreCount")
     private Integer maximumCpuCoreCount;
 
-    @Query
-    @NameInMap("MaximumCpuSpeedFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumCpuSpeedFrequency")
     private Float maximumCpuSpeedFrequency;
 
-    @Query
-    @NameInMap("MaximumCpuTurboFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumCpuTurboFrequency")
     private Float maximumCpuTurboFrequency;
 
-    @Query
-    @NameInMap("MaximumGPUAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumGPUAmount")
     private Integer maximumGPUAmount;
 
-    @Query
-    @NameInMap("MaximumMemorySize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumMemorySize")
     private Float maximumMemorySize;
 
-    @Query
-    @NameInMap("MinimumBaselineCredit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumBaselineCredit")
     private Integer minimumBaselineCredit;
 
-    @Query
-    @NameInMap("MinimumCpuCoreCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumCpuCoreCount")
     private Integer minimumCpuCoreCount;
 
-    @Query
-    @NameInMap("MinimumCpuSpeedFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumCpuSpeedFrequency")
     private Float minimumCpuSpeedFrequency;
 
-    @Query
-    @NameInMap("MinimumCpuTurboFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumCpuTurboFrequency")
     private Float minimumCpuTurboFrequency;
 
-    @Query
-    @NameInMap("MinimumDiskQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumDiskQuantity")
     private Integer minimumDiskQuantity;
 
-    @Query
-    @NameInMap("MinimumEniIpv6AddressQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEniIpv6AddressQuantity")
     private Integer minimumEniIpv6AddressQuantity;
 
-    @Query
-    @NameInMap("MinimumEniPrivateIpAddressQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEniPrivateIpAddressQuantity")
     private Integer minimumEniPrivateIpAddressQuantity;
 
-    @Query
-    @NameInMap("MinimumEniQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEniQuantity")
     private Integer minimumEniQuantity;
 
-    @Query
-    @NameInMap("MinimumEriQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEriQuantity")
     private Integer minimumEriQuantity;
 
-    @Query
-    @NameInMap("MinimumGPUAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumGPUAmount")
     private Integer minimumGPUAmount;
 
-    @Query
-    @NameInMap("MinimumInitialCredit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInitialCredit")
     private Integer minimumInitialCredit;
 
-    @Query
-    @NameInMap("MinimumInstanceBandwidthRx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstanceBandwidthRx")
     private Integer minimumInstanceBandwidthRx;
 
-    @Query
-    @NameInMap("MinimumInstanceBandwidthTx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstanceBandwidthTx")
     private Integer minimumInstanceBandwidthTx;
 
-    @Query
-    @NameInMap("MinimumInstancePpsRx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstancePpsRx")
     private Long minimumInstancePpsRx;
 
-    @Query
-    @NameInMap("MinimumInstancePpsTx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstancePpsTx")
     private Long minimumInstancePpsTx;
 
-    @Query
-    @NameInMap("MinimumLocalStorageAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumLocalStorageAmount")
     private Integer minimumLocalStorageAmount;
 
-    @Query
-    @NameInMap("MinimumLocalStorageCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumLocalStorageCapacity")
     private Long minimumLocalStorageCapacity;
 
-    @Query
-    @NameInMap("MinimumMemorySize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumMemorySize")
     private Float minimumMemorySize;
 
-    @Query
-    @NameInMap("MinimumPrimaryEniQueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPrimaryEniQueueNumber")
     private Integer minimumPrimaryEniQueueNumber;
 
-    @Query
-    @NameInMap("MinimumQueuePairNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumQueuePairNumber")
     private Integer minimumQueuePairNumber;
 
-    @Query
-    @NameInMap("MinimumSecondaryEniQueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumSecondaryEniQueueNumber")
     private Integer minimumSecondaryEniQueueNumber;
 
-    @Query
-    @NameInMap("NextToken")
-    @Validation(maxLength = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 50)
     private String nextToken;
 
-    @Query
-    @NameInMap("NvmeSupport")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NvmeSupport")
     private String nvmeSupport;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhysicalProcessorModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModel")
     private String physicalProcessorModel;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModels")
+    private java.util.List<String> physicalProcessorModels;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeInstanceTypesRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.cpuArchitecture = builder.cpuArchitecture;
+        this.cpuArchitectures = builder.cpuArchitectures;
         this.GPUSpec = builder.GPUSpec;
+        this.gpuSpecs = builder.gpuSpecs;
+        this.instanceCategories = builder.instanceCategories;
         this.instanceCategory = builder.instanceCategory;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
+        this.instanceTypeFamilies = builder.instanceTypeFamilies;
         this.instanceTypeFamily = builder.instanceTypeFamily;
         this.instanceTypes = builder.instanceTypes;
+        this.localStorageCategories = builder.localStorageCategories;
         this.localStorageCategory = builder.localStorageCategory;
         this.maxResults = builder.maxResults;
         this.maximumCpuCoreCount = builder.maximumCpuCoreCount;
@@ -224,6 +258,7 @@ public class DescribeInstanceTypesRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.physicalProcessorModel = builder.physicalProcessorModel;
+        this.physicalProcessorModels = builder.physicalProcessorModels;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -256,10 +291,31 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
+     * @return cpuArchitectures
+     */
+    public java.util.List<String> getCpuArchitectures() {
+        return this.cpuArchitectures;
+    }
+
+    /**
      * @return GPUSpec
      */
     public String getGPUSpec() {
         return this.GPUSpec;
+    }
+
+    /**
+     * @return gpuSpecs
+     */
+    public java.util.List<String> getGpuSpecs() {
+        return this.gpuSpecs;
+    }
+
+    /**
+     * @return instanceCategories
+     */
+    public java.util.List<String> getInstanceCategories() {
+        return this.instanceCategories;
     }
 
     /**
@@ -277,6 +333,13 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
+     * @return instanceTypeFamilies
+     */
+    public java.util.List<String> getInstanceTypeFamilies() {
+        return this.instanceTypeFamilies;
+    }
+
+    /**
      * @return instanceTypeFamily
      */
     public String getInstanceTypeFamily() {
@@ -286,8 +349,15 @@ public class DescribeInstanceTypesRequest extends Request {
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    /**
+     * @return localStorageCategories
+     */
+    public java.util.List<String> getLocalStorageCategories() {
+        return this.localStorageCategories;
     }
 
     /**
@@ -522,6 +592,13 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
+     * @return physicalProcessorModels
+     */
+    public java.util.List<String> getPhysicalProcessorModels() {
+        return this.physicalProcessorModels;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -538,11 +615,16 @@ public class DescribeInstanceTypesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceTypesRequest, Builder> {
         private String sourceRegionId; 
         private String cpuArchitecture; 
+        private java.util.List<String> cpuArchitectures; 
         private String GPUSpec; 
+        private java.util.List<String> gpuSpecs; 
+        private java.util.List<String> instanceCategories; 
         private String instanceCategory; 
         private String instanceFamilyLevel; 
+        private java.util.List<String> instanceTypeFamilies; 
         private String instanceTypeFamily; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<String> instanceTypes; 
+        private java.util.List<String> localStorageCategories; 
         private String localStorageCategory; 
         private Long maxResults; 
         private Integer maximumCpuCoreCount; 
@@ -576,6 +658,7 @@ public class DescribeInstanceTypesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String physicalProcessorModel; 
+        private java.util.List<String> physicalProcessorModels; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -587,11 +670,16 @@ public class DescribeInstanceTypesRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.cpuArchitecture = request.cpuArchitecture;
+            this.cpuArchitectures = request.cpuArchitectures;
             this.GPUSpec = request.GPUSpec;
+            this.gpuSpecs = request.gpuSpecs;
+            this.instanceCategories = request.instanceCategories;
             this.instanceCategory = request.instanceCategory;
             this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceTypeFamilies = request.instanceTypeFamilies;
             this.instanceTypeFamily = request.instanceTypeFamily;
             this.instanceTypes = request.instanceTypes;
+            this.localStorageCategories = request.localStorageCategories;
             this.localStorageCategory = request.localStorageCategory;
             this.maxResults = request.maxResults;
             this.maximumCpuCoreCount = request.maximumCpuCoreCount;
@@ -625,6 +713,7 @@ public class DescribeInstanceTypesRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.physicalProcessorModel = request.physicalProcessorModel;
+            this.physicalProcessorModels = request.physicalProcessorModels;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -639,11 +728,14 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The CPU architecture. Valid values:
-         * <p>
+         * <p>The CPU architecture. Valid values:</p>
+         * <ul>
+         * <li>X86</li>
+         * <li>ARM</li>
+         * </ul>
          * 
-         * *   X86
-         * *   ARM
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         public Builder cpuArchitecture(String cpuArchitecture) {
             this.putQueryParameter("CpuArchitecture", cpuArchitecture);
@@ -652,10 +744,29 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The GPU model.
-         * <p>
+         * <p>The CPU architectures of instance types. Valid values:</p>
+         * <blockquote>
+         * <p> Valid values of N: 1 and 2.</p>
+         * </blockquote>
+         * <ul>
+         * <li>X86</li>
+         * <li>ARM</li>
+         * </ul>
+         */
+        public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
+            this.putQueryParameter("CpuArchitectures", cpuArchitectures);
+            this.cpuArchitectures = cpuArchitectures;
+            return this;
+        }
+
+        /**
+         * <p>The GPU model.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported. For example, if an instance type provides NVIDIA V100 GPUs and you set this parameter to NVIDIA, information about the instance type is queried.</p>
+         * </blockquote>
          * 
-         * > Fuzzy match is supported. For example, if an instance type provides NVIDIA V100 GPUs and you set this parameter to NVIDIA, information about the instance type is queried.
+         * <strong>example:</strong>
+         * <p>NVIDIA V100</p>
          */
         public Builder GPUSpec(String GPUSpec) {
             this.putQueryParameter("GPUSpec", GPUSpec);
@@ -664,24 +775,67 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The category of the instance type. Valid values:
-         * <p>
+         * <p>The GPU models of instance types. Valid values of N: 1 to 10.</p>
+         */
+        public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
+            this.putQueryParameter("GpuSpecs", gpuSpecs);
+            this.gpuSpecs = gpuSpecs;
+            return this;
+        }
+
+        /**
+         * <p>The categories of instance types. Valid values:</p>
+         * <blockquote>
+         * <p> Valid values of N: 1 to 10.</p>
+         * </blockquote>
+         * <ul>
+         * <li>General-purpose: general-purpose instance type</li>
+         * <li>Compute-optimized: compute-optimized instance type</li>
+         * <li>Memory-optimized: memory-optimized instance type</li>
+         * <li>Big data: big data instance type</li>
+         * <li>Local SSDs: instance type with local SSDs</li>
+         * <li>High Clock Speed: instance type with high clock speeds</li>
+         * <li>Enhanced: enhanced instance type</li>
+         * <li>Shared: shared instance type</li>
+         * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</li>
+         * <li>Visual Compute-optimized: visual compute-optimized instance type</li>
+         * <li>Heterogeneous Service: heterogeneous service instance type</li>
+         * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</li>
+         * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</li>
+         * <li>ECS Bare Metal: ECS Bare Metal Instance type</li>
+         * <li>Super Computing Cluster: SCC instance type</li>
+         * <li>High Performance Compute: high-performance computing instance type</li>
+         * </ul>
+         */
+        public Builder instanceCategories(java.util.List<String> instanceCategories) {
+            this.putQueryParameter("InstanceCategories", instanceCategories);
+            this.instanceCategories = instanceCategories;
+            return this;
+        }
+
+        /**
+         * <p>The category of the instance type. Valid values:</p>
+         * <ul>
+         * <li>General-purpose: general-purpose instance type</li>
+         * <li>Compute-optimized: compute-optimized instance type</li>
+         * <li>Memory-optimized: memory-optimized instance type</li>
+         * <li>Big data: big data instance type</li>
+         * <li>Local SSDs: instance type with local SSDs</li>
+         * <li>High Clock Speed: instance type with high clock speeds</li>
+         * <li>Enhanced: enhanced instance type</li>
+         * <li>Shared: shared instance type</li>
+         * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</li>
+         * <li>Visual Compute-optimized: visual compute-optimized instance type</li>
+         * <li>Heterogeneous Service: heterogeneous service instance type</li>
+         * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</li>
+         * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</li>
+         * <li>ECS Bare Metal: ECS Bare Metal Instance type</li>
+         * <li>Super Computing Cluster: Super Computing Cluster (SCC) instance type</li>
+         * <li>High Performance Compute: high-performance computing instance type</li>
+         * </ul>
          * 
-         * *   General-purpose: general-purpose instance type
-         * *   Compute-optimized: compute-optimized instance type
-         * *   Memory-optimized: memory-optimized instance type
-         * *   Big data: big data instance type
-         * *   Local SSDs: instance type with local SSDs
-         * *   High Clock Speed: instance type with high clock speeds
-         * *   Enhanced: enhanced instance type
-         * *   Shared: shared instance type
-         * *   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type
-         * *   Visual Compute-optimized: visual compute-optimized instance type
-         * *   Heterogeneous Service: heterogeneous service instance type
-         * *   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type
-         * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
-         * *   ECS Bare Metal: ECS Bare Metal Instance type
-         * *   Super Computing Cluster: Super Computing Cluster (SCC) instance type
+         * <strong>example:</strong>
+         * <p>Big data</p>
          */
         public Builder instanceCategory(String instanceCategory) {
             this.putQueryParameter("InstanceCategory", instanceCategory);
@@ -690,12 +844,15 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The level of the instance family. Valid values:
-         * <p>
+         * <p>The level of the instance family. Valid values:</p>
+         * <ul>
+         * <li>EntryLevel: entry level (shared)</li>
+         * <li>EnterpriseLevel: enterprise level</li>
+         * <li>CreditEntryLevel: credit-based entry level</li>
+         * </ul>
          * 
-         * *   EntryLevel: entry level (shared)
-         * *   EnterpriseLevel: enterprise level
-         * *   CreditEntryLevel: credit-based entry level
+         * <strong>example:</strong>
+         * <p>EntryLevel</p>
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -704,10 +861,20 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The instance family to which the instance type belongs. For information about the valid values of this parameter, see [DescribeInstanceTypeFamilies](~~25621~~).
-         * <p>
+         * <p>The instance families of instance types that you want to query. Valid values of N: 1 to 10.</p>
+         */
+        public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
+            this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
+            this.instanceTypeFamilies = instanceTypeFamilies;
+            return this;
+        }
+
+        /**
+         * <p>The instance family to which the instance type belongs. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</p>
+         * <p>For more information about instance families, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
          * 
-         * For more information about instance families, see [Instance families](~~25378~~).
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -716,20 +883,44 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * Instance type N. Valid values of N: 1 to 10. If this parameter is empty, information about all instance types is queried.
+         * <p>Instance type N. Valid values of N: 1 to 10. If this parameter is left empty, information about all instance types is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
             return this;
         }
 
         /**
-         * The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:
-         * <p>
+         * <p>The categories of local disks. Valid values of N: 1 and 2. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</p>
+         * <ul>
+         * <li>local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</li>
+         * <li>local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</li>
+         * </ul>
+         */
+        public Builder localStorageCategories(java.util.List<String> localStorageCategories) {
+            this.putQueryParameter("LocalStorageCategories", localStorageCategories);
+            this.localStorageCategories = localStorageCategories;
+            return this;
+        }
+
+        /**
+         * <p>The category of local disks. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</p>
+         * <ul>
+         * <li>local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.</li>
+         * <li>local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>local_hdd_pro</li>
+         * <li>local_ssd_pro</li>
+         * </ul>
          * 
-         * *   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are used by d1ne or d1 instances
-         * *   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances
+         * <strong>example:</strong>
+         * <p>local_ssd_pro</p>
          */
         public Builder localStorageCategory(String localStorageCategory) {
             this.putQueryParameter("LocalStorageCategory", localStorageCategory);
@@ -738,10 +929,11 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 1600.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 1600.</p>
+         * <p>Default value: 1600.</p>
          * 
-         * Default value: 1600.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -750,10 +942,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of vCPUs. The value must be a positive integer.
-         * <p>
+         * <p>The maximum number of vCPUs. The value must be a positive integer.</p>
+         * <blockquote>
+         * <p> If an instance type has more vCPUs than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type has more vCPUs than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maximumCpuCoreCount(Integer maximumCpuCoreCount) {
             this.putQueryParameter("MaximumCpuCoreCount", maximumCpuCoreCount);
@@ -762,10 +957,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum clock speed.
-         * <p>
+         * <p>The maximum clock speed.</p>
+         * <blockquote>
+         * <p> If an instance type uses processors that have a higher clock speed than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type uses processors that have a higher clock speed than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>3.2</p>
          */
         public Builder maximumCpuSpeedFrequency(Float maximumCpuSpeedFrequency) {
             this.putQueryParameter("MaximumCpuSpeedFrequency", maximumCpuSpeedFrequency);
@@ -774,10 +972,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum turbo frequency.
-         * <p>
+         * <p>The maximum turbo frequency.</p>
+         * <blockquote>
+         * <p> If an instance type uses processors that deliver a higher turbo frequency than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type uses processors that deliver a higher turbo frequency than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>4.1</p>
          */
         public Builder maximumCpuTurboFrequency(Float maximumCpuTurboFrequency) {
             this.putQueryParameter("MaximumCpuTurboFrequency", maximumCpuTurboFrequency);
@@ -786,10 +987,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of GPUs. The value must be a positive integer.
-         * <p>
+         * <p>The maximum number of GPUs. The value must be a positive integer.</p>
+         * <blockquote>
+         * <p> If an instance type provides more GPUs than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type provides more GPUs than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maximumGPUAmount(Integer maximumGPUAmount) {
             this.putQueryParameter("MaximumGPUAmount", maximumGPUAmount);
@@ -798,10 +1002,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum memory size. Unit: GiB.
-         * <p>
+         * <p>The maximum memory size. Unit: GiB.</p>
+         * <blockquote>
+         * <p> If the memory size of an instance type is larger than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If the memory size of an instance type is larger than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder maximumMemorySize(Float maximumMemorySize) {
             this.putQueryParameter("MaximumMemorySize", maximumMemorySize);
@@ -810,10 +1017,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum baseline CPU performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
-         * <p>
+         * <p>The minimum baseline CPU performance (overall baseline performance of all vCPUs) of a t5 or t6 burstable instance.</p>
+         * <blockquote>
+         * <p> If a t5 or t6 instance type provides baseline CPU performance lower than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If a t5 or t6 instance type provides baseline CPU performance that is lower than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder minimumBaselineCredit(Integer minimumBaselineCredit) {
             this.putQueryParameter("MinimumBaselineCredit", minimumBaselineCredit);
@@ -822,10 +1032,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of vCPUs. The value must be a positive integer.
-         * <p>
+         * <p>The minimum number of vCPUs. The value must be a positive integer.</p>
+         * <blockquote>
+         * <p> If an instance type has fewer vCPUs than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type has fewer vCPUs than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minimumCpuCoreCount(Integer minimumCpuCoreCount) {
             this.putQueryParameter("MinimumCpuCoreCount", minimumCpuCoreCount);
@@ -834,10 +1047,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum clock speed.
-         * <p>
+         * <p>The minimum clock speed.</p>
+         * <blockquote>
+         * <p> If an instance type uses processors that have a lower clock speed than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type uses processors that have a lower clock speed than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>2.5</p>
          */
         public Builder minimumCpuSpeedFrequency(Float minimumCpuSpeedFrequency) {
             this.putQueryParameter("MinimumCpuSpeedFrequency", minimumCpuSpeedFrequency);
@@ -846,10 +1062,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum turbo frequency.
-         * <p>
+         * <p>The minimum turbo frequency.</p>
+         * <blockquote>
+         * <p> If an instance type uses processors that deliver a lower turbo frequency than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type uses processors that deliver a lower turbo frequency than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>3.2</p>
          */
         public Builder minimumCpuTurboFrequency(Float minimumCpuTurboFrequency) {
             this.putQueryParameter("MinimumCpuTurboFrequency", minimumCpuTurboFrequency);
@@ -858,10 +1077,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of cloud disks.
-         * <p>
+         * <p>The minimum number of cloud disks per instance.</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer cloud disks than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer cloud disks than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder minimumDiskQuantity(Integer minimumDiskQuantity) {
             this.putQueryParameter("MinimumDiskQuantity", minimumDiskQuantity);
@@ -870,10 +1092,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of IPv6 addresses per ENI.
-         * <p>
+         * <p>The minimum number of IPv6 addresses per ENI.</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer IPv6 addresses per ENI than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer IPv6 addresses per ENI than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
             this.putQueryParameter("MinimumEniIpv6AddressQuantity", minimumEniIpv6AddressQuantity);
@@ -882,10 +1107,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of IPv4 addresses per ENI.
-         * <p>
+         * <p>The minimum number of IPv4 addresses per ENI.</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer IPv4 addresses per ENI than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer IPv4 addresses per ENI than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
             this.putQueryParameter("MinimumEniPrivateIpAddressQuantity", minimumEniPrivateIpAddressQuantity);
@@ -894,10 +1122,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of elastic network interfaces (ENIs).
-         * <p>
+         * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer ENIs than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer ENIs than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder minimumEniQuantity(Integer minimumEniQuantity) {
             this.putQueryParameter("MinimumEniQuantity", minimumEniQuantity);
@@ -906,10 +1137,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of ERIs.
-         * <p>
+         * <p>The minimum number of ERIs per instance.</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer ERIs than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer ERIs than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minimumEriQuantity(Integer minimumEriQuantity) {
             this.putQueryParameter("MinimumEriQuantity", minimumEriQuantity);
@@ -918,10 +1152,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of GPUs. The value must be a positive integer.
-         * <p>
+         * <p>The minimum number of GPUs. The value must be a positive integer.</p>
+         * <blockquote>
+         * <p> If an instance type provides fewer GPUs than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type provides fewer GPUs than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minimumGPUAmount(Integer minimumGPUAmount) {
             this.putQueryParameter("MinimumGPUAmount", minimumGPUAmount);
@@ -930,10 +1167,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum initial CPU credits per t5 or t6 burstable instance.
-         * <p>
+         * <p>The minimum initial CPU credits of a t5 or t6 burstable instance.</p>
+         * <blockquote>
+         * <p> If a t5 or t6 instance type provides less initial vCPU credits than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If a t5 or t6 instance type provides less initial vCPU credits than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder minimumInitialCredit(Integer minimumInitialCredit) {
             this.putQueryParameter("MinimumInitialCredit", minimumInitialCredit);
@@ -942,10 +1182,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum inbound internal bandwidth. Unit: Kbit/s.
-         * <p>
+         * <p>The minimum inbound internal bandwidth. Unit: Kbit/s.</p>
+         * <blockquote>
+         * <p> If an instance type provides an inbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type provides an inbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>12288</p>
          */
         public Builder minimumInstanceBandwidthRx(Integer minimumInstanceBandwidthRx) {
             this.putQueryParameter("MinimumInstanceBandwidthRx", minimumInstanceBandwidthRx);
@@ -954,10 +1197,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum outbound internal bandwidth. Unit: Kbit/s.
-         * <p>
+         * <p>The minimum outbound internal bandwidth. Unit: Kbit/s.</p>
+         * <blockquote>
+         * <p> If an instance type provides an outbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type provides an outbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>12288</p>
          */
         public Builder minimumInstanceBandwidthTx(Integer minimumInstanceBandwidthTx) {
             this.putQueryParameter("MinimumInstanceBandwidthTx", minimumInstanceBandwidthTx);
@@ -966,10 +1212,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum inbound packet forwarding rate over the internal network. Unit: pps.
-         * <p>
+         * <p>The minimum inbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * <blockquote>
+         * <p> If an instance type provides an inbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type provides an inbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder minimumInstancePpsRx(Long minimumInstancePpsRx) {
             this.putQueryParameter("MinimumInstancePpsRx", minimumInstancePpsRx);
@@ -978,10 +1227,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum outbound packet forwarding rate over the internal network. Unit: pps.
-         * <p>
+         * <p>The minimum outbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * <blockquote>
+         * <p> If an instance type provides an outbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type provides an outbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder minimumInstancePpsTx(Long minimumInstancePpsTx) {
             this.putQueryParameter("MinimumInstancePpsTx", minimumInstancePpsTx);
@@ -990,10 +1242,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of local disks.
-         * <p>
+         * <p>The minimum number of local disks per instance.</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer local disks than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer local disks than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder minimumLocalStorageAmount(Integer minimumLocalStorageAmount) {
             this.putQueryParameter("MinimumLocalStorageAmount", minimumLocalStorageAmount);
@@ -1002,7 +1257,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The capacity of each local disk. Unit: GiB.
+         * <p>The capacity of each local disk attached per instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder minimumLocalStorageCapacity(Long minimumLocalStorageCapacity) {
             this.putQueryParameter("MinimumLocalStorageCapacity", minimumLocalStorageCapacity);
@@ -1011,10 +1269,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum memory size. Unit: GiB.
-         * <p>
+         * <p>The minimum memory size. Unit: GiB.</p>
+         * <blockquote>
+         * <p> If the memory size of an instance type is smaller than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If the memory size of an instance type is smaller than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder minimumMemorySize(Float minimumMemorySize) {
             this.putQueryParameter("MinimumMemorySize", minimumMemorySize);
@@ -1023,10 +1284,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum default number of queues per primary network interface controller (NIC).
-         * <p>
+         * <p>The minimum default number of queues per primary network interface controller (NIC).</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer queues per primary NIC than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer queues per primary NIC than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder minimumPrimaryEniQueueNumber(Integer minimumPrimaryEniQueueNumber) {
             this.putQueryParameter("MinimumPrimaryEniQueueNumber", minimumPrimaryEniQueueNumber);
@@ -1035,10 +1299,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of queue pair (QP) queues per elastic RDMA interface (ERI).
-         * <p>
+         * <p>The minimum number of queue pair (QP) queues per elastic RDMA interface (ERI).</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer QP queues per ERI than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer QP queues per ERI than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder minimumQueuePairNumber(Integer minimumQueuePairNumber) {
             this.putQueryParameter("MinimumQueuePairNumber", minimumQueuePairNumber);
@@ -1047,10 +1314,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum default number of queues per secondary NIC.
-         * <p>
+         * <p>The minimum default number of queues per secondary NIC.</p>
+         * <blockquote>
+         * <p> If an instance type supports fewer queues per secondary NIC than the specified value, information about the instance type is not queried.</p>
+         * </blockquote>
          * 
-         * > If an instance type supports fewer queues per secondary NIC than the specified value, information about the instance type is not queried.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder minimumSecondaryEniQueueNumber(Integer minimumSecondaryEniQueueNumber) {
             this.putQueryParameter("MinimumSecondaryEniQueueNumber", minimumSecondaryEniQueueNumber);
@@ -1059,7 +1329,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeInstanceTypes operation. Leave this parameter empty the first time you call this operation.
+         * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeInstanceTypes operation. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9cc11</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -1068,11 +1341,14 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:
-         * <p>
+         * <p>Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
+         * <ul>
+         * <li>required: Cloud disks can be attached by using the NVMe protocol.</li>
+         * <li>unsupported: Cloud disks cannot be attached by using the NVMe protocol.</li>
+         * </ul>
          * 
-         * *   required: Cloud disks can be attached by using the NVMe protocol.
-         * *   unsupported: Cloud disk cannot be attached by using the NVMe protocol.
+         * <strong>example:</strong>
+         * <p>required</p>
          */
         public Builder nvmeSupport(String nvmeSupport) {
             this.putQueryParameter("NvmeSupport", nvmeSupport);
@@ -1099,14 +1375,26 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The CPU model.
-         * <p>
+         * <p>The CPU model.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported. For example, if an instance type uses Intel Xeon (Ice Lake) Platinum 8369B processors and you set this parameter to Intel, information about the instance type is queried.</p>
+         * </blockquote>
          * 
-         * > Fuzzy match is supported. For example, if an instance type uses Intel Xeon (Ice Lake) Platinum 8369B processors and you set this parameter to Intel, information about the instance type is queried.
+         * <strong>example:</strong>
+         * <p>Intel Xeon(Ice Lake) Platinum 8369B</p>
          */
         public Builder physicalProcessorModel(String physicalProcessorModel) {
             this.putQueryParameter("PhysicalProcessorModel", physicalProcessorModel);
             this.physicalProcessorModel = physicalProcessorModel;
+            return this;
+        }
+
+        /**
+         * <p>The CPU models of instance types. Valid values of N: 1 to 10.</p>
+         */
+        public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
+            this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);
+            this.physicalProcessorModels = physicalProcessorModels;
             return this;
         }
 

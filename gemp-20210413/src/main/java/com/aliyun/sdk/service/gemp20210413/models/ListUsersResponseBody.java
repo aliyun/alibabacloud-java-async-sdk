@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListUsersResponseBody(Builder builder) {
@@ -132,52 +131,64 @@ public class ListUsersResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("accountType")
+        @com.aliyun.core.annotation.NameInMap("accountType")
         private Long accountType;
 
-        @NameInMap("appAccount")
+        @com.aliyun.core.annotation.NameInMap("appAccount")
         private String appAccount;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("isEditableUser")
+        @com.aliyun.core.annotation.NameInMap("gmtActive")
+        private String gmtActive;
+
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
+        private String gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("isActive")
+        private Long isActive;
+
+        @com.aliyun.core.annotation.NameInMap("isEditableUser")
         private Long isEditableUser;
 
-        @NameInMap("isOperation")
+        @com.aliyun.core.annotation.NameInMap("isOperation")
         private Integer isOperation;
 
-        @NameInMap("isRam")
+        @com.aliyun.core.annotation.NameInMap("isRam")
         private Integer isRam;
 
-        @NameInMap("isRelated")
+        @com.aliyun.core.annotation.NameInMap("isRelated")
         private String isRelated;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("ramId")
+        @com.aliyun.core.annotation.NameInMap("ramId")
         private Long ramId;
 
-        @NameInMap("roleIdList")
+        @com.aliyun.core.annotation.NameInMap("roleIdList")
         private java.util.List < Long > roleIdList;
 
-        @NameInMap("roleNameList")
+        @com.aliyun.core.annotation.NameInMap("roleNameList")
         private java.util.List < String > roleNameList;
 
-        @NameInMap("synergyChannel")
+        @com.aliyun.core.annotation.NameInMap("synergyChannel")
         private String synergyChannel;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Data(Builder builder) {
             this.accountType = builder.accountType;
             this.appAccount = builder.appAccount;
             this.email = builder.email;
+            this.gmtActive = builder.gmtActive;
+            this.gmtCreate = builder.gmtCreate;
+            this.isActive = builder.isActive;
             this.isEditableUser = builder.isEditableUser;
             this.isOperation = builder.isOperation;
             this.isRam = builder.isRam;
@@ -218,6 +229,27 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return gmtActive
+         */
+        public String getGmtActive() {
+            return this.gmtActive;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return isActive
+         */
+        public Long getIsActive() {
+            return this.isActive;
         }
 
         /**
@@ -301,6 +333,9 @@ public class ListUsersResponseBody extends TeaModel {
             private Long accountType; 
             private String appAccount; 
             private String email; 
+            private String gmtActive; 
+            private String gmtCreate; 
+            private Long isActive; 
             private Long isEditableUser; 
             private Integer isOperation; 
             private Integer isRam; 
@@ -334,6 +369,30 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * gmtActive.
+             */
+            public Builder gmtActive(String gmtActive) {
+                this.gmtActive = gmtActive;
+                return this;
+            }
+
+            /**
+             * gmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * isActive.
+             */
+            public Builder isActive(Long isActive) {
+                this.isActive = isActive;
                 return this;
             }
 

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSyntheticTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSyntheticTaskResponseBody</p>
  */
 public class DeleteSyntheticTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
     private DeleteSyntheticTaskResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteSyntheticTaskResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,14 @@ public class DeleteSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the specified tasks are deleted.</p>
+         * <ul>
+         * <li><code>true</code>: The tasks are deleted.</li>
+         * <li><code>false</code>: The tasks fail to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(String result) {
             this.result = result;

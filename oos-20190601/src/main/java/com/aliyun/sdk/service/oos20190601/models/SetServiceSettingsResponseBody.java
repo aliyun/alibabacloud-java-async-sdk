@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetServiceSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>SetServiceSettingsResponseBody</p>
  */
 public class SetServiceSettingsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceSettings")
-    private java.util.List < ServiceSettings> serviceSettings;
+    @com.aliyun.core.annotation.NameInMap("ServiceSettings")
+    private java.util.List<ServiceSettings> serviceSettings;
 
     private SetServiceSettingsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class SetServiceSettingsResponseBody extends TeaModel {
     /**
      * @return serviceSettings
      */
-    public java.util.List < ServiceSettings> getServiceSettings() {
+    public java.util.List<ServiceSettings> getServiceSettings() {
         return this.serviceSettings;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ServiceSettings> serviceSettings; 
+        private java.util.List<ServiceSettings> serviceSettings; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBEC8072-BEC2-478E-8EAE-E723BA79CF19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class SetServiceSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of service settings.
+         * <p>The information of service settings.</p>
          */
-        public Builder serviceSettings(java.util.List < ServiceSettings> serviceSettings) {
+        public Builder serviceSettings(java.util.List<ServiceSettings> serviceSettings) {
             this.serviceSettings = serviceSettings;
             return this;
         }
@@ -71,23 +79,29 @@ public class SetServiceSettingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetServiceSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetServiceSettingsResponseBody</p>
+     */
     public static class ServiceSettings extends TeaModel {
-        @NameInMap("DeliveryOssBucketName")
+        @com.aliyun.core.annotation.NameInMap("DeliveryOssBucketName")
         private String deliveryOssBucketName;
 
-        @NameInMap("DeliveryOssEnabled")
+        @com.aliyun.core.annotation.NameInMap("DeliveryOssEnabled")
         private Boolean deliveryOssEnabled;
 
-        @NameInMap("DeliveryOssKeyPrefix")
+        @com.aliyun.core.annotation.NameInMap("DeliveryOssKeyPrefix")
         private String deliveryOssKeyPrefix;
 
-        @NameInMap("DeliverySlsEnabled")
+        @com.aliyun.core.annotation.NameInMap("DeliverySlsEnabled")
         private Boolean deliverySlsEnabled;
 
-        @NameInMap("DeliverySlsProjectName")
+        @com.aliyun.core.annotation.NameInMap("DeliverySlsProjectName")
         private String deliverySlsProjectName;
 
-        @NameInMap("RdcEnterpriseId")
+        @com.aliyun.core.annotation.NameInMap("RdcEnterpriseId")
         private String rdcEnterpriseId;
 
         private ServiceSettings(Builder builder) {
@@ -158,7 +172,10 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             private String rdcEnterpriseId; 
 
             /**
-             * The name of OSS bucket to deliver.
+             * <p>The name of OSS bucket to deliver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OssBucketName</p>
              */
             public Builder deliveryOssBucketName(String deliveryOssBucketName) {
                 this.deliveryOssBucketName = deliveryOssBucketName;
@@ -166,7 +183,10 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable OSS delivery.
+             * <p>Whether to enable OSS delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deliveryOssEnabled(Boolean deliveryOssEnabled) {
                 this.deliveryOssEnabled = deliveryOssEnabled;
@@ -174,7 +194,10 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The key prefix of OSS to deliver.
+             * <p>The key prefix of OSS to deliver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oos/execution</p>
              */
             public Builder deliveryOssKeyPrefix(String deliveryOssKeyPrefix) {
                 this.deliveryOssKeyPrefix = deliveryOssKeyPrefix;
@@ -182,7 +205,10 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable SLS delivery.
+             * <p>Whether to enable SLS delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deliverySlsEnabled(Boolean deliverySlsEnabled) {
                 this.deliverySlsEnabled = deliverySlsEnabled;
@@ -190,7 +216,10 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of SLS project to deliver.
+             * <p>The name of SLS project to deliver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SlsProjectName</p>
              */
             public Builder deliverySlsProjectName(String deliverySlsProjectName) {
                 this.deliverySlsProjectName = deliverySlsProjectName;
@@ -198,7 +227,10 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The id of RDC Enterprise.
+             * <p>The id of RDC Enterprise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RdcEnterpriseId</p>
              */
             public Builder rdcEnterpriseId(String rdcEnterpriseId) {
                 this.rdcEnterpriseId = rdcEnterpriseId;

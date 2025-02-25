@@ -17,6 +17,10 @@ public class UnbindEslDeviceRequest extends Request {
     private String column;
 
     @Body
+    @NameInMap("ContainerName")
+    private String containerName;
+
+    @Body
     @NameInMap("EslBarCode")
     @Validation(required = true)
     private String eslBarCode;
@@ -45,6 +49,7 @@ public class UnbindEslDeviceRequest extends Request {
     private UnbindEslDeviceRequest(Builder builder) {
         super(builder);
         this.column = builder.column;
+        this.containerName = builder.containerName;
         this.eslBarCode = builder.eslBarCode;
         this.extraParams = builder.extraParams;
         this.itemBarCode = builder.itemBarCode;
@@ -71,6 +76,13 @@ public class UnbindEslDeviceRequest extends Request {
      */
     public String getColumn() {
         return this.column;
+    }
+
+    /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
     }
 
     /**
@@ -117,6 +129,7 @@ public class UnbindEslDeviceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UnbindEslDeviceRequest, Builder> {
         private String column; 
+        private String containerName; 
         private String eslBarCode; 
         private String extraParams; 
         private String itemBarCode; 
@@ -128,15 +141,16 @@ public class UnbindEslDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindEslDeviceRequest response) {
-            super(response);
-            this.column = response.column;
-            this.eslBarCode = response.eslBarCode;
-            this.extraParams = response.extraParams;
-            this.itemBarCode = response.itemBarCode;
-            this.layer = response.layer;
-            this.shelf = response.shelf;
-            this.storeId = response.storeId;
+        private Builder(UnbindEslDeviceRequest request) {
+            super(request);
+            this.column = request.column;
+            this.containerName = request.containerName;
+            this.eslBarCode = request.eslBarCode;
+            this.extraParams = request.extraParams;
+            this.itemBarCode = request.itemBarCode;
+            this.layer = request.layer;
+            this.shelf = request.shelf;
+            this.storeId = request.storeId;
         } 
 
         /**
@@ -145,6 +159,15 @@ public class UnbindEslDeviceRequest extends Request {
         public Builder column(String column) {
             this.putBodyParameter("Column", column);
             this.column = column;
+            return this;
+        }
+
+        /**
+         * ContainerName.
+         */
+        public Builder containerName(String containerName) {
+            this.putBodyParameter("ContainerName", containerName);
+            this.containerName = containerName;
             return this;
         }
 

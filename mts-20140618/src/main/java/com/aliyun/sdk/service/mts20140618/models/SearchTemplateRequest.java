@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTemplateRequest} extends {@link RequestModel}
  *
  * <p>SearchTemplateRequest</p>
  */
 public class SearchTemplateRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamePrefix")
+    private String namePrefix;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private SearchTemplateRequest(Builder builder) {
         super(builder);
+        this.namePrefix = builder.namePrefix;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -63,6 +68,13 @@ public class SearchTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return namePrefix
+     */
+    public String getNamePrefix() {
+        return this.namePrefix;
     }
 
     /**
@@ -115,6 +127,7 @@ public class SearchTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchTemplateRequest, Builder> {
+        private String namePrefix; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -129,6 +142,7 @@ public class SearchTemplateRequest extends Request {
 
         private Builder(SearchTemplateRequest request) {
             super(request);
+            this.namePrefix = request.namePrefix;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -137,6 +151,18 @@ public class SearchTemplateRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.state = request.state;
         } 
+
+        /**
+         * <p>The name prefix based on which you want to search for templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000001</p>
+         */
+        public Builder namePrefix(String namePrefix) {
+            this.putQueryParameter("NamePrefix", namePrefix);
+            this.namePrefix = namePrefix;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -157,7 +183,10 @@ public class SearchTemplateRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +195,14 @@ public class SearchTemplateRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The size of each page set during the result paging query.</p>
+         * <ul>
+         * <li>Upper limit: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +229,16 @@ public class SearchTemplateRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The status of the custom transcoding templates that you want to query.</p>
+         * <ul>
+         * <li><strong>All</strong>: All custom transcoding templates are queried.</li>
+         * <li><strong>Normal</strong>: Normal custom transcoding templates are queried.</li>
+         * <li><strong>Deleted</strong>: Deleted custom transcoding templates are queried.</li>
+         * <li>Default value: <strong>All</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

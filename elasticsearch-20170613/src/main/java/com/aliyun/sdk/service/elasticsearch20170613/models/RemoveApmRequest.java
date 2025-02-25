@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveApmRequest} extends {@link RequestModel}
  *
  * <p>RemoveApmRequest</p>
  */
 public class RemoveApmRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
     private RemoveApmRequest(Builder builder) {

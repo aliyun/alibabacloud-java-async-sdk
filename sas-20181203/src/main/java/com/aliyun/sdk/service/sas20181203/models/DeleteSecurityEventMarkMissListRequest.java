@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecurityEventMarkMissListRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecurityEventMarkMissListRequest</p>
  */
 public class DeleteSecurityEventMarkMissListRequest extends Request {
-    @Query
-    @NameInMap("Ids")
-    private java.util.List < Long > ids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    private java.util.List<Long> ids;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeleteSecurityEventMarkMissListRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
@@ -54,7 +59,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteSecurityEventMarkMissListRequest, Builder> {
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
         private Long resourceOwnerId; 
 
         private Builder() {
@@ -68,9 +73,9 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * The IDs of custom defense rule.
+         * <p>The IDs of custom defense rule.</p>
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             this.putQueryParameter("Ids", ids);
             this.ids = ids;
             return this;

@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByAppRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisByAppRequest</p>
  */
 public class DescribeApisByAppRequest extends Request {
-    @Query
-    @NameInMap("ApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
     private String apiName;
 
-    @Query
-    @NameInMap("ApiUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiUid")
     private String apiUid;
 
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Method")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Method")
     private String method;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeApisByAppRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class DescribeApisByAppRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * <p>The name of the API. The name is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>getPersonInfo</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -176,7 +184,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * ApiUid.
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b19240592b1b4e74961fb8438ed7550c</p>
          */
         public Builder apiUid(String apiUid) {
             this.putQueryParameter("ApiUid", apiUid);
@@ -185,7 +196,11 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333486644</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -194,7 +209,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +221,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * Method.
+         * <p>The request HTTP method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -212,7 +233,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +245,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +257,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tt</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

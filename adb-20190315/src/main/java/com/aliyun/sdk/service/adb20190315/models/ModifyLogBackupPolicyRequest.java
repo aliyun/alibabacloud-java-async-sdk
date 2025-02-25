@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLogBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyLogBackupPolicyRequest</p>
  */
 public class ModifyLogBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("EnableBackupLog")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String enableBackupLog;
 
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private String logBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyLogBackupPolicyRequest(Builder builder) {
@@ -154,7 +154,11 @@ public class ModifyLogBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -163,11 +167,15 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable log backup. Valid values:
-         * <p>
+         * <p>Specifies whether to enable log backup. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Enable**
-         * *   **Disable**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -176,10 +184,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * The number of days for which to retain backup files. Valid values: 7 to 730.
-         * <p>
+         * <p>The number of days for which to retain backup files. Valid values: 7 to 730.</p>
+         * <blockquote>
+         * <p>The default value is 7.</p>
+         * </blockquote>
          * 
-         * > The default value is 7.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -206,7 +217,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4f7oger****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

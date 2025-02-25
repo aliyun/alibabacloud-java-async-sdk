@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLiveRecordTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLiveRecordTemplateResponseBody</p>
  */
 public class CreateLiveRecordTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private CreateLiveRecordTemplateResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateLiveRecordTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

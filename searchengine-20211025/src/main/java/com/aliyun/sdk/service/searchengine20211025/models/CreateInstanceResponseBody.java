@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceResponseBody</p>
  */
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private CreateInstanceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D39EE0F1-D7EF-5F46-B781-6BF4185308B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * <p>The results returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,8 +79,14 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
         private Result(Builder builder) {
@@ -98,7 +112,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-2r42ppr7901</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

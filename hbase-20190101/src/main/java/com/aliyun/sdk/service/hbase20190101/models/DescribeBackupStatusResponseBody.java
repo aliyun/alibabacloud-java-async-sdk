@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupStatusResponseBody</p>
  */
 public class DescribeBackupStatusResponseBody extends TeaModel {
-    @NameInMap("BackupStatus")
+    @com.aliyun.core.annotation.NameInMap("BackupStatus")
     private String backupStatus;
 
-    @NameInMap("BdsClusterId")
+    @com.aliyun.core.annotation.NameInMap("BdsClusterId")
     private String bdsClusterId;
 
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupStatusResponseBody(Builder builder) {

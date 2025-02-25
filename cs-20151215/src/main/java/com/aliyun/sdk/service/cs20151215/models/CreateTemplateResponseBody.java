@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTemplateResponseBody</p>
  */
 public class CreateTemplateResponseBody extends TeaModel {
-    @NameInMap("template_id")
+    @com.aliyun.core.annotation.NameInMap("template_id")
     private String templateId;
 
     private CreateTemplateResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class CreateTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * The ID of the orchestration template.
+         * <p>The ID of the orchestration template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ba1fe77b-b01e-4640-b77e-8f1b80e3e3cf</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

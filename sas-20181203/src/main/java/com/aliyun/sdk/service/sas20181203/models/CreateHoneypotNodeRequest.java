@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHoneypotNodeRequest} extends {@link RequestModel}
  *
  * <p>CreateHoneypotNodeRequest</p>
  */
 public class CreateHoneypotNodeRequest extends Request {
-    @Query
-    @NameInMap("AllowHoneypotAccessInternet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowHoneypotAccessInternet")
     private Boolean allowHoneypotAccessInternet;
 
-    @Query
-    @NameInMap("AvailableProbeNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailableProbeNum")
     private Integer availableProbeNum;
 
-    @Query
-    @NameInMap("NodeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeName;
 
-    @Query
-    @NameInMap("SecurityGroupProbeIpList")
-    private java.util.List < String > securityGroupProbeIpList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
+    private java.util.List<String> securityGroupProbeIpList;
 
     private CreateHoneypotNodeRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class CreateHoneypotNodeRequest extends Request {
     /**
      * @return securityGroupProbeIpList
      */
-    public java.util.List < String > getSecurityGroupProbeIpList() {
+    public java.util.List<String> getSecurityGroupProbeIpList() {
         return this.securityGroupProbeIpList;
     }
 
@@ -82,7 +87,7 @@ public class CreateHoneypotNodeRequest extends Request {
         private Boolean allowHoneypotAccessInternet; 
         private Integer availableProbeNum; 
         private String nodeName; 
-        private java.util.List < String > securityGroupProbeIpList; 
+        private java.util.List<String> securityGroupProbeIpList; 
 
         private Builder() {
             super();
@@ -97,11 +102,14 @@ public class CreateHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow honeypots to access the Internet. Valid values:
-         * <p>
+         * <p>Specifies whether to allow honeypots to access the Internet. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: allows honeypots to access the Internet.</li>
+         * <li><strong>false</strong>: does not allow honeypots to access the Internet.</li>
+         * </ul>
          * 
-         * *   **true**: allows honeypots to access the Internet.
-         * *   **false**: does not allow honeypots to access the Internet.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
             this.putQueryParameter("AllowHoneypotAccessInternet", allowHoneypotAccessInternet);
@@ -110,7 +118,10 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The number of available probes.
+         * <p>The number of available probes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder availableProbeNum(Integer availableProbeNum) {
             this.putQueryParameter("AvailableProbeNum", availableProbeNum);
@@ -119,7 +130,11 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The name of the management node.
+         * <p>The name of the management node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manageNode</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -128,9 +143,9 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The CIDR blocks that are allowed to access the management node.
+         * <p>The CIDR blocks that are allowed to access the management node.</p>
          */
-        public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
+        public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);
             this.securityGroupProbeIpList = securityGroupProbeIpList;
             return this;

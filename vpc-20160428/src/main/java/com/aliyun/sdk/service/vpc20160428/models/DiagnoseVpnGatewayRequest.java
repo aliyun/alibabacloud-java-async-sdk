@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseVpnGatewayRequest} extends {@link RequestModel}
  *
  * <p>DiagnoseVpnGatewayRequest</p>
  */
 public class DiagnoseVpnGatewayRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("IPsecExtendInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPsecExtendInfo")
     private String iPsecExtendInfo;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
     private DiagnoseVpnGatewayRequest(Builder builder) {
@@ -128,12 +133,14 @@ public class DiagnoseVpnGatewayRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -142,11 +149,14 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * The configuration when you check the connectivity of the IPsec-VPN connection. Valid values:
-         * <p>
+         * <p>Check the connectivity of the destination address. Valid values:</p>
+         * <ul>
+         * <li><strong>PrivateSourceIp</strong>: the source IP address. The source IP address must be on the VPC side.</li>
+         * <li><strong>PrivateDestinationIp</strong>: the destination IP address. The destination IP address must be on the data center side.</li>
+         * </ul>
          * 
-         * *   **PrivateSourceIp**: the source IP address used when you check the connectivity of the IPsec-VPN connection. The source IP address must be on the VPC side.
-         * *   **PrivateDestinationIp**: the destination IP address used when you check the connectivity of the IPsec-VPN connection. The destination IP address must be on the data center side.
+         * <strong>example:</strong>
+         * <p>{&quot;PrivateSourceIp&quot;:&quot;192.168.1.1&quot;,&quot;PrivateDestinationIp&quot;:&quot;192.168.0.1&quot;}</p>
          */
         public Builder iPsecExtendInfo(String iPsecExtendInfo) {
             this.putQueryParameter("IPsecExtendInfo", iPsecExtendInfo);
@@ -155,10 +165,12 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * The region ID of the VPN gateway.
-         * <p>
+         * <p>The region ID of the VPN gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -167,7 +179,11 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the resource to be diagnosed.
+         * <p>The ID of the resource to be diagnosed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-uf66xniofskqtuoz1****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -176,10 +192,12 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Set the value to <strong>Ipsec</strong>, which specifies an IPsec-VPN connection.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **Ipsec**, which specifies an IPsec-VPN connection.
+         * <strong>example:</strong>
+         * <p>IPsec</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -188,7 +206,11 @@ public class DiagnoseVpnGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-m5efhj0k1p47ctuhl****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureConsistencyCheckJobsResponseBody</p>
  */
 public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
-    @NameInMap("FeatureConsistencyCheckJobs")
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobs")
     private java.util.List < FeatureConsistencyCheckJobs> featureConsistencyCheckJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListFeatureConsistencyCheckJobsResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
     } 
 
     public static class FeatureConsistencyCheckJobs extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("FeatureConsistencyCheckJobConfigId")
+        @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigId")
         private String featureConsistencyCheckJobConfigId;
 
-        @NameInMap("FeatureConsistencyCheckJobConfigName")
+        @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigName")
         private String featureConsistencyCheckJobConfigName;
 
-        @NameInMap("FeatureConsistencyCheckJobId")
+        @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobId")
         private String featureConsistencyCheckJobId;
 
-        @NameInMap("GmtEndTime")
+        @com.aliyun.core.annotation.NameInMap("GmtEndTime")
         private String gmtEndTime;
 
-        @NameInMap("GmtStartTime")
+        @com.aliyun.core.annotation.NameInMap("GmtStartTime")
         private String gmtStartTime;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < String > logs;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private FeatureConsistencyCheckJobs(Builder builder) {

@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsRequest</p>
  */
 public class ListApplicationsRequest extends Request {
-    @Query
-    @NameInMap("AppVersions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersions")
     private String appVersions;
 
-    @Query
-    @NameInMap("ClusterNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNames")
     private String clusterNames;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("MaxDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDate")
     private String maxDate;
 
-    @Query
-    @NameInMap("MinDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDate")
     private String minDate;
 
-    @Query
-    @NameInMap("OutAppInfoParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutAppInfoParams")
     private String outAppInfoParams;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListApplicationsRequest(Builder builder) {
@@ -152,7 +157,10 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * AppVersions.
+         * <p>The version number of the application. Separate multiple version numbers with commas (,). If you want to query data of all versions of applications, specify All for this parameter. By default, only data of applications in the stable versions are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1,v2</p>
          */
         public Builder appVersions(String appVersions) {
             this.putQueryParameter("AppVersions", appVersions);
@@ -161,7 +169,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ClusterNames.
+         * <p>The name of the application cluster. Separate multiple names with commas (,). If you want to query applications of all clusters in your account, specify All for this parameter. Default value: All.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc,pre</p>
          */
         public Builder clusterNames(String clusterNames) {
             this.putQueryParameter("ClusterNames", clusterNames);
@@ -170,7 +181,18 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</p>
+         * <ul>
+         * <li>National: Chinese mainland</li>
+         * <li>Big: area</li>
+         * <li>Middle: province</li>
+         * <li>Small: city</li>
+         * <li>RegionId: edge node</li>
+         * </ul>
+         * <p>Default value: National.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>National</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -179,7 +201,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * MaxDate.
+         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-20</p>
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -188,7 +213,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-15</p>
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -197,7 +225,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * OutAppInfoParams.
+         * <p>Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;appInfo&quot;:true,&quot;detailStat&quot;: true, &quot;appVersionStat&quot;: true, &quot;districtStat&quot;:true ,&quot;instanceStat&quot;: true, &quot;podCountStat&quot;: true}</p>
          */
         public Builder outAppInfoParams(String outAppInfoParams) {
             this.putQueryParameter("OutAppInfoParams", outAppInfoParams);
@@ -206,7 +237,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. This parameter is optional if you want to return all information about the applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +249,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. This parameter is optional if you want to return all information about the applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVectorConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ModifyVectorConfigurationRequest</p>
  */
 public class ModifyVectorConfigurationRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("VectorConfigurationStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VectorConfigurationStatus")
     private String vectorConfigurationStatus;
 
     private ModifyVectorConfigurationRequest(Builder builder) {
@@ -82,10 +87,13 @@ public class ModifyVectorConfigurationRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -103,14 +111,20 @@ public class ModifyVectorConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable vector engine optimization. Valid values:
-         * <p>
+         * <p>Specifies whether to enable vector engine optimization. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>We recommend that you <strong>do not enable</strong> vector engine optimization in mainstream analysis and real-time data warehousing scenarios.</li>
+         * <li>We recommend that you <strong>enable</strong> vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **enabled**
-         * *   **disabled**
-         * 
-         * > *   We recommend that you **do not enable** vector engine optimization in mainstream analysis and real-time data warehousing scenarios.
-         * > *   We recommend that you **enable** vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder vectorConfigurationStatus(String vectorConfigurationStatus) {
             this.putQueryParameter("VectorConfigurationStatus", vectorConfigurationStatus);

@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlarmsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlarmsRequest</p>
  */
 public class DescribeAlarmsRequest extends Request {
-    @Query
-    @NameInMap("AlarmTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmTaskId")
     private String alarmTaskId;
 
-    @Query
-    @NameInMap("IsEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsEnable")
     private Boolean isEnable;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private DescribeAlarmsRequest(Builder builder) {
@@ -196,7 +201,10 @@ public class DescribeAlarmsRequest extends Request {
         } 
 
         /**
-         * AlarmTaskId.
+         * <p>The ID of the event-triggered task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.putQueryParameter("AlarmTaskId", alarmTaskId);
@@ -205,7 +213,14 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * IsEnable.
+         * <p>Specifies whether to enable the event-triggered task. Valid values:</p>
+         * <ul>
+         * <li>true: enables the event-triggered task.</li>
+         * <li>false: disables the event-triggered task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEnable(Boolean isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -214,7 +229,10 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuUtilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -223,7 +241,15 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>The type of the metric. Valid values:</p>
+         * <ul>
+         * <li>system: system metrics of CloudMonitor</li>
+         * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+         * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -241,7 +267,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +280,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +293,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the event-triggered task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,7 +315,10 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>The ID of the scaling group with which the event-triggered task is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -286,7 +327,15 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * State.
+         * <p>The status of the event-triggered task. Valid values:</p>
+         * <ul>
+         * <li>ALARM: The alert condition is met and an alert is triggered.</li>
+         * <li>OK: The alert condition is not met.</li>
+         * <li>INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

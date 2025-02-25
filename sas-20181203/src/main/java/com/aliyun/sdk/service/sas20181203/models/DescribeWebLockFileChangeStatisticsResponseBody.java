@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockFileChangeStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockFileChangeStatisticsResponseBody</p>
  */
 public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWebLockFileChangeStatisticsResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -80,13 +85,16 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the files that are changed.
+         * <p>An array consisting of the files that are changed.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>709A8C3D-A543-5B79-AB75-361B206F71D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of files that are attempted to change.
+         * <p>The total number of files that are attempted to change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebLockFileChangeStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebLockFileChangeStatisticsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("File")
+        @com.aliyun.core.annotation.NameInMap("File")
         private String file;
 
         private List(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
             private String file; 
 
             /**
-             * The number of attempts.
+             * <p>The number of attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +204,10 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The file path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
              */
             public Builder file(String file) {
                 this.file = file;

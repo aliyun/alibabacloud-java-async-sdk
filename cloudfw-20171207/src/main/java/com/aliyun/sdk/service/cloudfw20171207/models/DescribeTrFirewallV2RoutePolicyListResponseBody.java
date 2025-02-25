@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallV2RoutePolicyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrFirewallV2RoutePolicyListResponseBody</p>
  */
 public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("TrFirewallRoutePolicies")
-    private java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies;
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicies")
+    private java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies;
 
     private DescribeTrFirewallV2RoutePolicyListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,17 +57,20 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     /**
      * @return trFirewallRoutePolicies
      */
-    public java.util.List < TrFirewallRoutePolicies> getTrFirewallRoutePolicies() {
+    public java.util.List<TrFirewallRoutePolicies> getTrFirewallRoutePolicies() {
         return this.trFirewallRoutePolicies;
     }
 
     public static final class Builder {
         private String requestId; 
         private String totalCount; 
-        private java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies; 
+        private java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95EB5F3A-67FE-5780-92BD-5ECBA772AB7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -78,9 +89,9 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * The routing policies.
+         * <p>The routing policies.</p>
          */
-        public Builder trFirewallRoutePolicies(java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies) {
+        public Builder trFirewallRoutePolicies(java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies) {
             this.trFirewallRoutePolicies = trFirewallRoutePolicies;
             return this;
         }
@@ -91,11 +102,17 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrFirewallV2RoutePolicyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallV2RoutePolicyListResponseBody</p>
+     */
     public static class DestCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private DestCandidateList(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             private String candidateType; 
 
             /**
-             * The ID of the secondary traffic redirection instance.
+             * <p>The ID of the secondary traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9epancaw8t4sha****</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -138,7 +158,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the secondary traffic redirection instance.
+             * <p>The type of the secondary traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -152,11 +175,17 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrFirewallV2RoutePolicyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallV2RoutePolicyListResponseBody</p>
+     */
     public static class SrcCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private SrcCandidateList(Builder builder) {
@@ -191,7 +220,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             private String candidateType; 
 
             /**
-             * The ID of the primary traffic redirection instance.
+             * <p>The ID of the primary traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9epancaw8t4sha****</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -199,7 +231,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the primary traffic redirection instance.
+             * <p>The type of the primary traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -213,26 +248,32 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrFirewallV2RoutePolicyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallV2RoutePolicyListResponseBody</p>
+     */
     public static class TrFirewallRoutePolicies extends TeaModel {
-        @NameInMap("DestCandidateList")
-        private java.util.List < DestCandidateList> destCandidateList;
+        @com.aliyun.core.annotation.NameInMap("DestCandidateList")
+        private java.util.List<DestCandidateList> destCandidateList;
 
-        @NameInMap("PolicyDescription")
+        @com.aliyun.core.annotation.NameInMap("PolicyDescription")
         private String policyDescription;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("SrcCandidateList")
-        private java.util.List < SrcCandidateList> srcCandidateList;
+        @com.aliyun.core.annotation.NameInMap("SrcCandidateList")
+        private java.util.List<SrcCandidateList> srcCandidateList;
 
-        @NameInMap("TrFirewallRoutePolicyId")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
         private String trFirewallRoutePolicyId;
 
         private TrFirewallRoutePolicies(Builder builder) {
@@ -256,7 +297,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         /**
          * @return destCandidateList
          */
-        public java.util.List < DestCandidateList> getDestCandidateList() {
+        public java.util.List<DestCandidateList> getDestCandidateList() {
             return this.destCandidateList;
         }
 
@@ -291,7 +332,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         /**
          * @return srcCandidateList
          */
-        public java.util.List < SrcCandidateList> getSrcCandidateList() {
+        public java.util.List<SrcCandidateList> getSrcCandidateList() {
             return this.srcCandidateList;
         }
 
@@ -303,24 +344,27 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DestCandidateList> destCandidateList; 
+            private java.util.List<DestCandidateList> destCandidateList; 
             private String policyDescription; 
             private String policyName; 
             private String policyStatus; 
             private String policyType; 
-            private java.util.List < SrcCandidateList> srcCandidateList; 
+            private java.util.List<SrcCandidateList> srcCandidateList; 
             private String trFirewallRoutePolicyId; 
 
             /**
-             * The secondary traffic redirection instances.
+             * <p>The secondary traffic redirection instances.</p>
              */
-            public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
+            public Builder destCandidateList(java.util.List<DestCandidateList> destCandidateList) {
                 this.destCandidateList = destCandidateList;
                 return this;
             }
 
             /**
-             * The description of the routing policy.
+             * <p>The description of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -328,7 +372,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the routing policy.
+             * <p>The name of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST_VPC_FW</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -336,15 +383,18 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the routing policy. Valid values:
-             * <p>
+             * <p>The status of the routing policy. Valid values:</p>
+             * <ul>
+             * <li>creating: The policy is being created.</li>
+             * <li>deleting: The policy is being deleted.</li>
+             * <li>opening: The policy is being enabled.</li>
+             * <li>opened: The policy is enabled.</li>
+             * <li>closing: The policy is being disabled.</li>
+             * <li>closed: The policy is disabled.</li>
+             * </ul>
              * 
-             * *   creating: The policy is being created.
-             * *   deleting: The policy is being deleted.
-             * *   opening: The policy is being enabled.
-             * *   opened: The policy is enabled.
-             * *   closing: The policy is being disabled.
-             * *   closed: The policy is disabled.
+             * <strong>example:</strong>
+             * <p>opened</p>
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
@@ -352,12 +402,15 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the traffic redirection scenario of the VPC firewall. Valid values:
-             * <p>
+             * <p>The type of the traffic redirection scenario of the VPC firewall. Valid values:</p>
+             * <ul>
+             * <li><strong>fullmesh</strong>: interconnected instances</li>
+             * <li><strong>one_to_one</strong>: instance to instance</li>
+             * <li><strong>end_to_end</strong>: instance to instances</li>
+             * </ul>
              * 
-             * *   **fullmesh**: interconnected instances
-             * *   **one_to_one**: instance to instance
-             * *   **end_to_end**: instance to instances
+             * <strong>example:</strong>
+             * <p>fullmesh</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -365,15 +418,18 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The primary traffic redirection instances.
+             * <p>The primary traffic redirection instances.</p>
              */
-            public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
+            public Builder srcCandidateList(java.util.List<SrcCandidateList> srcCandidateList) {
                 this.srcCandidateList = srcCandidateList;
                 return this;
             }
 
             /**
-             * The ID of the routing policy.
+             * <p>The ID of the routing policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-7b66257c14e141fb****</p>
              */
             public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
                 this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;

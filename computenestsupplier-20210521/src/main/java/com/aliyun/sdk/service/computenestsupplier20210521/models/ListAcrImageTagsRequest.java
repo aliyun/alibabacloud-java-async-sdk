@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAcrImageTagsRequest} extends {@link RequestModel}
  *
  * <p>ListAcrImageTagsRequest</p>
  */
 public class ListAcrImageTagsRequest extends Request {
-    @Query
-    @NameInMap("ArtifactType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactType")
     private String artifactType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
     private ListAcrImageTagsRequest(Builder builder) {
@@ -96,7 +101,14 @@ public class ListAcrImageTagsRequest extends Request {
         } 
 
         /**
-         * ArtifactType.
+         * <p>The type of the deployment package. Default value: AcrImage. Valid values:</p>
+         * <ul>
+         * <li>HelmChart: Helm chart image.</li>
+         * <li>AcrImage: container image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AcrImage</p>
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -105,7 +117,10 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -114,7 +129,10 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAW8kZY+u1sYOaYf5JmgmDQQ=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -123,7 +141,10 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-3gqhkza0wbxxxxxx</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

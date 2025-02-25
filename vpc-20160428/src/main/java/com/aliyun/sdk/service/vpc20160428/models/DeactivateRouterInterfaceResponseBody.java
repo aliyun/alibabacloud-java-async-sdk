@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeactivateRouterInterfaceResponseBody} extends {@link TeaModel}
  *
  * <p>DeactivateRouterInterfaceResponseBody</p>
  */
 public class DeactivateRouterInterfaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeactivateRouterInterfaceResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeactivateRouterInterfaceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE7EB53A-99AB-4DA8-AEDE-75FA90D046A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

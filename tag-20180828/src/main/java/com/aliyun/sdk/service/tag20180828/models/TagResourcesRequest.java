@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceARN")
-    @Validation(required = true)
-    private java.util.List < String > resourceARN;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceARN")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceARN;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("Tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tags;
 
     private TagResourcesRequest(Builder builder) {
@@ -86,7 +91,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceARN
      */
-    public java.util.List < String > getResourceARN() {
+    public java.util.List<String> getResourceARN() {
         return this.resourceARN;
     }
 
@@ -108,7 +113,7 @@ public class TagResourcesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > resourceARN; 
+        private java.util.List<String> resourceARN; 
         private String resourceOwnerAccount; 
         private String tags; 
 
@@ -145,7 +150,15 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resources.
+         * <p>The region ID.</p>
+         * <ul>
+         * <li>If the resources belong to a service that is centrally deployed, set the value to <code>cn-hangzhou</code> or to the region ID of the resources by referring to <a href="https://help.aliyun.com/document_detail/2579691.html">Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services</a>.</li>
+         * <li>If the resources belong to a service that is not centrally deployed, set the value to the region ID of the resources.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,9 +167,13 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of a resource.
+         * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arn:acs:vpc:cn-hangzhou:123456789****:vpc/vpc-bp19dd90tkt6tz7wu****</p>
          */
-        public Builder resourceARN(java.util.List < String > resourceARN) {
+        public Builder resourceARN(java.util.List<String> resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
             this.resourceARN = resourceARN;
             return this;
@@ -172,17 +189,19 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The key-value pairs of tags. You can specify 1 to 10 key-value pairs.
-         * <p>
+         * <p>The key-value pairs of tags. You can specify 1 to 10 key-value pairs.</p>
+         * <p>If you specify multiple tags, the system adds all the tags to the specified resources.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>A tag key must be 1 to 128 characters in length.</li>
+         * <li>A tag value must be 1 to 128 characters in length.</li>
+         * <li>Tag keys and tag values are case-sensitive.</li>
+         * <li>Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * If you specify multiple tags, the system adds all the tags to the specified resources.
-         * 
-         * Limits:
-         * 
-         * *   A tag key must be 1 to 128 characters in length.
-         * *   A tag value must be 1 to 128 characters in length.
-         * *   Tag keys and tag values are case-sensitive.
-         * *   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

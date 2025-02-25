@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDDosAllEventListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDDosAllEventListRequest</p>
  */
 public class DescribeDDosAllEventListRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeDDosAllEventListRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class DescribeDDosAllEventListRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The DDoS attack events occur before **EndTime** are queried. This value is a UNIX timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The DDoS attack events occur before <strong>EndTime</strong> are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640966399</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,17 +132,18 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * The type of the DDoS attack events you want to query. Valid values:
-         * <p>
+         * <p>The type of the DDoS attack events you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>web-cc</strong>: resource exhaustion attacks</li>
+         * <li><strong>cc</strong>: connection flood attacks</li>
+         * <li><strong>defense</strong>: DDoS attacks that trigger traffic scrubbing</li>
+         * <li><strong>blackhole</strong>: DDoS attacks that trigger blackhole filtering</li>
+         * </ul>
+         * <p>If you want to query multiple types of DDoS attack events, separate them with commas (,).</p>
+         * <p>If you do not configure this parameter, DDoS attack events of all types are queried.</p>
          * 
-         * *   **web-cc**: resource exhaustion attacks
-         * *   **cc**: connection flood attacks
-         * *   **defense**: DDoS attacks that trigger traffic scrubbing
-         * *   **blackhole**: DDoS attacks that trigger blackhole filtering
-         * 
-         * If you want to query multiple types of DDoS attack events, separate them with commas (,).
-         * 
-         * If you do not configure this parameter, DDoS attack events of all types are queried.
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -142,7 +152,11 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +165,11 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +178,11 @@ public class DescribeDDosAllEventListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The DDoS attack events occur after **StartTime** are queried. This value is a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The DDoS attack events occur after <strong>StartTime</strong> are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1609430400</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

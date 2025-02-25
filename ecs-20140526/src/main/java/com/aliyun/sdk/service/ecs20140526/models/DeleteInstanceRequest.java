@@ -1,53 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceRequest</p>
  */
 public class DeleteInstanceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TerminateSubscription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateSubscription")
     private Boolean terminateSubscription;
 
     private DeleteInstanceRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.dryRun = builder.dryRun;
         this.force = builder.force;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -75,6 +85,13 @@ public class DeleteInstanceRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -128,6 +145,7 @@ public class DeleteInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteInstanceRequest, Builder> {
         private String sourceRegionId; 
+        private Boolean dryRun; 
         private Boolean force; 
         private String instanceId; 
         private String ownerAccount; 
@@ -143,6 +161,7 @@ public class DeleteInstanceRequest extends Request {
         private Builder(DeleteInstanceRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.dryRun = request.dryRun;
             this.force = request.force;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
@@ -162,13 +181,33 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully release the instance in the `Running` state. Valid values:****
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.</li>
+         * </ul>
          * 
-         * *   true: forcefully releases the instance in the `Running` state.**** This operation is equivalent to performing a hard shut-down. Cache data that is not written to persistent storage will be lost.
-         * *   false: normally releases the instance. This value is valid only for instances in the `Stopped` state.****
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to forcefully release the instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
+         * <ul>
+         * <li>true: forcefully releases the instance in the <strong>Running</strong> (<code>Running</code>) state.</li>
+         * <li>false: normally releases the instance. This value take effects only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>**</p>
+         * <p><strong>Warning</strong> When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -177,7 +216,11 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6zv0ce8oghu7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -222,10 +265,15 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to release an expired subscription instance.
-         * <p>
+         * <p>Specifies whether to release the expired subscription instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder terminateSubscription(Boolean terminateSubscription) {
             this.putQueryParameter("TerminateSubscription", terminateSubscription);

@@ -49,9 +49,9 @@ public class DeleteTimeTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTimeTemplateRequest response) {
-            super(response);
-            this.templateId = response.templateId;
+        private Builder(DeleteTimeTemplateRequest request) {
+            super(request);
+            this.templateId = request.templateId;
         } 
 
         /**

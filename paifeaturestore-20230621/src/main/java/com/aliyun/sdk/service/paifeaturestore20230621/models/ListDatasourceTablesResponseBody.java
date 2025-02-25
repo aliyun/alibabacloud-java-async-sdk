@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatasourceTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatasourceTablesResponseBody</p>
  */
 public class ListDatasourceTablesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tables")
-    private java.util.List < String > tables;
+    @com.aliyun.core.annotation.NameInMap("Tables")
+    private java.util.List<String> tables;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDatasourceTablesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListDatasourceTablesResponseBody extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.List < String > getTables() {
+    public java.util.List<String> getTables() {
         return this.tables;
     }
 
@@ -58,7 +63,7 @@ public class ListDatasourceTablesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > tables; 
+        private java.util.List<String> tables; 
         private Long totalCount; 
 
         /**
@@ -72,7 +77,7 @@ public class ListDatasourceTablesResponseBody extends TeaModel {
         /**
          * Tables.
          */
-        public Builder tables(java.util.List < String > tables) {
+        public Builder tables(java.util.List<String> tables) {
             this.tables = tables;
             return this;
         }

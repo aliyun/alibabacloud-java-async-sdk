@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListTargetsResponseBody</p>
  */
 public class ListTargetsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTargetsResponseBody(Builder builder) {
@@ -89,9 +88,8 @@ public class ListTargetsResponseBody extends TeaModel {
          * The returned response code. Valid values:
          * <p>
          * 
-         *     Success: The request is successful. 
-         * 
-         *     Other codes: The request failed. For more information about error codes, see Error codes.
+         * *   Success: The request is successful.
+         * *   Other codes: The request failed. For a list of error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,9 +124,8 @@ public class ListTargetsResponseBody extends TeaModel {
          * Indicates whether the request is successful. Valid values:
          * <p>
          * 
-         *     true: The request is successful. 
-         * 
-         *     false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,16 +139,16 @@ public class ListTargetsResponseBody extends TeaModel {
     } 
 
     public static class ParamList extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("ResourceKey")
+        @com.aliyun.core.annotation.NameInMap("ResourceKey")
         private String resourceKey;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamList(Builder builder) {
@@ -204,7 +201,7 @@ public class ListTargetsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The format that is used by the event target parameter.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -212,7 +209,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceKey.
+             * The resource parameter of the event target.
              */
             public Builder resourceKey(String resourceKey) {
                 this.resourceKey = resourceKey;
@@ -220,7 +217,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template that is used by the event target parameter.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -228,7 +225,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the event target parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -243,25 +240,25 @@ public class ListTargetsResponseBody extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("ErrorsTolerance")
+        @com.aliyun.core.annotation.NameInMap("ErrorsTolerance")
         private String errorsTolerance;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ParamList")
+        @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List < ParamList> paramList;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Targets(Builder builder) {
@@ -341,7 +338,7 @@ public class ListTargetsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Endpoint.
+             * The endpoint of the event target.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -357,7 +354,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * EventBusName.
+             * The name of the event bus.
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -365,7 +362,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the event target.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -373,7 +370,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamList.
+             * The parameters that are configured for the event target.
              */
             public Builder paramList(java.util.List < ParamList> paramList) {
                 this.paramList = paramList;
@@ -381,7 +378,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the event rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -389,7 +386,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the event target. For more information, see [Event target parameters](~~183698~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -404,13 +401,13 @@ public class ListTargetsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < Targets> targets;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -462,7 +459,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event rule.
+             * The event targets.
              */
             public Builder targets(java.util.List < Targets> targets) {
                 this.targets = targets;

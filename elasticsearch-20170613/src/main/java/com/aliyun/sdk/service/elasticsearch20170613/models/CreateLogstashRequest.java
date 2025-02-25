@@ -1,55 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLogstashRequest} extends {@link RequestModel}
  *
  * <p>CreateLogstashRequest</p>
  */
 public class CreateLogstashRequest extends Request {
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("networkConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NetworkConfig networkConfig;
 
-    @Body
-    @NameInMap("nodeAmount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer nodeAmount;
 
-    @Body
-    @NameInMap("nodeSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NodeSpec nodeSpec;
 
-    @Body
-    @NameInMap("paymentInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentInfo")
     private PaymentInfo paymentInfo;
 
-    @Body
-    @NameInMap("paymentType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentType")
     private String paymentType;
 
-    @Body
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("version")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("version")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String version;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private CreateLogstashRequest(Builder builder) {
@@ -179,7 +179,7 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * networkConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.putBodyParameter("networkConfig", networkConfig);
@@ -188,7 +188,10 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * nodeAmount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeAmount(Integer nodeAmount) {
             this.putBodyParameter("nodeAmount", nodeAmount);
@@ -197,7 +200,7 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * nodeSpec.
+         * <p>This parameter is required.</p>
          */
         public Builder nodeSpec(NodeSpec nodeSpec) {
             this.putBodyParameter("nodeSpec", nodeSpec);
@@ -233,7 +236,10 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7_with_X-Pack</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -257,20 +263,26 @@ public class CreateLogstashRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLogstashRequest</p>
+     */
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vpcId;
 
-        @NameInMap("vsArea")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vsArea")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vsArea;
 
-        @NameInMap("vswitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vswitchId;
 
         private NetworkConfig(Builder builder) {
@@ -331,7 +343,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtmagcva****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -339,7 +354,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * vsArea.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -347,7 +365,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * vswitchId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1k4ec6s7sjdbudw****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -361,15 +382,21 @@ public class CreateLogstashRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLogstashRequest</p>
+     */
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Long disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("spec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String spec;
 
         private NodeSpec(Builder builder) {
@@ -429,7 +456,10 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * spec.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstash.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -443,17 +473,23 @@ public class CreateLogstashRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLogstashRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLogstashRequest</p>
+     */
     public static class PaymentInfo extends TeaModel {
-        @NameInMap("autoRenewDuration")
+        @com.aliyun.core.annotation.NameInMap("autoRenewDuration")
         private Long autoRenewDuration;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Long duration;
 
-        @NameInMap("isAutoRenew")
+        @com.aliyun.core.annotation.NameInMap("isAutoRenew")
         private Boolean isAutoRenew;
 
-        @NameInMap("pricingCycle")
+        @com.aliyun.core.annotation.NameInMap("pricingCycle")
         private String pricingCycle;
 
         private PaymentInfo(Builder builder) {

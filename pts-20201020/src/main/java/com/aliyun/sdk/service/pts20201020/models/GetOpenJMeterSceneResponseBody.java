@@ -130,7 +130,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 场景详情
+         * Scene.
          */
         public Builder scene(Scene scene) {
             this.scene = scene;
@@ -238,7 +238,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * 创建人名
+             * CreateName.
              */
             public Builder createName(String createName) {
                 this.createName = createName;
@@ -246,7 +246,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人名
+             * ModifyName.
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -254,7 +254,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 操作类型
+             * OperateType.
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -262,7 +262,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 场景压测负责人
+             * Principal.
              */
             public Builder principal(String principal) {
                 this.principal = principal;
@@ -270,7 +270,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * Remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -278,7 +278,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 场景来源
+             * Resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -343,7 +343,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private java.util.Map < String, ? > hostTable; 
 
             /**
-             * 是否清除缓存
+             * ClearCacheEachIteration.
              */
             public Builder clearCacheEachIteration(Boolean clearCacheEachIteration) {
                 this.clearCacheEachIteration = clearCacheEachIteration;
@@ -351,7 +351,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * DNS服务器
+             * DnsServers.
              */
             public Builder dnsServers(java.util.List < String > dnsServers) {
                 this.dnsServers = dnsServers;
@@ -359,7 +359,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 域名绑定
+             * HostTable.
              */
             public Builder hostTable(java.util.Map < String, ? > hostTable) {
                 this.hostTable = hostTable;
@@ -472,7 +472,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private Boolean splitCsv; 
 
             /**
-             * 文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -480,7 +480,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 文件地址
+             * FileOssAddress.
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -488,7 +488,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 文件大小
+             * FileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -496,7 +496,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 文件类型
+             * FileType.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -504,7 +504,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 文件ID
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -512,7 +512,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 文件的md5值
+             * Md5.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -520,7 +520,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * csv文件是否切分
+             * SplitCsv.
              */
             public Builder splitCsv(Boolean splitCsv) {
                 this.splitCsv = splitCsv;
@@ -529,6 +529,67 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
 
             public FileList build() {
                 return new FileList(this);
+            } 
+
+        } 
+
+    }
+    public static class RegionalCondition extends TeaModel {
+        @NameInMap("Amount")
+        private Integer amount;
+
+        @NameInMap("Region")
+        private String region;
+
+        private RegionalCondition(Builder builder) {
+            this.amount = builder.amount;
+            this.region = builder.region;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegionalCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        public static final class Builder {
+            private Integer amount; 
+            private String region; 
+
+            /**
+             * Amount.
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            public RegionalCondition build() {
+                return new RegionalCondition(this);
             } 
 
         } 
@@ -577,6 +638,9 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("RegionalCondition")
+        private java.util.List < RegionalCondition> regionalCondition;
+
         @NameInMap("SceneId")
         private String sceneId;
 
@@ -622,6 +686,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             this.pool = builder.pool;
             this.rampUp = builder.rampUp;
             this.regionId = builder.regionId;
+            this.regionalCondition = builder.regionalCondition;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
             this.securityGroupId = builder.securityGroupId;
@@ -741,6 +806,13 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionalCondition
+         */
+        public java.util.List < RegionalCondition> getRegionalCondition() {
+            return this.regionalCondition;
+        }
+
+        /**
          * @return sceneId
          */
         public String getSceneId() {
@@ -825,6 +897,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private String pool; 
             private Integer rampUp; 
             private String regionId; 
+            private java.util.List < RegionalCondition> regionalCondition; 
             private String sceneId; 
             private String sceneName; 
             private String securityGroupId; 
@@ -837,7 +910,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 施压机数量
+             * AgentCount.
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -845,7 +918,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 基本信息
+             * BaseInfo.
              */
             public Builder baseInfo(BaseInfo baseInfo) {
                 this.baseInfo = baseInfo;
@@ -853,7 +926,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 最大并发，并发模式下生效
+             * Concurrency.
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -861,7 +934,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * constantThroughputTimerType
+             * ConstantThroughputTimerType.
              */
             public Builder constantThroughputTimerType(String constantThroughputTimerType) {
                 this.constantThroughputTimerType = constantThroughputTimerType;
@@ -869,7 +942,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * DNS配置
+             * DnsCacheConfig.
              */
             public Builder dnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
                 this.dnsCacheConfig = dnsCacheConfig;
@@ -877,7 +950,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 压测持续时间，单位为s
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -885,7 +958,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 环境id
+             * EnvironmentId.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -893,7 +966,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 文件列表
+             * FileList.
              */
             public Builder fileList(java.util.List < FileList> fileList) {
                 this.fileList = fileList;
@@ -901,7 +974,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为VPC压测
+             * IsVpcTest.
              */
             public Builder isVpcTest(Boolean isVpcTest) {
                 this.isVpcTest = isVpcTest;
@@ -917,7 +990,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 施压模式，concurrency_mode表示并发压测,tps_mode表示RPS压测
+             * Mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -925,7 +998,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 压力来源。“”表示公网，intranet-vpc表示VPC
+             * Pool.
              */
             public Builder pool(String pool) {
                 this.pool = pool;
@@ -933,7 +1006,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 递增时间，单位s
+             * RampUp.
              */
             public Builder rampUp(Integer rampUp) {
                 this.rampUp = rampUp;
@@ -941,7 +1014,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * VPC压测时配置
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -949,7 +1022,15 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 场景id
+             * RegionalCondition.
+             */
+            public Builder regionalCondition(java.util.List < RegionalCondition> regionalCondition) {
+                this.regionalCondition = regionalCondition;
+                return this;
+            }
+
+            /**
+             * SceneId.
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -957,7 +1038,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 场景名
+             * SceneName.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -965,7 +1046,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 安全组id，VPC压测时配置
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -989,7 +1070,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 递增阶梯数。预热时间和预热阶段数都不配置时 使用固定压力值 只配置预热时间，不配置阶段数时 使用均匀递增 预热时间和阶段数都配置时，并且steps<rampUp 使用阶梯递增 不能只配置steps，不配置rampUp 如果这样配置，默认使用固定压力值
+             * Steps.
              */
             public Builder steps(Integer steps) {
                 this.steps = steps;
@@ -997,7 +1078,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * synchronizing timer 类型
+             * SyncTimerType.
              */
             public Builder syncTimerType(String syncTimerType) {
                 this.syncTimerType = syncTimerType;
@@ -1005,7 +1086,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 测试文件
+             * TestFile.
              */
             public Builder testFile(String testFile) {
                 this.testFile = testFile;
@@ -1013,7 +1094,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * 交换机id，VPC压测时配置
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1021,7 +1102,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * vpc的id，VPC压测时配置
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealtimeLogDeliveryDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRealtimeLogDeliveryDomainsResponseBody</p>
  */
 public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRealtimeLogDeliveryDomainsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the accelerated domain names.
+         * <p>The information about the accelerated domain names.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRealtimeLogDeliveryDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeLogDeliveryDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Domains(Builder builder) {
@@ -110,7 +119,10 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -118,11 +130,14 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values:
-             * <p>
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: enabled</li>
+             * <li><strong>offline</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **online**: enabled
-             * *   **offline**: disabled
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -136,8 +151,14 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRealtimeLogDeliveryDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRealtimeLogDeliveryDomainsResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Domains")
+        @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < Domains> domains;
 
         private Content(Builder builder) {

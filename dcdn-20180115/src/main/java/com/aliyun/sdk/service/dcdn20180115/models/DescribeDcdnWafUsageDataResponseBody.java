@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafUsageDataResponseBody</p>
  */
 public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("WafUsageData")
+    @com.aliyun.core.annotation.NameInMap("WafUsageData")
     private WafUsageData wafUsageData;
 
     private DescribeDcdnWafUsageDataResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         private WafUsageData wafUsageData; 
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeDcdnWafUsageData**.
+         * <p>The operation that you want to perform. Set the value to <strong>DescribeDcdnWafUsageData</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-01T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -82,11 +85,14 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies how query results are grouped. By default, this parameter is empty. Valid values:
-         * <p>
+         * <p>Specifies how query results are grouped. By default, this parameter is empty. Valid values:</p>
+         * <ul>
+         * <li>domain: Query results are grouped by accelerated domain name.</li>
+         * <li>An empty string: Query results are not grouped.</li>
+         * </ul>
          * 
-         * *   domain: Query results are grouped by accelerated domain name.
-         * *   An empty string: Query results are not grouped.
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-802B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,7 +100,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-30T16:00:00Z&quot;,</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -102,7 +111,7 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The number of monitored requests.
+         * <p>The number of monitored requests.</p>
          */
         public Builder wafUsageData(WafUsageData wafUsageData) {
             this.wafUsageData = wafUsageData;
@@ -115,23 +124,29 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafUsageDataResponseBody</p>
+     */
     public static class WafUsageDataItem extends TeaModel {
-        @NameInMap("AccessCnt")
+        @com.aliyun.core.annotation.NameInMap("AccessCnt")
         private Long accessCnt;
 
-        @NameInMap("BlockCnt")
+        @com.aliyun.core.annotation.NameInMap("BlockCnt")
         private Long blockCnt;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("ObserveCnt")
+        @com.aliyun.core.annotation.NameInMap("ObserveCnt")
         private Long observeCnt;
 
-        @NameInMap("SecCu")
+        @com.aliyun.core.annotation.NameInMap("SecCu")
         private Long secCu;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private WafUsageDataItem(Builder builder) {
@@ -202,7 +217,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The number of blocked requests.
+             * <p>The number of blocked requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder accessCnt(Long accessCnt) {
                 this.accessCnt = accessCnt;
@@ -210,7 +228,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of allowed requests.
+             * <p>The number of allowed requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder blockCnt(Long blockCnt) {
                 this.blockCnt = blockCnt;
@@ -218,7 +239,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that you want to query. If you do not specify an accelerated domain name, all accelerated domain names are queried by default.
+             * <p>The domain name that you want to query. If you do not specify an accelerated domain name, all accelerated domain names are queried by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -226,7 +250,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range during which data was queried.
+             * <p>The end of the time range during which data was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder observeCnt(Long observeCnt) {
                 this.observeCnt = observeCnt;
@@ -234,10 +261,11 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The time granularity for a query. Unit: seconds.
-             * <p>
+             * <p>The time granularity for a query. Unit: seconds.</p>
+             * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day).</p>
              * 
-             * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day).
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder secCu(Long secCu) {
                 this.secCu = secCu;
@@ -245,7 +273,10 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which data was queried.
+             * <p>The beginning of the time range during which data was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-30T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -259,8 +290,14 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafUsageDataResponseBody</p>
+     */
     public static class WafUsageData extends TeaModel {
-        @NameInMap("WafUsageDataItem")
+        @com.aliyun.core.annotation.NameInMap("WafUsageDataItem")
         private java.util.List < WafUsageDataItem> wafUsageDataItem;
 
         private WafUsageData(Builder builder) {

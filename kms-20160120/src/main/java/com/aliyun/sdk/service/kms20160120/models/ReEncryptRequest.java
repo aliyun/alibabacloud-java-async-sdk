@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReEncryptRequest</p>
  */
 public class ReEncryptRequest extends Request {
-    @Query
-    @NameInMap("CiphertextBlob")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ciphertextBlob;
 
-    @Query
-    @NameInMap("DestinationEncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEncryptionContext")
     private java.util.Map < String, ? > destinationEncryptionContext;
 
-    @Query
-    @NameInMap("DestinationKeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationKeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationKeyId;
 
-    @Query
-    @NameInMap("SourceEncryptionAlgorithm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEncryptionAlgorithm")
     private String sourceEncryptionAlgorithm;
 
-    @Query
-    @NameInMap("SourceEncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEncryptionContext")
     private java.util.Map < String, ? > sourceEncryptionContext;
 
-    @Query
-    @NameInMap("SourceKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceKeyId")
     private String sourceKeyId;
 
-    @Query
-    @NameInMap("SourceKeyVersionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceKeyVersionId")
     private String sourceKeyVersionId;
 
     private ReEncryptRequest(Builder builder) {
@@ -47,6 +50,7 @@ public class ReEncryptRequest extends Request {
         this.ciphertextBlob = builder.ciphertextBlob;
         this.destinationEncryptionContext = builder.destinationEncryptionContext;
         this.destinationKeyId = builder.destinationKeyId;
+        this.dryRun = builder.dryRun;
         this.sourceEncryptionAlgorithm = builder.sourceEncryptionAlgorithm;
         this.sourceEncryptionContext = builder.sourceEncryptionContext;
         this.sourceKeyId = builder.sourceKeyId;
@@ -88,6 +92,13 @@ public class ReEncryptRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return sourceEncryptionAlgorithm
      */
     public String getSourceEncryptionAlgorithm() {
@@ -119,6 +130,7 @@ public class ReEncryptRequest extends Request {
         private String ciphertextBlob; 
         private java.util.Map < String, ? > destinationEncryptionContext; 
         private String destinationKeyId; 
+        private String dryRun; 
         private String sourceEncryptionAlgorithm; 
         private java.util.Map < String, ? > sourceEncryptionContext; 
         private String sourceKeyId; 
@@ -133,6 +145,7 @@ public class ReEncryptRequest extends Request {
             this.ciphertextBlob = request.ciphertextBlob;
             this.destinationEncryptionContext = request.destinationEncryptionContext;
             this.destinationKeyId = request.destinationKeyId;
+            this.dryRun = request.dryRun;
             this.sourceEncryptionAlgorithm = request.sourceEncryptionAlgorithm;
             this.sourceEncryptionContext = request.sourceEncryptionContext;
             this.sourceKeyId = request.sourceKeyId;
@@ -170,6 +183,15 @@ public class ReEncryptRequest extends Request {
         public Builder destinationKeyId(String destinationKeyId) {
             this.putQueryParameter("DestinationKeyId", destinationKeyId);
             this.destinationKeyId = destinationKeyId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

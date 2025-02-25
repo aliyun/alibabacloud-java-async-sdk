@@ -40,10 +40,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   A principal needs to accept or reject a resource sharing invitation only if the principal is not the management account or a member of a resource directory. If you share resources with an object in a resource directory, the system automatically accepts the resource sharing invitation for the object.
-      * *   A resource sharing invitation is valid for seven days. A principal must accept or reject the invitation within the validity period.
-      * This topic provides an example on how to call the API operation to accept the resource sharing invitation `i-pMnItMX19fBJ****` in the `cn-hangzhou` region.
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <ul>
+     * <li>A principal needs to accept or reject a resource sharing invitation only if the principal is not the management account or a member of a resource directory. If you share resources with an object in a resource directory, the system automatically accepts the resource sharing invitation for the object.</li>
+     * <li>A resource sharing invitation is valid for seven days. A principal must accept or reject the invitation within the validity period.
+     * This topic provides an example on how to call the API operation to accept the resource sharing invitation whose ID is <code>i-pMnItMX19fBJ****</code> in the <code>cn-hangzhou</code> region.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AcceptResourceShareInvitation  AcceptResourceShareInvitationRequest
+     * @return AcceptResourceShareInvitationResponse
      */
     @Override
     public CompletableFuture<AcceptResourceShareInvitationResponse> acceptResourceShareInvitation(AcceptResourceShareInvitationRequest request) {
@@ -60,10 +66,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to associate the vSwitch `vsw-bp183p93qs667muql****` and the member `172050525300****` with the resource share `rs-6GRmdD3X****` in the `cn-hangzhou` region. After the association, the vSwitch is shared with the member.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to associate the vSwitch <code>vsw-bp183p93qs667muql****</code> and the member <code>172050525300****</code> with the resource share <code>rs-6GRmdD3X****</code> in the <code>cn-hangzhou</code> region. After the association, the vSwitch is shared with the member.</p>
+     * 
+     * @param request the request parameters of AssociateResourceShare  AssociateResourceShareRequest
+     * @return AssociateResourceShareResponse
      */
     @Override
     public CompletableFuture<AssociateResourceShareResponse> associateResourceShare(AssociateResourceShareRequest request) {
@@ -80,10 +87,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to associate the `AliyunRSDefaultPermissionVSwitch` permission with the `rs-6GRmdD3X****` resource share in the `cn-hangzhou` region.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to associate the <code>AliyunRSDefaultPermissionVSwitch</code> permission with the <code>rs-6GRmdD3X****</code> resource share in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of AssociateResourceSharePermission  AssociateResourceSharePermissionRequest
+     * @return AssociateResourceSharePermissionResponse
      */
     @Override
     public CompletableFuture<AssociateResourceSharePermissionResponse> associateResourceSharePermission(AssociateResourceSharePermissionRequest request) {
@@ -99,6 +107,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -113,6 +125,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckSharingWithResourceDirectoryStatus  CheckSharingWithResourceDirectoryStatusRequest
+     * @return CheckSharingWithResourceDirectoryStatusResponse
+     */
     @Override
     public CompletableFuture<CheckSharingWithResourceDirectoryStatusResponse> checkSharingWithResourceDirectoryStatus(CheckSharingWithResourceDirectoryStatusRequest request) {
         try {
@@ -128,11 +144,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Resource Sharing allows you to share your resources with one or more accounts and access the resources shared by other accounts. For more information, see [Resource Sharing overview](~~160622~~).
-      * This topic provides an example on how to call the API operation to create a resource share named `test` in the `cn-hangzhou` region to share the vSwitch `vsw-bp183p93qs667muql****` with the member `172050525300****`. In this example, the management account of a resource directory is used to call this API operation.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>Resource Sharing allows you to share your resources with one or more accounts and access the resources shared by other accounts. For more information, see <a href="https://help.aliyun.com/document_detail/160622.html">Resource Sharing overview</a>.
+     * This topic provides an example on how to call the API operation to create a resource share named <code>test</code> in the <code>cn-hangzhou</code> region to share the vSwitch <code>vsw-bp183p93qs667muql****</code> with the member <code>172050525300****</code> in a resource directory. In this example, the management account of the resource directory is used to call this API operation.</p>
+     * 
+     * @param request the request parameters of CreateResourceShare  CreateResourceShareRequest
+     * @return CreateResourceShareResponse
      */
     @Override
     public CompletableFuture<CreateResourceShareResponse> createResourceShare(CreateResourceShareRequest request) {
@@ -149,10 +166,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a resource share is deleted, all principals in the resource share can no longer access the resources in the resource share. However, the resources are not deleted with the resource share.
-      * A resource share that is deleted is in the `Deleted` state. The system deletes the record of the resource share within 48 hours to 96 hours.
-      * This topic provides an example on how to call the API operation to delete the resource share `rs-qSkW1HBY****` in the `cn-hangzhou` region.
-      *
+     * <b>description</b> :
+     * <p>After a resource share is deleted, all principals in the resource share can no longer access the resources in the resource share. However, the resources are not deleted with the resource share.
+     * A resource share that is deleted is in the <code>Deleted</code> state. The system deletes the record of the resource share within 48 hours to 96 hours.
+     * This topic provides an example on how to call the API operation to delete the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of DeleteResourceShare  DeleteResourceShareRequest
+     * @return DeleteResourceShareResponse
      */
     @Override
     public CompletableFuture<DeleteResourceShareResponse> deleteResourceShare(DeleteResourceShareRequest request) {
@@ -168,6 +188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -183,12 +207,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   A resource owner can call this API operation to remove shared resources or principals from a resource share.
-      * *   If an Alibaba Cloud account that is not the management account or a member of a resource directory is added to a resource share as a principal, you can use the Alibaba Cloud account to call this API operation to exit the resource share. For more information, see [Exit a resource share](~~440614~~).
-      * This topic provides an example on how to use the management account of a resource directory to call the API operation to remove the member `172050525300****` from the resource share `rs-6GRmdD3X****` in the `cn-hangzhou` region. After the member is removed from the resource share, the member cannot share the resources in the resource share.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>  A resource owner can call this API operation to disassociate shared resources or principals from a resource share.</p>
+     * <ul>
+     * <li>If a principal does not belong to a resource directory, the principal can call this API operation to exit the resource share. For more information, see <a href="https://help.aliyun.com/document_detail/440614.html">Exit a resource share</a>.
+     * This topic provides an example on how to use the management account of a resource directory to call the API operation to disassociate the member <code>172050525300****</code> from the resource share <code>rs-6GRmdD3X****</code> in the <code>cn-hangzhou</code> region. After the member is disassociated from the resource share, the member cannot share the resources in the resource share.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DisassociateResourceShare  DisassociateResourceShareRequest
+     * @return DisassociateResourceShareResponse
      */
     @Override
     public CompletableFuture<DisassociateResourceShareResponse> disassociateResourceShare(DisassociateResourceShareRequest request) {
@@ -205,10 +232,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to disassociate the `AliyunRSDefaultPermissionVSwitch` permission from the `rs-6GRmdD3X****` resource share in the `cn-hangzhou` region.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to disassociate the <code>AliyunRSDefaultPermissionVSwitch</code> permission from the <code>rs-6GRmdD3X****</code> resource share in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of DisassociateResourceSharePermission  DisassociateResourceSharePermissionRequest
+     * @return DisassociateResourceSharePermissionResponse
      */
     @Override
     public CompletableFuture<DisassociateResourceSharePermissionResponse> disassociateResourceSharePermission(DisassociateResourceSharePermissionRequest request) {
@@ -225,9 +253,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can share your resources with all members in your resource directory, all members in a specific folder in your resource directory, or a specific member in your resource directory as a resource owner only after you enable resource sharing for your resource directory.
-      * You can call this API operation only by using the management account of your resource directory or a RAM user or RAM role to which the required permissions are granted within the management account.
-      *
+     * <b>description</b> :
+     * <p>You can share your resources with all members in your resource directory, all members in a specific folder in your resource directory, or a specific member in your resource directory as a resource owner only after you enable resource sharing for your resource directory.
+     * You can call this API operation only by using the management account of your resource directory or a RAM user or RAM role to which the required permissions are granted within the management account.</p>
+     * 
+     * @param request the request parameters of EnableSharingWithResourceDirectory  EnableSharingWithResourceDirectoryRequest
+     * @return EnableSharingWithResourceDirectoryResponse
      */
     @Override
     public CompletableFuture<EnableSharingWithResourceDirectoryResponse> enableSharingWithResourceDirectory(EnableSharingWithResourceDirectoryRequest request) {
@@ -244,10 +275,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information about the `AliyunRSDefaultPermissionVSwitch` permission whose version is `v1` in the `cn-hangzhou` region.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information about the <code>AliyunRSDefaultPermissionVSwitch</code> permission whose version is <code>v1</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of GetPermission  GetPermissionRequest
+     * @return GetPermissionResponse
      */
     @Override
     public CompletableFuture<GetPermissionResponse> getPermission(GetPermissionRequest request) {
@@ -264,10 +296,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the versions of the `AliyunRSDefaultPermissionVSwitch` permission in the `cn-hangzhou` region.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the versions of the <code>AliyunRSDefaultPermissionVSwitch</code> permission in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of ListPermissionVersions  ListPermissionVersionsRequest
+     * @return ListPermissionVersionsResponse
      */
     @Override
     public CompletableFuture<ListPermissionVersionsResponse> listPermissionVersions(ListPermissionVersionsRequest request) {
@@ -284,10 +317,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information about the default permission for the `VSwitch` resource type in the `cn-hangzhou` region.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information about the default permission for the <code>VSwitch</code> resource type in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of ListPermissions  ListPermissionsRequest
+     * @return ListPermissionsResponse
      */
     @Override
     public CompletableFuture<ListPermissionsResponse> listPermissions(ListPermissionsRequest request) {
@@ -304,12 +338,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the association records of the resource shares that are created by using the current Alibaba Cloud account in the `cn-hangzhou` region. The response shows the following records:
-      * *   The resource `vsw-bp1upw03qyz8n7us9****` of the `VSwitch` type has been associated with the resource share `rs-6GRmdD3X****`. The resource is in the `Associated` state. This indicates that the resource is being shared.
-      * *   The resource `vsw-bp183p93qs667muql****` of the `VSwitch` type has been disassociated from the resource share `rs-6GRmdD3X****`. The resource is in the `Disassociated` state. This indicates that the sharing of the resource is stopped.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the association records of the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows the following records:</p>
+     * <ul>
+     * <li>The resource <code>vsw-bp1upw03qyz8n7us9****</code> of the <code>VSwitch</code> type has been associated with the resource share <code>rs-6GRmdD3X****</code>. The resource is in the <code>Associated</code> state. This indicates that the resource is being shared.</li>
+     * <li>The resource <code>vsw-bp183p93qs667muql****</code> of the <code>VSwitch</code> type has been disassociated from the resource share <code>rs-6GRmdD3X****</code>. The resource is in the <code>Disassociated</code> state. This indicates that the sharing of the resource is stopped.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListResourceShareAssociations  ListResourceShareAssociationsRequest
+     * @return ListResourceShareAssociationsResponse
      */
     @Override
     public CompletableFuture<ListResourceShareAssociationsResponse> listResourceShareAssociations(ListResourceShareAssociationsRequest request) {
@@ -326,8 +363,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the resource sharing invitations that are received by the current account in the `cn-hangzhou` region. The response shows that one invitation is received by the current account and is waiting for confirmation.
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>This topic provides an example on how to call the API operation to query the resource sharing invitations that are received by the current account in the <code>cn-hangzhou</code> region. The response shows that one invitation is received by the current account and is waiting for confirmation.</p>
+     * 
+     * @param request the request parameters of ListResourceShareInvitations  ListResourceShareInvitationsRequest
+     * @return ListResourceShareInvitationsResponse
      */
     @Override
     public CompletableFuture<ListResourceShareInvitationsResponse> listResourceShareInvitations(ListResourceShareInvitationsRequest request) {
@@ -344,10 +385,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the permissions that are associated with the resource share created by using the current Alibaba Cloud account in the `cn-hangzhou` region.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the permissions that are associated with the resource share created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of ListResourceSharePermissions  ListResourceSharePermissionsRequest
+     * @return ListResourceSharePermissionsResponse
      */
     @Override
     public CompletableFuture<ListResourceSharePermissionsResponse> listResourceSharePermissions(ListResourceSharePermissionsRequest request) {
@@ -364,12 +406,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the `cn-hangzhou` region. The response shows that the following resource shares are created by using the account whose ID is `151266687691****`:
-      * *   `rs-hX9wC5jO****`, which is in the `Deleted` state
-      * *   `rs-PqysnzIj****`, which is in the `Active` state
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <code>cn-hangzhou</code> region. The response shows that the following resource shares are created by using the account whose ID is <code>151266687691****</code>:</p>
+     * <ul>
+     * <li><code>rs-hX9wC5jO****</code>, which is in the <code>Deleted</code> state</li>
+     * <li><code>rs-PqysnzIj****</code>, which is in the <code>Active</code> state</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListResourceShares  ListResourceSharesRequest
+     * @return ListResourceSharesResponse
      */
     @Override
     public CompletableFuture<ListResourceSharesResponse> listResourceShares(ListResourceSharesRequest request) {
@@ -386,10 +431,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the resources that you share with other accounts in the `cn-hangzhou` region. The response shows that in the resource share `rs-6GRmdD3X****`, you share the `vsw-bp1upw03qyz8n7us9****` resource of the `VSwitch` type with other accounts.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the resources that you share with other accounts in the <code>cn-hangzhou</code> region. The response shows that in the resource share <code>rs-6GRmdD3X****</code>, you share the <code>vsw-bp1upw03qyz8n7us9****</code> resource of the <code>VSwitch</code> type with other accounts.</p>
+     * 
+     * @param request the request parameters of ListSharedResources  ListSharedResourcesRequest
+     * @return ListSharedResourcesResponse
      */
     @Override
     public CompletableFuture<ListSharedResourcesResponse> listSharedResources(ListSharedResourcesRequest request) {
@@ -406,12 +452,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you are a resource owner, you can query the principals with which you share your resources.
-      * If you are a principal, you can query the resources that are shared with you.
-      * This topic provides an example on how to call the API operation to query the principals with which you share your resources in the `cn-hangzhou` region. The response shows that you share your resources with the principals `114240524784****` and `172050525300****`.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 500 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>If you are a resource owner, you can query the principals with which you share your resources. If you are a principal, you can query the resources that are shared with you.
+     * This topic provides an example on how to call the API operation to query the principals with which you share your resources in the <code>cn-hangzhou</code> region. The response shows that you share your resources with the principals <code>114240524784****</code> and <code>172050525300****</code>.</p>
+     * 
+     * @param request the request parameters of ListSharedTargets  ListSharedTargetsRequest
+     * @return ListSharedTargetsResponse
      */
     @Override
     public CompletableFuture<ListSharedTargetsResponse> listSharedTargets(ListSharedTargetsRequest request) {
@@ -428,8 +474,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to reject the resource sharing invitation `i-yyTWbkjHArYh****` in the `cn-hangzhou` region.
-      *
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to reject the resource sharing invitation <code>i-yyTWbkjHArYh****</code> in the <code>cn-hangzhou</code> region.</p>
+     * 
+     * @param request the request parameters of RejectResourceShareInvitation  RejectResourceShareInvitationRequest
+     * @return RejectResourceShareInvitationResponse
      */
     @Override
     public CompletableFuture<RejectResourceShareInvitationResponse> rejectResourceShareInvitation(RejectResourceShareInvitationRequest request) {
@@ -446,9 +513,48 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to change the name or resource sharing scope of a resource share.
-      * This topic provides an example on how to call the API operation to change the name of the resource share `rs-qSkW1HBY****` in the `cn-hangzhou` region from `test` to `new`.
-      *
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UntagResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this API operation to change the name or resource sharing scope of a resource share.
+     * This topic provides an example on how to call the API operation to change the name of the resource share <code>rs-qSkW1HBY****</code> in the <code>cn-hangzhou</code> region from <code>test</code> to <code>new</code>.</p>
+     * 
+     * @param request the request parameters of UpdateResourceShare  UpdateResourceShareRequest
+     * @return UpdateResourceShareResponse
      */
     @Override
     public CompletableFuture<UpdateResourceShareResponse> updateResourceShare(UpdateResourceShareRequest request) {

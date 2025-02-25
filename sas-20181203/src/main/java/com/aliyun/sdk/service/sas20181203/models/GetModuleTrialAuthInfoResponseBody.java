@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModuleTrialAuthInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetModuleTrialAuthInfoResponseBody</p>
  */
 public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetModuleTrialAuthInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,24 +79,34 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModuleTrialAuthInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleTrialAuthInfoResponseBody</p>
+     */
     public static class TrialRecordList extends TeaModel {
-        @NameInMap("AuthLimit")
+        @com.aliyun.core.annotation.NameInMap("AuthLimit")
         private Long authLimit;
 
-        @NameInMap("GmtEnd")
+        @com.aliyun.core.annotation.NameInMap("AuthLimitList")
+        private String authLimitList;
+
+        @com.aliyun.core.annotation.NameInMap("GmtEnd")
         private Long gmtEnd;
 
-        @NameInMap("GmtStart")
+        @com.aliyun.core.annotation.NameInMap("GmtStart")
         private Long gmtStart;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private TrialRecordList(Builder builder) {
             this.authLimit = builder.authLimit;
+            this.authLimitList = builder.authLimitList;
             this.gmtEnd = builder.gmtEnd;
             this.gmtStart = builder.gmtStart;
             this.moduleCode = builder.moduleCode;
@@ -108,6 +126,13 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
          */
         public Long getAuthLimit() {
             return this.authLimit;
+        }
+
+        /**
+         * @return authLimitList
+         */
+        public String getAuthLimitList() {
+            return this.authLimitList;
         }
 
         /**
@@ -140,13 +165,17 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long authLimit; 
+            private String authLimitList; 
             private Long gmtEnd; 
             private Long gmtStart; 
             private String moduleCode; 
             private Integer status; 
 
             /**
-             * The authorized quota.
+             * <p>The quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder authLimit(Long authLimit) {
                 this.authLimit = authLimit;
@@ -154,7 +183,21 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the trial use.
+             * <p>The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1,100]</p>
+             */
+            public Builder authLimitList(String authLimitList) {
+                this.authLimitList = authLimitList;
+                return this;
+            }
+
+            /**
+             * <p>The end time of the trial use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679760000000</p>
              */
             public Builder gmtEnd(Long gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -162,7 +205,10 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the trial use.
+             * <p>The start time of the trial use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669824000000</p>
              */
             public Builder gmtStart(Long gmtStart) {
                 this.gmtStart = gmtStart;
@@ -170,11 +216,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The module code. Valid values:
-             * <p>
+             * <p>The code of the feature. Valid values:</p>
+             * <ul>
+             * <li><strong>vulFix</strong>: vulnerability fixing.</li>
+             * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+             * </ul>
              * 
-             * *   **vulFix**: vulnerability fixing
-             * *   **cloudSiem**: threat analysis
+             * <strong>example:</strong>
+             * <p>vulFix</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -182,11 +231,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the trial use. Valid values:
-             * <p>
+             * <p>The status of the trial use. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The feature is in trial use.</li>
+             * <li><strong>0</strong>: The trial use ends.</li>
+             * </ul>
              * 
-             * *   **1**: The feature is in trial use.
-             * *   **0**: The trial use ends.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -200,15 +252,21 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModuleTrialAuthInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleTrialAuthInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CanTry")
+        @com.aliyun.core.annotation.NameInMap("CanTry")
         private Boolean canTry;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("TrialRecordList")
-        private java.util.List < TrialRecordList> trialRecordList;
+        @com.aliyun.core.annotation.NameInMap("TrialRecordList")
+        private java.util.List<TrialRecordList> trialRecordList;
 
         private Data(Builder builder) {
             this.canTry = builder.canTry;
@@ -241,21 +299,24 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         /**
          * @return trialRecordList
          */
-        public java.util.List < TrialRecordList> getTrialRecordList() {
+        public java.util.List<TrialRecordList> getTrialRecordList() {
             return this.trialRecordList;
         }
 
         public static final class Builder {
             private Boolean canTry; 
             private String moduleCode; 
-            private java.util.List < TrialRecordList> trialRecordList; 
+            private java.util.List<TrialRecordList> trialRecordList; 
 
             /**
-             * Indicates whether the user is qualified for the trial use. Valid values:
-             * <p>
+             * <p>Indicates whether the user is qualified for the trial use. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canTry(Boolean canTry) {
                 this.canTry = canTry;
@@ -263,11 +324,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The module code. Valid values:
-             * <p>
+             * <p>The code of the feature. Valid values:</p>
+             * <ul>
+             * <li><strong>vulFix</strong>: vulnerability fixing.</li>
+             * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+             * </ul>
              * 
-             * *   **vulFix**: vulnerability fixing
-             * *   **cloudSiem**: threat analysis
+             * <strong>example:</strong>
+             * <p>vulFix</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -275,9 +339,9 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The trial use record.
+             * <p>The trial use record.</p>
              */
-            public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
+            public Builder trialRecordList(java.util.List<TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;
                 return this;
             }

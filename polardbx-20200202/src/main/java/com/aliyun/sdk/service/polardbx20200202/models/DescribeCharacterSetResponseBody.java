@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCharacterSetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCharacterSetResponseBody</p>
  */
 public class DescribeCharacterSetResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCharacterSetResponseBody(Builder builder) {
@@ -111,11 +116,17 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCharacterSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCharacterSetResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CharacterSet")
-        private java.util.List < String > characterSet;
+        @com.aliyun.core.annotation.NameInMap("CharacterSet")
+        private java.util.List<String> characterSet;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
         private Data(Builder builder) {
@@ -134,7 +145,7 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
         /**
          * @return characterSet
          */
-        public java.util.List < String > getCharacterSet() {
+        public java.util.List<String> getCharacterSet() {
             return this.characterSet;
         }
 
@@ -146,13 +157,13 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > characterSet; 
+            private java.util.List<String> characterSet; 
             private String engine; 
 
             /**
              * CharacterSet.
              */
-            public Builder characterSet(java.util.List < String > characterSet) {
+            public Builder characterSet(java.util.List<String> characterSet) {
                 this.characterSet = characterSet;
                 return this;
             }

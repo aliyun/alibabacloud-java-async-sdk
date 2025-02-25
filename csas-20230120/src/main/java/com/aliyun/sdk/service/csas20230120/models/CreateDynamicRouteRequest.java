@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDynamicRouteRequest} extends {@link RequestModel}
  *
  * <p>CreateDynamicRouteRequest</p>
  */
 public class CreateDynamicRouteRequest extends Request {
-    @Body
-    @NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    private java.util.List<String> applicationIds;
 
-    @Body
-    @NameInMap("ApplicationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DynamicRouteType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicRouteType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dynamicRouteType;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NextHop")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextHop")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextHop;
 
-    @Body
-    @NameInMap("Priority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer priority;
 
-    @Body
-    @NameInMap("RegionIds")
-    @Validation(required = true)
-    private java.util.List < String > regionIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> regionIds;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Body
-    @NameInMap("TagIds")
-    private java.util.List < String > tagIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    private java.util.List<String> tagIds;
 
     private CreateDynamicRouteRequest(Builder builder) {
         super(builder);
@@ -89,7 +94,7 @@ public class CreateDynamicRouteRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -138,7 +143,7 @@ public class CreateDynamicRouteRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -152,21 +157,21 @@ public class CreateDynamicRouteRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < String > getTagIds() {
+    public java.util.List<String> getTagIds() {
         return this.tagIds;
     }
 
     public static final class Builder extends Request.Builder<CreateDynamicRouteRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String applicationType; 
         private String description; 
         private String dynamicRouteType; 
         private String name; 
         private String nextHop; 
         private Integer priority; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private String status; 
-        private java.util.List < String > tagIds; 
+        private java.util.List<String> tagIds; 
 
         private Builder() {
             super();
@@ -189,14 +194,17 @@ public class CreateDynamicRouteRequest extends Request {
         /**
          * ApplicationIds.
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
         }
 
         /**
-         * ApplicationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder applicationType(String applicationType) {
             this.putBodyParameter("ApplicationType", applicationType);
@@ -214,7 +222,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * DynamicRouteType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector</p>
          */
         public Builder dynamicRouteType(String dynamicRouteType) {
             this.putBodyParameter("DynamicRouteType", dynamicRouteType);
@@ -223,7 +234,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dynamic_route_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -232,7 +246,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-8ccb13b6f52c****</p>
          */
         public Builder nextHop(String nextHop) {
             this.putBodyParameter("NextHop", nextHop);
@@ -241,7 +258,10 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -250,16 +270,19 @@ public class CreateDynamicRouteRequest extends Request {
         }
 
         /**
-         * RegionIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             this.putBodyParameter("RegionIds", regionIds);
             this.regionIds = regionIds;
             return this;
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -270,7 +293,7 @@ public class CreateDynamicRouteRequest extends Request {
         /**
          * TagIds.
          */
-        public Builder tagIds(java.util.List < String > tagIds) {
+        public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;

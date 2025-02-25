@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbortChangeOrderRequest} extends {@link RequestModel}
  *
  * <p>AbortChangeOrderRequest</p>
  */
 public class AbortChangeOrderRequest extends Request {
-    @Query
-    @NameInMap("ChangeOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderId;
 
     private AbortChangeOrderRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class AbortChangeOrderRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be2e1c76-682b-4897-98d3-1d8d6478****</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);

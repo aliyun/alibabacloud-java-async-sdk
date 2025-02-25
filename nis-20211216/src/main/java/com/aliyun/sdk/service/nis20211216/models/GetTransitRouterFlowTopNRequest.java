@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,81 +11,81 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTransitRouterFlowTopNRequest</p>
  */
 public class GetTransitRouterFlowTopNRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List < Long > accountIds;
 
-    @Query
-    @NameInMap("BandwithPackageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwithPackageId")
     private String bandwithPackageId;
 
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTime;
 
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("Direction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("GroupBy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupBy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupBy;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OtherIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherIp")
     private String otherIp;
 
-    @Query
-    @NameInMap("OtherPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherPort")
     private String otherPort;
 
-    @Query
-    @NameInMap("OtherRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherRegion")
     private String otherRegion;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("ThisIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThisIp")
     private String thisIp;
 
-    @Query
-    @NameInMap("ThisPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThisPort")
     private String thisPort;
 
-    @Query
-    @NameInMap("ThisRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThisRegion")
     private String thisRegion;
 
-    @Query
-    @NameInMap("TopN")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopN")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer topN;
 
-    @Query
-    @NameInMap("UseMultiAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseMultiAccount")
     private Boolean useMultiAccount;
 
     private GetTransitRouterFlowTopNRequest(Builder builder) {
@@ -297,7 +296,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         } 
 
         /**
-         * The IDs of member accounts.
+         * The IDs of the member accounts.
          */
         public Builder accountIds(java.util.List < Long > accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
@@ -337,8 +336,8 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The direction of the inter-region traffic in the local regions or for the local IP addresses. Valid values:
          * <p>
          * 
-         * *   in: inbound traffic
-         * *   out: outbound traffic
+         * *   **in**: inbound traffic
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -359,13 +358,13 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The dimension for ranking inter-region traffic data. The value of this parameter is case-sensitive. Valid values:
          * <p>
          * 
-         * *   1Tuple: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.
-         * *   2Tuple: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.
-         * *   5Tuple: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols in use.
-         * *   Cen: queries the rankings of inter-region traffic data for CEN instances.
-         * *   RegionPair: queries the rankings of inter-region traffic data for the local and remote regions.
-         * *   Port: queries the rankings of inter-region traffic data for the local and remote ports.
-         * *   Protocol: queries the rankings of inter-region traffic data for the protocols in use.
+         * *   **1Tuple**: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.
+         * *   **2Tuple**: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.
+         * *   **5Tuple**: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols.
+         * *   **Cen**: queries the rankings of inter-region traffic data for CEN instances.
+         * *   **RegionPair**: queries the rankings of inter-region traffic data for the local and remote regions.
+         * *   **Port**: queries the rankings of inter-region traffic data for the local and remote ports.
+         * *   **Protocol**: queries the rankings of inter-region traffic data for the protocols.
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -413,7 +412,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The protocol number.
          * <p>
          * 
-         * >  All protocols are supported. This parameter is required only if you set GroupBy to 5Tuple or Protocol.
+         * >  All protocols are supported. This parameter is required only if you set **GroupBy** to **5Tuple** or **Protocol**.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -425,8 +424,8 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The order for ranking inter-region traffic data. Valid values:
          * <p>
          * 
-         * *   desc: descending order
-         * *   asc: ascending order
+         * *   **desc**: descending order
+         * *   **asc**: ascending order
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

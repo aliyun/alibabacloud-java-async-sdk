@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkInterfacesResponseBody</p>
  */
 public class DescribeNetworkInterfacesResponseBody extends TeaModel {
-    @NameInMap("NetworkInterfaceSets")
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceSets")
     private NetworkInterfaceSets networkInterfaceSets;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeNetworkInterfacesResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the ENIs.
+         * <p>Details of the ENIs.</p>
          */
         public Builder networkInterfaceSets(NetworkInterfaceSets networkInterfaceSets) {
             this.networkInterfaceSets = networkInterfaceSets;
@@ -106,7 +111,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned pagination token which can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,10 +122,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
-         * <p>
+         * <p>The page number of the returned page.</p>
+         * <blockquote>
+         * <p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+         * </blockquote>
          * 
-         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -125,10 +136,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
-         * <p>
+         * <p>The number of entries returned per page.</p>
+         * <blockquote>
+         * <p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+         * </blockquote>
          * 
-         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -136,7 +150,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,10 +161,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of ENIs.
-         * <p>
+         * <p>The total number of ENIs.</p>
+         * <blockquote>
+         * <p>If you specify the <code>MaxResults</code> and <code>NextToken</code> parameters to perform a paged query, the value of the <code>TotalCount</code> response parameter is invalid.</p>
+         * </blockquote>
          * 
-         * > If you specify the `MaxResults` and `NextToken` parameters to perform a paged query, the value of the `TotalCount` response parameter is invalid.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -160,11 +180,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class AssociatedPublicIp extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("PublicIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private String publicIpAddress;
 
         private AssociatedPublicIp(Builder builder) {
@@ -199,7 +225,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String publicIpAddress; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -207,7 +238,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP of the ENI.
+             * <p>The EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>116.62.**.**</code></p>
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -221,17 +255,23 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Attachment extends TeaModel {
-        @NameInMap("DeviceIndex")
+        @com.aliyun.core.annotation.NameInMap("DeviceIndex")
         private Integer deviceIndex;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NetworkCardIndex")
+        @com.aliyun.core.annotation.NameInMap("NetworkCardIndex")
         private Integer networkCardIndex;
 
-        @NameInMap("TrunkNetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("TrunkNetworkInterfaceId")
         private String trunkNetworkInterfaceId;
 
         private Attachment(Builder builder) {
@@ -284,7 +324,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String trunkNetworkInterfaceId; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable to the public.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deviceIndex(Integer deviceIndex) {
                 this.deviceIndex = deviceIndex;
@@ -292,7 +337,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -300,11 +350,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The index of the network interface controller (NIC).
-             * <p>
+             * <p>The index of the network card.</p>
+             * <ul>
+             * <li>If the ENI is in the Available state or if no network card index was specified when the ENI was attached, this parameter is empty.</li>
+             * <li>If the ENI is in the InUse state and a network card index was specified when the ENI was attached, the specified network card index is returned as the value of this parameter.</li>
+             * </ul>
              * 
-             * *   If the ENI is in the Available state or no NIC index is specified when the ENI is attached, this parameter has no value.
-             * *   If the ENI is in the InUse state and an NIC index is specified when the ENI is attached, the specified NIC index is returned as the value of this parameter.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -312,7 +365,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder trunkNetworkInterfaceId(String trunkNetworkInterfaceId) {
                 this.trunkNetworkInterfaceId = trunkNetworkInterfaceId;
@@ -326,8 +384,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Ipv4PrefixSet extends TeaModel {
-        @NameInMap("Ipv4Prefix")
+        @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
         private String ipv4Prefix;
 
         private Ipv4PrefixSet(Builder builder) {
@@ -353,7 +417,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String ipv4Prefix; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <p>The IPv4 prefix of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;
@@ -367,9 +434,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Ipv4PrefixSets extends TeaModel {
-        @NameInMap("Ipv4PrefixSet")
-        private java.util.List < Ipv4PrefixSet> ipv4PrefixSet;
+        @com.aliyun.core.annotation.NameInMap("Ipv4PrefixSet")
+        private java.util.List<Ipv4PrefixSet> ipv4PrefixSet;
 
         private Ipv4PrefixSets(Builder builder) {
             this.ipv4PrefixSet = builder.ipv4PrefixSet;
@@ -386,17 +459,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * @return ipv4PrefixSet
          */
-        public java.util.List < Ipv4PrefixSet> getIpv4PrefixSet() {
+        public java.util.List<Ipv4PrefixSet> getIpv4PrefixSet() {
             return this.ipv4PrefixSet;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv4PrefixSet> ipv4PrefixSet; 
+            private java.util.List<Ipv4PrefixSet> ipv4PrefixSet; 
 
             /**
              * Ipv4PrefixSet.
              */
-            public Builder ipv4PrefixSet(java.util.List < Ipv4PrefixSet> ipv4PrefixSet) {
+            public Builder ipv4PrefixSet(java.util.List<Ipv4PrefixSet> ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;
                 return this;
             }
@@ -408,8 +481,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Ipv6PrefixSet extends TeaModel {
-        @NameInMap("Ipv6Prefix")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Prefix")
         private String ipv6Prefix;
 
         private Ipv6PrefixSet(Builder builder) {
@@ -435,7 +514,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String ipv6Prefix; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <p>The IPv6 prefix of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder ipv6Prefix(String ipv6Prefix) {
                 this.ipv6Prefix = ipv6Prefix;
@@ -449,9 +531,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Ipv6PrefixSets extends TeaModel {
-        @NameInMap("Ipv6PrefixSet")
-        private java.util.List < Ipv6PrefixSet> ipv6PrefixSet;
+        @com.aliyun.core.annotation.NameInMap("Ipv6PrefixSet")
+        private java.util.List<Ipv6PrefixSet> ipv6PrefixSet;
 
         private Ipv6PrefixSets(Builder builder) {
             this.ipv6PrefixSet = builder.ipv6PrefixSet;
@@ -468,17 +556,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * @return ipv6PrefixSet
          */
-        public java.util.List < Ipv6PrefixSet> getIpv6PrefixSet() {
+        public java.util.List<Ipv6PrefixSet> getIpv6PrefixSet() {
             return this.ipv6PrefixSet;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6PrefixSet> ipv6PrefixSet; 
+            private java.util.List<Ipv6PrefixSet> ipv6PrefixSet; 
 
             /**
              * Ipv6PrefixSet.
              */
-            public Builder ipv6PrefixSet(java.util.List < Ipv6PrefixSet> ipv6PrefixSet) {
+            public Builder ipv6PrefixSet(java.util.List<Ipv6PrefixSet> ipv6PrefixSet) {
                 this.ipv6PrefixSet = ipv6PrefixSet;
                 return this;
             }
@@ -490,8 +578,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Ipv6Set extends TeaModel {
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
         private Ipv6Set(Builder builder) {
@@ -517,7 +611,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String ipv6Address; 
 
             /**
-             * The IPv6 address assigned to the ENI.
+             * <p>The IPv6 address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -531,9 +628,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Ipv6Sets extends TeaModel {
-        @NameInMap("Ipv6Set")
-        private java.util.List < Ipv6Set> ipv6Set;
+        @com.aliyun.core.annotation.NameInMap("Ipv6Set")
+        private java.util.List<Ipv6Set> ipv6Set;
 
         private Ipv6Sets(Builder builder) {
             this.ipv6Set = builder.ipv6Set;
@@ -550,17 +653,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * @return ipv6Set
          */
-        public java.util.List < Ipv6Set> getIpv6Set() {
+        public java.util.List<Ipv6Set> getIpv6Set() {
             return this.ipv6Set;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6Set> ipv6Set; 
+            private java.util.List<Ipv6Set> ipv6Set; 
 
             /**
              * Ipv6Set.
              */
-            public Builder ipv6Set(java.util.List < Ipv6Set> ipv6Set) {
+            public Builder ipv6Set(java.util.List<Ipv6Set> ipv6Set) {
                 this.ipv6Set = ipv6Set;
                 return this;
             }
@@ -572,11 +675,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class PrivateIpSetAssociatedPublicIp extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("PublicIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private String publicIpAddress;
 
         private PrivateIpSetAssociatedPublicIp(Builder builder) {
@@ -611,7 +720,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String publicIpAddress; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -619,7 +733,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP of the ENI.
+             * <p>The EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>116.62.**.**</code></p>
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -633,19 +750,29 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class PrivateIpSet extends TeaModel {
-        @NameInMap("AssociatedPublicIp")
+        @com.aliyun.core.annotation.NameInMap("AssociatedPublicIp")
         private PrivateIpSetAssociatedPublicIp associatedPublicIp;
 
-        @NameInMap("Primary")
+        @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateDnsName")
+        private String privateDnsName;
+
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
         private PrivateIpSet(Builder builder) {
             this.associatedPublicIp = builder.associatedPublicIp;
             this.primary = builder.primary;
+            this.privateDnsName = builder.privateDnsName;
             this.privateIpAddress = builder.privateIpAddress;
         }
 
@@ -672,6 +799,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateDnsName
+         */
+        public String getPrivateDnsName() {
+            return this.privateDnsName;
+        }
+
+        /**
          * @return privateIpAddress
          */
         public String getPrivateIpAddress() {
@@ -681,10 +815,11 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private PrivateIpSetAssociatedPublicIp associatedPublicIp; 
             private Boolean primary; 
+            private String privateDnsName; 
             private String privateIpAddress; 
 
             /**
-             * The elastic IP address (EIP) associated with the ENI.
+             * <p>The elastic IP address (EIP) that is associated with the private IP address.</p>
              */
             public Builder associatedPublicIp(PrivateIpSetAssociatedPublicIp associatedPublicIp) {
                 this.associatedPublicIp = associatedPublicIp;
@@ -692,11 +827,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the IP address is the primary private IP address. Valid values:
-             * <p>
+             * <p>Indicates whether the private IP address is the primary private IP address. Valid values:</p>
+             * <ul>
+             * <li>true: The IP address is the primary private IP address.</li>
+             * <li>false: The IP address is a secondary private IP address.</li>
+             * </ul>
              * 
-             * *   true: The IP address is the primary private IP address.
-             * *   false: The IP address is the secondary private IP address.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -704,7 +842,24 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ENI.
+             * <p>The private domain name of the ECS instance.</p>
+             * <blockquote>
+             * <p> A private domain name can be returned in a specific format only when <code>HostnameType</code> is set to <code>IP</code> or <code>InstanceId</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>DnsTestName</p>
+             */
+            public Builder privateDnsName(String privateDnsName) {
+                this.privateDnsName = privateDnsName;
+                return this;
+            }
+
+            /**
+             * <p>The private IP address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.17.**.**</code></p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -718,9 +873,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class PrivateIpSets extends TeaModel {
-        @NameInMap("PrivateIpSet")
-        private java.util.List < PrivateIpSet> privateIpSet;
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
+        private java.util.List<PrivateIpSet> privateIpSet;
 
         private PrivateIpSets(Builder builder) {
             this.privateIpSet = builder.privateIpSet;
@@ -737,17 +898,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * @return privateIpSet
          */
-        public java.util.List < PrivateIpSet> getPrivateIpSet() {
+        public java.util.List<PrivateIpSet> getPrivateIpSet() {
             return this.privateIpSet;
         }
 
         public static final class Builder {
-            private java.util.List < PrivateIpSet> privateIpSet; 
+            private java.util.List<PrivateIpSet> privateIpSet; 
 
             /**
              * PrivateIpSet.
              */
-            public Builder privateIpSet(java.util.List < PrivateIpSet> privateIpSet) {
+            public Builder privateIpSet(java.util.List<PrivateIpSet> privateIpSet) {
                 this.privateIpSet = privateIpSet;
                 return this;
             }
@@ -759,9 +920,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class SecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private java.util.List<String> securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
             this.securityGroupId = builder.securityGroupId;
@@ -778,17 +945,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public java.util.List < String > getSecurityGroupId() {
+        public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private java.util.List<String> securityGroupId; 
 
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+            public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -800,11 +967,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -839,7 +1012,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the ENI.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -847,7 +1023,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the ENI.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -861,9 +1040,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -880,17 +1065,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -902,89 +1087,98 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class NetworkInterfaceSet extends TeaModel {
-        @NameInMap("AssociatedPublicIp")
+        @com.aliyun.core.annotation.NameInMap("AssociatedPublicIp")
         private AssociatedPublicIp associatedPublicIp;
 
-        @NameInMap("Attachment")
+        @com.aliyun.core.annotation.NameInMap("Attachment")
         private Attachment attachment;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeleteOnRelease")
+        @com.aliyun.core.annotation.NameInMap("DeleteOnRelease")
         private Boolean deleteOnRelease;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Ipv4PrefixSets")
+        @com.aliyun.core.annotation.NameInMap("Ipv4PrefixSets")
         private Ipv4PrefixSets ipv4PrefixSets;
 
-        @NameInMap("Ipv6PrefixSets")
+        @com.aliyun.core.annotation.NameInMap("Ipv6PrefixSets")
         private Ipv6PrefixSets ipv6PrefixSets;
 
-        @NameInMap("Ipv6Sets")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Sets")
         private Ipv6Sets ipv6Sets;
 
-        @NameInMap("MacAddress")
+        @com.aliyun.core.annotation.NameInMap("MacAddress")
         private String macAddress;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
 
-        @NameInMap("NetworkInterfaceTrafficMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("PrivateIpSets")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSets")
         private PrivateIpSets privateIpSets;
 
-        @NameInMap("QueueNumber")
+        @com.aliyun.core.annotation.NameInMap("QueueNumber")
         private Integer queueNumber;
 
-        @NameInMap("QueuePairNumber")
+        @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
         private Integer queuePairNumber;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private SecurityGroupIds securityGroupIds;
 
-        @NameInMap("ServiceID")
+        @com.aliyun.core.annotation.NameInMap("ServiceID")
         private Long serviceID;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
+        private Boolean sourceDestCheck;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NetworkInterfaceSet(Builder builder) {
@@ -1010,6 +1204,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             this.securityGroupIds = builder.securityGroupIds;
             this.serviceID = builder.serviceID;
             this.serviceManaged = builder.serviceManaged;
+            this.sourceDestCheck = builder.sourceDestCheck;
             this.status = builder.status;
             this.tags = builder.tags;
             this.type = builder.type;
@@ -1181,6 +1376,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceDestCheck
+         */
+        public Boolean getSourceDestCheck() {
+            return this.sourceDestCheck;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1245,6 +1447,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private SecurityGroupIds securityGroupIds; 
             private Long serviceID; 
             private Boolean serviceManaged; 
+            private Boolean sourceDestCheck; 
             private String status; 
             private Tags tags; 
             private String type; 
@@ -1253,7 +1456,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Details about the EIP that is associated with the secondary private IP address of the ENI.
+             * <p>The EIPs that are associated with the secondary private IP addresses of the ENI.</p>
              */
             public Builder associatedPublicIp(AssociatedPublicIp associatedPublicIp) {
                 this.associatedPublicIp = associatedPublicIp;
@@ -1261,7 +1464,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              */
             public Builder attachment(Attachment attachment) {
                 this.attachment = attachment;
@@ -1269,7 +1474,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ENI was created.
+             * <p>The time when the ENI was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-25T12:31:31Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1277,7 +1485,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteOnRelease.
+             * <p>Indicates whether to retain the ENI when the associated instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteOnRelease(Boolean deleteOnRelease) {
                 this.deleteOnRelease = deleteOnRelease;
@@ -1285,7 +1500,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ENI.
+             * <p>The description of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DescriptionTest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1293,10 +1511,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the ENI is attached.
-             * <p>
+             * <p>The ID of the Elastic Compute Service (ECS) instance to which the ENI is attached.</p>
+             * <blockquote>
+             * <p> If the ENI is managed by other Alibaba Cloud services, no instance ID is returned.</p>
+             * </blockquote>
              * 
-             * > If the ENI is managed and controlled by other Alibaba Cloud services, no instance ID is returned.
+             * <strong>example:</strong>
+             * <p>i-bp1e2l6djkndyuli****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1304,7 +1525,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <p>The IPv4 prefixes of the ENI.</p>
              */
             public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
                 this.ipv4PrefixSets = ipv4PrefixSets;
@@ -1312,7 +1533,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * <p>The IPv6 prefixes of the ENI.</p>
              */
             public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
                 this.ipv6PrefixSets = ipv6PrefixSets;
@@ -1320,7 +1541,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 addresses assigned to the ENI.
+             * <p>The IPv6 addresses of the ENI.</p>
              */
             public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
                 this.ipv6Sets = ipv6Sets;
@@ -1328,7 +1549,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The media access control (MAC) address of the ENI.
+             * <p>The MAC address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:16:3e:12:<strong>:</strong></p>
              */
             public Builder macAddress(String macAddress) {
                 this.macAddress = macAddress;
@@ -1336,7 +1560,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ENI ID.
+             * <p>The ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp125p95hhdhn3ot****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -1344,7 +1571,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ENI.
+             * <p>The name of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-eni-name</p>
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -1352,13 +1582,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The communication mode of the ENI. Valid values:
-             * <p>
+             * <p>The communication mode of the ENI. Valid values:</p>
+             * <ul>
+             * <li>Standard: The TCP communication mode is used.</li>
+             * <li>HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.</p>
+             * </blockquote>
              * 
-             * *   Standard: the TCP communication mode is used.
-             * *   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
-             * 
-             * > You can set this parameter to HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -1366,7 +1600,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the ENI belongs.
+             * <p>The ID of the account to which the ENI belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -1374,7 +1611,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the ENI.
+             * <p>The primary private IP address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.17.**.**</code></p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -1382,7 +1622,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the private IP addresses of the ENI.
+             * <p>Details about the private IP addresses of the ENI.</p>
              */
             public Builder privateIpSets(PrivateIpSets privateIpSets) {
                 this.privateIpSets = privateIpSets;
@@ -1390,13 +1630,16 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queues supported by the ENI.
-             * <p>
+             * <p>The number of queues supported by the ENI.</p>
+             * <ul>
+             * <li>If the ENI is a secondary ENI in the InUse state and the number of queues supported by the ENI has never been modified, the default number of queues per secondary ENI that the instance type supports is returned.</li>
+             * <li>If the ENI is a secondary ENI and the number of queues supported by the ENI has been modified, the new number of queues is returned.</li>
+             * <li>If the ENI is a secondary ENI in the Available state and the number of queues supported by the ENI has never been modified, an empty value is returned.</li>
+             * <li>If the ENI is a primary ENI, the default number of queues per primary ENI that the instance type supports is returned.</li>
+             * </ul>
              * 
-             * *   If the ENI is a secondary ENI in the InUse state and the number of queues supported by the ENI has never been modified, the default number of queues per secondary ENI that the instance type supports is returned.
-             * *   If the number of queues supported by the secondary ENI has been modified, the new number of queues is returned.
-             * *   If the ENI is a secondary ENI in the Available state and the number of queues supported by the ENI has never been modified, an empty value is returned.
-             * *   If the ENI is a primary ENI, the default number of queues per primary ENI that the instance type supports is returned.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder queueNumber(Integer queueNumber) {
                 this.queueNumber = queueNumber;
@@ -1404,7 +1647,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable to the public.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -1412,7 +1660,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the ENI belongs.
+             * <p>The ID of the resource group to which the ENI belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-2ze88m67qx5z****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1420,7 +1671,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the security groups to which the ENI belongs.
+             * <p>The security groups to which the ENI belongs.</p>
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1428,7 +1679,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the distributor to which the ENI belongs.
+             * <p>The ID of the distributor to which the ENI belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678910</p>
              */
             public Builder serviceID(Long serviceID) {
                 this.serviceID = serviceID;
@@ -1436,7 +1690,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.
+             * <p>Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -1444,7 +1701,23 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ENI.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder sourceDestCheck(Boolean sourceDestCheck) {
+                this.sourceDestCheck = sourceDestCheck;
+                return this;
+            }
+
+            /**
+             * <p>The state of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1452,7 +1725,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the ENI.
+             * <p>The tags of the ENI.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1460,7 +1733,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ENI.
+             * <p>The type of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Secondary</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1468,7 +1744,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch with which the ENI is associated.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp16usj2p27htro3****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1476,7 +1755,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the ENI belongs.
+             * <p>The ID of the VPC to which the ENI belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1j7w3gc1cexjqd****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1484,7 +1766,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the ENI.
+             * <p>The zone ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1498,9 +1783,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesResponseBody</p>
+     */
     public static class NetworkInterfaceSets extends TeaModel {
-        @NameInMap("NetworkInterfaceSet")
-        private java.util.List < NetworkInterfaceSet> networkInterfaceSet;
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceSet")
+        private java.util.List<NetworkInterfaceSet> networkInterfaceSet;
 
         private NetworkInterfaceSets(Builder builder) {
             this.networkInterfaceSet = builder.networkInterfaceSet;
@@ -1517,17 +1808,17 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * @return networkInterfaceSet
          */
-        public java.util.List < NetworkInterfaceSet> getNetworkInterfaceSet() {
+        public java.util.List<NetworkInterfaceSet> getNetworkInterfaceSet() {
             return this.networkInterfaceSet;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkInterfaceSet> networkInterfaceSet; 
+            private java.util.List<NetworkInterfaceSet> networkInterfaceSet; 
 
             /**
              * NetworkInterfaceSet.
              */
-            public Builder networkInterfaceSet(java.util.List < NetworkInterfaceSet> networkInterfaceSet) {
+            public Builder networkInterfaceSet(java.util.List<NetworkInterfaceSet> networkInterfaceSet) {
                 this.networkInterfaceSet = networkInterfaceSet;
                 return this;
             }

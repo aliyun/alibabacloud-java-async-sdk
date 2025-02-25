@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFailReasonForRegistrantProfileRealNameVerificationRequest} extends {@link RequestModel}
  *
  * <p>QueryFailReasonForRegistrantProfileRealNameVerificationRequest</p>
  */
 public class QueryFailReasonForRegistrantProfileRealNameVerificationRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegistrantProfileID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfileID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long registrantProfileID;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private QueryFailReasonForRegistrantProfileRealNameVerificationRequest(Builder builder) {
@@ -92,7 +92,10 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationRequest exte
         }
 
         /**
-         * RegistrantProfileID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileID(Long registrantProfileID) {
             this.putQueryParameter("RegistrantProfileID", registrantProfileID);

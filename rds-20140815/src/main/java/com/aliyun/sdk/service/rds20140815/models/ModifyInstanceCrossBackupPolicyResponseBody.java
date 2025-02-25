@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceCrossBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceCrossBackupPolicyResponseBody</p>
  */
 public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupEnabled")
+    @com.aliyun.core.annotation.NameInMap("BackupEnabled")
     private String backupEnabled;
 
-    @NameInMap("CrossBackupRegion")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupRegion")
     private String crossBackupRegion;
 
-    @NameInMap("CrossBackupType")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupType")
     private String crossBackupType;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("LogBackupEnabled")
+    @com.aliyun.core.annotation.NameInMap("LogBackupEnabled")
     private String logBackupEnabled;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetentType")
+    @com.aliyun.core.annotation.NameInMap("RetentType")
     private Integer retentType;
 
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
     private ModifyInstanceCrossBackupPolicyResponseBody(Builder builder) {
@@ -134,11 +139,14 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         private Integer retention; 
 
         /**
-         * The status of the cross-region backup feature on the instance. Valid values:
-         * <p>
+         * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong></li>
+         * <li><strong>Enable</strong></li>
+         * </ul>
          * 
-         * *   **Disable**
-         * *   **Enable**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder backupEnabled(String backupEnabled) {
             this.backupEnabled = backupEnabled;
@@ -146,7 +154,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region in which the cross-region backup files of the instance are stored.
+         * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.crossBackupRegion = crossBackupRegion;
@@ -154,7 +165,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The policy that is used to save the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that all cross-region backup files are saved.
+         * <p>The policy that is used to save the cross-region backup files of the instance. Default value: <strong>1</strong>. The value 1 indicates that all cross-region backup files are saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder crossBackupType(String crossBackupType) {
             this.crossBackupType = crossBackupType;
@@ -162,7 +176,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -170,11 +187,14 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the cross-region log backup feature on the instance. Valid values:
-         * <p>
+         * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong></li>
+         * <li><strong>Enable</strong></li>
+         * </ul>
          * 
-         * *   **Disable**
-         * *   **Enable**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder logBackupEnabled(String logBackupEnabled) {
             this.logBackupEnabled = logBackupEnabled;
@@ -182,7 +202,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the source instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>The region ID of the source instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -190,7 +213,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50A6059D-6DBB-46C6-A851-1EE93C9013CF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +224,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The policy that is used to retain the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.
+         * <p>The policy that is used to retain the cross-region backup files of the instance. Default value: <strong>1</strong>. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retentType(Integer retentType) {
             this.retentType = retentType;
@@ -206,7 +235,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.
+         * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: <strong>7 to 1825</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder retention(Integer retention) {
             this.retention = retention;

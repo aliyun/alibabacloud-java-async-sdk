@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateBackupPolicyResponseBody</p>
  */
 public class UpdateBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateBackupPolicyResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -111,62 +116,68 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateBackupPolicyResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BackupPeriod")
+        @com.aliyun.core.annotation.NameInMap("BackupPeriod")
         private String backupPeriod;
 
-        @NameInMap("BackupPlanBegin")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanBegin")
         private String backupPlanBegin;
 
-        @NameInMap("BackupSetRetention")
+        @com.aliyun.core.annotation.NameInMap("BackupSetRetention")
         private Integer backupSetRetention;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("BackupWay")
+        @com.aliyun.core.annotation.NameInMap("BackupWay")
         private String backupWay;
 
-        @NameInMap("ColdDataBackupInterval")
+        @com.aliyun.core.annotation.NameInMap("ColdDataBackupInterval")
         private Integer coldDataBackupInterval;
 
-        @NameInMap("ColdDataBackupRetention")
+        @com.aliyun.core.annotation.NameInMap("ColdDataBackupRetention")
         private Integer coldDataBackupRetention;
 
-        @NameInMap("CrossRegionDataBackupRetention")
+        @com.aliyun.core.annotation.NameInMap("CrossRegionDataBackupRetention")
         private Integer crossRegionDataBackupRetention;
 
-        @NameInMap("CrossRegionLogBackupRetention")
+        @com.aliyun.core.annotation.NameInMap("CrossRegionLogBackupRetention")
         private Integer crossRegionLogBackupRetention;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("DestCrossRegion")
+        @com.aliyun.core.annotation.NameInMap("DestCrossRegion")
         private String destCrossRegion;
 
-        @NameInMap("ForceCleanOnHighSpaceUsage")
+        @com.aliyun.core.annotation.NameInMap("ForceCleanOnHighSpaceUsage")
         private Integer forceCleanOnHighSpaceUsage;
 
-        @NameInMap("IsCrossRegionDataBackupEnabled")
+        @com.aliyun.core.annotation.NameInMap("IsCrossRegionDataBackupEnabled")
         private Boolean isCrossRegionDataBackupEnabled;
 
-        @NameInMap("IsCrossRegionLogBackupEnabled")
+        @com.aliyun.core.annotation.NameInMap("IsCrossRegionLogBackupEnabled")
         private Boolean isCrossRegionLogBackupEnabled;
 
-        @NameInMap("IsEnabled")
+        @com.aliyun.core.annotation.NameInMap("IsEnabled")
         private Integer isEnabled;
 
-        @NameInMap("LocalLogRetention")
+        @com.aliyun.core.annotation.NameInMap("LocalLogRetention")
         private Integer localLogRetention;
 
-        @NameInMap("LocalLogRetentionNumber")
+        @com.aliyun.core.annotation.NameInMap("LocalLogRetentionNumber")
         private Integer localLogRetentionNumber;
 
-        @NameInMap("LogLocalRetentionSpace")
+        @com.aliyun.core.annotation.NameInMap("LogLocalRetentionSpace")
         private Integer logLocalRetentionSpace;
 
-        @NameInMap("RemoveLogRetention")
+        @com.aliyun.core.annotation.NameInMap("RemoveLogRetention")
         private Integer removeLogRetention;
 
         private Data(Builder builder) {

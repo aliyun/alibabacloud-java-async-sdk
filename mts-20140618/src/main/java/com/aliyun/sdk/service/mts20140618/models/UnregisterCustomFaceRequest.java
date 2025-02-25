@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnregisterCustomFaceRequest} extends {@link RequestModel}
  *
  * <p>UnregisterCustomFaceRequest</p>
  */
 public class UnregisterCustomFaceRequest extends Request {
-    @Query
-    @NameInMap("CategoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String categoryId;
 
-    @Query
-    @NameInMap("FaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String faceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PersonId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PersonId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String personId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private UnregisterCustomFaceRequest(Builder builder) {
@@ -141,7 +141,11 @@ public class UnregisterCustomFaceRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * <p>The ID of the figure library. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique. If you set this parameter to the ID of a system figure library, the system figure library is used. The ID can be up to 120 characters in length and is not case-sensitive. You can call the <a href="https://help.aliyun.com/document_detail/187787.html">ListCustomPersons</a> operation to query the figure library ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CategoryId001-****</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -150,7 +154,11 @@ public class UnregisterCustomFaceRequest extends Request {
         }
 
         /**
-         * FaceId.
+         * <p>The ID of the face. The ID is used to uniquely identify a face. Make sure that the ID is unique. The ID can be up to 120 characters in length and is not case-sensitive. You can call the <a href="https://help.aliyun.com/document_detail/187787.html">ListCustomPersons</a> operation to query the face ID. If you set this parameter to ALL, all the faces associated with the specified figure are deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15****</p>
          */
         public Builder faceId(String faceId) {
             this.putQueryParameter("FaceId", faceId);
@@ -177,7 +185,11 @@ public class UnregisterCustomFaceRequest extends Request {
         }
 
         /**
-         * PersonId.
+         * <p>The ID of the figure. The ID is used to uniquely identify a custom figure. Make sure that the ID is unique. The ID can be up to 120 characters in length and is not case-sensitive. You can call the <a href="https://help.aliyun.com/document_detail/187787.html">ListCustomPersons</a> operation to query the figure ID. If you set this parameter to ALL, all the faces in the specified figure library are deleted, and the custom figure library is deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PersonId001-****</p>
          */
         public Builder personId(String personId) {
             this.putQueryParameter("PersonId", personId);

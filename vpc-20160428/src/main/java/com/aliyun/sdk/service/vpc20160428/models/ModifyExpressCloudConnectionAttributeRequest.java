@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyExpressCloudConnectionAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyExpressCloudConnectionAttributeRequest</p>
  */
 public class ModifyExpressCloudConnectionAttributeRequest extends Request {
-    @Query
-    @NameInMap("BgpAs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpAs")
     private String bgpAs;
 
-    @Query
-    @NameInMap("CeIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CeIp")
     private String ceIp;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EccId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EccId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eccId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeIp")
     private String peIp;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyExpressCloudConnectionAttributeRequest(Builder builder) {
@@ -196,7 +201,10 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         } 
 
         /**
-         * The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.
+         * <p>The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag-ejfge***</p>
          */
         public Builder bgpAs(String bgpAs) {
             this.putQueryParameter("BgpAs", bgpAs);
@@ -205,7 +213,10 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The peer IP address when the SAG device is connected to the cloud.
+         * <p>The peer IP address when the SAG device is connected to the cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>172.16.**.**</code></p>
          */
         public Builder ceIp(String ceIp) {
             this.putQueryParameter("CeIp", ceIp);
@@ -214,7 +225,10 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * Descriptions of ECC.
+         * <p>Descriptions of ECC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECC</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -223,7 +237,11 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the ECC instance.
+         * <p>The ID of the ECC instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecc-bp1t9osmuln*******</p>
          */
         public Builder eccId(String eccId) {
             this.putQueryParameter("EccId", eccId);
@@ -232,7 +250,10 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The name of the ECC instance.
+         * <p>The name of the ECC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -259,7 +280,10 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The on-premises IP address when the SAG device is connected to the cloud.
+         * <p>The on-premises IP address when the SAG device is connected to the cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>10.10.**.**</code></p>
          */
         public Builder peIp(String peIp) {
             this.putQueryParameter("PeIp", peIp);
@@ -268,7 +292,11 @@ public class ModifyExpressCloudConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the ECC instance.
+         * <p>The region ID of the ECC instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

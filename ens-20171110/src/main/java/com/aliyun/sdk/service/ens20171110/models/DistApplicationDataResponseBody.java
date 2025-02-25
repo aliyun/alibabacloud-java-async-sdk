@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
  *
  * <p>DistApplicationDataResponseBody</p>
  */
 public class DistApplicationDataResponseBody extends TeaModel {
-    @NameInMap("DistInstanceIds")
+    @com.aliyun.core.annotation.NameInMap("DistInstanceIds")
     private DistInstanceIds distInstanceIds;
 
-    @NameInMap("DistInstanceTotalCount")
+    @com.aliyun.core.annotation.NameInMap("DistInstanceTotalCount")
     private Integer distInstanceTotalCount;
 
-    @NameInMap("DistResults")
+    @com.aliyun.core.annotation.NameInMap("DistResults")
     private DistResults distResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DistApplicationDataResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DistInstanceIds.
+         * <p>The list of ENS instance IDs.</p>
          */
         public Builder distInstanceIds(DistInstanceIds distInstanceIds) {
             this.distInstanceIds = distInstanceIds;
@@ -82,7 +87,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * DistInstanceTotalCount.
+         * <p>The total number of ENS instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder distInstanceTotalCount(Integer distInstanceTotalCount) {
             this.distInstanceTotalCount = distInstanceTotalCount;
@@ -90,7 +98,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * DistResults.
+         * <p>The distribution result of the data file.</p>
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -98,7 +106,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,9 +122,15 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DistApplicationDataResponseBody</p>
+     */
     public static class DistInstanceIds extends TeaModel {
-        @NameInMap("DistInstanceId")
-        private java.util.List < String > distInstanceId;
+        @com.aliyun.core.annotation.NameInMap("DistInstanceId")
+        private java.util.List<String> distInstanceId;
 
         private DistInstanceIds(Builder builder) {
             this.distInstanceId = builder.distInstanceId;
@@ -130,17 +147,17 @@ public class DistApplicationDataResponseBody extends TeaModel {
         /**
          * @return distInstanceId
          */
-        public java.util.List < String > getDistInstanceId() {
+        public java.util.List<String> getDistInstanceId() {
             return this.distInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > distInstanceId; 
+            private java.util.List<String> distInstanceId; 
 
             /**
              * DistInstanceId.
              */
-            public Builder distInstanceId(java.util.List < String > distInstanceId) {
+            public Builder distInstanceId(java.util.List<String> distInstanceId) {
                 this.distInstanceId = distInstanceId;
                 return this;
             }
@@ -152,17 +169,23 @@ public class DistApplicationDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DistApplicationDataResponseBody</p>
+     */
     public static class DistResult extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private Integer resultCode;
 
-        @NameInMap("ResultDescrip")
+        @com.aliyun.core.annotation.NameInMap("ResultDescrip")
         private String resultDescrip;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private DistResult(Builder builder) {
@@ -215,7 +238,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name.
+             * <p>The name of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gcs-prod-websocket-eip-unicom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +249,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * <p>The error code. The value is of the enumerated data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;
@@ -231,7 +260,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResultDescrip.
+             * <p>The description of the distribution result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder resultDescrip(String resultDescrip) {
                 this.resultDescrip = resultDescrip;
@@ -239,7 +271,10 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -253,9 +288,15 @@ public class DistApplicationDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DistApplicationDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DistApplicationDataResponseBody</p>
+     */
     public static class DistResults extends TeaModel {
-        @NameInMap("DistResult")
-        private java.util.List < DistResult> distResult;
+        @com.aliyun.core.annotation.NameInMap("DistResult")
+        private java.util.List<DistResult> distResult;
 
         private DistResults(Builder builder) {
             this.distResult = builder.distResult;
@@ -272,17 +313,17 @@ public class DistApplicationDataResponseBody extends TeaModel {
         /**
          * @return distResult
          */
-        public java.util.List < DistResult> getDistResult() {
+        public java.util.List<DistResult> getDistResult() {
             return this.distResult;
         }
 
         public static final class Builder {
-            private java.util.List < DistResult> distResult; 
+            private java.util.List<DistResult> distResult; 
 
             /**
              * DistResult.
              */
-            public Builder distResult(java.util.List < DistResult> distResult) {
+            public Builder distResult(java.util.List<DistResult> distResult) {
                 this.distResult = distResult;
                 return this;
             }

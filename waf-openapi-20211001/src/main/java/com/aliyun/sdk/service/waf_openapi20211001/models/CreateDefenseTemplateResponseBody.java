@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDefenseTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDefenseTemplateResponseBody</p>
  */
 public class CreateDefenseTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Long templateId;
 
     private CreateDefenseTemplateResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDefenseTemplateResponseBody extends TeaModel {
         private Long templateId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F48ABDF7-D777-5F26-892A-57349765D7A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateDefenseTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the protection rule template.
+         * <p>The ID of the protection rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2212</p>
          */
         public Builder templateId(Long templateId) {
             this.templateId = templateId;

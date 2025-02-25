@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DelRuleCategoryResponseBody} extends {@link TeaModel}
  *
  * <p>DelRuleCategoryResponseBody</p>
  */
 public class DelRuleCategoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DelRuleCategoryResponseBody(Builder builder) {
@@ -131,8 +136,14 @@ public class DelRuleCategoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DelRuleCategoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DelRuleCategoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Select")
+        @com.aliyun.core.annotation.NameInMap("Select")
         private Boolean select;
 
         private Data(Builder builder) {

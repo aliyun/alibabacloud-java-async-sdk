@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetaCollectionEntityResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMetaCollectionEntityResponseBody</p>
  */
 public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteMetaCollectionEntityResponseBody(Builder builder) {
@@ -98,12 +103,10 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>The error code.</p>
          * 
-         * true: The request was successful.
-         * 
-         * false: The request failed.
+         * <strong>example:</strong>
+         * <p>999999</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -111,7 +114,10 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entity not exist</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -119,7 +125,10 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -127,12 +136,10 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation. Valid values:
-         * <p>
+         * <p>Id of the request</p>
          * 
-         * true: succeeded
-         * 
-         * false: failed
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +147,12 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The result of the operation. Valid values:</p>
+         * <p>true: succeeded</p>
+         * <p>false: failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -148,7 +160,12 @@ public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true</p>
+         * <p>false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

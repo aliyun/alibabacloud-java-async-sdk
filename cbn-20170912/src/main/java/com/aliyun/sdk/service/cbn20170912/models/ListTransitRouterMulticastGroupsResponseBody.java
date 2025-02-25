@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterMulticastGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterMulticastGroupsResponseBody</p>
  */
 public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterMulticastGroups")
-    private java.util.List < TransitRouterMulticastGroups> transitRouterMulticastGroups;
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastGroups")
+    private java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups;
 
     private ListTransitRouterMulticastGroupsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
     /**
      * @return transitRouterMulticastGroups
      */
-    public java.util.List < TransitRouterMulticastGroups> getTransitRouterMulticastGroups() {
+    public java.util.List<TransitRouterMulticastGroups> getTransitRouterMulticastGroups() {
         return this.transitRouterMulticastGroups;
     }
 
@@ -83,10 +88,13 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterMulticastGroups> transitRouterMulticastGroups; 
+        private java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
+         * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
-         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +117,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FB3C4A16-0933-5850-9D43-0C3EA37BCBFB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +128,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -122,9 +139,9 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * A list of multicast groups.
+         * <p>A list of multicast groups.</p>
          */
-        public Builder transitRouterMulticastGroups(java.util.List < TransitRouterMulticastGroups> transitRouterMulticastGroups) {
+        public Builder transitRouterMulticastGroups(java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups) {
             this.transitRouterMulticastGroups = transitRouterMulticastGroups;
             return this;
         }
@@ -135,47 +152,53 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterMulticastGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterMulticastGroupsResponseBody</p>
+     */
     public static class TransitRouterMulticastGroups extends TeaModel {
-        @NameInMap("GroupIpAddress")
+        @com.aliyun.core.annotation.NameInMap("GroupIpAddress")
         private String groupIpAddress;
 
-        @NameInMap("GroupMember")
+        @com.aliyun.core.annotation.NameInMap("GroupMember")
         private Boolean groupMember;
 
-        @NameInMap("GroupSource")
+        @com.aliyun.core.annotation.NameInMap("GroupSource")
         private Boolean groupSource;
 
-        @NameInMap("MemberType")
+        @com.aliyun.core.annotation.NameInMap("MemberType")
         private String memberType;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PeerTransitRouterMulticastDomainId")
+        @com.aliyun.core.annotation.NameInMap("PeerTransitRouterMulticastDomainId")
         private String peerTransitRouterMulticastDomainId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
         private Long resourceOwnerId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterMulticastDomainId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
         private String transitRouterMulticastDomainId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private TransitRouterMulticastGroups(Builder builder) {
@@ -318,7 +341,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The IP address of the multicast group to which the multicast resource belongs.
+             * <p>The IP address of the multicast group to which the multicast resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>239.XX.XX.2</p>
              */
             public Builder groupIpAddress(String groupIpAddress) {
                 this.groupIpAddress = groupIpAddress;
@@ -326,11 +352,14 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the multicast resource is a multicast member. Valid values:
-             * <p>
+             * <p>Indicates whether the multicast resource is a multicast member. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder groupMember(Boolean groupMember) {
                 this.groupMember = groupMember;
@@ -338,11 +367,14 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the multicast resource is a multicast source. Valid values:
-             * <p>
+             * <p>Indicates whether the multicast resource is a multicast source. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder groupSource(Boolean groupSource) {
                 this.groupSource = groupSource;
@@ -350,10 +382,11 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the multicast source.
-             * <p>
+             * <p>The type of the multicast source.</p>
+             * <p>If the value is <strong>Static</strong>, the multicast source is manually specified.</p>
              * 
-             * If the value is **Static**, the multicast source is manually specified.
+             * <strong>example:</strong>
+             * <p>Static</p>
              */
             public Builder memberType(String memberType) {
                 this.memberType = memberType;
@@ -361,7 +394,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI, which is a multicast resource.
+             * <p>The ID of the ENI, which is a multicast resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-p0weuda3lszwzjly****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -369,7 +405,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the multicast domain associated with the multicast resource that is deployed across regions.
+             * <p>The ID of the multicast domain associated with the multicast resource that is deployed across regions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
              */
             public Builder peerTransitRouterMulticastDomainId(String peerTransitRouterMulticastDomainId) {
                 this.peerTransitRouterMulticastDomainId = peerTransitRouterMulticastDomainId;
@@ -377,7 +416,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource associated with the multicast resource.
+             * <p>The ID of the resource associated with the multicast resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-p0w9alkte4w2htrqe****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -385,7 +427,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the multicast resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the multicast resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -393,11 +438,14 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the multicast resource. Valid values:
-             * <p>
+             * <p>The type of the multicast resource. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: The multicast resource is in a VPC.</li>
+             * <li><strong>TR</strong>: The multicast resource is deployed across regions.</li>
+             * </ul>
              * 
-             * *   **VPC**: The multicast resource is in a VPC.
-             * *   **TR**: The multicast resource is deployed across regions.
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -405,10 +453,11 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the multicast member.
-             * <p>
+             * <p>The type of the multicast member.</p>
+             * <p>If the value is <strong>Static</strong>, the multicast member is manually specified.</p>
              * 
-             * If the value is **Static**, the multicast member is manually specified.
+             * <strong>example:</strong>
+             * <p>Static</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -416,12 +465,15 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the multicast resource. Valid values:
-             * <p>
+             * <p>The status of the multicast resource. Valid values:</p>
+             * <ul>
+             * <li><strong>Registering</strong>: being created</li>
+             * <li><strong>Registered</strong>: available</li>
+             * <li><strong>Deregistering</strong>: being deleted</li>
+             * </ul>
              * 
-             * *   **Registering**: being created
-             * *   **Registered**: available
-             * *   **Deregistering**: being deleted
+             * <strong>example:</strong>
+             * <p>Registered</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -429,7 +481,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network instance connection.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-g3kz2k3u76amsk****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -437,7 +492,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the multicast domain.
+             * <p>The ID of the multicast domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-mcast-domain-kx0vk0v7fz8kx4****</p>
              */
             public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
                 this.transitRouterMulticastDomainId = transitRouterMulticastDomainId;
@@ -445,7 +503,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the multicast resource belongs.
+             * <p>The ID of the vSwitch to which the multicast resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-p0w9s2ig1jnwgrbzl****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

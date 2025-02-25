@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRAMDirectoryRequest} extends {@link RequestModel}
  *
  * <p>CreateRAMDirectoryRequest</p>
  */
 public class CreateRAMDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("DirectoryName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryName;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("EnableInternetAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInternetAccess")
     private Boolean enableInternetAccess;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
-    private java.util.List < String > vSwitchId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> vSwitchId;
 
     private CreateRAMDirectoryRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class CreateRAMDirectoryRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
@@ -110,7 +115,7 @@ public class CreateRAMDirectoryRequest extends Request {
         private Boolean enableAdminAccess; 
         private Boolean enableInternetAccess; 
         private String regionId; 
-        private java.util.List < String > vSwitchId; 
+        private java.util.List<String> vSwitchId; 
 
         private Builder() {
             super();
@@ -127,17 +132,33 @@ public class CreateRAMDirectoryRequest extends Request {
         } 
 
         /**
-         * The method that you use to connect clients to cloud desktops. Valid values:
-         * <p>
+         * <p>The method in which the cloud computer is connected.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>VPC</p>
+         * <!-- -->
          * 
-         * *   Internet: connects clients to cloud desktops only over the Internet.
-         * *   VPC: connects clients to cloud desktops only over a VPC.
-         * *   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method when you connect clients to cloud desktops.
+         * <!-- -->
          * 
-         * Default value: Internet.
+         * <!-- -->
+         * </li>
+         * <li><p>Internet (default)</p>
+         * <!-- -->
          * 
+         * <!-- -->
          * 
-         * > The VPC connection method is provided by Alibaba Cloud PrivateLink. You are not charged for PrivateLink. If you set this parameter to VPC or Any, PrivateLink is automatically activated.
+         * <!-- -->
+         * </li>
+         * <li><p>Any</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -146,7 +167,11 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the permissions of the local administrator to the desktop users. Default value: true.
+         * <p>The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDirectoryName</p>
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -155,7 +180,27 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to CreateRAMDirectory.
+         * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><!-- -->
+         * 
+         * <p>true</p>
+         * <!-- -->
+         * 
+         * <p>(default)</p>
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
+         * 
+         * <p>false</p>
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -164,7 +209,26 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>Specifies whether to enable Internet access.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.putQueryParameter("EnableInternetAccess", enableInternetAccess);
@@ -173,7 +237,11 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Internet access feature.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,9 +250,10 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * CreateRAMDirectory
+         * <p>The vSwitch IDs. You can configure only one vSwitch.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
             return this;

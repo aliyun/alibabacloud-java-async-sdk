@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,93 +11,97 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInternetTupleRequest</p>
  */
 public class GetInternetTupleRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List < Long > accountIds;
 
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 253402271999000D)
     private Long beginTime;
 
-    @Query
-    @NameInMap("CloudIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudIp")
     private String cloudIp;
 
-    @Query
-    @NameInMap("CloudIsp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudIpList")
+    private java.util.List < String > cloudIpList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudIsp")
     private String cloudIsp;
 
-    @Query
-    @NameInMap("CloudPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudPort")
     private String cloudPort;
 
-    @Query
-    @NameInMap("Direction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 253402271999000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List < String > instanceList;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OtherCity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherCity")
     private String otherCity;
 
-    @Query
-    @NameInMap("OtherCountry")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherCountry")
     private String otherCountry;
 
-    @Query
-    @NameInMap("OtherIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherIp")
     private String otherIp;
 
-    @Query
-    @NameInMap("OtherIsp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherIsp")
     private String otherIsp;
 
-    @Query
-    @NameInMap("OtherPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherPort")
     private String otherPort;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("TopN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopN")
     private Integer topN;
 
-    @Query
-    @NameInMap("TupleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TupleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer tupleType;
 
-    @Query
-    @NameInMap("UseMultiAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseMultiAccount")
     private Boolean useMultiAccount;
 
     private GetInternetTupleRequest(Builder builder) {
@@ -106,6 +109,7 @@ public class GetInternetTupleRequest extends Request {
         this.accountIds = builder.accountIds;
         this.beginTime = builder.beginTime;
         this.cloudIp = builder.cloudIp;
+        this.cloudIpList = builder.cloudIpList;
         this.cloudIsp = builder.cloudIsp;
         this.cloudPort = builder.cloudPort;
         this.direction = builder.direction;
@@ -158,6 +162,13 @@ public class GetInternetTupleRequest extends Request {
      */
     public String getCloudIp() {
         return this.cloudIp;
+    }
+
+    /**
+     * @return cloudIpList
+     */
+    public java.util.List < String > getCloudIpList() {
+        return this.cloudIpList;
     }
 
     /**
@@ -290,6 +301,7 @@ public class GetInternetTupleRequest extends Request {
         private java.util.List < Long > accountIds; 
         private Long beginTime; 
         private String cloudIp; 
+        private java.util.List < String > cloudIpList; 
         private String cloudIsp; 
         private String cloudPort; 
         private String direction; 
@@ -318,6 +330,7 @@ public class GetInternetTupleRequest extends Request {
             this.accountIds = request.accountIds;
             this.beginTime = request.beginTime;
             this.cloudIp = request.cloudIp;
+            this.cloudIpList = request.cloudIpList;
             this.cloudIsp = request.cloudIsp;
             this.cloudPort = request.cloudPort;
             this.direction = request.direction;
@@ -366,10 +379,20 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
+         * The local IP addresses for filtering.
+         */
+        public Builder cloudIpList(java.util.List < String > cloudIpList) {
+            String cloudIpListShrink = shrink(cloudIpList, "CloudIpList", "json");
+            this.putQueryParameter("CloudIpList", cloudIpListShrink);
+            this.cloudIpList = cloudIpList;
+            return this;
+        }
+
+        /**
          * The local Internet service provider (ISP).
          * <p>
          * 
-         * > In most cases, the value is Alibaba or Alibaba Cloud.
+         * >  In most cases, the value is Alibaba or Alibaba Cloud.
          */
         public Builder cloudIsp(String cloudIsp) {
             this.putQueryParameter("CloudIsp", cloudIsp);
@@ -381,7 +404,7 @@ public class GetInternetTupleRequest extends Request {
          * The local port.
          * <p>
          * 
-         * >  This parameter is required only if you set the **TupleType** parameter to **5**.
+         * >  This parameter is required only if you set GroupBy to CloudPort.
          */
         public Builder cloudPort(String cloudPort) {
             this.putQueryParameter("CloudPort", cloudPort);
@@ -431,7 +454,15 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The metric for data ranking. Default value: **ByteCount**. This value specifies that data is ranked by traffic volume.
+         * The metric for data ranking. Default value: **ByteCount**. This value indicates that Internet traffic data is ranked by traffic volume.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Rtt
+         * *   ByteCount
+         * *   PacketCount
+         * *   RetransmitRate
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -443,7 +474,7 @@ public class GetInternetTupleRequest extends Request {
          * The remote city.
          * <p>
          * 
-         * > This parameter is required only if you set **TupleType** to **5**.
+         * >  This parameter is required only if you set **TupleType** to **2** or **5**.
          */
         public Builder otherCity(String otherCity) {
             this.putQueryParameter("OtherCity", otherCity);
@@ -455,7 +486,7 @@ public class GetInternetTupleRequest extends Request {
          * The remote country.
          * <p>
          * 
-         * > This parameter is required only if you set **TupleType** to **5**.
+         * >  This parameter is required only if you set **TupleType** to **2** or **5**.
          */
         public Builder otherCountry(String otherCountry) {
             this.putQueryParameter("OtherCountry", otherCountry);
@@ -534,7 +565,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
+         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default. Max value: **100**.
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -560,7 +591,7 @@ public class GetInternetTupleRequest extends Request {
          * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
          * <p>
          * 
-         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your customer business manager to apply for permissions.
+         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);

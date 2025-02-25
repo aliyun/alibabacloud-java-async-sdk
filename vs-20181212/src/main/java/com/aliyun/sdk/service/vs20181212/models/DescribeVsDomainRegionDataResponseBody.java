@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainRegionDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainRegionDataResponseBody</p>
  */
 public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private Value value;
 
     private DescribeVsDomainRegionDataResponseBody(Builder builder) {
@@ -151,41 +156,47 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainRegionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainRegionDataResponseBody</p>
+     */
     public static class RegionProportionData extends TeaModel {
-        @NameInMap("AvgObjectSize")
+        @com.aliyun.core.annotation.NameInMap("AvgObjectSize")
         private String avgObjectSize;
 
-        @NameInMap("AvgResponseRate")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseRate")
         private String avgResponseRate;
 
-        @NameInMap("AvgResponseTime")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseTime")
         private String avgResponseTime;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private String bps;
 
-        @NameInMap("BytesProportion")
+        @com.aliyun.core.annotation.NameInMap("BytesProportion")
         private String bytesProportion;
 
-        @NameInMap("Proportion")
+        @com.aliyun.core.annotation.NameInMap("Proportion")
         private String proportion;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private String qps;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionEname")
+        @com.aliyun.core.annotation.NameInMap("RegionEname")
         private String regionEname;
 
-        @NameInMap("ReqErrRate")
+        @com.aliyun.core.annotation.NameInMap("ReqErrRate")
         private String reqErrRate;
 
-        @NameInMap("TotalBytes")
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private String totalBytes;
 
-        @NameInMap("TotalQuery")
+        @com.aliyun.core.annotation.NameInMap("TotalQuery")
         private String totalQuery;
 
         private RegionProportionData(Builder builder) {
@@ -412,9 +423,15 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainRegionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainRegionDataResponseBody</p>
+     */
     public static class Value extends TeaModel {
-        @NameInMap("RegionProportionData")
-        private java.util.List < RegionProportionData> regionProportionData;
+        @com.aliyun.core.annotation.NameInMap("RegionProportionData")
+        private java.util.List<RegionProportionData> regionProportionData;
 
         private Value(Builder builder) {
             this.regionProportionData = builder.regionProportionData;
@@ -431,17 +448,17 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
         /**
          * @return regionProportionData
          */
-        public java.util.List < RegionProportionData> getRegionProportionData() {
+        public java.util.List<RegionProportionData> getRegionProportionData() {
             return this.regionProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < RegionProportionData> regionProportionData; 
+            private java.util.List<RegionProportionData> regionProportionData; 
 
             /**
              * RegionProportionData.
              */
-            public Builder regionProportionData(java.util.List < RegionProportionData> regionProportionData) {
+            public Builder regionProportionData(java.util.List<RegionProportionData> regionProportionData) {
                 this.regionProportionData = regionProportionData;
                 return this;
             }

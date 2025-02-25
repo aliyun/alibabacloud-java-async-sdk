@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewReservedInstancesRequest} extends {@link RequestModel}
  *
  * <p>RenewReservedInstancesRequest</p>
  */
 public class RenewReservedInstancesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ReservedInstanceId")
-    private java.util.List < String > reservedInstanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
+    private java.util.List<String> reservedInstanceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private RenewReservedInstancesRequest(Builder builder) {
@@ -155,7 +160,7 @@ public class RenewReservedInstancesRequest extends Request {
     /**
      * @return reservedInstanceId
      */
-    public java.util.List < String > getReservedInstanceId() {
+    public java.util.List<String> getReservedInstanceId() {
         return this.reservedInstanceId;
     }
 
@@ -183,7 +188,7 @@ public class RenewReservedInstancesRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
-        private java.util.List < String > reservedInstanceId; 
+        private java.util.List<String> reservedInstanceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -217,10 +222,15 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * Valid values: 12 and 36. Default value: 12.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -229,7 +239,11 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * <p>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
+         * <p>Valid values: 12 and 36. Default value: 12.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -238,13 +252,10 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the reserved instance. Valid values:
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -271,10 +282,12 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the validity period of the reserved instance.
-         * <p>
+         * <p>The validity period of the reserved instance.</p>
+         * <p>Valid values: 1 and 3.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Set the value to Year.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -283,7 +296,11 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The unit of the validity period of the reserved instance.</p>
+         * <p>Set the value to Year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -292,12 +309,11 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The validity period of the reserved instance.
-         * <p>
+         * <p>The region ID of the reserved instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * Valid values: 1 and 3.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -306,12 +322,9 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the reserved instance. You can call the [DescribeReservedInstances](~~100065~~) operation to query the IDs of reserved instances that you purchased.
-         * <p>
-         * 
-         * You can specify up to 10 IDs of reserved instances in a single request.
+         * <p>The IDs of the reserved instances.</p>
          */
-        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+        public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
             this.reservedInstanceId = reservedInstanceId;
             return this;

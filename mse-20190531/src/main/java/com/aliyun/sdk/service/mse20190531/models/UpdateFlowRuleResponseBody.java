@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFlowRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateFlowRuleResponseBody</p>
  */
 public class UpdateFlowRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateFlowRuleResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the node.
+         * <p>The data of the node.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +118,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,34 +129,30 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   true
+         * <p>The request was successful.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>The request failed.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     The request was successful.
-         * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The request failed.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,32 +165,41 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateFlowRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateFlowRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ControlBehavior")
+        @com.aliyun.core.annotation.NameInMap("ControlBehavior")
         private Integer controlBehavior;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MaxQueueingTimeMs")
+        @com.aliyun.core.annotation.NameInMap("LimitApp")
+        private String limitApp;
+
+        @com.aliyun.core.annotation.NameInMap("MaxQueueingTimeMs")
         private Integer maxQueueingTimeMs;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private Data(Builder builder) {
@@ -192,6 +208,7 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             this.controlBehavior = builder.controlBehavior;
             this.enable = builder.enable;
             this.id = builder.id;
+            this.limitApp = builder.limitApp;
             this.maxQueueingTimeMs = builder.maxQueueingTimeMs;
             this.namespace = builder.namespace;
             this.resource = builder.resource;
@@ -242,6 +259,13 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return limitApp
+         */
+        public String getLimitApp() {
+            return this.limitApp;
+        }
+
+        /**
          * @return maxQueueingTimeMs
          */
         public Integer getMaxQueueingTimeMs() {
@@ -275,13 +299,17 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             private Integer controlBehavior; 
             private Boolean enable; 
             private Long id; 
+            private String limitApp; 
             private Integer maxQueueingTimeMs; 
             private String namespace; 
             private String resource; 
             private Float threshold; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hpn9ac29kz@e31a4b871******</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -289,7 +317,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spring-cloud-a</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -297,34 +328,30 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The throttling effect.
-             * <p>
+             * <p>The throttling effect.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>0</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   0
+             * <p>fast failure</p>
+             * <!-- -->
+             * </li>
+             * <li><p>2</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>in queue</p>
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     fast failure
-             * 
-             *     <!-- -->
-             * 
-             * *   2
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     in queue
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder controlBehavior(Integer controlBehavior) {
                 this.controlBehavior = controlBehavior;
@@ -332,26 +359,26 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule was enabled.
-             * <p>
+             * <p>Indicates whether the rule was enabled.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid value:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -359,7 +386,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -367,7 +397,18 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.
+             * LimitApp.
+             */
+            public Builder limitApp(String limitApp) {
+                this.limitApp = limitApp;
+                return this;
+            }
+
+            /**
+             * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder maxQueueingTimeMs(Integer maxQueueingTimeMs) {
                 this.maxQueueingTimeMs = maxQueueingTimeMs;
@@ -375,7 +416,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -383,7 +427,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API resource.
+             * <p>The name of the API resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/c</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -391,7 +438,10 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The throttling threshold.
+             * <p>The throttling threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

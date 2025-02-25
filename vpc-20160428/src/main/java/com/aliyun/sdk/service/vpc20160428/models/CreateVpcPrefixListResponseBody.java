@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcPrefixListResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpcPrefixListResponseBody</p>
  */
 public class CreateVpcPrefixListResponseBody extends TeaModel {
-    @NameInMap("PrefixListId")
+    @com.aliyun.core.annotation.NameInMap("PrefixListId")
     private String prefixListId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private CreateVpcPrefixListResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The ID of the prefix list.
+         * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-0b700s2ee3***</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = prefixListId;
@@ -70,7 +78,10 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class CreateVpcPrefixListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the prefix list belongs.
+         * <p>The ID of the resource group to which the prefix list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

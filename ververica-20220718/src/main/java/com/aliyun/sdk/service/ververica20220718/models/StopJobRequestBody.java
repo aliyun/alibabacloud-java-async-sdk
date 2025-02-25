@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopJobRequestBody} extends {@link TeaModel}
  *
  * <p>StopJobRequestBody</p>
  */
 public class StopJobRequestBody extends TeaModel {
-    @NameInMap("stopStrategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("stopStrategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stopStrategy;
 
     private StopJobRequestBody(Builder builder) {
@@ -39,7 +44,10 @@ public class StopJobRequestBody extends TeaModel {
         private String stopStrategy; 
 
         /**
-         * stopStrategy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder stopStrategy(String stopStrategy) {
             this.stopStrategy = stopStrategy;

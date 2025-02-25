@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLineageRelationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLineageRelationResponseBody</p>
  */
 public class DeleteLineageRelationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteLineageRelationResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010040007</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qualifiedName should be in format as entity-table.entity-guid</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +136,10 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID: used for locating logs and troubleshooting</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,12 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Operation result:</p>
+         * <p>true: Success</p>
+         * <p>false: Failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -138,7 +160,12 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the call was successful. Values are as follows:</p>
+         * <p>true: success</p>
+         * <p>false: failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

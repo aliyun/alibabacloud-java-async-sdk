@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
  *
  * <p>PickOutboundNumbersResponseBody</p>
  */
 public class PickOutboundNumbersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PickOutboundNumbersResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -96,7 +101,7 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -131,14 +136,20 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickOutboundNumbersResponseBody</p>
+     */
     public static class Callee extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private Callee(Builder builder) {
@@ -212,14 +223,20 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickOutboundNumbersResponseBody</p>
+     */
     public static class Caller extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private Caller(Builder builder) {
@@ -293,11 +310,17 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PickOutboundNumbersResponseBody} extends {@link TeaModel}
+     *
+     * <p>PickOutboundNumbersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Callee")
+        @com.aliyun.core.annotation.NameInMap("Callee")
         private Callee callee;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private Caller caller;
 
         private Data(Builder builder) {

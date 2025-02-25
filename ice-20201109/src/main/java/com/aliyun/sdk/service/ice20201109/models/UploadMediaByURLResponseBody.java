@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadMediaByURLResponseBody} extends {@link TeaModel}
  *
  * <p>UploadMediaByURLResponseBody</p>
  */
 public class UploadMediaByURLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadJobs")
-    private java.util.List < UploadJobs> uploadJobs;
+    @com.aliyun.core.annotation.NameInMap("UploadJobs")
+    private java.util.List<UploadJobs> uploadJobs;
 
     private UploadMediaByURLResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     /**
      * @return uploadJobs
      */
-    public java.util.List < UploadJobs> getUploadJobs() {
+    public java.util.List<UploadJobs> getUploadJobs() {
         return this.uploadJobs;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UploadJobs> uploadJobs; 
+        private java.util.List<UploadJobs> uploadJobs; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>83B7-7F87-4792-BFE9-63CD2137</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         }
 
         /**
-         * UploadJobs.
+         * <p>The information about upload jobs.</p>
          */
-        public Builder uploadJobs(java.util.List < UploadJobs> uploadJobs) {
+        public Builder uploadJobs(java.util.List<UploadJobs> uploadJobs) {
             this.uploadJobs = uploadJobs;
             return this;
         }
@@ -71,14 +79,20 @@ public class UploadMediaByURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadMediaByURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>UploadMediaByURLResponseBody</p>
+     */
     public static class UploadJobs extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("SourceURL")
+        @com.aliyun.core.annotation.NameInMap("SourceURL")
         private String sourceURL;
 
         private UploadJobs(Builder builder) {
@@ -122,7 +136,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             private String sourceURL; 
 
             /**
-             * JobId.
+             * <p>The ID of the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20ce1e05dba64576b96e9683879f0***</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -130,7 +147,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f476988629f54a7b8a4ba90d1a6c7***</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -138,7 +158,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
             }
 
             /**
-             * SourceURL.
+             * <p>The URL of the source file that is uploaded in the upload job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example****.mp4">http://example****.mp4</a></p>
              */
             public Builder sourceURL(String sourceURL) {
                 this.sourceURL = sourceURL;

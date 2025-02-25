@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantUserPermissionRequest} extends {@link RequestModel}
  *
  * <p>GrantUserPermissionRequest</p>
  */
 public class GrantUserPermissionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbId")
     private String dbId;
 
-    @Query
-    @NameInMap("DsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dsType;
 
-    @Query
-    @NameInMap("ExpireDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expireDate;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
-    @Query
-    @NameInMap("Logic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logic")
     private Boolean logic;
 
-    @Query
-    @NameInMap("PermTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permTypes;
 
-    @Query
-    @NameInMap("TableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableId")
     private String tableId;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private GrantUserPermissionRequest(Builder builder) {
@@ -207,10 +212,13 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the database. You can call the [ListDatabases](~~141873~~) operation to query the ID of a physical database and the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
-         * <p>
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to query the ID of a physical database and the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to query the ID of a logical database.</p>
+         * <blockquote>
+         * <p> The value of the DatabaseId parameter is that of the DbId parameter.</p>
+         * </blockquote>
          * 
-         * >  The value of the DatabaseId parameter is that of the DbId parameter.
+         * <strong>example:</strong>
+         * <p>1***</p>
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -219,14 +227,18 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The permissions on a specific type of object that you want to grant to the user. Valid values:
-         * <p>
+         * <p>The permissions on a specific type of object that you want to grant to the user. Valid values:</p>
+         * <ul>
+         * <li>INSTANCE: permissions on instances</li>
+         * <li>DATABASE: permissions on physical databases</li>
+         * <li>LOGIC_DATABASE: permissions on logical databases</li>
+         * <li>TABLE: permissions on physical tables</li>
+         * <li>LOGIC_TABLE: permissions on logical tables</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   INSTANCE: permissions on instances
-         * *   DATABASE: permissions on physical databases
-         * *   LOGIC_DATABASE: permissions on logical databases
-         * *   TABLE: permissions on physical tables
-         * *   LOGIC_TABLE: permissions on logical tables
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
          */
         public Builder dsType(String dsType) {
             this.putQueryParameter("DsType", dsType);
@@ -235,7 +247,11 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The time when the permissions expire.
+         * <p>The time when the permissions expire.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-12 00:00:00</p>
          */
         public Builder expireDate(String expireDate) {
             this.putQueryParameter("ExpireDate", expireDate);
@@ -244,7 +260,10 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You must specify this parameter if you grant permissions on an instance to the user. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You must specify this parameter if you grant permissions on an instance to the user. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174****</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -253,11 +272,14 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. You must specify this parameter if you grant permissions on a database to the user. Valid values:
-         * <p>
+         * <p>Specifies whether the database is a logical database. You must specify this parameter if you grant permissions on a database to the user. Valid values:</p>
+         * <ul>
+         * <li>true: The database is a logical database.</li>
+         * <li>false: The database is a physical database.</li>
+         * </ul>
          * 
-         * *   true: The database is a logical database.
-         * *   false: The database is a physical database.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -266,14 +288,18 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The permission type. Separate multiple permission types with commas (,). Valid values:
-         * <p>
+         * <p>The permission type. Separate multiple permission types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>QUERY</strong>: the query permissions</li>
+         * <li><strong>EXPORT</strong>: the export permissions</li>
+         * <li><strong>CORRECT</strong>: the change permissions</li>
+         * <li><strong>LOGIN</strong>: the logon permissions</li>
+         * <li><strong>PERF</strong>: the query permissions on the performance details of the instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **QUERY**: the query permissions
-         * *   **EXPORT**: the export permissions
-         * *   **CORRECT**: the change permissions
-         * *   **LOGIN**: the logon permissions
-         * *   **PERF**: the query permissions on the performance details of the instance
+         * <strong>example:</strong>
+         * <p>QUERY</p>
          */
         public Builder permTypes(String permTypes) {
             this.putQueryParameter("PermTypes", permTypes);
@@ -282,7 +308,10 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the table. You must specify this parameter if you grant permissions on a table to the user. You can call the [ListTables](~~141878~~) operation to query the table ID.
+         * <p>The ID of the table. You must specify this parameter if you grant permissions on a table to the user. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132***</p>
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -291,7 +320,10 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The name of the table. You must specify this parameter if you grant permissions on a table to the user.
+         * <p>The name of the table. You must specify this parameter if you grant permissions on a table to the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -300,10 +332,13 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * >  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -312,10 +347,14 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the user. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the ID of the user.
-         * <p>
+         * <p>The ID of the user. You can call the <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> or <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> operation to query the ID of the user.</p>
+         * <blockquote>
+         * <p> The user ID is different from the ID of your Alibaba Cloud account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The user ID is different from the ID of your Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

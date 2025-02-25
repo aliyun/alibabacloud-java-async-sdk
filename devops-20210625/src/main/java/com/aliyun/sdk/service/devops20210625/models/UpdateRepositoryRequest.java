@@ -1,97 +1,102 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepositoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateRepositoryRequest</p>
  */
 public class UpdateRepositoryRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("adminSettingLanguage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("adminSettingLanguage")
     private String adminSettingLanguage;
 
-    @Body
-    @NameInMap("avatar")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("avatar")
     private String avatar;
 
-    @Body
-    @NameInMap("buildsEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buildsEnabled")
     private Boolean buildsEnabled;
 
-    @Body
-    @NameInMap("checkEmail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("checkEmail")
     private Boolean checkEmail;
 
-    @Body
-    @NameInMap("defaultBranch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("defaultBranch")
     private String defaultBranch;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @Body
-    @NameInMap("issuesEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("issuesEnabled")
     private Boolean issuesEnabled;
 
-    @Body
-    @NameInMap("mergeRequestsEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mergeRequestsEnabled")
     private Boolean mergeRequestsEnabled;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("openCloneDownloadControl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("openCloneDownloadControl")
     private Boolean openCloneDownloadControl;
 
-    @Body
-    @NameInMap("path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("path")
     private String path;
 
-    @Body
-    @NameInMap("projectCloneDownloadMethodList")
-    private java.util.List < ProjectCloneDownloadMethodList> projectCloneDownloadMethodList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("projectCloneDownloadMethodList")
+    private java.util.List<ProjectCloneDownloadMethodList> projectCloneDownloadMethodList;
 
-    @Body
-    @NameInMap("projectCloneDownloadRoleList")
-    private java.util.List < ProjectCloneDownloadRoleList> projectCloneDownloadRoleList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("projectCloneDownloadRoleList")
+    private java.util.List<ProjectCloneDownloadRoleList> projectCloneDownloadRoleList;
 
-    @Body
-    @NameInMap("snippetsEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("snippetsEnabled")
     private Boolean snippetsEnabled;
 
-    @Body
-    @NameInMap("visibilityLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibilityLevel")
     private Integer visibilityLevel;
 
-    @Body
-    @NameInMap("wikiEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wikiEnabled")
     private Boolean wikiEnabled;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpdateRepositoryRequest(Builder builder) {
@@ -232,14 +237,14 @@ public class UpdateRepositoryRequest extends Request {
     /**
      * @return projectCloneDownloadMethodList
      */
-    public java.util.List < ProjectCloneDownloadMethodList> getProjectCloneDownloadMethodList() {
+    public java.util.List<ProjectCloneDownloadMethodList> getProjectCloneDownloadMethodList() {
         return this.projectCloneDownloadMethodList;
     }
 
     /**
      * @return projectCloneDownloadRoleList
      */
-    public java.util.List < ProjectCloneDownloadRoleList> getProjectCloneDownloadRoleList() {
+    public java.util.List<ProjectCloneDownloadRoleList> getProjectCloneDownloadRoleList() {
         return this.projectCloneDownloadRoleList;
     }
 
@@ -286,8 +291,8 @@ public class UpdateRepositoryRequest extends Request {
         private String name; 
         private Boolean openCloneDownloadControl; 
         private String path; 
-        private java.util.List < ProjectCloneDownloadMethodList> projectCloneDownloadMethodList; 
-        private java.util.List < ProjectCloneDownloadRoleList> projectCloneDownloadRoleList; 
+        private java.util.List<ProjectCloneDownloadMethodList> projectCloneDownloadMethodList; 
+        private java.util.List<ProjectCloneDownloadRoleList> projectCloneDownloadRoleList; 
         private Boolean snippetsEnabled; 
         private Integer visibilityLevel; 
         private Boolean wikiEnabled; 
@@ -322,7 +327,10 @@ public class UpdateRepositoryRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2080398</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -450,7 +458,7 @@ public class UpdateRepositoryRequest extends Request {
         /**
          * projectCloneDownloadMethodList.
          */
-        public Builder projectCloneDownloadMethodList(java.util.List < ProjectCloneDownloadMethodList> projectCloneDownloadMethodList) {
+        public Builder projectCloneDownloadMethodList(java.util.List<ProjectCloneDownloadMethodList> projectCloneDownloadMethodList) {
             this.putBodyParameter("projectCloneDownloadMethodList", projectCloneDownloadMethodList);
             this.projectCloneDownloadMethodList = projectCloneDownloadMethodList;
             return this;
@@ -459,7 +467,7 @@ public class UpdateRepositoryRequest extends Request {
         /**
          * projectCloneDownloadRoleList.
          */
-        public Builder projectCloneDownloadRoleList(java.util.List < ProjectCloneDownloadRoleList> projectCloneDownloadRoleList) {
+        public Builder projectCloneDownloadRoleList(java.util.List<ProjectCloneDownloadRoleList> projectCloneDownloadRoleList) {
             this.putBodyParameter("projectCloneDownloadRoleList", projectCloneDownloadRoleList);
             this.projectCloneDownloadRoleList = projectCloneDownloadRoleList;
             return this;
@@ -493,7 +501,10 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -508,11 +519,17 @@ public class UpdateRepositoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRepositoryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryRequest</p>
+     */
     public static class ProjectCloneDownloadMethodList extends TeaModel {
-        @NameInMap("allowed")
+        @com.aliyun.core.annotation.NameInMap("allowed")
         private Boolean allowed;
 
-        @NameInMap("permissionCode")
+        @com.aliyun.core.annotation.NameInMap("permissionCode")
         private String permissionCode;
 
         private ProjectCloneDownloadMethodList(Builder builder) {
@@ -569,11 +586,17 @@ public class UpdateRepositoryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRepositoryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryRequest</p>
+     */
     public static class ProjectCloneDownloadRoleList extends TeaModel {
-        @NameInMap("allowed")
+        @com.aliyun.core.annotation.NameInMap("allowed")
         private Boolean allowed;
 
-        @NameInMap("roleCode")
+        @com.aliyun.core.annotation.NameInMap("roleCode")
         private Integer roleCode;
 
         private ProjectCloneDownloadRoleList(Builder builder) {

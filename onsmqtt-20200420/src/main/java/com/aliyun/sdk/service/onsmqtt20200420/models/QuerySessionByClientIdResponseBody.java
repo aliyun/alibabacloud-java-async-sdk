@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySessionByClientIdResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySessionByClientIdResponseBody</p>
  */
 public class QuerySessionByClientIdResponseBody extends TeaModel {
-    @NameInMap("OnlineStatus")
+    @com.aliyun.core.annotation.NameInMap("OnlineStatus")
     private Boolean onlineStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QuerySessionByClientIdResponseBody(Builder builder) {
@@ -50,7 +55,14 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OnlineStatus.
+         * <p>Indicates whether the ApsaraMQ for MQTT client is connected to the ApsaraMQ for MQTT broker. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onlineStatus(Boolean onlineStatus) {
             this.onlineStatus = onlineStatus;
@@ -58,7 +70,10 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. This parameter is a common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4581CCF-62AF-44D9-B5B4-D1DBBC0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

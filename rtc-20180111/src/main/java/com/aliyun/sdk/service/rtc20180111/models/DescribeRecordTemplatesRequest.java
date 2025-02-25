@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecordTemplatesRequest</p>
  */
 public class DescribeRecordTemplatesRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("TemplateIds")
-    private java.util.List < String > templateIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIds")
+    private java.util.List<String> templateIds;
 
     private DescribeRecordTemplatesRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class DescribeRecordTemplatesRequest extends Request {
     /**
      * @return templateIds
      */
-    public java.util.List < String > getTemplateIds() {
+    public java.util.List<String> getTemplateIds() {
         return this.templateIds;
     }
 
@@ -95,23 +100,26 @@ public class DescribeRecordTemplatesRequest extends Request {
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private java.util.List < String > templateIds; 
+        private java.util.List<String> templateIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRecordTemplatesRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.templateIds = response.templateIds;
+        private Builder(DescribeRecordTemplatesRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.templateIds = request.templateIds;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,7 +128,7 @@ public class DescribeRecordTemplatesRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>1</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -149,7 +157,7 @@ public class DescribeRecordTemplatesRequest extends Request {
         /**
          * TemplateIds.
          */
-        public Builder templateIds(java.util.List < String > templateIds) {
+        public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
             return this;

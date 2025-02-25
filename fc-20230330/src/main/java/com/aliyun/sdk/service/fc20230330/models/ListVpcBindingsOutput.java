@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcBindingsOutput} extends {@link TeaModel}
  *
  * <p>ListVpcBindingsOutput</p>
  */
 public class ListVpcBindingsOutput extends TeaModel {
-    @NameInMap("vpcIds")
+    @com.aliyun.core.annotation.NameInMap("vpcIds")
     private java.util.List < String > vpcIds;
 
     private ListVpcBindingsOutput(Builder builder) {

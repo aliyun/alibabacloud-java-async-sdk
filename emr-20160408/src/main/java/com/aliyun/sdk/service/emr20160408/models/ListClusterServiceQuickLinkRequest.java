@@ -102,13 +102,13 @@ public class ListClusterServiceQuickLinkRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterServiceQuickLinkRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.directType = response.directType;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(ListClusterServiceQuickLinkRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.directType = request.directType;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

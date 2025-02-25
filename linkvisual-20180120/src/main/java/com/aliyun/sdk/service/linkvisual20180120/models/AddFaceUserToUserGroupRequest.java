@@ -77,11 +77,11 @@ public class AddFaceUserToUserGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddFaceUserToUserGroupRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.userGroupId = response.userGroupId;
-            this.userId = response.userId;
+        private Builder(AddFaceUserToUserGroupRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.userGroupId = request.userGroupId;
+            this.userId = request.userId;
         } 
 
         /**

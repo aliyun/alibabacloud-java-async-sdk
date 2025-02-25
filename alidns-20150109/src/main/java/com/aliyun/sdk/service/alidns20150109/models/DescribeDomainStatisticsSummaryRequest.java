@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainStatisticsSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainStatisticsSummaryRequest</p>
  */
 public class DescribeDomainStatisticsSummaryRequest extends Request {
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("SearchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchMode")
     private String searchMode;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
-    @Query
-    @NameInMap("Threshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
     private Long threshold;
 
     private DescribeDomainStatisticsSummaryRequest(Builder builder) {
@@ -154,10 +159,11 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>The default value is the day when you perform the operation.</p>
          * 
-         * The default value is the day when you perform the operation.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -166,7 +172,10 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The keyword for searches in %KeyWord% mode. The value is not case-sensitive.
+         * <p>The keyword for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -175,7 +184,10 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -184,7 +196,10 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +208,10 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Minimum value: **1**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,11 +220,14 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The search mode of the keyword. Valid values:
-         * <p>
+         * <p>The search mode of the keyword. Valid values:</p>
+         * <ul>
+         * <li><strong>LIKE</strong>: fuzzy match (default).</li>
+         * <li><strong>EXACT</strong>: exact match.</li>
+         * </ul>
          * 
-         * *   **LIKE**: fuzzy match (default).
-         * *   **EXACT**: exact match.
+         * <strong>example:</strong>
+         * <p>LIKE</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -215,10 +236,12 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>You can only query DNS records of the last 90 days.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can only query DNS records of the last 90 days.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -227,7 +250,10 @@ public class DescribeDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The threshold of query volume that can be obtained. You can also obtain data about a domain name with the query volume less than or equal to the threshold. For example, if you set this parameter to 100, you can query domain names with less than 100 queries.
+         * <p>The threshold of query volume that can be obtained. You can also obtain data about a domain name with the query volume less than or equal to the threshold. For example, if you set this parameter to 100, you can query domain names with less than 100 queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder threshold(Long threshold) {
             this.putQueryParameter("Threshold", threshold);

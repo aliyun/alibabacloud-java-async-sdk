@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkAppMetricsResponseBody</p>
  */
 public class GetSparkAppMetricsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkAppMetricsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkAppMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkAppMetricsResponseBody</p>
+     */
     public static class ScanMetrics extends TeaModel {
-        @NameInMap("OutputRowsCount")
+        @com.aliyun.core.annotation.NameInMap("OutputRowsCount")
         private Long outputRowsCount;
 
-        @NameInMap("TotalReadFileSizeInByte")
+        @com.aliyun.core.annotation.NameInMap("TotalReadFileSizeInByte")
         private Long totalReadFileSizeInByte;
 
         private ScanMetrics(Builder builder) {
@@ -110,7 +124,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             private Long totalReadFileSizeInByte; 
 
             /**
-             * The number of scanned rows.
+             * <p>The number of scanned rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder outputRowsCount(Long outputRowsCount) {
                 this.outputRowsCount = outputRowsCount;
@@ -118,7 +135,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scanned bytes.
+             * <p>The number of scanned bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder totalReadFileSizeInByte(Long totalReadFileSizeInByte) {
                 this.totalReadFileSizeInByte = totalReadFileSizeInByte;
@@ -132,20 +152,26 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSparkAppMetricsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkAppMetricsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AttemptId")
+        @com.aliyun.core.annotation.NameInMap("AttemptId")
         private String attemptId;
 
-        @NameInMap("EventLogPath")
+        @com.aliyun.core.annotation.NameInMap("EventLogPath")
         private String eventLogPath;
 
-        @NameInMap("Finished")
+        @com.aliyun.core.annotation.NameInMap("Finished")
         private Boolean finished;
 
-        @NameInMap("ScanMetrics")
+        @com.aliyun.core.annotation.NameInMap("ScanMetrics")
         private ScanMetrics scanMetrics;
 
         private Data(Builder builder) {
@@ -207,7 +233,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             private ScanMetrics scanMetrics; 
 
             /**
-             * The ID of the Spark application.
+             * <p>The ID of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202302051515shfa865f80003691</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -215,7 +244,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The attempt ID of the Spark application.
+             * <p>The attempt ID of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202301061000hz57d797b0000201-0001</p>
              */
             public Builder attemptId(String attemptId) {
                 this.attemptId = attemptId;
@@ -223,7 +255,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the event log.
+             * <p>The path of the event log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://path/to/eventLog</p>
              */
             public Builder eventLogPath(String eventLogPath) {
                 this.eventLogPath = eventLogPath;
@@ -231,11 +266,14 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether parsing is complete. Valid values:
-             * <p>
+             * <p>Indicates whether parsing is complete. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder finished(Boolean finished) {
                 this.finished = finished;
@@ -243,7 +281,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The metrics.
+             * <p>The metrics.</p>
              */
             public Builder scanMetrics(ScanMetrics scanMetrics) {
                 this.scanMetrics = scanMetrics;

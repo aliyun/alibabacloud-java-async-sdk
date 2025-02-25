@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMySqlDataSourceRequest</p>
  */
 public class CreateMySqlDataSourceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DgInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DgInstanceId")
     private String dgInstanceId;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String name;
 
-    @Body
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Body
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @Body
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Body
-    @NameInMap("UserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseSsl")
+    private Boolean useSsl;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
-    @Body
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateMySqlDataSourceRequest(Builder builder) {
@@ -76,6 +79,7 @@ public class CreateMySqlDataSourceRequest extends Request {
         this.port = builder.port;
         this.schema = builder.schema;
         this.type = builder.type;
+        this.useSsl = builder.useSsl;
         this.userName = builder.userName;
         this.vpcId = builder.vpcId;
     }
@@ -164,6 +168,13 @@ public class CreateMySqlDataSourceRequest extends Request {
     }
 
     /**
+     * @return useSsl
+     */
+    public Boolean getUseSsl() {
+        return this.useSsl;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -188,6 +199,7 @@ public class CreateMySqlDataSourceRequest extends Request {
         private Integer port; 
         private String schema; 
         private String type; 
+        private Boolean useSsl; 
         private String userName; 
         private String vpcId; 
 
@@ -207,6 +219,7 @@ public class CreateMySqlDataSourceRequest extends Request {
             this.port = request.port;
             this.schema = request.schema;
             this.type = request.type;
+            this.useSsl = request.useSsl;
             this.userName = request.userName;
             this.vpcId = request.vpcId;
         } 
@@ -298,6 +311,15 @@ public class CreateMySqlDataSourceRequest extends Request {
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * UseSsl.
+         */
+        public Builder useSsl(Boolean useSsl) {
+            this.putBodyParameter("UseSsl", useSsl);
+            this.useSsl = useSsl;
             return this;
         }
 

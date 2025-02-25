@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceMaintenanceAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
  */
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
-    @NameInMap("MaintenanceAttributes")
+    @com.aliyun.core.annotation.NameInMap("MaintenanceAttributes")
     private MaintenanceAttributes maintenanceAttributes;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceMaintenanceAttributesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * The maintenance attributes.
+         * <p>The maintenance attributes.</p>
          */
         public Builder maintenanceAttributes(MaintenanceAttributes maintenanceAttributes) {
             this.maintenanceAttributes = maintenanceAttributes;
@@ -94,7 +99,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of queried maintenance attributes.
+         * <p>The total number of queried maintenance attributes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,9 +148,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceMaintenanceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
+     */
     public static class SupportedValues extends TeaModel {
-        @NameInMap("SupportedValue")
-        private java.util.List < String > supportedValue;
+        @com.aliyun.core.annotation.NameInMap("SupportedValue")
+        private java.util.List<String> supportedValue;
 
         private SupportedValues(Builder builder) {
             this.supportedValue = builder.supportedValue;
@@ -150,17 +173,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * @return supportedValue
          */
-        public java.util.List < String > getSupportedValue() {
+        public java.util.List<String> getSupportedValue() {
             return this.supportedValue;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedValue; 
+            private java.util.List<String> supportedValue; 
 
             /**
              * SupportedValue.
              */
-            public Builder supportedValue(java.util.List < String > supportedValue) {
+            public Builder supportedValue(java.util.List<String> supportedValue) {
                 this.supportedValue = supportedValue;
                 return this;
             }
@@ -172,14 +195,20 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMaintenanceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
+     */
     public static class ActionOnMaintenance extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("SupportedValues")
+        @com.aliyun.core.annotation.NameInMap("SupportedValues")
         private SupportedValues supportedValues;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ActionOnMaintenance(Builder builder) {
@@ -223,7 +252,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * The default maintenance action.
+             * <p>The default maintenance action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoRecover</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -231,7 +263,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The supported maintenance actions.
+             * <p>The supported maintenance actions.</p>
              */
             public Builder supportedValues(SupportedValues supportedValues) {
                 this.supportedValues = supportedValues;
@@ -239,12 +271,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The current maintenance action. Valid values:
-             * <p>
+             * <p>The current maintenance action. Valid values:</p>
+             * <ul>
+             * <li>Stop: stops the instance.</li>
+             * <li>AutoRecover: automatically recovers the instance.</li>
+             * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
+             * </ul>
              * 
-             * *   Stop: stops the instance.
-             * *   AutoRecover: automatically recovers the instance.
-             * *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
+             * <strong>example:</strong>
+             * <p>Stop</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -258,11 +293,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMaintenanceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
+     */
     public static class MaintenanceWindow extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private MaintenanceWindow(Builder builder) {
@@ -297,7 +338,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private String startTime; 
 
             /**
-             * The end time of the maintenance window.
+             * <p>The end time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -305,7 +349,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The start time of the maintenance window.
+             * <p>The start time of the maintenance window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -319,9 +366,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMaintenanceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
+     */
     public static class MaintenanceWindows extends TeaModel {
-        @NameInMap("MaintenanceWindow")
-        private java.util.List < MaintenanceWindow> maintenanceWindow;
+        @com.aliyun.core.annotation.NameInMap("MaintenanceWindow")
+        private java.util.List<MaintenanceWindow> maintenanceWindow;
 
         private MaintenanceWindows(Builder builder) {
             this.maintenanceWindow = builder.maintenanceWindow;
@@ -338,17 +391,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * @return maintenanceWindow
          */
-        public java.util.List < MaintenanceWindow> getMaintenanceWindow() {
+        public java.util.List<MaintenanceWindow> getMaintenanceWindow() {
             return this.maintenanceWindow;
         }
 
         public static final class Builder {
-            private java.util.List < MaintenanceWindow> maintenanceWindow; 
+            private java.util.List<MaintenanceWindow> maintenanceWindow; 
 
             /**
              * MaintenanceWindow.
              */
-            public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
+            public Builder maintenanceWindow(java.util.List<MaintenanceWindow> maintenanceWindow) {
                 this.maintenanceWindow = maintenanceWindow;
                 return this;
             }
@@ -360,17 +413,23 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMaintenanceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
+     */
     public static class MaintenanceAttribute extends TeaModel {
-        @NameInMap("ActionOnMaintenance")
+        @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
         private ActionOnMaintenance actionOnMaintenance;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaintenanceWindows")
+        @com.aliyun.core.annotation.NameInMap("MaintenanceWindows")
         private MaintenanceWindows maintenanceWindows;
 
-        @NameInMap("NotifyOnMaintenance")
+        @com.aliyun.core.annotation.NameInMap("NotifyOnMaintenance")
         private Boolean notifyOnMaintenance;
 
         private MaintenanceAttribute(Builder builder) {
@@ -423,7 +482,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             private Boolean notifyOnMaintenance; 
 
             /**
-             * The attributes of the maintenance action of the instance.
+             * <p>The attributes of the maintenance action of the instance.</p>
              */
             public Builder actionOnMaintenance(ActionOnMaintenance actionOnMaintenance) {
                 this.actionOnMaintenance = actionOnMaintenance;
@@ -431,7 +490,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -439,7 +501,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The maintenance windows.
+             * <p>The maintenance windows.</p>
              */
             public Builder maintenanceWindows(MaintenanceWindows maintenanceWindows) {
                 this.maintenanceWindows = maintenanceWindows;
@@ -447,7 +509,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether an event notification was sent before maintenance.
+             * <p>Indicates whether an event notification was sent before maintenance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
                 this.notifyOnMaintenance = notifyOnMaintenance;
@@ -461,9 +526,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceMaintenanceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
+     */
     public static class MaintenanceAttributes extends TeaModel {
-        @NameInMap("MaintenanceAttribute")
-        private java.util.List < MaintenanceAttribute> maintenanceAttribute;
+        @com.aliyun.core.annotation.NameInMap("MaintenanceAttribute")
+        private java.util.List<MaintenanceAttribute> maintenanceAttribute;
 
         private MaintenanceAttributes(Builder builder) {
             this.maintenanceAttribute = builder.maintenanceAttribute;
@@ -480,17 +551,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * @return maintenanceAttribute
          */
-        public java.util.List < MaintenanceAttribute> getMaintenanceAttribute() {
+        public java.util.List<MaintenanceAttribute> getMaintenanceAttribute() {
             return this.maintenanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < MaintenanceAttribute> maintenanceAttribute; 
+            private java.util.List<MaintenanceAttribute> maintenanceAttribute; 
 
             /**
              * MaintenanceAttribute.
              */
-            public Builder maintenanceAttribute(java.util.List < MaintenanceAttribute> maintenanceAttribute) {
+            public Builder maintenanceAttribute(java.util.List<MaintenanceAttribute> maintenanceAttribute) {
                 this.maintenanceAttribute = maintenanceAttribute;
                 return this;
             }

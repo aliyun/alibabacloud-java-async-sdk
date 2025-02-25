@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyPythonFileRequest} extends {@link RequestModel}
  *
  * <p>VerifyPythonFileRequest</p>
  */
 public class VerifyPythonFileRequest extends Request {
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
     private VerifyPythonFileRequest(Builder builder) {
@@ -55,7 +55,16 @@ public class VerifyPythonFileRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The Python code snippet.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import logging
+         * def execute (params):
+         *   success=True
+         *   message=&quot;OK&quot;
+         *   data=[]
+         *   return (success,message,data)</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);

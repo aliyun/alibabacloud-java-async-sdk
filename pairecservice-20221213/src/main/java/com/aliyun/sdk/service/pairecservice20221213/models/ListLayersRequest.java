@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLayersRequest</p>
  */
 public class ListLayersRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LaboratoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaboratoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String laboratoryId;
 
     private ListLayersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.laboratoryId = builder.laboratoryId;
     }
@@ -42,6 +46,13 @@ public class ListLayersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -56,6 +67,7 @@ public class ListLayersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListLayersRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String laboratoryId; 
 
@@ -65,9 +77,19 @@ public class ListLayersRequest extends Request {
 
         private Builder(ListLayersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.laboratoryId = request.laboratoryId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.

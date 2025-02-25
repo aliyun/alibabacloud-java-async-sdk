@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventRuleTargetListRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventRuleTargetListRequest</p>
  */
 public class DescribeEventRuleTargetListRequest extends Request {
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
     private DescribeEventRuleTargetListRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeEventRuleTargetListRequest extends Request {
         } 
 
         /**
-         * The name of the event-triggered alert rule.
+         * <p>The name of the event-triggered alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PrepayOrderInfo</p>
  */
 public class PrepayOrderInfo extends TeaModel {
-    @NameInMap("autoRenew")
+    @com.aliyun.core.annotation.NameInMap("autoRenew")
     private Boolean autoRenew;
 
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.NameInMap("duration")
     private Integer duration;
 
-    @NameInMap("pricingCycle")
+    @com.aliyun.core.annotation.NameInMap("pricingCycle")
     private String pricingCycle;
 
     private PrepayOrderInfo(Builder builder) {

@@ -1,37 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListListenerCertificatesRequest} extends {@link RequestModel}
  *
  * <p>ListListenerCertificatesRequest</p>
  */
 public class ListListenerCertificatesRequest extends Request {
-    @Query
-    @NameInMap("CertificateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateIds")
+    private java.util.List<String> certificateIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateType")
     private String certificateType;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private ListListenerCertificatesRequest(Builder builder) {
         super(builder);
+        this.certificateIds = builder.certificateIds;
         this.certificateType = builder.certificateType;
         this.listenerId = builder.listenerId;
         this.maxResults = builder.maxResults;
@@ -49,6 +59,13 @@ public class ListListenerCertificatesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return certificateIds
+     */
+    public java.util.List<String> getCertificateIds() {
+        return this.certificateIds;
     }
 
     /**
@@ -80,6 +97,7 @@ public class ListListenerCertificatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListListenerCertificatesRequest, Builder> {
+        private java.util.List<String> certificateIds; 
         private String certificateType; 
         private String listenerId; 
         private Integer maxResults; 
@@ -91,6 +109,7 @@ public class ListListenerCertificatesRequest extends Request {
 
         private Builder(ListListenerCertificatesRequest request) {
             super(request);
+            this.certificateIds = request.certificateIds;
             this.certificateType = request.certificateType;
             this.listenerId = request.listenerId;
             this.maxResults = request.maxResults;
@@ -98,7 +117,19 @@ public class ListListenerCertificatesRequest extends Request {
         } 
 
         /**
-         * The type of the certificate. Valid values: **Ca** and **Server**.
+         * <p>The certificate IDs.</p>
+         */
+        public Builder certificateIds(java.util.List<String> certificateIds) {
+            this.putQueryParameter("CertificateIds", certificateIds);
+            this.certificateIds = certificateIds;
+            return this;
+        }
+
+        /**
+         * <p>The type of the certificate. Valid values: <strong>Ca</strong> and <strong>Server</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Server</p>
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -107,7 +138,11 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.
+         * <p>The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -116,7 +151,10 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: **1 to 100**. If you do not specify this parameter, the default value **20** is used.
+         * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,11 +163,14 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

@@ -1,115 +1,136 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceRequest</p>
  */
 public class CreateDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("CNNodeCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CNNodeCount")
     private String CNNodeCount;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CnClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnClass")
     private String cnClass;
 
-    @Query
-    @NameInMap("DBNodeClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeClass")
     private String DBNodeClass;
 
-    @Query
-    @NameInMap("DBNodeCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeCount")
     private Integer DBNodeCount;
 
-    @Query
-    @NameInMap("DNNodeCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DNNodeCount")
     private String DNNodeCount;
 
-    @Query
-    @NameInMap("DnClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnClass")
     private String dnClass;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnStorageSpace")
+    private String dnStorageSpace;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("IsReadDBInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraParams")
+    private java.util.Map<String, String> extraParams;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsColumnarReadDBInstance")
+    private Boolean isColumnarReadDBInstance;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsReadDBInstance")
     private Boolean isReadDBInstance;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("PrimaryDBInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryDBInstanceName")
     private String primaryDBInstanceName;
 
-    @Query
-    @NameInMap("PrimaryZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryZone")
     private String primaryZone;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecondaryZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZone")
     private String secondaryZone;
 
-    @Query
-    @NameInMap("TertiaryZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Series")
+    private String series;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TertiaryZone")
     private String tertiaryZone;
 
-    @Query
-    @NameInMap("TopologyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopologyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topologyType;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private Integer usedTime;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateDBInstanceRequest(Builder builder) {
@@ -122,7 +143,10 @@ public class CreateDBInstanceRequest extends Request {
         this.DBNodeCount = builder.DBNodeCount;
         this.DNNodeCount = builder.DNNodeCount;
         this.dnClass = builder.dnClass;
+        this.dnStorageSpace = builder.dnStorageSpace;
         this.engineVersion = builder.engineVersion;
+        this.extraParams = builder.extraParams;
+        this.isColumnarReadDBInstance = builder.isColumnarReadDBInstance;
         this.isReadDBInstance = builder.isReadDBInstance;
         this.networkType = builder.networkType;
         this.payType = builder.payType;
@@ -132,6 +156,7 @@ public class CreateDBInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.secondaryZone = builder.secondaryZone;
+        this.series = builder.series;
         this.tertiaryZone = builder.tertiaryZone;
         this.topologyType = builder.topologyType;
         this.usedTime = builder.usedTime;
@@ -210,10 +235,31 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return dnStorageSpace
+     */
+    public String getDnStorageSpace() {
+        return this.dnStorageSpace;
+    }
+
+    /**
      * @return engineVersion
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return extraParams
+     */
+    public java.util.Map<String, String> getExtraParams() {
+        return this.extraParams;
+    }
+
+    /**
+     * @return isColumnarReadDBInstance
+     */
+    public Boolean getIsColumnarReadDBInstance() {
+        return this.isColumnarReadDBInstance;
     }
 
     /**
@@ -280,6 +326,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return series
+     */
+    public String getSeries() {
+        return this.series;
+    }
+
+    /**
      * @return tertiaryZone
      */
     public String getTertiaryZone() {
@@ -330,7 +383,10 @@ public class CreateDBInstanceRequest extends Request {
         private Integer DBNodeCount; 
         private String DNNodeCount; 
         private String dnClass; 
+        private String dnStorageSpace; 
         private String engineVersion; 
+        private java.util.Map<String, String> extraParams; 
+        private Boolean isColumnarReadDBInstance; 
         private Boolean isReadDBInstance; 
         private String networkType; 
         private String payType; 
@@ -340,6 +396,7 @@ public class CreateDBInstanceRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String secondaryZone; 
+        private String series; 
         private String tertiaryZone; 
         private String topologyType; 
         private Integer usedTime; 
@@ -361,7 +418,10 @@ public class CreateDBInstanceRequest extends Request {
             this.DBNodeCount = request.DBNodeCount;
             this.DNNodeCount = request.DNNodeCount;
             this.dnClass = request.dnClass;
+            this.dnStorageSpace = request.dnStorageSpace;
             this.engineVersion = request.engineVersion;
+            this.extraParams = request.extraParams;
+            this.isColumnarReadDBInstance = request.isColumnarReadDBInstance;
             this.isReadDBInstance = request.isReadDBInstance;
             this.networkType = request.networkType;
             this.payType = request.payType;
@@ -371,6 +431,7 @@ public class CreateDBInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.secondaryZone = request.secondaryZone;
+            this.series = request.series;
             this.tertiaryZone = request.tertiaryZone;
             this.topologyType = request.topologyType;
             this.usedTime = request.usedTime;
@@ -452,11 +513,42 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * DnStorageSpace.
+         */
+        public Builder dnStorageSpace(String dnStorageSpace) {
+            this.putQueryParameter("DnStorageSpace", dnStorageSpace);
+            this.dnStorageSpace = dnStorageSpace;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * ExtraParams.
+         */
+        public Builder extraParams(java.util.Map<String, String> extraParams) {
+            String extraParamsShrink = shrink(extraParams, "ExtraParams", "json");
+            this.putQueryParameter("ExtraParams", extraParamsShrink);
+            this.extraParams = extraParams;
+            return this;
+        }
+
+        /**
+         * IsColumnarReadDBInstance.
+         */
+        public Builder isColumnarReadDBInstance(Boolean isColumnarReadDBInstance) {
+            this.putQueryParameter("IsColumnarReadDBInstance", isColumnarReadDBInstance);
+            this.isColumnarReadDBInstance = isColumnarReadDBInstance;
             return this;
         }
 
@@ -479,7 +571,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -515,7 +610,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -542,6 +640,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * Series.
+         */
+        public Builder series(String series) {
+            this.putQueryParameter("Series", series);
+            this.series = series;
+            return this;
+        }
+
+        /**
          * TertiaryZone.
          */
         public Builder tertiaryZone(String tertiaryZone) {
@@ -551,7 +658,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * TopologyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3azones</p>
          */
         public Builder topologyType(String topologyType) {
             this.putQueryParameter("TopologyType", topologyType);
@@ -569,7 +679,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VPC ID。
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);

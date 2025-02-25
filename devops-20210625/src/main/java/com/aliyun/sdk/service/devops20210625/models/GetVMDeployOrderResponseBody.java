@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
  *
  * <p>GetVMDeployOrderResponseBody</p>
  */
 public class GetVMDeployOrderResponseBody extends TeaModel {
-    @NameInMap("deployOrder")
+    @com.aliyun.core.annotation.NameInMap("deployOrder")
     private DeployOrder deployOrder;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetVMDeployOrderResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class Actions extends TeaModel {
-        @NameInMap("disable")
+        @com.aliyun.core.annotation.NameInMap("disable")
         private Boolean disable;
 
-        @NameInMap("params")
+        @com.aliyun.core.annotation.NameInMap("params")
         private Object params;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Actions(Builder builder) {
@@ -212,14 +223,20 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployMachinesActions extends TeaModel {
-        @NameInMap("disable")
+        @com.aliyun.core.annotation.NameInMap("disable")
         private Boolean disable;
 
-        @NameInMap("params")
+        @com.aliyun.core.annotation.NameInMap("params")
         private Object params;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private DeployMachinesActions(Builder builder) {
@@ -293,29 +310,35 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployMachines extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < DeployMachinesActions> actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<DeployMachinesActions> actions;
 
-        @NameInMap("batchNum")
+        @com.aliyun.core.annotation.NameInMap("batchNum")
         private Integer batchNum;
 
-        @NameInMap("clientStatus")
+        @com.aliyun.core.annotation.NameInMap("clientStatus")
         private String clientStatus;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private String ip;
 
-        @NameInMap("machineSn")
+        @com.aliyun.core.annotation.NameInMap("machineSn")
         private String machineSn;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private DeployMachines(Builder builder) {
@@ -340,7 +363,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < DeployMachinesActions> getActions() {
+        public java.util.List<DeployMachinesActions> getActions() {
             return this.actions;
         }
 
@@ -394,7 +417,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DeployMachinesActions> actions; 
+            private java.util.List<DeployMachinesActions> actions; 
             private Integer batchNum; 
             private String clientStatus; 
             private Long createTime; 
@@ -406,7 +429,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             /**
              * actions.
              */
-            public Builder actions(java.util.List < DeployMachinesActions> actions) {
+            public Builder actions(java.util.List<DeployMachinesActions> actions) {
                 this.actions = actions;
                 return this;
             }
@@ -474,14 +497,20 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployMachineInfo extends TeaModel {
-        @NameInMap("batchNum")
+        @com.aliyun.core.annotation.NameInMap("batchNum")
         private Integer batchNum;
 
-        @NameInMap("deployMachines")
-        private java.util.List < DeployMachines> deployMachines;
+        @com.aliyun.core.annotation.NameInMap("deployMachines")
+        private java.util.List<DeployMachines> deployMachines;
 
-        @NameInMap("hostGroupId")
+        @com.aliyun.core.annotation.NameInMap("hostGroupId")
         private Long hostGroupId;
 
         private DeployMachineInfo(Builder builder) {
@@ -508,7 +537,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return deployMachines
          */
-        public java.util.List < DeployMachines> getDeployMachines() {
+        public java.util.List<DeployMachines> getDeployMachines() {
             return this.deployMachines;
         }
 
@@ -521,7 +550,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer batchNum; 
-            private java.util.List < DeployMachines> deployMachines; 
+            private java.util.List<DeployMachines> deployMachines; 
             private Long hostGroupId; 
 
             /**
@@ -535,7 +564,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             /**
              * deployMachines.
              */
-            public Builder deployMachines(java.util.List < DeployMachines> deployMachines) {
+            public Builder deployMachines(java.util.List<DeployMachines> deployMachines) {
                 this.deployMachines = deployMachines;
                 return this;
             }
@@ -555,35 +584,41 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployOrder extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < Actions> actions;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<Actions> actions;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("currentBatch")
+        @com.aliyun.core.annotation.NameInMap("currentBatch")
         private Integer currentBatch;
 
-        @NameInMap("deployMachineInfo")
+        @com.aliyun.core.annotation.NameInMap("deployMachineInfo")
         private DeployMachineInfo deployMachineInfo;
 
-        @NameInMap("deployOrderId")
+        @com.aliyun.core.annotation.NameInMap("deployOrderId")
         private String deployOrderId;
 
-        @NameInMap("exceptionCode")
+        @com.aliyun.core.annotation.NameInMap("exceptionCode")
         private String exceptionCode;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("totalBatch")
+        @com.aliyun.core.annotation.NameInMap("totalBatch")
         private Integer totalBatch;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private DeployOrder(Builder builder) {
@@ -610,7 +645,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
@@ -678,7 +713,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
+            private java.util.List<Actions> actions; 
             private Long createTime; 
             private String creator; 
             private Integer currentBatch; 
@@ -692,7 +727,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             /**
              * actions.
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }

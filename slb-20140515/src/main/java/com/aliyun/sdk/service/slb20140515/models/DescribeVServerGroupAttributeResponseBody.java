@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVServerGroupAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVServerGroupAttributeResponseBody</p>
  */
 public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
-    @NameInMap("BackendServers")
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
     private BackendServers backendServers;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
-    @NameInMap("VServerGroupName")
+    @com.aliyun.core.annotation.NameInMap("VServerGroupName")
     private String vServerGroupName;
 
     private DescribeVServerGroupAttributeResponseBody(Builder builder) {
@@ -110,7 +115,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         private String vServerGroupName; 
 
         /**
-         * The list of backend servers.
+         * <p>The backend servers.</p>
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -118,7 +123,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+         * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-31T02:49:05Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -126,7 +134,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-jfakd****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -134,7 +145,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +156,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tag list.
+         * <p>The tags of the backend server.</p>
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -150,7 +164,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vServer group.
+         * <p>The ID of the vServer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6****</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.vServerGroupId = vServerGroupId;
@@ -158,7 +175,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the vServer group.
+         * <p>The name of the vServer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group1</p>
          */
         public Builder vServerGroupName(String vServerGroupName) {
             this.vServerGroupName = vServerGroupName;
@@ -171,23 +191,29 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupAttributeResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private BackendServer(Builder builder) {
@@ -258,7 +284,13 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The description of the vServer group.
+             * <p>The description of the server group.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if the Description parameter is not specified in the request.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Server Group Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +298,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The port used by the backend server.
+             * <p>The port that is used by the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -274,7 +309,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance, ENI, or elastic container instance.
+             * <p>The ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vm-233</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -282,7 +320,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the ECS instance, ENI, or elastic container instance.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XX.XX.11</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -290,12 +331,15 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong>: ECS instance</li>
+             * <li><strong>eni</strong>: ENI</li>
+             * <li><strong>eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **ecs** (default): an Elastic Compute Service (ECS) instance
-             * *   **eni**: an elastic network interface (ENI)
-             * *   **eci**: an elastic container instance
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -303,7 +347,10 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -317,9 +364,15 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupAttributeResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
-        private java.util.List < BackendServer> backendServer;
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
+        private java.util.List<BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
             this.backendServer = builder.backendServer;
@@ -336,17 +389,17 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         /**
          * @return backendServer
          */
-        public java.util.List < BackendServer> getBackendServer() {
+        public java.util.List<BackendServer> getBackendServer() {
             return this.backendServer;
         }
 
         public static final class Builder {
-            private java.util.List < BackendServer> backendServer; 
+            private java.util.List<BackendServer> backendServer; 
 
             /**
              * BackendServer.
              */
-            public Builder backendServer(java.util.List < BackendServer> backendServer) {
+            public Builder backendServer(java.util.List<BackendServer> backendServer) {
                 this.backendServer = backendServer;
                 return this;
             }
@@ -358,11 +411,17 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupAttributeResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -397,7 +456,11 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -405,7 +468,11 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -419,9 +486,15 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -438,17 +511,17 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

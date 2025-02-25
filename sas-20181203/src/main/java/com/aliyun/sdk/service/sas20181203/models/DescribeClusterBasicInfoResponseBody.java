@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterBasicInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterBasicInfoResponseBody</p>
  */
 public class DescribeClusterBasicInfoResponseBody extends TeaModel {
-    @NameInMap("ClusterInfo")
+    @com.aliyun.core.annotation.NameInMap("ClusterInfo")
     private ClusterInfo clusterInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterBasicInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The detailed information about the cluster.
+         * <p>The detailed information about the cluster.</p>
          */
         public Builder clusterInfo(ClusterInfo clusterInfo) {
             this.clusterInfo = clusterInfo;
@@ -58,7 +63,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterBasicInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterBasicInfoResponseBody</p>
+     */
     public static class ClusterInfo extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CurrentVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private String currentVersion;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TargetResult")
+        @com.aliyun.core.annotation.NameInMap("TargetResult")
         private Boolean targetResult;
 
         private ClusterInfo(Builder builder) {
@@ -194,7 +208,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             private Boolean targetResult; 
 
             /**
-             * The ID of cluster.
+             * <p>The ID of cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c870ec78ecbcb41d2a35c679823ef****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -202,7 +219,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testackpro</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -210,14 +230,17 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>ManagedKubernetes</strong>: managed Kubernetes cluster</li>
+             * <li><strong>NotManagedKubernetes</strong>: non-managed Kubernetes cluster</li>
+             * <li><strong>PrivateKubernetes</strong>: private cluster</li>
+             * <li><strong>kubernetes</strong>: dedicated Kubernetes cluster</li>
+             * <li><strong>ask</strong>: dedicated ASK cluster</li>
+             * </ul>
              * 
-             * *   **ManagedKubernetes**: managed Kubernetes cluster
-             * *   **NotManagedKubernetes**: non-managed Kubernetes cluster
-             * *   **PrivateKubernetes**: private cluster
-             * *   **kubernetes**: dedicated Kubernetes cluster
-             * *   **ask**: dedicated ASK cluster
+             * <strong>example:</strong>
+             * <p>kubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -225,7 +248,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the cluster was created. Unit: milliseconds.
+             * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1662038134000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -233,7 +259,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the cluster.
+             * <p>The version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.22.10-aliyun.1</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -241,7 +270,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances in the cluster.
+             * <p>The number of instances in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -249,7 +281,10 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the cluster is deployed.
+             * <p>The ID of the region in which the cluster is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -257,13 +292,16 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>unavailable</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>CreateFailed</strong></li>
+             * </ul>
              * 
-             * *   **unavailable**
-             * *   **Available**
-             * *   **Creating**
-             * *   **CreateFailed**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -271,11 +309,14 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the cluster is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The cluster is enabled.</li>
+             * <li><strong>false</strong>: The cluster is disabled.</li>
+             * </ul>
              * 
-             * *   **true**: The cluster is enabled.
-             * *   **false**: The cluster is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder targetResult(Boolean targetResult) {
                 this.targetResult = targetResult;

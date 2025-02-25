@@ -1,37 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodStreamURLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodStreamURLResponseBody</p>
  */
 public class DescribeVodStreamURLResponseBody extends TeaModel {
-    @NameInMap("OutProtocol")
+    @com.aliyun.core.annotation.NameInMap("OutProtocol")
     private String outProtocol;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Long port;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TxId")
-    private String txId;
-
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private DescribeVodStreamURLResponseBody(Builder builder) {
         this.outProtocol = builder.outProtocol;
         this.port = builder.port;
         this.requestId = builder.requestId;
-        this.txId = builder.txId;
         this.url = builder.url;
     }
 
@@ -65,13 +66,6 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
     }
 
     /**
-     * @return txId
-     */
-    public String getTxId() {
-        return this.txId;
-    }
-
-    /**
      * @return url
      */
     public String getUrl() {
@@ -82,7 +76,6 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
         private String outProtocol; 
         private Long port; 
         private String requestId; 
-        private String txId; 
         private String url; 
 
         /**
@@ -106,14 +99,6 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * TxId.
-         */
-        public Builder txId(String txId) {
-            this.txId = txId;
             return this;
         }
 

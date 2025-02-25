@@ -1,29 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetCheckSummaryRequest</p>
  */
 public class GetCheckSummaryRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsItemStatistic")
+    private Boolean isItemStatistic;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ResourceDirectoryAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private String resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendors")
+    private java.util.List<String> vendors;
 
     private GetCheckSummaryRequest(Builder builder) {
         super(builder);
+        this.isItemStatistic = builder.isItemStatistic;
         this.lang = builder.lang;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
+        this.vendors = builder.vendors;
     }
 
     public static Builder builder() {
@@ -40,6 +55,13 @@ public class GetCheckSummaryRequest extends Request {
     }
 
     /**
+     * @return isItemStatistic
+     */
+    public Boolean getIsItemStatistic() {
+        return this.isItemStatistic;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -53,9 +75,18 @@ public class GetCheckSummaryRequest extends Request {
         return this.resourceDirectoryAccountId;
     }
 
+    /**
+     * @return vendors
+     */
+    public java.util.List<String> getVendors() {
+        return this.vendors;
+    }
+
     public static final class Builder extends Request.Builder<GetCheckSummaryRequest, Builder> {
+        private Boolean isItemStatistic; 
         private String lang; 
         private String resourceDirectoryAccountId; 
+        private java.util.List<String> vendors; 
 
         private Builder() {
             super();
@@ -63,16 +94,37 @@ public class GetCheckSummaryRequest extends Request {
 
         private Builder(GetCheckSummaryRequest request) {
             super(request);
+            this.isItemStatistic = request.isItemStatistic;
             this.lang = request.lang;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.vendors = request.vendors;
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder isItemStatistic(Boolean isItemStatistic) {
+            this.putQueryParameter("IsItemStatistic", isItemStatistic);
+            this.isItemStatistic = isItemStatistic;
+            return this;
+        }
+
+        /**
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,11 +133,26 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * The account ID of the resource directory.
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>000</p>
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
             this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The cloud service providers.</p>
+         */
+        public Builder vendors(java.util.List<String> vendors) {
+            this.putQueryParameter("Vendors", vendors);
+            this.vendors = vendors;
             return this;
         }
 

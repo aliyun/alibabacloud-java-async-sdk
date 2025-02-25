@@ -1,122 +1,127 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesForCloneRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesForCloneRequest</p>
  */
 public class DescribeDBInstancesForCloneRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConnectionMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionMode")
     private String connectionMode;
 
-    @Query
-    @NameInMap("CurrentInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentInstanceId")
     private String currentInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
     private String DBInstanceStatus;
 
-    @Query
-    @NameInMap("DBInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceType")
     private String DBInstanceType;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private String expired;
 
-    @Query
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @Query
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    @Query
-    @NameInMap("proxyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("proxyId")
     private String proxyId;
 
     private DescribeDBInstancesForCloneRequest(Builder builder) {
@@ -407,7 +412,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -416,13 +424,15 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The connection mode of the instance. Valid values:
-         * <p>
+         * <p>The connection mode of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Standard</strong>: standard mode</li>
+         * <li><strong>Safe</strong>: database proxy mode</li>
+         * </ul>
+         * <p>By default, this operation queries the instances that use any of the supported connection modes.</p>
          * 
-         * *   **Standard**: standard mode
-         * *   **Safe**: database proxy mode
-         * 
-         * By default, this operation queries the instances that use any of the supported connection modes.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder connectionMode(String connectionMode) {
             this.putQueryParameter("ConnectionMode", connectionMode);
@@ -431,7 +441,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The ID of the current instance.
+         * <p>The ID of the current instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder currentInstanceId(String currentInstanceId) {
             this.putQueryParameter("CurrentInstanceId", currentInstanceId);
@@ -440,7 +453,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. For more information, see [Instance types](~~26312~~).
+         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n1.micro.1</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -449,7 +465,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -458,7 +477,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The status of the instance. For more information, see [Instance state table](~~26315~~).
+         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBInstanceStatus(String DBInstanceStatus) {
             this.putQueryParameter("DBInstanceStatus", DBInstanceStatus);
@@ -467,15 +489,17 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The role of the instance that you want to query. Valid values:
-         * <p>
+         * <p>The role of the instance that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Primary</strong>: primary instance</li>
+         * <li><strong>Readonly</strong>: read-only instance</li>
+         * <li><strong>Guard</strong>: disaster recovery instance</li>
+         * <li><strong>Temp</strong>: temporary instance</li>
+         * </ul>
+         * <p>By default, this operation queries the instances of all roles.</p>
          * 
-         * *   **Primary**: primary instance
-         * *   **Readonly**: read-only instance
-         * *   **Guard**: disaster recovery instance
-         * *   **Temp**: temporary instance
-         * 
-         * By default, this operation queries the instances of all roles.
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         public Builder DBInstanceType(String DBInstanceType) {
             this.putQueryParameter("DBInstanceType", DBInstanceType);
@@ -484,16 +508,18 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Valid values:
-         * <p>
+         * <p>The database engine of the instance. Valid values:</p>
+         * <ul>
+         * <li>MySQL</li>
+         * <li>SQLServer</li>
+         * <li>PostgreSQL</li>
+         * <li>PPAS</li>
+         * <li>MariaDB</li>
+         * </ul>
+         * <p>By default, this operation queries the instances that run any of the supported database engine types.</p>
          * 
-         * *   MySQL
-         * *   SQLServer
-         * *   PostgreSQL
-         * *   PPAS
-         * *   MariaDB
-         * 
-         * By default, this operation queries the instances that run any of the supported database engine types.
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -502,7 +528,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The version of the database engine.
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -511,11 +540,14 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance expires. Valid values:
-         * <p>
+         * <p>Specifies whether the instance expires. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: queries the instances that have expired.</li>
+         * <li><strong>False</strong>: does not query instances that have expired.</li>
+         * </ul>
          * 
-         * *   **True**: queries the instances that have expired.
-         * *   **False**: does not query instances that have expired.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -524,11 +556,14 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Classic</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
          * 
-         * *   **Classic**
-         * *   **VPC**
+         * <strong>example:</strong>
+         * <p>Classic</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -537,11 +572,14 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The type of the database node. Valid values:
-         * <p>
+         * <p>The type of the database node. Valid values:</p>
+         * <ul>
+         * <li><strong>Master</strong>: the primary node</li>
+         * <li><strong>Slave</strong>: the secondary node</li>
+         * </ul>
          * 
-         * *   **Master**: the primary node
-         * *   **Slave**: the secondary node
+         * <strong>example:</strong>
+         * <p>Master</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -568,7 +606,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -577,10 +618,11 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 100**.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -589,13 +631,15 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * <p>By default, this operation queries the instances that use any of the supported billing methods.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
-         * 
-         * By default, this operation queries the instances that use any of the supported billing methods.
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -604,7 +648,11 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -613,7 +661,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -640,7 +691,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.
+         * <p>The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6w</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -649,7 +703,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-j6csw46bgrgkxxxxxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -658,7 +715,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-j6cjvqms29yxxxxxxxxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -667,7 +727,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -676,7 +739,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * The ID of the proxy mode.
+         * <p>The ID of the proxy mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

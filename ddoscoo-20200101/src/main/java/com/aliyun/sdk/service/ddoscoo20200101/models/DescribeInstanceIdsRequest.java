@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceIdsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceIdsRequest</p>
  */
 public class DescribeInstanceIdsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private Integer edition;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeInstanceIdsRequest(Builder builder) {
@@ -66,7 +71,7 @@ public class DescribeInstanceIdsRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -80,7 +85,7 @@ public class DescribeInstanceIdsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceIdsRequest, Builder> {
         private String regionId; 
         private Integer edition; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -105,7 +110,17 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>The type of the instance to query. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+         * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder edition(Integer edition) {
             this.putQueryParameter("Edition", edition);
@@ -114,9 +129,12 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of instances to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

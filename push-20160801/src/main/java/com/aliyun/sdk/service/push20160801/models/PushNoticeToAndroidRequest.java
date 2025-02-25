@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushNoticeToAndroidRequest} extends {@link RequestModel}
  *
  * <p>PushNoticeToAndroidRequest</p>
  */
 public class PushNoticeToAndroidRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
 
-    @Query
-    @NameInMap("Body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String body;
 
-    @Query
-    @NameInMap("ExtParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtParameters")
     private String extParameters;
 
-    @Query
-    @NameInMap("JobKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobKey")
     private String jobKey;
 
-    @Query
-    @NameInMap("StoreOffline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoreOffline")
     private Boolean storeOffline;
 
-    @Query
-    @NameInMap("Target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String target;
 
-    @Query
-    @NameInMap("TargetValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetValue;
 
-    @Query
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
     private PushNoticeToAndroidRequest(Builder builder) {
@@ -157,7 +157,10 @@ public class PushNoticeToAndroidRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -166,7 +169,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * Body.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>body</p>
          */
         public Builder body(String body) {
             this.putQueryParameter("Body", body);
@@ -202,7 +208,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -211,7 +220,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);
@@ -220,7 +232,10 @@ public class PushNoticeToAndroidRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

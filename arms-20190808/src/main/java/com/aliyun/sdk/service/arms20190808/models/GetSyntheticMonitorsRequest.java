@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSyntheticMonitorsRequest} extends {@link RequestModel}
  *
  * <p>GetSyntheticMonitorsRequest</p>
  */
 public class GetSyntheticMonitorsRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Filter filter;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetSyntheticMonitorsRequest(Builder builder) {
@@ -69,7 +74,8 @@ public class GetSyntheticMonitorsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The query conditions.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -79,7 +85,10 @@ public class GetSyntheticMonitorsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -94,17 +103,23 @@ public class GetSyntheticMonitorsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetSyntheticMonitorsRequest} extends {@link TeaModel}
+     *
+     * <p>GetSyntheticMonitorsRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("MonitorCategory")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MonitorCategory")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer monitorCategory;
 
-        @NameInMap("Network")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Network")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer network;
 
-        @NameInMap("TaskType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TaskType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer taskType;
 
         private Filter(Builder builder) {
@@ -148,7 +163,11 @@ public class GetSyntheticMonitorsRequest extends Request {
             private Integer taskType; 
 
             /**
-             * MonitorCategory.
+             * <p>The type of the monitoring point. Valid values: 1: PC. 2: mobile device.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder monitorCategory(Integer monitorCategory) {
                 this.monitorCategory = monitorCategory;
@@ -156,7 +175,11 @@ public class GetSyntheticMonitorsRequest extends Request {
             }
 
             /**
-             * Network.
+             * <p>The network type. Valid values: 1: private network. 2: Internet.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder network(Integer network) {
                 this.network = network;
@@ -164,7 +187,12 @@ public class GetSyntheticMonitorsRequest extends Request {
             }
 
             /**
-             * TaskType.
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;

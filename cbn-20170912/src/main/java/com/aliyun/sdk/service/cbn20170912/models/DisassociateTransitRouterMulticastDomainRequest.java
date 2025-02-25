@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisassociateTransitRouterMulticastDomainRequest} extends {@link RequestModel}
  *
  * <p>DisassociateTransitRouterMulticastDomainRequest</p>
  */
 public class DisassociateTransitRouterMulticastDomainRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterMulticastDomainId;
 
-    @Query
-    @NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
 
     private DisassociateTransitRouterMulticastDomainRequest(Builder builder) {
         super(builder);
@@ -135,7 +140,7 @@ public class DisassociateTransitRouterMulticastDomainRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -148,7 +153,7 @@ public class DisassociateTransitRouterMulticastDomainRequest extends Request {
         private Long resourceOwnerId; 
         private String transitRouterAttachmentId; 
         private String transitRouterMulticastDomainId; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
 
         private Builder() {
             super();
@@ -168,7 +173,11 @@ public class DisassociateTransitRouterMulticastDomainRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +186,14 @@ public class DisassociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether only to precheck the API request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request but does not disassociate the vSwitch from the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the DryRunOperation error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. The vSwitch is disassociated from the multicast domain after the request passes the precheck.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -222,7 +238,12 @@ public class DisassociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * <p>The ID of the virtual private cloud (VPC) connection.</p>
+         * <p>A connection ID is generated after a VPC to which the vSwitch belongs is connected to a transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-g3kz2k3u76amsk****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -231,7 +252,11 @@ public class DisassociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * TransitRouterMulticastDomainId.
+         * <p>The ID of the multicast domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-91wpg6wbhchjeq****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -240,9 +265,9 @@ public class DisassociateTransitRouterMulticastDomainRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The IDs of vSwitches.</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;

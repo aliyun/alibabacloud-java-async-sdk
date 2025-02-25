@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupSetResponseBody</p>
  */
 public class DescribeBackupSetResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupSetResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -111,17 +116,23 @@ public class DescribeBackupSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSetResponseBody</p>
+     */
     public static class OSSList extends TeaModel {
-        @NameInMap("BackupSetFile")
+        @com.aliyun.core.annotation.NameInMap("BackupSetFile")
         private String backupSetFile;
 
-        @NameInMap("DownloadLink")
+        @com.aliyun.core.annotation.NameInMap("DownloadLink")
         private String downloadLink;
 
-        @NameInMap("IntranetDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("IntranetDownloadLink")
         private String intranetDownloadLink;
 
-        @NameInMap("LinkExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("LinkExpiredTime")
         private String linkExpiredTime;
 
         private OSSList(Builder builder) {
@@ -212,29 +223,35 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSetResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BackupModel")
+        @com.aliyun.core.annotation.NameInMap("BackupModel")
         private Integer backupModel;
 
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private Long backupSetId;
 
-        @NameInMap("BackupSetSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSetSize")
         private Long backupSetSize;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private Integer backupType;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("OSSList")
-        private java.util.List < OSSList> OSSList;
+        @com.aliyun.core.annotation.NameInMap("OSSList")
+        private java.util.List<OSSList> OSSList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
@@ -301,7 +318,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         /**
          * @return OSSList
          */
-        public java.util.List < OSSList> getOSSList() {
+        public java.util.List<OSSList> getOSSList() {
             return this.OSSList;
         }
 
@@ -319,7 +336,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             private Integer backupType; 
             private Long beginTime; 
             private Long endTime; 
-            private java.util.List < OSSList> OSSList; 
+            private java.util.List<OSSList> OSSList; 
             private Integer status; 
 
             /**
@@ -373,7 +390,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             /**
              * OSSList.
              */
-            public Builder OSSList(java.util.List < OSSList> OSSList) {
+            public Builder OSSList(java.util.List<OSSList> OSSList) {
                 this.OSSList = OSSList;
                 return this;
             }

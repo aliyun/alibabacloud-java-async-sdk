@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallPolicyBackUpAssociationListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrFirewallPolicyBackUpAssociationListResponseBody</p>
  */
 public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends TeaModel {
-    @NameInMap("PolicyAssociationBackupConfigs")
-    private java.util.List < PolicyAssociationBackupConfigs> policyAssociationBackupConfigs;
+    @com.aliyun.core.annotation.NameInMap("PolicyAssociationBackupConfigs")
+    private java.util.List<PolicyAssociationBackupConfigs> policyAssociationBackupConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTrFirewallPolicyBackUpAssociationListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
     /**
      * @return policyAssociationBackupConfigs
      */
-    public java.util.List < PolicyAssociationBackupConfigs> getPolicyAssociationBackupConfigs() {
+    public java.util.List<PolicyAssociationBackupConfigs> getPolicyAssociationBackupConfigs() {
         return this.policyAssociationBackupConfigs;
     }
 
@@ -46,19 +51,22 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
     }
 
     public static final class Builder {
-        private java.util.List < PolicyAssociationBackupConfigs> policyAssociationBackupConfigs; 
+        private java.util.List<PolicyAssociationBackupConfigs> policyAssociationBackupConfigs; 
         private String requestId; 
 
         /**
-         * PolicyAssociationBackupConfigs.
+         * <p>The route tables.</p>
          */
-        public Builder policyAssociationBackupConfigs(java.util.List < PolicyAssociationBackupConfigs> policyAssociationBackupConfigs) {
+        public Builder policyAssociationBackupConfigs(java.util.List<PolicyAssociationBackupConfigs> policyAssociationBackupConfigs) {
             this.policyAssociationBackupConfigs = policyAssociationBackupConfigs;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C264A756-9B48-57E3-B312-716941E146C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrFirewallPolicyBackUpAssociationListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallPolicyBackUpAssociationListResponseBody</p>
+     */
     public static class PolicyAssociationBackupConfigs extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateName")
+        @com.aliyun.core.annotation.NameInMap("CandidateName")
         private String candidateName;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
-        @NameInMap("CurrentRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("CurrentRouteTableId")
         private String currentRouteTableId;
 
-        @NameInMap("OriginalRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("OriginalRouteTableId")
         private String originalRouteTableId;
 
         private PolicyAssociationBackupConfigs(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             private String originalRouteTableId; 
 
             /**
-             * CandidateId.
+             * <p>The ID of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9grb8ng3y7h7lf2****</p>
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -154,7 +171,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * CandidateName.
+             * <p>The name of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder candidateName(String candidateName) {
                 this.candidateName = candidateName;
@@ -162,7 +182,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * CandidateType.
+             * <p>The type of the traffic redirection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -170,7 +193,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * CurrentRouteTableId.
+             * <p>The route table that is used after traffic redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-wz9898grickmh5j09****</p>
              */
             public Builder currentRouteTableId(String currentRouteTableId) {
                 this.currentRouteTableId = currentRouteTableId;
@@ -178,7 +204,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * OriginalRouteTableId.
+             * <p>The ID of the route table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-wz9slp3s7m4qrzvnq****</p>
              */
             public Builder originalRouteTableId(String originalRouteTableId) {
                 this.originalRouteTableId = originalRouteTableId;

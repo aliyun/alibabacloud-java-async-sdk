@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagInfos")
-    private java.util.List < TagInfos> tagInfos;
+    @com.aliyun.core.annotation.NameInMap("TagInfos")
+    private java.util.List<TagInfos> tagInfos;
 
     private DescribeTagsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeTagsResponseBody extends TeaModel {
     /**
      * @return tagInfos
      */
-    public java.util.List < TagInfos> getTagInfos() {
+    public java.util.List<TagInfos> getTagInfos() {
         return this.tagInfos;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TagInfos> tagInfos; 
+        private java.util.List<TagInfos> tagInfos; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>requestid</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -60,7 +68,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * TagInfos.
          */
-        public Builder tagInfos(java.util.List < TagInfos> tagInfos) {
+        public Builder tagInfos(java.util.List<TagInfos> tagInfos) {
             this.tagInfos = tagInfos;
             return this;
         }
@@ -71,14 +79,20 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagInfos extends TeaModel {
-        @NameInMap("DBInstanceIds")
-        private java.util.List < String > DBInstanceIds;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
+        private java.util.List<String> DBInstanceIds;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagInfos(Builder builder) {
@@ -98,7 +112,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return DBInstanceIds
          */
-        public java.util.List < String > getDBInstanceIds() {
+        public java.util.List<String> getDBInstanceIds() {
             return this.DBInstanceIds;
         }
 
@@ -117,14 +131,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > DBInstanceIds; 
+            private java.util.List<String> DBInstanceIds; 
             private String tagKey; 
             private String tagValue; 
 
             /**
              * DBInstanceIds.
              */
-            public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
+            public Builder DBInstanceIds(java.util.List<String> DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
                 return this;
             }

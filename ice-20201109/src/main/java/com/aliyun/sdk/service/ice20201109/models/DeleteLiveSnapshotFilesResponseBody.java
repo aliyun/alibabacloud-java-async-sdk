@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveSnapshotFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLiveSnapshotFilesResponseBody</p>
  */
 public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
-    @NameInMap("DeleteFileResultList")
-    private java.util.List < DeleteFileResultList> deleteFileResultList;
+    @com.aliyun.core.annotation.NameInMap("DeleteFileResultList")
+    private java.util.List<DeleteFileResultList> deleteFileResultList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteLiveSnapshotFilesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     /**
      * @return deleteFileResultList
      */
-    public java.util.List < DeleteFileResultList> getDeleteFileResultList() {
+    public java.util.List<DeleteFileResultList> getDeleteFileResultList() {
         return this.deleteFileResultList;
     }
 
@@ -46,19 +51,22 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeleteFileResultList> deleteFileResultList; 
+        private java.util.List<DeleteFileResultList> deleteFileResultList; 
         private String requestId; 
 
         /**
-         * DeleteFileResultList.
+         * <p>The list of deleted files.</p>
          */
-        public Builder deleteFileResultList(java.util.List < DeleteFileResultList> deleteFileResultList) {
+        public Builder deleteFileResultList(java.util.List<DeleteFileResultList> deleteFileResultList) {
             this.deleteFileResultList = deleteFileResultList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLiveSnapshotFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLiveSnapshotFilesResponseBody</p>
+     */
     public static class DeleteFileResultList extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
         private DeleteFileResultList(Builder builder) {
@@ -110,7 +124,10 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
             private String result; 
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the file was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660638613798</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -118,7 +135,15 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The result of deletion. A value of OK indicates that the file is deleted. Other values indicate that the file failed to be deleted.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>OK: The file was deleted.</li>
+             * <li>NotFound: The file was not found.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder result(String result) {
                 this.result = result;

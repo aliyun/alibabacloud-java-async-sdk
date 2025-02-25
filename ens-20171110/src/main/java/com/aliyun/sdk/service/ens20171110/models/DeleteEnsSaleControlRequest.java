@@ -1,36 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEnsSaleControlRequest} extends {@link RequestModel}
  *
  * <p>DeleteEnsSaleControlRequest</p>
  */
 public class DeleteEnsSaleControlRequest extends Request {
-    @Query
-    @NameInMap("AliUidAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliUidAccount")
     private String aliUidAccount;
 
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("SaleControls")
-    @Validation(required = true)
-    private java.util.List < SaleControls> saleControls;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAccount")
+    private String customAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleControls")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<SaleControls> saleControls;
 
     private DeleteEnsSaleControlRequest(Builder builder) {
         super(builder);
         this.aliUidAccount = builder.aliUidAccount;
         this.commodityCode = builder.commodityCode;
+        this.customAccount = builder.customAccount;
         this.saleControls = builder.saleControls;
     }
 
@@ -62,16 +71,24 @@ public class DeleteEnsSaleControlRequest extends Request {
     }
 
     /**
+     * @return customAccount
+     */
+    public String getCustomAccount() {
+        return this.customAccount;
+    }
+
+    /**
      * @return saleControls
      */
-    public java.util.List < SaleControls> getSaleControls() {
+    public java.util.List<SaleControls> getSaleControls() {
         return this.saleControls;
     }
 
     public static final class Builder extends Request.Builder<DeleteEnsSaleControlRequest, Builder> {
         private String aliUidAccount; 
         private String commodityCode; 
-        private java.util.List < SaleControls> saleControls; 
+        private String customAccount; 
+        private java.util.List<SaleControls> saleControls; 
 
         private Builder() {
             super();
@@ -81,6 +98,7 @@ public class DeleteEnsSaleControlRequest extends Request {
             super(request);
             this.aliUidAccount = request.aliUidAccount;
             this.commodityCode = request.commodityCode;
+            this.customAccount = request.customAccount;
             this.saleControls = request.saleControls;
         } 
 
@@ -94,7 +112,7 @@ public class DeleteEnsSaleControlRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * <p>This parameter is required.</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -103,9 +121,18 @@ public class DeleteEnsSaleControlRequest extends Request {
         }
 
         /**
-         * SaleControls.
+         * CustomAccount.
          */
-        public Builder saleControls(java.util.List < SaleControls> saleControls) {
+        public Builder customAccount(String customAccount) {
+            this.putQueryParameter("CustomAccount", customAccount);
+            this.customAccount = customAccount;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder saleControls(java.util.List<SaleControls> saleControls) {
             String saleControlsShrink = shrink(saleControls, "SaleControls", "json");
             this.putQueryParameter("SaleControls", saleControlsShrink);
             this.saleControls = saleControls;
@@ -119,13 +146,19 @@ public class DeleteEnsSaleControlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteEnsSaleControlRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteEnsSaleControlRequest</p>
+     */
     public static class SaleControls extends TeaModel {
-        @NameInMap("ModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String moduleCode;
 
-        @NameInMap("OrderType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String orderType;
 
         private SaleControls(Builder builder) {
@@ -160,7 +193,7 @@ public class DeleteEnsSaleControlRequest extends Request {
             private String orderType; 
 
             /**
-             * ModuleCode.
+             * <p>This parameter is required.</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -168,7 +201,7 @@ public class DeleteEnsSaleControlRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * <p>This parameter is required.</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

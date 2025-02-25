@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSampleDataResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSampleDataResponseBody</p>
  */
 public class CreateSampleDataResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
     private CreateSampleDataResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateSampleDataResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +90,10 @@ public class CreateSampleDataResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if an error occurs. This message does not affect the execution of the operation.
+         * <p>The error message returned if an error occurs. This message does not affect the execution of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +101,10 @@ public class CreateSampleDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15A6881F-AAAB-5E4D-9B3F-6DCC1BDF4F2E_99</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +112,14 @@ public class CreateSampleDataResponseBody extends TeaModel {
         }
 
         /**
-         * The execution state of the operation. Valid values:
-         * <p>
+         * <p>The execution state of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: The operation fails.</li>
+         * <li><strong>true</strong>: The operation is successful.</li>
+         * </ul>
          * 
-         * *   **false**: The operation fails.
-         * *   **true**: The operation is successful.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

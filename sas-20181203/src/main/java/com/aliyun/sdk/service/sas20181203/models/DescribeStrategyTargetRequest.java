@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStrategyTargetRequest} extends {@link RequestModel}
  *
  * <p>DescribeStrategyTargetRequest</p>
  */
 public class DescribeStrategyTargetRequest extends Request {
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeStrategyTargetRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class DescribeStrategyTargetRequest extends Request {
         } 
 
         /**
-         * The ID of the baseline check policy.
+         * <p>The ID of the baseline check policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;strategyId&quot;:8167126}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -93,7 +102,10 @@ public class DescribeStrategyTargetRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.X.X</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -102,7 +114,11 @@ public class DescribeStrategyTargetRequest extends Request {
         }
 
         /**
-         * The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.
+         * <p>The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_strategy</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

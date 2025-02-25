@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewReservedInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>RenewReservedInstancesResponseBody</p>
  */
 public class RenewReservedInstancesResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReservedInstanceIdSets")
+    @com.aliyun.core.annotation.NameInMap("ReservedInstanceIdSets")
     private ReservedInstanceIdSets reservedInstanceIdSets;
 
     private RenewReservedInstancesResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         private ReservedInstanceIdSets reservedInstanceIdSets; 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023912123****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,7 +78,10 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the reserved instances.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C314443-AF0D-4766-9562-C83B7F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,7 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the reserved instance.
+         * <p>The IDs of the reserved instances.</p>
          */
         public Builder reservedInstanceIdSets(ReservedInstanceIdSets reservedInstanceIdSets) {
             this.reservedInstanceIdSets = reservedInstanceIdSets;
@@ -91,9 +102,15 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenewReservedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenewReservedInstancesResponseBody</p>
+     */
     public static class ReservedInstanceIdSets extends TeaModel {
-        @NameInMap("ReservedInstanceId")
-        private java.util.List < String > reservedInstanceId;
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
+        private java.util.List<String> reservedInstanceId;
 
         private ReservedInstanceIdSets(Builder builder) {
             this.reservedInstanceId = builder.reservedInstanceId;
@@ -110,17 +127,17 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         /**
          * @return reservedInstanceId
          */
-        public java.util.List < String > getReservedInstanceId() {
+        public java.util.List<String> getReservedInstanceId() {
             return this.reservedInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > reservedInstanceId; 
+            private java.util.List<String> reservedInstanceId; 
 
             /**
              * ReservedInstanceId.
              */
-            public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+            public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
                 this.reservedInstanceId = reservedInstanceId;
                 return this;
             }

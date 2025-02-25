@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeDataStatsRequest} extends {@link RequestModel}
  *
  * <p>GetQueryOptimizeDataStatsRequest</p>
  */
 public class GetQueryOptimizeDataStatsRequest extends Request {
-    @Query
-    @NameInMap("Asc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Asc")
     private String asc;
 
-    @Query
-    @NameInMap("DbNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNames")
     private String dbNames;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("Keywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keywords")
     private String keywords;
 
-    @Query
-    @NameInMap("LogicalOperator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalOperator")
     private String logicalOperator;
 
-    @Query
-    @NameInMap("OnlyOptimizedSql")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyOptimizedSql")
     private String onlyOptimizedSql;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private String rules;
 
-    @Query
-    @NameInMap("SqlIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlIds")
     private String sqlIds;
 
-    @Query
-    @NameInMap("TagNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagNames")
     private String tagNames;
 
-    @Query
-    @NameInMap("Time")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Time")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String time;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private GetQueryOptimizeDataStatsRequest(Builder builder) {
@@ -266,11 +271,14 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to sort the returned entries in ascending order. Default value: **true**. Valid values:
-         * <p>
+         * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>true</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: sorts the returned entries in ascending order.</li>
+         * <li><strong>false</strong>: does not sort the returned entries in ascending order.</li>
+         * </ul>
          * 
-         * *   **true**: sorts the returned entries in ascending order.
-         * *   **false**: does not sort the returned entries in ascending order.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asc(String asc) {
             this.putQueryParameter("Asc", asc);
@@ -279,7 +287,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The name of the database to be queried.
+         * <p>The name of the database to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -288,12 +299,16 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PolarDBMySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **PolarDBMySQL**
-         * *   **PostgreSQL**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -302,7 +317,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The instance IDs. Separate multiple IDs with commas (,).
+         * <p>The instance IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -311,7 +329,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The keywords of the SQL template. Separate multiple keywords with spaces.
+         * <p>The keywords of the SQL template. Separate multiple keywords with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select update</p>
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("Keywords", keywords);
@@ -320,11 +341,14 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The logical relationship between multiple keywords. Valid values:
-         * <p>
+         * <p>The logical relationship between multiple keywords. Valid values:</p>
+         * <ul>
+         * <li><strong>or</strong></li>
+         * <li><strong>and</strong></li>
+         * </ul>
          * 
-         * *   **or**
-         * *   **and**
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder logicalOperator(String logicalOperator) {
             this.putQueryParameter("LogicalOperator", logicalOperator);
@@ -333,11 +357,14 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query only SQL templates that need to be optimized. Default value: **false**. Valid values:
-         * <p>
+         * <p>Specifies whether to query only SQL templates that need to be optimized. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: queries only SQL templates that need to be optimized.</li>
+         * <li><strong>false</strong>: does not query only SQL statements that need to be optimized.</li>
+         * </ul>
          * 
-         * *   **true**: queries only SQL templates that need to be optimized.
-         * *   **false**: does not query only SQL statements that need to be optimized.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyOptimizedSql(String onlyOptimizedSql) {
             this.putQueryParameter("OnlyOptimizedSql", onlyOptimizedSql);
@@ -346,18 +373,21 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The field by which to sort the returned entries. Default value: **count**. Valid values:
-         * <p>
+         * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>count</strong>: the number of executions.</li>
+         * <li><strong>maxQueryTime</strong>: the longest execution time.</li>
+         * <li><strong>avgQueryTime</strong>: the average execution time.</li>
+         * <li><strong>maxLockTime</strong>: the longest lock wait time.</li>
+         * <li><strong>avgLockTime</strong>: the longest lock wait time.</li>
+         * <li><strong>maxRowsExamined</strong>: the largest number of scanned rows.</li>
+         * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
+         * <li><strong>maxRowsSent</strong>: the largest number of returned rows.</li>
+         * <li><strong>avgRowsSent</strong>: the average number of returned rows.</li>
+         * </ul>
          * 
-         * *   **count**: the number of executions.
-         * *   **maxQueryTime**: the longest execution time.
-         * *   **avgQueryTime**: the average execution time.
-         * *   **maxLockTime**: the longest lock wait time.
-         * *   **avgLockTime**: the longest lock wait time.
-         * *   **maxRowsExamined**: the largest number of scanned rows.
-         * *   **avgRowsExamined**: the average number of scanned rows.
-         * *   **maxRowsSent**: the largest number of returned rows.
-         * *   **avgRowsSent**: the average number of returned rows.
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -366,7 +396,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -375,7 +408,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -384,16 +420,19 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The region in which the instance resides. Valid values:
-         * <p>
+         * <p>The region in which the instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-china</strong>: Chinese mainland</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
+         * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
+         * <blockquote>
+         * <p> Set this parameter to <strong>cn-china</strong> for the instances that are created in the regions in the Chinese mainland.</p>
+         * </blockquote>
          * 
-         * *   **cn-china**: Chinese mainland
-         * *   **cn-hongkong**: China (Hong Kong)
-         * *   **ap-southeast-1**: Singapore
-         * 
-         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****
-         * 
-         * >  Set this parameter to **cn-china** for the instances that are created in the regions in the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-china</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -402,7 +441,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](~~290038~~).
+         * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query governance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAS_NOT_IMPORTANT</p>
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);
@@ -411,7 +453,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The SQL template ID. You can query the ID of a template by calling the [GetQueryOptimizeExecErrorStats](~~405235~~) operation.
+         * <p>The SQL template ID. You can query the ID of a template by calling the <a href="https://help.aliyun.com/document_detail/405235.html">GetQueryOptimizeExecErrorStats</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
          */
         public Builder sqlIds(String sqlIds) {
             this.putQueryParameter("SqlIds", sqlIds);
@@ -420,7 +465,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder tagNames(String tagNames) {
             this.putQueryParameter("TagNames", tagNames);
@@ -429,7 +477,11 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * <p>The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642953600000</p>
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);
@@ -438,7 +490,10 @@ public class GetQueryOptimizeDataStatsRequest extends Request {
         }
 
         /**
-         * The account of the database to be queried.
+         * <p>The account of the database to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserGroupsResponseBody</p>
  */
 public class ListUserGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("UserGroups")
-    private java.util.List < UserGroups> userGroups;
+    @com.aliyun.core.annotation.NameInMap("UserGroups")
+    private java.util.List<UserGroups> userGroups;
 
     private ListUserGroupsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class ListUserGroupsResponseBody extends TeaModel {
     /**
      * @return userGroups
      */
-    public java.util.List < UserGroups> getUserGroups() {
+    public java.util.List<UserGroups> getUserGroups() {
         return this.userGroups;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalNum; 
-        private java.util.List < UserGroups> userGroups; 
+        private java.util.List<UserGroups> userGroups; 
 
         /**
          * RequestId.
@@ -80,7 +85,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         /**
          * UserGroups.
          */
-        public Builder userGroups(java.util.List < UserGroups> userGroups) {
+        public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
@@ -91,17 +96,23 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Attributes(Builder builder) {
@@ -192,20 +203,26 @@ public class ListUserGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsResponseBody</p>
+     */
     public static class UserGroups extends TeaModel {
-        @NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private java.util.List<Attributes> attributes;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private UserGroups(Builder builder) {
@@ -227,7 +244,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -260,7 +277,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String createTime; 
             private String description; 
             private String name; 
@@ -269,7 +286,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }

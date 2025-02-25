@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecoverableTimeRangeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecoverableTimeRangeResponseBody</p>
  */
 public class DescribeRecoverableTimeRangeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TimeBegin")
+    @com.aliyun.core.annotation.NameInMap("TimeBegin")
     private String timeBegin;
 
-    @NameInMap("TimeEnd")
+    @com.aliyun.core.annotation.NameInMap("TimeEnd")
     private String timeEnd;
 
     private DescribeRecoverableTimeRangeResponseBody(Builder builder) {

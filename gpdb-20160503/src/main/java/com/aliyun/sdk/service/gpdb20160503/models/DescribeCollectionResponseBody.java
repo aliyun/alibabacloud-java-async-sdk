@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCollectionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCollectionResponseBody</p>
  */
 public class DescribeCollectionResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Dimension")
+    @com.aliyun.core.annotation.NameInMap("Dimension")
     private Integer dimension;
 
-    @NameInMap("FullTextRetrievalFields")
+    @com.aliyun.core.annotation.NameInMap("FullTextRetrievalFields")
     private String fullTextRetrievalFields;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Metadata")
-    private java.util.Map < String, String > metadata;
+    @com.aliyun.core.annotation.NameInMap("Metadata")
+    private java.util.Map<String, String> metadata;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("Parser")
+    @com.aliyun.core.annotation.NameInMap("Parser")
     private String parser;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeCollectionResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
     /**
      * @return metadata
      */
-    public java.util.Map < String, String > getMetadata() {
+    public java.util.Map<String, String> getMetadata() {
         return this.metadata;
     }
 
@@ -149,7 +154,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         private Integer dimension; 
         private String fullTextRetrievalFields; 
         private String message; 
-        private java.util.Map < String, String > metadata; 
+        private java.util.Map<String, String> metadata; 
         private String metrics; 
         private String namespace; 
         private String parser; 
@@ -158,7 +163,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -166,7 +174,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vector dimensions.
+         * <p>The number of vector dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder dimension(Integer dimension) {
             this.dimension = dimension;
@@ -174,7 +185,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The fields that are used for full-text search. Multiple fields are separated by commas (,).
+         * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title,content</p>
          */
         public Builder fullTextRetrievalFields(String fullTextRetrievalFields) {
             this.fullTextRetrievalFields = fullTextRetrievalFields;
@@ -182,7 +196,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,20 +207,20 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.
-         * <p>
-         * 
-         * **
-         * 
-         * **Warning** Reserved fields such as id, vector, and to_tsvector cannot be used.
+         * <p>The metadata of vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
+         * <p>**</p>
+         * <p><strong>Warning</strong> Reserved fields such as id, vector, and to_tsvector cannot be used.</p>
          */
-        public Builder metadata(java.util.Map < String, String > metadata) {
+        public Builder metadata(java.util.Map<String, String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         /**
-         * The distance metrics.
+         * <p>The distance metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cosine</p>
          */
         public Builder metrics(String metrics) {
             this.metrics = metrics;
@@ -211,7 +228,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -219,7 +239,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The analyzer that is used for full-text search.
+         * <p>The analyzer that is used for full-text search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder parser(String parser) {
             this.parser = parser;
@@ -227,7 +250,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -235,7 +261,10 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,11 +272,14 @@ public class DescribeCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

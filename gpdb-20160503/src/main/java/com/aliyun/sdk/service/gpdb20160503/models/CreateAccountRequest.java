@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
  */
 public class CreateAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountDescription")
     private String accountDescription;
 
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountPassword;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    private String accountType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
 
     private CreateAccountRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
         this.accountPassword = builder.accountPassword;
+        this.accountType = builder.accountType;
         this.DBInstanceId = builder.DBInstanceId;
         this.databaseName = builder.databaseName;
         this.ownerId = builder.ownerId;
-        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -89,6 +94,13 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -109,21 +121,14 @@ public class CreateAccountRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
         private String accountPassword; 
+        private String accountType; 
         private String DBInstanceId; 
         private String databaseName; 
         private Long ownerId; 
-        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -134,14 +139,17 @@ public class CreateAccountRequest extends Request {
             this.accountDescription = request.accountDescription;
             this.accountName = request.accountName;
             this.accountPassword = request.accountPassword;
+            this.accountType = request.accountType;
             this.DBInstanceId = request.DBInstanceId;
             this.databaseName = request.databaseName;
             this.ownerId = request.ownerId;
-            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * The description of the privileged account.
+         * <p>The description of the initial account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc02</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -150,13 +158,17 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the privileged account.
-         * <p>
+         * <p>The name of the initial account.</p>
+         * <ul>
+         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>The name cannot start with gp.</li>
+         * <li>The name must be 2 to 16 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name can contain lowercase letters, digits, and underscores (\_).
-         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
-         * *   The name cannot start with gp.
-         * *   The name must be 2 to 16 characters in length.
+         * <strong>example:</strong>
+         * <p>testacc02</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -165,12 +177,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The password of the privileged account.
-         * <p>
+         * <p>The password of the initial account.</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
-         * *   The password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Pw123456</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -179,10 +195,26 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The type of the initial account. Default value: Super, which specifies a privileged account. To create a standard account, set the value to Normal.</p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>Super</p>
+         */
+        public Builder accountType(String accountType) {
+            this.putQueryParameter("AccountType", accountType);
+            this.accountType = accountType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -191,7 +223,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -205,15 +240,6 @@ public class CreateAccountRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the instance belongs.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

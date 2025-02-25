@@ -74,7 +74,7 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * Msg.
+         * The result of the task.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -82,7 +82,7 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -98,7 +98,7 @@ public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

@@ -1,67 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCacheAnalysisReportRequest} extends {@link RequestModel}
  *
  * <p>DescribeCacheAnalysisReportRequest</p>
  */
 public class DescribeCacheAnalysisReportRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AnalysisType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalysisType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String analysisType;
 
-    @Query
-    @NameInMap("Date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String date;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumbers")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumbers")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumbers;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeCacheAnalysisReportRequest(Builder builder) {
@@ -221,7 +221,11 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The type of analytics. Set the value to **BigKey**.
+         * <p>The type of analytics. Set the value to <strong>BigKey</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BigKey</p>
          */
         public Builder analysisType(String analysisType) {
             this.putQueryParameter("AnalysisType", analysisType);
@@ -230,7 +234,11 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The date to query. You can query the report for one day each time. Specify the date in the *yyyy-MM-dd*Z format. The time must be in UTC.
+         * <p>The date to query. You can query the report for one day each time. Specify the date in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-05Z</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -239,7 +247,11 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -248,10 +260,13 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The ID of the child node in the cluster instance.
-         * <p>
+         * <p>The ID of the child node in the cluster instance.</p>
+         * <blockquote>
+         * <p>If this parameter is not specified, the analytics results of all child nodes in the instance are returned.</p>
+         * </blockquote>
          * 
-         * > If this parameter is not specified, the analytics results of all child nodes in the instance are returned.
+         * <strong>example:</strong>
+         * <p>-bp1zxszhcgatnx****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -278,10 +293,13 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <blockquote>
+         * <p>If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.</p>
+         * </blockquote>
          * 
-         * > If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
@@ -290,10 +308,13 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <blockquote>
+         * <p>The default value is <strong>30</strong>.</p>
+         * </blockquote>
          * 
-         * > The default value is **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

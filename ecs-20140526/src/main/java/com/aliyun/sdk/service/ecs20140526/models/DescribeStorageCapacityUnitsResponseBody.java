@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageCapacityUnitsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStorageCapacityUnitsResponseBody</p>
  */
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StorageCapacityUnits")
+    @com.aliyun.core.annotation.NameInMap("StorageCapacityUnits")
     private StorageCapacityUnits storageCapacityUnits;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeStorageCapacityUnitsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the SCUs.
+         * <p>Details about the SCUs.</p>
          */
         public Builder storageCapacityUnits(StorageCapacityUnits storageCapacityUnits) {
             this.storageCapacityUnits = storageCapacityUnits;
@@ -118,7 +132,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of SCUs.
+         * <p>The total number of SCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageCapacityUnitsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageCapacityUnitsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +204,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -192,9 +221,15 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStorageCapacityUnitsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageCapacityUnitsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -211,17 +246,17 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -233,38 +268,44 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStorageCapacityUnitsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageCapacityUnitsResponseBody</p>
+     */
     public static class StorageCapacityUnit extends TeaModel {
-        @NameInMap("AllocationStatus")
+        @com.aliyun.core.annotation.NameInMap("AllocationStatus")
         private String allocationStatus;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Integer capacity;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageCapacityUnitId")
+        @com.aliyun.core.annotation.NameInMap("StorageCapacityUnitId")
         private String storageCapacityUnitId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private StorageCapacityUnit(Builder builder) {
@@ -380,11 +421,14 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:
-             * <p>
+             * <p>Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:</p>
+             * <ul>
+             * <li>allocated: The SCU is allocated to other accounts.</li>
+             * <li>BeAllocated: The SCU is allocated from another account.</li>
+             * </ul>
              * 
-             * *   allocated: The SCU is allocated to other accounts.
-             * *   BeAllocated: The SCU is allocated from another account.
+             * <strong>example:</strong>
+             * <p>allocated</p>
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -392,7 +436,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the SCU.
+             * <p>The capacity of the SCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder capacity(Integer capacity) {
                 this.capacity = capacity;
@@ -400,7 +447,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SCU was created.
+             * <p>The time when the SCU was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-17T02:55Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -408,7 +458,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the SCU.
+             * <p>The description of the SCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testScuDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -416,7 +469,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SCU expires.
+             * <p>The time when the SCU expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-17T16:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -424,7 +480,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SCU.
+             * <p>The name of the SCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testScuName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -432,7 +491,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the SCU.
+             * <p>The region ID of the SCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -440,7 +502,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SCU took effect.
+             * <p>The time when the SCU took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-17T02:55Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -448,7 +513,16 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the SCU.
+             * <p>The status of the SCU. Valid values:</p>
+             * <ul>
+             * <li>Creating: The SCUs are being created.</li>
+             * <li>Active: The SCUs are in effect.</li>
+             * <li>Expired: The SCUs have expired.</li>
+             * <li>Pending: The SCUs have not taken effect.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -456,7 +530,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SCU.
+             * <p>The ID of the SCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scu-bp67acfmxazb4p****</p>
              */
             public Builder storageCapacityUnitId(String storageCapacityUnitId) {
                 this.storageCapacityUnitId = storageCapacityUnitId;
@@ -464,7 +541,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key-value pairs of the SCU.
+             * <p>The tag key-value pairs of the SCU.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -478,9 +555,15 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStorageCapacityUnitsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageCapacityUnitsResponseBody</p>
+     */
     public static class StorageCapacityUnits extends TeaModel {
-        @NameInMap("StorageCapacityUnit")
-        private java.util.List < StorageCapacityUnit> storageCapacityUnit;
+        @com.aliyun.core.annotation.NameInMap("StorageCapacityUnit")
+        private java.util.List<StorageCapacityUnit> storageCapacityUnit;
 
         private StorageCapacityUnits(Builder builder) {
             this.storageCapacityUnit = builder.storageCapacityUnit;
@@ -497,17 +580,17 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         /**
          * @return storageCapacityUnit
          */
-        public java.util.List < StorageCapacityUnit> getStorageCapacityUnit() {
+        public java.util.List<StorageCapacityUnit> getStorageCapacityUnit() {
             return this.storageCapacityUnit;
         }
 
         public static final class Builder {
-            private java.util.List < StorageCapacityUnit> storageCapacityUnit; 
+            private java.util.List<StorageCapacityUnit> storageCapacityUnit; 
 
             /**
              * StorageCapacityUnit.
              */
-            public Builder storageCapacityUnit(java.util.List < StorageCapacityUnit> storageCapacityUnit) {
+            public Builder storageCapacityUnit(java.util.List<StorageCapacityUnit> storageCapacityUnit) {
                 this.storageCapacityUnit = storageCapacityUnit;
                 return this;
             }

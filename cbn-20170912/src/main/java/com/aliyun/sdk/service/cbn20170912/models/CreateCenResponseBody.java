@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCenResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCenResponseBody</p>
  */
 public class CreateCenResponseBody extends TeaModel {
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCenResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateCenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The CEN instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-dc4vwznpwbobrl****</p>
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -58,7 +66,10 @@ public class CreateCenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

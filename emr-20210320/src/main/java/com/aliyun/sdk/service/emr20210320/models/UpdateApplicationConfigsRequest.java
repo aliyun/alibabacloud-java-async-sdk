@@ -1,55 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationConfigsRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationConfigsRequest</p>
  */
 public class UpdateApplicationConfigsRequest extends Request {
-    @Query
-    @NameInMap("ApplicationConfigs")
-    @Validation(required = true)
-    private java.util.List < UpdateApplicationConfig > applicationConfigs;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<UpdateApplicationConfig> applicationConfigs;
 
-    @Query
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ConfigAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigAction")
     private String configAction;
 
-    @Query
-    @NameInMap("ConfigScope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigScope")
     private String configScope;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefreshConfig")
+    private Boolean refreshConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateApplicationConfigsRequest(Builder builder) {
@@ -62,6 +71,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         this.description = builder.description;
         this.nodeGroupId = builder.nodeGroupId;
         this.nodeId = builder.nodeId;
+        this.refreshConfig = builder.refreshConfig;
         this.regionId = builder.regionId;
     }
 
@@ -81,7 +91,7 @@ public class UpdateApplicationConfigsRequest extends Request {
     /**
      * @return applicationConfigs
      */
-    public java.util.List < UpdateApplicationConfig > getApplicationConfigs() {
+    public java.util.List<UpdateApplicationConfig> getApplicationConfigs() {
         return this.applicationConfigs;
     }
 
@@ -135,6 +145,13 @@ public class UpdateApplicationConfigsRequest extends Request {
     }
 
     /**
+     * @return refreshConfig
+     */
+    public Boolean getRefreshConfig() {
+        return this.refreshConfig;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -142,7 +159,7 @@ public class UpdateApplicationConfigsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateApplicationConfigsRequest, Builder> {
-        private java.util.List < UpdateApplicationConfig > applicationConfigs; 
+        private java.util.List<UpdateApplicationConfig> applicationConfigs; 
         private String applicationName; 
         private String clusterId; 
         private String configAction; 
@@ -150,6 +167,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         private String description; 
         private String nodeGroupId; 
         private String nodeId; 
+        private Boolean refreshConfig; 
         private String regionId; 
 
         private Builder() {
@@ -166,20 +184,26 @@ public class UpdateApplicationConfigsRequest extends Request {
             this.description = request.description;
             this.nodeGroupId = request.nodeGroupId;
             this.nodeId = request.nodeId;
+            this.refreshConfig = request.refreshConfig;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The list of application configurations.
+         * <p>应用配置列表。</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder applicationConfigs(java.util.List < UpdateApplicationConfig > applicationConfigs) {
-            this.putQueryParameter("ApplicationConfigs", applicationConfigs);
+        public Builder applicationConfigs(java.util.List<UpdateApplicationConfig> applicationConfigs) {
+            this.putBodyParameter("ApplicationConfigs", applicationConfigs);
             this.applicationConfigs = applicationConfigs;
             return this;
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -188,7 +212,11 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-e6a9d46e9267****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -197,12 +225,15 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The operation performed on configuration items. Valid values:
-         * <p>
+         * <p>The operation performed on configuration items. Valid values:</p>
+         * <ul>
+         * <li>ADD</li>
+         * <li>UPDATE</li>
+         * <li>DELETE</li>
+         * </ul>
          * 
-         * *   ADD
-         * *   UPDATE
-         * *   DELETE
+         * <strong>example:</strong>
+         * <p>ADD</p>
          */
         public Builder configAction(String configAction) {
             this.putQueryParameter("ConfigAction", configAction);
@@ -211,11 +242,14 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The operation scope. Valid values:
-         * <p>
+         * <p>The operation scope. Valid values:</p>
+         * <ul>
+         * <li>CLUSTER</li>
+         * <li>NODE_GROUP</li>
+         * </ul>
          * 
-         * *   CLUSTER
-         * *   NODE_GROUP
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder configScope(String configScope) {
             this.putQueryParameter("ConfigScope", configScope);
@@ -224,7 +258,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>更新YARN内存配置。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -233,7 +270,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the node group.
+         * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -242,7 +282,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The node ID.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -251,7 +294,23 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>Specifies whether to refresh the configurations. Default value: True.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder refreshConfig(Boolean refreshConfig) {
+            this.putQueryParameter("RefreshConfig", refreshConfig);
+            this.refreshConfig = refreshConfig;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportCustomerQuotaRecordResponseBody} extends {@link TeaModel}
  *
  * <p>ExportCustomerQuotaRecordResponseBody</p>
  */
 public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ExportCustomerQuotaRecordResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code
+         * <p>Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -98,7 +109,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>ID of the Request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc4b416874189683843905d9f9a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +125,17 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExportCustomerQuotaRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportCustomerQuotaRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Cost")
+        @com.aliyun.core.annotation.NameInMap("Cost")
         private Integer cost;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private Data(Builder builder) {
@@ -150,7 +170,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * Cost.
+             * <p>Estimated duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cost(Integer cost) {
                 this.cost = cost;
@@ -158,7 +181,10 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>ID of Export task</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231</p>
              */
             public Builder id(Long id) {
                 this.id = id;

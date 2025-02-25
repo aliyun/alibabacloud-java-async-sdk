@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTasksResponseBody</p>
  */
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeTasksResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The ID of the cluster for which the task was created.
+         * <p>The ID of the cluster for which the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -130,7 +138,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the query.
+         * <p>The end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-02T03:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -138,7 +149,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the page returned.
+         * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +160,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -154,7 +171,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4352AD99-9FF5-41A6-A319-068089******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +182,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-30T00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +193,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the task.
+         * <p>The details of the task.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -178,7 +201,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -191,47 +217,53 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTasksResponseBody</p>
+     */
     public static class Task extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("CurrentStepName")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepName")
         private String currentStepName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExpectedFinishTime")
+        @com.aliyun.core.annotation.NameInMap("ExpectedFinishTime")
         private String expectedFinishTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("ProgressInfo")
+        @com.aliyun.core.annotation.NameInMap("ProgressInfo")
         private String progressInfo;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Integer remain;
 
-        @NameInMap("StepProgressInfo")
+        @com.aliyun.core.annotation.NameInMap("StepProgressInfo")
         private String stepProgressInfo;
 
-        @NameInMap("StepsInfo")
+        @com.aliyun.core.annotation.NameInMap("StepsInfo")
         private String stepsInfo;
 
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
-        @NameInMap("TaskErrorCode")
+        @com.aliyun.core.annotation.NameInMap("TaskErrorCode")
         private String taskErrorCode;
 
-        @NameInMap("TaskErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("TaskErrorMessage")
         private String taskErrorMessage;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Task(Builder builder) {
@@ -374,7 +406,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the task was started. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the task was started. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-02T02:39:15Z</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -382,7 +417,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the current step.
+             * <p>The name of the current step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_instance</p>
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -390,10 +428,13 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
-             * <p>
+             * <p>The database name.</p>
+             * <blockquote>
+             * <p> This parameter is returned for only the tasks that involve database operations.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned for only the tasks that involve database operations.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -401,7 +442,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated end time of the task. In most cases, this parameter is empty.
+             * <p>The estimated end time of the task. In most cases, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder expectedFinishTime(String expectedFinishTime) {
                 this.expectedFinishTime = expectedFinishTime;
@@ -409,7 +453,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was completed. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The time when the task was completed. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-02T02:40:15Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -417,7 +464,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task in percentage.
+             * <p>The progress of the task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -425,7 +475,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task progress. If no progress description is provided for the task, this parameter is empty.
+             * <p>The description of the task progress. If no progress description is provided for the task, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder progressInfo(String progressInfo) {
                 this.progressInfo = progressInfo;
@@ -433,7 +486,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated remaining duration of the task. Unit: seconds.
+             * <p>The estimated remaining duration of the task. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767</p>
              */
             public Builder remain(Integer remain) {
                 this.remain = remain;
@@ -441,7 +497,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the subtasks. For example, the value `1/4` indicates that the task consists of four subtasks and the first subtask is in progress.
+             * <p>The progress of the subtasks. For example, the value <code>1/4</code> indicates that the task consists of four subtasks and the first subtask is in progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/4</p>
              */
             public Builder stepProgressInfo(String stepProgressInfo) {
                 this.stepProgressInfo = stepProgressInfo;
@@ -449,7 +508,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the subtasks.
+             * <p>The details of the subtasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;remain&quot;:0,&quot;name&quot;:&quot;init_task&quot;,&quot;progress&quot;:100},{&quot;remain&quot;:1764,&quot;name&quot;:&quot;create_instance&quot;,&quot;progress&quot;:0},{&quot;remain&quot;:1,&quot;name&quot;:&quot;init_cluster&quot;,&quot;progress&quot;:0},{&quot;remain&quot;:2,&quot;name&quot;:&quot;create_backup&quot;,&quot;progress&quot;:0}]</p>
              */
             public Builder stepsInfo(String stepsInfo) {
                 this.stepsInfo = stepsInfo;
@@ -457,7 +519,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The API operation that is used by the task. Example: `CreateDBInstance`.
+             * <p>The API operation that is used by the task. Example: <code>CreateDBInstance</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateDBInstance</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -465,10 +530,13 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned when an error occurs.
-             * <p>
+             * <p>The error code that is returned when an error occurs.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the task is in the <strong>Stop</strong> state.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the task is in the **Stop** state.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder taskErrorCode(String taskErrorCode) {
                 this.taskErrorCode = taskErrorCode;
@@ -476,10 +544,13 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when an error occurs.
-             * <p>
+             * <p>The error message that is returned when an error occurs.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the task is in the <strong>Stop</strong> state.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when the task is in the **Stop** state.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder taskErrorMessage(String taskErrorMessage) {
                 this.taskErrorMessage = taskErrorMessage;
@@ -487,7 +558,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -501,9 +575,15 @@ public class DescribeTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
-        private java.util.List < Task> task;
+        @com.aliyun.core.annotation.NameInMap("Task")
+        private java.util.List<Task> task;
 
         private Tasks(Builder builder) {
             this.task = builder.task;
@@ -520,17 +600,17 @@ public class DescribeTasksResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
 
             /**
              * Task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }

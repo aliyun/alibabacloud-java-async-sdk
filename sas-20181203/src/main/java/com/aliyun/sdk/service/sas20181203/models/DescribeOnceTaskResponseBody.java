@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOnceTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOnceTaskResponseBody</p>
  */
 public class DescribeOnceTaskResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskManageResponseList")
-    private java.util.List < TaskManageResponseList> taskManageResponseList;
+    @com.aliyun.core.annotation.NameInMap("TaskManageResponseList")
+    private java.util.List<TaskManageResponseList> taskManageResponseList;
 
     private DescribeOnceTaskResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
     /**
      * @return taskManageResponseList
      */
-    public java.util.List < TaskManageResponseList> getTaskManageResponseList() {
+    public java.util.List<TaskManageResponseList> getTaskManageResponseList() {
         return this.taskManageResponseList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < TaskManageResponseList> taskManageResponseList; 
+        private java.util.List<TaskManageResponseList> taskManageResponseList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the tasks.
+         * <p>An array that consists of the tasks.</p>
          */
-        public Builder taskManageResponseList(java.util.List < TaskManageResponseList> taskManageResponseList) {
+        public Builder taskManageResponseList(java.util.List<TaskManageResponseList> taskManageResponseList) {
             this.taskManageResponseList = taskManageResponseList;
             return this;
         }
@@ -91,17 +99,23 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOnceTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOnceTaskResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,41 +218,47 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOnceTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOnceTaskResponseBody</p>
+     */
     public static class TaskManageResponseList extends TeaModel {
-        @NameInMap("DetailData")
+        @com.aliyun.core.annotation.NameInMap("DetailData")
         private String detailData;
 
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ResultInfo")
+        @com.aliyun.core.annotation.NameInMap("ResultInfo")
         private String resultInfo;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
 
-        @NameInMap("TaskEndTime")
+        @com.aliyun.core.annotation.NameInMap("TaskEndTime")
         private Long taskEndTime;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskStartTime")
+        @com.aliyun.core.annotation.NameInMap("TaskStartTime")
         private Long taskStartTime;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("TaskStatusText")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusText")
         private String taskStatusText;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private TaskManageResponseList(Builder builder) {
@@ -351,21 +383,38 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The execution details of the task. The value of this parameter is in the JSON format.
-             * <p>
+             * <p>The execution details of the task. The value of this parameter is in the JSON format.</p>
+             * <ul>
+             * <li><strong>causeCode</strong>: the returned code for the cause.</li>
+             * <li><strong>causeMsg</strong>: the returned message for the cause.</li>
+             * <li><strong>resCode</strong>: the returned code for troubleshooting.</li>
+             * <li><strong>resMsg</strong>: the returned message for troubleshooting.</li>
+             * <li><strong>problemType</strong>: the type of the issue.</li>
+             * <li><strong>dispatchType</strong>: the task delivery method.</li>
+             * <li><strong>uuid</strong>: the UUID of the server.</li>
+             * <li><strong>instanceId</strong>: the instance ID of the server.</li>
+             * <li><strong>internetIp</strong>: the public IP address of the server.</li>
+             * <li><strong>intranetIp</strong>: the private IP address of the server.</li>
+             * <li><strong>instanceName</strong>: the instance name of the server.</li>
+             * <li><strong>url</strong>: the download URL of the troubleshooting log.</li>
+             * </ul>
              * 
-             * *   **causeCode**: the returned code for the cause.
-             * *   **causeMsg**: the returned message for the cause.
-             * *   **resCode**: the returned code for troubleshooting.
-             * *   **resMsg**: the returned message for troubleshooting.
-             * *   **problemType**: the type of the issue.
-             * *   **dispatchType**: the task delivery method.
-             * *   **uuid**: the UUID of the server.
-             * *   **instanceId**: the instance ID of the server.
-             * *   **internetIp**: the public IP address of the server.
-             * *   **intranetIp**: the private IP address of the server.
-             * *   **instanceName**: the instance name of the server.
-             * *   **url**: the download URL of the troubleshooting log.
+             * <strong>example:</strong>
+             * <p>[
+             *       {
+             *             &quot;dispatchType&quot;: &quot;manual&quot;,
+             *             &quot;causeMsg&quot;: [],
+             *             &quot;causeCode&quot;: [],
+             *             &quot;resCode&quot;: [
+             *                   &quot;1003&quot;
+             *             ],
+             *             &quot;resMsg&quot;: [
+             *                   &quot;powershell -executionpolicy bypass -c &quot;(New-Object Net.WebClient).DownloadFile(&quot;<a href="http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe%5C">http://aegis.alicdn.com/download/aegis_client_self_check/win32/aegis_checker.exe\</a>&quot;, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(&quot;.\\aegis_checker.exe&quot;))&quot;; &quot;./aegis_checker.exe -b eyJtb2RlIjoxLCJqc3J2X2RvbWFpbiI6W10sImlzc3VlIjoib2ZmbGluZSIsInVwZGF0ZV9kb21haW4iOltdLCJ1dWlkIjoiaW5ldC1lYWUwNDg2Ny0wMDJmLTQyM2QtYWYwMC1jNzJjZDYyOWIyNDgiLCJjbWRfaWR4IjoiNDRjZThiZWI3ZGYyYTQxMjQ1NGM4ZDc5OTE1ODI1MzMifQ==&quot;&quot;
+             *             ],
+             *             &quot;problemType&quot;: &quot;offline&quot;,
+             *             &quot;uuid&quot;: &quot;inet-eae04867-002f-423d-af00-c72cd629****&quot;
+             *       }
+             * ]</p>
              */
             public Builder detailData(String detailData) {
                 this.detailData = detailData;
@@ -373,7 +422,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that fail to be executed.
+             * <p>The number of tasks that fail to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -381,7 +433,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task. Unit: percent (%).
+             * <p>The progress of the task. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -389,7 +444,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the task.
+             * <p>The execution result of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -397,7 +455,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that are executed.
+             * <p>The number of tasks that are executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -405,7 +466,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the task ends. Unit: milliseconds.
+             * <p>The timestamp that indicates the time when the task ends. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1650267989000</p>
              */
             public Builder taskEndTime(Long taskEndTime) {
                 this.taskEndTime = taskEndTime;
@@ -413,7 +477,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e900f528f5a6229bb640ca27cb44c98e</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -421,7 +488,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLIENT_PROBLEM_CHECK</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -429,7 +499,10 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the task starts. Unit: milliseconds.
+             * <p>The timestamp that indicates the time when the task starts. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649732012000</p>
              */
             public Builder taskStartTime(Long taskStartTime) {
                 this.taskStartTime = taskStartTime;
@@ -437,13 +510,16 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The task is started.</li>
+             * <li><strong>2</strong>: The task is complete.</li>
+             * <li><strong>3</strong>: The task fails.</li>
+             * <li><strong>4</strong>: The task times out.</li>
+             * </ul>
              * 
-             * *   **1**: The task is started.
-             * *   **2**: The task is complete.
-             * *   **3**: The task fails.
-             * *   **4**: The task times out.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -451,15 +527,18 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The text description of the status for the task. Valid values:
-             * <p>
+             * <p>The text description of the status for the task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is pending start.</li>
+             * <li><strong>START</strong>: The task is started.</li>
+             * <li><strong>DISPATCH</strong>: The self-check command is issued.</li>
+             * <li><strong>SUCCESS</strong>: The self-check is complete.</li>
+             * <li><strong>FAIL</strong>: The task fails.</li>
+             * <li><strong>TIMEOUT</strong>: The task times out.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is pending start.
-             * *   **START**: The task is started.
-             * *   **DISPATCH**: The self-check command is issued.
-             * *   **SUCCESS**: The self-check is complete.
-             * *   **FAIL**: The task fails.
-             * *   **TIMEOUT**: The task times out.
+             * <strong>example:</strong>
+             * <p>INIT</p>
              */
             public Builder taskStatusText(String taskStatusText) {
                 this.taskStatusText = taskStatusText;
@@ -467,12 +546,15 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
-             * <p>
+             * <p>The type of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center client</li>
+             * <li><strong>CLIENT_DEV_OPS</strong>: an O&amp;M task of Cloud Assistant</li>
+             * <li><strong>ASSET_SECURITY_CHECK</strong>: a task for asset information collection</li>
+             * </ul>
              * 
-             * *   **CLIENT_PROBLEM_CHECK**: a task of the Security Center client
-             * *   **CLIENT_DEV_OPS**: an O\&M task of Cloud Assistant
-             * *   **ASSET_SECURITY_CHECK**: a task for asset information collection
+             * <strong>example:</strong>
+             * <p>CLIENT_PROBLEM_CHECK</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

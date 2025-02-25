@@ -1,73 +1,84 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupMachineGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceGroupMachineGroupResponseBody</p>
  */
 public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private String cpu;
 
-    @NameInMap("DefaultDriver")
+    @com.aliyun.core.annotation.NameInMap("DefaultDriver")
     private String defaultDriver;
 
-    @NameInMap("EcsCount")
+    @com.aliyun.core.annotation.NameInMap("EcsCount")
     private Long ecsCount;
 
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("GmtExpiredTime")
     private String gmtExpiredTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("GmtStartedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStartedTime")
     private String gmtStartedTime;
 
-    @NameInMap("Gpu")
+    @com.aliyun.core.annotation.NameInMap("Gpu")
     private String gpu;
 
-    @NameInMap("GpuType")
+    @com.aliyun.core.annotation.NameInMap("GpuType")
     private String gpuType;
 
-    @NameInMap("MachineGroupID")
+    @com.aliyun.core.annotation.NameInMap("MachineGroupID")
     private String machineGroupID;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private String memory;
 
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private String paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportedDrivers")
-    private java.util.List < String > supportedDrivers;
+    @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
+    private java.util.List<String> supportedDrivers;
+
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private GetResourceGroupMachineGroupResponseBody(Builder builder) {
         this.cpu = builder.cpu;
@@ -82,6 +93,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         this.gpuType = builder.gpuType;
         this.machineGroupID = builder.machineGroupID;
         this.memory = builder.memory;
+        this.name = builder.name;
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
         this.paymentType = builder.paymentType;
@@ -89,6 +101,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         this.resourceGroupID = builder.resourceGroupID;
         this.status = builder.status;
         this.supportedDrivers = builder.supportedDrivers;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -184,6 +197,13 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return paymentDuration
      */
     public String getPaymentDuration() {
@@ -228,8 +248,15 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     /**
      * @return supportedDrivers
      */
-    public java.util.List < String > getSupportedDrivers() {
+    public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     public static final class Builder {
@@ -245,13 +272,15 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         private String gpuType; 
         private String machineGroupID; 
         private String memory; 
+        private String name; 
         private String paymentDuration; 
         private String paymentDurationUnit; 
         private String paymentType; 
         private String requestId; 
         private String resourceGroupID; 
         private String status; 
-        private java.util.List < String > supportedDrivers; 
+        private java.util.List<String> supportedDrivers; 
+        private java.util.List<Tags> tags; 
 
         /**
          * Cpu.
@@ -350,6 +379,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         }
 
         /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        /**
          * PaymentDuration.
          */
         public Builder paymentDuration(String paymentDuration) {
@@ -400,8 +437,16 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         /**
          * SupportedDrivers.
          */
-        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+        public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -411,4 +456,71 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceGroupMachineGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceGroupMachineGroupResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersHistoryResponseBody</p>
  */
 public class DescribeParametersHistoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Respond")
+    @com.aliyun.core.annotation.NameInMap("Respond")
     private java.util.List < Respond> respond;
 
     private DescribeParametersHistoryResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DimensionValue")
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
         private String dimensionValue;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("OldValue")
+        @com.aliyun.core.annotation.NameInMap("OldValue")
         private String oldValue;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Parameters(Builder builder) {
@@ -239,13 +238,13 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
 
     }
     public static class Respond extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.List < Parameters> parameters;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Respond(Builder builder) {

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSavepointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSavepointsResponseBody</p>
  */
 public class ListSavepointsResponseBody extends TeaModel {
-    @NameInMap("data")
-    private java.util.List < Savepoint > data;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private java.util.List<Savepoint> data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("pageIndex")
+    @com.aliyun.core.annotation.NameInMap("pageIndex")
     private Integer pageIndex;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalSize")
+    @com.aliyun.core.annotation.NameInMap("totalSize")
     private Integer totalSize;
 
     private ListSavepointsResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListSavepointsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Savepoint > getData() {
+    public java.util.List<Savepoint> getData() {
         return this.data;
     }
 
@@ -123,7 +128,7 @@ public class ListSavepointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Savepoint > data; 
+        private java.util.List<Savepoint> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
@@ -134,15 +139,24 @@ public class ListSavepointsResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * data.
+         * <ul>
+         * <li>If the value of success was true, a list of savepoints was returned.</li>
+         * <li>If the value of success was false, a null value was returned.</li>
+         * </ul>
          */
-        public Builder data(java.util.List < Savepoint > data) {
+        public Builder data(java.util.List<Savepoint> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * errorCode.
+         * <ul>
+         * <li>If the value of success was false, an error code was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +164,13 @@ public class ListSavepointsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <ul>
+         * <li>If the value of success was false, an error message was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -158,7 +178,10 @@ public class ListSavepointsResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The value was fixed to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -166,7 +189,10 @@ public class ListSavepointsResponseBody extends TeaModel {
         }
 
         /**
-         * pageIndex.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -174,7 +200,10 @@ public class ListSavepointsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +211,10 @@ public class ListSavepointsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +222,10 @@ public class ListSavepointsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +233,10 @@ public class ListSavepointsResponseBody extends TeaModel {
         }
 
         /**
-         * totalSize.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;

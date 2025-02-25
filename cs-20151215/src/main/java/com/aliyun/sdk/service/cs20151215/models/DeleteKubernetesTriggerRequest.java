@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteKubernetesTriggerRequest} extends {@link RequestModel}
  *
  * <p>DeleteKubernetesTriggerRequest</p>
  */
 public class DeleteKubernetesTriggerRequest extends Request {
-    @Path
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
     private DeleteKubernetesTriggerRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DeleteKubernetesTriggerRequest extends Request {
         } 
 
         /**
-         * The ID of the application trigger.
+         * <p>The ID of the application trigger.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

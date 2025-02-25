@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteGatewayResponseBody</p>
  */
 public class DeleteGatewayResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteGatewayResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.
+         * <p>The HTTP status code returned. The value 200 indicates that the request was successful. Other values indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class DeleteGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,11 +133,14 @@ public class DeleteGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned, such as the &quot;TaskId not found&quot; message.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +148,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FFEA345-BE30-5FE0-8885-42E2DEFD5FE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +159,14 @@ public class DeleteGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,44 +179,50 @@ public class DeleteGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteGatewayResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PrimaryUser")
+        @com.aliyun.core.annotation.NameInMap("PrimaryUser")
         private String primaryUser;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Replica")
+        @com.aliyun.core.annotation.NameInMap("Replica")
         private Integer replica;
 
-        @NameInMap("SecurityGroup")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroup")
         private String securityGroup;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Vpc")
+        @com.aliyun.core.annotation.NameInMap("Vpc")
         private String vpc;
 
-        @NameInMap("Vswitch")
+        @com.aliyun.core.annotation.NameInMap("Vswitch")
         private String vswitch;
 
         private Data(Builder builder) {
@@ -330,7 +356,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             private String vswitch; 
 
             /**
-             * The unique ID of the gateway. The ID is automatically generated by the system.
+             * <p>The unique ID of the gateway. The ID is automatically generated by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-7ea3da97b96543e19f6c597c****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -338,7 +367,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -346,7 +378,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the gateway was last updated.
+             * <p>The time when the gateway was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-07T10:07:57.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -354,7 +389,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key.
+             * <p>The ID of the primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -362,7 +400,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway.
+             * <p>The name of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-bc1a29b0-reg-center-0-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -370,7 +411,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the user.
+             * <p>The information about the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231254</p>
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -378,7 +422,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -386,7 +433,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The number of gateway replicas.
+             * <p>The number of gateway replicas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -394,7 +444,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp11ufzqn6mmb8dtzz82</p>
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -402,7 +455,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the gateway.
+             * <p>The specifications of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE_GTW_16_32_200_c</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -410,7 +466,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.
+             * <p>The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -418,7 +477,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) where the gateway resides.
+             * <p>The ID of the virtual private cloud (VPC) where the gateway resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1328cm01m6uel42b5zb</p>
              */
             public Builder vpc(String vpc) {
                 this.vpc = vpc;
@@ -426,7 +488,10 @@ public class DeleteGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp18zeqxx6mpuq843z4n5</p>
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;

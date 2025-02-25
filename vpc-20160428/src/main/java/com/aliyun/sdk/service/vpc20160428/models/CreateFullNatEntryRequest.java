@@ -1,87 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFullNatEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateFullNatEntryRequest</p>
  */
 public class CreateFullNatEntryRequest extends Request {
-    @Query
-    @NameInMap("AccessIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessIp;
 
-    @Query
-    @NameInMap("AccessPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPort;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("FullNatEntryDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullNatEntryDescription")
     private String fullNatEntryDescription;
 
-    @Query
-    @NameInMap("FullNatEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullNatEntryName")
     private String fullNatEntryName;
 
-    @Query
-    @NameInMap("FullNatTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullNatTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fullNatTableId;
 
-    @Query
-    @NameInMap("IpProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipProtocol;
 
-    @Query
-    @NameInMap("NatIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natIp;
 
-    @Query
-    @NameInMap("NatIpPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIpPort")
     private String natIpPort;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateFullNatEntryRequest(Builder builder) {
@@ -272,7 +276,11 @@ public class CreateFullNatEntryRequest extends Request {
         } 
 
         /**
-         * The backend IP address to be modified in FULLNAT address translation.
+         * <p>The backend IP address to be modified in FULLNAT address translation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder accessIp(String accessIp) {
             this.putQueryParameter("AccessIp", accessIp);
@@ -281,7 +289,11 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The backend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
+         * <p>The backend port to be modified in the mapping of FULLNAT port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder accessPort(String accessPort) {
             this.putQueryParameter("AccessPort", accessPort);
@@ -290,12 +302,14 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -304,11 +318,14 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether to only precheck this request. Valid values:
-         * <p>
+         * <p>Specifies whether to only precheck this request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request without adding the FULLNAT entry. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: sends the API request. This is the default value. After the request passes the precheck, a 2XX HTTP status code is returned and the FULLNAT entry is added.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request without adding the FULLNAT entry. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the API request. This is the default value. After the request passes the precheck, a 2XX HTTP status code is returned and the FULLNAT entry is added.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -317,10 +334,11 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The description of the FULLNAT entry.
-         * <p>
+         * <p>The description of the FULLNAT entry.</p>
+         * <p>This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder fullNatEntryDescription(String fullNatEntryDescription) {
             this.putQueryParameter("FullNatEntryDescription", fullNatEntryDescription);
@@ -329,7 +347,10 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The FULLNAT entry name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://.
+         * <p>The FULLNAT entry name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder fullNatEntryName(String fullNatEntryName) {
             this.putQueryParameter("FullNatEntryName", fullNatEntryName);
@@ -338,7 +359,11 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The ID of the FULLNAT table to which the FULLNAT entry belongs.
+         * <p>The ID of the FULLNAT table to which the FULLNAT entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fulltb-gw88z7hhlv43rmb26****</p>
          */
         public Builder fullNatTableId(String fullNatTableId) {
             this.putQueryParameter("FullNatTableId", fullNatTableId);
@@ -347,11 +372,15 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The protocol of the packets that are forwarded by the port. Valid values:
-         * <p>
+         * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **TCP**
-         * *   **UDP**
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -360,7 +389,11 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The NAT IP address that provides address translation.
+         * <p>The NAT IP address that provides address translation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder natIp(String natIp) {
             this.putQueryParameter("NatIp", natIp);
@@ -369,7 +402,10 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
+         * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder natIpPort(String natIpPort) {
             this.putQueryParameter("NatIpPort", natIpPort);
@@ -378,7 +414,11 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The elastic network interface (ENI) ID.
+         * <p>The elastic network interface (ENI) ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-gw8g131ef2dnbu3k****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -405,10 +445,12 @@ public class CreateFullNatEntryRequest extends Request {
         }
 
         /**
-         * The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be added belongs.
-         * <p>
+         * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be added belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeAuctionRequest} extends {@link RequestModel}
  *
  * <p>ChangeAuctionRequest</p>
  */
 public class ChangeAuctionRequest extends Request {
-    @Body
-    @NameInMap("AuctionList")
-    private java.util.List < AuctionList> auctionList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuctionList")
+    private java.util.List<AuctionList> auctionList;
 
     private ChangeAuctionRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ChangeAuctionRequest extends Request {
     /**
      * @return auctionList
      */
-    public java.util.List < AuctionList> getAuctionList() {
+    public java.util.List<AuctionList> getAuctionList() {
         return this.auctionList;
     }
 
     public static final class Builder extends Request.Builder<ChangeAuctionRequest, Builder> {
-        private java.util.List < AuctionList> auctionList; 
+        private java.util.List<AuctionList> auctionList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class ChangeAuctionRequest extends Request {
         /**
          * AuctionList.
          */
-        public Builder auctionList(java.util.List < AuctionList> auctionList) {
+        public Builder auctionList(java.util.List<AuctionList> auctionList) {
             this.putBodyParameter("AuctionList", auctionList);
             this.auctionList = auctionList;
             return this;
@@ -69,17 +74,23 @@ public class ChangeAuctionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeAuctionRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeAuctionRequest</p>
+     */
     public static class BidRecords extends TeaModel {
-        @NameInMap("CreateTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String createTime;
 
-        @NameInMap("Price")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Price")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Float price;
 
-        @NameInMap("UserId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private BidRecords(Builder builder) {
@@ -123,7 +134,7 @@ public class ChangeAuctionRequest extends Request {
             private String userId; 
 
             /**
-             * CreateTime.
+             * <p>This parameter is required.</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -131,7 +142,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * Price.
+             * <p>This parameter is required.</p>
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -139,7 +150,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>This parameter is required.</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -153,39 +164,45 @@ public class ChangeAuctionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeAuctionRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeAuctionRequest</p>
+     */
     public static class AuctionList extends TeaModel {
-        @NameInMap("BidRecords")
-        private java.util.List < BidRecords> bidRecords;
+        @com.aliyun.core.annotation.NameInMap("BidRecords")
+        private java.util.List<BidRecords> bidRecords;
 
-        @NameInMap("DomainName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
-        @NameInMap("EndTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endTime;
 
-        @NameInMap("IsReserve")
+        @com.aliyun.core.annotation.NameInMap("IsReserve")
         private Integer isReserve;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Float reservePrice;
 
-        @NameInMap("ReserveRange")
+        @com.aliyun.core.annotation.NameInMap("ReserveRange")
         private String reserveRange;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeLeft")
+        @com.aliyun.core.annotation.NameInMap("TimeLeft")
         private Long timeLeft;
 
-        @NameInMap("Winner")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Winner")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String winner;
 
-        @NameInMap("WinnerPrice")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("WinnerPrice")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Float winnerPrice;
 
         private AuctionList(Builder builder) {
@@ -212,7 +229,7 @@ public class ChangeAuctionRequest extends Request {
         /**
          * @return bidRecords
          */
-        public java.util.List < BidRecords> getBidRecords() {
+        public java.util.List<BidRecords> getBidRecords() {
             return this.bidRecords;
         }
 
@@ -280,7 +297,7 @@ public class ChangeAuctionRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < BidRecords> bidRecords; 
+            private java.util.List<BidRecords> bidRecords; 
             private String domainName; 
             private String endTime; 
             private Integer isReserve; 
@@ -294,13 +311,13 @@ public class ChangeAuctionRequest extends Request {
             /**
              * BidRecords.
              */
-            public Builder bidRecords(java.util.List < BidRecords> bidRecords) {
+            public Builder bidRecords(java.util.List<BidRecords> bidRecords) {
                 this.bidRecords = bidRecords;
                 return this;
             }
 
             /**
-             * DomainName.
+             * <p>This parameter is required.</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -308,7 +325,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>This parameter is required.</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -356,7 +373,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * Winner.
+             * <p>This parameter is required.</p>
              */
             public Builder winner(String winner) {
                 this.winner = winner;
@@ -364,7 +381,7 @@ public class ChangeAuctionRequest extends Request {
             }
 
             /**
-             * WinnerPrice.
+             * <p>This parameter is required.</p>
              */
             public Builder winnerPrice(Float winnerPrice) {
                 this.winnerPrice = winnerPrice;

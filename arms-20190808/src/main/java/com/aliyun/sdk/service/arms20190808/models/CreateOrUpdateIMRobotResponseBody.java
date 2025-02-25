@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateIMRobotResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateIMRobotResponseBody</p>
  */
 public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
-    @NameInMap("AlertRobot")
+    @com.aliyun.core.annotation.NameInMap("AlertRobot")
     private AlertRobot alertRobot;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateIMRobotResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the IM chatbot.
+         * <p>The information about the IM chatbot.</p>
          */
         public Builder alertRobot(AlertRobot alertRobot) {
             this.alertRobot = alertRobot;
@@ -58,7 +63,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AF921B-8187-489F-9913-43C808B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateIMRobotResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateIMRobotResponseBody</p>
+     */
     public static class AlertRobot extends TeaModel {
-        @NameInMap("CardTemplate")
+        @com.aliyun.core.annotation.NameInMap("CardTemplate")
         private String cardTemplate;
 
-        @NameInMap("DailyNoc")
+        @com.aliyun.core.annotation.NameInMap("DailyNoc")
         private Boolean dailyNoc;
 
-        @NameInMap("DailyNocTime")
+        @com.aliyun.core.annotation.NameInMap("DailyNocTime")
         private String dailyNocTime;
 
-        @NameInMap("EnableOutgoing")
+        @com.aliyun.core.annotation.NameInMap("EnableOutgoing")
         private Boolean enableOutgoing;
 
-        @NameInMap("RobotAddress")
+        @com.aliyun.core.annotation.NameInMap("RobotAddress")
         private String robotAddress;
 
-        @NameInMap("RobotId")
+        @com.aliyun.core.annotation.NameInMap("RobotId")
         private Float robotId;
 
-        @NameInMap("RobotName")
+        @com.aliyun.core.annotation.NameInMap("RobotName")
         private String robotName;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AlertRobot(Builder builder) {
@@ -194,7 +208,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The configurations of the alert card template.
+             * <p>The configurations of the alert card template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{     &quot;button&quot;: [         &quot;claim&quot;,         &quot;close&quot;,         &quot;follow&quot;,         &quot;send_itsm&quot;,         &quot;block&quot;,         &quot;unResolvedIncident&quot;     ],     &quot;field&quot;: [         {             &quot;fieldName&quot;: &quot;alarmName&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;notificationPolicy&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;alarmContent&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;alarmTime&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;seriesChart&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;includeEvent&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;assigned&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;similarAlarm&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;operator&quot;,             &quot;visible&quot;: true         }     ] }</p>
              */
             public Builder cardTemplate(String cardTemplate) {
                 this.cardTemplate = cardTemplate;
@@ -202,11 +219,14 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether daily statistics are sent. Valid values:
-             * <p>
+             * <p>Indicates whether daily statistics are sent. Valid values:</p>
+             * <ul>
+             * <li><code>false</code> (default): Daily statistics are not sent.</li>
+             * <li><code>true</code>: Daily statistics are sent.</li>
+             * </ul>
              * 
-             * *   `false` (default): Daily statistics are not sent.
-             * *   `true`: Daily statistics are sent.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dailyNoc(Boolean dailyNoc) {
                 this.dailyNoc = dailyNoc;
@@ -214,7 +234,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.
+             * <p>The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:30,17:00</p>
              */
             public Builder dailyNocTime(String dailyNocTime) {
                 this.dailyNocTime = dailyNocTime;
@@ -222,7 +245,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Outgoing feature is enabled.
+             * <p>Indicates whether the Outgoing feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOutgoing(Boolean enableOutgoing) {
                 this.enableOutgoing = enableOutgoing;
@@ -230,7 +256,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the IM chatbot.
+             * <p>The webhook URL of the IM chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
              */
             public Builder robotAddress(String robotAddress) {
                 this.robotAddress = robotAddress;
@@ -238,7 +267,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IM chatbot.
+             * <p>The ID of the IM chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder robotId(Float robotId) {
                 this.robotId = robotId;
@@ -246,7 +278,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IM chatbot.
+             * <p>The name of the IM chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chatbot name</p>
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;
@@ -254,7 +289,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * The token required to enable the Outgoing feature.
+             * <p>The token required to enable the Outgoing feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656558719183be1245ab44********</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -262,11 +300,14 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IM chatbot. Valid values:
-             * <p>
+             * <p>The type of the IM chatbot. Valid values:</p>
+             * <ul>
+             * <li><code>dingding</code>: DingTalk chatbot</li>
+             * <li><code>wechat</code>: WeCom chatbot</li>
+             * </ul>
              * 
-             * *   `dingding`: DingTalk chatbot
-             * *   `wechat`: WeCom chatbot
+             * <strong>example:</strong>
+             * <p>dingding</p>
              */
             public Builder type(String type) {
                 this.type = type;

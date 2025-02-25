@@ -1,119 +1,119 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest} extends {@link RequestModel}
  *
  * <p>SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest</p>
  */
 public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extends Request {
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Query
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > domainName;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Body
-    @NameInMap("IdentityCredential")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityCredential")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredential;
 
-    @Query
-    @NameInMap("IdentityCredentialNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredentialNo;
 
-    @Query
-    @NameInMap("IdentityCredentialType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityCredentialType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityCredentialType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PostalCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostalCode")
     private String postalCode;
 
-    @Query
-    @NameInMap("Province")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Province")
     private String province;
 
-    @Query
-    @NameInMap("RegistrantName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantName")
     private String registrantName;
 
-    @Query
-    @NameInMap("RegistrantOrganization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
     private String registrantOrganization;
 
-    @Query
-    @NameInMap("RegistrantType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String registrantType;
 
-    @Query
-    @NameInMap("TelArea")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TelArea")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String telArea;
 
-    @Query
-    @NameInMap("TelExt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TelExt")
     private String telExt;
 
-    @Query
-    @NameInMap("Telephone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Telephone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String telephone;
 
-    @Query
-    @NameInMap("TransferOutProhibited")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransferOutProhibited")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean transferOutProhibited;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("ZhAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZhAddress")
     private String zhAddress;
 
-    @Query
-    @NameInMap("ZhCity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZhCity")
     private String zhCity;
 
-    @Query
-    @NameInMap("ZhProvince")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZhProvince")
     private String zhProvince;
 
-    @Query
-    @NameInMap("ZhRegistrantName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZhRegistrantName")
     private String zhRegistrantName;
 
-    @Query
-    @NameInMap("ZhRegistrantOrganization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZhRegistrantOrganization")
     private String zhRegistrantOrganization;
 
     private SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest(Builder builder) {
@@ -411,7 +411,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibabacloud.com</p>
          */
         public Builder domainName(java.util.List < String > domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -429,7 +432,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredential.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h6UPhXz/ADP/2Q==</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putBodyParameter("IdentityCredential", identityCredential);
@@ -438,7 +444,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5****************9</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -447,7 +456,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SFZ</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);
@@ -501,7 +513,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * RegistrantType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -510,7 +525,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * TelArea.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -528,7 +546,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * Telephone.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -537,7 +558,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * TransferOutProhibited.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transferOutProhibited(Boolean transferOutProhibited) {
             this.putQueryParameter("TransferOutProhibited", transferOutProhibited);

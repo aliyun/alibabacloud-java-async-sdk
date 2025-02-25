@@ -1,19 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertContactRequest} extends {@link RequestModel}
  *
  * <p>DeleteAlertContactRequest</p>
  */
 public class DeleteAlertContactRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("contact_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> contactIds;
+
     private DeleteAlertContactRequest(Builder builder) {
         super(builder);
+        this.contactIds = builder.contactIds;
     }
 
     public static Builder builder() {
@@ -29,7 +40,15 @@ public class DeleteAlertContactRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return contactIds
+     */
+    public java.util.List<Long> getContactIds() {
+        return this.contactIds;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAlertContactRequest, Builder> {
+        private java.util.List<Long> contactIds; 
 
         private Builder() {
             super();
@@ -37,7 +56,18 @@ public class DeleteAlertContactRequest extends Request {
 
         private Builder(DeleteAlertContactRequest request) {
             super(request);
+            this.contactIds = request.contactIds;
         } 
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder contactIds(java.util.List<Long> contactIds) {
+            String contactIdsShrink = shrink(contactIds, "contact_ids", "json");
+            this.putQueryParameter("contact_ids", contactIdsShrink);
+            this.contactIds = contactIds;
+            return this;
+        }
 
         @Override
         public DeleteAlertContactRequest build() {

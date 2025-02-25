@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessKeyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessKeyResponseBody</p>
  */
 public class CreateAccessKeyResponseBody extends TeaModel {
-    @NameInMap("AccessKey")
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
     private AccessKey accessKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAccessKeyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessKey.
+         * <p>The information of the AccessKey pair.</p>
          */
         public Builder accessKey(AccessKey accessKey) {
             this.accessKey = accessKey;
@@ -58,7 +63,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class CreateAccessKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccessKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAccessKeyResponseBody</p>
+     */
     public static class AccessKey extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AccessKey(Builder builder) {
@@ -134,7 +148,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccessKeyId.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0wNEpMMlzy7s****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -142,7 +159,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PupkTg8jdmau1cXxYacgE736PJ****</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -150,7 +170,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * <p>The time when the AccessKey pair was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -158,7 +181,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the AccessKey pair. Valid values: Active and Inactive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;

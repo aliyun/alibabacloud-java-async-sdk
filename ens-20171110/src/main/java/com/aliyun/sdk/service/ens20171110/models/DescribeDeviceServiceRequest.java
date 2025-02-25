@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceServiceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeviceServiceRequest</p>
  */
 public class DescribeDeviceServiceRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
     private DescribeDeviceServiceRequest(Builder builder) {
@@ -124,7 +129,10 @@ public class DescribeDeviceServiceRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2bac6f4-75dc-455e-8389-2dc8e47526d3</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -133,7 +141,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>This parameter does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chongqing-10</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -142,7 +153,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5sg1owx0g4ojy66ab2tez77r2</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,7 +165,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2661b1dd-3453-418d-8182-bb34f79e8d3c</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -160,7 +177,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chongqing-11</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +189,10 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * Service ID
+         * <p>Service ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-cxxxxx</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

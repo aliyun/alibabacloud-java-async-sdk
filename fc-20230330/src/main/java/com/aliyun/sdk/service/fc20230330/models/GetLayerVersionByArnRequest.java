@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLayerVersionByArnRequest} extends {@link RequestModel}
  *
  * <p>GetLayerVersionByArnRequest</p>
  */
 public class GetLayerVersionByArnRequest extends Request {
-    @Path
-    @NameInMap("arn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("arn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arn;
 
     private GetLayerVersionByArnRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class GetLayerVersionByArnRequest extends Request {
         } 
 
         /**
-         * arn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the layer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-shanghai:1234:layers/my-layer/versions/1</p>
          */
         public Builder arn(String arn) {
             this.putPathParameter("arn", arn);

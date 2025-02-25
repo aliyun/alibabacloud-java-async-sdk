@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResolverRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteResolverRuleResponseBody</p>
  */
 public class DeleteResolverRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteResolverRuleResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteResolverRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C9959BE-3A6A-4803-8DCE-973B42ACD599</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDatasetListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDatasetListResponseBody</p>
  */
 public class QueryDatasetListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDatasetListResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The keyword used to search for the dataset name.
+         * <p>The keyword used to search for the dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * Test dataset
+         * <p>Test dataset</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,11 +86,14 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * Whether to recursively wrap the dataset in the subdirectory. Valid values:
-         * <p>
+         * <p>Whether to recursively wrap the dataset in the subdirectory. Valid values:</p>
+         * <ul>
+         * <li>true: returns datasets in all recursive subdirectories in the directoryId directory.</li>
+         * <li>false: Only datasets in the directory specified by directoryId are returned, excluding subdirectories.</li>
+         * </ul>
          * 
-         * *   true: returns datasets in all recursive subdirectories in the directoryId directory.
-         * *   false: Only datasets in the directory specified by directoryId are returned, excluding subdirectories.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,14 +106,20 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDatasetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetListResponseBody</p>
+     */
     public static class DataSource extends TeaModel {
-        @NameInMap("DsId")
+        @com.aliyun.core.annotation.NameInMap("DsId")
         private String dsId;
 
-        @NameInMap("DsName")
+        @com.aliyun.core.annotation.NameInMap("DsName")
         private String dsName;
 
-        @NameInMap("DsType")
+        @com.aliyun.core.annotation.NameInMap("DsType")
         private String dsType;
 
         private DataSource(Builder builder) {
@@ -146,7 +163,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String dsType; 
 
             /**
-             * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+             * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>261b252d-c3c3-498a-a0a7-5d1ec6cd****</p>
              */
             public Builder dsId(String dsId) {
                 this.dsId = dsId;
@@ -154,7 +174,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling group was modified.
+             * <p>The time when the scaling group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the training dataset.</p>
              */
             public Builder dsName(String dsName) {
                 this.dsName = dsName;
@@ -162,7 +185,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the dataset owner in the Quick BI.
+             * <p>The user ID of the dataset owner in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dsType(String dsType) {
                 this.dsType = dsType;
@@ -176,17 +202,23 @@ public class QueryDatasetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetListResponseBody</p>
+     */
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -239,7 +271,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String pathName; 
 
             /**
-             * The ID of the directory path.
+             * <p>The ID of the directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -247,7 +282,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Information about the directory where the dataset is located</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -255,7 +293,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -263,7 +304,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test a data source</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -277,41 +321,50 @@ public class QueryDatasetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataSource")
+        @com.aliyun.core.annotation.NameInMap("DataSource")
         private DataSource dataSource;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OpenOfflineAcceleration")
+        private Boolean openOfflineAcceleration;
+
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("RowLevel")
+        @com.aliyun.core.annotation.NameInMap("RowLevel")
         private Boolean rowLevel;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Data(Builder builder) {
@@ -322,6 +375,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             this.description = builder.description;
             this.directory = builder.directory;
             this.modifyTime = builder.modifyTime;
+            this.openOfflineAcceleration = builder.openOfflineAcceleration;
             this.ownerId = builder.ownerId;
             this.ownerName = builder.ownerName;
             this.rowLevel = builder.rowLevel;
@@ -387,6 +441,13 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
+         * @return openOfflineAcceleration
+         */
+        public Boolean getOpenOfflineAcceleration() {
+            return this.openOfflineAcceleration;
+        }
+
+        /**
          * @return ownerId
          */
         public String getOwnerId() {
@@ -429,6 +490,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String description; 
             private Directory directory; 
             private String modifyTime; 
+            private Boolean openOfflineAcceleration; 
             private String ownerId; 
             private String ownerName; 
             private Boolean rowLevel; 
@@ -436,7 +498,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * The details of the dataset list.
+             * <p>The details of the dataset list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-02 10:36:05</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -444,7 +509,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Test Space
+             * <p>Test Space</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -452,7 +517,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5820f58c-c734-4d8a-baf1-7979af4f****</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -460,7 +528,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Tom
+             * <p>Tom</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_sales_record_copy12</p>
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -468,7 +539,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows per page set when the interface is requested.
+             * <p>The number of rows per page set when the interface is requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The total number of rows in the table.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -476,7 +550,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the data source to which the dataset belongs.
+             * <p>The information about the data source to which the dataset belongs.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -484,7 +558,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the dataset owner.
+             * <p>The nickname of the dataset owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-02 10:36:05</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -492,7 +569,18 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * OpenOfflineAcceleration.
+             */
+            public Builder openOfflineAcceleration(Boolean openOfflineAcceleration) {
+                this.openOfflineAcceleration = openOfflineAcceleration;
+                return this;
+            }
+
+            /**
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>136516262323****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -500,11 +588,14 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable row-level permissions. Valid values:
-             * <p>
+             * <p>Whether to enable row-level permissions. Valid values:</p>
+             * <ul>
+             * <li>true: The VIP Netty channel is enabled.</li>
+             * <li>false: The incremental log backup feature is disabled.</li>
+             * </ul>
              * 
-             * *   true: The VIP Netty channel is enabled.
-             * *   false: The incremental log backup feature is disabled.
+             * <strong>example:</strong>
+             * <p>The ID of the workspace.</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -512,7 +603,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages returned.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder rowLevel(Boolean rowLevel) {
                 this.rowLevel = rowLevel;
@@ -520,7 +614,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95296e95-ca89-4c7d-8af9-dedf0ad06adf</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -528,7 +625,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the dataset.
+             * <p>The description of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test dataset</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -542,20 +642,26 @@ public class QueryDatasetListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetListResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Integer totalNum;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Result(Builder builder) {
@@ -577,7 +683,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -610,26 +716,29 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
 
             /**
-             * Returns the pagination results of the dataset list. The detailed information of the dataset list is stored in the response parameter Data.
+             * <p>Returns the pagination results of the dataset list. The detailed information of the dataset list is stored in the response parameter Data.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * The number of rows per page in a paged query.
-             * <p>
+             * <p>The number of rows per page in a paged query.</p>
+             * <ul>
+             * <li>Default value: 10.</li>
+             * <li>Maximum value: 1,000.</li>
+             * </ul>
              * 
-             * *   Default value: 10.
-             * *   Maximum value: 1,000.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -637,11 +746,14 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request is successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request is successful. Valid values:</p>
+             * <ul>
+             * <li>true: The request was successful.</li>
+             * <li>false: The request failed.</li>
+             * </ul>
              * 
-             * *   true: The request was successful.
-             * *   false: The request failed.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -649,7 +761,10 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -657,11 +772,14 @@ public class QueryDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Current page number for dataset list:
-             * <p>
+             * <p>Current page number for dataset list:</p>
+             * <ul>
+             * <li>Pages start from page 1.</li>
+             * <li>Default value: 1.</li>
+             * </ul>
              * 
-             * *   Pages start from page 1.
-             * *   Default value: 1.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

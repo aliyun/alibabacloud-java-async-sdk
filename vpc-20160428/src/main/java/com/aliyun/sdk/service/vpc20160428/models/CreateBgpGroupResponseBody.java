@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBgpGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBgpGroupResponseBody</p>
  */
 public class CreateBgpGroupResponseBody extends TeaModel {
-    @NameInMap("BgpGroupId")
+    @com.aliyun.core.annotation.NameInMap("BgpGroupId")
     private String bgpGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBgpGroupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateBgpGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the BGP group.
+         * <p>The ID of the BGP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgpg-bp1k25cyp26cllath****</p>
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.bgpGroupId = bgpGroupId;
@@ -58,7 +66,10 @@ public class CreateBgpGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1221A1F-2ACD-4592-8F27-474E02883159</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

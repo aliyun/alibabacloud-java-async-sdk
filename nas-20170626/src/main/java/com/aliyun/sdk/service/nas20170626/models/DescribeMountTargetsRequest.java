@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMountTargetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeMountTargetsRequest</p>
  */
 public class DescribeMountTargetsRequest extends Request {
-    @Query
-    @NameInMap("DualStackMountTargetDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DualStackMountTargetDomain")
     private String dualStackMountTargetDomain;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
     private String mountTargetDomain;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
     private DescribeMountTargetsRequest(Builder builder) {
@@ -102,17 +107,23 @@ public class DescribeMountTargetsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMountTargetsRequest response) {
-            super(response);
-            this.dualStackMountTargetDomain = response.dualStackMountTargetDomain;
-            this.fileSystemId = response.fileSystemId;
-            this.mountTargetDomain = response.mountTargetDomain;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeMountTargetsRequest request) {
+            super(request);
+            this.dualStackMountTargetDomain = request.dualStackMountTargetDomain;
+            this.fileSystemId = request.fileSystemId;
+            this.mountTargetDomain = request.mountTargetDomain;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * DualStackMountTargetDomain.
+         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         * <blockquote>
+         * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
             this.putQueryParameter("DualStackMountTargetDomain", dualStackMountTargetDomain);
@@ -121,7 +132,19 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
+         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015****.</li>
+         * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-125487****.</li>
+         * </ul>
+         * <blockquote>
+         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -130,7 +153,10 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * <p>The domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404a666-x****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -139,7 +165,11 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +178,12 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

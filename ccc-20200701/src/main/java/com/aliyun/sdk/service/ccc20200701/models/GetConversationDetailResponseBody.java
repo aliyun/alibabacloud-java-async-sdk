@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConversationDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetConversationDetailResponseBody</p>
  */
 public class GetConversationDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Phrases")
-    private java.util.List < Phrases> phrases;
+    @com.aliyun.core.annotation.NameInMap("Phrases")
+    private java.util.List<Phrases> phrases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetConversationDetailResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class GetConversationDetailResponseBody extends TeaModel {
     /**
      * @return phrases
      */
-    public java.util.List < Phrases> getPhrases() {
+    public java.util.List<Phrases> getPhrases() {
         return this.phrases;
     }
 
@@ -82,7 +87,7 @@ public class GetConversationDetailResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < Phrases> phrases; 
+        private java.util.List<Phrases> phrases; 
         private String requestId; 
 
         /**
@@ -112,7 +117,7 @@ public class GetConversationDetailResponseBody extends TeaModel {
         /**
          * Phrases.
          */
-        public Builder phrases(java.util.List < Phrases> phrases) {
+        public Builder phrases(java.util.List<Phrases> phrases) {
             this.phrases = phrases;
             return this;
         }
@@ -131,25 +136,35 @@ public class GetConversationDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConversationDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConversationDetailResponseBody</p>
+     */
     public static class Phrases extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Integer end;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Finished")
+        private Boolean finished;
+
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Phrases(Builder builder) {
             this.begin = builder.begin;
             this.end = builder.end;
+            this.finished = builder.finished;
             this.identity = builder.identity;
             this.role = builder.role;
             this.words = builder.words;
@@ -178,6 +193,13 @@ public class GetConversationDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return finished
+         */
+        public Boolean getFinished() {
+            return this.finished;
+        }
+
+        /**
          * @return identity
          */
         public String getIdentity() {
@@ -201,6 +223,7 @@ public class GetConversationDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer begin; 
             private Integer end; 
+            private Boolean finished; 
             private String identity; 
             private String role; 
             private String words; 
@@ -218,6 +241,14 @@ public class GetConversationDetailResponseBody extends TeaModel {
              */
             public Builder end(Integer end) {
                 this.end = end;
+                return this;
+            }
+
+            /**
+             * Finished.
+             */
+            public Builder finished(Boolean finished) {
+                this.finished = finished;
                 return this;
             }
 

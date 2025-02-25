@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseVpnConnectionsRequest} extends {@link RequestModel}
  *
  * <p>DiagnoseVpnConnectionsRequest</p>
  */
 public class DiagnoseVpnConnectionsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TunnelIds")
-    private java.util.List < String > tunnelIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TunnelIds")
+    private java.util.List<String> tunnelIds;
 
-    @Query
-    @NameInMap("VpnConnectionIds")
-    private java.util.List < String > vpnConnectionIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnConnectionIds")
+    private java.util.List<String> vpnConnectionIds;
 
-    @Query
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private DiagnoseVpnConnectionsRequest(Builder builder) {
@@ -96,14 +101,14 @@ public class DiagnoseVpnConnectionsRequest extends Request {
     /**
      * @return tunnelIds
      */
-    public java.util.List < String > getTunnelIds() {
+    public java.util.List<String> getTunnelIds() {
         return this.tunnelIds;
     }
 
     /**
      * @return vpnConnectionIds
      */
-    public java.util.List < String > getVpnConnectionIds() {
+    public java.util.List<String> getVpnConnectionIds() {
         return this.vpnConnectionIds;
     }
 
@@ -119,8 +124,8 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private Long resourceOwnerId; 
-        private java.util.List < String > tunnelIds; 
-        private java.util.List < String > vpnConnectionIds; 
+        private java.util.List<String> tunnelIds; 
+        private java.util.List<String> vpnConnectionIds; 
         private String vpnGatewayId; 
 
         private Builder() {
@@ -139,7 +144,10 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +156,10 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,7 +168,12 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the IPsec-VPN connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,25 +191,28 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * TunnelIds.
+         * <p>The list of tunnel IDs.</p>
          */
-        public Builder tunnelIds(java.util.List < String > tunnelIds) {
+        public Builder tunnelIds(java.util.List<String> tunnelIds) {
             this.putQueryParameter("TunnelIds", tunnelIds);
             this.tunnelIds = tunnelIds;
             return this;
         }
 
         /**
-         * VpnConnectionIds.
+         * <p>The IDs of IPsec-VPN connections.</p>
          */
-        public Builder vpnConnectionIds(java.util.List < String > vpnConnectionIds) {
+        public Builder vpnConnectionIds(java.util.List<String> vpnConnectionIds) {
             this.putQueryParameter("VpnConnectionIds", vpnConnectionIds);
             this.vpnConnectionIds = vpnConnectionIds;
             return this;
         }
 
         /**
-         * VpnGatewayId.
+         * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp10hz6b0mbp39flt****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

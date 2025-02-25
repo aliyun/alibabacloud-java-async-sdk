@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileResponseBody</p>
  */
 public class GetFileResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetFileResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetFileResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>The index information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,28 +79,38 @@ public class GetFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("dataSource")
+        @com.aliyun.core.annotation.NameInMap("dataSource")
         private String dataSource;
 
-        @NameInMap("fullPathName")
+        @com.aliyun.core.annotation.NameInMap("extend")
+        private java.util.Map<String, java.util.List<String>> extend;
+
+        @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
 
-        @NameInMap("isDir")
+        @com.aliyun.core.annotation.NameInMap("isDir")
         private Boolean isDir;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private Long partition;
 
         private Result(Builder builder) {
             this.content = builder.content;
             this.dataSource = builder.dataSource;
+            this.extend = builder.extend;
             this.fullPathName = builder.fullPathName;
             this.isDir = builder.isDir;
             this.name = builder.name;
@@ -119,6 +137,13 @@ public class GetFileResponseBody extends TeaModel {
          */
         public String getDataSource() {
             return this.dataSource;
+        }
+
+        /**
+         * @return extend
+         */
+        public java.util.Map<String, java.util.List<String>> getExtend() {
+            return this.extend;
         }
 
         /**
@@ -152,13 +177,17 @@ public class GetFileResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String dataSource; 
+            private java.util.Map<String, java.util.List<String>> extend; 
             private String fullPathName; 
             private Boolean isDir; 
             private String name; 
             private Long partition; 
 
             /**
-             * content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -166,7 +195,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * dataSource.
+             * <p>The data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-2r42p5oi202_xijie_test</p>
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -174,7 +206,18 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * fullPathName.
+             * <p>Extended information</p>
+             */
+            public Builder extend(java.util.Map<String, java.util.List<String>> extend) {
+                this.extend = extend;
+                return this;
+            }
+
+            /**
+             * <p>The full path of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -182,7 +225,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * isDir.
+             * <p>Indicates whether the file is a directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -190,7 +236,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-2r42ostoc01_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +247,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * partition.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20210828</p>
              */
             public Builder partition(Long partition) {
                 this.partition = partition;

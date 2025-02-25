@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeEduPaperCutRequest} extends {@link RequestModel}
  *
  * <p>RecognizeEduPaperCutRequest</p>
  */
 public class RecognizeEduPaperCutRequest extends Request {
-    @Query
-    @NameInMap("CutType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CutType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cutType;
 
-    @Query
-    @NameInMap("ImageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageType;
 
-    @Query
-    @NameInMap("Subject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputOricoord")
+    private Boolean outputOricoord;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subject")
     private String subject;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(maxLength = 2048)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeEduPaperCutRequest(Builder builder) {
         super(builder);
         this.cutType = builder.cutType;
         this.imageType = builder.imageType;
+        this.outputOricoord = builder.outputOricoord;
         this.subject = builder.subject;
         this.url = builder.url;
         this.body = builder.body;
@@ -72,6 +77,13 @@ public class RecognizeEduPaperCutRequest extends Request {
     }
 
     /**
+     * @return outputOricoord
+     */
+    public Boolean getOutputOricoord() {
+        return this.outputOricoord;
+    }
+
+    /**
      * @return subject
      */
     public String getSubject() {
@@ -95,6 +107,7 @@ public class RecognizeEduPaperCutRequest extends Request {
     public static final class Builder extends Request.Builder<RecognizeEduPaperCutRequest, Builder> {
         private String cutType; 
         private String imageType; 
+        private Boolean outputOricoord; 
         private String subject; 
         private String url; 
         private java.io.InputStream body; 
@@ -107,13 +120,17 @@ public class RecognizeEduPaperCutRequest extends Request {
             super(request);
             this.cutType = request.cutType;
             this.imageType = request.imageType;
+            this.outputOricoord = request.outputOricoord;
             this.subject = request.subject;
             this.url = request.url;
             this.body = request.body;
         } 
 
         /**
-         * CutType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>question：题目， answer：答案</p>
          */
         public Builder cutType(String cutType) {
             this.putQueryParameter("CutType", cutType);
@@ -122,11 +139,23 @@ public class RecognizeEduPaperCutRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan：扫描图， photo：实拍图</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
             this.imageType = imageType;
+            return this;
+        }
+
+        /**
+         * OutputOricoord.
+         */
+        public Builder outputOricoord(Boolean outputOricoord) {
+            this.putQueryParameter("OutputOricoord", outputOricoord);
+            this.outputOricoord = outputOricoord;
             return this;
         }
 

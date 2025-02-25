@@ -1,83 +1,93 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcsRequest</p>
  */
 public class DescribeVpcsRequest extends Request {
-    @Query
-    @NameInMap("DhcpOptionsSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetId")
     private String dhcpOptionsSetId;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
+    private Boolean enableIpv6;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcName")
     private String vpcName;
 
-    @Query
-    @NameInMap("VpcOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcOwnerId")
     private Long vpcOwnerId;
 
     private DescribeVpcsRequest(Builder builder) {
         super(builder);
         this.dhcpOptionsSetId = builder.dhcpOptionsSetId;
         this.dryRun = builder.dryRun;
+        this.enableIpv6 = builder.enableIpv6;
         this.isDefault = builder.isDefault;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -118,6 +128,13 @@ public class DescribeVpcsRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return enableIpv6
+     */
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
     }
 
     /**
@@ -186,7 +203,7 @@ public class DescribeVpcsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -214,6 +231,7 @@ public class DescribeVpcsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeVpcsRequest, Builder> {
         private String dhcpOptionsSetId; 
         private Boolean dryRun; 
+        private Boolean enableIpv6; 
         private Boolean isDefault; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -223,7 +241,7 @@ public class DescribeVpcsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
         private String vpcName; 
         private Long vpcOwnerId; 
@@ -236,6 +254,7 @@ public class DescribeVpcsRequest extends Request {
             super(request);
             this.dhcpOptionsSetId = request.dhcpOptionsSetId;
             this.dryRun = request.dryRun;
+            this.enableIpv6 = request.enableIpv6;
             this.isDefault = request.isDefault;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -252,7 +271,10 @@ public class DescribeVpcsRequest extends Request {
         } 
 
         /**
-         * The ID of the DHCP options set.
+         * <p>The ID of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -261,11 +283,14 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.</li>
+         * </ul>
          * 
-         * *   **true**: checks the request but does not query VPCs. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -274,11 +299,32 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the default VPC in the specified region. Valid values:
-         * <p>
+         * <p>Query for VPCs in the specified region that have enabled IPv6 CIDR blocks. The value is empty by default, which means no filtering based on IPv6 availability is conducted. Valid values:</p>
+         * <ul>
+         * <li><p>false: disabled</p>
+         * </li>
+         * <li><p>true: enabled</p>
+         * </li>
+         * </ul>
          * 
-         * *   **true** (default): yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder enableIpv6(Boolean enableIpv6) {
+            this.putQueryParameter("EnableIpv6", enableIpv6);
+            this.enableIpv6 = enableIpv6;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to query the default VPC in the specified region. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -305,7 +351,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -314,7 +363,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -323,10 +375,12 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -335,7 +389,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the VPC to be queried belongs.
+         * <p>The ID of the resource group to which the VPC to be queried belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxvfvazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -362,19 +419,20 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags of the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the VPC.
-         * <p>
+         * <p>The VPC ID.</p>
+         * <p>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</p>
          * 
-         * You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>vpc-bp1b1xjllp3ve5yze****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -383,7 +441,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The name of the VPC.
+         * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vpc-1</p>
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);
@@ -392,7 +453,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VPC belongs.
+         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         public Builder vpcOwnerId(Long vpcOwnerId) {
             this.putQueryParameter("VpcOwnerId", vpcOwnerId);
@@ -407,11 +471,17 @@ public class DescribeVpcsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -446,7 +516,11 @@ public class DescribeVpcsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -454,7 +528,11 @@ public class DescribeVpcsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

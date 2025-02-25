@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GeneratePictureLinkResponseBody</p>
  */
 public class GeneratePictureLinkResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GeneratePictureLinkResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GeneratePictureLinkResponseBody extends TeaModel {
     } 
 
     public static class Links extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("link")
+        @com.aliyun.core.annotation.NameInMap("link")
         private String link;
 
         private Links(Builder builder) {
@@ -133,7 +132,7 @@ public class GeneratePictureLinkResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("links")
+        @com.aliyun.core.annotation.NameInMap("links")
         private java.util.List < Links> links;
 
         private Data(Builder builder) {

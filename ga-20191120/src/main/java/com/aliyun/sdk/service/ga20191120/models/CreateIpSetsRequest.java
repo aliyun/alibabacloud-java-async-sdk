@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIpSetsRequest</p>
  */
 public class CreateIpSetsRequest extends Request {
-    @Query
-    @NameInMap("AccelerateRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccelerateRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AccelerateRegion> accelerateRegion;
 
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateIpSetsRequest(Builder builder) {
@@ -120,9 +119,9 @@ public class CreateIpSetsRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,17 +146,17 @@ public class CreateIpSetsRequest extends Request {
     } 
 
     public static class AccelerateRegion extends TeaModel {
-        @NameInMap("AccelerateRegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AccelerateRegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accelerateRegionId;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("IspType")
+        @com.aliyun.core.annotation.NameInMap("IspType")
         private String ispType;
 
         private AccelerateRegion(Builder builder) {
@@ -210,10 +209,10 @@ public class CreateIpSetsRequest extends Request {
             private String ispType; 
 
             /**
-             * The acceleration region IDs.
+             * The ID of the acceleration region.
              * <p>
              * 
-             * The number of regions that can be added varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).
+             * The number of regions that you can add varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).
              */
             public Builder accelerateRegionId(String accelerateRegionId) {
                 this.accelerateRegionId = accelerateRegionId;
@@ -221,14 +220,12 @@ public class CreateIpSetsRequest extends Request {
             }
 
             /**
-             * The bandwidth to be allocated to the acceleration region. Unit: **Mbit/s**.
+             * The bandwidth that you want to allocate to the acceleration region. Unit: **Mbit/s**.
              * <p>
              * 
-             * > 
-             * 
-             * *   Each acceleration region must be allocated a minimum of 2 Mbit/s of bandwidth.
-             * 
-             * *   The total bandwidth for all acceleration regions cannot exceed the maximum bandwidth of the basic bandwidth plan.
+             * >*  This parameter is required.
+             * >*   You must allocate at least 2 Mbit/s of bandwidth to each acceleration region.
+             * >*   The total bandwidth of all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -241,6 +238,9 @@ public class CreateIpSetsRequest extends Request {
              * 
              * *   **IPv4** (default)
              * *   **IPv6**
+             * *   **DUAL_STACK**: IPv4 and IPv6
+             * 
+             * > Only pay-as-you-go standard GA instances support DUAL_STACK.
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -251,19 +251,11 @@ public class CreateIpSetsRequest extends Request {
              * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
              * <p>
              * 
-             * *   **BGP**
-             * *   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.
+             * *   **BGP**: BGP (Multi-ISP) lines.
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
              * 
-             * If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:
-             * 
-             * *   **ChinaTelecom**: China Telecom (single ISP)
-             * *   **ChinaUnicom**: China Unicom (single ISP)
-             * *   **ChinaMobile**: China Mobile (single ISP)
-             * *   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)
-             * *   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)
-             * *   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)
-             * 
-             * > Different acceleration regions support different single-ISP BGP lines.
+             * > *   This parameter is required only if the bandwidth metering method of the GA instance is **pay-by-data transfer**.
+             * >*   Different acceleration regions support different line types of EIPs.
              */
             public Builder ispType(String ispType) {
                 this.ispType = ispType;

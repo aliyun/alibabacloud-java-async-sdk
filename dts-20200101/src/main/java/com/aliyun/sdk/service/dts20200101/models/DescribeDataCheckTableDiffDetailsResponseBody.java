@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCheckTableDiffDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataCheckTableDiffDetailsResponseBody</p>
  */
 public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @NameInMap("DiffCount")
+    @com.aliyun.core.annotation.NameInMap("DiffCount")
     private Long diffCount;
 
-    @NameInMap("DiffDetails")
-    private java.util.List < DiffDetails> diffDetails;
+    @com.aliyun.core.annotation.NameInMap("DiffDetails")
+    private java.util.List<DiffDetails> diffDetails;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TbName")
+    @com.aliyun.core.annotation.NameInMap("TbName")
     private String tbName;
 
     private DescribeDataCheckTableDiffDetailsResponseBody(Builder builder) {
@@ -84,7 +89,7 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     /**
      * @return diffDetails
      */
-    public java.util.List < DiffDetails> getDiffDetails() {
+    public java.util.List<DiffDetails> getDiffDetails() {
         return this.diffDetails;
     }
 
@@ -147,7 +152,7 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public static final class Builder {
         private String dbName; 
         private Long diffCount; 
-        private java.util.List < DiffDetails> diffDetails; 
+        private java.util.List<DiffDetails> diffDetails; 
         private String dynamicMessage; 
         private String errCode; 
         private String errMessage; 
@@ -158,7 +163,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         private String tbName; 
 
         /**
-         * DbName.
+         * <p>The name of the source database to which the table that contains inconsistent data belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_dtstest</p>
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -166,7 +174,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * DiffCount.
+         * <p>The number of data rows that contain inconsistent data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder diffCount(Long diffCount) {
             this.diffCount = diffCount;
@@ -174,15 +185,21 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * DiffDetails.
+         * <p>The information about the inconsistent data.</p>
          */
-        public Builder diffDetails(java.util.List < DiffDetails> diffDetails) {
+        public Builder diffDetails(java.util.List<DiffDetails> diffDetails) {
             this.diffDetails = diffDetails;
             return this;
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>For example, if the value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the value of the <strong>DynamicMessage</strong> parameter is <strong>Type</strong>, the specified <strong>Type</strong> parameter is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -190,7 +207,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -198,7 +218,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of the parameter tbName is invalid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -206,7 +229,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -214,7 +240,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsog8q1z3tc9t****&quot;</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -222,7 +251,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +262,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +273,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * TbName.
+         * <p>The name of the table that contains inconsistent data in the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_person</p>
          */
         public Builder tbName(String tbName) {
             this.tbName = tbName;
@@ -251,14 +289,20 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataCheckTableDiffDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCheckTableDiffDetailsResponseBody</p>
+     */
     public static class DiffDetails extends TeaModel {
-        @NameInMap("Diff")
+        @com.aliyun.core.annotation.NameInMap("Diff")
         private String diff;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private DiffDetails(Builder builder) {
@@ -302,7 +346,16 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * Diff.
+             * <p>The details of the inconsistent data, whose value is a JSON string. The JSON string contains the following parameters:</p>
+             * <ul>
+             * <li>column: the name of the field.</li>
+             * <li>source: the value of the field in the source database.</li>
+             * <li>dest: the value of the field in the destination database.</li>
+             * <li>isPrimary: indicates whether the field is a primary key.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[     {         &quot;column&quot;: &quot;id&quot;,         &quot;source&quot;: &quot;9511&quot;,         &quot;dest&quot;: &quot;9511&quot;,         &quot;isPrimary&quot;: true     },     {         &quot;column&quot;: &quot;state&quot;,         &quot;source&quot;: &quot;3&quot;,         &quot;dest&quot;: &quot;2&quot;,         &quot;isPrimary&quot;: false     },     {         &quot;column&quot;: &quot;create_time&quot;,         &quot;source&quot;: &quot;2023-04-11 14:07:17.0&quot;,         &quot;dest&quot;: &quot;NULL&quot;,         &quot;isPrimary&quot;: false     },     {         &quot;column&quot;: &quot;update_time&quot;,         &quot;source&quot;: &quot;2023-04-11 06:07:17.0&quot;,         &quot;dest&quot;: &quot;2023-04-11 06:02:29.0&quot;,         &quot;isPrimary&quot;: false     } ]</p>
              */
             public Builder diff(String diff) {
                 this.diff = diff;
@@ -310,7 +363,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the data verification was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-23T10:36:05.000+00:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -318,7 +374,10 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The auto-increment primary key that is used to identify the data in a verification result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13058****</p>
              */
             public Builder id(Long id) {
                 this.id = id;

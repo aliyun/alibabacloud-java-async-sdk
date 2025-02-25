@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnatTableEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnatTableEntriesResponseBody</p>
  */
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnatTableEntries")
-    private java.util.List < SnatTableEntries> snatTableEntries;
+    @com.aliyun.core.annotation.NameInMap("SnatTableEntries")
+    private java.util.List<SnatTableEntries> snatTableEntries;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnatTableEntriesResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     /**
      * @return snatTableEntries
      */
-    public java.util.List < SnatTableEntries> getSnatTableEntries() {
+    public java.util.List<SnatTableEntries> getSnatTableEntries() {
         return this.snatTableEntries;
     }
 
@@ -82,11 +87,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SnatTableEntries> snatTableEntries; 
+        private java.util.List<SnatTableEntries> snatTableEntries; 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +124,18 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * SnatTableEntries.
+         * <p>The details of the SNAT entries.</p>
          */
-        public Builder snatTableEntries(java.util.List < SnatTableEntries> snatTableEntries) {
+        public Builder snatTableEntries(java.util.List<SnatTableEntries> snatTableEntries) {
             this.snatTableEntries = snatTableEntries;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The number of SNAT entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,32 +148,46 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnatTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnatTableEntriesResponseBody</p>
+     */
     public static class SnatTableEntries extends TeaModel {
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+        private Integer idleTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("IspAffinity")
+        private Boolean ispAffinity;
+
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("SnatEntryId")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryId")
         private String snatEntryId;
 
-        @NameInMap("SnatEntryName")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryName")
         private String snatEntryName;
 
-        @NameInMap("SnatIp")
+        @com.aliyun.core.annotation.NameInMap("SnatIp")
         private String snatIp;
 
-        @NameInMap("SourceCIDR")
+        @com.aliyun.core.annotation.NameInMap("SourceCIDR")
         private String sourceCIDR;
 
-        @NameInMap("StandbySnatIp")
+        @com.aliyun.core.annotation.NameInMap("StandbySnatIp")
         private String standbySnatIp;
 
-        @NameInMap("StandbyStatus")
+        @com.aliyun.core.annotation.NameInMap("StandbyStatus")
         private String standbyStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SnatTableEntries(Builder builder) {
+            this.idleTimeout = builder.idleTimeout;
+            this.ispAffinity = builder.ispAffinity;
             this.natGatewayId = builder.natGatewayId;
             this.snatEntryId = builder.snatEntryId;
             this.snatEntryName = builder.snatEntryName;
@@ -173,6 +204,20 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
         public static SnatTableEntries create() {
             return builder().build();
+        }
+
+        /**
+         * @return idleTimeout
+         */
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
+        }
+
+        /**
+         * @return ispAffinity
+         */
+        public Boolean getIspAffinity() {
+            return this.ispAffinity;
         }
 
         /**
@@ -232,6 +277,8 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer idleTimeout; 
+            private Boolean ispAffinity; 
             private String natGatewayId; 
             private String snatEntryId; 
             private String snatEntryName; 
@@ -242,7 +289,29 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * NatGatewayId.
+             * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
+             */
+            public Builder idleTimeout(Integer idleTimeout) {
+                this.idleTimeout = idleTimeout;
+                return this;
+            }
+
+            /**
+             * IspAffinity.
+             */
+            public Builder ispAffinity(Boolean ispAffinity) {
+                this.ispAffinity = ispAffinity;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the NAT gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -250,7 +319,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SnatEntryId.
+             * <p>The ID of the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snat-5tfjp3537mi6iokl59g5c****</p>
              */
             public Builder snatEntryId(String snatEntryId) {
                 this.snatEntryId = snatEntryId;
@@ -258,7 +330,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SnatEntryName.
+             * <p>The name of the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test0</p>
              */
             public Builder snatEntryName(String snatEntryName) {
                 this.snatEntryName = snatEntryName;
@@ -266,7 +341,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SnatIp.
+             * <p>The EIP specified in the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.XXX.XXX.71</p>
              */
             public Builder snatIp(String snatIp) {
                 this.snatIp = snatIp;
@@ -274,7 +352,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCIDR.
+             * <p>The source CIDR block specified in the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.13/32</p>
              */
             public Builder sourceCIDR(String sourceCIDR) {
                 this.sourceCIDR = sourceCIDR;
@@ -282,7 +363,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * StandbySnatIp.
+             * <p>The secondary EIP. Multiple EIPs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.XXX.XXX.7</p>
              */
             public Builder standbySnatIp(String standbySnatIp) {
                 this.standbySnatIp = standbySnatIp;
@@ -290,7 +374,16 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyStatus.
+             * <p>The status of the secondary EIP. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Stopped</li>
+             * <li>Starting</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder standbyStatus(String standbyStatus) {
                 this.standbyStatus = standbyStatus;
@@ -298,7 +391,15 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the SNAT entry. Valid values:</p>
+             * <ul>
+             * <li>Pending: The SNAT entry is being created or modified.</li>
+             * <li>Available: The SNAT entry is available.</li>
+             * <li>Deleting: The SNAT entry is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

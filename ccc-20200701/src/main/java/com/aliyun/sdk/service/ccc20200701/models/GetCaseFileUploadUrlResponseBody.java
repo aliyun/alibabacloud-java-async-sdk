@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCaseFileUploadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetCaseFileUploadUrlResponseBody</p>
  */
 public class GetCaseFileUploadUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCaseFileUploadUrlResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class GetCaseFileUploadUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCaseFileUploadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCaseFileUploadUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CaseFileKey")
+        @com.aliyun.core.annotation.NameInMap("CaseFileKey")
         private String caseFileKey;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

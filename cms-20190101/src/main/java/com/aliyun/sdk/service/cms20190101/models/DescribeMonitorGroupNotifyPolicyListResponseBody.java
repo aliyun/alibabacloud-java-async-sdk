@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupNotifyPolicyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorGroupNotifyPolicyListResponseBody</p>
  */
 public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NotifyPolicyList")
+    @com.aliyun.core.annotation.NameInMap("NotifyPolicyList")
     private NotifyPolicyList notifyPolicyList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMonitorGroupNotifyPolicyListResponseBody(Builder builder) {
@@ -98,10 +98,13 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +112,10 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned policies.
+         * <p>The returned policies.</p>
          */
         public Builder notifyPolicyList(NotifyPolicyList notifyPolicyList) {
             this.notifyPolicyList = notifyPolicyList;
@@ -125,7 +131,10 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6072F026-C441-41A6-B114-35A1E8F8FDD3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,11 +142,14 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -145,7 +157,10 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -158,20 +173,26 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorGroupNotifyPolicyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupNotifyPolicyListResponseBody</p>
+     */
     public static class NotifyPolicy extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NotifyPolicy(Builder builder) {
@@ -233,10 +254,11 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The end of the time range to query.
-             * <p>
+             * <p>The end of the time range to query.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1551761781273</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -244,7 +266,10 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6780****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -252,7 +277,10 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The policy ID.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -260,10 +288,11 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query.
-             * <p>
+             * <p>The beginning of the time range to query.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1551761781273</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -271,7 +300,10 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * The policy type.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PauseNotify</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -285,8 +317,14 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupNotifyPolicyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupNotifyPolicyListResponseBody</p>
+     */
     public static class NotifyPolicyList extends TeaModel {
-        @NameInMap("NotifyPolicy")
+        @com.aliyun.core.annotation.NameInMap("NotifyPolicy")
         private java.util.List < NotifyPolicy> notifyPolicy;
 
         private NotifyPolicyList(Builder builder) {

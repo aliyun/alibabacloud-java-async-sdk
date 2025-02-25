@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBNodeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBNodeRequest</p>
  */
 public class ModifyDBNodeRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
     private String DBInstanceStorage;
 
-    @Query
-    @NameInMap("DBInstanceStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
     private String DBInstanceStorageType;
 
-    @Query
-    @NameInMap("DBNode")
-    private java.util.List < DBNode> DBNode;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNode")
+    private java.util.List<DBNode> DBNode;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProduceAsync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProduceAsync")
     private Boolean produceAsync;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBNodeRequest(Builder builder) {
@@ -133,7 +138,7 @@ public class ModifyDBNodeRequest extends Request {
     /**
      * @return DBNode
      */
-    public java.util.List < DBNode> getDBNode() {
+    public java.util.List<DBNode> getDBNode() {
         return this.DBNode;
     }
 
@@ -192,7 +197,7 @@ public class ModifyDBNodeRequest extends Request {
         private String DBInstanceId; 
         private String DBInstanceStorage; 
         private String DBInstanceStorageType; 
-        private java.util.List < DBNode> DBNode; 
+        private java.util.List<DBNode> DBNode; 
         private Boolean dryRun; 
         private String effectiveTime; 
         private String ownerAccount; 
@@ -223,13 +228,17 @@ public class ModifyDBNodeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically complete the payment. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <ol>
+         * <li><strong>true</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+         * </ol>
+         * <blockquote>
+         * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.</p>
+         * </blockquote>
          * 
-         * 1.  **true**: automatically completes the payment. Make sure that your account balance is sufficient.
-         * 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
-         * 
-         * >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -238,7 +247,10 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -247,7 +259,11 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1k8s41l2o52****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -256,7 +272,10 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The new storage capacity of the instance. Unit: GB For more information, see [Instance types](~~26312~~).
+         * <p>The new storage capacity of the instance. Unit: GB For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder DBInstanceStorage(String DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -265,12 +284,15 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. Valid values:
-         * <p>
+         * <p>The storage type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_essd</strong>: performance level 1 (PL1) enhanced SSD (ESSD)</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * </ul>
          * 
-         * *   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)
-         * *   **cloud_essd2**: PL2 ESSD
-         * *   **cloud_essd3**: PL3 ESSD
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -279,12 +301,12 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * The information about the node.
-         * <p>
-         * 
-         * >  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+         * <p>The information about the node.</p>
+         * <blockquote>
+         * <p> This parameter is used for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
+         * </blockquote>
          */
-        public Builder DBNode(java.util.List < DBNode> DBNode) {
+        public Builder DBNode(java.util.List<DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
             this.putQueryParameter("DBNode", DBNodeShrink);
             this.DBNode = DBNode;
@@ -292,11 +314,14 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values: Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -305,10 +330,14 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * Effective time, value:
-         * <p>
-         * - Immediate (default value): takes effect immediately.
-         * - MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.
+         * <p>The time when you want the change to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong> (default): The change immediately takes effect.</li>
+         * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediate</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -335,13 +364,17 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * Specifies whether to asynchronously perform the operation. Valid values:
-         * <p>
+         * <p>Specifies whether to asynchronously perform the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): sends only the order. The operation is asynchronously performed.</li>
+         * <li><strong>false</strong>: sends the request. After the request passes the check, the operation is directly performed.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.</p>
+         * </blockquote>
          * 
-         * *   **true** (default): sends only the order. The operation is asynchronously performed.
-         * *   **false**: sends the request. After the request passes the check, the operation is directly performed.
-         * 
-         * >  The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder produceAsync(Boolean produceAsync) {
             this.putQueryParameter("ProduceAsync", produceAsync);
@@ -374,11 +407,17 @@ public class ModifyDBNodeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBNodeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBNodeRequest</p>
+     */
     public static class DBNode extends TeaModel {
-        @NameInMap("classCode")
+        @com.aliyun.core.annotation.NameInMap("classCode")
         private String classCode;
 
-        @NameInMap("nodeId")
+        @com.aliyun.core.annotation.NameInMap("nodeId")
         private String nodeId;
 
         private DBNode(Builder builder) {
@@ -413,7 +452,10 @@ public class ModifyDBNodeRequest extends Request {
             private String nodeId; 
 
             /**
-             * The instance type of the node.
+             * <p>The specification information about the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n2.medium.xc</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -421,7 +463,10 @@ public class ModifyDBNodeRequest extends Request {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rn-6256r4a87xvv7he5p</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

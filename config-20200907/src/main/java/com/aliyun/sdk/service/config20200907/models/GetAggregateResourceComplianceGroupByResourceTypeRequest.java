@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateResourceComplianceGroupByResourceTypeRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateResourceComplianceGroupByResourceTypeRequest</p>
  */
 public class GetAggregateResourceComplianceGroupByResourceTypeRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("ConfigRuleIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleIds")
     private String configRuleIds;
 
     private GetAggregateResourceComplianceGroupByResourceTypeRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class GetAggregateResourceComplianceGroupByResourceTypeRequest extends Re
         } 
 
         /**
-         * The ID of the account group.
+         * <p>The ID of the account group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-cdbd626622af0042****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -78,7 +87,10 @@ public class GetAggregateResourceComplianceGroupByResourceTypeRequest extends Re
         }
 
         /**
-         * The ID of the rule. Separate multiple rule IDs with commas (,).
+         * <p>The ID of the rule. Separate multiple rule IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-2541626622af0000****</p>
          */
         public Builder configRuleIds(String configRuleIds) {
             this.putQueryParameter("ConfigRuleIds", configRuleIds);

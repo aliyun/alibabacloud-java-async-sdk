@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLaunchTemplateVersionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLaunchTemplateVersionResponseBody</p>
  */
 public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @NameInMap("LaunchTemplateVersionNumber")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionNumber")
     private Long launchTemplateVersionNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateLaunchTemplateVersionResponseBody(Builder builder) {
@@ -62,10 +67,11 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 启动模板ID。更多信息，请参见[DescribeLaunchTemplates](~~73759~~)。
-         * <p>
+         * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+         * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
          * 
-         * 使用启动模板创建实例时，您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。
+         * <strong>example:</strong>
+         * <p>lt-bp1apo0bbbkuy0rj****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
@@ -73,7 +79,10 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The version number of the launch template.
+         * <p>The number of the created version of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
             this.launchTemplateVersionNumber = launchTemplateVersionNumber;
@@ -81,7 +90,10 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DExxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

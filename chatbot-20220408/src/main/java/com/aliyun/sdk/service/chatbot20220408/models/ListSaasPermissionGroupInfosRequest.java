@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSaasPermissionGroupInfosRequest} extends {@link RequestModel}
  *
  * <p>ListSaasPermissionGroupInfosRequest</p>
  */
 public class ListSaasPermissionGroupInfosRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
     private ListSaasPermissionGroupInfosRequest(Builder builder) {
@@ -55,7 +55,10 @@ public class ListSaasPermissionGroupInfosRequest extends Request {
         } 
 
         /**
-         * AgentKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);

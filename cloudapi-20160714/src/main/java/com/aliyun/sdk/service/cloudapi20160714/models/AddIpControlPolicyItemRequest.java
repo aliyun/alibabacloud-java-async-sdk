@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddIpControlPolicyItemRequest} extends {@link RequestModel}
  *
  * <p>AddIpControlPolicyItemRequest</p>
  */
 public class AddIpControlPolicyItemRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("CidrIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrIp;
 
-    @Query
-    @NameInMap("IpControlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipControlId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private AddIpControlPolicyItemRequest(Builder builder) {
@@ -98,14 +103,17 @@ public class AddIpControlPolicyItemRequest extends Request {
         } 
 
         /**
-         * The restriction policy on app IDs for a specific policy. You can restrict app IDs only for whitelists. The IpControlType values of whitelists are ALLOW.
-         * <p>
+         * <p>The restriction policy on app IDs for a specific policy. You can restrict app IDs only for whitelists. The IpControlType values of whitelists are ALLOW.</p>
+         * <ul>
+         * <li>You can add only one app ID restriction policy at a time.</li>
+         * <li>If this parameter is empty, no restriction is imposed on the app IDs.</li>
+         * <li>If this parameter is not empty, there is restriction not only on IP addresses, but also on apps.</li>
+         * <li>Please note that if this parameter is not empty and the security authentication method of the API is No Authentication, all API calls are restricted.</li>
+         * <li>If this parameter is not empty for a blacklist, API Gateway automatically skips this parameter and sets only restriction on IP addresses. The IpControlType value of a blacklist is REFUSE.</li>
+         * </ul>
          * 
-         * *   You can add only one app ID restriction policy at a time.
-         * *   If this parameter is empty, no restriction is imposed on the app IDs.
-         * *   If this parameter is not empty, there is restriction not only on IP addresses, but also on apps.
-         * *   Please note that if this parameter is not empty and the security authentication method of the API is No Authentication, all API calls are restricted.
-         * *   If this parameter is not empty for a blacklist, API Gateway automatically skips this parameter and sets only restriction on IP addresses. The IpControlType value of a blacklist is REFUSE.
+         * <strong>example:</strong>
+         * <p>1111111</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -114,7 +122,11 @@ public class AddIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The IP addresses or CIDR blocks involved in the policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can specify a maximum of 10 IP addresses or CIDR blocks.
+         * <p>The IP addresses or CIDR blocks involved in the policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can specify a maximum of 10 IP addresses or CIDR blocks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.125.1.101;101.11.1.1</p>
          */
         public Builder cidrIp(String cidrIp) {
             this.putQueryParameter("CidrIp", cidrIp);
@@ -123,7 +135,11 @@ public class AddIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The ID of the ACL. The ID is unique.
+         * <p>The ID of the ACL. The ID is unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -132,7 +148,10 @@ public class AddIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4223a10e-eed3-46a6-8b7c-23003f488153</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);

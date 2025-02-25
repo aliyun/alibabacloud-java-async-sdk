@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoModerationRequest} extends {@link RequestModel}
  *
  * <p>VideoModerationRequest</p>
  */
 public class VideoModerationRequest extends Request {
-    @Body
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
-    @Body
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
     private VideoModerationRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class VideoModerationRequest extends Request {
         } 
 
         /**
-         * Service.
+         * <p>The type of the moderation service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>videoDetection</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -77,7 +85,10 @@ public class VideoModerationRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;url&quot;: &quot;<a href="https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4%5C">https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4\</a>&quot;, &quot;dataId&quot;: &quot;94db0b88-f521-11ed-806e-fae21c1f239c&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

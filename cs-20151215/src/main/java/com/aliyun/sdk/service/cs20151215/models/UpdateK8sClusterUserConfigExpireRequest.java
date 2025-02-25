@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateK8sClusterUserConfigExpireRequest} extends {@link RequestModel}
  *
  * <p>UpdateK8sClusterUserConfigExpireRequest</p>
  */
 public class UpdateK8sClusterUserConfigExpireRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("expire_hour")
-    @Validation(required = true, maximum = 876000)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expire_hour")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 876000)
     private Long expireHour;
 
-    @Body
-    @NameInMap("user")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String user;
 
     private UpdateK8sClusterUserConfigExpireRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,10 +103,14 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * The validity period of the kubeconfig file. Unit: hours.
-         * <p>
+         * <p>The validity period of the kubeconfig file. Unit: hours.</p>
+         * <blockquote>
+         * <p>The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder expireHour(Long expireHour) {
             this.putBodyParameter("expire_hour", expireHour);
@@ -106,7 +119,11 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the Resource Access Management (RAM) user that you use.</p>
          */
         public Builder user(String user) {
             this.putBodyParameter("user", user);

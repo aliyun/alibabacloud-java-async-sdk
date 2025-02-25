@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBasicAccelerateIpEndpointRelationResponseBody</p>
  */
 public class CreateBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
-    @NameInMap("AccelerateIpId")
+    @com.aliyun.core.annotation.NameInMap("AccelerateIpId")
     private String accelerateIpId;
 
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private CreateBasicAccelerateIpEndpointRelationResponseBody(Builder builder) {
@@ -118,10 +117,10 @@ public class CreateBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
         }
 
         /**
-         * The association status between the accelerated IP address and endpoint.
+         * The status of the mapping between the accelerated IP address and the endpoint.
          * <p>
          * 
-         * >  This parameter is not in use and empty.
+         * >  This parameter is not in use.
          */
         public Builder state(String state) {
             this.state = state;

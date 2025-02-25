@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAllInstanceIdListRequest} extends {@link RequestModel}
  *
  * <p>GetAllInstanceIdListRequest</p>
  */
 public class GetAllInstanceIdListRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetAllInstanceIdListRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetAllInstanceIdListRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance. This parameter is reserved.
+         * <p>The region ID of the instance. This parameter is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

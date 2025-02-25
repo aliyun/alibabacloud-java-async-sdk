@@ -74,7 +74,7 @@ public class StatefulAsyncInvocationEvent extends TeaModel {
         private Long timestamp; 
 
         /**
-         * 事件详细数据。
+         * eventDetail.
          */
         public Builder eventDetail(String eventDetail) {
             this.eventDetail = eventDetail;
@@ -82,7 +82,7 @@ public class StatefulAsyncInvocationEvent extends TeaModel {
         }
 
         /**
-         * 事件ID。
+         * eventId.
          */
         public Builder eventId(Long eventId) {
             this.eventId = eventId;
@@ -90,7 +90,7 @@ public class StatefulAsyncInvocationEvent extends TeaModel {
         }
 
         /**
-         * 事件执行状态。
+         * status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -98,7 +98,7 @@ public class StatefulAsyncInvocationEvent extends TeaModel {
         }
 
         /**
-         * 事件时间。
+         * timestamp.
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;

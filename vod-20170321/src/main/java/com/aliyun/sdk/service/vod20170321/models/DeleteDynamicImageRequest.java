@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDynamicImageRequest} extends {@link RequestModel}
  *
  * <p>DeleteDynamicImageRequest</p>
  */
 public class DeleteDynamicImageRequest extends Request {
-    @Query
-    @NameInMap("DynamicImageIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DynamicImageIds")
     private String dynamicImageIds;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private DeleteDynamicImageRequest(Builder builder) {
@@ -69,11 +74,14 @@ public class DeleteDynamicImageRequest extends Request {
         } 
 
         /**
-         * The IDs of the animated stickers.
-         * <p>
+         * <p>The IDs of the animated stickers.</p>
+         * <ul>
+         * <li>Separate multiple IDs with commas (,). You can specify a maximum of 10 IDs.</li>
+         * <li>If you do not set this parameter, the system finds the video specified by the VideoId parameter and deletes the information about the animated stickers associated with the video. If more than 10 animated stickers are associated with the video specified by the VideoId parameter, the deletion request is denied.</li>
+         * </ul>
          * 
-         * - Separate multiple IDs with commas (,). You can specify a maximum of 10 IDs.
-         * - If you do not set this parameter, the system finds the video specified by the VideoId parameter and deletes the information about the animated stickers associated with the video. If more than 10 animated stickers are associated with the video specified by the VideoId parameter, the deletion request is denied.
+         * <strong>example:</strong>
+         * <p>beafec3834a4e52ea52042a4****,8281c8519847fd8970e79e80b6****</p>
          */
         public Builder dynamicImageIds(String dynamicImageIds) {
             this.putQueryParameter("DynamicImageIds", dynamicImageIds);
@@ -82,7 +90,11 @@ public class DeleteDynamicImageRequest extends Request {
         }
 
         /**
-         * The ID of the video associated with the animated stickers whose information you want to delete.
+         * <p>The ID of the video associated with the animated stickers whose information you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2321077d460b028700ef6c2f4d****</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

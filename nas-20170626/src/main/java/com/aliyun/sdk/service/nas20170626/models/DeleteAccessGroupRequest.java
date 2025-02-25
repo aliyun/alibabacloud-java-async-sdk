@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessGroupRequest</p>
  */
 public class DeleteAccessGroupRequest extends Request {
-    @Query
-    @NameInMap("AccessGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroupName;
 
-    @Query
-    @NameInMap("FileSystemType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemType")
     private String fileSystemType;
 
     private DeleteAccessGroupRequest(Builder builder) {
@@ -62,14 +67,18 @@ public class DeleteAccessGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessGroupRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.fileSystemType = response.fileSystemType;
+        private Builder(DeleteAccessGroupRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.fileSystemType = request.fileSystemType;
         } 
 
         /**
-         * AccessGroupName.
+         * <p>The name of the permission group to be deleted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -78,7 +87,15 @@ public class DeleteAccessGroupRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBResourceGroupResponseBody</p>
  */
 public class CreateDBResourceGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDBResourceGroupResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class CreateDBResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A8F6106-6AFD-5A34-9C80-8DE2C42D06E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

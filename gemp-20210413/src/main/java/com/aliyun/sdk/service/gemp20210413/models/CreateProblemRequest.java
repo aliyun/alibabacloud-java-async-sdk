@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProblemRequest</p>
  */
 public class CreateProblemRequest extends Request {
-    @Body
-    @NameInMap("affectServiceIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("affectServiceIds")
     private java.util.List < Long > affectServiceIds;
 
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("discoverTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("discoverTime")
     private String discoverTime;
 
-    @Body
-    @NameInMap("incidentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentId")
     private Long incidentId;
 
-    @Body
-    @NameInMap("mainHandlerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mainHandlerId")
     private Long mainHandlerId;
 
-    @Body
-    @NameInMap("preliminaryReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("preliminaryReason")
     private String preliminaryReason;
 
-    @Body
-    @NameInMap("problemLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemLevel")
     private String problemLevel;
 
-    @Body
-    @NameInMap("problemName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemName")
     private String problemName;
 
-    @Body
-    @NameInMap("problemNotifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemNotifyType")
     private String problemNotifyType;
 
-    @Body
-    @NameInMap("problemStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemStatus")
     private String problemStatus;
 
-    @Body
-    @NameInMap("progressSummary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("progressSummary")
     private String progressSummary;
 
-    @Body
-    @NameInMap("progressSummaryRichTextId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("progressSummaryRichTextId")
     private Long progressSummaryRichTextId;
 
-    @Body
-    @NameInMap("recoveryTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recoveryTime")
     private String recoveryTime;
 
-    @Body
-    @NameInMap("relatedServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedServiceId")
     private Long relatedServiceId;
 
-    @Body
-    @NameInMap("serviceGroupIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupIds")
     private java.util.List < Long > serviceGroupIds;
 
     private CreateProblemRequest(Builder builder) {

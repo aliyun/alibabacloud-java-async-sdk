@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayServiceRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayServiceRequest</p>
  */
 public class ListGatewayServiceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("DescSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DescSort")
     private Boolean descSort;
 
-    @Query
-    @NameInMap("FilterParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterParams")
     private FilterParams filterParams;
 
-    @Query
-    @NameInMap("OrderItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderItem")
     private String orderItem;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListGatewayServiceRequest(Builder builder) {
@@ -124,11 +129,14 @@ public class ListGatewayServiceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,7 +145,10 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable sorting.
+         * <p>Specifies whether to enable sorting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -146,7 +157,7 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The parameters that are used to specify filter conditions. The values of the parameters are in the format of {"key1":"value1"}.
+         * <p>The parameters that are used to specify filter conditions. The values of the parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -156,7 +167,10 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The item based on which entries are sorted.
+         * <p>The item based on which entries are sorted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreate</p>
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -165,7 +179,10 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +191,10 @@ public class ListGatewayServiceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,23 +209,29 @@ public class ListGatewayServiceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayServiceRequest} extends {@link TeaModel}
+     *
+     * <p>ListGatewayServiceRequest</p>
+     */
     public static class FilterParams extends TeaModel {
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ServiceProtocol")
+        @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
         private FilterParams(Builder builder) {
@@ -276,7 +302,10 @@ public class ListGatewayServiceRequest extends Request {
             private String sourceType; 
 
             /**
-             * The unique ID of the gateway.
+             * <p>The unique ID of the gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14centbrveca****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -284,7 +313,10 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The group.
+             * <p>The group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -292,7 +324,10 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +335,10 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The namespace to which the service belongs.
+             * <p>The namespace to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -308,14 +346,17 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The protocol of the service.
-             * <p>
+             * <p>The protocol of the service.</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * <li>HTTP2</li>
+             * <li>GRPC</li>
+             * <li>DUBBO</li>
+             * </ul>
              * 
-             * *   HTTP
-             * *   HTTPS
-             * *   HTTP2
-             * *   GRPC
-             * *   DUBBO
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -323,7 +364,10 @@ public class ListGatewayServiceRequest extends Request {
             }
 
             /**
-             * The type of the source.
+             * <p>The type of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

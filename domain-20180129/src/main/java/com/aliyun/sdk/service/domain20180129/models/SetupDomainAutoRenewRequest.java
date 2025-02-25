@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetupDomainAutoRenewRequest} extends {@link RequestModel}
  *
  * <p>SetupDomainAutoRenewRequest</p>
  */
 public class SetupDomainAutoRenewRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Operation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Operation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operation;
 
     private SetupDomainAutoRenewRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class SetupDomainAutoRenewRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2019270W570xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +82,10 @@ public class SetupDomainAutoRenewRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SET</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeResourceGroupResponseBody</p>
  */
 public class ChangeResourceGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ChangeResourceGroupResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.
+         * <p>The HTTP status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,7 +85,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * No business data is returned for this parameter.
+         * <p>No business data is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No business data is returned for this parameter.</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +96,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +107,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3488F1D-C444-17D0-BA4F-5374BA0F3562</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

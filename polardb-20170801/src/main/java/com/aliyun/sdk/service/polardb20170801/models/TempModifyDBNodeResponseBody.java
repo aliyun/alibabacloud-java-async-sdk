@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TempModifyDBNodeResponseBody} extends {@link TeaModel}
  *
  * <p>TempModifyDBNodeResponseBody</p>
  */
 public class TempModifyDBNodeResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBNodeIds")
-    private java.util.List < String > DBNodeIds;
+    @com.aliyun.core.annotation.NameInMap("DBNodeIds")
+    private java.util.List<String> DBNodeIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TempModifyDBNodeResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
     /**
      * @return DBNodeIds
      */
-    public java.util.List < String > getDBNodeIds() {
+    public java.util.List<String> getDBNodeIds() {
         return this.DBNodeIds;
     }
 
@@ -69,12 +74,15 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < String > DBNodeIds; 
+        private java.util.List<String> DBNodeIds; 
         private String orderId; 
         private String requestId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -82,15 +90,18 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the nodes.
+         * <p>The details of the nodes.</p>
          */
-        public Builder DBNodeIds(java.util.List < String > DBNodeIds) {
+        public Builder DBNodeIds(java.util.List<String> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
             return this;
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035638*******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -98,7 +109,10 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

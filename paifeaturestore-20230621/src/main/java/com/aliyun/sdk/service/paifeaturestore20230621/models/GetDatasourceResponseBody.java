@@ -1,41 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatasourceResponseBody} extends {@link TeaModel}
  *
  * <p>GetDatasourceResponseBody</p>
  */
 public class GetDatasourceResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("DatasourceId")
+    @com.aliyun.core.annotation.NameInMap("DatasourceId")
     private String datasourceId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
+    private String gmtCreateTime;
+
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
+    private String gmtModifiedTime;
+
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private GetDatasourceResponseBody(Builder builder) {
         this.config = builder.config;
         this.datasourceId = builder.datasourceId;
+        this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtModifiedTime = builder.gmtModifiedTime;
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.type = builder.type;
@@ -63,6 +76,20 @@ public class GetDatasourceResponseBody extends TeaModel {
      */
     public String getDatasourceId() {
         return this.datasourceId;
+    }
+
+    /**
+     * @return gmtCreateTime
+     */
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
+    }
+
+    /**
+     * @return gmtModifiedTime
+     */
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
     }
 
     /**
@@ -103,6 +130,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public static final class Builder {
         private String config; 
         private String datasourceId; 
+        private String gmtCreateTime; 
+        private String gmtModifiedTime; 
         private String name; 
         private String requestId; 
         private String type; 
@@ -122,6 +151,22 @@ public class GetDatasourceResponseBody extends TeaModel {
          */
         public Builder datasourceId(String datasourceId) {
             this.datasourceId = datasourceId;
+            return this;
+        }
+
+        /**
+         * GmtCreateTime.
+         */
+        public Builder gmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+
+        /**
+         * GmtModifiedTime.
+         */
+        public Builder gmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
             return this;
         }
 

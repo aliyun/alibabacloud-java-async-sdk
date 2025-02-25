@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQuickSaleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeQuickSaleConfigResponseBody</p>
  */
 public class DescribeQuickSaleConfigResponseBody extends TeaModel {
-    @NameInMap("Commodity")
+    @com.aliyun.core.annotation.NameInMap("Commodity")
     private String commodity;
 
-    @NameInMap("Items")
-    private java.util.Map < String, ? > items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.Map<String, ?> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeQuickSaleConfigResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.Map < String, ? > getItems() {
+    public java.util.Map<String, ?> getItems() {
         return this.items;
     }
 
@@ -58,15 +63,18 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String commodity; 
-        private java.util.Map < String, ? > items; 
+        private java.util.Map<String, ?> items; 
         private String requestId; 
 
         /**
-         * The product code. Valid values:
-         * <p>
+         * <p>The product code. Valid values:</p>
+         * <ul>
+         * <li>rds: The instance is a subscription instance.</li>
+         * <li>bards: The instance is a pay-as-you-go instance.</li>
+         * </ul>
          * 
-         * *   rds: The instance is a subscription instance.
-         * *   bards: The instance is a pay-as-you-go instance.
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder commodity(String commodity) {
             this.commodity = commodity;
@@ -74,15 +82,18 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration details of the product.
+         * <p>The configuration details of the product.</p>
          */
-        public Builder items(java.util.Map < String, ? > items) {
+        public Builder items(java.util.Map<String, ?> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DFFE9EC-3369-5937-A4E2-507C0C86A4C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessGroupsResponseBody</p>
  */
 public class DescribeAccessGroupsResponseBody extends TeaModel {
-    @NameInMap("AccessGroups")
+    @com.aliyun.core.annotation.NameInMap("AccessGroups")
     private AccessGroups accessGroups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessGroupsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AccessGroups.
+         * <p>The queried permission groups.</p>
          */
         public Builder accessGroups(AccessGroups accessGroups) {
             this.accessGroups = accessGroups;
@@ -94,7 +99,10 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of permission groups returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2514F97E-FFF0-4A1F-BF04-729CEAC6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of permission groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,27 +148,45 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessGroupsResponseBody</p>
+     */
     public static class AccessGroup extends TeaModel {
-        @NameInMap("AccessGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
 
-        @NameInMap("AccessGroupType")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupType")
         private String accessGroupType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MountTargetCount")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
+        private String fileSystemType;
+
+        @com.aliyun.core.annotation.NameInMap("MountTargetCount")
         private Integer mountTargetCount;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
         private AccessGroup(Builder builder) {
             this.accessGroupName = builder.accessGroupName;
             this.accessGroupType = builder.accessGroupType;
+            this.createTime = builder.createTime;
             this.description = builder.description;
+            this.fileSystemType = builder.fileSystemType;
             this.mountTargetCount = builder.mountTargetCount;
+            this.regionId = builder.regionId;
             this.ruleCount = builder.ruleCount;
         }
 
@@ -178,6 +213,13 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -185,10 +227,24 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileSystemType
+         */
+        public String getFileSystemType() {
+            return this.fileSystemType;
+        }
+
+        /**
          * @return mountTargetCount
          */
         public Integer getMountTargetCount() {
             return this.mountTargetCount;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -201,12 +257,18 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String accessGroupName; 
             private String accessGroupType; 
+            private String createTime; 
             private String description; 
+            private String fileSystemType; 
             private Integer mountTargetCount; 
+            private String regionId; 
             private Integer ruleCount; 
 
             /**
-             * AccessGroupName.
+             * <p>The name of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_VPC_GROUP_NAME</p>
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -214,7 +276,10 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessGroupType.
+             * <p>The network type of the permission group. Valid value: <strong>Vpc</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Vpc</p>
              */
             public Builder accessGroupType(String accessGroupType) {
                 this.accessGroupType = accessGroupType;
@@ -222,7 +287,21 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The time when the permission group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-05T16:00:00Z</p>
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The description of the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test access group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +309,30 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetCount.
+             * <p>The type of the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>standard: General-purpose File Storage NAS (NAS) file system</li>
+             * <li>extreme: Extreme NAS file system</li>
+             * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+             * </ul>
+             * <blockquote>
+             * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
+             */
+            public Builder fileSystemType(String fileSystemType) {
+                this.fileSystemType = fileSystemType;
+                return this;
+            }
+
+            /**
+             * <p>The number of mount targets to which the permission group is attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mountTargetCount(Integer mountTargetCount) {
                 this.mountTargetCount = mountTargetCount;
@@ -238,7 +340,21 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * <p>The total number of rules in the permission group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -252,9 +368,15 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessGroupsResponseBody</p>
+     */
     public static class AccessGroups extends TeaModel {
-        @NameInMap("AccessGroup")
-        private java.util.List < AccessGroup> accessGroup;
+        @com.aliyun.core.annotation.NameInMap("AccessGroup")
+        private java.util.List<AccessGroup> accessGroup;
 
         private AccessGroups(Builder builder) {
             this.accessGroup = builder.accessGroup;
@@ -271,17 +393,17 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         /**
          * @return accessGroup
          */
-        public java.util.List < AccessGroup> getAccessGroup() {
+        public java.util.List<AccessGroup> getAccessGroup() {
             return this.accessGroup;
         }
 
         public static final class Builder {
-            private java.util.List < AccessGroup> accessGroup; 
+            private java.util.List<AccessGroup> accessGroup; 
 
             /**
              * AccessGroup.
              */
-            public Builder accessGroup(java.util.List < AccessGroup> accessGroup) {
+            public Builder accessGroup(java.util.List<AccessGroup> accessGroup) {
                 this.accessGroup = accessGroup;
                 return this;
             }

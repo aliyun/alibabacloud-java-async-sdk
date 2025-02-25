@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePatchBaselineResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePatchBaselineResponseBody</p>
  */
 public class UpdatePatchBaselineResponseBody extends TeaModel {
-    @NameInMap("PatchBaseline")
+    @com.aliyun.core.annotation.NameInMap("PatchBaseline")
     private PatchBaseline patchBaseline;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdatePatchBaselineResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the patch baseline.
+         * <p>The details of the patch baseline.</p>
          */
         public Builder patchBaseline(PatchBaseline patchBaseline) {
             this.patchBaseline = patchBaseline;
@@ -58,7 +63,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1457F46C-7AAE-59FA-BD12-0BDB3751E6F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePatchBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePatchBaselineResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -110,7 +124,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +135,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -132,56 +152,62 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePatchBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePatchBaselineResponseBody</p>
+     */
     public static class PatchBaseline extends TeaModel {
-        @NameInMap("ApprovalRules")
+        @com.aliyun.core.annotation.NameInMap("ApprovalRules")
         private String approvalRules;
 
-        @NameInMap("ApprovedPatches")
-        private java.util.List < String > approvedPatches;
+        @com.aliyun.core.annotation.NameInMap("ApprovedPatches")
+        private java.util.List<String> approvedPatches;
 
-        @NameInMap("ApprovedPatchesEnableNonSecurity")
+        @com.aliyun.core.annotation.NameInMap("ApprovedPatchesEnableNonSecurity")
         private Boolean approvedPatchesEnableNonSecurity;
 
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OperationSystem")
+        @com.aliyun.core.annotation.NameInMap("OperationSystem")
         private String operationSystem;
 
-        @NameInMap("RejectedPatches")
-        private java.util.List < String > rejectedPatches;
+        @com.aliyun.core.annotation.NameInMap("RejectedPatches")
+        private java.util.List<String> rejectedPatches;
 
-        @NameInMap("RejectedPatchesAction")
+        @com.aliyun.core.annotation.NameInMap("RejectedPatchesAction")
         private String rejectedPatchesAction;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Sources")
-        private java.util.List < String > sources;
+        @com.aliyun.core.annotation.NameInMap("Sources")
+        private java.util.List<String> sources;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
         private PatchBaseline(Builder builder) {
@@ -222,7 +248,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         /**
          * @return approvedPatches
          */
-        public java.util.List < String > getApprovedPatches() {
+        public java.util.List<String> getApprovedPatches() {
             return this.approvedPatches;
         }
 
@@ -278,7 +304,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         /**
          * @return rejectedPatches
          */
-        public java.util.List < String > getRejectedPatches() {
+        public java.util.List<String> getRejectedPatches() {
             return this.rejectedPatches;
         }
 
@@ -306,14 +332,14 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         /**
          * @return sources
          */
-        public java.util.List < String > getSources() {
+        public java.util.List<String> getSources() {
             return this.sources;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -333,7 +359,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
 
         public static final class Builder {
             private String approvalRules; 
-            private java.util.List < String > approvedPatches; 
+            private java.util.List<String> approvedPatches; 
             private Boolean approvedPatchesEnableNonSecurity; 
             private String createdBy; 
             private String createdDate; 
@@ -341,17 +367,20 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String operationSystem; 
-            private java.util.List < String > rejectedPatches; 
+            private java.util.List<String> rejectedPatches; 
             private String rejectedPatchesAction; 
             private String resourceGroupId; 
             private String shareType; 
-            private java.util.List < String > sources; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<String> sources; 
+            private java.util.List<Tags> tags; 
             private String updatedBy; 
             private String updatedDate; 
 
             /**
-             * The rules of scanning and installing patches for the specified operating system.
+             * <p>The rules of scanning and installing patches for the specified operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</p>
              */
             public Builder approvalRules(String approvalRules) {
                 this.approvalRules = approvalRules;
@@ -359,15 +388,18 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The approved patches.
+             * <p>The approved patches.</p>
              */
-            public Builder approvedPatches(java.util.List < String > approvedPatches) {
+            public Builder approvedPatches(java.util.List<String> approvedPatches) {
                 this.approvedPatches = approvedPatches;
                 return this;
             }
 
             /**
-             * Indicates whether the approved patch involves updates other than security-related updates.
+             * <p>Indicates whether the approved patch involves updates other than security-related updates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
                 this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
@@ -375,7 +407,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the patch baseline.
+             * <p>The creator of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -383,7 +418,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was created.
+             * <p>The time when the patch baseline was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-07T03:42:56Z</p>
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -391,7 +429,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the patch baseline.
+             * <p>The description of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UpdatePatchBaseline</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -399,7 +440,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the patch baseline.
+             * <p>The ID of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pb-445340b5c6504a85a300</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -407,7 +451,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the patch baseline.
+             * <p>The name of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyPatchBaseline</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -415,7 +462,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system.
+             * <p>The operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
@@ -423,15 +473,18 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The rejected patches.
+             * <p>The rejected patches.</p>
              */
-            public Builder rejectedPatches(java.util.List < String > rejectedPatches) {
+            public Builder rejectedPatches(java.util.List<String> rejectedPatches) {
                 this.rejectedPatches = rejectedPatches;
                 return this;
             }
 
             /**
-             * The action of the rejected patch.
+             * <p>The action of the rejected patch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALLOW_AS_DEPENDENCY</p>
              */
             public Builder rejectedPatchesAction(String rejectedPatchesAction) {
                 this.rejectedPatchesAction = rejectedPatchesAction;
@@ -439,7 +492,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmy2zdbbjplii</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -447,7 +503,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the patch baseline.
+             * <p>The share type of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -455,23 +514,26 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The patch source configurations.
+             * <p>The patch source configurations.</p>
              */
-            public Builder sources(java.util.List < String > sources) {
+            public Builder sources(java.util.List<String> sources) {
                 this.sources = sources;
                 return this;
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The user who updated the patch baseline.
+             * <p>The user who updated the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root(130900000)</p>
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -479,7 +541,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch baseline was updated.
+             * <p>The time when the patch baseline was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T07:26:37Z</p>
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

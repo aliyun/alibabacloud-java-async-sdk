@@ -63,10 +63,10 @@ public class DescribeFlowProjectRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowProjectRequest response) {
-            super(response);
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(DescribeFlowProjectRequest request) {
+            super(request);
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

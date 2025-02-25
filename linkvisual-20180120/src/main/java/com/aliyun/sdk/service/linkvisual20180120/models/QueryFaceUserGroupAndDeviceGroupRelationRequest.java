@@ -63,10 +63,10 @@ public class QueryFaceUserGroupAndDeviceGroupRelationRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceUserGroupAndDeviceGroupRelationRequest response) {
-            super(response);
-            this.controlId = response.controlId;
-            this.isolationId = response.isolationId;
+        private Builder(QueryFaceUserGroupAndDeviceGroupRelationRequest request) {
+            super(request);
+            this.controlId = request.controlId;
+            this.isolationId = request.isolationId;
         } 
 
         /**

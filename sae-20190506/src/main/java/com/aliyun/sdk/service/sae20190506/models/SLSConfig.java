@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SLSConfig} extends {@link TeaModel}
  *
  * <p>SLSConfig</p>
  */
 public class SLSConfig extends TeaModel {
-    @NameInMap("collectConfigs")
-    private java.util.List < CollectConfigs> collectConfigs;
+    @com.aliyun.core.annotation.NameInMap("collectConfigs")
+    private java.util.List<CollectConfigs> collectConfigs;
 
     private SLSConfig(Builder builder) {
         this.collectConfigs = builder.collectConfigs;
@@ -30,17 +35,17 @@ public class SLSConfig extends TeaModel {
     /**
      * @return collectConfigs
      */
-    public java.util.List < CollectConfigs> getCollectConfigs() {
+    public java.util.List<CollectConfigs> getCollectConfigs() {
         return this.collectConfigs;
     }
 
     public static final class Builder {
-        private java.util.List < CollectConfigs> collectConfigs; 
+        private java.util.List<CollectConfigs> collectConfigs; 
 
         /**
          * collectConfigs.
          */
-        public Builder collectConfigs(java.util.List < CollectConfigs> collectConfigs) {
+        public Builder collectConfigs(java.util.List<CollectConfigs> collectConfigs) {
             this.collectConfigs = collectConfigs;
             return this;
         }
@@ -51,20 +56,26 @@ public class SLSConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SLSConfig} extends {@link TeaModel}
+     *
+     * <p>SLSConfig</p>
+     */
     public static class CollectConfigs extends TeaModel {
-        @NameInMap("logPath")
+        @com.aliyun.core.annotation.NameInMap("logPath")
         private String logPath;
 
-        @NameInMap("logType")
+        @com.aliyun.core.annotation.NameInMap("logType")
         private String logType;
 
-        @NameInMap("logstoreName")
+        @com.aliyun.core.annotation.NameInMap("logstoreName")
         private String logstoreName;
 
-        @NameInMap("logtailName")
+        @com.aliyun.core.annotation.NameInMap("logtailName")
         private String logtailName;
 
-        @NameInMap("projectName")
+        @com.aliyun.core.annotation.NameInMap("projectName")
         private String projectName;
 
         private CollectConfigs(Builder builder) {

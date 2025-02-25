@@ -153,17 +153,17 @@ public class DescribeItemsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeItemsRequest response) {
-            super(response);
-            this.bePromotion = response.bePromotion;
-            this.extraParams = response.extraParams;
-            this.itemBarCode = response.itemBarCode;
-            this.itemId = response.itemId;
-            this.itemTitle = response.itemTitle;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.skuId = response.skuId;
-            this.storeId = response.storeId;
+        private Builder(DescribeItemsRequest request) {
+            super(request);
+            this.bePromotion = request.bePromotion;
+            this.extraParams = request.extraParams;
+            this.itemBarCode = request.itemBarCode;
+            this.itemId = request.itemId;
+            this.itemTitle = request.itemTitle;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.skuId = request.skuId;
+            this.storeId = request.storeId;
         } 
 
         /**
@@ -230,7 +230,7 @@ public class DescribeItemsRequest extends Request {
         }
 
         /**
-         * SkuId.
+         * SkuID。
          */
         public Builder skuId(String skuId) {
             this.putBodyParameter("SkuId", skuId);

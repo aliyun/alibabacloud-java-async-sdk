@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserSecDropRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnUserSecDropRequest</p>
  */
 public class DescribeDcdnUserSecDropRequest extends Request {
-    @Query
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Query
-    @NameInMap("Metric")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metric")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metric;
 
-    @Query
-    @NameInMap("SecFunc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecFunc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secFunc;
 
     private DescribeDcdnUserSecDropRequest(Builder builder) {
@@ -85,11 +85,15 @@ public class DescribeDcdnUserSecDropRequest extends Request {
         } 
 
         /**
-         * The date or month that you want to query.
-         * <p>
+         * <p>The date or month that you want to query.</p>
+         * <ul>
+         * <li>If data is collected every day, set Data in the format of yyyymmdd, such as 20201203.</li>
+         * <li>If data is collected every month, set Data in the format of yyyymm, such as 202012.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If data is collected every day, set Data in the format of yyyymmdd, such as 20201203.
-         * *   If data is collected every month, set Data in the format of yyyymm, such as 202012.
+         * <strong>example:</strong>
+         * <p>20201203</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -98,11 +102,15 @@ public class DescribeDcdnUserSecDropRequest extends Request {
         }
 
         /**
-         * The time interval at which data is collected.
-         * <p>
+         * <p>The time interval at which data is collected.</p>
+         * <ul>
+         * <li>If data is collected every day, the number of blocked packets on the specified day is calculated.</li>
+         * <li>If data is collected every month, the number of blocked packets in the specified month is calculated.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If data is collected every day, the number of blocked packets on the specified day is calculated.
-         * *   If data is collected every month, the number of blocked packets in the specified month is calculated.
+         * <strong>example:</strong>
+         * <p>1day</p>
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -111,13 +119,17 @@ public class DescribeDcdnUserSecDropRequest extends Request {
         }
 
         /**
-         * The security feature. Valid values:
-         * <p>
+         * <p>The security feature. Valid values:</p>
+         * <ul>
+         * <li>waf: WAF</li>
+         * <li>tmd: rate limiting</li>
+         * <li>robot: bot traffic recognition</li>
+         * <li>l4_dm_drop: domain name blocking at Layer 4</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   waf: WAF
-         * *   tmd: rate limiting
-         * *   robot: bot traffic recognition
-         * *   l4\_dm_drop: domain name blocking at Layer 4
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder secFunc(String secFunc) {
             this.putQueryParameter("SecFunc", secFunc);

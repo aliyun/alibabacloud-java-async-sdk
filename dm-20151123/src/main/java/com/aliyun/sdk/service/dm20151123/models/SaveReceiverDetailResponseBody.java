@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveReceiverDetailResponseBody} extends {@link TeaModel}
  *
  * <p>SaveReceiverDetailResponseBody</p>
  */
 public class SaveReceiverDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCount")
+    @com.aliyun.core.annotation.NameInMap("ErrorCount")
     private Integer errorCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
     private SaveReceiverDetailResponseBody(Builder builder) {
@@ -111,8 +116,14 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SaveReceiverDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>SaveReceiverDetailResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
         private Detail(Builder builder) {
@@ -152,9 +163,15 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveReceiverDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>SaveReceiverDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Detail")
-        private java.util.List < Detail> detail;
+        @com.aliyun.core.annotation.NameInMap("Detail")
+        private java.util.List<Detail> detail;
 
         private Data(Builder builder) {
             this.detail = builder.detail;
@@ -171,17 +188,17 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < Detail> getDetail() {
+        public java.util.List<Detail> getDetail() {
             return this.detail;
         }
 
         public static final class Builder {
-            private java.util.List < Detail> detail; 
+            private java.util.List<Detail> detail; 
 
             /**
              * Detail.
              */
-            public Builder detail(java.util.List < Detail> detail) {
+            public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
                 return this;
             }

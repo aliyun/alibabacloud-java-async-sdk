@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveSnapshotTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveSnapshotTemplateRequest</p>
  */
 public class UpdateLiveSnapshotTemplateRequest extends Request {
-    @Body
-    @NameInMap("OverwriteFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OverwriteFormat")
     private String overwriteFormat;
 
-    @Body
-    @NameInMap("SequenceFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SequenceFormat")
     private String sequenceFormat;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Body
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Body
-    @NameInMap("TimeInterval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeInterval;
 
     private UpdateLiveSnapshotTemplateRequest(Builder builder) {
@@ -113,7 +118,17 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         } 
 
         /**
-         * OverwriteFormat.
+         * <p>The naming format of the snapshot captured in overwrite mode.</p>
+         * <ul>
+         * <li>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</li>
+         * <li>The value cannot exceed 255 characters in length.</li>
+         * <li>The {JobId} placeholder is supported. It specifies the ID of the snapshot job.</li>
+         * <li>Placeholders such as {UnixTimestamp}, {Sequence}, and {Date} are not allowed.</li>
+         * <li>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}.jpg</p>
          */
         public Builder overwriteFormat(String overwriteFormat) {
             this.putBodyParameter("OverwriteFormat", overwriteFormat);
@@ -122,7 +137,16 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * SequenceFormat.
+         * <p>The naming format of the snapshot captured in time series mode.</p>
+         * <ul>
+         * <li>The value cannot start with a forward slash (/). Only the suffix .jpg is supported.</li>
+         * <li>The value cannot exceed 255 characters in length.</li>
+         * <li>The {JobId}, {Date}, {UnixTimestamp}, and {Sequence} placeholders are supported. {JobId} specifies the ID of the snapshot job. {Date} specifies the date on which the snapshot is captured. {UnixTimestamp} specifies the timestamp of the snapshot. {Sequence} specifies the sequence number of the snapshot. You must specify at least one of the {UnixTimestamp} and {Sequence} placeholders.</li>
+         * <li>You must specify at least one of the OverwriteFormat and SequenceFormat parameters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
          */
         public Builder sequenceFormat(String sequenceFormat) {
             this.putBodyParameter("SequenceFormat", sequenceFormat);
@@ -131,7 +155,11 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -140,7 +168,11 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the template.</p>
+         * <ul>
+         * <li>It cannot exceed 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -149,7 +181,14 @@ public class UpdateLiveSnapshotTemplateRequest extends Request {
         }
 
         /**
-         * TimeInterval.
+         * <p>The interval between two adjacent snapshots. Unit: seconds.</p>
+         * <ul>
+         * <li>Valid values: [5,3600].</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeInterval(Integer timeInterval) {
             this.putBodyParameter("TimeInterval", timeInterval);

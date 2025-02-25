@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateSuspiciousOverallConfigRequest} extends {@link RequestModel}
  *
  * <p>OperateSuspiciousOverallConfigRequest</p>
  */
 public class OperateSuspiciousOverallConfigRequest extends Request {
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NoTargetAsOn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NoTargetAsOn")
     private Boolean noTargetAsOn;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private OperateSuspiciousOverallConfigRequest(Builder builder) {
@@ -112,11 +117,15 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: yes</li>
+         * <li><strong>off</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: yes
-         * *   **off**: no
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -125,11 +134,14 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,13 +150,17 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure assets for the feature. Default value: **false**. Valid values:
-         * <p>
+         * <p>Specifies whether to configure assets for the feature. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when you set <strong>Config</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * >  This parameter takes effect only when you set **Config** to **on**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder noTargetAsOn(Boolean noTargetAsOn) {
             this.putQueryParameter("NoTargetAsOn", noTargetAsOn);
@@ -153,7 +169,10 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.178.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -162,15 +181,19 @@ public class OperateSuspiciousOverallConfigRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
+         * <p>The type of the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>auto_breaking</strong>: Anti-Virus</li>
+         * <li><strong>ransomware_breaking</strong>: Anti-ransomware (Bait Capture)</li>
+         * <li><strong>webshell_cloud_breaking</strong>: Webshell Protection</li>
+         * <li><strong>alinet</strong>: Behavior prevention</li>
+         * <li><strong>k8s_log_analysis</strong>: K8s Threat Detection</li>
+         * <li><strong>alisecguard</strong>: Defense mode for Client Protection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **auto_breaking**: Anti-Virus
-         * *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-         * *   **webshell\_cloud_breaking**: Webshell Protection
-         * *   **alinet**: Behavior prevention
-         * *   **k8s\_log_analysis**: K8s Threat Detection
-         * *   **alisecguard**: Defense mode for Client Protection
+         * <strong>example:</strong>
+         * <p>k8s_log_analysis</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

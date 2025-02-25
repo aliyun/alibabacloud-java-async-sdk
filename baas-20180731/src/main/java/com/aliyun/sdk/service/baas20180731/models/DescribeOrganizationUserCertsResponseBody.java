@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOrganizationUserCertsResponseBody</p>
  */
 public class DescribeOrganizationUserCertsResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeOrganizationUserCertsResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class DescribeOrganizationUserCertsResponseBody extends TeaModel {
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("CertData")
+        @com.aliyun.core.annotation.NameInMap("CertData")
         private String certData;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
-        @NameInMap("ValidFrom")
+        @com.aliyun.core.annotation.NameInMap("ValidFrom")
         private String validFrom;
 
-        @NameInMap("ValidTo")
+        @com.aliyun.core.annotation.NameInMap("ValidTo")
         private String validTo;
 
         private Certificates(Builder builder) {
@@ -313,10 +312,10 @@ public class DescribeOrganizationUserCertsResponseBody extends TeaModel {
 
     }
     public static class KeyPair extends TeaModel {
-        @NameInMap("PrivateKey")
+        @com.aliyun.core.annotation.NameInMap("PrivateKey")
         private String privateKey;
 
-        @NameInMap("PublicKey")
+        @com.aliyun.core.annotation.NameInMap("PublicKey")
         private String publicKey;
 
         private KeyPair(Builder builder) {
@@ -374,10 +373,10 @@ public class DescribeOrganizationUserCertsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Certificates")
+        @com.aliyun.core.annotation.NameInMap("Certificates")
         private java.util.List < Certificates> certificates;
 
-        @NameInMap("KeyPair")
+        @com.aliyun.core.annotation.NameInMap("KeyPair")
         private KeyPair keyPair;
 
         private Result(Builder builder) {

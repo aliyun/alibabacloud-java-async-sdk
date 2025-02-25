@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEscalationPlansByNoticeObjectRequest</p>
  */
 public class ListEscalationPlansByNoticeObjectRequest extends Request {
-    @Body
-    @NameInMap("noticeObjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("noticeObjectId")
     private Long noticeObjectId;
 
-    @Body
-    @NameInMap("noticeObjectType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("noticeObjectType")
     private Long noticeObjectType;
 
     private ListEscalationPlansByNoticeObjectRequest(Builder builder) {

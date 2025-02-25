@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSmartSysAvatarModelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSmartSysAvatarModelsResponseBody</p>
  */
 public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmartSysAvatarModelList")
-    private java.util.List < SmartSysAvatarModelList> smartSysAvatarModelList;
+    @com.aliyun.core.annotation.NameInMap("SmartSysAvatarModelList")
+    private java.util.List<SmartSysAvatarModelList> smartSysAvatarModelList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSmartSysAvatarModelsResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
     /**
      * @return smartSysAvatarModelList
      */
-    public java.util.List < SmartSysAvatarModelList> getSmartSysAvatarModelList() {
+    public java.util.List<SmartSysAvatarModelList> getSmartSysAvatarModelList() {
         return this.smartSysAvatarModelList;
     }
 
@@ -58,11 +63,14 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SmartSysAvatarModelList> smartSysAvatarModelList; 
+        private java.util.List<SmartSysAvatarModelList> smartSysAvatarModelList; 
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         }
 
         /**
-         * SmartSysAvatarModelList.
+         * <p>The queried digital humans.</p>
          */
-        public Builder smartSysAvatarModelList(java.util.List < SmartSysAvatarModelList> smartSysAvatarModelList) {
+        public Builder smartSysAvatarModelList(java.util.List<SmartSysAvatarModelList> smartSysAvatarModelList) {
             this.smartSysAvatarModelList = smartSysAvatarModelList;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of system digital human images returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,29 +102,35 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSmartSysAvatarModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSmartSysAvatarModelsResponseBody</p>
+     */
     public static class SmartSysAvatarModelList extends TeaModel {
-        @NameInMap("AvatarId")
+        @com.aliyun.core.annotation.NameInMap("AvatarId")
         private String avatarId;
 
-        @NameInMap("AvatarName")
+        @com.aliyun.core.annotation.NameInMap("AvatarName")
         private String avatarName;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private Integer bitrate;
 
-        @NameInMap("CoverUrl")
+        @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("OutputMask")
+        @com.aliyun.core.annotation.NameInMap("OutputMask")
         private Boolean outputMask;
 
-        @NameInMap("VideoUrl")
+        @com.aliyun.core.annotation.NameInMap("VideoUrl")
         private String videoUrl;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private SmartSysAvatarModelList(Builder builder) {
@@ -202,7 +219,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * AvatarId.
+             * <p>The ID of the digital human. The ID is required to submit a separate digital human rendering job or use the digital human image in an intelligent timeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yunqiao</p>
              */
             public Builder avatarId(String avatarId) {
                 this.avatarId = avatarId;
@@ -210,7 +230,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarName.
+             * <p>The name of the digital human.</p>
              */
             public Builder avatarName(String avatarName) {
                 this.avatarName = avatarName;
@@ -218,7 +238,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * <p>The video bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder bitrate(Integer bitrate) {
                 this.bitrate = bitrate;
@@ -226,7 +249,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The sample thumbnail URL of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4</a></p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -234,7 +260,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The video height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -242,7 +271,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputMask.
+             * <p>Indicates whether portrait mask rendering is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder outputMask(Boolean outputMask) {
                 this.outputMask = outputMask;
@@ -250,7 +282,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             }
 
             /**
-             * VideoUrl.
+             * <p>The sample video URL of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4</a></p>
              */
             public Builder videoUrl(String videoUrl) {
                 this.videoUrl = videoUrl;
@@ -258,7 +293,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The video width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

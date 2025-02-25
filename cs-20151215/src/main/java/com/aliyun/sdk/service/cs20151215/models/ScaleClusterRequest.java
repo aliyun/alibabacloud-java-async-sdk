@@ -1,96 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleClusterRequest} extends {@link RequestModel}
  *
  * <p>ScaleClusterRequest</p>
  */
 public class ScaleClusterRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("cloud_monitor_flags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
     private Boolean cloudMonitorFlags;
 
-    @Body
-    @NameInMap("count")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("count")
     private Long count;
 
-    @Body
-    @NameInMap("cpu_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu_policy")
     private String cpuPolicy;
 
-    @Body
-    @NameInMap("disable_rollback")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("disable_rollback")
     private Boolean disableRollback;
 
-    @Body
-    @NameInMap("key_pair")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("key_pair")
     private String keyPair;
 
-    @Body
-    @NameInMap("login_password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("login_password")
     private String loginPassword;
 
-    @Body
-    @NameInMap("tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
 
-    @Body
-    @NameInMap("taints")
-    private java.util.List < Taints> taints;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taints")
+    private java.util.List<Taints> taints;
 
-    @Body
-    @NameInMap("vswitch_ids")
-    private java.util.List < String > vswitchIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vswitch_ids")
+    private java.util.List<String> vswitchIds;
 
-    @Body
-    @NameInMap("worker_auto_renew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew")
     private Boolean workerAutoRenew;
 
-    @Body
-    @NameInMap("worker_auto_renew_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew_period")
     private Long workerAutoRenewPeriod;
 
-    @Body
-    @NameInMap("worker_data_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_data_disk")
     private Boolean workerDataDisk;
 
-    @Body
-    @NameInMap("worker_data_disks")
-    private java.util.List < WorkerDataDisks> workerDataDisks;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_data_disks")
+    private java.util.List<WorkerDataDisks> workerDataDisks;
 
-    @Body
-    @NameInMap("worker_instance_charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_charge_type")
     private String workerInstanceChargeType;
 
-    @Body
-    @NameInMap("worker_instance_types")
-    private java.util.List < String > workerInstanceTypes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_types")
+    private java.util.List<String> workerInstanceTypes;
 
-    @Body
-    @NameInMap("worker_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period")
     private Long workerPeriod;
 
-    @Body
-    @NameInMap("worker_period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period_unit")
     private String workerPeriodUnit;
 
-    @Body
-    @NameInMap("worker_system_disk_category")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_category")
     private String workerSystemDiskCategory;
 
-    @Body
-    @NameInMap("worker_system_disk_size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_size")
     private Long workerSystemDiskSize;
 
     private ScaleClusterRequest(Builder builder) {
@@ -182,21 +187,21 @@ public class ScaleClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return taints
      */
-    public java.util.List < Taints> getTaints() {
+    public java.util.List<Taints> getTaints() {
         return this.taints;
     }
 
     /**
      * @return vswitchIds
      */
-    public java.util.List < String > getVswitchIds() {
+    public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
     }
 
@@ -224,7 +229,7 @@ public class ScaleClusterRequest extends Request {
     /**
      * @return workerDataDisks
      */
-    public java.util.List < WorkerDataDisks> getWorkerDataDisks() {
+    public java.util.List<WorkerDataDisks> getWorkerDataDisks() {
         return this.workerDataDisks;
     }
 
@@ -238,7 +243,7 @@ public class ScaleClusterRequest extends Request {
     /**
      * @return workerInstanceTypes
      */
-    public java.util.List < String > getWorkerInstanceTypes() {
+    public java.util.List<String> getWorkerInstanceTypes() {
         return this.workerInstanceTypes;
     }
 
@@ -278,15 +283,15 @@ public class ScaleClusterRequest extends Request {
         private Boolean disableRollback; 
         private String keyPair; 
         private String loginPassword; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < Taints> taints; 
-        private java.util.List < String > vswitchIds; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<Taints> taints; 
+        private java.util.List<String> vswitchIds; 
         private Boolean workerAutoRenew; 
         private Long workerAutoRenewPeriod; 
         private Boolean workerDataDisk; 
-        private java.util.List < WorkerDataDisks> workerDataDisks; 
+        private java.util.List<WorkerDataDisks> workerDataDisks; 
         private String workerInstanceChargeType; 
-        private java.util.List < String > workerInstanceTypes; 
+        private java.util.List<String> workerInstanceTypes; 
         private Long workerPeriod; 
         private String workerPeriodUnit; 
         private String workerSystemDiskCategory; 
@@ -321,7 +326,7 @@ public class ScaleClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -386,7 +391,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -395,7 +400,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * taints.
          */
-        public Builder taints(java.util.List < Taints> taints) {
+        public Builder taints(java.util.List<Taints> taints) {
             this.putBodyParameter("taints", taints);
             this.taints = taints;
             return this;
@@ -404,7 +409,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * vswitch_ids.
          */
-        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
             this.vswitchIds = vswitchIds;
             return this;
@@ -440,7 +445,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * worker_data_disks.
          */
-        public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
+        public Builder workerDataDisks(java.util.List<WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
             this.workerDataDisks = workerDataDisks;
             return this;
@@ -458,7 +463,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * worker_instance_types.
          */
-        public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
+        public Builder workerInstanceTypes(java.util.List<String> workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
             this.workerInstanceTypes = workerInstanceTypes;
             return this;
@@ -507,8 +512,14 @@ public class ScaleClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ScaleClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleClusterRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         private Tags(Builder builder) {
@@ -548,14 +559,20 @@ public class ScaleClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ScaleClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleClusterRequest</p>
+     */
     public static class Taints extends TeaModel {
-        @NameInMap("effect")
+        @com.aliyun.core.annotation.NameInMap("effect")
         private String effect;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Taints(Builder builder) {
@@ -629,14 +646,20 @@ public class ScaleClusterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ScaleClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleClusterRequest</p>
+     */
     public static class WorkerDataDisks extends TeaModel {
-        @NameInMap("category")
+        @com.aliyun.core.annotation.NameInMap("category")
         private String category;
 
-        @NameInMap("encrypted")
+        @com.aliyun.core.annotation.NameInMap("encrypted")
         private String encrypted;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private String size;
 
         private WorkerDataDisks(Builder builder) {

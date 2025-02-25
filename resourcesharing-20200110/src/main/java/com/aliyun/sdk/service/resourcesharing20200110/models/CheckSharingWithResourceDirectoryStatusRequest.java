@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSharingWithResourceDirectoryStatusRequest} extends {@link RequestModel}
  *
  * <p>CheckSharingWithResourceDirectoryStatusRequest</p>
  */
 public class CheckSharingWithResourceDirectoryStatusRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private CheckSharingWithResourceDirectoryStatusRequest(Builder builder) {

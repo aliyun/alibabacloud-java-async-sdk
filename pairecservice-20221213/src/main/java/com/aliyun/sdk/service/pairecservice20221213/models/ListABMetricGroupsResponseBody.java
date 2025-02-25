@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListABMetricGroupsResponseBody</p>
  */
 public class ListABMetricGroupsResponseBody extends TeaModel {
-    @NameInMap("ABMetricGroups")
+    @com.aliyun.core.annotation.NameInMap("ABMetricGroups")
     private java.util.List < ABMetricGroups> ABMetricGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListABMetricGroupsResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
     } 
 
     public static class ABMetricGroups extends TeaModel {
-        @NameInMap("ABMetricGroupId")
+        @com.aliyun.core.annotation.NameInMap("ABMetricGroupId")
         private String ABMetricGroupId;
 
-        @NameInMap("ABMetricIds")
+        @com.aliyun.core.annotation.NameInMap("ABMetricIds")
         private String ABMetricIds;
 
-        @NameInMap("ABMetricNames")
+        @com.aliyun.core.annotation.NameInMap("ABMetricNames")
         private String ABMetricNames;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Realtime")
+        @com.aliyun.core.annotation.NameInMap("Realtime")
         private Boolean realtime;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
         private ABMetricGroups(Builder builder) {

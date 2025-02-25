@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueryProcessorNersRequest</p>
  */
 public class ListQueryProcessorNersRequest extends Request {
-    @Query
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
     private ListQueryProcessorNersRequest(Builder builder) {
@@ -54,7 +53,10 @@ public class ListQueryProcessorNersRequest extends Request {
         } 
 
         /**
-         * ECOMMERCE
+         * The type of the industry.
+         * <p>
+         * 
+         * *   ECOMMERCE
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);

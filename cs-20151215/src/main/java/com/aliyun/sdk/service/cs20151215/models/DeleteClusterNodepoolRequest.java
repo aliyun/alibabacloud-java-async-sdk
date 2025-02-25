@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterNodepoolRequest} extends {@link RequestModel}
  *
  * <p>DeleteClusterNodepoolRequest</p>
  */
 public class DeleteClusterNodepoolRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("NodepoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("NodepoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Query
-    @NameInMap("force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("force")
     private Boolean force;
 
     private DeleteClusterNodepoolRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class DeleteClusterNodepoolRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c61da77e8bfbc4c4c999af2b51b65****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +102,11 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np30db56bcac7843dca90b999c8928****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -102,7 +115,10 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the node pool.
+         * <p>Specifies whether to forcefully delete the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

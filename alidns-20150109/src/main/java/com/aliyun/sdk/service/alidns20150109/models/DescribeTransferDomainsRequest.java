@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTransferDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTransferDomainsRequest</p>
  */
 public class DescribeTransferDomainsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("FromUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromUserId")
     private Long fromUserId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
     private Long targetUserId;
 
-    @Query
-    @NameInMap("TransferType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransferType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transferType;
 
     private DescribeTransferDomainsRequest(Builder builder) {
@@ -140,7 +145,10 @@ public class DescribeTransferDomainsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>Specifies the domain name for which you want to view the transfer record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alidns.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -149,7 +157,10 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * FromUserId.
+         * <p>The user ID from which the domain name was transferred to the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder fromUserId(Long fromUserId) {
             this.putQueryParameter("FromUserId", fromUserId);
@@ -158,7 +169,10 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -167,7 +181,10 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +193,10 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,7 +205,10 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * <p>The user ID to which the domain name was transferred from the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder targetUserId(Long targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);
@@ -194,11 +217,15 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * The transfer type. Valid values:
-         * <p>
+         * <p>The transfer type. Valid values:</p>
+         * <ul>
+         * <li>IN: The domain name was transferred to the current account.</li>
+         * <li>OUT: The domain name was transferred from the current account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   IN: transferred to this account.
-         * *   OUT: transferred from this account.
+         * <strong>example:</strong>
+         * <p>IN</p>
          */
         public Builder transferType(String transferType) {
             this.putQueryParameter("TransferType", transferType);

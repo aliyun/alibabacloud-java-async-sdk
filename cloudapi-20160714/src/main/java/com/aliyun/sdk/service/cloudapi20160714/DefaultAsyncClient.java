@@ -103,10 +103,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers and is the opposite of DeployApi.
-      * *   An API can be unpublished from a specified runtime environment in under 5 seconds.
-      * *   An unpublished API cannot be called in the specified runtime environment.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and is the opposite of DeployApi.</p>
+     * <ul>
+     * <li>An API can be unpublished from a specified runtime environment in under 5 seconds.</li>
+     * <li>An unpublished API cannot be called in the specified runtime environment.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AbolishApi  AbolishApiRequest
+     * @return AbolishApiResponse
      */
     @Override
     public CompletableFuture<AbolishApiResponse> abolishApi(AbolishApiRequest request) {
@@ -122,6 +127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddAccessControlListEntry  AddAccessControlListEntryRequest
+     * @return AddAccessControlListEntryResponse
+     */
     @Override
     public CompletableFuture<AddAccessControlListEntryResponse> addAccessControlListEntry(AddAccessControlListEntryRequest request) {
         try {
@@ -137,11 +146,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, note that:
-      * *   This operation is intended for API providers.
-      * *   An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).
-      * *   A maximum of 100 policies can be added to an ACL.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, note that:</p>
+     * <ul>
+     * <li>This operation is intended for API providers.</li>
+     * <li>An added policy immediately takes effect on all APIs that are bound to the access control list (ACL).</li>
+     * <li>A maximum of 100 policies can be added to an ACL.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddIpControlPolicyItem  AddIpControlPolicyItemRequest
+     * @return AddIpControlPolicyItemResponse
      */
     @Override
     public CompletableFuture<AddIpControlPolicyItemResponse> addIpControlPolicyItem(AddIpControlPolicyItemRequest request) {
@@ -158,10 +172,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   If the input SpecialKey already exists, the previous configuration is overwritten. Use caution when calling this operation.
-      * *   Special throttling policies must be added to an existing throttling policy, and can take effect on all the APIs to which the throttling policy is bound.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>If the input SpecialKey already exists, the previous configuration is overwritten. Use caution when calling this operation.</li>
+     * <li>Special throttling policies must be added to an existing throttling policy, and can take effect on all the APIs to which the throttling policy is bound.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddTrafficSpecialControl  AddTrafficSpecialControlRequest
+     * @return AddTrafficSpecialControlResponse
      */
     @Override
     public CompletableFuture<AddTrafficSpecialControlResponse> addTrafficSpecialControl(AddTrafficSpecialControlRequest request) {
@@ -177,6 +196,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</p>
+     * 
+     * @param request the request parameters of AssociateInstanceWithPrivateDNS  AssociateInstanceWithPrivateDNSRequest
+     * @return AssociateInstanceWithPrivateDNSResponse
+     */
+    @Override
+    public CompletableFuture<AssociateInstanceWithPrivateDNSResponse> associateInstanceWithPrivateDNS(AssociateInstanceWithPrivateDNSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AssociateInstanceWithPrivateDNS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AssociateInstanceWithPrivateDNSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AssociateInstanceWithPrivateDNSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AttachApiProduct  AttachApiProductRequest
+     * @return AttachApiProductResponse
+     */
     @Override
     public CompletableFuture<AttachApiProductResponse> attachApiProduct(AttachApiProductRequest request) {
         try {
@@ -192,11 +236,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   You can only bind plug-ins to published APIs.
-      * *   The plug-in takes effect immediately after it is bound to an API.
-      * *   If you bind a different plug-in to an API, this plug-in takes effect immediately.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You can only bind plug-ins to published APIs.</li>
+     * <li>The plug-in takes effect immediately after it is bound to an API.</li>
+     * <li>If you bind a different plug-in to an API, this plug-in takes effect immediately.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AttachPlugin  AttachPluginRequest
+     * @return AttachPluginResponse
      */
     @Override
     public CompletableFuture<AttachPluginResponse> attachPlugin(AttachPluginRequest request) {
@@ -212,6 +261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchAbolishApis  BatchAbolishApisRequest
+     * @return BatchAbolishApisResponse
+     */
     @Override
     public CompletableFuture<BatchAbolishApisResponse> batchAbolishApis(BatchAbolishApisRequest request) {
         try {
@@ -226,6 +279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchDeployApis  BatchDeployApisRequest
+     * @return BatchDeployApisResponse
+     */
     @Override
     public CompletableFuture<BatchDeployApisResponse> batchDeployApis(BatchDeployApisRequest request) {
         try {
@@ -240,6 +297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccessControlList  CreateAccessControlListRequest
+     * @return CreateAccessControlListResponse
+     */
     @Override
     public CompletableFuture<CreateAccessControlListResponse> createAccessControlList(CreateAccessControlListRequest request) {
         try {
@@ -255,11 +316,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   The name of an API must be unique within an API group.
-      * *   A request path must be unique within an API group.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The name of an API must be unique within an API group.</li>
+     * <li>A request path must be unique within an API group.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateApi  CreateApiRequest
+     * @return CreateApiResponse
      */
     @Override
     public CompletableFuture<CreateApiResponse> createApi(CreateApiRequest request) {
@@ -275,6 +341,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApiGroup  CreateApiGroupRequest
+     * @return CreateApiGroupResponse
+     */
     @Override
     public CompletableFuture<CreateApiGroupResponse> createApiGroup(CreateApiGroupRequest request) {
         try {
@@ -290,8 +360,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * @param request the request parameters of CreateApiStageVariable  CreateApiStageVariableRequest
+     * @return CreateApiStageVariableResponse
      */
     @Override
     public CompletableFuture<CreateApiStageVariableResponse> createApiStageVariable(CreateApiStageVariableRequest request) {
@@ -308,13 +381,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   Each application has a key-value pair which is used for identity verification when you call an API.
-      * *   An application must be authorized to call an API.
-      * *   Each application has only one key-value pair, which can be reset if the pair is leaked.
-      * *   A maximum of 1,000 applications can be created for each Alibaba Cloud account.
-      * *   You can call this operation up to 50 times per second per account.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>Each application has a key-value pair which is used for identity verification when you call an API.</li>
+     * <li>An application must be authorized to call an API.</li>
+     * <li>Each application has only one key-value pair, which can be reset if the pair is leaked.</li>
+     * <li>A maximum of 1,000 applications can be created for each Alibaba Cloud account.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateApp  CreateAppRequest
+     * @return CreateAppResponse
      */
     @Override
     public CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request) {
@@ -330,6 +408,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAppCode  CreateAppCodeRequest
+     * @return CreateAppCodeResponse
+     */
+    @Override
+    public CompletableFuture<CreateAppCodeResponse> createAppCode(CreateAppCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAppCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAppCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAppCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAppKey  CreateAppKeyRequest
+     * @return CreateAppKeyResponse
+     */
+    @Override
+    public CompletableFuture<CreateAppKeyResponse> createAppKey(CreateAppKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAppKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAppKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAppKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateBackend  CreateBackendRequest
+     * @return CreateBackendResponse
+     */
     @Override
     public CompletableFuture<CreateBackendResponse> createBackend(CreateBackendRequest request) {
         try {
@@ -344,6 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateBackendModel  CreateBackendModelRequest
+     * @return CreateBackendModelResponse
+     */
     @Override
     public CompletableFuture<CreateBackendModelResponse> createBackendModel(CreateBackendModelRequest request) {
         try {
@@ -358,6 +480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
     @Override
     public CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request) {
         try {
@@ -372,6 +498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDatasetItem  CreateDatasetItemRequest
+     * @return CreateDatasetItemResponse
+     */
     @Override
     public CompletableFuture<CreateDatasetItemResponse> createDatasetItem(CreateDatasetItemRequest request) {
         try {
@@ -386,6 +516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
@@ -400,6 +534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIntranetDomain  CreateIntranetDomainRequest
+     * @return CreateIntranetDomainResponse
+     */
     @Override
     public CompletableFuture<CreateIntranetDomainResponse> createIntranetDomain(CreateIntranetDomainRequest request) {
         try {
@@ -415,11 +553,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   An ACL must be bound to an API to take effect. After an ACL is bound to an API, the ACL takes effect on the API immediately.
-      * *   You can add policies to an ACL when you create the ACL.
-      * *   If an ACL does not have any policy, the ACL is ineffective.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>An ACL must be bound to an API to take effect. After an ACL is bound to an API, the ACL takes effect on the API immediately.</li>
+     * <li>You can add policies to an ACL when you create the ACL.</li>
+     * <li>If an ACL does not have any policy, the ACL is ineffective.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateIpControl  CreateIpControlRequest
+     * @return CreateIpControlResponse
      */
     @Override
     public CompletableFuture<CreateIpControlResponse> createIpControl(CreateIpControlRequest request) {
@@ -435,6 +578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLogConfig  CreateLogConfigRequest
+     * @return CreateLogConfigResponse
+     */
     @Override
     public CompletableFuture<CreateLogConfigResponse> createLogConfig(CreateLogConfigRequest request) {
         try {
@@ -450,9 +597,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   For more information about the model definition, see [JSON Schema Draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04?spm=a2c4g.11186623.2.10.2e977ff7p4BpQd).
-      * *   JSON Schema supports only element attributes of the Object type.
-      *
+     * <b>description</b> :
+     * <p>  For more information about the model definition, see <a href="https://tools.ietf.org/html/draft-zyp-json-schema-04?spm=a2c4g.11186623.2.10.2e977ff7p4BpQd">JSON Schema Draft 4</a>.</p>
+     * <ul>
+     * <li>JSON Schema supports only element attributes of the Object type.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateModel  CreateModelRequest
+     * @return CreateModelResponse
      */
     @Override
     public CompletableFuture<CreateModelResponse> createModel(CreateModelRequest request) {
@@ -468,6 +620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMonitorGroup  CreateMonitorGroupRequest
+     * @return CreateMonitorGroupResponse
+     */
     @Override
     public CompletableFuture<CreateMonitorGroupResponse> createMonitorGroup(CreateMonitorGroupRequest request) {
         try {
@@ -483,11 +639,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   The number of plug-ins of the same type that each user can create is limited. Different limits apply to different plug-in types.
-      * *   The plug-in definitions for advanced features are restricted.
-      * *   Plug-ins must be bound to APIs to take effect. After a plug-in is bound, it takes effect on that API immediately.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The number of plug-ins of the same type that each user can create is limited. Different limits apply to different plug-in types.</li>
+     * <li>The plug-in definitions for advanced features are restricted.</li>
+     * <li>Plug-ins must be bound to APIs to take effect. After a plug-in is bound, it takes effect on that API immediately.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreatePlugin  CreatePluginRequest
+     * @return CreatePluginResponse
      */
     @Override
     public CompletableFuture<CreatePluginResponse> createPlugin(CreatePluginRequest request) {
@@ -504,11 +665,37 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   The API operation only creates a key policy. You must call the binding operation to bind the key to an API.
-      * *   After the key is bound to the API, requests sent from API Gateway to the backend service contain signature strings. You can specify whether your backend service verifies these signature strings.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</p>
+     * 
+     * @param request the request parameters of CreatePrivateDNS  CreatePrivateDNSRequest
+     * @return CreatePrivateDNSResponse
+     */
+    @Override
+    public CompletableFuture<CreatePrivateDNSResponse> createPrivateDNS(CreatePrivateDNSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePrivateDNS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePrivateDNSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePrivateDNSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The API operation only creates a key policy. You must call the binding operation to bind the key to an API.</li>
+     * <li>After the key is bound to the API, requests sent from API Gateway to the backend service contain signature strings. You can specify whether your backend service verifies these signature strings.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateSignature  CreateSignatureRequest
+     * @return CreateSignatureResponse
      */
     @Override
     public CompletableFuture<CreateSignatureResponse> createSignature(CreateSignatureRequest request) {
@@ -525,10 +712,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   Throttling policies must be bound to APIs to take effect. After a policy is bound to an API, it goes into effect on that API immediately.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Throttling policies must be bound to APIs to take effect. After a policy is bound to an API, it goes into effect on that API immediately.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateTrafficControl  CreateTrafficControlRequest
+     * @return CreateTrafficControlResponse
      */
     @Override
     public CompletableFuture<CreateTrafficControlResponse> createTrafficControl(CreateTrafficControlRequest request) {
@@ -544,6 +736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAccessControlList  DeleteAccessControlListRequest
+     * @return DeleteAccessControlListResponse
+     */
     @Override
     public CompletableFuture<DeleteAccessControlListResponse> deleteAccessControlList(DeleteAccessControlListRequest request) {
         try {
@@ -559,8 +755,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DeleteAllTrafficSpecialControl  DeleteAllTrafficSpecialControlRequest
+     * @return DeleteAllTrafficSpecialControlResponse
      */
     @Override
     public CompletableFuture<DeleteAllTrafficSpecialControlResponse> deleteAllTrafficSpecialControl(DeleteAllTrafficSpecialControlRequest request) {
@@ -577,10 +776,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers and cannot be undone after it is complete.
-      * *   An API that is running in the runtime environment must be unpublished before you can delete the API.****
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and cannot be undone after it is complete.</p>
+     * <ul>
+     * <li>An API that is running in the runtime environment must be unpublished before you can delete the API.****</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteApi  DeleteApiRequest
+     * @return DeleteApiResponse
      */
     @Override
     public CompletableFuture<DeleteApiResponse> deleteApi(DeleteApiRequest request) {
@@ -597,12 +801,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   An API group that contains APIs cannot be deleted. To delete the API group, you must first delete its APIs.
-      * *   After an API group is deleted, the second-level domain name bound to the API group is automatically invalidated.
-      * *   If the specified API group does not exist, a success response is returned.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>An API group that contains APIs cannot be deleted. To delete the API group, you must first delete its APIs.</li>
+     * <li>After an API group is deleted, the second-level domain name bound to the API group is automatically invalidated.</li>
+     * <li>If the specified API group does not exist, a success response is returned.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteApiGroup  DeleteApiGroupRequest
+     * @return DeleteApiGroupResponse
      */
     @Override
     public CompletableFuture<DeleteApiGroupResponse> deleteApiGroup(DeleteApiGroupRequest request) {
@@ -618,6 +827,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApiProduct  DeleteApiProductRequest
+     * @return DeleteApiProductResponse
+     */
     @Override
     public CompletableFuture<DeleteApiProductResponse> deleteApiProduct(DeleteApiProductRequest request) {
         try {
@@ -633,8 +846,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DeleteApiStageVariable  DeleteApiStageVariableRequest
+     * @return DeleteApiStageVariableResponse
      */
     @Override
     public CompletableFuture<DeleteApiStageVariableResponse> deleteApiStageVariable(DeleteApiStageVariableRequest request) {
@@ -651,10 +867,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   After an application is deleted, the application and its API authorization cannot be restored.
-      * *   You can call this operation up to 50 times per second per account.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>After an application is deleted, the application and its API authorization cannot be restored.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteApp  DeleteAppRequest
+     * @return DeleteAppResponse
      */
     @Override
     public CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request) {
@@ -670,6 +891,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAppCode  DeleteAppCodeRequest
+     * @return DeleteAppCodeResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAppCodeResponse> deleteAppCode(DeleteAppCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAppCode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAppCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAppCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAppKey  DeleteAppKeyRequest
+     * @return DeleteAppKeyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAppKeyResponse> deleteAppKey(DeleteAppKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAppKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAppKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAppKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteBackend  DeleteBackendRequest
+     * @return DeleteBackendResponse
+     */
     @Override
     public CompletableFuture<DeleteBackendResponse> deleteBackend(DeleteBackendRequest request) {
         try {
@@ -684,6 +945,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBackendModel  DeleteBackendModelRequest
+     * @return DeleteBackendModelResponse
+     */
     @Override
     public CompletableFuture<DeleteBackendModelResponse> deleteBackendModel(DeleteBackendModelRequest request) {
         try {
@@ -698,6 +963,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
     @Override
     public CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request) {
         try {
@@ -712,6 +981,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDatasetItem  DeleteDatasetItemRequest
+     * @return DeleteDatasetItemResponse
+     */
     @Override
     public CompletableFuture<DeleteDatasetItemResponse> deleteDatasetItem(DeleteDatasetItemRequest request) {
         try {
@@ -727,10 +1000,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   If the specified domain name does not exist, a successful response will still appear.
-      * *   Unbinding a domain name from an API group will affect access to the APIs in the group. Exercise caution when using this operation.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>If the specified domain name does not exist, a successful response will still appear.</li>
+     * <li>Unbinding a domain name from an API group will affect access to the APIs in the group. Exercise caution when using this operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteDomain  DeleteDomainRequest
+     * @return DeleteDomainResponse
      */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
@@ -746,6 +1024,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomainCertificate  DeleteDomainCertificateRequest
+     * @return DeleteDomainCertificateResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainCertificateResponse> deleteDomainCertificate(DeleteDomainCertificateRequest request) {
         try {
@@ -760,6 +1042,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -775,10 +1061,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.
-      * *   If you call this operation on an ACL that does not exist, a success message is returned.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>If the ACL is bound to an API, you must unbind the ACL from the API before you can delete the ACL. Otherwise, an error is returned.</li>
+     * <li>If you call this operation on an ACL that does not exist, a success message is returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteIpControl  DeleteIpControlRequest
+     * @return DeleteIpControlResponse
      */
     @Override
     public CompletableFuture<DeleteIpControlResponse> deleteIpControl(DeleteIpControlRequest request) {
@@ -794,6 +1085,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLogConfig  DeleteLogConfigRequest
+     * @return DeleteLogConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteLogConfigResponse> deleteLogConfig(DeleteLogConfigRequest request) {
         try {
@@ -808,6 +1103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteModel  DeleteModelRequest
+     * @return DeleteModelResponse
+     */
     @Override
     public CompletableFuture<DeleteModelResponse> deleteModel(DeleteModelRequest request) {
         try {
@@ -822,6 +1121,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMonitorGroup  DeleteMonitorGroupRequest
+     * @return DeleteMonitorGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteMonitorGroupResponse> deleteMonitorGroup(DeleteMonitorGroupRequest request) {
         try {
@@ -837,9 +1140,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   You must first unbind the plug-in from the API. Otherwise, an error is reported when you delete the plug-in.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You must first unbind the plug-in from the API. Otherwise, an error is reported when you delete the plug-in.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeletePlugin  DeletePluginRequest
+     * @return DeletePluginResponse
      */
     @Override
     public CompletableFuture<DeletePluginResponse> deletePlugin(DeletePluginRequest request) {
@@ -856,11 +1164,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   This API operation deletes an existing backend signature key.
-      * *   You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * @param request the request parameters of DeletePrivateDNS  DeletePrivateDNSRequest
+     * @return DeletePrivateDNSResponse
+     */
+    @Override
+    public CompletableFuture<DeletePrivateDNSResponse> deletePrivateDNS(DeletePrivateDNSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePrivateDNS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePrivateDNSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePrivateDNSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API operation deletes an existing backend signature key.</li>
+     * <li>You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteSignature  DeleteSignatureRequest
+     * @return DeleteSignatureResponse
      */
     @Override
     public CompletableFuture<DeleteSignatureResponse> deleteSignature(DeleteSignatureRequest request) {
@@ -877,10 +1208,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   If the throttling policy you want to delete is bound to APIs, you need to unbind the policy first. Otherwise, an error is reported when you delete the policy.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>If the throttling policy you want to delete is bound to APIs, you need to unbind the policy first. Otherwise, an error is reported when you delete the policy.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteTrafficControl  DeleteTrafficControlRequest
+     * @return DeleteTrafficControlResponse
      */
     @Override
     public CompletableFuture<DeleteTrafficControlResponse> deleteTrafficControl(DeleteTrafficControlRequest request) {
@@ -897,9 +1233,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   You can obtain the input parameters required in this operation by calling other APIs.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>You can obtain the input parameters required in this operation by calling other APIs.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteTrafficSpecialControl  DeleteTrafficSpecialControlRequest
+     * @return DeleteTrafficSpecialControlResponse
      */
     @Override
     public CompletableFuture<DeleteTrafficSpecialControlResponse> deleteTrafficSpecialControl(DeleteTrafficSpecialControlRequest request) {
@@ -916,10 +1257,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.
-      * *   An API is published to a cluster in under 5 seconds.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.</p>
+     * <ul>
+     * <li>An API is published to a cluster in under 5 seconds.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeployApi  DeployApiRequest
+     * @return DeployApiResponse
      */
     @Override
     public CompletableFuture<DeployApiResponse> deployApi(DeployApiRequest request) {
@@ -935,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAbolishApiTask  DescribeAbolishApiTaskRequest
+     * @return DescribeAbolishApiTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeAbolishApiTaskResponse> describeAbolishApiTask(DescribeAbolishApiTaskRequest request) {
         try {
@@ -949,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccessControlListAttribute  DescribeAccessControlListAttributeRequest
+     * @return DescribeAccessControlListAttributeResponse
+     */
     @Override
     public CompletableFuture<DescribeAccessControlListAttributeResponse> describeAccessControlListAttribute(DescribeAccessControlListAttributeRequest request) {
         try {
@@ -963,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccessControlLists  DescribeAccessControlListsRequest
+     * @return DescribeAccessControlListsResponse
+     */
     @Override
     public CompletableFuture<DescribeAccessControlListsResponse> describeAccessControlLists(DescribeAccessControlListsRequest request) {
         try {
@@ -978,8 +1336,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DescribeApi  DescribeApiRequest
+     * @return DescribeApiResponse
      */
     @Override
     public CompletableFuture<DescribeApiResponse> describeApi(DescribeApiRequest request) {
@@ -996,11 +1357,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.****************
-      * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
-      * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
-      * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
-      *
+     * <b>description</b> :
+     * <p>  For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.</p>
+     * <ul>
+     * <li>When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.</li>
+     * <li>When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.</li>
+     * <li>Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiDoc  DescribeApiDocRequest
+     * @return DescribeApiDocResponse
      */
     @Override
     public CompletableFuture<DescribeApiDocResponse> describeApiDoc(DescribeApiDocRequest request) {
@@ -1017,8 +1383,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DescribeApiGroup  DescribeApiGroupRequest
+     * @return DescribeApiGroupResponse
      */
     @Override
     public CompletableFuture<DescribeApiGroupResponse> describeApiGroup(DescribeApiGroupRequest request) {
@@ -1034,6 +1403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApiGroupVpcWhitelist  DescribeApiGroupVpcWhitelistRequest
+     * @return DescribeApiGroupVpcWhitelistResponse
+     */
     @Override
     public CompletableFuture<DescribeApiGroupVpcWhitelistResponse> describeApiGroupVpcWhitelist(DescribeApiGroupVpcWhitelistRequest request) {
         try {
@@ -1049,8 +1422,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DescribeApiGroups  DescribeApiGroupsRequest
+     * @return DescribeApiGroupsResponse
      */
     @Override
     public CompletableFuture<DescribeApiGroupsResponse> describeApiGroups(DescribeApiGroupsRequest request) {
@@ -1067,9 +1443,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers. Only APIs that have been published have historical version records.
-      * *   This operation allows you to obtain the historical versions of an API. This operation is always called by other operations.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers. Only APIs that have been published have historical version records.</p>
+     * <ul>
+     * <li>This operation allows you to obtain the historical versions of an API. This operation is always called by other operations.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiHistories  DescribeApiHistoriesRequest
+     * @return DescribeApiHistoriesResponse
      */
     @Override
     public CompletableFuture<DescribeApiHistoriesResponse> describeApiHistories(DescribeApiHistoriesRequest request) {
@@ -1086,10 +1467,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Queries the details of a specified historical version of a specified API definition.
-      * *   This API is intended for API providers.
-      * *   API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.
-      *
+     * <b>description</b> :
+     * <p>Queries the details of a specified historical version of a specified API definition.</p>
+     * <ul>
+     * <li>This API is intended for API providers.</li>
+     * <li>API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiHistory  DescribeApiHistoryRequest
+     * @return DescribeApiHistoryResponse
      */
     @Override
     public CompletableFuture<DescribeApiHistoryResponse> describeApiHistory(DescribeApiHistoryRequest request) {
@@ -1106,10 +1492,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   If an optional parameter is not specified, all results are returned on separate pages.
-      * ·
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>If an optional parameter is not specified, all results are returned on separate pages.
+     * ·</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiIpControls  DescribeApiIpControlsRequest
+     * @return DescribeApiIpControlsResponse
      */
     @Override
     public CompletableFuture<DescribeApiIpControlsResponse> describeApiIpControls(DescribeApiIpControlsRequest request) {
@@ -1126,10 +1517,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the latency metrics in milliseconds for a specified API.
-      * *   This API is intended for API providers.
-      * *   Only statistics for API calls made in the release environment are collected by default.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the latency metrics in milliseconds for a specified API.</p>
+     * <ul>
+     * <li>This API is intended for API providers.</li>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiLatencyData  DescribeApiLatencyDataRequest
+     * @return DescribeApiLatencyDataResponse
      */
     @Override
     public CompletableFuture<DescribeApiLatencyDataResponse> describeApiLatencyData(DescribeApiLatencyDataRequest request) {
@@ -1145,6 +1541,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApiMarketAttributes  DescribeApiMarketAttributesRequest
+     * @return DescribeApiMarketAttributesResponse
+     */
     @Override
     public CompletableFuture<DescribeApiMarketAttributesResponse> describeApiMarketAttributes(DescribeApiMarketAttributesRequest request) {
         try {
@@ -1159,6 +1559,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApiProductApis  DescribeApiProductApisRequest
+     * @return DescribeApiProductApisResponse
+     */
     @Override
     public CompletableFuture<DescribeApiProductApisResponse> describeApiProductApis(DescribeApiProductApisRequest request) {
         try {
@@ -1173,6 +1577,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApiProductsByApp  DescribeApiProductsByAppRequest
+     * @return DescribeApiProductsByAppResponse
+     */
     @Override
     public CompletableFuture<DescribeApiProductsByAppResponse> describeApiProductsByApp(DescribeApiProductsByAppRequest request) {
         try {
@@ -1188,9 +1596,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   Only statistics for API calls made in the release environment are collected by default.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiQpsData  DescribeApiQpsDataRequest
+     * @return DescribeApiQpsDataResponse
      */
     @Override
     public CompletableFuture<DescribeApiQpsDataResponse> describeApiQpsData(DescribeApiQpsDataRequest request) {
@@ -1207,9 +1620,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiSignatures  DescribeApiSignaturesRequest
+     * @return DescribeApiSignaturesResponse
      */
     @Override
     public CompletableFuture<DescribeApiSignaturesResponse> describeApiSignatures(DescribeApiSignaturesRequest request) {
@@ -1226,9 +1644,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiTrafficControls  DescribeApiTrafficControlsRequest
+     * @return DescribeApiTrafficControlsResponse
      */
     @Override
     public CompletableFuture<DescribeApiTrafficControlsResponse> describeApiTrafficControls(DescribeApiTrafficControlsRequest request) {
@@ -1245,9 +1668,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   Only statistics for API calls made in the release environment are collected by default.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Only statistics for API calls made in the release environment are collected by default.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApiTrafficData  DescribeApiTrafficDataRequest
+     * @return DescribeApiTrafficDataResponse
      */
     @Override
     public CompletableFuture<DescribeApiTrafficDataResponse> describeApiTrafficData(DescribeApiTrafficDataRequest request) {
@@ -1264,10 +1692,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   This operation returns a list of all APIs that are being defined. The basic information about these APIs is also returned in the list.
-      * *   This operation returns all APIs that are being edited, regardless of their environments. The returned definitions may be different from the definitions in the environments.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>This operation returns a list of all APIs that are being defined. The basic information about these APIs is also returned in the list.</li>
+     * <li>This operation returns all APIs that are being edited, regardless of their environments. The returned definitions may be different from the definitions in the environments.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApis  DescribeApisRequest
+     * @return DescribeApisResponse
      */
     @Override
     public CompletableFuture<DescribeApisResponse> describeApis(DescribeApisRequest request) {
@@ -1283,6 +1716,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApisByApp  DescribeApisByAppRequest
+     * @return DescribeApisByAppResponse
+     */
     @Override
     public CompletableFuture<DescribeApisByAppResponse> describeApisByApp(DescribeApisByAppRequest request) {
         try {
@@ -1297,6 +1734,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApisByBackend  DescribeApisByBackendRequest
+     * @return DescribeApisByBackendResponse
+     */
     @Override
     public CompletableFuture<DescribeApisByBackendResponse> describeApisByBackend(DescribeApisByBackendRequest request) {
         try {
@@ -1312,9 +1753,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   You can specify PageNumber to obtain the result on the specified page.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApisByIpControl  DescribeApisByIpControlRequest
+     * @return DescribeApisByIpControlResponse
      */
     @Override
     public CompletableFuture<DescribeApisByIpControlResponse> describeApisByIpControl(DescribeApisByIpControlRequest request) {
@@ -1331,9 +1777,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApisBySignature  DescribeApisBySignatureRequest
+     * @return DescribeApisBySignatureResponse
      */
     @Override
     public CompletableFuture<DescribeApisBySignatureResponse> describeApisBySignature(DescribeApisBySignatureRequest request) {
@@ -1350,9 +1801,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   You can specify PageNumber to obtain the result on the specified page.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>You can specify PageNumber to obtain the result on the specified page.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApisByTrafficControl  DescribeApisByTrafficControlRequest
+     * @return DescribeApisByTrafficControlResponse
      */
     @Override
     public CompletableFuture<DescribeApisByTrafficControlResponse> describeApisByTrafficControl(DescribeApisByTrafficControlRequest request) {
@@ -1368,6 +1824,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApisByVpcAccess  DescribeApisByVpcAccessRequest
+     * @return DescribeApisByVpcAccessResponse
+     */
+    @Override
+    public CompletableFuture<DescribeApisByVpcAccessResponse> describeApisByVpcAccess(DescribeApisByVpcAccessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeApisByVpcAccess").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApisByVpcAccessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeApisByVpcAccessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeApisWithStageNameIntegratedByApp  DescribeApisWithStageNameIntegratedByAppRequest
+     * @return DescribeApisWithStageNameIntegratedByAppResponse
+     */
     @Override
     public CompletableFuture<DescribeApisWithStageNameIntegratedByAppResponse> describeApisWithStageNameIntegratedByApp(DescribeApisWithStageNameIntegratedByAppRequest request) {
         try {
@@ -1382,6 +1860,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApp  DescribeAppRequest
+     * @return DescribeAppResponse
+     */
     @Override
     public CompletableFuture<DescribeAppResponse> describeApp(DescribeAppRequest request) {
         try {
@@ -1397,9 +1879,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   AppId is optional.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>AppId is optional.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAppAttributes  DescribeAppAttributesRequest
+     * @return DescribeAppAttributesResponse
      */
     @Override
     public CompletableFuture<DescribeAppAttributesResponse> describeAppAttributes(DescribeAppAttributesRequest request) {
@@ -1415,6 +1902,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppSecurities  DescribeAppSecuritiesRequest
+     * @return DescribeAppSecuritiesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAppSecuritiesResponse> describeAppSecurities(DescribeAppSecuritiesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAppSecurities").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAppSecuritiesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAppSecuritiesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * 
+     * @param request the request parameters of DescribeAppSecurity  DescribeAppSecurityRequest
+     * @return DescribeAppSecurityResponse
+     */
     @Override
     public CompletableFuture<DescribeAppSecurityResponse> describeAppSecurity(DescribeAppSecurityRequest request) {
         try {
@@ -1430,10 +1942,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
-      * *   Each provider can call this operation for a maximum of 200 times every day in a region.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>API providers can use the app IDs or their Alibaba Cloud accounts to query app information.</li>
+     * <li>Each provider can call this operation for a maximum of 200 times every day in a region.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeApps  DescribeAppsRequest
+     * @return DescribeAppsResponse
      */
     @Override
     public CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request) {
@@ -1449,6 +1966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppsByApiProduct  DescribeAppsByApiProductRequest
+     * @return DescribeAppsByApiProductResponse
+     */
     @Override
     public CompletableFuture<DescribeAppsByApiProductResponse> describeAppsByApiProduct(DescribeAppsByApiProductRequest request) {
         try {
@@ -1464,9 +1985,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   The specified application can call all APIs included in the responses.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>The specified application can call all APIs included in the responses.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAuthorizedApis  DescribeAuthorizedApisRequest
+     * @return DescribeAuthorizedApisResponse
      */
     @Override
     public CompletableFuture<DescribeAuthorizedApisResponse> describeAuthorizedApis(DescribeAuthorizedApisRequest request) {
@@ -1483,9 +2009,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   All applications included in the responses have access to the specified API.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>All applications included in the responses have access to the specified API.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeAuthorizedApps  DescribeAuthorizedAppsRequest
+     * @return DescribeAuthorizedAppsResponse
      */
     @Override
     public CompletableFuture<DescribeAuthorizedAppsResponse> describeAuthorizedApps(DescribeAuthorizedAppsRequest request) {
@@ -1501,6 +2032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackendInfo  DescribeBackendInfoRequest
+     * @return DescribeBackendInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeBackendInfoResponse> describeBackendInfo(DescribeBackendInfoRequest request) {
         try {
@@ -1515,6 +2050,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackendList  DescribeBackendListRequest
+     * @return DescribeBackendListResponse
+     */
     @Override
     public CompletableFuture<DescribeBackendListResponse> describeBackendList(DescribeBackendListRequest request) {
         try {
@@ -1529,6 +2068,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDatasetInfo  DescribeDatasetInfoRequest
+     * @return DescribeDatasetInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDatasetInfoResponse> describeDatasetInfo(DescribeDatasetInfoRequest request) {
         try {
@@ -1543,6 +2086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDatasetItemInfo  DescribeDatasetItemInfoRequest
+     * @return DescribeDatasetItemInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDatasetItemInfoResponse> describeDatasetItemInfo(DescribeDatasetItemInfoRequest request) {
         try {
@@ -1557,6 +2104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDatasetItemList  DescribeDatasetItemListRequest
+     * @return DescribeDatasetItemListResponse
+     */
     @Override
     public CompletableFuture<DescribeDatasetItemListResponse> describeDatasetItemList(DescribeDatasetItemListRequest request) {
         try {
@@ -1571,6 +2122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDatasetList  DescribeDatasetListRequest
+     * @return DescribeDatasetListResponse
+     */
     @Override
     public CompletableFuture<DescribeDatasetListResponse> describeDatasetList(DescribeDatasetListRequest request) {
         try {
@@ -1585,6 +2140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeployApiTask  DescribeDeployApiTaskRequest
+     * @return DescribeDeployApiTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeDeployApiTaskResponse> describeDeployApiTask(DescribeDeployApiTaskRequest request) {
         try {
@@ -1599,6 +2158,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeployedApi  DescribeDeployedApiRequest
+     * @return DescribeDeployedApiResponse
+     */
     @Override
     public CompletableFuture<DescribeDeployedApiResponse> describeDeployedApi(DescribeDeployedApiRequest request) {
         try {
@@ -1614,8 +2177,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DescribeDeployedApis  DescribeDeployedApisRequest
+     * @return DescribeDeployedApisResponse
      */
     @Override
     public CompletableFuture<DescribeDeployedApisResponse> describeDeployedApis(DescribeDeployedApisRequest request) {
@@ -1631,6 +2197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomain  DescribeDomainRequest
+     * @return DescribeDomainResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainResponse> describeDomain(DescribeDomainRequest request) {
         try {
@@ -1645,6 +2215,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupLatency  DescribeGroupLatencyRequest
+     * @return DescribeGroupLatencyResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupLatencyResponse> describeGroupLatency(DescribeGroupLatencyRequest request) {
         try {
@@ -1659,6 +2233,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupQps  DescribeGroupQpsRequest
+     * @return DescribeGroupQpsResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupQpsResponse> describeGroupQps(DescribeGroupQpsRequest request) {
         try {
@@ -1673,6 +2251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupTraffic  DescribeGroupTrafficRequest
+     * @return DescribeGroupTrafficResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupTrafficResponse> describeGroupTraffic(DescribeGroupTrafficRequest request) {
         try {
@@ -1687,6 +2269,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHistoryApis  DescribeHistoryApisRequest
+     * @return DescribeHistoryApisResponse
+     */
     @Override
     public CompletableFuture<DescribeHistoryApisResponse> describeHistoryApis(DescribeHistoryApisRequest request) {
         try {
@@ -1701,6 +2287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImportOASTask  DescribeImportOASTaskRequest
+     * @return DescribeImportOASTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeImportOASTaskResponse> describeImportOASTask(DescribeImportOASTaskRequest request) {
         try {
@@ -1715,6 +2305,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceClusterInfo  DescribeInstanceClusterInfoRequest
+     * @return DescribeInstanceClusterInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceClusterInfoResponse> describeInstanceClusterInfo(DescribeInstanceClusterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInstanceClusterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceClusterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceClusterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceClusterList  DescribeInstanceClusterListRequest
+     * @return DescribeInstanceClusterListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceClusterListResponse> describeInstanceClusterList(DescribeInstanceClusterListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInstanceClusterList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceClusterListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceClusterListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceDropConnections  DescribeInstanceDropConnectionsRequest
+     * @return DescribeInstanceDropConnectionsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceDropConnectionsResponse> describeInstanceDropConnections(DescribeInstanceDropConnectionsRequest request) {
         try {
@@ -1729,6 +2359,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceDropPacket  DescribeInstanceDropPacketRequest
+     * @return DescribeInstanceDropPacketResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceDropPacketResponse> describeInstanceDropPacket(DescribeInstanceDropPacketRequest request) {
         try {
@@ -1743,6 +2377,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceHttpCode  DescribeInstanceHttpCodeRequest
+     * @return DescribeInstanceHttpCodeResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceHttpCodeResponse> describeInstanceHttpCode(DescribeInstanceHttpCodeRequest request) {
         try {
@@ -1757,6 +2395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceLatency  DescribeInstanceLatencyRequest
+     * @return DescribeInstanceLatencyResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceLatencyResponse> describeInstanceLatency(DescribeInstanceLatencyRequest request) {
         try {
@@ -1771,6 +2413,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceNewConnections  DescribeInstanceNewConnectionsRequest
+     * @return DescribeInstanceNewConnectionsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceNewConnectionsResponse> describeInstanceNewConnections(DescribeInstanceNewConnectionsRequest request) {
         try {
@@ -1785,6 +2431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstancePackets  DescribeInstancePacketsRequest
+     * @return DescribeInstancePacketsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstancePacketsResponse> describeInstancePackets(DescribeInstancePacketsRequest request) {
         try {
@@ -1799,6 +2449,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceQps  DescribeInstanceQpsRequest
+     * @return DescribeInstanceQpsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceQpsResponse> describeInstanceQps(DescribeInstanceQpsRequest request) {
         try {
@@ -1813,6 +2467,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceSlbConnect  DescribeInstanceSlbConnectRequest
+     * @return DescribeInstanceSlbConnectResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceSlbConnectResponse> describeInstanceSlbConnect(DescribeInstanceSlbConnectRequest request) {
         try {
@@ -1827,6 +2485,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceTraffic  DescribeInstanceTrafficRequest
+     * @return DescribeInstanceTrafficResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceTrafficResponse> describeInstanceTraffic(DescribeInstanceTrafficRequest request) {
         try {
@@ -1841,6 +2503,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstances  DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request) {
         try {
@@ -1856,9 +2522,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   You can filter the query results by policy ID.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You can filter the query results by policy ID.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeIpControlPolicyItems  DescribeIpControlPolicyItemsRequest
+     * @return DescribeIpControlPolicyItemsResponse
      */
     @Override
     public CompletableFuture<DescribeIpControlPolicyItemsResponse> describeIpControlPolicyItems(DescribeIpControlPolicyItemsRequest request) {
@@ -1875,11 +2546,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
-      * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to query the ACLs in a region. Region is a system parameter.</li>
+     * <li>You can filter the query results by ACL ID, name, or type.</li>
+     * <li>This operation cannot be used to query specific policies. If you want to query specific policies, call the <a href="~~DescribeIpControlPolicyItems~~">DescribeIpControlPolicyItems</a> operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeIpControls  DescribeIpControlsRequest
+     * @return DescribeIpControlsResponse
      */
     @Override
     public CompletableFuture<DescribeIpControlsResponse> describeIpControls(DescribeIpControlsRequest request) {
@@ -1895,6 +2571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLogConfig  DescribeLogConfigRequest
+     * @return DescribeLogConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeLogConfigResponse> describeLogConfig(DescribeLogConfigRequest request) {
         try {
@@ -1909,6 +2589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMarketRemainsQuota  DescribeMarketRemainsQuotaRequest
+     * @return DescribeMarketRemainsQuotaResponse
+     */
     @Override
     public CompletableFuture<DescribeMarketRemainsQuotaResponse> describeMarketRemainsQuota(DescribeMarketRemainsQuotaRequest request) {
         try {
@@ -1924,8 +2608,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Fuzzy queries are supported.
-      *
+     * <b>description</b> :
+     * <p>  Fuzzy queries are supported.</p>
+     * 
+     * @param request the request parameters of DescribeModels  DescribeModelsRequest
+     * @return DescribeModelsResponse
      */
     @Override
     public CompletableFuture<DescribeModelsResponse> describeModels(DescribeModelsRequest request) {
@@ -1941,6 +2628,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePluginApis  DescribePluginApisRequest
+     * @return DescribePluginApisResponse
+     */
     @Override
     public CompletableFuture<DescribePluginApisResponse> describePluginApis(DescribePluginApisRequest request) {
         try {
@@ -1955,6 +2646,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePluginSchemas  DescribePluginSchemasRequest
+     * @return DescribePluginSchemasResponse
+     */
     @Override
     public CompletableFuture<DescribePluginSchemasResponse> describePluginSchemas(DescribePluginSchemasRequest request) {
         try {
@@ -1969,6 +2664,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePluginTemplates  DescribePluginTemplatesRequest
+     * @return DescribePluginTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribePluginTemplatesResponse> describePluginTemplates(DescribePluginTemplatesRequest request) {
         try {
@@ -1984,11 +2683,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation supports pagination.
-      * *   This operation allows you to query plug-ins by business type.
-      * *   This operation allows you to query plug-ins by ID.
-      * *   This operation allows you to query plug-ins by name.
-      *
+     * <b>description</b> :
+     * <p>  This operation supports pagination.</p>
+     * <ul>
+     * <li>This operation allows you to query plug-ins by business type.</li>
+     * <li>This operation allows you to query plug-ins by ID.</li>
+     * <li>This operation allows you to query plug-ins by name.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribePlugins  DescribePluginsRequest
+     * @return DescribePluginsResponse
      */
     @Override
     public CompletableFuture<DescribePluginsResponse> describePlugins(DescribePluginsRequest request) {
@@ -2005,9 +2709,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   This operation supports pagination.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>This operation supports pagination.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribePluginsByApi  DescribePluginsByApiRequest
+     * @return DescribePluginsByApiResponse
      */
     @Override
     public CompletableFuture<DescribePluginsByApiResponse> describePluginsByApi(DescribePluginsByApiRequest request) {
@@ -2023,6 +2732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePurchasedApiGroup  DescribePurchasedApiGroupRequest
+     * @return DescribePurchasedApiGroupResponse
+     */
     @Override
     public CompletableFuture<DescribePurchasedApiGroupResponse> describePurchasedApiGroup(DescribePurchasedApiGroupRequest request) {
         try {
@@ -2037,6 +2750,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePurchasedApiGroups  DescribePurchasedApiGroupsRequest
+     * @return DescribePurchasedApiGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribePurchasedApiGroupsResponse> describePurchasedApiGroups(DescribePurchasedApiGroupsRequest request) {
         try {
@@ -2051,6 +2768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePurchasedApis  DescribePurchasedApisRequest
+     * @return DescribePurchasedApisResponse
+     */
     @Override
     public CompletableFuture<DescribePurchasedApisResponse> describePurchasedApis(DescribePurchasedApisRequest request) {
         try {
@@ -2066,9 +2787,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation queries regions in which API Gateway is available.
-      * *   This operation is intended for API providers and callers.
-      *
+     * <b>description</b> :
+     * <p>This operation queries regions in which API Gateway is available.</p>
+     * <ul>
+     * <li>This operation is intended for API providers and callers.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
      */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
@@ -2085,9 +2811,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   This operation is used to query the backend signature keys in a Region. Region is a system parameter.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to query the backend signature keys in a Region. Region is a system parameter.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSignatures  DescribeSignaturesRequest
+     * @return DescribeSignaturesResponse
      */
     @Override
     public CompletableFuture<DescribeSignaturesResponse> describeSignatures(DescribeSignaturesRequest request) {
@@ -2104,8 +2835,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DescribeSignaturesByApi  DescribeSignaturesByApiRequest
+     * @return DescribeSignaturesByApiResponse
      */
     @Override
     public CompletableFuture<DescribeSignaturesByApiResponse> describeSignaturesByApi(DescribeSignaturesByApiRequest request) {
@@ -2121,6 +2855,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSummaryData  DescribeSummaryDataRequest
+     * @return DescribeSummaryDataResponse
+     */
     @Override
     public CompletableFuture<DescribeSummaryDataResponse> describeSummaryData(DescribeSummaryDataRequest request) {
         try {
@@ -2136,9 +2874,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API callers.
-      * *   The response of this API contains the system parameters that are optional in API definitions.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API callers.</p>
+     * <ul>
+     * <li>The response of this API contains the system parameters that are optional in API definitions.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeSystemParameters  DescribeSystemParametersRequest
+     * @return DescribeSystemParametersResponse
      */
     @Override
     public CompletableFuture<DescribeSystemParametersResponse> describeSystemParameters(DescribeSystemParametersRequest request) {
@@ -2155,10 +2898,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   This API can be used to query all existing throttling policies (including special throttling policies) and their details.
-      * *   You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API can be used to query all existing throttling policies (including special throttling policies) and their details.</li>
+     * <li>You can specify query conditions. For example, you can query the throttling policies bound to a specified API or in a specified environment.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeTrafficControls  DescribeTrafficControlsRequest
+     * @return DescribeTrafficControlsResponse
      */
     @Override
     public CompletableFuture<DescribeTrafficControlsResponse> describeTrafficControls(DescribeTrafficControlsRequest request) {
@@ -2175,8 +2923,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * 
+     * @param request the request parameters of DescribeTrafficControlsByApi  DescribeTrafficControlsByApiRequest
+     * @return DescribeTrafficControlsByApiResponse
      */
     @Override
     public CompletableFuture<DescribeTrafficControlsByApiResponse> describeTrafficControlsByApi(DescribeTrafficControlsByApiRequest request) {
@@ -2192,6 +2943,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUpdateBackendTask  DescribeUpdateBackendTaskRequest
+     * @return DescribeUpdateBackendTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeUpdateBackendTaskResponse> describeUpdateBackendTask(DescribeUpdateBackendTaskRequest request) {
         try {
@@ -2206,6 +2961,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUpdateVpcInfoTask  DescribeUpdateVpcInfoTaskRequest
+     * @return DescribeUpdateVpcInfoTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeUpdateVpcInfoTaskResponse> describeUpdateVpcInfoTask(DescribeUpdateVpcInfoTaskRequest request) {
         try {
@@ -2220,6 +2979,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpcAccesses  DescribeVpcAccessesRequest
+     * @return DescribeVpcAccessesResponse
+     */
     @Override
     public CompletableFuture<DescribeVpcAccessesResponse> describeVpcAccesses(DescribeVpcAccessesRequest request) {
         try {
@@ -2234,6 +2997,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeZones  DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
     @Override
     public CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request) {
         try {
@@ -2248,6 +3015,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachApiProduct  DetachApiProductRequest
+     * @return DetachApiProductResponse
+     */
     @Override
     public CompletableFuture<DetachApiProductResponse> detachApiProduct(DetachApiProductRequest request) {
         try {
@@ -2262,6 +3033,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachPlugin  DetachPluginRequest
+     * @return DetachPluginResponse
+     */
     @Override
     public CompletableFuture<DetachPluginResponse> detachPlugin(DetachPluginRequest request) {
         try {
@@ -2276,6 +3051,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableInstanceAccessControl  DisableInstanceAccessControlRequest
+     * @return DisableInstanceAccessControlResponse
+     */
     @Override
     public CompletableFuture<DisableInstanceAccessControlResponse> disableInstanceAccessControl(DisableInstanceAccessControlRequest request) {
         try {
@@ -2290,6 +3069,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DissociateInstanceWithPrivateDNS  DissociateInstanceWithPrivateDNSRequest
+     * @return DissociateInstanceWithPrivateDNSResponse
+     */
+    @Override
+    public CompletableFuture<DissociateInstanceWithPrivateDNSResponse> dissociateInstanceWithPrivateDNS(DissociateInstanceWithPrivateDNSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DissociateInstanceWithPrivateDNS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DissociateInstanceWithPrivateDNSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DissociateInstanceWithPrivateDNSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DryRunSwagger  DryRunSwaggerRequest
+     * @return DryRunSwaggerResponse
+     */
     @Override
     public CompletableFuture<DryRunSwaggerResponse> dryRunSwagger(DryRunSwaggerRequest request) {
         try {
@@ -2304,6 +3105,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableInstanceAccessControl  EnableInstanceAccessControlRequest
+     * @return EnableInstanceAccessControlResponse
+     */
     @Override
     public CompletableFuture<EnableInstanceAccessControlResponse> enableInstanceAccessControl(EnableInstanceAccessControlRequest request) {
         try {
@@ -2318,6 +3123,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportOAS  ExportOASRequest
+     * @return ExportOASResponse
+     */
+    @Override
+    public CompletableFuture<ExportOASResponse> exportOAS(ExportOASRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ExportOAS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportOASResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportOASResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ImportOAS  ImportOASRequest
+     * @return ImportOASResponse
+     */
     @Override
     public CompletableFuture<ImportOASResponse> importOAS(ImportOASRequest request) {
         try {
@@ -2333,9 +3160,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Alibaba Cloud supports extensions based on Swagger 2.0.
-      * *   Alibaba Cloud supports Swagger configuration files in JSON and YAML formats.
-      *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud supports extensions based on Swagger 2.0.</p>
+     * <ul>
+     * <li>Alibaba Cloud supports Swagger configuration files in JSON and YAML formats.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ImportSwagger  ImportSwaggerRequest
+     * @return ImportSwaggerResponse
      */
     @Override
     public CompletableFuture<ImportSwaggerResponse> importSwagger(ImportSwaggerRequest request) {
@@ -2352,16 +3184,39 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The Tag.N.Key and Tag.N.Value parameters constitute a key-value pair.
-      * *   ResourceId.N must meet all the key-value pairs that are entered. If you enter multiple key-value pairs, resources that contain the specified key-value pairs are returned.
-      * *   This operation is used to query resource tags based on conditions. If no relationship matches the conditions, an empty list is returned.
-      * *   You can query both user tags and visible system tags.
-      * *   In addition to the required parameters, you can also specify ResourceId.N to query the visible resource tags of a specified resource in a region.
-      * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
-      * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
-      * *   You can query tags of the same type or different types in a single operation.
-      * *   You can query all your user tags and visible system tags.
-      *
+     * @param request the request parameters of ListPrivateDNS  ListPrivateDNSRequest
+     * @return ListPrivateDNSResponse
+     */
+    @Override
+    public CompletableFuture<ListPrivateDNSResponse> listPrivateDNS(ListPrivateDNSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPrivateDNS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPrivateDNSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPrivateDNSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  The Tag.N.Key and Tag.N.Value parameters constitute a key-value pair.</p>
+     * <ul>
+     * <li>ResourceId.N must meet all the key-value pairs that are entered. If you enter multiple key-value pairs, resources that contain the specified key-value pairs are returned.</li>
+     * <li>This operation is used to query resource tags based on conditions. If no relationship matches the conditions, an empty list is returned.</li>
+     * <li>You can query both user tags and visible system tags.</li>
+     * <li>In addition to the required parameters, you can also specify ResourceId.N to query the visible resource tags of a specified resource in a region.</li>
+     * <li>You can also specify Tag.N.Key to query the visible keys of a specified key in a region.</li>
+     * <li>At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.</li>
+     * <li>You can query tags of the same type or different types in a single operation.</li>
+     * <li>You can query all your user types and visible system tags.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
      */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
@@ -2378,18 +3233,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **This operation is intended for API providers.**
-      * *   This API operation requires a full update. Updates of partial parameters are not supported.
-      * *   When you modify an API name, make sure that the name of each API within the same group is unique.
-      * *   When you modify the request path, make sure that each request path within the same group is unique.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p><em>This operation is intended for API providers.</em>*</p>
+     * <ul>
+     * <li>This API operation requires a full update. Updates of partial parameters are not supported.</li>
+     * <li>When you modify an API name, make sure that the name of each API within the same group is unique.</li>
+     * <li>When you modify the request path, make sure that each request path within the same group is unique.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyApi  ModifyApiRequest
+     * @return ModifyApiResponse
      */
     @Override
     public CompletableFuture<ModifyApiResponse> modifyApi(ModifyApiRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyApi").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyApiResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2399,6 +3259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApiConfiguration  ModifyApiConfigurationRequest
+     * @return ModifyApiConfigurationResponse
+     */
     @Override
     public CompletableFuture<ModifyApiConfigurationResponse> modifyApiConfiguration(ModifyApiConfigurationRequest request) {
         try {
@@ -2414,9 +3278,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyApiGroup  ModifyApiGroupRequest
+     * @return ModifyApiGroupResponse
      */
     @Override
     public CompletableFuture<ModifyApiGroupResponse> modifyApiGroup(ModifyApiGroupRequest request) {
@@ -2432,6 +3301,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApiGroupInstance  ModifyApiGroupInstanceRequest
+     * @return ModifyApiGroupInstanceResponse
+     */
     @Override
     public CompletableFuture<ModifyApiGroupInstanceResponse> modifyApiGroupInstance(ModifyApiGroupInstanceRequest request) {
         try {
@@ -2446,6 +3319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApiGroupNetworkPolicy  ModifyApiGroupNetworkPolicyRequest
+     * @return ModifyApiGroupNetworkPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyApiGroupNetworkPolicyResponse> modifyApiGroupNetworkPolicy(ModifyApiGroupNetworkPolicyRequest request) {
         try {
@@ -2460,6 +3337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApiGroupVpcWhitelist  ModifyApiGroupVpcWhitelistRequest
+     * @return ModifyApiGroupVpcWhitelistResponse
+     */
     @Override
     public CompletableFuture<ModifyApiGroupVpcWhitelistResponse> modifyApiGroupVpcWhitelist(ModifyApiGroupVpcWhitelistRequest request) {
         try {
@@ -2475,10 +3356,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   **AppName** or **Description** can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.
-      * *   You can call this operation up to 50 times per second per account.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyApp  ModifyAppRequest
+     * @return ModifyAppResponse
      */
     @Override
     public CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request) {
@@ -2494,6 +3380,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackend  ModifyBackendRequest
+     * @return ModifyBackendResponse
+     */
     @Override
     public CompletableFuture<ModifyBackendResponse> modifyBackend(ModifyBackendRequest request) {
         try {
@@ -2508,6 +3398,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackendModel  ModifyBackendModelRequest
+     * @return ModifyBackendModelResponse
+     */
     @Override
     public CompletableFuture<ModifyBackendModelResponse> modifyBackendModel(ModifyBackendModelRequest request) {
         try {
@@ -2522,6 +3416,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDataset  ModifyDatasetRequest
+     * @return ModifyDatasetResponse
+     */
     @Override
     public CompletableFuture<ModifyDatasetResponse> modifyDataset(ModifyDatasetRequest request) {
         try {
@@ -2536,6 +3434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDatasetItem  ModifyDatasetItemRequest
+     * @return ModifyDatasetItemResponse
+     */
     @Override
     public CompletableFuture<ModifyDatasetItemResponse> modifyDatasetItem(ModifyDatasetItemRequest request) {
         try {
@@ -2550,6 +3452,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceAttribute  ModifyInstanceAttributeRequest
+     * @return ModifyInstanceAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInstanceAttributeResponse> modifyInstanceAttribute(ModifyInstanceAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstanceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyInstanceSpec  ModifyInstanceSpecRequest
+     * @return ModifyInstanceSpecResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request) {
         try {
@@ -2564,6 +3488,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceVpcAttributeForConsole  ModifyInstanceVpcAttributeForConsoleRequest
+     * @return ModifyInstanceVpcAttributeForConsoleResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInstanceVpcAttributeForConsoleResponse> modifyInstanceVpcAttributeForConsole(ModifyInstanceVpcAttributeForConsoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstanceVpcAttributeForConsole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceVpcAttributeForConsoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceVpcAttributeForConsoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyIntranetDomainPolicy  ModifyIntranetDomainPolicyRequest
+     * @return ModifyIntranetDomainPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyIntranetDomainPolicyResponse> modifyIntranetDomainPolicy(ModifyIntranetDomainPolicyRequest request) {
         try {
@@ -2579,9 +3525,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   This operation allows you to modify only the name and description of an ACL. You cannot modify the type of the ACL.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation allows you to modify only the name and description of an ACL. You cannot modify the type of the ACL.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyIpControl  ModifyIpControlRequest
+     * @return ModifyIpControlResponse
      */
     @Override
     public CompletableFuture<ModifyIpControlResponse> modifyIpControl(ModifyIpControlRequest request) {
@@ -2598,10 +3549,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   The modification immediately takes effect on all the APIs that are bound to the policy.
-      * *   This operation causes a full modification of the content of a policy.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The modification immediately takes effect on all the APIs that are bound to the policy.</li>
+     * <li>This operation causes a full modification of the content of a policy.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyIpControlPolicyItem  ModifyIpControlPolicyItemRequest
+     * @return ModifyIpControlPolicyItemResponse
      */
     @Override
     public CompletableFuture<ModifyIpControlPolicyItemResponse> modifyIpControlPolicyItem(ModifyIpControlPolicyItemRequest request) {
@@ -2617,6 +3573,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyLogConfig  ModifyLogConfigRequest
+     * @return ModifyLogConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyLogConfigResponse> modifyLogConfig(ModifyLogConfigRequest request) {
         try {
@@ -2631,6 +3591,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyModel  ModifyModelRequest
+     * @return ModifyModelResponse
+     */
     @Override
     public CompletableFuture<ModifyModelResponse> modifyModel(ModifyModelRequest request) {
         try {
@@ -2646,9 +3610,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   The name of the plug-in must be unique.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The name of the plug-in must be unique.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyPlugin  ModifyPluginRequest
+     * @return ModifyPluginResponse
      */
     @Override
     public CompletableFuture<ModifyPluginResponse> modifyPlugin(ModifyPluginRequest request) {
@@ -2665,11 +3634,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   This API operation modifies the name, Key value, and Secret value of an existing signature key.
-      * *   Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API operation modifies the name, Key value, and Secret value of an existing signature key.</li>
+     * <li>Note that the modification takes effect immediately. If the key has been bound to an API, you must adjust the backend signature verification based on the new key accordingly.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifySignature  ModifySignatureRequest
+     * @return ModifySignatureResponse
      */
     @Override
     public CompletableFuture<ModifySignatureResponse> modifySignature(ModifySignatureRequest request) {
@@ -2686,10 +3660,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   The modifications take effect on the bound APIs instantly.
-      * *   The QPS limit on this operation is 50 per user.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The modifications take effect on the bound APIs instantly.</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifyTrafficControl  ModifyTrafficControlRequest
+     * @return ModifyTrafficControlResponse
      */
     @Override
     public CompletableFuture<ModifyTrafficControlResponse> modifyTrafficControl(ModifyTrafficControlRequest request) {
@@ -2705,6 +3684,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyVpcAccessAndUpdateApis  ModifyVpcAccessAndUpdateApisRequest
+     * @return ModifyVpcAccessAndUpdateApisResponse
+     */
     @Override
     public CompletableFuture<ModifyVpcAccessAndUpdateApisResponse> modifyVpcAccessAndUpdateApis(ModifyVpcAccessAndUpdateApisRequest request) {
         try {
@@ -2719,6 +3702,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenApiGatewayService  OpenApiGatewayServiceRequest
+     * @return OpenApiGatewayServiceResponse
+     */
     @Override
     public CompletableFuture<OpenApiGatewayServiceResponse> openApiGatewayService(OpenApiGatewayServiceRequest request) {
         try {
@@ -2733,6 +3720,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRequestLogs  QueryRequestLogsRequest
+     * @return QueryRequestLogsResponse
+     */
     @Override
     public CompletableFuture<QueryRequestLogsResponse> queryRequestLogs(QueryRequestLogsRequest request) {
         try {
@@ -2748,11 +3739,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-      * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
-      * *   You can call this operation to reactivate the domain name to resume normal access.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.</li>
+     * <li>A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to call APIs.</li>
+     * <li>You can call this operation to reactivate the domain name to resume normal access.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ReactivateDomain  ReactivateDomainRequest
+     * @return ReactivateDomainResponse
      */
     @Override
     public CompletableFuture<ReactivateDomainResponse> reactivateDomain(ReactivateDomainRequest request) {
@@ -2768,6 +3764,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveAccessControlListEntry  RemoveAccessControlListEntryRequest
+     * @return RemoveAccessControlListEntryResponse
+     */
     @Override
     public CompletableFuture<RemoveAccessControlListEntryResponse> removeAccessControlListEntry(RemoveAccessControlListEntryRequest request) {
         try {
@@ -2782,6 +3782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveApiProductsAuthorities  RemoveApiProductsAuthoritiesRequest
+     * @return RemoveApiProductsAuthoritiesResponse
+     */
     @Override
     public CompletableFuture<RemoveApiProductsAuthoritiesResponse> removeApiProductsAuthorities(RemoveApiProductsAuthoritiesRequest request) {
         try {
@@ -2797,9 +3801,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers and callers.
-      * *   Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveApisAuthorities  RemoveApisAuthoritiesRequest
+     * @return RemoveApisAuthoritiesResponse
      */
     @Override
     public CompletableFuture<RemoveApisAuthoritiesResponse> removeApisAuthorities(RemoveApisAuthoritiesRequest request) {
@@ -2816,9 +3825,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers and callers.
-      * *   Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>Before you revoke access permissions, check by whom the permissions were granted. API providers can only revoke permissions granted by a Provider, and API callers can only revoke permissions granted by a Consumer.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveAppsAuthorities  RemoveAppsAuthoritiesRequest
+     * @return RemoveAppsAuthoritiesResponse
      */
     @Override
     public CompletableFuture<RemoveAppsAuthoritiesResponse> removeAppsAuthorities(RemoveAppsAuthoritiesRequest request) {
@@ -2835,9 +3849,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>The unbinding takes effect immediately. After the API is unbound from the ACL, the corresponding environment does not have any IP address access control in place for the API.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveIpControlApis  RemoveIpControlApisRequest
+     * @return RemoveIpControlApisResponse
      */
     @Override
     public CompletableFuture<RemoveIpControlApisResponse> removeIpControlApis(RemoveIpControlApisRequest request) {
@@ -2854,8 +3873,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * 
+     * @param request the request parameters of RemoveIpControlPolicyItem  RemoveIpControlPolicyItemRequest
+     * @return RemoveIpControlPolicyItemResponse
      */
     @Override
     public CompletableFuture<RemoveIpControlPolicyItemResponse> removeIpControlPolicyItem(RemoveIpControlPolicyItemRequest request) {
@@ -2872,9 +3894,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveSignatureApis  RemoveSignatureApisRequest
+     * @return RemoveSignatureApisResponse
      */
     @Override
     public CompletableFuture<RemoveSignatureApisResponse> removeSignatureApis(RemoveSignatureApisRequest request) {
@@ -2891,9 +3918,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API allows you to unbind a specified throttling policy from up to 100 APIs at a time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveTrafficControlApis  RemoveTrafficControlApisRequest
+     * @return RemoveTrafficControlApisResponse
      */
     @Override
     public CompletableFuture<RemoveTrafficControlApisResponse> removeTrafficControlApis(RemoveTrafficControlApisRequest request) {
@@ -2910,10 +3942,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   Revokes the permissions of API Gateway to access your VPC instance.
-      * >  Deleting an authorization affects the associated API. Before you delete the authorization, make sure that it is not used by the API.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>Revokes the permissions of API Gateway to access your VPC instance.<blockquote>
+     * <p> Deleting an authorization affects the associated API. Before you delete the authorization, make sure that it is not used by the API.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveVpcAccess  RemoveVpcAccessRequest
+     * @return RemoveVpcAccessResponse
      */
     @Override
     public CompletableFuture<RemoveVpcAccessResponse> removeVpcAccess(RemoveVpcAccessRequest request) {
@@ -2929,6 +3968,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveVpcAccessAndAbolishApis  RemoveVpcAccessAndAbolishApisRequest
+     * @return RemoveVpcAccessAndAbolishApisResponse
+     */
     @Override
     public CompletableFuture<RemoveVpcAccessAndAbolishApisResponse> removeVpcAccessAndAbolishApis(RemoveVpcAccessAndAbolishApisRequest request) {
         try {
@@ -2943,6 +3986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetAppCode  ResetAppCodeRequest
+     * @return ResetAppCodeResponse
+     */
     @Override
     public CompletableFuture<ResetAppCodeResponse> resetAppCode(ResetAppCodeRequest request) {
         try {
@@ -2958,10 +4005,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   A new secret is automatically generated after you have called this operation. This secret cannot be customized.
-      * *   The results returned by this operation do not contain the application secret. You can obtain the secret by calling DescribeAppSecurity.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>A new secret is automatically generated after you have called this operation. This secret cannot be customized.</li>
+     * <li>The results returned by this operation do not contain the application secret. You can obtain the secret by calling DescribeAppSecurity.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ResetAppSecret  ResetAppSecretRequest
+     * @return ResetAppSecretResponse
      */
     @Override
     public CompletableFuture<ResetAppSecretResponse> resetAppSecret(ResetAppSecretRequest request) {
@@ -2977,6 +4029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SdkGenerateByApp  SdkGenerateByAppRequest
+     * @return SdkGenerateByAppResponse
+     */
     @Override
     public CompletableFuture<SdkGenerateByAppResponse> sdkGenerateByApp(SdkGenerateByAppRequest request) {
         try {
@@ -2991,6 +4047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SdkGenerateByAppForRegion  SdkGenerateByAppForRegionRequest
+     * @return SdkGenerateByAppForRegionResponse
+     */
     @Override
     public CompletableFuture<SdkGenerateByAppForRegionResponse> sdkGenerateByAppForRegion(SdkGenerateByAppForRegionRequest request) {
         try {
@@ -3005,6 +4065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SdkGenerateByGroup  SdkGenerateByGroupRequest
+     * @return SdkGenerateByGroupResponse
+     */
     @Override
     public CompletableFuture<SdkGenerateByGroupResponse> sdkGenerateByGroup(SdkGenerateByGroupRequest request) {
         try {
@@ -3019,6 +4083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetAccessControlListAttribute  SetAccessControlListAttributeRequest
+     * @return SetAccessControlListAttributeResponse
+     */
     @Override
     public CompletableFuture<SetAccessControlListAttributeResponse> setAccessControlListAttribute(SetAccessControlListAttributeRequest request) {
         try {
@@ -3033,6 +4101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetApiProductsAuthorities  SetApiProductsAuthoritiesRequest
+     * @return SetApiProductsAuthoritiesResponse
+     */
     @Override
     public CompletableFuture<SetApiProductsAuthoritiesResponse> setApiProductsAuthorities(SetApiProductsAuthoritiesRequest request) {
         try {
@@ -3048,10 +4120,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers and callers.
-      * *   API providers can authorize any apps to call their APIs.
-      * *   API callers can authorize their own apps to call the APIs that they have purchased.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>API providers can authorize all applications to call their APIs.</li>
+     * <li>API callers can authorize their own applications to call the APIs that they have purchased.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetApisAuthorities  SetApisAuthoritiesRequest
+     * @return SetApisAuthoritiesResponse
      */
     @Override
     public CompletableFuture<SetApisAuthoritiesResponse> setApisAuthorities(SetApisAuthoritiesRequest request) {
@@ -3067,6 +4144,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetAppsAuthToApiProduct  SetAppsAuthToApiProductRequest
+     * @return SetAppsAuthToApiProductResponse
+     */
     @Override
     public CompletableFuture<SetAppsAuthToApiProductResponse> setAppsAuthToApiProduct(SetAppsAuthToApiProductRequest request) {
         try {
@@ -3082,10 +4163,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers and callers.
-      * *   API providers can authorize any apps to call their APIs.
-      * *   API callers can authorize their own apps to call the APIs that they have purchased.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers and callers.</p>
+     * <ul>
+     * <li>API providers can authorize all applications to call their APIs.</li>
+     * <li>API callers can authorize their own applications to call the APIs that they have purchased.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetAppsAuthorities  SetAppsAuthoritiesRequest
+     * @return SetAppsAuthoritiesResponse
      */
     @Override
     public CompletableFuture<SetAppsAuthoritiesResponse> setAppsAuthorities(SetAppsAuthoritiesRequest request) {
@@ -3101,6 +4187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDomain  SetDomainRequest
+     * @return SetDomainResponse
+     */
     @Override
     public CompletableFuture<SetDomainResponse> setDomain(SetDomainRequest request) {
         try {
@@ -3116,10 +4206,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API providers.
-      * *   The SSL certificate must match the custom domain name.
-      * *   After the SSL certificate is bound, HTTPS-based API services become available.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API providers.</p>
+     * <ul>
+     * <li>The SSL certificate must match the custom domain name.</li>
+     * <li>After the SSL certificate is bound, HTTPS-based API services become available.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetDomainCertificate  SetDomainCertificateRequest
+     * @return SetDomainCertificateResponse
      */
     @Override
     public CompletableFuture<SetDomainCertificateResponse> setDomainCertificate(SetDomainCertificateRequest request) {
@@ -3135,6 +4230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDomainWebSocketStatus  SetDomainWebSocketStatusRequest
+     * @return SetDomainWebSocketStatusResponse
+     */
     @Override
     public CompletableFuture<SetDomainWebSocketStatusResponse> setDomainWebSocketStatus(SetDomainWebSocketStatusRequest request) {
         try {
@@ -3149,6 +4248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetGroupAuthAppCode  SetGroupAuthAppCodeRequest
+     * @return SetGroupAuthAppCodeResponse
+     */
     @Override
     public CompletableFuture<SetGroupAuthAppCodeResponse> setGroupAuthAppCode(SetGroupAuthAppCodeRequest request) {
         try {
@@ -3164,9 +4267,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
-      * *   A maximum of 100 APIs can be bound at a time.
-      *
+     * <b>description</b> :
+     * <p>  This operation is intended for API callers.</p>
+     * <ul>
+     * <li>A maximum of 100 APIs can be bound at a time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetIpControlApis  SetIpControlApisRequest
+     * @return SetIpControlApisResponse
      */
     @Override
     public CompletableFuture<SetIpControlApisResponse> setIpControlApis(SetIpControlApisRequest request) {
@@ -3183,9 +4291,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   This operation allows you to bind a signature key to an API. You can bind signature keys for up to 100 APIs at a time.
-      *
+     * @param request the request parameters of SetSignatureApis  SetSignatureApisRequest
+     * @return SetSignatureApisResponse
      */
     @Override
     public CompletableFuture<SetSignatureApisResponse> setSignatureApis(SetSignatureApisRequest request) {
@@ -3202,9 +4309,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   This API allows you to bind a specific throttling policy to up to 100 APIs at a time.
-      *
+     * <b>description</b> :
+     * <p>  This API is intended for API providers.</p>
+     * <ul>
+     * <li>This API allows you to bind a specific throttling policy to up to 100 APIs at a time.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetTrafficControlApis  SetTrafficControlApisRequest
+     * @return SetTrafficControlApisResponse
      */
     @Override
     public CompletableFuture<SetTrafficControlApisResponse> setTrafficControlApis(SetTrafficControlApisRequest request) {
@@ -3220,6 +4332,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This operation is intended for API providers.</p>
+     * <ul>
+     * <li>This operation is used to authorize API Gateway to access your VPC instance.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SetVpcAccess  SetVpcAccessRequest
+     * @return SetVpcAccessResponse
+     */
     @Override
     public CompletableFuture<SetVpcAccessResponse> setVpcAccess(SetVpcAccessRequest request) {
         try {
@@ -3234,6 +4356,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetWildcardDomainPatterns  SetWildcardDomainPatternsRequest
+     * @return SetWildcardDomainPatternsResponse
+     */
     @Override
     public CompletableFuture<SetWildcardDomainPatternsResponse> setWildcardDomainPatterns(SetWildcardDomainPatternsRequest request) {
         try {
@@ -3249,12 +4375,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-      * *   Only APIs that have been published more than once have historical versions.
-      * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-      * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
-      *
+     * @param request the request parameters of SwitchApi  SwitchApiRequest
+     * @return SwitchApiResponse
      */
     @Override
     public CompletableFuture<SwitchApiResponse> switchApi(SwitchApiRequest request) {
@@ -3271,12 +4393,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   All tags (key-value pairs) are applied to all resources of a specified ResourceId, with each resource specified as ResourceId.N.
-      * *   Tag.N is a resource tag consisting of a key-value pair: Tag.N.Key and Tag.N.Value.
-      * *   If you call this operation to tag multiple resources simultaneously, either all or none of the resources will be tagged.
-      * *   If you specify Tag.1.Value in addition to required parameters, you must also specify Tag.1.Key. Otherwise, an InvalidParameter.TagKey error is reported. A tag that has a value must have the corresponding key, but the key can be an empty string.
-      * *   If a tag with the same key has been bound to a resource, the new tag will overwrite the existing one.
-      *
+     * <b>description</b> :
+     * <p>  All tags (key-value pairs) are applied to all resources of a specified ResourceId, with each resource specified as ResourceId.N.</p>
+     * <ul>
+     * <li>Tag.N is a resource tag consisting of a key-value pair: Tag.N.Key and Tag.N.Value.</li>
+     * <li>If you call this operation to tag multiple resources simultaneously, either all or none of the resources will be tagged.</li>
+     * <li>If you specify Tag.1.Value in addition to required parameters, you must also specify Tag.1.Key. Otherwise, an InvalidParameter.TagKey error is reported. A tag that has a value must have the corresponding key, but the key can be an empty string.</li>
+     * <li>If a tag with the same key has been bound to a resource, the new tag will overwrite the existing one.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
      */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
@@ -3293,12 +4420,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you call this operation to untag multiple resources simultaneously, either all or none of the resources will be untagged.
-      * *   If you specify resource IDs without specifying tag keys and set the All parameter to true, all tags bound to the specified resources will be deleted. If a resource does not have any tags, the request is not processed but a success is returned.
-      * *   If you specify resource IDs without specifying tag keys and set the All parameter to false, the request is not processed but a success is returned.
-      * *   When tag keys are specified, the All parameter is invalid.
-      * *   When multiple resources and key-value pairs are specified, the specified tags bound to the resources are deleted.
-      *
+     * <b>description</b> :
+     * <p>  If you call this operation to untag multiple resources simultaneously, either all or none of the resources will be untagged.</p>
+     * <ul>
+     * <li>If you specify resource IDs without specifying tag keys and set the All parameter to true, all tags bound to the specified resources will be deleted. If a resource does not have any tags, the request is not processed but a success is returned.</li>
+     * <li>If you specify resource IDs without specifying tag keys and set the All parameter to false, the request is not processed but a success is returned.</li>
+     * <li>When tag keys are specified, the All parameter is invalid.</li>
+     * <li>When multiple resources and key-value pairs are specified, the specified tags bound to the resources are deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
      */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
@@ -3314,6 +4446,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePrivateDNS  UpdatePrivateDNSRequest
+     * @return UpdatePrivateDNSResponse
+     */
+    @Override
+    public CompletableFuture<UpdatePrivateDNSResponse> updatePrivateDNS(UpdatePrivateDNSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdatePrivateDNS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdatePrivateDNSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdatePrivateDNSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ValidateVpcConnectivity  ValidateVpcConnectivityRequest
+     * @return ValidateVpcConnectivityResponse
+     */
     @Override
     public CompletableFuture<ValidateVpcConnectivityResponse> validateVpcConnectivity(ValidateVpcConnectivityRequest request) {
         try {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendTTSVerifyLinkResponseBody} extends {@link TeaModel}
  *
  * <p>SendTTSVerifyLinkResponseBody</p>
  */
 public class SendTTSVerifyLinkResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SendTTSVerifyLinkResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class SendTTSVerifyLinkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the text message was sent.
-         * <p>
+         * <p>Indicates whether the text message was sent.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -62,7 +70,10 @@ public class SendTTSVerifyLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

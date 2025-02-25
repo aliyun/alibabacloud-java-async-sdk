@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListSessionGroupResponseBody</p>
  */
 public class ListSessionGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("LastDataId")
+    @com.aliyun.core.annotation.NameInMap("LastDataId")
     private String lastDataId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Messages")
+    @com.aliyun.core.annotation.NameInMap("Messages")
     private Messages messages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCountId")
+    @com.aliyun.core.annotation.NameInMap("ResultCountId")
     private String resultCountId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSessionGroupResponseBody(Builder builder) {
@@ -291,9 +296,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CallerList extends TeaModel {
-        @NameInMap("CallerList")
-        private java.util.List < String > callerList;
+        @com.aliyun.core.annotation.NameInMap("CallerList")
+        private java.util.List<String> callerList;
 
         private CallerList(Builder builder) {
             this.callerList = builder.callerList;
@@ -310,17 +321,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return callerList
          */
-        public java.util.List < String > getCallerList() {
+        public java.util.List<String> getCallerList() {
             return this.callerList;
         }
 
         public static final class Builder {
-            private java.util.List < String > callerList; 
+            private java.util.List<String> callerList; 
 
             /**
              * CallerList.
              */
-            public Builder callerList(java.util.List < String > callerList) {
+            public Builder callerList(java.util.List<String> callerList) {
                 this.callerList = callerList;
                 return this;
             }
@@ -332,9 +343,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerIdList extends TeaModel {
-        @NameInMap("CustomerIdList")
-        private java.util.List < String > customerIdList;
+        @com.aliyun.core.annotation.NameInMap("CustomerIdList")
+        private java.util.List<String> customerIdList;
 
         private CustomerIdList(Builder builder) {
             this.customerIdList = builder.customerIdList;
@@ -351,17 +368,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return customerIdList
          */
-        public java.util.List < String > getCustomerIdList() {
+        public java.util.List<String> getCustomerIdList() {
             return this.customerIdList;
         }
 
         public static final class Builder {
-            private java.util.List < String > customerIdList; 
+            private java.util.List<String> customerIdList; 
 
             /**
              * CustomerIdList.
              */
-            public Builder customerIdList(java.util.List < String > customerIdList) {
+            public Builder customerIdList(java.util.List<String> customerIdList) {
                 this.customerIdList = customerIdList;
                 return this;
             }
@@ -373,9 +390,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerNameList extends TeaModel {
-        @NameInMap("CustomerNameList")
-        private java.util.List < String > customerNameList;
+        @com.aliyun.core.annotation.NameInMap("CustomerNameList")
+        private java.util.List<String> customerNameList;
 
         private CustomerNameList(Builder builder) {
             this.customerNameList = builder.customerNameList;
@@ -392,17 +415,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return customerNameList
          */
-        public java.util.List < String > getCustomerNameList() {
+        public java.util.List<String> getCustomerNameList() {
             return this.customerNameList;
         }
 
         public static final class Builder {
-            private java.util.List < String > customerNameList; 
+            private java.util.List<String> customerNameList; 
 
             /**
              * CustomerNameList.
              */
-            public Builder customerNameList(java.util.List < String > customerNameList) {
+            public Builder customerNameList(java.util.List<String> customerNameList) {
                 this.customerNameList = customerNameList;
                 return this;
             }
@@ -414,9 +437,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerServiceIdList extends TeaModel {
-        @NameInMap("CustomerServiceIdList")
-        private java.util.List < String > customerServiceIdList;
+        @com.aliyun.core.annotation.NameInMap("CustomerServiceIdList")
+        private java.util.List<String> customerServiceIdList;
 
         private CustomerServiceIdList(Builder builder) {
             this.customerServiceIdList = builder.customerServiceIdList;
@@ -433,17 +462,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return customerServiceIdList
          */
-        public java.util.List < String > getCustomerServiceIdList() {
+        public java.util.List<String> getCustomerServiceIdList() {
             return this.customerServiceIdList;
         }
 
         public static final class Builder {
-            private java.util.List < String > customerServiceIdList; 
+            private java.util.List<String> customerServiceIdList; 
 
             /**
              * CustomerServiceIdList.
              */
-            public Builder customerServiceIdList(java.util.List < String > customerServiceIdList) {
+            public Builder customerServiceIdList(java.util.List<String> customerServiceIdList) {
                 this.customerServiceIdList = customerServiceIdList;
                 return this;
             }
@@ -455,9 +484,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class CustomerServiceNameList extends TeaModel {
-        @NameInMap("CustomerServiceNameList")
-        private java.util.List < String > customerServiceNameList;
+        @com.aliyun.core.annotation.NameInMap("CustomerServiceNameList")
+        private java.util.List<String> customerServiceNameList;
 
         private CustomerServiceNameList(Builder builder) {
             this.customerServiceNameList = builder.customerServiceNameList;
@@ -474,17 +509,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return customerServiceNameList
          */
-        public java.util.List < String > getCustomerServiceNameList() {
+        public java.util.List<String> getCustomerServiceNameList() {
             return this.customerServiceNameList;
         }
 
         public static final class Builder {
-            private java.util.List < String > customerServiceNameList; 
+            private java.util.List<String> customerServiceNameList; 
 
             /**
              * CustomerServiceNameList.
              */
-            public Builder customerServiceNameList(java.util.List < String > customerServiceNameList) {
+            public Builder customerServiceNameList(java.util.List<String> customerServiceNameList) {
                 this.customerServiceNameList = customerServiceNameList;
                 return this;
             }
@@ -496,9 +531,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class ReviewerList extends TeaModel {
-        @NameInMap("ReviewerList")
-        private java.util.List < String > reviewerList;
+        @com.aliyun.core.annotation.NameInMap("ReviewerList")
+        private java.util.List<String> reviewerList;
 
         private ReviewerList(Builder builder) {
             this.reviewerList = builder.reviewerList;
@@ -515,17 +556,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return reviewerList
          */
-        public java.util.List < String > getReviewerList() {
+        public java.util.List<String> getReviewerList() {
             return this.reviewerList;
         }
 
         public static final class Builder {
-            private java.util.List < String > reviewerList; 
+            private java.util.List<String> reviewerList; 
 
             /**
              * ReviewerList.
              */
-            public Builder reviewerList(java.util.List < String > reviewerList) {
+            public Builder reviewerList(java.util.List<String> reviewerList) {
                 this.reviewerList = reviewerList;
                 return this;
             }
@@ -537,9 +578,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class SkillGroupNameList extends TeaModel {
-        @NameInMap("SkillGroupNameList")
-        private java.util.List < String > skillGroupNameList;
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNameList")
+        private java.util.List<String> skillGroupNameList;
 
         private SkillGroupNameList(Builder builder) {
             this.skillGroupNameList = builder.skillGroupNameList;
@@ -556,17 +603,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return skillGroupNameList
          */
-        public java.util.List < String > getSkillGroupNameList() {
+        public java.util.List<String> getSkillGroupNameList() {
             return this.skillGroupNameList;
         }
 
         public static final class Builder {
-            private java.util.List < String > skillGroupNameList; 
+            private java.util.List<String> skillGroupNameList; 
 
             /**
              * SkillGroupNameList.
              */
-            public Builder skillGroupNameList(java.util.List < String > skillGroupNameList) {
+            public Builder skillGroupNameList(java.util.List<String> skillGroupNameList) {
                 this.skillGroupNameList = skillGroupNameList;
                 return this;
             }
@@ -578,59 +625,65 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class DataData extends TeaModel {
-        @NameInMap("AssignStatus")
+        @com.aliyun.core.annotation.NameInMap("AssignStatus")
         private Integer assignStatus;
 
-        @NameInMap("CallStartTime")
+        @com.aliyun.core.annotation.NameInMap("CallStartTime")
         private String callStartTime;
 
-        @NameInMap("CallerList")
+        @com.aliyun.core.annotation.NameInMap("CallerList")
         private CallerList callerList;
 
-        @NameInMap("CustomerIdList")
+        @com.aliyun.core.annotation.NameInMap("CustomerIdList")
         private CustomerIdList customerIdList;
 
-        @NameInMap("CustomerNameList")
+        @com.aliyun.core.annotation.NameInMap("CustomerNameList")
         private CustomerNameList customerNameList;
 
-        @NameInMap("CustomerServiceIdList")
+        @com.aliyun.core.annotation.NameInMap("CustomerServiceIdList")
         private CustomerServiceIdList customerServiceIdList;
 
-        @NameInMap("CustomerServiceNameList")
+        @com.aliyun.core.annotation.NameInMap("CustomerServiceNameList")
         private CustomerServiceNameList customerServiceNameList;
 
-        @NameInMap("HitSessionCount")
+        @com.aliyun.core.annotation.NameInMap("HitSessionCount")
         private Integer hitSessionCount;
 
-        @NameInMap("LastDataId")
+        @com.aliyun.core.annotation.NameInMap("LastDataId")
         private String lastDataId;
 
-        @NameInMap("ReviewStatus")
+        @com.aliyun.core.annotation.NameInMap("ReviewStatus")
         private Integer reviewStatus;
 
-        @NameInMap("ReviewerList")
+        @com.aliyun.core.annotation.NameInMap("ReviewerList")
         private ReviewerList reviewerList;
 
-        @NameInMap("SchemeTaskConfigId")
+        @com.aliyun.core.annotation.NameInMap("SchemeTaskConfigId")
         private Long schemeTaskConfigId;
 
-        @NameInMap("SchemeTaskConfigName")
+        @com.aliyun.core.annotation.NameInMap("SchemeTaskConfigName")
         private String schemeTaskConfigName;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Long score;
 
-        @NameInMap("SessionCount")
+        @com.aliyun.core.annotation.NameInMap("SessionCount")
         private Integer sessionCount;
 
-        @NameInMap("SessionGroupId")
+        @com.aliyun.core.annotation.NameInMap("SessionGroupId")
         private String sessionGroupId;
 
-        @NameInMap("SessionGroupReviewedOrComplained")
+        @com.aliyun.core.annotation.NameInMap("SessionGroupReviewedOrComplained")
         private Boolean sessionGroupReviewedOrComplained;
 
-        @NameInMap("SkillGroupNameList")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNameList")
         private SkillGroupNameList skillGroupNameList;
 
         private DataData(Builder builder) {
@@ -959,9 +1012,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < DataData> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<DataData> data;
 
         private Data(Builder builder) {
             this.data = builder.data;
@@ -978,17 +1037,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < DataData> getData() {
+        public java.util.List<DataData> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < DataData> data; 
+            private java.util.List<DataData> data; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < DataData> data) {
+            public Builder data(java.util.List<DataData> data) {
                 this.data = data;
                 return this;
             }
@@ -1000,9 +1059,15 @@ public class ListSessionGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionGroupResponseBody</p>
+     */
     public static class Messages extends TeaModel {
-        @NameInMap("Message")
-        private java.util.List < String > message;
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private java.util.List<String> message;
 
         private Messages(Builder builder) {
             this.message = builder.message;
@@ -1019,17 +1084,17 @@ public class ListSessionGroupResponseBody extends TeaModel {
         /**
          * @return message
          */
-        public java.util.List < String > getMessage() {
+        public java.util.List<String> getMessage() {
             return this.message;
         }
 
         public static final class Builder {
-            private java.util.List < String > message; 
+            private java.util.List<String> message; 
 
             /**
              * Message.
              */
-            public Builder message(java.util.List < String > message) {
+            public Builder message(java.util.List<String> message) {
                 this.message = message;
                 return this;
             }

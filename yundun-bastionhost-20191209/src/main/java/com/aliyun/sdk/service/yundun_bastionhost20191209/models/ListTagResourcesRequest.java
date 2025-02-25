@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
  */
 public class ListTagResourcesRequest extends Request {
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -71,6 +76,13 @@ public class ListTagResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceId
      */
     public java.util.List < String > getResourceId() {
@@ -94,6 +106,7 @@ public class ListTagResourcesRequest extends Request {
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private String nextToken; 
         private String regionId; 
+        private String resourceGroupId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < Tag> tag; 
@@ -106,13 +119,17 @@ public class ListTagResourcesRequest extends Request {
             super(request);
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
         } 
 
         /**
-         * The region ID of the Bastionhost instance.
+         * <p>The token for starting the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EwFJmScBXFFC3nf.9Rq7HzA7APx7GWLbkZbjHrR6Pq39w</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +138,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The region ID of the Bastionhost instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +151,19 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The value of the tag.
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1gcxxxxx</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,10 +172,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **ListTagResources**.
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -151,10 +186,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The key of tag N.
-         * <p>
-         * 
-         * Valid values of N: 1 to 20.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -169,11 +201,17 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -208,7 +246,11 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the request.
+             * <p>The key of tag N.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -216,10 +258,11 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The type of the resource.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <p>Valid values of N: 1 to 20.</p>
              * 
-             * The returned value is INSTANCE, which indicates that the resource is a Bastionhost instance.
+             * <strong>example:</strong>
+             * <p>testapi</p>
              */
             public Builder value(String value) {
                 this.value = value;

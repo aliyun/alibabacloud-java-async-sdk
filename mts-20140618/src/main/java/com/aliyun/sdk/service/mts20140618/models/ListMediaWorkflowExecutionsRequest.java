@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMediaWorkflowExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListMediaWorkflowExecutionsRequest</p>
  */
 public class ListMediaWorkflowExecutionsRequest extends Request {
-    @Query
-    @NameInMap("InputFileURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputFileURL")
     private String inputFileURL;
 
-    @Query
-    @NameInMap("MaximumPageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumPageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maximumPageSize;
 
-    @Query
-    @NameInMap("MediaWorkflowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
     private String mediaWorkflowId;
 
-    @Query
-    @NameInMap("MediaWorkflowName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowName")
     private String mediaWorkflowName;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListMediaWorkflowExecutionsRequest(Builder builder) {
@@ -167,7 +167,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         } 
 
         /**
-         * InputFileURL.
+         * <p>The Object Storage Service (OSS) URL of the input file of the media workflow. The URL complies with RFC 3986 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-****.cn-hangzhou.aliyuncs.com/test****.flv">http://example-****.cn-hangzhou.aliyuncs.com/test****.flv</a></p>
          */
         public Builder inputFileURL(String inputFileURL) {
             this.putQueryParameter("InputFileURL", inputFileURL);
@@ -176,7 +179,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * MaximumPageSize.
+         * <p>The maximum number of media workflow execution instances to return. Valid values: <code>[1,100]</code>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -185,7 +191,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * MediaWorkflowId.
+         * <p>The ID of the media workflow whose execution instances you want to query. To obtain the workflow ID, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Workflows</strong> &gt; <strong>Workflow Settings</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43b7335a4b1d4fe883670036affb****</p>
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);
@@ -194,7 +203,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * MediaWorkflowName.
+         * <p>The name of the media workflow. To obtain the workflow name, you can log on to the <strong>MPS console</strong> and choose <strong>Workflows</strong> &gt; <strong>Workflow Settings</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-mediaworkflow-****</p>
          */
         public Builder mediaWorkflowName(String mediaWorkflowName) {
             this.putQueryParameter("MediaWorkflowName", mediaWorkflowName);
@@ -203,7 +215,10 @@ public class ListMediaWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. The value is a UUID that contains 32 characters. When you request the first page of query results, leave the NextPageToken parameter empty. When you request more query results, specify the value of the NextPageToken parameter returned in the query results on the previous page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39f8e0bc005e4f309379701645f4****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);

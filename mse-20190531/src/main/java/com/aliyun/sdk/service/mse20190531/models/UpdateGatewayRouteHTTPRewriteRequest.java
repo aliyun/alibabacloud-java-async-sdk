@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteHTTPRewriteRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteHTTPRewriteRequest</p>
  */
 public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("HttpRewriteJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpRewriteJSON")
     private String httpRewriteJSON;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
     private UpdateGatewayRouteHTTPRewriteRequest(Builder builder) {
@@ -110,11 +115,14 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +131,10 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>430</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -132,7 +143,10 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-90392d768a3847a7b804c505254da96d</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -141,7 +155,10 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * The information about the rewrite policy. The JSON format is supported.
+         * <p>The information about the rewrite policy. The JSON format is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pathType&quot;:&quot;PRE&quot;,&quot;path&quot;:&quot;/&quot;,&quot;status&quot;:&quot;off&quot;}</p>
          */
         public Builder httpRewriteJSON(String httpRewriteJSON) {
             this.putQueryParameter("HttpRewriteJSON", httpRewriteJSON);
@@ -150,7 +167,10 @@ public class UpdateGatewayRouteHTTPRewriteRequest extends Request {
         }
 
         /**
-         * The ID of the route.
+         * <p>The ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>238</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

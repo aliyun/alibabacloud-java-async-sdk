@@ -1,49 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouteTableAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyRouteTableAttributesRequest</p>
  */
 public class ModifyRouteTableAttributesRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutePropagationEnable")
+    private Boolean routePropagationEnable;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
-    @Query
-    @NameInMap("RouteTableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableName")
     private String routeTableName;
 
     private ModifyRouteTableAttributesRequest(Builder builder) {
@@ -54,6 +63,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.routePropagationEnable = builder.routePropagationEnable;
         this.routeTableId = builder.routeTableId;
         this.routeTableName = builder.routeTableName;
     }
@@ -114,6 +124,13 @@ public class ModifyRouteTableAttributesRequest extends Request {
     }
 
     /**
+     * @return routePropagationEnable
+     */
+    public Boolean getRoutePropagationEnable() {
+        return this.routePropagationEnable;
+    }
+
+    /**
      * @return routeTableId
      */
     public String getRouteTableId() {
@@ -134,6 +151,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean routePropagationEnable; 
         private String routeTableId; 
         private String routeTableName; 
 
@@ -149,15 +167,17 @@ public class ModifyRouteTableAttributesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.routePropagationEnable = request.routePropagationEnable;
             this.routeTableId = request.routeTableId;
             this.routeTableName = request.routeTableName;
         } 
 
         /**
-         * The description of the route table.
-         * <p>
+         * <p>The description of the route table.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -184,10 +204,12 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC) to which the custom route table belongs.
-         * <p>
+         * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -214,7 +236,29 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the route table.
+         * <p>Indicates whether to enable route propagation to receive dynamic routes. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): enables route propagation.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables route propagation.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder routePropagationEnable(Boolean routePropagationEnable) {
+            this.putQueryParameter("RoutePropagationEnable", routePropagationEnable);
+            this.routePropagationEnable = routePropagationEnable;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the route table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -223,10 +267,11 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * The name of the route table.
-         * <p>
+         * <p>The name of the route table.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);

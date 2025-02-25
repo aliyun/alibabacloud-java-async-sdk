@@ -1,38 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTTSConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTTSConfigResponseBody</p>
  */
 public class DescribeTTSConfigResponseBody extends TeaModel {
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.NameInMap("AliCustomizedVoice")
+    private String aliCustomizedVoice;
+
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @NameInMap("NlsServiceType")
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.NameInMap("EngineXunfei")
+    private String engineXunfei;
+
+    @com.aliyun.core.annotation.NameInMap("NlsServiceType")
     private String nlsServiceType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("PitchRate")
+    private Integer pitchRate;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpeechRate")
+    @com.aliyun.core.annotation.NameInMap("SpeechRate")
     private Integer speechRate;
 
-    @NameInMap("Voice")
+    @com.aliyun.core.annotation.NameInMap("Voice")
     private String voice;
 
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private Integer volume;
 
     private DescribeTTSConfigResponseBody(Builder builder) {
+        this.aliCustomizedVoice = builder.aliCustomizedVoice;
         this.appKey = builder.appKey;
+        this.engine = builder.engine;
+        this.engineXunfei = builder.engineXunfei;
         this.nlsServiceType = builder.nlsServiceType;
+        this.pitchRate = builder.pitchRate;
         this.requestId = builder.requestId;
         this.speechRate = builder.speechRate;
         this.voice = builder.voice;
@@ -48,6 +69,13 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return aliCustomizedVoice
+     */
+    public String getAliCustomizedVoice() {
+        return this.aliCustomizedVoice;
+    }
+
+    /**
      * @return appKey
      */
     public String getAppKey() {
@@ -55,10 +83,31 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * @return engineXunfei
+     */
+    public String getEngineXunfei() {
+        return this.engineXunfei;
+    }
+
+    /**
      * @return nlsServiceType
      */
     public String getNlsServiceType() {
         return this.nlsServiceType;
+    }
+
+    /**
+     * @return pitchRate
+     */
+    public Integer getPitchRate() {
+        return this.pitchRate;
     }
 
     /**
@@ -90,12 +139,24 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String aliCustomizedVoice; 
         private String appKey; 
+        private String engine; 
+        private String engineXunfei; 
         private String nlsServiceType; 
+        private Integer pitchRate; 
         private String requestId; 
         private Integer speechRate; 
         private String voice; 
         private Integer volume; 
+
+        /**
+         * AliCustomizedVoice.
+         */
+        public Builder aliCustomizedVoice(String aliCustomizedVoice) {
+            this.aliCustomizedVoice = aliCustomizedVoice;
+            return this;
+        }
 
         /**
          * AppKey.
@@ -106,10 +167,34 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+
+        /**
+         * EngineXunfei.
+         */
+        public Builder engineXunfei(String engineXunfei) {
+            this.engineXunfei = engineXunfei;
+            return this;
+        }
+
+        /**
          * NlsServiceType.
          */
         public Builder nlsServiceType(String nlsServiceType) {
             this.nlsServiceType = nlsServiceType;
+            return this;
+        }
+
+        /**
+         * PitchRate.
+         */
+        public Builder pitchRate(Integer pitchRate) {
+            this.pitchRate = pitchRate;
             return this;
         }
 

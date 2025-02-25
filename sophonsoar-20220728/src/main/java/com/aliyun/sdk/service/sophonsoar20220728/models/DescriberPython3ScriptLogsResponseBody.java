@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescriberPython3ScriptLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescriberPython3ScriptLogsResponseBody</p>
  */
 public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunResult")
+    @com.aliyun.core.annotation.NameInMap("RunResult")
     private String runResult;
 
     private DescriberPython3ScriptLogsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
         private String runResult; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D22D8A0C-6E86-57B2-A142-929184122AB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,16 @@ public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RunResult.
+         * <p>The operational logs of the Python3 script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;logs&quot;: [
+         *         {
+         *             &quot;message&quot;: &quot;function input is {}&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder runResult(String runResult) {
             this.runResult = runResult;

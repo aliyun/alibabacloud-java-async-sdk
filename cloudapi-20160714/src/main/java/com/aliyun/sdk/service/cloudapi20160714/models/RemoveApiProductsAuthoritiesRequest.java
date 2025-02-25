@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveApiProductsAuthoritiesRequest} extends {@link RequestModel}
  *
  * <p>RemoveApiProductsAuthoritiesRequest</p>
  */
 public class RemoveApiProductsAuthoritiesRequest extends Request {
-    @Query
-    @NameInMap("ApiProductIds")
-    @Validation(required = true)
-    private java.util.List < String > apiProductIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiProductIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> apiProductIds;
 
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private RemoveApiProductsAuthoritiesRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class RemoveApiProductsAuthoritiesRequest extends Request {
     /**
      * @return apiProductIds
      */
-    public java.util.List < String > getApiProductIds() {
+    public java.util.List<String> getApiProductIds() {
         return this.apiProductIds;
     }
 
@@ -68,7 +73,7 @@ public class RemoveApiProductsAuthoritiesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveApiProductsAuthoritiesRequest, Builder> {
-        private java.util.List < String > apiProductIds; 
+        private java.util.List<String> apiProductIds; 
         private Long appId; 
         private String securityToken; 
 
@@ -84,9 +89,10 @@ public class RemoveApiProductsAuthoritiesRequest extends Request {
         } 
 
         /**
-         * The API products.
+         * <p>The API products.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder apiProductIds(java.util.List < String > apiProductIds) {
+        public Builder apiProductIds(java.util.List<String> apiProductIds) {
             String apiProductIdsShrink = shrink(apiProductIds, "ApiProductIds", "simple");
             this.putQueryParameter("ApiProductIds", apiProductIdsShrink);
             this.apiProductIds = apiProductIds;
@@ -94,7 +100,11 @@ public class RemoveApiProductsAuthoritiesRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110982490</p>
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);

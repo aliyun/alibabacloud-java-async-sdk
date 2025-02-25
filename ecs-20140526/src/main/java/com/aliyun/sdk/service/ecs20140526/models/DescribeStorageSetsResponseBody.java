@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageSetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStorageSetsResponseBody</p>
  */
 public class DescribeStorageSetsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StorageSets")
+    @com.aliyun.core.annotation.NameInMap("StorageSets")
     private StorageSets storageSets;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeStorageSetsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.
+         * <p>Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.</p>
          */
         public Builder storageSets(StorageSets storageSets) {
             this.storageSets = storageSets;
@@ -118,7 +132,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of storage sets.
+         * <p>The total number of storage sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageSetsResponseBody</p>
+     */
     public static class StorageSet extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StorageSetId")
+        @com.aliyun.core.annotation.NameInMap("StorageSetId")
         private String storageSetId;
 
-        @NameInMap("StorageSetName")
+        @com.aliyun.core.annotation.NameInMap("StorageSetName")
         private String storageSetName;
 
-        @NameInMap("StorageSetPartitionNumber")
+        @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
         private Integer storageSetPartitionNumber;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private StorageSet(Builder builder) {
@@ -230,7 +253,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The time when the storage set was created.
+             * <p>The time when the storage set was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-01T00:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +264,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the storage set.
+             * <p>The description of the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +275,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the storage set belongs.
+             * <p>The ID of the region to which the storage set belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,7 +286,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the storage set.
+             * <p>The ID of the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss-bp1d6tsvznfghy7y****</p>
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -262,7 +297,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the storage set.
+             * <p>The name of the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testStorageSetName</p>
              */
             public Builder storageSetName(String storageSetName) {
                 this.storageSetName = storageSetName;
@@ -270,7 +308,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of partitions supported by the storage set.
+             * <p>The maximum number of partitions supported by the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -278,7 +319,10 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone to which the storage set belongs.
+             * <p>The ID of the zone to which the storage set belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -292,9 +336,15 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStorageSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageSetsResponseBody</p>
+     */
     public static class StorageSets extends TeaModel {
-        @NameInMap("StorageSet")
-        private java.util.List < StorageSet> storageSet;
+        @com.aliyun.core.annotation.NameInMap("StorageSet")
+        private java.util.List<StorageSet> storageSet;
 
         private StorageSets(Builder builder) {
             this.storageSet = builder.storageSet;
@@ -311,17 +361,17 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         /**
          * @return storageSet
          */
-        public java.util.List < StorageSet> getStorageSet() {
+        public java.util.List<StorageSet> getStorageSet() {
             return this.storageSet;
         }
 
         public static final class Builder {
-            private java.util.List < StorageSet> storageSet; 
+            private java.util.List<StorageSet> storageSet; 
 
             /**
              * StorageSet.
              */
-            public Builder storageSet(java.util.List < StorageSet> storageSet) {
+            public Builder storageSet(java.util.List<StorageSet> storageSet) {
                 this.storageSet = storageSet;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetAppliedConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppliedConfigsResponseBody</p>
  */
 public class GetAppliedConfigsResponseBody extends TeaModel {
-    @NameInMap("configs")
-    private java.util.List < String > configs;
+    @com.aliyun.core.annotation.NameInMap("configs")
+    private java.util.List<String> configs;
 
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
     private GetAppliedConfigsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetAppliedConfigsResponseBody extends TeaModel {
     /**
      * @return configs
      */
-    public java.util.List < String > getConfigs() {
+    public java.util.List<String> getConfigs() {
         return this.configs;
     }
 
@@ -46,19 +51,22 @@ public class GetAppliedConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > configs; 
+        private java.util.List<String> configs; 
         private Integer count; 
 
         /**
-         * The names of the Logtail configurations.
+         * <p>The names of the Logtail configurations.</p>
          */
-        public Builder configs(java.util.List < String > configs) {
+        public Builder configs(java.util.List<String> configs) {
             this.configs = configs;
             return this;
         }
 
         /**
-         * The number of Logtail configurations.
+         * <p>The number of Logtail configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditRoutineConfResponseBody} extends {@link TeaModel}
  *
  * <p>EditRoutineConfResponseBody</p>
  */
 public class EditRoutineConfResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map < String, ? > content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EditRoutineConfResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class EditRoutineConfResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The description of the execution errors and the version number of the latest environment configurations.
+         * <p>The description of the execution errors and the version number of the latest environment configurations.</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class EditRoutineConfResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAECB354-6D42-42C1-87DA-C9992EF1E7C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

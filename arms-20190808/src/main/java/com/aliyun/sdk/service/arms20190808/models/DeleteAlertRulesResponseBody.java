@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlertRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAlertRulesResponseBody</p>
  */
 public class DeleteAlertRulesResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
+    @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAlertRulesResponseBody(Builder builder) {
@@ -50,7 +55,14 @@ public class DeleteAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the alert rule was deleted.</p>
+         * <ul>
+         * <li><code>true</code>: The alert rule was deleted.</li>
+         * <li><code>false</code>: The alert rule failed to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +70,10 @@ public class DeleteAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

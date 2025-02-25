@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddUserToGroup  AddUserToGroupRequest
+     * @return AddUserToGroupResponse
+     */
     @Override
     public CompletableFuture<AddUserToGroupResponse> addUserToGroup(AddUserToGroupRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachPolicyToGroup  AttachPolicyToGroupRequest
+     * @return AttachPolicyToGroupResponse
+     */
     @Override
     public CompletableFuture<AttachPolicyToGroupResponse> attachPolicyToGroup(AttachPolicyToGroupRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachPolicyToRole  AttachPolicyToRoleRequest
+     * @return AttachPolicyToRoleResponse
+     */
     @Override
     public CompletableFuture<AttachPolicyToRoleResponse> attachPolicyToRole(AttachPolicyToRoleRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachPolicyToUser  AttachPolicyToUserRequest
+     * @return AttachPolicyToUserResponse
+     */
     @Override
     public CompletableFuture<AttachPolicyToUserResponse> attachPolicyToUser(AttachPolicyToUserRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindMFADevice  BindMFADeviceRequest
+     * @return BindMFADeviceResponse
+     */
     @Override
     public CompletableFuture<BindMFADeviceResponse> bindMFADevice(BindMFADeviceRequest request) {
         try {
@@ -109,6 +129,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can change their passwords.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ChangePassword  ChangePasswordRequest
+     * @return ChangePasswordResponse
+     */
     @Override
     public CompletableFuture<ChangePasswordResponse> changePassword(ChangePasswordRequest request) {
         try {
@@ -123,6 +152,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ClearAccountAlias  ClearAccountAliasRequest
+     * @return ClearAccountAliasResponse
+     */
     @Override
     public CompletableFuture<ClearAccountAliasResponse> clearAccountAlias(ClearAccountAliasRequest request) {
         try {
@@ -137,6 +170,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAccessKey  CreateAccessKeyRequest
+     * @return CreateAccessKeyResponse
+     */
     @Override
     public CompletableFuture<CreateAccessKeyResponse> createAccessKey(CreateAccessKeyRequest request) {
         try {
@@ -151,6 +188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
     @Override
     public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
         try {
@@ -165,6 +206,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLoginProfile  CreateLoginProfileRequest
+     * @return CreateLoginProfileResponse
+     */
     @Override
     public CompletableFuture<CreateLoginProfileResponse> createLoginProfile(CreateLoginProfileRequest request) {
         try {
@@ -179,6 +224,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>For more information about policies, see <a href="https://help.aliyun.com/document_detail/93732.html">Policy overview</a>.
+     * This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.</p>
+     * 
+     * @param request the request parameters of CreatePolicy  CreatePolicyRequest
+     * @return CreatePolicyResponse
+     */
     @Override
     public CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request) {
         try {
@@ -193,6 +246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePolicyVersion  CreatePolicyVersionRequest
+     * @return CreatePolicyVersionResponse
+     */
     @Override
     public CompletableFuture<CreatePolicyVersionResponse> createPolicyVersion(CreatePolicyVersionRequest request) {
         try {
@@ -207,6 +264,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+     * 
+     * @param request the request parameters of CreateRole  CreateRoleRequest
+     * @return CreateRoleResponse
+     */
     @Override
     public CompletableFuture<CreateRoleResponse> createRole(CreateRoleRequest request) {
         try {
@@ -221,6 +286,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
+     * 
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -235,6 +307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVirtualMFADevice  CreateVirtualMFADeviceRequest
+     * @return CreateVirtualMFADeviceResponse
+     */
     @Override
     public CompletableFuture<CreateVirtualMFADeviceResponse> createVirtualMFADevice(CreateVirtualMFADeviceRequest request) {
         try {
@@ -249,6 +325,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DecodeDiagnosticMessage  DecodeDiagnosticMessageRequest
+     * @return DecodeDiagnosticMessageResponse
+     */
+    @Override
+    public CompletableFuture<DecodeDiagnosticMessageResponse> decodeDiagnosticMessage(DecodeDiagnosticMessageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DecodeDiagnosticMessage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DecodeDiagnosticMessageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DecodeDiagnosticMessageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAccessKey  DeleteAccessKeyRequest
+     * @return DeleteAccessKeyResponse
+     */
     @Override
     public CompletableFuture<DeleteAccessKeyResponse> deleteAccessKey(DeleteAccessKeyRequest request) {
         try {
@@ -263,6 +361,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</p>
+     * 
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
         try {
@@ -277,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLoginProfile  DeleteLoginProfileRequest
+     * @return DeleteLoginProfileResponse
+     */
     @Override
     public CompletableFuture<DeleteLoginProfileResponse> deleteLoginProfile(DeleteLoginProfileRequest request) {
         try {
@@ -291,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePolicy  DeletePolicyRequest
+     * @return DeletePolicyResponse
+     */
     @Override
     public CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request) {
         try {
@@ -305,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePolicyVersion  DeletePolicyVersionRequest
+     * @return DeletePolicyVersionResponse
+     */
     @Override
     public CompletableFuture<DeletePolicyVersionResponse> deletePolicyVersion(DeletePolicyVersionRequest request) {
         try {
@@ -319,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRole  DeleteRoleRequest
+     * @return DeleteRoleResponse
+     */
     @Override
     public CompletableFuture<DeleteRoleResponse> deleteRole(DeleteRoleRequest request) {
         try {
@@ -333,6 +454,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.</p>
+     * 
+     * @param request the request parameters of DeleteUser  DeleteUserRequest
+     * @return DeleteUserResponse
+     */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
         try {
@@ -347,6 +475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVirtualMFADevice  DeleteVirtualMFADeviceRequest
+     * @return DeleteVirtualMFADeviceResponse
+     */
     @Override
     public CompletableFuture<DeleteVirtualMFADeviceResponse> deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request) {
         try {
@@ -361,6 +493,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachPolicyFromGroup  DetachPolicyFromGroupRequest
+     * @return DetachPolicyFromGroupResponse
+     */
     @Override
     public CompletableFuture<DetachPolicyFromGroupResponse> detachPolicyFromGroup(DetachPolicyFromGroupRequest request) {
         try {
@@ -375,6 +511,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachPolicyFromRole  DetachPolicyFromRoleRequest
+     * @return DetachPolicyFromRoleResponse
+     */
     @Override
     public CompletableFuture<DetachPolicyFromRoleResponse> detachPolicyFromRole(DetachPolicyFromRoleRequest request) {
         try {
@@ -389,6 +529,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachPolicyFromUser  DetachPolicyFromUserRequest
+     * @return DetachPolicyFromUserResponse
+     */
     @Override
     public CompletableFuture<DetachPolicyFromUserResponse> detachPolicyFromUser(DetachPolicyFromUserRequest request) {
         try {
@@ -403,6 +547,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccessKeyLastUsed  GetAccessKeyLastUsedRequest
+     * @return GetAccessKeyLastUsedResponse
+     */
     @Override
     public CompletableFuture<GetAccessKeyLastUsedResponse> getAccessKeyLastUsed(GetAccessKeyLastUsedRequest request) {
         try {
@@ -417,6 +565,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountAlias  GetAccountAliasRequest
+     * @return GetAccountAliasResponse
+     */
     @Override
     public CompletableFuture<GetAccountAliasResponse> getAccountAlias(GetAccountAliasRequest request) {
         try {
@@ -431,6 +583,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGroup  GetGroupRequest
+     * @return GetGroupResponse
+     */
     @Override
     public CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request) {
         try {
@@ -445,6 +601,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLoginProfile  GetLoginProfileRequest
+     * @return GetLoginProfileResponse
+     */
     @Override
     public CompletableFuture<GetLoginProfileResponse> getLoginProfile(GetLoginProfileRequest request) {
         try {
@@ -459,6 +619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPasswordPolicy  GetPasswordPolicyRequest
+     * @return GetPasswordPolicyResponse
+     */
     @Override
     public CompletableFuture<GetPasswordPolicyResponse> getPasswordPolicy(GetPasswordPolicyRequest request) {
         try {
@@ -473,6 +637,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPolicy  GetPolicyRequest
+     * @return GetPolicyResponse
+     */
     @Override
     public CompletableFuture<GetPolicyResponse> getPolicy(GetPolicyRequest request) {
         try {
@@ -487,6 +655,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPolicyVersion  GetPolicyVersionRequest
+     * @return GetPolicyVersionResponse
+     */
     @Override
     public CompletableFuture<GetPolicyVersionResponse> getPolicyVersion(GetPolicyVersionRequest request) {
         try {
@@ -501,6 +673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRole  GetRoleRequest
+     * @return GetRoleResponse
+     */
     @Override
     public CompletableFuture<GetRoleResponse> getRole(GetRoleRequest request) {
         try {
@@ -515,6 +691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSecurityPreference  GetSecurityPreferenceRequest
+     * @return GetSecurityPreferenceResponse
+     */
     @Override
     public CompletableFuture<GetSecurityPreferenceResponse> getSecurityPreference(GetSecurityPreferenceRequest request) {
         try {
@@ -529,6 +709,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the information about the RAM user <code>alice</code>.</p>
+     * 
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -543,6 +730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserMFAInfo  GetUserMFAInfoRequest
+     * @return GetUserMFAInfoResponse
+     */
     @Override
     public CompletableFuture<GetUserMFAInfoResponse> getUserMFAInfo(GetUserMFAInfoRequest request) {
         try {
@@ -557,6 +748,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAccessKeys  ListAccessKeysRequest
+     * @return ListAccessKeysResponse
+     */
     @Override
     public CompletableFuture<ListAccessKeysResponse> listAccessKeys(ListAccessKeysRequest request) {
         try {
@@ -571,6 +766,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEntitiesForPolicy  ListEntitiesForPolicyRequest
+     * @return ListEntitiesForPolicyResponse
+     */
     @Override
     public CompletableFuture<ListEntitiesForPolicyResponse> listEntitiesForPolicy(ListEntitiesForPolicyRequest request) {
         try {
@@ -585,6 +784,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroups  ListGroupsRequest
+     * @return ListGroupsResponse
+     */
     @Override
     public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
         try {
@@ -599,6 +802,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query the RAM user groups to which the RAM user <code>Alice</code> belongs. The response shows that <code>Alice</code> belongs to the RAM user group named <code>Dev-Team</code>.</p>
+     * 
+     * @param request the request parameters of ListGroupsForUser  ListGroupsForUserRequest
+     * @return ListGroupsForUserResponse
+     */
     @Override
     public CompletableFuture<ListGroupsForUserResponse> listGroupsForUser(ListGroupsForUserRequest request) {
         try {
@@ -613,6 +823,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPolicies  ListPoliciesRequest
+     * @return ListPoliciesResponse
+     */
     @Override
     public CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request) {
         try {
@@ -627,6 +841,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPoliciesForGroup  ListPoliciesForGroupRequest
+     * @return ListPoliciesForGroupResponse
+     */
     @Override
     public CompletableFuture<ListPoliciesForGroupResponse> listPoliciesForGroup(ListPoliciesForGroupRequest request) {
         try {
@@ -641,6 +859,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPoliciesForRole  ListPoliciesForRoleRequest
+     * @return ListPoliciesForRoleResponse
+     */
     @Override
     public CompletableFuture<ListPoliciesForRoleResponse> listPoliciesForRole(ListPoliciesForRoleRequest request) {
         try {
@@ -655,6 +877,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to query only the policies that are attached to Alibaba Cloud accounts. You cannot query the policies that are attached to resource groups.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ListPoliciesForUser  ListPoliciesForUserRequest
+     * @return ListPoliciesForUserResponse
+     */
     @Override
     public CompletableFuture<ListPoliciesForUserResponse> listPoliciesForUser(ListPoliciesForUserRequest request) {
         try {
@@ -669,6 +900,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPolicyVersions  ListPolicyVersionsRequest
+     * @return ListPolicyVersionsResponse
+     */
     @Override
     public CompletableFuture<ListPolicyVersionsResponse> listPolicyVersions(ListPolicyVersionsRequest request) {
         try {
@@ -683,6 +918,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRoles  ListRolesRequest
+     * @return ListRolesResponse
+     */
     @Override
     public CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request) {
         try {
@@ -697,6 +936,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
     @Override
     public CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request) {
         try {
@@ -711,6 +954,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUsersForGroup  ListUsersForGroupRequest
+     * @return ListUsersForGroupResponse
+     */
     @Override
     public CompletableFuture<ListUsersForGroupResponse> listUsersForGroup(ListUsersForGroupRequest request) {
         try {
@@ -725,6 +972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVirtualMFADevices  ListVirtualMFADevicesRequest
+     * @return ListVirtualMFADevicesResponse
+     */
     @Override
     public CompletableFuture<ListVirtualMFADevicesResponse> listVirtualMFADevices(ListVirtualMFADevicesRequest request) {
         try {
@@ -739,6 +990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveUserFromGroup  RemoveUserFromGroupRequest
+     * @return RemoveUserFromGroupResponse
+     */
     @Override
     public CompletableFuture<RemoveUserFromGroupResponse> removeUserFromGroup(RemoveUserFromGroupRequest request) {
         try {
@@ -753,6 +1008,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetAccountAlias  SetAccountAliasRequest
+     * @return SetAccountAliasResponse
+     */
     @Override
     public CompletableFuture<SetAccountAliasResponse> setAccountAlias(SetAccountAliasRequest request) {
         try {
@@ -767,6 +1026,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDefaultPolicyVersion  SetDefaultPolicyVersionRequest
+     * @return SetDefaultPolicyVersionResponse
+     */
     @Override
     public CompletableFuture<SetDefaultPolicyVersionResponse> setDefaultPolicyVersion(SetDefaultPolicyVersionRequest request) {
         try {
@@ -781,6 +1044,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetPasswordPolicy  SetPasswordPolicyRequest
+     * @return SetPasswordPolicyResponse
+     */
     @Override
     public CompletableFuture<SetPasswordPolicyResponse> setPasswordPolicy(SetPasswordPolicyRequest request) {
         try {
@@ -795,6 +1062,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetSecurityPreference  SetSecurityPreferenceRequest
+     * @return SetSecurityPreferenceResponse
+     */
     @Override
     public CompletableFuture<SetSecurityPreferenceResponse> setSecurityPreference(SetSecurityPreferenceRequest request) {
         try {
@@ -809,6 +1080,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindMFADevice  UnbindMFADeviceRequest
+     * @return UnbindMFADeviceResponse
+     */
     @Override
     public CompletableFuture<UnbindMFADeviceResponse> unbindMFADevice(UnbindMFADeviceRequest request) {
         try {
@@ -823,6 +1098,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAccessKey  UpdateAccessKeyRequest
+     * @return UpdateAccessKeyResponse
+     */
     @Override
     public CompletableFuture<UpdateAccessKeyResponse> updateAccessKey(UpdateAccessKeyRequest request) {
         try {
@@ -837,6 +1116,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGroup  UpdateGroupRequest
+     * @return UpdateGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateGroupResponse> updateGroup(UpdateGroupRequest request) {
         try {
@@ -851,6 +1134,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLoginProfile  UpdateLoginProfileRequest
+     * @return UpdateLoginProfileResponse
+     */
     @Override
     public CompletableFuture<UpdateLoginProfileResponse> updateLoginProfile(UpdateLoginProfileRequest request) {
         try {
@@ -865,6 +1152,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</p>
+     * 
+     * @param request the request parameters of UpdatePolicyDescription  UpdatePolicyDescriptionRequest
+     * @return UpdatePolicyDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdatePolicyDescriptionResponse> updatePolicyDescription(UpdatePolicyDescriptionRequest request) {
         try {
@@ -879,6 +1173,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.</p>
+     * 
+     * @param request the request parameters of UpdateRole  UpdateRoleRequest
+     * @return UpdateRoleResponse
+     */
     @Override
     public CompletableFuture<UpdateRoleResponse> updateRole(UpdateRoleRequest request) {
         try {
@@ -893,6 +1194,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the name of a RAM user from <code>zhangq****</code> to <code>xiaoq****</code>.</p>
+     * 
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {

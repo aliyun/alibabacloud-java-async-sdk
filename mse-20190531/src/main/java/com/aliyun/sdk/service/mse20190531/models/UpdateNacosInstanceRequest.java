@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNacosInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateNacosInstanceRequest</p>
  */
 public class UpdateNacosInstanceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("Enabled")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enabled;
 
-    @Query
-    @NameInMap("Ephemeral")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ephemeral")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean ephemeral;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Ip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ip;
 
-    @Body
-    @NameInMap("Metadata")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metadata")
     private String metadata;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer port;
 
-    @Query
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Query
-    @NameInMap("Weight")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Weight")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String weight;
 
     private UpdateNacosInstanceRequest(Builder builder) {
@@ -216,11 +221,14 @@ public class UpdateNacosInstanceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -229,7 +237,10 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the Nacos instance.
+         * <p>The name of the Nacos instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -238,11 +249,15 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable this service. Valid values:
-         * <p>
+         * <p>Specifies whether to disable this service. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: yes.</li>
+         * <li><code>false</code>: no.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `true`: yes.
-         * *   `false`: no.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -251,11 +266,15 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether the node is a non-persistent node. Valid values:
-         * <p>
+         * <p>Specifies whether the node is a non-persistent node. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: yes.</li>
+         * <li><code>false</code>: no.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `true`: yes.
-         * *   `false`: no.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ephemeral(Boolean ephemeral) {
             this.putQueryParameter("Ephemeral", ephemeral);
@@ -264,7 +283,11 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * <p>The name of the group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -273,7 +296,11 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-123456</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -282,7 +309,11 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The IP address of the Nacos instance.
+         * <p>The IP address of the Nacos instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.X.X</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -291,7 +322,10 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The metadata of the instance.
+         * <p>The metadata of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[int]</p>
          */
         public Builder metadata(String metadata) {
             this.putBodyParameter("Metadata", metadata);
@@ -300,7 +334,10 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e78a671-4b9b-4dd4-99c1-0****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -309,7 +346,11 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The port number of the Nacos instance.
+         * <p>The port number of the Nacos instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12281</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -318,7 +359,11 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello_service</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -327,7 +372,11 @@ public class UpdateNacosInstanceRequest extends Request {
         }
 
         /**
-         * The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.
+         * <p>The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder weight(String weight) {
             this.putQueryParameter("Weight", weight);

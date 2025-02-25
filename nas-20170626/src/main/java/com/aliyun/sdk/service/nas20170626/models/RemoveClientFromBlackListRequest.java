@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveClientFromBlackListRequest} extends {@link RequestModel}
  *
  * <p>RemoveClientFromBlackListRequest</p>
  */
 public class RemoveClientFromBlackListRequest extends Request {
-    @Query
-    @NameInMap("ClientIP")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIP")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientIP;
 
-    @Query
-    @NameInMap("ClientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private RemoveClientFromBlackListRequest(Builder builder) {
@@ -91,16 +96,19 @@ public class RemoveClientFromBlackListRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveClientFromBlackListRequest response) {
-            super(response);
-            this.clientIP = response.clientIP;
-            this.clientToken = response.clientToken;
-            this.fileSystemId = response.fileSystemId;
-            this.regionId = response.regionId;
+        private Builder(RemoveClientFromBlackListRequest request) {
+            super(request);
+            this.clientIP = request.clientIP;
+            this.clientToken = request.clientToken;
+            this.fileSystemId = request.fileSystemId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientIP.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0</p>
          */
         public Builder clientIP(String clientIP) {
             this.putQueryParameter("ClientIP", clientIP);
@@ -109,7 +117,10 @@ public class RemoveClientFromBlackListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -118,7 +129,10 @@ public class RemoveClientFromBlackListRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpfs-00d91ca404a348****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -127,7 +141,11 @@ public class RemoveClientFromBlackListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

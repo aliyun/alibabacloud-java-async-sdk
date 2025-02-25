@@ -1,60 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQualityRelativeNodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteQualityRelativeNodeRequest</p>
  */
 public class DeleteQualityRelativeNodeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("EnvType")
-    @Validation(required = true, maxLength = 40, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 40, minLength = 1)
     private String envType;
 
-    @Body
-    @NameInMap("MatchExpression")
-    @Validation(required = true, maxLength = 80, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MatchExpression")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 80, minLength = 1)
     private String matchExpression;
 
-    @Body
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long nodeId;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("TableName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String tableName;
 
-    @Body
-    @NameInMap("TargetNodeProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetNodeProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long targetNodeProjectId;
 
-    @Body
-    @NameInMap("TargetNodeProjectName")
-    @Validation(required = true, maxLength = 512, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetNodeProjectName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 512, minLength = 1)
     private String targetNodeProjectName;
 
     private DeleteQualityRelativeNodeRequest(Builder builder) {
@@ -175,7 +179,7 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -184,7 +188,20 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The environment in which the compute engine instance runs. Valid values: DEV and PRD. The value DEV indicates the development environment, and the value PRD indicates the production environment.
+         * <p>The type of the compute engine or data source. Valid values:</p>
+         * <ul>
+         * <li>cdh</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>odps</li>
+         * <li>emr</li>
+         * <li>hadoop</li>
+         * <li>holodb</li>
+         * <li>hybriddb_for_postgresql</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -193,7 +210,11 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The partition filter expression.
+         * <p>The partition filter expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=$[yyyymmdd]</p>
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -202,7 +223,11 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The ID of the node.
+         * <p>The ID of the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -211,7 +236,11 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -220,7 +249,11 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source.
+         * <p>The name of the compute engine instance or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -229,7 +262,11 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The name of the table that is generated by the node.
+         * <p>The name of the table that is generated by the node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dual</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
@@ -238,7 +275,11 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the node associated with the partition filter expression belongs.
+         * <p>The ID of the workspace to which the node associated with the partition filter expression belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder targetNodeProjectId(Long targetNodeProjectId) {
             this.putBodyParameter("TargetNodeProjectId", targetNodeProjectId);
@@ -247,7 +288,11 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The name of the workspace to which the node associated with the partition filter expression belongs.
+         * <p>The name of the workspace to which the node associated with the partition filter expression belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder targetNodeProjectName(String targetNodeProjectName) {
             this.putBodyParameter("TargetNodeProjectName", targetNodeProjectName);

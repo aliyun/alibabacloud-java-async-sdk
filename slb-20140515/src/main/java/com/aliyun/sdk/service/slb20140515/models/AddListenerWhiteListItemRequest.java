@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddListenerWhiteListItemRequest} extends {@link RequestModel}
  *
  * <p>AddListenerWhiteListItemRequest</p>
  */
 public class AddListenerWhiteListItemRequest extends Request {
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535, minimum = 1)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceItems")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceItems")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceItems;
 
     private AddListenerWhiteListItemRequest(Builder builder) {
@@ -169,7 +174,11 @@ public class AddListenerWhiteListItemRequest extends Request {
         } 
 
         /**
-         * The frontend port that is used by the CLB instance.
+         * <p>The frontend port that is used by the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -178,10 +187,13 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The frontend protocol that is used by the CLB instance.
-         * <p>
+         * <p>The frontend protocol that is used by the CLB instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when listeners that use different protocols listen on the same port.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when listeners that use different protocols listen on the same port.
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -190,7 +202,11 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1o94dp5i6ea*******</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -217,10 +233,11 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Classic Load Balancer (CLB) instance is created.
-         * <p>
+         * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -247,14 +264,14 @@ public class AddListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The IP addresses or CIDR blocks that you want to add to the whitelist.
-         * <p>
+         * <p>The IP addresses or CIDR blocks that you want to add to the whitelist.</p>
+         * <p>This parameter takes effect when the <strong>AccessControlStatus</strong> parameter of the listener is set to <strong>open_white_list</strong>.</p>
+         * <p>Separate multiple IP addresses or CIDR blocks with commas (,).</p>
+         * <p>You cannot enter <strong>0.0.0.0</strong> or <strong>0.0.0.0/0</strong>. To disable access control, you can call the <a href="https://help.aliyun.com/document_detail/27599.html">SetListenerAccessControlStatus</a> operation to set the value of the <strong>AccessControlStatus</strong> parameter to <strong>close</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter takes effect when the **AccessControlStatus** parameter of the listener is set to **open_white_list**.
-         * 
-         * Separate multiple IP addresses or CIDR blocks with commas (,).
-         * 
-         * You cannot enter **0.0.0.0** or **0.0.0.0/0**. To disable access control, you can call the [SetListenerAccessControlStatus](~~27599~~) operation to set the value of the **AccessControlStatus** parameter to **close**.
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceItems(String sourceItems) {
             this.putQueryParameter("SourceItems", sourceItems);

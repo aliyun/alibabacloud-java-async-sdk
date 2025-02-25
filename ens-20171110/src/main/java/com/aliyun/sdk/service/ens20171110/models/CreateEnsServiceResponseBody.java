@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEnsServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEnsServiceResponseBody</p>
  */
 public class CreateEnsServiceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateEnsServiceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateEnsServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -58,7 +66,10 @@ public class CreateEnsServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AF02B43-2D08-49D3-8AAF-65B9C792ED14</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

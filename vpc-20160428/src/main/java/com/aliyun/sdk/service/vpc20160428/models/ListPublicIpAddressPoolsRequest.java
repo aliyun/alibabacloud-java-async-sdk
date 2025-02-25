@@ -1,73 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicIpAddressPoolsRequest} extends {@link RequestModel}
  *
  * <p>ListPublicIpAddressPoolsRequest</p>
  */
 public class ListPublicIpAddressPoolsRequest extends Request {
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PublicIpAddressPoolIds")
-    private java.util.List < String > publicIpAddressPoolIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolIds")
+    private java.util.List<String> publicIpAddressPoolIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityProtectionEnabled")
+    private Boolean securityProtectionEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private ListPublicIpAddressPoolsRequest(Builder builder) {
         super(builder);
@@ -83,6 +92,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityProtectionEnabled = builder.securityProtectionEnabled;
         this.status = builder.status;
         this.tags = builder.tags;
     }
@@ -152,7 +162,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
     /**
      * @return publicIpAddressPoolIds
      */
-    public java.util.List < String > getPublicIpAddressPoolIds() {
+    public java.util.List<String> getPublicIpAddressPoolIds() {
         return this.publicIpAddressPoolIds;
     }
 
@@ -185,6 +195,13 @@ public class ListPublicIpAddressPoolsRequest extends Request {
     }
 
     /**
+     * @return securityProtectionEnabled
+     */
+    public Boolean getSecurityProtectionEnabled() {
+        return this.securityProtectionEnabled;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -194,7 +211,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -206,13 +223,14 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > publicIpAddressPoolIds; 
+        private java.util.List<String> publicIpAddressPoolIds; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean securityProtectionEnabled; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -232,16 +250,20 @@ public class ListPublicIpAddressPoolsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionEnabled = request.securityProtectionEnabled;
             this.status = request.status;
             this.tags = request.tags;
         } 
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -250,24 +272,25 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The line type. Valid values:
-         * <p>
+         * <p>The line type. Valid values:</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default): BGP (Multi-ISP) line</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line</li>
+         * </ul>
+         * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the &quot;Line types&quot; section of <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a></p>
+         * <p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to <strong>BGP_FinanceCloud</strong>.</p>
          * 
-         * *   **BGP** (default): BGP (Multi-ISP) line
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro line
-         * 
-         * For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](~~32321~~)
-         * 
-         * If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
-         * 
-         * *   **ChinaTelecom**
-         * *   **ChinaUnicom**
-         * *   **ChinaMobile**
-         * *   **ChinaTelecom_L2**
-         * *   **ChinaUnicom_L2**
-         * *   **ChinaMobile_L2**
-         * 
-         * If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to **BGP_FinanceCloud**.
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -276,7 +299,10 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: **10** to **100**. Default value: **10**.
+         * <p>The maximum number of entries to return. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -285,10 +311,11 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The name of the IP address pool.
-         * <p>
+         * <p>The name of the IP address pool.</p>
+         * <p>If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>AddressPoolName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -297,11 +324,14 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -328,22 +358,22 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The IDs of the IP address pool.
-         * <p>
-         * 
-         * You can enter up to 100 IDs.
+         * <p>The IDs of the IP address pool.</p>
+         * <p>You can enter up to 100 IDs.</p>
          */
-        public Builder publicIpAddressPoolIds(java.util.List < String > publicIpAddressPoolIds) {
+        public Builder publicIpAddressPoolIds(java.util.List<String> publicIpAddressPoolIds) {
             this.putQueryParameter("PublicIpAddressPoolIds", publicIpAddressPoolIds);
             this.publicIpAddressPoolIds = publicIpAddressPoolIds;
             return this;
         }
 
         /**
-         * The ID of the region in which the IP address pool that you want to query resides.
-         * <p>
+         * <p>The ID of the region in which the IP address pool that you want to query resides.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -352,7 +382,10 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the IP address pool belongs.
+         * <p>The ID of the resource group to which the IP address pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4pcdvf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -379,12 +412,31 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The status of the IP address pool. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **Created**
-         * *   **Deleting**
-         * *   **Modifying**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
+            this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
+            this.securityProtectionEnabled = securityProtectionEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The status of the IP address pool. Valid values:</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -393,9 +445,9 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource.
+         * <p>The tags to add to the resource.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -408,11 +460,17 @@ public class ListPublicIpAddressPoolsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublicIpAddressPoolsRequest} extends {@link TeaModel}
+     *
+     * <p>ListPublicIpAddressPoolsRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -447,10 +505,11 @@ public class ListPublicIpAddressPoolsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -458,10 +517,11 @@ public class ListPublicIpAddressPoolsRequest extends Request {
             }
 
             /**
-             * The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

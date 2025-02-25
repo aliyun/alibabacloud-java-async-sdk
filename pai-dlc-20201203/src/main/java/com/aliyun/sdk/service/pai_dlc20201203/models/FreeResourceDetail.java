@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FreeResourceDetail} extends {@link TeaModel}
  *
  * <p>FreeResourceDetail</p>
  */
 public class FreeResourceDetail extends TeaModel {
-    @NameInMap("Amount")
+    @com.aliyun.core.annotation.NameInMap("Amount")
     private Integer amount;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private FreeResourceDetail(Builder builder) {

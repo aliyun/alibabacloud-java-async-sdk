@@ -1,74 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMetricByPageRequest} extends {@link RequestModel}
  *
  * <p>QueryMetricByPageRequest</p>
  */
 public class QueryMetricByPageRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("CustomFilters")
-    private java.util.List < String > customFilters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFilters")
+    private java.util.List<String> customFilters;
 
-    @Query
-    @NameInMap("Dimensions")
-    private java.util.List < String > dimensions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
+    private java.util.List<String> dimensions;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
-    @Query
-    @NameInMap("IntervalInSec")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalInSec")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer intervalInSec;
 
-    @Query
-    @NameInMap("Measures")
-    private java.util.List < String > measures;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Measures")
+    private java.util.List<String> measures;
 
-    @Query
-    @NameInMap("Metric")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metric")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metric;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private QueryMetricByPageRequest(Builder builder) {
@@ -118,14 +122,14 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return customFilters
      */
-    public java.util.List < String > getCustomFilters() {
+    public java.util.List<String> getCustomFilters() {
         return this.customFilters;
     }
 
     /**
      * @return dimensions
      */
-    public java.util.List < String > getDimensions() {
+    public java.util.List<String> getDimensions() {
         return this.dimensions;
     }
 
@@ -139,7 +143,7 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -153,7 +157,7 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return measures
      */
-    public java.util.List < String > getMeasures() {
+    public java.util.List<String> getMeasures() {
         return this.measures;
     }
 
@@ -195,12 +199,12 @@ public class QueryMetricByPageRequest extends Request {
     public static final class Builder extends Request.Builder<QueryMetricByPageRequest, Builder> {
         private String regionId; 
         private Integer currentPage; 
-        private java.util.List < String > customFilters; 
-        private java.util.List < String > dimensions; 
+        private java.util.List<String> customFilters; 
+        private java.util.List<String> dimensions; 
         private Long endTime; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer intervalInSec; 
-        private java.util.List < String > measures; 
+        private java.util.List<String> measures; 
         private String metric; 
         private String order; 
         private String orderBy; 
@@ -229,7 +233,7 @@ public class QueryMetricByPageRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -238,7 +242,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: `1`.
+         * <p>The page number. Default value: <code>1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -247,25 +254,32 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Custom filter conditions.
+         * <p>Custom filter conditions.</p>
          */
-        public Builder customFilters(java.util.List < String > customFilters) {
+        public Builder customFilters(java.util.List<String> customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
             this.customFilters = customFilters;
             return this;
         }
 
         /**
-         * The dimensions of the metric that you want to query.
+         * <p>The dimensions of the metric that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;detector_browser&quot;,&quot;detector_device&quot;]</p>
          */
-        public Builder dimensions(java.util.List < String > dimensions) {
+        public Builder dimensions(java.util.List<String> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667546895000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -274,16 +288,19 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
         }
 
         /**
-         * The time interval at which data entries are aggregated. Unit: milliseconds. Minimum value: 60000.
+         * <p>The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -292,16 +309,23 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The measures of the metric that you want to query.
+         * <p>The measures of the metric that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
-        public Builder measures(java.util.List < String > measures) {
+        public Builder measures(java.util.List<String> measures) {
             this.putQueryParameter("Measures", measures);
             this.measures = measures;
             return this;
         }
 
         /**
-         * The metric that you want to query. You cannot specify a custom metric. For more information, see the "Application monitoring metrics that can be queried" section.
+         * <p>The metric that you want to query. You cannot specify a custom metric. For more information, see the &quot;Application monitoring metrics that can be queried&quot; section.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstat.host</p>
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -310,13 +334,17 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The order in which measures are sorted. Valid values:
-         * <p>
+         * <p>The order in which measures are sorted. Valid values:</p>
+         * <ul>
+         * <li><code>ASC</code>: ascending order</li>
+         * <li><code>DESC</code>: descending order</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify the parameter, data is not sorted.</p>
+         * </blockquote>
          * 
-         * *   `ASC`: ascending order
-         * *   `DESC`: descending order
-         * 
-         * > If you do not specify the parameter, data is not sorted.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -325,7 +353,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The dimension from which metrics are sorted. You can set this parameter to a supported dimension.
+         * <p>The dimension for arranging metrics in sequence. For more information, see the supplementary metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -334,7 +365,10 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page.
+         * <p>This parameter is no longer supported. The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -343,7 +377,11 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. Unit: milliseconds.
+         * <p>The start of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667287695000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -358,11 +396,17 @@ public class QueryMetricByPageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMetricByPageRequest} extends {@link TeaModel}
+     *
+     * <p>QueryMetricByPageRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -397,7 +441,10 @@ public class QueryMetricByPageRequest extends Request {
             private String value; 
 
             /**
-             * The key of the filter condition. You must set the key to `pid` or `regionId`.
+             * <p>The key of the filter condition. You must set the key to <code>pid</code> or <code>regionId</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pid</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -405,7 +452,10 @@ public class QueryMetricByPageRequest extends Request {
             }
 
             /**
-             * The value of the filter condition. You must set the value of the `pid` or `regionId` condition. For information about how to obtain the `pid`, see the "Obtain the PID of an application" section.
+             * <p>The value of the filter condition. You must set the value of the <code>pid</code> or <code>regionId</code> condition. For information about how to obtain the <code>pid</code>, see the &quot;Obtain the PID of an application&quot; section.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx@74xxx</p>
              */
             public Builder value(String value) {
                 this.value = value;

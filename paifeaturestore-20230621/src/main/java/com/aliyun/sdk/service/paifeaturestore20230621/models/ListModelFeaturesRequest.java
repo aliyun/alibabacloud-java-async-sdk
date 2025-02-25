@@ -1,57 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListModelFeaturesRequest} extends {@link RequestModel}
  *
  * <p>ListModelFeaturesRequest</p>
  */
 public class ListModelFeaturesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ModelFeatureIds")
-    private java.util.List < String > modelFeatureIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelFeatureIds")
+    private java.util.List<String> modelFeatureIds;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private ListModelFeaturesRequest(Builder builder) {
@@ -98,7 +102,7 @@ public class ListModelFeaturesRequest extends Request {
     /**
      * @return modelFeatureIds
      */
-    public java.util.List < String > getModelFeatureIds() {
+    public java.util.List<String> getModelFeatureIds() {
         return this.modelFeatureIds;
     }
 
@@ -154,7 +158,7 @@ public class ListModelFeaturesRequest extends Request {
     public static final class Builder extends Request.Builder<ListModelFeaturesRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > modelFeatureIds; 
+        private java.util.List<String> modelFeatureIds; 
         private String name; 
         private String order; 
         private String owner; 
@@ -182,7 +186,10 @@ public class ListModelFeaturesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -202,7 +209,7 @@ public class ListModelFeaturesRequest extends Request {
         /**
          * ModelFeatureIds.
          */
-        public Builder modelFeatureIds(java.util.List < String > modelFeatureIds) {
+        public Builder modelFeatureIds(java.util.List<String> modelFeatureIds) {
             String modelFeatureIdsShrink = shrink(modelFeatureIds, "ModelFeatureIds", "simple");
             this.putQueryParameter("ModelFeatureIds", modelFeatureIdsShrink);
             this.modelFeatureIds = modelFeatureIds;

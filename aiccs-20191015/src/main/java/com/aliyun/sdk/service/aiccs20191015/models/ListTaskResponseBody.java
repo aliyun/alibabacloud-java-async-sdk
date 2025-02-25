@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskResponseBody</p>
  */
 public class ListTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTaskResponseBody(Builder builder) {
@@ -110,7 +115,7 @@ public class ListTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,32 +136,38 @@ public class ListTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskResponseBody</p>
+     */
     public static class Record extends TeaModel {
-        @NameInMap("CompleteCount")
+        @com.aliyun.core.annotation.NameInMap("CompleteCount")
         private Integer completeCount;
 
-        @NameInMap("FireTime")
+        @com.aliyun.core.annotation.NameInMap("FireTime")
         private String fireTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RobotId")
+        @com.aliyun.core.annotation.NameInMap("RobotId")
         private Long robotId;
 
-        @NameInMap("RobotName")
+        @com.aliyun.core.annotation.NameInMap("RobotName")
         private String robotName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Record(Builder builder) {
@@ -332,17 +343,23 @@ public class ListTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Record")
-        private java.util.List < Record> record;
+        @com.aliyun.core.annotation.NameInMap("Record")
+        private java.util.List<Record> record;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -377,7 +394,7 @@ public class ListTaskResponseBody extends TeaModel {
         /**
          * @return record
          */
-        public java.util.List < Record> getRecord() {
+        public java.util.List<Record> getRecord() {
             return this.record;
         }
 
@@ -391,7 +408,7 @@ public class ListTaskResponseBody extends TeaModel {
         public static final class Builder {
             private Long pageNo; 
             private Long pageSize; 
-            private java.util.List < Record> record; 
+            private java.util.List<Record> record; 
             private Long total; 
 
             /**
@@ -413,7 +430,7 @@ public class ListTaskResponseBody extends TeaModel {
             /**
              * Record.
              */
-            public Builder record(java.util.List < Record> record) {
+            public Builder record(java.util.List<Record> record) {
                 this.record = record;
                 return this;
             }

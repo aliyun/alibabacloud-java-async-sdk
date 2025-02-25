@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainWebSocketStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDomainWebSocketStatusRequest</p>
  */
 public class SetDomainWebSocketStatusRequest extends Request {
-    @Query
-    @NameInMap("ActionValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actionValue;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("WSSEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WSSEnable")
     private String WSSEnable;
 
     private SetDomainWebSocketStatusRequest(Builder builder) {
@@ -113,7 +118,11 @@ public class SetDomainWebSocketStatusRequest extends Request {
         } 
 
         /**
-         * ActionValue.
+         * <p>The action.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder actionValue(String actionValue) {
             this.putQueryParameter("ActionValue", actionValue);
@@ -122,7 +131,11 @@ public class SetDomainWebSocketStatusRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The custom domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac.fluvet.cn</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -131,7 +144,11 @@ public class SetDomainWebSocketStatusRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf976e63b70c4993807e7bb9345d4695</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -149,7 +166,10 @@ public class SetDomainWebSocketStatusRequest extends Request {
         }
 
         /**
-         * WSSEnable.
+         * <p>If enable WSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder WSSEnable(String WSSEnable) {
             this.putQueryParameter("WSSEnable", WSSEnable);

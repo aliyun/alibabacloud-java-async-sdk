@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationOssUploadPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetOperationOssUploadPolicyResponseBody</p>
  */
 public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
-    @NameInMap("Accessid")
+    @com.aliyun.core.annotation.NameInMap("Accessid")
     private String accessid;
 
-    @NameInMap("EncodedPolicy")
+    @com.aliyun.core.annotation.NameInMap("EncodedPolicy")
     private String encodedPolicy;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("FileDir")
+    @com.aliyun.core.annotation.NameInMap("FileDir")
     private String fileDir;
 
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Signature")
+    @com.aliyun.core.annotation.NameInMap("Signature")
     private String signature;
 
     private GetOperationOssUploadPolicyResponseBody(Builder builder) {
@@ -142,7 +142,10 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * OSS Endpoint。
+         * <p>OSS Endpoint。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>//<em><strong>-basic-cert.oss-cn-</strong></em>.aliyuncs.com/</p>
          */
         public Builder host(String host) {
             this.host = host;

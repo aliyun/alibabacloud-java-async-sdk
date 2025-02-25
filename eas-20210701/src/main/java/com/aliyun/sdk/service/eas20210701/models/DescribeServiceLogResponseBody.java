@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceLogResponseBody</p>
  */
 public class DescribeServiceLogResponseBody extends TeaModel {
-    @NameInMap("Logs")
-    private java.util.List < String > logs;
+    @com.aliyun.core.annotation.NameInMap("Logs")
+    private java.util.List<String> logs;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Long totalPageNum;
 
     private DescribeServiceLogResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < String > getLogs() {
+    public java.util.List<String> getLogs() {
         return this.logs;
     }
 
@@ -79,22 +84,25 @@ public class DescribeServiceLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > logs; 
+        private java.util.List<String> logs; 
         private Long pageNum; 
         private String requestId; 
         private Long totalCount; 
         private Long totalPageNum; 
 
         /**
-         * Logs.
+         * <p>The returned logs.</p>
          */
-        public Builder logs(java.util.List < String > logs) {
+        public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
             return this;
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -102,7 +110,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +121,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +132,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder totalPageNum(Long totalPageNum) {
             this.totalPageNum = totalPageNum;

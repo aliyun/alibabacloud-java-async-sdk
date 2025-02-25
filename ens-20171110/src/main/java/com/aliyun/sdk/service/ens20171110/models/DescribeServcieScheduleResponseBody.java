@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServcieScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServcieScheduleResponseBody</p>
  */
 public class DescribeServcieScheduleResponseBody extends TeaModel {
-    @NameInMap("Index")
+    @com.aliyun.core.annotation.NameInMap("Index")
     private Integer index;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceIp")
+    @com.aliyun.core.annotation.NameInMap("InstanceIp")
     private String instanceIp;
 
-    @NameInMap("InstancePort")
+    @com.aliyun.core.annotation.NameInMap("InstancePort")
     private Integer instancePort;
 
-    @NameInMap("PodAbstractInfo")
+    @com.aliyun.core.annotation.NameInMap("PodAbstractInfo")
     private PodAbstractInfo podAbstractInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestRepeated")
+    @com.aliyun.core.annotation.NameInMap("RequestRepeated")
     private Boolean requestRepeated;
 
-    @NameInMap("TcpPorts")
+    @com.aliyun.core.annotation.NameInMap("TcpPorts")
     private String tcpPorts;
 
     private DescribeServcieScheduleResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         private String tcpPorts; 
 
         /**
-         * Index.
+         * <p>The index number of the scheduled virtual device (pod).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -130,7 +138,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5myukg7hnpbto7m024002****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -138,7 +149,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIp.
+         * <p>The ID of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.26.XX.XX</p>
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;
@@ -146,7 +160,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstancePort.
+         * <p>The start port of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
@@ -154,7 +171,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * PodAbstractInfo.
+         * <p>The summary information about the scheduled virtual device.</p>
          */
         public Builder podAbstractInfo(PodAbstractInfo podAbstractInfo) {
             this.podAbstractInfo = podAbstractInfo;
@@ -162,7 +179,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +190,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestRepeated.
+         * <p>Indicates whether the request is repeated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requestRepeated(Boolean requestRepeated) {
             this.requestRepeated = requestRepeated;
@@ -178,7 +201,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * TcpPorts.
+         * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80-88</p>
          */
         public Builder tcpPorts(String tcpPorts) {
             this.tcpPorts = tcpPorts;
@@ -191,11 +217,17 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServcieScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServcieScheduleResponseBody</p>
+     */
     public static class ContainerStatus extends TeaModel {
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ContainerStatus(Builder builder) {
@@ -230,7 +262,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * ContainerId.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>container_e79_1638372147094_158091_02_000001</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -238,7 +273,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -252,9 +290,15 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServcieScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServcieScheduleResponseBody</p>
+     */
     public static class ContainerStatuses extends TeaModel {
-        @NameInMap("ContainerStatus")
-        private java.util.List < ContainerStatus> containerStatus;
+        @com.aliyun.core.annotation.NameInMap("ContainerStatus")
+        private java.util.List<ContainerStatus> containerStatus;
 
         private ContainerStatuses(Builder builder) {
             this.containerStatus = builder.containerStatus;
@@ -271,17 +315,17 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         /**
          * @return containerStatus
          */
-        public java.util.List < ContainerStatus> getContainerStatus() {
+        public java.util.List<ContainerStatus> getContainerStatus() {
             return this.containerStatus;
         }
 
         public static final class Builder {
-            private java.util.List < ContainerStatus> containerStatus; 
+            private java.util.List<ContainerStatus> containerStatus; 
 
             /**
              * ContainerStatus.
              */
-            public Builder containerStatus(java.util.List < ContainerStatus> containerStatus) {
+            public Builder containerStatus(java.util.List<ContainerStatus> containerStatus) {
                 this.containerStatus = containerStatus;
                 return this;
             }
@@ -293,23 +337,29 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServcieScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServcieScheduleResponseBody</p>
+     */
     public static class PodAbstractInfo extends TeaModel {
-        @NameInMap("ContainerService")
+        @com.aliyun.core.annotation.NameInMap("ContainerService")
         private Boolean containerService;
 
-        @NameInMap("ContainerStatuses")
+        @com.aliyun.core.annotation.NameInMap("ContainerStatuses")
         private ContainerStatuses containerStatuses;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private Boolean name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private Boolean namespace;
 
-        @NameInMap("ResourceScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceScope")
         private Boolean resourceScope;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
         private PodAbstractInfo(Builder builder) {
@@ -380,7 +430,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * ContainerService.
+             * <p>The name of the container service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>android</p>
              */
             public Builder containerService(Boolean containerService) {
                 this.containerService = containerService;
@@ -388,7 +441,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerStatuses.
+             * <p>The information about the container.</p>
              */
             public Builder containerStatuses(ContainerStatuses containerStatuses) {
                 this.containerStatuses = containerStatuses;
@@ -396,7 +449,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gcs-prod-websocket-eip-telecom</p>
              */
             public Builder name(Boolean name) {
                 this.name = name;
@@ -404,7 +460,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-aliyun</p>
              */
             public Builder namespace(Boolean namespace) {
                 this.namespace = namespace;
@@ -412,7 +471,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceScope.
+             * <p>The pod scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FDN</p>
              */
             public Builder resourceScope(Boolean resourceScope) {
                 this.resourceScope = resourceScope;
@@ -420,7 +482,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSqlConcurrencyControlRulesHistoryRequest} extends {@link RequestModel}
  *
  * <p>GetSqlConcurrencyControlRulesHistoryRequest</p>
  */
 public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
-    @Query
-    @NameInMap("ConsoleContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleContext")
     private String consoleContext;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
     private GetSqlConcurrencyControlRulesHistoryRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
         } 
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -106,10 +114,14 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +130,10 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
         }
 
         /**
-         * The page number. The value must be an integer that is greater than 0. Default value: 1.
+         * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -127,7 +142,10 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
         }
 
         /**
-         * The number of entries per page. The value must be an integer that is greater than 0. Default value: 10.
+         * <p>The number of entries per page. The value must be an integer that is greater than 0. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

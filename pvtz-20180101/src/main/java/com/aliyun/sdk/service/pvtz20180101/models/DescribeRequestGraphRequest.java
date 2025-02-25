@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRequestGraphRequest} extends {@link RequestModel}
  *
  * <p>DescribeRequestGraphRequest</p>
  */
 public class DescribeRequestGraphRequest extends Request {
-    @Query
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("EndTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTimestamp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StartTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTimestamp;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeRequestGraphRequest(Builder builder) {
@@ -154,7 +154,14 @@ public class DescribeRequestGraphRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID. BizId is specified together with BizType.</p>
+         * <ul>
+         * <li>If you set BizType to AUTH_ZONE, set BizId to a zone ID.</li>
+         * <li>If you set BizType to RESOLVER_RULE, set BizId to the ID of a forwarding rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>b9c93a8954c4098731e863c04302f45a</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -163,7 +170,14 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The business type. Valid values:</p>
+         * <ul>
+         * <li>AUTH_ZONE: authoritative zone</li>
+         * <li>RESOLVER_RULE: forwarding rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTH_ZONE</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -172,7 +186,11 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * EndTimestamp.
+         * <p>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571673600000</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -181,7 +199,15 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -190,7 +216,11 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * <p>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571587200000</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);
@@ -199,7 +229,10 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -208,7 +241,10 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * VPC ID
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -217,7 +253,13 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * zone ID
+         * <p>The zone ID.</p>
+         * <blockquote>
+         * <p> To query the number of DNS requests for a zone, you can specify ZoneId or BizType and BizId.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>29c752a01cd281a20ddcfa****</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

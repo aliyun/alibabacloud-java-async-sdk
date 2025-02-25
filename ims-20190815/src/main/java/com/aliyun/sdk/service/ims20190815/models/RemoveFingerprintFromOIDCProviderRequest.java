@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveFingerprintFromOIDCProviderRequest} extends {@link RequestModel}
  *
  * <p>RemoveFingerprintFromOIDCProviderRequest</p>
  */
 public class RemoveFingerprintFromOIDCProviderRequest extends Request {
-    @Query
-    @NameInMap("Fingerprint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fingerprint")
     private String fingerprint;
 
-    @Query
-    @NameInMap("OIDCProviderName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OIDCProviderName")
     private String OIDCProviderName;
 
     private RemoveFingerprintFromOIDCProviderRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class RemoveFingerprintFromOIDCProviderRequest extends Request {
         } 
 
         /**
-         * The fingerprint that you want to remove.
+         * <p>The fingerprint that you want to remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6938fd4d98bab03faadb97b34396831e3780****</p>
          */
         public Builder fingerprint(String fingerprint) {
             this.putQueryParameter("Fingerprint", fingerprint);
@@ -77,7 +85,10 @@ public class RemoveFingerprintFromOIDCProviderRequest extends Request {
         }
 
         /**
-         * The name of the OIDC IdP.
+         * <p>The name of the OIDC IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestOIDCProvider</p>
          */
         public Builder OIDCProviderName(String OIDCProviderName) {
             this.putQueryParameter("OIDCProviderName", OIDCProviderName);

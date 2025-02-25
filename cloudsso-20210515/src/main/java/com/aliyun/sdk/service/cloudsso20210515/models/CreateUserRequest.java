@@ -1,47 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("FirstName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirstName")
     private String firstName;
 
-    @Query
-    @NameInMap("LastName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastName")
     private String lastName;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private CreateUserRequest(Builder builder) {
@@ -152,10 +152,11 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * The description of the user.
-         * <p>
+         * <p>The description of the user.</p>
+         * <p>The description can be up to 1,024 characters in length.</p>
          * 
-         * The description can be up to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>This is a user.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -164,7 +165,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -173,10 +177,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The display name of the user.
-         * <p>
+         * <p>The display name of the user.</p>
+         * <p>The name can be up to 256 characters in length.</p>
          * 
-         * The name can be up to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -185,10 +190,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The email address of the user. The email address must be unique within the directory.
-         * <p>
+         * <p>The email address of the user. The email address must be unique within the directory.</p>
+         * <p>The email address can be up to 128 characters in length.</p>
          * 
-         * The email address can be up to 128 characters in length.
+         * <strong>example:</strong>
+         * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -197,10 +203,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The first name of the user.
-         * <p>
+         * <p>The first name of the user.</p>
+         * <p>The name can be up to 64 characters in length.</p>
          * 
-         * The name can be up to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder firstName(String firstName) {
             this.putQueryParameter("FirstName", firstName);
@@ -209,10 +216,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The last name of the user.
-         * <p>
+         * <p>The last name of the user.</p>
+         * <p>The name can be up to 64 characters in length.</p>
          * 
-         * The name can be up to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>Lee</p>
          */
         public Builder lastName(String lastName) {
             this.putQueryParameter("LastName", lastName);
@@ -221,11 +229,14 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The status of the user. Valid values:
-         * <p>
+         * <p>The status of the user. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The logon of the user is enabled. This is the default value.</li>
+         * <li>Disabled: The logon of the user is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The logon of the user is enabled. This is the default value.
-         * *   Disabled: The logon of the user is disabled.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -234,12 +245,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The name of the user. The name must be unique within the directory. The name cannot be changed.
-         * <p>
+         * <p>The name of the user. The name must be unique within the directory. The name cannot be changed.</p>
+         * <p>The name can contain numbers, letters, and the following special characters: <code>@_-.</code></p>
+         * <p>The name can be up to 64 characters in length.</p>
          * 
-         * The name can contain numbers, letters, and the following special characters: `@_-.`
-         * 
-         * The name can be up to 64 characters in length.
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

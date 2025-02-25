@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExploreUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetExploreUrlResponseBody</p>
  */
 public class GetExploreUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetExploreUrlResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +102,12 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Response parameters
+         * <p>Response parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +115,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt information of the returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +126,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +137,14 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the operation was successful:</p>
+         * <ul>
+         * <li>true: the operation was successful</li>
+         * <li>false: the operation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

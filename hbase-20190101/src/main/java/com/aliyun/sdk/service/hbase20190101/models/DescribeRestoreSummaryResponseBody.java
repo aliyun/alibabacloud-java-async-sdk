@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreSummaryResponseBody</p>
  */
 public class DescribeRestoreSummaryResponseBody extends TeaModel {
-    @NameInMap("HasMoreRestoreRecord")
+    @com.aliyun.core.annotation.NameInMap("HasMoreRestoreRecord")
     private Integer hasMoreRestoreRecord;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rescords")
+    @com.aliyun.core.annotation.NameInMap("Rescords")
     private Rescords rescords;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeRestoreSummaryResponseBody(Builder builder) {
@@ -151,29 +156,35 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreSummaryResponseBody</p>
+     */
     public static class Rescord extends TeaModel {
-        @NameInMap("BulkLoadProcess")
+        @com.aliyun.core.annotation.NameInMap("BulkLoadProcess")
         private String bulkLoadProcess;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("HfileRestoreProcess")
+        @com.aliyun.core.annotation.NameInMap("HfileRestoreProcess")
         private String hfileRestoreProcess;
 
-        @NameInMap("LogProcess")
+        @com.aliyun.core.annotation.NameInMap("LogProcess")
         private String logProcess;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("SchemaProcess")
+        @com.aliyun.core.annotation.NameInMap("SchemaProcess")
         private String schemaProcess;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Rescord(Builder builder) {
@@ -332,9 +343,15 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreSummaryResponseBody</p>
+     */
     public static class Rescords extends TeaModel {
-        @NameInMap("Rescord")
-        private java.util.List < Rescord> rescord;
+        @com.aliyun.core.annotation.NameInMap("Rescord")
+        private java.util.List<Rescord> rescord;
 
         private Rescords(Builder builder) {
             this.rescord = builder.rescord;
@@ -351,17 +368,17 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         /**
          * @return rescord
          */
-        public java.util.List < Rescord> getRescord() {
+        public java.util.List<Rescord> getRescord() {
             return this.rescord;
         }
 
         public static final class Builder {
-            private java.util.List < Rescord> rescord; 
+            private java.util.List<Rescord> rescord; 
 
             /**
              * Rescord.
              */
-            public Builder rescord(java.util.List < Rescord> rescord) {
+            public Builder rescord(java.util.List<Rescord> rescord) {
                 this.rescord = rescord;
                 return this;
             }

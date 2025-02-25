@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogstashPluginsRequest} extends {@link RequestModel}
  *
  * <p>ListLogstashPluginsRequest</p>
  */
 public class ListLogstashPluginsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("source")
     private String source;
 
     private ListLogstashPluginsRequest(Builder builder) {
@@ -113,7 +113,11 @@ public class ListLogstashPluginsRequest extends Request {
         } 
 
         /**
-         * 3
+         * <p>3</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-oew1qbgl****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -122,7 +126,10 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * USER
+         * <p>USER</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstash-filter-clone</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -131,7 +138,10 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -140,7 +150,10 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -149,7 +162,10 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * The description of the plug-in.
+         * <p>The description of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);

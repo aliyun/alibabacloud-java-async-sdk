@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricChannelMembersResponseBody</p>
  */
 public class DescribeFabricChannelMembersResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeFabricChannelMembersResponseBody(Builder builder) {
@@ -112,31 +111,31 @@ public class DescribeFabricChannelMembersResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AcceptTime")
+        @com.aliyun.core.annotation.NameInMap("AcceptTime")
         private String acceptTime;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("InviteTime")
+        @com.aliyun.core.annotation.NameInMap("InviteTime")
         private String inviteTime;
 
-        @NameInMap("OrganizationDescription")
+        @com.aliyun.core.annotation.NameInMap("OrganizationDescription")
         private String organizationDescription;
 
-        @NameInMap("OrganizationDomain")
+        @com.aliyun.core.annotation.NameInMap("OrganizationDomain")
         private String organizationDomain;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("OrganizationName")
+        @com.aliyun.core.annotation.NameInMap("OrganizationName")
         private String organizationName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("WithPeer")
+        @com.aliyun.core.annotation.NameInMap("WithPeer")
         private Boolean withPeer;
 
         private Result(Builder builder) {

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeModifyParameterLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeModifyParameterLogResponseBody</p>
  */
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeModifyParameterLogResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -130,7 +138,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance.
+         * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -138,7 +149,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine version of the instance.
+         * <p>The database engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -146,7 +160,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of parameter modification log entries.
+         * <p>The log entries.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -154,7 +168,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -162,7 +179,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -170,7 +190,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8E88DED-533F-4B3C-9207-731FBF394CCA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +201,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -191,20 +217,26 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeModifyParameterLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyParameterLogResponseBody</p>
+     */
     public static class ParameterChangeLog extends TeaModel {
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("NewParameterValue")
+        @com.aliyun.core.annotation.NameInMap("NewParameterValue")
         private String newParameterValue;
 
-        @NameInMap("OldParameterValue")
+        @com.aliyun.core.annotation.NameInMap("OldParameterValue")
         private String oldParameterValue;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ParameterChangeLog(Builder builder) {
@@ -266,7 +298,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584076066000</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -274,7 +309,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * The new value of the parameter.
+             * <p>The new value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder newParameterValue(String newParameterValue) {
                 this.newParameterValue = newParameterValue;
@@ -282,7 +320,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * The original value of the parameter.
+             * <p>The original value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder oldParameterValue(String oldParameterValue) {
                 this.oldParameterValue = oldParameterValue;
@@ -290,7 +331,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>innodb_stats_sample_pages</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -298,11 +342,14 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the new value specified for the parameter. Valid values:
-             * <p>
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><strong>Applied:</strong> The new value has taken effect.</li>
+             * <li><strong>Syncing:</strong> The new value is being applied and has not taken effect.</li>
+             * </ul>
              * 
-             * *   **Applied:** The new value has taken effect.
-             * *   **Syncing:** The new value is being applied and has not taken effect.
+             * <strong>example:</strong>
+             * <p>Syncing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -316,9 +363,15 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModifyParameterLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyParameterLogResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("ParameterChangeLog")
-        private java.util.List < ParameterChangeLog> parameterChangeLog;
+        @com.aliyun.core.annotation.NameInMap("ParameterChangeLog")
+        private java.util.List<ParameterChangeLog> parameterChangeLog;
 
         private Items(Builder builder) {
             this.parameterChangeLog = builder.parameterChangeLog;
@@ -335,17 +388,17 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         /**
          * @return parameterChangeLog
          */
-        public java.util.List < ParameterChangeLog> getParameterChangeLog() {
+        public java.util.List<ParameterChangeLog> getParameterChangeLog() {
             return this.parameterChangeLog;
         }
 
         public static final class Builder {
-            private java.util.List < ParameterChangeLog> parameterChangeLog; 
+            private java.util.List<ParameterChangeLog> parameterChangeLog; 
 
             /**
              * ParameterChangeLog.
              */
-            public Builder parameterChangeLog(java.util.List < ParameterChangeLog> parameterChangeLog) {
+            public Builder parameterChangeLog(java.util.List<ParameterChangeLog> parameterChangeLog) {
                 this.parameterChangeLog = parameterChangeLog;
                 return this;
             }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkAclsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkAclsResponseBody</p>
  */
 public class DescribeNetworkAclsResponseBody extends TeaModel {
-    @NameInMap("NetworkAcls")
-    private java.util.List < NetworkAcls> networkAcls;
+    @com.aliyun.core.annotation.NameInMap("NetworkAcls")
+    private java.util.List<NetworkAcls> networkAcls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeNetworkAclsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     /**
      * @return networkAcls
      */
-    public java.util.List < NetworkAcls> getNetworkAcls() {
+    public java.util.List<NetworkAcls> getNetworkAcls() {
         return this.networkAcls;
     }
 
@@ -79,22 +84,25 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkAcls> networkAcls; 
+        private java.util.List<NetworkAcls> networkAcls; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
 
         /**
-         * NetworkAcls.
+         * <p>Details of the network ACLs.</p>
          */
-        public Builder networkAcls(java.util.List < NetworkAcls> networkAcls) {
+        public Builder networkAcls(java.util.List<NetworkAcls> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1707FC0-430C-423A-B624-284046B20399</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -131,32 +148,38 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAclsResponseBody</p>
+     */
     public static class EgressAclEntries extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EgressAclEntries(Builder builder) {
@@ -254,7 +277,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CidrBlock.
+             * <p>The destination CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -262,7 +288,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the outbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is EgressAclEntries.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +299,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclEntryId.
+             * <p>The ID of the outbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nae-a2d447uw4tillfvgb****</p>
              */
             public Builder networkAclEntryId(String networkAclEntryId) {
                 this.networkAclEntryId = networkAclEntryId;
@@ -278,7 +310,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclEntryName.
+             * <p>The name of the outbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-2</p>
              */
             public Builder networkAclEntryName(String networkAclEntryName) {
                 this.networkAclEntryName = networkAclEntryName;
@@ -286,7 +321,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>accept</strong>: allows the network traffic.</li>
+             * <li><strong>drop</strong>: blocks the network traffic.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -294,7 +336,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * PortRange.
+             * <p>The destination port range of the outbound rule.</p>
+             * <ul>
+             * <li>If <strong>Protocol</strong> of the outbound rule is set to <strong>all</strong> or <strong>icmp</strong> the port range is <strong>-1/-1</strong>, which indicates all ports.</li>
+             * <li>If <strong>Protocol</strong> of the outbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>-1/-1</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -302,7 +351,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the rule. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -310,7 +362,16 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><strong>icmp</strong>: ICMP.</li>
+             * <li><strong>tcp</strong>: TCP.</li>
+             * <li><strong>udp</strong>: UDP.</li>
+             * <li><strong>all</strong>: all protocols.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -318,7 +379,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>system</strong>: The rule is created by the system.</li>
+             * <li><strong>custom</strong>: The rule is created by a user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -332,32 +400,38 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAclsResponseBody</p>
+     */
     public static class IngressAclEntries extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private IngressAclEntries(Builder builder) {
@@ -455,7 +529,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CidrBlock.
+             * <p>The source CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -463,7 +540,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the inbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is IngressAclEntries.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -471,7 +551,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclEntryId.
+             * <p>The ID of the inbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nae-5dk86arlydmezasw****</p>
              */
             public Builder networkAclEntryId(String networkAclEntryId) {
                 this.networkAclEntryId = networkAclEntryId;
@@ -479,7 +562,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclEntryName.
+             * <p>The name of the inbound rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-3</p>
              */
             public Builder networkAclEntryName(String networkAclEntryName) {
                 this.networkAclEntryName = networkAclEntryName;
@@ -487,7 +573,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>accept</strong>: allows the network traffic.</li>
+             * <li><strong>drop</strong>: blocks the network traffic.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -495,7 +588,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * PortRange.
+             * <p>The destination port range of the inbound rule.</p>
+             * <ul>
+             * <li>If <strong>Protocol</strong> of the inbound rule is set to <strong>all</strong> or <strong>icmp</strong>, the port range is <strong>-1/-1</strong>, which indicates all ports.</li>
+             * <li>If <strong>Protocol</strong> of the inbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>-1/-1</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -503,7 +603,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the rule. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -511,7 +614,16 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><strong>icmp</strong>: ICMP.</li>
+             * <li><strong>tcp</strong>: TCP.</li>
+             * <li><strong>udp</strong>: UDP.</li>
+             * <li><strong>all</strong>: all protocols.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -519,7 +631,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>system</strong>: The rule is created by the system.</li>
+             * <li><strong>custom</strong>: The rule is created by a user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -533,17 +652,23 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAclsResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Resources(Builder builder) {
@@ -596,7 +721,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the edge node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-fuzhou-telecom</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -604,7 +732,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -612,7 +743,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Network</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -620,7 +754,15 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The association status of the resource. Valid values:</p>
+             * <ul>
+             * <li><strong>BINDED</strong>: The resource is associated with the network ACL.</li>
+             * <li><strong>BINDING</strong>: The resource is being associated with the network ACL.</li>
+             * <li><strong>UNBINDING</strong>: The resource is being disassociated from the network ACL.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BINDING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -634,29 +776,35 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNetworkAclsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkAclsResponseBody</p>
+     */
     public static class NetworkAcls extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EgressAclEntries")
-        private java.util.List < EgressAclEntries> egressAclEntries;
+        @com.aliyun.core.annotation.NameInMap("EgressAclEntries")
+        private java.util.List<EgressAclEntries> egressAclEntries;
 
-        @NameInMap("IngressAclEntries")
-        private java.util.List < IngressAclEntries> ingressAclEntries;
+        @com.aliyun.core.annotation.NameInMap("IngressAclEntries")
+        private java.util.List<IngressAclEntries> ingressAclEntries;
 
-        @NameInMap("NetworkAclId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclId")
         private String networkAclId;
 
-        @NameInMap("NetworkAclName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclName")
         private String networkAclName;
 
-        @NameInMap("Resources")
-        private java.util.List < Resources> resources;
+        @com.aliyun.core.annotation.NameInMap("Resources")
+        private java.util.List<Resources> resources;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NetworkAcls(Builder builder) {
@@ -695,14 +843,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * @return egressAclEntries
          */
-        public java.util.List < EgressAclEntries> getEgressAclEntries() {
+        public java.util.List<EgressAclEntries> getEgressAclEntries() {
             return this.egressAclEntries;
         }
 
         /**
          * @return ingressAclEntries
          */
-        public java.util.List < IngressAclEntries> getIngressAclEntries() {
+        public java.util.List<IngressAclEntries> getIngressAclEntries() {
             return this.ingressAclEntries;
         }
 
@@ -723,7 +871,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < Resources> getResources() {
+        public java.util.List<Resources> getResources() {
             return this.resources;
         }
 
@@ -737,15 +885,18 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         public static final class Builder {
             private String creationTime; 
             private String description; 
-            private java.util.List < EgressAclEntries> egressAclEntries; 
-            private java.util.List < IngressAclEntries> ingressAclEntries; 
+            private java.util.List<EgressAclEntries> egressAclEntries; 
+            private java.util.List<IngressAclEntries> ingressAclEntries; 
             private String networkAclId; 
             private String networkAclName; 
-            private java.util.List < Resources> resources; 
+            private java.util.List<Resources> resources; 
             private String status; 
 
             /**
-             * CreationTime.
+             * <p>The time when the network ACL was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-01T06:08:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -753,7 +904,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the network ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is my NetworkAcl.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -761,23 +915,26 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * EgressAclEntries.
+             * <p>Details of the outbound rules.</p>
              */
-            public Builder egressAclEntries(java.util.List < EgressAclEntries> egressAclEntries) {
+            public Builder egressAclEntries(java.util.List<EgressAclEntries> egressAclEntries) {
                 this.egressAclEntries = egressAclEntries;
                 return this;
             }
 
             /**
-             * IngressAclEntries.
+             * <p>Details of the inbound rules.</p>
              */
-            public Builder ingressAclEntries(java.util.List < IngressAclEntries> ingressAclEntries) {
+            public Builder ingressAclEntries(java.util.List<IngressAclEntries> ingressAclEntries) {
                 this.ingressAclEntries = ingressAclEntries;
                 return this;
             }
 
             /**
-             * NetworkAclId.
+             * <p>The ID of the network ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacl-a2do9e413e0spxscd****</p>
              */
             public Builder networkAclId(String networkAclId) {
                 this.networkAclId = networkAclId;
@@ -785,7 +942,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclName.
+             * <p>The name of the network ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-8</p>
              */
             public Builder networkAclName(String networkAclName) {
                 this.networkAclName = networkAclName;
@@ -793,15 +953,22 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Resources.
+             * <p>Details of the associated resources.</p>
              */
-            public Builder resources(java.util.List < Resources> resources) {
+            public Builder resources(java.util.List<Resources> resources) {
                 this.resources = resources;
                 return this;
             }
 
             /**
-             * Status.
+             * <p>The status of the network ACL. Valid values:</p>
+             * <ul>
+             * <li><strong>Available</strong>: The network ACL is available.</li>
+             * <li><strong>Modifying</strong>: The network ACL is being configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;

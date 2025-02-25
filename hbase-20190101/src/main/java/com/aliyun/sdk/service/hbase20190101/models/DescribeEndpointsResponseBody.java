@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEndpointsResponseBody</p>
  */
 public class DescribeEndpointsResponseBody extends TeaModel {
-    @NameInMap("ConnAddrs")
+    @com.aliyun.core.annotation.NameInMap("ConnAddrs")
     private ConnAddrs connAddrs;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("NetType")
+    @com.aliyun.core.annotation.NameInMap("NetType")
     private String netType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeEndpointsResponseBody(Builder builder) {
@@ -151,17 +156,23 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndpointsResponseBody</p>
+     */
     public static class ConnAddrInfo extends TeaModel {
-        @NameInMap("ConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ConnAddr")
         private String connAddr;
 
-        @NameInMap("ConnAddrPort")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrPort")
         private String connAddrPort;
 
-        @NameInMap("ConnType")
+        @com.aliyun.core.annotation.NameInMap("ConnType")
         private String connType;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
         private ConnAddrInfo(Builder builder) {
@@ -252,9 +263,15 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndpointsResponseBody</p>
+     */
     public static class ConnAddrs extends TeaModel {
-        @NameInMap("ConnAddrInfo")
-        private java.util.List < ConnAddrInfo> connAddrInfo;
+        @com.aliyun.core.annotation.NameInMap("ConnAddrInfo")
+        private java.util.List<ConnAddrInfo> connAddrInfo;
 
         private ConnAddrs(Builder builder) {
             this.connAddrInfo = builder.connAddrInfo;
@@ -271,17 +288,17 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         /**
          * @return connAddrInfo
          */
-        public java.util.List < ConnAddrInfo> getConnAddrInfo() {
+        public java.util.List<ConnAddrInfo> getConnAddrInfo() {
             return this.connAddrInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ConnAddrInfo> connAddrInfo; 
+            private java.util.List<ConnAddrInfo> connAddrInfo; 
 
             /**
              * ConnAddrInfo.
              */
-            public Builder connAddrInfo(java.util.List < ConnAddrInfo> connAddrInfo) {
+            public Builder connAddrInfo(java.util.List<ConnAddrInfo> connAddrInfo) {
                 this.connAddrInfo = connAddrInfo;
                 return this;
             }

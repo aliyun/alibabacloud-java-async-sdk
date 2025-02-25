@@ -1,55 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricRuleBlackListRequest} extends {@link RequestModel}
  *
  * <p>DescribeMetricRuleBlackListRequest</p>
  */
 public class DescribeMetricRuleBlackListRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("Ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
     private java.util.List < String > ids;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("IsEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsEnable")
     private Boolean isEnable;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private Integer order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
     private DescribeMetricRuleBlackListRequest(Builder builder) {
@@ -180,7 +180,10 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         } 
 
         /**
-         * The ID of the blacklist policy.
+         * <p>The ID of the blacklist policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -198,10 +201,8 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The IDs of the instances in the blacklist policy.
-         * <p>
-         * 
-         * Valid values of N: 0 to 10.
+         * <p>The IDs of the instances in the blacklist policy.</p>
+         * <p>Valid values of N: 0 to 10.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -210,11 +211,14 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The status of the blacklist policy. Valid values:
-         * <p>
+         * <p>The status of the blacklist policy. Valid values:</p>
+         * <ul>
+         * <li>true: The blacklist policy is enabled.</li>
+         * <li>false: The blacklist policy is disabled.</li>
+         * </ul>
          * 
-         * *   true: The blacklist policy is enabled.
-         * *   false: The blacklist policy is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEnable(Boolean isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -223,10 +227,11 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The name of the blacklist policy.
-         * <p>
+         * <p>The name of the blacklist policy.</p>
+         * <p>This parameter supports fuzzy match.</p>
          * 
-         * This parameter supports fuzzy match.
+         * <strong>example:</strong>
+         * <p>Blacklist-01</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -235,10 +240,11 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The timestamp when the blacklist policy expired.
-         * <p>
+         * <p>The timestamp when the blacklist policy expired.</p>
+         * <p>Unit: milliseconds.</p>
          * 
-         * Unit: milliseconds.
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -247,10 +253,13 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder order(Integer order) {
             this.putQueryParameter("Order", order);
@@ -259,7 +268,10 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The name of the metric.
+         * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,7 +280,10 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+         * <p>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <code>kvstore_standard</code>, <code>kvstore_sharding</code>, and <code>kvstore_splitrw</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,11 +292,14 @@ public class DescribeMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The effective scope of the blacklist policy. Valid values:
-         * <p>
+         * <p>The effective scope of the blacklist policy. Valid values:</p>
+         * <ul>
+         * <li>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</li>
+         * <li>GROUP: The blacklist policy takes effect only within the specified application group.</li>
+         * </ul>
          * 
-         * *   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.
-         * *   GROUP: The blacklist policy takes effect only within the specified application group.
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

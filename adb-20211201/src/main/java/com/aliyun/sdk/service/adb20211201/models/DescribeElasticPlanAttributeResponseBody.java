@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticPlanAttributeResponseBody</p>
  */
 public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
-    @NameInMap("ElasticPlan")
+    @com.aliyun.core.annotation.NameInMap("ElasticPlan")
     private ElasticPlan elasticPlan;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElasticPlanAttributeResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the scaling plan.
+         * <p>The queried scaling plan.</p>
          */
         public Builder elasticPlan(ElasticPlan elasticPlan) {
             this.elasticPlan = elasticPlan;
@@ -58,7 +63,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticPlanAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticPlanAttributeResponseBody</p>
+     */
     public static class ElasticPlan extends TeaModel {
-        @NameInMap("AutoScale")
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("ElasticPlanName")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanName")
         private String elasticPlanName;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TargetSize")
+        @com.aliyun.core.annotation.NameInMap("TargetSize")
         private String targetSize;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ElasticPlan(Builder builder) {
@@ -194,16 +208,13 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether **Proportional Default Scaling for EIUs** is enabled.
-             * <p>
+             * <p>Indicates whether <strong>Default Proportional Scaling for EIUs</strong> is enabled. Valid values: true: Default Proportional Scaling for EIUs is enabled. If you set this parameter to true, storage resources are scaled along with computing resources. false: Default Proportional Scaling for EIUs is not enabled.</p>
+             * <blockquote>
+             * <p> You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster. After you enable a scaling plan of the Default Proportional Scaling for EIUs type, you cannot enable scaling plans of other types.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * true: Proportional Default Scaling for EIUs is enabled. If you set this parameter to true, the amount of storage resources scales along with the computing resources.
-             * 
-             * false: Proportional Default Scaling for EIUs is not enabled.
-             * 
-             * >  You can enable Proportional Default Scaling for EIUs for only a single scaling plan of a cluster.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoScale(Boolean autoScale) {
                 this.autoScale = autoScale;
@@ -211,7 +222,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * A CORN expression that indicates the scaling cycle and time for the scaling plan.
+             * <p>A CORN expression that indicates the scaling cycle and time for the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 20 14 * * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -219,7 +233,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scaling plan.
+             * <p>The name of the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder elasticPlanName(String elasticPlanName) {
                 this.elasticPlanName = elasticPlanName;
@@ -227,7 +244,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scaling plan was enabled.
+             * <p>Indicates whether the scaling plan is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -235,10 +255,13 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the scaling plan.
-             * <p>
+             * <p>The end time of the scaling plan.</p>
+             * <blockquote>
+             * <p> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * </blockquote>
              * 
-             * >  The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2025-01-01T12:01:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -246,7 +269,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group used by the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -254,10 +280,13 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the scaling plan.
-             * <p>
+             * <p>The start time of the scaling plan.</p>
+             * <blockquote>
+             * <p> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * </blockquote>
              * 
-             * >  The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-01-01T12:01:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -265,7 +294,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of elastic resources after scaling.
+             * <p>The amount of elastic resources after scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32ACU</p>
              */
             public Builder targetSize(String targetSize) {
                 this.targetSize = targetSize;
@@ -273,7 +305,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling plan.
+             * <p>The type of the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXECUTOR</p>
              */
             public Builder type(String type) {
                 this.type = type;

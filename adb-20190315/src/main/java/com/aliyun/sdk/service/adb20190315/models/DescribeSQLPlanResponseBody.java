@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLPlanResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLPlanResponseBody</p>
  */
 public class DescribeSQLPlanResponseBody extends TeaModel {
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private Detail detail;
 
-    @NameInMap("OriginInfo")
+    @com.aliyun.core.annotation.NameInMap("OriginInfo")
     private String originInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StageList")
+    @com.aliyun.core.annotation.NameInMap("StageList")
     private java.util.List < StageList> stageList;
 
     private DescribeSQLPlanResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
         private java.util.List < StageList> stageList; 
 
         /**
-         * The execution information about the SQL statement.
+         * <p>The execution information about the SQL statement.</p>
          */
         public Builder detail(Detail detail) {
             this.detail = detail;
@@ -82,7 +82,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The original information about the SQL statement.
+         * <p>The original information about the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;queryId&quot;:&quot;20210527_160443_10581_hdhzr&quot;,&quot;session&quot;:{&quot;queryId&quot;:&quot;20210527_160443_10581_hdhzr&quot;,&quot;hasSharedStage&quot;:false,&quot;parentId&quot;:0}}</p>
          */
         public Builder originInfo(String originInfo) {
             this.originInfo = originInfo;
@@ -90,7 +93,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22D6DEF0-CBC7-4388-A41C-D5FD62******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,7 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The queried plan in different stages.
+         * <p>The queried plan in different stages.</p>
          */
         public Builder stageList(java.util.List < StageList> stageList) {
             this.stageList = stageList;
@@ -111,50 +117,56 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLPlanResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("CPUTime")
+        @com.aliyun.core.annotation.NameInMap("CPUTime")
         private Long CPUTime;
 
-        @NameInMap("ClientIP")
+        @com.aliyun.core.annotation.NameInMap("ClientIP")
         private String clientIP;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("OutputRows")
+        @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
-        @NameInMap("OutputSize")
+        @com.aliyun.core.annotation.NameInMap("OutputSize")
         private Long outputSize;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("PlanningTime")
+        @com.aliyun.core.annotation.NameInMap("PlanningTime")
         private Long planningTime;
 
-        @NameInMap("QueuedTime")
+        @com.aliyun.core.annotation.NameInMap("QueuedTime")
         private Long queuedTime;
 
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private String SQL;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TotalStage")
+        @com.aliyun.core.annotation.NameInMap("TotalStage")
         private Long totalStage;
 
-        @NameInMap("TotalTask")
+        @com.aliyun.core.annotation.NameInMap("TotalTask")
         private Long totalTask;
 
-        @NameInMap("TotalTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTime")
         private Long totalTime;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Detail(Builder builder) {
@@ -306,7 +318,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The total CPU time consumed by all operators on multithreaded servers when the SQL statement is executed. Unit: milliseconds.
+             * <p>The total CPU time consumed by all operators on multithreaded servers when the SQL statement is executed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6100</p>
              */
             public Builder CPUTime(Long CPUTime) {
                 this.CPUTime = CPUTime;
@@ -314,7 +329,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that is used to execute the SQL statement.
+             * <p>The IP address of the client that is used to execute the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.<em><strong>.</strong></em></p>
              */
             public Builder clientIP(String clientIP) {
                 this.clientIP = clientIP;
@@ -322,7 +340,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database on which the SQL statement was executed.
+             * <p>The name of the database on which the SQL statement was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -330,7 +351,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rows generated by the SQL statement.
+             * <p>The total number of rows generated by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -338,7 +362,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of data generated by the SQL statement. Unit: bytes.
+             * <p>The total amount of data generated by the SQL statement. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder outputSize(Long outputSize) {
                 this.outputSize = outputSize;
@@ -346,7 +373,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum memory usage when the SQL statement is executed. Unit: bytes.
+             * <p>The maximum memory usage when the SQL statement is executed. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>441802</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -354,7 +384,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed to generate the execution plan of the SQL statement. Unit: milliseconds.
+             * <p>The amount of time consumed to generate the execution plan of the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder planningTime(Long planningTime) {
                 this.planningTime = planningTime;
@@ -362,7 +395,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time consumed to queue the SQL statement. Unit: milliseconds.
+             * <p>The amount of time consumed to queue the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder queuedTime(Long queuedTime) {
                 this.queuedTime = queuedTime;
@@ -370,7 +406,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT OVERWRITE INTO hdfs_import_external\nSELECT *\nFROM adb_hdfs_import_source</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -378,7 +417,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The execution start time of the SQL statement. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The execution start time of the SQL statement. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1622102683243</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -386,11 +428,14 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The final execution state of the SQL statement. Valid values:
-             * <p>
+             * <p>The final execution state of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li>FINISHED</li>
+             * <li>FAILED</li>
+             * </ul>
              * 
-             * *   FINISHED
-             * *   FAILED
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -398,7 +443,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of stages in the SQL statement.
+             * <p>The total number of stages in the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalStage(Long totalStage) {
                 this.totalStage = totalStage;
@@ -406,7 +454,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks in the SQL statement.
+             * <p>The total number of tasks in the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalTask(Long totalTask) {
                 this.totalTask = totalTask;
@@ -414,7 +465,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of time consumed to execute the SQL statement. Unit: milliseconds.
+             * <p>The total amount of time consumed to execute the SQL statement. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2340</p>
              */
             public Builder totalTime(Long totalTime) {
                 this.totalTime = totalTime;
@@ -422,7 +476,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who submitted the SQL statement.
+             * <p>The name of the user who submitted the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_acc</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -436,53 +493,59 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLPlanResponseBody</p>
+     */
     public static class StageList extends TeaModel {
-        @NameInMap("CPUTimeAvg")
+        @com.aliyun.core.annotation.NameInMap("CPUTimeAvg")
         private Long CPUTimeAvg;
 
-        @NameInMap("CPUTimeMax")
+        @com.aliyun.core.annotation.NameInMap("CPUTimeMax")
         private Long CPUTimeMax;
 
-        @NameInMap("CPUTimeMin")
+        @com.aliyun.core.annotation.NameInMap("CPUTimeMin")
         private Long CPUTimeMin;
 
-        @NameInMap("InputSizeAvg")
+        @com.aliyun.core.annotation.NameInMap("InputSizeAvg")
         private Long inputSizeAvg;
 
-        @NameInMap("InputSizeMax")
+        @com.aliyun.core.annotation.NameInMap("InputSizeMax")
         private Long inputSizeMax;
 
-        @NameInMap("InputSizeMin")
+        @com.aliyun.core.annotation.NameInMap("InputSizeMin")
         private Long inputSizeMin;
 
-        @NameInMap("OperatorCost")
+        @com.aliyun.core.annotation.NameInMap("OperatorCost")
         private Long operatorCost;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("ScanSizeAvg")
+        @com.aliyun.core.annotation.NameInMap("ScanSizeAvg")
         private Long scanSizeAvg;
 
-        @NameInMap("ScanSizeMax")
+        @com.aliyun.core.annotation.NameInMap("ScanSizeMax")
         private Long scanSizeMax;
 
-        @NameInMap("ScanSizeMin")
+        @com.aliyun.core.annotation.NameInMap("ScanSizeMin")
         private Long scanSizeMin;
 
-        @NameInMap("ScanTimeAvg")
+        @com.aliyun.core.annotation.NameInMap("ScanTimeAvg")
         private Long scanTimeAvg;
 
-        @NameInMap("ScanTimeMax")
+        @com.aliyun.core.annotation.NameInMap("ScanTimeMax")
         private Long scanTimeMax;
 
-        @NameInMap("ScanTimeMin")
+        @com.aliyun.core.annotation.NameInMap("ScanTimeMin")
         private Long scanTimeMin;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private Integer stageId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private StageList(Builder builder) {
@@ -643,7 +706,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The average `CPU Time` value on each compute node in the stage. Unit: milliseconds.
+             * <p>The average <code>CPU Time</code> value on each compute node in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5984</p>
              */
             public Builder CPUTimeAvg(Long CPUTimeAvg) {
                 this.CPUTimeAvg = CPUTimeAvg;
@@ -651,7 +717,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum `CPU Time` value on each compute node in the stage. Unit: milliseconds.
+             * <p>The maximum <code>CPU Time</code> value on each compute node in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5984</p>
              */
             public Builder CPUTimeMax(Long CPUTimeMax) {
                 this.CPUTimeMax = CPUTimeMax;
@@ -659,7 +728,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum `CPU Time` value on each compute node in the stage. Unit: milliseconds.
+             * <p>The minimum <code>CPU Time</code> value on each compute node in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47</p>
              */
             public Builder CPUTimeMin(Long CPUTimeMin) {
                 this.CPUTimeMin = CPUTimeMin;
@@ -667,7 +739,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The average amount of input data on each compute node in the stage. Unit: bytes.
+             * <p>The average amount of input data on each compute node in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173</p>
              */
             public Builder inputSizeAvg(Long inputSizeAvg) {
                 this.inputSizeAvg = inputSizeAvg;
@@ -675,7 +750,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of input data on each compute node in the stage. Unit: byte.
+             * <p>The maximum amount of input data on each compute node in the stage. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173</p>
              */
             public Builder inputSizeMax(Long inputSizeMax) {
                 this.inputSizeMax = inputSizeMax;
@@ -683,7 +761,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of input data on each compute node in the stage. Unit: bytes.
+             * <p>The minimum amount of input data on each compute node in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173</p>
              */
             public Builder inputSizeMin(Long inputSizeMin) {
                 this.inputSizeMin = inputSizeMin;
@@ -691,7 +772,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.
+             * <p>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5984</p>
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -699,7 +783,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum memory usage when the SQL statement is executed. Unit: bytes.
+             * <p>The maximum memory usage when the SQL statement is executed. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74208</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -707,7 +794,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The average amount of data scanned by a scan operator on each storage node in the stage. Unit: bytes.
+             * <p>The average amount of data scanned by a scan operator on each storage node in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanSizeAvg(Long scanSizeAvg) {
                 this.scanSizeAvg = scanSizeAvg;
@@ -715,7 +805,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of data scanned by a scan operator on each storage node in the stage. Unit: bytes.
+             * <p>The maximum amount of data scanned by a scan operator on each storage node in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanSizeMax(Long scanSizeMax) {
                 this.scanSizeMax = scanSizeMax;
@@ -723,7 +816,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of data scanned by a scan operator on each storage node in the stage. Unit: bytes.
+             * <p>The minimum amount of data scanned by a scan operator on each storage node in the stage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanSizeMin(Long scanSizeMin) {
                 this.scanSizeMin = scanSizeMin;
@@ -731,7 +827,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The average amount of time consumed by a scan operator to read data on each storage node in the stage. Unit: milliseconds.
+             * <p>The average amount of time consumed by a scan operator to read data on each storage node in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanTimeAvg(Long scanTimeAvg) {
                 this.scanTimeAvg = scanTimeAvg;
@@ -739,7 +838,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of time consumed by a scan operator to read data on each storage node in the stage. Unit: milliseconds.
+             * <p>The maximum amount of time consumed by a scan operator to read data on each storage node in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanTimeMax(Long scanTimeMax) {
                 this.scanTimeMax = scanTimeMax;
@@ -747,7 +849,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of time consumed by a scan operator to read data on each storage node in the stage. Unit: milliseconds.
+             * <p>The minimum amount of time consumed by a scan operator to read data on each storage node in the stage. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanTimeMin(Long scanTimeMin) {
                 this.scanTimeMin = scanTimeMin;
@@ -755,7 +860,10 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The stage ID.
+             * <p>The stage ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder stageId(Integer stageId) {
                 this.stageId = stageId;
@@ -763,13 +871,16 @@ public class DescribeSQLPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The final execution state of the stage. Valid values:
-             * <p>
+             * <p>The final execution state of the stage. Valid values:</p>
+             * <ul>
+             * <li>FINISHED</li>
+             * <li>CANCELED</li>
+             * <li>ABORTED</li>
+             * <li>FAILED</li>
+             * </ul>
              * 
-             * *   FINISHED
-             * *   CANCELED
-             * *   ABORTED
-             * *   FAILED
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder state(String state) {
                 this.state = state;

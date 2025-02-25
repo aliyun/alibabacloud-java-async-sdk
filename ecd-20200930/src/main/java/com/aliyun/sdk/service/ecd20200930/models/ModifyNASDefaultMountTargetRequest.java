@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNASDefaultMountTargetRequest} extends {@link RequestModel}
  *
  * <p>ModifyNASDefaultMountTargetRequest</p>
  */
 public class ModifyNASDefaultMountTargetRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("MountTargetDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mountTargetDomain;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyNASDefaultMountTargetRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         } 
 
         /**
-         * The ID of the NAS file system.
+         * <p>The ID of the NAS file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -94,7 +103,11 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * <p>The domain name of the mount target.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bf744****-xo***.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -103,7 +116,11 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifyNASDefaultMountTarget.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

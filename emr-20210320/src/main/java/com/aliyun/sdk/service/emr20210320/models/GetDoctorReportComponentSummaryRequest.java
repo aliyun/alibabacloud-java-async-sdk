@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDoctorReportComponentSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetDoctorReportComponentSummaryRequest</p>
  */
 public class GetDoctorReportComponentSummaryRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ComponentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String componentType;
 
-    @Query
-    @NameInMap("DateTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dateTime;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private GetDoctorReportComponentSummaryRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>Cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +118,19 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * component type
+         * <p>Select component filter type. Values: </p>
+         * <ul>
+         * <li>compute </li>
+         * <li>hive</li>
+         * <li>hdfs</li>
+         * <li>yarn</li>
+         * <li>oss</li>
+         * <li>hbase</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
          */
         public Builder componentType(String componentType) {
             this.putQueryParameter("ComponentType", componentType);
@@ -118,7 +139,11 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * dateTime for specify report
+         * <p>Report date.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -127,7 +152,11 @@ public class GetDoctorReportComponentSummaryRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>Region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

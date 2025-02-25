@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFpShotDBResponseBody} extends {@link TeaModel}
  *
  * <p>ListFpShotDBResponseBody</p>
  */
 public class ListFpShotDBResponseBody extends TeaModel {
-    @NameInMap("FpShotDBList")
+    @com.aliyun.core.annotation.NameInMap("FpShotDBList")
     private FpShotDBList fpShotDBList;
 
-    @NameInMap("NonExistIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistIds")
     private NonExistIds nonExistIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFpShotDBResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListFpShotDBResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FpShotDBList.
+         * <p>The media fingerprint libraries.</p>
          */
         public Builder fpShotDBList(FpShotDBList fpShotDBList) {
             this.fpShotDBList = fpShotDBList;
@@ -70,7 +70,7 @@ public class ListFpShotDBResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistIds.
+         * <p>The IDs of the media fingerprint libraries that do not exist.</p>
          */
         public Builder nonExistIds(NonExistIds nonExistIds) {
             this.nonExistIds = nonExistIds;
@@ -78,7 +78,10 @@ public class ListFpShotDBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +94,26 @@ public class ListFpShotDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFpShotDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFpShotDBResponseBody</p>
+     */
     public static class FpShotDB extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FpDBId")
+        @com.aliyun.core.annotation.NameInMap("FpDBId")
         private String fpDBId;
 
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private Integer modelId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private FpShotDB(Builder builder) {
@@ -166,7 +175,10 @@ public class ListFpShotDBResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Description.
+             * <p>The description of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The library is a text fingerprint library.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +186,10 @@ public class ListFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * FpDBId.
+             * <p>The ID of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder fpDBId(String fpDBId) {
                 this.fpDBId = fpDBId;
@@ -182,7 +197,10 @@ public class ListFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * <p>The model ID of the media fingerprint library. A value of <strong>11</strong> indicates that the library is a text fingerprint library. A value of <strong>12</strong> indicates that the library is a video fingerprint library. A value of <strong>13</strong> indicates that the library is an audio fingerprint library. A value of <strong>14</strong> indicates that the library is an image fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder modelId(Integer modelId) {
                 this.modelId = modelId;
@@ -190,7 +208,10 @@ public class ListFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +219,16 @@ public class ListFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the media fingerprint library. Default value: <strong>offline</strong>. ****Valid values:</p>
+             * <ul>
+             * <li><strong>offline</strong>: The media fingerprint library is offline.</li>
+             * <li><strong>active</strong>: The media fingerprint library is online.</li>
+             * <li><strong>paused</strong>: The media fingerprint library is paused.</li>
+             * <li><strong>deleted</strong>: The media fingerprint library is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -212,8 +242,14 @@ public class ListFpShotDBResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFpShotDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFpShotDBResponseBody</p>
+     */
     public static class FpShotDBList extends TeaModel {
-        @NameInMap("FpShotDB")
+        @com.aliyun.core.annotation.NameInMap("FpShotDB")
         private java.util.List < FpShotDB> fpShotDB;
 
         private FpShotDBList(Builder builder) {
@@ -253,8 +289,14 @@ public class ListFpShotDBResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFpShotDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFpShotDBResponseBody</p>
+     */
     public static class NonExistIds extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistIds(Builder builder) {

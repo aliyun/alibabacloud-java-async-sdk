@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecretsResponseBody</p>
  */
 public class ListSecretsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private ListSecretsResponseBody(Builder builder) {
@@ -110,13 +115,16 @@ public class ListSecretsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,7 +132,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -132,11 +140,14 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Take note of the following rules:
-         * <p>
+         * <p>The error code returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * </ul>
          * 
-         * *   If the call is successful, the **ErrorCode** parameter is not returned.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,11 +155,14 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. Take note of the following rules:
-         * <p>
+         * <p>The returned message. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **success** is returned.
-         * *   If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +170,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,11 +181,14 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -176,7 +196,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -189,11 +212,17 @@ public class ListSecretsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class RelateApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
         private RelateApps(Builder builder) {
@@ -228,7 +257,10 @@ public class ListSecretsResponseBody extends TeaModel {
             private String appName; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -236,7 +268,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -250,26 +285,32 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class Secrets extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("RelateApps")
-        private java.util.List < RelateApps> relateApps;
+        @com.aliyun.core.annotation.NameInMap("RelateApps")
+        private java.util.List<RelateApps> relateApps;
 
-        @NameInMap("SecretId")
+        @com.aliyun.core.annotation.NameInMap("SecretId")
         private Long secretId;
 
-        @NameInMap("SecretName")
+        @com.aliyun.core.annotation.NameInMap("SecretName")
         private String secretName;
 
-        @NameInMap("SecretType")
+        @com.aliyun.core.annotation.NameInMap("SecretType")
         private String secretType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Secrets(Builder builder) {
@@ -307,7 +348,7 @@ public class ListSecretsResponseBody extends TeaModel {
         /**
          * @return relateApps
          */
-        public java.util.List < RelateApps> getRelateApps() {
+        public java.util.List<RelateApps> getRelateApps() {
             return this.relateApps;
         }
 
@@ -342,14 +383,17 @@ public class ListSecretsResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String namespaceId; 
-            private java.util.List < RelateApps> relateApps; 
+            private java.util.List<RelateApps> relateApps; 
             private Long secretId; 
             private String secretName; 
             private String secretType; 
             private Long updateTime; 
 
             /**
-             * The time when the Secret was created.
+             * <p>The time when the Secret was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593760185111</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -357,7 +401,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -365,15 +412,18 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The associated applications.
+             * <p>The associated applications.</p>
              */
-            public Builder relateApps(java.util.List < RelateApps> relateApps) {
+            public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
                 return this;
             }
 
             /**
-             * The Secret ID.
+             * <p>The Secret ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder secretId(Long secretId) {
                 this.secretId = secretId;
@@ -381,7 +431,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The Secret name.
+             * <p>The Secret name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-auth</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -389,10 +442,11 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The Secret type.
-             * <p>
+             * <p>The Secret type.</p>
+             * <p>Set the value to <strong>kubernetes.io/dockerconfigjson</strong>. The value indicates the secret for the username and password of the image repository and is used for authentication when images are pulled during application deployment.</p>
              * 
-             * Set the value to **kubernetes.io/dockerconfigjson**. The value indicates the secret for the username and password of the image repository and is used for authentication when images are pulled during application deployment.
+             * <strong>example:</strong>
+             * <p>kubernetes.io/dockerconfigjson</p>
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
@@ -400,7 +454,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Secret was updated.
+             * <p>The time when the Secret was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593760185111</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -414,9 +471,15 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Secrets")
-        private java.util.List < Secrets> secrets;
+        @com.aliyun.core.annotation.NameInMap("Secrets")
+        private java.util.List<Secrets> secrets;
 
         private Data(Builder builder) {
             this.secrets = builder.secrets;
@@ -433,17 +496,17 @@ public class ListSecretsResponseBody extends TeaModel {
         /**
          * @return secrets
          */
-        public java.util.List < Secrets> getSecrets() {
+        public java.util.List<Secrets> getSecrets() {
             return this.secrets;
         }
 
         public static final class Builder {
-            private java.util.List < Secrets> secrets; 
+            private java.util.List<Secrets> secrets; 
 
             /**
-             * The Secrets.
+             * <p>The Secrets.</p>
              */
-            public Builder secrets(java.util.List < Secrets> secrets) {
+            public Builder secrets(java.util.List<Secrets> secrets) {
                 this.secrets = secrets;
                 return this;
             }

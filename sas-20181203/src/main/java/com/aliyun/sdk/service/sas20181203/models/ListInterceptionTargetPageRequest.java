@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterceptionTargetPageRequest} extends {@link RequestModel}
  *
  * <p>ListInterceptionTargetPageRequest</p>
  */
 public class ListInterceptionTargetPageRequest extends Request {
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("ImageList")
-    private java.util.List < String > imageList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageList")
+    private java.util.List<String> imageList;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("TagList")
-    private java.util.List < String > tagList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    private java.util.List<String> tagList;
 
-    @Query
-    @NameInMap("TargetName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetName")
     private String targetName;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private ListInterceptionTargetPageRequest(Builder builder) {
@@ -86,7 +91,7 @@ public class ListInterceptionTargetPageRequest extends Request {
     /**
      * @return imageList
      */
-    public java.util.List < String > getImageList() {
+    public java.util.List<String> getImageList() {
         return this.imageList;
     }
 
@@ -107,7 +112,7 @@ public class ListInterceptionTargetPageRequest extends Request {
     /**
      * @return tagList
      */
-    public java.util.List < String > getTagList() {
+    public java.util.List<String> getTagList() {
         return this.tagList;
     }
 
@@ -128,10 +133,10 @@ public class ListInterceptionTargetPageRequest extends Request {
     public static final class Builder extends Request.Builder<ListInterceptionTargetPageRequest, Builder> {
         private String appName; 
         private Integer currentPage; 
-        private java.util.List < String > imageList; 
+        private java.util.List<String> imageList; 
         private String namespace; 
         private Integer pageSize; 
-        private java.util.List < String > tagList; 
+        private java.util.List<String> tagList; 
         private String targetName; 
         private String targetType; 
 
@@ -152,7 +157,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         } 
 
         /**
-         * The name of the application to which the network object belongs.
+         * <p>The name of the application to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>frontend</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -161,7 +169,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,16 +181,19 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The images of the network object.
+         * <p>The images of the network object.</p>
          */
-        public Builder imageList(java.util.List < String > imageList) {
+        public Builder imageList(java.util.List<String> imageList) {
             this.putQueryParameter("ImageList", imageList);
             this.imageList = imageList;
             return this;
         }
 
         /**
-         * The namespace to which the network object belongs.
+         * <p>The namespace to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -188,10 +202,13 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,16 +217,19 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The labels specified for the network object.
+         * <p>The labels specified for the network object.</p>
          */
-        public Builder tagList(java.util.List < String > tagList) {
+        public Builder tagList(java.util.List<String> tagList) {
             this.putQueryParameter("TagList", tagList);
             this.tagList = tagList;
             return this;
         }
 
         /**
-         * The name of the network object.
+         * <p>The name of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-test-obj-0****</p>
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -218,10 +238,13 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The type of the network object. Valid values:
-         * <p>
+         * <p>The type of the network object. Valid values:</p>
+         * <ul>
+         * <li>IMAGE</li>
+         * </ul>
          * 
-         * *   IMAGE
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

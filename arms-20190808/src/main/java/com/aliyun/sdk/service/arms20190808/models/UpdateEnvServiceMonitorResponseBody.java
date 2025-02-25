@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvServiceMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEnvServiceMonitorResponseBody</p>
  */
 public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateEnvServiceMonitorResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +125,17 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateEnvServiceMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateEnvServiceMonitorResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("MatchedMsg")
+        @com.aliyun.core.annotation.NameInMap("MatchedMsg")
         private String matchedMsg;
 
-        @NameInMap("MatchedTargetCount")
+        @com.aliyun.core.annotation.NameInMap("MatchedTargetCount")
         private String matchedTargetCount;
 
         private Data(Builder builder) {
@@ -150,7 +170,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
             private String matchedTargetCount; 
 
             /**
-             * Indicates whether targets are matched.
+             * <p>Indicates whether targets are matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Match successful.</p>
              */
             public Builder matchedMsg(String matchedMsg) {
                 this.matchedMsg = matchedMsg;
@@ -158,7 +181,10 @@ public class UpdateEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The number of matched targets.
+             * <p>The number of matched targets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchedTargetCount(String matchedTargetCount) {
                 this.matchedTargetCount = matchedTargetCount;

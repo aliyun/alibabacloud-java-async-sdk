@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMultiAccountResourceGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListMultiAccountResourceGroupsRequest</p>
  */
 public class ListMultiAccountResourceGroupsRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
     private java.util.List < String > resourceGroupIds;
 
     private ListMultiAccountResourceGroupsRequest(Builder builder) {
@@ -97,7 +97,11 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the management account or member of the resource directory.
+         * <p>The ID of the management account or member of the resource directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1394339739****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -106,10 +110,11 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <p>Maximum value: 100. Default value: 10.</p>
          * 
-         * Maximum value: 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -118,7 +123,10 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAS2Nboi3t4xGrdlG5/Ks/Q1xPG9jzviYEuZydevXIkgF</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -127,7 +135,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of resource groups.
+         * <p>The IDs of resource groups.</p>
          */
         public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);

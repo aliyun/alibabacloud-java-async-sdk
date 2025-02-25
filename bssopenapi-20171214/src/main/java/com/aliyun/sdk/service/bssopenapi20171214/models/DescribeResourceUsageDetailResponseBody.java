@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceUsageDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceUsageDetailResponseBody</p>
  */
 public class DescribeResourceUsageDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeResourceUsageDetailResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,74 +148,80 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceUsageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceUsageDetailResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private String capacityUnit;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeductQuantity")
+        @com.aliyun.core.annotation.NameInMap("DeductQuantity")
         private Float deductQuantity;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ImageType")
+        @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("PostpaidCost")
+        @com.aliyun.core.annotation.NameInMap("PostpaidCost")
         private String postpaidCost;
 
-        @NameInMap("PotentialSavedCost")
+        @com.aliyun.core.annotation.NameInMap("PotentialSavedCost")
         private String potentialSavedCost;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("ReservationCost")
+        @com.aliyun.core.annotation.NameInMap("ReservationCost")
         private String reservationCost;
 
-        @NameInMap("ResourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
 
-        @NameInMap("SavedCost")
+        @com.aliyun.core.annotation.NameInMap("SavedCost")
         private String savedCost;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusName")
+        @com.aliyun.core.annotation.NameInMap("StatusName")
         private String statusName;
 
-        @NameInMap("TotalQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalQuantity")
         private Float totalQuantity;
 
-        @NameInMap("UsagePercentage")
+        @com.aliyun.core.annotation.NameInMap("UsagePercentage")
         private Float usagePercentage;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private Items(Builder builder) {
@@ -422,7 +445,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The unit that is used to measure the resources deducted from deduction plans.
+             * <p>The unit that is used to measure the resources that are deducted.</p>
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -430,7 +453,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The currency in which deduction plans were priced.
+             * <p>The type of the currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -438,7 +464,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the resources deducted from deduction plans.
+             * <p>The amount of the deducted resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -446,7 +475,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range in which the usage details were queried.
+             * <p>The end of the time range in which the usage details were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 01:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -454,7 +486,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system.
+             * <p>The operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -462,7 +497,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of a deduction plan.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.t5-lc2m1.nano</p>
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -470,7 +508,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The equivalent of pay-as-you-go costs.
+             * <p>The equivalent of pay-as-you-go costs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.06</p>
              */
             public Builder postpaidCost(String postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -478,7 +519,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The potential net savings.
+             * <p>The potential net savings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.13</p>
              */
             public Builder potentialSavedCost(String potentialSavedCost) {
                 this.potentialSavedCost = potentialSavedCost;
@@ -486,7 +530,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of deduction plans.
+             * <p>The number of deduction plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder quantity(Long quantity) {
                 this.quantity = quantity;
@@ -494,7 +541,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region.
+             * <p>The region.</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -502,7 +549,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the region.
+             * <p>The code of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-dg-a01</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -510,7 +560,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The fee of purchased deduction plans.
+             * <p>The fee of the deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reservationCost(String reservationCost) {
                 this.reservationCost = reservationCost;
@@ -518,7 +571,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of a deduction plan.
+             * <p>The ID of the deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecsri-bp147nnfz21225k9mpix00</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -526,7 +582,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The net savings.
+             * <p>The net savings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.06</p>
              */
             public Builder savedCost(String savedCost) {
                 this.savedCost = savedCost;
@@ -534,7 +593,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range in which the usage details were queried.
+             * <p>The beginning of the time range in which the usage details were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -542,7 +604,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the deduction plan.
+             * <p>The status of the deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Valid</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -550,7 +615,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the state.
+             * <p>The name of the status.</p>
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -558,7 +623,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of deduction plans.
+             * <p>The total capacity of the deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalQuantity(Float totalQuantity) {
                 this.totalQuantity = totalQuantity;
@@ -566,7 +634,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The usage of deduction plans.
+             * <p>The usage rate of the deduction plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -574,7 +645,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123745698925000</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -582,7 +656,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -590,7 +667,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the zone.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -598,7 +678,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * <p>The code of the zone.</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -612,17 +692,23 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceUsageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceUsageDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -643,7 +729,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -669,21 +755,24 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
             /**
-             * The data entries.
+             * <p>The data entries.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -691,7 +780,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the next page.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -699,7 +791,10 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

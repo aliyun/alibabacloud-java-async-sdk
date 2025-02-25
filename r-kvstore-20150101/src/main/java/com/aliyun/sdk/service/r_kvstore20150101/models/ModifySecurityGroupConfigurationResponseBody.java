@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityGroupConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySecurityGroupConfigurationResponseBody</p>
  */
 public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifySecurityGroupConfigurationResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>147CAC09-E8C6-43F8-9599-982A43D6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

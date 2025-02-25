@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSiteMonitorAttributeResponseBody</p>
  */
 public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MetricRules")
+    @com.aliyun.core.annotation.NameInMap("MetricRules")
     private MetricRules metricRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SiteMonitors")
+    @com.aliyun.core.annotation.NameInMap("SiteMonitors")
     private SiteMonitors siteMonitors;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSiteMonitorAttributeResponseBody(Builder builder) {
@@ -98,10 +98,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +112,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the alert rules that are configured for the site monitoring task.
+         * <p>The information of the alert rules that are configured for the site monitoring task.</p>
          */
         public Builder metricRules(MetricRules metricRules) {
             this.metricRules = metricRules;
@@ -125,7 +131,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D17DF650-7EBD-54D0-903A-1D4E624D7402</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +142,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the site monitoring task.
+         * <p>The details of the site monitoring task.</p>
          */
         public Builder siteMonitors(SiteMonitors siteMonitors) {
             this.siteMonitors = siteMonitors;
@@ -141,11 +150,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,53 +170,59 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class MetricRule extends TeaModel {
-        @NameInMap("ActionEnable")
+        @com.aliyun.core.annotation.NameInMap("ActionEnable")
         private String actionEnable;
 
-        @NameInMap("AlarmActions")
+        @com.aliyun.core.annotation.NameInMap("AlarmActions")
         private String alarmActions;
 
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private String dimensions;
 
-        @NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private String evaluationCount;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("OkActions")
+        @com.aliyun.core.annotation.NameInMap("OkActions")
         private String okActions;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("StateValue")
+        @com.aliyun.core.annotation.NameInMap("StateValue")
         private String stateValue;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
         private MetricRule(Builder builder) {
@@ -365,11 +383,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String threshold; 
 
             /**
-             * Indicates whether the alert rule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: The alert rule is enabled.</li>
+             * <li>false: The alert rule is disabled.</li>
+             * </ul>
              * 
-             * *   true: The alert rule is enabled.
-             * *   false: The alert rule is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder actionEnable(String actionEnable) {
                 this.actionEnable = actionEnable;
@@ -377,7 +398,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact group to which alert notifications are sent.
+             * <p>The alert contact group to which alert notifications are sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudMonitor</p>
              */
             public Builder alarmActions(String alarmActions) {
                 this.alarmActions = alarmActions;
@@ -385,21 +409,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The operator that is used to compare the metric value with the threshold in the alert rule. Valid values:
-             * <p>
+             * <p>The operator that is used to compare the metric value with the threshold in the alert rule. Valid values:</p>
+             * <ul>
+             * <li><code>&gt;=</code></li>
+             * <li><code>&gt;</code></li>
+             * <li><code>&lt;=</code></li>
+             * <li><code>&lt;</code></li>
+             * <li><code>=</code></li>
+             * <li><code>!=</code></li>
+             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday</li>
+             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * </ul>
              * 
-             * *   `>=`
-             * *   `>`
-             * *   `<=`
-             * *   `<`
-             * *   `=`
-             * *   `!=`
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+             * <strong>example:</strong>
+             * <p>GreaterThanYesterday</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -407,7 +434,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension of the alert rule.
+             * <p>The dimension of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;taskId&quot;: &quot;cc641dff-c19d-45f3-ad0a-818a0c4f****&quot; }]</p>
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -415,7 +445,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.
+             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder evaluationCount(String evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -423,7 +456,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The expression that is used to trigger alerts.
+             * <p>The expression that is used to trigger alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$Availability=30</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -431,12 +467,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The alert severity. Valid values:
-             * <p>
+             * <p>The alert severity. Valid values:</p>
+             * <ul>
+             * <li>1: critical</li>
+             * <li>2: warning</li>
+             * <li>3: information</li>
+             * </ul>
              * 
-             * *   1: critical
-             * *   2: warning
-             * *   3: information
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -444,7 +483,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The metric name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Availability</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -452,10 +494,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the cloud service.
-             * <p>
+             * <p>The namespace of the cloud service.</p>
+             * <p>The value is in the following format: acs_service name.</p>
              * 
-             * The value is in the following format: acs_service name.
+             * <strong>example:</strong>
+             * <p>acs_networkmonitor</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -463,7 +506,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact group that receives alert notifications.
+             * <p>The alert contact group that receives alert notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[ &quot;CloudMonitor&quot;]</p>
              */
             public Builder okActions(String okActions) {
                 this.okActions = okActions;
@@ -471,10 +517,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval. The value is the same as the interval at which metric data is reported. Unit: seconds.
-             * <p>
+             * <p>The time interval. The value is the same as the interval at which metric data is reported. Unit: seconds.</p>
+             * <blockquote>
+             * <p> If you specify a statistical period for the alert rule, data is queried based on the statistical period.</p>
+             * </blockquote>
              * 
-             * >  If you specify a statistical period for the alert rule, data is queried based on the statistical period.
+             * <strong>example:</strong>
+             * <p>15s</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -482,7 +531,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bf071ae_7b7aec3817b0fdf****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -490,7 +542,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert rule.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -498,11 +553,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The alert status. Valid values:
-             * <p>
+             * <p>The alert status. Valid values:</p>
+             * <ul>
+             * <li>OK: The alert rule has no active alerts.</li>
+             * <li>ALARM: The alert rule has active alerts.</li>
+             * </ul>
              * 
-             * *   OK: The alert rule has no active alerts.
-             * *   ALARM: The alert rule has active alerts.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder stateValue(String stateValue) {
                 this.stateValue = stateValue;
@@ -510,14 +568,17 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical method of the alert rule. Valid values:
-             * <p>
+             * <p>The statistical method of the alert rule. Valid values:</p>
+             * <ul>
+             * <li>Availability: the percentage of available detection points</li>
+             * <li>AvailableNumber: the number of available detection points</li>
+             * <li>ErrorCodeMaximum: a status code for an alert</li>
+             * <li>ErrorCodeMinimum: all status codes for a set of alerts</li>
+             * <li>Average: response time</li>
+             * </ul>
              * 
-             * *   Availability: the percentage of available detection points
-             * *   AvailableNumber: the number of available detection points
-             * *   ErrorCodeMaximum: a status code for an alert
-             * *   ErrorCodeMinimum: all status codes for a set of alerts
-             * *   Average: response time
+             * <strong>example:</strong>
+             * <p>Availability</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -525,7 +586,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The alert threshold.
+             * <p>The alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -539,8 +603,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class MetricRules extends TeaModel {
-        @NameInMap("MetricRule")
+        @com.aliyun.core.annotation.NameInMap("MetricRule")
         private java.util.List < MetricRule> metricRule;
 
         private MetricRules(Builder builder) {
@@ -580,8 +650,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class Days extends TeaModel {
-        @NameInMap("days")
+        @com.aliyun.core.annotation.NameInMap("days")
         private java.util.List < Integer > days;
 
         private Days(Builder builder) {
@@ -621,17 +697,23 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class CustomSchedule extends TeaModel {
-        @NameInMap("days")
+        @com.aliyun.core.annotation.NameInMap("days")
         private Days days;
 
-        @NameInMap("end_hour")
+        @com.aliyun.core.annotation.NameInMap("end_hour")
         private Integer endHour;
 
-        @NameInMap("start_hour")
+        @com.aliyun.core.annotation.NameInMap("start_hour")
         private Integer startHour;
 
-        @NameInMap("time_zone")
+        @com.aliyun.core.annotation.NameInMap("time_zone")
         private String timeZone;
 
         private CustomSchedule(Builder builder) {
@@ -722,24 +804,34 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class IspCity extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
 
         private IspCity(Builder builder) {
             this.city = builder.city;
             this.cityName = builder.cityName;
             this.isp = builder.isp;
             this.ispName = builder.ispName;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -778,14 +870,25 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.ispName;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String city; 
             private String cityName; 
             private String isp; 
             private String ispName; 
+            private String type; 
 
             /**
-             * The city ID.
+             * <p>The city ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>738</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -793,7 +896,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The city name.
+             * <p>The city name.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -801,7 +904,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The carrier ID.
+             * <p>The carrier ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -809,10 +915,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The carrier name.
+             * <p>The carrier name.</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
+                return this;
+            }
+
+            /**
+             * <p>探测点网络类型。取值：
+             * IDC: IDC机房
+             * LASTMILE: 网民家宽
+             * MOBILE: 移动蜂窝网</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDC</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
@@ -823,8 +943,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class IspCities extends TeaModel {
-        @NameInMap("IspCity")
+        @com.aliyun.core.annotation.NameInMap("IspCity")
         private java.util.List < IspCity> ispCity;
 
         private IspCities(Builder builder) {
@@ -864,17 +990,23 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class Assertions extends TeaModel {
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("property")
+        @com.aliyun.core.annotation.NameInMap("property")
         private String property;
 
-        @NameInMap("target")
+        @com.aliyun.core.annotation.NameInMap("target")
         private String target;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Assertions(Builder builder) {
@@ -965,8 +1097,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class OptionJsonAssertions extends TeaModel {
-        @NameInMap("assertions")
+        @com.aliyun.core.annotation.NameInMap("assertions")
         private java.util.List < Assertions> assertions;
 
         private OptionJsonAssertions(Builder builder) {
@@ -1006,8 +1144,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class BlockedUrlList extends TeaModel {
-        @NameInMap("blocked_url_list")
+        @com.aliyun.core.annotation.NameInMap("blocked_url_list")
         private java.util.List < String > blockedUrlList;
 
         private BlockedUrlList(Builder builder) {
@@ -1047,8 +1191,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class BrowserHeaders extends TeaModel {
-        @NameInMap("browser_headers")
+        @com.aliyun.core.annotation.NameInMap("browser_headers")
         private java.util.List < java.util.Map<String, ?>> browserHeaders;
 
         private BrowserHeaders(Builder builder) {
@@ -1088,8 +1238,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class BrowserHosts extends TeaModel {
-        @NameInMap("browser_hosts")
+        @com.aliyun.core.annotation.NameInMap("browser_hosts")
         private java.util.List < String > browserHosts;
 
         private BrowserHosts(Builder builder) {
@@ -1129,11 +1285,17 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class BrowserInfo extends TeaModel {
-        @NameInMap("browser")
+        @com.aliyun.core.annotation.NameInMap("browser")
         private String browser;
 
-        @NameInMap("device")
+        @com.aliyun.core.annotation.NameInMap("device")
         private String device;
 
         private BrowserInfo(Builder builder) {
@@ -1190,8 +1352,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class OptionJsonBrowserInfo extends TeaModel {
-        @NameInMap("browser_info")
+        @com.aliyun.core.annotation.NameInMap("browser_info")
         private java.util.List < BrowserInfo> browserInfo;
 
         private OptionJsonBrowserInfo(Builder builder) {
@@ -1231,8 +1399,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class ExpectExistString extends TeaModel {
-        @NameInMap("expect_exist_string")
+        @com.aliyun.core.annotation.NameInMap("expect_exist_string")
         private java.util.List < String > expectExistString;
 
         private ExpectExistString(Builder builder) {
@@ -1272,8 +1446,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class ExpectNonExistString extends TeaModel {
-        @NameInMap("expect_non_exist_string")
+        @com.aliyun.core.annotation.NameInMap("expect_non_exist_string")
         private java.util.List < String > expectNonExistString;
 
         private ExpectNonExistString(Builder builder) {
@@ -1313,8 +1493,61 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class QuicTarget extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("quic_target")
+        private java.util.List < String > quicTarget;
+
+        private QuicTarget(Builder builder) {
+            this.quicTarget = builder.quicTarget;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QuicTarget create() {
+            return builder().build();
+        }
+
+        /**
+         * @return quicTarget
+         */
+        public java.util.List < String > getQuicTarget() {
+            return this.quicTarget;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > quicTarget; 
+
+            /**
+             * quic_target.
+             */
+            public Builder quicTarget(java.util.List < String > quicTarget) {
+                this.quicTarget = quicTarget;
+                return this;
+            }
+
+            public QuicTarget build() {
+                return new QuicTarget(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class TrafficHijackElementBlacklist extends TeaModel {
-        @NameInMap("traffic_hijack_element_blacklist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_blacklist")
         private java.util.List < String > trafficHijackElementBlacklist;
 
         private TrafficHijackElementBlacklist(Builder builder) {
@@ -1354,8 +1587,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class TrafficHijackElementWhitelist extends TeaModel {
-        @NameInMap("traffic_hijack_element_whitelist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_whitelist")
         private java.util.List < String > trafficHijackElementWhitelist;
 
         private TrafficHijackElementWhitelist(Builder builder) {
@@ -1395,134 +1634,164 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class OptionJson extends TeaModel {
-        @NameInMap("assertions")
+        @com.aliyun.core.annotation.NameInMap("assertions")
         private OptionJsonAssertions assertions;
 
-        @NameInMap("attempts")
+        @com.aliyun.core.annotation.NameInMap("attempts")
         private Long attempts;
 
-        @NameInMap("authentication")
+        @com.aliyun.core.annotation.NameInMap("authentication")
         private Integer authentication;
 
-        @NameInMap("blocked_url_list")
+        @com.aliyun.core.annotation.NameInMap("blocked_url_list")
         private BlockedUrlList blockedUrlList;
 
-        @NameInMap("browser_headers")
+        @com.aliyun.core.annotation.NameInMap("browser_headers")
         private BrowserHeaders browserHeaders;
 
-        @NameInMap("browser_hosts")
+        @com.aliyun.core.annotation.NameInMap("browser_hosts")
         private BrowserHosts browserHosts;
 
-        @NameInMap("browser_info")
+        @com.aliyun.core.annotation.NameInMap("browser_info")
         private OptionJsonBrowserInfo browserInfo;
 
-        @NameInMap("browser_insecure")
+        @com.aliyun.core.annotation.NameInMap("browser_insecure")
         private Boolean browserInsecure;
 
-        @NameInMap("browser_task_version")
+        @com.aliyun.core.annotation.NameInMap("browser_task_version")
         private String browserTaskVersion;
 
-        @NameInMap("cookie")
+        @com.aliyun.core.annotation.NameInMap("cookie")
         private String cookie;
 
-        @NameInMap("diagnosis_mtr")
+        @com.aliyun.core.annotation.NameInMap("diagnosis_mtr")
         private Boolean diagnosisMtr;
 
-        @NameInMap("diagnosis_ping")
+        @com.aliyun.core.annotation.NameInMap("diagnosis_ping")
         private Boolean diagnosisPing;
 
-        @NameInMap("dns_hijack_whitelist")
+        @com.aliyun.core.annotation.NameInMap("dns_hijack_whitelist")
         private String dnsHijackWhitelist;
 
-        @NameInMap("dns_match_rule")
+        @com.aliyun.core.annotation.NameInMap("dns_match_rule")
         private String dnsMatchRule;
 
-        @NameInMap("dns_server")
+        @com.aliyun.core.annotation.NameInMap("dns_server")
         private String dnsServer;
 
-        @NameInMap("dns_type")
+        @com.aliyun.core.annotation.NameInMap("dns_type")
         private String dnsType;
 
-        @NameInMap("expect_exist_string")
+        @com.aliyun.core.annotation.NameInMap("empty_message")
+        private Boolean emptyMessage;
+
+        @com.aliyun.core.annotation.NameInMap("expect_exist_string")
         private ExpectExistString expectExistString;
 
-        @NameInMap("expect_non_exist_string")
+        @com.aliyun.core.annotation.NameInMap("expect_non_exist_string")
         private ExpectNonExistString expectNonExistString;
 
-        @NameInMap("expect_value")
+        @com.aliyun.core.annotation.NameInMap("expect_value")
         private String expectValue;
 
-        @NameInMap("failure_rate")
+        @com.aliyun.core.annotation.NameInMap("failure_rate")
         private Float failureRate;
 
-        @NameInMap("header")
+        @com.aliyun.core.annotation.NameInMap("header")
         private String header;
 
-        @NameInMap("http_method")
+        @com.aliyun.core.annotation.NameInMap("host_binding")
+        private String hostBinding;
+
+        @com.aliyun.core.annotation.NameInMap("host_binding_type")
+        private Integer hostBindingType;
+
+        @com.aliyun.core.annotation.NameInMap("http_method")
         private String httpMethod;
 
-        @NameInMap("isBase64Encode")
+        @com.aliyun.core.annotation.NameInMap("ip_network")
+        private String ipNetwork;
+
+        @com.aliyun.core.annotation.NameInMap("isBase64Encode")
         private String isBase64Encode;
 
-        @NameInMap("match_rule")
+        @com.aliyun.core.annotation.NameInMap("match_rule")
         private Integer matchRule;
 
-        @NameInMap("min_tls_version")
+        @com.aliyun.core.annotation.NameInMap("min_tls_version")
         private String minTlsVersion;
 
-        @NameInMap("password")
+        @com.aliyun.core.annotation.NameInMap("password")
         private String password;
 
-        @NameInMap("ping_num")
+        @com.aliyun.core.annotation.NameInMap("ping_num")
         private Integer pingNum;
 
-        @NameInMap("ping_port")
+        @com.aliyun.core.annotation.NameInMap("ping_port")
         private Integer pingPort;
 
-        @NameInMap("ping_type")
+        @com.aliyun.core.annotation.NameInMap("ping_type")
         private String pingType;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("protocol")
+        @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @NameInMap("request_content")
+        @com.aliyun.core.annotation.NameInMap("quic_enabled")
+        private Boolean quicEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("quic_target")
+        private QuicTarget quicTarget;
+
+        @com.aliyun.core.annotation.NameInMap("request_content")
         private String requestContent;
 
-        @NameInMap("request_format")
+        @com.aliyun.core.annotation.NameInMap("request_format")
         private String requestFormat;
 
-        @NameInMap("response_content")
+        @com.aliyun.core.annotation.NameInMap("response_content")
         private String responseContent;
 
-        @NameInMap("response_format")
+        @com.aliyun.core.annotation.NameInMap("response_format")
         private String responseFormat;
 
-        @NameInMap("retry_delay")
+        @com.aliyun.core.annotation.NameInMap("retry_delay")
         private Integer retryDelay;
 
-        @NameInMap("strict_mode")
+        @com.aliyun.core.annotation.NameInMap("screen_shot")
+        private Boolean screenShot;
+
+        @com.aliyun.core.annotation.NameInMap("scroll_end")
+        private Boolean scrollEnd;
+
+        @com.aliyun.core.annotation.NameInMap("strict_mode")
         private Boolean strictMode;
 
-        @NameInMap("time_out")
+        @com.aliyun.core.annotation.NameInMap("time_out")
         private Long timeOut;
 
-        @NameInMap("traffic_hijack_element_blacklist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_blacklist")
         private TrafficHijackElementBlacklist trafficHijackElementBlacklist;
 
-        @NameInMap("traffic_hijack_element_count")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_count")
         private Integer trafficHijackElementCount;
 
-        @NameInMap("traffic_hijack_element_whitelist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_whitelist")
         private TrafficHijackElementWhitelist trafficHijackElementWhitelist;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
-        @NameInMap("waitTime_after_completion")
+        @com.aliyun.core.annotation.NameInMap("waitTime_after_completion")
         private Integer waitTimeAfterCompletion;
 
         private OptionJson(Builder builder) {
@@ -1542,12 +1811,16 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.dnsMatchRule = builder.dnsMatchRule;
             this.dnsServer = builder.dnsServer;
             this.dnsType = builder.dnsType;
+            this.emptyMessage = builder.emptyMessage;
             this.expectExistString = builder.expectExistString;
             this.expectNonExistString = builder.expectNonExistString;
             this.expectValue = builder.expectValue;
             this.failureRate = builder.failureRate;
             this.header = builder.header;
+            this.hostBinding = builder.hostBinding;
+            this.hostBindingType = builder.hostBindingType;
             this.httpMethod = builder.httpMethod;
+            this.ipNetwork = builder.ipNetwork;
             this.isBase64Encode = builder.isBase64Encode;
             this.matchRule = builder.matchRule;
             this.minTlsVersion = builder.minTlsVersion;
@@ -1557,11 +1830,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.pingType = builder.pingType;
             this.port = builder.port;
             this.protocol = builder.protocol;
+            this.quicEnabled = builder.quicEnabled;
+            this.quicTarget = builder.quicTarget;
             this.requestContent = builder.requestContent;
             this.requestFormat = builder.requestFormat;
             this.responseContent = builder.responseContent;
             this.responseFormat = builder.responseFormat;
             this.retryDelay = builder.retryDelay;
+            this.screenShot = builder.screenShot;
+            this.scrollEnd = builder.scrollEnd;
             this.strictMode = builder.strictMode;
             this.timeOut = builder.timeOut;
             this.trafficHijackElementBlacklist = builder.trafficHijackElementBlacklist;
@@ -1692,6 +1969,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return emptyMessage
+         */
+        public Boolean getEmptyMessage() {
+            return this.emptyMessage;
+        }
+
+        /**
          * @return expectExistString
          */
         public ExpectExistString getExpectExistString() {
@@ -1727,10 +2011,31 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return hostBinding
+         */
+        public String getHostBinding() {
+            return this.hostBinding;
+        }
+
+        /**
+         * @return hostBindingType
+         */
+        public Integer getHostBindingType() {
+            return this.hostBindingType;
+        }
+
+        /**
          * @return httpMethod
          */
         public String getHttpMethod() {
             return this.httpMethod;
+        }
+
+        /**
+         * @return ipNetwork
+         */
+        public String getIpNetwork() {
+            return this.ipNetwork;
         }
 
         /**
@@ -1797,6 +2102,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return quicEnabled
+         */
+        public Boolean getQuicEnabled() {
+            return this.quicEnabled;
+        }
+
+        /**
+         * @return quicTarget
+         */
+        public QuicTarget getQuicTarget() {
+            return this.quicTarget;
+        }
+
+        /**
          * @return requestContent
          */
         public String getRequestContent() {
@@ -1829,6 +2148,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public Integer getRetryDelay() {
             return this.retryDelay;
+        }
+
+        /**
+         * @return screenShot
+         */
+        public Boolean getScreenShot() {
+            return this.screenShot;
+        }
+
+        /**
+         * @return scrollEnd
+         */
+        public Boolean getScrollEnd() {
+            return this.scrollEnd;
         }
 
         /**
@@ -1897,12 +2230,16 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String dnsMatchRule; 
             private String dnsServer; 
             private String dnsType; 
+            private Boolean emptyMessage; 
             private ExpectExistString expectExistString; 
             private ExpectNonExistString expectNonExistString; 
             private String expectValue; 
             private Float failureRate; 
             private String header; 
+            private String hostBinding; 
+            private Integer hostBindingType; 
             private String httpMethod; 
+            private String ipNetwork; 
             private String isBase64Encode; 
             private Integer matchRule; 
             private String minTlsVersion; 
@@ -1912,11 +2249,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String pingType; 
             private Integer port; 
             private String protocol; 
+            private Boolean quicEnabled; 
+            private QuicTarget quicTarget; 
             private String requestContent; 
             private String requestFormat; 
             private String responseContent; 
             private String responseFormat; 
             private Integer retryDelay; 
+            private Boolean screenShot; 
+            private Boolean scrollEnd; 
             private Boolean strictMode; 
             private Long timeOut; 
             private TrafficHijackElementBlacklist trafficHijackElementBlacklist; 
@@ -1934,7 +2275,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries after a DNS failure occurred.
+             * <p>The number of retries after a DNS failure occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder attempts(Long attempts) {
                 this.attempts = attempts;
@@ -1942,11 +2286,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the security authentication feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the security authentication feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>0: The feature is disabled.</li>
+             * <li>1: The feature is enabled.</li>
+             * </ul>
              * 
-             * *   0: The feature is disabled.
-             * *   1: The feature is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder authentication(Integer authentication) {
                 this.authentication = authentication;
@@ -2002,7 +2349,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The cookie of the HTTP request.
+             * <p>The cookie of the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lang=en</p>
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -2034,13 +2384,16 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:
-             * <p>
+             * <p>The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:</p>
+             * <ul>
+             * <li>IN_DNS: The list of expected values is a subset of the list of DNS results.</li>
+             * <li>DNS_IN: The list of DNS results is a subset of the list of expected values.</li>
+             * <li>EQUAL: The list of DNS results is the same as the list of expected values.</li>
+             * <li>ANY: The list of DNS results intersects with the list of expected values.</li>
+             * </ul>
              * 
-             * *   IN_DNS: The list of expected values is a subset of the list of DNS results.
-             * *   DNS_IN: The list of DNS results is a subset of the list of expected values.
-             * *   EQUAL: The list of DNS results is the same as the list of expected values.
-             * *   ANY: The list of DNS results intersects with the list of expected values.
+             * <strong>example:</strong>
+             * <p>IN_DNS</p>
              */
             public Builder dnsMatchRule(String dnsMatchRule) {
                 this.dnsMatchRule = dnsMatchRule;
@@ -2048,10 +2401,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the DNS server.
-             * <p>
+             * <p>The IP address of the DNS server.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the TaskType parameter is set to DNS.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the TaskType parameter is set to DNS.
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder dnsServer(String dnsServer) {
                 this.dnsServer = dnsServer;
@@ -2059,17 +2415,28 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:
-             * <p>
+             * <p>The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:</p>
+             * <ul>
+             * <li>A (default): a record that specifies an IP address related to the specified host name or domain name.</li>
+             * <li>CNAME: a record that maps multiple domain names to a domain name.</li>
+             * <li>NS: a record that specifies a DNS server used to parse domain names.</li>
+             * <li>MX: a record that links domain names to the address of a mail server.</li>
+             * <li>TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</li>
+             * </ul>
              * 
-             * *   A (default): a record that specifies an IP address related to the specified host name or domain name.
-             * *   CNAME: a record that maps multiple domain names to a domain name.
-             * *   NS: a record that specifies a DNS server used to parse domain names.
-             * *   MX: a record that links domain names to the address of a mail server.
-             * *   TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder dnsType(String dnsType) {
                 this.dnsType = dnsType;
+                return this;
+            }
+
+            /**
+             * empty_message.
+             */
+            public Builder emptyMessage(Boolean emptyMessage) {
+                this.emptyMessage = emptyMessage;
                 return this;
             }
 
@@ -2090,10 +2457,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name or alias to be parsed.
-             * <p>
+             * <p>The domain name or alias to be parsed.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the TaskType parameter is set to DNS.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the TaskType parameter is set to DNS.
+             * <strong>example:</strong>
+             * <p>dns_server</p>
              */
             public Builder expectValue(String expectValue) {
                 this.expectValue = expectValue;
@@ -2101,10 +2471,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The packet loss rate.
-             * <p>
+             * <p>The packet loss rate.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the TaskType parameter is set to PING.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the TaskType parameter is set to PING.
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder failureRate(Float failureRate) {
                 this.failureRate = failureRate;
@@ -2112,7 +2485,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The header of the HTTP request.
+             * <p>The header of the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey:testValue</p>
              */
             public Builder header(String header) {
                 this.header = header;
@@ -2120,15 +2496,45 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
+             * host_binding.
+             */
+            public Builder hostBinding(String hostBinding) {
+                this.hostBinding = hostBinding;
+                return this;
+            }
+
+            /**
+             * host_binding_type.
+             */
+            public Builder hostBindingType(Integer hostBindingType) {
+                this.hostBindingType = hostBindingType;
+                return this;
+            }
+
+            /**
+             * <p>The HTTP request method. Valid values:</p>
+             * <ul>
+             * <li>get</li>
+             * <li>post</li>
+             * <li>head</li>
+             * </ul>
              * 
-             * *   get
-             * *   post
-             * *   head
+             * <strong>example:</strong>
+             * <p>get</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
+                return this;
+            }
+
+            /**
+             * <p>ip_network indicates the network type of the task. Valid values: v4, v6, and auto. Default value: v4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v4</p>
+             */
+            public Builder ipNetwork(String ipNetwork) {
+                this.ipNetwork = ipNetwork;
                 return this;
             }
 
@@ -2141,11 +2547,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert rule is included. Valid values:
-             * <p>
+             * <p>Indicates whether the alert rule is included. Valid values:</p>
+             * <ul>
+             * <li>0: The alert rule is included.</li>
+             * <li>1: The alert rule is excluded.</li>
+             * </ul>
              * 
-             * *   0: The alert rule is included.
-             * *   1: The alert rule is excluded.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchRule(Integer matchRule) {
                 this.matchRule = matchRule;
@@ -2161,7 +2570,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the SMTP, POP3, or FTP protocol.
+             * <p>The password of the SMTP, POP3, or FTP protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123****</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -2169,7 +2581,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The heartbeat of the PING protocol.
+             * <p>The heartbeat of the PING protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder pingNum(Integer pingNum) {
                 this.pingNum = pingNum;
@@ -2185,7 +2600,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ping_type.
+             * <p>The PING protocol type. Valid values:</p>
+             * <ul>
+             * <li>icmp</li>
+             * <li>tcp</li>
+             * <li>udp</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>icmp,tcp,udp</p>
              */
             public Builder pingType(String pingType) {
                 this.pingType = pingType;
@@ -2193,7 +2616,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the TCP, UDP, SMTP, or POP3 protocol.
+             * <p>The port number of the TCP, UDP, SMTP, or POP3 protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -2201,7 +2627,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used to send the request.
+             * <p>The protocol that is used to send the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -2209,7 +2638,29 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the HTTP request.
+             * <p>Indicates whether the Quick UDP Internet Connections (QUIC) protocol is used for browser detection. Valid values: true false Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder quicEnabled(Boolean quicEnabled) {
+                this.quicEnabled = quicEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The sites for which the QUIC protocol is forcibly used.</p>
+             */
+            public Builder quicTarget(QuicTarget quicTarget) {
+                this.quicTarget = quicTarget;
+                return this;
+            }
+
+            /**
+             * <p>The content of the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa=bb</p>
              */
             public Builder requestContent(String requestContent) {
                 this.requestContent = requestContent;
@@ -2217,11 +2668,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the HTTP request. Valid values:
-             * <p>
+             * <p>The format of the HTTP request. Valid values:</p>
+             * <ul>
+             * <li>hex: hexadecimal</li>
+             * <li>txt: text</li>
+             * </ul>
              * 
-             * *   hex: hexadecimal
-             * *   txt: text
+             * <strong>example:</strong>
+             * <p>txt</p>
              */
             public Builder requestFormat(String requestFormat) {
                 this.requestFormat = requestFormat;
@@ -2229,7 +2683,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The response to the HTTP request.
+             * <p>The response to the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>txt</p>
              */
             public Builder responseContent(String responseContent) {
                 this.responseContent = responseContent;
@@ -2237,11 +2694,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the HTTP response. Valid values:
-             * <p>
+             * <p>The format of the HTTP response. Valid values:</p>
+             * <ul>
+             * <li>hex: hexadecimal</li>
+             * <li>txt: text</li>
+             * </ul>
              * 
-             * *   hex: hexadecimal
-             * *   txt: text
+             * <strong>example:</strong>
+             * <p>txt</p>
              */
             public Builder responseFormat(String responseFormat) {
                 this.responseFormat = responseFormat;
@@ -2257,6 +2717,25 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * <p>是否开启页面截图</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder screenShot(Boolean screenShot) {
+                this.screenShot = screenShot;
+                return this;
+            }
+
+            /**
+             * scroll_end.
+             */
+            public Builder scrollEnd(Boolean scrollEnd) {
+                this.scrollEnd = scrollEnd;
+                return this;
+            }
+
+            /**
              * strict_mode.
              */
             public Builder strictMode(Boolean strictMode) {
@@ -2265,7 +2744,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period. Unit: milliseconds.
+             * <p>The timeout period. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder timeOut(Long timeOut) {
                 this.timeOut = timeOut;
@@ -2297,7 +2779,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the FTP, SMTP, or POP3 protocol.
+             * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -2319,36 +2804,155 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
+    public static class VpcConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private String region;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
+        private String vswitchId;
+
+        private VpcConfig(Builder builder) {
+            this.region = builder.region;
+            this.securityGroupId = builder.securityGroupId;
+            this.vpcId = builder.vpcId;
+            this.vswitchId = builder.vswitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public static final class Builder {
+            private String region; 
+            private String securityGroupId; 
+            private String vpcId; 
+            private String vswitchId; 
+
+            /**
+             * <p>内网拨测任务的目标站点所在地域。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            public VpcConfig build() {
+                return new VpcConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSiteMonitorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorAttributeResponseBody</p>
+     */
     public static class SiteMonitors extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AgentGroup")
+        @com.aliyun.core.annotation.NameInMap("AgentGroup")
         private String agentGroup;
 
-        @NameInMap("CustomSchedule")
+        @com.aliyun.core.annotation.NameInMap("CustomSchedule")
         private CustomSchedule customSchedule;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("IspCities")
+        @com.aliyun.core.annotation.NameInMap("IspCities")
         private IspCities ispCities;
 
-        @NameInMap("OptionJson")
+        @com.aliyun.core.annotation.NameInMap("OptionJson")
         private OptionJson optionJson;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
+
+        @com.aliyun.core.annotation.NameInMap("VpcConfig")
+        private VpcConfig vpcConfig;
 
         private SiteMonitors(Builder builder) {
             this.address = builder.address;
@@ -2361,6 +2965,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.taskName = builder.taskName;
             this.taskState = builder.taskState;
             this.taskType = builder.taskType;
+            this.vpcConfig = builder.vpcConfig;
         }
 
         public static Builder builder() {
@@ -2441,6 +3046,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.taskType;
         }
 
+        /**
+         * @return vpcConfig
+         */
+        public VpcConfig getVpcConfig() {
+            return this.vpcConfig;
+        }
+
         public static final class Builder {
             private String address; 
             private String agentGroup; 
@@ -2452,9 +3064,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String taskName; 
             private String taskState; 
             private String taskType; 
+            private VpcConfig vpcConfig; 
 
             /**
-             * The URL that is monitored by the site monitoring task.
+             * <p>The URL that is monitored by the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -2478,7 +3094,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.
+             * <p>The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -2486,7 +3105,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.
+             * <p>The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.</p>
              */
             public Builder ispCities(IspCities ispCities) {
                 this.ispCities = ispCities;
@@ -2494,7 +3113,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).
+             * <p>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see <a href="https://help.aliyun.com/document_detail/115048.html">CreateSiteMonitor</a>.</p>
              */
             public Builder optionJson(OptionJson optionJson) {
                 this.optionJson = optionJson;
@@ -2502,7 +3121,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the site monitoring task.
+             * <p>The ID of the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc641dff-c19d-45f3-ad0a-818a0c4f****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -2510,7 +3132,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the site monitoring task.
+             * <p>The name of the site monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -2518,11 +3143,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the site monitoring task. Valid values:
-             * <p>
+             * <p>The status of the site monitoring task. Valid values:</p>
+             * <ul>
+             * <li>1: The task is enabled.</li>
+             * <li>2: The task is disabled.</li>
+             * </ul>
              * 
-             * *   1: The task is enabled.
-             * *   2: The task is disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -2530,10 +3158,21 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
+             * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
+                return this;
+            }
+
+            /**
+             * VpcConfig.
+             */
+            public Builder vpcConfig(VpcConfig vpcConfig) {
+                this.vpcConfig = vpcConfig;
                 return this;
             }
 

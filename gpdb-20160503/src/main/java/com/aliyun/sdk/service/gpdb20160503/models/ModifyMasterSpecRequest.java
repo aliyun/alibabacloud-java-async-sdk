@@ -1,38 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMasterSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyMasterSpecRequest</p>
  */
 public class ModifyMasterSpecRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("MasterCU")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterAISpec")
+    private String masterAISpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterCU")
     private Integer masterCU;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyMasterSpecRequest(Builder builder) {
         super(builder);
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceId = builder.DBInstanceId;
+        this.masterAISpec = builder.masterAISpec;
         this.masterCU = builder.masterCU;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -65,6 +75,13 @@ public class ModifyMasterSpecRequest extends Request {
     }
 
     /**
+     * @return masterAISpec
+     */
+    public String getMasterAISpec() {
+        return this.masterAISpec;
+    }
+
+    /**
      * @return masterCU
      */
     public Integer getMasterCU() {
@@ -81,6 +98,7 @@ public class ModifyMasterSpecRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyMasterSpecRequest, Builder> {
         private String DBInstanceDescription; 
         private String DBInstanceId; 
+        private String masterAISpec; 
         private Integer masterCU; 
         private String resourceGroupId; 
 
@@ -92,12 +110,16 @@ public class ModifyMasterSpecRequest extends Request {
             super(request);
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBInstanceId = request.DBInstanceId;
+            this.masterAISpec = request.masterAISpec;
             this.masterCU = request.masterCU;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * DBInstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -106,7 +128,14 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -115,7 +144,29 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * MasterCU.
+         * MasterAISpec.
+         */
+        public Builder masterAISpec(String masterAISpec) {
+            this.putQueryParameter("MasterAISpec", masterAISpec);
+            this.masterAISpec = masterAISpec;
+            return this;
+        }
+
+        /**
+         * <p>The specifications of coordinator node resources. Valid values:</p>
+         * <ul>
+         * <li>2 CU</li>
+         * <li>4 CU</li>
+         * <li>8 CU</li>
+         * <li>16 CU</li>
+         * <li>32 CU</li>
+         * </ul>
+         * <blockquote>
+         * <p> You are charged for coordinator node resources of more than 8 compute units (CUs).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8 CU</p>
          */
         public Builder masterCU(Integer masterCU) {
             this.putQueryParameter("MasterCU", masterCU);
@@ -124,7 +175,10 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

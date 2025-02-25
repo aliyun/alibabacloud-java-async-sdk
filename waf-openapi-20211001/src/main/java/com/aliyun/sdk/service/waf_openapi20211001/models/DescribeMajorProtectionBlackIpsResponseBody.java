@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMajorProtectionBlackIpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMajorProtectionBlackIpsResponseBody</p>
  */
 public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
-    @NameInMap("IpList")
-    private java.util.List < IpList> ipList;
+    @com.aliyun.core.annotation.NameInMap("IpList")
+    private java.util.List<IpList> ipList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeMajorProtectionBlackIpsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     /**
      * @return ipList
      */
-    public java.util.List < IpList> getIpList() {
+    public java.util.List<IpList> getIpList() {
         return this.ipList;
     }
 
@@ -57,20 +62,23 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpList> ipList; 
+        private java.util.List<IpList> ipList; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * An array of IP addresses in the IP address blacklist.
+         * <p>An array of IP addresses in the IP address blacklist.</p>
          */
-        public Builder ipList(java.util.List < IpList> ipList) {
+        public Builder ipList(java.util.List<IpList> ipList) {
             this.ipList = ipList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41631674-EEB0-5B02-BEB4-40A758E9B841</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of IP addresses in the blacklist.
+         * <p>The total number of IP addresses in the blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,23 +102,29 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMajorProtectionBlackIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMajorProtectionBlackIpsResponseBody</p>
+     */
     public static class IpList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private Long expiredTime;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private IpList(Builder builder) {
@@ -178,7 +195,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * The description of the IP address in the blacklist.
+             * <p>The description of the IP address in the blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test0003asdffas</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,10 +206,13 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The time after which the IP address blacklist becomes invalid. Unit: seconds.
-             * <p>
+             * <p>The time after which the IP address blacklist becomes invalid. Unit: seconds.</p>
+             * <blockquote>
+             * <p> If the value of this parameter is <strong>0</strong>, the blacklist is permanently valid.</p>
+             * </blockquote>
              * 
-             * >  If the value of this parameter is **0**, the blacklist is permanently valid.
+             * <strong>example:</strong>
+             * <p>1662603328</p>
              */
             public Builder expiredTime(Long expiredTime) {
                 this.expiredTime = expiredTime;
@@ -197,7 +220,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent time when the IP address blacklist was modified.
+             * <p>The most recent time when the IP address blacklist was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665456202000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -205,7 +231,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address in the IP address blacklist.
+             * <p>The IP address in the IP address blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -213,7 +242,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IP address blacklist rule for major event protection.
+             * <p>The ID of the IP address blacklist rule for major event protection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8508970</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -221,7 +253,10 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule template for major event protection.
+             * <p>The ID of the rule template for major event protection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9684</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

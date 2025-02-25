@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnAclFieldsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnAclFieldsRequest</p>
  */
 public class DescribeDcdnAclFieldsRequest extends Request {
-    @Query
-    @NameInMap("Lang")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lang;
 
     private DescribeDcdnAclFieldsRequest(Builder builder) {
@@ -55,11 +55,15 @@ public class DescribeDcdnAclFieldsRequest extends Request {
         } 
 
         /**
-         * The access language. Default value: en. Valid values:
-         * <p>
+         * <p>The access language. Default value: en. Valid values:</p>
+         * <ul>
+         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **en**: English
-         * *   **zh**: Chinese
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -1,39 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVpdRequest} extends {@link RequestModel}
  *
  * <p>UpdateVpdRequest</p>
  */
 public class UpdateVpdRequest extends Request {
-    @Body
-    @NameInMap("Description")
-    private String description;
-
-    @Body
-    @NameInMap("Name")
-    private String name;
-
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("VpdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpdId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpdId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpdName")
+    private String vpdName;
 
     private UpdateVpdRequest(Builder builder) {
         super(builder);
-        this.description = builder.description;
-        this.name = builder.name;
         this.regionId = builder.regionId;
         this.vpdId = builder.vpdId;
+        this.vpdName = builder.vpdName;
     }
 
     public static Builder builder() {
@@ -50,20 +52,6 @@ public class UpdateVpdRequest extends Request {
     }
 
     /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -77,11 +65,17 @@ public class UpdateVpdRequest extends Request {
         return this.vpdId;
     }
 
+    /**
+     * @return vpdName
+     */
+    public String getVpdName() {
+        return this.vpdName;
+    }
+
     public static final class Builder extends Request.Builder<UpdateVpdRequest, Builder> {
-        private String description; 
-        private String name; 
         private String regionId; 
         private String vpdId; 
+        private String vpdName; 
 
         private Builder() {
             super();
@@ -89,32 +83,17 @@ public class UpdateVpdRequest extends Request {
 
         private Builder(UpdateVpdRequest request) {
             super(request);
-            this.description = request.description;
-            this.name = request.name;
             this.regionId = request.regionId;
             this.vpdId = request.vpdId;
+            this.vpdName = request.vpdName;
         } 
 
         /**
-         * 描述
-         */
-        public Builder description(String description) {
-            this.putBodyParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * 灵骏网段名称
-         */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * 地域
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -123,11 +102,27 @@ public class UpdateVpdRequest extends Request {
         }
 
         /**
-         * 灵骏网段ID
+         * <p>The ID of the VPD instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-omqutbff</p>
          */
         public Builder vpdId(String vpdId) {
             this.putBodyParameter("VpdId", vpdId);
             this.vpdId = vpdId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the VPD instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-lingjun</p>
+         */
+        public Builder vpdName(String vpdName) {
+            this.putBodyParameter("VpdName", vpdName);
+            this.vpdName = vpdName;
             return this;
         }
 

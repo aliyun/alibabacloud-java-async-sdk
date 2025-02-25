@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmRecoveryPlanRequest} extends {@link RequestModel}
  *
  * <p>AddGtmRecoveryPlanRequest</p>
  */
 public class AddGtmRecoveryPlanRequest extends Request {
-    @Query
-    @NameInMap("FaultAddrPool")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaultAddrPool")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String faultAddrPool;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     private AddGtmRecoveryPlanRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class AddGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * The list of IDs of faulty address pools.
+         * <p>The IDs of faulty address pools.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;hra0or&quot;]</p>
          */
         public Builder faultAddrPool(String faultAddrPool) {
             this.putQueryParameter("FaultAddrPool", faultAddrPool);
@@ -107,7 +116,10 @@ public class AddGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +128,11 @@ public class AddGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The name of the disaster recovery plan that you want to create.
+         * <p>The name of the disaster recovery plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -125,7 +141,10 @@ public class AddGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The remarks on the disaster recovery plan.
+         * <p>The description of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

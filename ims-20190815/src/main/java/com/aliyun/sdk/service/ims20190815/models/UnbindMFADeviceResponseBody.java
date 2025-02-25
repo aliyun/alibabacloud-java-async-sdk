@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindMFADeviceResponseBody} extends {@link TeaModel}
  *
  * <p>UnbindMFADeviceResponseBody</p>
  */
 public class UnbindMFADeviceResponseBody extends TeaModel {
-    @NameInMap("MFADevice")
+    @com.aliyun.core.annotation.NameInMap("MFADevice")
     private MFADevice MFADevice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UnbindMFADeviceResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the MFA device.
+         * <p>The information about the MFA device.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -58,7 +63,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A26CB3E9-1021-452A-AC57-3134B3BA0E4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UnbindMFADeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnbindMFADeviceResponseBody</p>
+     */
     public static class MFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
         private MFADevice(Builder builder) {
@@ -98,7 +112,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * The serial number of the MFA device.
+             * <p>The serial number of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::151298381312****:mfa/device001</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

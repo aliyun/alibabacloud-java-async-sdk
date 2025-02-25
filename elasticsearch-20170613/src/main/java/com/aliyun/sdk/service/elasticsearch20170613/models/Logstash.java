@@ -1,72 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Logstash} extends {@link TeaModel}
  *
  * <p>Logstash</p>
  */
 public class Logstash extends TeaModel {
-    @NameInMap("config")
+    @com.aliyun.core.annotation.NameInMap("config")
     private java.util.Map < String, String > config;
 
-    @NameInMap("createdAt")
+    @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
-    @NameInMap("dataNode")
+    @com.aliyun.core.annotation.NameInMap("dataNode")
     private Boolean dataNode;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @NameInMap("endpointList")
+    @com.aliyun.core.annotation.NameInMap("endpointList")
     private java.util.List < EndpointList> endpointList;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("networkConfig")
+    @com.aliyun.core.annotation.NameInMap("networkConfig")
     private NetworkConfig networkConfig;
 
-    @NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
     private Long nodeAmount;
 
-    @NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
     private NodeSpec nodeSpec;
 
-    @NameInMap("paymentType")
+    @com.aliyun.core.annotation.NameInMap("paymentType")
     private String paymentType;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("updatedAt")
+    @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
-    @NameInMap("zoneCount")
+    @com.aliyun.core.annotation.NameInMap("zoneCount")
     private Long zoneCount;
 
-    @NameInMap("zoneInfos")
+    @com.aliyun.core.annotation.NameInMap("zoneInfos")
     private java.util.List < ZoneInfos> zoneInfos;
 
     private Logstash(Builder builder) {
@@ -411,14 +411,20 @@ public class Logstash extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class EndpointList extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Long port;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private EndpointList(Builder builder) {
@@ -492,17 +498,23 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vsArea")
+        @com.aliyun.core.annotation.NameInMap("vsArea")
         private String vsArea;
 
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
         private NetworkConfig(Builder builder) {
@@ -593,14 +605,20 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Long disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private NodeSpec(Builder builder) {
@@ -674,11 +692,17 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("tagKey")
+        @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
 
-        @NameInMap("tagValue")
+        @com.aliyun.core.annotation.NameInMap("tagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -735,11 +759,17 @@ public class Logstash extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Logstash} extends {@link TeaModel}
+     *
+     * <p>Logstash</p>
+     */
     public static class ZoneInfos extends TeaModel {
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private ZoneInfos(Builder builder) {

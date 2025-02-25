@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDiagnoseResultForSingleCardRequest</p>
  */
 public class GetDiagnoseResultForSingleCardRequest extends Request {
-    @Query
-    @NameInMap("DiagnoseTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiagnoseTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diagnoseTaskId;
 
-    @Query
-    @NameInMap("RegionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
     private String regionNo;
 
     private GetDiagnoseResultForSingleCardRequest(Builder builder) {

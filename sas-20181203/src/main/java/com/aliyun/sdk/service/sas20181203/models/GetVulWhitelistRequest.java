@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVulWhitelistRequest} extends {@link RequestModel}
  *
  * <p>GetVulWhitelistRequest</p>
  */
 public class GetVulWhitelistRequest extends Request {
-    @Query
-    @NameInMap("VulWhitelistId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulWhitelistId")
     private Long vulWhitelistId;
 
     private GetVulWhitelistRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetVulWhitelistRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist.
+         * <p>The ID of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1275</p>
          */
         public Builder vulWhitelistId(Long vulWhitelistId) {
             this.putQueryParameter("VulWhitelistId", vulWhitelistId);

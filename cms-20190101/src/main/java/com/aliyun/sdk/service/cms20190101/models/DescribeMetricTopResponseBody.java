@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricTopResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricTopResponseBody</p>
  */
 public class DescribeMetricTopResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datapoints")
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
     private String datapoints;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMetricTopResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring data.
+         * <p>The monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;order&quot;:1,&quot;timestamp&quot;:1620287520000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-j6ccf7d5fn335qpo****&quot;,&quot;Average&quot;:99.92,&quot;Minimum&quot;:99.5,&quot;Maximum&quot;:100.0,&quot;_count&quot;:1.0},{&quot;order&quot;:2,&quot;timestamp&quot;:1620287520000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-0xii2bvf42iqvxbp****&quot;,&quot;Average&quot;:99.91,&quot;Minimum&quot;:99.0,&quot;Maximum&quot;:100.0,&quot;_count&quot;:1.0}]</p>
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -105,7 +111,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +122,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * The statistical period of the monitoring data. Unit: seconds. Valid values: 15, 60, 900, and 3600.
+         * <p>The statistical period of the monitoring data. Unit: seconds. Valid values: 15, 60, 900, and 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.period = period;
@@ -121,7 +133,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3121AE7D-4AFF-4C25-8F1D-C8226EBB1F42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

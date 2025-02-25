@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushUserAnalyzerEntriesRequest</p>
  */
 public class PushUserAnalyzerEntriesRequest extends Request {
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("entries")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("entries")
     private java.util.List < Entries> entries;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private PushUserAnalyzerEntriesRequest(Builder builder) {
@@ -117,16 +116,16 @@ public class PushUserAnalyzerEntriesRequest extends Request {
     } 
 
     public static class Entries extends TeaModel {
-        @NameInMap("cmd")
+        @com.aliyun.core.annotation.NameInMap("cmd")
         private String cmd;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("splitEnabled")
+        @com.aliyun.core.annotation.NameInMap("splitEnabled")
         private Boolean splitEnabled;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Entries(Builder builder) {

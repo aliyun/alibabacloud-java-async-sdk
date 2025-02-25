@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoLiveStreamRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAutoLiveStreamRuleResponseBody</p>
  */
 public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
     private CreateAutoLiveStreamRuleResponseBody(Builder builder) {

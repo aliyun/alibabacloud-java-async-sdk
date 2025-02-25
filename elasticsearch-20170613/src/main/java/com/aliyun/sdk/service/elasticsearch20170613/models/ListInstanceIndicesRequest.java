@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceIndicesRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceIndicesRequest</p>
  */
 public class ListInstanceIndicesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("all")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("all")
     private Boolean all;
 
-    @Query
-    @NameInMap("isManaged")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isManaged")
     private Boolean isManaged;
 
-    @Query
-    @NameInMap("isOpenstore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isOpenstore")
     private Boolean isOpenstore;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
     private ListInstanceIndicesRequest(Builder builder) {
@@ -139,7 +139,11 @@ public class ListInstanceIndicesRequest extends Request {
         } 
 
         /**
-         * false
+         * <p>false</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl329rbpc0001****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -148,7 +152,10 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * false
+         * <p>false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -157,7 +164,10 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * 15
+         * <p>15</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isManaged(Boolean isManaged) {
             this.putQueryParameter("isManaged", isManaged);
@@ -166,7 +176,10 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isOpenstore(Boolean isOpenstore) {
             this.putQueryParameter("isOpenstore", isOpenstore);
@@ -175,7 +188,10 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log-0001</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -184,7 +200,10 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -193,7 +212,10 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * The total size of the index in Cloud Hosting. Unit: bytes.
+         * <p>The total size of the index in Cloud Hosting. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

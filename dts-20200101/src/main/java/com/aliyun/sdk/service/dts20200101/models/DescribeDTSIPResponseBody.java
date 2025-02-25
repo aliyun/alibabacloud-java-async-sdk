@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDTSIPResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDTSIPResponseBody</p>
  */
 public class DescribeDTSIPResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeDTSIPResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The internal error code. This parameter will be removed in the future.
+         * <p>The internal error code. This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -106,7 +114,10 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR blocks of DTS servers.
+         * <p>The CIDR blocks of DTS servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -114,7 +125,10 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -122,7 +136,10 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -130,7 +147,10 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C99C0BE-F312-40FA-ADFA-4DC1166B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +158,10 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

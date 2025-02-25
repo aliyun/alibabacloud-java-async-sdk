@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableMetricRulesRequest} extends {@link RequestModel}
  *
  * <p>DisableMetricRulesRequest</p>
  */
 public class DisableMetricRulesRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > ruleId;
 
     private DisableMetricRulesRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DisableMetricRulesRequest extends Request {
         } 
 
         /**
-         * RuleId.
+         * <p>The ID of the alert rule. Valid values of N: 1 to 20.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>detect_87****_HTTP_HttpLatency</p>
          */
         public Builder ruleId(java.util.List < String > ruleId) {
             this.putQueryParameter("RuleId", ruleId);

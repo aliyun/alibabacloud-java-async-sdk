@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiGroupsResponseBody</p>
  */
 public class DescribeApiGroupsResponseBody extends TeaModel {
-    @NameInMap("ApiGroupAttributes")
+    @com.aliyun.core.annotation.NameInMap("ApiGroupAttributes")
     private ApiGroupAttributes apiGroupAttributes;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApiGroupsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned group set.
+         * <p>The returned group set.</p>
          */
         public Builder apiGroupAttributes(ApiGroupAttributes apiGroupAttributes) {
             this.apiGroupAttributes = apiGroupAttributes;
@@ -94,7 +99,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of pages to return the results on.
+         * <p>The number of pages to return the results on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E46F10-F26C-4AA0-BB69-FE2743D9AE62</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupsResponseBody</p>
+     */
     public static class TagInfo extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagInfo(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,9 +221,15 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
+        private java.util.List<TagInfo> tagInfo;
 
         private Tags(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -211,17 +246,17 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }
@@ -233,50 +268,56 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupsResponseBody</p>
+     */
     public static class ApiGroupAttribute extends TeaModel {
-        @NameInMap("BasePath")
+        @com.aliyun.core.annotation.NameInMap("BasePath")
         private String basePath;
 
-        @NameInMap("BillingStatus")
+        @com.aliyun.core.annotation.NameInMap("BillingStatus")
         private String billingStatus;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HttpsPolicy")
+        @com.aliyun.core.annotation.NameInMap("HttpsPolicy")
         private String httpsPolicy;
 
-        @NameInMap("IllegalStatus")
+        @com.aliyun.core.annotation.NameInMap("IllegalStatus")
         private String illegalStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SubDomain")
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
         private String subDomain;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TrafficLimit")
+        @com.aliyun.core.annotation.NameInMap("TrafficLimit")
         private Integer trafficLimit;
 
         private ApiGroupAttribute(Builder builder) {
@@ -428,7 +469,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             private Integer trafficLimit; 
 
             /**
-             * The basepath.
+             * <p>The basepath.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v2/</p>
              */
             public Builder basePath(String basePath) {
                 this.basePath = basePath;
@@ -436,11 +480,14 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing status of the API group. Valid values:
-             * <p>
+             * <p>The billing status of the API group. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The instance is normal.</li>
+             * <li><strong>LOCKED</strong>: The API group is locked due to overdue payments.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The instance is normal.
-             * *   **LOCKED**: The API group is locked due to overdue payments.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder billingStatus(String billingStatus) {
                 this.billingStatus = billingStatus;
@@ -448,7 +495,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time (UTC) of the API group.
+             * <p>The creation time (UTC) of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-08-01T08:45:15Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -456,7 +506,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Group Description
+             * <p>Group Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TrafficInformations.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -464,7 +517,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group. This ID is generated by the system and globally unique.
+             * <p>The ID of the API group. This ID is generated by the system and globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be6d2abcc0dd4f749fc2d2edd6567164</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -472,7 +528,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Traffic</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -480,7 +539,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTPS security policy
+             * <p>The HTTPS security policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS2_TLS1_0</p>
              */
             public Builder httpsPolicy(String httpsPolicy) {
                 this.httpsPolicy = httpsPolicy;
@@ -488,11 +550,14 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The validity status of the API group. Valid values:
-             * <p>
+             * <p>The validity status of the API group. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The instance is normal.</li>
+             * <li><strong>LOCKED</strong>: The API group is locked because it is not valid.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The instance is normal.
-             * *   **LOCKED**: The API group is locked because it is not valid.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder illegalStatus(String illegalStatus) {
                 this.illegalStatus = illegalStatus;
@@ -500,7 +565,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apigateway-cn-v6419k43245xx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -508,7 +576,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC_SHARED</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -516,7 +587,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the API group.
+             * <p>The last modification time (UTC) of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-08-01T08:45:15Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -524,7 +598,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the API group belongs.
+             * <p>The region to which the API group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -532,7 +609,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The second-level domain name that corresponds to the API group and is used by the CNAME of the custom domain name.
+             * <p>The second-level domain name that corresponds to the API group and is used by the CNAME of the custom domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be6d2abcc0dd4f749fc2d2edd6567164-cn-hangzhou.alicloudapi.com</p>
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;
@@ -540,7 +620,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -548,7 +628,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The upper QPS limit of the API group. The default value is 500. You can increase the upper limit by submitting an application.
+             * <p>The upper QPS limit of the API group. The default value is 500. You can increase the upper limit by submitting an application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder trafficLimit(Integer trafficLimit) {
                 this.trafficLimit = trafficLimit;
@@ -562,9 +645,15 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApiGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiGroupsResponseBody</p>
+     */
     public static class ApiGroupAttributes extends TeaModel {
-        @NameInMap("ApiGroupAttribute")
-        private java.util.List < ApiGroupAttribute> apiGroupAttribute;
+        @com.aliyun.core.annotation.NameInMap("ApiGroupAttribute")
+        private java.util.List<ApiGroupAttribute> apiGroupAttribute;
 
         private ApiGroupAttributes(Builder builder) {
             this.apiGroupAttribute = builder.apiGroupAttribute;
@@ -581,17 +670,17 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         /**
          * @return apiGroupAttribute
          */
-        public java.util.List < ApiGroupAttribute> getApiGroupAttribute() {
+        public java.util.List<ApiGroupAttribute> getApiGroupAttribute() {
             return this.apiGroupAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < ApiGroupAttribute> apiGroupAttribute; 
+            private java.util.List<ApiGroupAttribute> apiGroupAttribute; 
 
             /**
              * ApiGroupAttribute.
              */
-            public Builder apiGroupAttribute(java.util.List < ApiGroupAttribute> apiGroupAttribute) {
+            public Builder apiGroupAttribute(java.util.List<ApiGroupAttribute> apiGroupAttribute) {
                 this.apiGroupAttribute = apiGroupAttribute;
                 return this;
             }

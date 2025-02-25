@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryEventsResponseBody</p>
  */
 public class DescribeHistoryEventsResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHistoryEventsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,25 +84,25 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The details of the task execution.
+         * <p>The events.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
-         * <p>
+         * <p>The page number. Valid values: any non-zero positive integer. Default value: <strong>1</strong>.</p>
          * 
-         * Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +110,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +121,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +132,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks that meet these constraints without taking pagination into account.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,86 +148,92 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryEventsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CmsProduct")
+        @com.aliyun.core.annotation.NameInMap("CmsProduct")
         private String cmsProduct;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DetailImpact")
+        @com.aliyun.core.annotation.NameInMap("DetailImpact")
         private String detailImpact;
 
-        @NameInMap("DetailReason")
+        @com.aliyun.core.annotation.NameInMap("DetailReason")
         private String detailReason;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EventCategory")
+        @com.aliyun.core.annotation.NameInMap("EventCategory")
         private String eventCategory;
 
-        @NameInMap("EventCode")
+        @com.aliyun.core.annotation.NameInMap("EventCode")
         private String eventCode;
 
-        @NameInMap("EventDetail")
+        @com.aliyun.core.annotation.NameInMap("EventDetail")
         private String eventDetail;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventImpact")
+        @com.aliyun.core.annotation.NameInMap("EventImpact")
         private String eventImpact;
 
-        @NameInMap("EventLevel")
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
         private String eventLevel;
 
-        @NameInMap("EventReason")
+        @com.aliyun.core.annotation.NameInMap("EventReason")
         private String eventReason;
 
-        @NameInMap("EventStatus")
+        @com.aliyun.core.annotation.NameInMap("EventStatus")
         private String eventStatus;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HandleStatus")
+        @com.aliyun.core.annotation.NameInMap("HandleStatus")
         private String handleStatus;
 
-        @NameInMap("HasLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("HasLifeCycle")
         private Integer hasLifeCycle;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IsClosed")
+        @com.aliyun.core.annotation.NameInMap("IsClosed")
         private Integer isClosed;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private Data(Builder builder) {
@@ -473,7 +493,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * product.
+             * <p>The cloud service type of the application group. Valid values: <strong>web</strong> and native. The value web indicates a web application. The value <strong>native</strong> indicates a local application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder cmsProduct(String cmsProduct) {
                 this.cmsProduct = cmsProduct;
@@ -481,7 +504,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -489,7 +515,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail impact.
+             * <p>The pagination parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder detailImpact(String detailImpact) {
                 this.detailImpact = detailImpact;
@@ -497,7 +526,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail reason.
+             * <p>The details of the instance operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder detailReason(String detailReason) {
                 this.detailReason = detailReason;
@@ -505,7 +537,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The end date of the query.
+             * <p>The time when the alert was closed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-06T11:46:01Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -513,7 +548,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Event category.
+             * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception</p>
              */
             public Builder eventCategory(String eventCategory) {
                 this.eventCategory = eventCategory;
@@ -521,7 +559,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the extension point event.
+             * <p>The event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENT000014</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -529,10 +570,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The output names of the current file.
-             * <p>
+             * <p>The event details.</p>
              * 
-             * This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder eventDetail(String eventDetail) {
                 this.eventDetail = eventDetail;
@@ -540,7 +581,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom event.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>669036</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -548,7 +592,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Event impact.
+             * <p>The event impact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder eventImpact(String eventImpact) {
                 this.eventImpact = eventImpact;
@@ -556,7 +603,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Event level.
+             * <p>The event level. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -564,7 +614,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the event.
+             * <p>The event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -572,16 +625,19 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the exception. Valid values:
-             * <p>
+             * <p>The status of the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: pending</li>
+             * <li><strong>2</strong>: ignored</li>
+             * <li><strong>4</strong>: confirmed</li>
+             * <li><strong>8</strong>: marked as false positive</li>
+             * <li><strong>16</strong>: handling</li>
+             * <li><strong>32</strong>: handled</li>
+             * <li><strong>64</strong>: expired</li>
+             * </ul>
              * 
-             * *   **1**: pending handling
-             * *   **2**: ignored
-             * *   **4**: confirmed
-             * *   **8**: marked as a false positive
-             * *   **16**: handling
-             * *   **32**: handled
-             * *   **64**: expired
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -589,10 +645,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type.
-             * <p>
+             * <p>The event type. Valid values:</p>
              * 
-             * *   Set the value to **sensitiveFile**.
+             * <strong>example:</strong>
+             * <p>StatusNotification</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -600,7 +656,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance is created. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The creation time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-17T16:05:40Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -608,7 +667,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the export task was modified.
+             * <p>The update time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-14T09:44:39.000+0000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -616,7 +678,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Processing status.
+             * <p>The handling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>done</p>
              */
             public Builder handleStatus(String handleStatus) {
                 this.handleStatus = handleStatus;
@@ -624,7 +689,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Is there a lifecycle.
+             * <p>Indicates whether the event has a lifecycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasLifeCycle(Integer hasLifeCycle) {
                 this.hasLifeCycle = hasLifeCycle;
@@ -632,7 +700,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmy****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -640,7 +711,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dhimgsearch</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -648,7 +722,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to close.
+             * <p>Indicates whether the alert is closed. Valid values: <strong>0</strong>: closed. <strong>1</strong>: not closed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isClosed(Integer isClosed) {
                 this.isClosed = isClosed;
@@ -656,10 +733,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service in which the system event occurred.
-             * <p>
+             * <p>The service name.</p>
              * 
-             * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Product`. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see [DescribeSystemEventMetaList](~~114972~~).
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -667,7 +744,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+             * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-guangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -675,7 +755,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource. Set the value to INSTANCE.
+             * <p>The resource type. The value is fixed as <strong>INSTANCE</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -683,7 +766,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source resource.
+             * <p>The type of the source data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -691,7 +777,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+             * <p>The start time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-29T07:23Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -699,7 +788,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The account ID. You can view the ID of the **logon account** by moving the pointer over the profile in the Alibaba Cloud console.
+             * <p>The ID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16986832xxxxx</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -713,29 +805,35 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHistoryEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryEventsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Specversion")
+        @com.aliyun.core.annotation.NameInMap("Specversion")
         private String specversion;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Items(Builder builder) {
@@ -824,7 +922,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The data returned.
+             * <p>The details of the data.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -832,7 +930,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4309</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -840,7 +941,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the instance.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -848,7 +952,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance username.
+             * <p>The event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loanBill</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -856,7 +963,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Specversion.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder specversion(String specversion) {
                 this.specversion = specversion;
@@ -864,7 +974,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The subject of the certificate, which is in the DN format.
+             * <p>The name of the pending event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QiTian</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -872,7 +985,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log was generated. The time is displayed in UTC.
+             * <p>The amount of time that has elapsed from the start time of the query. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1675232573125</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -880,34 +996,10 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The notification type.
-             * <p>
+             * <p>The event type. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
              * 
-             * Valid values:
-             * 
-             * *   Sell
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Operation
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Promotion
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMcubeNebulaTasksResponseBody</p>
  */
 public class ListMcubeNebulaTasksResponseBody extends TeaModel {
-    @NameInMap("ListMcubeNebulaTaskResult")
+    @com.aliyun.core.annotation.NameInMap("ListMcubeNebulaTaskResult")
     private ListMcubeNebulaTaskResult listMcubeNebulaTaskResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private ListMcubeNebulaTasksResponseBody(Builder builder) {
@@ -112,100 +111,100 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
     } 
 
     public static class NebulaTaskInfo extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GmtModifiedStr")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedStr")
         private String gmtModifiedStr;
 
-        @NameInMap("GreyConfigInfo")
+        @com.aliyun.core.annotation.NameInMap("GreyConfigInfo")
         private String greyConfigInfo;
 
-        @NameInMap("GreyEndtime")
+        @com.aliyun.core.annotation.NameInMap("GreyEndtime")
         private String greyEndtime;
 
-        @NameInMap("GreyEndtimeData")
+        @com.aliyun.core.annotation.NameInMap("GreyEndtimeData")
         private String greyEndtimeData;
 
-        @NameInMap("GreyEndtimeStr")
+        @com.aliyun.core.annotation.NameInMap("GreyEndtimeStr")
         private String greyEndtimeStr;
 
-        @NameInMap("GreyNum")
+        @com.aliyun.core.annotation.NameInMap("GreyNum")
         private Integer greyNum;
 
-        @NameInMap("GreyUrl")
+        @com.aliyun.core.annotation.NameInMap("GreyUrl")
         private String greyUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Memo")
+        @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("PackageId")
+        @com.aliyun.core.annotation.NameInMap("PackageId")
         private Long packageId;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private Integer percent;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductVersion")
+        @com.aliyun.core.annotation.NameInMap("ProductVersion")
         private String productVersion;
 
-        @NameInMap("PublishMode")
+        @com.aliyun.core.annotation.NameInMap("PublishMode")
         private Integer publishMode;
 
-        @NameInMap("PublishType")
+        @com.aliyun.core.annotation.NameInMap("PublishType")
         private Integer publishType;
 
-        @NameInMap("ReleaseVersion")
+        @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
         private String releaseVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SyncResult")
+        @com.aliyun.core.annotation.NameInMap("SyncResult")
         private String syncResult;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
-        @NameInMap("TaskVersion")
+        @com.aliyun.core.annotation.NameInMap("TaskVersion")
         private Long taskVersion;
 
-        @NameInMap("UpgradeNoticeNum")
+        @com.aliyun.core.annotation.NameInMap("UpgradeNoticeNum")
         private Long upgradeNoticeNum;
 
-        @NameInMap("UpgradeProgress")
+        @com.aliyun.core.annotation.NameInMap("UpgradeProgress")
         private String upgradeProgress;
 
-        @NameInMap("WhitelistIds")
+        @com.aliyun.core.annotation.NameInMap("WhitelistIds")
         private String whitelistIds;
 
         private NebulaTaskInfo(Builder builder) {
@@ -773,19 +772,19 @@ public class ListMcubeNebulaTasksResponseBody extends TeaModel {
 
     }
     public static class ListMcubeNebulaTaskResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("NebulaTaskInfo")
+        @com.aliyun.core.annotation.NameInMap("NebulaTaskInfo")
         private java.util.List < NebulaTaskInfo> nebulaTaskInfo;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private ListMcubeNebulaTaskResult(Builder builder) {

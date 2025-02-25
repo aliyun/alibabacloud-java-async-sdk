@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBClusterRequest} extends {@link RequestModel}
  *
  * <p>DeleteDBClusterRequest</p>
  */
 public class DeleteDBClusterRequest extends Request {
-    @Query
-    @NameInMap("BackupRetentionPolicyOnClusterDeletion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPolicyOnClusterDeletion")
     private String backupRetentionPolicyOnClusterDeletion;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeleteDBClusterRequest(Builder builder) {
@@ -125,12 +130,15 @@ public class DeleteDBClusterRequest extends Request {
         } 
 
         /**
-         * The retention policy for the backup sets when you delete the cluster. Valid values:
-         * <p>
+         * <p>The retention policy applied to the backup sets when the cluster is released. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: permanently retains all backup sets.</li>
+         * <li><strong>LATEST</strong>: permanently retains the most recent backup set that is automatically created before the cluster is released.</li>
+         * <li><strong>NONE</strong>: does not retain backup sets.</li>
+         * </ul>
          * 
-         * *   **ALL**: permanently retains all backups.
-         * *   **LATEST**: permanently retains the most recent backup. A backup is automatically created before you delete the cluster.
-         * *   **NONE**: No backup sets are retained after you delete the cluster.
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder backupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
             this.putQueryParameter("BackupRetentionPolicyOnClusterDeletion", backupRetentionPolicyOnClusterDeletion);
@@ -139,7 +147,11 @@ public class DeleteDBClusterRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContainerPluginRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteContainerPluginRuleRequest</p>
  */
 public class DeleteContainerPluginRuleRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ruleId;
 
     private DeleteContainerPluginRuleRequest(Builder builder) {
@@ -69,11 +74,14 @@ public class DeleteContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and the response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +90,11 @@ public class DeleteContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule. You can call the addContainerWebDefenseRule operation to query the ID.
+         * <p>The ID of the rule. You can call the addContainerWebDefenseRule operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200022</p>
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);

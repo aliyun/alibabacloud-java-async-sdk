@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePushRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdatePushRuleRequest</p>
  */
 public class UpdatePushRuleRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Path
-    @NameInMap("pushRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pushRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pushRuleId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("ruleInfos")
-    private java.util.List < RuleInfos> ruleInfos;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ruleInfos")
+    private java.util.List<RuleInfos> ruleInfos;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpdatePushRuleRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class UpdatePushRuleRequest extends Request {
     /**
      * @return ruleInfos
      */
-    public java.util.List < RuleInfos> getRuleInfos() {
+    public java.util.List<RuleInfos> getRuleInfos() {
         return this.ruleInfos;
     }
 
@@ -96,7 +101,7 @@ public class UpdatePushRuleRequest extends Request {
         private Long repositoryId; 
         private Long pushRuleId; 
         private String accessToken; 
-        private java.util.List < RuleInfos> ruleInfos; 
+        private java.util.List<RuleInfos> ruleInfos; 
         private String organizationId; 
 
         private Builder() {
@@ -113,7 +118,10 @@ public class UpdatePushRuleRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2709413</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -122,7 +130,10 @@ public class UpdatePushRuleRequest extends Request {
         }
 
         /**
-         * pushRuleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2077</p>
          */
         public Builder pushRuleId(Long pushRuleId) {
             this.putPathParameter("pushRuleId", pushRuleId);
@@ -142,14 +153,17 @@ public class UpdatePushRuleRequest extends Request {
         /**
          * ruleInfos.
          */
-        public Builder ruleInfos(java.util.List < RuleInfos> ruleInfos) {
+        public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.putBodyParameter("ruleInfos", ruleInfos);
             this.ruleInfos = ruleInfos;
             return this;
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -164,18 +178,24 @@ public class UpdatePushRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePushRuleRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePushRuleRequest</p>
+     */
     public static class RuleInfos extends TeaModel {
-        @NameInMap("checkerName")
+        @com.aliyun.core.annotation.NameInMap("checkerName")
         private String checkerName;
 
-        @NameInMap("checkerType")
+        @com.aliyun.core.annotation.NameInMap("checkerType")
         private String checkerType;
 
-        @NameInMap("extraMessage")
+        @com.aliyun.core.annotation.NameInMap("extraMessage")
         private String extraMessage;
 
-        @NameInMap("fileRuleRegexes")
-        private java.util.List < String > fileRuleRegexes;
+        @com.aliyun.core.annotation.NameInMap("fileRuleRegexes")
+        private java.util.List<String> fileRuleRegexes;
 
         private RuleInfos(Builder builder) {
             this.checkerName = builder.checkerName;
@@ -216,7 +236,7 @@ public class UpdatePushRuleRequest extends Request {
         /**
          * @return fileRuleRegexes
          */
-        public java.util.List < String > getFileRuleRegexes() {
+        public java.util.List<String> getFileRuleRegexes() {
             return this.fileRuleRegexes;
         }
 
@@ -224,7 +244,7 @@ public class UpdatePushRuleRequest extends Request {
             private String checkerName; 
             private String checkerType; 
             private String extraMessage; 
-            private java.util.List < String > fileRuleRegexes; 
+            private java.util.List<String> fileRuleRegexes; 
 
             /**
              * checkerName.
@@ -253,7 +273,7 @@ public class UpdatePushRuleRequest extends Request {
             /**
              * fileRuleRegexes.
              */
-            public Builder fileRuleRegexes(java.util.List < String > fileRuleRegexes) {
+            public Builder fileRuleRegexes(java.util.List<String> fileRuleRegexes) {
                 this.fileRuleRegexes = fileRuleRegexes;
                 return this;
             }

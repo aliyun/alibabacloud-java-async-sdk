@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEaisEiRequest} extends {@link RequestModel}
  *
  * <p>DeleteEaisEiRequest</p>
  */
 public class DeleteEaisEiRequest extends Request {
-    @Query
-    @NameInMap("EiInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EiInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eiInstanceId;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteEaisEiRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class DeleteEaisEiRequest extends Request {
         } 
 
         /**
-         * EiInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eais-hzu00xufs1c8j5nn****</p>
          */
         public Builder eiInstanceId(String eiInstanceId) {
             this.putQueryParameter("EiInstanceId", eiInstanceId);
@@ -102,7 +110,10 @@ public class DeleteEaisEiRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

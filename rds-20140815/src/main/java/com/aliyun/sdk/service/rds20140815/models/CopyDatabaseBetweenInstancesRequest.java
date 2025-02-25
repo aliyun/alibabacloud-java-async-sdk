@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyDatabaseBetweenInstancesRequest} extends {@link RequestModel}
  *
  * <p>CopyDatabaseBetweenInstancesRequest</p>
  */
 public class CopyDatabaseBetweenInstancesRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DbNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbNames;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("SyncUserPrivilege")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncUserPrivilege")
     private String syncUserPrivilege;
 
-    @Query
-    @NameInMap("TargetDBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetDBInstanceId;
 
     private CopyDatabaseBetweenInstancesRequest(Builder builder) {
@@ -141,10 +146,13 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set by which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.
-         * <p>
+         * <p>The ID of the backup set based on which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.</p>
+         * <blockquote>
+         * <p> You must specify one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+         * </blockquote>
          * 
-         * > : You must specify one of the **BackupId** and **RestoreTime** parameters.
+         * <strong>example:</strong>
+         * <p>106523874****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -153,7 +161,11 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * The source instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The source instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -162,7 +174,11 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * The names of the databases that you want to copy. Format: `Source database name 1,Source database name 2`.
+         * <p>The names of the databases that you want to copy. Format: <code>Source database name 1,Source database name 2</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test1&quot;:&quot;newtest1&quot;,&quot;test2&quot;:&quot;newtest2&quot;}</p>
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -180,10 +196,13 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * The point in time when the system replicates databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The point in time when the system replicates databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>You must specify one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+         * </blockquote>
          * 
-         * > You must specify one of the **BackupId** and **RestoreTime** parameters.
+         * <strong>example:</strong>
+         * <p>2011-06-11T16:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -192,13 +211,15 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to copy users and permissions.
-         * <p>
+         * <p>Specifies whether to copy users and permissions.</p>
+         * <ul>
+         * <li><strong>YES</strong>: copies users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you copy user permissions.</li>
+         * <li><strong>NO</strong>: does not copy users and permissions.</li>
+         * </ul>
+         * <p>Default value: <strong>NO</strong>.</p>
          * 
-         * *   **YES**: copies users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you copy user permissions.
-         * *   **NO**: does not copy users and permissions.
-         * 
-         * Default value: **NO**.
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         public Builder syncUserPrivilege(String syncUserPrivilege) {
             this.putQueryParameter("SyncUserPrivilege", syncUserPrivilege);
@@ -207,7 +228,11 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * The destination instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The destination instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-ut5ajk3xxxxxxx</p>
          */
         public Builder targetDBInstanceId(String targetDBInstanceId) {
             this.putQueryParameter("TargetDBInstanceId", targetDBInstanceId);

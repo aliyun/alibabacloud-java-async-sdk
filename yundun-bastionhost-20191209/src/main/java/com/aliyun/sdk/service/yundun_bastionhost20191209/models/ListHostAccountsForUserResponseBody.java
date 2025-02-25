@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostAccountsForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostAccountsForUserResponseBody</p>
  */
 public class ListHostAccountsForUserResponseBody extends TeaModel {
-    @NameInMap("HostAccounts")
+    @com.aliyun.core.annotation.NameInMap("HostAccounts")
     private java.util.List < HostAccounts> hostAccounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHostAccountsForUserResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The host accounts returned.
+         * <p>An array that consists of the queried host accounts.</p>
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,10 +70,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the host accounts that the user is authorized to manage on the host.
-         * <p>
+         * <p>The ID of the request.</p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,12 +81,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The total number of host accounts that were queried.</p>
          * 
-         * The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.
-         * 
-         * >  We recommend that you do not leave the PageSize parameter empty.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -99,20 +97,26 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostAccountsForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostAccountsForUserResponseBody</p>
+     */
     public static class HostAccounts extends TeaModel {
-        @NameInMap("HostAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
-        @NameInMap("HostAccountName")
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("IsAuthorized")
+        @com.aliyun.core.annotation.NameInMap("IsAuthorized")
         private Boolean isAuthorized;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
         private HostAccounts(Builder builder) {
@@ -174,11 +178,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * The protocol that is used by the host account. Valid values:
-             * <p>
+             * <p>The ID of the host account.</p>
              * 
-             * *   **SSH**
-             * *   **RDP**
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -186,7 +189,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host account.
+             * <p>The name of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -194,7 +200,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the host for which the host accounts were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -202,10 +211,14 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host for which you want to query the host accounts that the user is authorized to manage.
-             * <p>
+             * <p>Indicates whether the user is authorized to manage the host account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAuthorized(Boolean isAuthorized) {
                 this.isAuthorized = isAuthorized;
@@ -213,11 +226,14 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user is authorized to manage the host account. Valid values:
-             * <p>
+             * <p>The protocol that is used by the host. Valid values:</p>
+             * <ul>
+             * <li><strong>SSH</strong></li>
+             * <li><strong>RDP</strong></li>
+             * </ul>
              * 
-             * *   **true**: The user is authorized to manage the host account.
-             * *   **false**: The user is not authorized to manage the host account.
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

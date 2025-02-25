@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebuildDesktopsResponseBody} extends {@link TeaModel}
  *
  * <p>RebuildDesktopsResponseBody</p>
  */
 public class RebuildDesktopsResponseBody extends TeaModel {
-    @NameInMap("RebuildResults")
-    private java.util.List < RebuildResults> rebuildResults;
+    @com.aliyun.core.annotation.NameInMap("RebuildResults")
+    private java.util.List<RebuildResults> rebuildResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RebuildDesktopsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
     /**
      * @return rebuildResults
      */
-    public java.util.List < RebuildResults> getRebuildResults() {
+    public java.util.List<RebuildResults> getRebuildResults() {
         return this.rebuildResults;
     }
 
@@ -46,19 +51,22 @@ public class RebuildDesktopsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RebuildResults> rebuildResults; 
+        private java.util.List<RebuildResults> rebuildResults; 
         private String requestId; 
 
         /**
-         * RebuildResults.
+         * <p>The recreation results.</p>
          */
-        public Builder rebuildResults(java.util.List < RebuildResults> rebuildResults) {
+        public Builder rebuildResults(java.util.List<RebuildResults> rebuildResults) {
             this.rebuildResults = rebuildResults;
             return this;
         }
 
         /**
-         * RebuildDesktops
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class RebuildDesktopsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RebuildDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>RebuildDesktopsResponseBody</p>
+     */
     public static class RebuildResults extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private RebuildResults(Builder builder) {
@@ -122,7 +136,10 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * <p>The recreation result code. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IncorrectDesktopStatus</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +147,10 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The IDs of the cloud computers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-gx2x1dhsmucyy****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -138,7 +158,10 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message. This parameter is invalid if the value of <code>Code</code> is <code>success</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The current status of the desktop does not support this operation.</p>
              */
             public Builder message(String message) {
                 this.message = message;

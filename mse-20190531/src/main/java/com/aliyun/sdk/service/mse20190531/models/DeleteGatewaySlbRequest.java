@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewaySlbRequest} extends {@link RequestModel}
  *
  * <p>DeleteGatewaySlbRequest</p>
  */
 public class DeleteGatewaySlbRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("DeleteSlb")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteSlb")
     private Boolean deleteSlb;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("SlbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbId")
     private String slbId;
 
     private DeleteGatewaySlbRequest(Builder builder) {
@@ -110,11 +115,14 @@ public class DeleteGatewaySlbRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +131,10 @@ public class DeleteGatewaySlbRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.
+         * <p>Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteSlb(Boolean deleteSlb) {
             this.putQueryParameter("DeleteSlb", deleteSlb);
@@ -132,7 +143,10 @@ public class DeleteGatewaySlbRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c9bc5afd61014165bd58f621b491****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -141,7 +155,10 @@ public class DeleteGatewaySlbRequest extends Request {
         }
 
         /**
-         * The ID of the association record.
+         * <p>The ID of the association record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>395</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -150,7 +167,10 @@ public class DeleteGatewaySlbRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance that needs to be deleted.
+         * <p>The ID of the SLB instance that needs to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf6duug6s13x4abc8****</p>
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);

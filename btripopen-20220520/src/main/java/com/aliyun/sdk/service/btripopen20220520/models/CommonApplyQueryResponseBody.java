@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommonApplyQueryResponseBody} extends {@link TeaModel}
  *
  * <p>CommonApplyQueryResponseBody</p>
  */
 public class CommonApplyQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CommonApplyQueryResponseBody(Builder builder) {
@@ -151,39 +156,48 @@ public class CommonApplyQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CommonApplyQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CommonApplyQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
 
-        @NameInMap("biz_category")
+        @com.aliyun.core.annotation.NameInMap("biz_category")
         private Integer bizCategory;
 
-        @NameInMap("cause")
+        @com.aliyun.core.annotation.NameInMap("cause")
         private String cause;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("extend_value")
+        @com.aliyun.core.annotation.NameInMap("extend_value")
         private String extendValue;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("thirdpart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_id")
         private String thirdpartId;
 
-        @NameInMap("trip_cause")
+        @com.aliyun.core.annotation.NameInMap("trip_cause")
         private String tripCause;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        private String userName;
 
         private Module(Builder builder) {
             this.applyId = builder.applyId;
@@ -197,6 +211,7 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             this.thirdpartId = builder.thirdpartId;
             this.tripCause = builder.tripCause;
             this.userId = builder.userId;
+            this.userName = builder.userName;
         }
 
         public static Builder builder() {
@@ -284,6 +299,13 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
         public static final class Builder {
             private Long applyId; 
             private Integer bizCategory; 
@@ -296,6 +318,7 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             private String thirdpartId; 
             private String tripCause; 
             private String userId; 
+            private String userName; 
 
             /**
              * apply_id.
@@ -382,6 +405,14 @@ public class CommonApplyQueryResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * user_name.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

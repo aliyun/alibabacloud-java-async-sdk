@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHotKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHotKeysResponseBody</p>
  */
 public class DescribeHotKeysResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeHotKeysResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the hot keys.
+         * <p>The details of the hot keys.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,20 +155,26 @@ public class DescribeHotKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHotKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotKeysResponseBody</p>
+     */
     public static class HotKey extends TeaModel {
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Hot")
+        @com.aliyun.core.annotation.NameInMap("Hot")
         private String hot;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyType")
+        @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private HotKey(Builder builder) {
@@ -213,7 +236,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * The database in which the key is stored.
+             * <p>The database in which the key is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -221,7 +247,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.
+             * <p>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5500~6000</p>
              */
             public Builder hot(String hot) {
                 this.hot = hot;
@@ -229,7 +258,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The name of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc:def:eng</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -237,7 +269,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the key.
+             * <p>The type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zset</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -245,7 +280,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -259,9 +297,15 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHotKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotKeysResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HotKey")
-        private java.util.List < HotKey> hotKey;
+        @com.aliyun.core.annotation.NameInMap("HotKey")
+        private java.util.List<HotKey> hotKey;
 
         private Data(Builder builder) {
             this.hotKey = builder.hotKey;
@@ -278,17 +322,17 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         /**
          * @return hotKey
          */
-        public java.util.List < HotKey> getHotKey() {
+        public java.util.List<HotKey> getHotKey() {
             return this.hotKey;
         }
 
         public static final class Builder {
-            private java.util.List < HotKey> hotKey; 
+            private java.util.List<HotKey> hotKey; 
 
             /**
              * HotKey.
              */
-            public Builder hotKey(java.util.List < HotKey> hotKey) {
+            public Builder hotKey(java.util.List<HotKey> hotKey) {
                 this.hotKey = hotKey;
                 return this;
             }

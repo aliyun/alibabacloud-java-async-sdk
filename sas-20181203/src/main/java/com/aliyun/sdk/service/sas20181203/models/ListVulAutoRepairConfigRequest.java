@@ -1,38 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVulAutoRepairConfigRequest} extends {@link RequestModel}
  *
  * <p>ListVulAutoRepairConfigRequest</p>
  */
 public class ListVulAutoRepairConfigRequest extends Request {
-    @Query
-    @NameInMap("AliasName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ListVulAutoRepairConfigRequest(Builder builder) {
         super(builder);
         this.aliasName = builder.aliasName;
         this.currentPage = builder.currentPage;
+        this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.type = builder.type;
     }
@@ -65,6 +75,13 @@ public class ListVulAutoRepairConfigRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -81,6 +98,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ListVulAutoRepairConfigRequest, Builder> {
         private String aliasName; 
         private Integer currentPage; 
+        private String lang; 
         private Integer pageSize; 
         private String type; 
 
@@ -92,12 +110,16 @@ public class ListVulAutoRepairConfigRequest extends Request {
             super(request);
             this.aliasName = request.aliasName;
             this.currentPage = request.currentPage;
+            this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.type = request.type;
         } 
 
         /**
-         * The alias of the vulnerability.
+         * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2022:0274-Important: polkit pkexec Local Privilege Escalation Vulnerability(CVE-2021-4034)</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -106,7 +128,10 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -115,7 +140,19 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,11 +161,14 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * </ul>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

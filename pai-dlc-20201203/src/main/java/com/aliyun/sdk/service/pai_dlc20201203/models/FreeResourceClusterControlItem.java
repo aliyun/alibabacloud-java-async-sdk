@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FreeResourceClusterControlItem} extends {@link TeaModel}
  *
  * <p>FreeResourceClusterControlItem</p>
  */
 public class FreeResourceClusterControlItem extends TeaModel {
-    @NameInMap("ClusterID")
+    @com.aliyun.core.annotation.NameInMap("ClusterID")
     private String clusterID;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("CrossClusters")
+    @com.aliyun.core.annotation.NameInMap("CrossClusters")
     private Boolean crossClusters;
 
-    @NameInMap("EnableFreeResource")
+    @com.aliyun.core.annotation.NameInMap("EnableFreeResource")
     private Boolean enableFreeResource;
 
-    @NameInMap("FreeResourceClusterControlId")
+    @com.aliyun.core.annotation.NameInMap("FreeResourceClusterControlId")
     private String freeResourceClusterControlId;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
-    @NameInMap("RegionID")
+    @com.aliyun.core.annotation.NameInMap("RegionID")
     private String regionID;
 
     private FreeResourceClusterControlItem(Builder builder) {

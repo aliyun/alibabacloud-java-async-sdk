@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySnapshotJobListResponseBody</p>
  */
 public class QuerySnapshotJobListResponseBody extends TeaModel {
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @NameInMap("NonExistSnapshotJobIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistSnapshotJobIds")
     private NonExistSnapshotJobIds nonExistSnapshotJobIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotJobList")
+    @com.aliyun.core.annotation.NameInMap("SnapshotJobList")
     private SnapshotJobList snapshotJobList;
 
     private QuerySnapshotJobListResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         private SnapshotJobList snapshotJobList; 
 
         /**
-         * NextPageToken.
+         * <p>The OSS object that is used as the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b11c171cced04565b1f38f1ecc39****</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -82,7 +85,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistSnapshotJobIds.
+         * <p>The OSS object that is generated as the output file of the tiling job.</p>
          */
         public Builder nonExistSnapshotJobIds(NonExistSnapshotJobIds nonExistSnapshotJobIds) {
             this.nonExistSnapshotJobIds = nonExistSnapshotJobIds;
@@ -90,7 +93,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the snapshot job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34BCAB31-2833-43A7-9FBD-B34302AB23EQ</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,11 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotJobList.
+         * <p>The distance between images.</p>
+         * <ul>
+         * <li>Default value: <strong>0</strong>.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
          */
         public Builder snapshotJobList(SnapshotJobList snapshotJobList) {
             this.snapshotJobList = snapshotJobList;
@@ -111,8 +121,14 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class NonExistSnapshotJobIds extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistSnapshotJobIds(Builder builder) {
@@ -152,17 +168,23 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private Input(Builder builder) {
@@ -215,7 +237,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * <p>The ID of the snapshot job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -223,7 +248,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The ID of the MPS queue to which the snapshot job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-location</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -231,7 +259,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The error code returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.flv</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -239,7 +270,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The custom data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1:role/testrole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -253,14 +287,20 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class MNSMessageResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
         private MNSMessageResult(Builder builder) {
@@ -304,7 +344,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * ErrorCode.
+             * <p>The number of snapshots that were taken.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -312,7 +355,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The OSS bucket that stores the input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource operated InputFile is bad</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -320,7 +366,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>The ID of the region in which the input OSS bucket is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>799454621135656C7F815F198A76****</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -334,17 +383,23 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class OutputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private OutputFile(Builder builder) {
@@ -397,7 +452,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * <p>The OSS bucket that stores the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -405,7 +463,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The ID of the region in which the output OSS bucket is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-location</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -413,7 +474,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The OSS object that is generated as the output file of the tiling job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.png</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -421,7 +485,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1:role/testrole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -435,32 +502,38 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class TileOut extends TeaModel {
-        @NameInMap("CellHeight")
+        @com.aliyun.core.annotation.NameInMap("CellHeight")
         private String cellHeight;
 
-        @NameInMap("CellSelStep")
+        @com.aliyun.core.annotation.NameInMap("CellSelStep")
         private String cellSelStep;
 
-        @NameInMap("CellWidth")
+        @com.aliyun.core.annotation.NameInMap("CellWidth")
         private String cellWidth;
 
-        @NameInMap("Color")
+        @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
 
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private String columns;
 
-        @NameInMap("IsKeepCellPic")
+        @com.aliyun.core.annotation.NameInMap("IsKeepCellPic")
         private String isKeepCellPic;
 
-        @NameInMap("Lines")
+        @com.aliyun.core.annotation.NameInMap("Lines")
         private String lines;
 
-        @NameInMap("Margin")
+        @com.aliyun.core.annotation.NameInMap("Margin")
         private String margin;
 
-        @NameInMap("Padding")
+        @com.aliyun.core.annotation.NameInMap("Padding")
         private String padding;
 
         private TileOut(Builder builder) {
@@ -558,7 +631,15 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String padding; 
 
             /**
-             * CellHeight.
+             * <p>The interval for taking snapshots.</p>
+             * <ul>
+             * <li>If this Interval parameter is specified in the request, snapshots are taken at intervals. The value must be greater than 0.</li>
+             * <li>Unit: seconds.</li>
+             * <li>Default value: <strong>10</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cellHeight(String cellHeight) {
                 this.cellHeight = cellHeight;
@@ -566,7 +647,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CellSelStep.
+             * <p>The number of rows that the tiled image can contain. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder cellSelStep(String cellSelStep) {
                 this.cellSelStep = cellSelStep;
@@ -574,7 +658,15 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CellWidth.
+             * <p>The type of the snapshot. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: normal frames.</li>
+             * <li><strong>intra</strong>: I-frames.</li>
+             * <li>Default value: <strong>intra</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cellWidth(String cellWidth) {
                 this.cellWidth = cellWidth;
@@ -582,7 +674,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Color.
+             * <p>Indicates whether the single images are retained. Default value: <strong>true</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>black</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -590,7 +685,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Columns.
+             * <p>The height of the output snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder columns(String columns) {
                 this.columns = columns;
@@ -598,7 +696,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsKeepCellPic.
+             * <p>The Object Storage Service (OSS) output file of the snapshot job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isKeepCellPic(String isKeepCellPic) {
                 this.isKeepCellPic = isKeepCellPic;
@@ -606,7 +707,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Lines.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder lines(String lines) {
                 this.lines = lines;
@@ -614,7 +718,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Margin.
+             * <p>The width of the output snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder margin(String margin) {
                 this.margin = margin;
@@ -622,7 +729,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Padding.
+             * <p>The number of columns that the tiled image can contain. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder padding(String padding) {
                 this.padding = padding;
@@ -636,17 +746,23 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class TileOutputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private TileOutputFile(Builder builder) {
@@ -699,7 +815,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * <p>The error code returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -707,7 +826,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The error message returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-location</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -715,7 +837,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * <p>The ID of the message. This parameter is not returned if the job fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.png</p>
              */
             public Builder object(String object) {
                 this.object = object;
@@ -723,7 +848,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * <p>The message sent by MNS to notify the user of the job result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1:role/testrole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -737,32 +865,88 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
+    public static class TimeArray extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TimePointList")
+        private java.util.List < Long > timePointList;
+
+        private TimeArray(Builder builder) {
+            this.timePointList = builder.timePointList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeArray create() {
+            return builder().build();
+        }
+
+        /**
+         * @return timePointList
+         */
+        public java.util.List < Long > getTimePointList() {
+            return this.timePointList;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > timePointList; 
+
+            /**
+             * TimePointList.
+             */
+            public Builder timePointList(java.util.List < Long > timePointList) {
+                this.timePointList = timePointList;
+                return this;
+            }
+
+            public TimeArray build() {
+                return new TimeArray(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class SnapshotConfig extends TeaModel {
-        @NameInMap("FrameType")
+        @com.aliyun.core.annotation.NameInMap("FrameType")
         private String frameType;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private String num;
 
-        @NameInMap("OutputFile")
+        @com.aliyun.core.annotation.NameInMap("OutputFile")
         private OutputFile outputFile;
 
-        @NameInMap("TileOut")
+        @com.aliyun.core.annotation.NameInMap("TileOut")
         private TileOut tileOut;
 
-        @NameInMap("TileOutputFile")
+        @com.aliyun.core.annotation.NameInMap("TileOutputFile")
         private TileOutputFile tileOutputFile;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("TimeArray")
+        private TimeArray timeArray;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private SnapshotConfig(Builder builder) {
@@ -774,6 +958,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             this.tileOut = builder.tileOut;
             this.tileOutputFile = builder.tileOutputFile;
             this.time = builder.time;
+            this.timeArray = builder.timeArray;
             this.width = builder.width;
         }
 
@@ -842,6 +1027,13 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         }
 
         /**
+         * @return timeArray
+         */
+        public TimeArray getTimeArray() {
+            return this.timeArray;
+        }
+
+        /**
          * @return width
          */
         public String getWidth() {
@@ -857,10 +1049,14 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private TileOut tileOut; 
             private TileOutputFile tileOutputFile; 
             private String time; 
+            private TimeArray timeArray; 
             private String width; 
 
             /**
-             * FrameType.
+             * <p>The ID of the region in which the output OSS bucket is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intra</p>
              */
             public Builder frameType(String frameType) {
                 this.frameType = frameType;
@@ -868,7 +1064,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The number of snapshots to take. If the Num parameter is set in the request, snapshots are taken at intervals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -876,7 +1075,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The OSS object that is generated as the output file of the snapshot job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -884,7 +1086,16 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * <p>The status of the snapshot job. </p>
+             * <ul>
+             * <li><strong>Submitted</strong>: The job was submitted.</li>
+             * <li><strong>Snapshoting</strong>: The job is being processed.</li>
+             * <li><strong>Success</strong>: The job was successfully processed.</li>
+             * <li><strong>Fail</strong>: The job failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder num(String num) {
                 this.num = num;
@@ -892,7 +1103,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFile.
+             * <p>The OSS output file of the tiling job.</p>
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;
@@ -900,7 +1111,11 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TileOut.
+             * <p>The margin width of the tiled image.</p>
+             * <ul>
+             * <li>Default value: <strong>0</strong>.</li>
+             * <li>Unit: pixel.</li>
+             * </ul>
              */
             public Builder tileOut(TileOut tileOut) {
                 this.tileOut = tileOut;
@@ -908,7 +1123,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TileOutputFile.
+             * <p>The error message returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
              */
             public Builder tileOutputFile(TileOutputFile tileOutputFile) {
                 this.tileOutputFile = tileOutputFile;
@@ -916,7 +1131,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The width of a single image. The default value is the width of the output snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -924,7 +1142,18 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * TimeArray.
+             */
+            public Builder timeArray(TimeArray timeArray) {
+                this.timeArray = timeArray;
+                return this;
+            }
+
+            /**
+             * <p>The OSS bucket that stores the output file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -938,41 +1167,47 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class SnapshotJob extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("MNSMessageResult")
+        @com.aliyun.core.annotation.NameInMap("MNSMessageResult")
         private MNSMessageResult MNSMessageResult;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("SnapshotConfig")
+        @com.aliyun.core.annotation.NameInMap("SnapshotConfig")
         private SnapshotConfig snapshotConfig;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TileCount")
+        @com.aliyun.core.annotation.NameInMap("TileCount")
         private String tileCount;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private SnapshotJob(Builder builder) {
@@ -1097,7 +1332,12 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Code.
+             * <p>You can call this operation to query up to 10 snapshot jobs at a time.</p>
+             * <h2>Limits on QPS</h2>
+             * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit">QPS limit</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1105,7 +1345,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The ID of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -1113,7 +1356,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The stride of a single image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T12:34:29Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1121,7 +1367,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The OSS output file of the tiling job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc6cbef8e8d5481ca536f5d2a466****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1129,7 +1378,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The number of snapshots that are contained in the tiled image.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -1137,7 +1386,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MNSMessageResult.
+             * <p>The OSS object that is used as the input file.</p>
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -1145,7 +1394,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource operated InputFile is bad</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1153,7 +1405,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The start time for taking snapshots. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b11c171cced04565b1f38f1ecc39****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1161,7 +1416,7 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotConfig.
+             * <p>The height of a single image. The default value is the height of the output snapshot.</p>
              */
             public Builder snapshotConfig(SnapshotConfig snapshotConfig) {
                 this.snapshotConfig = snapshotConfig;
@@ -1169,7 +1424,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The information about the job input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Snapshoting</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1177,7 +1435,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TileCount.
+             * <p>The snapshot job IDs that do not exist. This parameter is not returned if all specified snapshot jobs are found.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder tileCount(String tileCount) {
                 this.tileCount = tileCount;
@@ -1185,7 +1446,10 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The token that is used to retrieve the next page of the query results. The value is a 32-bit UUID. If the returned query results cannot be displayed within one page, this parameter is returned. The value of this parameter is updated for each query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testid-001</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1199,8 +1463,14 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySnapshotJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySnapshotJobListResponseBody</p>
+     */
     public static class SnapshotJobList extends TeaModel {
-        @NameInMap("SnapshotJob")
+        @com.aliyun.core.annotation.NameInMap("SnapshotJob")
         private java.util.List < SnapshotJob> snapshotJob;
 
         private SnapshotJobList(Builder builder) {

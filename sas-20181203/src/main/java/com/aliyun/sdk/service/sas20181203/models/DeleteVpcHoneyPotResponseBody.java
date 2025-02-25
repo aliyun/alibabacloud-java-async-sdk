@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcHoneyPotResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVpcHoneyPotResponseBody</p>
  */
 public class DeleteVpcHoneyPotResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteVpcHoneyPotResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeleteVpcHoneyPotResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4347E985-6E64-467B-96EC-30D4EA9E32FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

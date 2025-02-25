@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageAsyncModerationResponseBody} extends {@link TeaModel}
  *
  * <p>ImageAsyncModerationResponseBody</p>
  */
 public class ImageAsyncModerationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ImageAsyncModerationResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -98,7 +109,10 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A926AE2-4C96-573F-824F-0532960799F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +125,17 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImageAsyncModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImageAsyncModerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("ReqId")
+        @com.aliyun.core.annotation.NameInMap("ReqId")
         private String reqId;
 
         private Data(Builder builder) {
@@ -150,7 +170,10 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
             private String reqId; 
 
             /**
-             * DataId.
+             * <p>The ID of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fb5ffab1-993b-449f-b8d6-b97d5e3331f2</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -158,7 +181,10 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * <p>The reqId field returned by the Image Async Moderation API. You can use this field to query the detection results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;

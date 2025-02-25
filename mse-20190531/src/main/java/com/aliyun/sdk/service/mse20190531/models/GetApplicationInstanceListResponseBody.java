@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationInstanceListResponseBody</p>
  */
 public class GetApplicationInstanceListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
     private GetApplicationInstanceListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         private Data data; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -51,8 +56,14 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationInstanceListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private Tags(Builder builder) {
@@ -78,7 +89,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * 标签值。
+             * <p>标签值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -92,15 +106,21 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationInstanceListResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Result(Builder builder) {
             this.ip = builder.ip;
@@ -133,17 +153,20 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private String ip; 
             private String port; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The node IP address.
+             * <p>The node IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.2.3</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -151,7 +174,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The application port.
+             * <p>The application port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -159,9 +185,9 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The node tags.
+             * <p>The node tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -173,17 +199,23 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationInstanceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -218,7 +250,7 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -232,11 +264,14 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
             /**
-             * The page number. Pages start from page 1.
+             * <p>The page number. Pages start from page 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -244,7 +279,10 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -252,15 +290,18 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The queried nodes.
+             * <p>The queried nodes.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The total number of nodes.
+             * <p>The total number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

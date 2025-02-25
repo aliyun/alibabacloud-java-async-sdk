@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccessTokenResponseBody} extends {@link TeaModel}
  *
  * <p>AccessTokenResponseBody</p>
  */
 public class AccessTokenResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private AccessTokenResponseBody(Builder builder) {
@@ -150,7 +155,10 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标识
+         * <p>成功标识</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +166,10 @@ public class AccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -171,11 +182,17 @@ public class AccessTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AccessTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>AccessTokenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("expire")
+        @com.aliyun.core.annotation.NameInMap("expire")
         private Long expire;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Data(Builder builder) {
@@ -232,14 +249,20 @@ public class AccessTokenResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AccessTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>AccessTokenResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("expire")
+        @com.aliyun.core.annotation.NameInMap("expire")
         private Long expire;
 
-        @NameInMap("start")
+        @com.aliyun.core.annotation.NameInMap("start")
         private Long start;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Module(Builder builder) {

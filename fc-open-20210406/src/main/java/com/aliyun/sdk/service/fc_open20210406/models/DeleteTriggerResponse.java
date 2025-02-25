@@ -13,12 +13,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteTriggerResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
+
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
     private DeleteTriggerResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
     }
 
     public static DeleteTriggerResponse create() {
@@ -37,9 +40,18 @@ public class DeleteTriggerResponse extends Response {
         return this.headers;
     }
 
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
     public interface Builder extends Response.Builder<DeleteTriggerResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         @Override
         DeleteTriggerResponse build();
@@ -50,6 +62,7 @@ public class DeleteTriggerResponse extends Response {
             extends Response.BuilderImpl<DeleteTriggerResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
 
         private BuilderImpl() {
             super();
@@ -58,6 +71,7 @@ public class DeleteTriggerResponse extends Response {
         private BuilderImpl(DeleteTriggerResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
         } 
 
         /**
@@ -66,6 +80,15 @@ public class DeleteTriggerResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

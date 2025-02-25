@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>CreateApiDestinationRequest</p>
  */
 public class CreateApiDestinationRequest extends Request {
-    @Query
-    @NameInMap("ApiDestinationName")
-    @Validation(required = true, maxLength = 127, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiDestinationName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 127, minLength = 2)
     private String apiDestinationName;
 
-    @Query
-    @NameInMap("ConnectionName")
-    @Validation(required = true, maxLength = 127, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 127, minLength = 2)
     private String connectionName;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 255)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String description;
 
-    @Query
-    @NameInMap("HttpApiParameters")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpApiParameters")
+    @com.aliyun.core.annotation.Validation(required = true)
     private HttpApiParameters httpApiParameters;
 
     private CreateApiDestinationRequest(Builder builder) {
@@ -148,12 +147,12 @@ public class CreateApiDestinationRequest extends Request {
     } 
 
     public static class HttpApiParameters extends TeaModel {
-        @NameInMap("Endpoint")
-        @Validation(required = true, maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 127)
         private String endpoint;
 
-        @NameInMap("Method")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Method")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String method;
 
         private HttpApiParameters(Builder builder) {

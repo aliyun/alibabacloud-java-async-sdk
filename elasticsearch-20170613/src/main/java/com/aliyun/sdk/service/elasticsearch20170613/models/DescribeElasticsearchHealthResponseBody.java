@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticsearchHealthResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticsearchHealthResponseBody</p>
  */
 public class DescribeElasticsearchHealthResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
     private DescribeElasticsearchHealthResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * The response code returned.
+         * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,10 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * The response message returned.
+         * <p>The response message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +96,10 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0731F217-2C8A-4D42-8BCD-5C352866E3B7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +107,10 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * The color that indicates the health status of the cluster.
+         * <p>The color that indicates the health status of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GREEN</p>
          */
         public Builder result(String result) {
             this.result = result;

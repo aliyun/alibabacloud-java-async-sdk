@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvServiceMonitorsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnvServiceMonitorsResponseBody</p>
  */
 public class ListEnvServiceMonitorsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEnvServiceMonitorsResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,12 +74,15 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,15 +90,18 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +125,26 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvServiceMonitorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvServiceMonitorsResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("MatchedTargetCount")
+        @com.aliyun.core.annotation.NameInMap("MatchedTargetCount")
         private Integer matchedTargetCount;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private Endpoints(Builder builder) {
@@ -186,7 +206,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * The collection interval.
+             * <p>The collection interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30s</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -194,7 +217,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pods that match the ServiceMonitor endpoint.
+             * <p>The number of pods that match the ServiceMonitor endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchedTargetCount(Integer matchedTargetCount) {
                 this.matchedTargetCount = matchedTargetCount;
@@ -202,7 +228,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The collection path.
+             * <p>The collection path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/metrics</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -210,7 +239,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The external port.
+             * <p>The external port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9101</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -218,7 +250,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The destination port.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -232,41 +267,47 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvServiceMonitorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvServiceMonitorsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AddonName")
+        @com.aliyun.core.annotation.NameInMap("AddonName")
         private String addonName;
 
-        @NameInMap("AddonReleaseName")
+        @com.aliyun.core.annotation.NameInMap("AddonReleaseName")
         private String addonReleaseName;
 
-        @NameInMap("AddonVersion")
+        @com.aliyun.core.annotation.NameInMap("AddonVersion")
         private String addonVersion;
 
-        @NameInMap("ConfigYaml")
+        @com.aliyun.core.annotation.NameInMap("ConfigYaml")
         private String configYaml;
 
-        @NameInMap("CreationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreationTimestamp")
         private String creationTimestamp;
 
-        @NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
+        private java.util.List<Endpoints> endpoints;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("MatchedServiceCount")
+        @com.aliyun.core.annotation.NameInMap("MatchedServiceCount")
         private Integer matchedServiceCount;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceMonitorName")
+        @com.aliyun.core.annotation.NameInMap("ServiceMonitorName")
         private String serviceMonitorName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -330,7 +371,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -382,7 +423,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             private String addonVersion; 
             private String configYaml; 
             private String creationTimestamp; 
-            private java.util.List < Endpoints> endpoints; 
+            private java.util.List<Endpoints> endpoints; 
             private String environmentId; 
             private Integer matchedServiceCount; 
             private String namespace; 
@@ -391,7 +432,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the component to which the ServiceMonitor belongs.
+             * <p>The name of the add-on to which the ServiceMonitor belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -399,7 +443,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the component.
+             * <p>The instance name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql1</p>
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -407,7 +454,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the component.
+             * <p>The version of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.0</p>
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;
@@ -415,7 +465,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The YAML configuration string.
+             * <p>The YAML configuration string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Refer to supplementary instructions.</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -423,7 +476,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ServiceMonitor was created. The value of this parameter is a timestamp.
+             * <p>The time when the ServiceMonitor was created. The value of this parameter is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2011-10-11T22:32:11Z</p>
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -431,15 +487,18 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoints of the ServiceMonitor.
+             * <p>The endpoints of the ServiceMonitor.</p>
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
 
             /**
-             * The environment ID.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -447,7 +506,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of matched services.
+             * <p>The number of matched services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder matchedServiceCount(Integer matchedServiceCount) {
                 this.matchedServiceCount = matchedServiceCount;
@@ -455,7 +517,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -463,7 +528,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -471,7 +539,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ServiceMonitor.
+             * <p>The name of the ServiceMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sm1</p>
              */
             public Builder serviceMonitorName(String serviceMonitorName) {
                 this.serviceMonitorName = serviceMonitorName;
@@ -479,7 +550,10 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ServiceMonitor.
+             * <p>The status of the ServiceMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,40 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEntitiesByTagsRequest} extends {@link RequestModel}
  *
  * <p>ListEntitiesByTagsRequest</p>
  */
 public class ListEntitiesByTagsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EntityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entityType;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Tags")
-    @Validation(required = true)
-    private java.util.List < UserEntityTag > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<UserEntityTag> tags;
 
     private ListEntitiesByTagsRequest(Builder builder) {
         super(builder);
@@ -89,7 +93,7 @@ public class ListEntitiesByTagsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < UserEntityTag > getTags() {
+    public java.util.List<UserEntityTag> getTags() {
         return this.tags;
     }
 
@@ -98,7 +102,7 @@ public class ListEntitiesByTagsRequest extends Request {
         private String entityType; 
         private String nextToken; 
         private Integer pageSize; 
-        private java.util.List < UserEntityTag > tags; 
+        private java.util.List<UserEntityTag> tags; 
 
         private Builder() {
             super();
@@ -114,7 +118,7 @@ public class ListEntitiesByTagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -123,7 +127,11 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>The type of the entity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -132,7 +140,10 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -141,7 +152,10 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,9 +164,10 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.List < UserEntityTag > tags) {
+        public Builder tags(java.util.List<UserEntityTag> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

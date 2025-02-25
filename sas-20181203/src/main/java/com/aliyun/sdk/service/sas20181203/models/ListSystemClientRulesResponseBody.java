@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemClientRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemClientRulesResponseBody</p>
  */
 public class ListSystemClientRulesResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleList")
-    private java.util.List < RuleList> ruleList;
+    @com.aliyun.core.annotation.NameInMap("RuleList")
+    private java.util.List<RuleList> ruleList;
 
     private ListSystemClientRulesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     /**
      * @return ruleList
      */
-    public java.util.List < RuleList> getRuleList() {
+    public java.util.List<RuleList> getRuleList() {
         return this.ruleList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RuleList> ruleList; 
+        private java.util.List<RuleList> ruleList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C43CA30F-EF67-51BB-8C95-F31B8303****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the system defense rules.
+         * <p>An array that consists of the system defense rules.</p>
          */
-        public Builder ruleList(java.util.List < RuleList> ruleList) {
+        public Builder ruleList(java.util.List<RuleList> ruleList) {
             this.ruleList = ruleList;
             return this;
         }
@@ -91,14 +99,20 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemClientRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemClientRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -142,7 +156,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -150,7 +167,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +178,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -172,11 +195,17 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSystemClientRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemClientRulesResponseBody</p>
+     */
     public static class Policies extends TeaModel {
-        @NameInMap("PolicyKey")
+        @com.aliyun.core.annotation.NameInMap("PolicyKey")
         private String policyKey;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
         private Policies(Builder builder) {
@@ -211,7 +240,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private String policyName; 
 
             /**
-             * The policy key.
+             * <p>The policy key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_auto_****</p>
              */
             public Builder policyKey(String policyKey) {
                 this.policyKey = policyKey;
@@ -219,7 +251,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System self-starting task****</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -233,32 +268,41 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSystemClientRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemClientRulesResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
-        @NameInMap("AggregationName")
+        @com.aliyun.core.annotation.NameInMap("AggregationName")
         private String aggregationName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Policies")
-        private java.util.List < Policies> policies;
+        @com.aliyun.core.annotation.NameInMap("Policies")
+        private java.util.List<Policies> policies;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private Integer ruleType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SwitchId")
+        @com.aliyun.core.annotation.NameInMap("SwitchEnable")
+        private Boolean switchEnable;
+
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
         private RuleList(Builder builder) {
@@ -270,6 +314,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             this.ruleName = builder.ruleName;
             this.ruleType = builder.ruleType;
             this.status = builder.status;
+            this.switchEnable = builder.switchEnable;
             this.switchId = builder.switchId;
         }
 
@@ -305,7 +350,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         /**
          * @return policies
          */
-        public java.util.List < Policies> getPolicies() {
+        public java.util.List<Policies> getPolicies() {
             return this.policies;
         }
 
@@ -338,6 +383,13 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return switchEnable
+         */
+        public Boolean getSwitchEnable() {
+            return this.switchEnable;
+        }
+
+        /**
          * @return switchId
          */
         public String getSwitchId() {
@@ -348,15 +400,19 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private String aggregationName; 
             private String description; 
             private String platform; 
-            private java.util.List < Policies> policies; 
+            private java.util.List<Policies> policies; 
             private Long ruleId; 
             private String ruleName; 
             private Integer ruleType; 
             private Integer status; 
+            private Boolean switchEnable; 
             private String switchId; 
 
             /**
-             * The name of the aggregation type for the system defense rule.
+             * <p>The name of the aggregation type for the system defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initial entry</p>
              */
             public Builder aggregationName(String aggregationName) {
                 this.aggregationName = aggregationName;
@@ -364,7 +420,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the system defense rule.
+             * <p>The description of the system defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Supports alerting or blocking of images that have high-risk vulnerabilities****</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -372,12 +431,15 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the OS. Valid values:
-             * <p>
+             * <p>The type of the OS. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * <li><strong>all</strong>: all types</li>
+             * </ul>
              * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
-             * *   **all**: all types
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -385,15 +447,18 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of policies.
+             * <p>An array that consists of policies.</p>
              */
-            public Builder policies(java.util.List < Policies> policies) {
+            public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
                 return this;
             }
 
             /**
-             * The ID of the system defense rule.
+             * <p>The ID of the system defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30****</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -401,7 +466,10 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system defense rule.
+             * <p>The name of the system defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule****</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -409,13 +477,14 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the system defense rule. Valid values:
-             * <p>
+             * <p>The type of the system defense rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: alihips, process-specific defense</li>
+             * <li><strong>2</strong>: alinet, network-specific defense</li>
+             * </ul>
              * 
-             * *   **1**: alihips
-             * *   **2**: alinet
-             * *   **3**: alidetect
-             * *   **4**: alisecguard
+             * <strong>example:</strong>
+             * <p>alihips</p>
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;
@@ -423,11 +492,14 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the system defense rule. Valid values:
-             * <p>
+             * <p>The status of the system defense rule. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: enabled</li>
+             * <li><strong>offline</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **online**: enabled
-             * *   **offline**: disabled
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -435,7 +507,25 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the system defense rule.
+             * <p>Whether the current rule switch takes effect. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enabled</li>
+             * <li><strong>false</strong>: disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder switchEnable(Boolean switchEnable) {
+                this.switchEnable = switchEnable;
+                return this;
+            }
+
+            /**
+             * <p>The switch ID of the system defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-ENABLE-SWITCH-TYPE_****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

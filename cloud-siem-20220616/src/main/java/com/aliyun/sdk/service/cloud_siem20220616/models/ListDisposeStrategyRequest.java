@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDisposeStrategyRequest</p>
  */
 public class ListDisposeStrategyRequest extends Request {
-    @Body
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Body
-    @NameInMap("EffectiveStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EffectiveStatus")
     private Integer effectiveStatus;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Body
-    @NameInMap("EntityIdentity")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityIdentity")
     private String entityIdentity;
 
-    @Body
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @Body
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Body
-    @NameInMap("OrderField")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderField")
     private String orderField;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("PlaybookName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookName")
     private String playbookName;
 
-    @Body
-    @NameInMap("PlaybookTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookTypes")
     private String playbookTypes;
 
-    @Body
-    @NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SophonTaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SophonTaskId")
     private String sophonTaskId;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private ListDisposeStrategyRequest(Builder builder) {
@@ -86,6 +93,8 @@ public class ListDisposeStrategyRequest extends Request {
         this.playbookTypes = builder.playbookTypes;
         this.playbookUuid = builder.playbookUuid;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.sophonTaskId = builder.sophonTaskId;
         this.startTime = builder.startTime;
     }
@@ -188,6 +197,20 @@ public class ListDisposeStrategyRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return sophonTaskId
      */
     public String getSophonTaskId() {
@@ -214,6 +237,8 @@ public class ListDisposeStrategyRequest extends Request {
         private String playbookTypes; 
         private String playbookUuid; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String sophonTaskId; 
         private Long startTime; 
 
@@ -235,6 +260,8 @@ public class ListDisposeStrategyRequest extends Request {
             this.playbookTypes = request.playbookTypes;
             this.playbookUuid = request.playbookUuid;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.sophonTaskId = request.sophonTaskId;
             this.startTime = request.startTime;
         } 
@@ -373,6 +400,27 @@ public class ListDisposeStrategyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

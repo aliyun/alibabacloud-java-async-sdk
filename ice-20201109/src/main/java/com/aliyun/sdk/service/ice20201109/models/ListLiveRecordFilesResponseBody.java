@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveRecordFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveRecordFilesResponseBody</p>
  */
 public class ListLiveRecordFilesResponseBody extends TeaModel {
-    @NameInMap("Files")
-    private java.util.List < Files> files;
+    @com.aliyun.core.annotation.NameInMap("Files")
+    private java.util.List<Files> files;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListLiveRecordFilesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -90,7 +95,7 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
         private Long pageNo; 
         private String pageSize; 
         private String requestId; 
@@ -98,15 +103,18 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Files.
+         * <p>The list of index files.</p>
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             this.files = files;
             return this;
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -114,7 +122,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +133,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE24625C-7C0F-4020-8448-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order of the index files by creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.sortBy = sortBy;
@@ -138,7 +155,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of files that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -151,44 +171,50 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveRecordFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveRecordFilesResponseBody</p>
+     */
     public static class Files extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("RecordOutput")
+        @com.aliyun.core.annotation.NameInMap("RecordOutput")
         private String recordOutput;
 
-        @NameInMap("RecordUrl")
+        @com.aliyun.core.annotation.NameInMap("RecordUrl")
         private String recordUrl;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StreamUrl")
+        @com.aliyun.core.annotation.NameInMap("StreamUrl")
         private String streamUrl;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private Files(Builder builder) {
@@ -322,7 +348,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * CreateTime.
+             * <p>The time when the file was created in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-05-27T09:40:56Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -330,7 +359,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The recording length. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -338,7 +370,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-01T07:36:10Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -346,7 +381,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of the recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m3u8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -354,7 +392,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>640</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -362,7 +403,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the recording job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -370,7 +414,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The name of the recording job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LiveRecordJob***</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -378,7 +425,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The ID of the index file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -386,7 +436,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordOutput.
+             * <p>The storage information about the recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Type&quot;: &quot;oss&quot;, &quot;Endpoint&quot;:&quot;oss-cn-shanghai.aliyuncs.com&quot;, &quot;Bucket&quot;: &quot;test-bucket&quot; }</p>
              */
             public Builder recordOutput(String recordOutput) {
                 this.recordOutput = recordOutput;
@@ -394,7 +447,7 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordUrl.
+             * <p>The URL of the index file.</p>
              */
             public Builder recordUrl(String recordUrl) {
                 this.recordUrl = recordUrl;
@@ -402,7 +455,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-01T07:36:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -410,7 +466,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StreamUrl.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LiveStream***</p>
              */
             public Builder streamUrl(String streamUrl) {
                 this.streamUrl = streamUrl;
@@ -418,7 +477,10 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

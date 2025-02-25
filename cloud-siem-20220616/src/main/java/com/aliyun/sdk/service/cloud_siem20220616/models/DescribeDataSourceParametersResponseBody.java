@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataSourceParametersResponseBody</p>
  */
 public class DescribeDataSourceParametersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDataSourceParametersResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     } 
 
     public static class ParamValue extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamValue(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Label.
+             * The display value.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -118,7 +117,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The actual value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -133,46 +132,46 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CanEditted")
+        @com.aliyun.core.annotation.NameInMap("CanEditted")
         private Integer canEditted;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("DataSourceType")
+        @com.aliyun.core.annotation.NameInMap("DataSourceType")
         private String dataSourceType;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("FormatCheck")
+        @com.aliyun.core.annotation.NameInMap("FormatCheck")
         private String formatCheck;
 
-        @NameInMap("Hit")
+        @com.aliyun.core.annotation.NameInMap("Hit")
         private String hit;
 
-        @NameInMap("ParaCode")
+        @com.aliyun.core.annotation.NameInMap("ParaCode")
         private String paraCode;
 
-        @NameInMap("ParaLevel")
+        @com.aliyun.core.annotation.NameInMap("ParaLevel")
         private Integer paraLevel;
 
-        @NameInMap("ParaName")
+        @com.aliyun.core.annotation.NameInMap("ParaName")
         private String paraName;
 
-        @NameInMap("ParaType")
+        @com.aliyun.core.annotation.NameInMap("ParaType")
         private String paraType;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private java.util.List < ParamValue> paramValue;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Integer required;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Data(Builder builder) {
@@ -315,7 +314,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * CanEditted.
+             * Indicates whether the edit operation is supported. Valid values:
+             * <p>
+             * 
+             * *   **0**
+             * *   **1**
              */
             public Builder canEditted(Integer canEditted) {
                 this.canEditted = canEditted;
@@ -323,7 +326,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   **qcloud**: Tencent Cloud
+             * *   **aliyun**: Alibaba Cloud
+             * *   **hcloud**: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -331,7 +339,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   **obs**: Huawei Cloud Object Storage Service (OBS)
+             * *   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)
+             * *   **ckafka**: Tencent Cloud TDMQ for CKafka
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -339,7 +352,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * The default value of the parameter.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -347,7 +360,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Disabled.
+             * Indicates whether the modification operation is forbidden. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -355,7 +372,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * FormatCheck.
+             * The method that is used to check the parameter format.
              */
             public Builder formatCheck(String formatCheck) {
                 this.formatCheck = formatCheck;
@@ -363,7 +380,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Hit.
+             * The additional information.
              */
             public Builder hit(String hit) {
                 this.hit = hit;
@@ -371,7 +388,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaCode.
+             * The code of the parameter.
              */
             public Builder paraCode(String paraCode) {
                 this.paraCode = paraCode;
@@ -379,7 +396,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaLevel.
+             * The parameter level. Valid values:
+             * <p>
+             * 
+             * *   **1**: the parameters of the data source
+             * *   **2**: the parameters of the log
              */
             public Builder paraLevel(Integer paraLevel) {
                 this.paraLevel = paraLevel;
@@ -387,7 +408,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaName.
+             * The name of the parameter.
              */
             public Builder paraName(String paraName) {
                 this.paraName = paraName;
@@ -395,7 +416,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaType.
+             * The data type of the parameter.
              */
             public Builder paraType(String paraType) {
                 this.paraType = paraType;
@@ -403,7 +424,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValue.
+             * The value of the parameter.
              */
             public Builder paramValue(java.util.List < ParamValue> paramValue) {
                 this.paramValue = paramValue;
@@ -411,7 +432,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Indicates whether the parameter is required. Valid values:
+             * <p>
+             * 
+             * *   **1**: required
+             * *   **0**: optional
              */
             public Builder required(Integer required) {
                 this.required = required;
@@ -419,7 +444,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The note for the parameter value.
              */
             public Builder title(String title) {
                 this.title = title;

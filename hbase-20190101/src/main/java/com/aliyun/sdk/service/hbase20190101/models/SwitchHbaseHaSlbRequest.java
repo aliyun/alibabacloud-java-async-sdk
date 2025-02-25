@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchHbaseHaSlbRequest} extends {@link RequestModel}
  *
  * <p>SwitchHbaseHaSlbRequest</p>
  */
 public class SwitchHbaseHaSlbRequest extends Request {
-    @Query
-    @NameInMap("BdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bdsId;
 
-    @Query
-    @NameInMap("HaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haId;
 
-    @Query
-    @NameInMap("HaTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haTypes;
 
-    @Query
-    @NameInMap("HbaseType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HbaseType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hbaseType;
 
     private SwitchHbaseHaSlbRequest(Builder builder) {
@@ -100,7 +105,10 @@ public class SwitchHbaseHaSlbRequest extends Request {
         } 
 
         /**
-         * BdsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-t4n3496whj23ia4k</p>
          */
         public Builder bdsId(String bdsId) {
             this.putQueryParameter("BdsId", bdsId);
@@ -109,7 +117,10 @@ public class SwitchHbaseHaSlbRequest extends Request {
         }
 
         /**
-         * HaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-v21tmnxjwh2yuy1il</p>
          */
         public Builder haId(String haId) {
             this.putQueryParameter("HaId", haId);
@@ -118,7 +129,10 @@ public class SwitchHbaseHaSlbRequest extends Request {
         }
 
         /**
-         * HaTypes.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thrift</p>
          */
         public Builder haTypes(String haTypes) {
             this.putQueryParameter("HaTypes", haTypes);
@@ -127,7 +141,10 @@ public class SwitchHbaseHaSlbRequest extends Request {
         }
 
         /**
-         * HbaseType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder hbaseType(String hbaseType) {
             this.putQueryParameter("HbaseType", hbaseType);

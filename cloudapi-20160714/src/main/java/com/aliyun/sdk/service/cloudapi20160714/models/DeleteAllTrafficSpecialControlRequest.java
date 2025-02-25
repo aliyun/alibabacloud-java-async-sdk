@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAllTrafficSpecialControlRequest} extends {@link RequestModel}
  *
  * <p>DeleteAllTrafficSpecialControlRequest</p>
  */
 public class DeleteAllTrafficSpecialControlRequest extends Request {
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("TrafficControlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficControlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficControlId;
 
     private DeleteAllTrafficSpecialControlRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class DeleteAllTrafficSpecialControlRequest extends Request {
         } 
 
         /**
-         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
+         * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fa876ffb-caab-4f0a-93b3-3409f2fa5199</p>
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
@@ -78,7 +86,11 @@ public class DeleteAllTrafficSpecialControlRequest extends Request {
         }
 
         /**
-         * The ID of the throttling policy.
+         * <p>The ID of the throttling policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf123456</p>
          */
         public Builder trafficControlId(String trafficControlId) {
             this.putQueryParameter("TrafficControlId", trafficControlId);

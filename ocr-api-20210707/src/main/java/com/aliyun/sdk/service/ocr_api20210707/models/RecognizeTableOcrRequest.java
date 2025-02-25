@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeTableOcrRequest} extends {@link RequestModel}
  *
  * <p>RecognizeTableOcrRequest</p>
  */
 public class RecognizeTableOcrRequest extends Request {
-    @Query
-    @NameInMap("IsHandWriting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsHandWriting")
     private String isHandWriting;
 
-    @Query
-    @NameInMap("LineLess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineLess")
     private Boolean lineLess;
 
-    @Query
-    @NameInMap("NeedRotate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedRotate")
     private Boolean needRotate;
 
-    @Query
-    @NameInMap("SkipDetection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipDetection")
     private Boolean skipDetection;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(maxLength = 2048)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeTableOcrRequest(Builder builder) {

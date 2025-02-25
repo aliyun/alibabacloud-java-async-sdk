@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClusterRequest} extends {@link RequestModel}
  *
  * <p>UpdateClusterRequest</p>
  */
 public class UpdateClusterRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ClusterAliasName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterAliasName")
     private String clusterAliasName;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MaintenanceEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintenanceEndTime")
     private String maintenanceEndTime;
 
-    @Query
-    @NameInMap("MaintenanceStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintenanceStartTime")
     private String maintenanceStartTime;
 
-    @Query
-    @NameInMap("RequestPars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPars")
     private String requestPars;
 
     private UpdateClusterRequest(Builder builder) {
@@ -124,11 +129,14 @@ public class UpdateClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,7 +145,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The alias of the instance.
+         * <p>The alias of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-1</p>
          */
         public Builder clusterAliasName(String clusterAliasName) {
             this.putQueryParameter("ClusterAliasName", clusterAliasName);
@@ -146,7 +157,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-78v1l83****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +169,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The end time of the O\&M window.
+         * <p>The end time of the O&amp;M window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06:00</p>
          */
         public Builder maintenanceEndTime(String maintenanceEndTime) {
             this.putQueryParameter("MaintenanceEndTime", maintenanceEndTime);
@@ -164,7 +181,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The start time of the O\&M window.
+         * <p>The start time of the O&amp;M window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00</p>
          */
         public Builder maintenanceStartTime(String maintenanceStartTime) {
             this.putQueryParameter("MaintenanceStartTime", maintenanceStartTime);
@@ -173,7 +193,10 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

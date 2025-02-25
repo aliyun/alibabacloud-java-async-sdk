@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ReleaseInstanceResponseBody</p>
  */
 public class ReleaseInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ReleaseInstanceResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid_Product_Code</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description of the execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which can be used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,11 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>A value of true indicates that the execution is complete.</p>
+         * <p>A value of false indicates that an error occurs during the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +149,17 @@ public class ReleaseInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ReleaseInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ReleaseInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("ReleaseResult")
+        @com.aliyun.core.annotation.NameInMap("ReleaseResult")
         private Boolean releaseResult;
 
         private Data(Builder builder) {
@@ -170,7 +194,10 @@ public class ReleaseInstanceResponseBody extends TeaModel {
             private Boolean releaseResult; 
 
             /**
-             * HostId.
+             * <p>The site of the execution host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -178,7 +205,10 @@ public class ReleaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseResult.
+             * <p>Indicates whether the instance is released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder releaseResult(Boolean releaseResult) {
                 this.releaseResult = releaseResult;

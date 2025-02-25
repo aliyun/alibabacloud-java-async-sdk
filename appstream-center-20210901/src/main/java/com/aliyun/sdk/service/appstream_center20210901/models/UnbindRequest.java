@@ -1,40 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindRequest} extends {@link RequestModel}
  *
  * <p>UnbindRequest</p>
  */
 public class UnbindRequest extends Request {
-    @Body
-    @NameInMap("AppInstanceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupId;
 
-    @Body
-    @NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
     private String appInstanceId;
 
-    @Body
-    @NameInMap("EndUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
+    private String appInstancePersistentId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endUserId;
 
-    @Body
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
     private UnbindRequest(Builder builder) {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
+        this.appInstancePersistentId = builder.appInstancePersistentId;
         this.endUserId = builder.endUserId;
         this.productType = builder.productType;
     }
@@ -67,6 +77,13 @@ public class UnbindRequest extends Request {
     }
 
     /**
+     * @return appInstancePersistentId
+     */
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
+    }
+
+    /**
      * @return endUserId
      */
     public String getEndUserId() {
@@ -83,6 +100,7 @@ public class UnbindRequest extends Request {
     public static final class Builder extends Request.Builder<UnbindRequest, Builder> {
         private String appInstanceGroupId; 
         private String appInstanceId; 
+        private String appInstancePersistentId; 
         private String endUserId; 
         private String productType; 
 
@@ -94,12 +112,17 @@ public class UnbindRequest extends Request {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceId = request.appInstanceId;
+            this.appInstancePersistentId = request.appInstancePersistentId;
             this.endUserId = request.endUserId;
             this.productType = request.productType;
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>The ID of the delivery group. You can call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -108,7 +131,10 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * AppInstanceId.
+         * <p>The session ID. You can call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-d297eyf83g5ni****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.putBodyParameter("AppInstanceId", appInstanceId);
@@ -117,7 +143,23 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The ID of the persistent session. You can call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-0bxls9m3cl7s****</p>
+         */
+        public Builder appInstancePersistentId(String appInstancePersistentId) {
+            this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
+            this.appInstancePersistentId = appInstancePersistentId;
+            return this;
+        }
+
+        /**
+         * <p>The username.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
@@ -126,7 +168,15 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);

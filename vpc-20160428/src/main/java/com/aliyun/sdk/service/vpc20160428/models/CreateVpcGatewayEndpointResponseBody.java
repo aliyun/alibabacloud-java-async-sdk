@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcGatewayEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpcGatewayEndpointResponseBody</p>
  */
 public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
     private CreateVpcGatewayEndpointResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+         * <p>The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-27T01:58:37Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -106,7 +114,10 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the gateway endpoint.
+         * <p>The ID of the gateway endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpce-bp1w1dmdqjpwul0v3****</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -114,7 +125,10 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the gateway endpoint.
+         * <p>The name of the gateway endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder endpointName(String endpointName) {
             this.endpointName = endpointName;
@@ -122,7 +136,10 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62CFC815-E08A-5CF4-92D1-54273EC9E406</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,10 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the gateway endpoint belongs.
+         * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -138,7 +158,10 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the endpoint service.
+         * <p>The name of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyun.cn-hangzhou.oss</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

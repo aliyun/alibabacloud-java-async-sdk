@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TimeConstraint} extends {@link TeaModel}
  *
  * <p>TimeConstraint</p>
  */
 public class TimeConstraint extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private TimeConstraint(Builder builder) {
@@ -50,7 +55,10 @@ public class TimeConstraint extends TeaModel {
         private String startTime; 
 
         /**
-         * 结束时间。取值范围：00:00:00至23:59:59
+         * <p>结束时间。取值范围：00:00:00至23:59:59</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -58,7 +66,10 @@ public class TimeConstraint extends TeaModel {
         }
 
         /**
-         * 开始时间。取值范围：00:00:00至23:59:59
+         * <p>开始时间。取值范围：00:00:00至23:59:59</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

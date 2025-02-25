@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRouteRulesResponseBody</p>
  */
 public class ListRouteRulesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListRouteRulesResponseBody(Builder builder) {
@@ -132,61 +131,61 @@ public class ListRouteRulesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("assignObjectId")
+        @com.aliyun.core.annotation.NameInMap("assignObjectId")
         private Long assignObjectId;
 
-        @NameInMap("assignObjectType")
+        @com.aliyun.core.annotation.NameInMap("assignObjectType")
         private String assignObjectType;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("effection")
+        @com.aliyun.core.annotation.NameInMap("effection")
         private String effection;
 
-        @NameInMap("enableStatus")
+        @com.aliyun.core.annotation.NameInMap("enableStatus")
         private String enableStatus;
 
-        @NameInMap("incidentLevel")
+        @com.aliyun.core.annotation.NameInMap("incidentLevel")
         private String incidentLevel;
 
-        @NameInMap("isValid")
+        @com.aliyun.core.annotation.NameInMap("isValid")
         private Integer isValid;
 
-        @NameInMap("matchCount")
+        @com.aliyun.core.annotation.NameInMap("matchCount")
         private Long matchCount;
 
-        @NameInMap("monitorSourceNames")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceNames")
         private String monitorSourceNames;
 
-        @NameInMap("relServiceDeleteType")
+        @com.aliyun.core.annotation.NameInMap("relServiceDeleteType")
         private Integer relServiceDeleteType;
 
-        @NameInMap("relatedServiceId")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceId")
         private Long relatedServiceId;
 
-        @NameInMap("relatedServiceName")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceName")
         private String relatedServiceName;
 
-        @NameInMap("routeRuleId")
+        @com.aliyun.core.annotation.NameInMap("routeRuleId")
         private Long routeRuleId;
 
-        @NameInMap("routeType")
+        @com.aliyun.core.annotation.NameInMap("routeType")
         private String routeType;
 
-        @NameInMap("ruleName")
+        @com.aliyun.core.annotation.NameInMap("ruleName")
         private String ruleName;
 
-        @NameInMap("tenantRamId")
+        @com.aliyun.core.annotation.NameInMap("tenantRamId")
         private Long tenantRamId;
 
-        @NameInMap("timeWindow")
+        @com.aliyun.core.annotation.NameInMap("timeWindow")
         private Long timeWindow;
 
-        @NameInMap("timeWindowUnit")
+        @com.aliyun.core.annotation.NameInMap("timeWindowUnit")
         private Long timeWindowUnit;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Data(Builder builder) {

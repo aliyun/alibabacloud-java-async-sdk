@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResolverEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResolverEndpointResponseBody</p>
  */
 public class DescribeResolverEndpointResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("IpConfigs")
+    @com.aliyun.core.annotation.NameInMap("IpConfigs")
     private java.util.List < IpConfigs> ipConfigs;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UpdateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
     private Long updateTimestamp;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("VpcName")
+    @com.aliyun.core.annotation.NameInMap("VpcName")
     private String vpcName;
 
-    @NameInMap("VpcRegionId")
+    @com.aliyun.core.annotation.NameInMap("VpcRegionId")
     private String vpcRegionId;
 
-    @NameInMap("VpcRegionName")
+    @com.aliyun.core.annotation.NameInMap("VpcRegionName")
     private String vpcRegionName;
 
     private DescribeResolverEndpointResponseBody(Builder builder) {
@@ -194,7 +194,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         private String vpcRegionName; 
 
         /**
-         * CreateTime.
+         * <p>The time when the endpoint was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-13 10:45:56</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -202,7 +205,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * <p>The time when the endpoint was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594608356000</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -210,7 +216,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The endpoint ID. This ID uniquely identifies the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -218,7 +227,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * IpConfigs.
+         * <p>The configurations of the source IP addresses for outbound traffic.</p>
          */
         public Builder ipConfigs(java.util.List < IpConfigs> ipConfigs) {
             this.ipConfigs = ipConfigs;
@@ -226,7 +235,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -234,7 +246,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45020ED9-6319-4CA7-9475-6E8D6446E84F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +257,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group. The security group rules are applied to the outbound virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-8vb3sigz86xc-group-****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -250,7 +268,18 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the endpoint. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: The endpoint works as expected.</li>
+         * <li>INIT: The endpoint is being created.</li>
+         * <li>FAILED: The endpoint failed to be created.</li>
+         * <li>CHANGE_INIT: The endpoint is being modified.</li>
+         * <li>CHANGE_FAILED: The endpoint failed to be modified.</li>
+         * <li>EXCEPTION: The endpoint encountered an exception.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -258,7 +287,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the endpoint was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-13 10:48:39</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -266,7 +298,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * <p>The time when the endpoint was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594608519000</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -274,7 +309,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the outbound VPC. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-0jl96awrjt75ezglc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -282,7 +320,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * VpcName.
+         * <p>The name of the outbound VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-name-test</p>
          */
         public Builder vpcName(String vpcName) {
             this.vpcName = vpcName;
@@ -290,7 +331,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * VpcRegionId.
+         * <p>The region ID of the outbound VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.vpcRegionId = vpcRegionId;
@@ -298,7 +342,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * VpcRegionName.
+         * <p>The name of the region where the outbound VPC resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HuaBei</p>
          */
         public Builder vpcRegionName(String vpcRegionName) {
             this.vpcRegionName = vpcRegionName;
@@ -311,17 +358,23 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResolverEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverEndpointResponseBody</p>
+     */
     public static class IpConfigs extends TeaModel {
-        @NameInMap("AzId")
+        @com.aliyun.core.annotation.NameInMap("AzId")
         private String azId;
 
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private IpConfigs(Builder builder) {
@@ -374,7 +427,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * AzId.
+             * <p>The ID of the zone to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder azId(String azId) {
                 this.azId = azId;
@@ -382,7 +438,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -390,7 +449,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If this parameter is left empty, the system automatically allocates an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -398,7 +460,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-0jlgeyq4oazkh5xue****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

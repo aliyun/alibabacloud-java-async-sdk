@@ -1,70 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMockRuleRequest} extends {@link RequestModel}
  *
  * <p>AddMockRuleRequest</p>
  */
 public class AddMockRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ConsumerAppIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerAppIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerAppIds;
 
-    @Query
-    @NameInMap("DubboMockItems")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DubboMockItems")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dubboMockItems;
 
-    @Query
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @Query
-    @NameInMap("ExtraJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String extraJson;
 
-    @Query
-    @NameInMap("MockType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MockType")
     private Long mockType;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ProviderAppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProviderAppId")
     private String providerAppId;
 
-    @Query
-    @NameInMap("ProviderAppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProviderAppName")
     private String providerAppName;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("ScMockItems")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScMockItems")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scMockItems;
 
-    @Query
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
     private AddMockRuleRequest(Builder builder) {
@@ -215,11 +220,14 @@ public class AddMockRuleRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -228,7 +236,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The ID of the custom application.
+         * <p>The ID of the custom application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;appName&quot;:&quot;provide&quot;,&quot;appId&quot;:&quot;bst8l6o735@f6d8aaf6e56e67d&quot;}]</p>
          */
         public Builder consumerAppIds(String consumerAppIds) {
             this.putQueryParameter("ConsumerAppIds", consumerAppIds);
@@ -237,7 +249,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The items in the recycle bin.
+         * <p>The items in the recycle bin.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder dubboMockItems(String dubboMockItems) {
             this.putQueryParameter("DubboMockItems", dubboMockItems);
@@ -246,11 +262,14 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alert rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the alert rule. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables the alert rule.</li>
+         * <li><code>false</code>: disables the alert rule.</li>
+         * </ul>
          * 
-         * *   `true`: enables the alert rule.
-         * *   `false`: disables the alert rule.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -259,7 +278,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraJson(String extraJson) {
             this.putQueryParameter("ExtraJson", extraJson);
@@ -268,13 +291,16 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The response time (RT) threshold of slow calls. Valid values:
-         * <p>
+         * <p>The response time (RT) threshold of slow calls. Valid values:</p>
+         * <ul>
+         * <li>- 15: 15 ms</li>
+         * <li>- 30: 30 ms</li>
+         * <li>- 60: 60 ms</li>
+         * <li>- 120: 120 ms</li>
+         * </ul>
          * 
-         * *   \- 15: 15 ms
-         * *   \- 30: 30 ms
-         * *   \- 60: 60 ms
-         * *   \- 120: 120 ms
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mockType(Long mockType) {
             this.putQueryParameter("MockType", mockType);
@@ -283,7 +309,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-auto-test-sc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -292,7 +322,10 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The ID of the service provider application.
+         * <p>The ID of the service provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcqtkuhnc4@66e5235415****</p>
          */
         public Builder providerAppId(String providerAppId) {
             this.putQueryParameter("ProviderAppId", providerAppId);
@@ -301,7 +334,10 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The name of the service provider application.
+         * <p>The name of the service provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-cartservice</p>
          */
         public Builder providerAppName(String providerAppName) {
             this.putQueryParameter("ProviderAppName", providerAppName);
@@ -310,7 +346,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -319,7 +359,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The input parameters. The JSON format is supported.
+         * <p>The input parameters. The JSON format is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder scMockItems(String scMockItems) {
             this.putQueryParameter("ScMockItems", scMockItems);
@@ -328,7 +372,11 @@ public class AddMockRuleRequest extends Request {
         }
 
         /**
-         * The rule source.
+         * <p>The rule source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

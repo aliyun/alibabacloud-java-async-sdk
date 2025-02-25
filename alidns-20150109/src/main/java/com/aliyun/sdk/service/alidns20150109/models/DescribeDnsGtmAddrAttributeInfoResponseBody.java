@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAddrAttributeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmAddrAttributeInfoResponseBody</p>
  */
 public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
-    @NameInMap("Addr")
+    @com.aliyun.core.annotation.NameInMap("Addr")
     private Addr addr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDnsGtmAddrAttributeInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The addresses that were queried.
+         * <p>The address in the address pool.</p>
          */
         public Builder addr(Addr addr) {
             this.addr = addr;
@@ -58,7 +63,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmAddrAttributeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAddrAttributeInfoResponseBody</p>
+     */
     public static class AttributeInfo extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private AttributeInfo(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The parent line code of the source region.
+             * <p>The parent line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -154,7 +171,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the source region group.
+             * <p>The code of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -162,7 +182,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source region group.
+             * <p>The name of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -170,7 +193,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The line code of the source region.
+             * <p>The line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -178,7 +204,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The line name of the source region.
+             * <p>The line name of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -192,11 +221,17 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAddrAttributeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAddrAttributeInfoResponseBody</p>
+     */
     public static class AddrAddr extends TeaModel {
-        @NameInMap("Addr")
+        @com.aliyun.core.annotation.NameInMap("Addr")
         private String addr;
 
-        @NameInMap("AttributeInfo")
+        @com.aliyun.core.annotation.NameInMap("AttributeInfo")
         private AttributeInfo attributeInfo;
 
         private AddrAddr(Builder builder) {
@@ -231,7 +266,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             private AttributeInfo attributeInfo; 
 
             /**
-             * The address that was queried.
+             * <p>The address in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -239,7 +277,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The source region of the address.
+             * <p>The information about the source region of the address.</p>
              */
             public Builder attributeInfo(AttributeInfo attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -253,9 +291,15 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAddrAttributeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAddrAttributeInfoResponseBody</p>
+     */
     public static class Addr extends TeaModel {
-        @NameInMap("Addr")
-        private java.util.List < AddrAddr> addr;
+        @com.aliyun.core.annotation.NameInMap("Addr")
+        private java.util.List<AddrAddr> addr;
 
         private Addr(Builder builder) {
             this.addr = builder.addr;
@@ -272,17 +316,20 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         /**
          * @return addr
          */
-        public java.util.List < AddrAddr> getAddr() {
+        public java.util.List<AddrAddr> getAddr() {
             return this.addr;
         }
 
         public static final class Builder {
-            private java.util.List < AddrAddr> addr; 
+            private java.util.List<AddrAddr> addr; 
 
             /**
-             * The address that was queried.
+             * <p>The address in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
-            public Builder addr(java.util.List < AddrAddr> addr) {
+            public Builder addr(java.util.List<AddrAddr> addr) {
                 this.addr = addr;
                 return this;
             }

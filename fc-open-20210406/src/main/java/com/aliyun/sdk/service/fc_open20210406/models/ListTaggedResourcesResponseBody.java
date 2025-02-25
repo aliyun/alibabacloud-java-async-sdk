@@ -50,7 +50,7 @@ public class ListTaggedResourcesResponseBody extends TeaModel {
         private java.util.List < Resource > resources; 
 
         /**
-         * nextToken.
+         * The token required to obtain more results. If the number of layers exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -58,7 +58,7 @@ public class ListTaggedResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * resources.
+         * The information about tagged services.
          */
         public Builder resources(java.util.List < Resource > resources) {
             this.resources = resources;

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderRequest</p>
  */
 public class CreateOrderRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
-    @Query
-    @NameInMap("Commodity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Commodity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodity;
 
-    @Query
-    @NameInMap("OrderSouce")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderSouce")
     private String orderSouce;
 
-    @Query
-    @NameInMap("OrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PaymentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String paymentType;
 
     private CreateOrderRequest(Builder builder) {
@@ -128,7 +133,10 @@ public class CreateOrderRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2709c68a-d569-4819-9c5d-1222ed2ee924</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -137,7 +145,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * Commodity.
+         * <p>This parameter is required.</p>
          */
         public Builder commodity(String commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -155,7 +163,10 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE_BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -173,7 +184,10 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HAND</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhoneMessageQrdlResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePhoneMessageQrdlResponseBody</p>
  */
 public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePhoneMessageQrdlResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,23 +120,29 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePhoneMessageQrdlResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePhoneMessageQrdlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeepLinkUrl")
+        @com.aliyun.core.annotation.NameInMap("DeepLinkUrl")
         private String deepLinkUrl;
 
-        @NameInMap("GenerateQrImage")
+        @com.aliyun.core.annotation.NameInMap("GenerateQrImage")
         private String generateQrImage;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PrefilledMessage")
+        @com.aliyun.core.annotation.NameInMap("PrefilledMessage")
         private String prefilledMessage;
 
-        @NameInMap("QrImageUrl")
+        @com.aliyun.core.annotation.NameInMap("QrImageUrl")
         private String qrImageUrl;
 
-        @NameInMap("QrdlCode")
+        @com.aliyun.core.annotation.NameInMap("QrdlCode")
         private String qrdlCode;
 
         private Data(Builder builder) {
@@ -198,7 +213,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
             private String qrdlCode; 
 
             /**
-             * DeepLinkUrl.
+             * <p>The URL of the deep link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://wa.qrdl/">https://wa.qrdl/</a></p>
              */
             public Builder deepLinkUrl(String deepLinkUrl) {
                 this.deepLinkUrl = deepLinkUrl;
@@ -206,7 +224,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * GenerateQrImage.
+             * <p>The format of the generated image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PNG</p>
              */
             public Builder generateQrImage(String generateQrImage) {
                 this.generateQrImage = generateQrImage;
@@ -214,7 +235,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -222,7 +246,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * PrefilledMessage.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hello</p>
              */
             public Builder prefilledMessage(String prefilledMessage) {
                 this.prefilledMessage = prefilledMessage;
@@ -230,7 +257,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * QrImageUrl.
+             * <p>The URL of the QR code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://img.png">http://img.png</a></p>
              */
             public Builder qrImageUrl(String qrImageUrl) {
                 this.qrImageUrl = qrImageUrl;
@@ -238,7 +268,10 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * QrdlCode.
+             * <p>The mode of the quick-response (QR) code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>D9II3***</p>
              */
             public Builder qrdlCode(String qrdlCode) {
                 this.qrdlCode = qrdlCode;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveInterventionDictionaryRequest</p>
  */
 public class RemoveInterventionDictionaryRequest extends Request {
-    @Path
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     private RemoveInterventionDictionaryRequest(Builder builder) {

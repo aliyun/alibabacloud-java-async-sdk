@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>GetRuleResponseBody</p>
  */
 public class GetRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class GetRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +117,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. If the operation is successful, the value true is returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,8 +130,49 @@ public class GetRuleResponseBody extends TeaModel {
 
     } 
 
+    public static class ConcurrentConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
+        private Long concurrency;
+
+        private ConcurrentConfig(Builder builder) {
+            this.concurrency = builder.concurrency;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConcurrentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return concurrency
+         */
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+        public static final class Builder {
+            private Long concurrency; 
+
+            /**
+             * Concurrency.
+             */
+            public Builder concurrency(Long concurrency) {
+                this.concurrency = concurrency;
+                return this;
+            }
+
+            public ConcurrentConfig build() {
+                return new ConcurrentConfig(this);
+            } 
+
+        } 
+
+    }
     public static class DeadLetterQueue extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private DeadLetterQueue(Builder builder) {
@@ -158,7 +198,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String arn; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the event source.
+             * The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -173,16 +213,16 @@ public class GetRuleResponseBody extends TeaModel {
 
     }
     public static class ParamList extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("ResourceKey")
+        @com.aliyun.core.annotation.NameInMap("ResourceKey")
         private String resourceKey;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamList(Builder builder) {
@@ -235,7 +275,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The format that is used by the event target parameter. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)
+             * The method that is used to deliver events to the event target. For more information, see [Limits](~~163289~~).
              */
             public Builder form(String form) {
                 this.form = form;
@@ -243,7 +283,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The resource parameter of the event target. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)
+             * The resource key of the event target. For more information, see [Limits](~~163289~~).
              */
             public Builder resourceKey(String resourceKey) {
                 this.resourceKey = resourceKey;
@@ -251,7 +291,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The template that is used by the event target parameter.
+             * The template based on which events are delivered to the event target.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -259,7 +299,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the event target parameter.
+             * The event target.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -274,34 +314,38 @@ public class GetRuleResponseBody extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
-        @NameInMap("DeadLetterQueue")
+        @com.aliyun.core.annotation.NameInMap("ConcurrentConfig")
+        private ConcurrentConfig concurrentConfig;
+
+        @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
-        @NameInMap("DetailMap")
+        @com.aliyun.core.annotation.NameInMap("DetailMap")
         private java.util.Map < String, ? > detailMap;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("ErrorsTolerance")
+        @com.aliyun.core.annotation.NameInMap("ErrorsTolerance")
         private String errorsTolerance;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ParamList")
+        @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List < ParamList> paramList;
 
-        @NameInMap("PushRetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("PushRetryStrategy")
         private String pushRetryStrategy;
 
-        @NameInMap("PushSelector")
+        @com.aliyun.core.annotation.NameInMap("PushSelector")
         private String pushSelector;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Targets(Builder builder) {
+            this.concurrentConfig = builder.concurrentConfig;
             this.deadLetterQueue = builder.deadLetterQueue;
             this.detailMap = builder.detailMap;
             this.endpoint = builder.endpoint;
@@ -319,6 +363,13 @@ public class GetRuleResponseBody extends TeaModel {
 
         public static Targets create() {
             return builder().build();
+        }
+
+        /**
+         * @return concurrentConfig
+         */
+        public ConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         /**
@@ -385,6 +436,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ConcurrentConfig concurrentConfig; 
             private DeadLetterQueue deadLetterQueue; 
             private java.util.Map < String, ? > detailMap; 
             private String endpoint; 
@@ -396,7 +448,15 @@ public class GetRuleResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the custom event target.
+             * ConcurrentConfig.
+             */
+            public Builder concurrentConfig(ConcurrentConfig concurrentConfig) {
+                this.concurrentConfig = concurrentConfig;
+                return this;
+            }
+
+            /**
+             * The dead-letter queue.
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -420,7 +480,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorsTolerance.
+             * The fault tolerance policy. Valid values: ALL: Fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations. NONE: Fault tolerance is not allowed. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.
              */
             public Builder errorsTolerance(String errorsTolerance) {
                 this.errorsTolerance = errorsTolerance;
@@ -428,7 +488,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom event target.
+             * The ID of the event target.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -444,7 +504,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The retry policy that is used to push events. Valid values: BACKOFF_RETRY: backoff retry. If an event failed to be pushed, it can be retried up to three times. The interval between two consecutive retries is a random value from 10 to 20. Unit: seconds. EXPONENTIAL_DECAY_RETRY: exponential decay retry. If an event failed to be pushed, it can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds is used for 167 retries.
+             * The retry policy that is used to push failed events. Valid values: BACKOFF_RETRY: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value between 10 seconds and 20 seconds. EXPONENTIAL_DECAY_RETRY: exponential decay retry. A failed event can be retried up to 176 times. The interval between two consecutive retries exponentially increases to a maximum of 512 seconds. The total retry time is 1 day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, and 512 seconds. The interval of 512 seconds is used for 167 retries.
              */
             public Builder pushRetryStrategy(String pushRetryStrategy) {
                 this.pushRetryStrategy = pushRetryStrategy;
@@ -460,7 +520,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+             * The type of the event target. For more information, see [Event target parameters](~~185887~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -475,28 +535,28 @@ public class GetRuleResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CreatedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreatedTimestamp")
         private Long createdTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("FilterPattern")
+        @com.aliyun.core.annotation.NameInMap("FilterPattern")
         private String filterPattern;
 
-        @NameInMap("RuleARN")
+        @com.aliyun.core.annotation.NameInMap("RuleARN")
         private String ruleARN;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < Targets> targets;
 
         private Data(Builder builder) {

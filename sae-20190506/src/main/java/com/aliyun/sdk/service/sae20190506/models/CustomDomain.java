@@ -1,54 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CustomDomain} extends {@link TeaModel}
  *
  * <p>CustomDomain</p>
  */
 public class CustomDomain extends TeaModel {
-    @NameInMap("accountId")
+    @com.aliyun.core.annotation.NameInMap("accountId")
     private String accountId;
 
-    @NameInMap("apiVersion")
+    @com.aliyun.core.annotation.NameInMap("apiVersion")
     private String apiVersion;
 
-    @NameInMap("certConfig")
+    @com.aliyun.core.annotation.NameInMap("certConfig")
     private CertConfig certConfig;
 
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("domainName")
+    @com.aliyun.core.annotation.NameInMap("domainName")
     private String domainName;
 
-    @NameInMap("keepFullPath")
+    @com.aliyun.core.annotation.NameInMap("keepFullPath")
     private Boolean keepFullPath;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("namespaceID")
+    @com.aliyun.core.annotation.NameInMap("namespaceID")
     private String namespaceID;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("subdomainCount")
+    @com.aliyun.core.annotation.NameInMap("routeConfig")
+    private RouteConfig routeConfig;
+
+    @com.aliyun.core.annotation.NameInMap("subdomainCount")
     private String subdomainCount;
 
-    @NameInMap("tlsConfig")
+    @com.aliyun.core.annotation.NameInMap("tlsConfig")
     private TLSConfig tlsConfig;
 
-    @NameInMap("wafConfig")
+    @com.aliyun.core.annotation.NameInMap("wafConfig")
     private WAFConfig wafConfig;
 
     private CustomDomain(Builder builder) {
@@ -62,6 +70,7 @@ public class CustomDomain extends TeaModel {
         this.namespaceID = builder.namespaceID;
         this.protocol = builder.protocol;
         this.requestId = builder.requestId;
+        this.routeConfig = builder.routeConfig;
         this.subdomainCount = builder.subdomainCount;
         this.tlsConfig = builder.tlsConfig;
         this.wafConfig = builder.wafConfig;
@@ -146,6 +155,13 @@ public class CustomDomain extends TeaModel {
     }
 
     /**
+     * @return routeConfig
+     */
+    public RouteConfig getRouteConfig() {
+        return this.routeConfig;
+    }
+
+    /**
      * @return subdomainCount
      */
     public String getSubdomainCount() {
@@ -177,6 +193,7 @@ public class CustomDomain extends TeaModel {
         private String namespaceID; 
         private String protocol; 
         private String requestId; 
+        private RouteConfig routeConfig; 
         private String subdomainCount; 
         private TLSConfig tlsConfig; 
         private WAFConfig wafConfig; 
@@ -258,6 +275,14 @@ public class CustomDomain extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * routeConfig.
+         */
+        public Builder routeConfig(RouteConfig routeConfig) {
+            this.routeConfig = routeConfig;
             return this;
         }
 

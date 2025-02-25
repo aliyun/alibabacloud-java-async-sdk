@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCollectionDataResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCollectionDataResponseBody</p>
  */
 public class DeleteCollectionDataResponseBody extends TeaModel {
-    @NameInMap("AppliedRows")
+    @com.aliyun.core.annotation.NameInMap("AppliedRows")
     private Long appliedRows;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DeleteCollectionDataResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * AppliedRows.
+         * <p>The number of rows that are affected by the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder appliedRows(Long appliedRows) {
             this.appliedRows = appliedRows;
@@ -82,7 +90,10 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +101,10 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +112,14 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

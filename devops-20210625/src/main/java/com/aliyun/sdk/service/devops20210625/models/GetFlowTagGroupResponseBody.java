@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowTagGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetFlowTagGroupResponseBody</p>
  */
 public class GetFlowTagGroupResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("flowTagGroup")
+    @com.aliyun.core.annotation.NameInMap("flowTagGroup")
     private FlowTagGroup flowTagGroup;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetFlowTagGroupResponseBody(Builder builder) {
@@ -131,20 +136,26 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFlowTagGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowTagGroupResponseBody</p>
+     */
     public static class FlowTagList extends TeaModel {
-        @NameInMap("color")
+        @com.aliyun.core.annotation.NameInMap("color")
         private String color;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modiferAccountId")
+        @com.aliyun.core.annotation.NameInMap("modiferAccountId")
         private String modiferAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private FlowTagList(Builder builder) {
@@ -252,20 +263,26 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFlowTagGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowTagGroupResponseBody</p>
+     */
     public static class FlowTagGroup extends TeaModel {
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("flowTagList")
-        private java.util.List < FlowTagList> flowTagList;
+        @com.aliyun.core.annotation.NameInMap("flowTagList")
+        private java.util.List<FlowTagList> flowTagList;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modiferAccountId")
+        @com.aliyun.core.annotation.NameInMap("modiferAccountId")
         private String modiferAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private FlowTagGroup(Builder builder) {
@@ -294,7 +311,7 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
         /**
          * @return flowTagList
          */
-        public java.util.List < FlowTagList> getFlowTagList() {
+        public java.util.List<FlowTagList> getFlowTagList() {
             return this.flowTagList;
         }
 
@@ -321,7 +338,7 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creatorAccountId; 
-            private java.util.List < FlowTagList> flowTagList; 
+            private java.util.List<FlowTagList> flowTagList; 
             private Long id; 
             private String modiferAccountId; 
             private String name; 
@@ -337,7 +354,7 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
             /**
              * flowTagList.
              */
-            public Builder flowTagList(java.util.List < FlowTagList> flowTagList) {
+            public Builder flowTagList(java.util.List<FlowTagList> flowTagList) {
                 this.flowTagList = flowTagList;
                 return this;
             }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlsLogstoreInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlsLogstoreInfoResponseBody</p>
  */
 public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
-    @NameInMap("LogStore")
+    @com.aliyun.core.annotation.NameInMap("LogStore")
     private String logStore;
 
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
-    @NameInMap("Quota")
+    @com.aliyun.core.annotation.NameInMap("Quota")
     private Long quota;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @NameInMap("Used")
+    @com.aliyun.core.annotation.NameInMap("Used")
     private Long used;
 
     private DescribeSlsLogstoreInfoResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         private Long used; 
 
         /**
-         * The Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * <p>The Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-logstore</p>
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -106,7 +114,10 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The Logstore project of the Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * <p>The Logstore project of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-project-181071506993****-cn-hangzhou</p>
          */
         public Builder project(String project) {
             this.project = project;
@@ -114,7 +125,10 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The available log storage capacity. Unit: bytes.
+         * <p>The available log storage capacity. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3298534883328</p>
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -122,7 +136,10 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,10 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The log storage duration. Unit: days.
+         * <p>The log storage duration. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -138,10 +158,13 @@ public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The used log storage capacity. Unit: bytes.
-         * <p>
+         * <p>The used log storage capacity. Unit: bytes.</p>
+         * <blockquote>
+         * <p>The statistics on Log Service are delayed for about two hours.</p>
+         * </blockquote>
          * 
-         * > The statistics on Log Service are delayed for about two hours.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder used(Long used) {
             this.used = used;

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmInstanceRequest</p>
  */
 public class DescribeGtmInstanceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NeedDetailAttributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedDetailAttributes")
     private Boolean needDetailAttributes;
 
     private DescribeGtmInstanceRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class DescribeGtmInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the GTM instance.
+         * <p>The ID of the GTM instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +101,10 @@ public class DescribeGtmInstanceRequest extends Request {
         }
 
         /**
-         * The language of the values of specific response parameters.
+         * <p>The language of the values of specific response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +113,10 @@ public class DescribeGtmInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether additional information is required. Default value: **false**. If the value is **true**, the AccessStrategyNum and AddressPoolNum parameters are returned.
+         * <p>Specifies whether additional information is required. Default value: <strong>false</strong>. If the value is <strong>true</strong>, the AccessStrategyNum and AddressPoolNum parameters are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);

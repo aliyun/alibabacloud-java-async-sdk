@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansDiscountResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySavingsPlansDiscountResponseBody</p>
  */
 public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySavingsPlansDiscountResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_ERROR</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This API is not applicable for caller.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,35 +148,41 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySavingsPlansDiscountResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansDiscountResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
-        @NameInMap("ContractDiscountRate")
+        @com.aliyun.core.annotation.NameInMap("ContractDiscountRate")
         private String contractDiscountRate;
 
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private String cycle;
 
-        @NameInMap("DiscountRate")
+        @com.aliyun.core.annotation.NameInMap("DiscountRate")
         private String discountRate;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("PayMode")
+        @com.aliyun.core.annotation.NameInMap("PayMode")
         private String payMode;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("SpnType")
+        @com.aliyun.core.annotation.NameInMap("SpnType")
         private String spnType;
 
         private Items(Builder builder) {
@@ -266,7 +289,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             private String spnType; 
 
             /**
-             * The details of the service.
+             * <p>The details of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pay-as-you-go Elastic Compute Service (ECS) instance</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -274,7 +300,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The contracted discount.
+             * <p>The contracted discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.85</p>
              */
             public Builder contractDiscountRate(String contractDiscountRate) {
                 this.contractDiscountRate = contractDiscountRate;
@@ -282,7 +311,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The cycle based on which queries were performed.
+             * <p>The cycle based on which queries were performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1:Year</p>
              */
             public Builder cycle(String cycle) {
                 this.cycle = cycle;
@@ -290,7 +322,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The discount provided by the official website.
+             * <p>The discount provided by the official website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.85</p>
              */
             public Builder discountRate(String discountRate) {
                 this.discountRate = discountRate;
@@ -298,7 +333,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pricing module.
+             * <p>The name of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -306,12 +344,15 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The payment mode. Valid values:
-             * <p>
+             * <p>The payment mode. Valid values:</p>
+             * <ul>
+             * <li>total: all upfront</li>
+             * <li>half: half upfront</li>
+             * <li>zero: no upfront</li>
+             * </ul>
              * 
-             * *   total: all upfront
-             * *   half: half upfront
-             * *   zero: no upfront
+             * <strong>example:</strong>
+             * <p>total</p>
              */
             public Builder payMode(String payMode) {
                 this.payMode = payMode;
@@ -319,7 +360,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-na62-a01</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -327,7 +371,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCode.
+             * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -335,7 +382,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -343,7 +393,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the savings plan.
+             * <p>The type of the savings plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>universal</p>
              */
             public Builder spnType(String spnType) {
                 this.spnType = spnType;
@@ -357,12 +410,18 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySavingsPlansDiscountResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansDiscountResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
         private Data(Builder builder) {
             this.hostId = builder.hostId;
@@ -387,16 +446,19 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
             private String hostId; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
 
             /**
-             * The IP address of the request.
+             * <p>The IP address of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.180.109</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -404,9 +466,9 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the discounts on saving plans.
+             * <p>The information about the discounts on saving plans.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

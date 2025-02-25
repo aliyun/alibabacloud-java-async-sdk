@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckOrganizationDomainRequest</p>
  */
 public class CheckOrganizationDomainRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Body
-    @NameInMap("DomainCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainCode")
     private String domainCode;
 
     private CheckOrganizationDomainRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDetectLanguageRequest</p>
  */
 public class GetDetectLanguageRequest extends Request {
-    @Body
-    @NameInMap("SourceText")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceText")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceText;
 
     private GetDetectLanguageRequest(Builder builder) {

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsStreamsOnlineListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsStreamsOnlineListResponseBody</p>
  */
 public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
-    @NameInMap("OnlineInfo")
+    @com.aliyun.core.annotation.NameInMap("OnlineInfo")
     private OnlineInfo onlineInfo;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeVsStreamsOnlineListResponseBody(Builder builder) {
@@ -151,32 +156,38 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsStreamsOnlineListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsStreamsOnlineListResponseBody</p>
+     */
     public static class LiveStreamOnlineInfo extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("PublishDomain")
+        @com.aliyun.core.annotation.NameInMap("PublishDomain")
         private String publishDomain;
 
-        @NameInMap("PublishTime")
+        @com.aliyun.core.annotation.NameInMap("PublishTime")
         private String publishTime;
 
-        @NameInMap("PublishType")
+        @com.aliyun.core.annotation.NameInMap("PublishType")
         private String publishType;
 
-        @NameInMap("PublishUrl")
+        @com.aliyun.core.annotation.NameInMap("PublishUrl")
         private String publishUrl;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("TranscodeId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeId")
         private String transcodeId;
 
-        @NameInMap("Transcoded")
+        @com.aliyun.core.annotation.NameInMap("Transcoded")
         private String transcoded;
 
         private LiveStreamOnlineInfo(Builder builder) {
@@ -352,9 +363,15 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsStreamsOnlineListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsStreamsOnlineListResponseBody</p>
+     */
     public static class OnlineInfo extends TeaModel {
-        @NameInMap("LiveStreamOnlineInfo")
-        private java.util.List < LiveStreamOnlineInfo> liveStreamOnlineInfo;
+        @com.aliyun.core.annotation.NameInMap("LiveStreamOnlineInfo")
+        private java.util.List<LiveStreamOnlineInfo> liveStreamOnlineInfo;
 
         private OnlineInfo(Builder builder) {
             this.liveStreamOnlineInfo = builder.liveStreamOnlineInfo;
@@ -371,17 +388,17 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         /**
          * @return liveStreamOnlineInfo
          */
-        public java.util.List < LiveStreamOnlineInfo> getLiveStreamOnlineInfo() {
+        public java.util.List<LiveStreamOnlineInfo> getLiveStreamOnlineInfo() {
             return this.liveStreamOnlineInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LiveStreamOnlineInfo> liveStreamOnlineInfo; 
+            private java.util.List<LiveStreamOnlineInfo> liveStreamOnlineInfo; 
 
             /**
              * LiveStreamOnlineInfo.
              */
-            public Builder liveStreamOnlineInfo(java.util.List < LiveStreamOnlineInfo> liveStreamOnlineInfo) {
+            public Builder liveStreamOnlineInfo(java.util.List<LiveStreamOnlineInfo> liveStreamOnlineInfo) {
                 this.liveStreamOnlineInfo = liveStreamOnlineInfo;
                 return this;
             }

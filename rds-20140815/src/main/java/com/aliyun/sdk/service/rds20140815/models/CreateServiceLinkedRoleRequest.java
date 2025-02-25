@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceLinkedRoleRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceLinkedRoleRequest</p>
  */
 public class CreateServiceLinkedRoleRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ServiceLinkedRole")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceLinkedRole")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceLinkedRole;
 
     private CreateServiceLinkedRoleRequest(Builder builder) {
@@ -121,7 +126,11 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,11 +157,15 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The name of the service-linked role.
-         * <p>
+         * <p>The name of the service-linked role.</p>
+         * <ul>
+         * <li><strong>AliyunServiceRoleForRdsPgsqlOnEcs</strong>: the service-linked role for ApsaraDB RDS for PostgreSQL.</li>
+         * <li><strong>AliyunServiceRoleForRDSProxyOnEcs</strong>: the service-linked role for the database proxy feature of ApsaraDB RDS for PostgreSQL.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AliyunServiceRoleForRdsPgsqlOnEcs**: the service-linked role for ApsaraDB RDS for PostgreSQL.
-         * *   **AliyunServiceRoleForRDSProxyOnEcs**: the service-linked role for the database proxy feature of ApsaraDB RDS for PostgreSQL.
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForRdsPgsqlOnEcs</p>
          */
         public Builder serviceLinkedRole(String serviceLinkedRole) {
             this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);

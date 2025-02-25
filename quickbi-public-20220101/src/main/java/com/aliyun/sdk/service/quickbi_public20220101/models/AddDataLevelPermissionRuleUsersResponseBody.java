@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDataLevelPermissionRuleUsersResponseBody} extends {@link TeaModel}
  *
  * <p>AddDataLevelPermissionRuleUsersResponseBody</p>
  */
 public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddDataLevelPermissionRuleUsersResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The execution result of the interface. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n
+         * <p>The execution result of the interface. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +89,10 @@ public class AddDataLevelPermissionRuleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n
+         * <p>Indicates whether the request is successful. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomPersonsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomPersonsResponseBody</p>
  */
 public class ListCustomPersonsResponseBody extends TeaModel {
-    @NameInMap("Categories")
+    @com.aliyun.core.annotation.NameInMap("Categories")
     private Categories categories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCustomPersonsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Categories.
+         * <p>The array of the figure libraries.</p>
          */
         public Builder categories(Categories categories) {
             this.categories = categories;
@@ -58,7 +58,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD4DED6B-0C26-5A8B-A6BE-4FA542AE4D57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class ListCustomPersonsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomPersonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomPersonsResponseBody</p>
+     */
     public static class Face extends TeaModel {
-        @NameInMap("FaceId")
+        @com.aliyun.core.annotation.NameInMap("FaceId")
         private String faceId;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
         private Face(Builder builder) {
@@ -110,7 +119,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             private String imageUrl; 
 
             /**
-             * FaceId.
+             * <p>The ID of the face.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15****</p>
              */
             public Builder faceId(String faceId) {
                 this.faceId = faceId;
@@ -118,7 +130,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the facial image that was registered for the figure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-****.jpeg">http://example-****.jpeg</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -132,8 +147,14 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomPersonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomPersonsResponseBody</p>
+     */
     public static class Faces extends TeaModel {
-        @NameInMap("Face")
+        @com.aliyun.core.annotation.NameInMap("Face")
         private java.util.List < Face> face;
 
         private Faces(Builder builder) {
@@ -173,17 +194,23 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomPersonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomPersonsResponseBody</p>
+     */
     public static class Person extends TeaModel {
-        @NameInMap("Faces")
+        @com.aliyun.core.annotation.NameInMap("Faces")
         private Faces faces;
 
-        @NameInMap("PersonDescription")
+        @com.aliyun.core.annotation.NameInMap("PersonDescription")
         private String personDescription;
 
-        @NameInMap("PersonId")
+        @com.aliyun.core.annotation.NameInMap("PersonId")
         private String personId;
 
-        @NameInMap("PersonName")
+        @com.aliyun.core.annotation.NameInMap("PersonName")
         private String personName;
 
         private Person(Builder builder) {
@@ -236,7 +263,7 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             private String personName; 
 
             /**
-             * Faces.
+             * <p>The array of the faces.</p>
              */
             public Builder faces(Faces faces) {
                 this.faces = faces;
@@ -244,7 +271,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             }
 
             /**
-             * PersonDescription.
+             * <p>The description of the figure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PersonDescription-****</p>
              */
             public Builder personDescription(String personDescription) {
                 this.personDescription = personDescription;
@@ -252,7 +282,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             }
 
             /**
-             * PersonId.
+             * <p>The ID of the figure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PersonId-****</p>
              */
             public Builder personId(String personId) {
                 this.personId = personId;
@@ -260,7 +293,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             }
 
             /**
-             * PersonName.
+             * <p>The name of the figure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PersonName-****</p>
              */
             public Builder personName(String personName) {
                 this.personName = personName;
@@ -274,8 +310,14 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomPersonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomPersonsResponseBody</p>
+     */
     public static class Persons extends TeaModel {
-        @NameInMap("Person")
+        @com.aliyun.core.annotation.NameInMap("Person")
         private java.util.List < Person> person;
 
         private Persons(Builder builder) {
@@ -315,17 +357,23 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomPersonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomPersonsResponseBody</p>
+     */
     public static class Category extends TeaModel {
-        @NameInMap("CategoryDescription")
+        @com.aliyun.core.annotation.NameInMap("CategoryDescription")
         private String categoryDescription;
 
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private String categoryId;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("Persons")
+        @com.aliyun.core.annotation.NameInMap("Persons")
         private Persons persons;
 
         private Category(Builder builder) {
@@ -378,7 +426,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             private Persons persons; 
 
             /**
-             * CategoryDescription.
+             * <p>The description of the figure library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CategoryDescription-****</p>
              */
             public Builder categoryDescription(String categoryDescription) {
                 this.categoryDescription = categoryDescription;
@@ -386,7 +437,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryId.
+             * <p>The ID of the figure library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CategoryId-****</p>
              */
             public Builder categoryId(String categoryId) {
                 this.categoryId = categoryId;
@@ -394,7 +448,10 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The name of the figure library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CategoryName-****</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -402,7 +459,7 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             }
 
             /**
-             * Persons.
+             * <p>The array of the figures.</p>
              */
             public Builder persons(Persons persons) {
                 this.persons = persons;
@@ -416,8 +473,14 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomPersonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomPersonsResponseBody</p>
+     */
     public static class Categories extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private java.util.List < Category> category;
 
         private Categories(Builder builder) {

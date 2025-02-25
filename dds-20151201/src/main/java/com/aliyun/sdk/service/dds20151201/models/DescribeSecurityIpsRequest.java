@@ -1,41 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIpsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityIpsRequest</p>
  */
 public class DescribeSecurityIpsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowHDMIps")
+    private Boolean showHDMIps;
 
     private DescribeSecurityIpsRequest(Builder builder) {
         super(builder);
@@ -45,6 +54,7 @@ public class DescribeSecurityIpsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.showHDMIps = builder.showHDMIps;
     }
 
     public static Builder builder() {
@@ -102,6 +112,13 @@ public class DescribeSecurityIpsRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return showHDMIps
+     */
+    public Boolean getShowHDMIps() {
+        return this.showHDMIps;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSecurityIpsRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -109,6 +126,7 @@ public class DescribeSecurityIpsRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean showHDMIps; 
 
         private Builder() {
             super();
@@ -122,6 +140,7 @@ public class DescribeSecurityIpsRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.showHDMIps = request.showHDMIps;
         } 
 
         /**
@@ -134,7 +153,11 @@ public class DescribeSecurityIpsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -175,6 +198,18 @@ public class DescribeSecurityIpsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * <p>Whether to display DAS whitelist information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder showHDMIps(Boolean showHDMIps) {
+            this.putQueryParameter("ShowHDMIps", showHDMIps);
+            this.showHDMIps = showHDMIps;
             return this;
         }
 

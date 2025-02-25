@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCacheAnalysisJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCacheAnalysisJobResponseBody</p>
  */
 public class CreateCacheAnalysisJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CreateCacheAnalysisJobResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information.
+         * <p>The detailed information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,29 +155,35 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCacheAnalysisJobResponseBody</p>
+     */
     public static class KeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private KeyInfo(Builder builder) {
@@ -249,7 +272,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of bytes that are occupied by the key.
+             * <p>The number of bytes that are occupied by the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -257,7 +283,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -265,7 +294,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -273,7 +305,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the key.
+             * <p>The data type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hashtable</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -281,7 +316,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596256542547</p>
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -289,7 +327,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The name of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_x****</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -297,7 +338,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node on the instance.
+             * <p>The ID of the data node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -305,7 +349,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the ApsaraDB for Redis instance.
+             * <p>The data type of the ApsaraDB for Redis instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -319,9 +366,15 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCacheAnalysisJobResponseBody</p>
+     */
     public static class BigKeys extends TeaModel {
-        @NameInMap("KeyInfo")
-        private java.util.List < KeyInfo> keyInfo;
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
+        private java.util.List<KeyInfo> keyInfo;
 
         private BigKeys(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -338,17 +391,17 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < KeyInfo> getKeyInfo() {
+        public java.util.List<KeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < KeyInfo> keyInfo; 
+            private java.util.List<KeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < KeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<KeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -360,23 +413,29 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCacheAnalysisJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCacheAnalysisJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BigKeys")
+        @com.aliyun.core.annotation.NameInMap("BigKeys")
         private BigKeys bigKeys;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
         private Data(Builder builder) {
@@ -447,7 +506,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             private String taskState; 
 
             /**
-             * The number of elements in the key.
+             * <p>The number of elements in the key.</p>
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -455,7 +514,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp18ff4a195d****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -463,10 +525,13 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cache analysis task.
-             * <p>
+             * <p>The ID of the cache analysis task.</p>
+             * <blockquote>
+             * <p> This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis results of the specified cache analysis task.</p>
+             * </blockquote>
              * 
-             * >  This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the [DescribeCacheAnalysisJob](~~180983~~) operation to query the analysis results of the specified cache analysis task.
+             * <strong>example:</strong>
+             * <p>sf79-sd99-sa37-****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -474,10 +539,13 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
-             * <p>
+             * <p>The returned message.</p>
+             * <blockquote>
+             * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+             * </blockquote>
              * 
-             * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -485,7 +553,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data node on the instance.
+             * <p>The ID of the data node on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -493,13 +564,16 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cache analysis task. Valid values:
-             * <p>
+             * <p>The state of the cache analysis task. Valid values:</p>
+             * <ul>
+             * <li><strong>BACKUP</strong>: The data is being backed up.</li>
+             * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
+             * <li><strong>FINISHED</strong>: The data is analyzed.</li>
+             * <li><strong>FAILED</strong>: An error occurred.</li>
+             * </ul>
              * 
-             * *   **BACKUP**: The data is being backed up.
-             * *   **ANALYZING**: The data is being analyzed.
-             * *   **FINISHED**: The data is analyzed.
-             * *   **FAILED**: An error occurred.
+             * <strong>example:</strong>
+             * <p>BACKUP</p>
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;

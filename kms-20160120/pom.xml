@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-kms20160120</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.8</version>
   <packaging>jar</packaging>
   <name>alibabacloud-kms20160120</name>
   <description>Alibaba Cloud Kms (20160120) Async SDK for Java
@@ -41,7 +41,7 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
-    <service.version>0.1.13-beta</service.version>
+    <service.version>0.2.12-beta</service.version>
   </properties>
   <dependencies>
     <dependency>

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectIdsRequest} extends {@link RequestModel}
  *
  * <p>ListProjectIdsRequest</p>
  */
 public class ListProjectIdsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true, maxLength = 10000000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 10000000)
     private String userId;
 
     private ListProjectIdsRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class ListProjectIdsRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which DataWorks is activated. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -78,7 +83,12 @@ public class ListProjectIdsRequest extends Request {
         }
 
         /**
-         * The ID of the specific Alibaba Cloud account. You can log on to the [DataWorks](https://workbench.data.aliyun.com/console) console and move the pointer over the profile picture in the upper-right corner to view the ID.
+         * <p>The ID of the desired Alibaba Cloud account.</p>
+         * <p>You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks</a> console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>171111</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

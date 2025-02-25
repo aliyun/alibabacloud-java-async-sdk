@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApiGroupVpcWhitelistRequest} extends {@link RequestModel}
  *
  * <p>ModifyApiGroupVpcWhitelistRequest</p>
  */
 public class ModifyApiGroupVpcWhitelistRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("VpcIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcIds;
 
     private ModifyApiGroupVpcWhitelistRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class ModifyApiGroupVpcWhitelistRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9b80408147724ddab4c4e2703c6ca019</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -102,7 +111,11 @@ public class ModifyApiGroupVpcWhitelistRequest extends Request {
         }
 
         /**
-         * VpcIds.
+         * <p>The ID of the VPC instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp11w979o2s9rcr962w25</p>
          */
         public Builder vpcIds(String vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);

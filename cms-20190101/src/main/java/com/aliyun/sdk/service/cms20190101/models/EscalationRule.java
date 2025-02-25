@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EscalationRule} extends {@link TeaModel}
  *
  * <p>EscalationRule</p>
  */
 public class EscalationRule extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Escalations")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Escalations")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Escalations> escalations;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private EscalationRule(Builder builder) {
@@ -128,7 +128,7 @@ public class EscalationRule extends TeaModel {
         }
 
         /**
-         * Escalations.
+         * <p>This parameter is required.</p>
          */
         public Builder escalations(java.util.List < Escalations> escalations) {
             this.escalations = escalations;
@@ -136,7 +136,7 @@ public class EscalationRule extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -173,20 +173,26 @@ public class EscalationRule extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EscalationRule} extends {@link TeaModel}
+     *
+     * <p>EscalationRule</p>
+     */
     public static class ContactGroupsByLevel extends TeaModel {
-        @NameInMap("Critical")
+        @com.aliyun.core.annotation.NameInMap("Critical")
         private java.util.List < String > critical;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private java.util.List < String > error;
 
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private java.util.List < String > info;
 
-        @NameInMap("Resolve")
+        @com.aliyun.core.annotation.NameInMap("Resolve")
         private java.util.List < String > resolve;
 
-        @NameInMap("Warning")
+        @com.aliyun.core.annotation.NameInMap("Warning")
         private java.util.List < String > warning;
 
         private ContactGroupsByLevel(Builder builder) {
@@ -294,17 +300,23 @@ public class EscalationRule extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EscalationRule} extends {@link TeaModel}
+     *
+     * <p>EscalationRule</p>
+     */
     public static class Escalations extends TeaModel {
-        @NameInMap("BackupContactGroups")
+        @com.aliyun.core.annotation.NameInMap("BackupContactGroups")
         private java.util.List < String > backupContactGroups;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
 
-        @NameInMap("ContactGroupsByLevel")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupsByLevel")
         private ContactGroupsByLevel contactGroupsByLevel;
 
-        @NameInMap("EscalateMin")
+        @com.aliyun.core.annotation.NameInMap("EscalateMin")
         private Long escalateMin;
 
         private Escalations(Builder builder) {

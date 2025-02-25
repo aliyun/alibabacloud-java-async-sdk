@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateFileProtectRuleRequest</p>
  */
 public class UpdateFileProtectRuleRequest extends Request {
-    @Query
-    @NameInMap("AlertLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertLevel")
     private Integer alertLevel;
 
-    @Query
-    @NameInMap("FileOps")
-    @Validation(required = true)
-    private java.util.List < String > fileOps;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileOps")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> fileOps;
 
-    @Query
-    @NameInMap("FilePaths")
-    @Validation(required = true)
-    private java.util.List < String > filePaths;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilePaths")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> filePaths;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("ProcPaths")
-    @Validation(required = true)
-    private java.util.List < String > procPaths;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcPaths")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> procPaths;
 
-    @Query
-    @NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
     private String ruleAction;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private UpdateFileProtectRuleRequest(Builder builder) {
@@ -83,14 +88,14 @@ public class UpdateFileProtectRuleRequest extends Request {
     /**
      * @return fileOps
      */
-    public java.util.List < String > getFileOps() {
+    public java.util.List<String> getFileOps() {
         return this.fileOps;
     }
 
     /**
      * @return filePaths
      */
-    public java.util.List < String > getFilePaths() {
+    public java.util.List<String> getFilePaths() {
         return this.filePaths;
     }
 
@@ -104,7 +109,7 @@ public class UpdateFileProtectRuleRequest extends Request {
     /**
      * @return procPaths
      */
-    public java.util.List < String > getProcPaths() {
+    public java.util.List<String> getProcPaths() {
         return this.procPaths;
     }
 
@@ -131,10 +136,10 @@ public class UpdateFileProtectRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateFileProtectRuleRequest, Builder> {
         private Integer alertLevel; 
-        private java.util.List < String > fileOps; 
-        private java.util.List < String > filePaths; 
+        private java.util.List<String> fileOps; 
+        private java.util.List<String> filePaths; 
         private Long id; 
-        private java.util.List < String > procPaths; 
+        private java.util.List<String> procPaths; 
         private String ruleAction; 
         private String ruleName; 
         private Integer status; 
@@ -156,13 +161,16 @@ public class UpdateFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The severity of alerts. Valid values:
-         * <p>
+         * <p>The severity of alerts. Valid values:</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
          * 
-         * *   0: does not generate alerts
-         * *   1: sends notifications
-         * *   2: suspicious
-         * *   3: high-risk
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -171,25 +179,30 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The operations performed on the files.
+         * <p>The operations that you want to perform on the files.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder fileOps(java.util.List < String > fileOps) {
+        public Builder fileOps(java.util.List<String> fileOps) {
             this.putQueryParameter("FileOps", fileOps);
             this.fileOps = fileOps;
             return this;
         }
 
         /**
-         * The paths to the monitored files. Wildcard characters are supported.
+         * <p>The paths to the monitored files. Wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder filePaths(java.util.List < String > filePaths) {
+        public Builder filePaths(java.util.List<String> filePaths) {
             this.putQueryParameter("FilePaths", filePaths);
             this.filePaths = filePaths;
             return this;
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1062</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -198,20 +211,24 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The paths to the monitored processes.
+         * <p>The paths to the monitored processes.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder procPaths(java.util.List < String > procPaths) {
+        public Builder procPaths(java.util.List<String> procPaths) {
             this.putQueryParameter("ProcPaths", procPaths);
             this.procPaths = procPaths;
             return this;
         }
 
         /**
-         * The handling method of the rule. Valid values:
-         * <p>
+         * <p>The handling method of the rule. Valid values:</p>
+         * <ul>
+         * <li>pass: allow</li>
+         * <li>alert</li>
+         * </ul>
          * 
-         * *   pass: allow
-         * *   alert
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -220,7 +237,11 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -229,11 +250,14 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
          * 
-         * *   **0**: disabled
-         * *   **1**: enabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

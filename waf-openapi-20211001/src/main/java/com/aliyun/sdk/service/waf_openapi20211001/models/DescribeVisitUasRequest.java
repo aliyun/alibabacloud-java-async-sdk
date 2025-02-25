@@ -1,37 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVisitUasRequest} extends {@link RequestModel}
  *
  * <p>DescribeVisitUasRequest</p>
  */
 public class DescribeVisitUasRequest extends Request {
-    @Query
-    @NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
     private String endTimestamp;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private String resource;
 
-    @Query
-    @NameInMap("StartTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTimestamp;
 
     private DescribeVisitUasRequest(Builder builder) {
@@ -40,6 +49,7 @@ public class DescribeVisitUasRequest extends Request {
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.startTimestamp = builder.startTimestamp;
     }
 
@@ -85,6 +95,13 @@ public class DescribeVisitUasRequest extends Request {
     }
 
     /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    /**
      * @return startTimestamp
      */
     public String getStartTimestamp() {
@@ -96,6 +113,7 @@ public class DescribeVisitUasRequest extends Request {
         private String instanceId; 
         private String regionId; 
         private String resource; 
+        private String resourceManagerResourceGroupId; 
         private String startTimestamp; 
 
         private Builder() {
@@ -108,11 +126,15 @@ public class DescribeVisitUasRequest extends Request {
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resource = request.resource;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.startTimestamp = request.startTimestamp;
         } 
 
         /**
-         * The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.
+         * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665386280</p>
          */
         public Builder endTimestamp(String endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -121,10 +143,14 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +159,14 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +175,10 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * The protected object.
+         * <p>The protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -151,7 +187,20 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: seconds.
+         * ResourceManagerResourceGroupId.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665331200</p>
          */
         public Builder startTimestamp(String startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

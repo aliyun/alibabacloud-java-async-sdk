@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPermissionPoliciesInAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ListPermissionPoliciesInAccessConfigurationRequest</p>
  */
 public class ListPermissionPoliciesInAccessConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("PermissionPolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionPolicyType")
     private String permissionPolicyType;
 
     private ListPermissionPoliciesInAccessConfigurationRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -91,7 +94,10 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -100,13 +106,15 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         }
 
         /**
-         * The type of the policy. The type can be used to filter policies. Valid values:
-         * <p>
+         * <p>The type of the policy. The type can be used to filter policies. Valid values:</p>
+         * <ul>
+         * <li>System: system policy</li>
+         * <li>Inline: inline policy</li>
+         * </ul>
+         * <p>If you do not specify this parameter, all types of policies are queried.</p>
          * 
-         * *   System: system policy
-         * *   Inline: inline policy
-         * 
-         * If you do not specify this parameter, all types of policies are queried.
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder permissionPolicyType(String permissionPolicyType) {
             this.putQueryParameter("PermissionPolicyType", permissionPolicyType);

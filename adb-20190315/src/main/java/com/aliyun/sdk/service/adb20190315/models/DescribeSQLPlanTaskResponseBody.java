@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLPlanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLPlanTaskResponseBody</p>
  */
 public class DescribeSQLPlanTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskList")
+    @com.aliyun.core.annotation.NameInMap("TaskList")
     private java.util.List < TaskList> taskList;
 
     private DescribeSQLPlanTaskResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         private java.util.List < TaskList> taskList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tasks.
+         * <p>The list of tasks.</p>
          */
         public Builder taskList(java.util.List < TaskList> taskList) {
             this.taskList = taskList;
@@ -71,41 +74,47 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLPlanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLPlanTaskResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Long elapsedTime;
 
-        @NameInMap("InputRows")
+        @com.aliyun.core.annotation.NameInMap("InputRows")
         private Long inputRows;
 
-        @NameInMap("InputSize")
+        @com.aliyun.core.annotation.NameInMap("InputSize")
         private Long inputSize;
 
-        @NameInMap("OperatorCost")
+        @com.aliyun.core.annotation.NameInMap("OperatorCost")
         private Long operatorCost;
 
-        @NameInMap("OutputRows")
+        @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
-        @NameInMap("OutputSize")
+        @com.aliyun.core.annotation.NameInMap("OutputSize")
         private Long outputSize;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("ScanCost")
+        @com.aliyun.core.annotation.NameInMap("ScanCost")
         private Long scanCost;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("ScanSize")
+        @com.aliyun.core.annotation.NameInMap("ScanSize")
         private Long scanSize;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
 
         private TaskList(Builder builder) {
@@ -230,7 +239,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             private Integer taskId; 
 
             /**
-             * The time elapsed from when the task was created to when the task was complete. Unit: milliseconds.
+             * <p>The time elapsed from when the task was created to when the task was complete. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -238,7 +250,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of input rows in the task.
+             * <p>The number of input rows in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105</p>
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -246,7 +261,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of input data in the task. Unit: bytes.
+             * <p>The amount of input data in the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3763</p>
              */
             public Builder inputSize(Long inputSize) {
                 this.inputSize = inputSize;
@@ -254,7 +272,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of time consumed by operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.
+             * <p>The total amount of time consumed by operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -262,7 +283,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of output rows in the task.
+             * <p>The number of output rows in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -270,7 +294,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of output data in the task. Unit: bytes.
+             * <p>The amount of output data in the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>945</p>
              */
             public Builder outputSize(Long outputSize) {
                 this.outputSize = outputSize;
@@ -278,7 +305,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The peak memory of the task on a specific node. Unit: bytes.
+             * <p>The peak memory of the task on a specific node. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>898576</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -286,7 +316,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time consumed to scan data from a data source in the task. Unit: milliseconds.
+             * <p>The time consumed to scan data from a data source in the task. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanCost(Long scanCost) {
                 this.scanCost = scanCost;
@@ -294,7 +327,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows scanned from a data source in the task.
+             * <p>The number of rows scanned from a data source in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -302,7 +338,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data scanned from a data source in the task. Unit: bytes.
+             * <p>The amount of data scanned from a data source in the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanSize(Long scanSize) {
                 this.scanSize = scanSize;
@@ -310,13 +349,16 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The final execution status of the task. Valid values:
-             * <p>
+             * <p>The final execution status of the task. Valid values:</p>
+             * <ul>
+             * <li>FINISHED</li>
+             * <li>CANCELED</li>
+             * <li>ABORTED</li>
+             * <li>FAILED</li>
+             * </ul>
              * 
-             * *   FINISHED
-             * *   CANCELED
-             * *   ABORTED
-             * *   FAILED
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -324,7 +366,10 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>198877623</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

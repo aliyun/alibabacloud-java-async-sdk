@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterUserRequest} extends {@link RequestModel}
  *
  * <p>RegisterUserRequest</p>
  */
 public class RegisterUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Query
-    @NameInMap("RoleNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleNames")
     private String roleNames;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uid;
 
-    @Query
-    @NameInMap("UserNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserNick")
     private String userNick;
 
     private RegisterUserRequest(Builder builder) {
@@ -134,7 +139,10 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The mobile number of the user.
+         * <p>The mobile number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130000000xx</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -143,15 +151,19 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The role that you want to assign to the user. Valid values:
-         * <p>
+         * <p>The role that you want to assign to the user. Valid values:</p>
+         * <ul>
+         * <li><strong>USER</strong>: a regular user role</li>
+         * <li><strong>DBA</strong>: a database administrator (DBA) role</li>
+         * <li><strong>ADMIN</strong>: a DMS administrator role</li>
+         * <li><strong>SECURITY_ADMIN</strong>: a security administrator role</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the regular user role is assigned to the user by default. You can assign one or more roles to the user. Separate multiple roles with commas (,).</p>
+         * </blockquote>
          * 
-         * *   **USER**: a regular user role
-         * *   **DBA**: a database administrator (DBA) role
-         * *   **ADMIN**: a DMS administrator role
-         * *   **SECURITY_ADMIN**: a security administrator role
-         * 
-         * >  If you do not specify this parameter, the regular user role is assigned to the user by default. You can assign one or more roles to the user. Separate multiple roles with commas (,).
+         * <strong>example:</strong>
+         * <p>USER,DBA</p>
          */
         public Builder roleNames(String roleNames) {
             this.putQueryParameter("RoleNames", roleNames);
@@ -160,10 +172,13 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p> To query ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+         * </blockquote>
          * 
-         * >  To query ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -172,7 +187,11 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The UID of the Alibaba Cloud account of the user that you want to register.
+         * <p>The UID of the Alibaba Cloud account of the user that you want to register.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);
@@ -181,7 +200,10 @@ public class RegisterUserRequest extends Request {
         }
 
         /**
-         * The nickname of the user.
+         * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest</p>
          */
         public Builder userNick(String userNick) {
             this.putQueryParameter("UserNick", userNick);

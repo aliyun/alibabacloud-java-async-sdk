@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAsrConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAsrConfigRequest</p>
  */
 public class ModifyAsrConfigRequest extends Request {
-    @Query
-    @NameInMap("AsrAcousticModelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrAcousticModelId")
     private String asrAcousticModelId;
 
-    @Query
-    @NameInMap("AsrClassVocabularyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrClassVocabularyId")
     private String asrClassVocabularyId;
 
-    @Query
-    @NameInMap("AsrCustomizationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrCustomizationId")
     private String asrCustomizationId;
 
-    @Query
-    @NameInMap("AsrVocabularyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
     private String asrVocabularyId;
 
-    @Query
-    @NameInMap("ConfigLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigLevel")
     private Integer configLevel;
 
-    @Query
-    @NameInMap("EntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryId")
     private String entryId;
 
     private ModifyAsrConfigRequest(Builder builder) {
@@ -43,6 +52,7 @@ public class ModifyAsrConfigRequest extends Request {
         this.asrCustomizationId = builder.asrCustomizationId;
         this.asrVocabularyId = builder.asrVocabularyId;
         this.configLevel = builder.configLevel;
+        this.engine = builder.engine;
         this.entryId = builder.entryId;
     }
 
@@ -95,6 +105,13 @@ public class ModifyAsrConfigRequest extends Request {
     }
 
     /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
      * @return entryId
      */
     public String getEntryId() {
@@ -107,6 +124,7 @@ public class ModifyAsrConfigRequest extends Request {
         private String asrCustomizationId; 
         private String asrVocabularyId; 
         private Integer configLevel; 
+        private String engine; 
         private String entryId; 
 
         private Builder() {
@@ -120,6 +138,7 @@ public class ModifyAsrConfigRequest extends Request {
             this.asrCustomizationId = request.asrCustomizationId;
             this.asrVocabularyId = request.asrVocabularyId;
             this.configLevel = request.configLevel;
+            this.engine = request.engine;
             this.entryId = request.entryId;
         } 
 
@@ -165,6 +184,15 @@ public class ModifyAsrConfigRequest extends Request {
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
             this.configLevel = configLevel;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

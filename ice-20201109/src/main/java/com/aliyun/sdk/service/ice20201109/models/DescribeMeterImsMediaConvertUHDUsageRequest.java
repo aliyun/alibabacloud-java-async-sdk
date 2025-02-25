@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsMediaConvertUHDUsageRequest} extends {@link RequestModel}
  *
  * <p>DescribeMeterImsMediaConvertUHDUsageRequest</p>
  */
 public class DescribeMeterImsMediaConvertUHDUsageRequest extends Request {
-    @Query
-    @NameInMap("EndTs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTs;
 
-    @Query
-    @NameInMap("Interval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String interval;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StartTs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTs;
 
     private DescribeMeterImsMediaConvertUHDUsageRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class DescribeMeterImsMediaConvertUHDUsageRequest extends Request {
         } 
 
         /**
-         * EndTs.
+         * <p>The end of the time range to query. The value is a 10-digit timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656995036</p>
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -108,7 +117,11 @@ public class DescribeMeterImsMediaConvertUHDUsageRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the query. Valid values: 3600 (hour) and 86400 (day).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -117,7 +130,10 @@ public class DescribeMeterImsMediaConvertUHDUsageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter does not take effect. By default, the usage data of all regions is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +142,11 @@ public class DescribeMeterImsMediaConvertUHDUsageRequest extends Request {
         }
 
         /**
-         * StartTs.
+         * <p>The beginning of the time range to query. The value is a 10-digit timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1654403036</p>
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProxyAccessesResponseBody} extends {@link TeaModel}
  *
  * <p>ListProxyAccessesResponseBody</p>
  */
 public class ListProxyAccessesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ProxyAccessList")
-    private java.util.List < ProxyAccessList> proxyAccessList;
+    @com.aliyun.core.annotation.NameInMap("ProxyAccessList")
+    private java.util.List<ProxyAccessList> proxyAccessList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListProxyAccessesResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     /**
      * @return proxyAccessList
      */
-    public java.util.List < ProxyAccessList> getProxyAccessList() {
+    public java.util.List<ProxyAccessList> getProxyAccessList() {
         return this.proxyAccessList;
     }
 
@@ -81,12 +86,15 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < ProxyAccessList> proxyAccessList; 
+        private java.util.List<ProxyAccessList> proxyAccessList; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingProxyId</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProxyId is mandatory for this action.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,15 +113,18 @@ public class ListProxyAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the users that are authorized to access the database instance by using the secure access proxy feature.
+         * <p>The information about the users that are authorized to access the database instance by using the secure access proxy feature.</p>
          */
-        public Builder proxyAccessList(java.util.List < ProxyAccessList> proxyAccessList) {
+        public Builder proxyAccessList(java.util.List<ProxyAccessList> proxyAccessList) {
             this.proxyAccessList = proxyAccessList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E53D178A-85E9-5E1F-88B6-3CB1FCF2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class ListProxyAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,35 +152,41 @@ public class ListProxyAccessesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProxyAccessesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProxyAccessesResponseBody</p>
+     */
     public static class ProxyAccessList extends TeaModel {
-        @NameInMap("AccessId")
+        @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("IndepAccount")
+        @com.aliyun.core.annotation.NameInMap("IndepAccount")
         private String indepAccount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("OriginInfo")
+        @com.aliyun.core.annotation.NameInMap("OriginInfo")
         private String originInfo;
 
-        @NameInMap("ProxyAccessId")
+        @com.aliyun.core.annotation.NameInMap("ProxyAccessId")
         private Long proxyAccessId;
 
-        @NameInMap("ProxyId")
+        @com.aliyun.core.annotation.NameInMap("ProxyId")
         private Long proxyId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserUid")
+        @com.aliyun.core.annotation.NameInMap("UserUid")
         private String userUid;
 
         private ProxyAccessList(Builder builder) {
@@ -270,7 +293,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             private String userUid; 
 
             /**
-             * The username of the database account that is authorized to access the database instance by using the secure access proxy feature.
+             * <p>The username of the database account that is authorized to access the database instance by using the secure access proxy feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MXPL8HalI22m****</p>
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -278,7 +304,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the user is authorized to access the database instance by using the secure access proxy feature.
+             * <p>The time when the user is authorized to access the database instance by using the secure access proxy feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-31 10:34:18</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -286,7 +315,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the independent database account.
+             * <p>The username of the independent database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder indepAccount(String indepAccount) {
                 this.indepAccount = indepAccount;
@@ -294,7 +326,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database instance.
+             * <p>The ID of the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>164****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -302,11 +337,14 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to authorize the user to access the database instance by using the secure access proxy feature. Valid values: 
-             * <p>
+             * <p>The method that is used to authorize the user to access the database instance by using the secure access proxy feature. Valid values: </p>
+             * <ul>
+             * <li><strong>Authorization by the Alibaba Cloud Account ()</strong>: The information in the parentheses () indicates the user ID (UID) of the Alibaba Cloud account.</li>
+             * <li><strong>Authorization by submitting the ticket ()</strong>:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.</li>
+             * </ul>
              * 
-             * - **Authorization by the Alibaba Cloud Account ()**: The information in the parentheses () indicates the user ID (UID) of the Alibaba Cloud account.
-             * - **Authorization by submitting the ticket ()**:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.
+             * <strong>example:</strong>
+             * <p>Authorization by the Alibaba Cloud Account(29490401597700****)</p>
              */
             public Builder originInfo(String originInfo) {
                 this.originInfo = originInfo;
@@ -314,7 +352,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID that DMS generates after the user is authorized to access the database instance by using the secure access proxy feature. The ID is unique in DMS.
+             * <p>The ID that DMS generates after the user is authorized to access the database instance by using the secure access proxy feature. The ID is unique in DMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder proxyAccessId(Long proxyAccessId) {
                 this.proxyAccessId = proxyAccessId;
@@ -322,7 +363,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secure access proxy.
+             * <p>The ID of the secure access proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47</p>
              */
             public Builder proxyId(Long proxyId) {
                 this.proxyId = proxyId;
@@ -330,7 +374,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -338,7 +385,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -346,7 +396,10 @@ public class ListProxyAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the Alibaba Cloud account.
+             * <p>The UID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25936669186260****</p>
              */
             public Builder userUid(String userUid) {
                 this.userUid = userUid;

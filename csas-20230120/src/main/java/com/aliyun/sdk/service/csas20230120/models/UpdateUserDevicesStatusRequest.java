@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserDevicesStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserDevicesStatusRequest</p>
  */
 public class UpdateUserDevicesStatusRequest extends Request {
-    @Body
-    @NameInMap("DeviceAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceAction;
 
-    @Body
-    @NameInMap("DeviceTags")
-    @Validation(required = true)
-    private java.util.List < String > deviceTags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceTags")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceTags;
 
     private UpdateUserDevicesStatusRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class UpdateUserDevicesStatusRequest extends Request {
     /**
      * @return deviceTags
      */
-    public java.util.List < String > getDeviceTags() {
+    public java.util.List<String> getDeviceTags() {
         return this.deviceTags;
     }
 
     public static final class Builder extends Request.Builder<UpdateUserDevicesStatusRequest, Builder> {
         private String deviceAction; 
-        private java.util.List < String > deviceTags; 
+        private java.util.List<String> deviceTags; 
 
         private Builder() {
             super();
@@ -70,7 +75,10 @@ public class UpdateUserDevicesStatusRequest extends Request {
         } 
 
         /**
-         * DeviceAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unbound</p>
          */
         public Builder deviceAction(String deviceAction) {
             this.putBodyParameter("DeviceAction", deviceAction);
@@ -79,9 +87,9 @@ public class UpdateUserDevicesStatusRequest extends Request {
         }
 
         /**
-         * DeviceTags.
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceTags(java.util.List < String > deviceTags) {
+        public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);
             this.deviceTags = deviceTags;
             return this;

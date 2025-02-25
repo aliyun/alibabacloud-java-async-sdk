@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveAccessControlListEntryRequest} extends {@link RequestModel}
  *
  * <p>RemoveAccessControlListEntryRequest</p>
  */
 public class RemoveAccessControlListEntryRequest extends Request {
-    @Query
-    @NameInMap("AclEntrys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclEntrys")
     private String aclEntrys;
 
-    @Query
-    @NameInMap("AclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private RemoveAccessControlListEntryRequest(Builder builder) {
@@ -92,7 +97,10 @@ public class RemoveAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp12ag0xxcfhq1ll68wp9</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

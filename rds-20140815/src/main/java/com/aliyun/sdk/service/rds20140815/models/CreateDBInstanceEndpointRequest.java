@@ -1,70 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceEndpointRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceEndpointRequest</p>
  */
 public class CreateDBInstanceEndpointRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConnectionStringPrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBInstanceEndpointDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointDescription")
     private String DBInstanceEndpointDescription;
 
-    @Query
-    @NameInMap("DBInstanceEndpointType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceEndpointType;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NodeItems")
-    @Validation(required = true)
-    private java.util.List < NodeItems> nodeItems;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeItems")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<NodeItems> nodeItems;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String port;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateDBInstanceEndpointRequest(Builder builder) {
@@ -134,7 +139,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
     /**
      * @return nodeItems
      */
-    public java.util.List < NodeItems> getNodeItems() {
+    public java.util.List<NodeItems> getNodeItems() {
         return this.nodeItems;
     }
 
@@ -186,7 +191,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         private String DBInstanceEndpointDescription; 
         private String DBInstanceEndpointType; 
         private String DBInstanceId; 
-        private java.util.List < NodeItems> nodeItems; 
+        private java.util.List<NodeItems> nodeItems; 
         private String port; 
         private String privateIpAddress; 
         private String resourceGroupId; 
@@ -215,10 +220,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -227,10 +233,12 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The prefix of the internal endpoint.
-         * <p>
+         * <p>The prefix of the internal endpoint.</p>
+         * <p>When you create any type of endpoint, an internal endpoint is automatically created for the endpoint. This parameter specifies the prefix of the internal endpoint.</p>
+         * <p>This parameter is required.</p>
          * 
-         * When you create any type of endpoint, an internal endpoint is automatically created for the endpoint. This parameter specifies the prefix of the internal endpoint.
+         * <strong>example:</strong>
+         * <p>rm-****-ro</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -239,7 +247,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The user-defined description of the endpoint.
+         * <p>The user-defined description of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for readonly business</p>
          */
         public Builder DBInstanceEndpointDescription(String DBInstanceEndpointDescription) {
             this.putQueryParameter("DBInstanceEndpointDescription", DBInstanceEndpointDescription);
@@ -248,11 +259,15 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The type of the endpoint. Valid values:
-         * <p>
+         * <p>The endpoint type. Valid values:</p>
+         * <ul>
+         * <li>Primary: read/write endpoint of the instance</li>
+         * <li>Readonly: read-only endpoint of the instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Primary: read/write endpoint of the instance
-         * *   Readonly: read-only endpoint of the instance
+         * <strong>example:</strong>
+         * <p>Readonly</p>
          */
         public Builder DBInstanceEndpointType(String DBInstanceEndpointType) {
             this.putQueryParameter("DBInstanceEndpointType", DBInstanceEndpointType);
@@ -261,7 +276,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -270,9 +289,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The information about the node that is configured for the endpoint.
+         * <p>The information about the endpoint.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
+        public Builder nodeItems(java.util.List<NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
             this.putQueryParameter("NodeItems", nodeItemsShrink);
             this.nodeItems = nodeItems;
@@ -280,10 +300,12 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The port number of the internal endpoint. You can specify the port number for the internal endpoint.
-         * <p>
+         * <p>The port number of the internal endpoint. You can specify the port number for the internal endpoint.</p>
+         * <p>Valid values: 3000 to 5999.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 3000 to 5999.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -292,7 +314,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The IP address of the internal endpoint.
+         * <p>The IP address of the internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -301,7 +326,10 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -319,7 +347,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the internal endpoint.
+         * <p>The vSwitch ID of the internal endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1kqp****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -328,7 +360,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID of the internal endpoint.
+         * <p>The VPC ID of the internal endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxmmxjqqi****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -343,16 +379,22 @@ public class CreateDBInstanceEndpointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBInstanceEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBInstanceEndpointRequest</p>
+     */
     public static class NodeItems extends TeaModel {
-        @NameInMap("DBInstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String DBInstanceId;
 
-        @NameInMap("NodeId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nodeId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private NodeItems(Builder builder) {
@@ -396,7 +438,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
             private Long weight; 
 
             /**
-             * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+             * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -404,7 +450,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rn-xxxx-****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -412,10 +462,11 @@ public class CreateDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * The weight of the node. Read requests are distributed based on the weight.
-             * <p>
+             * <p>The weight of the node. Read requests are distributed based on the weight.</p>
+             * <p>Valid values: 0 to 100.</p>
              * 
-             * Valid values: 0 to 100.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Long weight) {
                 this.weight = weight;

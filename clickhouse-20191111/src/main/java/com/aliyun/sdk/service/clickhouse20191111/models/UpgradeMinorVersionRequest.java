@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeMinorVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeMinorVersionRequest</p>
  */
 public class UpgradeMinorVersionRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("UpgradeImmediately")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeImmediately")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean upgradeImmediately;
 
-    @Query
-    @NameInMap("UpgradeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeTime")
     private String upgradeTime;
 
-    @Query
-    @NameInMap("UpgradeVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeVersion")
     private String upgradeVersion;
 
     private UpgradeMinorVersionRequest(Builder builder) {
@@ -154,7 +159,11 @@ public class UpgradeMinorVersionRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -199,7 +208,18 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * UpgradeImmediately.
+         * <p>Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.</li>
+         * <li><strong>false</strong>: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, <strong>UpgradeTime</strong> is required.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder upgradeImmediately(Boolean upgradeImmediately) {
             this.putQueryParameter("UpgradeImmediately", upgradeImmediately);
@@ -208,7 +228,13 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * UpgradeTime.
+         * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-07T16:38Z</p>
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("UpgradeTime", upgradeTime);
@@ -217,7 +243,13 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * UpgradeVersion.
+         * <p>The minor engine version to which you want to update.</p>
+         * <blockquote>
+         * <p> By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1.37.0</p>
          */
         public Builder upgradeVersion(String upgradeVersion) {
             this.putQueryParameter("UpgradeVersion", upgradeVersion);

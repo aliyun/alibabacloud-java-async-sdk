@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVSwitchAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVSwitchAttributeRequest</p>
  */
 public class ModifyVSwitchAttributeRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableIPv6")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIPv6")
     private Boolean enableIPv6;
 
-    @Query
-    @NameInMap("Ipv6CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private Integer ipv6CidrBlock;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VSwitchName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchName")
     private String vSwitchName;
 
-    @Query
-    @NameInMap("VpcIpv6CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcIpv6CidrBlock")
     private String vpcIpv6CidrBlock;
 
     private ModifyVSwitchAttributeRequest(Builder builder) {
@@ -195,10 +200,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         } 
 
         /**
-         * The new description for the vSwitch.
-         * <p>
+         * <p>The new description for the vSwitch.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This is my vswitch.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -207,11 +213,14 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the IPv6 feature for the vSwitch. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the IPv6 feature for the vSwitch. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the IPv6 feature.</li>
+         * <li><strong>false</strong>: disables the IPv6 feature. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: enables the IPv6 feature.
-         * *   **false**: disables the IPv6 feature. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableIPv6(Boolean enableIPv6) {
             this.putQueryParameter("EnableIPv6", enableIPv6);
@@ -220,10 +229,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
-         * <p>
+         * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+         * <p>You can set this parameter only when the IPv6 feature is enabled for the virtual private cloud (VPC) to which the vSwitch belongs.</p>
          * 
-         * You can set this parameter only when the IPv6 feature is enabled for the virtual private cloud (VPC) to which the vSwitch belongs.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -250,7 +260,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the vSwitch is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where the vSwitch is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,7 +290,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-25nacdfvue4****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -286,10 +303,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The new name for the vSwitch.
-         * <p>
+         * <p>The new name for the vSwitch.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>VSwitch-1</p>
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -298,10 +316,11 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * The IPv6 CIDR block of the VPC to which the vSwitch belongs.
-         * <p>
+         * <p>The IPv6 CIDR block of the VPC to which the vSwitch belongs.</p>
+         * <p>You can set this parameter only when the IPv6 feature is enabled for the VPC.</p>
          * 
-         * You can set this parameter only when the IPv6 feature is enabled for the VPC.
+         * <strong>example:</strong>
+         * <p>2408:XXXX:312:3e00::/56</p>
          */
         public Builder vpcIpv6CidrBlock(String vpcIpv6CidrBlock) {
             this.putQueryParameter("VpcIpv6CidrBlock", vpcIpv6CidrBlock);

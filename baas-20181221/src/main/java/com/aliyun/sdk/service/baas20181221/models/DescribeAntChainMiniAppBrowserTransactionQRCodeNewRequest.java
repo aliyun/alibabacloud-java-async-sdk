@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest</p>
  */
 public class DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
-    private String antChainId;
-
-    @Body
-    @NameInMap("ContractId")
-    private String contractId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("TransactionHash")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String antChainId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContractId")
+    private String contractId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransactionHash")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transactionHash;
 
     private DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.contractId = builder.contractId;
-        this.regionId = builder.regionId;
         this.transactionHash = builder.transactionHash;
     }
 
@@ -52,6 +51,13 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest extends R
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return antChainId
      */
     public String getAntChainId() {
@@ -66,13 +72,6 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest extends R
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return transactionHash
      */
     public String getTransactionHash() {
@@ -80,22 +79,31 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest extends R
     }
 
     public static final class Builder extends Request.Builder<DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String contractId; 
-        private String regionId; 
         private String transactionHash; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.contractId = response.contractId;
-            this.regionId = response.regionId;
-            this.transactionHash = response.transactionHash;
+        private Builder(DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.contractId = request.contractId;
+            this.transactionHash = request.transactionHash;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -112,15 +120,6 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeNewRequest extends R
         public Builder contractId(String contractId) {
             this.putBodyParameter("ContractId", contractId);
             this.contractId = contractId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

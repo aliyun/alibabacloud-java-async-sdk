@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotaJobViewMetric} extends {@link TeaModel}
  *
  * <p>QuotaJobViewMetric</p>
  */
 public class QuotaJobViewMetric extends TeaModel {
-    @NameInMap("CPUUsageRate")
+    @com.aliyun.core.annotation.NameInMap("CPUUsageRate")
     private String CPUUsageRate;
 
-    @NameInMap("DiskReadRate")
+    @com.aliyun.core.annotation.NameInMap("DiskReadRate")
     private String diskReadRate;
 
-    @NameInMap("DiskWriteRate")
+    @com.aliyun.core.annotation.NameInMap("DiskWriteRate")
     private String diskWriteRate;
 
-    @NameInMap("GPUUsageRate")
+    @com.aliyun.core.annotation.NameInMap("GPUUsageRate")
     private String GPUUsageRate;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobType")
+    @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
-    @NameInMap("MemoryUsageRate")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsageRate")
     private String memoryUsageRate;
 
-    @NameInMap("NetworkInputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkInputRate")
     private String networkInputRate;
 
-    @NameInMap("NetworkOutputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkOutputRate")
     private String networkOutputRate;
 
-    @NameInMap("NodeNames")
-    private java.util.List < String > nodeNames;
+    @com.aliyun.core.annotation.NameInMap("NodeNames")
+    private java.util.List<String> nodeNames;
 
-    @NameInMap("RequestCPU")
+    @com.aliyun.core.annotation.NameInMap("RequestCPU")
     private Integer requestCPU;
 
-    @NameInMap("RequestGPU")
+    @com.aliyun.core.annotation.NameInMap("RequestGPU")
     private Integer requestGPU;
 
-    @NameInMap("RequestMemory")
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
     private Long requestMemory;
 
-    @NameInMap("TotalCPU")
+    @com.aliyun.core.annotation.NameInMap("TotalCPU")
     private Integer totalCPU;
 
-    @NameInMap("TotalGPU")
+    @com.aliyun.core.annotation.NameInMap("TotalGPU")
     private Integer totalGPU;
 
-    @NameInMap("TotalMemory")
+    @com.aliyun.core.annotation.NameInMap("TotalMemory")
     private Long totalMemory;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private QuotaJobViewMetric(Builder builder) {
@@ -157,7 +162,7 @@ public class QuotaJobViewMetric extends TeaModel {
     /**
      * @return nodeNames
      */
-    public java.util.List < String > getNodeNames() {
+    public java.util.List<String> getNodeNames() {
         return this.nodeNames;
     }
 
@@ -220,7 +225,7 @@ public class QuotaJobViewMetric extends TeaModel {
         private String memoryUsageRate; 
         private String networkInputRate; 
         private String networkOutputRate; 
-        private java.util.List < String > nodeNames; 
+        private java.util.List<String> nodeNames; 
         private Integer requestCPU; 
         private Integer requestGPU; 
         private Long requestMemory; 
@@ -304,7 +309,7 @@ public class QuotaJobViewMetric extends TeaModel {
         /**
          * NodeNames.
          */
-        public Builder nodeNames(java.util.List < String > nodeNames) {
+        public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
             return this;
         }

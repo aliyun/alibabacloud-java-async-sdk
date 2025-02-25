@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTransitRouteTableAggregationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTransitRouteTableAggregationResponseBody</p>
  */
 public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeTransitRouteTableAggregationResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,16 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
         private Integer total; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -94,19 +102,22 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * A list of aggregate routes.
+         * <p>A list of aggregate routes.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +125,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C2EE7A8-74D4-4081-8236-CEBDE3BBCF50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -135,26 +152,32 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTransitRouteTableAggregationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTransitRouteTableAggregationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RouteType")
+        @com.aliyun.core.annotation.NameInMap("RouteType")
         private String routeType;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TrRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("TrRouteTableId")
         private String trRouteTableId;
 
-        @NameInMap("TransitRouteTableAggregationCidr")
+        @com.aliyun.core.annotation.NameInMap("TransitRouteTableAggregationCidr")
         private String transitRouteTableAggregationCidr;
 
         private Data(Builder builder) {
@@ -234,7 +257,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             private String transitRouteTableAggregationCidr; 
 
             /**
-             * The description of the aggregate route.
+             * <p>The description of the aggregate route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,7 +268,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the aggregate route.
+             * <p>The name of the aggregate route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -250,10 +279,11 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the aggregate route.
-             * <p>
+             * <p>The type of the aggregate route.</p>
+             * <p>The valid value is <strong>Static</strong>, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.</p>
              * 
-             * The valid value is **Static**, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.
+             * <strong>example:</strong>
+             * <p>Static</p>
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;
@@ -261,10 +291,11 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * The scope of networks that you want to advertise the aggregate route.
-             * <p>
+             * <p>The scope of networks that you want to advertise the aggregate route.</p>
+             * <p>The valid value is <strong>VPC</strong>, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
              * 
-             * The valid value is **VPC**, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -272,14 +303,17 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the advertisement of the aggregate route. Valid values:
-             * <p>
+             * <p>The status of the advertisement of the aggregate route. Valid values:</p>
+             * <ul>
+             * <li><strong>AllConfigured</strong>: The aggregate route is advertised to all VPCs.</li>
+             * <li><strong>Configuring</strong>: The aggregate route is being advertised.</li>
+             * <li><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</li>
+             * <li><strong>PartialConfigured</strong>: Failed to advertise the aggregate route to some VPCs.</li>
+             * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
+             * </ul>
              * 
-             * *   **AllConfigured**: The aggregate route is advertised to all VPCs.
-             * *   **Configuring**: The aggregate route is being advertised.
-             * *   **ConfigFailed**: The aggregate route failed to be advertised.
-             * *   **PartialConfigured**: Failed to advertise the aggregate route to some VPCs.
-             * *   **Deleting**: The aggregate route is being deleted.
+             * <strong>example:</strong>
+             * <p>AllConfigured</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -287,7 +321,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table of the Enterprise Edition transit router.
+             * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-6ehgc262hr170qgyc****</p>
              */
             public Builder trRouteTableId(String trRouteTableId) {
                 this.trRouteTableId = trRouteTableId;
@@ -295,7 +332,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the aggregate route.
+             * <p>The destination CIDR block of the aggregate route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder transitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
                 this.transitRouteTableAggregationCidr = transitRouteTableAggregationCidr;

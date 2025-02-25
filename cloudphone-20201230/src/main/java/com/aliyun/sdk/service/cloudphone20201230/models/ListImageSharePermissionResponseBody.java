@@ -50,7 +50,7 @@ public class ListImageSharePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Accounts.
+         * The list of Alibaba Cloud accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -58,7 +58,7 @@ public class ListImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListImageSharePermissionResponseBody extends TeaModel {
             private String aliyunId; 
 
             /**
-             * AliyunId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder aliyunId(String aliyunId) {
                 this.aliyunId = aliyunId;

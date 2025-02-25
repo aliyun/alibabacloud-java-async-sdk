@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainUsageDataResponseBody</p>
  */
 public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
-    @NameInMap("Area")
+    @com.aliyun.core.annotation.NameInMap("Area")
     private String area;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UsageDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("UsageDataPerInterval")
     private UsageDataPerInterval usageDataPerInterval;
 
     private DescribeDcdnDomainUsageDataResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         private UsageDataPerInterval usageDataPerInterval; 
 
         /**
-         * The billable region where the usage data was collected.
+         * <p>The billable region where the usage data was collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder area(String area) {
             this.area = area;
@@ -130,7 +133,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -138,7 +144,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -146,7 +155,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T22:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +166,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +177,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range during which data was queried.
+         * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +188,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the content returned.
+         * <p>The type of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bps</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -178,7 +199,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The network traffic that was collected at each interval.
+         * <p>The traffic that was collected at each interval.</p>
          */
         public Builder usageDataPerInterval(UsageDataPerInterval usageDataPerInterval) {
             this.usageDataPerInterval = usageDataPerInterval;
@@ -191,17 +212,23 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainUsageDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("PeakTime")
+        @com.aliyun.core.annotation.NameInMap("PeakTime")
         private String peakTime;
 
-        @NameInMap("SpecialValue")
+        @com.aliyun.core.annotation.NameInMap("SpecialValue")
         private String specialValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -254,7 +281,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The time of the peak bandwidth value if the **Field** parameter in the request is set to **bps**. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.
+             * <p>The time of the peak bandwidth value if the <strong>Field</strong> parameter in the request is set to <strong>bps</strong>. Otherwise, this parameter returns the same value as the <strong>TimeStamp</strong> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T21:30:00Z</p>
              */
             public Builder peakTime(String peakTime) {
                 this.peakTime = peakTime;
@@ -262,10 +292,13 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The data usage in a specific scenario.
-             * <p>
+             * <p>The data usage in a specific scenario.</p>
+             * <blockquote>
+             * <p> This parameter indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
+             * </blockquote>
              * 
-             * > SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
+             * <strong>example:</strong>
+             * <p>4233041**</p>
              */
             public Builder specialValue(String specialValue) {
                 this.specialValue = specialValue;
@@ -273,7 +306,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T21:30:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -281,7 +317,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of resource usage.
+             * <p>The usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4233041**</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -295,8 +334,14 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainUsageDataResponseBody</p>
+     */
     public static class UsageDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private UsageDataPerInterval(Builder builder) {

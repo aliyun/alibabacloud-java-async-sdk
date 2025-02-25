@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOnDemandDdosEventRequest} extends {@link RequestModel}
  *
  * <p>DescribeOnDemandDdosEventRequest</p>
  */
 public class DescribeOnDemandDdosEventRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer startTime;
 
     private DescribeOnDemandDdosEventRequest(Builder builder) {
@@ -157,7 +157,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         } 
 
         /**
-         * The timestamp that specifies the end of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+         * <p>The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557909844</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -166,7 +170,14 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The ID of the on-demand instance to query.
+         * <p>The ID of the anti-DDoS diversion instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all anti-DDoS diversion instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,7 +186,10 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The IP address of the protection target.
+         * <p>The IP address of the anti-DDoS diversion instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -184,7 +198,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -193,7 +211,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The maximum value is **50**. The default value is **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +224,13 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the anti-DDoS diversion instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +239,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -220,7 +252,11 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+         * <p>The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557305044</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

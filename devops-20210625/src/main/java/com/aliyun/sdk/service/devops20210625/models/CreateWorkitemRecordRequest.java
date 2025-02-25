@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkitemRecordRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkitemRecordRequest</p>
  */
 public class CreateWorkitemRecordRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("actualTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("actualTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actualTime;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("gmtEnd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gmtEnd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtEnd;
 
-    @Body
-    @NameInMap("gmtStart")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gmtStart")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtStart;
 
-    @Body
-    @NameInMap("recordUserIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recordUserIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordUserIdentifier;
 
-    @Body
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Body
-    @NameInMap("workitemIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemIdentifier;
 
     private CreateWorkitemRecordRequest(Builder builder) {
@@ -159,7 +164,10 @@ public class CreateWorkitemRecordRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e9903d8b3f1xxxxxf9286ef5</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -168,7 +176,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * actualTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder actualTime(String actualTime) {
             this.putBodyParameter("actualTime", actualTime);
@@ -186,7 +197,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * gmtEnd.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646323200000</p>
          */
         public Builder gmtEnd(String gmtEnd) {
             this.putBodyParameter("gmtEnd", gmtEnd);
@@ -195,7 +209,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * gmtStart.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667205617061</p>
          */
         public Builder gmtStart(String gmtStart) {
             this.putBodyParameter("gmtStart", gmtStart);
@@ -204,7 +221,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * recordUserIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1316458xxxxx41068</p>
          */
         public Builder recordUserIdentifier(String recordUserIdentifier) {
             this.putBodyParameter("recordUserIdentifier", recordUserIdentifier);
@@ -213,7 +233,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deafe5f33xxxxx6a259d8dafd</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -222,7 +245,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * workitemIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCenBandwidthPackagesResponseBody</p>
  */
 public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("CenBandwidthPackages")
+    @com.aliyun.core.annotation.NameInMap("CenBandwidthPackages")
     private CenBandwidthPackages cenBandwidthPackages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenBandwidthPackagesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the bandwidth plan.
+         * <p>The details about the bandwidth plan.</p>
          */
         public Builder cenBandwidthPackages(CenBandwidthPackages cenBandwidthPackages) {
             this.cenBandwidthPackages = cenBandwidthPackages;
@@ -94,7 +99,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D7E2400-2755-4AF5-9B73-12565E4F73A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,9 +148,15 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesResponseBody</p>
+     */
     public static class CenIds extends TeaModel {
-        @NameInMap("CenId")
-        private java.util.List < String > cenId;
+        @com.aliyun.core.annotation.NameInMap("CenId")
+        private java.util.List<String> cenId;
 
         private CenIds(Builder builder) {
             this.cenId = builder.cenId;
@@ -150,17 +173,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return cenId
          */
-        public java.util.List < String > getCenId() {
+        public java.util.List<String> getCenId() {
             return this.cenId;
         }
 
         public static final class Builder {
-            private java.util.List < String > cenId; 
+            private java.util.List<String> cenId; 
 
             /**
              * CenId.
              */
-            public Builder cenId(java.util.List < String > cenId) {
+            public Builder cenId(java.util.List<String> cenId) {
                 this.cenId = cenId;
                 return this;
             }
@@ -172,17 +195,23 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesResponseBody</p>
+     */
     public static class OrginInterRegionBandwidthLimit extends TeaModel {
-        @NameInMap("BandwidthLimit")
+        @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
         private String bandwidthLimit;
 
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("LocalRegionId")
+        @com.aliyun.core.annotation.NameInMap("LocalRegionId")
         private String localRegionId;
 
-        @NameInMap("OppositeRegionId")
+        @com.aliyun.core.annotation.NameInMap("OppositeRegionId")
         private String oppositeRegionId;
 
         private OrginInterRegionBandwidthLimit(Builder builder) {
@@ -235,7 +264,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private String oppositeRegionId; 
 
             /**
-             * The maximum bandwidth value for the inter-region connection.
+             * <p>The maximum bandwidth value for the inter-region connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bandwidthLimit(String bandwidthLimit) {
                 this.bandwidthLimit = bandwidthLimit;
@@ -243,7 +275,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The connected regions.
+             * <p>The connected regions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>north-america_china</p>
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -251,7 +286,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the local region.
+             * <p>The ID of the local region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder localRegionId(String localRegionId) {
                 this.localRegionId = localRegionId;
@@ -259,7 +297,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the peer region.
+             * <p>The ID of the peer region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-west-1</p>
              */
             public Builder oppositeRegionId(String oppositeRegionId) {
                 this.oppositeRegionId = oppositeRegionId;
@@ -273,9 +314,15 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesResponseBody</p>
+     */
     public static class OrginInterRegionBandwidthLimits extends TeaModel {
-        @NameInMap("OrginInterRegionBandwidthLimit")
-        private java.util.List < OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit;
+        @com.aliyun.core.annotation.NameInMap("OrginInterRegionBandwidthLimit")
+        private java.util.List<OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit;
 
         private OrginInterRegionBandwidthLimits(Builder builder) {
             this.orginInterRegionBandwidthLimit = builder.orginInterRegionBandwidthLimit;
@@ -292,17 +339,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return orginInterRegionBandwidthLimit
          */
-        public java.util.List < OrginInterRegionBandwidthLimit> getOrginInterRegionBandwidthLimit() {
+        public java.util.List<OrginInterRegionBandwidthLimit> getOrginInterRegionBandwidthLimit() {
             return this.orginInterRegionBandwidthLimit;
         }
 
         public static final class Builder {
-            private java.util.List < OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit; 
+            private java.util.List<OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit; 
 
             /**
              * OrginInterRegionBandwidthLimit.
              */
-            public Builder orginInterRegionBandwidthLimit(java.util.List < OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit) {
+            public Builder orginInterRegionBandwidthLimit(java.util.List<OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit) {
                 this.orginInterRegionBandwidthLimit = orginInterRegionBandwidthLimit;
                 return this;
             }
@@ -314,11 +361,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -353,7 +406,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -361,7 +417,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -375,9 +434,15 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -394,17 +459,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -416,71 +481,77 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesResponseBody</p>
+     */
     public static class CenBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("BandwidthPackageChargeType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageChargeType")
         private String bandwidthPackageChargeType;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CenBandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageId")
         private String cenBandwidthPackageId;
 
-        @NameInMap("CenIds")
+        @com.aliyun.core.annotation.NameInMap("CenIds")
         private CenIds cenIds;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GeographicRegionAId")
+        @com.aliyun.core.annotation.NameInMap("GeographicRegionAId")
         private String geographicRegionAId;
 
-        @NameInMap("GeographicRegionBId")
+        @com.aliyun.core.annotation.NameInMap("GeographicRegionBId")
         private String geographicRegionBId;
 
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("HasReservationData")
+        @com.aliyun.core.annotation.NameInMap("HasReservationData")
         private String hasReservationData;
 
-        @NameInMap("IsCrossBorder")
+        @com.aliyun.core.annotation.NameInMap("IsCrossBorder")
         private Boolean isCrossBorder;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrginInterRegionBandwidthLimits")
+        @com.aliyun.core.annotation.NameInMap("OrginInterRegionBandwidthLimits")
         private OrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ReservationBandwidth")
         private String reservationBandwidth;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private CenBandwidthPackage(Builder builder) {
@@ -695,7 +766,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The maximum bandwidth of the bandwidth plan.
+             * <p>The maximum bandwidth of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -703,7 +777,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the bandwidth plan.
+             * <p>The billing method of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder bandwidthPackageChargeType(String bandwidthPackageChargeType) {
                 this.bandwidthPackageChargeType = bandwidthPackageChargeType;
@@ -711,12 +788,15 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the bandwidth plan. Valid values:
-             * <p>
+             * <p>The status of the bandwidth plan. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: running as expected.</li>
+             * <li><strong>FinancialLocked</strong>: locked due to overdue payments.</li>
+             * <li><strong>SecurityLocked</strong>: locked due to security reasons</li>
+             * </ul>
              * 
-             * *   **Normal**: running as expected.
-             * *   **FinancialLocked**: locked due to overdue payments.
-             * *   **SecurityLocked**: locked due to security reasons
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -724,7 +804,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bandwidth plan.
+             * <p>The ID of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cenbwp-4c2zaavbvh5x****</p>
              */
             public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
                 this.cenBandwidthPackageId = cenBandwidthPackageId;
@@ -732,7 +815,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * A list of CEN instances that are associated with the bandwidth plan.
+             * <p>A list of CEN instances that are associated with the bandwidth plan.</p>
              */
             public Builder cenIds(CenIds cenIds) {
                 this.cenIds = cenIds;
@@ -740,7 +823,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bandwidth plan was created. The time is displayed in the ISO8601 standard in the YYYY-MM-DDThh:mmZ format.
+             * <p>The time when the bandwidth plan was created. The time is displayed in the ISO8601 standard in the YYYY-MM-DDThh:mmZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-01T11:14Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -748,7 +834,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the bandwidth plan.
+             * <p>The description of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -756,7 +845,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bandwidth plan expires.
+             * <p>The time when the bandwidth plan expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T16:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -764,14 +856,16 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the area that you want to query. Valid values:
-             * <p>
+             * <p>The ID of the area that you want to query. Valid values:</p>
+             * <ul>
+             * <li><strong>china</strong>: Chinese mainland.</li>
+             * <li><strong>asia-pacific</strong>: Asia Pacific</li>
+             * <li><strong>europe</strong>: Europe</li>
+             * <li><strong>north-america</strong>: North America</li>
+             * </ul>
              * 
-             * *   **china**: Chinese mainland.
-             * *   **asia-pacific**: Asia Pacific
-             * *   **europe**: Europe
-             * *   **australia**: Australia
-             * *   **north-america**: North America
+             * <strong>example:</strong>
+             * <p>china</p>
              */
             public Builder geographicRegionAId(String geographicRegionAId) {
                 this.geographicRegionAId = geographicRegionAId;
@@ -779,14 +873,16 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the other area connected by the bandwidth plan. Valid values:
-             * <p>
+             * <p>The ID of the other area connected by the bandwidth plan. Valid values:</p>
+             * <ul>
+             * <li><strong>china</strong>: Chinese mainland.</li>
+             * <li><strong>asia-pacific</strong>: Asia Pacific</li>
+             * <li><strong>europe</strong>: Europe</li>
+             * <li><strong>north-america</strong>: North America</li>
+             * </ul>
              * 
-             * *   **china**: Chinese mainland.
-             * *   **asia-pacific**: Asia Pacific
-             * *   **europe**: Europe
-             * *   **australia**: Australia
-             * *   **north-america**: North America
+             * <strong>example:</strong>
+             * <p>north-america</p>
              */
             public Builder geographicRegionBId(String geographicRegionBId) {
                 this.geographicRegionBId = geographicRegionBId;
@@ -794,7 +890,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the connected area.
+             * <p>The ID of the connected area.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>north-america_china</p>
              */
             public Builder geographicSpanId(String geographicSpanId) {
                 this.geographicSpanId = geographicSpanId;
@@ -802,13 +901,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether renewal data is included.
-             * <p>
+             * <p>Indicates whether renewal data is included.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter returns <strong>true</strong> only when the <strong>IncludeReservationData</strong> parameter is set to <strong>true</strong> and a pending order exists.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and a pending order exists.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -816,11 +919,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bandwidth plan supports cross-border communication.
-             * <p>
+             * <p>Indicates whether the bandwidth plan supports cross-border communication.</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCrossBorder(Boolean isCrossBorder) {
                 this.isCrossBorder = isCrossBorder;
@@ -828,7 +934,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the bandwidth plan.
+             * <p>The name of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -836,7 +945,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the connected regions.
+             * <p>The details about the connected regions.</p>
              */
             public Builder orginInterRegionBandwidthLimits(OrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits) {
                 this.orginInterRegionBandwidthLimits = orginInterRegionBandwidthLimits;
@@ -844,7 +953,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the temporary upgrade.
+             * <p>The expiration time of the temporary upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-30T16:00Z</p>
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -852,7 +964,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value to which the bandwidth plan is restored when the temporary upgrade ends.
+             * <p>The bandwidth value to which the bandwidth plan is restored when the temporary upgrade ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder reservationBandwidth(String reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -860,7 +975,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The new billing method.
+             * <p>The new billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -868,11 +986,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal method.
-             * <p>
+             * <p>The renewal method.</p>
+             * <ul>
+             * <li><strong>TEMP_UPGRADE</strong>: temporary upgrade</li>
+             * <li><strong>UPGRADE</strong>: upgrade</li>
+             * </ul>
              * 
-             * *   **TEMP_UPGRADE**: temporary upgrade
-             * *   **UPGRADE**: upgrade
+             * <strong>example:</strong>
+             * <p>UPGRADE</p>
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -880,7 +1001,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the ACL belongs.
+             * <p>The ID of the resource group to which the ACL belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzoyr5k36****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -888,11 +1012,14 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bandwidth plan is associated with a CEN instance.
-             * <p>
+             * <p>Indicates whether the bandwidth plan is associated with a CEN instance.</p>
+             * <ul>
+             * <li><strong>Idle</strong></li>
+             * <li><strong>InUse</strong></li>
+             * </ul>
              * 
-             * *   **Idle**
-             * *   **InUse**
+             * <strong>example:</strong>
+             * <p>InUse</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -900,7 +1027,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the bandwidth plan.
+             * <p>The tags of the bandwidth plan.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -914,9 +1041,15 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCenBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCenBandwidthPackagesResponseBody</p>
+     */
     public static class CenBandwidthPackages extends TeaModel {
-        @NameInMap("CenBandwidthPackage")
-        private java.util.List < CenBandwidthPackage> cenBandwidthPackage;
+        @com.aliyun.core.annotation.NameInMap("CenBandwidthPackage")
+        private java.util.List<CenBandwidthPackage> cenBandwidthPackage;
 
         private CenBandwidthPackages(Builder builder) {
             this.cenBandwidthPackage = builder.cenBandwidthPackage;
@@ -933,17 +1066,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return cenBandwidthPackage
          */
-        public java.util.List < CenBandwidthPackage> getCenBandwidthPackage() {
+        public java.util.List<CenBandwidthPackage> getCenBandwidthPackage() {
             return this.cenBandwidthPackage;
         }
 
         public static final class Builder {
-            private java.util.List < CenBandwidthPackage> cenBandwidthPackage; 
+            private java.util.List<CenBandwidthPackage> cenBandwidthPackage; 
 
             /**
              * CenBandwidthPackage.
              */
-            public Builder cenBandwidthPackage(java.util.List < CenBandwidthPackage> cenBandwidthPackage) {
+            public Builder cenBandwidthPackage(java.util.List<CenBandwidthPackage> cenBandwidthPackage) {
                 this.cenBandwidthPackage = cenBandwidthPackage;
                 return this;
             }

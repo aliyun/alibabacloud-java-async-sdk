@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRDDomainConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeRDDomainConfigRequest</p>
  */
 public class DescribeRDDomainConfigRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("FunctionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionName")
     private String functionName;
 
     private DescribeRDDomainConfigRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class DescribeRDDomainConfigRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,7 +82,10 @@ public class DescribeRDDomainConfigRequest extends Request {
         }
 
         /**
-         * The name of the feature. Default value: source_group.
+         * <p>The name of the feature. Default value: source_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source_group</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);

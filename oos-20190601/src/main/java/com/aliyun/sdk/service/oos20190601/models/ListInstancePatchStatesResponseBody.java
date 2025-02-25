@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancePatchStatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancePatchStatesResponseBody</p>
  */
 public class ListInstancePatchStatesResponseBody extends TeaModel {
-    @NameInMap("InstancePatchStates")
-    private java.util.List < InstancePatchStates> instancePatchStates;
+    @com.aliyun.core.annotation.NameInMap("InstancePatchStates")
+    private java.util.List<InstancePatchStates> instancePatchStates;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstancePatchStatesResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
     /**
      * @return instancePatchStates
      */
-    public java.util.List < InstancePatchStates> getInstancePatchStates() {
+    public java.util.List<InstancePatchStates> getInstancePatchStates() {
         return this.instancePatchStates;
     }
 
@@ -68,21 +73,24 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstancePatchStates> instancePatchStates; 
+        private java.util.List<InstancePatchStates> instancePatchStates; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The number of patches that are not installed.
+         * <p>The details of patches of the instance.</p>
          */
-        public Builder instancePatchStates(java.util.List < InstancePatchStates> instancePatchStates) {
+        public Builder instancePatchStates(java.util.List<InstancePatchStates> instancePatchStates) {
             this.instancePatchStates = instancePatchStates;
             return this;
         }
 
         /**
-         * The details of patches of the instance.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +98,12 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +111,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A47C086-E64D-52EE-8B2C-EFD23877C55E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,44 +127,50 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancePatchStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancePatchStatesResponseBody</p>
+     */
     public static class InstancePatchStates extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private String baselineId;
 
-        @NameInMap("FailedCount")
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
         private String failedCount;
 
-        @NameInMap("InstalledCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledCount")
         private String installedCount;
 
-        @NameInMap("InstalledOtherCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledOtherCount")
         private String installedOtherCount;
 
-        @NameInMap("InstalledPendingRebootCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledPendingRebootCount")
         private String installedPendingRebootCount;
 
-        @NameInMap("InstalledRejectedCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledRejectedCount")
         private String installedRejectedCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MissingCount")
+        @com.aliyun.core.annotation.NameInMap("MissingCount")
         private String missingCount;
 
-        @NameInMap("OperationEndTime")
+        @com.aliyun.core.annotation.NameInMap("OperationEndTime")
         private String operationEndTime;
 
-        @NameInMap("OperationStartTime")
+        @com.aliyun.core.annotation.NameInMap("OperationStartTime")
         private String operationStartTime;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("OwnerInformation")
+        @com.aliyun.core.annotation.NameInMap("OwnerInformation")
         private String ownerInformation;
 
-        @NameInMap("PatchGroup")
+        @com.aliyun.core.annotation.NameInMap("PatchGroup")
         private String patchGroup;
 
         private InstancePatchStates(Builder builder) {
@@ -282,7 +304,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             private String patchGroup; 
 
             /**
-             * The number of patches that have been installed but require a restart to take effect.
+             * <p>The ID of the patch baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pb-f9393021b7a049e1b34e</p>
              */
             public Builder baselineId(String baselineId) {
                 this.baselineId = baselineId;
@@ -290,7 +315,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the patch baseline.
+             * <p>The number of patches that failed to be installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCount(String failedCount) {
                 this.failedCount = failedCount;
@@ -298,7 +326,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries patches of an instance.
+             * <p>The number of installed patches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedCount(String installedCount) {
                 this.installedCount = installedCount;
@@ -306,7 +337,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The number of patches that do not meet the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedOtherCount(String installedOtherCount) {
                 this.installedOtherCount = installedOtherCount;
@@ -314,7 +348,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that are rejected by the user.
+             * <p>The number of patches that have been installed but require a restart to take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedPendingRebootCount(String installedPendingRebootCount) {
                 this.installedPendingRebootCount = installedPendingRebootCount;
@@ -322,7 +359,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The patch group.
+             * <p>The number of patches that are rejected by the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installedRejectedCount(String installedRejectedCount) {
                 this.installedRejectedCount = installedRejectedCount;
@@ -330,7 +370,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1jaxa2bs4bps7*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +381,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation ended.
+             * <p>The number of patches that are not installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder missingCount(String missingCount) {
                 this.missingCount = missingCount;
@@ -346,7 +392,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the user.
+             * <p>The time when the operation ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-10T11:42:22Z</p>
              */
             public Builder operationEndTime(String operationEndTime) {
                 this.operationEndTime = operationEndTime;
@@ -354,7 +403,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that failed to be installed.
+             * <p>The time when the operation was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-10T11:42:22Z</p>
              */
             public Builder operationStartTime(String operationStartTime) {
                 this.operationStartTime = operationStartTime;
@@ -362,7 +414,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was initiated.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scan</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -370,7 +425,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that do not meet the baseline.
+             * <p>The information about the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder ownerInformation(String ownerInformation) {
                 this.ownerInformation = ownerInformation;
@@ -378,7 +436,10 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of installed patches.
+             * <p>The patch group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder patchGroup(String patchGroup) {
                 this.patchGroup = patchGroup;

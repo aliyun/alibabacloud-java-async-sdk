@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActiveOperationTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyActiveOperationTasksResponseBody</p>
  */
 public class ModifyActiveOperationTasksResponseBody extends TeaModel {
-    @NameInMap("Ids")
+    @com.aliyun.core.annotation.NameInMap("Ids")
     private String ids;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyActiveOperationTasksResponseBody(Builder builder) {

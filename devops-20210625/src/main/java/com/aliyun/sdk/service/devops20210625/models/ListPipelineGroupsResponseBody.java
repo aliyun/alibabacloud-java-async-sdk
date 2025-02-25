@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelineGroupsResponseBody</p>
  */
 public class ListPipelineGroupsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("pipelineGroups")
-    private java.util.List < PipelineGroups> pipelineGroups;
+    @com.aliyun.core.annotation.NameInMap("pipelineGroups")
+    private java.util.List<PipelineGroups> pipelineGroups;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListPipelineGroupsResponseBody(Builder builder) {
@@ -75,7 +80,7 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
     /**
      * @return pipelineGroups
      */
-    public java.util.List < PipelineGroups> getPipelineGroups() {
+    public java.util.List<PipelineGroups> getPipelineGroups() {
         return this.pipelineGroups;
     }
 
@@ -104,7 +109,7 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String nextToken; 
-        private java.util.List < PipelineGroups> pipelineGroups; 
+        private java.util.List<PipelineGroups> pipelineGroups; 
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
@@ -136,7 +141,7 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
         /**
          * pipelineGroups.
          */
-        public Builder pipelineGroups(java.util.List < PipelineGroups> pipelineGroups) {
+        public Builder pipelineGroups(java.util.List<PipelineGroups> pipelineGroups) {
             this.pipelineGroups = pipelineGroups;
             return this;
         }
@@ -171,14 +176,20 @@ public class ListPipelineGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelineGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineGroupsResponseBody</p>
+     */
     public static class PipelineGroups extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private PipelineGroups(Builder builder) {

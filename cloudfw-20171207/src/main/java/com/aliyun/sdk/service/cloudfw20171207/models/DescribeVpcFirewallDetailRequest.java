@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallDetailRequest</p>
  */
 public class DescribeVpcFirewallDetailRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LocalVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalVpcId")
     private String localVpcId;
 
-    @Query
-    @NameInMap("PeerVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerVpcId")
     private String peerVpcId;
 
-    @Query
-    @NameInMap("VpcFirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallId;
 
     private DescribeVpcFirewallDetailRequest(Builder builder) {
@@ -97,11 +102,14 @@ public class DescribeVpcFirewallDetailRequest extends Request {
         } 
 
         /**
-         * The natural language of the request and response. Valid values:
-         * <p>
+         * <p>The natural language of the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +118,10 @@ public class DescribeVpcFirewallDetailRequest extends Request {
         }
 
         /**
-         * The ID of the local VPC.
+         * <p>The ID of the local VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder localVpcId(String localVpcId) {
             this.putQueryParameter("LocalVpcId", localVpcId);
@@ -119,7 +130,10 @@ public class DescribeVpcFirewallDetailRequest extends Request {
         }
 
         /**
-         * The ID of the peer VPC.
+         * <p>The ID of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-90rq0anm6t8vbwbo****</p>
          */
         public Builder peerVpcId(String peerVpcId) {
             this.putQueryParameter("PeerVpcId", peerVpcId);
@@ -128,10 +142,14 @@ public class DescribeVpcFirewallDetailRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
-         * <p>
+         * <p>The instance ID of the VPC firewall.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

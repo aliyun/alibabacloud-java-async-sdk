@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceLogResponseBody</p>
  */
 public class DescribeResourceLogResponseBody extends TeaModel {
-    @NameInMap("LogStore")
+    @com.aliyun.core.annotation.NameInMap("LogStore")
     private String logStore;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeResourceLogResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * LogStore.
+         * <p>The Logstore of Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_log</p>
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -94,7 +102,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Network interfaces are updating</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +113,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The Log Service project that is associated with the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd-sls</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -110,7 +124,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceReady</p>
          */
         public Builder status(String status) {
             this.status = status;

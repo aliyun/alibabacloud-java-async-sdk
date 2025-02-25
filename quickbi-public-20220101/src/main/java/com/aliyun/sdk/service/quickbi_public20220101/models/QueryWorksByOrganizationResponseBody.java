@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksByOrganizationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryWorksByOrganizationResponseBody</p>
  */
 public class QueryWorksByOrganizationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryWorksByOrganizationResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the list of works.
+         * <p>The details of the list of works.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,13 +78,13 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the report. Valid values:
-         * <p>
-         * 
-         * *   0: unpublished
-         * *   1: published
-         * *   2: modified but not published
-         * *   3: unpublished
+         * <p>The status of the report. Valid values:</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>1: published</li>
+         * <li>2: modified but not published</li>
+         * <li>3: unpublished</li>
+         * </ul>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -84,7 +92,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of rows in the table.
+         * <p>The total number of rows in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -97,17 +108,23 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryWorksByOrganizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksByOrganizationResponseBody</p>
+     */
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -198,50 +215,62 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorksByOrganizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksByOrganizationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Auth3rdFlag")
+        @com.aliyun.core.annotation.NameInMap("Auth3rdFlag")
         private Integer auth3rdFlag;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("ModifyName")
+        @com.aliyun.core.annotation.NameInMap("ModifyName")
         private String modifyName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("PublicFlag")
+        private Boolean publicFlag;
+
+        @com.aliyun.core.annotation.NameInMap("PublicInvalidTime")
+        private Long publicInvalidTime;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WorkName")
+        @com.aliyun.core.annotation.NameInMap("WorkName")
         private String workName;
 
-        @NameInMap("WorkType")
+        @com.aliyun.core.annotation.NameInMap("WorkType")
         private String workType;
 
-        @NameInMap("WorksId")
+        @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Data(Builder builder) {
@@ -253,6 +282,8 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             this.modifyName = builder.modifyName;
             this.ownerId = builder.ownerId;
             this.ownerName = builder.ownerName;
+            this.publicFlag = builder.publicFlag;
+            this.publicInvalidTime = builder.publicInvalidTime;
             this.securityLevel = builder.securityLevel;
             this.status = builder.status;
             this.workName = builder.workName;
@@ -327,6 +358,20 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicFlag
+         */
+        public Boolean getPublicFlag() {
+            return this.publicFlag;
+        }
+
+        /**
+         * @return publicInvalidTime
+         */
+        public Long getPublicInvalidTime() {
+            return this.publicInvalidTime;
+        }
+
+        /**
          * @return securityLevel
          */
         public String getSecurityLevel() {
@@ -384,6 +429,8 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             private String modifyName; 
             private String ownerId; 
             private String ownerName; 
+            private Boolean publicFlag; 
+            private Long publicInvalidTime; 
             private String securityLevel; 
             private Integer status; 
             private String workName; 
@@ -393,7 +440,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * The name of the workspace to which the work belongs.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder auth3rdFlag(Integer auth3rdFlag) {
                 this.auth3rdFlag = auth3rdFlag;
@@ -401,7 +451,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.
+             * <p>The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -409,7 +462,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -417,7 +470,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Test directory
+             * <p>Test directory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1496651577000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -425,7 +481,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Test Workspace
+             * <p>Test Workspace</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572334870000</p>
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -433,7 +492,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the work.</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -441,18 +503,23 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Security policies for collaborative authorization of works. Valid values:
-             * <p>
+             * <p>Security policies for collaborative authorization of works. Valid values:</p>
+             * <ul>
+             * <li>0: private</li>
+             * <li>12: Authorize specified members</li>
+             * <li>1 or 11: Authorize all workspace members</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you use legacy permissions, the return value is 1.</p>
+             * </li>
+             * <li><p>If you use the new permissions, the return value is 11.</p>
+             * </li>
+             * </ul>
              * 
-             * *   0: private
-             * *   12: Authorize specified members
-             * *   1 or 11: Authorize all workspace members
-             * 
-             * > 
-             * 
-             * *   If you use legacy permissions, the return value is 1.
-             * 
-             * *   If you use the new permissions, the return value is 11.
+             * <strong>example:</strong>
+             * <p>Remarks on the work.</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -460,7 +527,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account name of the person who modified the work.
+             * <p>The Alibaba Cloud account name of the person who modified the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tom</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -468,7 +538,26 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The directory to which the work belongs.
+             * PublicFlag.
+             */
+            public Builder publicFlag(Boolean publicFlag) {
+                this.publicFlag = publicFlag;
+                return this;
+            }
+
+            /**
+             * PublicInvalidTime.
+             */
+            public Builder publicInvalidTime(Long publicInvalidTime) {
+                this.publicInvalidTime = publicInvalidTime;
+                return this;
+            }
+
+            /**
+             * <p>The directory to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -476,7 +565,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Li Si
+             * <p>Li Si</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -484,7 +576,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Test directory
+             * <p>Test directory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the directory.</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -492,7 +587,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace to which the work belongs.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -500,7 +598,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the work owner in the Quick BI.
+             * <p>The user ID of the work owner in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>897ce25e-<strong><strong>-</strong></strong>-af84-d13c5610****</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -508,7 +609,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Test report
+             * <p>Test report</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The timestamp of the creation of the work in milliseconds.</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -516,7 +620,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the work belongs.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the Alibaba Cloud account that modified the work.</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -530,20 +637,26 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorksByOrganizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksByOrganizationResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Integer totalNum;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Result(Builder builder) {
@@ -565,7 +678,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -598,22 +711,25 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalNum; 
             private Integer totalPages; 
 
             /**
-             * The Alibaba Cloud account name of the work owner.
+             * <p>The Alibaba Cloud account name of the work owner.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
 
             /**
-             * The timestamp of the modification of the work in milliseconds.
+             * <p>The timestamp of the modification of the work in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -621,7 +737,10 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the work.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -629,13 +748,16 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the work. Valid values:
-             * <p>
+             * <p>The type of the work. Valid values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: BI portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>FULLPAGE: full-screen dashboards</li>
+             * <li>REPORT: workbook</li>
+             * </ul>
              * 
-             * *   DATAPRODUCT: BI portal
-             * *   PAGE: Dashboard
-             * *   FULLPAGE: full-screen dashboards
-             * *   REPORT: workbook
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -643,11 +765,14 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
             }
 
             /**
-             * Third-party embedding status. Valid values:
-             * <p>
+             * <p>Third-party embedding status. Valid values:</p>
+             * <ul>
+             * <li>0: The embed service is not enabled.</li>
+             * <li>1: Embed is enabled.</li>
+             * </ul>
              * 
-             * *   0: The embed service is not enabled.
-             * *   1: Embed is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

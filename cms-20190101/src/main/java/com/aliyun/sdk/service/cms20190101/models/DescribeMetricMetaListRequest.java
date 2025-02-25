@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricMetaListRequest} extends {@link RequestModel}
  *
  * <p>DescribeMetricMetaListRequest</p>
  */
 public class DescribeMetricMetaListRequest extends Request {
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeMetricMetaListRequest(Builder builder) {
@@ -110,17 +110,19 @@ public class DescribeMetricMetaListRequest extends Request {
         } 
 
         /**
-         * The tags for filtering metrics. Specify a JSON string.
-         * <p>
+         * <p>The tags for filtering metrics. Specify a JSON string.</p>
+         * <p>Format: <code>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;},{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}] </code>. The following tags are available:</p>
+         * <ul>
+         * <li>metricCategory: the category of the metric.</li>
+         * <li>alertEnable: specifies whether to report alerts for the metric.</li>
+         * <li>alertUnit: the unit of the metric in the alerts.</li>
+         * <li>unitFactor: the factor for metric unit conversion.</li>
+         * <li>minAlertPeriod: the minimum interval at which the alert is reported.</li>
+         * <li>productCategory: the category of the service.</li>
+         * </ul>
          * 
-         * Format:`[{"name":"tag name","value":"tag value"},{"name":"tag name","value":"tag value"}]`. The following tags are available:
-         * 
-         * *   metricCategory: the category of the metric.
-         * *   alertEnable: specifies whether to report alerts for the metric.
-         * *   alertUnit: the suggested unit of the metric value in alerts.
-         * *   unitFactor: the factor for metric unit conversion.
-         * *   minAlertPeriod: the minimum time interval to report a new alert.
-         * *   productCategory: the category of the service.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;productCategory&quot;,&quot;value&quot;:&quot;kvstore_old&quot;}]</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -129,7 +131,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -138,10 +143,11 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The namespace of the service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * 
-         * For more information, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>acs_kvstore</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -150,7 +156,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The page to return. Default value: 1
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +168,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30.
+         * <p>The number of entries per page. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

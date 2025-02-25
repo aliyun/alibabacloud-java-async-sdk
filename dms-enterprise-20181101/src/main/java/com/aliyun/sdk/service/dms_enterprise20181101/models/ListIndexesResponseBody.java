@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIndexesResponseBody} extends {@link TeaModel}
  *
  * <p>ListIndexesResponseBody</p>
  */
 public class ListIndexesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("IndexList")
+    @com.aliyun.core.annotation.NameInMap("IndexList")
     private IndexList indexList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListIndexesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListIndexesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,7 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of indexes.
+         * <p>The details of indexes.</p>
          */
         public Builder indexList(IndexList indexList) {
             this.indexList = indexList;
@@ -110,7 +121,10 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F4DE2F1-5B47-462A-A973-E02EB7AF386B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +148,26 @@ public class ListIndexesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIndexesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndexesResponseBody</p>
+     */
     public static class Index extends TeaModel {
-        @NameInMap("IndexComment")
+        @com.aliyun.core.annotation.NameInMap("IndexComment")
         private String indexComment;
 
-        @NameInMap("IndexId")
+        @com.aliyun.core.annotation.NameInMap("IndexId")
         private String indexId;
 
-        @NameInMap("IndexName")
+        @com.aliyun.core.annotation.NameInMap("IndexName")
         private String indexName;
 
-        @NameInMap("IndexType")
+        @com.aliyun.core.annotation.NameInMap("IndexType")
         private String indexType;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
 
         private Index(Builder builder) {
@@ -206,7 +229,10 @@ public class ListIndexesResponseBody extends TeaModel {
             private String tableId; 
 
             /**
-             * The description of the index.
+             * <p>The description of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder indexComment(String indexComment) {
                 this.indexComment = indexComment;
@@ -214,7 +240,10 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the index.
+             * <p>The ID of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -222,7 +251,10 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index.
+             * <p>The name of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idx_test</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -230,14 +262,17 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the index. Valid values:
-             * <p>
+             * <p>The type of the index. Valid values:</p>
+             * <ul>
+             * <li>Primary</li>
+             * <li>Unique</li>
+             * <li>Normal</li>
+             * <li>FullText</li>
+             * <li>Spatial</li>
+             * </ul>
              * 
-             * *   Primary
-             * *   Unique
-             * *   Normal
-             * *   FullText
-             * *   Spatial
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder indexType(String indexType) {
                 this.indexType = indexType;
@@ -245,7 +280,10 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -259,9 +297,15 @@ public class ListIndexesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIndexesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndexesResponseBody</p>
+     */
     public static class IndexList extends TeaModel {
-        @NameInMap("Index")
-        private java.util.List < Index> index;
+        @com.aliyun.core.annotation.NameInMap("Index")
+        private java.util.List<Index> index;
 
         private IndexList(Builder builder) {
             this.index = builder.index;
@@ -278,17 +322,17 @@ public class ListIndexesResponseBody extends TeaModel {
         /**
          * @return index
          */
-        public java.util.List < Index> getIndex() {
+        public java.util.List<Index> getIndex() {
             return this.index;
         }
 
         public static final class Builder {
-            private java.util.List < Index> index; 
+            private java.util.List<Index> index; 
 
             /**
              * Index.
              */
-            public Builder index(java.util.List < Index> index) {
+            public Builder index(java.util.List<Index> index) {
                 this.index = index;
                 return this;
             }

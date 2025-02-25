@@ -1,28 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateADConnectorDirectoryResponse} extends {@link TeaModel}
  *
  * <p>CreateADConnectorDirectoryResponse</p>
  */
 public class CreateADConnectorDirectoryResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CreateADConnectorDirectoryResponseBody body;
 
     private CreateADConnectorDirectoryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -38,8 +45,15 @@ public class CreateADConnectorDirectoryResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     /**
@@ -51,7 +65,9 @@ public class CreateADConnectorDirectoryResponse extends Response {
 
     public interface Builder extends Response.Builder<CreateADConnectorDirectoryResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateADConnectorDirectoryResponseBody body);
 
@@ -63,7 +79,8 @@ public class CreateADConnectorDirectoryResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<CreateADConnectorDirectoryResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
         private CreateADConnectorDirectoryResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +90,7 @@ public class CreateADConnectorDirectoryResponse extends Response {
         private BuilderImpl(CreateADConnectorDirectoryResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -80,8 +98,17 @@ public class CreateADConnectorDirectoryResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

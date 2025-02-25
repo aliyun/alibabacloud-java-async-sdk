@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveRecordJobRequest} extends {@link RequestModel}
  *
  * <p>GetLiveRecordJobRequest</p>
  */
 public class GetLiveRecordJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private GetLiveRecordJobRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetLiveRecordJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The ID of the recording job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

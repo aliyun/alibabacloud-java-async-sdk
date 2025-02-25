@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessAssignmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccessAssignmentsResponseBody</p>
  */
 public class ListAccessAssignmentsResponseBody extends TeaModel {
-    @NameInMap("AccessAssignments")
+    @com.aliyun.core.annotation.NameInMap("AccessAssignments")
     private java.util.List < AccessAssignments> accessAssignments;
 
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListAccessAssignmentsResponseBody(Builder builder) {
@@ -98,7 +98,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The access permissions that are assigned.
+         * <p>The access permissions that are assigned.</p>
          */
         public Builder accessAssignments(java.util.List < AccessAssignments> accessAssignments) {
             this.accessAssignments = accessAssignments;
@@ -106,11 +106,14 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the queried entries are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -118,7 +121,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -126,10 +132,13 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of IsTruncated is <code>true</code>.``</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -137,7 +146,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66898413-EB80-556D-9429-06FE3548F672</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +157,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -158,38 +173,44 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccessAssignmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessAssignmentsResponseBody</p>
+     */
     public static class AccessAssignments extends TeaModel {
-        @NameInMap("AccessConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
 
-        @NameInMap("AccessConfigurationName")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationName")
         private String accessConfigurationName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("PrincipalId")
+        @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
-        @NameInMap("PrincipalName")
+        @com.aliyun.core.annotation.NameInMap("PrincipalName")
         private String principalName;
 
-        @NameInMap("PrincipalType")
+        @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetPath")
+        @com.aliyun.core.annotation.NameInMap("TargetPath")
         private String targetPath;
 
-        @NameInMap("TargetPathName")
+        @com.aliyun.core.annotation.NameInMap("TargetPathName")
         private String targetPathName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private AccessAssignments(Builder builder) {
@@ -305,7 +326,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the access configuration.
+             * <p>The ID of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-00jhtfl8thteu6uj****</p>
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -313,7 +337,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access configuration.
+             * <p>The name of the access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS-Admin</p>
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -321,7 +348,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access permissions were assigned.
+             * <p>The time when the access permissions were assigned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-04T10:03:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -329,7 +359,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CloudSSO identity.
+             * <p>The ID of the CloudSSO identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00q8wbq42wiltcrk****</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -337,7 +370,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CloudSSO identity.
+             * <p>The name of the CloudSSO identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -345,11 +381,14 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the CloudSSO identity. Valid values:
-             * <p>
+             * <p>The type of the CloudSSO identity. Valid values:</p>
+             * <ul>
+             * <li>User</li>
+             * <li>Group</li>
+             * </ul>
              * 
-             * *   User
-             * *   Group
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -357,7 +396,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task object.
+             * <p>The ID of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114240524784****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -365,7 +407,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task object.
+             * <p>The name of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev-test</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -373,7 +418,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The path ID of the task object in your resource directory.
+             * <p>The path ID of the task object in the resource directory.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -381,7 +426,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the task object in your resource directory.
+             * <p>The path name of the task object in the resource directory.</p>
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -389,10 +434,11 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task object.
-             * <p>
+             * <p>The type of the task object.</p>
+             * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
              * 
-             * The value is fixed as RD-Account, which indicates an account in your resource directory.
+             * <strong>example:</strong>
+             * <p>RD-Account</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

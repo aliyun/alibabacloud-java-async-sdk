@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIPArrayListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceIPArrayListRequest</p>
  */
 public class DescribeDBInstanceIPArrayListRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("WhitelistNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhitelistNetworkType")
     private String whitelistNetworkType;
 
     private DescribeDBInstanceIPArrayListRequest(Builder builder) {
@@ -97,7 +102,11 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -124,14 +133,16 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         }
 
         /**
-         * The network type of the IP address whitelist. Valid values:
-         * <p>
+         * <p>The network type of the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>Classic</strong>: classic network in enhanced whitelist mode</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC) in enhanced whitelist mode</li>
+         * <li><strong>MIX</strong>: standard whitelist mode</li>
+         * </ul>
+         * <p>By default, this operation returns IP address whitelists of all network types.</p>
          * 
-         * *   **Classic**: classic network in enhanced whitelist mode
-         * *   **VPC**: virtual private cloud (VPC) in enhanced whitelist mode
-         * *   **MIX**: standard whitelist mode
-         * 
-         * By default, this operation returns IP address whitelists of all network types.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder whitelistNetworkType(String whitelistNetworkType) {
             this.putQueryParameter("WhitelistNetworkType", whitelistNetworkType);

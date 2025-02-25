@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetDcdnDomainCertificateRequest} extends {@link RequestModel}
  *
  * <p>BatchSetDcdnDomainCertificateRequest</p>
  */
 public class BatchSetDcdnDomainCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @Query
-    @NameInMap("CertType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertType")
     private String certType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("SSLPri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPri")
     private String SSLPri;
 
-    @Query
-    @NameInMap("SSLProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLProtocol;
 
-    @Query
-    @NameInMap("SSLPub")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPub")
     private String SSLPub;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private BatchSetDcdnDomainCertificateRequest(Builder builder) {
@@ -168,7 +168,10 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         } 
 
         /**
-         * The name of the certificate.
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-te**.com</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -177,11 +180,14 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The type of the certificate. Valid values:
-         * <p>
+         * <p>The type of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>upload</strong>: a custom certificate that you upload.</li>
+         * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+         * </ul>
          * 
-         * *   **upload**: a custom certificate that you upload.
-         * *   **cas**: a certificate that is acquired through Certificate Management Service.
+         * <strong>example:</strong>
+         * <p>cas</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -190,10 +196,14 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The accelerated domain name for which you want to configure the HTTPS certificate. The accelerated domain must have HTTPS acceleration enabled. You can specify multiple domain names and separate them with commas (,).
-         * <p>
+         * <p>The accelerated domain name for which you want to configure the HTTPS certificate. The accelerated domain must have HTTPS acceleration enabled. You can specify multiple domain names and separate them with commas (,).</p>
+         * <blockquote>
+         * <p>You can configure up to 10 domain names in each request.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can configure up to 10 domain names in each request.
+         * <strong>example:</strong>
+         * <p><strong>example</strong>.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -211,7 +221,10 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -220,7 +233,10 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The private key. This parameter is required only if you enable the certificate.
+         * <p>The private key. This parameter is required only if you enable the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y****</p>
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -229,13 +245,16 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the HTTPS certificate. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables the HTTPS certificate.</li>
+         * <li><strong>off</strong>: does not enable the HTTPS certificate.</li>
+         * </ul>
+         * <p>This is the default value.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   \*\*on\*\*: enables the HTTPS certificate.
-         * *   **off**: does not enable the HTTPS certificate.
-         * 
-         * This is the default value.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -244,7 +263,10 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * The content of the certificate. This parameter is required only if you enable the certificate.
+         * <p>The content of the certificate. This parameter is required only if you enable the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x****</p>
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

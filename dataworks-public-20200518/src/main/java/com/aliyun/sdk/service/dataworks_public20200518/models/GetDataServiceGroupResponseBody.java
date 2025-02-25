@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataServiceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataServiceGroupResponseBody</p>
  */
 public class GetDataServiceGroupResponseBody extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDataServiceGroupResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the business process.
+         * <p>The details of the business process.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +63,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataServiceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataServiceGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("ApiGatewayGroupId")
+        @com.aliyun.core.annotation.NameInMap("ApiGatewayGroupId")
         private String apiGatewayGroupId;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private Group(Builder builder) {
@@ -194,7 +208,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the API group that is associated with the business process in the API Gateway console.
+             * <p>The ID of the API group that is associated with the business process in the API Gateway console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100abc</p>
              */
             public Builder apiGatewayGroupId(String apiGatewayGroupId) {
                 this.apiGatewayGroupId = apiGatewayGroupId;
@@ -202,7 +219,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business process was created.
+             * <p>The time when the business process was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -210,7 +230,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.
+             * <p>The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -218,7 +241,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the business process.
+             * <p>The description of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +252,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business process.
+             * <p>The business process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds_123abc</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -234,7 +263,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the business process.
+             * <p>The name of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -242,7 +274,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the business process was last modified.
+             * <p>The time when the business process was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-24T18:37:51+0800</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -250,7 +285,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -258,7 +296,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10003</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

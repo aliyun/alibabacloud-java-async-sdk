@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GeneralBill} extends {@link TeaModel}
  *
  * <p>GeneralBill</p>
  */
 public class GeneralBill extends TeaModel {
-    @NameInMap("billId")
+    @com.aliyun.core.annotation.NameInMap("billId")
     private String billId;
 
-    @NameInMap("billPeriod")
+    @com.aliyun.core.annotation.NameInMap("billPeriod")
     private String billPeriod;
 
-    @NameInMap("downloadUrl")
-    private java.util.List < String > downloadUrl;
+    @com.aliyun.core.annotation.NameInMap("downloadUrl")
+    private java.util.List<String> downloadUrl;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
-    @NameInMap("gmtModified")
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
     private String gmtModified;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("shopName")
+    @com.aliyun.core.annotation.NameInMap("shopName")
     private String shopName;
 
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
-    @NameInMap("totalAmount")
+    @com.aliyun.core.annotation.NameInMap("totalAmount")
     private Money totalAmount;
 
     private GeneralBill(Builder builder) {
@@ -80,7 +85,7 @@ public class GeneralBill extends TeaModel {
     /**
      * @return downloadUrl
      */
-    public java.util.List < String > getDownloadUrl() {
+    public java.util.List<String> getDownloadUrl() {
         return this.downloadUrl;
     }
 
@@ -136,7 +141,7 @@ public class GeneralBill extends TeaModel {
     public static final class Builder {
         private String billId; 
         private String billPeriod; 
-        private java.util.List < String > downloadUrl; 
+        private java.util.List<String> downloadUrl; 
         private String endTime; 
         private String gmtCreate; 
         private String gmtModified; 
@@ -164,7 +169,7 @@ public class GeneralBill extends TeaModel {
         /**
          * downloadUrl.
          */
-        public Builder downloadUrl(java.util.List < String > downloadUrl) {
+        public Builder downloadUrl(java.util.List<String> downloadUrl) {
             this.downloadUrl = downloadUrl;
             return this;
         }

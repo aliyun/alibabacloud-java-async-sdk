@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSoftwareForUserDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>ListSoftwareForUserDeviceResponseBody</p>
  */
 public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Software")
-    private java.util.List < Software> software;
+    @com.aliyun.core.annotation.NameInMap("Software")
+    private java.util.List<Software> software;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private ListSoftwareForUserDeviceResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
     /**
      * @return software
      */
-    public java.util.List < Software> getSoftware() {
+    public java.util.List<Software> getSoftware() {
         return this.software;
     }
 
@@ -58,7 +63,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Software> software; 
+        private java.util.List<Software> software; 
         private Long totalNum; 
 
         /**
@@ -72,7 +77,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         /**
          * Software.
          */
-        public Builder software(java.util.List < Software> software) {
+        public Builder software(java.util.List<Software> software) {
             this.software = software;
             return this;
         }
@@ -91,18 +96,24 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSoftwareForUserDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSoftwareForUserDeviceResponseBody</p>
+     */
     public static class Software extends TeaModel {
-        @NameInMap("Inc")
+        @com.aliyun.core.annotation.NameInMap("Inc")
         private String inc;
 
-        @NameInMap("InstallTime")
+        @com.aliyun.core.annotation.NameInMap("InstallTime")
         private String installTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Versions")
-        private java.util.List < String > versions;
+        @com.aliyun.core.annotation.NameInMap("Versions")
+        private java.util.List<String> versions;
 
         private Software(Builder builder) {
             this.inc = builder.inc;
@@ -143,7 +154,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         /**
          * @return versions
          */
-        public java.util.List < String > getVersions() {
+        public java.util.List<String> getVersions() {
             return this.versions;
         }
 
@@ -151,7 +162,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
             private String inc; 
             private String installTime; 
             private String name; 
-            private java.util.List < String > versions; 
+            private java.util.List<String> versions; 
 
             /**
              * Inc.
@@ -180,7 +191,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
             /**
              * Versions.
              */
-            public Builder versions(java.util.List < String > versions) {
+            public Builder versions(java.util.List<String> versions) {
                 this.versions = versions;
                 return this;
             }

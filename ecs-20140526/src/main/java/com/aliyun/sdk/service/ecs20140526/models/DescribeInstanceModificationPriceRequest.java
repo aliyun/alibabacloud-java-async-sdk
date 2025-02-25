@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceModificationPriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceModificationPriceRequest</p>
  */
 public class DescribeInstanceModificationPriceRequest extends Request {
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisk")
+    private java.util.List<DataDisk> dataDisk;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeInstanceModificationPriceRequest(Builder builder) {
@@ -98,7 +103,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -154,7 +159,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceModificationPriceRequest, Builder> {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private String instanceId; 
         private String instanceType; 
         private String ownerAccount; 
@@ -200,16 +205,20 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * The information about the data disk.
+         * <p>The information about data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
         }
 
         /**
-         * The ID of the instance for which you want to query pricing information for a configuration upgrade.
+         * <p>The ID of the instance for which you want to query pricing information for a configuration upgrade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1f2o4ldh8l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,10 +227,13 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * The new instance type. We recommend that you call the [DescribeResourcesModification](~~66187~~) operation to query the instance types available for configuration upgrades in a specified zone.
-         * <p>
+         * <p>The new instance type. We recommend that you call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query the instance types available for configuration upgrades in a specified zone.</p>
+         * <blockquote>
+         * <p>When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: <code>InstanceType</code> and <code>DataDisk.N.*</code>.</p>
+         * </blockquote>
          * 
-         * > When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.
+         * <strong>example:</strong>
+         * <p>ecs.g6e.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -248,7 +260,11 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,8 +297,14 @@ public class DescribeInstanceModificationPriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceModificationPriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceModificationPriceRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
         private SystemDisk(Builder builder) {
@@ -308,15 +330,16 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             private String category; 
 
             /**
-             * The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see [Instance families](~~25378~~) and [Retired instance types](~~55263~~).
-             * <p>
+             * <p>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/55263.html">Retired instance types</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * </ul>
+             * <p>This parameter is empty by default.</p>
              * 
-             * Valid values:
-             * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * 
-             * This parameter is empty by default.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -330,14 +353,20 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceModificationPriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceModificationPriceRequest</p>
+     */
     public static class DataDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private DataDisk(Builder builder) {
@@ -381,17 +410,20 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             private Integer size; 
 
             /**
-             * The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:
-             * <p>
+             * <p>The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: utra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud: basic disk.</li>
+             * </ul>
+             * <p>This parameter is empty by default.</p>
+             * <blockquote>
+             * <p> When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: <code>InstanceType</code> and <code>DataDisk.N.*</code>.</p>
+             * </blockquote>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
-             * 
-             * This parameter is empty by default.
-             * 
-             * > When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -399,17 +431,18 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:
-             * <p>
+             * <p>The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>Default value: PL1.</p>
+             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * Default value: PL1.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -417,23 +450,27 @@ public class DescribeInstanceModificationPriceRequest extends Request {
             }
 
             /**
-             * The capacity of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
-             * <p>
+             * <p>The capacity of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
+             * <ul>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
+             * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+             * </li>
+             * </ul>
+             * <p>The default value is the minimum capacity allowed for the specified data disk category.</p>
              * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_essd: depends on the value of `DataDisk.N.PerformanceLevel`.
-             * 
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
-             * 
-             * *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
-             * 
-             * The default value is the minimum capacity allowed for the specified data disk category.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

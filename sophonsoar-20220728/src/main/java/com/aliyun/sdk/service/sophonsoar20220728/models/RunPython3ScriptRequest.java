@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunPython3ScriptRequest} extends {@link RequestModel}
  *
  * <p>RunPython3ScriptRequest</p>
  */
 public class RunPython3ScriptRequest extends Request {
-    @Body
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
-    @Body
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Body
-    @NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
 
-    @Body
-    @NameInMap("PythonScript")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PythonScript")
     private String pythonScript;
 
     private RunPython3ScriptRequest(Builder builder) {
@@ -96,7 +96,10 @@ public class RunPython3ScriptRequest extends Request {
         } 
 
         /**
-         * NodeName.
+         * <p>The name of the node in the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3_3</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -105,7 +108,13 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>The input parameters of the Python3 script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;input1&quot;: &quot;xx.xx.xx.xx&quot;,
+         *     &quot;input2&quot;: &quot;7d&quot;
+         * }</p>
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -114,7 +123,13 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8baa6cff-319e-4ede-97bc-xxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -123,7 +138,17 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * PythonScript.
+         * <p>The Python3 script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import logging
+         * def execute (params):
+         *   #ip = params[&quot;ip&quot;]
+         *   #logging.info(&quot;enter execute,ip is &quot;+ip)
+         *   success=True
+         *   message=&quot;OK&quot;
+         *   data=[]
+         *   return (success,message,data)</p>
          */
         public Builder pythonScript(String pythonScript) {
             this.putBodyParameter("PythonScript", pythonScript);

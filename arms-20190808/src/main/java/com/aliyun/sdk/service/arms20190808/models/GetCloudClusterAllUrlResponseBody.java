@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudClusterAllUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetCloudClusterAllUrlResponseBody</p>
  */
 public class GetCloudClusterAllUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCloudClusterAllUrlResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,16 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * 状态码。200为成功，其他状态码为异常。
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,15 +102,18 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * An array object.
+         * <p>An array object.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * 详细信息。
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * 操作是否成功：true：操作成功                                 false：操作失败
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,35 +148,41 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCloudClusterAllUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCloudClusterAllUrlResponseBody</p>
+     */
     public static class RemoteUrl extends TeaModel {
-        @NameInMap("AuthToken")
+        @com.aliyun.core.annotation.NameInMap("AuthToken")
         private Boolean authToken;
 
-        @NameInMap("GrafanaUrl")
+        @com.aliyun.core.annotation.NameInMap("GrafanaUrl")
         private String grafanaUrl;
 
-        @NameInMap("InternetGrafanaUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetGrafanaUrl")
         private String internetGrafanaUrl;
 
-        @NameInMap("InternetPushGatewayUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetPushGatewayUrl")
         private String internetPushGatewayUrl;
 
-        @NameInMap("InternetRemoteReadUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetRemoteReadUrl")
         private String internetRemoteReadUrl;
 
-        @NameInMap("InternetRemoteWriteUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetRemoteWriteUrl")
         private String internetRemoteWriteUrl;
 
-        @NameInMap("PushGatewayUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayUrl")
         private String pushGatewayUrl;
 
-        @NameInMap("RemoteReadUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadUrl")
         private String remoteReadUrl;
 
-        @NameInMap("RemoteWriteUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteUrl")
         private String remoteWriteUrl;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
         private RemoteUrl(Builder builder) {
@@ -266,7 +289,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * Indicates whether authentication is enabled.
+             * <p>Indicates whether authentication is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authToken(Boolean authToken) {
                 this.authToken = authToken;
@@ -274,7 +300,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for Grafana.
+             * <p>The internal URL for Grafana.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder grafanaUrl(String grafanaUrl) {
                 this.grafanaUrl = grafanaUrl;
@@ -282,7 +311,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for Grafana.
+             * <p>The public URL for Grafana.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder internetGrafanaUrl(String internetGrafanaUrl) {
                 this.internetGrafanaUrl = internetGrafanaUrl;
@@ -290,7 +322,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for Pushgateway.
+             * <p>The public URL for Pushgateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder internetPushGatewayUrl(String internetPushGatewayUrl) {
                 this.internetPushGatewayUrl = internetPushGatewayUrl;
@@ -298,7 +333,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for remote read.
+             * <p>The public URL for remote read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder internetRemoteReadUrl(String internetRemoteReadUrl) {
                 this.internetRemoteReadUrl = internetRemoteReadUrl;
@@ -306,7 +344,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The public URL for remote write.
+             * <p>The public URL for remote write.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder internetRemoteWriteUrl(String internetRemoteWriteUrl) {
                 this.internetRemoteWriteUrl = internetRemoteWriteUrl;
@@ -314,7 +355,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for Pushgateway.
+             * <p>The internal URL for Pushgateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder pushGatewayUrl(String pushGatewayUrl) {
                 this.pushGatewayUrl = pushGatewayUrl;
@@ -322,7 +366,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for remote read.
+             * <p>The internal URL for remote read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder remoteReadUrl(String remoteReadUrl) {
                 this.remoteReadUrl = remoteReadUrl;
@@ -330,7 +377,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The internal URL for remote write.
+             * <p>The internal URL for remote write.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
              */
             public Builder remoteWriteUrl(String remoteWriteUrl) {
                 this.remoteWriteUrl = remoteWriteUrl;
@@ -338,7 +388,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The token value used for authentication.
+             * <p>The token value used for authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;eyJhbGciOiJIUzI1NiJ9.DKEIFJSL.KYK6uOtNVxTVHXJbH5MNqlsAuUtKzNlUvmAIiKc-QXw&quot;</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -352,14 +405,20 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCloudClusterAllUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCloudClusterAllUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RemoteUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteUrl")
         private RemoteUrl remoteUrl;
 
         private Data(Builder builder) {
@@ -403,7 +462,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             private RemoteUrl remoteUrl; 
 
             /**
-             * The identifier of the cloud service.
+             * <p>The identifier of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amp</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -411,7 +473,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -419,7 +484,7 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The URLs for remote read and write. The value is a JSON string.
+             * <p>The URLs for remote read and write. The value is a JSON string.</p>
              */
             public Builder remoteUrl(RemoteUrl remoteUrl) {
                 this.remoteUrl = remoteUrl;

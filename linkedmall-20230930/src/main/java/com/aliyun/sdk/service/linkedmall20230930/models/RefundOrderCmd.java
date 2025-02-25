@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundOrderCmd} extends {@link TeaModel}
  *
  * <p>RefundOrderCmd</p>
  */
 public class RefundOrderCmd extends TeaModel {
-    @NameInMap("applyReasonTextId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("applyReasonTextId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long applyReasonTextId;
 
-    @NameInMap("applyReasonTips")
+    @com.aliyun.core.annotation.NameInMap("applyReasonTips")
     private String applyReasonTips;
 
-    @NameInMap("applyRefundCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("applyRefundCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer applyRefundCount;
 
-    @NameInMap("applyRefundFee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("applyRefundFee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long applyRefundFee;
 
-    @NameInMap("bizClaimType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("bizClaimType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bizClaimType;
 
-    @NameInMap("goodsStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("goodsStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer goodsStatus;
 
-    @NameInMap("leaveMessage")
+    @com.aliyun.core.annotation.NameInMap("leaveMessage")
     private String leaveMessage;
 
-    @NameInMap("leavePictureLists")
-    private java.util.List < LeavePictureList > leavePictureLists;
+    @com.aliyun.core.annotation.NameInMap("leavePictureLists")
+    private java.util.List<LeavePictureList> leavePictureLists;
 
-    @NameInMap("orderLineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("orderLineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderLineId;
 
     private RefundOrderCmd(Builder builder) {
@@ -117,7 +122,7 @@ public class RefundOrderCmd extends TeaModel {
     /**
      * @return leavePictureLists
      */
-    public java.util.List < LeavePictureList > getLeavePictureLists() {
+    public java.util.List<LeavePictureList> getLeavePictureLists() {
         return this.leavePictureLists;
     }
 
@@ -136,11 +141,14 @@ public class RefundOrderCmd extends TeaModel {
         private Integer bizClaimType; 
         private Integer goodsStatus; 
         private String leaveMessage; 
-        private java.util.List < LeavePictureList > leavePictureLists; 
+        private java.util.List<LeavePictureList> leavePictureLists; 
         private String orderLineId; 
 
         /**
-         * applyReasonTextId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47821</p>
          */
         public Builder applyReasonTextId(Long applyReasonTextId) {
             this.applyReasonTextId = applyReasonTextId;
@@ -156,7 +164,10 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
-         * applyRefundCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder applyRefundCount(Integer applyRefundCount) {
             this.applyRefundCount = applyRefundCount;
@@ -164,7 +175,10 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
-         * applyRefundFee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder applyRefundFee(Long applyRefundFee) {
             this.applyRefundFee = applyRefundFee;
@@ -172,7 +186,10 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
-         * bizClaimType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.bizClaimType = bizClaimType;
@@ -180,7 +197,10 @@ public class RefundOrderCmd extends TeaModel {
         }
 
         /**
-         * goodsStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder goodsStatus(Integer goodsStatus) {
             this.goodsStatus = goodsStatus;
@@ -198,13 +218,16 @@ public class RefundOrderCmd extends TeaModel {
         /**
          * leavePictureLists.
          */
-        public Builder leavePictureLists(java.util.List < LeavePictureList > leavePictureLists) {
+        public Builder leavePictureLists(java.util.List<LeavePictureList> leavePictureLists) {
             this.leavePictureLists = leavePictureLists;
             return this;
         }
 
         /**
-         * orderLineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;

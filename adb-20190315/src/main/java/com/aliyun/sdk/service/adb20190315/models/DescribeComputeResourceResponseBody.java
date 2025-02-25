@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComputeResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeComputeResourceResponseBody</p>
  */
 public class DescribeComputeResourceResponseBody extends TeaModel {
-    @NameInMap("ComputeResource")
+    @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private java.util.List < ComputeResource> computeResource;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeComputeResourceResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried specifications of computing resources.
+         * <p>The queried specifications of computing resources.</p>
          */
         public Builder computeResource(java.util.List < ComputeResource> computeResource) {
             this.computeResource = computeResource;
@@ -58,7 +58,10 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEAW</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeComputeResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComputeResourceResponseBody</p>
+     */
     public static class ComputeResource extends TeaModel {
-        @NameInMap("DisplayValue")
+        @com.aliyun.core.annotation.NameInMap("DisplayValue")
         private String displayValue;
 
-        @NameInMap("RealValue")
+        @com.aliyun.core.annotation.NameInMap("RealValue")
         private String realValue;
 
         private ComputeResource(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
             private String realValue; 
 
             /**
-             * The specifications of computing resources displayed in the console.
+             * <p>The specifications of computing resources displayed in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8 Core 32 GB（单机版）</p>
              */
             public Builder displayValue(String displayValue) {
                 this.displayValue = displayValue;
@@ -118,7 +130,10 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The actual specifications of computing resources.
+             * <p>The actual specifications of computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8 Core 32 GB</p>
              */
             public Builder realValue(String realValue) {
                 this.realValue = realValue;

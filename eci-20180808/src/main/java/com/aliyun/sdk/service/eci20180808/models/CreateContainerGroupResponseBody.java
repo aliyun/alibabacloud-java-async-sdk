@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContainerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateContainerGroupResponseBody</p>
  */
 public class CreateContainerGroupResponseBody extends TeaModel {
-    @NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
     private String containerGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateContainerGroupResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateContainerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the elastic container instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-uf6fonnghi50u374****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
@@ -58,7 +61,10 @@ public class CreateContainerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89945DD3-9072-47D0-A318-353284CFC7B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

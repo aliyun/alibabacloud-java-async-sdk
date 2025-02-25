@@ -1,43 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableLevelRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableLevelRequest</p>
  */
 public class UpdateTableLevelRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("LevelId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long levelId;
 
-    @Query
-    @NameInMap("LevelType")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelType")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Integer levelType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long projectId;
 
     private UpdateTableLevelRequest(Builder builder) {
@@ -128,7 +132,7 @@ public class UpdateTableLevelRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -137,7 +141,10 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The description of the table level.
+         * <p>The description of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -146,7 +153,11 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the table level to be updated. You can call the ListTableLevel operation to obtain the ID.
+         * <p>The ID of the table level. You can call the ListTableLevel operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -155,7 +166,10 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+         * <p>The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -164,7 +178,10 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The name of the table level.
+         * <p>The name of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -173,7 +190,11 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The ID of the DataWorks workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

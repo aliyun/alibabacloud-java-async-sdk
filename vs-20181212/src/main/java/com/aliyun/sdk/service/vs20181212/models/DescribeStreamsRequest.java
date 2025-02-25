@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamsRequest} extends {@link RequestModel}
  *
  * <p>DescribeStreamsRequest</p>
  */
 public class DescribeStreamsRequest extends Request {
-    @Query
-    @NameInMap("App")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("App")
     private String app;
 
-    @Query
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private String parentId;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortDirection")
     private String sortDirection;
 
     private DescribeStreamsRequest(Builder builder) {
@@ -191,20 +196,20 @@ public class DescribeStreamsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStreamsRequest response) {
-            super(response);
-            this.app = response.app;
-            this.deviceId = response.deviceId;
-            this.domain = response.domain;
-            this.groupId = response.groupId;
-            this.id = response.id;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.parentId = response.parentId;
-            this.sortBy = response.sortBy;
-            this.sortDirection = response.sortDirection;
+        private Builder(DescribeStreamsRequest request) {
+            super(request);
+            this.app = request.app;
+            this.deviceId = request.deviceId;
+            this.domain = request.domain;
+            this.groupId = request.groupId;
+            this.id = request.id;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.parentId = request.parentId;
+            this.sortBy = request.sortBy;
+            this.sortDirection = request.sortDirection;
         } 
 
         /**

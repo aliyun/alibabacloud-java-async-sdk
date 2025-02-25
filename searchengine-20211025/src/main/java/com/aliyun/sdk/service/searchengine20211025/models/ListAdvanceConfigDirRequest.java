@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAdvanceConfigDirRequest} extends {@link RequestModel}
  *
  * <p>ListAdvanceConfigDirRequest</p>
  */
 public class ListAdvanceConfigDirRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("configName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("configName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configName;
 
-    @Query
-    @NameInMap("dirName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dirName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dirName;
 
     private ListAdvanceConfigDirRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class ListAdvanceConfigDirRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32n3iu801</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +103,11 @@ public class ListAdvanceConfigDirRequest extends Request {
         }
 
         /**
-         * configName.
+         * <p>The configuration name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_online_config_v3</p>
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -103,7 +116,11 @@ public class ListAdvanceConfigDirRequest extends Request {
         }
 
         /**
-         * dirName.
+         * <p>The name of the directory</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/zones/general</p>
          */
         public Builder dirName(String dirName) {
             this.putQueryParameter("dirName", dirName);

@@ -89,6 +89,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateJob  CreateJobRequest
+     * @return CreateJobResponse
+     */
     @Override
     public CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request) {
         try {
@@ -103,6 +107,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTensorboard  CreateTensorboardRequest
+     * @return CreateTensorboardResponse
+     */
     @Override
     public CompletableFuture<CreateTensorboardResponse> createTensorboard(CreateTensorboardRequest request) {
         try {
@@ -117,6 +125,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteJob  DeleteJobRequest
+     * @return DeleteJobResponse
+     */
     @Override
     public CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request) {
         try {
@@ -131,6 +143,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTensorboard  DeleteTensorboardRequest
+     * @return DeleteTensorboardResponse
+     */
     @Override
     public CompletableFuture<DeleteTensorboardResponse> deleteTensorboard(DeleteTensorboardRequest request) {
         try {
@@ -145,6 +161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJob  GetJobRequest
+     * @return GetJobResponse
+     */
     @Override
     public CompletableFuture<GetJobResponse> getJob(GetJobRequest request) {
         try {
@@ -159,6 +179,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobEvents  GetJobEventsRequest
+     * @return GetJobEventsResponse
+     */
     @Override
     public CompletableFuture<GetJobEventsResponse> getJobEvents(GetJobEventsRequest request) {
         try {
@@ -173,6 +197,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobMetrics  GetJobMetricsRequest
+     * @return GetJobMetricsResponse
+     */
     @Override
     public CompletableFuture<GetJobMetricsResponse> getJobMetrics(GetJobMetricsRequest request) {
         try {
@@ -187,6 +215,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJobSanityCheckResult  GetJobSanityCheckResultRequest
+     * @return GetJobSanityCheckResultResponse
+     */
+    @Override
+    public CompletableFuture<GetJobSanityCheckResultResponse> getJobSanityCheckResult(GetJobSanityCheckResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetJobSanityCheckResult").setMethod(HttpMethod.GET).setPathRegex("/api/v1/jobs/{JobId}/sanitycheckresult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetJobSanityCheckResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetJobSanityCheckResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPodEvents  GetPodEventsRequest
+     * @return GetPodEventsResponse
+     */
     @Override
     public CompletableFuture<GetPodEventsResponse> getPodEvents(GetPodEventsRequest request) {
         try {
@@ -201,6 +251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPodLogs  GetPodLogsRequest
+     * @return GetPodLogsResponse
+     */
     @Override
     public CompletableFuture<GetPodLogsResponse> getPodLogs(GetPodLogsRequest request) {
         try {
@@ -215,6 +269,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTensorboard  GetTensorboardRequest
+     * @return GetTensorboardResponse
+     */
     @Override
     public CompletableFuture<GetTensorboardResponse> getTensorboard(GetTensorboardRequest request) {
         try {
@@ -229,6 +287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTensorboardSharedUrl  GetTensorboardSharedUrlRequest
+     * @return GetTensorboardSharedUrlResponse
+     */
     @Override
     public CompletableFuture<GetTensorboardSharedUrlResponse> getTensorboardSharedUrl(GetTensorboardSharedUrlRequest request) {
         try {
@@ -243,6 +305,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetToken  GetTokenRequest
+     * @return GetTokenResponse
+     */
     @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
@@ -257,6 +323,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWebTerminal  GetWebTerminalRequest
+     * @return GetWebTerminalResponse
+     */
     @Override
     public CompletableFuture<GetWebTerminalResponse> getWebTerminal(GetWebTerminalRequest request) {
         try {
@@ -271,6 +341,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEcsSpecs  ListEcsSpecsRequest
+     * @return ListEcsSpecsResponse
+     */
     @Override
     public CompletableFuture<ListEcsSpecsResponse> listEcsSpecs(ListEcsSpecsRequest request) {
         try {
@@ -285,6 +359,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobSanityCheckResults  ListJobSanityCheckResultsRequest
+     * @return ListJobSanityCheckResultsResponse
+     */
+    @Override
+    public CompletableFuture<ListJobSanityCheckResultsResponse> listJobSanityCheckResults(ListJobSanityCheckResultsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListJobSanityCheckResults").setMethod(HttpMethod.GET).setPathRegex("/api/v1/jobs/{JobId}/sanitycheckresults").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobSanityCheckResultsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobSanityCheckResultsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
     @Override
     public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
         try {
@@ -299,6 +395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTensorboards  ListTensorboardsRequest
+     * @return ListTensorboardsResponse
+     */
     @Override
     public CompletableFuture<ListTensorboardsResponse> listTensorboards(ListTensorboardsRequest request) {
         try {
@@ -313,6 +413,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartTensorboard  StartTensorboardRequest
+     * @return StartTensorboardResponse
+     */
     @Override
     public CompletableFuture<StartTensorboardResponse> startTensorboard(StartTensorboardRequest request) {
         try {
@@ -327,6 +431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopJob  StopJobRequest
+     * @return StopJobResponse
+     */
     @Override
     public CompletableFuture<StopJobResponse> stopJob(StopJobRequest request) {
         try {
@@ -341,6 +449,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTensorboard  StopTensorboardRequest
+     * @return StopTensorboardResponse
+     */
     @Override
     public CompletableFuture<StopTensorboardResponse> stopTensorboard(StopTensorboardRequest request) {
         try {
@@ -355,6 +467,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateJob  UpdateJobRequest
+     * @return UpdateJobResponse
+     */
     @Override
     public CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request) {
         try {
@@ -369,6 +485,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTensorboard  UpdateTensorboardRequest
+     * @return UpdateTensorboardResponse
+     */
     @Override
     public CompletableFuture<UpdateTensorboardResponse> updateTensorboard(UpdateTensorboardRequest request) {
         try {

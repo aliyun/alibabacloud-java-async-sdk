@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchCreateQualityProjectsRequest} extends {@link RequestModel}
  *
  * <p>BatchCreateQualityProjectsRequest</p>
  */
 public class BatchCreateQualityProjectsRequest extends Request {
-    @Query
-    @NameInMap("AnalysisIds")
-    @Validation(required = true)
-    private java.util.List < Long > analysisIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalysisIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> analysisIds;
 
-    @Query
-    @NameInMap("ChannelTouchType")
-    private java.util.List < Integer > channelTouchType;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelTouchType")
+    private java.util.List<Integer> channelTouchType;
 
-    @Query
-    @NameInMap("CheckFreqType")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckFreqType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer checkFreqType;
 
-    @Query
-    @NameInMap("InstanceList")
-    @Validation(required = true)
-    private java.util.List < String > instanceList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceList;
 
-    @Query
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Query
-    @NameInMap("TimeRangeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeRangeEnd")
     private String timeRangeEnd;
 
-    @Query
-    @NameInMap("TimeRangeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeRangeStart")
     private String timeRangeStart;
 
     private BatchCreateQualityProjectsRequest(Builder builder) {
@@ -71,14 +76,14 @@ public class BatchCreateQualityProjectsRequest extends Request {
     /**
      * @return analysisIds
      */
-    public java.util.List < Long > getAnalysisIds() {
+    public java.util.List<Long> getAnalysisIds() {
         return this.analysisIds;
     }
 
     /**
      * @return channelTouchType
      */
-    public java.util.List < Integer > getChannelTouchType() {
+    public java.util.List<Integer> getChannelTouchType() {
         return this.channelTouchType;
     }
 
@@ -92,7 +97,7 @@ public class BatchCreateQualityProjectsRequest extends Request {
     /**
      * @return instanceList
      */
-    public java.util.List < String > getInstanceList() {
+    public java.util.List<String> getInstanceList() {
         return this.instanceList;
     }
 
@@ -118,10 +123,10 @@ public class BatchCreateQualityProjectsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchCreateQualityProjectsRequest, Builder> {
-        private java.util.List < Long > analysisIds; 
-        private java.util.List < Integer > channelTouchType; 
+        private java.util.List<Long> analysisIds; 
+        private java.util.List<Integer> channelTouchType; 
         private Integer checkFreqType; 
-        private java.util.List < String > instanceList; 
+        private java.util.List<String> instanceList; 
         private String projectName; 
         private String timeRangeEnd; 
         private String timeRangeStart; 
@@ -142,9 +147,9 @@ public class BatchCreateQualityProjectsRequest extends Request {
         } 
 
         /**
-         * AnalysisIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder analysisIds(java.util.List < Long > analysisIds) {
+        public Builder analysisIds(java.util.List<Long> analysisIds) {
             this.putQueryParameter("AnalysisIds", analysisIds);
             this.analysisIds = analysisIds;
             return this;
@@ -153,14 +158,14 @@ public class BatchCreateQualityProjectsRequest extends Request {
         /**
          * ChannelTouchType.
          */
-        public Builder channelTouchType(java.util.List < Integer > channelTouchType) {
+        public Builder channelTouchType(java.util.List<Integer> channelTouchType) {
             this.putQueryParameter("ChannelTouchType", channelTouchType);
             this.channelTouchType = channelTouchType;
             return this;
         }
 
         /**
-         * CheckFreqType.
+         * <p>This parameter is required.</p>
          */
         public Builder checkFreqType(Integer checkFreqType) {
             this.putQueryParameter("CheckFreqType", checkFreqType);
@@ -169,16 +174,16 @@ public class BatchCreateQualityProjectsRequest extends Request {
         }
 
         /**
-         * InstanceList.
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceList(java.util.List < String > instanceList) {
+        public Builder instanceList(java.util.List<String> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
             this.instanceList = instanceList;
             return this;
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

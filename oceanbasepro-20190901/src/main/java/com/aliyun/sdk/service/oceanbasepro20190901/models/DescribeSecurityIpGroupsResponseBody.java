@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityIpGroupsResponseBody</p>
  */
 public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityIpGroups")
+    @com.aliyun.core.annotation.NameInMap("SecurityIpGroups")
     private java.util.List < SecurityIpGroups> securityIpGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSecurityIpGroupsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     } 
 
     public static class SecurityIpGroups extends TeaModel {
-        @NameInMap("SecurityIpGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroupName")
         private String securityIpGroupName;
 
-        @NameInMap("SecurityIps")
+        @com.aliyun.core.annotation.NameInMap("SecurityIps")
         private String securityIps;
 
         private SecurityIpGroups(Builder builder) {

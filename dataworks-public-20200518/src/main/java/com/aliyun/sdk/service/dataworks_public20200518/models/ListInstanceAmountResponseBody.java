@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceAmountResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceAmountResponseBody</p>
  */
 public class ListInstanceAmountResponseBody extends TeaModel {
-    @NameInMap("InstanceCounts")
-    private java.util.List < InstanceCounts> instanceCounts;
+    @com.aliyun.core.annotation.NameInMap("InstanceCounts")
+    private java.util.List<InstanceCounts> instanceCounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstanceAmountResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListInstanceAmountResponseBody extends TeaModel {
     /**
      * @return instanceCounts
      */
-    public java.util.List < InstanceCounts> getInstanceCounts() {
+    public java.util.List<InstanceCounts> getInstanceCounts() {
         return this.instanceCounts;
     }
 
@@ -46,19 +51,22 @@ public class ListInstanceAmountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceCounts> instanceCounts; 
+        private java.util.List<InstanceCounts> instanceCounts; 
         private String requestId; 
 
         /**
-         * The trend of the number of auto triggered node instances within the specified period of time.
+         * <p>The trend of the number of auto triggered node instances within the specified period of time.</p>
          */
-        public Builder instanceCounts(java.util.List < InstanceCounts> instanceCounts) {
+        public Builder instanceCounts(java.util.List<InstanceCounts> instanceCounts) {
             this.instanceCounts = instanceCounts;
             return this;
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527adhfj****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListInstanceAmountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceAmountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceAmountResponseBody</p>
+     */
     public static class InstanceCounts extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
 
         private InstanceCounts(Builder builder) {
@@ -110,7 +124,10 @@ public class ListInstanceAmountResponseBody extends TeaModel {
             private Long date; 
 
             /**
-             * The number of auto triggered node instances.
+             * <p>The number of auto triggered node instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +135,10 @@ public class ListInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.
+             * <p>The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623772800000</p>
              */
             public Builder date(Long date) {
                 this.date = date;

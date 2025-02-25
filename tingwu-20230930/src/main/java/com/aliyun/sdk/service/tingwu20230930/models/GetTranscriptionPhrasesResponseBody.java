@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTranscriptionPhrasesResponseBody} extends {@link TeaModel}
  *
  * <p>GetTranscriptionPhrasesResponseBody</p>
  */
 public class GetTranscriptionPhrasesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTranscriptionPhrasesResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +119,23 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTranscriptionPhrasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranscriptionPhrasesResponseBody</p>
+     */
     public static class Phrases extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhraseId")
+        @com.aliyun.core.annotation.NameInMap("PhraseId")
         private String phraseId;
 
-        @NameInMap("WordWeights")
+        @com.aliyun.core.annotation.NameInMap("WordWeights")
         private String wordWeights;
 
         private Phrases(Builder builder) {
@@ -212,17 +226,23 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTranscriptionPhrasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranscriptionPhrasesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Phrases")
-        private java.util.List < Phrases> phrases;
+        @com.aliyun.core.annotation.NameInMap("Phrases")
+        private java.util.List<Phrases> phrases;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -257,7 +277,7 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         /**
          * @return phrases
          */
-        public java.util.List < Phrases> getPhrases() {
+        public java.util.List<Phrases> getPhrases() {
             return this.phrases;
         }
 
@@ -271,7 +291,7 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         public static final class Builder {
             private String errorCode; 
             private String errorMessage; 
-            private java.util.List < Phrases> phrases; 
+            private java.util.List<Phrases> phrases; 
             private String status; 
 
             /**
@@ -293,7 +313,7 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             /**
              * Phrases.
              */
-            public Builder phrases(java.util.List < Phrases> phrases) {
+            public Builder phrases(java.util.List<Phrases> phrases) {
                 this.phrases = phrases;
                 return this;
             }

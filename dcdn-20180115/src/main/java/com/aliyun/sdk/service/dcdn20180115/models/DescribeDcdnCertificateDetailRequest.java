@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnCertificateDetailRequest</p>
  */
 public class DescribeDcdnCertificateDetailRequest extends Request {
-    @Query
-    @NameInMap("CertName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeDcdnCertificateDetailRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class DescribeDcdnCertificateDetailRequest extends Request {
         } 
 
         /**
-         * The name of the certificate.
+         * <p>The name of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

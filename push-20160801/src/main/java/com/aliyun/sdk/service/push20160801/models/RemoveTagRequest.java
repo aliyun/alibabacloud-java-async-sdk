@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTagRequest} extends {@link RequestModel}
  *
  * <p>RemoveTagRequest</p>
  */
 public class RemoveTagRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
 
-    @Query
-    @NameInMap("TagName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagName;
 
     private RemoveTagRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class RemoveTagRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23267207</p>
          */
         public Builder appKey(Long appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -79,7 +82,10 @@ public class RemoveTagRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tag</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

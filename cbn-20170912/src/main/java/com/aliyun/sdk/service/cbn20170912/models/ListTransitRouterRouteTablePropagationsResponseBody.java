@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterRouteTablePropagationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterRouteTablePropagationsResponseBody</p>
  */
 public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterPropagations")
-    private java.util.List < TransitRouterPropagations> transitRouterPropagations;
+    @com.aliyun.core.annotation.NameInMap("TransitRouterPropagations")
+    private java.util.List<TransitRouterPropagations> transitRouterPropagations;
 
     private ListTransitRouterRouteTablePropagationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     /**
      * @return transitRouterPropagations
      */
-    public java.util.List < TransitRouterPropagations> getTransitRouterPropagations() {
+    public java.util.List<TransitRouterPropagations> getTransitRouterPropagations() {
         return this.transitRouterPropagations;
     }
 
@@ -83,10 +88,13 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterPropagations> transitRouterPropagations; 
+        private java.util.List<TransitRouterPropagations> transitRouterPropagations; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * The token that determines the start point of the query.
+         * <p>The token that determines the start point of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd20****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +113,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04C81E0D-945E-4D61-A561-3DEA322F243B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,9 +135,9 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         }
 
         /**
-         * A list of route learning correlations.
+         * <p>A list of route learning correlations.</p>
          */
-        public Builder transitRouterPropagations(java.util.List < TransitRouterPropagations> transitRouterPropagations) {
+        public Builder transitRouterPropagations(java.util.List<TransitRouterPropagations> transitRouterPropagations) {
             this.transitRouterPropagations = transitRouterPropagations;
             return this;
         }
@@ -131,20 +148,26 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterRouteTablePropagationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterRouteTablePropagationsResponseBody</p>
+     */
     public static class TransitRouterPropagations extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
         private String transitRouterRouteTableId;
 
         private TransitRouterPropagations(Builder builder) {
@@ -206,7 +229,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             private String transitRouterRouteTableId; 
 
             /**
-             * The ID of the network instance.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1h8vbrbcgohcju5****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -214,13 +240,16 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * The type of the network instance. Valid values:
-             * <p>
+             * <p>The type of the network instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>VBR</strong>: VBR</li>
+             * <li><strong>TR</strong>: transit router</li>
+             * <li><strong>VPN</strong>: VPN connection</li>
+             * </ul>
              * 
-             * *   **VPC**: VPC
-             * *   **VBR**: VBR
-             * *   **TR**: transit router
-             * *   **VPN**: VPN connection
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -228,12 +257,15 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * The status of the route learning correlation. Valid values:
-             * <p>
+             * <p>The status of the route learning correlation. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabling</strong>: being enabled</li>
+             * <li><strong>Disabling</strong>: being disabled</li>
+             * <li><strong>Active</strong>: available</li>
+             * </ul>
              * 
-             * *   **Enabling**: being enabled
-             * *   **Disabling**: being disabled
-             * *   **Active**: available
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -241,7 +273,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the network instance connection.
+             * <p>The ID of the network instance connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-attach-vx6iwhjr1x1j78****</p>
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -249,7 +284,10 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the route table of the Enterprise Edition transit router.
+             * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp1dudbh2d5na6b50****</p>
              */
             public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
                 this.transitRouterRouteTableId = transitRouterRouteTableId;

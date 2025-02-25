@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHybridMonitorNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHybridMonitorNamespaceResponseBody</p>
  */
 public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CreateHybridMonitorNamespaceResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The returned message.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,10 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Namespace.Existed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +96,10 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3843D23A-FB9E-5DC8-BCCC-458768B79296</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +107,14 @@ public class CreateHybridMonitorNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

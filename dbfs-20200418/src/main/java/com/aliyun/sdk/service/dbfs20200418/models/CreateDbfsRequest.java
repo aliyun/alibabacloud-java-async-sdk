@@ -1,85 +1,85 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDbfsRequest} extends {@link RequestModel}
  *
  * <p>CreateDbfsRequest</p>
  */
 public class CreateDbfsRequest extends Request {
-    @Query
-    @NameInMap("AdvancedFeatures")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdvancedFeatures")
     private String advancedFeatures;
 
-    @Query
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeleteSnapshot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteSnapshot")
     private Boolean deleteSnapshot;
 
-    @Query
-    @NameInMap("EnableRaid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRaid")
     private Boolean enableRaid;
 
-    @Query
-    @NameInMap("Encryption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encryption")
     private Boolean encryption;
 
-    @Query
-    @NameInMap("FsName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsName;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("PerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
     private String performanceLevel;
 
-    @Query
-    @NameInMap("RaidStripeUnitNumber")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RaidStripeUnitNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer raidStripeUnitNumber;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SizeG")
-    @Validation(required = true, minimum = 20)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SizeG")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 20)
     private Integer sizeG;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Query
-    @NameInMap("UsedScene")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedScene")
     private String usedScene;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateDbfsRequest(Builder builder) {
@@ -279,7 +279,10 @@ public class CreateDbfsRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -324,7 +327,10 @@ public class CreateDbfsRequest extends Request {
         }
 
         /**
-         * FsName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdbfs-001</p>
          */
         public Builder fsName(String fsName) {
             this.putQueryParameter("FsName", fsName);
@@ -369,7 +375,10 @@ public class CreateDbfsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -378,7 +387,10 @@ public class CreateDbfsRequest extends Request {
         }
 
         /**
-         * SizeG.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder sizeG(Integer sizeG) {
             this.putQueryParameter("SizeG", sizeG);
@@ -405,7 +417,10 @@ public class CreateDbfsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

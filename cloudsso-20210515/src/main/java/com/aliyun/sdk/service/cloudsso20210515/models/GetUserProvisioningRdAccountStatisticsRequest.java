@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserProvisioningRdAccountStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetUserProvisioningRdAccountStatisticsRequest</p>
  */
 public class GetUserProvisioningRdAccountStatisticsRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("RdMemberId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdMemberId")
     private String rdMemberId;
 
     private GetUserProvisioningRdAccountStatisticsRequest(Builder builder) {
@@ -68,7 +68,10 @@ public class GetUserProvisioningRdAccountStatisticsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +80,10 @@ public class GetUserProvisioningRdAccountStatisticsRequest extends Request {
         }
 
         /**
-         * RdMemberId.
+         * <p>The ID of the member in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743382******</p>
          */
         public Builder rdMemberId(String rdMemberId) {
             this.putQueryParameter("RdMemberId", rdMemberId);

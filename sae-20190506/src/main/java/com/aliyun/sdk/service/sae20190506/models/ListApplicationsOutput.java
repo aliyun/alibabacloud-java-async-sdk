@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsOutput} extends {@link TeaModel}
  *
  * <p>ListApplicationsOutput</p>
  */
 public class ListApplicationsOutput extends TeaModel {
-    @NameInMap("applications")
-    private java.util.List < Application > applications;
+    @com.aliyun.core.annotation.NameInMap("applications")
+    private java.util.List<Application> applications;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListApplicationsOutput(Builder builder) {
@@ -38,7 +43,7 @@ public class ListApplicationsOutput extends TeaModel {
     /**
      * @return applications
      */
-    public java.util.List < Application > getApplications() {
+    public java.util.List<Application> getApplications() {
         return this.applications;
     }
 
@@ -57,14 +62,14 @@ public class ListApplicationsOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Application > applications; 
+        private java.util.List<Application> applications; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * applications.
          */
-        public Builder applications(java.util.List < Application > applications) {
+        public Builder applications(java.util.List<Application> applications) {
             this.applications = applications;
             return this;
         }

@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateInstancePublicConnectionRequest</p>
  */
 public class AllocateInstancePublicConnectionRequest extends Request {
-    @Query
-    @NameInMap("AddressType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
     private String addressType;
 
-    @Query
-    @NameInMap("ConnectionStringPrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String port;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private AllocateInstancePublicConnectionRequest(Builder builder) {
@@ -141,13 +146,17 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * The network type of the endpoint. Valid values:
-         * <p>
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>primary</strong>: primary endpoint</li>
+         * <li><strong>cluster</strong>: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is primary.</p>
+         * </blockquote>
          * 
-         * *   **primary**: primary endpoint
-         * *   **cluster**: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.
-         * 
-         * >  The default value is primary.
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -156,10 +165,12 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the endpoint.
-         * <p>
+         * <p>The prefix of the endpoint.</p>
+         * <p>Specify a prefix for the endpoint. Example: <code>gp-bp12ga6v69h86****</code>. In this example, the endpoint is <code>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify a prefix for the endpoint. Example: `gp-bp12ga6v69h86****`. In this example, the endpoint is `gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com`.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -168,10 +179,14 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -189,7 +204,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The port number. Example: 5432.
+         * <p>The port number. Example: 5432.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

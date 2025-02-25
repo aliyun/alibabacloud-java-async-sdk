@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainReqHitRateDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainReqHitRateDataResponseBody</p>
  */
 public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("ReqHitRateInterval")
+    @com.aliyun.core.annotation.NameInMap("ReqHitRateInterval")
     private ReqHitRateInterval reqHitRateInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainReqHitRateDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-22T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,7 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request hit ratio data at each time interval. The hit ratio is measured in percentage.
+         * <p>The request hit ratio data at each time interval. The hit ratio is measured in percentage.</p>
          */
         public Builder reqHitRateInterval(ReqHitRateInterval reqHitRateInterval) {
             this.reqHitRateInterval = reqHitRateInterval;
@@ -130,7 +139,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-21T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,14 +166,20 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainReqHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainReqHitRateDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("HttpsValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsValue")
         private String httpsValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -202,7 +223,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The hit ratio of HTTPS requests.
+             * <p>The hit ratio of HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50.0</p>
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -210,7 +234,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-22T08:00:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -218,7 +245,10 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * The request hit ratio.
+             * <p>The request hit ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -232,8 +262,14 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainReqHitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainReqHitRateDataResponseBody</p>
+     */
     public static class ReqHitRateInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private ReqHitRateInterval(Builder builder) {

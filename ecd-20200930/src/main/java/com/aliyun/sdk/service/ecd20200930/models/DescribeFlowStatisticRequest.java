@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowStatisticRequest} extends {@link RequestModel}
  *
  * <p>DescribeFlowStatisticRequest</p>
  */
 public class DescribeFlowStatisticRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer period;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeFlowStatisticRequest(Builder builder) {
@@ -129,7 +134,10 @@ public class DescribeFlowStatisticRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -138,7 +146,11 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The office network ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -147,9 +159,10 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The number of the page to return.\
-         * <p>
-         * Default value: 1.
+         * <p>The number of the page to return.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -158,7 +171,10 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -167,12 +183,17 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The interval to query the traffic data. Unit: seconds. Valid values:
-         * <p>
+         * <p>The statistic collection interval. Unit: seconds.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>3600: 1 hour</li>
+         * <li>10800: 3 hours</li>
+         * <li>86400: 24 hours</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   3600
-         * *   10800
-         * *   86400
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -181,7 +202,11 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

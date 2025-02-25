@@ -1,36 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoCcBlacklistRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoCcBlacklistRequest</p>
  */
 public class DeleteAutoCcBlacklistRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Blacklist")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Blacklist")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blacklist;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
+    private String queryType;
 
     private DeleteAutoCcBlacklistRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.blacklist = builder.blacklist;
         this.instanceId = builder.instanceId;
+        this.queryType = builder.queryType;
     }
 
     public static Builder builder() {
@@ -67,10 +77,18 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return queryType
+     */
+    public String getQueryType() {
+        return this.queryType;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAutoCcBlacklistRequest, Builder> {
         private String regionId; 
         private String blacklist; 
         private String instanceId; 
+        private String queryType; 
 
         private Builder() {
             super();
@@ -81,6 +99,7 @@ public class DeleteAutoCcBlacklistRequest extends Request {
             this.regionId = request.regionId;
             this.blacklist = request.blacklist;
             this.instanceId = request.instanceId;
+            this.queryType = request.queryType;
         } 
 
         /**
@@ -93,10 +112,14 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following fields:
-         * <p>
+         * <p>The IP addresses that you want to manage. This parameter is a JSON string. The string contains the following fields:</p>
+         * <ul>
+         * <li><strong>src</strong>: the IP address. This field is required and must be of the STRING type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **src**: the IP address. This field is required and must be of the STRING type.
+         * <strong>example:</strong>
+         * <p>[{&quot;src&quot;:&quot;198.51.XX.XX&quot;},{&quot;src&quot;:&quot;198.52.XX.XX&quot;}]</p>
          */
         public Builder blacklist(String blacklist) {
             this.putQueryParameter("Blacklist", blacklist);
@@ -105,14 +128,27 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * QueryType.
+         */
+        public Builder queryType(String queryType) {
+            this.putQueryParameter("QueryType", queryType);
+            this.queryType = queryType;
             return this;
         }
 

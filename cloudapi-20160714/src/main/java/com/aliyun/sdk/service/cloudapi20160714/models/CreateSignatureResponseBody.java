@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSignatureResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSignatureResponseBody</p>
  */
 public class CreateSignatureResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SignatureId")
+    @com.aliyun.core.annotation.NameInMap("SignatureId")
     private String signatureId;
 
-    @NameInMap("SignatureName")
+    @com.aliyun.core.annotation.NameInMap("SignatureName")
     private String signatureName;
 
     private CreateSignatureResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateSignatureResponseBody extends TeaModel {
         private String signatureName; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class CreateSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the back-end signature key.
+         * <p>The ID of the back-end signature key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         public Builder signatureId(String signatureId) {
             this.signatureId = signatureId;
@@ -78,7 +89,10 @@ public class CreateSignatureResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the back-end signature key.
+         * <p>The name of the back-end signature key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backendsignature</p>
          */
         public Builder signatureName(String signatureName) {
             this.signatureName = signatureName;

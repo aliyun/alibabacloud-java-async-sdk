@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserProvisioningsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserProvisioningsResponseBody</p>
  */
 public class ListUserProvisioningsResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
-    @NameInMap("UserProvisionings")
+    @com.aliyun.core.annotation.NameInMap("UserProvisionings")
     private java.util.List < UserProvisionings> userProvisionings;
 
     private ListUserProvisioningsResponseBody(Builder builder) {
@@ -98,7 +98,14 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         private java.util.List < UserProvisionings> userProvisionings; 
 
         /**
-         * IsTruncated.
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -106,7 +113,12 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +126,13 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token that is used to initiate the next request.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>27EbL9j4ZgZjsMZFqbZFgbwQ1VXFU1Khcpx9e2vrW1zwzTBmTGWaM7ixHhRin8SCsxaJdazYVCzeKc2UF2QkyGb83cPhr8ZxrzoaiTd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +140,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F76AF4FC-<strong><strong>-</strong></strong>-B7CB-74F3********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +151,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -138,7 +162,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * UserProvisionings.
+         * <p>The RAM user provisionings.</p>
          */
         public Builder userProvisionings(java.util.List < UserProvisionings> userProvisionings) {
             this.userProvisionings = userProvisionings;
@@ -151,53 +175,59 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserProvisioningsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserProvisioningsResponseBody</p>
+     */
     public static class UserProvisionings extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletionStrategy")
+        @com.aliyun.core.annotation.NameInMap("DeletionStrategy")
         private String deletionStrategy;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DuplicationStrategy")
+        @com.aliyun.core.annotation.NameInMap("DuplicationStrategy")
         private String duplicationStrategy;
 
-        @NameInMap("OwnerPk")
+        @com.aliyun.core.annotation.NameInMap("OwnerPk")
         private String ownerPk;
 
-        @NameInMap("PrincipalId")
+        @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
-        @NameInMap("PrincipalName")
+        @com.aliyun.core.annotation.NameInMap("PrincipalName")
         private String principalName;
 
-        @NameInMap("PrincipalType")
+        @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetPath")
+        @com.aliyun.core.annotation.NameInMap("TargetPath")
         private String targetPath;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserProvisioningId")
+        @com.aliyun.core.annotation.NameInMap("UserProvisioningId")
         private String userProvisioningId;
 
         private UserProvisionings(Builder builder) {
@@ -358,7 +388,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             private String userProvisioningId; 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-28T03:55:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -366,7 +399,14 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionStrategy.
+             * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
+             * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Delete</p>
              */
             public Builder deletionStrategy(String deletionStrategy) {
                 this.deletionStrategy = deletionStrategy;
@@ -374,7 +414,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a user provisioning.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -382,7 +425,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-003qew84****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -390,7 +436,14 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * DuplicationStrategy.
+             * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
+             * <ul>
+             * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
+             * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>KeepBoth</p>
              */
             public Builder duplicationStrategy(String duplicationStrategy) {
                 this.duplicationStrategy = duplicationStrategy;
@@ -398,7 +451,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerPk.
+             * <p>The ID of the Alibaba Cloud account to which the resource directory belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639738******</p>
              */
             public Builder ownerPk(String ownerPk) {
                 this.ownerPk = ownerPk;
@@ -406,7 +462,14 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalId.
+             * <p>The identity ID of the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-********).</li>
+             * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-********).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>g-02ha881d*****</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -414,7 +477,14 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * <p>The identity name of the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</li>
+             * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>testGroupName</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -422,7 +492,14 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * <p>The identity type of the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
+             * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Group</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -430,7 +507,14 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the RAM user provisioning. Valid values:</p>
+             * <ul>
+             * <li>Enabled</li>
+             * <li>Disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +522,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * <p>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1743382******</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -446,7 +533,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRdMember</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -454,7 +544,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * <p>The path of the resource directory in which you create the RAM user provisioning for the object.</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -462,7 +552,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RD-Account</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -470,7 +563,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-28T03:55:42Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -478,7 +574,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * UserProvisioningId.
+             * <p>The ID of the RAM user provisioning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up-002axzhapcbz6e63****</p>
              */
             public Builder userProvisioningId(String userProvisioningId) {
                 this.userProvisioningId = userProvisioningId;

@@ -1,54 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateContactRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateContactRequest</p>
  */
 public class CreateOrUpdateContactRequest extends Request {
-    @Body
-    @NameInMap("ContactId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactId")
     private Long contactId;
 
-    @Body
-    @NameInMap("ContactName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
-    @Query
-    @NameInMap("DingRobotUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CorpUserId")
+    private String corpUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DingRobotUrl")
     private String dingRobotUrl;
 
-    @Body
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Body
-    @NameInMap("IsEmailVerify")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsEmailVerify")
     private Boolean isEmailVerify;
 
-    @Body
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @Body
-    @NameInMap("ReissueSendNotice")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReissueSendNotice")
     private Long reissueSendNotice;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private CreateOrUpdateContactRequest(Builder builder) {
         super(builder);
         this.contactId = builder.contactId;
         this.contactName = builder.contactName;
+        this.corpUserId = builder.corpUserId;
         this.dingRobotUrl = builder.dingRobotUrl;
         this.email = builder.email;
         this.isEmailVerify = builder.isEmailVerify;
@@ -82,6 +92,13 @@ public class CreateOrUpdateContactRequest extends Request {
      */
     public String getContactName() {
         return this.contactName;
+    }
+
+    /**
+     * @return corpUserId
+     */
+    public String getCorpUserId() {
+        return this.corpUserId;
     }
 
     /**
@@ -129,6 +146,7 @@ public class CreateOrUpdateContactRequest extends Request {
     public static final class Builder extends Request.Builder<CreateOrUpdateContactRequest, Builder> {
         private Long contactId; 
         private String contactName; 
+        private String corpUserId; 
         private String dingRobotUrl; 
         private String email; 
         private Boolean isEmailVerify; 
@@ -144,6 +162,7 @@ public class CreateOrUpdateContactRequest extends Request {
             super(request);
             this.contactId = request.contactId;
             this.contactName = request.contactName;
+            this.corpUserId = request.corpUserId;
             this.dingRobotUrl = request.dingRobotUrl;
             this.email = request.email;
             this.isEmailVerify = request.isEmailVerify;
@@ -153,11 +172,14 @@ public class CreateOrUpdateContactRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact.
-         * <p>
+         * <p>The ID of the alert contact.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, a new alert contact is created.</li>
+         * <li>If you specify this parameter, the specified alert contact is modified.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, a new alert contact is created.
-         * *   If you specify this parameter, the specified alert contact is modified.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactId(Long contactId) {
             this.putBodyParameter("ContactId", contactId);
@@ -166,7 +188,11 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JohnDoe</p>
          */
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);
@@ -175,7 +201,22 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * The webhook URL of the DingTalk chatbot.
+         * <p>The ID of the alert contact that is shown to the enterprise when the contact is mentioned with the at sign (@) by a third-party instant messaging (IM) tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A123221</p>
+         */
+        public Builder corpUserId(String corpUserId) {
+            this.putBodyParameter("CorpUserId", corpUserId);
+            this.corpUserId = corpUserId;
+            return this;
+        }
+
+        /**
+         * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=69d4e0">https://oapi.dingtalk.com/robot/send?access_token=69d4e0</a>******</p>
          */
         public Builder dingRobotUrl(String dingRobotUrl) {
             this.putQueryParameter("DingRobotUrl", dingRobotUrl);
@@ -184,10 +225,13 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * The email address of the alert contact.
-         * <p>
+         * <p>The email address of the alert contact.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the <strong>Phone</strong> and <strong>Email</strong> parameters. Each mobile number or email address can be used for only one alert contact.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the **Phone** and **Email** parameters. Each mobile number or email address can be used for only one alert contact.
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("Email", email);
@@ -196,7 +240,10 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * Specifies whether the email address is verified.
+         * <p>Specifies whether the email address is verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEmailVerify(Boolean isEmailVerify) {
             this.putBodyParameter("IsEmailVerify", isEmailVerify);
@@ -205,10 +252,13 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * The mobile number of the alert contact.
-         * <p>
+         * <p>The mobile number of the alert contact.</p>
+         * <blockquote>
+         * <p>You must specify at least one of the <strong>Phone</strong> and <strong>Email</strong> parameters. Each mobile number or email address can be used for only one alert contact.</p>
+         * </blockquote>
          * 
-         * > You must specify at least one of the **Phone** and **Email** parameters. Each mobile number or email address can be used for only one alert contact.
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("Phone", phone);
@@ -217,13 +267,16 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform if phone calls fail to be answered. Valid values:
-         * <p>
+         * <p>The operation that you want to perform if phone calls fail to be answered. Valid values:</p>
+         * <ul>
+         * <li>0: No operation is performed.</li>
+         * <li>1: A phone call is made again.</li>
+         * <li>2: A text message is sent.</li>
+         * <li>3 (default value): The global default value is used.</li>
+         * </ul>
          * 
-         * *   0: No operation is performed.
-         * *   1: A phone call is made again.
-         * *   2: A text message is sent.
-         * *   3 (default value): The global default value is used.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder reissueSendNotice(Long reissueSendNotice) {
             this.putBodyParameter("ReissueSendNotice", reissueSendNotice);
@@ -232,7 +285,10 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafDefaultRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafDefaultRulesResponseBody</p>
  */
 public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.List < Content> content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafDefaultRulesResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * <p>The rule configurations.</p>
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafDefaultRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafDefaultRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Rules(Builder builder) {
@@ -146,7 +155,15 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Action.
+             * <p>The default action of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>monitor</strong></li>
+             * <li><strong>deny</strong></li>
+             * <li><strong>block</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -154,7 +171,10 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The default configuration of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;wafGroupIds&quot;:&quot;1012&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -162,7 +182,10 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The default name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default_WafGroup_Rule</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +193,14 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The default status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +208,16 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>waf_group</strong>: basic web protection.</li>
+             * <li><strong>high_frequency</strong>: high-frequency scanning blocking.</li>
+             * <li><strong>directory_traversal</strong>: directory traversal blocking.</li>
+             * <li><strong>scan_tools</strong>: scanner blocking.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_group</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -192,11 +231,17 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafDefaultRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafDefaultRulesResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private Content(Builder builder) {
@@ -231,7 +276,14 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * DefenseScene.
+             * <p>The protection scenario. Valid values:</p>
+             * <ul>
+             * <li><strong>waf_group</strong>: basic web protection.</li>
+             * <li><strong>anti_scan</strong>: scan protection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>anti_scan</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -239,7 +291,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The rules.</p>
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;

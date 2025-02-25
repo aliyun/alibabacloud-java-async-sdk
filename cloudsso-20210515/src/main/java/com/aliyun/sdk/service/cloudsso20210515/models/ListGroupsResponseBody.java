@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupsResponseBody</p>
  */
 public class ListGroupsResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private java.util.List < Groups> groups;
 
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListGroupsResponseBody(Builder builder) {
@@ -98,7 +98,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The groups.
+         * <p>The groups.</p>
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -106,11 +106,14 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the queried entries are truncated. Valid values:
-         * <p>
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li>true: The queried entries are truncated.</li>
+         * <li>false: The queried entries are not truncated.</li>
+         * </ul>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -118,7 +121,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -126,10 +132,13 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
-         * <p>
+         * <p>The token that is returned for the next page.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only when the `IsTruncated` parameter is set to `true`.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -137,7 +146,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +157,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -158,23 +173,29 @@ public class ListGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Groups(Builder builder) {
@@ -245,7 +266,10 @@ public class ListGroupsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the group was created.
+             * <p>The time when the group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T02:38:27Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -253,7 +277,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the group.
+             * <p>The description of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +288,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-00jqzghi2n3o5hkh****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -269,7 +299,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -277,11 +310,14 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group. Valid values:
-             * <p>
+             * <p>The type of the group. Valid values:</p>
+             * <ul>
+             * <li>Manual: The group is manually created.</li>
+             * <li>Synchronized: The group is synchronized from an external IdP.</li>
+             * </ul>
              * 
-             * *   Manual: The group is manually created.
-             * *   Synchronized: The group is synchronized from an external IdP.
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -289,7 +325,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the group was modified.
+             * <p>The time when the information about the group was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T02:38:27Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

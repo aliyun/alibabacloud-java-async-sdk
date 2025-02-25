@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGlobalDatabaseNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGlobalDatabaseNetworkResponseBody</p>
  */
 public class CreateGlobalDatabaseNetworkResponseBody extends TeaModel {
-    @NameInMap("GDNId")
+    @com.aliyun.core.annotation.NameInMap("GDNId")
     private String GDNId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateGlobalDatabaseNetworkResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the GDN.
+         * <p>The ID of the GDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gd-m5ex5wqfqbou*****</p>
          */
         public Builder GDNId(String GDNId) {
             this.GDNId = GDNId;
@@ -58,7 +66,10 @@ public class CreateGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61892A4-0850-4516-9E26-44D96C1782DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

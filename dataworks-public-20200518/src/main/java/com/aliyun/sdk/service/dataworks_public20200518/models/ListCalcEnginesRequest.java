@@ -1,46 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCalcEnginesRequest} extends {@link RequestModel}
  *
  * <p>ListCalcEnginesRequest</p>
  */
 public class ListCalcEnginesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CalcEngineType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalcEngineType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calcEngineType;
 
-    @Query
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private String envType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
     private ListCalcEnginesRequest(Builder builder) {
@@ -141,7 +145,7 @@ public class ListCalcEnginesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -150,7 +154,22 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * CalcEngineType.
+         * <p>The type of the compute engine. The value of this parameter is not case-sensitive. Valid values:</p>
+         * <ul>
+         * <li><strong>ODPS</strong></li>
+         * <li><strong>EMR</strong></li>
+         * <li><strong>BLINK</strong></li>
+         * <li><strong>HOLO</strong></li>
+         * <li><strong>MaxGraph</strong></li>
+         * <li><strong>HYBRIDDB_FOR_POSTGRESQL</strong></li>
+         * <li><strong>ADB_MYSQL</strong></li>
+         * <li><strong>HADOOP_CDH</strong></li>
+         * <li><strong>CLICKHOUSE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS</p>
          */
         public Builder calcEngineType(String calcEngineType) {
             this.putQueryParameter("CalcEngineType", calcEngineType);
@@ -159,7 +178,14 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment in which the compute engine is used. Valid values:</p>
+         * <ul>
+         * <li><strong>DEV</strong></li>
+         * <li><strong>PRD</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRD</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -168,7 +194,10 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the compute engine, which must be exactly matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -177,7 +206,10 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -186,7 +218,10 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,7 +230,11 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace with which the compute engine is associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -116,18 +116,18 @@ public class DescribeRDSPerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRDSPerformanceRequest response) {
-            super(response);
-            this.dbInstType = response.dbInstType;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.endTime = response.endTime;
-            this.keys = response.keys;
-            this.rdsInstanceId = response.rdsInstanceId;
-            this.startTime = response.startTime;
+        private Builder(DescribeRDSPerformanceRequest request) {
+            super(request);
+            this.dbInstType = request.dbInstType;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.endTime = request.endTime;
+            this.keys = request.keys;
+            this.rdsInstanceId = request.rdsInstanceId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DbInstType.
+         * The type of the database engine.
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -136,7 +136,7 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the Distributed Relational Database Service (DRDS) instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -145,7 +145,7 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -154,7 +154,10 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * Keys.
+         * The performance monitoring metrics. You can specify one or more metrics for a query at a time. Separate multiple metric parameters with commas (,).
+         * <p>
+         * 
+         * >  For more information about the details of performance monitoring metrics, see [Storage monitoring](~~186705~~).
          */
         public Builder keys(String keys) {
             this.putQueryParameter("Keys", keys);
@@ -163,7 +166,7 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * RdsInstanceId.
+         * The ID of the storage-layer ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsInstanceId(String rdsInstanceId) {
             this.putQueryParameter("RdsInstanceId", rdsInstanceId);
@@ -172,7 +175,7 @@ public class DescribeRDSPerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -286,7 +286,7 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             private Long vum; 
 
             /**
-             * 压测开始时间
+             * ActualStartTime.
              */
             public Builder actualStartTime(Long actualStartTime) {
                 this.actualStartTime = actualStartTime;
@@ -294,7 +294,7 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * 压测持续时间
+             * Duration.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -302,7 +302,7 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * 报告id
+             * ReportId.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -310,7 +310,7 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * 报告名称
+             * ReportName.
              */
             public Builder reportName(String reportName) {
                 this.reportName = reportName;
@@ -318,7 +318,7 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * 消耗的vum
+             * Vum.
              */
             public Builder vum(Long vum) {
                 this.vum = vum;

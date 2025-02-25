@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyPhysicalConnectionLOARequest} extends {@link RequestModel}
  *
  * <p>ApplyPhysicalConnectionLOARequest</p>
  */
 public class ApplyPhysicalConnectionLOARequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CompanyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompanyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String companyName;
 
-    @Query
-    @NameInMap("ConstructionTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConstructionTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String constructionTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LineType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lineType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PMInfo")
-    private java.util.List < PMInfo> PMInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PMInfo")
+    private java.util.List<PMInfo> PMInfo;
 
-    @Query
-    @NameInMap("PeerLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerLocation")
     private String peerLocation;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Si")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Si")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String si;
 
     private ApplyPhysicalConnectionLOARequest(Builder builder) {
@@ -164,7 +169,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
     /**
      * @return PMInfo
      */
-    public java.util.List < PMInfo> getPMInfo() {
+    public java.util.List<PMInfo> getPMInfo() {
         return this.PMInfo;
     }
 
@@ -212,7 +217,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         private String lineType; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < PMInfo> PMInfo; 
+        private java.util.List<PMInfo> PMInfo; 
         private String peerLocation; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -242,10 +247,11 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         } 
 
         /**
-         * The bandwidth of the Express Connect circuit. Unit: Mbit/s.
-         * <p>
+         * <p>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10240</strong>.</p>
          * 
-         * Valid values: **2** to **10240**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -254,12 +260,14 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -268,7 +276,11 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The name of the customer company that requires the Express Connect circuit.
+         * <p>The name of the customer company that requires the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>company</p>
          */
         public Builder companyName(String companyName) {
             this.putQueryParameter("CompanyName", companyName);
@@ -277,7 +289,11 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+         * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-28T16:00:00Z</p>
          */
         public Builder constructionTime(String constructionTime) {
             this.putQueryParameter("ConstructionTime", constructionTime);
@@ -286,7 +302,11 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit.
+         * <p>The ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1qrb3044eqi****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -295,13 +315,17 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The type of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The type of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>MSTP</strong>: MSTP line</li>
+         * <li><strong>MPLSVPN</strong>: MPLSVPN line</li>
+         * <li><strong>FIBRE</strong>: fiber line</li>
+         * <li><strong>Other</strong>: other types</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MSTP**: MSTP line
-         * *   **MPLSVPN**: MPLSVPN line
-         * *   **FIBRE**: fiber line
-         * *   **Other**: other types
+         * <strong>example:</strong>
+         * <p>FIBRE</p>
          */
         public Builder lineType(String lineType) {
             this.putQueryParameter("LineType", lineType);
@@ -328,16 +352,19 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The information about the construction engineer.
+         * <p>The information about the construction engineer.</p>
          */
-        public Builder PMInfo(java.util.List < PMInfo> PMInfo) {
+        public Builder PMInfo(java.util.List<PMInfo> PMInfo) {
             this.putQueryParameter("PMInfo", PMInfo);
             this.PMInfo = PMInfo;
             return this;
         }
 
         /**
-         * The geographic location where the Express Connect circuit is deployed.
+         * <p>The geographic location where the Express Connect circuit is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -346,10 +373,12 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -376,7 +405,11 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The construction company.
+         * <p>The construction company.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>company</p>
          */
         public Builder si(String si) {
             this.putQueryParameter("Si", si);
@@ -391,20 +424,26 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyPhysicalConnectionLOARequest} extends {@link TeaModel}
+     *
+     * <p>ApplyPhysicalConnectionLOARequest</p>
+     */
     public static class PMInfo extends TeaModel {
-        @NameInMap("PMCertificateNo")
+        @com.aliyun.core.annotation.NameInMap("PMCertificateNo")
         private String PMCertificateNo;
 
-        @NameInMap("PMCertificateType")
+        @com.aliyun.core.annotation.NameInMap("PMCertificateType")
         private String PMCertificateType;
 
-        @NameInMap("PMContactInfo")
+        @com.aliyun.core.annotation.NameInMap("PMContactInfo")
         private String PMContactInfo;
 
-        @NameInMap("PMGender")
+        @com.aliyun.core.annotation.NameInMap("PMGender")
         private String PMGender;
 
-        @NameInMap("PMName")
+        @com.aliyun.core.annotation.NameInMap("PMName")
         private String PMName;
 
         private PMInfo(Builder builder) {
@@ -466,10 +505,11 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
             private String PMName; 
 
             /**
-             * The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.
-             * <p>
+             * <p>The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.</p>
+             * <p>You can configure information for up to 16 construction engineers.</p>
              * 
-             * You can configure information for up to 16 construction engineers.
+             * <strong>example:</strong>
+             * <p>5****************9</p>
              */
             public Builder PMCertificateNo(String PMCertificateNo) {
                 this.PMCertificateNo = PMCertificateNo;
@@ -477,11 +517,14 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
             }
 
             /**
-             * The type of the identity document of the construction engineer. Valid values:
-             * <p>
+             * <p>The type of the identity document of the construction engineer. Valid values:</p>
+             * <ul>
+             * <li><strong>IDCard</strong></li>
+             * <li><strong>Passport</strong></li>
+             * </ul>
              * 
-             * *   **IDCard**
-             * *   **Passport**
+             * <strong>example:</strong>
+             * <p>IDCard</p>
              */
             public Builder PMCertificateType(String PMCertificateType) {
                 this.PMCertificateType = PMCertificateType;
@@ -489,7 +532,10 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
             }
 
             /**
-             * The contact information about the construction engineer.
+             * <p>The contact information about the construction engineer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder PMContactInfo(String PMContactInfo) {
                 this.PMContactInfo = PMContactInfo;
@@ -497,7 +543,10 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
             }
 
             /**
-             * The gender of the construction engineer.
+             * <p>The gender of the construction engineer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Male</p>
              */
             public Builder PMGender(String PMGender) {
                 this.PMGender = PMGender;
@@ -505,7 +554,10 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
             }
 
             /**
-             * The name of the construction engineer.
+             * <p>The name of the construction engineer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhangsan</p>
              */
             public Builder PMName(String PMName) {
                 this.PMName = PMName;

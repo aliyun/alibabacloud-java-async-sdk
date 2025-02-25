@@ -1,74 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluateResourceRequest} extends {@link RequestModel}
  *
  * <p>EvaluateResourceRequest</p>
  */
 public class EvaluateResourceRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReadonlyReplicas")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadonlyReplicas")
     private String readonlyReplicas;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicationFactor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicationFactor")
     private String replicationFactor;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ShardsInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardsInfo")
     private String shardsInfo;
 
-    @Query
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private String storage;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private EvaluateResourceRequest(Builder builder) {
@@ -239,10 +244,13 @@ public class EvaluateResourceRequest extends Request {
         } 
 
         /**
-         * The stype of the instance.
-         * <p>
+         * <p>The type of the instance.</p>
+         * <blockquote>
+         * <p>This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
+         * <strong>example:</strong>
+         * <p>dds.mongo.mid</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -251,7 +259,10 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The ID of the instance. This parameter is required when you check whether resources are sufficient for upgrading an instance.
+         * <p>The ID of the instance. This parameter is required when you check whether resources are sufficient for upgrading an instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp14bf67a76d****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -260,7 +271,10 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to **MongoDB**.
+         * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -269,14 +283,11 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The version of the database engine. Valid values:
-         * <p>
+         * <p>The version of the database engine.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **5.0**
-         * *   **4.4**
-         * *   **4.2**
-         * *   **4.0**
-         * *   **3.4**
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -303,10 +314,13 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The number of read-only nodes in the instance. Valid values: **1** to **5**.
-         * <p>
+         * <p>The number of read-only nodes in the instance. Valid values: <strong>1</strong> to <strong>5</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is not required for standalone or serverless instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is not required for standalone or serverless instances.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder readonlyReplicas(String readonlyReplicas) {
             this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
@@ -315,7 +329,11 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -324,13 +342,17 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The number of nodes in the instance.
-         * <p>
+         * <p>The number of nodes in the instance.</p>
+         * <ul>
+         * <li>Set the value to <strong>1</strong> for standalone instances.</li>
+         * <li>Valid values for replica set instances: <strong>3</strong>, <strong>5</strong>, and <strong>7</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is not required for serverless instances.</p>
+         * </blockquote>
          * 
-         * *   Set the value to **1** for standalone instances.
-         * *   Valid values for replica set instances: **3**, **5**, and **7**
-         * 
-         * > This parameter is not required for serverless instances.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder replicationFactor(String replicationFactor) {
             this.putQueryParameter("ReplicationFactor", replicationFactor);
@@ -357,38 +379,38 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The node information about the sharded cluster instance. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.
-         * <p>
+         * <p>The node information about the sharded cluster instance. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.</p>
+         * <p>To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:</p>
+         * <pre><code>{
+         *      &quot;ConfigSvrs&quot;:
+         *          [{&quot;Storage&quot;:20,&quot;DBInstanceClass&quot;:&quot;dds.cs.mid&quot;}],
+         *      &quot;Mongos&quot;:
+         *          [{&quot;DBInstanceClass&quot;:&quot;dds.mongos.standard&quot;},{&quot;DBInstanceClass&quot;:&quot;dds.mongos.standard&quot;}],
+         *      &quot;Shards&quot;:
+         *          [{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},   {&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;}]
+         *  }
+         * </code></pre>
+         * <p>Parameters in the example:</p>
+         * <ul>
+         * <li>ConfigSvrs: the Configserver node.</li>
+         * <li>Mongos: the mongos node.</li>
+         * <li>Shards: the shard node.</li>
+         * <li>Storage: the storage space of the node.</li>
+         * <li>DBInstanceClass: the instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
+         * </ul>
+         * <p>To check whether resources are sufficient for upgrading a single node of a sharded cluster instance, specify only the information about the node to be upgraded. The value must be a JSON string. Example:</p>
+         * <pre><code>{
+         *      &quot;NodeId&quot;: &quot;d-bp147c4d9ca7****&quot;, &quot;NodeClass&quot;: &quot;dds.shard.standard&quot;
+         * } 
+         * </code></pre>
+         * <p>Parameters in the example:</p>
+         * <ul>
+         * <li>NodeId: the ID of the node.</li>
+         * <li>NodeClass: the instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
+         * </ul>
          * 
-         * To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:
-         * 
-         *     {
-         *          "ConfigSvrs":
-         *              [{"Storage":20,"DBInstanceClass":"dds.cs.mid"}],
-         *          "Mongos":
-         *              [{"DBInstanceClass":"dds.mongos.standard"},{"DBInstanceClass":"dds.mongos.standard"}],
-         *          "Shards":
-         *              [{"Storage":50,"DBInstanceClass":"dds.shard.standard"},{"Storage":50,"DBInstanceClass":"dds.shard.standard"},   {"Storage":50,"DBInstanceClass":"dds.shard.standard"}]
-         *      }
-         * 
-         * Parameters in the example:
-         * 
-         * *   ConfigSvrs: the Configserver node.
-         * *   Mongos: the mongos node.
-         * *   Shards: the shard node.
-         * *   Storage: the storage space of the node.
-         * *   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
-         * 
-         * To check whether resources are sufficient for upgrading a single node of a sharded cluster instance, specify only the information about the node to be upgraded. The value must be a JSON string. Example:
-         * 
-         *     {
-         *          "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"
-         *     } 
-         * 
-         * Parameters in the example:
-         * 
-         * *   NodeId: the ID of the node.
-         * *   NodeClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
+         * <strong>example:</strong>
+         * <p>{&quot;NodeId&quot;: &quot;d-bp147c4d9ca7****&quot;, &quot;NodeClass&quot;: &quot;dds.shard.standard&quot;}</p>
          */
         public Builder shardsInfo(String shardsInfo) {
             this.putQueryParameter("ShardsInfo", shardsInfo);
@@ -397,10 +419,13 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the replica set instance. Unit: GB.
-         * <p>
+         * <p>The storage capacity of the replica set instance. Unit: GB.</p>
+         * <blockquote>
+         * <p>This parameter is required for the instances that use cloud disks.</p>
+         * </blockquote>
          * 
-         * > This parameter is required for the instances that use cloud disks.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);
@@ -409,7 +434,11 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

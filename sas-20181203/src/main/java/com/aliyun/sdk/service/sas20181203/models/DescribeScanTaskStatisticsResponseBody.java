@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScanTaskStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScanTaskStatisticsResponseBody</p>
  */
 public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
-    @NameInMap("DealedRiskNum")
+    @com.aliyun.core.annotation.NameInMap("DealedRiskNum")
     private Integer dealedRiskNum;
 
-    @NameInMap("PersonalTaskNum")
+    @com.aliyun.core.annotation.NameInMap("PersonalTaskNum")
     private Long personalTaskNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalTaskNum")
+    @com.aliyun.core.annotation.NameInMap("TotalTaskNum")
     private Long totalTaskNum;
 
-    @NameInMap("UserNum")
+    @com.aliyun.core.annotation.NameInMap("UserNum")
     private Long userNum;
 
     private DescribeScanTaskStatisticsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         private Long userNum; 
 
         /**
-         * The number of risks that are handled for the user.
+         * <p>The number of risks that are handled for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder dealedRiskNum(Integer dealedRiskNum) {
             this.dealedRiskNum = dealedRiskNum;
@@ -94,7 +102,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks that are created for the user.
+         * <p>The total number of tasks that are created for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder personalTaskNum(Long personalTaskNum) {
             this.personalTaskNum = personalTaskNum;
@@ -102,7 +113,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>765EDBDE-1686-5DBA-B76F-2E0XXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of virus detection tasks.
+         * <p>The total number of virus detection tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalTaskNum(Long totalTaskNum) {
             this.totalTaskNum = totalTaskNum;
@@ -118,7 +135,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of risks that are detected for the user.
+         * <p>The number of risks that are detected for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder userNum(Long userNum) {
             this.userNum = userNum;

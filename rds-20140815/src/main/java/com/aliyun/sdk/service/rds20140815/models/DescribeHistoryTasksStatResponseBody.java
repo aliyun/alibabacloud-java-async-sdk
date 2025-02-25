@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHistoryTasksStatResponseBody</p>
  */
 public class DescribeHistoryTasksStatResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHistoryTasksStatResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -46,19 +51,22 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
 
         /**
-         * The details of the instance.
+         * <p>The queried tasks.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryTasksStatResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Items(Builder builder) {
@@ -110,14 +124,19 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The status of the migration task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>Scheduled</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Succeed</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Cancelling</strong></li>
+             * <li><strong>Canceled</strong></li>
+             * <li><strong>Waiting</strong></li>
+             * </ul>
              * 
-             * *   **NoStart**: The task is not started.
-             * *   **Running**:The task is in progress.
-             * *   **Success**: The task is successful.
-             * *   **Failed**: The task failed.
-             * *   **Waiting**: The task is waiting for an incremental backup file to be imported.
+             * <strong>example:</strong>
+             * <p>Succeed,Waiting</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -125,7 +144,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks that meet these constraints without taking pagination into account.
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

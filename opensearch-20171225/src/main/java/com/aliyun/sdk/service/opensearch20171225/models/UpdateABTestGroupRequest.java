@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateABTestGroupRequest</p>
  */
 public class UpdateABTestGroupRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("sceneId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("sceneId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Integer sceneId;
 
-    @Path
-    @NameInMap("groupId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Integer groupId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private ABTestGroup body;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private UpdateABTestGroupRequest(Builder builder) {
@@ -113,7 +112,7 @@ public class UpdateABTestGroupRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -122,7 +121,7 @@ public class UpdateABTestGroupRequest extends Request {
         }
 
         /**
-         * 20404
+         * The scenario ID.
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -131,7 +130,7 @@ public class UpdateABTestGroupRequest extends Request {
         }
 
         /**
-         * 13467
+         * The ID of the test group.
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -140,7 +139,7 @@ public class UpdateABTestGroupRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body. For more information, see [ABTestGroup](~~178935~~).
          */
         public Builder body(ABTestGroup body) {
             this.putBodyParameter("body", body);
@@ -149,7 +148,11 @@ public class UpdateABTestGroupRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   true: performs only a dry run. No endpoint is created. The system checks whether your AccessKey is valid, whether Resource Access Management (RAM) users are authorized, and whether the required parameters are set.
+         * *   false (default): creates an endpoint immediately.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

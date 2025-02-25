@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesRequest} extends {@link RequestModel}
  *
  * <p>SearchTracesRequest</p>
  */
 public class SearchTracesRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("ExclusionFilters")
-    private java.util.List < ExclusionFilters> exclusionFilters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExclusionFilters")
+    private java.util.List<ExclusionFilters> exclusionFilters;
 
-    @Query
-    @NameInMap("MinDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDuration")
     private Long minDuration;
 
-    @Query
-    @NameInMap("OperationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationName")
     private String operationName;
 
-    @Query
-    @NameInMap("Pid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
     private String pid;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Reverse")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
-    @Query
-    @NameInMap("ServiceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceIp")
     private String serviceIp;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private SearchTracesRequest(Builder builder) {
         super(builder);
@@ -97,7 +102,7 @@ public class SearchTracesRequest extends Request {
     /**
      * @return exclusionFilters
      */
-    public java.util.List < ExclusionFilters> getExclusionFilters() {
+    public java.util.List<ExclusionFilters> getExclusionFilters() {
         return this.exclusionFilters;
     }
 
@@ -160,13 +165,13 @@ public class SearchTracesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<SearchTracesRequest, Builder> {
         private Long endTime; 
-        private java.util.List < ExclusionFilters> exclusionFilters; 
+        private java.util.List<ExclusionFilters> exclusionFilters; 
         private Long minDuration; 
         private String operationName; 
         private String pid; 
@@ -175,7 +180,7 @@ public class SearchTracesRequest extends Request {
         private String serviceIp; 
         private String serviceName; 
         private Long startTime; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -197,7 +202,11 @@ public class SearchTracesRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595210400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -206,16 +215,19 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
-        public Builder exclusionFilters(java.util.List < ExclusionFilters> exclusionFilters) {
+        public Builder exclusionFilters(java.util.List<ExclusionFilters> exclusionFilters) {
             this.putQueryParameter("ExclusionFilters", exclusionFilters);
             this.exclusionFilters = exclusionFilters;
             return this;
         }
 
         /**
-         * The minimum amount of time consumed by traces. Unit: milliseconds.
+         * <p>The minimum amount of time consumed by traces. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minDuration(Long minDuration) {
             this.putQueryParameter("MinDuration", minDuration);
@@ -224,7 +236,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The name of the traced span.
+         * <p>The name of the traced span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/demo/queryNotExistDB/11</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -233,7 +248,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@9781be0f44dXXXX</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -242,7 +260,11 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -251,11 +273,14 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.
-         * <p>
+         * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: <code>false</code>.</p>
+         * <ul>
+         * <li><code>true</code>: sorts the query results in reverse chronological order.</li>
+         * <li><code>false</code>: sorts the query results in chronological order.</li>
+         * </ul>
          * 
-         * *   `true`: sorts the query results in reverse chronological order.
-         * *   `false`: sorts the query results in chronological order.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -264,7 +289,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The IP address of the host where the application resides.
+         * <p>The IP address of the host where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.XX.XX</p>
          */
         public Builder serviceIp(String serviceIp) {
             this.putQueryParameter("ServiceIp", serviceIp);
@@ -273,7 +301,10 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-k8s-demo-subcomponent</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -282,7 +313,11 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -291,9 +326,9 @@ public class SearchTracesRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -306,11 +341,17 @@ public class SearchTracesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTracesRequest</p>
+     */
     public static class ExclusionFilters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExclusionFilters(Builder builder) {
@@ -345,7 +386,10 @@ public class SearchTracesRequest extends Request {
             private String value; 
 
             /**
-             * The key that is used to filter the query results.
+             * <p>The key that is used to filter the query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.status_code</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -353,7 +397,10 @@ public class SearchTracesRequest extends Request {
             }
 
             /**
-             * The value of the key that is used to filter the query results.
+             * <p>The value of the key that is used to filter the query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -367,11 +414,17 @@ public class SearchTracesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTracesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTracesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -406,18 +459,21 @@ public class SearchTracesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. The following system preset fields are provided:
-             * <p>
+             * <p>The tag key. The following system preset fields are provided:</p>
+             * <ul>
+             * <li>serverApp: the name of the server application.</li>
+             * <li>clientApp: the name of the client application.</li>
+             * <li>service: the name of the operation.</li>
+             * <li>rpc: the type of the call.</li>
+             * <li>msOfSpan: the duration exceeds a specific value.</li>
+             * <li>clientIp: the IP address of the client.</li>
+             * <li>serverIp: the IP address of the server.</li>
+             * <li>isError: specifies whether the call is abnormal.</li>
+             * <li>hasTprof: contains only thread profiling.</li>
+             * </ul>
              * 
-             * *   serverApp: the name of the server application.
-             * *   clientApp: the name of the client application.
-             * *   service: the name of the operation.
-             * *   rpc: the type of the call.
-             * *   msOfSpan: the duration exceeds a specific value.
-             * *   clientIp: the IP address of the client.
-             * *   serverIp: the IP address of the server.
-             * *   isError: specifies whether the call is abnormal.
-             * *   hasTprof: contains only thread profiling.
+             * <strong>example:</strong>
+             * <p>http.status_code</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -425,7 +481,10 @@ public class SearchTracesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;

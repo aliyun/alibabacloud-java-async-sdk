@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserInfoByUserIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserInfoByUserIdResponseBody</p>
  */
 public class QueryUserInfoByUserIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryUserInfoByUserIdResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned organization user information.
+         * <p>The returned organization user information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -78,11 +86,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,32 +106,41 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserInfoByUserIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserInfoByUserIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AdminUser")
+        @com.aliyun.core.annotation.NameInMap("AdminUser")
         private Boolean adminUser;
 
-        @NameInMap("AuthAdminUser")
+        @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
         private Boolean authAdminUser;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("RoleIdList")
+        private java.util.List<Long> roleIdList;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private Integer userType;
 
         private Result(Builder builder) {
@@ -131,6 +151,7 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             this.email = builder.email;
             this.nickName = builder.nickName;
             this.phone = builder.phone;
+            this.roleIdList = builder.roleIdList;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -193,6 +214,13 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleIdList
+         */
+        public java.util.List<Long> getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -214,11 +242,15 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             private String email; 
             private String nickName; 
             private String phone; 
+            private java.util.List<Long> roleIdList; 
             private String userId; 
             private Integer userType; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135****5848</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -226,7 +258,10 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account that corresponds to the member.
+             * <p>The name of the Alibaba Cloud account that corresponds to the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386587****@163.com</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -234,11 +269,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Whether you are an administrator of the organization. Valid values:
-             * <p>
+             * <p>Whether you are an administrator of the organization. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder adminUser(Boolean adminUser) {
                 this.adminUser = adminUser;
@@ -246,11 +284,14 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Whether you are a permission administrator. Valid values:
-             * <p>
+             * <p>Whether you are a permission administrator. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
@@ -258,7 +299,10 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386587****@163.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -266,7 +310,10 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the account.
+             * <p>The nickname of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test user</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -274,7 +321,10 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the alert contact.
+             * <p>The phone number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386587****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -282,7 +332,18 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The UserID in the Quick BI.
+             * RoleIdList.
+             */
+            public Builder roleIdList(java.util.List<Long> roleIdList) {
+                this.roleIdList = roleIdList;
+                return this;
+            }
+
+            /**
+             * <p>The UserID in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe67f61a35a94b7da1a34ba174a7****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -290,12 +351,15 @@ public class QueryUserInfoByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * The role type of the organization member. Valid values:
-             * <p>
+             * <p>The role type of the organization member. Valid values:</p>
+             * <ul>
+             * <li>1 : developer</li>
+             * <li>2 : visitors</li>
+             * <li>3 : Analyst</li>
+             * </ul>
              * 
-             * *   1 : developer
-             * *   2 : visitors
-             * *   3 : Analyst
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;

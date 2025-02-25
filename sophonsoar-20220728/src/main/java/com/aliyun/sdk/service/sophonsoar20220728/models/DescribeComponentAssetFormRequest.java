@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentAssetFormRequest} extends {@link RequestModel}
  *
  * <p>DescribeComponentAssetFormRequest</p>
  */
 public class DescribeComponentAssetFormRequest extends Request {
-    @Query
-    @NameInMap("ComponentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String componentName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DescribeComponentAssetFormRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class DescribeComponentAssetFormRequest extends Request {
         } 
 
         /**
-         * ComponentName.
+         * <p>The component name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3</p>
          */
         public Builder componentName(String componentName) {
             this.putQueryParameter("ComponentName", componentName);
@@ -78,7 +82,14 @@ public class DescribeComponentAssetFormRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCasesRequest} extends {@link RequestModel}
  *
  * <p>AddCasesRequest</p>
  */
 public class AddCasesRequest extends Request {
-    @Query
-    @NameInMap("CampaignId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CampaignId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String campaignId;
 
-    @Query
-    @NameInMap("CaseList")
-    private java.util.List < CaseList> caseList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseList")
+    private java.util.List<CaseList> caseList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private AddCasesRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class AddCasesRequest extends Request {
     /**
      * @return caseList
      */
-    public java.util.List < CaseList> getCaseList() {
+    public java.util.List<CaseList> getCaseList() {
         return this.caseList;
     }
 
@@ -69,7 +74,7 @@ public class AddCasesRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddCasesRequest, Builder> {
         private String campaignId; 
-        private java.util.List < CaseList> caseList; 
+        private java.util.List<CaseList> caseList; 
         private String instanceId; 
 
         private Builder() {
@@ -84,7 +89,10 @@ public class AddCasesRequest extends Request {
         } 
 
         /**
-         * CampaignId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c58b9719-3bc3-441d-a4d3-fc0309ef7066</p>
          */
         public Builder campaignId(String campaignId) {
             this.putQueryParameter("CampaignId", campaignId);
@@ -95,7 +103,7 @@ public class AddCasesRequest extends Request {
         /**
          * CaseList.
          */
-        public Builder caseList(java.util.List < CaseList> caseList) {
+        public Builder caseList(java.util.List<CaseList> caseList) {
             String caseListShrink = shrink(caseList, "CaseList", "json");
             this.putQueryParameter("CaseList", caseListShrink);
             this.caseList = caseList;
@@ -103,7 +111,10 @@ public class AddCasesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,20 +129,26 @@ public class AddCasesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddCasesRequest} extends {@link TeaModel}
+     *
+     * <p>AddCasesRequest</p>
+     */
     public static class CaseList extends TeaModel {
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("CustomVariables")
+        @com.aliyun.core.annotation.NameInMap("CustomVariables")
         private String customVariables;
 
-        @NameInMap("MaskedCallee")
+        @com.aliyun.core.annotation.NameInMap("MaskedCallee")
         private String maskedCallee;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
         private CaseList(Builder builder) {

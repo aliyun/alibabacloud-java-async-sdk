@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSasModuleTrialRequest} extends {@link RequestModel}
  *
  * <p>AddSasModuleTrialRequest</p>
  */
 public class AddSasModuleTrialRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ModuleCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleCode")
     private String moduleCode;
 
     private AddSasModuleTrialRequest(Builder builder) {
@@ -68,11 +73,14 @@ public class AddSasModuleTrialRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,11 +89,14 @@ public class AddSasModuleTrialRequest extends Request {
         }
 
         /**
-         * The module code. Valid values:
-         * <p>
+         * <p>The code of the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>vulFix</strong>: vulnerability fixing.</li>
+         * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+         * </ul>
          * 
-         * *   **vulFix**: vulnerability fixing
-         * *   **cloudSiem**: threat analysis
+         * <strong>example:</strong>
+         * <p>vulFix</p>
          */
         public Builder moduleCode(String moduleCode) {
             this.putQueryParameter("ModuleCode", moduleCode);

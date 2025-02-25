@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreCheckCreateOrderForDeleteDBNodesResponseBody} extends {@link TeaModel}
  *
  * <p>PreCheckCreateOrderForDeleteDBNodesResponseBody</p>
  */
 public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
-    @NameInMap("Failures")
+    @com.aliyun.core.annotation.NameInMap("Failures")
     private Failures failures;
 
-    @NameInMap("PreCheckResult")
+    @com.aliyun.core.annotation.NameInMap("PreCheckResult")
     private Boolean preCheckResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PreCheckCreateOrderForDeleteDBNodesResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the failed order.
+         * <p>The information about the failed order.</p>
          */
         public Builder failures(Failures failures) {
             this.failures = failures;
@@ -70,7 +75,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The precheck result.
+         * <p>The precheck result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder preCheckResult(Boolean preCheckResult) {
             this.preCheckResult = preCheckResult;
@@ -78,7 +86,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B415BC6-FE84-5323-A255-42CF330DB99C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +102,17 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PreCheckCreateOrderForDeleteDBNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreCheckCreateOrderForDeleteDBNodesResponseBody</p>
+     */
     public static class FailuresFailures extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private FailuresFailures(Builder builder) {
@@ -130,14 +147,17 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The response code. Valid values:
-             * <p>
+             * <p>The response code. Valid values:</p>
+             * <ul>
+             * <li><strong>200</strong>: success</li>
+             * <li><strong>400</strong>: client error</li>
+             * <li><strong>401</strong>: identity authentication failed</li>
+             * <li><strong>404</strong>: requested page not found</li>
+             * <li><strong>500</strong>: server error</li>
+             * </ul>
              * 
-             * *   **200**: success
-             * *   **400**: client error
-             * *   **401**: identity authentication failed
-             * *   **404**: requested page not found
-             * *   **500**: server error
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -145,7 +165,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -159,9 +182,15 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreCheckCreateOrderForDeleteDBNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreCheckCreateOrderForDeleteDBNodesResponseBody</p>
+     */
     public static class Failures extends TeaModel {
-        @NameInMap("Failures")
-        private java.util.List < FailuresFailures> failures;
+        @com.aliyun.core.annotation.NameInMap("Failures")
+        private java.util.List<FailuresFailures> failures;
 
         private Failures(Builder builder) {
             this.failures = builder.failures;
@@ -178,17 +207,17 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         /**
          * @return failures
          */
-        public java.util.List < FailuresFailures> getFailures() {
+        public java.util.List<FailuresFailures> getFailures() {
             return this.failures;
         }
 
         public static final class Builder {
-            private java.util.List < FailuresFailures> failures; 
+            private java.util.List<FailuresFailures> failures; 
 
             /**
-             * The information about the failed order.
+             * <p>The information about the failed order.</p>
              */
-            public Builder failures(java.util.List < FailuresFailures> failures) {
+            public Builder failures(java.util.List<FailuresFailures> failures) {
                 this.failures = failures;
                 return this;
             }

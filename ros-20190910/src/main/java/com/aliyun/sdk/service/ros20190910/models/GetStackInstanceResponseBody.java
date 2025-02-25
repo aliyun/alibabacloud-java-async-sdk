@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetStackInstanceResponseBody</p>
  */
 public class GetStackInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackInstance")
+    @com.aliyun.core.annotation.NameInMap("StackInstance")
     private StackInstance stackInstance;
 
     private GetStackInstanceResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
         private StackInstance stackInstance; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8A6B693-82C8-419D-8796-DE99EC33CFF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the stack.
+         * <p>The information about the stack.</p>
          */
         public Builder stackInstance(StackInstance stackInstance) {
             this.stackInstance = stackInstance;
@@ -71,11 +74,17 @@ public class GetStackInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStackInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackInstanceResponseBody</p>
+     */
     public static class ParameterOverrides extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private ParameterOverrides(Builder builder) {
@@ -110,7 +119,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The name of the parameter that is used to override a specific parameter.
+             * <p>The name of the parameter that is used to override a specific parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Amount</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -118,7 +130,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter that is used to override a specific parameter.
+             * <p>The value of the parameter that is used to override a specific parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -132,43 +147,53 @@ public class GetStackInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStackInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackInstanceResponseBody</p>
+     */
     public static class StackInstance extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("DriftDetectionTime")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
-        @NameInMap("ParameterOverrides")
+        @com.aliyun.core.annotation.NameInMap("Outputs")
+        private java.util.List < java.util.Map<String, ?>> outputs;
+
+        @com.aliyun.core.annotation.NameInMap("ParameterOverrides")
         private java.util.List < ParameterOverrides> parameterOverrides;
 
-        @NameInMap("RdFolderId")
+        @com.aliyun.core.annotation.NameInMap("RdFolderId")
         private String rdFolderId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StackDriftStatus")
+        @com.aliyun.core.annotation.NameInMap("StackDriftStatus")
         private String stackDriftStatus;
 
-        @NameInMap("StackGroupId")
+        @com.aliyun.core.annotation.NameInMap("StackGroupId")
         private String stackGroupId;
 
-        @NameInMap("StackGroupName")
+        @com.aliyun.core.annotation.NameInMap("StackGroupName")
         private String stackGroupName;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private StackInstance(Builder builder) {
             this.accountId = builder.accountId;
             this.driftDetectionTime = builder.driftDetectionTime;
+            this.outputs = builder.outputs;
             this.parameterOverrides = builder.parameterOverrides;
             this.rdFolderId = builder.rdFolderId;
             this.regionId = builder.regionId;
@@ -200,6 +225,13 @@ public class GetStackInstanceResponseBody extends TeaModel {
          */
         public String getDriftDetectionTime() {
             return this.driftDetectionTime;
+        }
+
+        /**
+         * @return outputs
+         */
+        public java.util.List < java.util.Map<String, ?>> getOutputs() {
+            return this.outputs;
         }
 
         /**
@@ -268,6 +300,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String driftDetectionTime; 
+            private java.util.List < java.util.Map<String, ?>> outputs; 
             private java.util.List < ParameterOverrides> parameterOverrides; 
             private String rdFolderId; 
             private String regionId; 
@@ -279,7 +312,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The ID of the destination account to which the stack belongs.
+             * <p>The ID of the destination account to which the stack belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -287,10 +323,13 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the most recent successful drift detection was performed on the stack group.
-             * <p>
+             * <p>The time when the most recent successful drift detection was performed on the stack group.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if drift detection is performed on the stack group.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if drift detection is performed on the stack group.
+             * <strong>example:</strong>
+             * <p>2020-02-27T07:47:47</p>
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
@@ -298,7 +337,18 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are used to override specific parameters.
+             * <p>The outputs of the stack.</p>
+             * <blockquote>
+             * <p> This parameter is returned if OutputOption is set to Enabled.</p>
+             * </blockquote>
+             */
+            public Builder outputs(java.util.List < java.util.Map<String, ?>> outputs) {
+                this.outputs = outputs;
+                return this;
+            }
+
+            /**
+             * <p>The parameters that are used to override specific parameters.</p>
              */
             public Builder parameterOverrides(java.util.List < ParameterOverrides> parameterOverrides) {
                 this.parameterOverrides = parameterOverrides;
@@ -306,10 +356,13 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder in the resource directory.
-             * <p>
+             * <p>The ID of the folder in the resource directory.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if the stack group is granted service-managed permissions.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the stack group is granted service-managed permissions.
+             * <strong>example:</strong>
+             * <p>fd-4PvlVLOL8v</p>
              */
             public Builder rdFolderId(String rdFolderId) {
                 this.rdFolderId = rdFolderId;
@@ -317,7 +370,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the stack.
+             * <p>The region ID of the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -325,16 +381,19 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stack when the most recent successful drift detection was performed on the stack group.
-             * <p>
+             * <p>The state of the stack when the most recent successful drift detection was performed on the stack group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DRIFTED: The stack has drifted.</li>
+             * <li>NOT_CHECKED: No successful drift detection is performed on the stack.</li>
+             * <li>IN_SYNC: The stack is being synchronized.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only if drift detection is performed on the stack group.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   DRIFTED: The stack has drifted.
-             * *   NOT_CHECKED: No successful drift detection is performed on the stack.
-             * *   IN_SYNC: The stack is being synchronized.
-             * 
-             * > This parameter is returned only if drift detection is performed on the stack group.
+             * <strong>example:</strong>
+             * <p>IN_SYNC</p>
              */
             public Builder stackDriftStatus(String stackDriftStatus) {
                 this.stackDriftStatus = stackDriftStatus;
@@ -342,7 +401,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack group.
+             * <p>The ID of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
              */
             public Builder stackGroupId(String stackGroupId) {
                 this.stackGroupId = stackGroupId;
@@ -350,7 +412,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stack group.
+             * <p>The name of the stack group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyStackGroup</p>
              */
             public Builder stackGroupName(String stackGroupName) {
                 this.stackGroupName = stackGroupName;
@@ -358,10 +423,13 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The stack ID.
-             * <p>
+             * <p>The stack ID.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if the stack is in the CURRENT state.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the stack is in the CURRENT state.
+             * <strong>example:</strong>
+             * <p>35ad60e3-6a92-42d8-8812-f0700d45****</p>
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -369,18 +437,22 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stack.
-             * <p>
+             * <p>The state of the stack.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>CURRENT: The stack is up-to-date with the stack group.</p>
+             * </li>
+             * <li><p>OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:</p>
+             * <ul>
+             * <li>When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</li>
+             * <li>When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</li>
+             * <li>The creation or update operation is not complete.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   CURRENT: The stack is up-to-date with the stack group.
-             * 
-             * *   OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:
-             * 
-             *     *   When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.
-             *     *   When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.
-             *     *   The creation or update operation is not complete.
+             * <strong>example:</strong>
+             * <p>CURRENT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -388,10 +460,13 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the stack instance is in the OUTDATED state.
-             * <p>
+             * <p>The reason why the stack instance is in the OUTDATED state.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if the stack instance is in the OUTDATED state.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the stack instance is in the OUTDATED state.
+             * <strong>example:</strong>
+             * <p>User initiated stop</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStorageAnalysisTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateStorageAnalysisTaskResponseBody</p>
  */
 public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateStorageAnalysisTaskResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,13 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,14 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +155,20 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateStorageAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateStorageAnalysisTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTaskSuccess")
+        @com.aliyun.core.annotation.NameInMap("CreateTaskSuccess")
         private Boolean createTaskSuccess;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {
@@ -182,7 +212,14 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreateTaskSuccess.
+             * <p>Indicates whether the task is created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder createTaskSuccess(Boolean createTaskSuccess) {
                 this.createTaskSuccess = createTaskSuccess;
@@ -190,7 +227,10 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unknown error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -198,7 +238,10 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>910f83f4b96df0524ddc5749f61539f8</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

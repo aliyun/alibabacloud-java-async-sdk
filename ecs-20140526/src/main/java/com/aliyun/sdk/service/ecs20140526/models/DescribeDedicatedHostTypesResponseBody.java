@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedHostTypesResponseBody</p>
  */
 public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostTypes")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostTypes")
     private DedicatedHostTypes dedicatedHostTypes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDedicatedHostTypesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The category of the local disks.
+         * <p>Details about the dedicated host types.</p>
          */
         public Builder dedicatedHostTypes(DedicatedHostTypes dedicatedHostTypes) {
             this.dedicatedHostTypes = dedicatedHostTypes;
@@ -58,7 +63,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of cores in a single physical CPU.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FE5FF06-3A33-4658-8495-6445FC54E327</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +79,15 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedHostTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostTypesResponseBody</p>
+     */
     public static class SupportedInstanceTypeFamilies extends TeaModel {
-        @NameInMap("SupportedInstanceTypeFamily")
-        private java.util.List < String > supportedInstanceTypeFamily;
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypeFamily")
+        private java.util.List<String> supportedInstanceTypeFamily;
 
         private SupportedInstanceTypeFamilies(Builder builder) {
             this.supportedInstanceTypeFamily = builder.supportedInstanceTypeFamily;
@@ -90,17 +104,17 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         /**
          * @return supportedInstanceTypeFamily
          */
-        public java.util.List < String > getSupportedInstanceTypeFamily() {
+        public java.util.List<String> getSupportedInstanceTypeFamily() {
             return this.supportedInstanceTypeFamily;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedInstanceTypeFamily; 
+            private java.util.List<String> supportedInstanceTypeFamily; 
 
             /**
              * SupportedInstanceTypeFamily.
              */
-            public Builder supportedInstanceTypeFamily(java.util.List < String > supportedInstanceTypeFamily) {
+            public Builder supportedInstanceTypeFamily(java.util.List<String> supportedInstanceTypeFamily) {
                 this.supportedInstanceTypeFamily = supportedInstanceTypeFamily;
                 return this;
             }
@@ -112,9 +126,15 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostTypesResponseBody</p>
+     */
     public static class SupportedInstanceTypesList extends TeaModel {
-        @NameInMap("SupportedInstanceTypesList")
-        private java.util.List < String > supportedInstanceTypesList;
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypesList")
+        private java.util.List<String> supportedInstanceTypesList;
 
         private SupportedInstanceTypesList(Builder builder) {
             this.supportedInstanceTypesList = builder.supportedInstanceTypesList;
@@ -131,17 +151,17 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         /**
          * @return supportedInstanceTypesList
          */
-        public java.util.List < String > getSupportedInstanceTypesList() {
+        public java.util.List<String> getSupportedInstanceTypesList() {
             return this.supportedInstanceTypesList;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedInstanceTypesList; 
+            private java.util.List<String> supportedInstanceTypesList; 
 
             /**
              * SupportedInstanceTypesList.
              */
-            public Builder supportedInstanceTypesList(java.util.List < String > supportedInstanceTypesList) {
+            public Builder supportedInstanceTypesList(java.util.List<String> supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;
                 return this;
             }
@@ -153,50 +173,56 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostTypesResponseBody</p>
+     */
     public static class DedicatedHostType extends TeaModel {
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
-        @NameInMap("CpuOverCommitRatioRange")
+        @com.aliyun.core.annotation.NameInMap("CpuOverCommitRatioRange")
         private String cpuOverCommitRatioRange;
 
-        @NameInMap("DedicatedHostType")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostType")
         private String dedicatedHostType;
 
-        @NameInMap("GPUSpec")
+        @com.aliyun.core.annotation.NameInMap("GPUSpec")
         private String GPUSpec;
 
-        @NameInMap("LocalStorageAmount")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageAmount")
         private Integer localStorageAmount;
 
-        @NameInMap("LocalStorageCapacity")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCapacity")
         private Long localStorageCapacity;
 
-        @NameInMap("LocalStorageCategory")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCategory")
         private String localStorageCategory;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Float memorySize;
 
-        @NameInMap("PhysicalGpus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalGpus")
         private Integer physicalGpus;
 
-        @NameInMap("Sockets")
+        @com.aliyun.core.annotation.NameInMap("Sockets")
         private Integer sockets;
 
-        @NameInMap("SupportCpuOverCommitRatio")
+        @com.aliyun.core.annotation.NameInMap("SupportCpuOverCommitRatio")
         private Boolean supportCpuOverCommitRatio;
 
-        @NameInMap("SupportedInstanceTypeFamilies")
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypeFamilies")
         private SupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
-        @NameInMap("SupportedInstanceTypesList")
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypesList")
         private SupportedInstanceTypesList supportedInstanceTypesList;
 
-        @NameInMap("TotalVcpus")
+        @com.aliyun.core.annotation.NameInMap("TotalVcpus")
         private Integer totalVcpus;
 
-        @NameInMap("TotalVgpus")
+        @com.aliyun.core.annotation.NameInMap("TotalVgpus")
         private Integer totalVgpus;
 
         private DedicatedHostType(Builder builder) {
@@ -348,7 +374,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             private Integer totalVgpus; 
 
             /**
-             * The GPU model.
+             * <p>The number of cores per physical CPU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -356,7 +385,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory. Unit: GiB.
+             * <p>The supported CPU overcommit ratio range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1-5</p>
              */
             public Builder cpuOverCommitRatioRange(String cpuOverCommitRatioRange) {
                 this.cpuOverCommitRatioRange = cpuOverCommitRatioRange;
@@ -364,7 +396,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vGPUs.
+             * <p>The dedicated host type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddh.sn1ne</p>
              */
             public Builder dedicatedHostType(String dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;
@@ -372,7 +407,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The supported CPU overcommit ratio range.
+             * <p>The GPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gpu</p>
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -380,7 +418,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical CPUs.
+             * <p>The number of local disks on a dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder localStorageAmount(Integer localStorageAmount) {
                 this.localStorageAmount = localStorageAmount;
@@ -388,7 +429,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of local disks on a dedicated host.
+             * <p>The capacity of a local disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -396,7 +440,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vCPUs.
+             * <p>The category of local disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -404,7 +451,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of a local disk. Unit: GiB.
+             * <p>The memory size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112.0</p>
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;
@@ -412,7 +462,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the CPU overcommit ratio setting is supported.
+             * <p>The number of physical GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder physicalGpus(Integer physicalGpus) {
                 this.physicalGpus = physicalGpus;
@@ -420,7 +473,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance family.
+             * <p>The number of physical CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder sockets(Integer sockets) {
                 this.sockets = sockets;
@@ -428,7 +484,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dedicated host. You can submit a ticket to request more dedicated host types.
+             * <p>Indicates whether the CPU overcommit ratio settings are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportCpuOverCommitRatio(Boolean supportCpuOverCommitRatio) {
                 this.supportCpuOverCommitRatio = supportCpuOverCommitRatio;
@@ -436,7 +495,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance types supported by the dedicated host.
+             * <p>The ECS instance families supported by the dedicated host type.</p>
              */
             public Builder supportedInstanceTypeFamilies(SupportedInstanceTypeFamilies supportedInstanceTypeFamilies) {
                 this.supportedInstanceTypeFamilies = supportedInstanceTypeFamilies;
@@ -444,7 +503,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedInstanceTypesList.
+             * <p>The ECS instance types supported by the dedicated host type.</p>
              */
             public Builder supportedInstanceTypesList(SupportedInstanceTypesList supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;
@@ -452,7 +511,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical GPUs.
+             * <p>The total number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder totalVcpus(Integer totalVcpus) {
                 this.totalVcpus = totalVcpus;
@@ -460,7 +522,10 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance families supported by the dedicated host.
+             * <p>The total number of vGPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalVgpus(Integer totalVgpus) {
                 this.totalVgpus = totalVgpus;
@@ -474,9 +539,15 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostTypesResponseBody</p>
+     */
     public static class DedicatedHostTypes extends TeaModel {
-        @NameInMap("DedicatedHostType")
-        private java.util.List < DedicatedHostType> dedicatedHostType;
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostType")
+        private java.util.List<DedicatedHostType> dedicatedHostType;
 
         private DedicatedHostTypes(Builder builder) {
             this.dedicatedHostType = builder.dedicatedHostType;
@@ -493,17 +564,20 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         /**
          * @return dedicatedHostType
          */
-        public java.util.List < DedicatedHostType> getDedicatedHostType() {
+        public java.util.List<DedicatedHostType> getDedicatedHostType() {
             return this.dedicatedHostType;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHostType> dedicatedHostType; 
+            private java.util.List<DedicatedHostType> dedicatedHostType; 
 
             /**
-             * The total number of vGPUs.
+             * <p>The dedicated host type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddh.sn1ne</p>
              */
-            public Builder dedicatedHostType(java.util.List < DedicatedHostType> dedicatedHostType) {
+            public Builder dedicatedHostType(java.util.List<DedicatedHostType> dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;
                 return this;
             }

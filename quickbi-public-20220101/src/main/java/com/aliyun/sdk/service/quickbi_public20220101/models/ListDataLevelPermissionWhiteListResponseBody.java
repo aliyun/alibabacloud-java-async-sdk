@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataLevelPermissionWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataLevelPermissionWhiteListResponseBody</p>
  */
 public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataLevelPermissionWhiteListResponseBody(Builder builder) {
@@ -91,12 +96,18 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataLevelPermissionWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataLevelPermissionWhiteListResponseBody</p>
+     */
     public static class UsersModel extends TeaModel {
-        @NameInMap("UserGroups")
-        private java.util.List < String > userGroups;
+        @com.aliyun.core.annotation.NameInMap("UserGroups")
+        private java.util.List<String> userGroups;
 
-        @NameInMap("Users")
-        private java.util.List < String > users;
+        @com.aliyun.core.annotation.NameInMap("Users")
+        private java.util.List<String> users;
 
         private UsersModel(Builder builder) {
             this.userGroups = builder.userGroups;
@@ -114,25 +125,25 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         /**
          * @return userGroups
          */
-        public java.util.List < String > getUserGroups() {
+        public java.util.List<String> getUserGroups() {
             return this.userGroups;
         }
 
         /**
          * @return users
          */
-        public java.util.List < String > getUsers() {
+        public java.util.List<String> getUsers() {
             return this.users;
         }
 
         public static final class Builder {
-            private java.util.List < String > userGroups; 
-            private java.util.List < String > users; 
+            private java.util.List<String> userGroups; 
+            private java.util.List<String> users; 
 
             /**
              * UserGroups.
              */
-            public Builder userGroups(java.util.List < String > userGroups) {
+            public Builder userGroups(java.util.List<String> userGroups) {
                 this.userGroups = userGroups;
                 return this;
             }
@@ -140,7 +151,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             /**
              * Users.
              */
-            public Builder users(java.util.List < String > users) {
+            public Builder users(java.util.List<String> users) {
                 this.users = users;
                 return this;
             }
@@ -152,14 +163,20 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataLevelPermissionWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataLevelPermissionWhiteListResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("CubeId")
+        @com.aliyun.core.annotation.NameInMap("CubeId")
         private String cubeId;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("UsersModel")
+        @com.aliyun.core.annotation.NameInMap("UsersModel")
         private UsersModel usersModel;
 
         private Result(Builder builder) {

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RuleTestDialogue} extends {@link TeaModel}
  *
  * <p>RuleTestDialogue</p>
  */
 public class RuleTestDialogue extends TeaModel {
-    @NameInMap("Content")
-    private java.util.List < Content> content;
+    @com.aliyun.core.annotation.NameInMap("Content")
+    private java.util.List<Content> content;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("UserGroup")
+    @com.aliyun.core.annotation.NameInMap("UserGroup")
     private String userGroup;
 
     private RuleTestDialogue(Builder builder) {
@@ -42,7 +47,7 @@ public class RuleTestDialogue extends TeaModel {
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -68,7 +73,7 @@ public class RuleTestDialogue extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private Long id; 
         private String name; 
         private String userGroup; 
@@ -76,7 +81,7 @@ public class RuleTestDialogue extends TeaModel {
         /**
          * Content.
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
@@ -111,35 +116,41 @@ public class RuleTestDialogue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RuleTestDialogue} extends {@link TeaModel}
+     *
+     * <p>RuleTestDialogue</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("HourMinSec")
+        @com.aliyun.core.annotation.NameInMap("HourMinSec")
         private String hourMinSec;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SilenceDuration")
+        @com.aliyun.core.annotation.NameInMap("SilenceDuration")
         private Long silenceDuration;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Long speechRate;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Content(Builder builder) {

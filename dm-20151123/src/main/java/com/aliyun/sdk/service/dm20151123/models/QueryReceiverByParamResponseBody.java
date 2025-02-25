@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReceiverByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryReceiverByParamResponseBody</p>
  */
 public class QueryReceiverByParamResponseBody extends TeaModel {
-    @NameInMap("NextStart")
+    @com.aliyun.core.annotation.NameInMap("NextStart")
     private String nextStart;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryReceiverByParamResponseBody(Builder builder) {
@@ -131,29 +136,35 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryReceiverByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReceiverByParamResponseBody</p>
+     */
     public static class Receiver extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("ReceiverId")
+        @com.aliyun.core.annotation.NameInMap("ReceiverId")
         private String receiverId;
 
-        @NameInMap("ReceiversAlias")
+        @com.aliyun.core.annotation.NameInMap("ReceiversAlias")
         private String receiversAlias;
 
-        @NameInMap("ReceiversName")
+        @com.aliyun.core.annotation.NameInMap("ReceiversName")
         private String receiversName;
 
-        @NameInMap("ReceiversStatus")
+        @com.aliyun.core.annotation.NameInMap("ReceiversStatus")
         private String receiversStatus;
 
-        @NameInMap("UtcCreateTime")
+        @com.aliyun.core.annotation.NameInMap("UtcCreateTime")
         private Long utcCreateTime;
 
         private Receiver(Builder builder) {
@@ -312,9 +323,15 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReceiverByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReceiverByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("receiver")
-        private java.util.List < Receiver> receiver;
+        @com.aliyun.core.annotation.NameInMap("receiver")
+        private java.util.List<Receiver> receiver;
 
         private Data(Builder builder) {
             this.receiver = builder.receiver;
@@ -331,17 +348,17 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         /**
          * @return receiver
          */
-        public java.util.List < Receiver> getReceiver() {
+        public java.util.List<Receiver> getReceiver() {
             return this.receiver;
         }
 
         public static final class Builder {
-            private java.util.List < Receiver> receiver; 
+            private java.util.List<Receiver> receiver; 
 
             /**
              * receiver.
              */
-            public Builder receiver(java.util.List < Receiver> receiver) {
+            public Builder receiver(java.util.List<Receiver> receiver) {
                 this.receiver = receiver;
                 return this;
             }

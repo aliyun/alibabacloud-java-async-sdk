@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryServerLockResponseBody} extends {@link TeaModel}
  *
  * <p>QueryServerLockResponseBody</p>
  */
 public class QueryServerLockResponseBody extends TeaModel {
-    @NameInMap("DomainInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DomainInstanceId")
     private String domainInstanceId;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("ExpireDate")
+    @com.aliyun.core.annotation.NameInMap("ExpireDate")
     private String expireDate;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("LockInstanceId")
+    @com.aliyun.core.annotation.NameInMap("LockInstanceId")
     private String lockInstanceId;
 
-    @NameInMap("LockProductId")
+    @com.aliyun.core.annotation.NameInMap("LockProductId")
     private String lockProductId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServerLockStatus")
+    @com.aliyun.core.annotation.NameInMap("ServerLockStatus")
     private Integer serverLockStatus;
 
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private QueryServerLockResponseBody(Builder builder) {

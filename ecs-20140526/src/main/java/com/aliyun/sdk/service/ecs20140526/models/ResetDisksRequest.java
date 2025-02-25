@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetDisksRequest} extends {@link RequestModel}
  *
  * <p>ResetDisksRequest</p>
  */
 public class ResetDisksRequest extends Request {
-    @Query
-    @NameInMap("Disk")
-    @Validation(required = true)
-    private java.util.List < Disk> disk;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Disk")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Disk> disk;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ResetDisksRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class ResetDisksRequest extends Request {
     /**
      * @return disk
      */
-    public java.util.List < Disk> getDisk() {
+    public java.util.List<Disk> getDisk() {
         return this.disk;
     }
 
@@ -116,7 +121,7 @@ public class ResetDisksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResetDisksRequest, Builder> {
-        private java.util.List < Disk> disk; 
+        private java.util.List<Disk> disk; 
         private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -140,22 +145,25 @@ public class ResetDisksRequest extends Request {
         } 
 
         /**
-         * The disks that you want to roll back.
+         * <p>The disks that you want to roll back.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder disk(java.util.List < Disk> disk) {
+        public Builder disk(java.util.List<Disk> disk) {
             this.putQueryParameter("Disk", disk);
             this.disk = disk;
             return this;
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -182,7 +190,11 @@ public class ResetDisksRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,11 +227,17 @@ public class ResetDisksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ResetDisksRequest} extends {@link TeaModel}
+     *
+     * <p>ResetDisksRequest</p>
+     */
     public static class Disk extends TeaModel {
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
         private Disk(Builder builder) {
@@ -254,7 +272,10 @@ public class ResetDisksRequest extends Request {
             private String snapshotId; 
 
             /**
-             * The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.
+             * <p>The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-j6cf7l0ewidb78lq****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -262,7 +283,10 @@ public class ResetDisksRequest extends Request {
             }
 
             /**
-             * The ID of the disk snapshot that is contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.
+             * <p>The ID of the disk snapshot that is contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-j6cdofbycydvg7ey****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;

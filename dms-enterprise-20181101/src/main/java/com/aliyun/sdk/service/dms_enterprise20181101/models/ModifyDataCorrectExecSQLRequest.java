@@ -1,34 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDataCorrectExecSQLRequest} extends {@link RequestModel}
  *
  * <p>ModifyDataCorrectExecSQLRequest</p>
  */
 public class ModifyDataCorrectExecSQLRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ExecSQL")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecSQL")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String execSQL;
 
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long orderId;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private ModifyDataCorrectExecSQLRequest(Builder builder) {
@@ -36,6 +45,7 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         this.regionId = builder.regionId;
         this.execSQL = builder.execSQL;
         this.orderId = builder.orderId;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.tid = builder.tid;
     }
 
@@ -74,6 +84,13 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -84,6 +101,7 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         private String regionId; 
         private String execSQL; 
         private Long orderId; 
+        private String realLoginUserUid; 
         private Long tid; 
 
         private Builder() {
@@ -95,6 +113,7 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
             this.regionId = request.regionId;
             this.execSQL = request.execSQL;
             this.orderId = request.orderId;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.tid = request.tid;
         } 
 
@@ -108,7 +127,11 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The new SQL script.
+         * <p>The new SQL script.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update tb set id = 1 where id = 1;</p>
          */
         public Builder execSQL(String execSQL) {
             this.putQueryParameter("ExecSQL", execSQL);
@@ -117,7 +140,11 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The ID of the data change ticket.
+         * <p>The ID of the data change ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4328****</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -126,7 +153,19 @@ public class ModifyDataCorrectExecSQLRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4****</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

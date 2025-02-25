@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListenerCertificatesResponseBody</p>
  */
 public class ListListenerCertificatesResponseBody extends TeaModel {
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListListenerCertificatesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the certificates.
+         * The certificates.
          */
         public Builder certificates(java.util.List < Certificates> certificates) {
             this.certificates = certificates;
@@ -102,11 +101,11 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If **NextToken** is not returned, it indicates that no additional results exist.
-         * *   If **NextToken** is returned, the value is the token that is used for the next query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +113,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +121,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -136,16 +135,16 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Certificates(Builder builder) {
@@ -198,7 +197,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the certificate.
+             * The certificate ID.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -217,11 +216,11 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate is a default one:
+             * Indicates whether the certificate is a default one.
              * <p>
              * 
-             * *   **true**: a default certificate
-             * *   **false**: an additional certificate
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -229,10 +228,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the certificate.
+             * The status of the certificate.
              * <p>
              * 
-             * *   **active**: The certificate is associated with a listener and takes effect.
+             * *   **active**: The certificate is associated with a listener and in effect.
              * *   **updating**: The additional certificate is being replaced.
              */
             public Builder state(String state) {

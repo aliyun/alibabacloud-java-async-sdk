@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEditingProjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetEditingProjectResponseBody</p>
  */
 public class GetEditingProjectResponseBody extends TeaModel {
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.NameInMap("Project")
     private Project project;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetEditingProjectResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetEditingProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the online editing project.
+         * <p>The information about the online editing project.</p>
          */
         public Builder project(Project project) {
             this.project = project;
@@ -58,7 +63,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63E8B7C7-4812-46*****AD-0FA56029AC86</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,35 +79,41 @@ public class GetEditingProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEditingProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectResponseBody</p>
+     */
     public static class Project extends TeaModel {
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Timeline")
+        @com.aliyun.core.annotation.NameInMap("Timeline")
         private String timeline;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Project(Builder builder) {
@@ -206,7 +220,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The thumbnail URL of the online editing project.
+             * <p>The thumbnail URL of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<strong><strong>.com/6AB4D0E1E1C74468883516C2349</strong></strong>.png</p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -214,7 +231,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-10-23T13:33:40Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -222,7 +242,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the online editing project.
+             * <p>The description of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +253,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-10-23T14:27:26Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -238,7 +264,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the online editing project.
+             * <p>The ID of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fb2101bf24b27*****54cb318787dc</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -246,7 +275,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the online editing project was created.
+             * <p>The region where the online editing project was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -254,13 +286,16 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:
-             * <p>
+             * <p>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
+             * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
+             * <li><strong>Produced</strong>: indicates that the video was produced.</li>
+             * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+             * </ul>
              * 
-             * *   **Normal**: indicates that the online editing project is in draft.
-             * *   **Producing**: indicates that the video is being produced.
-             * *   **Produced**: indicates that the video was produced.
-             * *   **ProduceFailed**: indicates that the video failed to be produced.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -268,10 +303,13 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the Object Storage Service (OSS) bucket where the online editing project is stored.
-             * <p>
+             * <p>The path of the Object Storage Service (OSS) bucket where the online editing project is stored.</p>
+             * <blockquote>
+             * <p>To view the path of the OSS bucket, log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a>, and choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, you can view the path of the OSS bucket.</p>
+             * </blockquote>
              * 
-             * > To view the path of the OSS bucket, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored), and choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the path of the OSS bucket.
+             * <strong>example:</strong>
+             * <p>location_s</p>
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -279,7 +317,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The timeline of the online editing project.
+             * <p>The timeline of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;TimelineIn&quot;:0,&quot;TimelineOut&quot;:9.42}</p>
              */
             public Builder timeline(String timeline) {
                 this.timeline = timeline;
@@ -287,7 +328,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the online editing project.
+             * <p>The title of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video_1508736815000</p>
              */
             public Builder title(String title) {
                 this.title = title;

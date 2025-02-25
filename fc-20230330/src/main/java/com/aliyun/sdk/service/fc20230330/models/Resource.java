@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Resource} extends {@link TeaModel}
  *
  * <p>Resource</p>
  */
 public class Resource extends TeaModel {
-    @NameInMap("resouceType")
+    @com.aliyun.core.annotation.NameInMap("resouceType")
     private String resouceType;
 
-    @NameInMap("resourceArn")
+    @com.aliyun.core.annotation.NameInMap("resourceArn")
     private String resourceArn;
 
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.Map < String, String > tags;
 
     private Resource(Builder builder) {

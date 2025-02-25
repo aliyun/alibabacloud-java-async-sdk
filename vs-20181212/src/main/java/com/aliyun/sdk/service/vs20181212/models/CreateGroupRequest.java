@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGroupRequest</p>
  */
 public class CreateGroupRequest extends Request {
-    @Query
-    @NameInMap("App")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("App")
     private String app;
 
-    @Query
-    @NameInMap("Callback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callback")
     private String callback;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inProtocol;
 
-    @Query
-    @NameInMap("LazyPull")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LazyPull")
     private Boolean lazyPull;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OutProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutProtocol")
     private String outProtocol;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayDomain")
     private String playDomain;
 
-    @Query
-    @NameInMap("PushDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushDomain")
     private String pushDomain;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
     private CreateGroupRequest(Builder builder) {
@@ -180,19 +185,19 @@ public class CreateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGroupRequest response) {
-            super(response);
-            this.app = response.app;
-            this.callback = response.callback;
-            this.description = response.description;
-            this.inProtocol = response.inProtocol;
-            this.lazyPull = response.lazyPull;
-            this.name = response.name;
-            this.outProtocol = response.outProtocol;
-            this.ownerId = response.ownerId;
-            this.playDomain = response.playDomain;
-            this.pushDomain = response.pushDomain;
-            this.region = response.region;
+        private Builder(CreateGroupRequest request) {
+            super(request);
+            this.app = request.app;
+            this.callback = request.callback;
+            this.description = request.description;
+            this.inProtocol = request.inProtocol;
+            this.lazyPull = request.lazyPull;
+            this.name = request.name;
+            this.outProtocol = request.outProtocol;
+            this.ownerId = request.ownerId;
+            this.playDomain = request.playDomain;
+            this.pushDomain = request.pushDomain;
+            this.region = request.region;
         } 
 
         /**
@@ -223,7 +228,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * InProtocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder inProtocol(String inProtocol) {
             this.putQueryParameter("InProtocol", inProtocol);
@@ -241,7 +249,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

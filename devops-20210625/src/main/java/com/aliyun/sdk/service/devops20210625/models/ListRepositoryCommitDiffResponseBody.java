@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepositoryCommitDiffResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepositoryCommitDiffResponseBody</p>
  */
 public class ListRepositoryCommitDiffResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListRepositoryCommitDiffResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -82,7 +87,7 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -102,7 +107,10 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0EE38A4E-8991-532A-8E8B-5C22B5D2E058</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +120,7 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,44 +139,50 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepositoryCommitDiffResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepositoryCommitDiffResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("aMode")
+        @com.aliyun.core.annotation.NameInMap("aMode")
         private String aMode;
 
-        @NameInMap("bMode")
+        @com.aliyun.core.annotation.NameInMap("bMode")
         private String bMode;
 
-        @NameInMap("deletedFile")
+        @com.aliyun.core.annotation.NameInMap("deletedFile")
         private Boolean deletedFile;
 
-        @NameInMap("diff")
+        @com.aliyun.core.annotation.NameInMap("diff")
         private String diff;
 
-        @NameInMap("isBinary")
+        @com.aliyun.core.annotation.NameInMap("isBinary")
         private Boolean isBinary;
 
-        @NameInMap("isNewLfs")
+        @com.aliyun.core.annotation.NameInMap("isNewLfs")
         private Boolean isNewLfs;
 
-        @NameInMap("isOldLfs")
+        @com.aliyun.core.annotation.NameInMap("isOldLfs")
         private Boolean isOldLfs;
 
-        @NameInMap("newFile")
+        @com.aliyun.core.annotation.NameInMap("newFile")
         private Boolean newFile;
 
-        @NameInMap("newId")
+        @com.aliyun.core.annotation.NameInMap("newId")
         private String newId;
 
-        @NameInMap("newPath")
+        @com.aliyun.core.annotation.NameInMap("newPath")
         private String newPath;
 
-        @NameInMap("oldId")
+        @com.aliyun.core.annotation.NameInMap("oldId")
         private String oldId;
 
-        @NameInMap("oldPath")
+        @com.aliyun.core.annotation.NameInMap("oldPath")
         private String oldPath;
 
-        @NameInMap("renamedFile")
+        @com.aliyun.core.annotation.NameInMap("renamedFile")
         private Boolean renamedFile;
 
         private Result(Builder builder) {

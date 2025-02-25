@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContinuousAdjustRequest} extends {@link RequestModel}
  *
  * <p>ContinuousAdjustRequest</p>
  */
 public class ContinuousAdjustRequest extends Request {
-    @Query
-    @NameInMap("Focus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Focus")
     private String focus;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Iris")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Iris")
     private String iris;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private ContinuousAdjustRequest(Builder builder) {
@@ -88,12 +93,12 @@ public class ContinuousAdjustRequest extends Request {
             super();
         } 
 
-        private Builder(ContinuousAdjustRequest response) {
-            super(response);
-            this.focus = response.focus;
-            this.id = response.id;
-            this.iris = response.iris;
-            this.ownerId = response.ownerId;
+        private Builder(ContinuousAdjustRequest request) {
+            super(request);
+            this.focus = request.focus;
+            this.id = request.id;
+            this.iris = request.iris;
+            this.ownerId = request.ownerId;
         } 
 
         /**
@@ -106,7 +111,10 @@ public class ContinuousAdjustRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

@@ -1,58 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppInstanceGroupAttributeRequest</p>
  */
 public class ModifyAppInstanceGroupAttributeRequest extends Request {
-    @Query
-    @NameInMap("AppInstanceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupId;
 
-    @Query
-    @NameInMap("AppInstanceGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
     private String appInstanceGroupName;
 
-    @Body
-    @NameInMap("Network")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Network")
     private Network network;
 
-    @Query
-    @NameInMap("NodePool")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodePool")
     private NodePool nodePool;
 
-    @Body
-    @NameInMap("PreOpenAppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PerSessionPerApp")
+    private Boolean perSessionPerApp;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreOpenAppId")
     private String preOpenAppId;
 
-    @Body
-    @NameInMap("PreOpenMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreOpenMode")
     private String preOpenMode;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Body
-    @NameInMap("SecurityPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicy")
     private SecurityPolicy securityPolicy;
 
-    @Query
-    @NameInMap("SessionTimeout")
-    @Validation(maximum = 300)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 300)
     private Integer sessionTimeout;
 
-    @Body
-    @NameInMap("StoragePolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StoragePolicy")
     private StoragePolicy storagePolicy;
 
     private ModifyAppInstanceGroupAttributeRequest(Builder builder) {
@@ -61,6 +70,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         this.appInstanceGroupName = builder.appInstanceGroupName;
         this.network = builder.network;
         this.nodePool = builder.nodePool;
+        this.perSessionPerApp = builder.perSessionPerApp;
         this.preOpenAppId = builder.preOpenAppId;
         this.preOpenMode = builder.preOpenMode;
         this.productType = builder.productType;
@@ -111,6 +121,13 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return perSessionPerApp
+     */
+    public Boolean getPerSessionPerApp() {
+        return this.perSessionPerApp;
+    }
+
+    /**
      * @return preOpenAppId
      */
     public String getPreOpenAppId() {
@@ -157,6 +174,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         private String appInstanceGroupName; 
         private Network network; 
         private NodePool nodePool; 
+        private Boolean perSessionPerApp; 
         private String preOpenAppId; 
         private String preOpenMode; 
         private String productType; 
@@ -174,6 +192,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             this.appInstanceGroupName = request.appInstanceGroupName;
             this.network = request.network;
             this.nodePool = request.nodePool;
+            this.perSessionPerApp = request.perSessionPerApp;
             this.preOpenAppId = request.preOpenAppId;
             this.preOpenMode = request.preOpenMode;
             this.productType = request.productType;
@@ -183,7 +202,11 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>The ID of the delivery group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -192,7 +215,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupName.
+         * <p>The name of the delivery group.</p>
          */
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putQueryParameter("AppInstanceGroupName", appInstanceGroupName);
@@ -201,7 +224,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>The network settings.</p>
+         * <blockquote>
+         * <p> If you want to use this parameter, submit a ticket.</p>
+         * </blockquote>
          */
         public Builder network(Network network) {
             String networkShrink = shrink(network, "Network", "json");
@@ -211,7 +237,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * NodePool.
+         * <p>The information about the resource group.</p>
          */
         public Builder nodePool(NodePool nodePool) {
             String nodePoolShrink = shrink(nodePool, "NodePool", "json");
@@ -221,7 +247,19 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * PreOpenAppId.
+         * PerSessionPerApp.
+         */
+        public Builder perSessionPerApp(Boolean perSessionPerApp) {
+            this.putBodyParameter("PerSessionPerApp", perSessionPerApp);
+            this.perSessionPerApp = perSessionPerApp;
+            return this;
+        }
+
+        /**
+         * <p>The application ID of the pre-open application. If you set <code>PreOpenMode</code> to <code>SINGLE_APP</code>, you cannot leave this parameter empty.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-b2ronxxd****</p>
          */
         public Builder preOpenAppId(String preOpenAppId) {
             this.putBodyParameter("PreOpenAppId", preOpenAppId);
@@ -230,7 +268,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * PreOpenMode.
+         * <p>The pre-open mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SINGLE_APP: enables the pre-open mode for a single application.</li>
+         * <li>OFF: disables the pre-open mode. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
          */
         public Builder preOpenMode(String preOpenMode) {
             this.putBodyParameter("PreOpenMode", preOpenMode);
@@ -239,7 +285,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -248,7 +302,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * SecurityPolicy.
+         * <p>The security policy.</p>
          */
         public Builder securityPolicy(SecurityPolicy securityPolicy) {
             String securityPolicyShrink = shrink(securityPolicy, "SecurityPolicy", "json");
@@ -258,7 +312,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * SessionTimeout.
+         * <p>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. Default value: <code>15</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.putQueryParameter("SessionTimeout", sessionTimeout);
@@ -267,7 +324,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * StoragePolicy.
+         * <p>The storage policy.</p>
          */
         public Builder storagePolicy(StoragePolicy storagePolicy) {
             String storagePolicyShrink = shrink(storagePolicy, "StoragePolicy", "json");
@@ -283,11 +340,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class DomainRules extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
         private DomainRules(Builder builder) {
@@ -322,7 +385,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private String policy; 
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -330,7 +396,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * Policy.
+             * <p>The policy used for the domain name.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>allow</li>
+             * <li>block</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -344,9 +418,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class Network extends TeaModel {
-        @NameInMap("DomainRules")
-        private java.util.List < DomainRules> domainRules;
+        @com.aliyun.core.annotation.NameInMap("DomainRules")
+        private java.util.List<DomainRules> domainRules;
 
         private Network(Builder builder) {
             this.domainRules = builder.domainRules;
@@ -363,17 +443,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         /**
          * @return domainRules
          */
-        public java.util.List < DomainRules> getDomainRules() {
+        public java.util.List<DomainRules> getDomainRules() {
             return this.domainRules;
         }
 
         public static final class Builder {
-            private java.util.List < DomainRules> domainRules; 
+            private java.util.List<DomainRules> domainRules; 
 
             /**
-             * DomainRules.
+             * <p>The domain name rules.</p>
              */
-            public Builder domainRules(java.util.List < DomainRules> domainRules) {
+            public Builder domainRules(java.util.List<DomainRules> domainRules) {
                 this.domainRules = domainRules;
                 return this;
             }
@@ -385,11 +465,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class NodePool extends TeaModel {
-        @NameInMap("NodeCapacity")
+        @com.aliyun.core.annotation.NameInMap("NodeCapacity")
         private Integer nodeCapacity;
 
-        @NameInMap("NodePoolId")
+        @com.aliyun.core.annotation.NameInMap("NodePoolId")
         private String nodePoolId;
 
         private NodePool(Builder builder) {
@@ -424,7 +510,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private String nodePoolId; 
 
             /**
-             * NodeCapacity.
+             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
+             * <ul>
+             * <li>appstreaming.general.4c8g: 1 to 2</li>
+             * <li>appstreaming.general.8c16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeCapacity(Integer nodeCapacity) {
                 this.nodeCapacity = nodeCapacity;
@@ -432,7 +528,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * NodePoolId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-ew7va2g1wl3vm****</p>
              */
             public Builder nodePoolId(String nodePoolId) {
                 this.nodePoolId = nodePoolId;
@@ -446,11 +545,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class SecurityPolicy extends TeaModel {
-        @NameInMap("ResetAfterUnbind")
+        @com.aliyun.core.annotation.NameInMap("ResetAfterUnbind")
         private Boolean resetAfterUnbind;
 
-        @NameInMap("SkipUserAuthCheck")
+        @com.aliyun.core.annotation.NameInMap("SkipUserAuthCheck")
         private Boolean skipUserAuthCheck;
 
         private SecurityPolicy(Builder builder) {
@@ -485,7 +590,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             private Boolean skipUserAuthCheck; 
 
             /**
-             * ResetAfterUnbind.
+             * <p>Specifies whether to reset after unbinding from a delivery group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder resetAfterUnbind(Boolean resetAfterUnbind) {
                 this.resetAfterUnbind = resetAfterUnbind;
@@ -493,7 +606,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * SkipUserAuthCheck.
+             * <p>Specifies whether to skip user permission verification.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false: This is the default value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skipUserAuthCheck(Boolean skipUserAuthCheck) {
                 this.skipUserAuthCheck = skipUserAuthCheck;
@@ -507,12 +628,160 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
+    public static class UserProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
+        private String fileSystemId;
+
+        @com.aliyun.core.annotation.NameInMap("UserProfileSwitch")
+        private Boolean userProfileSwitch;
+
+        private UserProfile(Builder builder) {
+            this.fileSystemId = builder.fileSystemId;
+            this.userProfileSwitch = builder.userProfileSwitch;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileSystemId
+         */
+        public String getFileSystemId() {
+            return this.fileSystemId;
+        }
+
+        /**
+         * @return userProfileSwitch
+         */
+        public Boolean getUserProfileSwitch() {
+            return this.userProfileSwitch;
+        }
+
+        public static final class Builder {
+            private String fileSystemId; 
+            private Boolean userProfileSwitch; 
+
+            /**
+             * FileSystemId.
+             */
+            public Builder fileSystemId(String fileSystemId) {
+                this.fileSystemId = fileSystemId;
+                return this;
+            }
+
+            /**
+             * UserProfileSwitch.
+             */
+            public Builder userProfileSwitch(Boolean userProfileSwitch) {
+                this.userProfileSwitch = userProfileSwitch;
+                return this;
+            }
+
+            public UserProfile build() {
+                return new UserProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
+    public static class UserProfileFollow extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
+        private String fileSystemId;
+
+        @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
+        private Boolean profileFollowSwitch;
+
+        private UserProfileFollow(Builder builder) {
+            this.fileSystemId = builder.fileSystemId;
+            this.profileFollowSwitch = builder.profileFollowSwitch;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserProfileFollow create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileSystemId
+         */
+        public String getFileSystemId() {
+            return this.fileSystemId;
+        }
+
+        /**
+         * @return profileFollowSwitch
+         */
+        public Boolean getProfileFollowSwitch() {
+            return this.profileFollowSwitch;
+        }
+
+        public static final class Builder {
+            private String fileSystemId; 
+            private Boolean profileFollowSwitch; 
+
+            /**
+             * FileSystemId.
+             */
+            public Builder fileSystemId(String fileSystemId) {
+                this.fileSystemId = fileSystemId;
+                return this;
+            }
+
+            /**
+             * ProfileFollowSwitch.
+             */
+            public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
+                this.profileFollowSwitch = profileFollowSwitch;
+                return this;
+            }
+
+            public UserProfileFollow build() {
+                return new UserProfileFollow(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class StoragePolicy extends TeaModel {
-        @NameInMap("StorageTypeList")
-        private java.util.List < String > storageTypeList;
+        @com.aliyun.core.annotation.NameInMap("StorageTypeList")
+        private java.util.List<String> storageTypeList;
+
+        @com.aliyun.core.annotation.NameInMap("UserProfile")
+        private UserProfile userProfile;
+
+        @com.aliyun.core.annotation.NameInMap("UserProfileFollow")
+        private UserProfileFollow userProfileFollow;
 
         private StoragePolicy(Builder builder) {
             this.storageTypeList = builder.storageTypeList;
+            this.userProfile = builder.userProfile;
+            this.userProfileFollow = builder.userProfileFollow;
         }
 
         public static Builder builder() {
@@ -526,18 +795,50 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         /**
          * @return storageTypeList
          */
-        public java.util.List < String > getStorageTypeList() {
+        public java.util.List<String> getStorageTypeList() {
             return this.storageTypeList;
         }
 
+        /**
+         * @return userProfile
+         */
+        public UserProfile getUserProfile() {
+            return this.userProfile;
+        }
+
+        /**
+         * @return userProfileFollow
+         */
+        public UserProfileFollow getUserProfileFollow() {
+            return this.userProfileFollow;
+        }
+
         public static final class Builder {
-            private java.util.List < String > storageTypeList; 
+            private java.util.List<String> storageTypeList; 
+            private UserProfile userProfile; 
+            private UserProfileFollow userProfileFollow; 
 
             /**
-             * StorageTypeList.
+             * <p>The storage types.</p>
              */
-            public Builder storageTypeList(java.util.List < String > storageTypeList) {
+            public Builder storageTypeList(java.util.List<String> storageTypeList) {
                 this.storageTypeList = storageTypeList;
+                return this;
+            }
+
+            /**
+             * UserProfile.
+             */
+            public Builder userProfile(UserProfile userProfile) {
+                this.userProfile = userProfile;
+                return this;
+            }
+
+            /**
+             * UserProfileFollow.
+             */
+            public Builder userProfileFollow(UserProfileFollow userProfileFollow) {
+                this.userProfileFollow = userProfileFollow;
                 return this;
             }
 

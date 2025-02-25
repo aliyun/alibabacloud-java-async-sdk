@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplicationConfigParam} extends {@link TeaModel}
  *
  * <p>ApplicationConfigParam</p>
  */
 public class ApplicationConfigParam extends TeaModel {
-    @NameInMap("ConfigAction")
+    @com.aliyun.core.annotation.NameInMap("ConfigAction")
     private String configAction;
 
-    @NameInMap("ConfigFileName")
+    @com.aliyun.core.annotation.NameInMap("ConfigFileName")
     private String configFileName;
 
-    @NameInMap("ConfigItemDescription")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemDescription")
     private String configItemDescription;
 
-    @NameInMap("ConfigItemKey")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
     private String configItemKey;
 
-    @NameInMap("ConfigItemValue")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
     private String configItemValue;
 
-    @NameInMap("ConfigScope")
+    @com.aliyun.core.annotation.NameInMap("ConfigScope")
     private String configScope;
 
-    @NameInMap("EffectiveActions")
+    @com.aliyun.core.annotation.NameInMap("EffectiveActions")
     private String effectiveActions;
 
-    @NameInMap("EffectiveType")
+    @com.aliyun.core.annotation.NameInMap("EffectiveType")
     private String effectiveType;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
     private ApplicationConfigParam(Builder builder) {

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFoldersResponseBody} extends {@link TeaModel}
  *
  * <p>ListFoldersResponseBody</p>
  */
 public class ListFoldersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListFoldersResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListFoldersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The folders returned.
+         * <p>The information about the folders.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +171,17 @@ public class ListFoldersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFoldersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersResponseBody</p>
+     */
     public static class Folders extends TeaModel {
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("FolderPath")
+        @com.aliyun.core.annotation.NameInMap("FolderPath")
         private String folderPath;
 
         private Folders(Builder builder) {
@@ -190,7 +216,10 @@ public class ListFoldersResponseBody extends TeaModel {
             private String folderPath; 
 
             /**
-             * The ID of the folder.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2735c2****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -198,7 +227,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the folder.
+             * <p>The path of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
              */
             public Builder folderPath(String folderPath) {
                 this.folderPath = folderPath;
@@ -212,17 +244,23 @@ public class ListFoldersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFoldersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Folders")
-        private java.util.List < Folders> folders;
+        @com.aliyun.core.annotation.NameInMap("Folders")
+        private java.util.List<Folders> folders;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -243,7 +281,7 @@ public class ListFoldersResponseBody extends TeaModel {
         /**
          * @return folders
          */
-        public java.util.List < Folders> getFolders() {
+        public java.util.List<Folders> getFolders() {
             return this.folders;
         }
 
@@ -269,21 +307,24 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Folders> folders; 
+            private java.util.List<Folders> folders; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The details of the folder.
+             * <p>The list of folders.</p>
              */
-            public Builder folders(java.util.List < Folders> folders) {
+            public Builder folders(java.util.List<Folders> folders) {
                 this.folders = folders;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -291,7 +332,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries on the returned page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -299,7 +343,10 @@ public class ListFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

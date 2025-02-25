@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDiscoverDatabaseRequest} extends {@link RequestModel}
  *
  * <p>QueryDiscoverDatabaseRequest</p>
  */
 public class QueryDiscoverDatabaseRequest extends Request {
-    @Query
-    @NameInMap("CreateMark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateMark")
     private String createMark;
 
     private QueryDiscoverDatabaseRequest(Builder builder) {
@@ -54,10 +59,13 @@ public class QueryDiscoverDatabaseRequest extends Request {
         } 
 
         /**
-         * The ID of the scan task.
-         * <p>
+         * <p>The ID of the scan task.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~StartDiscoverDatabaseTask~~">StartDiscoverDatabaseTask</a> operation to query the ID of the task.</p>
+         * </blockquote>
          * 
-         * > You can call the [StartDiscoverDatabaseTask](~~StartDiscoverDatabaseTask~~) operation to query the ID of the task.
+         * <strong>example:</strong>
+         * <p>7f7b051f-7d1c-46da-b253-a03f3a27****</p>
          */
         public Builder createMark(String createMark) {
             this.putQueryParameter("CreateMark", createMark);

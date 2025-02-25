@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
  *
  * <p>TicketChangingFlightListResponseBody</p>
  */
 public class TicketChangingFlightListResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TicketChangingFlightListResponseBody(Builder builder) {
@@ -151,14 +156,20 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_name")
+        @com.aliyun.core.annotation.NameInMap("airline_name")
         private String airlineName;
 
-        @NameInMap("airline_simple_name")
+        @com.aliyun.core.annotation.NameInMap("airline_simple_name")
         private String airlineSimpleName;
 
         private AirlineInfo(Builder builder) {
@@ -232,20 +243,26 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private ArrAirportInfo(Builder builder) {
@@ -353,17 +370,23 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class ModifyPriceList extends TeaModel {
-        @NameInMap("passenger_type")
+        @com.aliyun.core.annotation.NameInMap("passenger_type")
         private Integer passengerType;
 
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Integer ticketPrice;
 
-        @NameInMap("upgrade_fee")
+        @com.aliyun.core.annotation.NameInMap("upgrade_fee")
         private Integer upgradeFee;
 
-        @NameInMap("upgrade_price")
+        @com.aliyun.core.annotation.NameInMap("upgrade_price")
         private Integer upgradePrice;
 
         private ModifyPriceList(Builder builder) {
@@ -454,29 +477,35 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class CabinList extends TeaModel {
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private String cabinClass;
 
-        @NameInMap("cabin_desc")
+        @com.aliyun.core.annotation.NameInMap("cabin_desc")
         private String cabinDesc;
 
-        @NameInMap("cabin_discount")
+        @com.aliyun.core.annotation.NameInMap("cabin_discount")
         private Integer cabinDiscount;
 
-        @NameInMap("child_cabin")
+        @com.aliyun.core.annotation.NameInMap("child_cabin")
         private String childCabin;
 
-        @NameInMap("left_num")
+        @com.aliyun.core.annotation.NameInMap("left_num")
         private String leftNum;
 
-        @NameInMap("modify_price_list")
-        private java.util.List < ModifyPriceList> modifyPriceList;
+        @com.aliyun.core.annotation.NameInMap("modify_price_list")
+        private java.util.List<ModifyPriceList> modifyPriceList;
 
-        @NameInMap("ota_itemid")
+        @com.aliyun.core.annotation.NameInMap("ota_itemid")
         private String otaItemid;
 
         private CabinList(Builder builder) {
@@ -543,7 +572,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         /**
          * @return modifyPriceList
          */
-        public java.util.List < ModifyPriceList> getModifyPriceList() {
+        public java.util.List<ModifyPriceList> getModifyPriceList() {
             return this.modifyPriceList;
         }
 
@@ -561,7 +590,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private Integer cabinDiscount; 
             private String childCabin; 
             private String leftNum; 
-            private java.util.List < ModifyPriceList> modifyPriceList; 
+            private java.util.List<ModifyPriceList> modifyPriceList; 
             private String otaItemid; 
 
             /**
@@ -615,7 +644,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             /**
              * modify_price_list.
              */
-            public Builder modifyPriceList(java.util.List < ModifyPriceList> modifyPriceList) {
+            public Builder modifyPriceList(java.util.List<ModifyPriceList> modifyPriceList) {
                 this.modifyPriceList = modifyPriceList;
                 return this;
             }
@@ -635,20 +664,26 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private DepAirportInfo(Builder builder) {
@@ -756,17 +791,23 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class LowestCabinPrice extends TeaModel {
-        @NameInMap("passenger_type")
+        @com.aliyun.core.annotation.NameInMap("passenger_type")
         private Integer passengerType;
 
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Integer ticketPrice;
 
-        @NameInMap("upgrade_fee")
+        @com.aliyun.core.annotation.NameInMap("upgrade_fee")
         private Integer upgradeFee;
 
-        @NameInMap("upgrade_price")
+        @com.aliyun.core.annotation.NameInMap("upgrade_price")
         private Integer upgradePrice;
 
         private LowestCabinPrice(Builder builder) {
@@ -857,80 +898,86 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class FlightInfoList extends TeaModel {
-        @NameInMap("airline_info")
+        @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
 
-        @NameInMap("arr_airport_info")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_info")
         private ArrAirportInfo arrAirportInfo;
 
-        @NameInMap("cabin_list")
-        private java.util.List < CabinList> cabinList;
+        @com.aliyun.core.annotation.NameInMap("cabin_list")
+        private java.util.List<CabinList> cabinList;
 
-        @NameInMap("carrier_airline")
+        @com.aliyun.core.annotation.NameInMap("carrier_airline")
         private String carrierAirline;
 
-        @NameInMap("carrier_no")
+        @com.aliyun.core.annotation.NameInMap("carrier_no")
         private String carrierNo;
 
-        @NameInMap("dep_airport_info")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_info")
         private DepAirportInfo depAirportInfo;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("flight_size")
+        @com.aliyun.core.annotation.NameInMap("flight_size")
         private String flightSize;
 
-        @NameInMap("flight_type")
+        @com.aliyun.core.annotation.NameInMap("flight_type")
         private String flightType;
 
-        @NameInMap("is_protocol")
+        @com.aliyun.core.annotation.NameInMap("is_protocol")
         private Boolean isProtocol;
 
-        @NameInMap("is_share")
+        @com.aliyun.core.annotation.NameInMap("is_share")
         private Boolean isShare;
 
-        @NameInMap("is_stop")
+        @com.aliyun.core.annotation.NameInMap("is_stop")
         private Boolean isStop;
 
-        @NameInMap("lowest_cabin")
+        @com.aliyun.core.annotation.NameInMap("lowest_cabin")
         private String lowestCabin;
 
-        @NameInMap("lowest_cabin_class")
+        @com.aliyun.core.annotation.NameInMap("lowest_cabin_class")
         private String lowestCabinClass;
 
-        @NameInMap("lowest_cabin_desc")
+        @com.aliyun.core.annotation.NameInMap("lowest_cabin_desc")
         private String lowestCabinDesc;
 
-        @NameInMap("lowest_cabin_num")
+        @com.aliyun.core.annotation.NameInMap("lowest_cabin_num")
         private String lowestCabinNum;
 
-        @NameInMap("lowest_cabin_price")
-        private java.util.List < LowestCabinPrice> lowestCabinPrice;
+        @com.aliyun.core.annotation.NameInMap("lowest_cabin_price")
+        private java.util.List<LowestCabinPrice> lowestCabinPrice;
 
-        @NameInMap("meal_desc")
+        @com.aliyun.core.annotation.NameInMap("meal_desc")
         private String mealDesc;
 
-        @NameInMap("modify_flight_arr_time")
+        @com.aliyun.core.annotation.NameInMap("modify_flight_arr_time")
         private String modifyFlightArrTime;
 
-        @NameInMap("modify_flight_dep_date")
+        @com.aliyun.core.annotation.NameInMap("modify_flight_dep_date")
         private String modifyFlightDepDate;
 
-        @NameInMap("modify_flight_dep_time")
+        @com.aliyun.core.annotation.NameInMap("modify_flight_dep_time")
         private String modifyFlightDepTime;
 
-        @NameInMap("session_id")
+        @com.aliyun.core.annotation.NameInMap("session_id")
         private String sessionId;
 
-        @NameInMap("stop_arr_time")
+        @com.aliyun.core.annotation.NameInMap("stop_arr_time")
         private String stopArrTime;
 
-        @NameInMap("stop_city")
+        @com.aliyun.core.annotation.NameInMap("stop_city")
         private String stopCity;
 
-        @NameInMap("stop_dep_time")
+        @com.aliyun.core.annotation.NameInMap("stop_dep_time")
         private String stopDepTime;
 
         private FlightInfoList(Builder builder) {
@@ -986,7 +1033,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         /**
          * @return cabinList
          */
-        public java.util.List < CabinList> getCabinList() {
+        public java.util.List<CabinList> getCabinList() {
             return this.cabinList;
         }
 
@@ -1084,7 +1131,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         /**
          * @return lowestCabinPrice
          */
-        public java.util.List < LowestCabinPrice> getLowestCabinPrice() {
+        public java.util.List<LowestCabinPrice> getLowestCabinPrice() {
             return this.lowestCabinPrice;
         }
 
@@ -1147,7 +1194,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         public static final class Builder {
             private AirlineInfo airlineInfo; 
             private ArrAirportInfo arrAirportInfo; 
-            private java.util.List < CabinList> cabinList; 
+            private java.util.List<CabinList> cabinList; 
             private String carrierAirline; 
             private String carrierNo; 
             private DepAirportInfo depAirportInfo; 
@@ -1161,7 +1208,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             private String lowestCabinClass; 
             private String lowestCabinDesc; 
             private String lowestCabinNum; 
-            private java.util.List < LowestCabinPrice> lowestCabinPrice; 
+            private java.util.List<LowestCabinPrice> lowestCabinPrice; 
             private String mealDesc; 
             private String modifyFlightArrTime; 
             private String modifyFlightDepDate; 
@@ -1190,7 +1237,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             /**
              * cabin_list.
              */
-            public Builder cabinList(java.util.List < CabinList> cabinList) {
+            public Builder cabinList(java.util.List<CabinList> cabinList) {
                 this.cabinList = cabinList;
                 return this;
             }
@@ -1302,7 +1349,7 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
             /**
              * lowest_cabin_price.
              */
-            public Builder lowestCabinPrice(java.util.List < LowestCabinPrice> lowestCabinPrice) {
+            public Builder lowestCabinPrice(java.util.List<LowestCabinPrice> lowestCabinPrice) {
                 this.lowestCabinPrice = lowestCabinPrice;
                 return this;
             }
@@ -1378,9 +1425,15 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TicketChangingFlightListResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketChangingFlightListResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("flight_info_list")
-        private java.util.List < FlightInfoList> flightInfoList;
+        @com.aliyun.core.annotation.NameInMap("flight_info_list")
+        private java.util.List<FlightInfoList> flightInfoList;
 
         private Module(Builder builder) {
             this.flightInfoList = builder.flightInfoList;
@@ -1397,17 +1450,17 @@ public class TicketChangingFlightListResponseBody extends TeaModel {
         /**
          * @return flightInfoList
          */
-        public java.util.List < FlightInfoList> getFlightInfoList() {
+        public java.util.List<FlightInfoList> getFlightInfoList() {
             return this.flightInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < FlightInfoList> flightInfoList; 
+            private java.util.List<FlightInfoList> flightInfoList; 
 
             /**
              * flight_info_list.
              */
-            public Builder flightInfoList(java.util.List < FlightInfoList> flightInfoList) {
+            public Builder flightInfoList(java.util.List<FlightInfoList> flightInfoList) {
                 this.flightInfoList = flightInfoList;
                 return this;
             }

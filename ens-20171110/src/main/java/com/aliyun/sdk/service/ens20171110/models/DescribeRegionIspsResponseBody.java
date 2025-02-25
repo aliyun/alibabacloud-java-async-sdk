@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionIspsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionIspsResponseBody</p>
  */
 public class DescribeRegionIspsResponseBody extends TeaModel {
-    @NameInMap("Isps")
-    private java.util.List < Isps> isps;
+    @com.aliyun.core.annotation.NameInMap("Isps")
+    private java.util.List<Isps> isps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionIspsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
     /**
      * @return isps
      */
-    public java.util.List < Isps> getIsps() {
+    public java.util.List<Isps> getIsps() {
         return this.isps;
     }
 
@@ -46,19 +51,22 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Isps> isps; 
+        private java.util.List<Isps> isps; 
         private String requestId; 
 
         /**
-         * Isps.
+         * <p>The list of ISPs.</p>
          */
-        public Builder isps(java.util.List < Isps> isps) {
+        public Builder isps(java.util.List<Isps> isps) {
             this.isps = isps;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC90CC7E-23B6-5A90-9097-A17CE4A161C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionIspsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionIspsResponseBody</p>
+     */
     public static class Isps extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Isps(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * <p>The code of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmcc</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -118,7 +135,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>move</p>
              */
             public Builder name(String name) {
                 this.name = name;

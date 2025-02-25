@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSelectionProductRequest} extends {@link RequestModel}
  *
  * <p>GetSelectionProductRequest</p>
  */
 public class GetSelectionProductRequest extends Request {
-    @Path
-    @NameInMap("productId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("productId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @Query
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @Query
-    @NameInMap("purchaserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("purchaserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String purchaserId;
 
     private GetSelectionProductRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class GetSelectionProductRequest extends Request {
         } 
 
         /**
-         * productId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822080</p>
          */
         public Builder productId(String productId) {
             this.putPathParameter("productId", productId);
@@ -102,7 +110,10 @@ public class GetSelectionProductRequest extends Request {
         }
 
         /**
-         * purchaserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56****2304</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putQueryParameter("purchaserId", purchaserId);

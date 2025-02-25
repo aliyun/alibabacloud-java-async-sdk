@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSmsVerifyCodeResponseBody} extends {@link TeaModel}
  *
  * <p>CheckSmsVerifyCodeResponseBody</p>
  */
 public class CheckSmsVerifyCodeResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckSmsVerifyCodeResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +97,14 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>For more information about other error codes, see <a href="https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11174283.0.0.70c5616bkj38Wa">Response codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +112,10 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +123,7 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * <p>The returned data.</p>
          */
         public Builder model(Model model) {
             this.model = model;
@@ -118,7 +131,14 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +151,17 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckSmsVerifyCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckSmsVerifyCodeResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("OutId")
+        @com.aliyun.core.annotation.NameInMap("OutId")
         private String outId;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private String verifyResult;
 
         private Model(Builder builder) {
@@ -170,7 +196,10 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
             private String verifyResult; 
 
             /**
-             * OutId.
+             * <p>The external ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1212312</p>
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -178,7 +207,14 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyResult.
+             * <p>The verification results. Valid values:</p>
+             * <ul>
+             * <li>PASS: The verification is successful.</li>
+             * <li>UNKNOWN: The verification failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PASS</p>
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;

@@ -116,14 +116,14 @@ public class ListFlowNodeSqlResultRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowNodeSqlResultRequest response) {
-            super(response);
-            this.length = response.length;
-            this.nodeInstanceId = response.nodeInstanceId;
-            this.offset = response.offset;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.sqlIndex = response.sqlIndex;
+        private Builder(ListFlowNodeSqlResultRequest request) {
+            super(request);
+            this.length = request.length;
+            this.nodeInstanceId = request.nodeInstanceId;
+            this.offset = request.offset;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.sqlIndex = request.sqlIndex;
         } 
 
         /**

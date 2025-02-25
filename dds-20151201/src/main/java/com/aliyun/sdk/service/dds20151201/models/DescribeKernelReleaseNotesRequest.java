@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKernelReleaseNotesRequest} extends {@link RequestModel}
  *
  * <p>DescribeKernelReleaseNotesRequest</p>
  */
 public class DescribeKernelReleaseNotesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("KernelVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KernelVersion")
     private String kernelVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeKernelReleaseNotesRequest(Builder builder) {
@@ -133,11 +138,13 @@ public class DescribeKernelReleaseNotesRequest extends Request {
         }
 
         /**
-         * The number of the minor database version. For example: **mongodb\_20180522\_0.4.8**.
-         * <p>
+         * <p>The minor version number of the instance. Example: <strong>mongodb_20180522_0.4.8</strong>.</p>
+         * <ul>
+         * <li>This parameter is required. After you specify a version number for this parameter in a request, the release notes of the versions later than this version are returned.</li>
+         * </ul>
          * 
-         * *   If you specify this parameter, a list of version numbers later than the version specified is returned.
-         * *   If you do not specify this parameter, a list of all the version numbers is returned.
+         * <strong>example:</strong>
+         * <p>mongodb_20180522_0.4.8</p>
          */
         public Builder kernelVersion(String kernelVersion) {
             this.putQueryParameter("KernelVersion", kernelVersion);

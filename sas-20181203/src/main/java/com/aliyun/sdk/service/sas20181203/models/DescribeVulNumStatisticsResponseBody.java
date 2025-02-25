@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulNumStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulNumStatisticsResponseBody</p>
  */
 public class DescribeVulNumStatisticsResponseBody extends TeaModel {
-    @NameInMap("AppCnt")
+    @com.aliyun.core.annotation.NameInMap("AppCnt")
     private Integer appCnt;
 
-    @NameInMap("AppNum")
+    @com.aliyun.core.annotation.NameInMap("AppNum")
     private Integer appNum;
 
-    @NameInMap("CmsDealedTotalNum")
+    @com.aliyun.core.annotation.NameInMap("CmsDealedTotalNum")
     private Integer cmsDealedTotalNum;
 
-    @NameInMap("CmsNum")
+    @com.aliyun.core.annotation.NameInMap("CmsNum")
     private Integer cmsNum;
 
-    @NameInMap("CveNum")
+    @com.aliyun.core.annotation.NameInMap("CveNum")
     private Integer cveNum;
 
-    @NameInMap("EmgNum")
+    @com.aliyun.core.annotation.NameInMap("EmgNum")
     private Integer emgNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScaNum")
+    @com.aliyun.core.annotation.NameInMap("ScaNum")
     private Integer scaNum;
 
-    @NameInMap("SysNum")
+    @com.aliyun.core.annotation.NameInMap("SysNum")
     private Integer sysNum;
 
-    @NameInMap("VulAsapSum")
+    @com.aliyun.core.annotation.NameInMap("VulAsapSum")
     private Integer vulAsapSum;
 
-    @NameInMap("VulDealedTotalNum")
+    @com.aliyun.core.annotation.NameInMap("VulDealedTotalNum")
     private Integer vulDealedTotalNum;
 
-    @NameInMap("VulLaterSum")
+    @com.aliyun.core.annotation.NameInMap("VulLaterSum")
     private Integer vulLaterSum;
 
-    @NameInMap("VulNntfSum")
+    @com.aliyun.core.annotation.NameInMap("VulNntfSum")
     private Integer vulNntfSum;
 
     private DescribeVulNumStatisticsResponseBody(Builder builder) {
@@ -182,7 +187,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         private Integer vulNntfSum; 
 
         /**
-         * The number of application vulnerabilities that are detected on the asset by using the web scanner.
+         * <p>The number of application vulnerabilities that are detected on the asset by using the web scanner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder appCnt(Integer appCnt) {
             this.appCnt = appCnt;
@@ -190,7 +198,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of application vulnerabilities that are detected on the asset by using the web scanner.
+         * <p>The number of application vulnerabilities that are detected on the asset by using the web scanner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder appNum(Integer appNum) {
             this.appNum = appNum;
@@ -198,7 +209,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Web-CMS vulnerabilities that are handled.
+         * <p>The number of Web-CMS vulnerabilities that are handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cmsDealedTotalNum(Integer cmsDealedTotalNum) {
             this.cmsDealedTotalNum = cmsDealedTotalNum;
@@ -206,7 +220,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Web-CMS vulnerabilities that are detected on the asset.
+         * <p>The number of Web-CMS vulnerabilities that are detected on the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cmsNum(Integer cmsNum) {
             this.cmsNum = cmsNum;
@@ -214,7 +231,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Linux software vulnerabilities that are detected on the asset.
+         * <p>The number of Linux software vulnerabilities that are detected on the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cveNum(Integer cveNum) {
             this.cveNum = cveNum;
@@ -222,7 +242,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of urgent vulnerabilities that are detected on the asset.
+         * <p>The number of urgent vulnerabilities that are detected on the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder emgNum(Integer emgNum) {
             this.emgNum = emgNum;
@@ -230,7 +253,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E22C89D2-FE13-5800-8746-9D0EF1827A59</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +264,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of middleware vulnerabilities that are detected on the asset.
+         * <p>The number of middleware vulnerabilities that are detected on the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder scaNum(Integer scaNum) {
             this.scaNum = scaNum;
@@ -246,7 +275,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Windows system vulnerabilities that are detected on the asset.
+         * <p>The number of Windows system vulnerabilities that are detected on the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sysNum(Integer sysNum) {
             this.sysNum = sysNum;
@@ -254,7 +286,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the high priority.
+         * <p>The number of vulnerabilities that have the high priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulAsapSum(Integer vulAsapSum) {
             this.vulAsapSum = vulAsapSum;
@@ -262,7 +297,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that are handled.
+         * <p>The number of vulnerabilities that are handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulDealedTotalNum(Integer vulDealedTotalNum) {
             this.vulDealedTotalNum = vulDealedTotalNum;
@@ -270,7 +308,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the medium priority.
+         * <p>The number of vulnerabilities that have the medium priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulLaterSum(Integer vulLaterSum) {
             this.vulLaterSum = vulLaterSum;
@@ -278,7 +319,10 @@ public class DescribeVulNumStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the low priority.
+         * <p>The number of vulnerabilities that have the low priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulNntfSum(Integer vulNntfSum) {
             this.vulNntfSum = vulNntfSum;

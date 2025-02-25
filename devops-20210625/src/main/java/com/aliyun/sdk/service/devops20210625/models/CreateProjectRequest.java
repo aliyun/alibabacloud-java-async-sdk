@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectRequest</p>
  */
 public class CreateProjectRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("customCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customCode;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
-    @Body
-    @NameInMap("templateIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("templateIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateIdentifier;
 
     private CreateProjectRequest(Builder builder) {
@@ -115,7 +120,10 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -124,7 +132,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * customCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCD</p>
          */
         public Builder customCode(String customCode) {
             this.putBodyParameter("customCode", customCode);
@@ -133,7 +144,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -142,7 +156,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);
@@ -151,7 +168,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * templateIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>704eaxxxx5efede61xxx5</p>
          */
         public Builder templateIdentifier(String templateIdentifier) {
             this.putBodyParameter("templateIdentifier", templateIdentifier);

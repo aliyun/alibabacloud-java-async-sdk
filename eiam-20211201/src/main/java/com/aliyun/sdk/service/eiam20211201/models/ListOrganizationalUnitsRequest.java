@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitsRequest} extends {@link RequestModel}
  *
  * <p>ListOrganizationalUnitsRequest</p>
  */
 public class ListOrganizationalUnitsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrganizationalUnitIds")
-    private java.util.List < String > organizationalUnitIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
+    private java.util.List<String> organizationalUnitIds;
 
-    @Query
-    @NameInMap("OrganizationalUnitName")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String organizationalUnitName;
 
-    @Query
-    @NameInMap("OrganizationalUnitNameStartsWith")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitNameStartsWith")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String organizationalUnitNameStartsWith;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ParentId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String parentId;
 
     private ListOrganizationalUnitsRequest(Builder builder) {
@@ -90,7 +95,7 @@ public class ListOrganizationalUnitsRequest extends Request {
     /**
      * @return organizationalUnitIds
      */
-    public java.util.List < String > getOrganizationalUnitIds() {
+    public java.util.List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds;
     }
 
@@ -132,7 +137,7 @@ public class ListOrganizationalUnitsRequest extends Request {
     public static final class Builder extends Request.Builder<ListOrganizationalUnitsRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private java.util.List < String > organizationalUnitIds; 
+        private java.util.List<String> organizationalUnitIds; 
         private String organizationalUnitName; 
         private String organizationalUnitNameStartsWith; 
         private Long pageNumber; 
@@ -165,7 +170,11 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,16 +183,22 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 组织ID列表。size限制最大100。
+         * <p>The IDs of organizational units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ou_wovwffm62xifdziem7an7xxxxx]</p>
          */
-        public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+        public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 
         /**
-         * The name of the organizational unit.
+         * <p>The name of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_001</p>
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putQueryParameter("OrganizationalUnitName", organizationalUnitName);
@@ -192,7 +207,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * 组织名称，左匹配
+         * <p>Organization name, matching left</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder organizationalUnitNameStartsWith(String organizationalUnitNameStartsWith) {
             this.putQueryParameter("OrganizationalUnitNameStartsWith", organizationalUnitNameStartsWith);
@@ -201,7 +219,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +231,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -219,7 +243,10 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the parent organizational unit.
+         * <p>The ID of the parent organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);

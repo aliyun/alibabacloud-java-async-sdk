@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynchronizationJobStatusListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynchronizationJobStatusListResponseBody</p>
  */
 public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("SynchronizationJobListStatusList")
-    private java.util.List < SynchronizationJobListStatusList> synchronizationJobListStatusList;
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobListStatusList")
+    private java.util.List<SynchronizationJobListStatusList> synchronizationJobListStatusList;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeSynchronizationJobStatusListResponseBody(Builder builder) {
@@ -100,7 +105,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     /**
      * @return synchronizationJobListStatusList
      */
-    public java.util.List < SynchronizationJobListStatusList> getSynchronizationJobListStatusList() {
+    public java.util.List<SynchronizationJobListStatusList> getSynchronizationJobListStatusList() {
         return this.synchronizationJobListStatusList;
     }
 
@@ -118,11 +123,14 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         private Integer pageRecordCount; 
         private String requestId; 
         private String success; 
-        private java.util.List < SynchronizationJobListStatusList> synchronizationJobListStatusList; 
+        private java.util.List<SynchronizationJobListStatusList> synchronizationJobListStatusList; 
         private Long totalRecordCount; 
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -130,7 +138,10 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -138,7 +149,10 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +160,10 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of data synchronization instances displayed on one page.
+         * <p>The number of data synchronization instances displayed on one page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -154,7 +171,10 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1413460B-138A-48D1-836C-B24EDDC1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +182,10 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -170,15 +193,18 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the data synchronization tasks.
+         * <p>The status of the data synchronization tasks.</p>
          */
-        public Builder synchronizationJobListStatusList(java.util.List < SynchronizationJobListStatusList> synchronizationJobListStatusList) {
+        public Builder synchronizationJobListStatusList(java.util.List<SynchronizationJobListStatusList> synchronizationJobListStatusList) {
             this.synchronizationJobListStatusList = synchronizationJobListStatusList;
             return this;
         }
 
         /**
-         * The total number of data synchronization instances.
+         * <p>The total number of data synchronization instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -191,14 +217,20 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusListResponseBody</p>
+     */
     public static class SynchronizationDirectionInfoList extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SynchronizationDirection")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
         private String synchronizationDirection;
 
         private SynchronizationDirectionInfoList(Builder builder) {
@@ -242,10 +274,13 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
             private String synchronizationDirection; 
 
             /**
-             * The UNIX timestamp generated when the latest data record was synchronized.
-             * <p>
+             * <p>The UNIX timestamp generated when the latest data record was synchronized.</p>
+             * <blockquote>
+             * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+             * </blockquote>
              * 
-             * >  You can use a search engine to obtain a UNIX timestamp converter.
+             * <strong>example:</strong>
+             * <p>1610524452</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -253,19 +288,22 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data synchronization task in this direction. Valid values:
-             * <p>
+             * <p>The status of the data synchronization task in this direction. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started.</li>
+             * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
+             * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
+             * <li><strong>Initializing</strong>: The task is performing initial synchronization.</li>
+             * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
+             * <li><strong>Synchronizing</strong>: The task is synchronizing data.</li>
+             * <li><strong>Failed</strong>: The task failed to synchronize data.</li>
+             * <li><strong>Suspending</strong>: The task is paused.</li>
+             * <li><strong>Modifying</strong>: The objects in the task are being modified.</li>
+             * <li><strong>Finished</strong>: The task is completed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: The task is not started.
-             * *   **Prechecking**: The task is being prechecked.
-             * *   **PrecheckFailed**: The task failed to pass the precheck.
-             * *   **Initializing**: The task is performing initial synchronization.
-             * *   **InitializeFailed**: Initial synchronization failed.
-             * *   **Synchronizing**: The task is synchronizing data.
-             * *   **Failed**: The task failed to synchronize data.
-             * *   **Suspending**: The task is paused.
-             * *   **Modifying**: The objects in the task are being modified.
-             * *   **Finished**: The task is completed.
+             * <strong>example:</strong>
+             * <p>InitializeFailed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -273,11 +311,14 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization direction. Valid values:
-             * <p>
+             * <p>The synchronization direction. Valid values:</p>
+             * <ul>
+             * <li><strong>Forward</strong></li>
+             * <li><strong>Reverse</strong></li>
+             * </ul>
              * 
-             * *   **Forward**
-             * *   **Reverse**
+             * <strong>example:</strong>
+             * <p>Forward</p>
              */
             public Builder synchronizationDirection(String synchronizationDirection) {
                 this.synchronizationDirection = synchronizationDirection;
@@ -291,11 +332,17 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusListResponseBody</p>
+     */
     public static class SynchronizationJobListStatusList extends TeaModel {
-        @NameInMap("SynchronizationDirectionInfoList")
-        private java.util.List < SynchronizationDirectionInfoList> synchronizationDirectionInfoList;
+        @com.aliyun.core.annotation.NameInMap("SynchronizationDirectionInfoList")
+        private java.util.List<SynchronizationDirectionInfoList> synchronizationDirectionInfoList;
 
-        @NameInMap("SynchronizationJobId")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
         private String synchronizationJobId;
 
         private SynchronizationJobListStatusList(Builder builder) {
@@ -314,7 +361,7 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         /**
          * @return synchronizationDirectionInfoList
          */
-        public java.util.List < SynchronizationDirectionInfoList> getSynchronizationDirectionInfoList() {
+        public java.util.List<SynchronizationDirectionInfoList> getSynchronizationDirectionInfoList() {
             return this.synchronizationDirectionInfoList;
         }
 
@@ -326,19 +373,22 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SynchronizationDirectionInfoList> synchronizationDirectionInfoList; 
+            private java.util.List<SynchronizationDirectionInfoList> synchronizationDirectionInfoList; 
             private String synchronizationJobId; 
 
             /**
-             * The details of data synchronization tasks in each direction.
+             * <p>The details of data synchronization tasks in each direction.</p>
              */
-            public Builder synchronizationDirectionInfoList(java.util.List < SynchronizationDirectionInfoList> synchronizationDirectionInfoList) {
+            public Builder synchronizationDirectionInfoList(java.util.List<SynchronizationDirectionInfoList> synchronizationDirectionInfoList) {
                 this.synchronizationDirectionInfoList = synchronizationDirectionInfoList;
                 return this;
             }
 
             /**
-             * The ID of the data synchronization instance.
+             * <p>The ID of the data synchronization instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsexjk1alb116****</p>
              */
             public Builder synchronizationJobId(String synchronizationJobId) {
                 this.synchronizationJobId = synchronizationJobId;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCommonBandwidthPackagesResponseBody</p>
  */
 public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("CommonBandwidthPackages")
+    @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackages")
     private CommonBandwidthPackages commonBandwidthPackages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCommonBandwidthPackagesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the Internet Shared Bandwidth instance.
+         * <p>The details of the Internet Shared Bandwidth instance.</p>
          */
         public Builder commonBandwidthPackages(CommonBandwidthPackages commonBandwidthPackages) {
             this.commonBandwidthPackages = commonBandwidthPackages;
@@ -94,7 +99,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20E6FD1C-7321-4DAD-BDFD-EC8769E4AA33</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonBandwidthPackagesResponseBody</p>
+     */
     public static class PublicIpAddresse extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("BandwidthPackageIpRelationStatus")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageIpRelationStatus")
         private String bandwidthPackageIpRelationStatus;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
         private PublicIpAddresse(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String ipAddress; 
 
             /**
-             * The ID of the EIP.
+             * <p>The ID of the EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bp13e9i2qst4g6jzi****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -190,11 +216,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the EIP is associated with the Internet Shared Bandwidth instance. Valid values:
-             * <p>
+             * <p>Indicates whether the EIP is associated with the Internet Shared Bandwidth instance. Valid values:</p>
+             * <ul>
+             * <li><strong>BINDED</strong></li>
+             * <li><strong>BINDING</strong></li>
+             * </ul>
              * 
-             * *   **BINDED**
-             * *   **BINDING**
+             * <strong>example:</strong>
+             * <p>BINDED</p>
              */
             public Builder bandwidthPackageIpRelationStatus(String bandwidthPackageIpRelationStatus) {
                 this.bandwidthPackageIpRelationStatus = bandwidthPackageIpRelationStatus;
@@ -202,7 +231,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.95.XX.XX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -216,9 +248,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonBandwidthPackagesResponseBody</p>
+     */
     public static class PublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddresse")
-        private java.util.List < PublicIpAddresse> publicIpAddresse;
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresse")
+        private java.util.List<PublicIpAddresse> publicIpAddresse;
 
         private PublicIpAddresses(Builder builder) {
             this.publicIpAddresse = builder.publicIpAddresse;
@@ -235,17 +273,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return publicIpAddresse
          */
-        public java.util.List < PublicIpAddresse> getPublicIpAddresse() {
+        public java.util.List<PublicIpAddresse> getPublicIpAddresse() {
             return this.publicIpAddresse;
         }
 
         public static final class Builder {
-            private java.util.List < PublicIpAddresse> publicIpAddresse; 
+            private java.util.List<PublicIpAddresse> publicIpAddresse; 
 
             /**
              * PublicIpAddresse.
              */
-            public Builder publicIpAddresse(java.util.List < PublicIpAddresse> publicIpAddresse) {
+            public Builder publicIpAddresse(java.util.List<PublicIpAddresse> publicIpAddresse) {
                 this.publicIpAddresse = publicIpAddresse;
                 return this;
             }
@@ -257,9 +295,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonBandwidthPackagesResponseBody</p>
+     */
     public static class SecurityProtectionTypes extends TeaModel {
-        @NameInMap("SecurityProtectionType")
-        private java.util.List < String > securityProtectionType;
+        @com.aliyun.core.annotation.NameInMap("SecurityProtectionType")
+        private java.util.List<String> securityProtectionType;
 
         private SecurityProtectionTypes(Builder builder) {
             this.securityProtectionType = builder.securityProtectionType;
@@ -276,17 +320,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return securityProtectionType
          */
-        public java.util.List < String > getSecurityProtectionType() {
+        public java.util.List<String> getSecurityProtectionType() {
             return this.securityProtectionType;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityProtectionType; 
+            private java.util.List<String> securityProtectionType; 
 
             /**
              * SecurityProtectionType.
              */
-            public Builder securityProtectionType(java.util.List < String > securityProtectionType) {
+            public Builder securityProtectionType(java.util.List<String> securityProtectionType) {
                 this.securityProtectionType = securityProtectionType;
                 return this;
             }
@@ -298,11 +342,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonBandwidthPackagesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -337,7 +387,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key that is added to the Internet Shared Bandwidth instance.
+             * <p>The tag key that is added to the Internet Shared Bandwidth instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -345,7 +398,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value that is added to the Internet Shared Bandwidth instance.
+             * <p>The tag value that is added to the Internet Shared Bandwidth instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ValueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -359,9 +415,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonBandwidthPackagesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -378,17 +440,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -400,83 +462,89 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonBandwidthPackagesResponseBody</p>
+     */
     public static class CommonBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("HasReservationData")
+        @com.aliyun.core.annotation.NameInMap("HasReservationData")
         private String hasReservationData;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublicIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
         private PublicIpAddresses publicIpAddresses;
 
-        @NameInMap("Ratio")
+        @com.aliyun.core.annotation.NameInMap("Ratio")
         private Integer ratio;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ReservationBandwidth")
         private String reservationBandwidth;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityProtectionTypes")
+        @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
         private SecurityProtectionTypes securityProtectionTypes;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Integer serviceManaged;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private CommonBandwidthPackage(Builder builder) {
@@ -727,7 +795,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
+             * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -735,7 +806,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Internet Shared Bandwidth instance.
+             * <p>The ID of the Internet Shared Bandwidth instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp-bp1t3sm1ffzmshdki****</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -743,11 +817,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The service type of the Internet Shared Bandwidth instance. Valid values:
-             * <p>
+             * <p>The service type of the Internet Shared Bandwidth instance. Valid values:</p>
+             * <ul>
+             * <li><strong>CloudBox</strong> The cloud box. Only cloud box users can select this type.</li>
+             * <li><strong>Default</strong> (default): The general service type.</li>
+             * </ul>
              * 
-             * *   **CloudBox** The cloud box. Only cloud box users can select this type.
-             * *   **Default** (default): The general service type.
+             * <strong>example:</strong>
+             * <p>CloudBox</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -755,12 +832,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the Internet Shared Bandwidth instance. Valid values:
-             * <p>
+             * <p>The service status of the Internet Shared Bandwidth instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The Internet Shared Bandwidth instance runs as expected.</li>
+             * <li><strong>FinancialLocked</strong>: An overdue payment occurs in the Internet Shared Bandwidth instance</li>
+             * <li><strong>Unactivated</strong>: The Internet Shared Bandwidth instance is not activated.</li>
+             * </ul>
              * 
-             * *   **Normal**: The Internet Shared Bandwidth instance runs as expected.
-             * *   **FinancialLocked**: An overdue payment occurs in the Internet Shared Bandwidth instance
-             * *   **Unactivated**: The Internet Shared Bandwidth instance is not activated.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -768,7 +848,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Internet Shared Bandwidth instance was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the Internet Shared Bandwidth instance was created. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-06-28T06:39:20Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -776,11 +859,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether deletion protection is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether deletion protection is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -788,7 +874,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the Internet Shared Bandwidth instance.
+             * <p>The description of the Internet Shared Bandwidth instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -796,7 +885,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Internet Shared Bandwidth instance expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the Internet Shared Bandwidth instance expired. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-15T03:08:37Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -804,11 +896,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the information about pending orders is returned. Valid values:
-             * <p>
+             * <p>Indicates whether the information about pending orders is returned. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -816,22 +911,24 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The line type. Valid values:
-             * <p>
+             * <p>The line type. Valid values:</p>
+             * <ul>
+             * <li><strong>BGP</strong>: BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</li>
+             * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore (Singapore), Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+             * </ul>
+             * <p>If you are allowed to use single-ISP bandwidth, one of the following values is returned:</p>
+             * <ul>
+             * <li><strong>ChinaTelecom</strong></li>
+             * <li><strong>ChinaUnicom</strong></li>
+             * <li><strong>ChinaMobile</strong></li>
+             * <li><strong>ChinaTelecom_L2</strong></li>
+             * <li><strong>ChinaUnicom_L2</strong></li>
+             * <li><strong>ChinaMobile_L2</strong></li>
+             * </ul>
+             * <p>If your services are deployed in China East 1 Finance, <strong>BGP_FinanceCloud</strong> is returned.</p>
              * 
-             * *   **BGP**: BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore (Singapore), Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.
-             * 
-             * If you are allowed to use single-ISP bandwidth, one of the following values is returned:
-             * 
-             * *   **ChinaTelecom**
-             * *   **ChinaUnicom**
-             * *   **ChinaMobile**
-             * *   **ChinaTelecom_L2**
-             * *   **ChinaUnicom_L2**
-             * *   **ChinaMobile_L2**
-             * 
-             * If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -839,10 +936,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the Internet Shared Bandwidth instance. Valid value:
-             * <p>
+             * <p>The billing method of the Internet Shared Bandwidth instance. Valid value:</p>
+             * <p><strong>PostPaid</strong>: pay-as-you-go</p>
              * 
-             * **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -850,10 +948,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method of the Internet Shared Bandwidth instance. Valid value:
-             * <p>
+             * <p>The metering method of the Internet Shared Bandwidth instance. Valid value:</p>
+             * <p><strong>PayByTraffic</strong></p>
              * 
-             * **PayByTraffic**
+             * <strong>example:</strong>
+             * <p>PayByBandwidth</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -861,7 +960,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Internet Shared Bandwidth instance.
+             * <p>The name of the Internet Shared Bandwidth instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -869,7 +971,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The elastic IP addresses (EIPs) that are associated with the Internet Shared Bandwidth instance.
+             * <p>The elastic IP addresses (EIPs) that are associated with the Internet Shared Bandwidth instance.</p>
              */
             public Builder publicIpAddresses(PublicIpAddresses publicIpAddresses) {
                 this.publicIpAddresses = publicIpAddresses;
@@ -877,10 +979,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the minimum bandwidth commitment. Only **20** is returned.
-             * <p>
+             * <p>The percentage of the minimum bandwidth commitment. Only <strong>20</strong> is returned.</p>
+             * <blockquote>
+             * <p> This parameter is supported only on the Alibaba Cloud China site.</p>
+             * </blockquote>
              * 
-             * >  This parameter is supported only on the Alibaba Cloud China site.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder ratio(Integer ratio) {
                 this.ratio = ratio;
@@ -888,7 +993,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Internet Shared Bandwidth instance resides.
+             * <p>The ID of the region where the Internet Shared Bandwidth instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -896,7 +1004,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the renewal took effect. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-30T16:00:00Z</p>
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -904,7 +1015,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The new maximum bandwidth after the configurations are changed. Unit: Mbit/s.
+             * <p>The new maximum bandwidth after the configurations are changed. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder reservationBandwidth(String reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -912,10 +1026,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method after the configurations are changed. Valid value:
-             * <p>
+             * <p>The metering method after the configurations are changed. Valid value:</p>
+             * <p><strong>PayByTraffic</strong></p>
              * 
-             * **PayByTraffic**
+             * <strong>example:</strong>
+             * <p>PayByBandwidth</p>
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -923,12 +1038,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The renewal method. Valid values:
-             * <p>
+             * <p>The renewal method. Valid values:</p>
+             * <ul>
+             * <li><strong>RENEWCHANGE</strong>: renewal with a specification change</li>
+             * <li><strong>TEMP_UPGRADE</strong>: renewal with a temporary upgrade</li>
+             * <li><strong>UPGRADE</strong>: renewal with an upgrade</li>
+             * </ul>
              * 
-             * *   **RENEWCHANGE**: renewal with a specification change
-             * *   **TEMP_UPGRADE**: renewal with a temporary upgrade
-             * *   **UPGRADE**: renewal with an upgrade
+             * <strong>example:</strong>
+             * <p>RENEWCHANGE</p>
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -936,7 +1054,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -944,11 +1065,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The editions of Anti-DDoS.
-             * <p>
-             * 
-             * *   If this parameter is empty, Anti-DDoS Origin Basic is enabled.
-             * *   If **AntiDDoS_Enhanced** is returned, Anti-DDoS Pro/Premium is enabled.
+             * <p>The editions of Anti-DDoS.</p>
+             * <ul>
+             * <li>If this parameter is empty, Anti-DDoS Origin Basic is enabled.</li>
+             * <li>If <strong>AntiDDoS_Enhanced</strong> is returned, Anti-DDoS Pro/Premium is enabled.</li>
+             * </ul>
              */
             public Builder securityProtectionTypes(SecurityProtectionTypes securityProtectionTypes) {
                 this.securityProtectionTypes = securityProtectionTypes;
@@ -956,11 +1077,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource is created by the service account. Valid values:
-             * <p>
+             * <p>Indicates whether the resource is created by the service account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The resource is not created by the service account.</li>
+             * <li><strong>1</strong>: The resource is created by the service account.</li>
+             * </ul>
              * 
-             * *   **0**: The resource is not created by the service account.
-             * *   **1**: The resource is created by the service account.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceManaged(Integer serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -968,11 +1092,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Internet Shared Bandwidth instance. Valid values:
-             * <p>
+             * <p>The status of the Internet Shared Bandwidth instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Available</strong>: The Internet Shared Bandwidth instance is available.</li>
+             * <li><strong>Modifying</strong>: The Internet Shared Bandwidth instance is being modified.</li>
+             * </ul>
              * 
-             * *   **Available**: The Internet Shared Bandwidth instance is available.
-             * *   **Modifying**: The Internet Shared Bandwidth instance is being modified.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -980,7 +1107,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the Internet Shared Bandwidth instance.
+             * <p>The tag that is added to the Internet Shared Bandwidth instance.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -988,7 +1115,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone of the Internet Shared Bandwidth instance. This parameter is returned only when BizType is set to CloudBox. If BizType is set to Default, an empty value is returned.
+             * <p>The zone of the Internet Shared Bandwidth instance. This parameter is returned only when BizType is set to CloudBox. If BizType is set to Default, an empty value is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1-lzdvn-cb</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1002,9 +1132,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommonBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonBandwidthPackagesResponseBody</p>
+     */
     public static class CommonBandwidthPackages extends TeaModel {
-        @NameInMap("CommonBandwidthPackage")
-        private java.util.List < CommonBandwidthPackage> commonBandwidthPackage;
+        @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackage")
+        private java.util.List<CommonBandwidthPackage> commonBandwidthPackage;
 
         private CommonBandwidthPackages(Builder builder) {
             this.commonBandwidthPackage = builder.commonBandwidthPackage;
@@ -1021,17 +1157,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return commonBandwidthPackage
          */
-        public java.util.List < CommonBandwidthPackage> getCommonBandwidthPackage() {
+        public java.util.List<CommonBandwidthPackage> getCommonBandwidthPackage() {
             return this.commonBandwidthPackage;
         }
 
         public static final class Builder {
-            private java.util.List < CommonBandwidthPackage> commonBandwidthPackage; 
+            private java.util.List<CommonBandwidthPackage> commonBandwidthPackage; 
 
             /**
              * CommonBandwidthPackage.
              */
-            public Builder commonBandwidthPackage(java.util.List < CommonBandwidthPackage> commonBandwidthPackage) {
+            public Builder commonBandwidthPackage(java.util.List<CommonBandwidthPackage> commonBandwidthPackage) {
                 this.commonBandwidthPackage = commonBandwidthPackage;
                 return this;
             }

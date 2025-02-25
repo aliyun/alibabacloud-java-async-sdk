@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnumItemsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEnumItemsRequest</p>
  */
 public class DescribeEnumItemsRequest extends Request {
-    @Query
-    @NameInMap("EnumType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnumType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String enumType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DescribeEnumItemsRequest(Builder builder) {
@@ -69,7 +69,14 @@ public class DescribeEnumItemsRequest extends Request {
         } 
 
         /**
-         * EnumType.
+         * <p>The type of the enumeration item. Valid values:</p>
+         * <ul>
+         * <li><strong>process</strong>: scenarios</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>process</p>
          */
         public Builder enumType(String enumType) {
             this.putQueryParameter("EnumType", enumType);
@@ -78,7 +85,14 @@ public class DescribeEnumItemsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

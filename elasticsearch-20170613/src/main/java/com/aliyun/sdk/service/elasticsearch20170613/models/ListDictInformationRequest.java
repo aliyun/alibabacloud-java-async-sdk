@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDictInformationRequest} extends {@link RequestModel}
  *
  * <p>ListDictInformationRequest</p>
  */
 public class ListDictInformationRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("analyzerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("analyzerType")
     private String analyzerType;
 
-    @Query
-    @NameInMap("bucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
-    @Query
-    @NameInMap("key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
     private ListDictInformationRequest(Builder builder) {
@@ -99,7 +99,10 @@ public class ListDictInformationRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -117,7 +120,10 @@ public class ListDictInformationRequest extends Request {
         }
 
         /**
-         * bucketName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search-cloud-test-cn-****</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("bucketName", bucketName);
@@ -126,7 +132,10 @@ public class ListDictInformationRequest extends Request {
         }
 
         /**
-         * key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss/dic_0.dic</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("key", key);

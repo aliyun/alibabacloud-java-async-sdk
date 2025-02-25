@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDDLPublishRecordsRequest} extends {@link RequestModel}
  *
  * <p>ListDDLPublishRecordsRequest</p>
  */
 public class ListDDLPublishRecordsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long orderId;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private ListDDLPublishRecordsRequest(Builder builder) {
@@ -93,10 +98,14 @@ public class ListDDLPublishRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the ticket.
-         * <p>
+         * <p>The ID of the ticket.</p>
+         * <blockquote>
+         * <p>You can create a schema design ticket in the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/69711.html">Design schemas</a>. You can also call the <a href="https://help.aliyun.com/document_detail/144649.html">CreateOrder</a> operation to create a schema design ticket and obtain the ID of the ticket.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can create a schema design ticket in the Data Management (DMS) console. For more information, see [Design schemas](~~69711~~). You can also call the [CreateOrder](~~144649~~) operation to create a schema design ticket and obtain the ID of the ticket.
+         * <strong>example:</strong>
+         * <p>3214325</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -105,10 +114,13 @@ public class ListDDLPublishRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, log on to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, log on to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopsPolicyGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopsPolicyGroupRequest</p>
  */
 public class ModifyDesktopsPolicyGroupRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
-    private java.util.List < String > desktopId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> desktopId;
 
-    @Query
-    @NameInMap("PolicyGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
 
-    @Query
-    @NameInMap("PolicyGroupIds")
-    private java.util.List < String > policyGroupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupIds")
+    private java.util.List<String> policyGroupIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyDesktopsPolicyGroupRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -68,7 +73,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     /**
      * @return policyGroupIds
      */
-    public java.util.List < String > getPolicyGroupIds() {
+    public java.util.List<String> getPolicyGroupIds() {
         return this.policyGroupIds;
     }
 
@@ -80,9 +85,9 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDesktopsPolicyGroupRequest, Builder> {
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String policyGroupId; 
-        private java.util.List < String > policyGroupIds; 
+        private java.util.List<String> policyGroupIds; 
         private String regionId; 
 
         private Builder() {
@@ -98,16 +103,23 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * <p>The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
         }
 
         /**
-         * PolicyGroupId.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -116,16 +128,20 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupIds.
+         * <p>策略ID列表。</p>
          */
-        public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
+        public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
             this.policyGroupIds = policyGroupIds;
             return this;
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

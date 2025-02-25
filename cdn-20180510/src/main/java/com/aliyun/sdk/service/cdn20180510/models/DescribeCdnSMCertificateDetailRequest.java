@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnSMCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnSMCertificateDetailRequest</p>
  */
 public class DescribeCdnSMCertificateDetailRequest extends Request {
-    @Query
-    @NameInMap("CertIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certIdentifier;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeCdnSMCertificateDetailRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class DescribeCdnSMCertificateDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>648****-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);

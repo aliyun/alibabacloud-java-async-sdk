@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInternetTrafficTrendRequest} extends {@link RequestModel}
  *
  * <p>DescribeInternetTrafficTrendRequest</p>
  */
 public class DescribeInternetTrafficTrendRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SourceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceCode;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     @Deprecated
     private String sourceIp;
 
-    @Query
-    @NameInMap("SrcPrivateIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcPrivateIP")
     private String srcPrivateIP;
 
-    @Query
-    @NameInMap("SrcPublicIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcPublicIP")
     private String srcPublicIP;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("TrafficType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficType")
     private String trafficType;
 
     private DescribeInternetTrafficTrendRequest(Builder builder) {
@@ -170,13 +175,15 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         } 
 
         /**
-         * The direction of the internet traffic.
-         * <p>
+         * <p>The direction of the internet traffic.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound traffic</li>
+         * <li><strong>out</strong>: outbound traffic</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **in**: inbound traffic
-         * *   **out**: outbound traffic
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -185,7 +192,11 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1674958929</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -194,11 +205,14 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The language of the content in the request and response. Valid values:
-         * <p>
+         * <p>The language of the content in the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh** (default): Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -207,7 +221,11 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The source code.
+         * <p>The source code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yundun</p>
          */
         public Builder sourceCode(String sourceCode) {
             this.putQueryParameter("SourceCode", sourceCode);
@@ -216,7 +234,10 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The IP address of the access source.
+         * <p>The IP address of the access source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.80.171.196</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -225,7 +246,10 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The private IP address of the source.
+         * <p>The private IP address of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.100.134.60</p>
          */
         public Builder srcPrivateIP(String srcPrivateIP) {
             this.putQueryParameter("SrcPrivateIP", srcPrivateIP);
@@ -234,7 +258,10 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The public IP address of the source.
+         * <p>The public IP address of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.112.210.136</p>
          */
         public Builder srcPublicIP(String srcPublicIP) {
             this.putQueryParameter("SrcPublicIP", srcPublicIP);
@@ -243,7 +270,11 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670307484</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -252,11 +283,14 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * The type of the traffic that is captured. Valid values:
-         * <p>
+         * <p>The type of the traffic that is captured. Valid values:</p>
+         * <ul>
+         * <li><strong>max</strong> (default): peak traffic</li>
+         * <li><strong>avg</strong>: average traffic</li>
+         * </ul>
          * 
-         * *   **max** (default): peak traffic
-         * *   **avg**: average traffic
+         * <strong>example:</strong>
+         * <p>max</p>
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

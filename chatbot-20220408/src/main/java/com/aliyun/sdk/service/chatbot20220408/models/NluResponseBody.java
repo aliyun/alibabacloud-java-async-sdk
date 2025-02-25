@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NluResponseBody} extends {@link TeaModel}
  *
  * <p>NluResponseBody</p>
  */
 public class NluResponseBody extends TeaModel {
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
-    @NameInMap("Messages")
+    @com.aliyun.core.annotation.NameInMap("Messages")
     private java.util.List < Messages> messages;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private NluResponseBody(Builder builder) {
@@ -91,11 +91,17 @@ public class NluResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class GlobalDictList extends TeaModel {
-        @NameInMap("StandardWord")
+        @com.aliyun.core.annotation.NameInMap("StandardWord")
         private String standardWord;
 
-        @NameInMap("Word")
+        @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
         private GlobalDictList(Builder builder) {
@@ -152,11 +158,17 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class GlobalSensitiveWordList extends TeaModel {
-        @NameInMap("StandardWord")
+        @com.aliyun.core.annotation.NameInMap("StandardWord")
         private String standardWord;
 
-        @NameInMap("Word")
+        @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
         private GlobalSensitiveWordList(Builder builder) {
@@ -213,11 +225,17 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class DialogHubNluInfo extends TeaModel {
-        @NameInMap("GlobalDictList")
+        @com.aliyun.core.annotation.NameInMap("GlobalDictList")
         private java.util.List < GlobalDictList> globalDictList;
 
-        @NameInMap("GlobalSensitiveWordList")
+        @com.aliyun.core.annotation.NameInMap("GlobalSensitiveWordList")
         private java.util.List < GlobalSensitiveWordList> globalSensitiveWordList;
 
         private DialogHubNluInfo(Builder builder) {
@@ -274,17 +292,23 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class EntityList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EntityList(Builder builder) {
@@ -375,17 +399,23 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class SlotList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SlotList(Builder builder) {
@@ -476,23 +506,29 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class IntentList extends TeaModel {
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private Long intentId;
 
-        @NameInMap("MatchDetail")
+        @com.aliyun.core.annotation.NameInMap("MatchDetail")
         private String matchDetail;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private String matchType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
-        @NameInMap("SlotList")
+        @com.aliyun.core.annotation.NameInMap("SlotList")
         private java.util.List < SlotList> slotList;
 
         private IntentList(Builder builder) {
@@ -617,11 +653,17 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class DsNluInfo extends TeaModel {
-        @NameInMap("EntityList")
+        @com.aliyun.core.annotation.NameInMap("EntityList")
         private java.util.List < EntityList> entityList;
 
-        @NameInMap("IntentList")
+        @com.aliyun.core.annotation.NameInMap("IntentList")
         private java.util.List < IntentList> intentList;
 
         private DsNluInfo(Builder builder) {
@@ -678,11 +720,17 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class Messages extends TeaModel {
-        @NameInMap("DialogHubNluInfo")
+        @com.aliyun.core.annotation.NameInMap("DialogHubNluInfo")
         private DialogHubNluInfo dialogHubNluInfo;
 
-        @NameInMap("DsNluInfo")
+        @com.aliyun.core.annotation.NameInMap("DsNluInfo")
         private DsNluInfo dsNluInfo;
 
         private Messages(Builder builder) {

@@ -1,51 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePolarDBXInstanceNodeRequest} extends {@link RequestModel}
  *
  * <p>UpdatePolarDBXInstanceNodeRequest</p>
  */
 public class UpdatePolarDBXInstanceNodeRequest extends Request {
-    @Query
-    @NameInMap("CNNodeCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddDNSpec")
+    private String addDNSpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CNNodeCount")
     private String CNNodeCount;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("DNNodeCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DNNodeCount")
     private String DNNodeCount;
 
-    @Query
-    @NameInMap("DbInstanceNodeCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstanceNodeCount")
     private String dbInstanceNodeCount;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteDNIds")
+    private String deleteDNIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoragePoolName")
+    private String storagePoolName;
 
     private UpdatePolarDBXInstanceNodeRequest(Builder builder) {
         super(builder);
+        this.addDNSpec = builder.addDNSpec;
         this.CNNodeCount = builder.CNNodeCount;
         this.clientToken = builder.clientToken;
         this.DBInstanceName = builder.DBInstanceName;
         this.DNNodeCount = builder.DNNodeCount;
         this.dbInstanceNodeCount = builder.dbInstanceNodeCount;
+        this.deleteDNIds = builder.deleteDNIds;
         this.regionId = builder.regionId;
+        this.storagePoolName = builder.storagePoolName;
     }
 
     public static Builder builder() {
@@ -59,6 +79,13 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addDNSpec
+     */
+    public String getAddDNSpec() {
+        return this.addDNSpec;
     }
 
     /**
@@ -97,19 +124,36 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
     }
 
     /**
+     * @return deleteDNIds
+     */
+    public String getDeleteDNIds() {
+        return this.deleteDNIds;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return storagePoolName
+     */
+    public String getStoragePoolName() {
+        return this.storagePoolName;
+    }
+
     public static final class Builder extends Request.Builder<UpdatePolarDBXInstanceNodeRequest, Builder> {
+        private String addDNSpec; 
         private String CNNodeCount; 
         private String clientToken; 
         private String DBInstanceName; 
         private String DNNodeCount; 
         private String dbInstanceNodeCount; 
+        private String deleteDNIds; 
         private String regionId; 
+        private String storagePoolName; 
 
         private Builder() {
             super();
@@ -117,13 +161,25 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
 
         private Builder(UpdatePolarDBXInstanceNodeRequest request) {
             super(request);
+            this.addDNSpec = request.addDNSpec;
             this.CNNodeCount = request.CNNodeCount;
             this.clientToken = request.clientToken;
             this.DBInstanceName = request.DBInstanceName;
             this.DNNodeCount = request.DNNodeCount;
             this.dbInstanceNodeCount = request.dbInstanceNodeCount;
+            this.deleteDNIds = request.deleteDNIds;
             this.regionId = request.regionId;
+            this.storagePoolName = request.storagePoolName;
         } 
+
+        /**
+         * AddDNSpec.
+         */
+        public Builder addDNSpec(String addDNSpec) {
+            this.putQueryParameter("AddDNSpec", addDNSpec);
+            this.addDNSpec = addDNSpec;
+            return this;
+        }
 
         /**
          * CNNodeCount.
@@ -144,7 +200,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-hzjasdyuoo</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -171,11 +230,32 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * DeleteDNIds.
+         */
+        public Builder deleteDNIds(String deleteDNIds) {
+            this.putQueryParameter("DeleteDNIds", deleteDNIds);
+            this.deleteDNIds = deleteDNIds;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StoragePoolName.
+         */
+        public Builder storagePoolName(String storagePoolName) {
+            this.putQueryParameter("StoragePoolName", storagePoolName);
+            this.storagePoolName = storagePoolName;
             return this;
         }
 

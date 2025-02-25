@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAlertRuleResponseBody</p>
  */
 public class UpdateAlertRuleResponseBody extends TeaModel {
-    @NameInMap("AlertId")
+    @com.aliyun.core.annotation.NameInMap("AlertId")
     private Long alertId;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateAlertRuleResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the alert rule.
+         * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder alertId(Long alertId) {
             this.alertId = alertId;
@@ -70,7 +78,12 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * <p>The struct returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder data(String data) {
             this.data = data;
@@ -78,7 +91,10 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AsymmetricVerifyRequest</p>
  */
 public class AsymmetricVerifyRequest extends Request {
-    @Query
-    @NameInMap("Algorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
 
-    @Query
-    @NameInMap("Digest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Digest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String digest;
 
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("KeyVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyVersionId;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private AsymmetricVerifyRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
         this.digest = builder.digest;
+        this.dryRun = builder.dryRun;
         this.keyId = builder.keyId;
         this.keyVersionId = builder.keyVersionId;
         this.value = builder.value;
@@ -74,6 +78,13 @@ public class AsymmetricVerifyRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return keyId
      */
     public String getKeyId() {
@@ -97,6 +108,7 @@ public class AsymmetricVerifyRequest extends Request {
     public static final class Builder extends Request.Builder<AsymmetricVerifyRequest, Builder> {
         private String algorithm; 
         private String digest; 
+        private String dryRun; 
         private String keyId; 
         private String keyVersionId; 
         private String value; 
@@ -109,6 +121,7 @@ public class AsymmetricVerifyRequest extends Request {
             super(request);
             this.algorithm = request.algorithm;
             this.digest = request.digest;
+            this.dryRun = request.dryRun;
             this.keyId = request.keyId;
             this.keyVersionId = request.keyVersionId;
             this.value = request.value;
@@ -132,6 +145,15 @@ public class AsymmetricVerifyRequest extends Request {
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
             this.digest = digest;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageEventOperationPageResponseBody</p>
  */
 public class DescribeImageEventOperationPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeImageEventOperationPageResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,27 +152,39 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationPageResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private String conditions;
 
-        @NameInMap("EventKey")
+        @com.aliyun.core.annotation.NameInMap("EventKey")
         private String eventKey;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OperationCode")
+        @com.aliyun.core.annotation.NameInMap("Note")
+        private String note;
+
+        @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
 
-        @NameInMap("Scenarios")
+        @com.aliyun.core.annotation.NameInMap("Scenarios")
         private String scenarios;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
 
         private List(Builder builder) {
             this.conditions = builder.conditions;
@@ -163,8 +192,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             this.eventName = builder.eventName;
             this.eventType = builder.eventType;
             this.id = builder.id;
+            this.note = builder.note;
             this.operationCode = builder.operationCode;
             this.scenarios = builder.scenarios;
+            this.source = builder.source;
         }
 
         public static Builder builder() {
@@ -211,6 +242,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return note
+         */
+        public String getNote() {
+            return this.note;
+        }
+
+        /**
          * @return operationCode
          */
         public String getOperationCode() {
@@ -224,22 +262,34 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             return this.scenarios;
         }
 
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
         public static final class Builder {
             private String conditions; 
             private String eventKey; 
             private String eventName; 
             private String eventType; 
             private Long id; 
+            private String note; 
             private String operationCode; 
             private String scenarios; 
+            private String source; 
 
             /**
-             * The rule conditions. The value is in the JSON format. Valid values of keys:
-             * <p>
+             * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+             * <ul>
+             * <li><strong>condition</strong>: the matching condition.</li>
+             * <li><strong>type</strong>: the matching type.</li>
+             * <li><strong>value</strong>: the matching value.</li>
+             * </ul>
              * 
-             * *   **condition**: the matching condition.
-             * *   **type**: the matching type.
-             * *   **value**: the matching value.
+             * <strong>example:</strong>
+             * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e783e&quot;}]</p>
              */
             public Builder conditions(String conditions) {
                 this.conditions = conditions;
@@ -247,7 +297,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword of the alert item.
+             * <p>The keyword of the alert item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PEM</p>
              */
             public Builder eventKey(String eventKey) {
                 this.eventKey = eventKey;
@@ -255,7 +308,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert item.
+             * <p>The name of the alert item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PEM</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -263,10 +319,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type.
-             * <p>
+             * <p>The alert type.</p>
+             * <ul>
+             * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+             * </ul>
              * 
-             * *   Only **sensitiveFile** may be returned.
+             * <strong>example:</strong>
+             * <p>sensitiveFile</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -274,7 +333,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the alert handling rule.
+             * <p>The primary key of the alert handling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2646624</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -282,10 +344,24 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The operation code.
-             * <p>
+             * <p>The remarks.</p>
              * 
-             * *   Only **whitelist** may be returned, which means that the alert item is added to the whitelist.
+             * <strong>example:</strong>
+             * <p>xxx</p>
+             */
+            public Builder note(String note) {
+                this.note = note;
+                return this;
+            }
+
+            /**
+             * <p>The operation code.</p>
+             * <ul>
+             * <li>Only <strong>whitelist</strong> may be returned, which means that the alert item is added to the whitelist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>whitelist</p>
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -293,14 +369,32 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The application scope of the rule. The value is in the JSON format. Valid values of keys:
-             * <p>
+             * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+             * <ul>
+             * <li><strong>type</strong></li>
+             * <li><strong>value</strong></li>
+             * </ul>
              * 
-             * *   **type**
-             * *   **value**
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;
+                return this;
+            }
+
+            /**
+             * <p>The source of the whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>image</strong>: image.</li>
+             * <li><strong>agentless</strong>: agentless detection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>agentless</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 
@@ -311,14 +405,20 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationPageResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -362,7 +462,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -370,7 +473,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -378,7 +484,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -392,11 +501,17 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
         private Data(Builder builder) {
@@ -415,7 +530,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -427,19 +542,19 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private PageInfo pageInfo; 
 
             /**
-             * The alert handling rules.
+             * <p>The alert handling rules.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * The pagination information.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

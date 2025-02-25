@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRegisteredLocationResponseBody</p>
  */
 public class UpdateRegisteredLocationResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateRegisteredLocationResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class UpdateRegisteredLocationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("LocationId")
+        @com.aliyun.core.annotation.NameInMap("LocationId")
         private String locationId;
 
-        @NameInMap("StorageCollectTaskOperationResultList")
+        @com.aliyun.core.annotation.NameInMap("StorageCollectTaskOperationResultList")
         private java.util.List < StorageCollectTaskOperationResult > storageCollectTaskOperationResultList;
 
         private Data(Builder builder) {

@@ -1,63 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRegistrantProfilesRequest} extends {@link RequestModel}
  *
  * <p>QueryRegistrantProfilesRequest</p>
  */
 public class QueryRegistrantProfilesRequest extends Request {
-    @Query
-    @NameInMap("DefaultRegistrantProfile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRegistrantProfile")
     private Boolean defaultRegistrantProfile;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RealNameStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealNameStatus")
     private String realNameStatus;
 
-    @Query
-    @NameInMap("RegistrantOrganization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
     private String registrantOrganization;
 
-    @Query
-    @NameInMap("RegistrantProfileId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfileId")
     private Long registrantProfileId;
 
-    @Query
-    @NameInMap("RegistrantProfileType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfileType")
     private String registrantProfileType;
 
-    @Query
-    @NameInMap("RegistrantType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantType")
     private String registrantType;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("ZhRegistrantOrganization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZhRegistrantOrganization")
     private String zhRegistrantOrganization;
 
     private QueryRegistrantProfilesRequest(Builder builder) {
@@ -72,6 +76,7 @@ public class QueryRegistrantProfilesRequest extends Request {
         this.registrantProfileId = builder.registrantProfileId;
         this.registrantProfileType = builder.registrantProfileType;
         this.registrantType = builder.registrantType;
+        this.remark = builder.remark;
         this.userClientIp = builder.userClientIp;
         this.zhRegistrantOrganization = builder.zhRegistrantOrganization;
     }
@@ -160,6 +165,13 @@ public class QueryRegistrantProfilesRequest extends Request {
     }
 
     /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
      * @return userClientIp
      */
     public String getUserClientIp() {
@@ -184,6 +196,7 @@ public class QueryRegistrantProfilesRequest extends Request {
         private Long registrantProfileId; 
         private String registrantProfileType; 
         private String registrantType; 
+        private String remark; 
         private String userClientIp; 
         private String zhRegistrantOrganization; 
 
@@ -203,6 +216,7 @@ public class QueryRegistrantProfilesRequest extends Request {
             this.registrantProfileId = request.registrantProfileId;
             this.registrantProfileType = request.registrantProfileType;
             this.registrantType = request.registrantType;
+            this.remark = request.remark;
             this.userClientIp = request.userClientIp;
             this.zhRegistrantOrganization = request.zhRegistrantOrganization;
         } 
@@ -294,6 +308,15 @@ public class QueryRegistrantProfilesRequest extends Request {
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
             this.registrantType = registrantType;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

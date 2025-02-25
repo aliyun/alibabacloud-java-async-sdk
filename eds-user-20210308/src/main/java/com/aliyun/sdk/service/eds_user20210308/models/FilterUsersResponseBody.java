@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FilterUsersResponseBody} extends {@link TeaModel}
  *
  * <p>FilterUsersResponseBody</p>
  */
 public class FilterUsersResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
-    private java.util.List < Users> users;
+    @com.aliyun.core.annotation.NameInMap("Users")
+    private java.util.List<Users> users;
 
     private FilterUsersResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,17 +57,20 @@ public class FilterUsersResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +78,10 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBD276B5-00FF-5E04-8EF7-5CBA09BF112A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +89,9 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the convenience users.
+         * <p>The information about the convenience user.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.users = users;
             return this;
         }
@@ -91,11 +102,17 @@ public class FilterUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
     public static class ExternalInfo extends TeaModel {
-        @NameInMap("ExternalName")
+        @com.aliyun.core.annotation.NameInMap("ExternalName")
         private String externalName;
 
-        @NameInMap("JobNumber")
+        @com.aliyun.core.annotation.NameInMap("JobNumber")
         private String jobNumber;
 
         private ExternalInfo(Builder builder) {
@@ -130,7 +147,10 @@ public class FilterUsersResponseBody extends TeaModel {
             private String jobNumber; 
 
             /**
-             * The account that is connected to the user.
+             * <p>The account that is associated with the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -138,7 +158,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The account, student ID, or employee ID that is connected to the user.
+             * <p>The account, student ID, or employee ID that is associated with the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>030801</p>
              */
             public Builder jobNumber(String jobNumber) {
                 this.jobNumber = jobNumber;
@@ -152,11 +175,17 @@ public class FilterUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
     public static class PropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
-        @NameInMap("PropertyValueId")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueId")
         private Long propertyValueId;
 
         private PropertyValues(Builder builder) {
@@ -191,7 +220,10 @@ public class FilterUsersResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * The property value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -199,7 +231,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The property value ID.
+             * <p>The ID of the property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -213,23 +248,29 @@ public class FilterUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
     public static class UserSetPropertiesModels extends TeaModel {
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("PropertyType")
+        @com.aliyun.core.annotation.NameInMap("PropertyType")
         private Integer propertyType;
 
-        @NameInMap("PropertyValues")
-        private java.util.List < PropertyValues> propertyValues;
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
+        private java.util.List<PropertyValues> propertyValues;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private UserSetPropertiesModels(Builder builder) {
@@ -273,7 +314,7 @@ public class FilterUsersResponseBody extends TeaModel {
         /**
          * @return propertyValues
          */
-        public java.util.List < PropertyValues> getPropertyValues() {
+        public java.util.List<PropertyValues> getPropertyValues() {
             return this.propertyValues;
         }
 
@@ -295,12 +336,15 @@ public class FilterUsersResponseBody extends TeaModel {
             private Long propertyId; 
             private String propertyKey; 
             private Integer propertyType; 
-            private java.util.List < PropertyValues> propertyValues; 
+            private java.util.List<PropertyValues> propertyValues; 
             private Long userId; 
             private String userName; 
 
             /**
-             * The property ID.
+             * <p>The property ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -308,7 +352,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The property name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -316,7 +363,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The property ID.
+             * <p>The property type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder propertyType(Integer propertyType) {
                 this.propertyType = propertyType;
@@ -324,15 +374,18 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The property value.
+             * <p>The property values.</p>
              */
-            public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
+            public Builder propertyValues(java.util.List<PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
                 return this;
             }
 
             /**
-             * The ID of the user that is bound to the property.
+             * <p>The ID of the convenience user that is bound to the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -340,7 +393,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user that is bound to the property.
+             * <p>The username of the convenience user that is bound to the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -354,50 +410,66 @@ public class FilterUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FilterUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>FilterUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
-        @NameInMap("DesktopCount")
+        @com.aliyun.core.annotation.NameInMap("AutoLockTime")
+        private String autoLockTime;
+
+        @com.aliyun.core.annotation.NameInMap("DesktopCount")
         private Long desktopCount;
 
-        @NameInMap("DesktopGroupCount")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupCount")
         private Long desktopGroupCount;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EnableAdminAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
         private Boolean enableAdminAccess;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ExternalInfo")
+        @com.aliyun.core.annotation.NameInMap("ExternalInfo")
         private ExternalInfo externalInfo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsTenantManager")
+        @com.aliyun.core.annotation.NameInMap("IsTenantManager")
         private Boolean isTenantManager;
 
-        @NameInMap("OwnerType")
+        @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireDays")
+        private Integer passwordExpireDays;
+
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireRestDays")
+        private Integer passwordExpireRestDays;
+
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("RealNickName")
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
         private String realNickName;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("UserSetPropertiesModels")
-        private java.util.List < UserSetPropertiesModels> userSetPropertiesModels;
+        @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
+        private java.util.List<UserSetPropertiesModels> userSetPropertiesModels;
 
         private Users(Builder builder) {
+            this.autoLockTime = builder.autoLockTime;
             this.desktopCount = builder.desktopCount;
             this.desktopGroupCount = builder.desktopGroupCount;
             this.email = builder.email;
@@ -407,6 +479,8 @@ public class FilterUsersResponseBody extends TeaModel {
             this.id = builder.id;
             this.isTenantManager = builder.isTenantManager;
             this.ownerType = builder.ownerType;
+            this.passwordExpireDays = builder.passwordExpireDays;
+            this.passwordExpireRestDays = builder.passwordExpireRestDays;
             this.phone = builder.phone;
             this.realNickName = builder.realNickName;
             this.remark = builder.remark;
@@ -420,6 +494,13 @@ public class FilterUsersResponseBody extends TeaModel {
 
         public static Users create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoLockTime
+         */
+        public String getAutoLockTime() {
+            return this.autoLockTime;
         }
 
         /**
@@ -486,6 +567,20 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return passwordExpireDays
+         */
+        public Integer getPasswordExpireDays() {
+            return this.passwordExpireDays;
+        }
+
+        /**
+         * @return passwordExpireRestDays
+         */
+        public Integer getPasswordExpireRestDays() {
+            return this.passwordExpireRestDays;
+        }
+
+        /**
          * @return phone
          */
         public String getPhone() {
@@ -516,11 +611,12 @@ public class FilterUsersResponseBody extends TeaModel {
         /**
          * @return userSetPropertiesModels
          */
-        public java.util.List < UserSetPropertiesModels> getUserSetPropertiesModels() {
+        public java.util.List<UserSetPropertiesModels> getUserSetPropertiesModels() {
             return this.userSetPropertiesModels;
         }
 
         public static final class Builder {
+            private String autoLockTime; 
             private Long desktopCount; 
             private Long desktopGroupCount; 
             private String email; 
@@ -530,14 +626,27 @@ public class FilterUsersResponseBody extends TeaModel {
             private Long id; 
             private Boolean isTenantManager; 
             private String ownerType; 
+            private Integer passwordExpireDays; 
+            private Integer passwordExpireRestDays; 
             private String phone; 
             private String realNickName; 
             private String remark; 
             private Long status; 
-            private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
+            private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
-             * The number of cloud desktops that are assigned to the user.
+             * AutoLockTime.
+             */
+            public Builder autoLockTime(String autoLockTime) {
+                this.autoLockTime = autoLockTime;
+                return this;
+            }
+
+            /**
+             * <p>The number of cloud desktops that are assigned to the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder desktopCount(Long desktopCount) {
                 this.desktopCount = desktopCount;
@@ -545,7 +654,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of authorized desktop groups that are owned by the user. This value is returned if you set `IncludeDesktopGroupCount` to `true`.
+             * <p>The number of cloud desktop pools that are assigned to the convenience user. This value is returned if you set <code>IncludeDesktopGroupCount</code> to <code>true</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder desktopGroupCount(Long desktopGroupCount) {
                 this.desktopGroupCount = desktopGroupCount;
@@ -553,7 +665,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The email address.
+             * <p>The email address of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:testName@example.com">testName@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -561,26 +676,26 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user is a local administrator.
-             * <p>
+             * <p>Indicates whether the convenience user is a local administrator.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -588,7 +703,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -596,7 +714,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information about the user.
+             * <p>The additional information about the convenience user.</p>
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
@@ -604,7 +722,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The ID of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -612,26 +733,26 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user is a tenant administrator.
-             * <p>
+             * <p>Indicates whether the convenience user is a tenant administrator.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTenantManager(Boolean isTenantManager) {
                 this.isTenantManager = isTenantManager;
@@ -639,34 +760,15 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account ownership.
-             * <p>
+             * <p>The type of the account ownership.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>CreateFromManager: administrator-activated</li>
+             * <li>Normal: user-activated</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   CreateFromManager
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     administrator-activated
-             * 
-             *     <!-- -->
-             * 
-             * *   Normal
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     user-activated
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -674,7 +776,26 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number.
+             * PasswordExpireDays.
+             */
+            public Builder passwordExpireDays(Integer passwordExpireDays) {
+                this.passwordExpireDays = passwordExpireDays;
+                return this;
+            }
+
+            /**
+             * PasswordExpireRestDays.
+             */
+            public Builder passwordExpireRestDays(Integer passwordExpireRestDays) {
+                this.passwordExpireRestDays = passwordExpireRestDays;
+                return this;
+            }
+
+            /**
+             * <p>The mobile number of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -682,7 +803,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RealNickName.
+             * <p>The nickname of the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oliver</p>
              */
             public Builder realNickName(String realNickName) {
                 this.realNickName = realNickName;
@@ -690,7 +814,10 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks on the convenience user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -698,26 +825,26 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The user status.
-             * <p>
+             * <p>The status of the convenience user.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>0: The convenience user is normal.</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   0: The user status is normal.
+             * <!-- -->
+             * </li>
+             * <li><p>9: The convenience user is locked.</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   9: The user is locked.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -725,9 +852,9 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the properties.
+             * <p>The information about the properties.</p>
              */
-            public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
+            public Builder userSetPropertiesModels(java.util.List<UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;
                 return this;
             }

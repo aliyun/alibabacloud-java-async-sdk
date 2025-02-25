@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainPvDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainPvDataResponseBody</p>
  */
 public class DescribeVsDomainPvDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PvDataInterval")
+    @com.aliyun.core.annotation.NameInMap("PvDataInterval")
     private PvDataInterval pvDataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVsDomainPvDataResponseBody(Builder builder) {
@@ -151,11 +156,17 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainPvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainPvDataResponseBody</p>
+     */
     public static class UsageData extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UsageData(Builder builder) {
@@ -212,9 +223,15 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainPvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainPvDataResponseBody</p>
+     */
     public static class PvDataInterval extends TeaModel {
-        @NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        @com.aliyun.core.annotation.NameInMap("UsageData")
+        private java.util.List<UsageData> usageData;
 
         private PvDataInterval(Builder builder) {
             this.usageData = builder.usageData;
@@ -231,17 +248,17 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

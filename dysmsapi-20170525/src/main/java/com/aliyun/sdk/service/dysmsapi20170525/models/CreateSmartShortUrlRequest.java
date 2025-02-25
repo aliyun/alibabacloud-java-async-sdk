@@ -1,53 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSmartShortUrlRequest} extends {@link RequestModel}
  *
  * <p>CreateSmartShortUrlRequest</p>
  */
 public class CreateSmartShortUrlRequest extends Request {
-    @Query
-    @NameInMap("Expiration")
-    private Long expiration;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
+    private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNumbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumbers;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceName")
-    private String sourceName;
-
-    @Query
-    @NameInMap("SourceUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceUrl;
 
     private CreateSmartShortUrlRequest(Builder builder) {
         super(builder);
-        this.expiration = builder.expiration;
+        this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.phoneNumbers = builder.phoneNumbers;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceName = builder.sourceName;
         this.sourceUrl = builder.sourceUrl;
     }
 
@@ -65,10 +67,10 @@ public class CreateSmartShortUrlRequest extends Request {
     }
 
     /**
-     * @return expiration
+     * @return outId
      */
-    public Long getExpiration() {
-        return this.expiration;
+    public String getOutId() {
+        return this.outId;
     }
 
     /**
@@ -100,13 +102,6 @@ public class CreateSmartShortUrlRequest extends Request {
     }
 
     /**
-     * @return sourceName
-     */
-    public String getSourceName() {
-        return this.sourceName;
-    }
-
-    /**
      * @return sourceUrl
      */
     public String getSourceUrl() {
@@ -114,12 +109,11 @@ public class CreateSmartShortUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSmartShortUrlRequest, Builder> {
-        private Long expiration; 
+        private String outId; 
         private Long ownerId; 
         private String phoneNumbers; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceName; 
         private String sourceUrl; 
 
         private Builder() {
@@ -128,21 +122,20 @@ public class CreateSmartShortUrlRequest extends Request {
 
         private Builder(CreateSmartShortUrlRequest request) {
             super(request);
-            this.expiration = request.expiration;
+            this.outId = request.outId;
             this.ownerId = request.ownerId;
             this.phoneNumbers = request.phoneNumbers;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sourceName = request.sourceName;
             this.sourceUrl = request.sourceUrl;
         } 
 
         /**
-         * Expiration.
+         * OutId.
          */
-        public Builder expiration(Long expiration) {
-            this.putQueryParameter("Expiration", expiration);
-            this.expiration = expiration;
+        public Builder outId(String outId) {
+            this.putQueryParameter("OutId", outId);
+            this.outId = outId;
             return this;
         }
 
@@ -156,7 +149,10 @@ public class CreateSmartShortUrlRequest extends Request {
         }
 
         /**
-         * PhoneNumbers.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15900195***</p>
          */
         public Builder phoneNumbers(String phoneNumbers) {
             this.putQueryParameter("PhoneNumbers", phoneNumbers);
@@ -183,16 +179,10 @@ public class CreateSmartShortUrlRequest extends Request {
         }
 
         /**
-         * SourceName.
-         */
-        public Builder sourceName(String sourceName) {
-            this.putQueryParameter("SourceName", sourceName);
-            this.sourceName = sourceName;
-            return this;
-        }
-
-        /**
-         * SourceUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder sourceUrl(String sourceUrl) {
             this.putQueryParameter("SourceUrl", sourceUrl);

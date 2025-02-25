@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateSlrPermissionRequest} extends {@link RequestModel}
  *
  * <p>ValidateSlrPermissionRequest</p>
  */
 public class ValidateSlrPermissionRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("rolename")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rolename")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rolename;
 
     private ValidateSlrPermissionRequest(Builder builder) {
@@ -78,7 +78,10 @@ public class ValidateSlrPermissionRequest extends Request {
         }
 
         /**
-         * rolename.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForElasticsearchCollector</p>
          */
         public Builder rolename(String rolename) {
             this.putQueryParameter("rolename", rolename);

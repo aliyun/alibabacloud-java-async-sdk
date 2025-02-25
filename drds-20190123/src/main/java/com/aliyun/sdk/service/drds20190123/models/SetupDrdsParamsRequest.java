@@ -90,12 +90,12 @@ public class SetupDrdsParamsRequest extends Request {
             super();
         } 
 
-        private Builder(SetupDrdsParamsRequest response) {
-            super(response);
-            this.data = response.data;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.paramLevel = response.paramLevel;
-            this.regionId = response.regionId;
+        private Builder(SetupDrdsParamsRequest request) {
+            super(request);
+            this.data = request.data;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.paramLevel = request.paramLevel;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -108,7 +108,7 @@ public class SetupDrdsParamsRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance for which you want to configure parameters.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -117,7 +117,11 @@ public class SetupDrdsParamsRequest extends Request {
         }
 
         /**
-         * ParamLevel.
+         * The resource for which you want to configure parameters. Valid values:
+         * <p>
+         * 
+         * *   **INSTANCE**: Configure parameters for the instance.
+         * *   **DB**: Configure parameters for the databases of the instance.
          */
         public Builder paramLevel(String paramLevel) {
             this.putQueryParameter("ParamLevel", paramLevel);
@@ -126,7 +130,7 @@ public class SetupDrdsParamsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the PolarDB-X 1.0 instance is located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +220,7 @@ public class SetupDrdsParamsRequest extends Request {
             private String paramVariableName; 
 
             /**
-             * DbName.
+             * The name of the parameter that you want to configure for a database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -224,7 +228,7 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * ParamRanges.
+             * The valid values of the parameter.
              */
             public Builder paramRanges(String paramRanges) {
                 this.paramRanges = paramRanges;
@@ -232,7 +236,12 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * ParamType.
+             * The type of the parameter that you want to configure. Valid values:
+             * <p>
+             * 
+             * *   **ATOM**: the configuration item in the layer-3 data source.
+             * *   **CONFIG**: the configuration item in ConfigServer.
+             * *   **DIAMOND**: the configuration item in Diamond.
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -240,7 +249,7 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * ParamValue.
+             * The value of parameter that you want to configure.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -248,7 +257,7 @@ public class SetupDrdsParamsRequest extends Request {
             }
 
             /**
-             * ParamVariableName.
+             * The name of the parameter that you want to configure.
              */
             public Builder paramVariableName(String paramVariableName) {
                 this.paramVariableName = paramVariableName;

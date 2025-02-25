@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceRequest} extends {@link RequestModel}
  *
  * <p>CreateNamespaceRequest</p>
  */
 public class CreateNamespaceRequest extends Request {
-    @Query
-    @NameInMap("EnableMicroRegistration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableMicroRegistration")
     private Boolean enableMicroRegistration;
 
-    @Query
-    @NameInMap("NameSpaceShortId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
     private String nameSpaceShortId;
 
-    @Query
-    @NameInMap("NamespaceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceDescription")
     private String namespaceDescription;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("NamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
 
     private CreateNamespaceRequest(Builder builder) {
@@ -120,7 +125,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The returned message.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameSpaceShortId(String nameSpaceShortId) {
             this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
@@ -129,7 +137,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The message returned for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder namespaceDescription(String namespaceDescription) {
             this.putQueryParameter("NamespaceDescription", namespaceDescription);
@@ -138,13 +149,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The data returned.</p>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -153,7 +161,11 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * cn-beijing:test
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

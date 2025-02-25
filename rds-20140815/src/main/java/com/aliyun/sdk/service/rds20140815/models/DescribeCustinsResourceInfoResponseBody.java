@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustinsResourceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustinsResourceInfoResponseBody</p>
  */
 public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCustinsResourceInfoResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,74 +79,80 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustinsResourceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustinsResourceInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CpuAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("CpuAdjustDeadline")
         private String cpuAdjustDeadline;
 
-        @NameInMap("CpuAdjustableMaxRatio")
+        @com.aliyun.core.annotation.NameInMap("CpuAdjustableMaxRatio")
         private String cpuAdjustableMaxRatio;
 
-        @NameInMap("CpuAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("CpuAdjustableMaxValue")
         private String cpuAdjustableMaxValue;
 
-        @NameInMap("CpuIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("CpuIncreaseRatio")
         private String cpuIncreaseRatio;
 
-        @NameInMap("CpuIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("CpuIncreaseRatioValue")
         private String cpuIncreaseRatioValue;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("IopsAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("IopsAdjustableMaxValue")
         private String iopsAdjustableMaxValue;
 
-        @NameInMap("MaxConnAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("MaxConnAdjustDeadline")
         private String maxConnAdjustDeadline;
 
-        @NameInMap("MaxConnAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxConnAdjustableMaxValue")
         private String maxConnAdjustableMaxValue;
 
-        @NameInMap("MaxConnIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("MaxConnIncreaseRatio")
         private String maxConnIncreaseRatio;
 
-        @NameInMap("MaxConnIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("MaxConnIncreaseRatioValue")
         private String maxConnIncreaseRatioValue;
 
-        @NameInMap("MaxIopsAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("MaxIopsAdjustDeadline")
         private String maxIopsAdjustDeadline;
 
-        @NameInMap("MaxIopsIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("MaxIopsIncreaseRatio")
         private String maxIopsIncreaseRatio;
 
-        @NameInMap("MaxIopsIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("MaxIopsIncreaseRatioValue")
         private String maxIopsIncreaseRatioValue;
 
-        @NameInMap("MemAdjustableMaxRatio")
+        @com.aliyun.core.annotation.NameInMap("MemAdjustableMaxRatio")
         private String memAdjustableMaxRatio;
 
-        @NameInMap("MemAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("MemAdjustableMaxValue")
         private String memAdjustableMaxValue;
 
-        @NameInMap("MemoryAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("MemoryAdjustDeadline")
         private String memoryAdjustDeadline;
 
-        @NameInMap("MemoryIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("MemoryIncreaseRatio")
         private String memoryIncreaseRatio;
 
-        @NameInMap("MemoryIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("MemoryIncreaseRatioValue")
         private String memoryIncreaseRatioValue;
 
-        @NameInMap("OriginCpu")
+        @com.aliyun.core.annotation.NameInMap("OriginCpu")
         private String originCpu;
 
-        @NameInMap("OriginMaxConn")
+        @com.aliyun.core.annotation.NameInMap("OriginMaxConn")
         private String originMaxConn;
 
-        @NameInMap("OriginMaxIops")
+        @com.aliyun.core.annotation.NameInMap("OriginMaxIops")
         private String originMaxIops;
 
-        @NameInMap("OriginMemory")
+        @com.aliyun.core.annotation.NameInMap("OriginMemory")
         private String originMemory;
 
         private Data(Builder builder) {
@@ -362,7 +376,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             private String originMemory; 
 
             /**
-             * The deadline for the CPU adjustment.
+             * <p>The deadline for the CPU adjustment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-25</p>
              */
             public Builder cpuAdjustDeadline(String cpuAdjustDeadline) {
                 this.cpuAdjustDeadline = cpuAdjustDeadline;
@@ -370,7 +387,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum percentage of the system CPU resources that the instance can use.
+             * <p>The maximum percentage of the system CPU resources that the instance can use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder cpuAdjustableMaxRatio(String cpuAdjustableMaxRatio) {
                 this.cpuAdjustableMaxRatio = cpuAdjustableMaxRatio;
@@ -378,7 +398,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum CPU utilization.
+             * <p>The maximum CPU utilization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder cpuAdjustableMaxValue(String cpuAdjustableMaxValue) {
                 this.cpuAdjustableMaxValue = cpuAdjustableMaxValue;
@@ -386,7 +409,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization.
+             * <p>The CPU utilization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpuIncreaseRatio(String cpuIncreaseRatio) {
                 this.cpuIncreaseRatio = cpuIncreaseRatio;
@@ -394,7 +420,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization. Unit: percentage.
+             * <p>The CPU utilization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpuIncreaseRatioValue(String cpuIncreaseRatioValue) {
                 this.cpuIncreaseRatioValue = cpuIncreaseRatioValue;
@@ -402,7 +431,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-wz92gn1ll9fe5d3a4</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -410,7 +442,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS.
+             * <p>The maximum IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder iopsAdjustableMaxValue(String iopsAdjustableMaxValue) {
                 this.iopsAdjustableMaxValue = iopsAdjustableMaxValue;
@@ -418,7 +453,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The deadline for the adjustment of the maximum number of connections.
+             * <p>The deadline for the adjustment of the maximum number of connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-25</p>
              */
             public Builder maxConnAdjustDeadline(String maxConnAdjustDeadline) {
                 this.maxConnAdjustDeadline = maxConnAdjustDeadline;
@@ -426,7 +464,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections.
+             * <p>The maximum number of concurrent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxConnAdjustableMaxValue(String maxConnAdjustableMaxValue) {
                 this.maxConnAdjustableMaxValue = maxConnAdjustableMaxValue;
@@ -434,7 +475,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections.
+             * <p>The maximum number of concurrent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxConnIncreaseRatio(String maxConnIncreaseRatio) {
                 this.maxConnIncreaseRatio = maxConnIncreaseRatio;
@@ -442,7 +486,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections.
+             * <p>The maximum number of concurrent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxConnIncreaseRatioValue(String maxConnIncreaseRatioValue) {
                 this.maxConnIncreaseRatioValue = maxConnIncreaseRatioValue;
@@ -450,7 +497,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The deadline for the adjustment of the maximum IOPS.
+             * <p>The deadline for the adjustment of the maximum IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-25</p>
              */
             public Builder maxIopsAdjustDeadline(String maxIopsAdjustDeadline) {
                 this.maxIopsAdjustDeadline = maxIopsAdjustDeadline;
@@ -458,7 +508,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS.
+             * <p>The maximum IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxIopsIncreaseRatio(String maxIopsIncreaseRatio) {
                 this.maxIopsIncreaseRatio = maxIopsIncreaseRatio;
@@ -466,7 +519,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS that can be supported by the instance.
+             * <p>The maximum IOPS that can be supported by the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxIopsIncreaseRatioValue(String maxIopsIncreaseRatioValue) {
                 this.maxIopsIncreaseRatioValue = maxIopsIncreaseRatioValue;
@@ -474,7 +530,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum percentage of the system memory that the instance can use.
+             * <p>The maximum percentage of the system memory that the instance can use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder memAdjustableMaxRatio(String memAdjustableMaxRatio) {
                 this.memAdjustableMaxRatio = memAdjustableMaxRatio;
@@ -482,7 +541,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the resources to be evaluated.
+             * <p>The maximum value of the resources to be evaluated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder memAdjustableMaxValue(String memAdjustableMaxValue) {
                 this.memAdjustableMaxValue = memAdjustableMaxValue;
@@ -490,7 +552,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The deadline for the memory adjustment.
+             * <p>The deadline for the memory adjustment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-25</p>
              */
             public Builder memoryAdjustDeadline(String memoryAdjustDeadline) {
                 this.memoryAdjustDeadline = memoryAdjustDeadline;
@@ -498,7 +563,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The memory increase percentage.
+             * <p>The memory increase percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-25</p>
              */
             public Builder memoryIncreaseRatio(String memoryIncreaseRatio) {
                 this.memoryIncreaseRatio = memoryIncreaseRatio;
@@ -506,7 +574,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The memory usage. Unit: MB.
+             * <p>The memory usage. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder memoryIncreaseRatioValue(String memoryIncreaseRatioValue) {
                 this.memoryIncreaseRatioValue = memoryIncreaseRatioValue;
@@ -514,7 +585,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPUs of the instance.
+             * <p>The number of CPUs of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder originCpu(String originCpu) {
                 this.originCpu = originCpu;
@@ -522,7 +596,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections.
+             * <p>The maximum number of concurrent connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder originMaxConn(String originMaxConn) {
                 this.originMaxConn = originMaxConn;
@@ -530,7 +607,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS.
+             * <p>The maximum IOPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder originMaxIops(String originMaxIops) {
                 this.originMaxIops = originMaxIops;
@@ -538,7 +618,10 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The actual memory used. Unit: MB.
+             * <p>The actual memory used. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder originMemory(String originMemory) {
                 this.originMemory = originMemory;

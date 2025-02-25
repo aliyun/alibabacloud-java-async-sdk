@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AirportSearchResponseBody} extends {@link TeaModel}
  *
  * <p>AirportSearchResponseBody</p>
  */
 public class AirportSearchResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private AirportSearchResponseBody(Builder builder) {
@@ -114,7 +119,7 @@ public class AirportSearchResponseBody extends TeaModel {
         }
 
         /**
-         * module。
+         * <p>module。</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -151,17 +156,23 @@ public class AirportSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AirportSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>AirportSearchResponseBody</p>
+     */
     public static class Cities extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("distance")
+        @com.aliyun.core.annotation.NameInMap("distance")
         private Integer distance;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("travel_name")
+        @com.aliyun.core.annotation.NameInMap("travel_name")
         private String travelName;
 
         private Cities(Builder builder) {
@@ -252,11 +263,17 @@ public class AirportSearchResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AirportSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>AirportSearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("cities")
-        private java.util.List < Cities> cities;
+        @com.aliyun.core.annotation.NameInMap("cities")
+        private java.util.List<Cities> cities;
 
-        @NameInMap("nearby")
+        @com.aliyun.core.annotation.NameInMap("nearby")
         private Boolean nearby;
 
         private Module(Builder builder) {
@@ -275,7 +292,7 @@ public class AirportSearchResponseBody extends TeaModel {
         /**
          * @return cities
          */
-        public java.util.List < Cities> getCities() {
+        public java.util.List<Cities> getCities() {
             return this.cities;
         }
 
@@ -287,13 +304,13 @@ public class AirportSearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Cities> cities; 
+            private java.util.List<Cities> cities; 
             private Boolean nearby; 
 
             /**
              * cities.
              */
-            public Builder cities(java.util.List < Cities> cities) {
+            public Builder cities(java.util.List<Cities> cities) {
                 this.cities = cities;
                 return this;
             }

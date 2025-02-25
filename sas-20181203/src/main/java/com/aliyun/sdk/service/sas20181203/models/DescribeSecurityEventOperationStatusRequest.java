@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityEventOperationStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityEventOperationStatusRequest</p>
  */
 public class DescribeSecurityEventOperationStatusRequest extends Request {
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityEventIds")
-    @Validation(required = true)
-    private java.util.List < String > securityEventIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> securityEventIds;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
     private DescribeSecurityEventOperationStatusRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
     /**
      * @return securityEventIds
      */
-    public java.util.List < String > getSecurityEventIds() {
+    public java.util.List<String> getSecurityEventIds() {
         return this.securityEventIds;
     }
 
@@ -81,7 +86,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSecurityEventOperationStatusRequest, Builder> {
         private Long resourceOwnerId; 
-        private java.util.List < String > securityEventIds; 
+        private java.util.List<String> securityEventIds; 
         private String sourceIp; 
         private Long taskId; 
 
@@ -107,19 +112,26 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * The IDs of the alert events.
-         * <p>
+         * <p>The IDs of the alert events.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the TaskId and SecurityEventIds parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify at least one of the TaskId and SecurityEventIds parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;909361&quot;]</p>
          */
-        public Builder securityEventIds(java.util.List < String > securityEventIds) {
+        public Builder securityEventIds(java.util.List<String> securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
             this.securityEventIds = securityEventIds;
             return this;
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -128,10 +140,14 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * The ID of the task that handles the alert events.
-         * <p>
+         * <p>The ID of the task that handles the alert events.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the TaskId and SecurityEventIds parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify at least one of the TaskId and SecurityEventIds parameters.
+         * <strong>example:</strong>
+         * <p>12121</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -1,74 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIntegrationRequest} extends {@link RequestModel}
  *
  * <p>UpdateIntegrationRequest</p>
  */
 public class UpdateIntegrationRequest extends Request {
-    @Body
-    @NameInMap("AutoRecover")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRecover")
     private Boolean autoRecover;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DuplicateKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DuplicateKey")
     private String duplicateKey;
 
-    @Body
-    @NameInMap("ExtendedFieldRedefineRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendedFieldRedefineRules")
     private String extendedFieldRedefineRules;
 
-    @Body
-    @NameInMap("FieldRedefineRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FieldRedefineRules")
     private String fieldRedefineRules;
 
-    @Body
-    @NameInMap("InitiativeRecoverField")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InitiativeRecoverField")
     private String initiativeRecoverField;
 
-    @Body
-    @NameInMap("InitiativeRecoverValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InitiativeRecoverValue")
     private String initiativeRecoverValue;
 
-    @Body
-    @NameInMap("IntegrationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long integrationId;
 
-    @Body
-    @NameInMap("IntegrationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationName;
 
-    @Body
-    @NameInMap("IntegrationProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationProductType;
 
-    @Body
-    @NameInMap("Liveness")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Liveness")
     private String liveness;
 
-    @Body
-    @NameInMap("RecoverTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecoverTime")
     private Long recoverTime;
 
-    @Body
-    @NameInMap("Stat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Stat")
     private String stat;
 
-    @Body
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("State")
     private Boolean state;
 
     private UpdateIntegrationRequest(Builder builder) {
@@ -239,11 +244,14 @@ public class UpdateIntegrationRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically clear alert events. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically clear alert events. Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true (default)
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRecover(Boolean autoRecover) {
             this.putBodyParameter("AutoRecover", autoRecover);
@@ -252,7 +260,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The description of the alert integration.
+         * <p>The description of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -261,7 +272,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The fields whose values are deduplicated.
+         * <p>The fields whose values are deduplicated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL.dimensions::LABEL.ruleId</p>
          */
         public Builder duplicateKey(String duplicateKey) {
             this.putBodyParameter("DuplicateKey", duplicateKey);
@@ -270,7 +284,39 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The extended mapped fields are mapped to the fields of ARMS alerts. For more information, see the description of the ExtendedFieldRedefineRules parameter.
+         * <p>The extended mapped fields are mapped to the fields of ARMS alerts. For more information, see the description of the ExtendedFieldRedefineRules parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;redefineType&quot;:&quot;EXTRACT&quot;,
+         *         &quot;matchExpression&quot;:null,
+         *         &quot;fieldName&quot;:&quot;dimensions&quot;,
+         *         &quot;expression&quot;:null,
+         *         &quot;mappingRuleList&quot;:[</p>
+         * <pre><code>    ],
+         *     &quot;name&quot;:&quot;dimensions&quot;,
+         *     &quot;integrationId&quot;:1234,
+         *     &quot;jsonPath&quot;:&quot;$.dimensions&quot;,
+         *     &quot;id&quot;:10013,
+         *     &quot;fieldType&quot;:&quot;LABEL&quot;
+         * },
+         * {
+         *     &quot;redefineType&quot;:&quot;EXTRACT&quot;,
+         *     &quot;matchExpression&quot;:null,
+         *     &quot;fieldName&quot;:&quot;expression&quot;,
+         *     &quot;expression&quot;:null,
+         *     &quot;mappingRuleList&quot;:[
+         * 
+         *     ],
+         *     &quot;name&quot;:&quot;expression&quot;,
+         *     &quot;integrationId&quot;:1234,
+         *     &quot;jsonPath&quot;:&quot;$.expression&quot;,
+         *     &quot;id&quot;:10014,
+         *     &quot;fieldType&quot;:&quot;LABEL&quot;
+         * }
+         * </code></pre>
+         * <p>]</p>
          */
         public Builder extendedFieldRedefineRules(String extendedFieldRedefineRules) {
             this.putBodyParameter("ExtendedFieldRedefineRules", extendedFieldRedefineRules);
@@ -279,7 +325,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The predefined mapped fields are mapped to the fields of ARMS alerts. The predefined mapped fields were generated when the alert integration was created. For more information, see the description of the FieldRedefineRules parameter.
+         * <p>The predefined mapped fields are mapped to the fields of ARMS alerts. The predefined mapped fields were generated when the alert integration was created. For more information, see the description of the FieldRedefineRules parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;alertname&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Alert name&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;$.alertName&quot;, &quot;id&quot;:10001, &quot;fieldType&quot;:&quot;LABEL&quot; }, { &quot;redefineType&quot;:&quot;MAP&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;severity&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ { &quot;mappingValue&quot;:&quot;critical&quot;, &quot;mappingName&quot;:&quot;P1&quot;, &quot;mappingType&quot;:&quot;MAP&quot;, &quot;originValue&quot;:&quot;CRITICAL&quot; }, { &quot;mappingValue&quot;:&quot;error&quot;, &quot;mappingName&quot;:&quot;P2&quot;, &quot;mappingType&quot;:&quot;MAP&quot;, &quot;originValue&quot;:&quot;WARN&quot; }, { &quot;mappingValue&quot;:&quot;warning&quot;, &quot;mappingName&quot;:&quot;P3&quot;, &quot;mappingType&quot;:&quot;MAP&quot;, &quot;originValue&quot;:&quot;INFO&quot; } ], &quot;name&quot;:&quot;Alert level&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;$.triggerLevel&quot;, &quot;id&quot;:10002, &quot;fieldType&quot;:&quot;LABEL&quot; }, { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;message&quot;, &quot;expression&quot;:&quot;{{$labels.namespace}} / {{$labels.dimensions}} Alert content {{ $labels.alertname }}, Current value {{$value}}.&quot;, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Alert description&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:null, &quot;id&quot;:10003, &quot;fieldType&quot;:&quot;ANNOTATION&quot; }, { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;value&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Alert sample value&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;$.curValue&quot;, &quot;id&quot;:10004, &quot;fieldType&quot;:&quot;ANNOTATION&quot; }, { &quot;redefineType&quot;:&quot;EXTRACT&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;source&quot;, &quot;expression&quot;:null, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Source&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:null, &quot;id&quot;:10007, &quot;fieldType&quot;:&quot;LABEL&quot; }, { &quot;redefineType&quot;:&quot;ADD&quot;, &quot;matchExpression&quot;:null, &quot;fieldName&quot;:&quot;generatorUrl&quot;, &quot;expression&quot;:&quot;<a href="https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name=%7B%7B$labels.ruleId%7D%7D%5C&searchValue=%5C&searchType=name%5C&searchProduct=/history/all/searchKey:%7B%7B$labels.ruleId%7D%7D,startTime:%7B%7Bsub">https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}\&amp;searchValue=\&amp;searchType=name\&amp;searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub</a> $startsAt 300000}},endTime:{{$endsAt}}&quot;, &quot;mappingRuleList&quot;:[ ], &quot;name&quot;:&quot;Event URL&quot;, &quot;integrationId&quot;:1234, &quot;jsonPath&quot;:&quot;<a href="https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name=%7B%7B$labels.ruleId%7D%7D%5C&searchValue=%5C&searchType=name%5C&searchProduct=/history/all/searchKey:%7B%7B$labels.ruleId%7D%7D,startTime:%7B%7Bsub">https://cloudmonitor.console.aliyun.com/index.htm#/alarmInfo/name={{$labels.ruleId}}\&amp;searchValue=\&amp;searchType=name\&amp;searchProduct=/history/all/searchKey:{{$labels.ruleId}},startTime:{{sub</a> $startsAt 300000}},endTime:{{$endsAt}}&quot;, &quot;id&quot;:10012, &quot;fieldType&quot;:&quot;GENERATE_URL&quot; } ]</p>
          */
         public Builder fieldRedefineRules(String fieldRedefineRules) {
             this.putBodyParameter("FieldRedefineRules", fieldRedefineRules);
@@ -288,10 +337,13 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
-         * <p>
+         * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+         * <blockquote>
+         * <p>Only the Log Service alert integration supports the parameter.</p>
+         * </blockquote>
          * 
-         * > Only the Log Service alert integration supports the parameter.
+         * <strong>example:</strong>
+         * <p>$.status</p>
          */
         public Builder initiativeRecoverField(String initiativeRecoverField) {
             this.putBodyParameter("InitiativeRecoverField", initiativeRecoverField);
@@ -300,10 +352,13 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
-         * <p>
+         * <p>The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+         * <blockquote>
+         * <p>Only the Log Service alert integration supports the parameter.</p>
+         * </blockquote>
          * 
-         * > Only the Log Service alert integration supports the parameter.
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder initiativeRecoverValue(String initiativeRecoverValue) {
             this.putBodyParameter("InitiativeRecoverValue", initiativeRecoverValue);
@@ -312,7 +367,11 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The ID of the alert integration.
+         * <p>The ID of the alert integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder integrationId(Long integrationId) {
             this.putBodyParameter("IntegrationId", integrationId);
@@ -321,7 +380,11 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The name of the alert integration.
+         * <p>The name of the alert integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor integration</p>
          */
         public Builder integrationName(String integrationName) {
             this.putBodyParameter("IntegrationName", integrationName);
@@ -330,11 +393,15 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The service of the alert integration. Valid values:
-         * <p>
+         * <p>The service of the alert integration. Valid values:</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CLOUD_MONITOR: CloudMonitor
-         * *   LOG_SERVICE: Log Service
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putBodyParameter("IntegrationProductType", integrationProductType);
@@ -343,7 +410,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The activity of the alert integration
+         * <p>The activity of the alert integration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         public Builder liveness(String liveness) {
             this.putBodyParameter("Liveness", liveness);
@@ -352,7 +422,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.
+         * <p>The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder recoverTime(Long recoverTime) {
             this.putBodyParameter("RecoverTime", recoverTime);
@@ -361,7 +434,10 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * The total number of alert events and the number of abnormal alert events in the last hour.
+         * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0,0]</p>
          */
         public Builder stat(String stat) {
             this.putBodyParameter("Stat", stat);
@@ -370,11 +446,14 @@ public class UpdateIntegrationRequest extends Request {
         }
 
         /**
-         * Indicates whether the alert integration was enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the alert integration was enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder state(Boolean state) {
             this.putBodyParameter("State", state);

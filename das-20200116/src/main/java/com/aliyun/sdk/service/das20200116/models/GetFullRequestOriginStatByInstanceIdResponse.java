@@ -1,27 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFullRequestOriginStatByInstanceIdResponse} extends {@link TeaModel}
  *
  * <p>GetFullRequestOriginStatByInstanceIdResponse</p>
  */
 public class GetFullRequestOriginStatByInstanceIdResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("body")
     private GetFullRequestOriginStatByInstanceIdResponseBody body;
 
     private GetFullRequestOriginStatByInstanceIdResponse(BuilderImpl builder) {
@@ -43,7 +45,7 @@ public class GetFullRequestOriginStatByInstanceIdResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -63,7 +65,7 @@ public class GetFullRequestOriginStatByInstanceIdResponse extends Response {
 
     public interface Builder extends Response.Builder<GetFullRequestOriginStatByInstanceIdResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -77,7 +79,7 @@ public class GetFullRequestOriginStatByInstanceIdResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<GetFullRequestOriginStatByInstanceIdResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private GetFullRequestOriginStatByInstanceIdResponseBody body; 
 
@@ -96,7 +98,7 @@ public class GetFullRequestOriginStatByInstanceIdResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CostCenterQueryRequest} extends {@link RequestModel}
  *
  * <p>CostCenterQueryRequest</p>
  */
 public class CostCenterQueryRequest extends Request {
-    @Query
-    @NameInMap("disable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("disable")
     private Long disable;
 
-    @Query
-    @NameInMap("need_org_entity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("need_org_entity")
     private Boolean needOrgEntity;
 
-    @Query
-    @NameInMap("thirdpart_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("thirdpart_id")
     private String thirdpartId;
 
-    @Query
-    @NameInMap("title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
-    @Query
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private CostCenterQueryRequest(Builder builder) {

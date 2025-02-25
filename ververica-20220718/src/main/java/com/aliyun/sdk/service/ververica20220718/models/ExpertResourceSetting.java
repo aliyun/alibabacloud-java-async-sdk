@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExpertResourceSetting} extends {@link TeaModel}
  *
  * <p>ExpertResourceSetting</p>
  */
 public class ExpertResourceSetting extends TeaModel {
-    @NameInMap("jobmanagerResourceSettingSpec")
+    @com.aliyun.core.annotation.NameInMap("jobmanagerResourceSettingSpec")
     private BasicResourceSettingSpec jobmanagerResourceSettingSpec;
 
-    @NameInMap("resourcePlan")
+    @com.aliyun.core.annotation.NameInMap("resourcePlan")
     private String resourcePlan;
 
     private ExpertResourceSetting(Builder builder) {

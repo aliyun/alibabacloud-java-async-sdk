@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSlotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSlotRequest</p>
  */
 public class DeleteSlotRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SlotName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlotName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slotName;
 
-    @Query
-    @NameInMap("SlotStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlotStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slotStatus;
 
     private DeleteSlotRequest(Builder builder) {
@@ -169,10 +174,11 @@ public class DeleteSlotRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -181,7 +187,11 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -208,7 +218,10 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can leave this parameter empty.
+         * <p>The ID of the resource group. You can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -235,7 +248,11 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.
+         * <p>The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slot_test01</p>
          */
         public Builder slotName(String slotName) {
             this.putQueryParameter("SlotName", slotName);
@@ -244,11 +261,15 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:
-         * <p>
+         * <p>The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:</p>
+         * <ul>
+         * <li><strong>ACTIVE</strong></li>
+         * <li><strong>INACTIVE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ACTIVE
-         * *   INACTIVE
+         * <strong>example:</strong>
+         * <p>INACTIVE</p>
          */
         public Builder slotStatus(String slotStatus) {
             this.putQueryParameter("SlotStatus", slotStatus);

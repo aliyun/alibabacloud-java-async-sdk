@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewaySlbRequest} extends {@link RequestModel}
  *
  * <p>AddGatewaySlbRequest</p>
  */
 public class AddGatewaySlbRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("HttpPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPort")
     private Integer httpPort;
 
-    @Query
-    @NameInMap("HttpsPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsPort")
     private Integer httpsPort;
 
-    @Query
-    @NameInMap("HttpsVServerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsVServerGroupId")
     private String httpsVServerGroupId;
 
-    @Query
-    @NameInMap("ServiceWeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceWeight")
     private Integer serviceWeight;
 
-    @Query
-    @NameInMap("SlbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slbId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
-    @Query
-    @NameInMap("VServiceList")
-    private java.util.List < VServiceList> vServiceList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServiceList")
+    private java.util.List<VServiceList> vServiceList;
 
     private AddGatewaySlbRequest(Builder builder) {
         super(builder);
@@ -147,7 +152,7 @@ public class AddGatewaySlbRequest extends Request {
     /**
      * @return vServiceList
      */
-    public java.util.List < VServiceList> getVServiceList() {
+    public java.util.List<VServiceList> getVServiceList() {
         return this.vServiceList;
     }
 
@@ -161,7 +166,7 @@ public class AddGatewaySlbRequest extends Request {
         private String slbId; 
         private String type; 
         private String vServerGroupId; 
-        private java.util.List < VServiceList> vServiceList; 
+        private java.util.List<VServiceList> vServiceList; 
 
         private Builder() {
             super();
@@ -182,11 +187,14 @@ public class AddGatewaySlbRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -195,7 +203,11 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-9cdcf8e4f58144059e73ff4c5ef9****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -204,7 +216,10 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The HTTP port number (virtual service group).
+         * <p>The HTTP port number (virtual service group).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder httpPort(Integer httpPort) {
             this.putQueryParameter("HttpPort", httpPort);
@@ -213,7 +228,10 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The HTTPS port number (virtual service group).
+         * <p>The HTTPS port number (virtual service group).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder httpsPort(Integer httpsPort) {
             this.putQueryParameter("HttpsPort", httpsPort);
@@ -222,7 +240,10 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The ID of the HTTPS virtual service group.
+         * <p>The ID of the HTTPS virtual service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>353</p>
          */
         public Builder httpsVServerGroupId(String httpsVServerGroupId) {
             this.putQueryParameter("HttpsVServerGroupId", httpsVServerGroupId);
@@ -231,7 +252,10 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The service weight.
+         * <p>The service weight.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder serviceWeight(Integer serviceWeight) {
             this.putQueryParameter("ServiceWeight", serviceWeight);
@@ -240,7 +264,11 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp18t6jjskwxh6wy1****</p>
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);
@@ -249,11 +277,14 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The type of the service source. Valid values:
-         * <p>
+         * <p>The type of the service source. Valid values:</p>
+         * <ul>
+         * <li>PUB_NET: Internet</li>
+         * <li>PRIVATE_NET: VPC</li>
+         * </ul>
          * 
-         * *   PUB_NET: Internet
-         * *   PRIVATE_NET: VPC
+         * <strong>example:</strong>
+         * <p>PUB_NET</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -262,7 +293,10 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The ID of the HTTP virtual service group.
+         * <p>The ID of the HTTP virtual service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>353</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.putQueryParameter("VServerGroupId", vServerGroupId);
@@ -271,9 +305,9 @@ public class AddGatewaySlbRequest extends Request {
         }
 
         /**
-         * The SLB monitoring information.
+         * <p>The SLB monitoring information.</p>
          */
-        public Builder vServiceList(java.util.List < VServiceList> vServiceList) {
+        public Builder vServiceList(java.util.List<VServiceList> vServiceList) {
             String vServiceListShrink = shrink(vServiceList, "VServiceList", "json");
             this.putQueryParameter("VServiceList", vServiceListShrink);
             this.vServiceList = vServiceList;
@@ -287,17 +321,23 @@ public class AddGatewaySlbRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddGatewaySlbRequest} extends {@link TeaModel}
+     *
+     * <p>AddGatewaySlbRequest</p>
+     */
     public static class VServiceList extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
-        @NameInMap("VServerGroupName")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupName")
         private String vServerGroupName;
 
         private VServiceList(Builder builder) {
@@ -350,7 +390,10 @@ public class AddGatewaySlbRequest extends Request {
             private String vServerGroupName; 
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -358,11 +401,14 @@ public class AddGatewaySlbRequest extends Request {
             }
 
             /**
-             * The protocol type. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
              * 
-             * *   HTTP
-             * *   HTTPS
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -370,7 +416,10 @@ public class AddGatewaySlbRequest extends Request {
             }
 
             /**
-             * The ID of the virtual server group.
+             * <p>The ID of the virtual server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-bp1j<strong>t0fyl</strong></p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -378,7 +427,7 @@ public class AddGatewaySlbRequest extends Request {
             }
 
             /**
-             * The name of the virtual server group.
+             * <p>The name of the virtual server group.</p>
              */
             public Builder vServerGroupName(String vServerGroupName) {
                 this.vServerGroupName = vServerGroupName;

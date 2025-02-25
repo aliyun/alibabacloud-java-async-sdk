@@ -1,61 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingActivitiesRequest} extends {@link RequestModel}
  *
  * <p>DescribeScalingActivitiesRequest</p>
  */
 public class DescribeScalingActivitiesRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceRefreshTaskId")
+    private String instanceRefreshTaskId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScalingActivityIds")
-    private java.util.List < String > scalingActivityIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityIds")
+    private java.util.List<String> scalingActivityIds;
 
-    @Query
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("StatusCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
     private String statusCode;
 
     private DescribeScalingActivitiesRequest(Builder builder) {
         super(builder);
+        this.instanceRefreshTaskId = builder.instanceRefreshTaskId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -79,6 +89,13 @@ public class DescribeScalingActivitiesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instanceRefreshTaskId
+     */
+    public String getInstanceRefreshTaskId() {
+        return this.instanceRefreshTaskId;
     }
 
     /**
@@ -133,7 +150,7 @@ public class DescribeScalingActivitiesRequest extends Request {
     /**
      * @return scalingActivityIds
      */
-    public java.util.List < String > getScalingActivityIds() {
+    public java.util.List<String> getScalingActivityIds() {
         return this.scalingActivityIds;
     }
 
@@ -152,6 +169,7 @@ public class DescribeScalingActivitiesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeScalingActivitiesRequest, Builder> {
+        private String instanceRefreshTaskId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -159,7 +177,7 @@ public class DescribeScalingActivitiesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > scalingActivityIds; 
+        private java.util.List<String> scalingActivityIds; 
         private String scalingGroupId; 
         private String statusCode; 
 
@@ -169,6 +187,7 @@ public class DescribeScalingActivitiesRequest extends Request {
 
         private Builder(DescribeScalingActivitiesRequest request) {
             super(request);
+            this.instanceRefreshTaskId = request.instanceRefreshTaskId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -180,6 +199,18 @@ public class DescribeScalingActivitiesRequest extends Request {
             this.scalingGroupId = request.scalingGroupId;
             this.statusCode = request.statusCode;
         } 
+
+        /**
+         * <p>The ID of the instance refresh task. If you specify this parameter, this operation returns the list of scaling activities associated with the instance refresh task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ir-a12ds234fasd*****</p>
+         */
+        public Builder instanceRefreshTaskId(String instanceRefreshTaskId) {
+            this.putQueryParameter("InstanceRefreshTaskId", instanceRefreshTaskId);
+            this.instanceRefreshTaskId = instanceRefreshTaskId;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -200,10 +231,11 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,10 +244,11 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +257,11 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group to which the scaling activity that you want to query belongs.
+         * <p>The region ID of the scaling group to which the scaling activity that you want to query belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -251,22 +288,25 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The IDs of the scaling activities that you want to query.
-         * <p>
-         * 
-         * > When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.
+         * <p>The IDs of the scaling activities that you want to query.</p>
+         * <blockquote>
+         * <p> When you call this operation, you must specify one of the following parameters: <code>ScalingGroupId</code> and <code>ScalingActivityIds</code>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</p>
+         * </blockquote>
          */
-        public Builder scalingActivityIds(java.util.List < String > scalingActivityIds) {
+        public Builder scalingActivityIds(java.util.List<String> scalingActivityIds) {
             this.putQueryParameter("ScalingActivityIds", scalingActivityIds);
             this.scalingActivityIds = scalingActivityIds;
             return this;
         }
 
         /**
-         * The ID of the scaling group.
-         * <p>
+         * <p>The ID of the scaling group.</p>
+         * <blockquote>
+         * <p> When you call this operation, you must specify one of the following parameters: <code>ScalingGroupId</code> and <code>ScalingActivityIds</code>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</p>
+         * </blockquote>
          * 
-         * > When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -275,14 +315,17 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The status of the scaling activity. Valid values:
-         * <p>
+         * <p>The status of the scaling activity. Valid values:</p>
+         * <ul>
+         * <li>Successful: The scaling activity is successful.</li>
+         * <li>Warning: The scaling activity is partially successful.</li>
+         * <li>Failed: The scaling activity failed.</li>
+         * <li>InProgress: The scaling activity is in progress.</li>
+         * <li>Rejected: The request to trigger the scaling activity is rejected.</li>
+         * </ul>
          * 
-         * *   Successful: The scaling activity is successful.
-         * *   Warning: The scaling activity is partially successful.
-         * *   Failed: The scaling activity failed.
-         * *   InProgress: The scaling activity is in progress.
-         * *   Rejected: The request to trigger the scaling activity is rejected.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder statusCode(String statusCode) {
             this.putQueryParameter("StatusCode", statusCode);

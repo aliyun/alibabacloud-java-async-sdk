@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStopGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteStopGatewayResponseBody</p>
  */
 public class DeleteStopGatewayResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DeleteStopGatewayResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,14 +102,17 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the DeleteStopGateway operation. Valid values:
-         * <p>
+         * <p>The result of the DeleteStopGateway operation. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The metadata of the DBGateway is deleted.</li>
+         * <li><strong>-1</strong>: A system error occurs.</li>
+         * <li><strong>-2</strong>: The DBGateway does not exist.</li>
+         * <li><strong>-3</strong>: The DBGateway is not stopped and the metadata cannot be deleted.</li>
+         * <li><strong>-4</strong>: The metadata of the DBGateway fails to be deleted.</li>
+         * </ul>
          * 
-         * *   **0**: The metadata of the DBGateway is deleted.
-         * *   **-1**: A system error occurs.
-         * *   **-2**: The DBGateway does not exist.
-         * *   **-3**: The DBGateway is not stopped and the metadata cannot be deleted.
-         * *   **-4**: The metadata of the DBGateway fails to be deleted.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -109,10 +120,13 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +134,10 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC6C0929-29E1-59FD-8DFE-70D9D41E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,11 +145,14 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

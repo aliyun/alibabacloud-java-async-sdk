@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>AttachControlPolicyRequest</p>
  */
 public class AttachControlPolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("TargetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetId;
 
     private AttachControlPolicyRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class AttachControlPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * <p>The ID of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-jExXAqIYkwHN****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -79,12 +88,16 @@ public class AttachControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the object to which you want to attach the access control policy. Access control policies can be attached to the following objects:
-         * <p>
+         * <p>The ID of the object to which you want to attach the access control policy. Access control policies can be attached to the following objects:</p>
+         * <ul>
+         * <li>Root folder</li>
+         * <li>Subfolders of the Root folder</li>
+         * <li>Members</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Root folder
-         * *   Subfolders of the Root folder
-         * *   Members
+         * <strong>example:</strong>
+         * <p>fd-ZDNPiT****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoctorHDFSDirectoriesResponseBody</p>
  */
 public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDoctorHDFSDirectoriesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,13 +93,16 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * <p>本次请求所返回的最大记录条数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>请求ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * <p>本次请求条件下的数据总量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class ColdDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataDayGrowthSize(Builder builder) {
@@ -232,17 +255,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class ColdDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataSize(Builder builder) {
@@ -333,17 +362,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class ColdDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ColdDataSizeDayGrowthRatio(Builder builder) {
@@ -434,17 +469,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class EmptyFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private EmptyFileCount(Builder builder) {
@@ -535,17 +576,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class EmptyFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private EmptyFileCountDayGrowthRatio(Builder builder) {
@@ -636,17 +683,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class EmptyFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private EmptyFileDayGrowthCount(Builder builder) {
@@ -737,17 +790,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class FreezeDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataDayGrowthSize(Builder builder) {
@@ -838,17 +897,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class FreezeDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataSize(Builder builder) {
@@ -939,17 +1004,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class FreezeDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private FreezeDataSizeDayGrowthRatio(Builder builder) {
@@ -1040,17 +1111,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class HotDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataDayGrowthSize(Builder builder) {
@@ -1141,17 +1218,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class HotDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataSize(Builder builder) {
@@ -1242,17 +1325,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class HotDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private HotDataSizeDayGrowthRatio(Builder builder) {
@@ -1343,17 +1432,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class LargeFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private LargeFileCount(Builder builder) {
@@ -1444,17 +1539,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class LargeFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private LargeFileCountDayGrowthRatio(Builder builder) {
@@ -1545,17 +1646,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class LargeFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private LargeFileDayGrowthCount(Builder builder) {
@@ -1646,17 +1753,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class MediumFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private MediumFileCount(Builder builder) {
@@ -1747,17 +1860,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class MediumFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MediumFileCountDayGrowthRatio(Builder builder) {
@@ -1848,17 +1967,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class MediumFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private MediumFileDayGrowthCount(Builder builder) {
@@ -1949,17 +2074,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class SmallFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private SmallFileCount(Builder builder) {
@@ -2050,17 +2181,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class SmallFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private SmallFileCountDayGrowthRatio(Builder builder) {
@@ -2151,17 +2288,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class SmallFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private SmallFileDayGrowthCount(Builder builder) {
@@ -2252,17 +2395,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TinyFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TinyFileCount(Builder builder) {
@@ -2353,17 +2502,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TinyFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TinyFileCountDayGrowthRatio(Builder builder) {
@@ -2454,17 +2609,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TinyFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TinyFileDayGrowthCount(Builder builder) {
@@ -2555,17 +2716,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TotalDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDataDayGrowthSize(Builder builder) {
@@ -2656,17 +2823,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TotalDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDataSize(Builder builder) {
@@ -2757,17 +2930,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TotalDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TotalDataSizeDayGrowthRatio(Builder builder) {
@@ -2858,17 +3037,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TotalFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalFileCount(Builder builder) {
@@ -2959,17 +3144,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TotalFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TotalFileCountDayGrowthRatio(Builder builder) {
@@ -3060,17 +3251,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class TotalFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalFileDayGrowthCount(Builder builder) {
@@ -3161,17 +3358,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class WarmDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataDayGrowthSize(Builder builder) {
@@ -3262,17 +3465,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class WarmDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataSize(Builder builder) {
@@ -3363,17 +3572,23 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class WarmDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private WarmDataSizeDayGrowthRatio(Builder builder) {
@@ -3464,104 +3679,110 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("ColdDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataDayGrowthSize")
         private ColdDataDayGrowthSize coldDataDayGrowthSize;
 
-        @NameInMap("ColdDataSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSize")
         private ColdDataSize coldDataSize;
 
-        @NameInMap("ColdDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSizeDayGrowthRatio")
         private ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio;
 
-        @NameInMap("EmptyFileCount")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileCount")
         private EmptyFileCount emptyFileCount;
 
-        @NameInMap("EmptyFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileCountDayGrowthRatio")
         private EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio;
 
-        @NameInMap("EmptyFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileDayGrowthCount")
         private EmptyFileDayGrowthCount emptyFileDayGrowthCount;
 
-        @NameInMap("FreezeDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataDayGrowthSize")
         private FreezeDataDayGrowthSize freezeDataDayGrowthSize;
 
-        @NameInMap("FreezeDataSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSize")
         private FreezeDataSize freezeDataSize;
 
-        @NameInMap("FreezeDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSizeDayGrowthRatio")
         private FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio;
 
-        @NameInMap("HotDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataDayGrowthSize")
         private HotDataDayGrowthSize hotDataDayGrowthSize;
 
-        @NameInMap("HotDataSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataSize")
         private HotDataSize hotDataSize;
 
-        @NameInMap("HotDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("HotDataSizeDayGrowthRatio")
         private HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio;
 
-        @NameInMap("LargeFileCount")
+        @com.aliyun.core.annotation.NameInMap("LargeFileCount")
         private LargeFileCount largeFileCount;
 
-        @NameInMap("LargeFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("LargeFileCountDayGrowthRatio")
         private LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio;
 
-        @NameInMap("LargeFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("LargeFileDayGrowthCount")
         private LargeFileDayGrowthCount largeFileDayGrowthCount;
 
-        @NameInMap("MediumFileCount")
+        @com.aliyun.core.annotation.NameInMap("MediumFileCount")
         private MediumFileCount mediumFileCount;
 
-        @NameInMap("MediumFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("MediumFileCountDayGrowthRatio")
         private MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio;
 
-        @NameInMap("MediumFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("MediumFileDayGrowthCount")
         private MediumFileDayGrowthCount mediumFileDayGrowthCount;
 
-        @NameInMap("SmallFileCount")
+        @com.aliyun.core.annotation.NameInMap("SmallFileCount")
         private SmallFileCount smallFileCount;
 
-        @NameInMap("SmallFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("SmallFileCountDayGrowthRatio")
         private SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio;
 
-        @NameInMap("SmallFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("SmallFileDayGrowthCount")
         private SmallFileDayGrowthCount smallFileDayGrowthCount;
 
-        @NameInMap("TinyFileCount")
+        @com.aliyun.core.annotation.NameInMap("TinyFileCount")
         private TinyFileCount tinyFileCount;
 
-        @NameInMap("TinyFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TinyFileCountDayGrowthRatio")
         private TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio;
 
-        @NameInMap("TinyFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("TinyFileDayGrowthCount")
         private TinyFileDayGrowthCount tinyFileDayGrowthCount;
 
-        @NameInMap("TotalDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDataDayGrowthSize")
         private TotalDataDayGrowthSize totalDataDayGrowthSize;
 
-        @NameInMap("TotalDataSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDataSize")
         private TotalDataSize totalDataSize;
 
-        @NameInMap("TotalDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TotalDataSizeDayGrowthRatio")
         private TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio;
 
-        @NameInMap("TotalFileCount")
+        @com.aliyun.core.annotation.NameInMap("TotalFileCount")
         private TotalFileCount totalFileCount;
 
-        @NameInMap("TotalFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TotalFileCountDayGrowthRatio")
         private TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio;
 
-        @NameInMap("TotalFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("TotalFileDayGrowthCount")
         private TotalFileDayGrowthCount totalFileDayGrowthCount;
 
-        @NameInMap("WarmDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataDayGrowthSize")
         private WarmDataDayGrowthSize warmDataDayGrowthSize;
 
-        @NameInMap("WarmDataSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSize")
         private WarmDataSize warmDataSize;
 
-        @NameInMap("WarmDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSizeDayGrowthRatio")
         private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio;
 
         private Metrics(Builder builder) {
@@ -4145,20 +4366,26 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHDFSDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHDFSDirectoriesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Depth")
+        @com.aliyun.core.annotation.NameInMap("Depth")
         private Integer depth;
 
-        @NameInMap("DirPath")
+        @com.aliyun.core.annotation.NameInMap("DirPath")
         private String dirPath;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Data(Builder builder) {

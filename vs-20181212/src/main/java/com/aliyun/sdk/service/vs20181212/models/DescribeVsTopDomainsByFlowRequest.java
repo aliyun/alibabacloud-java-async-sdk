@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsTopDomainsByFlowRequest} extends {@link RequestModel}
  *
  * <p>DescribeVsTopDomainsByFlowRequest</p>
  */
 public class DescribeVsTopDomainsByFlowRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Limit")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long limit;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVsTopDomainsByFlowRequest(Builder builder) {
@@ -88,12 +93,12 @@ public class DescribeVsTopDomainsByFlowRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVsTopDomainsByFlowRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.limit = response.limit;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeVsTopDomainsByFlowRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.limit = request.limit;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

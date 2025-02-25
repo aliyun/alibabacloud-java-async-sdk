@@ -62,7 +62,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RdsPerformanceInfos.
+         * A collection of objects.
          */
         public Builder rdsPerformanceInfos(java.util.List < RdsPerformanceInfos> rdsPerformanceInfos) {
             this.rdsPerformanceInfos = rdsPerformanceInfos;
@@ -70,7 +70,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the API request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +178,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             private Integer totalSessions; 
 
             /**
-             * ActiveSessions.
+             * The number of active sessions of the RDS instance.
              */
             public Builder activeSessions(Integer activeSessions) {
                 this.activeSessions = activeSessions;
@@ -186,7 +186,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The CPU utilization of an RDS instance.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -194,7 +194,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Iops.
+             * The IOPS of the RDS instance.
              */
             public Builder iops(Float iops) {
                 this.iops = iops;
@@ -202,7 +202,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RdsId.
+             * The ID of an RDS instance.
              */
             public Builder rdsId(String rdsId) {
                 this.rdsId = rdsId;
@@ -210,7 +210,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceUsage.
+             * The disk usage of apsaradb for RDS. Unit: MB.
              */
             public Builder spaceUsage(Long spaceUsage) {
                 this.spaceUsage = spaceUsage;
@@ -218,7 +218,7 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSessions.
+             * The total number of current RDS sessions.
              */
             public Builder totalSessions(Integer totalSessions) {
                 this.totalSessions = totalSessions;

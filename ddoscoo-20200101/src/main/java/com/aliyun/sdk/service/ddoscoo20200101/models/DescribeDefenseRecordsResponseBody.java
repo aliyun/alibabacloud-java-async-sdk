@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefenseRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefenseRecordsResponseBody</p>
  */
 public class DescribeDefenseRecordsResponseBody extends TeaModel {
-    @NameInMap("DefenseRecords")
-    private java.util.List < DefenseRecords> defenseRecords;
+    @com.aliyun.core.annotation.NameInMap("DefenseRecords")
+    private java.util.List<DefenseRecords> defenseRecords;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDefenseRecordsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
     /**
      * @return defenseRecords
      */
-    public java.util.List < DefenseRecords> getDefenseRecords() {
+    public java.util.List<DefenseRecords> getDefenseRecords() {
         return this.defenseRecords;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DefenseRecords> defenseRecords; 
+        private java.util.List<DefenseRecords> defenseRecords; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * An array that consists of details of the log of an advanced mitigation session.
+         * <p>An array that consists of details of the log of an advanced mitigation session.</p>
          */
-        public Builder defenseRecords(java.util.List < DefenseRecords> defenseRecords) {
+        public Builder defenseRecords(java.util.List<DefenseRecords> defenseRecords) {
             this.defenseRecords = defenseRecords;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of advanced mitigation sessions.
+         * <p>The total number of advanced mitigation sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,23 +102,29 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDefenseRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDefenseRecordsResponseBody</p>
+     */
     public static class DefenseRecords extends TeaModel {
-        @NameInMap("AttackPeak")
+        @com.aliyun.core.annotation.NameInMap("AttackPeak")
         private Long attackPeak;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("EventCount")
+        @com.aliyun.core.annotation.NameInMap("EventCount")
         private Integer eventCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private DefenseRecords(Builder builder) {
@@ -178,7 +195,10 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The peak attack traffic. Unit: bit/s.
+             * <p>The peak attack traffic. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6584186000</p>
              */
             public Builder attackPeak(Long attackPeak) {
                 this.attackPeak = attackPeak;
@@ -186,7 +206,10 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.
+             * <p>The end time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583683200000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -194,7 +217,10 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of attacks.
+             * <p>The number of attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -202,7 +228,10 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-mp91j1ao****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +239,10 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.
+             * <p>The start time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582992000000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -218,11 +250,14 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the advanced mitigation session. Valid values:
-             * <p>
+             * <p>The status of the advanced mitigation session. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The advanced mitigation session is being used.</li>
+             * <li><strong>1</strong>: The advanced mitigation session is used.</li>
+             * </ul>
              * 
-             * *   **0**: The advanced mitigation session is being used.
-             * *   **1**: The advanced mitigation session is used.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

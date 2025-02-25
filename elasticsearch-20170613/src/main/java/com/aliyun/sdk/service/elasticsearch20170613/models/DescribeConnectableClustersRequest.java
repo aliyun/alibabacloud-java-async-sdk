@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConnectableClustersRequest} extends {@link RequestModel}
  *
  * <p>DescribeConnectableClustersRequest</p>
  */
 public class DescribeConnectableClustersRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("alreadySetItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("alreadySetItems")
     private Boolean alreadySetItems;
 
     private DescribeConnectableClustersRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class DescribeConnectableClustersRequest extends Request {
         } 
 
         /**
-         * The network type of the instance.
+         * <p>The network type of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +82,10 @@ public class DescribeConnectableClustersRequest extends Request {
         }
 
         /**
-         * The ID of the instance that can communicate with each other.
+         * <p>The ID of the instance that can communicate with each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder alreadySetItems(Boolean alreadySetItems) {
             this.putQueryParameter("alreadySetItems", alreadySetItems);

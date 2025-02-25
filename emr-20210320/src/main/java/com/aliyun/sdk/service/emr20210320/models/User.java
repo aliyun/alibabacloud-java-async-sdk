@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link User} extends {@link TeaModel}
  *
  * <p>User</p>
  */
 public class User extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private String group;
 
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @NameInMap("UserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private User(Builder builder) {
@@ -89,7 +94,10 @@ public class User extends TeaModel {
         private String userType; 
 
         /**
-         * 用户组。
+         * <p>用户组。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hadoop</p>
          */
         public Builder group(String group) {
             this.group = group;
@@ -97,7 +105,11 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户密码。
+         * <p>用户密码。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345****</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -105,7 +117,11 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户ID。
+         * <p>用户ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1238539****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -113,7 +129,11 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户名称。
+         * <p>用户名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王五</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -121,7 +141,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * 用户类型。
+         * <p>用户类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LDAP</p>
          */
         public Builder userType(String userType) {
             this.userType = userType;

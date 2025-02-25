@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDNAJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDNAJobRequest</p>
  */
 public class SubmitDNAJobRequest extends Request {
-    @Query
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Query
-    @NameInMap("DBId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBId;
 
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Input input;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("PrimaryKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String primaryKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitDNAJobRequest(Builder builder) {
@@ -197,7 +202,10 @@ public class SubmitDNAJobRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The configurations of the media fingerprint analysis job. The value is a JSON object. If you specify this parameter, the template parameters are overwritten.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -206,7 +214,11 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * DBId.
+         * <p>The ID of the media fingerprint library. If you do not specify this parameter, the default media fingerprint library is used. For more information about how to create a media fingerprint library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2288c6ca184c0e47098a5b665e2a12****</p>
          */
         public Builder DBId(String DBId) {
             this.putQueryParameter("DBId", DBId);
@@ -215,7 +227,8 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The input file for media fingerprint analysis.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -243,7 +256,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the media fingerprint analysis job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5246b8d12a62433ab77845074039****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -252,7 +268,11 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * PrimaryKey.
+         * <p>The primary key of the video. You must make sure that each primary key is unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ca84a39a9024f19853b21be9cf9****</p>
          */
         public Builder primaryKey(String primaryKey) {
             this.putQueryParameter("PrimaryKey", primaryKey);
@@ -279,7 +299,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000101-100060</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -288,7 +311,10 @@ public class SubmitDNAJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data. The data can be up to 128 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userData</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -303,13 +329,19 @@ public class SubmitDNAJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitDNAJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDNAJobRequest</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -344,7 +376,14 @@ public class SubmitDNAJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. The file can be an OSS object or a media asset. You can specify the path of an OSS object in one of the following formats:</p>
+             * <p>1. oss://bucket/object</p>
+             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * <p>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1b1b9cd148034739af413150fded****</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -352,7 +391,15 @@ public class SubmitDNAJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: Object Storage Service (OSS) object.</li>
+             * <li>Media: media asset.</li>
+             * </ol>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;

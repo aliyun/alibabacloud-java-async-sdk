@@ -1,45 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubscriptionByTopicRequest} extends {@link RequestModel}
  *
  * <p>ListSubscriptionByTopicRequest</p>
  */
 public class ListSubscriptionByTopicRequest extends Request {
-    @Query
-    @NameInMap("PageNum")
-    @Validation(required = true)
-    private Long pageNum;
-
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    private Long pageSize;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SubscriptionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    private Long pageNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Long pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionName")
     private String subscriptionName;
 
-    @Query
-    @NameInMap("TopicName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicName")
     private String topicName;
 
     private ListSubscriptionByTopicRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.subscriptionName = builder.subscriptionName;
         this.topicName = builder.topicName;
     }
@@ -58,6 +60,13 @@ public class ListSubscriptionByTopicRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return pageNum
      */
     public Long getPageNum() {
@@ -69,13 +78,6 @@ public class ListSubscriptionByTopicRequest extends Request {
      */
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +95,9 @@ public class ListSubscriptionByTopicRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSubscriptionByTopicRequest, Builder> {
+        private String regionId; 
         private Long pageNum; 
         private Long pageSize; 
-        private String regionId; 
         private String subscriptionName; 
         private String topicName; 
 
@@ -105,30 +107,12 @@ public class ListSubscriptionByTopicRequest extends Request {
 
         private Builder(ListSubscriptionByTopicRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.subscriptionName = request.subscriptionName;
             this.topicName = request.topicName;
         } 
-
-        /**
-         * PageNum.
-         */
-        public Builder pageNum(Long pageNum) {
-            this.putQueryParameter("PageNum", pageNum);
-            this.pageNum = pageNum;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -140,7 +124,34 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * SubscriptionName.
+         * <p>The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNum(Long pageNum) {
+            this.putQueryParameter("PageNum", pageNum);
+            this.pageNum = pageNum;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The name of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-subscription</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -149,7 +160,10 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * <p>The topic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

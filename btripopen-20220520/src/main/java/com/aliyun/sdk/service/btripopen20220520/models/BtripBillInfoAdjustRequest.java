@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BtripBillInfoAdjustRequest} extends {@link RequestModel}
  *
  * <p>BtripBillInfoAdjustRequest</p>
  */
 public class BtripBillInfoAdjustRequest extends Request {
-    @Body
-    @NameInMap("primary_id")
-    @Validation(required = true, maximum = 999999999, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("primary_id")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999, minimum = 1)
     private Long primaryId;
 
-    @Body
-    @NameInMap("third_part_cost_center_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_cost_center_id")
     private String thirdPartCostCenterId;
 
-    @Body
-    @NameInMap("third_part_department_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_department_id")
     private String thirdPartDepartmentId;
 
-    @Body
-    @NameInMap("third_part_invoice_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
     private String thirdPartInvoiceId;
 
-    @Body
-    @NameInMap("third_part_project_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_project_id")
     private String thirdPartProjectId;
 
-    @Body
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private BtripBillInfoAdjustRequest(Builder builder) {
@@ -139,7 +144,10 @@ public class BtripBillInfoAdjustRequest extends Request {
         } 
 
         /**
-         * primary_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder primaryId(Long primaryId) {
             this.putBodyParameter("primary_id", primaryId);

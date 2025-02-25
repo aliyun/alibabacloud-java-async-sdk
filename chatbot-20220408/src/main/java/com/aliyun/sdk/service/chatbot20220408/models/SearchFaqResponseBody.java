@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchFaqResponseBody} extends {@link TeaModel}
  *
  * <p>SearchFaqResponseBody</p>
  */
 public class SearchFaqResponseBody extends TeaModel {
-    @NameInMap("FaqHits")
+    @com.aliyun.core.annotation.NameInMap("FaqHits")
     private java.util.List < FaqHits> faqHits;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private SearchFaqResponseBody(Builder builder) {
@@ -131,44 +131,50 @@ public class SearchFaqResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFaqResponseBody</p>
+     */
     public static class FaqHits extends TeaModel {
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private Long createUserId;
 
-        @NameInMap("CreateUserName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserName")
         private String createUserName;
 
-        @NameInMap("EffectStatus")
+        @com.aliyun.core.annotation.NameInMap("EffectStatus")
         private Integer effectStatus;
 
-        @NameInMap("HitSimilarTitles")
+        @com.aliyun.core.annotation.NameInMap("HitSimilarTitles")
         private java.util.List < String > hitSimilarTitles;
 
-        @NameInMap("HitSolutions")
+        @com.aliyun.core.annotation.NameInMap("HitSolutions")
         private java.util.List < String > hitSolutions;
 
-        @NameInMap("KnowledgeId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private Long knowledgeId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ModifyUserId")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserId")
         private Long modifyUserId;
 
-        @NameInMap("ModifyUserName")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserName")
         private String modifyUserName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private FaqHits(Builder builder) {

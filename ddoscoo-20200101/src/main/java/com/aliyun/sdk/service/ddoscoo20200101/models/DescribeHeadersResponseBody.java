@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHeadersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHeadersResponseBody</p>
  */
 public class DescribeHeadersResponseBody extends TeaModel {
-    @NameInMap("CustomHeader")
+    @com.aliyun.core.annotation.NameInMap("CustomHeader")
     private CustomHeader customHeader;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHeadersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the custom header.
+         * <p>The information about the custom header.</p>
          */
         public Builder customHeader(CustomHeader customHeader) {
             this.customHeader = customHeader;
@@ -58,7 +63,10 @@ public class DescribeHeadersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48BC7BA5-69BE-5C31-A080-AFF2431AE48D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeHeadersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHeadersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHeadersResponseBody</p>
+     */
     public static class CustomHeader extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Headers")
+        @com.aliyun.core.annotation.NameInMap("Headers")
         private String headers;
 
         private CustomHeader(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeHeadersResponseBody extends TeaModel {
             private String headers; 
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -118,7 +135,10 @@ public class DescribeHeadersResponseBody extends TeaModel {
             }
 
             /**
-             * The header of the response.
+             * <p>The header of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;X-Forwarded-ClientSrcPort&quot;:&quot;&quot;,&quot;header1&quot;:&quot;hLeLele&quot;}</p>
              */
             public Builder headers(String headers) {
                 this.headers = headers;

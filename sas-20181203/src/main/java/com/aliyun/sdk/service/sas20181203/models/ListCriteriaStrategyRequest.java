@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCriteriaStrategyRequest} extends {@link RequestModel}
  *
  * <p>ListCriteriaStrategyRequest</p>
  */
 public class ListCriteriaStrategyRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
     private ListCriteriaStrategyRequest(Builder builder) {
@@ -110,10 +115,13 @@ public class ListCriteriaStrategyRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,10 +130,13 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * The name of the image.
-         * <p>
+         * <p>The name of the image.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetOpaClusterImageList~~">GetOpaClusterImageList</a> operation to query the names of images.</p>
+         * </blockquote>
          * 
-         * >  You can call the [GetOpaClusterImageList](~~GetOpaClusterImageList~~) operation to query the names of images.
+         * <strong>example:</strong>
+         * <p>testImage</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -134,10 +145,13 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * The tag that is added to the container.
-         * <p>
+         * <p>The tag that is added to the container.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetOpaClusterLabelList~~">GetOpaClusterLabelList</a> operation to query the tags that are added to containers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [GetOpaClusterLabelList](~~GetOpaClusterLabelList~~) operation to query the tags that are added to containers.
+         * <strong>example:</strong>
+         * <p>testlabel</p>
          */
         public Builder label(String label) {
             this.putQueryParameter("Label", label);
@@ -146,10 +160,13 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * The namespace of the cluster.
-         * <p>
+         * <p>The namespace of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetOpaClusterNamespaceList~~">GetOpaClusterNamespaceList</a> operation to query the namespaces of clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [GetOpaClusterNamespaceList](~~GetOpaClusterNamespaceList~~) operation to query the namespaces of clusters.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -158,7 +175,10 @@ public class ListCriteriaStrategyRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

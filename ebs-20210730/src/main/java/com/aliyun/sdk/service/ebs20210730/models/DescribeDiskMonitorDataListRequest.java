@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskMonitorDataListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiskMonitorDataListRequest</p>
  */
 public class DescribeDiskMonitorDataListRequest extends Request {
-    @Query
-    @NameInMap("DiskIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskIds")
     private String diskIds;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeDiskMonitorDataListRequest(Builder builder) {
@@ -142,7 +147,10 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         } 
 
         /**
-         * The IDs of the disks. The value is a JSON array that contains multiple disk IDs. Separate the IDs with commas (,).
+         * <p>The IDs of the disks. The value is a JSON array that contains multiple disk IDs. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d-bp67acfmxazb4p****&quot;,&quot;d-bp67acfmxazs5t****&quot;]</p>
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -151,7 +159,11 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * The end of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The end of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-01T05:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,12 +172,12 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. If you specify this parameter, both `MaxResults` and `NextToken` are used for a paged query.
-         * <p>
+         * <p>The number of entries per page. If you specify this parameter, both <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -174,7 +186,10 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in this request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in this request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9c****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -183,7 +198,11 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~354276~~) operation to query the list of regions that support CloudLens for EBS.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the list of regions that support CloudLens for EBS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +211,11 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The beginning of the time range during which you want to query the near real-time monitoring data of the disks. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-01T03:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -201,10 +224,12 @@ public class DescribeDiskMonitorDataListRequest extends Request {
         }
 
         /**
-         * The type of the monitoring data. Set the value to pro.
-         * <p>
+         * <p>The type of the monitoring data. Set the value to pro.</p>
+         * <p>pro: burst performance data, such as burst I/O operations.</p>
+         * <p>This parameter is required.</p>
          * 
-         * pro: burst performance data, such as burst I/O operations.
+         * <strong>example:</strong>
+         * <p>pro</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

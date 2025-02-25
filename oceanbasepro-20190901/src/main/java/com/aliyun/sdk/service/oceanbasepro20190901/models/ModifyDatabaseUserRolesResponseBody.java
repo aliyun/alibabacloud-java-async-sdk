@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDatabaseUserRolesResponseBody</p>
  */
 public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantUser")
+    @com.aliyun.core.annotation.NameInMap("TenantUser")
     private TenantUser tenantUser;
 
     private ModifyDatabaseUserRolesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Users(Builder builder) {
@@ -133,13 +132,13 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
 
     }
     public static class TenantUser extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("Users")
+        @com.aliyun.core.annotation.NameInMap("Users")
         private java.util.List < Users> users;
 
         private TenantUser(Builder builder) {

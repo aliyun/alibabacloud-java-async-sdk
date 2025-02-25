@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskInfoResponseBody</p>
  */
 public class DescribeTaskInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskInfo")
+    @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private TaskInfo taskInfo;
 
     private DescribeTaskInfoResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         private TaskInfo taskInfo; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the task.
+         * <p>The queried task.</p>
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -71,20 +74,26 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskInfoResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
 
         private TaskInfo(Builder builder) {
@@ -146,7 +155,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private Integer taskId; 
 
             /**
-             * The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
+             * <p>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-07T07:39:56Z</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -154,7 +166,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
+             * <p>The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-01-07T08:08:50Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -162,7 +177,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task. Unit: %.
+             * <p>The progress of the task. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -170,18 +188,21 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
-             * <p>
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>Waiting</li>
+             * <li>Running</li>
+             * <li>Finished</li>
+             * <li>Failed</li>
+             * <li>Closed</li>
+             * <li>Cancel</li>
+             * <li>Retry</li>
+             * <li>Pause</li>
+             * <li>Stop</li>
+             * </ul>
              * 
-             * *   Waiting
-             * *   Running
-             * *   Finished
-             * *   Failed
-             * *   Closed
-             * *   Cancel
-             * *   Retry
-             * *   Pause
-             * *   Stop
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -189,7 +210,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>225685759</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

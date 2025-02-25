@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUploadImageResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUploadImageResponseBody</p>
  */
 public class CreateUploadImageResponseBody extends TeaModel {
-    @NameInMap("FileURL")
+    @com.aliyun.core.annotation.NameInMap("FileURL")
     private String fileURL;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("ImageURL")
+    @com.aliyun.core.annotation.NameInMap("ImageURL")
     private String imageURL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadAddress")
+    @com.aliyun.core.annotation.NameInMap("UploadAddress")
     private String uploadAddress;
 
-    @NameInMap("UploadAuth")
+    @com.aliyun.core.annotation.NameInMap("UploadAuth")
     private String uploadAuth;
 
     private CreateUploadImageResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class CreateUploadImageResponseBody extends TeaModel {
         private String uploadAuth; 
 
         /**
-         * The OSS URL of the file. The URL does not contain the information used for URL signing. You can specify FileUrl when you call the [AddWatermark](~~98617~~) operation.
+         * <p>The OSS URL of the file. The URL does not contain the information used for URL signing. You can specify FileUrl when you call the <a href="https://help.aliyun.com/document_detail/98617.html">AddWatermark</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png">http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png</a></p>
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -106,7 +114,10 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image file.
+         * <p>The ID of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f46e91d24d81d4****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -114,10 +125,13 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the image.
-         * <p>
+         * <p>The URL of the image.</p>
+         * <blockquote>
+         * <p>If the returned URL is inaccessible from a browser and the HTTP 403 status code is returned, the URL signing feature in ApsaraVideo VOD is enabled. To resolve this issue, you can disable the <a href="https://help.aliyun.com/document_detail/86090.html">URL signing</a> feature or <a href="https://help.aliyun.com/document_detail/57007.html">generate a signed URL</a>.</p>
+         * </blockquote>
          * 
-         * > If the returned URL is inaccessible from a browser and the HTTP 403 status code is returned, the URL signing feature in ApsaraVideo VOD is enabled. To resolve this issue, you can disable the [URL signing](~~86090~~) feature or [generate a signed URL](~~57007~~).
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png">http://example.aliyundoc.com/cover/2017-34DB-4F4C-9373-003AA060****.png</a></p>
          */
         public Builder imageURL(String imageURL) {
             this.imageURL = imageURL;
@@ -125,7 +139,10 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-AEF6-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,10 +150,13 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The upload URL.
-         * <p>
+         * <p>The upload URL.</p>
+         * <blockquote>
+         * <p>The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.</p>
+         * </blockquote>
          * 
-         * > The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.
+         * <strong>example:</strong>
+         * <p>eyJTZWN1cmuIjoiQ0FJU3p3TjF****</p>
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -144,10 +164,13 @@ public class CreateUploadImageResponseBody extends TeaModel {
         }
 
         /**
-         * The upload credential.
-         * <p>
+         * <p>The upload credential.</p>
+         * <blockquote>
+         * <p>The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.</p>
+         * </blockquote>
          * 
-         * > The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload auxiliary media assets. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload auxiliary media assets.
+         * <strong>example:</strong>
+         * <p>eyJFbmmRCI6Im****</p>
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;

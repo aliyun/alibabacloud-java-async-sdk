@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateHaVipRequest} extends {@link RequestModel}
  *
  * <p>UnassociateHaVipRequest</p>
  */
 public class UnassociateHaVipRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private String force;
 
-    @Query
-    @NameInMap("HaVipId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaVipId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haVipId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private UnassociateHaVipRequest(Builder builder) {
@@ -183,7 +188,10 @@ public class UnassociateHaVipRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,13 +200,17 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the value to <strong>False</strong>, you cannot disassociate the HAVIP from the primary instance.</p>
+         * </blockquote>
          * 
-         * *   **True**
-         * *   **False** (default)
-         * 
-         * >  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder force(String force) {
             this.putQueryParameter("Force", force);
@@ -207,7 +219,11 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the HAVIP that you want to disassociate.
+         * <p>The ID of the HAVIP that you want to disassociate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-2zeo05qre24nhrqpy****</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -216,7 +232,11 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.
+         * <p>The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-faf344422ffsfad****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -225,13 +245,17 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * The type of the instance from which you want to disassociate the HAVIP. Valid values:
-         * <p>
+         * <p>The type of the instance from which you want to disassociate the HAVIP. Valid values:</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong>: an ECS instance</li>
+         * <li><strong>NetworkInterface</strong>: an ENI</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you want to disassociate the HAVIP from an ENI, this parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **EcsInstance**: an ECS instance
-         * *   **NetworkInterface**: an ENI
-         * 
-         * >  If you want to disassociate the HAVIP from an ENI, this parameter is required.
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -258,10 +282,12 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * The region ID of the HAVIP.
-         * <p>
+         * <p>The region ID of the HAVIP.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

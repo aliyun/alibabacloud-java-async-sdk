@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsInstanceUpdateRequest} extends {@link RequestModel}
  *
  * <p>OnsInstanceUpdateRequest</p>
  */
 public class OnsInstanceUpdateRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     private OnsInstanceUpdateRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class OnsInstanceUpdateRequest extends Request {
         } 
 
         /**
-         * The ID of the instance whose name or description you want to update.
+         * <p>The ID of the instance whose name or description you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BXSuW61e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,12 +96,15 @@ public class OnsInstanceUpdateRequest extends Request {
         }
 
         /**
-         * The new name of the instance. The name must meet the following rules:
-         * <p>
+         * <p>The new name of the instance. The name must meet the following rules:</p>
+         * <ul>
+         * <li>The name of the instance must be unique in the region where the instance is deployed.</li>
+         * <li>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), underscores (_), and Chinese characters.</li>
+         * <li>If you do not configure this parameter, the instance name remains unchanged.</li>
+         * </ul>
          * 
-         * *   The name of the instance must be unique in the region where the instance is deployed.
-         * *   The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
-         * *   If you do not configure this parameter, the instance name remains unchanged.
+         * <strong>example:</strong>
+         * <p>Updatedname</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -106,7 +113,10 @@ public class OnsInstanceUpdateRequest extends Request {
         }
 
         /**
-         * The updated description of the instance. If you do not configure this parameter, the instance description remains unchanged.
+         * <p>The updated description of the instance. If you do not configure this parameter, the instance description remains unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Updateddescription</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

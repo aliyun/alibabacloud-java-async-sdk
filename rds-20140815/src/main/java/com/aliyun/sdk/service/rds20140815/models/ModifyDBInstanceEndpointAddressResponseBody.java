@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceEndpointAddressResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceEndpointAddressResponseBody</p>
  */
 public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBInstanceEndpointAddressResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90496720-2319-42A8-87CD-FCE4DF95EBED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBInstanceEndpointAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceEndpointAddressResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceEndpointId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointId")
         private String DBInstanceEndpointId;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
         private Data(Builder builder) {
@@ -110,7 +124,10 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
             private String DBInstanceName; 
 
             /**
-             * The endpoint ID of the instance.
+             * <p>The endpoint ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-****</p>
              */
             public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
                 this.DBInstanceEndpointId = DBInstanceEndpointId;
@@ -118,7 +135,10 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;

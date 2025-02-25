@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteModelRequest} extends {@link RequestModel}
  *
  * <p>DeleteModelRequest</p>
  */
 public class DeleteModelRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("ModelName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelName;
 
     private DeleteModelRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DeleteModelRequest extends Request {
         } 
 
         /**
-         * The ID of the API group to which the model belongs.
+         * <p>The ID of the API group to which the model belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30e792398d6c4569b04c0e53a3494381</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -79,7 +88,11 @@ public class DeleteModelRequest extends Request {
         }
 
         /**
-         * The name of the model.
+         * <p>The name of the model.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);

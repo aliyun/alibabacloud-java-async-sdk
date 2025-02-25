@@ -1,167 +1,190 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateShardingDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateShardingDBInstanceRequest</p>
  */
 public class CreateShardingDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("AccountPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPassword")
     private String accountPassword;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    private String backupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConfigServer")
-    @Validation(required = true)
-    private java.util.List < ConfigServer> configServer;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigServer")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ConfigServer> configServer;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("GlobalSecurityGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupIds")
     private String globalSecurityGroupIds;
 
-    @Query
-    @NameInMap("HiddenZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HiddenZoneId")
     private String hiddenZoneId;
 
-    @Query
-    @NameInMap("Mongos")
-    @Validation(required = true)
-    private java.util.List < Mongos> mongos;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mongos")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Mongos> mongos;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("ProvisionedIops")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
     private Long provisionedIops;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicaSet")
-    @Validation(required = true)
-    private java.util.List < ReplicaSet> replicaSet;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaSet")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ReplicaSet> replicaSet;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("SecondaryZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    private String restoreType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
     private String secondaryZoneId;
 
-    @Query
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @Query
-    @NameInMap("SrcDBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcDBInstanceId")
     private String srcDBInstanceId;
 
-    @Query
-    @NameInMap("StorageEngine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageEngine")
     private String storageEngine;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateShardingDBInstanceRequest(Builder builder) {
         super(builder);
         this.accountPassword = builder.accountPassword;
         this.autoRenew = builder.autoRenew;
+        this.backupId = builder.backupId;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
         this.configServer = builder.configServer;
         this.DBInstanceDescription = builder.DBInstanceDescription;
+        this.destRegion = builder.destRegion;
         this.encrypted = builder.encrypted;
         this.encryptionKey = builder.encryptionKey;
         this.engine = builder.engine;
@@ -181,9 +204,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
+        this.restoreType = builder.restoreType;
         this.secondaryZoneId = builder.secondaryZoneId;
         this.securityIPList = builder.securityIPList;
         this.srcDBInstanceId = builder.srcDBInstanceId;
+        this.srcRegion = builder.srcRegion;
         this.storageEngine = builder.storageEngine;
         this.storageType = builder.storageType;
         this.tag = builder.tag;
@@ -220,6 +245,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return backupId
+     */
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    /**
      * @return chargeType
      */
     public String getChargeType() {
@@ -236,7 +268,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return configServer
      */
-    public java.util.List < ConfigServer> getConfigServer() {
+    public java.util.List<ConfigServer> getConfigServer() {
         return this.configServer;
     }
 
@@ -245,6 +277,13 @@ public class CreateShardingDBInstanceRequest extends Request {
      */
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     /**
@@ -292,7 +331,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return mongos
      */
-    public java.util.List < Mongos> getMongos() {
+    public java.util.List<Mongos> getMongos() {
         return this.mongos;
     }
 
@@ -348,7 +387,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return replicaSet
      */
-    public java.util.List < ReplicaSet> getReplicaSet() {
+    public java.util.List<ReplicaSet> getReplicaSet() {
         return this.replicaSet;
     }
 
@@ -381,6 +420,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return restoreType
+     */
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
+    /**
      * @return secondaryZoneId
      */
     public String getSecondaryZoneId() {
@@ -402,6 +448,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
+    /**
      * @return storageEngine
      */
     public String getStorageEngine() {
@@ -418,7 +471,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -446,17 +499,19 @@ public class CreateShardingDBInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateShardingDBInstanceRequest, Builder> {
         private String accountPassword; 
         private String autoRenew; 
+        private String backupId; 
         private String chargeType; 
         private String clientToken; 
-        private java.util.List < ConfigServer> configServer; 
+        private java.util.List<ConfigServer> configServer; 
         private String DBInstanceDescription; 
+        private String destRegion; 
         private Boolean encrypted; 
         private String encryptionKey; 
         private String engine; 
         private String engineVersion; 
         private String globalSecurityGroupIds; 
         private String hiddenZoneId; 
-        private java.util.List < Mongos> mongos; 
+        private java.util.List<Mongos> mongos; 
         private String networkType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -464,17 +519,19 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String protocolType; 
         private Long provisionedIops; 
         private String regionId; 
-        private java.util.List < ReplicaSet> replicaSet; 
+        private java.util.List<ReplicaSet> replicaSet; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
+        private String restoreType; 
         private String secondaryZoneId; 
         private String securityIPList; 
         private String srcDBInstanceId; 
+        private String srcRegion; 
         private String storageEngine; 
         private String storageType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -487,10 +544,12 @@ public class CreateShardingDBInstanceRequest extends Request {
             super(request);
             this.accountPassword = request.accountPassword;
             this.autoRenew = request.autoRenew;
+            this.backupId = request.backupId;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
             this.configServer = request.configServer;
             this.DBInstanceDescription = request.DBInstanceDescription;
+            this.destRegion = request.destRegion;
             this.encrypted = request.encrypted;
             this.encryptionKey = request.encryptionKey;
             this.engine = request.engine;
@@ -510,9 +569,11 @@ public class CreateShardingDBInstanceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
             this.secondaryZoneId = request.secondaryZoneId;
             this.securityIPList = request.securityIPList;
             this.srcDBInstanceId = request.srcDBInstanceId;
+            this.srcRegion = request.srcRegion;
             this.storageEngine = request.storageEngine;
             this.storageType = request.storageType;
             this.tag = request.tag;
@@ -522,12 +583,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         } 
 
         /**
-         * The password of the root account. The password must meet the following requirements:
-         * <p>
+         * <p>The password of the root account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>The special characters include ! # $ % ^ &amp; * ( ) _ + - =</li>
+         * <li>The password of the account must be 8 to 32 characters in length.</li>
+         * </ul>
          * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   The special characters include ! # $ % ^ & \* ( ) \_ + - =
-         * *   The password of the account must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>123456Aa</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -536,13 +600,17 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available and optional if you set the value of <strong>ChargeType</strong> to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false** (default)
-         * 
-         * > This parameter is available and optional if you set the value of **ChargeType** to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -551,13 +619,32 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The ID of the backup set. </p>
+         * <blockquote>
+         * <p>When you call this operation to clone an instance based on the backup set, this parameter is required. The <strong>SrcDBInstanceId</strong> parameter is also required.</p>
+         * </blockquote>
          * 
-         * *   **PostPaid** (default): pay-as-you-go
-         * *   **PrePaid**: subscription
+         * <strong>example:</strong>
+         * <p>cb-xxx</p>
+         */
+        public Builder backupId(String backupId) {
+            this.putQueryParameter("BackupId", backupId);
+            this.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is set to <strong>PrePaid</strong>, you must also configure the <strong>Period</strong> parameter.</p>
+         * </blockquote>
          * 
-         * > **Period** is required if you set the value of this parameter to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -566,7 +653,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -575,21 +665,25 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The ConfigServer nodes of the instance.
+         * <p>The ConfigServer nodes of the instance.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder configServer(java.util.List < ConfigServer> configServer) {
+        public Builder configServer(java.util.List<ConfigServer> configServer) {
             this.putQueryParameter("ConfigServer", configServer);
             this.configServer = configServer;
             return this;
         }
 
         /**
-         * The name of the instance. The name of the instance must meet the following requirements:
-         * <p>
+         * <p>The name of the instance. The name of the instance must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must start with a letter.</li>
+         * <li>It can contain digits, letters, underscores (_), and hyphens (-).</li>
+         * <li>It must be 2 to 256 characters in length.</li>
+         * </ul>
          * 
-         * *   The name must start with a letter.
-         * *   It can contain digits, letters, underscores (\_), and hyphens (-).
-         * *   It must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -598,13 +692,25 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the disk. Valid values:
-         * <p>
+         * <p>The region of the backup set used for the cross-region backup and restoration.</p>
+         * <blockquote>
+         * <p> This parameter is required when you set the RestoreType parameter to 3.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether disk encryption is enabled.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -613,7 +719,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the custom key.
+         * <p>The ID of the custom key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -622,7 +731,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to **MongoDB**.
+         * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -631,21 +744,25 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The version of the database engine. Valid values:
-         * <p>
+         * <p>The database engine version of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>7.0</strong></li>
+         * <li><strong>6.0</strong></li>
+         * <li><strong>5.0</strong></li>
+         * <li><strong>4.4</strong></li>
+         * <li><strong>4.2</strong></li>
+         * <li><strong>4.0</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
+         * <li>If you call this operation to clone an instance, set the value of this parameter to the database engine version of the source instance.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **6.0**
-         * *   **5.0**
-         * *   **4.4**
-         * *   **4.2**
-         * *   **4.0**
-         * *   **3.4**
-         * 
-         * > 
-         * 
-         * *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
-         * 
-         * *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.
+         * <strong>example:</strong>
+         * <p>4.4</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -654,7 +771,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * 实例的全局IP白名单模板，多个IP白名单模板请用英文逗号（,）分隔，不可重复。
+         * <p>The global IP address whitelist template of the instance. Separate multiple templates with commas (,). The template name must be globally unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-qxieqf40xjst1ngp****</p>
          */
         public Builder globalSecurityGroupIds(String globalSecurityGroupIds) {
             this.putQueryParameter("GlobalSecurityGroupIds", globalSecurityGroupIds);
@@ -663,35 +783,37 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of secondary zone 2 for multi-zone deployment. Valid values:
-         * <p>
+         * <p>The ID of secondary zone 2 for multi-zone deployment. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
+         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
+         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
+         * <li><strong>cn-hongkong-b</strong>: Hong Kong Zone B</li>
+         * <li><strong>cn-hongkong-c</strong>: Hong Kong Zone C</li>
+         * <li><strong>cn-hongkong-d</strong>: Hong Kong Zone D</li>
+         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
+         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
+         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
+         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
+         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
+         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
+         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
+         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
+         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
+         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
+         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
+         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required if you set the value of <strong>EngineVersion</strong> to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+         * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>SecondaryZoneId</strong>.</li>
+         * <li>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **cn-hangzhou-g**: Hangzhou Zone G
-         * *   **cn-hangzhou-h**: Hangzhou Zone H
-         * *   **cn-hangzhou-i**: Hangzhou Zone I
-         * *   **cn-hongkong-b**: Hong Kong Zone B
-         * *   **cn-hongkong-c**: Hong Kong Zone C
-         * *   **cn-hongkong-d**: Hong Kong Zone D
-         * *   **cn-wulanchabu-a**: Ulanqab Zone A
-         * *   **cn-wulanchabu-b**: Ulanqab Zone B
-         * *   **cn-wulanchabu-c**: Ulanqab Zone C
-         * *   **ap-southeast-1a**: Singapore Zone A
-         * *   **ap-southeast-1b**: Singapore Zone B
-         * *   **ap-southeast-1c**: Singapore Zone C
-         * *   **ap-southeast-5a**: Jakarta Zone A
-         * *   **ap-southeast-5b**: Jakarta Zone B
-         * *   **ap-southeast-5c**: Jakarta Zone C
-         * *   **eu-central-1a**: Frankfurt Zone A
-         * *   **eu-central-1b**: Frankfurt Zone B
-         * *   **eu-central-1c**: Frankfurt Zone C
-         * 
-         * > 
-         * 
-         * *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
-         * 
-         * *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.
-         * 
-         * *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder hiddenZoneId(String hiddenZoneId) {
             this.putQueryParameter("HiddenZoneId", hiddenZoneId);
@@ -700,19 +822,21 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The mongos nodes of the instance.
+         * <p>The mongos nodes of the instance.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder mongos(java.util.List < Mongos> mongos) {
+        public Builder mongos(java.util.List<Mongos> mongos) {
             this.putQueryParameter("Mongos", mongos);
             this.mongos = mongos;
             return this;
         }
 
         /**
-         * The network type of the instance. Set the value to VPC.
-         * <p>
+         * <p>The network type of the instance.</p>
+         * <p>Set the value to <strong>VPC</strong>.</p>
          * 
-         * ****
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -739,12 +863,14 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. Unit: month.
-         * <p>
+         * <p>The subscription period of the instance. Unit: months.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
+         * <blockquote>
+         * <p>When you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>, this parameter is valid and required.</p>
+         * </blockquote>
          * 
-         * Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, and 60************************
-         * 
-         * > This parameter is available and required if you set the value of **ChargeType** to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -753,11 +879,14 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The access protocol type of the instance. Valid values:
-         * <p>
+         * <p>The access protocol type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>mongodb</strong></li>
+         * <li><strong>dynamodb</strong></li>
+         * </ul>
          * 
-         * *   **mongodb**: the MongoDB protocol
-         * *   **dynamodb**: the DynamoDB protocol
+         * <strong>example:</strong>
+         * <p>mongodb</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -766,7 +895,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * ProvisionedIops.
+         * <p>The provisioned IOPS of the instance:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1960</p>
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -775,7 +907,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -784,16 +920,20 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The shard nodes of the instance.
+         * <p>The information of the shard node.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder replicaSet(java.util.List < ReplicaSet> replicaSet) {
+        public Builder replicaSet(java.util.List<ReplicaSet> replicaSet) {
             this.putQueryParameter("ReplicaSet", replicaSet);
             this.replicaSet = replicaSet;
             return this;
         }
 
         /**
-         * The resource group ID. For more information, see [View the basic information of a resource group](~~151181~~).
+         * <p>The resource group ID. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -820,10 +960,13 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The point in time to restore the instance, which must be within seven days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in Coordinated Universal Time (UTC).
-         * <p>
+         * <p>The point in time to restore the instance, which must be within seven days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <blockquote>
+         * <p>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <strong>SrcDBInstanceId</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify **SrcDBInstanceId**.
+         * <strong>example:</strong>
+         * <p>2022-03-08T02:30:25Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -832,34 +975,54 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of secondary zone 1 for multi-zone deployment. Valid values:
-         * <p>
+         * <p>The backup restore type of the instance.</p>
+         * <ul>
+         * <li>1:  restore an instance to the specified time.</li>
+         * <li>2: restore an  released instance to the specified backup set.</li>
+         * <li>3：restore an instance to the specified cross-regional backup set.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou-g**: Hangzhou Zone G
-         * *   **cn-hangzhou-h**: Hangzhou Zone H
-         * *   **cn-hangzhou-i**: Hangzhou Zone I
-         * *   **cn-hongkong-b**: Hong Kong Zone B
-         * *   **cn-hongkong-c**: Hong Kong Zone C
-         * *   **cn-hongkong-d**: Hong Kong Zone D
-         * *   **cn-wulanchabu-a**: Ulanqab Zone A
-         * *   **cn-wulanchabu-b**: Ulanqab Zone B
-         * *   **cn-wulanchabu-c**: Ulanqab Zone C
-         * *   **ap-southeast-1a**: Singapore Zone A
-         * *   **ap-southeast-1b**: Singapore Zone B
-         * *   **ap-southeast-1c**: Singapore Zone C
-         * *   **ap-southeast-5a**: Jakarta Zone A
-         * *   **ap-southeast-5b**: Jakarta Zone B
-         * *   **ap-southeast-5c**: Jakarta Zone C
-         * *   **eu-central-1a**: Frankfurt Zone A
-         * *   **eu-central-1b**: Frankfurt Zone B
-         * *   **eu-central-1c**: Frankfurt Zone C
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder restoreType(String restoreType) {
+            this.putQueryParameter("RestoreType", restoreType);
+            this.restoreType = restoreType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of secondary zone 1 for multi-zone deployment. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
+         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
+         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
+         * <li><strong>cn-hongkong-b</strong>: Hong Kong Zone B</li>
+         * <li><strong>cn-hongkong-c</strong>: Hong Kong Zone C</li>
+         * <li><strong>cn-hongkong-d</strong>: Hong Kong Zone D</li>
+         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
+         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
+         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
+         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
+         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
+         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
+         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
+         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
+         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
+         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
+         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
+         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required if you set the value of <strong>EngineVersion</strong> to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+         * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>HiddenZoneId</strong>.</li>
+         * <li>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
-         * 
-         * *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.
-         * *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -868,18 +1031,21 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The IP addresses in an IP address whitelist of the instance. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:
-         * <p>
+         * <p>The IP addresses in an IP address whitelist of the instance. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:</p>
+         * <ul>
+         * <li>0.0.0.0/0</li>
+         * <li>IP addresses, such as 10.23.12.24.</li>
+         * <li>CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</li>
+         * <li>If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   0.0.0.0/0
-         * *   IP addresses, such as 10.23.12.24.
-         * *   CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
-         * 
-         * > 
-         * 
-         * *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
-         * 
-         * *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx,192.168.xx.xx</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -888,10 +1054,13 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The source instance ID.
-         * <p>
+         * <p>The source instance ID.</p>
+         * <blockquote>
+         * <p>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <strong>RestoreTime</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify **RestoreTime**.
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         public Builder srcDBInstanceId(String srcDBInstanceId) {
             this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);
@@ -900,14 +1069,31 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage engine of the instance. Set the value to **WiredTiger**.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p>This parameter is required when restore type is set to 2 or 3.</p>
+         * </blockquote>
          * 
-         * > 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
+            return this;
+        }
+
+        /**
+         * <p>The storage engine of the instance. Set the value to <strong>WiredTiger</strong>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</li>
+         * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.
-         * 
-         * *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+         * <strong>example:</strong>
+         * <p>WiredTiger</p>
          */
         public Builder storageEngine(String storageEngine) {
             this.putQueryParameter("StorageEngine", storageEngine);
@@ -916,19 +1102,22 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. Valid values:
-         * <p>
+         * <p>The storage type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_essd1</strong>: ESSD PL1</li>
+         * <li><strong>cloud_essd2</strong>: ESSD PL2</li>
+         * <li><strong>cloud_essd3</strong>: ESSD PL3</li>
+         * <li><strong>local_ssd</strong>: local SSD</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Instances of MongoDB 4.4 and later support only cloud disks. <strong>cloud_essd1</strong> is selected if you leave this parameter empty.</li>
+         * <li>Instances of MongoDB 4.2 and earlier support only local disks. <strong>local_ssd</strong> is selected if you leave this parameter empty.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **cloud_essd1**: ESSD PL1
-         * *   **cloud_essd2**: ESSD PL2
-         * *   **cloud_essd3**: ESSD PL3
-         * *   **local_ssd**: local SSD
-         * 
-         * > 
-         * 
-         * *   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-         * 
-         * *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>cloud_essd1</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -937,16 +1126,19 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The custom tags that you want to add to the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The vSwitch ID.
+         * <p>The vSwitch ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1vj604nj5a9zz74****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -955,7 +1147,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1n3i15v90el48nx****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -964,7 +1159,10 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+         * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -979,13 +1177,19 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateShardingDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateShardingDBInstanceRequest</p>
+     */
     public static class ConfigServer extends TeaModel {
-        @NameInMap("Class")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Class")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String _class;
 
-        @NameInMap("Storage")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Storage")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer storage;
 
         private ConfigServer(Builder builder) {
@@ -1020,11 +1224,15 @@ public class CreateShardingDBInstanceRequest extends Request {
             private Integer storage; 
 
             /**
-             * The instance type of the ConfigServer node. Valid values:
-             * <p>
+             * <p>The instance type of the ConfigServer node. Valid values:</p>
+             * <ul>
+             * <li><strong>mdb.shard.2x.xlarge.d</strong>: 4 cores, 8 GB (dedicated). Only instances that run MongoDB 4.4 and later support this instance type.</li>
+             * <li><strong>dds.cs.mid</strong> :1 core, 2 GB (general-purpose). Only instances that run MongoDB 4.2 and earlier support this instance type.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **mdb.shard.2x.xlarge.d**: 4 cores, 8 GB (dedicated). Only instances that run MongoDB 4.4 and later support this instance type.
-             * *   **dds.cs.mid** :1 core, 2 GB (general-purpose). Only instances that run MongoDB 4.2 and earlier support this instance type.
+             * <strong>example:</strong>
+             * <p>mdb.shard.2x.xlarge.d</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -1032,10 +1240,14 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * The storage space of the ConfigServer node. Unit: GB.
-             * <p>
+             * <p>The storage space of the ConfigServer node. Unit: GB.</p>
+             * <blockquote>
+             * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -1049,9 +1261,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateShardingDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateShardingDBInstanceRequest</p>
+     */
     public static class Mongos extends TeaModel {
-        @NameInMap("Class")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Class")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String _class;
 
         private Mongos(Builder builder) {
@@ -1077,14 +1295,17 @@ public class CreateShardingDBInstanceRequest extends Request {
             private String _class; 
 
             /**
-             * The instance type of the mongos node. For more information, see [Sharded cluster instance types](~~311414~~).
-             * <p>
+             * <p>The instance type of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+             * <blockquote>
+             * <ul>
+             * <li><strong>N</strong> specifies the serial number of the mongos node for which the instance type is specified. For example, <strong>Mongos.2.Class</strong> specifies the instance type of the second mongos node.</li>
+             * <li>Valid values for <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
+             * </ul>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > 
-             * 
-             * *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.
-             * 
-             * *   Valid values for **N**: **2** to **32**.
+             * <strong>example:</strong>
+             * <p>mdb.shard.2x.xlarge.d</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -1098,17 +1319,23 @@ public class CreateShardingDBInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateShardingDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateShardingDBInstanceRequest</p>
+     */
     public static class ReplicaSet extends TeaModel {
-        @NameInMap("Class")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Class")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String _class;
 
-        @NameInMap("ReadonlyReplicas")
-        @Validation(maximum = 5)
+        @com.aliyun.core.annotation.NameInMap("ReadonlyReplicas")
+        @com.aliyun.core.annotation.Validation(maximum = 5)
         private Integer readonlyReplicas;
 
-        @NameInMap("Storage")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Storage")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer storage;
 
         private ReplicaSet(Builder builder) {
@@ -1152,14 +1379,17 @@ public class CreateShardingDBInstanceRequest extends Request {
             private Integer storage; 
 
             /**
-             * The instance type of the shard node. For more information, see [Sharded cluster instance types](~~311414~~).
-             * <p>
+             * <p>The instance type of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+             * <blockquote>
+             * <ul>
+             * <li><strong>N</strong> specifies the serial number of the shard node for which the instance type is specified. For example, <strong>ReplicaSet.2.Class</strong> specifies the instance type of the second shard node.</li>
+             * <li>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
+             * </ul>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > 
-             * 
-             * *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.
-             * 
-             * *   Valid values for **N**: **2** to **32**.
+             * <strong>example:</strong>
+             * <p>dds.shard.standard</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -1167,12 +1397,14 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * The number of read-only nodes in shard node N.
-             * <p>
+             * <p>The number of read-only nodes in the shard node.</p>
+             * <p>Valid values: <strong>0</strong>, <strong>1, 2, 3, 4, and 5</strong>. Default value: <strong>0</strong>.</p>
+             * <blockquote>
+             * <p> <strong>N</strong> specifies the serial number of the shard node for which you want to set the number of read-only nodes. <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard node.</p>
+             * </blockquote>
              * 
-             * Valid values: **0** to **5**. Default value: **0**.
-             * 
-             * > **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder readonlyReplicas(Integer readonlyReplicas) {
                 this.readonlyReplicas = readonlyReplicas;
@@ -1180,14 +1412,17 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * The storage space of the shard node. Unit: GB.
-             * <p>
+             * <p>The storage capacity of the shard node. Unit: GB.</p>
+             * <blockquote>
+             * <ul>
+             * <li>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
+             * <li><strong>N</strong> specifies the serial number of the shard node for which the storage space is specified. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage space of the second shard node.</li>
+             * </ul>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > 
-             * 
-             * *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
-             * 
-             * *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -1201,11 +1436,17 @@ public class CreateShardingDBInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateShardingDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateShardingDBInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -1240,7 +1481,13 @@ public class CreateShardingDBInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * <blockquote>
+             * <p> <strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag and <strong>Tag.2.Key</strong> specifies the key of the second tag.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>testdatabase</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1248,7 +1495,13 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * <blockquote>
+             * <p> <strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>apitest</p>
              */
             public Builder value(String value) {
                 this.value = value;

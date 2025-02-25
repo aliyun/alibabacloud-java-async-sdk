@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInvoicingCustomerListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInvoicingCustomerListResponseBody</p>
  */
 public class QueryInvoicingCustomerListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryInvoicingCustomerListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,68 +148,74 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInvoicingCustomerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInvoicingCustomerListResponseBody</p>
+     */
     public static class CustomerInvoice extends TeaModel {
-        @NameInMap("AdjustType")
+        @com.aliyun.core.annotation.NameInMap("AdjustType")
         private Long adjustType;
 
-        @NameInMap("Bank")
+        @com.aliyun.core.annotation.NameInMap("Bank")
         private String bank;
 
-        @NameInMap("BankNo")
+        @com.aliyun.core.annotation.NameInMap("BankNo")
         private String bankNo;
 
-        @NameInMap("CustomerType")
+        @com.aliyun.core.annotation.NameInMap("CustomerType")
         private Long customerType;
 
-        @NameInMap("DefaultRemark")
+        @com.aliyun.core.annotation.NameInMap("DefaultRemark")
         private String defaultRemark;
 
-        @NameInMap("EndCycle")
+        @com.aliyun.core.annotation.NameInMap("EndCycle")
         private Long endCycle;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InvoiceTitle")
+        @com.aliyun.core.annotation.NameInMap("InvoiceTitle")
         private String invoiceTitle;
 
-        @NameInMap("IssueType")
+        @com.aliyun.core.annotation.NameInMap("IssueType")
         private Long issueType;
 
-        @NameInMap("OperatingLicenseAddress")
+        @com.aliyun.core.annotation.NameInMap("OperatingLicenseAddress")
         private String operatingLicenseAddress;
 
-        @NameInMap("OperatingLicensePhone")
+        @com.aliyun.core.annotation.NameInMap("OperatingLicensePhone")
         private String operatingLicensePhone;
 
-        @NameInMap("RegisterNo")
+        @com.aliyun.core.annotation.NameInMap("RegisterNo")
         private String registerNo;
 
-        @NameInMap("StartCycle")
+        @com.aliyun.core.annotation.NameInMap("StartCycle")
         private Long startCycle;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TaxationLicense")
+        @com.aliyun.core.annotation.NameInMap("TaxationLicense")
         private String taxationLicense;
 
-        @NameInMap("TaxpayerType")
+        @com.aliyun.core.annotation.NameInMap("TaxpayerType")
         private Long taxpayerType;
 
-        @NameInMap("TitleChangeInstructions")
+        @com.aliyun.core.annotation.NameInMap("TitleChangeInstructions")
         private String titleChangeInstructions;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Long type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private CustomerInvoice(Builder builder) {
@@ -398,7 +421,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             private String userNick; 
 
             /**
-             * The type of invoice that was changed to.
+             * <p>The type of invoice that was changed to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder adjustType(Long adjustType) {
                 this.adjustType = adjustType;
@@ -406,7 +432,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The bank that issues the invoice.
+             * <p>The bank that issues the invoice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Bank</p>
              */
             public Builder bank(String bank) {
                 this.bank = bank;
@@ -414,7 +443,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The bank account number.
+             * <p>The bank account number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>389576348573296349853476</p>
              */
             public Builder bankNo(String bankNo) {
                 this.bankNo = bankNo;
@@ -422,11 +454,14 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication type of Alipay. Valid values:
-             * <p>
+             * <p>The authentication type of Alipay. Valid values:</p>
+             * <ul>
+             * <li>1: individual</li>
+             * <li>2: company</li>
+             * </ul>
              * 
-             * *   1: individual
-             * *   2: company
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder customerType(Long customerType) {
                 this.customerType = customerType;
@@ -434,7 +469,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The default note that is attached when the title is specified.
+             * <p>The default note that is attached when the title is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PO Code: 12984554</p>
              */
             public Builder defaultRemark(String defaultRemark) {
                 this.defaultRemark = defaultRemark;
@@ -442,7 +480,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the payment ended.
+             * <p>The time when the payment ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202003</p>
              */
             public Builder endCycle(Long endCycle) {
                 this.endCycle = endCycle;
@@ -450,7 +491,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invoice was created. The time was in the yyyy-mm-dd hh:mm:ss format.
+             * <p>The time when the invoice was created. The time was in the yyyy-mm-dd hh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-07 15:26:20</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -458,7 +502,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invoice.
+             * <p>The ID of the invoice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>239875502738</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -466,7 +513,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The company name in the invoice title.
+             * <p>The company name in the invoice title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Company</p>
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -474,7 +524,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of issue.
+             * <p>The type of issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder issueType(Long issueType) {
                 this.issueType = issueType;
@@ -482,7 +535,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the business license.
+             * <p>The address of the business license.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX, XXX district, XXX city, XXX province</p>
              */
             public Builder operatingLicenseAddress(String operatingLicenseAddress) {
                 this.operatingLicenseAddress = operatingLicenseAddress;
@@ -490,7 +546,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the business license.
+             * <p>The phone number of the business license.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138xxxxxxxx</p>
              */
             public Builder operatingLicensePhone(String operatingLicensePhone) {
                 this.operatingLicensePhone = operatingLicensePhone;
@@ -498,7 +557,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The tax registration number.
+             * <p>The tax registration number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21343245342534</p>
              */
             public Builder registerNo(String registerNo) {
                 this.registerNo = registerNo;
@@ -506,7 +568,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the payment started.
+             * <p>The time when the payment started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202002</p>
              */
             public Builder startCycle(Long startCycle) {
                 this.startCycle = startCycle;
@@ -514,7 +579,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the invoice title.
+             * <p>The status of the invoice title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -522,7 +590,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The path and file name of the scanned copy of the tax registration certificate.
+             * <p>The path and file name of the scanned copy of the tax registration certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>taxationLicense.jpg</p>
              */
             public Builder taxationLicense(String taxationLicense) {
                 this.taxationLicense = taxationLicense;
@@ -530,11 +601,14 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the taxpayer. Valid values:
-             * <p>
+             * <p>The type of the taxpayer. Valid values:</p>
+             * <ul>
+             * <li>1: general taxpayer</li>
+             * <li>2: special taxpayer</li>
+             * </ul>
              * 
-             * *   1: general taxpayer
-             * *   2: special taxpayer
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taxpayerType(Long taxpayerType) {
                 this.taxpayerType = taxpayerType;
@@ -542,7 +616,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The instruction document of the invoice title change.
+             * <p>The instruction document of the invoice title change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instruction.doc</p>
              */
             public Builder titleChangeInstructions(String titleChangeInstructions) {
                 this.titleChangeInstructions = titleChangeInstructions;
@@ -550,11 +627,14 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the invoice. Valid values:
-             * <p>
+             * <p>The type of the invoice. Valid values:</p>
+             * <ul>
+             * <li>0: plain value-added tax (VAT) invoice</li>
+             * <li>1: special VAT invoice</li>
+             * </ul>
              * 
-             * *   0: plain value-added tax (VAT) invoice
-             * *   1: special VAT invoice
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -562,7 +642,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34565465675</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -570,7 +653,10 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNick</p>
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -584,9 +670,15 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInvoicingCustomerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInvoicingCustomerListResponseBody</p>
+     */
     public static class CustomerInvoiceList extends TeaModel {
-        @NameInMap("CustomerInvoice")
-        private java.util.List < CustomerInvoice> customerInvoice;
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoice")
+        private java.util.List<CustomerInvoice> customerInvoice;
 
         private CustomerInvoiceList(Builder builder) {
             this.customerInvoice = builder.customerInvoice;
@@ -603,17 +695,17 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         /**
          * @return customerInvoice
          */
-        public java.util.List < CustomerInvoice> getCustomerInvoice() {
+        public java.util.List<CustomerInvoice> getCustomerInvoice() {
             return this.customerInvoice;
         }
 
         public static final class Builder {
-            private java.util.List < CustomerInvoice> customerInvoice; 
+            private java.util.List<CustomerInvoice> customerInvoice; 
 
             /**
              * CustomerInvoice.
              */
-            public Builder customerInvoice(java.util.List < CustomerInvoice> customerInvoice) {
+            public Builder customerInvoice(java.util.List<CustomerInvoice> customerInvoice) {
                 this.customerInvoice = customerInvoice;
                 return this;
             }
@@ -625,8 +717,14 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInvoicingCustomerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInvoicingCustomerListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CustomerInvoiceList")
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoiceList")
         private CustomerInvoiceList customerInvoiceList;
 
         private Data(Builder builder) {
@@ -652,7 +750,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             private CustomerInvoiceList customerInvoiceList; 
 
             /**
-             * The information about the invoice.
+             * <p>The information about the invoice.</p>
              */
             public Builder customerInvoiceList(CustomerInvoiceList customerInvoiceList) {
                 this.customerInvoiceList = customerInvoiceList;

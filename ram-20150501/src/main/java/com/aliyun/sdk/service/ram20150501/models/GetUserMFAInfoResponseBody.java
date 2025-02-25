@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserMFAInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserMFAInfoResponseBody</p>
  */
 public class GetUserMFAInfoResponseBody extends TeaModel {
-    @NameInMap("MFADevice")
+    @com.aliyun.core.annotation.NameInMap("MFADevice")
     private MFADevice MFADevice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetUserMFAInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MFADevice.
+         * <p>The information about the MFA device that is attached to the RAM user.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -58,7 +63,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserMFAInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserMFAInfoResponseBody</p>
+     */
     public static class MFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MFADevice(Builder builder) {
@@ -110,7 +124,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * SerialNumber.
+             * <p>The serial number of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:mfa/test</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -118,7 +135,14 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the MFA device. Valid values:</p>
+             * <ul>
+             * <li>VMFA: virtual MFA device</li>
+             * <li>U2F: Universal 2nd Factor (U2F) security key</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VMFA</p>
              */
             public Builder type(String type) {
                 this.type = type;

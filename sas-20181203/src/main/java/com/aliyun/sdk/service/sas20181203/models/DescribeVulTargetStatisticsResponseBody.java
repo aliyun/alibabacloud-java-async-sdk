@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulTargetStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulTargetStatisticsResponseBody</p>
  */
 public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetStats")
-    private java.util.List < TargetStats> targetStats;
+    @com.aliyun.core.annotation.NameInMap("TargetStats")
+    private java.util.List<TargetStats> targetStats;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVulTargetStatisticsResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
     /**
      * @return targetStats
      */
-    public java.util.List < TargetStats> getTargetStats() {
+    public java.util.List<TargetStats> getTargetStats() {
         return this.targetStats;
     }
 
@@ -82,11 +87,14 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < TargetStats> targetStats; 
+        private java.util.List<TargetStats> targetStats; 
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +102,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +124,18 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations of the vulnerability scan feature.
+         * <p>An array that consists of the configurations of the vulnerability scan feature.</p>
          */
-        public Builder targetStats(java.util.List < TargetStats> targetStats) {
+        public Builder targetStats(java.util.List<TargetStats> targetStats) {
             this.targetStats = targetStats;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulTargetStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulTargetStatisticsResponseBody</p>
+     */
     public static class Targets extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Targets(Builder builder) {
@@ -182,11 +205,14 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * Indicates whether the configurations are applied to the server. Valid values:
-             * <p>
+             * <p>Indicates whether the configurations are applied to the server. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: yes</li>
+             * <li><strong>del</strong>: no</li>
+             * </ul>
              * 
-             * *   **add**: yes
-             * *   **del**: no
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -194,7 +220,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The group ID or UUID of the server to which the configurations are applied.
+             * <p>The group ID or UUID of the server to which the configurations are applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0011ea53-738c-4bff-93be-ce6a1cc9****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -202,11 +231,14 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The condition by which the configurations are applied to the server. Valid values:
-             * <p>
+             * <p>The condition by which the configurations are applied to the server. Valid values:</p>
+             * <ul>
+             * <li><strong>uuid</strong>: the UUID of the server</li>
+             * <li><strong>groupId</strong>: the ID of the server group</li>
+             * </ul>
              * 
-             * *   **uuid**: the UUID of the server
-             * *   **groupId**: the ID of the server group
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -220,17 +252,23 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVulTargetStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulTargetStatisticsResponseBody</p>
+     */
     public static class TargetStats extends TeaModel {
-        @NameInMap("Targets")
-        private java.util.List < Targets> targets;
+        @com.aliyun.core.annotation.NameInMap("Targets")
+        private java.util.List<Targets> targets;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("UuidCount")
+        @com.aliyun.core.annotation.NameInMap("UuidCount")
         private Integer uuidCount;
 
-        @NameInMap("VulType")
+        @com.aliyun.core.annotation.NameInMap("VulType")
         private String vulType;
 
         private TargetStats(Builder builder) {
@@ -251,7 +289,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         /**
          * @return targets
          */
-        public java.util.List < Targets> getTargets() {
+        public java.util.List<Targets> getTargets() {
             return this.targets;
         }
 
@@ -277,21 +315,24 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Targets> targets; 
+            private java.util.List<Targets> targets; 
             private Integer totalCount; 
             private Integer uuidCount; 
             private String vulType; 
 
             /**
-             * An array that consists of available servers.
+             * <p>An array that consists of available servers.</p>
              */
-            public Builder targets(java.util.List < Targets> targets) {
+            public Builder targets(java.util.List<Targets> targets) {
                 this.targets = targets;
                 return this;
             }
 
             /**
-             * The total number of servers.
+             * <p>The total number of servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -299,7 +340,10 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers to which the configurations are applied.
+             * <p>The number of servers to which the configurations are applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder uuidCount(Integer uuidCount) {
                 this.uuidCount = uuidCount;
@@ -307,13 +351,16 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li>cve: Linux software vulnerabilities</li>
+             * <li>sys: Windows system vulnerabilities</li>
+             * <li>cms: Web-CMS vulnerabilities</li>
+             * <li>emg: urgent vulnerabilities</li>
+             * </ul>
              * 
-             * *   cve: Linux software vulnerabilities
-             * *   sys: Windows system vulnerabilities
-             * *   cms: Web-CMS vulnerabilities
-             * *   emg: urgent vulnerabilities
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder vulType(String vulType) {
                 this.vulType = vulType;

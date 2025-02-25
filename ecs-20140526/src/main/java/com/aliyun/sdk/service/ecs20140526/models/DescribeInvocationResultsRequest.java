@@ -1,81 +1,94 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationResultsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInvocationResultsRequest</p>
  */
 public class DescribeInvocationResultsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("CommandId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
     private String commandId;
 
-    @Query
-    @NameInMap("ContentEncoding")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentEncoding")
     private String contentEncoding;
 
-    @Query
-    @NameInMap("IncludeHistory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeHistory")
     private Boolean includeHistory;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InvokeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
     private String invokeId;
 
-    @Query
-    @NameInMap("InvokeRecordStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvokeRecordStatus")
     private String invokeRecordStatus;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeInvocationResultsRequest(Builder builder) {
         super(builder);
@@ -86,6 +99,8 @@ public class DescribeInvocationResultsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.invokeId = builder.invokeId;
         this.invokeRecordStatus = builder.invokeRecordStatus;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -160,6 +175,20 @@ public class DescribeInvocationResultsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -218,7 +247,7 @@ public class DescribeInvocationResultsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -230,6 +259,8 @@ public class DescribeInvocationResultsRequest extends Request {
         private String instanceId; 
         private String invokeId; 
         private String invokeRecordStatus; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -238,7 +269,7 @@ public class DescribeInvocationResultsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -253,6 +284,8 @@ public class DescribeInvocationResultsRequest extends Request {
             this.instanceId = request.instanceId;
             this.invokeId = request.invokeId;
             this.invokeRecordStatus = request.invokeRecordStatus;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -274,7 +307,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The execution results.
+         * <p>The ID of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz0jdfwcsr****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -283,12 +319,15 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+         * <ul>
+         * <li>PlainText: returns the original command content and command output.</li>
+         * <li>Base64: returns the Base64-encoded command content and command output.</li>
+         * </ul>
+         * <p>Default value: Base64.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -297,7 +336,15 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The information about the tag.
+         * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
+         * <ul>
+         * <li>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</li>
+         * <li>false: does not return the results of historical scheduled executions.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeHistory(Boolean includeHistory) {
             this.putQueryParameter("IncludeHistory", includeHistory);
@@ -306,7 +353,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1i7gg30r52z2em****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -315,7 +365,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command execution.
+         * <p>The ID of the command task. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the IDs of all command tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-hz0jdfwd9f****</p>
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -324,16 +377,76 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
-         * <p>
+         * <p>The execution status of the command task. Valid values:</p>
+         * <ul>
+         * <li><p>Running:</p>
+         * <ul>
+         * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
+         * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
+         * </ul>
+         * </li>
+         * <li><p>Finished:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be Finished.</li>
+         * <li>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>Success:</p>
+         * <ul>
+         * <li>One-time task: The execution is complete, and the exit code is 0.</li>
+         * <li>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</li>
+         * </ul>
+         * </li>
+         * <li><p>Failed:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be Failed.</li>
+         * <li>One-time task: The execution fails on all instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>PartialFailed:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be PartialFailed.</li>
+         * <li>One-time task: The execution fails on some instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>Stopped: The task is stopped.</p>
+         * </li>
+         * <li><p>Stopping: The task is being stopped.</p>
+         * </li>
+         * </ul>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
             this.invokeRecordStatus = invokeRecordStatus;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -356,7 +469,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command.
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -365,7 +483,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the container.
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -374,7 +497,11 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -383,7 +510,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The name of the user who ran the command on the instance.
+         * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -410,28 +540,9 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The error code returned when the command cannot be sent or run. Valid values:
-         * <p>
-         * 
-         * *   If this parameter is empty, the command is run normally.
-         * *   InstanceNotExists: The specified instance does not exist is released.
-         * *   InstanceReleased: The instance was released while the command was being run on the instance.
-         * *   InstanceNotRunning: The instance is not in the Running state while the command is being run.
-         * *   CommandNotApplicable: The command is not applicable to the specified instance.
-         * *   AccountNotExists: The specified account does not exist.
-         * *   DirectoryNotExists: The specified directory does not exist.
-         * *   BadCronExpression: The cron expression used to specify the execution time is invalid.
-         * *   ClientNotRunning: The Cloud Assistant client is not running.
-         * *   ClientNotResponse: The Cloud Assistant client is not responding.
-         * *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
-         * *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
-         * *   DeliveryTimeout: The request to send the command timed out.
-         * *   ExecutionTimeout: The command execution timed out.
-         * *   ExecutionException: An exception occurred while the command was being run.
-         * *   ExecutionInterrupted: The execution was interrupted.
-         * *   ExitCodeNonzero: The command execution is complete, but the exit code is not 0.
+         * <p>The tags of the command task.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -444,11 +555,17 @@ public class DescribeInvocationResultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationResultsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -483,7 +600,12 @@ public class DescribeInvocationResultsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the instance
+             * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -491,7 +613,11 @@ public class DescribeInvocationResultsRequest extends Request {
             }
 
             /**
-             * The execution state of the command.
+             * <p>The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

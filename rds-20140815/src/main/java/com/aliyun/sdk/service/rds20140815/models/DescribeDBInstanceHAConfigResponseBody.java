@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceHAConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceHAConfigResponseBody</p>
  */
 public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("HAMode")
+    @com.aliyun.core.annotation.NameInMap("HAMode")
     private String HAMode;
 
-    @NameInMap("HostInstanceInfos")
+    @com.aliyun.core.annotation.NameInMap("HostInstanceInfos")
     private HostInstanceInfos hostInstanceInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncMode")
+    @com.aliyun.core.annotation.NameInMap("SyncMode")
     private String syncMode;
 
     private DescribeDBInstanceHAConfigResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         private String syncMode; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -94,13 +102,17 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The high availability mode of the instance. Valid values:
-         * <p>
+         * <p>The high availability mode of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>RPO</strong>: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</li>
+         * <li><strong>RTO</strong>: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run MySQL.</p>
+         * </blockquote>
          * 
-         * *   **RPO**: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.
-         * *   **RTO**: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.
-         * 
-         * > This parameter is returned only for instances that run MySQL.
+         * <strong>example:</strong>
+         * <p>RPO</p>
          */
         public Builder HAMode(String HAMode) {
             this.HAMode = HAMode;
@@ -108,7 +120,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information of the primary and secondary instances.
+         * <p>An array that consists of the information of the primary and secondary instances.</p>
          */
         public Builder hostInstanceInfos(HostInstanceInfos hostInstanceInfos) {
             this.hostInstanceInfos = hostInstanceInfos;
@@ -116,7 +128,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,14 +139,18 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The data replication mode of the instance. Valid values:
-         * <p>
+         * <p>The data replication mode of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Sync</strong>: the synchronous mode</li>
+         * <li><strong>Semi-sync</strong>: the semi-synchronous replication mode</li>
+         * <li><strong>Async</strong>: the asynchronous mode</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run MySQL.</p>
+         * </blockquote>
          * 
-         * *   **Sync**: the synchronous mode
-         * *   **Semi-sync**: the semi-synchronous replication mode
-         * *   **Async**: the asynchronous mode
-         * 
-         * > This parameter is returned only for instances that run MySQL.
+         * <strong>example:</strong>
+         * <p>Sync</p>
          */
         public Builder syncMode(String syncMode) {
             this.syncMode = syncMode;
@@ -144,26 +163,32 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceHAConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceHAConfigResponseBody</p>
+     */
     public static class NodeInfo extends TeaModel {
-        @NameInMap("DataSyncTime")
+        @com.aliyun.core.annotation.NameInMap("DataSyncTime")
         private String dataSyncTime;
 
-        @NameInMap("LogSyncTime")
+        @com.aliyun.core.annotation.NameInMap("LogSyncTime")
         private String logSyncTime;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SyncStatus")
+        @com.aliyun.core.annotation.NameInMap("SyncStatus")
         private String syncStatus;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NodeInfo(Builder builder) {
@@ -243,7 +268,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-05T15:15:00Z</p>
              */
             public Builder dataSyncTime(String dataSyncTime) {
                 this.dataSyncTime = dataSyncTime;
@@ -251,7 +279,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-05T15:15:00Z</p>
              */
             public Builder logSyncTime(String logSyncTime) {
                 this.logSyncTime = logSyncTime;
@@ -259,7 +290,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3397027</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -267,11 +301,14 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: the primary node</li>
+             * <li><strong>Slave</strong>: the secondary node</li>
+             * </ul>
              * 
-             * *   **Master**: the primary node
-             * *   **Slave**: the secondary node
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -279,7 +316,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -287,13 +327,16 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization status. Valid values:
-             * <p>
+             * <p>The synchronization status. Valid values:</p>
+             * <ul>
+             * <li><strong>NotAvailable</strong>: The synchronization fails. This means that faults occur.</li>
+             * <li><strong>Syncing</strong>: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</li>
+             * <li><strong>Synchronized</strong>: The synchronization is completed.</li>
+             * <li><strong>NotSupport</strong>: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.</li>
+             * </ul>
              * 
-             * *   **NotAvailable**: The synchronization fails. This means that faults occur.
-             * *   **Syncing**: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.
-             * *   **Synchronized**: The synchronization is completed.
-             * *   **NotSupport**: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.
+             * <strong>example:</strong>
+             * <p>NotAvailable</p>
              */
             public Builder syncStatus(String syncStatus) {
                 this.syncStatus = syncStatus;
@@ -301,7 +344,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -315,9 +361,15 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceHAConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceHAConfigResponseBody</p>
+     */
     public static class HostInstanceInfos extends TeaModel {
-        @NameInMap("NodeInfo")
-        private java.util.List < NodeInfo> nodeInfo;
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
+        private java.util.List<NodeInfo> nodeInfo;
 
         private HostInstanceInfos(Builder builder) {
             this.nodeInfo = builder.nodeInfo;
@@ -334,17 +386,17 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         /**
          * @return nodeInfo
          */
-        public java.util.List < NodeInfo> getNodeInfo() {
+        public java.util.List<NodeInfo> getNodeInfo() {
             return this.nodeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < NodeInfo> nodeInfo; 
+            private java.util.List<NodeInfo> nodeInfo; 
 
             /**
              * NodeInfo.
              */
-            public Builder nodeInfo(java.util.List < NodeInfo> nodeInfo) {
+            public Builder nodeInfo(java.util.List<NodeInfo> nodeInfo) {
                 this.nodeInfo = nodeInfo;
                 return this;
             }

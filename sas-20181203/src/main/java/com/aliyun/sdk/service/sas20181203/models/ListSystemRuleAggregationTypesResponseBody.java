@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemRuleAggregationTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemRuleAggregationTypesResponseBody</p>
  */
 public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
-    @NameInMap("AggregationTypeList")
-    private java.util.List < AggregationTypeList> aggregationTypeList;
+    @com.aliyun.core.annotation.NameInMap("AggregationTypeList")
+    private java.util.List<AggregationTypeList> aggregationTypeList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSystemRuleAggregationTypesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
     /**
      * @return aggregationTypeList
      */
-    public java.util.List < AggregationTypeList> getAggregationTypeList() {
+    public java.util.List<AggregationTypeList> getAggregationTypeList() {
         return this.aggregationTypeList;
     }
 
@@ -46,19 +51,22 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AggregationTypeList> aggregationTypeList; 
+        private java.util.List<AggregationTypeList> aggregationTypeList; 
         private String requestId; 
 
         /**
-         * An array that consists of the aggregation types.
+         * <p>An array that consists of the aggregation types.</p>
          */
-        public Builder aggregationTypeList(java.util.List < AggregationTypeList> aggregationTypeList) {
+        public Builder aggregationTypeList(java.util.List<AggregationTypeList> aggregationTypeList) {
             this.aggregationTypeList = aggregationTypeList;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1427F3BE-8A7E-57F9-BD4E-590B00D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemRuleAggregationTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemRuleAggregationTypesResponseBody</p>
+     */
     public static class AggregationTypeList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private AggregationTypeList(Builder builder) {
@@ -110,7 +124,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the aggregation type.
+             * <p>The ID of the aggregation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -118,7 +135,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the aggregation type.
+             * <p>The name of the aggregation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remote control****</p>
              */
             public Builder name(String name) {
                 this.name = name;

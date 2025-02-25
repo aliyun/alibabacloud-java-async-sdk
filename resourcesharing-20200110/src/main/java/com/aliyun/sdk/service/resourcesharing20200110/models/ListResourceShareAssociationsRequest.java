@@ -1,49 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceShareAssociationsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceShareAssociationsRequest</p>
  */
 public class ListResourceShareAssociationsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AssociationStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociationStatus")
     private String associationStatus;
 
-    @Query
-    @NameInMap("AssociationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String associationType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceShareIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceShareIds")
     private java.util.List < String > resourceShareIds;
 
-    @Query
-    @NameInMap("Target")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Target")
     private String target;
 
     private ListResourceShareAssociationsRequest(Builder builder) {
@@ -154,7 +153,7 @@ public class ListResourceShareAssociationsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -163,16 +162,20 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * The association status. Valid values:
-         * <p>
+         * <p>The association status. Valid values:</p>
+         * <ul>
+         * <li>Associating: The entity is being associated.</li>
+         * <li>Associated: The entity is associated.</li>
+         * <li>Failed: The entity fails to be associated.</li>
+         * <li>Disassociating: The entity is being disassociated.</li>
+         * <li>Disassociated: The entity is disassociated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The system deletes the records of entities in the <code>Failed</code> or <code>Disassociated</code> state within 48 hours to 96 hours.</p>
+         * </blockquote>
          * 
-         * *   Associating: The entity is being associated.
-         * *   Associated: The entity is associated.
-         * *   Failed: The entity fails to be associated.
-         * *   Disassociating: The entity is being disassociated.
-         * *   Disassociated: The entity is disassociated.
-         * 
-         * >  The system deletes the records of entities in the `Failed` or `Disassociated` state within 48 hours to 96 hours.
+         * <strong>example:</strong>
+         * <p>Associated</p>
          */
         public Builder associationStatus(String associationStatus) {
             this.putQueryParameter("AssociationStatus", associationStatus);
@@ -181,11 +184,15 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * The association type. Valid values:
-         * <p>
+         * <p>The association type. Valid values:</p>
+         * <ul>
+         * <li>Resource</li>
+         * <li>Target</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Resource
-         * *   Target
+         * <strong>example:</strong>
+         * <p>Resource</p>
          */
         public Builder associationType(String associationType) {
             this.putQueryParameter("AssociationType", associationType);
@@ -194,10 +201,11 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request.
-         * <p>
+         * <p>The maximum number of entries to return for a single request.</p>
+         * <p>Valid values: 1 to 100. Default value: 20.</p>
          * 
-         * Valid values: 1 to 100. Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -206,7 +214,10 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+         * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -215,10 +226,13 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
-         * <p>
+         * <p>The ID of the resource.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable if you set the <code>AssociationType</code> parameter to <code>Target</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is unavailable if you set the `AssociationType` parameter to `Target`.
+         * <strong>example:</strong>
+         * <p>vsw-bp183p93qs667muql****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -227,7 +241,11 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * ResourceShareIds.
+         * <p>The IDs of the resource shares.</p>
+         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five resource shares can be specified at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rs-6GRmdD3X****</p>
          */
         public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
@@ -236,10 +254,13 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * The ID of the principal.
-         * <p>
+         * <p>The ID of the principal.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable if you set the <code>AssociationType</code> parameter to <code>Resource</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is unavailable if you set the `AssociationType` parameter to `Resource`.
+         * <strong>example:</strong>
+         * <p>172050525300****</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);

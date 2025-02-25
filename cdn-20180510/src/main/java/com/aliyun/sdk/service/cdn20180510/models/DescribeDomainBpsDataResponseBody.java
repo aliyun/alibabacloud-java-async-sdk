@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainBpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainBpsDataResponseBody</p>
  */
 public class DescribeDomainBpsDataResponseBody extends TeaModel {
-    @NameInMap("BpsDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("BpsDataPerInterval")
     private BpsDataPerInterval bpsDataPerInterval;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("IspNameEn")
+    @com.aliyun.core.annotation.NameInMap("IspNameEn")
     private String ispNameEn;
 
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainBpsDataResponseBody(Builder builder) {
@@ -122,7 +122,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The list of bandwidth data entries returned at each interval.
+         * <p>The list of bandwidth data entries returned at each interval.</p>
          */
         public Builder bpsDataPerInterval(BpsDataPerInterval bpsDataPerInterval) {
             this.bpsDataPerInterval = bpsDataPerInterval;
@@ -130,7 +130,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -138,7 +141,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -146,7 +152,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +163,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the ISP.
+         * <p>The name of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.ispNameEn = ispNameEn;
@@ -162,7 +174,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the region.
+         * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beijing</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.locationNameEn = locationNameEn;
@@ -170,7 +185,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +196,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-14T09:50:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -191,26 +212,32 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainBpsDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("DomesticValue")
+        @com.aliyun.core.annotation.NameInMap("DomesticValue")
         private String domesticValue;
 
-        @NameInMap("HttpsDomesticValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsDomesticValue")
         private String httpsDomesticValue;
 
-        @NameInMap("HttpsOverseasValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsOverseasValue")
         private String httpsOverseasValue;
 
-        @NameInMap("HttpsValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsValue")
         private String httpsValue;
 
-        @NameInMap("OverseasValue")
+        @com.aliyun.core.annotation.NameInMap("OverseasValue")
         private String overseasValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -290,7 +317,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The bandwidth value in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
+             * <p>The bandwidth value in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11286111</p>
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -298,7 +328,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth data for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
+             * <p>The bandwidth data for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11286111</p>
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -306,7 +339,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth data for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
+             * <p>The bandwidth data for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -314,7 +350,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value for HTTPS requests. Unit: bit/s.
+             * <p>The bandwidth value for HTTPS requests. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11288111</p>
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -322,7 +361,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth data in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
+             * <p>The bandwidth data in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -330,7 +372,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -338,7 +383,10 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth. Unit: bit/s.
+             * <p>The bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11288111</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -352,8 +400,14 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainBpsDataResponseBody</p>
+     */
     public static class BpsDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private BpsDataPerInterval(Builder builder) {

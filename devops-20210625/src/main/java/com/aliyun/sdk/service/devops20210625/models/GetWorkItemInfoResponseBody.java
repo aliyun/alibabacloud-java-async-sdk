@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkItemInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkItemInfoResponseBody</p>
  */
 public class GetWorkItemInfoResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("workitem")
+    @com.aliyun.core.annotation.NameInMap("workitem")
     private Workitem workitem;
 
     private GetWorkItemInfoResponseBody(Builder builder) {
@@ -131,20 +136,26 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkItemInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemInfoResponseBody</p>
+     */
     public static class ValueList extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private Long level;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
-        @NameInMap("valueEn")
+        @com.aliyun.core.annotation.NameInMap("valueEn")
         private String valueEn;
 
         private ValueList(Builder builder) {
@@ -252,32 +263,38 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemInfoResponseBody</p>
+     */
     public static class CustomFields extends TeaModel {
-        @NameInMap("fieldClassName")
+        @com.aliyun.core.annotation.NameInMap("fieldClassName")
         private String fieldClassName;
 
-        @NameInMap("fieldFormat")
+        @com.aliyun.core.annotation.NameInMap("fieldFormat")
         private String fieldFormat;
 
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private Long level;
 
-        @NameInMap("objectValue")
+        @com.aliyun.core.annotation.NameInMap("objectValue")
         private String objectValue;
 
-        @NameInMap("position")
+        @com.aliyun.core.annotation.NameInMap("position")
         private Long position;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
-        @NameInMap("valueList")
-        private java.util.List < ValueList> valueList;
+        @com.aliyun.core.annotation.NameInMap("valueList")
+        private java.util.List<ValueList> valueList;
 
-        @NameInMap("workitemIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
         private String workitemIdentifier;
 
         private CustomFields(Builder builder) {
@@ -352,7 +369,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         /**
          * @return valueList
          */
-        public java.util.List < ValueList> getValueList() {
+        public java.util.List<ValueList> getValueList() {
             return this.valueList;
         }
 
@@ -371,7 +388,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String objectValue; 
             private Long position; 
             private String value; 
-            private java.util.List < ValueList> valueList; 
+            private java.util.List<ValueList> valueList; 
             private String workitemIdentifier; 
 
             /**
@@ -433,7 +450,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             /**
              * valueList.
              */
-            public Builder valueList(java.util.List < ValueList> valueList) {
+            public Builder valueList(java.util.List<ValueList> valueList) {
                 this.valueList = valueList;
                 return this;
             }
@@ -453,86 +470,255 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         } 
 
     }
-    public static class Workitem extends TeaModel {
-        @NameInMap("assignedTo")
-        private String assignedTo;
+    /**
+     * 
+     * {@link GetWorkItemInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemInfoResponseBody</p>
+     */
+    public static class TagDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("color")
+        private String color;
 
-        @NameInMap("categoryIdentifier")
-        private String categoryIdentifier;
-
-        @NameInMap("creator")
-        private String creator;
-
-        @NameInMap("customFields")
-        private java.util.List < CustomFields> customFields;
-
-        @NameInMap("document")
-        private String document;
-
-        @NameInMap("finishTime")
-        private Long finishTime;
-
-        @NameInMap("gmtCreate")
-        private Long gmtCreate;
-
-        @NameInMap("gmtModified")
-        private Long gmtModified;
-
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("logicalStatus")
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private TagDetails(Builder builder) {
+            this.color = builder.color;
+            this.identifier = builder.identifier;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return color
+         */
+        public String getColor() {
+            return this.color;
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String color; 
+            private String identifier; 
+            private String name; 
+
+            /**
+             * color.
+             */
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+
+            /**
+             * identifier.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public TagDetails build() {
+                return new TagDetails(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWorkItemInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemInfoResponseBody</p>
+     */
+    public static class Versions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("identifier")
+        private String identifier;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Versions(Builder builder) {
+            this.identifier = builder.identifier;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Versions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String identifier; 
+            private String name; 
+
+            /**
+             * identifier.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Versions build() {
+                return new Versions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWorkItemInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemInfoResponseBody</p>
+     */
+    public static class Workitem extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("assignedTo")
+        private String assignedTo;
+
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
+        private String categoryIdentifier;
+
+        @com.aliyun.core.annotation.NameInMap("creator")
+        private String creator;
+
+        @com.aliyun.core.annotation.NameInMap("customFields")
+        private java.util.List<CustomFields> customFields;
+
+        @com.aliyun.core.annotation.NameInMap("document")
+        private String document;
+
+        @com.aliyun.core.annotation.NameInMap("documentFormat")
+        private String documentFormat;
+
+        @com.aliyun.core.annotation.NameInMap("finishTime")
+        private Long finishTime;
+
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
+        private Long gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
+        private Long gmtModified;
+
+        @com.aliyun.core.annotation.NameInMap("identifier")
+        private String identifier;
+
+        @com.aliyun.core.annotation.NameInMap("logicalStatus")
         private String logicalStatus;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("parentIdentifier")
+        @com.aliyun.core.annotation.NameInMap("parentIdentifier")
         private String parentIdentifier;
 
-        @NameInMap("participant")
-        private java.util.List < String > participant;
+        @com.aliyun.core.annotation.NameInMap("participant")
+        private java.util.List<String> participant;
 
-        @NameInMap("serialNumber")
+        @com.aliyun.core.annotation.NameInMap("serialNumber")
         private String serialNumber;
 
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("spaceName")
+        @com.aliyun.core.annotation.NameInMap("spaceName")
         private String spaceName;
 
-        @NameInMap("spaceType")
+        @com.aliyun.core.annotation.NameInMap("spaceType")
         private String spaceType;
 
-        @NameInMap("sprint")
-        private java.util.List < String > sprint;
+        @com.aliyun.core.annotation.NameInMap("sprint")
+        private java.util.List<String> sprint;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("statusIdentifier")
+        @com.aliyun.core.annotation.NameInMap("statusIdentifier")
         private String statusIdentifier;
 
-        @NameInMap("statusStageIdentifier")
+        @com.aliyun.core.annotation.NameInMap("statusStageIdentifier")
         private String statusStageIdentifier;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("tag")
-        private java.util.List < String > tag;
+        @com.aliyun.core.annotation.NameInMap("tag")
+        private java.util.List<String> tag;
 
-        @NameInMap("tracker")
-        private java.util.List < String > tracker;
+        @com.aliyun.core.annotation.NameInMap("tagDetails")
+        private java.util.List<TagDetails> tagDetails;
 
-        @NameInMap("updateStatusAt")
+        @com.aliyun.core.annotation.NameInMap("tracker")
+        private java.util.List<String> tracker;
+
+        @com.aliyun.core.annotation.NameInMap("updateStatusAt")
         private Long updateStatusAt;
 
-        @NameInMap("verifier")
-        private java.util.List < String > verifier;
+        @com.aliyun.core.annotation.NameInMap("verifier")
+        private java.util.List<String> verifier;
 
-        @NameInMap("workitemTypeIdentifier")
+        @com.aliyun.core.annotation.NameInMap("versions")
+        private java.util.List<Versions> versions;
+
+        @com.aliyun.core.annotation.NameInMap("workitemTypeIdentifier")
         private String workitemTypeIdentifier;
 
         private Workitem(Builder builder) {
@@ -541,6 +727,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             this.creator = builder.creator;
             this.customFields = builder.customFields;
             this.document = builder.document;
+            this.documentFormat = builder.documentFormat;
             this.finishTime = builder.finishTime;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -559,9 +746,11 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             this.statusStageIdentifier = builder.statusStageIdentifier;
             this.subject = builder.subject;
             this.tag = builder.tag;
+            this.tagDetails = builder.tagDetails;
             this.tracker = builder.tracker;
             this.updateStatusAt = builder.updateStatusAt;
             this.verifier = builder.verifier;
+            this.versions = builder.versions;
             this.workitemTypeIdentifier = builder.workitemTypeIdentifier;
         }
 
@@ -597,7 +786,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         /**
          * @return customFields
          */
-        public java.util.List < CustomFields> getCustomFields() {
+        public java.util.List<CustomFields> getCustomFields() {
             return this.customFields;
         }
 
@@ -606,6 +795,13 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
          */
         public String getDocument() {
             return this.document;
+        }
+
+        /**
+         * @return documentFormat
+         */
+        public String getDocumentFormat() {
+            return this.documentFormat;
         }
 
         /**
@@ -660,7 +856,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         /**
          * @return participant
          */
-        public java.util.List < String > getParticipant() {
+        public java.util.List<String> getParticipant() {
             return this.participant;
         }
 
@@ -695,7 +891,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         /**
          * @return sprint
          */
-        public java.util.List < String > getSprint() {
+        public java.util.List<String> getSprint() {
             return this.sprint;
         }
 
@@ -730,14 +926,21 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < String > getTag() {
+        public java.util.List<String> getTag() {
             return this.tag;
+        }
+
+        /**
+         * @return tagDetails
+         */
+        public java.util.List<TagDetails> getTagDetails() {
+            return this.tagDetails;
         }
 
         /**
          * @return tracker
          */
-        public java.util.List < String > getTracker() {
+        public java.util.List<String> getTracker() {
             return this.tracker;
         }
 
@@ -751,8 +954,15 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         /**
          * @return verifier
          */
-        public java.util.List < String > getVerifier() {
+        public java.util.List<String> getVerifier() {
             return this.verifier;
+        }
+
+        /**
+         * @return versions
+         */
+        public java.util.List<Versions> getVersions() {
+            return this.versions;
         }
 
         /**
@@ -766,8 +976,9 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String assignedTo; 
             private String categoryIdentifier; 
             private String creator; 
-            private java.util.List < CustomFields> customFields; 
+            private java.util.List<CustomFields> customFields; 
             private String document; 
+            private String documentFormat; 
             private Long finishTime; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -775,20 +986,22 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String logicalStatus; 
             private String modifier; 
             private String parentIdentifier; 
-            private java.util.List < String > participant; 
+            private java.util.List<String> participant; 
             private String serialNumber; 
             private String spaceIdentifier; 
             private String spaceName; 
             private String spaceType; 
-            private java.util.List < String > sprint; 
+            private java.util.List<String> sprint; 
             private String status; 
             private String statusIdentifier; 
             private String statusStageIdentifier; 
             private String subject; 
-            private java.util.List < String > tag; 
-            private java.util.List < String > tracker; 
+            private java.util.List<String> tag; 
+            private java.util.List<TagDetails> tagDetails; 
+            private java.util.List<String> tracker; 
             private Long updateStatusAt; 
-            private java.util.List < String > verifier; 
+            private java.util.List<String> verifier; 
+            private java.util.List<Versions> versions; 
             private String workitemTypeIdentifier; 
 
             /**
@@ -818,7 +1031,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             /**
              * customFields.
              */
-            public Builder customFields(java.util.List < CustomFields> customFields) {
+            public Builder customFields(java.util.List<CustomFields> customFields) {
                 this.customFields = customFields;
                 return this;
             }
@@ -828,6 +1041,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
              */
             public Builder document(String document) {
                 this.document = document;
+                return this;
+            }
+
+            /**
+             * documentFormat.
+             */
+            public Builder documentFormat(String documentFormat) {
+                this.documentFormat = documentFormat;
                 return this;
             }
 
@@ -890,7 +1111,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             /**
              * participant.
              */
-            public Builder participant(java.util.List < String > participant) {
+            public Builder participant(java.util.List<String> participant) {
                 this.participant = participant;
                 return this;
             }
@@ -930,7 +1151,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             /**
              * sprint.
              */
-            public Builder sprint(java.util.List < String > sprint) {
+            public Builder sprint(java.util.List<String> sprint) {
                 this.sprint = sprint;
                 return this;
             }
@@ -970,15 +1191,23 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             /**
              * tag.
              */
-            public Builder tag(java.util.List < String > tag) {
+            public Builder tag(java.util.List<String> tag) {
                 this.tag = tag;
+                return this;
+            }
+
+            /**
+             * tagDetails.
+             */
+            public Builder tagDetails(java.util.List<TagDetails> tagDetails) {
+                this.tagDetails = tagDetails;
                 return this;
             }
 
             /**
              * tracker.
              */
-            public Builder tracker(java.util.List < String > tracker) {
+            public Builder tracker(java.util.List<String> tracker) {
                 this.tracker = tracker;
                 return this;
             }
@@ -994,8 +1223,16 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             /**
              * verifier.
              */
-            public Builder verifier(java.util.List < String > verifier) {
+            public Builder verifier(java.util.List<String> verifier) {
                 this.verifier = verifier;
+                return this;
+            }
+
+            /**
+             * versions.
+             */
+            public Builder versions(java.util.List<Versions> versions) {
+                this.versions = versions;
                 return this;
             }
 

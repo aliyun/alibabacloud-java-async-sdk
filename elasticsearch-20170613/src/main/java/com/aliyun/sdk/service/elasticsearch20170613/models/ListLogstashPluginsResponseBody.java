@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogstashPluginsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogstashPluginsResponseBody</p>
  */
 public class ListLogstashPluginsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListLogstashPluginsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The address of the documentation for the plug-in.
+         * <p>The address of the documentation for the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,16 +61,16 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the plug-in. Valid values:
-         * <p>
-         * 
-         * *   INSTALLED: Installed
-         * *   UNINSTALLED: Not installed
-         * *   INSTALLING: The instance is being installed.
-         * *   UNINSTALLING: The instance is being uninstalled.
-         * *   UPGRADING: The backup gateway is being upgraded.
-         * *   FAILED: Installation failed
-         * *   UNKNOWN: The cluster is lost and cannot be created.
+         * <p>The status of the plug-in. Valid values:</p>
+         * <ul>
+         * <li>INSTALLED: Installed</li>
+         * <li>UNINSTALLED: Not installed</li>
+         * <li>INSTALLING: The instance is being installed.</li>
+         * <li>UNINSTALLING: The instance is being uninstalled.</li>
+         * <li>UPGRADING: The backup gateway is being upgraded.</li>
+         * <li>FAILED: Installation failed</li>
+         * <li>UNKNOWN: The cluster is lost and cannot be created.</li>
+         * </ul>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -80,20 +83,26 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogstashPluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogstashPluginsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("specificationUrl")
+        @com.aliyun.core.annotation.NameInMap("specificationUrl")
         private String specificationUrl;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Result(Builder builder) {
@@ -155,7 +164,10 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The source of the plug-in.
+             * <p>The source of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The clone filter is for duplicating events.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -179,7 +191,10 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.html">https://xxx.html</a></p>
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;

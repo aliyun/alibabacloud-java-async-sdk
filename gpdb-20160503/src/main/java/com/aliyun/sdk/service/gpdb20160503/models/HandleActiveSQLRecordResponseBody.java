@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HandleActiveSQLRecordResponseBody} extends {@link TeaModel}
  *
  * <p>HandleActiveSQLRecordResponseBody</p>
  */
 public class HandleActiveSQLRecordResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
-    private java.util.List < Results> results;
+    @com.aliyun.core.annotation.NameInMap("Results")
+    private java.util.List<Results> results;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private HandleActiveSQLRecordResponseBody(Builder builder) {
@@ -56,7 +61,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
@@ -70,11 +75,14 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
     public static final class Builder {
         private String DBInstanceId; 
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
         private String status; 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +90,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,15 +101,22 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The processing result of the active query.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -111,11 +129,17 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HandleActiveSQLRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>HandleActiveSQLRecordResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Results(Builder builder) {
@@ -150,7 +174,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Pid.
+             * <p>The process ID, which is a unique identifier of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3003925</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -158,7 +185,14 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the processing was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(String status) {
                 this.status = status;

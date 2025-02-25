@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContactGroupsResponseBody</p>
  */
 public class DescribeContactGroupsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContactGroupsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The objects that were returned.
+         * <p>The objects that were returned.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +63,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContactGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactGroupsResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
-        @NameInMap("ArmsContactId")
+        @com.aliyun.core.annotation.NameInMap("ArmsContactId")
         private Long armsContactId;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private Float contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private Contacts(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private String phone; 
 
             /**
-             * The ID of the alert contact.
+             * <p>The ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100117</p>
              */
             public Builder armsContactId(Long armsContactId) {
                 this.armsContactId = armsContactId;
@@ -154,7 +171,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert contact.
+             * <p>The ID of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder contactId(Float contactId) {
                 this.contactId = contactId;
@@ -162,7 +182,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -170,7 +193,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -178,7 +204,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the alert contact.
+             * <p>The mobile number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -192,18 +221,24 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactGroupsResponseBody</p>
+     */
     public static class AlertContactGroups extends TeaModel {
-        @NameInMap("ArmsContactGroupId")
+        @com.aliyun.core.annotation.NameInMap("ArmsContactGroupId")
         private Long armsContactGroupId;
 
-        @NameInMap("ContactGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupId")
         private Float contactGroupId;
 
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Contacts")
-        private java.util.List < Contacts> contacts;
+        @com.aliyun.core.annotation.NameInMap("Contacts")
+        private java.util.List<Contacts> contacts;
 
         private AlertContactGroups(Builder builder) {
             this.armsContactGroupId = builder.armsContactGroupId;
@@ -244,7 +279,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
@@ -252,10 +287,13 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private Long armsContactGroupId; 
             private Float contactGroupId; 
             private String contactGroupName; 
-            private java.util.List < Contacts> contacts; 
+            private java.util.List<Contacts> contacts; 
 
             /**
-             * The ID of the alert contact group.
+             * <p>The ID of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83261</p>
              */
             public Builder armsContactGroupId(Long armsContactGroupId) {
                 this.armsContactGroupId = armsContactGroupId;
@@ -263,7 +301,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert contact group.
+             * <p>The ID of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder contactGroupId(Float contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -271,7 +312,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact group.
+             * <p>The name of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup</p>
              */
             public Builder contactGroupName(String contactGroupName) {
                 this.contactGroupName = contactGroupName;
@@ -279,9 +323,9 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The contact information. If the **IsDetail** parameter is set to `false`, no **contact** information is displayed.
+             * <p>The contact information. If the <strong>IsDetail</strong> parameter is set to <code>false</code>, no <strong>contact</strong> information is displayed.</p>
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }
@@ -293,17 +337,23 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactGroupsResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("AlertContactGroups")
-        private java.util.List < AlertContactGroups> alertContactGroups;
+        @com.aliyun.core.annotation.NameInMap("AlertContactGroups")
+        private java.util.List<AlertContactGroups> alertContactGroups;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {
@@ -324,7 +374,7 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         /**
          * @return alertContactGroups
          */
-        public java.util.List < AlertContactGroups> getAlertContactGroups() {
+        public java.util.List<AlertContactGroups> getAlertContactGroups() {
             return this.alertContactGroups;
         }
 
@@ -350,21 +400,24 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertContactGroups> alertContactGroups; 
+            private java.util.List<AlertContactGroups> alertContactGroups; 
             private Long page; 
             private Long size; 
             private Long total; 
 
             /**
-             * The name of the alert contact group.
+             * <p>The name of the alert contact group.</p>
              */
-            public Builder alertContactGroups(java.util.List < AlertContactGroups> alertContactGroups) {
+            public Builder alertContactGroups(java.util.List<AlertContactGroups> alertContactGroups) {
                 this.alertContactGroups = alertContactGroups;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -372,7 +425,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert contact groups displayed on each page.
+             * <p>The number of alert contact groups displayed on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -380,7 +436,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alert contact groups.
+             * <p>The total number of alert contact groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

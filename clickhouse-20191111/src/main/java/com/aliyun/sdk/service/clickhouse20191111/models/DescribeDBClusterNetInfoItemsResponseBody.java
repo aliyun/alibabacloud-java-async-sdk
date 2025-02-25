@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterNetInfoItemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterNetInfoItemsResponseBody</p>
  */
 public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
-    @NameInMap("ClusterNetworkType")
+    @com.aliyun.core.annotation.NameInMap("ClusterNetworkType")
     private String clusterNetworkType;
 
-    @NameInMap("EnableSLB")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("EnableSLB")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableSLB;
 
-    @NameInMap("NetInfoItems")
+    @com.aliyun.core.annotation.NameInMap("NetInfoItems")
     private NetInfoItems netInfoItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterNetInfoItemsResponseBody(Builder builder) {
@@ -75,7 +80,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterNetworkType.
+         * <p>The network type of the cluster. Only VPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -83,7 +91,15 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * EnableSLB.
+         * <p>Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSLB(Boolean enableSLB) {
             this.enableSLB = enableSLB;
@@ -91,7 +107,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * NetInfoItems.
+         * <p>The network information about the cluster.</p>
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -99,7 +115,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A23C87D-87DF-4DA0-A50E-CB13F4F7923D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,32 +131,38 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterNetInfoItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNetInfoItemsResponseBody</p>
+     */
     public static class NetInfoItem extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("HttpPort")
+        @com.aliyun.core.annotation.NameInMap("HttpPort")
         private String httpPort;
 
-        @NameInMap("HttpsPort")
+        @com.aliyun.core.annotation.NameInMap("HttpsPort")
         private String httpsPort;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("JdbcPort")
+        @com.aliyun.core.annotation.NameInMap("JdbcPort")
         private String jdbcPort;
 
-        @NameInMap("MySQLPort")
+        @com.aliyun.core.annotation.NameInMap("MySQLPort")
         private String mySQLPort;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private NetInfoItem(Builder builder) {
@@ -235,7 +260,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ConnectionString.
+             * <p>The endpoint that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp1554t789i8e****.clickhouse.ads.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -243,7 +271,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPort.
+             * <p>The HTTP port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8123</p>
              */
             public Builder httpPort(String httpPort) {
                 this.httpPort = httpPort;
@@ -251,7 +282,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPort.
+             * <p>The HTTPS port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8443</p>
              */
             public Builder httpsPort(String httpsPort) {
                 this.httpsPort = httpsPort;
@@ -259,7 +293,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.255.234.251</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -267,7 +304,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * JdbcPort.
+             * <p>The port number that is used in Java Database Connectivity (JDBC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder jdbcPort(String jdbcPort) {
                 this.jdbcPort = jdbcPort;
@@ -275,7 +315,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * MySQLPort.
+             * <p>The port of the MySQL instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9004</p>
              */
             public Builder mySQLPort(String mySQLPort) {
                 this.mySQLPort = mySQLPort;
@@ -283,7 +326,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li>Public: public endpoint</li>
+             * <li>VPC: VPC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -291,7 +341,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * <blockquote>
+             * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1gzt31twhlo0sa5****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -299,7 +355,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * <blockquote>
+             * <p> If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp175iuvg8nxqraf2****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -313,9 +375,15 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterNetInfoItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNetInfoItemsResponseBody</p>
+     */
     public static class NetInfoItems extends TeaModel {
-        @NameInMap("NetInfoItem")
-        private java.util.List < NetInfoItem> netInfoItem;
+        @com.aliyun.core.annotation.NameInMap("NetInfoItem")
+        private java.util.List<NetInfoItem> netInfoItem;
 
         private NetInfoItems(Builder builder) {
             this.netInfoItem = builder.netInfoItem;
@@ -332,17 +400,17 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         /**
          * @return netInfoItem
          */
-        public java.util.List < NetInfoItem> getNetInfoItem() {
+        public java.util.List<NetInfoItem> getNetInfoItem() {
             return this.netInfoItem;
         }
 
         public static final class Builder {
-            private java.util.List < NetInfoItem> netInfoItem; 
+            private java.util.List<NetInfoItem> netInfoItem; 
 
             /**
              * NetInfoItem.
              */
-            public Builder netInfoItem(java.util.List < NetInfoItem> netInfoItem) {
+            public Builder netInfoItem(java.util.List<NetInfoItem> netInfoItem) {
                 this.netInfoItem = netInfoItem;
                 return this;
             }

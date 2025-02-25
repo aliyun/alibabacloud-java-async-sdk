@@ -115,14 +115,14 @@ public class AddRecordPlanDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(AddRecordPlanDeviceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.planId = response.planId;
-            this.productKey = response.productKey;
-            this.streamType = response.streamType;
+        private Builder(AddRecordPlanDeviceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.planId = request.planId;
+            this.productKey = request.productKey;
+            this.streamType = request.streamType;
         } 
 
         /**

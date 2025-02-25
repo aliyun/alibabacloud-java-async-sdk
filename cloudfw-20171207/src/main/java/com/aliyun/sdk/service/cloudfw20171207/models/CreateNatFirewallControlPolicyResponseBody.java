@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatFirewallControlPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNatFirewallControlPolicyResponseBody</p>
  */
 public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
-    @NameInMap("AclUuid")
+    @com.aliyun.core.annotation.NameInMap("AclUuid")
     private String aclUuid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNatFirewallControlPolicyResponseBody(Builder builder) {
@@ -50,10 +55,13 @@ public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The UUID of the access control policy.
-         * <p>
+         * <p>The unique ID of the access control policy.</p>
+         * <blockquote>
+         * <p> To modify an access control policy, you must specify the unique ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * > If you want to modify an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.
+         * <strong>example:</strong>
+         * <p>6504d2fb-ab36-49c3-92a6-822a56549783</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.aclUuid = aclUuid;
@@ -61,7 +69,10 @@ public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DC783F1-B3A7-578D-8A63-687CC9B82C0A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

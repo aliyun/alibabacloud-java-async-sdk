@@ -91,12 +91,12 @@ public class QueryPictureSearchJobRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPictureSearchJobRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.currentPage = response.currentPage;
-            this.jobStatus = response.jobStatus;
-            this.pageSize = response.pageSize;
+        private Builder(QueryPictureSearchJobRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.currentPage = request.currentPage;
+            this.jobStatus = request.jobStatus;
+            this.pageSize = request.pageSize;
         } 
 
         /**

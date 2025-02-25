@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecordStatisticsRequest</p>
  */
 public class DescribeRecordStatisticsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("DomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainType")
     private String domainType;
 
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Rr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rr;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
     private DescribeRecordStatisticsRequest(Builder builder) {
@@ -127,7 +132,11 @@ public class DescribeRecordStatisticsRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The primary domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -136,7 +145,14 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC (default): hosted public domain name</li>
+         * <li>CACHE: cache-accelerated domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -145,10 +161,11 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>The default value is the day when you query the data.</p>
          * 
-         * The default value is the day when you perform the operation.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -157,7 +174,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -166,10 +186,11 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The DNS record.
-         * <p>
+         * <p>The hostname. If you want to resolve <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set Rr to www.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The host record. For example, to resolve `www.dns-exmaple.com`, you must set Rr to www.
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder rr(String rr) {
             this.putQueryParameter("Rr", rr);
@@ -178,10 +199,14 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>You can only query the DNS records within the last 90 days.``</p>
+         * <p>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</p>
+         * <p>If the time range is greater than seven days, data is returned on a daily basis.````</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can only query DNS records of the last 90 days.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSparkCodeWebUiResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSparkCodeWebUiResponseBody</p>
  */
 public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private DescribeSparkCodeWebUiResponseBody(Builder builder) {
@@ -74,11 +79,14 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, <strong>SUCCESS</strong> is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request was successful, **SUCCESS** is returned.
-         * *   If the request failed, an error message is returned.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -86,7 +94,10 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>774DDC37-1908-58F6-B9CA-99E3E45965A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,11 +105,14 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -106,7 +120,10 @@ public class DescribeSparkCodeWebUiResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the web UI for the Spark application.
+         * <p>The URL of the web UI for the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://adb-subuser-cn-hangzhou-1358535755648527-100000648.oss-cn-hangzhou.aliyuncs.com/%3Facl?Expires=1681295967&OSSAccessKeyId=LTAI5tB7NAkm25oiGASu****&Signature=hKAZ1vgvhJ%2FD8hNHTuX%2FOOBWht">https://adb-subuser-cn-hangzhou-1358535755648527-100000648.oss-cn-hangzhou.aliyuncs.com/%3Facl?Expires=1681295967&amp;OSSAccessKeyId=LTAI5tB7NAkm25oiGASu****&amp;Signature=hKAZ1vgvhJ%2FD8hNHTuX%2FOOBWht</a>****</p>
          */
         public Builder url(String url) {
             this.url = url;

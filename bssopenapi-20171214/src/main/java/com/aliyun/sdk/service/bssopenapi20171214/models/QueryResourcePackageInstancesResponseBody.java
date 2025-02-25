@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryResourcePackageInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryResourcePackageInstancesResponseBody</p>
  */
 public class QueryResourcePackageInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryResourcePackageInstancesResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +138,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +146,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +157,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -154,7 +168,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +179,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +190,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +201,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -191,9 +217,15 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryResourcePackageInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryResourcePackageInstancesResponseBody</p>
+     */
     public static class ApplicableProducts extends TeaModel {
-        @NameInMap("Product")
-        private java.util.List < String > product;
+        @com.aliyun.core.annotation.NameInMap("Product")
+        private java.util.List<String> product;
 
         private ApplicableProducts(Builder builder) {
             this.product = builder.product;
@@ -210,17 +242,17 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         /**
          * @return product
          */
-        public java.util.List < String > getProduct() {
+        public java.util.List<String> getProduct() {
             return this.product;
         }
 
         public static final class Builder {
-            private java.util.List < String > product; 
+            private java.util.List<String> product; 
 
             /**
              * Product.
              */
-            public Builder product(java.util.List < String > product) {
+            public Builder product(java.util.List<String> product) {
                 this.product = product;
                 return this;
             }
@@ -232,47 +264,53 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryResourcePackageInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryResourcePackageInstancesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("ApplicableProducts")
+        @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private ApplicableProducts applicableProducts;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("DeductType")
+        @com.aliyun.core.annotation.NameInMap("DeductType")
         private String deductType;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("ExpiryTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiryTime")
         private String expiryTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RemainingAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmount")
         private String remainingAmount;
 
-        @NameInMap("RemainingAmountUnit")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmountUnit")
         private String remainingAmountUnit;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalAmount")
         private String totalAmount;
 
-        @NameInMap("TotalAmountUnit")
+        @com.aliyun.core.annotation.NameInMap("TotalAmountUnit")
         private String totalAmountUnit;
 
         private Instance(Builder builder) {
@@ -415,7 +453,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             private String totalAmountUnit; 
 
             /**
-             * The services to which the resource plan is applicable.
+             * <p>The services to which the resource plan is applicable.</p>
              */
             public Builder applicableProducts(ApplicableProducts applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -423,7 +461,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -431,7 +472,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The deduction type. Example: Absolute.
+             * <p>The deduction type. Example: Absolute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Absolute</p>
              */
             public Builder deductType(String deductType) {
                 this.deductType = deductType;
@@ -439,7 +483,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource plan took effect.
+             * <p>The time when the resource plan took effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-12T09:51:56Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -447,7 +494,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource plan expired.
+             * <p>The time when the resource plan expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-12T16:00:00Z</p>
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -455,7 +505,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSBAG-cn-v0h1s4hma01</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -463,7 +516,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource plan.
+             * <p>The type of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_ossbag_absolute_Storage_sh</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -471,7 +527,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -479,7 +538,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota.
+             * <p>The remaining quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40.000</p>
              */
             public Builder remainingAmount(String remainingAmount) {
                 this.remainingAmount = remainingAmount;
@@ -487,7 +549,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the remaining quota.
+             * <p>The unit of the remaining quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder remainingAmountUnit(String remainingAmountUnit) {
                 this.remainingAmountUnit = remainingAmountUnit;
@@ -495,7 +560,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the resource plan. The remarks must be made in Chinese.
+             * <p>The remarks on the resource plan. The remarks must be made in Chinese.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -503,11 +568,14 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource plan. Valid values:
-             * <p>
+             * <p>The status of the resource plan. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>Expired</li>
+             * </ul>
              * 
-             * *   Available
-             * *   Expired
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -515,7 +583,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota of the resource plan.
+             * <p>The total quota of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40.000</p>
              */
             public Builder totalAmount(String totalAmount) {
                 this.totalAmount = totalAmount;
@@ -523,7 +594,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the total quota.
+             * <p>The unit of the total quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder totalAmountUnit(String totalAmountUnit) {
                 this.totalAmountUnit = totalAmountUnit;
@@ -537,9 +611,15 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryResourcePackageInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryResourcePackageInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -556,17 +636,17 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }
@@ -578,20 +658,26 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryResourcePackageInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryResourcePackageInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Instances instances;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private String pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private String pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
 
         private Data(Builder builder) {
@@ -653,7 +739,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * The ID of the host.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -661,7 +750,7 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the instances.
+             * <p>The details of the instances.</p>
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -669,7 +758,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(String pageNum) {
                 this.pageNum = pageNum;
@@ -677,7 +769,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -685,7 +780,10 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

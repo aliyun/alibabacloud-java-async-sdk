@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmInstanceResponseBody</p>
  */
 public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("ExpireTimestamp")
+    @com.aliyun.core.annotation.NameInMap("ExpireTimestamp")
     private Long expireTimestamp;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SmsQuota")
+    @com.aliyun.core.annotation.NameInMap("SmsQuota")
     private Integer smsQuota;
 
-    @NameInMap("TaskQuota")
+    @com.aliyun.core.annotation.NameInMap("TaskQuota")
     private Integer taskQuota;
 
-    @NameInMap("UsedQuota")
+    @com.aliyun.core.annotation.NameInMap("UsedQuota")
     private UsedQuota usedQuota;
 
-    @NameInMap("VersionCode")
+    @com.aliyun.core.annotation.NameInMap("VersionCode")
     private String versionCode;
 
     private DescribeDnsGtmInstanceResponseBody(Builder builder) {
@@ -182,7 +187,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         private String versionCode; 
 
         /**
-         * The configurations of the instance.
+         * <p>The configurations of the instance.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -190,7 +195,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the instance was created.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-14T06:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -198,7 +206,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The UNIX timestamp that indicates when the instance was created.
+         * <p>The UNIX timestamp that indicates when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1602656937000</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -206,7 +217,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the instance expires.
+         * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-14T06:58Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -214,7 +228,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The UNIX timestamp that indicates when the instance expires.
+         * <p>The UNIX timestamp that indicates when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1602656937000</p>
          */
         public Builder expireTimestamp(Long expireTimestamp) {
             this.expireTimestamp = expireTimestamp;
@@ -222,7 +239,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceid1</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -230,10 +250,13 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method. Valid value:
-         * <p>
+         * <p>The billing method. Valid value:</p>
+         * <ul>
+         * <li>Subscription: You can pay in advance for the use of resources.</li>
+         * </ul>
          * 
-         * *   Subscription: You can pay in advance for the use of resources.
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -241,7 +264,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84314904-D047-4176-A0EC-256D7F68C7F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -249,7 +275,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resourcegroupid1</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -257,7 +286,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of SMS notifications.
+         * <p>The total number of SMS notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder smsQuota(Integer smsQuota) {
             this.smsQuota = smsQuota;
@@ -265,7 +297,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of detection tasks.
+         * <p>The total number of detection tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder taskQuota(Integer taskQuota) {
             this.taskQuota = taskQuota;
@@ -273,7 +308,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The used quota.
+         * <p>The used quota.</p>
          */
         public Builder usedQuota(UsedQuota usedQuota) {
             this.usedQuota = usedQuota;
@@ -281,7 +316,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the instance.
+         * <p>The version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>versioncode1</p>
          */
         public Builder versionCode(String versionCode) {
             this.versionCode = versionCode;
@@ -294,17 +332,23 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceResponseBody</p>
+     */
     public static class AlertConfig extends TeaModel {
-        @NameInMap("DingtalkNotice")
+        @com.aliyun.core.annotation.NameInMap("DingtalkNotice")
         private Boolean dingtalkNotice;
 
-        @NameInMap("EmailNotice")
+        @com.aliyun.core.annotation.NameInMap("EmailNotice")
         private Boolean emailNotice;
 
-        @NameInMap("NoticeType")
+        @com.aliyun.core.annotation.NameInMap("NoticeType")
         private String noticeType;
 
-        @NameInMap("SmsNotice")
+        @com.aliyun.core.annotation.NameInMap("SmsNotice")
         private Boolean smsNotice;
 
         private AlertConfig(Builder builder) {
@@ -365,11 +409,14 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether email notification is configured. Valid values:
-             * <p>
+             * <p>Indicates whether email notification is configured. Valid values:</p>
+             * <ul>
+             * <li>true: Email notification is configured.</li>
+             * <li>false: Email notification is not configured. null: Email notification is not configured.</li>
+             * </ul>
              * 
-             * *   true: Email notification is configured.
-             * *   false: Email notification is not configured. null: Email notification is not configured.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailNotice(Boolean emailNotice) {
                 this.emailNotice = emailNotice;
@@ -377,15 +424,18 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event. Valid values:
-             * <p>
+             * <p>The type of the alert event. Valid values:</p>
+             * <ul>
+             * <li>ADDR_ALERT: The address is unavailable.</li>
+             * <li>ADDR_RESUME: The address is restored and becomes available.</li>
+             * <li>ADDR_POOL_GROUP_UNAVAILABLE: The address pool group is unavailable.</li>
+             * <li>ADDR_POOL_GROUP_AVAILABLE: The address pool group is restored and becomes available.</li>
+             * <li>ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.</li>
+             * <li>MONITOR_NODE_IP_CHANGE: The IP address of the monitoring node has changed.</li>
+             * </ul>
              * 
-             * *   ADDR_ALERT: The address is unavailable.
-             * *   ADDR_RESUME: The address is restored and becomes available.
-             * *   ADDR_POOL_GROUP_UNAVAILABLE: The address pool group is unavailable.
-             * *   ADDR_POOL_GROUP_AVAILABLE: The address pool group is restored and becomes available.
-             * *   ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.
-             * *   MONITOR_NODE_IP_CHANGE: The IP address of the monitoring node has changed.
+             * <strong>example:</strong>
+             * <p>ADDR_ALERT</p>
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
@@ -393,11 +443,14 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SMS notification is configured. Valid values:
-             * <p>
+             * <p>Indicates whether SMS notification is configured. Valid values:</p>
+             * <ul>
+             * <li>true: SMS notification is configured.</li>
+             * <li>false: SMS notification is not configured. null: SMS notification is not configured.</li>
+             * </ul>
              * 
-             * *   true: SMS notification is configured.
-             * *   false: SMS notification is not configured. null: SMS notification is not configured.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder smsNotice(Boolean smsNotice) {
                 this.smsNotice = smsNotice;
@@ -411,9 +464,15 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceResponseBody</p>
+     */
     public static class ConfigAlertConfig extends TeaModel {
-        @NameInMap("AlertConfig")
-        private java.util.List < AlertConfig> alertConfig;
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
+        private java.util.List<AlertConfig> alertConfig;
 
         private ConfigAlertConfig(Builder builder) {
             this.alertConfig = builder.alertConfig;
@@ -430,17 +489,17 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         /**
          * @return alertConfig
          */
-        public java.util.List < AlertConfig> getAlertConfig() {
+        public java.util.List<AlertConfig> getAlertConfig() {
             return this.alertConfig;
         }
 
         public static final class Builder {
-            private java.util.List < AlertConfig> alertConfig; 
+            private java.util.List<AlertConfig> alertConfig; 
 
             /**
              * AlertConfig.
              */
-            public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+            public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
                 this.alertConfig = alertConfig;
                 return this;
             }
@@ -452,35 +511,41 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("AlertConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private ConfigAlertConfig alertConfig;
 
-        @NameInMap("AlertGroup")
+        @com.aliyun.core.annotation.NameInMap("AlertGroup")
         private String alertGroup;
 
-        @NameInMap("CnameType")
+        @com.aliyun.core.annotation.NameInMap("CnameType")
         private String cnameType;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("PubicZoneName")
+        @com.aliyun.core.annotation.NameInMap("PubicZoneName")
         private String pubicZoneName;
 
-        @NameInMap("PublicCnameMode")
+        @com.aliyun.core.annotation.NameInMap("PublicCnameMode")
         private String publicCnameMode;
 
-        @NameInMap("PublicRr")
+        @com.aliyun.core.annotation.NameInMap("PublicRr")
         private String publicRr;
 
-        @NameInMap("PublicUserDomainName")
+        @com.aliyun.core.annotation.NameInMap("PublicUserDomainName")
         private String publicUserDomainName;
 
-        @NameInMap("StrategyMode")
+        @com.aliyun.core.annotation.NameInMap("StrategyMode")
         private String strategyMode;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
         private Config(Builder builder) {
@@ -587,7 +652,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             private Integer ttl; 
 
             /**
-             * The alert notification method.
+             * <p>The alert notification method.</p>
              */
             public Builder alertConfig(ConfigAlertConfig alertConfig) {
                 this.alertConfig = alertConfig;
@@ -595,7 +660,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert group.
+             * <p>The name of the alert group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alertgroup1</p>
              */
             public Builder alertGroup(String alertGroup) {
                 this.alertGroup = alertGroup;
@@ -603,10 +671,13 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the CNAME domain name that is used to access the instance. Valid value:
-             * <p>
+             * <p>The type of the CNAME domain name that is used to access the instance. Valid value:</p>
+             * <ul>
+             * <li>PUBLIC: The CNAME domain name is used to access the instance over the Internet.</li>
+             * </ul>
              * 
-             * *   PUBLIC: The CNAME domain name is used to access the instance over the Internet.
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder cnameType(String cnameType) {
                 this.cnameType = cnameType;
@@ -614,7 +685,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instancetest1</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -622,7 +696,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is used to access the instance over the Internet.
+             * <p>The domain name that is used to access the instance over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.rr.gtm-003.com</p>
              */
             public Builder pubicZoneName(String pubicZoneName) {
                 this.pubicZoneName = pubicZoneName;
@@ -630,11 +707,14 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a custom CNAME domain name or a CNAME domain name assigned by the system is used to access the instance over the Internet. Valid values:
-             * <p>
+             * <p>Indicates whether a custom CNAME domain name or a CNAME domain name assigned by the system is used to access the instance over the Internet. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM: A custom CNAME domain name is used.</li>
+             * <li>SYSTEM_ASSIGN: A CNAME domain name assigned by the system is used.</li>
+             * </ul>
              * 
-             * *   CUSTOM: A custom CNAME domain name is used.
-             * *   SYSTEM_ASSIGN: A CNAME domain name assigned by the system is used.
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder publicCnameMode(String publicCnameMode) {
                 this.publicCnameMode = publicCnameMode;
@@ -642,7 +722,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.
+             * <p>The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.rr</p>
              */
             public Builder publicRr(String publicRr) {
                 this.publicRr = publicRr;
@@ -650,7 +733,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The service domain name that is used over the Internet.
+             * <p>The service domain name that is used over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder publicUserDomainName(String publicUserDomainName) {
                 this.publicUserDomainName = publicUserDomainName;
@@ -658,11 +744,14 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the access policy. Valid values:
-             * <p>
+             * <p>The type of the access policy. Valid values:</p>
+             * <ul>
+             * <li>LATENCY: Latency-based</li>
+             * <li>GEO: Geographical location-based</li>
+             * </ul>
              * 
-             * *   LATENCY: Latency-based
-             * *   GEO: Geographical location-based
+             * <strong>example:</strong>
+             * <p>GEO</p>
              */
             public Builder strategyMode(String strategyMode) {
                 this.strategyMode = strategyMode;
@@ -670,7 +759,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The global time to live (TTL).
+             * <p>The global time to live (TTL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -684,17 +776,23 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmInstanceResponseBody</p>
+     */
     public static class UsedQuota extends TeaModel {
-        @NameInMap("DingtalkUsedCount")
+        @com.aliyun.core.annotation.NameInMap("DingtalkUsedCount")
         private Integer dingtalkUsedCount;
 
-        @NameInMap("EmailUsedCount")
+        @com.aliyun.core.annotation.NameInMap("EmailUsedCount")
         private Integer emailUsedCount;
 
-        @NameInMap("SmsUsedCount")
+        @com.aliyun.core.annotation.NameInMap("SmsUsedCount")
         private Integer smsUsedCount;
 
-        @NameInMap("TaskUsedCount")
+        @com.aliyun.core.annotation.NameInMap("TaskUsedCount")
         private Integer taskUsedCount;
 
         private UsedQuota(Builder builder) {
@@ -755,7 +853,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of emails that were sent.
+             * <p>The total number of emails that were sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder emailUsedCount(Integer emailUsedCount) {
                 this.emailUsedCount = emailUsedCount;
@@ -763,7 +864,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of short messages that were sent.
+             * <p>The total number of short messages that were sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder smsUsedCount(Integer smsUsedCount) {
                 this.smsUsedCount = smsUsedCount;
@@ -771,7 +875,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of detection tasks that were created.
+             * <p>The number of detection tasks that were created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder taskUsedCount(Integer taskUsedCount) {
                 this.taskUsedCount = taskUsedCount;

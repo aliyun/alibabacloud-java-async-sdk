@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceNodeNumRequest</p>
  */
 public class ModifyInstanceNodeNumRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("NodeNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeNum;
 
     private ModifyInstanceNodeNumRequest(Builder builder) {
@@ -108,7 +106,10 @@ public class ModifyInstanceNodeNumRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run for the request. Default value: false. Valid values:
+         * <p>
+         * - true: Only a dry-run request is sent and the number of nodes in the instance is not modified. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.
+         * - false: The actual request is sent and no dry run is performed. The number of nodes is changed if the requirements are met. By default, the DryRunResult parameter returns false if you set DryRun to false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -117,7 +118,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -126,7 +127,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
         }
 
         /**
-         * NodeNum.
+         * The number of nodes in the cluster. If the cluster is deployed in n-n-n mode, the number of nodes in the cluster equals n × 3.
          */
         public Builder nodeNum(String nodeNum) {
             this.putBodyParameter("NodeNum", nodeNum);

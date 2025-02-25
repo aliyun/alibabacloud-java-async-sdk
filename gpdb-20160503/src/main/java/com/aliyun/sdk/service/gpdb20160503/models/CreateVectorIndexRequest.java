@@ -1,66 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVectorIndexRequest} extends {@link RequestModel}
  *
  * <p>CreateVectorIndexRequest</p>
  */
 public class CreateVectorIndexRequest extends Request {
-    @Query
-    @NameInMap("Collection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Dimension")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimension")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer dimension;
 
-    @Query
-    @NameInMap("HnswM")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalStorage")
+    private Integer externalStorage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HnswEfConstruction")
+    private Integer hnswEfConstruction;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HnswM")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer hnswM;
 
-    @Query
-    @NameInMap("ManagerAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagerAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String managerAccount;
 
-    @Query
-    @NameInMap("ManagerAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagerAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String managerAccountPassword;
 
-    @Query
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PqEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PqEnable")
     private Integer pqEnable;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateVectorIndexRequest(Builder builder) {
@@ -68,6 +81,8 @@ public class CreateVectorIndexRequest extends Request {
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
+        this.externalStorage = builder.externalStorage;
+        this.hnswEfConstruction = builder.hnswEfConstruction;
         this.hnswM = builder.hnswM;
         this.managerAccount = builder.managerAccount;
         this.managerAccountPassword = builder.managerAccountPassword;
@@ -110,6 +125,20 @@ public class CreateVectorIndexRequest extends Request {
      */
     public Integer getDimension() {
         return this.dimension;
+    }
+
+    /**
+     * @return externalStorage
+     */
+    public Integer getExternalStorage() {
+        return this.externalStorage;
+    }
+
+    /**
+     * @return hnswEfConstruction
+     */
+    public Integer getHnswEfConstruction() {
+        return this.hnswEfConstruction;
     }
 
     /**
@@ -172,6 +201,8 @@ public class CreateVectorIndexRequest extends Request {
         private String collection; 
         private String DBInstanceId; 
         private Integer dimension; 
+        private Integer externalStorage; 
+        private Integer hnswEfConstruction; 
         private Integer hnswM; 
         private String managerAccount; 
         private String managerAccountPassword; 
@@ -190,6 +221,8 @@ public class CreateVectorIndexRequest extends Request {
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
+            this.externalStorage = request.externalStorage;
+            this.hnswEfConstruction = request.hnswEfConstruction;
             this.hnswM = request.hnswM;
             this.managerAccount = request.managerAccount;
             this.managerAccountPassword = request.managerAccountPassword;
@@ -201,7 +234,14 @@ public class CreateVectorIndexRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * <p>Collection name.</p>
+         * <blockquote>
+         * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API to view the list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -210,7 +250,14 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>Instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -219,7 +266,14 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * Dimension.
+         * <p>Vector dimension.</p>
+         * <blockquote>
+         * <p>This value must be consistent with the length of the vector data (Rows. Vector) uploaded via the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> API.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder dimension(Integer dimension) {
             this.putQueryParameter("Dimension", dimension);
@@ -228,7 +282,46 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * HnswM.
+         * <p>Whether to use mmap to build the HNSW index, default is 0. If the data does not need to be deleted and there are performance requirements for uploading data, it is recommended to set this to 1.</p>
+         * <blockquote>
+         * <ul>
+         * <li>When set to 0, the segment-page storage mode is used to build the index, which can use the shared_buffer in PostgreSQL for caching and supports deletion and update operations.</li>
+         * <li>When set to 1, the index is built using mmap, which does not support deletion and update operations.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder externalStorage(Integer externalStorage) {
+            this.putQueryParameter("ExternalStorage", externalStorage);
+            this.externalStorage = externalStorage;
+            return this;
+        }
+
+        /**
+         * HnswEfConstruction.
+         */
+        public Builder hnswEfConstruction(Integer hnswEfConstruction) {
+            this.putQueryParameter("HnswEfConstruction", hnswEfConstruction);
+            this.hnswEfConstruction = hnswEfConstruction;
+            return this;
+        }
+
+        /**
+         * <p>The maximum number of neighbors in the HNSW algorithm, ranging from 1 to 1000. The API will automatically set this value based on the vector dimension, and it generally does not need to be manually set.</p>
+         * <blockquote>
+         * <p>It is suggested to set this based on the vector dimension as follows:</p>
+         * <ul>
+         * <li>Less than or equal to 384: 16</li>
+         * <li>Greater than 384 and less than or equal to 768: 32</li>
+         * <li>Greater than 768 and less than or equal to 1024: 64</li>
+         * <li>Greater than 1024: 128</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder hnswM(Integer hnswM) {
             this.putQueryParameter("HnswM", hnswM);
@@ -237,7 +330,14 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * ManagerAccount.
+         * <p>Name of the management account with rds_superuser permissions.</p>
+         * <blockquote>
+         * <p>You can create an account through the console -&gt; Account Management, or by using the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> API.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -246,7 +346,11 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * ManagerAccountPassword.
+         * <p>Management account password.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder managerAccountPassword(String managerAccountPassword) {
             this.putQueryParameter("ManagerAccountPassword", managerAccountPassword);
@@ -255,7 +359,15 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * Distance Metrics。
+         * <p>Method used for building the vector index. Value description:</p>
+         * <ul>
+         * <li>l2: Euclidean distance.</li>
+         * <li>ip: Inner product (dot product) distance.</li>
+         * <li>cosine: Cosine similarity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cosine</p>
          */
         public Builder metrics(String metrics) {
             this.putQueryParameter("Metrics", metrics);
@@ -264,7 +376,13 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>Namespace, default is public.</p>
+         * <blockquote>
+         * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API to view the list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -282,7 +400,14 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * PqEnable.
+         * <p>Whether to enable PQ (Product Quantization) algorithm acceleration for the index. It is recommended to enable this when the data volume exceeds 500,000. Value description:</p>
+         * <ul>
+         * <li>0: Disabled.</li>
+         * <li>1: Enabled (default).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pqEnable(Integer pqEnable) {
             this.putQueryParameter("PqEnable", pqEnable);
@@ -291,7 +416,11 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID where the instance is located.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

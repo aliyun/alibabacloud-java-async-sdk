@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAttackAnalysisDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeAttackAnalysisDataRequest</p>
  */
 public class DescribeAttackAnalysisDataRequest extends Request {
-    @Query
-    @NameInMap("Base64")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Base64")
     private String base64;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeAttackAnalysisDataRequest(Builder builder) {
@@ -155,11 +160,14 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         } 
 
         /**
-         * Specifies whether to encode the value of the **client_url** field in the query results by using the Base64 algorithm. Valid values:
-         * <p>
+         * <p>Specifies whether to encode the value of the <strong>client_url</strong> field in the query results by using the Base64 algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder base64(String base64) {
             this.putQueryParameter("Base64", base64);
@@ -168,10 +176,13 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**.
-         * <p>
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>.</p>
+         * <blockquote>
+         * <p> If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage parameter.</p>
+         * </blockquote>
          * 
-         * >  If the Type parameter is set to **DETAILS**, you must specify the CurrentPage parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -180,54 +191,59 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * The condition that is used to filter attack events.
-         * <p>
+         * <p>The condition that is used to filter attack events.</p>
+         * <blockquote>
+         * <p> The following list describes the valid values of crack_type:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>3: brute-force attack on MySQL</p>
+         * </li>
+         * <li><p>4: FTP brute-force attack</p>
+         * </li>
+         * <li><p>5: SSH brute-force attack</p>
+         * </li>
+         * <li><p>6: RDP brute-force attack</p>
+         * </li>
+         * <li><p>9: brute-force attack on Microsoft SQL Server</p>
+         * </li>
+         * <li><p>101: intercepted attack on Java Struts 2</p>
+         * </li>
+         * <li><p>102: intercepted attack on Redis</p>
+         * </li>
+         * <li><p>103: communication with AntSword Webshell</p>
+         * </li>
+         * <li><p>104: communication with China Chopper Webshell</p>
+         * </li>
+         * <li><p>133: communication with XISE Webshell</p>
+         * </li>
+         * <li><p>sqli: SQL injection</p>
+         * </li>
+         * <li><p>codei: code execution</p>
+         * </li>
+         * <li><p>xss: cross-site scripting (XSS)</p>
+         * </li>
+         * <li><p>lfi: local file inclusion</p>
+         * </li>
+         * <li><p>rfi: remote file inclusion</p>
+         * </li>
+         * <li><p>webshell: trojan script</p>
+         * </li>
+         * <li><p>upload: vulnerability upload</p>
+         * </li>
+         * <li><p>path: directory traversal</p>
+         * </li>
+         * <li><p>bypass: unauthorized access</p>
+         * </li>
+         * <li><p>csrf: cross-site request forgery (CSRF)</p>
+         * </li>
+         * <li><p>crlf: carriage return line feed (CRLF)</p>
+         * </li>
+         * <li><p>other: others</p>
+         * </li>
+         * </ul>
          * 
-         * >  The following list describes the valid values of crack_type:
-         * 
-         * *   3: brute-force attack on MySQL
-         * 
-         * *   4: FTP brute-force attack
-         * 
-         * *   5: SSH brute-force attack
-         * 
-         * *   6: RDP brute-force attack
-         * 
-         * *   9: brute-force attack on Microsoft SQL Server
-         * 
-         * *   101: intercepted attack on Java Struts 2
-         * 
-         * *   102: intercepted attack on Redis
-         * 
-         * *   103: communication with AntSword Webshell
-         * 
-         * *   104: communication with China Chopper Webshell
-         * 
-         * *   133: communication with XISE Webshell
-         * 
-         * *   sqli: SQL injection
-         * 
-         * *   codei: code execution
-         * 
-         * *   xss: cross-site scripting (XSS)
-         * 
-         * *   lfi: local file inclusion
-         * 
-         * *   rfi: remote file inclusion
-         * 
-         * *   webshell: trojan script
-         * 
-         * *   upload: vulnerability upload
-         * 
-         * *   path: directory traversal
-         * 
-         * *   bypass: unauthorized access
-         * 
-         * *   csrf: cross-site request forgery (CSRF)
-         * 
-         * *   crlf: carriage return line feed (CRLF)
-         * 
-         * *   other: others
+         * <strong>example:</strong>
+         * <p>{&quot;crack_type&quot;:&quot;9&quot;}</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -236,7 +252,11 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * The timestamp when the attack stops. Unit: seconds.
+         * <p>The timestamp when the attack stops. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649040221</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -245,11 +265,14 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -258,10 +281,13 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <blockquote>
+         * <p> If the Type parameter is set to <strong>DETAILS</strong>, you must specify the PageSize parameter.</p>
+         * </blockquote>
          * 
-         * >  If the Type parameter is set to **DETAILS**, you must specify the PageSize parameter.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -270,10 +296,14 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.
-         * <p>
+         * <p>The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.</p>
+         * <blockquote>
+         * <p> The start time that you specify must be within the previous 40 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The start time that you specify must be within the previous 40 days.
+         * <strong>example:</strong>
+         * <p>1644027670</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -282,17 +312,22 @@ public class DescribeAttackAnalysisDataRequest extends Request {
         }
 
         /**
-         * The details of attack analysis. Valid values:
-         * <p>
+         * <p>The details of attack analysis. Valid values:</p>
+         * <ul>
+         * <li><strong>TOTAL</strong>: number of attacks</li>
+         * <li><strong>TREND</strong>: attack trend</li>
+         * <li><strong>PIE_CHART</strong>: distribution of attacks by type</li>
+         * <li><strong>SOURCE_TOP</strong>: top 5 attack sources</li>
+         * <li><strong>CLIENT_TOP</strong>: top 5 attacked assets</li>
+         * <li><strong>DETAILS</strong>: attack details</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the Type parameter is set to <strong>DETAILS</strong>, you must specify the CurrentPage and PageSize parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **TOTAL**: number of attacks
-         * *   **TREND**: attack trend
-         * *   **PIE_CHART**: distribution of attacks by type
-         * *   **SOURCE_TOP**: top 5 attack sources
-         * *   **CLIENT_TOP**: top 5 attacked assets
-         * *   **DETAILS**: attack details
-         * 
-         * >  If the Type parameter is set to **DETAILS**, you must specify the CurrentPage and PageSize parameters.
+         * <strong>example:</strong>
+         * <p>DETAILS</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

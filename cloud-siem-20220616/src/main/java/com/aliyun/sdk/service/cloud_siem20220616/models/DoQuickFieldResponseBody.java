@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DoQuickFieldResponseBody</p>
  */
 public class DoQuickFieldResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DoQuickFieldResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class DoQuickFieldResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AggQueryd")
+        @com.aliyun.core.annotation.NameInMap("AggQueryd")
         private String aggQueryd;
 
-        @NameInMap("CompleteOrNot")
+        @com.aliyun.core.annotation.NameInMap("CompleteOrNot")
         private Boolean completeOrNot;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("HasSQL")
+        @com.aliyun.core.annotation.NameInMap("HasSQL")
         private Boolean hasSQL;
 
-        @NameInMap("Keys")
+        @com.aliyun.core.annotation.NameInMap("Keys")
         private java.util.List < String > keys;
 
-        @NameInMap("Limited")
+        @com.aliyun.core.annotation.NameInMap("Limited")
         private Long limited;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < ? > logs;
 
-        @NameInMap("PQuery")
+        @com.aliyun.core.annotation.NameInMap("PQuery")
         private String pQuery;
 
-        @NameInMap("ProcessedRows")
+        @com.aliyun.core.annotation.NameInMap("ProcessedRows")
         private Long processedRows;
 
-        @NameInMap("QueryMode")
+        @com.aliyun.core.annotation.NameInMap("QueryMode")
         private Integer queryMode;
 
-        @NameInMap("WhereQuery")
+        @com.aliyun.core.annotation.NameInMap("WhereQuery")
         private String whereQuery;
 
         private Data(Builder builder) {

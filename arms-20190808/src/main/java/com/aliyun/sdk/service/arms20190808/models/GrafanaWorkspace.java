@@ -1,93 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspace} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspace</p>
  */
 public class GrafanaWorkspace extends TeaModel {
-    @NameInMap("commercial")
+    @com.aliyun.core.annotation.NameInMap("commercial")
     private Boolean commercial;
 
-    @NameInMap("deployType")
+    @com.aliyun.core.annotation.NameInMap("deployType")
     private String deployType;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Float endTime;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Float gmtCreate;
 
-    @NameInMap("grafanaVersion")
+    @com.aliyun.core.annotation.NameInMap("grafanaVersion")
     private String grafanaVersion;
 
-    @NameInMap("grafanaWorkspaceDomain")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceDomain")
     private String grafanaWorkspaceDomain;
 
-    @NameInMap("grafanaWorkspaceEdition")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceDomainStatus")
+    private String grafanaWorkspaceDomainStatus;
+
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceEdition")
     private String grafanaWorkspaceEdition;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("grafanaWorkspaceIp")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceIp")
     private String grafanaWorkspaceIp;
 
-    @NameInMap("grafanaWorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceName")
     private String grafanaWorkspaceName;
 
-    @NameInMap("maxAccount")
+    @com.aliyun.core.annotation.NameInMap("maxAccount")
     private String maxAccount;
 
-    @NameInMap("ntmId")
+    @com.aliyun.core.annotation.NameInMap("ntmId")
     private String ntmId;
 
-    @NameInMap("personalDomain")
+    @com.aliyun.core.annotation.NameInMap("personalDomain")
     private String personalDomain;
 
-    @NameInMap("personalDomainPrefix")
+    @com.aliyun.core.annotation.NameInMap("personalDomainPrefix")
     private String personalDomainPrefix;
 
-    @NameInMap("privateDomain")
+    @com.aliyun.core.annotation.NameInMap("privateDomain")
     private String privateDomain;
 
-    @NameInMap("privateIp")
+    @com.aliyun.core.annotation.NameInMap("privateIp")
     private String privateIp;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("shareSynced")
+    @com.aliyun.core.annotation.NameInMap("shareSynced")
     private Boolean shareSynced;
 
-    @NameInMap("snatIp")
+    @com.aliyun.core.annotation.NameInMap("snatIp")
     private String snatIp;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
 
-    @NameInMap("upgradeVersion")
-    private java.util.List < String > upgradeVersion;
+    @com.aliyun.core.annotation.NameInMap("upgradeVersion")
+    private java.util.List<String> upgradeVersion;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private GrafanaWorkspace(Builder builder) {
@@ -98,6 +106,7 @@ public class GrafanaWorkspace extends TeaModel {
         this.gmtCreate = builder.gmtCreate;
         this.grafanaVersion = builder.grafanaVersion;
         this.grafanaWorkspaceDomain = builder.grafanaWorkspaceDomain;
+        this.grafanaWorkspaceDomainStatus = builder.grafanaWorkspaceDomainStatus;
         this.grafanaWorkspaceEdition = builder.grafanaWorkspaceEdition;
         this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
         this.grafanaWorkspaceIp = builder.grafanaWorkspaceIp;
@@ -174,6 +183,13 @@ public class GrafanaWorkspace extends TeaModel {
      */
     public String getGrafanaWorkspaceDomain() {
         return this.grafanaWorkspaceDomain;
+    }
+
+    /**
+     * @return grafanaWorkspaceDomainStatus
+     */
+    public String getGrafanaWorkspaceDomainStatus() {
+        return this.grafanaWorkspaceDomainStatus;
     }
 
     /**
@@ -291,14 +307,14 @@ public class GrafanaWorkspace extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return upgradeVersion
      */
-    public java.util.List < String > getUpgradeVersion() {
+    public java.util.List<String> getUpgradeVersion() {
         return this.upgradeVersion;
     }
 
@@ -317,6 +333,7 @@ public class GrafanaWorkspace extends TeaModel {
         private Float gmtCreate; 
         private String grafanaVersion; 
         private String grafanaWorkspaceDomain; 
+        private String grafanaWorkspaceDomainStatus; 
         private String grafanaWorkspaceEdition; 
         private String grafanaWorkspaceId; 
         private String grafanaWorkspaceIp; 
@@ -333,8 +350,8 @@ public class GrafanaWorkspace extends TeaModel {
         private Boolean shareSynced; 
         private String snatIp; 
         private String status; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > upgradeVersion; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> upgradeVersion; 
         private String userId; 
 
         /**
@@ -390,6 +407,14 @@ public class GrafanaWorkspace extends TeaModel {
          */
         public Builder grafanaWorkspaceDomain(String grafanaWorkspaceDomain) {
             this.grafanaWorkspaceDomain = grafanaWorkspaceDomain;
+            return this;
+        }
+
+        /**
+         * grafanaWorkspaceDomainStatus.
+         */
+        public Builder grafanaWorkspaceDomainStatus(String grafanaWorkspaceDomainStatus) {
+            this.grafanaWorkspaceDomainStatus = grafanaWorkspaceDomainStatus;
             return this;
         }
 
@@ -524,7 +549,7 @@ public class GrafanaWorkspace extends TeaModel {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -532,7 +557,7 @@ public class GrafanaWorkspace extends TeaModel {
         /**
          * upgradeVersion.
          */
-        public Builder upgradeVersion(java.util.List < String > upgradeVersion) {
+        public Builder upgradeVersion(java.util.List<String> upgradeVersion) {
             this.upgradeVersion = upgradeVersion;
             return this;
         }
@@ -551,11 +576,17 @@ public class GrafanaWorkspace extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GrafanaWorkspace} extends {@link TeaModel}
+     *
+     * <p>GrafanaWorkspace</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksResponseBody} extends {@link TeaModel}
  *
  * <p>QueryWorksResponseBody</p>
  */
 public class QueryWorksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryWorksResponseBody(Builder builder) {
@@ -91,17 +96,23 @@ public class QueryWorksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryWorksResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksResponseBody</p>
+     */
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -192,50 +203,62 @@ public class QueryWorksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorksResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Auth3rdFlag")
+        @com.aliyun.core.annotation.NameInMap("Auth3rdFlag")
         private Integer auth3rdFlag;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("ModifyName")
+        @com.aliyun.core.annotation.NameInMap("ModifyName")
         private String modifyName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("PublicFlag")
+        private Boolean publicFlag;
+
+        @com.aliyun.core.annotation.NameInMap("PublicInvalidTime")
+        private Long publicInvalidTime;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WorkName")
+        @com.aliyun.core.annotation.NameInMap("WorkName")
         private String workName;
 
-        @NameInMap("WorkType")
+        @com.aliyun.core.annotation.NameInMap("WorkType")
         private String workType;
 
-        @NameInMap("WorksId")
+        @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Result(Builder builder) {
@@ -247,6 +270,8 @@ public class QueryWorksResponseBody extends TeaModel {
             this.modifyName = builder.modifyName;
             this.ownerId = builder.ownerId;
             this.ownerName = builder.ownerName;
+            this.publicFlag = builder.publicFlag;
+            this.publicInvalidTime = builder.publicInvalidTime;
             this.securityLevel = builder.securityLevel;
             this.status = builder.status;
             this.workName = builder.workName;
@@ -321,6 +346,20 @@ public class QueryWorksResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicFlag
+         */
+        public Boolean getPublicFlag() {
+            return this.publicFlag;
+        }
+
+        /**
+         * @return publicInvalidTime
+         */
+        public Long getPublicInvalidTime() {
+            return this.publicInvalidTime;
+        }
+
+        /**
          * @return securityLevel
          */
         public String getSecurityLevel() {
@@ -378,6 +417,8 @@ public class QueryWorksResponseBody extends TeaModel {
             private String modifyName; 
             private String ownerId; 
             private String ownerName; 
+            private Boolean publicFlag; 
+            private Long publicInvalidTime; 
             private String securityLevel; 
             private Integer status; 
             private String workName; 
@@ -447,6 +488,22 @@ public class QueryWorksResponseBody extends TeaModel {
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
+                return this;
+            }
+
+            /**
+             * PublicFlag.
+             */
+            public Builder publicFlag(Boolean publicFlag) {
+                this.publicFlag = publicFlag;
+                return this;
+            }
+
+            /**
+             * PublicInvalidTime.
+             */
+            public Builder publicInvalidTime(Long publicInvalidTime) {
+                this.publicInvalidTime = publicInvalidTime;
                 return this;
             }
 

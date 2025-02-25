@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudMonitorAgentStatusesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudMonitorAgentStatusesResponseBody</p>
  */
 public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
-    @NameInMap("InstanceStatusList")
-    private java.util.List < InstanceStatusList> instanceStatusList;
+    @com.aliyun.core.annotation.NameInMap("InstanceStatusList")
+    private java.util.List<InstanceStatusList> instanceStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCloudMonitorAgentStatusesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
     /**
      * @return instanceStatusList
      */
-    public java.util.List < InstanceStatusList> getInstanceStatusList() {
+    public java.util.List<InstanceStatusList> getInstanceStatusList() {
         return this.instanceStatusList;
     }
 
@@ -46,23 +51,22 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceStatusList> instanceStatusList; 
+        private java.util.List<InstanceStatusList> instanceStatusList; 
         private String requestId; 
 
         /**
-         * Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
+         * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server.</p>
          */
-        public Builder instanceStatusList(java.util.List < InstanceStatusList> instanceStatusList) {
+        public Builder instanceStatusList(java.util.List<InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E1FEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,14 +79,20 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudMonitorAgentStatusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudMonitorAgentStatusesResponseBody</p>
+     */
     public static class InstanceStatusList extends TeaModel {
-        @NameInMap("AutoInstall")
+        @com.aliyun.core.annotation.NameInMap("AutoInstall")
         private Boolean autoInstall;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceStatusList(Builder builder) {
@@ -126,7 +136,14 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AutoInstall.
+             * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoInstall(Boolean autoInstall) {
                 this.autoInstall = autoInstall;
@@ -134,7 +151,10 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c854dc6f07e74953830bb5808d0****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -142,7 +162,18 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The running status of the Cloud Monitoring plug-in. Possible values are:</p>
+             * <ul>
+             * <li>running: Cloud Monitoring plug-in running.</li>
+             * <li>stopped: Cloud Monitoring plug-in stopped.</li>
+             * <li>installing: Cloud Monitoring plug-in installing.</li>
+             * <li>install_faild: Cloud Monitoring plug-in installation failed.</li>
+             * <li>abnormal: Cloud Monitoring plug-in installation abnormal.</li>
+             * <li>not_installed: Cloud Monitoring plug-in not installed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;

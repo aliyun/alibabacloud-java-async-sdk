@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIndexRequest} extends {@link RequestModel}
  *
  * <p>GetIndexRequest</p>
  */
 public class GetIndexRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("indexName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("indexName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexName;
 
     private GetIndexRequest(Builder builder) {
@@ -70,10 +75,11 @@ public class GetIndexRequest extends Request {
         } 
 
         /**
-         * ## Sample requests
-         * <p>
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         *     GET  /openapi/ha3/instances/ose-test1/indexes/index1?dataSource=xxx
+         * <strong>example:</strong>
+         * <p>ha-cn-8ed2j834u03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,62 +88,11 @@ public class GetIndexRequest extends Request {
         }
 
         /**
-         * ## Sample responses
-         * <p>
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Success responses
-         * 
-         *     {
-         *       "requestId": "e1eef569-1ff7-4bf8-acf7-1cecca9894ce",
-         *       "result": {
-         *         "name": "index1",
-         *         "dataSource": "test_yyds_data1",
-         *         "versions": [
-         *           {
-         *             "name": "my_index_1",
-         *             "versionId": 1,
-         *             "status": "drafting",
-         *             "updateTime": "1631070464000",
-         *             "desc": "test",
-         *             "files": [
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               },
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               }
-         *             ]
-         *           },
-         *           {
-         *             "name": "my_index_2",
-         *             "versionId": 1,
-         *             "status": "drafting",
-         *             "updateTime": "1631070464000",
-         *             "desc": "test",
-         *             "files": [
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               },
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               }
-         *             ]        
-         *           }
-         *         ]
-         *       }
-         *     }
+         * <strong>example:</strong>
+         * <p>index_jiayi_text</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);

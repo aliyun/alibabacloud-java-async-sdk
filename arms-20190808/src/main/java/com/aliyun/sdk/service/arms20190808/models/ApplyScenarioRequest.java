@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyScenarioRequest} extends {@link RequestModel}
  *
  * <p>ApplyScenarioRequest</p>
  */
 public class ApplyScenarioRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
-    private java.util.Map < String, ? > config;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> config;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Scenario")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scenario")
     private String scenario;
 
-    @Query
-    @NameInMap("Sign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sign")
     private String sign;
 
-    @Query
-    @NameInMap("SnDump")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnDump")
     private Boolean snDump;
 
-    @Query
-    @NameInMap("SnForce")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnForce")
     private Boolean snForce;
 
-    @Query
-    @NameInMap("SnStat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnStat")
     private Boolean snStat;
 
-    @Query
-    @NameInMap("SnTransfer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnTransfer")
     private Boolean snTransfer;
 
-    @Query
-    @NameInMap("UpdateOption")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateOption")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean updateOption;
 
     private ApplyScenarioRequest(Builder builder) {
@@ -98,7 +103,7 @@ public class ApplyScenarioRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, ? > getConfig() {
+    public java.util.Map<String, ?> getConfig() {
         return this.config;
     }
 
@@ -167,7 +172,7 @@ public class ApplyScenarioRequest extends Request {
 
     public static final class Builder extends Request.Builder<ApplyScenarioRequest, Builder> {
         private String appId; 
-        private java.util.Map < String, ? > config; 
+        private java.util.Map<String, ?> config; 
         private String name; 
         private String regionId; 
         private String scenario; 
@@ -198,7 +203,11 @@ public class ApplyScenarioRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@28f515462f******</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -207,9 +216,13 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * The configuration of the business monitoring job. The value is a JSON string. For more information about this parameter, see the following additional information about the **Config** parameter.
+         * <p>The configuration of the business monitoring job. The value is a JSON string. For more information about this parameter, see the following additional information about the <strong>Config</strong> parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;rpcType&quot;:&quot;0&quot;,&quot;nameMatchType&quot;:&quot;EQUALS&quot;,&quot;service&quot;:&quot;/api/pop/test&quot;,&quot;operator&quot;:&quot;and&quot;,&quot;filterItems&quot;:[{&quot;type&quot;:&quot;HttpHeaders&quot;,&quot;key&quot;:&quot;uid&quot;,&quot;opt&quot;:&quot;==&quot;,&quot;value&quot;:&quot;123456789&quot;}],&quot;group&quot;:{&quot;type&quot;:&quot;HttpRequestParameters&quot;,&quot;key&quot;:&quot;name&quot;}}</p>
          */
-        public Builder config(java.util.Map < String, ? > config) {
+        public Builder config(java.util.Map<String, ?> config) {
             String configShrink = shrink(config, "Config", "json");
             this.putQueryParameter("Config", configShrink);
             this.config = config;
@@ -217,7 +230,11 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * The name of the business monitoring job.
+         * <p>The name of the business monitoring job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScenarioName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -226,7 +243,10 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjaikou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,13 +255,16 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * The scenario where you want to use the business monitoring job. Valid values:
-         * <p>
+         * <p>The scenario where you want to use the business monitoring job. Valid values:</p>
+         * <ul>
+         * <li><code>USER-DEFINED</code>: user-defined. This is the default value.</li>
+         * <li><code>EDAS-ROLLOUT</code>: application release in Enterprise Distributed Application Service (EDAS)</li>
+         * <li><code>OAM-ROLLOUT</code>: application release based on Open Application Model (OAM)</li>
+         * <li><code>MSC-CANARY</code>: canary release based on Microservice Engine (MSE)</li>
+         * </ul>
          * 
-         * *   `USER-DEFINED`: user-defined. This is the default value.
-         * *   `EDAS-ROLLOUT`: application release in Enterprise Distributed Application Service (EDAS)
-         * *   `OAM-ROLLOUT`: application release based on Open Application Model (OAM)
-         * *   `MSC-CANARY`: canary release based on Microservice Engine (MSE)
+         * <strong>example:</strong>
+         * <p>USER-DEFINED</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);
@@ -250,7 +273,10 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * The code of the business monitoring job. This parameter is not required when you create a business monitoring job. However, this parameter is required when you update a business monitoring job.
+         * <p>The code of the business monitoring job. This parameter is not required when you create a business monitoring job. However, this parameter is required when you update a business monitoring job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a9f8****</p>
          */
         public Builder sign(String sign) {
             this.putQueryParameter("Sign", sign);
@@ -259,11 +285,14 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Specifies whether to record business parameters to the trace marked with the coloring sign.
-         * <p>
+         * <p>Specifies whether to record business parameters to the trace marked with the coloring sign.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code>: This is the default value.</li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`: This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder snDump(Boolean snDump) {
             this.putQueryParameter("SnDump", snDump);
@@ -272,11 +301,14 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Specifies whether traffic in the trace marked with the coloring sign is all collected.
-         * <p>
+         * <p>Specifies whether traffic in the trace marked with the coloring sign is all collected.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code>: This is the default value.</li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`: This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder snForce(Boolean snForce) {
             this.putQueryParameter("SnForce", snForce);
@@ -285,11 +317,14 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Specifies whether to count traffic based on the coloring sign.
-         * <p>
+         * <p>Specifies whether to count traffic based on the coloring sign.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code>: This is the default value.</li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`: This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder snStat(Boolean snStat) {
             this.putQueryParameter("SnStat", snStat);
@@ -298,11 +333,14 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Specifies whether the coloring sign is transparently passed down to downstream application nodes in the trace.
-         * <p>
+         * <p>Specifies whether the coloring sign is transparently passed down to downstream application nodes in the trace.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code>: This is the default value.</li>
+         * </ul>
          * 
-         * *   `true`
-         * *   `false`: This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder snTransfer(Boolean snTransfer) {
             this.putQueryParameter("SnTransfer", snTransfer);
@@ -311,11 +349,15 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Specifies whether the operation is an update operation.
-         * <p>
+         * <p>Specifies whether the operation is an update operation.</p>
+         * <ul>
+         * <li><code>true</code>: update</li>
+         * <li><code>false</code>: insert</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `true`: update
-         * *   `false`: insert
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder updateOption(Boolean updateOption) {
             this.putQueryParameter("UpdateOption", updateOption);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEventInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyEventInfoResponseBody</p>
  */
 public class ModifyEventInfoResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorEventId")
+    @com.aliyun.core.annotation.NameInMap("ErrorEventId")
     private String errorEventId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
-    @NameInMap("SuccessEventId")
+    @com.aliyun.core.annotation.NameInMap("SuccessEventId")
     private String successEventId;
 
     private ModifyEventInfoResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         private String successEventId; 
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mst.errorcode.success.errormessage</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Error eventId.
+         * <p>The error ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12343</p>
          */
         public Builder errorEventId(String errorEventId) {
             this.errorEventId = errorEventId;
@@ -102,7 +113,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of devices that were created.
+         * <p>The number of successful records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -118,7 +135,10 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success eventId.
+         * <p>The ID of the successful event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234221</p>
          */
         public Builder successEventId(String successEventId) {
             this.successEventId = successEventId;

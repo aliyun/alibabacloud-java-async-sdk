@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsWithTagRulesResponseBody</p>
  */
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListApplicationsWithTagRulesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +99,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,11 +110,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +125,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +136,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -139,35 +156,41 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class ArgumentItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("datum")
+        @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
 
-        @NameInMap("divisor")
+        @com.aliyun.core.annotation.NameInMap("divisor")
         private Integer divisor;
 
-        @NameInMap("expr")
+        @com.aliyun.core.annotation.NameInMap("expr")
         private String expr;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("nameList")
-        private java.util.List < String > nameList;
+        @com.aliyun.core.annotation.NameInMap("nameList")
+        private java.util.List<String> nameList;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("rate")
+        @com.aliyun.core.annotation.NameInMap("rate")
         private Integer rate;
 
-        @NameInMap("remainder")
+        @com.aliyun.core.annotation.NameInMap("remainder")
         private Integer remainder;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private ArgumentItems(Builder builder) {
@@ -229,7 +252,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -267,7 +290,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Integer divisor; 
             private String expr; 
             private Integer index; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String operator; 
             private Integer rate; 
             private Integer remainder; 
@@ -316,7 +339,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -360,35 +383,41 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Dubbo extends TeaModel {
-        @NameInMap("appId")
+        @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
 
-        @NameInMap("argumentItems")
-        private java.util.List < ArgumentItems> argumentItems;
+        @com.aliyun.core.annotation.NameInMap("argumentItems")
+        private java.util.List<ArgumentItems> argumentItems;
 
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("group")
+        @com.aliyun.core.annotation.NameInMap("group")
         private String group;
 
-        @NameInMap("methodName")
+        @com.aliyun.core.annotation.NameInMap("methodName")
         private String methodName;
 
-        @NameInMap("paramTypes")
-        private java.util.List < String > paramTypes;
+        @com.aliyun.core.annotation.NameInMap("paramTypes")
+        private java.util.List<String> paramTypes;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("tags")
-        private java.util.List < String > tags;
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<String> tags;
 
-        @NameInMap("triggerPolicy")
+        @com.aliyun.core.annotation.NameInMap("triggerPolicy")
         private String triggerPolicy;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Dubbo(Builder builder) {
@@ -422,7 +451,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return argumentItems
          */
-        public java.util.List < ArgumentItems> getArgumentItems() {
+        public java.util.List<ArgumentItems> getArgumentItems() {
             return this.argumentItems;
         }
 
@@ -450,7 +479,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return paramTypes
          */
-        public java.util.List < String > getParamTypes() {
+        public java.util.List<String> getParamTypes() {
             return this.paramTypes;
         }
 
@@ -464,7 +493,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -484,13 +513,13 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appId; 
-            private java.util.List < ArgumentItems> argumentItems; 
+            private java.util.List<ArgumentItems> argumentItems; 
             private String condition; 
             private String group; 
             private String methodName; 
-            private java.util.List < String > paramTypes; 
+            private java.util.List<String> paramTypes; 
             private String serviceName; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String triggerPolicy; 
             private String version; 
 
@@ -505,7 +534,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * argumentItems.
              */
-            public Builder argumentItems(java.util.List < ArgumentItems> argumentItems) {
+            public Builder argumentItems(java.util.List<ArgumentItems> argumentItems) {
                 this.argumentItems = argumentItems;
                 return this;
             }
@@ -537,7 +566,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * paramTypes.
              */
-            public Builder paramTypes(java.util.List < String > paramTypes) {
+            public Builder paramTypes(java.util.List<String> paramTypes) {
                 this.paramTypes = paramTypes;
                 return this;
             }
@@ -553,7 +582,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -581,35 +610,41 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class RestItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("datum")
+        @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
 
-        @NameInMap("divisor")
+        @com.aliyun.core.annotation.NameInMap("divisor")
         private Integer divisor;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameList")
-        private java.util.List < String > nameList;
+        @com.aliyun.core.annotation.NameInMap("nameList")
+        private java.util.List<String> nameList;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("rate")
+        @com.aliyun.core.annotation.NameInMap("rate")
         private Integer rate;
 
-        @NameInMap("remainder")
+        @com.aliyun.core.annotation.NameInMap("remainder")
         private Integer remainder;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RestItems(Builder builder) {
@@ -664,7 +699,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -708,7 +743,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String datum; 
             private Integer divisor; 
             private String name; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String operator; 
             private Integer rate; 
             private Integer remainder; 
@@ -750,7 +785,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -802,32 +837,38 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Springcloud extends TeaModel {
-        @NameInMap("appId")
+        @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
 
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("paths")
-        private java.util.List < String > paths;
+        @com.aliyun.core.annotation.NameInMap("paths")
+        private java.util.List<String> paths;
 
-        @NameInMap("priority")
+        @com.aliyun.core.annotation.NameInMap("priority")
         private Integer priority;
 
-        @NameInMap("restItems")
-        private java.util.List < RestItems> restItems;
+        @com.aliyun.core.annotation.NameInMap("restItems")
+        private java.util.List<RestItems> restItems;
 
-        @NameInMap("tags")
-        private java.util.List < String > tags;
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<String> tags;
 
-        @NameInMap("triggerPolicy")
+        @com.aliyun.core.annotation.NameInMap("triggerPolicy")
         private String triggerPolicy;
 
         private Springcloud(Builder builder) {
@@ -881,7 +922,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
@@ -895,14 +936,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return restItems
          */
-        public java.util.List < RestItems> getRestItems() {
+        public java.util.List<RestItems> getRestItems() {
             return this.restItems;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -918,10 +959,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String condition; 
             private Boolean enable; 
             private String path; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> paths; 
             private Integer priority; 
-            private java.util.List < RestItems> restItems; 
-            private java.util.List < String > tags; 
+            private java.util.List<RestItems> restItems; 
+            private java.util.List<String> tags; 
             private String triggerPolicy; 
 
             /**
@@ -959,7 +1000,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -975,7 +1016,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * restItems.
              */
-            public Builder restItems(java.util.List < RestItems> restItems) {
+            public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
                 return this;
             }
@@ -983,7 +1024,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1003,12 +1044,18 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("dubbo")
-        private java.util.List < Dubbo> dubbo;
+        @com.aliyun.core.annotation.NameInMap("dubbo")
+        private java.util.List<Dubbo> dubbo;
 
-        @NameInMap("springcloud")
-        private java.util.List < Springcloud> springcloud;
+        @com.aliyun.core.annotation.NameInMap("springcloud")
+        private java.util.List<Springcloud> springcloud;
 
         private Rules(Builder builder) {
             this.dubbo = builder.dubbo;
@@ -1026,25 +1073,25 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return dubbo
          */
-        public java.util.List < Dubbo> getDubbo() {
+        public java.util.List<Dubbo> getDubbo() {
             return this.dubbo;
         }
 
         /**
          * @return springcloud
          */
-        public java.util.List < Springcloud> getSpringcloud() {
+        public java.util.List<Springcloud> getSpringcloud() {
             return this.springcloud;
         }
 
         public static final class Builder {
-            private java.util.List < Dubbo> dubbo; 
-            private java.util.List < Springcloud> springcloud; 
+            private java.util.List<Dubbo> dubbo; 
+            private java.util.List<Springcloud> springcloud; 
 
             /**
              * dubbo.
              */
-            public Builder dubbo(java.util.List < Dubbo> dubbo) {
+            public Builder dubbo(java.util.List<Dubbo> dubbo) {
                 this.dubbo = dubbo;
                 return this;
             }
@@ -1052,7 +1099,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             /**
              * springcloud.
              */
-            public Builder springcloud(java.util.List < Springcloud> springcloud) {
+            public Builder springcloud(java.util.List<Springcloud> springcloud) {
                 this.springcloud = springcloud;
                 return this;
             }
@@ -1064,29 +1111,35 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class RouteRules extends TeaModel {
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceNum")
+        @com.aliyun.core.annotation.NameInMap("InstanceNum")
         private Integer instanceNum;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private RouteRules(Builder builder) {
@@ -1175,11 +1228,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * Indicates whether the alert rule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>true</code></li>
+             * <li><code>false</code></li>
+             * </ul>
              * 
-             * *   `true`
-             * *   `false`
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1187,7 +1243,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>653</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1195,7 +1254,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -1203,7 +1265,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dubbo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1211,7 +1276,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rate.
+             * <p>The rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -1219,7 +1287,25 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the routing rule.
+             * <p>The details of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;dubbo&quot;: [{
+             *     &quot;serviceName&quot;: &quot;com.taobao.hsf.common.DemoService&quot;,
+             *     &quot;group&quot;: &quot;&quot;,
+             *     &quot;version&quot;: &quot;&quot;,
+             *     &quot;methodName&quot;: &quot;sayHello&quot;,
+             *     &quot;condition&quot;: &quot;AND&quot;,
+             *     &quot;argumentItems&quot;: [{
+             *         &quot;index&quot;: 0,
+             *         &quot;expr&quot;: &quot;&quot;,
+             *         &quot;operator&quot;: &quot;rawvalue&quot;,
+             *         &quot;value&quot;: &quot;jim&quot;,
+             *         &quot;cond&quot;: &quot;==&quot;
+             *     }]
+             *       }]
+             *   }</p>
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;
@@ -1227,7 +1313,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1235,7 +1324,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1249,20 +1341,26 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RouteRules")
-        private java.util.List < RouteRules> routeRules;
+        @com.aliyun.core.annotation.NameInMap("RouteRules")
+        private java.util.List<RouteRules> routeRules;
 
-        @NameInMap("RouteStatus")
+        @com.aliyun.core.annotation.NameInMap("RouteStatus")
         private Long routeStatus;
 
         private Result(Builder builder) {
@@ -1305,7 +1403,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return routeRules
          */
-        public java.util.List < RouteRules> getRouteRules() {
+        public java.util.List<RouteRules> getRouteRules() {
             return this.routeRules;
         }
 
@@ -1320,11 +1418,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String namespace; 
-            private java.util.List < RouteRules> routeRules; 
+            private java.util.List<RouteRules> routeRules; 
             private Long routeStatus; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daqijp6c31@xxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1332,7 +1433,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-lottery-core</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1340,7 +1444,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The MSE namespace to which the application belongs.
+             * <p>The MSE namespace to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1348,19 +1455,22 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The queried rules.
+             * <p>The queried rules.</p>
              */
-            public Builder routeRules(java.util.List < RouteRules> routeRules) {
+            public Builder routeRules(java.util.List<RouteRules> routeRules) {
                 this.routeRules = routeRules;
                 return this;
             }
 
             /**
-             * The route state. Valid values:
-             * <p>
+             * <p>The route state. Valid values:</p>
+             * <ul>
+             * <li>0: disabled</li>
+             * <li>1: enabled</li>
+             * </ul>
              * 
-             * *   0: disabled
-             * *   1: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeStatus(Long routeStatus) {
                 this.routeStatus = routeStatus;
@@ -1374,17 +1484,23 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsWithTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsWithTagRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {
@@ -1419,7 +1535,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -1433,11 +1549,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1445,7 +1564,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1453,15 +1575,18 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

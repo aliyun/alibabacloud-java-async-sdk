@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrgAndFactoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrgAndFactoryResponseBody</p>
  */
 public class GetOrgAndFactoryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private java.util.List<Data> data;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetOrgAndFactoryResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,16 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * code.
+         * <p>The code returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +102,18 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>data</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -110,7 +121,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +148,17 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOrgAndFactoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrgAndFactoryResponseBody</p>
+     */
     public static class FactoryList extends TeaModel {
-        @NameInMap("factoryId")
+        @com.aliyun.core.annotation.NameInMap("factoryId")
         private String factoryId;
 
-        @NameInMap("factoryName")
+        @com.aliyun.core.annotation.NameInMap("factoryName")
         private String factoryName;
 
         private FactoryList(Builder builder) {
@@ -170,7 +193,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             private String factoryName; 
 
             /**
-             * factoryId.
+             * <p>The site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pn_95</p>
              */
             public Builder factoryId(String factoryId) {
                 this.factoryId = factoryId;
@@ -178,7 +204,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * factoryName.
+             * <p>The site name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ledi Industrial Park 1</p>
              */
             public Builder factoryName(String factoryName) {
                 this.factoryName = factoryName;
@@ -192,17 +221,23 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOrgAndFactoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrgAndFactoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
 
-        @NameInMap("factoryList")
-        private java.util.List < FactoryList> factoryList;
+        @com.aliyun.core.annotation.NameInMap("factoryList")
+        private java.util.List<FactoryList> factoryList;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("organizationName")
+        @com.aliyun.core.annotation.NameInMap("organizationName")
         private String organizationName;
 
         private Data(Builder builder) {
@@ -230,7 +265,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         /**
          * @return factoryList
          */
-        public java.util.List < FactoryList> getFactoryList() {
+        public java.util.List<FactoryList> getFactoryList() {
             return this.factoryList;
         }
 
@@ -250,12 +285,15 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliyunPk; 
-            private java.util.List < FactoryList> factoryList; 
+            private java.util.List<FactoryList> factoryList; 
             private String organizationId; 
             private String organizationName; 
 
             /**
-             * aliyunPk.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1319617584664960</p>
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -263,15 +301,18 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * factoryList.
+             * <p>The sites.</p>
              */
-            public Builder factoryList(java.util.List < FactoryList> factoryList) {
+            public Builder factoryList(java.util.List<FactoryList> factoryList) {
                 this.factoryList = factoryList;
                 return this;
             }
 
             /**
-             * organizationId.
+             * <p>The enterprise ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6265f42XXXX2fec150</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -279,7 +320,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * organizationName.
+             * <p>The enterprise name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ledi Industrial Park</p>
              */
             public Builder organizationName(String organizationName) {
                 this.organizationName = organizationName;

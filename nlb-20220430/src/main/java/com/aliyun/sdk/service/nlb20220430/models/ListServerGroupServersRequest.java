@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServerGroupServersRequest} extends {@link RequestModel}
  *
  * <p>ListServerGroupServersRequest</p>
  */
 public class ListServerGroupServersRequest extends Request {
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
     private String serverGroupId;
 
-    @Body
-    @NameInMap("ServerIds")
-    private java.util.List < String > serverIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerIds")
+    private java.util.List<String> serverIds;
 
-    @Body
-    @NameInMap("ServerIps")
-    private java.util.List < String > serverIps;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerIps")
+    private java.util.List<String> serverIps;
 
     private ListServerGroupServersRequest(Builder builder) {
         super(builder);
@@ -90,14 +95,14 @@ public class ListServerGroupServersRequest extends Request {
     /**
      * @return serverIds
      */
-    public java.util.List < String > getServerIds() {
+    public java.util.List<String> getServerIds() {
         return this.serverIds;
     }
 
     /**
      * @return serverIps
      */
-    public java.util.List < String > getServerIps() {
+    public java.util.List<String> getServerIps() {
         return this.serverIps;
     }
 
@@ -106,8 +111,8 @@ public class ListServerGroupServersRequest extends Request {
         private String nextToken; 
         private String regionId; 
         private String serverGroupId; 
-        private java.util.List < String > serverIds; 
-        private java.util.List < String > serverIps; 
+        private java.util.List<String> serverIds; 
+        private java.util.List<String> serverIps; 
 
         private Builder() {
             super();
@@ -124,7 +129,10 @@ public class ListServerGroupServersRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -133,11 +141,14 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -146,10 +157,11 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -158,7 +170,10 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * The ID of the server group.
+         * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putBodyParameter("ServerGroupId", serverGroupId);
@@ -167,18 +182,18 @@ public class ListServerGroupServersRequest extends Request {
         }
 
         /**
-         * The IDs of the servers.
+         * <p>The server IDs. You can specify at most 40 servers in each call.</p>
          */
-        public Builder serverIds(java.util.List < String > serverIds) {
+        public Builder serverIds(java.util.List<String> serverIds) {
             this.putBodyParameter("ServerIds", serverIds);
             this.serverIds = serverIds;
             return this;
         }
 
         /**
-         * The IP addresses of the servers.
+         * <p>A list of server IP addresses. You can specify at most 40 servers in each call.</p>
          */
-        public Builder serverIps(java.util.List < String > serverIps) {
+        public Builder serverIps(java.util.List<String> serverIps) {
             this.putBodyParameter("ServerIps", serverIps);
             this.serverIps = serverIps;
             return this;

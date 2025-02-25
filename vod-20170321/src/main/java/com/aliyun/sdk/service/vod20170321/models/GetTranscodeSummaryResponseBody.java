@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTranscodeSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetTranscodeSummaryResponseBody</p>
  */
 public class GetTranscodeSummaryResponseBody extends TeaModel {
-    @NameInMap("NonExistVideoIds")
-    private java.util.List < String > nonExistVideoIds;
+    @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
+    private java.util.List<String> nonExistVideoIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeSummaryList")
-    private java.util.List < TranscodeSummaryList> transcodeSummaryList;
+    @com.aliyun.core.annotation.NameInMap("TranscodeSummaryList")
+    private java.util.List<TranscodeSummaryList> transcodeSummaryList;
 
     private GetTranscodeSummaryResponseBody(Builder builder) {
         this.nonExistVideoIds = builder.nonExistVideoIds;
@@ -38,7 +43,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
     /**
      * @return nonExistVideoIds
      */
-    public java.util.List < String > getNonExistVideoIds() {
+    public java.util.List<String> getNonExistVideoIds() {
         return this.nonExistVideoIds;
     }
 
@@ -52,25 +57,28 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
     /**
      * @return transcodeSummaryList
      */
-    public java.util.List < TranscodeSummaryList> getTranscodeSummaryList() {
+    public java.util.List<TranscodeSummaryList> getTranscodeSummaryList() {
         return this.transcodeSummaryList;
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExistVideoIds; 
+        private java.util.List<String> nonExistVideoIds; 
         private String requestId; 
-        private java.util.List < TranscodeSummaryList> transcodeSummaryList; 
+        private java.util.List<TranscodeSummaryList> transcodeSummaryList; 
 
         /**
-         * The IDs of the audio or video files that do not exist.
+         * <p>The IDs of the audio or video files that do not exist.</p>
          */
-        public Builder nonExistVideoIds(java.util.List < String > nonExistVideoIds) {
+        public Builder nonExistVideoIds(java.util.List<String> nonExistVideoIds) {
             this.nonExistVideoIds = nonExistVideoIds;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The transcoding summary of the file.
+         * <p>The transcoding summary of the file.</p>
          */
-        public Builder transcodeSummaryList(java.util.List < TranscodeSummaryList> transcodeSummaryList) {
+        public Builder transcodeSummaryList(java.util.List<TranscodeSummaryList> transcodeSummaryList) {
             this.transcodeSummaryList = transcodeSummaryList;
             return this;
         }
@@ -91,50 +99,56 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTranscodeSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranscodeSummaryResponseBody</p>
+     */
     public static class TranscodeJobInfoSummaryList extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Filesize")
+        @com.aliyun.core.annotation.NameInMap("Filesize")
         private Long filesize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("TranscodeJobStatus")
+        @com.aliyun.core.annotation.NameInMap("TranscodeJobStatus")
         private String transcodeJobStatus;
 
-        @NameInMap("TranscodeProgress")
+        @com.aliyun.core.annotation.NameInMap("TranscodeProgress")
         private Long transcodeProgress;
 
-        @NameInMap("TranscodeTemplateId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateId")
         private String transcodeTemplateId;
 
-        @NameInMap("WatermarkIdList")
-        private java.util.List < String > watermarkIdList;
+        @com.aliyun.core.annotation.NameInMap("WatermarkIdList")
+        private java.util.List<String> watermarkIdList;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private TranscodeJobInfoSummaryList(Builder builder) {
@@ -257,7 +271,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         /**
          * @return watermarkIdList
          */
-        public java.util.List < String > getWatermarkIdList() {
+        public java.util.List<String> getWatermarkIdList() {
             return this.watermarkIdList;
         }
 
@@ -282,11 +296,14 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             private String transcodeJobStatus; 
             private Long transcodeProgress; 
             private String transcodeTemplateId; 
-            private java.util.List < String > watermarkIdList; 
+            private java.util.List<String> watermarkIdList; 
             private String width; 
 
             /**
-             * The average bitrate of the output video. Unit: Kbit/s.
+             * <p>The average bitrate of the output video. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>749</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -294,7 +311,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the transcoding job was complete. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-27T03:40:51Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -302,7 +322,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the transcoding job was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-27T03:34:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -310,7 +333,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the output video. Unit: seconds.
+             * <p>The duration of the output video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -318,7 +344,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned when the transcoding job failed.
+             * <p>The error code returned when the transcoding job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -326,7 +355,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the transcoding job failed.
+             * <p>The error message returned when the transcoding job failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ErrorMessage</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -334,7 +366,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the output video. Unit: bytes.
+             * <p>The size of the output video. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1144259</p>
              */
             public Builder filesize(Long filesize) {
                 this.filesize = filesize;
@@ -342,7 +377,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The container format of the output video.
+             * <p>The container format of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -350,7 +388,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The frame rate of the output video. Unit: frames per second.
+             * <p>The frame rate of the output video. Unit: frames per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -358,7 +399,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the output video. Unit: pixels.
+             * <p>The height of the output video. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -366,11 +410,15 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the transcoding job. Valid values:
-             * <p>
-             * *   **Transcoding**
-             * *   **TranscodeSuccess**
-             * *   **TranscodeFail**
+             * <p>The status of the transcoding job. Valid values:</p>
+             * <ul>
+             * <li><strong>Transcoding</strong>: Transcoding is in process.</li>
+             * <li><strong>TranscodeSuccess</strong>: The job was successful.</li>
+             * <li><strong>TranscodeFail</strong>: The job failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Transcoding</p>
              */
             public Builder transcodeJobStatus(String transcodeJobStatus) {
                 this.transcodeJobStatus = transcodeJobStatus;
@@ -378,7 +426,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding progress. Valid values: `[0,100]`.
+             * <p>The transcoding progress. Valid values: <code>[0,100]</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder transcodeProgress(Long transcodeProgress) {
                 this.transcodeProgress = transcodeProgress;
@@ -386,7 +437,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template.
+             * <p>The ID of the transcoding template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57496724ae2*****0968d6e08acc8f6</p>
              */
             public Builder transcodeTemplateId(String transcodeTemplateId) {
                 this.transcodeTemplateId = transcodeTemplateId;
@@ -394,15 +448,18 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the watermarks that are applied to the output video.
+             * <p>The IDs of the watermarks that are applied to the output video.</p>
              */
-            public Builder watermarkIdList(java.util.List < String > watermarkIdList) {
+            public Builder watermarkIdList(java.util.List<String> watermarkIdList) {
                 this.watermarkIdList = watermarkIdList;
                 return this;
             }
 
             /**
-             * The width of the output video. Unit: pixels.
+             * <p>The width of the output video. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>544</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -416,23 +473,29 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTranscodeSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTranscodeSummaryResponseBody</p>
+     */
     public static class TranscodeSummaryList extends TeaModel {
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("TranscodeJobInfoSummaryList")
-        private java.util.List < TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
+        @com.aliyun.core.annotation.NameInMap("TranscodeJobInfoSummaryList")
+        private java.util.List<TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
 
-        @NameInMap("TranscodeStatus")
+        @com.aliyun.core.annotation.NameInMap("TranscodeStatus")
         private String transcodeStatus;
 
-        @NameInMap("TranscodeTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
         private String transcodeTemplateGroupId;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private TranscodeSummaryList(Builder builder) {
@@ -469,7 +532,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         /**
          * @return transcodeJobInfoSummaryList
          */
-        public java.util.List < TranscodeJobInfoSummaryList> getTranscodeJobInfoSummaryList() {
+        public java.util.List<TranscodeJobInfoSummaryList> getTranscodeJobInfoSummaryList() {
             return this.transcodeJobInfoSummaryList;
         }
 
@@ -497,13 +560,16 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private String completeTime; 
             private String creationTime; 
-            private java.util.List < TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList; 
+            private java.util.List<TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList; 
             private String transcodeStatus; 
             private String transcodeTemplateGroupId; 
             private String videoId; 
 
             /**
-             * The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the transcoding task was complete. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-23T12:40:12Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -511,7 +577,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the transcoding task was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-23T12:35:12Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -519,21 +588,25 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The summaries of transcoding jobs.
+             * <p>The summaries of transcoding jobs.</p>
              */
-            public Builder transcodeJobInfoSummaryList(java.util.List < TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList) {
+            public Builder transcodeJobInfoSummaryList(java.util.List<TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList) {
                 this.transcodeJobInfoSummaryList = transcodeJobInfoSummaryList;
                 return this;
             }
 
             /**
-             * The status of the transcoding task. Valid values:
-             * <p>
-             * *   **Processing**: In progress.
-             * *   **Partial**: Some transcoding jobs were complete.
-             * *   **CompleteAllSucc**: All transcoding jobs were successful.
-             * *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
-             * *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
+             * <p>The status of the transcoding task. Valid values:</p>
+             * <ul>
+             * <li><strong>Processing</strong>: Transcoding is in process.</li>
+             * <li><strong>Partial</strong>: Some transcoding jobs were complete.</li>
+             * <li><strong>CompleteAllSucc</strong>: All transcoding jobs were successful.</li>
+             * <li><strong>CompleteAllFail</strong>: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.</li>
+             * <li><strong>CompletePartialSucc</strong>: All transcoding jobs were complete but only some were successful.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Processing</p>
              */
             public Builder transcodeStatus(String transcodeStatus) {
                 this.transcodeStatus = transcodeStatus;
@@ -541,7 +614,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template group.
+             * <p>The ID of the transcoding template group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44f9e406bbb*****736a9abe876ecc0</p>
              */
             public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
                 this.transcodeTemplateGroupId = transcodeTemplateGroupId;
@@ -549,7 +625,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the audio or video file.
+             * <p>The ID of the audio or video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e1db68cc586644b83e562bcd94****</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryClusterSpecificationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryClusterSpecificationResponseBody</p>
  */
 public class QueryClusterSpecificationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryClusterSpecificationResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,7 +107,7 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private Integer httpStatusCode; 
         private String message; 
@@ -110,7 +115,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,15 +126,18 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +145,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +156,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +167,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +178,14 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,14 +198,20 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryClusterSpecificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryClusterSpecificationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClusterSpecificationName")
+        @com.aliyun.core.annotation.NameInMap("ClusterSpecificationName")
         private String clusterSpecificationName;
 
-        @NameInMap("CpuCapacity")
+        @com.aliyun.core.annotation.NameInMap("CpuCapacity")
         private String cpuCapacity;
 
-        @NameInMap("MemoryCapacity")
+        @com.aliyun.core.annotation.NameInMap("MemoryCapacity")
         private String memoryCapacity;
 
         private Data(Builder builder) {
@@ -226,7 +255,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             private String memoryCapacity; 
 
             /**
-             * The engine specifications that can be used.
+             * <p>The engine specifications that can be used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE_SC_1_2_200_c</p>
              */
             public Builder clusterSpecificationName(String clusterSpecificationName) {
                 this.clusterSpecificationName = clusterSpecificationName;
@@ -234,7 +266,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs in the specifications.
+             * <p>The number of vCPUs in the specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuCapacity(String cpuCapacity) {
                 this.cpuCapacity = cpuCapacity;
@@ -242,7 +277,10 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size in the specifications. Unit: GB.
+             * <p>The memory size in the specifications. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder memoryCapacity(String memoryCapacity) {
                 this.memoryCapacity = memoryCapacity;

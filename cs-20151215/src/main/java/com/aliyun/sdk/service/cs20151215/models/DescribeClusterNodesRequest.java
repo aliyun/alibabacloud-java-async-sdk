@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNodesRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterNodesRequest</p>
  */
 public class DescribeClusterNodesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("instanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
     private String nodepoolId;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
     private DescribeClusterNodesRequest(Builder builder) {
@@ -125,7 +130,11 @@ public class DescribeClusterNodesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -134,7 +143,10 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the nodes that you want to query. Separate multiple node IDs with commas (,).
+         * <p>The IDs of the nodes that you want to query. Separate multiple node IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;i-bp11xjhwkj8k966u****,i-bp1dmhc2bu5igkyq****&quot;</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("instanceIds", instanceIds);
@@ -143,7 +155,10 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putQueryParameter("nodepool_id", nodepoolId);
@@ -152,10 +167,11 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -164,10 +180,11 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -176,16 +193,18 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * The node state that you want to use to filter nodes. Valid values:
-         * <p>
+         * <p>The node state that you want to use to filter nodes. Valid values:</p>
+         * <ul>
+         * <li><code>all</code>: query nodes in the following four states.</li>
+         * <li><code>running</code>: query nodes in the running state.</li>
+         * <li><code>removing</code>: query nodes that are being removed.</li>
+         * <li><code>initial</code>: query nodes that are being initialized.</li>
+         * <li><code>failed</code>: query nodes that fail to be created.</li>
+         * </ul>
+         * <p>Default value: <code>all</code>.</p>
          * 
-         * *   `all`: query nodes in the following four states.
-         * *   `running`: query nodes in the running state.
-         * *   `removing`: query nodes that are being removed.
-         * *   `initial`: query nodes that are being initialized.
-         * *   `failed`: query nodes that fail to be created.
-         * 
-         * Default value: `all`.
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("state", state);

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSasContainerWebDefenseRuleApplicationRequest} extends {@link RequestModel}
  *
  * <p>GetSasContainerWebDefenseRuleApplicationRequest</p>
  */
 public class GetSasContainerWebDefenseRuleApplicationRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
     private GetSasContainerWebDefenseRuleApplicationRequest(Builder builder) {
@@ -54,10 +59,13 @@ public class GetSasContainerWebDefenseRuleApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <blockquote>
+         * <p> You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.</p>
+         * </blockquote>
          * 
-         * >  You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.
+         * <strong>example:</strong>
+         * <p>400599</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

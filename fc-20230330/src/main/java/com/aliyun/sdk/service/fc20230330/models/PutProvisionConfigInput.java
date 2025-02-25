@@ -1,32 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutProvisionConfigInput} extends {@link TeaModel}
  *
  * <p>PutProvisionConfigInput</p>
  */
 public class PutProvisionConfigInput extends TeaModel {
-    @NameInMap("alwaysAllocateCPU")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateCPU")
     private Boolean alwaysAllocateCPU;
 
-    @NameInMap("scheduledActions")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateGPU")
+    private Boolean alwaysAllocateGPU;
+
+    @com.aliyun.core.annotation.NameInMap("defaultTarget")
+    private Long defaultTarget;
+
+    @com.aliyun.core.annotation.NameInMap("scheduledActions")
     private java.util.List < ScheduledAction > scheduledActions;
 
-    @NameInMap("target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("target")
+    @Deprecated
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long target;
 
-    @NameInMap("targetTrackingPolicies")
+    @com.aliyun.core.annotation.NameInMap("targetTrackingPolicies")
     private java.util.List < TargetTrackingPolicy > targetTrackingPolicies;
 
     private PutProvisionConfigInput(Builder builder) {
         this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
+        this.alwaysAllocateGPU = builder.alwaysAllocateGPU;
+        this.defaultTarget = builder.defaultTarget;
         this.scheduledActions = builder.scheduledActions;
         this.target = builder.target;
         this.targetTrackingPolicies = builder.targetTrackingPolicies;
@@ -45,6 +54,20 @@ public class PutProvisionConfigInput extends TeaModel {
      */
     public Boolean getAlwaysAllocateCPU() {
         return this.alwaysAllocateCPU;
+    }
+
+    /**
+     * @return alwaysAllocateGPU
+     */
+    public Boolean getAlwaysAllocateGPU() {
+        return this.alwaysAllocateGPU;
+    }
+
+    /**
+     * @return defaultTarget
+     */
+    public Long getDefaultTarget() {
+        return this.defaultTarget;
     }
 
     /**
@@ -70,6 +93,8 @@ public class PutProvisionConfigInput extends TeaModel {
 
     public static final class Builder {
         private Boolean alwaysAllocateCPU; 
+        private Boolean alwaysAllocateGPU; 
+        private Long defaultTarget; 
         private java.util.List < ScheduledAction > scheduledActions; 
         private Long target; 
         private java.util.List < TargetTrackingPolicy > targetTrackingPolicies; 
@@ -83,6 +108,22 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
+         * alwaysAllocateGPU.
+         */
+        public Builder alwaysAllocateGPU(Boolean alwaysAllocateGPU) {
+            this.alwaysAllocateGPU = alwaysAllocateGPU;
+            return this;
+        }
+
+        /**
+         * defaultTarget.
+         */
+        public Builder defaultTarget(Long defaultTarget) {
+            this.defaultTarget = defaultTarget;
+            return this;
+        }
+
+        /**
          * scheduledActions.
          */
         public Builder scheduledActions(java.util.List < ScheduledAction > scheduledActions) {
@@ -91,7 +132,10 @@ public class PutProvisionConfigInput extends TeaModel {
         }
 
         /**
-         * target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder target(Long target) {
             this.target = target;

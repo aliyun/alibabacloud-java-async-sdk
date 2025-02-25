@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartReplicationJobRequest} extends {@link RequestModel}
  *
  * <p>StartReplicationJobRequest</p>
  */
 public class StartReplicationJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private StartReplicationJobRequest(Builder builder) {
@@ -75,15 +75,19 @@ public class StartReplicationJobRequest extends Request {
             super();
         } 
 
-        private Builder(StartReplicationJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
+        private Builder(StartReplicationJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**
-         * JobId.
+         * <p>The migration job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bw526m1vi6x21q****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

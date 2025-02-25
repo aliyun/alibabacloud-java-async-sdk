@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLifecycleHookRequest} extends {@link RequestModel}
  *
  * <p>DeleteLifecycleHookRequest</p>
  */
 public class DeleteLifecycleHookRequest extends Request {
-    @Query
-    @NameInMap("LifecycleHookId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookId")
     private String lifecycleHookId;
 
-    @Query
-    @NameInMap("LifecycleHookName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookName")
     private String lifecycleHookName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
     private DeleteLifecycleHookRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class DeleteLifecycleHookRequest extends Request {
         } 
 
         /**
-         * LifecycleHookId.
+         * <p>The ID of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ash-bp14g3ee6bt3sc98****</p>
          */
         public Builder lifecycleHookId(String lifecycleHookId) {
             this.putQueryParameter("LifecycleHookId", lifecycleHookId);
@@ -147,7 +155,10 @@ public class DeleteLifecycleHookRequest extends Request {
         }
 
         /**
-         * LifecycleHookName.
+         * <p>The name of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclehook****</p>
          */
         public Builder lifecycleHookName(String lifecycleHookName) {
             this.putQueryParameter("LifecycleHookName", lifecycleHookName);
@@ -174,7 +185,10 @@ public class DeleteLifecycleHookRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +206,10 @@ public class DeleteLifecycleHookRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

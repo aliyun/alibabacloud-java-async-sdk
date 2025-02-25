@@ -1,54 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseNodePrivateNetworkAddressRequest} extends {@link RequestModel}
  *
  * <p>ReleaseNodePrivateNetworkAddressRequest</p>
  */
 public class ReleaseNodePrivateNetworkAddressRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionType")
+    private String connectionType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ReleaseNodePrivateNetworkAddressRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.connectionType = builder.connectionType;
         this.DBInstanceId = builder.DBInstanceId;
         this.networkType = builder.networkType;
         this.nodeId = builder.nodeId;
@@ -76,6 +86,13 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return connectionType
+     */
+    public String getConnectionType() {
+        return this.connectionType;
     }
 
     /**
@@ -129,6 +146,7 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReleaseNodePrivateNetworkAddressRequest, Builder> {
         private String regionId; 
+        private String connectionType; 
         private String DBInstanceId; 
         private String networkType; 
         private String nodeId; 
@@ -144,6 +162,7 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         private Builder(ReleaseNodePrivateNetworkAddressRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.connectionType = request.connectionType;
             this.DBInstanceId = request.DBInstanceId;
             this.networkType = request.networkType;
             this.nodeId = request.nodeId;
@@ -163,7 +182,30 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the sharded cluster instance.
+         * <p>The public endpoint type. Valid values:</p>
+         * <ul>
+         * <li><strong>SRV</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only when you want to release an SRV endpoint.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SRV</p>
+         */
+        public Builder connectionType(String connectionType) {
+            this.putQueryParameter("ConnectionType", connectionType);
+            this.connectionType = connectionType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the sharded cluster instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1a7009eb24****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,13 +214,17 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The network type of the internal endpoint. Valid values:
-         * <p>
+         * <p>The network type of the internal endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>Classic</strong>: classic network.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62135.html">DescribeShardingNetworkAddress</a> operation to query the network type of the internal endpoint.</p>
+         * </blockquote>
          * 
-         * *   **VPC**
-         * *   **Classic**
-         * 
-         * >  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -187,10 +233,14 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of the shard or Configserver node.
-         * <p>
+         * <p>The ID of the shard or Configserver node.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.
+         * <strong>example:</strong>
+         * <p>d-bp128a003436****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

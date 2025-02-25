@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAlertRequest} extends {@link RequestModel}
  *
  * <p>StartAlertRequest</p>
  */
 public class StartAlertRequest extends Request {
-    @Query
-    @NameInMap("AlertId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alertId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private StartAlertRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class StartAlertRequest extends Request {
         } 
 
         /**
-         * AlertId.
+         * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610***</p>
          */
         public Builder alertId(String alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -79,7 +88,11 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region. Set the value to <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

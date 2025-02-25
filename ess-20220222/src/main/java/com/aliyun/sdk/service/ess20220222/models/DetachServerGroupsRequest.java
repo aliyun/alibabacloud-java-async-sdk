@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>DetachServerGroupsRequest</p>
  */
 public class DetachServerGroupsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ForceDetach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDetach")
     private Boolean forceDetach;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("ServerGroups")
-    @Validation(required = true)
-    private java.util.List < ServerGroups> serverGroups;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ServerGroups> serverGroups;
 
     private DetachServerGroupsRequest(Builder builder) {
         super(builder);
@@ -112,7 +117,7 @@ public class DetachServerGroupsRequest extends Request {
     /**
      * @return serverGroups
      */
-    public java.util.List < ServerGroups> getServerGroups() {
+    public java.util.List<ServerGroups> getServerGroups() {
         return this.serverGroups;
     }
 
@@ -123,7 +128,7 @@ public class DetachServerGroupsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
-        private java.util.List < ServerGroups> serverGroups; 
+        private java.util.List<ServerGroups> serverGroups; 
 
         private Builder() {
             super();
@@ -141,10 +146,11 @@ public class DetachServerGroupsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -153,13 +159,15 @@ public class DetachServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the Elastic Compute Service (ECS) instances in the scaling group from the detached server group.
-         * <p>
+         * <p>Specifies whether to remove the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group from the server group marked for detachment.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDetach(Boolean forceDetach) {
             this.putQueryParameter("ForceDetach", forceDetach);
@@ -177,7 +185,11 @@ public class DetachServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +207,11 @@ public class DetachServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -204,9 +220,10 @@ public class DetachServerGroupsRequest extends Request {
         }
 
         /**
-         * Details of the server groups.
+         * <p>The information about the server groups.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
+        public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {
             this.putQueryParameter("ServerGroups", serverGroups);
             this.serverGroups = serverGroups;
             return this;
@@ -219,17 +236,23 @@ public class DetachServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DetachServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DetachServerGroupsRequest</p>
+     */
     public static class ServerGroups extends TeaModel {
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
-        @NameInMap("ServerGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverGroupId;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private ServerGroups(Builder builder) {
@@ -273,7 +296,11 @@ public class DetachServerGroupsRequest extends Request {
             private String type; 
 
             /**
-             * The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group.
+             * <p>The port used by ECS instances or elastic container instances as backend servers of the server group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -281,7 +308,11 @@ public class DetachServerGroupsRequest extends Request {
             }
 
             /**
-             * The ID of the server group.
+             * <p>The ID of the server group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-1gv2uidn2msy****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -289,11 +320,15 @@ public class DetachServerGroupsRequest extends Request {
             }
 
             /**
-             * The type of the server group. Valid values:
-             * <p>
+             * <p>The type of the server group. Valid values:</p>
+             * <ul>
+             * <li>ALB</li>
+             * <li>NLB</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   ALB
-             * *   NLB
+             * <strong>example:</strong>
+             * <p>ALB</p>
              */
             public Builder type(String type) {
                 this.type = type;

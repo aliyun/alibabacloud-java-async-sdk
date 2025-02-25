@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GotoPresetRequest} extends {@link RequestModel}
  *
  * <p>GotoPresetRequest</p>
  */
 public class GotoPresetRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PresetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PresetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String presetId;
 
     private GotoPresetRequest(Builder builder) {
@@ -76,15 +81,18 @@ public class GotoPresetRequest extends Request {
             super();
         } 
 
-        private Builder(GotoPresetRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.presetId = response.presetId;
+        private Builder(GotoPresetRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.presetId = request.presetId;
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -102,7 +110,10 @@ public class GotoPresetRequest extends Request {
         }
 
         /**
-         * PresetId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder presetId(String presetId) {
             this.putQueryParameter("PresetId", presetId);

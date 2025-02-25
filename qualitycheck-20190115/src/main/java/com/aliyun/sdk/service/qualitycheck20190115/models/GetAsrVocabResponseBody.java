@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsrVocabResponseBody</p>
  */
 public class GetAsrVocabResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAsrVocabResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class GetAsrVocabResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsrVocabResponseBody</p>
+     */
     public static class Word extends TeaModel {
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
-        @NameInMap("Word")
+        @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
         private Word(Builder builder) {
@@ -192,9 +203,15 @@ public class GetAsrVocabResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsrVocabResponseBody</p>
+     */
     public static class Words extends TeaModel {
-        @NameInMap("Word")
-        private java.util.List < Word> word;
+        @com.aliyun.core.annotation.NameInMap("Word")
+        private java.util.List<Word> word;
 
         private Words(Builder builder) {
             this.word = builder.word;
@@ -211,17 +228,17 @@ public class GetAsrVocabResponseBody extends TeaModel {
         /**
          * @return word
          */
-        public java.util.List < Word> getWord() {
+        public java.util.List<Word> getWord() {
             return this.word;
         }
 
         public static final class Builder {
-            private java.util.List < Word> word; 
+            private java.util.List<Word> word; 
 
             /**
              * Word.
              */
-            public Builder word(java.util.List < Word> word) {
+            public Builder word(java.util.List<Word> word) {
                 this.word = word;
                 return this;
             }
@@ -233,14 +250,28 @@ public class GetAsrVocabResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAsrVocabResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsrVocabResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ModelCustomizationId")
+        private String modelCustomizationId;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private Words words;
 
         private Data(Builder builder) {
+            this.asrVersion = builder.asrVersion;
+            this.modelCustomizationId = builder.modelCustomizationId;
             this.name = builder.name;
             this.words = builder.words;
         }
@@ -251,6 +282,20 @@ public class GetAsrVocabResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
+        }
+
+        /**
+         * @return modelCustomizationId
+         */
+        public String getModelCustomizationId() {
+            return this.modelCustomizationId;
         }
 
         /**
@@ -268,8 +313,26 @@ public class GetAsrVocabResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer asrVersion; 
+            private String modelCustomizationId; 
             private String name; 
             private Words words; 
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
+                return this;
+            }
+
+            /**
+             * ModelCustomizationId.
+             */
+            public Builder modelCustomizationId(String modelCustomizationId) {
+                this.modelCustomizationId = modelCustomizationId;
+                return this;
+            }
 
             /**
              * Name.

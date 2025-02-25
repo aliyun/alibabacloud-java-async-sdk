@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSparkAppLogRootPathRequest} extends {@link RequestModel}
  *
  * <p>SetSparkAppLogRootPathRequest</p>
  */
 public class SetSparkAppLogRootPathRequest extends Request {
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("OssLogPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssLogPath")
     private String ossLogPath;
 
-    @Body
-    @NameInMap("UseDefaultOss")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseDefaultOss")
     private Boolean useDefaultOss;
 
     private SetSparkAppLogRootPathRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class SetSparkAppLogRootPathRequest extends Request {
         } 
 
         /**
-         * The database ID.
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-dbclusterid</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -92,7 +101,10 @@ public class SetSparkAppLogRootPathRequest extends Request {
         }
 
         /**
-         * The Object Storage Service (OSS) log path.
+         * <p>The path of Object Storage Service (OSS) logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://path/to/log</p>
          */
         public Builder ossLogPath(String ossLogPath) {
             this.putBodyParameter("OssLogPath", ossLogPath);
@@ -101,7 +113,10 @@ public class SetSparkAppLogRootPathRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the default OSS log path.
+         * <p>Specifies whether to use the default OSS log path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useDefaultOss(Boolean useDefaultOss) {
             this.putBodyParameter("UseDefaultOss", useDefaultOss);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSAMLProviderResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateSAMLProviderResponseBody</p>
  */
 public class UpdateSAMLProviderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLProvider")
+    @com.aliyun.core.annotation.NameInMap("SAMLProvider")
     private SAMLProvider SAMLProvider;
 
     private UpdateSAMLProviderResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         private SAMLProvider SAMLProvider; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5EDDFD2-3654-4F9F-9780-4AE7D81823EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the IdP.
+         * <p>The information about the IdP.</p>
          */
         public Builder SAMLProvider(SAMLProvider SAMLProvider) {
             this.SAMLProvider = SAMLProvider;
@@ -71,20 +79,26 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSAMLProviderResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateSAMLProviderResponseBody</p>
+     */
     public static class SAMLProvider extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("SAMLProviderName")
+        @com.aliyun.core.annotation.NameInMap("SAMLProviderName")
         private String SAMLProviderName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private SAMLProvider(Builder builder) {
@@ -146,7 +160,10 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the IdP.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -154,7 +171,10 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the IdP was created. The time is displayed in UTC.
+             * <p>The point in time at which the IdP was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T02:37:05Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +182,10 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the IdP.
+             * <p>The description of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a new provider.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +193,10 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IdP.
+             * <p>The name of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-provider</p>
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -178,7 +204,10 @@ public class UpdateSAMLProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the information about the IdP was modified. The time is displayed in UTC.
+             * <p>The point in time at which the information about the IdP was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-22T02:51:20Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

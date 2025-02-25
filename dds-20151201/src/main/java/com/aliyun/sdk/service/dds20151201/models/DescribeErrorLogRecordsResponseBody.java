@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeErrorLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeErrorLogRecordsResponseBody</p>
  */
 public class DescribeErrorLogRecordsResponseBody extends TeaModel {
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeErrorLogRecordsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The database engine.
+         * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -106,7 +114,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the log entries returned.
+         * <p>Details about the log entries returned.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +122,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +133,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +144,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68BCBEC2-1E66-471F-A1A8-E3C60C0A80B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -151,20 +171,26 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeErrorLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeErrorLogRecordsResponseBody</p>
+     */
     public static class LogRecords extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ConnInfo")
+        @com.aliyun.core.annotation.NameInMap("ConnInfo")
         private String connInfo;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
         private LogRecords(Builder builder) {
@@ -226,18 +252,21 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             private Integer id; 
 
             /**
-             * The category of the log entry. Valid values:
-             * <p>
+             * <p>The category of the log entry. Valid values:</p>
+             * <ul>
+             * <li>NETWORK: network connection log</li>
+             * <li>ACCESS: access control log</li>
+             * <li>-: general log</li>
+             * <li>COMMAND: slow query log</li>
+             * <li>SHARDING: sharded cluster log</li>
+             * <li>STORAGE: storage engine log</li>
+             * <li>CONNPOOL: connection pool log</li>
+             * <li>ASIO: asynchronous I/O operation log</li>
+             * <li>WRITE: slow update log</li>
+             * </ul>
              * 
-             * *   NETWORK: network connection log
-             * *   ACCESS: access control log
-             * *   \-: general log
-             * *   COMMAND: slow query log
-             * *   SHARDING: sharded cluster log
-             * *   STORAGE: storage engine log
-             * *   CONNPOOL: connection pool log
-             * *   ASIO: asynchronous I/O operation log
-             * *   WRITE: slow update log
+             * <strong>example:</strong>
+             * <p>NETWORK</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -245,7 +274,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection information of the log entry.
+             * <p>The connection information of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conn18xxxxxx</p>
              */
             public Builder connInfo(String connInfo) {
                 this.connInfo = connInfo;
@@ -253,7 +285,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the log entry.
+             * <p>The content of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -261,7 +296,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss***Z format. The time is displayed in UTC.
+             * <p>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-26T12:09:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,7 +307,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the log entry.
+             * <p>The ID of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111111111</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -283,9 +324,15 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeErrorLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeErrorLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("LogRecords")
-        private java.util.List < LogRecords> logRecords;
+        @com.aliyun.core.annotation.NameInMap("LogRecords")
+        private java.util.List<LogRecords> logRecords;
 
         private Items(Builder builder) {
             this.logRecords = builder.logRecords;
@@ -302,17 +349,17 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         /**
          * @return logRecords
          */
-        public java.util.List < LogRecords> getLogRecords() {
+        public java.util.List<LogRecords> getLogRecords() {
             return this.logRecords;
         }
 
         public static final class Builder {
-            private java.util.List < LogRecords> logRecords; 
+            private java.util.List<LogRecords> logRecords; 
 
             /**
              * LogRecords.
              */
-            public Builder logRecords(java.util.List < LogRecords> logRecords) {
+            public Builder logRecords(java.util.List<LogRecords> logRecords) {
                 this.logRecords = logRecords;
                 return this;
             }

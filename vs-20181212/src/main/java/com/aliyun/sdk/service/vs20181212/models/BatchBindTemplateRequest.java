@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchBindTemplateRequest} extends {@link RequestModel}
  *
  * <p>BatchBindTemplateRequest</p>
  */
 public class BatchBindTemplateRequest extends Request {
-    @Query
-    @NameInMap("ApplyAll")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyAll")
     private Boolean applyAll;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Replace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Replace")
     private Boolean replace;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private BatchBindTemplateRequest(Builder builder) {
@@ -116,14 +121,14 @@ public class BatchBindTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(BatchBindTemplateRequest response) {
-            super(response);
-            this.applyAll = response.applyAll;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.ownerId = response.ownerId;
-            this.replace = response.replace;
-            this.templateId = response.templateId;
+        private Builder(BatchBindTemplateRequest request) {
+            super(request);
+            this.applyAll = request.applyAll;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ownerId = request.ownerId;
+            this.replace = request.replace;
+            this.templateId = request.templateId;
         } 
 
         /**
@@ -136,7 +141,10 @@ public class BatchBindTemplateRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****994-cn-qingdao</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +153,10 @@ public class BatchBindTemplateRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -172,7 +183,10 @@ public class BatchBindTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

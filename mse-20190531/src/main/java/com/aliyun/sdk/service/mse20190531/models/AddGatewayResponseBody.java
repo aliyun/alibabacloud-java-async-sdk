@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>AddGatewayResponseBody</p>
  */
 public class AddGatewayResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddGatewayResponseBody(Builder builder) {
@@ -98,11 +103,14 @@ public class AddGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -110,7 +118,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -118,11 +126,14 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
-         * <p>
+         * <p>The message returned.</p>
+         * <ul>
+         * <li>If the request is successful, a success message is returned.</li>
+         * <li>If the request fails, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, a success message is returned.
-         * *   If the request fails, an error message is returned.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +141,10 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request is successfully processed.
+         * <p>The request is successfully processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The return value.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +152,10 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +163,10 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,8 +179,14 @@ public class AddGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddGatewayResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
         private Data(Builder builder) {
@@ -186,7 +212,10 @@ public class AddGatewayResponseBody extends TeaModel {
             private String gatewayUniqueId; 
 
             /**
-             * code
+             * <p>code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-5017305290e14cebbrvec4a5****</p>
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;

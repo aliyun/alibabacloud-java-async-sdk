@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceListResponseBody</p>
  */
 public class DescribeInstanceListResponseBody extends TeaModel {
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List < InstanceList> instanceList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeInstanceListResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The details about the Anti-DDoS Origin instance.
+         * <p>The details about the Anti-DDoS Origin instances.</p>
          */
         public Builder instanceList(java.util.List < InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -70,7 +70,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>381D5D33-BB8F-395F-8EE4-AE3BB4B523C4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of Anti-DDoS Origin instances.
+         * <p>The total number of Anti-DDoS Origin instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -91,48 +97,112 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceListResponseBody</p>
+     */
+    public static class AutoProtectCondition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Events")
+        private java.util.List < String > events;
+
+        private AutoProtectCondition(Builder builder) {
+            this.events = builder.events;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoProtectCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return events
+         */
+        public java.util.List < String > getEvents() {
+            return this.events;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > events; 
+
+            /**
+             * <p>The events that trigger automatic association.</p>
+             */
+            public Builder events(java.util.List < String > events) {
+                this.events = events;
+                return this;
+            }
+
+            public AutoProtectCondition build() {
+                return new AutoProtectCondition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceListResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoProtectCondition")
+        private AutoProtectCondition autoProtectCondition;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("BlackholdingCount")
+        @com.aliyun.core.annotation.NameInMap("BlackholdingCount")
         private String blackholdingCount;
 
-        @NameInMap("CommodityType")
+        @com.aliyun.core.annotation.NameInMap("CommodityType")
         private String commodityType;
 
-        @NameInMap("CoverageType")
+        @com.aliyun.core.annotation.NameInMap("CoverageType")
         private Integer coverageType;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("DebtStatus")
+        private Long debtStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IpType")
+        @com.aliyun.core.annotation.NameInMap("IpType")
         private String ipType;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceList(Builder builder) {
+            this.autoProtectCondition = builder.autoProtectCondition;
             this.autoRenewal = builder.autoRenewal;
             this.blackholdingCount = builder.blackholdingCount;
             this.commodityType = builder.commodityType;
             this.coverageType = builder.coverageType;
+            this.debtStatus = builder.debtStatus;
             this.expireTime = builder.expireTime;
             this.gmtCreate = builder.gmtCreate;
             this.instanceId = builder.instanceId;
@@ -140,6 +210,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             this.ipType = builder.ipType;
             this.product = builder.product;
             this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
         }
 
@@ -149,6 +220,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
         public static InstanceList create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoProtectCondition
+         */
+        public AutoProtectCondition getAutoProtectCondition() {
+            return this.autoProtectCondition;
         }
 
         /**
@@ -177,6 +255,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
          */
         public Integer getCoverageType() {
             return this.coverageType;
+        }
+
+        /**
+         * @return debtStatus
+         */
+        public Long getDebtStatus() {
+            return this.debtStatus;
         }
 
         /**
@@ -229,6 +314,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -236,10 +328,12 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AutoProtectCondition autoProtectCondition; 
             private Boolean autoRenewal; 
             private String blackholdingCount; 
             private String commodityType; 
             private Integer coverageType; 
+            private Long debtStatus; 
             private Long expireTime; 
             private Long gmtCreate; 
             private String instanceId; 
@@ -247,14 +341,26 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             private String ipType; 
             private String product; 
             private String remark; 
+            private String resourceGroupId; 
             private String status; 
 
             /**
-             * Indicates whether auto-renewal is enabled for the instance. Valid values:
-             * <p>
+             * <p>The condition that triggers automatic association of the instance with an object.</p>
+             */
+            public Builder autoProtectCondition(AutoProtectCondition autoProtectCondition) {
+                this.autoProtectCondition = autoProtectCondition;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -262,10 +368,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of protected public IP addresses for which blackhole filtering is triggered.
-             * <p>
+             * <p>The number of protected public IP addresses for which blackhole filtering is triggered.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DeleteBlackhole](~~118692~~) operation to deactivate blackhole filtering for a protected IP address.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder blackholdingCount(String blackholdingCount) {
                 this.blackholdingCount = blackholdingCount;
@@ -273,7 +382,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityType.
+             * <p>The type of the instance.</p>
+             * <ul>
+             * <li><strong>ddos_ddosorigin_public_cn</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com).</li>
+             * <li><strong>ddos_ddosorigin_public_intl</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ddos_ddosorigin_public_cn</p>
              */
             public Builder commodityType(String commodityType) {
                 this.commodityType = commodityType;
@@ -281,7 +397,16 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CoverageType.
+             * <p>The application scope of the instance.</p>
+             * <ul>
+             * <li><strong>1</strong>: The instance supports public IP addresses in all regions.</li>
+             * <li><strong>2</strong>: The instance supports public IP addresses in regions in the Chinese mainland.</li>
+             * <li><strong>3</strong>: The instance supports public IP addresses in regions outside the Chinese mainland.</li>
+             * <li><strong>4</strong>: The instance supports public IP addresses in a region in or outside the Chinese mainland.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder coverageType(Integer coverageType) {
                 this.coverageType = coverageType;
@@ -289,7 +414,18 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.
+             * DebtStatus.
+             */
+            public Builder debtStatus(Long debtStatus) {
+                this.debtStatus = debtStatus;
+                return this;
+            }
+
+            /**
+             * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640275200000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -297,7 +433,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the instance was purchased. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1592886047000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -305,7 +444,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosbgp-cn-oew1pjrk****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -313,11 +455,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The mitigation plan of the instance. Valid values:
-             * <p>
+             * <p>The mitigation plan of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: the Professional mitigation plan</li>
+             * <li><strong>1</strong>: the Enterprise mitigation plan</li>
+             * </ul>
              * 
-             * *   **0**: the Professional mitigation plan
-             * *   **1**: the Enterprise mitigation plan
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -325,11 +470,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type of the IP address asset that is protected by the instance. Valid values:
-             * <p>
+             * <p>The protocol type of the IP address asset that is protected by the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Ipv4</strong></li>
+             * <li><strong>Ipv6</strong></li>
+             * </ul>
              * 
-             * *   **Ipv4**: IPv4
-             * *   **Ipv6**: IPv6
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -337,13 +485,15 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.
-             * <p>
+             * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>gamebox</strong>: The Anti-DDoS Origin instance is created by using Game Security Box.</li>
+             * <li><strong>eip</strong>: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   **gamebox**: The Anti-DDoS Origin instance is created by using Game Security Box.
-             * *   **eip**: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.
+             * <strong>example:</strong>
+             * <p>gamebox</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -351,7 +501,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -359,12 +512,23 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: normal</li>
+             * <li><strong>2</strong>: expired</li>
+             * <li><strong>3</strong>: released</li>
+             * </ul>
              * 
-             * *   **1**: normal
-             * *   **2**: expired
-             * *   **3**: released
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;

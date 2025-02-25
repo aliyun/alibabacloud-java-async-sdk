@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSCIMSynchronizationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetSCIMSynchronizationStatusResponseBody</p>
  */
 public class SetSCIMSynchronizationStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetSCIMSynchronizationStatusResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class SetSCIMSynchronizationStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BF1FC78-5D20-54CC-BAEB-8CC33AE21D01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

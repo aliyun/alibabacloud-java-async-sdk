@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetHostAccountCredentialRequest} extends {@link RequestModel}
  *
  * <p>ResetHostAccountCredentialRequest</p>
  */
 public class ResetHostAccountCredentialRequest extends Request {
-    @Query
-    @NameInMap("CredentialType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredentialType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String credentialType;
 
-    @Query
-    @NameInMap("HostAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostAccountId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ResetHostAccountCredentialRequest(Builder builder) {
@@ -99,7 +99,15 @@ public class ResetHostAccountCredentialRequest extends Request {
         } 
 
         /**
-         * ResetHostAccountCredential
+         * <p>The type of the logon credential that you want to delete. Valid values:</p>
+         * <ul>
+         * <li><strong>Password</strong></li>
+         * <li><strong>PrivateKey</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Password</p>
          */
         public Builder credentialType(String credentialType) {
             this.putQueryParameter("CredentialType", credentialType);
@@ -108,7 +116,14 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * WB662865
+         * <p>The ID of the host account for which the logon credential is to be deleted.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostAccountId(String hostAccountId) {
             this.putQueryParameter("HostAccountId", hostAccountId);
@@ -117,7 +132,14 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * Deletes the logon credential of a specified host account of a specified Bastionhost instance. The logon credential can be the password or SSH private key.
+         * <p>The ID of the bastion host from which you want to delete the logon credential for the host account.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +148,13 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * ResetHostAccountCredential
+         * <p>The region ID of the bastion host from which you want to delete the logon credential for the host account.</p>
+         * <blockquote>
+         * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

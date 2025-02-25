@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySkillGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySkillGroupsResponseBody</p>
  */
 public class QuerySkillGroupsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("OnePageSize")
+    @com.aliyun.core.annotation.NameInMap("OnePageSize")
     private Integer onePageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
-    @NameInMap("TotalResults")
+    @com.aliyun.core.annotation.NameInMap("TotalResults")
     private Integer totalResults;
 
     private QuerySkillGroupsResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer onePageSize; 
         private String requestId; 
         private Integer totalPage; 
@@ -108,7 +113,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,20 +156,26 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySkillGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySkillGroupsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ChannelType")
+        @com.aliyun.core.annotation.NameInMap("ChannelType")
         private Integer channelType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private Long skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
         private Data(Builder builder) {

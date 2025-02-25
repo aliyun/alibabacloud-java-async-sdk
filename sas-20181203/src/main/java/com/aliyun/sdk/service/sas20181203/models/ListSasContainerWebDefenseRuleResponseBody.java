@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSasContainerWebDefenseRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListSasContainerWebDefenseRuleResponseBody</p>
  */
 public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
-    @NameInMap("ContainerWebDefenseRuleList")
-    private java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList;
+    @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseRuleList")
+    private java.util.List<ContainerWebDefenseRuleList> containerWebDefenseRuleList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSasContainerWebDefenseRuleResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     /**
      * @return containerWebDefenseRuleList
      */
-    public java.util.List < ContainerWebDefenseRuleList> getContainerWebDefenseRuleList() {
+    public java.util.List<ContainerWebDefenseRuleList> getContainerWebDefenseRuleList() {
         return this.containerWebDefenseRuleList;
     }
 
@@ -57,20 +62,20 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList; 
+        private java.util.List<ContainerWebDefenseRuleList> containerWebDefenseRuleList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The rules for container tamper-proofing.
+         * <p>The rules for container tamper-proofing.</p>
          */
-        public Builder containerWebDefenseRuleList(java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList) {
+        public Builder containerWebDefenseRuleList(java.util.List<ContainerWebDefenseRuleList> containerWebDefenseRuleList) {
             this.containerWebDefenseRuleList = containerWebDefenseRuleList;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID, which is used to query logs and troubleshoot issues.
+         * <p>The request ID, which is used to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C376***AE74FB4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,36 +99,42 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSasContainerWebDefenseRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSasContainerWebDefenseRuleResponseBody</p>
+     */
     public static class PathConfDTOList extends TeaModel {
-        @NameInMap("BackupPath")
+        @com.aliyun.core.annotation.NameInMap("BackupPath")
         private String backupPath;
 
-        @NameInMap("DefenseMode")
+        @com.aliyun.core.annotation.NameInMap("DefenseMode")
         private String defenseMode;
 
-        @NameInMap("DefensePath")
+        @com.aliyun.core.annotation.NameInMap("DefensePath")
         private String defensePath;
 
-        @NameInMap("ExcludeFile")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFile")
         private String excludeFile;
 
-        @NameInMap("ExcludeFilePath")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFilePath")
         private String excludeFilePath;
 
-        @NameInMap("ExcludeFileType")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFileType")
         private String excludeFileType;
 
-        @NameInMap("GuardType")
+        @com.aliyun.core.annotation.NameInMap("GuardType")
         private Integer guardType;
 
-        @NameInMap("IncludeFile")
+        @com.aliyun.core.annotation.NameInMap("IncludeFile")
         private String includeFile;
 
-        @NameInMap("IncludeFileType")
+        @com.aliyun.core.annotation.NameInMap("IncludeFileType")
         private String includeFileType;
 
-        @NameInMap("ProcessPathList")
-        private java.util.List < String > processPathList;
+        @com.aliyun.core.annotation.NameInMap("ProcessPathList")
+        private java.util.List<String> processPathList;
 
         private PathConfDTOList(Builder builder) {
             this.backupPath = builder.backupPath;
@@ -209,7 +223,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         /**
          * @return processPathList
          */
-        public java.util.List < String > getProcessPathList() {
+        public java.util.List<String> getProcessPathList() {
             return this.processPathList;
         }
 
@@ -223,10 +237,13 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Integer guardType; 
             private String includeFile; 
             private String includeFileType; 
-            private java.util.List < String > processPathList; 
+            private java.util.List<String> processPathList; 
 
             /**
-             * The backup paths.
+             * <p>The backup paths.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/test</p>
              */
             public Builder backupPath(String backupPath) {
                 this.backupPath = backupPath;
@@ -234,11 +251,14 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The prevention mode. Valid values:
-             * <p>
+             * <p>The prevention mode. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>audit</strong></li>
+             * </ul>
              * 
-             * *   **block**
-             * *   **audit**
+             * <strong>example:</strong>
+             * <p>audit</p>
              */
             public Builder defenseMode(String defenseMode) {
                 this.defenseMode = defenseMode;
@@ -246,7 +266,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The protected path.
+             * <p>The protected path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/test/</p>
              */
             public Builder defensePath(String defensePath) {
                 this.defensePath = defensePath;
@@ -254,7 +277,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The file that is excluded.
+             * <p>The file that is excluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>php</p>
              */
             public Builder excludeFile(String excludeFile) {
                 this.excludeFile = excludeFile;
@@ -262,7 +288,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the file that is excluded.
+             * <p>The path to the file that is excluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/tt</p>
              */
             public Builder excludeFilePath(String excludeFilePath) {
                 this.excludeFilePath = excludeFilePath;
@@ -270,7 +299,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file that is excluded.
+             * <p>The type of the file that is excluded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jsp</p>
              */
             public Builder excludeFileType(String excludeFileType) {
                 this.excludeFileType = excludeFileType;
@@ -278,11 +310,14 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The protection mode. Valid values:
-             * <p>
+             * <p>The protection mode. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: basic mode (whitelist)</li>
+             * <li><strong>1</strong>: complex mode (blacklist)</li>
+             * </ul>
              * 
-             * *   **0**: basic mode (whitelist)
-             * *   **1**: complex mode (blacklist)
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder guardType(Integer guardType) {
                 this.guardType = guardType;
@@ -290,7 +325,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The file that is included.
+             * <p>The file that is included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/test</p>
              */
             public Builder includeFile(String includeFile) {
                 this.includeFile = includeFile;
@@ -298,7 +336,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file that is included.
+             * <p>The type of the file that is included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>php</p>
              */
             public Builder includeFileType(String includeFileType) {
                 this.includeFileType = includeFileType;
@@ -306,9 +347,9 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The processes that are added to the whitelist.
+             * <p>The processes that are added to the whitelist.</p>
              */
-            public Builder processPathList(java.util.List < String > processPathList) {
+            public Builder processPathList(java.util.List<String> processPathList) {
                 this.processPathList = processPathList;
                 return this;
             }
@@ -320,29 +361,35 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSasContainerWebDefenseRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSasContainerWebDefenseRuleResponseBody</p>
+     */
     public static class ContainerWebDefenseRuleList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("ApptotalCount")
+        @com.aliyun.core.annotation.NameInMap("ApptotalCount")
         private Integer apptotalCount;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PathConfDTOList")
-        private java.util.List < PathConfDTOList> pathConfDTOList;
+        @com.aliyun.core.annotation.NameInMap("PathConfDTOList")
+        private java.util.List<PathConfDTOList> pathConfDTOList;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleStatus")
+        @com.aliyun.core.annotation.NameInMap("RuleStatus")
         private Integer ruleStatus;
 
         private ContainerWebDefenseRuleList(Builder builder) {
@@ -402,7 +449,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         /**
          * @return pathConfDTOList
          */
-        public java.util.List < PathConfDTOList> getPathConfDTOList() {
+        public java.util.List<PathConfDTOList> getPathConfDTOList() {
             return this.pathConfDTOList;
         }
 
@@ -426,12 +473,15 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
-            private java.util.List < PathConfDTOList> pathConfDTOList; 
+            private java.util.List<PathConfDTOList> pathConfDTOList; 
             private String ruleName; 
             private Integer ruleStatus; 
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766185894104675</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -439,7 +489,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the applications.
+             * <p>The number of the applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder apptotalCount(Integer apptotalCount) {
                 this.apptotalCount = apptotalCount;
@@ -447,7 +500,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. Unit: milliseconds.
+             * <p>The creation time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698978109000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -455,7 +511,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was last modified. Unit: milliseconds.
+             * <p>The timestamp when the alert event was last modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1678852686000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -463,7 +522,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>420336648</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -471,15 +533,18 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The paths that are protected.
+             * <p>The paths that are protected.</p>
              */
-            public Builder pathConfDTOList(java.util.List < PathConfDTOList> pathConfDTOList) {
+            public Builder pathConfDTOList(java.util.List<PathConfDTOList> pathConfDTOList) {
                 this.pathConfDTOList = pathConfDTOList;
                 return this;
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -487,11 +552,14 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleStatus(Integer ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -505,17 +573,23 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSasContainerWebDefenseRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSasContainerWebDefenseRuleResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -568,7 +642,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -576,7 +653,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -584,7 +664,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -592,7 +675,10 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

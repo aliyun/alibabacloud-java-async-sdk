@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBasicAcceleratorResponseBody</p>
  */
 public class GetBasicAcceleratorResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("BandwidthBillingType")
+    @com.aliyun.core.annotation.NameInMap("BandwidthBillingType")
     private String bandwidthBillingType;
 
-    @NameInMap("BasicBandwidthPackage")
+    @com.aliyun.core.annotation.NameInMap("BasicBandwidthPackage")
     private BasicBandwidthPackage basicBandwidthPackage;
 
-    @NameInMap("BasicEndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("BasicEndpointGroupId")
     private String basicEndpointGroupId;
 
-    @NameInMap("BasicIpSetId")
+    @com.aliyun.core.annotation.NameInMap("BasicIpSetId")
     private String basicIpSetId;
 
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("CrossBorderStatus")
+    @com.aliyun.core.annotation.NameInMap("CrossBorderStatus")
     private Boolean crossBorderStatus;
 
-    @NameInMap("CrossDomainBandwidthPackage")
+    @com.aliyun.core.annotation.NameInMap("CrossDomainBandwidthPackage")
     private CrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
-    @NameInMap("CrossPrivateState")
+    @com.aliyun.core.annotation.NameInMap("CrossPrivateState")
     private String crossPrivateState;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private Long expiredTime;
 
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private GetBasicAcceleratorResponseBody(Builder builder) {
@@ -315,12 +314,11 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 基础型全球加速实例是否开启跨境线路功能。取值：
+         * Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:
          * <p>
          * 
-         * - **true**：开启跨境线路功能，可以加速跨境线路。
-         * 
-         * - **false**：关闭跨境线路功能，不可以加速跨境线路。
+         * *   **true**
+         * *   **false**
          */
         public Builder crossBorderStatus(Boolean crossBorderStatus) {
             this.crossBorderStatus = crossBorderStatus;
@@ -441,13 +439,13 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     } 
 
     public static class BasicBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BandwidthType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private String bandwidthType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private BasicBandwidthPackage(Builder builder) {
@@ -527,10 +525,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
 
     }
     public static class CrossDomainBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private CrossDomainBandwidthPackage(Builder builder) {
@@ -588,10 +586,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -626,7 +624,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the basic GA instance.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -634,7 +632,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the basic GA instance.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

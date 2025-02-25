@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserVipsByDomainResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserVipsByDomainResponseBody</p>
  */
 public class DescribeUserVipsByDomainResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Vips")
+    @com.aliyun.core.annotation.NameInMap("Vips")
     private Vips vips;
 
     private DescribeUserVipsByDomainResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
         private Vips vips; 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -70,7 +73,10 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>820E7900-5CA9-4AEF-B0DD-20ED5F64BE55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The list of VIPs.
+         * <p>The list of VIPs.</p>
          */
         public Builder vips(Vips vips) {
             this.vips = vips;
@@ -91,8 +97,14 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserVipsByDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserVipsByDomainResponseBody</p>
+     */
     public static class Vips extends TeaModel {
-        @NameInMap("Vip")
+        @com.aliyun.core.annotation.NameInMap("Vip")
         private java.util.List < String > vip;
 
         private Vips(Builder builder) {

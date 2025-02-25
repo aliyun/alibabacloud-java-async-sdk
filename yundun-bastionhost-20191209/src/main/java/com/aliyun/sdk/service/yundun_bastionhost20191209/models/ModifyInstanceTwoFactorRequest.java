@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceTwoFactorRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceTwoFactorRequest</p>
  */
 public class ModifyInstanceTwoFactorRequest extends Request {
-    @Query
-    @NameInMap("EnableTwoFactor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableTwoFactor")
     private String enableTwoFactor;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SkipTwoFactorTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipTwoFactorTime")
     private String skipTwoFactorTime;
 
-    @Query
-    @NameInMap("TwoFactorMethods")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TwoFactorMethods")
     private String twoFactorMethods;
 
     private ModifyInstanceTwoFactorRequest(Builder builder) {
@@ -111,11 +111,14 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable two-factor authentication. Valid values:
-         * <p>
+         * <p>Specifies whether to enable two-factor authentication. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: enables two-factor authentication.
-         * *   **false**: disables two-factor authentication.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTwoFactor(String enableTwoFactor) {
             this.putQueryParameter("EnableTwoFactor", enableTwoFactor);
@@ -124,10 +127,14 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host.
-         * <p>
+         * <p>The ID of the bastion host.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -136,10 +143,13 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host.
-         * <p>
+         * <p>The region ID of the bastion host.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +158,10 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The duration within which two-factor authentication is not required after a user passes two-factor authentication. Valid values: 0 to 168. Unit: hours. If you set this parameter to 0, the user must pass two-factor authentication every time the user logs on to the bastion host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder skipTwoFactorTime(String skipTwoFactorTime) {
             this.putQueryParameter("SkipTwoFactorTime", skipTwoFactorTime);
@@ -157,12 +170,17 @@ public class ModifyInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * One or more methods that are used to send a verification code if two-factor authentication is enabled. If you set the EnableTwoFactor parameter to true, you must specify at least one method. Valid values:
-         * <p>
+         * <p>The method used to send a verification code for two-factor authentication. If EnableTwoFactor is set to true, you must specify at least one method. Valid values:</p>
+         * <ul>
+         * <li><strong>sms:</strong> text message.</li>
+         * <li><strong>email</strong>: email.</li>
+         * <li><strong>dingtalk</strong>: notice in DingTalk.</li>
+         * <li><strong>totp</strong>: one-time password (OTP) token.</li>
+         * <li><strong>gmusbkey</strong>: SM-based USB key.</li>
+         * </ul>
          * 
-         * *   **sms**: text message
-         * *   **email**: email
-         * *   **dingtalk**: Notice in DingTalk
+         * <strong>example:</strong>
+         * <p>[&quot;sms&quot;]</p>
          */
         public Builder twoFactorMethods(String twoFactorMethods) {
             this.putQueryParameter("TwoFactorMethods", twoFactorMethods);

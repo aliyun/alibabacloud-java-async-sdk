@@ -194,7 +194,7 @@ public class Trigger extends TeaModel {
         private String urlIntranet; 
 
         /**
-         * created time
+         * createdTime.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -202,7 +202,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * domain name
+         * domainName.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -210,7 +210,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * invocation role
+         * invocationRole.
          */
         public Builder invocationRole(String invocationRole) {
             this.invocationRole = invocationRole;
@@ -218,7 +218,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * last modified time
+         * lastModifiedTime.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -226,7 +226,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * qualifier
+         * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -234,7 +234,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * source arn
+         * sourceArn.
          */
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = sourceArn;
@@ -242,7 +242,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * status
+         * status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -250,7 +250,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * target arn
+         * targetArn.
          */
         public Builder targetArn(String targetArn) {
             this.targetArn = targetArn;
@@ -258,7 +258,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * trigger config
+         * triggerConfig.
          */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -266,7 +266,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * trigger Id
+         * triggerId.
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
@@ -274,7 +274,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * trigger name
+         * triggerName.
          */
         public Builder triggerName(String triggerName) {
             this.triggerName = triggerName;
@@ -282,7 +282,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * trigger type
+         * triggerType.
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;
@@ -290,7 +290,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * url Internet
+         * urlInternet.
          */
         public Builder urlInternet(String urlInternet) {
             this.urlInternet = urlInternet;
@@ -298,7 +298,7 @@ public class Trigger extends TeaModel {
         }
 
         /**
-         * url Intranet
+         * urlIntranet.
          */
         public Builder urlIntranet(String urlIntranet) {
             this.urlIntranet = urlIntranet;

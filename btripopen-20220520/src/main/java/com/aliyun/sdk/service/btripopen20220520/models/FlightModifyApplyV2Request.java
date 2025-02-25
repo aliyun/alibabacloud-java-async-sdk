@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyApplyV2Request} extends {@link RequestModel}
  *
  * <p>FlightModifyApplyV2Request</p>
  */
 public class FlightModifyApplyV2Request extends Request {
-    @Body
-    @NameInMap("cache_key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cache_key")
     private String cacheKey;
 
-    @Body
-    @NameInMap("contact_phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contact_phone")
     private String contactPhone;
 
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("item_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("item_id")
     private String itemId;
 
-    @Body
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private Long orderId;
 
-    @Body
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Body
-    @NameInMap("out_sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_sub_order_id")
     private String outSubOrderId;
 
-    @Body
-    @NameInMap("passenger_segment_relations")
-    private java.util.List < PassengerSegmentRelations> passengerSegmentRelations;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_relations")
+    private java.util.List<PassengerSegmentRelations> passengerSegmentRelations;
 
-    @Body
-    @NameInMap("reason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason")
     private String reason;
 
-    @Body
-    @NameInMap("session_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("session_id")
     private String sessionId;
 
-    @Body
-    @NameInMap("voluntary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("voluntary")
     private Boolean voluntary;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightModifyApplyV2Request(Builder builder) {
@@ -141,7 +146,7 @@ public class FlightModifyApplyV2Request extends Request {
     /**
      * @return passengerSegmentRelations
      */
-    public java.util.List < PassengerSegmentRelations> getPassengerSegmentRelations() {
+    public java.util.List<PassengerSegmentRelations> getPassengerSegmentRelations() {
         return this.passengerSegmentRelations;
     }
 
@@ -181,7 +186,7 @@ public class FlightModifyApplyV2Request extends Request {
         private Long orderId; 
         private String outOrderId; 
         private String outSubOrderId; 
-        private java.util.List < PassengerSegmentRelations> passengerSegmentRelations; 
+        private java.util.List<PassengerSegmentRelations> passengerSegmentRelations; 
         private String reason; 
         private String sessionId; 
         private Boolean voluntary; 
@@ -273,7 +278,7 @@ public class FlightModifyApplyV2Request extends Request {
         /**
          * passenger_segment_relations.
          */
-        public Builder passengerSegmentRelations(java.util.List < PassengerSegmentRelations> passengerSegmentRelations) {
+        public Builder passengerSegmentRelations(java.util.List<PassengerSegmentRelations> passengerSegmentRelations) {
             String passengerSegmentRelationsShrink = shrink(passengerSegmentRelations, "passenger_segment_relations", "json");
             this.putBodyParameter("passenger_segment_relations", passengerSegmentRelationsShrink);
             this.passengerSegmentRelations = passengerSegmentRelations;
@@ -290,7 +295,10 @@ public class FlightModifyApplyV2Request extends Request {
         }
 
         /**
-         * sessionId
+         * <p>sessionId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2ffebfe733742aab5c491d960ba3d59</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("session_id", sessionId);
@@ -323,12 +331,18 @@ public class FlightModifyApplyV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlightModifyApplyV2Request} extends {@link TeaModel}
+     *
+     * <p>FlightModifyApplyV2Request</p>
+     */
     public static class PassengerSegmentRelations extends TeaModel {
-        @NameInMap("passenger_id")
+        @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
 
-        @NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        @com.aliyun.core.annotation.NameInMap("segment_id_list")
+        private java.util.List<String> segmentIdList;
 
         private PassengerSegmentRelations(Builder builder) {
             this.passengerId = builder.passengerId;
@@ -353,13 +367,13 @@ public class FlightModifyApplyV2Request extends Request {
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
             private String passengerId; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * passenger_id.
@@ -372,7 +386,7 @@ public class FlightModifyApplyV2Request extends Request {
             /**
              * segment_id_list.
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }

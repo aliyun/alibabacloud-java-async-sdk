@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagResourcesRequest</p>
  */
 public class ListTagResourcesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ListTagResourcesRequest(Builder builder) {
@@ -129,9 +128,9 @@ public class ListTagResourcesRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The ClientToken value contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,14 +161,14 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * An array of IDs of resources whose tag information you want to query.
+         * The IDs of the resources whose tag information you want to query.
          * <p>
          * 
-         * *   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-         * *   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-         * *   If you set the **ResourceType** parameter to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-         * *   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.
-         * *   If **ResourceType** is set to **endpointgroup**, set the value of ResourceId to the ID of an EndpointGroup.
+         * *   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
+         * *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
+         * *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
+         * *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.
+         * *   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.
          * 
          * You can specify up to 50 GA resource IDs.
          */
@@ -183,11 +182,11 @@ public class ListTagResourcesRequest extends Request {
          * The type of the resource whose tag information you want to query. Valid values:
          * <p>
          * 
-         * *   **accelerator:** a standard GA instance.
-         * *   **basicaccelerator:** a basic GA instance.
-         * *   **bandwidthpackage:** a bandwidth plan.
-         * *   **acl:** an access control list (ACL).
-         * *   **endpointgroup:** an endpoint group (EndpointGroup).
+         * *   **accelerator**: a standard GA instance
+         * *   **basicaccelerator**: a basic GA instance
+         * *   **bandwidthpackage**: a bandwidth plan
+         * *   **acl**: an access control list (ACL).
+         * *   **endpointgroup**: an endpoint group
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -215,10 +214,10 @@ public class ListTagResourcesRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductSpec} extends {@link TeaModel}
  *
  * <p>ProductSpec</p>
  */
 public class ProductSpec extends TeaModel {
-    @NameInMap("key")
+    @com.aliyun.core.annotation.NameInMap("key")
     private String key;
 
-    @NameInMap("keyId")
+    @com.aliyun.core.annotation.NameInMap("keyId")
     private Long keyId;
 
-    @NameInMap("values")
-    private java.util.List < ProductSpecValue > values;
+    @com.aliyun.core.annotation.NameInMap("values")
+    private java.util.List<ProductSpecValue> values;
 
     private ProductSpec(Builder builder) {
         this.key = builder.key;
@@ -52,14 +57,14 @@ public class ProductSpec extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < ProductSpecValue > getValues() {
+    public java.util.List<ProductSpecValue> getValues() {
         return this.values;
     }
 
     public static final class Builder {
         private String key; 
         private Long keyId; 
-        private java.util.List < ProductSpecValue > values; 
+        private java.util.List<ProductSpecValue> values; 
 
         /**
          * key.
@@ -80,7 +85,7 @@ public class ProductSpec extends TeaModel {
         /**
          * values.
          */
-        public Builder values(java.util.List < ProductSpecValue > values) {
+        public Builder values(java.util.List<ProductSpecValue> values) {
             this.values = values;
             return this;
         }

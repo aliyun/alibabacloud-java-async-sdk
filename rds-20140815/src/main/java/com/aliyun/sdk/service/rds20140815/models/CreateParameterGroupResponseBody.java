@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateParameterGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateParameterGroupResponseBody</p>
  */
 public class CreateParameterGroupResponseBody extends TeaModel {
-    @NameInMap("ParameterGroupId")
+    @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
     private String parameterGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateParameterGroupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the IDs of parameter templates.
+         * <p>The ID of the parameter template. You can call the <a href="https://help.aliyun.com/document_detail/144491.html">DescribeParameterGroups</a> operation to query the IDs of parameter templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-q488w14xvsk****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.parameterGroupId = parameterGroupId;
@@ -58,7 +66,10 @@ public class CreateParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPhysicalConnectionAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyPhysicalConnectionAttributeRequest</p>
  */
 public class ModifyPhysicalConnectionAttributeRequest extends Request {
-    @Query
-    @NameInMap("CircuitCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CircuitCode")
     private String circuitCode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("LineOperator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineOperator")
     private String lineOperator;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerLocation")
     private String peerLocation;
 
-    @Query
-    @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String physicalConnectionId;
 
-    @Query
-    @NameInMap("PortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortType")
     private String portType;
 
-    @Query
-    @NameInMap("RedundantPhysicalConnectionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedundantPhysicalConnectionId")
     private String redundantPhysicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bandwidth")
     private Integer bandwidth;
 
     private ModifyPhysicalConnectionAttributeRequest(Builder builder) {
@@ -252,7 +257,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         } 
 
         /**
-         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>longtel001</p>
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -261,12 +269,14 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>efefe566754h</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -275,10 +285,11 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The description of the Express Connect circuit.
-         * <p>
+         * <p>The description of the Express Connect circuit.</p>
+         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>The description of the Express Connect circuit.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -287,15 +298,18 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The connectivity provider of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>CT</strong>: China Telecom</li>
+         * <li><strong>CU</strong>: China Unicom</li>
+         * <li><strong>CM</strong>: China Mobile</li>
+         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland</li>
+         * <li><strong>Equinix</strong>: Equinix</li>
+         * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland</li>
+         * </ul>
          * 
-         * *   **CT**: China Telecom
-         * *   **CU**: China Unicom
-         * *   **CM**: China Mobile
-         * *   **CO**: other connectivity providers in the Chinese mainland
-         * *   **Equinix**: Equinix
-         * *   **Other**: other connectivity providers outside the Chinese mainland
+         * <strong>example:</strong>
+         * <p>CT</p>
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -304,10 +318,11 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The name of the Express Connect circuit.
-         * <p>
+         * <p>The name of the Express Connect circuit.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -334,7 +349,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The geographical location of the data center.
+         * <p>The geographical location of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</p>
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -343,7 +361,11 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit.
+         * <p>The ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-119mfjzm******</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -352,18 +374,22 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The port type of the Express Connect circuit. Valid values:
-         * <p>
+         * <p>The port type of the Express Connect circuit. Valid values:</p>
+         * <ul>
+         * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-T</strong> (default): 1,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 kilometers)</li>
+         * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 kilometers)</li>
+         * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+         * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+         * </ul>
+         * <blockquote>
+         * <p> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+         * </blockquote>
          * 
-         * *   **100Base-T**: 100 Mbit/s copper Ethernet port
-         * *   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port
-         * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 kilometers)
-         * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-         * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)
-         * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-         * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
-         * 
-         * >  To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.
+         * <strong>example:</strong>
+         * <p>1000Base-LX</p>
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -372,7 +398,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
+         * <p>The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-119mfjzm7</p>
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);
@@ -381,10 +410,12 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
-         * <p>
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -411,7 +442,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         }
 
         /**
-         * The bandwidth value for the connection over the Express Connect circuit. Unit: Mbit/s. Valid values: 2 to 10240.
+         * <p>The bandwidth value for the connection over the Express Connect circuit. Unit: Mbit/s. Valid values: 2 to 10240.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("bandwidth", bandwidth);

@@ -62,14 +62,14 @@ public class CreateOrderForRdsRequest extends Request {
             super();
         } 
 
-        private Builder(CreateOrderForRdsRequest response) {
-            super(response);
-            this.params = response.params;
-            this.regionId = response.regionId;
+        private Builder(CreateOrderForRdsRequest request) {
+            super(request);
+            this.params = request.params;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * Params.
+         * The JSON string that contains the order details. For more information, see [CreateDBInstance](~~26228~~).
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -78,7 +78,7 @@ public class CreateOrderForRdsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

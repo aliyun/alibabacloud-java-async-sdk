@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterCnnfStatusDetailRequest} extends {@link RequestModel}
  *
  * <p>ListClusterCnnfStatusDetailRequest</p>
  */
 public class ListClusterCnnfStatusDetailRequest extends Request {
-    @Query
-    @NameInMap("ClusterIds")
-    private java.util.List < String > clusterIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
+    private java.util.List<String> clusterIds;
 
     private ListClusterCnnfStatusDetailRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ListClusterCnnfStatusDetailRequest extends Request {
     /**
      * @return clusterIds
      */
-    public java.util.List < String > getClusterIds() {
+    public java.util.List<String> getClusterIds() {
         return this.clusterIds;
     }
 
     public static final class Builder extends Request.Builder<ListClusterCnnfStatusDetailRequest, Builder> {
-        private java.util.List < String > clusterIds; 
+        private java.util.List<String> clusterIds; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class ListClusterCnnfStatusDetailRequest extends Request {
         } 
 
         /**
-         * An array that consists of the ID of the cluster.
+         * <p>An array that consists of the ID of the cluster.</p>
          */
-        public Builder clusterIds(java.util.List < String > clusterIds) {
+        public Builder clusterIds(java.util.List<String> clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
             this.clusterIds = clusterIds;
             return this;

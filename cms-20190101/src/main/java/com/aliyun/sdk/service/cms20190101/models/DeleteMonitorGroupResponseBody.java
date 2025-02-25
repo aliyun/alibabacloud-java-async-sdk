@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitorGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteMonitorGroupResponseBody</p>
  */
 public class DeleteMonitorGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteMonitorGroupResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +100,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The deleted application group.
+         * <p>The deleted application group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -105,7 +108,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA35B3AE-4FFD-4A33-AE67-67EF68711EFA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +130,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,8 +146,14 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteMonitorGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteMonitorGroupResponseBody</p>
+     */
     public static class ContactGroup extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ContactGroup(Builder builder) {
@@ -161,7 +179,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the alert group.
+             * <p>The name of the alert group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_Group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -175,8 +196,14 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteMonitorGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteMonitorGroupResponseBody</p>
+     */
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < ContactGroup> contactGroup;
 
         private ContactGroups(Builder builder) {
@@ -216,11 +243,17 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteMonitorGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteMonitorGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private ContactGroups contactGroups;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private Group(Builder builder) {
@@ -255,7 +288,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The alert groups that receive alert notifications for the application group.
+             * <p>The alert groups that receive alert notifications for the application group.</p>
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -263,7 +296,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

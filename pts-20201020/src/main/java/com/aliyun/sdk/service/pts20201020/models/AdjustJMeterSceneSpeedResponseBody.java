@@ -122,7 +122,7 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         }
 
         /**
-         * 报告ID
+         * ReportId.
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;

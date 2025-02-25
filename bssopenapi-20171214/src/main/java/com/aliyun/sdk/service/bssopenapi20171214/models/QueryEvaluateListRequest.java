@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEvaluateListRequest} extends {@link RequestModel}
  *
  * <p>QueryEvaluateListRequest</p>
  */
 public class QueryEvaluateListRequest extends Request {
-    @Query
-    @NameInMap("BillCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillCycle")
     private String billCycle;
 
-    @Query
-    @NameInMap("BizTypeList")
-    private java.util.List < String > bizTypeList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizTypeList")
+    private java.util.List<String> bizTypeList;
 
-    @Query
-    @NameInMap("EndAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndAmount")
     private Long endAmount;
 
-    @Query
-    @NameInMap("EndBizTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndBizTime")
     private String endBizTime;
 
-    @Query
-    @NameInMap("EndSearchTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndSearchTime")
     private String endSearchTime;
 
-    @Query
-    @NameInMap("OutBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutBizId")
     private String outBizId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
     private Integer sortType;
 
-    @Query
-    @NameInMap("StartAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartAmount")
     private Long startAmount;
 
-    @Query
-    @NameInMap("StartBizTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartBizTime")
     private String startBizTime;
 
-    @Query
-    @NameInMap("StartSearchTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartSearchTime")
     private String startSearchTime;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
     private QueryEvaluateListRequest(Builder builder) {
@@ -109,7 +114,7 @@ public class QueryEvaluateListRequest extends Request {
     /**
      * @return bizTypeList
      */
-    public java.util.List < String > getBizTypeList() {
+    public java.util.List<String> getBizTypeList() {
         return this.bizTypeList;
     }
 
@@ -199,7 +204,7 @@ public class QueryEvaluateListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryEvaluateListRequest, Builder> {
         private String billCycle; 
-        private java.util.List < String > bizTypeList; 
+        private java.util.List<String> bizTypeList; 
         private Long endAmount; 
         private String endBizTime; 
         private String endSearchTime; 
@@ -236,7 +241,10 @@ public class QueryEvaluateListRequest extends Request {
         } 
 
         /**
-         * The billing cycle.
+         * <p>The billing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202003</p>
          */
         public Builder billCycle(String billCycle) {
             this.putQueryParameter("BillCycle", billCycle);
@@ -245,19 +253,25 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The market types in invoices.
-         * <p>
+         * <p>The market types in invoices.</p>
+         * <blockquote>
+         * <p> By default, this parameter is left empty. If this parameter is left empty, all market types are queried.</p>
+         * </blockquote>
          * 
-         * >  By default, this parameter is left empty. If this parameter is left empty, all market types are queried.
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
-        public Builder bizTypeList(java.util.List < String > bizTypeList) {
+        public Builder bizTypeList(java.util.List<String> bizTypeList) {
             this.putQueryParameter("BizTypeList", bizTypeList);
             this.bizTypeList = bizTypeList;
             return this;
         }
 
         /**
-         * The maximum amount to be queried.
+         * <p>The maximum amount to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder endAmount(Long endAmount) {
             this.putQueryParameter("EndAmount", endAmount);
@@ -266,7 +280,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The latest time when an order is paid Specify the time in the yyyy-mm-dd hh:mm:ss format.
+         * <p>The latest time when an order is paid Specify the time in the yyyy-mm-dd hh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-02 15:00:00</p>
          */
         public Builder endBizTime(String endBizTime) {
             this.putQueryParameter("EndBizTime", endBizTime);
@@ -275,7 +292,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-02 12:00:00</p>
          */
         public Builder endSearchTime(String endSearchTime) {
             this.putQueryParameter("EndSearchTime", endSearchTime);
@@ -284,7 +304,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The ID of the external order.
+         * <p>The ID of the external order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2387432832696</p>
          */
         public Builder outBizId(String outBizId) {
             this.putQueryParameter("OutBizId", outBizId);
@@ -302,7 +325,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -311,7 +337,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -320,12 +349,15 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The type of the sort. Valid values:
-         * <p>
+         * <p>The type of the sort. Valid values:</p>
+         * <ul>
+         * <li>1: Sort invoices by ID in descending order.</li>
+         * <li>2: Sort invoices by invoice type in descending order, and then sort invoices of the same type by ID in descending order.</li>
+         * <li>3: Sort invoices by invoice type in ascending order, and then sort invoices of the same type by ID in descending order.</li>
+         * </ul>
          * 
-         * *   1: Sort invoices by ID in descending order.
-         * *   2: Sort invoices by invoice type in descending order, and then sort invoices of the same type by ID in descending order.
-         * *   3: Sort invoices by invoice type in ascending order, and then sort invoices of the same type by ID in descending order.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortType(Integer sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -334,7 +366,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The minimum amount to be queried.
+         * <p>The minimum amount to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder startAmount(Long startAmount) {
             this.putQueryParameter("StartAmount", startAmount);
@@ -343,7 +378,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The earliest time when an order is paid. Specify the time in the yyyy-mm-dd hh:mm:ss format.
+         * <p>The earliest time when an order is paid. Specify the time in the yyyy-mm-dd hh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-02 12:00:00</p>
          */
         public Builder startBizTime(String startBizTime) {
             this.putQueryParameter("StartBizTime", startBizTime);
@@ -352,7 +390,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-02 12:00:00</p>
          */
         public Builder startSearchTime(String startSearchTime) {
             this.putQueryParameter("StartSearchTime", startSearchTime);
@@ -361,15 +402,19 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * The type of orders to be queried. Valid values:
-         * <p>
+         * <p>The type of orders to be queried. Valid values:</p>
+         * <ul>
+         * <li>1: the orders in which the invoiceable amount is negative.</li>
+         * <li>2: the orders in which the invoiceable amount is positive.</li>
+         * <li>3: the orders in which the invoiceable amount is not 0.</li>
+         * <li>4: the orders in which the amount that has been invoiced is greater than 0.</li>
+         * </ul>
+         * <blockquote>
+         * <p> By default, this parameter is left empty. If this parameter is left empty, all orders are queried.</p>
+         * </blockquote>
          * 
-         * *   1: the orders in which the invoiceable amount is negative.
-         * *   2: the orders in which the invoiceable amount is positive.
-         * *   3: the orders in which the invoiceable amount is not 0.
-         * *   4: the orders in which the amount that has been invoiced is greater than 0.
-         * 
-         * >  By default, this parameter is left empty. If this parameter is left empty, all orders are queried.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhitelistTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhitelistTemplateResponseBody</p>
  */
 public class DescribeWhitelistTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeWhitelistTemplateResponseBody(Builder builder) {
@@ -98,14 +103,17 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned. Valid values:
-         * <p>
+         * <p>The response code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>401</strong>: identity authentication failed</li>
+         * <li><strong>404</strong>: request page not found</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **401**: identity authentication failed
-         * *   **404**: request page not found
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -113,7 +121,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,12 +129,15 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned. Valid values:
-         * <p>
+         * <p>The HTTP status code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +145,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED169A3E-1657-4104-82AB-24EA8CD0DB75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,11 +167,14 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -167,20 +187,26 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWhitelistTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhitelistTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private String ips;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Integer userId;
 
         private Template(Builder builder) {
@@ -242,7 +268,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             private Integer userId; 
 
             /**
-             * The primary key of the data table.
+             * <p>The primary key of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1013</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -250,7 +279,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses.
+             * <p>The IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.X.X,2.3.X.X</p>
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -258,7 +290,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the whitelist template.
+             * <p>The ID of the whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>424</p>
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -266,7 +301,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template.
+             * <p>The name of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template_123</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -274,7 +312,10 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16****</p>
              */
             public Builder userId(Integer userId) {
                 this.userId = userId;
@@ -288,8 +329,14 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWhitelistTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhitelistTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private Template template;
 
         private Data(Builder builder) {
@@ -315,7 +362,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             private Template template; 
 
             /**
-             * The information about the IP whitelist template.
+             * <p>The information about the IP whitelist template.</p>
              */
             public Builder template(Template template) {
                 this.template = template;

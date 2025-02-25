@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePendingMaintenanceActionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePendingMaintenanceActionsResponseBody</p>
  */
 public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TypeList")
-    private java.util.List < TypeList> typeList;
+    @com.aliyun.core.annotation.NameInMap("TypeList")
+    private java.util.List<TypeList> typeList;
 
     private DescribePendingMaintenanceActionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     /**
      * @return typeList
      */
-    public java.util.List < TypeList> getTypeList() {
+    public java.util.List<TypeList> getTypeList() {
         return this.typeList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TypeList> typeList; 
+        private java.util.List<TypeList> typeList; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>314127C2-B6C1-4F58-B1F6-E6B645******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of pending events.
+         * <p>The details of pending events.</p>
          */
-        public Builder typeList(java.util.List < TypeList> typeList) {
+        public Builder typeList(java.util.List<TypeList> typeList) {
             this.typeList = typeList;
             return this;
         }
@@ -71,11 +79,17 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePendingMaintenanceActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePendingMaintenanceActionsResponseBody</p>
+     */
     public static class TypeList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private TypeList(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The number of pending events.
+             * <p>The number of pending events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,13 +135,16 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The task type of pending events. Valid values:
-             * <p>
+             * <p>The task type of pending events. Valid values:</p>
+             * <ul>
+             * <li><strong>DatabaseSoftwareUpgrading</strong>: database software upgrades</li>
+             * <li><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrades</li>
+             * <li><strong>DatabaseStorageUpgrading</strong>: database storage upgrades</li>
+             * <li><strong>DatabaseProxyUpgrading</strong>: minor version upgrades of the proxy</li>
+             * </ul>
              * 
-             * *   **DatabaseSoftwareUpgrading**: database software upgrades
-             * *   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades
-             * *   **DatabaseStorageUpgrading**: database storage upgrades
-             * *   **DatabaseProxyUpgrading**: minor version upgrades of the proxy
+             * <strong>example:</strong>
+             * <p>DatabaseSoftwareUpgrading</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

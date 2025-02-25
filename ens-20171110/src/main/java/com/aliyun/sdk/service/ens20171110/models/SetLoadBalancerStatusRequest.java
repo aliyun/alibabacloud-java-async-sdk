@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLoadBalancerStatusRequest} extends {@link RequestModel}
  *
  * <p>SetLoadBalancerStatusRequest</p>
  */
 public class SetLoadBalancerStatusRequest extends Request {
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("LoadBalancerStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerStatus;
 
     private SetLoadBalancerStatusRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class SetLoadBalancerStatusRequest extends Request {
         } 
 
         /**
-         * LoadBalancerId.
+         * <p>The ID of the ELB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5t18quoohsrc3xkf86spmnu77</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -79,7 +88,15 @@ public class SetLoadBalancerStatusRequest extends Request {
         }
 
         /**
-         * LoadBalancerStatus.
+         * <p>The status of the listener after the modification. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: The listener for the instance can forward the received traffic based on forwarding rules.</li>
+         * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);

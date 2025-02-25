@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotMonitorDataResponseBody</p>
  */
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSnapshotMonitorDataResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring data of snapshot sizes.
+         * <p>The monitoring data of snapshot sizes.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -58,7 +63,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F8163A8-F5DE-47A2-A572-4E062D223E09</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotMonitorDataResponseBody</p>
+     */
     public static class DataPoint extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataPoint(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The total size of snapshots. Unit: bytes.
+             * <p>The total size of snapshots. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>243036848128</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -118,7 +135,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that corresponds to a snapshot size.
+             * <p>The timestamp that corresponds to a snapshot size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-10T04:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -132,9 +152,15 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotMonitorDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
-        @NameInMap("DataPoint")
-        private java.util.List < DataPoint> dataPoint;
+        @com.aliyun.core.annotation.NameInMap("DataPoint")
+        private java.util.List<DataPoint> dataPoint;
 
         private MonitorData(Builder builder) {
             this.dataPoint = builder.dataPoint;
@@ -151,17 +177,17 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         /**
          * @return dataPoint
          */
-        public java.util.List < DataPoint> getDataPoint() {
+        public java.util.List<DataPoint> getDataPoint() {
             return this.dataPoint;
         }
 
         public static final class Builder {
-            private java.util.List < DataPoint> dataPoint; 
+            private java.util.List<DataPoint> dataPoint; 
 
             /**
              * DataPoint.
              */
-            public Builder dataPoint(java.util.List < DataPoint> dataPoint) {
+            public Builder dataPoint(java.util.List<DataPoint> dataPoint) {
                 this.dataPoint = dataPoint;
                 return this;
             }

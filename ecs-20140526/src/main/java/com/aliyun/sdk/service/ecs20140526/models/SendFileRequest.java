@@ -1,96 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendFileRequest} extends {@link RequestModel}
  *
  * <p>SendFileRequest</p>
  */
 public class SendFileRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("ContentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
     private String contentType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileGroup")
     private String fileGroup;
 
-    @Query
-    @NameInMap("FileMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileMode")
     private String fileMode;
 
-    @Query
-    @NameInMap("FileOwner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileOwner")
     private String fileOwner;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Overwrite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Overwrite")
     private Boolean overwrite;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TargetDir")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDir")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetDir;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
     private SendFileRequest(Builder builder) {
@@ -181,7 +186,7 @@ public class SendFileRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -244,7 +249,7 @@ public class SendFileRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -270,7 +275,7 @@ public class SendFileRequest extends Request {
         private String fileGroup; 
         private String fileMode; 
         private String fileOwner; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String name; 
         private Boolean overwrite; 
         private String ownerAccount; 
@@ -279,7 +284,7 @@ public class SendFileRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetDir; 
         private Long timeout; 
 
@@ -320,11 +325,15 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The content of the remote file. The content must not exceed 32 KB in size after it is encoded in Base64.
-         * <p>
+         * <p>The content of the file. The file must not exceed 32 KB in size after it is encoded in Base64.</p>
+         * <ul>
+         * <li>If <code>ContentType</code> is set to <code>PlainText</code>, the value of Content is in plaintext.</li>
+         * <li>If <code>ContentType</code> is set to <code>Base64</code>, the value of Content is Base64-encoded.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If `ContentType` is set to `PlainText`, the Content value is in plaintext.
-         * *   If `ContentType` is set to `Base64`, the Content value is Base64-encoded.
+         * <strong>example:</strong>
+         * <p>#!/bin/bash  echo &quot;Current User is :&quot;  echo $(ps | grep &quot;$$&quot; | awk &quot;{print $2}&quot;)  --------  oss://bucketName/objectName</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -333,13 +342,15 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The content type of the file. Valid values:
-         * <p>
+         * <p>The content type of the file. Valid values:</p>
+         * <ul>
+         * <li>PlainText: The file content is not encoded.</li>
+         * <li>Base64: The file content is encoded in Base64.</li>
+         * </ul>
+         * <p>Default value: PlainText.</p>
          * 
-         * *   PlainText: The file content is not encoded.
-         * *   Base64: The file content is Base64-encoded.
-         * 
-         * Default value: PlainText.
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -348,7 +359,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The description of the file. The description supports all character sets and can be up to 512 characters in length.
+         * <p>The description of the file. The description can be up to 512 characters in length and can contain any characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test file.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -357,10 +371,13 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The user group of the file. This parameter takes effect only for Linux instances. Default value: root. The user group name can be up to 64 characters in length.
-         * <p>
+         * <p>The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you want to use a non-root user group, make sure that the user group exists in the instances.</p>
+         * </blockquote>
          * 
-         * >  If you want to use a non-root user group, make sure that the user group exists in the instances.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder fileGroup(String fileGroup) {
             this.putQueryParameter("FileGroup", fileGroup);
@@ -369,10 +386,11 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The permissions on the file. This parameter takes effect only for Linux instances. You can configure this parameter in the same way as you configure the chmod command.
-         * <p>
+         * <p>The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you configure the chmod command.</p>
+         * <p>Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have the read-only permissions on the file.</p>
          * 
-         * Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have the read-only permissions on the file.
+         * <strong>example:</strong>
+         * <p>0644</p>
          */
         public Builder fileMode(String fileMode) {
             this.putQueryParameter("FileMode", fileMode);
@@ -381,10 +399,13 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The owner of the file. This parameter takes effect only for Linux instances. Default value: root. The value can be up to 64 characters in length.
-         * <p>
+         * <p>The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you want to use a non-root user, make sure that the user exists in the instances.</p>
+         * </blockquote>
          * 
-         * >  If you want to use a non-root user, make sure that the user exists in the instances.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder fileOwner(String fileOwner) {
             this.putQueryParameter("FileOwner", fileOwner);
@@ -393,16 +414,24 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The ID of instance N to which to send the file. Up to 50 instance IDs can be specified in each request. Valid values of N: 1 to 50.
+         * <p>The IDs of instances to which to send the file. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp185dy2o3o6n****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
         }
 
         /**
-         * The name of the file. The name supports all character sets and can be up to 255 characters in length.
+         * <p>The name of the file. The name can be up to 255 characters in length and can contain any characters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file.txt</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -411,13 +440,15 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.
-         * <p>
+         * <p>Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: overwrites the file.
-         * *   false: does not overwrite the file.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -444,7 +475,11 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The region ID of the instance to which to send the file. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance to which to send the file. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -453,11 +488,14 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. When you specify this parameter, take note of the following items:
-         * <p>
+         * <p>The ID of the resource group. When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>The instance specified by the InstanceId parameter must belong to the specified resource group.</li>
+         * <li>If you specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> operation to query file sending results in the specified resource group.</li>
+         * </ul>
          * 
-         * *   The ECS instance specified by the InstanceId parameter must belong to this resource group.
-         * *   If you specify this parameter, you can call the [DescribeSendFileResults](~~184117~~) operation to query file sending results in the specified resource group.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -484,16 +522,20 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The tags to add to the file sending task.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance. The value supports all character sets and cannot exceed 255 characters in length.
+         * <p>The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance. The value cannot exceed 255 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         public Builder targetDir(String targetDir) {
             this.putQueryParameter("TargetDir", targetDir);
@@ -502,13 +544,15 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The timeout period for the file sending task. Unit: seconds.
-         * <p>
+         * <p>The timeout period for the file sending task. Unit: seconds.</p>
+         * <ul>
+         * <li>A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.</li>
+         * <li>If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.</li>
+         * </ul>
+         * <p>Default value: 60.</p>
          * 
-         * *   A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.
-         * *   If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.
-         * 
-         * Default value: 60.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -523,11 +567,17 @@ public class SendFileRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SendFileRequest} extends {@link TeaModel}
+     *
+     * <p>SendFileRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -562,12 +612,12 @@ public class SendFileRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -575,10 +625,11 @@ public class SendFileRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateKmsInstanceBindVpcRequest</p>
  */
 public class UpdateKmsInstanceBindVpcRequest extends Request {
-    @Query
-    @NameInMap("BindVpcs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindVpcs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindVpcs;
 
-    @Query
-    @NameInMap("KmsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String kmsInstanceId;
 
     private UpdateKmsInstanceBindVpcRequest(Builder builder) {
@@ -70,7 +69,15 @@ public class UpdateKmsInstanceBindVpcRequest extends Request {
         } 
 
         /**
-         * BindVpcs.
+         * The VPC configuration. The configuration of each VPC contains the following content:
+         * <p>
+         * 
+         * *   VpcId: the ID of the VPC.
+         * *   VSwitchId: the vSwitch in the VPC.
+         * *   RegionID: the ID of the region to which the VPC belongs.
+         * *   VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.
+         * 
+         * Format: `[{"VpcId":"${VpcId}","VSwitchId":"${VSwitchId}","RegionId":"${RegionId}","VpcOwnerId":${VpcOwnerId}},..]`.
          */
         public Builder bindVpcs(String bindVpcs) {
             this.putQueryParameter("BindVpcs", bindVpcs);
@@ -79,7 +86,7 @@ public class UpdateKmsInstanceBindVpcRequest extends Request {
         }
 
         /**
-         * KmsInstanceId.
+         * The ID of the KMS instance.
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.putQueryParameter("KmsInstanceId", kmsInstanceId);

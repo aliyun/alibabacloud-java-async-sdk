@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateEventBridgeIntegrationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateEventBridgeIntegrationResponseBody</p>
  */
 public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
-    @NameInMap("EventBridgeIntegration")
+    @com.aliyun.core.annotation.NameInMap("EventBridgeIntegration")
     private EventBridgeIntegration eventBridgeIntegration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateEventBridgeIntegrationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the EventBridge integration.
+         * <p>The information about the EventBridge integration.</p>
          */
         public Builder eventBridgeIntegration(EventBridgeIntegration eventBridgeIntegration) {
             this.eventBridgeIntegration = eventBridgeIntegration;
@@ -58,7 +63,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B289756-E791-5842-BCBD-AD414C******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrUpdateEventBridgeIntegrationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrUpdateEventBridgeIntegrationResponseBody</p>
+     */
     public static class EventBridgeIntegration extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("AccessSecret")
+        @com.aliyun.core.annotation.NameInMap("AccessSecret")
         private String accessSecret;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("EventBusRegionId")
+        @com.aliyun.core.annotation.NameInMap("EventBusRegionId")
         private String eventBusRegionId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private EventBridgeIntegration(Builder builder) {
@@ -194,7 +208,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The AccessKey ID that is used to connect to EventBridge.
+             * <p>The AccessKey ID that is used to connect to EventBridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc******************</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -202,7 +219,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey secret that is used to connect to EventBridge.
+             * <p>The AccessKey secret that is used to connect to EventBridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc******************</p>
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -210,7 +230,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the EventBridge integration.
+             * <p>The description of the EventBridge integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +241,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of EventBridge.
+             * <p>The public endpoint of EventBridge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxx">http://xxxxx</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -226,7 +252,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event bus.
+             * <p>The name of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EventBus_Test</p>
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -234,7 +263,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the event bus.
+             * <p>The region ID of the event bus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder eventBusRegionId(String eventBusRegionId) {
                 this.eventBusRegionId = eventBusRegionId;
@@ -242,7 +274,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EventBridge integration.
+             * <p>The ID of the EventBridge integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -250,7 +285,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the EventBridge integration.
+             * <p>The name of the EventBridge integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EventBridge_Test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +296,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The event source.
+             * <p>The event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms</p>
              */
             public Builder source(String source) {
                 this.source = source;

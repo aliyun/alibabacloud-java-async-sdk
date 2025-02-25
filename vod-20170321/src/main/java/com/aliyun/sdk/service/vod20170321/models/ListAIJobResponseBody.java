@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAIJobResponseBody} extends {@link TeaModel}
  *
  * <p>ListAIJobResponseBody</p>
  */
 public class ListAIJobResponseBody extends TeaModel {
-    @NameInMap("AIJobList")
+    @com.aliyun.core.annotation.NameInMap("AIJobList")
     private AIJobList AIJobList;
 
-    @NameInMap("NonExistAIJobIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistAIJobIds")
     private NonExistAIJobIds nonExistAIJobIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAIJobResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListAIJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of jobs.
+         * <p>The list of jobs.</p>
          */
         public Builder AIJobList(AIJobList AIJobList) {
             this.AIJobList = AIJobList;
@@ -70,7 +75,7 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the jobs that do not exist.
+         * <p>The IDs of the jobs that do not exist.</p>
          */
         public Builder nonExistAIJobIds(NonExistAIJobIds nonExistAIJobIds) {
             this.nonExistAIJobIds = nonExistAIJobIds;
@@ -78,7 +83,10 @@ public class ListAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8233A0E4-E112-44*****58-2BCED1B88173</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,32 +99,38 @@ public class ListAIJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAIJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAIJobResponseBody</p>
+     */
     public static class AIJob extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AIJob(Builder builder) {
@@ -214,7 +228,10 @@ public class ListAIJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error code. This parameter is returned if the value of Status is fail.
+             * <p>The error code. This parameter is returned if the value of Status is fail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -222,7 +239,10 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-28T02:04:47Z</p>
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -230,7 +250,10 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-28T02:04:32Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +261,10 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data. The value is a JSON string. For more information, see [AITemplateConfig](~~89863~~).
+             * <p>The returned data. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/89863.html">AITemplateConfig</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;OrigASRData&quot;:{&quot;AsrTextList&quot;:[{&quot;EndTime&quot;:700,&quot;StartTime&quot;:0,&quot;Text&quot;:&quot;Yes.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:85},{&quot;EndTime&quot;:3750,&quot;StartTime&quot;:1630,&quot;Text&quot;:&quot;No.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:28},{&quot;EndTime&quot;:5910,&quot;StartTime&quot;:4020,&quot;Text&quot;:&quot;Of course.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:95},{&quot;EndTime&quot;:12750,&quot;StartTime&quot;:10090,&quot;Text&quot;:&quot;Message.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:45},{&quot;EndTime&quot;:25230,&quot;StartTime&quot;:13590,&quot;Text&quot;:&quot;Hello, good afternoon.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:20},{&quot;EndTime&quot;:30000,&quot;StartTime&quot;:28220,&quot;Text&quot;:&quot;Yes.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:33}],&quot;Duration&quot;:&quot;30016&quot;}}</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -246,7 +272,10 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a718a3a1e8bb42ee3bc88921e94****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -254,7 +283,10 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video file.
+             * <p>The ID of the video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3D3D12340d9401fab46a0b847****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -262,7 +294,10 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The error message. This parameter is returned if the value of Status is fail.
+             * <p>The error message. This parameter is returned if the value of Status is fail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -270,13 +305,16 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong>: The job is successful.</li>
+             * <li><strong>fail</strong>: The job failed.</li>
+             * <li><strong>init</strong>: The job is being initialized.</li>
+             * <li><strong>Processing</strong>: The job is in progress.</li>
+             * </ul>
              * 
-             * *   **success**: The job is successful.
-             * *   **fail**: The job failed.
-             * *   **init**: The job is being initialized.
-             * *   **Processing**: The job is in progress.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -284,11 +322,14 @@ public class ListAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the job. Valid values:
-             * <p>
+             * <p>The type of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>AIMediaDNA</strong>: video fingerprinting</li>
+             * <li><strong>AIVideoTag</strong>: smart tagging</li>
+             * </ul>
              * 
-             * *   **AIMediaDNA**: video fingerprinting
-             * *   **AIVideoTag**: smart tagging
+             * <strong>example:</strong>
+             * <p>AIVideoTag</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -302,9 +343,15 @@ public class ListAIJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAIJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAIJobResponseBody</p>
+     */
     public static class AIJobList extends TeaModel {
-        @NameInMap("AIJob")
-        private java.util.List < AIJob> AIJob;
+        @com.aliyun.core.annotation.NameInMap("AIJob")
+        private java.util.List<AIJob> AIJob;
 
         private AIJobList(Builder builder) {
             this.AIJob = builder.AIJob;
@@ -321,17 +368,17 @@ public class ListAIJobResponseBody extends TeaModel {
         /**
          * @return AIJob
          */
-        public java.util.List < AIJob> getAIJob() {
+        public java.util.List<AIJob> getAIJob() {
             return this.AIJob;
         }
 
         public static final class Builder {
-            private java.util.List < AIJob> AIJob; 
+            private java.util.List<AIJob> AIJob; 
 
             /**
              * AIJob.
              */
-            public Builder AIJob(java.util.List < AIJob> AIJob) {
+            public Builder AIJob(java.util.List<AIJob> AIJob) {
                 this.AIJob = AIJob;
                 return this;
             }
@@ -343,9 +390,15 @@ public class ListAIJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAIJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAIJobResponseBody</p>
+     */
     public static class NonExistAIJobIds extends TeaModel {
-        @NameInMap("String")
-        private java.util.List < String > string;
+        @com.aliyun.core.annotation.NameInMap("String")
+        private java.util.List<String> string;
 
         private NonExistAIJobIds(Builder builder) {
             this.string = builder.string;
@@ -362,17 +415,17 @@ public class ListAIJobResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }

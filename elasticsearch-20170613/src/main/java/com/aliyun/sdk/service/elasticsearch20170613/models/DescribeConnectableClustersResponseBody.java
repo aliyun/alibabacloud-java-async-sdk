@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConnectableClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConnectableClustersResponseBody</p>
  */
 public class DescribeConnectableClustersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private DescribeConnectableClustersResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConnectableClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConnectableClustersResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("instances")
+        @com.aliyun.core.annotation.NameInMap("instances")
         private String instances;
 
-        @NameInMap("networkType")
+        @com.aliyun.core.annotation.NameInMap("networkType")
         private String networkType;
 
         private Result(Builder builder) {

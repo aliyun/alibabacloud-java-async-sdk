@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackendRequest} extends {@link RequestModel}
  *
  * <p>CreateBackendRequest</p>
  */
 public class CreateBackendRequest extends Request {
-    @Query
-    @NameInMap("BackendName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendName;
 
-    @Query
-    @NameInMap("BackendType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendType;
 
-    @Query
-    @NameInMap("CreateEventBridgeServiceLinkedRole")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateEventBridgeServiceLinkedRole")
     private Boolean createEventBridgeServiceLinkedRole;
 
-    @Query
-    @NameInMap("CreateSlr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateSlr")
     private Boolean createSlr;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateBackendRequest(Builder builder) {
         super(builder);
@@ -111,7 +116,7 @@ public class CreateBackendRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -122,7 +127,7 @@ public class CreateBackendRequest extends Request {
         private Boolean createSlr; 
         private String description; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -140,7 +145,11 @@ public class CreateBackendRequest extends Request {
         } 
 
         /**
-         * BackendName.
+         * <p>The name of the backend service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testBackendService</p>
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -149,7 +158,11 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * BackendType.
+         * <p>The type of the backend service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -158,7 +171,10 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * CreateEventBridgeServiceLinkedRole.
+         * <p>Specifies to create a EventBridge service-linked role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder createEventBridgeServiceLinkedRole(Boolean createEventBridgeServiceLinkedRole) {
             this.putQueryParameter("CreateEventBridgeServiceLinkedRole", createEventBridgeServiceLinkedRole);
@@ -167,7 +183,10 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * CreateSlr.
+         * <p>Specifies to create a service-linked role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder createSlr(Boolean createSlr) {
             this.putQueryParameter("CreateSlr", createSlr);
@@ -176,7 +195,10 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release data api 411055691504981</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -194,9 +216,9 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -209,11 +231,17 @@ public class CreateBackendRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBackendRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBackendRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -248,7 +276,10 @@ public class CreateBackendRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -256,7 +287,10 @@ public class CreateBackendRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

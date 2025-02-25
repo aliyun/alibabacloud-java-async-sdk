@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkInterfacePermissionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworkInterfacePermissionsRequest</p>
  */
 public class DescribeNetworkInterfacePermissionsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("NetworkInterfacePermissionId")
-    private java.util.List < String > networkInterfacePermissionId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermissionId")
+    private java.util.List<String> networkInterfacePermissionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeNetworkInterfacePermissionsRequest(Builder builder) {
@@ -97,7 +102,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
     /**
      * @return networkInterfacePermissionId
      */
-    public java.util.List < String > getNetworkInterfacePermissionId() {
+    public java.util.List<String> getNetworkInterfacePermissionId() {
         return this.networkInterfacePermissionId;
     }
 
@@ -153,7 +158,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacePermissionsRequest, Builder> {
         private String sourceRegionId; 
         private String networkInterfaceId; 
-        private java.util.List < String > networkInterfacePermissionId; 
+        private java.util.List<String> networkInterfacePermissionId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -190,7 +195,10 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The ID of ENI N. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.
+         * <p>The ID of ENI N. You must specify <code>NetworkInterfaceId</code> or <code>NetworkInterfacePermissionId.N</code> to determine the query range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp17pdijfczax****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -199,9 +207,12 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.
+         * <p>The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-perm-bp1cs4lwn56lfb****</p>
          */
-        public Builder networkInterfacePermissionId(java.util.List < String > networkInterfacePermissionId) {
+        public Builder networkInterfacePermissionId(java.util.List<String> networkInterfacePermissionId) {
             this.putQueryParameter("NetworkInterfacePermissionId", networkInterfacePermissionId);
             this.networkInterfacePermissionId = networkInterfacePermissionId;
             return this;
@@ -226,12 +237,12 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -240,12 +251,12 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,7 +265,11 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI permission. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

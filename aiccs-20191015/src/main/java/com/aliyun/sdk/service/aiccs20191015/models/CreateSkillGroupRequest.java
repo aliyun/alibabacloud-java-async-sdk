@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSkillGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateSkillGroupRequest</p>
  */
 public class CreateSkillGroupRequest extends Request {
-    @Body
-    @NameInMap("ChannelType")
-    @Validation(required = true, maximum = 7)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 7)
     private Integer channelType;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DepartmentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DepartmentId")
     private Long departmentId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("SkillGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SkillGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skillGroupName;
 
     private CreateSkillGroupRequest(Builder builder) {
@@ -141,7 +146,10 @@ public class CreateSkillGroupRequest extends Request {
         } 
 
         /**
-         * ChannelType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder channelType(Integer channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -159,7 +167,7 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * 部门ID
+         * DepartmentId.
          */
         public Builder departmentId(Long departmentId) {
             this.putBodyParameter("DepartmentId", departmentId);
@@ -186,7 +194,10 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -195,7 +206,7 @@ public class CreateSkillGroupRequest extends Request {
         }
 
         /**
-         * SkillGroupName.
+         * <p>This parameter is required.</p>
          */
         public Builder skillGroupName(String skillGroupName) {
             this.putBodyParameter("SkillGroupName", skillGroupName);

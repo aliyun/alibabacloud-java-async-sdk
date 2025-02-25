@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceSourceRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceSourceRequest</p>
  */
 public class UpdateServiceSourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("IngressOptionsRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressOptionsRequest")
     private IngressOptionsRequest ingressOptionsRequest;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PathList")
-    private java.util.List < String > pathList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathList")
+    private java.util.List<String> pathList;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private UpdateServiceSourceRequest(Builder builder) {
@@ -131,7 +136,7 @@ public class UpdateServiceSourceRequest extends Request {
     /**
      * @return pathList
      */
-    public java.util.List < String > getPathList() {
+    public java.util.List<String> getPathList() {
         return this.pathList;
     }
 
@@ -157,7 +162,7 @@ public class UpdateServiceSourceRequest extends Request {
         private Long id; 
         private IngressOptionsRequest ingressOptionsRequest; 
         private String name; 
-        private java.util.List < String > pathList; 
+        private java.util.List<String> pathList; 
         private String source; 
         private String type; 
 
@@ -180,11 +185,14 @@ public class UpdateServiceSourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese.</li>
+         * <li>en: English.</li>
+         * </ul>
          * 
-         * *   zh: Chinese.
-         * *   en: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -193,7 +201,10 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The address.
+         * <p>The address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9ad2a0717032427e920754e25b49e3b5</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -202,7 +213,10 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>429</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -211,7 +225,10 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cdd1bb9bfb8341e9805f931a3ba1f4c6</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -220,7 +237,10 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The ID of the service source.
+         * <p>The ID of the service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -229,7 +249,10 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The configurations of Ingress resources.
+         * <p>The configurations of Ingress resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
@@ -239,7 +262,10 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>istio</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -248,9 +274,9 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * An array of service root paths.
+         * <p>An array of service root paths.</p>
          */
-        public Builder pathList(java.util.List < String > pathList) {
+        public Builder pathList(java.util.List<String> pathList) {
             String pathListShrink = shrink(pathList, "PathList", "json");
             this.putQueryParameter("PathList", pathListShrink);
             this.pathList = pathList;
@@ -258,11 +284,14 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The service source. Valid values:
-         * <p>
+         * <p>The service source. Valid values:</p>
+         * <ul>
+         * <li>K8s: ACK cluster.</li>
+         * <li>MSE: Nacos instance.</li>
+         * </ul>
          * 
-         * *   K8s: ACK cluster.
-         * *   MSE: Nacos instance.
+         * <strong>example:</strong>
+         * <p>K8s</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -271,11 +300,14 @@ public class UpdateServiceSourceRequest extends Request {
         }
 
         /**
-         * The type of the service source. Valid values:
-         * <p>
+         * <p>The type of the service source. Valid values:</p>
+         * <ul>
+         * <li>K8s: ACK cluster.</li>
+         * <li>NACOS: Nacos instance.</li>
+         * </ul>
          * 
-         * *   K8s: ACK cluster.
-         * *   NACOS: Nacos instance.
+         * <strong>example:</strong>
+         * <p>K8s</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -290,17 +322,23 @@ public class UpdateServiceSourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateServiceSourceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateServiceSourceRequest</p>
+     */
     public static class IngressOptionsRequest extends TeaModel {
-        @NameInMap("EnableIngress")
+        @com.aliyun.core.annotation.NameInMap("EnableIngress")
         private Boolean enableIngress;
 
-        @NameInMap("EnableStatus")
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
         private Boolean enableStatus;
 
-        @NameInMap("IngressClass")
+        @com.aliyun.core.annotation.NameInMap("IngressClass")
         private String ingressClass;
 
-        @NameInMap("WatchNamespace")
+        @com.aliyun.core.annotation.NameInMap("WatchNamespace")
         private String watchNamespace;
 
         private IngressOptionsRequest(Builder builder) {
@@ -353,7 +391,10 @@ public class UpdateServiceSourceRequest extends Request {
             private String watchNamespace; 
 
             /**
-             * Specifies whether to enable Ingress.
+             * <p>Specifies whether to enable Ingress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -361,7 +402,10 @@ public class UpdateServiceSourceRequest extends Request {
             }
 
             /**
-             * Specifies whether to update the Ingress status.
+             * <p>Specifies whether to update the Ingress status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -369,7 +413,10 @@ public class UpdateServiceSourceRequest extends Request {
             }
 
             /**
-             * Specifies whether to monitor Ingress classes.
+             * <p>Specifies whether to monitor Ingress classes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.test.xxx</p>
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -377,7 +424,10 @@ public class UpdateServiceSourceRequest extends Request {
             }
 
             /**
-             * The namespace whose resources you want to monitor.
+             * <p>The namespace whose resources you want to monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;

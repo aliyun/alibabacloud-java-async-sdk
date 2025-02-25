@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageInfosRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageInfosRequest</p>
  */
 public class DescribeImageInfosRequest extends Request {
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
     private DescribeImageInfosRequest(Builder builder) {
@@ -54,7 +59,14 @@ public class DescribeImageInfosRequest extends Request {
         } 
 
         /**
-         * OsType.
+         * <p>The operating system (OS). You can specify only one OS in a request. If you do not specify a value for this parameter, images for all supported OSs are queried. Valid values:</p>
+         * <ul>
+         * <li>linux</li>
+         * <li>windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);

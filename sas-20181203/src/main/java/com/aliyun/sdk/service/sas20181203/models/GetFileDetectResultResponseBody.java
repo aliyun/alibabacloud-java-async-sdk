@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDetectResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileDetectResultResponseBody</p>
  */
 public class GetFileDetectResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultList")
-    private java.util.List < ResultList> resultList;
+    @com.aliyun.core.annotation.NameInMap("ResultList")
+    private java.util.List<ResultList> resultList;
 
     private GetFileDetectResultResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     /**
      * @return resultList
      */
-    public java.util.List < ResultList> getResultList() {
+    public java.util.List<ResultList> getResultList() {
         return this.resultList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResultList> resultList; 
+        private java.util.List<ResultList> resultList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of file detection results.
+         * <p>An array that consists of file detection results.</p>
          */
-        public Builder resultList(java.util.List < ResultList> resultList) {
+        public Builder resultList(java.util.List<ResultList> resultList) {
             this.resultList = resultList;
             return this;
         }
@@ -71,30 +79,40 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileDetectResultResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Compress")
+        private Boolean compress;
+
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private String ext;
 
-        @NameInMap("HashKey")
+        @com.aliyun.core.annotation.NameInMap("HashKey")
         private String hashKey;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Integer result;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("VirusType")
+        @com.aliyun.core.annotation.NameInMap("VirusType")
         private String virusType;
 
         private ResultList(Builder builder) {
             this.code = builder.code;
+            this.compress = builder.compress;
             this.ext = builder.ext;
             this.hashKey = builder.hashKey;
             this.message = builder.message;
@@ -116,6 +134,13 @@ public class GetFileDetectResultResponseBody extends TeaModel {
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return compress
+         */
+        public Boolean getCompress() {
+            return this.compress;
         }
 
         /**
@@ -162,6 +187,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
+            private Boolean compress; 
             private String ext; 
             private String hashKey; 
             private String message; 
@@ -170,7 +196,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             private String virusType; 
 
             /**
-             * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+             * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -178,7 +207,25 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about the file detection result.
+             * <p>Whether to identify as a compressed package. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder compress(Boolean compress) {
+                this.compress = compress;
+                return this;
+            }
+
+            /**
+             * <p>The extended information about the file detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;HighLight&quot;:[[23245,23212]]}</p>
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -186,7 +233,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the file. Only MD5 hash values are supported.
+             * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a212417e65c26ff133cfff28f6c****</p>
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
@@ -194,7 +244,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -202,12 +255,15 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The file detection result. Valid values:
-             * <p>
+             * <p>The file detection result. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The file is normal.</li>
+             * <li><strong>1</strong>: The file is suspicious.</li>
+             * <li><strong>3</strong>: The detection is in progress.</li>
+             * </ul>
              * 
-             * *   **0**: The file is normal.
-             * *   **1**: The file is suspicious.
-             * *   **3**: The detection is in progress.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder result(Integer result) {
                 this.result = result;
@@ -215,10 +271,13 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of file detection result.
-             * <p>
+             * <p>The score of file detection result.</p>
+             * <blockquote>
+             * <p>A higher score indicates a more suspicious file.</p>
+             * </blockquote>
              * 
-             * > A higher score indicates a more suspicious file.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -226,31 +285,33 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the virus. Valid values:
-             * <p>
+             * <p>The type of the virus. Valid values:</p>
+             * <ul>
+             * <li><strong>Trojan</strong>: trojan horse</li>
+             * <li><strong>WebShell</strong>: webshell</li>
+             * <li><strong>Backdoor</strong>: backdoor program</li>
+             * <li><strong>RansomWare</strong>: ransomware</li>
+             * <li><strong>Scanner</strong>: scanner</li>
+             * <li><strong>Stealer</strong>: tool that is used to steal information</li>
+             * <li><strong>Malbaseware</strong>: tainted basic software</li>
+             * <li><strong>Hacktool</strong>: attacker tool</li>
+             * <li><strong>Engtest</strong>: engine test program</li>
+             * <li><strong>Downloader</strong>: trojan downloader</li>
+             * <li><strong>Virus</strong>: infectious virus</li>
+             * <li><strong>Miner</strong>: mining program</li>
+             * <li><strong>Worm</strong>: worm</li>
+             * <li><strong>DDoS</strong>: DDoS trojan</li>
+             * <li><strong>Malware</strong>: malicious program</li>
+             * <li><strong>RiskWare</strong>: software that has risks</li>
+             * <li><strong>Proxytool</strong>: proxy</li>
+             * <li><strong>Suspicious</strong>: suspicious program</li>
+             * <li><strong>MalScript</strong>: malicious script</li>
+             * <li><strong>Rootkit</strong>: rootkit</li>
+             * <li><strong>Exploit</strong>: exploit</li>
+             * </ul>
              * 
-             * *   **Trojan**: self-mutating trojan
-             * *   **WebShell**: webshell
-             * *   **Backdoor**: backdoor program
-             * *   **RansomWare**: ransomware
-             * *   **Scanner**: scanner
-             * *   **Stealer**: tool that is used to steal information
-             * *   **Malbaseware**: tainted basic software
-             * *   **Hacktool**: attacker tool
-             * *   **Engtest**: engine test program
-             * *   **Downloader**: trojan downloader
-             * *   **Virus**: infectious virus
-             * *   **Miner**: mining program
-             * *   **Worm**: worm
-             * *   **DDoS**: DDoS trojan
-             * *   **Malware**: malicious program
-             * *   **Backdoor**: reverse shell
-             * *   **RiskWare**: software that has risks
-             * *   **Proxytool**: proxy
-             * *   **Suspicious**: suspicious program
-             * *   **MalScript**: malicious script
-             * *   **Rootkit**: rootkit
-             * *   **Exploit**: exploit
+             * <strong>example:</strong>
+             * <p>WEBSHELL</p>
              */
             public Builder virusType(String virusType) {
                 this.virusType = virusType;

@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogstashRequest} extends {@link RequestModel}
  *
  * <p>ListLogstashRequest</p>
  */
 public class ListLogstashRequest extends Request {
-    @Query
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Query
-    @NameInMap("version")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private ListLogstashRequest(Builder builder) {
@@ -138,7 +138,10 @@ public class ListLogstashRequest extends Request {
         } 
 
         /**
-         * rg-acfm2h5vbzd\*\*\*\*
+         * <p>rg-acfm2h5vbzd****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-abc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -147,7 +150,10 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * \[{"tagKey":"key1","tagValue":"value1"}]
+         * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-n6w1o5jq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -156,7 +162,10 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * ls-cn-n6w1o5jq\*\*\*\*
+         * <p>ls-cn-n6w1o5jq****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -165,7 +174,10 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * Details of the request header.
+         * <p>Details of the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2h5vbzd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -174,7 +186,10 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * 5.5.3\_with_X-Pack
+         * <p>5.5.3_with_X-Pack</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -183,7 +198,10 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -192,7 +210,10 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.5.3_with_X-Pack</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

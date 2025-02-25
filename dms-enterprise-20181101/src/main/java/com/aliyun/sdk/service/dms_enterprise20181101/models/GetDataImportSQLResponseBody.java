@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataImportSQLResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataImportSQLResponseBody</p>
  */
 public class GetDataImportSQLResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLDetail")
+    @com.aliyun.core.annotation.NameInMap("SQLDetail")
     private SQLDetail SQLDetail;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataImportSQLResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B43AD641-49C2-5299-9E06-1B37EC1B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * The details of SQL statements.
+         * <p>The details of SQL statements.</p>
          */
         public Builder SQLDetail(SQLDetail SQLDetail) {
             this.SQLDetail = SQLDetail;
@@ -118,11 +132,14 @@ public class GetDataImportSQLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,8 +152,14 @@ public class GetDataImportSQLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataImportSQLResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataImportSQLResponseBody</p>
+     */
     public static class SQLDetail extends TeaModel {
-        @NameInMap("ExecSql")
+        @com.aliyun.core.annotation.NameInMap("ExecSql")
         private String execSql;
 
         private SQLDetail(Builder builder) {
@@ -162,7 +185,10 @@ public class GetDataImportSQLResponseBody extends TeaModel {
             private String execSql; 
 
             /**
-             * The SQL script.
+             * <p>The SQL script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>insert into t1 values (1);</p>
              */
             public Builder execSql(String execSql) {
                 this.execSql = execSql;

@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBNodesRequest} extends {@link RequestModel}
  *
  * <p>CreateDBNodesRequest</p>
  */
 public class CreateDBNodesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBNode")
-    @Validation(required = true)
-    private java.util.List < DBNode> DBNode;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DBNode> DBNode;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateDBNodesRequest(Builder builder) {
@@ -88,7 +93,7 @@ public class CreateDBNodesRequest extends Request {
     /**
      * @return DBNode
      */
-    public java.util.List < DBNode> getDBNode() {
+    public java.util.List<DBNode> getDBNode() {
         return this.DBNode;
     }
 
@@ -130,7 +135,7 @@ public class CreateDBNodesRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDBNodesRequest, Builder> {
         private String clientToken; 
         private String DBInstanceId; 
-        private java.util.List < DBNode> DBNode; 
+        private java.util.List<DBNode> DBNode; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -154,10 +159,11 @@ public class CreateDBNodesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -166,7 +172,11 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+         * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze450g4ctg6t****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -175,9 +185,10 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * An array that consists of the details of the node.
+         * <p>The details of the node.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder DBNode(java.util.List < DBNode> DBNode) {
+        public Builder DBNode(java.util.List<DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
             this.putQueryParameter("DBNode", DBNodeShrink);
             this.DBNode = DBNode;
@@ -203,7 +214,10 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to obtain the ID of the resource group.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -236,17 +250,27 @@ public class CreateDBNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBNodesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBNodesRequest</p>
+     */
     public static class DBNode extends TeaModel {
-        @NameInMap("classCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("classCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String classCode;
 
-        @NameInMap("zoneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
+        private String vswitchId;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private DBNode(Builder builder) {
             this.classCode = builder.classCode;
+            this.vswitchId = builder.vswitchId;
             this.zoneId = builder.zoneId;
         }
 
@@ -266,6 +290,13 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -274,10 +305,15 @@ public class CreateDBNodesRequest extends Request {
 
         public static final class Builder {
             private String classCode; 
+            private String vswitchId; 
             private String zoneId; 
 
             /**
-             * The specification information of the node.
+             * <p>The specification information of the node.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.n2.medium.xc</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -285,7 +321,22 @@ public class CreateDBNodesRequest extends Request {
             }
 
             /**
-             * The zone ID of the node.
+             * <p>The vSwitch ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1sxxsodv28ey5dl****</p>
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the zone in which the node is deployed.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

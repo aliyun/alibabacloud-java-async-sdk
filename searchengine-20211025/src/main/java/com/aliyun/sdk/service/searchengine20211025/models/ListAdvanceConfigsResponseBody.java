@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAdvanceConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAdvanceConfigsResponseBody</p>
  */
 public class ListAdvanceConfigsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
     private ListAdvanceConfigsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FB0325E-8C37-5525-96AC-0333523170A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * <p>The advanced configurations.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -71,17 +79,23 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAdvanceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAdvanceConfigsResponseBody</p>
+     */
     public static class Files extends TeaModel {
-        @NameInMap("fullPathName")
+        @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
 
-        @NameInMap("isDir")
+        @com.aliyun.core.annotation.NameInMap("isDir")
         private Boolean isDir;
 
-        @NameInMap("isTemplate")
+        @com.aliyun.core.annotation.NameInMap("isTemplate")
         private Boolean isTemplate;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Files(Builder builder) {
@@ -134,7 +148,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * fullPathName.
+             * <p>The absolute path in which the file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path/wpd/nae</p>
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -142,7 +159,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * isDir.
+             * <p>Indicates whether the file is a directory. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -150,7 +170,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * isTemplate.
+             * <p>Indicates whether the file is a template. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -158,7 +181,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_name_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -172,31 +198,45 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAdvanceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAdvanceConfigsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("advanceConfigType")
+        private String advanceConfigType;
+
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("contentType")
+        @com.aliyun.core.annotation.NameInMap("contentType")
         private String contentType;
 
-        @NameInMap("desc")
+        @com.aliyun.core.annotation.NameInMap("creator")
+        private String creator;
+
+        @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
 
-        @NameInMap("files")
-        private java.util.List < Files> files;
+        @com.aliyun.core.annotation.NameInMap("files")
+        private java.util.List<Files> files;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private Result(Builder builder) {
+            this.advanceConfigType = builder.advanceConfigType;
             this.content = builder.content;
             this.contentType = builder.contentType;
+            this.creator = builder.creator;
             this.desc = builder.desc;
             this.files = builder.files;
             this.name = builder.name;
@@ -210,6 +250,13 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return advanceConfigType
+         */
+        public String getAdvanceConfigType() {
+            return this.advanceConfigType;
         }
 
         /**
@@ -227,6 +274,13 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return creator
+         */
+        public String getCreator() {
+            return this.creator;
+        }
+
+        /**
          * @return desc
          */
         public String getDesc() {
@@ -236,7 +290,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         /**
          * @return files
          */
-        public java.util.List < Files> getFiles() {
+        public java.util.List<Files> getFiles() {
             return this.files;
         }
 
@@ -262,16 +316,42 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String advanceConfigType; 
             private String content; 
             private String contentType; 
+            private String creator; 
             private String desc; 
-            private java.util.List < Files> files; 
+            private java.util.List<Files> files; 
             private String name; 
             private String status; 
             private Long updateTime; 
 
             /**
-             * 配置内容 http，git 请求时不为空
+             * <ul>
+             * <li>The type of the advanced configuration. Valid values: -ONLINE: online configuration</li>
+             * <li>-ONLINE_CAVA: online Cava configuration</li>
+             * <li>-ONLINE_PLUGIN: online plug-in configuration</li>
+             * <li>-ONLINE_QUERY: query configuration</li>
+             * <li>-OFFLINE_DICT: offline dictionary configuration</li>
+             * <li>-OFFLINE_TABLE: offline table configuration</li>
+             * <li>-OFFLINE_COMMON: offline configuration</li>
+             * <li>-OFFLINE_PLUGIN: offline plug-in configuration</li>
+             * <li>-OFFLINE_INDEX: index configuration</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
+             */
+            public Builder advanceConfigType(String advanceConfigType) {
+                this.advanceConfigType = advanceConfigType;
+                return this;
+            }
+
+            /**
+             * <p>The content of the advanced configuration that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;url&quot;:&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\&quot;}</a></p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -279,7 +359,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 配置内容的类型 (FILE, GIT, HTTP, ODPS)
+             * <p>The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -287,7 +370,21 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * desc.
+             * <p>The Alibaba Cloud account ID of the user who created the advanced configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
+             */
+            public Builder creator(String creator) {
+                this.creator = creator;
+                return this;
+            }
+
+            /**
+             * <p>The description of the advanced configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -295,15 +392,18 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * files.
+             * <p>The files.</p>
              */
-            public Builder files(java.util.List < Files> files) {
+            public Builder files(java.util.List<Files> files) {
                 this.files = files;
                 return this;
             }
 
             /**
-             * name.
+             * <p>The name of the advanced configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_index</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +411,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drafting</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -319,7 +422,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The time when the advanced configuration was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631070464000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

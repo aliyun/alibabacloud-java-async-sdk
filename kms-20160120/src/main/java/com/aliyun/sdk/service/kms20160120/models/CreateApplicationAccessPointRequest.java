@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApplicationAccessPointRequest</p>
  */
 public class CreateApplicationAccessPointRequest extends Request {
-    @Query
-    @NameInMap("AuthenticationMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationMethod")
     private String authenticationMethod;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Policies")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policies")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policies;
 
     private CreateApplicationAccessPointRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * AuthenticationMethod.
+         * The authentication method. Currently, only ClientKey is supported.
          */
         public Builder authenticationMethod(String authenticationMethod) {
             this.putQueryParameter("AuthenticationMethod", authenticationMethod);
@@ -107,7 +106,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the AAP.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +115,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the AAP.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -125,7 +124,10 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Policies.
+         * The permission policy.
+         * <p>
+         * 
+         * > You can bind up to three permission policies to each AAP.
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);

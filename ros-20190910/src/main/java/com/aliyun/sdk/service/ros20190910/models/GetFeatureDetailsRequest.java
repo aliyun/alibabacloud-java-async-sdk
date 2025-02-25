@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFeatureDetailsRequest} extends {@link RequestModel}
  *
  * <p>GetFeatureDetailsRequest</p>
  */
 public class GetFeatureDetailsRequest extends Request {
-    @Query
-    @NameInMap("Feature")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Feature")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String feature;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private GetFeatureDetailsRequest(Builder builder) {
@@ -70,13 +70,17 @@ public class GetFeatureDetailsRequest extends Request {
         } 
 
         /**
-         * The one or more features that you want to query. Valid values:
-         * <p>
+         * <p>The one or more features that you want to query. Valid values:</p>
+         * <ul>
+         * <li>Terraform: the Terraform hosting feature.</li>
+         * <li>ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</li>
+         * <li>TemplateScratch: the scenario feature.</li>
+         * <li>All: all features that are supported by ROS.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Terraform: the Terraform hosting feature.
-         * *   ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.
-         * *   TemplateScratch: the scenario feature.
-         * *   All: all features that are supported by ROS.
+         * <strong>example:</strong>
+         * <p>Terraform</p>
          */
         public Builder feature(String feature) {
             this.putQueryParameter("Feature", feature);
@@ -85,7 +89,11 @@ public class GetFeatureDetailsRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterVulStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterVulStatisticsResponseBody</p>
  */
 public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulStat")
+    @com.aliyun.core.annotation.NameInMap("VulStat")
     private VulStat vulStat;
 
     private DescribeClusterVulStatisticsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         private VulStat vulStat; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of the vulnerabilities.
+         * <p>The statistics of the vulnerabilities.</p>
          */
         public Builder vulStat(VulStat vulStat) {
             this.vulStat = vulStat;
@@ -71,14 +79,20 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterVulStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterVulStatisticsResponseBody</p>
+     */
     public static class VulStat extends TeaModel {
-        @NameInMap("AsapCount")
+        @com.aliyun.core.annotation.NameInMap("AsapCount")
         private String asapCount;
 
-        @NameInMap("LaterCount")
+        @com.aliyun.core.annotation.NameInMap("LaterCount")
         private String laterCount;
 
-        @NameInMap("NntfCount")
+        @com.aliyun.core.annotation.NameInMap("NntfCount")
         private String nntfCount;
 
         private VulStat(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             private String nntfCount; 
 
             /**
-             * The number of high-risk vulnerabilities.
+             * <p>The number of high-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder asapCount(String asapCount) {
                 this.asapCount = asapCount;
@@ -130,7 +147,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk vulnerabilities.
+             * <p>The number of medium-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder laterCount(String laterCount) {
                 this.laterCount = laterCount;
@@ -138,7 +158,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk vulnerabilities.
+             * <p>The number of low-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nntfCount(String nntfCount) {
                 this.nntfCount = nntfCount;

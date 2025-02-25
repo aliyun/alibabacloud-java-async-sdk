@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDetachedBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDetachedBackupsResponseBody</p>
  */
 public class DescribeDetachedBackupsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private String pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private String totalRecordCount;
 
     private DescribeDetachedBackupsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * Details about the backup sets.
+         * <p>Details about the backup sets.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>717B2382-BB14-4DCB-BBC2-32DBE0******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,44 +148,50 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDetachedBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDetachedBackupsResponseBody</p>
+     */
     public static class Backup extends TeaModel {
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("BackupSetSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSetSize")
         private String backupSetSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("BackupsLevel")
+        @com.aliyun.core.annotation.NameInMap("BackupsLevel")
         private String backupsLevel;
 
-        @NameInMap("ConsistentTime")
+        @com.aliyun.core.annotation.NameInMap("ConsistentTime")
         private String consistentTime;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("IsAvail")
+        @com.aliyun.core.annotation.NameInMap("IsAvail")
         private String isAvail;
 
-        @NameInMap("StoreStatus")
+        @com.aliyun.core.annotation.NameInMap("StoreStatus")
         private String storeStatus;
 
         private Backup(Builder builder) {
@@ -302,7 +325,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             private String storeStatus; 
 
             /**
-             * The end time of the backup task. The time is displayed in UTC.
+             * <p>The end time of the backup task. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-12T03:25:55Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -310,7 +336,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup set.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -318,7 +347,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup method. Only snapshot backups are supported. The value is set to **Snapshot**.
+             * <p>The backup method. Only snapshot backups are supported. The value is set to <strong>Snapshot</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Snapshot</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -326,11 +358,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup mode. Valid values:
-             * <p>
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Automated</strong></li>
+             * <li><strong>Manual</strong></li>
+             * </ul>
              * 
-             * *   **Automated**
-             * *   **Manual**
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -338,10 +373,13 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the backup set. Unit: bytes.
-             * <p>
+             * <p>The size of the backup set. Unit: bytes.</p>
+             * <blockquote>
+             * <p>After you delete the target snapshot backups, the storage space consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share certain data blocks.</p>
+             * </blockquote>
              * 
-             * > After you delete the target snapshot backups, the storage space consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share certain data blocks.
+             * <strong>example:</strong>
+             * <p>7251056</p>
              */
             public Builder backupSetSize(String backupSetSize) {
                 this.backupSetSize = backupSetSize;
@@ -349,7 +387,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the backup task. The time is displayed in UTC.
+             * <p>The start time of the backup task. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-12T03:25:44Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -357,11 +398,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup set. Valid values:
-             * <p>
+             * <p>The status of the backup set. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * *   **Success**
-             * *   **Failed**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -369,7 +413,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backup. Only full backups are supported. The value is set to **FullBackup**.
+             * <p>The type of the backup. Only full backups are supported. The value is set to <strong>FullBackup</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FullBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -377,11 +424,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the backup set. Valid values:
-             * <p>
+             * <p>The level of the backup set. Valid values:</p>
+             * <ul>
+             * <li><strong>Level-1</strong>: level-1 backup set</li>
+             * <li><strong>Level-2</strong>: level-2 backup set</li>
+             * </ul>
              * 
-             * *   **Level-1**: level-1 backup set
-             * *   **Level-2**: level-2 backup set
+             * <strong>example:</strong>
+             * <p>Level-2</p>
              */
             public Builder backupsLevel(String backupsLevel) {
                 this.backupsLevel = backupsLevel;
@@ -389,7 +439,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot checkpoint time. The value is a Unix timestamp.
+             * <p>The snapshot checkpoint time. The value is a Unix timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589253947</p>
              */
             public Builder consistentTime(String consistentTime) {
                 this.consistentTime = consistentTime;
@@ -397,7 +450,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-**************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -405,11 +461,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup set is available. Valid values:
-             * <p>
+             * <p>Indicates whether the backup set is available. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The data backup set is unavailable.</li>
+             * <li><strong>1</strong>: The data backup set is available.</li>
+             * </ul>
              * 
-             * *   **0**: The data backup set is unavailable.
-             * *   **1**: The data backup set is available.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;
@@ -417,11 +476,14 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup set can be deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the backup set can be deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: The backup set can be deleted.</li>
+             * <li><strong>Disabled</strong>: The backup set cannot be deleted.</li>
+             * </ul>
              * 
-             * *   **Enabled**: The backup set can be deleted.
-             * *   **Disabled**: The backup set cannot be deleted.
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder storeStatus(String storeStatus) {
                 this.storeStatus = storeStatus;
@@ -435,9 +497,15 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDetachedBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDetachedBackupsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Backup")
-        private java.util.List < Backup> backup;
+        @com.aliyun.core.annotation.NameInMap("Backup")
+        private java.util.List<Backup> backup;
 
         private Items(Builder builder) {
             this.backup = builder.backup;
@@ -454,17 +522,17 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         /**
          * @return backup
          */
-        public java.util.List < Backup> getBackup() {
+        public java.util.List<Backup> getBackup() {
             return this.backup;
         }
 
         public static final class Builder {
-            private java.util.List < Backup> backup; 
+            private java.util.List<Backup> backup; 
 
             /**
              * Backup.
              */
-            public Builder backup(java.util.List < Backup> backup) {
+            public Builder backup(java.util.List<Backup> backup) {
                 this.backup = backup;
                 return this;
             }

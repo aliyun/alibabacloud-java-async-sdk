@@ -39,62 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
-    @Override
-    public CompletableFuture<AddDeviceResponse> addDevice(AddDeviceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddDevice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddDeviceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddDeviceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<AddRegisteredDeviceResponse> addRegisteredDevice(AddRegisteredDeviceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRegisteredDevice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRegisteredDeviceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddRegisteredDeviceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<AddRegisteredVendorResponse> addRegisteredVendor(AddRegisteredVendorRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRegisteredVendor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRegisteredVendorResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddRegisteredVendorResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<AddRenderingDeviceInternetPortsResponse> addRenderingDeviceInternetPorts(AddRenderingDeviceInternetPortsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRenderingDeviceInternetPorts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRenderingDeviceInternetPortsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddRenderingDeviceInternetPortsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of AddVsPullStreamInfoConfig  AddVsPullStreamInfoConfigRequest
+     * @return AddVsPullStreamInfoConfigResponse
+     */
     @Override
     public CompletableFuture<AddVsPullStreamInfoConfigResponse> addVsPullStreamInfoConfig(AddVsPullStreamInfoConfigRequest request) {
         try {
@@ -109,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchBindDirectories  BatchBindDirectoriesRequest
+     * @return BatchBindDirectoriesResponse
+     */
     @Override
     public CompletableFuture<BatchBindDirectoriesResponse> batchBindDirectories(BatchBindDirectoriesRequest request) {
         try {
@@ -123,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchBindParentPlatformDevices  BatchBindParentPlatformDevicesRequest
+     * @return BatchBindParentPlatformDevicesResponse
+     */
     @Override
     public CompletableFuture<BatchBindParentPlatformDevicesResponse> batchBindParentPlatformDevices(BatchBindParentPlatformDevicesRequest request) {
         try {
@@ -137,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchBindPurchasedDevices  BatchBindPurchasedDevicesRequest
+     * @return BatchBindPurchasedDevicesResponse
+     */
     @Override
     public CompletableFuture<BatchBindPurchasedDevicesResponse> batchBindPurchasedDevices(BatchBindPurchasedDevicesRequest request) {
         try {
@@ -151,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchBindTemplate  BatchBindTemplateRequest
+     * @return BatchBindTemplateResponse
+     */
     @Override
     public CompletableFuture<BatchBindTemplateResponse> batchBindTemplate(BatchBindTemplateRequest request) {
         try {
@@ -165,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchBindTemplates  BatchBindTemplatesRequest
+     * @return BatchBindTemplatesResponse
+     */
     @Override
     public CompletableFuture<BatchBindTemplatesResponse> batchBindTemplates(BatchBindTemplatesRequest request) {
         try {
@@ -179,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchDeleteDevices  BatchDeleteDevicesRequest
+     * @return BatchDeleteDevicesResponse
+     */
     @Override
     public CompletableFuture<BatchDeleteDevicesResponse> batchDeleteDevices(BatchDeleteDevicesRequest request) {
         try {
@@ -193,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchDeleteVsDomainConfigs  BatchDeleteVsDomainConfigsRequest
+     * @return BatchDeleteVsDomainConfigsResponse
+     */
     @Override
     public CompletableFuture<BatchDeleteVsDomainConfigsResponse> batchDeleteVsDomainConfigs(BatchDeleteVsDomainConfigsRequest request) {
         try {
@@ -207,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchForbidVsStream  BatchForbidVsStreamRequest
+     * @return BatchForbidVsStreamResponse
+     */
     @Override
     public CompletableFuture<BatchForbidVsStreamResponse> batchForbidVsStream(BatchForbidVsStreamRequest request) {
         try {
@@ -221,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchResumeVsStream  BatchResumeVsStreamRequest
+     * @return BatchResumeVsStreamResponse
+     */
     @Override
     public CompletableFuture<BatchResumeVsStreamResponse> batchResumeVsStream(BatchResumeVsStreamRequest request) {
         try {
@@ -235,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchSetVsDomainConfigs  BatchSetVsDomainConfigsRequest
+     * @return BatchSetVsDomainConfigsResponse
+     */
     @Override
     public CompletableFuture<BatchSetVsDomainConfigsResponse> batchSetVsDomainConfigs(BatchSetVsDomainConfigsRequest request) {
         try {
@@ -249,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchStartDevices  BatchStartDevicesRequest
+     * @return BatchStartDevicesResponse
+     */
     @Override
     public CompletableFuture<BatchStartDevicesResponse> batchStartDevices(BatchStartDevicesRequest request) {
         try {
@@ -263,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchStartStreams  BatchStartStreamsRequest
+     * @return BatchStartStreamsResponse
+     */
     @Override
     public CompletableFuture<BatchStartStreamsResponse> batchStartStreams(BatchStartStreamsRequest request) {
         try {
@@ -277,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchStopDevices  BatchStopDevicesRequest
+     * @return BatchStopDevicesResponse
+     */
     @Override
     public CompletableFuture<BatchStopDevicesResponse> batchStopDevices(BatchStopDevicesRequest request) {
         try {
@@ -291,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchStopStreams  BatchStopStreamsRequest
+     * @return BatchStopStreamsResponse
+     */
     @Override
     public CompletableFuture<BatchStopStreamsResponse> batchStopStreams(BatchStopStreamsRequest request) {
         try {
@@ -305,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchUnbindDirectories  BatchUnbindDirectoriesRequest
+     * @return BatchUnbindDirectoriesResponse
+     */
     @Override
     public CompletableFuture<BatchUnbindDirectoriesResponse> batchUnbindDirectories(BatchUnbindDirectoriesRequest request) {
         try {
@@ -319,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchUnbindParentPlatformDevices  BatchUnbindParentPlatformDevicesRequest
+     * @return BatchUnbindParentPlatformDevicesResponse
+     */
     @Override
     public CompletableFuture<BatchUnbindParentPlatformDevicesResponse> batchUnbindParentPlatformDevices(BatchUnbindParentPlatformDevicesRequest request) {
         try {
@@ -333,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchUnbindPurchasedDevices  BatchUnbindPurchasedDevicesRequest
+     * @return BatchUnbindPurchasedDevicesResponse
+     */
     @Override
     public CompletableFuture<BatchUnbindPurchasedDevicesResponse> batchUnbindPurchasedDevices(BatchUnbindPurchasedDevicesRequest request) {
         try {
@@ -347,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchUnbindTemplate  BatchUnbindTemplateRequest
+     * @return BatchUnbindTemplateResponse
+     */
     @Override
     public CompletableFuture<BatchUnbindTemplateResponse> batchUnbindTemplate(BatchUnbindTemplateRequest request) {
         try {
@@ -361,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchUnbindTemplates  BatchUnbindTemplatesRequest
+     * @return BatchUnbindTemplatesResponse
+     */
     @Override
     public CompletableFuture<BatchUnbindTemplatesResponse> batchUnbindTemplates(BatchUnbindTemplatesRequest request) {
         try {
@@ -375,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindDirectory  BindDirectoryRequest
+     * @return BindDirectoryResponse
+     */
     @Override
     public CompletableFuture<BindDirectoryResponse> bindDirectory(BindDirectoryRequest request) {
         try {
@@ -389,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindParentPlatformDevice  BindParentPlatformDeviceRequest
+     * @return BindParentPlatformDeviceResponse
+     */
     @Override
     public CompletableFuture<BindParentPlatformDeviceResponse> bindParentPlatformDevice(BindParentPlatformDeviceRequest request) {
         try {
@@ -403,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindPurchasedDevice  BindPurchasedDeviceRequest
+     * @return BindPurchasedDeviceResponse
+     */
     @Override
     public CompletableFuture<BindPurchasedDeviceResponse> bindPurchasedDevice(BindPurchasedDeviceRequest request) {
         try {
@@ -417,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindTemplate  BindTemplateRequest
+     * @return BindTemplateResponse
+     */
     @Override
     public CompletableFuture<BindTemplateResponse> bindTemplate(BindTemplateRequest request) {
         try {
@@ -431,20 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CaptureDeviceSnapshotResponse> captureDeviceSnapshot(CaptureDeviceSnapshotRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CaptureDeviceSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CaptureDeviceSnapshotResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CaptureDeviceSnapshotResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of ContinuousAdjust  ContinuousAdjustRequest
+     * @return ContinuousAdjustResponse
+     */
     @Override
     public CompletableFuture<ContinuousAdjustResponse> continuousAdjust(ContinuousAdjustRequest request) {
         try {
@@ -459,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ContinuousMove  ContinuousMoveRequest
+     * @return ContinuousMoveResponse
+     */
     @Override
     public CompletableFuture<ContinuousMoveResponse> continuousMove(ContinuousMoveRequest request) {
         try {
@@ -473,34 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateAIConfigResponse> createAIConfig(CreateAIConfigRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAIConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAIConfigResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateAIConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateClusterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateClusterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateDevice  CreateDeviceRequest
+     * @return CreateDeviceResponse
+     */
     @Override
     public CompletableFuture<CreateDeviceResponse> createDevice(CreateDeviceRequest request) {
         try {
@@ -515,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDeviceAlarm  CreateDeviceAlarmRequest
+     * @return CreateDeviceAlarmResponse
+     */
     @Override
     public CompletableFuture<CreateDeviceAlarmResponse> createDeviceAlarm(CreateDeviceAlarmRequest request) {
         try {
@@ -529,20 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateDeviceSnapshotResponse> createDeviceSnapshot(CreateDeviceSnapshotRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDeviceSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDeviceSnapshotResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateDeviceSnapshotResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateDirectory  CreateDirectoryRequest
+     * @return CreateDirectoryResponse
+     */
     @Override
     public CompletableFuture<CreateDirectoryResponse> createDirectory(CreateDirectoryRequest request) {
         try {
@@ -557,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
     @Override
     public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
         try {
@@ -571,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateParentPlatform  CreateParentPlatformRequest
+     * @return CreateParentPlatformResponse
+     */
     @Override
     public CompletableFuture<CreateParentPlatformResponse> createParentPlatform(CreateParentPlatformRequest request) {
         try {
@@ -585,20 +597,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRenderingDataPackage  CreateRenderingDataPackageRequest
+     * @return CreateRenderingDataPackageResponse
+     */
     @Override
-    public CompletableFuture<CreateRenderingDeviceResponse> createRenderingDevice(CreateRenderingDeviceRequest request) {
+    public CompletableFuture<CreateRenderingDataPackageResponse> createRenderingDataPackage(CreateRenderingDataPackageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRenderingDevice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRenderingDeviceResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRenderingDataPackage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRenderingDataPackageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<CreateRenderingDeviceResponse> future = new CompletableFuture<>();
+            CompletableFuture<CreateRenderingDataPackageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRenderingInstance  CreateRenderingInstanceRequest
+     * @return CreateRenderingInstanceResponse
+     */
+    @Override
+    public CompletableFuture<CreateRenderingInstanceResponse> createRenderingInstance(CreateRenderingInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRenderingInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRenderingInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRenderingInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRenderingInstanceGateway  CreateRenderingInstanceGatewayRequest
+     * @return CreateRenderingInstanceGatewayResponse
+     */
+    @Override
+    public CompletableFuture<CreateRenderingInstanceGatewayResponse> createRenderingInstanceGateway(CreateRenderingInstanceGatewayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRenderingInstanceGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRenderingInstanceGatewayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRenderingInstanceGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateStreamSnapshot  CreateStreamSnapshotRequest
+     * @return CreateStreamSnapshotResponse
+     */
     @Override
     public CompletableFuture<CreateStreamSnapshotResponse> createStreamSnapshot(CreateStreamSnapshotRequest request) {
         try {
@@ -613,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request) {
         try {
@@ -627,48 +687,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCloudApp  DeleteCloudAppRequest
+     * @return DeleteCloudAppResponse
+     */
     @Override
-    public CompletableFuture<DeleteAIConfigResponse> deleteAIConfig(DeleteAIConfigRequest request) {
+    public CompletableFuture<DeleteCloudAppResponse> deleteCloudApp(DeleteCloudAppRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAIConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAIConfigResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCloudApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCloudAppResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DeleteAIConfigResponse> future = new CompletableFuture<>();
+            CompletableFuture<DeleteCloudAppResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
-    @Override
-    public CompletableFuture<DeleteBucketResponse> deleteBucket(DeleteBucketRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteBucket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteBucketResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteBucketResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteClusterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteClusterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DeleteDevice  DeleteDeviceRequest
+     * @return DeleteDeviceResponse
+     */
     @Override
     public CompletableFuture<DeleteDeviceResponse> deleteDevice(DeleteDeviceRequest request) {
         try {
@@ -683,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDirectory  DeleteDirectoryRequest
+     * @return DeleteDirectoryResponse
+     */
     @Override
     public CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request) {
         try {
@@ -697,6 +741,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFile  DeleteFileRequest
+     * @return DeleteFileResponse
+     */
+    @Override
+    public CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
         try {
@@ -711,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteParentPlatform  DeleteParentPlatformRequest
+     * @return DeleteParentPlatformResponse
+     */
     @Override
     public CompletableFuture<DeleteParentPlatformResponse> deleteParentPlatform(DeleteParentPlatformRequest request) {
         try {
@@ -725,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePreset  DeletePresetRequest
+     * @return DeletePresetResponse
+     */
     @Override
     public CompletableFuture<DeletePresetResponse> deletePreset(DeletePresetRequest request) {
         try {
@@ -739,48 +813,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePublicKey  DeletePublicKeyRequest
+     * @return DeletePublicKeyResponse
+     */
     @Override
-    public CompletableFuture<DeletePurchasedDeviceResponse> deletePurchasedDevice(DeletePurchasedDeviceRequest request) {
+    public CompletableFuture<DeletePublicKeyResponse> deletePublicKey(DeletePublicKeyRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePurchasedDevice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePurchasedDeviceResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePublicKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePublicKeyResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DeletePurchasedDeviceResponse> future = new CompletableFuture<>();
+            CompletableFuture<DeletePublicKeyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRenderingInstanceConfiguration  DeleteRenderingInstanceConfigurationRequest
+     * @return DeleteRenderingInstanceConfigurationResponse
+     */
     @Override
-    public CompletableFuture<DeleteRenderingDeviceInternetPortsResponse> deleteRenderingDeviceInternetPorts(DeleteRenderingDeviceInternetPortsRequest request) {
+    public CompletableFuture<DeleteRenderingInstanceConfigurationResponse> deleteRenderingInstanceConfiguration(DeleteRenderingInstanceConfigurationRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRenderingDeviceInternetPorts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRenderingDeviceInternetPortsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRenderingInstanceConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRenderingInstanceConfigurationResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DeleteRenderingDeviceInternetPortsResponse> future = new CompletableFuture<>();
+            CompletableFuture<DeleteRenderingInstanceConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRenderingInstanceGateway  DeleteRenderingInstanceGatewayRequest
+     * @return DeleteRenderingInstanceGatewayResponse
+     */
     @Override
-    public CompletableFuture<DeleteRenderingDevicesResponse> deleteRenderingDevices(DeleteRenderingDevicesRequest request) {
+    public CompletableFuture<DeleteRenderingInstanceGatewayResponse> deleteRenderingInstanceGateway(DeleteRenderingInstanceGatewayRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRenderingDevices").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRenderingDevicesResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRenderingInstanceGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRenderingInstanceGatewayResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DeleteRenderingDevicesResponse> future = new CompletableFuture<>();
+            CompletableFuture<DeleteRenderingInstanceGatewayResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request) {
         try {
@@ -795,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVsPullStreamInfoConfig  DeleteVsPullStreamInfoConfigRequest
+     * @return DeleteVsPullStreamInfoConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteVsPullStreamInfoConfigResponse> deleteVsPullStreamInfoConfig(DeleteVsPullStreamInfoConfigRequest request) {
         try {
@@ -809,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVsStreamsNotifyUrlConfig  DeleteVsStreamsNotifyUrlConfigRequest
+     * @return DeleteVsStreamsNotifyUrlConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteVsStreamsNotifyUrlConfigResponse> deleteVsStreamsNotifyUrlConfig(DeleteVsStreamsNotifyUrlConfigRequest request) {
         try {
@@ -823,48 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeAIConfigResponse> describeAIConfig(DescribeAIConfigRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAIConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAIConfigResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeAIConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeAIConfigListResponse> describeAIConfigList(DescribeAIConfigListRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAIConfigList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAIConfigListResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeAIConfigListResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeAIEventListResponse> describeAIEventList(DescribeAIEventListRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAIEventList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAIEventListResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeAIEventListResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeAccountStat  DescribeAccountStatRequest
+     * @return DescribeAccountStatResponse
+     */
     @Override
     public CompletableFuture<DescribeAccountStatResponse> describeAccountStat(DescribeAccountStatRequest request) {
         try {
@@ -879,62 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeClusterResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeClusterDevicesResponse> describeClusterDevices(DescribeClusterDevicesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClusterDevices").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterDevicesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeClusterDevicesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeClustersResponse> describeClusters(DescribeClustersRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClusters").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClustersResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeClustersResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeContainerInstanceIdResponse> describeContainerInstanceId(DescribeContainerInstanceIdRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeContainerInstanceId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeContainerInstanceIdResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeContainerInstanceIdResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeDevice  DescribeDeviceRequest
+     * @return DescribeDeviceResponse
+     */
     @Override
     public CompletableFuture<DescribeDeviceResponse> describeDevice(DescribeDeviceRequest request) {
         try {
@@ -949,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeviceChannels  DescribeDeviceChannelsRequest
+     * @return DescribeDeviceChannelsResponse
+     */
     @Override
     public CompletableFuture<DescribeDeviceChannelsResponse> describeDeviceChannels(DescribeDeviceChannelsRequest request) {
         try {
@@ -963,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeviceGateway  DescribeDeviceGatewayRequest
+     * @return DescribeDeviceGatewayResponse
+     */
     @Override
     public CompletableFuture<DescribeDeviceGatewayResponse> describeDeviceGateway(DescribeDeviceGatewayRequest request) {
         try {
@@ -977,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeviceURL  DescribeDeviceURLRequest
+     * @return DescribeDeviceURLResponse
+     */
     @Override
     public CompletableFuture<DescribeDeviceURLResponse> describeDeviceURL(DescribeDeviceURLRequest request) {
         try {
@@ -991,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDevices  DescribeDevicesRequest
+     * @return DescribeDevicesResponse
+     */
     @Override
     public CompletableFuture<DescribeDevicesResponse> describeDevices(DescribeDevicesRequest request) {
         try {
@@ -1005,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDirectories  DescribeDirectoriesRequest
+     * @return DescribeDirectoriesResponse
+     */
     @Override
     public CompletableFuture<DescribeDirectoriesResponse> describeDirectories(DescribeDirectoriesRequest request) {
         try {
@@ -1019,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDirectory  DescribeDirectoryRequest
+     * @return DescribeDirectoryResponse
+     */
     @Override
     public CompletableFuture<DescribeDirectoryResponse> describeDirectory(DescribeDirectoryRequest request) {
         try {
@@ -1033,20 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeExternalStreamURLResponse> describeExternalStreamURL(DescribeExternalStreamURLRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeExternalStreamURL").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeExternalStreamURLResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeExternalStreamURLResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeGroup  DescribeGroupRequest
+     * @return DescribeGroupResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupResponse> describeGroup(DescribeGroupRequest request) {
         try {
@@ -1061,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroups  DescribeGroupsRequest
+     * @return DescribeGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupsResponse> describeGroups(DescribeGroupsRequest request) {
         try {
@@ -1075,20 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeNodeDevicesInfoResponse> describeNodeDevicesInfo(DescribeNodeDevicesInfoRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNodeDevicesInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNodeDevicesInfoResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeNodeDevicesInfoResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeParentPlatform  DescribeParentPlatformRequest
+     * @return DescribeParentPlatformResponse
+     */
     @Override
     public CompletableFuture<DescribeParentPlatformResponse> describeParentPlatform(DescribeParentPlatformRequest request) {
         try {
@@ -1103,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeParentPlatformDevices  DescribeParentPlatformDevicesRequest
+     * @return DescribeParentPlatformDevicesResponse
+     */
     @Override
     public CompletableFuture<DescribeParentPlatformDevicesResponse> describeParentPlatformDevices(DescribeParentPlatformDevicesRequest request) {
         try {
@@ -1117,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeParentPlatforms  DescribeParentPlatformsRequest
+     * @return DescribeParentPlatformsResponse
+     */
     @Override
     public CompletableFuture<DescribeParentPlatformsResponse> describeParentPlatforms(DescribeParentPlatformsRequest request) {
         try {
@@ -1131,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePresets  DescribePresetsRequest
+     * @return DescribePresetsResponse
+     */
     @Override
     public CompletableFuture<DescribePresetsResponse> describePresets(DescribePresetsRequest request) {
         try {
@@ -1145,6 +1173,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePublishStreamStatus  DescribePublishStreamStatusRequest
+     * @return DescribePublishStreamStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribePublishStreamStatusResponse> describePublishStreamStatus(DescribePublishStreamStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePublishStreamStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePublishStreamStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePublishStreamStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePurchasedDevice  DescribePurchasedDeviceRequest
+     * @return DescribePurchasedDeviceResponse
+     */
     @Override
     public CompletableFuture<DescribePurchasedDeviceResponse> describePurchasedDevice(DescribePurchasedDeviceRequest request) {
         try {
@@ -1159,6 +1209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePurchasedDevices  DescribePurchasedDevicesRequest
+     * @return DescribePurchasedDevicesResponse
+     */
     @Override
     public CompletableFuture<DescribePurchasedDevicesResponse> describePurchasedDevices(DescribePurchasedDevicesRequest request) {
         try {
@@ -1173,6 +1227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRecords  DescribeRecordsRequest
+     * @return DescribeRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeRecordsResponse> describeRecords(DescribeRecordsRequest request) {
         try {
@@ -1187,20 +1245,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRenderingInstance  DescribeRenderingInstanceRequest
+     * @return DescribeRenderingInstanceResponse
+     */
     @Override
-    public CompletableFuture<DescribeRenderingDevicesResponse> describeRenderingDevices(DescribeRenderingDevicesRequest request) {
+    public CompletableFuture<DescribeRenderingInstanceResponse> describeRenderingInstance(DescribeRenderingInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRenderingDevices").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRenderingDevicesResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRenderingInstance").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRenderingInstanceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DescribeRenderingDevicesResponse> future = new CompletableFuture<>();
+            CompletableFuture<DescribeRenderingInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRenderingInstanceConfiguration  DescribeRenderingInstanceConfigurationRequest
+     * @return DescribeRenderingInstanceConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRenderingInstanceConfigurationResponse> describeRenderingInstanceConfiguration(DescribeRenderingInstanceConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRenderingInstanceConfiguration").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRenderingInstanceConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRenderingInstanceConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeStream  DescribeStreamRequest
+     * @return DescribeStreamResponse
+     */
     @Override
     public CompletableFuture<DescribeStreamResponse> describeStream(DescribeStreamRequest request) {
         try {
@@ -1215,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStreamURL  DescribeStreamURLRequest
+     * @return DescribeStreamURLResponse
+     */
     @Override
     public CompletableFuture<DescribeStreamURLResponse> describeStreamURL(DescribeStreamURLRequest request) {
         try {
@@ -1229,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStreamVodList  DescribeStreamVodListRequest
+     * @return DescribeStreamVodListResponse
+     */
     @Override
     public CompletableFuture<DescribeStreamVodListResponse> describeStreamVodList(DescribeStreamVodListRequest request) {
         try {
@@ -1243,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStreams  DescribeStreamsRequest
+     * @return DescribeStreamsResponse
+     */
     @Override
     public CompletableFuture<DescribeStreamsResponse> describeStreams(DescribeStreamsRequest request) {
         try {
@@ -1257,6 +1353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTemplate  DescribeTemplateRequest
+     * @return DescribeTemplateResponse
+     */
     @Override
     public CompletableFuture<DescribeTemplateResponse> describeTemplate(DescribeTemplateRequest request) {
         try {
@@ -1271,6 +1371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTemplates  DescribeTemplatesRequest
+     * @return DescribeTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeTemplatesResponse> describeTemplates(DescribeTemplatesRequest request) {
         try {
@@ -1285,6 +1389,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVodStreamURL  DescribeVodStreamURLRequest
+     * @return DescribeVodStreamURLResponse
+     */
     @Override
     public CompletableFuture<DescribeVodStreamURLResponse> describeVodStreamURL(DescribeVodStreamURLRequest request) {
         try {
@@ -1299,6 +1407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsCertificateDetail  DescribeVsCertificateDetailRequest
+     * @return DescribeVsCertificateDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeVsCertificateDetailResponse> describeVsCertificateDetail(DescribeVsCertificateDetailRequest request) {
         try {
@@ -1313,6 +1425,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsCertificateList  DescribeVsCertificateListRequest
+     * @return DescribeVsCertificateListResponse
+     */
     @Override
     public CompletableFuture<DescribeVsCertificateListResponse> describeVsCertificateList(DescribeVsCertificateListRequest request) {
         try {
@@ -1327,6 +1443,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDevicesData  DescribeVsDevicesDataRequest
+     * @return DescribeVsDevicesDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDevicesDataResponse> describeVsDevicesData(DescribeVsDevicesDataRequest request) {
         try {
@@ -1341,6 +1461,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainBpsData  DescribeVsDomainBpsDataRequest
+     * @return DescribeVsDomainBpsDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainBpsDataResponse> describeVsDomainBpsData(DescribeVsDomainBpsDataRequest request) {
         try {
@@ -1355,6 +1479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainCertificateInfo  DescribeVsDomainCertificateInfoRequest
+     * @return DescribeVsDomainCertificateInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainCertificateInfoResponse> describeVsDomainCertificateInfo(DescribeVsDomainCertificateInfoRequest request) {
         try {
@@ -1369,6 +1497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainConfigs  DescribeVsDomainConfigsRequest
+     * @return DescribeVsDomainConfigsResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainConfigsResponse> describeVsDomainConfigs(DescribeVsDomainConfigsRequest request) {
         try {
@@ -1383,6 +1515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainDetail  DescribeVsDomainDetailRequest
+     * @return DescribeVsDomainDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainDetailResponse> describeVsDomainDetail(DescribeVsDomainDetailRequest request) {
         try {
@@ -1397,20 +1533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeVsDomainOnlineUserNumResponse> describeVsDomainOnlineUserNum(DescribeVsDomainOnlineUserNumRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVsDomainOnlineUserNum").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVsDomainOnlineUserNumResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeVsDomainOnlineUserNumResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeVsDomainPvData  DescribeVsDomainPvDataRequest
+     * @return DescribeVsDomainPvDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainPvDataResponse> describeVsDomainPvData(DescribeVsDomainPvDataRequest request) {
         try {
@@ -1425,6 +1551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainPvUvData  DescribeVsDomainPvUvDataRequest
+     * @return DescribeVsDomainPvUvDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainPvUvDataResponse> describeVsDomainPvUvData(DescribeVsDomainPvUvDataRequest request) {
         try {
@@ -1439,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainRecordData  DescribeVsDomainRecordDataRequest
+     * @return DescribeVsDomainRecordDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainRecordDataResponse> describeVsDomainRecordData(DescribeVsDomainRecordDataRequest request) {
         try {
@@ -1453,6 +1587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainRegionData  DescribeVsDomainRegionDataRequest
+     * @return DescribeVsDomainRegionDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainRegionDataResponse> describeVsDomainRegionData(DescribeVsDomainRegionDataRequest request) {
         try {
@@ -1467,6 +1605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainReqBpsData  DescribeVsDomainReqBpsDataRequest
+     * @return DescribeVsDomainReqBpsDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainReqBpsDataResponse> describeVsDomainReqBpsData(DescribeVsDomainReqBpsDataRequest request) {
         try {
@@ -1481,6 +1623,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainReqTrafficData  DescribeVsDomainReqTrafficDataRequest
+     * @return DescribeVsDomainReqTrafficDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainReqTrafficDataResponse> describeVsDomainReqTrafficData(DescribeVsDomainReqTrafficDataRequest request) {
         try {
@@ -1495,6 +1641,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainSnapshotData  DescribeVsDomainSnapshotDataRequest
+     * @return DescribeVsDomainSnapshotDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainSnapshotDataResponse> describeVsDomainSnapshotData(DescribeVsDomainSnapshotDataRequest request) {
         try {
@@ -1509,6 +1659,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainTrafficData  DescribeVsDomainTrafficDataRequest
+     * @return DescribeVsDomainTrafficDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainTrafficDataResponse> describeVsDomainTrafficData(DescribeVsDomainTrafficDataRequest request) {
         try {
@@ -1523,6 +1677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsDomainUvData  DescribeVsDomainUvDataRequest
+     * @return DescribeVsDomainUvDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsDomainUvDataResponse> describeVsDomainUvData(DescribeVsDomainUvDataRequest request) {
         try {
@@ -1537,20 +1695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeVsPullStreamConfigResponse> describeVsPullStreamConfig(DescribeVsPullStreamConfigRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVsPullStreamConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVsPullStreamConfigResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeVsPullStreamConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeVsPullStreamInfoConfig  DescribeVsPullStreamInfoConfigRequest
+     * @return DescribeVsPullStreamInfoConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeVsPullStreamInfoConfigResponse> describeVsPullStreamInfoConfig(DescribeVsPullStreamInfoConfigRequest request) {
         try {
@@ -1565,34 +1713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<DescribeVsStorageTrafficUsageDataResponse> describeVsStorageTrafficUsageData(DescribeVsStorageTrafficUsageDataRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVsStorageTrafficUsageData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVsStorageTrafficUsageDataResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeVsStorageTrafficUsageDataResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<DescribeVsStorageUsageDataResponse> describeVsStorageUsageData(DescribeVsStorageUsageDataRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVsStorageUsageData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVsStorageUsageDataResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeVsStorageUsageDataResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of DescribeVsStreamsNotifyUrlConfig  DescribeVsStreamsNotifyUrlConfigRequest
+     * @return DescribeVsStreamsNotifyUrlConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeVsStreamsNotifyUrlConfigResponse> describeVsStreamsNotifyUrlConfig(DescribeVsStreamsNotifyUrlConfigRequest request) {
         try {
@@ -1607,6 +1731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsStreamsOnlineList  DescribeVsStreamsOnlineListRequest
+     * @return DescribeVsStreamsOnlineListResponse
+     */
     @Override
     public CompletableFuture<DescribeVsStreamsOnlineListResponse> describeVsStreamsOnlineList(DescribeVsStreamsOnlineListRequest request) {
         try {
@@ -1621,6 +1749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsStreamsPublishList  DescribeVsStreamsPublishListRequest
+     * @return DescribeVsStreamsPublishListResponse
+     */
     @Override
     public CompletableFuture<DescribeVsStreamsPublishListResponse> describeVsStreamsPublishList(DescribeVsStreamsPublishListRequest request) {
         try {
@@ -1635,6 +1767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsTopDomainsByFlow  DescribeVsTopDomainsByFlowRequest
+     * @return DescribeVsTopDomainsByFlowResponse
+     */
     @Override
     public CompletableFuture<DescribeVsTopDomainsByFlowResponse> describeVsTopDomainsByFlow(DescribeVsTopDomainsByFlowRequest request) {
         try {
@@ -1649,6 +1785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsUpPeakPublishStreamData  DescribeVsUpPeakPublishStreamDataRequest
+     * @return DescribeVsUpPeakPublishStreamDataResponse
+     */
     @Override
     public CompletableFuture<DescribeVsUpPeakPublishStreamDataResponse> describeVsUpPeakPublishStreamData(DescribeVsUpPeakPublishStreamDataRequest request) {
         try {
@@ -1663,6 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsUserResourcePackage  DescribeVsUserResourcePackageRequest
+     * @return DescribeVsUserResourcePackageResponse
+     */
     @Override
     public CompletableFuture<DescribeVsUserResourcePackageResponse> describeVsUserResourcePackage(DescribeVsUserResourcePackageRequest request) {
         try {
@@ -1677,6 +1821,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVsVerifyContent  DescribeVsVerifyContentRequest
+     * @return DescribeVsVerifyContentResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVsVerifyContentResponse> describeVsVerifyContent(DescribeVsVerifyContentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVsVerifyContent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVsVerifyContentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVsVerifyContentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ForbidVsStream  ForbidVsStreamRequest
+     * @return ForbidVsStreamResponse
+     */
     @Override
     public CompletableFuture<ForbidVsStreamResponse> forbidVsStream(ForbidVsStreamRequest request) {
         try {
@@ -1691,34 +1857,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRenderingInstanceStreamingInfo  GetRenderingInstanceStreamingInfoRequest
+     * @return GetRenderingInstanceStreamingInfoResponse
+     */
     @Override
-    public CompletableFuture<GetBucketInfoResponse> getBucketInfo(GetBucketInfoRequest request) {
+    public CompletableFuture<GetRenderingInstanceStreamingInfoResponse> getRenderingInstanceStreamingInfo(GetRenderingInstanceStreamingInfoRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBucketInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBucketInfoResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRenderingInstanceStreamingInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRenderingInstanceStreamingInfoResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<GetBucketInfoResponse> future = new CompletableFuture<>();
+            CompletableFuture<GetRenderingInstanceStreamingInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
-    @Override
-    public CompletableFuture<GetObjectTotalResponse> getObjectTotal(GetObjectTotalRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetObjectTotal").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetObjectTotalResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetObjectTotalResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of GotoPreset  GotoPresetRequest
+     * @return GotoPresetResponse
+     */
     @Override
     public CompletableFuture<GotoPresetResponse> gotoPreset(GotoPresetRequest request) {
         try {
@@ -1733,62 +1893,190 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallCloudApp  InstallCloudAppRequest
+     * @return InstallCloudAppResponse
+     */
     @Override
-    public CompletableFuture<ListBucketsResponse> listBuckets(ListBucketsRequest request) {
+    public CompletableFuture<InstallCloudAppResponse> installCloudApp(InstallCloudAppRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBuckets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBucketsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InstallCloudApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InstallCloudAppResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListBucketsResponse> future = new CompletableFuture<>();
+            CompletableFuture<InstallCloudAppResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ListCloudAppInstallations  ListCloudAppInstallationsRequest
+     * @return ListCloudAppInstallationsResponse
+     */
     @Override
-    public CompletableFuture<ListDeviceChannelsResponse> listDeviceChannels(ListDeviceChannelsRequest request) {
+    public CompletableFuture<ListCloudAppInstallationsResponse> listCloudAppInstallations(ListCloudAppInstallationsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDeviceChannels").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDeviceChannelsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCloudAppInstallations").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCloudAppInstallationsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListDeviceChannelsResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListCloudAppInstallationsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ListCloudApps  ListCloudAppsRequest
+     * @return ListCloudAppsResponse
+     */
     @Override
-    public CompletableFuture<ListDeviceRecordsResponse> listDeviceRecords(ListDeviceRecordsRequest request) {
+    public CompletableFuture<ListCloudAppsResponse> listCloudApps(ListCloudAppsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDeviceRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDeviceRecordsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCloudApps").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCloudAppsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListDeviceRecordsResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListCloudAppsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ListFilePushStatuses  ListFilePushStatusesRequest
+     * @return ListFilePushStatusesResponse
+     */
     @Override
-    public CompletableFuture<ListObjectsResponse> listObjects(ListObjectsRequest request) {
+    public CompletableFuture<ListFilePushStatusesResponse> listFilePushStatuses(ListFilePushStatusesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListObjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListObjectsResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFilePushStatuses").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFilePushStatusesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ListObjectsResponse> future = new CompletableFuture<>();
+            CompletableFuture<ListFilePushStatusesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ListFiles  ListFilesRequest
+     * @return ListFilesResponse
+     */
+    @Override
+    public CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFiles").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPublicKeys  ListPublicKeysRequest
+     * @return ListPublicKeysResponse
+     */
+    @Override
+    public CompletableFuture<ListPublicKeysResponse> listPublicKeys(ListPublicKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPublicKeys").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPublicKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPublicKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRenderingDataPackages  ListRenderingDataPackagesRequest
+     * @return ListRenderingDataPackagesResponse
+     */
+    @Override
+    public CompletableFuture<ListRenderingDataPackagesResponse> listRenderingDataPackages(ListRenderingDataPackagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRenderingDataPackages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRenderingDataPackagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRenderingDataPackagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRenderingInstanceGateway  ListRenderingInstanceGatewayRequest
+     * @return ListRenderingInstanceGatewayResponse
+     */
+    @Override
+    public CompletableFuture<ListRenderingInstanceGatewayResponse> listRenderingInstanceGateway(ListRenderingInstanceGatewayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRenderingInstanceGateway").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRenderingInstanceGatewayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRenderingInstanceGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRenderingInstances  ListRenderingInstancesRequest
+     * @return ListRenderingInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListRenderingInstancesResponse> listRenderingInstances(ListRenderingInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRenderingInstances").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRenderingInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRenderingInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ManageLogin  ManageLoginRequest
+     * @return ManageLoginResponse
+     */
+    @Override
+    public CompletableFuture<ManageLoginResponse> manageLogin(ManageLoginRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ManageLogin").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManageLoginResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ManageLoginResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyDevice  ModifyDeviceRequest
+     * @return ModifyDeviceResponse
+     */
     @Override
     public CompletableFuture<ModifyDeviceResponse> modifyDevice(ModifyDeviceRequest request) {
         try {
@@ -1803,6 +2091,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDeviceAlarm  ModifyDeviceAlarmRequest
+     * @return ModifyDeviceAlarmResponse
+     */
     @Override
     public CompletableFuture<ModifyDeviceAlarmResponse> modifyDeviceAlarm(ModifyDeviceAlarmRequest request) {
         try {
@@ -1817,6 +2109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDeviceCapture  ModifyDeviceCaptureRequest
+     * @return ModifyDeviceCaptureResponse
+     */
     @Override
     public CompletableFuture<ModifyDeviceCaptureResponse> modifyDeviceCapture(ModifyDeviceCaptureRequest request) {
         try {
@@ -1831,6 +2127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDeviceChannels  ModifyDeviceChannelsRequest
+     * @return ModifyDeviceChannelsResponse
+     */
     @Override
     public CompletableFuture<ModifyDeviceChannelsResponse> modifyDeviceChannels(ModifyDeviceChannelsRequest request) {
         try {
@@ -1845,6 +2145,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDirectory  ModifyDirectoryRequest
+     * @return ModifyDirectoryResponse
+     */
     @Override
     public CompletableFuture<ModifyDirectoryResponse> modifyDirectory(ModifyDirectoryRequest request) {
         try {
@@ -1859,6 +2163,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGroup  ModifyGroupRequest
+     * @return ModifyGroupResponse
+     */
     @Override
     public CompletableFuture<ModifyGroupResponse> modifyGroup(ModifyGroupRequest request) {
         try {
@@ -1873,6 +2181,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyParentPlatform  ModifyParentPlatformRequest
+     * @return ModifyParentPlatformResponse
+     */
     @Override
     public CompletableFuture<ModifyParentPlatformResponse> modifyParentPlatform(ModifyParentPlatformRequest request) {
         try {
@@ -1887,20 +2199,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRenderingInstance  ModifyRenderingInstanceRequest
+     * @return ModifyRenderingInstanceResponse
+     */
     @Override
-    public CompletableFuture<ModifyPurchasedDeviceResponse> modifyPurchasedDevice(ModifyPurchasedDeviceRequest request) {
+    public CompletableFuture<ModifyRenderingInstanceResponse> modifyRenderingInstance(ModifyRenderingInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPurchasedDevice").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPurchasedDeviceResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyRenderingInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyRenderingInstanceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ModifyPurchasedDeviceResponse> future = new CompletableFuture<>();
+            CompletableFuture<ModifyRenderingInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRenderingInstanceBandwidth  ModifyRenderingInstanceBandwidthRequest
+     * @return ModifyRenderingInstanceBandwidthResponse
+     */
+    @Override
+    public CompletableFuture<ModifyRenderingInstanceBandwidthResponse> modifyRenderingInstanceBandwidth(ModifyRenderingInstanceBandwidthRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyRenderingInstanceBandwidth").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyRenderingInstanceBandwidthResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyRenderingInstanceBandwidthResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyTemplate  ModifyTemplateRequest
+     * @return ModifyTemplateResponse
+     */
     @Override
     public CompletableFuture<ModifyTemplateResponse> modifyTemplate(ModifyTemplateRequest request) {
         try {
@@ -1915,6 +2253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenVsService  OpenVsServiceRequest
+     * @return OpenVsServiceResponse
+     */
     @Override
     public CompletableFuture<OpenVsServiceResponse> openVsService(OpenVsServiceRequest request) {
         try {
@@ -1929,62 +2271,118 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushFile  PushFileRequest
+     * @return PushFileResponse
+     */
     @Override
-    public CompletableFuture<OperateRenderingDevicesResponse> operateRenderingDevices(OperateRenderingDevicesRequest request) {
+    public CompletableFuture<PushFileResponse> pushFile(PushFileRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OperateRenderingDevices").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OperateRenderingDevicesResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PushFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PushFileResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<OperateRenderingDevicesResponse> future = new CompletableFuture<>();
+            CompletableFuture<PushFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of RebootRenderingInstance  RebootRenderingInstanceRequest
+     * @return RebootRenderingInstanceResponse
+     */
     @Override
-    public CompletableFuture<PrepareUploadResponse> prepareUpload(PrepareUploadRequest request) {
+    public CompletableFuture<RebootRenderingInstanceResponse> rebootRenderingInstance(RebootRenderingInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PrepareUpload").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PrepareUploadResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RebootRenderingInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RebootRenderingInstanceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<PrepareUploadResponse> future = new CompletableFuture<>();
+            CompletableFuture<RebootRenderingInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of RecoverRenderingDataPackage  RecoverRenderingDataPackageRequest
+     * @return RecoverRenderingDataPackageResponse
+     */
     @Override
-    public CompletableFuture<PutBucketResponse> putBucket(PutBucketRequest request) {
+    public CompletableFuture<RecoverRenderingDataPackageResponse> recoverRenderingDataPackage(RecoverRenderingDataPackageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutBucket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutBucketResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RecoverRenderingDataPackage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RecoverRenderingDataPackageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<PutBucketResponse> future = new CompletableFuture<>();
+            CompletableFuture<RecoverRenderingDataPackageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseRenderingDataPackage  ReleaseRenderingDataPackageRequest
+     * @return ReleaseRenderingDataPackageResponse
+     */
     @Override
-    public CompletableFuture<ResetRenderingDevicesResponse> resetRenderingDevices(ResetRenderingDevicesRequest request) {
+    public CompletableFuture<ReleaseRenderingDataPackageResponse> releaseRenderingDataPackage(ReleaseRenderingDataPackageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResetRenderingDevices").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetRenderingDevicesResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReleaseRenderingDataPackage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReleaseRenderingDataPackageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<ResetRenderingDevicesResponse> future = new CompletableFuture<>();
+            CompletableFuture<ReleaseRenderingDataPackageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseRenderingInstance  ReleaseRenderingInstanceRequest
+     * @return ReleaseRenderingInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ReleaseRenderingInstanceResponse> releaseRenderingInstance(ReleaseRenderingInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReleaseRenderingInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReleaseRenderingInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReleaseRenderingInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RenewRenderingInstance  RenewRenderingInstanceRequest
+     * @return RenewRenderingInstanceResponse
+     */
+    @Override
+    public CompletableFuture<RenewRenderingInstanceResponse> renewRenderingInstance(RenewRenderingInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RenewRenderingInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenewRenderingInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenewRenderingInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResumeVsStream  ResumeVsStreamRequest
+     * @return ResumeVsStreamResponse
+     */
     @Override
     public CompletableFuture<ResumeVsStreamResponse> resumeVsStream(ResumeVsStreamRequest request) {
         try {
@@ -1999,6 +2397,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendRenderingInstanceCommands  SendRenderingInstanceCommandsRequest
+     * @return SendRenderingInstanceCommandsResponse
+     */
+    @Override
+    public CompletableFuture<SendRenderingInstanceCommandsResponse> sendRenderingInstanceCommands(SendRenderingInstanceCommandsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SendRenderingInstanceCommands").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendRenderingInstanceCommandsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendRenderingInstanceCommandsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetPreset  SetPresetRequest
+     * @return SetPresetResponse
+     */
     @Override
     public CompletableFuture<SetPresetResponse> setPreset(SetPresetRequest request) {
         try {
@@ -2013,6 +2433,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetVsDomainCertificate  SetVsDomainCertificateRequest
+     * @return SetVsDomainCertificateResponse
+     */
     @Override
     public CompletableFuture<SetVsDomainCertificateResponse> setVsDomainCertificate(SetVsDomainCertificateRequest request) {
         try {
@@ -2027,6 +2451,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetVsStreamsNotifyUrlConfig  SetVsStreamsNotifyUrlConfigRequest
+     * @return SetVsStreamsNotifyUrlConfigResponse
+     */
     @Override
     public CompletableFuture<SetVsStreamsNotifyUrlConfigResponse> setVsStreamsNotifyUrlConfig(SetVsStreamsNotifyUrlConfigRequest request) {
         try {
@@ -2041,6 +2469,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartDevice  StartDeviceRequest
+     * @return StartDeviceResponse
+     */
     @Override
     public CompletableFuture<StartDeviceResponse> startDevice(StartDeviceRequest request) {
         try {
@@ -2055,6 +2487,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartParentPlatform  StartParentPlatformRequest
+     * @return StartParentPlatformResponse
+     */
     @Override
     public CompletableFuture<StartParentPlatformResponse> startParentPlatform(StartParentPlatformRequest request) {
         try {
@@ -2069,6 +2505,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartPublishStream  StartPublishStreamRequest
+     * @return StartPublishStreamResponse
+     */
+    @Override
+    public CompletableFuture<StartPublishStreamResponse> startPublishStream(StartPublishStreamRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartPublishStream").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartPublishStreamResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartPublishStreamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartRecordStream  StartRecordStreamRequest
+     * @return StartRecordStreamResponse
+     */
     @Override
     public CompletableFuture<StartRecordStreamResponse> startRecordStream(StartRecordStreamRequest request) {
         try {
@@ -2083,6 +2541,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartStream  StartStreamRequest
+     * @return StartStreamResponse
+     */
     @Override
     public CompletableFuture<StartStreamResponse> startStream(StartStreamRequest request) {
         try {
@@ -2097,6 +2559,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartTransferStream  StartTransferStreamRequest
+     * @return StartTransferStreamResponse
+     */
     @Override
     public CompletableFuture<StartTransferStreamResponse> startTransferStream(StartTransferStreamRequest request) {
         try {
@@ -2111,6 +2577,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopAdjust  StopAdjustRequest
+     * @return StopAdjustResponse
+     */
     @Override
     public CompletableFuture<StopAdjustResponse> stopAdjust(StopAdjustRequest request) {
         try {
@@ -2125,6 +2595,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopDevice  StopDeviceRequest
+     * @return StopDeviceResponse
+     */
     @Override
     public CompletableFuture<StopDeviceResponse> stopDevice(StopDeviceRequest request) {
         try {
@@ -2139,6 +2613,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopMove  StopMoveRequest
+     * @return StopMoveResponse
+     */
     @Override
     public CompletableFuture<StopMoveResponse> stopMove(StopMoveRequest request) {
         try {
@@ -2153,20 +2631,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopPublishStream  StopPublishStreamRequest
+     * @return StopPublishStreamResponse
+     */
     @Override
-    public CompletableFuture<StopParentPlatformResponse> stopParentPlatform(StopParentPlatformRequest request) {
+    public CompletableFuture<StopPublishStreamResponse> stopPublishStream(StopPublishStreamRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopParentPlatform").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopParentPlatformResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopPublishStream").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopPublishStreamResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<StopParentPlatformResponse> future = new CompletableFuture<>();
+            CompletableFuture<StopPublishStreamResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of StopRecordStream  StopRecordStreamRequest
+     * @return StopRecordStreamResponse
+     */
     @Override
     public CompletableFuture<StopRecordStreamResponse> stopRecordStream(StopRecordStreamRequest request) {
         try {
@@ -2181,6 +2667,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopStream  StopStreamRequest
+     * @return StopStreamResponse
+     */
     @Override
     public CompletableFuture<StopStreamResponse> stopStream(StopStreamRequest request) {
         try {
@@ -2195,6 +2685,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTransferStream  StopTransferStreamRequest
+     * @return StopTransferStreamResponse
+     */
     @Override
     public CompletableFuture<StopTransferStreamResponse> stopTransferStream(StopTransferStreamRequest request) {
         try {
@@ -2209,6 +2703,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncCatalogs  SyncCatalogsRequest
+     * @return SyncCatalogsResponse
+     */
     @Override
     public CompletableFuture<SyncCatalogsResponse> syncCatalogs(SyncCatalogsRequest request) {
         try {
@@ -2223,20 +2721,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<SyncDeviceChannelsResponse> syncDeviceChannels(SyncDeviceChannelsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SyncDeviceChannels").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SyncDeviceChannelsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SyncDeviceChannelsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of UnbindDirectory  UnbindDirectoryRequest
+     * @return UnbindDirectoryResponse
+     */
     @Override
     public CompletableFuture<UnbindDirectoryResponse> unbindDirectory(UnbindDirectoryRequest request) {
         try {
@@ -2251,6 +2739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindParentPlatformDevice  UnbindParentPlatformDeviceRequest
+     * @return UnbindParentPlatformDeviceResponse
+     */
     @Override
     public CompletableFuture<UnbindParentPlatformDeviceResponse> unbindParentPlatformDevice(UnbindParentPlatformDeviceRequest request) {
         try {
@@ -2265,6 +2757,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindPurchasedDevice  UnbindPurchasedDeviceRequest
+     * @return UnbindPurchasedDeviceResponse
+     */
     @Override
     public CompletableFuture<UnbindPurchasedDeviceResponse> unbindPurchasedDevice(UnbindPurchasedDeviceRequest request) {
         try {
@@ -2279,6 +2775,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindTemplate  UnbindTemplateRequest
+     * @return UnbindTemplateResponse
+     */
     @Override
     public CompletableFuture<UnbindTemplateResponse> unbindTemplate(UnbindTemplateRequest request) {
         try {
@@ -2293,6 +2793,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallCloudApp  UninstallCloudAppRequest
+     * @return UninstallCloudAppResponse
+     */
+    @Override
+    public CompletableFuture<UninstallCloudAppResponse> uninstallCloudApp(UninstallCloudAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UninstallCloudApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UninstallCloudAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UninstallCloudAppResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnlockDevice  UnlockDeviceRequest
+     * @return UnlockDeviceResponse
+     */
     @Override
     public CompletableFuture<UnlockDeviceResponse> unlockDevice(UnlockDeviceRequest request) {
         try {
@@ -2307,62 +2829,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCloudAppInfo  UpdateCloudAppInfoRequest
+     * @return UpdateCloudAppInfoResponse
+     */
     @Override
-    public CompletableFuture<UpdateAIConfigResponse> updateAIConfig(UpdateAIConfigRequest request) {
+    public CompletableFuture<UpdateCloudAppInfoResponse> updateCloudAppInfo(UpdateCloudAppInfoRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAIConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAIConfigResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCloudAppInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCloudAppInfoResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UpdateAIConfigResponse> future = new CompletableFuture<>();
+            CompletableFuture<UpdateCloudAppInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFileInfo  UpdateFileInfoRequest
+     * @return UpdateFileInfoResponse
+     */
     @Override
-    public CompletableFuture<UpdateBucketInfoResponse> updateBucketInfo(UpdateBucketInfoRequest request) {
+    public CompletableFuture<UpdateFileInfoResponse> updateFileInfo(UpdateFileInfoRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateBucketInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateBucketInfoResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateFileInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFileInfoResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UpdateBucketInfoResponse> future = new CompletableFuture<>();
+            CompletableFuture<UpdateFileInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRenderingInstanceConfiguration  UpdateRenderingInstanceConfigurationRequest
+     * @return UpdateRenderingInstanceConfigurationResponse
+     */
     @Override
-    public CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request) {
+    public CompletableFuture<UpdateRenderingInstanceConfigurationResponse> updateRenderingInstanceConfiguration(UpdateRenderingInstanceConfigurationRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateClusterResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRenderingInstanceConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRenderingInstanceConfigurationResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UpdateClusterResponse> future = new CompletableFuture<>();
+            CompletableFuture<UpdateRenderingInstanceConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
-    @Override
-    public CompletableFuture<UpdateRenderingDeviceSpecResponse> updateRenderingDeviceSpec(UpdateRenderingDeviceSpecRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRenderingDeviceSpec").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRenderingDeviceSpecResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateRenderingDeviceSpecResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of UpdateVsPullStreamInfoConfig  UpdateVsPullStreamInfoConfigRequest
+     * @return UpdateVsPullStreamInfoConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateVsPullStreamInfoConfigResponse> updateVsPullStreamInfoConfig(UpdateVsPullStreamInfoConfigRequest request) {
         try {
@@ -2377,43 +2901,73 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadCloudApp  UploadCloudAppRequest
+     * @return UploadCloudAppResponse
+     */
     @Override
-    public CompletableFuture<UpgradeRenderingDevicesHostOSResponse> upgradeRenderingDevicesHostOS(UpgradeRenderingDevicesHostOSRequest request) {
+    public CompletableFuture<UploadCloudAppResponse> uploadCloudApp(UploadCloudAppRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeRenderingDevicesHostOS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeRenderingDevicesHostOSResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadCloudApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadCloudAppResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UpgradeRenderingDevicesHostOSResponse> future = new CompletableFuture<>();
+            CompletableFuture<UploadCloudAppResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of UploadFile  UploadFileRequest
+     * @return UploadFileResponse
+     */
     @Override
-    public CompletableFuture<UpgradeRenderingDevicesImageResponse> upgradeRenderingDevicesImage(UpgradeRenderingDevicesImageRequest request) {
+    public CompletableFuture<UploadFileResponse> uploadFile(UploadFileRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeRenderingDevicesImage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeRenderingDevicesImageResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadFileResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UpgradeRenderingDevicesImageResponse> future = new CompletableFuture<>();
+            CompletableFuture<UploadFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+     * @param request the request parameters of UploadPublicKey  UploadPublicKeyRequest
+     * @return UploadPublicKeyResponse
+     */
     @Override
-    public CompletableFuture<UploadDeviceRecordResponse> uploadDeviceRecord(UploadDeviceRecordRequest request) {
+    public CompletableFuture<UploadPublicKeyResponse> uploadPublicKey(UploadPublicKeyRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadDeviceRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadDeviceRecordResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadPublicKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadPublicKeyResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UploadDeviceRecordResponse> future = new CompletableFuture<>();
+            CompletableFuture<UploadPublicKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VerifyVsDomainOwner  VerifyVsDomainOwnerRequest
+     * @return VerifyVsDomainOwnerResponse
+     */
+    @Override
+    public CompletableFuture<VerifyVsDomainOwnerResponse> verifyVsDomainOwner(VerifyVsDomainOwnerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VerifyVsDomainOwner").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VerifyVsDomainOwnerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VerifyVsDomainOwnerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

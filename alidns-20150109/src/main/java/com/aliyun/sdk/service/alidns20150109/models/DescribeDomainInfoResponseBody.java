@@ -1,87 +1,95 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainInfoResponseBody</p>
  */
 public class DescribeDomainInfoResponseBody extends TeaModel {
-    @NameInMap("AliDomain")
+    @com.aliyun.core.annotation.NameInMap("AliDomain")
     private Boolean aliDomain;
 
-    @NameInMap("AvailableTtls")
+    @com.aliyun.core.annotation.NameInMap("AvailableTtls")
     private AvailableTtls availableTtls;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DnsServers")
+    @com.aliyun.core.annotation.NameInMap("DnsServers")
     private DnsServers dnsServers;
 
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private String domainId;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainLoggingSwitchStatus")
+    private String domainLoggingSwitchStatus;
+
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("InBlackHole")
+    @com.aliyun.core.annotation.NameInMap("InBlackHole")
     private Boolean inBlackHole;
 
-    @NameInMap("InClean")
+    @com.aliyun.core.annotation.NameInMap("InClean")
     private Boolean inClean;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("LineType")
+    @com.aliyun.core.annotation.NameInMap("LineType")
     private String lineType;
 
-    @NameInMap("MinTtl")
+    @com.aliyun.core.annotation.NameInMap("MinTtl")
     private Long minTtl;
 
-    @NameInMap("PunyCode")
+    @com.aliyun.core.annotation.NameInMap("PunyCode")
     private String punyCode;
 
-    @NameInMap("RecordLineTreeJson")
+    @com.aliyun.core.annotation.NameInMap("RecordLineTreeJson")
     private String recordLineTreeJson;
 
-    @NameInMap("RecordLines")
+    @com.aliyun.core.annotation.NameInMap("RecordLines")
     private RecordLines recordLines;
 
-    @NameInMap("RegionLines")
+    @com.aliyun.core.annotation.NameInMap("RegionLines")
     private Boolean regionLines;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SlaveDns")
+    @com.aliyun.core.annotation.NameInMap("SlaveDns")
     private Boolean slaveDns;
 
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private Boolean subDomain;
 
-    @NameInMap("VersionCode")
+    @com.aliyun.core.annotation.NameInMap("VersionCode")
     private String versionCode;
 
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private DescribeDomainInfoResponseBody(Builder builder) {
@@ -90,6 +98,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.dnsServers = builder.dnsServers;
         this.domainId = builder.domainId;
+        this.domainLoggingSwitchStatus = builder.domainLoggingSwitchStatus;
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
@@ -152,6 +161,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      */
     public String getDomainId() {
         return this.domainId;
+    }
+
+    /**
+     * @return domainLoggingSwitchStatus
+     */
+    public String getDomainLoggingSwitchStatus() {
+        return this.domainLoggingSwitchStatus;
     }
 
     /**
@@ -293,6 +309,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         private String createTime; 
         private DnsServers dnsServers; 
         private String domainId; 
+        private String domainLoggingSwitchStatus; 
         private String domainName; 
         private String groupId; 
         private String groupName; 
@@ -314,7 +331,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * Indicates whether the domain name is an Alibaba Cloud HiChina domain name.
+         * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder aliDomain(Boolean aliDomain) {
             this.aliDomain = aliDomain;
@@ -322,7 +342,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The available time to live (TTL) values.
+         * <p>The available time to live (TTL) values that can be configured for the domain name. Available TTL values are not returned by default. If you want to query such information, set NeedDetailAttributes to true.</p>
          */
         public Builder availableTtls(AvailableTtls availableTtls) {
             this.availableTtls = availableTtls;
@@ -330,7 +350,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the domain name was added to Alibaba Cloud CDN.
+         * <p>The time when the domain name was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-12T09:23Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -338,7 +361,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about DNS servers.
+         * <p>The DNS servers that are used to resolve the domain name.</p>
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -346,7 +369,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the domain name.
+         * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -354,7 +380,18 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>Indicates whether the DNS traffic analysis feature is enabled. Valid values:</p>
+         */
+        public Builder domainLoggingSwitchStatus(String domainLoggingSwitchStatus) {
+            this.domainLoggingSwitchStatus = domainLoggingSwitchStatus;
+            return this;
+        }
+
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -362,7 +399,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -370,7 +410,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the domain name group.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygroup</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -378,7 +421,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether blackhole filtering was triggered.
+         * <p>Indicates whether blackhole filtering was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inBlackHole(Boolean inBlackHole) {
             this.inBlackHole = inBlackHole;
@@ -386,7 +432,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether traffic scrubbing was started.
+         * <p>Indicates whether traffic scrubbing was in progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inClean(Boolean inClean) {
             this.inClean = inClean;
@@ -394,7 +443,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud DNS instance.
+         * <p>The ID of the Alibaba Cloud DNS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-7bg</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -402,7 +454,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The type of line.
+         * <p>The type of the DNS request line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region_province</p>
          */
         public Builder lineType(String lineType) {
             this.lineType = lineType;
@@ -410,7 +465,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum TTL.
+         * <p>The minimum TTL value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minTtl(Long minTtl) {
             this.minTtl = minTtl;
@@ -418,7 +476,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
+         * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -426,7 +487,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The tree-based lines.
+         * <p>The tree-structure DNS request lines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;default&quot;:{},&quot;unicom&quot;:{},&quot;telecom&quot;:{},&quot;mobile&quot;:{},&quot;edu&quot;:{},&quot;oversea&quot;:{},&quot;baidu&quot;:{},&quot;biying&quot;:{},&quot;google&quot;:{}}</p>
          */
         public Builder recordLineTreeJson(String recordLineTreeJson) {
             this.recordLineTreeJson = recordLineTreeJson;
@@ -434,7 +498,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about lines.
+         * <p>The DNS request lines.</p>
          */
         public Builder recordLines(RecordLines recordLines) {
             this.recordLines = recordLines;
@@ -442,7 +506,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the lines are regional lines.
+         * <p>Indicates whether the DNS request lines are regional lines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder regionLines(Boolean regionLines) {
             this.regionLines = regionLines;
@@ -450,7 +517,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the domain name.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -458,7 +528,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -466,7 +539,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3dj3wvclgcxo</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -474,7 +550,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether secondary DNS is allowed.
+         * <p>Indicates whether secondary DNS is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder slaveDns(Boolean slaveDns) {
             this.slaveDns = slaveDns;
@@ -482,7 +561,14 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SubDomain.
+         * <p>Indicates whether the queried domain name is a hosted subdomain name. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder subDomain(Boolean subDomain) {
             this.subDomain = subDomain;
@@ -490,7 +576,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the Alibaba Cloud DNS instance.
+         * <p>The version ID of Alibaba Cloud DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version1</p>
          */
         public Builder versionCode(String versionCode) {
             this.versionCode = versionCode;
@@ -498,7 +587,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The edition of the Alibaba Cloud DNS instance.
+         * <p>The edition of Alibaba Cloud DNS.</p>
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
@@ -511,9 +600,15 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainInfoResponseBody</p>
+     */
     public static class AvailableTtls extends TeaModel {
-        @NameInMap("AvailableTtl")
-        private java.util.List < String > availableTtl;
+        @com.aliyun.core.annotation.NameInMap("AvailableTtl")
+        private java.util.List<String> availableTtl;
 
         private AvailableTtls(Builder builder) {
             this.availableTtl = builder.availableTtl;
@@ -530,17 +625,17 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         /**
          * @return availableTtl
          */
-        public java.util.List < String > getAvailableTtl() {
+        public java.util.List<String> getAvailableTtl() {
             return this.availableTtl;
         }
 
         public static final class Builder {
-            private java.util.List < String > availableTtl; 
+            private java.util.List<String> availableTtl; 
 
             /**
              * AvailableTtl.
              */
-            public Builder availableTtl(java.util.List < String > availableTtl) {
+            public Builder availableTtl(java.util.List<String> availableTtl) {
                 this.availableTtl = availableTtl;
                 return this;
             }
@@ -552,9 +647,15 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainInfoResponseBody</p>
+     */
     public static class DnsServers extends TeaModel {
-        @NameInMap("DnsServer")
-        private java.util.List < String > dnsServer;
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
+        private java.util.List<String> dnsServer;
 
         private DnsServers(Builder builder) {
             this.dnsServer = builder.dnsServer;
@@ -571,17 +672,17 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         /**
          * @return dnsServer
          */
-        public java.util.List < String > getDnsServer() {
+        public java.util.List<String> getDnsServer() {
             return this.dnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > dnsServer; 
+            private java.util.List<String> dnsServer; 
 
             /**
              * DnsServer.
              */
-            public Builder dnsServer(java.util.List < String > dnsServer) {
+            public Builder dnsServer(java.util.List<String> dnsServer) {
                 this.dnsServer = dnsServer;
                 return this;
             }
@@ -593,17 +694,23 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainInfoResponseBody</p>
+     */
     public static class RecordLine extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineDisplayName")
+        @com.aliyun.core.annotation.NameInMap("LineDisplayName")
         private String lineDisplayName;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private RecordLine(Builder builder) {
@@ -656,7 +763,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The code of the parent line. This parameter is left empty if the line has no parent line.
+             * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internal</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -664,7 +774,10 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the line.
+             * <p>The code of the line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_region_xibei</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -672,7 +785,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parent line.
+             * <p>The name of the parent line.</p>
              */
             public Builder lineDisplayName(String lineDisplayName) {
                 this.lineDisplayName = lineDisplayName;
@@ -680,7 +793,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the line.
+             * <p>The name of the line.</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -694,9 +807,15 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainInfoResponseBody</p>
+     */
     public static class RecordLines extends TeaModel {
-        @NameInMap("RecordLine")
-        private java.util.List < RecordLine> recordLine;
+        @com.aliyun.core.annotation.NameInMap("RecordLine")
+        private java.util.List<RecordLine> recordLine;
 
         private RecordLines(Builder builder) {
             this.recordLine = builder.recordLine;
@@ -713,17 +832,17 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         /**
          * @return recordLine
          */
-        public java.util.List < RecordLine> getRecordLine() {
+        public java.util.List<RecordLine> getRecordLine() {
             return this.recordLine;
         }
 
         public static final class Builder {
-            private java.util.List < RecordLine> recordLine; 
+            private java.util.List<RecordLine> recordLine; 
 
             /**
              * RecordLine.
              */
-            public Builder recordLine(java.util.List < RecordLine> recordLine) {
+            public Builder recordLine(java.util.List<RecordLine> recordLine) {
                 this.recordLine = recordLine;
                 return this;
             }

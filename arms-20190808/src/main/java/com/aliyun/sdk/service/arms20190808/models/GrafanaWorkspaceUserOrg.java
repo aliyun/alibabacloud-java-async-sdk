@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspaceUserOrg} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspaceUserOrg</p>
  */
 public class GrafanaWorkspaceUserOrg extends TeaModel {
-    @NameInMap("orgId")
+    @com.aliyun.core.annotation.NameInMap("orgId")
     private Long orgId;
 
-    @NameInMap("orgName")
+    @com.aliyun.core.annotation.NameInMap("orgName")
     private String orgName;
 
-    @NameInMap("role")
+    @com.aliyun.core.annotation.NameInMap("role")
     private String role;
 
     private GrafanaWorkspaceUserOrg(Builder builder) {

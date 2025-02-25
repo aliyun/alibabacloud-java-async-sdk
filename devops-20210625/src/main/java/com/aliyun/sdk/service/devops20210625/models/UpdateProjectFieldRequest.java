@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectFieldRequest} extends {@link RequestModel}
  *
  * <p>UpdateProjectFieldRequest</p>
  */
 public class UpdateProjectFieldRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
-    @Body
-    @NameInMap("statusIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("statusIdentifier")
     private String statusIdentifier;
 
-    @Body
-    @NameInMap("updateBasicFieldRequestList")
-    private java.util.List < UpdateBasicFieldRequestList> updateBasicFieldRequestList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("updateBasicFieldRequestList")
+    private java.util.List<UpdateBasicFieldRequestList> updateBasicFieldRequestList;
 
-    @Body
-    @NameInMap("updateForOpenApiList")
-    private java.util.List < UpdateForOpenApiList> updateForOpenApiList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("updateForOpenApiList")
+    private java.util.List<UpdateForOpenApiList> updateForOpenApiList;
 
     private UpdateProjectFieldRequest(Builder builder) {
         super(builder);
@@ -80,14 +85,14 @@ public class UpdateProjectFieldRequest extends Request {
     /**
      * @return updateBasicFieldRequestList
      */
-    public java.util.List < UpdateBasicFieldRequestList> getUpdateBasicFieldRequestList() {
+    public java.util.List<UpdateBasicFieldRequestList> getUpdateBasicFieldRequestList() {
         return this.updateBasicFieldRequestList;
     }
 
     /**
      * @return updateForOpenApiList
      */
-    public java.util.List < UpdateForOpenApiList> getUpdateForOpenApiList() {
+    public java.util.List<UpdateForOpenApiList> getUpdateForOpenApiList() {
         return this.updateForOpenApiList;
     }
 
@@ -95,8 +100,8 @@ public class UpdateProjectFieldRequest extends Request {
         private String organizationId; 
         private String identifier; 
         private String statusIdentifier; 
-        private java.util.List < UpdateBasicFieldRequestList> updateBasicFieldRequestList; 
-        private java.util.List < UpdateForOpenApiList> updateForOpenApiList; 
+        private java.util.List<UpdateBasicFieldRequestList> updateBasicFieldRequestList; 
+        private java.util.List<UpdateForOpenApiList> updateForOpenApiList; 
 
         private Builder() {
             super();
@@ -112,7 +117,10 @@ public class UpdateProjectFieldRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -121,7 +129,10 @@ public class UpdateProjectFieldRequest extends Request {
         }
 
         /**
-         * identifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deafe5f33xxxxx6a259d8dafd</p>
          */
         public Builder identifier(String identifier) {
             this.putPathParameter("identifier", identifier);
@@ -141,7 +152,7 @@ public class UpdateProjectFieldRequest extends Request {
         /**
          * updateBasicFieldRequestList.
          */
-        public Builder updateBasicFieldRequestList(java.util.List < UpdateBasicFieldRequestList> updateBasicFieldRequestList) {
+        public Builder updateBasicFieldRequestList(java.util.List<UpdateBasicFieldRequestList> updateBasicFieldRequestList) {
             this.putBodyParameter("updateBasicFieldRequestList", updateBasicFieldRequestList);
             this.updateBasicFieldRequestList = updateBasicFieldRequestList;
             return this;
@@ -150,7 +161,7 @@ public class UpdateProjectFieldRequest extends Request {
         /**
          * updateForOpenApiList.
          */
-        public Builder updateForOpenApiList(java.util.List < UpdateForOpenApiList> updateForOpenApiList) {
+        public Builder updateForOpenApiList(java.util.List<UpdateForOpenApiList> updateForOpenApiList) {
             this.putBodyParameter("updateForOpenApiList", updateForOpenApiList);
             this.updateForOpenApiList = updateForOpenApiList;
             return this;
@@ -163,11 +174,17 @@ public class UpdateProjectFieldRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProjectFieldRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectFieldRequest</p>
+     */
     public static class UpdateBasicFieldRequestList extends TeaModel {
-        @NameInMap("propertyKey")
+        @com.aliyun.core.annotation.NameInMap("propertyKey")
         private String propertyKey;
 
-        @NameInMap("propertyValue")
+        @com.aliyun.core.annotation.NameInMap("propertyValue")
         private String propertyValue;
 
         private UpdateBasicFieldRequestList(Builder builder) {
@@ -224,11 +241,17 @@ public class UpdateProjectFieldRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProjectFieldRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectFieldRequest</p>
+     */
     public static class UpdateForOpenApiList extends TeaModel {
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private UpdateForOpenApiList(Builder builder) {

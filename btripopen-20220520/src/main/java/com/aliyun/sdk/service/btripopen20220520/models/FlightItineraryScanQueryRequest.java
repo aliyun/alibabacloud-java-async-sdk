@@ -1,49 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightItineraryScanQueryRequest} extends {@link RequestModel}
  *
  * <p>FlightItineraryScanQueryRequest</p>
  */
 public class FlightItineraryScanQueryRequest extends Request {
-    @Query
-    @NameInMap("bill_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_date")
     private String billDate;
 
-    @Query
-    @NameInMap("bill_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_id")
     private Long billId;
 
-    @Query
-    @NameInMap("invoice_sub_task_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("invoice_sub_task_id")
     private Long invoiceSubTaskId;
 
-    @Query
-    @NameInMap("itinerary_num")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("itinerary_num")
     private String itineraryNum;
 
-    @Query
-    @NameInMap("page_no")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_no")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("page_size")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ticket_no")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ticket_no")
     private String ticketNo;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private FlightItineraryScanQueryRequest(Builder builder) {

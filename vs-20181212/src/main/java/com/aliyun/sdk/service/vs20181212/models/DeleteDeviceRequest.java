@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDeviceRequest} extends {@link RequestModel}
  *
  * <p>DeleteDeviceRequest</p>
  */
 public class DeleteDeviceRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DeleteDeviceRequest(Builder builder) {
@@ -62,14 +67,17 @@ public class DeleteDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDeviceRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteDeviceRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3238848****092996</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

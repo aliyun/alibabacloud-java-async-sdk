@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayServiceCheckRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayServiceCheckRequest</p>
  */
 public class UpdateGatewayServiceCheckRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Check")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Check")
     private Boolean check;
 
-    @Query
-    @NameInMap("ExpectedStatuses")
-    private java.util.List < Integer > expectedStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpectedStatuses")
+    private java.util.List<Integer> expectedStatuses;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @Query
-    @NameInMap("HttpHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpHost")
     private String httpHost;
 
-    @Query
-    @NameInMap("HttpPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPath")
     private String httpPath;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
     private UpdateGatewayServiceCheckRequest(Builder builder) {
@@ -106,7 +111,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
     /**
      * @return expectedStatuses
      */
-    public java.util.List < Integer > getExpectedStatuses() {
+    public java.util.List<Integer> getExpectedStatuses() {
         return this.expectedStatuses;
     }
 
@@ -176,7 +181,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateGatewayServiceCheckRequest, Builder> {
         private String acceptLanguage; 
         private Boolean check; 
-        private java.util.List < Integer > expectedStatuses; 
+        private java.util.List<Integer> expectedStatuses; 
         private String gatewayUniqueId; 
         private Integer healthyThreshold; 
         private String httpHost; 
@@ -208,7 +213,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         } 
 
         /**
-         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
+         * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -217,7 +225,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check.
+         * <p>Specifies whether to enable the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder check(Boolean check) {
             this.putQueryParameter("Check", check);
@@ -226,9 +237,9 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The expected status code, which is required if the health check protocol is HTTP.
+         * <p>The expected status code, which is required if the health check protocol is HTTP.</p>
          */
-        public Builder expectedStatuses(java.util.List < Integer > expectedStatuses) {
+        public Builder expectedStatuses(java.util.List<Integer> expectedStatuses) {
             String expectedStatusesShrink = shrink(expectedStatuses, "ExpectedStatuses", "json");
             this.putQueryParameter("ExpectedStatuses", expectedStatusesShrink);
             this.expectedStatuses = expectedStatuses;
@@ -236,7 +247,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-8d410698bd7f4628ab76b*****72dd1d</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -245,7 +259,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The healthy threshold of the health check.
+         * <p>The healthy threshold of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -254,7 +271,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The health check domain name, which is optional if the health check protocol is HTTP.
+         * <p>The health check domain name, which is optional if the health check protocol is HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder httpHost(String httpHost) {
             this.putQueryParameter("HttpHost", httpHost);
@@ -263,7 +283,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The health check path, which is required if the health check protocol is HTTP.
+         * <p>The health check path, which is required if the health check protocol is HTTP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/healthz</p>
          */
         public Builder httpPath(String httpPath) {
             this.putQueryParameter("HttpPath", httpPath);
@@ -272,7 +295,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The interval at which the health check is performed.
+         * <p>The interval at which the health check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -281,11 +307,14 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The health check protocol. Valid values:
-         * <p>
+         * <p>The health check protocol. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>TCP</li>
+         * </ul>
          * 
-         * *   HTTP
-         * *   TCP
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -294,7 +323,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The ID of the service.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -303,7 +335,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The timeout period of responses to the health check. Unit: seconds.
+         * <p>The timeout period of responses to the health check. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -312,7 +347,10 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         }
 
         /**
-         * The unhealthy threshold of the health check.
+         * <p>The unhealthy threshold of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);

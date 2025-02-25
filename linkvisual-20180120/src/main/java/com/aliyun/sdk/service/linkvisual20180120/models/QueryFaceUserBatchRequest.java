@@ -63,10 +63,10 @@ public class QueryFaceUserBatchRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceUserBatchRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.userIdList = response.userIdList;
+        private Builder(QueryFaceUserBatchRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.userIdList = request.userIdList;
         } 
 
         /**

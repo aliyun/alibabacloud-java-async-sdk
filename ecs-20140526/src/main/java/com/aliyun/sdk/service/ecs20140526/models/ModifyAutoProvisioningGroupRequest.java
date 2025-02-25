@@ -1,76 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAutoProvisioningGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyAutoProvisioningGroupRequest</p>
  */
 public class ModifyAutoProvisioningGroupRequest extends Request {
-    @Query
-    @NameInMap("AutoProvisioningGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
     private String autoProvisioningGroupId;
 
-    @Query
-    @NameInMap("AutoProvisioningGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupName")
     private String autoProvisioningGroupName;
 
-    @Query
-    @NameInMap("DefaultTargetCapacityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultTargetCapacityType")
     private String defaultTargetCapacityType;
 
-    @Query
-    @NameInMap("ExcessCapacityTerminationPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcessCapacityTerminationPolicy")
     private String excessCapacityTerminationPolicy;
 
-    @Query
-    @NameInMap("LaunchTemplateConfig")
-    private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
+    private java.util.List<LaunchTemplateConfig> launchTemplateConfig;
 
-    @Query
-    @NameInMap("MaxSpotPrice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSpotPrice")
     private Float maxSpotPrice;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayAsYouGoTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayAsYouGoTargetCapacity")
     private String payAsYouGoTargetCapacity;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SpotTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotTargetCapacity")
     private String spotTargetCapacity;
 
-    @Query
-    @NameInMap("TerminateInstancesWithExpiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateInstancesWithExpiration")
     private Boolean terminateInstancesWithExpiration;
 
-    @Query
-    @NameInMap("TotalTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalTargetCapacity")
     private String totalTargetCapacity;
 
     private ModifyAutoProvisioningGroupRequest(Builder builder) {
@@ -136,7 +141,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
     /**
      * @return launchTemplateConfig
      */
-    public java.util.List < LaunchTemplateConfig> getLaunchTemplateConfig() {
+    public java.util.List<LaunchTemplateConfig> getLaunchTemplateConfig() {
         return this.launchTemplateConfig;
     }
 
@@ -215,7 +220,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         private String autoProvisioningGroupName; 
         private String defaultTargetCapacityType; 
         private String excessCapacityTerminationPolicy; 
-        private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
+        private java.util.List<LaunchTemplateConfig> launchTemplateConfig; 
         private Float maxSpotPrice; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -251,7 +256,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         } 
 
         /**
-         * The auto-provisioning group ID.
+         * <p>The auto-provisioning group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apg-bp67acfmxazb4ph****</p>
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -260,7 +268,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.[ It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+         * <p>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>apg-test</p>
          */
         public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
             this.putQueryParameter("AutoProvisioningGroupName", autoProvisioningGroupName);
@@ -269,11 +280,14 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:
-         * <p>
+         * <p>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo: pay-as-you-go instances</li>
+         * <li>Spot: preemptible instances</li>
+         * </ul>
          * 
-         * *   PayAsYouGo: pay-as-you-go instances
-         * *   Spot: preemptible instances
+         * <strong>example:</strong>
+         * <p>Spot</p>
          */
         public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
             this.putQueryParameter("DefaultTargetCapacityType", defaultTargetCapacityType);
@@ -282,11 +296,14 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the removed instances when the real-time capacity of the auto-provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:
-         * <p>
+         * <p>Specifies whether to release the removed instances when the real-time capacity of the auto-provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</p>
+         * <ul>
+         * <li>termination: releases the removed instances.</li>
+         * <li>no-termination: removes the instances from the auto-provisioning group but does not release them.</li>
+         * </ul>
          * 
-         * *   termination: releases the removed instances.
-         * *   no-termination: removes the instances from the auto-provisioning group but does not release them.
+         * <strong>example:</strong>
+         * <p>no-termination</p>
          */
         public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
             this.putQueryParameter("ExcessCapacityTerminationPolicy", excessCapacityTerminationPolicy);
@@ -295,19 +312,22 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The extended configurations of the launch template.
+         * <p>The extended configurations of the launch template.</p>
          */
-        public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
+        public Builder launchTemplateConfig(java.util.List<LaunchTemplateConfig> launchTemplateConfig) {
             this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
             this.launchTemplateConfig = launchTemplateConfig;
             return this;
         }
 
         /**
-         * The maximum price of preemptible instances in the auto-provisioning group.
-         * <p>
+         * <p>The maximum price of preemptible instances in the auto-provisioning group.</p>
+         * <blockquote>
+         * <p>When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto-provisioning group is created, and cannot be modified.</p>
+         * </blockquote>
          * 
-         * > When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto-provisioning group is created, and cannot be modified.
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder maxSpotPrice(Float maxSpotPrice) {
             this.putQueryParameter("MaxSpotPrice", maxSpotPrice);
@@ -334,7 +354,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The target capacity of pay-as-you-go instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+         * <p>The target capacity of pay-as-you-go instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder payAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
             this.putQueryParameter("PayAsYouGoTargetCapacity", payAsYouGoTargetCapacity);
@@ -343,7 +366,11 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the auto-provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the auto-provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -370,7 +397,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The target capacity of preemptible instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.
+         * <p>The target capacity of preemptible instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder spotTargetCapacity(String spotTargetCapacity) {
             this.putQueryParameter("SpotTargetCapacity", spotTargetCapacity);
@@ -379,11 +409,14 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to release instances that are located in the auto-provisioning group after the group expires. Valid values:
-         * <p>
+         * <p>Specifies whether to release instances that are located in the auto-provisioning group after the group expires. Valid values:</p>
+         * <ul>
+         * <li>true: releases instances that are located in the auto-provisioning group.</li>
+         * <li>false: removes instances from the auto-provisioning group but does not release them.</li>
+         * </ul>
          * 
-         * *   true: releases instances that are located in the auto-provisioning group.
-         * *   false: removes instances from the auto-provisioning group but does not release them.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
             this.putQueryParameter("TerminateInstancesWithExpiration", terminateInstancesWithExpiration);
@@ -392,10 +425,11 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The total target capacity of the auto-provisioning group. The value must be a positive integer.
-         * <p>
+         * <p>The total target capacity of the auto-provisioning group. The value must be a positive integer.</p>
+         * <p>The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of preemptible instances specified by the SpotTargetCapacity parameter.</p>
          * 
-         * The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of preemptible instances specified by the SpotTargetCapacity parameter.
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder totalTargetCapacity(String totalTargetCapacity) {
             this.putQueryParameter("TotalTargetCapacity", totalTargetCapacity);
@@ -410,20 +444,26 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoProvisioningGroupRequest</p>
+     */
     public static class LaunchTemplateConfig extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaxPrice")
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Double maxPrice;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Double weightedCapacity;
 
         private LaunchTemplateConfig(Builder builder) {
@@ -485,7 +525,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             private Double weightedCapacity; 
 
             /**
-             * The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).
+             * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -493,7 +536,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The maximum price of preemptible instances in extended configuration N.
+             * <p>The maximum price of preemptible instances in extended configuration N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxPrice(Double maxPrice) {
                 this.maxPrice = maxPrice;
@@ -501,7 +547,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.
+             * <p>The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -509,7 +558,10 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch in extended configuration N. The zone of the instances created from the extended configuration is determined by the vSwitch.
+             * <p>The ID of the vSwitch in extended configuration N. The zone of the instances created from the extended configuration is determined by the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-sn5bsitu4lfzgc5o7****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -517,13 +569,15 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.
-             * <p>
+             * <p>The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.</p>
+             * <p>The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster that can created by the auto-provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</p>
+             * <ul>
+             * <li>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</li>
+             * <li>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</li>
+             * </ul>
              * 
-             * The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster that can created by the auto-provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.
-             * 
-             * *   For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.
-             * *   For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder weightedCapacity(Double weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;

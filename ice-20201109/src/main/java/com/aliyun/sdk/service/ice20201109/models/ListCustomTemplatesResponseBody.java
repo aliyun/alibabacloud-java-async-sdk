@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomTemplatesResponseBody</p>
  */
 public class ListCustomTemplatesResponseBody extends TeaModel {
-    @NameInMap("CustomTemplateList")
-    private java.util.List < CustomTemplateList> customTemplateList;
+    @com.aliyun.core.annotation.NameInMap("CustomTemplateList")
+    private java.util.List<CustomTemplateList> customTemplateList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListCustomTemplatesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
     /**
      * @return customTemplateList
      */
-    public java.util.List < CustomTemplateList> getCustomTemplateList() {
+    public java.util.List<CustomTemplateList> getCustomTemplateList() {
         return this.customTemplateList;
     }
 
@@ -57,20 +62,23 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CustomTemplateList> customTemplateList; 
+        private java.util.List<CustomTemplateList> customTemplateList; 
         private String requestId; 
         private Integer total; 
 
         /**
-         * CustomTemplateList.
+         * <p>The queried templates.</p>
          */
-        public Builder customTemplateList(java.util.List < CustomTemplateList> customTemplateList) {
+        public Builder customTemplateList(java.util.List<CustomTemplateList> customTemplateList) {
             this.customTemplateList = customTemplateList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,42 +102,146 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomTemplatesResponseBody</p>
+     */
+    public static class TranscodeTemplateHint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BitrateControlType")
+        private String bitrateControlType;
+
+        private TranscodeTemplateHint(Builder builder) {
+            this.bitrateControlType = builder.bitrateControlType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TranscodeTemplateHint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bitrateControlType
+         */
+        public String getBitrateControlType() {
+            return this.bitrateControlType;
+        }
+
+        public static final class Builder {
+            private String bitrateControlType; 
+
+            /**
+             * BitrateControlType.
+             */
+            public Builder bitrateControlType(String bitrateControlType) {
+                this.bitrateControlType = bitrateControlType;
+                return this;
+            }
+
+            public TranscodeTemplateHint build() {
+                return new TranscodeTemplateHint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomTemplatesResponseBody</p>
+     */
+    public static class FrontendHint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateHint")
+        private TranscodeTemplateHint transcodeTemplateHint;
+
+        private FrontendHint(Builder builder) {
+            this.transcodeTemplateHint = builder.transcodeTemplateHint;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FrontendHint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return transcodeTemplateHint
+         */
+        public TranscodeTemplateHint getTranscodeTemplateHint() {
+            return this.transcodeTemplateHint;
+        }
+
+        public static final class Builder {
+            private TranscodeTemplateHint transcodeTemplateHint; 
+
+            /**
+             * TranscodeTemplateHint.
+             */
+            public Builder transcodeTemplateHint(TranscodeTemplateHint transcodeTemplateHint) {
+                this.transcodeTemplateHint = transcodeTemplateHint;
+                return this;
+            }
+
+            public FrontendHint build() {
+                return new FrontendHint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomTemplatesResponseBody</p>
+     */
     public static class CustomTemplateList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("FrontendHint")
+        private FrontendHint frontendHint;
+
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Subtype")
+        @com.aliyun.core.annotation.NameInMap("Subtype")
         private Integer subtype;
 
-        @NameInMap("SubtypeName")
+        @com.aliyun.core.annotation.NameInMap("SubtypeName")
         private String subtypeName;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private CustomTemplateList(Builder builder) {
             this.createTime = builder.createTime;
+            this.frontendHint = builder.frontendHint;
             this.isDefault = builder.isDefault;
             this.modifiedTime = builder.modifiedTime;
             this.status = builder.status;
@@ -152,6 +267,13 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return frontendHint
+         */
+        public FrontendHint getFrontendHint() {
+            return this.frontendHint;
         }
 
         /**
@@ -226,6 +348,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private FrontendHint frontendHint; 
             private Boolean isDefault; 
             private String modifiedTime; 
             private String status; 
@@ -238,7 +361,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * CreateTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -246,7 +372,23 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * FrontendHint.
+             */
+            public Builder frontendHint(FrontendHint frontendHint) {
+                this.frontendHint = frontendHint;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the template is the default template.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -254,7 +396,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the template was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12T16:17:54Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -262,7 +407,14 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The template state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +422,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Subtype.
+             * <p>The subtype ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder subtype(Integer subtype) {
                 this.subtype = subtype;
@@ -278,7 +433,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SubtypeName.
+             * <p>The subtype name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AudioTranscode</p>
              */
             public Builder subtypeName(String subtypeName) {
                 this.subtypeName = subtypeName;
@@ -286,7 +444,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The template parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;mp3&quot;},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;mp3&quot;,&quot;Bitrate&quot;:&quot;64&quot;,&quot;Samplerate&quot;:&quot;22050&quot;,&quot;Channels&quot;:&quot;2&quot;}}</p>
              */
             public Builder templateConfig(String templateConfig) {
                 this.templateConfig = templateConfig;
@@ -294,7 +455,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -302,7 +466,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -310,7 +477,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -318,7 +488,10 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The type name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TranscodeTemplate</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendBatchSmsResponseBody} extends {@link TeaModel}
  *
  * <p>SendBatchSmsResponseBody</p>
  */
 public class SendBatchSmsResponseBody extends TeaModel {
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SendBatchSmsResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class SendBatchSmsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BizId.
+         * <p>The ID of the delivery receipt. You can use one of the following methods to query the delivery status of a message based on the ID.</p>
+         * <ul>
+         * <li>Call the <a href="https://help.aliyun.com/document_detail/102352.html">QuerySendDetails</a> operation.</li>
+         * <li>Log on to the <a href="https://dysms.console.aliyun.com/dysms.htm#/overview">Alibaba Cloud SMS console</a>. In the left-side navigation pane, choose <strong>Analytics</strong> &gt; <strong>Delivery Report</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>9006197469364984400</p>
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -82,7 +94,14 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +109,10 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +120,10 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8D230E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMaliciousFileWhitelistConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteMaliciousFileWhitelistConfigRequest</p>
  */
 public class DeleteMaliciousFileWhitelistConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
     private Long configId;
 
     private DeleteMaliciousFileWhitelistConfigRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class DeleteMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist rule. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.
+         * <p>The ID of the alert whitelist rule of sensitive files that are detected by using the agentless detection feature. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to query the IDs of alert whitelist rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

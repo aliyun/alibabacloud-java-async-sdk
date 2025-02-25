@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRegistrantProfilesResponseBody</p>
  */
 public class QueryRegistrantProfilesResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RegistrantProfiles")
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfiles")
     private RegistrantProfiles registrantProfiles;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryRegistrantProfilesResponseBody(Builder builder) {
@@ -191,83 +191,92 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegistrantProfilesResponseBody</p>
+     */
     public static class RegistrantProfile extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CredentialNo")
+        @com.aliyun.core.annotation.NameInMap("CredentialNo")
         private String credentialNo;
 
-        @NameInMap("CredentialType")
+        @com.aliyun.core.annotation.NameInMap("CredentialType")
         private String credentialType;
 
-        @NameInMap("DefaultRegistrantProfile")
+        @com.aliyun.core.annotation.NameInMap("DefaultRegistrantProfile")
         private Boolean defaultRegistrantProfile;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EmailVerificationStatus")
+        @com.aliyun.core.annotation.NameInMap("EmailVerificationStatus")
         private Integer emailVerificationStatus;
 
-        @NameInMap("PostalCode")
+        @com.aliyun.core.annotation.NameInMap("PostalCode")
         private String postalCode;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("RealNameStatus")
+        @com.aliyun.core.annotation.NameInMap("RealNameStatus")
         private String realNameStatus;
 
-        @NameInMap("RegistrantName")
+        @com.aliyun.core.annotation.NameInMap("RegistrantName")
         private String registrantName;
 
-        @NameInMap("RegistrantOrganization")
+        @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
         private String registrantOrganization;
 
-        @NameInMap("RegistrantProfileId")
+        @com.aliyun.core.annotation.NameInMap("RegistrantProfileId")
         private Long registrantProfileId;
 
-        @NameInMap("RegistrantProfileType")
+        @com.aliyun.core.annotation.NameInMap("RegistrantProfileType")
         private String registrantProfileType;
 
-        @NameInMap("RegistrantType")
+        @com.aliyun.core.annotation.NameInMap("RegistrantType")
         private String registrantType;
 
-        @NameInMap("TelArea")
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
+        @com.aliyun.core.annotation.NameInMap("TelArea")
         private String telArea;
 
-        @NameInMap("TelExt")
+        @com.aliyun.core.annotation.NameInMap("TelExt")
         private String telExt;
 
-        @NameInMap("Telephone")
+        @com.aliyun.core.annotation.NameInMap("Telephone")
         private String telephone;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("ZhAddress")
+        @com.aliyun.core.annotation.NameInMap("ZhAddress")
         private String zhAddress;
 
-        @NameInMap("ZhCity")
+        @com.aliyun.core.annotation.NameInMap("ZhCity")
         private String zhCity;
 
-        @NameInMap("ZhProvince")
+        @com.aliyun.core.annotation.NameInMap("ZhProvince")
         private String zhProvince;
 
-        @NameInMap("ZhRegistrantName")
+        @com.aliyun.core.annotation.NameInMap("ZhRegistrantName")
         private String zhRegistrantName;
 
-        @NameInMap("ZhRegistrantOrganization")
+        @com.aliyun.core.annotation.NameInMap("ZhRegistrantOrganization")
         private String zhRegistrantOrganization;
 
         private RegistrantProfile(Builder builder) {
@@ -288,6 +297,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             this.registrantProfileId = builder.registrantProfileId;
             this.registrantProfileType = builder.registrantProfileType;
             this.registrantType = builder.registrantType;
+            this.remark = builder.remark;
             this.telArea = builder.telArea;
             this.telExt = builder.telExt;
             this.telephone = builder.telephone;
@@ -427,6 +437,13 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return telArea
          */
         public String getTelArea() {
@@ -507,6 +524,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             private Long registrantProfileId; 
             private String registrantProfileType; 
             private String registrantType; 
+            private String remark; 
             private String telArea; 
             private String telExt; 
             private String telephone; 
@@ -654,6 +672,14 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
              * TelArea.
              */
             public Builder telArea(String telArea) {
@@ -732,8 +758,14 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRegistrantProfilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRegistrantProfilesResponseBody</p>
+     */
     public static class RegistrantProfiles extends TeaModel {
-        @NameInMap("RegistrantProfile")
+        @com.aliyun.core.annotation.NameInMap("RegistrantProfile")
         private java.util.List < RegistrantProfile> registrantProfile;
 
         private RegistrantProfiles(Builder builder) {

@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTrafficMirrorFilterRuleAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateTrafficMirrorFilterRuleAttributeRequest</p>
  */
 public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("DestinationPortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
     private String destinationPortRange;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
     private String ruleAction;
 
-    @Query
-    @NameInMap("SourceCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
     private String sourceCidrBlock;
 
-    @Query
-    @NameInMap("SourcePortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePortRange")
     private String sourcePortRange;
 
-    @Query
-    @NameInMap("TrafficMirrorFilterRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficMirrorFilterRuleId;
 
     private UpdateTrafficMirrorFilterRuleAttributeRequest(Builder builder) {
@@ -252,12 +257,14 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -266,7 +273,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The new destination CIDR block of the inbound or outbound traffic.
+         * <p>The new destination CIDR block of the inbound or outbound traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -275,10 +285,13 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The new destination port range of the inbound or outbound traffic.
-         * <p>
+         * <p>The new destination port range of the inbound or outbound traffic.</p>
+         * <blockquote>
+         * <p> If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
+         * </blockquote>
          * 
-         * >  If you set **Protocol** to **ICMP**, you cannot change the port range.
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
          */
         public Builder destinationPortRange(String destinationPortRange) {
             this.putQueryParameter("DestinationPortRange", destinationPortRange);
@@ -287,11 +300,14 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
-         * <p>
+         * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</li>
+         * </ul>
          * 
-         * *   **true**: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -318,7 +334,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The new priority of the inbound or outbound rule. A smaller value indicates a higher priority.
+         * <p>The new priority of the inbound or outbound rule. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -327,13 +346,16 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The new protocol that is used by the traffic to be mirrored by the inbound or outbound rule. Valid values:
-         * <p>
+         * <p>The new protocol that is used by the traffic to be mirrored by the inbound or outbound rule. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: all protocols</li>
+         * <li><strong>ICMP</strong>: Internet Control Message Protocol (ICMP)</li>
+         * <li><strong>TCP</strong>: TCP</li>
+         * <li><strong>UDP</strong>: User Datagram Protocol (UDP)</li>
+         * </ul>
          * 
-         * *   **ALL**: all protocols
-         * *   **ICMP**: Internet Control Message Protocol (ICMP)
-         * *   **TCP**: TCP
-         * *   **UDP**: User Datagram Protocol (UDP)
+         * <strong>example:</strong>
+         * <p>ICMP</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -342,10 +364,12 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the mirrored traffic belongs.
-         * <p>
+         * <p>The ID of the region to which the mirrored traffic belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -372,11 +396,14 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The new action of the inbound or outbound rule. Valid values:
-         * <p>
+         * <p>The new action of the inbound or outbound rule. Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: accepts network traffic.</li>
+         * <li><strong>drop</strong>: drops network traffic.</li>
+         * </ul>
          * 
-         * *   **accept**: accepts network traffic.
-         * *   **drop**: drops network traffic.
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -385,7 +412,10 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The new source CIDR block of the inbound or outbound traffic.
+         * <p>The new source CIDR block of the inbound or outbound traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         public Builder sourceCidrBlock(String sourceCidrBlock) {
             this.putQueryParameter("SourceCidrBlock", sourceCidrBlock);
@@ -394,10 +424,13 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The new source port range of the inbound or outbound traffic.
-         * <p>
+         * <p>The new source port range of the inbound or outbound traffic.</p>
+         * <blockquote>
+         * <p> If you set <strong>Protocol</strong> to <strong>ICMP</strong>, you cannot change the port range.</p>
+         * </blockquote>
          * 
-         * >  If you set **Protocol** to **ICMP**, you cannot change the port range.
+         * <strong>example:</strong>
+         * <p>22/40</p>
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
@@ -406,7 +439,11 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the inbound or outbound rule.
+         * <p>The ID of the inbound or outbound rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmr-j6c89rzmtd3hhdugq****</p>
          */
         public Builder trafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
             this.putQueryParameter("TrafficMirrorFilterRuleId", trafficMirrorFilterRuleId);

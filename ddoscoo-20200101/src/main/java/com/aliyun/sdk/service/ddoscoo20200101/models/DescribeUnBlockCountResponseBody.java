@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUnBlockCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUnBlockCountResponseBody</p>
  */
 public class DescribeUnBlockCountResponseBody extends TeaModel {
-    @NameInMap("RemainCount")
+    @com.aliyun.core.annotation.NameInMap("RemainCount")
     private Integer remainCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeUnBlockCountResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The remaining quota that you can use the Diversion from Origin Server policy.
+         * <p>The remaining number of times that you can enable the near-origin traffic diversion feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder remainCount(Integer remainCount) {
             this.remainCount = remainCount;
@@ -70,7 +78,10 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class DescribeUnBlockCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total quota that you can use the Diversion from Origin Server policy.
+         * <p>The total number of times that you can enable the near-origin traffic diversion feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricChannelConfigResponseBody</p>
  */
 public class DescribeFabricChannelConfigResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeFabricChannelConfigResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeFabricChannelConfigResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AbsoluteMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("AbsoluteMaxBytes")
         private Long absoluteMaxBytes;
 
-        @NameInMap("BatchTimeout")
+        @com.aliyun.core.annotation.NameInMap("BatchTimeout")
         private String batchTimeout;
 
-        @NameInMap("MaxMessageCount")
+        @com.aliyun.core.annotation.NameInMap("MaxMessageCount")
         private Long maxMessageCount;
 
-        @NameInMap("PreferredMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("PreferredMaxBytes")
         private Long preferredMaxBytes;
 
         private Result(Builder builder) {

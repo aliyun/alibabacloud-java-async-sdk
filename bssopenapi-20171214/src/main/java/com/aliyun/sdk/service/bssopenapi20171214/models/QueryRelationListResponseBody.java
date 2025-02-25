@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRelationListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRelationListResponseBody</p>
  */
 public class QueryRelationListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryRelationListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryRelationListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FC5D662-37FD-40A6-85B1-33442D815184</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,35 +148,41 @@ public class QueryRelationListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRelationListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRelationListResponseBody</p>
+     */
     public static class FinancialRelationInfoList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountNickName")
+        @com.aliyun.core.annotation.NameInMap("AccountNickName")
         private String accountNickName;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("RelationId")
+        @com.aliyun.core.annotation.NameInMap("RelationId")
         private Long relationId;
 
-        @NameInMap("RelationType")
+        @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
 
-        @NameInMap("SetupTime")
+        @com.aliyun.core.annotation.NameInMap("SetupTime")
         private String setupTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private FinancialRelationInfoList(Builder builder) {
@@ -266,7 +289,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1851253838840762</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -274,7 +300,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>caiwuyun_test4</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -282,7 +311,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the account.
+             * <p>The display name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test4</p>
              */
             public Builder accountNickName(String accountNickName) {
                 this.accountNickName = accountNickName;
@@ -290,7 +322,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account. Valid values: MASTER and MEMBER.
+             * <p>The type of the account. Valid values: MASTER and MEMBER.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MEMBER</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -298,7 +333,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the relationship became invalid. If no value is returned, the relationship is still valid.
+             * <p>The time when the relationship became invalid. If no value is returned, the relationship is still valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-08T15:12Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -306,7 +344,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the relationship.
+             * <p>The ID of the relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51463</p>
              */
             public Builder relationId(Long relationId) {
                 this.relationId = relationId;
@@ -314,7 +355,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.
+             * <p>The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinancialManagement</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -322,7 +366,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.
+             * <p>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-02T15:12Z</p>
              */
             public Builder setupTime(String setupTime) {
                 this.setupTime = setupTime;
@@ -330,7 +377,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the relationship became valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.
+             * <p>The time when the relationship became valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-02T15:12Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,7 +388,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the relationship. One of the enumeration members of the RelationshipStatusEnum data type is returned.
+             * <p>The state of the relationship. One of the enumeration members of the RelationshipStatusEnum data type is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELATED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -352,17 +405,23 @@ public class QueryRelationListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRelationListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRelationListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FinancialRelationInfoList")
-        private java.util.List < FinancialRelationInfoList> financialRelationInfoList;
+        @com.aliyun.core.annotation.NameInMap("FinancialRelationInfoList")
+        private java.util.List<FinancialRelationInfoList> financialRelationInfoList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -383,7 +442,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         /**
          * @return financialRelationInfoList
          */
-        public java.util.List < FinancialRelationInfoList> getFinancialRelationInfoList() {
+        public java.util.List<FinancialRelationInfoList> getFinancialRelationInfoList() {
             return this.financialRelationInfoList;
         }
 
@@ -409,21 +468,24 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FinancialRelationInfoList> financialRelationInfoList; 
+            private java.util.List<FinancialRelationInfoList> financialRelationInfoList; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The relationships.
+             * <p>The relationships.</p>
              */
-            public Builder financialRelationInfoList(java.util.List < FinancialRelationInfoList> financialRelationInfoList) {
+            public Builder financialRelationInfoList(java.util.List<FinancialRelationInfoList> financialRelationInfoList) {
                 this.financialRelationInfoList = financialRelationInfoList;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -431,7 +493,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +504,10 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

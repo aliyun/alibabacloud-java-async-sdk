@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoadBalancerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLoadBalancerResponseBody</p>
  */
 public class CreateLoadBalancerResponseBody extends TeaModel {
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @NameInMap("NetworkId")
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private CreateLoadBalancerResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String vSwitchId; 
 
         /**
-         * LoadBalancerId.
+         * <p>The ID of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5s7crik3yo3bp03gqrbp5****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -94,7 +102,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerName.
+         * <p>The name of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gcs-pre-websocket-****</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
@@ -102,7 +113,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkId.
+         * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5sax03dh2eyagujgsn7z9****</p>
          */
         public Builder networkId(String networkId) {
             this.networkId = networkId;
@@ -110,7 +124,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ECC937A-AE0E-4626-BE51-DED1D6D1C888</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch to which the ELB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5savh5ngxh8sbj14bu7n****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;

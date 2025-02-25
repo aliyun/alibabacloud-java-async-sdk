@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAddonsUpgradeStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterAddonsUpgradeStatusRequest</p>
  */
 public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("componentIds")
-    @Validation(required = true)
-    private java.util.List < String > componentIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("componentIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> componentIds;
 
     private DescribeClusterAddonsUpgradeStatusRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
     /**
      * @return componentIds
      */
-    public java.util.List < String > getComponentIds() {
+    public java.util.List<String> getComponentIds() {
         return this.componentIds;
     }
 
     public static final class Builder extends Request.Builder<DescribeClusterAddonsUpgradeStatusRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > componentIds; 
+        private java.util.List<String> componentIds; 
 
         private Builder() {
             super();
@@ -70,7 +75,11 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c23421cfa74454bc8b37163fd19af****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,9 +88,10 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
         }
 
         /**
-         * The list of component names.
+         * <p>The list of component names.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder componentIds(java.util.List < String > componentIds) {
+        public Builder componentIds(java.util.List<String> componentIds) {
             String componentIdsShrink = shrink(componentIds, "componentIds", "json");
             this.putQueryParameter("componentIds", componentIdsShrink);
             this.componentIds = componentIds;

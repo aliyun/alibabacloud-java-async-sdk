@@ -1,76 +1,84 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Cluster} extends {@link TeaModel}
  *
  * <p>Cluster</p>
  */
 public class Cluster extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("ClusterState")
+    @com.aliyun.core.annotation.NameInMap("ClusterState")
     private String clusterState;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("DeployMode")
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
-    @NameInMap("EmrDefaultRole")
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.NameInMap("EmrDefaultRole")
     private String emrDefaultRole;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("NodeAttributes")
+    @com.aliyun.core.annotation.NameInMap("NodeAttributes")
     private NodeAttributes nodeAttributes;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("ReadyTime")
+    @com.aliyun.core.annotation.NameInMap("ReadyTime")
     private Long readyTime;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("ReleaseVersion")
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
     private String releaseVersion;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SecurityMode")
+    @com.aliyun.core.annotation.NameInMap("SecurityMode")
     private String securityMode;
 
-    @NameInMap("StateChangeReason")
+    @com.aliyun.core.annotation.NameInMap("StateChangeReason")
     private ClusterStateChangeReason stateChangeReason;
 
-    @NameInMap("Status")
-    private String status;
-
-    @NameInMap("SubscriptionConfig")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionConfig")
     private SubscriptionConfig subscriptionConfig;
 
-    @NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tag> tags;
 
     private Cluster(Builder builder) {
         this.clusterId = builder.clusterId;
@@ -78,7 +86,9 @@ public class Cluster extends TeaModel {
         this.clusterState = builder.clusterState;
         this.clusterType = builder.clusterType;
         this.createTime = builder.createTime;
+        this.deletionProtection = builder.deletionProtection;
         this.deployMode = builder.deployMode;
+        this.description = builder.description;
         this.emrDefaultRole = builder.emrDefaultRole;
         this.endTime = builder.endTime;
         this.expireTime = builder.expireTime;
@@ -90,7 +100,6 @@ public class Cluster extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.securityMode = builder.securityMode;
         this.stateChangeReason = builder.stateChangeReason;
-        this.status = builder.status;
         this.subscriptionConfig = builder.subscriptionConfig;
         this.tags = builder.tags;
     }
@@ -139,10 +148,24 @@ public class Cluster extends TeaModel {
     }
 
     /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    /**
      * @return deployMode
      */
     public String getDeployMode() {
         return this.deployMode;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -223,13 +246,6 @@ public class Cluster extends TeaModel {
     }
 
     /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
      * @return subscriptionConfig
      */
     public SubscriptionConfig getSubscriptionConfig() {
@@ -239,7 +255,7 @@ public class Cluster extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -249,7 +265,9 @@ public class Cluster extends TeaModel {
         private String clusterState; 
         private String clusterType; 
         private Long createTime; 
+        private Boolean deletionProtection; 
         private String deployMode; 
+        private String description; 
         private String emrDefaultRole; 
         private Long endTime; 
         private Long expireTime; 
@@ -261,12 +279,14 @@ public class Cluster extends TeaModel {
         private String resourceGroupId; 
         private String securityMode; 
         private ClusterStateChangeReason stateChangeReason; 
-        private String status; 
         private SubscriptionConfig subscriptionConfig; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -274,7 +294,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群名称。
+         * <p>集群名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emrtest</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -282,7 +305,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群状态。
+         * <p>集群状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder clusterState(String clusterState) {
             this.clusterState = clusterState;
@@ -290,7 +316,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群类型。
+         * <p>集群类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -298,7 +327,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 创建时间。
+         * <p>创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -306,7 +338,18 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 部署模式。
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * <p>部署模式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HA</p>
          */
         public Builder deployMode(String deployMode) {
             this.deployMode = deployMode;
@@ -314,7 +357,18 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * EMR默认角色。
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>EMR默认角色。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunEMRDefaultRole</p>
          */
         public Builder emrDefaultRole(String emrDefaultRole) {
             this.emrDefaultRole = emrDefaultRole;
@@ -322,7 +376,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 删除时间。
+         * <p>删除时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -330,7 +387,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 过期时间。
+         * <p>过期时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -338,7 +398,7 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 节点属性。
+         * <p>节点属性。</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             this.nodeAttributes = nodeAttributes;
@@ -346,7 +406,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 付费类型。
+         * <p>付费类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -354,7 +417,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 可用时间。
+         * <p>可用时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder readyTime(Long readyTime) {
             this.readyTime = readyTime;
@@ -362,7 +428,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 地域ID。
+         * <p>地域ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -370,7 +439,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * EMR发行版。
+         * <p>EMR发行版。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.3.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = releaseVersion;
@@ -378,7 +450,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -386,7 +461,10 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * Kerberos安全模式。
+         * <p>Kerberos安全模式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder securityMode(String securityMode) {
             this.securityMode = securityMode;
@@ -402,15 +480,7 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群状态，值同clusterState
-         */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * 预付费配置。
+         * <p>预付费配置。</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             this.subscriptionConfig = subscriptionConfig;
@@ -418,9 +488,9 @@ public class Cluster extends TeaModel {
         }
 
         /**
-         * 集群标签。
+         * <p>集群标签。</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }

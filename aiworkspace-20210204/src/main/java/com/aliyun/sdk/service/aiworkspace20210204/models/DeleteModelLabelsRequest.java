@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteModelLabelsRequest} extends {@link RequestModel}
  *
  * <p>DeleteModelLabelsRequest</p>
  */
 public class DeleteModelLabelsRequest extends Request {
-    @Path
-    @NameInMap("ModelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelId;
 
-    @Query
-    @NameInMap("LabelKeys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelKeys")
     private String labelKeys;
 
     private DeleteModelLabelsRequest(Builder builder) {
@@ -69,7 +69,10 @@ public class DeleteModelLabelsRequest extends Request {
         } 
 
         /**
-         * ModelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-d8dfd****sjfd</p>
          */
         public Builder modelId(String modelId) {
             this.putPathParameter("ModelId", modelId);

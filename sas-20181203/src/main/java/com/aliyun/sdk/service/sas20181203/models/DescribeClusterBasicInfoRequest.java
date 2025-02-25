@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterBasicInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterBasicInfoRequest</p>
  */
 public class DescribeClusterBasicInfoRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("TargetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetType;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeClusterBasicInfoRequest(Builder builder) {
@@ -85,10 +90,14 @@ public class DescribeClusterBasicInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to query.
-         * <p>
+         * <p>The ID of the cluster that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c870ec78ecbcb41d2a35c679823ef****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -97,10 +106,14 @@ public class DescribeClusterBasicInfoRequest extends Request {
         }
 
         /**
-         * The dimension from which you want to configure the feature. Valid values:
-         * <p>
+         * <p>The dimension from which you want to configure the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Cluster</strong>: the ID of the cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Cluster**: the ID of the cluster
+         * <strong>example:</strong>
+         * <p>Cluster</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -109,11 +122,15 @@ public class DescribeClusterBasicInfoRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
+         * <p>The type of the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>containerNetwork</strong>: container network topology</li>
+         * <li><strong>interceptionSwitch</strong>: cluster microsegmentation</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **containerNetwork**: container network topology
-         * *   **interceptionSwitch**: cluster microsegmentation
+         * <strong>example:</strong>
+         * <p>containerNetwork</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

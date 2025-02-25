@@ -1,59 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGlobalSecurityIPGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyGlobalSecurityIPGroupRequest</p>
  */
 public class ModifyGlobalSecurityIPGroupRequest extends Request {
-    @Query
-    @NameInMap("GIpList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GIpList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gIpList;
 
-    @Query
-    @NameInMap("GlobalIgName")
-    @Validation(required = true, maxLength = 120, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalIgName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 120, minLength = 2)
     private String globalIgName;
 
-    @Query
-    @NameInMap("GlobalSecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalSecurityGroupId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyGlobalSecurityIPGroupRequest(Builder builder) {
@@ -184,7 +184,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * GIpList.
+         * <p>The IP addresses in the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1,10.10.10.10,172.16.0.1</p>
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);
@@ -193,7 +197,16 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * GlobalIgName.
+         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The name must start with a letter and end with a letter or a digit.</li>
+         * <li>The name must be 2 to 120 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -202,7 +215,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * GlobalSecurityGroupId.
+         * <p>The ID of the IP whitelist template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-zsldxfiwjmti0kcm****</p>
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -229,7 +246,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +259,10 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

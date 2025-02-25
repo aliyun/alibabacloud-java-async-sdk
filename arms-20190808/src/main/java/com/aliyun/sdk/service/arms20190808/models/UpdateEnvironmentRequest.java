@@ -1,34 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvironmentRequest} extends {@link RequestModel}
  *
  * <p>UpdateEnvironmentRequest</p>
  */
 public class UpdateEnvironmentRequest extends Request {
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("EnvironmentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentName")
     private String environmentName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeePackage")
+    private String feePackage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateEnvironmentRequest(Builder builder) {
@@ -36,6 +44,7 @@ public class UpdateEnvironmentRequest extends Request {
         this.aliyunLang = builder.aliyunLang;
         this.environmentId = builder.environmentId;
         this.environmentName = builder.environmentName;
+        this.feePackage = builder.feePackage;
         this.regionId = builder.regionId;
     }
 
@@ -74,6 +83,13 @@ public class UpdateEnvironmentRequest extends Request {
     }
 
     /**
+     * @return feePackage
+     */
+    public String getFeePackage() {
+        return this.feePackage;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -84,6 +100,7 @@ public class UpdateEnvironmentRequest extends Request {
         private String aliyunLang; 
         private String environmentId; 
         private String environmentName; 
+        private String feePackage; 
         private String regionId; 
 
         private Builder() {
@@ -95,11 +112,15 @@ public class UpdateEnvironmentRequest extends Request {
             this.aliyunLang = request.aliyunLang;
             this.environmentId = request.environmentId;
             this.environmentName = request.environmentName;
+            this.feePackage = request.feePackage;
             this.regionId = request.regionId;
         } 
 
         /**
-         * Locale, the default is Chinese zh | en.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -108,7 +129,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -117,7 +142,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment name.
+         * <p>The name of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env1</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -126,7 +154,27 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The payable resource plan. Valid values:</p>
+         * <ul>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+         * <li>Otherwise, leave the parameter empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CS_Basic</p>
+         */
+        public Builder feePackage(String feePackage) {
+            this.putQueryParameter("FeePackage", feePackage);
+            this.feePackage = feePackage;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

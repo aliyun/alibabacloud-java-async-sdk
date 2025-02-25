@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogicDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogicDatabasesResponseBody</p>
  */
 public class ListLogicDatabasesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LogicDatabaseList")
+    @com.aliyun.core.annotation.NameInMap("LogicDatabaseList")
     private LogicDatabaseList logicDatabaseList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLogicDatabasesResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code that is returned.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
+         * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of logical databases.
+         * <p>The details of logical databases.</p>
          */
         public Builder logicDatabaseList(LogicDatabaseList logicDatabaseList) {
             this.logicDatabaseList = logicDatabaseList;
@@ -122,7 +133,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8068AF82-8A1A-592C-AC2E-6B75338BAB87</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * - **true**: The request is successful.
-         * - **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of logical databases.
+         * <p>The total number of logical databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,9 +175,15 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogicDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicDatabasesResponseBody</p>
+     */
     public static class DatabaseIds extends TeaModel {
-        @NameInMap("DatabaseIds")
-        private java.util.List < Long > databaseIds;
+        @com.aliyun.core.annotation.NameInMap("DatabaseIds")
+        private java.util.List<Long> databaseIds;
 
         private DatabaseIds(Builder builder) {
             this.databaseIds = builder.databaseIds;
@@ -174,17 +200,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return databaseIds
          */
-        public java.util.List < Long > getDatabaseIds() {
+        public java.util.List<Long> getDatabaseIds() {
             return this.databaseIds;
         }
 
         public static final class Builder {
-            private java.util.List < Long > databaseIds; 
+            private java.util.List<Long> databaseIds; 
 
             /**
              * DatabaseIds.
              */
-            public Builder databaseIds(java.util.List < Long > databaseIds) {
+            public Builder databaseIds(java.util.List<Long> databaseIds) {
                 this.databaseIds = databaseIds;
                 return this;
             }
@@ -196,9 +222,15 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicDatabasesResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
-        @NameInMap("OwnerIds")
-        private java.util.List < String > ownerIds;
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
+        private java.util.List<String> ownerIds;
 
         private OwnerIdList(Builder builder) {
             this.ownerIds = builder.ownerIds;
@@ -215,17 +247,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < String > getOwnerIds() {
+        public java.util.List<String> getOwnerIds() {
             return this.ownerIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerIds; 
+            private java.util.List<String> ownerIds; 
 
             /**
              * OwnerIds.
              */
-            public Builder ownerIds(java.util.List < String > ownerIds) {
+            public Builder ownerIds(java.util.List<String> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
@@ -237,9 +269,15 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicDatabasesResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
-        @NameInMap("OwnerNames")
-        private java.util.List < String > ownerNames;
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
+        private java.util.List<String> ownerNames;
 
         private OwnerNameList(Builder builder) {
             this.ownerNames = builder.ownerNames;
@@ -256,17 +294,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return ownerNames
          */
-        public java.util.List < String > getOwnerNames() {
+        public java.util.List<String> getOwnerNames() {
             return this.ownerNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerNames; 
+            private java.util.List<String> ownerNames; 
 
             /**
              * OwnerNames.
              */
-            public Builder ownerNames(java.util.List < String > ownerNames) {
+            public Builder ownerNames(java.util.List<String> ownerNames) {
                 this.ownerNames = ownerNames;
                 return this;
             }
@@ -278,35 +316,41 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicDatabasesResponseBody</p>
+     */
     public static class LogicDatabase extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DatabaseIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseIds")
         private DatabaseIds databaseIds;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OwnerIdList")
+        @com.aliyun.core.annotation.NameInMap("OwnerIdList")
         private OwnerIdList ownerIdList;
 
-        @NameInMap("OwnerNameList")
+        @com.aliyun.core.annotation.NameInMap("OwnerNameList")
         private OwnerNameList ownerNameList;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
         private LogicDatabase(Builder builder) {
@@ -413,7 +457,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * The alias of the logical database.
+             * <p>The alias of the logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic_db_alias</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -421,7 +468,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the logical database.
+             * <p>The ID of the logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1***</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -429,7 +479,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Logical database sub-ID list.
+             * <p>Logical database sub-ID list.</p>
              */
             public Builder databaseIds(DatabaseIds databaseIds) {
                 this.databaseIds = databaseIds;
@@ -437,7 +487,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the logical database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).
+             * <p>The type of the logical database. For more information about the valid values of this parameter, see <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter">DbType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -445,17 +498,20 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the logical database belongs. Valid values:
-             * <p>
+             * <p>The type of the environment to which the logical database belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>product</strong>: production environment</li>
+             * <li><strong>dev</strong>: development environment</li>
+             * <li><strong>pre</strong>: staging environment</li>
+             * <li><strong>test</strong>: test environment</li>
+             * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
+             * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+             * <li><strong>pet</strong>: stress testing environment</li>
+             * <li><strong>stag</strong>: STAG environment</li>
+             * </ul>
              * 
-             * - **product**: production environment
-             * - **dev**: development environment
-             * - **pre**: staging environment
-             * - **test**: test environment
-             * - **sit**: system integration testing (SIT) environment
-             * - **uat**: user acceptance testing (UAT) environment
-             * - **pet**: stress testing environment
-             * - **stag**: STAG environment
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -463,7 +519,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is a logical database. The return value is true.
+             * <p>Indicates whether the database is a logical database. The return value is true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -471,7 +530,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the logical database.
+             * <p>The IDs of the owners of the logical database.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -479,7 +538,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the owners of the logical database.
+             * <p>The names of the owners of the logical database.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -487,7 +546,10 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the logical database.
+             * <p>The name of the logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic_db</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -495,10 +557,13 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the logical database.
-             * <p>
+             * <p>The name that is used to search for the logical database.</p>
+             * <blockquote>
+             * <p>We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
+             * </blockquote>
              * 
-             * > We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.
+             * <strong>example:</strong>
+             * <p>logic_db[logic_db_alias]</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -512,9 +577,15 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicDatabasesResponseBody</p>
+     */
     public static class LogicDatabaseList extends TeaModel {
-        @NameInMap("LogicDatabase")
-        private java.util.List < LogicDatabase> logicDatabase;
+        @com.aliyun.core.annotation.NameInMap("LogicDatabase")
+        private java.util.List<LogicDatabase> logicDatabase;
 
         private LogicDatabaseList(Builder builder) {
             this.logicDatabase = builder.logicDatabase;
@@ -531,17 +602,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return logicDatabase
          */
-        public java.util.List < LogicDatabase> getLogicDatabase() {
+        public java.util.List<LogicDatabase> getLogicDatabase() {
             return this.logicDatabase;
         }
 
         public static final class Builder {
-            private java.util.List < LogicDatabase> logicDatabase; 
+            private java.util.List<LogicDatabase> logicDatabase; 
 
             /**
              * LogicDatabase.
              */
-            public Builder logicDatabase(java.util.List < LogicDatabase> logicDatabase) {
+            public Builder logicDatabase(java.util.List<LogicDatabase> logicDatabase) {
                 this.logicDatabase = logicDatabase;
                 return this;
             }

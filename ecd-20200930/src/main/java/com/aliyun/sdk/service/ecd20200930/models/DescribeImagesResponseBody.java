@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImagesResponseBody</p>
  */
 public class DescribeImagesResponseBody extends TeaModel {
-    @NameInMap("Images")
-    private java.util.List < Images> images;
+    @com.aliyun.core.annotation.NameInMap("Images")
+    private java.util.List<Images> images;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImagesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -57,20 +62,23 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private String nextToken; 
         private String requestId; 
 
         /**
-         * The details of the images.
+         * <p>The details of the images.</p>
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +86,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4636DBE0-BBB4-4076-8B8E-94D21A9A3CFB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,68 +102,74 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private Integer dataDiskSize;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GpuCategory")
+        @com.aliyun.core.annotation.NameInMap("GpuCategory")
         private Boolean gpuCategory;
 
-        @NameInMap("GpuDriverVersion")
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
         private String gpuDriverVersion;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageType")
+        @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("SessionType")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
-        @NameInMap("SharedCount")
+        @com.aliyun.core.annotation.NameInMap("SharedCount")
         private Integer sharedCount;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportedLanguages")
-        private java.util.List < String > supportedLanguages;
+        @com.aliyun.core.annotation.NameInMap("SupportedLanguages")
+        private java.util.List<String> supportedLanguages;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
         private Images(Builder builder) {
@@ -309,7 +326,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * @return supportedLanguages
          */
-        public java.util.List < String > getSupportedLanguages() {
+        public java.util.List<String> getSupportedLanguages() {
             return this.supportedLanguages;
         }
 
@@ -352,13 +369,16 @@ public class DescribeImagesResponseBody extends TeaModel {
             private Integer sharedCount; 
             private Integer size; 
             private String status; 
-            private java.util.List < String > supportedLanguages; 
+            private java.util.List<String> supportedLanguages; 
             private String updateTime; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
 
             /**
-             * The version of the image.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -366,7 +386,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was created.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-10T01:01:10Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -374,7 +397,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the data disk. Unit: GiB.
+             * <p>The size of the data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder dataDiskSize(Integer dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -382,7 +408,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image.
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -390,7 +419,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image is a GPU-accelerated image.
+             * <p>Indicates whether the image is a GPU-accelerated image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder gpuCategory(Boolean gpuCategory) {
                 this.gpuCategory = gpuCategory;
@@ -398,7 +430,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the GPU driver.
+             * <p>The version number of the GPU driver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>417.22</p>
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -406,7 +441,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-gx2x1dhsmusr2****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -414,7 +452,26 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image.
+             * <p>The type of the image.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SYSTEM</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CUSTOM</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -422,7 +479,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testImageName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -430,7 +490,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type of the image.
+             * <p>The type of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WINDOWS</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -438,7 +501,61 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type of the image.
+             * <p>The operating system type of the image.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Ubuntu</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows Server 2022</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>UOS</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CentOS</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows Server 2019</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>SQL Server 2016</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows 10</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows Server 2019</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -446,7 +563,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of image creation. Unit: percentage (%).
+             * <p>The creation progress of the image. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -454,7 +574,15 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol.
+             * <p>The protocol type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>HDX: High-definition Experience (HDX) protocol</li>
+             * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -462,11 +590,17 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The session type of the image. Valid values:
-             * <p>
+             * <p>The type of the image session.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SINGLE_SESSION: single-session image.</p>
+             * </li>
+             * <li><p>MULTIPLE_SESSION: multi-session image.</p>
+             * </li>
+             * </ul>
              * 
-             * *   SINGLE_SESSION: single-session images
-             * *   MULTIPLE_SESSION: multi-session images
+             * <strong>example:</strong>
+             * <p>MULTIPLE_SESSION</p>
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -474,7 +608,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of shared images.
+             * <p>The number of shared images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sharedCount(Integer sharedCount) {
                 this.sharedCount = sharedCount;
@@ -482,7 +619,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image. Unit: GiB.
+             * <p>The size of the image. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -490,7 +630,33 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the image.
+             * <p>The status of the image.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Creating</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Available</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>CreateFailed</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -498,15 +664,18 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The languages of the OS.
+             * <p>The languages of the operating system.</p>
              */
-            public Builder supportedLanguages(java.util.List < String > supportedLanguages) {
+            public Builder supportedLanguages(java.util.List<String> supportedLanguages) {
                 this.supportedLanguages = supportedLanguages;
                 return this;
             }
 
             /**
-             * The time when the image was last modified.
+             * <p>The time when the image was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-22T02:48:43Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -514,7 +683,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether disk encryption is enabled.
+             * <p>Indicates whether disk encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
                 this.volumeEncryptionEnabled = volumeEncryptionEnabled;
@@ -522,7 +694,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain the list of KMS keys.
+             * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;

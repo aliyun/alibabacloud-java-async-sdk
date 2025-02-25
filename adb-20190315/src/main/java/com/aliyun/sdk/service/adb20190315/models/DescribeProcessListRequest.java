@@ -1,66 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProcessListRequest} extends {@link RequestModel}
  *
  * <p>DescribeProcessListRequest</p>
  */
 public class DescribeProcessListRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 30)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RunningTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunningTime")
     private Integer runningTime;
 
-    @Query
-    @NameInMap("ShowFull")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowFull")
     private Boolean showFull;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DescribeProcessListRequest(Builder builder) {
@@ -211,7 +211,11 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -220,7 +224,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The keyword in an SQL statement, which is used to filter queries. Set the value to **SELECT**.
+         * <p>The keyword in an SQL statement, which is used to filter queries. Set the value to <strong>SELECT</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -229,11 +236,14 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The order in which queries are sorted based on the specified fields. Specify this parameter as an ordered JSON array in the `[{"Field":"Time","Type":"Desc" },{ "Field":"User", "Type":"Asc" }]` format.
-         * <p>
+         * <p>The order in which queries are sorted based on the specified fields. Specify this parameter as an ordered JSON array in the <code>[{&quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },{ &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</code> format.</p>
+         * <ul>
+         * <li><strong>Field</strong> specifies the field used to sort queries. Valid values: Time, User, Host, and DB.</li>
+         * <li><strong>Type</strong> specifies the sorting sequence. Valid values: <strong>Desc</strong> and <strong>Asc</strong>.</li>
+         * </ul>
          * 
-         * *   **Field** specifies the field used to sort queries. Valid values: Time, User, Host, and DB.
-         * *   **Type** specifies the sorting sequence. Valid values: **Desc** and **Asc**.
+         * <strong>example:</strong>
+         * <p>[ { &quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },  { &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -260,7 +270,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -269,12 +282,15 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -301,7 +317,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The execution duration used to filter queries. Queries that take a longer time than the specified execution duration are displayed. Unit: seconds.
+         * <p>The execution duration used to filter queries. Queries that take a longer time than the specified execution duration are displayed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder runningTime(Integer runningTime) {
             this.putQueryParameter("RunningTime", runningTime);
@@ -310,13 +329,17 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Specifies whether to show a complete SQL statement. Valid values:
-         * <p>
+         * <p>Specifies whether to show a complete SQL statement. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: shows a complete SQL statement.</li>
+         * <li><strong>False</strong>: shows only the first 100 characters of an SQL statement.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is False.</p>
+         * </blockquote>
          * 
-         * *   **True**: shows a complete SQL statement.
-         * *   **False**: shows only the first 100 characters of an SQL statement.
-         * 
-         * >  The default value is False.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder showFull(Boolean showFull) {
             this.putQueryParameter("ShowFull", showFull);
@@ -325,7 +348,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The name of the user used to filter queries.
+         * <p>The name of the user used to filter queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
-    @Query
-    @NameInMap("NewComments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewComments")
     private String newComments;
 
-    @Query
-    @NameInMap("NewDisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDisplayName")
     private String newDisplayName;
 
-    @Query
-    @NameInMap("NewEmail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewEmail")
     private String newEmail;
 
-    @Query
-    @NameInMap("NewMobilePhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewMobilePhone")
     private String newMobilePhone;
 
-    @Query
-    @NameInMap("NewUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewUserName")
     private String newUserName;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private UpdateUserRequest(Builder builder) {
@@ -113,18 +118,22 @@ public class UpdateUserRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserRequest response) {
-            super(response);
-            this.newComments = response.newComments;
-            this.newDisplayName = response.newDisplayName;
-            this.newEmail = response.newEmail;
-            this.newMobilePhone = response.newMobilePhone;
-            this.newUserName = response.newUserName;
-            this.userName = response.userName;
+        private Builder(UpdateUserRequest request) {
+            super(request);
+            this.newComments = request.newComments;
+            this.newDisplayName = request.newDisplayName;
+            this.newEmail = request.newEmail;
+            this.newMobilePhone = request.newMobilePhone;
+            this.newUserName = request.newUserName;
+            this.userName = request.userName;
         } 
 
         /**
-         * NewComments.
+         * <p>The new description of the RAM user.</p>
+         * <p>The description must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a cloud computing engineer.</p>
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);
@@ -133,7 +142,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewDisplayName.
+         * <p>The new display name of the RAM user.</p>
+         * <p>The name must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaoq****</p>
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -142,7 +155,13 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewEmail.
+         * <p>The new email address of the RAM user.</p>
+         * <blockquote>
+         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaoq****@example.com</p>
          */
         public Builder newEmail(String newEmail) {
             this.putQueryParameter("NewEmail", newEmail);
@@ -151,7 +170,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewMobilePhone.
+         * <p>The new mobile phone number of the RAM user.</p>
+         * <p>Format: &lt;Country code&gt;-&lt;Mobile phone number&gt;.</p>
+         * <blockquote>
+         * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86-1860000****</p>
          */
         public Builder newMobilePhone(String newMobilePhone) {
             this.putQueryParameter("NewMobilePhone", newMobilePhone);
@@ -160,7 +186,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewUserName.
+         * <p>The new username of the RAM user.</p>
+         * <p>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaoq****</p>
          */
         public Builder newUserName(String newUserName) {
             this.putQueryParameter("NewUserName", newUserName);
@@ -169,7 +199,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

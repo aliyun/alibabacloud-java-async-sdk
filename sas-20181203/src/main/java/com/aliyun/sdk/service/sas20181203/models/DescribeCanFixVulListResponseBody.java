@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCanFixVulListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCanFixVulListResponseBody</p>
  */
 public class DescribeCanFixVulListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulRecords")
-    private java.util.List < VulRecords> vulRecords;
+    @com.aliyun.core.annotation.NameInMap("VulRecords")
+    private java.util.List<VulRecords> vulRecords;
 
     private DescribeCanFixVulListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
     /**
      * @return vulRecords
      */
-    public java.util.List < VulRecords> getVulRecords() {
+    public java.util.List<VulRecords> getVulRecords() {
         return this.vulRecords;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VulRecords> vulRecords; 
+        private java.util.List<VulRecords> vulRecords; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1408FDB3-46F4-513C-9918-FE7D356DF048</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the vulnerability.
+         * <p>The information about the vulnerability.</p>
          */
-        public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
+        public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
             return this;
         }
@@ -71,29 +79,35 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCanFixVulListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCanFixVulListResponseBody</p>
+     */
     public static class RpmEntityList extends TeaModel {
-        @NameInMap("FullVersion")
+        @com.aliyun.core.annotation.NameInMap("FullVersion")
         private String fullVersion;
 
-        @NameInMap("Layer")
+        @com.aliyun.core.annotation.NameInMap("Layer")
         private String layer;
 
-        @NameInMap("MatchDetail")
+        @com.aliyun.core.annotation.NameInMap("MatchDetail")
         private String matchDetail;
 
-        @NameInMap("MatchList")
-        private java.util.List < String > matchList;
+        @com.aliyun.core.annotation.NameInMap("MatchList")
+        private java.util.List<String> matchList;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("UpdateCmd")
+        @com.aliyun.core.annotation.NameInMap("UpdateCmd")
         private String updateCmd;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private RpmEntityList(Builder builder) {
@@ -139,7 +153,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         /**
          * @return matchList
          */
-        public java.util.List < String > getMatchList() {
+        public java.util.List<String> getMatchList() {
             return this.matchList;
         }
 
@@ -175,14 +189,17 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             private String fullVersion; 
             private String layer; 
             private String matchDetail; 
-            private java.util.List < String > matchList; 
+            private java.util.List<String> matchList; 
             private String name; 
             private String path; 
             private String updateCmd; 
             private String version; 
 
             /**
-             * The complete version number of the software package.
+             * <p>The complete version number of the software package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.10.0-693.2.2.el7</p>
              */
             public Builder fullVersion(String fullVersion) {
                 this.fullVersion = fullVersion;
@@ -190,7 +207,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 value of the digest of the image layer.
+             * <p>The SHA-256 value of the digest of the image layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b1f5b9420803ad0657cf21566e3e20acc08581e7f22991249ef3aa80b8b1****</p>
              */
             public Builder layer(String layer) {
                 this.layer = layer;
@@ -198,7 +218,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the detected vulnerability.
+             * <p>The information about the detected vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python-perf version less than 0:3.10.0-693.21.1.el7</p>
              */
             public Builder matchDetail(String matchDetail) {
                 this.matchDetail = matchDetail;
@@ -206,15 +229,18 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The rule that is used to detect the vulnerability.
+             * <p>The rule that is used to detect the vulnerability.</p>
              */
-            public Builder matchList(java.util.List < String > matchList) {
+            public Builder matchList(java.util.List<String> matchList) {
                 this.matchList = matchList;
                 return this;
             }
 
             /**
-             * The name of the software package.
+             * <p>The name of the software package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>python-perf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +248,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the software that has the vulnerability.
+             * <p>The path of the software that has the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/lib64/python2.7/site-packages</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -230,7 +259,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The command that is used to fix the vulnerability.
+             * <p>The command that is used to fix the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</p>
              */
             public Builder updateCmd(String updateCmd) {
                 this.updateCmd = updateCmd;
@@ -238,7 +270,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the software package.
+             * <p>The version number of the software package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.10.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -252,15 +287,21 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCanFixVulListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCanFixVulListResponseBody</p>
+     */
     public static class ExtendContentJson extends TeaModel {
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsRelease")
+        @com.aliyun.core.annotation.NameInMap("OsRelease")
         private String osRelease;
 
-        @NameInMap("RpmEntityList")
-        private java.util.List < RpmEntityList> rpmEntityList;
+        @com.aliyun.core.annotation.NameInMap("RpmEntityList")
+        private java.util.List<RpmEntityList> rpmEntityList;
 
         private ExtendContentJson(Builder builder) {
             this.os = builder.os;
@@ -293,17 +334,20 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         /**
          * @return rpmEntityList
          */
-        public java.util.List < RpmEntityList> getRpmEntityList() {
+        public java.util.List<RpmEntityList> getRpmEntityList() {
             return this.rpmEntityList;
         }
 
         public static final class Builder {
             private String os; 
             private String osRelease; 
-            private java.util.List < RpmEntityList> rpmEntityList; 
+            private java.util.List<RpmEntityList> rpmEntityList; 
 
             /**
-             * The name of the operating system.
+             * <p>The name of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>debian</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -311,7 +355,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the operating system in the image.
+             * <p>The version of the operating system in the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.9</p>
              */
             public Builder osRelease(String osRelease) {
                 this.osRelease = osRelease;
@@ -319,9 +366,9 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The RPM packages.
+             * <p>The RPM packages.</p>
              */
-            public Builder rpmEntityList(java.util.List < RpmEntityList> rpmEntityList) {
+            public Builder rpmEntityList(java.util.List<RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
                 return this;
             }
@@ -333,104 +380,110 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCanFixVulListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCanFixVulListResponseBody</p>
+     */
     public static class VulRecords extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("CanFix")
+        @com.aliyun.core.annotation.NameInMap("CanFix")
         private String canFix;
 
-        @NameInMap("CanUpdate")
+        @com.aliyun.core.annotation.NameInMap("CanUpdate")
         private Boolean canUpdate;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ExtendContentJson")
+        @com.aliyun.core.annotation.NameInMap("ExtendContentJson")
         private ExtendContentJson extendContentJson;
 
-        @NameInMap("FirstTs")
+        @com.aliyun.core.annotation.NameInMap("FirstTs")
         private Long firstTs;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImageDigest")
+        @com.aliyun.core.annotation.NameInMap("ImageDigest")
         private String imageDigest;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LastTs")
+        @com.aliyun.core.annotation.NameInMap("LastTs")
         private Long lastTs;
 
-        @NameInMap("Layers")
-        private java.util.List < String > layers;
+        @com.aliyun.core.annotation.NameInMap("Layers")
+        private java.util.List<String> layers;
 
-        @NameInMap("MaliciousSource")
+        @com.aliyun.core.annotation.NameInMap("MaliciousSource")
         private String maliciousSource;
 
-        @NameInMap("ModifyTs")
+        @com.aliyun.core.annotation.NameInMap("ModifyTs")
         private Long modifyTs;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Necessity")
+        @com.aliyun.core.annotation.NameInMap("Necessity")
         private String necessity;
 
-        @NameInMap("Pod")
+        @com.aliyun.core.annotation.NameInMap("Pod")
         private String pod;
 
-        @NameInMap("PrimaryId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryId")
         private Long primaryId;
 
-        @NameInMap("Related")
+        @com.aliyun.core.annotation.NameInMap("Related")
         private String related;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
-        @NameInMap("ScanTime")
+        @com.aliyun.core.annotation.NameInMap("ScanTime")
         private Long scanTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private VulRecords(Builder builder) {
@@ -578,7 +631,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
         /**
          * @return layers
          */
-        public java.util.List < String > getLayers() {
+        public java.util.List<String> getLayers() {
             return this.layers;
         }
 
@@ -723,7 +776,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private Long lastTs; 
-            private java.util.List < String > layers; 
+            private java.util.List<String> layers; 
             private String maliciousSource; 
             private Long modifyTs; 
             private String name; 
@@ -744,7 +797,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2018-25010:libwebp up to 1.0.0 ApplyFilter out-of-bounds read</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -752,11 +808,14 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:
-             * <p>
+             * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder canFix(String canFix) {
                 this.canFix = canFix;
@@ -764,11 +823,14 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:
-             * <p>
+             * <p>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canUpdate(Boolean canUpdate) {
                 this.canUpdate = canUpdate;
@@ -776,7 +838,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c08d5fc1a329a4b88950a253d082f1****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -784,7 +849,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docker-law</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -792,7 +860,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The container ID.
+             * <p>The container ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -800,7 +871,7 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about the vulnerability.
+             * <p>The extended information about the vulnerability.</p>
              */
             public Builder extendContentJson(ExtendContentJson extendContentJson) {
                 this.extendContentJson = extendContentJson;
@@ -808,7 +879,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the vulnerability was first detected. Unit: milliseconds.
+             * <p>The timestamp generated when the vulnerability was first detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620752053000</p>
              */
             public Builder firstTs(Long firstTs) {
                 this.firstTs = firstTs;
@@ -816,7 +890,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-conta****</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -824,7 +901,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the image.
+             * <p>The unique identifier of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</p>
              */
             public Builder imageDigest(String imageDigest) {
                 this.imageDigest = imageDigest;
@@ -832,10 +912,11 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
-             * <p>
+             * <p>The name of the instance.</p>
+             * <p>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
              * 
-             * The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+             * <strong>example:</strong>
+             * <p>testInstance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -843,7 +924,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the asset.
+             * <p>The public IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -851,7 +935,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the asset.
+             * <p>The private IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.19.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -859,7 +946,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the vulnerability was last detected. Unit: milliseconds.
+             * <p>The timestamp generated when the vulnerability was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620404763000</p>
              */
             public Builder lastTs(Long lastTs) {
                 this.lastTs = lastTs;
@@ -867,20 +957,23 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The image layers.
+             * <p>The image layers.</p>
              */
-            public Builder layers(java.util.List < String > layers) {
+            public Builder layers(java.util.List<String> layers) {
                 this.layers = layers;
                 return this;
             }
 
             /**
-             * The source of the malicious file. Valid values:
-             * <p>
+             * <p>The source of the malicious file. Valid values:</p>
+             * <ul>
+             * <li><strong>agentless</strong></li>
+             * <li><strong>image</strong></li>
+             * <li><strong>container</strong></li>
+             * </ul>
              * 
-             * *   **agentless**
-             * *   **image**
-             * *   **container**
+             * <strong>example:</strong>
+             * <p>agentless</p>
              */
             public Builder maliciousSource(String maliciousSource) {
                 this.maliciousSource = maliciousSource;
@@ -888,7 +981,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the vulnerability status was modified. Unit: milliseconds.
+             * <p>The timestamp generated when the vulnerability status was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1620404763000</p>
              */
             public Builder modifyTs(Long modifyTs) {
                 this.modifyTs = modifyTs;
@@ -896,7 +992,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>debian:10:CVE-2019-9893</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -904,7 +1003,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-002</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -912,14 +1014,18 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The priority to fix the vulnerability. Valid values:
-             * <p>
+             * <p>The priority to fix the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>asap</strong>: high</li>
+             * <li><strong>later</strong>: medium</li>
+             * <li><strong>nntf</strong>: low</li>
+             * </ul>
+             * <blockquote>
+             * <p> We recommend that you fix high-level vulnerabilities as soon as possible.</p>
+             * </blockquote>
              * 
-             * *   **asap**: high
-             * *   **later**: medium
-             * *   **nntf**: low
-             * 
-             * >  We recommend that you fix high-level vulnerabilities as soon as possible.
+             * <strong>example:</strong>
+             * <p>asap,later,nntf</p>
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -927,7 +1033,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container group.
+             * <p>The name of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22222-7xsqq</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -935,7 +1044,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The vulnerability ID.
+             * <p>The vulnerability ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>782661</p>
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
@@ -943,7 +1055,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The CVE IDs related to the vulnerability. Multiple CVE IDs are separated by commas (,).
+             * <p>The CVE IDs related to the vulnerability. Multiple CVE IDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2017-7518,CVE-2017-12188</p>
              */
             public Builder related(String related) {
                 this.related = related;
@@ -951,7 +1066,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varnish</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -959,7 +1077,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3rdparty</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -967,7 +1088,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the scan task was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the scan task was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649814050000</p>
              */
             public Builder scanTime(Long scanTime) {
                 this.scanTime = scanTime;
@@ -975,12 +1099,15 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the vulnerability. Valid values:
-             * <p>
+             * <p>The status of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The vulnerability is unfixed.</li>
+             * <li><strong>4</strong>: The vulnerability is being fixed.</li>
+             * <li><strong>7</strong>: The vulnerability is fixed.</li>
+             * </ul>
              * 
-             * *   **1**: The vulnerability is unfixed.
-             * *   **4**: The vulnerability is being fixed.
-             * *   **7**: The vulnerability is fixed.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -988,7 +1115,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * <p>The tag that is added to the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -996,7 +1126,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset that is scanned.
+             * <p>The ID of the asset that is scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300269</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -1004,7 +1137,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset that is scanned.
+             * <p>The name of the asset that is scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source-test-obj-XM0Ma</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -1012,12 +1148,15 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset that is scanned. Valid values:
-             * <p>
+             * <p>The type of the asset that is scanned. Valid values:</p>
+             * <ul>
+             * <li><strong>IMAGE</strong></li>
+             * <li><strong>ECS_IMAGE</strong></li>
+             * <li><strong>ECS_SNAPSHOT</strong></li>
+             * </ul>
              * 
-             * *   **IMAGE**
-             * *   **ECS_IMAGE**
-             * *   **ECS_SNAPSHOT**
+             * <strong>example:</strong>
+             * <p>ECS_IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -1025,11 +1164,14 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: system vulnerability</li>
+             * <li><strong>sca</strong>: application vulnerability</li>
+             * </ul>
              * 
-             * *   **cve**: system vulnerability
-             * *   **sca**: application vulnerability
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1037,7 +1179,10 @@ public class DescribeCanFixVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the container image.
+             * <p>The UUID of the container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0004a32a0305a7f6ab5ff9600d47****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

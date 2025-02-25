@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTimingSyntheticTaskRequest} extends {@link RequestModel}
  *
  * <p>GetTimingSyntheticTaskRequest</p>
  */
 public class GetTimingSyntheticTaskRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private GetTimingSyntheticTaskRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class GetTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +85,10 @@ public class GetTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the synthetic monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>856566a9cb2a4cafa05aa95ed0ec8f21</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

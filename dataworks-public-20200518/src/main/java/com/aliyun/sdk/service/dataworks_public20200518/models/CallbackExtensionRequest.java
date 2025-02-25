@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CallbackExtensionRequest} extends {@link RequestModel}
  *
  * <p>CallbackExtensionRequest</p>
  */
 public class CallbackExtensionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CheckMessage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckMessage")
     private String checkMessage;
 
-    @Body
-    @NameInMap("CheckResult")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckResult")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkResult;
 
-    @Body
-    @NameInMap("ExtensionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtensionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String extensionCode;
 
-    @Body
-    @NameInMap("MessageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
     private CallbackExtensionRequest(Builder builder) {
@@ -122,7 +127,10 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * CheckMessage.
+         * <p>The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The xxx rule is hit. Modify it and try again.</p>
          */
         public Builder checkMessage(String checkMessage) {
             this.putBodyParameter("CheckMessage", checkMessage);
@@ -131,7 +139,16 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * CheckResult.
+         * <p>The check status of the extension point event. Valid values:</p>
+         * <ul>
+         * <li>OK: The event passes the check.</li>
+         * <li>FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.</li>
+         * <li>WARN: The event passes the check, but an alert is reported.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAIL</p>
          */
         public Builder checkResult(String checkResult) {
             this.putBodyParameter("CheckResult", checkResult);
@@ -140,7 +157,11 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * ExtensionCode.
+         * <p>The unique code of the extension.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -149,7 +170,11 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * <p>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03400b03-b721-4c34-8727-2d6884077091</p>
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);

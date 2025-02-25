@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticPlanResponseBody</p>
  */
 public class DescribeElasticPlanResponseBody extends TeaModel {
-    @NameInMap("ElasticPlanList")
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanList")
     private java.util.List < ElasticPlanList> elasticPlanList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElasticPlanResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried scaling plans.
+         * <p>The queried scaling plans.</p>
          */
         public Builder elasticPlanList(java.util.List < ElasticPlanList> elasticPlanList) {
             this.elasticPlanList = elasticPlanList;
@@ -58,7 +58,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +74,47 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticPlanResponseBody</p>
+     */
     public static class ElasticPlanList extends TeaModel {
-        @NameInMap("ElasticNodeNum")
+        @com.aliyun.core.annotation.NameInMap("ElasticNodeNum")
         private Integer elasticNodeNum;
 
-        @NameInMap("ElasticPlanType")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanType")
         private String elasticPlanType;
 
-        @NameInMap("ElasticPlanWorkerSpec")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanWorkerSpec")
         private String elasticPlanWorkerSpec;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("EndDay")
+        @com.aliyun.core.annotation.NameInMap("EndDay")
         private String endDay;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("PlanName")
+        @com.aliyun.core.annotation.NameInMap("MonthlyRepeat")
+        private String monthlyRepeat;
+
+        @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
-        @NameInMap("ResourcePoolName")
+        @com.aliyun.core.annotation.NameInMap("ResourcePoolName")
         private String resourcePoolName;
 
-        @NameInMap("StartDay")
+        @com.aliyun.core.annotation.NameInMap("StartDay")
         private String startDay;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("WeeklyRepeat")
+        @com.aliyun.core.annotation.NameInMap("WeeklyRepeat")
         private String weeklyRepeat;
 
         private ElasticPlanList(Builder builder) {
@@ -112,6 +124,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             this.enable = builder.enable;
             this.endDay = builder.endDay;
             this.endTime = builder.endTime;
+            this.monthlyRepeat = builder.monthlyRepeat;
             this.planName = builder.planName;
             this.resourcePoolName = builder.resourcePoolName;
             this.startDay = builder.startDay;
@@ -170,6 +183,13 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         }
 
         /**
+         * @return monthlyRepeat
+         */
+        public String getMonthlyRepeat() {
+            return this.monthlyRepeat;
+        }
+
+        /**
          * @return planName
          */
         public String getPlanName() {
@@ -211,6 +231,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             private Boolean enable; 
             private String endDay; 
             private String endTime; 
+            private String monthlyRepeat; 
             private String planName; 
             private String resourcePoolName; 
             private String startDay; 
@@ -218,11 +239,14 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             private String weeklyRepeat; 
 
             /**
-             * The number of nodes that are involved in the scaling plan.
-             * <p>
+             * <p>The number of nodes that are involved in the scaling plan.</p>
+             * <ul>
+             * <li>If ElasticPlanType is set to <strong>worker</strong>, a value of 0 or null is returned.</li>
+             * <li>If ElasticPlanType is set to <strong>executorcombineworker</strong> or <strong>executor</strong>, a value greater than 0 is returned.</li>
+             * </ul>
              * 
-             * *   If ElasticPlanType is set to **worker**, a value of 0 or null is returned.
-             * *   If ElasticPlanType is set to **executorcombineworker** or **executor**, a value greater than 0 is returned.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder elasticNodeNum(Integer elasticNodeNum) {
                 this.elasticNodeNum = elasticNodeNum;
@@ -230,12 +254,15 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling plan. Valid values:
-             * <p>
+             * <p>The type of the scaling plan. Valid values:</p>
+             * <ul>
+             * <li><strong>worker</strong>: scales only elastic I/O resources.</li>
+             * <li><strong>executor</strong>: scales only computing resources.</li>
+             * <li><strong>executorcombineworker</strong> (default): scales both elastic I/O resources and computing resources by proportion.</li>
+             * </ul>
              * 
-             * *   **worker**: scales only elastic I/O resources.
-             * *   **executor**: scales only computing resources.
-             * *   **executorcombineworker** (default): scales both elastic I/O resources and computing resources by proportion.
+             * <strong>example:</strong>
+             * <p>worker</p>
              */
             public Builder elasticPlanType(String elasticPlanType) {
                 this.elasticPlanType = elasticPlanType;
@@ -243,16 +270,19 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specifications that can be scaled up by the scaling plan. Valid values:
-             * <p>
+             * <p>The resource specifications that can be scaled up by the scaling plan. Valid values:</p>
+             * <ul>
+             * <li>8 Core 64 GB (default)</li>
+             * <li>16 Core 64 GB</li>
+             * <li>32 Core 64 GB</li>
+             * <li>64 Core 128 GB</li>
+             * <li>12 Core 96 GB</li>
+             * <li>24 Core 96 GB</li>
+             * <li>52 Core 86 GB</li>
+             * </ul>
              * 
-             * *   8 Core 64 GB (default)
-             * *   16 Core 64 GB
-             * *   32 Core 64 GB
-             * *   64 Core 128 GB
-             * *   12 Core 96 GB
-             * *   24 Core 96 GB
-             * *   52 Core 86 GB
+             * <strong>example:</strong>
+             * <p>16 Core 64 GB</p>
              */
             public Builder elasticPlanWorkerSpec(String elasticPlanWorkerSpec) {
                 this.elasticPlanWorkerSpec = elasticPlanWorkerSpec;
@@ -260,11 +290,14 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scaling plan takes effect. Default value: true. Valid values:
-             * <p>
+             * <p>Indicates whether the scaling plan takes effect. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true** (default)
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -272,7 +305,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The end date of the scaling plan. This parameter is returned only if the end date of the scaling plan is set. The date is in the yyyy-MM-dd format.
+             * <p>The end date of the scaling plan. This parameter is returned only if the end date of the scaling plan is set. The date is in the yyyy-MM-dd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-09</p>
              */
             public Builder endDay(String endDay) {
                 this.endDay = endDay;
@@ -280,7 +316,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The restoration time of the scaling plan. The interval between the scale-up time and the restoration time cannot be more than 24 hours. The time is in the HH:mm:ss format.
+             * <p>The restoration time of the scaling plan. The interval between the scale-up time and the restoration time cannot be more than 24 hours. The time is in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -288,7 +327,21 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scaling plan.
+             * <p>The days of the month when the scaling plan was executed. A value indicates a day of the month. Multiple values are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,15,25</p>
+             */
+            public Builder monthlyRepeat(String monthlyRepeat) {
+                this.monthlyRepeat = monthlyRepeat;
+                return this;
+            }
+
+            /**
+             * <p>The name of the scaling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>realtime</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -296,7 +349,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_DEFAULT</p>
              */
             public Builder resourcePoolName(String resourcePoolName) {
                 this.resourcePoolName = resourcePoolName;
@@ -304,7 +360,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The start date of the scaling plan. This parameter is returned only if the start date of the scaling plan is set. The date is in the yyyy-MM-dd format.
+             * <p>The start date of the scaling plan. This parameter is returned only if the start date of the scaling plan is set. The date is in the yyyy-MM-dd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02</p>
              */
             public Builder startDay(String startDay) {
                 this.startDay = startDay;
@@ -312,7 +371,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The scale-up time of the scaling plan. The time is in the HH:mm:ss format.
+             * <p>The scale-up time of the scaling plan. The time is in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -320,7 +382,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The days of the week when the scaling plan was executed. Valid values: 0 to 6, which indicate Sunday to Saturday. Multiple values are separated by commas (,).
+             * <p>The days of the week when the scaling plan was executed. Valid values: 0 to 6, which indicate Sunday to Saturday. Multiple values are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3,4,5,6</p>
              */
             public Builder weeklyRepeat(String weeklyRepeat) {
                 this.weeklyRepeat = weeklyRepeat;

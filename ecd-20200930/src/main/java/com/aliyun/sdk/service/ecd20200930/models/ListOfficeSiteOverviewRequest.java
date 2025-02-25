@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOfficeSiteOverviewRequest} extends {@link RequestModel}
  *
  * <p>ListOfficeSiteOverviewRequest</p>
  */
 public class ListOfficeSiteOverviewRequest extends Request {
-    @Query
-    @NameInMap("ForceRefresh")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceRefresh")
     private Boolean forceRefresh;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    private java.util.List < String > officeSiteId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private java.util.List<String> officeSiteId;
 
-    @Query
-    @NameInMap("QueryRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryRange")
     private Integer queryRange;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListOfficeSiteOverviewRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
     /**
      * @return officeSiteId
      */
-    public java.util.List < String > getOfficeSiteId() {
+    public java.util.List<String> getOfficeSiteId() {
         return this.officeSiteId;
     }
 
@@ -107,7 +112,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         private Boolean forceRefresh; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > officeSiteId; 
+        private java.util.List<String> officeSiteId; 
         private Integer queryRange; 
         private String regionId; 
 
@@ -126,7 +131,10 @@ public class ListOfficeSiteOverviewRequest extends Request {
         } 
 
         /**
-         * Specifies whether to refresh the cache.
+         * <p>Specifies whether to refresh the cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceRefresh(Boolean forceRefresh) {
             this.putQueryParameter("ForceRefresh", forceRefresh);
@@ -135,11 +143,14 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 100</li>
+         * <li>Default value: 10</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 100
-         * *   Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -148,7 +159,10 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this is your first query or no next query is to be sent, skip this parameter. If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <p>The token that determines the start point of the next query. If this is your first query or no next query is to be sent, skip this parameter. If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -157,16 +171,28 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.
+         * <p>The office network IDs. You can specify IDs of 1 to 100 office networks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
-        public Builder officeSiteId(java.util.List < String > officeSiteId) {
+        public Builder officeSiteId(java.util.List<String> officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
             return this;
         }
 
         /**
-         * The query scope. Default value: 1.
+         * <p>The query scope. Cloud computers in a cloud computer pool are pooled cloud computers.</p>
+         * <p>Default values:</p>
+         * <ul>
+         * <li>1 (default): queries non-pooled cloud computers in the office network.</li>
+         * <li>2: queries pooled cloud computers in the office network.</li>
+         * <li>3: queries all cloud computers in the office network.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder queryRange(Integer queryRange) {
             this.putQueryParameter("QueryRange", queryRange);
@@ -175,7 +201,11 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

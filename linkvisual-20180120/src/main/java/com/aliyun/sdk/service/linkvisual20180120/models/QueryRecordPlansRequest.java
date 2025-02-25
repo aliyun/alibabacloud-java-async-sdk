@@ -61,10 +61,10 @@ public class QueryRecordPlansRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordPlansRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
+        private Builder(QueryRecordPlansRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

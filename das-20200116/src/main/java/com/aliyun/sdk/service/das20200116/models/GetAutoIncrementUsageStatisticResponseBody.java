@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoIncrementUsageStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoIncrementUsageStatisticResponseBody</p>
  */
 public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAutoIncrementUsageStatisticResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,13 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,14 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +155,29 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoIncrementUsageStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoIncrementUsageStatisticResponseBody</p>
+     */
     public static class AutoIncrementUsageList extends TeaModel {
-        @NameInMap("AutoIncrementCurrentValue")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementCurrentValue")
         private Long autoIncrementCurrentValue;
 
-        @NameInMap("AutoIncrementRatio")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementRatio")
         private Double autoIncrementRatio;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("MaximumValue")
+        @com.aliyun.core.annotation.NameInMap("MaximumValue")
         private Long maximumValue;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private AutoIncrementUsageList(Builder builder) {
@@ -218,7 +248,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * AutoIncrementCurrentValue.
+             * <p>The latest auto-increment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2147483647</p>
              */
             public Builder autoIncrementCurrentValue(Long autoIncrementCurrentValue) {
                 this.autoIncrementCurrentValue = autoIncrementCurrentValue;
@@ -226,7 +259,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AutoIncrementRatio.
+             * <p>The usage ratio of auto-increment IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoIncrementRatio(Double autoIncrementRatio) {
                 this.autoIncrementRatio = autoIncrementRatio;
@@ -234,7 +270,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -242,7 +281,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db01</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -250,7 +292,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumValue.
+             * <p>The maximum auto-increment ID that is supported by the current data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2147483647</p>
              */
             public Builder maximumValue(Long maximumValue) {
                 this.maximumValue = maximumValue;
@@ -258,7 +303,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -272,20 +320,26 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoIncrementUsageStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoIncrementUsageStatisticResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AutoIncrementUsageList")
-        private java.util.List < AutoIncrementUsageList> autoIncrementUsageList;
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementUsageList")
+        private java.util.List<AutoIncrementUsageList> autoIncrementUsageList;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("Finish")
+        @com.aliyun.core.annotation.NameInMap("Finish")
         private Boolean finish;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Data(Builder builder) {
@@ -307,7 +361,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         /**
          * @return autoIncrementUsageList
          */
-        public java.util.List < AutoIncrementUsageList> getAutoIncrementUsageList() {
+        public java.util.List<AutoIncrementUsageList> getAutoIncrementUsageList() {
             return this.autoIncrementUsageList;
         }
 
@@ -340,22 +394,25 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AutoIncrementUsageList> autoIncrementUsageList; 
+            private java.util.List<AutoIncrementUsageList> autoIncrementUsageList; 
             private String errorInfo; 
             private Boolean finish; 
             private String taskStatus; 
             private Long timestamp; 
 
             /**
-             * AutoIncrementUsageList.
+             * <p>The usage details of auto-increment IDs.</p>
              */
-            public Builder autoIncrementUsageList(java.util.List < AutoIncrementUsageList> autoIncrementUsageList) {
+            public Builder autoIncrementUsageList(java.util.List<AutoIncrementUsageList> autoIncrementUsageList) {
                 this.autoIncrementUsageList = autoIncrementUsageList;
                 return this;
             }
 
             /**
-             * ErrorInfo.
+             * <p>The error message returned if the task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the given database name list invalid, none of the database names in the list exist on the instance</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -363,7 +420,14 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Finish.
+             * <p>Indicates whether the task is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder finish(Boolean finish) {
                 this.finish = finish;
@@ -371,7 +435,16 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>RUNNING</strong>: The task is being executed.</li>
+             * <li><strong>SUCCESS</strong>: The task succeeds.</li>
+             * <li><strong>FAIL</strong>: The task fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INIT</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -379,7 +452,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1697183353000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

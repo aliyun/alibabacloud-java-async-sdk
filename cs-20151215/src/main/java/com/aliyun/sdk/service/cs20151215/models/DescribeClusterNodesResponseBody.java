@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNodesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterNodesResponseBody</p>
  */
 public class DescribeClusterNodesResponseBody extends TeaModel {
-    @NameInMap("nodes")
-    private java.util.List < Nodes> nodes;
+    @com.aliyun.core.annotation.NameInMap("nodes")
+    private java.util.List<Nodes> nodes;
 
-    @NameInMap("page")
+    @com.aliyun.core.annotation.NameInMap("page")
     private Page page;
 
     private DescribeClusterNodesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -46,19 +51,19 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private Page page; 
 
         /**
-         * The details of the nodes in the cluster.
+         * <p>The details of the nodes in the cluster.</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -71,65 +76,71 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("creation_time")
+        @com.aliyun.core.annotation.NameInMap("creation_time")
         private String creationTime;
 
-        @NameInMap("error_message")
+        @com.aliyun.core.annotation.NameInMap("error_message")
         private String errorMessage;
 
-        @NameInMap("expired_time")
+        @com.aliyun.core.annotation.NameInMap("expired_time")
         private String expiredTime;
 
-        @NameInMap("host_name")
+        @com.aliyun.core.annotation.NameInMap("host_name")
         private String hostName;
 
-        @NameInMap("image_id")
+        @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
-        @NameInMap("instance_charge_type")
+        @com.aliyun.core.annotation.NameInMap("instance_charge_type")
         private String instanceChargeType;
 
-        @NameInMap("instance_id")
+        @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
 
-        @NameInMap("instance_name")
+        @com.aliyun.core.annotation.NameInMap("instance_name")
         private String instanceName;
 
-        @NameInMap("instance_role")
+        @com.aliyun.core.annotation.NameInMap("instance_role")
         private String instanceRole;
 
-        @NameInMap("instance_status")
+        @com.aliyun.core.annotation.NameInMap("instance_status")
         private String instanceStatus;
 
-        @NameInMap("instance_type")
+        @com.aliyun.core.annotation.NameInMap("instance_type")
         private String instanceType;
 
-        @NameInMap("instance_type_family")
+        @com.aliyun.core.annotation.NameInMap("instance_type_family")
         private String instanceTypeFamily;
 
-        @NameInMap("ip_address")
-        private java.util.List < String > ipAddress;
+        @com.aliyun.core.annotation.NameInMap("ip_address")
+        private java.util.List<String> ipAddress;
 
-        @NameInMap("is_aliyun_node")
+        @com.aliyun.core.annotation.NameInMap("is_aliyun_node")
         private Boolean isAliyunNode;
 
-        @NameInMap("node_name")
+        @com.aliyun.core.annotation.NameInMap("node_name")
         private String nodeName;
 
-        @NameInMap("node_status")
+        @com.aliyun.core.annotation.NameInMap("node_status")
         private String nodeStatus;
 
-        @NameInMap("nodepool_id")
+        @com.aliyun.core.annotation.NameInMap("nodepool_id")
         private String nodepoolId;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("spot_strategy")
+        @com.aliyun.core.annotation.NameInMap("spot_strategy")
         private String spotStrategy;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Nodes(Builder builder) {
@@ -250,7 +261,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
@@ -316,7 +327,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private String instanceStatus; 
             private String instanceType; 
             private String instanceTypeFamily; 
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
             private Boolean isAliyunNode; 
             private String nodeName; 
             private String nodeStatus; 
@@ -326,7 +337,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The time when the node was created.
+             * <p>The time when the node was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-25T11:25:35+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -334,7 +348,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message generated when the node was created.
+             * <p>The error message generated when the node was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error***</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -342,7 +359,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration date of the node.
+             * <p>The expiration date of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2099-12-31T23:59:00+08:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -350,7 +370,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * <p>The name of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZ2vcckdmxp7u0urj2k****</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -358,7 +381,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the system image that is used by the node.
+             * <p>The ID of the system image that is used by the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -366,11 +392,14 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the node. Valid values:
-             * <p>
+             * <p>The billing method of the node. Valid values:</p>
+             * <ul>
+             * <li><code>PrePaid</code>: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
+             * <li><code>PostPaid</code>: the pay-as-you-go billing method.</li>
+             * </ul>
              * 
-             * *   `PrePaid`: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
-             * *   `PostPaid`: the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -378,7 +407,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2vcckdmxp7u0urj2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -386,7 +418,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance on which the node is deployed.
+             * <p>The name of the instance on which the node is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>worker-k8s-for-cs-c5cdf7e3938bc4f8eb0e44b21a80f****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -394,11 +429,14 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the node. Valid values:
-             * <p>
+             * <p>The role of the node. Valid values:</p>
+             * <ul>
+             * <li>Master: master node</li>
+             * <li>Worker: worker node</li>
+             * </ul>
              * 
-             * *   Master: master node
-             * *   Worker: worker node
+             * <strong>example:</strong>
+             * <p>Worker</p>
              */
             public Builder instanceRole(String instanceRole) {
                 this.instanceRole = instanceRole;
@@ -406,7 +444,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node.
+             * <p>The status of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -414,7 +455,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c5.xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -422,7 +466,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance family of the node.
+             * <p>The ECS instance family of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c5</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -430,19 +477,22 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * <p>The IP address of the node.</p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
 
             /**
-             * Indicates whether the instance on which the node is deployed is provided by Alibaba Cloud. Valid values:
-             * <p>
+             * <p>Indicates whether the instance on which the node is deployed is provided by Alibaba Cloud. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The instance is provided by Alibaba Cloud.</li>
+             * <li><code>false</code>: The instance is not provided by Alibaba Cloud.</li>
+             * </ul>
              * 
-             * *   `true`: The instance is provided by Alibaba Cloud.
-             * *   `false`: The instance is not provided by Alibaba Cloud.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAliyunNode(Boolean isAliyunNode) {
                 this.isAliyunNode = isAliyunNode;
@@ -450,7 +500,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node. This name is the identifier of the node in the cluster.
+             * <p>The name of the node. This name is the identifier of the node in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu.192.168.0.36</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -458,13 +511,16 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is ready. Valid values:
-             * <p>
+             * <p>Indicates whether the node is ready. Valid values:</p>
+             * <ul>
+             * <li><code>Ready</code>: The node is ready.</li>
+             * <li><code>NotReady</code>: The node is not ready.</li>
+             * <li><code>Unknown</code>: The status of the node is unknown.</li>
+             * <li><code>Offline</code>: The node is offline.</li>
+             * </ul>
              * 
-             * *   `Ready`: The node is ready.
-             * *   `NotReady`: The node is not ready.
-             * *   `Unknown`: The status of the node is unknown.
-             * *   `Offline`: The node is offline.
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -472,7 +528,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The node pool ID.
+             * <p>The node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np0794239424a84eb7a95327369d56****</p>
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -480,7 +539,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).
+             * <p>Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ess_attach</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -488,12 +550,15 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of preemptible instance. Valid values:
-             * <p>
+             * <p>The type of preemptible instance. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: a non-preemptible instance.</li>
+             * <li>SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</li>
+             * <li>SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</li>
+             * </ul>
              * 
-             * *   NoSpot: a non-preemptible instance.
-             * *   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.
-             * *   SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -501,14 +566,17 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node. Valid values:
-             * <p>
+             * <p>The status of the node. Valid values:</p>
+             * <ul>
+             * <li><code>pending</code>: The node is being created.</li>
+             * <li><code>running</code>: The node is running.</li>
+             * <li><code>starting</code>: The node is being started.</li>
+             * <li><code>stopping</code>: The node is being stopped.</li>
+             * <li><code>stopped</code>: The node is stopped.</li>
+             * </ul>
              * 
-             * *   `pending`: The node is being created.
-             * *   `running`: The node is running.
-             * *   `starting`: The node is being started.
-             * *   `stopping`: The node is being stopped.
-             * *   `stopped`: The node is stopped.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -522,14 +590,20 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodesResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Integer pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Integer totalCount;
 
         private Page(Builder builder) {
@@ -573,7 +647,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -581,7 +658,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -589,7 +669,10 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

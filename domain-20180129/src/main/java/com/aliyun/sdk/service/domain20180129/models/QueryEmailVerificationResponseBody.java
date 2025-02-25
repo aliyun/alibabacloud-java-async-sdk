@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEmailVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEmailVerificationResponseBody</p>
  */
 public class QueryEmailVerificationResponseBody extends TeaModel {
-    @NameInMap("ConfirmIp")
+    @com.aliyun.core.annotation.NameInMap("ConfirmIp")
     private String confirmIp;
 
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @NameInMap("EmailVerificationNo")
+    @com.aliyun.core.annotation.NameInMap("EmailVerificationNo")
     private String emailVerificationNo;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SendIp")
+    @com.aliyun.core.annotation.NameInMap("SendIp")
     private String sendIp;
 
-    @NameInMap("TokenSendTime")
+    @com.aliyun.core.annotation.NameInMap("TokenSendTime")
     private String tokenSendTime;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("VerificationStatus")
+    @com.aliyun.core.annotation.NameInMap("VerificationStatus")
     private Integer verificationStatus;
 
-    @NameInMap("VerificationTime")
+    @com.aliyun.core.annotation.NameInMap("VerificationTime")
     private String verificationTime;
 
     private QueryEmailVerificationResponseBody(Builder builder) {

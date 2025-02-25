@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootMachineRequest} extends {@link RequestModel}
  *
  * <p>RebootMachineRequest</p>
  */
 public class RebootMachineRequest extends Request {
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private RebootMachineRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class RebootMachineRequest extends Request {
         } 
 
         /**
-         * The UUID of the server that you want to restart.
-         * <p>
+         * <p>The UUID of the server that you want to restart.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>7151f27e-1d51-4e98-a540-8936a****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

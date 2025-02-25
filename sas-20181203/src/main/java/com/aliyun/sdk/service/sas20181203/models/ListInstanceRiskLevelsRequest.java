@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceRiskLevelsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceRiskLevelsRequest</p>
  */
 public class ListInstanceRiskLevelsRequest extends Request {
-    @Query
-    @NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
+    private java.util.List<InstanceList> instanceList;
 
     private ListInstanceRiskLevelsRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ListInstanceRiskLevelsRequest extends Request {
     /**
      * @return instanceList
      */
-    public java.util.List < InstanceList> getInstanceList() {
+    public java.util.List<InstanceList> getInstanceList() {
         return this.instanceList;
     }
 
     public static final class Builder extends Request.Builder<ListInstanceRiskLevelsRequest, Builder> {
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List<InstanceList> instanceList; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class ListInstanceRiskLevelsRequest extends Request {
         } 
 
         /**
-         * The instances.
+         * <p>The instances.</p>
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+        public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
             this.instanceList = instanceList;
             return this;
@@ -69,11 +74,17 @@ public class ListInstanceRiskLevelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceRiskLevelsRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstanceRiskLevelsRequest</p>
+     */
     public static class InstanceList extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private InstanceList(Builder builder) {
@@ -108,7 +119,10 @@ public class ListInstanceRiskLevelsRequest extends Request {
             private String uuid; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5efigezp50l2cmb****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -116,7 +130,10 @@ public class ListInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * The serial number of the instance.
+             * <p>The serial number of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

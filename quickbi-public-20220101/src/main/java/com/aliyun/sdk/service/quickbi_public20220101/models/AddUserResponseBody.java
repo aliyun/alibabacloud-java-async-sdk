@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserResponseBody} extends {@link TeaModel}
  *
  * <p>AddUserResponseBody</p>
  */
 public class AddUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddUserResponseBody(Builder builder) {
@@ -91,23 +96,32 @@ public class AddUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddUserResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AdminUser")
+        @com.aliyun.core.annotation.NameInMap("AdminUser")
         private Boolean adminUser;
 
-        @NameInMap("AuthAdminUser")
+        @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
         private Boolean authAdminUser;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("RoleIdList")
+        private java.util.List<Long> roleIdList;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private Integer userType;
 
         private Result(Builder builder) {
@@ -115,6 +129,7 @@ public class AddUserResponseBody extends TeaModel {
             this.adminUser = builder.adminUser;
             this.authAdminUser = builder.authAdminUser;
             this.nickName = builder.nickName;
+            this.roleIdList = builder.roleIdList;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -156,6 +171,13 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleIdList
+         */
+        public java.util.List<Long> getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -174,6 +196,7 @@ public class AddUserResponseBody extends TeaModel {
             private Boolean adminUser; 
             private Boolean authAdminUser; 
             private String nickName; 
+            private java.util.List<Long> roleIdList; 
             private String userId; 
             private Integer userType; 
 
@@ -206,6 +229,14 @@ public class AddUserResponseBody extends TeaModel {
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
+                return this;
+            }
+
+            /**
+             * RoleIdList.
+             */
+            public Builder roleIdList(java.util.List<Long> roleIdList) {
+                this.roleIdList = roleIdList;
                 return this;
             }
 

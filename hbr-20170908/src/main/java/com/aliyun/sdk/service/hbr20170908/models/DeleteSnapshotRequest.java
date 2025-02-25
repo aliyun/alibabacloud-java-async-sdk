@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnapshotRequest</p>
  */
 public class DeleteSnapshotRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("SnapshotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private DeleteSnapshotRequest(Builder builder) {
@@ -127,19 +132,22 @@ public class DeleteSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSnapshotRequest response) {
-            super(response);
-            this.clientId = response.clientId;
-            this.force = response.force;
-            this.instanceId = response.instanceId;
-            this.snapshotId = response.snapshotId;
-            this.sourceType = response.sourceType;
-            this.token = response.token;
-            this.vaultId = response.vaultId;
+        private Builder(DeleteSnapshotRequest request) {
+            super(request);
+            this.clientId = request.clientId;
+            this.force = request.force;
+            this.instanceId = request.instanceId;
+            this.snapshotId = request.snapshotId;
+            this.sourceType = request.sourceType;
+            this.token = request.token;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * ClientId.
+         * <p>The ID of the Cloud Backup client. If you delete a backup snapshot for Elastic Compute Service (ECS) instances, you must specify one of the ClientId and <strong>InstanceId</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-*********************</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -148,7 +156,14 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to forcibly delete the most recent backup snapshot. Valid values:</p>
+         * <ul>
+         * <li>true: The system forcibly deletes the most recent backup snapshot.</li>
+         * <li>false (default): The system does not forcibly delete the most recent backup snapshot.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -157,7 +172,10 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ECS instance. If you delete a backup snapshot for ECS instances, you must specify one of the InstanceId and <strong>ClientId</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-*********************</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -166,7 +184,11 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>The ID of the backup snapshot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-*********************</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -175,7 +197,15 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the backup source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: backup snapshots for ECS files</li>
+         * <li><strong>OSS</strong>: backup snapshots for Object Storage Service (OSS) buckets</li>
+         * <li><strong>NAS</strong>: backup snapshots for Apsara File Storage NAS (NAS) file systems</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -184,7 +214,10 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The token that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02WJDOE7</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -193,7 +226,10 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

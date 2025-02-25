@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationalUnitsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationalUnitsResponseBody</p>
  */
 public class ListOrganizationalUnitsResponseBody extends TeaModel {
-    @NameInMap("OrganizationalUnits")
-    private java.util.List < OrganizationalUnits> organizationalUnits;
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnits")
+    private java.util.List<OrganizationalUnits> organizationalUnits;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOrganizationalUnitsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     /**
      * @return organizationalUnits
      */
-    public java.util.List < OrganizationalUnits> getOrganizationalUnits() {
+    public java.util.List<OrganizationalUnits> getOrganizationalUnits() {
         return this.organizationalUnits;
     }
 
@@ -57,20 +62,23 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OrganizationalUnits> organizationalUnits; 
+        private java.util.List<OrganizationalUnits> organizationalUnits; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The list of data objects of organizational units.
+         * <p>The list of data objects of organizational units.</p>
          */
-        public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
+        public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries in the list.
+         * <p>The number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,38 +102,44 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationalUnitsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationalUnitsResponseBody</p>
+     */
     public static class OrganizationalUnits extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Leaf")
+        @com.aliyun.core.annotation.NameInMap("Leaf")
         private Boolean leaf;
 
-        @NameInMap("OrganizationalUnitExternalId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitExternalId")
         private String organizationalUnitExternalId;
 
-        @NameInMap("OrganizationalUnitId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
 
-        @NameInMap("OrganizationalUnitName")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
         private String organizationalUnitName;
 
-        @NameInMap("OrganizationalUnitSourceId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitSourceId")
         private String organizationalUnitSourceId;
 
-        @NameInMap("OrganizationalUnitSourceType")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitSourceType")
         private String organizationalUnitSourceType;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private OrganizationalUnits(Builder builder) {
@@ -238,7 +255,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -246,7 +266,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the organizational unit.
+             * <p>The description of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test organizational unit</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -254,7 +277,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -262,7 +288,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is a leaf node.
+             * <p>Indicates whether the node is a leaf node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder leaf(Boolean leaf) {
                 this.leaf = leaf;
@@ -270,10 +299,11 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The external ID of the organizational unit. The external ID can be used by external data to map the data of the organizational unit in IDaaS EIAM. By default, the external ID is the organizational unit ID.
-             * <p>
+             * <p>The external ID of the organizational unit. The external ID can be used by external data to map the data of the organizational unit in IDaaS EIAM. By default, the external ID is the organizational unit ID.</p>
+             * <p>For organizational units with the same source type and source ID, each organizational unit has a unique external ID.</p>
              * 
-             * For organizational units with the same source type and source ID, each organizational unit has a unique external ID.
+             * <strong>example:</strong>
+             * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
              */
             public Builder organizationalUnitExternalId(String organizationalUnitExternalId) {
                 this.organizationalUnitExternalId = organizationalUnitExternalId;
@@ -281,7 +311,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the organizational unit.
+             * <p>The ID of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -289,7 +322,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * 组织名称。
+             * <p>组织名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_organizationalUnit_name</p>
              */
             public Builder organizationalUnitName(String organizationalUnitName) {
                 this.organizationalUnitName = organizationalUnitName;
@@ -297,7 +333,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The source ID of the organizational unit.
+             * <p>The source ID of the organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder organizationalUnitSourceId(String organizationalUnitSourceId) {
                 this.organizationalUnitSourceId = organizationalUnitSourceId;
@@ -305,13 +344,16 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the organizational unit. Valid values:
-             * <p>
+             * <p>The source type of the organizational unit. Valid values:</p>
+             * <ul>
+             * <li>build_in: The organizational unit was created in IDaaS.</li>
+             * <li>ding_talk: The organizational unit was imported from DingTalk.</li>
+             * <li>ad: The organizational unit was imported from Microsoft Active Directory (AD).</li>
+             * <li>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+             * </ul>
              * 
-             * *   build_in: The organizational unit was created in IDaaS.
-             * *   ding_talk: The organizational unit was imported from DingTalk.
-             * *   ad: The organizational unit was imported from Microsoft Active Directory (AD).
-             * *   ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.
+             * <strong>example:</strong>
+             * <p>build_in</p>
              */
             public Builder organizationalUnitSourceType(String organizationalUnitSourceType) {
                 this.organizationalUnitSourceType = organizationalUnitSourceType;
@@ -319,7 +361,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent organizational unit.
+             * <p>The ID of the parent organizational unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -327,7 +372,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652085686179</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

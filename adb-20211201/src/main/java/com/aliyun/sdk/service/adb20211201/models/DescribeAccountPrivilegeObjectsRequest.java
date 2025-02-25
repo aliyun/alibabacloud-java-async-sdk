@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountPrivilegeObjectsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccountPrivilegeObjectsRequest</p>
  */
 public class DescribeAccountPrivilegeObjectsRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("ColumnPrivilegeObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColumnPrivilegeObject")
     private String columnPrivilegeObject;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DatabasePrivilegeObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabasePrivilegeObject")
     private String databasePrivilegeObject;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("PrivilegeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivilegeType")
     private String privilegeType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TablePrivilegeObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TablePrivilegeObject")
     private String tablePrivilegeObject;
 
     private DescribeAccountPrivilegeObjectsRequest(Builder builder) {
@@ -169,7 +174,11 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -178,7 +187,10 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The column name that is used to filter columns.
+         * <p>The column name that is used to filter columns.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col1</p>
          */
         public Builder columnPrivilegeObject(String columnPrivilegeObject) {
             this.putQueryParameter("ColumnPrivilegeObject", columnPrivilegeObject);
@@ -187,7 +199,11 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1k3wdmt139****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -196,7 +212,10 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The database name that is used to filter databases.
+         * <p>The database name that is used to filter databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database1</p>
          */
         public Builder databasePrivilegeObject(String databasePrivilegeObject) {
             this.putQueryParameter("DatabasePrivilegeObject", databasePrivilegeObject);
@@ -205,7 +224,10 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -214,7 +236,10 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +248,10 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The permission level. Valid values: Database, Table, and Column. Global is not supported.
+         * <p>The permission level. Valid values: Database, Table, and Column. Global is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Column</p>
          */
         public Builder privilegeType(String privilegeType) {
             this.putQueryParameter("PrivilegeType", privilegeType);
@@ -232,7 +260,11 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * <p>The region ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +273,10 @@ public class DescribeAccountPrivilegeObjectsRequest extends Request {
         }
 
         /**
-         * The table name that is used to filter tables.
+         * <p>The table name that is used to filter tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table1</p>
          */
         public Builder tablePrivilegeObject(String tablePrivilegeObject) {
             this.putQueryParameter("TablePrivilegeObject", tablePrivilegeObject);

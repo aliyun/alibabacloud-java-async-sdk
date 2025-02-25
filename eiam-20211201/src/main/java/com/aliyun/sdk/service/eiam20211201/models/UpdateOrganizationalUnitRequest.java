@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateOrganizationalUnitRequest} extends {@link RequestModel}
  *
  * <p>UpdateOrganizationalUnitRequest</p>
  */
 public class UpdateOrganizationalUnitRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrganizationalUnitId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String organizationalUnitId;
 
-    @Query
-    @NameInMap("OrganizationalUnitName")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String organizationalUnitName;
 
     private UpdateOrganizationalUnitRequest(Builder builder) {
@@ -108,7 +113,11 @@ public class UpdateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +126,11 @@ public class UpdateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The organization ID.
+         * <p>The organization ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -126,7 +139,10 @@ public class UpdateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * The name of the organization. The name can be up to 64 characters in length and must be unique in the same parent organization.
+         * <p>The name of the organization. The name can be up to 128 characters in length and must be unique in the same parent organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_name</p>
          */
         public Builder organizationalUnitName(String organizationalUnitName) {
             this.putQueryParameter("OrganizationalUnitName", organizationalUnitName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryProcessor</p>
  */
 public class QueryProcessor extends TeaModel {
-    @NameInMap("active")
+    @com.aliyun.core.annotation.NameInMap("active")
     private Boolean active;
 
-    @NameInMap("category")
+    @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
-    @NameInMap("indexes")
+    @com.aliyun.core.annotation.NameInMap("indexes")
     private java.util.List < String > indexes;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("processors")
+    @com.aliyun.core.annotation.NameInMap("processors")
     private java.util.List < java.util.Map<String, ?>> processors;
 
     private QueryProcessor(Builder builder) {

@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrometheusAlertRulesRequest} extends {@link RequestModel}
  *
  * <p>ListPrometheusAlertRulesRequest</p>
  */
 public class ListPrometheusAlertRulesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("MatchExpressions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchExpressions")
     private String matchExpressions;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ListPrometheusAlertRulesRequest(Builder builder) {
@@ -104,7 +109,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -121,7 +126,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         private String name; 
         private String regionId; 
         private Integer status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String type; 
 
         private Builder() {
@@ -140,7 +145,11 @@ public class ListPrometheusAlertRulesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0bad479465464e1d8c1e641b0afb****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -149,7 +158,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * MatchExpressions.
+         * <p>The tag match conditions that are described in a JSON string. For more information about this parameter, see the <strong>Additional description of the MatchExpressions parameter</strong> section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;severity&quot;,&quot;value&quot;:&quot;critical&quot;,&quot;operator&quot;:&quot;re&quot;}]</p>
          */
         public Builder matchExpressions(String matchExpressions) {
             this.putQueryParameter("MatchExpressions", matchExpressions);
@@ -158,7 +170,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus_Alert</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -167,7 +182,11 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +195,14 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Specifies whether the alert rule is enabled. Valid values:</p>
+         * <ul>
+         * <li>1: enables the alert rule.</li>
+         * <li>0: disables the alert rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -185,16 +211,19 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * Type.
+         * <p>The type of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -209,11 +238,17 @@ public class ListPrometheusAlertRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrometheusAlertRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListPrometheusAlertRulesRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -248,7 +283,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -256,7 +294,10 @@ public class ListPrometheusAlertRulesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder value(String value) {
                 this.value = value;

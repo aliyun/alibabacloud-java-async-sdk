@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorAccountsResponseBody</p>
  */
 public class DescribeMonitorAccountsResponseBody extends TeaModel {
-    @NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
+    private java.util.List<String> accountIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMonitorAccountsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
@@ -46,19 +51,22 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > accountIds; 
+        private java.util.List<String> accountIds; 
         private String requestId; 
 
         /**
-         * The IDs of the members.
+         * <p>The IDs of the members.</p>
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List<String> accountIds) {
             this.accountIds = accountIds;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6BF880</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

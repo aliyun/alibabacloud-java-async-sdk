@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCenRouteMapResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCenRouteMapResponseBody</p>
  */
 public class DeleteCenRouteMapResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteCenRouteMapResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeleteCenRouteMapResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5903EE99-D542-4E14-BC65-AAC1CB2D3D03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

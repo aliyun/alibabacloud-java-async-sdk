@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSmsTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>AddSmsTemplateResponseBody</p>
  */
 public class AddSmsTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
     private AddSmsTemplateResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class AddSmsTemplateResponseBody extends TeaModel {
         private String templateCode; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,10 @@ public class AddSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +105,10 @@ public class AddSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +116,10 @@ public class AddSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateCode.
+         * <p>The code of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_15255****</p>
          */
         public Builder templateCode(String templateCode) {
             this.templateCode = templateCode;

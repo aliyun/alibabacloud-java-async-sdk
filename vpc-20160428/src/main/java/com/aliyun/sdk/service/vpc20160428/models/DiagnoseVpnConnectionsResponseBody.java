@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiagnoseVpnConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>DiagnoseVpnConnectionsResponseBody</p>
  */
 public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnConnections")
-    private java.util.List < VpnConnections> vpnConnections;
+    @com.aliyun.core.annotation.NameInMap("VpnConnections")
+    private java.util.List<VpnConnections> vpnConnections;
 
     private DiagnoseVpnConnectionsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     /**
      * @return vpnConnections
      */
-    public java.util.List < VpnConnections> getVpnConnections() {
+    public java.util.List<VpnConnections> getVpnConnections() {
         return this.vpnConnections;
     }
 
@@ -83,10 +88,13 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VpnConnections> vpnConnections; 
+        private java.util.List<VpnConnections> vpnConnections; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8094E1E-935B-1397-96A8-4F87A5D1BF29</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,9 +135,9 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * VpnConnections.
+         * <p>The diagnostic information.</p>
          */
-        public Builder vpnConnections(java.util.List < VpnConnections> vpnConnections) {
+        public Builder vpnConnections(java.util.List<VpnConnections> vpnConnections) {
             this.vpnConnections = vpnConnections;
             return this;
         }
@@ -131,32 +148,38 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DiagnoseVpnConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DiagnoseVpnConnectionsResponseBody</p>
+     */
     public static class VpnConnections extends TeaModel {
-        @NameInMap("FailedReason")
+        @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
-        @NameInMap("FailedReasonCode")
+        @com.aliyun.core.annotation.NameInMap("FailedReasonCode")
         private String failedReasonCode;
 
-        @NameInMap("FailedTime")
+        @com.aliyun.core.annotation.NameInMap("FailedTime")
         private Long failedTime;
 
-        @NameInMap("MismatchLocalParam")
+        @com.aliyun.core.annotation.NameInMap("MismatchLocalParam")
         private String mismatchLocalParam;
 
-        @NameInMap("MismatchRemoteParam")
+        @com.aliyun.core.annotation.NameInMap("MismatchRemoteParam")
         private String mismatchRemoteParam;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("SourceLog")
+        @com.aliyun.core.annotation.NameInMap("SourceLog")
         private String sourceLog;
 
-        @NameInMap("TunnelId")
+        @com.aliyun.core.annotation.NameInMap("TunnelId")
         private String tunnelId;
 
-        @NameInMap("VpnConnectionId")
+        @com.aliyun.core.annotation.NameInMap("VpnConnectionId")
         private String vpnConnectionId;
 
         private VpnConnections(Builder builder) {
@@ -254,7 +277,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             private String vpnConnectionId; 
 
             /**
-             * FailedReason.
+             * <p>The cause of the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Phase1 negotiation timeout</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -262,7 +288,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReasonCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Phase1NegotiationTimeout</p>
              */
             public Builder failedReasonCode(String failedReasonCode) {
                 this.failedReasonCode = failedReasonCode;
@@ -270,7 +299,11 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedTime.
+             * <p>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: millisecond.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673581161000</p>
              */
             public Builder failedTime(Long failedTime) {
                 this.failedTime = failedTime;
@@ -278,7 +311,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * MismatchLocalParam.
+             * <p>If the values of the parameters configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameters configured for the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256</p>
              */
             public Builder mismatchLocalParam(String mismatchLocalParam) {
                 this.mismatchLocalParam = mismatchLocalParam;
@@ -286,7 +322,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * MismatchRemoteParam.
+             * <p>If the parameter values configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameter configured for the peer gateway device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder mismatchRemoteParam(String mismatchRemoteParam) {
                 this.mismatchRemoteParam = mismatchRemoteParam;
@@ -294,7 +333,15 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * <p>The error level. Valid values:</p>
+             * <ul>
+             * <li><strong>Critical</strong></li>
+             * <li><strong>Warn</strong></li>
+             * <li><strong>Normal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Warn</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -302,7 +349,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLog.
+             * <p>The log information about the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-13 11:39:21 vco-bp1spxu8hlcvpd7ry**** [PROTO_ERR]: ikev1.c:1433:isakmp_ph1resend(): phase1 negotiation failed due to time up. [{remote id:4}{ph1: 172.16.0.88[500] &lt;=&gt; 192.168.0.206[500], 172.16.0.88 &lt;=&gt; 192.168.0.206}]</p>
              */
             public Builder sourceLog(String sourceLog) {
                 this.sourceLog = sourceLog;
@@ -310,7 +360,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelId.
+             * <p>The tunnel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tun-64n1sr9dig64k6****</p>
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -318,7 +371,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * VpnConnectionId.
+             * <p>The ID of the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vco-bp1spxu8hlcvpd7ry****</p>
              */
             public Builder vpnConnectionId(String vpnConnectionId) {
                 this.vpnConnectionId = vpnConnectionId;

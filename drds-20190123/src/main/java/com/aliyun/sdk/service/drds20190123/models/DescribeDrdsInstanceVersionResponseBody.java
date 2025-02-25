@@ -62,7 +62,7 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details about the instance version.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
             private String newestVersion; 
 
             /**
-             * InstanceVersion.
+             * The current version of the instance.
              */
             public Builder instanceVersion(String instanceVersion) {
                 this.instanceVersion = instanceVersion;
@@ -138,7 +138,7 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NewestVersion.
+             * The latest version of the instance.
              */
             public Builder newestVersion(String newestVersion) {
                 this.newestVersion = newestVersion;

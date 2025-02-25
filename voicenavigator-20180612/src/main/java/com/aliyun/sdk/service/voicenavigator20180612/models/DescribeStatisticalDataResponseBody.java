@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStatisticalDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStatisticalDataResponseBody</p>
  */
 public class DescribeStatisticalDataResponseBody extends TeaModel {
-    @NameInMap("ConversationTotalNum")
+    @com.aliyun.core.annotation.NameInMap("ConversationTotalNum")
     private Long conversationTotalNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResolvedQuestionTotalNum")
+    @com.aliyun.core.annotation.NameInMap("ResolvedQuestionTotalNum")
     private Long resolvedQuestionTotalNum;
 
-    @NameInMap("StatisticalDataReports")
-    private java.util.List < StatisticalDataReports> statisticalDataReports;
+    @com.aliyun.core.annotation.NameInMap("StatisticalDataReports")
+    private java.util.List<StatisticalDataReports> statisticalDataReports;
 
-    @NameInMap("TotalDialoguePassRate")
+    @com.aliyun.core.annotation.NameInMap("TotalDialoguePassRate")
     private String totalDialoguePassRate;
 
-    @NameInMap("TotalKnowledgeHitRate")
+    @com.aliyun.core.annotation.NameInMap("TotalKnowledgeHitRate")
     private String totalKnowledgeHitRate;
 
-    @NameInMap("TotalResolutionRate")
+    @com.aliyun.core.annotation.NameInMap("TotalResolutionRate")
     private String totalResolutionRate;
 
-    @NameInMap("TotalValidAnswerRate")
+    @com.aliyun.core.annotation.NameInMap("TotalValidAnswerRate")
     private String totalValidAnswerRate;
 
     private DescribeStatisticalDataResponseBody(Builder builder) {
@@ -79,7 +84,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     /**
      * @return statisticalDataReports
      */
-    public java.util.List < StatisticalDataReports> getStatisticalDataReports() {
+    public java.util.List<StatisticalDataReports> getStatisticalDataReports() {
         return this.statisticalDataReports;
     }
 
@@ -115,7 +120,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         private Long conversationTotalNum; 
         private String requestId; 
         private Long resolvedQuestionTotalNum; 
-        private java.util.List < StatisticalDataReports> statisticalDataReports; 
+        private java.util.List<StatisticalDataReports> statisticalDataReports; 
         private String totalDialoguePassRate; 
         private String totalKnowledgeHitRate; 
         private String totalResolutionRate; 
@@ -148,7 +153,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         /**
          * StatisticalDataReports.
          */
-        public Builder statisticalDataReports(java.util.List < StatisticalDataReports> statisticalDataReports) {
+        public Builder statisticalDataReports(java.util.List<StatisticalDataReports> statisticalDataReports) {
             this.statisticalDataReports = statisticalDataReports;
             return this;
         }
@@ -191,26 +196,32 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStatisticalDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStatisticalDataResponseBody</p>
+     */
     public static class StatisticalDataReports extends TeaModel {
-        @NameInMap("DialoguePassRate")
+        @com.aliyun.core.annotation.NameInMap("DialoguePassRate")
         private String dialoguePassRate;
 
-        @NameInMap("KnowledgeHitRate")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeHitRate")
         private String knowledgeHitRate;
 
-        @NameInMap("ResolutionRate")
+        @com.aliyun.core.annotation.NameInMap("ResolutionRate")
         private String resolutionRate;
 
-        @NameInMap("ResolvedQuestionNum")
+        @com.aliyun.core.annotation.NameInMap("ResolvedQuestionNum")
         private Integer resolvedQuestionNum;
 
-        @NameInMap("StatisticalDate")
+        @com.aliyun.core.annotation.NameInMap("StatisticalDate")
         private String statisticalDate;
 
-        @NameInMap("TotalConversationNum")
+        @com.aliyun.core.annotation.NameInMap("TotalConversationNum")
         private Integer totalConversationNum;
 
-        @NameInMap("ValidAnswerRate")
+        @com.aliyun.core.annotation.NameInMap("ValidAnswerRate")
         private String validAnswerRate;
 
         private StatisticalDataReports(Builder builder) {

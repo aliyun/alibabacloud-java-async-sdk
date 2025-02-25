@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSystemLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeSystemLogRequest</p>
  */
 public class DescribeSystemLogRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("EntityObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityObject")
     private String entityObject;
 
-    @Query
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private Integer entityType;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeSystemLogRequest(Builder builder) {
@@ -151,7 +156,11 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The bills of the burstable clean bandwidth that are issued before this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range to query. The bills of the burstable clean bandwidth that are issued before this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640966400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,10 +169,13 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * The IP address of the instance.
-         * <p>
+         * <p>The IP address of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/91490.html">DescribeInstanceDetails</a> operation to query the IP addresses of all instances.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeInstanceDetails](~~91490~~) operation to query the IP addresses of all instances.
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder entityObject(String entityObject) {
             this.putQueryParameter("EntityObject", entityObject);
@@ -172,10 +184,13 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * The type of the system log. Set the value to **20**, which indicates the billing logs for the burstable clean bandwidth.
-         * <p>
+         * <p>The type of the system log. Set the value to <strong>20</strong>, which indicates the billing logs for the burstable clean bandwidth.</p>
+         * <blockquote>
+         * <p>You must specify this parameter. Otherwise, the call fails.</p>
+         * </blockquote>
          * 
-         * > You must specify this parameter. Otherwise, the call fails.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder entityType(Integer entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -184,7 +199,11 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +212,11 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +225,11 @@ public class DescribeSystemLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The bills of the burstable clean bandwidth that are issued after this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query. The bills of the burstable clean bandwidth that are issued after this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1609430400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

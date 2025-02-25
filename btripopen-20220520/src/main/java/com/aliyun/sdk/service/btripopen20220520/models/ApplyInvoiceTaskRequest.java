@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyInvoiceTaskRequest} extends {@link RequestModel}
  *
  * <p>ApplyInvoiceTaskRequest</p>
  */
 public class ApplyInvoiceTaskRequest extends Request {
-    @Body
-    @NameInMap("bill_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("bill_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billDate;
 
-    @Body
-    @NameInMap("invoice_task_list")
-    @Validation(required = true)
-    private java.util.List < InvoiceTaskList> invoiceTaskList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("invoice_task_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<InvoiceTaskList> invoiceTaskList;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ApplyInvoiceTaskRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class ApplyInvoiceTaskRequest extends Request {
     /**
      * @return invoiceTaskList
      */
-    public java.util.List < InvoiceTaskList> getInvoiceTaskList() {
+    public java.util.List<InvoiceTaskList> getInvoiceTaskList() {
         return this.invoiceTaskList;
     }
 
@@ -69,7 +74,7 @@ public class ApplyInvoiceTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ApplyInvoiceTaskRequest, Builder> {
         private String billDate; 
-        private java.util.List < InvoiceTaskList> invoiceTaskList; 
+        private java.util.List<InvoiceTaskList> invoiceTaskList; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -84,7 +89,10 @@ public class ApplyInvoiceTaskRequest extends Request {
         } 
 
         /**
-         * bill_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
          */
         public Builder billDate(String billDate) {
             this.putBodyParameter("bill_date", billDate);
@@ -93,9 +101,9 @@ public class ApplyInvoiceTaskRequest extends Request {
         }
 
         /**
-         * invoice_task_list.
+         * <p>This parameter is required.</p>
          */
-        public Builder invoiceTaskList(java.util.List < InvoiceTaskList> invoiceTaskList) {
+        public Builder invoiceTaskList(java.util.List<InvoiceTaskList> invoiceTaskList) {
             String invoiceTaskListShrink = shrink(invoiceTaskList, "invoice_task_list", "json");
             this.putBodyParameter("invoice_task_list", invoiceTaskListShrink);
             this.invoiceTaskList = invoiceTaskList;
@@ -118,67 +126,85 @@ public class ApplyInvoiceTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyInvoiceTaskRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyInvoiceTaskRequest</p>
+     */
     public static class InvoiceTaskList extends TeaModel {
-        @NameInMap("contact")
+        @com.aliyun.core.annotation.NameInMap("contact")
         private String contact;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("flight_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("flight_invoice_fee")
         private String flightInvoiceFee;
 
-        @NameInMap("fu_point_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("fu_point_invoice_fee")
         private String fuPointInvoiceFee;
 
-        @NameInMap("hotel_normal_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("hotel_normal_invoice_fee")
         private String hotelNormalInvoiceFee;
 
-        @NameInMap("hotel_special_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("hotel_special_invoice_fee")
         private String hotelSpecialInvoiceFee;
 
-        @NameInMap("international_flight_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("international_flight_invoice_fee")
         private String internationalFlightInvoiceFee;
 
-        @NameInMap("international_hotel_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("international_hotel_invoice_fee")
         private String internationalHotelInvoiceFee;
 
-        @NameInMap("invoice_third_part_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("invoice_third_part_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String invoiceThirdPartId;
 
-        @NameInMap("invoice_type")
+        @com.aliyun.core.annotation.NameInMap("invoice_type")
         private Integer invoiceType;
 
-        @NameInMap("mail_address")
+        @com.aliyun.core.annotation.NameInMap("mail_address")
         private String mailAddress;
 
-        @NameInMap("mail_city")
+        @com.aliyun.core.annotation.NameInMap("mail_city")
         private String mailCity;
 
-        @NameInMap("mail_full_address")
+        @com.aliyun.core.annotation.NameInMap("mail_full_address")
         private String mailFullAddress;
 
-        @NameInMap("mail_province")
+        @com.aliyun.core.annotation.NameInMap("mail_province")
         private String mailProvince;
 
-        @NameInMap("penalty_fee")
+        @com.aliyun.core.annotation.NameInMap("meal_normal_invoice_fee")
+        private String mealNormalInvoiceFee;
+
+        @com.aliyun.core.annotation.NameInMap("penalty_fee")
         private String penaltyFee;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("service_fee")
+        @com.aliyun.core.annotation.NameInMap("service_fee")
         private String serviceFee;
 
-        @NameInMap("telephone")
+        @com.aliyun.core.annotation.NameInMap("telephone")
         private String telephone;
 
-        @NameInMap("train_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("train_acceleration_package_invoice_fee")
+        private String trainAccelerationPackageInvoiceFee;
+
+        @com.aliyun.core.annotation.NameInMap("train_invoice_fee")
         private String trainInvoiceFee;
 
-        @NameInMap("vehicle_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("vas_mall_special_invoice_fee")
+        private String vasMallSpecialInvoiceFee;
+
+        @com.aliyun.core.annotation.NameInMap("vehicle_invoice_fee")
         private String vehicleInvoiceFee;
+
+        @com.aliyun.core.annotation.NameInMap("vehicle_normal_invoice_fee")
+        private String vehicleNormalInvoiceFee;
 
         private InvoiceTaskList(Builder builder) {
             this.contact = builder.contact;
@@ -195,12 +221,16 @@ public class ApplyInvoiceTaskRequest extends Request {
             this.mailCity = builder.mailCity;
             this.mailFullAddress = builder.mailFullAddress;
             this.mailProvince = builder.mailProvince;
+            this.mealNormalInvoiceFee = builder.mealNormalInvoiceFee;
             this.penaltyFee = builder.penaltyFee;
             this.remark = builder.remark;
             this.serviceFee = builder.serviceFee;
             this.telephone = builder.telephone;
+            this.trainAccelerationPackageInvoiceFee = builder.trainAccelerationPackageInvoiceFee;
             this.trainInvoiceFee = builder.trainInvoiceFee;
+            this.vasMallSpecialInvoiceFee = builder.vasMallSpecialInvoiceFee;
             this.vehicleInvoiceFee = builder.vehicleInvoiceFee;
+            this.vehicleNormalInvoiceFee = builder.vehicleNormalInvoiceFee;
         }
 
         public static Builder builder() {
@@ -310,6 +340,13 @@ public class ApplyInvoiceTaskRequest extends Request {
         }
 
         /**
+         * @return mealNormalInvoiceFee
+         */
+        public String getMealNormalInvoiceFee() {
+            return this.mealNormalInvoiceFee;
+        }
+
+        /**
          * @return penaltyFee
          */
         public String getPenaltyFee() {
@@ -338,6 +375,13 @@ public class ApplyInvoiceTaskRequest extends Request {
         }
 
         /**
+         * @return trainAccelerationPackageInvoiceFee
+         */
+        public String getTrainAccelerationPackageInvoiceFee() {
+            return this.trainAccelerationPackageInvoiceFee;
+        }
+
+        /**
          * @return trainInvoiceFee
          */
         public String getTrainInvoiceFee() {
@@ -345,10 +389,24 @@ public class ApplyInvoiceTaskRequest extends Request {
         }
 
         /**
+         * @return vasMallSpecialInvoiceFee
+         */
+        public String getVasMallSpecialInvoiceFee() {
+            return this.vasMallSpecialInvoiceFee;
+        }
+
+        /**
          * @return vehicleInvoiceFee
          */
         public String getVehicleInvoiceFee() {
             return this.vehicleInvoiceFee;
+        }
+
+        /**
+         * @return vehicleNormalInvoiceFee
+         */
+        public String getVehicleNormalInvoiceFee() {
+            return this.vehicleNormalInvoiceFee;
         }
 
         public static final class Builder {
@@ -366,12 +424,16 @@ public class ApplyInvoiceTaskRequest extends Request {
             private String mailCity; 
             private String mailFullAddress; 
             private String mailProvince; 
+            private String mealNormalInvoiceFee; 
             private String penaltyFee; 
             private String remark; 
             private String serviceFee; 
             private String telephone; 
+            private String trainAccelerationPackageInvoiceFee; 
             private String trainInvoiceFee; 
+            private String vasMallSpecialInvoiceFee; 
             private String vehicleInvoiceFee; 
+            private String vehicleNormalInvoiceFee; 
 
             /**
              * contact.
@@ -438,7 +500,10 @@ public class ApplyInvoiceTaskRequest extends Request {
             }
 
             /**
-             * invoice_third_part_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder invoiceThirdPartId(String invoiceThirdPartId) {
                 this.invoiceThirdPartId = invoiceThirdPartId;
@@ -486,6 +551,14 @@ public class ApplyInvoiceTaskRequest extends Request {
             }
 
             /**
+             * meal_normal_invoice_fee.
+             */
+            public Builder mealNormalInvoiceFee(String mealNormalInvoiceFee) {
+                this.mealNormalInvoiceFee = mealNormalInvoiceFee;
+                return this;
+            }
+
+            /**
              * penalty_fee.
              */
             public Builder penaltyFee(String penaltyFee) {
@@ -518,6 +591,14 @@ public class ApplyInvoiceTaskRequest extends Request {
             }
 
             /**
+             * train_acceleration_package_invoice_fee.
+             */
+            public Builder trainAccelerationPackageInvoiceFee(String trainAccelerationPackageInvoiceFee) {
+                this.trainAccelerationPackageInvoiceFee = trainAccelerationPackageInvoiceFee;
+                return this;
+            }
+
+            /**
              * train_invoice_fee.
              */
             public Builder trainInvoiceFee(String trainInvoiceFee) {
@@ -526,10 +607,26 @@ public class ApplyInvoiceTaskRequest extends Request {
             }
 
             /**
+             * vas_mall_special_invoice_fee.
+             */
+            public Builder vasMallSpecialInvoiceFee(String vasMallSpecialInvoiceFee) {
+                this.vasMallSpecialInvoiceFee = vasMallSpecialInvoiceFee;
+                return this;
+            }
+
+            /**
              * vehicle_invoice_fee.
              */
             public Builder vehicleInvoiceFee(String vehicleInvoiceFee) {
                 this.vehicleInvoiceFee = vehicleInvoiceFee;
+                return this;
+            }
+
+            /**
+             * vehicle_normal_invoice_fee.
+             */
+            public Builder vehicleNormalInvoiceFee(String vehicleNormalInvoiceFee) {
+                this.vehicleNormalInvoiceFee = vehicleNormalInvoiceFee;
                 return this;
             }
 

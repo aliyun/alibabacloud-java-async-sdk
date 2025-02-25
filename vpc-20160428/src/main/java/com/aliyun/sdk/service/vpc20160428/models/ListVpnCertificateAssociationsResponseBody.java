@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpnCertificateAssociationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpnCertificateAssociationsResponseBody</p>
  */
 public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnCertificateRelations")
-    private java.util.List < VpnCertificateRelations> vpnCertificateRelations;
+    @com.aliyun.core.annotation.NameInMap("VpnCertificateRelations")
+    private java.util.List<VpnCertificateRelations> vpnCertificateRelations;
 
     private ListVpnCertificateAssociationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     /**
      * @return vpnCertificateRelations
      */
-    public java.util.List < VpnCertificateRelations> getVpnCertificateRelations() {
+    public java.util.List<VpnCertificateRelations> getVpnCertificateRelations() {
         return this.vpnCertificateRelations;
     }
 
@@ -83,10 +88,13 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VpnCertificateRelations> vpnCertificateRelations; 
+        private java.util.List<VpnCertificateRelations> vpnCertificateRelations; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +117,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>197AF2BD-547F-470C-B29A-8400400233EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +128,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -122,9 +139,9 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The association information.
+         * <p>The association information.</p>
          */
-        public Builder vpnCertificateRelations(java.util.List < VpnCertificateRelations> vpnCertificateRelations) {
+        public Builder vpnCertificateRelations(java.util.List<VpnCertificateRelations> vpnCertificateRelations) {
             this.vpnCertificateRelations = vpnCertificateRelations;
             return this;
         }
@@ -135,20 +152,26 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpnCertificateAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpnCertificateAssociationsResponseBody</p>
+     */
     public static class VpnCertificateRelations extends TeaModel {
-        @NameInMap("AssociationTime")
+        @com.aliyun.core.annotation.NameInMap("AssociationTime")
         private String associationTime;
 
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VpnGatewayId")
+        @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
         private String vpnGatewayId;
 
         private VpnCertificateRelations(Builder builder) {
@@ -210,10 +233,11 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             private String vpnGatewayId; 
 
             /**
-             * The time when the Anycast EIP was associated.
-             * <p>
+             * <p>The time when the Anycast EIP was associated.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2020-12-29T09:30:29Z</p>
              */
             public Builder associationTime(String associationTime) {
                 this.associationTime = associationTime;
@@ -221,7 +245,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate ID.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6bfe4218-ea1d****</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -229,11 +256,14 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
-             * <p>
+             * <p>The type of the certificate.</p>
+             * <ul>
+             * <li><strong>Encryption</strong></li>
+             * <li><strong>Signature</strong></li>
+             * </ul>
              * 
-             * *   **Encryption**
-             * *   **Signature**
+             * <strong>example:</strong>
+             * <p>Signature</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -241,7 +271,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the VPN gateway is created.
+             * <p>The ID of the region where the VPN gateway is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -249,7 +282,10 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPN gateway.
+             * <p>The ID of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpn-bp1usbiorilk51760****</p>
              */
             public Builder vpnGatewayId(String vpnGatewayId) {
                 this.vpnGatewayId = vpnGatewayId;

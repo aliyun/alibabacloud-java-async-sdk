@@ -1,63 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselineStatusesRequest} extends {@link RequestModel}
  *
  * <p>ListBaselineStatusesRequest</p>
  */
 public class ListBaselineStatusesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BaselineTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineTypes")
     private String baselineTypes;
 
-    @Body
-    @NameInMap("Bizdate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizdate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizdate;
 
-    @Body
-    @NameInMap("FinishStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FinishStatus")
     private String finishStatus;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Body
-    @NameInMap("SearchText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchText")
     private String searchText;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Body
-    @NameInMap("TopicId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TopicId")
     private Long topicId;
 
     private ListBaselineStatusesRequest(Builder builder) {
@@ -198,7 +202,7 @@ public class ListBaselineStatusesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -207,7 +211,10 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The type of the baseline. Valid values: DAILY and HOURLY. The value DAILY indicates that the baseline is scheduled by day. The value HOURLY indicates that the baseline is scheduled by hour. Multiple types are separated by commas (,).
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY. The value DAILY indicates that the baseline is scheduled by day. The value HOURLY indicates that the baseline is scheduled by hour. Multiple types are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY,HOURLY</p>
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -216,7 +223,11 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * <p>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-07T00:00:00+0800</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -225,7 +236,10 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running. Multiple states are separated by commas (,).
+         * <p>The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running. Multiple states are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISH,UNFINISH</p>
          */
         public Builder finishStatus(String finishStatus) {
             this.putBodyParameter("FinishStatus", finishStatus);
@@ -234,7 +248,10 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the baseline owner.
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -243,7 +260,11 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
+         * <p>The number of the page to return. Valid values: 1 to 30. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -252,7 +273,11 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -261,7 +286,10 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Multiple priorities are separated by commas (,).
+         * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Multiple priorities are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,3,5,7,8</p>
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -270,7 +298,10 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The keyword of the baseline name used to search for the baseline.
+         * <p>The keyword of the baseline name used to search for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Keyword of the baseline name</p>
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
@@ -279,7 +310,10 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time. Multiple states are separated by commas (,).
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time. Multiple states are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAFE,DANGROUS,OVER</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -288,7 +322,10 @@ public class ListBaselineStatusesRequest extends Request {
         }
 
         /**
-         * The ID of the event.
+         * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder topicId(Long topicId) {
             this.putBodyParameter("TopicId", topicId);

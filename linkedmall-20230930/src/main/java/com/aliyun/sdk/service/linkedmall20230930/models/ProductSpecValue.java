@@ -1,25 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductSpecValue} extends {@link TeaModel}
  *
  * <p>ProductSpecValue</p>
  */
 public class ProductSpecValue extends TeaModel {
-    @NameInMap("value")
+    @com.aliyun.core.annotation.NameInMap("value")
     private String value;
 
-    @NameInMap("valueId")
+    @com.aliyun.core.annotation.NameInMap("valueAlias")
+    private String valueAlias;
+
+    @com.aliyun.core.annotation.NameInMap("valueId")
     private Long valueId;
 
     private ProductSpecValue(Builder builder) {
         this.value = builder.value;
+        this.valueAlias = builder.valueAlias;
         this.valueId = builder.valueId;
     }
 
@@ -39,6 +48,13 @@ public class ProductSpecValue extends TeaModel {
     }
 
     /**
+     * @return valueAlias
+     */
+    public String getValueAlias() {
+        return this.valueAlias;
+    }
+
+    /**
      * @return valueId
      */
     public Long getValueId() {
@@ -47,6 +63,7 @@ public class ProductSpecValue extends TeaModel {
 
     public static final class Builder {
         private String value; 
+        private String valueAlias; 
         private Long valueId; 
 
         /**
@@ -54,6 +71,14 @@ public class ProductSpecValue extends TeaModel {
          */
         public Builder value(String value) {
             this.value = value;
+            return this;
+        }
+
+        /**
+         * valueAlias.
+         */
+        public Builder valueAlias(String valueAlias) {
+            this.valueAlias = valueAlias;
             return this;
         }
 

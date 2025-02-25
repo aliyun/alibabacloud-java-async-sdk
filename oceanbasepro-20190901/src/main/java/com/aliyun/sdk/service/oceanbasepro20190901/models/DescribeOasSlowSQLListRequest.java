@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,77 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOasSlowSQLListRequest</p>
  */
 public class DescribeOasSlowSQLListRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Body
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @Body
-    @NameInMap("DynamicSql")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicSql")
     private Boolean dynamicSql;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Body
-    @NameInMap("FilterCondition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterCondition")
     private String filterCondition;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("MergeDynamicSql")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MergeDynamicSql")
     private Boolean mergeDynamicSql;
 
-    @Body
-    @NameInMap("NodeIp")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIp")
     private String nodeIp;
 
-    @Body
-    @NameInMap("SearchKeyWord")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchKeyWord")
     private String searchKeyWord;
 
-    @Body
-    @NameInMap("SearchParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchParam")
     private String searchParam;
 
-    @Body
-    @NameInMap("SearchRule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchRule")
     private String searchRule;
 
-    @Body
-    @NameInMap("SearchValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchValue")
     private String searchValue;
 
-    @Body
-    @NameInMap("SqlId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlId")
     private String sqlId;
 
-    @Body
-    @NameInMap("SqlTextLength")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlTextLength")
     private Long sqlTextLength;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     private DescribeOasSlowSQLListRequest(Builder builder) {

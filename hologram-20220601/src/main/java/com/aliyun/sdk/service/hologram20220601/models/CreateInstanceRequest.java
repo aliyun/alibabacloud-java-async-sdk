@@ -1,95 +1,104 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("autoPay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoPay")
     private Boolean autoPay;
 
-    @Body
-    @NameInMap("autoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("chargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("chargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("coldStorageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("coldStorageSize")
     private Long coldStorageSize;
 
-    @Body
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Long cpu;
 
-    @Body
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
-    @Body
-    @NameInMap("gatewayCount")
-    @Validation(maximum = 50, minimum = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableServerlessComputing")
+    private Boolean enableServerlessComputing;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayCount")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 2)
     private Long gatewayCount;
 
-    @Body
-    @NameInMap("initialDatabases")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("initialDatabases")
     private String initialDatabases;
 
-    @Body
-    @NameInMap("instanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("instanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Body
-    @NameInMap("leaderInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("leaderInstanceId")
     private String leaderInstanceId;
 
-    @Body
-    @NameInMap("pricingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pricingCycle")
     private String pricingCycle;
 
-    @Body
-    @NameInMap("regionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("storageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storageSize")
     private Long storageSize;
 
-    @Body
-    @NameInMap("vSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Body
-    @NameInMap("vpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Body
-    @NameInMap("zoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("zoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateInstanceRequest(Builder builder) {
@@ -100,6 +109,7 @@ public class CreateInstanceRequest extends Request {
         this.coldStorageSize = builder.coldStorageSize;
         this.cpu = builder.cpu;
         this.duration = builder.duration;
+        this.enableServerlessComputing = builder.enableServerlessComputing;
         this.gatewayCount = builder.gatewayCount;
         this.initialDatabases = builder.initialDatabases;
         this.instanceName = builder.instanceName;
@@ -167,6 +177,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Long getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return enableServerlessComputing
+     */
+    public Boolean getEnableServerlessComputing() {
+        return this.enableServerlessComputing;
     }
 
     /**
@@ -260,6 +277,7 @@ public class CreateInstanceRequest extends Request {
         private Long coldStorageSize; 
         private Long cpu; 
         private Long duration; 
+        private Boolean enableServerlessComputing; 
         private Long gatewayCount; 
         private String initialDatabases; 
         private String instanceName; 
@@ -285,6 +303,7 @@ public class CreateInstanceRequest extends Request {
             this.coldStorageSize = request.coldStorageSize;
             this.cpu = request.cpu;
             this.duration = request.duration;
+            this.enableServerlessComputing = request.enableServerlessComputing;
             this.gatewayCount = request.gatewayCount;
             this.initialDatabases = request.initialDatabases;
             this.instanceName = request.instanceName;
@@ -300,13 +319,17 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-payment. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-payment. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the Expenses and Costs console to pay for the order.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * > The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the User Center to pay for the order.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("autoPay", autoPay);
@@ -315,11 +338,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable monthly auto-renewal. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("autoRenew", autoRenew);
@@ -328,13 +354,18 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is invalid for Hologres Shared Cluster instances. Hologres Shared Cluster instances have fixed specifications and are pay-as-you-go instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
-         * 
-         * > This parameter is invalid for shared instances. Shared instances have fixed specifications and are pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("chargeType", chargeType);
@@ -343,10 +374,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The infrequent access (IA) storage space of the instance. Unit: GB.
-         * <p>
+         * <p>The infrequent access (IA) storage space of the instance. Unit: GB.</p>
+         * <blockquote>
+         * <p> This parameter is invalid for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is invalid for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder coldStorageSize(Long coldStorageSize) {
             this.putBodyParameter("coldStorageSize", coldStorageSize);
@@ -355,26 +389,30 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The instance specifications. Valid values:
-         * <p>
+         * <p>The instance specifications. Valid values:</p>
+         * <ul>
+         * <li>8-core 32GB (number of compute nodes: 1)</li>
+         * <li>32-core 128GB (number of compute nodes: 2)</li>
+         * <li>64-core 256GB (number of compute nodes: 4)</li>
+         * <li>96-core 384GB (number of compute nodes: 6)</li>
+         * <li>128-core 512GB (number of compute nodes: 8)</li>
+         * <li>Others</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Set this parameter to the number of cores.</p>
+         * </li>
+         * <li><p>If you want to set this parameter to specifications with more than 1,024 GB, you must submit a ticket.</p>
+         * </li>
+         * <li><p>This parameter is invalid for Hologres Shared Cluster instances.</p>
+         * </li>
+         * <li><p>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
+         * </li>
+         * </ul>
          * 
-         * *   8-core 32 GB (number of compute nodes: 1)
-         * *   16-core 64 GB (number of compute nodes: 1)
-         * *   32-core 128 GB (number of compute nodes: 2)
-         * *   64-core 256 GB (number of compute nodes: 4)
-         * *   96-core 384 GB (number of compute nodes: 6)
-         * *   128-core 512 GB (number of compute nodes: 8)
-         * *   Others
-         * 
-         * > 
-         * 
-         * *   Set this parameter to the number of cores.
-         * 
-         * *   If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.
-         * 
-         * *   If you want to purchase a shared instance, you do not need to configure this parameter.
-         * 
-         * *   The specifications of 8-core 32 GB (number of compute nodes: 1) are for trial use only and cannot be used for production.
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder cpu(Long cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -383,10 +421,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The validity period of the instance that you want to purchase. For example, you can specify a validity period of two months.
-         * <p>
+         * <p>The validity period of the instance that you want to purchase. For example, you can specify a validity period of two months.</p>
+         * <blockquote>
+         * <p> You do not need to configure this parameter for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * > You do not need to configure this parameter for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duration(Long duration) {
             this.putBodyParameter("duration", duration);
@@ -395,10 +436,30 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The number of gateways. Valid values: 2 to 50.
-         * <p>
+         * <p>Specifies whether to enable the Serverless Computing feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * > This parameter is required only for virtual warehouse instances.
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder enableServerlessComputing(Boolean enableServerlessComputing) {
+            this.putBodyParameter("enableServerlessComputing", enableServerlessComputing);
+            this.enableServerlessComputing = enableServerlessComputing;
+            return this;
+        }
+
+        /**
+         * <p>The number of gateways. Valid values: 2 to 50.</p>
+         * <blockquote>
+         * <p> This parameter is required only for virtual warehouse instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder gatewayCount(Long gatewayCount) {
             this.putBodyParameter("gatewayCount", gatewayCount);
@@ -407,7 +468,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * initialDatabases.
+         * <p>The initial database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot</p>
          */
         public Builder initialDatabases(String initialDatabases) {
             this.putBodyParameter("initialDatabases", initialDatabases);
@@ -416,7 +480,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The name of the Hologres instance that you want to purchase. The name must be 2 to 64 characters in length.
+         * <p>The name of the instance. The name must be 2 to 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_holo</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);
@@ -425,13 +493,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The type of the instance. Valid values:
-         * <p>
+         * <p>The category of the instance. Valid values:</p>
+         * <ul>
+         * <li>Standard: general-purpose instance</li>
+         * <li>Follower: read-only secondary instance</li>
+         * <li>Warehouse: virtual warehouse instance</li>
+         * <li>Shared: Hologres Shared Cluster instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Standard: general-purpose instance
-         * *   Follower: read-only secondary instance
-         * *   Warehouse: virtual warehouse instance
-         * *   Shared: shared instance
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -440,20 +512,25 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the primary instance. This parameter is required for read-only secondary instances.
-         * <p>
+         * <p>The ID of the primary instance. This parameter is required for read-only secondary instances.</p>
+         * <blockquote>
+         * <p> The primary and secondary instances must meet the following requirements:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>The primary instance is in the Running state.</p>
+         * </li>
+         * <li><p>The primary instance and secondary instances are deployed in the same region.</p>
+         * </li>
+         * <li><p>The primary instance and secondary instances are deployed in the same zone.</p>
+         * </li>
+         * <li><p>Less than 10 secondary instances are associated with the primary instance.</p>
+         * </li>
+         * <li><p>The primary instance and secondary instances belong to the same Alibaba Cloud account.</p>
+         * </li>
+         * </ul>
          * 
-         * > The primary instance and secondary instances must meet the following requirements:
-         * 
-         * *   The primary instance is in the Running state.
-         * 
-         * *   The primary instance and secondary instances are deployed in the same region.
-         * 
-         * *   The primary instance and secondary instances are deployed in the same zone.
-         * 
-         * *   Less than 10 secondary instances are associated with the primary instance.
-         * 
-         * *   The primary and secondary instances belong to the same Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>hgpostcn-cn-lbj3aworq112</p>
          */
         public Builder leaderInstanceId(String leaderInstanceId) {
             this.putBodyParameter("leaderInstanceId", leaderInstanceId);
@@ -462,19 +539,24 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing cycle. Valid values:
-         * <p>
+         * <p>The billing cycle. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Hour</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter can only be set to Month for subscription instances.</p>
+         * </li>
+         * <li><p>This parameter can only be set to Hour for pay-as-you-go instances.</p>
+         * </li>
+         * <li><p>By default, this parameter is set to Hour for Hologres Shared Cluster instances.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Month
-         * *   Hour
-         * 
-         * > 
-         * 
-         * *   This parameter can only be set to Month for subscription instances.
-         * 
-         * *   This parameter can only be set to Hour for pay-as-you-go instances.
-         * 
-         * *   By default, this parameter is set to Hour for shared instances.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("pricingCycle", pricingCycle);
@@ -483,7 +565,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can go to the [OpenAPI Explorer](https://api.aliyun.com/product/Hologram) or the Usage notes section to view the ID of the region.
+         * <p>The ID of the region. You can obtain region IDs in <a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/endpoints">Endpoints</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("regionId", regionId);
@@ -492,7 +578,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The resource group. If you do not specify this parameter, the default resource group of the account is used.
+         * <p>The ID of the resource group. If you do not specify this parameter, the default resource group of the account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -501,10 +590,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The standard storage space of the instance. Unit: GB.
-         * <p>
+         * <p>The standard storage space of the instance. Unit: GB.</p>
+         * <blockquote>
+         * <p> This parameter is invalid for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is invalid for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder storageSize(Long storageSize) {
             this.putBodyParameter("storageSize", storageSize);
@@ -513,7 +605,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the instance resides.
+         * <p>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2vccsiymtxxxxxx</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putBodyParameter("vSwitchId", vSwitchId);
@@ -522,7 +618,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC). The region in which the VPC resides must be the same as the region in which the Hologres instance resides.
+         * <p>The ID of the virtual private cloud (VPC). The region in which the VPC resides must be the same as the region in which the Hologres instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4netc3y5xxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -531,7 +631,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the zone. For more information about how to obtain the ID of the zone, see the Usage notes section.
+         * <p>The ID of the zone. For more information, see the &quot;Operation description&quot; section in this topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("zoneId", zoneId);

@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue} extends {@link TeaModel}
  *
  * <p>ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue</p>
  */
 public class ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue extends TeaModel {
-    @NameInMap("struct")
+    @com.aliyun.core.annotation.NameInMap("struct")
     private Boolean struct;
 
-    @NameInMap("cancel_fee_ind")
+    @com.aliyun.core.annotation.NameInMap("cancel_fee_ind")
     private Boolean cancelFeeInd;
 
-    @NameInMap("change_fee_ind")
+    @com.aliyun.core.annotation.NameInMap("change_fee_ind")
     private Boolean changeFeeInd;
 
-    @NameInMap("upgrade_fee_ind")
+    @com.aliyun.core.annotation.NameInMap("upgrade_fee_ind")
     private Boolean upgradeFeeInd;
 
-    @NameInMap("reissue_ind")
+    @com.aliyun.core.annotation.NameInMap("reissue_ind")
     private Boolean reissueInd;
 
-    @NameInMap("penalty_type_code")
+    @com.aliyun.core.annotation.NameInMap("penalty_type_code")
     private Integer penaltyTypeCode;
 
-    @NameInMap("penalty_apply_range_code")
+    @com.aliyun.core.annotation.NameInMap("penalty_apply_range_code")
     private Integer penaltyApplyRangeCode;
 
-    @NameInMap("penalty_charge_type_code")
+    @com.aliyun.core.annotation.NameInMap("penalty_charge_type_code")
     private Integer penaltyChargeTypeCode;
 
-    @NameInMap("fee")
+    @com.aliyun.core.annotation.NameInMap("fee")
     private Double fee;
 
-    @NameInMap("currency")
+    @com.aliyun.core.annotation.NameInMap("currency")
     private String currency;
 
-    @NameInMap("penalty_percent")
+    @com.aliyun.core.annotation.NameInMap("penalty_percent")
     private Double penaltyPercent;
 
-    @NameInMap("start_time")
+    @com.aliyun.core.annotation.NameInMap("start_time")
     private Integer startTime;
 
-    @NameInMap("end_time")
+    @com.aliyun.core.annotation.NameInMap("end_time")
     private Integer endTime;
 
-    @NameInMap("time_unit_code")
+    @com.aliyun.core.annotation.NameInMap("time_unit_code")
     private Integer timeUnitCode;
 
     private ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue(Builder builder) {

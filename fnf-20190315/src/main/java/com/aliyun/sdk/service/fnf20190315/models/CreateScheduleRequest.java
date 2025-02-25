@@ -34,14 +34,14 @@ public class CreateScheduleRequest extends Request {
     @NameInMap("Payload")
     private String payload;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     @Body
     @NameInMap("ScheduleName")
     @Validation(required = true)
     private String scheduleName;
+
+    @Query
+    @NameInMap("SignatureVersion")
+    private String signatureVersion;
 
     private CreateScheduleRequest(Builder builder) {
         super(builder);
@@ -50,8 +50,8 @@ public class CreateScheduleRequest extends Request {
         this.enable = builder.enable;
         this.flowName = builder.flowName;
         this.payload = builder.payload;
-        this.requestId = builder.requestId;
         this.scheduleName = builder.scheduleName;
+        this.signatureVersion = builder.signatureVersion;
     }
 
     public static Builder builder() {
@@ -103,17 +103,17 @@ public class CreateScheduleRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return scheduleName
      */
     public String getScheduleName() {
         return this.scheduleName;
+    }
+
+    /**
+     * @return signatureVersion
+     */
+    public String getSignatureVersion() {
+        return this.signatureVersion;
     }
 
     public static final class Builder extends Request.Builder<CreateScheduleRequest, Builder> {
@@ -122,8 +122,8 @@ public class CreateScheduleRequest extends Request {
         private Boolean enable; 
         private String flowName; 
         private String payload; 
-        private String requestId; 
         private String scheduleName; 
+        private String signatureVersion; 
 
         private Builder() {
             super();
@@ -136,8 +136,8 @@ public class CreateScheduleRequest extends Request {
             this.enable = request.enable;
             this.flowName = request.flowName;
             this.payload = request.payload;
-            this.requestId = request.requestId;
             this.scheduleName = request.scheduleName;
+            this.signatureVersion = request.signatureVersion;
         } 
 
         /**
@@ -190,15 +190,6 @@ public class CreateScheduleRequest extends Request {
         }
 
         /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
          * The name of the time-based schedule. Configure this parameter based on the following rules:
          * <p>
          * 
@@ -210,6 +201,15 @@ public class CreateScheduleRequest extends Request {
         public Builder scheduleName(String scheduleName) {
             this.putBodyParameter("ScheduleName", scheduleName);
             this.scheduleName = scheduleName;
+            return this;
+        }
+
+        /**
+         * SignatureVersion.
+         */
+        public Builder signatureVersion(String signatureVersion) {
+            this.putQueryParameter("SignatureVersion", signatureVersion);
+            this.signatureVersion = signatureVersion;
             return this;
         }
 

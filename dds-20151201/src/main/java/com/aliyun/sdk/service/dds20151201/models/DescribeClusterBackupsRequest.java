@@ -1,64 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterBackupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterBackupsRequest</p>
  */
 public class DescribeClusterBackupsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("IsOnlyGetClusterBackUp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOnlyGetClusterBackUp")
     private Boolean isOnlyGetClusterBackUp;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeClusterBackupsRequest(Builder builder) {
@@ -66,6 +79,7 @@ public class DescribeClusterBackupsRequest extends Request {
         this.regionId = builder.regionId;
         this.backupId = builder.backupId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.destRegion = builder.destRegion;
         this.endTime = builder.endTime;
         this.isOnlyGetClusterBackUp = builder.isOnlyGetClusterBackUp;
         this.ownerAccount = builder.ownerAccount;
@@ -74,6 +88,7 @@ public class DescribeClusterBackupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.srcRegion = builder.srcRegion;
         this.startTime = builder.startTime;
     }
 
@@ -109,6 +124,13 @@ public class DescribeClusterBackupsRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     /**
@@ -168,6 +190,13 @@ public class DescribeClusterBackupsRequest extends Request {
     }
 
     /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -178,6 +207,7 @@ public class DescribeClusterBackupsRequest extends Request {
         private String regionId; 
         private String backupId; 
         private String DBInstanceId; 
+        private String destRegion; 
         private String endTime; 
         private Boolean isOnlyGetClusterBackUp; 
         private String ownerAccount; 
@@ -186,6 +216,7 @@ public class DescribeClusterBackupsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String srcRegion; 
         private String startTime; 
 
         private Builder() {
@@ -197,6 +228,7 @@ public class DescribeClusterBackupsRequest extends Request {
             this.regionId = request.regionId;
             this.backupId = request.backupId;
             this.DBInstanceId = request.DBInstanceId;
+            this.destRegion = request.destRegion;
             this.endTime = request.endTime;
             this.isOnlyGetClusterBackUp = request.isOnlyGetClusterBackUp;
             this.ownerAccount = request.ownerAccount;
@@ -205,6 +237,7 @@ public class DescribeClusterBackupsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.srcRegion = request.srcRegion;
             this.startTime = request.startTime;
         } 
 
@@ -218,7 +251,10 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster backup set.
+         * <p>The ID of the cluster backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5664****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -227,7 +263,11 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp16cb162771****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -236,7 +276,25 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The region where cross-region backups reside.</p>
+         * <blockquote>
+         * <p> This parameter is required if you want to query cross-region backups.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-14T13:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -245,11 +303,14 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query information about child nodes in the cluster backup. Valid values:
-         * <p>
+         * <p>Specifies whether to query information about child nodes in the cluster backup. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system returns only the basic information of the cluster backup.</li>
+         * <li><strong>false</strong> (default): The system returns the backup information of all child nodes.</li>
+         * </ul>
          * 
-         * *   **true**: The system returns only the basic information of the cluster backup.
-         * *   **false** (default): The system returns the backup information of all child nodes.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isOnlyGetClusterBackUp(Boolean isOnlyGetClusterBackUp) {
             this.putQueryParameter("IsOnlyGetClusterBackUp", isOnlyGetClusterBackUp);
@@ -276,7 +337,10 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**. The page number must be a positive integer.
+         * <p>The page number. Default value: <strong>1</strong>. The page number must be a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -285,12 +349,15 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **30** (default)
-         * *   **50**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -317,7 +384,30 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required if you want to query the backup sets of a released instance.</p>
+         * </li>
+         * <li><p>This parameter is required if you want to query cross-region backups.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-13T12:11:14Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

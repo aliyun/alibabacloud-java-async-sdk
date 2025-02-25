@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRemediationTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListRemediationTemplatesRequest</p>
  */
 public class ListRemediationTemplatesRequest extends Request {
-    @Query
-    @NameInMap("ManagedRuleIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
     private String managedRuleIdentifier;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RemediationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemediationType")
     private String remediationType;
 
     private ListRemediationTemplatesRequest(Builder builder) {
@@ -96,10 +101,11 @@ public class ListRemediationTemplatesRequest extends Request {
         } 
 
         /**
-         * The identifier of the managed rule.
-         * <p>
+         * <p>The identifier of the managed rule.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a> operation to obtain the managed rule identifier.</p>
          * 
-         * You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the managed rule identifier.
+         * <strong>example:</strong>
+         * <p>oss-bucket-public-write-prohibited</p>
          */
         public Builder managedRuleIdentifier(String managedRuleIdentifier) {
             this.putQueryParameter("ManagedRuleIdentifier", managedRuleIdentifier);
@@ -108,7 +114,10 @@ public class ListRemediationTemplatesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from 1.
+         * <p>The page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -117,7 +126,10 @@ public class ListRemediationTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -126,7 +138,10 @@ public class ListRemediationTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.
+         * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOS</p>
          */
         public Builder remediationType(String remediationType) {
             this.putQueryParameter("RemediationType", remediationType);

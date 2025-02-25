@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteConflictResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRouteConflictResponseBody</p>
  */
 public class DescribeRouteConflictResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteConflicts")
+    @com.aliyun.core.annotation.NameInMap("RouteConflicts")
     private RouteConflicts routeConflicts;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRouteConflictResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE3A2CC7-41F1-58DB-8306-CFC99D9C747B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * A list of overlapping routes.
+         * <p>A list of overlapping routes.</p>
          */
         public Builder routeConflicts(RouteConflicts routeConflicts) {
             this.routeConflicts = routeConflicts;
@@ -118,7 +132,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +148,26 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouteConflictResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteConflictResponseBody</p>
+     */
     public static class RouteConflict extends TeaModel {
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RouteConflict(Builder builder) {
@@ -206,7 +229,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The destination CIDR block of the overlapping route.
+             * <p>The destination CIDR block of the overlapping route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/16</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -214,7 +240,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the peer network instance on which the overlapping routes are found.
+             * <p>The ID of the peer network instance on which the overlapping routes are found.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccn-0q3b7oviikmm9h****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -222,12 +251,15 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the peer network instance on which the overlapping routes are found.
-             * <p>
+             * <p>The type of the peer network instance on which the overlapping routes are found.</p>
+             * <ul>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>VBR</strong>: VBR</li>
+             * <li><strong>CCN</strong>: CCN instance</li>
+             * </ul>
              * 
-             * *   **VPC**: VPC
-             * *   **VBR**: VBR
-             * *   **CCN**: CCN instance
+             * <strong>example:</strong>
+             * <p>CCN</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -235,7 +267,10 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the peer network instance on which the overlapping routes are found is deployed.
+             * <p>The region ID of the peer network instance on which the overlapping routes are found is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccn-cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -243,11 +278,14 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the route error. Valid values:
-             * <p>
+             * <p>The cause of the route error. Valid values:</p>
+             * <ul>
+             * <li><strong>conflict</strong>: The routes have the same destination CIDR block.</li>
+             * <li><strong>overflow</strong>: The number of routes in the route table configured on another network instance has reached the upper limit.</li>
+             * </ul>
              * 
-             * *   **conflict**: The routes have the same destination CIDR block.
-             * *   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.
+             * <strong>example:</strong>
+             * <p>conflict</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -261,9 +299,15 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteConflictResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteConflictResponseBody</p>
+     */
     public static class RouteConflicts extends TeaModel {
-        @NameInMap("RouteConflict")
-        private java.util.List < RouteConflict> routeConflict;
+        @com.aliyun.core.annotation.NameInMap("RouteConflict")
+        private java.util.List<RouteConflict> routeConflict;
 
         private RouteConflicts(Builder builder) {
             this.routeConflict = builder.routeConflict;
@@ -280,17 +324,17 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         /**
          * @return routeConflict
          */
-        public java.util.List < RouteConflict> getRouteConflict() {
+        public java.util.List<RouteConflict> getRouteConflict() {
             return this.routeConflict;
         }
 
         public static final class Builder {
-            private java.util.List < RouteConflict> routeConflict; 
+            private java.util.List<RouteConflict> routeConflict; 
 
             /**
              * RouteConflict.
              */
-            public Builder routeConflict(java.util.List < RouteConflict> routeConflict) {
+            public Builder routeConflict(java.util.List<RouteConflict> routeConflict) {
                 this.routeConflict = routeConflict;
                 return this;
             }

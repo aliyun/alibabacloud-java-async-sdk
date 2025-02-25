@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLoadBalancerAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateLoadBalancerAttributeRequest</p>
  */
 public class UpdateLoadBalancerAttributeRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Cps")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cps")
     private Integer cps;
 
-    @Body
-    @NameInMap("CrossZoneEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CrossZoneEnabled")
     private Boolean crossZoneEnabled;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Body
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private UpdateLoadBalancerAttributeRequest(Builder builder) {
@@ -139,12 +144,14 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -153,7 +160,10 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * The maximum number of connections that can be created per second on the NLB instance. Valid values: **1** to **1000000**.
+         * <p>The maximum number of new connections per second supported by the NLB instance in each zone (virtual IP address). Valid values: <strong>1</strong> to <strong>1000000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cps(Integer cps) {
             this.putBodyParameter("Cps", cps);
@@ -162,11 +172,14 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable cross-zone load balancing for the NLB instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable cross-zone load balancing for the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder crossZoneEnabled(Boolean crossZoneEnabled) {
             this.putBodyParameter("CrossZoneEnabled", crossZoneEnabled);
@@ -175,11 +188,14 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -188,7 +204,11 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * The NLB instance ID.
+         * <p>The NLB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-wb7r6dlwetvt5j****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putBodyParameter("LoadBalancerId", loadBalancerId);
@@ -197,10 +217,11 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * The NLB instance name.
-         * <p>
+         * <p>The NLB instance name.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>NLB1</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putBodyParameter("LoadBalancerName", loadBalancerName);
@@ -209,10 +230,11 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

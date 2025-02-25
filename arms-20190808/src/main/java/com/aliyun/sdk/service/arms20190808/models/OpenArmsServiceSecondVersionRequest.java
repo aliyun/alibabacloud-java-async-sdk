@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenArmsServiceSecondVersionRequest} extends {@link RequestModel}
  *
  * <p>OpenArmsServiceSecondVersionRequest</p>
  */
 public class OpenArmsServiceSecondVersionRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private OpenArmsServiceSecondVersionRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class OpenArmsServiceSecondVersionRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,14 +88,18 @@ public class OpenArmsServiceSecondVersionRequest extends Request {
         }
 
         /**
-         * The type of the service. Valid values:
-         * <p>
+         * <p>The type of the service. Valid values:</p>
+         * <ul>
+         * <li><code>arms</code>: ARMS</li>
+         * <li><code>arms_app</code>: Application Monitoring</li>
+         * <li><code>arms_web</code>: Browser Monitoring</li>
+         * <li><code>prometheus_monitor</code>: Managed Service for Prometheus</li>
+         * <li><code>synthetic_post</code>: Synthetic Monitoring</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `arms`: ARMS
-         * *   `arms_app`: Application Monitoring
-         * *   `arms_web`: Browser Monitoring
-         * *   `prometheus_monitor`: Managed Service for Prometheus
-         * *   `synthetic_post`: Synthetic Monitoring
+         * <strong>example:</strong>
+         * <p>arms</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

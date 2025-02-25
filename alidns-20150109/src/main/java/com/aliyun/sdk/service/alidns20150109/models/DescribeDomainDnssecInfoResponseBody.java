@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainDnssecInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainDnssecInfoResponseBody</p>
  */
 public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
-    @NameInMap("Algorithm")
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
     private String algorithm;
 
-    @NameInMap("Digest")
+    @com.aliyun.core.annotation.NameInMap("Digest")
     private String digest;
 
-    @NameInMap("DigestType")
+    @com.aliyun.core.annotation.NameInMap("DigestType")
     private String digestType;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DsRecord")
+    @com.aliyun.core.annotation.NameInMap("DsRecord")
     private String dsRecord;
 
-    @NameInMap("Flags")
+    @com.aliyun.core.annotation.NameInMap("Flags")
     private String flags;
 
-    @NameInMap("KeyTag")
+    @com.aliyun.core.annotation.NameInMap("KeyTag")
     private String keyTag;
 
-    @NameInMap("PublicKey")
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
     private String publicKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDomainDnssecInfoResponseBody(Builder builder) {
@@ -146,7 +151,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The algorithm configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * <p>The algorithm type. This parameter is returned if DNSSEC is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder algorithm(String algorithm) {
             this.algorithm = algorithm;
@@ -154,7 +162,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The digest configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * <p>The digest. This parameter is returned if DNSSEC is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1A0424B97A049F1F9B2EA139CC298533219668164E343BD21203ABC4608C02A</p>
          */
         public Builder digest(String digest) {
             this.digest = digest;
@@ -162,7 +173,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The digest type configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * <p>The digest type. This parameter is returned if DNSSEC is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256</p>
          */
         public Builder digestType(String digestType) {
             this.digestType = digestType;
@@ -170,7 +184,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name that is queried.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -178,7 +195,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The DS record. This parameter is returned if DNSSEC is enabled.
+         * <p>The delegation signer (DS) record. This parameter is returned if DNSSEC is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com. 3600 IN DS 2371 13 2 C1A0424B97A049F1F9B2EA139CC298533219668164E343BD21203ABC4608C02A</p>
          */
         public Builder dsRecord(String dsRecord) {
             this.dsRecord = dsRecord;
@@ -186,7 +206,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The flag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * <p>The flag. This parameter is returned if DNSSEC is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257 (KSK)</p>
          */
         public Builder flags(String flags) {
             this.flags = flags;
@@ -194,7 +217,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The key tag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * <p>The key tag. This parameter is returned if DNSSEC is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54931</p>
          */
         public Builder keyTag(String keyTag) {
             this.keyTag = keyTag;
@@ -202,7 +228,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The public key for a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * <p>The public key. This parameter is returned if DNSSEC is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==</p>
          */
         public Builder publicKey(String publicKey) {
             this.publicKey = publicKey;
@@ -210,7 +239,10 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,11 +250,14 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether DNSSEC is enabled for the specified domain name.
-         * <p>
+         * <p>The state of the DNSSEC. Valid values:</p>
+         * <ul>
+         * <li>ON</li>
+         * <li>OFF</li>
+         * </ul>
          * 
-         * *   ON: DNSSEC is enabled.
-         * *   OFF: DNSSEC is disabled.
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder status(String status) {
             this.status = status;

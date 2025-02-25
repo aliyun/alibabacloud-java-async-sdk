@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatasetItemInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatasetItemInfoResponseBody</p>
  */
 public class DescribeDatasetItemInfoResponseBody extends TeaModel {
-    @NameInMap("DatasetItemInfo")
+    @com.aliyun.core.annotation.NameInMap("DatasetItemInfo")
     private DatasetItemInfo datasetItemInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDatasetItemInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Dataset information.
+         * <p>The Dataset information.</p>
          */
         public Builder datasetItemInfo(DatasetItemInfo datasetItemInfo) {
             this.datasetItemInfo = datasetItemInfo;
@@ -58,7 +63,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BAFA85F-38E3-5D9E-9E32-4B09********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatasetItemInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatasetItemInfoResponseBody</p>
+     */
     public static class DatasetItemInfo extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetItemId")
+        @com.aliyun.core.annotation.NameInMap("DatasetItemId")
         private String datasetItemId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DatasetItemInfo(Builder builder) {
@@ -170,7 +184,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The creation time (UTC) of the data entry.
+             * <p>The creation time (UTC) of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -178,7 +195,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dataset.
+             * <p>The ID of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>626238665db4a5140eea3e40********</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -186,7 +206,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data entry.
+             * <p>The ID of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5045****</p>
              */
             public Builder datasetItemId(String datasetItemId) {
                 this.datasetItemId = datasetItemId;
@@ -194,7 +217,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data entry.
+             * <p>The description of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -202,7 +228,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.
+             * <p>The time in UTC when the data entry expires. The time is in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. If this parameter is empty, the data entry does not expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-22T12:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -210,7 +239,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the data entry.
+             * <p>The last modification time (UTC) of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-21T12:58:43Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -218,7 +250,10 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the data entry.
+             * <p>The value of the data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106.43.XXX.XXX</p>
              */
             public Builder value(String value) {
                 this.value = value;

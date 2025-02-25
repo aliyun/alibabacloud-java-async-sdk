@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterNetworkResponseBody</p>
  */
 public class DescribeClusterNetworkResponseBody extends TeaModel {
-    @NameInMap("ClusterNetwork")
+    @com.aliyun.core.annotation.NameInMap("ClusterNetwork")
     private ClusterNetwork clusterNetwork;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterNetworkResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Information about the network topology edge in the cluster.
+         * <p>Information about the network topology edge in the cluster.</p>
          */
         public Builder clusterNetwork(ClusterNetwork clusterNetwork) {
             this.clusterNetwork = clusterNetwork;
@@ -58,7 +63,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNetworkResponseBody</p>
+     */
     public static class Edge extends TeaModel {
-        @NameInMap("DstNodeId")
+        @com.aliyun.core.annotation.NameInMap("DstNodeId")
         private String dstNodeId;
 
-        @NameInMap("DstNodeType")
+        @com.aliyun.core.annotation.NameInMap("DstNodeType")
         private String dstNodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("SrcNodeId")
+        @com.aliyun.core.annotation.NameInMap("SrcNodeId")
         private String srcNodeId;
 
-        @NameInMap("SrcNodeType")
+        @com.aliyun.core.annotation.NameInMap("SrcNodeType")
         private String srcNodeType;
 
         private Edge(Builder builder) {
@@ -158,7 +172,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private String srcNodeType; 
 
             /**
-             * The ID of the destination node.
+             * <p>The ID of the destination node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfb41a869c71e4678a97021582dd8****</p>
              */
             public Builder dstNodeId(String dstNodeId) {
                 this.dstNodeId = dstNodeId;
@@ -166,10 +183,13 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination node. Valid values:
-             * <p>
+             * <p>The type of the destination node. Valid values:</p>
+             * <ul>
+             * <li>Set the value to <strong>cluster</strong>.</li>
+             * </ul>
              * 
-             * *   Set the value to **cluster**.
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder dstNodeType(String dstNodeType) {
                 this.dstNodeType = dstNodeType;
@@ -177,7 +197,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the topology edge.
+             * <p>The ID of the topology edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -185,7 +208,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the topology edge.
+             * <p>The port number of the topology edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6164</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -193,7 +219,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source node.
+             * <p>The ID of the source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfb41a869c71e4678a97021582dd8****</p>
              */
             public Builder srcNodeId(String srcNodeId) {
                 this.srcNodeId = srcNodeId;
@@ -201,11 +230,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source node. Valid values:
-             * <p>
+             * <p>The type of the source node. Valid values:</p>
+             * <ul>
+             * <li><strong>cluster</strong>: a cluster.</li>
+             * <li><strong>internet</strong>: a network node outside the cluster</li>
+             * </ul>
              * 
-             * *   **cluster**: a cluster.
-             * *   **internet**: a network node outside the cluster
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder srcNodeType(String srcNodeType) {
                 this.srcNodeType = srcNodeType;
@@ -219,26 +251,32 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNetworkResponseBody</p>
+     */
     public static class Node extends TeaModel {
-        @NameInMap("CnnfSwitch")
+        @com.aliyun.core.annotation.NameInMap("CnnfSwitch")
         private Integer cnnfSwitch;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InterceptionType")
+        @com.aliyun.core.annotation.NameInMap("InterceptionType")
         private Integer interceptionType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetTopoSwitch")
+        @com.aliyun.core.annotation.NameInMap("NetTopoSwitch")
         private String netTopoSwitch;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Node(Builder builder) {
@@ -318,11 +356,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The status of the microsegmentation switch. Valid values:
-             * <p>
+             * <p>The status of the microsegmentation switch. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: off.</li>
+             * <li><strong>1</strong>: on.</li>
+             * </ul>
              * 
-             * *   **0**: off.
-             * *   **1**: on.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cnnfSwitch(Integer cnnfSwitch) {
                 this.cnnfSwitch = cnnfSwitch;
@@ -330,7 +371,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfeb7a9f99ce740e98c5595d0fe37****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -338,11 +382,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: classic network.</li>
+             * <li><strong>1</strong>: virtual private cloud (VPC).</li>
+             * </ul>
              * 
-             * *   **0**: classic network.
-             * *   **1**: virtual private cloud (VPC).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interceptionType(Integer interceptionType) {
                 this.interceptionType = interceptionType;
@@ -350,7 +397,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testwww</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -358,11 +408,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the network topology switch. Valid values:
-             * <p>
+             * <p>The status of the network topology switch. Valid values:</p>
+             * <ul>
+             * <li><strong>ON</strong></li>
+             * <li><strong>OFF</strong></li>
+             * </ul>
              * 
-             * *   **ON**
-             * *   **OFF**
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder netTopoSwitch(String netTopoSwitch) {
                 this.netTopoSwitch = netTopoSwitch;
@@ -370,14 +423,17 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: high.</li>
+             * <li><strong>2</strong>: medium.</li>
+             * <li><strong>1</strong>: low.</li>
+             * <li><strong>0</strong>: secure.</li>
+             * <li><strong>-1</strong>: unknown.</li>
+             * </ul>
              * 
-             * *   **3**: high.
-             * *   **2**: medium.
-             * *   **1**: low.
-             * *   **0**: secure.
-             * *   **-1**: unknown.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -385,11 +441,14 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>cluster</strong>: a cluster.</li>
+             * <li><strong>internet</strong>: a network node outside the cluster.</li>
+             * </ul>
              * 
-             * *   **cluster**: a cluster.
-             * *   **internet**: a network node outside the cluster.
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -403,12 +462,18 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterNetworkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNetworkResponseBody</p>
+     */
     public static class ClusterNetwork extends TeaModel {
-        @NameInMap("Edge")
-        private java.util.List < Edge> edge;
+        @com.aliyun.core.annotation.NameInMap("Edge")
+        private java.util.List<Edge> edge;
 
-        @NameInMap("Node")
-        private java.util.List < Node> node;
+        @com.aliyun.core.annotation.NameInMap("Node")
+        private java.util.List<Node> node;
 
         private ClusterNetwork(Builder builder) {
             this.edge = builder.edge;
@@ -426,33 +491,33 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * @return edge
          */
-        public java.util.List < Edge> getEdge() {
+        public java.util.List<Edge> getEdge() {
             return this.edge;
         }
 
         /**
          * @return node
          */
-        public java.util.List < Node> getNode() {
+        public java.util.List<Node> getNode() {
             return this.node;
         }
 
         public static final class Builder {
-            private java.util.List < Edge> edge; 
-            private java.util.List < Node> node; 
+            private java.util.List<Edge> edge; 
+            private java.util.List<Node> node; 
 
             /**
-             * An array that consists of information about the topology edge.
+             * <p>An array that consists of information about the topology edge.</p>
              */
-            public Builder edge(java.util.List < Edge> edge) {
+            public Builder edge(java.util.List<Edge> edge) {
                 this.edge = edge;
                 return this;
             }
 
             /**
-             * An array that consists of information about the node.
+             * <p>An array that consists of information about the node.</p>
              */
-            public Builder node(java.util.List < Node> node) {
+            public Builder node(java.util.List<Node> node) {
                 this.node = node;
                 return this;
             }

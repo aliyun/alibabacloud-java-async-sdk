@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCorrectBackupFilesResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataCorrectBackupFilesResponseBody</p>
  */
 public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
-    @NameInMap("DataCorrectBackupFiles")
+    @com.aliyun.core.annotation.NameInMap("DataCorrectBackupFiles")
     private DataCorrectBackupFiles dataCorrectBackupFiles;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataCorrectBackupFilesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The download URL of the backup file for the ticket.
+         * <p>The download URL of the backup file for the ticket.</p>
          */
         public Builder dataCorrectBackupFiles(DataCorrectBackupFiles dataCorrectBackupFiles) {
             this.dataCorrectBackupFiles = dataCorrectBackupFiles;
@@ -94,7 +99,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AFF4109-FEFB-44E8-96A3-923B1FA8C46E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,9 +148,15 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataCorrectBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCorrectBackupFilesResponseBody</p>
+     */
     public static class DataCorrectBackupFiles extends TeaModel {
-        @NameInMap("FileUrl")
-        private java.util.List < String > fileUrl;
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
+        private java.util.List<String> fileUrl;
 
         private DataCorrectBackupFiles(Builder builder) {
             this.fileUrl = builder.fileUrl;
@@ -150,17 +173,17 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         /**
          * @return fileUrl
          */
-        public java.util.List < String > getFileUrl() {
+        public java.util.List<String> getFileUrl() {
             return this.fileUrl;
         }
 
         public static final class Builder {
-            private java.util.List < String > fileUrl; 
+            private java.util.List<String> fileUrl; 
 
             /**
              * FileUrl.
              */
-            public Builder fileUrl(java.util.List < String > fileUrl) {
+            public Builder fileUrl(java.util.List<String> fileUrl) {
                 this.fileUrl = fileUrl;
                 return this;
             }

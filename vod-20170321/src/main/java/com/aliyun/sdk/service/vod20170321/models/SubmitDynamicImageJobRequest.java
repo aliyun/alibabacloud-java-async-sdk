@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDynamicImageJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDynamicImageJobRequest</p>
  */
 public class SubmitDynamicImageJobRequest extends Request {
-    @Query
-    @NameInMap("DynamicImageTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DynamicImageTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dynamicImageTemplateId;
 
-    @Query
-    @NameInMap("OverrideParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverrideParams")
     private String overrideParams;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private SubmitDynamicImageJobRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
         /**
-         * The ID of the frame animation template.
+         * <p>The ID of the frame animation template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a443dc52ef10abc4794d700*****</p>
          */
         public Builder dynamicImageTemplateId(String dynamicImageTemplateId) {
             this.putQueryParameter("DynamicImageTemplateId", dynamicImageTemplateId);
@@ -93,7 +102,10 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * The override parameter. Specify the value in the JSON format. For more information, see [Parameters for media processing](~~98618~~). You can use this parameter to override configurations in the animated image template. For more information, see the "DynamicImageTemplateConfig: the configurations of an animated sticker template" section of the [Basic data types](~~52839~~) topic.
+         * <p>The override parameter. Specify the value in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/98618.html">Parameters for media processing</a>. You can use this parameter to override configurations in the animated image template. For more information, see the &quot;DynamicImageTemplateConfig: the configurations of an animated sticker template&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic data types</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Watermarks&quot;:[{&quot;Content&quot;:&quot;UserID: 666**&quot;,&quot;WatermarkId&quot;:&quot;8ca03c884944bd05efccc312367****&quot;}]}</p>
          */
         public Builder overrideParams(String overrideParams) {
             this.putQueryParameter("OverrideParams", overrideParams);
@@ -102,12 +114,16 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * The ID of the video. You can use one of the following methods to obtain the ID:
-         * <p>
+         * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
+         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media files.</li>
+         * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload media files.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-         * *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.
-         * *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload media files.
+         * <strong>example:</strong>
+         * <p>7d2fbc3e273441bdb0e08e55f8****</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

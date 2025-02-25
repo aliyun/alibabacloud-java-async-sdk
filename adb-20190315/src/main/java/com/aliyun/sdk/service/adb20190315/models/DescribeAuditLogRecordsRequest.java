@@ -1,93 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuditLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAuditLogRecordsRequest</p>
  */
 public class DescribeAuditLogRecordsRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("HostAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAddress")
     private String hostAddress;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryKeyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKeyword")
     private String queryKeyword;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SqlType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlType")
     private String sqlType;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Succeed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Succeed")
     private String succeed;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DescribeAuditLogRecordsRequest(Builder builder) {
@@ -298,10 +296,14 @@ public class DescribeAuditLogRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-t4nj8619bz2w3****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -310,7 +312,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database on which you want to execute the SQL statement.
+         * <p>The name of the database on which you want to execute the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -319,11 +324,16 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The end time must be later than the start time.</li>
+         * <li>The maximum time range that can be specified is 24 hours.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > - The end time must be later than the start time.
-         * > - The maximum time range that can be specified is 24 hours.
+         * <strong>example:</strong>
+         * <p>2022-01-23T22:18Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -332,7 +342,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The IP address and port number of the client that is used to execute the SQL statement.
+         * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX:43908</p>
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -341,23 +354,29 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The order in which specified fields are sorted. Specify this parameter as an ordered JSON array that consists of the Field and Type fields.
-         * <p>
+         * <p>The order in which specified fields are sorted. Specify this parameter as an ordered JSON array that consists of the Field and Type fields.</p>
+         * <ul>
+         * <li><p>Field specifies the field that is used to sort the retrieved entries. Valid values:</p>
+         * <ul>
+         * <li>HostAddress: the IP address of the client that is used to connect to the database.</li>
+         * <li>Succeed: specifies whether the SQL statement is successfully executed.</li>
+         * <li>TotalTime: the total amount of time that is consumed to execute the SQL statement.</li>
+         * <li>DBName: the name of the database on which the SQL statement is executed.</li>
+         * <li>SQLType: the type of the SQL statement.</li>
+         * <li>User: the username that is used to execute the SQL statement.</li>
+         * <li>ExecuteTime: the time to start executing the SQL statement.</li>
+         * </ul>
+         * </li>
+         * <li><p>Type specifies the sorting order. Valid values:</p>
+         * <ul>
+         * <li>Desc: descending order.</li>
+         * <li>Asc: ascending order.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   Field specifies the field that is used to sort the retrieved entries. Valid values:
-         * 
-         *     *   HostAddress: the IP address of the client that is used to connect to the database.
-         *     *   Succeed: specifies whether the SQL statement is successfully executed.
-         *     *   TotalTime: the total amount of time that is consumed to execute the SQL statement.
-         *     *   DBName: the name of the database on which the SQL statement is executed.
-         *     *   SQLType: the type of the SQL statement.
-         *     *   User: the username that is used to execute the SQL statement.
-         *     *   ExecuteTime: the time to start executing the SQL statement.
-         * 
-         * *   Type specifies the sorting order. Valid values:
-         * 
-         *     *   Desc: descending order.
-         *     *   Asc: ascending order.
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;ExecuteTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;HostAddress&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -366,11 +385,14 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The sorting order of the retrieved entries. Valid values:
-         * <p>
+         * <p>The sorting order of the retrieved entries. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: sorts the retrieved entries by time in ascending order.</li>
+         * <li><strong>desc</strong>: sorts the retrieved entries by time in descending order.</li>
+         * </ul>
          * 
-         * *   **asc**: sorts the retrieved entries by time in ascending order.
-         * *   **desc**: sorts the retrieved entries by time in descending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -397,7 +419,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value is an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value is an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -406,15 +431,19 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><strong>10</strong></li>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the value 10 is used.</p>
+         * </blockquote>
          * 
-         * *   **10**
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * > If you do not specify this parameter, the value 10 is used.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -423,7 +452,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The keywords that are included in the SQL statement to query.
+         * <p>The keywords that are included in the SQL statement to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb</p>
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -432,10 +464,14 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -462,18 +498,22 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The type of the SQL statement. Valid values:
-         * <p>
+         * <p>The type of the SQL statement. Valid values:</p>
+         * <ul>
+         * <li><strong>DELETE</strong></li>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>UPDATE</strong></li>
+         * <li><strong>INSERT_INTO_SELECT</strong></li>
+         * <li><strong>ALTER</strong></li>
+         * <li><strong>DROP</strong></li>
+         * <li><strong>CREATE</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>You can query only a single type of SQL statements at a time. If you leave this parameter empty, the <strong>SELECT</strong> statements are queried.</p>
+         * </blockquote>
          * 
-         * *   **DELETE**
-         * *   **SELECT**
-         * *   **UPDATE**
-         * *   **INSERT_INTO_SELECT**
-         * *   **ALTER**
-         * *   **DROP**
-         * *   **CREATE**
-         * 
-         * > You can query only a single type of SQL statements at a time. If you leave this parameter empty, the **SELECT** statements are queried.
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -482,10 +522,13 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.</p>
+         * </blockquote>
          * 
-         * > SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.
+         * <strong>example:</strong>
+         * <p>2022-01-23T02:18Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -494,11 +537,14 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * Specifies whether the execution of the SQL statement succeeds. Valid values:
-         * <p>
+         * <p>Specifies whether the execution of the SQL statement succeeds. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder succeed(String succeed) {
             this.putQueryParameter("Succeed", succeed);
@@ -507,7 +553,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the user who executed the SQL statement.
+         * <p>The name of the user who executed the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

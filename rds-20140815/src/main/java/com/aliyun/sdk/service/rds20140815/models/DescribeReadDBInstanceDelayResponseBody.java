@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeReadDBInstanceDelayResponseBody</p>
  */
 public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DelayTime")
+    @com.aliyun.core.annotation.NameInMap("DelayTime")
     private Integer delayTime;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("ReadDBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ReadDBInstanceId")
     private String readDBInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeReadDBInstanceDelayResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The primary instance ID.
+         * <p>The primary instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -94,7 +102,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The latency of data replication. Unit: seconds.
+         * <p>The latency of data replication. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder delayTime(Integer delayTime) {
             this.delayTime = delayTime;
@@ -102,7 +113,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The latency information.
+         * <p>The latency information.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -110,7 +121,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The read-only instance ID.
+         * <p>The read-only instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-bp*****</p>
          */
         public Builder readDBInstanceId(String readDBInstanceId) {
             this.readDBInstanceId = readDBInstanceId;
@@ -118,7 +132,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1BDDEA8-452D-450B-AB10-CD5C5BAFC5DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,9 +148,15 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ReadDBInstanceNames extends TeaModel {
-        @NameInMap("ReadDBInstanceName")
-        private java.util.List < String > readDBInstanceName;
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstanceName")
+        private java.util.List<String> readDBInstanceName;
 
         private ReadDBInstanceNames(Builder builder) {
             this.readDBInstanceName = builder.readDBInstanceName;
@@ -150,17 +173,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return readDBInstanceName
          */
-        public java.util.List < String > getReadDBInstanceName() {
+        public java.util.List<String> getReadDBInstanceName() {
             return this.readDBInstanceName;
         }
 
         public static final class Builder {
-            private java.util.List < String > readDBInstanceName; 
+            private java.util.List<String> readDBInstanceName; 
 
             /**
              * ReadDBInstanceName.
              */
-            public Builder readDBInstanceName(java.util.List < String > readDBInstanceName) {
+            public Builder readDBInstanceName(java.util.List<String> readDBInstanceName) {
                 this.readDBInstanceName = readDBInstanceName;
                 return this;
             }
@@ -172,9 +195,15 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ReadDelayTimes extends TeaModel {
-        @NameInMap("ReadDelayTime")
-        private java.util.List < String > readDelayTime;
+        @com.aliyun.core.annotation.NameInMap("ReadDelayTime")
+        private java.util.List<String> readDelayTime;
 
         private ReadDelayTimes(Builder builder) {
             this.readDelayTime = builder.readDelayTime;
@@ -191,17 +220,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return readDelayTime
          */
-        public java.util.List < String > getReadDelayTime() {
+        public java.util.List<String> getReadDelayTime() {
             return this.readDelayTime;
         }
 
         public static final class Builder {
-            private java.util.List < String > readDelayTime; 
+            private java.util.List<String> readDelayTime; 
 
             /**
              * ReadDelayTime.
              */
-            public Builder readDelayTime(java.util.List < String > readDelayTime) {
+            public Builder readDelayTime(java.util.List<String> readDelayTime) {
                 this.readDelayTime = readDelayTime;
                 return this;
             }
@@ -213,29 +242,35 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ReadonlyInstanceDelay extends TeaModel {
-        @NameInMap("FlushLag")
+        @com.aliyun.core.annotation.NameInMap("FlushLag")
         private String flushLag;
 
-        @NameInMap("FlushLatency")
+        @com.aliyun.core.annotation.NameInMap("FlushLatency")
         private String flushLatency;
 
-        @NameInMap("ReadDBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstanceName")
         private String readDBInstanceName;
 
-        @NameInMap("ReplayLag")
+        @com.aliyun.core.annotation.NameInMap("ReplayLag")
         private String replayLag;
 
-        @NameInMap("ReplayLatency")
+        @com.aliyun.core.annotation.NameInMap("ReplayLatency")
         private String replayLatency;
 
-        @NameInMap("SendLatency")
+        @com.aliyun.core.annotation.NameInMap("SendLatency")
         private String sendLatency;
 
-        @NameInMap("WriteLag")
+        @com.aliyun.core.annotation.NameInMap("WriteLag")
         private String writeLag;
 
-        @NameInMap("WriteLatency")
+        @com.aliyun.core.annotation.NameInMap("WriteLatency")
         private String writeLatency;
 
         private ReadonlyInstanceDelay(Builder builder) {
@@ -324,7 +359,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private String writeLatency; 
 
             /**
-             * The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.
+             * <p>The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flushLag(String flushLag) {
                 this.flushLag = flushLag;
@@ -332,7 +370,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flushLatency(String flushLatency) {
                 this.flushLatency = flushLatency;
@@ -340,7 +381,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The read-only instance ID.
+             * <p>The read-only instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rr-bp*****</p>
              */
             public Builder readDBInstanceName(String readDBInstanceName) {
                 this.readDBInstanceName = readDBInstanceName;
@@ -348,7 +392,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.
+             * <p>The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder replayLag(String replayLag) {
                 this.replayLag = replayLag;
@@ -356,7 +403,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the playback of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the playback of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder replayLatency(String replayLatency) {
                 this.replayLatency = replayLatency;
@@ -364,7 +414,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the sending of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the sending of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sendLatency(String sendLatency) {
                 this.sendLatency = sendLatency;
@@ -372,7 +425,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.
+             * <p>The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder writeLag(String writeLag) {
                 this.writeLag = writeLag;
@@ -380,7 +436,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.
+             * <p>The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder writeLatency(String writeLatency) {
                 this.writeLatency = writeLatency;
@@ -394,9 +453,15 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ItemsReadonlyInstanceDelay extends TeaModel {
-        @NameInMap("ReadonlyInstanceDelay")
-        private java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay;
+        @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceDelay")
+        private java.util.List<ReadonlyInstanceDelay> readonlyInstanceDelay;
 
         private ItemsReadonlyInstanceDelay(Builder builder) {
             this.readonlyInstanceDelay = builder.readonlyInstanceDelay;
@@ -413,17 +478,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return readonlyInstanceDelay
          */
-        public java.util.List < ReadonlyInstanceDelay> getReadonlyInstanceDelay() {
+        public java.util.List<ReadonlyInstanceDelay> getReadonlyInstanceDelay() {
             return this.readonlyInstanceDelay;
         }
 
         public static final class Builder {
-            private java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay; 
+            private java.util.List<ReadonlyInstanceDelay> readonlyInstanceDelay; 
 
             /**
              * ReadonlyInstanceDelay.
              */
-            public Builder readonlyInstanceDelay(java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay) {
+            public Builder readonlyInstanceDelay(java.util.List<ReadonlyInstanceDelay> readonlyInstanceDelay) {
                 this.readonlyInstanceDelay = readonlyInstanceDelay;
                 return this;
             }
@@ -435,17 +500,23 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class ItemsItems extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("ReadDBInstanceNames")
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstanceNames")
         private ReadDBInstanceNames readDBInstanceNames;
 
-        @NameInMap("ReadDelayTimes")
+        @com.aliyun.core.annotation.NameInMap("ReadDelayTimes")
         private ReadDelayTimes readDelayTimes;
 
-        @NameInMap("ReadonlyInstanceDelay")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceDelay")
         private ItemsReadonlyInstanceDelay readonlyInstanceDelay;
 
         private ItemsItems(Builder builder) {
@@ -498,7 +569,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private ItemsReadonlyInstanceDelay readonlyInstanceDelay; 
 
             /**
-             * The primary instance ID.
+             * <p>The primary instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp*****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -506,7 +580,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of information about the read-only instance.
+             * <p>An array that consists of information about the read-only instance.</p>
              */
             public Builder readDBInstanceNames(ReadDBInstanceNames readDBInstanceNames) {
                 this.readDBInstanceNames = readDBInstanceNames;
@@ -514,7 +588,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of data replication.
+             * <p>The latency of data replication.</p>
              */
             public Builder readDelayTimes(ReadDelayTimes readDelayTimes) {
                 this.readDelayTimes = readDelayTimes;
@@ -522,10 +596,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the write-ahead log (WAL) latency.
-             * <p>
-             * 
-             * >  This parameter is returned only when the primary instance runs PostgreSQL.
+             * <p>The information about the write-ahead log (WAL) latency.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the primary instance runs PostgreSQL.</p>
+             * </blockquote>
              */
             public Builder readonlyInstanceDelay(ItemsReadonlyInstanceDelay readonlyInstanceDelay) {
                 this.readonlyInstanceDelay = readonlyInstanceDelay;
@@ -539,9 +613,15 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReadDBInstanceDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReadDBInstanceDelayResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < ItemsItems> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<ItemsItems> items;
 
         private Items(Builder builder) {
             this.items = builder.items;
@@ -558,17 +638,17 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < ItemsItems> getItems() {
+        public java.util.List<ItemsItems> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < ItemsItems> items; 
+            private java.util.List<ItemsItems> items; 
 
             /**
-             * The latency information.
+             * <p>The latency information.</p>
              */
-            public Builder items(java.util.List < ItemsItems> items) {
+            public Builder items(java.util.List<ItemsItems> items) {
                 this.items = items;
                 return this;
             }

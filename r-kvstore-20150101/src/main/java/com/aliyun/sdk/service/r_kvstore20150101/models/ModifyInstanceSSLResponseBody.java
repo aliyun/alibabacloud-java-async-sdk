@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceSSLResponseBody</p>
  */
 public class ModifyInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private ModifyInstanceSSLResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +73,10 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyInstanceSSL**.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD7E16AA-6B23-43BF-979C-07D957FB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,10 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32184****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

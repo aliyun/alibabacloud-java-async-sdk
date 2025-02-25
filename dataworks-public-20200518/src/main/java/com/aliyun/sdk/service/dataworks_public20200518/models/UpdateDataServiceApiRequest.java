@@ -1,85 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDataServiceApiRequest} extends {@link RequestModel}
  *
  * <p>UpdateDataServiceApiRequest</p>
  */
 public class UpdateDataServiceApiRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ApiDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiDescription")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiDescription;
 
-    @Body
-    @NameInMap("ApiId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long apiId;
 
-    @Body
-    @NameInMap("ApiPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiPath;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("Protocols")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Protocols")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocols;
 
-    @Body
-    @NameInMap("RegistrationDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegistrationDetails")
     private String registrationDetails;
 
-    @Body
-    @NameInMap("RequestMethod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestMethod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer requestMethod;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private Long resourceGroupId;
 
-    @Body
-    @NameInMap("ResponseContentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseContentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer responseContentType;
 
-    @Body
-    @NameInMap("ScriptDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScriptDetails")
     private String scriptDetails;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
-    @Body
-    @NameInMap("Timeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeout;
 
-    @Body
-    @NameInMap("VisibleRange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VisibleRange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer visibleRange;
 
-    @Body
-    @NameInMap("WizardDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WizardDetails")
     private String wizardDetails;
 
     private UpdateDataServiceApiRequest(Builder builder) {
@@ -260,7 +264,7 @@ public class UpdateDataServiceApiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -269,7 +273,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The description of the API.
+         * <p>The description of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API description</p>
          */
         public Builder apiDescription(String apiDescription) {
             this.putBodyParameter("ApiDescription", apiDescription);
@@ -278,7 +286,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -287,7 +299,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The path of the API.
+         * <p>The path of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/2</p>
          */
         public Builder apiPath(String apiPath) {
             this.putBodyParameter("ApiPath", apiPath);
@@ -296,7 +312,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -305,7 +325,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The protocol used by the API. Valid values: 0 and 1. The value 0 indicates HTTP. The value 1 indicates HTTPS. You can specify multiple protocols. Separate multiple protocols with commas (,).
+         * <p>The protocol used by the API. Valid values: 0 and 1. The value 0 indicates HTTP. The value 1 indicates HTTPS. You can specify multiple protocols. Separate multiple protocols with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0,1</p>
          */
         public Builder protocols(String protocols) {
             this.putBodyParameter("Protocols", protocols);
@@ -314,7 +338,10 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The details of the API generated by registration. For more information, see the RegistrationDetails parameter returned by the [GetDataServiceApi](~~174013~~) operation.
+         * <p>The details of the API generated by registration. For more information, see the RegistrationDetails parameter returned by the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;failedResultSample&quot;:&quot;fail&quot;,&quot;registrationErrorCodes&quot;:[{&quot;errorCode&quot;:&quot;e1&quot;,&quot;errorMessage&quot;:&quot;msg1&quot;,&quot;errorSolution&quot;:&quot;sol1&quot;},{&quot;errorCode&quot;:&quot;e2&quot;,&quot;errorMessage&quot;:&quot;msg2&quot;,&quot;errorSolution&quot;:&quot;sol2&quot;}],&quot;registrationRequestParameters&quot;:[{&quot;columnName&quot;:&quot;&quot;,&quot;defaultValue&quot;:&quot;&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id&quot;,&quot;parameterOperator&quot;:0,&quot;parameterPosition&quot;:1},{&quot;columnName&quot;:&quot;&quot;,&quot;defaultValue&quot;:&quot;xx&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;cc&quot;,&quot;parameterOperator&quot;:2,&quot;parameterPosition&quot;:2}],&quot;serviceContentType&quot;:1,&quot;serviceHost&quot;:&quot;<a href="http://www.baidu.com%22,%22servicePath%22:%22/%5Buid%5D%22,%22serviceRequestBodyDescription%22:%22body%22,%22successfulResultSample%22:%22success%22%7D">http://www.baidu.com&quot;,&quot;servicePath&quot;:&quot;/[uid]&quot;,&quot;serviceRequestBodyDescription&quot;:&quot;body&quot;,&quot;successfulResultSample&quot;:&quot;success&quot;}</a></p>
          */
         public Builder registrationDetails(String registrationDetails) {
             this.putBodyParameter("RegistrationDetails", registrationDetails);
@@ -323,7 +350,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The request method of the API. Valid values: 0, 1, 2, and 3. The value 0 indicates the GET method. The value 1 indicates the POST method. The value 2 indicates the PUT method. The value 3 indicates the DELETE method. APIs generated in wizard or script mode support the GET and POST methods. APIs generated by registration support the GET, POST, PUT, and DELETE methods.
+         * <p>The request method of the API. Valid values: 0, 1, 2, and 3. The value 0 indicates the GET method. The value 1 indicates the POST method. The value 2 indicates the PUT method. The value 3 indicates the DELETE method. APIs generated in wizard or script mode support the GET and POST methods. APIs generated by registration support the GET, POST, PUT, and DELETE methods.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder requestMethod(Integer requestMethod) {
             this.putBodyParameter("RequestMethod", requestMethod);
@@ -332,7 +363,10 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the exclusive resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3242432423</p>
          */
         public Builder resourceGroupId(Long resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -341,7 +375,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.
+         * <p>The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder responseContentType(Integer responseContentType) {
             this.putBodyParameter("ResponseContentType", responseContentType);
@@ -350,7 +388,10 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The details of the API generated in script mode. For more information, see the ScriptDetails parameter returned by the [GetDataServiceApi](~~174013~~) operation.
+         * <p>The details of the API generated in script mode. For more information, see the ScriptDetails parameter returned by the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;isPagedResponse&quot;:false,&quot;script&quot;:&quot;select id as id1, name as name1 from person where id=${inputid}&quot;,&quot;scriptConnection&quot;:{&quot;connectionId&quot;:122786,&quot;tableName&quot;:&quot;person&quot;},&quot;scriptRequestParameters&quot;:[{&quot;defaultValue&quot;:&quot;&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;inputid&quot;,&quot;parameterOperator&quot;:0,&quot;parameterPosition&quot;:1}],&quot;scriptResponseParameters&quot;:[{&quot;exampleValue&quot;:&quot;&quot;,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id1&quot;},{&quot;exampleValue&quot;:&quot;&quot;,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;name1&quot;}]}</p>
          */
         public Builder scriptDetails(String scriptDetails) {
             this.putBodyParameter("ScriptDetails", scriptDetails);
@@ -359,7 +400,10 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the username for the logon in the upper-right corner and click User Info in the Menu section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -368,7 +412,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The timeout period of the API request. Unit: milliseconds. Valid values: (0,30000].
+         * <p>The timeout period of the API request. Unit: milliseconds. Valid values: (0,30000].</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("Timeout", timeout);
@@ -377,7 +425,11 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The scope in which the API is visible. Valid values: 0 and 1. The value 0 indicates that the API is visible within the workspace. The value 1 indicates that the API is visible only to its owner.
+         * <p>The scope in which the API is visible. Valid values: 0 and 1. The value 0 indicates that the API is visible within the workspace. The value 1 indicates that the API is visible only to its owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder visibleRange(Integer visibleRange) {
             this.putBodyParameter("VisibleRange", visibleRange);
@@ -386,7 +438,10 @@ public class UpdateDataServiceApiRequest extends Request {
         }
 
         /**
-         * The details of the API generated in wizard mode. For more information, see the WizardDetails parameter returned by the [GetDataServiceApi](~~174013~~) operation.
+         * <p>The details of the API generated in wizard mode. For more information, see the WizardDetails parameter returned by the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;isPagedResponse&quot;:true,&quot;wizardConnection&quot;:{&quot;connectionId&quot;:122786,&quot;tableName&quot;:&quot;person&quot;},&quot;wizardRequestParameters&quot;:[{&quot;columnName&quot;:&quot;id&quot;,&quot;defaultValue&quot;:&quot;&quot;,&quot;exampleValue&quot;:&quot;1&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:2,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id&quot;,&quot;parameterOperator&quot;:0,&quot;parameterPosition&quot;:0}],&quot;wizardResponseParameters&quot;:[{&quot;columnName&quot;:&quot;id&quot;,&quot;exampleValue&quot;:&quot;11&quot;,&quot;parameterDataType&quot;:2,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id&quot;}]}</p>
          */
         public Builder wizardDetails(String wizardDetails) {
             this.putBodyParameter("WizardDetails", wizardDetails);

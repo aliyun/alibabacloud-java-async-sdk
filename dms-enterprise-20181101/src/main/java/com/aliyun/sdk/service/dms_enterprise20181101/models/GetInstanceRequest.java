@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceRequest</p>
  */
 public class GetInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Host")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Host")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String host;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer port;
 
-    @Query
-    @NameInMap("Sid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sid")
     private String sid;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private GetInstanceRequest(Builder builder) {
@@ -121,7 +126,11 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The endpoint of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the endpoint.
+         * <p>The endpoint of the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.17.XXX.XXX</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -130,7 +139,11 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the port number.
+         * <p>The port number that is used to connect to the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the port number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -139,7 +152,10 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The system ID (SID) of the database instance. You can call the [ListInstances](~~141936~~) operation to obtain the SID.
+         * <p>The system ID (SID) of the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the SID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -148,7 +164,10 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

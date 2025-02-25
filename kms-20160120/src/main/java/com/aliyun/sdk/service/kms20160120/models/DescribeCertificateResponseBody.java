@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertificateResponseBody</p>
  */
 public class DescribeCertificateResponseBody extends TeaModel {
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("CertificateId")
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
     private String certificateId;
 
-    @NameInMap("CreatedAt")
+    @com.aliyun.core.annotation.NameInMap("CreatedAt")
     private String createdAt;
 
-    @NameInMap("ExportablePrivateKey")
+    @com.aliyun.core.annotation.NameInMap("ExportablePrivateKey")
     private Boolean exportablePrivateKey;
 
-    @NameInMap("Issuer")
+    @com.aliyun.core.annotation.NameInMap("Issuer")
     private String issuer;
 
-    @NameInMap("KeySpec")
+    @com.aliyun.core.annotation.NameInMap("KeySpec")
     private String keySpec;
 
-    @NameInMap("NotAfter")
+    @com.aliyun.core.annotation.NameInMap("NotAfter")
     private String notAfter;
 
-    @NameInMap("NotBefore")
+    @com.aliyun.core.annotation.NameInMap("NotBefore")
     private String notBefore;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Serial")
+    @com.aliyun.core.annotation.NameInMap("Serial")
     private String serial;
 
-    @NameInMap("SignatureAlgorithm")
+    @com.aliyun.core.annotation.NameInMap("SignatureAlgorithm")
     private String signatureAlgorithm;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Subject")
+    @com.aliyun.core.annotation.NameInMap("Subject")
     private String subject;
 
-    @NameInMap("SubjectAlternativeNames")
+    @com.aliyun.core.annotation.NameInMap("SubjectAlternativeNames")
     private java.util.List < String > subjectAlternativeNames;
 
-    @NameInMap("SubjectKeyIdentifier")
+    @com.aliyun.core.annotation.NameInMap("SubjectKeyIdentifier")
     private String subjectKeyIdentifier;
 
-    @NameInMap("SubjectPublicKey")
+    @com.aliyun.core.annotation.NameInMap("SubjectPublicKey")
     private String subjectPublicKey;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.Map < String, ? > tags;
 
-    @NameInMap("UpdatedAt")
+    @com.aliyun.core.annotation.NameInMap("UpdatedAt")
     private String updatedAt;
 
     private DescribeCertificateResponseBody(Builder builder) {

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityEntityRequest} extends {@link RequestModel}
  *
  * <p>GetQualityEntityRequest</p>
  */
 public class GetQualityEntityRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("EnvType")
-    @Validation(required = true, maxLength = 64, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String envType;
 
-    @Body
-    @NameInMap("MatchExpression")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MatchExpression")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String matchExpression;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true, maxLength = 1024, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
     private String projectName;
 
-    @Body
-    @NameInMap("TableName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String tableName;
 
     private GetQualityEntityRequest(Builder builder) {
@@ -137,7 +142,20 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The type of the compute engine instance or data source.
+         * <p>The type of the compute engine or data source. Valid values:</p>
+         * <ul>
+         * <li>cdh</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>odps</li>
+         * <li>emr</li>
+         * <li>hadoop</li>
+         * <li>holodb</li>
+         * <li>hybriddb_for_postgresql</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -146,7 +164,10 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The partition filter expression.
+         * <p>The partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=$[yyyymmdd]</p>
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -155,7 +176,10 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -164,7 +188,11 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
+         * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -173,7 +201,11 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the partitioned table. You can call the [GetMetaTablePartition](~~173923~~) operation to obtain the name.
+         * <p>The name of the partitioned table. You can call the <a href="https://help.aliyun.com/document_detail/173923.html">GetMetaTablePartition</a> operation to obtain the name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dual</p>
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

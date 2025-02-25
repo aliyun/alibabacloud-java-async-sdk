@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsResourceSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRdsResourceSettingsResponseBody</p>
  */
 public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
-    @NameInMap("RdsInstanceResourceSettings")
+    @com.aliyun.core.annotation.NameInMap("RdsInstanceResourceSettings")
     private RdsInstanceResourceSettings rdsInstanceResourceSettings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRdsResourceSettingsResponseBody(Builder builder) {
@@ -71,32 +76,38 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRdsResourceSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsResourceSettingsResponseBody</p>
+     */
     public static class RdsInstanceResourceSetting extends TeaModel {
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("IsTop")
+        @com.aliyun.core.annotation.NameInMap("IsTop")
         private String isTop;
 
-        @NameInMap("NoticeBarContent")
+        @com.aliyun.core.annotation.NameInMap("NoticeBarContent")
         private String noticeBarContent;
 
-        @NameInMap("PoppedUpButtonText")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpButtonText")
         private String poppedUpButtonText;
 
-        @NameInMap("PoppedUpButtonType")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpButtonType")
         private String poppedUpButtonType;
 
-        @NameInMap("PoppedUpButtonUrl")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpButtonUrl")
         private String poppedUpButtonUrl;
 
-        @NameInMap("PoppedUpContent")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpContent")
         private String poppedUpContent;
 
-        @NameInMap("ResourceNiche")
+        @com.aliyun.core.annotation.NameInMap("ResourceNiche")
         private String resourceNiche;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
         private RdsInstanceResourceSetting(Builder builder) {
@@ -272,9 +283,15 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRdsResourceSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsResourceSettingsResponseBody</p>
+     */
     public static class RdsInstanceResourceSettings extends TeaModel {
-        @NameInMap("RdsInstanceResourceSetting")
-        private java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting;
+        @com.aliyun.core.annotation.NameInMap("RdsInstanceResourceSetting")
+        private java.util.List<RdsInstanceResourceSetting> rdsInstanceResourceSetting;
 
         private RdsInstanceResourceSettings(Builder builder) {
             this.rdsInstanceResourceSetting = builder.rdsInstanceResourceSetting;
@@ -291,17 +308,17 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         /**
          * @return rdsInstanceResourceSetting
          */
-        public java.util.List < RdsInstanceResourceSetting> getRdsInstanceResourceSetting() {
+        public java.util.List<RdsInstanceResourceSetting> getRdsInstanceResourceSetting() {
             return this.rdsInstanceResourceSetting;
         }
 
         public static final class Builder {
-            private java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting; 
+            private java.util.List<RdsInstanceResourceSetting> rdsInstanceResourceSetting; 
 
             /**
              * RdsInstanceResourceSetting.
              */
-            public Builder rdsInstanceResourceSetting(java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting) {
+            public Builder rdsInstanceResourceSetting(java.util.List<RdsInstanceResourceSetting> rdsInstanceResourceSetting) {
                 this.rdsInstanceResourceSetting = rdsInstanceResourceSetting;
                 return this;
             }

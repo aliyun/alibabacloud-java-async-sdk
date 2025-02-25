@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDataShareInstanceRequest} extends {@link RequestModel}
  *
  * <p>SetDataShareInstanceRequest</p>
  */
 public class SetDataShareInstanceRequest extends Request {
-    @Query
-    @NameInMap("InstanceList")
-    @Validation(required = true)
-    private java.util.List < String > instanceList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceList;
 
-    @Query
-    @NameInMap("OperationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private SetDataShareInstanceRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class SetDataShareInstanceRequest extends Request {
     /**
      * @return instanceList
      */
-    public java.util.List < String > getInstanceList() {
+    public java.util.List<String> getInstanceList() {
         return this.instanceList;
     }
 
@@ -81,7 +86,7 @@ public class SetDataShareInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetDataShareInstanceRequest, Builder> {
-        private java.util.List < String > instanceList; 
+        private java.util.List<String> instanceList; 
         private String operationType; 
         private Long ownerId; 
         private String regionId; 
@@ -99,12 +104,13 @@ public class SetDataShareInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.
-         * <p>
-         * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <p>The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceList(java.util.List < String > instanceList) {
+        public Builder instanceList(java.util.List<String> instanceList) {
             String instanceListShrink = shrink(instanceList, "InstanceList", "json");
             this.putQueryParameter("InstanceList", instanceListShrink);
             this.instanceList = instanceList;
@@ -112,11 +118,15 @@ public class SetDataShareInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable data sharing. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable data sharing. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong>: enables data sharing.</li>
+         * <li><strong>remove</strong>: disables data sharing.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **add**: enables data sharing.
-         * *   **remove**: disables data sharing.
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -134,10 +144,14 @@ public class SetDataShareInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

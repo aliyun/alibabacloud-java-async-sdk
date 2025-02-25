@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFieldRequest} extends {@link RequestModel}
  *
  * <p>DescribeFieldRequest</p>
  */
 public class DescribeFieldRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("QueryKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queryKey;
 
     private DescribeFieldRequest(Builder builder) {
@@ -69,7 +69,14 @@ public class DescribeFieldRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +85,14 @@ public class DescribeFieldRequest extends Request {
         }
 
         /**
-         * QueryKey.
+         * <p>The key of the global configuration. Valid values:</p>
+         * <ul>
+         * <li><strong>soar_filed_tags</strong>: queries the input template of the playbook.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>soar_filed_tags</p>
          */
         public Builder queryKey(String queryKey) {
             this.putQueryParameter("QueryKey", queryKey);

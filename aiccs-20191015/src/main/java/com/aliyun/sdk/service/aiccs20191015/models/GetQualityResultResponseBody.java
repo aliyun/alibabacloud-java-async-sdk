@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityResultResponseBody</p>
  */
 public class GetQualityResultResponseBody extends TeaModel {
-    @NameInMap("ChannelTypeName")
+    @com.aliyun.core.annotation.NameInMap("ChannelTypeName")
     private String channelTypeName;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityResultResponseBody(Builder builder) {
@@ -151,53 +156,59 @@ public class GetQualityResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityResultResponseBody</p>
+     */
     public static class QualityResultResponseList extends TeaModel {
-        @NameInMap("ChannelType")
+        @com.aliyun.core.annotation.NameInMap("ChannelType")
         private String channelType;
 
-        @NameInMap("ChannelTypeName")
+        @com.aliyun.core.annotation.NameInMap("ChannelTypeName")
         private String channelTypeName;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HitDetail")
+        @com.aliyun.core.annotation.NameInMap("HitDetail")
         private String hitDetail;
 
-        @NameInMap("HitStatus")
+        @com.aliyun.core.annotation.NameInMap("HitStatus")
         private Boolean hitStatus;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MemberName")
+        @com.aliyun.core.annotation.NameInMap("MemberName")
         private String memberName;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("ServicerId")
+        @com.aliyun.core.annotation.NameInMap("ServicerId")
         private String servicerId;
 
-        @NameInMap("ServicerName")
+        @com.aliyun.core.annotation.NameInMap("ServicerName")
         private String servicerName;
 
-        @NameInMap("TouchId")
+        @com.aliyun.core.annotation.NameInMap("TouchId")
         private String touchId;
 
-        @NameInMap("TouchStartTime")
+        @com.aliyun.core.annotation.NameInMap("TouchStartTime")
         private String touchStartTime;
 
         private QualityResultResponseList(Builder builder) {
@@ -492,17 +503,23 @@ public class GetQualityResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQualityResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("QualityResultResponseList")
-        private java.util.List < QualityResultResponseList> qualityResultResponseList;
+        @com.aliyun.core.annotation.NameInMap("QualityResultResponseList")
+        private java.util.List<QualityResultResponseList> qualityResultResponseList;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Integer totalNum;
 
         private Data(Builder builder) {
@@ -537,7 +554,7 @@ public class GetQualityResultResponseBody extends TeaModel {
         /**
          * @return qualityResultResponseList
          */
-        public java.util.List < QualityResultResponseList> getQualityResultResponseList() {
+        public java.util.List<QualityResultResponseList> getQualityResultResponseList() {
             return this.qualityResultResponseList;
         }
 
@@ -551,7 +568,7 @@ public class GetQualityResultResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNo; 
             private Integer pageSize; 
-            private java.util.List < QualityResultResponseList> qualityResultResponseList; 
+            private java.util.List<QualityResultResponseList> qualityResultResponseList; 
             private Integer totalNum; 
 
             /**
@@ -573,7 +590,7 @@ public class GetQualityResultResponseBody extends TeaModel {
             /**
              * QualityResultResponseList.
              */
-            public Builder qualityResultResponseList(java.util.List < QualityResultResponseList> qualityResultResponseList) {
+            public Builder qualityResultResponseList(java.util.List<QualityResultResponseList> qualityResultResponseList) {
                 this.qualityResultResponseList = qualityResultResponseList;
                 return this;
             }

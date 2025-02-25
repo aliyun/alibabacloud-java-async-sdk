@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentInfoResponseBody</p>
  */
 public class GetAgentInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAgentInfoResponseBody(Builder builder) {
@@ -90,7 +90,10 @@ public class GetAgentInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC384CE1-8D42-1900-84E1-F33F990F2B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +114,17 @@ public class GetAgentInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAgentInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AgentKey")
+        @com.aliyun.core.annotation.NameInMap("AgentKey")
         private String agentKey;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
         private Data(Builder builder) {

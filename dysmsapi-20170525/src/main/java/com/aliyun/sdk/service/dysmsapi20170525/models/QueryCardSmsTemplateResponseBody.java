@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCardSmsTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCardSmsTemplateResponseBody</p>
  */
 public class QueryCardSmsTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCardSmsTemplateResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,7 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +102,10 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +113,14 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,9 +133,15 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCardSmsTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCardSmsTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Templates")
-        private java.util.List < java.util.Map<String, ?>> templates;
+        @com.aliyun.core.annotation.NameInMap("Templates")
+        private java.util.List<java.util.Map<String, ?>> templates;
 
         private Data(Builder builder) {
             this.templates = builder.templates;
@@ -130,17 +158,17 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
         /**
          * @return templates
          */
-        public java.util.List < java.util.Map<String, ?>> getTemplates() {
+        public java.util.List<java.util.Map<String, ?>> getTemplates() {
             return this.templates;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> templates; 
+            private java.util.List<java.util.Map<String, ?>> templates; 
 
             /**
-             * Templates.
+             * <p>The array of objects.</p>
              */
-            public Builder templates(java.util.List < java.util.Map<String, ?>> templates) {
+            public Builder templates(java.util.List<java.util.Map<String, ?>> templates) {
                 this.templates = templates;
                 return this;
             }

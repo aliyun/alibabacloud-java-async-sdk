@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityIpsResponseBody</p>
  */
 public class DescribeSecurityIpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityIpGroups")
+    @com.aliyun.core.annotation.NameInMap("SecurityIpGroups")
     private SecurityIpGroups securityIpGroups;
 
-    @NameInMap("SecurityIps")
+    @com.aliyun.core.annotation.NameInMap("SecurityIps")
     private String securityIps;
 
     private DescribeSecurityIpsResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String securityIps; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC724D23-2962-479E-ABB1-606C935AE7FD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information of IP whitelists.
+         * <p>An array that consists of the information of IP whitelists.</p>
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -78,7 +86,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP addresses in the default whitelist.
+         * <p>The IP addresses in the default whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
          */
         public Builder securityIps(String securityIps) {
             this.securityIps = securityIps;
@@ -91,14 +102,20 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class SecurityIpGroup extends TeaModel {
-        @NameInMap("SecurityIpGroupAttribute")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroupAttribute")
         private String securityIpGroupAttribute;
 
-        @NameInMap("SecurityIpGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroupName")
         private String securityIpGroupName;
 
-        @NameInMap("SecurityIpList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpList")
         private String securityIpList;
 
         private SecurityIpGroup(Builder builder) {
@@ -142,7 +159,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * The attribute of the IP whitelist. This parameter is empty by default.
+             * <p>The attribute of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -150,7 +170,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist.
+             * <p>The name of the IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -158,7 +181,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the whitelist.
+             * <p>The name of the IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;
@@ -172,9 +198,15 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityIpsResponseBody</p>
+     */
     public static class SecurityIpGroups extends TeaModel {
-        @NameInMap("SecurityIpGroup")
-        private java.util.List < SecurityIpGroup> securityIpGroup;
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroup")
+        private java.util.List<SecurityIpGroup> securityIpGroup;
 
         private SecurityIpGroups(Builder builder) {
             this.securityIpGroup = builder.securityIpGroup;
@@ -191,17 +223,17 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         /**
          * @return securityIpGroup
          */
-        public java.util.List < SecurityIpGroup> getSecurityIpGroup() {
+        public java.util.List<SecurityIpGroup> getSecurityIpGroup() {
             return this.securityIpGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SecurityIpGroup> securityIpGroup; 
+            private java.util.List<SecurityIpGroup> securityIpGroup; 
 
             /**
              * SecurityIpGroup.
              */
-            public Builder securityIpGroup(java.util.List < SecurityIpGroup> securityIpGroup) {
+            public Builder securityIpGroup(java.util.List<SecurityIpGroup> securityIpGroup) {
                 this.securityIpGroup = securityIpGroup;
                 return this;
             }

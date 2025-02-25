@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LocationStorageRankDTO</p>
  */
 public class LocationStorageRankDTO extends TeaModel {
-    @NameInMap("FileCnt")
+    @com.aliyun.core.annotation.NameInMap("FileCnt")
     private Long fileCnt;
 
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private Long storage;
 
     private LocationStorageRankDTO(Builder builder) {

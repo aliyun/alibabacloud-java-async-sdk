@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataCronClearTaskDetailListResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataCronClearTaskDetailListResponseBody</p>
  */
 public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
-    @NameInMap("DataCronClearTaskDetailList")
-    private java.util.List < DataCronClearTaskDetailList> dataCronClearTaskDetailList;
+    @com.aliyun.core.annotation.NameInMap("DataCronClearTaskDetailList")
+    private java.util.List<DataCronClearTaskDetailList> dataCronClearTaskDetailList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetDataCronClearTaskDetailListResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
     /**
      * @return dataCronClearTaskDetailList
      */
-    public java.util.List < DataCronClearTaskDetailList> getDataCronClearTaskDetailList() {
+    public java.util.List<DataCronClearTaskDetailList> getDataCronClearTaskDetailList() {
         return this.dataCronClearTaskDetailList;
     }
 
@@ -90,7 +95,7 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataCronClearTaskDetailList> dataCronClearTaskDetailList; 
+        private java.util.List<DataCronClearTaskDetailList> dataCronClearTaskDetailList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -98,15 +103,18 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The historical data cleansing tasks
+         * <p>The historical data cleansing tasks</p>
          */
-        public Builder dataCronClearTaskDetailList(java.util.List < DataCronClearTaskDetailList> dataCronClearTaskDetailList) {
+        public Builder dataCronClearTaskDetailList(java.util.List<DataCronClearTaskDetailList> dataCronClearTaskDetailList) {
             this.dataCronClearTaskDetailList = dataCronClearTaskDetailList;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1D39814-9808-47F8-AFE0-AF167239AC9B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of SQL tasks.
+         * <p>The total number of SQL tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -151,17 +171,23 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataCronClearTaskDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataCronClearTaskDetailListResponseBody</p>
+     */
     public static class DataCronClearTaskDetailList extends TeaModel {
-        @NameInMap("ActualAffectRows")
+        @com.aliyun.core.annotation.NameInMap("ActualAffectRows")
         private Long actualAffectRows;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBTaskGroupId")
+        @com.aliyun.core.annotation.NameInMap("DBTaskGroupId")
         private Long DBTaskGroupId;
 
-        @NameInMap("jobStatus")
+        @com.aliyun.core.annotation.NameInMap("jobStatus")
         private String jobStatus;
 
         private DataCronClearTaskDetailList(Builder builder) {
@@ -214,7 +240,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             private String jobStatus; 
 
             /**
-             * The number of rows affected by the SQL task.
+             * <p>The number of rows affected by the SQL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder actualAffectRows(Long actualAffectRows) {
                 this.actualAffectRows = actualAffectRows;
@@ -222,7 +251,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL task was created.
+             * <p>The time when the SQL task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-14 10:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -230,7 +262,10 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL task group.
+             * <p>The ID of the SQL task group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>432523</p>
              */
             public Builder DBTaskGroupId(Long DBTaskGroupId) {
                 this.DBTaskGroupId = DBTaskGroupId;
@@ -238,17 +273,20 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the SQL task. Valid values:
-             * <p>
+             * <p>The state of the SQL task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The SQL task was initialized.</li>
+             * <li><strong>PENDING</strong>: The SQL task waited to be run.</li>
+             * <li><strong>BE_SCHEDULED</strong>: The SQL task waited to be scheduled.</li>
+             * <li><strong>FAIL</strong>: The SQL task failed.</li>
+             * <li><strong>SUCCESS</strong>: The SQL task was successful.</li>
+             * <li><strong>PAUSE</strong>: The SQL task was paused.</li>
+             * <li><strong>DELETE</strong>: The SQL task was deleted.</li>
+             * <li><strong>RUNNING</strong>: The SQL task was being run.</li>
+             * </ul>
              * 
-             * *   **INIT**: The SQL task was initialized.
-             * *   **PENDING**: The SQL task waited to be run.
-             * *   **BE_SCHEDULED**: The SQL task waited to be scheduled.
-             * *   **FAIL**: The SQL task failed.
-             * *   **SUCCESS**: The SQL task was successful.
-             * *   **PAUSE**: The SQL task was paused.
-             * *   **DELETE**: The SQL task was deleted.
-             * *   **RUNNING**: The SQL task was being run.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;

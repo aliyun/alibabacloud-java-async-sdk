@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProjectStepMetricRequest</p>
  */
 public class DescribeProjectStepMetricRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Aggregator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Aggregator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregator;
 
-    @Body
-    @NameInMap("BeginTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BeginTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTimestamp;
 
-    @Body
-    @NameInMap("EndTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTimestamp;
 
-    @Body
-    @NameInMap("MaxPointNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxPointNum")
     private Integer maxPointNum;
 
-    @Body
-    @NameInMap("MetricType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricType;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("StepName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StepName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stepName;
 
     private DescribeProjectStepMetricRequest(Builder builder) {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSecurityEventIdResponseBody} extends {@link TeaModel}
  *
  * <p>CheckSecurityEventIdResponseBody</p>
  */
 public class CheckSecurityEventIdResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckSecurityEventIdResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class CheckSecurityEventIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the alert events are generated on the server. Valid values:
-         * <p>
+         * <p>Indicates whether the alert events are generated on the server. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -62,7 +70,10 @@ public class CheckSecurityEventIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1383B0DB-D5D6-4B0C-9E6B-75939C8E67FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

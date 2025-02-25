@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClientUserDefineRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteClientUserDefineRuleRequest</p>
  */
 public class DeleteClientUserDefineRuleRequest extends Request {
-    @Query
-    @NameInMap("IdList")
-    @Validation(required = true)
-    private java.util.List < Long > idList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> idList;
 
     private DeleteClientUserDefineRuleRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DeleteClientUserDefineRuleRequest extends Request {
     /**
      * @return idList
      */
-    public java.util.List < Long > getIdList() {
+    public java.util.List<Long> getIdList() {
         return this.idList;
     }
 
     public static final class Builder extends Request.Builder<DeleteClientUserDefineRuleRequest, Builder> {
-        private java.util.List < Long > idList; 
+        private java.util.List<Long> idList; 
 
         private Builder() {
             super();
@@ -55,9 +60,10 @@ public class DeleteClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * The IDs of the custom defense rules.
+         * <p>The IDs of the custom defense rules.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder idList(java.util.List < Long > idList) {
+        public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
             this.idList = idList;
             return this;

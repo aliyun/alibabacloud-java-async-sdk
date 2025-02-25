@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAccountPasswordResponseBody} extends {@link TeaModel}
  *
  * <p>ResetAccountPasswordResponseBody</p>
  */
 public class ResetAccountPasswordResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ResetAccountPasswordResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8BE02313-5395-4EBE-BAE7-E90A053F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

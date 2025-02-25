@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkItemWorkFlowInfoResponseBody</p>
  */
 public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("workflow")
+    @com.aliyun.core.annotation.NameInMap("workflow")
     private Workflow workflow;
 
     private GetWorkItemWorkFlowInfoResponseBody(Builder builder) {
@@ -131,38 +136,44 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemWorkFlowInfoResponseBody</p>
+     */
     public static class Statuses extends TeaModel {
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("workflowStageIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workflowStageIdentifier")
         private String workflowStageIdentifier;
 
-        @NameInMap("workflowStageName")
+        @com.aliyun.core.annotation.NameInMap("workflowStageName")
         private String workflowStageName;
 
         private Statuses(Builder builder) {
@@ -372,20 +383,26 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemWorkFlowInfoResponseBody</p>
+     */
     public static class WorkflowActions extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nextWorkflowStatusIdentifier")
+        @com.aliyun.core.annotation.NameInMap("nextWorkflowStatusIdentifier")
         private String nextWorkflowStatusIdentifier;
 
-        @NameInMap("workflowIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workflowIdentifier")
         private String workflowIdentifier;
 
-        @NameInMap("workflowStatusIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workflowStatusIdentifier")
         private String workflowStatusIdentifier;
 
         private WorkflowActions(Builder builder) {
@@ -493,51 +510,57 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemWorkFlowInfoResponseBody</p>
+     */
     public static class Workflow extends TeaModel {
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("defaultStatusIdentifier")
+        @com.aliyun.core.annotation.NameInMap("defaultStatusIdentifier")
         private String defaultStatusIdentifier;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("ownerSpaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ownerSpaceIdentifier")
         private String ownerSpaceIdentifier;
 
-        @NameInMap("ownerSpaceType")
+        @com.aliyun.core.annotation.NameInMap("ownerSpaceType")
         private String ownerSpaceType;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("statusOrder")
+        @com.aliyun.core.annotation.NameInMap("statusOrder")
         private String statusOrder;
 
-        @NameInMap("statuses")
-        private java.util.List < Statuses> statuses;
+        @com.aliyun.core.annotation.NameInMap("statuses")
+        private java.util.List<Statuses> statuses;
 
-        @NameInMap("workflowActions")
-        private java.util.List < WorkflowActions> workflowActions;
+        @com.aliyun.core.annotation.NameInMap("workflowActions")
+        private java.util.List<WorkflowActions> workflowActions;
 
         private Workflow(Builder builder) {
             this.creator = builder.creator;
@@ -659,14 +682,14 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         /**
          * @return statuses
          */
-        public java.util.List < Statuses> getStatuses() {
+        public java.util.List<Statuses> getStatuses() {
             return this.statuses;
         }
 
         /**
          * @return workflowActions
          */
-        public java.util.List < WorkflowActions> getWorkflowActions() {
+        public java.util.List<WorkflowActions> getWorkflowActions() {
             return this.workflowActions;
         }
 
@@ -684,8 +707,8 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private String resourceType; 
             private String source; 
             private String statusOrder; 
-            private java.util.List < Statuses> statuses; 
-            private java.util.List < WorkflowActions> workflowActions; 
+            private java.util.List<Statuses> statuses; 
+            private java.util.List<WorkflowActions> workflowActions; 
 
             /**
              * creator.
@@ -794,7 +817,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             /**
              * statuses.
              */
-            public Builder statuses(java.util.List < Statuses> statuses) {
+            public Builder statuses(java.util.List<Statuses> statuses) {
                 this.statuses = statuses;
                 return this;
             }
@@ -802,7 +825,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             /**
              * workflowActions.
              */
-            public Builder workflowActions(java.util.List < WorkflowActions> workflowActions) {
+            public Builder workflowActions(java.util.List<WorkflowActions> workflowActions) {
                 this.workflowActions = workflowActions;
                 return this;
             }

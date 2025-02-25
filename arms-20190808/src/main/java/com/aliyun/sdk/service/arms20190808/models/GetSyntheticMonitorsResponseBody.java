@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSyntheticMonitorsResponseBody} extends {@link TeaModel}
  *
  * <p>GetSyntheticMonitorsResponseBody</p>
  */
 public class GetSyntheticMonitorsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSyntheticMonitorsResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,12 +74,15 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,15 +90,18 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of monitoring points.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FD473FF-5398-5A85-9BF6-7AB45561522F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,35 +125,41 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSyntheticMonitorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSyntheticMonitorsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private String available;
 
-        @NameInMap("CanBeSelected")
+        @com.aliyun.core.annotation.NameInMap("CanBeSelected")
         private Boolean canBeSelected;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private Integer clientType;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Ipv6")
+        @com.aliyun.core.annotation.NameInMap("Ipv6")
         private Integer ipv6;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("OperatorCode")
+        @com.aliyun.core.annotation.NameInMap("OperatorCode")
         private String operatorCode;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private Data(Builder builder) {
@@ -246,7 +266,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Available.
+             * <p>Indicates whether the monitoring point is available. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder available(String available) {
                 this.available = available;
@@ -254,7 +277,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * CanBeSelected.
+             * <p>Indicates whether the monitoring point is selected. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canBeSelected(Boolean canBeSelected) {
                 this.canBeSelected = canBeSelected;
@@ -262,7 +288,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -270,7 +299,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * CityCode.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1100101</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -278,7 +310,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientType.
+             * <p>The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clientType(Integer clientType) {
                 this.clientType = clientType;
@@ -286,7 +321,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -294,7 +332,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6.
+             * <p>Indicates whether IPv6 is supported. Valid values: 0: IPv6 is not supported. 1: IPv6 is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipv6(Integer ipv6) {
                 this.ipv6 = ipv6;
@@ -302,7 +343,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The carrier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -310,7 +354,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCode.
+             * <p>The carrier code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder operatorCode(String operatorCode) {
                 this.operatorCode = operatorCode;
@@ -318,7 +365,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;

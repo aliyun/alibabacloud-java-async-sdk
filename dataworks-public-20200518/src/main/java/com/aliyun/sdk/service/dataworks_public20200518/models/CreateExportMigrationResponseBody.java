@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExportMigrationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateExportMigrationResponseBody</p>
  */
 public class CreateExportMigrationResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Long data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateExportMigrationResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the export task.
+         * <p>The export task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -70,7 +78,10 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot errors.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34267E2E-0335-1A60-A1F0-ADA530890CBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +89,14 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call succeeded.
-         * *   false: The call failed. You can locate errors based on the request ID.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

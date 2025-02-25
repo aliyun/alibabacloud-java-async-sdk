@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIngressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIngressResponseBody</p>
  */
 public class DescribeIngressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeIngressResponseBody(Builder builder) {
@@ -118,7 +123,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * The port specified for the SLB listener.
+         * <p>The port specified for the SLB listener.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -134,7 +139,10 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +150,10 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +169,10 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the routing rule.
+         * <p>The name of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a981dd515966966104121683d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -171,17 +185,23 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIngressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIngressResponseBody</p>
+     */
     public static class DefaultRule extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BackendProtocol")
+        @com.aliyun.core.annotation.NameInMap("BackendProtocol")
         private String backendProtocol;
 
-        @NameInMap("ContainerPort")
+        @com.aliyun.core.annotation.NameInMap("ContainerPort")
         private Integer containerPort;
 
         private DefaultRule(Builder builder) {
@@ -234,7 +254,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             private Integer containerPort; 
 
             /**
-             * The domain name of the application.
+             * <p>The domain name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>395b60e4-0550-458d-9c54-a265d036****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -242,7 +265,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The container port of the application specified in the forwarding rule.
+             * <p>The container port of the application specified in the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -258,7 +284,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application specified in the forwarding rule.
+             * <p>The name of the application specified in the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder containerPort(Integer containerPort) {
                 this.containerPort = containerPort;
@@ -272,27 +301,103 @@ public class DescribeIngressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIngressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIngressResponseBody</p>
+     */
+    public static class RuleActions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionConfig")
+        private String actionConfig;
+
+        @com.aliyun.core.annotation.NameInMap("ActionType")
+        private String actionType;
+
+        private RuleActions(Builder builder) {
+            this.actionConfig = builder.actionConfig;
+            this.actionType = builder.actionType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RuleActions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actionConfig
+         */
+        public String getActionConfig() {
+            return this.actionConfig;
+        }
+
+        /**
+         * @return actionType
+         */
+        public String getActionType() {
+            return this.actionType;
+        }
+
+        public static final class Builder {
+            private String actionConfig; 
+            private String actionType; 
+
+            /**
+             * ActionConfig.
+             */
+            public Builder actionConfig(String actionConfig) {
+                this.actionConfig = actionConfig;
+                return this;
+            }
+
+            /**
+             * ActionType.
+             */
+            public Builder actionType(String actionType) {
+                this.actionType = actionType;
+                return this;
+            }
+
+            public RuleActions build() {
+                return new RuleActions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeIngressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIngressResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BackendProtocol")
+        @com.aliyun.core.annotation.NameInMap("BackendProtocol")
         private String backendProtocol;
 
-        @NameInMap("ContainerPort")
+        @com.aliyun.core.annotation.NameInMap("ContainerPort")
         private Integer containerPort;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RewritePath")
+        @com.aliyun.core.annotation.NameInMap("RewritePath")
         private String rewritePath;
+
+        @com.aliyun.core.annotation.NameInMap("RuleActions")
+        private java.util.List<RuleActions> ruleActions;
 
         private Rules(Builder builder) {
             this.appId = builder.appId;
@@ -302,6 +407,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.domain = builder.domain;
             this.path = builder.path;
             this.rewritePath = builder.rewritePath;
+            this.ruleActions = builder.ruleActions;
         }
 
         public static Builder builder() {
@@ -361,6 +467,13 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.rewritePath;
         }
 
+        /**
+         * @return ruleActions
+         */
+        public java.util.List<RuleActions> getRuleActions() {
+            return this.ruleActions;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appName; 
@@ -369,13 +482,17 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String domain; 
             private String path; 
             private String rewritePath; 
+            private java.util.List<RuleActions> ruleActions; 
 
             /**
-             * The protocol used to forward requests. Valid values:
-             * <p>
+             * <p>The protocol used to forward requests. Valid values:</p>
+             * <ul>
+             * <li><strong>HTTP</strong>: used when the application needs to identify the transmitted data.</li>
+             * <li><strong>HTTPS</strong>: used when the application requires encrypted data transmission.</li>
+             * </ul>
              * 
-             * *   **HTTP**: used when the application needs to identify the transmitted data.
-             * *   **HTTPS**: used when the application requires encrypted data transmission.
+             * <strong>example:</strong>
+             * <p>395b60e4-0550-458d-9c54-a265d036****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -383,7 +500,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the URL.
+             * <p>The path of the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -399,7 +519,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing rule.
+             * <p>The ID of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder containerPort(Integer containerPort) {
                 this.containerPort = containerPort;
@@ -407,11 +530,14 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SLB instance based on the processing capabilities. Valid values:
-             * <p>
+             * <p>The type of the SLB instance based on the processing capabilities. Valid values:</p>
+             * <ul>
+             * <li><strong>clb</strong>: the Classic Load Balancer (CLB) instance.</li>
+             * <li><strong>alb</strong>: the Application Load Balancer (ALB) instance.</li>
+             * </ul>
              * 
-             * *   **clb**: the Classic Load Balancer (CLB) instance.
-             * *   **alb**: the Application Load Balancer (ALB) instance.
+             * <strong>example:</strong>
+             * <p>edas.site</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -419,11 +545,14 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+             * </ul>
              * 
-             * *   The **ErrorCode** parameter is not returned when the request succeeds.
-             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+             * <strong>example:</strong>
+             * <p>/path1</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -438,6 +567,14 @@ public class DescribeIngressResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * RuleActions.
+             */
+            public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
+                this.ruleActions = ruleActions;
+                return this;
+            }
+
             public Rules build() {
                 return new Rules(this);
             } 
@@ -445,58 +582,100 @@ public class DescribeIngressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIngressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIngressResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("CertIds")
+        @com.aliyun.core.annotation.NameInMap("CertIds")
         private String certIds;
 
-        @NameInMap("DefaultRule")
+        @com.aliyun.core.annotation.NameInMap("CreatedBySae")
+        private Boolean createdBySae;
+
+        @com.aliyun.core.annotation.NameInMap("DefaultRule")
         private DefaultRule defaultRule;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedFor")
+        private Boolean enableXForwardedFor;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForClientSrcPort")
+        private Boolean enableXForwardedForClientSrcPort;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForProto")
+        private Boolean enableXForwardedForProto;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForSlbId")
+        private Boolean enableXForwardedForSlbId;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXForwardedForSlbPort")
+        private Boolean enableXForwardedForSlbPort;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+        private Integer idleTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("LoadBalanceType")
+        @com.aliyun.core.annotation.NameInMap("LoadBalanceType")
         private String loadBalanceType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+        private Integer requestTimeout;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
+        private String securityPolicyId;
+
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbType")
+        @com.aliyun.core.annotation.NameInMap("SlbType")
         private String slbType;
 
         private Data(Builder builder) {
             this.certId = builder.certId;
             this.certIds = builder.certIds;
+            this.createdBySae = builder.createdBySae;
             this.defaultRule = builder.defaultRule;
             this.description = builder.description;
+            this.enableXForwardedFor = builder.enableXForwardedFor;
+            this.enableXForwardedForClientSrcPort = builder.enableXForwardedForClientSrcPort;
+            this.enableXForwardedForProto = builder.enableXForwardedForProto;
+            this.enableXForwardedForSlbId = builder.enableXForwardedForSlbId;
+            this.enableXForwardedForSlbPort = builder.enableXForwardedForSlbPort;
             this.id = builder.id;
+            this.idleTimeout = builder.idleTimeout;
             this.listenerPort = builder.listenerPort;
             this.listenerProtocol = builder.listenerProtocol;
             this.loadBalanceType = builder.loadBalanceType;
             this.name = builder.name;
             this.namespaceId = builder.namespaceId;
+            this.requestTimeout = builder.requestTimeout;
             this.rules = builder.rules;
+            this.securityPolicyId = builder.securityPolicyId;
             this.slbId = builder.slbId;
             this.slbType = builder.slbType;
         }
@@ -524,6 +703,13 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
+         * @return createdBySae
+         */
+        public Boolean getCreatedBySae() {
+            return this.createdBySae;
+        }
+
+        /**
          * @return defaultRule
          */
         public DefaultRule getDefaultRule() {
@@ -538,10 +724,52 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableXForwardedFor
+         */
+        public Boolean getEnableXForwardedFor() {
+            return this.enableXForwardedFor;
+        }
+
+        /**
+         * @return enableXForwardedForClientSrcPort
+         */
+        public Boolean getEnableXForwardedForClientSrcPort() {
+            return this.enableXForwardedForClientSrcPort;
+        }
+
+        /**
+         * @return enableXForwardedForProto
+         */
+        public Boolean getEnableXForwardedForProto() {
+            return this.enableXForwardedForProto;
+        }
+
+        /**
+         * @return enableXForwardedForSlbId
+         */
+        public Boolean getEnableXForwardedForSlbId() {
+            return this.enableXForwardedForSlbId;
+        }
+
+        /**
+         * @return enableXForwardedForSlbPort
+         */
+        public Boolean getEnableXForwardedForSlbPort() {
+            return this.enableXForwardedForSlbPort;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return idleTimeout
+         */
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
         }
 
         /**
@@ -580,10 +808,24 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
+         * @return requestTimeout
+         */
+        public Integer getRequestTimeout() {
+            return this.requestTimeout;
+        }
+
+        /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
+        }
+
+        /**
+         * @return securityPolicyId
+         */
+        public String getSecurityPolicyId() {
+            return this.securityPolicyId;
         }
 
         /**
@@ -603,20 +845,32 @@ public class DescribeIngressResponseBody extends TeaModel {
         public static final class Builder {
             private String certId; 
             private String certIds; 
+            private Boolean createdBySae; 
             private DefaultRule defaultRule; 
             private String description; 
+            private Boolean enableXForwardedFor; 
+            private Boolean enableXForwardedForClientSrcPort; 
+            private Boolean enableXForwardedForProto; 
+            private Boolean enableXForwardedForSlbId; 
+            private Boolean enableXForwardedForSlbPort; 
             private Long id; 
+            private Integer idleTimeout; 
             private Integer listenerPort; 
             private String listenerProtocol; 
             private String loadBalanceType; 
             private String name; 
             private String namespaceId; 
-            private java.util.List < Rules> rules; 
+            private Integer requestTimeout; 
+            private java.util.List<Rules> rules; 
+            private String securityPolicyId; 
             private String slbId; 
             private String slbType; 
 
             /**
-             * The name of the application specified in the default rule.
+             * <p>The name of the application specified in the default rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13623****809_16cad216b32_845_-419427029</p>
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -632,7 +886,15 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding rules.
+             * CreatedBySae.
+             */
+            public Builder createdBySae(Boolean createdBySae) {
+                this.createdBySae = createdBySae;
+                return this;
+            }
+
+            /**
+             * <p>The forwarding rules.</p>
              */
             public Builder defaultRule(DefaultRule defaultRule) {
                 this.defaultRule = defaultRule;
@@ -640,7 +902,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the routing rule.
+             * <p>The name of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ingress-sae-test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -648,13 +913,56 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code. Valid values:
-             * <p>
+             * EnableXForwardedFor.
+             */
+            public Builder enableXForwardedFor(Boolean enableXForwardedFor) {
+                this.enableXForwardedFor = enableXForwardedFor;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForClientSrcPort.
+             */
+            public Builder enableXForwardedForClientSrcPort(Boolean enableXForwardedForClientSrcPort) {
+                this.enableXForwardedForClientSrcPort = enableXForwardedForClientSrcPort;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForProto.
+             */
+            public Builder enableXForwardedForProto(Boolean enableXForwardedForProto) {
+                this.enableXForwardedForProto = enableXForwardedForProto;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForSlbId.
+             */
+            public Builder enableXForwardedForSlbId(Boolean enableXForwardedForSlbId) {
+                this.enableXForwardedForSlbId = enableXForwardedForSlbId;
+                return this;
+            }
+
+            /**
+             * EnableXForwardedForSlbPort.
+             */
+            public Builder enableXForwardedForSlbPort(Boolean enableXForwardedForSlbPort) {
+                this.enableXForwardedForSlbPort = enableXForwardedForSlbPort;
+                return this;
+            }
+
+            /**
+             * <p>The HTTP status code. Valid values:</p>
+             * <ul>
+             * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+             * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+             * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+             * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+             * </ul>
              * 
-             * *   **2xx**: indicates that the request was successful.
-             * *   **3xx**: indicates that the request was redirected.
-             * *   **4xx**: indicates that the request was invalid.
-             * *   **5xx**: indicates that a server error occurred.
+             * <strong>example:</strong>
+             * <p>87</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -662,7 +970,18 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The default rule.
+             * IdleTimeout.
+             */
+            public Builder idleTimeout(Integer idleTimeout) {
+                this.idleTimeout = idleTimeout;
+                return this;
+            }
+
+            /**
+             * <p>The default rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -678,11 +997,14 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configurations of the routing rule were queried successfully. Valid values:
-             * <p>
+             * <p>Indicates whether the configurations of the routing rule were queried successfully. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: indicates that the query was successful.</li>
+             * <li><strong>false</strong>: indicates that the query failed.</li>
+             * </ul>
              * 
-             * *   **true**: indicates that the query was successful.
-             * *   **false**: indicates that the query failed.
+             * <strong>example:</strong>
+             * <p>clb</p>
              */
             public Builder loadBalanceType(String loadBalanceType) {
                 this.loadBalanceType = loadBalanceType;
@@ -690,7 +1012,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application specified in the default rule.
+             * <p>The ID of the application specified in the default rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-uf6jt0nu4z6ior943****-80-f5****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -698,7 +1023,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:sae-test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -706,19 +1034,38 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application specified in the forwarding rule.
+             * RequestTimeout.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder requestTimeout(Integer requestTimeout) {
+                this.requestTimeout = requestTimeout;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the application specified in the forwarding rule.</p>
+             */
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
 
             /**
-             * The type of the SLB instance based on the IP address. Valid values:
-             * <p>
+             * SecurityPolicyId.
+             */
+            public Builder securityPolicyId(String securityPolicyId) {
+                this.securityPolicyId = securityPolicyId;
+                return this;
+            }
+
+            /**
+             * <p>The type of the SLB instance based on the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>internet</strong>: the Internet-facing SLB instance.</li>
+             * <li><strong>intranet</strong>: the internal-facing SLB instance.</li>
+             * </ul>
              * 
-             * *   **internet**: the Internet-facing SLB instance.
-             * *   **intranet**: the internal-facing SLB instance.
+             * <strong>example:</strong>
+             * <p>lb-uf62****6d13tq2u5</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -726,7 +1073,10 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * The container port of the application specified in the default rule.
+             * <p>The container port of the application specified in the default rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder slbType(String slbType) {
                 this.slbType = slbType;

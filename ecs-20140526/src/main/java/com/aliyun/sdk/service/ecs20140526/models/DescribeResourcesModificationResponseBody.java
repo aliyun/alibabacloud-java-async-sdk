@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourcesModificationResponseBody</p>
  */
 public class DescribeResourcesModificationResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
     private AvailableZones availableZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeResourcesModificationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the queried zones.
+         * <p>The information about the queried zones.</p>
          */
         public Builder availableZones(AvailableZones availableZones) {
             this.availableZones = availableZones;
@@ -58,7 +63,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class Condition extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Condition(Builder builder) {
@@ -98,10 +112,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The condition name. Valid value:
-             * <p>
+             * <p>The condition name. Valid value:</p>
+             * <p>DiskCategory, which indicates a disk category change.</p>
              * 
-             * DiskCategory, which indicates a disk category change.
+             * <strong>example:</strong>
+             * <p>DiskCategory</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -115,9 +130,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
-        @NameInMap("Condition")
-        private java.util.List < Condition> condition;
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private java.util.List<Condition> condition;
 
         private Conditions(Builder builder) {
             this.condition = builder.condition;
@@ -134,17 +155,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return condition
          */
-        public java.util.List < Condition> getCondition() {
+        public java.util.List<Condition> getCondition() {
             return this.condition;
         }
 
         public static final class Builder {
-            private java.util.List < Condition> condition; 
+            private java.util.List<Condition> condition; 
 
             /**
              * Condition.
              */
-            public Builder condition(java.util.List < Condition> condition) {
+            public Builder condition(java.util.List<Condition> condition) {
                 this.condition = condition;
                 return this;
             }
@@ -156,26 +177,32 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class ConditionSupportedResource extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private Conditions conditions;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCategory")
+        @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ConditionSupportedResource(Builder builder) {
@@ -255,7 +282,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The conditions.
+             * <p>The conditions.</p>
              */
             public Builder conditions(Conditions conditions) {
                 this.conditions = conditions;
@@ -263,7 +290,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum resource specification value. This parameter is not returned if it has no value.
+             * <p>The maximum disk capacity.</p>
+             * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -271,7 +302,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum resource specification value. This parameter is not returned if it has no value.
+             * <p>The minimum disk capacity.</p>
+             * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -279,11 +314,14 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The stock status of the resource. Valid values:
-             * <p>
+             * <p>The stock state of the resource. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>SoldOut</li>
+             * </ul>
              * 
-             * - Available
-             * - SoldOut
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -291,12 +329,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The category of resource based on stock status. Valid values:
-             * <p>
+             * <p>The category of the resource based on stock status. Valid values:</p>
+             * <ul>
+             * <li>WithStock: resources that are in sufficient stock</li>
+             * <li>ClosedWithStock: resources that are in insufficient stock</li>
+             * <li>WithoutStock: resources that are out of stock</li>
+             * </ul>
              * 
-             * - WithStock: resources that are in sufficient stock
-             * - ClosedWithStock: resources that are in insufficient stock
-             * - WithoutStock: resources that are out of stock
+             * <strong>example:</strong>
+             * <p>WithStock</p>
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -304,7 +345,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specification unit. This parameter is not returned if it has no value.
+             * <p>The unit of the disk capacity.</p>
+             * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -312,7 +357,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -326,9 +374,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class ConditionSupportedResources extends TeaModel {
-        @NameInMap("ConditionSupportedResource")
-        private java.util.List < ConditionSupportedResource> conditionSupportedResource;
+        @com.aliyun.core.annotation.NameInMap("ConditionSupportedResource")
+        private java.util.List<ConditionSupportedResource> conditionSupportedResource;
 
         private ConditionSupportedResources(Builder builder) {
             this.conditionSupportedResource = builder.conditionSupportedResource;
@@ -345,17 +399,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return conditionSupportedResource
          */
-        public java.util.List < ConditionSupportedResource> getConditionSupportedResource() {
+        public java.util.List<ConditionSupportedResource> getConditionSupportedResource() {
             return this.conditionSupportedResource;
         }
 
         public static final class Builder {
-            private java.util.List < ConditionSupportedResource> conditionSupportedResource; 
+            private java.util.List<ConditionSupportedResource> conditionSupportedResource; 
 
             /**
              * ConditionSupportedResource.
              */
-            public Builder conditionSupportedResource(java.util.List < ConditionSupportedResource> conditionSupportedResource) {
+            public Builder conditionSupportedResource(java.util.List<ConditionSupportedResource> conditionSupportedResource) {
                 this.conditionSupportedResource = conditionSupportedResource;
                 return this;
             }
@@ -367,23 +421,29 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class SupportedResource extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCategory")
+        @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SupportedResource(Builder builder) {
@@ -454,7 +514,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The maximum resource specification value. This parameter is not returned if it has no value.
+             * <p>The maximum disk capacity.</p>
+             * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -462,7 +526,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum resource specification value. This parameter is not returned if it has no value.
+             * <p>The minimum disk capacity.</p>
+             * <p>This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -470,11 +538,14 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. Valid values:
-             * <p>
+             * <p>The state of the resource. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>SoldOut</li>
+             * </ul>
              * 
-             * *   Available
-             * *   SoldOut
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -482,12 +553,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The category of resource based on stock status. Valid values:
-             * <p>
+             * <p>The category of the resource based on stock status. Valid values:</p>
+             * <ul>
+             * <li>WithStock: resources that are in sufficient stock</li>
+             * <li>ClosedWithStock: resources that are in insufficient stock</li>
+             * <li>WithoutStock: resources that are out of stock</li>
+             * </ul>
              * 
-             * *   WithStock: resources that are in sufficient stock
-             * *   ClosedWithStock: resources that are in insufficient stock
-             * *   WithoutStock: resources that are out of stock
+             * <strong>example:</strong>
+             * <p>WithStock</p>
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -495,7 +569,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specification unit. This parameter is not returned if it has no value.
+             * <p>The unit of the disk capacity. This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -503,7 +580,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -517,9 +597,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class SupportedResources extends TeaModel {
-        @NameInMap("SupportedResource")
-        private java.util.List < SupportedResource> supportedResource;
+        @com.aliyun.core.annotation.NameInMap("SupportedResource")
+        private java.util.List<SupportedResource> supportedResource;
 
         private SupportedResources(Builder builder) {
             this.supportedResource = builder.supportedResource;
@@ -536,17 +622,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return supportedResource
          */
-        public java.util.List < SupportedResource> getSupportedResource() {
+        public java.util.List<SupportedResource> getSupportedResource() {
             return this.supportedResource;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedResource> supportedResource; 
+            private java.util.List<SupportedResource> supportedResource; 
 
             /**
              * SupportedResource.
              */
-            public Builder supportedResource(java.util.List < SupportedResource> supportedResource) {
+            public Builder supportedResource(java.util.List<SupportedResource> supportedResource) {
                 this.supportedResource = supportedResource;
                 return this;
             }
@@ -558,14 +644,20 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class AvailableResource extends TeaModel {
-        @NameInMap("ConditionSupportedResources")
+        @com.aliyun.core.annotation.NameInMap("ConditionSupportedResources")
         private ConditionSupportedResources conditionSupportedResources;
 
-        @NameInMap("SupportedResources")
+        @com.aliyun.core.annotation.NameInMap("SupportedResources")
         private SupportedResources supportedResources;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AvailableResource(Builder builder) {
@@ -609,7 +701,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The resource types that resources can be changed to after the resources meet specified conditions.
+             * <p>The resource types that resources can be changed to after the resources meet specified conditions. If the conditions are met, you can change the current resource to a resource in the list.</p>
              */
             public Builder conditionSupportedResources(ConditionSupportedResources conditionSupportedResources) {
                 this.conditionSupportedResources = conditionSupportedResources;
@@ -617,7 +709,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the resources.
+             * <p>The information about the supported resources.</p>
              */
             public Builder supportedResources(SupportedResources supportedResources) {
                 this.supportedResources = supportedResources;
@@ -625,15 +717,14 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource. Valid values:
-             * <p>
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>InstanceType</li>
+             * <li>SystemDisk</li>
+             * </ul>
              * 
-             * *   Zone
-             * *   IoOptimized
-             * *   InstanceType
-             * *   SystemDisk
-             * *   DataDisk
-             * *   Network
+             * <strong>example:</strong>
+             * <p>InstanceType</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -647,9 +738,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class AvailableResources extends TeaModel {
-        @NameInMap("AvailableResource")
-        private java.util.List < AvailableResource> availableResource;
+        @com.aliyun.core.annotation.NameInMap("AvailableResource")
+        private java.util.List<AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
             this.availableResource = builder.availableResource;
@@ -666,17 +763,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return availableResource
          */
-        public java.util.List < AvailableResource> getAvailableResource() {
+        public java.util.List<AvailableResource> getAvailableResource() {
             return this.availableResource;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableResource> availableResource; 
+            private java.util.List<AvailableResource> availableResource; 
 
             /**
              * AvailableResource.
              */
-            public Builder availableResource(java.util.List < AvailableResource> availableResource) {
+            public Builder availableResource(java.util.List<AvailableResource> availableResource) {
                 this.availableResource = availableResource;
                 return this;
             }
@@ -688,20 +785,26 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class AvailableZone extends TeaModel {
-        @NameInMap("AvailableResources")
+        @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private AvailableResources availableResources;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCategory")
+        @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZone(Builder builder) {
@@ -763,7 +866,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The resources that are available in the zone.
+             * <p>The resources that are available in the zone.</p>
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -771,7 +874,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -779,11 +885,14 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. Valid values:
-             * <p>
+             * <p>The state of the resource. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>SoldOut</li>
+             * </ul>
              * 
-             * *   Available
-             * *   SoldOut
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -791,12 +900,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The category of resource based on stock status. Valid values:
-             * <p>
+             * <p>The category of the resource based on stock status. Valid values:</p>
+             * <ul>
+             * <li>WithStock: resources that are in sufficient stock</li>
+             * <li>ClosedWithStock: resources that are in insufficient stock</li>
+             * <li>WithoutStock: resources that are out of stock</li>
+             * </ul>
              * 
-             * *   WithStock: resources that are in sufficient stock
-             * *   ClosedWithStock: resources that are in insufficient stock
-             * *   WithoutStock: resources that are out of stock
+             * <strong>example:</strong>
+             * <p>WithStock</p>
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -804,7 +916,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -818,9 +933,15 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcesModificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcesModificationResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
-        @NameInMap("AvailableZone")
-        private java.util.List < AvailableZone> availableZone;
+        @com.aliyun.core.annotation.NameInMap("AvailableZone")
+        private java.util.List<AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {
             this.availableZone = builder.availableZone;
@@ -837,17 +958,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return availableZone
          */
-        public java.util.List < AvailableZone> getAvailableZone() {
+        public java.util.List<AvailableZone> getAvailableZone() {
             return this.availableZone;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableZone> availableZone; 
+            private java.util.List<AvailableZone> availableZone; 
 
             /**
              * AvailableZone.
              */
-            public Builder availableZone(java.util.List < AvailableZone> availableZone) {
+            public Builder availableZone(java.util.List<AvailableZone> availableZone) {
                 this.availableZone = availableZone;
                 return this;
             }

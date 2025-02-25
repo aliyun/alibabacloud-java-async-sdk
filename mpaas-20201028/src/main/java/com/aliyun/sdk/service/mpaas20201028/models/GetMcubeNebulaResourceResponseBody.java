@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMcubeNebulaResourceResponseBody</p>
  */
 public class GetMcubeNebulaResourceResponseBody extends TeaModel {
-    @NameInMap("GetNebulaResourceResult")
+    @com.aliyun.core.annotation.NameInMap("GetNebulaResourceResult")
     private GetNebulaResourceResult getNebulaResourceResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private GetMcubeNebulaResourceResponseBody(Builder builder) {
@@ -112,85 +111,85 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
     } 
 
     public static class NebulaResourceInfo extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("AutoInstall")
+        @com.aliyun.core.annotation.NameInMap("AutoInstall")
         private Integer autoInstall;
 
-        @NameInMap("ClientVersionMax")
+        @com.aliyun.core.annotation.NameInMap("ClientVersionMax")
         private String clientVersionMax;
 
-        @NameInMap("ClientVersionMin")
+        @com.aliyun.core.annotation.NameInMap("ClientVersionMin")
         private String clientVersionMin;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("ExtendInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
         private String extendInfo;
 
-        @NameInMap("ExtraData")
+        @com.aliyun.core.annotation.NameInMap("ExtraData")
         private String extraData;
 
-        @NameInMap("FallbackBaseUrl")
+        @com.aliyun.core.annotation.NameInMap("FallbackBaseUrl")
         private String fallbackBaseUrl;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
-        @NameInMap("H5Version")
+        @com.aliyun.core.annotation.NameInMap("H5Version")
         private String h5Version;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstallType")
+        @com.aliyun.core.annotation.NameInMap("InstallType")
         private Integer installType;
 
-        @NameInMap("MainUrl")
+        @com.aliyun.core.annotation.NameInMap("MainUrl")
         private String mainUrl;
 
-        @NameInMap("Memo")
+        @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
 
-        @NameInMap("MetaId")
+        @com.aliyun.core.annotation.NameInMap("MetaId")
         private Long metaId;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private Integer packageType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("PublishPeriod")
+        @com.aliyun.core.annotation.NameInMap("PublishPeriod")
         private Integer publishPeriod;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Vhost")
+        @com.aliyun.core.annotation.NameInMap("Vhost")
         private String vhost;
 
         private NebulaResourceInfo(Builder builder) {
@@ -673,19 +672,19 @@ public class GetMcubeNebulaResourceResponseBody extends TeaModel {
 
     }
     public static class GetNebulaResourceResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("NebulaResourceInfo")
+        @com.aliyun.core.annotation.NameInMap("NebulaResourceInfo")
         private NebulaResourceInfo nebulaResourceInfo;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private GetNebulaResourceResult(Builder builder) {

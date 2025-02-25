@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmRecoveryPlanResponseBody} extends {@link TeaModel}
  *
  * <p>AddGtmRecoveryPlanResponseBody</p>
  */
 public class AddGtmRecoveryPlanResponseBody extends TeaModel {
-    @NameInMap("RecoveryPlanId")
+    @com.aliyun.core.annotation.NameInMap("RecoveryPlanId")
     private String recoveryPlanId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddGtmRecoveryPlanResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the disaster recovery plan created.
+         * <p>The ID of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder recoveryPlanId(String recoveryPlanId) {
             this.recoveryPlanId = recoveryPlanId;
@@ -58,7 +66,10 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

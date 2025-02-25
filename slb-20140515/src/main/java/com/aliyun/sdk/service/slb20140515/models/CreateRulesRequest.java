@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRulesRequest} extends {@link RequestModel}
  *
  * <p>CreateRulesRequest</p>
  */
 public class CreateRulesRequest extends Request {
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RuleList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleList;
 
     private CreateRulesRequest(Builder builder) {
@@ -170,10 +175,12 @@ public class CreateRulesRequest extends Request {
         } 
 
         /**
-         * The frontend listener port that is used by the SLB instance.
-         * <p>
+         * <p>The frontend listener port that is used by the SLB instance.</p>
+         * <p>Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1 to 65535**.
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -182,10 +189,13 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * The frontend protocol that is used by the SLB instance.
-         * <p>
+         * <p>The frontend protocol that is used by the SLB instance.</p>
+         * <blockquote>
+         * <p>This parameter is required if the same port is used by listeners that use different protocols.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the same port is used by listeners that use different protocols.
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -194,7 +204,11 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1ca0zt07t934w******</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -221,10 +235,12 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
-         * <p>
+         * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -251,15 +267,20 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * The forwarding rules that you want to create. You can create up to 10 forwarding rules in each request. Each forwarding rule contains the following parameters:
-         * <p>
+         * <p>The forwarding rules that you want to create. You can create at most 10 forwarding rules in each call. Each forwarding rule contains the following parameters:</p>
+         * <ul>
+         * <li><strong>RuleName</strong>: Required. The value must be of the STRING type. The name of the forwarding rule. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). Forwarding rule names must be unique within the same listener.</li>
+         * <li><strong>Domain</strong>: Optional. The value must be a string. The domain name that is associated with the forwarding rule. You must specify this parameter or the <strong>URL</strong> parameter.</li>
+         * <li><strong>Url</strong>: Optional. The value must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The value must be a string. The URL cannot be only a forward slash (/). However, it must start with a forward slash (/). You must specify this parameter or the <strong>Domain</strong> parameter.</li>
+         * <li><strong>VServerGroupId</strong>: Required. The value must be a string. The ID of the vServer group to be specified in the forwarding rule.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify at least one between the <code>Domain</code> and <code>URL</code> parameters. You can also specify both. The combination of <code>Domain</code> and <code>Url</code> must be unique within the same listener.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RuleName**: Required. The value must be of the STRING type. The name of the forwarding rule. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). Forwarding rule names must be unique within the same listener.
-         * *   **Domain**: Optional. The value must be of the STRING type. The domain name that is associated with the forwarding rule. You must specify at least one of this parameter and **Url**.
-         * *   **Url**: Optional. The value must be of the STRING type. The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL cannot be a forward slash (/). However, the URL must start with a forward slash (/). You must specify at least one of this parameter and **Domain**.
-         * *   **VServerGroupId**: Required. The value must be of the STRING type. The ID of the vServer group that is associated with the forwarding rule.
-         * 
-         * > You must specify at least one of `Domain` and `Url`. The combination of `Domain` and `Url` must be unique within the same listener.
+         * <strong>example:</strong>
+         * <p>[{&quot;RuleName&quot;:&quot;Rule2&quot;,&quot;Domain&quot;:&quot;test.com&quot;,&quot;VServerGroupId&quot;:&quot;rsp-bp114ni******&quot;}]</p>
          */
         public Builder ruleList(String ruleList) {
             this.putQueryParameter("RuleList", ruleList);

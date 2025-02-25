@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceTypeTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceTypeTemplateResponseBody</p>
  */
 public class GetResourceTypeTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private java.util.Map < String, ? > templateBody;
 
-    @NameInMap("TemplateContent")
+    @com.aliyun.core.annotation.NameInMap("TemplateContent")
     private String templateContent;
 
     private GetResourceTypeTemplateResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
         private String templateContent; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87F54B2B-AEF0-4C33-A72A-3F8856A575E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,10 +73,13 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 51,200 bytes in length. For more information, see [Template syntax](~~28857~~).
-         * <p>
+         * <p>The structure that contains the template body. The template body must be 1 to 51,200 bytes in length. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</p>
+         * <blockquote>
+         * <p>We recommend that use TemplateContent instead of TemplateBody.</p>
+         * </blockquote>
          * 
-         * > We recommend that use TemplateContent instead of TemplateBody.
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
          */
         public Builder templateBody(java.util.Map < String, ? > templateBody) {
             this.templateBody = templateBody;
@@ -81,7 +87,12 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The JSON-formatted structure of the template body. For more information, see [Template syntax](~~28857~~).
+         * <p>The JSON-formatted structure of the template body. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;
+         * }</p>
          */
         public Builder templateContent(String templateContent) {
             this.templateContent = templateContent;

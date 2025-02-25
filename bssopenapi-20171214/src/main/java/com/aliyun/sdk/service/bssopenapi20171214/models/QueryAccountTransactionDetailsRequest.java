@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAccountTransactionDetailsRequest} extends {@link RequestModel}
  *
  * <p>QueryAccountTransactionDetailsRequest</p>
  */
 public class QueryAccountTransactionDetailsRequest extends Request {
-    @Query
-    @NameInMap("CreateTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private String createTimeEnd;
 
-    @Query
-    @NameInMap("CreateTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private String createTimeStart;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RecordID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordID")
     private String recordID;
 
-    @Query
-    @NameInMap("TransactionChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionChannel")
     private String transactionChannel;
 
-    @Query
-    @NameInMap("TransactionChannelSN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionChannelSN")
     private String transactionChannelSN;
 
-    @Query
-    @NameInMap("TransactionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionNumber")
     private String transactionNumber;
 
-    @Query
-    @NameInMap("TransactionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionType")
     private String transactionType;
 
     private QueryAccountTransactionDetailsRequest(Builder builder) {
@@ -166,7 +171,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         } 
 
         /**
-         * The end of the creation time range to query.
+         * <p>The end of the creation time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-20</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -175,7 +183,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * The beginning of the creation time range to query.
+         * <p>The beginning of the creation time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-20</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -184,7 +195,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * This parameter is invalid.
+         * <p>This parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -193,7 +207,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * The token that is used for paging.
+         * <p>The token that is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABEDSDS124DASA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -202,7 +219,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the order or bill.
+         * <p>The ID of the order or bill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022120336190912</p>
          */
         public Builder recordID(String recordID) {
             this.putQueryParameter("RecordID", recordID);
@@ -211,7 +231,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * The transaction channel.
+         * <p>The transaction channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIPAY</p>
          */
         public Builder transactionChannel(String transactionChannel) {
             this.putQueryParameter("TransactionChannel", transactionChannel);
@@ -220,7 +243,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * The serial number of the transaction channel.
+         * <p>The serial number of the transaction channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022112122001470591458665933</p>
          */
         public Builder transactionChannelSN(String transactionChannelSN) {
             this.putQueryParameter("TransactionChannelSN", transactionChannelSN);
@@ -229,7 +255,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * The number of the transaction.
+         * <p>The number of the transaction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>410874027490089</p>
          */
         public Builder transactionNumber(String transactionNumber) {
             this.putQueryParameter("TransactionNumber", transactionNumber);
@@ -238,7 +267,10 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * The type of the transaction.
+         * <p>The type of the transaction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHARGE</p>
          */
         public Builder transactionType(String transactionType) {
             this.putQueryParameter("TransactionType", transactionType);

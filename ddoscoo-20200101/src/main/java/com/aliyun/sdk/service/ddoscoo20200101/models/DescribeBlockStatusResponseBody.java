@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBlockStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBlockStatusResponseBody</p>
  */
 public class DescribeBlockStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StatusList")
-    private java.util.List < StatusList> statusList;
+    @com.aliyun.core.annotation.NameInMap("StatusList")
+    private java.util.List<StatusList> statusList;
 
     private DescribeBlockStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
     /**
      * @return statusList
      */
-    public java.util.List < StatusList> getStatusList() {
+    public java.util.List<StatusList> getStatusList() {
         return this.statusList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StatusList> statusList; 
+        private java.util.List<StatusList> statusList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of details of the Diversion from Origin Server configurations of the instance.
+         * <p>An array that consists of details of the Diversion from Origin Server configurations of the instance.</p>
          */
-        public Builder statusList(java.util.List < StatusList> statusList) {
+        public Builder statusList(java.util.List<StatusList> statusList) {
             this.statusList = statusList;
             return this;
         }
@@ -71,17 +79,23 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBlockStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockStatusResponseBody</p>
+     */
     public static class BlockStatusList extends TeaModel {
-        @NameInMap("BlockStatus")
+        @com.aliyun.core.annotation.NameInMap("BlockStatus")
         private String blockStatus;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private BlockStatusList(Builder builder) {
@@ -134,11 +148,14 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The blocking status of the network traffic. Valid values:
-             * <p>
+             * <p>The blocking status of the network traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>areablock</strong>: Network traffic is blocked.</li>
+             * <li><strong>normal</strong>: Network traffic is not blocked.</li>
+             * </ul>
              * 
-             * *   **areablock**: Network traffic is blocked.
-             * *   **normal**: Network traffic is not blocked.
+             * <strong>example:</strong>
+             * <p>areablock</p>
              */
             public Builder blockStatus(String blockStatus) {
                 this.blockStatus = blockStatus;
@@ -146,7 +163,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the blocking. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The end time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1540196323</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -154,11 +174,14 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) line from which the traffic is blocked. Valid values:
-             * <p>
+             * <p>The Internet service provider (ISP) line from which the traffic is blocked. Valid values:</p>
+             * <ul>
+             * <li><strong>ct</strong>: China Telecom (International)</li>
+             * <li><strong>cut</strong>: China Unicom (International)</li>
+             * </ul>
              * 
-             * *   **ct**: China Telecom (International)
-             * *   **cut**: China Unicom (International)
+             * <strong>example:</strong>
+             * <p>cut</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -166,7 +189,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the blocking. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The start time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1540195323</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -180,11 +206,17 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBlockStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBlockStatusResponseBody</p>
+     */
     public static class StatusList extends TeaModel {
-        @NameInMap("BlockStatusList")
-        private java.util.List < BlockStatusList> blockStatusList;
+        @com.aliyun.core.annotation.NameInMap("BlockStatusList")
+        private java.util.List<BlockStatusList> blockStatusList;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private StatusList(Builder builder) {
@@ -203,7 +235,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         /**
          * @return blockStatusList
          */
-        public java.util.List < BlockStatusList> getBlockStatusList() {
+        public java.util.List<BlockStatusList> getBlockStatusList() {
             return this.blockStatusList;
         }
 
@@ -215,19 +247,22 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BlockStatusList> blockStatusList; 
+            private java.util.List<BlockStatusList> blockStatusList; 
             private String ip; 
 
             /**
-             * An array that consists of details of the Diversion from Origin Server configuration.
+             * <p>An array that consists of details of the Diversion from Origin Server configuration.</p>
              */
-            public Builder blockStatusList(java.util.List < BlockStatusList> blockStatusList) {
+            public Builder blockStatusList(java.util.List<BlockStatusList> blockStatusList) {
                 this.blockStatusList = blockStatusList;
                 return this;
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.XX.XX.88</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;

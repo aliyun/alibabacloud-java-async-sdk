@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAlertContactGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAlertContactGroupRequest</p>
  */
 public class CreateAlertContactGroupRequest extends Request {
-    @Query
-    @NameInMap("ContactGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroupName;
 
-    @Query
-    @NameInMap("ContactIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactIds")
     private String contactIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateAlertContactGroupRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class CreateAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * ContactGroupName.
+         * <p>The name of the alert contact group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -93,7 +102,10 @@ public class CreateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * ContactIds.
+         * <p>The IDs of contacts in the contact group. Separate multiple contact IDs with spaces. You can call the SearchAlertContact operation to query the contact IDs. For more information, see <a href="https://help.aliyun.com/document_detail/130703.html">SearchAlertContact</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12* 23* 34*</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -102,7 +114,11 @@ public class CreateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridCloudGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHybridCloudGroupsResponseBody</p>
  */
 public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
-    @NameInMap("Groups")
-    private java.util.List < Groups> groups;
+    @com.aliyun.core.annotation.NameInMap("Groups")
+    private java.util.List<Groups> groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHybridCloudGroupsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < Groups> getGroups() {
+    public java.util.List<Groups> getGroups() {
         return this.groups;
     }
 
@@ -57,20 +62,23 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Groups> groups; 
+        private java.util.List<Groups> groups; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The hybrid cloud node groups.
+         * <p>The node groups.</p>
          */
-        public Builder groups(java.util.List < Groups> groups) {
+        public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>045660E7-C4C6-5CD7-8182-7B337D95****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>146</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,38 +102,44 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHybridCloudGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridCloudGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("BackSourceMark")
+        @com.aliyun.core.annotation.NameInMap("BackSourceMark")
         private String backSourceMark;
 
-        @NameInMap("ContinentsValue")
+        @com.aliyun.core.annotation.NameInMap("ContinentsValue")
         private Integer continentsValue;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("LoadBalanceIp")
+        @com.aliyun.core.annotation.NameInMap("LoadBalanceIp")
         private String loadBalanceIp;
 
-        @NameInMap("LocationId")
+        @com.aliyun.core.annotation.NameInMap("LocationId")
         private Long locationId;
 
-        @NameInMap("OperatorValue")
+        @com.aliyun.core.annotation.NameInMap("OperatorValue")
         private Integer operatorValue;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private String ports;
 
-        @NameInMap("RegionCodeValue")
+        @com.aliyun.core.annotation.NameInMap("RegionCodeValue")
         private Integer regionCodeValue;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private Groups(Builder builder) {
@@ -238,7 +255,13 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * BackSourceMark.
+             * <p>The back-to-origin mark of the protected cluster. The value is in the {ISP name}-{Continent name}-{City name}-{Back-to-origin identifier} format. The back-to-origin identifier is optional.</p>
+             * <blockquote>
+             * <p> For more information about ISP names, continent names, city names, and back-to-origin identifiers, see the following sections.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-asiapacific-beijing-12345678</p>
              */
             public Builder backSourceMark(String backSourceMark) {
                 this.backSourceMark = backSourceMark;
@@ -246,7 +269,13 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ContinentsValue.
+             * <p>The continent code of the protected cluster.</p>
+             * <blockquote>
+             * <p> For more information about continent codes, see Continent codes in this topic.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>410</p>
              */
             public Builder continentsValue(Integer continentsValue) {
                 this.continentsValue = continentsValue;
@@ -254,7 +283,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the hybrid cloud node group.
+             * <p>The ID of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -262,7 +294,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the hybrid cloud node group.
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StorageGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -270,13 +305,16 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the hybrid cloud node group. Valid values:
-             * <p>
+             * <p>The type of the node group. Valid values:</p>
+             * <ul>
+             * <li><strong>protect</strong></li>
+             * <li><strong>control</strong></li>
+             * <li><strong>storage</strong></li>
+             * <li><strong>controlStorage</strong></li>
+             * </ul>
              * 
-             * *   **protect**
-             * *   **control**
-             * *   **storage**
-             * *   **controlStorage**
+             * <strong>example:</strong>
+             * <p>protect</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -284,7 +322,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server for load balancing.
+             * <p>The IP address of the server used for load balancing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder loadBalanceIp(String loadBalanceIp) {
                 this.loadBalanceIp = loadBalanceIp;
@@ -292,7 +333,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the protection node.
+             * <p>The ID of the protection node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1312</p>
              */
             public Builder locationId(Long locationId) {
                 this.locationId = locationId;
@@ -300,7 +344,13 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorValue.
+             * <p>The ISP code of the protected cluster.</p>
+             * <blockquote>
+             * <p> For more information about ISP codes, see ISP codes in this topic.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder operatorValue(Integer operatorValue) {
                 this.operatorValue = operatorValue;
@@ -308,7 +358,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used by the hybrid cloud cluster. The value of this parameter is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.
+             * <p>The port that is used by the hybrid cloud cluster. The value of this parameter is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80,9200,20018</p>
              */
             public Builder ports(String ports) {
                 this.ports = ports;
@@ -316,7 +369,13 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCodeValue.
+             * <p>The city code of the protected cluster.</p>
+             * <blockquote>
+             * <p> For more information about city codes, see City codes in this topic.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder regionCodeValue(Integer regionCodeValue) {
                 this.regionCodeValue = regionCodeValue;
@@ -324,7 +383,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the hybrid cloud node group.
+             * <p>The description of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

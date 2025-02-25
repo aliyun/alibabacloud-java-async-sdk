@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserGroupsResponseBody</p>
  */
 public class ListUserGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("UserGroups")
+    @com.aliyun.core.annotation.NameInMap("UserGroups")
     private java.util.List < UserGroups> userGroups;
 
     private ListUserGroupsResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         private java.util.List < UserGroups> userGroups; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of user groups returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +84,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroups.
+         * <p>The user groups returned.</p>
          */
         public Builder userGroups(java.util.List < UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -91,17 +97,23 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsResponseBody</p>
+     */
     public static class UserGroups extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("MemberCount")
+        @com.aliyun.core.annotation.NameInMap("MemberCount")
         private Integer memberCount;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
-        @NameInMap("UserGroupName")
+        @com.aliyun.core.annotation.NameInMap("UserGroupName")
         private String userGroupName;
 
         private UserGroups(Builder builder) {
@@ -154,7 +166,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             private String userGroupName; 
 
             /**
-             * Comment.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -162,7 +177,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemberCount.
+             * <p>The number of users in the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder memberCount(Integer memberCount) {
                 this.memberCount = memberCount;
@@ -170,7 +188,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -178,7 +199,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestGroup01</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

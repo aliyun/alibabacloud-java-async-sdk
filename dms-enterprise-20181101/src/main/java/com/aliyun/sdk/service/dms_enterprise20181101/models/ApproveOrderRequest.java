@@ -1,53 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApproveOrderRequest} extends {@link RequestModel}
  *
  * <p>ApproveOrderRequest</p>
  */
 public class ApproveOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApprovalNodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalNodeId")
     private Long approvalNodeId;
 
-    @Query
-    @NameInMap("ApprovalNodePos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalNodePos")
     private String approvalNodePos;
 
-    @Query
-    @NameInMap("ApprovalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String approvalType;
 
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("NewApprover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewApprover")
     private Long newApprover;
 
-    @Query
-    @NameInMap("OldApprover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewApproverList")
+    private String newApproverList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldApprover")
     private Long oldApprover;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("WorkflowInstanceId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long workflowInstanceId;
 
     private ApproveOrderRequest(Builder builder) {
@@ -58,7 +71,9 @@ public class ApproveOrderRequest extends Request {
         this.approvalType = builder.approvalType;
         this.comment = builder.comment;
         this.newApprover = builder.newApprover;
+        this.newApproverList = builder.newApproverList;
         this.oldApprover = builder.oldApprover;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.tid = builder.tid;
         this.workflowInstanceId = builder.workflowInstanceId;
     }
@@ -119,10 +134,24 @@ public class ApproveOrderRequest extends Request {
     }
 
     /**
+     * @return newApproverList
+     */
+    public String getNewApproverList() {
+        return this.newApproverList;
+    }
+
+    /**
      * @return oldApprover
      */
     public Long getOldApprover() {
         return this.oldApprover;
+    }
+
+    /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     /**
@@ -146,7 +175,9 @@ public class ApproveOrderRequest extends Request {
         private String approvalType; 
         private String comment; 
         private Long newApprover; 
+        private String newApproverList; 
         private Long oldApprover; 
+        private String realLoginUserUid; 
         private Long tid; 
         private Long workflowInstanceId; 
 
@@ -162,7 +193,9 @@ public class ApproveOrderRequest extends Request {
             this.approvalType = request.approvalType;
             this.comment = request.comment;
             this.newApprover = request.newApprover;
+            this.newApproverList = request.newApproverList;
             this.oldApprover = request.oldApprover;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.tid = request.tid;
             this.workflowInstanceId = request.workflowInstanceId;
         } 
@@ -177,7 +210,10 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The ID of the user that is added as the new approval node. This node must be a user-defined approval node. You can call the ListUserDefineWorkFlowNodes operation to obtain the value of this parameter.
+         * <p>If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The ID of the user that is added as the new approval node. This node must be a user-defined approval node. You can call the ListUserDefineWorkFlowNodes operation to obtain the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder approvalNodeId(Long approvalNodeId) {
             this.putQueryParameter("ApprovalNodeId", approvalNodeId);
@@ -186,11 +222,14 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The position of the new approval node. Valid values:
-         * <p>
+         * <p>The position of the new approval node. You must specify this parameter if ApprovalType is set to ADD_APPROVAL_NODE. Valid values:</p>
+         * <ul>
+         * <li><strong>PRE_ADD_APPROVAL_NODE</strong>: before the current approval node.</li>
+         * <li><strong>POST_ADD_APPROVAL_NODE</strong>: after the current approval node.</li>
+         * </ul>
          * 
-         * *   **PRE_ADD_APPROVAL_NODE**: before the current approval node.
-         * *   **POST_ADD_APPROVAL_NODE**: after the current approval node.
+         * <strong>example:</strong>
+         * <p>POST_ADD_APPROVAL_NODE</p>
          */
         public Builder approvalNodePos(String approvalNodePos) {
             this.putQueryParameter("ApprovalNodePos", approvalNodePos);
@@ -199,14 +238,18 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * The action that you want to perform on the ticket. Valid values:
-         * <p>
+         * <p>The action that you want to perform on the ticket. Valid values:</p>
+         * <ul>
+         * <li><strong>AGREE</strong></li>
+         * <li><strong>CANCEL</strong></li>
+         * <li><strong>REJECT</strong></li>
+         * <li><strong>TRANSFER</strong></li>
+         * <li><strong>ADD_APPROVAL_NODE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AGREE**
-         * *   **CANCEL**
-         * *   **REJECT**
-         * *   **TRANSFER**
-         * *   **ADD_APPROVAL_NODE**
+         * <strong>example:</strong>
+         * <p>agree</p>
          */
         public Builder approvalType(String approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
@@ -215,7 +258,10 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * The description of the ticket.
+         * <p>The description of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -224,7 +270,10 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * The ID of the user to which the ticket is transferred. If ApprovalType is set to TRANSFER, you need to specify this parameter.
+         * <p>The ID of the user to which the ticket is transferred. If ApprovalType is set to TRANSFER, you need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         public Builder newApprover(Long newApprover) {
             this.putQueryParameter("NewApprover", newApprover);
@@ -233,7 +282,25 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * The ID of the user that transfers the ticket to another user. The default value is the ID of the current user. If the current user is an administrator or a database administrator (DBA), the user can change the value of this parameter to the ID of another user.
+         * <blockquote>
+         * <p> You can specify this parameter if ApprovalType is set to TRANSFER. You need to only specify one of NewApproverList and NewApprover.</p>
+         * </blockquote>
+         * <p>The IDs of the users to whom the ticket is transferred. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154***,155***,156***</p>
+         */
+        public Builder newApproverList(String newApproverList) {
+            this.putQueryParameter("NewApproverList", newApproverList);
+            this.newApproverList = newApproverList;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the user that transfers the ticket to another user. The default value is the ID of the current user. If the current user is an administrator or a database administrator (DBA), the user can change the value of this parameter to the ID of another user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23***</p>
          */
         public Builder oldApprover(Long oldApprover) {
             this.putQueryParameter("OldApprover", oldApprover);
@@ -242,7 +309,22 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * <p>The UID of the Alibaba Cloud account that actually calls the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21400447956867****</p>
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -251,7 +333,11 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
+         * <p>The ID of the approval process. You can call the <a href="https://help.aliyun.com/document_detail/144642.html">GetOrderBaseInfo</a> operation to obtain the ID of the approval process.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workflowInstanceId(Long workflowInstanceId) {
             this.putQueryParameter("WorkflowInstanceId", workflowInstanceId);

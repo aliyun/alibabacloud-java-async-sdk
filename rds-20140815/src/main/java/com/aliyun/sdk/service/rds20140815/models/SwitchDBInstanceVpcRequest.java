@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchDBInstanceVpcRequest} extends {@link RequestModel}
  *
  * <p>SwitchDBInstanceVpcRequest</p>
  */
 public class SwitchDBInstanceVpcRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VPCId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     private SwitchDBInstanceVpcRequest(Builder builder) {
@@ -113,7 +118,11 @@ public class SwitchDBInstanceVpcRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -122,10 +131,13 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * The private IP address of the instance. The private IP address must be within the CIDR block of the vSwitch that is specified by the **VSwitchId** parameter.
-         * <p>
+         * <p>The private IP address of the instance. The private IP address must be within the CIDR block of the vSwitch that is specified by the <strong>VSwitchId</strong> parameter.</p>
+         * <blockquote>
+         * <p> You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.</p>
+         * </blockquote>
          * 
-         * >  You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.
+         * <strong>example:</strong>
+         * <p>10.23.XX.XX</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -143,10 +155,14 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * The VPC ID.
-         * <p>
+         * <p>The VPC ID.</p>
+         * <blockquote>
+         * <p>The VPC must reside in the same region as the instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The VPC must reside in the same region as the instance.
+         * <strong>example:</strong>
+         * <p>vpc-uf6f7l4fg90*****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -155,10 +171,14 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the instance.
-         * <p>
+         * <p>The vSwitch ID of the instance.</p>
+         * <blockquote>
+         * <p>The vSwitch must belong to the same zone as the instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The vSwitch must belong to the same zone as the instance.
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2p*****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

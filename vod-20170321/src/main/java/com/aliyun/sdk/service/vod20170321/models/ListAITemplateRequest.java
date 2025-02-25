@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAITemplateRequest} extends {@link RequestModel}
  *
  * <p>ListAITemplateRequest</p>
  */
 public class ListAITemplateRequest extends Request {
-    @Query
-    @NameInMap("TemplateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
     private ListAITemplateRequest(Builder builder) {
@@ -55,11 +60,15 @@ public class ListAITemplateRequest extends Request {
         } 
 
         /**
-         * The type of the AI template. Valid values:
-         * <p>
+         * <p>The type of the AI template. Valid values:</p>
+         * <ul>
+         * <li><strong>AIMediaAudit</strong>: automated review</li>
+         * <li><strong>AIImage</strong>: smart thumbnail</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AIMediaAudit**: automated review
-         * *   **AIImage**: smart thumbnail
+         * <strong>example:</strong>
+         * <p>AIMediaAudit</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

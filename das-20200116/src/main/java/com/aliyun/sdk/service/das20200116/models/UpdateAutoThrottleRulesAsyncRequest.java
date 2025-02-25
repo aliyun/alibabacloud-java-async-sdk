@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAutoThrottleRulesAsyncRequest} extends {@link RequestModel}
  *
  * <p>UpdateAutoThrottleRulesAsyncRequest</p>
  */
 public class UpdateAutoThrottleRulesAsyncRequest extends Request {
-    @Query
-    @NameInMap("AbnormalDuration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AbnormalDuration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double abnormalDuration;
 
-    @Query
-    @NameInMap("ActiveSessions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActiveSessions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long activeSessions;
 
-    @Query
-    @NameInMap("AllowThrottleEndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowThrottleEndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowThrottleEndTime;
 
-    @Query
-    @NameInMap("AllowThrottleStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowThrottleStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowThrottleStartTime;
 
-    @Query
-    @NameInMap("AutoKillSession")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoKillSession")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean autoKillSession;
 
-    @Query
-    @NameInMap("ConsoleContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleContext")
     private String consoleContext;
 
-    @Query
-    @NameInMap("CpuSessionRelation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuSessionRelation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cpuSessionRelation;
 
-    @Query
-    @NameInMap("CpuUsage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuUsage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double cpuUsage;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
-    @Query
-    @NameInMap("MaxThrottleTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxThrottleTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double maxThrottleTime;
 
-    @Query
-    @NameInMap("ResultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultId")
     private String resultId;
 
     private UpdateAutoThrottleRulesAsyncRequest(Builder builder) {
@@ -203,7 +208,11 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         } 
 
         /**
-         * The duration threshold for triggering automatic SQL throttling. Set this parameter to a positive integer that is greater than or equal to 2. Unit: minutes.
+         * <p>The duration threshold for triggering automatic SQL throttling. Set this parameter to an integer that is greater than or equal to 2. Unit: minutes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder abnormalDuration(Double abnormalDuration) {
             this.putQueryParameter("AbnormalDuration", abnormalDuration);
@@ -212,11 +221,15 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The maximum number of active sessions.
-         * <p>
+         * <p>The threshold for the number of active sessions.</p>
+         * <ul>
+         * <li>If this parameter and CpuUsage are in the <strong>OR</strong> relationship, set this parameter to an integer that is greater than or equal to 16.</li>
+         * <li>If this parameter and CpuUsage are in the <strong>AND</strong> relationship, set this parameter to an integer that is greater than or equal to 2.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Specify an integer that is greater than or equal to 16 when the CPU utilization threshold and the maximum number of active sessions are in the **OR** relationship.
-         * *   Specify an integer that is greater than or equal to 2 when the CPU utilization threshold and the maximum number of active sessions are in the **AND** relationship.
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder activeSessions(Long activeSessions) {
             this.putQueryParameter("ActiveSessions", activeSessions);
@@ -225,7 +238,11 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The end time of the throttling window. The time must be in UTC.
+         * <p>The end time of the throttling window. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:59Z</p>
          */
         public Builder allowThrottleEndTime(String allowThrottleEndTime) {
             this.putQueryParameter("AllowThrottleEndTime", allowThrottleEndTime);
@@ -234,7 +251,11 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The start time of the throttling window. The time must be in UTC.
+         * <p>The start time of the throttling window. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00Z</p>
          */
         public Builder allowThrottleStartTime(String allowThrottleStartTime) {
             this.putQueryParameter("AllowThrottleStartTime", allowThrottleStartTime);
@@ -243,13 +264,18 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:
-         * <p>
+         * <p>Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:</p>
+         * <blockquote>
+         * <p> Abnormal SQL statements use the same template as the SQL statements to be throttled.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * >  Abnormal SQL statements use the same template as the SQL statements that need to be throttled.
-         * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoKillSession(Boolean autoKillSession) {
             this.putQueryParameter("AutoKillSession", autoKillSession);
@@ -258,7 +284,10 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -267,11 +296,15 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:
-         * <p>
+         * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
+         * <ul>
+         * <li><strong>AND</strong></li>
+         * <li><strong>OR</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **AND**
-         * *   **OR**
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         public Builder cpuSessionRelation(String cpuSessionRelation) {
             this.putQueryParameter("CpuSessionRelation", cpuSessionRelation);
@@ -280,7 +313,11 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The CPU utilization threshold, in percentages. Valid values: 70 to 100.
+         * <p>The threshold for CPU utilization. Valid values: 70% to 100%.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder cpuUsage(Double cpuUsage) {
             this.putQueryParameter("CpuUsage", cpuUsage);
@@ -289,10 +326,14 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The database instance IDs.
-         * <p>
+         * <p>The database instance IDs.</p>
+         * <blockquote>
+         * <p> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\&quot;Instance ID1\&quot;, \&quot;Instance ID2\&quot;]</code>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\", \"Instance ID2\"]`.
+         * <strong>example:</strong>
+         * <p>[&quot;rm-2ze8g2am97624****&quot;,&quot;rm-2ze9xrhze0709****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -301,7 +342,11 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The maximum throttling duration. Set this parameter to a positive integer. Unit: minutes.
+         * <p>The maximum throttling duration. Set this parameter to a positive integer. Unit: minutes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxThrottleTime(Double maxThrottleTime) {
             this.putQueryParameter("MaxThrottleTime", maxThrottleTime);
@@ -310,10 +355,13 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The ID of the asynchronous request.
-         * <p>
+         * <p>The ID of the asynchronous request.</p>
+         * <blockquote>
+         * <p> You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</p>
+         * </blockquote>
          * 
-         * >  You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.
+         * <strong>example:</strong>
+         * <p>async__507044db6c4eadfa2dab9b084e80****</p>
          */
         public Builder resultId(String resultId) {
             this.putQueryParameter("ResultId", resultId);

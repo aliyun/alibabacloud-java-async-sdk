@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportMasterKeyVO} extends {@link TeaModel}
  *
  * <p>ImportMasterKeyVO</p>
  */
 public class ImportMasterKeyVO extends TeaModel {
-    @NameInMap("EncryptMekDataBase64")
+    @com.aliyun.core.annotation.NameInMap("EncryptMekDataBase64")
     private String encryptMekDataBase64;
 
-    @NameInMap("MekId")
+    @com.aliyun.core.annotation.NameInMap("MekId")
     private Long mekId;
 
-    @NameInMap("ProjectId")
-    private java.util.List < Long > projectId;
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private java.util.List<Long> projectId;
 
     private ImportMasterKeyVO(Builder builder) {
         this.encryptMekDataBase64 = builder.encryptMekDataBase64;
@@ -52,14 +57,14 @@ public class ImportMasterKeyVO extends TeaModel {
     /**
      * @return projectId
      */
-    public java.util.List < Long > getProjectId() {
+    public java.util.List<Long> getProjectId() {
         return this.projectId;
     }
 
     public static final class Builder {
         private String encryptMekDataBase64; 
         private Long mekId; 
-        private java.util.List < Long > projectId; 
+        private java.util.List<Long> projectId; 
 
         /**
          * EncryptMekDataBase64.
@@ -80,7 +85,7 @@ public class ImportMasterKeyVO extends TeaModel {
         /**
          * ProjectId.
          */
-        public Builder projectId(java.util.List < Long > projectId) {
+        public Builder projectId(java.util.List<Long> projectId) {
             this.projectId = projectId;
             return this;
         }

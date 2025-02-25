@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAlarmMachineCountResponseBody} extends {@link TeaModel}
  *
  * <p>GetAlarmMachineCountResponseBody</p>
  */
 public class GetAlarmMachineCountResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAlarmMachineCountResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D3A2E7D-1238-5DD4-B3C3-BF06FCAD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAlarmMachineCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAlarmMachineCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("MachineCount")
+        @com.aliyun.core.annotation.NameInMap("MachineCount")
         private Integer machineCount;
 
         private Data(Builder builder) {
@@ -98,7 +112,10 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
             private Integer machineCount; 
 
             /**
-             * The number of servers on which alerts are generated.
+             * <p>The number of servers on which alerts are generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder machineCount(Integer machineCount) {
                 this.machineCount = machineCount;

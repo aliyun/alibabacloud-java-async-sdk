@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaWorkflowTriggerModeRequest} extends {@link RequestModel}
  *
  * <p>UpdateMediaWorkflowTriggerModeRequest</p>
  */
 public class UpdateMediaWorkflowTriggerModeRequest extends Request {
-    @Query
-    @NameInMap("MediaWorkflowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaWorkflowId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TriggerMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerMode;
 
     private UpdateMediaWorkflowTriggerModeRequest(Builder builder) {
@@ -126,7 +126,11 @@ public class UpdateMediaWorkflowTriggerModeRequest extends Request {
         } 
 
         /**
-         * MediaWorkflowId.
+         * <p>The ID of the media workflow that you want to update. To obtain the ID of the media workflow, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Workflows</strong> &gt; <strong>Workflow Settings</strong> in the left-side navigation pane.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e00732b977da427d9177a4dee646****</p>
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);
@@ -171,7 +175,15 @@ public class UpdateMediaWorkflowTriggerModeRequest extends Request {
         }
 
         /**
-         * TriggerMode.
+         * <p>The trigger mode of the media workflow. Valid values:</p>
+         * <ul>
+         * <li><strong>OssAutoTrigger</strong>: automatically triggers the media workflow.</li>
+         * <li><strong>NotInAuto</strong>: does not automatically trigger the media workflow.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotInAuto</p>
          */
         public Builder triggerMode(String triggerMode) {
             this.putQueryParameter("TriggerMode", triggerMode);

@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkInterfaceAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworkInterfaceAttributeRequest</p>
  */
 public class DescribeNetworkInterfaceAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Attribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Attribute")
     private String attribute;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeNetworkInterfaceAttributeRequest(Builder builder) {
         super(builder);
@@ -135,7 +140,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -148,7 +153,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -177,7 +182,13 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The attributes of the ENI.
+         * <p>The attribute of the ENI. Valid values:</p>
+         * <p>attachment: member ENI attachment information of the trunk ENI. This value is in invitational preview and is not publicly available.</p>
+         * <p>connectionTrackingConfiguration: connection tracking configuration.</p>
+         * <p>Default value:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attachment</p>
          */
         public Builder attribute(String attribute) {
             this.putQueryParameter("Attribute", attribute);
@@ -186,7 +197,11 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp67acfmxazb4p****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -213,7 +228,11 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,9 +259,11 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -255,11 +276,17 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkInterfaceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfaceAttributeRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -294,7 +321,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is unavailable.
+             * <blockquote>
+             * <p> This parameter is unavailable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +334,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * > This parameter is unavailable.
+             * <blockquote>
+             * <p> This parameter is unavailable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

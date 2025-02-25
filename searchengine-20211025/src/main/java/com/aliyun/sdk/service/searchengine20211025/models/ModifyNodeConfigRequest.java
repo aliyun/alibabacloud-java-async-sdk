@@ -1,58 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNodeConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyNodeConfigRequest</p>
  */
 public class ModifyNodeConfigRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("active")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("active")
     private Boolean active;
 
-    @Body
-    @NameInMap("dataDuplicateNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataDuplicateNumber")
     private Integer dataDuplicateNumber;
 
-    @Body
-    @NameInMap("dataFragmentNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataFragmentNumber")
     private Integer dataFragmentNumber;
 
-    @Body
-    @NameInMap("minServicePercent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("flowRatio")
+    private Integer flowRatio;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("minServicePercent")
     private Integer minServicePercent;
 
-    @Body
-    @NameInMap("published")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("published")
     private Boolean published;
 
-    @Query
-    @NameInMap("clusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Query
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ModifyNodeConfigRequest(Builder builder) {
@@ -61,6 +70,7 @@ public class ModifyNodeConfigRequest extends Request {
         this.active = builder.active;
         this.dataDuplicateNumber = builder.dataDuplicateNumber;
         this.dataFragmentNumber = builder.dataFragmentNumber;
+        this.flowRatio = builder.flowRatio;
         this.minServicePercent = builder.minServicePercent;
         this.published = builder.published;
         this.clusterName = builder.clusterName;
@@ -111,6 +121,13 @@ public class ModifyNodeConfigRequest extends Request {
     }
 
     /**
+     * @return flowRatio
+     */
+    public Integer getFlowRatio() {
+        return this.flowRatio;
+    }
+
+    /**
      * @return minServicePercent
      */
     public Integer getMinServicePercent() {
@@ -157,6 +174,7 @@ public class ModifyNodeConfigRequest extends Request {
         private Boolean active; 
         private Integer dataDuplicateNumber; 
         private Integer dataFragmentNumber; 
+        private Integer flowRatio; 
         private Integer minServicePercent; 
         private Boolean published; 
         private String clusterName; 
@@ -174,6 +192,7 @@ public class ModifyNodeConfigRequest extends Request {
             this.active = request.active;
             this.dataDuplicateNumber = request.dataDuplicateNumber;
             this.dataFragmentNumber = request.dataFragmentNumber;
+            this.flowRatio = request.flowRatio;
             this.minServicePercent = request.minServicePercent;
             this.published = request.published;
             this.clusterName = request.clusterName;
@@ -183,7 +202,11 @@ public class ModifyNodeConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42p5oi202</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -192,7 +215,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * active.
+         * <p>Specifies whether to enable the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder active(Boolean active) {
             this.putBodyParameter("active", active);
@@ -201,7 +227,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * dataDuplicateNumber.
+         * <p>The number of data replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataDuplicateNumber(Integer dataDuplicateNumber) {
             this.putBodyParameter("dataDuplicateNumber", dataDuplicateNumber);
@@ -210,7 +239,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * dataFragmentNumber.
+         * <p>The number of data shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataFragmentNumber(Integer dataFragmentNumber) {
             this.putBodyParameter("dataFragmentNumber", dataFragmentNumber);
@@ -219,7 +251,22 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * minServicePercent.
+         * <p>The traffic percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-100</p>
+         */
+        public Builder flowRatio(Integer flowRatio) {
+            this.putBodyParameter("flowRatio", flowRatio);
+            this.flowRatio = flowRatio;
+            return this;
+        }
+
+        /**
+         * <p>The minimum service ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minServicePercent(Integer minServicePercent) {
             this.putBodyParameter("minServicePercent", minServicePercent);
@@ -228,7 +275,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * published.
+         * <p>Specifies whether to mount the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder published(Boolean published) {
             this.putBodyParameter("published", published);
@@ -237,7 +287,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_sh_domain_2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("clusterName", clusterName);
@@ -246,7 +299,10 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The parameters in the request body.
+         * <p>The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_0704</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("dataSourceName", dataSourceName);
@@ -255,7 +311,11 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the configuration before the modification.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2iv9a401_qrs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -264,7 +324,18 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The original name of the node.
+         * <p>The type of the algorithm. Valid values:</p>
+         * <ul>
+         * <li>pop: a popularity model.</li>
+         * <li>cp: a category prediction model.</li>
+         * <li>hot: a top search model.</li>
+         * <li>hint: a hint model.</li>
+         * <li>suggest: a drop-down suggestions model.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePatchBaselineRequest} extends {@link RequestModel}
  *
  * <p>CreatePatchBaselineRequest</p>
  */
 public class CreatePatchBaselineRequest extends Request {
-    @Query
-    @NameInMap("ApprovalRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String approvalRules;
 
-    @Query
-    @NameInMap("ApprovedPatches")
-    private java.util.List < String > approvedPatches;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovedPatches")
+    private java.util.List<String> approvedPatches;
 
-    @Query
-    @NameInMap("ApprovedPatchesEnableNonSecurity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovedPatchesEnableNonSecurity")
     private Boolean approvedPatchesEnableNonSecurity;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OperationSystem")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationSystem")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationSystem;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RejectedPatches")
-    private java.util.List < String > rejectedPatches;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RejectedPatches")
+    private java.util.List<String> rejectedPatches;
 
-    @Query
-    @NameInMap("RejectedPatchesAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RejectedPatchesAction")
     private String rejectedPatchesAction;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Sources")
-    private java.util.List < String > sources;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sources")
+    private java.util.List<String> sources;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private CreatePatchBaselineRequest(Builder builder) {
         super(builder);
@@ -107,7 +112,7 @@ public class CreatePatchBaselineRequest extends Request {
     /**
      * @return approvedPatches
      */
-    public java.util.List < String > getApprovedPatches() {
+    public java.util.List<String> getApprovedPatches() {
         return this.approvedPatches;
     }
 
@@ -156,7 +161,7 @@ public class CreatePatchBaselineRequest extends Request {
     /**
      * @return rejectedPatches
      */
-    public java.util.List < String > getRejectedPatches() {
+    public java.util.List<String> getRejectedPatches() {
         return this.rejectedPatches;
     }
 
@@ -177,31 +182,31 @@ public class CreatePatchBaselineRequest extends Request {
     /**
      * @return sources
      */
-    public java.util.List < String > getSources() {
+    public java.util.List<String> getSources() {
         return this.sources;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreatePatchBaselineRequest, Builder> {
         private String approvalRules; 
-        private java.util.List < String > approvedPatches; 
+        private java.util.List<String> approvedPatches; 
         private Boolean approvedPatchesEnableNonSecurity; 
         private String clientToken; 
         private String description; 
         private String name; 
         private String operationSystem; 
         private String regionId; 
-        private java.util.List < String > rejectedPatches; 
+        private java.util.List<String> rejectedPatches; 
         private String rejectedPatchesAction; 
         private String resourceGroupId; 
-        private java.util.List < String > sources; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<String> sources; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -225,7 +230,11 @@ public class CreatePatchBaselineRequest extends Request {
         } 
 
         /**
-         * The rules of scanning and installing patches for the specified operating system.
+         * <p>The rules of scanning and installing patches for the specified operating system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</p>
          */
         public Builder approvalRules(String approvalRules) {
             this.putQueryParameter("ApprovalRules", approvalRules);
@@ -234,9 +243,9 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The approved patches.
+         * <p>The approved patches.</p>
          */
-        public Builder approvedPatches(java.util.List < String > approvedPatches) {
+        public Builder approvedPatches(java.util.List<String> approvedPatches) {
             String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
             this.putQueryParameter("ApprovedPatches", approvedPatchesShrink);
             this.approvedPatches = approvedPatches;
@@ -244,7 +253,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * Specifies whether the approved patch involves updates other than security-related updates.
+         * <p>Specifies whether the approved patch involves updates other than security-related updates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
             this.putQueryParameter("ApprovedPatchesEnableNonSecurity", approvedPatchesEnableNonSecurity);
@@ -253,7 +265,12 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -262,7 +279,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The description of the patch baseline.
+         * <p>The description of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PatchBaseline</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -271,7 +291,11 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The name of the patch baseline.
+         * <p>The name of the patch baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPatchBaseline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -280,17 +304,21 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Ubuntu</li>
+         * <li>CentOS</li>
+         * <li>Debian</li>
+         * <li>AliyunLinux</li>
+         * <li>RedhatEnterpriseLinux</li>
+         * <li>Anolis</li>
+         * <li>AlmaLinux</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Windows
-         * *   Ubuntu
-         * *   CentOS
-         * *   Debian
-         * *   AliyunLinux
-         * *   RedhatEnterpriseLinux
-         * *   Anolis
-         * *   AlmaLinux
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder operationSystem(String operationSystem) {
             this.putQueryParameter("OperationSystem", operationSystem);
@@ -299,7 +327,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to create a patch baseline.
+         * <p>The ID of the region in which you want to create a patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -308,9 +339,9 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The rejected patches.
+         * <p>The rejected patches.</p>
          */
-        public Builder rejectedPatches(java.util.List < String > rejectedPatches) {
+        public Builder rejectedPatches(java.util.List<String> rejectedPatches) {
             String rejectedPatchesShrink = shrink(rejectedPatches, "RejectedPatches", "json");
             this.putQueryParameter("RejectedPatches", rejectedPatchesShrink);
             this.rejectedPatches = rejectedPatches;
@@ -318,7 +349,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The action of the rejected patch.
+         * <p>The action of the rejected patch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW_AS_DEPENDENCY</p>
          */
         public Builder rejectedPatchesAction(String rejectedPatchesAction) {
             this.putQueryParameter("RejectedPatchesAction", rejectedPatchesAction);
@@ -327,7 +361,10 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -336,9 +373,9 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The patch source configurations.
+         * <p>The patch source configurations.</p>
          */
-        public Builder sources(java.util.List < String > sources) {
+        public Builder sources(java.util.List<String> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
             this.putQueryParameter("Sources", sourcesShrink);
             this.sources = sources;
@@ -346,9 +383,9 @@ public class CreatePatchBaselineRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -362,11 +399,17 @@ public class CreatePatchBaselineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePatchBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePatchBaselineRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -401,7 +444,10 @@ public class CreatePatchBaselineRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -409,7 +455,10 @@ public class CreatePatchBaselineRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

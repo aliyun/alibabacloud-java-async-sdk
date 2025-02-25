@@ -1,156 +1,186 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @NameInMap("AccumulatedRunningTimeInMs")
+    @com.aliyun.core.annotation.NameInMap("AccumulatedRunningTimeInMs")
     private Long accumulatedRunningTimeInMs;
 
-    @NameInMap("CloudDisks")
-    private java.util.List < CloudDisks> cloudDisks;
+    @com.aliyun.core.annotation.NameInMap("Affinity")
+    private Affinity affinity;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("CloudDisks")
+    private java.util.List<CloudDisks> cloudDisks;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datasets")
-    private java.util.List < Datasets> datasets;
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
 
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.NameInMap("Datasets")
+    private java.util.List<Datasets> datasets;
+
+    @com.aliyun.core.annotation.NameInMap("Driver")
+    private String driver;
+
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @NameInMap("EnvironmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    @com.aliyun.core.annotation.NameInMap("EnvironmentVariables")
+    private java.util.Map<String, String> environmentVariables;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("IdleInstanceCuller")
+    @com.aliyun.core.annotation.NameInMap("IdleInstanceCuller")
     private IdleInstanceCuller idleInstanceCuller;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageAuth")
+    private String imageAuth;
+
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InstanceShutdownTimer")
+    @com.aliyun.core.annotation.NameInMap("InstanceShutdownTimer")
     private InstanceShutdownTimer instanceShutdownTimer;
 
-    @NameInMap("InstanceSnapshotList")
-    private java.util.List < InstanceSnapshotList> instanceSnapshotList;
+    @com.aliyun.core.annotation.NameInMap("InstanceSnapshotList")
+    private java.util.List<InstanceSnapshotList> instanceSnapshotList;
 
-    @NameInMap("InstanceUrl")
+    @com.aliyun.core.annotation.NameInMap("InstanceUrl")
     private String instanceUrl;
 
-    @NameInMap("JupyterlabUrl")
+    @com.aliyun.core.annotation.NameInMap("JupyterlabUrl")
     private String jupyterlabUrl;
 
-    @NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
 
-    @NameInMap("LatestSnapshot")
+    @com.aliyun.core.annotation.NameInMap("LatestSnapshot")
     private LatestSnapshot latestSnapshot;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("NodeErrorRecovery")
+    private NodeErrorRecovery nodeErrorRecovery;
+
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("ProxyPath")
+    private String proxyPath;
+
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestedResource")
+    @com.aliyun.core.annotation.NameInMap("RequestedResource")
     private RequestedResource requestedResource;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TerminalUrl")
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.NameInMap("TerminalUrl")
     private String terminalUrl;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @NameInMap("WebIDEUrl")
+    @com.aliyun.core.annotation.NameInMap("WebIDEUrl")
     private String webIDEUrl;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
-    @NameInMap("WorkspaceSource")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceSource")
     private String workspaceSource;
 
     private GetInstanceResponseBody(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
         this.accumulatedRunningTimeInMs = builder.accumulatedRunningTimeInMs;
+        this.affinity = builder.affinity;
         this.cloudDisks = builder.cloudDisks;
         this.code = builder.code;
+        this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
+        this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
         this.environmentVariables = builder.environmentVariables;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.httpStatusCode = builder.httpStatusCode;
         this.idleInstanceCuller = builder.idleInstanceCuller;
+        this.imageAuth = builder.imageAuth;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
         this.imageUrl = builder.imageUrl;
@@ -163,8 +193,10 @@ public class GetInstanceResponseBody extends TeaModel {
         this.labels = builder.labels;
         this.latestSnapshot = builder.latestSnapshot;
         this.message = builder.message;
+        this.nodeErrorRecovery = builder.nodeErrorRecovery;
         this.paymentType = builder.paymentType;
         this.priority = builder.priority;
+        this.proxyPath = builder.proxyPath;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
         this.requestId = builder.requestId;
@@ -173,6 +205,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.resourceName = builder.resourceName;
         this.status = builder.status;
         this.success = builder.success;
+        this.tags = builder.tags;
         this.terminalUrl = builder.terminalUrl;
         this.userId = builder.userId;
         this.userName = builder.userName;
@@ -213,9 +246,16 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return affinity
+     */
+    public Affinity getAffinity() {
+        return this.affinity;
+    }
+
+    /**
      * @return cloudDisks
      */
-    public java.util.List < CloudDisks> getCloudDisks() {
+    public java.util.List<CloudDisks> getCloudDisks() {
         return this.cloudDisks;
     }
 
@@ -227,10 +267,24 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
+    }
+
+    /**
      * @return datasets
      */
-    public java.util.List < Datasets> getDatasets() {
+    public java.util.List<Datasets> getDatasets() {
         return this.datasets;
+    }
+
+    /**
+     * @return driver
+     */
+    public String getDriver() {
+        return this.driver;
     }
 
     /**
@@ -243,7 +297,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -273,6 +327,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public IdleInstanceCuller getIdleInstanceCuller() {
         return this.idleInstanceCuller;
+    }
+
+    /**
+     * @return imageAuth
+     */
+    public String getImageAuth() {
+        return this.imageAuth;
     }
 
     /**
@@ -320,7 +381,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return instanceSnapshotList
      */
-    public java.util.List < InstanceSnapshotList> getInstanceSnapshotList() {
+    public java.util.List<InstanceSnapshotList> getInstanceSnapshotList() {
         return this.instanceSnapshotList;
     }
 
@@ -341,7 +402,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -360,6 +421,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return nodeErrorRecovery
+     */
+    public NodeErrorRecovery getNodeErrorRecovery() {
+        return this.nodeErrorRecovery;
+    }
+
+    /**
      * @return paymentType
      */
     public String getPaymentType() {
@@ -371,6 +439,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public Long getPriority() {
         return this.priority;
+    }
+
+    /**
+     * @return proxyPath
+     */
+    public String getProxyPath() {
+        return this.proxyPath;
     }
 
     /**
@@ -427,6 +502,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -489,29 +571,35 @@ public class GetInstanceResponseBody extends TeaModel {
         private String acceleratorType; 
         private String accessibility; 
         private Long accumulatedRunningTimeInMs; 
-        private java.util.List < CloudDisks> cloudDisks; 
+        private Affinity affinity; 
+        private java.util.List<CloudDisks> cloudDisks; 
         private String code; 
-        private java.util.List < Datasets> datasets; 
+        private CredentialConfig credentialConfig; 
+        private java.util.List<Datasets> datasets; 
+        private String driver; 
         private String ecsSpec; 
-        private java.util.Map < String, String > environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private Integer httpStatusCode; 
         private IdleInstanceCuller idleInstanceCuller; 
+        private String imageAuth; 
         private String imageId; 
         private String imageName; 
         private String imageUrl; 
         private String instanceId; 
         private String instanceName; 
         private InstanceShutdownTimer instanceShutdownTimer; 
-        private java.util.List < InstanceSnapshotList> instanceSnapshotList; 
+        private java.util.List<InstanceSnapshotList> instanceSnapshotList; 
         private String instanceUrl; 
         private String jupyterlabUrl; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private LatestSnapshot latestSnapshot; 
         private String message; 
+        private NodeErrorRecovery nodeErrorRecovery; 
         private String paymentType; 
         private Long priority; 
+        private String proxyPath; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
@@ -520,6 +608,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String resourceName; 
         private String status; 
         private Boolean success; 
+        private java.util.List<Tags> tags; 
         private String terminalUrl; 
         private String userId; 
         private String userName; 
@@ -554,9 +643,17 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * Affinity.
+         */
+        public Builder affinity(Affinity affinity) {
+            this.affinity = affinity;
+            return this;
+        }
+
+        /**
          * CloudDisks.
          */
-        public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
+        public Builder cloudDisks(java.util.List<CloudDisks> cloudDisks) {
             this.cloudDisks = cloudDisks;
             return this;
         }
@@ -570,10 +667,26 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.credentialConfig = credentialConfig;
+            return this;
+        }
+
+        /**
          * Datasets.
          */
-        public Builder datasets(java.util.List < Datasets> datasets) {
+        public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
+            return this;
+        }
+
+        /**
+         * Driver.
+         */
+        public Builder driver(String driver) {
+            this.driver = driver;
             return this;
         }
 
@@ -588,7 +701,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * EnvironmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
@@ -622,6 +735,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder idleInstanceCuller(IdleInstanceCuller idleInstanceCuller) {
             this.idleInstanceCuller = idleInstanceCuller;
+            return this;
+        }
+
+        /**
+         * ImageAuth.
+         */
+        public Builder imageAuth(String imageAuth) {
+            this.imageAuth = imageAuth;
             return this;
         }
 
@@ -676,7 +797,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * InstanceSnapshotList.
          */
-        public Builder instanceSnapshotList(java.util.List < InstanceSnapshotList> instanceSnapshotList) {
+        public Builder instanceSnapshotList(java.util.List<InstanceSnapshotList> instanceSnapshotList) {
             this.instanceSnapshotList = instanceSnapshotList;
             return this;
         }
@@ -690,7 +811,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Jupyterlab Url。
+         * <p>Jupyterlab Url。</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
          */
         public Builder jupyterlabUrl(String jupyterlabUrl) {
             this.jupyterlabUrl = jupyterlabUrl;
@@ -700,7 +824,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }
@@ -722,6 +846,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * NodeErrorRecovery.
+         */
+        public Builder nodeErrorRecovery(NodeErrorRecovery nodeErrorRecovery) {
+            this.nodeErrorRecovery = nodeErrorRecovery;
+            return this;
+        }
+
+        /**
          * PaymentType.
          */
         public Builder paymentType(String paymentType) {
@@ -734,6 +866,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder priority(Long priority) {
             this.priority = priority;
+            return this;
+        }
+
+        /**
+         * ProxyPath.
+         */
+        public Builder proxyPath(String proxyPath) {
+            this.proxyPath = proxyPath;
             return this;
         }
 
@@ -802,6 +942,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * TerminalUrl.
          */
         public Builder terminalUrl(String terminalUrl) {
@@ -834,7 +982,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Web IDE url。
+         * <p>Web IDE url。</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
          */
         public Builder webIDEUrl(String webIDEUrl) {
             this.webIDEUrl = webIDEUrl;
@@ -871,17 +1022,117 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class CPU extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        private CPU(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CPU create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public CPU build() {
+                return new CPU(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class Affinity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CPU")
+        private CPU CPU;
+
+        private Affinity(Builder builder) {
+            this.CPU = builder.CPU;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Affinity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return CPU
+         */
+        public CPU getCPU() {
+            return this.CPU;
+        }
+
+        public static final class Builder {
+            private CPU CPU; 
+
+            /**
+             * CPU.
+             */
+            public Builder CPU(CPU CPU) {
+                this.CPU = CPU;
+                return this;
+            }
+
+            public Affinity build() {
+                return new Affinity(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class CloudDisks extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
         private CloudDisks(Builder builder) {
@@ -972,16 +1223,38 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Datasets extends TeaModel {
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountAccess")
+        private String mountAccess;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("OptionType")
+        private String optionType;
+
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private String options;
+
+        @com.aliyun.core.annotation.NameInMap("Uri")
+        private String uri;
 
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
+            this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
+            this.optionType = builder.optionType;
+            this.options = builder.options;
+            this.uri = builder.uri;
         }
 
         public static Builder builder() {
@@ -1000,21 +1273,61 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return mountAccess
+         */
+        public String getMountAccess() {
+            return this.mountAccess;
+        }
+
+        /**
          * @return mountPath
          */
         public String getMountPath() {
             return this.mountPath;
         }
 
+        /**
+         * @return optionType
+         */
+        public String getOptionType() {
+            return this.optionType;
+        }
+
+        /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
+        /**
+         * @return uri
+         */
+        public String getUri() {
+            return this.uri;
+        }
+
         public static final class Builder {
             private String datasetId; 
+            private String mountAccess; 
             private String mountPath; 
+            private String optionType; 
+            private String options; 
+            private String uri; 
 
             /**
              * DatasetId.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
+             * MountAccess.
+             */
+            public Builder mountAccess(String mountAccess) {
+                this.mountAccess = mountAccess;
                 return this;
             }
 
@@ -1026,6 +1339,30 @@ public class GetInstanceResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * OptionType.
+             */
+            public Builder optionType(String optionType) {
+                this.optionType = optionType;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
+                return this;
+            }
+
+            /**
+             * Uri.
+             */
+            public Builder uri(String uri) {
+                this.uri = uri;
+                return this;
+            }
+
             public Datasets build() {
                 return new Datasets(this);
             } 
@@ -1033,20 +1370,26 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class IdleInstanceCuller extends TeaModel {
-        @NameInMap("CpuPercentThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuPercentThreshold")
         private Integer cpuPercentThreshold;
 
-        @NameInMap("GpuPercentThreshold")
+        @com.aliyun.core.annotation.NameInMap("GpuPercentThreshold")
         private Integer gpuPercentThreshold;
 
-        @NameInMap("IdleTimeInMinutes")
+        @com.aliyun.core.annotation.NameInMap("IdleTimeInMinutes")
         private Integer idleTimeInMinutes;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxIdleTimeInMinutes")
+        @com.aliyun.core.annotation.NameInMap("MaxIdleTimeInMinutes")
         private Integer maxIdleTimeInMinutes;
 
         private IdleInstanceCuller(Builder builder) {
@@ -1154,20 +1497,26 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class InstanceShutdownTimer extends TeaModel {
-        @NameInMap("DueTime")
+        @com.aliyun.core.annotation.NameInMap("DueTime")
         private String dueTime;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RemainingTimeInMs")
+        @com.aliyun.core.annotation.NameInMap("RemainingTimeInMs")
         private Long remainingTimeInMs;
 
         private InstanceShutdownTimer(Builder builder) {
@@ -1275,32 +1624,38 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class InstanceSnapshotList extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
-        @NameInMap("ReasonMessage")
+        @com.aliyun.core.annotation.NameInMap("ReasonMessage")
         private String reasonMessage;
 
-        @NameInMap("RepositoryUrl")
+        @com.aliyun.core.annotation.NameInMap("RepositoryUrl")
         private String repositoryUrl;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceSnapshotList(Builder builder) {
@@ -1398,7 +1753,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 快照创建时间
+             * <p>快照创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1406,7 +1764,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 快照修改时间
+             * <p>快照修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1414,7 +1775,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Id
+             * <p>镜像Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-05cefd0be2exxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1422,7 +1786,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像名称
+             * <p>镜像名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1430,7 +1797,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Url
+             * <p>镜像Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1438,7 +1808,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误代码
+             * <p>实例快照错误代码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1446,7 +1819,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误消息
+             * <p>实例快照错误消息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImagePullBackOff</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -1454,7 +1830,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库Url
+             * <p>镜像仓库Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
@@ -1462,7 +1841,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照状态
+             * <p>实例快照状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pushing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1476,11 +1858,17 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -1537,32 +1925,38 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class LatestSnapshot extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
-        @NameInMap("ReasonMessage")
+        @com.aliyun.core.annotation.NameInMap("ReasonMessage")
         private String reasonMessage;
 
-        @NameInMap("RepositoryUrl")
+        @com.aliyun.core.annotation.NameInMap("RepositoryUrl")
         private String repositoryUrl;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private LatestSnapshot(Builder builder) {
@@ -1660,7 +2054,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 快照创建时间
+             * <p>快照创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1668,7 +2065,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 快照修改时间
+             * <p>快照修改时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-12T14:36:01Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1676,7 +2076,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Id
+             * <p>镜像Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-05cefd0be2exxxx</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1684,7 +2087,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像名称
+             * <p>镜像名称</p>
+             * 
+             * <strong>example:</strong>
+             * <p>py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1692,7 +2098,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像Url
+             * <p>镜像Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1700,7 +2109,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误代码
+             * <p>实例快照错误代码</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Internal Error</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1708,7 +2120,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误消息
+             * <p>实例快照错误消息</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImagePullBackOff</p>
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -1716,7 +2131,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像仓库Url
+             * <p>镜像仓库Url</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
@@ -1724,7 +2142,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照状态
+             * <p>实例快照状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pushing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1738,20 +2159,113 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class NodeErrorRecovery extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoSwitchCountdownSeconds")
+        private Long autoSwitchCountdownSeconds;
+
+        @com.aliyun.core.annotation.NameInMap("enableAutoSwitchOnNodeError")
+        private Boolean enableAutoSwitchOnNodeError;
+
+        @com.aliyun.core.annotation.NameInMap("hasNodeError")
+        private Boolean hasNodeError;
+
+        private NodeErrorRecovery(Builder builder) {
+            this.autoSwitchCountdownSeconds = builder.autoSwitchCountdownSeconds;
+            this.enableAutoSwitchOnNodeError = builder.enableAutoSwitchOnNodeError;
+            this.hasNodeError = builder.hasNodeError;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeErrorRecovery create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoSwitchCountdownSeconds
+         */
+        public Long getAutoSwitchCountdownSeconds() {
+            return this.autoSwitchCountdownSeconds;
+        }
+
+        /**
+         * @return enableAutoSwitchOnNodeError
+         */
+        public Boolean getEnableAutoSwitchOnNodeError() {
+            return this.enableAutoSwitchOnNodeError;
+        }
+
+        /**
+         * @return hasNodeError
+         */
+        public Boolean getHasNodeError() {
+            return this.hasNodeError;
+        }
+
+        public static final class Builder {
+            private Long autoSwitchCountdownSeconds; 
+            private Boolean enableAutoSwitchOnNodeError; 
+            private Boolean hasNodeError; 
+
+            /**
+             * autoSwitchCountdownSeconds.
+             */
+            public Builder autoSwitchCountdownSeconds(Long autoSwitchCountdownSeconds) {
+                this.autoSwitchCountdownSeconds = autoSwitchCountdownSeconds;
+                return this;
+            }
+
+            /**
+             * enableAutoSwitchOnNodeError.
+             */
+            public Builder enableAutoSwitchOnNodeError(Boolean enableAutoSwitchOnNodeError) {
+                this.enableAutoSwitchOnNodeError = enableAutoSwitchOnNodeError;
+                return this;
+            }
+
+            /**
+             * hasNodeError.
+             */
+            public Builder hasNodeError(Boolean hasNodeError) {
+                this.hasNodeError = hasNodeError;
+                return this;
+            }
+
+            public NodeErrorRecovery build() {
+                return new NodeErrorRecovery(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class RequestedResource extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
-        @NameInMap("GPU")
+        @com.aliyun.core.annotation.NameInMap("GPU")
         private String GPU;
 
-        @NameInMap("GPUType")
+        @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("SharedMemory")
+        @com.aliyun.core.annotation.NameInMap("SharedMemory")
         private String sharedMemory;
 
         private RequestedResource(Builder builder) {
@@ -1859,25 +2373,102 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class UserVpc extends TeaModel {
-        @NameInMap("DefaultRoute")
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
-        @NameInMap("ExtendedCIDRs")
-        private java.util.List < String > extendedCIDRs;
+        @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
+        private java.util.List<String> extendedCIDRs;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("ForwardInfos")
+        private java.util.List<ForwardInfoResponse> forwardInfos;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private UserVpc(Builder builder) {
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
+            this.forwardInfos = builder.forwardInfos;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -1901,8 +2492,15 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return extendedCIDRs
          */
-        public java.util.List < String > getExtendedCIDRs() {
+        public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
+        }
+
+        /**
+         * @return forwardInfos
+         */
+        public java.util.List<ForwardInfoResponse> getForwardInfos() {
+            return this.forwardInfos;
         }
 
         /**
@@ -1928,7 +2526,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String defaultRoute; 
-            private java.util.List < String > extendedCIDRs; 
+            private java.util.List<String> extendedCIDRs; 
+            private java.util.List<ForwardInfoResponse> forwardInfos; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -1944,8 +2543,16 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * ExtendedCIDRs.
              */
-            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+            public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * ForwardInfos.
+             */
+            public Builder forwardInfos(java.util.List<ForwardInfoResponse> forwardInfos) {
+                this.forwardInfos = forwardInfos;
                 return this;
             }
 
@@ -1966,7 +2573,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Vpc Id。
+             * <p>Vpc Id。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

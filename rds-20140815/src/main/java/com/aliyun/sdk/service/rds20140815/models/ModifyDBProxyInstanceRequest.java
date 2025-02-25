@@ -1,59 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBProxyInstanceRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBProxyInstanceRequest</p>
  */
 public class ModifyDBProxyInstanceRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("DBProxyInstanceNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyInstanceNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBProxyInstanceNum;
 
-    @Query
-    @NameInMap("DBProxyInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBProxyInstanceType;
 
-    @Query
-    @NameInMap("EffectiveSpecificTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyNodes")
+    private java.util.List<DBProxyNodes> DBProxyNodes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveSpecificTime")
     private String effectiveSpecificTime;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrateAZ")
+    private java.util.List<MigrateAZ> migrateAZ;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private String vSwitchIds;
 
     private ModifyDBProxyInstanceRequest(Builder builder) {
         super(builder);
@@ -61,12 +78,15 @@ public class ModifyDBProxyInstanceRequest extends Request {
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceNum = builder.DBProxyInstanceNum;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
+        this.DBProxyNodes = builder.DBProxyNodes;
         this.effectiveSpecificTime = builder.effectiveSpecificTime;
         this.effectiveTime = builder.effectiveTime;
+        this.migrateAZ = builder.migrateAZ;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.vSwitchIds = builder.vSwitchIds;
     }
 
     public static Builder builder() {
@@ -111,6 +131,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
     }
 
     /**
+     * @return DBProxyNodes
+     */
+    public java.util.List<DBProxyNodes> getDBProxyNodes() {
+        return this.DBProxyNodes;
+    }
+
+    /**
      * @return effectiveSpecificTime
      */
     public String getEffectiveSpecificTime() {
@@ -122,6 +149,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
      */
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    /**
+     * @return migrateAZ
+     */
+    public java.util.List<MigrateAZ> getMigrateAZ() {
+        return this.migrateAZ;
     }
 
     /**
@@ -152,17 +186,27 @@ public class ModifyDBProxyInstanceRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return vSwitchIds
+     */
+    public String getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBProxyInstanceRequest, Builder> {
         private String DBInstanceId; 
         private String DBProxyEngineType; 
         private String DBProxyInstanceNum; 
         private String DBProxyInstanceType; 
+        private java.util.List<DBProxyNodes> DBProxyNodes; 
         private String effectiveSpecificTime; 
         private String effectiveTime; 
+        private java.util.List<MigrateAZ> migrateAZ; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String vSwitchIds; 
 
         private Builder() {
             super();
@@ -174,16 +218,23 @@ public class ModifyDBProxyInstanceRequest extends Request {
             this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceNum = request.DBProxyInstanceNum;
             this.DBProxyInstanceType = request.DBProxyInstanceType;
+            this.DBProxyNodes = request.DBProxyNodes;
             this.effectiveSpecificTime = request.effectiveSpecificTime;
             this.effectiveTime = request.effectiveTime;
+            this.migrateAZ = request.migrateAZ;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchIds = request.vSwitchIds;
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n3a****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,7 +243,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * An internal parameter. You do not need to specify this parameter.
+         * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -201,10 +255,14 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * The number of proxy instances that are enabled. If the value of this parameter is 0, the database proxy feature is disabled for the instance. Valid values: **1** to **60**.
-         * <p>
+         * <p>The number of database proxies. If you set this parameter to 0, the database proxy feature is disabled for the instance. Valid values: <strong>1</strong> to <strong>16</strong>.</p>
+         * <blockquote>
+         * <p> The capability of the database proxy feature to process requests increases with the number of database proxies that are enabled. You can monitor the load on the instance and specify an appropriate number of database proxies based on the load monitoring data.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The capability of the database proxy to process requests increases with the number of proxy instances that are enabled. You can monitor the load on the instance and specify an appropriate number of proxy instances based on the load monitoring data.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DBProxyInstanceNum(String DBProxyInstanceNum) {
             this.putQueryParameter("DBProxyInstanceNum", DBProxyInstanceNum);
@@ -213,7 +271,15 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * The type of database proxy that is enabled for the instance. Set the value to **DedicatedProxy**.
+         * <p>The database proxy type. Valid values:</p>
+         * <ul>
+         * <li><strong>common</strong>: general-purpose database proxy</li>
+         * <li><strong>exclusive</strong> (default): dedicated database proxy</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DedicatedProxy</p>
          */
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.putQueryParameter("DBProxyInstanceType", DBProxyInstanceType);
@@ -222,10 +288,26 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * The point in time at which you want to apply the new database proxy settings. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>List of proxy nodes.</p>
+         * <blockquote>
+         * <p>This parameter must be passed when the current proxy instance is deployed in multiple availability zones.</p>
+         * </blockquote>
+         */
+        public Builder DBProxyNodes(java.util.List<DBProxyNodes> DBProxyNodes) {
+            String DBProxyNodesShrink = shrink(DBProxyNodes, "DBProxyNodes", "json");
+            this.putQueryParameter("DBProxyNodes", DBProxyNodesShrink);
+            this.DBProxyNodes = DBProxyNodes;
+            return this;
+        }
+
+        /**
+         * <p>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> If the <strong>EffectiveTime</strong> parameter is set to <strong>SpecificTime</strong>, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  If you set the **EffectiveTime** parameter to **SpecificTime**, you must specify the EffectiveSpecificTime parameter.
+         * <strong>example:</strong>
+         * <p>2019-07-10T13:15:12Z</p>
          */
         public Builder effectiveSpecificTime(String effectiveSpecificTime) {
             this.putQueryParameter("EffectiveSpecificTime", effectiveSpecificTime);
@@ -234,18 +316,33 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * The time when you want to apply the new database proxy settings. Valid values:
-         * <p>
+         * <p>The effective time. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong>: The effective time is immediate.</li>
+         * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+         * <li><strong>SpecificTime</strong>: The effective time is a specified point in time.</li>
+         * </ul>
+         * <p>Default value: <strong>MaintainTime</strong>.</p>
          * 
-         * *   **Immediate**: ApsaraDB RDS immediately applies the new settings.
-         * *   **MaintainTime**: ApsaraDB RDS applies the new settings during the maintenance window that you specified. For more information, see [Modify the maintenance window](~~26249~~).
-         * *   **SpecificTime**: ApsaraDB RDS applies the new settings at a specified point in time.
-         * 
-         * Default value: **MaintainTime**.
+         * <strong>example:</strong>
+         * <p>MaintainTime</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
             this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * <p>The list of available zones for migration agents.</p>
+         * <blockquote>
+         * <p>Currently, only RDS MySQL cloud disk version agent instance migration is supported.</p>
+         * </blockquote>
+         */
+        public Builder migrateAZ(java.util.List<MigrateAZ> migrateAZ) {
+            String migrateAZShrink = shrink(migrateAZ, "MigrateAZ", "json");
+            this.putQueryParameter("MigrateAZ", migrateAZShrink);
+            this.migrateAZ = migrateAZ;
             return this;
         }
 
@@ -259,7 +356,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -285,6 +385,21 @@ public class ModifyDBProxyInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The ID of the vSwitch in the destination zone. You can call the <a href="https://help.aliyun.com/document_detail/610431.html">DescribeVSwitches</a> operation to query existing vSwitches.</p>
+         * <blockquote>
+         * <p> Only database proxies for ApsaraDB RDS for MySQL instances that use cloud disks can be migrated to different zones.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2p****</p>
+         */
+        public Builder vSwitchIds(String vSwitchIds) {
+            this.putQueryParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+
         @Override
         public ModifyDBProxyInstanceRequest build() {
             return new ModifyDBProxyInstanceRequest(this);
@@ -292,4 +407,188 @@ public class ModifyDBProxyInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBProxyInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBProxyInstanceRequest</p>
+     */
+    public static class DBProxyNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cpuCores")
+        private String cpuCores;
+
+        @com.aliyun.core.annotation.NameInMap("nodeCounts")
+        private String nodeCounts;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private DBProxyNodes(Builder builder) {
+            this.cpuCores = builder.cpuCores;
+            this.nodeCounts = builder.nodeCounts;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBProxyNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuCores
+         */
+        public String getCpuCores() {
+            return this.cpuCores;
+        }
+
+        /**
+         * @return nodeCounts
+         */
+        public String getNodeCounts() {
+            return this.nodeCounts;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String cpuCores; 
+            private String nodeCounts; 
+            private String zoneId; 
+
+            /**
+             * <p>The number of cpu cores for the node, valid values: <strong>1</strong> to <strong>16</strong>.</p>
+             * <blockquote>
+             * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder cpuCores(String cpuCores) {
+                this.cpuCores = cpuCores;
+                return this;
+            }
+
+            /**
+             * <p>The number of proxy nodes in the availability zone, valid values: <strong>1</strong> to <strong>16</strong>.</p>
+             * <blockquote>
+             * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder nodeCounts(String nodeCounts) {
+                this.nodeCounts = nodeCounts;
+                return this;
+            }
+
+            /**
+             * <p>The id of the availability zone where the node is located.</p>
+             * <blockquote>
+             * <p>This parameter is required when selecting <strong>DBProxyNodes</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hagnzhou-c</p>
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public DBProxyNodes build() {
+                return new DBProxyNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyDBProxyInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBProxyInstanceRequest</p>
+     */
+    public static class MigrateAZ extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dbProxyEndpointId")
+        private String dbProxyEndpointId;
+
+        @com.aliyun.core.annotation.NameInMap("destVSwitchId")
+        private String destVSwitchId;
+
+        private MigrateAZ(Builder builder) {
+            this.dbProxyEndpointId = builder.dbProxyEndpointId;
+            this.destVSwitchId = builder.destVSwitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MigrateAZ create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dbProxyEndpointId
+         */
+        public String getDbProxyEndpointId() {
+            return this.dbProxyEndpointId;
+        }
+
+        /**
+         * @return destVSwitchId
+         */
+        public String getDestVSwitchId() {
+            return this.destVSwitchId;
+        }
+
+        public static final class Builder {
+            private String dbProxyEndpointId; 
+            private String destVSwitchId; 
+
+            /**
+             * <p>The proxy connection address ID. You can obtain it through the DescribeDBProxyEndpoint interface.</p>
+             * <blockquote>
+             * <p>This parameter is required when MigrateAZ is selected.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>yhw429********</p>
+             */
+            public Builder dbProxyEndpointId(String dbProxyEndpointId) {
+                this.dbProxyEndpointId = dbProxyEndpointId;
+                return this;
+            }
+
+            /**
+             * <p>The target VSwitchId corresponding to the proxy instance migration.</p>
+             * <blockquote>
+             * <p>This parameter is required when MigrateAZ is selected.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-sw0qq49d1m****</p>
+             */
+            public Builder destVSwitchId(String destVSwitchId) {
+                this.destVSwitchId = destVSwitchId;
+                return this;
+            }
+
+            public MigrateAZ build() {
+                return new MigrateAZ(this);
+            } 
+
+        } 
+
+    }
 }

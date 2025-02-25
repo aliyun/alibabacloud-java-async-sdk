@@ -1,69 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNodeSpecBatchRequest} extends {@link RequestModel}
  *
  * <p>ModifyNodeSpecBatchRequest</p>
  */
 public class ModifyNodeSpecBatchRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("BusinessInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("NodesInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodesInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodesInfo;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyNodeSpecBatchRequest(Builder builder) {
@@ -224,13 +229,15 @@ public class ModifyNodeSpecBatchRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+         * <li><strong>false</strong>: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click <strong>Expenses</strong> to go to the <strong>Billing Management</strong> console. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
          * 
-         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-         * *   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > User Center to go to the **Billing Management** console. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
-         * 
-         * Default value: **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -239,7 +246,10 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The business information.
+         * <p>The business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -248,7 +258,10 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -257,7 +270,10 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -266,7 +282,11 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose configurations you want to modify.
+         * <p>The ID of the instance whose configurations you want to change.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1337621e8f****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -275,19 +295,23 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The time when the modified configurations take effect. Valid values:
-         * <p>
+         * <p>The time when the changed configurations take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: The configurations immediately take effect.</li>
+         * <li><strong>MaintainTime</strong>: The configurations take effect during the maintenance window of the instance.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62008.html">ModifyDBInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the maintenance window of an instance.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>Immediately</strong>.</p>
          * 
-         * *   **Immediately**: The configurations immediately take effect.
-         * *   **MaintainTime**: The configurations take effect during the maintenance window of the instance.
-         * 
-         * > 
-         * 
-         * *   You can call the [ModifyDBInstanceMaintainTime](~~62008~~) operation to modify the maintenance window of an instance.
-         * 
-         * *   You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the maintenance window of an instance.
-         * 
-         * Default value: **Immediately**.
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -296,7 +320,11 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The configuration information of the mongos nodes or shard nodes whose configurations you want to modify. For more information, see [Instance types](~~57141~~).
+         * <p>The configuration information of the mongos nodes or shard nodes whose configurations you want to change. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Shards&quot;:[{&quot;DBInstanceClass&quot;:&quot;dds.shard.mid&quot;,&quot;DBInstanceName&quot;:&quot;d-bp14ae4572fd****&quot;,&quot;Storage&quot;:20},{&quot;DBInstanceClass&quot;:&quot;dds.shard.mid&quot;,&quot;DBInstanceName&quot;:&quot;d-bp19f4f92dc5****&quot;,&quot;Storage&quot;:30}]}</p>
          */
         public Builder nodesInfo(String nodesInfo) {
             this.putQueryParameter("NodesInfo", nodesInfo);
@@ -305,13 +333,17 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The type of configuration modifications. Valid values:
-         * <p>
+         * <p>The type of configuration changes. Valid values:</p>
+         * <ul>
+         * <li><strong>UPGRADE</strong></li>
+         * <li><strong>DOWNGRADE</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is only applicable to instances whose billing method is subscription.</p>
+         * </blockquote>
          * 
-         * *   **UPGRADE**
-         * *   **DOWNGRADE**
-         * 
-         * > This parameter is available only if the billing method of the instance is subscription.
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -338,7 +370,10 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

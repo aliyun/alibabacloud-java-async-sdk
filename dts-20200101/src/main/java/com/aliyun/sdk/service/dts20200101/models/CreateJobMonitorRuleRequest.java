@@ -1,52 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobMonitorRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateJobMonitorRuleRequest</p>
  */
 public class CreateJobMonitorRuleRequest extends Request {
-    @Query
-    @NameInMap("DelayRuleTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayRuleTime")
     private Long delayRuleTime;
 
-    @Query
-    @NameInMap("DtsJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dtsJobId;
 
-    @Query
-    @NameInMap("NoticeValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NoticeValue")
     private Integer noticeValue;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Query
-    @NameInMap("Times")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Times")
     private Integer times;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private CreateJobMonitorRuleRequest(Builder builder) {
@@ -57,6 +66,7 @@ public class CreateJobMonitorRuleRequest extends Request {
         this.period = builder.period;
         this.phone = builder.phone;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.state = builder.state;
         this.times = builder.times;
         this.type = builder.type;
@@ -118,6 +128,13 @@ public class CreateJobMonitorRuleRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -145,6 +162,7 @@ public class CreateJobMonitorRuleRequest extends Request {
         private Integer period; 
         private String phone; 
         private String regionId; 
+        private String resourceGroupId; 
         private String state; 
         private Integer times; 
         private String type; 
@@ -161,19 +179,24 @@ public class CreateJobMonitorRuleRequest extends Request {
             this.period = request.period;
             this.phone = request.phone;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.state = request.state;
             this.times = request.times;
             this.type = request.type;
         } 
 
         /**
-         * The threshold for triggering latency alerts.
-         * <p>
+         * <p>The threshold for triggering an alert.</p>
+         * <ul>
+         * <li>If <strong>Type</strong> is set to <strong>delay</strong>, the threshold must be an integer in units of seconds. You can specify the threshold based on your business requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</li>
+         * <li>If <strong>Type</strong> is set to <strong>full_timeout</strong>, the threshold must be an integer in units of hours.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required if <strong>Type</strong> is set to <strong>delay</strong> or <strong>full_timeout</strong> and <strong>State</strong> is set to <strong>Y</strong>.</p>
+         * </blockquote>
          * 
-         * *   If the **Type** parameter is set to **delay**, the threshold must be an integer. You can set the threshold based on your requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds. Unit: seconds.
-         * *   If the **Type** parameter is set to **full_timeout**, the threshold must be an integer. Unit: hours.
-         * 
-         * >  This parameter is required if the **Type** parameter is set to **delay** or **full_timeout** and the **State** parameter is set to **Y**.
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder delayRuleTime(Long delayRuleTime) {
             this.putQueryParameter("DelayRuleTime", delayRuleTime);
@@ -182,7 +205,11 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>The ID of the data migration, data synchronization, or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i03e3zty16i****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -191,7 +218,10 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * The alert threshold.
+         * <p>The alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder noticeValue(Integer noticeValue) {
             this.putQueryParameter("NoticeValue", noticeValue);
@@ -200,10 +230,13 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * The statistical period of the incremental data verification task. Unit: minutes.
-         * <p>
+         * <p>The statistical period of the incremental data verification task. Unit: minutes.</p>
+         * <blockquote>
+         * <p>Valid values: 1, 3, 5, and 30.</p>
+         * </blockquote>
          * 
-         * >  Valid values: 1, 3, 5, and 30.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -212,12 +245,18 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * The mobile numbers that receive alert notifications. Separate multiple mobile numbers with commas (,).
-         * <p>
+         * <p>The mobile numbers that receive alert notifications. Separate multiple mobile numbers with commas (,).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</p>
+         * </li>
+         * <li><p>Users of the international site (alibabacloud.com) cannot receive notifications on alerts by using mobile numbers, but can configure alert rules for DTS tasks in the CloudMonitor console. For more information, see <a href="https://help.aliyun.com/document_detail/175876.html">Configure alert rules for DTS tasks in the CloudMonitor console</a>.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * *   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.
-         * *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -226,7 +265,10 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,13 +277,27 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alert rule. Valid values:
-         * <p>
+         * <p>Resource group ID.</p>
          * 
-         * *   **Y**: enables the alert rule.
-         * *   **N**: disables the alert rule.
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the alert rule. Valid values:</p>
+         * <ul>
+         * <li><strong>Y</strong>: enables the alert rule.</li>
+         * <li><strong>N</strong>: disables the alert rule.</li>
+         * </ul>
+         * <p>Default value: <strong>Y</strong>.</p>
          * 
-         * Default value: **Y**.
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -250,7 +306,10 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * The number of statistical periods of the incremental data verification task.
+         * <p>The number of statistical periods of the incremental data verification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder times(Integer times) {
             this.putQueryParameter("Times", times);
@@ -259,14 +318,16 @@ public class CreateJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * The metric that is used to monitor the task. Valid values:
-         * <p>
+         * <p>The metric that is used to monitor the task. Valid values:</p>
+         * <ul>
+         * <li><strong>delay</strong>: the <strong>Latency</strong> metric.</li>
+         * <li><strong>error</strong>: the <strong>Status</strong> metric.</li>
+         * <li><strong>full_timeout</strong>: the <strong>Full Timeout</strong> metric.</li>
+         * </ul>
+         * <p>Default value: <strong>error</strong>. You must manually set this value.</p>
          * 
-         * *   **delay**: the **Latency** metric.
-         * *   **error**: the **Status** metric.
-         * *   **full_timeout**: the **Full Timeout** metric.
-         * 
-         * Default value: **error**. You must manually set this value.
+         * <strong>example:</strong>
+         * <p>delay</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

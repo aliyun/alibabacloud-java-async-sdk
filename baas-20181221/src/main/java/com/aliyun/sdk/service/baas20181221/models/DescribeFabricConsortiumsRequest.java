@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricConsortiumsRequest</p>
  */
 public class DescribeFabricConsortiumsRequest extends Request {
-    @Query
-    @NameInMap("ConsortiumId")
-    private String consortiumId;
-
-    @Body
-    @NameInMap("Location")
-    private String location;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    private String consortiumId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeFabricConsortiumsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.consortiumId = builder.consortiumId;
         this.location = builder.location;
-        this.regionId = builder.regionId;
         this.tag = builder.tag;
     }
 
@@ -50,6 +49,13 @@ public class DescribeFabricConsortiumsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return consortiumId
      */
     public String getConsortiumId() {
@@ -64,13 +70,6 @@ public class DescribeFabricConsortiumsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -78,22 +77,31 @@ public class DescribeFabricConsortiumsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeFabricConsortiumsRequest, Builder> {
+        private String regionId; 
         private String consortiumId; 
         private String location; 
-        private String regionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFabricConsortiumsRequest response) {
-            super(response);
-            this.consortiumId = response.consortiumId;
-            this.location = response.location;
-            this.regionId = response.regionId;
-            this.tag = response.tag;
+        private Builder(DescribeFabricConsortiumsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.consortiumId = request.consortiumId;
+            this.location = request.location;
+            this.tag = request.tag;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ConsortiumId.
@@ -114,15 +122,6 @@ public class DescribeFabricConsortiumsRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
@@ -139,11 +138,11 @@ public class DescribeFabricConsortiumsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

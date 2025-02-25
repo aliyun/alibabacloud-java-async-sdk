@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTraceAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTraceAppsResponseBody</p>
  */
 public class ListTraceAppsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceApps")
-    private java.util.List < TraceApps> traceApps;
+    @com.aliyun.core.annotation.NameInMap("TraceApps")
+    private java.util.List<TraceApps> traceApps;
 
     private ListTraceAppsResponseBody(Builder builder) {
         this.code = builder.code;
@@ -74,7 +79,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
     /**
      * @return traceApps
      */
-    public java.util.List < TraceApps> getTraceApps() {
+    public java.util.List<TraceApps> getTraceApps() {
         return this.traceApps;
     }
 
@@ -83,16 +88,19 @@ public class ListTraceAppsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TraceApps> traceApps; 
+        private java.util.List<TraceApps> traceApps; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
+         * <p>The HTTP status code returned for the request. Valid values:</p>
+         * <ul>
+         * <li><code>2XX</code>: The request is successful.</li>
+         * <li><code>3XX</code>: A redirection message is returned.</li>
+         * <li><code>4XX</code>: The request is invalid.</li>
+         * <li><code>5XX</code>: A server error occurs.</li>
+         * </ul>
          * 
-         * *   `2XX`: The request is successful.
-         * *   `3XX`: A redirection message is returned.
-         * *   `4XX`: The request is invalid.
-         * *   `5XX`: A server error occurs.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -100,7 +108,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request parameters are invalid.
+         * <p>The error message returned if the request parameters are invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal error. Please try again. Contact the DingTalk service account if the issue persists after multiple retries.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -108,7 +119,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,11 +130,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
+         * </ul>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -128,9 +145,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of Application Monitoring tasks.
+         * <p>The list of Application Monitoring tasks.</p>
          */
-        public Builder traceApps(java.util.List < TraceApps> traceApps) {
+        public Builder traceApps(java.util.List<TraceApps> traceApps) {
             this.traceApps = traceApps;
             return this;
         }
@@ -141,11 +158,17 @@ public class ListTraceAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTraceAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTraceAppsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -180,7 +203,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -188,7 +214,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -202,59 +231,65 @@ public class ListTraceAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTraceAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTraceAppsResponseBody</p>
+     */
     public static class TraceApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Labels")
-        private java.util.List < String > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<String> labels;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Show")
+        @com.aliyun.core.annotation.NameInMap("Show")
         private Boolean show;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WorkloadKind")
+        @com.aliyun.core.annotation.NameInMap("WorkloadKind")
         private String workloadKind;
 
-        @NameInMap("WorkloadName")
+        @com.aliyun.core.annotation.NameInMap("WorkloadName")
         private String workloadName;
 
         private TraceApps(Builder builder) {
@@ -317,7 +352,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
@@ -373,7 +408,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -417,7 +452,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String appName; 
             private String clusterId; 
             private Long createTime; 
-            private java.util.List < String > labels; 
+            private java.util.List<String> labels; 
             private String language; 
             private String namespace; 
             private String pid; 
@@ -425,7 +460,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Boolean show; 
             private String source; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
@@ -433,7 +468,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String workloadName; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -441,7 +479,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -449,7 +490,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -457,7 +501,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.
+             * <p>The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1529667762000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -465,15 +512,18 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The labels of the application.
+             * <p>The labels of the application.</p>
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * Language.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHP</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -481,7 +531,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -489,7 +542,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The process identifier (PID) of the application.
+             * <p>The process identifier (PID) of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a5f9bdeb-2627-4dbe-9247-****</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -497,7 +553,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -505,7 +564,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource group</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -513,11 +575,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-             * <p>
+             * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: yes</li>
+             * <li><code>false</code>: no</li>
+             * </ul>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -525,7 +590,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The application source.
+             * <p>The application source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -533,19 +601,22 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The type of the monitoring task. Valid values:
-             * <p>
+             * <p>The type of the monitoring task. Valid values:</p>
+             * <ul>
+             * <li><code>TRACE</code>: Application Monitoring</li>
+             * <li><code>RETCODE</code>: Browser Monitoring</li>
+             * </ul>
              * 
-             * *   `TRACE`: Application Monitoring
-             * *   `RETCODE`: Browser Monitoring
+             * <strong>example:</strong>
+             * <p>TRACE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -553,7 +624,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the monitoring task was updated. The value is a timestamp. Unit: milliseconds.
+             * <p>The time when the monitoring task was updated. The value is a timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1529667762000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -561,7 +635,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113197164949****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -569,7 +646,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadKind.
+             * <p>The type of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployment</p>
              */
             public Builder workloadKind(String workloadKind) {
                 this.workloadKind = workloadKind;
@@ -577,7 +657,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadName.
+             * <p>The name of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx-deployment</p>
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;

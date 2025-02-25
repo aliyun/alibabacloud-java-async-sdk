@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnConnectionLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpnConnectionLogsResponseBody</p>
  */
 public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("IsCompleted")
+    @com.aliyun.core.annotation.NameInMap("IsCompleted")
     private Boolean isCompleted;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVpnConnectionLogsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries on the current page.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,10 +114,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * An array of strings.
-         * <p>
-         * 
-         * Each item in the array is a log entry.
+         * <p>The log list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,11 +122,14 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log is accurate. Valid values:
-         * <p>
+         * <p>Indicates whether the log is accurate. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**: accurate
-         * *   **false**: inaccurate
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isCompleted(Boolean isCompleted) {
             this.isCompleted = isCompleted;
@@ -129,7 +137,10 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -137,7 +148,10 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -145,7 +159,10 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF161502-4959-5C3B-B499-09B87BA931D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,9 +175,15 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpnConnectionLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnConnectionLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Logs")
-        private java.util.List < String > logs;
+        @com.aliyun.core.annotation.NameInMap("Logs")
+        private java.util.List<String> logs;
 
         private Data(Builder builder) {
             this.logs = builder.logs;
@@ -177,17 +200,17 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         /**
          * @return logs
          */
-        public java.util.List < String > getLogs() {
+        public java.util.List<String> getLogs() {
             return this.logs;
         }
 
         public static final class Builder {
-            private java.util.List < String > logs; 
+            private java.util.List<String> logs; 
 
             /**
              * Logs.
              */
-            public Builder logs(java.util.List < String > logs) {
+            public Builder logs(java.util.List<String> logs) {
                 this.logs = logs;
                 return this;
             }

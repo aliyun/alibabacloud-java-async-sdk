@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Savepoint} extends {@link TeaModel}
  *
  * <p>Savepoint</p>
  */
 public class Savepoint extends TeaModel {
-    @NameInMap("createdAt")
+    @com.aliyun.core.annotation.NameInMap("createdAt")
     private Long createdAt;
 
-    @NameInMap("deploymentId")
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
     private String deploymentId;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("jobId")
+    @com.aliyun.core.annotation.NameInMap("jobId")
     private String jobId;
 
-    @NameInMap("modifiedAt")
+    @com.aliyun.core.annotation.NameInMap("modifiedAt")
     private Long modifiedAt;
 
-    @NameInMap("namespace")
+    @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @NameInMap("nativeFormat")
+    @com.aliyun.core.annotation.NameInMap("nativeFormat")
     private Boolean nativeFormat;
 
-    @NameInMap("savepointId")
+    @com.aliyun.core.annotation.NameInMap("savepointId")
     private String savepointId;
 
-    @NameInMap("savepointLocation")
+    @com.aliyun.core.annotation.NameInMap("savepointLocation")
     private String savepointLocation;
 
-    @NameInMap("savepointOrigin")
+    @com.aliyun.core.annotation.NameInMap("savepointOrigin")
     private String savepointOrigin;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private SavepointStatus status;
 
-    @NameInMap("stopWithDrainEnabled")
+    @com.aliyun.core.annotation.NameInMap("stopWithDrainEnabled")
     private Boolean stopWithDrainEnabled;
 
     private Savepoint(Builder builder) {

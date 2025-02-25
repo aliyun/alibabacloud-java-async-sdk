@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsRegionIdIpv6InfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsRegionIdIpv6InfoResponseBody</p>
  */
 public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportIpv6Info")
+    @com.aliyun.core.annotation.NameInMap("SupportIpv6Info")
     private SupportIpv6Info supportIpv6Info;
 
     private DescribeEnsRegionIdIpv6InfoResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         private SupportIpv6Info supportIpv6Info; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3703C4AC-9396-458C-8F25-1D701334D309</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         }
 
         /**
-         * SupportIpv6Info.
+         * <p>IPv6 support information.</p>
          */
         public Builder supportIpv6Info(SupportIpv6Info supportIpv6Info) {
             this.supportIpv6Info = supportIpv6Info;
@@ -71,11 +79,17 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsRegionIdIpv6InfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsRegionIdIpv6InfoResponseBody</p>
+     */
     public static class SupportIpv6Info extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("SupportIpv6")
+        @com.aliyun.core.annotation.NameInMap("SupportIpv6")
         private Boolean supportIpv6;
 
         private SupportIpv6Info(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             private Boolean supportIpv6; 
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-xxxx-4</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -118,7 +135,14 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIpv6.
+             * <p>Specifies whether IPv6 is supported. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;

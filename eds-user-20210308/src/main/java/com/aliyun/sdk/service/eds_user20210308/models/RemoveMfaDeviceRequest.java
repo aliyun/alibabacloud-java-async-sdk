@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveMfaDeviceRequest} extends {@link RequestModel}
  *
  * <p>RemoveMfaDeviceRequest</p>
  */
 public class RemoveMfaDeviceRequest extends Request {
-    @Query
-    @NameInMap("AdDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdDomain")
     private String adDomain;
 
-    @Query
-    @NameInMap("SerialNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SerialNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serialNumber;
 
     private RemoveMfaDeviceRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class RemoveMfaDeviceRequest extends Request {
         } 
 
         /**
-         * AdDomain.
+         * <p>The domain of the Active Directory (AD) workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alpha.lftltd.net</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -78,7 +86,11 @@ public class RemoveMfaDeviceRequest extends Request {
         }
 
         /**
-         * SerialNumber.
+         * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc856334-446b-4035-bfbc-18af261e****</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

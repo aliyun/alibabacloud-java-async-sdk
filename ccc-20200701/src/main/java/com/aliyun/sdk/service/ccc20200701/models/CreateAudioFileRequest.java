@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAudioFileRequest} extends {@link RequestModel}
  *
  * <p>CreateAudioFileRequest</p>
  */
 public class CreateAudioFileRequest extends Request {
-    @Query
-    @NameInMap("AudioFileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioFileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String audioFileName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OssFileKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssFileKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossFileKey;
 
-    @Query
-    @NameInMap("Usage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usage")
     private String usage;
 
     private CreateAudioFileRequest(Builder builder) {
@@ -114,7 +119,10 @@ public class CreateAudioFileRequest extends Request {
         } 
 
         /**
-         * AudioFileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-file.wav</p>
          */
         public Builder audioFileName(String audioFileName) {
             this.putQueryParameter("AudioFileName", audioFileName);
@@ -123,7 +131,10 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,7 +143,7 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -141,7 +152,10 @@ public class CreateAudioFileRequest extends Request {
         }
 
         /**
-         * OssFileKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test/test-file.wav</p>
          */
         public Builder ossFileKey(String ossFileKey) {
             this.putQueryParameter("OssFileKey", ossFileKey);

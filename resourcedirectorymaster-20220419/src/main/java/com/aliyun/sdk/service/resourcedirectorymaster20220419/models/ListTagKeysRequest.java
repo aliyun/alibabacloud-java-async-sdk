@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysRequest} extends {@link RequestModel}
  *
  * <p>ListTagKeysRequest</p>
  */
 public class ListTagKeysRequest extends Request {
-    @Query
-    @NameInMap("KeyFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyFilter")
     private String keyFilter;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private ListTagKeysRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * The tag key for a fuzzy query.
+         * <p>The tag key for a fuzzy query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
          */
         public Builder keyFilter(String keyFilter) {
             this.putQueryParameter("KeyFilter", keyFilter);
@@ -106,10 +114,11 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request.
-         * <p>
+         * <p>The maximum number of entries to return for a single request.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -118,7 +127,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -127,10 +139,12 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
+         * <p>The resource type.</p>
+         * <p>The value Account indicates the members of the resource directory.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value Account indicates the members of the resource directory.
+         * <strong>example:</strong>
+         * <p>Account</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

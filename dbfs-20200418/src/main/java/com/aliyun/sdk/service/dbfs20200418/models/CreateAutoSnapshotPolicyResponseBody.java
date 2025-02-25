@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAutoSnapshotPolicyResponseBody</p>
  */
 public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private String policyId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAutoSnapshotPolicyResponseBody(Builder builder) {

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserCertificateExpireCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserCertificateExpireCountResponseBody</p>
  */
 public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
-    @NameInMap("ExpireWithin30DaysCount")
+    @com.aliyun.core.annotation.NameInMap("ExpireWithin30DaysCount")
     private Integer expireWithin30DaysCount;
 
-    @NameInMap("ExpiredCount")
+    @com.aliyun.core.annotation.NameInMap("ExpiredCount")
     private Integer expiredCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserCertificateExpireCountResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of domain names whose SSL certificates are about to expires within 30 days.
+         * <p>The number of domain names whose SSL certificates are about to expires within 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder expireWithin30DaysCount(Integer expireWithin30DaysCount) {
             this.expireWithin30DaysCount = expireWithin30DaysCount;
@@ -70,7 +73,10 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names whose SSL certificates have already expired.
+         * <p>The number of domain names whose SSL certificates have already expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder expiredCount(Integer expiredCount) {
             this.expiredCount = expiredCount;
@@ -78,7 +84,10 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5E8DF64-7175-4186-9B06-F002C0BBD0C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,88 +1,88 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataCacheRequest} extends {@link RequestModel}
  *
  * <p>CreateDataCacheRequest</p>
  */
 public class CreateDataCacheRequest extends Request {
-    @Query
-    @NameInMap("Bucket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bucket")
     private String bucket;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DataSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSource")
     private DataSource dataSource;
 
-    @Query
-    @NameInMap("EipCreateParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipCreateParam")
     private EipCreateParam eipCreateParam;
 
-    @Query
-    @NameInMap("EipInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipInstanceId")
     private String eipInstanceId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
     private Integer retentionDays;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private CreateDataCacheRequest(Builder builder) {
@@ -293,10 +293,13 @@ public class CreateDataCacheRequest extends Request {
         } 
 
         /**
-         * The bucket in which the data is stored. By default, the default bucket is used. You can use a custom bucket for business grouping and to prevent path conflicts.
-         * <p>
+         * <p>The bucket in which the data is stored. By default, the default bucket is used. You can use a custom bucket for business grouping and to prevent path conflicts.</p>
+         * <blockquote>
+         * <p> eci-system is the reserved bucket of the ECI and cannot be used.</p>
+         * </blockquote>
          * 
-         * >  eci-system is the reserved bucket of the ECI and cannot be used.
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -305,7 +308,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-<strong><strong>-12d3-</strong></strong>-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -314,7 +320,7 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The data source.
+         * <p>The data source.</p>
          */
         public Builder dataSource(DataSource dataSource) {
             this.putQueryParameter("DataSource", dataSource);
@@ -323,7 +329,7 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The elastic IP address (EIP) to be created and associated. If no NAT gateway is configured for the virtual private cloud (VPC), you can associate an EIP to pull data from the Internet.
+         * <p>The elastic IP address (EIP) to be created and associated. If no NAT gateway is configured for the virtual private cloud (VPC), you can associate an EIP to pull data from the Internet.</p>
          */
         public Builder eipCreateParam(EipCreateParam eipCreateParam) {
             this.putQueryParameter("EipCreateParam", eipCreateParam);
@@ -332,7 +338,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The existing elastic IP address (EIP) to be associated. If no NAT gateway is configured for the virtual private cloud (VPC), you can associate an EIP to pull data from the Internet.
+         * <p>The existing elastic IP address (EIP) to be associated. If no NAT gateway is configured for the virtual private cloud (VPC), you can associate an EIP to pull data from the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-uf66jeqopgqa9hdn****</p>
          */
         public Builder eipInstanceId(String eipInstanceId) {
             this.putQueryParameter("EipInstanceId", eipInstanceId);
@@ -341,7 +350,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The DataCache name.
+         * <p>The DataCache name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -368,7 +380,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The storage path of the data.
+         * <p>The storage path of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/model/test</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -377,7 +392,11 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -386,7 +405,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-2df3isufhi38****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -413,7 +435,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The number of days for which the DataCache is retained. When the retention days end, the DataCache is deleted. By default, DataCaches do not expire.
+         * <p>The number of days for which the DataCache is retained. When the retention days end, the DataCache is deleted. By default, DataCaches do not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -422,7 +447,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the generated ECI belongs during the creation of the data cache.
+         * <p>The ID of the security group to which the generated ECI belongs during the creation of the data cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2ze81zoc3yl7a3we****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -431,7 +459,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The size of the data cache. Unit: GiB. Default value: 20. Evaluate the required size based on the actual data size.
+         * <p>The size of the data cache. Unit: GiB. Default value: 20. Evaluate the required size based on the actual data size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -440,7 +471,7 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The tags to be bound to the data cache.
+         * <p>The tags to be bound to the data cache.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -449,7 +480,10 @@ public class CreateDataCacheRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the generated ECI belongs during the creation of the data cache.
+         * <p>The ID of the vSwitch to which the generated ECI belongs during the creation of the data cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1jrgfqqy54kg5hc****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -464,11 +498,17 @@ public class CreateDataCacheRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataCacheRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCacheRequest</p>
+     */
     public static class DataSource extends TeaModel {
-        @NameInMap("Options")
+        @com.aliyun.core.annotation.NameInMap("Options")
         private java.util.Map < String, String > options;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataSource(Builder builder) {
@@ -503,7 +543,7 @@ public class CreateDataCacheRequest extends Request {
             private String type; 
 
             /**
-             * The parameters that are configured for the data source.
+             * <p>The parameters that are configured for the data source.</p>
              */
             public Builder options(java.util.Map < String, String > options) {
                 this.options = options;
@@ -511,13 +551,16 @@ public class CreateDataCacheRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>URL</li>
+             * <li>NAS</li>
+             * <li>OSS</li>
+             * <li>SNAPSHOT</li>
+             * </ul>
              * 
-             * *   URL
-             * *   NAS
-             * *   OSS
-             * *   SNAPSHOT
+             * <strong>example:</strong>
+             * <p>NAS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -531,20 +574,26 @@ public class CreateDataCacheRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataCacheRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCacheRequest</p>
+     */
     public static class EipCreateParam extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("CommonBandwidthPackage")
+        @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackage")
         private String commonBandwidthPackage;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("PublicIpAddressPoolId")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolId")
         private String publicIpAddressPoolId;
 
         private EipCreateParam(Builder builder) {
@@ -606,7 +655,10 @@ public class CreateDataCacheRequest extends Request {
             private String publicIpAddressPoolId; 
 
             /**
-             * The bandwidth of the EIP. Unit: Mbit/s. Default value: 5.
+             * <p>The bandwidth of the EIP. Unit: Mbit/s. Default value: 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -614,7 +666,10 @@ public class CreateDataCacheRequest extends Request {
             }
 
             /**
-             * The EIP bandwidth plan to be associated.
+             * <p>The EIP bandwidth plan to be associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp-2zeukbj916scmj51m****</p>
              */
             public Builder commonBandwidthPackage(String commonBandwidthPackage) {
                 this.commonBandwidthPackage = commonBandwidthPackage;
@@ -622,11 +677,14 @@ public class CreateDataCacheRequest extends Request {
             }
 
             /**
-             * The line type of the EIP. Valid values:
-             * <p>
+             * <p>The line type of the EIP. Valid values:</p>
+             * <ul>
+             * <li>BGP: BGP (Multi-ISP) line</li>
+             * <li>BGP_PRO: BGP (Multi-ISP) Pro line</li>
+             * </ul>
              * 
-             * *   BGP: BGP (Multi-ISP) line
-             * *   BGP_PRO: BGP (Multi-ISP) Pro line
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -634,11 +692,14 @@ public class CreateDataCacheRequest extends Request {
             }
 
             /**
-             * The metering method of the EIP. Valid values:
-             * <p>
+             * <p>The metering method of the EIP. Valid values:</p>
+             * <ul>
+             * <li>PayByBandwidth: pay-by-bandwidth</li>
+             * <li>PayByTraffic: pay-by-data-transfer</li>
+             * </ul>
              * 
-             * *   PayByBandwidth: pay-by-bandwidth
-             * *   PayByTraffic: pay-by-data-transfer
+             * <strong>example:</strong>
+             * <p>PayByTraffic</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -646,7 +707,10 @@ public class CreateDataCacheRequest extends Request {
             }
 
             /**
-             * The ID of the IP address pool. The EIP is allocated from the IP address pool. You cannot use the IP address pool feature by default. To use this feature, you must apply for the privilege in the Quota Center console.
+             * <p>The ID of the IP address pool. The EIP is allocated from the IP address pool. You cannot use the IP address pool feature by default. To use this feature, you must apply for the privilege in the Quota Center console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pippool-2vc4xdtjhwl4t0go5****</p>
              */
             public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
                 this.publicIpAddressPoolId = publicIpAddressPoolId;
@@ -660,11 +724,17 @@ public class CreateDataCacheRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataCacheRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCacheRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -699,7 +769,10 @@ public class CreateDataCacheRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -707,7 +780,10 @@ public class CreateDataCacheRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

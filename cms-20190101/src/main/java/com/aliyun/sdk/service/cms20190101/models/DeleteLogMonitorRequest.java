@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLogMonitorRequest} extends {@link RequestModel}
  *
  * <p>DeleteLogMonitorRequest</p>
  */
 public class DeleteLogMonitorRequest extends Request {
-    @Query
-    @NameInMap("LogId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long logId;
 
     private DeleteLogMonitorRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteLogMonitorRequest extends Request {
         } 
 
         /**
-         * The ID returned by Log Service.
+         * <p>The ID returned by Log Service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder logId(Long logId) {
             this.putQueryParameter("LogId", logId);

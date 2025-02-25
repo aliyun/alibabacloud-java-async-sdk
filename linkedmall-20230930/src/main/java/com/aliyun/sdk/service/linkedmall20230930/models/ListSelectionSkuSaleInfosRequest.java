@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSelectionSkuSaleInfosRequest} extends {@link RequestModel}
  *
  * <p>ListSelectionSkuSaleInfosRequest</p>
  */
 public class ListSelectionSkuSaleInfosRequest extends Request {
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private SkuSaleInfoListQuery body;
 
     private ListSelectionSkuSaleInfosRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class ListSelectionSkuSaleInfosRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>This parameter is required.</p>
          */
         public Builder body(SkuSaleInfoListQuery body) {
             this.putBodyParameter("body", body);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWirelessCloudConnectorResponseBody</p>
  */
 public class CreateWirelessCloudConnectorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WirelessCloudConnectorId")
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
     private String wirelessCloudConnectorId;
 
     private CreateWirelessCloudConnectorResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateWirelessCloudConnectorResponseBody extends TeaModel {
         private String wirelessCloudConnectorId; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

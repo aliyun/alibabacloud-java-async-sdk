@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePurchasedApiGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePurchasedApiGroupsResponseBody</p>
  */
 public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PurchasedApiGroupAttributes")
+    @com.aliyun.core.annotation.NameInMap("PurchasedApiGroupAttributes")
     private PurchasedApiGroupAttributes purchasedApiGroupAttributes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePurchasedApiGroupsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The attributes of the API group.
+         * <p>The attributes of the API group.</p>
          */
         public Builder purchasedApiGroupAttributes(PurchasedApiGroupAttributes purchasedApiGroupAttributes) {
             this.purchasedApiGroupAttributes = purchasedApiGroupAttributes;
@@ -110,7 +121,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36BBBAD4-1CFB-489F-841A-8CA52EEA787E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,35 +148,41 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePurchasedApiGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePurchasedApiGroupsResponseBody</p>
+     */
     public static class PurchasedApiGroupAttribute extends TeaModel {
-        @NameInMap("BillingType")
+        @com.aliyun.core.annotation.NameInMap("BillingType")
         private String billingType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("InvokeTimesMax")
+        @com.aliyun.core.annotation.NameInMap("InvokeTimesMax")
         private Long invokeTimesMax;
 
-        @NameInMap("InvokeTimesNow")
+        @com.aliyun.core.annotation.NameInMap("InvokeTimesNow")
         private Long invokeTimesNow;
 
-        @NameInMap("PurchasedTime")
+        @com.aliyun.core.annotation.NameInMap("PurchasedTime")
         private String purchasedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PurchasedApiGroupAttribute(Builder builder) {
@@ -266,7 +289,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The billing method.
+             * <p>The billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAID</p>
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -274,7 +300,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the API group.
+             * <p>The description of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -282,7 +311,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API group expires.
+             * <p>The time when the API group expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-19T00:00:00</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -290,7 +322,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group.
+             * <p>The ID of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8e91f23f88f94348855b82c9a73209f3</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -298,7 +333,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -306,7 +344,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of calls.
+             * <p>The maximum number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder invokeTimesMax(Long invokeTimesMax) {
                 this.invokeTimesMax = invokeTimesMax;
@@ -314,7 +355,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The current number of calls.
+             * <p>The current number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder invokeTimesNow(Long invokeTimesNow) {
                 this.invokeTimesNow = invokeTimesNow;
@@ -322,7 +366,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API group was purchased.
+             * <p>The time when the API group was purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-19T00:00:00</p>
              */
             public Builder purchasedTime(String purchasedTime) {
                 this.purchasedTime = purchasedTime;
@@ -330,7 +377,10 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the API group is located.
+             * <p>The ID of the region where the API group is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,11 +388,14 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the API group.
-             * <p>
+             * <p>The status of the API group.</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The API group is normal.</li>
+             * <li><strong>DELETE</strong>: The API group is deleted.</li>
+             * </ul>
              * 
-             * *   **NORMAL**: The API group is normal.
-             * *   **DELETE**: The API group is deleted.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -356,9 +409,15 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePurchasedApiGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePurchasedApiGroupsResponseBody</p>
+     */
     public static class PurchasedApiGroupAttributes extends TeaModel {
-        @NameInMap("PurchasedApiGroupAttribute")
-        private java.util.List < PurchasedApiGroupAttribute> purchasedApiGroupAttribute;
+        @com.aliyun.core.annotation.NameInMap("PurchasedApiGroupAttribute")
+        private java.util.List<PurchasedApiGroupAttribute> purchasedApiGroupAttribute;
 
         private PurchasedApiGroupAttributes(Builder builder) {
             this.purchasedApiGroupAttribute = builder.purchasedApiGroupAttribute;
@@ -375,17 +434,17 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         /**
          * @return purchasedApiGroupAttribute
          */
-        public java.util.List < PurchasedApiGroupAttribute> getPurchasedApiGroupAttribute() {
+        public java.util.List<PurchasedApiGroupAttribute> getPurchasedApiGroupAttribute() {
             return this.purchasedApiGroupAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < PurchasedApiGroupAttribute> purchasedApiGroupAttribute; 
+            private java.util.List<PurchasedApiGroupAttribute> purchasedApiGroupAttribute; 
 
             /**
              * PurchasedApiGroupAttribute.
              */
-            public Builder purchasedApiGroupAttribute(java.util.List < PurchasedApiGroupAttribute> purchasedApiGroupAttribute) {
+            public Builder purchasedApiGroupAttribute(java.util.List<PurchasedApiGroupAttribute> purchasedApiGroupAttribute) {
                 this.purchasedApiGroupAttribute = purchasedApiGroupAttribute;
                 return this;
             }

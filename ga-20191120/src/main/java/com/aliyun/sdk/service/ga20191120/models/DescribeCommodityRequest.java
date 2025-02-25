@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommodityRequest</p>
  */
 public class DescribeCommodityRequest extends Request {
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("OrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeCommodityRequest(Builder builder) {
@@ -88,15 +87,15 @@ public class DescribeCommodityRequest extends Request {
          * The commodity code.
          * <p>
          * 
-         * Examples for the China site (aliyun.com):
+         * Valid values on the China site (aliyun.com):
          * 
          * *   **ga_gapluspre_public_cn**: GA instance.
          * *   **ga_plusbwppre_public_cn**: basic bandwidth plan.
          * 
-         * Examples for the international site (alibabacloud.com):
+         * Valid values on the international site (alibabacloud.com):
          * 
          * *   **ga_pluspre_public_intl**: GA instance.
-         * *   **ga_bwppreintl_public_intl**: basic bandwidth plan.
+         * *   **ga_bwppreintl_public_intl:** basic bandwidth plan.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -108,9 +107,9 @@ public class DescribeCommodityRequest extends Request {
          * The type of the order. Valid values:
          * <p>
          * 
-         * *   **BUY**: purchase
-         * *   **RENEW**: renewal
-         * *   **UPGRADE**: upgrade
+         * *   **BUY**: purchase order.
+         * *   **RENEW**: renewal order.
+         * *   **UPGRADE**: upgrade order.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);

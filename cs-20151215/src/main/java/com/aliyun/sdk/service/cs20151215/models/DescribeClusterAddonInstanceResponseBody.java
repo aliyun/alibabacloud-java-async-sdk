@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterAddonInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterAddonInstanceResponseBody</p>
  */
 public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
-    @NameInMap("config")
+    @com.aliyun.core.annotation.NameInMap("config")
     private String config;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private DescribeClusterAddonInstanceResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * The configuration of the component.
+         * <p>The configuration of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -82,7 +90,10 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the component.
+         * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terway-eniip</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -90,16 +101,19 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the component. Valid values:
-         * <p>
+         * <p>The status of the component. Valid values:</p>
+         * <ul>
+         * <li>initial: The component is being installed.</li>
+         * <li>active: The component is installed.</li>
+         * <li>unhealthy: The component is in an abnormal state.</li>
+         * <li>upgrading: The component is being updated.</li>
+         * <li>updating: The component is being modified.</li>
+         * <li>deleting: The component is being uninstalled.</li>
+         * <li>deleted: The component is deleted.</li>
+         * </ul>
          * 
-         * *   initial: The component is being installed.
-         * *   active: The component is installed.
-         * *   unhealthy: The component is in an abnormal state.
-         * *   upgrading: The component is being updated.
-         * *   updating: The component is being modified.
-         * *   deleting: The component is being uninstalled.
-         * *   deleted: The component is deleted.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -107,7 +121,10 @@ public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the component.
+         * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.4.3</p>
          */
         public Builder version(String version) {
             this.version = version;

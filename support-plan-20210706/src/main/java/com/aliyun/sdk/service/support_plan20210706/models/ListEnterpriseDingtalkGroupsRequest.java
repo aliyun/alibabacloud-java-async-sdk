@@ -1,12 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnterpriseDingtalkGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListEnterpriseDingtalkGroupsRequest</p>
@@ -35,8 +40,8 @@ public class ListEnterpriseDingtalkGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListEnterpriseDingtalkGroupsRequest response) {
-            super(response);
+        private Builder(ListEnterpriseDingtalkGroupsRequest request) {
+            super(request);
         } 
 
         @Override

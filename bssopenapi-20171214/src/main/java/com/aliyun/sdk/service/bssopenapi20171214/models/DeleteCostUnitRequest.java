@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCostUnitRequest} extends {@link RequestModel}
  *
  * <p>DeleteCostUnitRequest</p>
  */
 public class DeleteCostUnitRequest extends Request {
-    @Query
-    @NameInMap("OwnerUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ownerUid;
 
-    @Query
-    @NameInMap("UnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long unitId;
 
     private DeleteCostUnitRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DeleteCostUnitRequest extends Request {
         } 
 
         /**
-         * The user ID of the cost center owner.
+         * <p>The user ID of the cost center owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2135342</p>
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -79,7 +88,11 @@ public class DeleteCostUnitRequest extends Request {
         }
 
         /**
-         * The ID of the cost center. A value of -1 indicates the root cost center.
+         * <p>The ID of the cost center. A value of -1 indicates the root cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>376348</p>
          */
         public Builder unitId(Long unitId) {
             this.putQueryParameter("UnitId", unitId);

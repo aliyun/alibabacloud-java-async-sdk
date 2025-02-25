@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClustersWithBackupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClustersWithBackupsRequest</p>
  */
 public class DescribeDBClustersWithBackupsRequest extends Request {
-    @Query
-    @NameInMap("DBClusterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
-    @Query
-    @NameInMap("DBClusterIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterIds")
     private String DBClusterIds;
 
-    @Query
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @Query
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @Query
-    @NameInMap("IsDeleted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDeleted")
     private Integer isDeleted;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeDBClustersWithBackupsRequest(Builder builder) {
@@ -223,11 +228,14 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         } 
 
         /**
-         * The name of the cluster. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the cluster. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It must be 2 to 256 characters in length.</li>
+         * </ul>
          * 
-         * *   It cannot start with `http://` or `https://`.
-         * *   It must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -236,7 +244,10 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).
+         * <p>The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -245,12 +256,15 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * The type of the database engine. Valid values:
-         * <p>
+         * <p>The type of the database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -259,21 +273,27 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * The version of the database engine.
-         * <p>
+         * <p>The version of the database engine.</p>
+         * <ul>
+         * <li><p>Valid values for the MySQL database engine:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for the PostgreSQL database engine:</p>
+         * <ul>
+         * <li><strong>11</strong></li>
+         * <li><strong>14</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values for the MySQL database engine:
-         * 
-         *     *   **5.6**
-         *     *   **5.7**
-         *     *   **8.0**
-         * 
-         * *   Valid values for the PostgreSQL database engine:
-         * 
-         *     *   **11**
-         *     *   **14**
-         * 
-         * *   Valid value for the Oracle database engine: **11**
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -282,11 +302,14 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * Specifies whether the cluster is deleted. Valid values:
-         * <p>
+         * <p>Specifies whether the cluster is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not deleted</li>
+         * <li><strong>1</strong>: deleted</li>
+         * </ul>
          * 
-         * *   **0**: not deleted
-         * *   **1**: deleted
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isDeleted(Integer isDeleted) {
             this.putQueryParameter("IsDeleted", isDeleted);
@@ -313,7 +336,10 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
+         * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -322,14 +348,16 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: 30.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -338,10 +366,14 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query information about regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -350,7 +382,10 @@ public class DescribeDBClustersWithBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpcPrefixListEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>GetVpcPrefixListEntriesResponseBody</p>
  */
 public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PrefixListEntry")
-    private java.util.List < PrefixListEntry> prefixListEntry;
+    @com.aliyun.core.annotation.NameInMap("PrefixListEntry")
+    private java.util.List<PrefixListEntry> prefixListEntry;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetVpcPrefixListEntriesResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     /**
      * @return prefixListEntry
      */
-    public java.util.List < PrefixListEntry> getPrefixListEntry() {
+    public java.util.List<PrefixListEntry> getPrefixListEntry() {
         return this.prefixListEntry;
     }
 
@@ -81,12 +86,15 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     public static final class Builder {
         private Long count; 
         private String nextToken; 
-        private java.util.List < PrefixListEntry> prefixListEntry; 
+        private java.util.List<PrefixListEntry> prefixListEntry; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The number of entries.
+         * <p>The number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -94,11 +102,14 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value indicates the token that is used for the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,15 +117,18 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the prefix list.
+         * <p>The information about the prefix list.</p>
          */
-        public Builder prefixListEntry(java.util.List < PrefixListEntry> prefixListEntry) {
+        public Builder prefixListEntry(java.util.List<PrefixListEntry> prefixListEntry) {
             this.prefixListEntry = prefixListEntry;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,17 +152,23 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVpcPrefixListEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVpcPrefixListEntriesResponseBody</p>
+     */
     public static class PrefixListEntry extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PrefixListId")
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
         private String prefixListId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private PrefixListEntry(Builder builder) {
@@ -198,7 +221,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The CIDR blocks specified in the prefix list.
+             * <p>The CIDR blocks specified in the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -206,7 +232,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the prefix list.
+             * <p>The description of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +243,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the prefix list.
+             * <p>The ID of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-0b7hwu67****</p>
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -222,7 +254,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the prefix list.
+             * <p>The region ID of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

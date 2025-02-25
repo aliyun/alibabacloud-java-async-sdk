@@ -1,39 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeHandwritingRequest} extends {@link RequestModel}
  *
  * <p>RecognizeHandwritingRequest</p>
  */
 public class RecognizeHandwritingRequest extends Request {
-    @Query
-    @NameInMap("NeedRotate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedRotate")
     private Boolean needRotate;
 
-    @Query
-    @NameInMap("NeedSortPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedSortPage")
     private Boolean needSortPage;
 
-    @Query
-    @NameInMap("OutputCharInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputCharInfo")
     private Boolean outputCharInfo;
 
-    @Query
-    @NameInMap("OutputTable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputTable")
     private Boolean outputTable;
 
-    @Query
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Paragraph")
+    private Boolean paragraph;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeHandwritingRequest(Builder builder) {
@@ -42,6 +46,7 @@ public class RecognizeHandwritingRequest extends Request {
         this.needSortPage = builder.needSortPage;
         this.outputCharInfo = builder.outputCharInfo;
         this.outputTable = builder.outputTable;
+        this.paragraph = builder.paragraph;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -88,6 +93,13 @@ public class RecognizeHandwritingRequest extends Request {
     }
 
     /**
+     * @return paragraph
+     */
+    public Boolean getParagraph() {
+        return this.paragraph;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -106,6 +118,7 @@ public class RecognizeHandwritingRequest extends Request {
         private Boolean needSortPage; 
         private Boolean outputCharInfo; 
         private Boolean outputTable; 
+        private Boolean paragraph; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -119,6 +132,7 @@ public class RecognizeHandwritingRequest extends Request {
             this.needSortPage = request.needSortPage;
             this.outputCharInfo = request.outputCharInfo;
             this.outputTable = request.outputTable;
+            this.paragraph = request.paragraph;
             this.url = request.url;
             this.body = request.body;
         } 
@@ -156,6 +170,15 @@ public class RecognizeHandwritingRequest extends Request {
         public Builder outputTable(Boolean outputTable) {
             this.putQueryParameter("OutputTable", outputTable);
             this.outputTable = outputTable;
+            return this;
+        }
+
+        /**
+         * Paragraph.
+         */
+        public Builder paragraph(Boolean paragraph) {
+            this.putQueryParameter("Paragraph", paragraph);
+            this.paragraph = paragraph;
             return this;
         }
 

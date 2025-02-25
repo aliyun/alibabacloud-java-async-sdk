@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMaliciousFileWhitelistConfigRequest} extends {@link RequestModel}
  *
  * <p>GetMaliciousFileWhitelistConfigRequest</p>
  */
 public class GetMaliciousFileWhitelistConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
     private Long configId;
 
     private GetMaliciousFileWhitelistConfigRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist rule.
+         * <p>The ID of the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

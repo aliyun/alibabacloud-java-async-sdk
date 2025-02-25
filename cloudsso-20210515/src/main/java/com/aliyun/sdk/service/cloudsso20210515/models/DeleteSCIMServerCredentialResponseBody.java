@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSCIMServerCredentialResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSCIMServerCredentialResponseBody</p>
  */
 public class DeleteSCIMServerCredentialResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSCIMServerCredentialResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteSCIMServerCredentialResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CE8B990-193D-50CE-A604-69F3E7DCE740</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

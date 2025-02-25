@@ -1,33 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInfoRequest} extends {@link RequestModel}
  *
  * <p>ListAppInfoRequest</p>
  */
 public class ListAppInfoRequest extends Request {
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListAppInfoRequest(Builder builder) {
         super(builder);
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
     }
 
@@ -59,6 +69,13 @@ public class ListAppInfoRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -68,6 +85,7 @@ public class ListAppInfoRequest extends Request {
     public static final class Builder extends Request.Builder<ListAppInfoRequest, Builder> {
         private Integer pageNo; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private String status; 
 
         private Builder() {
@@ -78,11 +96,15 @@ public class ListAppInfoRequest extends Request {
             super(request);
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
         } 
 
         /**
-         * The number of the page to return. By default, pages start from page 1.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -91,7 +113,10 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,11 +125,26 @@ public class ListAppInfoRequest extends Request {
         }
 
         /**
-         * The status of the application. After an application is created, it enters the **Normal** state. Valid values:
-         * <p>
+         * <p>The ID of the resource group.</p>
          * 
-         * *   **Normal**
-         * *   **Disable**
+         * <strong>example:</strong>
+         * <p>rg-aekzko7fsuj****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The status of the application. You can specify the status of the applications that you want to query. After an application is created, it enters the <strong>Normal</strong> state. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsMessageTraceResponseBody} extends {@link TeaModel}
  *
  * <p>OnsMessageTraceResponseBody</p>
  */
 public class OnsMessageTraceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsMessageTraceResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsMessageTraceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the message that is queried.
+         * <p>The information about the message that is queried.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsMessageTraceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EAE5BE23-37A1-4354-94D6-E44AE17E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class OnsMessageTraceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsMessageTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsMessageTraceResponseBody</p>
+     */
     public static class MessageTrack extends TeaModel {
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TrackType")
+        @com.aliyun.core.annotation.NameInMap("TrackType")
         private String trackType;
 
         private MessageTrack(Builder builder) {
@@ -122,7 +131,10 @@ public class OnsMessageTraceResponseBody extends TeaModel {
             private String trackType; 
 
             /**
-             * The ID of the consumer group that subscribes to the topic.
+             * <p>The ID of the consumer group that subscribes to the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test_group_id</p>
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -130,7 +142,10 @@ public class OnsMessageTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance where the message that you want to query resides.
+             * <p>The ID of the instance to which the message you want to query belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_111111111111_DOxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -138,14 +153,17 @@ public class OnsMessageTraceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the message. Valid values:
-             * <p>
+             * <p>The status of the message. Valid values:</p>
+             * <ul>
+             * <li><strong>CONSUMED</strong>: The message is consumed.</li>
+             * <li><strong>CONSUMED_BUT_FILTERED</strong>: No consumer group subscribes to the message. The message is filtered out and not consumed.</li>
+             * <li><strong>NOT_CONSUME_YET</strong>: The message is not consumed.</li>
+             * <li><strong>NOT_ONLINE</strong>: The consumer group is offline.</li>
+             * <li><strong>UNKNOWN</strong>: The message is not consumed due to unknown reasons.</li>
+             * </ul>
              * 
-             * *   **CONSUMED**: The message is consumed.
-             * *   **CONSUMED_BUT_FILTERED:** No consumer groups subscribe to the message. The message is filtered out and not consumed.
-             * *   **NOT_CONSUME_YET**: The message is pending to be consumed.
-             * *   **NOT_ONLINE**: The consumer group is offline.
-             * *   **UNKNOWN**: The message is not consumed due to unknown reasons.
+             * <strong>example:</strong>
+             * <p>CONSUMED</p>
              */
             public Builder trackType(String trackType) {
                 this.trackType = trackType;
@@ -159,8 +177,14 @@ public class OnsMessageTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsMessageTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsMessageTraceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("MessageTrack")
+        @com.aliyun.core.annotation.NameInMap("MessageTrack")
         private java.util.List < MessageTrack> messageTrack;
 
         private Data(Builder builder) {

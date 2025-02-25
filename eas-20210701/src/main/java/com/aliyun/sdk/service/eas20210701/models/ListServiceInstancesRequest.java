@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListServiceInstancesRequest</p>
  */
 public class ListServiceInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("HostIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostIP")
     private String hostIP;
 
-    @Query
-    @NameInMap("InstanceIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIP")
     private String instanceIP;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("IsSpot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSpot")
     private Boolean isSpot;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
     private ListServiceInstancesRequest(Builder builder) {
@@ -252,7 +257,11 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region where the service is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -261,7 +270,11 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -270,7 +283,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The keyword used to query instances. Instances can be queried based on instance name, instance IP address, IP address of the server where the instance resides, and instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.118.xx.xx</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -279,7 +295,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * HostIP.
+         * <p>The IP address of the server where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder hostIP(String hostIP) {
             this.putQueryParameter("HostIP", hostIP);
@@ -288,7 +307,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIP.
+         * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder instanceIP(String instanceIP) {
             this.putQueryParameter("InstanceIP", instanceIP);
@@ -297,7 +319,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo-bdc5xxxx-8l7rk</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -306,7 +331,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The instance state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -315,7 +343,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -324,7 +355,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * IsSpot.
+         * <p>Specifies whether the instance is a preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSpot(Boolean isSpot) {
             this.putQueryParameter("IsSpot", isSpot);
@@ -333,7 +367,33 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sorting order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>asc</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>The instances are sorted in ascending order.</p>
+         * </li>
+         * <li><p>desc</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>The instances are sorted in descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -342,7 +402,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -351,7 +414,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -360,7 +426,26 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource group to which the instance belongs.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PublicResource</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DedicatedResource</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicResource</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -369,7 +454,57 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The service role.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>DataSet</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>dataset service</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>SDProxy</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>Stable-Diffusion proxy service</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Standard</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>standard service</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>Queue</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>queue service</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Queue</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -378,7 +513,22 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The field that you use to sort the query results.</p>
+         * <ul>
+         * <li><p>Set the value to StartTime.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>The value specifies that the query results are sorted based on the time when the instances were created</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>StartTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

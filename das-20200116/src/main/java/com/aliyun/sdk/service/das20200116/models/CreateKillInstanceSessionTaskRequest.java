@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKillInstanceSessionTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateKillInstanceSessionTaskRequest</p>
  */
 public class CreateKillInstanceSessionTaskRequest extends Request {
-    @Query
-    @NameInMap("DbUser")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbUser")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbUser;
 
-    @Query
-    @NameInMap("DbUserPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbUserPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbUserPassword;
 
-    @Query
-    @NameInMap("IgnoredUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoredUsers")
     private String ignoredUsers;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("KillAllSessions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KillAllSessions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean killAllSessions;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("SessionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionIds")
     private String sessionIds;
 
     private CreateKillInstanceSessionTaskRequest(Builder builder) {
@@ -142,7 +147,11 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         } 
 
         /**
-         * The database account that has the permissions to terminate sessions.
+         * <p>The database account that has the permissions to terminate sessions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         public Builder dbUser(String dbUser) {
             this.putQueryParameter("DbUser", dbUser);
@@ -151,7 +160,11 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder dbUserPassword(String dbUserPassword) {
             this.putQueryParameter("DbUserPassword", dbUserPassword);
@@ -160,10 +173,13 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * The account whose sessions do not need to be terminated.
-         * <p>
+         * <p>The account whose sessions do not need to be terminated.</p>
+         * <blockquote>
+         * <p> Set this parameter to a JSON array. Separate database accounts with commas (,). Example: [&quot;Database account 1&quot;,&quot;Database account 2&quot;].</p>
+         * </blockquote>
          * 
-         * >  Set this parameter to a JSON array. Separate database accounts with commas (,). Example: \[\"Database account 1\",\"Database account 2\"].
+         * <strong>example:</strong>
+         * <p>[&quot;db_user1&quot;,&quot;db_user2&quot;]</p>
          */
         public Builder ignoredUsers(String ignoredUsers) {
             this.putQueryParameter("IgnoredUsers", ignoredUsers);
@@ -172,7 +188,11 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -181,13 +201,18 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to terminate all sessions.
-         * <p>
+         * <p>Specifies whether to terminate all sessions.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>true</strong>, sessions of the accounts that are specified by <strong>IgnoredUsers</strong>, sessions of internal O&amp;M accounts of Alibaba Cloud, and <strong>Binlog Dump</strong> sessions are not terminated.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  If you set this parameter to **true**, sessions of the accounts that are specified by **IgnoredUsers**, sessions of internal O\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions are not terminated.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder killAllSessions(Boolean killAllSessions) {
             this.putQueryParameter("KillAllSessions", killAllSessions);
@@ -196,10 +221,13 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster. If you do not specify a node ID and set <strong>KillAllSessions</strong> to <strong>true</strong>, the system traverses all nodes in the PolarDB for MySQL cluster and terminates the active sessions on each node.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if the database instance is a PolarDB for MySQL cluster. If you do not specify a node ID and set **KillAllSessions** to **true**, the system traverses all nodes in the PolarDB for MySQL cluster and terminates the active sessions on each node.
+         * <strong>example:</strong>
+         * <p>pi-bp1v203xzzh0a****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -208,10 +236,13 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * The IDs of sessions that need to be terminated.
-         * <p>
+         * <p>The IDs of sessions that need to be terminated.</p>
+         * <blockquote>
+         * <p> Set this parameter to a JSON array. Separate session IDs with commas (,). Example: [&quot;Session ID1&quot;,&quot;Session ID2&quot;]. If <strong>KillAllSessions</strong> is set to <strong>true</strong>, this parameter does not take effect.</p>
+         * </blockquote>
          * 
-         * >  Set this parameter to a JSON array. Separate session IDs with commas (,). Example: \[\"Session ID1\",\"Session ID2\"]. If **KillAllSessions** is set to **true**, this parameter does not take effect.
+         * <strong>example:</strong>
+         * <p>[10805639,10805623,10805645,10805553,10805566,10805616]</p>
          */
         public Builder sessionIds(String sessionIds) {
             this.putQueryParameter("SessionIds", sessionIds);

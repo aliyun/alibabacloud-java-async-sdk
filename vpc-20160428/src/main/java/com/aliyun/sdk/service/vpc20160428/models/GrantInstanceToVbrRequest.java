@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantInstanceToVbrRequest} extends {@link RequestModel}
  *
  * <p>GrantInstanceToVbrRequest</p>
  */
 public class GrantInstanceToVbrRequest extends Request {
-    @Query
-    @NameInMap("GrantType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrantType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String grantType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VbrInstanceIds")
-    private java.util.List < String > vbrInstanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceIds")
+    private java.util.List<String> vbrInstanceIds;
 
-    @Query
-    @NameInMap("VbrOwnerUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrOwnerUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long vbrOwnerUid;
 
-    @Query
-    @NameInMap("VbrRegionNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrRegionNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrRegionNo;
 
     private GrantInstanceToVbrRequest(Builder builder) {
@@ -88,7 +93,7 @@ public class GrantInstanceToVbrRequest extends Request {
     /**
      * @return vbrInstanceIds
      */
-    public java.util.List < String > getVbrInstanceIds() {
+    public java.util.List<String> getVbrInstanceIds() {
         return this.vbrInstanceIds;
     }
 
@@ -110,7 +115,7 @@ public class GrantInstanceToVbrRequest extends Request {
         private String grantType; 
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > vbrInstanceIds; 
+        private java.util.List<String> vbrInstanceIds; 
         private Long vbrOwnerUid; 
         private String vbrRegionNo; 
 
@@ -129,11 +134,15 @@ public class GrantInstanceToVbrRequest extends Request {
         } 
 
         /**
-         * The VBRs that need to acquire permissions on the VPC. Valid values:
-         * <p>
+         * <p>The VBRs that need to acquire permissions on the VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong>: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave <strong>VbrInstanceIds</strong> empty.</li>
+         * <li><strong>Specify</strong>: Permissions on the VPC are granted to the specified VBRs. <strong>VbrInstanceIds</strong> must be assigned a value.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **All**: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave **VbrInstanceIds** empty.
-         * *   **Specify**: Permissions on the VPC are granted to the specified VBRs. **VbrInstanceIds** must be assigned a value.
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder grantType(String grantType) {
             this.putQueryParameter("GrantType", grantType);
@@ -142,7 +151,11 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1lqhq93q8evjpky****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,10 +164,12 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VPC is deployed.
-         * <p>
+         * <p>The ID of the region where the VPC is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,9 +178,9 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * The information about the VBRs.
+         * <p>The information about the VBRs.</p>
          */
-        public Builder vbrInstanceIds(java.util.List < String > vbrInstanceIds) {
+        public Builder vbrInstanceIds(java.util.List<String> vbrInstanceIds) {
             String vbrInstanceIdsShrink = shrink(vbrInstanceIds, "VbrInstanceIds", "simple");
             this.putQueryParameter("VbrInstanceIds", vbrInstanceIdsShrink);
             this.vbrInstanceIds = vbrInstanceIds;
@@ -173,7 +188,11 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VBR belongs.
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         public Builder vbrOwnerUid(Long vbrOwnerUid) {
             this.putQueryParameter("VbrOwnerUid", vbrOwnerUid);
@@ -182,7 +201,11 @@ public class GrantInstanceToVbrRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vbrRegionNo(String vbrRegionNo) {
             this.putQueryParameter("VbrRegionNo", vbrRegionNo);

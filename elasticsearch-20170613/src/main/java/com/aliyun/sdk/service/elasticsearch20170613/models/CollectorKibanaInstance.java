@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CollectorKibanaInstance} extends {@link TeaModel}
  *
  * <p>CollectorKibanaInstance</p>
  */
 public class CollectorKibanaInstance extends TeaModel {
-    @NameInMap("configType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("configType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configType;
 
-    @NameInMap("host")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("host")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String host;
 
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @NameInMap("kibanaHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("kibanaHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String kibanaHost;
 
-    @NameInMap("password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @NameInMap("protocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("protocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
-    @NameInMap("userName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("userName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
     private CollectorKibanaInstance(Builder builder) {
@@ -117,7 +117,10 @@ public class CollectorKibanaInstance extends TeaModel {
         private String userName; 
 
         /**
-         * configType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collectorElasticsearchForKibana</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -125,7 +128,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * host.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-*****-kibana.internal.elasticsearch.aliyuncs.com:5601</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -133,7 +139,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-45dfy****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -141,7 +150,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * kibanaHost.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://es-cn-****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-****.kibana.elasticsearch.aliyuncs.com:5601</a></p>
          */
         public Builder kibanaHost(String kibanaHost) {
             this.kibanaHost = kibanaHost;
@@ -149,7 +161,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -157,7 +172,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -165,7 +183,10 @@ public class CollectorKibanaInstance extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

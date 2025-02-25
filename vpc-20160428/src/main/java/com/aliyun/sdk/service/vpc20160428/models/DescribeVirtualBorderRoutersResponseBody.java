@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVirtualBorderRoutersResponseBody</p>
  */
 public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VirtualBorderRouterSet")
+    @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterSet")
     private VirtualBorderRouterSet virtualBorderRouterSet;
 
     private DescribeVirtualBorderRoutersResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         private VirtualBorderRouterSet virtualBorderRouterSet; 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +135,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the queried VBR.
+         * <p>The information about the VBR.</p>
          */
         public Builder virtualBorderRouterSet(VirtualBorderRouterSet virtualBorderRouterSet) {
             this.virtualBorderRouterSet = virtualBorderRouterSet;
@@ -131,14 +148,20 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class AssociatedCen extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
-        @NameInMap("CenStatus")
+        @com.aliyun.core.annotation.NameInMap("CenStatus")
         private String cenStatus;
 
         private AssociatedCen(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String cenStatus; 
 
             /**
-             * The ID of the CEN instance.
+             * <p>The CEN instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-kojok19xxx****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -190,7 +216,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+             * <p>The ID of the account to which the CEN instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1688000000000****</p>
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -198,14 +227,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CEN instance. Valid values:
-             * <p>
+             * <p>The status of the CEN instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Attached</strong></li>
+             * <li><strong>Attaching</strong></li>
+             * <li><strong>Detached</strong></li>
+             * <li><strong>Detaching</strong></li>
+             * <li>If no value is returned, the VBR is not attached to a CEN instance.</li>
+             * </ul>
              * 
-             * *   **Attached**: The VBR is attached to the CEN instance.
-             * *   **Attaching**: The VBR is being attached to the CEN instance.
-             * *   **Detached**: The VBR is detached from the CEN instance.
-             * *   **Detaching**: The VBR is being detached from the CEN instance.
-             * *   If no value is returned, the VBR is not attached to a CEN instance.
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -219,9 +251,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class AssociatedCens extends TeaModel {
-        @NameInMap("AssociatedCen")
-        private java.util.List < AssociatedCen> associatedCen;
+        @com.aliyun.core.annotation.NameInMap("AssociatedCen")
+        private java.util.List<AssociatedCen> associatedCen;
 
         private AssociatedCens(Builder builder) {
             this.associatedCen = builder.associatedCen;
@@ -238,17 +276,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return associatedCen
          */
-        public java.util.List < AssociatedCen> getAssociatedCen() {
+        public java.util.List<AssociatedCen> getAssociatedCen() {
             return this.associatedCen;
         }
 
         public static final class Builder {
-            private java.util.List < AssociatedCen> associatedCen; 
+            private java.util.List<AssociatedCen> associatedCen; 
 
             /**
              * AssociatedCen.
              */
-            public Builder associatedCen(java.util.List < AssociatedCen> associatedCen) {
+            public Builder associatedCen(java.util.List<AssociatedCen> associatedCen) {
                 this.associatedCen = associatedCen;
                 return this;
             }
@@ -260,50 +298,56 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class AssociatedPhysicalConnection extends TeaModel {
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("EnableIpv6")
+        @com.aliyun.core.annotation.NameInMap("EnableIpv6")
         private Boolean enableIpv6;
 
-        @NameInMap("LocalGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
         private String localGatewayIp;
 
-        @NameInMap("LocalIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalIpv6GatewayIp")
         private String localIpv6GatewayIp;
 
-        @NameInMap("PeerGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
 
-        @NameInMap("PeerIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerIpv6GatewayIp")
         private String peerIpv6GatewayIp;
 
-        @NameInMap("PeeringIpv6SubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringIpv6SubnetMask")
         private String peeringIpv6SubnetMask;
 
-        @NameInMap("PeeringSubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
         private String peeringSubnetMask;
 
-        @NameInMap("PhysicalConnectionBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionBusinessStatus")
         private String physicalConnectionBusinessStatus;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PhysicalConnectionOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionOwnerUid")
         private String physicalConnectionOwnerUid;
 
-        @NameInMap("PhysicalConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionStatus")
         private String physicalConnectionStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private String vlanId;
 
-        @NameInMap("VlanInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("VlanInterfaceId")
         private String vlanInterfaceId;
 
         private AssociatedPhysicalConnection(Builder builder) {
@@ -455,7 +499,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String vlanInterfaceId; 
 
             /**
-             * The circuit code of the Express Connect circuit. The circuit code is provided by the ISP.
+             * <p>The circuit code of the Express Connect circuit, which is provided by the connectivity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longtel0**</p>
              */
             public Builder circuitCode(String circuitCode) {
                 this.circuitCode = circuitCode;
@@ -463,11 +510,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIpv6(Boolean enableIpv6) {
                 this.enableIpv6 = enableIpv6;
@@ -475,7 +525,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 address of the gateway device on the Alibaba Cloud side.
+             * <p>The IPv4 address of the VBR on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder localGatewayIp(String localGatewayIp) {
                 this.localGatewayIp = localGatewayIp;
@@ -483,7 +536,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address of the gateway device on the Alibaba Cloud side.
+             * <p>The IPv6 address of the VBR on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
              */
             public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
                 this.localIpv6GatewayIp = localIpv6GatewayIp;
@@ -491,7 +547,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 address of the gateway device on the user side.
+             * <p>The IPv4 address of the VBR on the user side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.62.XX.XX</p>
              */
             public Builder peerGatewayIp(String peerGatewayIp) {
                 this.peerGatewayIp = peerGatewayIp;
@@ -499,7 +558,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address of the gateway device on the user side.
+             * <p>The IPv6 address of the VBR on the user side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
              */
             public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
                 this.peerIpv6GatewayIp = peerIpv6GatewayIp;
@@ -507,10 +569,11 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask for the IPv6 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
-             * <p>
+             * <p>The subnet mask for the IPv6 addresses on the user side and on the Alibaba Cloud side.</p>
+             * <p>Both IPv6 addresses must belong to the same subnet.</p>
              * 
-             * The two IPv6 addresses must fall within the same subnet.
+             * <strong>example:</strong>
+             * <p>2408:4004:cc:400::/56</p>
              */
             public Builder peeringIpv6SubnetMask(String peeringIpv6SubnetMask) {
                 this.peeringIpv6SubnetMask = peeringIpv6SubnetMask;
@@ -518,10 +581,11 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask for the IPv4 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
-             * <p>
+             * <p>The subnet mask for the IPv4 addresses of the VBR on the user side and on the Alibaba Cloud side.</p>
+             * <p>Both IPv4 addresses must belong to the same subnet.</p>
              * 
-             * The two IPv4 addresses must fall within the same subnet.
+             * <strong>example:</strong>
+             * <p>255.255.255.252</p>
              */
             public Builder peeringSubnetMask(String peeringSubnetMask) {
                 this.peeringSubnetMask = peeringSubnetMask;
@@ -529,11 +593,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the Express Connect circuit.
-             * <p>
+             * <p>The business status of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal:</strong> The Express Connect circuit is running as normal.</li>
+             * <li><strong>FinancialLocked:</strong> The Express Connect circuit is locked due to overdue payments.</li>
+             * </ul>
              * 
-             * *   **Normal:** The Express Connect circuit is running as normal.
-             * *   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder physicalConnectionBusinessStatus(String physicalConnectionBusinessStatus) {
                 this.physicalConnectionBusinessStatus = physicalConnectionBusinessStatus;
@@ -541,7 +608,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Express Connect circuit.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-119mfjzm7****</p>
              */
             public Builder physicalConnectionId(String physicalConnectionId) {
                 this.physicalConnectionId = physicalConnectionId;
@@ -549,7 +619,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.
+             * <p>The ID of the account to which the Express Connect circuit belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678****</p>
              */
             public Builder physicalConnectionOwnerUid(String physicalConnectionOwnerUid) {
                 this.physicalConnectionOwnerUid = physicalConnectionOwnerUid;
@@ -557,19 +630,22 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Express Connect circuit.
-             * <p>
+             * <p>The status of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Initial:</strong> The application is under review.</li>
+             * <li><strong>Approved</strong>: The application is approved.</li>
+             * <li><strong>Allocating</strong>: The system is allocating resources.</li>
+             * <li><strong>Allocated</strong>: The Express Connect circuit is under construction.</li>
+             * <li><strong>Confirmed</strong>: The Express Connect circuit is to be confirmed.</li>
+             * <li><strong>Enabled</strong>: The Express Connect circuit is enabled.</li>
+             * <li><strong>Rejected</strong>: The application is rejected.</li>
+             * <li><strong>Canceled</strong>: The application is canceled.</li>
+             * <li><strong>Allocation Failed:</strong> The system failed to allocate resources.</li>
+             * <li><strong>Terminated:</strong> The Express Connect circuit is disabled.</li>
+             * </ul>
              * 
-             * *   **Initial:** The application is under review.
-             * *   **Approved**: The application is approved.
-             * *   **Allocating**: The system is allocating resources.
-             * *   **Allocated**: The Express Connect circuit is under construction.
-             * *   **Confirmed**: The Express Connect circuit is to be confirmed.
-             * *   **Enabled**: The Express Connect circuit is enabled.
-             * *   **Rejected**: The application is rejected.
-             * *   **Canceled**: The application is canceled.
-             * *   **Allocation Failed:** The system failed to allocate resources.
-             * *   **Terminated:** The Express Connect circuit is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder physicalConnectionStatus(String physicalConnectionStatus) {
                 this.physicalConnectionStatus = physicalConnectionStatus;
@@ -577,15 +653,18 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VBR. Valid values:
-             * <p>
+             * <p>The status of the VBR. Valid values:</p>
+             * <ul>
+             * <li><strong>unconfirmed</strong></li>
+             * <li><strong>active:</strong></li>
+             * <li><strong>terminating</strong></li>
+             * <li><strong>terminated</strong></li>
+             * <li><strong>recovering</strong></li>
+             * <li><strong>deleting:</strong></li>
+             * </ul>
              * 
-             * *   **unconfirmed**
-             * *   **active**
-             * *   **terminating**
-             * *   **terminated**
-             * *   **recovering**
-             * *   **deleting**
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -593,7 +672,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The VLAN ID of the VBR.
+             * <p>The VLAN ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vlanId(String vlanId) {
                 this.vlanId = vlanId;
@@ -601,7 +683,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR interface, which can be used as the next hop of a VBR route.
+             * <p>The ID of the VBR interface, which can be used as a next hop of a VBR route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ri-kojok19x3j0q6k****</p>
              */
             public Builder vlanInterfaceId(String vlanInterfaceId) {
                 this.vlanInterfaceId = vlanInterfaceId;
@@ -615,9 +700,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class AssociatedPhysicalConnections extends TeaModel {
-        @NameInMap("AssociatedPhysicalConnection")
-        private java.util.List < AssociatedPhysicalConnection> associatedPhysicalConnection;
+        @com.aliyun.core.annotation.NameInMap("AssociatedPhysicalConnection")
+        private java.util.List<AssociatedPhysicalConnection> associatedPhysicalConnection;
 
         private AssociatedPhysicalConnections(Builder builder) {
             this.associatedPhysicalConnection = builder.associatedPhysicalConnection;
@@ -634,17 +725,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return associatedPhysicalConnection
          */
-        public java.util.List < AssociatedPhysicalConnection> getAssociatedPhysicalConnection() {
+        public java.util.List<AssociatedPhysicalConnection> getAssociatedPhysicalConnection() {
             return this.associatedPhysicalConnection;
         }
 
         public static final class Builder {
-            private java.util.List < AssociatedPhysicalConnection> associatedPhysicalConnection; 
+            private java.util.List<AssociatedPhysicalConnection> associatedPhysicalConnection; 
 
             /**
              * AssociatedPhysicalConnection.
              */
-            public Builder associatedPhysicalConnection(java.util.List < AssociatedPhysicalConnection> associatedPhysicalConnection) {
+            public Builder associatedPhysicalConnection(java.util.List<AssociatedPhysicalConnection> associatedPhysicalConnection) {
                 this.associatedPhysicalConnection = associatedPhysicalConnection;
                 return this;
             }
@@ -656,11 +747,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -695,7 +792,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -703,7 +803,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -717,9 +820,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class VirtualBorderRouterTypeTags extends TeaModel {
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private VirtualBorderRouterTypeTags(Builder builder) {
             this.tags = builder.tags;
@@ -736,17 +845,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -758,116 +867,134 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class VirtualBorderRouterType extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("ActivationTime")
+        @com.aliyun.core.annotation.NameInMap("ActivationTime")
         private String activationTime;
 
-        @NameInMap("AssociatedCens")
+        @com.aliyun.core.annotation.NameInMap("AssociatedCens")
         private AssociatedCens associatedCens;
 
-        @NameInMap("AssociatedPhysicalConnections")
+        @com.aliyun.core.annotation.NameInMap("AssociatedPhysicalConnections")
         private AssociatedPhysicalConnections associatedPhysicalConnections;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("CloudBoxInstanceId")
+        @com.aliyun.core.annotation.NameInMap("CloudBoxInstanceId")
         private String cloudBoxInstanceId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DetectMultiplier")
+        @com.aliyun.core.annotation.NameInMap("DetectMultiplier")
         private Long detectMultiplier;
 
-        @NameInMap("EccId")
+        @com.aliyun.core.annotation.NameInMap("EccId")
         private String eccId;
 
-        @NameInMap("EnableIpv6")
+        @com.aliyun.core.annotation.NameInMap("EcrAttatchStatus")
+        private String ecrAttatchStatus;
+
+        @com.aliyun.core.annotation.NameInMap("EcrId")
+        private String ecrId;
+
+        @com.aliyun.core.annotation.NameInMap("EcrOwnerId")
+        private String ecrOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIpv6")
         private Boolean enableIpv6;
 
-        @NameInMap("LocalGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
         private String localGatewayIp;
 
-        @NameInMap("LocalIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalIpv6GatewayIp")
         private String localIpv6GatewayIp;
 
-        @NameInMap("MinRxInterval")
+        @com.aliyun.core.annotation.NameInMap("MinRxInterval")
         private Long minRxInterval;
 
-        @NameInMap("MinTxInterval")
+        @com.aliyun.core.annotation.NameInMap("MinTxInterval")
         private Long minTxInterval;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PConnVbrChargeType")
+        @com.aliyun.core.annotation.NameInMap("PConnVbrChargeType")
         private String pConnVbrChargeType;
 
-        @NameInMap("PConnVbrExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PConnVbrExpireTime")
         private String pConnVbrExpireTime;
 
-        @NameInMap("PeerGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
 
-        @NameInMap("PeerIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerIpv6GatewayIp")
         private String peerIpv6GatewayIp;
 
-        @NameInMap("PeeringIpv6SubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringIpv6SubnetMask")
         private String peeringIpv6SubnetMask;
 
-        @NameInMap("PeeringSubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
         private String peeringSubnetMask;
 
-        @NameInMap("PhysicalConnectionBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionBusinessStatus")
         private String physicalConnectionBusinessStatus;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PhysicalConnectionOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionOwnerUid")
         private String physicalConnectionOwnerUid;
 
-        @NameInMap("PhysicalConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionStatus")
         private String physicalConnectionStatus;
 
-        @NameInMap("RecoveryTime")
+        @com.aliyun.core.annotation.NameInMap("RecoveryTime")
         private String recoveryTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SitelinkEnable")
+        private Boolean sitelinkEnable;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private VirtualBorderRouterTypeTags tags;
 
-        @NameInMap("TerminationTime")
+        @com.aliyun.core.annotation.NameInMap("TerminationTime")
         private String terminationTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VbrId")
+        @com.aliyun.core.annotation.NameInMap("VbrId")
         private String vbrId;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private Integer vlanId;
 
-        @NameInMap("VlanInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("VlanInterfaceId")
         private String vlanInterfaceId;
 
         private VirtualBorderRouterType(Builder builder) {
@@ -882,6 +1009,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.description = builder.description;
             this.detectMultiplier = builder.detectMultiplier;
             this.eccId = builder.eccId;
+            this.ecrAttatchStatus = builder.ecrAttatchStatus;
+            this.ecrId = builder.ecrId;
+            this.ecrOwnerId = builder.ecrOwnerId;
             this.enableIpv6 = builder.enableIpv6;
             this.localGatewayIp = builder.localGatewayIp;
             this.localIpv6GatewayIp = builder.localIpv6GatewayIp;
@@ -901,6 +1031,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.recoveryTime = builder.recoveryTime;
             this.resourceGroupId = builder.resourceGroupId;
             this.routeTableId = builder.routeTableId;
+            this.sitelinkEnable = builder.sitelinkEnable;
             this.status = builder.status;
             this.tags = builder.tags;
             this.terminationTime = builder.terminationTime;
@@ -993,6 +1124,27 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
          */
         public String getEccId() {
             return this.eccId;
+        }
+
+        /**
+         * @return ecrAttatchStatus
+         */
+        public String getEcrAttatchStatus() {
+            return this.ecrAttatchStatus;
+        }
+
+        /**
+         * @return ecrId
+         */
+        public String getEcrId() {
+            return this.ecrId;
+        }
+
+        /**
+         * @return ecrOwnerId
+         */
+        public String getEcrOwnerId() {
+            return this.ecrOwnerId;
         }
 
         /**
@@ -1129,6 +1281,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
+         * @return sitelinkEnable
+         */
+        public Boolean getSitelinkEnable() {
+            return this.sitelinkEnable;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1189,6 +1348,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String description; 
             private Long detectMultiplier; 
             private String eccId; 
+            private String ecrAttatchStatus; 
+            private String ecrId; 
+            private String ecrOwnerId; 
             private Boolean enableIpv6; 
             private String localGatewayIp; 
             private String localIpv6GatewayIp; 
@@ -1208,6 +1370,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String recoveryTime; 
             private String resourceGroupId; 
             private String routeTableId; 
+            private Boolean sitelinkEnable; 
             private String status; 
             private VirtualBorderRouterTypeTags tags; 
             private String terminationTime; 
@@ -1217,7 +1380,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String vlanInterfaceId; 
 
             /**
-             * The ID of the access point.
+             * <p>The ID of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-cn-kojok1x****</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -1225,7 +1391,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VBR was first activated.
+             * <p>The time when the VBR was activated for the first time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-08T12:20:55</p>
              */
             public Builder activationTime(String activationTime) {
                 this.activationTime = activationTime;
@@ -1233,7 +1402,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Cloud Enterprise Network (CEN) instance to which the VBR is attached.
+             * <p>The information about the Cloud Enterprise Network (CEN) instance to which the VBR is attached.</p>
              */
             public Builder associatedCens(AssociatedCens associatedCens) {
                 this.associatedCens = associatedCens;
@@ -1241,7 +1410,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Express Connect circuit that is associated with the VBR.
+             * <p>The information about the Express Connect circuit that is associated with the VBR.</p>
              */
             public Builder associatedPhysicalConnections(AssociatedPhysicalConnections associatedPhysicalConnections) {
                 this.associatedPhysicalConnections = associatedPhysicalConnections;
@@ -1249,7 +1418,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of the VBR. Unit: Mbit/s.
+             * <p>The bandwidth value of the VBR. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -1257,7 +1429,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The circuit code of the Express Connect circuit. The circuit code is provided by the Internet service provider (ISP).
+             * <p>The circuit code of the Express Connect circuit, which is provided by the connectivity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longtel0****</p>
              */
             public Builder circuitCode(String circuitCode) {
                 this.circuitCode = circuitCode;
@@ -1265,7 +1440,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud box.
+             * <p>The ID of the cloud box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb-****</p>
              */
             public Builder cloudBoxInstanceId(String cloudBoxInstanceId) {
                 this.cloudBoxInstanceId = cloudBoxInstanceId;
@@ -1273,7 +1451,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VBR was created.
+             * <p>The time when the VBR was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-08T12:20:55</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1281,7 +1462,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the VBR.
+             * <p>The description of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1289,12 +1473,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The multiple of the detection time.
-             * <p>
+             * <p>The multiple of the detection time.</p>
+             * <p>This value indicates the maximum number of dropped packets that is allowed by the receiver when the initiator transmits packets. This value can be used to check whether the connection works as expected.</p>
+             * <p>Valid values: <strong>3 to 10</strong>.</p>
              * 
-             * This value indicates the maximum number of dropped packets that is allowed by the receiver when the initiator transmits packets. This value can be used to check whether the connection works as expected.
-             * 
-             * Valid values: **3 to 10**.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder detectMultiplier(Long detectMultiplier) {
                 this.detectMultiplier = detectMultiplier;
@@ -1302,7 +1486,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECC instance.
+             * <p>The ID of the Express Cloud Connect (ECC) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecc-h****</p>
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
@@ -1310,11 +1497,54 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled. Valid values:
-             * <p>
+             * <p>The status of the ECR. Valid values:</p>
+             * <ul>
+             * <li><strong>Attached</strong></li>
+             * <li><strong>Attaching</strong></li>
+             * <li><strong>Detached</strong></li>
+             * <li><strong>Detaching</strong></li>
+             * <li>If no value is returned, the VBR is not attached to a CEN instance.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>Attached</p>
+             */
+            public Builder ecrAttatchStatus(String ecrAttatchStatus) {
+                this.ecrAttatchStatus = ecrAttatchStatus;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Express Connect Router (ECR).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-7vrbqv9lcgvzqbwwkm</p>
+             */
+            public Builder ecrId(String ecrId) {
+                this.ecrId = ecrId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Alibaba Cloud account (primary account)  to which the ECR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192732132151xxxx</p>
+             */
+            public Builder ecrOwnerId(String ecrOwnerId) {
+                this.ecrOwnerId = ecrOwnerId;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableIpv6(Boolean enableIpv6) {
                 this.enableIpv6 = enableIpv6;
@@ -1322,7 +1552,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 address of the gateway device on the Alibaba Cloud side.
+             * <p>The IPv4 address of the VBR on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder localGatewayIp(String localGatewayIp) {
                 this.localGatewayIp = localGatewayIp;
@@ -1330,7 +1563,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address of the gateway device on the Alibaba Cloud side.
+             * <p>The IPv6 address of the VBR on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
              */
             public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
                 this.localIpv6GatewayIp = localIpv6GatewayIp;
@@ -1338,7 +1574,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval to receive BFD packets. Valid values: **200 to 1000**. Unit: milliseconds.
+             * <p>The time interval to receive BFD packets. Valid values: <strong>200 to 1000</strong>. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder minRxInterval(Long minRxInterval) {
                 this.minRxInterval = minRxInterval;
@@ -1346,7 +1585,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval to send Bidirectional Forwarding Detection (BFD) packets. Valid values: **200 to 1000**. Unit: milliseconds.
+             * <p>The time interval to send Bidirectional Forwarding Detection (BFD) packets. Valid values: <strong>200 to 1000</strong>. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder minTxInterval(Long minTxInterval) {
                 this.minTxInterval = minTxInterval;
@@ -1354,7 +1596,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VBR.
+             * <p>The VBR name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1362,11 +1607,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the VBR. Valid values:
-             * <p>
+             * <p>The billing method of the VBR. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid:</strong> subscription. If you choose this billing method, make sure that your account supports balance payments or credit payments.</li>
+             * <li><strong>PostPaid:</strong> pay-as-you-go.</li>
+             * </ul>
              * 
-             * *   **PrePaid**: subscription. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
-             * *   **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder pConnVbrChargeType(String pConnVbrChargeType) {
                 this.pConnVbrChargeType = pConnVbrChargeType;
@@ -1374,7 +1622,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VBR expires.
+             * <p>The time when the VBR expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-08T12:20:55</p>
              */
             public Builder pConnVbrExpireTime(String pConnVbrExpireTime) {
                 this.pConnVbrExpireTime = pConnVbrExpireTime;
@@ -1382,7 +1633,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 address of the gateway device on the user side.
+             * <p>The IPv4 address of the VBR on the user side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder peerGatewayIp(String peerGatewayIp) {
                 this.peerGatewayIp = peerGatewayIp;
@@ -1390,7 +1644,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address of the gateway device on the user side.
+             * <p>The IPv6 address of the VBR on the user side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
              */
             public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
                 this.peerIpv6GatewayIp = peerIpv6GatewayIp;
@@ -1398,7 +1655,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask of the IPv6 addresses configured on the user side and Alibaba Cloud side.
+             * <p>The subnet mask for the IPv6 addresses on the user side and on the Alibaba Cloud side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000:1234:0:a000::/55</p>
              */
             public Builder peeringIpv6SubnetMask(String peeringIpv6SubnetMask) {
                 this.peeringIpv6SubnetMask = peeringIpv6SubnetMask;
@@ -1406,7 +1666,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask of the IPv4 addresses configured on the user side and Alibaba Cloud side.
+             * <p>The subnet mask for the IPv4 addresses on the Alibaba Cloud side and on the user side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255.255.255.252</p>
              */
             public Builder peeringSubnetMask(String peeringSubnetMask) {
                 this.peeringSubnetMask = peeringSubnetMask;
@@ -1414,11 +1677,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the Express Connect circuit.
-             * <p>
+             * <p>The business status of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal:</strong> The Express Connect circuit is running as normal.</li>
+             * <li><strong>FinancialLocked:</strong> The Express Connect circuit is locked due to overdue payments.</li>
+             * </ul>
              * 
-             * *   **Normal:** The Express Connect circuit is running asnormal.
-             * *   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder physicalConnectionBusinessStatus(String physicalConnectionBusinessStatus) {
                 this.physicalConnectionBusinessStatus = physicalConnectionBusinessStatus;
@@ -1426,7 +1692,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Express Connect circuit to which the VBR belongs.
+             * <p>The ID of the Express Connect circuit to which the VBR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-119mfjzm7x****</p>
              */
             public Builder physicalConnectionId(String physicalConnectionId) {
                 this.physicalConnectionId = physicalConnectionId;
@@ -1434,7 +1703,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.
+             * <p>The ID of the account to which the Express Connect circuit belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1688000000000****</p>
              */
             public Builder physicalConnectionOwnerUid(String physicalConnectionOwnerUid) {
                 this.physicalConnectionOwnerUid = physicalConnectionOwnerUid;
@@ -1442,19 +1714,22 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Express Connect circuit.
-             * <p>
+             * <p>The status of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Initial:</strong> The application is under review.</li>
+             * <li><strong>Approved</strong>: The application is approved.</li>
+             * <li><strong>Allocating</strong>: The system is allocating resources.</li>
+             * <li><strong>Allocated</strong>: The Express Connect circuit is under construction.</li>
+             * <li><strong>Confirmed</strong>: The Express Connect circuit is to be confirmed.</li>
+             * <li><strong>Enabled</strong>: The Express Connect circuit is enabled.</li>
+             * <li><strong>Rejected</strong>: The application is rejected.</li>
+             * <li><strong>Canceled</strong>: The application is canceled.</li>
+             * <li><strong>Allocation Failed:</strong> The system failed to allocate resources.</li>
+             * <li><strong>Terminated:</strong> The Express Connect circuit is disabled.</li>
+             * </ul>
              * 
-             * *   **Initial:** The application is under review.
-             * *   **Approved**: The application is approved.
-             * *   **Allocating**: The system is allocating resources.
-             * *   **Allocated**: The Express Connect circuit is under construction.
-             * *   **Confirmed**: The Express Connect circuit is to be confirmed.
-             * *   **Enabled**: The Express Connect circuit is enabled.
-             * *   **Rejected**: The application is rejected.
-             * *   **Canceled**: The application is canceled.
-             * *   **Allocation Failed:** The system failed to allocate resources.
-             * *   **Terminated:** The Express Connect circuit is disabled.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder physicalConnectionStatus(String physicalConnectionStatus) {
                 this.physicalConnectionStatus = physicalConnectionStatus;
@@ -1462,7 +1737,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the status of the VBR last changed from **terminated** to **active**.
+             * <p>The last time when the status of the VBR changed from <strong>terminated</strong> to <strong>active</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-08T12:20:55</p>
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
@@ -1470,7 +1748,11 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The resource group ID.</p>
+             * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph6aiy****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1478,7 +1760,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR route table.
+             * <p>The ID of the route table of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtb-bp1****</p>
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -1486,15 +1771,36 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VBR. Valid values:
-             * <p>
+             * <p>Indicates whether to allow service access between data centers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> If no value is returned, service access between data centers is not allowed.</p>
+             * </blockquote>
              * 
-             * *   **unconfirmed**
-             * *   **active**
-             * *   **terminating**
-             * *   **terminated**
-             * *   **recovering**
-             * *   **deleting**
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder sitelinkEnable(Boolean sitelinkEnable) {
+                this.sitelinkEnable = sitelinkEnable;
+                return this;
+            }
+
+            /**
+             * <p>The status of the VBR. Valid values:</p>
+             * <ul>
+             * <li><strong>unconfirmed</strong></li>
+             * <li><strong>active</strong></li>
+             * <li><strong>terminating</strong></li>
+             * <li><strong>terminated</strong></li>
+             * <li><strong>recovering</strong></li>
+             * <li><strong>deleting:</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1502,7 +1808,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tag of the resource.</p>
              */
             public Builder tags(VirtualBorderRouterTypeTags tags) {
                 this.tags = tags;
@@ -1510,7 +1816,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VBR was last disabled.
+             * <p>The last time when the VBR was terminated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-08T12:20:55</p>
              */
             public Builder terminationTime(String terminationTime) {
                 this.terminationTime = terminationTime;
@@ -1518,7 +1827,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the VBR.
+             * <p>The VBR type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pconnVBR</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1526,7 +1838,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The VBR ID.
+             * <p>The VBR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-bp1jcg5cmxjbl9xgc****</p>
              */
             public Builder vbrId(String vbrId) {
                 this.vbrId = vbrId;
@@ -1534,7 +1849,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The VLAN ID of the VBR.
+             * <p>The VLAN ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder vlanId(Integer vlanId) {
                 this.vlanId = vlanId;
@@ -1542,7 +1860,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR interface.
+             * <p>The ID of the VBR interface.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ri-2zeo3xzyf38r4xx****</p>
              */
             public Builder vlanInterfaceId(String vlanInterfaceId) {
                 this.vlanInterfaceId = vlanInterfaceId;
@@ -1556,9 +1877,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class VirtualBorderRouterSet extends TeaModel {
-        @NameInMap("VirtualBorderRouterType")
-        private java.util.List < VirtualBorderRouterType> virtualBorderRouterType;
+        @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterType")
+        private java.util.List<VirtualBorderRouterType> virtualBorderRouterType;
 
         private VirtualBorderRouterSet(Builder builder) {
             this.virtualBorderRouterType = builder.virtualBorderRouterType;
@@ -1575,17 +1902,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return virtualBorderRouterType
          */
-        public java.util.List < VirtualBorderRouterType> getVirtualBorderRouterType() {
+        public java.util.List<VirtualBorderRouterType> getVirtualBorderRouterType() {
             return this.virtualBorderRouterType;
         }
 
         public static final class Builder {
-            private java.util.List < VirtualBorderRouterType> virtualBorderRouterType; 
+            private java.util.List<VirtualBorderRouterType> virtualBorderRouterType; 
 
             /**
              * VirtualBorderRouterType.
              */
-            public Builder virtualBorderRouterType(java.util.List < VirtualBorderRouterType> virtualBorderRouterType) {
+            public Builder virtualBorderRouterType(java.util.List<VirtualBorderRouterType> virtualBorderRouterType) {
                 this.virtualBorderRouterType = virtualBorderRouterType;
                 return this;
             }

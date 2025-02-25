@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigRuleEvaluationStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConfigRuleEvaluationStatisticsResponseBody</p>
  */
 public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
-    @NameInMap("EvaluationResults")
-    private java.util.List < EvaluationResults> evaluationResults;
+    @com.aliyun.core.annotation.NameInMap("EvaluationResults")
+    private java.util.List<EvaluationResults> evaluationResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConfigRuleEvaluationStatisticsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
     /**
      * @return evaluationResults
      */
-    public java.util.List < EvaluationResults> getEvaluationResults() {
+    public java.util.List<EvaluationResults> getEvaluationResults() {
         return this.evaluationResults;
     }
 
@@ -46,19 +51,22 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EvaluationResults> evaluationResults; 
+        private java.util.List<EvaluationResults> evaluationResults; 
         private String requestId; 
 
         /**
-         * The statistics of compliance evaluation results.
+         * <p>The statistics of compliance evaluation results.</p>
          */
-        public Builder evaluationResults(java.util.List < EvaluationResults> evaluationResults) {
+        public Builder evaluationResults(java.util.List<EvaluationResults> evaluationResults) {
             this.evaluationResults = evaluationResults;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FF2B787-347E-5299-A196-2C0448DEA341</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConfigRuleEvaluationStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConfigRuleEvaluationStatisticsResponseBody</p>
+     */
     public static class EvaluationResults extends TeaModel {
-        @NameInMap("NonCompliantResourceCnt")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantResourceCnt")
         private Integer nonCompliantResourceCnt;
 
-        @NameInMap("NonCompliantRuleCnt")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantRuleCnt")
         private Integer nonCompliantRuleCnt;
 
-        @NameInMap("StatisticDate")
+        @com.aliyun.core.annotation.NameInMap("StatisticDate")
         private String statisticDate;
 
-        @NameInMap("TotalResourceCnt")
+        @com.aliyun.core.annotation.NameInMap("TotalResourceCnt")
         private Integer totalResourceCnt;
 
-        @NameInMap("TotalRuleCnt")
+        @com.aliyun.core.annotation.NameInMap("TotalRuleCnt")
         private Integer totalRuleCnt;
 
         private EvaluationResults(Builder builder) {
@@ -146,7 +160,10 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
             private Integer totalRuleCnt; 
 
             /**
-             * The number of resources that are evaluated as non-compliant.
+             * <p>The number of resources that are evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder nonCompliantResourceCnt(Integer nonCompliantResourceCnt) {
                 this.nonCompliantResourceCnt = nonCompliantResourceCnt;
@@ -154,7 +171,10 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rules based on which resources are evaluated as non-compliant.
+             * <p>The number of rules based on which resources are evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nonCompliantRuleCnt(Integer nonCompliantRuleCnt) {
                 this.nonCompliantRuleCnt = nonCompliantRuleCnt;
@@ -162,7 +182,10 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the statistics are obtained.
+             * <p>The date on which the statistics are obtained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-27</p>
              */
             public Builder statisticDate(String statisticDate) {
                 this.statisticDate = statisticDate;
@@ -170,7 +193,10 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of resources.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91</p>
              */
             public Builder totalResourceCnt(Integer totalResourceCnt) {
                 this.totalResourceCnt = totalResourceCnt;
@@ -178,7 +204,10 @@ public class ListConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rules.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalRuleCnt(Integer totalRuleCnt) {
                 this.totalRuleCnt = totalRuleCnt;

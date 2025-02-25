@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceInspectionsRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceInspectionsRequest</p>
  */
 public class GetInstanceInspectionsRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("InstanceArea")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceArea")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceArea;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SearchMap")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchMap")
     private String searchMap;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private GetInstanceInspectionsRequest(Builder builder) {
@@ -158,10 +163,14 @@ public class GetInstanceInspectionsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>1655427625000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,12 +179,16 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>PolarDBMySQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **Redis**
-         * *   **PolarDBMySQL**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -184,14 +197,19 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * The type of the instance on which the database is deployed. Valid values:
-         * <p>
+         * <p>The type of the instance on which the database is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
+         * <li><strong>ECS</strong>: an ECS instance on which a self-managed database is deployed.</li>
+         * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value IDC specifies that the instance is deployed in a data center.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RDS**: an Alibaba Cloud database instance.
-         * *   **ECS**: an ECS instance on which a self-managed database is deployed.
-         * *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
-         * 
-         * >  The value IDC specifies that the instance is deployed in a data center.
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder instanceArea(String instanceArea) {
             this.putQueryParameter("InstanceArea", instanceArea);
@@ -200,7 +218,11 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * The page number. The value must be a positive integer. Default value: 1.
+         * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -209,7 +231,11 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,7 +244,10 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2eil6npi****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -227,12 +256,15 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * The filter condition, which can be specified in one of the following formats:
-         * <p>
+         * <p>The filter condition, which can be specified in one of the following formats:</p>
+         * <ul>
+         * <li>Specify the ID of a single instance in the {&quot;InstanceId&quot;:&quot;Instance ID&quot;} format.</li>
+         * <li>Specify the IDs of multiple instances in the {&quot;InstanceIds&quot;:[&quot;Instance ID1&quot;,&quot;Instance ID2&quot;]} format. Separate the instance IDs with commas (,).</li>
+         * <li>Specify the region in which the instance resides in the {&quot;region&quot;:&quot;Region of the instance&quot;} format.</li>
+         * </ul>
          * 
-         * *   Specify the ID of a single instance in the {"InstanceId":"Instance ID"} format.
-         * *   Specify the IDs of multiple instances in the {"InstanceIds":\["Instance ID1","Instance ID2"]} format. Separate the instance IDs with commas (,).
-         * *   Specify the region in which the instance resides in the {"region":"Region of the instance"} format.
+         * <strong>example:</strong>
+         * <p>{&quot;InstanceId&quot;:&quot;rm-bp10usoc1erj7****&quot;}</p>
          */
         public Builder searchMap(String searchMap) {
             this.putQueryParameter("SearchMap", searchMap);
@@ -241,7 +273,11 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655416825000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

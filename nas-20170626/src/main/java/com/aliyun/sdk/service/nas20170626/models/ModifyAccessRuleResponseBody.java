@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccessRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAccessRuleResponseBody</p>
  */
 public class ModifyAccessRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyAccessRuleResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyAccessRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6299428C-3861-435D-AE54-9B330A00****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

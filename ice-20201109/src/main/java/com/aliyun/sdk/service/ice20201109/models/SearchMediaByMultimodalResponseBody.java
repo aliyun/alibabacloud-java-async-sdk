@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByMultimodalResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMediaByMultimodalResponseBody</p>
  */
 public class SearchMediaByMultimodalResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("MediaList")
-    private java.util.List < MediaList> mediaList;
+    @com.aliyun.core.annotation.NameInMap("MediaList")
+    private java.util.List<MediaList> mediaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private SearchMediaByMultimodalResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     /**
      * @return mediaList
      */
-    public java.util.List < MediaList> getMediaList() {
+    public java.util.List<MediaList> getMediaList() {
         return this.mediaList;
     }
 
@@ -80,13 +85,16 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaList> mediaList; 
+        private java.util.List<MediaList> mediaList; 
         private String requestId; 
         private String success; 
         private Long total; 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +102,18 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         }
 
         /**
-         * MediaList.
+         * <p>The media assets that contain the specified content.</p>
          */
-        public Builder mediaList(java.util.List < MediaList> mediaList) {
+        public Builder mediaList(java.util.List<MediaList> mediaList) {
             this.mediaList = mediaList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +121,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values: true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -118,7 +132,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of data records that meet the specified filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -131,14 +148,20 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMediaByMultimodalResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByMultimodalResponseBody</p>
+     */
     public static class ClipInfo extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Double to;
 
         private ClipInfo(Builder builder) {
@@ -182,7 +205,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
             private Double to; 
 
             /**
-             * From.
+             * <p>The start time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder from(Double from) {
                 this.from = from;
@@ -190,7 +216,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -198,7 +227,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>The end time of the clip.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder to(Double to) {
                 this.to = to;
@@ -212,11 +244,17 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMediaByMultimodalResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMediaByMultimodalResponseBody</p>
+     */
     public static class MediaList extends TeaModel {
-        @NameInMap("ClipInfo")
-        private java.util.List < ClipInfo> clipInfo;
+        @com.aliyun.core.annotation.NameInMap("ClipInfo")
+        private java.util.List<ClipInfo> clipInfo;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaList(Builder builder) {
@@ -235,7 +273,7 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         /**
          * @return clipInfo
          */
-        public java.util.List < ClipInfo> getClipInfo() {
+        public java.util.List<ClipInfo> getClipInfo() {
             return this.clipInfo;
         }
 
@@ -247,19 +285,22 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ClipInfo> clipInfo; 
+            private java.util.List<ClipInfo> clipInfo; 
             private String mediaId; 
 
             /**
-             * ClipInfo.
+             * <p>The information about the clip.</p>
              */
-            public Builder clipInfo(java.util.List < ClipInfo> clipInfo) {
+            public Builder clipInfo(java.util.List<ClipInfo> clipInfo) {
                 this.clipInfo = clipInfo;
                 return this;
             }
 
             /**
-             * MediaId.
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a18936e0e28771edb59ae6f6f47a****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkItemAllFieldsRequest} extends {@link RequestModel}
  *
  * <p>ListWorkItemAllFieldsRequest</p>
  */
 public class ListWorkItemAllFieldsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Query
-    @NameInMap("spaceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spaceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceType;
 
-    @Query
-    @NameInMap("workitemTypeIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workitemTypeIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemTypeIdentifier;
 
     private ListWorkItemAllFieldsRequest(Builder builder) {
@@ -100,7 +105,10 @@ public class ListWorkItemAllFieldsRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +117,10 @@ public class ListWorkItemAllFieldsRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -118,7 +129,10 @@ public class ListWorkItemAllFieldsRequest extends Request {
         }
 
         /**
-         * spaceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);
@@ -127,7 +141,10 @@ public class ListWorkItemAllFieldsRequest extends Request {
         }
 
         /**
-         * workitemTypeIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfexxxxxf4fee18xxxxx36</p>
          */
         public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
             this.putQueryParameter("workitemTypeIdentifier", workitemTypeIdentifier);

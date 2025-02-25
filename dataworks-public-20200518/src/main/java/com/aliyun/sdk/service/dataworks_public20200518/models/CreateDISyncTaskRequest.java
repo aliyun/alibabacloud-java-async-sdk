@@ -1,47 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDISyncTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateDISyncTaskRequest</p>
  */
 public class CreateDISyncTaskRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 10000000000D, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Query
-    @NameInMap("TaskContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskContent;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("TaskParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskParam")
     private String taskParam;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private CreateDISyncTaskRequest(Builder builder) {
@@ -142,7 +146,7 @@ public class CreateDISyncTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -151,7 +155,10 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. This parameter can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -160,7 +167,11 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -169,16 +180,19 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskContent.
+         * <p>This parameter is required.</p>
          */
         public Builder taskContent(String taskContent) {
-            this.putQueryParameter("TaskContent", taskContent);
+            this.putBodyParameter("TaskContent", taskContent);
             this.taskContent = taskContent;
             return this;
         }
 
         /**
-         * TaskName.
+         * <p>The name of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_di_task</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -187,7 +201,15 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskParam.
+         * <p>The configuration parameters of the data synchronization task. The following parameters are supported:</p>
+         * <ul>
+         * <li>FileFolderPath: the storage path of the data synchronization task.</li>
+         * <li>ResourceGroup: the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</li>
+         * <li>Cu: the specifications occupied by the data synchronization task in the serverless resource group. The value of this parameter must be a multiple of 0.5.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FileFolderPath&quot;:&quot;Business Flow/XXX/Data Integration&quot;,&quot;ResourceGroup&quot;:&quot;S_res_group_XXX_XXXX&quot;}</p>
          */
         public Builder taskParam(String taskParam) {
             this.putQueryParameter("TaskParam", taskParam);
@@ -196,7 +218,11 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the data synchronization task. Valid values: DI_OFFLINE, DI_REALTIME, and DI_SOLUTION.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DI_OFFLINE</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

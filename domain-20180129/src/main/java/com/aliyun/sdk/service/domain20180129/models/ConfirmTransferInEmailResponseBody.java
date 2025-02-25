@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmTransferInEmailResponseBody} extends {@link TeaModel}
  *
  * <p>ConfirmTransferInEmailResponseBody</p>
  */
 public class ConfirmTransferInEmailResponseBody extends TeaModel {
-    @NameInMap("FailList")
+    @com.aliyun.core.annotation.NameInMap("FailList")
     private FailList failList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessList")
+    @com.aliyun.core.annotation.NameInMap("SuccessList")
     private SuccessList successList;
 
     private ConfirmTransferInEmailResponseBody(Builder builder) {
@@ -91,8 +91,14 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ConfirmTransferInEmailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ConfirmTransferInEmailResponseBody</p>
+     */
     public static class FailList extends TeaModel {
-        @NameInMap("FailDomain")
+        @com.aliyun.core.annotation.NameInMap("FailDomain")
         private java.util.List < String > failDomain;
 
         private FailList(Builder builder) {
@@ -132,8 +138,14 @@ public class ConfirmTransferInEmailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ConfirmTransferInEmailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ConfirmTransferInEmailResponseBody</p>
+     */
     public static class SuccessList extends TeaModel {
-        @NameInMap("SuccessDomain")
+        @com.aliyun.core.annotation.NameInMap("SuccessDomain")
         private java.util.List < String > successDomain;
 
         private SuccessList(Builder builder) {

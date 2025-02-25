@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCallDetailByCallIdRequest} extends {@link RequestModel}
  *
  * <p>QueryCallDetailByCallIdRequest</p>
  */
 public class QueryCallDetailByCallIdRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProdId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProdId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long prodId;
 
-    @Query
-    @NameInMap("QueryDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long queryDate;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QueryCallDetailByCallIdRequest(Builder builder) {
@@ -116,18 +116,32 @@ public class QueryCallDetailByCallIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCallDetailByCallIdRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.ownerId = response.ownerId;
-            this.prodId = response.prodId;
-            this.queryDate = response.queryDate;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryCallDetailByCallIdRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.ownerId = request.ownerId;
+            this.prodId = request.prodId;
+            this.queryDate = request.queryDate;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CallId.
+         * <p>The unique ID of the call.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The CallId parameter is included in the response parameters of the outbound call operation that you call to initiate a call.</p>
+         * </li>
+         * <li><p>The date when the call specified by CallId is started must be the same as the date specified by QueryDate.</p>
+         * </li>
+         * <li><p>The value of CallId must match the value of ProdId.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116014888060^10281631****</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -145,7 +159,18 @@ public class QueryCallDetailByCallIdRequest extends Request {
         }
 
         /**
-         * ProdId.
+         * <p>The service ID. Valid values:</p>
+         * <ul>
+         * <li><strong>11000000300006</strong>: voice notification. You can call the <a href="https://help.aliyun.com/document_detail/393517.html">SingleCallByVoice</a> operation to send a voice notification of the voice notification file type to the specified number.</li>
+         * <li><strong>11010000138001</strong>: voice verification code. You can call the <a href="https://help.aliyun.com/document_detail/393519.html">SingleCallByTts</a> operation to send a voice verification code or a text-to-speech (TTS) voice notification to the specified number.</li>
+         * <li><strong>11000000300005</strong>: IVR. You can call the <a href="https://help.aliyun.com/document_detail/393521.html">IvrCall</a> operation to initiate an interactive voice call to the specified number.</li>
+         * <li><strong>11000000300009</strong>: Session Initiation Protocol (SIP) call.</li>
+         * <li><strong>11030000180001</strong>: intelligent outbound call.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11000000300006</p>
          */
         public Builder prodId(Long prodId) {
             this.putQueryParameter("ProdId", prodId);
@@ -154,7 +179,14 @@ public class QueryCallDetailByCallIdRequest extends Request {
         }
 
         /**
-         * QueryDate.
+         * <p>The time at which call details are queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p>The system queries the call records that are generated within 24 hours after the specified point in time. For example, if you specify the time 20:00:01 on November 21, 2022, the system queries the call records that are generated for the specified call ID from 20:00:01 on November 21, 2022, to 20:00:01 on November 22, 2022.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671552000000</p>
          */
         public Builder queryDate(Long queryDate) {
             this.putQueryParameter("QueryDate", queryDate);

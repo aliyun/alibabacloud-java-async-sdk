@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMetaDBResponseBody} extends {@link TeaModel}
  *
  * <p>ListMetaDBResponseBody</p>
  */
 public class ListMetaDBResponseBody extends TeaModel {
-    @NameInMap("DatabaseInfo")
+    @com.aliyun.core.annotation.NameInMap("DatabaseInfo")
     private DatabaseInfo databaseInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListMetaDBResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListMetaDBResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of metadatabases.
+         * <p>The information about the metadatabases.</p>
          */
         public Builder databaseInfo(DatabaseInfo databaseInfo) {
             this.databaseInfo = databaseInfo;
@@ -58,7 +63,10 @@ public class ListMetaDBResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the metadatabases.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class ListMetaDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMetaDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMetaDBResponseBody</p>
+     */
     public static class DbList extends TeaModel {
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("ModifiedTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimeStamp")
         private Long modifiedTimeStamp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UUID")
+        @com.aliyun.core.annotation.NameInMap("UUID")
         private String UUID;
 
         private DbList(Builder builder) {
@@ -170,7 +184,10 @@ public class ListMetaDBResponseBody extends TeaModel {
             private String UUID; 
 
             /**
-             * The timestamp at which the metadatabase was updated.
+             * <p>The timestamp at which the metadatabase was created. You can convert the timestamp to the date based on the time zone that you use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1388776825</p>
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -178,7 +195,10 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * <p>The URL of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs://localhost:777/user/hadoop/test.txt</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -186,7 +206,10 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the metadatabase owner.
+             * <p>The timestamp at which the metadatabase was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1388776837</p>
              */
             public Builder modifiedTimeStamp(Long modifiedTimeStamp) {
                 this.modifiedTimeStamp = modifiedTimeStamp;
@@ -194,7 +217,10 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the metadatabase.
+             * <p>The name of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +228,10 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1232</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -210,7 +239,10 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The universally unique identifier (UUID) of the metadatabase.
+             * <p>The type of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HIVE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -218,7 +250,10 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metadatabase.
+             * <p>The UUID of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32342</p>
              */
             public Builder UUID(String UUID) {
                 this.UUID = UUID;
@@ -232,11 +267,17 @@ public class ListMetaDBResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMetaDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMetaDBResponseBody</p>
+     */
     public static class DatabaseInfo extends TeaModel {
-        @NameInMap("DbList")
-        private java.util.List < DbList> dbList;
+        @com.aliyun.core.annotation.NameInMap("DbList")
+        private java.util.List<DbList> dbList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private DatabaseInfo(Builder builder) {
@@ -255,7 +296,7 @@ public class ListMetaDBResponseBody extends TeaModel {
         /**
          * @return dbList
          */
-        public java.util.List < DbList> getDbList() {
+        public java.util.List<DbList> getDbList() {
             return this.dbList;
         }
 
@@ -267,19 +308,22 @@ public class ListMetaDBResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DbList> dbList; 
+            private java.util.List<DbList> dbList; 
             private Long totalCount; 
 
             /**
-             * The timestamp at which the metadatabase was created. You can convert the timestamp to the related date based on the time zone that you use.
+             * <p>The metadatabases.</p>
              */
-            public Builder dbList(java.util.List < DbList> dbList) {
+            public Builder dbList(java.util.List<DbList> dbList) {
                 this.dbList = dbList;
                 return this;
             }
 
             /**
-             * The type of the metadatabase.
+             * <p>The total number of the metadatabases returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

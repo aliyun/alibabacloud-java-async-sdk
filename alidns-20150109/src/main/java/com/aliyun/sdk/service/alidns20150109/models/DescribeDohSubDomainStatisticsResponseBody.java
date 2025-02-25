@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDohSubDomainStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDohSubDomainStatisticsResponseBody</p>
  */
 public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
-    private java.util.List < Statistics> statistics;
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    private java.util.List<Statistics> statistics;
 
     private DescribeDohSubDomainStatisticsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
     /**
      * @return statistics
      */
-    public java.util.List < Statistics> getStatistics() {
+    public java.util.List<Statistics> getStatistics() {
         return this.statistics;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Statistics> statistics; 
+        private java.util.List<Statistics> statistics; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics list.
+         * <p>The statistics list.</p>
          */
-        public Builder statistics(java.util.List < Statistics> statistics) {
+        public Builder statistics(java.util.List<Statistics> statistics) {
             this.statistics = statistics;
             return this;
         }
@@ -71,23 +79,29 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDohSubDomainStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDohSubDomainStatisticsResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("V4HttpCount")
+        @com.aliyun.core.annotation.NameInMap("V4HttpCount")
         private Long v4HttpCount;
 
-        @NameInMap("V4HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("V4HttpsCount")
         private Long v4HttpsCount;
 
-        @NameInMap("V6HttpCount")
+        @com.aliyun.core.annotation.NameInMap("V6HttpCount")
         private Long v6HttpCount;
 
-        @NameInMap("V6HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("V6HttpsCount")
         private Long v6HttpsCount;
 
         private Statistics(Builder builder) {
@@ -158,7 +172,10 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             private Long v6HttpsCount; 
 
             /**
-             * The timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1544976000000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -166,7 +183,10 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -174,7 +194,10 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv4-based HTTP requests.
+             * <p>The number of IPv4-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v4HttpCount(Long v4HttpCount) {
                 this.v4HttpCount = v4HttpCount;
@@ -182,7 +205,10 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv4-based HTTPS requests.
+             * <p>The number of IPv4-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v4HttpsCount(Long v4HttpsCount) {
                 this.v4HttpsCount = v4HttpsCount;
@@ -190,7 +216,10 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6-based HTTP requests.
+             * <p>The number of IPv6-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v6HttpCount(Long v6HttpCount) {
                 this.v6HttpCount = v6HttpCount;
@@ -198,7 +227,10 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6-based HTTPS requests.
+             * <p>The number of IPv6-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v6HttpsCount(Long v6HttpsCount) {
                 this.v6HttpsCount = v6HttpsCount;

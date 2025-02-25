@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEaiAllRequest} extends {@link RequestModel}
  *
  * <p>DeleteEaiAllRequest</p>
  */
 public class DeleteEaiAllRequest extends Request {
-    @Query
-    @NameInMap("ClientInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientInstanceId")
     private String clientInstanceId;
 
-    @Query
-    @NameInMap("ElasticAcceleratedInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticAcceleratedInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String elasticAcceleratedInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteEaiAllRequest(Builder builder) {
@@ -93,7 +98,10 @@ public class DeleteEaiAllRequest extends Request {
         }
 
         /**
-         * ElasticAcceleratedInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eais-hza1ahi0uuw0re33****</p>
          */
         public Builder elasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
             this.putQueryParameter("ElasticAcceleratedInstanceId", elasticAcceleratedInstanceId);
@@ -102,7 +110,10 @@ public class DeleteEaiAllRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

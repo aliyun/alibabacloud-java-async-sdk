@@ -1,56 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationsRequest</p>
  */
 public class ListApplicationsRequest extends Request {
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppSource")
+    private String appSource;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("FieldType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FieldType")
     private String fieldType;
 
-    @Query
-    @NameInMap("FieldValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FieldValue")
     private String fieldValue;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Reverse")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
     private ListApplicationsRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
+        this.appSource = builder.appSource;
         this.currentPage = builder.currentPage;
         this.fieldType = builder.fieldType;
         this.fieldValue = builder.fieldValue;
@@ -79,6 +89,13 @@ public class ListApplicationsRequest extends Request {
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return appSource
+     */
+    public String getAppSource() {
+        return this.appSource;
     }
 
     /**
@@ -139,6 +156,7 @@ public class ListApplicationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
         private String appName; 
+        private String appSource; 
         private Integer currentPage; 
         private String fieldType; 
         private String fieldValue; 
@@ -155,6 +173,7 @@ public class ListApplicationsRequest extends Request {
         private Builder(ListApplicationsRequest request) {
             super(request);
             this.appName = request.appName;
+            this.appSource = request.appSource;
             this.currentPage = request.currentPage;
             this.fieldType = request.fieldType;
             this.fieldValue = request.fieldValue;
@@ -166,13 +185,16 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -181,7 +203,27 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The SAE application type. Valid values:</p>
+         * <ul>
+         * <li><strong>micro_service</strong></li>
+         * <li><strong>web</strong></li>
+         * <li><strong>job</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>micro_service</p>
+         */
+        public Builder appSource(String appSource) {
+            this.putQueryParameter("AppSource", appSource);
+            this.appSource = appSource;
+            return this;
+        }
+
+        /**
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -190,7 +232,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appName</p>
          */
         public Builder fieldType(String fieldType) {
             this.putQueryParameter("FieldType", fieldType);
@@ -199,7 +244,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -208,7 +256,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:demo</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -217,7 +268,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * runnings
+         * <p>runnings</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -226,11 +280,14 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Indicates whether the application is being deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the application is being deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The application is being deleted.</li>
+         * <li><strong>false</strong>: The application is not being deleted.</li>
+         * </ul>
          * 
-         * *   **true**: The application is being deleted.
-         * *   **false**: The application is not being deleted.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -239,7 +296,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -248,7 +308,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * The list of applications.
+         * <p>The list of applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

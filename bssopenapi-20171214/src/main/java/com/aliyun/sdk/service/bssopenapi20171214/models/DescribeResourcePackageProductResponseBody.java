@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourcePackageProductResponseBody</p>
  */
 public class DescribeResourcePackageProductResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeResourcePackageProductResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +133,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72353765387</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -130,7 +144,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +171,17 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class Property extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Property(Builder builder) {
@@ -190,7 +216,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the property.
+             * <p>The name of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +227,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the property.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,9 +244,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class Properties extends TeaModel {
-        @NameInMap("Property")
-        private java.util.List < Property> property;
+        @com.aliyun.core.annotation.NameInMap("Property")
+        private java.util.List<Property> property;
 
         private Properties(Builder builder) {
             this.property = builder.property;
@@ -231,17 +269,17 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.List < Property> getProperty() {
+        public java.util.List<Property> getProperty() {
             return this.property;
         }
 
         public static final class Builder {
-            private java.util.List < Property> property; 
+            private java.util.List<Property> property; 
 
             /**
              * Property.
              */
-            public Builder property(java.util.List < Property> property) {
+            public Builder property(java.util.List<Property> property) {
                 this.property = property;
                 return this;
             }
@@ -253,14 +291,20 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class AvailableDuration extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Integer value;
 
         private AvailableDuration(Builder builder) {
@@ -304,7 +348,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private Integer value; 
 
             /**
-             * The name of the validity period.
+             * <p>The name of the validity period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6 Month</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,13 +359,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the validity period for the resource plan. Valid values:
-             * <p>
+             * <p>The unit of the validity period for the resource plan. Valid values:</p>
+             * <ul>
+             * <li>Month</li>
+             * <li>Year</li>
+             * </ul>
+             * <p>Default value: Month.</p>
              * 
-             * *   Month
-             * *   Year
-             * 
-             * Default value: Month.
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -326,7 +375,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the validity period.
+             * <p>The value of the validity period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder value(Integer value) {
                 this.value = value;
@@ -340,9 +392,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class AvailableDurations extends TeaModel {
-        @NameInMap("AvailableDuration")
-        private java.util.List < AvailableDuration> availableDuration;
+        @com.aliyun.core.annotation.NameInMap("AvailableDuration")
+        private java.util.List<AvailableDuration> availableDuration;
 
         private AvailableDurations(Builder builder) {
             this.availableDuration = builder.availableDuration;
@@ -359,17 +417,17 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         /**
          * @return availableDuration
          */
-        public java.util.List < AvailableDuration> getAvailableDuration() {
+        public java.util.List<AvailableDuration> getAvailableDuration() {
             return this.availableDuration;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableDuration> availableDuration; 
+            private java.util.List<AvailableDuration> availableDuration; 
 
             /**
              * AvailableDuration.
              */
-            public Builder availableDuration(java.util.List < AvailableDuration> availableDuration) {
+            public Builder availableDuration(java.util.List<AvailableDuration> availableDuration) {
                 this.availableDuration = availableDuration;
                 return this;
             }
@@ -381,14 +439,20 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class Specification extends TeaModel {
-        @NameInMap("AvailableDurations")
+        @com.aliyun.core.annotation.NameInMap("AvailableDurations")
         private AvailableDurations availableDurations;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Specification(Builder builder) {
@@ -432,7 +496,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The validity periods available for the resource plan.
+             * <p>The validity periods available for the resource plan.</p>
              */
             public Builder availableDurations(AvailableDurations availableDurations) {
                 this.availableDurations = availableDurations;
@@ -440,7 +504,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the specification.
+             * <p>The name of the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1TB</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -448,7 +515,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the specification.
+             * <p>The value of the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -462,9 +532,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class Specifications extends TeaModel {
-        @NameInMap("Specification")
-        private java.util.List < Specification> specification;
+        @com.aliyun.core.annotation.NameInMap("Specification")
+        private java.util.List<Specification> specification;
 
         private Specifications(Builder builder) {
             this.specification = builder.specification;
@@ -481,17 +557,17 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         /**
          * @return specification
          */
-        public java.util.List < Specification> getSpecification() {
+        public java.util.List<Specification> getSpecification() {
             return this.specification;
         }
 
         public static final class Builder {
-            private java.util.List < Specification> specification; 
+            private java.util.List<Specification> specification; 
 
             /**
              * Specification.
              */
-            public Builder specification(java.util.List < Specification> specification) {
+            public Builder specification(java.util.List<Specification> specification) {
                 this.specification = specification;
                 return this;
             }
@@ -503,17 +579,23 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class PackageType extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("Specifications")
+        @com.aliyun.core.annotation.NameInMap("Specifications")
         private Specifications specifications;
 
         private PackageType(Builder builder) {
@@ -566,7 +648,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private Specifications specifications; 
 
             /**
-             * The code of the resource plan.
+             * <p>The code of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_ossbag_deadlineAcc_CdnOut_common_sz</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -574,7 +659,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource plan type.
+             * <p>The name of the resource plan type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Back-to-origin traffic plan - China (Shenzhen)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -582,7 +670,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The properties of the resource plan.
+             * <p>The properties of the resource plan.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -590,7 +678,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the resource plan.
+             * <p>The specifications of the resource plan.</p>
              */
             public Builder specifications(Specifications specifications) {
                 this.specifications = specifications;
@@ -604,9 +692,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class PackageTypes extends TeaModel {
-        @NameInMap("PackageType")
-        private java.util.List < PackageType> packageType;
+        @com.aliyun.core.annotation.NameInMap("PackageType")
+        private java.util.List<PackageType> packageType;
 
         private PackageTypes(Builder builder) {
             this.packageType = builder.packageType;
@@ -623,17 +717,17 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         /**
          * @return packageType
          */
-        public java.util.List < PackageType> getPackageType() {
+        public java.util.List<PackageType> getPackageType() {
             return this.packageType;
         }
 
         public static final class Builder {
-            private java.util.List < PackageType> packageType; 
+            private java.util.List<PackageType> packageType; 
 
             /**
              * PackageType.
              */
-            public Builder packageType(java.util.List < PackageType> packageType) {
+            public Builder packageType(java.util.List<PackageType> packageType) {
                 this.packageType = packageType;
                 return this;
             }
@@ -645,17 +739,23 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class ResourcePackage extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PackageTypes")
+        @com.aliyun.core.annotation.NameInMap("PackageTypes")
         private PackageTypes packageTypes;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
         private ResourcePackage(Builder builder) {
@@ -708,7 +808,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private String productType; 
 
             /**
-             * The name of the resource plan.
+             * <p>The name of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Object Storage Service (OSS) resource plan (monthly)</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -716,7 +819,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the resource plans.
+             * <p>The types of the resource plans.</p>
              */
             public Builder packageTypes(PackageTypes packageTypes) {
                 this.packageTypes = packageTypes;
@@ -724,7 +827,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ossbag</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -732,7 +838,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ossbag</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -746,9 +855,15 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class ResourcePackages extends TeaModel {
-        @NameInMap("ResourcePackage")
-        private java.util.List < ResourcePackage> resourcePackage;
+        @com.aliyun.core.annotation.NameInMap("ResourcePackage")
+        private java.util.List<ResourcePackage> resourcePackage;
 
         private ResourcePackages(Builder builder) {
             this.resourcePackage = builder.resourcePackage;
@@ -765,17 +880,17 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         /**
          * @return resourcePackage
          */
-        public java.util.List < ResourcePackage> getResourcePackage() {
+        public java.util.List<ResourcePackage> getResourcePackage() {
             return this.resourcePackage;
         }
 
         public static final class Builder {
-            private java.util.List < ResourcePackage> resourcePackage; 
+            private java.util.List<ResourcePackage> resourcePackage; 
 
             /**
              * ResourcePackage.
              */
-            public Builder resourcePackage(java.util.List < ResourcePackage> resourcePackage) {
+            public Builder resourcePackage(java.util.List<ResourcePackage> resourcePackage) {
                 this.resourcePackage = resourcePackage;
                 return this;
             }
@@ -787,8 +902,14 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourcePackageProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourcePackageProductResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ResourcePackages")
+        @com.aliyun.core.annotation.NameInMap("ResourcePackages")
         private ResourcePackages resourcePackages;
 
         private Data(Builder builder) {
@@ -814,7 +935,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             private ResourcePackages resourcePackages; 
 
             /**
-             * The details about the resource plans.
+             * <p>The details about the resource plans.</p>
              */
             public Builder resourcePackages(ResourcePackages resourcePackages) {
                 this.resourcePackages = resourcePackages;

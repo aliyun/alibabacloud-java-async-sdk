@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectLogStoresRequest</p>
  */
 public class ListProjectLogStoresRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SourceLogCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLogCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLogCode;
 
-    @Body
-    @NameInMap("SourceProdCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceProdCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceProdCode;
 
-    @Body
-    @NameInMap("SubUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long subUserId;
 
     private ListProjectLogStoresRequest(Builder builder) {
@@ -99,7 +98,11 @@ public class ListProjectLogStoresRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -108,7 +111,7 @@ public class ListProjectLogStoresRequest extends Request {
         }
 
         /**
-         * SourceLogCode.
+         * The log code.
          */
         public Builder sourceLogCode(String sourceLogCode) {
             this.putBodyParameter("SourceLogCode", sourceLogCode);
@@ -117,7 +120,7 @@ public class ListProjectLogStoresRequest extends Request {
         }
 
         /**
-         * SourceProdCode.
+         * The code of the cloud service.
          */
         public Builder sourceProdCode(String sourceProdCode) {
             this.putBodyParameter("SourceProdCode", sourceProdCode);
@@ -126,7 +129,7 @@ public class ListProjectLogStoresRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

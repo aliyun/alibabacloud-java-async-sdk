@@ -1,69 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceTDERequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceTDERequest</p>
  */
 public class ModifyDBInstanceTDERequest extends Request {
-    @Query
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private String certificate;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @Query
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @Query
-    @NameInMap("IsRotate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsRotate")
     private Boolean isRotate;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PassWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PassWord")
     private String passWord;
 
-    @Query
-    @NameInMap("PrivateKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateKey")
     private String privateKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
-    @Query
-    @NameInMap("TDEStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TDEStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String TDEStatus;
 
     private ModifyDBInstanceTDERequest(Builder builder) {
@@ -224,18 +229,20 @@ public class ModifyDBInstanceTDERequest extends Request {
         } 
 
         /**
-         * The file that contains the certificate.\
-         * <p>
-         * Format:
+         * <p>The file that contains the certificate.<br>Format:</p>
+         * <ul>
+         * <li>Public endpoint: <code>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</code> (The file name contains the extension.)</li>
+         * <li>Internal endpoint: <code>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the certificate file&gt;</code> (The file name contains the extension.)</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
-         * *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)
-         * 
-         * > 
-         * 
-         * *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
-         * 
-         * *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>oss-ap-southeast-1.aliyuncs.com:****:key.cer</p>
          */
         public Builder certificate(String certificate) {
             this.putQueryParameter("Certificate", certificate);
@@ -244,7 +251,11 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -253,10 +264,13 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).
-         * <p>
+         * <p>The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).</p>
+         * <blockquote>
+         * <p>This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+         * </blockquote>
          * 
-         * > This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -265,10 +279,13 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The ID of the custom key.
-         * <p>
+         * <p>The ID of the custom key.</p>
+         * <blockquote>
+         * <p>This parameter is available when the instance runs MySQL or PostgreSQL.</p>
+         * </blockquote>
          * 
-         * > This parameter is available when the instance runs MySQL or PostgreSQL.
+         * <strong>example:</strong>
+         * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -277,15 +294,17 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * Specifies whether to replace the key. Valid values:
-         * <p>
+         * <p>Specifies whether to replace the key. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available for only ApsaraDB RDS for PostgreSQL instances.</p>
+         * </blockquote>
          * 
-         * *   **true**: replaces the key.
-         * *   **false**: does not replace the key.
-         * 
-         * Default value: **false**
-         * 
-         * > This parameter is available only when the instance runs PostgreSQL.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isRotate(Boolean isRotate) {
             this.putQueryParameter("IsRotate", isRotate);
@@ -312,10 +331,13 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The password of the certificate.
-         * <p>
+         * <p>The password of the certificate.</p>
+         * <blockquote>
+         * <p>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+         * </blockquote>
          * 
-         * > This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
+         * <strong>example:</strong>
+         * <p>1qaz@WSX</p>
          */
         public Builder passWord(String passWord) {
             this.putQueryParameter("PassWord", passWord);
@@ -324,18 +346,20 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The file that contains the private key of the certificate.\
-         * <p>
-         * Format:
+         * <p>The file that contains the private key of the certificate.<br>Format:</p>
+         * <ul>
+         * <li>Public endpoint: <code>oss-&lt;The ID of the region&gt;.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</code> (The file name contains the extension.)</li>
+         * <li>Internal endpoint: <code>oss-&lt;The ID of the region&gt;-internal.aliyuncs.com:&lt;The name of the bucket&gt;:&lt;The name of the file that contains the private key&gt;</code> (The file name contains the extension.)</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
-         * *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)
-         * 
-         * > 
-         * 
-         * *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.
-         * 
-         * *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>oss-ap-southeast-1.aliyuncs.com:****:key.pvk</p>
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -362,10 +386,13 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
+         * <blockquote>
+         * <p>This parameter is available when the instance runs MySQL or PostgreSQL.</p>
+         * </blockquote>
          * 
-         * > This parameter is available when the instance runs MySQL or PostgreSQL.
+         * <strong>example:</strong>
+         * <p>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</p>
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -374,11 +401,15 @@ public class ModifyDBInstanceTDERequest extends Request {
         }
 
         /**
-         * The status of TDE. Valid values:
-         * <p>
+         * <p>The status of TDE. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Enabled**
-         * *   **Disabled**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder TDEStatus(String TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);

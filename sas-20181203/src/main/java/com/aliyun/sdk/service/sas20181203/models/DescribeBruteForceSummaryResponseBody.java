@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBruteForceSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBruteForceSummaryResponseBody</p>
  */
 public class DescribeBruteForceSummaryResponseBody extends TeaModel {
-    @NameInMap("BruteForceSummary")
+    @com.aliyun.core.annotation.NameInMap("BruteForceSummary")
     private BruteForceSummary bruteForceSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBruteForceSummaryResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics of IP address blocking policies.
+         * <p>The statistics of IP address blocking policies.</p>
          */
         public Builder bruteForceSummary(BruteForceSummary bruteForceSummary) {
             this.bruteForceSummary = bruteForceSummary;
@@ -58,7 +63,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE60EAE3-ABD0-897C-B0F16CAC6C7D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBruteForceSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBruteForceSummaryResponseBody</p>
+     */
     public static class BruteForceSummary extends TeaModel {
-        @NameInMap("AllStrategyCount")
+        @com.aliyun.core.annotation.NameInMap("AllStrategyCount")
         private Integer allStrategyCount;
 
-        @NameInMap("AntiBruteForceRuleCount")
+        @com.aliyun.core.annotation.NameInMap("AntiBruteForceRuleCount")
         private String antiBruteForceRuleCount;
 
-        @NameInMap("CustomEffectiveCount")
+        @com.aliyun.core.annotation.NameInMap("CustomEffectiveCount")
         private String customEffectiveCount;
 
-        @NameInMap("CustomRecordCount")
+        @com.aliyun.core.annotation.NameInMap("CustomRecordCount")
         private String customRecordCount;
 
-        @NameInMap("EffectiveCount")
+        @com.aliyun.core.annotation.NameInMap("EffectiveCount")
         private Integer effectiveCount;
 
-        @NameInMap("SystemEffectiveCount")
+        @com.aliyun.core.annotation.NameInMap("SystemEffectiveCount")
         private String systemEffectiveCount;
 
-        @NameInMap("SystemRecordCount")
+        @com.aliyun.core.annotation.NameInMap("SystemRecordCount")
         private String systemRecordCount;
 
         private BruteForceSummary(Builder builder) {
@@ -170,7 +184,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             private String systemRecordCount; 
 
             /**
-             * The number of anti-brute force IP blocking policies.
+             * <p>The number of anti-brute force IP blocking policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder allStrategyCount(Integer allStrategyCount) {
                 this.allStrategyCount = allStrategyCount;
@@ -178,7 +195,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of defense policies.
+             * <p>The number of defense policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder antiBruteForceRuleCount(String antiBruteForceRuleCount) {
                 this.antiBruteForceRuleCount = antiBruteForceRuleCount;
@@ -186,7 +206,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of custom blocking rules that are in effect.
+             * <p>The number of custom blocking rules that are in effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder customEffectiveCount(String customEffectiveCount) {
                 this.customEffectiveCount = customEffectiveCount;
@@ -194,7 +217,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of custom blocking rules.
+             * <p>The number of custom blocking rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19730</p>
              */
             public Builder customRecordCount(String customRecordCount) {
                 this.customRecordCount = customRecordCount;
@@ -202,7 +228,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of anti-brute force IP blocking policies enabled.
+             * <p>The number of anti-brute force IP blocking policies enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder effectiveCount(Integer effectiveCount) {
                 this.effectiveCount = effectiveCount;
@@ -210,7 +239,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of system blocking rules that are in effect.
+             * <p>The number of system blocking rules that are in effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder systemEffectiveCount(String systemEffectiveCount) {
                 this.systemEffectiveCount = systemEffectiveCount;
@@ -218,7 +250,10 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of system blocking rules.
+             * <p>The number of system blocking rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder systemRecordCount(String systemRecordCount) {
                 this.systemRecordCount = systemRecordCount;

@@ -1,79 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLoadBalancerUDPListenerAttributeRequest} extends {@link RequestModel}
  *
  * <p>SetLoadBalancerUDPListenerAttributeRequest</p>
  */
 public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 80, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 80, minLength = 1)
     private String description;
 
-    @Query
-    @NameInMap("EipTransmit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipTransmit")
     private String eipTransmit;
 
-    @Query
-    @NameInMap("HealthCheckConnectPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EstablishedTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 900, minimum = 10)
+    private Integer establishedTimeout;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckConnectPort;
 
-    @Query
-    @NameInMap("HealthCheckConnectTimeout")
-    @Validation(maximum = 300, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 1)
     private Integer healthCheckConnectTimeout;
 
-    @Query
-    @NameInMap("HealthCheckExp")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String healthCheckExp;
 
-    @Query
-    @NameInMap("HealthCheckInterval")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer healthCheckInterval;
 
-    @Query
-    @NameInMap("HealthCheckReq")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String healthCheckReq;
 
-    @Query
-    @NameInMap("HealthyThreshold")
-    @Validation(maximum = 10, minimum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer healthyThreshold;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535, minimum = 1)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @Query
-    @NameInMap("UnhealthyThreshold")
-    @Validation(maximum = 10, minimum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer unhealthyThreshold;
 
     private SetLoadBalancerUDPListenerAttributeRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.eipTransmit = builder.eipTransmit;
+        this.establishedTimeout = builder.establishedTimeout;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
         this.healthCheckExp = builder.healthCheckExp;
@@ -111,6 +122,13 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
      */
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    /**
+     * @return establishedTimeout
+     */
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     /**
@@ -186,6 +204,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<SetLoadBalancerUDPListenerAttributeRequest, Builder> {
         private String description; 
         private String eipTransmit; 
+        private Integer establishedTimeout; 
         private Integer healthCheckConnectPort; 
         private Integer healthCheckConnectTimeout; 
         private String healthCheckExp; 
@@ -205,6 +224,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
             super(request);
             this.description = request.description;
             this.eipTransmit = request.eipTransmit;
+            this.establishedTimeout = request.establishedTimeout;
             this.healthCheckConnectPort = request.healthCheckConnectPort;
             this.healthCheckConnectTimeout = request.healthCheckConnectTimeout;
             this.healthCheckExp = request.healthCheckExp;
@@ -218,7 +238,13 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The name of the listener. The valuemust be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+         * <blockquote>
+         * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -227,7 +253,14 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * EipTransmit.
+         * <p>Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder eipTransmit(String eipTransmit) {
             this.putQueryParameter("EipTransmit", eipTransmit);
@@ -236,7 +269,22 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectPort.
+         * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        public Builder establishedTimeout(Integer establishedTimeout) {
+            this.putQueryParameter("EstablishedTimeout", establishedTimeout);
+            this.establishedTimeout = establishedTimeout;
+            return this;
+        }
+
+        /**
+         * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified for BackendServerPort is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -245,7 +293,18 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectTimeout.
+         * <p>The timeout period of a health check response. If the backend ENS does not respond within the specified time, the health check fails.</p>
+         * <ul>
+         * <li>Default value: 5.</li>
+         * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
+         * <li>Unit: seconds.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -254,7 +313,10 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckExp.
+         * <p>The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder healthCheckExp(String healthCheckExp) {
             this.putQueryParameter("HealthCheckExp", healthCheckExp);
@@ -263,7 +325,10 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckInterval.
+         * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -272,7 +337,10 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthCheckReq.
+         * <p>The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder healthCheckReq(String healthCheckReq) {
             this.putQueryParameter("HealthCheckReq", healthCheckReq);
@@ -281,7 +349,10 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * HealthyThreshold.
+         * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -290,7 +361,11 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * <p>The listener port whose attributes are to be modified. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -299,7 +374,11 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5pzipr2fszqtl2xf64uy5****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -308,7 +387,18 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * <p>The routing algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
+         * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
+         * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+         * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+         * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
+         * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -317,7 +407,10 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * UnhealthyThreshold.
+         * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);

@@ -38,7 +38,7 @@ public class Destination extends TeaModel {
         private String destination; 
 
         /**
-         * destination
+         * destination.
          */
         public Builder destination(String destination) {
             this.destination = destination;

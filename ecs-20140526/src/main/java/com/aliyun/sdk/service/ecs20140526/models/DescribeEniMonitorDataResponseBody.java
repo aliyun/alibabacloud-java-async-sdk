@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEniMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEniMonitorDataResponseBody</p>
  */
 public class DescribeEniMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEniMonitorDataResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the monitoring data of the secondary ENI.
+         * <p>The monitoring data of the secondary ENI.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -70,7 +75,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,29 +102,35 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEniMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEniMonitorDataResponseBody</p>
+     */
     public static class EniMonitorData extends TeaModel {
-        @NameInMap("DropPacketRx")
+        @com.aliyun.core.annotation.NameInMap("DropPacketRx")
         private String dropPacketRx;
 
-        @NameInMap("DropPacketTx")
+        @com.aliyun.core.annotation.NameInMap("DropPacketTx")
         private String dropPacketTx;
 
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("IntranetRx")
+        @com.aliyun.core.annotation.NameInMap("IntranetRx")
         private String intranetRx;
 
-        @NameInMap("IntranetTx")
+        @com.aliyun.core.annotation.NameInMap("IntranetTx")
         private String intranetTx;
 
-        @NameInMap("PacketRx")
+        @com.aliyun.core.annotation.NameInMap("PacketRx")
         private String packetRx;
 
-        @NameInMap("PacketTx")
+        @com.aliyun.core.annotation.NameInMap("PacketTx")
         private String packetTx;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private EniMonitorData(Builder builder) {
@@ -202,7 +219,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The number of dropped packets received by the secondary ENI over the internal network.
+             * <p>The number of received packets that were dropped by the secondary ENI over the internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dropPacketRx(String dropPacketRx) {
                 this.dropPacketRx = dropPacketRx;
@@ -210,7 +230,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of dropped packets sent by the secondary ENI over the internal network.
+             * <p>The number of sent packets that were dropped by the secondary ENI over the internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dropPacketTx(String dropPacketTx) {
                 this.dropPacketTx = dropPacketTx;
@@ -218,7 +241,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary ENI ID.
+             * <p>The ID of the secondary ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp19da36d6xdwey****</p>
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -226,7 +252,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average rate of data received by the secondary ENI over the internal network. Unit: Kbit/s.
+             * <p>The average rate at which the secondary ENI received data over the internal network. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder intranetRx(String intranetRx) {
                 this.intranetRx = intranetRx;
@@ -234,7 +263,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average rate of data sent by the secondary ENI over the internal network. Unit: Kbit/s.
+             * <p>The average rate at which the secondary ENI sent data over the internal network. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder intranetTx(String intranetTx) {
                 this.intranetTx = intranetTx;
@@ -242,7 +274,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets received by the secondary ENI over the internal network.
+             * <p>The number of packets received by the secondary ENI over the internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder packetRx(String packetRx) {
                 this.packetRx = packetRx;
@@ -250,7 +285,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets sent by the secondary ENI over the internal network.
+             * <p>The number of packets sent by the secondary ENI over the internal network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder packetTx(String packetTx) {
                 this.packetTx = packetTx;
@@ -258,7 +296,10 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp to query the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The timestamp of the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-21T03:22:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -272,9 +313,15 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEniMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEniMonitorDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
-        @NameInMap("EniMonitorData")
-        private java.util.List < EniMonitorData> eniMonitorData;
+        @com.aliyun.core.annotation.NameInMap("EniMonitorData")
+        private java.util.List<EniMonitorData> eniMonitorData;
 
         private MonitorData(Builder builder) {
             this.eniMonitorData = builder.eniMonitorData;
@@ -291,17 +338,17 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         /**
          * @return eniMonitorData
          */
-        public java.util.List < EniMonitorData> getEniMonitorData() {
+        public java.util.List<EniMonitorData> getEniMonitorData() {
             return this.eniMonitorData;
         }
 
         public static final class Builder {
-            private java.util.List < EniMonitorData> eniMonitorData; 
+            private java.util.List<EniMonitorData> eniMonitorData; 
 
             /**
              * EniMonitorData.
              */
-            public Builder eniMonitorData(java.util.List < EniMonitorData> eniMonitorData) {
+            public Builder eniMonitorData(java.util.List<EniMonitorData> eniMonitorData) {
                 this.eniMonitorData = eniMonitorData;
                 return this;
             }

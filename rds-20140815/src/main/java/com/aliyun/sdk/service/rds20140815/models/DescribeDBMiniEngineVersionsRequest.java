@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBMiniEngineVersionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBMiniEngineVersionsRequest</p>
  */
 public class DescribeDBMiniEngineVersionsRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DedicatedHostGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostGroupId")
     private String dedicatedHostGroupId;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("MinorVersionTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinorVersionTag")
     private String minorVersionTag;
 
-    @Query
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
     private DescribeDBMiniEngineVersionsRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -176,7 +184,10 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
+         * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-4n*****</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -185,7 +196,10 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Valid values: **MySQL** and **PostgreSQL**.
+         * <p>The database engine of the instance. Valid values: <strong>MySQL</strong> and <strong>PostgreSQL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -194,11 +208,14 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values:
-         * <p>
+         * <p>The database engine version of the instance. Valid values:</p>
+         * <ul>
+         * <li>Valid values when you set the Engine parameter to MySQL: <strong>8.0</strong>, <strong>5.7</strong>, <strong>5.6</strong>, and <strong>5.5</strong></li>
+         * <li>Valid values when you set the Engine parameter to PostgreSQL: <strong>15.0</strong>, <strong>14.0</strong>, <strong>13.0</strong>, <strong>12.0</strong>, <strong>11.0</strong>, and <strong>10.0</strong></li>
+         * </ul>
          * 
-         * *   Valid values when you set the Engine parameter to MySQL: **8.0**, **5.7**, **5.6**, and **5.5**
-         * *   Valid values when you set the Engine parameter to PostgreSQL: **15.0**, **14.0**, **13.0**, **12.0**, **11.0**, and **10.0**
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -207,7 +224,10 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The minor engine version of the instance. You can specify this parameter to query the minor engine version of the instance.
+         * <p>The minor engine version of the instance. You can specify this parameter to query the minor engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_20220731</p>
          */
         public Builder minorVersionTag(String minorVersionTag) {
             this.putQueryParameter("MinorVersionTag", minorVersionTag);
@@ -216,12 +236,15 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The instance edition. Valid values:
-         * <p>
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+         * </ul>
          * 
-         * *   **Basic**: RDS Basic Edition
-         * *   **HighAvailability**: RDS High-availability Edition
-         * *   **Finance**: RDS Enterprise Edition
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -230,7 +253,11 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,14 +275,17 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. Valid values:
-         * <p>
+         * <p>The storage type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>local_ssd</strong>: local SSD</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD</li>
+         * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD) of performance level 1 (PL1)</li>
+         * <li><strong>cloud_essd2</strong>: ESSD of PL2</li>
+         * <li><strong>cloud_essd3</strong>: ESSD of PL3</li>
+         * </ul>
          * 
-         * *   **local_ssd**: local SSD
-         * *   **cloud_ssd**: standard SSD
-         * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-         * *   **cloud_essd2**: ESSD of PL2
-         * *   **cloud_essd3**: ESSD of PL3
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

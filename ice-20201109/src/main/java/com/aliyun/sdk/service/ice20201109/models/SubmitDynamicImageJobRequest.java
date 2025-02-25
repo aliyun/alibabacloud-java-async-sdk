@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDynamicImageJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDynamicImageJobRequest</p>
  */
 public class SubmitDynamicImageJobRequest extends Request {
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Input input;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Output")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Output output;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("TemplateConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TemplateConfig templateConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitDynamicImageJobRequest(Builder builder) {
@@ -127,7 +132,8 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
         /**
-         * Input.
+         * <p>The input of the job.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -137,7 +143,10 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleJob</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -146,7 +155,8 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * Output.
+         * <p>The output of the job.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
             String outputShrink = shrink(output, "Output", "json");
@@ -156,7 +166,7 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * ScheduleConfig.
+         * <p>The scheduling settings.</p>
          */
         public Builder scheduleConfig(ScheduleConfig scheduleConfig) {
             String scheduleConfigShrink = shrink(scheduleConfig, "ScheduleConfig", "json");
@@ -166,7 +176,8 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The snapshot template configuration.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder templateConfig(TemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -176,7 +187,10 @@ public class SubmitDynamicImageJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user-defined data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;SampleKey&quot;: &quot;SampleValue&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -191,13 +205,19 @@ public class SubmitDynamicImageJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -232,7 +252,19 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. If Type is set to OSS, set this parameter to the URL of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. The URL of an OSS object can be in one of the following formats:</p>
+             * <ol>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+             * </ol>
+             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the Intelligent Media Services (IMS) console.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://bucket/object.mp4</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -240,7 +272,15 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an Object Storage Service (OSS) object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -254,13 +294,19 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class Output extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Output(Builder builder) {
@@ -295,7 +341,19 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String type; 
 
             /**
-             * Media.
+             * <p>The output file. The file can be an OSS object or a media asset. The URL of an OSS object can be in one of the following formats:</p>
+             * <ul>
+             * <li>oss://bucket/object</li>
+             * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object</li>
+             * </ul>
+             * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
+             * <blockquote>
+             * <p> Before you use the OSS bucket in the URL, you must add the bucket on the <a href="https://help.aliyun.com/document_detail/609918.html">Storage Management</a> page of the IMS console.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -303,7 +361,15 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the output file. Valid values:</p>
+             * <ol>
+             * <li>OSS: an OSS object.</li>
+             * <li>Media: a media asset.</li>
+             * </ol>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -317,11 +383,17 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {
@@ -356,7 +428,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             private Integer priority; 
 
             /**
-             * PipelineId.
+             * <p>The ID of the MPS queue to which the job was submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -364,7 +439,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority. Valid values: 1 to 10. Default value: 6. A greater value specifies a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -378,14 +456,20 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class TimeSpan extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("Seek")
+        @com.aliyun.core.annotation.NameInMap("Seek")
         private String seek;
 
         private TimeSpan(Builder builder) {
@@ -429,7 +513,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String seek; 
 
             /**
-             * Duration.
+             * <p>The length of the clip.</p>
+             * <ul>
+             * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+             * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>01:59:59.999 or 32000.23</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -437,7 +528,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * End.
+             * <p>The length of the ending part of the original clip to be cropped out. If you specify this parameter, the Duration parameter becomes invalid.</p>
+             * <ul>
+             * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+             * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>01:59:59.999 or 32000.23</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -445,7 +543,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Seek.
+             * <p>The start point of the clip.</p>
+             * <ul>
+             * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+             * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>01:59:59.999 or 32000.23</p>
              */
             public Builder seek(String seek) {
                 this.seek = seek;
@@ -459,26 +564,32 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class OverwriteParams extends TeaModel {
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private Integer fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("LongShortMode")
+        @com.aliyun.core.annotation.NameInMap("LongShortMode")
         private Boolean longShortMode;
 
-        @NameInMap("ScanMode")
+        @com.aliyun.core.annotation.NameInMap("ScanMode")
         private String scanMode;
 
-        @NameInMap("TimeSpan")
+        @com.aliyun.core.annotation.NameInMap("TimeSpan")
         private TimeSpan timeSpan;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private OverwriteParams(Builder builder) {
@@ -558,7 +669,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             private Integer width; 
 
             /**
-             * Format.
+             * <p>The format of the animated image. Valid values:</p>
+             * <ul>
+             * <li><strong>gif</strong></li>
+             * <li><strong>webp</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gif</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -566,7 +684,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate. Valid values: [1,60].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder fps(Integer fps) {
                 this.fps = fps;
@@ -574,7 +695,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the animated image. Valid values: [128,4096].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -582,7 +706,18 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * LongShortMode.
+             * <p>Specifies whether to enable the auto-rotate screen feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <p>Default value: <strong>true</strong>.</p>
+             * <blockquote>
+             * <p> If this feature is enabled, the width of the output video corresponds to the long side of the input video, which is the height of the input video in portrait mode. The height of the output video corresponds to the short side of the input video, which is the width of the input video in portrait mode.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder longShortMode(Boolean longShortMode) {
                 this.longShortMode = longShortMode;
@@ -590,7 +725,14 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * ScanMode.
+             * <p>The scan mode. Valid values:</p>
+             * <ul>
+             * <li><strong>interlaced</strong></li>
+             * <li><strong>progressive</strong> This is the default value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>progressive</p>
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -598,7 +740,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * TimeSpan.
+             * <p>The timeline parameters.</p>
              */
             public Builder timeSpan(TimeSpan timeSpan) {
                 this.timeSpan = timeSpan;
@@ -606,7 +748,10 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the animated image. Valid values: [128,4096].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -620,12 +765,18 @@ public class SubmitDynamicImageJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitDynamicImageJobRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitDynamicImageJobRequest</p>
+     */
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private TemplateConfig(Builder builder) {
@@ -660,7 +811,7 @@ public class SubmitDynamicImageJobRequest extends Request {
             private String templateId; 
 
             /**
-             * OverwriteParams.
+             * <p>The parameters that are used to overwrite the corresponding parameters.</p>
              */
             public Builder overwriteParams(OverwriteParams overwriteParams) {
                 this.overwriteParams = overwriteParams;
@@ -668,7 +819,11 @@ public class SubmitDynamicImageJobRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

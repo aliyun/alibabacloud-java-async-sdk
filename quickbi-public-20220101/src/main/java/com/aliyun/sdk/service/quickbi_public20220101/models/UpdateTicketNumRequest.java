@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTicketNumRequest} extends {@link RequestModel}
  *
  * <p>UpdateTicketNumRequest</p>
  */
 public class UpdateTicketNumRequest extends Request {
-    @Query
-    @NameInMap("Ticket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ticket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ticket;
 
-    @Query
-    @NameInMap("TicketNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TicketNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ticketNum;
 
     private UpdateTicketNumRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class UpdateTicketNumRequest extends Request {
         } 
 
         /**
-         * Ticket.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>040e6f79d33444838***83c7206c070</p>
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);
@@ -79,7 +87,10 @@ public class UpdateTicketNumRequest extends Request {
         }
 
         /**
-         * TicketNum.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ticketNum(Integer ticketNum) {
             this.putQueryParameter("TicketNum", ticketNum);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLineResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomLineResponseBody</p>
  */
 public class DescribeCustomLineResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("IpSegmentList")
-    private java.util.List < IpSegmentList> ipSegmentList;
+    @com.aliyun.core.annotation.NameInMap("IpSegmentList")
+    private java.util.List<IpSegmentList> ipSegmentList;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCustomLineResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     /**
      * @return ipSegmentList
      */
-    public java.util.List < IpSegmentList> getIpSegmentList() {
+    public java.util.List<IpSegmentList> getIpSegmentList() {
         return this.ipSegmentList;
     }
 
@@ -93,12 +98,15 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         private String code; 
         private String domainName; 
         private Long id; 
-        private java.util.List < IpSegmentList> ipSegmentList; 
+        private java.util.List<IpSegmentList> ipSegmentList; 
         private String name; 
         private String requestId; 
 
         /**
-         * The code of the custom line. The code is used when you configure a resolution record.
+         * <p>The code of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0yc-597</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name for which the custom line is configured.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +125,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the custom line.
+         * <p>The ID of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>597</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -122,15 +136,15 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The list of CIDR blocks.
+         * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
          */
-        public Builder ipSegmentList(java.util.List < IpSegmentList> ipSegmentList) {
+        public Builder ipSegmentList(java.util.List<IpSegmentList> ipSegmentList) {
             this.ipSegmentList = ipSegmentList;
             return this;
         }
 
         /**
-         * The name of the custom line.
+         * <p>The name of the custom line.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +152,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,11 +168,17 @@ public class DescribeCustomLineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomLineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomLineResponseBody</p>
+     */
     public static class IpSegmentList extends TeaModel {
-        @NameInMap("EndIp")
+        @com.aliyun.core.annotation.NameInMap("EndIp")
         private String endIp;
 
-        @NameInMap("StartIp")
+        @com.aliyun.core.annotation.NameInMap("StartIp")
         private String startIp;
 
         private IpSegmentList(Builder builder) {
@@ -190,7 +213,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             private String startIp; 
 
             /**
-             * The end IP address.
+             * <p>The end IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.1.1.3</p>
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -198,7 +224,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             }
 
             /**
-             * The start IP address.
+             * <p>The start IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.1.1.2</p>
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

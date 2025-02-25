@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainProxyTokensResponseBody} extends {@link TeaModel}
  *
  * <p>ListDomainProxyTokensResponseBody</p>
  */
 public class ListDomainProxyTokensResponseBody extends TeaModel {
-    @NameInMap("DomainProxyTokens")
-    private java.util.List < DomainProxyTokens> domainProxyTokens;
+    @com.aliyun.core.annotation.NameInMap("DomainProxyTokens")
+    private java.util.List<DomainProxyTokens> domainProxyTokens;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDomainProxyTokensResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
     /**
      * @return domainProxyTokens
      */
-    public java.util.List < DomainProxyTokens> getDomainProxyTokens() {
+    public java.util.List<DomainProxyTokens> getDomainProxyTokens() {
         return this.domainProxyTokens;
     }
 
@@ -46,13 +51,13 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainProxyTokens> domainProxyTokens; 
+        private java.util.List<DomainProxyTokens> domainProxyTokens; 
         private String requestId; 
 
         /**
          * DomainProxyTokens.
          */
-        public Builder domainProxyTokens(java.util.List < DomainProxyTokens> domainProxyTokens) {
+        public Builder domainProxyTokens(java.util.List<DomainProxyTokens> domainProxyTokens) {
             this.domainProxyTokens = domainProxyTokens;
             return this;
         }
@@ -71,29 +76,35 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDomainProxyTokensResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainProxyTokensResponseBody</p>
+     */
     public static class DomainProxyTokens extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("DomainProxyToken")
+        @com.aliyun.core.annotation.NameInMap("DomainProxyToken")
         private String domainProxyToken;
 
-        @NameInMap("DomainProxyTokenId")
+        @com.aliyun.core.annotation.NameInMap("DomainProxyTokenId")
         private String domainProxyTokenId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastUsedTime")
+        @com.aliyun.core.annotation.NameInMap("LastUsedTime")
         private Long lastUsedTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private DomainProxyTokens(Builder builder) {
@@ -182,7 +193,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 域名代理Token创建时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名代理Token创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -190,7 +204,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * 域名ID。
+             * <p>域名ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm_examplexxxx</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -198,7 +215,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token。
+             * <p>域名代理Token。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PTxxxxxxxx</p>
              */
             public Builder domainProxyToken(String domainProxyToken) {
                 this.domainProxyToken = domainProxyToken;
@@ -206,7 +226,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token ID。
+             * <p>域名代理Token ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pt_examplexxxx</p>
              */
             public Builder domainProxyTokenId(String domainProxyTokenId) {
                 this.domainProxyTokenId = domainProxyTokenId;
@@ -214,7 +237,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -222,7 +248,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token最近使用时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名代理Token最近使用时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -230,7 +259,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * token状态，枚举类型：(enabled）启用,（disabled）禁用。
+             * <p>token状态，枚举类型：(enabled）启用,（disabled）禁用。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +270,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
             }
 
             /**
-             * 域名代理Token最近更新时间，Unix时间戳格式，单位为毫秒。
+             * <p>域名代理Token最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

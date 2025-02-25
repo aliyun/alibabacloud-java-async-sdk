@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDataLevelPermissionStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateDataLevelPermissionStatusRequest</p>
  */
 public class UpdateDataLevelPermissionStatusRequest extends Request {
-    @Query
-    @NameInMap("CubeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CubeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cubeId;
 
-    @Query
-    @NameInMap("IsOpen")
-    @Validation(required = true, maximum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOpen")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10)
     private Integer isOpen;
 
-    @Query
-    @NameInMap("RuleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleType;
 
     private UpdateDataLevelPermissionStatusRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class UpdateDataLevelPermissionStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+         * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -94,7 +103,10 @@ public class UpdateDataLevelPermissionStatusRequest extends Request {
         }
 
         /**
-         * IsOpen.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isOpen(Integer isOpen) {
             this.putQueryParameter("IsOpen", isOpen);
@@ -103,7 +115,10 @@ public class UpdateDataLevelPermissionStatusRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROW_LEVEL</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

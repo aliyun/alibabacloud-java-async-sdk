@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTableResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteTableResponseBody</p>
  */
 public class DeleteTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskInfo")
+    @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private TaskInfo taskInfo;
 
     private DeleteTableResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteTableResponseBody extends TeaModel {
         private TaskInfo taskInfo; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DeleteTableResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task that is used to delete the table.
+         * <p>The information about the task that is used to delete the table.</p>
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -71,17 +79,23 @@ public class DeleteTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteTableResponseBody</p>
+     */
     public static class TaskInfo extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("NextTaskId")
+        @com.aliyun.core.annotation.NameInMap("NextTaskId")
         private String nextTaskId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private TaskInfo(Builder builder) {
@@ -134,7 +148,10 @@ public class DeleteTableResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The content of the task.
+             * <p>The content of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -142,7 +159,10 @@ public class DeleteTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task that is running.
+             * <p>The ID of the task that is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc1</p>
              */
             public Builder nextTaskId(String nextTaskId) {
                 this.nextTaskId = nextTaskId;
@@ -150,7 +170,10 @@ public class DeleteTableResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task that is complete.
+             * <p>The status of the task that is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -158,7 +181,10 @@ public class DeleteTableResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task that is complete.
+             * <p>The ID of the task that is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

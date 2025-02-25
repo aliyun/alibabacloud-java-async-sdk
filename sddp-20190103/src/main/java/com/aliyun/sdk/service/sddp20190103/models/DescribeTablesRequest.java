@@ -1,60 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTablesRequest} extends {@link RequestModel}
  *
  * <p>DescribeTablesRequest</p>
  */
 public class DescribeTablesRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PackageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageId")
     private Long packageId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductId")
     private Long productId;
 
-    @Query
-    @NameInMap("RiskLevelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevelId")
     private Long riskLevelId;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
-    @Query
-    @NameInMap("ServiceRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
     private String serviceRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private Long templateId;
 
     private DescribeTablesRequest(Builder builder) {
         super(builder);
@@ -69,6 +78,7 @@ public class DescribeTablesRequest extends Request {
         this.riskLevelId = builder.riskLevelId;
         this.ruleId = builder.ruleId;
         this.serviceRegionId = builder.serviceRegionId;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
@@ -161,6 +171,13 @@ public class DescribeTablesRequest extends Request {
         return this.serviceRegionId;
     }
 
+    /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeTablesRequest, Builder> {
         private Integer currentPage; 
         private Long instanceId; 
@@ -173,6 +190,7 @@ public class DescribeTablesRequest extends Request {
         private Long riskLevelId; 
         private Long ruleId; 
         private String serviceRegionId; 
+        private Long templateId; 
 
         private Builder() {
             super();
@@ -191,10 +209,14 @@ public class DescribeTablesRequest extends Request {
             this.riskLevelId = request.riskLevelId;
             this.ruleId = request.ruleId;
             this.serviceRegionId = request.serviceRegionId;
+            this.templateId = request.templateId;
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -203,7 +225,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the data asset to which the table belongs. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to obtain the ID of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +237,14 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -221,7 +253,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The search keyword. Fuzzy match is supported. For example, if you specify test, all tables whose names contain test are retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -230,7 +265,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * PackageId.
+         * <p>The ID of the package to which the table belongs. You can call the <a href="~~DescribePackages~~">DescribePackages</a> operation to obtain the ID of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>555555</p>
          */
         public Builder packageId(Long packageId) {
             this.putQueryParameter("PackageId", packageId);
@@ -239,7 +277,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +289,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The name of the service to which the table belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which Data Security Center (DSC) can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -257,7 +301,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The ID of the service to which the table belongs. You can call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to obtain the ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -266,7 +313,17 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * <p>The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -275,7 +332,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the sensitive data detection rule that the table hits. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the ID of the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333322</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -284,11 +344,26 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * <p>The region in which DSC is activated. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
             this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the industry-specific rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

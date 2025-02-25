@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudDriveServiceMountTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetCloudDriveServiceMountTokenResponseBody</p>
  */
 public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private Token token;
 
     private GetCloudDriveServiceMountTokenResponseBody(Builder builder) {
@@ -71,23 +76,29 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCloudDriveServiceMountTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCloudDriveServiceMountTokenResponseBody</p>
+     */
     public static class Token extends TeaModel {
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("ExpiredAfter")
+        @com.aliyun.core.annotation.NameInMap("ExpiredAfter")
         private String expiredAfter;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
-        @NameInMap("UsedSize")
+        @com.aliyun.core.annotation.NameInMap("UsedSize")
         private Long usedSize;
 
         private Token(Builder builder) {

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLogicTableRouteConfigRequest} extends {@link RequestModel}
  *
  * <p>AddLogicTableRouteConfigRequest</p>
  */
 public class AddLogicTableRouteConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RouteExpr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteExpr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeExpr;
 
-    @Query
-    @NameInMap("RouteKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeKey;
 
-    @Query
-    @NameInMap("TableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long tableId;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private AddLogicTableRouteConfigRequest(Builder builder) {
@@ -123,7 +128,11 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The routing algorithm expression. For more information about how to configure a routing algorithm expression, see [Configure a routing algorithm](https://www.alibabacloud.com/help/en/data-management-service/latest/configure-a-routing-algorithm).
+         * <p>The routing algorithm expression. For more information about how to configure a routing algorithm expression, see <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/configure-a-routing-algorithm">Configure a routing algorithm</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#id#%16</p>
          */
         public Builder routeExpr(String routeExpr) {
             this.putQueryParameter("RouteExpr", routeExpr);
@@ -132,11 +141,17 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The unique key of the routing algorithm. 
-         * <p>
+         * <p>The unique key of the routing algorithm. </p>
+         * <blockquote>
+         * <ul>
+         * <li>You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.</li>
+         * <li>The unique key of the routing algorithm in the same logical table must be unique.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > - You can create a custom unique key for the routing algorithm. No requirements are imposed on custom unique keys.
-         * > - The unique key of the routing algorithm in the same logical table must be unique.
+         * <strong>example:</strong>
+         * <p>id-hash-mod16</p>
          */
         public Builder routeKey(String routeKey) {
             this.putQueryParameter("RouteKey", routeKey);
@@ -145,7 +160,11 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The ID of the logical table. You can call the [ListLogicTables](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables) operation to query the ID of the logical table.
+         * <p>The ID of the logical table. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listlogictables">ListLogicTables</a> operation to query the ID of the logical table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4****</p>
          */
         public Builder tableId(Long tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -154,7 +173,10 @@ public class AddLogicTableRouteConfigRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

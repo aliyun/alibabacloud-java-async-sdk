@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyProcItemResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyProcItemResponseBody</p>
  */
 public class DescribePropertyProcItemResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("PropertyItems")
-    private java.util.List < PropertyItems> propertyItems;
+    @com.aliyun.core.annotation.NameInMap("PropertyItems")
+    private java.util.List<PropertyItems> propertyItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePropertyProcItemResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
     /**
      * @return propertyItems
      */
-    public java.util.List < PropertyItems> getPropertyItems() {
+    public java.util.List<PropertyItems> getPropertyItems() {
         return this.propertyItems;
     }
 
@@ -58,11 +63,11 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < PropertyItems> propertyItems; 
+        private java.util.List<PropertyItems> propertyItems; 
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,15 +75,18 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the processes returned.
+         * <p>An array that consists of the processes returned.</p>
          */
-        public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
+        public Builder propertyItems(java.util.List<PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD8AD4C6-A169-4FA3-BA1F-ED40ED52973B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +99,23 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyProcItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyProcItemResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>372</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,11 +218,17 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyProcItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyProcItemResponseBody</p>
+     */
     public static class PropertyItems extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private PropertyItems(Builder builder) {
@@ -231,7 +263,10 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The number of servers on which the process runs.
+             * <p>The number of servers on which the process runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8888</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -239,7 +274,10 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the process.
+             * <p>The name of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.ss</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>AddUserGroupMemberRequest</p>
  */
 public class AddUserGroupMemberRequest extends Request {
-    @Query
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
-    @Query
-    @NameInMap("UserIdList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userIdList;
 
     private AddUserGroupMemberRequest(Builder builder) {
@@ -70,11 +75,15 @@ public class AddUserGroupMemberRequest extends Request {
         } 
 
         /**
-         * The result of adding members to a user group is returned. Valid values:
-         * <p>
+         * <p>The result of adding members to a user group is returned. Valid values:</p>
+         * <ul>
+         * <li>true: The task is added.</li>
+         * <li>false: The tag failed to be added.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The task is added.
-         * *   false: The tag failed to be added.
+         * <strong>example:</strong>
+         * <p>555c4cd****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -83,11 +92,15 @@ public class AddUserGroupMemberRequest extends Request {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>46e537a5****,3dadsu****</p>
          */
         public Builder userIdList(String userIdList) {
             this.putQueryParameter("UserIdList", userIdList);

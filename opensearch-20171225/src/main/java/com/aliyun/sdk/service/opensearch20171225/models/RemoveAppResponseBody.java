@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveAppResponseBody</p>
  */
 public class RemoveAppResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Integer > result;
 
     private RemoveAppResponseBody(Builder builder) {
@@ -58,7 +57,7 @@ public class RemoveAppResponseBody extends TeaModel {
         }
 
         /**
-         * N/A
+         * The return result.
          */
         public Builder result(java.util.List < Integer > result) {
             this.result = result;

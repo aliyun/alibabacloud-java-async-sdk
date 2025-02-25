@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSupportMaxPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSupportMaxPerformanceResponseBody</p>
  */
 public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Performances")
+    @com.aliyun.core.annotation.NameInMap("Performances")
     private Performances performances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceSupportMaxPerformanceResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +78,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * Performances.
+         * <p>The queried performance metric.</p>
          */
         public Builder performances(Performances performances) {
             this.performances = performances;
@@ -78,7 +86,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +102,23 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceSupportMaxPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceSupportMaxPerformanceResponseBody</p>
+     */
     public static class Performance extends TeaModel {
-        @NameInMap("Bottleneck")
+        @com.aliyun.core.annotation.NameInMap("Bottleneck")
         private String bottleneck;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Performance(Builder builder) {
@@ -154,7 +171,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             private String value; 
 
             /**
-             * Bottleneck.
+             * <p>The performance bottleneck type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs or disk</p>
              */
             public Builder bottleneck(String bottleneck) {
                 this.bottleneck = bottleneck;
@@ -162,7 +182,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * Key.
+             * <p>The name of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpg_status,adbpg_disk_status,adbpg_connection_status,adbgp_segment_disk_usage_percent_max,adbpg_master_disk_usage_percent_max,adbpg_disk_usage_percent</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -170,7 +193,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * Unit.
+             * <p>The unit of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -178,7 +204,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * Value.
+             * <p>The value of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,9 +221,15 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceSupportMaxPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceSupportMaxPerformanceResponseBody</p>
+     */
     public static class Performances extends TeaModel {
-        @NameInMap("Performance")
-        private java.util.List < Performance> performance;
+        @com.aliyun.core.annotation.NameInMap("Performance")
+        private java.util.List<Performance> performance;
 
         private Performances(Builder builder) {
             this.performance = builder.performance;
@@ -211,17 +246,17 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         /**
          * @return performance
          */
-        public java.util.List < Performance> getPerformance() {
+        public java.util.List<Performance> getPerformance() {
             return this.performance;
         }
 
         public static final class Builder {
-            private java.util.List < Performance> performance; 
+            private java.util.List<Performance> performance; 
 
             /**
              * Performance.
              */
-            public Builder performance(java.util.List < Performance> performance) {
+            public Builder performance(java.util.List<Performance> performance) {
                 this.performance = performance;
                 return this;
             }

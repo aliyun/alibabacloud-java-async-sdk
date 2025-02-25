@@ -22,7 +22,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddApDeviceResponse> addApDevice(AddApDeviceRequest request);
 
+    CompletableFuture<AddCompanyTemplateResponse> addCompanyTemplate(AddCompanyTemplateRequest request);
+
     CompletableFuture<AddUserResponse> addUser(AddUserRequest request);
+
+    CompletableFuture<ApplyCompanyTemplateVersionToStoresResponse> applyCompanyTemplateVersionToStores(ApplyCompanyTemplateVersionToStoresRequest request);
 
     CompletableFuture<AssignUserResponse> assignUser(AssignUserRequest request);
 
@@ -30,11 +34,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindEslDeviceResponse> bindEslDevice(BindEslDeviceRequest request);
 
-    CompletableFuture<ConfirmServerLocationResponse> confirmServerLocation(ConfirmServerLocationRequest request);
-
     CompletableFuture<CreateStoreResponse> createStore(CreateStoreRequest request);
 
     CompletableFuture<DeleteApDeviceResponse> deleteApDevice(DeleteApDeviceRequest request);
+
+    CompletableFuture<DeleteCompanyTemplateResponse> deleteCompanyTemplate(DeleteCompanyTemplateRequest request);
 
     CompletableFuture<DeleteItemResponse> deleteItem(DeleteItemRequest request);
 
@@ -44,25 +48,37 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeApDevicesResponse> describeApDevices(DescribeApDevicesRequest request);
 
+    CompletableFuture<DescribeAvailableEslModelsResponse> describeAvailableEslModels(DescribeAvailableEslModelsRequest request);
+
     CompletableFuture<DescribeBindersResponse> describeBinders(DescribeBindersRequest request);
 
-    CompletableFuture<DescribeClientPackageResponse> describeClientPackage(DescribeClientPackageRequest request);
+    CompletableFuture<DescribeCompanyTemplateVersionsResponse> describeCompanyTemplateVersions(DescribeCompanyTemplateVersionsRequest request);
 
     CompletableFuture<DescribeEslDeviceResponse> describeEslDevice(DescribeEslDeviceRequest request);
 
     CompletableFuture<DescribeEslDevicesResponse> describeEslDevices(DescribeEslDevicesRequest request);
 
+    CompletableFuture<DescribeEslModelByTemplateVersionResponse> describeEslModelByTemplateVersion(DescribeEslModelByTemplateVersionRequest request);
+
     CompletableFuture<DescribeItemsResponse> describeItems(DescribeItemsRequest request);
+
+    CompletableFuture<DescribeStoreByTemplateVersionResponse> describeStoreByTemplateVersion(DescribeStoreByTemplateVersionRequest request);
 
     CompletableFuture<DescribeStoreConfigResponse> describeStoreConfig(DescribeStoreConfigRequest request);
 
     CompletableFuture<DescribeStoresResponse> describeStores(DescribeStoresRequest request);
+
+    CompletableFuture<DescribeTemplateByModelResponse> describeTemplateByModel(DescribeTemplateByModelRequest request);
 
     CompletableFuture<DescribeUserLogResponse> describeUserLog(DescribeUserLogRequest request);
 
     CompletableFuture<DescribeUsersResponse> describeUsers(DescribeUsersRequest request);
 
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
+    CompletableFuture<QueryTemplateListByGroupIdResponse> queryTemplateListByGroupId(QueryTemplateListByGroupIdRequest request);
+
+    CompletableFuture<SyncAddMaterialResponse> syncAddMaterial(SyncAddMaterialRequest request);
 
     CompletableFuture<UnassignUserResponse> unassignUser(UnassignUserRequest request);
 

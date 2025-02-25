@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFpShotImportJobResponseBody} extends {@link TeaModel}
  *
  * <p>ListFpShotImportJobResponseBody</p>
  */
 public class ListFpShotImportJobResponseBody extends TeaModel {
-    @NameInMap("FpShotImportJobList")
+    @com.aliyun.core.annotation.NameInMap("FpShotImportJobList")
     private java.util.List < FpShotImportJobList> fpShotImportJobList;
 
-    @NameInMap("NonExistIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistIds")
     private java.util.List < String > nonExistIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFpShotImportJobResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FpShotImportJobList.
+         * <p>The jobs of importing text files to a text fingerprint library.</p>
          */
         public Builder fpShotImportJobList(java.util.List < FpShotImportJobList> fpShotImportJobList) {
             this.fpShotImportJobList = fpShotImportJobList;
@@ -70,7 +70,7 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistIds.
+         * <p>The job IDs that do not exist. This parameter is not returned if all specified job IDs exist.</p>
          */
         public Builder nonExistIds(java.util.List < String > nonExistIds) {
             this.nonExistIds = nonExistIds;
@@ -78,7 +78,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,41 +94,47 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFpShotImportJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFpShotImportJobResponseBody</p>
+     */
     public static class FpShotImportJobList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("FpDBId")
+        @com.aliyun.core.annotation.NameInMap("FpDBId")
         private String fpDBId;
 
-        @NameInMap("FpImportConfig")
+        @com.aliyun.core.annotation.NameInMap("FpImportConfig")
         private String fpImportConfig;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("ProcessMessage")
+        @com.aliyun.core.annotation.NameInMap("ProcessMessage")
         private String processMessage;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private FpShotImportJobList(Builder builder) {
@@ -250,7 +259,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Code.
+             * <p>The error code returned when the job fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -258,7 +270,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-30T00:33:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -266,7 +281,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-30T00:34:02Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -274,7 +292,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * FpDBId.
+             * <p>The ID of the text fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2288c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder fpDBId(String fpDBId) {
                 this.fpDBId = fpDBId;
@@ -282,7 +303,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * FpImportConfig.
+             * <p>The import configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder fpImportConfig(String fpImportConfig) {
                 this.fpImportConfig = fpImportConfig;
@@ -290,7 +314,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25bacf2824614bcf9273dc0744db****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -298,7 +325,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The input file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Bucket&quot;:&quot;mts-example****&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;test-0828/video/test.mp4&quot;}</p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -306,7 +336,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message returned when the job fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -314,7 +347,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ebb51ee30f0b49aba959823fa991****</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -322,7 +358,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessMessage.
+             * <p>The processing information of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://testbucket.oss-cn-shanghai.aliyuncs.com/932ajjw***32ssoj_importResult.txt">http://testbucket.oss-cn-shanghai.aliyuncs.com/932ajjw***32ssoj_importResult.txt</a></p>
              */
             public Builder processMessage(String processMessage) {
                 this.processMessage = processMessage;
@@ -330,7 +369,15 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li>Processing: The job is in progress.</li>
+             * <li>Fail: The job fails.</li>
+             * <li>Success: The job is successful.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +385,10 @@ public class ListFpShotImportJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>001</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

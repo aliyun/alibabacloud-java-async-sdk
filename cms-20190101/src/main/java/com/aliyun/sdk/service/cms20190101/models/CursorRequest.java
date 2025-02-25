@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CursorRequest} extends {@link RequestModel}
  *
  * <p>CursorRequest</p>
  */
 public class CursorRequest extends Request {
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Body
-    @NameInMap("Matchers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Matchers")
     private java.util.List < Matcher > matchers;
 
-    @Body
-    @NameInMap("Metric")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metric")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metric;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer period;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private CursorRequest(Builder builder) {
@@ -128,17 +128,21 @@ public class CursorRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Unit: milliseconds.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For example, 2023-01-01T00:00:00Z indicates January 1, 2023, 00:00:00 UTC.</p>
+         * </li>
+         * <li><p>If you do not set the end time, the end time is infinite. You can leave this parameter empty in real-time export scenarios.</p>
+         * </li>
+         * <li><p>In CloudMonitor, the TTL of monitoring data varies with the time granularity. Specify a proper time interval based on the TTL corresponding to the value of the <code>Period</code> parameter.</p>
+         * </li>
+         * </ul>
          * 
-         * Unit: milliseconds.
-         * 
-         * > 
-         * 
-         * *   This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For example, 2023-01-01T00:00:00Z indicates January 1, 2023, 00:00:00 UTC.
-         * 
-         * *   If you do not set the end time, the end time is infinite. You can leave this parameter empty in real-time export scenarios.
-         * *   In CloudMonitor, the TTL of monitoring data varies with the time granularity. Specify a proper time interval based on the TTL corresponding to the value of the `Period` parameter.
+         * <strong>example:</strong>
+         * <p>1641645000000</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -147,7 +151,7 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * The dimension information of the metric.
+         * <p>The dimension information of the metric.</p>
          */
         public Builder matchers(java.util.List < Matcher > matchers) {
             String matchersShrink = shrink(matchers, "Matchers", "json");
@@ -157,10 +161,12 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * The metric that is used to monitor the cloud service.
-         * <p>
+         * <p>The metric that is used to monitor the cloud service.</p>
+         * <p>For more information about the metrics of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about the metrics of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>cpu_idle</p>
          */
         public Builder metric(String metric) {
             this.putBodyParameter("Metric", metric);
@@ -169,10 +175,12 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -181,12 +189,15 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * The time interval based on which the metric value is measured.
-         * <p>
+         * <p>The time interval based on which the metric value is measured.</p>
+         * <p>Unit: seconds.</p>
+         * <blockquote>
+         * <p> Generally, the time interval is 60 seconds. For more information about specific values, see the <code>Period</code> parameter in <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Unit: seconds.
-         * 
-         * >  Generally, the time interval is 60 seconds. For more information about specific values, see the `Period` parameter in [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -195,12 +206,15 @@ public class CursorRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For example, 2023-01-01T00:00:00Z indicates January 1, 2023, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> In CloudMonitor, the TTL of monitoring data varies with the time granularity. Specify a proper time interval based on the TTL corresponding to the value of the <code>Period</code> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For example, 2023-01-01T00:00:00Z indicates January 1, 2023, 00:00:00 UTC.
-         * 
-         * >  In CloudMonitor, the TTL of monitoring data varies with the time granularity. Specify a proper time interval based on the TTL corresponding to the value of the `Period` parameter.
+         * <strong>example:</strong>
+         * <p>1641627000000</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

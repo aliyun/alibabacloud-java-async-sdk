@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApplicationStatusResponseBody</p>
  */
 public class DescribeApplicationStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationStatusResponseBody(Builder builder) {
@@ -110,13 +115,16 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,7 +132,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -132,11 +140,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   If the request is successful, this parameter is not returned.****
-         * *   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>If the request is successful, this parameter is not returned.****</li>
+         * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,11 +152,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. Valid values:
-         * <p>
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +167,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,11 +178,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether information of the application is successfully obtained. Valid values:
-         * <p>
+         * <p>Indicates whether information of the application is successfully obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -176,7 +193,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It is used to query the details of a request.
+         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -189,41 +209,47 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApplicationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("ArmsAdvancedEnabled")
+        @com.aliyun.core.annotation.NameInMap("ArmsAdvancedEnabled")
         private String armsAdvancedEnabled;
 
-        @NameInMap("ArmsApmInfo")
+        @com.aliyun.core.annotation.NameInMap("ArmsApmInfo")
         private String armsApmInfo;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CurrentStatus")
+        @com.aliyun.core.annotation.NameInMap("CurrentStatus")
         private String currentStatus;
 
-        @NameInMap("EnableAgent")
+        @com.aliyun.core.annotation.NameInMap("EnableAgent")
         private Boolean enableAgent;
 
-        @NameInMap("FileSizeLimit")
+        @com.aliyun.core.annotation.NameInMap("FileSizeLimit")
         private Long fileSizeLimit;
 
-        @NameInMap("LastChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderId")
         private String lastChangeOrderId;
 
-        @NameInMap("LastChangeOrderRunning")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderRunning")
         private Boolean lastChangeOrderRunning;
 
-        @NameInMap("LastChangeOrderStatus")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderStatus")
         private String lastChangeOrderStatus;
 
-        @NameInMap("RunningInstances")
+        @com.aliyun.core.annotation.NameInMap("RunningInstances")
         private Integer runningInstances;
 
-        @NameInMap("SubStatus")
+        @com.aliyun.core.annotation.NameInMap("SubStatus")
         private String subStatus;
 
         private Data(Builder builder) {
@@ -348,7 +374,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             private String subStatus; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -356,11 +385,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Application Real-Time Monitoring Service (ARMS) advanced monitoring is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether Application Real-Time Monitoring Service (ARMS) advanced monitoring is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder armsAdvancedEnabled(String armsAdvancedEnabled) {
                 this.armsAdvancedEnabled = armsAdvancedEnabled;
@@ -368,7 +400,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the application in ARMS.
+             * <p>The metadata of the application in ARMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;appId&quot;:&quot;0099b7be-5f5b-4512-a7fc-56049ef1****&quot;,&quot;licenseKey&quot;:&quot;d5cgdt5pu0@7303f55292a****&quot;}</p>
              */
             public Builder armsApmInfo(String armsApmInfo) {
                 this.armsApmInfo = armsApmInfo;
@@ -376,7 +411,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563373372746</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -384,12 +422,15 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The current state of the application. Valid values:
-             * <p>
+             * <p>The current state of the application. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>STOPPED</strong></li>
+             * <li><strong>UNKNOWN</strong></li>
+             * </ul>
              * 
-             * *   **RUNNING**
-             * *   **STOPPED**
-             * *   **UNKNOWN**
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -397,11 +438,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SAE agent is enabled.
-             * <p>
+             * <p>Indicates whether SAE agent is enabled.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableAgent(Boolean enableAgent) {
                 this.enableAgent = enableAgent;
@@ -409,7 +453,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The file size limit. Unit: KB. Valid values: 0 to 10240.
+             * <p>The file size limit. Unit: KB. Valid values: 0 to 10240.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder fileSizeLimit(Long fileSizeLimit) {
                 this.fileSizeLimit = fileSizeLimit;
@@ -417,7 +464,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the latest change order that is executed. If no change orders have been executed or if change orders have expired, an empty parameter is returned.
+             * <p>The ID of the latest change order that is executed. If no change orders have been executed or if change orders have expired, an empty parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1ccc2339-fc19-49aa-bda0-1e7b8497****</p>
              */
             public Builder lastChangeOrderId(String lastChangeOrderId) {
                 this.lastChangeOrderId = lastChangeOrderId;
@@ -425,11 +475,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the latest change order is being executed. Valid values:
-             * <p>
+             * <p>Indicates whether the latest change order is being executed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder lastChangeOrderRunning(Boolean lastChangeOrderRunning) {
                 this.lastChangeOrderRunning = lastChangeOrderRunning;
@@ -437,19 +490,22 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the latest change order. Valid values:
-             * <p>
+             * <p>The state of the latest change order. Valid values:</p>
+             * <ul>
+             * <li><strong>READY</strong>: The change order is ready.</li>
+             * <li><strong>RUNNING</strong>: The change order is being executed.</li>
+             * <li><strong>SUCCESS</strong>: The change order was executed successfully.</li>
+             * <li><strong>FAIL</strong>: The change order failed to be executed.</li>
+             * <li><strong>ABORT</strong>: The change order is stopped.</li>
+             * <li><strong>WAIT_BATCH_CONFIRM</strong>: The change order is pending execution. You must manually confirm the release batch.</li>
+             * <li><strong>AUTO_BATCH_WAIT</strong>: The change order is pending execution. SAE will automatically confirm the release batch.</li>
+             * <li><strong>SYSTEM_FAIL</strong>: A system exception occurred.</li>
+             * <li><strong>WAIT_APPROVAL</strong>: The change order is pending approval.</li>
+             * <li><strong>APPROVED</strong>: The change order is approved and is pending execution.</li>
+             * </ul>
              * 
-             * *   **READY**: The change order is ready.
-             * *   **RUNNING**: The change order is being executed.
-             * *   **SUCCESS**: The change order was executed successfully.
-             * *   **FAIL**: The change order failed to be executed.
-             * *   **ABORT**: The change order is stopped.
-             * *   **WAIT_BATCH_CONFIRM**: The change order is pending execution. You must manually confirm the release batch.
-             * *   **AUTO_BATCH_WAIT**: The change order is pending execution. SAE will automatically confirm the release batch.
-             * *   **SYSTEM_FAIL**: A system exception occurred.
-             * *   **WAIT_APPROVAL**: The change order is pending approval.
-             * *   **APPROVED**: The change order is approved and is pending execution.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder lastChangeOrderStatus(String lastChangeOrderStatus) {
                 this.lastChangeOrderStatus = lastChangeOrderStatus;
@@ -457,7 +513,10 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running instances of the application.
+             * <p>The number of running instances of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -465,11 +524,14 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an error occurred while the change order was being executed. Valid values:
-             * <p>
+             * <p>Indicates whether an error occurred while the change order was being executed. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong></li>
+             * <li><strong>RUNNING_BUT_HAS_ERROR</strong> If an error occurs during a batch release, you must manually perform a rollback. In this case, the change order is still running because the task is not completed, but the state of the change order is RUNNING_BUT_HAS_ERROR.</li>
+             * </ul>
              * 
-             * *   **NORMAL**
-             * *   **RUNNING_BUT_HAS_ERROR** If an error occurs during a batch release, you must manually perform a rollback. In this case, the change order is still running because the task is not completed, but the state of the change order is RUNNING_BUT_HAS_ERROR.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;

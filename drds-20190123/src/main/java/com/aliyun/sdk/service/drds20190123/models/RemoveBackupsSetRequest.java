@@ -63,14 +63,14 @@ public class RemoveBackupsSetRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveBackupsSetRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(RemoveBackupsSetRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set. You can call the [DescribeBackupSets](~~139331~~) interface to query the ID of a backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -79,7 +79,7 @@ public class RemoveBackupsSetRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

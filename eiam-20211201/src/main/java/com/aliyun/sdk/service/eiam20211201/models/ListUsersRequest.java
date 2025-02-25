@@ -1,86 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersRequest} extends {@link RequestModel}
  *
  * <p>ListUsersRequest</p>
  */
 public class ListUsersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DisplayNameStartsWith")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayNameStartsWith")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String displayNameStartsWith;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String email;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrganizationalUnitId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String organizationalUnitId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("PhoneRegion")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneRegion")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneRegion;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String status;
 
-    @Query
-    @NameInMap("UserExternalId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserExternalId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String userExternalId;
 
-    @Query
-    @NameInMap("UserIds")
-    private java.util.List < String > userIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
+    private java.util.List<String> userIds;
 
-    @Query
-    @NameInMap("UserSourceId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSourceId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String userSourceId;
 
-    @Query
-    @NameInMap("UserSourceType")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSourceType")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String userSourceType;
 
-    @Query
-    @NameInMap("UsernameStartsWith")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsernameStartsWith")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String usernameStartsWith;
 
     private ListUsersRequest(Builder builder) {
@@ -195,7 +200,7 @@ public class ListUsersRequest extends Request {
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
@@ -232,7 +237,7 @@ public class ListUsersRequest extends Request {
         private String phoneRegion; 
         private String status; 
         private String userExternalId; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userIds; 
         private String userSourceId; 
         private String userSourceType; 
         private String usernameStartsWith; 
@@ -270,7 +275,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 账户展示名，模糊匹配
+         * <p>Displayname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_001</p>
          */
         public Builder displayNameStartsWith(String displayNameStartsWith) {
             this.putQueryParameter("DisplayNameStartsWith", displayNameStartsWith);
@@ -279,7 +287,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The email address of the user who owns the account.
+         * <p>The email address of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:user@example.com">user@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -288,7 +299,11 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -297,7 +312,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The ID of the organizational unit.
+         * <p>The ID of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder organizationalUnitId(String organizationalUnitId) {
             this.putQueryParameter("OrganizationalUnitId", organizationalUnitId);
@@ -306,7 +324,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -315,7 +336,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -324,7 +348,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The mobile number of the user who owns the account.
+         * <p>The mobile number of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156xxxxxxx</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -333,7 +360,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The country code of the mobile number. For example, the country code of China is 86 without 00 or +.
+         * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putQueryParameter("PhoneRegion", phoneRegion);
@@ -342,11 +372,14 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The status of the account. Valid values:
-         * <p>
+         * <p>The status of the account. Valid values:</p>
+         * <ul>
+         * <li>enabled: The account is enabled.</li>
+         * <li>disabled: The account is disabled.</li>
+         * </ul>
          * 
-         * *   enabled: The account is enabled.
-         * *   disabled: The account is disabled.
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -355,10 +388,11 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.
-         * <p>
+         * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.</p>
+         * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
          * 
-         * For accounts with the same source type and source ID, each account has a unique external ID.
+         * <strong>example:</strong>
+         * <p>id_wovwffm62xifdziem7an7xxxxx</p>
          */
         public Builder userExternalId(String userExternalId) {
             this.putQueryParameter("UserExternalId", userExternalId);
@@ -367,19 +401,20 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 账户的ID集合
+         * <p>User ID set</p>
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);
             this.userIds = userIds;
             return this;
         }
 
         /**
-         * The source ID of the account.
-         * <p>
+         * <p>The source ID of the account.</p>
+         * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
          * 
-         * If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder userSourceId(String userSourceId) {
             this.putQueryParameter("UserSourceId", userSourceId);
@@ -388,13 +423,16 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The source type of the account. Valid values:
-         * <p>
+         * <p>The source type of the account. Valid values:</p>
+         * <ul>
+         * <li>build_in: The account was created in IDaaS.</li>
+         * <li>ding_talk: The account was imported from DingTalk.</li>
+         * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
+         * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * </ul>
          * 
-         * *   build_in: The account was created in IDaaS.
-         * *   ding_talk: The account was imported from DingTalk.
-         * *   ad: The account was imported from Microsoft Active Directory (AD).
-         * *   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.
+         * <strong>example:</strong>
+         * <p>build_in</p>
          */
         public Builder userSourceType(String userSourceType) {
             this.putQueryParameter("UserSourceType", userSourceType);
@@ -403,7 +441,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 账户名，左模糊匹配
+         * <p>Username</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name_001</p>
          */
         public Builder usernameStartsWith(String usernameStartsWith) {
             this.putQueryParameter("UsernameStartsWith", usernameStartsWith);

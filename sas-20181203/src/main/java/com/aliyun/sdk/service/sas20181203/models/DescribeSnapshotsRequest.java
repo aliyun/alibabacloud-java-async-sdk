@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotsRequest</p>
  */
 public class DescribeSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("ApiVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiVersion;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("IsAliYunEcs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAliYunEcs")
     private String isAliYunEcs;
 
-    @Query
-    @NameInMap("MachineRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineRegion")
     private String machineRegion;
 
-    @Query
-    @NameInMap("MachineRemark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MachineRemark")
     private String machineRemark;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StatusList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusList")
     private String statusList;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribeSnapshotsRequest(Builder builder) {
@@ -168,11 +173,15 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
-         * The version of the anti-ransomware policy. Valid values:
-         * <p>
+         * <p>The version of the anti-ransomware policy. Valid values:</p>
+         * <ul>
+         * <li><strong>1.0.0</strong></li>
+         * <li><strong>2.0.0</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1.0.0**
-         * *   **2.0.0**
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
@@ -181,7 +190,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -190,11 +202,14 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Specifies whether the server is an Elastic Compute Service (ECS) instance. Valid values:
-         * <p>
+         * <p>Specifies whether the server is an Elastic Compute Service (ECS) instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAliYunEcs(String isAliYunEcs) {
             this.putQueryParameter("IsAliYunEcs", isAliYunEcs);
@@ -203,7 +218,13 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
+         * <p>The region in which the server resides.</p>
+         * <blockquote>
+         * <p> If the Uuid parameter is not specified, this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>us-east-1</p>
          */
         public Builder machineRegion(String machineRegion) {
             this.putQueryParameter("MachineRegion", machineRegion);
@@ -212,7 +233,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * <p>The name or IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -221,10 +245,13 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The starting position of the query. If this parameter is left empty, the query starts from the beginning.
-         * <p>
+         * <p>The starting position of the query. If this parameter is left empty, the query starts from the beginning.</p>
+         * <blockquote>
+         * <p> If you call the operation for the first time, you do not need to specify the parameter. The response to the first call contains the token that can be used for the second call. Each subsequent response contains the token that can be used for the next call.</p>
+         * </blockquote>
          * 
-         * >  If you call the operation for the first time, you do not need to specify the parameter. The response to the first call contains the token that can be used for the second call. Each subsequent response contains the token that can be used for the next call.
+         * <strong>example:</strong>
+         * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAB4SwmEAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM0NzY3YTZjNjI3NjZmNmU3MjcxNjk3NDY5MzY3MjY4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -233,7 +260,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,11 +273,14 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The status of backup snapshots from which data can be restored. Valid values:
-         * <p>
+         * <p>The status of backup snapshots from which data can be restored. Valid values:</p>
+         * <ul>
+         * <li><strong>COMPLETE</strong>: complete</li>
+         * <li><strong>PARTIAL_COMPLETE</strong>: partial complete</li>
+         * </ul>
          * 
-         * *   **COMPLETE**: complete
-         * *   **PARTIAL_COMPLETE**: partial complete
+         * <strong>example:</strong>
+         * <p>[&quot;COMPLETE&quot;]</p>
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -255,10 +289,13 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeBackupPolicy~~">DescribeBackupPolicy</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeBackupPolicy](~~DescribeBackupPolicy~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>061d8042-59ff-416e-bc33-294a1cf5****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

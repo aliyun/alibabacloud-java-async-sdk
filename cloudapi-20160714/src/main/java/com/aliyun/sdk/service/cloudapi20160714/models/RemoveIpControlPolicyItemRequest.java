@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveIpControlPolicyItemRequest} extends {@link RequestModel}
  *
  * <p>RemoveIpControlPolicyItemRequest</p>
  */
 public class RemoveIpControlPolicyItemRequest extends Request {
-    @Query
-    @NameInMap("IpControlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipControlId;
 
-    @Query
-    @NameInMap("PolicyItemIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyItemIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyItemIds;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private RemoveIpControlPolicyItemRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class RemoveIpControlPolicyItemRequest extends Request {
         } 
 
         /**
-         * The ID of the ACL. The ID is unique.
+         * <p>The ID of the ACL. The ID is unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -93,7 +102,11 @@ public class RemoveIpControlPolicyItemRequest extends Request {
         }
 
         /**
-         * The ID of a policy. Separate multiple IDs with semicolons (;). A maximum of 100 IDs can be entered.
+         * <p>The ID of a policy. Separate multiple IDs with semicolons (;). A maximum of 100 IDs can be entered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P151533572852362;P151533557750260</p>
          */
         public Builder policyItemIds(String policyItemIds) {
             this.putQueryParameter("PolicyItemIds", policyItemIds);

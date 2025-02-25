@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterPerformanceRequest</p>
  */
 public class DescribeDBClusterPerformanceRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDBClusterPerformanceRequest(Builder builder) {
@@ -155,7 +160,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp125e3uu94wo****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +173,14 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The interval cannot be more than 32 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-27T16:38Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -173,7 +189,58 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * <p>The performance metrics that you want to query. Separate multiple performance metrics with commas (,). You can query up to five performance metrics at a time. You can query the following performance metrics:</p>
+         * <blockquote>
+         * <p> The <strong>Key</strong> parameter is required.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>CPU</strong>:</p>
+         * <ul>
+         * <li><strong>CPU_USAGE</strong>: the CPU utilization</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Memory</strong>:</p>
+         * <ul>
+         * <li><strong>MEM_USAGE</strong>: the memory usage</li>
+         * <li><strong>MEM_USAGE_SIZE</strong>: the used memory. Unit: MB</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Disk</strong>:</p>
+         * <ul>
+         * <li><strong>DISK_USAGE</strong>: the disk usage</li>
+         * <li><strong>DISK_USAGE_SIZE</strong>: the size of the used disks. Unit: MB</li>
+         * <li><strong>IOPS</strong>: the disk Input/Output Operations per Second (IOPS)</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Connection</strong>:</p>
+         * <ul>
+         * <li><strong>CONN_USAGE</strong>: the database connection usage</li>
+         * <li><strong>CONN_USAGE_COUNT</strong>: the number of database connections used</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Write</strong>:</p>
+         * <ul>
+         * <li><strong>TPS</strong>: the number of rows written per second</li>
+         * <li><strong>INSERT_SIZE</strong>: the amount of data written per second. Unit: MB</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Query</strong>:</p>
+         * <ul>
+         * <li><strong>QPS</strong>: the queries per second</li>
+         * <li><strong>AVG_SEEK</strong>: the average number of random seek calls</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>WAIT</strong>:</p>
+         * <ul>
+         * <li><strong>ZK_WAIT</strong>: the average ZooKeeper wait time. Unit: ms</li>
+         * <li><strong>IO_WAIT</strong>: the average I/O wait time. Unit: ms</li>
+         * <li><strong>CPU_WAIT</strong>: the average CPU wait time. Unit: ms</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MEM_USAGE</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -218,7 +285,11 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-27T16:37Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

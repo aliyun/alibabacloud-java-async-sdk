@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDevicesDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeVsDevicesDataRequest</p>
  */
 public class DescribeVsDevicesDataRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVsDevicesDataRequest(Builder builder) {
@@ -87,12 +92,12 @@ public class DescribeVsDevicesDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVsDevicesDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.groupId = response.groupId;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeVsDevicesDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.groupId = request.groupId;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

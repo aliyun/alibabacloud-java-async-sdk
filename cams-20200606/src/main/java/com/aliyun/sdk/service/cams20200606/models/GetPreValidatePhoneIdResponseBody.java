@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPreValidatePhoneIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetPreValidatePhoneIdResponseBody</p>
  */
 public class GetPreValidatePhoneIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPreValidatePhoneIdResponseBody(Builder builder) {
@@ -74,7 +74,14 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +89,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +97,10 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +108,10 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +124,17 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPreValidatePhoneIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPreValidatePhoneIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PhoneNumberId")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberId")
         private String phoneNumberId;
 
         private Data(Builder builder) {
@@ -150,7 +169,10 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
             private String phoneNumberId; 
 
             /**
-             * PhoneNumber.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>929833</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -158,7 +180,10 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumberId.
+             * <p>The ID of the phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8613800000000</p>
              */
             public Builder phoneNumberId(String phoneNumberId) {
                 this.phoneNumberId = phoneNumberId;

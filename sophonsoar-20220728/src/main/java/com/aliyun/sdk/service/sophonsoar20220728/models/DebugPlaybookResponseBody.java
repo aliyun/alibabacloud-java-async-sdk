@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DebugPlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>DebugPlaybookResponseBody</p>
  */
 public class DebugPlaybookResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestUuid")
+    @com.aliyun.core.annotation.NameInMap("RequestUuid")
     private String requestUuid;
 
     private DebugPlaybookResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DebugPlaybookResponseBody extends TeaModel {
         private String requestUuid; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75E56B2C-C8FA-5A2F-AA08-8745E2AC33EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class DebugPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestUuid.
+         * <p>The UUID of the debugging task. You can use the UUID to query the result and other details of the debugging task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d412cfa-0905-4567-8a83-xxxxxx</p>
          */
         public Builder requestUuid(String requestUuid) {
             this.requestUuid = requestUuid;

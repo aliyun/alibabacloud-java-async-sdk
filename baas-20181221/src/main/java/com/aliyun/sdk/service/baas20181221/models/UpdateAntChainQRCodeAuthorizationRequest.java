@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAntChainQRCodeAuthorizationRequest</p>
  */
 public class UpdateAntChainQRCodeAuthorizationRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("AuthorizationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuthorizationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authorizationType;
 
-    @Body
-    @NameInMap("QRCodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QRCodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String QRCodeType;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private UpdateAntChainQRCodeAuthorizationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.authorizationType = builder.authorizationType;
         this.QRCodeType = builder.QRCodeType;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,6 +49,13 @@ public class UpdateAntChainQRCodeAuthorizationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -73,30 +79,32 @@ public class UpdateAntChainQRCodeAuthorizationRequest extends Request {
         return this.QRCodeType;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateAntChainQRCodeAuthorizationRequest, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String authorizationType; 
         private String QRCodeType; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateAntChainQRCodeAuthorizationRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.authorizationType = response.authorizationType;
-            this.QRCodeType = response.QRCodeType;
-            this.regionId = response.regionId;
+        private Builder(UpdateAntChainQRCodeAuthorizationRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.authorizationType = request.authorizationType;
+            this.QRCodeType = request.QRCodeType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -122,15 +130,6 @@ public class UpdateAntChainQRCodeAuthorizationRequest extends Request {
         public Builder QRCodeType(String QRCodeType) {
             this.putBodyParameter("QRCodeType", QRCodeType);
             this.QRCodeType = QRCodeType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLaunchTemplateVersionRequest} extends {@link RequestModel}
  *
  * <p>DeleteLaunchTemplateVersionRequest</p>
  */
 public class DeleteLaunchTemplateVersionRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DeleteVersion")
-    @Validation(required = true)
-    private java.util.List < Long > deleteVersion;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> deleteVersion;
 
-    @Query
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @Query
-    @NameInMap("LaunchTemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateName")
     private String launchTemplateName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeleteLaunchTemplateVersionRequest(Builder builder) {
@@ -86,7 +91,7 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
     /**
      * @return deleteVersion
      */
-    public java.util.List < Long > getDeleteVersion() {
+    public java.util.List<Long> getDeleteVersion() {
         return this.deleteVersion;
     }
 
@@ -141,7 +146,7 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteLaunchTemplateVersionRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < Long > deleteVersion; 
+        private java.util.List<Long> deleteVersion; 
         private String launchTemplateId; 
         private String launchTemplateName; 
         private String ownerAccount; 
@@ -177,16 +182,23 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The version numbers of instance launch templates that to be deleted. You can specify at most 29 version numbers.
+         * <p>The version numbers of the launch template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
-        public Builder deleteVersion(java.util.List < Long > deleteVersion) {
+        public Builder deleteVersion(java.util.List<Long> deleteVersion) {
             this.putQueryParameter("DeleteVersion", deleteVersion);
             this.deleteVersion = deleteVersion;
             return this;
         }
 
         /**
-         * The ID of the instance launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
+         * <p>The ID of the launch template. For more information, call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-bp1apo0bbbkuy0rj****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -195,7 +207,10 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The name of the instance launch template.
+         * <p>The name of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testLaunchTemplateName</p>
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -222,7 +237,11 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the instance lauch template belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

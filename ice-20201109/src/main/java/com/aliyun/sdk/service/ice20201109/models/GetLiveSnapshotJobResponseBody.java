@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveSnapshotJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveSnapshotJobResponseBody</p>
  */
 public class GetLiveSnapshotJobResponseBody extends TeaModel {
-    @NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobName")
+    @com.aliyun.core.annotation.NameInMap("JobName")
     private String jobName;
 
-    @NameInMap("LastModified")
+    @com.aliyun.core.annotation.NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("OverwriteFormat")
+    @com.aliyun.core.annotation.NameInMap("OverwriteFormat")
     private String overwriteFormat;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SequenceFormat")
+    @com.aliyun.core.annotation.NameInMap("SequenceFormat")
     private String sequenceFormat;
 
-    @NameInMap("SnapshotOutput")
+    @com.aliyun.core.annotation.NameInMap("SnapshotOutput")
     private SnapshotOutput snapshotOutput;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StreamInput")
+    @com.aliyun.core.annotation.NameInMap("StreamInput")
     private StreamInput streamInput;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
     private Integer timeInterval;
 
     private GetLiveSnapshotJobResponseBody(Builder builder) {
@@ -194,7 +199,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         private Integer timeInterval; 
 
         /**
-         * CallbackUrl.
+         * <p>The snapshot callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = callbackUrl;
@@ -202,7 +210,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the file was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T22:22:22Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -210,7 +221,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -218,7 +232,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobName.
+         * <p>The name of the job.</p>
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -226,7 +240,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * LastModified.
+         * <p>The time when the file was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02T22:22:22Z</p>
          */
         public Builder lastModified(String lastModified) {
             this.lastModified = lastModified;
@@ -234,7 +251,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * OverwriteFormat.
+         * <p>The naming format of the snapshot captured in overwrite mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}.jpg</p>
          */
         public Builder overwriteFormat(String overwriteFormat) {
             this.overwriteFormat = overwriteFormat;
@@ -242,7 +262,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +273,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * SequenceFormat.
+         * <p>The naming format of the snapshot captured in time series mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
          */
         public Builder sequenceFormat(String sequenceFormat) {
             this.sequenceFormat = sequenceFormat;
@@ -258,7 +284,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotOutput.
+         * <p>The output information.</p>
          */
         public Builder snapshotOutput(SnapshotOutput snapshotOutput) {
             this.snapshotOutput = snapshotOutput;
@@ -266,7 +292,16 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The state of the job.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>init: The job is not started.</li>
+         * <li>paused: The job is paused.</li>
+         * <li>started: The job is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>started</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -274,7 +309,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * StreamInput.
+         * <p>The input information.</p>
          */
         public Builder streamInput(StreamInput streamInput) {
             this.streamInput = streamInput;
@@ -282,7 +317,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -290,7 +328,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the template.</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -298,7 +336,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * TimeInterval.
+         * <p>The interval between two adjacent snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeInterval(Integer timeInterval) {
             this.timeInterval = timeInterval;
@@ -311,14 +352,20 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveSnapshotJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveSnapshotJobResponseBody</p>
+     */
     public static class SnapshotOutput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private SnapshotOutput(Builder builder) {
@@ -362,7 +409,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * Bucket.
+             * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testbucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -370,7 +420,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -378,7 +431,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type. The value can only be oss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -392,11 +448,17 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveSnapshotJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveSnapshotJobResponseBody</p>
+     */
     public static class StreamInput extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private StreamInput(Builder builder) {
@@ -431,7 +493,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Type.
+             * <p>The type of the input stream. The value can only be rtmp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -439,7 +504,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the input stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://<a href="http://www.aliyun.com/stream">www.aliyun.com/stream</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

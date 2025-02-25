@@ -1,33 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogMetaRequest} extends {@link RequestModel}
  *
  * <p>DescribeLogMetaRequest</p>
  */
 public class DescribeLogMetaRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private DescribeLogMetaRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -59,6 +69,13 @@ public class DescribeLogMetaRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -68,6 +85,7 @@ public class DescribeLogMetaRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeLogMetaRequest, Builder> {
         private String from; 
         private String lang; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
 
         private Builder() {
@@ -78,17 +96,22 @@ public class DescribeLogMetaRequest extends Request {
             super(request);
             this.from = request.from;
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * The ID of the request source. Default value: **aegis**. Valid values:
-         * <p>
+         * <p>The ID of the request source. Default value: <strong>aegis</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>aegis</strong>: Server Guard</li>
+         * <li><strong>sas</strong>: Security Center</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you use Server Guard, set the value to <strong>aegis</strong>. If you use Security Center, set the value to <strong>sas</strong>.</p>
+         * </blockquote>
          * 
-         * *   **aegis**: Server Guard
-         * *   **sas**: Security Center
-         * 
-         * >  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -97,11 +120,14 @@ public class DescribeLogMetaRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +136,25 @@ public class DescribeLogMetaRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

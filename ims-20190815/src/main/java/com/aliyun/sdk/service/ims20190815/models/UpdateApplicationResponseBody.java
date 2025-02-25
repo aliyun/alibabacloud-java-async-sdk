@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateApplicationResponseBody</p>
  */
 public class UpdateApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateApplicationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the application.
+         * <p>The information about the application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +63,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6616F09B-2768-4C11-8866-A8EE4C4A583E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationResponseBody</p>
+     */
     public static class PredefinedScope extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
         private PredefinedScope(Builder builder) {
@@ -122,7 +136,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private Boolean required; 
 
             /**
-             * The description of the permission scope.
+             * <p>The description of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +147,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scope.
+             * <p>The name of the permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openid</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +158,15 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p><code>openid</code> is required by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -152,9 +180,15 @@ public class UpdateApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationResponseBody</p>
+     */
     public static class PredefinedScopes extends TeaModel {
-        @NameInMap("PredefinedScope")
-        private java.util.List < PredefinedScope> predefinedScope;
+        @com.aliyun.core.annotation.NameInMap("PredefinedScope")
+        private java.util.List<PredefinedScope> predefinedScope;
 
         private PredefinedScopes(Builder builder) {
             this.predefinedScope = builder.predefinedScope;
@@ -171,17 +205,17 @@ public class UpdateApplicationResponseBody extends TeaModel {
         /**
          * @return predefinedScope
          */
-        public java.util.List < PredefinedScope> getPredefinedScope() {
+        public java.util.List<PredefinedScope> getPredefinedScope() {
             return this.predefinedScope;
         }
 
         public static final class Builder {
-            private java.util.List < PredefinedScope> predefinedScope; 
+            private java.util.List<PredefinedScope> predefinedScope; 
 
             /**
              * PredefinedScope.
              */
-            public Builder predefinedScope(java.util.List < PredefinedScope> predefinedScope) {
+            public Builder predefinedScope(java.util.List<PredefinedScope> predefinedScope) {
                 this.predefinedScope = predefinedScope;
                 return this;
             }
@@ -193,8 +227,14 @@ public class UpdateApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationResponseBody</p>
+     */
     public static class DelegatedScope extends TeaModel {
-        @NameInMap("PredefinedScopes")
+        @com.aliyun.core.annotation.NameInMap("PredefinedScopes")
         private PredefinedScopes predefinedScopes;
 
         private DelegatedScope(Builder builder) {
@@ -220,7 +260,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private PredefinedScopes predefinedScopes; 
 
             /**
-             * The information of application permissions.
+             * <p>The information about the permissions that are granted on the application.</p>
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -234,9 +274,15 @@ public class UpdateApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationResponseBody</p>
+     */
     public static class RedirectUris extends TeaModel {
-        @NameInMap("RedirectUri")
-        private java.util.List < String > redirectUri;
+        @com.aliyun.core.annotation.NameInMap("RedirectUri")
+        private java.util.List<String> redirectUri;
 
         private RedirectUris(Builder builder) {
             this.redirectUri = builder.redirectUri;
@@ -253,17 +299,17 @@ public class UpdateApplicationResponseBody extends TeaModel {
         /**
          * @return redirectUri
          */
-        public java.util.List < String > getRedirectUri() {
+        public java.util.List<String> getRedirectUri() {
             return this.redirectUri;
         }
 
         public static final class Builder {
-            private java.util.List < String > redirectUri; 
+            private java.util.List<String> redirectUri; 
 
             /**
              * RedirectUri.
              */
-            public Builder redirectUri(java.util.List < String > redirectUri) {
+            public Builder redirectUri(java.util.List<String> redirectUri) {
                 this.redirectUri = redirectUri;
                 return this;
             }
@@ -275,44 +321,50 @@ public class UpdateApplicationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateApplicationResponseBody</p>
+     */
     public static class Application extends TeaModel {
-        @NameInMap("AccessTokenValidity")
+        @com.aliyun.core.annotation.NameInMap("AccessTokenValidity")
         private Integer accessTokenValidity;
 
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DelegatedScope")
+        @com.aliyun.core.annotation.NameInMap("DelegatedScope")
         private DelegatedScope delegatedScope;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("IsMultiTenant")
+        @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
         private Boolean isMultiTenant;
 
-        @NameInMap("RedirectUris")
+        @com.aliyun.core.annotation.NameInMap("RedirectUris")
         private RedirectUris redirectUris;
 
-        @NameInMap("RefreshTokenValidity")
+        @com.aliyun.core.annotation.NameInMap("RefreshTokenValidity")
         private Integer refreshTokenValidity;
 
-        @NameInMap("SecretRequired")
+        @com.aliyun.core.annotation.NameInMap("SecretRequired")
         private Boolean secretRequired;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Application(Builder builder) {
@@ -446,7 +498,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The validity period of the access token. Unit: seconds.
+             * <p>The validity period of the access token. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder accessTokenValidity(Integer accessTokenValidity) {
                 this.accessTokenValidity = accessTokenValidity;
@@ -454,7 +509,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the application belongs.
+             * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>177242285274****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -462,7 +520,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>472457090344041****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -470,7 +531,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myapp</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -478,7 +542,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebApp</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -486,7 +553,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-23T08:06:57Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -494,7 +564,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The information of application permissions.
+             * <p>The information about the permissions that are granted on the application.</p>
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -502,7 +572,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the application.
+             * <p>The display name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NewApp</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -510,7 +583,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application can be installed by using other Alibaba Cloud accounts.
+             * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isMultiTenant(Boolean isMultiTenant) {
                 this.isMultiTenant = isMultiTenant;
@@ -518,7 +594,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL.
+             * <p>The callback URLs.</p>
              */
             public Builder redirectUris(RedirectUris redirectUris) {
                 this.redirectUris = redirectUris;
@@ -526,7 +602,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the refreshed token. Unit: seconds.
+             * <p>The validity period of the refresh token. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7776000</p>
              */
             public Builder refreshTokenValidity(Integer refreshTokenValidity) {
                 this.refreshTokenValidity = refreshTokenValidity;
@@ -534,7 +613,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a secret is required.
+             * <p>Indicates whether a secret is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder secretRequired(Boolean secretRequired) {
                 this.secretRequired = secretRequired;
@@ -542,7 +624,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-23T08:06:57Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

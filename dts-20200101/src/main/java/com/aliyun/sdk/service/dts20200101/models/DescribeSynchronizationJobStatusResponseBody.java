@@ -1,93 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynchronizationJobStatusResponseBody</p>
  */
 public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
-    @NameInMap("Checkpoint")
+    @com.aliyun.core.annotation.NameInMap("Checkpoint")
     private String checkpoint;
 
-    @NameInMap("DataInitialization")
+    @com.aliyun.core.annotation.NameInMap("DataInitialization")
     private String dataInitialization;
 
-    @NameInMap("DataInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
     private DataInitializationStatus dataInitializationStatus;
 
-    @NameInMap("DataSynchronizationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
     private DataSynchronizationStatus dataSynchronizationStatus;
 
-    @NameInMap("Delay")
+    @com.aliyun.core.annotation.NameInMap("Delay")
     private String delay;
 
-    @NameInMap("DelayMillis")
+    @com.aliyun.core.annotation.NameInMap("DelayMillis")
     private Long delayMillis;
 
-    @NameInMap("DestinationEndpoint")
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
     private DestinationEndpoint destinationEndpoint;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("Performance")
+    @com.aliyun.core.annotation.NameInMap("Performance")
     private Performance performance;
 
-    @NameInMap("PrecheckStatus")
+    @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
     private PrecheckStatus precheckStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StructureInitialization")
+    @com.aliyun.core.annotation.NameInMap("StructureInitialization")
     private String structureInitialization;
 
-    @NameInMap("StructureInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
     private StructureInitializationStatus structureInitializationStatus;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("SynchronizationDirection")
+    @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
-    @NameInMap("SynchronizationJobClass")
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobClass")
     private String synchronizationJobClass;
 
-    @NameInMap("SynchronizationJobId")
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
     private String synchronizationJobId;
 
-    @NameInMap("SynchronizationJobName")
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobName")
     private String synchronizationJobName;
 
-    @NameInMap("SynchronizationObjects")
-    private java.util.List < SynchronizationObjects> synchronizationObjects;
+    @com.aliyun.core.annotation.NameInMap("SynchronizationObjects")
+    private java.util.List<SynchronizationObjects> synchronizationObjects;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DescribeSynchronizationJobStatusResponseBody(Builder builder) {
@@ -298,7 +303,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
     /**
      * @return synchronizationObjects
      */
-    public java.util.List < SynchronizationObjects> getSynchronizationObjects() {
+    public java.util.List<SynchronizationObjects> getSynchronizationObjects() {
         return this.synchronizationObjects;
     }
 
@@ -334,14 +339,17 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         private String synchronizationJobClass; 
         private String synchronizationJobId; 
         private String synchronizationJobName; 
-        private java.util.List < SynchronizationObjects> synchronizationObjects; 
+        private java.util.List<SynchronizationObjects> synchronizationObjects; 
         private String taskId; 
 
         /**
-         * The UNIX timestamp generated when the latest data record was synchronized.
-         * <p>
+         * <p>The UNIX timestamp generated when the latest data record was synchronized.</p>
+         * <blockquote>
+         * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+         * </blockquote>
          * 
-         * >  You can use a search engine to obtain a UNIX timestamp converter.
+         * <strong>example:</strong>
+         * <p>1610616144</p>
          */
         public Builder checkpoint(String checkpoint) {
             this.checkpoint = checkpoint;
@@ -349,11 +357,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether full data synchronization is performed. Valid values:
-         * <p>
+         * <p>Indicates whether full data synchronization is performed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dataInitialization(String dataInitialization) {
             this.dataInitialization = dataInitialization;
@@ -361,7 +372,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of full data synchronization.
+         * <p>The status of full data synchronization.</p>
          */
         public Builder dataInitializationStatus(DataInitializationStatus dataInitializationStatus) {
             this.dataInitializationStatus = dataInitializationStatus;
@@ -369,7 +380,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of incremental data synchronization.
+         * <p>The status of incremental data synchronization.</p>
          */
         public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
             this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -377,7 +388,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The synchronization latency, in seconds.
+         * <p>The synchronization latency, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder delay(String delay) {
             this.delay = delay;
@@ -385,7 +399,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The synchronization delay, in milliseconds.
+         * <p>The synchronization delay, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>506</p>
          */
         public Builder delayMillis(Long delayMillis) {
             this.delayMillis = delayMillis;
@@ -393,7 +410,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The connection settings of the destination instance.
+         * <p>The connection settings of the destination instance.</p>
          */
         public Builder destinationEndpoint(DestinationEndpoint destinationEndpoint) {
             this.destinationEndpoint = destinationEndpoint;
@@ -401,7 +418,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -409,7 +429,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -417,7 +440,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if data synchronization failed.
+         * <p>The error message returned if data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -425,10 +451,13 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the data synchronization instance expires. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
-         * <p>
+         * <p>The time when the data synchronization instance expires. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the return value of the <strong>PayType</strong> parameter is <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if the return value of the **PayType** parameter is **PrePaid**.
+         * <strong>example:</strong>
+         * <p>2021-03-07T16:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -436,11 +465,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the data synchronization instance. Valid values:
-         * <p>
+         * <p>The billing method of the data synchronization instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -448,7 +480,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The performance of the data synchronization instance.
+         * <p>The performance of the data synchronization instance.</p>
          */
         public Builder performance(Performance performance) {
             this.performance = performance;
@@ -456,7 +488,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The precheck status.
+         * <p>The precheck status.</p>
          */
         public Builder precheckStatus(PrecheckStatus precheckStatus) {
             this.precheckStatus = precheckStatus;
@@ -464,7 +496,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DACDF659-AFC6-4DC8-ADB8-4569419A4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -472,7 +507,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The connection settings of the source instance.
+         * <p>The connection settings of the source instance.</p>
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
@@ -480,19 +515,22 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the data synchronization task. Valid values:
-         * <p>
+         * <p>The status of the data synchronization task. Valid values:</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started.</li>
+         * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
+         * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
+         * <li><strong>Initializing</strong>: The task is performing initial synchronization.</li>
+         * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
+         * <li><strong>Synchronizing</strong>: The task is synchronizing data.</li>
+         * <li><strong>Failed</strong>: The task failed to synchronize data.</li>
+         * <li><strong>Suspending</strong>: The task is paused.</li>
+         * <li><strong>Modifying</strong>: The objects in the task are being modified.</li>
+         * <li><strong>Finished</strong>: The task is completed.</li>
+         * </ul>
          * 
-         * *   **NotStarted**: The task is not started.
-         * *   **Prechecking**: The task is being prechecked.
-         * *   **PrecheckFailed**: The task failed to pass the precheck.
-         * *   **Initializing**: The task is performing initial synchronization.
-         * *   **InitializeFailed**: Initial synchronization failed.
-         * *   **Synchronizing**: The task is synchronizing data.
-         * *   **Failed**: The task failed to synchronize data.
-         * *   **Suspending**: The task is paused.
-         * *   **Modifying**: The objects in the task are being modified.
-         * *   **Finished**: The task is completed.
+         * <strong>example:</strong>
+         * <p>synchronizing</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -500,11 +538,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether schema synchronization is performed. Valid values:
-         * <p>
+         * <p>Indicates whether schema synchronization is performed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder structureInitialization(String structureInitialization) {
             this.structureInitialization = structureInitialization;
@@ -512,7 +553,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of schema synchronization.
+         * <p>The status of schema synchronization.</p>
          */
         public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
@@ -520,7 +561,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -528,11 +572,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The synchronization direction. Valid values:
-         * <p>
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
          * 
-         * *   **Forward**
-         * *   **Reverse**
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.synchronizationDirection = synchronizationDirection;
@@ -540,7 +587,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The specification of the data synchronization instance.
+         * <p>The specification of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>large</p>
          */
         public Builder synchronizationJobClass(String synchronizationJobClass) {
             this.synchronizationJobClass = synchronizationJobClass;
@@ -548,7 +598,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data synchronization instance.
+         * <p>The ID of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsexjk1alb116****</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.synchronizationJobId = synchronizationJobId;
@@ -556,7 +609,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the data synchronization task.
+         * <p>The name of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.synchronizationJobName = synchronizationJobName;
@@ -564,9 +620,9 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The objects that are synchronized by the task.
+         * <p>The objects that are synchronized by the task.</p>
          */
-        public Builder synchronizationObjects(java.util.List < SynchronizationObjects> synchronizationObjects) {
+        public Builder synchronizationObjects(java.util.List<SynchronizationObjects> synchronizationObjects) {
             this.synchronizationObjects = synchronizationObjects;
             return this;
         }
@@ -585,17 +641,23 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class DataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataInitializationStatus(Builder builder) {
@@ -648,7 +710,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if full data synchronization failed.
+             * <p>The error message returned if full data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -656,7 +721,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of full data synchronization. Unit: %.
+             * <p>The progress of full data synchronization. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -664,7 +732,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of records that have been synchronized during full data synchronization.
+             * <p>The number of records that have been synchronized during full data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200001</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -672,13 +743,16 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of full data synchronization. Valid values:
-             * <p>
+             * <p>The status of full data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Full data synchronization is not started.</li>
+             * <li><strong>Migrating</strong>: Full data synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: Full data synchronization failed.</li>
+             * <li><strong>Finished</strong>: Full data synchronization is completed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: Full data synchronization is not started.
-             * *   **Migrating**: Full data synchronization is in progress.
-             * *   **Failed**: Full data synchronization failed.
-             * *   **Finished**: Full data synchronization is completed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -692,23 +766,29 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class DataSynchronizationStatus extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("DelayMillis")
+        @com.aliyun.core.annotation.NameInMap("DelayMillis")
         private Long delayMillis;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataSynchronizationStatus(Builder builder) {
@@ -779,7 +859,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The UNIX timestamp generated when the latest data record was synchronized.
+             * <p>The UNIX timestamp generated when the latest data record was synchronized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1610709865</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -787,7 +870,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization latency, in seconds.
+             * <p>The synchronization latency, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delay(String delay) {
                 this.delay = delay;
@@ -795,7 +881,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization latency, in milliseconds.
+             * <p>The synchronization latency, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>856</p>
              */
             public Builder delayMillis(Long delayMillis) {
                 this.delayMillis = delayMillis;
@@ -803,7 +892,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if incremental data synchronization failed.
+             * <p>The error message returned if incremental data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -811,7 +903,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of incremental data synchronization. Unit: %.
+             * <p>The progress of incremental data synchronization. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -819,13 +914,16 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of incremental data synchronization. Valid values:
-             * <p>
+             * <p>The status of incremental data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Incremental data synchronization is not started.</li>
+             * <li><strong>Migrating</strong>: Incremental data synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: Incremental data synchronization failed.</li>
+             * <li><strong>Finished</strong>: Incremental data synchronization is completed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: Incremental data synchronization is not started.
-             * *   **Migrating**: Incremental data synchronization is in progress.
-             * *   **Failed**: Incremental data synchronization failed.
-             * *   **Finished**: Incremental data synchronization is completed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -839,23 +937,29 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class DestinationEndpoint extends TeaModel {
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private DestinationEndpoint(Builder builder) {
@@ -926,7 +1030,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The database type of the destination instance.
+             * <p>The database type of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -934,7 +1041,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the destination instance.
+             * <p>The endpoint of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -942,7 +1052,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp162d4tp0500****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -950,7 +1063,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination instance.
+             * <p>The type of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -958,7 +1074,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The database service port of the destination instance.
+             * <p>The database service port of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -966,7 +1085,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the destination instance.
+             * <p>The database account of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -980,11 +1102,17 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class Performance extends TeaModel {
-        @NameInMap("FLOW")
+        @com.aliyun.core.annotation.NameInMap("FLOW")
         private String FLOW;
 
-        @NameInMap("RPS")
+        @com.aliyun.core.annotation.NameInMap("RPS")
         private String RPS;
 
         private Performance(Builder builder) {
@@ -1019,7 +1147,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String RPS; 
 
             /**
-             * The data traffic that is synchronized per second. Unit: MB/s.
+             * <p>The data traffic that is synchronized per second. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder FLOW(String FLOW) {
                 this.FLOW = FLOW;
@@ -1027,7 +1158,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+             * <p>The number of times SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder RPS(String RPS) {
                 this.RPS = RPS;
@@ -1041,17 +1175,23 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private Detail(Builder builder) {
@@ -1104,11 +1244,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * The precheck result. Valid values:
-             * <p>
+             * <p>The precheck result. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong>: The task passed the precheck.</li>
+             * <li><strong>Failed</strong>: The task failed to pass the precheck.</li>
+             * </ul>
              * 
-             * *   **Success**: The task passed the precheck.
-             * *   **Failed**: The task failed to pass the precheck.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -1116,10 +1259,13 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed to pass the precheck.
-             * <p>
+             * <p>The error message returned if the task failed to pass the precheck.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
+             * <strong>example:</strong>
+             * <p>Original error: Access denied for user &quot;dtstest&quot;@&quot;100.104.***.**&quot; (using password: YES)</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1127,7 +1273,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the precheck item.
+             * <p>The name of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -1135,10 +1284,13 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The method to fix the precheck failure.
-             * <p>
+             * <p>The method to fix the precheck failure.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
+             * <strong>example:</strong>
+             * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -1152,14 +1304,20 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class PrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
-        private java.util.List < Detail> detail;
+        @com.aliyun.core.annotation.NameInMap("Detail")
+        private java.util.List<Detail> detail;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrecheckStatus(Builder builder) {
@@ -1179,7 +1337,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < Detail> getDetail() {
+        public java.util.List<Detail> getDetail() {
             return this.detail;
         }
 
@@ -1198,20 +1356,23 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Detail> detail; 
+            private java.util.List<Detail> detail; 
             private String percent; 
             private String status; 
 
             /**
-             * The result of each precheck item.
+             * <p>The result of each precheck item.</p>
              */
-            public Builder detail(java.util.List < Detail> detail) {
+            public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
                 return this;
             }
 
             /**
-             * The precheck progress. Unit: %.
+             * <p>The precheck progress. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1219,11 +1380,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck result. Valid values:
-             * <p>
+             * <p>The precheck result. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong>: The task passed the precheck.</li>
+             * <li><strong>Failed</strong>: The task failed to pass the precheck.</li>
+             * </ul>
              * 
-             * *   **Success**: The task passed the precheck.
-             * *   **Failed**: The task failed to pass the precheck.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1237,23 +1401,29 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SourceEndpoint(Builder builder) {
@@ -1324,7 +1494,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The database type of the source instance.
+             * <p>The database type of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -1332,7 +1505,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the source instance.
+             * <p>The endpoint of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1340,7 +1516,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1i99e8l7913****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1348,7 +1527,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source instance.
+             * <p>The type of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1356,7 +1538,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The database service port of the source instance.
+             * <p>The database service port of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1364,7 +1549,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the source instance.
+             * <p>The database account of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1378,17 +1566,23 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class StructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationStatus(Builder builder) {
@@ -1441,7 +1635,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if schema synchronization failed.
+             * <p>The error message returned if schema synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1449,7 +1646,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of schema synchronization. Unit: %.
+             * <p>The progress of schema synchronization. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1457,7 +1657,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables whose schemas have been synchronized.
+             * <p>The number of tables whose schemas have been synchronized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1465,13 +1668,16 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of schema synchronization. Valid values:
-             * <p>
+             * <p>The status of schema synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Schema synchronization is not started.</li>
+             * <li><strong>Migrating</strong>: Schema synchronization is in progress.</li>
+             * <li><strong>Failed</strong>: Schema synchronization failed.</li>
+             * <li><strong>Finished</strong>: Schema synchronization is completed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: Schema synchronization is not started.
-             * *   **Migrating**: Schema synchronization is in progress.
-             * *   **Failed**: Schema synchronization failed.
-             * *   **Finished**: Schema synchronization is completed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1485,8 +1691,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class TableExcludes extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableExcludes(Builder builder) {
@@ -1512,7 +1724,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the excluded table.
+             * <p>The name of the excluded table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1526,8 +1741,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class TableIncludes extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableIncludes(Builder builder) {
@@ -1553,7 +1774,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the synchronized table.
+             * <p>The name of the synchronized table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1567,18 +1791,24 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSynchronizationJobStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobStatusResponseBody</p>
+     */
     public static class SynchronizationObjects extends TeaModel {
-        @NameInMap("NewSchemaName")
+        @com.aliyun.core.annotation.NameInMap("NewSchemaName")
         private String newSchemaName;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableExcludes")
-        private java.util.List < TableExcludes> tableExcludes;
+        @com.aliyun.core.annotation.NameInMap("TableExcludes")
+        private java.util.List<TableExcludes> tableExcludes;
 
-        @NameInMap("TableIncludes")
-        private java.util.List < TableIncludes> tableIncludes;
+        @com.aliyun.core.annotation.NameInMap("TableIncludes")
+        private java.util.List<TableIncludes> tableIncludes;
 
         private SynchronizationObjects(Builder builder) {
             this.newSchemaName = builder.newSchemaName;
@@ -1612,25 +1842,28 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         /**
          * @return tableExcludes
          */
-        public java.util.List < TableExcludes> getTableExcludes() {
+        public java.util.List<TableExcludes> getTableExcludes() {
             return this.tableExcludes;
         }
 
         /**
          * @return tableIncludes
          */
-        public java.util.List < TableIncludes> getTableIncludes() {
+        public java.util.List<TableIncludes> getTableIncludes() {
             return this.tableIncludes;
         }
 
         public static final class Builder {
             private String newSchemaName; 
             private String schemaName; 
-            private java.util.List < TableExcludes> tableExcludes; 
-            private java.util.List < TableIncludes> tableIncludes; 
+            private java.util.List<TableExcludes> tableExcludes; 
+            private java.util.List<TableIncludes> tableIncludes; 
 
             /**
-             * The database name that is used in the destination instance.
+             * <p>The database name that is used in the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newdtstestdatabase</p>
              */
             public Builder newSchemaName(String newSchemaName) {
                 this.newSchemaName = newSchemaName;
@@ -1638,7 +1871,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the synchronized database.
+             * <p>The name of the synchronized database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdatabase</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -1646,17 +1882,17 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The source tables that are excluded from the data synchronization task.
+             * <p>The source tables that are excluded from the data synchronization task.</p>
              */
-            public Builder tableExcludes(java.util.List < TableExcludes> tableExcludes) {
+            public Builder tableExcludes(java.util.List<TableExcludes> tableExcludes) {
                 this.tableExcludes = tableExcludes;
                 return this;
             }
 
             /**
-             * The tables that are synchronized by the task.
+             * <p>The tables that are synchronized by the task.</p>
              */
-            public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
+            public Builder tableIncludes(java.util.List<TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;
                 return this;
             }

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutHybridMonitorMetricDataResponseBody} extends {@link TeaModel}
  *
  * <p>PutHybridMonitorMetricDataResponseBody</p>
  */
 public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorDetail")
+    @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private java.util.List < ErrorDetail> errorDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutHybridMonitorMetricDataResponseBody(Builder builder) {
@@ -62,10 +62,13 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -73,10 +76,8 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * The details of invalid parameters.
-         * <p>
-         * 
-         * If a request parameter is invalid, the details of the invalid parameter are returned.
+         * <p>The details of invalid parameters.</p>
+         * <p>If a request parameter is invalid, the details of the invalid parameter are returned.</p>
          */
         public Builder errorDetail(java.util.List < ErrorDetail> errorDetail) {
             this.errorDetail = errorDetail;
@@ -84,7 +85,10 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DB1CBCA-D14A-55FA-814F-B4DBD9735F68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +101,17 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PutHybridMonitorMetricDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutHybridMonitorMetricDataResponseBody</p>
+     */
     public static class ErrorDetail extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
         private ErrorDetail(Builder builder) {
@@ -136,7 +146,10 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
             private Long index; 
 
             /**
-             * The error message of the invalid parameter.
+             * <p>The error message of the invalid parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>label name :123 not match [a-zA-Z_][a-zA-Z0-9_]*</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -144,7 +157,10 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * The position of the error message in the array.
+             * <p>The position of the error message in the array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Long index) {
                 this.index = index;

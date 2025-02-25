@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveBatchTaskForReserveDropListDomainRequest} extends {@link RequestModel}
  *
  * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
  */
 public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
-    @Query
-    @NameInMap("ContactTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactTemplateId;
 
-    @Query
-    @NameInMap("Domains")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domains")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Domains> domains;
 
     private SaveBatchTaskForReserveDropListDomainRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         } 
 
         /**
-         * ContactTemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder contactTemplateId(String contactTemplateId) {
             this.putQueryParameter("ContactTemplateId", contactTemplateId);
@@ -79,7 +82,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
-         * Domains.
+         * <p>This parameter is required.</p>
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.putQueryParameter("Domains", domains);
@@ -94,12 +97,26 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveBatchTaskForReserveDropListDomainRequest} extends {@link TeaModel}
+     *
+     * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("DomainName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Dns1")
+        private String dns1;
+
+        @com.aliyun.core.annotation.NameInMap("Dns2")
+        private String dns2;
+
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
         private Domains(Builder builder) {
+            this.dns1 = builder.dns1;
+            this.dns2 = builder.dns2;
             this.domainName = builder.domainName;
         }
 
@@ -112,6 +129,20 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
+         * @return dns1
+         */
+        public String getDns1() {
+            return this.dns1;
+        }
+
+        /**
+         * @return dns2
+         */
+        public String getDns2() {
+            return this.dns2;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
@@ -119,10 +150,31 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         public static final class Builder {
+            private String dns1; 
+            private String dns2; 
             private String domainName; 
 
             /**
-             * DomainName.
+             * Dns1.
+             */
+            public Builder dns1(String dns1) {
+                this.dns1 = dns1;
+                return this;
+            }
+
+            /**
+             * Dns2.
+             */
+            public Builder dns2(String dns2) {
+                this.dns2 = dns2;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

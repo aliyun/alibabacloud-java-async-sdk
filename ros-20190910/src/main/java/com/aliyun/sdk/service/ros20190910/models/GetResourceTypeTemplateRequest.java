@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceTypeTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetResourceTypeTemplateRequest</p>
  */
 public class GetResourceTypeTemplateRequest extends Request {
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("VersionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
     private GetResourceTypeTemplateRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class GetResourceTypeTemplateRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -78,10 +82,13 @@ public class GetResourceTypeTemplateRequest extends Request {
         }
 
         /**
-         * The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.
-         * <p>
+         * <p>The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.</p>
+         * <blockquote>
+         * <p>This parameter is supported only for modules.</p>
+         * </blockquote>
          * 
-         * > This parameter is supported only for modules.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

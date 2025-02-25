@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppPoliciesForIdentityRequest} extends {@link RequestModel}
  *
  * <p>ListAppPoliciesForIdentityRequest</p>
  */
 public class ListAppPoliciesForIdentityRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("IdentityName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityName")
     private String identityName;
 
-    @Query
-    @NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
     private String identityType;
 
     private ListAppPoliciesForIdentityRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class ListAppPoliciesForIdentityRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -91,11 +99,14 @@ public class ListAppPoliciesForIdentityRequest extends Request {
         }
 
         /**
-         * The name of the identity.
-         * <p>
+         * <p>The name of the identity.</p>
+         * <ul>
+         * <li>Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.</li>
+         * <li>Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.</li>
+         * </ul>
          * 
-         * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
-         * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
+         * <strong>example:</strong>
+         * <p>test****name</p>
          */
         public Builder identityName(String identityName) {
             this.putQueryParameter("IdentityName", identityName);
@@ -104,11 +115,14 @@ public class ListAppPoliciesForIdentityRequest extends Request {
         }
 
         /**
-         * The type of the identity. Valid values:
-         * <p>
+         * <p>The type of the identity. Valid values:</p>
+         * <ul>
+         * <li><strong>RamUser</strong>: a RAM user.</li>
+         * <li><strong>RamRole</strong>: a RAM role.</li>
+         * </ul>
          * 
-         * *   **RamUser**: a RAM user.
-         * *   **RamRole**: a RAM role.
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);

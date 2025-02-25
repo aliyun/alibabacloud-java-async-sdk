@@ -1,87 +1,115 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTensorboardsRequest} extends {@link RequestModel}
  *
  * <p>ListTensorboardsRequest</p>
  */
 public class ListTensorboardsRequest extends Request {
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ShowOwn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    private String paymentType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
+    private String quotaId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowOwn")
     private Boolean showOwn;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TensorboardId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TensorboardId")
     private String tensorboardId;
 
-    @Query
-    @NameInMap("Verbose")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    private String username;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListTensorboardsRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.displayName = builder.displayName;
         this.endTime = builder.endTime;
         this.jobId = builder.jobId;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.paymentType = builder.paymentType;
+        this.quotaId = builder.quotaId;
         this.showOwn = builder.showOwn;
         this.sortBy = builder.sortBy;
         this.sourceId = builder.sourceId;
@@ -89,6 +117,8 @@ public class ListTensorboardsRequest extends Request {
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.tensorboardId = builder.tensorboardId;
+        this.userId = builder.userId;
+        this.username = builder.username;
         this.verbose = builder.verbose;
         this.workspaceId = builder.workspaceId;
     }
@@ -104,6 +134,13 @@ public class ListTensorboardsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -146,6 +183,20 @@ public class ListTensorboardsRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
+    }
+
+    /**
+     * @return quotaId
+     */
+    public String getQuotaId() {
+        return this.quotaId;
     }
 
     /**
@@ -198,6 +249,20 @@ public class ListTensorboardsRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
+     * @return username
+     */
+    public String getUsername() {
+        return this.username;
+    }
+
+    /**
      * @return verbose
      */
     public Boolean getVerbose() {
@@ -212,12 +277,15 @@ public class ListTensorboardsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTensorboardsRequest, Builder> {
+        private String accessibility; 
         private String displayName; 
         private String endTime; 
         private String jobId; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String paymentType; 
+        private String quotaId; 
         private Boolean showOwn; 
         private String sortBy; 
         private String sourceId; 
@@ -225,6 +293,8 @@ public class ListTensorboardsRequest extends Request {
         private String startTime; 
         private String status; 
         private String tensorboardId; 
+        private String userId; 
+        private String username; 
         private Boolean verbose; 
         private String workspaceId; 
 
@@ -234,12 +304,15 @@ public class ListTensorboardsRequest extends Request {
 
         private Builder(ListTensorboardsRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.displayName = request.displayName;
             this.endTime = request.endTime;
             this.jobId = request.jobId;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.paymentType = request.paymentType;
+            this.quotaId = request.quotaId;
             this.showOwn = request.showOwn;
             this.sortBy = request.sortBy;
             this.sourceId = request.sourceId;
@@ -247,9 +320,20 @@ public class ListTensorboardsRequest extends Request {
             this.startTime = request.startTime;
             this.status = request.status;
             this.tensorboardId = request.tensorboardId;
+            this.userId = request.userId;
+            this.username = request.username;
             this.verbose = request.verbose;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * DisplayName.
@@ -302,6 +386,24 @@ public class ListTensorboardsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PaymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putQueryParameter("PaymentType", paymentType);
+            this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
+         * QuotaId.
+         */
+        public Builder quotaId(String quotaId) {
+            this.putQueryParameter("QuotaId", quotaId);
+            this.quotaId = quotaId;
             return this;
         }
 
@@ -365,6 +467,24 @@ public class ListTensorboardsRequest extends Request {
         public Builder tensorboardId(String tensorboardId) {
             this.putQueryParameter("TensorboardId", tensorboardId);
             this.tensorboardId = tensorboardId;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("UserId", userId);
+            this.userId = userId;
+            return this;
+        }
+
+        /**
+         * Username.
+         */
+        public Builder username(String username) {
+            this.putQueryParameter("Username", username);
+            this.username = username;
             return this;
         }
 

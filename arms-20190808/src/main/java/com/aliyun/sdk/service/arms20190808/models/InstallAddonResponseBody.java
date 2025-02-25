@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallAddonResponseBody} extends {@link TeaModel}
  *
  * <p>InstallAddonResponseBody</p>
  */
 public class InstallAddonResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private InstallAddonResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class InstallAddonResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code: 200 indicates success.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class InstallAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class InstallAddonResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class InstallAddonResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,10 @@ public class InstallAddonResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,23 +148,29 @@ public class InstallAddonResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InstallAddonResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstallAddonResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
-        @NameInMap("FirstTransitionTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTransitionTime")
         private String firstTransitionTime;
 
-        @NameInMap("LastTransitionTime")
+        @com.aliyun.core.annotation.NameInMap("LastTransitionTime")
         private String lastTransitionTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Conditions(Builder builder) {
@@ -222,7 +241,10 @@ public class InstallAddonResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * First transition time.
+             * <p>The first transition time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-31T14:32:19Z</p>
              */
             public Builder firstTransitionTime(String firstTransitionTime) {
                 this.firstTransitionTime = firstTransitionTime;
@@ -230,7 +252,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Last transition time.
+             * <p>The last transition time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-31T14:32:19Z</p>
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -238,7 +263,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -246,7 +274,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Reason of failure.
+             * <p>The reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -254,7 +285,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Condition status.
+             * <p>The status of the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -262,7 +296,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Condition type.
+             * <p>The type of the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Loaded</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -276,59 +313,68 @@ public class InstallAddonResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InstallAddonResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstallAddonResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AddonName")
+        @com.aliyun.core.annotation.NameInMap("AddonName")
         private String addonName;
 
-        @NameInMap("AlertRuleCount")
+        @com.aliyun.core.annotation.NameInMap("AlertRuleCount")
         private Long alertRuleCount;
 
-        @NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        @com.aliyun.core.annotation.NameInMap("Conditions")
+        private java.util.List<Conditions> conditions;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DashboardCount")
+        @com.aliyun.core.annotation.NameInMap("DashboardCount")
         private Long dashboardCount;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("ExporterCount")
+        @com.aliyun.core.annotation.NameInMap("ExporterCount")
         private Long exporterCount;
 
-        @NameInMap("HaveConfig")
+        @com.aliyun.core.annotation.NameInMap("HaveConfig")
         private Boolean haveConfig;
 
-        @NameInMap("InstallUserId")
+        @com.aliyun.core.annotation.NameInMap("InstallUserId")
         private String installUserId;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("Managed")
+        private Boolean managed;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReleaseId")
+        @com.aliyun.core.annotation.NameInMap("ReleaseId")
         private String releaseId;
 
-        @NameInMap("ReleaseName")
+        @com.aliyun.core.annotation.NameInMap("ReleaseName")
         private String releaseName;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {
@@ -342,6 +388,7 @@ public class InstallAddonResponseBody extends TeaModel {
             this.haveConfig = builder.haveConfig;
             this.installUserId = builder.installUserId;
             this.language = builder.language;
+            this.managed = builder.managed;
             this.regionId = builder.regionId;
             this.releaseId = builder.releaseId;
             this.releaseName = builder.releaseName;
@@ -377,7 +424,7 @@ public class InstallAddonResponseBody extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -428,6 +475,13 @@ public class InstallAddonResponseBody extends TeaModel {
          */
         public String getLanguage() {
             return this.language;
+        }
+
+        /**
+         * @return managed
+         */
+        public Boolean getManaged() {
+            return this.managed;
         }
 
         /**
@@ -489,7 +543,7 @@ public class InstallAddonResponseBody extends TeaModel {
         public static final class Builder {
             private String addonName; 
             private Long alertRuleCount; 
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private String createTime; 
             private Long dashboardCount; 
             private String environmentId; 
@@ -497,6 +551,7 @@ public class InstallAddonResponseBody extends TeaModel {
             private Boolean haveConfig; 
             private String installUserId; 
             private String language; 
+            private Boolean managed; 
             private String regionId; 
             private String releaseId; 
             private String releaseName; 
@@ -507,7 +562,10 @@ public class InstallAddonResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Addon name.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -515,7 +573,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Number of alarm groups.
+             * <p>The number of alert rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alertRuleCount(Long alertRuleCount) {
                 this.alertRuleCount = alertRuleCount;
@@ -523,15 +584,18 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Condition list.
+             * <p>The installation phase.</p>
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
 
             /**
-             * Created time.
+             * <p>The time when the add-on was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-22T16:56:29+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -539,7 +603,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Number of dashboard.
+             * <p>The number of dashboards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dashboardCount(Long dashboardCount) {
                 this.dashboardCount = dashboardCount;
@@ -547,7 +614,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Environment ID.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-xxxx</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -555,7 +625,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Number of Exporter.
+             * <p>The number of exporters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder exporterCount(Long exporterCount) {
                 this.exporterCount = exporterCount;
@@ -563,7 +636,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Whether there is configuration.
+             * <p>Indicates whether the configuration is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder haveConfig(Boolean haveConfig) {
                 this.haveConfig = haveConfig;
@@ -571,7 +647,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * User ID of the installation.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder installUserId(String installUserId) {
                 this.installUserId = installUserId;
@@ -579,7 +658,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -587,7 +669,21 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>Indicates whether the component is fully managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder managed(Boolean managed) {
+                this.managed = managed;
+                return this;
+            }
+
+            /**
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-heyuan</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -595,7 +691,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Release ID.
+             * <p>The release ID after installation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be29c093-3fd6-4fb6-9430-797030cc183a</p>
              */
             public Builder releaseId(String releaseId) {
                 this.releaseId = releaseId;
@@ -603,7 +702,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Name of Release.
+             * <p>The name of the release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-1695372983039</p>
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -611,7 +713,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -619,7 +724,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Status of Release.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -627,7 +735,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * Update time.
+             * <p>The time when the add-on was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-22T16:56:29+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -635,7 +746,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * User ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -643,7 +757,10 @@ public class InstallAddonResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder version(String version) {
                 this.version = version;

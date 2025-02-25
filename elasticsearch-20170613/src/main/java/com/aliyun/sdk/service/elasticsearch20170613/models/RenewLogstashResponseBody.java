@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewLogstashResponseBody} extends {@link TeaModel}
  *
  * <p>RenewLogstashResponseBody</p>
  */
 public class RenewLogstashResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private RenewLogstashResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class RenewLogstashResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +61,14 @@ public class RenewLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result. Valid values:
-         * <p>
+         * <p>The returned result. Valid values:</p>
+         * <ul>
+         * <li>true: The cluster is renewed.</li>
+         * <li>false: The cluster fails to be renewed.</li>
+         * </ul>
          * 
-         * *   true: The cluster is renewed.
-         * *   false: The cluster fails to be renewed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

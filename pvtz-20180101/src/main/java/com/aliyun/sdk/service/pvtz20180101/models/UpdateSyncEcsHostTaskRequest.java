@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSyncEcsHostTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateSyncEcsHostTaskRequest</p>
  */
 public class UpdateSyncEcsHostTaskRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Region> region;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private UpdateSyncEcsHostTaskRequest(Builder builder) {
@@ -99,7 +99,15 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +116,8 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The regions to be synchronized.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder region(java.util.List < Region> region) {
             this.putQueryParameter("Region", region);
@@ -117,7 +126,15 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the hostname synchronization task. Valid values:</p>
+         * <ul>
+         * <li>ON: The task is started.</li>
+         * <li>OFF: The task is ended.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -126,7 +143,11 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df2d03865266bd9842306db586d3****</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -141,11 +162,17 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSyncEcsHostTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSyncEcsHostTaskRequest</p>
+     */
     public static class Region extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private Region(Builder builder) {
@@ -180,7 +207,10 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
             private Long userId; 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -188,7 +218,10 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141339776561****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

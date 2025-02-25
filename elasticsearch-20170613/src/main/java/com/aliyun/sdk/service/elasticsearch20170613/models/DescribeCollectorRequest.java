@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCollectorRequest} extends {@link RequestModel}
  *
  * <p>DescribeCollectorRequest</p>
  */
 public class DescribeCollectorRequest extends Request {
-    @Path
-    @NameInMap("ResId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resId;
 
     private DescribeCollectorRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeCollectorRequest extends Request {
         } 
 
         /**
-         * The ID of the shipper.
+         * <p>The ID of the shipper.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-cn-rg31ahn82m0qd****</p>
          */
         public Builder resId(String resId) {
             this.putPathParameter("ResId", resId);

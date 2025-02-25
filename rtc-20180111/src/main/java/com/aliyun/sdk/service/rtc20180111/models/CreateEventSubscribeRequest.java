@@ -1,52 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEventSubscribeRequest} extends {@link RequestModel}
  *
  * <p>CreateEventSubscribeRequest</p>
  */
 public class CreateEventSubscribeRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("CallbackUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callbackUrl;
 
-    @Query
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Query
-    @NameInMap("ClientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
-    @Query
-    @NameInMap("Events")
-    @Validation(required = true)
-    private java.util.List < String > events;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Events")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> events;
 
-    @Query
-    @NameInMap("NeedCallbackAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedCallbackAuth")
     private Boolean needCallbackAuth;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Users")
-    private java.util.List < String > users;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
+    private Long role;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Users")
+    private java.util.List<String> users;
 
     private CreateEventSubscribeRequest(Builder builder) {
         super(builder);
@@ -57,6 +66,7 @@ public class CreateEventSubscribeRequest extends Request {
         this.events = builder.events;
         this.needCallbackAuth = builder.needCallbackAuth;
         this.ownerId = builder.ownerId;
+        this.role = builder.role;
         this.users = builder.users;
     }
 
@@ -104,7 +114,7 @@ public class CreateEventSubscribeRequest extends Request {
     /**
      * @return events
      */
-    public java.util.List < String > getEvents() {
+    public java.util.List<String> getEvents() {
         return this.events;
     }
 
@@ -123,9 +133,16 @@ public class CreateEventSubscribeRequest extends Request {
     }
 
     /**
+     * @return role
+     */
+    public Long getRole() {
+        return this.role;
+    }
+
+    /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
@@ -134,29 +151,34 @@ public class CreateEventSubscribeRequest extends Request {
         private String callbackUrl; 
         private String channelId; 
         private String clientToken; 
-        private java.util.List < String > events; 
+        private java.util.List<String> events; 
         private Boolean needCallbackAuth; 
         private Long ownerId; 
-        private java.util.List < String > users; 
+        private Long role; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateEventSubscribeRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.callbackUrl = response.callbackUrl;
-            this.channelId = response.channelId;
-            this.clientToken = response.clientToken;
-            this.events = response.events;
-            this.needCallbackAuth = response.needCallbackAuth;
-            this.ownerId = response.ownerId;
-            this.users = response.users;
+        private Builder(CreateEventSubscribeRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.callbackUrl = request.callbackUrl;
+            this.channelId = request.channelId;
+            this.clientToken = request.clientToken;
+            this.events = request.events;
+            this.needCallbackAuth = request.needCallbackAuth;
+            this.ownerId = request.ownerId;
+            this.role = request.role;
+            this.users = request.users;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9qb1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -165,7 +187,10 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * CallbackUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****.com/callback</p>
          */
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
@@ -183,7 +208,10 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,9 +220,12 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
-         * Events.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChannelEvent</p>
          */
-        public Builder events(java.util.List < String > events) {
+        public Builder events(java.util.List<String> events) {
             this.putQueryParameter("Events", events);
             this.events = events;
             return this;
@@ -219,9 +250,18 @@ public class CreateEventSubscribeRequest extends Request {
         }
 
         /**
+         * Role.
+         */
+        public Builder role(Long role) {
+            this.putQueryParameter("Role", role);
+            this.role = role;
+            return this;
+        }
+
+        /**
          * Users.
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putQueryParameter("Users", users);
             this.users = users;
             return this;

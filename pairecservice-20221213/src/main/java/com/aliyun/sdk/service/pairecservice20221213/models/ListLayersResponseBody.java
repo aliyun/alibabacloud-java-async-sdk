@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLayersResponseBody</p>
  */
 public class ListLayersResponseBody extends TeaModel {
-    @NameInMap("Layers")
+    @com.aliyun.core.annotation.NameInMap("Layers")
     private java.util.List < Layers> layers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLayersResponseBody(Builder builder) {
@@ -92,26 +91,34 @@ public class ListLayersResponseBody extends TeaModel {
     } 
 
     public static class Layers extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LaboratoryId")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
+        private String gmtCreateTime;
+
+        @com.aliyun.core.annotation.NameInMap("LaboratoryId")
         private String laboratoryId;
 
-        @NameInMap("LayerId")
+        @com.aliyun.core.annotation.NameInMap("LayerId")
         private String layerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("ResidualFlow")
+        private Long residualFlow;
+
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
         private Layers(Builder builder) {
             this.description = builder.description;
+            this.gmtCreateTime = builder.gmtCreateTime;
             this.laboratoryId = builder.laboratoryId;
             this.layerId = builder.layerId;
             this.name = builder.name;
+            this.residualFlow = builder.residualFlow;
             this.sceneId = builder.sceneId;
         }
 
@@ -128,6 +135,13 @@ public class ListLayersResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return gmtCreateTime
+         */
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
         }
 
         /**
@@ -152,6 +166,13 @@ public class ListLayersResponseBody extends TeaModel {
         }
 
         /**
+         * @return residualFlow
+         */
+        public Long getResidualFlow() {
+            return this.residualFlow;
+        }
+
+        /**
          * @return sceneId
          */
         public String getSceneId() {
@@ -160,9 +181,11 @@ public class ListLayersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String gmtCreateTime; 
             private String laboratoryId; 
             private String layerId; 
             private String name; 
+            private Long residualFlow; 
             private String sceneId; 
 
             /**
@@ -170,6 +193,14 @@ public class ListLayersResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * GmtCreateTime.
+             */
+            public Builder gmtCreateTime(String gmtCreateTime) {
+                this.gmtCreateTime = gmtCreateTime;
                 return this;
             }
 
@@ -194,6 +225,14 @@ public class ListLayersResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * ResidualFlow.
+             */
+            public Builder residualFlow(Long residualFlow) {
+                this.residualFlow = residualFlow;
                 return this;
             }
 

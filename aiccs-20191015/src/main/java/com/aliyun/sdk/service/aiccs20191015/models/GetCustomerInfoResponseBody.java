@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomerInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomerInfoResponseBody</p>
  */
 public class GetCustomerInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCustomerInfoResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +99,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 会员信息
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +107,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 是否请求成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +136,29 @@ public class GetCustomerInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomerInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomerInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CustomizeFields")
-        private java.util.Map < String, ? > customizeFields;
+        @com.aliyun.core.annotation.NameInMap("CustomizeFields")
+        private java.util.Map<String, ?> customizeFields;
 
-        @NameInMap("Nick")
+        @com.aliyun.core.annotation.NameInMap("Nick")
         private String nick;
 
-        @NameInMap("OuterId")
+        @com.aliyun.core.annotation.NameInMap("OuterId")
         private String outerId;
 
-        @NameInMap("Photo")
+        @com.aliyun.core.annotation.NameInMap("Photo")
         private String photo;
 
-        @NameInMap("RealName")
+        @com.aliyun.core.annotation.NameInMap("RealName")
         private String realName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private Data(Builder builder) {
@@ -170,7 +181,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         /**
          * @return customizeFields
          */
-        public java.util.Map < String, ? > getCustomizeFields() {
+        public java.util.Map<String, ?> getCustomizeFields() {
             return this.customizeFields;
         }
 
@@ -210,7 +221,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > customizeFields; 
+            private java.util.Map<String, ?> customizeFields; 
             private String nick; 
             private String outerId; 
             private String photo; 
@@ -218,15 +229,15 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * 自定义字段
+             * CustomizeFields.
              */
-            public Builder customizeFields(java.util.Map < String, ? > customizeFields) {
+            public Builder customizeFields(java.util.Map<String, ?> customizeFields) {
                 this.customizeFields = customizeFields;
                 return this;
             }
 
             /**
-             * 昵称
+             * Nick.
              */
             public Builder nick(String nick) {
                 this.nick = nick;
@@ -234,7 +245,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 外部ID
+             * OuterId.
              */
             public Builder outerId(String outerId) {
                 this.outerId = outerId;
@@ -242,7 +253,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 头像
+             * Photo.
              */
             public Builder photo(String photo) {
                 this.photo = photo;
@@ -250,7 +261,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 真实姓名
+             * RealName.
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -258,7 +269,7 @@ public class GetCustomerInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 会员ID
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadCertificateRequest</p>
  */
 public class UploadCertificateRequest extends Request {
-    @Query
-    @NameInMap("Certificate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificate;
 
-    @Query
-    @NameInMap("CertificateChain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateChain")
     private String certificateChain;
 
-    @Query
-    @NameInMap("CertificateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateId;
 
     private UploadCertificateRequest(Builder builder) {

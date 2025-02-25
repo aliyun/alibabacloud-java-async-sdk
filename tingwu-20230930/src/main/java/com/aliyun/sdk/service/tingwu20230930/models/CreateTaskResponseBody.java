@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTaskResponseBody</p>
  */
 public class CreateTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateTaskResponseBody(Builder builder) {
@@ -111,16 +116,30 @@ public class CreateTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("MeetingJoinUrl")
+        private String meetingJoinUrl;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskKey")
+        @com.aliyun.core.annotation.NameInMap("TaskKey")
         private String taskKey;
 
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
+        private String taskStatus;
+
         private Data(Builder builder) {
+            this.meetingJoinUrl = builder.meetingJoinUrl;
             this.taskId = builder.taskId;
             this.taskKey = builder.taskKey;
+            this.taskStatus = builder.taskStatus;
         }
 
         public static Builder builder() {
@@ -129,6 +148,13 @@ public class CreateTaskResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return meetingJoinUrl
+         */
+        public String getMeetingJoinUrl() {
+            return this.meetingJoinUrl;
         }
 
         /**
@@ -145,9 +171,26 @@ public class CreateTaskResponseBody extends TeaModel {
             return this.taskKey;
         }
 
+        /**
+         * @return taskStatus
+         */
+        public String getTaskStatus() {
+            return this.taskStatus;
+        }
+
         public static final class Builder {
+            private String meetingJoinUrl; 
             private String taskId; 
             private String taskKey; 
+            private String taskStatus; 
+
+            /**
+             * MeetingJoinUrl.
+             */
+            public Builder meetingJoinUrl(String meetingJoinUrl) {
+                this.meetingJoinUrl = meetingJoinUrl;
+                return this;
+            }
 
             /**
              * TaskId.
@@ -162,6 +205,14 @@ public class CreateTaskResponseBody extends TeaModel {
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
+                return this;
+            }
+
+            /**
+             * TaskStatus.
+             */
+            public Builder taskStatus(String taskStatus) {
+                this.taskStatus = taskStatus;
                 return this;
             }
 

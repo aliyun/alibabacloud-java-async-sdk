@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserDcdnIpaStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserDcdnIpaStatusResponseBody</p>
  */
 public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("InDebt")
+    @com.aliyun.core.annotation.NameInMap("InDebt")
     private Boolean inDebt;
 
-    @NameInMap("InDebtOverdue")
+    @com.aliyun.core.annotation.NameInMap("InDebtOverdue")
     private Boolean inDebtOverdue;
 
-    @NameInMap("OnService")
+    @com.aliyun.core.annotation.NameInMap("OnService")
     private Boolean onService;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserDcdnIpaStatusResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the IPA service is activated.
+         * <p>Indicates whether the IPA service is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -94,7 +97,10 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether you have overdue payments.
+         * <p>Indicates whether you have overdue payments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -102,7 +108,10 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the grace period for your overdue payments expired.
+         * <p>Indicates whether the grace period for your overdue payments expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -110,7 +119,10 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the IPA service is available. The IPA service is available when no payment is overdue.
+         * <p>Indicates whether the IPA service is available. The IPA service is available when no payment is overdue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -118,7 +130,10 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F51E9C3-728F-4E35-952D-0ED87A06A8A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

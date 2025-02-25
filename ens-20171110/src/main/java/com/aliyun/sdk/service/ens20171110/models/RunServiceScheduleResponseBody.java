@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunServiceScheduleResponseBody} extends {@link TeaModel}
  *
  * <p>RunServiceScheduleResponseBody</p>
  */
 public class RunServiceScheduleResponseBody extends TeaModel {
-    @NameInMap("CommandResults")
+    @com.aliyun.core.annotation.NameInMap("CommandResults")
     private CommandResults commandResults;
 
-    @NameInMap("Index")
+    @com.aliyun.core.annotation.NameInMap("Index")
     private Integer index;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceIp")
+    @com.aliyun.core.annotation.NameInMap("InstanceIp")
     private String instanceIp;
 
-    @NameInMap("InstancePort")
+    @com.aliyun.core.annotation.NameInMap("InstancePort")
     private Integer instancePort;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestRepeated")
+    @com.aliyun.core.annotation.NameInMap("RequestRepeated")
     private String requestRepeated;
 
-    @NameInMap("TcpPorts")
+    @com.aliyun.core.annotation.NameInMap("TcpPorts")
     private Boolean tcpPorts;
 
     private RunServiceScheduleResponseBody(Builder builder) {
@@ -122,7 +127,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         private Boolean tcpPorts; 
 
         /**
-         * CommandResults.
+         * <p>The execution results of the commands.</p>
          */
         public Builder commandResults(CommandResults commandResults) {
             this.commandResults = commandResults;
@@ -130,7 +135,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Index.
+         * <p>The index number of the scheduled virtual device (pod).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -138,7 +146,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5qvji3mom4ec013dyygmtxlkj</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -146,7 +157,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIp.
+         * <p>The IP address of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.246.11</p>
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;
@@ -154,7 +168,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstancePort.
+         * <p>The start port of the scheduled instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
@@ -162,7 +179,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +190,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestRepeated.
+         * <p>Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requestRepeated(String requestRepeated) {
             this.requestRepeated = requestRepeated;
@@ -178,7 +201,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * TcpPorts.
+         * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;80-88&quot;</p>
          */
         public Builder tcpPorts(Boolean tcpPorts) {
             this.tcpPorts = tcpPorts;
@@ -191,14 +217,20 @@ public class RunServiceScheduleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunServiceScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunServiceScheduleResponseBody</p>
+     */
     public static class CommandResult extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
         private CommandResult(Builder builder) {
@@ -242,7 +274,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             private String resultMsg; 
 
             /**
-             * Command.
+             * <p>The command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls -l /data</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -250,7 +285,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerName.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>android</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -258,7 +296,10 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ResultMsg.
+             * <p>The execution result of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder resultMsg(String resultMsg) {
                 this.resultMsg = resultMsg;
@@ -272,9 +313,15 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunServiceScheduleResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunServiceScheduleResponseBody</p>
+     */
     public static class CommandResults extends TeaModel {
-        @NameInMap("CommandResult")
-        private java.util.List < CommandResult> commandResult;
+        @com.aliyun.core.annotation.NameInMap("CommandResult")
+        private java.util.List<CommandResult> commandResult;
 
         private CommandResults(Builder builder) {
             this.commandResult = builder.commandResult;
@@ -291,17 +338,17 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         /**
          * @return commandResult
          */
-        public java.util.List < CommandResult> getCommandResult() {
+        public java.util.List<CommandResult> getCommandResult() {
             return this.commandResult;
         }
 
         public static final class Builder {
-            private java.util.List < CommandResult> commandResult; 
+            private java.util.List<CommandResult> commandResult; 
 
             /**
              * CommandResult.
              */
-            public Builder commandResult(java.util.List < CommandResult> commandResult) {
+            public Builder commandResult(java.util.List<CommandResult> commandResult) {
                 this.commandResult = commandResult;
                 return this;
             }

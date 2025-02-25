@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafDefaultRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafDefaultRulesRequest</p>
  */
 public class DescribeDcdnWafDefaultRulesRequest extends Request {
-    @Query
-    @NameInMap("QueryArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryArgs")
     private String queryArgs;
 
     private DescribeDcdnWafDefaultRulesRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class DescribeDcdnWafDefaultRulesRequest extends Request {
         } 
 
         /**
-         * QueryArgs.
+         * <p>The query conditions. The value is a string in the JSON format. Format: <code>QueryArgs={&quot;DefenseScene&quot;:&quot;anti_scan&quot;}</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DefenseScene&quot;:&quot;anti_scan&quot;}</p>
          */
         public Builder queryArgs(String queryArgs) {
             this.putQueryParameter("QueryArgs", queryArgs);

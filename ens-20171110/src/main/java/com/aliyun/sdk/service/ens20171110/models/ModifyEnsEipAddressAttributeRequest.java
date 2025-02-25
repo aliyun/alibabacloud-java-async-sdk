@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEnsEipAddressAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyEnsEipAddressAttributeRequest</p>
  */
 public class ModifyEnsEipAddressAttributeRequest extends Request {
-    @Query
-    @NameInMap("AllocationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allocationId;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String name;
 
     private ModifyEnsEipAddressAttributeRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * <p>The ID of the EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-5sw5dxzgi6umq4uexxkt8wpma</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -109,7 +118,10 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -118,7 +130,10 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -127,7 +142,10 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-api-modify</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

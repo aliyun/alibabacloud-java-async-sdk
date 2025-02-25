@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCdnDeliverTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCdnDeliverTaskResponseBody</p>
  */
 public class CreateCdnDeliverTaskResponseBody extends TeaModel {
-    @NameInMap("DeliverId")
+    @com.aliyun.core.annotation.NameInMap("DeliverId")
     private String deliverId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCdnDeliverTaskResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateCdnDeliverTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the tracking task.
+         * <p>The ID of the tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1025</p>
          */
         public Builder deliverId(String deliverId) {
             this.deliverId = deliverId;
@@ -58,7 +61,10 @@ public class CreateCdnDeliverTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

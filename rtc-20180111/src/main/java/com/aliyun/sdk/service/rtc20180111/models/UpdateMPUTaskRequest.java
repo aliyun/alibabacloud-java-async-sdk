@@ -1,102 +1,107 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMPUTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateMPUTaskRequest</p>
  */
 public class UpdateMPUTaskRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("BackgroundColor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundColor")
     private Integer backgroundColor;
 
-    @Query
-    @NameInMap("Backgrounds")
-    private java.util.List < Backgrounds> backgrounds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Backgrounds")
+    private java.util.List<Backgrounds> backgrounds;
 
-    @Query
-    @NameInMap("ClockWidgets")
-    private java.util.List < ClockWidgets> clockWidgets;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClockWidgets")
+    private java.util.List<ClockWidgets> clockWidgets;
 
-    @Query
-    @NameInMap("CropMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CropMode")
     private Integer cropMode;
 
-    @Query
-    @NameInMap("LayoutIds")
-    private java.util.List < Long > layoutIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutIds")
+    private java.util.List<Long> layoutIds;
 
-    @Query
-    @NameInMap("MediaEncode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaEncode")
     private Integer mediaEncode;
 
-    @Query
-    @NameInMap("MixMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MixMode")
     private Integer mixMode;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private Integer streamType;
 
-    @Query
-    @NameInMap("SubSpecAudioUsers")
-    private java.util.List < String > subSpecAudioUsers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecAudioUsers")
+    private java.util.List<String> subSpecAudioUsers;
 
-    @Query
-    @NameInMap("SubSpecCameraUsers")
-    private java.util.List < String > subSpecCameraUsers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecCameraUsers")
+    private java.util.List<String> subSpecCameraUsers;
 
-    @Query
-    @NameInMap("SubSpecShareScreenUsers")
-    private java.util.List < String > subSpecShareScreenUsers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecShareScreenUsers")
+    private java.util.List<String> subSpecShareScreenUsers;
 
-    @Query
-    @NameInMap("SubSpecUsers")
-    private java.util.List < String > subSpecUsers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecUsers")
+    private java.util.List<String> subSpecUsers;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
-    @Query
-    @NameInMap("UnsubSpecAudioUsers")
-    private java.util.List < String > unsubSpecAudioUsers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnsubSpecAudioUsers")
+    private java.util.List<String> unsubSpecAudioUsers;
 
-    @Query
-    @NameInMap("UnsubSpecCameraUsers")
-    private java.util.List < String > unsubSpecCameraUsers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnsubSpecCameraUsers")
+    private java.util.List<String> unsubSpecCameraUsers;
 
-    @Query
-    @NameInMap("UnsubSpecShareScreenUsers")
-    private java.util.List < String > unsubSpecShareScreenUsers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnsubSpecShareScreenUsers")
+    private java.util.List<String> unsubSpecShareScreenUsers;
 
-    @Query
-    @NameInMap("UserPanes")
-    private java.util.List < UserPanes> userPanes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPanes")
+    private java.util.List<UserPanes> userPanes;
 
-    @Query
-    @NameInMap("Watermarks")
-    private java.util.List < Watermarks> watermarks;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Watermarks")
+    private java.util.List<Watermarks> watermarks;
 
     private UpdateMPUTaskRequest(Builder builder) {
         super(builder);
@@ -153,14 +158,14 @@ public class UpdateMPUTaskRequest extends Request {
     /**
      * @return backgrounds
      */
-    public java.util.List < Backgrounds> getBackgrounds() {
+    public java.util.List<Backgrounds> getBackgrounds() {
         return this.backgrounds;
     }
 
     /**
      * @return clockWidgets
      */
-    public java.util.List < ClockWidgets> getClockWidgets() {
+    public java.util.List<ClockWidgets> getClockWidgets() {
         return this.clockWidgets;
     }
 
@@ -174,7 +179,7 @@ public class UpdateMPUTaskRequest extends Request {
     /**
      * @return layoutIds
      */
-    public java.util.List < Long > getLayoutIds() {
+    public java.util.List<Long> getLayoutIds() {
         return this.layoutIds;
     }
 
@@ -216,28 +221,28 @@ public class UpdateMPUTaskRequest extends Request {
     /**
      * @return subSpecAudioUsers
      */
-    public java.util.List < String > getSubSpecAudioUsers() {
+    public java.util.List<String> getSubSpecAudioUsers() {
         return this.subSpecAudioUsers;
     }
 
     /**
      * @return subSpecCameraUsers
      */
-    public java.util.List < String > getSubSpecCameraUsers() {
+    public java.util.List<String> getSubSpecCameraUsers() {
         return this.subSpecCameraUsers;
     }
 
     /**
      * @return subSpecShareScreenUsers
      */
-    public java.util.List < String > getSubSpecShareScreenUsers() {
+    public java.util.List<String> getSubSpecShareScreenUsers() {
         return this.subSpecShareScreenUsers;
     }
 
     /**
      * @return subSpecUsers
      */
-    public java.util.List < String > getSubSpecUsers() {
+    public java.util.List<String> getSubSpecUsers() {
         return this.subSpecUsers;
     }
 
@@ -251,92 +256,95 @@ public class UpdateMPUTaskRequest extends Request {
     /**
      * @return unsubSpecAudioUsers
      */
-    public java.util.List < String > getUnsubSpecAudioUsers() {
+    public java.util.List<String> getUnsubSpecAudioUsers() {
         return this.unsubSpecAudioUsers;
     }
 
     /**
      * @return unsubSpecCameraUsers
      */
-    public java.util.List < String > getUnsubSpecCameraUsers() {
+    public java.util.List<String> getUnsubSpecCameraUsers() {
         return this.unsubSpecCameraUsers;
     }
 
     /**
      * @return unsubSpecShareScreenUsers
      */
-    public java.util.List < String > getUnsubSpecShareScreenUsers() {
+    public java.util.List<String> getUnsubSpecShareScreenUsers() {
         return this.unsubSpecShareScreenUsers;
     }
 
     /**
      * @return userPanes
      */
-    public java.util.List < UserPanes> getUserPanes() {
+    public java.util.List<UserPanes> getUserPanes() {
         return this.userPanes;
     }
 
     /**
      * @return watermarks
      */
-    public java.util.List < Watermarks> getWatermarks() {
+    public java.util.List<Watermarks> getWatermarks() {
         return this.watermarks;
     }
 
     public static final class Builder extends Request.Builder<UpdateMPUTaskRequest, Builder> {
         private String appId; 
         private Integer backgroundColor; 
-        private java.util.List < Backgrounds> backgrounds; 
-        private java.util.List < ClockWidgets> clockWidgets; 
+        private java.util.List<Backgrounds> backgrounds; 
+        private java.util.List<ClockWidgets> clockWidgets; 
         private Integer cropMode; 
-        private java.util.List < Long > layoutIds; 
+        private java.util.List<Long> layoutIds; 
         private Integer mediaEncode; 
         private Integer mixMode; 
         private Long ownerId; 
         private String sourceType; 
         private Integer streamType; 
-        private java.util.List < String > subSpecAudioUsers; 
-        private java.util.List < String > subSpecCameraUsers; 
-        private java.util.List < String > subSpecShareScreenUsers; 
-        private java.util.List < String > subSpecUsers; 
+        private java.util.List<String> subSpecAudioUsers; 
+        private java.util.List<String> subSpecCameraUsers; 
+        private java.util.List<String> subSpecShareScreenUsers; 
+        private java.util.List<String> subSpecUsers; 
         private String taskId; 
-        private java.util.List < String > unsubSpecAudioUsers; 
-        private java.util.List < String > unsubSpecCameraUsers; 
-        private java.util.List < String > unsubSpecShareScreenUsers; 
-        private java.util.List < UserPanes> userPanes; 
-        private java.util.List < Watermarks> watermarks; 
+        private java.util.List<String> unsubSpecAudioUsers; 
+        private java.util.List<String> unsubSpecCameraUsers; 
+        private java.util.List<String> unsubSpecShareScreenUsers; 
+        private java.util.List<UserPanes> userPanes; 
+        private java.util.List<Watermarks> watermarks; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateMPUTaskRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.backgroundColor = response.backgroundColor;
-            this.backgrounds = response.backgrounds;
-            this.clockWidgets = response.clockWidgets;
-            this.cropMode = response.cropMode;
-            this.layoutIds = response.layoutIds;
-            this.mediaEncode = response.mediaEncode;
-            this.mixMode = response.mixMode;
-            this.ownerId = response.ownerId;
-            this.sourceType = response.sourceType;
-            this.streamType = response.streamType;
-            this.subSpecAudioUsers = response.subSpecAudioUsers;
-            this.subSpecCameraUsers = response.subSpecCameraUsers;
-            this.subSpecShareScreenUsers = response.subSpecShareScreenUsers;
-            this.subSpecUsers = response.subSpecUsers;
-            this.taskId = response.taskId;
-            this.unsubSpecAudioUsers = response.unsubSpecAudioUsers;
-            this.unsubSpecCameraUsers = response.unsubSpecCameraUsers;
-            this.unsubSpecShareScreenUsers = response.unsubSpecShareScreenUsers;
-            this.userPanes = response.userPanes;
-            this.watermarks = response.watermarks;
+        private Builder(UpdateMPUTaskRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.backgroundColor = request.backgroundColor;
+            this.backgrounds = request.backgrounds;
+            this.clockWidgets = request.clockWidgets;
+            this.cropMode = request.cropMode;
+            this.layoutIds = request.layoutIds;
+            this.mediaEncode = request.mediaEncode;
+            this.mixMode = request.mixMode;
+            this.ownerId = request.ownerId;
+            this.sourceType = request.sourceType;
+            this.streamType = request.streamType;
+            this.subSpecAudioUsers = request.subSpecAudioUsers;
+            this.subSpecCameraUsers = request.subSpecCameraUsers;
+            this.subSpecShareScreenUsers = request.subSpecShareScreenUsers;
+            this.subSpecUsers = request.subSpecUsers;
+            this.taskId = request.taskId;
+            this.unsubSpecAudioUsers = request.unsubSpecAudioUsers;
+            this.unsubSpecCameraUsers = request.unsubSpecCameraUsers;
+            this.unsubSpecShareScreenUsers = request.unsubSpecShareScreenUsers;
+            this.userPanes = request.userPanes;
+            this.watermarks = request.watermarks;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -356,7 +364,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * Backgrounds.
          */
-        public Builder backgrounds(java.util.List < Backgrounds> backgrounds) {
+        public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
             this.backgrounds = backgrounds;
             return this;
@@ -365,7 +373,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * ClockWidgets.
          */
-        public Builder clockWidgets(java.util.List < ClockWidgets> clockWidgets) {
+        public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
             this.clockWidgets = clockWidgets;
             return this;
@@ -383,7 +391,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * LayoutIds.
          */
-        public Builder layoutIds(java.util.List < Long > layoutIds) {
+        public Builder layoutIds(java.util.List<Long> layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
             this.layoutIds = layoutIds;
             return this;
@@ -437,7 +445,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * SubSpecAudioUsers.
          */
-        public Builder subSpecAudioUsers(java.util.List < String > subSpecAudioUsers) {
+        public Builder subSpecAudioUsers(java.util.List<String> subSpecAudioUsers) {
             this.putQueryParameter("SubSpecAudioUsers", subSpecAudioUsers);
             this.subSpecAudioUsers = subSpecAudioUsers;
             return this;
@@ -446,7 +454,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * SubSpecCameraUsers.
          */
-        public Builder subSpecCameraUsers(java.util.List < String > subSpecCameraUsers) {
+        public Builder subSpecCameraUsers(java.util.List<String> subSpecCameraUsers) {
             this.putQueryParameter("SubSpecCameraUsers", subSpecCameraUsers);
             this.subSpecCameraUsers = subSpecCameraUsers;
             return this;
@@ -455,7 +463,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * SubSpecShareScreenUsers.
          */
-        public Builder subSpecShareScreenUsers(java.util.List < String > subSpecShareScreenUsers) {
+        public Builder subSpecShareScreenUsers(java.util.List<String> subSpecShareScreenUsers) {
             this.putQueryParameter("SubSpecShareScreenUsers", subSpecShareScreenUsers);
             this.subSpecShareScreenUsers = subSpecShareScreenUsers;
             return this;
@@ -464,14 +472,17 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * SubSpecUsers.
          */
-        public Builder subSpecUsers(java.util.List < String > subSpecUsers) {
+        public Builder subSpecUsers(java.util.List<String> subSpecUsers) {
             this.putQueryParameter("SubSpecUsers", subSpecUsers);
             this.subSpecUsers = subSpecUsers;
             return this;
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testId</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -482,7 +493,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * UnsubSpecAudioUsers.
          */
-        public Builder unsubSpecAudioUsers(java.util.List < String > unsubSpecAudioUsers) {
+        public Builder unsubSpecAudioUsers(java.util.List<String> unsubSpecAudioUsers) {
             this.putQueryParameter("UnsubSpecAudioUsers", unsubSpecAudioUsers);
             this.unsubSpecAudioUsers = unsubSpecAudioUsers;
             return this;
@@ -491,7 +502,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * UnsubSpecCameraUsers.
          */
-        public Builder unsubSpecCameraUsers(java.util.List < String > unsubSpecCameraUsers) {
+        public Builder unsubSpecCameraUsers(java.util.List<String> unsubSpecCameraUsers) {
             this.putQueryParameter("UnsubSpecCameraUsers", unsubSpecCameraUsers);
             this.unsubSpecCameraUsers = unsubSpecCameraUsers;
             return this;
@@ -500,7 +511,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * UnsubSpecShareScreenUsers.
          */
-        public Builder unsubSpecShareScreenUsers(java.util.List < String > unsubSpecShareScreenUsers) {
+        public Builder unsubSpecShareScreenUsers(java.util.List<String> unsubSpecShareScreenUsers) {
             this.putQueryParameter("UnsubSpecShareScreenUsers", unsubSpecShareScreenUsers);
             this.unsubSpecShareScreenUsers = unsubSpecShareScreenUsers;
             return this;
@@ -509,7 +520,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * UserPanes.
          */
-        public Builder userPanes(java.util.List < UserPanes> userPanes) {
+        public Builder userPanes(java.util.List<UserPanes> userPanes) {
             this.putQueryParameter("UserPanes", userPanes);
             this.userPanes = userPanes;
             return this;
@@ -518,7 +529,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * Watermarks.
          */
-        public Builder watermarks(java.util.List < Watermarks> watermarks) {
+        public Builder watermarks(java.util.List<Watermarks> watermarks) {
             this.putQueryParameter("Watermarks", watermarks);
             this.watermarks = watermarks;
             return this;
@@ -531,27 +542,33 @@ public class UpdateMPUTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMPUTaskRequest</p>
+     */
     public static class Backgrounds extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Backgrounds(Builder builder) {
             this.display = builder.display;
@@ -560,7 +577,7 @@ public class UpdateMPUTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -614,10 +631,10 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -627,7 +644,7 @@ public class UpdateMPUTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -680,8 +697,8 @@ public class UpdateMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -692,32 +709,62 @@ public class UpdateMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMPUTaskRequest</p>
+     */
     public static class ClockWidgets extends TeaModel {
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        private Float alpha;
+
+        @com.aliyun.core.annotation.NameInMap("BorderColor")
+        private Long borderColor;
+
+        @com.aliyun.core.annotation.NameInMap("BorderWidth")
+        private Integer borderWidth;
+
+        @com.aliyun.core.annotation.NameInMap("Box")
+        private Boolean box;
+
+        @com.aliyun.core.annotation.NameInMap("BoxBorderWidth")
+        private Integer boxBorderWidth;
+
+        @com.aliyun.core.annotation.NameInMap("BoxColor")
+        private Long boxColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("FontType")
+        @com.aliyun.core.annotation.NameInMap("FontType")
         private Integer fontType;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
+            this.alpha = builder.alpha;
+            this.borderColor = builder.borderColor;
+            this.borderWidth = builder.borderWidth;
+            this.box = builder.box;
+            this.boxBorderWidth = builder.boxBorderWidth;
+            this.boxColor = builder.boxColor;
             this.fontColor = builder.fontColor;
             this.fontSize = builder.fontSize;
             this.fontType = builder.fontType;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -726,6 +773,48 @@ public class UpdateMPUTaskRequest extends Request {
 
         public static ClockWidgets create() {
             return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Float getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return borderColor
+         */
+        public Long getBorderColor() {
+            return this.borderColor;
+        }
+
+        /**
+         * @return borderWidth
+         */
+        public Integer getBorderWidth() {
+            return this.borderWidth;
+        }
+
+        /**
+         * @return box
+         */
+        public Boolean getBox() {
+            return this.box;
+        }
+
+        /**
+         * @return boxBorderWidth
+         */
+        public Integer getBoxBorderWidth() {
+            return this.boxBorderWidth;
+        }
+
+        /**
+         * @return boxColor
+         */
+        public Long getBoxColor() {
+            return this.boxColor;
         }
 
         /**
@@ -764,19 +853,73 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
+            private Float alpha; 
+            private Long borderColor; 
+            private Integer borderWidth; 
+            private Boolean box; 
+            private Integer boxBorderWidth; 
+            private Long boxColor; 
             private Integer fontColor; 
             private Integer fontSize; 
             private Integer fontType; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Float alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * BorderColor.
+             */
+            public Builder borderColor(Long borderColor) {
+                this.borderColor = borderColor;
+                return this;
+            }
+
+            /**
+             * BorderWidth.
+             */
+            public Builder borderWidth(Integer borderWidth) {
+                this.borderWidth = borderWidth;
+                return this;
+            }
+
+            /**
+             * Box.
+             */
+            public Builder box(Boolean box) {
+                this.box = box;
+                return this;
+            }
+
+            /**
+             * BoxBorderWidth.
+             */
+            public Builder boxBorderWidth(Integer boxBorderWidth) {
+                this.boxBorderWidth = boxBorderWidth;
+                return this;
+            }
+
+            /**
+             * BoxColor.
+             */
+            public Builder boxColor(Long boxColor) {
+                this.boxColor = boxColor;
+                return this;
+            }
 
             /**
              * FontColor.
@@ -821,8 +964,8 @@ public class UpdateMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -833,27 +976,33 @@ public class UpdateMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMPUTaskRequest</p>
+     */
     public static class Images extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Images(Builder builder) {
             this.display = builder.display;
@@ -862,7 +1011,7 @@ public class UpdateMPUTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -916,10 +1065,10 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -929,7 +1078,7 @@ public class UpdateMPUTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -982,8 +1131,8 @@ public class UpdateMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -994,36 +1143,66 @@ public class UpdateMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMPUTaskRequest</p>
+     */
     public static class Texts extends TeaModel {
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        private Float alpha;
+
+        @com.aliyun.core.annotation.NameInMap("BorderColor")
+        private Long borderColor;
+
+        @com.aliyun.core.annotation.NameInMap("BorderWidth")
+        private Integer borderWidth;
+
+        @com.aliyun.core.annotation.NameInMap("Box")
+        private Boolean box;
+
+        @com.aliyun.core.annotation.NameInMap("BoxBorderWidth")
+        private Integer boxBorderWidth;
+
+        @com.aliyun.core.annotation.NameInMap("BoxColor")
+        private Long boxColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("FontType")
+        @com.aliyun.core.annotation.NameInMap("FontType")
         private Integer fontType;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Texts(Builder builder) {
+            this.alpha = builder.alpha;
+            this.borderColor = builder.borderColor;
+            this.borderWidth = builder.borderWidth;
+            this.box = builder.box;
+            this.boxBorderWidth = builder.boxBorderWidth;
+            this.boxColor = builder.boxColor;
             this.fontColor = builder.fontColor;
             this.fontSize = builder.fontSize;
             this.fontType = builder.fontType;
             this.text = builder.text;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -1032,6 +1211,48 @@ public class UpdateMPUTaskRequest extends Request {
 
         public static Texts create() {
             return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Float getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return borderColor
+         */
+        public Long getBorderColor() {
+            return this.borderColor;
+        }
+
+        /**
+         * @return borderWidth
+         */
+        public Integer getBorderWidth() {
+            return this.borderWidth;
+        }
+
+        /**
+         * @return box
+         */
+        public Boolean getBox() {
+            return this.box;
+        }
+
+        /**
+         * @return boxBorderWidth
+         */
+        public Integer getBoxBorderWidth() {
+            return this.boxBorderWidth;
+        }
+
+        /**
+         * @return boxColor
+         */
+        public Long getBoxColor() {
+            return this.boxColor;
         }
 
         /**
@@ -1077,20 +1298,74 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
+            private Float alpha; 
+            private Long borderColor; 
+            private Integer borderWidth; 
+            private Boolean box; 
+            private Integer boxBorderWidth; 
+            private Long boxColor; 
             private Integer fontColor; 
             private Integer fontSize; 
             private Integer fontType; 
             private String text; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Float alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * BorderColor.
+             */
+            public Builder borderColor(Long borderColor) {
+                this.borderColor = borderColor;
+                return this;
+            }
+
+            /**
+             * BorderWidth.
+             */
+            public Builder borderWidth(Integer borderWidth) {
+                this.borderWidth = borderWidth;
+                return this;
+            }
+
+            /**
+             * Box.
+             */
+            public Builder box(Boolean box) {
+                this.box = box;
+                return this;
+            }
+
+            /**
+             * BoxBorderWidth.
+             */
+            public Builder boxBorderWidth(Integer boxBorderWidth) {
+                this.boxBorderWidth = boxBorderWidth;
+                return this;
+            }
+
+            /**
+             * BoxColor.
+             */
+            public Builder boxColor(Long boxColor) {
+                this.boxColor = boxColor;
+                return this;
+            }
 
             /**
              * FontColor.
@@ -1143,8 +1418,8 @@ public class UpdateMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -1155,23 +1430,29 @@ public class UpdateMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMPUTaskRequest</p>
+     */
     public static class UserPanes extends TeaModel {
-        @NameInMap("Images")
-        private java.util.List < Images> images;
+        @com.aliyun.core.annotation.NameInMap("Images")
+        private java.util.List<Images> images;
 
-        @NameInMap("PaneId")
+        @com.aliyun.core.annotation.NameInMap("PaneId")
         private Integer paneId;
 
-        @NameInMap("SegmentType")
+        @com.aliyun.core.annotation.NameInMap("SegmentType")
         private Integer segmentType;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Texts")
-        private java.util.List < Texts> texts;
+        @com.aliyun.core.annotation.NameInMap("Texts")
+        private java.util.List<Texts> texts;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserPanes(Builder builder) {
@@ -1194,7 +1475,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
@@ -1222,7 +1503,7 @@ public class UpdateMPUTaskRequest extends Request {
         /**
          * @return texts
          */
-        public java.util.List < Texts> getTexts() {
+        public java.util.List<Texts> getTexts() {
             return this.texts;
         }
 
@@ -1234,17 +1515,17 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Images> images; 
+            private java.util.List<Images> images; 
             private Integer paneId; 
             private Integer segmentType; 
             private String sourceType; 
-            private java.util.List < Texts> texts; 
+            private java.util.List<Texts> texts; 
             private String userId; 
 
             /**
              * Images.
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
@@ -1276,7 +1557,7 @@ public class UpdateMPUTaskRequest extends Request {
             /**
              * Texts.
              */
-            public Builder texts(java.util.List < Texts> texts) {
+            public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
                 return this;
             }
@@ -1296,30 +1577,36 @@ public class UpdateMPUTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateMPUTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMPUTaskRequest</p>
+     */
     public static class Watermarks extends TeaModel {
-        @NameInMap("Alpha")
+        @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
 
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Watermarks(Builder builder) {
             this.alpha = builder.alpha;
@@ -1329,7 +1616,7 @@ public class UpdateMPUTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -1390,10 +1677,10 @@ public class UpdateMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -1404,7 +1691,7 @@ public class UpdateMPUTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Alpha.
@@ -1465,8 +1752,8 @@ public class UpdateMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

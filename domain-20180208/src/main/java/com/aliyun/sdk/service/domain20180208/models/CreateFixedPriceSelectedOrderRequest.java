@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFixedPriceSelectedOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateFixedPriceSelectedOrderRequest</p>
  */
 public class CreateFixedPriceSelectedOrderRequest extends Request {
-    @Query
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @Query
-    @NameInMap("ContactId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactId;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("ExpectedPrice")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpectedPrice")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double expectedPrice;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
     private CreateFixedPriceSelectedOrderRequest(Builder builder) {
@@ -122,7 +127,10 @@ public class CreateFixedPriceSelectedOrderRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11935401</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -131,7 +139,10 @@ public class CreateFixedPriceSelectedOrderRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -140,7 +151,10 @@ public class CreateFixedPriceSelectedOrderRequest extends Request {
         }
 
         /**
-         * ExpectedPrice.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.00</p>
          */
         public Builder expectedPrice(Double expectedPrice) {
             this.putQueryParameter("ExpectedPrice", expectedPrice);

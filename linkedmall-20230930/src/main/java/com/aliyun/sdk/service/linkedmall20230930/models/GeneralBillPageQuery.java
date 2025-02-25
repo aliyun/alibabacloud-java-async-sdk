@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GeneralBillPageQuery} extends {@link TeaModel}
  *
  * <p>GeneralBillPageQuery</p>
  */
 public class GeneralBillPageQuery extends TeaModel {
-    @NameInMap("asc")
+    @com.aliyun.core.annotation.NameInMap("asc")
     private Boolean asc;
 
-    @NameInMap("billId")
+    @com.aliyun.core.annotation.NameInMap("billId")
     private String billId;
 
-    @NameInMap("billPeriod")
+    @com.aliyun.core.annotation.NameInMap("billPeriod")
     private String billPeriod;
 
-    @NameInMap("limit")
+    @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @NameInMap("orderDirection")
+    @com.aliyun.core.annotation.NameInMap("orderDirection")
     private String orderDirection;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("start")
+    @com.aliyun.core.annotation.NameInMap("start")
     private Integer start;
 
     private GeneralBillPageQuery(Builder builder) {

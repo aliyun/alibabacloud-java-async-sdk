@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterAuditLogCollectorRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterAuditLogCollectorRequest</p>
  */
 public class ModifyDBClusterAuditLogCollectorRequest extends Request {
-    @Query
-    @NameInMap("CollectorStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectorStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collectorStatus;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBClusterAuditLogCollectorRequest(Builder builder) {
@@ -126,11 +131,15 @@ public class ModifyDBClusterAuditLogCollectorRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable SQL collector. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable SQL collector. Valid values:</p>
+         * <ul>
+         * <li>Enable</li>
+         * <li>Disable</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Enable
-         * *   Disable
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder collectorStatus(String collectorStatus) {
             this.putQueryParameter("CollectorStatus", collectorStatus);
@@ -139,7 +148,11 @@ public class ModifyDBClusterAuditLogCollectorRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

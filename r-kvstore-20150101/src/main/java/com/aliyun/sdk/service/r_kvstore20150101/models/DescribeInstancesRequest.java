@@ -1,120 +1,120 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
  */
 public class DescribeInstancesRequest extends Request {
-    @Query
-    @NameInMap("ArchitectureType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchitectureType")
     private String architectureType;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("EditionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EditionType")
     private String editionType;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private String expired;
 
-    @Query
-    @NameInMap("GlobalInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalInstance")
     private Boolean globalInstance;
 
-    @Query
-    @NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PrivateIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIp")
     private String privateIp;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeInstancesRequest(Builder builder) {
@@ -405,12 +405,15 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * The architecture of the instance. Valid values:
-         * <p>
+         * <p>The architecture of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cluster</strong>: cluster architecture</li>
+         * <li><strong>standard</strong>: standard architecture</li>
+         * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+         * </ul>
          * 
-         * *   **cluster**: cluster architecture
-         * *   **standard**: standard architecture
-         * *   **rwsplit**: read/write splitting architecture
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder architectureType(String architectureType) {
             this.putQueryParameter("ArchitectureType", architectureType);
@@ -419,11 +422,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -432,11 +438,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The edition of the instance. Valid values:
-         * <p>
+         * <p>The edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Community</strong>: ApsaraDB for Redis Community Edition</li>
+         * <li><strong>Enterprise</strong>: ApsaraDB for Redis Enhanced Edition (Tair)</li>
+         * </ul>
          * 
-         * *   **Community**: Community Edition
-         * *   **Enterprise**: Enhance Edition (Tair)
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         public Builder editionType(String editionType) {
             this.putQueryParameter("EditionType", editionType);
@@ -445,7 +454,19 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.
+         * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1.0</li>
+         * <li>2.8</li>
+         * <li>4.0</li>
+         * <li>5.0</li>
+         * <li>6.0</li>
+         * <li>7.0</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -454,11 +475,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance has expired. Valid values:
-         * <p>
+         * <p>Specifies whether the instance has expired. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance has expired.</li>
+         * <li><strong>false</strong>: The instance has not expired.</li>
+         * </ul>
          * 
-         * *   **true**: The instance has expired.
-         * *   **false**: The instance has not expired.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -467,11 +491,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the child instances of distributed instances. Valid values:
-         * <p>
+         * <p>Specifies whether to return the child instances of distributed instances. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Only child instances are returned.</li>
+         * <li><strong>false</strong>: Child instances are not returned.</li>
+         * </ul>
          * 
-         * *   **true**: Only child instances are returned.
-         * *   **false**: Child instances are not returned.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder globalInstance(Boolean globalInstance) {
             this.putQueryParameter("GlobalInstance", globalInstance);
@@ -480,7 +507,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. For more information, see [Instance types](~~107984~~).
+         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis.master.small.default</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -489,10 +519,13 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The IDs of the instances that you want to query.</p>
+         * <blockquote>
+         * <p> If you want to specify multiple instance IDs, separate the instance IDs with commas (,). You can specify a maximum of 30 instance IDs in a single request.</p>
+         * </blockquote>
          * 
-         * > If you specify multiple instance IDs, separate these IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -501,26 +534,30 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The state of the instance. Valid values:
-         * <p>
+         * <p>The state of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Creating</strong>: The instance is being created.</li>
+         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+         * <li><strong>Inactive</strong>: The instance is disabled.</li>
+         * <li><strong>Flushing</strong>: The instance is being released.</li>
+         * <li><strong>Released</strong>: The instance is released.</li>
+         * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
+         * <li><strong>Unavailable</strong>: The instance is suspended.</li>
+         * <li><strong>Error</strong>: The instance failed to be created.</li>
+         * <li><strong>Migrating</strong>: The instance is being migrated.</li>
+         * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
+         * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
+         * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
+         * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+         * </blockquote>
          * 
-         * *   **Normal**: The instance is normal.
-         * *   **Creating**: The instance is being created.
-         * *   **Changing**: The configurations of the instance are being changed.
-         * *   **Inactive**: The instance is disabled.
-         * *   **Flushing**: The instance is being released.
-         * *   **Released**: The instance is released.
-         * *   **Transforming**: The billing method of the instance is being changed.
-         * *   **Unavailable**: The instance is suspended.
-         * *   **Error**: The instance failed to be created.
-         * *   **Migrating**: The instance is being migrated.
-         * *   **BackupRecovering**: The instance is being restored from a backup.
-         * *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
-         * *   **NetworkModifying**: The network type of the instance is being changed.
-         * *   **SSLModifying**: The SSL certificate of the instance is being changed.
-         * *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
-         * 
-         * > For more information about instance states, see [Instance states and impacts](~~200740~~).
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -529,12 +566,15 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Valid values:
-         * <p>
+         * <p>The database engine of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Tair</strong></li>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>Memcache</strong></li>
+         * </ul>
          * 
-         * *   **Tair**
-         * *   **Redis**
-         * *   **Memcache**
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -543,11 +583,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
          * 
-         * *   **CLASSIC**: classic network
-         * *   **VPC**: Virtual Private Cloud (VPC)
+         * <strong>example:</strong>
+         * <p>CLASSIC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -574,7 +617,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -583,7 +629,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -592,7 +641,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The private IP address of the instance.
+         * <p>The private IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.49.***</p>
          */
         public Builder privateIp(String privateIp) {
             this.putQueryParameter("PrivateIp", privateIp);
@@ -601,10 +653,13 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p>When you call this operation and specify the <strong>Tag</strong> parameter, you must also specify this parameter.</p>
+         * </blockquote>
          * 
-         * > When you call this operation and specify the **Tag** parameter, you must also specify this parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -613,10 +668,13 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <blockquote>
+         * <p>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+         * </blockquote>
          * 
-         * > You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -643,7 +701,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The keyword used for fuzzy search. The keyword can be based on an instance name or an instance ID.
+         * <p>The keyword used for fuzzy search. The keyword can be based on an instance name or an instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -661,7 +722,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tags of the instance.
+         * <p>The tags of the instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -670,7 +731,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -679,7 +743,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -688,7 +755,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -703,11 +773,17 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -742,10 +818,13 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. A tag is a key-value pair.
-             * <p>
+             * <p>The tag key. A tag is a key-value pair.</p>
+             * <blockquote>
+             * <p> A maximum of five key-value pairs can be specified at a time.</p>
+             * </blockquote>
              * 
-             * > A maximum of five key-value pairs can be specified at a time.
+             * <strong>example:</strong>
+             * <p>Storage type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -753,7 +832,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of the tag. A tag is a key-value pair.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Local disk</p>
              */
             public Builder value(String value) {
                 this.value = value;

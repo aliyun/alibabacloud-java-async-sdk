@@ -62,7 +62,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DbInstance.
+         * The details of each PolarDB cluster.
          */
         public Builder dbInstance(DbInstance dbInstance) {
             this.dbInstance = dbInstance;
@@ -70,7 +70,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,7 +154,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * DBNodeId.
+             * The ID of the node in the apsaradb for PolarDB cluster.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -162,7 +162,11 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeRole.
+             * The role of a node in the apsaradb for PolarDB cluster. Valid values:
+             * <p>
+             * 
+             * *   **Reader**
+             * *   **Writer**
              */
             public Builder DBNodeRole(String DBNodeRole) {
                 this.DBNodeRole = DBNodeRole;
@@ -170,7 +174,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeStatus.
+             * The status of the nodes in the PolarDB cluster.
              */
             public Builder DBNodeStatus(String DBNodeStatus) {
                 this.DBNodeStatus = DBNodeStatus;
@@ -178,7 +182,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone where the node of the PolarDB cluster resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -284,7 +288,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             private Integer readWeight; 
 
             /**
-             * EndpointId.
+             * The ID of the PolarDB connection address.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -292,7 +296,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIds.
+             * The ID list of the nodes in the PolarDB connection string. Separate multiple nodes with commas (,).
              */
             public Builder nodeIds(String nodeIds) {
                 this.nodeIds = nodeIds;
@@ -300,7 +304,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ReadWeight.
+             * The read ratio of this connection address managed by the DRDS database.
              */
             public Builder readWeight(Integer readWeight) {
                 this.readWeight = readWeight;
@@ -538,7 +542,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             private String remainDays; 
 
             /**
-             * DBInstanceId.
+             * The ID of the PolarDB cluster.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -546,7 +550,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * The status of the PolarDB instance.
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -554,7 +558,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodes.
+             * The information about the nodes in the PolarDB Cluster.
              */
             public Builder DBNodes(DBNodes DBNodes) {
                 this.DBNodes = DBNodes;
@@ -562,7 +566,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstType.
+             * The type of storage used by the DRDS database.
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -570,7 +574,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The endpoint of the PolarDB read /write splitting endpoint
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -578,7 +582,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The type of the DRDS database storage engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -586,7 +590,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version of the DRDS database storage engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -594,7 +598,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the PolarDB cluster expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -602,7 +606,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the PolarDB cluster.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -610,7 +614,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the PolarDB cluster.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -618,7 +622,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The PolarDB access port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -626,7 +630,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * RdsInstType.
+             * The type of RDS instance. PolarDB cluster does not support this parameter.
              */
             public Builder rdsInstType(String rdsInstType) {
                 this.rdsInstType = rdsInstType;
@@ -634,7 +638,14 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ReadMode.
+             * This parameter specifies the Read mode when the database storage type is PolarDB.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **DEFAULT**: the default mode (that is, all read traffic is sent to the PolarDB read /write node).
+             * *   **CUSTOM**: Custom mode (you can customize the ratio of traffic sent to read /write nodes and read-only nodes).
+             * *   **BALANCE**: read balancing mode (the read traffic is automatically distributed by the read load module of the PolarDB cluster, which can also be understood as the read traffic being evenly distributed to each node).
              */
             public Builder readMode(String readMode) {
                 this.readMode = readMode;
@@ -642,7 +653,7 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * RemainDays.
+             * The number of days remaining on the PolarDB for MySQL instance.
              */
             public Builder remainDays(String remainDays) {
                 this.remainDays = remainDays;

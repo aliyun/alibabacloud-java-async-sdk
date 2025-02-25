@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTraceInfoDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTraceInfoDetailResponseBody</p>
  */
 public class DescribeTraceInfoDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceInfoDetail")
+    @com.aliyun.core.annotation.NameInMap("TraceInfoDetail")
     private TraceInfoDetail traceInfoDetail;
 
     private DescribeTraceInfoDetailResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         private TraceInfoDetail traceInfoDetail; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-XXXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,11 +78,14 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -82,7 +93,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tracing diagram.
+         * <p>The details of the tracing diagram.</p>
          */
         public Builder traceInfoDetail(TraceInfoDetail traceInfoDetail) {
             this.traceInfoDetail = traceInfoDetail;
@@ -95,20 +106,26 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTraceInfoDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoDetailResponseBody</p>
+     */
     public static class EdgeList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("EndId")
+        @com.aliyun.core.annotation.NameInMap("EndId")
         private String endId;
 
-        @NameInMap("StartId")
+        @com.aliyun.core.annotation.NameInMap("StartId")
         private String startId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EdgeList(Builder builder) {
@@ -170,7 +187,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of times.
+             * <p>The number of times.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +198,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ending vertex ID of the edge of the tracing diagram.
+             * <p>The ending vertex ID of the edge of the tracing diagram.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1d1fa39e5345dcef3f9712172cxxxxx</p>
              */
             public Builder endId(String endId) {
                 this.endId = endId;
@@ -186,7 +209,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The starting vertex ID of the edge of the tracing diagram.
+             * <p>The starting vertex ID of the edge of the tracing diagram.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02b4bf933c8e3bb8b9465eee502xxxxx</p>
              */
             public Builder startId(String startId) {
                 this.startId = startId;
@@ -194,7 +220,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-21 10:24:42</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -202,7 +231,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the edge of the tracing diagram.
+             * <p>The type of the edge of the tracing diagram.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trigger_file_alert</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -216,38 +248,44 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTraceInfoDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoDetailResponseBody</p>
+     */
     public static class EntityTypeList extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Integer dbId;
 
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("DisplayIcon")
+        @com.aliyun.core.annotation.NameInMap("DisplayIcon")
         private String displayIcon;
 
-        @NameInMap("DisplayTemplate")
+        @com.aliyun.core.annotation.NameInMap("DisplayTemplate")
         private String displayTemplate;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Integer limit;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private Integer offset;
 
         private EntityTypeList(Builder builder) {
@@ -363,7 +401,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private Integer offset; 
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deprecated</p>
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -371,7 +412,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The rendering color of the vertex.
+             * <p>The rendering color of the vertex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#fff</p>
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -379,7 +423,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The icon style of the vertex.
+             * <p>The icon style of the vertex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/tfs/TB176P5OgDqK1RjSZSyXXaxEVXa-49-48.png">https://img.alicdn.com/tfs/TB176P5OgDqK1RjSZSyXXaxEVXa-49-48.png</a></p>
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -387,7 +434,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;${logtime}&quot;,&quot;value&quot;:&quot;$!{time}&quot;}]</p>
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -395,7 +445,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vertex was created.
+             * <p>The timestamp when the vertex was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-09T11:47Z</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -403,7 +456,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the vertex was last modified.
+             * <p>The time when the vertex was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-09T11:47Z</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -411,7 +467,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vertex type.
+             * <p>The ID of the vertex type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -419,7 +478,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deprecated</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -427,7 +489,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vertex type.
+             * <p>The name of the vertex type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -435,7 +500,12 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -443,7 +513,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deprecated</p>
              */
             public Builder offset(Integer offset) {
                 this.offset = offset;
@@ -457,20 +530,26 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTraceInfoDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoDetailResponseBody</p>
+     */
     public static class RelationTypeList extends TeaModel {
-        @NameInMap("Directed")
+        @com.aliyun.core.annotation.NameInMap("Directed")
         private Integer directed;
 
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RelationTypeId")
+        @com.aliyun.core.annotation.NameInMap("RelationTypeId")
         private String relationTypeId;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
         private RelationTypeList(Builder builder) {
@@ -532,11 +611,14 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String showType; 
 
             /**
-             * Indicates whether the edge is a directional edge. Valid values:
-             * <p>
+             * <p>Indicates whether the edge is a directional edge. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder directed(Integer directed) {
                 this.directed = directed;
@@ -544,7 +626,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The rendering color of the edge.
+             * <p>The rendering color of the edge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#fff</p>
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -552,7 +637,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the edge type.
+             * <p>The name of the edge type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -560,7 +648,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the edge type.
+             * <p>The ID of the edge type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>netflow_to_process</p>
              */
             public Builder relationTypeId(String relationTypeId) {
                 this.relationTypeId = relationTypeId;
@@ -568,7 +659,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deprecated</p>
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -582,14 +676,20 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTraceInfoDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoDetailResponseBody</p>
+     */
     public static class NeighborList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NeighborList(Builder builder) {
@@ -633,7 +733,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of neighbor nodes.
+             * <p>The number of neighbor nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -641,7 +744,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether one more page is returned.
+             * <p>Indicates whether one more page is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -649,7 +755,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the neighbor node. The value is fixed as **alert**.
+             * <p>The type of the neighbor node. The value is fixed as <strong>alert</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -663,23 +772,29 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTraceInfoDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoDetailResponseBody</p>
+     */
     public static class VertexList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeighborList")
-        private java.util.List < NeighborList> neighborList;
+        @com.aliyun.core.annotation.NameInMap("NeighborList")
+        private java.util.List<NeighborList> neighborList;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private VertexList(Builder builder) {
@@ -723,7 +838,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         /**
          * @return neighborList
          */
-        public java.util.List < NeighborList> getNeighborList() {
+        public java.util.List<NeighborList> getNeighborList() {
             return this.neighborList;
         }
 
@@ -745,12 +860,15 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private Integer count; 
             private String id; 
             private String name; 
-            private java.util.List < NeighborList> neighborList; 
+            private java.util.List<NeighborList> neighborList; 
             private String time; 
             private String type; 
 
             /**
-             * The number of times.
+             * <p>The number of times.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -758,7 +876,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vertex.
+             * <p>The ID of the vertex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a1d1fa39e5345dcef3f9712172xxxxxx</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -766,7 +887,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the entity represented by the vertex.
+             * <p>The name of the entity represented by the vertex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/tomcat</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -774,15 +898,18 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the neighbor nodes.
+             * <p>An array that consists of the neighbor nodes.</p>
              */
-            public Builder neighborList(java.util.List < NeighborList> neighborList) {
+            public Builder neighborList(java.util.List<NeighborList> neighborList) {
                 this.neighborList = neighborList;
                 return this;
             }
 
             /**
-             * The point in time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-21 10:24:42</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -790,7 +917,10 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the entity represented by the vertex.
+             * <p>The type of the entity represented by the vertex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_path</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -804,18 +934,24 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTraceInfoDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoDetailResponseBody</p>
+     */
     public static class TraceInfoDetail extends TeaModel {
-        @NameInMap("EdgeList")
-        private java.util.List < EdgeList> edgeList;
+        @com.aliyun.core.annotation.NameInMap("EdgeList")
+        private java.util.List<EdgeList> edgeList;
 
-        @NameInMap("EntityTypeList")
-        private java.util.List < EntityTypeList> entityTypeList;
+        @com.aliyun.core.annotation.NameInMap("EntityTypeList")
+        private java.util.List<EntityTypeList> entityTypeList;
 
-        @NameInMap("RelationTypeList")
-        private java.util.List < RelationTypeList> relationTypeList;
+        @com.aliyun.core.annotation.NameInMap("RelationTypeList")
+        private java.util.List<RelationTypeList> relationTypeList;
 
-        @NameInMap("VertexList")
-        private java.util.List < VertexList> vertexList;
+        @com.aliyun.core.annotation.NameInMap("VertexList")
+        private java.util.List<VertexList> vertexList;
 
         private TraceInfoDetail(Builder builder) {
             this.edgeList = builder.edgeList;
@@ -835,65 +971,65 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         /**
          * @return edgeList
          */
-        public java.util.List < EdgeList> getEdgeList() {
+        public java.util.List<EdgeList> getEdgeList() {
             return this.edgeList;
         }
 
         /**
          * @return entityTypeList
          */
-        public java.util.List < EntityTypeList> getEntityTypeList() {
+        public java.util.List<EntityTypeList> getEntityTypeList() {
             return this.entityTypeList;
         }
 
         /**
          * @return relationTypeList
          */
-        public java.util.List < RelationTypeList> getRelationTypeList() {
+        public java.util.List<RelationTypeList> getRelationTypeList() {
             return this.relationTypeList;
         }
 
         /**
          * @return vertexList
          */
-        public java.util.List < VertexList> getVertexList() {
+        public java.util.List<VertexList> getVertexList() {
             return this.vertexList;
         }
 
         public static final class Builder {
-            private java.util.List < EdgeList> edgeList; 
-            private java.util.List < EntityTypeList> entityTypeList; 
-            private java.util.List < RelationTypeList> relationTypeList; 
-            private java.util.List < VertexList> vertexList; 
+            private java.util.List<EdgeList> edgeList; 
+            private java.util.List<EntityTypeList> entityTypeList; 
+            private java.util.List<RelationTypeList> relationTypeList; 
+            private java.util.List<VertexList> vertexList; 
 
             /**
-             * An array that consists of the edges of the tracing diagram.
+             * <p>An array that consists of the edges of the tracing diagram.</p>
              */
-            public Builder edgeList(java.util.List < EdgeList> edgeList) {
+            public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
                 return this;
             }
 
             /**
-             * An array that consists of the metadata configurations of the vertex type.
+             * <p>An array that consists of the metadata configurations of the vertex type.</p>
              */
-            public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
+            public Builder entityTypeList(java.util.List<EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
                 return this;
             }
 
             /**
-             * An array that consists of the metadata configurations of the edge type.
+             * <p>An array that consists of the metadata configurations of the edge type.</p>
              */
-            public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
+            public Builder relationTypeList(java.util.List<RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
                 return this;
             }
 
             /**
-             * An array that consists of all vertexes of the tracing diagram.
+             * <p>An array that consists of all vertexes of the tracing diagram.</p>
              */
-            public Builder vertexList(java.util.List < VertexList> vertexList) {
+            public Builder vertexList(java.util.List<VertexList> vertexList) {
                 this.vertexList = vertexList;
                 return this;
             }

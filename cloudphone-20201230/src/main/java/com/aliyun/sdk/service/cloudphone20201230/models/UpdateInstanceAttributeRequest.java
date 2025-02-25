@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceAttributeRequest</p>
  */
 public class UpdateInstanceAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Description")
     private String description;
@@ -51,12 +55,8 @@ public class UpdateInstanceAttributeRequest extends Request {
     private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("VncPassword")
@@ -64,6 +64,7 @@ public class UpdateInstanceAttributeRequest extends Request {
 
     private UpdateInstanceAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
@@ -73,8 +74,7 @@ public class UpdateInstanceAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resolution = builder.resolution;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.tag = builder.tag;
         this.vncPassword = builder.vncPassword;
     }
 
@@ -89,6 +89,13 @@ public class UpdateInstanceAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -155,17 +162,10 @@ public class UpdateInstanceAttributeRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return tag
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -176,6 +176,7 @@ public class UpdateInstanceAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateInstanceAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private String description; 
         private String instanceId; 
         private String instanceName; 
@@ -185,32 +186,40 @@ public class UpdateInstanceAttributeRequest extends Request {
         private String regionId; 
         private String resolution; 
         private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String sourceRegionId; 
+        private java.util.List < Tag> tag; 
         private String vncPassword; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateInstanceAttributeRequest response) {
-            super(response);
-            this.description = response.description;
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.keyPairName = response.keyPairName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resolution = response.resolution;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.vncPassword = response.vncPassword;
+        private Builder(UpdateInstanceAttributeRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.description = request.description;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.keyPairName = request.keyPairName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resolution = request.resolution;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tag = request.tag;
+            this.vncPassword = request.vncPassword;
         } 
 
         /**
-         * Description.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The instance description. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -219,7 +228,7 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,7 +237,7 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The instance name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -237,7 +246,7 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair that is used to connect to the instance. To improve the security of an instance, we recommend that you use a key pair to connect to the instance.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -264,7 +273,7 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,7 +282,7 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Resolution.
+         * The instance resolution.
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
@@ -291,25 +300,16 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * Details of tags.
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * VncPassword.
+         * The VNC password of the instance. The password must be six characters in length and can contain only uppercase letters, lowercase letters, and digits.
          */
         public Builder vncPassword(String vncPassword) {
             this.putQueryParameter("VncPassword", vncPassword);
@@ -324,4 +324,65 @@ public class UpdateInstanceAttributeRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the instance. Valid values of N: 1 to 20.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the instance. Valid values of N: 1 to 20.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

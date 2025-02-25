@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTimingSyntheticTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteTimingSyntheticTaskRequest</p>
  */
 public class DeleteTimingSyntheticTaskRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DeleteTimingSyntheticTaskRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -91,7 +99,10 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2eq4peca****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -100,7 +111,10 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The ID of the synthetic monitoring task.
+         * <p>The ID of the synthetic monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5308a2691f59422c8c3b7aeccec9cd3b</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

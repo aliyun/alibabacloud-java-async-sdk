@@ -130,19 +130,19 @@ public class DescribeTableListByTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTableListByTypeRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.pageSize = response.pageSize;
-            this.query = response.query;
-            this.regionId = response.regionId;
-            this.tableType = response.tableType;
+        private Builder(DescribeTableListByTypeRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.pageSize = request.pageSize;
+            this.query = request.query;
+            this.regionId = request.regionId;
+            this.tableType = request.tableType;
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -151,7 +151,7 @@ public class DescribeTableListByTypeRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -160,7 +160,7 @@ public class DescribeTableListByTypeRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -169,7 +169,7 @@ public class DescribeTableListByTypeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +178,7 @@ public class DescribeTableListByTypeRequest extends Request {
         }
 
         /**
-         * Query.
+         * The field that you specify for your query.
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -187,7 +187,7 @@ public class DescribeTableListByTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +196,7 @@ public class DescribeTableListByTypeRequest extends Request {
         }
 
         /**
-         * TableType.
+         * The type of tables. Valid values:
          */
         public Builder tableType(String tableType) {
             this.putQueryParameter("TableType", tableType);

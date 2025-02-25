@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIMRobotsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIMRobotsResponseBody</p>
  */
 public class DescribeIMRobotsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIMRobotsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned objects.
+         * <p>The returned objects.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +63,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIMRobotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIMRobotsResponseBody</p>
+     */
     public static class DispatchRules extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private DispatchRules(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the notification policy.
+             * <p>The ID of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -118,7 +135,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the notification policy.
+             * <p>The name of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Notification policy test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -132,32 +152,38 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIMRobotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIMRobotsResponseBody</p>
+     */
     public static class AlertIMRobots extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DailyNoc")
+        @com.aliyun.core.annotation.NameInMap("DailyNoc")
         private Boolean dailyNoc;
 
-        @NameInMap("DailyNocTime")
+        @com.aliyun.core.annotation.NameInMap("DailyNocTime")
         private String dailyNocTime;
 
-        @NameInMap("DingSignKey")
+        @com.aliyun.core.annotation.NameInMap("DingSignKey")
         private String dingSignKey;
 
-        @NameInMap("DispatchRules")
-        private java.util.List < DispatchRules> dispatchRules;
+        @com.aliyun.core.annotation.NameInMap("DispatchRules")
+        private java.util.List<DispatchRules> dispatchRules;
 
-        @NameInMap("RobotAddr")
+        @com.aliyun.core.annotation.NameInMap("RobotAddr")
         private String robotAddr;
 
-        @NameInMap("RobotId")
+        @com.aliyun.core.annotation.NameInMap("RobotId")
         private Float robotId;
 
-        @NameInMap("RobotName")
+        @com.aliyun.core.annotation.NameInMap("RobotName")
         private String robotName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AlertIMRobots(Builder builder) {
@@ -211,7 +237,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         /**
          * @return dispatchRules
          */
-        public java.util.List < DispatchRules> getDispatchRules() {
+        public java.util.List<DispatchRules> getDispatchRules() {
             return this.dispatchRules;
         }
 
@@ -248,14 +274,17 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             private Boolean dailyNoc; 
             private String dailyNocTime; 
             private String dingSignKey; 
-            private java.util.List < DispatchRules> dispatchRules; 
+            private java.util.List<DispatchRules> dispatchRules; 
             private String robotAddr; 
             private Float robotId; 
             private String robotName; 
             private String type; 
 
             /**
-             * The time when the IM chatbot was created.
+             * <p>The time when the IM chatbot was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-16 17:21:48</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -263,11 +292,14 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether daily statistics are sent. Valid values:
-             * <p>
+             * <p>Indicates whether daily statistics are sent. Valid values:</p>
+             * <ul>
+             * <li><code>false</code> (default): Daily statistics are not sent.</li>
+             * <li><code>true</code>: Daily statistics are sent.</li>
+             * </ul>
              * 
-             * *   `false` (default): Daily statistics are not sent.
-             * *   `true`: Daily statistics are sent.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dailyNoc(Boolean dailyNoc) {
                 this.dailyNoc = dailyNoc;
@@ -275,7 +307,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.
+             * <p>The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:30,17:30</p>
              */
             public Builder dailyNocTime(String dailyNocTime) {
                 this.dailyNocTime = dailyNocTime;
@@ -283,7 +318,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.
+             * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is <strong>Alert</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder dingSignKey(String dingSignKey) {
                 this.dingSignKey = dingSignKey;
@@ -291,15 +329,18 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The notification policies.
+             * <p>The notification policies.</p>
              */
-            public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
+            public Builder dispatchRules(java.util.List<DispatchRules> dispatchRules) {
                 this.dispatchRules = dispatchRules;
                 return this;
             }
 
             /**
-             * The webhook URL of the IM chatbot.
+             * <p>The webhook URL of the IM chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
              */
             public Builder robotAddr(String robotAddr) {
                 this.robotAddr = robotAddr;
@@ -307,7 +348,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IM chatbot.
+             * <p>The ID of the IM chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder robotId(Float robotId) {
                 this.robotId = robotId;
@@ -315,7 +359,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IM chatbot.
+             * <p>The name of the IM chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chatbot name</p>
              */
             public Builder robotName(String robotName) {
                 this.robotName = robotName;
@@ -323,11 +370,14 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IM chatbot. Valid values:
-             * <p>
+             * <p>The type of the IM chatbot. Valid values:</p>
+             * <ul>
+             * <li><code>dingding</code>: DingTalk chatbot</li>
+             * <li><code>wechat</code>: WeCom chatbot</li>
+             * </ul>
              * 
-             * *   `dingding`: DingTalk chatbot
-             * *   `wechat`: WeCom chatbot
+             * <strong>example:</strong>
+             * <p>dingding</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -341,17 +391,23 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIMRobotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIMRobotsResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("AlertIMRobots")
-        private java.util.List < AlertIMRobots> alertIMRobots;
+        @com.aliyun.core.annotation.NameInMap("AlertIMRobots")
+        private java.util.List<AlertIMRobots> alertIMRobots;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {
@@ -372,7 +428,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         /**
          * @return alertIMRobots
          */
-        public java.util.List < AlertIMRobots> getAlertIMRobots() {
+        public java.util.List<AlertIMRobots> getAlertIMRobots() {
             return this.alertIMRobots;
         }
 
@@ -398,21 +454,24 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertIMRobots> alertIMRobots; 
+            private java.util.List<AlertIMRobots> alertIMRobots; 
             private Long page; 
             private Long size; 
             private Long total; 
 
             /**
-             * The queried IM chatbots.
+             * <p>The queried IM chatbots.</p>
              */
-            public Builder alertIMRobots(java.util.List < AlertIMRobots> alertIMRobots) {
+            public Builder alertIMRobots(java.util.List<AlertIMRobots> alertIMRobots) {
                 this.alertIMRobots = alertIMRobots;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -420,7 +479,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IM chatbots returned per page.
+             * <p>The number of IM chatbots returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -428,7 +490,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of queried IM chatbots.
+             * <p>The total number of queried IM chatbots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

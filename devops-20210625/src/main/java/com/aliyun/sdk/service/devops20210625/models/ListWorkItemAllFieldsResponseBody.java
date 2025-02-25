@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkItemAllFieldsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkItemAllFieldsResponseBody</p>
  */
 public class ListWorkItemAllFieldsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("fields")
-    private java.util.List < Fields> fields;
+    @com.aliyun.core.annotation.NameInMap("fields")
+    private java.util.List<Fields> fields;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListWorkItemAllFieldsResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -81,7 +86,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMsg; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String requestId; 
         private Boolean success; 
 
@@ -104,7 +109,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         /**
          * fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -131,26 +136,32 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkItemAllFieldsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkItemAllFieldsResponseBody</p>
+     */
     public static class Options extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private Long level;
 
-        @NameInMap("position")
+        @com.aliyun.core.annotation.NameInMap("position")
         private Long position;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
-        @NameInMap("valueEn")
+        @com.aliyun.core.annotation.NameInMap("valueEn")
         private String valueEn;
 
         private Options(Builder builder) {
@@ -292,56 +303,62 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkItemAllFieldsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkItemAllFieldsResponseBody</p>
+     */
     public static class Fields extends TeaModel {
-        @NameInMap("className")
+        @com.aliyun.core.annotation.NameInMap("className")
         private String className;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("defaultValue")
+        @com.aliyun.core.annotation.NameInMap("defaultValue")
         private String defaultValue;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("format")
+        @com.aliyun.core.annotation.NameInMap("format")
         private String format;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("isRequired")
+        @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
 
-        @NameInMap("isShowWhenCreate")
+        @com.aliyun.core.annotation.NameInMap("isShowWhenCreate")
         private Boolean isShowWhenCreate;
 
-        @NameInMap("isSystemRequired")
+        @com.aliyun.core.annotation.NameInMap("isSystemRequired")
         private Boolean isSystemRequired;
 
-        @NameInMap("linkWithService")
+        @com.aliyun.core.annotation.NameInMap("linkWithService")
         private String linkWithService;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("options")
-        private java.util.List < Options> options;
+        @com.aliyun.core.annotation.NameInMap("options")
+        private java.util.List<Options> options;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Fields(Builder builder) {
@@ -473,7 +490,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
         /**
          * @return options
          */
-        public java.util.List < Options> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
@@ -506,7 +523,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             private String linkWithService; 
             private String modifier; 
             private String name; 
-            private java.util.List < Options> options; 
+            private java.util.List<Options> options; 
             private String resourceType; 
             private String type; 
 
@@ -625,7 +642,7 @@ public class ListWorkItemAllFieldsResponseBody extends TeaModel {
             /**
              * options.
              */
-            public Builder options(java.util.List < Options> options) {
+            public Builder options(java.util.List<Options> options) {
                 this.options = options;
                 return this;
             }

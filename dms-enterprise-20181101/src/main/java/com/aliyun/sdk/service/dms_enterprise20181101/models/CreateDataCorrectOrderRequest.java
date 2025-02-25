@@ -1,42 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataCorrectOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateDataCorrectOrderRequest</p>
  */
 public class CreateDataCorrectOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Param param;
 
-    @Query
-    @NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
+    private java.util.List<Long> relatedUserList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateDataCorrectOrderRequest(Builder builder) {
@@ -45,6 +54,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         this.attachmentKey = builder.attachmentKey;
         this.comment = builder.comment;
         this.param = builder.param;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.relatedUserList = builder.relatedUserList;
         this.tid = builder.tid;
     }
@@ -91,9 +101,16 @@ public class CreateDataCorrectOrderRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -109,7 +126,8 @@ public class CreateDataCorrectOrderRequest extends Request {
         private String attachmentKey; 
         private String comment; 
         private Param param; 
-        private java.util.List < Long > relatedUserList; 
+        private String realLoginUserUid; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -122,6 +140,7 @@ public class CreateDataCorrectOrderRequest extends Request {
             this.attachmentKey = request.attachmentKey;
             this.comment = request.comment;
             this.param = request.param;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.relatedUserList = request.relatedUserList;
             this.tid = request.tid;
         } 
@@ -136,7 +155,10 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
+         * <p>The key of the attachment that provides more instructions for the ticket. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_attachment.txt</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -145,7 +167,11 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.
+         * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -154,7 +180,8 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The parameters of the ticket.
+         * <p>The parameters of the ticket.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -164,9 +191,18 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.
+         * RealLoginUserUid.
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
+            return this;
+        }
+
+        /**
+         * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+         */
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -174,7 +210,10 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -189,17 +228,25 @@ public class CreateDataCorrectOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDataCorrectOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCorrectOrderRequest</p>
+     */
     public static class DbItemList extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("Logic")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private Long instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
         private DbItemList(Builder builder) {
             this.dbId = builder.dbId;
+            this.instanceId = builder.instanceId;
             this.logic = builder.logic;
         }
 
@@ -219,6 +266,13 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
+         * @return instanceId
+         */
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
          * @return logic
          */
         public Boolean getLogic() {
@@ -227,14 +281,18 @@ public class CreateDataCorrectOrderRequest extends Request {
 
         public static final class Builder {
             private Long dbId; 
+            private Long instanceId; 
             private Boolean logic; 
 
             /**
-             * The ID of the database. The database can be a physical database or a logical database.
-             * <p>
+             * <p>The ID of the database. The database can be a physical database or a logical database.</p>
+             * <ul>
+             * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+             * </ul>
              * 
-             * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
-             * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
+             * <strong>example:</strong>
+             * <p>1860****</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -242,11 +300,22 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * Specifies whether the database is a logical database. Valid values:
-             * <p>
+             * InstanceId.
+             */
+            public Builder instanceId(Long instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether the database is a logical database. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The database is a logical database.</li>
+             * <li><strong>false</strong>: The database is a physical database.</li>
+             * </ul>
              * 
-             * *   **true**: The database is a logical database.
-             * *   **false**: The database is a physical database.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -260,38 +329,44 @@ public class CreateDataCorrectOrderRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDataCorrectOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDataCorrectOrderRequest</p>
+     */
     public static class Param extends TeaModel {
-        @NameInMap("AttachmentName")
+        @com.aliyun.core.annotation.NameInMap("AttachmentName")
         private String attachmentName;
 
-        @NameInMap("Classify")
+        @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
 
-        @NameInMap("DbItemList")
-        @Validation(required = true)
-        private java.util.List < DbItemList> dbItemList;
+        @com.aliyun.core.annotation.NameInMap("DbItemList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<DbItemList> dbItemList;
 
-        @NameInMap("EstimateAffectRows")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EstimateAffectRows")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long estimateAffectRows;
 
-        @NameInMap("ExecMode")
+        @com.aliyun.core.annotation.NameInMap("ExecMode")
         private String execMode;
 
-        @NameInMap("ExecSQL")
+        @com.aliyun.core.annotation.NameInMap("ExecSQL")
         private String execSQL;
 
-        @NameInMap("RollbackAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("RollbackAttachmentName")
         private String rollbackAttachmentName;
 
-        @NameInMap("RollbackSQL")
+        @com.aliyun.core.annotation.NameInMap("RollbackSQL")
         private String rollbackSQL;
 
-        @NameInMap("RollbackSqlType")
+        @com.aliyun.core.annotation.NameInMap("RollbackSqlType")
         private String rollbackSqlType;
 
-        @NameInMap("SqlType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SqlType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sqlType;
 
         private Param(Builder builder) {
@@ -332,7 +407,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         /**
          * @return dbItemList
          */
-        public java.util.List < DbItemList> getDbItemList() {
+        public java.util.List<DbItemList> getDbItemList() {
             return this.dbItemList;
         }
 
@@ -388,7 +463,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         public static final class Builder {
             private String attachmentName; 
             private String classify; 
-            private java.util.List < DbItemList> dbItemList; 
+            private java.util.List<DbItemList> dbItemList; 
             private Long estimateAffectRows; 
             private String execMode; 
             private String execSQL; 
@@ -398,10 +473,13 @@ public class CreateDataCorrectOrderRequest extends Request {
             private String sqlType; 
 
             /**
-             * The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](~~206069~~) operation to obtain the attachment key from the value of the AttachmentKey parameter.
-             * <p>
+             * <p>The key of the attachment that contains the SQL statements used to change data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>SqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required if you set the **SqlType** parameter to **ATTACHMENT**.
+             * <strong>example:</strong>
+             * <p>test.sql</p>
              */
             public Builder attachmentName(String attachmentName) {
                 this.attachmentName = attachmentName;
@@ -409,7 +487,10 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The reason for the data change.
+             * <p>The reason for the data change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -417,15 +498,20 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The databases in which you want to change data.
+             * <p>The databases in which you want to change data.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
+            public Builder dbItemList(java.util.List<DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
                 return this;
             }
 
             /**
-             * The estimated number of data rows to be affected by the data change.
+             * <p>The estimated number of data rows to be affected by the data change.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder estimateAffectRows(Long estimateAffectRows) {
                 this.estimateAffectRows = estimateAffectRows;
@@ -433,12 +519,15 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The execution mode of the ticket after the ticket is approved. Valid values:
-             * <p>
+             * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
+             * <ul>
+             * <li><strong>COMMITOR</strong>: The data change is performed by the user who submits the ticket.</li>
+             * <li><strong>AUTO</strong>: The data change is automatically performed after the ticket is approved.</li>
+             * <li><strong>LAST_AUDITOR</strong>: The data change is performed by the last approver of the ticket.</li>
+             * </ul>
              * 
-             * *   **COMMITOR**: The data change is performed by the user who submits the ticket.
-             * *   **AUTO**: The data change is automatically performed after the ticket is approved.
-             * *   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.
+             * <strong>example:</strong>
+             * <p>COMMITOR</p>
              */
             public Builder execMode(String execMode) {
                 this.execMode = execMode;
@@ -446,10 +535,13 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The SQL statements that you want to execute to change data.
-             * <p>
+             * <p>The SQL statements that you want to execute to change data.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>SqlType</strong> parameter to <strong>TEXT</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required if you set the **SqlType** parameter to **TEXT**.
+             * <strong>example:</strong>
+             * <p>update base_user set id = 1 where id  = 1;</p>
              */
             public Builder execSQL(String execSQL) {
                 this.execSQL = execSQL;
@@ -457,10 +549,13 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The key of the attachment that contains the SQL statements used to roll back the data change. You can call the [GetUserUploadFileJob](~~206069~~) operation to the attachment key from the value of the AttachmentKey parameter.
-             * <p>
+             * <p>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to the attachment key from the value of the AttachmentKey parameter.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.
+             * <strong>example:</strong>
+             * <p>test_rollback.sql</p>
              */
             public Builder rollbackAttachmentName(String rollbackAttachmentName) {
                 this.rollbackAttachmentName = rollbackAttachmentName;
@@ -468,10 +563,13 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The SQL statements used to roll back the data change.
-             * <p>
+             * <p>The SQL statements used to roll back the data change.</p>
+             * <blockquote>
+             * <p>This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>TEXT</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.
+             * <strong>example:</strong>
+             * <p>update base_user set id = 1 where id  = 1;</p>
              */
             public Builder rollbackSQL(String rollbackSQL) {
                 this.rollbackSQL = rollbackSQL;
@@ -479,11 +577,14 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The format of the SQL statements used to roll back the data change. Valid values:
-             * <p>
+             * <p>The format of the SQL statements used to roll back the data change. Valid values:</p>
+             * <ul>
+             * <li><strong>TEXT</strong>: text</li>
+             * <li><strong>ATTACHMENT</strong>: attachment</li>
+             * </ul>
              * 
-             * *   **TEXT**: text
-             * *   **ATTACHMENT**: attachment
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder rollbackSqlType(String rollbackSqlType) {
                 this.rollbackSqlType = rollbackSqlType;
@@ -491,11 +592,15 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
-             * The format of the SQL statements used to change data. Valid values:
-             * <p>
+             * <p>The format of the SQL statements used to change data. Valid values:</p>
+             * <ul>
+             * <li><strong>TEXT</strong>: text</li>
+             * <li><strong>ATTACHMENT</strong>: attachment</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **TEXT**: text
-             * *   **ATTACHMENT**: attachment
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;

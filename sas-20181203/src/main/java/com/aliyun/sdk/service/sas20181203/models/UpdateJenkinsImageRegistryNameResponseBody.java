@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJenkinsImageRegistryNameResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateJenkinsImageRegistryNameResponseBody</p>
  */
 public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TimeCost")
+    @com.aliyun.core.annotation.NameInMap("TimeCost")
     private Long timeCost;
 
     private UpdateJenkinsImageRegistryNameResponseBody(Builder builder) {
@@ -74,11 +79,14 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * The result of the operation. Valid values:
-         * <p>
+         * <p>The result of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: successful</li>
+         * <li><strong>false</strong>: failed</li>
+         * </ul>
          * 
-         * *   **true**: successful
-         * *   **false**: failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -86,7 +94,10 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -94,7 +105,10 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4347E985-6E64-467B-96EC-30D4EA9E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +116,10 @@ public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed. Unit: seconds.
+         * <p>The time consumed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

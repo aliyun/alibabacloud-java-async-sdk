@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKvUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKvUsageDataResponseBody</p>
  */
 public class DescribeKvUsageDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("KvUsageData")
+    @com.aliyun.core.annotation.NameInMap("KvUsageData")
     private java.util.List < KvUsageData> kvUsageData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeKvUsageDataResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * EndTime.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-18T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -82,7 +85,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * KvUsageData.
+         * <p>The usage details.</p>
          */
         public Builder kvUsageData(java.util.List < KvUsageData> kvUsageData) {
             this.kvUsageData = kvUsageData;
@@ -90,7 +93,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +104,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-06T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -111,17 +120,23 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKvUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKvUsageDataResponseBody</p>
+     */
     public static class KvUsageData extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
 
-        @NameInMap("AccessType")
+        @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private KvUsageData(Builder builder) {
@@ -174,7 +189,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Acc.
+             * <p>The number of visits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1340000</p>
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -182,7 +200,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * AccessType.
+             * <p>The request method. This parameter is available only when the <strong>SplitBy</strong> parameter is set to <strong>type</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -190,7 +211,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID. This parameter is available only when the <strong>SplitBy</strong> parameter is set to <strong>namespace</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>534167033424646144</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -198,7 +222,10 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-14T15:00:03Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

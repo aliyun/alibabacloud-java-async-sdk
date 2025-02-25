@@ -1,65 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCommandRequest} extends {@link RequestModel}
  *
  * <p>ModifyCommandRequest</p>
  */
 public class ModifyCommandRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("CommandContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandContent")
     private String commandContent;
 
-    @Query
-    @NameInMap("CommandId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Launcher")
+    private String launcher;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
-    @Query
-    @NameInMap("WorkingDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
     private ModifyCommandRequest(Builder builder) {
@@ -68,6 +77,7 @@ public class ModifyCommandRequest extends Request {
         this.commandContent = builder.commandContent;
         this.commandId = builder.commandId;
         this.description = builder.description;
+        this.launcher = builder.launcher;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -117,6 +127,13 @@ public class ModifyCommandRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return launcher
+     */
+    public String getLauncher() {
+        return this.launcher;
     }
 
     /**
@@ -180,6 +197,7 @@ public class ModifyCommandRequest extends Request {
         private String commandContent; 
         private String commandId; 
         private String description; 
+        private String launcher; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -199,6 +217,7 @@ public class ModifyCommandRequest extends Request {
             this.commandContent = request.commandContent;
             this.commandId = request.commandId;
             this.description = request.description;
+            this.launcher = request.launcher;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -219,19 +238,12 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The command content. The command content can be plaintext or Base64-encoded. Take note of the following items:
-         * <p>
+         * <blockquote>
+         * <p> This parameter is no longer used and does not take effect.</p>
+         * </blockquote>
          * 
-         * *   The Base64-encoded command content can be up to 16 KB in size.
-         * 
-         * *   If the command content is Base64-encoded, set `ContentEncoding` to Base64.
-         * 
-         * *   If you set `EnableParameter` to true, the custom parameter feature is enabled and you can specify custom parameters based on the following rules:
-         * 
-         *     *   Specify custom parameters in the `{{}}` format. When parameter names are enclosed in `{{}}`, the spaces and line feeds before and after the parameter names are ignored.
-         *     *   You can specify up to 20 custom parameters.
-         *     *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is not case-sensitive.
-         *     *   Each custom parameter name cannot exceed 64 bytes in length.
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -240,7 +252,11 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
+         * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz01272yr52****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -249,7 +265,10 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The command description. The description supports all character sets and can be up to 512 characters in length.
+         * <p>The command description. The description supports all character sets and can be up to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -258,7 +277,22 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The command name. The name supports all character sets and can be up to 128 characters in length.
+         * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+         */
+        public Builder launcher(String launcher) {
+            this.putQueryParameter("Launcher", launcher);
+            this.launcher = launcher;
+            return this;
+        }
+
+        /**
+         * <p>The command name. The name supports all character sets and can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-CommandName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -285,7 +319,11 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -312,7 +350,10 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.
+         * <p>The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -321,7 +362,10 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The working directory of the command.
+         * <p>The working directory of the command. The value can be up to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/</p>
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);

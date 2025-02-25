@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainsResponseBody</p>
  */
 public class DescribeDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Domains domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainsResponseBody(Builder builder) {
@@ -131,8 +136,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Domain extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private Domain(Builder builder) {
@@ -172,9 +183,15 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("Domain")
-        private java.util.List < Domain> domain;
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        private java.util.List<Domain> domain;
 
         private Domains(Builder builder) {
             this.domain = builder.domain;
@@ -191,17 +208,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < Domain> getDomain() {
+        public java.util.List<Domain> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < Domain> domain; 
+            private java.util.List<Domain> domain; 
 
             /**
              * Domain.
              */
-            public Builder domain(java.util.List < Domain> domain) {
+            public Builder domain(java.util.List<Domain> domain) {
                 this.domain = domain;
                 return this;
             }

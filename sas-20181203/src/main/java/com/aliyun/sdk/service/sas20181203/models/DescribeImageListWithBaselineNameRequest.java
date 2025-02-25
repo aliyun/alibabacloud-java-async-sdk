@@ -1,85 +1,90 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageListWithBaselineNameRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageListWithBaselineNameRequest</p>
  */
 public class DescribeImageListWithBaselineNameRequest extends Request {
-    @Query
-    @NameInMap("BaselineNameKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaselineNameKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baselineNameKey;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("ContainerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerId")
     private String containerId;
 
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("CriteriaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CriteriaType")
     private String criteriaType;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
-    @Query
-    @NameInMap("ImageDigest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageDigest")
     private String imageDigest;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Pod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pod")
     private String pod;
 
-    @Query
-    @NameInMap("RepoInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoInstanceId")
     private String repoInstanceId;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @Query
-    @NameInMap("RepoNamespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNamespace")
     private String repoNamespace;
 
-    @Query
-    @NameInMap("ScanRange")
-    private java.util.List < String > scanRange;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRange")
+    private java.util.List<String> scanRange;
 
     private DescribeImageListWithBaselineNameRequest(Builder builder) {
         super(builder);
@@ -230,7 +235,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
     /**
      * @return scanRange
      */
-    public java.util.List < String > getScanRange() {
+    public java.util.List<String> getScanRange() {
         return this.scanRange;
     }
 
@@ -251,7 +256,7 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         private String repoInstanceId; 
         private String repoName; 
         private String repoNamespace; 
-        private java.util.List < String > scanRange; 
+        private java.util.List<String> scanRange; 
 
         private Builder() {
             super();
@@ -279,7 +284,11 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         } 
 
         /**
-         * The name of the image baseline.
+         * <p>The name of the image baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         public Builder baselineNameKey(String baselineNameKey) {
             this.putQueryParameter("BaselineNameKey", baselineNameKey);
@@ -288,10 +297,13 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>cc20a1024011c44b6a8710d6f8b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -300,7 +312,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker-law</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -309,7 +324,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The ID of the container.
+         * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c08d5fc1a329a4b88950a253d082f****</p>
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -318,7 +336,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The search condition for the image baseline.
+         * <p>The search condition for the image baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unauthorized access</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -327,11 +348,14 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The type of the search condition. Valid values:
-         * <p>
+         * <p>The type of the search condition. Valid values:</p>
+         * <ul>
+         * <li><strong>BaselineNameAlias</strong>: baseline name</li>
+         * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+         * </ul>
          * 
-         * *   **BaselineNameAlias**: baseline name
-         * *   **BaselineClassAlias**: baseline category
+         * <strong>example:</strong>
+         * <p>BaselineNameAlias</p>
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -340,7 +364,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -349,7 +376,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The name of the image to which the container belongs.
+         * <p>The name of the image to which the container belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</p>
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -358,7 +388,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The SHA-256 value of the image digest.
+         * <p>The SHA-256 value of the image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</p>
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -367,11 +400,14 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -380,7 +416,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-002</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -389,7 +428,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -398,7 +440,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The pod.
+         * <p>The pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22222-7xsqq</p>
          */
         public Builder pod(String pod) {
             this.putQueryParameter("Pod", pod);
@@ -407,7 +452,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The instance ID of the image repository.
+         * <p>The instance ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-qewqrqcsadf****</p>
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -416,7 +464,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libssh2</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -425,7 +476,10 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The namespace to which the image repository belongs.
+         * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libssh2</p>
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -434,9 +488,9 @@ public class DescribeImageListWithBaselineNameRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * <p>The types of the assets that you want to scan.</p>
          */
-        public Builder scanRange(java.util.List < String > scanRange) {
+        public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
             return this;

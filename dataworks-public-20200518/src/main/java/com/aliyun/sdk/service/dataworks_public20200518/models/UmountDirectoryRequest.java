@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UmountDirectoryRequest} extends {@link RequestModel}
  *
  * <p>UmountDirectoryRequest</p>
  */
 public class UmountDirectoryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @Body
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
-    @Body
-    @NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
     private String targetUserId;
 
     private UmountDirectoryRequest(Builder builder) {
@@ -105,7 +110,10 @@ public class UmountDirectoryRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned. The value 200 indicates that the request was successful.
+         * <p>The ID of the directory that you want to remove from the left-side navigation pane of DataAnalysis. This parameter is used together with the TargetType parameter. For example, if you set the TargetType parameter to META_ALBUM, you must set the TargetId parameter to the ID of the metadata data album. You can call the <a href="https://help.aliyun.com/document_detail/469938.html">ListMetaCollections</a> operation to obtain the ID of the data album. The ID is indicated by the QualifiedName parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.339</p>
          */
         public Builder targetId(String targetId) {
             this.putBodyParameter("TargetId", targetId);
@@ -114,7 +122,10 @@ public class UmountDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The type of the directory that you want to remove from the left-side navigation pane of DataAnalysis. Example: META_ALBUM, which indicates the metadata data album.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>META_ALBUM</p>
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("TargetType", targetType);
@@ -123,7 +134,14 @@ public class UmountDirectoryRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * <p>The ID of the user in the tenant.</p>
+         * <ul>
+         * <li>If you do not configure TargetUserId, the directory belongs to you.</li>
+         * <li>If you configure TargetUserId, the directory belongs to the user specified by using TargetUserId.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder targetUserId(String targetUserId) {
             this.putBodyParameter("TargetUserId", targetUserId);

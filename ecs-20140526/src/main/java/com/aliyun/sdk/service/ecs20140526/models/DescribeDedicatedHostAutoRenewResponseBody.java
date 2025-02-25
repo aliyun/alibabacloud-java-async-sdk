@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostAutoRenewResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedHostAutoRenewResponseBody</p>
  */
 public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostRenewAttributes")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostRenewAttributes")
     private DedicatedHostRenewAttributes dedicatedHostRenewAttributes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDedicatedHostAutoRenewResponseBody(Builder builder) {
@@ -50,11 +55,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unit of the auto-renewal period. Valid values:
-         * <p>
-         * 
-         * *   Week
-         * *   Month
+         * <p>The array that consists of dedicated host auto-renewal attributes.</p>
          */
         public Builder dedicatedHostRenewAttributes(DedicatedHostRenewAttributes dedicatedHostRenewAttributes) {
             this.dedicatedHostRenewAttributes = dedicatedHostRenewAttributes;
@@ -62,7 +63,10 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the auto-renewal attributes of the dedicated hosts.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,23 +79,29 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedHostAutoRenewResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostAutoRenewResponseBody</p>
+     */
     public static class DedicatedHostRenewAttribute extends TeaModel {
-        @NameInMap("AutoRenewEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewEnabled")
         private Boolean autoRenewEnabled;
 
-        @NameInMap("AutoRenewWithEcs")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewWithEcs")
         private String autoRenewWithEcs;
 
-        @NameInMap("DedicatedHostId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("RenewalStatus")
+        @com.aliyun.core.annotation.NameInMap("RenewalStatus")
         private String renewalStatus;
 
         private DedicatedHostRenewAttribute(Builder builder) {
@@ -162,11 +172,14 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             private String renewalStatus; 
 
             /**
-             * Indicates whether the subscription dedicated host is automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on it if the new expiration time of the renewed instances is later than the expiration time of the dedicated host. Valid values:
-             * <p>
+             * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   AutoRenewWithEcs: The subscription dedicated host is automatically renewed along with the subscription ECS instances hosted on it.
-             * *   StopRenewWithEcs: The subscription dedicated host is not automatically renewed along with the subscription ECS instances hosted on it.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
                 this.autoRenewEnabled = autoRenewEnabled;
@@ -174,7 +187,14 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenewWithEcs.
+             * <p>Indicates whether the dedicated host is automatically renewed if a subscription ECS instance it hosts, after being automatically renewed, has a new expiration time that is later than that of the dedicated host. Valid values:</p>
+             * <ul>
+             * <li>AutoRenewWithEcs: The dedicated host is automatically renewed along with the ECS instance.</li>
+             * <li>StopRenewWithEcs: The dedicated host is not automatically renewed along with the ECS instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>StopRenewWithEcs</p>
              */
             public Builder autoRenewWithEcs(String autoRenewWithEcs) {
                 this.autoRenewWithEcs = autoRenewWithEcs;
@@ -182,12 +202,10 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the subscription dedicated host is automatically renewed. Valid values:
-             * <p>
+             * <p>The ID of the dedicated host.</p>
              * 
-             * *   AutoRenewal: The dedicated host is automatically renewed.
-             * *   Normal: The dedicated host is not automatically renewed, and you will receive notifications for renewal.
-             * *   NotRenewal: The dedicated host is not renewed, and no expiration notification is sent. Notifications for renewal are automatically sent three days before the dedicated host expires. You can change the value of this parameter from NotRenewal to Normal for the dedicated host and manually renew it by calling the [RenewDedicatedHosts](~~93287~~) operation. Alternatively, you can set this parameter to AutoRenewal to configure the dedicated host to be automatically renewed.
+             * <strong>example:</strong>
+             * <p>dh-bp165p6xk2tlw61e****</p>
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -195,7 +213,10 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated host.
+             * <p>The auto-renewal period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -203,7 +224,14 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             }
 
             /**
-             * The auto-renewal period.
+             * <p>The unit of the auto-renewal duration. Valid values:</p>
+             * <ul>
+             * <li>Week</li>
+             * <li>Month</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -211,11 +239,15 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the subscription dedicated host is automatically renewed. Valid values:
-             * <p>
+             * <p>Indicates whether the subscription dedicated host is automatically renewed. Valid values:</p>
+             * <ul>
+             * <li>AutoRenewal: The dedicated host is automatically renewed.</li>
+             * <li>Normal: The dedicated host is not automatically renewed, but renewal notifications are sent.</li>
+             * <li>NotRenewal: The dedicated host is not automatically renewed, and no expiration notification is sent. Alibaba Cloud sends only a non-renewal notice three days before the host expires. If the renewal status of a dedicated host is NotRenewal, you can change the value to Normal and then call <a href="https://help.aliyun.com/document_detail/93287.html">RenewDedicatedHosts</a> to manually renew the dedicated host, or directly change the value to AutoRenewal.</li>
+             * </ul>
              * 
-             * *   true: The dedicated host is automatically renewed.
-             * *   false: The dedicated host is not automatically renewed.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;
@@ -229,9 +261,15 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostAutoRenewResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostAutoRenewResponseBody</p>
+     */
     public static class DedicatedHostRenewAttributes extends TeaModel {
-        @NameInMap("DedicatedHostRenewAttribute")
-        private java.util.List < DedicatedHostRenewAttribute> dedicatedHostRenewAttribute;
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostRenewAttribute")
+        private java.util.List<DedicatedHostRenewAttribute> dedicatedHostRenewAttribute;
 
         private DedicatedHostRenewAttributes(Builder builder) {
             this.dedicatedHostRenewAttribute = builder.dedicatedHostRenewAttribute;
@@ -248,17 +286,17 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         /**
          * @return dedicatedHostRenewAttribute
          */
-        public java.util.List < DedicatedHostRenewAttribute> getDedicatedHostRenewAttribute() {
+        public java.util.List<DedicatedHostRenewAttribute> getDedicatedHostRenewAttribute() {
             return this.dedicatedHostRenewAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHostRenewAttribute> dedicatedHostRenewAttribute; 
+            private java.util.List<DedicatedHostRenewAttribute> dedicatedHostRenewAttribute; 
 
             /**
              * DedicatedHostRenewAttribute.
              */
-            public Builder dedicatedHostRenewAttribute(java.util.List < DedicatedHostRenewAttribute> dedicatedHostRenewAttribute) {
+            public Builder dedicatedHostRenewAttribute(java.util.List<DedicatedHostRenewAttribute> dedicatedHostRenewAttribute) {
                 this.dedicatedHostRenewAttribute = dedicatedHostRenewAttribute;
                 return this;
             }

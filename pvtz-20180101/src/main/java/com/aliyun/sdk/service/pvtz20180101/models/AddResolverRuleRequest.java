@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddResolverRuleRequest} extends {@link RequestModel}
  *
  * <p>AddResolverRuleRequest</p>
  */
 public class AddResolverRuleRequest extends Request {
-    @Query
-    @NameInMap("EndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointId;
 
-    @Query
-    @NameInMap("ForwardIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ForwardIp> forwardIp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("ZoneName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneName;
 
     private AddResolverRuleRequest(Builder builder) {
@@ -128,7 +128,11 @@ public class AddResolverRuleRequest extends Request {
         } 
 
         /**
-         * EndpointId.
+         * <p>The outbound endpoint ID. The outbound endpoint is used to forward the DNS requests to the specified destination IP addresses.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -137,7 +141,11 @@ public class AddResolverRuleRequest extends Request {
         }
 
         /**
-         * ForwardIp.
+         * <p>The IP addresses and ports of the external DNS servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded. You can enter up to <strong>six</strong> IP addresses and ports. Both private and public IP addresses are supported.</p>
+         * <blockquote>
+         * <p> If you specify public IP addresses as the IP addresses of the external DNS servers and Elastic Compute Service (ECS) instances in the outbound VPC are not assigned public IP addresses, you need to activate NAT Gateway for the VPC and create and manage SNAT entries on a NAT gateway.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder forwardIp(java.util.List < ForwardIp> forwardIp) {
             this.putQueryParameter("ForwardIp", forwardIp);
@@ -146,7 +154,15 @@ public class AddResolverRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -155,7 +171,11 @@ public class AddResolverRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the forwarding rule. You can name the rule based on your business requirements.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -164,7 +184,13 @@ public class AddResolverRuleRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the forwarding rule. The parameter value can only be OUTBOUND, which indicates that DNS requests are forwarded to one or more external IP addresses.</p>
+         * <blockquote>
+         * <p> You cannot change the value of Type after you create the forwarding rule.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -173,7 +199,14 @@ public class AddResolverRuleRequest extends Request {
         }
 
         /**
-         * ZoneName.
+         * <p>The zone for which you want to forward DNS requests.</p>
+         * <blockquote>
+         * <p> You cannot change the value of ZoneName after you create the forwarding rule.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder zoneName(String zoneName) {
             this.putQueryParameter("ZoneName", zoneName);
@@ -188,13 +221,19 @@ public class AddResolverRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddResolverRuleRequest} extends {@link TeaModel}
+     *
+     * <p>AddResolverRuleRequest</p>
+     */
     public static class ForwardIp extends TeaModel {
-        @NameInMap("Ip")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ip;
 
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
         private ForwardIp(Builder builder) {
@@ -229,7 +268,14 @@ public class AddResolverRuleRequest extends Request {
             private Integer port; 
 
             /**
-             * Ip.
+             * <p>The IP address of the destination server.</p>
+             * <blockquote>
+             * <p> The following CIDR blocks are reserved by the system: 100.100.2.136 to 100.100.2.138 and 100.100.2.116 to 100.100.2.118. You cannot specify the IP addresses within these CIDR blocks for the external DNS servers.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -237,7 +283,11 @@ public class AddResolverRuleRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port of the destination server.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

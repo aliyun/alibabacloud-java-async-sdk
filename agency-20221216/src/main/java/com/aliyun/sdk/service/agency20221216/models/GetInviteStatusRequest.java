@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInviteStatusRequest} extends {@link RequestModel}
  *
  * <p>GetInviteStatusRequest</p>
  */
 public class GetInviteStatusRequest extends Request {
-    @Query
-    @NameInMap("InviteStatusList")
-    @Validation(required = true)
-    private java.util.List < InviteStatusList> inviteStatusList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InviteStatusList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<InviteStatusList> inviteStatusList;
 
     private GetInviteStatusRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class GetInviteStatusRequest extends Request {
     /**
      * @return inviteStatusList
      */
-    public java.util.List < InviteStatusList> getInviteStatusList() {
+    public java.util.List<InviteStatusList> getInviteStatusList() {
         return this.inviteStatusList;
     }
 
     public static final class Builder extends Request.Builder<GetInviteStatusRequest, Builder> {
-        private java.util.List < InviteStatusList> inviteStatusList; 
+        private java.util.List<InviteStatusList> inviteStatusList; 
 
         private Builder() {
             super();
@@ -55,9 +60,11 @@ public class GetInviteStatusRequest extends Request {
         } 
 
         /**
-         * inviteId list
+         * <p>inviteId list</br>
+         * <code>Sub-levels &lt;= 5</code></p>
+         * <p>This parameter is required.</p>
          */
-        public Builder inviteStatusList(java.util.List < InviteStatusList> inviteStatusList) {
+        public Builder inviteStatusList(java.util.List<InviteStatusList> inviteStatusList) {
             this.putQueryParameter("InviteStatusList", inviteStatusList);
             this.inviteStatusList = inviteStatusList;
             return this;
@@ -70,8 +77,14 @@ public class GetInviteStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetInviteStatusRequest} extends {@link TeaModel}
+     *
+     * <p>GetInviteStatusRequest</p>
+     */
     public static class InviteStatusList extends TeaModel {
-        @NameInMap("InviteId")
+        @com.aliyun.core.annotation.NameInMap("InviteId")
         private Long inviteId;
 
         private InviteStatusList(Builder builder) {
@@ -97,7 +110,10 @@ public class GetInviteStatusRequest extends Request {
             private Long inviteId; 
 
             /**
-             * InviteId.
+             * <p>Invitation ID, From interface InviteSubAccount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;

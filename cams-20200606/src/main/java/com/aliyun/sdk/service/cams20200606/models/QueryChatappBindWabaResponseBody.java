@@ -1,31 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryChatappBindWabaResponseBody} extends {@link TeaModel}
  *
  * <p>QueryChatappBindWabaResponseBody</p>
  */
 public class QueryChatappBindWabaResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
 
     private QueryChatappBindWabaResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
@@ -33,6 +36,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -78,15 +82,26 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,11 +109,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +124,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +132,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,10 +143,28 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
@@ -135,28 +174,50 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryChatappBindWabaResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChatappBindWabaResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountReviewStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountReviewStatus")
         private String accountReviewStatus;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("AuthInternationalRateEligibility")
+        private java.util.Map < String, ? > authInternationalRateEligibility;
+
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
+        private String businessId;
+
+        @com.aliyun.core.annotation.NameInMap("BusinessName")
+        private String businessName;
+
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MessageTemplateNamespace")
+        @com.aliyun.core.annotation.NameInMap("MessageTemplateNamespace")
         private String messageTemplateNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryBusinessLocation")
+        private String primaryBusinessLocation;
 
         private Data(Builder builder) {
             this.accountReviewStatus = builder.accountReviewStatus;
+            this.authInternationalRateEligibility = builder.authInternationalRateEligibility;
+            this.businessId = builder.businessId;
+            this.businessName = builder.businessName;
             this.currency = builder.currency;
             this.id = builder.id;
             this.messageTemplateNamespace = builder.messageTemplateNamespace;
             this.name = builder.name;
+            this.primaryBusinessLocation = builder.primaryBusinessLocation;
         }
 
         public static Builder builder() {
@@ -172,6 +233,27 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
          */
         public String getAccountReviewStatus() {
             return this.accountReviewStatus;
+        }
+
+        /**
+         * @return authInternationalRateEligibility
+         */
+        public java.util.Map < String, ? > getAuthInternationalRateEligibility() {
+            return this.authInternationalRateEligibility;
+        }
+
+        /**
+         * @return businessId
+         */
+        public String getBusinessId() {
+            return this.businessId;
+        }
+
+        /**
+         * @return businessName
+         */
+        public String getBusinessName() {
+            return this.businessName;
         }
 
         /**
@@ -202,15 +284,42 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return primaryBusinessLocation
+         */
+        public String getPrimaryBusinessLocation() {
+            return this.primaryBusinessLocation;
+        }
+
         public static final class Builder {
             private String accountReviewStatus; 
+            private java.util.Map < String, ? > authInternationalRateEligibility; 
+            private String businessId; 
+            private String businessName; 
             private String currency; 
             private String id; 
             private String messageTemplateNamespace; 
             private String name; 
+            private String primaryBusinessLocation; 
 
             /**
-             * The review status of the WhatsApp Business account.
+             * <p>The review state of the WhatsApp Business account (WABA).</p>
+             * <blockquote>
+             * <p> Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>PENDING: The WABA is to be reviewed.</p>
+             * </li>
+             * <li><p>APPROVED: The WABA was approved.</p>
+             * </li>
+             * <li><p>REJECTED: The WABA was rejected.</p>
+             * </li>
+             * <li><p>DISABLED: The WABA was forbidden.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVED</p>
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;
@@ -218,7 +327,40 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * The currency.
+             * <p>WABA related information.</p>
+             */
+            public Builder authInternationalRateEligibility(java.util.Map < String, ? > authInternationalRateEligibility) {
+                this.authInternationalRateEligibility = authInternationalRateEligibility;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the business platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19293988***</p>
+             */
+            public Builder businessId(String businessId) {
+                this.businessId = businessId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the business platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
+             */
+            public Builder businessName(String businessName) {
+                this.businessName = businessName;
+                return this;
+            }
+
+            /**
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -226,7 +368,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the WhatsApp Business account.
+             * <p>The ID of the WhatsApp Business account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20393988393993***</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -234,7 +379,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the message template.
+             * <p>The namespace of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
              */
             public Builder messageTemplateNamespace(String messageTemplateNamespace) {
                 this.messageTemplateNamespace = messageTemplateNamespace;
@@ -242,10 +390,24 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the WhatsApp Business account.
+             * <p>The name of the WhatsApp Business account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The start time when the authentication-international rate applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;start_time&quot;:1721952000</p>
+             */
+            public Builder primaryBusinessLocation(String primaryBusinessLocation) {
+                this.primaryBusinessLocation = primaryBusinessLocation;
                 return this;
             }
 

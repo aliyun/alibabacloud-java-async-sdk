@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDomainStatusRequest} extends {@link RequestModel}
  *
  * <p>CheckDomainStatusRequest</p>
  */
 public class CheckDomainStatusRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
     private CheckDomainStatusRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class CheckDomainStatusRequest extends Request {
         } 
 
         /**
-         * Domain.
+         * <p>This parameter is required.</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

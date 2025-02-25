@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTotalAttackMaxFlowRequest} extends {@link RequestModel}
  *
  * <p>DescribeTotalAttackMaxFlowRequest</p>
  */
 public class DescribeTotalAttackMaxFlowRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeTotalAttackMaxFlowRequest(Builder builder) {
@@ -74,7 +79,7 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -95,7 +100,7 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeTotalAttackMaxFlowRequest, Builder> {
         private String regionId; 
         private Long endTime; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -122,10 +127,14 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1659697200</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -134,16 +143,20 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.
+         * <p>The IDs of the instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. If you do not configure this parameter, the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. If you do not configure this parameter, the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -152,10 +165,14 @@ public class DescribeTotalAttackMaxFlowRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > This UNIX timestamp must indicate a point in time that is accurate to the minute.
+         * <strong>example:</strong>
+         * <p>1669240800</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

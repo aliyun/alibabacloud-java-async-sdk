@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVSwitchCidrReservationsRequest} extends {@link RequestModel}
  *
  * <p>ListVSwitchCidrReservationsRequest</p>
  */
 public class ListVSwitchCidrReservationsRequest extends Request {
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @Query
-    @NameInMap("VSwitchCidrReservationIds")
-    private java.util.List < String > vSwitchCidrReservationIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationIds")
+    private java.util.List<String> vSwitchCidrReservationIds;
 
-    @Query
-    @NameInMap("VSwitchCidrReservationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationType")
     private String vSwitchCidrReservationType;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private ListVSwitchCidrReservationsRequest(Builder builder) {
@@ -150,14 +155,14 @@ public class ListVSwitchCidrReservationsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return vSwitchCidrReservationIds
      */
-    public java.util.List < String > getVSwitchCidrReservationIds() {
+    public java.util.List<String> getVSwitchCidrReservationIds() {
         return this.vSwitchCidrReservationIds;
     }
 
@@ -184,8 +189,8 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > vSwitchCidrReservationIds; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> vSwitchCidrReservationIds; 
         private String vSwitchCidrReservationType; 
         private String vSwitchId; 
 
@@ -210,11 +215,14 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         } 
 
         /**
-         * The IP version of the reserved CIDR block. Valid values:
-         * <p>
+         * <p>The IP version of the reserved CIDR block. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong> (default)</li>
+         * <li><strong>IPv6</strong></li>
+         * </ul>
          * 
-         * *   **IPv4** (default)
-         * *   **IPv6**
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -223,7 +231,10 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -232,11 +243,14 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -263,10 +277,12 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * The region ID of the vSwitch.
-         * <p>
+         * <p>The region ID of the vSwitch.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -293,28 +309,31 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * The ID of the reserved CIDR block. You can specify at most 10 IDs.
+         * <p>The ID of the reserved CIDR block. You can specify at most 10 IDs.</p>
          */
-        public Builder vSwitchCidrReservationIds(java.util.List < String > vSwitchCidrReservationIds) {
+        public Builder vSwitchCidrReservationIds(java.util.List<String> vSwitchCidrReservationIds) {
             this.putQueryParameter("VSwitchCidrReservationIds", vSwitchCidrReservationIds);
             this.vSwitchCidrReservationIds = vSwitchCidrReservationIds;
             return this;
         }
 
         /**
-         * The type of the reserved CIDR block. Set the value to **prefix**.
-         * <p>
+         * <p>The type of the reserved CIDR block. Set the value to <strong>prefix</strong>.</p>
+         * <blockquote>
+         * <p> When you allocate CIDR blocks, or enable the service to automatically allocate CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks to allocate must fall into the reserved CIDR block. If the reserved CIDR is exhausted, an error message is returned.</p>
+         * </blockquote>
          * 
-         * >  When you allocate CIDR blocks, or enable the service to automatically allocate CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks to allocate must fall into the reserved CIDR block. If the reserved CIDR is exhausted, an error message is returned.
+         * <strong>example:</strong>
+         * <p>prefix</p>
          */
         public Builder vSwitchCidrReservationType(String vSwitchCidrReservationType) {
             this.putQueryParameter("VSwitchCidrReservationType", vSwitchCidrReservationType);
@@ -323,7 +342,10 @@ public class ListVSwitchCidrReservationsRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch for which you want to query reserved CIDR blocks.
+         * <p>The ID of the vSwitch for which you want to query reserved CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-25navfgbue4g****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -338,11 +360,17 @@ public class ListVSwitchCidrReservationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListVSwitchCidrReservationsRequest} extends {@link TeaModel}
+     *
+     * <p>ListVSwitchCidrReservationsRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -377,10 +405,11 @@ public class ListVSwitchCidrReservationsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
              * 
-             * A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -388,10 +417,11 @@ public class ListVSwitchCidrReservationsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

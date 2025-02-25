@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightModifyOtaSearchV2ResponseBody</p>
  */
 public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightModifyOtaSearchV2ResponseBody(Builder builder) {
@@ -114,7 +119,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -122,7 +127,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +146,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2136019116915615639457351e06ee</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,17 +162,23 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class CabinClassInfo extends TeaModel {
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private String cabinClass;
 
-        @NameInMap("class_name")
+        @com.aliyun.core.annotation.NameInMap("class_name")
         private String className;
 
-        @NameInMap("inner_cabin_class")
+        @com.aliyun.core.annotation.NameInMap("inner_cabin_class")
         private Integer innerCabinClass;
 
-        @NameInMap("quantity")
+        @com.aliyun.core.annotation.NameInMap("quantity")
         private String quantity;
 
         private CabinClassInfo(Builder builder) {
@@ -230,7 +247,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             }
 
             /**
-             * inner_cabin_class
+             * inner_cabin_class.
              */
             public Builder innerCabinClass(Integer innerCabinClass) {
                 this.innerCabinClass = innerCabinClass;
@@ -252,32 +269,38 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class ReShopPriceInfoDTO extends TeaModel {
-        @NameInMap("re_shop_adult_change_fee")
+        @com.aliyun.core.annotation.NameInMap("re_shop_adult_change_fee")
         private Integer reShopAdultChangeFee;
 
-        @NameInMap("re_shop_adult_price")
+        @com.aliyun.core.annotation.NameInMap("re_shop_adult_price")
         private Integer reShopAdultPrice;
 
-        @NameInMap("re_shop_adult_price_gap")
+        @com.aliyun.core.annotation.NameInMap("re_shop_adult_price_gap")
         private Integer reShopAdultPriceGap;
 
-        @NameInMap("re_shop_child_change_fee")
+        @com.aliyun.core.annotation.NameInMap("re_shop_child_change_fee")
         private Integer reShopChildChangeFee;
 
-        @NameInMap("re_shop_child_price")
+        @com.aliyun.core.annotation.NameInMap("re_shop_child_price")
         private Integer reShopChildPrice;
 
-        @NameInMap("re_shop_child_price_gap")
+        @com.aliyun.core.annotation.NameInMap("re_shop_child_price_gap")
         private Integer reShopChildPriceGap;
 
-        @NameInMap("re_shop_inf_change_fee")
+        @com.aliyun.core.annotation.NameInMap("re_shop_inf_change_fee")
         private Integer reShopInfChangeFee;
 
-        @NameInMap("re_shop_inf_price")
+        @com.aliyun.core.annotation.NameInMap("re_shop_inf_price")
         private Integer reShopInfPrice;
 
-        @NameInMap("re_shop_inf_price_gap")
+        @com.aliyun.core.annotation.NameInMap("re_shop_inf_price_gap")
         private Integer reShopInfPriceGap;
 
         private ReShopPriceInfoDTO(Builder builder) {
@@ -453,44 +476,50 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class PriceInfoDTO extends TeaModel {
-        @NameInMap("adult_price")
+        @com.aliyun.core.annotation.NameInMap("adult_price")
         private Integer adultPrice;
 
-        @NameInMap("adult_tax")
+        @com.aliyun.core.annotation.NameInMap("adult_tax")
         private Integer adultTax;
 
-        @NameInMap("adult_total_price")
+        @com.aliyun.core.annotation.NameInMap("adult_total_price")
         private Integer adultTotalPrice;
 
-        @NameInMap("before_control_price")
+        @com.aliyun.core.annotation.NameInMap("before_control_price")
         private Integer beforeControlPrice;
 
-        @NameInMap("child_price")
+        @com.aliyun.core.annotation.NameInMap("child_price")
         private Integer childPrice;
 
-        @NameInMap("child_tax")
+        @com.aliyun.core.annotation.NameInMap("child_tax")
         private Integer childTax;
 
-        @NameInMap("child_total_price")
+        @com.aliyun.core.annotation.NameInMap("child_total_price")
         private Integer childTotalPrice;
 
-        @NameInMap("infant_price")
+        @com.aliyun.core.annotation.NameInMap("infant_price")
         private Integer infantPrice;
 
-        @NameInMap("infant_tax")
+        @com.aliyun.core.annotation.NameInMap("infant_tax")
         private Integer infantTax;
 
-        @NameInMap("infant_total_price")
+        @com.aliyun.core.annotation.NameInMap("infant_total_price")
         private Integer infantTotalPrice;
 
-        @NameInMap("original_adult_price")
+        @com.aliyun.core.annotation.NameInMap("original_adult_price")
         private Integer originalAdultPrice;
 
-        @NameInMap("original_adult_total_price")
+        @com.aliyun.core.annotation.NameInMap("original_adult_total_price")
         private Integer originalAdultTotalPrice;
 
-        @NameInMap("re_shop_price_info_d_t_o")
+        @com.aliyun.core.annotation.NameInMap("re_shop_price_info_d_t_o")
         private ReShopPriceInfoDTO reShopPriceInfoDTO;
 
         private PriceInfoDTO(Builder builder) {
@@ -734,41 +763,47 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
-    public static class AgentInfo extends TeaModel {
-        @NameInMap("attribute_show_info_map")
-        private java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap;
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
+    public static class AgentInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("attribute_show_info_map")
+        private java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap;
 
-        @NameInMap("best_discount")
+        @com.aliyun.core.annotation.NameInMap("best_discount")
         private Double bestDiscount;
 
-        @NameInMap("cabin_class_info")
+        @com.aliyun.core.annotation.NameInMap("cabin_class_info")
         private CabinClassInfo cabinClassInfo;
 
-        @NameInMap("cabin_code")
+        @com.aliyun.core.annotation.NameInMap("cabin_code")
         private Integer cabinCode;
 
-        @NameInMap("cabin_name")
+        @com.aliyun.core.annotation.NameInMap("cabin_name")
         private String cabinName;
 
-        @NameInMap("item_id")
+        @com.aliyun.core.annotation.NameInMap("item_id")
         private String itemId;
 
-        @NameInMap("modify_type_desc")
+        @com.aliyun.core.annotation.NameInMap("modify_type_desc")
         private String modifyTypeDesc;
 
-        @NameInMap("modify_type_name")
+        @com.aliyun.core.annotation.NameInMap("modify_type_name")
         private String modifyTypeName;
 
-        @NameInMap("price_info_d_t_o")
+        @com.aliyun.core.annotation.NameInMap("price_info_d_t_o")
         private PriceInfoDTO priceInfoDTO;
 
-        @NameInMap("quantity")
+        @com.aliyun.core.annotation.NameInMap("quantity")
         private Integer quantity;
 
-        @NameInMap("support_child_ticket")
+        @com.aliyun.core.annotation.NameInMap("support_child_ticket")
         private Boolean supportChildTicket;
 
-        private AgentInfo(Builder builder) {
+        private AgentInfos(Builder builder) {
             this.attributeShowInfoMap = builder.attributeShowInfoMap;
             this.bestDiscount = builder.bestDiscount;
             this.cabinClassInfo = builder.cabinClassInfo;
@@ -786,14 +821,14 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static AgentInfo create() {
+        public static AgentInfos create() {
             return builder().build();
         }
 
         /**
          * @return attributeShowInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
             return this.attributeShowInfoMap;
         }
 
@@ -868,7 +903,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap; 
             private Double bestDiscount; 
             private CabinClassInfo cabinClassInfo; 
             private Integer cabinCode; 
@@ -883,7 +918,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             /**
              * attribute_show_info_map.
              */
-            public Builder attributeShowInfoMap(java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap) {
+            public Builder attributeShowInfoMap(java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap) {
                 this.attributeShowInfoMap = attributeShowInfoMap;
                 return this;
             }
@@ -921,7 +956,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             }
 
             /**
-             * item_id
+             * item_id.
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -968,6 +1003,860 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
                 return this;
             }
 
+            public AgentInfos build() {
+                return new AgentInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
+    public static class AgentInfoCabinClassInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
+        private String cabinClass;
+
+        @com.aliyun.core.annotation.NameInMap("class_name")
+        private String className;
+
+        @com.aliyun.core.annotation.NameInMap("inner_cabin_class")
+        private Integer innerCabinClass;
+
+        @com.aliyun.core.annotation.NameInMap("quantity")
+        private String quantity;
+
+        private AgentInfoCabinClassInfo(Builder builder) {
+            this.cabinClass = builder.cabinClass;
+            this.className = builder.className;
+            this.innerCabinClass = builder.innerCabinClass;
+            this.quantity = builder.quantity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentInfoCabinClassInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cabinClass
+         */
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        /**
+         * @return className
+         */
+        public String getClassName() {
+            return this.className;
+        }
+
+        /**
+         * @return innerCabinClass
+         */
+        public Integer getInnerCabinClass() {
+            return this.innerCabinClass;
+        }
+
+        /**
+         * @return quantity
+         */
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+        public static final class Builder {
+            private String cabinClass; 
+            private String className; 
+            private Integer innerCabinClass; 
+            private String quantity; 
+
+            /**
+             * cabin_class.
+             */
+            public Builder cabinClass(String cabinClass) {
+                this.cabinClass = cabinClass;
+                return this;
+            }
+
+            /**
+             * class_name.
+             */
+            public Builder className(String className) {
+                this.className = className;
+                return this;
+            }
+
+            /**
+             * <p>inner_cabin_class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder innerCabinClass(Integer innerCabinClass) {
+                this.innerCabinClass = innerCabinClass;
+                return this;
+            }
+
+            /**
+             * quantity.
+             */
+            public Builder quantity(String quantity) {
+                this.quantity = quantity;
+                return this;
+            }
+
+            public AgentInfoCabinClassInfo build() {
+                return new AgentInfoCabinClassInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
+    public static class PriceInfoDTOReShopPriceInfoDTO extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("re_shop_adult_change_fee")
+        private Integer reShopAdultChangeFee;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_adult_price")
+        private Integer reShopAdultPrice;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_adult_price_gap")
+        private Integer reShopAdultPriceGap;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_child_change_fee")
+        private Integer reShopChildChangeFee;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_child_price")
+        private Integer reShopChildPrice;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_child_price_gap")
+        private Integer reShopChildPriceGap;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_inf_change_fee")
+        private Integer reShopInfChangeFee;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_inf_price")
+        private Integer reShopInfPrice;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_inf_price_gap")
+        private Integer reShopInfPriceGap;
+
+        private PriceInfoDTOReShopPriceInfoDTO(Builder builder) {
+            this.reShopAdultChangeFee = builder.reShopAdultChangeFee;
+            this.reShopAdultPrice = builder.reShopAdultPrice;
+            this.reShopAdultPriceGap = builder.reShopAdultPriceGap;
+            this.reShopChildChangeFee = builder.reShopChildChangeFee;
+            this.reShopChildPrice = builder.reShopChildPrice;
+            this.reShopChildPriceGap = builder.reShopChildPriceGap;
+            this.reShopInfChangeFee = builder.reShopInfChangeFee;
+            this.reShopInfPrice = builder.reShopInfPrice;
+            this.reShopInfPriceGap = builder.reShopInfPriceGap;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PriceInfoDTOReShopPriceInfoDTO create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reShopAdultChangeFee
+         */
+        public Integer getReShopAdultChangeFee() {
+            return this.reShopAdultChangeFee;
+        }
+
+        /**
+         * @return reShopAdultPrice
+         */
+        public Integer getReShopAdultPrice() {
+            return this.reShopAdultPrice;
+        }
+
+        /**
+         * @return reShopAdultPriceGap
+         */
+        public Integer getReShopAdultPriceGap() {
+            return this.reShopAdultPriceGap;
+        }
+
+        /**
+         * @return reShopChildChangeFee
+         */
+        public Integer getReShopChildChangeFee() {
+            return this.reShopChildChangeFee;
+        }
+
+        /**
+         * @return reShopChildPrice
+         */
+        public Integer getReShopChildPrice() {
+            return this.reShopChildPrice;
+        }
+
+        /**
+         * @return reShopChildPriceGap
+         */
+        public Integer getReShopChildPriceGap() {
+            return this.reShopChildPriceGap;
+        }
+
+        /**
+         * @return reShopInfChangeFee
+         */
+        public Integer getReShopInfChangeFee() {
+            return this.reShopInfChangeFee;
+        }
+
+        /**
+         * @return reShopInfPrice
+         */
+        public Integer getReShopInfPrice() {
+            return this.reShopInfPrice;
+        }
+
+        /**
+         * @return reShopInfPriceGap
+         */
+        public Integer getReShopInfPriceGap() {
+            return this.reShopInfPriceGap;
+        }
+
+        public static final class Builder {
+            private Integer reShopAdultChangeFee; 
+            private Integer reShopAdultPrice; 
+            private Integer reShopAdultPriceGap; 
+            private Integer reShopChildChangeFee; 
+            private Integer reShopChildPrice; 
+            private Integer reShopChildPriceGap; 
+            private Integer reShopInfChangeFee; 
+            private Integer reShopInfPrice; 
+            private Integer reShopInfPriceGap; 
+
+            /**
+             * re_shop_adult_change_fee.
+             */
+            public Builder reShopAdultChangeFee(Integer reShopAdultChangeFee) {
+                this.reShopAdultChangeFee = reShopAdultChangeFee;
+                return this;
+            }
+
+            /**
+             * re_shop_adult_price.
+             */
+            public Builder reShopAdultPrice(Integer reShopAdultPrice) {
+                this.reShopAdultPrice = reShopAdultPrice;
+                return this;
+            }
+
+            /**
+             * re_shop_adult_price_gap.
+             */
+            public Builder reShopAdultPriceGap(Integer reShopAdultPriceGap) {
+                this.reShopAdultPriceGap = reShopAdultPriceGap;
+                return this;
+            }
+
+            /**
+             * re_shop_child_change_fee.
+             */
+            public Builder reShopChildChangeFee(Integer reShopChildChangeFee) {
+                this.reShopChildChangeFee = reShopChildChangeFee;
+                return this;
+            }
+
+            /**
+             * re_shop_child_price.
+             */
+            public Builder reShopChildPrice(Integer reShopChildPrice) {
+                this.reShopChildPrice = reShopChildPrice;
+                return this;
+            }
+
+            /**
+             * re_shop_child_price_gap.
+             */
+            public Builder reShopChildPriceGap(Integer reShopChildPriceGap) {
+                this.reShopChildPriceGap = reShopChildPriceGap;
+                return this;
+            }
+
+            /**
+             * re_shop_inf_change_fee.
+             */
+            public Builder reShopInfChangeFee(Integer reShopInfChangeFee) {
+                this.reShopInfChangeFee = reShopInfChangeFee;
+                return this;
+            }
+
+            /**
+             * re_shop_inf_price.
+             */
+            public Builder reShopInfPrice(Integer reShopInfPrice) {
+                this.reShopInfPrice = reShopInfPrice;
+                return this;
+            }
+
+            /**
+             * re_shop_inf_price_gap.
+             */
+            public Builder reShopInfPriceGap(Integer reShopInfPriceGap) {
+                this.reShopInfPriceGap = reShopInfPriceGap;
+                return this;
+            }
+
+            public PriceInfoDTOReShopPriceInfoDTO build() {
+                return new PriceInfoDTOReShopPriceInfoDTO(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
+    public static class AgentInfoPriceInfoDTO extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adult_price")
+        private Integer adultPrice;
+
+        @com.aliyun.core.annotation.NameInMap("adult_tax")
+        private Integer adultTax;
+
+        @com.aliyun.core.annotation.NameInMap("adult_total_price")
+        private Integer adultTotalPrice;
+
+        @com.aliyun.core.annotation.NameInMap("before_control_price")
+        private Integer beforeControlPrice;
+
+        @com.aliyun.core.annotation.NameInMap("child_price")
+        private Integer childPrice;
+
+        @com.aliyun.core.annotation.NameInMap("child_tax")
+        private Integer childTax;
+
+        @com.aliyun.core.annotation.NameInMap("child_total_price")
+        private Integer childTotalPrice;
+
+        @com.aliyun.core.annotation.NameInMap("infant_price")
+        private Integer infantPrice;
+
+        @com.aliyun.core.annotation.NameInMap("infant_tax")
+        private Integer infantTax;
+
+        @com.aliyun.core.annotation.NameInMap("infant_total_price")
+        private Integer infantTotalPrice;
+
+        @com.aliyun.core.annotation.NameInMap("original_adult_price")
+        private Integer originalAdultPrice;
+
+        @com.aliyun.core.annotation.NameInMap("original_adult_total_price")
+        private Integer originalAdultTotalPrice;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_price_info_d_t_o")
+        private PriceInfoDTOReShopPriceInfoDTO reShopPriceInfoDTO;
+
+        private AgentInfoPriceInfoDTO(Builder builder) {
+            this.adultPrice = builder.adultPrice;
+            this.adultTax = builder.adultTax;
+            this.adultTotalPrice = builder.adultTotalPrice;
+            this.beforeControlPrice = builder.beforeControlPrice;
+            this.childPrice = builder.childPrice;
+            this.childTax = builder.childTax;
+            this.childTotalPrice = builder.childTotalPrice;
+            this.infantPrice = builder.infantPrice;
+            this.infantTax = builder.infantTax;
+            this.infantTotalPrice = builder.infantTotalPrice;
+            this.originalAdultPrice = builder.originalAdultPrice;
+            this.originalAdultTotalPrice = builder.originalAdultTotalPrice;
+            this.reShopPriceInfoDTO = builder.reShopPriceInfoDTO;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentInfoPriceInfoDTO create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adultPrice
+         */
+        public Integer getAdultPrice() {
+            return this.adultPrice;
+        }
+
+        /**
+         * @return adultTax
+         */
+        public Integer getAdultTax() {
+            return this.adultTax;
+        }
+
+        /**
+         * @return adultTotalPrice
+         */
+        public Integer getAdultTotalPrice() {
+            return this.adultTotalPrice;
+        }
+
+        /**
+         * @return beforeControlPrice
+         */
+        public Integer getBeforeControlPrice() {
+            return this.beforeControlPrice;
+        }
+
+        /**
+         * @return childPrice
+         */
+        public Integer getChildPrice() {
+            return this.childPrice;
+        }
+
+        /**
+         * @return childTax
+         */
+        public Integer getChildTax() {
+            return this.childTax;
+        }
+
+        /**
+         * @return childTotalPrice
+         */
+        public Integer getChildTotalPrice() {
+            return this.childTotalPrice;
+        }
+
+        /**
+         * @return infantPrice
+         */
+        public Integer getInfantPrice() {
+            return this.infantPrice;
+        }
+
+        /**
+         * @return infantTax
+         */
+        public Integer getInfantTax() {
+            return this.infantTax;
+        }
+
+        /**
+         * @return infantTotalPrice
+         */
+        public Integer getInfantTotalPrice() {
+            return this.infantTotalPrice;
+        }
+
+        /**
+         * @return originalAdultPrice
+         */
+        public Integer getOriginalAdultPrice() {
+            return this.originalAdultPrice;
+        }
+
+        /**
+         * @return originalAdultTotalPrice
+         */
+        public Integer getOriginalAdultTotalPrice() {
+            return this.originalAdultTotalPrice;
+        }
+
+        /**
+         * @return reShopPriceInfoDTO
+         */
+        public PriceInfoDTOReShopPriceInfoDTO getReShopPriceInfoDTO() {
+            return this.reShopPriceInfoDTO;
+        }
+
+        public static final class Builder {
+            private Integer adultPrice; 
+            private Integer adultTax; 
+            private Integer adultTotalPrice; 
+            private Integer beforeControlPrice; 
+            private Integer childPrice; 
+            private Integer childTax; 
+            private Integer childTotalPrice; 
+            private Integer infantPrice; 
+            private Integer infantTax; 
+            private Integer infantTotalPrice; 
+            private Integer originalAdultPrice; 
+            private Integer originalAdultTotalPrice; 
+            private PriceInfoDTOReShopPriceInfoDTO reShopPriceInfoDTO; 
+
+            /**
+             * adult_price.
+             */
+            public Builder adultPrice(Integer adultPrice) {
+                this.adultPrice = adultPrice;
+                return this;
+            }
+
+            /**
+             * adult_tax.
+             */
+            public Builder adultTax(Integer adultTax) {
+                this.adultTax = adultTax;
+                return this;
+            }
+
+            /**
+             * adult_total_price.
+             */
+            public Builder adultTotalPrice(Integer adultTotalPrice) {
+                this.adultTotalPrice = adultTotalPrice;
+                return this;
+            }
+
+            /**
+             * before_control_price.
+             */
+            public Builder beforeControlPrice(Integer beforeControlPrice) {
+                this.beforeControlPrice = beforeControlPrice;
+                return this;
+            }
+
+            /**
+             * child_price.
+             */
+            public Builder childPrice(Integer childPrice) {
+                this.childPrice = childPrice;
+                return this;
+            }
+
+            /**
+             * child_tax.
+             */
+            public Builder childTax(Integer childTax) {
+                this.childTax = childTax;
+                return this;
+            }
+
+            /**
+             * child_total_price.
+             */
+            public Builder childTotalPrice(Integer childTotalPrice) {
+                this.childTotalPrice = childTotalPrice;
+                return this;
+            }
+
+            /**
+             * infant_price.
+             */
+            public Builder infantPrice(Integer infantPrice) {
+                this.infantPrice = infantPrice;
+                return this;
+            }
+
+            /**
+             * infant_tax.
+             */
+            public Builder infantTax(Integer infantTax) {
+                this.infantTax = infantTax;
+                return this;
+            }
+
+            /**
+             * infant_total_price.
+             */
+            public Builder infantTotalPrice(Integer infantTotalPrice) {
+                this.infantTotalPrice = infantTotalPrice;
+                return this;
+            }
+
+            /**
+             * original_adult_price.
+             */
+            public Builder originalAdultPrice(Integer originalAdultPrice) {
+                this.originalAdultPrice = originalAdultPrice;
+                return this;
+            }
+
+            /**
+             * original_adult_total_price.
+             */
+            public Builder originalAdultTotalPrice(Integer originalAdultTotalPrice) {
+                this.originalAdultTotalPrice = originalAdultTotalPrice;
+                return this;
+            }
+
+            /**
+             * re_shop_price_info_d_t_o.
+             */
+            public Builder reShopPriceInfoDTO(PriceInfoDTOReShopPriceInfoDTO reShopPriceInfoDTO) {
+                this.reShopPriceInfoDTO = reShopPriceInfoDTO;
+                return this;
+            }
+
+            public AgentInfoPriceInfoDTO build() {
+                return new AgentInfoPriceInfoDTO(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
+    public static class AgentInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("attribute_show_info_map")
+        private java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap;
+
+        @com.aliyun.core.annotation.NameInMap("best_discount")
+        private Double bestDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("cabin_class_info")
+        private AgentInfoCabinClassInfo cabinClassInfo;
+
+        @com.aliyun.core.annotation.NameInMap("cabin_code")
+        private Integer cabinCode;
+
+        @com.aliyun.core.annotation.NameInMap("cabin_name")
+        private String cabinName;
+
+        @com.aliyun.core.annotation.NameInMap("item_id")
+        private String itemId;
+
+        @com.aliyun.core.annotation.NameInMap("modify_type_desc")
+        private String modifyTypeDesc;
+
+        @com.aliyun.core.annotation.NameInMap("modify_type_name")
+        private String modifyTypeName;
+
+        @com.aliyun.core.annotation.NameInMap("price_info_d_t_o")
+        private AgentInfoPriceInfoDTO priceInfoDTO;
+
+        @com.aliyun.core.annotation.NameInMap("quantity")
+        private Integer quantity;
+
+        @com.aliyun.core.annotation.NameInMap("support_child_ticket")
+        private Boolean supportChildTicket;
+
+        private AgentInfo(Builder builder) {
+            this.attributeShowInfoMap = builder.attributeShowInfoMap;
+            this.bestDiscount = builder.bestDiscount;
+            this.cabinClassInfo = builder.cabinClassInfo;
+            this.cabinCode = builder.cabinCode;
+            this.cabinName = builder.cabinName;
+            this.itemId = builder.itemId;
+            this.modifyTypeDesc = builder.modifyTypeDesc;
+            this.modifyTypeName = builder.modifyTypeName;
+            this.priceInfoDTO = builder.priceInfoDTO;
+            this.quantity = builder.quantity;
+            this.supportChildTicket = builder.supportChildTicket;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attributeShowInfoMap
+         */
+        public java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
+            return this.attributeShowInfoMap;
+        }
+
+        /**
+         * @return bestDiscount
+         */
+        public Double getBestDiscount() {
+            return this.bestDiscount;
+        }
+
+        /**
+         * @return cabinClassInfo
+         */
+        public AgentInfoCabinClassInfo getCabinClassInfo() {
+            return this.cabinClassInfo;
+        }
+
+        /**
+         * @return cabinCode
+         */
+        public Integer getCabinCode() {
+            return this.cabinCode;
+        }
+
+        /**
+         * @return cabinName
+         */
+        public String getCabinName() {
+            return this.cabinName;
+        }
+
+        /**
+         * @return itemId
+         */
+        public String getItemId() {
+            return this.itemId;
+        }
+
+        /**
+         * @return modifyTypeDesc
+         */
+        public String getModifyTypeDesc() {
+            return this.modifyTypeDesc;
+        }
+
+        /**
+         * @return modifyTypeName
+         */
+        public String getModifyTypeName() {
+            return this.modifyTypeName;
+        }
+
+        /**
+         * @return priceInfoDTO
+         */
+        public AgentInfoPriceInfoDTO getPriceInfoDTO() {
+            return this.priceInfoDTO;
+        }
+
+        /**
+         * @return quantity
+         */
+        public Integer getQuantity() {
+            return this.quantity;
+        }
+
+        /**
+         * @return supportChildTicket
+         */
+        public Boolean getSupportChildTicket() {
+            return this.supportChildTicket;
+        }
+
+        public static final class Builder {
+            private java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap; 
+            private Double bestDiscount; 
+            private AgentInfoCabinClassInfo cabinClassInfo; 
+            private Integer cabinCode; 
+            private String cabinName; 
+            private String itemId; 
+            private String modifyTypeDesc; 
+            private String modifyTypeName; 
+            private AgentInfoPriceInfoDTO priceInfoDTO; 
+            private Integer quantity; 
+            private Boolean supportChildTicket; 
+
+            /**
+             * attribute_show_info_map.
+             */
+            public Builder attributeShowInfoMap(java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap) {
+                this.attributeShowInfoMap = attributeShowInfoMap;
+                return this;
+            }
+
+            /**
+             * best_discount.
+             */
+            public Builder bestDiscount(Double bestDiscount) {
+                this.bestDiscount = bestDiscount;
+                return this;
+            }
+
+            /**
+             * cabin_class_info.
+             */
+            public Builder cabinClassInfo(AgentInfoCabinClassInfo cabinClassInfo) {
+                this.cabinClassInfo = cabinClassInfo;
+                return this;
+            }
+
+            /**
+             * cabin_code.
+             */
+            public Builder cabinCode(Integer cabinCode) {
+                this.cabinCode = cabinCode;
+                return this;
+            }
+
+            /**
+             * cabin_name.
+             */
+            public Builder cabinName(String cabinName) {
+                this.cabinName = cabinName;
+                return this;
+            }
+
+            /**
+             * <p>item_id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c85124c527fc4b26b86d0c043ddc08d3_0</p>
+             */
+            public Builder itemId(String itemId) {
+                this.itemId = itemId;
+                return this;
+            }
+
+            /**
+             * modify_type_desc.
+             */
+            public Builder modifyTypeDesc(String modifyTypeDesc) {
+                this.modifyTypeDesc = modifyTypeDesc;
+                return this;
+            }
+
+            /**
+             * modify_type_name.
+             */
+            public Builder modifyTypeName(String modifyTypeName) {
+                this.modifyTypeName = modifyTypeName;
+                return this;
+            }
+
+            /**
+             * price_info_d_t_o.
+             */
+            public Builder priceInfoDTO(AgentInfoPriceInfoDTO priceInfoDTO) {
+                this.priceInfoDTO = priceInfoDTO;
+                return this;
+            }
+
+            /**
+             * quantity.
+             */
+            public Builder quantity(Integer quantity) {
+                this.quantity = quantity;
+                return this;
+            }
+
+            /**
+             * support_child_ticket.
+             */
+            public Builder supportChildTicket(Boolean supportChildTicket) {
+                this.supportChildTicket = supportChildTicket;
+                return this;
+            }
+
             public AgentInfo build() {
                 return new AgentInfo(this);
             } 
@@ -975,17 +1864,23 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class DepAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("airport_short_name")
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
         private String airportShortName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private DepAirportInfo(Builder builder) {
@@ -1076,17 +1971,23 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class ArrAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("airport_short_name")
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
         private String airportShortName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private ArrAirportInfo(Builder builder) {
@@ -1177,20 +2078,26 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class AirlineInfo extends TeaModel {
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_chinese_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
 
-        @NameInMap("airline_chinese_short_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
         private String airlineChineseShortName;
 
-        @NameInMap("airline_icon")
+        @com.aliyun.core.annotation.NameInMap("airline_icon")
         private String airlineIcon;
 
-        @NameInMap("cheap_flight")
+        @com.aliyun.core.annotation.NameInMap("cheap_flight")
         private Boolean cheapFlight;
 
         private AirlineInfo(Builder builder) {
@@ -1298,20 +2205,26 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class OperatingAirlineInfo extends TeaModel {
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_chinese_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
 
-        @NameInMap("airline_chinese_short_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
         private String airlineChineseShortName;
 
-        @NameInMap("airline_icon")
+        @com.aliyun.core.annotation.NameInMap("airline_icon")
         private String airlineIcon;
 
-        @NameInMap("cheap_flight")
+        @com.aliyun.core.annotation.NameInMap("cheap_flight")
         private Boolean cheapFlight;
 
         private OperatingAirlineInfo(Builder builder) {
@@ -1419,11 +2332,17 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class FlightSharedInfo extends TeaModel {
-        @NameInMap("operating_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operating_flight_no")
         private String operatingFlightNo;
 
-        @NameInMap("operating_airline_info")
+        @com.aliyun.core.annotation.NameInMap("operating_airline_info")
         private OperatingAirlineInfo operatingAirlineInfo;
 
         private FlightSharedInfo(Builder builder) {
@@ -1480,26 +2399,32 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class FlightStopInfo extends TeaModel {
-        @NameInMap("stop_city_name")
+        @com.aliyun.core.annotation.NameInMap("stop_city_name")
         private String stopCityName;
 
-        @NameInMap("stop_arr_time")
+        @com.aliyun.core.annotation.NameInMap("stop_arr_time")
         private String stopArrTime;
 
-        @NameInMap("stop_dep_time")
+        @com.aliyun.core.annotation.NameInMap("stop_dep_time")
         private String stopDepTime;
 
-        @NameInMap("stop_city_code")
+        @com.aliyun.core.annotation.NameInMap("stop_city_code")
         private String stopCityCode;
 
-        @NameInMap("stop_airport")
+        @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
 
-        @NameInMap("stop_arr_term")
+        @com.aliyun.core.annotation.NameInMap("stop_arr_term")
         private String stopArrTerm;
 
-        @NameInMap("stop_dep_term")
+        @com.aliyun.core.annotation.NameInMap("stop_dep_term")
         private String stopDepTerm;
 
         private FlightStopInfo(Builder builder) {
@@ -1641,74 +2566,80 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class FlightSegmentInfos extends TeaModel {
-        @NameInMap("journey_seq")
+        @com.aliyun.core.annotation.NameInMap("journey_seq")
         private Integer journeySeq;
 
-        @NameInMap("segment_seq")
+        @com.aliyun.core.annotation.NameInMap("segment_seq")
         private Integer segmentSeq;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("dep_airport_info")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_info")
         private DepAirportInfo depAirportInfo;
 
-        @NameInMap("arr_airport_info")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_info")
         private ArrAirportInfo arrAirportInfo;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("airline_info")
+        @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
 
-        @NameInMap("share")
+        @com.aliyun.core.annotation.NameInMap("share")
         private Boolean share;
 
-        @NameInMap("flight_shared_info")
+        @com.aliyun.core.annotation.NameInMap("flight_shared_info")
         private FlightSharedInfo flightSharedInfo;
 
-        @NameInMap("stop")
+        @com.aliyun.core.annotation.NameInMap("stop")
         private Boolean stop;
 
-        @NameInMap("flight_stop_info")
+        @com.aliyun.core.annotation.NameInMap("flight_stop_info")
         private FlightStopInfo flightStopInfo;
 
-        @NameInMap("transfer_time")
+        @com.aliyun.core.annotation.NameInMap("transfer_time")
         private Integer transferTime;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Integer duration;
 
-        @NameInMap("manufacturer")
+        @com.aliyun.core.annotation.NameInMap("manufacturer")
         private String manufacturer;
 
-        @NameInMap("flight_type")
+        @com.aliyun.core.annotation.NameInMap("flight_type")
         private String flightType;
 
-        @NameInMap("flight_size")
+        @com.aliyun.core.annotation.NameInMap("flight_size")
         private String flightSize;
 
-        @NameInMap("meal_desc")
+        @com.aliyun.core.annotation.NameInMap("meal_desc")
         private String mealDesc;
 
-        @NameInMap("on_time_rate")
+        @com.aliyun.core.annotation.NameInMap("on_time_rate")
         private String onTimeRate;
 
         private FlightSegmentInfos(Builder builder) {
@@ -2122,14 +3053,20 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class PassengerCount extends TeaModel {
-        @NameInMap("adult_passenger_num")
+        @com.aliyun.core.annotation.NameInMap("adult_passenger_num")
         private Integer adultPassengerNum;
 
-        @NameInMap("child_passenger_num")
+        @com.aliyun.core.annotation.NameInMap("child_passenger_num")
         private Integer childPassengerNum;
 
-        @NameInMap("infant_passenger_num")
+        @com.aliyun.core.annotation.NameInMap("infant_passenger_num")
         private Integer infantPassengerNum;
 
         private PassengerCount(Builder builder) {
@@ -2203,23 +3140,33 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FlightModifyOtaSearchV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>FlightModifyOtaSearchV2ResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("agent_info")
+        @com.aliyun.core.annotation.NameInMap("agentInfos")
+        private java.util.List<AgentInfos> agentInfos;
+
+        @com.aliyun.core.annotation.NameInMap("agent_info")
         private AgentInfo agentInfo;
 
-        @NameInMap("cache_key")
+        @com.aliyun.core.annotation.NameInMap("cache_key")
         private String cacheKey;
 
-        @NameInMap("flight_segment_infos")
-        private java.util.List < java.util.List < FlightSegmentInfos> > flightSegmentInfos;
+        @com.aliyun.core.annotation.NameInMap("flight_segment_infos")
+        private java.util.List<java.util.List<FlightSegmentInfos>> flightSegmentInfos;
 
-        @NameInMap("passenger_count")
+        @com.aliyun.core.annotation.NameInMap("passenger_count")
         private PassengerCount passengerCount;
 
-        @NameInMap("session_id")
+        @com.aliyun.core.annotation.NameInMap("session_id")
         private String sessionId;
 
         private Module(Builder builder) {
+            this.agentInfos = builder.agentInfos;
             this.agentInfo = builder.agentInfo;
             this.cacheKey = builder.cacheKey;
             this.flightSegmentInfos = builder.flightSegmentInfos;
@@ -2233,6 +3180,13 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
 
         public static Module create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentInfos
+         */
+        public java.util.List<AgentInfos> getAgentInfos() {
+            return this.agentInfos;
         }
 
         /**
@@ -2252,7 +3206,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         /**
          * @return flightSegmentInfos
          */
-        public java.util.List < java.util.List < FlightSegmentInfos> > getFlightSegmentInfos() {
+        public java.util.List<java.util.List<FlightSegmentInfos>> getFlightSegmentInfos() {
             return this.flightSegmentInfos;
         }
 
@@ -2271,11 +3225,20 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AgentInfos> agentInfos; 
             private AgentInfo agentInfo; 
             private String cacheKey; 
-            private java.util.List < java.util.List < FlightSegmentInfos> > flightSegmentInfos; 
+            private java.util.List<java.util.List<FlightSegmentInfos>> flightSegmentInfos; 
             private PassengerCount passengerCount; 
             private String sessionId; 
+
+            /**
+             * agentInfos.
+             */
+            public Builder agentInfos(java.util.List<AgentInfos> agentInfos) {
+                this.agentInfos = agentInfos;
+                return this;
+            }
 
             /**
              * agent_info.
@@ -2296,7 +3259,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             /**
              * flight_segment_infos.
              */
-            public Builder flightSegmentInfos(java.util.List < java.util.List < FlightSegmentInfos> > flightSegmentInfos) {
+            public Builder flightSegmentInfos(java.util.List<java.util.List<FlightSegmentInfos>> flightSegmentInfos) {
                 this.flightSegmentInfos = flightSegmentInfos;
                 return this;
             }

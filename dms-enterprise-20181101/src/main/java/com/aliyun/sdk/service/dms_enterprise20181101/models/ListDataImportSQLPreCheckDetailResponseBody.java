@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataImportSQLPreCheckDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataImportSQLPreCheckDetailResponseBody</p>
  */
 public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PreCheckSQLDetailList")
-    private java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList;
+    @com.aliyun.core.annotation.NameInMap("PreCheckSQLDetailList")
+    private java.util.List<PreCheckSQLDetailList> preCheckSQLDetailList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDataImportSQLPreCheckDetailResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
     /**
      * @return preCheckSQLDetailList
      */
-    public java.util.List < PreCheckSQLDetailList> getPreCheckSQLDetailList() {
+    public java.util.List<PreCheckSQLDetailList> getPreCheckSQLDetailList() {
         return this.preCheckSQLDetailList;
     }
 
@@ -92,13 +97,16 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList; 
+        private java.util.List<PreCheckSQLDetailList> preCheckSQLDetailList; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,15 +125,18 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The precheck information of SQL statements.
+         * <p>The precheck information of SQL statements.</p>
          */
-        public Builder preCheckSQLDetailList(java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList) {
+        public Builder preCheckSQLDetailList(java.util.List<PreCheckSQLDetailList> preCheckSQLDetailList) {
             this.preCheckSQLDetailList = preCheckSQLDetailList;
             return this;
         }
 
         /**
-         * The request ID. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31853A2B-DC9D-5B39-8492-D2AC8BCF550E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The number of SQL statements.
+         * <p>The number of SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,17 +175,23 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataImportSQLPreCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataImportSQLPreCheckDetailResponseBody</p>
+     */
     public static class PreCheckSQLDetailList extends TeaModel {
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private Long sqlId;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
         private PreCheckSQLDetailList(Builder builder) {
@@ -218,11 +244,14 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             private String statusCode; 
 
             /**
-             * Indicates whether the precheck of the SQL statement was skipped. Valid values:
-             * <p>
+             * <p>Indicates whether the precheck of the SQL statement was skipped. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -230,7 +259,10 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL ID, which indicates the sequence number of the SQL statement. The number starts with 1.
+             * <p>The SQL ID, which indicates the sequence number of the SQL statement. The number starts with 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sqlId(Long sqlId) {
                 this.sqlId = sqlId;
@@ -238,7 +270,10 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.
+             * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -246,14 +281,17 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ticket. Valid values:
-             * <p>
+             * <p>The state of the ticket. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The ticket was being initialized.</li>
+             * <li><strong>RUNNING</strong>: The ticket was in progress.</li>
+             * <li><strong>SUCCESS</strong>: The ticket was complete.</li>
+             * <li><strong>TIMEOUT</strong>: The ticket was skipped due to timeout.</li>
+             * <li><strong>FAIL</strong>: The ticket failed.</li>
+             * </ul>
              * 
-             * *   **INIT**: The ticket was being initialized.
-             * *   **RUNNING**: The ticket was in progress.
-             * *   **SUCCESS**: The ticket was complete.
-             * *   **TIMEOUT**: The ticket was skipped due to timeout.
-             * *   **FAIL**: The ticket failed.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;

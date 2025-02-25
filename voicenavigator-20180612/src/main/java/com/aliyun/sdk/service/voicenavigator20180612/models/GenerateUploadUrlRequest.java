@@ -1,111 +1,116 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateUploadUrlRequest} extends {@link RequestModel}
  *
  * <p>GenerateUploadUrlRequest</p>
  */
 public class GenerateUploadUrlRequest extends Request {
-    @Body
-    @NameInMap("CallerBid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerBid")
     private String callerBid;
 
-    @Body
-    @NameInMap("CallerIp")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerIp")
     private String callerIp;
 
-    @Body
-    @NameInMap("CallerParentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerParentId")
     private Long callerParentId;
 
-    @Body
-    @NameInMap("CallerType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerType")
     private String callerType;
 
-    @Body
-    @NameInMap("CallerUid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerUid")
     private Long callerUid;
 
-    @Body
-    @NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
-    @Body
-    @NameInMap("Environment")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Environment")
     private Integer environment;
 
-    @Body
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("InstanceOwnerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceOwnerId")
     private Long instanceOwnerId;
 
-    @Body
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Body
-    @NameInMap("MfaPresent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MfaPresent")
     private Boolean mfaPresent;
 
-    @Body
-    @NameInMap("ProxyOriginalSecurityTransport")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyOriginalSecurityTransport")
     private Boolean proxyOriginalSecurityTransport;
 
-    @Body
-    @NameInMap("ProxyOriginalSourceIp")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyOriginalSourceIp")
     private String proxyOriginalSourceIp;
 
-    @Body
-    @NameInMap("ProxyTrustTransportInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProxyTrustTransportInfo")
     private Boolean proxyTrustTransportInfo;
 
-    @Body
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @Body
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Body
-    @NameInMap("SecurityTransport")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityTransport")
     private Boolean securityTransport;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
-    @Body
-    @NameInMap("TenantName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantName")
     private String tenantName;
 
-    @Body
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private Long userId;
 
-    @Body
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @Body
-    @NameInMap("XspaceServicerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("XspaceServicerId")
     private Long xspaceServicerId;
 
-    @Body
-    @NameInMap("XspaceTenantBuId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("XspaceTenantBuId")
     private Long xspaceTenantBuId;
 
     private GenerateUploadUrlRequest(Builder builder) {

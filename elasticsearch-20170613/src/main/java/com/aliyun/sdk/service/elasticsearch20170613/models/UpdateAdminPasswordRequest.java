@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAdminPasswordRequest} extends {@link RequestModel}
  *
  * <p>UpdateAdminPasswordRequest</p>
  */
 public class UpdateAdminPasswordRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("esAdminPassword")
-    @Validation(maxLength = 32, minLength = 8)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("esAdminPassword")
+    @com.aliyun.core.annotation.Validation(maxLength = 32, minLength = 8)
     private String esAdminPassword;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private UpdateAdminPasswordRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class UpdateAdminPasswordRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q9o8r0008****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -102,11 +106,14 @@ public class UpdateAdminPasswordRequest extends Request {
         }
 
         /**
-         * Indicates whether the password was updated. Valid values:
-         * <p>
+         * <p>Indicates whether the password was updated. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

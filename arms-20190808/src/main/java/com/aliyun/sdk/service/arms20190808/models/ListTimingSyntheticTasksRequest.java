@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTimingSyntheticTasksRequest} extends {@link RequestModel}
  *
  * <p>ListTimingSyntheticTasksRequest</p>
  */
 public class ListTimingSyntheticTasksRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Search")
     private Search search;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private ListTimingSyntheticTasksRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -81,7 +86,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private Search search; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -96,7 +101,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +113,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -114,7 +125,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         }
 
         /**
-         * Search.
+         * <p>The search keyword.</p>
          */
         public Builder search(Search search) {
             String searchShrink = shrink(search, "Search", "json");
@@ -124,9 +135,9 @@ public class ListTimingSyntheticTasksRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -140,30 +151,36 @@ public class ListTimingSyntheticTasksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksRequest} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksRequest</p>
+     */
     public static class Search extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("OrderField")
+        @com.aliyun.core.annotation.NameInMap("OrderField")
         private String orderField;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskIds")
-        private java.util.List < String > taskIds;
+        @com.aliyun.core.annotation.NameInMap("TaskIds")
+        private java.util.List<String> taskIds;
 
-        @NameInMap("TaskTypes")
-        private java.util.List < Integer > taskTypes;
+        @com.aliyun.core.annotation.NameInMap("TaskTypes")
+        private java.util.List<Integer> taskTypes;
 
         private Search(Builder builder) {
             this.name = builder.name;
@@ -229,14 +246,14 @@ public class ListTimingSyntheticTasksRequest extends Request {
         /**
          * @return taskIds
          */
-        public java.util.List < String > getTaskIds() {
+        public java.util.List<String> getTaskIds() {
             return this.taskIds;
         }
 
         /**
          * @return taskTypes
          */
-        public java.util.List < Integer > getTaskTypes() {
+        public java.util.List<Integer> getTaskTypes() {
             return this.taskTypes;
         }
 
@@ -247,11 +264,14 @@ public class ListTimingSyntheticTasksRequest extends Request {
             private Integer page; 
             private Integer pageSize; 
             private String status; 
-            private java.util.List < String > taskIds; 
-            private java.util.List < Integer > taskTypes; 
+            private java.util.List<String> taskIds; 
+            private java.util.List<Integer> taskTypes; 
 
             /**
-             * Name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AlibabaCloud DNS Task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +279,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Order.
+             * <p>The order by which tasks are sorted. 1: ascending order. -1: descending order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -267,7 +290,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * OrderField.
+             * <p>The condition by which tasks are sorted. You can sort tasks by gmtCreate, gmtModified, status, or monitorCount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status</p>
              */
             public Builder orderField(String orderField) {
                 this.orderField = orderField;
@@ -275,7 +301,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>The page number. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -283,7 +312,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -291,7 +323,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,17 +334,17 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * TaskIds.
+             * <p>The task IDs.</p>
              */
-            public Builder taskIds(java.util.List < String > taskIds) {
+            public Builder taskIds(java.util.List<String> taskIds) {
                 this.taskIds = taskIds;
                 return this;
             }
 
             /**
-             * TaskTypes.
+             * <p>The task types.</p>
              */
-            public Builder taskTypes(java.util.List < Integer > taskTypes) {
+            public Builder taskTypes(java.util.List<Integer> taskTypes) {
                 this.taskTypes = taskTypes;
                 return this;
             }
@@ -321,11 +356,17 @@ public class ListTimingSyntheticTasksRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTimingSyntheticTasksRequest} extends {@link TeaModel}
+     *
+     * <p>ListTimingSyntheticTasksRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -360,7 +401,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mark</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -368,7 +412,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1111</p>
              */
             public Builder value(String value) {
                 this.value = value;

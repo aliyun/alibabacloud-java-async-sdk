@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateManualDagResponseBody} extends {@link TeaModel}
  *
  * <p>CreateManualDagResponseBody</p>
  */
 public class CreateManualDagResponseBody extends TeaModel {
-    @NameInMap("DagId")
+    @com.aliyun.core.annotation.NameInMap("DagId")
     private Long dagId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateManualDagResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateManualDagResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DagId.
+         * <p>The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and states of the nodes in the manually triggered workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700000123123141</p>
          */
         public Builder dagId(Long dagId) {
             this.dagId = dagId;
@@ -58,7 +66,10 @@ public class CreateManualDagResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

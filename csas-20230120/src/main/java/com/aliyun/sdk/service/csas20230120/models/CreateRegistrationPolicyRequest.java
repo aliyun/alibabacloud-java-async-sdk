@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRegistrationPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateRegistrationPolicyRequest</p>
  */
 public class CreateRegistrationPolicyRequest extends Request {
-    @Body
-    @NameInMap("CompanyLimitCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompanyLimitCount")
     private CompanyLimitCount companyLimitCount;
 
-    @Body
-    @NameInMap("CompanyLimitType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompanyLimitType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String companyLimitType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("MatchMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MatchMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String matchMode;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("PersonalLimitCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PersonalLimitCount")
     private PersonalLimitCount personalLimitCount;
 
-    @Body
-    @NameInMap("PersonalLimitType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PersonalLimitType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String personalLimitType;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Body
-    @NameInMap("UserGroupIds")
-    private java.util.List < String > userGroupIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    private java.util.List<String> userGroupIds;
 
-    @Body
-    @NameInMap("Whitelist")
-    private java.util.List < String > whitelist;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Whitelist")
+    private java.util.List<String> whitelist;
 
     private CreateRegistrationPolicyRequest(Builder builder) {
         super(builder);
@@ -155,14 +160,14 @@ public class CreateRegistrationPolicyRequest extends Request {
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
     /**
      * @return whitelist
      */
-    public java.util.List < String > getWhitelist() {
+    public java.util.List<String> getWhitelist() {
         return this.whitelist;
     }
 
@@ -176,8 +181,8 @@ public class CreateRegistrationPolicyRequest extends Request {
         private String personalLimitType; 
         private Long priority; 
         private String status; 
-        private java.util.List < String > userGroupIds; 
-        private java.util.List < String > whitelist; 
+        private java.util.List<String> userGroupIds; 
+        private java.util.List<String> whitelist; 
 
         private Builder() {
             super();
@@ -209,7 +214,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * CompanyLimitType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitAll</p>
          */
         public Builder companyLimitType(String companyLimitType) {
             this.putBodyParameter("CompanyLimitType", companyLimitType);
@@ -227,7 +235,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupAll</p>
          */
         public Builder matchMode(String matchMode) {
             this.putBodyParameter("MatchMode", matchMode);
@@ -236,7 +247,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registration_policy_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -255,7 +269,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * PersonalLimitType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitDiff</p>
          */
         public Builder personalLimitType(String personalLimitType) {
             this.putBodyParameter("PersonalLimitType", personalLimitType);
@@ -273,7 +290,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -284,7 +304,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         /**
          * UserGroupIds.
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
@@ -293,7 +313,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         /**
          * Whitelist.
          */
-        public Builder whitelist(java.util.List < String > whitelist) {
+        public Builder whitelist(java.util.List<String> whitelist) {
             this.putBodyParameter("Whitelist", whitelist);
             this.whitelist = whitelist;
             return this;
@@ -306,14 +326,20 @@ public class CreateRegistrationPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRegistrationPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRegistrationPolicyRequest</p>
+     */
     public static class CompanyLimitCount extends TeaModel {
-        @NameInMap("All")
+        @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private Integer mobile;
 
-        @NameInMap("PC")
+        @com.aliyun.core.annotation.NameInMap("PC")
         private Integer pc;
 
         private CompanyLimitCount(Builder builder) {
@@ -387,14 +413,20 @@ public class CreateRegistrationPolicyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRegistrationPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRegistrationPolicyRequest</p>
+     */
     public static class PersonalLimitCount extends TeaModel {
-        @NameInMap("All")
+        @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private Integer mobile;
 
-        @NameInMap("PC")
+        @com.aliyun.core.annotation.NameInMap("PC")
         private Integer pc;
 
         private PersonalLimitCount(Builder builder) {

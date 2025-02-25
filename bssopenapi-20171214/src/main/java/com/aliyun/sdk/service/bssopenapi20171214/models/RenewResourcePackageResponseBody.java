@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewResourcePackageResponseBody} extends {@link TeaModel}
  *
  * <p>RenewResourcePackageResponseBody</p>
  */
 public class RenewResourcePackageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private RenewResourcePackageResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +133,10 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>204322301110333</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -130,7 +144,10 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +171,17 @@ public class RenewResourcePackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenewResourcePackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenewResourcePackageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
         private Data(Builder builder) {
@@ -190,7 +216,10 @@ public class RenewResourcePackageResponseBody extends TeaModel {
             private Long orderId; 
 
             /**
-             * The ID of the resource plan.
+             * <p>The ID of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSBAG-cn-0xl0n****003</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -198,7 +227,10 @@ public class RenewResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204322560333</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

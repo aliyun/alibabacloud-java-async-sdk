@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateRegistryTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrivateRegistryTypeResponseBody</p>
  */
 public class ListPrivateRegistryTypeResponseBody extends TeaModel {
-    @NameInMap("RegistryTypeInfos")
-    private java.util.List < RegistryTypeInfos> registryTypeInfos;
+    @com.aliyun.core.annotation.NameInMap("RegistryTypeInfos")
+    private java.util.List<RegistryTypeInfos> registryTypeInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrivateRegistryTypeResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     /**
      * @return registryTypeInfos
      */
-    public java.util.List < RegistryTypeInfos> getRegistryTypeInfos() {
+    public java.util.List<RegistryTypeInfos> getRegistryTypeInfos() {
         return this.registryTypeInfos;
     }
 
@@ -46,19 +51,22 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RegistryTypeInfos> registryTypeInfos; 
+        private java.util.List<RegistryTypeInfos> registryTypeInfos; 
         private String requestId; 
 
         /**
-         * An array that consists of image repository types.
+         * <p>An array that consists of image repository types.</p>
          */
-        public Builder registryTypeInfos(java.util.List < RegistryTypeInfos> registryTypeInfos) {
+        public Builder registryTypeInfos(java.util.List<RegistryTypeInfos> registryTypeInfos) {
             this.registryTypeInfos = registryTypeInfos;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrivateRegistryTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateRegistryTypeResponseBody</p>
+     */
     public static class RegistryTypeInfos extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
         private RegistryTypeInfos(Builder builder) {
@@ -110,7 +124,10 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
             private String registryType; 
 
             /**
-             * The number of image repositories.
+             * <p>The number of image repositories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,13 +135,16 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository type. Valid values:
-             * <p>
+             * <p>The name of the image repository type. Valid values:</p>
+             * <ul>
+             * <li><strong>acr</strong>: Container Registry</li>
+             * <li><strong>harbor</strong>: Harbor</li>
+             * <li><strong>quay</strong>: Quay</li>
+             * <li><strong>CI/CD</strong>: Jenkins</li>
+             * </ul>
              * 
-             * *   **acr**: Container Registry
-             * *   **harbor**: Harbor
-             * *   **quay**: Quay
-             * *   **CI/CD**: Jenkins
+             * <strong>example:</strong>
+             * <p>harbor</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;

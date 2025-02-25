@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpLogResponseBody</p>
  */
 public class GetOpLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OpLogDetails")
+    @com.aliyun.core.annotation.NameInMap("OpLogDetails")
     private OpLogDetails opLogDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetOpLogResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetOpLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,7 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the operation log.
+         * <p>The details of the operation log.</p>
          */
         public Builder opLogDetails(OpLogDetails opLogDetails) {
             this.opLogDetails = opLogDetails;
@@ -122,7 +133,10 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47D56208-DB1D-4FD3-BE32-300E43185488</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +144,14 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class GetOpLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of operation logs that are returned.
+         * <p>The total number of operation logs that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,29 +175,35 @@ public class GetOpLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpLogResponseBody</p>
+     */
     public static class OpLogDetail extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
 
-        @NameInMap("OpContent")
+        @com.aliyun.core.annotation.NameInMap("OpContent")
         private String opContent;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("OpUserId")
+        @com.aliyun.core.annotation.NameInMap("OpUserId")
         private Long opUserId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private OpLogDetail(Builder builder) {
@@ -266,14 +292,18 @@ public class GetOpLogResponseBody extends TeaModel {
             private String userNick; 
 
             /**
-             * The endpoint of the database instance.
-             * <p>
+             * <p>The endpoint of the database instance.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>This parameter is valid only for database instances of the LocalInstance type.</p>
+             * </li>
+             * <li><p>This parameter is valid only for operations on the functional modules related to tasks.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   This parameter is valid only for database instances of the LocalInstance type.
-             * 
-             * *   This parameter is valid only for operations on the functional modules related to tasks.
+             * <strong>example:</strong>
+             * <p><a href="mailto:dmstest_prod_database@dmstest.rds">dmstest_prod_database@dmstest.rds</a>... [Test instance]</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -281,7 +311,10 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The functional module for which the operation log is queried.
+             * <p>The functional module for which the operation log is queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECURITY_RULE</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -289,7 +322,10 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the operation.
+             * <p>The details of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM <code>orders</code> \n LIMIT 20</p>
              */
             public Builder opContent(String opContent) {
                 this.opContent = opContent;
@@ -297,7 +333,10 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * <p>The time when the operation was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-28 16:45:19</p>
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -305,7 +344,10 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who performed the operation.
+             * <p>The ID of the user who performed the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder opUserId(Long opUserId) {
                 this.opUserId = opUserId;
@@ -313,10 +355,13 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ticket or task.
-             * <p>
+             * <p>The ID of the ticket or task.</p>
+             * <blockquote>
+             * <p> This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.</p>
+             * </blockquote>
              * 
-             * >  This parameter is valid only for operations on the functional modules related to tasks and the task management module in system management.
+             * <strong>example:</strong>
+             * <p>509****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -324,7 +369,10 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22275482072787****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -332,7 +380,10 @@ public class GetOpLogResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the user.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -346,9 +397,15 @@ public class GetOpLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpLogResponseBody</p>
+     */
     public static class OpLogDetails extends TeaModel {
-        @NameInMap("OpLogDetail")
-        private java.util.List < OpLogDetail> opLogDetail;
+        @com.aliyun.core.annotation.NameInMap("OpLogDetail")
+        private java.util.List<OpLogDetail> opLogDetail;
 
         private OpLogDetails(Builder builder) {
             this.opLogDetail = builder.opLogDetail;
@@ -365,17 +422,17 @@ public class GetOpLogResponseBody extends TeaModel {
         /**
          * @return opLogDetail
          */
-        public java.util.List < OpLogDetail> getOpLogDetail() {
+        public java.util.List<OpLogDetail> getOpLogDetail() {
             return this.opLogDetail;
         }
 
         public static final class Builder {
-            private java.util.List < OpLogDetail> opLogDetail; 
+            private java.util.List<OpLogDetail> opLogDetail; 
 
             /**
              * OpLogDetail.
              */
-            public Builder opLogDetail(java.util.List < OpLogDetail> opLogDetail) {
+            public Builder opLogDetail(java.util.List<OpLogDetail> opLogDetail) {
                 this.opLogDetail = opLogDetail;
                 return this;
             }

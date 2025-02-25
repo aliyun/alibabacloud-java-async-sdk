@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMultiContainerGroupMetricResponseBody</p>
  */
 public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
-    @NameInMap("MonitorDatas")
+    @com.aliyun.core.annotation.NameInMap("MonitorDatas")
     private java.util.List < MonitorDatas> monitorDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMultiContainerGroupMetricResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring data of the elastic container instances.
+         * <p>The monitoring data of the elastic container instances.</p>
          */
         public Builder monitorDatas(java.util.List < MonitorDatas> monitorDatas) {
             this.monitorDatas = monitorDatas;
@@ -58,7 +58,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8756BA0-6452-419C-9727-37A6209C85E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class CPU extends TeaModel {
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Long limit;
 
-        @NameInMap("Load")
+        @com.aliyun.core.annotation.NameInMap("Load")
         private Long load;
 
-        @NameInMap("UsageCoreNanoSeconds")
+        @com.aliyun.core.annotation.NameInMap("UsageCoreNanoSeconds")
         private Long usageCoreNanoSeconds;
 
-        @NameInMap("UsageNanoCores")
+        @com.aliyun.core.annotation.NameInMap("UsageNanoCores")
         private Long usageNanoCores;
 
         private CPU(Builder builder) {
@@ -134,7 +143,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long usageNanoCores; 
 
             /**
-             * The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.
+             * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder limit(Long limit) {
                 this.limit = limit;
@@ -142,7 +154,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The average load in the last 10 seconds.
+             * <p>The average load in the last 10 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder load(Long load) {
                 this.load = load;
@@ -150,7 +165,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The cumulative usage of vCPUs.
+             * <p>The cumulative usage of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70769883</p>
              */
             public Builder usageCoreNanoSeconds(Long usageCoreNanoSeconds) {
                 this.usageCoreNanoSeconds = usageCoreNanoSeconds;
@@ -158,7 +176,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.
+             * <p>The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usageNanoCores(Long usageNanoCores) {
                 this.usageNanoCores = usageNanoCores;
@@ -172,17 +193,23 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class ContainersCPU extends TeaModel {
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Long limit;
 
-        @NameInMap("Load")
+        @com.aliyun.core.annotation.NameInMap("Load")
         private Long load;
 
-        @NameInMap("UsageCoreNanoSeconds")
+        @com.aliyun.core.annotation.NameInMap("UsageCoreNanoSeconds")
         private Long usageCoreNanoSeconds;
 
-        @NameInMap("UsageNanoCores")
+        @com.aliyun.core.annotation.NameInMap("UsageNanoCores")
         private Long usageNanoCores;
 
         private ContainersCPU(Builder builder) {
@@ -235,7 +262,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long usageNanoCores; 
 
             /**
-             * The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.
+             * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>321234</p>
              */
             public Builder limit(Long limit) {
                 this.limit = limit;
@@ -243,7 +273,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The average load in the last 10 seconds.
+             * <p>The average load in the last 10 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12341</p>
              */
             public Builder load(Long load) {
                 this.load = load;
@@ -251,7 +284,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The cumulative usage of vCPUs.
+             * <p>The cumulative usage of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40876694</p>
              */
             public Builder usageCoreNanoSeconds(Long usageCoreNanoSeconds) {
                 this.usageCoreNanoSeconds = usageCoreNanoSeconds;
@@ -259,7 +295,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.
+             * <p>The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usageNanoCores(Long usageNanoCores) {
                 this.usageNanoCores = usageNanoCores;
@@ -273,20 +312,26 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class Memory extends TeaModel {
-        @NameInMap("AvailableBytes")
+        @com.aliyun.core.annotation.NameInMap("AvailableBytes")
         private Long availableBytes;
 
-        @NameInMap("Cache")
+        @com.aliyun.core.annotation.NameInMap("Cache")
         private Long cache;
 
-        @NameInMap("Rss")
+        @com.aliyun.core.annotation.NameInMap("Rss")
         private Long rss;
 
-        @NameInMap("UsageBytes")
+        @com.aliyun.core.annotation.NameInMap("UsageBytes")
         private Long usageBytes;
 
-        @NameInMap("WorkingSet")
+        @com.aliyun.core.annotation.NameInMap("WorkingSet")
         private Long workingSet;
 
         private Memory(Builder builder) {
@@ -348,7 +393,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long workingSet; 
 
             /**
-             * The size of the available memory. Unit: bytes.
+             * <p>The size of the available memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4285091840</p>
              */
             public Builder availableBytes(Long availableBytes) {
                 this.availableBytes = availableBytes;
@@ -356,7 +404,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cache. Unit: bytes.
+             * <p>The size of the cache. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9289728</p>
              */
             public Builder cache(Long cache) {
                 this.cache = cache;
@@ -364,7 +415,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.
+             * <p>The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9289728</p>
              */
             public Builder rss(Long rss) {
                 this.rss = rss;
@@ -372,7 +426,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the used memory. Unit: bytes.
+             * <p>The size of the used memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9289728</p>
              */
             public Builder usageBytes(Long usageBytes) {
                 this.usageBytes = usageBytes;
@@ -380,7 +437,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The usage of the working set. Unit: bytes.
+             * <p>The usage of the working set. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9289728</p>
              */
             public Builder workingSet(Long workingSet) {
                 this.workingSet = workingSet;
@@ -394,14 +454,20 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class Containers extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private ContainersCPU CPU;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Containers(Builder builder) {
@@ -445,7 +511,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The vCPU monitoring data of the container.
+             * <p>The vCPU monitoring data of the container.</p>
              */
             public Builder CPU(ContainersCPU CPU) {
                 this.CPU = CPU;
@@ -453,7 +519,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The memory monitoring data of the container.
+             * <p>The memory monitoring data of the container.</p>
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -461,7 +527,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -475,20 +544,26 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class Disk extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("ReadBytes")
+        @com.aliyun.core.annotation.NameInMap("ReadBytes")
         private Long readBytes;
 
-        @NameInMap("ReadIo")
+        @com.aliyun.core.annotation.NameInMap("ReadIo")
         private Long readIo;
 
-        @NameInMap("WriteBytes")
+        @com.aliyun.core.annotation.NameInMap("WriteBytes")
         private Long writeBytes;
 
-        @NameInMap("WriteIo")
+        @com.aliyun.core.annotation.NameInMap("WriteIo")
         private Long writeIo;
 
         private Disk(Builder builder) {
@@ -550,7 +625,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long writeIo; 
 
             /**
-             * The name of the disk.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/vda</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -558,7 +636,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that was read from the disk. Unit: bytes.
+             * <p>The amount of data that was read from the disk. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>210714112</p>
              */
             public Builder readBytes(Long readBytes) {
                 this.readBytes = readBytes;
@@ -566,7 +647,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <p>This parameter is unavailable for public use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder readIo(Long readIo) {
                 this.readIo = readIo;
@@ -574,7 +658,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that was written to the disk. Unit: bytes.
+             * <p>The amount of data that was written to the disk. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1375109120</p>
              */
             public Builder writeBytes(Long writeBytes) {
                 this.writeBytes = writeBytes;
@@ -582,7 +669,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <p>This parameter is unavailable for public use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder writeIo(Long writeIo) {
                 this.writeIo = writeIo;
@@ -596,17 +686,23 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class Filesystem extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private Long available;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
-        @NameInMap("FsName")
+        @com.aliyun.core.annotation.NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private Long usage;
 
         private Filesystem(Builder builder) {
@@ -659,7 +755,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long usage; 
 
             /**
-             * The size of the available space.
+             * <p>The size of the available space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35319836672</p>
              */
             public Builder available(Long available) {
                 this.available = available;
@@ -667,7 +766,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The total file system space.
+             * <p>The total file system space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41610981376</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -675,7 +777,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the partition.
+             * <p>The name of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/root</p>
              */
             public Builder fsName(String fsName) {
                 this.fsName = fsName;
@@ -683,7 +788,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used space.
+             * <p>The size of used space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4368744448</p>
              */
             public Builder usage(Long usage) {
                 this.usage = usage;
@@ -697,20 +805,26 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class RecordsMemory extends TeaModel {
-        @NameInMap("AvailableBytes")
+        @com.aliyun.core.annotation.NameInMap("AvailableBytes")
         private Long availableBytes;
 
-        @NameInMap("Cache")
+        @com.aliyun.core.annotation.NameInMap("Cache")
         private Long cache;
 
-        @NameInMap("Rss")
+        @com.aliyun.core.annotation.NameInMap("Rss")
         private Long rss;
 
-        @NameInMap("UsageBytes")
+        @com.aliyun.core.annotation.NameInMap("UsageBytes")
         private Long usageBytes;
 
-        @NameInMap("WorkingSet")
+        @com.aliyun.core.annotation.NameInMap("WorkingSet")
         private Long workingSet;
 
         private RecordsMemory(Builder builder) {
@@ -772,7 +886,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long workingSet; 
 
             /**
-             * The size of the available memory. Unit: bytes.
+             * <p>The size of the available memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4289445888</p>
              */
             public Builder availableBytes(Long availableBytes) {
                 this.availableBytes = availableBytes;
@@ -780,7 +897,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cache. Unit: bytes.
+             * <p>The size of the cache. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7028736</p>
              */
             public Builder cache(Long cache) {
                 this.cache = cache;
@@ -788,7 +908,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.
+             * <p>The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593344</p>
              */
             public Builder rss(Long rss) {
                 this.rss = rss;
@@ -796,7 +919,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the used memory. Unit: bytes.
+             * <p>The size of the used memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11153408</p>
              */
             public Builder usageBytes(Long usageBytes) {
                 this.usageBytes = usageBytes;
@@ -804,7 +930,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The usage of the working set. Unit: bytes.
+             * <p>The usage of the working set. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5521408</p>
              */
             public Builder workingSet(Long workingSet) {
                 this.workingSet = workingSet;
@@ -818,32 +947,38 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class Interfaces extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RxBytes")
+        @com.aliyun.core.annotation.NameInMap("RxBytes")
         private Long rxBytes;
 
-        @NameInMap("RxDrops")
+        @com.aliyun.core.annotation.NameInMap("RxDrops")
         private Long rxDrops;
 
-        @NameInMap("RxErrors")
+        @com.aliyun.core.annotation.NameInMap("RxErrors")
         private Long rxErrors;
 
-        @NameInMap("RxPackets")
+        @com.aliyun.core.annotation.NameInMap("RxPackets")
         private Long rxPackets;
 
-        @NameInMap("TxBytes")
+        @com.aliyun.core.annotation.NameInMap("TxBytes")
         private Long txBytes;
 
-        @NameInMap("TxDrops")
+        @com.aliyun.core.annotation.NameInMap("TxDrops")
         private Long txDrops;
 
-        @NameInMap("TxErrors")
+        @com.aliyun.core.annotation.NameInMap("TxErrors")
         private Long txErrors;
 
-        @NameInMap("TxPackets")
+        @com.aliyun.core.annotation.NameInMap("TxPackets")
         private Long txPackets;
 
         private Interfaces(Builder builder) {
@@ -941,7 +1076,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long txPackets; 
 
             /**
-             * The name of the NIC.
+             * <p>The name of the NIC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -949,7 +1087,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of bytes received.
+             * <p>The total number of bytes received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>505001954</p>
              */
             public Builder rxBytes(Long rxBytes) {
                 this.rxBytes = rxBytes;
@@ -957,7 +1098,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets that fail to be received.
+             * <p>The number of packets that fail to be received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rxDrops(Long rxDrops) {
                 this.rxDrops = rxDrops;
@@ -965,7 +1109,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The number of receipt errors.
+             * <p>The number of receipt errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rxErrors(Long rxErrors) {
                 this.rxErrors = rxErrors;
@@ -973,7 +1120,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of packets received.
+             * <p>The total number of packets received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4800583</p>
              */
             public Builder rxPackets(Long rxPackets) {
                 this.rxPackets = rxPackets;
@@ -981,7 +1131,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of bytes sent.
+             * <p>The total number of bytes sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381805699</p>
              */
             public Builder txBytes(Long txBytes) {
                 this.txBytes = txBytes;
@@ -989,7 +1142,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The number of packets that fail to arrive at their destination.
+             * <p>The number of packets that fail to arrive at their destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder txDrops(Long txDrops) {
                 this.txDrops = txDrops;
@@ -997,7 +1153,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of sending errors.
+             * <p>The total number of sending errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder txErrors(Long txErrors) {
                 this.txErrors = txErrors;
@@ -1005,7 +1164,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of packets sent.
+             * <p>The total number of packets sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5158427</p>
              */
             public Builder txPackets(Long txPackets) {
                 this.txPackets = txPackets;
@@ -1019,8 +1181,14 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class Network extends TeaModel {
-        @NameInMap("Interfaces")
+        @com.aliyun.core.annotation.NameInMap("Interfaces")
         private java.util.List < Interfaces> interfaces;
 
         private Network(Builder builder) {
@@ -1046,7 +1214,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private java.util.List < Interfaces> interfaces; 
 
             /**
-             * The monitoring data of network interface controllers (NICs).
+             * <p>The monitoring data of network interface controllers (NICs).</p>
              */
             public Builder interfaces(java.util.List < Interfaces> interfaces) {
                 this.interfaces = interfaces;
@@ -1060,26 +1228,32 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private CPU CPU;
 
-        @NameInMap("Containers")
+        @com.aliyun.core.annotation.NameInMap("Containers")
         private java.util.List < Containers> containers;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private java.util.List < Disk> disk;
 
-        @NameInMap("Filesystem")
+        @com.aliyun.core.annotation.NameInMap("Filesystem")
         private java.util.List < Filesystem> filesystem;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private RecordsMemory memory;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
         private Records(Builder builder) {
@@ -1159,7 +1333,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * The monitoring data of vCPUs.
+             * <p>The monitoring data of vCPUs.</p>
              */
             public Builder CPU(CPU CPU) {
                 this.CPU = CPU;
@@ -1167,7 +1341,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring data of containers.
+             * <p>The monitoring data of containers.</p>
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;
@@ -1175,7 +1349,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring data of disks.
+             * <p>The monitoring data of disks.</p>
              */
             public Builder disk(java.util.List < Disk> disk) {
                 this.disk = disk;
@@ -1183,7 +1357,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring data of file system partitions.
+             * <p>The monitoring data of file system partitions.</p>
              */
             public Builder filesystem(java.util.List < Filesystem> filesystem) {
                 this.filesystem = filesystem;
@@ -1191,7 +1365,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring data of the memory.
+             * <p>The monitoring data of the memory.</p>
              */
             public Builder memory(RecordsMemory memory) {
                 this.memory = memory;
@@ -1199,7 +1373,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring data of the network.
+             * <p>The monitoring data of the network.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -1207,7 +1381,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the entry of monitoring data was collected. The time follows the RFC 3339 format.
+             * <p>The time when the entry of monitoring data was collected. The time follows the RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-19T02:31:54Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1221,11 +1398,17 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiContainerGroupMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiContainerGroupMetricResponseBody</p>
+     */
     public static class MonitorDatas extends TeaModel {
-        @NameInMap("ContainerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
         private String containerGroupId;
 
-        @NameInMap("Records")
+        @com.aliyun.core.annotation.NameInMap("Records")
         private java.util.List < Records> records;
 
         private MonitorDatas(Builder builder) {
@@ -1260,7 +1443,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private java.util.List < Records> records; 
 
             /**
-             * The ID of the elastic container instance.
+             * <p>The ID of the elastic container instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci-bp15oolgorelvhfb****</p>
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -1268,7 +1454,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The details about monitoring data.
+             * <p>The details about monitoring data.</p>
              */
             public Builder records(java.util.List < Records> records) {
                 this.records = records;

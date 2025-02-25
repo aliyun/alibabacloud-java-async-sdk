@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotAttackerSourceResponseBody} extends {@link TeaModel}
  *
  * <p>ListHoneypotAttackerSourceResponseBody</p>
  */
 public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHoneypotAttackerSourceResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -103,14 +108,17 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +126,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,15 +137,18 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The source IP addresses of the attack.
+         * <p>The source IP addresses of the attack.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +164,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9915DC4D-B4DA-5140-8138-FD80636*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +175,14 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,23 +195,29 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHoneypotAttackerSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAttackerSourceResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("EventCount")
+        @com.aliyun.core.annotation.NameInMap("EventCount")
         private Integer eventCount;
 
-        @NameInMap("LastTargetHoneypot")
+        @com.aliyun.core.annotation.NameInMap("LastTargetHoneypot")
         private String lastTargetHoneypot;
 
-        @NameInMap("LastTargetIp")
+        @com.aliyun.core.annotation.NameInMap("LastTargetIp")
         private String lastTargetIp;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
         private List(Builder builder) {
@@ -262,7 +288,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * The total number of attack events.
+             * <p>The total number of attack events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -270,7 +299,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent honeypot that was attacked.
+             * <p>The most recent honeypot that was attacked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc tcp honeypot</p>
              */
             public Builder lastTargetHoneypot(String lastTargetHoneypot) {
                 this.lastTargetHoneypot = lastTargetHoneypot;
@@ -278,7 +310,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent IP address that was attacked.
+             * <p>The most recent IP address that was attacked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>144.23.66.***</p>
              */
             public Builder lastTargetIp(String lastTargetIp) {
                 this.lastTargetIp = lastTargetIp;
@@ -286,7 +321,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the attack event occurred.
+             * <p>The last time when the attack event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1693446913000</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -294,12 +332,15 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: low</li>
+             * <li><strong>3</strong>: medium</li>
+             * <li><strong>4</strong>: high</li>
+             * </ul>
              * 
-             * *   **2**: low
-             * *   **3**: medium
-             * *   **4**: high
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -307,7 +348,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the attack.
+             * <p>The source IP address of the attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.102.61.***</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -321,17 +365,23 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotAttackerSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAttackerSourceResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -384,7 +434,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -392,7 +445,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -400,7 +456,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -408,7 +467,10 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

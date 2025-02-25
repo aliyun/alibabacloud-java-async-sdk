@@ -62,7 +62,7 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * List.
+         * The backup information list.
          */
         public Builder list(List list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,11 @@ public class DescribeBackMenuResponseBody extends TeaModel {
             private Boolean support; 
 
             /**
-             * MenuName.
+             * The backup method. Valid values:
+             * <p>
+             * 
+             * *   **Logic **: logical backup
+             * *   **phy**: physical backup
              */
             public Builder menuName(String menuName) {
                 this.menuName = menuName;
@@ -138,7 +142,7 @@ public class DescribeBackMenuResponseBody extends TeaModel {
             }
 
             /**
-             * Support.
+             * Indicates whether backup recovery is supported.
              */
             public Builder support(Boolean support) {
                 this.support = support;

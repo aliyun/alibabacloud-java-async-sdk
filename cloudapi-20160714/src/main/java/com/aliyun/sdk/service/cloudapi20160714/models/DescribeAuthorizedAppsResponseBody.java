@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuthorizedAppsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuthorizedAppsResponseBody</p>
  */
 public class DescribeAuthorizedAppsResponseBody extends TeaModel {
-    @NameInMap("AuthorizedApps")
+    @com.aliyun.core.annotation.NameInMap("AuthorizedApps")
     private AuthorizedApps authorizedApps;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAuthorizedAppsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned group set.
+         * <p>The authorized applications.</p>
          */
         public Builder authorizedApps(AuthorizedApps authorizedApps) {
             this.authorizedApps = authorizedApps;
@@ -94,7 +99,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E46F10-F26C-4AA0-BB69-FE2743D9AE62</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,32 +148,168 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuthorizedAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthorizedAppsResponseBody</p>
+     */
+    public static class TagInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TagInfo(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagInfo build() {
+                return new TagInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAuthorizedAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthorizedAppsResponseBody</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
+        private java.util.List<TagInfo> tagInfo;
+
+        private Tag(Builder builder) {
+            this.tagInfo = builder.tagInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagInfo
+         */
+        public java.util.List<TagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List<TagInfo> tagInfo; 
+
+            /**
+             * TagInfo.
+             */
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
+                this.tagInfo = tagInfo;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAuthorizedAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthorizedAppsResponseBody</p>
+     */
     public static class AuthorizedApp extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppDescription")
+        private String appDescription;
+
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AuthVaildTime")
+        @com.aliyun.core.annotation.NameInMap("AuthVaildTime")
         private String authVaildTime;
 
-        @NameInMap("AuthorizationSource")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationSource")
         private String authorizationSource;
 
-        @NameInMap("AuthorizedTime")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedTime")
         private String authorizedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageAlias")
+        private String stageAlias;
+
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private Tag tag;
+
         private AuthorizedApp(Builder builder) {
+            this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
             this.authVaildTime = builder.authVaildTime;
@@ -164,7 +317,9 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             this.authorizedTime = builder.authorizedTime;
             this.description = builder.description;
             this.operator = builder.operator;
+            this.stageAlias = builder.stageAlias;
             this.stageName = builder.stageName;
+            this.tag = builder.tag;
         }
 
         public static Builder builder() {
@@ -173,6 +328,13 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
 
         public static AuthorizedApp create() {
             return builder().build();
+        }
+
+        /**
+         * @return appDescription
+         */
+        public String getAppDescription() {
+            return this.appDescription;
         }
 
         /**
@@ -225,13 +387,28 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stageAlias
+         */
+        public String getStageAlias() {
+            return this.stageAlias;
+        }
+
+        /**
          * @return stageName
          */
         public String getStageName() {
             return this.stageName;
         }
 
+        /**
+         * @return tag
+         */
+        public Tag getTag() {
+            return this.tag;
+        }
+
         public static final class Builder {
+            private String appDescription; 
             private Long appId; 
             private String appName; 
             private String authVaildTime; 
@@ -239,10 +416,26 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             private String authorizedTime; 
             private String description; 
             private String operator; 
+            private String stageAlias; 
             private String stageName; 
+            private Tag tag; 
 
             /**
-             * The ID, which is generated by the system and globally unique.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Production application</p>
+             */
+            public Builder appDescription(String appDescription) {
+                this.appDescription = appDescription;
+                return this;
+            }
+
+            /**
+             * <p>The application ID, which is generated by the system and globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2386789</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -250,7 +443,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the app.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weather</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -258,7 +454,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the app.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-05T16:00:00Z</p>
              */
             public Builder authVaildTime(String authVaildTime) {
                 this.authVaildTime = authVaildTime;
@@ -266,11 +465,14 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization source. Valid values:
-             * <p>
+             * <p>The authorization source. Valid values:</p>
+             * <ul>
+             * <li><strong>CONSOLE</strong></li>
+             * <li><strong>API</strong></li>
+             * </ul>
              * 
-             * *   **CONSOLE**
-             * *   **API**
+             * <strong>example:</strong>
+             * <p>CONSOLE</p>
              */
             public Builder authorizationSource(String authorizationSource) {
                 this.authorizationSource = authorizationSource;
@@ -278,7 +480,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization time (UTC).
+             * <p>The authorization time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-21T06:17:20Z</p>
              */
             public Builder authorizedTime(String authorizedTime) {
                 this.authorizedTime = authorizedTime;
@@ -286,7 +491,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the authorization.
+             * <p>The authorization description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries weather based on the region name</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,11 +502,14 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The authorizer. Valid values:
-             * <p>
+             * <p>The authorizer. Valid values:</p>
+             * <ul>
+             * <li><strong>PROVIDER</strong>: API owner</li>
+             * <li><strong>CONSUMER</strong>: API caller</li>
+             * </ul>
              * 
-             * *   **PROVIDER: API owner**
-             * *   **CONSUMER: API caller**
+             * <strong>example:</strong>
+             * <p>PROVIDER</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -306,14 +517,37 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
-             * <p>
+             * <p>The environment alias.</p>
              * 
-             * *   **RELEASE**
-             * *   **TEST**
+             * <strong>example:</strong>
+             * <p>Production</p>
+             */
+            public Builder stageAlias(String stageAlias) {
+                this.stageAlias = stageAlias;
+                return this;
+            }
+
+            /**
+             * <p>The environment to which the API is published. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong>: the production environment</li>
+             * <li><strong>PRE</strong>: the staging environment</li>
+             * <li><strong>TEST</strong>: the test environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
+                return this;
+            }
+
+            /**
+             * <p>The key of the tag.</p>
+             */
+            public Builder tag(Tag tag) {
+                this.tag = tag;
                 return this;
             }
 
@@ -324,9 +558,15 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAuthorizedAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthorizedAppsResponseBody</p>
+     */
     public static class AuthorizedApps extends TeaModel {
-        @NameInMap("AuthorizedApp")
-        private java.util.List < AuthorizedApp> authorizedApp;
+        @com.aliyun.core.annotation.NameInMap("AuthorizedApp")
+        private java.util.List<AuthorizedApp> authorizedApp;
 
         private AuthorizedApps(Builder builder) {
             this.authorizedApp = builder.authorizedApp;
@@ -343,17 +583,17 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         /**
          * @return authorizedApp
          */
-        public java.util.List < AuthorizedApp> getAuthorizedApp() {
+        public java.util.List<AuthorizedApp> getAuthorizedApp() {
             return this.authorizedApp;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorizedApp> authorizedApp; 
+            private java.util.List<AuthorizedApp> authorizedApp; 
 
             /**
              * AuthorizedApp.
              */
-            public Builder authorizedApp(java.util.List < AuthorizedApp> authorizedApp) {
+            public Builder authorizedApp(java.util.List<AuthorizedApp> authorizedApp) {
                 this.authorizedApp = authorizedApp;
                 return this;
             }

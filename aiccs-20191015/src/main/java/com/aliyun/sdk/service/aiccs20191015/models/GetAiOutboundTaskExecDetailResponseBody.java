@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAiOutboundTaskExecDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetAiOutboundTaskExecDetailResponseBody</p>
  */
 public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAiOutboundTaskExecDetailResponseBody(Builder builder) {
@@ -94,7 +99,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 任务执行列表
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +115,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,32 +136,38 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAiOutboundTaskExecDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskExecDetailResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("BatchVersion")
+        @com.aliyun.core.annotation.NameInMap("BatchVersion")
         private Integer batchVersion;
 
-        @NameInMap("BizData")
+        @com.aliyun.core.annotation.NameInMap("BizData")
         private String bizData;
 
-        @NameInMap("CallCount")
+        @com.aliyun.core.annotation.NameInMap("CallCount")
         private Integer callCount;
 
-        @NameInMap("CaseId")
+        @com.aliyun.core.annotation.NameInMap("CaseId")
         private Long caseId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("LastCallResult")
+        @com.aliyun.core.annotation.NameInMap("LastCallResult")
         private String lastCallResult;
 
-        @NameInMap("PhoneNum")
+        @com.aliyun.core.annotation.NameInMap("PhoneNum")
         private String phoneNum;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private Integer statusDesc;
 
         private List(Builder builder) {
@@ -254,7 +265,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             private Integer statusDesc; 
 
             /**
-             * 任务批次
+             * BatchVersion.
              */
             public Builder batchVersion(Integer batchVersion) {
                 this.batchVersion = batchVersion;
@@ -262,7 +273,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 业务自定义信息
+             * BizData.
              */
             public Builder bizData(String bizData) {
                 this.bizData = bizData;
@@ -270,7 +281,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼次数
+             * CallCount.
              */
             public Builder callCount(Integer callCount) {
                 this.callCount = callCount;
@@ -278,7 +289,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * CaseId.
              */
             public Builder caseId(Long caseId) {
                 this.caseId = caseId;
@@ -286,7 +297,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 号码导入时间戳（毫秒）
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -294,7 +305,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 最后一次外呼结果
+             * LastCallResult.
              */
             public Builder lastCallResult(String lastCallResult) {
                 this.lastCallResult = lastCallResult;
@@ -302,7 +313,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号
+             * PhoneNum.
              */
             public Builder phoneNum(String phoneNum) {
                 this.phoneNum = phoneNum;
@@ -310,7 +321,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 执行状态（1：待呼叫，2:呼叫中，3:已完成，4:已终止，5:待重呼）
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -318,7 +329,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 执行状态描述
+             * StatusDesc.
              */
             public Builder statusDesc(Integer statusDesc) {
                 this.statusDesc = statusDesc;
@@ -332,20 +343,26 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAiOutboundTaskExecDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskExecDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("HasNextPage")
+        @com.aliyun.core.annotation.NameInMap("HasNextPage")
         private Boolean hasNextPage;
 
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalResults")
+        @com.aliyun.core.annotation.NameInMap("TotalResults")
         private Integer totalResults;
 
         private Data(Builder builder) {
@@ -381,7 +398,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -402,12 +419,12 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Boolean hasNextPage; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageSize; 
             private Integer totalResults; 
 
             /**
-             * 当前页数
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -415,7 +432,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否有下一页
+             * HasNextPage.
              */
             public Builder hasNextPage(Boolean hasNextPage) {
                 this.hasNextPage = hasNextPage;
@@ -423,15 +440,15 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼号码执行列表
+             * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * 分页大小
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +456,7 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 总数
+             * TotalResults.
              */
             public Builder totalResults(Integer totalResults) {
                 this.totalResults = totalResults;

@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBgpPeerAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyBgpPeerAttributeRequest</p>
  */
 public class ModifyBgpPeerAttributeRequest extends Request {
-    @Query
-    @NameInMap("BfdMultiHop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BfdMultiHop")
     private Integer bfdMultiHop;
 
-    @Query
-    @NameInMap("BgpGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpGroupId")
     private String bgpGroupId;
 
-    @Query
-    @NameInMap("BgpPeerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpPeerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bgpPeerId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EnableBfd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBfd")
     private Boolean enableBfd;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerIpAddress")
     private String peerIpAddress;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyBgpPeerAttributeRequest(Builder builder) {
@@ -196,10 +201,11 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         } 
 
         /**
-         * The BFD hop count. Valid values: **1** to **255**.
-         * <p>
+         * <p>The BFD hop count. Valid values: <strong>1</strong> to <strong>255</strong>.</p>
+         * <p>This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</p>
          * 
-         * This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder bfdMultiHop(Integer bfdMultiHop) {
             this.putQueryParameter("BfdMultiHop", bfdMultiHop);
@@ -208,7 +214,10 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the BGP group to which the BGP peer that you want to modify belongs.
+         * <p>The ID of the BGP group to which the BGP peer that you want to modify belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgpg-m5eo12jxuw2hc0uqq****</p>
          */
         public Builder bgpGroupId(String bgpGroupId) {
             this.putQueryParameter("BgpGroupId", bgpGroupId);
@@ -217,7 +226,11 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the BGP peer that you want to modify.
+         * <p>The ID of the BGP peer that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bgp-m5eoyp2mwegk8ce9v****</p>
          */
         public Builder bgpPeerId(String bgpPeerId) {
             this.putQueryParameter("BgpPeerId", bgpPeerId);
@@ -226,12 +239,14 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -240,11 +255,14 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableBfd(Boolean enableBfd) {
             this.putQueryParameter("EnableBfd", enableBfd);
@@ -271,7 +289,10 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * The IP address of the BGP peer that you want to modify.
+         * <p>The IP address of the BGP peer that you want to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.62.XX.XX</p>
          */
         public Builder peerIpAddress(String peerIpAddress) {
             this.putQueryParameter("PeerIpAddress", peerIpAddress);
@@ -280,10 +301,12 @@ public class ModifyBgpPeerAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the BGP group to which the BGP peer that you want to modify belongs.
-         * <p>
+         * <p>The region ID of the BGP group to which the BGP peer that you want to modify belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

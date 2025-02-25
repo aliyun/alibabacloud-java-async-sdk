@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsCertificateDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsCertificateDetailResponseBody</p>
  */
 public class DescribeVsCertificateDetailResponseBody extends TeaModel {
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private Long certId;
 
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsCertificateDetailResponseBody(Builder builder) {

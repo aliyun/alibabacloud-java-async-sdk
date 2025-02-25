@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomizeRuleCountResponseBody</p>
  */
 public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCustomizeRuleCountResponseBody(Builder builder) {
@@ -136,23 +135,55 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("HighRuleNum")
+        @com.aliyun.core.annotation.NameInMap("AggregationRuleNum")
+        private Integer aggregationRuleNum;
+
+        @com.aliyun.core.annotation.NameInMap("CustomizeRuleNum")
+        private Integer customizeRuleNum;
+
+        @com.aliyun.core.annotation.NameInMap("ExpertRuleNum")
+        private Integer expertRuleNum;
+
+        @com.aliyun.core.annotation.NameInMap("GraphComputingRuleNum")
+        private Integer graphComputingRuleNum;
+
+        @com.aliyun.core.annotation.NameInMap("HighRuleNum")
         private Integer highRuleNum;
 
-        @NameInMap("InUseRuleNum")
+        @com.aliyun.core.annotation.NameInMap("InUseRuleNum")
         private Integer inUseRuleNum;
 
-        @NameInMap("LowRuleNum")
+        @com.aliyun.core.annotation.NameInMap("LowRuleNum")
         private Integer lowRuleNum;
 
-        @NameInMap("MediumRuleNum")
+        @com.aliyun.core.annotation.NameInMap("MediumRuleNum")
         private Integer mediumRuleNum;
 
+        @com.aliyun.core.annotation.NameInMap("PredefinedRuleNum")
+        private Integer predefinedRuleNum;
+
+        @com.aliyun.core.annotation.NameInMap("SingleAlertRuleNum")
+        private Integer singleAlertRuleNum;
+
+        @com.aliyun.core.annotation.NameInMap("TotalRuleNum")
+        private Integer totalRuleNum;
+
+        @com.aliyun.core.annotation.NameInMap("UnEventRuleNum")
+        private Integer unEventRuleNum;
+
         private Data(Builder builder) {
+            this.aggregationRuleNum = builder.aggregationRuleNum;
+            this.customizeRuleNum = builder.customizeRuleNum;
+            this.expertRuleNum = builder.expertRuleNum;
+            this.graphComputingRuleNum = builder.graphComputingRuleNum;
             this.highRuleNum = builder.highRuleNum;
             this.inUseRuleNum = builder.inUseRuleNum;
             this.lowRuleNum = builder.lowRuleNum;
             this.mediumRuleNum = builder.mediumRuleNum;
+            this.predefinedRuleNum = builder.predefinedRuleNum;
+            this.singleAlertRuleNum = builder.singleAlertRuleNum;
+            this.totalRuleNum = builder.totalRuleNum;
+            this.unEventRuleNum = builder.unEventRuleNum;
         }
 
         public static Builder builder() {
@@ -161,6 +192,34 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return aggregationRuleNum
+         */
+        public Integer getAggregationRuleNum() {
+            return this.aggregationRuleNum;
+        }
+
+        /**
+         * @return customizeRuleNum
+         */
+        public Integer getCustomizeRuleNum() {
+            return this.customizeRuleNum;
+        }
+
+        /**
+         * @return expertRuleNum
+         */
+        public Integer getExpertRuleNum() {
+            return this.expertRuleNum;
+        }
+
+        /**
+         * @return graphComputingRuleNum
+         */
+        public Integer getGraphComputingRuleNum() {
+            return this.graphComputingRuleNum;
         }
 
         /**
@@ -191,11 +250,79 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             return this.mediumRuleNum;
         }
 
+        /**
+         * @return predefinedRuleNum
+         */
+        public Integer getPredefinedRuleNum() {
+            return this.predefinedRuleNum;
+        }
+
+        /**
+         * @return singleAlertRuleNum
+         */
+        public Integer getSingleAlertRuleNum() {
+            return this.singleAlertRuleNum;
+        }
+
+        /**
+         * @return totalRuleNum
+         */
+        public Integer getTotalRuleNum() {
+            return this.totalRuleNum;
+        }
+
+        /**
+         * @return unEventRuleNum
+         */
+        public Integer getUnEventRuleNum() {
+            return this.unEventRuleNum;
+        }
+
         public static final class Builder {
+            private Integer aggregationRuleNum; 
+            private Integer customizeRuleNum; 
+            private Integer expertRuleNum; 
+            private Integer graphComputingRuleNum; 
             private Integer highRuleNum; 
             private Integer inUseRuleNum; 
             private Integer lowRuleNum; 
             private Integer mediumRuleNum; 
+            private Integer predefinedRuleNum; 
+            private Integer singleAlertRuleNum; 
+            private Integer totalRuleNum; 
+            private Integer unEventRuleNum; 
+
+            /**
+             * 同类聚合规则数。
+             */
+            public Builder aggregationRuleNum(Integer aggregationRuleNum) {
+                this.aggregationRuleNum = aggregationRuleNum;
+                return this;
+            }
+
+            /**
+             * 自定义规则数。
+             */
+            public Builder customizeRuleNum(Integer customizeRuleNum) {
+                this.customizeRuleNum = customizeRuleNum;
+                return this;
+            }
+
+            /**
+             * 专家规则数。
+             */
+            public Builder expertRuleNum(Integer expertRuleNum) {
+                this.expertRuleNum = expertRuleNum;
+                return this;
+            }
+
+            /**
+             * 图计算规则数。
+             */
+            public Builder graphComputingRuleNum(Integer graphComputingRuleNum) {
+                this.graphComputingRuleNum = graphComputingRuleNum;
+                return this;
+            }
 
             /**
              * The number of rules that are used to identify high-risk threats.
@@ -226,6 +353,38 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
              */
             public Builder mediumRuleNum(Integer mediumRuleNum) {
                 this.mediumRuleNum = mediumRuleNum;
+                return this;
+            }
+
+            /**
+             * 预定义规则数。
+             */
+            public Builder predefinedRuleNum(Integer predefinedRuleNum) {
+                this.predefinedRuleNum = predefinedRuleNum;
+                return this;
+            }
+
+            /**
+             * 告警透传规则数。
+             */
+            public Builder singleAlertRuleNum(Integer singleAlertRuleNum) {
+                this.singleAlertRuleNum = singleAlertRuleNum;
+                return this;
+            }
+
+            /**
+             * 总规则数。
+             */
+            public Builder totalRuleNum(Integer totalRuleNum) {
+                this.totalRuleNum = totalRuleNum;
+                return this;
+            }
+
+            /**
+             * 不产生事件规则数。
+             */
+            public Builder unEventRuleNum(Integer unEventRuleNum) {
+                this.unEventRuleNum = unEventRuleNum;
                 return this;
             }
 

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerScanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerScanConfigResponseBody</p>
  */
 public class DescribeContainerScanConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContainerScanConfigResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -78,7 +86,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BFFCDE-37D6-5A49-A8BC-BB03AC83****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +102,26 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerScanConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerScanConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AllCount")
+        @com.aliyun.core.annotation.NameInMap("AllCount")
         private Integer allCount;
 
-        @NameInMap("AppNames")
+        @com.aliyun.core.annotation.NameInMap("AppNames")
         private String appNames;
 
-        @NameInMap("ChooseCount")
+        @com.aliyun.core.annotation.NameInMap("ChooseCount")
         private Integer chooseCount;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
         private Data(Builder builder) {
@@ -166,7 +183,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             private String clusterName; 
 
             /**
-             * The total number of container applications in the cluster.
+             * <p>The total number of container applications in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder allCount(Integer allCount) {
                 this.allCount = allCount;
@@ -174,7 +194,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the container applications.
+             * <p>The names of the container applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;alicloud-monitor-controller&quot;]</p>
              */
             public Builder appNames(String appNames) {
                 this.appNames = appNames;
@@ -182,7 +205,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of selected container applications.
+             * <p>The number of selected container applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder chooseCount(Integer chooseCount) {
                 this.chooseCount = chooseCount;
@@ -190,7 +216,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -198,7 +227,10 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hhht-cluster-02</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;

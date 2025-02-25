@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventOnStageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventOnStageResponseBody</p>
  */
 public class DescribeEventOnStageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityEventStageResponse")
+    @com.aliyun.core.annotation.NameInMap("SecurityEventStageResponse")
     private SecurityEventStageResponse securityEventStageResponse;
 
     private DescribeEventOnStageResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         private SecurityEventStageResponse securityEventStageResponse; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E332241XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         }
 
         /**
-         * The platforms that are supported by the feature of container threat detection.
+         * <p>The platforms that are supported by the feature of container threat detection.</p>
          */
         public Builder securityEventStageResponse(SecurityEventStageResponse securityEventStageResponse) {
             this.securityEventStageResponse = securityEventStageResponse;
@@ -71,9 +79,15 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventOnStageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventOnStageResponseBody</p>
+     */
     public static class SecurityEventStageResponse extends TeaModel {
-        @NameInMap("SecurityEventOnStag")
-        private java.util.Map < String, ? > securityEventOnStag;
+        @com.aliyun.core.annotation.NameInMap("SecurityEventOnStag")
+        private java.util.Map<String, ?> securityEventOnStag;
 
         private SecurityEventStageResponse(Builder builder) {
             this.securityEventOnStag = builder.securityEventOnStag;
@@ -90,22 +104,22 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         /**
          * @return securityEventOnStag
          */
-        public java.util.Map < String, ? > getSecurityEventOnStag() {
+        public java.util.Map<String, ?> getSecurityEventOnStag() {
             return this.securityEventOnStag;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > securityEventOnStag; 
+            private java.util.Map<String, ?> securityEventOnStag; 
 
             /**
-             * The platform that is supported by the feature of container threat detection. Valid values:
-             * <p>
-             * 
-             * *   **container**
-             * *   **linux**
-             * *   **windows**
+             * <p>The platform that is supported by the feature of container threat detection. Valid values:</p>
+             * <ul>
+             * <li><strong>container</strong></li>
+             * <li><strong>linux</strong></li>
+             * <li><strong>windows</strong></li>
+             * </ul>
              */
-            public Builder securityEventOnStag(java.util.Map < String, ? > securityEventOnStag) {
+            public Builder securityEventOnStag(java.util.Map<String, ?> securityEventOnStag) {
                 this.securityEventOnStag = securityEventOnStag;
                 return this;
             }

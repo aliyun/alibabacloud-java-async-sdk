@@ -1,52 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElasticityAssuranceRequest} extends {@link RequestModel}
  *
  * <p>ModifyElasticityAssuranceRequest</p>
  */
 public class ModifyElasticityAssuranceRequest extends Request {
-    @Query
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAmount")
+    private Integer instanceAmount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecurrenceRules")
+    private java.util.List<RecurrenceRules> recurrenceRules;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyElasticityAssuranceRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.instanceAmount = builder.instanceAmount;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.recurrenceRules = builder.recurrenceRules;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -73,10 +93,24 @@ public class ModifyElasticityAssuranceRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return instanceAmount
+     */
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
     }
 
     /**
@@ -91,6 +125,13 @@ public class ModifyElasticityAssuranceRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return recurrenceRules
+     */
+    public java.util.List<RecurrenceRules> getRecurrenceRules() {
+        return this.recurrenceRules;
     }
 
     /**
@@ -116,9 +157,12 @@ public class ModifyElasticityAssuranceRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyElasticityAssuranceRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
+        private String clientToken; 
         private String description; 
+        private Integer instanceAmount; 
         private String ownerAccount; 
         private Long ownerId; 
+        private java.util.List<RecurrenceRules> recurrenceRules; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -130,9 +174,12 @@ public class ModifyElasticityAssuranceRequest extends Request {
         private Builder(ModifyElasticityAssuranceRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
+            this.clientToken = request.clientToken;
             this.description = request.description;
+            this.instanceAmount = request.instanceAmount;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.recurrenceRules = request.recurrenceRules;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -148,11 +195,44 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The total number of instances to reserve for the elasticity assurance. Valid values: Number of created instances to 1000. This parameter cannot be changed at the same time with other parameters.----This parameter is exclusive with other parameters in the same request. ?</p>
+         * <blockquote>
+         * <p> Capacity scale-in, not capacity scale-out, is supported.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder instanceAmount(Integer instanceAmount) {
+            this.putQueryParameter("InstanceAmount", instanceAmount);
+            this.instanceAmount = instanceAmount;
             return this;
         }
 
@@ -175,7 +255,20 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RecurrenceRules.
+         */
+        public Builder recurrenceRules(java.util.List<RecurrenceRules> recurrenceRules) {
+            this.putQueryParameter("RecurrenceRules", recurrenceRules);
+            this.recurrenceRules = recurrenceRules;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,12 +301,18 @@ public class ModifyElasticityAssuranceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyElasticityAssuranceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyElasticityAssuranceRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private PrivatePoolOptions(Builder builder) {
@@ -248,7 +347,11 @@ public class ModifyElasticityAssuranceRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the elasticity assurance.
+             * <p>The ID of the elasticity assurance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -256,7 +359,10 @@ public class ModifyElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eapTestName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,6 +371,115 @@ public class ModifyElasticityAssuranceRequest extends Request {
 
             public PrivatePoolOptions build() {
                 return new PrivatePoolOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyElasticityAssuranceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyElasticityAssuranceRequest</p>
+     */
+    public static class RecurrenceRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndHour")
+        @com.aliyun.core.annotation.Validation(maximum = 24)
+        private Integer endHour;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
+        private String recurrenceType;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
+        private String recurrenceValue;
+
+        @com.aliyun.core.annotation.NameInMap("StartHour")
+        @com.aliyun.core.annotation.Validation(maximum = 24)
+        private Integer startHour;
+
+        private RecurrenceRules(Builder builder) {
+            this.endHour = builder.endHour;
+            this.recurrenceType = builder.recurrenceType;
+            this.recurrenceValue = builder.recurrenceValue;
+            this.startHour = builder.startHour;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecurrenceRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endHour
+         */
+        public Integer getEndHour() {
+            return this.endHour;
+        }
+
+        /**
+         * @return recurrenceType
+         */
+        public String getRecurrenceType() {
+            return this.recurrenceType;
+        }
+
+        /**
+         * @return recurrenceValue
+         */
+        public String getRecurrenceValue() {
+            return this.recurrenceValue;
+        }
+
+        /**
+         * @return startHour
+         */
+        public Integer getStartHour() {
+            return this.startHour;
+        }
+
+        public static final class Builder {
+            private Integer endHour; 
+            private String recurrenceType; 
+            private String recurrenceValue; 
+            private Integer startHour; 
+
+            /**
+             * EndHour.
+             */
+            public Builder endHour(Integer endHour) {
+                this.endHour = endHour;
+                return this;
+            }
+
+            /**
+             * RecurrenceType.
+             */
+            public Builder recurrenceType(String recurrenceType) {
+                this.recurrenceType = recurrenceType;
+                return this;
+            }
+
+            /**
+             * RecurrenceValue.
+             */
+            public Builder recurrenceValue(String recurrenceValue) {
+                this.recurrenceValue = recurrenceValue;
+                return this;
+            }
+
+            /**
+             * StartHour.
+             */
+            public Builder startHour(Integer startHour) {
+                this.startHour = startHour;
+                return this;
+            }
+
+            public RecurrenceRules build() {
+                return new RecurrenceRules(this);
             } 
 
         } 

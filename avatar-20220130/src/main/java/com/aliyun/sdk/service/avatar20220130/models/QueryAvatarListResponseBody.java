@@ -385,6 +385,9 @@ public class QueryAvatarListResponseBody extends TeaModel {
         @NameInMap("Portrait")
         private String portrait;
 
+        @NameInMap("Preview")
+        private String preview;
+
         @NameInMap("SupportedResolutions")
         private SupportedResolutions supportedResolutions;
 
@@ -399,6 +402,7 @@ public class QueryAvatarListResponseBody extends TeaModel {
             this.modelType = builder.modelType;
             this.name = builder.name;
             this.portrait = builder.portrait;
+            this.preview = builder.preview;
             this.supportedResolutions = builder.supportedResolutions;
         }
 
@@ -481,6 +485,13 @@ public class QueryAvatarListResponseBody extends TeaModel {
         }
 
         /**
+         * @return preview
+         */
+        public String getPreview() {
+            return this.preview;
+        }
+
+        /**
          * @return supportedResolutions
          */
         public SupportedResolutions getSupportedResolutions() {
@@ -498,6 +509,7 @@ public class QueryAvatarListResponseBody extends TeaModel {
             private String modelType; 
             private String name; 
             private String portrait; 
+            private String preview; 
             private SupportedResolutions supportedResolutions; 
 
             /**
@@ -577,6 +589,14 @@ public class QueryAvatarListResponseBody extends TeaModel {
              */
             public Builder portrait(String portrait) {
                 this.portrait = portrait;
+                return this;
+            }
+
+            /**
+             * Preview.
+             */
+            public Builder preview(String preview) {
+                this.preview = preview;
                 return this;
             }
 

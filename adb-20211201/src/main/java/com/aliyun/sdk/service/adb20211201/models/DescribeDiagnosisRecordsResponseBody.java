@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisRecordsResponseBody</p>
  */
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Querys")
-    private java.util.List < Querys> querys;
+    @com.aliyun.core.annotation.NameInMap("Querys")
+    private java.util.List<Querys> querys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDiagnosisRecordsResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     /**
      * @return querys
      */
-    public java.util.List < Querys> getQuerys() {
+    public java.util.List<Querys> getQuerys() {
         return this.querys;
     }
 
@@ -81,12 +86,15 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Querys> querys; 
+        private java.util.List<Querys> querys; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,15 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,15 +118,18 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Querys.
+         * <p>The queried SQL statements.</p>
          */
-        public Builder querys(java.util.List < Querys> querys) {
+        public Builder querys(java.util.List<Querys> querys) {
             this.querys = querys;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F88BEFA-CF0B-5C95-8BB1-92EC9F09E40D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +137,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,74 +153,153 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisRecordsResponseBody</p>
+     */
+    public static class QueryProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private QueryProperties(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public QueryProperties build() {
+                return new QueryProperties(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDiagnosisRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisRecordsResponseBody</p>
+     */
     public static class Querys extends TeaModel {
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("Cost")
+        @com.aliyun.core.annotation.NameInMap("Cost")
         private Long cost;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("EtlWriteRows")
+        @com.aliyun.core.annotation.NameInMap("EtlWriteRows")
         private Long etlWriteRows;
 
-        @NameInMap("ExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionTime")
         private Long executionTime;
 
-        @NameInMap("OutputDataSize")
+        @com.aliyun.core.annotation.NameInMap("OutputDataSize")
         private Long outputDataSize;
 
-        @NameInMap("OutputRows")
+        @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PatternId")
+        private String patternId;
+
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
-        @NameInMap("QueueTime")
+        @com.aliyun.core.annotation.NameInMap("QueryProperties")
+        private java.util.List<QueryProperties> queryProperties;
+
+        @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
 
-        @NameInMap("RcHost")
+        @com.aliyun.core.annotation.NameInMap("RcHost")
         private String rcHost;
 
-        @NameInMap("ResourceCostRank")
+        @com.aliyun.core.annotation.NameInMap("ResourceCostRank")
         private Integer resourceCostRank;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private String SQL;
 
-        @NameInMap("SQLTruncated")
+        @com.aliyun.core.annotation.NameInMap("SQLTruncated")
         private Boolean SQLTruncated;
 
-        @NameInMap("SQLTruncatedThreshold")
+        @com.aliyun.core.annotation.NameInMap("SQLTruncatedThreshold")
         private Long SQLTruncatedThreshold;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("ScanSize")
+        @com.aliyun.core.annotation.NameInMap("ScanSize")
         private Long scanSize;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalPlanningTime")
+        @com.aliyun.core.annotation.NameInMap("TotalPlanningTime")
         private Long totalPlanningTime;
 
-        @NameInMap("TotalStages")
+        @com.aliyun.core.annotation.NameInMap("TotalStages")
         private Integer totalStages;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Querys(Builder builder) {
@@ -209,8 +310,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             this.executionTime = builder.executionTime;
             this.outputDataSize = builder.outputDataSize;
             this.outputRows = builder.outputRows;
+            this.patternId = builder.patternId;
             this.peakMemory = builder.peakMemory;
             this.processId = builder.processId;
+            this.queryProperties = builder.queryProperties;
             this.queueTime = builder.queueTime;
             this.rcHost = builder.rcHost;
             this.resourceCostRank = builder.resourceCostRank;
@@ -285,6 +388,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return patternId
+         */
+        public String getPatternId() {
+            return this.patternId;
+        }
+
+        /**
          * @return peakMemory
          */
         public Long getPeakMemory() {
@@ -296,6 +406,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
          */
         public String getProcessId() {
             return this.processId;
+        }
+
+        /**
+         * @return queryProperties
+         */
+        public java.util.List<QueryProperties> getQueryProperties() {
+            return this.queryProperties;
         }
 
         /**
@@ -404,8 +521,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private Long executionTime; 
             private Long outputDataSize; 
             private Long outputRows; 
+            private String patternId; 
             private Long peakMemory; 
             private String processId; 
+            private java.util.List<QueryProperties> queryProperties; 
             private Long queueTime; 
             private String rcHost; 
             private Integer resourceCostRank; 
@@ -422,7 +541,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * ClientIp.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59.82.XX.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -430,7 +552,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Cost.
+             * <p>The total execution duration. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cost(Long cost) {
                 this.cost = cost;
@@ -438,7 +566,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * <p>The name of the database on which the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -446,7 +577,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EtlWriteRows.
+             * <p>The number of rows written to the table by an extract-transform-load (ETL) job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder etlWriteRows(Long etlWriteRows) {
                 this.etlWriteRows = etlWriteRows;
@@ -454,7 +588,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionTime.
+             * <p>The execution duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder executionTime(Long executionTime) {
                 this.executionTime = executionTime;
@@ -462,7 +599,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSize.
+             * <p>The amount of returned data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder outputDataSize(Long outputDataSize) {
                 this.outputDataSize = outputDataSize;
@@ -470,7 +610,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputRows.
+             * <p>The number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -478,7 +621,18 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * PatternId.
+             */
+            public Builder patternId(String patternId) {
+                this.patternId = patternId;
+                return this;
+            }
+
+            /**
+             * <p>The peak memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16648</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -486,7 +640,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021093000414401000000023503151******</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -494,7 +651,18 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueueTime.
+             * QueryProperties.
+             */
+            public Builder queryProperties(java.util.List<QueryProperties> queryProperties) {
+                this.queryProperties = queryProperties;
+                return this;
+            }
+
+            /**
+             * <p>The amount of time that is consumed for queuing. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder queueTime(Long queueTime) {
                 this.queueTime = queueTime;
@@ -502,7 +670,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RcHost.
+             * <p>The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX:3004</p>
              */
             public Builder rcHost(String rcHost) {
                 this.rcHost = rcHost;
@@ -510,7 +681,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCostRank.
+             * <p>The execution duration rank of operators that are used in the SQL statement.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for SQL statements whose <code>Status</code> parameter is <code>running</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceCostRank(Integer resourceCostRank) {
                 this.resourceCostRank = resourceCostRank;
@@ -518,7 +695,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The resource group to which the SQL statement belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_default</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -526,7 +706,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * <p>The queried SQL statement.</p>
+             * <blockquote>
+             * <p> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT count(*)\nFROM nation</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -534,7 +720,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLTruncated.
+             * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder SQLTruncated(Boolean SQLTruncated) {
                 this.SQLTruncated = SQLTruncated;
@@ -542,7 +735,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLTruncatedThreshold.
+             * <p>The maximum length of the SQL statement. 5120 is returned. Unit: characters. SQL statements that exceed this limit are truncated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder SQLTruncatedThreshold(Long SQLTruncatedThreshold) {
                 this.SQLTruncatedThreshold = SQLTruncatedThreshold;
@@ -550,7 +746,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ScanRows.
+             * <p>The number of rows scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -558,7 +757,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ScanSize.
+             * <p>The amount of scanned data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder scanSize(Long scanSize) {
                 this.scanSize = scanSize;
@@ -566,7 +768,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The execution start time of the SQL statement. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632933704000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -574,7 +779,15 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong></li>
+             * <li><strong>finished</strong></li>
+             * <li><strong>failed</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -582,7 +795,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPlanningTime.
+             * <p>The amount of time that is consumed to generate an execution plan. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalPlanningTime(Long totalPlanningTime) {
                 this.totalPlanningTime = totalPlanningTime;
@@ -590,7 +806,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalStages.
+             * <p>The total number of stages generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalStages(Integer totalStages) {
                 this.totalStages = totalStages;
@@ -598,7 +817,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username that is used to execute the SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

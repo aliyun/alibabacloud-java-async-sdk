@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResultRequest} extends {@link RequestModel}
  *
  * <p>GetResultRequest</p>
  */
 public class GetResultRequest extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Query
-    @NameInMap("JsonStr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JsonStr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
     private GetResultRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class GetResultRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -78,7 +83,10 @@ public class GetResultRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10,&quot;excludeFields&quot;:&quot;hitResult.hits, recording.url&quot;,&quot;requiredFields&quot;:&quot;agent,status,errorMessage,reviewStatus,reviewResult,score,taskId,reviewer,resolver,recording.name,recording.duration,hitResult,business&quot;,&quot;dataType&quot;:1,&quot;sourceType&quot;:0,&quot;startTime&quot;:&quot;2020-06-25 00:00:00&quot;,&quot;endTime&quot;:&quot;2020-07-01 23:59:59&quot;}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

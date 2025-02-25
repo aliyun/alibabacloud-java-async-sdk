@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsureOrderApplyRequest} extends {@link RequestModel}
  *
  * <p>InsureOrderApplyRequest</p>
  */
 public class InsureOrderApplyRequest extends Request {
-    @Body
-    @NameInMap("btrip_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
 
-    @Body
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Body
-    @NameInMap("ins_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ins_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String insOrderId;
 
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Body
-    @NameInMap("out_sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_sub_order_id")
     private String outSubOrderId;
 
-    @Body
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private InsureOrderApplyRequest(Builder builder) {
@@ -154,7 +159,10 @@ public class InsureOrderApplyRequest extends Request {
         } 
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000102</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putBodyParameter("btrip_user_id", btripUserId);
@@ -172,7 +180,10 @@ public class InsureOrderApplyRequest extends Request {
         }
 
         /**
-         * ins_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000003000000490</p>
          */
         public Builder insOrderId(String insOrderId) {
             this.putBodyParameter("ins_order_id", insOrderId);

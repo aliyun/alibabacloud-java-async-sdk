@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckRiskStatisticsResponseBody</p>
  */
 public class GetCheckRiskStatisticsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Summary")
+    private Summary summary;
 
     private GetCheckRiskStatisticsResponseBody(Builder builder) {
         this.count = builder.count;
         this.data = builder.data;
         this.requestId = builder.requestId;
+        this.summary = builder.summary;
     }
 
     public static Builder builder() {
@@ -45,7 +54,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -56,13 +65,24 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return summary
+     */
+    public Summary getSummary() {
+        return this.summary;
+    }
+
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
+        private Summary summary; 
 
         /**
-         * The number of risk scenarios.
+         * <p>The number of risk scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,18 +90,29 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the statistics on check items that are used in risk scenarios.
+         * <p>An array consisting of the statistics on check items that are used in risk scenarios.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C455672-2490-5211-84EC-420C7818****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>Historical check item statistics.</p>
+         */
+        public Builder summary(Summary summary) {
+            this.summary = summary;
             return this;
         }
 
@@ -91,26 +122,32 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckRiskStatisticsResponseBody</p>
+     */
     public static class SubStatistics extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("HighWarningCount")
+        @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
-        @NameInMap("LowWarningCount")
+        @com.aliyun.core.annotation.NameInMap("LowWarningCount")
         private Integer lowWarningCount;
 
-        @NameInMap("MediumWarningCount")
+        @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private SubStatistics(Builder builder) {
@@ -190,7 +227,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The name of the baseline type.
+             * <p>The name of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weak_password</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -198,7 +238,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk items.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -206,7 +249,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * <p>The number of low-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -214,7 +260,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * <p>The number of medium-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -222,7 +271,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of passed check items.
+             * <p>The number of passed check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -230,7 +282,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of check items.
+             * <p>The total number of check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -238,7 +293,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline type.
+             * <p>The baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weak_password</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -252,26 +310,32 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckRiskStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("HighWarningCount")
+        @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
-        @NameInMap("LowWarningCount")
+        @com.aliyun.core.annotation.NameInMap("LowWarningCount")
         private Integer lowWarningCount;
 
-        @NameInMap("MediumWarningCount")
+        @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SubStatistics")
-        private java.util.List < SubStatistics> subStatistics;
+        @com.aliyun.core.annotation.NameInMap("SubStatistics")
+        private java.util.List<SubStatistics> subStatistics;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -330,7 +394,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         /**
          * @return subStatistics
          */
-        public java.util.List < SubStatistics> getSubStatistics() {
+        public java.util.List<SubStatistics> getSubStatistics() {
             return this.subStatistics;
         }
 
@@ -347,11 +411,14 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private Integer mediumWarningCount; 
             private Integer passCount; 
             private String sceneName; 
-            private java.util.List < SubStatistics> subStatistics; 
+            private java.util.List<SubStatistics> subStatistics; 
             private Integer totalCount; 
 
             /**
-             * The number of high-risk items.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -359,7 +426,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * <p>The number of low-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -367,7 +437,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * <p>The number of medium-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -375,7 +448,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of passed check items.
+             * <p>The number of passed check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>143</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -383,7 +459,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the risk scenario.
+             * <p>The name of the risk scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECURITY</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -391,15 +470,18 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on check items that are used in the risk scenario by baseline type.
+             * <p>The statistics on check items that are used in the risk scenario by baseline type.</p>
              */
-            public Builder subStatistics(java.util.List < SubStatistics> subStatistics) {
+            public Builder subStatistics(java.util.List<SubStatistics> subStatistics) {
                 this.subStatistics = subStatistics;
                 return this;
             }
 
             /**
-             * The total number of check items.
+             * <p>The total number of check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>219</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -408,6 +490,171 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
 
             public Data build() {
                 return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckRiskStatisticsResponseBody</p>
+     */
+    public static class Summary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HandledCheckToday")
+        private Integer handledCheckToday;
+
+        @com.aliyun.core.annotation.NameInMap("HandledCheckTotal")
+        private Integer handledCheckTotal;
+
+        @com.aliyun.core.annotation.NameInMap("HandledDays")
+        private Integer handledDays;
+
+        @com.aliyun.core.annotation.NameInMap("RiskCheckCnt")
+        private Integer riskCheckCnt;
+
+        @com.aliyun.core.annotation.NameInMap("RiskDays")
+        private Integer riskDays;
+
+        @com.aliyun.core.annotation.NameInMap("RiskWarningCnt")
+        private Integer riskWarningCnt;
+
+        private Summary(Builder builder) {
+            this.handledCheckToday = builder.handledCheckToday;
+            this.handledCheckTotal = builder.handledCheckTotal;
+            this.handledDays = builder.handledDays;
+            this.riskCheckCnt = builder.riskCheckCnt;
+            this.riskDays = builder.riskDays;
+            this.riskWarningCnt = builder.riskWarningCnt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Summary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return handledCheckToday
+         */
+        public Integer getHandledCheckToday() {
+            return this.handledCheckToday;
+        }
+
+        /**
+         * @return handledCheckTotal
+         */
+        public Integer getHandledCheckTotal() {
+            return this.handledCheckTotal;
+        }
+
+        /**
+         * @return handledDays
+         */
+        public Integer getHandledDays() {
+            return this.handledDays;
+        }
+
+        /**
+         * @return riskCheckCnt
+         */
+        public Integer getRiskCheckCnt() {
+            return this.riskCheckCnt;
+        }
+
+        /**
+         * @return riskDays
+         */
+        public Integer getRiskDays() {
+            return this.riskDays;
+        }
+
+        /**
+         * @return riskWarningCnt
+         */
+        public Integer getRiskWarningCnt() {
+            return this.riskWarningCnt;
+        }
+
+        public static final class Builder {
+            private Integer handledCheckToday; 
+            private Integer handledCheckTotal; 
+            private Integer handledDays; 
+            private Integer riskCheckCnt; 
+            private Integer riskDays; 
+            private Integer riskWarningCnt; 
+
+            /**
+             * <p>Check items handled today.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder handledCheckToday(Integer handledCheckToday) {
+                this.handledCheckToday = handledCheckToday;
+                return this;
+            }
+
+            /**
+             * <p>A risk item exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder handledCheckTotal(Integer handledCheckTotal) {
+                this.handledCheckTotal = handledCheckTotal;
+                return this;
+            }
+
+            /**
+             * <p>Total days since check items were handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365</p>
+             */
+            public Builder handledDays(Integer handledDays) {
+                this.handledDays = handledDays;
+                return this;
+            }
+
+            /**
+             * <p>Check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder riskCheckCnt(Integer riskCheckCnt) {
+                this.riskCheckCnt = riskCheckCnt;
+                return this;
+            }
+
+            /**
+             * <p>Days since check items failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
+             */
+            public Builder riskDays(Integer riskDays) {
+                this.riskDays = riskDays;
+                return this;
+            }
+
+            /**
+             * <p>Risks to be handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder riskWarningCnt(Integer riskWarningCnt) {
+                this.riskWarningCnt = riskWarningCnt;
+                return this;
+            }
+
+            public Summary build() {
+                return new Summary(this);
             } 
 
         } 

@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateEipAddressRequest} extends {@link RequestModel}
  *
  * <p>UnassociateEipAddressRequest</p>
  */
 public class UnassociateEipAddressRequest extends Request {
-    @Query
-    @NameInMap("AllocationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allocationId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private UnassociateEipAddressRequest(Builder builder) {
@@ -195,7 +200,11 @@ public class UnassociateEipAddressRequest extends Request {
         } 
 
         /**
-         * The ID of the EIP that you want to disassociate.
+         * <p>The ID of the EIP that you want to disassociate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7uj6i0d****</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -204,12 +213,14 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -218,11 +229,14 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:
-         * <p>
+         * <p>Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -231,7 +245,10 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance from which you want to disassociate the EIP.
+         * <p>The ID of the instance from which you want to disassociate the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-hp3akk9irtd69jad****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -240,14 +257,17 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * The type of instance from which you want to disassociate the EIP. Valid values:
-         * <p>
+         * <p>The type of instance from which you want to disassociate the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</li>
+         * <li><strong>SlbInstance</strong>: a Server Load Balancer (SLB) instance in a VPC</li>
+         * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI) in a VPC</li>
+         * <li><strong>Nat</strong>: a NAT gateway</li>
+         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP)</li>
+         * </ul>
          * 
-         * *   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)
-         * *   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC
-         * *   **NetworkInterface**: a secondary elastic network interface (ENI) in a VPC
-         * *   **Nat**: a NAT gateway
-         * *   **HaVip**: a high-availability virtual IP address (HAVIP)
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -274,7 +294,10 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * The private IP address of the ECS instance or the secondary ENI from which you want to disassociate the EIP.
+         * <p>The private IP address of the ECS instance or the secondary ENI from which you want to disassociate the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.2</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -283,7 +306,10 @@ public class UnassociateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

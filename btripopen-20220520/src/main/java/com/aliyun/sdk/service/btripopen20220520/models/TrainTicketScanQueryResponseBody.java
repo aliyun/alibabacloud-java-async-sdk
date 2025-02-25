@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TrainTicketScanQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TrainTicketScanQueryResponseBody</p>
  */
 public class TrainTicketScanQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TrainTicketScanQueryResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +146,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21041ce316577904808056433edbb2</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,71 +162,81 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TrainTicketScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainTicketScanQueryResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("arr_station")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
+        private String applyId;
+
+        @com.aliyun.core.annotation.NameInMap("arr_station")
         private String arrStation;
 
-        @NameInMap("bill_date")
+        @com.aliyun.core.annotation.NameInMap("bill_date")
         private String billDate;
 
-        @NameInMap("coach_name")
+        @com.aliyun.core.annotation.NameInMap("coach_name")
         private String coachName;
 
-        @NameInMap("cost_center")
+        @com.aliyun.core.annotation.NameInMap("cost_center")
         private String costCenter;
 
-        @NameInMap("dep_station")
+        @com.aliyun.core.annotation.NameInMap("dep_station")
         private String depStation;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("department")
+        @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
-        @NameInMap("oss_url")
+        @com.aliyun.core.annotation.NameInMap("oss_url")
         private String ossUrl;
 
-        @NameInMap("passenger")
+        @com.aliyun.core.annotation.NameInMap("passenger")
         private String passenger;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private String price;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("seat")
+        @com.aliyun.core.annotation.NameInMap("seat")
         private String seat;
 
-        @NameInMap("seat_no")
+        @com.aliyun.core.annotation.NameInMap("seat_no")
         private String seatNo;
 
-        @NameInMap("serial_number")
+        @com.aliyun.core.annotation.NameInMap("serial_number")
         private String serialNumber;
 
-        @NameInMap("tax_amount")
+        @com.aliyun.core.annotation.NameInMap("tax_amount")
         private String taxAmount;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
-        @NameInMap("train_no")
+        @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
 
         private Items(Builder builder) {
+            this.applyId = builder.applyId;
             this.arrStation = builder.arrStation;
             this.billDate = builder.billDate;
             this.coachName = builder.coachName;
@@ -245,6 +266,13 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return applyId
+         */
+        public String getApplyId() {
+            return this.applyId;
         }
 
         /**
@@ -395,6 +423,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applyId; 
             private String arrStation; 
             private String billDate; 
             private String coachName; 
@@ -416,6 +445,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String taxRate; 
             private String ticketNo; 
             private String trainNo; 
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(String applyId) {
+                this.applyId = applyId;
+                return this;
+            }
 
             /**
              * arr_station.
@@ -570,7 +607,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 取票号
+             * <p>取票号</p>
+             * 
+             * <strong>example:</strong>
+             * <p>784-1111111111</p>
              */
             public Builder ticketNo(String ticketNo) {
                 this.ticketNo = ticketNo;
@@ -578,7 +618,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 车次
+             * <p>车次</p>
+             * 
+             * <strong>example:</strong>
+             * <p>G99</p>
              */
             public Builder trainNo(String trainNo) {
                 this.trainNo = trainNo;
@@ -592,20 +635,26 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TrainTicketScanQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TrainTicketScanQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<Items> items;
 
-        @NameInMap("page_no")
+        @com.aliyun.core.annotation.NameInMap("page_no")
         private Integer pageNo;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_page")
+        @com.aliyun.core.annotation.NameInMap("total_page")
         private Integer totalPage;
 
-        @NameInMap("total_size")
+        @com.aliyun.core.annotation.NameInMap("total_size")
         private Integer totalSize;
 
         private Module(Builder builder) {
@@ -627,7 +676,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -660,7 +709,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer totalPage; 
@@ -669,7 +718,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

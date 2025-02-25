@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamVodListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStreamVodListResponseBody</p>
  */
 public class DescribeStreamVodListResponseBody extends TeaModel {
-    @NameInMap("Records")
-    private java.util.List < Records> records;
+    @com.aliyun.core.annotation.NameInMap("Records")
+    private java.util.List<Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeStreamVodListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -46,13 +51,13 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
 
         /**
          * Records.
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStreamVodListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStreamVodListResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Records(Builder builder) {

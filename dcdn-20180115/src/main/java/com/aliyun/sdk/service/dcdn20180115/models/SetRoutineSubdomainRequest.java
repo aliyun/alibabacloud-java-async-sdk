@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetRoutineSubdomainRequest} extends {@link RequestModel}
  *
  * <p>SetRoutineSubdomainRequest</p>
  */
 public class SetRoutineSubdomainRequest extends Request {
-    @Body
-    @NameInMap("Subdomains")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Subdomains")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, ? > subdomains;
 
     private SetRoutineSubdomainRequest(Builder builder) {
@@ -55,14 +55,16 @@ public class SetRoutineSubdomainRequest extends Request {
         } 
 
         /**
-         * The parameters of the subdomain.
-         * <p>
+         * <p>The parameters of the subdomain.</p>
+         * <p>The parameters are in the following format:</p>
+         * <pre><code>Subdomains: [
+         *     &quot;subdomain-test&quot;
+         * ]
+         * </code></pre>
+         * <p>This parameter is required.</p>
          * 
-         * The parameters are in the following format:
-         * 
-         *     Subdomains: [
-         *         "subdomain-test"
-         *     ]
+         * <strong>example:</strong>
+         * <p>[&quot;subdomain-test&quot;]</p>
          */
         public Builder subdomains(java.util.Map < String, ? > subdomains) {
             String subdomainsShrink = shrink(subdomains, "Subdomains", "json");

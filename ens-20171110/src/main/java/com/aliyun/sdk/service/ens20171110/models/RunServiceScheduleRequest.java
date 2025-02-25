@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunServiceScheduleRequest} extends {@link RequestModel}
  *
  * <p>RunServiceScheduleRequest</p>
  */
 public class RunServiceScheduleRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ClientIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientIp;
 
-    @Query
-    @NameInMap("Directorys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Directorys")
     private String directorys;
 
-    @Query
-    @NameInMap("PodConfigName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PodConfigName")
     private String podConfigName;
 
-    @Query
-    @NameInMap("PreLockedTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreLockedTimeout")
     private Integer preLockedTimeout;
 
-    @Query
-    @NameInMap("ScheduleStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleStrategy")
     private String scheduleStrategy;
 
-    @Query
-    @NameInMap("ServiceAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceAction;
 
-    @Query
-    @NameInMap("ServiceCommands")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCommands")
     private String serviceCommands;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private RunServiceScheduleRequest(Builder builder) {
@@ -170,7 +175,11 @@ public class RunServiceScheduleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474bdef0-d149-4695-abfb-52912d9143f0</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -179,7 +188,11 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ClientIp.
+         * <p>The IP address of the client.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180.166.45.146</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -188,7 +201,10 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * Directorys.
+         * <p>The directory to which the data file is mounted. The value must be a full path and cannot be &quot;/../&quot;. Example: [&quot;/data/app01&quot;, &quot;/data/user&quot;]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/data/app01&quot;, &quot;/data/user&quot;]</p>
          */
         public Builder directorys(String directorys) {
             this.putQueryParameter("Directorys", directorys);
@@ -197,7 +213,10 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * PodConfigName.
+         * <p>The parameter does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         public Builder podConfigName(String podConfigName) {
             this.putQueryParameter("PodConfigName", podConfigName);
@@ -206,7 +225,10 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * PreLockedTimeout.
+         * <p>The maximum duration for locking an idle device. Unit: seconds. This parameter takes effect only if you set ServiceAction to PreSchedule. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder preLockedTimeout(Integer preLockedTimeout) {
             this.putQueryParameter("PreLockedTimeout", preLockedTimeout);
@@ -215,7 +237,10 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ScheduleStrategy.
+         * <p>The scheduling policy of the device. The value must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;selectLevel&quot;: &quot;RegionId&quot;, &quot;values&quot;: [&quot;cn-chengdu-telecom-2&quot;]  }</p>
          */
         public Builder scheduleStrategy(String scheduleStrategy) {
             this.putQueryParameter("ScheduleStrategy", scheduleStrategy);
@@ -224,7 +249,24 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ServiceAction.
+         * <p>The scheduling operation. The value must be of the enumeration type. Valid values:</p>
+         * <p>Container scenario:</p>
+         * <ul>
+         * <li>Start: selects and activates an idle cloud device.</li>
+         * <li>Stop: stops and releases the cloud device.</li>
+         * <li>Console: performs the scheduling operation when the device is in the scheduling state.</li>
+         * </ul>
+         * <p>Bare metal instance or virtual machine scenario:</p>
+         * <ul>
+         * <li>PreSchedule: locks a virtual machine instance for scheduling.</li>
+         * <li>Confirm: confirms the scheduling operation.</li>
+         * <li>Cancel: cancels the scheduling operation.</li>
+         * <li>Console: performs the scheduling operation when the device is in the scheduling state.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Start</p>
          */
         public Builder serviceAction(String serviceAction) {
             this.putQueryParameter("ServiceAction", serviceAction);
@@ -233,7 +275,10 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ServiceCommands.
+         * <p>The service commands. The value must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;containerName&quot;: &quot;android&quot;,       &quot;commands&quot;:[&quot;cat /tmp/token.json&quot;]    },    {      &quot;commands&quot;:[&quot;ls -l /data/data&quot;]    }]</p>
          */
         public Builder serviceCommands(String serviceCommands) {
             this.putQueryParameter("ServiceCommands", serviceCommands);
@@ -242,7 +287,11 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdm_d4f1059a8e1afc0956bd71b497faa433</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

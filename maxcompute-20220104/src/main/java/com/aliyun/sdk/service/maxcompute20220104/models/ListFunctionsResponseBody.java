@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFunctionsResponseBody</p>
  */
 public class ListFunctionsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListFunctionsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0be3e0b716671885050924814e3623</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class ListFunctionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFunctionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionsResponseBody</p>
+     */
     public static class Functions extends TeaModel {
-        @NameInMap("class")
+        @com.aliyun.core.annotation.NameInMap("class")
         private String _class;
 
-        @NameInMap("creationTime")
+        @com.aliyun.core.annotation.NameInMap("creationTime")
         private Long creationTime;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("owner")
+        @com.aliyun.core.annotation.NameInMap("owner")
         private String owner;
 
-        @NameInMap("resources")
+        @com.aliyun.core.annotation.NameInMap("resources")
         private String resources;
 
-        @NameInMap("schema")
+        @com.aliyun.core.annotation.NameInMap("schema")
         private String schema;
 
         private Functions(Builder builder) {
@@ -170,7 +184,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String schema; 
 
             /**
-             * The class in which the function was defined.
+             * <p>The class in which the function was defined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -178,7 +195,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the function was created. Unit: milliseconds.
+             * <p>The time when the function was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1664505167000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -186,7 +206,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>getdate</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -194,7 +217,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the function.
+             * <p>The name of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>getdate</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +228,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the function.
+             * <p>The owner of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odpsowner</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -210,7 +239,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource that was associated with the function.
+             * <p>The name of the resource that was associated with the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder resources(String resources) {
                 this.resources = resources;
@@ -218,7 +250,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the function.
+             * <p>The schema of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -232,14 +267,20 @@ public class ListFunctionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("functions")
-        private java.util.List < Functions> functions;
+        @com.aliyun.core.annotation.NameInMap("functions")
+        private java.util.List<Functions> functions;
 
-        @NameInMap("marker")
+        @com.aliyun.core.annotation.NameInMap("marker")
         private String marker;
 
-        @NameInMap("maxItem")
+        @com.aliyun.core.annotation.NameInMap("maxItem")
         private Integer maxItem;
 
         private Data(Builder builder) {
@@ -259,7 +300,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * @return functions
          */
-        public java.util.List < Functions> getFunctions() {
+        public java.util.List<Functions> getFunctions() {
             return this.functions;
         }
 
@@ -278,20 +319,23 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Functions> functions; 
+            private java.util.List<Functions> functions; 
             private String marker; 
             private Integer maxItem; 
 
             /**
-             * The information about each function.
+             * <p>The information about each function.</p>
              */
-            public Builder functions(java.util.List < Functions> functions) {
+            public Builder functions(java.util.List<Functions> functions) {
                 this.functions = functions;
                 return this;
             }
 
             /**
-             * Indicates the marker after which the returned list begins.
+             * <p>Indicates the marker after which the returned list begins.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -299,7 +343,10 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries returned per page.
+             * <p>The maximum number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxItem(Integer maxItem) {
                 this.maxItem = maxItem;

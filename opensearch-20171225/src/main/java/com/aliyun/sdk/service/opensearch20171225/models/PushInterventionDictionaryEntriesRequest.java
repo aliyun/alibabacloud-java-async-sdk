@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushInterventionDictionaryEntriesRequest</p>
  */
 public class PushInterventionDictionaryEntriesRequest extends Request {
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < java.util.Map<String, ?>> body;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private PushInterventionDictionaryEntriesRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
         } 
 
         /**
-         * my_dict
+         * The name of the intervention dictionary.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -92,7 +91,7 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.List < java.util.Map<String, ?>> body) {
             this.putBodyParameter("body", body);
@@ -101,7 +100,13 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to check the validity of input parameters. Default value: false.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **true**: checks only the validity of input parameters.
+         * *   **false**: checks the validity of input parameters and creates an attribution configuration.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

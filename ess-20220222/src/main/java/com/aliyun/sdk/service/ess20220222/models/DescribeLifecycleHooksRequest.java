@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLifecycleHooksRequest} extends {@link RequestModel}
  *
  * <p>DescribeLifecycleHooksRequest</p>
  */
 public class DescribeLifecycleHooksRequest extends Request {
-    @Query
-    @NameInMap("LifecycleHookIds")
-    private java.util.List < String > lifecycleHookIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookIds")
+    private java.util.List<String> lifecycleHookIds;
 
-    @Query
-    @NameInMap("LifecycleHookName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookName")
     private String lifecycleHookName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
     private DescribeLifecycleHooksRequest(Builder builder) {
@@ -77,7 +82,7 @@ public class DescribeLifecycleHooksRequest extends Request {
     /**
      * @return lifecycleHookIds
      */
-    public java.util.List < String > getLifecycleHookIds() {
+    public java.util.List<String> getLifecycleHookIds() {
         return this.lifecycleHookIds;
     }
 
@@ -138,7 +143,7 @@ public class DescribeLifecycleHooksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLifecycleHooksRequest, Builder> {
-        private java.util.List < String > lifecycleHookIds; 
+        private java.util.List<String> lifecycleHookIds; 
         private String lifecycleHookName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -166,16 +171,19 @@ public class DescribeLifecycleHooksRequest extends Request {
         } 
 
         /**
-         * LifecycleHookIds.
+         * <p>The IDs of the lifecycle hooks that you want to query.</p>
          */
-        public Builder lifecycleHookIds(java.util.List < String > lifecycleHookIds) {
+        public Builder lifecycleHookIds(java.util.List<String> lifecycleHookIds) {
             this.putQueryParameter("LifecycleHookIds", lifecycleHookIds);
             this.lifecycleHookIds = lifecycleHookIds;
             return this;
         }
 
         /**
-         * LifecycleHookName.
+         * <p>The name of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclehook****</p>
          */
         public Builder lifecycleHookName(String lifecycleHookName) {
             this.putQueryParameter("LifecycleHookName", lifecycleHookName);
@@ -202,7 +210,11 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +223,11 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +236,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +257,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

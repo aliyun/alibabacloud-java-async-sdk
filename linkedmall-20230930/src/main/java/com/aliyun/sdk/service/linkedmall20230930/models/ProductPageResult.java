@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductPageResult} extends {@link TeaModel}
  *
  * <p>ProductPageResult</p>
  */
 public class ProductPageResult extends TeaModel {
-    @NameInMap("pageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @NameInMap("products")
-    private java.util.List < Product > products;
+    @com.aliyun.core.annotation.NameInMap("products")
+    private java.util.List<Product> products;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("total")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("total")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer total;
 
     private ProductPageResult(Builder builder) {
@@ -63,7 +68,7 @@ public class ProductPageResult extends TeaModel {
     /**
      * @return products
      */
-    public java.util.List < Product > getProducts() {
+    public java.util.List<Product> getProducts() {
         return this.products;
     }
 
@@ -84,12 +89,15 @@ public class ProductPageResult extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Product > products; 
+        private java.util.List<Product> products; 
         private String requestId; 
         private Integer total; 
 
         /**
-         * pageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -97,7 +105,10 @@ public class ProductPageResult extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +118,7 @@ public class ProductPageResult extends TeaModel {
         /**
          * products.
          */
-        public Builder products(java.util.List < Product > products) {
+        public Builder products(java.util.List<Product> products) {
             this.products = products;
             return this;
         }
@@ -121,7 +132,10 @@ public class ProductPageResult extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder total(Integer total) {
             this.total = total;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceAttributeResponseBody</p>
  */
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceAttributeResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The result returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -71,28 +76,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("CCU")
-        private Integer CCU;
-
-        @NameInMap("CpuCores")
-        private Integer cpuCores;
-
-        @NameInMap("Memory")
-        private Integer memory;
-
-        @NameInMap("NodeStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private String nodeStatus;
 
-        @NameInMap("String")
-        private String string;
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
 
         private Nodes(Builder builder) {
-            this.CCU = builder.CCU;
-            this.cpuCores = builder.cpuCores;
-            this.memory = builder.memory;
             this.nodeStatus = builder.nodeStatus;
-            this.string = builder.string;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -104,27 +103,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return CCU
-         */
-        public Integer getCCU() {
-            return this.CCU;
-        }
-
-        /**
-         * @return cpuCores
-         */
-        public Integer getCpuCores() {
-            return this.cpuCores;
-        }
-
-        /**
-         * @return memory
-         */
-        public Integer getMemory() {
-            return this.memory;
-        }
-
-        /**
          * @return nodeStatus
          */
         public String getNodeStatus() {
@@ -132,42 +110,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return string
+         * @return zoneId
          */
-        public String getString() {
-            return this.string;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
         public static final class Builder {
-            private Integer CCU; 
-            private Integer cpuCores; 
-            private Integer memory; 
             private String nodeStatus; 
-            private String string; 
-
-            /**
-             * CCU.
-             */
-            public Builder CCU(Integer CCU) {
-                this.CCU = CCU;
-                return this;
-            }
-
-            /**
-             * CpuCores.
-             */
-            public Builder cpuCores(Integer cpuCores) {
-                this.cpuCores = cpuCores;
-                return this;
-            }
-
-            /**
-             * Memory.
-             */
-            public Builder memory(Integer memory) {
-                this.memory = memory;
-                return this;
-            }
+            private String zoneId; 
 
             /**
              * NodeStatus.
@@ -178,10 +129,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * String.
+             * ZoneId.
              */
-            public Builder string(String string) {
-                this.string = string;
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
@@ -192,11 +143,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -253,89 +210,101 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private String bid;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("DisabledPorts")
+        private String disabledPorts;
+
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineMinorVersion")
         private String engineMinorVersion;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LatestEngineMinorVersion")
+        private String latestEngineMinorVersion;
+
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private java.util.List<Nodes> nodes;
 
-        @NameInMap("ObjectStoreSize")
+        @com.aliyun.core.annotation.NameInMap("ObjectStoreSize")
         private String objectStoreSize;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ScaleMax")
+        @com.aliyun.core.annotation.NameInMap("ScaleMax")
         private Integer scaleMax;
 
-        @NameInMap("ScaleMin")
+        @com.aliyun.core.annotation.NameInMap("ScaleMin")
         private Integer scaleMin;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageSize")
+        @com.aliyun.core.annotation.NameInMap("StorageSize")
         private Integer storageSize;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Data(Builder builder) {
@@ -346,10 +315,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceId = builder.DBInstanceId;
             this.deletionProtection = builder.deletionProtection;
             this.description = builder.description;
+            this.disabledPorts = builder.disabledPorts;
             this.engine = builder.engine;
             this.engineMinorVersion = builder.engineMinorVersion;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.latestEngineMinorVersion = builder.latestEngineMinorVersion;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.maintainEndTime = builder.maintainEndTime;
@@ -427,6 +398,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return disabledPorts
+         */
+        public String getDisabledPorts() {
+            return this.disabledPorts;
+        }
+
+        /**
          * @return engine
          */
         public String getEngine() {
@@ -452,6 +430,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return latestEngineMinorVersion
+         */
+        public String getLatestEngineMinorVersion() {
+            return this.latestEngineMinorVersion;
         }
 
         /**
@@ -485,7 +470,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -548,7 +533,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -581,15 +566,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceId; 
             private Boolean deletionProtection; 
             private String description; 
+            private String disabledPorts; 
             private String engine; 
             private String engineMinorVersion; 
             private String engineVersion; 
             private String expireTime; 
+            private String latestEngineMinorVersion; 
             private String lockMode; 
             private String lockReason; 
             private String maintainEndTime; 
             private String maintainStartTime; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String objectStoreSize; 
             private String regionId; 
             private String resourceGroupId; 
@@ -598,7 +585,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String status; 
             private Integer storageSize; 
             private String storageType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
@@ -660,6 +647,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * DisabledPorts.
+             */
+            public Builder disabledPorts(String disabledPorts) {
+                this.disabledPorts = disabledPorts;
+                return this;
+            }
+
+            /**
              * Engine.
              */
             public Builder engine(String engine) {
@@ -688,6 +683,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * LatestEngineMinorVersion.
+             */
+            public Builder latestEngineMinorVersion(String latestEngineMinorVersion) {
+                this.latestEngineMinorVersion = latestEngineMinorVersion;
                 return this;
             }
 
@@ -726,7 +729,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -798,7 +801,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -812,7 +815,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9duj8xd6r1gzhsg*****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

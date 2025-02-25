@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateQuotaResponseBody</p>
  */
 public class UpdateQuotaResponseBody extends TeaModel {
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateQuotaResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpdateQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Quota Id
+         * <p>Quota Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota-20210126170216-mtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;

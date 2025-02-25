@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTensorboardRequest} extends {@link RequestModel}
  *
  * <p>GetTensorboardRequest</p>
  */
 public class GetTensorboardRequest extends Request {
-    @Path
-    @NameInMap("TensorboardId")
-    @Validation(required = true, maxLength = 256, minLength = 1)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TensorboardId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String tensorboardId;
 
-    @Query
-    @NameInMap("JodId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JodId")
     private String jodId;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private GetTensorboardRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class GetTensorboardRequest extends Request {
         } 
 
         /**
-         * TensorboardId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tb-20210114104214-xxxxx</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putPathParameter("TensorboardId", tensorboardId);

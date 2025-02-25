@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotaDetail} extends {@link TeaModel}
  *
  * <p>QuotaDetail</p>
  */
 public class QuotaDetail extends TeaModel {
-    @NameInMap("CPU")
+    @com.aliyun.core.annotation.NameInMap("CPU")
     private String CPU;
 
-    @NameInMap("GPU")
+    @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
-    @NameInMap("GPUDetails")
-    private java.util.List < GPUDetail > GPUDetails;
+    @com.aliyun.core.annotation.NameInMap("GPUDetails")
+    private java.util.List<GPUDetail> GPUDetails;
 
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("GPUTypeFullName")
+    @com.aliyun.core.annotation.NameInMap("GPUTypeFullName")
     private String GPUTypeFullName;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private String memory;
 
     private QuotaDetail(Builder builder) {
@@ -64,7 +69,7 @@ public class QuotaDetail extends TeaModel {
     /**
      * @return GPUDetails
      */
-    public java.util.List < GPUDetail > getGPUDetails() {
+    public java.util.List<GPUDetail> getGPUDetails() {
         return this.GPUDetails;
     }
 
@@ -92,7 +97,7 @@ public class QuotaDetail extends TeaModel {
     public static final class Builder {
         private String CPU; 
         private String GPU; 
-        private java.util.List < GPUDetail > GPUDetails; 
+        private java.util.List<GPUDetail> GPUDetails; 
         private String GPUType; 
         private String GPUTypeFullName; 
         private String memory; 
@@ -116,7 +121,7 @@ public class QuotaDetail extends TeaModel {
         /**
          * GPUDetails.
          */
-        public Builder GPUDetails(java.util.List < GPUDetail > GPUDetails) {
+        public Builder GPUDetails(java.util.List<GPUDetail> GPUDetails) {
             this.GPUDetails = GPUDetails;
             return this;
         }

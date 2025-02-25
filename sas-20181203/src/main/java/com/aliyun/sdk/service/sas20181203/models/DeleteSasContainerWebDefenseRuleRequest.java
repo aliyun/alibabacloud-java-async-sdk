@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSasContainerWebDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteSasContainerWebDefenseRuleRequest</p>
  */
 public class DeleteSasContainerWebDefenseRuleRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleId;
 
     private DeleteSasContainerWebDefenseRuleRequest(Builder builder) {
@@ -55,10 +60,14 @@ public class DeleteSasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <blockquote>
+         * <p> You can call the ListContainerWebDefenseRule operation to query the rule ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the ListContainerWebDefenseRule operation to query the rule ID.
+         * <strong>example:</strong>
+         * <p>400597</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

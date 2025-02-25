@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDelegatedAdministratorsRequest} extends {@link RequestModel}
  *
  * <p>ListDelegatedAdministratorsRequest</p>
  */
 public class ListDelegatedAdministratorsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ServicePrincipal")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePrincipal")
     private String servicePrincipal;
 
     private ListDelegatedAdministratorsRequest(Builder builder) {
@@ -82,10 +87,11 @@ public class ListDelegatedAdministratorsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -94,10 +100,11 @@ public class ListDelegatedAdministratorsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -106,10 +113,11 @@ public class ListDelegatedAdministratorsRequest extends Request {
         }
 
         /**
-         * The identifier of the trusted service.
-         * <p>
+         * <p>The identifier of the trusted service.</p>
+         * <p>For more information, see the <code>Trusted service identifier</code> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</p>
          * 
-         * For more information, see the `Trusted service identifier` column in [Supported trusted services](~~208133~~).
+         * <strong>example:</strong>
+         * <p>cloudfw.aliyuncs.com</p>
          */
         public Builder servicePrincipal(String servicePrincipal) {
             this.putQueryParameter("ServicePrincipal", servicePrincipal);

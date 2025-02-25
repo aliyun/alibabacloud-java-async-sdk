@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserBackupFileRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserBackupFileRequest</p>
  */
 public class UpdateUserBackupFileRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupId;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String comment;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
     private UpdateUserBackupFileRequest(Builder builder) {
@@ -155,7 +160,11 @@ public class UpdateUserBackupFileRequest extends Request {
         } 
 
         /**
-         * The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.
+         * <p>The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-kwwvr7v8t7of********</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -164,7 +173,10 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The new description of the full backup file.
+         * <p>The new description of the full backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommentTest</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -182,7 +194,11 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -191,7 +207,10 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -218,7 +237,10 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.
+         * <p>The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);

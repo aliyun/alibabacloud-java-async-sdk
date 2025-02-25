@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOpaClusterStrategyNewResponseBody} extends {@link TeaModel}
  *
  * <p>ListOpaClusterStrategyNewResponseBody</p>
  */
 public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("List")
-    private java.util.List < List> list;
+    @com.aliyun.core.annotation.NameInMap("List")
+    private java.util.List<List> list;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListOpaClusterStrategyNewResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -103,14 +108,17 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +126,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,15 +137,18 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * <p>The rules.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The message that shows the export task result. The value is fixed as <strong>success</strong>, which indicates that the export task is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +164,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7DFD947C-9172-5129-B783-DD14C55191D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +175,14 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,35 +195,41 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOpaClusterStrategyNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOpaClusterStrategyNewResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private Integer action;
 
-        @NameInMap("ClusterCount")
+        @com.aliyun.core.annotation.NameInMap("ClusterCount")
         private Integer clusterCount;
 
-        @NameInMap("ClusterIdList")
-        private java.util.List < String > clusterIdList;
+        @com.aliyun.core.annotation.NameInMap("ClusterIdList")
+        private java.util.List<String> clusterIdList;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageName")
-        private java.util.List < String > imageName;
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private java.util.List<String> imageName;
 
-        @NameInMap("Label")
-        private java.util.List < String > label;
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private java.util.List<String> label;
 
-        @NameInMap("MaliciousImage")
+        @com.aliyun.core.annotation.NameInMap("MaliciousImage")
         private Boolean maliciousImage;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private Long strategyId;
 
-        @NameInMap("StrategyName")
+        @com.aliyun.core.annotation.NameInMap("StrategyName")
         private String strategyName;
 
-        @NameInMap("UnScanedImage")
+        @com.aliyun.core.annotation.NameInMap("UnScanedImage")
         private Boolean unScanedImage;
 
         private List(Builder builder) {
@@ -240,7 +270,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         /**
          * @return clusterIdList
          */
-        public java.util.List < String > getClusterIdList() {
+        public java.util.List<String> getClusterIdList() {
             return this.clusterIdList;
         }
 
@@ -254,14 +284,14 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         /**
          * @return imageName
          */
-        public java.util.List < String > getImageName() {
+        public java.util.List<String> getImageName() {
             return this.imageName;
         }
 
         /**
          * @return label
          */
-        public java.util.List < String > getLabel() {
+        public java.util.List<String> getLabel() {
             return this.label;
         }
 
@@ -296,17 +326,25 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         public static final class Builder {
             private Integer action; 
             private Integer clusterCount; 
-            private java.util.List < String > clusterIdList; 
+            private java.util.List<String> clusterIdList; 
             private String description; 
-            private java.util.List < String > imageName; 
-            private java.util.List < String > label; 
+            private java.util.List<String> imageName; 
+            private java.util.List<String> label; 
             private Boolean maliciousImage; 
             private Long strategyId; 
             private String strategyName; 
             private Boolean unScanedImage; 
 
             /**
-             * Action.
+             * <p>The action of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: trigger alerts</li>
+             * <li><strong>2</strong>: block</li>
+             * <li><strong>3</strong>: allow</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder action(Integer action) {
                 this.action = action;
@@ -314,7 +352,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterCount.
+             * <p>The number of clusters on which the rule takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -322,15 +363,18 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterIdList.
+             * <p>The clusters on which the rule takes effect.</p>
              */
-            public Builder clusterIdList(java.util.List < String > clusterIdList) {
+            public Builder clusterIdList(java.util.List<String> clusterIdList) {
                 this.clusterIdList = clusterIdList;
                 return this;
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Config the Event Audit policys</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,23 +382,30 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image names.</p>
              */
-            public Builder imageName(java.util.List < String > imageName) {
+            public Builder imageName(java.util.List<String> imageName) {
                 this.imageName = imageName;
                 return this;
             }
 
             /**
-             * Label.
+             * <p>The tags that are added to the container.</p>
              */
-            public Builder label(java.util.List < String > label) {
+            public Builder label(java.util.List<String> label) {
                 this.label = label;
                 return this;
             }
 
             /**
-             * MaliciousImage.
+             * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder maliciousImage(Boolean maliciousImage) {
                 this.maliciousImage = maliciousImage;
@@ -362,7 +413,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -370,7 +424,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto-strategy-vohuiq</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -378,7 +435,14 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * UnScanedImage.
+             * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder unScanedImage(Boolean unScanedImage) {
                 this.unScanedImage = unScanedImage;
@@ -392,17 +456,23 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOpaClusterStrategyNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOpaClusterStrategyNewResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -455,7 +525,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -463,7 +536,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -471,7 +547,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +558,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

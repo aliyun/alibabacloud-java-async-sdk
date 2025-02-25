@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnSSLCertificateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnSSLCertificateListRequest</p>
  */
 public class DescribeCdnSSLCertificateListRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("SearchKeyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKeyword")
     private String searchKeyword;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeCdnSSLCertificateListRequest(Builder builder) {
@@ -124,7 +124,10 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name. You can specify only one domain name in each request.
+         * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,7 +145,10 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +157,10 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: an integer from **1** to **1000**.
+         * <p>The number of entries per page. Valid values: an integer from <strong>1</strong> to <strong>1000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +169,10 @@ public class DescribeCdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query the certificate.
+         * <p>The keyword that is used to query the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>certabc</p>
          */
         public Builder searchKeyword(String searchKeyword) {
             this.putQueryParameter("SearchKeyword", searchKeyword);

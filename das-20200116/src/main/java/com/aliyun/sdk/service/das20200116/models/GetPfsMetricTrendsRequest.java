@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPfsMetricTrendsRequest} extends {@link RequestModel}
  *
  * <p>GetPfsMetricTrendsRequest</p>
  */
 public class GetPfsMetricTrendsRequest extends Request {
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("Metric")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metric")
     private String metric;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private GetPfsMetricTrendsRequest(Builder builder) {
@@ -110,10 +115,13 @@ public class GetPfsMetricTrendsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
+         * </blockquote>
          * 
-         * >  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.
+         * <strong>example:</strong>
+         * <p>1678432430967</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -122,7 +130,10 @@ public class GetPfsMetricTrendsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-m5ea73876ukci****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -131,13 +142,16 @@ public class GetPfsMetricTrendsRequest extends Request {
         }
 
         /**
-         * The metric whose trend you want to query. Valid values:
-         * <p>
+         * <p>The metric whose trend you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>count</strong>: the number of executions.</li>
+         * <li><strong>avgRt</strong>: the average execution duration.</li>
+         * <li><strong>rtRate</strong>: the execution duration percentage.</li>
+         * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
+         * </ul>
          * 
-         * *   **count**: the number of executions.
-         * *   **avgRt**: the average execution duration.
-         * *   **rtRate**: the execution duration percentage.
-         * *   **rowsExamined**: the total number of scanned rows.
+         * <strong>example:</strong>
+         * <p>Count</p>
          */
         public Builder metric(String metric) {
             this.putBodyParameter("Metric", metric);
@@ -146,10 +160,13 @@ public class GetPfsMetricTrendsRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p> This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL clusters.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -158,7 +175,10 @@ public class GetPfsMetricTrendsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677461663092</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

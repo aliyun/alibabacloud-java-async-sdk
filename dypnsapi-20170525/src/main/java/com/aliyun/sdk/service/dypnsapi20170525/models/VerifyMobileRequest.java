@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyMobileRequest} extends {@link RequestModel}
  *
  * <p>VerifyMobileRequest</p>
  */
 public class VerifyMobileRequest extends Request {
-    @Query
-    @NameInMap("AccessCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessCode;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private VerifyMobileRequest(Builder builder) {
@@ -126,7 +126,11 @@ public class VerifyMobileRequest extends Request {
         } 
 
         /**
-         * AccessCode.
+         * <p>The token obtained by the SDK for your app.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dfafdafad542****</p>
          */
         public Builder accessCode(String accessCode) {
             this.putQueryParameter("AccessCode", accessCode);
@@ -135,7 +139,10 @@ public class VerifyMobileRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>The external ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -153,7 +160,11 @@ public class VerifyMobileRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800****00</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

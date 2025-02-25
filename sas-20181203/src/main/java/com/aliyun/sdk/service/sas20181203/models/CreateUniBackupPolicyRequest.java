@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUniBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateUniBackupPolicyRequest</p>
  */
 public class CreateUniBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPassword")
     private String accountPassword;
 
-    @Query
-    @NameInMap("DatabaseAddByUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseAddByUser")
     private String databaseAddByUser;
 
-    @Query
-    @NameInMap("DatabaseType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseType;
 
-    @Query
-    @NameInMap("FullPlan")
-    @Validation(required = true)
-    private java.util.Map < String, ? > fullPlan;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullPlan")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> fullPlan;
 
-    @Query
-    @NameInMap("IncPlan")
-    @Validation(required = true)
-    private java.util.Map < String, ? > incPlan;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncPlan")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> incPlan;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Query
-    @NameInMap("Retention")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer retention;
 
-    @Query
-    @NameInMap("SpeedLimiter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeedLimiter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long speedLimiter;
 
-    @Query
-    @NameInMap("UniRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uniRegionId;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private CreateUniBackupPolicyRequest(Builder builder) {
@@ -128,14 +133,14 @@ public class CreateUniBackupPolicyRequest extends Request {
     /**
      * @return fullPlan
      */
-    public java.util.Map < String, ? > getFullPlan() {
+    public java.util.Map<String, ?> getFullPlan() {
         return this.fullPlan;
     }
 
     /**
      * @return incPlan
      */
-    public java.util.Map < String, ? > getIncPlan() {
+    public java.util.Map<String, ?> getIncPlan() {
         return this.incPlan;
     }
 
@@ -186,8 +191,8 @@ public class CreateUniBackupPolicyRequest extends Request {
         private String accountPassword; 
         private String databaseAddByUser; 
         private String databaseType; 
-        private java.util.Map < String, ? > fullPlan; 
-        private java.util.Map < String, ? > incPlan; 
+        private java.util.Map<String, ?> fullPlan; 
+        private java.util.Map<String, ?> incPlan; 
         private String instanceId; 
         private String policyName; 
         private Integer retention; 
@@ -216,7 +221,10 @@ public class CreateUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -225,7 +233,10 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pass****</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -234,11 +245,14 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is manually added. Valid values:
-         * <p>
+         * <p>Specifies whether the database is manually added. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder databaseAddByUser(String databaseAddByUser) {
             this.putQueryParameter("DatabaseAddByUser", databaseAddByUser);
@@ -247,12 +261,16 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The type of the database. Valid values:
-         * <p>
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>MYSQL</strong></li>
+         * <li><strong>ORACLE</strong></li>
+         * <li><strong>MSSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MYSQL**
-         * *   **ORACLE**
-         * *   **MSSQL**
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         public Builder databaseType(String databaseType) {
             this.putQueryParameter("DatabaseType", databaseType);
@@ -261,15 +279,19 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for full data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:
-         * <p>
+         * <p>The policy for full data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:</p>
+         * <ul>
+         * <li><strong>start</strong>: the start time of a backup task.</li>
+         * <li><strong>interval</strong>: the interval of backup tasks.</li>
+         * <li><strong>type</strong>: the unit of the interval.</li>
+         * <li><strong>days</strong>: the days of a week on which a backup task is performed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **start**: the start time of a backup task.
-         * *   **interval**: the interval of backup tasks.
-         * *   **type**: the unit of the interval.
-         * *   **days**: the days of a week on which a backup task is performed.
+         * <strong>example:</strong>
+         * <p>{&quot;days&quot;:[4],&quot;interval&quot;:1,&quot;planType&quot;:&quot;weekly&quot;,&quot;startTime&quot;:&quot;22:00:00&quot;}</p>
          */
-        public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
+        public Builder fullPlan(java.util.Map<String, ?> fullPlan) {
             String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
             this.putQueryParameter("FullPlan", fullPlanShrink);
             this.fullPlan = fullPlan;
@@ -277,15 +299,19 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for incremental data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:
-         * <p>
+         * <p>The policy for incremental data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:</p>
+         * <ul>
+         * <li><strong>start</strong>: the start time of a backup task.</li>
+         * <li><strong>interval</strong>: the interval of backup tasks.</li>
+         * <li><strong>type</strong>: the unit of the interval.</li>
+         * <li><strong>days</strong>: the days of a week on which a backup task is performed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **start**: the start time of a backup task.
-         * *   **interval**: the interval of backup tasks.
-         * *   **type**: the unit of the interval.
-         * *   **days**: the days of a week on which a backup task is performed.
+         * <strong>example:</strong>
+         * <p>{&quot;interval&quot;:1,&quot;planType&quot;:&quot;daily&quot;,&quot;startTime&quot;:&quot;23:30:00&quot;}</p>
          */
-        public Builder incPlan(java.util.Map < String, ? > incPlan) {
+        public Builder incPlan(java.util.Map<String, ?> incPlan) {
             String incPlanShrink = shrink(incPlan, "IncPlan", "json");
             this.putQueryParameter("IncPlan", incPlanShrink);
             this.incPlan = incPlan;
@@ -293,10 +319,14 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the Elastic Compute Service (ECS) instance.
-         * <p>
+         * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the IDs of ECS instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the IDs of ECS instances.
+         * <strong>example:</strong>
+         * <p>i-bp1fu4aqltf1huhc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -305,7 +335,11 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The name of the anti-ransomware policy.
+         * <p>The name of the anti-ransomware policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql-policy</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -314,7 +348,11 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of backup data.
+         * <p>The retention period of backup data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);
@@ -323,7 +361,11 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
+         * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5242880</p>
          */
         public Builder speedLimiter(Long speedLimiter) {
             this.putQueryParameter("SpeedLimiter", speedLimiter);
@@ -332,7 +374,11 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
+         * <p>The region in which the server resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);
@@ -341,10 +387,13 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The UUID of the server whose data is backed up based on the anti-ransomware policy.
-         * <p>
+         * <p>The UUID of the server whose data is backed up based on the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>045cad48-eb08-4047-a70c-713aec7b****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

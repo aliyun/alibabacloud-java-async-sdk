@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSprintRequest} extends {@link RequestModel}
  *
  * <p>CreateSprintRequest</p>
  */
 public class CreateSprintRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("endDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endDate")
     private String endDate;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Body
-    @NameInMap("staffIds")
-    @Validation(required = true)
-    private java.util.List < String > staffIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("staffIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> staffIds;
 
-    @Body
-    @NameInMap("startDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startDate")
     private String startDate;
 
     private CreateSprintRequest(Builder builder) {
@@ -94,7 +99,7 @@ public class CreateSprintRequest extends Request {
     /**
      * @return staffIds
      */
-    public java.util.List < String > getStaffIds() {
+    public java.util.List<String> getStaffIds() {
         return this.staffIds;
     }
 
@@ -110,7 +115,7 @@ public class CreateSprintRequest extends Request {
         private String endDate; 
         private String name; 
         private String spaceIdentifier; 
-        private java.util.List < String > staffIds; 
+        private java.util.List<String> staffIds; 
         private String startDate; 
 
         private Builder() {
@@ -128,7 +133,10 @@ public class CreateSprintRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -146,7 +154,10 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -155,7 +166,10 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asd345xxxxx9q9845xxxxx34</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putBodyParameter("spaceIdentifier", spaceIdentifier);
@@ -164,9 +178,9 @@ public class CreateSprintRequest extends Request {
         }
 
         /**
-         * staffIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder staffIds(java.util.List < String > staffIds) {
+        public Builder staffIds(java.util.List<String> staffIds) {
             this.putBodyParameter("staffIds", staffIds);
             this.staffIds = staffIds;
             return this;

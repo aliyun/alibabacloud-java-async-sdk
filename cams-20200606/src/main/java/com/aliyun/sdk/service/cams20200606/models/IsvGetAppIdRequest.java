@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IsvGetAppIdRequest} extends {@link RequestModel}
  *
  * <p>IsvGetAppIdRequest</p>
  */
 public class IsvGetAppIdRequest extends Request {
-    @Body
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private String permissions;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private IsvGetAppIdRequest(Builder builder) {
@@ -69,7 +69,16 @@ public class IsvGetAppIdRequest extends Request {
         } 
 
         /**
-         * Permissions.
+         * <p>The permission.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>whatsapp_business_messaging: sending permission on WhatsApp messages</li>
+         * <li>ads_management: management permission on advertisements</li>
+         * <li>catalog_management: management permission on catalogs</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>catalog_management</p>
          */
         public Builder permissions(String permissions) {
             this.putBodyParameter("Permissions", permissions);
@@ -78,7 +87,11 @@ public class IsvGetAppIdRequest extends Request {
         }
 
         /**
-         * The type of the application. Set the value to WHATSAPP.
+         * <p>The type of the app. Valid value: WHATSAPP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

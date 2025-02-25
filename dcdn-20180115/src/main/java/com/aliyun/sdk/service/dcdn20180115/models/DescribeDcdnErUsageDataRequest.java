@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnErUsageDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnErUsageDataRequest</p>
  */
 public class DescribeDcdnErUsageDataRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("RoutineID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutineID")
     private String routineID;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @Query
-    @NameInMap("SplitBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SplitBy")
     private String splitBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnErUsageDataRequest(Builder builder) {
@@ -110,10 +110,13 @@ public class DescribeDcdnErUsageDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2018-10-31T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -122,7 +125,10 @@ public class DescribeDcdnErUsageDataRequest extends Request {
         }
 
         /**
-         * The ID of the routine.
+         * <p>The ID of the routine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routine1.test</p>
          */
         public Builder routineID(String routineID) {
             this.putQueryParameter("RoutineID", routineID);
@@ -131,12 +137,15 @@ public class DescribeDcdnErUsageDataRequest extends Request {
         }
 
         /**
-         * The specification of the routine. Valid values:
-         * <p>
+         * <p>The specification of the routine. Valid values:</p>
+         * <ul>
+         * <li>5ms</li>
+         * <li>50ms</li>
+         * <li>100ms</li>
+         * </ul>
          * 
-         * *   5ms
-         * *   50ms
-         * *   100ms
+         * <strong>example:</strong>
+         * <p>50ms</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -145,10 +154,13 @@ public class DescribeDcdnErUsageDataRequest extends Request {
         }
 
         /**
-         * Specifies how the results are grouped. If you set this parameter to routine, the returned results are grouped based on the routine ID. If you set this parameter to spec, the returned results are grouped based on the routine specification.
-         * <p>
+         * <p>Specifies how the results are grouped. If you set this parameter to routine, the returned results are grouped based on the routine ID. If you set this parameter to spec, the returned results are grouped based on the routine specification.</p>
+         * <blockquote>
+         * <p>If you leave this parameter empty, the returned results are not grouped.</p>
+         * </blockquote>
          * 
-         * > If you leave this parameter empty, the returned results are not grouped.
+         * <strong>example:</strong>
+         * <p>routine</p>
          */
         public Builder splitBy(String splitBy) {
             this.putQueryParameter("SplitBy", splitBy);
@@ -157,7 +169,10 @@ public class DescribeDcdnErUsageDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

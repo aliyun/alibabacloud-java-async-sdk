@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogstashResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogstashResponseBody</p>
  */
 public class DescribeLogstashResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeLogstashResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Detailed information about the instance.
+         * <p>Detailed information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C9334241-4837-46C2-B24B-9BDC517318DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the instance.
+         * <p>The configurations of the instance.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +74,17 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogstashResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("tagKey")
+        @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
 
-        @NameInMap("tagValue")
+        @com.aliyun.core.annotation.NameInMap("tagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +130,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the zones.
+             * <p>The information about the zones.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -132,11 +147,17 @@ public class DescribeLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogstashResponseBody</p>
+     */
     public static class ZoneInfos extends TeaModel {
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private ZoneInfos(Builder builder) {
@@ -171,7 +192,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The zone ID of the new instance.
+             * <p>The zone ID of the new instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -179,7 +203,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of cluster extension parameters.
+             * <p>The configuration of cluster extension parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -193,14 +220,20 @@ public class DescribeLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogstashResponseBody</p>
+     */
     public static class EndpointList extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private String port;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private EndpointList(Builder builder) {
@@ -244,7 +277,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The tags added to the ALB instance.
+             * <p>The tags added to the ALB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.16.**.**</code></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -252,7 +288,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9600</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -260,7 +299,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -274,17 +316,23 @@ public class DescribeLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogstashResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vsArea")
+        @com.aliyun.core.annotation.NameInMap("vsArea")
         private String vsArea;
 
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
         private NetworkConfig(Builder builder) {
@@ -337,7 +385,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * The ID of the vSwitch to which the instance is connected.
+             * <p>The ID of the vSwitch to which the instance is connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -345,7 +396,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the cluster resides.
+             * <p>The zone where the cluster resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtmagcva****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -353,7 +407,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance. Valid values: Currently, only Virtual Private Cloud (VPC) are supported.
+             * <p>The network type of the instance. Valid values: Currently, only Virtual Private Cloud (VPC) are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-*</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -375,17 +432,23 @@ public class DescribeLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogstashResponseBody</p>
+     */
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskEncryption")
+        @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private NodeSpec(Builder builder) {
@@ -438,11 +501,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * Whether to use disk encryption:
-             * <p>
+             * <p>Whether to use disk encryption:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -450,7 +516,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type of the node.
+             * <p>The disk type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -458,7 +527,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The network configurations.
+             * <p>The network configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -466,7 +538,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size of the node.
+             * <p>The disk size of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn1ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -480,56 +555,62 @@ public class DescribeLogstashResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLogstashResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogstashResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("ExtendConfigs")
+        @com.aliyun.core.annotation.NameInMap("ExtendConfigs")
         private java.util.List < java.util.Map<String, ?>> extendConfigs;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("ZoneInfos")
+        @com.aliyun.core.annotation.NameInMap("ZoneInfos")
         private java.util.List < ZoneInfos> zoneInfos;
 
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private java.util.Map < String, ? > config;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("endpointList")
+        @com.aliyun.core.annotation.NameInMap("endpointList")
         private java.util.List < EndpointList> endpointList;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("networkConfig")
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
 
-        @NameInMap("nodeAmount")
+        @com.aliyun.core.annotation.NameInMap("nodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("nodeSpec")
+        @com.aliyun.core.annotation.NameInMap("nodeSpec")
         private NodeSpec nodeSpec;
 
-        @NameInMap("paymentType")
+        @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
-        @NameInMap("vpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("vpcInstanceId")
         private String vpcInstanceId;
 
         private Result(Builder builder) {
@@ -699,7 +780,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * The configuration information of the node.
+             * <p>The configuration information of the node.</p>
              */
             public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -707,7 +788,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data nodes.
+             * <p>The number of data nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzvowej3i****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -715,7 +799,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -723,11 +807,11 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the zone. Valid values:
-             * <p>
-             * 
-             * *   ISOLATION: offline
-             * *   NORMAL
+             * <p>The status of the zone. Valid values:</p>
+             * <ul>
+             * <li>ISOLATION: offline</li>
+             * <li>NORMAL</li>
+             * </ul>
              */
             public Builder zoneInfos(java.util.List < ZoneInfos> zoneInfos) {
                 this.zoneInfos = zoneInfos;
@@ -735,11 +819,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. Valid values:
-             * <p>
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li>prepaid: subscription</li>
+             * <li>postpaid: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   prepaid: subscription
-             * *   postpaid: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</p>
              */
             public Builder config(java.util.Map < String, ? > config) {
                 this.config = config;
@@ -747,13 +834,16 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Four states are supported:
-             * <p>
+             * <p>The state of the instance. Four states are supported:</p>
+             * <ul>
+             * <li>Normal: active</li>
+             * <li>Active: activating</li>
+             * <li>Freeze: inactive</li>
+             * <li>Invalid: invalid</li>
+             * </ul>
              * 
-             * *   Normal: active
-             * *   Active: activating
-             * *   Freeze: inactive
-             * *   Invalid: invalid
+             * <strong>example:</strong>
+             * <p>2020-02-06T14:12:03.672Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -761,7 +851,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls-cn-abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -769,7 +862,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the node resides.
+             * <p>The ID of the zone where the node resides.</p>
              */
             public Builder endpointList(java.util.List < EndpointList> endpointList) {
                 this.endpointList = endpointList;
@@ -777,7 +870,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The access information of the node.
+             * <p>The access information of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls-cn-abc</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -785,7 +881,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -793,7 +889,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -801,7 +900,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the node.
+             * <p>The specifications of the node.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -809,7 +908,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prepaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -817,7 +919,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the elastic container instances belong.
+             * <p>The ID of the virtual private cloud (VPC) to which the elastic container instances belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -825,7 +930,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the dedicated KMS instance.
+             * <p>The edition of the dedicated KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-06T14:22:36.850Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -833,7 +941,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.4.0_with_X-Pack</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -841,7 +952,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated.
+             * <p>The time when the instance was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtmagcva****</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

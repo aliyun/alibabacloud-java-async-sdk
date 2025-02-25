@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListK8sAccessInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ListK8sAccessInfoResponseBody</p>
  */
 public class ListK8sAccessInfoResponseBody extends TeaModel {
-    @NameInMap("K8sAccessInfos")
-    private java.util.List < K8sAccessInfos> k8sAccessInfos;
+    @com.aliyun.core.annotation.NameInMap("K8sAccessInfos")
+    private java.util.List<K8sAccessInfos> k8sAccessInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListK8sAccessInfoResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     /**
      * @return k8sAccessInfos
      */
-    public java.util.List < K8sAccessInfos> getK8sAccessInfos() {
+    public java.util.List<K8sAccessInfos> getK8sAccessInfos() {
         return this.k8sAccessInfos;
     }
 
@@ -46,19 +51,22 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < K8sAccessInfos> k8sAccessInfos; 
+        private java.util.List<K8sAccessInfos> k8sAccessInfos; 
         private String requestId; 
 
         /**
-         * The information about the Kubernetes clusters.
+         * <p>The information about the Kubernetes clusters.</p>
          */
-        public Builder k8sAccessInfos(java.util.List < K8sAccessInfos> k8sAccessInfos) {
+        public Builder k8sAccessInfos(java.util.List<K8sAccessInfos> k8sAccessInfos) {
             this.k8sAccessInfos = k8sAccessInfos;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,41 +79,47 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListK8sAccessInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListK8sAccessInfoResponseBody</p>
+     */
     public static class K8sAccessInfos extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("AuditLogStore")
+        @com.aliyun.core.annotation.NameInMap("AuditLogStore")
         private String auditLogStore;
 
-        @NameInMap("AuditProject")
+        @com.aliyun.core.annotation.NameInMap("AuditProject")
         private String auditProject;
 
-        @NameInMap("AuditRegionId")
+        @com.aliyun.core.annotation.NameInMap("AuditRegionId")
         private String auditRegionId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private Long expireDate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstallKey")
+        @com.aliyun.core.annotation.NameInMap("InstallKey")
         private String installKey;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
         private K8sAccessInfos(Builder builder) {
@@ -230,7 +244,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             private String vendor; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1960721413485****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -238,7 +255,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service Logstore that is used to store the audit logs.
+             * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit-cf6baf6afa106eca665296fdf68b****</p>
              */
             public Builder auditLogStore(String auditLogStore) {
                 this.auditLogStore = auditLogStore;
@@ -246,7 +266,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service project that is used to store the audit logs.
+             * <p>The Simple Log Service project that is used to store the audit logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-custom-your-project-sd89eh****</p>
              */
             public Builder auditProject(String auditProject) {
                 this.auditProject = auditProject;
@@ -254,7 +277,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server is deployed.
+             * <p>The ID of the region in which the server is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder auditRegionId(String auditRegionId) {
                 this.auditRegionId = auditRegionId;
@@ -262,7 +288,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0da5e4cb82a848c4a57c4dc9f49a****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -270,7 +299,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -278,7 +310,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690596321613</p>
              */
             public Builder expireDate(Long expireDate) {
                 this.expireDate = expireDate;
@@ -286,7 +321,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group.
+             * <p>The ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11088522</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -294,7 +332,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * <p>The name of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -302,7 +343,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the access information.
+             * <p>The UUID of the access information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67070</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -310,7 +354,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The installation key of the Kubernetes cluster.
+             * <p>The installation key of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder installKey(String installKey) {
                 this.installKey = installKey;
@@ -318,7 +365,10 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service provider.
+             * <p>The service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

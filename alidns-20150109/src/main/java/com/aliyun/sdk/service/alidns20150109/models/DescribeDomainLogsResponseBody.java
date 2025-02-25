@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainLogsResponseBody</p>
  */
 public class DescribeDomainLogsResponseBody extends TeaModel {
-    @NameInMap("DomainLogs")
+    @com.aliyun.core.annotation.NameInMap("DomainLogs")
     private DomainLogs domainLogs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainLogsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details about the operation logs that are queried.
+         * <p>The operation logs.</p>
          */
         public Builder domainLogs(DomainLogs domainLogs) {
             this.domainLogs = domainLogs;
@@ -94,7 +99,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of operation logs returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of operation logs returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainLogsResponseBody</p>
+     */
     public static class DomainLog extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionTime")
+        @com.aliyun.core.annotation.NameInMap("ActionTime")
         private String actionTime;
 
-        @NameInMap("ActionTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ActionTimestamp")
         private Long actionTimestamp;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DomainLog(Builder builder) {
@@ -230,7 +253,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The operation performed.
+             * <p>The operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Add</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -238,7 +264,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * <p>The time when the operation is performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-12T09:23Z</p>
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -246,7 +275,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates when the operation was performed.
+             * <p>The time when the operation was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>143562300000</p>
              */
             public Builder actionTimestamp(Long actionTimestamp) {
                 this.actionTimestamp = actionTimestamp;
@@ -254,7 +286,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address from which the operation was performed.
+             * <p>The IP address of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>182.92.253.20</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -262,7 +297,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -270,7 +308,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The message for the operation.
+             * <p>The message for the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>To the DNS record list</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -278,7 +319,10 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the private zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cxfd345sd234</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -292,9 +336,15 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainLogsResponseBody</p>
+     */
     public static class DomainLogs extends TeaModel {
-        @NameInMap("DomainLog")
-        private java.util.List < DomainLog> domainLog;
+        @com.aliyun.core.annotation.NameInMap("DomainLog")
+        private java.util.List<DomainLog> domainLog;
 
         private DomainLogs(Builder builder) {
             this.domainLog = builder.domainLog;
@@ -311,17 +361,17 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         /**
          * @return domainLog
          */
-        public java.util.List < DomainLog> getDomainLog() {
+        public java.util.List<DomainLog> getDomainLog() {
             return this.domainLog;
         }
 
         public static final class Builder {
-            private java.util.List < DomainLog> domainLog; 
+            private java.util.List<DomainLog> domainLog; 
 
             /**
              * DomainLog.
              */
-            public Builder domainLog(java.util.List < DomainLog> domainLog) {
+            public Builder domainLog(java.util.List<DomainLog> domainLog) {
                 this.domainLog = domainLog;
                 return this;
             }

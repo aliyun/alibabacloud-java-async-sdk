@@ -303,7 +303,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The system disk space of the GPU rendering instance.
+         * The system disk space of the GPU rendering instance. Unit: GB.
          */
         public Builder diskSizeGigabytes(String diskSizeGigabytes) {
             this.putBodyParameter("diskSizeGigabytes", diskSizeGigabytes);
@@ -312,7 +312,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The image ID of the GPU-rendered instance.
+         * The image ID of the GPU rendering instance.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("imageId", imageId);
@@ -375,7 +375,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The range of TCP ports that are open to the security group of the GPU rendering instance.
+         * The range of TCP ports that are enabled by the security group of the GPU rendering instance.
          */
         public Builder tcpPortRange(java.util.List < String > tcpPortRange) {
             this.putBodyParameter("tcpPortRange", tcpPortRange);
@@ -384,7 +384,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The range of UDP ports that are open to the security group of the GPU rendering instance.
+         * The range of UDP ports that are enabled by the security group of the GPU rendering instance.
          */
         public Builder udpPortRange(java.util.List < String > udpPortRange) {
             this.putBodyParameter("udpPortRange", udpPortRange);
@@ -393,7 +393,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the VPC in which the instance resides.
+         * The virtual private cloud (VPC) ID.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -402,7 +402,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The vSwitch ID.
          */
         public Builder vswId(String vswId) {
             this.putBodyParameter("vswId", vswId);

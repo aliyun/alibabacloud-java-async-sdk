@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataServiceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataServiceGroupResponseBody</p>
  */
 public class CreateDataServiceGroupResponseBody extends TeaModel {
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDataServiceGroupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDataServiceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the business process.
+         * <p>The business process ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_12345</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -58,7 +66,10 @@ public class CreateDataServiceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

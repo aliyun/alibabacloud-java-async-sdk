@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AckNodeSelector} extends {@link TeaModel}
  *
  * <p>AckNodeSelector</p>
  */
 public class AckNodeSelector extends TeaModel {
-    @NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
 
-    @NameInMap("Taints")
-    private java.util.List < Taints> taints;
+    @com.aliyun.core.annotation.NameInMap("Taints")
+    private java.util.List<Taints> taints;
 
     private AckNodeSelector(Builder builder) {
         this.labels = builder.labels;
@@ -34,33 +39,33 @@ public class AckNodeSelector extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
     /**
      * @return taints
      */
-    public java.util.List < Taints> getTaints() {
+    public java.util.List<Taints> getTaints() {
         return this.taints;
     }
 
     public static final class Builder {
-        private java.util.List < Labels> labels; 
-        private java.util.List < Taints> taints; 
+        private java.util.List<Labels> labels; 
+        private java.util.List<Taints> taints; 
 
         /**
-         * 污点列表。
+         * <p>污点列表。</p>
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }
 
         /**
-         * 污点列表。
+         * <p>污点列表。</p>
          */
-        public Builder taints(java.util.List < Taints> taints) {
+        public Builder taints(java.util.List<Taints> taints) {
             this.taints = taints;
             return this;
         }
@@ -71,11 +76,17 @@ public class AckNodeSelector extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AckNodeSelector} extends {@link TeaModel}
+     *
+     * <p>AckNodeSelector</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -110,7 +121,10 @@ public class AckNodeSelector extends TeaModel {
             private String value; 
 
             /**
-             * 标签键。
+             * <p>标签键。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +132,10 @@ public class AckNodeSelector extends TeaModel {
             }
 
             /**
-             * 标签值。
+             * <p>标签值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -132,14 +149,20 @@ public class AckNodeSelector extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AckNodeSelector} extends {@link TeaModel}
+     *
+     * <p>AckNodeSelector</p>
+     */
     public static class Taints extends TeaModel {
-        @NameInMap("Effect")
+        @com.aliyun.core.annotation.NameInMap("Effect")
         private String effect;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Taints(Builder builder) {
@@ -183,7 +206,7 @@ public class AckNodeSelector extends TeaModel {
             private String value; 
 
             /**
-             * 污点效果。
+             * <p>污点效果。</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -191,7 +214,10 @@ public class AckNodeSelector extends TeaModel {
             }
 
             /**
-             * 污点键。
+             * <p>污点键。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -199,7 +225,10 @@ public class AckNodeSelector extends TeaModel {
             }
 
             /**
-             * 污点值。
+             * <p>污点值。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;

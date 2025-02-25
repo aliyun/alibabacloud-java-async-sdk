@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEnvironmentResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEnvironmentResponseBody</p>
  */
 public class UpdateEnvironmentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateEnvironmentResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code or error code.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,10 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The result of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +101,10 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +112,10 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

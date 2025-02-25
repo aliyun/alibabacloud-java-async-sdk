@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAvatarResponseBody} extends {@link TeaModel}
  *
  * <p>GetAvatarResponseBody</p>
  */
 public class GetAvatarResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAvatarResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class GetAvatarResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class GetAvatarResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,14 @@ public class GetAvatarResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,32 +106,38 @@ public class GetAvatarResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAvatarResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAvatarResponseBody</p>
+     */
     public static class Avatar extends TeaModel {
-        @NameInMap("AvatarDescription")
+        @com.aliyun.core.annotation.NameInMap("AvatarDescription")
         private String avatarDescription;
 
-        @NameInMap("AvatarId")
+        @com.aliyun.core.annotation.NameInMap("AvatarId")
         private String avatarId;
 
-        @NameInMap("AvatarName")
+        @com.aliyun.core.annotation.NameInMap("AvatarName")
         private String avatarName;
 
-        @NameInMap("AvatarType")
+        @com.aliyun.core.annotation.NameInMap("AvatarType")
         private String avatarType;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Portrait")
+        @com.aliyun.core.annotation.NameInMap("Portrait")
         private String portrait;
 
-        @NameInMap("Thumbnail")
+        @com.aliyun.core.annotation.NameInMap("Thumbnail")
         private String thumbnail;
 
-        @NameInMap("Transparent")
+        @com.aliyun.core.annotation.NameInMap("Transparent")
         private Boolean transparent;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private Avatar(Builder builder) {
@@ -214,7 +235,7 @@ public class GetAvatarResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * AvatarDescription.
+             * <p>The description of the digital human.</p>
              */
             public Builder avatarDescription(String avatarDescription) {
                 this.avatarDescription = avatarDescription;
@@ -222,7 +243,10 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarId.
+             * <p>The ID of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Avatar-XXXX</p>
              */
             public Builder avatarId(String avatarId) {
                 this.avatarId = avatarId;
@@ -230,7 +254,7 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarName.
+             * <p>The name of the digital human.</p>
              */
             public Builder avatarName(String avatarName) {
                 this.avatarName = avatarName;
@@ -238,7 +262,10 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarType.
+             * <p>The type of the digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2DAvatar</p>
              */
             public Builder avatarType(String avatarType) {
                 this.avatarType = avatarType;
@@ -246,7 +273,10 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the digital human image in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -254,7 +284,10 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * Portrait.
+             * <p>The media asset ID of the portrait image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
              */
             public Builder portrait(String portrait) {
                 this.portrait = portrait;
@@ -262,7 +295,10 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>The thumbnail URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -270,7 +306,10 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * Transparent.
+             * <p>Indicates whether the digital human supports alpha channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder transparent(Boolean transparent) {
                 this.transparent = transparent;
@@ -278,7 +317,10 @@ public class GetAvatarResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the digital human image in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -292,8 +334,14 @@ public class GetAvatarResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAvatarResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAvatarResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Avatar")
+        @com.aliyun.core.annotation.NameInMap("Avatar")
         private Avatar avatar;
 
         private Data(Builder builder) {
@@ -319,7 +367,7 @@ public class GetAvatarResponseBody extends TeaModel {
             private Avatar avatar; 
 
             /**
-             * Avatar.
+             * <p>The information about the digital human.</p>
              */
             public Builder avatar(Avatar avatar) {
                 this.avatar = avatar;

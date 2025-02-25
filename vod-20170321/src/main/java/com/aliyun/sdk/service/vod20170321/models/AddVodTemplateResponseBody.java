@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVodTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>AddVodTemplateResponseBody</p>
  */
 public class AddVodTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VodTemplateId")
+    @com.aliyun.core.annotation.NameInMap("VodTemplateId")
     private String vodTemplateId;
 
     private AddVodTemplateResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class AddVodTemplateResponseBody extends TeaModel {
         private String vodTemplateId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class AddVodTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the snapshot template. You can call the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
+         * <p>The ID of the snapshot template. You can call the <a href="https://help.aliyun.com/document_detail/72213.html">SubmitSnapshotJob</a> operation to submit snapshot jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f5b228fe6930e*****0d6bf55bd87789</p>
          */
         public Builder vodTemplateId(String vodTemplateId) {
             this.vodTemplateId = vodTemplateId;

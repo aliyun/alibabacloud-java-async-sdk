@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNamespaceListResponseBody</p>
  */
 public class DescribeNamespaceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeNamespaceListResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,7 +107,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -110,13 +115,16 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,19 +132,22 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The list of namespaces.
+         * <p>The namespaces.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned error code. Valid values:
-         * <p>
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
          * 
-         * *   If the call is successful, the **ErrorCode** parameter is not returned.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * <strong>example:</strong>
+         * <p>NULL</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,11 +155,14 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information. Valid values:
-         * <p>
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +170,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,11 +181,14 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the namespaces were obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the list of namespaces was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The list was queried.</li>
+         * <li><strong>false</strong>: The list failed to be queried.</li>
+         * </ul>
          * 
-         * *   **true**: The namespaces were obtained.
-         * *   **false**: The namespaces failed to be obtained.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -176,7 +196,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1a0b2215622920113732501e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -189,38 +212,44 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AgentInstall")
+        @com.aliyun.core.annotation.NameInMap("AgentInstall")
         private String agentInstall;
 
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private Boolean current;
 
-        @NameInMap("Custom")
+        @com.aliyun.core.annotation.NameInMap("Custom")
         private Boolean custom;
 
-        @NameInMap("HybridCloudEnable")
+        @com.aliyun.core.annotation.NameInMap("HybridCloudEnable")
         private Boolean hybridCloudEnable;
 
-        @NameInMap("NameSpaceShortId")
+        @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
         private String nameSpaceShortId;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {
@@ -336,7 +365,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The command that was run to install the agent.
+             * <p>The command that was run to install the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://edas-bj.oss-cn-beijing-internal.aliyuncs.com/test/install.sh">http://edas-bj.oss-cn-beijing-internal.aliyuncs.com/test/install.sh</a></p>
              */
             public Builder agentInstall(String agentInstall) {
                 this.agentInstall = agentInstall;
@@ -344,7 +376,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is no longer valid.
+             * <p>This parameter is no longer valid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder current(Boolean current) {
                 this.current = current;
@@ -352,11 +387,14 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether custom namespaces are returned. Valid values:
-             * <p>
+             * <p>Indicates whether custom namespaces are returned. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Custom namespaces are returned.</li>
+             * <li><strong>false</strong>: Custom namespaces are not returned.</li>
+             * </ul>
              * 
-             * *   **true**: Custom namespaces are returned.
-             * *   **false**: Custom namespaces are not returned.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder custom(Boolean custom) {
                 this.custom = custom;
@@ -364,11 +402,14 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether hybrid cloud namespaces are excluded. Valid values:
-             * <p>
+             * <p>Indicates whether hybrid cloud namespaces are excluded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Hybrid cloud namespaces are excluded.</li>
+             * <li><strong>false</strong>: Hybrid cloud namespaces are included.</li>
+             * </ul>
              * 
-             * *   **true**: Hybrid cloud namespaces are excluded.
-             * *   **false**: Hybrid cloud namespaces are included.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hybridCloudEnable(Boolean hybridCloudEnable) {
                 this.hybridCloudEnable = hybridCloudEnable;
@@ -376,7 +417,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * NameSpaceShortId.
+             * <p>The short ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;
@@ -384,7 +428,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -392,7 +439,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -400,7 +450,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the namespace belongs.
+             * <p>The region to which the namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -408,7 +461,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz969ngg2e49q5i4****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -416,7 +472,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze559r1z1bpwqxwp****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -424,7 +483,10 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze0i263cnn311nvj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

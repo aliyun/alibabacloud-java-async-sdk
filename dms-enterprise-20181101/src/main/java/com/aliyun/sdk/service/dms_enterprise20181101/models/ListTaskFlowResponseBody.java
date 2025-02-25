@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowResponseBody</p>
  */
 public class ListTaskFlowResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskFlowList")
+    @com.aliyun.core.annotation.NameInMap("TaskFlowList")
     private TaskFlowList taskFlowList;
 
     private ListTaskFlowResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
         private TaskFlowList taskFlowList; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4116147E-C628-5816-8779-8EEAF8E973F4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +124,14 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +139,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task flows returned.
+         * <p>The information about the task flows returned.</p>
          */
         public Builder taskFlowList(TaskFlowList taskFlowList) {
             this.taskFlowList = taskFlowList;
@@ -135,29 +152,35 @@ public class ListTaskFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowResponseBody</p>
+     */
     public static class TaskFlow extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorNickName")
+        @com.aliyun.core.annotation.NameInMap("CreatorNickName")
         private String creatorNickName;
 
-        @NameInMap("DagOwnerNickName")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerNickName")
         private String dagOwnerNickName;
 
-        @NameInMap("DeployId")
+        @com.aliyun.core.annotation.NameInMap("DeployId")
         private Long deployId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LatestInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceStatus")
         private Integer latestInstanceStatus;
 
-        @NameInMap("LatestInstanceTime")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceTime")
         private String latestInstanceTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private TaskFlow(Builder builder) {
@@ -246,7 +269,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The ID of the user who creates the task flow.
+             * <p>The ID of the user who creates the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -254,7 +280,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who creates the task flow.
+             * <p>The name of the user who creates the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Creator_NickName</p>
              */
             public Builder creatorNickName(String creatorNickName) {
                 this.creatorNickName = creatorNickName;
@@ -262,7 +291,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task flow owner.
+             * <p>The name of the task flow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Owner_NickName</p>
              */
             public Builder dagOwnerNickName(String dagOwnerNickName) {
                 this.dagOwnerNickName = dagOwnerNickName;
@@ -270,7 +302,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the latest deployment record.
+             * <p>The ID of the latest deployment record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12**</p>
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -278,7 +313,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task flow.
+             * <p>The ID of the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134137****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -286,12 +324,15 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the latest execution. Valid values:
-             * <p>
+             * <p>The status of the latest execution. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid.</li>
+             * <li><strong>1</strong>: scheduling disabled.</li>
+             * <li><strong>2</strong>: waiting to be scheduled.</li>
+             * </ul>
              * 
-             * *   **0**: invalid.
-             * *   **1**: scheduling disabled.
-             * *   **2**: waiting to be scheduled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder latestInstanceStatus(Integer latestInstanceStatus) {
                 this.latestInstanceStatus = latestInstanceStatus;
@@ -299,7 +340,10 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the latest execution record was generated.
+             * <p>The time when the latest execution record was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-13</p>
              */
             public Builder latestInstanceTime(String latestInstanceTime) {
                 this.latestInstanceTime = latestInstanceTime;
@@ -307,12 +351,15 @@ public class ListTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task flow. Valid values:
-             * <p>
+             * <p>The status of the task flow. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task flow is invalid.</li>
+             * <li><strong>1</strong>: Scheduling is disabled for the task flow.</li>
+             * <li><strong>2</strong>: The task flow is waiting to be scheduled.</li>
+             * </ul>
              * 
-             * *   **0**: The task flow is invalid.
-             * *   **1**: Scheduling is disabled for the task flow.
-             * *   **2**: The task flow is waiting to be scheduled.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -326,9 +373,15 @@ public class ListTaskFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowResponseBody</p>
+     */
     public static class TaskFlowList extends TeaModel {
-        @NameInMap("TaskFlow")
-        private java.util.List < TaskFlow> taskFlow;
+        @com.aliyun.core.annotation.NameInMap("TaskFlow")
+        private java.util.List<TaskFlow> taskFlow;
 
         private TaskFlowList(Builder builder) {
             this.taskFlow = builder.taskFlow;
@@ -345,17 +398,17 @@ public class ListTaskFlowResponseBody extends TeaModel {
         /**
          * @return taskFlow
          */
-        public java.util.List < TaskFlow> getTaskFlow() {
+        public java.util.List<TaskFlow> getTaskFlow() {
             return this.taskFlow;
         }
 
         public static final class Builder {
-            private java.util.List < TaskFlow> taskFlow; 
+            private java.util.List<TaskFlow> taskFlow; 
 
             /**
              * TaskFlow.
              */
-            public Builder taskFlow(java.util.List < TaskFlow> taskFlow) {
+            public Builder taskFlow(java.util.List<TaskFlow> taskFlow) {
                 this.taskFlow = taskFlow;
                 return this;
             }

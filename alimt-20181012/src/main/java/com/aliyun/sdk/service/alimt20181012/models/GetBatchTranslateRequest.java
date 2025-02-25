@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBatchTranslateRequest</p>
  */
 public class GetBatchTranslateRequest extends Request {
-    @Body
-    @NameInMap("ApiType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiType;
 
-    @Body
-    @NameInMap("FormatType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FormatType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String formatType;
 
-    @Body
-    @NameInMap("Scene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Scene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scene;
 
-    @Body
-    @NameInMap("SourceLanguage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLanguage;
 
-    @Body
-    @NameInMap("SourceText")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceText")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceText;
 
-    @Body
-    @NameInMap("TargetLanguage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetLanguage;
 
     private GetBatchTranslateRequest(Builder builder) {

@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceNetExpireTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceNetExpireTimeRequest</p>
  */
 public class ModifyDBInstanceNetExpireTimeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ClassicExpendExpiredDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClassicExpendExpiredDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer classicExpendExpiredDays;
 
-    @Query
-    @NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBInstanceNetExpireTimeRequest(Builder builder) {
@@ -163,7 +168,11 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The retention period of the original classic network address. Valid values: **14**, **30**, **60**, and** 120**. Unit: day.
+         * <p>The retention period of the classic network endpoint of the instance. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: day.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder classicExpendExpiredDays(Integer classicExpendExpiredDays) {
             this.putQueryParameter("ClassicExpendExpiredDays", classicExpendExpiredDays);
@@ -172,7 +181,10 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The connection string of the instance
+         * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -181,7 +193,11 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

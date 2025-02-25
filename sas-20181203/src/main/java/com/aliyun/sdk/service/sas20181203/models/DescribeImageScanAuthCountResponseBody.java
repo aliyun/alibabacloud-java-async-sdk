@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageScanAuthCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageScanAuthCountResponseBody</p>
  */
 public class DescribeImageScanAuthCountResponseBody extends TeaModel {
-    @NameInMap("ImageScan")
+    @com.aliyun.core.annotation.NameInMap("ImageScan")
     private ImageScan imageScan;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageScanAuthCountResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageScan.
+         * <p>The details about the quota for container image scan.</p>
          */
         public Builder imageScan(ImageScan imageScan) {
             this.imageScan = imageScan;
@@ -58,7 +63,10 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>892NYH839-0EDC-4CD0-A2EF-5BD294656C99</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageScanAuthCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageScanAuthCountResponseBody</p>
+     */
     public static class ImageScan extends TeaModel {
-        @NameInMap("ImageScanCapacity")
+        @com.aliyun.core.annotation.NameInMap("ImageScanCapacity")
         private Long imageScanCapacity;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ScanCount")
+        @com.aliyun.core.annotation.NameInMap("ScanCount")
         private Long scanCount;
 
         private ImageScan(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
             private Long scanCount; 
 
             /**
-             * ImageScanCapacity.
+             * <p>The quota for container image scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15340</p>
              */
             public Builder imageScanCapacity(Long imageScanCapacity) {
                 this.imageScanCapacity = imageScanCapacity;
@@ -130,7 +147,10 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID of Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-qdl123412****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -138,7 +158,10 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
             }
 
             /**
-             * ScanCount.
+             * <p>The consumed quota for container image scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5489</p>
              */
             public Builder scanCount(Long scanCount) {
                 this.scanCount = scanCount;

@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateVirtualClusterNameRequest} extends {@link RequestModel}
  *
  * <p>ValidateVirtualClusterNameRequest</p>
  */
 public class ValidateVirtualClusterNameRequest extends Request {
-    @Body
-    @NameInMap("VcName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VcName")
     private String vcName;
 
     private ValidateVirtualClusterNameRequest(Builder builder) {
@@ -48,9 +48,9 @@ public class ValidateVirtualClusterNameRequest extends Request {
             super();
         } 
 
-        private Builder(ValidateVirtualClusterNameRequest response) {
-            super(response);
-            this.vcName = response.vcName;
+        private Builder(ValidateVirtualClusterNameRequest request) {
+            super(request);
+            this.vcName = request.vcName;
         } 
 
         /**

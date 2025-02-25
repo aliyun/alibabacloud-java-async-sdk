@@ -1,57 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLabelTablesRequest} extends {@link RequestModel}
  *
  * <p>ListLabelTablesRequest</p>
  */
 public class ListLabelTablesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("LabelTableIds")
-    private java.util.List < String > labelTableIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelTableIds")
+    private java.util.List<String> labelTableIds;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private ListLabelTablesRequest(Builder builder) {
@@ -98,7 +102,7 @@ public class ListLabelTablesRequest extends Request {
     /**
      * @return labelTableIds
      */
-    public java.util.List < String > getLabelTableIds() {
+    public java.util.List<String> getLabelTableIds() {
         return this.labelTableIds;
     }
 
@@ -154,7 +158,7 @@ public class ListLabelTablesRequest extends Request {
     public static final class Builder extends Request.Builder<ListLabelTablesRequest, Builder> {
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > labelTableIds; 
+        private java.util.List<String> labelTableIds; 
         private String name; 
         private String order; 
         private String owner; 
@@ -182,7 +186,10 @@ public class ListLabelTablesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>featurestore-test*</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -202,7 +209,7 @@ public class ListLabelTablesRequest extends Request {
         /**
          * LabelTableIds.
          */
-        public Builder labelTableIds(java.util.List < String > labelTableIds) {
+        public Builder labelTableIds(java.util.List<String> labelTableIds) {
             String labelTableIdsShrink = shrink(labelTableIds, "LabelTableIds", "simple");
             this.putQueryParameter("LabelTableIds", labelTableIdsShrink);
             this.labelTableIds = labelTableIds;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeModelsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeModelsResponseBody</p>
  */
 public class DescribeModelsResponseBody extends TeaModel {
-    @NameInMap("ModelDetails")
+    @com.aliyun.core.annotation.NameInMap("ModelDetails")
     private ModelDetails modelDetails;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeModelsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned information about models. It is an array consisting of ModelDetail data.
+         * <p>The returned information about models. It is an array consisting of ModelDetail data.</p>
          */
         public Builder modelDetails(ModelDetails modelDetails) {
             this.modelDetails = modelDetails;
@@ -94,7 +99,10 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40306469-2FB5-417A-B723-AF1F4A4FA204</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeModelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModelsResponseBody</p>
+     */
     public static class TagInfo extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagInfo(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENV</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ST4</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,9 +221,15 @@ public class DescribeModelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModelsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
+        private java.util.List<TagInfo> tagInfo;
 
         private Tags(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -211,17 +246,17 @@ public class DescribeModelsResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }
@@ -233,32 +268,38 @@ public class DescribeModelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModelsResponseBody</p>
+     */
     public static class ModelDetail extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private String modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("ModelRef")
+        @com.aliyun.core.annotation.NameInMap("ModelRef")
         private String modelRef;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private ModelDetail(Builder builder) {
@@ -356,7 +397,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The time when the model was created.
+             * <p>The time when the model was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-29T11:07:48Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -364,7 +408,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the model description.
+             * <p>The description of the model definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Model Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -372,7 +419,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group to which the model belongs.
+             * <p>The ID of the API group to which the model belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30e792398d6c4569b04c0e53a3494381</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -380,7 +430,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the model.
+             * <p>The ID of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>766c0b9538a04bdf974953b5576783ba</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -388,7 +441,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the model.
+             * <p>The name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -396,7 +452,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The URI of the model.
+             * <p>The URI of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba">https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba</a></p>
              */
             public Builder modelRef(String modelRef) {
                 this.modelRef = modelRef;
@@ -404,7 +463,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time of the model.
+             * <p>The time when the model was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-29T11:07:48Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -412,7 +474,10 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the model.
+             * <p>The definition of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;id&quot;:{&quot;format&quot;:&quot;int64&quot;,&quot;maximum&quot;:100,&quot;exclusiveMaximum&quot;:true,&quot;type&quot;:&quot;integer&quot;},&quot;name&quot;:{&quot;maxLength&quot;:10,&quot;type&quot;:&quot;string&quot;}}}</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -420,7 +485,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the model.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -434,9 +499,15 @@ public class DescribeModelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModelsResponseBody</p>
+     */
     public static class ModelDetails extends TeaModel {
-        @NameInMap("ModelDetail")
-        private java.util.List < ModelDetail> modelDetail;
+        @com.aliyun.core.annotation.NameInMap("ModelDetail")
+        private java.util.List<ModelDetail> modelDetail;
 
         private ModelDetails(Builder builder) {
             this.modelDetail = builder.modelDetail;
@@ -453,17 +524,17 @@ public class DescribeModelsResponseBody extends TeaModel {
         /**
          * @return modelDetail
          */
-        public java.util.List < ModelDetail> getModelDetail() {
+        public java.util.List<ModelDetail> getModelDetail() {
             return this.modelDetail;
         }
 
         public static final class Builder {
-            private java.util.List < ModelDetail> modelDetail; 
+            private java.util.List<ModelDetail> modelDetail; 
 
             /**
              * ModelDetail.
              */
-            public Builder modelDetail(java.util.List < ModelDetail> modelDetail) {
+            public Builder modelDetail(java.util.List<ModelDetail> modelDetail) {
                 this.modelDetail = modelDetail;
                 return this;
             }

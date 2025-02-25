@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateChatappMigrationInitiateRequest} extends {@link RequestModel}
  *
  * <p>CreateChatappMigrationInitiateRequest</p>
  */
 public class CreateChatappMigrationInitiateRequest extends Request {
-    @Query
-    @NameInMap("CountryCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String countryCode;
 
-    @Query
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Query
-    @NameInMap("MobileNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mobileNumber;
 
     private CreateChatappMigrationInitiateRequest(Builder builder) {
@@ -85,7 +85,11 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         } 
 
         /**
-         * CountryCode.
+         * <p>The code of the country or region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -94,7 +98,11 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the user within the ISV account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849493****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -103,7 +111,11 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         }
 
         /**
-         * MobileNumber.
+         * <p>The mobile number without the country code or region code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001234</p>
          */
         public Builder mobileNumber(String mobileNumber) {
             this.putQueryParameter("MobileNumber", mobileNumber);

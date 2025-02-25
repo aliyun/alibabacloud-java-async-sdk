@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppSecurityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppSecurityResponseBody</p>
  */
 public class DescribeAppSecurityResponseBody extends TeaModel {
-    @NameInMap("AppCode")
+    @com.aliyun.core.annotation.NameInMap("AppCode")
     private String appCode;
 
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @NameInMap("AppSecret")
+    @com.aliyun.core.annotation.NameInMap("AppSecret")
     private String appSecret;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private String modifiedTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAppSecurityResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppCode.
+         * <p>The AppCode of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3aaf905a0a1f4f0eabc6d891dfa08afc</p>
          */
         public Builder appCode(String appCode) {
             this.appCode = appCode;
@@ -106,7 +114,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * AppKey.
+         * <p>The key of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60030986</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -114,7 +125,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * AppSecret.
+         * <p>The password of the app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1ae97aaa7e45f21d10824bc44678fee</p>
          */
         public Builder appSecret(String appSecret) {
             this.appSecret = appSecret;
@@ -122,7 +136,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * <p>The creation time (UTC) of the key, which is the same as the app creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-31T04:10:19Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -130,7 +147,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * <p>The modification time (UTC) of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-31T04:10:19Z</p>
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -138,7 +158,10 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

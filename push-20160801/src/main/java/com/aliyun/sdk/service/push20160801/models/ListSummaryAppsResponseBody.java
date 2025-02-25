@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSummaryAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSummaryAppsResponseBody</p>
  */
 public class ListSummaryAppsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SummaryAppInfos")
+    @com.aliyun.core.annotation.NameInMap("SummaryAppInfos")
     private SummaryAppInfos summaryAppInfos;
 
     private ListSummaryAppsResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class ListSummaryAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSummaryAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSummaryAppsResponseBody</p>
+     */
     public static class SummaryAppInfo extends TeaModel {
-        @NameInMap("AppKey")
+        @com.aliyun.core.annotation.NameInMap("AppKey")
         private Long appKey;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
         private SummaryAppInfo(Builder builder) {
@@ -132,8 +138,14 @@ public class ListSummaryAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSummaryAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSummaryAppsResponseBody</p>
+     */
     public static class SummaryAppInfos extends TeaModel {
-        @NameInMap("SummaryAppInfo")
+        @com.aliyun.core.annotation.NameInMap("SummaryAppInfo")
         private java.util.List < SummaryAppInfo> summaryAppInfo;
 
         private SummaryAppInfos(Builder builder) {

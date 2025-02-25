@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserResourcePackageRequest} extends {@link RequestModel}
  *
  * <p>DescribeCdnUserResourcePackageRequest</p>
  */
 public class DescribeCdnUserResourcePackageRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeCdnUserResourcePackageRequest(Builder builder) {
@@ -100,11 +100,14 @@ public class DescribeCdnUserResourcePackageRequest extends Request {
         }
 
         /**
-         * The status of the resource plan that you want to query. Valid values:
-         * <p>
+         * <p>The status of the resource plan that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>valid</strong>: valid</li>
+         * <li><strong>closed</strong>: expired</li>
+         * </ul>
          * 
-         * *   **valid**: valid
-         * *   **closed**: expired
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

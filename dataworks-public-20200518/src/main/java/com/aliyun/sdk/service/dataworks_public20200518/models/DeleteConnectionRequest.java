@@ -1,25 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConnectionRequest} extends {@link RequestModel}
  *
  * <p>DeleteConnectionRequest</p>
  */
 public class DeleteConnectionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long connectionId;
 
     private DeleteConnectionRequest(Builder builder) {
@@ -70,7 +74,7 @@ public class DeleteConnectionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -79,7 +83,11 @@ public class DeleteConnectionRequest extends Request {
         }
 
         /**
-         * ConnectionId.
+         * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/173911.html">ListConnection</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder connectionId(Long connectionId) {
             this.putQueryParameter("ConnectionId", connectionId);

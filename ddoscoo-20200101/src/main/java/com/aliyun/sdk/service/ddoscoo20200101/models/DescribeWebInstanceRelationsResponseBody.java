@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebInstanceRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebInstanceRelationsResponseBody</p>
  */
 public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WebInstanceRelations")
-    private java.util.List < WebInstanceRelations> webInstanceRelations;
+    @com.aliyun.core.annotation.NameInMap("WebInstanceRelations")
+    private java.util.List<WebInstanceRelations> webInstanceRelations;
 
     private DescribeWebInstanceRelationsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     /**
      * @return webInstanceRelations
      */
-    public java.util.List < WebInstanceRelations> getWebInstanceRelations() {
+    public java.util.List<WebInstanceRelations> getWebInstanceRelations() {
         return this.webInstanceRelations;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < WebInstanceRelations> webInstanceRelations; 
+        private java.util.List<WebInstanceRelations> webInstanceRelations; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0222382B-5FE5-4FF7-BC9B-97EE31D58818</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instances to which a website service is added.
+         * <p>The information about the instances to which a website service is added.</p>
          */
-        public Builder webInstanceRelations(java.util.List < WebInstanceRelations> webInstanceRelations) {
+        public Builder webInstanceRelations(java.util.List<WebInstanceRelations> webInstanceRelations) {
             this.webInstanceRelations = webInstanceRelations;
             return this;
         }
@@ -71,14 +79,20 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebInstanceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebInstanceRelationsResponseBody</p>
+     */
     public static class InstanceDetails extends TeaModel {
-        @NameInMap("EipList")
-        private java.util.List < String > eipList;
+        @com.aliyun.core.annotation.NameInMap("EipList")
+        private java.util.List<String> eipList;
 
-        @NameInMap("FunctionVersion")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private String functionVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceDetails(Builder builder) {
@@ -98,7 +112,7 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         /**
          * @return eipList
          */
-        public java.util.List < String > getEipList() {
+        public java.util.List<String> getEipList() {
             return this.eipList;
         }
 
@@ -117,24 +131,27 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > eipList; 
+            private java.util.List<String> eipList; 
             private String functionVersion; 
             private String instanceId; 
 
             /**
-             * The IP addresses of the instance.
+             * <p>The IP addresses of the instance.</p>
              */
-            public Builder eipList(java.util.List < String > eipList) {
+            public Builder eipList(java.util.List<String> eipList) {
                 this.eipList = eipList;
                 return this;
             }
 
             /**
-             * The function plan of the instance. Valid values:
-             * <p>
+             * <p>The function plan of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: Standard function plan</li>
+             * <li><strong>enhance</strong>: Enhanced function plan</li>
+             * </ul>
              * 
-             * *   **default**: Standard function plan
-             * *   **enhance**: Enhanced function plan
+             * <strong>example:</strong>
+             * <p>enhance</p>
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -142,7 +159,10 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-0pp163pd****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -156,12 +176,18 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebInstanceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebInstanceRelationsResponseBody</p>
+     */
     public static class WebInstanceRelations extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("InstanceDetails")
-        private java.util.List < InstanceDetails> instanceDetails;
+        @com.aliyun.core.annotation.NameInMap("InstanceDetails")
+        private java.util.List<InstanceDetails> instanceDetails;
 
         private WebInstanceRelations(Builder builder) {
             this.domain = builder.domain;
@@ -186,16 +212,19 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
         /**
          * @return instanceDetails
          */
-        public java.util.List < InstanceDetails> getInstanceDetails() {
+        public java.util.List<InstanceDetails> getInstanceDetails() {
             return this.instanceDetails;
         }
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < InstanceDetails> instanceDetails; 
+            private java.util.List<InstanceDetails> instanceDetails; 
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -203,9 +232,9 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the instance to which a website service is added.
+             * <p>The information about the instance to which a website service is added.</p>
              */
-            public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
+            public Builder instanceDetails(java.util.List<InstanceDetails> instanceDetails) {
                 this.instanceDetails = instanceDetails;
                 return this;
             }

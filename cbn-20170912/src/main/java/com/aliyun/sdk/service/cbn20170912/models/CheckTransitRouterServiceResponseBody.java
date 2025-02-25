@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckTransitRouterServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CheckTransitRouterServiceResponseBody</p>
  */
 public class CheckTransitRouterServiceResponseBody extends TeaModel {
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private String enabled;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckTransitRouterServiceResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class CheckTransitRouterServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the transit router feature is activated.
-         * <p>
+         * <p>Indicates whether the transit router feature is activated.</p>
+         * <ul>
+         * <li><strong>true</strong>: activated</li>
+         * <li>If this value is not returned, the system prompts that the current account does not have the transit router feature activated.</li>
+         * </ul>
          * 
-         * *   **true**: activated
-         * *   If this value is not returned, the system prompts that the current account does not have the transit router feature activated.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(String enabled) {
             this.enabled = enabled;
@@ -62,7 +70,10 @@ public class CheckTransitRouterServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D93C8B9-C354-5C3E-BEFB-BA8A2C314D68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

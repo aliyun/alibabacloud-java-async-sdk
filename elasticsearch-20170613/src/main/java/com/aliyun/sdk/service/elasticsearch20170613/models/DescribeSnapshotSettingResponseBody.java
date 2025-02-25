@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotSettingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotSettingResponseBody</p>
  */
 public class DescribeSnapshotSettingResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeSnapshotSettingResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +74,17 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotSettingResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("QuartzRegex")
+        @com.aliyun.core.annotation.NameInMap("QuartzRegex")
         private String quartzRegex;
 
         private Result(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
             private String quartzRegex; 
 
             /**
-             * Whether to enable automatic backup.
+             * <p>Whether to enable automatic backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -118,7 +130,10 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Automatic backup time configuration, using Quartz Cron expression.
+             * <p>Automatic backup time configuration, using Quartz Cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 01 ? * * *</p>
              */
             public Builder quartzRegex(String quartzRegex) {
                 this.quartzRegex = quartzRegex;

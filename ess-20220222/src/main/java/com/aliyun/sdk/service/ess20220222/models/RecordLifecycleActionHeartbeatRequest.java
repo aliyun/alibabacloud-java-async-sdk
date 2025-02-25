@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecordLifecycleActionHeartbeatRequest} extends {@link RequestModel}
  *
  * <p>RecordLifecycleActionHeartbeatRequest</p>
  */
 public class RecordLifecycleActionHeartbeatRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("heartbeatTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("heartbeatTimeout")
     private Integer heartbeatTimeout;
 
-    @Query
-    @NameInMap("lifecycleActionToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("lifecycleActionToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecycleActionToken;
 
-    @Query
-    @NameInMap("lifecycleHookId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("lifecycleHookId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecycleHookId;
 
     private RecordLifecycleActionHeartbeatRequest(Builder builder) {
@@ -158,7 +163,10 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +184,12 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * heartbeatTimeout.
+         * <p>The time window during which the ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.</p>
+         * <p>After you create a lifecycle hook, you can call this operation to extend the time window during which the ECS instance stays in a Pending state. You can also call the <a href="https://help.aliyun.com/document_detail/459335.html">CompleteLifecycleAction</a> operation to remove the ECS instance from the Pending state ahead of schedule.</p>
+         * <p>Default value: 600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder heartbeatTimeout(Integer heartbeatTimeout) {
             this.putQueryParameter("heartbeatTimeout", heartbeatTimeout);
@@ -185,7 +198,13 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * lifecycleActionToken.
+         * <p>The action token of the lifecycle hook. You can obtain the token from the details page of the Simple Message Queue (SMQ, formerly MNS) queue specified for the lifecycle hook.</p>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/459333.html">DescribeLifecycleActions</a> operation to obtain the action token of the lifecycle hook.</p>
+         * <p>If you specified an SMQ topic for the lifecycle hook, you can obtain the token from the MNS topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F324B880-900E-4968-85DD-81691113****</p>
          */
         public Builder lifecycleActionToken(String lifecycleActionToken) {
             this.putQueryParameter("lifecycleActionToken", lifecycleActionToken);
@@ -194,7 +213,11 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * lifecycleHookId.
+         * <p>The ID of the lifecycle hook.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ash-bp1fxuqyi98w0aib****</p>
          */
         public Builder lifecycleHookId(String lifecycleHookId) {
             this.putQueryParameter("lifecycleHookId", lifecycleHookId);

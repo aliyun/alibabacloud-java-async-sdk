@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueueConsumersResponseBody} extends {@link TeaModel}
  *
  * <p>ListQueueConsumersResponseBody</p>
  */
 public class ListQueueConsumersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListQueueConsumersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4409B7D5-E4EC-4EB5-804A-385DCDFCD***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class ListQueueConsumersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQueueConsumersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueueConsumersResponseBody</p>
+     */
     public static class Consumers extends TeaModel {
-        @NameInMap("ConsumerTag")
+        @com.aliyun.core.annotation.NameInMap("ConsumerTag")
         private String consumerTag;
 
         private Consumers(Builder builder) {
@@ -98,7 +112,10 @@ public class ListQueueConsumersResponseBody extends TeaModel {
             private String consumerTag; 
 
             /**
-             * ConsumerTag.
+             * <p>The consumer tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgen-1</p>
              */
             public Builder consumerTag(String consumerTag) {
                 this.consumerTag = consumerTag;
@@ -112,14 +129,20 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQueueConsumersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueueConsumersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Consumers")
-        private java.util.List < Consumers> consumers;
+        @com.aliyun.core.annotation.NameInMap("Consumers")
+        private java.util.List<Consumers> consumers;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -139,7 +162,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         /**
          * @return consumers
          */
-        public java.util.List < Consumers> getConsumers() {
+        public java.util.List<Consumers> getConsumers() {
             return this.consumers;
         }
 
@@ -158,20 +181,23 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Consumers> consumers; 
+            private java.util.List<Consumers> consumers; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * Consumers.
+             * <p>The consumers.</p>
              */
-            public Builder consumers(java.util.List < Consumers> consumers) {
+            public Builder consumers(java.util.List<Consumers> consumers) {
                 this.consumers = consumers;
                 return this;
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -179,7 +205,10 @@ public class ListQueueConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>caebacccb2be03f84eb48b699f0a****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

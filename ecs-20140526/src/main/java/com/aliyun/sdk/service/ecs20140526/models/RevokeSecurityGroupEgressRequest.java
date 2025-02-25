@@ -1,117 +1,137 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeSecurityGroupEgressRequest} extends {@link RequestModel}
  *
  * <p>RevokeSecurityGroupEgressRequest</p>
  */
 public class RevokeSecurityGroupEgressRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @Deprecated
     private String description;
 
-    @Query
-    @NameInMap("DestCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestCidrIp")
+    @Deprecated
     private String destCidrIp;
 
-    @Query
-    @NameInMap("DestGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestGroupId")
+    @Deprecated
     private String destGroupId;
 
-    @Query
-    @NameInMap("DestGroupOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestGroupOwnerAccount")
+    @Deprecated
     private String destGroupOwnerAccount;
 
-    @Query
-    @NameInMap("DestGroupOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestGroupOwnerId")
+    @Deprecated
     private Long destGroupOwnerId;
 
-    @Query
-    @NameInMap("DestPrefixListId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestPrefixListId")
+    @Deprecated
     private String destPrefixListId;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
+    @Deprecated
     private String ipProtocol;
 
-    @Query
-    @NameInMap("Ipv6DestCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6DestCidrIp")
+    @Deprecated
     private String ipv6DestCidrIp;
 
-    @Query
-    @NameInMap("Ipv6SourceCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6SourceCidrIp")
+    @Deprecated
     private String ipv6SourceCidrIp;
 
-    @Query
-    @NameInMap("NicType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NicType")
+    @Deprecated
     private String nicType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Permissions")
-    private java.util.List < Permissions> permissions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Permissions")
+    private java.util.List<Permissions> permissions;
 
-    @Query
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @Deprecated
     private String policy;
 
-    @Query
-    @NameInMap("PortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRange")
+    @Deprecated
     private String portRange;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @Deprecated
     private String priority;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupRuleId")
-    private java.util.List < String > securityGroupRuleId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupRuleId")
+    private java.util.List<String> securityGroupRuleId;
 
-    @Query
-    @NameInMap("SourceCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
+    @Deprecated
     private String sourceCidrIp;
 
-    @Query
-    @NameInMap("SourcePortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePortRange")
+    @Deprecated
     private String sourcePortRange;
 
     private RevokeSecurityGroupEgressRequest(Builder builder) {
@@ -257,7 +277,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
     /**
      * @return permissions
      */
-    public java.util.List < Permissions> getPermissions() {
+    public java.util.List<Permissions> getPermissions() {
         return this.permissions;
     }
 
@@ -313,7 +333,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
     /**
      * @return securityGroupRuleId
      */
-    public java.util.List < String > getSecurityGroupRuleId() {
+    public java.util.List<String> getSecurityGroupRuleId() {
         return this.securityGroupRuleId;
     }
 
@@ -346,7 +366,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         private String nicType; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < Permissions> permissions; 
+        private java.util.List<Permissions> permissions; 
         private String policy; 
         private String portRange; 
         private String priority; 
@@ -354,7 +374,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupRuleId; 
+        private java.util.List<String> securityGroupRuleId; 
         private String sourceCidrIp; 
         private String sourcePortRange; 
 
@@ -401,7 +421,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -410,7 +433,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Description` to specify the description of security group rule N.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Description</code> to specify the rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -419,7 +445,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -428,7 +457,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestGroupId` to specify the ID of the destination security group.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.DestGroupId</code> to specify the ID of the destination security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxa123b****</p>
          */
         public Builder destGroupId(String destGroupId) {
             this.putQueryParameter("DestGroupId", destGroupId);
@@ -437,7 +469,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestGroupOwnerAccount` to specify the Alibaba Cloud account that manages the destination security group.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.DestGroupOwnerAccount</code> to specify the Alibaba Cloud account that manages the destination security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
          */
         public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
             this.putQueryParameter("DestGroupOwnerAccount", destGroupOwnerAccount);
@@ -446,7 +481,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the destination security group.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.DestGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that manages the destination security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678910</p>
          */
         public Builder destGroupOwnerId(Long destGroupOwnerId) {
             this.putQueryParameter("DestGroupOwnerId", destGroupOwnerId);
@@ -455,7 +493,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestPrefixListId` to specify the ID of the destination prefix list.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.DestPrefixListId</code> to specify the ID of the destination prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
         public Builder destPrefixListId(String destPrefixListId) {
             this.putQueryParameter("DestPrefixListId", destPrefixListId);
@@ -464,7 +505,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.IpProtocol</code> to specify the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -473,7 +517,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:db8:1233:1a00::***</p>
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);
@@ -482,7 +529,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6SourceCidrIp</code> to specify the source IPv6 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:db8:1234:1a00::***</p>
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -491,7 +541,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.NicType` to specify the NIC type.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.NicType</code> to specify the network interface type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -518,16 +571,19 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The security group rules. Valid values of N: 1 to 100.
+         * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
          */
-        public Builder permissions(java.util.List < Permissions> permissions) {
+        public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
             this.permissions = permissions;
             return this;
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow outbound access.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Policy</code> to specify whether to allow outbound access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -536,7 +592,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.PortRange</code> to specify the range of destination ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -545,7 +604,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Priority` to specify the priority of the rule.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Priority</code> to specify the rule priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -554,7 +616,11 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -581,7 +647,11 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -590,16 +660,19 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The IDs of the security group rules. Valid values of N: 1 to 100.
+         * <p>An array of security group rule IDs. You can specify 1 to 100 security group rules.</p>
          */
-        public Builder securityGroupRuleId(java.util.List < String > securityGroupRuleId) {
+        public Builder securityGroupRuleId(java.util.List<String> securityGroupRuleId) {
             this.putQueryParameter("SecurityGroupRuleId", securityGroupRuleId);
             this.securityGroupRuleId = securityGroupRuleId;
             return this;
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourceCidrIp</code> to specify the source IPv4 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -608,7 +681,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourcePortRange</code> to specify the range of source ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
@@ -623,50 +699,56 @@ public class RevokeSecurityGroupEgressRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RevokeSecurityGroupEgressRequest} extends {@link TeaModel}
+     *
+     * <p>RevokeSecurityGroupEgressRequest</p>
+     */
     public static class Permissions extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestCidrIp")
+        @com.aliyun.core.annotation.NameInMap("DestCidrIp")
         private String destCidrIp;
 
-        @NameInMap("DestGroupId")
+        @com.aliyun.core.annotation.NameInMap("DestGroupId")
         private String destGroupId;
 
-        @NameInMap("DestGroupOwnerAccount")
+        @com.aliyun.core.annotation.NameInMap("DestGroupOwnerAccount")
         private String destGroupOwnerAccount;
 
-        @NameInMap("DestGroupOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DestGroupOwnerId")
         private String destGroupOwnerId;
 
-        @NameInMap("DestPrefixListId")
+        @com.aliyun.core.annotation.NameInMap("DestPrefixListId")
         private String destPrefixListId;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Ipv6DestCidrIp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6DestCidrIp")
         private String ipv6DestCidrIp;
 
-        @NameInMap("Ipv6SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6SourceCidrIp")
         private String ipv6SourceCidrIp;
 
-        @NameInMap("NicType")
+        @com.aliyun.core.annotation.NameInMap("NicType")
         private String nicType;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
         private Permissions(Builder builder) {
@@ -818,10 +900,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             private String sourcePortRange; 
 
             /**
-             * The description of security group rule N. The description must be 1 to 512 characters in length.
-             * <p>
+             * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
              * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -829,10 +911,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The destination IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
-             * <p>
+             * <p>The destination IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
              * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -840,19 +922,20 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the destination security group that is referenced in security group rule N.
-             * <p>
+             * <p>The ID of the destination security group from which you want to remove access control configurations.</p>
+             * <ul>
+             * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
+             * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
+             * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
+             * </ul>
+             * <p>When you call this operation, take note of the following items:</p>
+             * <ul>
+             * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
+             * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
+             * </ul>
              * 
-             * *   Specify at least one of the following parameters: `DestGroupId`, `DestCidrIp`, `Ipv6DestCidrIp`, and `DestPrefixListId`.
-             * *   If you specify `DestGroupId` but you do not specify `DestCidrIp`, you must set `NicType` to intranet.
-             * *   If you specify `DestGroupId` and `DestCidrIp`, `DestCidrIp` takes precedence.
-             * 
-             * When you specify this parameter, take note of the following items:
-             * 
-             * *   You cannot reference security groups as destinations or sources in the rules of advanced security groups.
-             * *   You can reference up to 20 security groups as destinations or sources in the rules of each basic security group.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxa123b****</p>
              */
             public Builder destGroupId(String destGroupId) {
                 this.destGroupId = destGroupId;
@@ -860,13 +943,14 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The Alibaba Cloud account that manages the destination security group when you delete security group rule N across accounts.
-             * <p>
+             * <p>The Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
+             * <ul>
+             * <li>If both <code>DestGroupOwnerAccount</code> and <code>DestGroupOwnerId</code> are empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
+             * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerAccount</code> is ignored.</li>
+             * </ul>
              * 
-             * *   If both `DestGroupOwnerAccount` and `DestGroupOwnerId` are not specified, the security group rule that controls access to other security groups managed by your account is deleted.
-             * *   If you specify `DestCidrIp`, `DestGroupOwnerAccount` is ignored.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
              */
             public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
                 this.destGroupOwnerAccount = destGroupOwnerAccount;
@@ -874,13 +958,14 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that manages the destination security group when you delete security group rule N across accounts.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account that manages the destination security group specified in the security group rule.</p>
+             * <ul>
+             * <li>If both <code>DestGroupOwnerId</code> and <code>DestGroupOwnerAccount</code> are empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.</li>
+             * <li>If you specify <code>DestCidrIp</code>, <code>DestGroupOwnerId</code> is invalid.</li>
+             * </ul>
              * 
-             * *   If both `DestGroupOwnerId` and `DestGroupOwnerAccount` are not specified, the security group rule that controls access to other security groups managed by your account is deleted.
-             * *   If you specify `DestCidrIp`, `DestGroupOwnerId` is ignored.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>12345678910</p>
              */
             public Builder destGroupOwnerId(String destGroupOwnerId) {
                 this.destGroupOwnerId = destGroupOwnerId;
@@ -888,15 +973,15 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the destination prefix list that is referenced in security group rule N. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
-             * <p>
+             * <p>The ID of the destination prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+             * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
+             * </ul>
              * 
-             * When you specify this parameter, take note of the following items:
-             * 
-             * *   If the network type of a security group is classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
-             * *   If you specify the `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId` parameter, this parameter is ignored.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>pl-x1j1k5ykzqlixdcy****</p>
              */
             public Builder destPrefixListId(String destPrefixListId) {
                 this.destPrefixListId = destPrefixListId;
@@ -904,17 +989,18 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The transport layer protocol of security group rule N. The values of this parameter are not case-sensitive. Valid values:
-             * <p>
+             * <p>The protocol. The values of this parameter are case-insensitive. Valid values:</p>
+             * <ul>
+             * <li>TCP.</li>
+             * <li>UDP.</li>
+             * <li>ICMP.</li>
+             * <li>ICMPv6.</li>
+             * <li>GRE.</li>
+             * <li>ALL: All protocols are supported.</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
-             * *   ICMP
-             * *   ICMPv6
-             * *   GRE
-             * *   ALL: All protocols are supported.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -922,12 +1008,13 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The destination IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.
-             * <p>
+             * <p>The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+             * <blockquote>
+             * <p> This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 100.
-             * 
-             * > This parameter is valid only when the destination is an Elastic Compute Service (ECS) instance that resides in a virtual private cloud (VPC) and supports IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
+             * <strong>example:</strong>
+             * <p>2001:db8:1233:1a00::***</p>
              */
             public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
                 this.ipv6DestCidrIp = ipv6DestCidrIp;
@@ -935,14 +1022,14 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The source IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.
-             * <p>
+             * <p>The source IPv6 CIDR block or IPv6 address.</p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <blockquote>
+             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * </blockquote>
              * 
-             * This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-             * 
-             * Valid values of N: 1 to 100.
-             * 
-             * > This parameter is valid only when the source is an ECS instance that resides in a VPC and supports IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
+             * <strong>example:</strong>
+             * <p>2001:db8:1234:1a00::***</p>
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -950,19 +1037,17 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The network interface card (NIC) type of the security group rule if the security group is of the classic network type. Valid values:
-             * <p>
+             * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
+             * <ul>
+             * <li>internet: public NIC.</li>
+             * <li>intranet: internal NIC.</li>
+             * </ul>
+             * <p>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.</p>
+             * <p>If you specify only <code>SourceGroupId</code> when you remove access control configurations between security groups, you must set this parameter to intranet.</p>
+             * <p>Default value: internet.</p>
              * 
-             * *   internet: public NIC
-             * *   intranet: internal NIC
-             * 
-             * If the security group is in a VPC, this parameter is set to intranet by default and cannot be changed.
-             * 
-             * If you specify only `SourceGroupId` when you configure access between security groups, this parameter must be set to intranet.
-             * 
-             * Default value: internet.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder nicType(String nicType) {
                 this.nicType = nicType;
@@ -970,15 +1055,15 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The action of security group rule N that determines whether to allow outbound access. Valid values:
-             * <p>
+             * <p>The action of the security group rule. Valid values:</p>
+             * <ul>
+             * <li>accept: allows outbound traffic.</li>
+             * <li>drop: denies outbound traffic and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+             * </ul>
+             * <p>Default value: accept.</p>
              * 
-             * *   accept: allows access.
-             * *   drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.
-             * 
-             * Default value: accept.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -986,15 +1071,16 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The range of destination ports that correspond to the transport layer protocol of security group rule N. Valid values:
-             * <p>
+             * <p>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <ul>
+             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+             * </ul>
              * 
-             * *   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: 1/200.
-             * *   If the Permissions.N.IpProtocol parameter is set to ICMP, the port range is -1/-1, which indicates all ports.
-             * *   If the Permissions.N.IpProtocol parameter is set to GRE, the port range is -1/-1, which indicates all ports.
-             * *   If the Permissions.N.IpProtocol parameter is set to ALL, the port range is -1/-1, which indicates all ports.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>22/22</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -1002,12 +1088,11 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The priority of security group rule N. A smaller value specifies a higher priority. Valid values: 1 to 100.
-             * <p>
+             * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
+             * <p>Default value: 1.</p>
              * 
-             * Default value: 1.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -1015,12 +1100,11 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.
-             * <p>
+             * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
-             * This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -1028,17 +1112,17 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The range of source ports that correspond to the transport layer protocol of security group rule N. Valid values:
-             * <p>
+             * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <ul>
+             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+             * </ul>
+             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
-             * *   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: 1/200.
-             * *   If the Permissions.N.IpProtocol parameter is set to ICMP, the port range is -1/-1, which indicates all ports.
-             * *   If the Permissions.N.IpProtocol parameter is set to GRE, the port range is -1/-1, which indicates all ports.
-             * *   If the Permissions.N.IpProtocol parameter is set to ALL, the port range is -1/-1, which indicates all ports.
-             * 
-             * This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>22/22</p>
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;

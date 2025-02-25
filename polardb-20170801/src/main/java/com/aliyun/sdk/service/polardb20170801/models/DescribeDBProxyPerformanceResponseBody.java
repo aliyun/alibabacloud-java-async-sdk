@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBProxyPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBProxyPerformanceResponseBody</p>
  */
 public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PerformanceKeys")
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBProxyPerformanceResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -118,7 +126,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -126,7 +137,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the database engine.
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -134,7 +148,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the query. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+         * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:01:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -142,7 +159,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the performance metrics.
+         * <p>Details about the performance metrics.</p>
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -150,7 +167,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35D3E3DA-4650-407A-BFF5-59BFF1******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +178,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+         * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -171,11 +194,17 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBProxyPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyPerformanceResponseBody</p>
+     */
     public static class PerformanceItemValue extends TeaModel {
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PerformanceItemValue(Builder builder) {
@@ -210,7 +239,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The time when the metric value was collected. This value is a timestamp in milliseconds.
+             * <p>The time when the metric value was collected. This value is a timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600822800000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -218,7 +250,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the metric.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -232,9 +267,15 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBProxyPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyPerformanceResponseBody</p>
+     */
     public static class Points extends TeaModel {
-        @NameInMap("PerformanceItemValue")
-        private java.util.List < PerformanceItemValue> performanceItemValue;
+        @com.aliyun.core.annotation.NameInMap("PerformanceItemValue")
+        private java.util.List<PerformanceItemValue> performanceItemValue;
 
         private Points(Builder builder) {
             this.performanceItemValue = builder.performanceItemValue;
@@ -251,17 +292,17 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         /**
          * @return performanceItemValue
          */
-        public java.util.List < PerformanceItemValue> getPerformanceItemValue() {
+        public java.util.List<PerformanceItemValue> getPerformanceItemValue() {
             return this.performanceItemValue;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceItemValue> performanceItemValue; 
+            private java.util.List<PerformanceItemValue> performanceItemValue; 
 
             /**
              * PerformanceItemValue.
              */
-            public Builder performanceItemValue(java.util.List < PerformanceItemValue> performanceItemValue) {
+            public Builder performanceItemValue(java.util.List<PerformanceItemValue> performanceItemValue) {
                 this.performanceItemValue = performanceItemValue;
                 return this;
             }
@@ -273,17 +314,23 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBProxyPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyPerformanceResponseBody</p>
+     */
     public static class PerformanceItem extends TeaModel {
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("Measurement")
+        @com.aliyun.core.annotation.NameInMap("Measurement")
         private String measurement;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Points points;
 
         private PerformanceItem(Builder builder) {
@@ -336,7 +383,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             private Points points; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-*************</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -344,7 +394,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The performance metric.
+             * <p>The performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarProxy_CpuUsage</p>
              */
             public Builder measurement(String measurement) {
                 this.measurement = measurement;
@@ -352,7 +405,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the performance metric.
+             * <p>The name of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service_connections_ps</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -360,7 +416,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the performance metrics.
+             * <p>The list of the performance metrics.</p>
              */
             public Builder points(Points points) {
                 this.points = points;
@@ -374,9 +430,15 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBProxyPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBProxyPerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("PerformanceItem")
-        private java.util.List < PerformanceItem> performanceItem;
+        @com.aliyun.core.annotation.NameInMap("PerformanceItem")
+        private java.util.List<PerformanceItem> performanceItem;
 
         private PerformanceKeys(Builder builder) {
             this.performanceItem = builder.performanceItem;
@@ -393,17 +455,17 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         /**
          * @return performanceItem
          */
-        public java.util.List < PerformanceItem> getPerformanceItem() {
+        public java.util.List<PerformanceItem> getPerformanceItem() {
             return this.performanceItem;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceItem> performanceItem; 
+            private java.util.List<PerformanceItem> performanceItem; 
 
             /**
              * PerformanceItem.
              */
-            public Builder performanceItem(java.util.List < PerformanceItem> performanceItem) {
+            public Builder performanceItem(java.util.List<PerformanceItem> performanceItem) {
                 this.performanceItem = performanceItem;
                 return this;
             }

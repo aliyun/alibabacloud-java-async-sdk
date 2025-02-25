@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainConsortiumsResponseBody</p>
  */
 public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainConsortiumsResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
     } 
 
     public static class AntConsortiums extends TeaModel {
-        @NameInMap("ChainNum")
+        @com.aliyun.core.annotation.NameInMap("ChainNum")
         private Long chainNum;
 
-        @NameInMap("ConsortiumDescription")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumDescription")
         private String consortiumDescription;
 
-        @NameInMap("ConsortiumId")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumId")
         private String consortiumId;
 
-        @NameInMap("ConsortiumName")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumName")
         private String consortiumName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("IsEmptyConsortium")
+        @com.aliyun.core.annotation.NameInMap("IsEmptyConsortium")
         private Boolean isEmptyConsortium;
 
-        @NameInMap("MemberNum")
+        @com.aliyun.core.annotation.NameInMap("MemberNum")
         private Long memberNum;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AntConsortiums(Builder builder) {
@@ -273,13 +272,13 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Pagination(Builder builder) {
@@ -354,10 +353,10 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AntConsortiums")
+        @com.aliyun.core.annotation.NameInMap("AntConsortiums")
         private java.util.List < AntConsortiums> antConsortiums;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
         private Result(Builder builder) {

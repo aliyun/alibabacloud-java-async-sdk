@@ -1,59 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceRequest</p>
  */
 public class ListInstanceRequest extends Request {
-    @Query
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Query
-    @NameInMap("esVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("esVersion")
     private String esVersion;
 
-    @Query
-    @NameInMap("instanceCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceCategory")
     private String instanceCategory;
 
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("paymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("paymentType")
     private String paymentType;
 
-    @Query
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Query
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("zoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("zoneId")
     private String zoneId;
 
     private ListInstanceRequest(Builder builder) {
@@ -194,7 +194,10 @@ public class ListInstanceRequest extends Request {
         } 
 
         /**
-         * cn-hangzhou-i
+         * <p>cn-hangzhou-i</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyunes_test1</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -203,7 +206,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * advanced
+         * <p>advanced</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7_with_X-Pack</p>
          */
         public Builder esVersion(String esVersion) {
             this.putQueryParameter("esVersion", esVersion);
@@ -212,7 +218,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The number of data nodes.
+         * <p>The number of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>advanced</p>
          */
         public Builder instanceCategory(String instanceCategory) {
             this.putQueryParameter("instanceCategory", instanceCategory);
@@ -221,7 +230,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * postpaid
+         * <p>postpaid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-v641a0ta3000g****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -230,7 +242,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * \[{"tagKey":"key1","tagValue":"value1"}]
+         * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -239,11 +254,14 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to include dedicated master nodes. Valid values:
-         * <p>
+         * <p>Specifies whether to include dedicated master nodes. Valid values:</p>
+         * <ul>
+         * <li>true: The files contain data that is dumped to the IA storage medium.</li>
+         * <li>false: The files do not contain data that is dumped to the IA storage medium.</li>
+         * </ul>
          * 
-         * *   true: The files contain data that is dumped to the IA storage medium.
-         * *   false: The files do not contain data that is dumped to the IA storage medium.
+         * <strong>example:</strong>
+         * <p>postpaid</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("paymentType", paymentType);
@@ -252,7 +270,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzvowej3i****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -261,7 +282,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * vpc-bp16k1dvzxtmagcva\*\*\*\*
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -270,7 +294,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The header of the response.
+         * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -279,7 +306,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);
@@ -288,7 +318,10 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("zoneId", zoneId);

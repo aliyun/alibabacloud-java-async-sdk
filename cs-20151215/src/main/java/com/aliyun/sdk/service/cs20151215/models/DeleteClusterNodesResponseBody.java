@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClusterNodesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteClusterNodesResponseBody</p>
  */
 public class DeleteClusterNodesResponseBody extends TeaModel {
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
-    @NameInMap("task_id")
+    @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
     private DeleteClusterNodesResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c104d5d5f301c4e2a8ee578c37bc****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +78,10 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9891419-D125-4D89-AFCA-68846675E2F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class DeleteClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-60fea8ad2e277f0879000ae9</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

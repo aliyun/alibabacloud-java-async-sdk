@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupClientRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackupClientRequest</p>
  */
 public class DeleteBackupClientRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
     private DeleteBackupClientRequest(Builder builder) {
@@ -49,13 +54,17 @@ public class DeleteBackupClientRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackupClientRequest response) {
-            super(response);
-            this.clientId = response.clientId;
+        private Builder(DeleteBackupClientRequest request) {
+            super(request);
+            this.clientId = request.clientId;
         } 
 
         /**
-         * ClientId.
+         * <p>The ID of the Cloud Backup client.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-*********************</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);

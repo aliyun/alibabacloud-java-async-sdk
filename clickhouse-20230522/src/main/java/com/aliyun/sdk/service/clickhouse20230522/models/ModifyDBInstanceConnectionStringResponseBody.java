@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBInstanceConnectionStringResponseBody</p>
  */
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBInstanceConnectionStringResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,30 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBInstanceConnectionStringResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceConnectionStringResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("DBInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private Integer DBInstanceID;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
+
+        @com.aliyun.core.annotation.NameInMap("DisabledPorts")
+        private String disabledPorts;
 
         private Data(Builder builder) {
             this.connectionString = builder.connectionString;
             this.DBInstanceID = builder.DBInstanceID;
             this.DBInstanceName = builder.DBInstanceName;
+            this.disabledPorts = builder.disabledPorts;
         }
 
         public static Builder builder() {
@@ -116,13 +134,24 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             return this.DBInstanceName;
         }
 
+        /**
+         * @return disabledPorts
+         */
+        public String getDisabledPorts() {
+            return this.disabledPorts;
+        }
+
         public static final class Builder {
             private String connectionString; 
             private Integer DBInstanceID; 
             private String DBInstanceName; 
+            private String disabledPorts; 
 
             /**
-             * ConnectionString.
+             * <p>The endpoint of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -130,7 +159,10 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxxx</p>
              */
             public Builder DBInstanceID(Integer DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -138,10 +170,21 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxxx</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
+                return this;
+            }
+
+            /**
+             * DisabledPorts.
+             */
+            public Builder disabledPorts(String disabledPorts) {
+                this.disabledPorts = disabledPorts;
                 return this;
             }
 

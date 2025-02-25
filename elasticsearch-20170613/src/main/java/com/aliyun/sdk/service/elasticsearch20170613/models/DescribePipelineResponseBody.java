@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePipelineResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePipelineResponseBody</p>
  */
 public class DescribePipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribePipelineResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribePipelineResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The time when the pipeline was updated.
+         * <p>The time when the pipeline was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>829F38F6-E2D6-4109-90A6-888160BD1***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +61,11 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the queue. Valid values:
-         * <p>
-         * 
-         * *   MEMORY: a traditional memory-based queue.
-         * *   PERSISTED: disk-based ACKed queue (persistent queue).
+         * <p>The type of the queue. Valid values:</p>
+         * <ul>
+         * <li>MEMORY: a traditional memory-based queue.</li>
+         * <li>PERSISTED: disk-based ACKed queue (persistent queue).</li>
+         * </ul>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -75,41 +78,47 @@ public class DescribePipelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePipelineResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("batchDelay")
+        @com.aliyun.core.annotation.NameInMap("batchDelay")
         private Integer batchDelay;
 
-        @NameInMap("batchSize")
+        @com.aliyun.core.annotation.NameInMap("batchSize")
         private Integer batchSize;
 
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private String config;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreatedTime")
+        @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
 
-        @NameInMap("gmtUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("gmtUpdateTime")
         private String gmtUpdateTime;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private String pipelineId;
 
-        @NameInMap("pipelineStatus")
+        @com.aliyun.core.annotation.NameInMap("pipelineStatus")
         private String pipelineStatus;
 
-        @NameInMap("queueCheckPointWrites")
+        @com.aliyun.core.annotation.NameInMap("queueCheckPointWrites")
         private Integer queueCheckPointWrites;
 
-        @NameInMap("queueMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("queueMaxBytes")
         private Integer queueMaxBytes;
 
-        @NameInMap("queueType")
+        @com.aliyun.core.annotation.NameInMap("queueType")
         private String queueType;
 
-        @NameInMap("workers")
+        @com.aliyun.core.annotation.NameInMap("workers")
         private Integer workers;
 
         private Result(Builder builder) {
@@ -234,7 +243,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             private Integer workers; 
 
             /**
-             * The time when the pipeline was created.
+             * <p>The time when the pipeline was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder batchDelay(Integer batchDelay) {
                 this.batchDelay = batchDelay;
@@ -250,7 +262,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the pipeline.
+             * <p>The description of the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input {  }  filter {  }  output {  }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -258,12 +273,15 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the MPS queue. Valid values:
-             * <p>
+             * <p>The state of the MPS queue. Valid values:</p>
+             * <ul>
+             * <li>NOT_DEPLOYED: The node is not deployed.</li>
+             * <li>RUNNING</li>
+             * <li>DELETED: Deleted. The console does not display this status.</li>
+             * </ul>
              * 
-             * *   NOT_DEPLOYED: The node is not deployed.
-             * *   RUNNING
-             * *   DELETED: Deleted. The console does not display this status.
+             * <strong>example:</strong>
+             * <p>this is a test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -279,7 +297,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the queue in bytes. Unit: MB.
+             * <p>The total capacity of the queue in bytes. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-20T07:26:47.000+0000</p>
              */
             public Builder gmtUpdateTime(String gmtUpdateTime) {
                 this.gmtUpdateTime = gmtUpdateTime;
@@ -287,7 +308,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Number of queue checkpoint writes.
+             * <p>Number of queue checkpoint writes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pipeline_test</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -303,7 +327,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Pipeline batch delay. Unit: milliseconds.
+             * <p>Pipeline batch delay. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder queueCheckPointWrites(Integer queueCheckPointWrites) {
                 this.queueCheckPointWrites = queueCheckPointWrites;
@@ -311,7 +338,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pipeline workers.
+             * <p>The number of pipeline workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder queueMaxBytes(Integer queueMaxBytes) {
                 this.queueMaxBytes = queueMaxBytes;
@@ -319,7 +349,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The specific configuration of the pipeline.
+             * <p>The specific configuration of the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MEMORY</p>
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -327,7 +360,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the pipeline batch.
+             * <p>The size of the pipeline batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder workers(Integer workers) {
                 this.workers = workers;

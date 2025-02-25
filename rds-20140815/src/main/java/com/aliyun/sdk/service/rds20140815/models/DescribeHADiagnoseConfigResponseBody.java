@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHADiagnoseConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHADiagnoseConfigResponseBody</p>
  */
 public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TcpConnectionType")
+    @com.aliyun.core.annotation.NameInMap("TcpConnectionType")
     private String tcpConnectionType;
 
     private DescribeHADiagnoseConfigResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
         private String tcpConnectionType; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06B220E2-EAC5-4DBE-A1FC-1B62DB6A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +66,14 @@ public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The availability check method of the instance. Valid values:
-         * <p>
+         * <p>The availability check method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>LONG</strong>: Alibaba Cloud uses persistent connections to check the availability of the instance.</li>
+         * <li><strong>SHORT</strong>: Alibaba Cloud uses short-lived connections to check the availability of the instance.</li>
+         * </ul>
          * 
-         * *   **LONG**: Alibaba Cloud uses persistent connections to check the availability of the instance.
-         * *   **SHORT**: Alibaba Cloud uses short-lived connections to check the availability of the instance.
+         * <strong>example:</strong>
+         * <p>LONG</p>
          */
         public Builder tcpConnectionType(String tcpConnectionType) {
             this.tcpConnectionType = tcpConnectionType;

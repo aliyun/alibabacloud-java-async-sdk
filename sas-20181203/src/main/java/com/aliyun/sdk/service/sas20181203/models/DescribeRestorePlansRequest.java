@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestorePlansRequest} extends {@link RequestModel}
  *
  * <p>DescribeRestorePlansRequest</p>
  */
 public class DescribeRestorePlansRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeRestorePlansRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class DescribeRestorePlansRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +113,10 @@ public class DescribeRestorePlansRequest extends Request {
         }
 
         /**
-         * The name of the server.
+         * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-test-001</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -114,10 +125,13 @@ public class DescribeRestorePlansRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -126,15 +140,18 @@ public class DescribeRestorePlansRequest extends Request {
         }
 
         /**
-         * The status of the restoration task. Valid values:
-         * <p>
+         * <p>The status of the restoration task. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: initializing</li>
+         * <li><strong>created</strong>: creating</li>
+         * <li><strong>running</strong>: running</li>
+         * <li><strong>completed</strong>: complete</li>
+         * <li><strong>error</strong>: failed</li>
+         * <li><strong>restoring</strong>: restoring</li>
+         * </ul>
          * 
-         * *   **init**: initializing
-         * *   **created**: creating
-         * *   **running**: running
-         * *   **completed**: complete
-         * *   **error**: failed
-         * *   **restoring**: restoring
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

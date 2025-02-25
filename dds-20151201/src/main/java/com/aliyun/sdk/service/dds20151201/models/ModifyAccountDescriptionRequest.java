@@ -1,50 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
  */
 public class ModifyAccountDescriptionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccountDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountDescription")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountDescription;
 
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CharacterType")
+    private String characterType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyAccountDescriptionRequest(Builder builder) {
@@ -52,6 +61,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         this.regionId = builder.regionId;
         this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
+        this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -94,6 +104,13 @@ public class ModifyAccountDescriptionRequest extends Request {
     }
 
     /**
+     * @return characterType
+     */
+    public String getCharacterType() {
+        return this.characterType;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -132,6 +149,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         private String regionId; 
         private String accountDescription; 
         private String accountName; 
+        private String characterType; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -147,6 +165,7 @@ public class ModifyAccountDescriptionRequest extends Request {
             this.regionId = request.regionId;
             this.accountDescription = request.accountDescription;
             this.accountName = request.accountName;
+            this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -164,12 +183,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the account.
-         * <p>
+         * <p>The description of the account.</p>
+         * <ul>
+         * <li>The description must start with a letter and cannot start with http:// or https://.</li>
+         * <li>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   It cannot start with http:// or https://.
-         * *   It must start with a letter.
-         * *   It must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>superadmin</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -178,7 +200,11 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the account for which you want to modify the description.
+         * <p>The name of the account whose description is to be modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -187,7 +213,20 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * CharacterType.
+         */
+        public Builder characterType(String characterType) {
+            this.putQueryParameter("CharacterType", characterType);
+            this.characterType = characterType;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2356****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

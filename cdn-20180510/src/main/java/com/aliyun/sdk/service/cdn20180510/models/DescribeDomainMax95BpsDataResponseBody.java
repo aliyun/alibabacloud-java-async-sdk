@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainMax95BpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainMax95BpsDataResponseBody</p>
  */
 public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
-    @NameInMap("DetailData")
+    @com.aliyun.core.annotation.NameInMap("DetailData")
     private DetailData detailData;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DomesticMax95Bps")
+    @com.aliyun.core.annotation.NameInMap("DomesticMax95Bps")
     private String domesticMax95Bps;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Max95Bps")
+    @com.aliyun.core.annotation.NameInMap("Max95Bps")
     private String max95Bps;
 
-    @NameInMap("OverseasMax95Bps")
+    @com.aliyun.core.annotation.NameInMap("OverseasMax95Bps")
     private String overseasMax95Bps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainMax95BpsDataResponseBody(Builder builder) {
@@ -122,7 +122,7 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * Details of the 95th percentile bandwidth.
+         * <p>Details of the 95th percentile bandwidth.</p>
          */
         public Builder detailData(DetailData detailData) {
             this.detailData = detailData;
@@ -130,7 +130,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -138,7 +141,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The 95th percentile bandwidth in the Chinese mainland.
+         * <p>The 95th percentile bandwidth in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16777590.28</p>
          */
         public Builder domesticMax95Bps(String domesticMax95Bps) {
             this.domesticMax95Bps = domesticMax95Bps;
@@ -146,7 +152,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range for which the data was queried.
+         * <p>The end of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-11T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +163,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The 95th percentile bandwidth.
+         * <p>The 95th percentile bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16777590.28</p>
          */
         public Builder max95Bps(String max95Bps) {
             this.max95Bps = max95Bps;
@@ -162,7 +174,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The 95th percentile bandwidth outside the Chinese mainland.
+         * <p>The 95th percentile bandwidth outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder overseasMax95Bps(String overseasMax95Bps) {
             this.overseasMax95Bps = overseasMax95Bps;
@@ -170,7 +185,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +196,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range for which the data was queried.
+         * <p>The beginning of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -191,17 +212,23 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainMax95BpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainMax95BpsDataResponseBody</p>
+     */
     public static class Max95Detail extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("Max95Bps")
+        @com.aliyun.core.annotation.NameInMap("Max95Bps")
         private Float max95Bps;
 
-        @NameInMap("Max95BpsPeakTime")
+        @com.aliyun.core.annotation.NameInMap("Max95BpsPeakTime")
         private String max95BpsPeakTime;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private Max95Detail(Builder builder) {
@@ -254,7 +281,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Region of the 95th percentile bandwidth.
+             * <p>Region of the 95th percentile bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder area(String area) {
                 this.area = area;
@@ -262,7 +292,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The 95th percentile bandwidth.
+             * <p>The 95th percentile bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16777590.28</p>
              */
             public Builder max95Bps(Float max95Bps) {
                 this.max95Bps = max95Bps;
@@ -270,7 +303,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Time of the 95th percentile bandwidth.
+             * <p>Time of the 95th percentile bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-11T21:05:00Z</p>
              */
             public Builder max95BpsPeakTime(String max95BpsPeakTime) {
                 this.max95BpsPeakTime = max95BpsPeakTime;
@@ -278,7 +314,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-11T21:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -292,8 +331,14 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainMax95BpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainMax95BpsDataResponseBody</p>
+     */
     public static class DetailData extends TeaModel {
-        @NameInMap("Max95Detail")
+        @com.aliyun.core.annotation.NameInMap("Max95Detail")
         private java.util.List < Max95Detail> max95Detail;
 
         private DetailData(Builder builder) {

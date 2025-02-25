@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDetectReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileDetectReportResponseBody</p>
  */
 public class GetFileDetectReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFileDetectReportResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,32 +152,38 @@ public class GetFileDetectReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileDetectReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileDetectReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Basic")
+        @com.aliyun.core.annotation.NameInMap("Basic")
         private String basic;
 
-        @NameInMap("FileHash")
+        @com.aliyun.core.annotation.NameInMap("FileHash")
         private String fileHash;
 
-        @NameInMap("Filename")
+        @com.aliyun.core.annotation.NameInMap("Filename")
         private String filename;
 
-        @NameInMap("HasData")
+        @com.aliyun.core.annotation.NameInMap("HasData")
         private Boolean hasData;
 
-        @NameInMap("Intelligences")
+        @com.aliyun.core.annotation.NameInMap("Intelligences")
         private String intelligences;
 
-        @NameInMap("Sandbox")
+        @com.aliyun.core.annotation.NameInMap("Sandbox")
         private String sandbox;
 
-        @NameInMap("ShowTab")
+        @com.aliyun.core.annotation.NameInMap("ShowTab")
         private Boolean showTab;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private Long threatLevel;
 
-        @NameInMap("ThreatTypes")
+        @com.aliyun.core.annotation.NameInMap("ThreatTypes")
         private String threatTypes;
 
         private Data(Builder builder) {
@@ -258,7 +281,22 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             private String threatTypes; 
 
             /**
-             * The basic information about the detected file.
+             * <p>The basic information about the detected file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;sha256&quot;: &quot;&quot;,
+             *         &quot;sha512&quot;: &quot;&quot;,
+             *         &quot;source&quot;: &quot;aegis&quot;,
+             *         &quot;gmt_first_submit&quot;: &quot;&quot;,
+             *         &quot;sha1&quot;: &quot;&quot;,
+             *         &quot;virus_result&quot;: &quot;&quot;,
+             *         &quot;webshell_result&quot;: &quot;&quot;,
+             *         &quot;gmt_update&quot;: &quot;&quot;,
+             *         &quot;sandbox_result&quot;: &quot;2&quot;,
+             *         &quot;fileSize&quot;: &quot;363752&quot;,
+             *         &quot;virus_name&quot;: &quot;&quot;,
+             *     }</p>
              */
             public Builder basic(String basic) {
                 this.basic = basic;
@@ -266,7 +304,10 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * The hash value of the file.
+             * <p>The hash value of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c42b5f6bde0b730ece2923266333****</p>
              */
             public Builder fileHash(String fileHash) {
                 this.fileHash = fileHash;
@@ -274,7 +315,10 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.zip</p>
              */
             public Builder filename(String filename) {
                 this.filename = filename;
@@ -282,11 +326,14 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file data exists in the cloud sandbox. Valid values:
-             * <p>
+             * <p>Indicates whether the file data exists in the cloud sandbox. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasData(Boolean hasData) {
                 this.hasData = hasData;
@@ -294,12 +341,14 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * The threat intelligence event, which is a JSON array.
-             * <p>
+             * <p>The threat intelligence event, which is a JSON array.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C&amp;C servers, webshells, and web attacks.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\&C servers, webshells, and web attacks.
+             * <strong>example:</strong>
+             * <p>[&quot;The threat type&quot;]</p>
              */
             public Builder intelligences(String intelligences) {
                 this.intelligences = intelligences;
@@ -307,7 +356,10 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the cloud sandbox check results.
+             * <p>The details of the cloud sandbox check results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;BehaviorData&quot;: {}, &quot;ProcessData&quot;: {}, &quot;SandboxData&quot;: {}, &quot;AttackData&quot;: [], &quot;NetworkData&quot;: {}, &quot;SolutionData&quot;: {}, &quot;FileData&quot;: {}}</p>
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -315,11 +367,14 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the check report is displayed. Valid values:
-             * <p>
+             * <p>Indicates whether the check report is displayed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder showTab(Boolean showTab) {
                 this.showTab = showTab;
@@ -327,12 +382,15 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * The threat level. Valid values:
-             * <p>
+             * <p>The threat level. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: normal</li>
+             * <li><strong>1</strong>: suspicious</li>
+             * <li><strong>2</strong>: high</li>
+             * </ul>
              * 
-             * *   **0**: normal
-             * *   **1**: suspicious
-             * *   **2**: high
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder threatLevel(Long threatLevel) {
                 this.threatLevel = threatLevel;
@@ -340,13 +398,16 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * The risk tags and server tags that are generated by analyzing threat intelligence and security events. The value is a string array. The array includes the following elements:
-             * <p>
+             * <p>The risk tags and server tags that are generated by analyzing threat intelligence and security events. The value is a string array. The array includes the following elements:</p>
+             * <ul>
+             * <li><strong>threat_type_desc</strong>: the threat type.</li>
+             * <li><strong>last_find_time</strong>: the last time the threat was detected.</li>
+             * <li><strong>risk_type</strong>: indicates whether the tag is malicious. The value 0 indicates that the tag is not malicious. The value 1 indicates that the tag is malicious. The value -1 indicates that whether the tag type is malicious is unknown.</li>
+             * <li><strong>threat_type</strong>: the threat type. The value is an array. The elements in the array can be network layer intrusion, network service scanning, network sharing and discovery, mining pool, exploits, darknet, malicious logon, malicious download source, central control, web shell, and web attack.</li>
+             * </ul>
              * 
-             * *   **threat_type_desc**: the threat type.
-             * *   **last_find_time**: the last time the threat was detected.
-             * *   **risk_type**: indicates whether the tag is malicious. The value 0 indicates that the tag is not malicious. The value 1 indicates that the tag is malicious. The value -1 indicates that whether the tag type is malicious is unknown.
-             * *   **threat_type**: the threat type. The value is an array. The elements in the array can be network layer intrusion, network service scanning, network sharing and discovery, mining pool, exploits, darknet, malicious logon, malicious download source, central control, web shell, and web attack.
+             * <strong>example:</strong>
+             * <p>[{&quot;threat_type_desc&quot;: &quot;test&quot;,&quot;risk_type&quot;: 1,&quot;threat_type&quot;: &quot;&quot;}]</p>
              */
             public Builder threatTypes(String threatTypes) {
                 this.threatTypes = threatTypes;

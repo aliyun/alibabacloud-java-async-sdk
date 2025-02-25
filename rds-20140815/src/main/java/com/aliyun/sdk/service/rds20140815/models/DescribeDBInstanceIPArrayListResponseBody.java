@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceIPArrayListResponseBody</p>
  */
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceIPArrayListResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details about the IP address whitelists.
+         * <p>An array that consists of the details about the IP address whitelists.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2B6AF71-DC32-4055-B477-43B348798D10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceIPArrayListResponseBody</p>
+     */
     public static class DBInstanceIPArray extends TeaModel {
-        @NameInMap("DBInstanceIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
         private String DBInstanceIPArrayAttribute;
 
-        @NameInMap("DBInstanceIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayName")
         private String DBInstanceIPArrayName;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
-        @NameInMap("SecurityIPType")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPType")
         private String securityIPType;
 
         private DBInstanceIPArray(Builder builder) {
@@ -134,10 +148,13 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             private String securityIPType; 
 
             /**
-             * The attribute of the IP address whitelist. By default, this parameter is empty.
-             * <p>
+             * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
+             * <blockquote>
+             * <p> A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
+             * </blockquote>
              * 
-             * >  A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
                 this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
@@ -145,7 +162,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address whitelist.
+             * <p>The name of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_default</p>
              */
             public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
                 this.DBInstanceIPArrayName = DBInstanceIPArrayName;
@@ -153,7 +173,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the IP address whitelist.
+             * <p>The IP addresses in the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -161,7 +184,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IP address.
+             * <p>The type of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;
@@ -175,9 +201,15 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceIPArrayListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceIPArray")
-        private java.util.List < DBInstanceIPArray> DBInstanceIPArray;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArray")
+        private java.util.List<DBInstanceIPArray> DBInstanceIPArray;
 
         private Items(Builder builder) {
             this.DBInstanceIPArray = builder.DBInstanceIPArray;
@@ -194,17 +226,17 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         /**
          * @return DBInstanceIPArray
          */
-        public java.util.List < DBInstanceIPArray> getDBInstanceIPArray() {
+        public java.util.List<DBInstanceIPArray> getDBInstanceIPArray() {
             return this.DBInstanceIPArray;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceIPArray> DBInstanceIPArray; 
+            private java.util.List<DBInstanceIPArray> DBInstanceIPArray; 
 
             /**
              * DBInstanceIPArray.
              */
-            public Builder DBInstanceIPArray(java.util.List < DBInstanceIPArray> DBInstanceIPArray) {
+            public Builder DBInstanceIPArray(java.util.List<DBInstanceIPArray> DBInstanceIPArray) {
                 this.DBInstanceIPArray = DBInstanceIPArray;
                 return this;
             }

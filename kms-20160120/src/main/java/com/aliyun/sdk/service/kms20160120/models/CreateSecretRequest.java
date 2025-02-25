@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSecretRequest</p>
  */
 public class CreateSecretRequest extends Request {
-    @Query
-    @NameInMap("DKMSInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DKMSInstanceId")
     private String DKMSInstanceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableAutomaticRotation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutomaticRotation")
     private Boolean enableAutomaticRotation;
 
-    @Query
-    @NameInMap("EncryptionKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKeyId")
     private String encryptionKeyId;
 
-    @Query
-    @NameInMap("ExtendedConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendedConfig")
     private java.util.Map < String, ? > extendedConfig;
 
-    @Query
-    @NameInMap("RotationInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    private String policy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotationInterval")
     private String rotationInterval;
 
-    @Query
-    @NameInMap("SecretData")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretData")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretData;
 
-    @Query
-    @NameInMap("SecretDataType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretDataType")
     private String secretDataType;
 
-    @Query
-    @NameInMap("SecretName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretName;
 
-    @Query
-    @NameInMap("SecretType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretType")
     private String secretType;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("VersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionId;
 
     private CreateSecretRequest(Builder builder) {
@@ -70,6 +73,7 @@ public class CreateSecretRequest extends Request {
         this.enableAutomaticRotation = builder.enableAutomaticRotation;
         this.encryptionKeyId = builder.encryptionKeyId;
         this.extendedConfig = builder.extendedConfig;
+        this.policy = builder.policy;
         this.rotationInterval = builder.rotationInterval;
         this.secretData = builder.secretData;
         this.secretDataType = builder.secretDataType;
@@ -128,6 +132,13 @@ public class CreateSecretRequest extends Request {
     }
 
     /**
+     * @return policy
+     */
+    public String getPolicy() {
+        return this.policy;
+    }
+
+    /**
      * @return rotationInterval
      */
     public String getRotationInterval() {
@@ -182,6 +193,7 @@ public class CreateSecretRequest extends Request {
         private Boolean enableAutomaticRotation; 
         private String encryptionKeyId; 
         private java.util.Map < String, ? > extendedConfig; 
+        private String policy; 
         private String rotationInterval; 
         private String secretData; 
         private String secretDataType; 
@@ -201,6 +213,7 @@ public class CreateSecretRequest extends Request {
             this.enableAutomaticRotation = request.enableAutomaticRotation;
             this.encryptionKeyId = request.encryptionKeyId;
             this.extendedConfig = request.extendedConfig;
+            this.policy = request.policy;
             this.rotationInterval = request.rotationInterval;
             this.secretData = request.secretData;
             this.secretDataType = request.secretDataType;
@@ -266,6 +279,15 @@ public class CreateSecretRequest extends Request {
             String extendedConfigShrink = shrink(extendedConfig, "ExtendedConfig", "json");
             this.putQueryParameter("ExtendedConfig", extendedConfigShrink);
             this.extendedConfig = extendedConfig;
+            return this;
+        }
+
+        /**
+         * Policy.
+         */
+        public Builder policy(String policy) {
+            this.putQueryParameter("Policy", policy);
+            this.policy = policy;
             return this;
         }
 

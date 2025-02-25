@@ -1,3 +1,45 @@
+2025-02-19 Version: 2.0.18
+- Generated java-async 2023-09-30 for linkedmall.
+
+2025-02-18 Version: 2.0.17
+- Generated java-async 2023-09-30 for linkedmall.
+
+2025-02-17 Version: 2.0.16
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-09-18 Version: 2.0.15
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-09-10 Version: 2.0.14
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-08-30 Version: 2.0.13
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-07-02 Version: 2.0.12
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-06-11 Version: 2.0.11
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-06-06 Version: 2.0.10
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-05-13 Version: 2.0.9
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-05-07 Version: 2.0.8
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-04-17 Version: 2.0.7
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-04-12 Version: 2.0.6
+- Generated java-async 2023-09-30 for linkedmall.
+
+2024-04-08 Version: 2.0.5
+- Generated java-async 2023-09-30 for linkedmall.
+
 2023-12-06 Version: 2.0.4
 - Generated java-async 2023-09-30 for linkedmall.
 

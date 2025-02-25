@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCanAllocateVpcPrivateIpAddressRequest} extends {@link RequestModel}
  *
  * <p>CheckCanAllocateVpcPrivateIpAddressRequest</p>
  */
 public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     private CheckCanAllocateVpcPrivateIpAddressRequest(Builder builder) {
@@ -155,11 +160,14 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         } 
 
         /**
-         * The version of the private IP address. Valid values:
-         * <p>
+         * <p>The version of the private IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>ipv4</strong> If you want to query an IPv4 address, this parameter is optional.</li>
+         * <li><strong>ipv6</strong> If you want to query an IPv6 address, this parameter is required.</li>
+         * </ul>
          * 
-         * *   **ipv4** If you want to query an IPv4 address, this parameter is optional.
-         * *   **ipv6** If you want to query an IPv6 address, this parameter is required.
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -186,7 +194,11 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         }
 
         /**
-         * To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.
+         * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.7</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -195,10 +207,12 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         }
 
         /**
-         * The region ID of the vSwitch to which the private IP address that you want to query belongs.
-         * <p>
+         * <p>The region ID of the vSwitch to which the private IP address that you want to query belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +239,11 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the private IP address to be queried belongs.
+         * <p>The ID of the vSwitch to which the private IP address to be queried belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-m5ew3t46z2drmifnt****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

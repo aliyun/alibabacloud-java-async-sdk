@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecretParameterResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSecretParameterResponseBody</p>
  */
 public class DeleteSecretParameterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSecretParameterResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeleteSecretParameterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0D02BDF-77F6-49F2-95C9-8E87121D1944</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

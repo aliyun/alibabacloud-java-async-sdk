@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafPolicyDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafPolicyDomainsRequest</p>
  */
 public class DescribeDcdnWafPolicyDomainsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long policyId;
 
     private DescribeDcdnWafPolicyDomainsRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class DescribeDcdnWafPolicyDomainsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -93,7 +96,10 @@ public class DescribeDcdnWafPolicyDomainsRequest extends Request {
         }
 
         /**
-         * The number of domain names to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.
+         * <p>The number of domain names to return on each page. Valid values: an integer from <strong>1</strong> to <strong>500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -102,7 +108,11 @@ public class DescribeDcdnWafPolicyDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the protection policy. You can specify only one ID in each request.
+         * <p>The ID of the protection policy. You can specify only one ID in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);

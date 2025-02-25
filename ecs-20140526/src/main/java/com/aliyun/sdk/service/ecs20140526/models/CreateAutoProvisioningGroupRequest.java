@@ -1,145 +1,162 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoProvisioningGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAutoProvisioningGroupRequest</p>
  */
 public class CreateAutoProvisioningGroupRequest extends Request {
-    @Query
-    @NameInMap("LaunchConfiguration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchConfiguration")
     private LaunchConfiguration launchConfiguration;
 
-    @Query
-    @NameInMap("AutoProvisioningGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupName")
     private String autoProvisioningGroupName;
 
-    @Query
-    @NameInMap("AutoProvisioningGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupType")
     private String autoProvisioningGroupType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DataDiskConfig")
-    private java.util.List < DataDiskConfig> dataDiskConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskConfig")
+    private java.util.List<DataDiskConfig> dataDiskConfig;
 
-    @Query
-    @NameInMap("DefaultTargetCapacityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultTargetCapacityType")
     private String defaultTargetCapacityType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExcessCapacityTerminationPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcessCapacityTerminationPolicy")
     private String excessCapacityTerminationPolicy;
 
-    @Query
-    @NameInMap("HibernationOptionsConfigured")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HibernationOptionsConfigured")
     private Boolean hibernationOptionsConfigured;
 
-    @Query
-    @NameInMap("LaunchTemplateConfig")
-    private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
+    private java.util.List<LaunchTemplateConfig> launchTemplateConfig;
 
-    @Query
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @Query
-    @NameInMap("LaunchTemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
     private String launchTemplateVersion;
 
-    @Query
-    @NameInMap("MaxSpotPrice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSpotPrice")
     private Float maxSpotPrice;
 
-    @Query
-    @NameInMap("MinTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinTargetCapacity")
     private String minTargetCapacity;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayAsYouGoAllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayAsYouGoAllocationStrategy")
     private String payAsYouGoAllocationStrategy;
 
-    @Query
-    @NameInMap("PayAsYouGoTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayAsYouGoTargetCapacity")
     private String payAsYouGoTargetCapacity;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrePaidOptions")
+    private PrePaidOptions prePaidOptions;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SpotAllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePoolOptions")
+    private ResourcePoolOptions resourcePoolOptions;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
     private String spotAllocationStrategy;
 
-    @Query
-    @NameInMap("SpotInstanceInterruptionBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceInterruptionBehavior")
     private String spotInstanceInterruptionBehavior;
 
-    @Query
-    @NameInMap("SpotInstancePoolsToUseCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstancePoolsToUseCount")
     private Integer spotInstancePoolsToUseCount;
 
-    @Query
-    @NameInMap("SpotTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotTargetCapacity")
     private String spotTargetCapacity;
 
-    @Query
-    @NameInMap("SystemDiskConfig")
-    private java.util.List < SystemDiskConfig> systemDiskConfig;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskConfig")
+    private java.util.List<SystemDiskConfig> systemDiskConfig;
 
-    @Query
-    @NameInMap("TerminateInstances")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateInstances")
     private Boolean terminateInstances;
 
-    @Query
-    @NameInMap("TerminateInstancesWithExpiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateInstancesWithExpiration")
     private Boolean terminateInstancesWithExpiration;
 
-    @Query
-    @NameInMap("TotalTargetCapacity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalTargetCapacity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String totalTargetCapacity;
 
-    @Query
-    @NameInMap("ValidFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidFrom")
     private String validFrom;
 
-    @Query
-    @NameInMap("ValidUntil")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidUntil")
     private String validUntil;
 
     private CreateAutoProvisioningGroupRequest(Builder builder) {
@@ -162,15 +179,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         this.ownerId = builder.ownerId;
         this.payAsYouGoAllocationStrategy = builder.payAsYouGoAllocationStrategy;
         this.payAsYouGoTargetCapacity = builder.payAsYouGoTargetCapacity;
+        this.prePaidOptions = builder.prePaidOptions;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourcePoolOptions = builder.resourcePoolOptions;
         this.spotAllocationStrategy = builder.spotAllocationStrategy;
         this.spotInstanceInterruptionBehavior = builder.spotInstanceInterruptionBehavior;
         this.spotInstancePoolsToUseCount = builder.spotInstancePoolsToUseCount;
         this.spotTargetCapacity = builder.spotTargetCapacity;
         this.systemDiskConfig = builder.systemDiskConfig;
+        this.tag = builder.tag;
         this.terminateInstances = builder.terminateInstances;
         this.terminateInstancesWithExpiration = builder.terminateInstancesWithExpiration;
         this.totalTargetCapacity = builder.totalTargetCapacity;
@@ -222,7 +242,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     /**
      * @return dataDiskConfig
      */
-    public java.util.List < DataDiskConfig> getDataDiskConfig() {
+    public java.util.List<DataDiskConfig> getDataDiskConfig() {
         return this.dataDiskConfig;
     }
 
@@ -257,7 +277,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     /**
      * @return launchTemplateConfig
      */
-    public java.util.List < LaunchTemplateConfig> getLaunchTemplateConfig() {
+    public java.util.List<LaunchTemplateConfig> getLaunchTemplateConfig() {
         return this.launchTemplateConfig;
     }
 
@@ -318,6 +338,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
+     * @return prePaidOptions
+     */
+    public PrePaidOptions getPrePaidOptions() {
+        return this.prePaidOptions;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -343,6 +370,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return resourcePoolOptions
+     */
+    public ResourcePoolOptions getResourcePoolOptions() {
+        return this.resourcePoolOptions;
     }
 
     /**
@@ -376,8 +410,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     /**
      * @return systemDiskConfig
      */
-    public java.util.List < SystemDiskConfig> getSystemDiskConfig() {
+    public java.util.List<SystemDiskConfig> getSystemDiskConfig() {
         return this.systemDiskConfig;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -420,12 +461,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String autoProvisioningGroupName; 
         private String autoProvisioningGroupType; 
         private String clientToken; 
-        private java.util.List < DataDiskConfig> dataDiskConfig; 
+        private java.util.List<DataDiskConfig> dataDiskConfig; 
         private String defaultTargetCapacityType; 
         private String description; 
         private String excessCapacityTerminationPolicy; 
         private Boolean hibernationOptionsConfigured; 
-        private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
+        private java.util.List<LaunchTemplateConfig> launchTemplateConfig; 
         private String launchTemplateId; 
         private String launchTemplateVersion; 
         private Float maxSpotPrice; 
@@ -434,15 +475,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Long ownerId; 
         private String payAsYouGoAllocationStrategy; 
         private String payAsYouGoTargetCapacity; 
+        private PrePaidOptions prePaidOptions; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private ResourcePoolOptions resourcePoolOptions; 
         private String spotAllocationStrategy; 
         private String spotInstanceInterruptionBehavior; 
         private Integer spotInstancePoolsToUseCount; 
         private String spotTargetCapacity; 
-        private java.util.List < SystemDiskConfig> systemDiskConfig; 
+        private java.util.List<SystemDiskConfig> systemDiskConfig; 
+        private java.util.List<Tag> tag; 
         private Boolean terminateInstances; 
         private Boolean terminateInstancesWithExpiration; 
         private String totalTargetCapacity; 
@@ -473,15 +517,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.ownerId = request.ownerId;
             this.payAsYouGoAllocationStrategy = request.payAsYouGoAllocationStrategy;
             this.payAsYouGoTargetCapacity = request.payAsYouGoTargetCapacity;
+            this.prePaidOptions = request.prePaidOptions;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePoolOptions = request.resourcePoolOptions;
             this.spotAllocationStrategy = request.spotAllocationStrategy;
             this.spotInstanceInterruptionBehavior = request.spotInstanceInterruptionBehavior;
             this.spotInstancePoolsToUseCount = request.spotInstancePoolsToUseCount;
             this.spotTargetCapacity = request.spotTargetCapacity;
             this.systemDiskConfig = request.systemDiskConfig;
+            this.tag = request.tag;
             this.terminateInstances = request.terminateInstances;
             this.terminateInstancesWithExpiration = request.terminateInstancesWithExpiration;
             this.totalTargetCapacity = request.totalTargetCapacity;
@@ -499,7 +546,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The name of the auto provisioning group. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.
+         * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apg-test</p>
          */
         public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
             this.putQueryParameter("AutoProvisioningGroupName", autoProvisioningGroupName);
@@ -508,14 +558,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The delivery type of the auto provisioning group. Valid values:
-         * <p>
+         * <p>The delivery type of the auto provisioning group. Valid values:</p>
+         * <ul>
+         * <li>request: one-time asynchronous delivery. When the auto provisioning group is started, it attempts to asynchronously deliver an instance cluster that meets the target capacity only once. The group does not retry the operation regardless of whether all the instances are delivered.</li>
+         * <li>instant: one-time synchronous delivery. When the auto provisioning group is started, it attempts to synchronously deliver an instance cluster that meets the target capacity only once. The list of delivered instances and the causes of delivery failures are returned in the response.</li>
+         * <li>maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver an instance cluster that meets the target capacity, and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.</li>
+         * </ul>
+         * <p>Default value: maintain.</p>
          * 
-         * *   request: one-time asynchronous delivery. The auto provisioning group attempts to asynchronously deliver an instance cluster that meets the target capacity only once when it is started. The group does not retry the operation regardless of whether all the instances are delivered.
-         * *   instant: one-time synchronous delivery. The auto provisioning group attempts to synchronously deliver an instance cluster that meets the target capacity only once when it is started. The list of delivered instances and the causes of delivery failures are returned in the response.
-         * *   maintain: continuous delivery. The auto provisioning group attempts to deliver an instance cluster that meets the target capacity, and monitors the real-time capacity when it is started. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.
-         * 
-         * Default value: maintain.
+         * <strong>example:</strong>
+         * <p>maintain</p>
          */
         public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
             this.putQueryParameter("AutoProvisioningGroupType", autoProvisioningGroupType);
@@ -524,7 +576,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -533,22 +588,24 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The information of data disks on the instance.
+         * <p>The information of data disks on the instance.</p>
          */
-        public Builder dataDiskConfig(java.util.List < DataDiskConfig> dataDiskConfig) {
+        public Builder dataDiskConfig(java.util.List<DataDiskConfig> dataDiskConfig) {
             this.putQueryParameter("DataDiskConfig", dataDiskConfig);
             this.dataDiskConfig = dataDiskConfig;
             return this;
         }
 
         /**
-         * The type of supplemental instances. If the sum of the values of the `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` parameters is smaller than the value of the `TotalTargetCapacity` parameter, the auto provisioning group creates instances of the specified type to meet the capacity requirements. Valid values:
-         * <p>
+         * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is smaller than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo: pay-as-you-go instances</li>
+         * <li>Spot: preemptible instances.</li>
+         * </ul>
+         * <p>Default value: Spot.</p>
          * 
-         * *   PayAsYouGo: pay-as-you-go instances
-         * *   Spot: preemptible instances.
-         * 
-         * Default value: Spot.
+         * <strong>example:</strong>
+         * <p>Spot</p>
          */
         public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
             this.putQueryParameter("DefaultTargetCapacityType", defaultTargetCapacityType);
@@ -557,7 +614,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The description of the auto provisioning group.
+         * <p>The description of the auto provisioning group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -566,13 +626,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the removed instances when the real-time capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:
-         * <p>
+         * <p>Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:</p>
+         * <ul>
+         * <li>termination: releases the scaled-in instances in the auto provisioning group.</li>
+         * <li>no-termination: removes the scaled-in instances from the auto provisioning group but does not release the instances.</li>
+         * </ul>
+         * <p>Default value: no-termination.</p>
          * 
-         * *   termination: releases the removed instances.
-         * *   no-termination: only removes the instances from the auto provisioning group but does not release them.
-         * 
-         * Default value: no-termination.
+         * <strong>example:</strong>
+         * <p>termination</p>
          */
         public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
             this.putQueryParameter("ExcessCapacityTerminationPolicy", excessCapacityTerminationPolicy);
@@ -581,7 +643,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
             this.putQueryParameter("HibernationOptionsConfigured", hibernationOptionsConfigured);
@@ -590,16 +657,19 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The extended configurations of the launch template.
+         * <p>The extended configurations of the launch template.</p>
          */
-        public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
+        public Builder launchTemplateConfig(java.util.List<LaunchTemplateConfig> launchTemplateConfig) {
             this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
             this.launchTemplateConfig = launchTemplateConfig;
             return this;
         }
 
         /**
-         * The ID of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplates](~~73759~~) operation to query available launch templates. If both the LaunchTemplateId and `LaunchConfiguration.*` parameters are specified, the LaunchTemplateId parameter takes precedence.
+         * <p>The ID of the launch template associated with the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation to query available launch templates. When both LaunchTemplateId and <code>LaunchConfiguration.*</code> parameters are specified, LaunchTemplateId takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-bp1fgzds4bdogu03****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -608,10 +678,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The version of the launch template associated with the auto provisioning group. You can call the [DescribeLaunchTemplateVersions](~~73761~~) operation to query the versions of available launch templates.
-         * <p>
+         * <p>The version of the launch template associated with the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/73761.html">DescribeLaunchTemplateVersions</a> operation to query the versions of available launch templates.</p>
+         * <p>Default value: the default version of the launch template.</p>
          * 
-         * Default value: the default version of the launch template.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder launchTemplateVersion(String launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -620,10 +691,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The maximum price of preemptible instances in the auto provisioning group.
-         * <p>
+         * <p>The maximum price of preemptible instances in the auto provisioning group.</p>
+         * <blockquote>
+         * <p> When both <code>MaxSpotPrice</code> and <code>LaunchTemplateConfig.N.MaxPrice</code> are specified, the smaller one of the two parameter values is used.</p>
+         * </blockquote>
          * 
-         * > If the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are both specified, the lower price is used.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxSpotPrice(Float maxSpotPrice) {
             this.putQueryParameter("MaxSpotPrice", maxSpotPrice);
@@ -632,14 +706,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The minimum target capacity of the auto provisioning group. The value must be a positive integer.
-         * <p>
+         * <p>The minimum target capacity of the auto provisioning group. The value must be a positive integer. When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when <code>AutoProvisioningGroupType</code> is set to instant. </li>
+         * <li>If the number of instances that can be created in the current region is smaller than the value of this parameter, the operation cannot be called and no instances are created. </li>
+         * <li>If the number of instances that can be created in the current region is greater than the value of this parameter, instances can be created based on the specified parameters.</li>
+         * </ul>
          * 
-         * When you specify this parameter, take note of the following items:
-         * 
-         * *   This parameter takes effect only when `AutoProvisioningGroupType` is set to instant.
-         * *   If the number of instances that can be created in the current region is smaller than the value of this parameter, the operation cannot be called and no instances are created.
-         * *   If the number of instances that can be created in the current region is greater than the value of this parameter, instances can be created based on the specified parameters.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder minTargetCapacity(String minTargetCapacity) {
             this.putQueryParameter("MinTargetCapacity", minTargetCapacity);
@@ -666,13 +741,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The policy for creating pay-as-you-go instances. Valid values:
-         * <p>
+         * <p>The policy for creating pay-as-you-go instances. Valid values:</p>
+         * <ul>
+         * <li>lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.</li>
+         * <li>prioritized: priority-based policy. The auto provisioning group creates instances based on the priority specified by <code>LaunchTemplateConfig.N.Priority</code>.</li>
+         * </ul>
+         * <p>Default value: lowest-price.</p>
          * 
-         * *   lowest-price: cost optimization policy. The auto provisioning group attempts to create instances of the lowest-priced instance type.
-         * *   prioritized: priority-based policy. The auto provisioning group attempts to create instances based on the priority specified by the `LaunchTemplateConfig.N.Priority` parameter.
-         * 
-         * Default value: lowest-price.
+         * <strong>example:</strong>
+         * <p>prioritized</p>
          */
         public Builder payAsYouGoAllocationStrategy(String payAsYouGoAllocationStrategy) {
             this.putQueryParameter("PayAsYouGoAllocationStrategy", payAsYouGoAllocationStrategy);
@@ -681,7 +758,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be smaller than the `TotalTargetCapacity` value.
+         * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be less than or equal to the <code>TotalTargetCapacity</code> value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder payAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
             this.putQueryParameter("PayAsYouGoTargetCapacity", payAsYouGoTargetCapacity);
@@ -690,7 +770,20 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * PrePaidOptions.
+         */
+        public Builder prePaidOptions(PrePaidOptions prePaidOptions) {
+            this.putQueryParameter("PrePaidOptions", prePaidOptions);
+            this.prePaidOptions = prePaidOptions;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the region in which to create the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -699,7 +792,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the auto provisioning group.
+         * <p>The ID of the resource group to which to assign the auto provisioning group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -726,14 +822,30 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The policy for creating preemptible instances. Valid values:
-         * <p>
+         * <p>The resource pool options to use to create instances. When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the auto provisioning group creates pay-as-you-go instances.</li>
+         * <li>This parameter takes effect only if you set <code>AutoProvisioningGroupType</code> to instant.</li>
+         * </ul>
+         */
+        public Builder resourcePoolOptions(ResourcePoolOptions resourcePoolOptions) {
+            String resourcePoolOptionsShrink = shrink(resourcePoolOptions, "ResourcePoolOptions", "json");
+            this.putQueryParameter("ResourcePoolOptions", resourcePoolOptionsShrink);
+            this.resourcePoolOptions = resourcePoolOptions;
+            return this;
+        }
+
+        /**
+         * <p>The policy for creating preemptible instances. Valid values:</p>
+         * <ul>
+         * <li>lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.</li>
+         * <li>diversified: balanced distribution policy. The auto provisioning group creates instances in zones that are specified in extended configurations and then evenly distributes the instances across the zones.</li>
+         * <li>capacity-optimized: capacity-optimized distribution policy. The auto provisioning group creates instances of the optimal instance types across the optimal zones based on resource availability.</li>
+         * </ul>
+         * <p>Default value: lowest-price.</p>
          * 
-         * *   lowest-price: cost optimization policy. The auto provisioning group attempts to create instances of the lowest-priced instance type.
-         * *   diversified: balanced distribution policy. The auto provisioning group attempts to create instances in zones that are specified in extended configurations and then evenly distribute the instances across the zones.
-         * *   capacity-optimized: capacity-optimized distribution policy. The auto provisioning group attempts to create instances that are of the optimal instance types across the optimal zones based on resource availability.
-         * 
-         * Default value: lowest-price.
+         * <strong>example:</strong>
+         * <p>diversified</p>
          */
         public Builder spotAllocationStrategy(String spotAllocationStrategy) {
             this.putQueryParameter("SpotAllocationStrategy", spotAllocationStrategy);
@@ -742,13 +854,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The operation to be performed on the preemptible instance when it is interrupted. Valid values:
-         * <p>
+         * <p>The operation to be performed on the preemptible instance when it is interrupted. Valid values:</p>
+         * <ul>
+         * <li>stop: stops the preemptible instance.</li>
+         * <li>terminate: releases the preemptible instance.</li>
+         * </ul>
+         * <p>Default value: terminate.</p>
          * 
-         * *   stop: stops the preemptible instance.
-         * *   terminate: releases the preemptible instance.
-         * 
-         * Default value: terminate.
+         * <strong>example:</strong>
+         * <p>terminate</p>
          */
         public Builder spotInstanceInterruptionBehavior(String spotInstanceInterruptionBehavior) {
             this.putQueryParameter("SpotInstanceInterruptionBehavior", spotInstanceInterruptionBehavior);
@@ -757,10 +871,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The number of preemptible instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`.
-         * <p>
+         * <p>The number of preemptible instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when <code>SpotAllocationStrategy</code> is set to <code>lowest-price</code>.</p>
+         * <p>The value must be smaller than the N value specified in <code>LaunchTemplateConfig.N</code>.</p>
          * 
-         * The value of SpotInstancePoolsToUseCount must be smaller than the N value specified in `LaunchTemplateConfig.N.*` parameters.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder spotInstancePoolsToUseCount(Integer spotInstancePoolsToUseCount) {
             this.putQueryParameter("SpotInstancePoolsToUseCount", spotInstancePoolsToUseCount);
@@ -769,7 +884,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The target capacity of preemptible instances in the auto provisioning group. The value must be smaller than the `TotalTargetCapacity` value.
+         * <p>The target capacity of preemptible instances in the auto provisioning group. The value must be less than or equal to the <code>TotalTargetCapacity</code> value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder spotTargetCapacity(String spotTargetCapacity) {
             this.putQueryParameter("SpotTargetCapacity", spotTargetCapacity);
@@ -778,22 +896,33 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The information of system disks on the instance.
+         * <p>The information of system disks on the instance.</p>
          */
-        public Builder systemDiskConfig(java.util.List < SystemDiskConfig> systemDiskConfig) {
+        public Builder systemDiskConfig(java.util.List<SystemDiskConfig> systemDiskConfig) {
             this.putQueryParameter("SystemDiskConfig", systemDiskConfig);
             this.systemDiskConfig = systemDiskConfig;
             return this;
         }
 
         /**
-         * Specifies whether to release instances in the auto provisioning group after the auto provisioning group is deleted. Valid values:
-         * <p>
+         * <p>The tags to add to the auto provisioning group.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:</p>
+         * <ul>
+         * <li>true: releases the instances.</li>
+         * <li>false: retains the instances.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: releases instances in the auto provisioning group.
-         * *   false: retains instances in the auto provisioning group.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder terminateInstances(Boolean terminateInstances) {
             this.putQueryParameter("TerminateInstances", terminateInstances);
@@ -802,13 +931,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to release instances in the auto provisioning group after the auto provisioning group expires. Valid values:
-         * <p>
+         * <p>Specifies whether to release instances in the auto provisioning group when the group expires. Valid values:</p>
+         * <ul>
+         * <li>true: releases the instances.</li>
+         * <li>false: only removes the instances from the auto provisioning group but does not release them.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: releases instances in the auto provisioning group.
-         * *   false: only removes instances from the auto provisioning group but does not release them.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
             this.putQueryParameter("TerminateInstancesWithExpiration", terminateInstancesWithExpiration);
@@ -817,10 +948,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The total target capacity of the auto provisioning group. The value must be a positive integer.
-         * <p>
+         * <p>The total target capacity of the auto provisioning group. The value must be a positive integer.</p>
+         * <p>The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by <code>PayAsYouGoTargetCapacity</code> and the target capacity of preemptible instances specified by <code>SpotTargetCapacity</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the `PayAsYouGoTargetCapacity` parameter and the target capacity of preemptible instances specified by the `SpotTargetCapacity` parameter.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder totalTargetCapacity(String totalTargetCapacity) {
             this.putQueryParameter("TotalTargetCapacity", totalTargetCapacity);
@@ -829,12 +962,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The time at which to start the auto provisioning group. The period of time between this point in time and the point in time specified by the `ValidUntil` parameter is the effective time period of the auto provisioning group.
-         * <p>
+         * <p>The time at which to start the auto provisioning group. The period of time between this point in time and the point in time specified by <code>ValidUntil</code> is the validity period of the auto provisioning group.</p>
+         * <p>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>By default, an auto provisioning group is started immediately after it is created.</p>
          * 
-         * Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * By default, an auto provisioning group is started immediately after it is created.
+         * <strong>example:</strong>
+         * <p>2019-04-01T15:10:20Z</p>
          */
         public Builder validFrom(String validFrom) {
             this.putQueryParameter("ValidFrom", validFrom);
@@ -843,12 +976,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The expiration time of the auto provisioning group. The period of time between this point in time and the point in time specified by the `ValidFrom` parameter is the effective time period of the auto provisioning group.
-         * <p>
+         * <p>The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by <code>ValidFrom</code> is the validity period of the auto provisioning group.</p>
+         * <p>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>Default value: 2099-12-31T23:59:59Z.</p>
          * 
-         * Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * Default value: 2099-12-31T23:59:59Z.
+         * <strong>example:</strong>
+         * <p>2019-06-01T15:10:20Z</p>
          */
         public Builder validUntil(String validUntil) {
             this.putQueryParameter("ValidUntil", validUntil);
@@ -863,14 +996,20 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -914,7 +1053,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String rolearn; 
 
             /**
-             * This parameter is unavailable for public use.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789012****</p>
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -922,7 +1066,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>34458433936495****:alice</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -930,7 +1079,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:role/adminrole</p>
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -944,46 +1098,64 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class DataDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
+        private String encryptAlgorithm;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("KmsKeyId")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
         private DataDisk(Builder builder) {
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
             this.description = builder.description;
             this.device = builder.device;
             this.diskName = builder.diskName;
+            this.encryptAlgorithm = builder.encryptAlgorithm;
             this.encrypted = builder.encrypted;
             this.kmsKeyId = builder.kmsKeyId;
             this.performanceLevel = builder.performanceLevel;
+            this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
             this.snapshotId = builder.snapshotId;
         }
@@ -994,6 +1166,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static DataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1032,6 +1211,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return encryptAlgorithm
+         */
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
+        /**
          * @return encrypted
          */
         public Boolean getEncrypted() {
@@ -1053,6 +1239,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -1067,29 +1260,51 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithInstance; 
             private String description; 
             private String device; 
             private String diskName; 
+            private String encryptAlgorithm; 
             private Boolean encrypted; 
             private String kmsKeyId; 
             private String performanceLevel; 
+            private Long provisionedIops; 
             private Integer size; 
             private String snapshotId; 
 
             /**
-             * The category of data disk N. Valid values of N: 1 to 16. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk.
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The category of data disk N. Valid values of N: 1 to 16. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud: basic disk.</li>
+             * </ul>
+             * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1097,15 +1312,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to release the data disk after the instance with which the disk is associated is released. Valid values:
-             * <p>
+             * <p>Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   true: yes
-             * *   false: no
-             * 
-             * Default value: true.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -1113,7 +1329,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The description of data disk N. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataDisk_Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1121,7 +1340,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The mount target of the data disk. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The mount point of data disk N. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/vd1</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -1129,12 +1351,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the data disk. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
-             * <p>
+             * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+             * <p>This parameter is left empty by default.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * This parameter is empty by default.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>cloud_ssdData</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1142,15 +1364,29 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt data disk N. Valid values:
-             * <p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>null</p>
+             */
+            public Builder encryptAlgorithm(String encryptAlgorithm) {
+                this.encryptAlgorithm = encryptAlgorithm;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to encrypt data disk N. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * Default value: false.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1158,7 +1394,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key to be used for the data disk. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The ID of the Key Management Service (KMS) key to use for data disk N. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -1166,17 +1405,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The PL of the ESSD that is used as the data disk. The number of PLs that you specify must be the same as the value of N in the `LaunchConfiguration.DataDisk.N.Category` parameter. Default value: PL1. Valid values:
-             * <p>
+             * <p>The performance level of the Enterprise SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in <code>LaunchConfiguration.DataDisk.N.Category</code>. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1184,25 +1424,45 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
-             * <p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <blockquote>
+             * <p> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
              * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
+             * <strong>example:</strong>
+             * <p>40000</p>
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
+                return this;
+            }
+
+            /**
+             * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li><p>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_efficiency: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_ssd: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_essd: vary based on the <code>LaunchConfiguration.DataDisk.N.PerformanceLevel</code> value.</p>
+             * <ul>
+             * <li>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL0: 40 to 32768.</li>
+             * <li>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL1: 20 to 32768.</li>
+             * <li>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL2: 461 to 32768.</li>
+             * <li>Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud: 5 to 2000.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>LaunchConfiguration.DataDisk.N.SnapshotId</code>.</p>
+             * </blockquote>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
-             * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_essd: depend on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.
-             * 
-             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
-             * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud: 5 to 2000.
-             * 
-             * > The parameter value must be greater than or equal to the size of the snapshot specified by the `LaunchConfiguration.DataDisk.N.SnapshotId` parameter.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1210,12 +1470,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot that you want to use to create the data disk. Valid values of N: 1 to 16.
-             * <p>
+             * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</p>
+             * <p>If you specify this parameter, <code>LaunchConfiguration.DataDisk.N.Size</code> is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * After this parameter is specified, the `LaunchConfiguration.DataDisk.N.Size` parameter is ignored. The size of the data disk is the same as that of the snapshot specified by this parameter. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>s-bp17441ohwka0yuh****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -1229,20 +1489,34 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
-        @NameInMap("EncryptAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
         private String encryptAlgorithm;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         private SystemDisk(Builder builder) {
+            this.burstingEnabled = builder.burstingEnabled;
             this.encryptAlgorithm = builder.encryptAlgorithm;
             this.encrypted = builder.encrypted;
             this.KMSKeyId = builder.KMSKeyId;
+            this.provisionedIops = builder.provisionedIops;
         }
 
         public static Builder builder() {
@@ -1251,6 +1525,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static SystemDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1274,21 +1555,52 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             return this.KMSKeyId;
         }
 
+        /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public static final class Builder {
+            private Boolean burstingEnabled; 
             private String encryptAlgorithm; 
             private String encrypted; 
             private String KMSKeyId; 
+            private Long provisionedIops; 
 
             /**
-             * The algorithm to be used to encrypt data disks. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is available only if you set <code>LaunchConfiguration.SystemDisk.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
              * 
-             * *   aes-256
-             * *   sm4-128
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The algorithm to use to encrypt the system disk. Valid values:</p>
+             * <ul>
+             * <li>aes-256</li>
+             * <li>sm4-128</li>
+             * </ul>
+             * <p>Default value: aes-256.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
-             * Default value: aes-256.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>aes-256</p>
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -1296,15 +1608,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt system disk N. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: false.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -1312,13 +1625,29 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the KMS key that you want to use for the system disk.
-             * <p>
+             * <p>The ID of the KMS key to use for the system disk.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <blockquote>
+             * <p> This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>40000</p>
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
                 return this;
             }
 
@@ -1329,14 +1658,20 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
-    public static class Tag extends TeaModel {
-        @NameInMap("Key")
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class LaunchConfigurationTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Tag(Builder builder) {
+        private LaunchConfigurationTag(Builder builder) {
             this.key = builder.key;
             this.value = builder.value;
         }
@@ -1345,7 +1680,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             return new Builder();
         }
 
-        public static Tag create() {
+        public static LaunchConfigurationTag create() {
             return builder().build();
         }
 
@@ -1368,7 +1703,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1376,110 +1714,134 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain <code>http://</code> or <code>https://</code>. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public Tag build() {
-                return new Tag(this);
+            public LaunchConfigurationTag build() {
+                return new LaunchConfigurationTag(this);
             } 
 
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class LaunchConfiguration extends TeaModel {
-        @NameInMap("Arn")
-        private java.util.List < Arn> arn;
+        @com.aliyun.core.annotation.NameInMap("Arn")
+        private java.util.List<Arn> arn;
 
-        @NameInMap("AutoReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
-        @NameInMap("CreditSpecification")
+        @com.aliyun.core.annotation.NameInMap("CreditSpecification")
         private String creditSpecification;
 
-        @NameInMap("DataDisk")
-        private java.util.List < DataDisk> dataDisk;
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
+        private java.util.List<DataDisk> dataDisk;
 
-        @NameInMap("DeploymentSetId")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HostNames")
-        private java.util.List < String > hostNames;
+        @com.aliyun.core.annotation.NameInMap("HostNames")
+        private java.util.List<String> hostNames;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
+        private String imageFamily;
+
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("InternetMaxBandwidthIn")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
         private Integer internetMaxBandwidthIn;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private String ioOptimized;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("PasswordInherit")
+        @com.aliyun.core.annotation.NameInMap("PasswordInherit")
         private Boolean passwordInherit;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityEnhancementStrategy")
+        @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
         private String securityEnhancementStrategy;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+        private java.util.List<String> securityGroupIds;
 
-        @NameInMap("SystemDisk")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
         private SystemDisk systemDisk;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskDescription")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskDescription")
         private String systemDiskDescription;
 
-        @NameInMap("SystemDiskName")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskName")
         private String systemDiskName;
 
-        @NameInMap("SystemDiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPerformanceLevel")
         private String systemDiskPerformanceLevel;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<LaunchConfigurationTag> tag;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+        private Integer autoRenewPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Integer period;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+        private String periodUnit;
 
         private LaunchConfiguration(Builder builder) {
             this.arn = builder.arn;
@@ -1489,6 +1851,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.deploymentSetId = builder.deploymentSetId;
             this.hostName = builder.hostName;
             this.hostNames = builder.hostNames;
+            this.imageFamily = builder.imageFamily;
             this.imageId = builder.imageId;
             this.instanceDescription = builder.instanceDescription;
             this.instanceName = builder.instanceName;
@@ -1512,6 +1875,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.systemDiskSize = builder.systemDiskSize;
             this.tag = builder.tag;
             this.userData = builder.userData;
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
         }
 
         public static Builder builder() {
@@ -1525,7 +1892,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return arn
          */
-        public java.util.List < Arn> getArn() {
+        public java.util.List<Arn> getArn() {
             return this.arn;
         }
 
@@ -1546,7 +1913,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return dataDisk
          */
-        public java.util.List < DataDisk> getDataDisk() {
+        public java.util.List<DataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
@@ -1567,8 +1934,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return hostNames
          */
-        public java.util.List < String > getHostNames() {
+        public java.util.List<String> getHostNames() {
             return this.hostNames;
+        }
+
+        /**
+         * @return imageFamily
+         */
+        public String getImageFamily() {
+            return this.imageFamily;
         }
 
         /**
@@ -1672,7 +2046,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -1721,7 +2095,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<LaunchConfigurationTag> getTag() {
             return this.tag;
         }
 
@@ -1732,14 +2106,43 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             return this.userData;
         }
 
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Integer getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
         public static final class Builder {
-            private java.util.List < Arn> arn; 
+            private java.util.List<Arn> arn; 
             private String autoReleaseTime; 
             private String creditSpecification; 
-            private java.util.List < DataDisk> dataDisk; 
+            private java.util.List<DataDisk> dataDisk; 
             private String deploymentSetId; 
             private String hostName; 
-            private java.util.List < String > hostNames; 
+            private java.util.List<String> hostNames; 
+            private String imageFamily; 
             private String imageId; 
             private String instanceDescription; 
             private String instanceName; 
@@ -1754,33 +2157,40 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String resourceGroupId; 
             private String securityEnhancementStrategy; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private SystemDisk systemDisk; 
             private String systemDiskCategory; 
             private String systemDiskDescription; 
             private String systemDiskName; 
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
-            private java.util.List < Tag> tag; 
+            private java.util.List<LaunchConfigurationTag> tag; 
             private String userData; 
+            private Boolean autoRenew; 
+            private Integer autoRenewPeriod; 
+            private Integer period; 
+            private String periodUnit; 
 
             /**
-             * This parameter is unavailable for public use.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              */
-            public Builder arn(java.util.List < Arn> arn) {
+            public Builder arn(java.util.List<Arn> arn) {
                 this.arn = arn;
                 return this;
             }
 
             /**
-             * 按量付费实例的自动释放时间。按照[ISO8601](~~25696~~)标准表示，使用UTC+0时间。格式为：`yyyy-MM-ddTHH:mm:ssZ`。
-             * <p>
+             * <p>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
+             * <ul>
+             * <li>If the value of <code>ss</code> is not <code>00</code>, the start time is automatically rounded down to the nearest minute based on the value of <code>mm</code>.</li>
+             * <li>The specified time must be at least 30 minutes later than the current time.</li>
+             * <li>The specified time can be at most three years later than the current time.</li>
+             * </ul>
              * 
-             * - 如果秒（`ss`）取值不是`00`，则自动取为当前分钟（`mm`）开始时。
-             * 
-             * - 最短释放时间为当前时间半小时之后。
-             * 
-             * - 最长释放时间不能超过当前时间三年。
+             * <strong>example:</strong>
+             * <p>2018-01-01T12:05:00Z</p>
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1788,15 +2198,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The performance mode of the burstable instance. Valid values:
-             * <p>
+             * <p>The performance mode of the burstable instance. Valid values:</p>
+             * <ul>
+             * <li>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in the <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a> topic.</li>
+             * <li>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in the <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a> topic.</li>
+             * </ul>
+             * <p>This parameter is empty by default.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   Standard: the standard mode. For more information, see the "Standard mode" section in the [Burstable instances](~~59977~~) topic.
-             * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
-             * 
-             * This parameter is empty by default.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder creditSpecification(String creditSpecification) {
                 this.creditSpecification = creditSpecification;
@@ -1804,15 +2215,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The cloud disks in the extended configurations of the launch template.
+             * <p>The cloud disks in the extended configurations of the launch template.</p>
              */
-            public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
                 return this;
             }
 
             /**
-             * The ID of the deployment set to which to deploy the instance.
+             * <p>The ID of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp1frxuzdg87zh4p****</p>
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -1820,14 +2234,17 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The hostname of the instance. Take note of the following items:
-             * <p>
+             * <p>The instance hostname. Take note of the following items:</p>
+             * <ul>
+             * <li>The hostname cannot start or end with a period (.) or hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-).</li>
+             * <li>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</li>
+             * <li>For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+             * <li>You cannot specify both <code>LaunchConfiguration.HostName</code> and <code>LaunchConfiguration.HostNames.N</code>. Otherwise, an error is returned.</li>
+             * <li>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</li>
+             * </ul>
              * 
-             * *   The hostname cannot start or end with a period (.) or hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-).
-             * *   For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
-             * *   For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
-             * *   You cannot specify both the `LaunchConfiguration.HostName` and `LaunchConfiguration.HostNames.N` parameters. Otherwise, an error is returned.
-             * *   If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>k8s-node-[1,4]-ecshost</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1835,24 +2252,41 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The hostname of the instance. You can use this parameter to specify different hostnames for multiple instances. Take note of the following items:
-             * <p>
+             * <p>The hostname of instance N. You can use this parameter to specify different hostnames for multiple instances. Take note of the following items:</p>
+             * <ul>
+             * <li>This parameter takes effect only when <code>AutoProvisioningGroupType</code> is set to instant. </li>
+             * <li>The value of N indicates the number of instances. Valid values of N: 1 to 1000. The value of N must be the same as the TotalTargetCapacity value. </li>
+             * <li>The hostname cannot start or end with a period (.) or hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-). </li>
+             * <li>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. The hostname can contain letters, digits, and hyphens (-). </li>
+             * <li>For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). </li>
+             * <li>You cannot specify both <code>LaunchConfiguration.HostName</code> and <code>LaunchConfiguration.HostNames.N</code>. Otherwise, an error is returned. </li>
+             * <li>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</li>
+             * </ul>
              * 
-             * *   This parameter takes effect only when `AutoProvisioningGroupType` is set to instant.
-             * *   The value of N indicates the number of instances. Valid values: 1 to 1000. The value of N must be the same as the TotalTargetCapacity value.
-             * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
-             * *   For a Windows instance, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. The hostname can contain letters, digits, and hyphens (-).
-             * *   For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
-             * *   You cannot specify both the `LaunchConfiguration.HostName` and `LaunchConfiguration.HostNames.N` parameters. Otherwise, an error is returned.
-             * *   If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>ecs-host-01</p>
              */
-            public Builder hostNames(java.util.List < String > hostNames) {
+            public Builder hostNames(java.util.List<String> hostNames) {
                 this.hostNames = hostNames;
                 return this;
             }
 
             /**
-             * The ID of the image that you want to use to create the instance. You can call the [DescribeImages](~~25534~~) operation to query available image resources. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>aliyun</code> or <code>acs:</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou-daily-update</p>
+             */
+            public Builder imageFamily(String imageFamily) {
+                this.imageFamily = imageFamily;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the image to be used to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1g7004ksh0oeuc****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1860,7 +2294,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The description of the instance. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The instance description. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <code>http://</code> or <code>https://</code>. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance_Description</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -1868,12 +2305,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the instance . The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
-             * <p>
+             * <p>The instance name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+             * <p>The default value of this parameter is the <code>InstanceId</code> value.</p>
+             * <p>When you batch create instances, you can batch configure sequential names for the instances. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>k8s-node-[1,4]-alibabacloud</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1881,15 +2319,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The billing method for network usage. Valid values:
-             * <p>
+             * <p>The billing method for network usage. Valid values:</p>
+             * <ul>
+             * <li>PayByBandwidth: pay-by-bandwidth</li>
+             * <li>PayByTraffic: pay-by-traffic</li>
+             * </ul>
+             * <blockquote>
+             * <p> When the pay-by-traffic billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as the upper limits of bandwidth instead of guaranteed performance specifications. When demands outstrip resource supplies, the maximum bandwidths may be limited. If you want guaranteed bandwidth for your instance, use the pay-by-bandwidth billing method.</p>
+             * </blockquote>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   PayByBandwidth: pay-by-bandwidth
-             * *   PayByTraffic: pay-by-traffic
-             * 
-             * > If the pay-by-traffic billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instances, use the pay-by-bandwidth billing method for network usage.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>PayByTraffic</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1897,13 +2338,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
-             * <p>
+             * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+             * <ul>
+             * <li>When the maximum outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</li>
+             * <li>When the maximum outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>, and the default value is the value of <code>LaunchConfiguration.InternetMaxBandwidthOut</code>.</li>
+             * </ul>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.
-             * *   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of `LaunchConfiguration.InternetMaxBandwidthOut`, and the default value is the value of `LaunchConfiguration.InternetMaxBandwidthOut`.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
                 this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -1911,12 +2354,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
-             * <p>
+             * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+             * <p>Default value: 0.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * Default value: 0.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -1924,15 +2367,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to create an I/O optimized instance. Valid values:
-             * <p>
+             * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
+             * <ul>
+             * <li>none: The instance is not I/O optimized.</li>
+             * <li>optimized: The instance is I/O optimized.</li>
+             * </ul>
+             * <p>For instances of retired instance types, the default value is none. For instances of other instance types, the default value is optimized.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   none: The instance is not I/O optimized.
-             * *   optimized: The instance is I/O optimized.
-             * 
-             * For instances of retired instance types, the default value is none. For instances of other instance types, the default value is optimized.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>optimized</p>
              */
             public Builder ioOptimized(String ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -1940,13 +2384,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the key pair to bind to the instance.
-             * <p>
+             * <p>The key pair name.</p>
+             * <ul>
+             * <li>For Windows instances, this parameter is ignored. This parameter is empty by default.</li>
+             * <li>By default, password-based logon is disabled for Linux instances.</li>
+             * </ul>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   For Windows instances, this parameter is ignored. This parameter is empty by default.
-             * *   By default, password-based logon is disabled for Linux instances.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>KeyPair_Name</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -1954,14 +2400,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
-             * <p>
+             * <p>The instance password. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:</p>
+             * <p><code>( ) ` ~ ! @ # $ % ^ &amp; * - _ + = | { }  </code>: ; &quot; &lt; &gt; , . ? /``  For Windows instances, the password cannot start with a forward slash (/). When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence. `</p>
              * 
-             * ``()`~!@#$%^&*-_+=|{}`[]`:;\"<>,.?/``
-             * 
-             * For Windows instances, the password cannot start with a forward slash (/).
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>EcsV587!</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1969,13 +2412,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the preset password of the image. Valid values:
-             * <p>
+             * <p>Specifies whether to use the password preset in the image. Valid values:</p>
+             * <ul>
+             * <li>true: uses the password preset in the image.</li>
+             * <li>false: does not use the password preset in the image.</li>
+             * </ul>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   true: uses the preset password.
-             * *   false: does not use the preset password.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder passwordInherit(Boolean passwordInherit) {
                 this.passwordInherit = passwordInherit;
@@ -1983,7 +2428,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The name of the instance Resource Access Management (RAM) role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RAM_Name</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -1991,7 +2439,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the resource group to which to assign the instance. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The ID of the resource group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1999,13 +2450,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Indicates whether security hardening is enabled. Valid values:
-             * <p>
+             * <p>Specifies whether to enable security hardening. Valid values:</p>
+             * <ul>
+             * <li>Active: enables security hardening. This value is applicable only to public images.</li>
+             * <li>Deactive: disables security hardening. This value is applicable to all image types.</li>
+             * </ul>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   Active: Security hardening is enabled. This value is applicable only to public images.
-             * *   Deactive: Security hardening is disabled. This value is applicable to all image types.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
                 this.securityEnhancementStrategy = securityEnhancementStrategy;
@@ -2013,7 +2466,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of security group N to which to assign the instance. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The ID of the security group to which to assign the instance. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp15ed6xe1yxeycg****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2021,15 +2477,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The IDs of the security groups to which the new ECS instances belong.
+             * <p>The IDs of the security groups to which the new ECS instances belong.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
 
             /**
-             * The information of the system disk on the instance. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The system disk information of instances. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -2037,17 +2493,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The category of the system disk. Valid values:
-             * <p>
+             * <p>The category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: enhanced SSD (ESSD)</li>
+             * <li>cloud: basic disk</li>
+             * </ul>
+             * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_essd: enhanced SSD (ESSD)
-             * *   cloud: basic disk.
-             * 
-             * For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -2055,10 +2512,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`.
-             * <p>
+             * <p>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>SystemDisk_Description</p>
              */
             public Builder systemDiskDescription(String systemDiskDescription) {
                 this.systemDiskDescription = systemDiskDescription;
@@ -2066,12 +2524,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
-             * <p>
+             * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+             * <p>This parameter is empty by default.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * This parameter is empty by default.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>cloud_ssdSystem</p>
              */
             public Builder systemDiskName(String systemDiskName) {
                 this.systemDiskName = systemDiskName;
@@ -2079,17 +2537,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD that you want to use as the system disk. Default value: PL0. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD to be used as the system disk. Valid values:</p>
+             * <ul>
+             * <li>PL0 (default): A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -2097,12 +2556,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The size of the system disk. Valid values: 20 to 500. Unit: GiB. This parameter value must be at least 20 and greater than or equal to the size of the image specified by the LaunchConfiguration.ImageId parameter.
-             * <p>
+             * <p>The size of the system disk. Valid values: 20 to 500. Unit: GiB. The value must be at least 20 and greater than or equal to the size of the image specified by LaunchConfiguration.ImageId.</p>
+             * <p>Default value: 40 or the size of the image specified by LaunchConfiguration.ImageId, whichever is greater.</p>
+             * <p>When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * Default value: 40 or the size of the image specified by the LaunchConfiguration.ImageId parameter, whichever is greater.
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -2110,18 +2569,53 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The tags in the extended configurations of the launch template.
+             * <p>The tag in the extended configurations of the launch template.</p>
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<LaunchConfigurationTag> tag) {
                 this.tag = tag;
                 return this;
             }
 
             /**
-             * The user data of the instance. The user data must be encoded in Base64. The raw data can be up to 16 KB in size. If both the LaunchTemplateId and LaunchConfiguration.\* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * <p>The instance user data. The user data must be encoded in Base64. The raw data can be up to 32 KB in size. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBoZWxsbyBlY3Mh</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
+                return this;
+            }
+
+            /**
+             * AutoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * AutoRenewPeriod.
+             */
+            public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * PeriodUnit.
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
                 return this;
             }
 
@@ -2132,8 +2626,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class DataDiskConfig extends TeaModel {
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
         private DataDiskConfig(Builder builder) {
@@ -2159,13 +2659,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String diskCategory; 
 
             /**
-             * The category of the data disk. You can specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:
-             * <p>
+             * <p>The category of data disk N. You can use this parameter to specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: ESSD</li>
+             * <li>cloud: basic disk</li>
+             * </ul>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk.
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -2179,41 +2682,50 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class LaunchTemplateConfig extends TeaModel {
-        @NameInMap("Architectures")
-        private java.util.List < String > architectures;
+        @com.aliyun.core.annotation.NameInMap("Architectures")
+        private java.util.List<String> architectures;
 
-        @NameInMap("BurstablePerformance")
+        @com.aliyun.core.annotation.NameInMap("BurstablePerformance")
         private String burstablePerformance;
 
-        @NameInMap("Cores")
-        private java.util.List < Integer > cores;
+        @com.aliyun.core.annotation.NameInMap("Cores")
+        private java.util.List<Integer> cores;
 
-        @NameInMap("ExcludedInstanceTypes")
-        private java.util.List < String > excludedInstanceTypes;
+        @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
+        private java.util.List<String> excludedInstanceTypes;
 
-        @NameInMap("InstanceFamilyLevel")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaxPrice")
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Double maxPrice;
 
-        @NameInMap("MaxQuantity")
+        @com.aliyun.core.annotation.NameInMap("MaxQuantity")
         private Integer maxQuantity;
 
-        @NameInMap("Memories")
-        private java.util.List < Float > memories;
+        @com.aliyun.core.annotation.NameInMap("Memories")
+        private java.util.List<Float> memories;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Double weightedCapacity;
 
         private LaunchTemplateConfig(Builder builder) {
@@ -2221,6 +2733,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.burstablePerformance = builder.burstablePerformance;
             this.cores = builder.cores;
             this.excludedInstanceTypes = builder.excludedInstanceTypes;
+            this.imageId = builder.imageId;
             this.instanceFamilyLevel = builder.instanceFamilyLevel;
             this.instanceType = builder.instanceType;
             this.maxPrice = builder.maxPrice;
@@ -2242,7 +2755,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return architectures
          */
-        public java.util.List < String > getArchitectures() {
+        public java.util.List<String> getArchitectures() {
             return this.architectures;
         }
 
@@ -2256,15 +2769,22 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return cores
          */
-        public java.util.List < Integer > getCores() {
+        public java.util.List<Integer> getCores() {
             return this.cores;
         }
 
         /**
          * @return excludedInstanceTypes
          */
-        public java.util.List < String > getExcludedInstanceTypes() {
+        public java.util.List<String> getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
         }
 
         /**
@@ -2298,7 +2818,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return memories
          */
-        public java.util.List < Float > getMemories() {
+        public java.util.List<Float> getMemories() {
             return this.memories;
         }
 
@@ -2324,36 +2844,39 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > architectures; 
+            private java.util.List<String> architectures; 
             private String burstablePerformance; 
-            private java.util.List < Integer > cores; 
-            private java.util.List < String > excludedInstanceTypes; 
+            private java.util.List<Integer> cores; 
+            private java.util.List<String> excludedInstanceTypes; 
+            private String imageId; 
             private String instanceFamilyLevel; 
             private String instanceType; 
             private Double maxPrice; 
             private Integer maxQuantity; 
-            private java.util.List < Float > memories; 
+            private java.util.List<Float> memories; 
             private Integer priority; 
             private String vSwitchId; 
             private Double weightedCapacity; 
 
             /**
-             * The architectures of the instance types.
+             * <p>The architectures of the instance types.</p>
              */
-            public Builder architectures(java.util.List < String > architectures) {
+            public Builder architectures(java.util.List<String> architectures) {
                 this.architectures = architectures;
                 return this;
             }
 
             /**
-             * Specifies whether to include burstable instance types. Valid values:
-             * <p>
+             * <p>Specifies whether to include burstable instance types. Valid values:</p>
+             * <ul>
+             * <li>Exclude: does not include burstable instance types.</li>
+             * <li>Include: includes burstable instance types.</li>
+             * <li>Required: includes only burstable instance types.</li>
+             * </ul>
+             * <p>Default value: Include.</p>
              * 
-             * *   Exclude: does not include burstable instance types.
-             * *   Include: includes burstable instance types.
-             * *   Required: includes only burstable instance types.
-             * 
-             * Default value: Include.
+             * <strong>example:</strong>
+             * <p>Include</p>
              */
             public Builder burstablePerformance(String burstablePerformance) {
                 this.burstablePerformance = burstablePerformance;
@@ -2361,30 +2884,43 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The number of vCPU cores of the instance type.
+             * <p>The number of vCPU cores of the instance type.</p>
              */
-            public Builder cores(java.util.List < Integer > cores) {
+            public Builder cores(java.util.List<Integer> cores) {
                 this.cores = cores;
                 return this;
             }
 
             /**
-             * The instance types that you want to exclude.
+             * <p>The instance types that you want to exclude.</p>
              */
-            public Builder excludedInstanceTypes(java.util.List < String > excludedInstanceTypes) {
+            public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
                 this.excludedInstanceTypes = excludedInstanceTypes;
                 return this;
             }
 
             /**
-             * The instance family level in the intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria. Valid values:
-             * <p>
+             * <p>The ID of the image to be used to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available image resources. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.</p>
              * 
-             * *   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-             * *   EnterpriseLevel: enterprise level. Instances of this level provide stable performance and dedicated resources, and are suitable for scenarios in which high stability is required. For more information, see [Overview of instance families](~~25378~~).
-             * *   CreditEntryLevel: This value is available only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [What are burstable instances?](~~59977~~).
+             * <strong>example:</strong>
+             * <p>m-bp1g7004ksh0oeuc****</p>
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</p>
+             * <ul>
+             * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+             * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> topic.</li>
+             * <li>CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 10.</p>
              * 
-             * Valid values of N: 1 to 10.
+             * <strong>example:</strong>
+             * <p>EnterpriseLevel</p>
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -2392,7 +2928,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).
+             * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2400,12 +2939,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The maximum price of preemptible instances in extended configuration N.
-             * <p>
+             * <p>The maximum price of preemptible instances in extended configuration N.</p>
+             * <blockquote>
+             * <p> If you specify one or more other <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.MaxPrice</code>.</p>
+             * </blockquote>
              * 
-             * **
-             * 
-             * **If you specify the **`LaunchTemplateConfig` parameter, you must also specify the `LaunchTemplateConfig.N.MaxPrice` parameter.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxPrice(Double maxPrice) {
                 this.maxPrice = maxPrice;
@@ -2413,7 +2953,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable to general users.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder maxQuantity(Integer maxQuantity) {
                 this.maxQuantity = maxQuantity;
@@ -2421,15 +2966,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The memory sizes of the instance type.
+             * <p>The memory sizes of the instance type.</p>
              */
-            public Builder memories(java.util.List < Float > memories) {
+            public Builder memories(java.util.List<Float> memories) {
                 this.memories = memories;
                 return this;
             }
 
             /**
-             * The priority of the extended configuration. A value of 0 indicates the highest priority. Valid values: 0 to ∞.
+             * <p>The priority of extended configuration N. A value of 0 indicates the highest priority. Valid values: 0 to ∞.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -2437,10 +2985,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.
-             * <p>
+             * <p>The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.</p>
+             * <blockquote>
+             * <p> If you specify one or more other <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.VSwitchId</code>.</p>
+             * </blockquote>
              * 
-             * > If you specify the `LaunchTemplateConfig` parameter, you must also specify the `LaunchTemplateConfig.N.VSwitchId` parameter.
+             * <strong>example:</strong>
+             * <p>vsw-sn5bsitu4lfzgc5o7****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2448,13 +2999,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.
-             * <p>
+             * <p>The weight of the instance type in extended configuration N. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.</p>
+             * <p>The weight is calculated based on the computing power of the specified instance type and the minimum computing power of a single instance in the cluster to be created by the auto provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</p>
+             * <ul>
+             * <li>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</li>
+             * <li>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</li>
+             * </ul>
              * 
-             * The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster to be created by the auto provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.
-             * 
-             * *   For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.
-             * *   For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder weightedCapacity(Double weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
@@ -2468,8 +3021,212 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class SpecifyCapacityDistribution extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+        private java.util.List<String> instanceTypes;
+
+        @com.aliyun.core.annotation.NameInMap("MinTargetCapacity")
+        private Integer minTargetCapacity;
+
+        private SpecifyCapacityDistribution(Builder builder) {
+            this.instanceTypes = builder.instanceTypes;
+            this.minTargetCapacity = builder.minTargetCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpecifyCapacityDistribution create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceTypes
+         */
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        /**
+         * @return minTargetCapacity
+         */
+        public Integer getMinTargetCapacity() {
+            return this.minTargetCapacity;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> instanceTypes; 
+            private Integer minTargetCapacity; 
+
+            /**
+             * InstanceTypes.
+             */
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
+                this.instanceTypes = instanceTypes;
+                return this;
+            }
+
+            /**
+             * <p>The minimum target capacity of the auto provisioning group. The value must be a positive integer. When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>This parameter takes effect only when <code>AutoProvisioningGroupType</code> is set to instant. </li>
+             * <li>If the number of instances that can be created in the current region is smaller than the value of this parameter, the operation cannot be called and no instances are created. </li>
+             * <li>If the number of instances that can be created in the current region is greater than the value of this parameter, instances can be created based on the specified parameters.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder minTargetCapacity(Integer minTargetCapacity) {
+                this.minTargetCapacity = minTargetCapacity;
+                return this;
+            }
+
+            public SpecifyCapacityDistribution build() {
+                return new SpecifyCapacityDistribution(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class PrePaidOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SpecifyCapacityDistribution")
+        private java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution;
+
+        private PrePaidOptions(Builder builder) {
+            this.specifyCapacityDistribution = builder.specifyCapacityDistribution;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrePaidOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return specifyCapacityDistribution
+         */
+        public java.util.List<SpecifyCapacityDistribution> getSpecifyCapacityDistribution() {
+            return this.specifyCapacityDistribution;
+        }
+
+        public static final class Builder {
+            private java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution; 
+
+            /**
+             * SpecifyCapacityDistribution.
+             */
+            public Builder specifyCapacityDistribution(java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution) {
+                this.specifyCapacityDistribution = specifyCapacityDistribution;
+                return this;
+            }
+
+            public PrePaidOptions build() {
+                return new PrePaidOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class ResourcePoolOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolIds")
+        private java.util.List<String> privatePoolIds;
+
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private String strategy;
+
+        private ResourcePoolOptions(Builder builder) {
+            this.privatePoolIds = builder.privatePoolIds;
+            this.strategy = builder.strategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privatePoolIds
+         */
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        /**
+         * @return strategy
+         */
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> privatePoolIds; 
+            private String strategy; 
+
+            /**
+             * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</p>
+             */
+            public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
+                this.privatePoolIds = privatePoolIds;
+                return this;
+            }
+
+            /**
+             * <p>Specifies which resource pools to use to create instances. Resource pools include the public pool and the private pools that are associated with elasticity assurance and capacity reservations in the Active state. Valid values:</p>
+             * <ul>
+             * <li>PrivatePoolFirst: uses private pools first. If you set this parameter to PrivatePoolFirst, you can specify ResourcePoolOptions.PrivatePoolIds or leave ResourcePoolOptions.PrivatePoolIds empty. If you specify ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, matching open private pools are used. If no matching open private pools exist, the public pool is used.</li>
+             * <li>PrivatePoolOnly: uses only private pools. If you set this parameter to PrivatePoolOnly, you must specify ResourcePoolOptions.PrivatePoolIds. If the private pools that you specify in ResourcePoolOptions.PrivatePoolIds have insufficient capacity, instances cannot be created.</li>
+             * <li>PublicPoolOnly: uses the public pool.</li>
+             * </ul>
+             * <p>Default value: PublicPoolOnly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivatePoolFirst</p>
+             */
+            public Builder strategy(String strategy) {
+                this.strategy = strategy;
+                return this;
+            }
+
+            public ResourcePoolOptions build() {
+                return new ResourcePoolOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class SystemDiskConfig extends TeaModel {
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
         private SystemDiskConfig(Builder builder) {
@@ -2495,13 +3252,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String diskCategory; 
 
             /**
-             * The category of the system disk. You can specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:
-             * <p>
+             * <p>The category of the system disk. You can specify multiple disk categories, and the disk categories are prioritized in the order in which they are specified. If a specified disk category is unavailable, the system uses the next available disk category. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_essd: ESSD</li>
+             * <li>cloud: basic disk.</li>
+             * </ul>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -2510,6 +3270,81 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
             public SystemDiskConfig build() {
                 return new SystemDiskConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The key of tag N to add to the auto provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N to add to the auto provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

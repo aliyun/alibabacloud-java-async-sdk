@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublicPreCheckImageScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>PublicPreCheckImageScanTaskResponseBody</p>
  */
 public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PublicPreCheckImageScanTaskResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9353221-40F4-5F98-B73C-2803DC804033</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PublicPreCheckImageScanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>PublicPreCheckImageScanTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("NeedAuthCount")
+        @com.aliyun.core.annotation.NameInMap("NeedAuthCount")
         private Integer needAuthCount;
 
-        @NameInMap("ScanImageCount")
+        @com.aliyun.core.annotation.NameInMap("ScanImageCount")
         private Integer scanImageCount;
 
         private Data(Builder builder) {
@@ -110,7 +124,10 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
             private Integer scanImageCount; 
 
             /**
-             * NeedAuthCount.
+             * <p>The number of images to scan in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder needAuthCount(Integer needAuthCount) {
                 this.needAuthCount = needAuthCount;
@@ -118,7 +135,10 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanImageCount.
+             * <p>The quota for container image scan to be consumed by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder scanImageCount(Integer scanImageCount) {
                 this.scanImageCount = scanImageCount;

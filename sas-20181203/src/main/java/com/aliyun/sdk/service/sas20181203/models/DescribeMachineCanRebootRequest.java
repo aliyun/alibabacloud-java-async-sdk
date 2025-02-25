@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMachineCanRebootRequest} extends {@link RequestModel}
  *
  * <p>DescribeMachineCanRebootRequest</p>
  */
 public class DescribeMachineCanRebootRequest extends Request {
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribeMachineCanRebootRequest(Builder builder) {
@@ -68,11 +73,14 @@ public class DescribeMachineCanRebootRequest extends Request {
         } 
 
         /**
-         * The type of the vulnerabilities. Valid values:
-         * <p>
+         * <p>The type of the vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li>cve: Linux software vulnerabilities</li>
+         * <li>sys: Windows system vulnerabilities</li>
+         * </ul>
          * 
-         * *   cve: Linux software vulnerabilities
-         * *   sys: Windows system vulnerabilities
+         * <strong>example:</strong>
+         * <p>sys</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -81,7 +89,10 @@ public class DescribeMachineCanRebootRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b268326-273e-44fc-a0e3-9482435c****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

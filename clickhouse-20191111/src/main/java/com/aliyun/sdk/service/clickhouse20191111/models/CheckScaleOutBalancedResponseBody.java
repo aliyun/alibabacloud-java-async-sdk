@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckScaleOutBalancedResponseBody} extends {@link TeaModel}
  *
  * <p>CheckScaleOutBalancedResponseBody</p>
  */
 public class CheckScaleOutBalancedResponseBody extends TeaModel {
-    @NameInMap("CheckCode")
+    @com.aliyun.core.annotation.NameInMap("CheckCode")
     private String checkCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TableDetails")
+    @com.aliyun.core.annotation.NameInMap("TableDetails")
     private TableDetails tableDetails;
 
-    @NameInMap("TimeDuration")
+    @com.aliyun.core.annotation.NameInMap("TimeDuration")
     private String timeDuration;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private CheckScaleOutBalancedResponseBody(Builder builder) {
@@ -110,7 +115,14 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CheckCode.
+         * <p>The check result. Valid values:</p>
+         * <ul>
+         * <li><strong>400</strong>: The cluster failed the check.</li>
+         * <li><strong>200</strong>: The cluster passed the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder checkCode(String checkCode) {
             this.checkCode = checkCode;
@@ -118,7 +130,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -126,7 +141,15 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +157,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +168,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * TableDetails.
+         * <p>The error information returned for a check failure.</p>
          */
         public Builder tableDetails(TableDetails tableDetails) {
             this.tableDetails = tableDetails;
@@ -150,7 +176,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * TimeDuration.
+         * <p>The amount of time that is required for the migration and scale-out. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder timeDuration(String timeDuration) {
             this.timeDuration = timeDuration;
@@ -158,7 +187,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -171,17 +203,23 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckScaleOutBalancedResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckScaleOutBalancedResponseBody</p>
+     */
     public static class TableDetail extends TeaModel {
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private String cluster;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Integer detail;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableDetail(Builder builder) {
@@ -234,7 +272,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Cluster.
+             * <p>The cluster. The value is fixed as <strong>default</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -242,7 +283,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_name</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -250,7 +294,14 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The error details. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The unique distributed table is missing.</li>
+             * <li><strong>2</strong>: More than one distributed table exists for the local table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder detail(Integer detail) {
                 this.detail = detail;
@@ -258,7 +309,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the local table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -272,9 +326,15 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CheckScaleOutBalancedResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckScaleOutBalancedResponseBody</p>
+     */
     public static class TableDetails extends TeaModel {
-        @NameInMap("TableDetail")
-        private java.util.List < TableDetail> tableDetail;
+        @com.aliyun.core.annotation.NameInMap("TableDetail")
+        private java.util.List<TableDetail> tableDetail;
 
         private TableDetails(Builder builder) {
             this.tableDetail = builder.tableDetail;
@@ -291,17 +351,17 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         /**
          * @return tableDetail
          */
-        public java.util.List < TableDetail> getTableDetail() {
+        public java.util.List<TableDetail> getTableDetail() {
             return this.tableDetail;
         }
 
         public static final class Builder {
-            private java.util.List < TableDetail> tableDetail; 
+            private java.util.List<TableDetail> tableDetail; 
 
             /**
              * TableDetail.
              */
-            public Builder tableDetail(java.util.List < TableDetail> tableDetail) {
+            public Builder tableDetail(java.util.List<TableDetail> tableDetail) {
                 this.tableDetail = tableDetail;
                 return this;
             }

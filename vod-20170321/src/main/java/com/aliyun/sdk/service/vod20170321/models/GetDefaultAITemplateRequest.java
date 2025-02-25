@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDefaultAITemplateRequest} extends {@link RequestModel}
  *
  * <p>GetDefaultAITemplateRequest</p>
  */
 public class GetDefaultAITemplateRequest extends Request {
-    @Query
-    @NameInMap("TemplateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
     private GetDefaultAITemplateRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetDefaultAITemplateRequest extends Request {
         } 
 
         /**
-         * The type of the AI template. Set the value to **AIMediaAudit**, which specifies the automated review.
+         * <p>The type of the AI template. Set the value to <strong>AIMediaAudit</strong>, which specifies the automated review.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AIMediaAudit</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

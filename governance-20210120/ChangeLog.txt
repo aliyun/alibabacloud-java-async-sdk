@@ -1,3 +1,33 @@
+2024-11-14 Version: 0.0.11
+- Generated java-async 2021-01-20 for governance.
+
+2024-10-12 Version: 0.0.10
+- Generated java-async 2021-01-20 for governance.
+
+2024-09-27 Version: 0.0.9
+- Generated java-async 2021-01-20 for governance.
+
+2024-09-03 Version: 0.0.8
+- Generated java-async 2021-01-20 for governance.
+
+2024-08-23 Version: 0.0.7
+- Generated java-async 2021-01-20 for governance.
+
+2024-08-14 Version: 0.0.6
+- Generated java-async 2021-01-20 for governance.
+
+2024-08-08 Version: 0.0.5
+- Generated java-async 2021-01-20 for governance.
+
+2024-07-31 Version: 0.0.4
+- Generated java-async 2021-01-20 for governance.
+
+2024-07-30 Version: 0.0.3
+- Generated java-async 2021-01-20 for governance.
+
+2024-03-12 Version: 0.0.2
+- Generated java-async 2021-01-20 for governance.
+
 2022-05-26 Version: 0.0.1
 - Publish governance sdk.
 - Supported enroll account for account factory.

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMasterSpecResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyMasterSpecResponseBody</p>
  */
 public class ModifyMasterSpecResponseBody extends TeaModel {
-    @NameInMap("DbInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DbInstanceId")
     private String dbInstanceId;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
     private ModifyMasterSpecResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * DbInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.dbInstanceId = dbInstanceId;
@@ -82,7 +90,11 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The returned message.</p>
+         * <p>This parameter is returned only if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -90,7 +102,10 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +113,14 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

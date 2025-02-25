@@ -1,49 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRefDISyncTasksRequest} extends {@link RequestModel}
  *
  * <p>ListRefDISyncTasksRequest</p>
  */
 public class ListRefDISyncTasksRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DatasourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasourceName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true, maximum = 10000000000D, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000000D, minimum = 1)
     private Long projectId;
 
-    @Query
-    @NameInMap("RefType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String refType;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private ListRefDISyncTasksRequest(Builder builder) {
@@ -144,7 +148,7 @@ public class ListRefDISyncTasksRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the DataWorks workspace resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -153,7 +157,11 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The name of the data source. You can call the [ListDataSources](~~211431~~) operation to query the name of the data source.
+         * <p>The name of the data source. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_datasource</p>
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -162,7 +170,10 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +182,10 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +194,11 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -189,11 +207,15 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The condition used to filter sync nodes. Valid values:
-         * <p>
+         * <p>The condition used to filter synchronization tasks. Valid values:</p>
+         * <ul>
+         * <li>from: queries the synchronization tasks that use the data source as the source.</li>
+         * <li>to: queries the synchronization tasks that use the data source as the destination.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   from: queries the sync nodes that use the data source as the source data source.
-         * *   to: queries the sync nodes that use the data source as the destination data source.
+         * <strong>example:</strong>
+         * <p>from</p>
          */
         public Builder refType(String refType) {
             this.putQueryParameter("RefType", refType);
@@ -202,13 +224,16 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The type of the sync node that you want to query. Valid values:
-         * <p>
+         * <p>The type of the synchronization task that you want to query. Valid values:</p>
+         * <ul>
+         * <li>DI_OFFLINE: batch synchronization task</li>
+         * <li>DI_REALTIME: real-time synchronization task</li>
+         * </ul>
+         * <p>You can call the ListRefDISyncTasks operation to query only one type of the task.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   DI_OFFLINE: batch sync node
-         * *   DI_REALTIME: real-time sync node
-         * 
-         * You can specify only one type. The sync solution type is not supported.
+         * <strong>example:</strong>
+         * <p>DI_OFFLINE</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

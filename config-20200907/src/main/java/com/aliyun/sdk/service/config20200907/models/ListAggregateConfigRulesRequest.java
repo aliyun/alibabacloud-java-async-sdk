@@ -1,59 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateConfigRulesRequest} extends {@link RequestModel}
  *
  * <p>ListAggregateConfigRulesRequest</p>
  */
 public class ListAggregateConfigRulesRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("ComplianceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
+    private String compliancePackId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceType")
     private String complianceType;
 
-    @Query
-    @NameInMap("ConfigRuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
     private String configRuleName;
 
-    @Query
-    @NameInMap("ConfigRuleState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
     private String configRuleState;
 
-    @Query
-    @NameInMap("Keyword")
-    @Validation(maxLength = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
+    @com.aliyun.core.annotation.Validation(maxLength = 1000)
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
-    @Query
-    @NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
     private Integer riskLevel;
 
     private ListAggregateConfigRulesRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
+        this.compliancePackId = builder.compliancePackId;
         this.complianceType = builder.complianceType;
         this.configRuleName = builder.configRuleName;
         this.configRuleState = builder.configRuleState;
@@ -82,6 +92,13 @@ public class ListAggregateConfigRulesRequest extends Request {
      */
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    /**
+     * @return compliancePackId
+     */
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
     /**
@@ -142,6 +159,7 @@ public class ListAggregateConfigRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAggregateConfigRulesRequest, Builder> {
         private String aggregatorId; 
+        private String compliancePackId; 
         private String complianceType; 
         private String configRuleName; 
         private String configRuleState; 
@@ -158,6 +176,7 @@ public class ListAggregateConfigRulesRequest extends Request {
         private Builder(ListAggregateConfigRulesRequest request) {
             super(request);
             this.aggregatorId = request.aggregatorId;
+            this.compliancePackId = request.compliancePackId;
             this.complianceType = request.complianceType;
             this.configRuleName = request.configRuleName;
             this.configRuleState = request.configRuleState;
@@ -169,10 +188,12 @@ public class ListAggregateConfigRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-f632626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -181,13 +202,28 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The compliance evaluation result. Valid values:
-         * <p>
+         * <p>The compliance package ID.</p>
          * 
-         * *   COMPLIANT: The resource is evaluated as compliant.
-         * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resource.
-         * *   INSUFFICIENT_DATA: No resource data is available.
+         * <strong>example:</strong>
+         * <p>cp-fe416457e0d90022****</p>
+         */
+        public Builder compliancePackId(String compliancePackId) {
+            this.putQueryParameter("CompliancePackId", compliancePackId);
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+
+        /**
+         * <p>The compliance evaluation result. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -196,7 +232,10 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-name</p>
          */
         public Builder configRuleName(String configRuleName) {
             this.putQueryParameter("ConfigRuleName", configRuleName);
@@ -205,13 +244,16 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: The rule is being used to monitor resource configurations.</li>
+         * <li>DELETING: The rule is being deleted.</li>
+         * <li>EVALUATING: The rule is triggered and is being used to monitor resource configurations.</li>
+         * <li>INACTIVE: The rule is disabled.</li>
+         * </ul>
          * 
-         * *   ACTIVE: The rule is enabled.
-         * *   DELETING: The rule is being deleted.
-         * *   EVALUATING: The rule is being used to evaluate resource configurations.
-         * *   INACTIVE: The rule is disabled.
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder configRuleState(String configRuleState) {
             this.putQueryParameter("ConfigRuleState", configRuleState);
@@ -220,10 +262,11 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The keyword that you want to use to query the rules.
-         * <p>
+         * <p>The keyword that is used for queries.</p>
+         * <p>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</p>
          * 
-         * You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -232,10 +275,11 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -244,10 +288,11 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -256,7 +301,10 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * Resource type for the rule to evaluate.
+         * <p>Resource type for the rule to evaluate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -265,12 +313,15 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that do not comply with the rule. Valid values:
-         * <p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
          * 
-         * *   1: high
-         * *   2: medium
-         * *   3: low
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);

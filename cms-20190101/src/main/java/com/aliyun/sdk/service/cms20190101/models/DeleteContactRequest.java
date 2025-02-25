@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContactRequest} extends {@link RequestModel}
  *
  * <p>DeleteContactRequest</p>
  */
 public class DeleteContactRequest extends Request {
-    @Query
-    @NameInMap("ContactName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
     private DeleteContactRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteContactRequest extends Request {
         } 
 
         /**
-         * The name of the alert contact.
+         * <p>The name of the alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-01</p>
          */
         public Builder contactName(String contactName) {
             this.putQueryParameter("ContactName", contactName);

@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAddressBookRequest} extends {@link RequestModel}
  *
  * <p>AddAddressBookRequest</p>
  */
 public class AddAddressBookRequest extends Request {
-    @Query
-    @NameInMap("AddressList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressList")
     private String addressList;
 
-    @Query
-    @NameInMap("AutoAddTagEcs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoAddTagEcs")
     private String autoAddTagEcs;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 2)
     private String description;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 2)
     private String groupName;
 
-    @Query
-    @NameInMap("GroupType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     @Deprecated
     private String sourceIp;
 
-    @Query
-    @NameInMap("TagList")
-    private java.util.List < TagList> tagList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    private java.util.List<TagList> tagList;
 
-    @Query
-    @NameInMap("TagRelation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagRelation")
     private String tagRelation;
 
     private AddAddressBookRequest(Builder builder) {
@@ -130,7 +135,7 @@ public class AddAddressBookRequest extends Request {
     /**
      * @return tagList
      */
-    public java.util.List < TagList> getTagList() {
+    public java.util.List<TagList> getTagList() {
         return this.tagList;
     }
 
@@ -149,7 +154,7 @@ public class AddAddressBookRequest extends Request {
         private String groupType; 
         private String lang; 
         private String sourceIp; 
-        private java.util.List < TagList> tagList; 
+        private java.util.List<TagList> tagList; 
         private String tagRelation; 
 
         private Builder() {
@@ -170,14 +175,18 @@ public class AddAddressBookRequest extends Request {
         } 
 
         /**
-         * The addresses that you want to add to the address book. Separate multiple addresses with commas (,).
-         * <p>
+         * <p>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</p>
+         * <blockquote>
+         * <p> If you set GroupType to <code>ip</code>, <code>port</code> or <code>domain</code>, you must specify AddressList.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If you set GroupType to <code>ip</code>, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.</li>
+         * <li>If you set GroupType to <code>port</code>, you must add port numbers or port ranges to the address book. Example: 80,100/200.</li>
+         * <li>If you set GroupType to <code>domain</code>, you must add domain names to the address book. Example: example.com,aliyundoc.com.</li>
+         * </ul>
          * 
-         * > If you set GroupType to `ip`, `port` or `domain`, you must specify the AddressList parameter.
-         * >
-         * > * If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32, 192.0.XX.XX/24.
-         * > * If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80, 100/200.
-         * > * If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com, aliyundoc.com.
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX/32, 192.0.XX.XX/24</p>
          */
         public Builder addressList(String addressList) {
             this.putQueryParameter("AddressList", addressList);
@@ -186,11 +195,14 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong> (default): no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no (default)
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoAddTagEcs(String autoAddTagEcs) {
             this.putQueryParameter("AutoAddTagEcs", autoAddTagEcs);
@@ -199,7 +211,11 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * The description of the address book.
+         * <p>The description of the address book.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sz-001</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +224,11 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * The name of the address book.
+         * <p>The name of the address book.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sz-001</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -217,13 +237,17 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * The type of the address book. Valid values:
-         * <p>
+         * <p>The type of the address book. Valid values:</p>
+         * <ul>
+         * <li><strong>ip</strong>: IP address book</li>
+         * <li><strong>domain</strong>: domain address book</li>
+         * <li><strong>port</strong>: port address book</li>
+         * <li><strong>tag</strong>: ECS tag-based address book</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * * **ip**: IP address book
-         * * **domain**: domain address book
-         * * **port**: port address book
-         * * **tag**: ECS tag-based address book
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -232,11 +256,14 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -245,7 +272,10 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -254,20 +284,23 @@ public class AddAddressBookRequest extends Request {
         }
 
         /**
-         * The ECS tags that you want to match.
+         * <p>The ECS tags that you want to match.</p>
          */
-        public Builder tagList(java.util.List < TagList> tagList) {
+        public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
             this.tagList = tagList;
             return this;
         }
 
         /**
-         * The logical relation among the ECS tags that you want to match. Valid values:
-         * <p>
+         * <p>The logical relation among the ECS tags that you want to match. Valid values:</p>
+         * <ul>
+         * <li><strong>and</strong> (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</li>
+         * <li><strong>or</strong>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</li>
+         * </ul>
          * 
-         * *   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book. This is the default value.
-         * *   **or**: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder tagRelation(String tagRelation) {
             this.putQueryParameter("TagRelation", tagRelation);
@@ -282,11 +315,17 @@ public class AddAddressBookRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddAddressBookRequest} extends {@link TeaModel}
+     *
+     * <p>AddAddressBookRequest</p>
+     */
     public static class TagList extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagList(Builder builder) {
@@ -321,7 +360,10 @@ public class AddAddressBookRequest extends Request {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the ECS tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TXY</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -329,7 +371,10 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the ECS tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

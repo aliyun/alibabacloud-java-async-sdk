@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHealthCheckStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHealthCheckStatusResponseBody</p>
  */
 public class DescribeHealthCheckStatusResponseBody extends TeaModel {
-    @NameInMap("HealthCheckStatus")
-    private java.util.List < HealthCheckStatus> healthCheckStatus;
+    @com.aliyun.core.annotation.NameInMap("HealthCheckStatus")
+    private java.util.List<HealthCheckStatus> healthCheckStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHealthCheckStatusResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     /**
      * @return healthCheckStatus
      */
-    public java.util.List < HealthCheckStatus> getHealthCheckStatus() {
+    public java.util.List<HealthCheckStatus> getHealthCheckStatus() {
         return this.healthCheckStatus;
     }
 
@@ -46,19 +51,22 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HealthCheckStatus> healthCheckStatus; 
+        private java.util.List<HealthCheckStatus> healthCheckStatus; 
         private String requestId; 
 
         /**
-         * An array that consists of the details of the health status of the origin server.
+         * <p>An array that consists of the details of the health status of the origin server.</p>
          */
-        public Builder healthCheckStatus(java.util.List < HealthCheckStatus> healthCheckStatus) {
+        public Builder healthCheckStatus(java.util.List<HealthCheckStatus> healthCheckStatus) {
             this.healthCheckStatus = healthCheckStatus;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE9FF9E1-569C-4B6C-AB6A-0F6D927BB27C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHealthCheckStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckStatusResponseBody</p>
+     */
     public static class RealServerStatusList extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RealServerStatusList(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The IP address of the origin server.
+             * <p>The IP address of the origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -118,11 +135,14 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The health state of the IP address. Valid values:
-             * <p>
+             * <p>The health state of the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: healthy</li>
+             * <li><strong>abnormal</strong>: unhealthy</li>
+             * </ul>
              * 
-             * *   **normal**: healthy
-             * *   **abnormal**: unhealthy
+             * <strong>example:</strong>
+             * <p>abnormal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -136,20 +156,26 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHealthCheckStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHealthCheckStatusResponseBody</p>
+     */
     public static class HealthCheckStatus extends TeaModel {
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServerStatusList")
-        private java.util.List < RealServerStatusList> realServerStatusList;
+        @com.aliyun.core.annotation.NameInMap("RealServerStatusList")
+        private java.util.List<RealServerStatusList> realServerStatusList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private HealthCheckStatus(Builder builder) {
@@ -192,7 +218,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         /**
          * @return realServerStatusList
          */
-        public java.util.List < RealServerStatusList> getRealServerStatusList() {
+        public java.util.List<RealServerStatusList> getRealServerStatusList() {
             return this.realServerStatusList;
         }
 
@@ -207,11 +233,14 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             private Integer frontendPort; 
             private String instanceId; 
             private String protocol; 
-            private java.util.List < RealServerStatusList> realServerStatusList; 
+            private java.util.List<RealServerStatusList> realServerStatusList; 
             private String status; 
 
             /**
-             * The forwarding port.
+             * <p>The forwarding port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -219,7 +248,10 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddoscoo-cn-mp91j1ao****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -227,11 +259,14 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding protocol. Valid values:
-             * <p>
+             * <p>The forwarding protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -239,19 +274,22 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the health states of the IP addresses of the origin server.
+             * <p>An array that consists of the health states of the IP addresses of the origin server.</p>
              */
-            public Builder realServerStatusList(java.util.List < RealServerStatusList> realServerStatusList) {
+            public Builder realServerStatusList(java.util.List<RealServerStatusList> realServerStatusList) {
                 this.realServerStatusList = realServerStatusList;
                 return this;
             }
 
             /**
-             * The health status of the origin server. Valid values:
-             * <p>
+             * <p>The health status of the origin server. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: healthy</li>
+             * <li><strong>abnormal</strong>: unhealthy</li>
+             * </ul>
              * 
-             * *   **normal**: healthy
-             * *   **abnormal**: unhealthy
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;

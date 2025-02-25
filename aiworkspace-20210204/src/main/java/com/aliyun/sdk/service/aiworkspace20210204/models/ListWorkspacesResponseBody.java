@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkspacesResponseBody</p>
  */
 public class ListWorkspacesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceLimits")
+    @com.aliyun.core.annotation.NameInMap("ResourceLimits")
     private java.util.Map < String, ? > resourceLimits;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Workspaces")
+    @com.aliyun.core.annotation.NameInMap("Workspaces")
     private java.util.List < Workspaces> workspaces;
 
     private ListWorkspacesResponseBody(Builder builder) {
@@ -111,38 +111,44 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
     public static class Workspaces extends TeaModel {
-        @NameInMap("AdminNames")
+        @com.aliyun.core.annotation.NameInMap("AdminNames")
         private java.util.List < String > adminNames;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnvTypes")
+        @com.aliyun.core.annotation.NameInMap("EnvTypes")
         private java.util.List < String > envTypes;
 
-        @NameInMap("ExtraInfos")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfos")
         private java.util.Map < String, ? > extraInfos;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Workspaces(Builder builder) {

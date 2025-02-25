@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayDomainRequest</p>
  */
 public class UpdateGatewayDomainRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Http2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Http2")
     private String http2;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("MustHttps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MustHttps")
     private Boolean mustHttps;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("TlsMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsMax")
     private String tlsMax;
 
-    @Query
-    @NameInMap("TlsMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsMin")
     private String tlsMin;
 
     private UpdateGatewayDomainRequest(Builder builder) {
@@ -166,11 +171,14 @@ public class UpdateGatewayDomainRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -179,7 +187,10 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6209108-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -188,7 +199,10 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -197,12 +211,15 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable `HTTP/2`.
-         * <p>
+         * <p>Specifies whether to enable <code>HTTP/2</code>.</p>
+         * <ul>
+         * <li><code>open</code>: <code>HTTP/2</code> is enabled.</li>
+         * <li><code>close</code>: <code>HTTP/2</code> is disabled.</li>
+         * <li><code>globalConfig</code>: Global configurations are used.</li>
+         * </ul>
          * 
-         * *   `open`: `HTTP/2` is enabled.
-         * *   `close`: `HTTP/2` is disabled.
-         * *   `globalConfig`: Global configurations are used.
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder http2(String http2) {
             this.putQueryParameter("Http2", http2);
@@ -211,7 +228,10 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * The ID of the domain name that you want to update.
+         * <p>The ID of the domain name that you want to update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -220,7 +240,10 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly use HTTPS.
+         * <p>Specifies whether to forcibly use HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mustHttps(Boolean mustHttps) {
             this.putQueryParameter("MustHttps", mustHttps);
@@ -229,11 +252,14 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values:
-         * <p>
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li>HTTPS</li>
+         * <li>HTTP</li>
+         * </ul>
          * 
-         * *   HTTPS
-         * *   HTTP
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -242,7 +268,10 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * The maximum version of Transport Layer Security (TLS).
+         * <p>The maximum version of Transport Layer Security (TLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.3</p>
          */
         public Builder tlsMax(String tlsMax) {
             this.putQueryParameter("TlsMax", tlsMax);
@@ -251,7 +280,10 @@ public class UpdateGatewayDomainRequest extends Request {
         }
 
         /**
-         * The minimum version of TLS.
+         * <p>The minimum version of TLS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.0</p>
          */
         public Builder tlsMin(String tlsMin) {
             this.putQueryParameter("TlsMin", tlsMin);

@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateRuleRequest</p>
  */
 public class CreateRuleRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer priority;
 
-    @Query
-    @NameInMap("RuleActions")
-    @Validation(required = true)
-    private java.util.List < RuleActions> ruleActions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleActions")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<RuleActions> ruleActions;
 
-    @Query
-    @NameInMap("RuleConditions")
-    @Validation(required = true)
-    private java.util.List < RuleConditions> ruleConditions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConditions")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<RuleConditions> ruleConditions;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateRuleRequest(Builder builder) {
         super(builder);
@@ -117,14 +122,14 @@ public class CreateRuleRequest extends Request {
     /**
      * @return ruleActions
      */
-    public java.util.List < RuleActions> getRuleActions() {
+    public java.util.List<RuleActions> getRuleActions() {
         return this.ruleActions;
     }
 
     /**
      * @return ruleConditions
      */
-    public java.util.List < RuleConditions> getRuleConditions() {
+    public java.util.List<RuleConditions> getRuleConditions() {
         return this.ruleConditions;
     }
 
@@ -138,7 +143,7 @@ public class CreateRuleRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -148,10 +153,10 @@ public class CreateRuleRequest extends Request {
         private Boolean dryRun; 
         private String listenerId; 
         private Integer priority; 
-        private java.util.List < RuleActions> ruleActions; 
-        private java.util.List < RuleConditions> ruleConditions; 
+        private java.util.List<RuleActions> ruleActions; 
+        private java.util.List<RuleConditions> ruleConditions; 
         private String ruleName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -171,12 +176,14 @@ public class CreateRuleRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,13 +192,17 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * The direction to which the forwarding rule is applied. Valid values:
-         * <p>
+         * <p>The direction to which the forwarding rule is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>Request</strong> (default): The forwarding rule is applied to the requests received by ALB.</li>
+         * <li><strong>Response</strong>: The forwarding rule is applied to the responses returned by backend servers.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Basic ALB instances do not support the <strong>Response</strong> value.</p>
+         * </blockquote>
          * 
-         * *   **Request** (default): The forwarding rule is applied to the requests received by ALB.
-         * *   **Response**: The forwarding rule is applied to the responses returned by backend servers.
-         * 
-         * > Basic ALB instances do not support the **Response** value.
+         * <strong>example:</strong>
+         * <p>Request</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -200,11 +211,14 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -213,7 +227,11 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * The listener ID of the ALB instance.
+         * <p>The listener ID of the ALB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -222,10 +240,14 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * The priority of the forwarding rule. Valid values: **1 to 10000**. A smaller value indicates a higher priority.
-         * <p>
+         * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
+         * <blockquote>
+         * <p>The priorities of the forwarding rules created for the same listener must be unique.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The priorities of the forwarding rules created for the same listener must be unique.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -234,32 +256,35 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * The maximum cache time of dry run requests in the browser. Unit: seconds.
-         * <p>
-         * 
-         * Valid values: **-1** to **172800**.
+         * <p>The actions of the forwarding rule.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
+        public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
             this.putQueryParameter("RuleActions", ruleActions);
             this.ruleActions = ruleActions;
             return this;
         }
 
         /**
-         * The configuration of the source IP-based forwarding rule.
+         * <p>The match conditions of the forwarding rule.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder ruleConditions(java.util.List < RuleConditions> ruleConditions) {
+        public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
             this.putQueryParameter("RuleConditions", ruleConditions);
             this.ruleConditions = ruleConditions;
             return this;
         }
 
         /**
-         * The name of the forwarding rule.
-         * <p>
+         * <p>The name of the forwarding rule.</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must be 2 to 128 characters in length.
-         * *   It can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>rule-doc</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -268,9 +293,9 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -283,23 +308,29 @@ public class CreateRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class CorsConfig extends TeaModel {
-        @NameInMap("AllowCredentials")
+        @com.aliyun.core.annotation.NameInMap("AllowCredentials")
         private String allowCredentials;
 
-        @NameInMap("AllowHeaders")
-        private java.util.List < String > allowHeaders;
+        @com.aliyun.core.annotation.NameInMap("AllowHeaders")
+        private java.util.List<String> allowHeaders;
 
-        @NameInMap("AllowMethods")
-        private java.util.List < String > allowMethods;
+        @com.aliyun.core.annotation.NameInMap("AllowMethods")
+        private java.util.List<String> allowMethods;
 
-        @NameInMap("AllowOrigin")
-        private java.util.List < String > allowOrigin;
+        @com.aliyun.core.annotation.NameInMap("AllowOrigin")
+        private java.util.List<String> allowOrigin;
 
-        @NameInMap("ExposeHeaders")
-        private java.util.List < String > exposeHeaders;
+        @com.aliyun.core.annotation.NameInMap("ExposeHeaders")
+        private java.util.List<String> exposeHeaders;
 
-        @NameInMap("MaxAge")
+        @com.aliyun.core.annotation.NameInMap("MaxAge")
         private Long maxAge;
 
         private CorsConfig(Builder builder) {
@@ -329,28 +360,28 @@ public class CreateRuleRequest extends Request {
         /**
          * @return allowHeaders
          */
-        public java.util.List < String > getAllowHeaders() {
+        public java.util.List<String> getAllowHeaders() {
             return this.allowHeaders;
         }
 
         /**
          * @return allowMethods
          */
-        public java.util.List < String > getAllowMethods() {
+        public java.util.List<String> getAllowMethods() {
             return this.allowMethods;
         }
 
         /**
          * @return allowOrigin
          */
-        public java.util.List < String > getAllowOrigin() {
+        public java.util.List<String> getAllowOrigin() {
             return this.allowOrigin;
         }
 
         /**
          * @return exposeHeaders
          */
-        public java.util.List < String > getExposeHeaders() {
+        public java.util.List<String> getExposeHeaders() {
             return this.exposeHeaders;
         }
 
@@ -363,18 +394,21 @@ public class CreateRuleRequest extends Request {
 
         public static final class Builder {
             private String allowCredentials; 
-            private java.util.List < String > allowHeaders; 
-            private java.util.List < String > allowMethods; 
-            private java.util.List < String > allowOrigin; 
-            private java.util.List < String > exposeHeaders; 
+            private java.util.List<String> allowHeaders; 
+            private java.util.List<String> allowMethods; 
+            private java.util.List<String> allowOrigin; 
+            private java.util.List<String> exposeHeaders; 
             private Long maxAge; 
 
             /**
-             * Specifies whether credentials can be carried in CORS requests. Valid values:
-             * <p>
+             * <p>Specifies whether to allow credentials to be carried in CORS requests. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: allows credentials to be carried in CORS requests.</li>
+             * <li><strong>off</strong>: does not allow credentials to be carried in CORS requests.</li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder allowCredentials(String allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -382,42 +416,47 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The allowed headers for CORS requests.
+             * <p>The trusted headers of CORS requests.</p>
              */
-            public Builder allowHeaders(java.util.List < String > allowHeaders) {
+            public Builder allowHeaders(java.util.List<String> allowHeaders) {
                 this.allowHeaders = allowHeaders;
                 return this;
             }
 
             /**
-             * The allowed HTTP methods for CORS requests.
+             * <p>The trusted HTTP methods of CORS requests.</p>
              */
-            public Builder allowMethods(java.util.List < String > allowMethods) {
+            public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
                 return this;
             }
 
             /**
-             * The allowed origins of CORS requests.
+             * <p>The trusted origins of CORS requests. You can specify one or more values, or only the wildcard character (<code>*</code>).</p>
+             * <ul>
+             * <li>Each value must start with <code>http://</code> or <code>https://</code>, which must be followed by a valid domain name, including top-level domain names. Example: <code>http://*.test.abc.example.com</code>.</li>
+             * <li>You can specify a port in each value or leave the port empty. Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
+             * </ul>
              */
-            public Builder allowOrigin(java.util.List < String > allowOrigin) {
+            public Builder allowOrigin(java.util.List<String> allowOrigin) {
                 this.allowOrigin = allowOrigin;
                 return this;
             }
 
             /**
-             * The headers that can be exposed.
+             * <p>The headers that can be exposed.</p>
              */
-            public Builder exposeHeaders(java.util.List < String > exposeHeaders) {
+            public Builder exposeHeaders(java.util.List<String> exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
                 return this;
             }
 
             /**
-             * The maximum cache time of dry run requests in the browser. Unit: seconds.
-             * <p>
+             * <p>The maximum cache time of dry run requests in the browser. Unit: seconds.</p>
+             * <p>Valid values: <strong>-1</strong> to <strong>172800</strong>.</p>
              * 
-             * Valid values: **-1** to **172800**.
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxAge(Long maxAge) {
                 this.maxAge = maxAge;
@@ -431,14 +470,20 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class FixedResponseConfig extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
         private FixedResponseConfig(Builder builder) {
@@ -482,7 +527,10 @@ public class CreateRuleRequest extends Request {
             private String httpCode; 
 
             /**
-             * The content of the custom response. The content can be up to 1 KB in size and can contain only ASCII characters.
+             * <p>The content of the custom response. The content cannot exceed 1 KB in size, and can contain only ASCII characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dssacav</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -490,10 +538,11 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The format of the response.
-             * <p>
+             * <p>The format of the response.</p>
+             * <p>Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
              * 
-             * Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.
+             * <strong>example:</strong>
+             * <p>text/plain</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -501,7 +550,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The HTTP status code in the response. Valid values: **HTTP\_2xx**, **HTTP\_4xx**, and **HTTP\_5xx**. **x** must be a digit.
+             * <p>The HTTP status code in responses. Valid values: <strong>2xx</strong>, <strong>4xx</strong>, <strong>5xx</strong>. The value must be a numeric string. <strong>x</strong> must be a digit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP_200</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -515,11 +567,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class ServerGroupStickySession extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
         private ServerGroupStickySession(Builder builder) {
@@ -554,11 +612,14 @@ public class CreateRuleRequest extends Request {
             private Integer timeout; 
 
             /**
-             * Specifies whether to enable session persistence. Valid values:
-             * <p>
+             * <p>Specifies whether to enable session persistence. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enables session persistence.</li>
+             * <li><strong>false</strong> (default): disables session persistence.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -566,7 +627,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The timeout period of sessions. Unit: seconds. Valid values: **1** to **86400**. Default value: **1000**.
+             * <p>The timeout period of sessions. Unit: seconds Valid values: <strong>1</strong> to <strong>86400</strong>. Default value: <strong>1000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -580,11 +644,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private ServerGroupTuples(Builder builder) {
@@ -619,7 +689,10 @@ public class CreateRuleRequest extends Request {
             private Integer weight; 
 
             /**
-             * The server group to which requests are distributed.
+             * <p>The server group to which requests are forwarded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-k86c1ov501id6p****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -627,11 +700,14 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The weight of the server group. A larger value specifies a higher weight. A server group with a higher weight receives more requests. Valid values: **0** to **100**.
-             * <p>
+             * <p>The weight of the server group. A larger value specifies a higher weight. A server group with a higher weight receives more requests. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * <ul>
+             * <li>If the number of destination server groups is 1, the default weight of the server group is <strong>100</strong>, unless you specify a weight.</li>
+             * <li>If the number of destination server groups is larger than 1, you must specify a weight.</li>
+             * </ul>
              * 
-             * *   If only one destination server group exists and you do not specify a weight, the default value **100** is used.
-             * *   If more than one destination server group exists, you must specify weights.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -645,12 +721,18 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupStickySession")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupStickySession")
         private ServerGroupStickySession serverGroupStickySession;
 
-        @NameInMap("ServerGroupTuples")
-        private java.util.List < ServerGroupTuples> serverGroupTuples;
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
+        private java.util.List<ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
             this.serverGroupStickySession = builder.serverGroupStickySession;
@@ -675,16 +757,16 @@ public class CreateRuleRequest extends Request {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < ServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<ServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
             private ServerGroupStickySession serverGroupStickySession; 
-            private java.util.List < ServerGroupTuples> serverGroupTuples; 
+            private java.util.List<ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * The configuration of session persistence for server groups.
+             * <p>The configuration of session persistence for the server groups.</p>
              */
             public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
                 this.serverGroupStickySession = serverGroupStickySession;
@@ -692,9 +774,9 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The server groups to which requests are distributed. Each forwarding rule supports at most five server groups.
+             * <p>The server groups to which requests are forwarded. You can specify at most five server groups for each forwarding rule.</p>
              */
-            public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -706,14 +788,20 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class InsertHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
         private InsertHeaderConfig(Builder builder) {
@@ -757,10 +845,13 @@ public class CreateRuleRequest extends Request {
             private String valueType; 
 
             /**
-             * The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
-             * <p>
+             * <p>The key of the header. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified by <strong>InsertHeaderConfig</strong> must be unique.</p>
+             * <blockquote>
+             * <p> You cannot specify the following header keys: <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, and <code>authority</code>. The header keys are not case-sensitive.</p>
+             * </blockquote>
              * 
-             * > You cannot specify the following header keys (case-insensitive): `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -768,20 +859,25 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The value of the header to be inserted.
-             * <p>
+             * <p>The value of the header to be inserted.</p>
+             * <ul>
+             * <li><p>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, you can set the Value parameter to one of the following values:</p>
+             * <ul>
+             * <li><strong>ClientSrcPort</strong>: the client port.</li>
+             * <li><strong>ClientSrcIp</strong>: the IP address of the client.</li>
+             * <li><strong>Protocol</strong>: the request protocol (HTTP or HTTPS).</li>
+             * <li><strong>SLBId</strong>: the ID of the ALB instance.</li>
+             * <li><strong>SLBPort</strong>: the listener port.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain wildcard characters, such as asterisks (*) and question marks (?), and printable characters whose ASCII values are <code>larger than or equal to 32 and smaller than 127</code>. The header value cannot start or end with a space character.</p>
+             * </li>
+             * <li><p>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>, you can reference a value from request headers. The value must be 1 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
+             * </li>
+             * </ul>
              * 
-             * *   If **ValueType** is set to **SystemDefined**, you can specify one of the following header values:
-             * 
-             *     *   **ClientSrcPort**: the client port.
-             *     *   **ClientSrcIp**: the client IP address.
-             *     *   **Protocol**: the request protocol (HTTP or HTTPS).
-             *     *   **SLBId**: the ID of the ALB instance.
-             *     *   **SLBPort**: the listening port.
-             * 
-             * *   If **ValueType** is set to **UserDefined**, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\*) and question marks (?) as wildcards. The value cannot start or end with a space character.
-             * 
-             * *   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-).
+             * <strong>example:</strong>
+             * <p>UserDefined</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -789,12 +885,15 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The type of header. Valid values:
-             * <p>
+             * <p>The type of header. Valid values:</p>
+             * <ul>
+             * <li><strong>UserDefined</strong>: a custom header value.</li>
+             * <li><strong>ReferenceHeader</strong>: a header value that is referenced from one of the request headers.</li>
+             * <li><strong>SystemDefined</strong>: a header predefined by the system.</li>
+             * </ul>
              * 
-             * *   **UserDefined**: a custom header
-             * *   **ReferenceHeader**: a header that references one of the request headers
-             * *   **SystemDefined**: a header predefined by the system
+             * <strong>example:</strong>
+             * <p>UserDefined</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -808,23 +907,29 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class RedirectConfig extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private RedirectConfig(Builder builder) {
@@ -895,18 +1000,23 @@ public class CreateRuleRequest extends Request {
             private String query; 
 
             /**
-             * The hostname to which requests are redirected. Valid values:
-             * <p>
+             * <p>The hostname to which requests are forwarded. Valid values:</p>
+             * <ul>
+             * <li><p><strong>${host}</strong> (default): If you set the value to ${host}, you cannot append other characters.</p>
+             * </li>
+             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
+             * <ul>
+             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following characters: - . * = ~ _ + \ ^ ! $ &amp; | ( ) [ ] ?.</li>
+             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
+             * <li>The rightmost domain label can contain only letters and wildcard characters, and cannot contain digits or hyphens (-). The leftmost <code>domain label</code> can be an asterisk (*).</li>
+             * <li>The domain labels cannot start or end with hyphens (-).</li>
+             * <li>You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **${host}** (default): If you set the value to ${host}, you cannot append other characters.
-             * 
-             * *   A custom value. Make sure that the custom value meets the following requirements:
-             * 
-             *     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following special characters: - . \* = ~ \_ + \ ^ ! $ & | ( ) \[ ] ?.
-             *     *   The hostname must contain at least one period (.) but cannot start or end with a period (.).
-             *     *   The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost `domain label` can be an asterisk (\*).
-             *     *   The domain labels cannot start or end with a hyphen (-).
-             *     *   You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.
+             * <strong>example:</strong>
+             * <p>${host}</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -914,7 +1024,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The redirect type. Valid values: **301**, **302**, **303**, **307**, and **308**.
+             * <p>The HTTP status code that indicates the redirect type. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -922,15 +1035,20 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The path to which requests are redirected. Valid values:
-             * <p>
+             * <p>The URL to which requests are redirected. Valid values:</p>
+             * <ul>
+             * <li><p>Default value: <strong>${path}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+             * </li>
+             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
+             * <ul>
+             * <li>The UTRL must be 1 to 128 characters in length, and is case-sensitive. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li>The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ .+ / &amp; ~ @ :</code>. It cannot contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   Default value: **${path}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
-             * 
-             * *   A custom value. You must make sure that the custom value meets the following requirements:
-             * 
-             *     *   The value must be 1 to 128 characters in length, and can contain asterisks (\*) and question marks (?) as wildcards. The value is case-sensitive.
-             *     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -938,11 +1056,14 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The port to which requests are redirected.
-             * <p>
+             * <p>The port to which requests are distributed.</p>
+             * <ul>
+             * <li><strong>${port}</strong> (default): If you set the value to ${port}, you cannot append other characters to the value.</li>
+             * <li>You can also enter a port number. Valid values: <strong>1 to 63335</strong>.</li>
+             * </ul>
              * 
-             * *   **${port}** (default): If you set the value to ${port}, you cannot add other characters to the value.
-             * *   You can also enter a port number. Valid values: **1 to 63335**.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -950,13 +1071,23 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The redirect protocol. Valid values:
-             * <p>
+             * <p>The redirect protocol. Valid values: Valid values:</p>
+             * <ul>
+             * <li><strong>${protocol}</strong> (default): If you set the value to ${protocol}, you cannot modify the value or append other characters.</li>
+             * <li><strong>HTTP</strong></li>
+             * <li><strong>HTTPS</strong></li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>HTTPS listeners support only HTTPS redirection.</p>
+             * </li>
+             * <li><p>HTTP listeners support HTTP and HTTPS redirection.</p>
+             * </li>
+             * </ul>
              * 
-             * *   **${protocol}** (default): If you set the value to ${protocol}, you cannot add other characters to the value.
-             * *   **HTTP** or **HTTPS**.
-             * 
-             * > HTTPS listeners support only HTTPS to HTTPS redirects.
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -964,15 +1095,20 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The query string of the URL to which requests are redirected.
-             * <p>
+             * <p>The query string to which requests are redirected.</p>
+             * <ul>
+             * <li><p>Default value: <strong>${query}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. The preceding variables can be used at the same time or combined with a custom value.</p>
+             * </li>
+             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
+             * <ul>
+             * <li>The query string must be 1 to 128 characters in length.</li>
+             * <li>It can contain printable characters, but cannot contain space characters, the special characters <code># [ ] { } \ | &lt; &gt; &amp;</code>, or lowercase letters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   Default value: **${query}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
-             * 
-             * *   A custom value. You must make sure that the custom value meets the following requirements:
-             * 
-             *     *   The value must be 1 to 128 characters in length.
-             *     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.
+             * <strong>example:</strong>
+             * <p>${query}</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -986,8 +1122,14 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class RemoveHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private RemoveHeaderConfig(Builder builder) {
@@ -1013,10 +1155,14 @@ public class CreateRuleRequest extends Request {
             private String key; 
 
             /**
-             * The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
-             * <p>
+             * <p>The key of the header to be removed. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified in RemoveHeader must be unique.</p>
+             * <ul>
+             * <li>If Direction is set to Requests, the following header keys are not supported: <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, and <code>authority</code>. The header keys are not case-sensitive.</li>
+             * <li>If Direction is set to Response, the following response header keys are not supported: <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, and <code>transfer-encoding</code>. The header keys are not case-sensitive.</li>
+             * </ul>
              * 
-             * > You cannot specify the following header keys (case-insensitive): `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1030,14 +1176,20 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class RewriteConfig extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private RewriteConfig(Builder builder) {
@@ -1081,17 +1233,22 @@ public class CreateRuleRequest extends Request {
             private String query; 
 
             /**
-             * The hostname to which requests are redirected. Valid values:
-             * <p>
+             * <p>The hostname to which requests are redirected. Valid values:</p>
+             * <ul>
+             * <li><p><strong>${host}</strong> (default): If you set the value to ${host}, you cannot append other characters.</p>
+             * </li>
+             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
+             * <ul>
+             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following characters: - . * = ~ _ + \ ^ ! $ &amp; | ( ) [ ] ?.</li>
+             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
+             * <li>The rightmost domain label can contain only letters and wildcard characters, and cannot contain digits or hyphens (-). The leftmost <code>domain label</code> can be an asterisk (*).</li>
+             * <li>The domain labels cannot start or end with hyphens (-). You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **${host}** (default): If you set the value to ${host}, you cannot append other characters.
-             * 
-             * *   If you want to specify a custom value, make sure that the following requirements are met:
-             * 
-             *     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, and the following special characters: - . \* = ~ \_ + \ ^ ! $ & | ( ) \[ ] ?.
-             *     *   The hostname must contain at least one period (.) but cannot start or end with a period (.).
-             *     *   The rightmost domain label can contain only letters and wildcards, and cannot contain digits or hyphens (-). The leftmost `domain label` can be an asterisk (\*).
-             *     *   The domain labels cannot start or end with a hyphen (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1099,15 +1256,20 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The path to which requests are redirected. Valid values:
-             * <p>
+             * <p>The URL to which requests are redirected. Valid values:</p>
+             * <ul>
+             * <li><p>Default value: <strong>${path}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+             * </li>
+             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
+             * <ul>
+             * <li>The UTRL must be 1 to 128 characters in length, and is case-sensitive. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li>The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ .+ / &amp; ~ @ :</code>. It cannot contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   Default value: **${path}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
-             * 
-             * *   A custom value. You must make sure that the custom value meets the following requirements:
-             * 
-             *     *   The value must be 1 to 128 characters in length, and can contain asterisks (\*) and question marks (?) as wildcards. The value is case-sensitive.
-             *     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+             * <strong>example:</strong>
+             * <p>/tsdf</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1115,15 +1277,20 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The query string of the URL to which requests are redirected.
-             * <p>
+             * <p>The query string of the URL to which requests are distributed.</p>
+             * <ul>
+             * <li><p>Default value: <strong>${query}</strong>. <strong>${host}</strong>, <strong>${protocol}</strong>, and <strong>${port}</strong> are also supported. Each variable can be specified only once. The preceding variables can be used at the same time or combined with a custom value.</p>
+             * </li>
+             * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
+             * <ul>
+             * <li>The query string must be 1 to 128 characters in length.</li>
+             * <li>It can contain printable characters, but cannot contain space characters, the special characters <code># [ ] { } \ | &lt; &gt; &amp;</code>, or lowercase letters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   Default value: **${query}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
-             * 
-             * *   A custom value. You must make sure that the custom value meets the following requirements:
-             * 
-             *     *   The value must be 1 to 128 characters in length.
-             *     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.
+             * <strong>example:</strong>
+             * <p>${query}</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -1137,11 +1304,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class TrafficLimitConfig extends TeaModel {
-        @NameInMap("PerIpQps")
+        @com.aliyun.core.annotation.NameInMap("PerIpQps")
         private Integer perIpQps;
 
-        @NameInMap("QPS")
+        @com.aliyun.core.annotation.NameInMap("QPS")
         private Integer QPS;
 
         private TrafficLimitConfig(Builder builder) {
@@ -1176,10 +1349,13 @@ public class CreateRuleRequest extends Request {
             private Integer QPS; 
 
             /**
-             * The QPS of each IP address. Valid values: **1 to 100000**.
-             * <p>
+             * <p>The number of requests per IP address. Value values: <strong>1 to 1000000</strong>.</p>
+             * <blockquote>
+             * <p> If both the <strong>QPS</strong> and <strong>PerIpQps</strong> parameters are specified, the value of the <strong>QPS</strong> parameter is smaller than the value of the PerIpQps parameter.</p>
+             * </blockquote>
              * 
-             * > If both the **QPS** and **PerIpQps** properties are specified, make sure that the value of the **QPS** property is smaller than the value of the PerIpQps property.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder perIpQps(Integer perIpQps) {
                 this.perIpQps = perIpQps;
@@ -1187,7 +1363,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The queries per second (QPS). Valid values: **1 to 100000**.
+             * <p>The number of queries per second (QPS). Valid values: <strong>1 to 1000000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder QPS(Integer QPS) {
                 this.QPS = QPS;
@@ -1201,8 +1380,14 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class MirrorGroupConfigServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
         private MirrorGroupConfigServerGroupTuples(Builder builder) {
@@ -1228,7 +1413,10 @@ public class CreateRuleRequest extends Request {
             private String serverGroupId; 
 
             /**
-             * The ID of the server group.
+             * <p>The ID of the VServer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-00mkgijak0w4qgz9****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -1242,9 +1430,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class MirrorGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
-        private java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples;
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
+        private java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples;
 
         private MirrorGroupConfig(Builder builder) {
             this.serverGroupTuples = builder.serverGroupTuples;
@@ -1261,17 +1455,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < MirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<MirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
-            private java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples; 
+            private java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples; 
 
             /**
-             * The configuration of the server group to which traffic is mirrored.
+             * <p>The server group to which traffic is mirrored.</p>
              */
-            public Builder serverGroupTuples(java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -1283,11 +1477,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class TrafficMirrorConfig extends TeaModel {
-        @NameInMap("MirrorGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("MirrorGroupConfig")
         private MirrorGroupConfig mirrorGroupConfig;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TrafficMirrorConfig(Builder builder) {
@@ -1322,7 +1522,7 @@ public class CreateRuleRequest extends Request {
             private String targetType; 
 
             /**
-             * The configuration of the server group to which traffic is mirrored.
+             * <p>The configuration of the server group to which traffic is mirrored.</p>
              */
             public Builder mirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
                 this.mirrorGroupConfig = mirrorGroupConfig;
@@ -1330,11 +1530,13 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The type of destination to which network traffic is mirrored. Valid values:
-             * <p>
+             * <p>The type of target to which network traffic is mirrored. Valid values:</p>
+             * <ul>
+             * <li><strong>ForwardGroupMirror</strong>: a server group.</li>
+             * </ul>
              * 
-             * *   **ForwardGroupMirror**: a server group
-             * *   **SlsMirror**: Log Service
+             * <strong>example:</strong>
+             * <p>ForwardGroupMirror</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -1348,40 +1550,46 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class RuleActions extends TeaModel {
-        @NameInMap("CorsConfig")
+        @com.aliyun.core.annotation.NameInMap("CorsConfig")
         private CorsConfig corsConfig;
 
-        @NameInMap("FixedResponseConfig")
+        @com.aliyun.core.annotation.NameInMap("FixedResponseConfig")
         private FixedResponseConfig fixedResponseConfig;
 
-        @NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("InsertHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("InsertHeaderConfig")
         private InsertHeaderConfig insertHeaderConfig;
 
-        @NameInMap("Order")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Order")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer order;
 
-        @NameInMap("RedirectConfig")
+        @com.aliyun.core.annotation.NameInMap("RedirectConfig")
         private RedirectConfig redirectConfig;
 
-        @NameInMap("RemoveHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("RemoveHeaderConfig")
         private RemoveHeaderConfig removeHeaderConfig;
 
-        @NameInMap("RewriteConfig")
+        @com.aliyun.core.annotation.NameInMap("RewriteConfig")
         private RewriteConfig rewriteConfig;
 
-        @NameInMap("TrafficLimitConfig")
+        @com.aliyun.core.annotation.NameInMap("TrafficLimitConfig")
         private TrafficLimitConfig trafficLimitConfig;
 
-        @NameInMap("TrafficMirrorConfig")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorConfig")
         private TrafficMirrorConfig trafficMirrorConfig;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private RuleActions(Builder builder) {
@@ -1497,7 +1705,7 @@ public class CreateRuleRequest extends Request {
             private String type; 
 
             /**
-             * The origins allowed.
+             * <p>Request forwarding based on CORS.</p>
              */
             public Builder corsConfig(CorsConfig corsConfig) {
                 this.corsConfig = corsConfig;
@@ -1505,7 +1713,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configuration of the custom response.
+             * <p>The configuration of the custom response.</p>
              */
             public Builder fixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
                 this.fixedResponseConfig = fixedResponseConfig;
@@ -1513,7 +1721,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The server groups to which requests are distributed. Each forwarding rule supports at most five server groups.
+             * <p>The server groups to which requests are forwarded. You can specify at most five server groups for each forwarding rule.</p>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -1521,7 +1729,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configuration of the header to be inserted.
+             * <p>The key of the header to be inserted.</p>
              */
             public Builder insertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
                 this.insertHeaderConfig = insertHeaderConfig;
@@ -1529,7 +1737,11 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The priority of the action. Valid values: **1 to 50000**. A smaller value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter is required. The priority of each action within a forwarding rule must be unique.
+             * <p>The priority of the action. Valid values: <strong>1 to 50000</strong>. A smaller value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter cannot empty. The priority of each action within a forwarding rule must be unique.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -1537,10 +1749,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The redirect configuration.
-             * <p>
-             * 
-             * > When you configure the **RedirectConfig** action, you can use the default value only for the **httpCode** parameter. Do not use the default values for the other parameters.
+             * <p>The configuration of the redirect action.</p>
+             * <blockquote>
+             * <p> Do not set all fields in <strong>RedirectConfig</strong> to default values, except for <strong>httpCode</strong>.</p>
+             * </blockquote>
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
                 this.redirectConfig = redirectConfig;
@@ -1548,7 +1760,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * RemoveHeaderConfig.
+             * <p>The HTTP header to be removed.</p>
              */
             public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
                 this.removeHeaderConfig = removeHeaderConfig;
@@ -1556,10 +1768,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The rewrite configuration.
-             * <p>
-             * 
-             * > If multiple actions are configured within a forwarding rule, you must set **RewriteConfig** to the value of **ForwardGroup**.
+             * <p>The configuration of the rewrite action.</p>
+             * <blockquote>
+             * <p> If you specify multiple actions for a forwarding rule, you must configure the <strong>ForwardGroup</strong> parameter for the <strong>RewriteConfig</strong> action.</p>
+             * </blockquote>
              */
             public Builder rewriteConfig(RewriteConfig rewriteConfig) {
                 this.rewriteConfig = rewriteConfig;
@@ -1567,7 +1779,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The action to throttle traffic.
+             * <p>The configuration of the traffic throttling action.</p>
              */
             public Builder trafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
                 this.trafficLimitConfig = trafficLimitConfig;
@@ -1575,7 +1787,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The action to mirror traffic.
+             * <p>The configuration of the traffic mirroring action.</p>
              */
             public Builder trafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
                 this.trafficMirrorConfig = trafficMirrorConfig;
@@ -1583,23 +1795,27 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The action type. Valid values:
-             * <p>
+             * <p>The action. Valid values:</p>
+             * <ul>
+             * <li><strong>ForwardGroup</strong>: distributes requests to multiple vServer groups.</li>
+             * <li><strong>Redirect</strong>: redirects a request.</li>
+             * <li><strong>FixedResponse</strong>: returns a custom response.</li>
+             * <li><strong>Rewrite</strong>: rewrites a request.</li>
+             * <li><strong>InsertHeader</strong>: inserts headers.</li>
+             * <li><strong>RemoveHeaderConfig:</strong> deletes the header of a request.</li>
+             * <li><strong>TrafficLimit</strong>: throttles traffic.</li>
+             * <li><strong>TrafficMirror</strong>: mirrors network traffic.</li>
+             * <li><strong>Cors</strong>: enables cross-origin resource sharing (CORS).</li>
+             * </ul>
+             * <p>The following action types are supported:</p>
+             * <ul>
+             * <li><strong>FinalType</strong>: Each forwarding rule can contain only one FinalType action, which is performed at the end. You can specify only one of <strong>ForwardGroup</strong>, <strong>Redirect</strong>, and <strong>FixedResponse</strong>.</li>
+             * <li><strong>ExtType</strong>: Each forwarding rule can contain one or more <strong>ExtType</strong> actions, which are performed before the <strong>FinalType</strong> action. If you want to specify an ExtType action, you must also specify a <strong>FinalType</strong> action. You can specify multiple <strong>InsertHeader</strong> actions or one <strong>Rewrite</strong> action.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **ForwardGroup**: forwards a request to multiple vServer groups.
-             * *   **Redirect**: redirects a request.
-             * *   **FixedResponse**: returns a custom response.
-             * *   **Rewrite**: rewrites a request.
-             * *   **InsertHeader**: inserts a header.
-             * *   **RemoveHeaderConfig**: deletes a header.
-             * *   **TrafficLimitConfig**: throttles network traffic.
-             * *   **TrafficMirrorConfig**: mirrors traffic.
-             * *   **CorsConfig**: forwards requests based on CORS.
-             * 
-             * The following action types are supported:
-             * 
-             * *   **FinalType**: the last action to be performed in a forwarding rule. Each forwarding rule can contain only one FinalType action. You can specify the **ForwardGroup**, **Redirect**, or **FixedResponse** action as the FinalType action.
-             * *   **ExtType**: the action or the actions to be performed before the **FinalType** action. A forwarding rule can contain one or more **ExtType** actions. To specify this parameter, you must also specify **FinalType**. You can specify multiple **InsertHeader** actions or one **Rewrite** action.
+             * <strong>example:</strong>
+             * <p>ForwardGroup</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1613,11 +1829,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Values(Builder builder) {
@@ -1652,12 +1874,15 @@ public class CreateRuleRequest extends Request {
             private String value; 
 
             /**
-             * The key of the cookie.
-             * <p>
+             * <p>The cookie key.</p>
+             * <ul>
+             * <li>The cookie key must be 1 to 100 characters in length.</li>
+             * <li>You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li>The cookie key can contain printable characters, but cannot contain uppercase letters, space characters, or the following special characters: <code>; # [ ] { } \ | &lt; &gt; &amp;</code>.</li>
+             * </ul>
              * 
-             * *   The key must be 1 to 100 characters in length.
-             * *   You can use asterisks (\*) and question marks (?) as wildcard characters.
-             * *   The key can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \ | < > &`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1665,12 +1890,15 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The value of the cookie.
-             * <p>
+             * <p>The cookie value.</p>
+             * <ul>
+             * <li>The cookie value must be 1 to 100 characters in length.</li>
+             * <li>You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * <li>The cookie value can contain printable characters, but cannot contain uppercase letters, space characters, or the following special characters: <code>; # [ ] { } \ | &lt; &gt; &amp;</code>.</li>
+             * </ul>
              * 
-             * *   The value must be 1 to 100 characters in length.
-             * *   You can use asterisks (\*) and question marks (?) as wildcard characters.
-             * *   The value can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \ | < > &`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1684,9 +1912,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class CookieConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < Values> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Values> values;
 
         private CookieConfig(Builder builder) {
             this.values = builder.values;
@@ -1703,17 +1937,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
-             * The cookie values.
+             * <p>The cookie values.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }
@@ -1725,12 +1959,18 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class HeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private HeaderConfig(Builder builder) {
             this.key = builder.key;
@@ -1755,21 +1995,24 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The key of the header.
-             * <p>
+             * <p>The header key.</p>
+             * <ul>
+             * <li>The header key must be 1 to 40 characters in length.</li>
+             * <li>The key can contain letters, digits, hyphens (-), and underscores (_).</li>
+             * <li>Cookie and Host are not supported.</li>
+             * </ul>
              * 
-             * *   The key must be 1 to 40 characters in length.
-             * *   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).
-             * *   Cookie and Host are not supported.
+             * <strong>example:</strong>
+             * <p>Port</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1777,9 +2020,9 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The value of the header.
+             * <p>The header values.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1791,9 +2034,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class HostConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private HostConfig(Builder builder) {
             this.values = builder.values;
@@ -1810,17 +2059,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The hostname.
+             * <p>The hostnames.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1832,9 +2081,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class MethodConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private MethodConfig(Builder builder) {
             this.values = builder.values;
@@ -1851,17 +2106,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The request methods.
+             * <p>The request methods.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1873,9 +2128,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class PathConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private PathConfig(Builder builder) {
             this.values = builder.values;
@@ -1892,17 +2153,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The path.
+             * <p>The forwarding URLs.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1914,11 +2175,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class QueryStringConfigValues extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueryStringConfigValues(Builder builder) {
@@ -1953,11 +2220,14 @@ public class CreateRuleRequest extends Request {
             private String value; 
 
             /**
-             * The key of the query string.
-             * <p>
+             * <p>They key of the query string.</p>
+             * <ul>
+             * <li>The key must be 1 to 100 characters in length.</li>
+             * <li>You can use asterisks (*) and question marks (?) as wildcard characters. The key can contain printable characters, excluding uppercase letters, space characters, and the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</li>
+             * </ul>
              * 
-             * *   The key must be 1 to 100 characters in length.
-             * *   You can use asterisks (\*) and question marks (?) as wildcards. The key can contain printable characters, except uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1965,11 +2235,14 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The value of the query string.
-             * <p>
+             * <p>The value of the query string.</p>
+             * <ul>
+             * <li>The query string must be 1 to 128 characters in length.</li>
+             * <li>The value can contain printable characters, excluding uppercase letters, space characters, and the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * </ul>
              * 
-             * *   The value must be 1 to 128 characters in length.
-             * *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1983,9 +2256,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class QueryStringConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < QueryStringConfigValues> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<QueryStringConfigValues> values;
 
         private QueryStringConfig(Builder builder) {
             this.values = builder.values;
@@ -2002,17 +2281,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < QueryStringConfigValues> getValues() {
+        public java.util.List<QueryStringConfigValues> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < QueryStringConfigValues> values; 
+            private java.util.List<QueryStringConfigValues> values; 
 
             /**
-             * The query strings.
+             * <p>The query strings.</p>
              */
-            public Builder values(java.util.List < QueryStringConfigValues> values) {
+            public Builder values(java.util.List<QueryStringConfigValues> values) {
                 this.values = values;
                 return this;
             }
@@ -2024,12 +2303,18 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class ResponseHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private ResponseHeaderConfig(Builder builder) {
             this.key = builder.key;
@@ -2054,20 +2339,24 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The key of the query string.
-             * <p>
+             * <p>The key of the header.</p>
+             * <ul>
+             * <li>The key must be 1 to 40 characters in length,</li>
+             * <li>The key can contain letters, digits, hyphens (-), and underscores (_).</li>
+             * <li>Cookie and Host are not supported.</li>
+             * </ul>
              * 
-             * *   The key must be 1 to 100 characters in length.
-             * *   You can use asterisks (\*) and question marks (?) as wildcards. The key can contain printable characters, except uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2075,9 +2364,9 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The query strings.
+             * <p>The header values.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -2089,9 +2378,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class ResponseStatusCodeConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private ResponseStatusCodeConfig(Builder builder) {
             this.values = builder.values;
@@ -2108,17 +2403,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The query strings.
+             * <p>The response status codes.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -2130,9 +2425,15 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class SourceIpConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private SourceIpConfig(Builder builder) {
             this.values = builder.values;
@@ -2149,17 +2450,17 @@ public class CreateRuleRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The configuration of the source IP-based forwarding rule.
+             * <p>The source IP addresses used for traffic matching.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -2171,36 +2472,42 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class RuleConditions extends TeaModel {
-        @NameInMap("CookieConfig")
+        @com.aliyun.core.annotation.NameInMap("CookieConfig")
         private CookieConfig cookieConfig;
 
-        @NameInMap("HeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("HeaderConfig")
         private HeaderConfig headerConfig;
 
-        @NameInMap("HostConfig")
+        @com.aliyun.core.annotation.NameInMap("HostConfig")
         private HostConfig hostConfig;
 
-        @NameInMap("MethodConfig")
+        @com.aliyun.core.annotation.NameInMap("MethodConfig")
         private MethodConfig methodConfig;
 
-        @NameInMap("PathConfig")
+        @com.aliyun.core.annotation.NameInMap("PathConfig")
         private PathConfig pathConfig;
 
-        @NameInMap("QueryStringConfig")
+        @com.aliyun.core.annotation.NameInMap("QueryStringConfig")
         private QueryStringConfig queryStringConfig;
 
-        @NameInMap("ResponseHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("ResponseHeaderConfig")
         private ResponseHeaderConfig responseHeaderConfig;
 
-        @NameInMap("ResponseStatusCodeConfig")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatusCodeConfig")
         private ResponseStatusCodeConfig responseStatusCodeConfig;
 
-        @NameInMap("SourceIpConfig")
+        @com.aliyun.core.annotation.NameInMap("SourceIpConfig")
         private SourceIpConfig sourceIpConfig;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private RuleConditions(Builder builder) {
@@ -2307,7 +2614,7 @@ public class CreateRuleRequest extends Request {
             private String type; 
 
             /**
-             * The configurations of the cookies.
+             * <p>The key-value pairs of the cookie.</p>
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -2315,7 +2622,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configuration of the header.
+             * <p>The configuration of the header.</p>
              */
             public Builder headerConfig(HeaderConfig headerConfig) {
                 this.headerConfig = headerConfig;
@@ -2323,7 +2630,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configurations of the host.
+             * <p>The configuration of the host.</p>
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -2331,7 +2638,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configurations of the request methods.
+             * <p>The configurations of the request method.</p>
              */
             public Builder methodConfig(MethodConfig methodConfig) {
                 this.methodConfig = methodConfig;
@@ -2339,7 +2646,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configurations of the URLs.
+             * <p>The configurations of the URL to which requests are forwarded.</p>
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -2347,7 +2654,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configurations of the query strings.
+             * <p>The configurations of the query strings.</p>
              */
             public Builder queryStringConfig(QueryStringConfig queryStringConfig) {
                 this.queryStringConfig = queryStringConfig;
@@ -2355,7 +2662,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * ResponseHeaderConfig.
+             * <p>The configuration of headers.</p>
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -2363,7 +2670,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * ResponseStatusCodeConfig.
+             * <p>The configurations of the response status codes.</p>
              */
             public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
                 this.responseStatusCodeConfig = responseStatusCodeConfig;
@@ -2371,7 +2678,7 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The configuration of the source IP-based forwarding rule. This parameter is required and takes effect only when **Type** is set to **SourceIP**.
+             * <p>Configurations of traffic matching based on source IP addresses. This parameter is required and valid when <strong>Type</strong> is set to <strong>SourceIP</strong>.</p>
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -2379,16 +2686,22 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The type of forwarding rule. Valid values:
-             * <p>
+             * <p>The type of forwarding rule. Valid values:</p>
+             * <ul>
+             * <li><strong>Host</strong>: Requests are distributed based on hosts.</li>
+             * <li><strong>Path</strong>: Requests are distributed based on paths.</li>
+             * <li><strong>Header</strong>: Requests are forwarded based on HTTP headers.</li>
+             * <li><strong>QueryString</strong>: Requests are distributed based on query strings.</li>
+             * <li><strong>Method</strong>: Requests are distributed based on request methods.</li>
+             * <li><strong>Cookie</strong>: Requests are distributed based on cookies.</li>
+             * <li><strong>SourceIp</strong>: Requests are forwarded based on source IP addresses.</li>
+             * <li><strong>ResponseHeader</strong>: Requests are forwarded based on HTTP response headers.</li>
+             * <li><strong>ResponseStatusCode</strong>: Requests are forwarded based on response status codes.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **Host**: Requests are distributed based on hosts.
-             * *   **Path**: Requests are distributed based on paths.
-             * *   **Header**: Requests are distributed based on HTTP headers.
-             * *   **QueryString**: Requests are distributed based on query strings.
-             * *   **Method**: Requests are distributed based on request methods.
-             * *   **Cookie**: Requests are distributed based on cookies.
-             * *   **SourceIp**: Requests are distributed based on source IP addresses.
+             * <strong>example:</strong>
+             * <p>Host</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2402,11 +2715,17 @@ public class CreateRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRuleRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -2441,11 +2760,10 @@ public class CreateRuleRequest extends Request {
             private String value; 
 
             /**
-             * The key of the query string.
-             * <p>
+             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
              * 
-             * *   The key must be 1 to 100 characters in length.
-             * *   You can use asterisks (\*) and question marks (?) as wildcards. The key can contain printable characters, except uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`.
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2453,11 +2771,10 @@ public class CreateRuleRequest extends Request {
             }
 
             /**
-             * The value of the query string.
-             * <p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
              * 
-             * *   The value must be 1 to 128 characters in length.
-             * *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

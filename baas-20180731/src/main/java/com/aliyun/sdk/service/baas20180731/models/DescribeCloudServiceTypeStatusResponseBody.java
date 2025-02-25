@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudServiceTypeStatusResponseBody</p>
  */
 public class DescribeCloudServiceTypeStatusResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCloudServiceTypeStatusResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class DescribeCloudServiceTypeStatusResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("GrantPrivilegeUrl")
+        @com.aliyun.core.annotation.NameInMap("GrantPrivilegeUrl")
         private String grantPrivilegeUrl;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("ServiceOpenStatus")
+        @com.aliyun.core.annotation.NameInMap("ServiceOpenStatus")
         private Boolean serviceOpenStatus;
 
-        @NameInMap("ServiceOpenUrl")
+        @com.aliyun.core.annotation.NameInMap("ServiceOpenUrl")
         private String serviceOpenUrl;
 
-        @NameInMap("ServicePrivilegeStatus")
+        @com.aliyun.core.annotation.NameInMap("ServicePrivilegeStatus")
         private Boolean servicePrivilegeStatus;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
         private Result(Builder builder) {

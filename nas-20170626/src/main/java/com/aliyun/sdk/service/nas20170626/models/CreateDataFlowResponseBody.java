@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDataFlowResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDataFlowResponseBody</p>
  */
 public class CreateDataFlowResponseBody extends TeaModel {
-    @NameInMap("DataFlowId")
+    @com.aliyun.core.annotation.NameInMap("DataFlowId")
     private String dataFlowId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDataFlowResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateDataFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataFlowId.
+         * <p>The dataflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.dataFlowId = dataFlowId;
@@ -58,7 +66,10 @@ public class CreateDataFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D****3E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

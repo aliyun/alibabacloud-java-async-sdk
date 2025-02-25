@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,83 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetExperimentGroupResponseBody</p>
  */
 public class GetExperimentGroupResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("CrowdId")
+    @com.aliyun.core.annotation.NameInMap("CrowdId")
     private String crowdId;
 
-    @NameInMap("DebugCrowdId")
+    @com.aliyun.core.annotation.NameInMap("CrowdTargetType")
+    private String crowdTargetType;
+
+    @com.aliyun.core.annotation.NameInMap("DebugCrowdId")
     private String debugCrowdId;
 
-    @NameInMap("DebugUsers")
+    @com.aliyun.core.annotation.NameInMap("DebugUsers")
     private String debugUsers;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DistributionTimeDuration")
+    @com.aliyun.core.annotation.NameInMap("DistributionTimeDuration")
     private Integer distributionTimeDuration;
 
-    @NameInMap("DistributionType")
+    @com.aliyun.core.annotation.NameInMap("DistributionType")
     private String distributionType;
 
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @NameInMap("LaboratoryId")
+    @com.aliyun.core.annotation.NameInMap("HoldingBuckets")
+    private String holdingBuckets;
+
+    @com.aliyun.core.annotation.NameInMap("LaboratoryId")
     private String laboratoryId;
 
-    @NameInMap("LayerId")
+    @com.aliyun.core.annotation.NameInMap("LayerId")
     private String layerId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NeedAA")
+    @com.aliyun.core.annotation.NameInMap("NeedAA")
     private Boolean needAA;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RandomFlow")
+    private Long randomFlow;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReservedBuckets")
+    @com.aliyun.core.annotation.NameInMap("ReservedBuckets")
     private String reservedBuckets;
 
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetExperimentGroupResponseBody(Builder builder) {
         this.config = builder.config;
         this.crowdId = builder.crowdId;
+        this.crowdTargetType = builder.crowdTargetType;
         this.debugCrowdId = builder.debugCrowdId;
         this.debugUsers = builder.debugUsers;
         this.description = builder.description;
         this.distributionTimeDuration = builder.distributionTimeDuration;
         this.distributionType = builder.distributionType;
         this.filter = builder.filter;
+        this.holdingBuckets = builder.holdingBuckets;
         this.laboratoryId = builder.laboratoryId;
         this.layerId = builder.layerId;
         this.name = builder.name;
         this.needAA = builder.needAA;
         this.owner = builder.owner;
+        this.randomFlow = builder.randomFlow;
         this.requestId = builder.requestId;
         this.reservedBuckets = builder.reservedBuckets;
         this.sceneId = builder.sceneId;
@@ -103,6 +114,13 @@ public class GetExperimentGroupResponseBody extends TeaModel {
      */
     public String getCrowdId() {
         return this.crowdId;
+    }
+
+    /**
+     * @return crowdTargetType
+     */
+    public String getCrowdTargetType() {
+        return this.crowdTargetType;
     }
 
     /**
@@ -148,6 +166,13 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return holdingBuckets
+     */
+    public String getHoldingBuckets() {
+        return this.holdingBuckets;
+    }
+
+    /**
      * @return laboratoryId
      */
     public String getLaboratoryId() {
@@ -183,6 +208,13 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return randomFlow
+     */
+    public Long getRandomFlow() {
+        return this.randomFlow;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -213,17 +245,20 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String config; 
         private String crowdId; 
+        private String crowdTargetType; 
         private String debugCrowdId; 
         private String debugUsers; 
         private String description; 
         private Integer distributionTimeDuration; 
         private String distributionType; 
         private String filter; 
+        private String holdingBuckets; 
         private String laboratoryId; 
         private String layerId; 
         private String name; 
         private Boolean needAA; 
         private String owner; 
+        private Long randomFlow; 
         private String requestId; 
         private String reservedBuckets; 
         private String sceneId; 
@@ -242,6 +277,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
          */
         public Builder crowdId(String crowdId) {
             this.crowdId = crowdId;
+            return this;
+        }
+
+        /**
+         * CrowdTargetType.
+         */
+        public Builder crowdTargetType(String crowdTargetType) {
+            this.crowdTargetType = crowdTargetType;
             return this;
         }
 
@@ -294,6 +337,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
+         * HoldingBuckets.
+         */
+        public Builder holdingBuckets(String holdingBuckets) {
+            this.holdingBuckets = holdingBuckets;
+            return this;
+        }
+
+        /**
          * LaboratoryId.
          */
         public Builder laboratoryId(String laboratoryId) {
@@ -330,6 +381,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
          */
         public Builder owner(String owner) {
             this.owner = owner;
+            return this;
+        }
+
+        /**
+         * RandomFlow.
+         */
+        public Builder randomFlow(Long randomFlow) {
+            this.randomFlow = randomFlow;
             return this;
         }
 

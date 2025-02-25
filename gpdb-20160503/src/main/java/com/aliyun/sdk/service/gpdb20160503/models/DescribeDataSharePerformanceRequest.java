@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSharePerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataSharePerformanceRequest</p>
  */
 public class DescribeDataSharePerformanceRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDataSharePerformanceRequest(Builder builder) {
@@ -112,7 +117,10 @@ public class DescribeDataSharePerformanceRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T15:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,11 +129,15 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * The name of the performance metric. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The name of the performance metric. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>adbpg_datashare_topic_count</strong>: the number of shared topics.</li>
+         * <li><strong>adbpg_datashare_data_size_mb</strong>: the amount of data shared.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **adbpg_datashare_topic_count**: the number of shared topics.
-         * *   **adbpg_datashare_data_size_mb**: the amount of data shared.
+         * <strong>example:</strong>
+         * <p>adbpg_datashare_topic_count</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -134,10 +146,14 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +162,10 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -155,7 +174,10 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

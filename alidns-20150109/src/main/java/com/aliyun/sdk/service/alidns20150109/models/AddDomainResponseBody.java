@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainResponseBody} extends {@link TeaModel}
  *
  * <p>AddDomainResponseBody</p>
  */
 public class AddDomainResponseBody extends TeaModel {
-    @NameInMap("DnsServers")
+    @com.aliyun.core.annotation.NameInMap("DnsServers")
     private DnsServers dnsServers;
 
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private String domainId;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("PunyCode")
+    @com.aliyun.core.annotation.NameInMap("PunyCode")
     private String punyCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddDomainResponseBody(Builder builder) {
@@ -110,7 +115,7 @@ public class AddDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Domain Name System (DNS) servers that resolve the domain name.
+         * <p>The Domain Name System (DNS) servers configured for the domain name.</p>
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -118,7 +123,10 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the domain name.
+         * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -126,7 +134,10 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.top</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -134,7 +145,10 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -142,7 +156,10 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the domain name group.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyGroup</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -150,7 +167,10 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
+         * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--fsq270a.com</p>
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -158,7 +178,10 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,9 +194,15 @@ public class AddDomainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddDomainResponseBody</p>
+     */
     public static class DnsServers extends TeaModel {
-        @NameInMap("DnsServer")
-        private java.util.List < String > dnsServer;
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
+        private java.util.List<String> dnsServer;
 
         private DnsServers(Builder builder) {
             this.dnsServer = builder.dnsServer;
@@ -190,17 +219,17 @@ public class AddDomainResponseBody extends TeaModel {
         /**
          * @return dnsServer
          */
-        public java.util.List < String > getDnsServer() {
+        public java.util.List<String> getDnsServer() {
             return this.dnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > dnsServer; 
+            private java.util.List<String> dnsServer; 
 
             /**
              * DnsServer.
              */
-            public Builder dnsServer(java.util.List < String > dnsServer) {
+            public Builder dnsServer(java.util.List<String> dnsServer) {
                 this.dnsServer = dnsServer;
                 return this;
             }

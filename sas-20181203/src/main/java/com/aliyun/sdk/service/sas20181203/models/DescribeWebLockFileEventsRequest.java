@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockFileEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebLockFileEventsRequest</p>
  */
 public class DescribeWebLockFileEventsRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProcessName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessName")
     private String processName;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("TsBegin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TsBegin")
     private Long tsBegin;
 
-    @Query
-    @NameInMap("TsEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TsEnd")
     private Long tsEnd;
 
     private DescribeWebLockFileEventsRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class DescribeWebLockFileEventsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,11 +155,14 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * Specifies whether the event on web tamper proofing is handled. Valid values:
-         * <p>
+         * <p>Specifies whether the event on web tamper proofing is handled. Valid values:</p>
+         * <ul>
+         * <li><strong>n</strong>: The event on web tamper proofing is handled.</li>
+         * <li><strong>y</strong>: The event on web tamper proofing is not handled.</li>
+         * </ul>
          * 
-         * *   **n**: The event on web tamper proofing is handled.
-         * *   **y**: The event on web tamper proofing is not handled.
+         * <strong>example:</strong>
+         * <p>n</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -160,7 +171,10 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +183,10 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys_create</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -178,10 +195,13 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * The name of the asset.
-         * <p>
+         * <p>The name of the asset.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the names of assets.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the names of assets.
+         * <strong>example:</strong>
+         * <p>test-ecs</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -190,7 +210,10 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660649981419</p>
          */
         public Builder tsBegin(Long tsBegin) {
             this.putQueryParameter("TsBegin", tsBegin);
@@ -199,7 +222,10 @@ public class DescribeWebLockFileEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp.
+         * <p>The end of the time range to query. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660649981419</p>
          */
         public Builder tsEnd(Long tsEnd) {
             this.putQueryParameter("TsEnd", tsEnd);

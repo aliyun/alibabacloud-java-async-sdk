@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTablePartitionResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTablePartitionResponseBody</p>
  */
 public class GetMetaTablePartitionResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTablePartitionResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The business data returned.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,38 +171,44 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTablePartitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTablePartitionResponseBody</p>
+     */
     public static class DataEntityList extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("PartitionGuid")
+        @com.aliyun.core.annotation.NameInMap("PartitionGuid")
         private String partitionGuid;
 
-        @NameInMap("PartitionLocation")
+        @com.aliyun.core.annotation.NameInMap("PartitionLocation")
         private String partitionLocation;
 
-        @NameInMap("PartitionName")
+        @com.aliyun.core.annotation.NameInMap("PartitionName")
         private String partitionName;
 
-        @NameInMap("PartitionPath")
+        @com.aliyun.core.annotation.NameInMap("PartitionPath")
         private String partitionPath;
 
-        @NameInMap("PartitionType")
+        @com.aliyun.core.annotation.NameInMap("PartitionType")
         private String partitionType;
 
-        @NameInMap("RecordCount")
+        @com.aliyun.core.annotation.NameInMap("RecordCount")
         private Long recordCount;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
         private DataEntityList(Builder builder) {
@@ -298,7 +324,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             private String tableGuid; 
 
             /**
-             * The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -306,7 +335,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the partition.
+             * <p>The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590032868000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -314,7 +346,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The comment.
+             * <p>The size of the partition. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -322,7 +357,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries in the partition.
+             * <p>The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590032868000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -330,7 +368,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * <p>The GUID of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.table_name.pt=20170614</p>
              */
             public Builder partitionGuid(String partitionGuid) {
                 this.partitionGuid = partitionGuid;
@@ -338,7 +379,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionLocation.
+             * <p>The location of the Hive partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder partitionLocation(String partitionLocation) {
                 this.partitionLocation = partitionLocation;
@@ -346,7 +390,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The name of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pt=20170614</p>
              */
             public Builder partitionName(String partitionName) {
                 this.partitionName = partitionName;
@@ -354,7 +401,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the partition.
+             * <p>The path of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder partitionPath(String partitionPath) {
                 this.partitionPath = partitionPath;
@@ -362,7 +412,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The location of the Hive partition.
+             * <p>The type of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder partitionType(String partitionType) {
                 this.partitionType = partitionType;
@@ -370,7 +423,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the partition.
+             * <p>The number of entries in the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>233</p>
              */
             public Builder recordCount(Long recordCount) {
                 this.recordCount = recordCount;
@@ -378,7 +434,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * <p>The unique identifier of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.table_name</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -392,17 +451,23 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMetaTablePartitionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTablePartitionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataEntityList")
-        private java.util.List < DataEntityList> dataEntityList;
+        @com.aliyun.core.annotation.NameInMap("DataEntityList")
+        private java.util.List<DataEntityList> dataEntityList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -423,7 +488,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         /**
          * @return dataEntityList
          */
-        public java.util.List < DataEntityList> getDataEntityList() {
+        public java.util.List<DataEntityList> getDataEntityList() {
             return this.dataEntityList;
         }
 
@@ -449,21 +514,24 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataEntityList> dataEntityList; 
+            private java.util.List<DataEntityList> dataEntityList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
 
             /**
-             * The size of the partition. Unit: bytes.
+             * <p>The list of partitions.</p>
              */
-            public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
+            public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
                 return this;
             }
 
             /**
-             * The total number of partitions.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -471,7 +539,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The list of partitions.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +550,10 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the partition.
+             * <p>The total number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

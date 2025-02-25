@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateImageTranslateTaskRequest</p>
  */
 public class CreateImageTranslateTaskRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extra")
     private String extra;
 
-    @Body
-    @NameInMap("SourceLanguage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLanguage;
 
-    @Body
-    @NameInMap("TargetLanguage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetLanguage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetLanguage;
 
-    @Body
-    @NameInMap("UrlList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UrlList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String urlList;
 
     private CreateImageTranslateTaskRequest(Builder builder) {

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDeletedDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDeletedDomainsResponseBody</p>
  */
 public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Domains domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDcdnDeletedDomainsResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information about the accelerated domain name.
+         * <p>The information about the accelerated domain name.</p>
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -94,7 +94,10 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.
+         * <p>The page number of the returned page, which is the same as the <strong>PageNumber</strong> parameter in request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,10 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.
+         * <p>The number of domain names returned per page, which is the same as the <strong>PageSize</strong> parameter in request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +116,10 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA75AADB-5E25-4970-B480-EAA1F5658483</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of domain names returned.
+         * <p>The total number of domain names returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +143,17 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDeletedDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDeletedDomainsResponseBody</p>
+     */
     public static class PageData extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
         private PageData(Builder builder) {
@@ -170,7 +188,10 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
             private String gmtModified; 
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -178,7 +199,10 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-10-28T11:05:52Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -192,8 +216,14 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDeletedDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDeletedDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
-        @NameInMap("PageData")
+        @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;
 
         private Domains(Builder builder) {

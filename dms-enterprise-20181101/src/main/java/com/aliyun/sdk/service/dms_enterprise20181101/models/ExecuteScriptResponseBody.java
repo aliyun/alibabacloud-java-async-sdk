@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteScriptResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteScriptResponseBody</p>
  */
 public class ExecuteScriptResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
-    private java.util.List < Results> results;
+    @com.aliyun.core.annotation.NameInMap("Results")
+    private java.util.List<Results> results;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ExecuteScriptResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
@@ -82,11 +87,14 @@ public class ExecuteScriptResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The error message about the gateway.
+         * <p>The error message about the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF9A04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +124,18 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.
+         * <p>The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,20 +148,26 @@ public class ExecuteScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteScriptResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("ColumnNames")
-        private java.util.List < String > columnNames;
+        @com.aliyun.core.annotation.NameInMap("ColumnNames")
+        private java.util.List<String> columnNames;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RowCount")
+        @com.aliyun.core.annotation.NameInMap("RowCount")
         private Long rowCount;
 
-        @NameInMap("Rows")
-        private java.util.List < java.util.Map<String, ?>> rows;
+        @com.aliyun.core.annotation.NameInMap("Rows")
+        private java.util.List<java.util.Map<String, ?>> rows;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Results(Builder builder) {
@@ -166,7 +189,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         /**
          * @return columnNames
          */
-        public java.util.List < String > getColumnNames() {
+        public java.util.List<String> getColumnNames() {
             return this.columnNames;
         }
 
@@ -187,7 +210,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         /**
          * @return rows
          */
-        public java.util.List < java.util.Map<String, ?>> getRows() {
+        public java.util.List<java.util.Map<String, ?>> getRows() {
             return this.rows;
         }
 
@@ -199,22 +222,25 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > columnNames; 
+            private java.util.List<String> columnNames; 
             private String message; 
             private Long rowCount; 
-            private java.util.List < java.util.Map<String, ?>> rows; 
+            private java.util.List<java.util.Map<String, ?>> rows; 
             private Boolean success; 
 
             /**
-             * The fields that are queried after the SQL statement is executed.
+             * <p>The fields that are queried after the SQL statement is executed.</p>
              */
-            public Builder columnNames(java.util.List < String > columnNames) {
+            public Builder columnNames(java.util.List<String> columnNames) {
                 this.columnNames = columnNames;
                 return this;
             }
 
             /**
-             * The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.
+             * <p>The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UnknownError</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -222,7 +248,10 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries that are returned.
+             * <p>The total number of entries that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -230,15 +259,18 @@ public class ExecuteScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The rows that are queried after the SQL statement is executed.
+             * <p>The rows that are queried after the SQL statement is executed.</p>
              */
-            public Builder rows(java.util.List < java.util.Map<String, ?>> rows) {
+            public Builder rows(java.util.List<java.util.Map<String, ?>> rows) {
                 this.rows = rows;
                 return this;
             }
 
             /**
-             * Indicates whether the SQL statement is executed.
+             * <p>Indicates whether the SQL statement is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceGroupResponseBody</p>
  */
 public class GetServiceGroupResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetServiceGroupResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetServiceGroupResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("roleNameList")
+        @com.aliyun.core.annotation.NameInMap("roleNameList")
         private java.util.List < String > roleNameList;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("userName")
+        @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
 
         private Users(Builder builder) {
@@ -193,31 +192,31 @@ public class GetServiceGroupResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("enableWebhook")
+        @com.aliyun.core.annotation.NameInMap("enableWebhook")
         private String enableWebhook;
 
-        @NameInMap("serviceGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupDescription")
         private String serviceGroupDescription;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("serviceGroupName")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupName")
         private String serviceGroupName;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
-        @NameInMap("users")
+        @com.aliyun.core.annotation.NameInMap("users")
         private java.util.List < Users> users;
 
-        @NameInMap("webhookLink")
+        @com.aliyun.core.annotation.NameInMap("webhookLink")
         private String webhookLink;
 
-        @NameInMap("webhookType")
+        @com.aliyun.core.annotation.NameInMap("webhookType")
         private String webhookType;
 
         private Data(Builder builder) {

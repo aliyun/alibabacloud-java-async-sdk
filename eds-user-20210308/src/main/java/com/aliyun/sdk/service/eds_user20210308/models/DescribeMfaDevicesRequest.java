@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMfaDevicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMfaDevicesRequest</p>
  */
 public class DescribeMfaDevicesRequest extends Request {
-    @Query
-    @NameInMap("AdDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdDomain")
     private String adDomain;
 
-    @Query
-    @NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    private java.util.List<String> endUserIds;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("SerialNumbers")
-    private java.util.List < String > serialNumbers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SerialNumbers")
+    private java.util.List<String> serialNumbers;
 
     private DescribeMfaDevicesRequest(Builder builder) {
         super(builder);
@@ -65,7 +70,7 @@ public class DescribeMfaDevicesRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
@@ -86,16 +91,16 @@ public class DescribeMfaDevicesRequest extends Request {
     /**
      * @return serialNumbers
      */
-    public java.util.List < String > getSerialNumbers() {
+    public java.util.List<String> getSerialNumbers() {
         return this.serialNumbers;
     }
 
     public static final class Builder extends Request.Builder<DescribeMfaDevicesRequest, Builder> {
         private String adDomain; 
-        private java.util.List < String > endUserIds; 
+        private java.util.List<String> endUserIds; 
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < String > serialNumbers; 
+        private java.util.List<String> serialNumbers; 
 
         private Builder() {
             super();
@@ -111,7 +116,10 @@ public class DescribeMfaDevicesRequest extends Request {
         } 
 
         /**
-         * AdDomain.
+         * <p>The domain of the Active Directory (AD) workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn.misumi.pri</p>
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -120,19 +128,22 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The list of username of convenience users.
+         * <p>The usernames of the convenience users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;
         }
 
         /**
-         * The maximum number of entries to return. Valid values: 1 to 500.
-         * <p>
+         * <p>The maximum number of entries to return. Valid values: 1 to 500.<br>Default value: 100.</p>
          * 
-         * Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -141,7 +152,10 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the last call.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Set the value to the token that is obtained from the previous query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -150,9 +164,12 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The list of serial numbers of the virtual MFA devices.
+         * <p>The serial numbers of the virtual MFA devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2d9ae94-a64b-4a0d-8024-9519ca50****</p>
          */
-        public Builder serialNumbers(java.util.List < String > serialNumbers) {
+        public Builder serialNumbers(java.util.List<String> serialNumbers) {
             this.putQueryParameter("SerialNumbers", serialNumbers);
             this.serialNumbers = serialNumbers;
             return this;

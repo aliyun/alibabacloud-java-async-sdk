@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest</p>
  */
 public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("QRCodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QRCodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String QRCodeType;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.QRCodeType = builder.QRCodeType;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -56,6 +55,13 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest extends 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -86,32 +92,34 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest extends 
         return this.QRCodeType;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest, Builder> {
+        private String regionId; 
         private String antChainId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String QRCodeType; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.QRCodeType = response.QRCodeType;
-            this.regionId = response.regionId;
+        private Builder(DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.QRCodeType = request.QRCodeType;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -146,15 +154,6 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersRequest extends 
         public Builder QRCodeType(String QRCodeType) {
             this.putBodyParameter("QRCodeType", QRCodeType);
             this.QRCodeType = QRCodeType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

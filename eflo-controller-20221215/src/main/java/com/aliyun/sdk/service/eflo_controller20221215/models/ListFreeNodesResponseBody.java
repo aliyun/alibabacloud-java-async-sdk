@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo_controller20221215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFreeNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFreeNodesResponseBody</p>
  */
 public class ListFreeNodesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<Nodes> nodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFreeNodesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -58,11 +63,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String requestId; 
 
         /**
-         * NextToken.
+         * <p>The query token value returned by this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,15 +78,18 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Nodes.
+         * <p>List of nodes</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA14CB86-70C4-5CB7-9E7B-6CCA77F3512B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,29 +102,35 @@ public class ListFreeNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFreeNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFreeNodesResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("HpnZone")
+        @com.aliyun.core.annotation.NameInMap("HpnZone")
         private String hpnZone;
 
-        @NameInMap("MachineType")
+        @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Nodes(Builder builder) {
@@ -202,7 +219,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652321554</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +230,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>Expiration time of the machine</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673107200</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -218,7 +241,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HpnZone.
+             * <p>Cluster number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A1</p>
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
@@ -226,7 +252,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * MachineType.
+             * <p>Machine type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efg1.nvga1</p>
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -234,7 +263,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-7pp2x193801</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -242,7 +274,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Resource group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzkkbrpl4owgy</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -250,7 +285,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Sn.
+             * <p>Machine SN</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sn_pozkHBgicd</p>
              */
             public Builder sn(String sn) {
                 this.sn = sn;
@@ -258,7 +296,10 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>Availability zone ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

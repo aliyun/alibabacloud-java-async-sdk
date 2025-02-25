@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBEndpointAddressRequest} extends {@link RequestModel}
  *
  * <p>CreateDBEndpointAddressRequest</p>
  */
 public class CreateDBEndpointAddressRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBEndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBEndpointId;
 
-    @Query
-    @NameInMap("NetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String netType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("ZoneInfo")
-    private java.util.List < ZoneInfo> zoneInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneInfo")
+    private java.util.List<ZoneInfo> zoneInfo;
 
     private CreateDBEndpointAddressRequest(Builder builder) {
         super(builder);
@@ -160,7 +165,7 @@ public class CreateDBEndpointAddressRequest extends Request {
     /**
      * @return zoneInfo
      */
-    public java.util.List < ZoneInfo> getZoneInfo() {
+    public java.util.List<ZoneInfo> getZoneInfo() {
         return this.zoneInfo;
     }
 
@@ -175,7 +180,7 @@ public class CreateDBEndpointAddressRequest extends Request {
         private Long resourceOwnerId; 
         private String securityGroupId; 
         private String VPCId; 
-        private java.util.List < ZoneInfo> zoneInfo; 
+        private java.util.List<ZoneInfo> zoneInfo; 
 
         private Builder() {
             super();
@@ -197,12 +202,15 @@ public class CreateDBEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The prefix of the new endpoint. The prefix of the endpoint must meet the following requirements:
-         * <p>
+         * <p>The prefix of the new endpoint. The prefix of the endpoint must meet the following requirements:</p>
+         * <ul>
+         * <li>The prefix can contain lowercase letters, digits, and hyphens (-).</li>
+         * <li>The prefix must start with a letter and end with a digit or a letter.</li>
+         * <li>The prefix must be 6 to 40 characters in length.</li>
+         * </ul>
          * 
-         * *   The prefix can contain lowercase letters, digits, and hyphens (-).
-         * *   The prefix must start with a letter and end with a digit or a letter.
-         * *   The prefix must be 6 to 40 characters in length.
+         * <strong>example:</strong>
+         * <p>test-1</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -211,7 +219,11 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -220,10 +232,14 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint.
-         * <p>
+         * <p>The ID of the endpoint.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint details.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query endpoint details.
+         * <strong>example:</strong>
+         * <p>pe-**************</p>
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -232,7 +248,11 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The network type of the endpoint. Set the value to **Public**.
+         * <p>The network type of the endpoint. Set the value to <strong>Public</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -277,7 +297,10 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the ECS security group.
+         * <p>The ID of the ECS security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp**************</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -286,7 +309,10 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-**********</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -295,9 +321,9 @@ public class CreateDBEndpointAddressRequest extends Request {
         }
 
         /**
-         * The details of the zones.
+         * <p>The details of the zones.</p>
          */
-        public Builder zoneInfo(java.util.List < ZoneInfo> zoneInfo) {
+        public Builder zoneInfo(java.util.List<ZoneInfo> zoneInfo) {
             this.putQueryParameter("ZoneInfo", zoneInfo);
             this.zoneInfo = zoneInfo;
             return this;
@@ -310,11 +336,17 @@ public class CreateDBEndpointAddressRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBEndpointAddressRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBEndpointAddressRequest</p>
+     */
     public static class ZoneInfo extends TeaModel {
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ZoneInfo(Builder builder) {
@@ -349,7 +381,10 @@ public class CreateDBEndpointAddressRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-**********</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -357,7 +392,10 @@ public class CreateDBEndpointAddressRequest extends Request {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

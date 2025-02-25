@@ -98,7 +98,7 @@ public class OpenReservedCapacity extends TeaModel {
         private String lastModifiedTime; 
 
         /**
-         * createdTime
+         * createdTime.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -106,7 +106,7 @@ public class OpenReservedCapacity extends TeaModel {
         }
 
         /**
-         * cu
+         * cu.
          */
         public Builder cu(Long cu) {
             this.cu = cu;
@@ -114,7 +114,7 @@ public class OpenReservedCapacity extends TeaModel {
         }
 
         /**
-         * deadline
+         * deadline.
          */
         public Builder deadline(String deadline) {
             this.deadline = deadline;
@@ -122,7 +122,7 @@ public class OpenReservedCapacity extends TeaModel {
         }
 
         /**
-         * instanceId
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -130,7 +130,7 @@ public class OpenReservedCapacity extends TeaModel {
         }
 
         /**
-         * isRefunded
+         * isRefunded.
          */
         public Builder isRefunded(String isRefunded) {
             this.isRefunded = isRefunded;
@@ -138,7 +138,7 @@ public class OpenReservedCapacity extends TeaModel {
         }
 
         /**
-         * lastModifiedTime
+         * lastModifiedTime.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;

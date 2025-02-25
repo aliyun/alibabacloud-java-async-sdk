@@ -1,93 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTotalStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTotalStatisticsResponseBody</p>
  */
 public class DescribeTotalStatisticsResponseBody extends TeaModel {
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.NameInMap("Account")
     private Integer account;
 
-    @NameInMap("Health")
+    @com.aliyun.core.annotation.NameInMap("Health")
     private Integer health;
 
-    @NameInMap("HealthTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthTotal")
     private Integer healthTotal;
 
-    @NameInMap("HealthdealedTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthdealedTotal")
     private Integer healthdealedTotal;
 
-    @NameInMap("HealthhighTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthhighTotal")
     private Integer healthhighTotal;
 
-    @NameInMap("HealthlowTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthlowTotal")
     private Integer healthlowTotal;
 
-    @NameInMap("HealthmediumTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthmediumTotal")
     private Integer healthmediumTotal;
 
-    @NameInMap("HealthseriousTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthseriousTotal")
     private Integer healthseriousTotal;
 
-    @NameInMap("Newsuspicious")
+    @com.aliyun.core.annotation.NameInMap("Newsuspicious")
     private Integer newsuspicious;
 
-    @NameInMap("Online")
+    @com.aliyun.core.annotation.NameInMap("Online")
     private Boolean online;
 
-    @NameInMap("Patch")
+    @com.aliyun.core.annotation.NameInMap("Patch")
     private Integer patch;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Suspicious")
+    @com.aliyun.core.annotation.NameInMap("Suspicious")
     private Integer suspicious;
 
-    @NameInMap("SuspiciousTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousTotal")
     private Integer suspiciousTotal;
 
-    @NameInMap("SuspiciousdealedTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousdealedTotal")
     private Integer suspiciousdealedTotal;
 
-    @NameInMap("SuspicioushighTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspicioushighTotal")
     private Integer suspicioushighTotal;
 
-    @NameInMap("SuspiciouslowTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciouslowTotal")
     private Integer suspiciouslowTotal;
 
-    @NameInMap("SuspiciousmediumTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousmediumTotal")
     private Integer suspiciousmediumTotal;
 
-    @NameInMap("SuspiciousseriousTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousseriousTotal")
     private Integer suspiciousseriousTotal;
 
-    @NameInMap("Trojan")
+    @com.aliyun.core.annotation.NameInMap("Trojan")
     private Integer trojan;
 
-    @NameInMap("Vul")
+    @com.aliyun.core.annotation.NameInMap("Vul")
     private Integer vul;
 
-    @NameInMap("VulAsapSum")
+    @com.aliyun.core.annotation.NameInMap("VulAsapSum")
     private Integer vulAsapSum;
 
-    @NameInMap("VulDealedTotal")
+    @com.aliyun.core.annotation.NameInMap("VulDealedTotal")
     private Integer vulDealedTotal;
 
-    @NameInMap("VulLaterSum")
+    @com.aliyun.core.annotation.NameInMap("VulLaterSum")
     private Integer vulLaterSum;
 
-    @NameInMap("VulNntfSum")
+    @com.aliyun.core.annotation.NameInMap("VulNntfSum")
     private Integer vulNntfSum;
 
-    @NameInMap("VulTotal")
+    @com.aliyun.core.annotation.NameInMap("VulTotal")
     private Integer vulTotal;
 
     private DescribeTotalStatisticsResponseBody(Builder builder) {
@@ -338,7 +343,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         private Integer vulTotal; 
 
         /**
-         * The number of logons to the asset.
+         * <p>The number of logons to the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder account(Integer account) {
             this.account = account;
@@ -346,7 +354,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of unfixed baseline risks.
+         * <p>The total number of unfixed baseline risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder health(Integer health) {
             this.health = health;
@@ -354,7 +365,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of baseline risks.
+         * <p>The total number of baseline risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder healthTotal(Integer healthTotal) {
             this.healthTotal = healthTotal;
@@ -362,7 +376,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of fixed baseline risk items. This parameter is deprecated.
+         * <p>The total number of fixed baseline risk items. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder healthdealedTotal(Integer healthdealedTotal) {
             this.healthdealedTotal = healthdealedTotal;
@@ -370,7 +387,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of baseline risk items whose severity is high.
+         * <p>The number of baseline risk items whose severity is high.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder healthhighTotal(Integer healthhighTotal) {
             this.healthhighTotal = healthhighTotal;
@@ -378,7 +398,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of baseline risk items whose severity is low.
+         * <p>The number of baseline risk items whose severity is low.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder healthlowTotal(Integer healthlowTotal) {
             this.healthlowTotal = healthlowTotal;
@@ -386,7 +409,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of baseline risk items whose severity is medium.
+         * <p>The number of baseline risk items whose severity is medium.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder healthmediumTotal(Integer healthmediumTotal) {
             this.healthmediumTotal = healthmediumTotal;
@@ -394,7 +420,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of baseline risk items whose severity is urgent. This parameter is deprecated.
+         * <p>The number of baseline risk items whose severity is urgent. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder healthseriousTotal(Integer healthseriousTotal) {
             this.healthseriousTotal = healthseriousTotal;
@@ -402,14 +431,22 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts that are generated by Server Guard or Security Center.
-         * <p>
+         * <p>The number of alerts that are generated by Server Guard or Security Center.</p>
+         * <blockquote>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li>If you set the <strong>Type</strong> parameter to <strong>sas</strong>, this parameter indicates the number of alerts that are generated by Security Center.</li>
+         * </ul>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li>If you set the <strong>Type</strong> parameter to <strong>aqs</strong>, this parameter indicates the number of alerts that are generated by Server Guard.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > 
-         * 
-         * > *   If you set the **Type** parameter to **sas**, this parameter indicates the number of alerts that are generated by Security Center.
-         * 
-         * > *   If you set the **Type** parameter to **aqs**, this parameter indicates the number of alerts that are generated by Server Guard.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder newsuspicious(Integer newsuspicious) {
             this.newsuspicious = newsuspicious;
@@ -417,11 +454,14 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the agent is online. Valid values:
-         * <p>
+         * <p>Indicates whether the agent is online. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder online(Boolean online) {
             this.online = online;
@@ -429,7 +469,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Web-CMS vulnerabilities.
+         * <p>The number of Web-CMS vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder patch(Integer patch) {
             this.patch = patch;
@@ -437,7 +480,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -445,7 +491,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts that are generated by Server Guard.
+         * <p>The number of alerts that are generated by Server Guard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder suspicious(Integer suspicious) {
             this.suspicious = suspicious;
@@ -453,7 +502,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder suspiciousTotal(Integer suspiciousTotal) {
             this.suspiciousTotal = suspiciousTotal;
@@ -461,7 +513,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of handled alerts.
+         * <p>The number of handled alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder suspiciousdealedTotal(Integer suspiciousdealedTotal) {
             this.suspiciousdealedTotal = suspiciousdealedTotal;
@@ -469,7 +524,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated. This parameter is deprecated.
+         * <p>This parameter is deprecated. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder suspicioushighTotal(Integer suspicioushighTotal) {
             this.suspicioushighTotal = suspicioushighTotal;
@@ -477,7 +535,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts whose risk level is reminder.
+         * <p>The number of alerts whose risk level is reminder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder suspiciouslowTotal(Integer suspiciouslowTotal) {
             this.suspiciouslowTotal = suspiciouslowTotal;
@@ -485,7 +546,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts whose risk level is suspicious.
+         * <p>The number of alerts whose risk level is suspicious.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder suspiciousmediumTotal(Integer suspiciousmediumTotal) {
             this.suspiciousmediumTotal = suspiciousmediumTotal;
@@ -493,7 +557,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts whose risk level is urgent.
+         * <p>The number of alerts whose risk level is urgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder suspiciousseriousTotal(Integer suspiciousseriousTotal) {
             this.suspiciousseriousTotal = suspiciousseriousTotal;
@@ -501,7 +568,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of webshell alerts.
+         * <p>The number of webshell alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder trojan(Integer trojan) {
             this.trojan = trojan;
@@ -509,7 +579,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unfixed vulnerabilities.
+         * <p>The number of unfixed vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vul(Integer vul) {
             this.vul = vul;
@@ -517,7 +590,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities whose severity level is high.
+         * <p>The number of vulnerabilities whose severity level is high.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder vulAsapSum(Integer vulAsapSum) {
             this.vulAsapSum = vulAsapSum;
@@ -525,7 +601,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of fixed vulnerabilities.
+         * <p>The total number of fixed vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulDealedTotal(Integer vulDealedTotal) {
             this.vulDealedTotal = vulDealedTotal;
@@ -533,7 +612,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities whose severity level is medium.
+         * <p>The number of vulnerabilities whose severity level is medium.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulLaterSum(Integer vulLaterSum) {
             this.vulLaterSum = vulLaterSum;
@@ -541,7 +623,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unfixed vulnerabilities whose severity level is low.
+         * <p>The number of unfixed vulnerabilities whose severity level is low.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulNntfSum(Integer vulNntfSum) {
             this.vulNntfSum = vulNntfSum;
@@ -549,7 +634,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerabilities.
+         * <p>The total number of vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulTotal(Integer vulTotal) {
             this.vulTotal = vulTotal;

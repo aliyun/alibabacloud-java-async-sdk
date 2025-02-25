@@ -234,23 +234,23 @@ public class ListEmrAvailableResourceRequest extends Request {
             super();
         } 
 
-        private Builder(ListEmrAvailableResourceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.clusterType = response.clusterType;
-            this.dataDiskType = response.dataDiskType;
-            this.depositType = response.depositType;
-            this.destinationResource = response.destinationResource;
-            this.emrVersion = response.emrVersion;
-            this.instanceChargeType = response.instanceChargeType;
-            this.instanceType = response.instanceType;
-            this.netType = response.netType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.spotStrategy = response.spotStrategy;
-            this.systemDiskType = response.systemDiskType;
-            this.zoneId = response.zoneId;
+        private Builder(ListEmrAvailableResourceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.clusterType = request.clusterType;
+            this.dataDiskType = request.dataDiskType;
+            this.depositType = request.depositType;
+            this.destinationResource = request.destinationResource;
+            this.emrVersion = request.emrVersion;
+            this.instanceChargeType = request.instanceChargeType;
+            this.instanceType = request.instanceType;
+            this.netType = request.netType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.spotStrategy = request.spotStrategy;
+            this.systemDiskType = request.systemDiskType;
+            this.zoneId = request.zoneId;
         } 
 
         /**

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskTypeResponseBody</p>
  */
 public class DescribeRiskTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskTypes")
-    private java.util.List < RiskTypes> riskTypes;
+    @com.aliyun.core.annotation.NameInMap("RiskTypes")
+    private java.util.List<RiskTypes> riskTypes;
 
     private DescribeRiskTypeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     /**
      * @return riskTypes
      */
-    public java.util.List < RiskTypes> getRiskTypes() {
+    public java.util.List<RiskTypes> getRiskTypes() {
         return this.riskTypes;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RiskTypes> riskTypes; 
+        private java.util.List<RiskTypes> riskTypes; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F22037B5-FCE4-5178-A9E7-71798E1F9270</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about baseline types.
+         * <p>An array that consists of the information about baseline types.</p>
          */
-        public Builder riskTypes(java.util.List < RiskTypes> riskTypes) {
+        public Builder riskTypes(java.util.List<RiskTypes> riskTypes) {
             this.riskTypes = riskTypes;
             return this;
         }
@@ -71,26 +79,32 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRiskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskTypeResponseBody</p>
+     */
     public static class ParamList extends TeaModel {
-        @NameInMap("EnumValue")
+        @com.aliyun.core.annotation.NameInMap("EnumValue")
         private String enumValue;
 
-        @NameInMap("MaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Integer maxValue;
 
-        @NameInMap("MinValue")
+        @com.aliyun.core.annotation.NameInMap("MinValue")
         private Integer minValue;
 
-        @NameInMap("ParamDefaultValue")
+        @com.aliyun.core.annotation.NameInMap("ParamDefaultValue")
         private String paramDefaultValue;
 
-        @NameInMap("ParamDesc")
+        @com.aliyun.core.annotation.NameInMap("ParamDesc")
         private String paramDesc;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private Integer paramType;
 
         private ParamList(Builder builder) {
@@ -170,7 +184,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private Integer paramType; 
 
             /**
-             * If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.
+             * <p>If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0,1,2,3</p>
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -178,7 +195,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the parameter.
+             * <p>The maximum value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>999</p>
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -186,7 +206,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the parameter.
+             * <p>The minimum value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -194,7 +217,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -202,7 +228,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The setting value is 0 means no definition, 1 means success, 2 means failure, 3 means success and failure</p>
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -210,7 +239,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>range_val</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -218,11 +250,14 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration type of the parameter. Valid values:
-             * <p>
+             * <p>The configuration type of the parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: input</li>
+             * <li><strong>2</strong>: selection</li>
+             * </ul>
              * 
-             * *   **1**: input
-             * *   **2**: selection
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paramType(Integer paramType) {
                 this.paramType = paramType;
@@ -236,17 +271,23 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskTypeResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Optional")
+        @com.aliyun.core.annotation.NameInMap("Optional")
         private Integer optional;
 
-        @NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        @com.aliyun.core.annotation.NameInMap("ParamList")
+        private java.util.List<ParamList> paramList;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
         private Rules(Builder builder) {
@@ -274,7 +315,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -294,16 +335,19 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer optional; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private String ruleDesc; 
             private String ruleId; 
 
             /**
-             * Indicates whether the baseline can be edited. Valid values:
-             * <p>
+             * <p>Indicates whether the baseline can be edited. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder optional(Integer optional) {
                 this.optional = optional;
@@ -311,15 +355,18 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the parameters in the rule for the baseline.
+             * <p>An array that consists of the parameters in the rule for the baseline.</p>
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
 
             /**
-             * The description of the rule for the baseline.
+             * <p>The description of the rule for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Please customize the password expiration time detection standard as</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -327,7 +374,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule for the baseline.
+             * <p>The ID of the rule for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit.audit_policy.auditpolicychange.cus</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -341,18 +391,24 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskTypeResponseBody</p>
+     */
     public static class CheckDetails extends TeaModel {
-        @NameInMap("CheckDesc")
+        @com.aliyun.core.annotation.NameInMap("CheckDesc")
         private String checkDesc;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
         private CheckDetails(Builder builder) {
             this.checkDesc = builder.checkDesc;
@@ -393,7 +449,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -401,10 +457,13 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             private String checkDesc; 
             private Long checkId; 
             private String checkItem; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
-             * The description of the baseline.
+             * <p>The description of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Set password expiration time, force regular modification of password, reduce password leakage and guess risk.Use non-password login (e.g. key pair) please ignore this item.</p>
              */
             public Builder checkDesc(String checkDesc) {
                 this.checkDesc = checkDesc;
@@ -412,7 +471,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the baseline.
+             * <p>The ID of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1299</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -420,7 +482,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline.
+             * <p>The baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ensure password expiration period is set.</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -428,9 +493,9 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the rule details about the baseline.
+             * <p>An array that consists of the rule details about the baseline.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -442,20 +507,26 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskTypeResponseBody</p>
+     */
     public static class SubTypes extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("AuthFlag")
+        @com.aliyun.core.annotation.NameInMap("AuthFlag")
         private Boolean authFlag;
 
-        @NameInMap("CheckDetails")
-        private java.util.List < CheckDetails> checkDetails;
+        @com.aliyun.core.annotation.NameInMap("CheckDetails")
+        private java.util.List<CheckDetails> checkDetails;
 
-        @NameInMap("SupportedOs")
+        @com.aliyun.core.annotation.NameInMap("SupportedOs")
         private String supportedOs;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private SubTypes(Builder builder) {
@@ -491,7 +562,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         /**
          * @return checkDetails
          */
-        public java.util.List < CheckDetails> getCheckDetails() {
+        public java.util.List<CheckDetails> getCheckDetails() {
             return this.checkDetails;
         }
 
@@ -512,12 +583,15 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         public static final class Builder {
             private String alias; 
             private Boolean authFlag; 
-            private java.util.List < CheckDetails> checkDetails; 
+            private java.util.List<CheckDetails> checkDetails; 
             private String supportedOs; 
             private String typeName; 
 
             /**
-             * The alias of the baseline subtype.
+             * <p>The alias of the baseline subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Redis unauthorized access high exploit vulnerability risk</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -525,11 +599,14 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline subtype permission flag of the current user version. Valid values:
-             * <p>
+             * <p>The baseline subtype permission flag of the current user version. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Have access</li>
+             * <li><strong>false</strong>: No permissions</li>
+             * </ul>
              * 
-             * - **true**: Have access
-             * - **false**: No permissions
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authFlag(Boolean authFlag) {
                 this.authFlag = authFlag;
@@ -537,19 +614,22 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the check details about the baseline subtype.
+             * <p>An array that consists of the check details about the baseline subtype.</p>
              */
-            public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
+            public Builder checkDetails(java.util.List<CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
                 return this;
             }
 
             /**
-             * The operating system type of the server. Valid values:
-             * <p>
+             * <p>The operating system type of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
+             * </ul>
              * 
-             * - **windows**
-             * - **linux**
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder supportedOs(String supportedOs) {
                 this.supportedOs = supportedOs;
@@ -557,7 +637,10 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline subtype.
+             * <p>The name of the baseline subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_exploit_redis</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -571,17 +654,23 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskTypeResponseBody</p>
+     */
     public static class RiskTypes extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("AuthFlag")
+        @com.aliyun.core.annotation.NameInMap("AuthFlag")
         private Boolean authFlag;
 
-        @NameInMap("SubTypes")
-        private java.util.List < SubTypes> subTypes;
+        @com.aliyun.core.annotation.NameInMap("SubTypes")
+        private java.util.List<SubTypes> subTypes;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private RiskTypes(Builder builder) {
@@ -616,7 +705,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         /**
          * @return subTypes
          */
-        public java.util.List < SubTypes> getSubTypes() {
+        public java.util.List<SubTypes> getSubTypes() {
             return this.subTypes;
         }
 
@@ -630,11 +719,14 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         public static final class Builder {
             private String alias; 
             private Boolean authFlag; 
-            private java.util.List < SubTypes> subTypes; 
+            private java.util.List<SubTypes> subTypes; 
             private String typeName; 
 
             /**
-             * The alias of the baseline type.
+             * <p>The alias of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Redis unauthorized access high exploit vulnerability risk</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -642,11 +734,14 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline type flag of the current user version. Valid values:
-             * <p>
+             * <p>The baseline type flag of the current user version. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Have access</li>
+             * <li><strong>false</strong>: No permissions</li>
+             * </ul>
              * 
-             * - **true**: Have access
-             * - **false**: No permissions
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authFlag(Boolean authFlag) {
                 this.authFlag = authFlag;
@@ -654,15 +749,18 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the information about baseline subtypes.
+             * <p>An array that consists of the information about baseline subtypes.</p>
              */
-            public Builder subTypes(java.util.List < SubTypes> subTypes) {
+            public Builder subTypes(java.util.List<SubTypes> subTypes) {
                 this.subTypes = subTypes;
                 return this;
             }
 
             /**
-             * The name of the baseline type.
+             * <p>The name of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_exploit</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsSaleControlStockResponseBody</p>
  */
 public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SaleControl")
-    private java.util.List < SaleControl> saleControl;
+    @com.aliyun.core.annotation.NameInMap("SaleControl")
+    private java.util.List<SaleControl> saleControl;
 
     private DescribeEnsSaleControlStockResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
     /**
      * @return saleControl
      */
-    public java.util.List < SaleControl> getSaleControl() {
+    public java.util.List<SaleControl> getSaleControl() {
         return this.saleControl;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SaleControl> saleControl; 
+        private java.util.List<SaleControl> saleControl; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         /**
          * SaleControl.
          */
-        public Builder saleControl(java.util.List < SaleControl> saleControl) {
+        public Builder saleControl(java.util.List<SaleControl> saleControl) {
             this.saleControl = saleControl;
             return this;
         }
@@ -71,11 +76,17 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ModuleValue extends TeaModel {
-        @NameInMap("ModuleMaxValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleMaxValue")
         private String moduleMaxValue;
 
-        @NameInMap("ModuleMinValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleMinValue")
         private String moduleMinValue;
 
         private ModuleValue(Builder builder) {
@@ -132,11 +143,17 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class BasicSaleControl extends TeaModel {
-        @NameInMap("ModuleValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleValue")
         private ModuleValue moduleValue;
 
-        @NameInMap("StockValue")
+        @com.aliyun.core.annotation.NameInMap("StockValue")
         private String stockValue;
 
         private BasicSaleControl(Builder builder) {
@@ -193,11 +210,17 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ConditionControl extends TeaModel {
-        @NameInMap("ConditionControlModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ConditionControlModuleCode")
         private String conditionControlModuleCode;
 
-        @NameInMap("ConditionControlModuleValue")
+        @com.aliyun.core.annotation.NameInMap("ConditionControlModuleValue")
         private String conditionControlModuleValue;
 
         private ConditionControl(Builder builder) {
@@ -254,11 +277,17 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ConditionSaleControlModuleValue extends TeaModel {
-        @NameInMap("ModuleMaxValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleMaxValue")
         private String moduleMaxValue;
 
-        @NameInMap("ModuleMinValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleMinValue")
         private String moduleMinValue;
 
         private ConditionSaleControlModuleValue(Builder builder) {
@@ -315,14 +344,20 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class ConditionSaleControl extends TeaModel {
-        @NameInMap("ConditionControl")
+        @com.aliyun.core.annotation.NameInMap("ConditionControl")
         private ConditionControl conditionControl;
 
-        @NameInMap("ModuleValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleValue")
         private ConditionSaleControlModuleValue moduleValue;
 
-        @NameInMap("StockValue")
+        @com.aliyun.core.annotation.NameInMap("StockValue")
         private String stockValue;
 
         private ConditionSaleControl(Builder builder) {
@@ -396,12 +431,18 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class SaleControlItem extends TeaModel {
-        @NameInMap("BasicSaleControl")
+        @com.aliyun.core.annotation.NameInMap("BasicSaleControl")
         private BasicSaleControl basicSaleControl;
 
-        @NameInMap("ConditionSaleControl")
-        private java.util.List < ConditionSaleControl> conditionSaleControl;
+        @com.aliyun.core.annotation.NameInMap("ConditionSaleControl")
+        private java.util.List<ConditionSaleControl> conditionSaleControl;
 
         private SaleControlItem(Builder builder) {
             this.basicSaleControl = builder.basicSaleControl;
@@ -426,13 +467,13 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         /**
          * @return conditionSaleControl
          */
-        public java.util.List < ConditionSaleControl> getConditionSaleControl() {
+        public java.util.List<ConditionSaleControl> getConditionSaleControl() {
             return this.conditionSaleControl;
         }
 
         public static final class Builder {
             private BasicSaleControl basicSaleControl; 
-            private java.util.List < ConditionSaleControl> conditionSaleControl; 
+            private java.util.List<ConditionSaleControl> conditionSaleControl; 
 
             /**
              * BasicSaleControl.
@@ -445,7 +486,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
             /**
              * ConditionSaleControl.
              */
-            public Builder conditionSaleControl(java.util.List < ConditionSaleControl> conditionSaleControl) {
+            public Builder conditionSaleControl(java.util.List<ConditionSaleControl> conditionSaleControl) {
                 this.conditionSaleControl = conditionSaleControl;
                 return this;
             }
@@ -457,11 +498,17 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class SaleControlItems extends TeaModel {
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("SaleControlItem")
+        @com.aliyun.core.annotation.NameInMap("SaleControlItem")
         private SaleControlItem saleControlItem;
 
         private SaleControlItems(Builder builder) {
@@ -518,15 +565,21 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEnsSaleControlStockResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsSaleControlStockResponseBody</p>
+     */
     public static class SaleControl extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("SaleControlItems")
-        private java.util.List < SaleControlItems> saleControlItems;
+        @com.aliyun.core.annotation.NameInMap("SaleControlItems")
+        private java.util.List<SaleControlItems> saleControlItems;
 
         private SaleControl(Builder builder) {
             this.commodityCode = builder.commodityCode;
@@ -559,14 +612,14 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         /**
          * @return saleControlItems
          */
-        public java.util.List < SaleControlItems> getSaleControlItems() {
+        public java.util.List<SaleControlItems> getSaleControlItems() {
             return this.saleControlItems;
         }
 
         public static final class Builder {
             private String commodityCode; 
             private String orderType; 
-            private java.util.List < SaleControlItems> saleControlItems; 
+            private java.util.List<SaleControlItems> saleControlItems; 
 
             /**
              * CommodityCode.
@@ -587,7 +640,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
             /**
              * SaleControlItems.
              */
-            public Builder saleControlItems(java.util.List < SaleControlItems> saleControlItems) {
+            public Builder saleControlItems(java.util.List<SaleControlItems> saleControlItems) {
                 this.saleControlItems = saleControlItems;
                 return this;
             }

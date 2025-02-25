@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesRequest</p>
  */
 public class DescribeInstancesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
     private DescribeInstancesRequest(Builder builder) {
@@ -147,7 +146,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of CPU cores used in the cluster.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -156,7 +155,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The size of used memory in the cluster, in GB.
+         * The name of the OceanBase cluster. It must be 1 to 20 characters in length. If this parameter is not specified, the value is the instance ID of the cluster by default.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -165,7 +164,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The total memory size of the cluster, in GB.
+         * The number of the page to return.
+         * <p>
+         * - Pages start from page 1.
+         * - Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -174,7 +176,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The information about the memory resources of the cluster.
+         * The number of rows to return on each page.
+         * <p>
+         * - Maximum value: 100.
+         * - Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -183,7 +188,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of CPU cores of each replica node in the cluster.
+         * The ID of the resource group. If you do not specify this parameter, all resources are returned.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -192,7 +197,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The memory size of each replica node in the cluster, in GB.
+         * The keyword for fuzzy search, which can be an instance ID, instance name, tenant ID, or tenant name.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);

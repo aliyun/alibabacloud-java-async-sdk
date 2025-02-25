@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupTasksRequest</p>
  */
 public class DescribeBackupTasksRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackupJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupJobId")
     private String backupJobId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobMode")
     private String jobMode;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeBackupTasksRequest(Builder builder) {
@@ -176,7 +176,10 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The progress of the backup task in percentage.
+         * <p>The progress of the backup task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1162****</p>
          */
         public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -185,7 +188,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The details of the backup tasks.
+         * <p>The details of the backup tasks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,13 +201,17 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The backup mode. Valid values:
-         * <p>
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong>: automatic backup. You can call the <a href="https://help.aliyun.com/document_detail/61078.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</li>
+         * <li><strong>Manual</strong>: manual backup.</li>
+         * </ul>
+         * <blockquote>
+         * <p>By default, the information about backup tasks in both modes is returned.</p>
+         * </blockquote>
          * 
-         * *   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](~~61078~~) operation to query the automatic backup policy.
-         * *   **Manual**: manual backup.
-         * 
-         * > By default, the information about backup tasks in both modes is returned.
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder jobMode(String jobMode) {
             this.putQueryParameter("JobMode", jobMode);

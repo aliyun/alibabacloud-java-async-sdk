@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigVersionDifferenceRequest} extends {@link RequestModel}
  *
  * <p>DescribeConfigVersionDifferenceRequest</p>
  */
 public class DescribeConfigVersionDifferenceRequest extends Request {
-    @Query
-    @NameInMap("ChangeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeId;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
     private DescribeConfigVersionDifferenceRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DescribeConfigVersionDifferenceRequest extends Request {
         } 
 
         /**
-         * ChangeId.
+         * <p>The ID of the change record. You can call the <a href="https://help.aliyun.com/document_detail/452209.html">DescribeConfigHistory</a> operation to query the ID of the change record.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder changeId(String changeId) {
             this.putQueryParameter("ChangeId", changeId);
@@ -79,7 +88,11 @@ public class DescribeConfigVersionDifferenceRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp1tm8zf130ew****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

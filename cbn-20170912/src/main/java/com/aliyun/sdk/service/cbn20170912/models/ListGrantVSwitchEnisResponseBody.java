@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGrantVSwitchEnisResponseBody} extends {@link TeaModel}
  *
  * <p>ListGrantVSwitchEnisResponseBody</p>
  */
 public class ListGrantVSwitchEnisResponseBody extends TeaModel {
-    @NameInMap("GrantVSwitchEnis")
-    private java.util.List < GrantVSwitchEnis> grantVSwitchEnis;
+    @com.aliyun.core.annotation.NameInMap("GrantVSwitchEnis")
+    private java.util.List<GrantVSwitchEnis> grantVSwitchEnis;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListGrantVSwitchEnisResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     /**
      * @return grantVSwitchEnis
      */
-    public java.util.List < GrantVSwitchEnis> getGrantVSwitchEnis() {
+    public java.util.List<GrantVSwitchEnis> getGrantVSwitchEnis() {
         return this.grantVSwitchEnis;
     }
 
@@ -79,22 +84,25 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GrantVSwitchEnis> grantVSwitchEnis; 
+        private java.util.List<GrantVSwitchEnis> grantVSwitchEnis; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
 
         /**
-         * The information about the ENI.
+         * <p>The information about the ENI.</p>
          */
-        public Builder grantVSwitchEnis(java.util.List < GrantVSwitchEnis> grantVSwitchEnis) {
+        public Builder grantVSwitchEnis(java.util.List<GrantVSwitchEnis> grantVSwitchEnis) {
             this.grantVSwitchEnis = grantVSwitchEnis;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBFE1736-2F33-5309-9954-875B11E9519D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,10 +132,13 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
-         * <p>
+         * <p>The total number of entries returned.</p>
+         * <blockquote>
+         * <p>If MaxResults and NextToken are sued to query results by page, ignore this parameter.</p>
+         * </blockquote>
          * 
-         * > If MaxResults and NextToken are sued to query results by page, ignore this parameter.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -134,26 +151,32 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGrantVSwitchEnisResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGrantVSwitchEnisResponseBody</p>
+     */
     public static class GrantVSwitchEnis extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
 
-        @NameInMap("PrimaryIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
 
-        @NameInMap("TransitRouterFlag")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterFlag")
         private Boolean transitRouterFlag;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private GrantVSwitchEnis(Builder builder) {
@@ -233,7 +256,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ENI description.
+             * <p>The ENI description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>created by CBN</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -241,7 +267,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The ENI ID.
+             * <p>The ENI ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-p0w172vv82kxzb49****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -249,7 +278,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The ENI name.
+             * <p>The ENI name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-eni-name</p>
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -257,7 +289,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The primary private IPv4 address of the ENI.
+             * <p>The primary private IPv4 address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -265,13 +300,15 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ENI is created by a transit router. Valid values:
-             * <p>
+             * <p>Indicates whether the ENI is created by a transit router. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <p>ENIs that are created by transit routers cannot be used as multicast sources or members.</p>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * ENIs that are created by transit routers cannot be used as multicast sources or members.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder transitRouterFlag(Boolean transitRouterFlag) {
                 this.transitRouterFlag = transitRouterFlag;
@@ -279,7 +316,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-p0w9s2ig1jnwgrbzl****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -287,7 +327,10 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-p0w9alkte4w2htrqe****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

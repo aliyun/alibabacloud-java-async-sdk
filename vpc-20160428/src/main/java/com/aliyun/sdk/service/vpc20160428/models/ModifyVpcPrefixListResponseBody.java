@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcPrefixListResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyVpcPrefixListResponseBody</p>
  */
 public class ModifyVpcPrefixListResponseBody extends TeaModel {
-    @NameInMap("PrefixListId")
+    @com.aliyun.core.annotation.NameInMap("PrefixListId")
     private String prefixListId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyVpcPrefixListResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ModifyVpcPrefixListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the prefix list.
+         * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-0b7hwu67****</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = prefixListId;
@@ -58,7 +66,10 @@ public class ModifyVpcPrefixListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

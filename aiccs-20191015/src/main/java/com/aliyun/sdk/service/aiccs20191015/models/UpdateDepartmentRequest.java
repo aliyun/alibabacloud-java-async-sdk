@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDepartmentRequest} extends {@link RequestModel}
  *
  * <p>UpdateDepartmentRequest</p>
  */
 public class UpdateDepartmentRequest extends Request {
-    @Query
-    @NameInMap("DepartmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long departmentId;
 
-    @Query
-    @NameInMap("DepartmentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String departmentName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private UpdateDepartmentRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class UpdateDepartmentRequest extends Request {
         } 
 
         /**
-         * 部门id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder departmentId(Long departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -94,7 +102,7 @@ public class UpdateDepartmentRequest extends Request {
         }
 
         /**
-         * 部门名称
+         * <p>This parameter is required.</p>
          */
         public Builder departmentName(String departmentName) {
             this.putQueryParameter("DepartmentName", departmentName);
@@ -103,7 +111,10 @@ public class UpdateDepartmentRequest extends Request {
         }
 
         /**
-         * 实例id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

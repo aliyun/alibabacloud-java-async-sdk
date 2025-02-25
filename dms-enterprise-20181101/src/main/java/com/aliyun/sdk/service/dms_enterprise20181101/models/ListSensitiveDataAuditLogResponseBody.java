@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitiveDataAuditLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListSensitiveDataAuditLogResponseBody</p>
  */
 public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveDataAuditLogList")
-    private java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList;
+    @com.aliyun.core.annotation.NameInMap("SensitiveDataAuditLogList")
+    private java.util.List<SensitiveDataAuditLogList> sensitiveDataAuditLogList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListSensitiveDataAuditLogResponseBody(Builder builder) {
@@ -71,7 +76,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     /**
      * @return sensitiveDataAuditLogList
      */
-    public java.util.List < SensitiveDataAuditLogList> getSensitiveDataAuditLogList() {
+    public java.util.List<SensitiveDataAuditLogList> getSensitiveDataAuditLogList() {
         return this.sensitiveDataAuditLogList;
     }
 
@@ -93,12 +98,15 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList; 
+        private java.util.List<SensitiveDataAuditLogList> sensitiveDataAuditLogList; 
         private Boolean success; 
         private Long totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,19 +136,22 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The audit logs for sensitive data.
+         * <p>The audit logs for sensitive data.</p>
          */
-        public Builder sensitiveDataAuditLogList(java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList) {
+        public Builder sensitiveDataAuditLogList(java.util.List<SensitiveDataAuditLogList> sensitiveDataAuditLogList) {
             this.sensitiveDataAuditLogList = sensitiveDataAuditLogList;
             return this;
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +159,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,20 +175,26 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSensitiveDataAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveDataAuditLogResponseBody</p>
+     */
     public static class SensitiveDataLog extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnPermissionType")
+        @com.aliyun.core.annotation.NameInMap("ColumnPermissionType")
         private String columnPermissionType;
 
-        @NameInMap("DesensitizationRule")
+        @com.aliyun.core.annotation.NameInMap("DesensitizationRule")
         private String desensitizationRule;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private SensitiveDataLog(Builder builder) {
@@ -230,7 +256,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the column that contains sensitive data.
+             * <p>The name of the column that contains sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleColumnName</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -238,15 +267,18 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The permission that the user has on the column. Valid values:
-             * <p>
+             * <p>The permission that the user has on the column. Valid values:</p>
+             * <ul>
+             * <li><strong>No permission</strong></li>
+             * <li><strong>Partial redaction</strong></li>
+             * <li><strong>Plaintext</strong></li>
+             * <li><strong>Change</strong></li>
+             * <li><strong>Enable data masking</strong></li>
+             * <li><strong>Disable data masking</strong></li>
+             * </ul>
              * 
-             * *   **No permission**
-             * *   **Partial redaction**
-             * *   **Plaintext**
-             * *   **Change**
-             * *   **Enable data masking**
-             * *   **Disable data masking**
+             * <strong>example:</strong>
+             * <p>Change</p>
              */
             public Builder columnPermissionType(String columnPermissionType) {
                 this.columnPermissionType = columnPermissionType;
@@ -254,7 +286,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm used for data masking.
+             * <p>The algorithm used for data masking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default - Full redaction</p>
              */
             public Builder desensitizationRule(String desensitizationRule) {
                 this.desensitizationRule = desensitizationRule;
@@ -262,12 +297,15 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The sensitivity level of the data. Valid values:
-             * <p>
+             * <p>The sensitivity level of the data. Valid values:</p>
+             * <ul>
+             * <li><strong>Low</strong></li>
+             * <li><strong>Medium</strong></li>
+             * <li><strong>High</strong></li>
+             * </ul>
              * 
-             * *   **Low**
-             * *   **Medium**
-             * *   **High**
+             * <strong>example:</strong>
+             * <p>Low</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -275,7 +313,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that stores the sensitive data.
+             * <p>The name of the table that stores the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleTableName</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -289,29 +330,35 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSensitiveDataAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSensitiveDataAuditLogResponseBody</p>
+     */
     public static class SensitiveDataAuditLogList extends TeaModel {
-        @NameInMap("DbDisplayName")
+        @com.aliyun.core.annotation.NameInMap("DbDisplayName")
         private String dbDisplayName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("SensitiveDataLog")
-        private java.util.List < SensitiveDataLog> sensitiveDataLog;
+        @com.aliyun.core.annotation.NameInMap("SensitiveDataLog")
+        private java.util.List<SensitiveDataLog> sensitiveDataLog;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SensitiveDataAuditLogList(Builder builder) {
@@ -364,7 +411,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         /**
          * @return sensitiveDataLog
          */
-        public java.util.List < SensitiveDataLog> getSensitiveDataLog() {
+        public java.util.List<SensitiveDataLog> getSensitiveDataLog() {
             return this.sensitiveDataLog;
         }
 
@@ -394,13 +441,16 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             private Long instanceId; 
             private String moduleName; 
             private String opTime; 
-            private java.util.List < SensitiveDataLog> sensitiveDataLog; 
+            private java.util.List<SensitiveDataLog> sensitiveDataLog; 
             private String targetName; 
             private Long userId; 
             private String userName; 
 
             /**
-             * The name of the database that stores the sensitive data.
+             * <p>The name of the database that stores the sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:ExampleDbName@xxx.xxx.xxx.xxx">ExampleDbName@xxx.xxx.xxx.xxx</a>:3306</p>
              */
             public Builder dbDisplayName(String dbDisplayName) {
                 this.dbDisplayName = dbDisplayName;
@@ -408,7 +458,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12****</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -416,7 +469,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the function module whose audit logs were queried.
+             * <p>The name of the function module whose audit logs were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL_CONSOLE</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -424,7 +480,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed. The time is in the yyyy-MM-DD HH:mm:ss format.
+             * <p>The time when the operation was performed. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-18 10:01:00</p>
              */
             public Builder opTime(String opTime) {
                 this.opTime = opTime;
@@ -432,19 +491,22 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The logs for sensitive data.
+             * <p>The logs for sensitive data.</p>
              */
-            public Builder sensitiveDataLog(java.util.List < SensitiveDataLog> sensitiveDataLog) {
+            public Builder sensitiveDataLog(java.util.List<SensitiveDataLog> sensitiveDataLog) {
                 this.sensitiveDataLog = sensitiveDataLog;
                 return this;
             }
 
             /**
-             * The details of the object on which the operation was performed. The value of this parameter is in one of the following formats:
-             * <p>
+             * <p>The details of the object on which the operation was performed. The value of this parameter is in one of the following formats:</p>
+             * <ul>
+             * <li>Object name - object ID</li>
+             * <li>Object name (object ID)</li>
+             * </ul>
              * 
-             * *   Object name - object ID
-             * *   Object name (object ID)
+             * <strong>example:</strong>
+             * <p>Ticket - 1****</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -452,7 +514,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the requester.
+             * <p>The user ID of the requester.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1**</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -460,7 +525,10 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the requester.
+             * <p>The username of the requester.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExampleUserName</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

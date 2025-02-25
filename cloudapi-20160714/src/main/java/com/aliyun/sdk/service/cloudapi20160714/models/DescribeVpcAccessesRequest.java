@@ -1,55 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcAccessesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcAccessesRequest</p>
  */
 public class DescribeVpcAccessesRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccurateQuery")
+    private Boolean accurateQuery;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VpcAccessId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcAccessId")
     private String vpcAccessId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeVpcAccessesRequest(Builder builder) {
         super(builder);
+        this.accurateQuery = builder.accurateQuery;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
@@ -72,6 +82,13 @@ public class DescribeVpcAccessesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accurateQuery
+     */
+    public Boolean getAccurateQuery() {
+        return this.accurateQuery;
     }
 
     /**
@@ -119,7 +136,7 @@ public class DescribeVpcAccessesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -138,13 +155,14 @@ public class DescribeVpcAccessesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVpcAccessesRequest, Builder> {
+        private Boolean accurateQuery; 
         private String instanceId; 
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String port; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcAccessId; 
         private String vpcId; 
 
@@ -154,6 +172,7 @@ public class DescribeVpcAccessesRequest extends Request {
 
         private Builder(DescribeVpcAccessesRequest request) {
             super(request);
+            this.accurateQuery = request.accurateQuery;
             this.instanceId = request.instanceId;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
@@ -166,7 +185,22 @@ public class DescribeVpcAccessesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Whether to conduct precise queries</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder accurateQuery(Boolean accurateQuery) {
+            this.putQueryParameter("AccurateQuery", accurateQuery);
+            this.accurateQuery = accurateQuery;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.199.26.***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,7 +209,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the authorization. The name must be unique.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wuying-edm-svc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -184,7 +221,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +233,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +245,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>The service port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -220,16 +266,19 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The port number.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * VpcAccessId.
+         * <p>The ID of the VPC authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*****ssds24</p>
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.putQueryParameter("VpcAccessId", vpcAccessId);
@@ -238,7 +287,10 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf657qec7lx42paw3qxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -253,11 +305,17 @@ public class DescribeVpcAccessesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcAccessesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcAccessesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -292,7 +350,10 @@ public class DescribeVpcAccessesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appname</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -300,7 +361,10 @@ public class DescribeVpcAccessesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

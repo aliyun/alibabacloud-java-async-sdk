@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartInstanceRequest} extends {@link RequestModel}
  *
  * <p>RestartInstanceRequest</p>
  */
 public class RestartInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("UpgradeMinorVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeMinorVersion")
     private Boolean upgradeMinorVersion;
 
     private RestartInstanceRequest(Builder builder) {
@@ -176,18 +176,14 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * The time when you want to restart the instance. Default value: Immediately. Valid values:
-         * <p>
+         * <p>The time when you want to restart the instance. Default value: Immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: immediately restarts the instance.</li>
+         * <li><strong>MaintainTime</strong>: restarts the instance during the maintenance window.</li>
+         * </ul>
          * 
-         * *   **Immediately**: immediately restarts the instance.
-         * *   **MaintainTime**: restarts the instance during the maintenance window.
-         * 
-         * Enumeration values:
-         * 
-         * *   0
-         * *   1
-         * *   Immediately
-         * *   MaintainTime
+         * <strong>example:</strong>
+         * <p>Immediately</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -196,7 +192,11 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **RestartInstance**.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -250,13 +250,17 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to update the instance to the latest minor version when the instance is restarted. Valid values:
-         * <p>
+         * <p>Specifies whether to update to the latest minor version when the instance is restarted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: updates the minor version.</li>
+         * <li><strong>false</strong>: does not update the minor version.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: updates the minor version.
-         * *   **false**: does not update the minor version.
-         * 
-         * > The default value is **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder upgradeMinorVersion(Boolean upgradeMinorVersion) {
             this.putQueryParameter("UpgradeMinorVersion", upgradeMinorVersion);

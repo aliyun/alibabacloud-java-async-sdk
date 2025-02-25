@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSpareIpsResponseBody</p>
  */
 public class ListSpareIpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpareIps")
+    @com.aliyun.core.annotation.NameInMap("SpareIps")
     private java.util.List < SpareIps> spareIps;
 
     private ListSpareIpsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListSpareIpsResponseBody extends TeaModel {
     } 
 
     public static class SpareIps extends TeaModel {
-        @NameInMap("SpareIp")
+        @com.aliyun.core.annotation.NameInMap("SpareIp")
         private String spareIp;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private SpareIps(Builder builder) {

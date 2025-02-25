@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPropertyScheduleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetPropertyScheduleConfigResponseBody</p>
  */
 public class GetPropertyScheduleConfigResponseBody extends TeaModel {
-    @NameInMap("PropertyScheduleConfig")
+    @com.aliyun.core.annotation.NameInMap("PropertyScheduleConfig")
     private PropertyScheduleConfig propertyScheduleConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPropertyScheduleConfigResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configurations for the collection frequency of asset fingerprints.
+         * <p>The configurations for the collection frequency of asset fingerprints.</p>
          */
         public Builder propertyScheduleConfig(PropertyScheduleConfig propertyScheduleConfig) {
             this.propertyScheduleConfig = propertyScheduleConfig;
@@ -58,7 +63,10 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B37C9052-A73E-4707-A024-92477028****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPropertyScheduleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertyScheduleConfigResponseBody</p>
+     */
     public static class PropertyScheduleConfig extends TeaModel {
-        @NameInMap("NextScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("NextScheduleTime")
         private Long nextScheduleTime;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PropertyScheduleConfig(Builder builder) {
@@ -122,7 +136,10 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The timestamp when the next collection of asset fingerprints starts. Unit: milliseconds.
+             * <p>The timestamp when the next collection of asset fingerprints starts. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671630647018</p>
              */
             public Builder nextScheduleTime(Long nextScheduleTime) {
                 this.nextScheduleTime = nextScheduleTime;
@@ -130,15 +147,18 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The collection frequency of asset fingerprints. Valid values:
-             * <p>
+             * <p>The collection frequency of asset fingerprints. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled, which indicates that the asset fingerprints are not automatically or periodically collected.</li>
+             * <li><strong>1</strong>: collects asset fingerprints once an hour.</li>
+             * <li><strong>3</strong>: collects asset fingerprints once every 3 hours.</li>
+             * <li><strong>12</strong>: collects asset fingerprints once every 12 hours.</li>
+             * <li><strong>24</strong>: collects asset fingerprints once a day.</li>
+             * <li><strong>168</strong>: collects asset fingerprints once every 7 days.</li>
+             * </ul>
              * 
-             * *   **0**: disabled, which indicates that the asset fingerprints are not automatically or periodically collected.
-             * *   **1**: collects asset fingerprints once an hour.
-             * *   **3**: collects asset fingerprints once every 3 hours.
-             * *   **12**: collects asset fingerprints once every 12 hours.
-             * *   **24**: collects asset fingerprints once a day.
-             * *   **168**: collects asset fingerprints once every 7 days.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -146,18 +166,21 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset fingerprints. Valid values:
-             * <p>
+             * <p>The type of the asset fingerprints. Valid values:</p>
+             * <ul>
+             * <li><strong>scheduler_port_period</strong>: listening port</li>
+             * <li><strong>scheduler_process_period</strong>: running process</li>
+             * <li><strong>scheduler_account_period</strong>: account</li>
+             * <li><strong>scheduler_software_period</strong>: software</li>
+             * <li><strong>scheduler_cron_period</strong>: scheduled task</li>
+             * <li><strong>scheduler_sca_period</strong>: middleware</li>
+             * <li><strong>scheduler_autorun_period</strong>: startup item</li>
+             * <li><strong>scheduler_lkm_period</strong>: kernel module</li>
+             * <li><strong>scheduler_sca_proxy_period</strong>: website</li>
+             * </ul>
              * 
-             * *   **scheduler_port_period**: listening port
-             * *   **scheduler_process_period**: running process
-             * *   **scheduler_account_period**: account
-             * *   **scheduler_software_period**: software
-             * *   **scheduler_cron_period**: scheduled task
-             * *   **scheduler_sca_period**: middleware
-             * *   **scheduler_autorun_period**: startup item
-             * *   **scheduler_lkm_period**: kernel module
-             * *   **scheduler_sca_proxy_period**: website
+             * <strong>example:</strong>
+             * <p>scheduler_account_period</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateDesktopsRequest} extends {@link RequestModel}
  *
  * <p>MigrateDesktopsRequest</p>
  */
 public class MigrateDesktopsRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
-    private java.util.List < String > desktopId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> desktopId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TargetOfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetOfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetOfficeSiteId;
 
     private MigrateDesktopsRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class MigrateDesktopsRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -69,7 +74,7 @@ public class MigrateDesktopsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<MigrateDesktopsRequest, Builder> {
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String regionId; 
         private String targetOfficeSiteId; 
 
@@ -85,16 +90,21 @@ public class MigrateDesktopsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops. You can specify one or more cloud desktops. Valid values of N: 1 to 100.
+         * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
         }
 
         /**
-         * The region ID.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +113,11 @@ public class MigrateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the destination workspace.
+         * <p>The ID of the destination office network.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen+dir-388505****</p>
          */
         public Builder targetOfficeSiteId(String targetOfficeSiteId) {
             this.putQueryParameter("TargetOfficeSiteId", targetOfficeSiteId);

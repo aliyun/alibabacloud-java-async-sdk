@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepositoryMemberResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateRepositoryMemberResponseBody</p>
  */
 public class UpdateRepositoryMemberResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private UpdateRepositoryMemberResponseBody(Builder builder) {
@@ -131,44 +136,50 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRepositoryMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryMemberResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("expireAt")
+        @com.aliyun.core.annotation.NameInMap("expireAt")
         private String expireAt;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("memberName")
+        @com.aliyun.core.annotation.NameInMap("memberName")
         private String memberName;
 
-        @NameInMap("memberType")
+        @com.aliyun.core.annotation.NameInMap("memberType")
         private String memberType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceId")
+        @com.aliyun.core.annotation.NameInMap("sourceId")
         private Long sourceId;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
-        @NameInMap("webUrl")
+        @com.aliyun.core.annotation.NameInMap("webUrl")
         private String webUrl;
 
         private Result(Builder builder) {
@@ -398,7 +409,10 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * web url
+             * <p>web url</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;

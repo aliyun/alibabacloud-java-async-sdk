@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMemberRequest} extends {@link RequestModel}
  *
  * <p>UpdateMemberRequest</p>
  */
 public class UpdateMemberRequest extends Request {
-    @Path
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private Member body;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private UpdateMemberRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class UpdateMemberRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +102,7 @@ public class UpdateMemberRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The permission information about the member.</p>
          */
         public Builder body(Member body) {
             this.putBodyParameter("body", body);
@@ -102,7 +111,11 @@ public class UpdateMemberRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

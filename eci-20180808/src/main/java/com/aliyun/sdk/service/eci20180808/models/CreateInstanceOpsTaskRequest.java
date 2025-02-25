@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceOpsTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceOpsTaskRequest</p>
  */
 public class CreateInstanceOpsTaskRequest extends Request {
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("OpsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String opsType;
 
-    @Query
-    @NameInMap("OpsValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpsValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String opsValue;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateInstanceOpsTaskRequest(Builder builder) {
@@ -156,7 +156,11 @@ public class CreateInstanceOpsTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the container group.
+         * <p>The ID of the container group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp1dvysdafbh00t7****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -165,11 +169,15 @@ public class CreateInstanceOpsTaskRequest extends Request {
         }
 
         /**
-         * The type of the O&M task. Valid values:
-         * <p>
+         * <p>The type of the O&amp;M task. Valid values:</p>
+         * <ul>
+         * <li>coredump</li>
+         * <li>tcpdump</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   coredump
-         * *   tcpdump
+         * <strong>example:</strong>
+         * <p>coredump</p>
          */
         public Builder opsType(String opsType) {
             this.putQueryParameter("OpsType", opsType);
@@ -178,29 +186,36 @@ public class CreateInstanceOpsTaskRequest extends Request {
         }
 
         /**
-         * The value of the O\&M task. You can set this parameter based on the value of OpsType.
-         * <p>
+         * <p>The value of the O&amp;M task. You can set this parameter based on the value of OpsType.</p>
+         * <ul>
+         * <li><p>If OpsType is set to coredump, the valid values of OpsValue are:</p>
+         * <ul>
+         * <li>enable: enables coredump.</li>
+         * <li>disable: disables coredump.</li>
+         * </ul>
+         * </li>
+         * <li><p>If OpsType is set to tcpdump, the value of OpsValue is a JSON-formatted parameter string. Example: <code>{&quot;Enable&quot;:true, &quot;IfDeviceName&quot;:&quot;eth0&quot;}</code>. The value may contain the following parameters:</p>
+         * <ul>
+         * <li>Enable: specifies whether to enable tcpdump. You must specify this parameter. Valid values: true and false.</li>
+         * <li>Protocol: the network protocol. Valid values: tcp, udp, and icmpv4.</li>
+         * <li>SourceIp: the source IP address.</li>
+         * <li>SourceCidr: the source CIDR block. If you specify both an IP address and a CIDR block, the IP address is ignored if the CIDR block is valid.</li>
+         * <li>SourcePort: the source port. Valid values: 1 to 65535.</li>
+         * <li>DestIp: the destination IP address.</li>
+         * <li>DestCidr: the destination CIDR block. If you specify both an IP address and a CIDR block, the IP address is ignored if the CIDR block is valid.</li>
+         * <li>DestPort: the destination port. Valid values: 1 to 65535.</li>
+         * <li>IfDeviceName: the destination network interface controller. Default value: eth0.</li>
+         * <li>Snaplen: the length to be captured. Default value: 65535. Unit: bytes.</li>
+         * <li>Duration: the captured period. Unit: seconds.</li>
+         * <li>PacketNum: the number of packets to be captured.</li>
+         * <li>FileSize: the size of the destination files on packets. Unit: bytes. Maximum value: 1073741824. 1073741824 bytes is equal to 1 GB.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If OpsType is set to coredump, the valid values of OpsValue are:
-         * 
-         *     *   enable: enables coredump.
-         *     *   disable: disables coredump.
-         * 
-         * *   If OpsType is set to tcpdump, the value of OpsValue is a JSON-formatted parameter string. Example: `{"Enable":true, "IfDeviceName":"eth0"}`. The value may contain the following parameters:
-         * 
-         *     *   Enable: specifies whether to enable tcpdump. You must specify this parameter. Valid values: true and false.
-         *     *   Protocol: the network protocol. Valid values: tcp, udp, and icmpv4.
-         *     *   SourceIp: the source IP address.
-         *     *   SourceCidr: the source CIDR block. If you specify both an IP address and a CIDR block, the IP address is ignored if the CIDR block is valid.
-         *     *   SourcePort: the source port. Valid values: 1 to 65535.
-         *     *   DestIp: the destination IP address.
-         *     *   DestCidr: the destination CIDR block. If you specify both an IP address and a CIDR block, the IP address is ignored if the CIDR block is valid.
-         *     *   DestPort: the destination port. Valid values: 1 to 65535.
-         *     *   IfDeviceName: the destination network interface controller. Default value: eth0.
-         *     *   Snaplen: the length to be captured. Default value: 65535. Unit: bytes.
-         *     *   Duration: the captured period. Unit: seconds.
-         *     *   PacketNum: the number of packets to be captured.
-         *     *   FileSize: the size of the destination files on packets. Unit: bytes. Maximum value: 1073741824. 1073741824 bytes is equal to 1 GB.
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder opsValue(String opsValue) {
             this.putQueryParameter("OpsValue", opsValue);
@@ -227,7 +242,11 @@ public class CreateInstanceOpsTaskRequest extends Request {
         }
 
         /**
-         * The region ID of the O&M task.
+         * <p>The region ID of the O&amp;M task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactListByContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContactListByContactGroupResponseBody</p>
  */
 public class DescribeContactListByContactGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Contacts")
+    @com.aliyun.core.annotation.NameInMap("Contacts")
     private Contacts contacts;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeContactListByContactGroupResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The alert group.
+         * <p>The alert contacts that receive alert notifications.</p>
          */
         public Builder contacts(Contacts contacts) {
             this.contacts = contacts;
@@ -105,7 +108,10 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The group is not exists.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +130,14 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,17 +150,23 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContactListByContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListByContactGroupResponseBody</p>
+     */
     public static class Channels extends TeaModel {
-        @NameInMap("AliIM")
+        @com.aliyun.core.annotation.NameInMap("AliIM")
         private String aliIM;
 
-        @NameInMap("DingWebHook")
+        @com.aliyun.core.annotation.NameInMap("DingWebHook")
         private String dingWebHook;
 
-        @NameInMap("Mail")
+        @com.aliyun.core.annotation.NameInMap("Mail")
         private String mail;
 
-        @NameInMap("SMS")
+        @com.aliyun.core.annotation.NameInMap("SMS")
         private String SMS;
 
         private Channels(Builder builder) {
@@ -201,10 +219,13 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             private String SMS; 
 
             /**
-             * The TradeManager ID of the alert contact.
-             * <p>
+             * <p>The TradeManager ID of the alert contact.</p>
+             * <blockquote>
+             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -212,7 +233,10 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URL of the DingTalk chatbot.
+             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112">https://oapi.dingtalk.com/robot/send?access_token=9bf44f8189597d07dfdd7a123455ffc112</a>****</p>
              */
             public Builder dingWebHook(String dingWebHook) {
                 this.dingWebHook = dingWebHook;
@@ -220,7 +244,10 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the alert contact.
+             * <p>The email address of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -228,10 +255,13 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the alert contact.
-             * <p>
+             * <p>The mobile number of the alert contact.</p>
+             * <blockquote>
+             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>1333333****</p>
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -245,20 +275,26 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactListByContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListByContactGroupResponseBody</p>
+     */
     public static class Contact extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Contact(Builder builder) {
@@ -320,7 +356,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The alert notification targets.
+             * <p>The alert notification methods.</p>
              */
             public Builder channels(Channels channels) {
                 this.channels = channels;
@@ -328,7 +364,11 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert contact was created.
+             * <p>The time when the alert contact was created.</p>
+             * <p>Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1552314252000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -336,7 +376,10 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert contact.
+             * <p>The description of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -344,7 +387,10 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert contact.
+             * <p>The name of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -352,7 +398,11 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert contact was modified.
+             * <p>The time when the alert contact was modified.</p>
+             * <p>Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1552314252000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -366,8 +416,14 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactListByContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactListByContactGroupResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < Contact> contact;
 
         private Contacts(Builder builder) {

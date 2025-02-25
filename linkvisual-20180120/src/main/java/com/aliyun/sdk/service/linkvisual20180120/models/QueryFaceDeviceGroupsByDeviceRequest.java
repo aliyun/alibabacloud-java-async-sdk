@@ -119,14 +119,14 @@ public class QueryFaceDeviceGroupsByDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceDeviceGroupsByDeviceRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isolationId = response.isolationId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(QueryFaceDeviceGroupsByDeviceRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isolationId = request.isolationId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

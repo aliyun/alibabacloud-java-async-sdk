@@ -49,13 +49,13 @@ public class RestartDrdsInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RestartDrdsInstanceRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(RestartDrdsInstanceRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of a DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -63,10 +63,10 @@ public class CreateRecordPlanRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRecordPlanRequest response) {
-            super(response);
-            this.name = response.name;
-            this.templateId = response.templateId;
+        private Builder(CreateRecordPlanRequest request) {
+            super(request);
+            this.name = request.name;
+            this.templateId = request.templateId;
         } 
 
         /**

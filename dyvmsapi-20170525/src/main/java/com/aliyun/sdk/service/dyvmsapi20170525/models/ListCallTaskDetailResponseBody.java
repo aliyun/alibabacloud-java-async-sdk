@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCallTaskDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ListCallTaskDetailResponseBody</p>
  */
 public class ListCallTaskDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Long totalPage;
 
     private ListCallTaskDetailResponseBody(Builder builder) {
@@ -110,7 +110,14 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         private Long totalPage; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +125,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the task.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +133,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +144,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +155,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D692AC3D-CBA8-417F-BEB9-5B73718922D4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +166,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of called numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -158,7 +177,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -171,20 +193,26 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCallTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallTaskDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CalledNum")
+        @com.aliyun.core.annotation.NameInMap("CalledNum")
         private String calledNum;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -246,7 +274,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CalledNum.
+             * <p>The called number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1300000****</p>
              */
             public Builder calledNum(String calledNum) {
                 this.calledNum = calledNum;
@@ -254,7 +285,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * <p>The calling number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0571000****</p>
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -262,7 +296,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The call duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -270,7 +307,10 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -278,7 +318,15 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task state. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong>: The task was successful.</li>
+             * <li><strong>FAIL</strong>: The task failed.</li>
+             * <li><strong>INIT</strong>: The task was not started.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FAIL</p>
              */
             public Builder status(String status) {
                 this.status = status;

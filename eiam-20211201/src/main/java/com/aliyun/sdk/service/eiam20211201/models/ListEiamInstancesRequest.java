@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEiamInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListEiamInstancesRequest</p>
  */
 public class ListEiamInstancesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("InstanceRegionId")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceRegionId")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String instanceRegionId;
 
     private ListEiamInstancesRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class ListEiamInstancesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -68,7 +73,7 @@ public class ListEiamInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEiamInstancesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String instanceRegionId; 
 
         private Builder() {
@@ -92,16 +97,19 @@ public class ListEiamInstancesRequest extends Request {
         }
 
         /**
-         * 实例ID列表，支持0到100个
+         * <p>实例ID列表，支持0到100个</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * 实例所属Region
+         * <p>实例所属Region</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder instanceRegionId(String instanceRegionId) {
             this.putQueryParameter("InstanceRegionId", instanceRegionId);

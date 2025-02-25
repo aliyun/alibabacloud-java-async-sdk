@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLPatternsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLPatternsResponseBody</p>
  */
 public class DescribeSQLPatternsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PatternDetails")
+    @com.aliyun.core.annotation.NameInMap("PatternDetails")
     private java.util.List < PatternDetails> patternDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSQLPatternsResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +108,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried SQL patterns.
+         * <p>The queried SQL patterns.</p>
          */
         public Builder patternDetails(java.util.List < PatternDetails> patternDetails) {
             this.patternDetails = patternDetails;
@@ -110,7 +116,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BE0EDD1-0DE6-3EB6-81BF-BFE4F2******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +127,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,74 +143,136 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLPatternsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLPatternsResponseBody</p>
+     */
     public static class PatternDetails extends TeaModel {
-        @NameInMap("AccessIp")
+        @com.aliyun.core.annotation.NameInMap("AccessIp")
         private String accessIp;
 
-        @NameInMap("AverageExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("AverageExecutionTime")
         private Double averageExecutionTime;
 
-        @NameInMap("AveragePeakMemory")
+        @com.aliyun.core.annotation.NameInMap("AverageOperatorCost")
+        private Double averageOperatorCost;
+
+        @com.aliyun.core.annotation.NameInMap("AveragePeakMemory")
         private Double averagePeakMemory;
 
-        @NameInMap("AverageQueryTime")
+        @com.aliyun.core.annotation.NameInMap("AverageQueryTime")
         private Double averageQueryTime;
 
-        @NameInMap("AverageScanSize")
+        @com.aliyun.core.annotation.NameInMap("AverageScanCost")
+        private Double averageScanCost;
+
+        @com.aliyun.core.annotation.NameInMap("AverageScanSize")
         private Double averageScanSize;
 
-        @NameInMap("Blockable")
+        @com.aliyun.core.annotation.NameInMap("Blockable")
         private Boolean blockable;
 
-        @NameInMap("FailedCount")
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
         private Long failedCount;
 
-        @NameInMap("MaxExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("MaxExecutionTime")
         private Long maxExecutionTime;
 
-        @NameInMap("MaxPeakMemory")
+        @com.aliyun.core.annotation.NameInMap("MaxOperatorCost")
+        private Double maxOperatorCost;
+
+        @com.aliyun.core.annotation.NameInMap("MaxPeakMemory")
         private Long maxPeakMemory;
 
-        @NameInMap("MaxQueryTime")
+        @com.aliyun.core.annotation.NameInMap("MaxQueryTime")
         private Long maxQueryTime;
 
-        @NameInMap("MaxScanSize")
+        @com.aliyun.core.annotation.NameInMap("MaxScanCost")
+        private Double maxScanCost;
+
+        @com.aliyun.core.annotation.NameInMap("MaxScanSize")
         private Long maxScanSize;
 
-        @NameInMap("PatternCreationTime")
+        @com.aliyun.core.annotation.NameInMap("OperatorCostPercentage")
+        private Double operatorCostPercentage;
+
+        @com.aliyun.core.annotation.NameInMap("OperatorCostSum")
+        private Double operatorCostSum;
+
+        @com.aliyun.core.annotation.NameInMap("PatternCreationTime")
         private String patternCreationTime;
 
-        @NameInMap("PatternId")
+        @com.aliyun.core.annotation.NameInMap("PatternId")
         private String patternId;
 
-        @NameInMap("QueryCount")
+        @com.aliyun.core.annotation.NameInMap("PeakMemoryPercentage")
+        private Double peakMemoryPercentage;
+
+        @com.aliyun.core.annotation.NameInMap("PeakMemorySum")
+        private Double peakMemorySum;
+
+        @com.aliyun.core.annotation.NameInMap("QueryCount")
         private Long queryCount;
 
-        @NameInMap("SQLPattern")
+        @com.aliyun.core.annotation.NameInMap("QueryTimePercentage")
+        private Double queryTimePercentage;
+
+        @com.aliyun.core.annotation.NameInMap("QueryTimeSum")
+        private Double queryTimeSum;
+
+        @com.aliyun.core.annotation.NameInMap("SQLPattern")
         private String SQLPattern;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("ScanCostPercentage")
+        private Double scanCostPercentage;
+
+        @com.aliyun.core.annotation.NameInMap("ScanCostSum")
+        private Double scanCostSum;
+
+        @com.aliyun.core.annotation.NameInMap("ScanSizePercentage")
+        private Double scanSizePercentage;
+
+        @com.aliyun.core.annotation.NameInMap("ScanSizeSum")
+        private Double scanSizeSum;
+
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private String tables;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private PatternDetails(Builder builder) {
             this.accessIp = builder.accessIp;
             this.averageExecutionTime = builder.averageExecutionTime;
+            this.averageOperatorCost = builder.averageOperatorCost;
             this.averagePeakMemory = builder.averagePeakMemory;
             this.averageQueryTime = builder.averageQueryTime;
+            this.averageScanCost = builder.averageScanCost;
             this.averageScanSize = builder.averageScanSize;
             this.blockable = builder.blockable;
             this.failedCount = builder.failedCount;
             this.maxExecutionTime = builder.maxExecutionTime;
+            this.maxOperatorCost = builder.maxOperatorCost;
             this.maxPeakMemory = builder.maxPeakMemory;
             this.maxQueryTime = builder.maxQueryTime;
+            this.maxScanCost = builder.maxScanCost;
             this.maxScanSize = builder.maxScanSize;
+            this.operatorCostPercentage = builder.operatorCostPercentage;
+            this.operatorCostSum = builder.operatorCostSum;
             this.patternCreationTime = builder.patternCreationTime;
             this.patternId = builder.patternId;
+            this.peakMemoryPercentage = builder.peakMemoryPercentage;
+            this.peakMemorySum = builder.peakMemorySum;
             this.queryCount = builder.queryCount;
+            this.queryTimePercentage = builder.queryTimePercentage;
+            this.queryTimeSum = builder.queryTimeSum;
             this.SQLPattern = builder.SQLPattern;
+            this.scanCostPercentage = builder.scanCostPercentage;
+            this.scanCostSum = builder.scanCostSum;
+            this.scanSizePercentage = builder.scanSizePercentage;
+            this.scanSizeSum = builder.scanSizeSum;
             this.tables = builder.tables;
             this.user = builder.user;
         }
@@ -226,6 +300,13 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
+         * @return averageOperatorCost
+         */
+        public Double getAverageOperatorCost() {
+            return this.averageOperatorCost;
+        }
+
+        /**
          * @return averagePeakMemory
          */
         public Double getAveragePeakMemory() {
@@ -237,6 +318,13 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
          */
         public Double getAverageQueryTime() {
             return this.averageQueryTime;
+        }
+
+        /**
+         * @return averageScanCost
+         */
+        public Double getAverageScanCost() {
+            return this.averageScanCost;
         }
 
         /**
@@ -268,6 +356,13 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxOperatorCost
+         */
+        public Double getMaxOperatorCost() {
+            return this.maxOperatorCost;
+        }
+
+        /**
          * @return maxPeakMemory
          */
         public Long getMaxPeakMemory() {
@@ -282,10 +377,31 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxScanCost
+         */
+        public Double getMaxScanCost() {
+            return this.maxScanCost;
+        }
+
+        /**
          * @return maxScanSize
          */
         public Long getMaxScanSize() {
             return this.maxScanSize;
+        }
+
+        /**
+         * @return operatorCostPercentage
+         */
+        public Double getOperatorCostPercentage() {
+            return this.operatorCostPercentage;
+        }
+
+        /**
+         * @return operatorCostSum
+         */
+        public Double getOperatorCostSum() {
+            return this.operatorCostSum;
         }
 
         /**
@@ -303,6 +419,20 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
+         * @return peakMemoryPercentage
+         */
+        public Double getPeakMemoryPercentage() {
+            return this.peakMemoryPercentage;
+        }
+
+        /**
+         * @return peakMemorySum
+         */
+        public Double getPeakMemorySum() {
+            return this.peakMemorySum;
+        }
+
+        /**
          * @return queryCount
          */
         public Long getQueryCount() {
@@ -310,10 +440,52 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
+         * @return queryTimePercentage
+         */
+        public Double getQueryTimePercentage() {
+            return this.queryTimePercentage;
+        }
+
+        /**
+         * @return queryTimeSum
+         */
+        public Double getQueryTimeSum() {
+            return this.queryTimeSum;
+        }
+
+        /**
          * @return SQLPattern
          */
         public String getSQLPattern() {
             return this.SQLPattern;
+        }
+
+        /**
+         * @return scanCostPercentage
+         */
+        public Double getScanCostPercentage() {
+            return this.scanCostPercentage;
+        }
+
+        /**
+         * @return scanCostSum
+         */
+        public Double getScanCostSum() {
+            return this.scanCostSum;
+        }
+
+        /**
+         * @return scanSizePercentage
+         */
+        public Double getScanSizePercentage() {
+            return this.scanSizePercentage;
+        }
+
+        /**
+         * @return scanSizeSum
+         */
+        public Double getScanSizeSum() {
+            return this.scanSizeSum;
         }
 
         /**
@@ -333,24 +505,41 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public static final class Builder {
             private String accessIp; 
             private Double averageExecutionTime; 
+            private Double averageOperatorCost; 
             private Double averagePeakMemory; 
             private Double averageQueryTime; 
+            private Double averageScanCost; 
             private Double averageScanSize; 
             private Boolean blockable; 
             private Long failedCount; 
             private Long maxExecutionTime; 
+            private Double maxOperatorCost; 
             private Long maxPeakMemory; 
             private Long maxQueryTime; 
+            private Double maxScanCost; 
             private Long maxScanSize; 
+            private Double operatorCostPercentage; 
+            private Double operatorCostSum; 
             private String patternCreationTime; 
             private String patternId; 
+            private Double peakMemoryPercentage; 
+            private Double peakMemorySum; 
             private Long queryCount; 
+            private Double queryTimePercentage; 
+            private Double queryTimeSum; 
             private String SQLPattern; 
+            private Double scanCostPercentage; 
+            private Double scanCostSum; 
+            private Double scanSizePercentage; 
+            private Double scanSizeSum; 
             private String tables; 
             private String user; 
 
             /**
-             * The IP address of the SQL client that commits the SQL pattern.
+             * <p>The IP address of the SQL client that commits the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -358,7 +547,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234.78</p>
              */
             public Builder averageExecutionTime(Double averageExecutionTime) {
                 this.averageExecutionTime = averageExecutionTime;
@@ -366,7 +558,21 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.
+             * <p>The number of average operator cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder averageOperatorCost(Double averageOperatorCost) {
+                this.averageOperatorCost = averageOperatorCost;
+                return this;
+            }
+
+            /**
+             * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234.22</p>
              */
             public Builder averagePeakMemory(Double averagePeakMemory) {
                 this.averagePeakMemory = averagePeakMemory;
@@ -374,7 +580,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder averageQueryTime(Double averageQueryTime) {
                 this.averageQueryTime = averageQueryTime;
@@ -382,7 +591,21 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
+             * <p>The number of average scan cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder averageScanCost(Double averageScanCost) {
+                this.averageScanCost = averageScanCost;
+                return this;
+            }
+
+            /**
+             * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234149.23</p>
              */
             public Builder averageScanSize(Double averageScanSize) {
                 this.averageScanSize = averageScanSize;
@@ -390,13 +613,17 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the execution of the SQL pattern can be blocked. Valid values:
-             * <p>
+             * <p>Indicates whether the execution of the SQL pattern can be blocked. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>Only SELECT and INSERT statements can be blocked.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * > Only SELECT and INSERT statements can be blocked.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder blockable(Boolean blockable) {
                 this.blockable = blockable;
@@ -404,7 +631,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of failed queries executed in association with the SQL pattern within the query time range.
+             * <p>The number of failed queries executed in association with the SQL pattern within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -412,7 +642,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2142</p>
              */
             public Builder maxExecutionTime(Long maxExecutionTime) {
                 this.maxExecutionTime = maxExecutionTime;
@@ -420,7 +653,21 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.
+             * <p>The number of max operator cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder maxOperatorCost(Double maxOperatorCost) {
+                this.maxOperatorCost = maxOperatorCost;
+                return this;
+            }
+
+            /**
+             * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234149</p>
              */
             public Builder maxPeakMemory(Long maxPeakMemory) {
                 this.maxPeakMemory = maxPeakMemory;
@@ -428,7 +675,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2341</p>
              */
             public Builder maxQueryTime(Long maxQueryTime) {
                 this.maxQueryTime = maxQueryTime;
@@ -436,7 +686,21 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
+             * <p>The number of max scan cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
+             */
+            public Builder maxScanCost(Double maxScanCost) {
+                this.maxScanCost = maxScanCost;
+                return this;
+            }
+
+            /**
+             * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234149</p>
              */
             public Builder maxScanSize(Long maxScanSize) {
                 this.maxScanSize = maxScanSize;
@@ -444,7 +708,32 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest commit time of the SQL pattern within the query time range. Unit: milliseconds.
+             * <p>The number of operator cost percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
+             */
+            public Builder operatorCostPercentage(Double operatorCostPercentage) {
+                this.operatorCostPercentage = operatorCostPercentage;
+                return this;
+            }
+
+            /**
+             * <p>The number of operator cost sum.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder operatorCostSum(Double operatorCostSum) {
+                this.operatorCostSum = operatorCostSum;
+                return this;
+            }
+
+            /**
+             * <p>The earliest commit time of the SQL pattern within the query time range. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-12 03:06:00</p>
              */
             public Builder patternCreationTime(String patternCreationTime) {
                 this.patternCreationTime = patternCreationTime;
@@ -452,7 +741,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL pattern.
+             * <p>The ID of the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5575924945138******</p>
              */
             public Builder patternId(String patternId) {
                 this.patternId = patternId;
@@ -460,7 +752,32 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries executed in association with the SQL pattern within the query time range.
+             * <p>The number of peak memory percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
+             */
+            public Builder peakMemoryPercentage(Double peakMemoryPercentage) {
+                this.peakMemoryPercentage = peakMemoryPercentage;
+                return this;
+            }
+
+            /**
+             * <p>The number of peak memory sum.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
+             */
+            public Builder peakMemorySum(Double peakMemorySum) {
+                this.peakMemorySum = peakMemorySum;
+                return this;
+            }
+
+            /**
+             * <p>The number of queries executed in association with the SQL pattern within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345</p>
              */
             public Builder queryCount(Long queryCount) {
                 this.queryCount = queryCount;
@@ -468,7 +785,32 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The statement of the SQL pattern.
+             * <p>The number of query time percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
+             */
+            public Builder queryTimePercentage(Double queryTimePercentage) {
+                this.queryTimePercentage = queryTimePercentage;
+                return this;
+            }
+
+            /**
+             * <p>The number of query time sum.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
+             */
+            public Builder queryTimeSum(Double queryTimeSum) {
+                this.queryTimeSum = queryTimeSum;
+                return this;
+            }
+
+            /**
+             * <p>The statement of the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM KEPLER_META_NODE_STATIC_INFO WHERE elastic_node = ? OR (elastic_node = ? AND enable = ?)</p>
              */
             public Builder SQLPattern(String SQLPattern) {
                 this.SQLPattern = SQLPattern;
@@ -476,7 +818,54 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The tables scanned based on the SQL pattern.
+             * <p>The number of scan cost percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
+             */
+            public Builder scanCostPercentage(Double scanCostPercentage) {
+                this.scanCostPercentage = scanCostPercentage;
+                return this;
+            }
+
+            /**
+             * <p>The number of scan cost sum.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
+             */
+            public Builder scanCostSum(Double scanCostSum) {
+                this.scanCostSum = scanCostSum;
+                return this;
+            }
+
+            /**
+             * <p>The number of scan size percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
+             */
+            public Builder scanSizePercentage(Double scanSizePercentage) {
+                this.scanSizePercentage = scanSizePercentage;
+                return this;
+            }
+
+            /**
+             * <p>The number of scan size sum.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder scanSizeSum(Double scanSizeSum) {
+                this.scanSizeSum = scanSizeSum;
+                return this;
+            }
+
+            /**
+             * <p>The tables scanned based on the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tpch.orders</p>
              */
             public Builder tables(String tables) {
                 this.tables = tables;
@@ -484,7 +873,10 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The database username that is used to commit the SQL pattern.
+             * <p>The database username that is used to commit the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reporter</p>
              */
             public Builder user(String user) {
                 this.user = user;

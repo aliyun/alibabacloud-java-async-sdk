@@ -859,6 +859,12 @@ public class DescribeClusterTemplateResponseBody extends TeaModel {
         @NameInMap("CreateSource")
         private String createSource;
 
+        @NameInMap("DataDiskEncrypted")
+        private Boolean dataDiskEncrypted;
+
+        @NameInMap("DataDiskKMSKeyId")
+        private String dataDiskKMSKeyId;
+
         @NameInMap("DepositType")
         private String depositType;
 
@@ -968,6 +974,8 @@ public class DescribeClusterTemplateResponseBody extends TeaModel {
             this.configList = builder.configList;
             this.configurations = builder.configurations;
             this.createSource = builder.createSource;
+            this.dataDiskEncrypted = builder.dataDiskEncrypted;
+            this.dataDiskKMSKeyId = builder.dataDiskKMSKeyId;
             this.depositType = builder.depositType;
             this.easEnable = builder.easEnable;
             this.emrVer = builder.emrVer;
@@ -1052,6 +1060,20 @@ public class DescribeClusterTemplateResponseBody extends TeaModel {
          */
         public String getCreateSource() {
             return this.createSource;
+        }
+
+        /**
+         * @return dataDiskEncrypted
+         */
+        public Boolean getDataDiskEncrypted() {
+            return this.dataDiskEncrypted;
+        }
+
+        /**
+         * @return dataDiskKMSKeyId
+         */
+        public String getDataDiskKMSKeyId() {
+            return this.dataDiskKMSKeyId;
         }
 
         /**
@@ -1299,6 +1321,8 @@ public class DescribeClusterTemplateResponseBody extends TeaModel {
             private ConfigList configList; 
             private String configurations; 
             private String createSource; 
+            private Boolean dataDiskEncrypted; 
+            private String dataDiskKMSKeyId; 
             private String depositType; 
             private Boolean easEnable; 
             private String emrVer; 
@@ -1379,6 +1403,22 @@ public class DescribeClusterTemplateResponseBody extends TeaModel {
              */
             public Builder createSource(String createSource) {
                 this.createSource = createSource;
+                return this;
+            }
+
+            /**
+             * DataDiskEncrypted.
+             */
+            public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
+                this.dataDiskEncrypted = dataDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * DataDiskKMSKeyId.
+             */
+            public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
+                this.dataDiskKMSKeyId = dataDiskKMSKeyId;
                 return this;
             }
 
@@ -1639,7 +1679,7 @@ public class DescribeClusterTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

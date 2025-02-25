@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoutineSpecResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRoutineSpecResponseBody</p>
  */
 public class DescribeRoutineSpecResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map < String, ? > content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRoutineSpecResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeRoutineSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The specification of the CPU time slice. Valid values: 5 ms, 50 ms, and 100 ms.
+         * <p>The specification of the CPU time slice. Valid values: 5 ms, 50 ms, and 100 ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ms, 50ms, 100ms</p>
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +61,10 @@ public class DescribeRoutineSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE4E1B80-D5F3-47DB-824A-DA98A21854C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

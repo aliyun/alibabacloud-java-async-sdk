@@ -17,14 +17,9 @@ public class DescribeFlowRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     private DescribeFlowRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
-        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeFlowRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeFlowRequest, Builder> {
         private String name; 
-        private String requestId; 
 
         private Builder() {
             super();
@@ -65,7 +52,6 @@ public class DescribeFlowRequest extends Request {
         private Builder(DescribeFlowRequest request) {
             super(request);
             this.name = request.name;
-            this.requestId = request.requestId;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class DescribeFlowRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

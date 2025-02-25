@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -71,8 +71,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class AdvancedSetting extends TeaModel {
-        @NameInMap("gcName")
+        @com.aliyun.core.annotation.NameInMap("gcName")
         private String gcName;
 
         private AdvancedSetting(Builder builder) {
@@ -112,17 +118,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class AliwsDicts extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private AliwsDicts(Builder builder) {
@@ -213,24 +225,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ClientNodeConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
+
+        @com.aliyun.core.annotation.NameInMap("specInfo")
+        private String specInfo;
 
         private ClientNodeConfiguration(Builder builder) {
             this.amount = builder.amount;
             this.disk = builder.disk;
             this.diskType = builder.diskType;
             this.spec = builder.spec;
+            this.specInfo = builder.specInfo;
         }
 
         public static Builder builder() {
@@ -269,11 +291,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return specInfo
+         */
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private Integer disk; 
             private String diskType; 
             private String spec; 
+            private String specInfo; 
 
             /**
              * amount.
@@ -307,6 +337,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * specInfo.
+             */
+            public Builder specInfo(String specInfo) {
+                this.specInfo = specInfo;
+                return this;
+            }
+
             public ClientNodeConfiguration build() {
                 return new ClientNodeConfiguration(this);
             } 
@@ -314,17 +352,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class DictList extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private DictList(Builder builder) {
@@ -415,21 +459,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ElasticDataNodeConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskEncryption")
+        @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
+
+        @com.aliyun.core.annotation.NameInMap("specInfo")
+        private String specInfo;
 
         private ElasticDataNodeConfiguration(Builder builder) {
             this.amount = builder.amount;
@@ -437,6 +490,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.diskEncryption = builder.diskEncryption;
             this.diskType = builder.diskType;
             this.spec = builder.spec;
+            this.specInfo = builder.specInfo;
         }
 
         public static Builder builder() {
@@ -482,12 +536,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return specInfo
+         */
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private Integer disk; 
             private Boolean diskEncryption; 
             private String diskType; 
             private String spec; 
+            private String specInfo; 
 
             /**
              * amount.
@@ -529,6 +591,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * specInfo.
+             */
+            public Builder specInfo(String specInfo) {
+                this.specInfo = specInfo;
+                return this;
+            }
+
             public ElasticDataNodeConfiguration build() {
                 return new ElasticDataNodeConfiguration(this);
             } 
@@ -536,17 +606,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class IkHotDicts extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Integer fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private IkHotDicts(Builder builder) {
@@ -637,20 +713,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class KibanaConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
+
+        @com.aliyun.core.annotation.NameInMap("specInfo")
+        private String specInfo;
 
         private KibanaConfiguration(Builder builder) {
             this.amount = builder.amount;
             this.disk = builder.disk;
             this.spec = builder.spec;
+            this.specInfo = builder.specInfo;
         }
 
         public static Builder builder() {
@@ -682,10 +768,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return specInfo
+         */
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private Integer disk; 
             private String spec; 
+            private String specInfo; 
 
             /**
              * amount.
@@ -711,6 +805,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * specInfo.
+             */
+            public Builder specInfo(String specInfo) {
+                this.specInfo = specInfo;
+                return this;
+            }
+
             public KibanaConfiguration build() {
                 return new KibanaConfiguration(this);
             } 
@@ -718,24 +820,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class MasterConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
+
+        @com.aliyun.core.annotation.NameInMap("specInfo")
+        private String specInfo;
 
         private MasterConfiguration(Builder builder) {
             this.amount = builder.amount;
             this.disk = builder.disk;
             this.diskType = builder.diskType;
             this.spec = builder.spec;
+            this.specInfo = builder.specInfo;
         }
 
         public static Builder builder() {
@@ -774,11 +886,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return specInfo
+         */
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private Integer disk; 
             private String diskType; 
             private String spec; 
+            private String specInfo; 
 
             /**
              * amount.
@@ -812,6 +932,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * specInfo.
+             */
+            public Builder specInfo(String specInfo) {
+                this.specInfo = specInfo;
+                return this;
+            }
+
             public MasterConfiguration build() {
                 return new MasterConfiguration(this);
             } 
@@ -819,14 +947,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class WhiteIpGroupList extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("ips")
+        @com.aliyun.core.annotation.NameInMap("ips")
         private java.util.List < String > ips;
 
-        @NameInMap("whiteIpType")
+        @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
 
         private WhiteIpGroupList(Builder builder) {
@@ -900,20 +1034,26 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vsArea")
+        @com.aliyun.core.annotation.NameInMap("vsArea")
         private String vsArea;
 
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
-        @NameInMap("whiteIpGroupList")
+        @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
         private java.util.List < WhiteIpGroupList> whiteIpGroupList;
 
         private NetworkConfig(Builder builder) {
@@ -1021,21 +1161,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskEncryption")
+        @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("performanceLevel")
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
         private String performanceLevel;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
+
+        @com.aliyun.core.annotation.NameInMap("specInfo")
+        private String specInfo;
 
         private NodeSpec(Builder builder) {
             this.disk = builder.disk;
@@ -1043,6 +1192,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.diskType = builder.diskType;
             this.performanceLevel = builder.performanceLevel;
             this.spec = builder.spec;
+            this.specInfo = builder.specInfo;
         }
 
         public static Builder builder() {
@@ -1088,12 +1238,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return specInfo
+         */
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
         public static final class Builder {
             private Integer disk; 
             private Boolean diskEncryption; 
             private String diskType; 
             private String performanceLevel; 
             private String spec; 
+            private String specInfo; 
 
             /**
              * disk.
@@ -1135,6 +1293,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * specInfo.
+             */
+            public Builder specInfo(String specInfo) {
+                this.specInfo = specInfo;
+                return this;
+            }
+
             public NodeSpec build() {
                 return new NodeSpec(this);
             } 
@@ -1142,17 +1308,23 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class SynonymsDicts extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private SynonymsDicts(Builder builder) {
@@ -1243,11 +1415,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("tagKey")
+        @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
 
-        @NameInMap("tagValue")
+        @com.aliyun.core.annotation.NameInMap("tagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -1304,21 +1482,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class WarmNodeConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskEncryption")
+        @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
+
+        @com.aliyun.core.annotation.NameInMap("specInfo")
+        private String specInfo;
 
         private WarmNodeConfiguration(Builder builder) {
             this.amount = builder.amount;
@@ -1326,6 +1513,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.diskEncryption = builder.diskEncryption;
             this.diskType = builder.diskType;
             this.spec = builder.spec;
+            this.specInfo = builder.specInfo;
         }
 
         public static Builder builder() {
@@ -1371,12 +1559,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return specInfo
+         */
+        public String getSpecInfo() {
+            return this.specInfo;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private Integer disk; 
             private Boolean diskEncryption; 
             private String diskType; 
             private String spec; 
+            private String specInfo; 
 
             /**
              * amount.
@@ -1418,6 +1614,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * specInfo.
+             */
+            public Builder specInfo(String specInfo) {
+                this.specInfo = specInfo;
+                return this;
+            }
+
             public WarmNodeConfiguration build() {
                 return new WarmNodeConfiguration(this);
             } 
@@ -1425,11 +1629,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class ZoneInfos extends TeaModel {
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private ZoneInfos(Builder builder) {
@@ -1486,167 +1696,186 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("advancedDedicateMaster")
+        @com.aliyun.core.annotation.NameInMap("advancedDedicateMaster")
         private Boolean advancedDedicateMaster;
 
-        @NameInMap("advancedSetting")
+        @com.aliyun.core.annotation.NameInMap("advancedSetting")
         private AdvancedSetting advancedSetting;
 
-        @NameInMap("aliwsDicts")
+        @com.aliyun.core.annotation.NameInMap("aliwsDicts")
         private java.util.List < AliwsDicts> aliwsDicts;
 
-        @NameInMap("clientNodeConfiguration")
+        @com.aliyun.core.annotation.NameInMap("archType")
+        private String archType;
+
+        @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
         private ClientNodeConfiguration clientNodeConfiguration;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("dedicateMaster")
+        @com.aliyun.core.annotation.NameInMap("dedicateMaster")
         private Boolean dedicateMaster;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("dictList")
+        @com.aliyun.core.annotation.NameInMap("dictList")
         private java.util.List < DictList> dictList;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("elasticDataNodeConfiguration")
+        @com.aliyun.core.annotation.NameInMap("elasticDataNodeConfiguration")
         private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
-        @NameInMap("enableKibanaPrivateNetwork")
+        @com.aliyun.core.annotation.NameInMap("enableKibanaPrivateNetwork")
         private Boolean enableKibanaPrivateNetwork;
 
-        @NameInMap("enableKibanaPublicNetwork")
+        @com.aliyun.core.annotation.NameInMap("enableKibanaPublicNetwork")
         private Boolean enableKibanaPublicNetwork;
 
-        @NameInMap("enablePublic")
+        @com.aliyun.core.annotation.NameInMap("enablePublic")
         private Boolean enablePublic;
 
-        @NameInMap("esConfig")
+        @com.aliyun.core.annotation.NameInMap("endtime")
+        private Long endtime;
+
+        @com.aliyun.core.annotation.NameInMap("esConfig")
         private java.util.Map < String, ? > esConfig;
 
-        @NameInMap("esIPBlacklist")
+        @com.aliyun.core.annotation.NameInMap("esIPBlacklist")
         private java.util.List < String > esIPBlacklist;
 
-        @NameInMap("esIPWhitelist")
+        @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
         private java.util.List < String > esIPWhitelist;
 
-        @NameInMap("esVersion")
+        @com.aliyun.core.annotation.NameInMap("esVersion")
         private String esVersion;
 
-        @NameInMap("extendConfigs")
+        @com.aliyun.core.annotation.NameInMap("extendConfigs")
         private java.util.List < java.util.Map<String, ?>> extendConfigs;
 
-        @NameInMap("haveClientNode")
+        @com.aliyun.core.annotation.NameInMap("haveClientNode")
         private Boolean haveClientNode;
 
-        @NameInMap("haveKibana")
+        @com.aliyun.core.annotation.NameInMap("haveKibana")
         private Boolean haveKibana;
 
-        @NameInMap("ikHotDicts")
+        @com.aliyun.core.annotation.NameInMap("ikHotDicts")
         private java.util.List < IkHotDicts> ikHotDicts;
 
-        @NameInMap("instanceCategory")
+        @com.aliyun.core.annotation.NameInMap("instanceCategory")
         private String instanceCategory;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("isNewDeployment")
+        @com.aliyun.core.annotation.NameInMap("isNewDeployment")
         private Boolean isNewDeployment;
 
-        @NameInMap("kibanaConfiguration")
+        @com.aliyun.core.annotation.NameInMap("kibanaConfiguration")
         private KibanaConfiguration kibanaConfiguration;
 
-        @NameInMap("kibanaDomain")
+        @com.aliyun.core.annotation.NameInMap("kibanaDomain")
         private String kibanaDomain;
 
-        @NameInMap("kibanaIPWhitelist")
+        @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
         private java.util.List < String > kibanaIPWhitelist;
 
-        @NameInMap("kibanaPort")
+        @com.aliyun.core.annotation.NameInMap("kibanaPort")
         private Integer kibanaPort;
 
-        @NameInMap("kibanaPrivateIPWhitelist")
+        @com.aliyun.core.annotation.NameInMap("kibanaPrivateDomain")
+        private String kibanaPrivateDomain;
+
+        @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
         private java.util.List < String > kibanaPrivateIPWhitelist;
 
-        @NameInMap("masterConfiguration")
+        @com.aliyun.core.annotation.NameInMap("kibanaPrivatePort")
+        private String kibanaPrivatePort;
+
+        @com.aliyun.core.annotation.NameInMap("masterConfiguration")
         private MasterConfiguration masterConfiguration;
 
-        @NameInMap("networkConfig")
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
 
-        @NameInMap("nodeAmount")
+        @com.aliyun.core.annotation.NameInMap("nodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("nodeSpec")
+        @com.aliyun.core.annotation.NameInMap("nodeSpec")
         private NodeSpec nodeSpec;
 
-        @NameInMap("paymentType")
+        @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("postpaidServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("postpaidServiceStatus")
         private String postpaidServiceStatus;
 
-        @NameInMap("privateNetworkIpWhiteList")
+        @com.aliyun.core.annotation.NameInMap("privateNetworkIpWhiteList")
         private java.util.List < String > privateNetworkIpWhiteList;
 
-        @NameInMap("protocol")
+        @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @NameInMap("publicDomain")
+        @com.aliyun.core.annotation.NameInMap("publicDomain")
         private String publicDomain;
 
-        @NameInMap("publicIpWhitelist")
+        @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
         private java.util.List < String > publicIpWhitelist;
 
-        @NameInMap("publicPort")
+        @com.aliyun.core.annotation.NameInMap("publicPort")
         private Integer publicPort;
 
-        @NameInMap("resourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("serviceVpc")
+        @com.aliyun.core.annotation.NameInMap("serviceVpc")
         private Boolean serviceVpc;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("synonymsDicts")
+        @com.aliyun.core.annotation.NameInMap("synonymsDicts")
         private java.util.List < SynonymsDicts> synonymsDicts;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("vpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("vpcInstanceId")
         private String vpcInstanceId;
 
-        @NameInMap("warmNode")
+        @com.aliyun.core.annotation.NameInMap("warmNode")
         private Boolean warmNode;
 
-        @NameInMap("warmNodeConfiguration")
+        @com.aliyun.core.annotation.NameInMap("warmNodeConfiguration")
         private WarmNodeConfiguration warmNodeConfiguration;
 
-        @NameInMap("zoneCount")
+        @com.aliyun.core.annotation.NameInMap("zoneCount")
         private Integer zoneCount;
 
-        @NameInMap("zoneInfos")
+        @com.aliyun.core.annotation.NameInMap("zoneInfos")
         private java.util.List < ZoneInfos> zoneInfos;
 
         private Result(Builder builder) {
             this.advancedDedicateMaster = builder.advancedDedicateMaster;
             this.advancedSetting = builder.advancedSetting;
             this.aliwsDicts = builder.aliwsDicts;
+            this.archType = builder.archType;
             this.clientNodeConfiguration = builder.clientNodeConfiguration;
             this.createdAt = builder.createdAt;
             this.dedicateMaster = builder.dedicateMaster;
@@ -1657,6 +1886,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.enableKibanaPrivateNetwork = builder.enableKibanaPrivateNetwork;
             this.enableKibanaPublicNetwork = builder.enableKibanaPublicNetwork;
             this.enablePublic = builder.enablePublic;
+            this.endtime = builder.endtime;
             this.esConfig = builder.esConfig;
             this.esIPBlacklist = builder.esIPBlacklist;
             this.esIPWhitelist = builder.esIPWhitelist;
@@ -1672,7 +1902,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.kibanaDomain = builder.kibanaDomain;
             this.kibanaIPWhitelist = builder.kibanaIPWhitelist;
             this.kibanaPort = builder.kibanaPort;
+            this.kibanaPrivateDomain = builder.kibanaPrivateDomain;
             this.kibanaPrivateIPWhitelist = builder.kibanaPrivateIPWhitelist;
+            this.kibanaPrivatePort = builder.kibanaPrivatePort;
             this.masterConfiguration = builder.masterConfiguration;
             this.networkConfig = builder.networkConfig;
             this.nodeAmount = builder.nodeAmount;
@@ -1725,6 +1957,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public java.util.List < AliwsDicts> getAliwsDicts() {
             return this.aliwsDicts;
+        }
+
+        /**
+         * @return archType
+         */
+        public String getArchType() {
+            return this.archType;
         }
 
         /**
@@ -1795,6 +2034,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Boolean getEnablePublic() {
             return this.enablePublic;
+        }
+
+        /**
+         * @return endtime
+         */
+        public Long getEndtime() {
+            return this.endtime;
         }
 
         /**
@@ -1903,10 +2149,24 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return kibanaPrivateDomain
+         */
+        public String getKibanaPrivateDomain() {
+            return this.kibanaPrivateDomain;
+        }
+
+        /**
          * @return kibanaPrivateIPWhitelist
          */
         public java.util.List < String > getKibanaPrivateIPWhitelist() {
             return this.kibanaPrivateIPWhitelist;
+        }
+
+        /**
+         * @return kibanaPrivatePort
+         */
+        public String getKibanaPrivatePort() {
+            return this.kibanaPrivatePort;
         }
 
         /**
@@ -2074,6 +2334,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean advancedDedicateMaster; 
             private AdvancedSetting advancedSetting; 
             private java.util.List < AliwsDicts> aliwsDicts; 
+            private String archType; 
             private ClientNodeConfiguration clientNodeConfiguration; 
             private String createdAt; 
             private Boolean dedicateMaster; 
@@ -2084,6 +2345,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean enableKibanaPrivateNetwork; 
             private Boolean enableKibanaPublicNetwork; 
             private Boolean enablePublic; 
+            private Long endtime; 
             private java.util.Map < String, ? > esConfig; 
             private java.util.List < String > esIPBlacklist; 
             private java.util.List < String > esIPWhitelist; 
@@ -2099,7 +2361,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String kibanaDomain; 
             private java.util.List < String > kibanaIPWhitelist; 
             private Integer kibanaPort; 
+            private String kibanaPrivateDomain; 
             private java.util.List < String > kibanaPrivateIPWhitelist; 
+            private String kibanaPrivatePort; 
             private MasterConfiguration masterConfiguration; 
             private NetworkConfig networkConfig; 
             private Integer nodeAmount; 
@@ -2145,6 +2409,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder aliwsDicts(java.util.List < AliwsDicts> aliwsDicts) {
                 this.aliwsDicts = aliwsDicts;
+                return this;
+            }
+
+            /**
+             * archType.
+             */
+            public Builder archType(String archType) {
+                this.archType = archType;
                 return this;
             }
 
@@ -2225,6 +2497,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder enablePublic(Boolean enablePublic) {
                 this.enablePublic = enablePublic;
+                return this;
+            }
+
+            /**
+             * endtime.
+             */
+            public Builder endtime(Long endtime) {
+                this.endtime = endtime;
                 return this;
             }
 
@@ -2349,10 +2629,26 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * kibanaPrivateDomain.
+             */
+            public Builder kibanaPrivateDomain(String kibanaPrivateDomain) {
+                this.kibanaPrivateDomain = kibanaPrivateDomain;
+                return this;
+            }
+
+            /**
              * kibanaPrivateIPWhitelist.
              */
             public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
                 this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
+                return this;
+            }
+
+            /**
+             * kibanaPrivatePort.
+             */
+            public Builder kibanaPrivatePort(String kibanaPrivatePort) {
+                this.kibanaPrivatePort = kibanaPrivatePort;
                 return this;
             }
 

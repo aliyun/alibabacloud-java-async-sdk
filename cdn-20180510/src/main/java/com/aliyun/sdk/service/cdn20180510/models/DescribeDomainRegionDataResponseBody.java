@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRegionDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRegionDataResponseBody</p>
  */
 public class DescribeDomainRegionDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private Value value;
 
     private DescribeDomainRegionDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         private Value value; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range for which the data was queried.
+         * <p>The end of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-07T12:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2E5AD83F-BD7B-462E-8319-2E30E305519A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range for which the data was queried.
+         * <p>The beginning of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-05T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +153,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The proportions of requests initiated from each region.
+         * <p>The proportions of requests initiated from each region.</p>
          */
         public Builder value(Value value) {
             this.value = value;
@@ -151,41 +166,47 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainRegionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRegionDataResponseBody</p>
+     */
     public static class RegionProportionData extends TeaModel {
-        @NameInMap("AvgObjectSize")
+        @com.aliyun.core.annotation.NameInMap("AvgObjectSize")
         private String avgObjectSize;
 
-        @NameInMap("AvgResponseRate")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseRate")
         private String avgResponseRate;
 
-        @NameInMap("AvgResponseTime")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseTime")
         private String avgResponseTime;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private String bps;
 
-        @NameInMap("BytesProportion")
+        @com.aliyun.core.annotation.NameInMap("BytesProportion")
         private String bytesProportion;
 
-        @NameInMap("Proportion")
+        @com.aliyun.core.annotation.NameInMap("Proportion")
         private String proportion;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private String qps;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionEname")
+        @com.aliyun.core.annotation.NameInMap("RegionEname")
         private String regionEname;
 
-        @NameInMap("ReqErrRate")
+        @com.aliyun.core.annotation.NameInMap("ReqErrRate")
         private String reqErrRate;
 
-        @NameInMap("TotalBytes")
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private String totalBytes;
 
-        @NameInMap("TotalQuery")
+        @com.aliyun.core.annotation.NameInMap("TotalQuery")
         private String totalQuery;
 
         private RegionProportionData(Builder builder) {
@@ -310,7 +331,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             private String totalQuery; 
 
             /**
-             * The average response size. Unit: bytes.
+             * <p>The average response size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>800019.0</p>
              */
             public Builder avgObjectSize(String avgObjectSize) {
                 this.avgObjectSize = avgObjectSize;
@@ -318,7 +342,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average response speed. Unit: bit/s.
+             * <p>The average response speed. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>154.3345765545624</p>
              */
             public Builder avgResponseRate(String avgResponseRate) {
                 this.avgResponseRate = avgResponseRate;
@@ -326,7 +353,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average response time. Unit: milliseconds.
+             * <p>The average response time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5183.666666666667</p>
              */
             public Builder avgResponseTime(String avgResponseTime) {
                 this.avgResponseTime = avgResponseTime;
@@ -334,7 +364,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth.
+             * <p>The bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>380.9614285714286</p>
              */
             public Builder bps(String bps) {
                 this.bps = bps;
@@ -342,7 +375,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of traffic from the region. For example, a value of 90 indicates that 90% of the traffic is from the region.
+             * <p>The proportion of traffic from the region. For example, a value of 90 indicates that 90% of the traffic is from the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.003544181046236794</p>
              */
             public Builder bytesProportion(String bytesProportion) {
                 this.bytesProportion = bytesProportion;
@@ -350,7 +386,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits from the region. For example, a value of 90 indicates that 90% of the visits are from the region.
+             * <p>The proportion of visits from the region. For example, a value of 90 indicates that 90% of the visits are from the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01155980271270037</p>
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -358,7 +397,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second.
+             * <p>The number of queries per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.9523809523809524E-5</p>
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -366,7 +408,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the region.
+             * <p>The information about the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Japan</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -374,7 +419,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>japan</p>
              */
             public Builder regionEname(String regionEname) {
                 this.regionEname = regionEname;
@@ -382,7 +430,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The request error rate. A value of 90 indicates that 90% of the requests encountered errors.
+             * <p>The request error rate. A value of 90 indicates that 90% of the requests encountered errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder reqErrRate(String reqErrRate) {
                 this.reqErrRate = reqErrRate;
@@ -390,7 +441,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total traffic. Unit: bytes.
+             * <p>The total traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2400057</p>
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;
@@ -398,7 +452,10 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalQuery(String totalQuery) {
                 this.totalQuery = totalQuery;
@@ -412,8 +469,14 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainRegionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRegionDataResponseBody</p>
+     */
     public static class Value extends TeaModel {
-        @NameInMap("RegionProportionData")
+        @com.aliyun.core.annotation.NameInMap("RegionProportionData")
         private java.util.List < RegionProportionData> regionProportionData;
 
         private Value(Builder builder) {

@@ -1,81 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundResult} extends {@link TeaModel}
  *
  * <p>RefundResult</p>
  */
 public class RefundResult extends TeaModel {
-    @NameInMap("applyDisputeDesc")
+    @com.aliyun.core.annotation.NameInMap("applyDisputeDesc")
     private String applyDisputeDesc;
 
-    @NameInMap("applyReason")
+    @com.aliyun.core.annotation.NameInMap("applyReason")
     private ApplyReason applyReason;
 
-    @NameInMap("bizClaimType")
+    @com.aliyun.core.annotation.NameInMap("bizClaimType")
     private Integer bizClaimType;
 
-    @NameInMap("disputeCreateTime")
+    @com.aliyun.core.annotation.NameInMap("disputeCreateTime")
     private String disputeCreateTime;
 
-    @NameInMap("disputeDesc")
+    @com.aliyun.core.annotation.NameInMap("disputeDesc")
     private String disputeDesc;
 
-    @NameInMap("disputeEndTime")
+    @com.aliyun.core.annotation.NameInMap("disputeEndTime")
     private String disputeEndTime;
 
-    @NameInMap("disputeId")
+    @com.aliyun.core.annotation.NameInMap("disputeId")
     private String disputeId;
 
-    @NameInMap("disputeStatus")
+    @com.aliyun.core.annotation.NameInMap("disputeStatus")
     private Integer disputeStatus;
 
-    @NameInMap("orderId")
+    @com.aliyun.core.annotation.NameInMap("orderId")
     private String orderId;
 
-    @NameInMap("orderLineId")
+    @com.aliyun.core.annotation.NameInMap("orderLineId")
     private String orderLineId;
 
-    @NameInMap("orderLogisticsStatus")
+    @com.aliyun.core.annotation.NameInMap("orderLogisticsStatus")
     private Integer orderLogisticsStatus;
 
-    @NameInMap("refundFee")
+    @com.aliyun.core.annotation.NameInMap("refundFee")
     private Long refundFee;
 
-    @NameInMap("refundFeeData")
+    @com.aliyun.core.annotation.NameInMap("refundFeeData")
     private RefundFeeData refundFeeData;
 
-    @NameInMap("refunderAddress")
+    @com.aliyun.core.annotation.NameInMap("refunderAddress")
     private String refunderAddress;
 
-    @NameInMap("refunderName")
+    @com.aliyun.core.annotation.NameInMap("refunderName")
     private String refunderName;
 
-    @NameInMap("refunderTel")
+    @com.aliyun.core.annotation.NameInMap("refunderTel")
     private String refunderTel;
 
-    @NameInMap("refunderZipCode")
+    @com.aliyun.core.annotation.NameInMap("refunderZipCode")
     private String refunderZipCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("returnGoodLogisticsStatus")
+    @com.aliyun.core.annotation.NameInMap("returnGoodLogisticsStatus")
     private Integer returnGoodLogisticsStatus;
 
-    @NameInMap("sellerAgreeMsg")
+    @com.aliyun.core.annotation.NameInMap("sellerAgreeMsg")
     private String sellerAgreeMsg;
 
-    @NameInMap("sellerRefuseAgreementMessage")
+    @com.aliyun.core.annotation.NameInMap("sellerRefuseAgreementMessage")
     private String sellerRefuseAgreementMessage;
 
-    @NameInMap("sellerRefuseReason")
+    @com.aliyun.core.annotation.NameInMap("sellerRefuseReason")
     private String sellerRefuseReason;
 
     private RefundResult(Builder builder) {

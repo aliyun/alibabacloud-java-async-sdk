@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterGroupResponseBody</p>
  */
 public class DescribeParameterGroupResponseBody extends TeaModel {
-    @NameInMap("ParamGroup")
+    @com.aliyun.core.annotation.NameInMap("ParamGroup")
     private ParamGroup paramGroup;
 
-    @NameInMap("RelatedCustinsInfo")
+    @com.aliyun.core.annotation.NameInMap("RelatedCustinsInfo")
     private RelatedCustinsInfo relatedCustinsInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterGroupResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the parameter template.
+         * <p>The information about the parameter template.</p>
          */
         public Builder paramGroup(ParamGroup paramGroup) {
             this.paramGroup = paramGroup;
@@ -70,10 +75,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instance to which the parameter template is applied.
-         * <p>
-         * 
-         * >  This parameter is available only for ApsaraDB RDS for PostgreSQL instances.
+         * <p>The information about the instance to which the parameter template is applied.</p>
+         * <blockquote>
+         * <p> This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
+         * </blockquote>
          */
         public Builder relatedCustinsInfo(RelatedCustinsInfo relatedCustinsInfo) {
             this.relatedCustinsInfo = relatedCustinsInfo;
@@ -81,7 +86,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>498AE8CA-8C81-4A01-AF37-2B902014ED30</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,11 +102,17 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupResponseBody</p>
+     */
     public static class ParameterDetail extends TeaModel {
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private ParameterDetail(Builder builder) {
@@ -133,7 +147,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String paramValue; 
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>back_log</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -141,7 +158,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -155,9 +175,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupResponseBody</p>
+     */
     public static class ParamDetail extends TeaModel {
-        @NameInMap("ParameterDetail")
-        private java.util.List < ParameterDetail> parameterDetail;
+        @com.aliyun.core.annotation.NameInMap("ParameterDetail")
+        private java.util.List<ParameterDetail> parameterDetail;
 
         private ParamDetail(Builder builder) {
             this.parameterDetail = builder.parameterDetail;
@@ -174,17 +200,17 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         /**
          * @return parameterDetail
          */
-        public java.util.List < ParameterDetail> getParameterDetail() {
+        public java.util.List<ParameterDetail> getParameterDetail() {
             return this.parameterDetail;
         }
 
         public static final class Builder {
-            private java.util.List < ParameterDetail> parameterDetail; 
+            private java.util.List<ParameterDetail> parameterDetail; 
 
             /**
              * ParameterDetail.
              */
-            public Builder parameterDetail(java.util.List < ParameterDetail> parameterDetail) {
+            public Builder parameterDetail(java.util.List<ParameterDetail> parameterDetail) {
                 this.parameterDetail = parameterDetail;
                 return this;
             }
@@ -196,38 +222,44 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupResponseBody</p>
+     */
     public static class ParameterGroup extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Integer forceRestart;
 
-        @NameInMap("ParamCounts")
+        @com.aliyun.core.annotation.NameInMap("ParamCounts")
         private Integer paramCounts;
 
-        @NameInMap("ParamDetail")
+        @com.aliyun.core.annotation.NameInMap("ParamDetail")
         private ParamDetail paramDetail;
 
-        @NameInMap("ParameterGroupDesc")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
 
-        @NameInMap("ParameterGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
         private String parameterGroupId;
 
-        @NameInMap("ParameterGroupName")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
         private String parameterGroupName;
 
-        @NameInMap("ParameterGroupType")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupType")
         private Integer parameterGroupType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ParameterGroup(Builder builder) {
@@ -343,7 +375,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the parameter template was created.
+             * <p>The time when the parameter template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-22T06:02:53Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -351,7 +386,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -359,7 +397,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * <p>The database engine version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -367,11 +408,14 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the restart of an instance is required for the parameter template to take effect. Valid values:
-             * <p>
+             * <p>Indicates whether the restart of an instance is required for the parameter template to take effect. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: A restart is not required.</li>
+             * <li><strong>1</strong>: A restart is required.</li>
+             * </ul>
              * 
-             * *   **0**: A restart is not required.
-             * *   **1**: A restart is required.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder forceRestart(Integer forceRestart) {
                 this.forceRestart = forceRestart;
@@ -379,7 +423,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The number of parameters in the parameter template.
+             * <p>The number of parameters in the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paramCounts(Integer paramCounts) {
                 this.paramCounts = paramCounts;
@@ -387,7 +434,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the parameters.
+             * <p>The details of the parameters.</p>
              */
             public Builder paramDetail(ParamDetail paramDetail) {
                 this.paramDetail = paramDetail;
@@ -395,7 +442,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter template.
+             * <p>The description of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGroup1</p>
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -403,7 +453,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parameter template.
+             * <p>The ID of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rpg-dp****</p>
              */
             public Builder parameterGroupId(String parameterGroupId) {
                 this.parameterGroupId = parameterGroupId;
@@ -411,7 +464,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter template.
+             * <p>The name of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123456</p>
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -419,12 +475,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter template. Valid values:
-             * <p>
+             * <p>The type of the parameter template. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: the default parameter template.</li>
+             * <li><strong>1</strong>: a custom parameter template.</li>
+             * <li><strong>2</strong>: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</li>
+             * </ul>
              * 
-             * *   **0**: the default parameter template.
-             * *   **1**: a custom parameter template.
-             * *   **2**: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterGroupType(Integer parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;
@@ -432,7 +491,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the parameter template was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the parameter template was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-22T06:07:54Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -446,9 +508,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupResponseBody</p>
+     */
     public static class ParamGroup extends TeaModel {
-        @NameInMap("ParameterGroup")
-        private java.util.List < ParameterGroup> parameterGroup;
+        @com.aliyun.core.annotation.NameInMap("ParameterGroup")
+        private java.util.List<ParameterGroup> parameterGroup;
 
         private ParamGroup(Builder builder) {
             this.parameterGroup = builder.parameterGroup;
@@ -465,17 +533,17 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         /**
          * @return parameterGroup
          */
-        public java.util.List < ParameterGroup> getParameterGroup() {
+        public java.util.List<ParameterGroup> getParameterGroup() {
             return this.parameterGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ParameterGroup> parameterGroup; 
+            private java.util.List<ParameterGroup> parameterGroup; 
 
             /**
              * ParameterGroup.
              */
-            public Builder parameterGroup(java.util.List < ParameterGroup> parameterGroup) {
+            public Builder parameterGroup(java.util.List<ParameterGroup> parameterGroup) {
                 this.parameterGroup = parameterGroup;
                 return this;
             }
@@ -487,11 +555,17 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupResponseBody</p>
+     */
     public static class RelatedCustinsInfoRelatedCustinsInfo extends TeaModel {
-        @NameInMap("AppliedTime")
+        @com.aliyun.core.annotation.NameInMap("AppliedTime")
         private String appliedTime;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
         private RelatedCustinsInfoRelatedCustinsInfo(Builder builder) {
@@ -526,7 +600,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String DBInstanceName; 
 
             /**
-             * The time when the parameter template was applied.
+             * <p>The time when the parameter template was applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-17T03:19:02Z</p>
              */
             public Builder appliedTime(String appliedTime) {
                 this.appliedTime = appliedTime;
@@ -534,7 +611,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp170****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -548,9 +628,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupResponseBody</p>
+     */
     public static class RelatedCustinsInfo extends TeaModel {
-        @NameInMap("RelatedCustinsInfo")
-        private java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo;
+        @com.aliyun.core.annotation.NameInMap("RelatedCustinsInfo")
+        private java.util.List<RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo;
 
         private RelatedCustinsInfo(Builder builder) {
             this.relatedCustinsInfo = builder.relatedCustinsInfo;
@@ -567,20 +653,20 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         /**
          * @return relatedCustinsInfo
          */
-        public java.util.List < RelatedCustinsInfoRelatedCustinsInfo> getRelatedCustinsInfo() {
+        public java.util.List<RelatedCustinsInfoRelatedCustinsInfo> getRelatedCustinsInfo() {
             return this.relatedCustinsInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo; 
+            private java.util.List<RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo; 
 
             /**
-             * The information about the instance to which the parameter template is applied.
-             * <p>
-             * 
-             * >  This parameter is available only for ApsaraDB RDS for PostgreSQL instances.
+             * <p>The information about the instance to which the parameter template is applied.</p>
+             * <blockquote>
+             * <p> This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
+             * </blockquote>
              */
-            public Builder relatedCustinsInfo(java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo) {
+            public Builder relatedCustinsInfo(java.util.List<RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo) {
                 this.relatedCustinsInfo = relatedCustinsInfo;
                 return this;
             }

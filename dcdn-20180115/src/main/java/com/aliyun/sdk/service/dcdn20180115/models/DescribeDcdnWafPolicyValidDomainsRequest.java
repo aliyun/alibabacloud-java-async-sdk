@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafPolicyValidDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafPolicyValidDomainsRequest</p>
  */
 public class DescribeDcdnWafPolicyValidDomainsRequest extends Request {
-    @Query
-    @NameInMap("DefenseScene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseScene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String defenseScene;
 
-    @Query
-    @NameInMap("DomainNameLike")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNameLike")
     private String domainNameLike;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer pageSize;
 
     private DescribeDcdnWafPolicyValidDomainsRequest(Builder builder) {
@@ -98,15 +98,19 @@ public class DescribeDcdnWafPolicyValidDomainsRequest extends Request {
         } 
 
         /**
-         * The type of the Web Application Firewall (WAF) protection policy. Valid values:
-         * <p>
+         * <p>The type of the Web Application Firewall (WAF) protection policy. Valid values:</p>
+         * <ul>
+         * <li>waf_group: basic web protection</li>
+         * <li>custom_acl: custom protection</li>
+         * <li>whitelist: IP address whitelist</li>
+         * <li>ip_blacklist: IP address blacklist</li>
+         * <li>region_block: region blacklist</li>
+         * <li>bot: bot management</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   waf_group: basic web protection
-         * *   custom_acl: custom protection
-         * *   whitelist: IP address whitelist
-         * *   ip_blacklist: IP address blacklist
-         * *   region_block: region blacklist
-         * *   bot: bot management
+         * <strong>example:</strong>
+         * <p>custom_acl</p>
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -115,7 +119,10 @@ public class DescribeDcdnWafPolicyValidDomainsRequest extends Request {
         }
 
         /**
-         * The protected domain name. Fuzzy search is supported.
+         * <p>The protected domain name. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainNameLike(String domainNameLike) {
             this.putQueryParameter("DomainNameLike", domainNameLike);
@@ -124,7 +131,10 @@ public class DescribeDcdnWafPolicyValidDomainsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.
+         * <p>The page number of the returned page. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -133,7 +143,10 @@ public class DescribeDcdnWafPolicyValidDomainsRequest extends Request {
         }
 
         /**
-         * The number of domain names to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.
+         * <p>The number of domain names to return on each page. Valid values: an integer from <strong>1</strong> to <strong>500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

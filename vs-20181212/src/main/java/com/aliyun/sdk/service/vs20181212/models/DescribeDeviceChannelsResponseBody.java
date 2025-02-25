@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceChannelsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeviceChannelsResponseBody</p>
  */
 public class DescribeDeviceChannelsResponseBody extends TeaModel {
-    @NameInMap("Channels")
-    private java.util.List < Channels> channels;
+    @com.aliyun.core.annotation.NameInMap("Channels")
+    private java.util.List<Channels> channels;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDeviceChannelsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     /**
      * @return channels
      */
-    public java.util.List < Channels> getChannels() {
+    public java.util.List<Channels> getChannels() {
         return this.channels;
     }
 
@@ -90,7 +95,7 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Channels> channels; 
+        private java.util.List<Channels> channels; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -100,7 +105,7 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         /**
          * Channels.
          */
-        public Builder channels(java.util.List < Channels> channels) {
+        public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
             return this;
         }
@@ -151,29 +156,35 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeviceChannelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceChannelsResponseBody</p>
+     */
     public static class Channels extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private Long channelId;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceStatus")
+        @com.aliyun.core.annotation.NameInMap("DeviceStatus")
         private String deviceStatus;
 
-        @NameInMap("GbId")
+        @com.aliyun.core.annotation.NameInMap("GbId")
         private String gbId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Params")
+        @com.aliyun.core.annotation.NameInMap("Params")
         private String params;
 
-        @NameInMap("StreamId")
+        @com.aliyun.core.annotation.NameInMap("StreamId")
         private String streamId;
 
-        @NameInMap("StreamStatus")
+        @com.aliyun.core.annotation.NameInMap("StreamStatus")
         private String streamStatus;
 
         private Channels(Builder builder) {

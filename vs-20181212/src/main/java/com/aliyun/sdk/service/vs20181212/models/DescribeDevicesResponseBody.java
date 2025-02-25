@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDevicesResponseBody</p>
  */
 public class DescribeDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
-    private java.util.List < Devices> devices;
+    @com.aliyun.core.annotation.NameInMap("Devices")
+    private java.util.List<Devices> devices;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDevicesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
     /**
      * @return devices
      */
-    public java.util.List < Devices> getDevices() {
+    public java.util.List<Devices> getDevices() {
         return this.devices;
     }
 
@@ -90,7 +95,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Devices> devices; 
+        private java.util.List<Devices> devices; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -100,7 +105,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         /**
          * Devices.
          */
-        public Builder devices(java.util.List < Devices> devices) {
+        public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
             return this;
         }
@@ -151,23 +156,29 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class Directory extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
         private Directory(Builder builder) {
@@ -292,20 +303,26 @@ public class DescribeDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class Stats extends TeaModel {
-        @NameInMap("ChannelNum")
+        @com.aliyun.core.annotation.NameInMap("ChannelNum")
         private Long channelNum;
 
-        @NameInMap("FailedNum")
+        @com.aliyun.core.annotation.NameInMap("FailedNum")
         private Long failedNum;
 
-        @NameInMap("OfflineNum")
+        @com.aliyun.core.annotation.NameInMap("OfflineNum")
         private Long offlineNum;
 
-        @NameInMap("OnlineNum")
+        @com.aliyun.core.annotation.NameInMap("OnlineNum")
         private Long onlineNum;
 
-        @NameInMap("StreamNum")
+        @com.aliyun.core.annotation.NameInMap("StreamNum")
         private Long streamNum;
 
         private Stats(Builder builder) {
@@ -413,98 +430,104 @@ public class DescribeDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class Devices extends TeaModel {
-        @NameInMap("AlarmMethod")
+        @com.aliyun.core.annotation.NameInMap("AlarmMethod")
         private String alarmMethod;
 
-        @NameInMap("AutoDirectory")
+        @com.aliyun.core.annotation.NameInMap("AutoDirectory")
         private Boolean autoDirectory;
 
-        @NameInMap("AutoPos")
+        @com.aliyun.core.annotation.NameInMap("AutoPos")
         private Boolean autoPos;
 
-        @NameInMap("AutoStart")
+        @com.aliyun.core.annotation.NameInMap("AutoStart")
         private Boolean autoStart;
 
-        @NameInMap("ChannelSyncTime")
+        @com.aliyun.core.annotation.NameInMap("ChannelSyncTime")
         private String channelSyncTime;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("Dsn")
+        @com.aliyun.core.annotation.NameInMap("Dsn")
         private String dsn;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("GbId")
+        @com.aliyun.core.annotation.NameInMap("GbId")
         private String gbId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Latitude")
+        @com.aliyun.core.annotation.NameInMap("Latitude")
         private String latitude;
 
-        @NameInMap("Longitude")
+        @com.aliyun.core.annotation.NameInMap("Longitude")
         private String longitude;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Params")
+        @com.aliyun.core.annotation.NameInMap("Params")
         private String params;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("PosInterval")
+        @com.aliyun.core.annotation.NameInMap("PosInterval")
         private Long posInterval;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RegisteredTime")
+        @com.aliyun.core.annotation.NameInMap("RegisteredTime")
         private String registeredTime;
 
-        @NameInMap("Stats")
+        @com.aliyun.core.annotation.NameInMap("Stats")
         private Stats stats;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
         private Devices(Builder builder) {

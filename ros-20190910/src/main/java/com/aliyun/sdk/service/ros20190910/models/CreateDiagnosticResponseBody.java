@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiagnosticResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDiagnosticResponseBody</p>
  */
 public class CreateDiagnosticResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DiagnosticType")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticType")
     private String diagnosticType;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CreateDiagnosticResponseBody(Builder builder) {
@@ -110,7 +110,10 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +121,10 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticType.
+         * <p>The type of the item that is diagnosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stack</p>
          */
         public Builder diagnosticType(String diagnosticType) {
             this.diagnosticType = diagnosticType;
@@ -126,7 +132,10 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +143,10 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to complete this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +154,10 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * ReportId.
+         * <p>The ID of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-e94e39a1274d44b6****</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -150,7 +165,10 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>943B24D7-1A67-55A4-B045-818F90693D3A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +176,14 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

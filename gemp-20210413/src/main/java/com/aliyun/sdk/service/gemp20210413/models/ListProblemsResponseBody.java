@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProblemsResponseBody</p>
  */
 public class ListProblemsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListProblemsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListProblemsResponseBody extends TeaModel {
     } 
 
     public static class AffectServices extends TeaModel {
-        @NameInMap("serviceDescription")
+        @com.aliyun.core.annotation.NameInMap("serviceDescription")
         private String serviceDescription;
 
-        @NameInMap("serviceId")
+        @com.aliyun.core.annotation.NameInMap("serviceId")
         private Long serviceId;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private AffectServices(Builder builder) {
@@ -233,70 +232,70 @@ public class ListProblemsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("affectServices")
+        @com.aliyun.core.annotation.NameInMap("affectServices")
         private java.util.List < AffectServices> affectServices;
 
-        @NameInMap("cancelTime")
+        @com.aliyun.core.annotation.NameInMap("cancelTime")
         private String cancelTime;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("discoverTime")
+        @com.aliyun.core.annotation.NameInMap("discoverTime")
         private String discoverTime;
 
-        @NameInMap("finishTime")
+        @com.aliyun.core.annotation.NameInMap("finishTime")
         private String finishTime;
 
-        @NameInMap("incidentId")
+        @com.aliyun.core.annotation.NameInMap("incidentId")
         private Long incidentId;
 
-        @NameInMap("isManual")
+        @com.aliyun.core.annotation.NameInMap("isManual")
         private Boolean isManual;
 
-        @NameInMap("isUpgrade")
+        @com.aliyun.core.annotation.NameInMap("isUpgrade")
         private Boolean isUpgrade;
 
-        @NameInMap("mainHandlerId")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerId")
         private Long mainHandlerId;
 
-        @NameInMap("mainHandlerIsValid")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerIsValid")
         private Long mainHandlerIsValid;
 
-        @NameInMap("mainHandlerName")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerName")
         private String mainHandlerName;
 
-        @NameInMap("problemId")
+        @com.aliyun.core.annotation.NameInMap("problemId")
         private Long problemId;
 
-        @NameInMap("problemLevel")
+        @com.aliyun.core.annotation.NameInMap("problemLevel")
         private String problemLevel;
 
-        @NameInMap("problemName")
+        @com.aliyun.core.annotation.NameInMap("problemName")
         private String problemName;
 
-        @NameInMap("problemNumber")
+        @com.aliyun.core.annotation.NameInMap("problemNumber")
         private String problemNumber;
 
-        @NameInMap("problemStatus")
+        @com.aliyun.core.annotation.NameInMap("problemStatus")
         private String problemStatus;
 
-        @NameInMap("recoveryTime")
+        @com.aliyun.core.annotation.NameInMap("recoveryTime")
         private String recoveryTime;
 
-        @NameInMap("relatedServiceId")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceId")
         private String relatedServiceId;
 
-        @NameInMap("replayTime")
+        @com.aliyun.core.annotation.NameInMap("replayTime")
         private String replayTime;
 
-        @NameInMap("serviceDeletedType")
+        @com.aliyun.core.annotation.NameInMap("serviceDeletedType")
         private Integer serviceDeletedType;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Data(Builder builder) {

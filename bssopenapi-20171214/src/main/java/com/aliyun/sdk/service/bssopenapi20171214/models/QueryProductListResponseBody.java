@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryProductListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryProductListResponseBody</p>
  */
 public class QueryProductListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryProductListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryProductListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about all Alibaba Cloud services.
+         * <p>The information about all Alibaba Cloud services.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This API is not applicable for caller.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94858229-2758-4663-A7D0-99490D541F15</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +148,23 @@ public class QueryProductListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryProductListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProductListResponseBody</p>
+     */
     public static class Product extends TeaModel {
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
         private Product(Builder builder) {
@@ -194,7 +217,10 @@ public class QueryProductListResponseBody extends TeaModel {
             private String subscriptionType; 
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdn</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -202,7 +228,10 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDN (Pay-as-you-go)</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -210,7 +239,10 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * <p>The type of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDN</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -218,11 +250,14 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription: subscription</li>
+             * <li>PayAsYouGo: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   Subscription: subscription
-             * *   PayAsYouGo: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -236,9 +271,15 @@ public class QueryProductListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryProductListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProductListResponseBody</p>
+     */
     public static class ProductList extends TeaModel {
-        @NameInMap("Product")
-        private java.util.List < Product> product;
+        @com.aliyun.core.annotation.NameInMap("Product")
+        private java.util.List<Product> product;
 
         private ProductList(Builder builder) {
             this.product = builder.product;
@@ -255,17 +296,17 @@ public class QueryProductListResponseBody extends TeaModel {
         /**
          * @return product
          */
-        public java.util.List < Product> getProduct() {
+        public java.util.List<Product> getProduct() {
             return this.product;
         }
 
         public static final class Builder {
-            private java.util.List < Product> product; 
+            private java.util.List<Product> product; 
 
             /**
              * Product.
              */
-            public Builder product(java.util.List < Product> product) {
+            public Builder product(java.util.List<Product> product) {
                 this.product = product;
                 return this;
             }
@@ -277,17 +318,23 @@ public class QueryProductListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryProductListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryProductListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ProductList")
+        @com.aliyun.core.annotation.NameInMap("ProductList")
         private ProductList productList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -340,7 +387,10 @@ public class QueryProductListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -348,7 +398,10 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -356,7 +409,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * The service definitions.
+             * <p>The service definitions.</p>
              */
             public Builder productList(ProductList productList) {
                 this.productList = productList;
@@ -364,7 +417,10 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of services.
+             * <p>The total number of services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>449</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,79 +1,84 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Quota} extends {@link TeaModel}
  *
  * <p>Quota</p>
  */
 public class Quota extends TeaModel {
-    @NameInMap("AllocateStrategy")
+    @com.aliyun.core.annotation.NameInMap("AllocateStrategy")
     private String allocateStrategy;
 
-    @NameInMap("CreatorId")
+    @com.aliyun.core.annotation.NameInMap("CreatorId")
     private String creatorId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Labels")
-    private java.util.List < Label > labels;
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Label> labels;
 
-    @NameInMap("LatestOperationId")
+    @com.aliyun.core.annotation.NameInMap("LatestOperationId")
     private String latestOperationId;
 
-    @NameInMap("Min")
+    @com.aliyun.core.annotation.NameInMap("Min")
     private ResourceSpec min;
 
-    @NameInMap("ParentQuotaId")
+    @com.aliyun.core.annotation.NameInMap("ParentQuotaId")
     private String parentQuotaId;
 
-    @NameInMap("QueueStrategy")
+    @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
 
-    @NameInMap("QuotaConfig")
+    @com.aliyun.core.annotation.NameInMap("QuotaConfig")
     private QuotaConfig quotaConfig;
 
-    @NameInMap("QuotaDetails")
+    @com.aliyun.core.annotation.NameInMap("QuotaDetails")
     private QuotaDetails quotaDetails;
 
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @NameInMap("QuotaName")
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
     private String quotaName;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("ResourceGroupIds")
-    private java.util.List < String > resourceGroupIds;
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
+    private java.util.List<String> resourceGroupIds;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SubQuotas")
-    private java.util.List < QuotaIdName > subQuotas;
+    @com.aliyun.core.annotation.NameInMap("SubQuotas")
+    private java.util.List<QuotaIdName> subQuotas;
 
-    @NameInMap("Workspaces")
-    private java.util.List < WorkspaceIdName > workspaces;
+    @com.aliyun.core.annotation.NameInMap("Workspaces")
+    private java.util.List<WorkspaceIdName> workspaces;
 
     private Quota(Builder builder) {
         this.allocateStrategy = builder.allocateStrategy;
@@ -145,7 +150,7 @@ public class Quota extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -222,7 +227,7 @@ public class Quota extends TeaModel {
     /**
      * @return resourceGroupIds
      */
-    public java.util.List < String > getResourceGroupIds() {
+    public java.util.List<String> getResourceGroupIds() {
         return this.resourceGroupIds;
     }
 
@@ -243,14 +248,14 @@ public class Quota extends TeaModel {
     /**
      * @return subQuotas
      */
-    public java.util.List < QuotaIdName > getSubQuotas() {
+    public java.util.List<QuotaIdName> getSubQuotas() {
         return this.subQuotas;
     }
 
     /**
      * @return workspaces
      */
-    public java.util.List < WorkspaceIdName > getWorkspaces() {
+    public java.util.List<WorkspaceIdName> getWorkspaces() {
         return this.workspaces;
     }
 
@@ -260,7 +265,7 @@ public class Quota extends TeaModel {
         private String description; 
         private String gmtCreatedTime; 
         private String gmtModifiedTime; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private String latestOperationId; 
         private ResourceSpec min; 
         private String parentQuotaId; 
@@ -271,11 +276,11 @@ public class Quota extends TeaModel {
         private String quotaName; 
         private String reasonCode; 
         private String reasonMessage; 
-        private java.util.List < String > resourceGroupIds; 
+        private java.util.List<String> resourceGroupIds; 
         private String resourceType; 
         private String status; 
-        private java.util.List < QuotaIdName > subQuotas; 
-        private java.util.List < WorkspaceIdName > workspaces; 
+        private java.util.List<QuotaIdName> subQuotas; 
+        private java.util.List<WorkspaceIdName> workspaces; 
 
         /**
          * AllocateStrategy.
@@ -320,7 +325,7 @@ public class Quota extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
             return this;
         }
@@ -408,7 +413,7 @@ public class Quota extends TeaModel {
         /**
          * ResourceGroupIds.
          */
-        public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
+        public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.resourceGroupIds = resourceGroupIds;
             return this;
         }
@@ -432,7 +437,7 @@ public class Quota extends TeaModel {
         /**
          * SubQuotas.
          */
-        public Builder subQuotas(java.util.List < QuotaIdName > subQuotas) {
+        public Builder subQuotas(java.util.List<QuotaIdName> subQuotas) {
             this.subQuotas = subQuotas;
             return this;
         }
@@ -440,7 +445,7 @@ public class Quota extends TeaModel {
         /**
          * Workspaces.
          */
-        public Builder workspaces(java.util.List < WorkspaceIdName > workspaces) {
+        public Builder workspaces(java.util.List<WorkspaceIdName> workspaces) {
             this.workspaces = workspaces;
             return this;
         }

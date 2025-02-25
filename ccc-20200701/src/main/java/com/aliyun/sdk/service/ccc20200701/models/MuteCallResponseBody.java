@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MuteCallResponseBody} extends {@link TeaModel}
  *
  * <p>MuteCallResponseBody</p>
  */
 public class MuteCallResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
-    private java.util.List < String > params;
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private java.util.List<String> params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private MuteCallResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class MuteCallResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class MuteCallResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class MuteCallResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -151,44 +156,53 @@ public class MuteCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MuteCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>MuteCallResponseBody</p>
+     */
     public static class ChannelContexts extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("ChannelFlags")
+        @com.aliyun.core.annotation.NameInMap("ChannelFlags")
         private String channelFlags;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelState")
+        @com.aliyun.core.annotation.NameInMap("ChannelState")
         private String channelState;
 
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private String originator;
 
-        @NameInMap("ReleaseInitiator")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInitiator")
         private String releaseInitiator;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+        private String skillGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UserExtension")
+        @com.aliyun.core.annotation.NameInMap("UserExtension")
         private String userExtension;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ChannelContexts(Builder builder) {
@@ -202,6 +216,7 @@ public class MuteCallResponseBody extends TeaModel {
             this.originator = builder.originator;
             this.releaseInitiator = builder.releaseInitiator;
             this.releaseReason = builder.releaseReason;
+            this.skillGroupId = builder.skillGroupId;
             this.timestamp = builder.timestamp;
             this.userExtension = builder.userExtension;
             this.userId = builder.userId;
@@ -286,6 +301,13 @@ public class MuteCallResponseBody extends TeaModel {
         }
 
         /**
+         * @return skillGroupId
+         */
+        public String getSkillGroupId() {
+            return this.skillGroupId;
+        }
+
+        /**
          * @return timestamp
          */
         public Long getTimestamp() {
@@ -317,6 +339,7 @@ public class MuteCallResponseBody extends TeaModel {
             private String originator; 
             private String releaseInitiator; 
             private String releaseReason; 
+            private String skillGroupId; 
             private Long timestamp; 
             private String userExtension; 
             private String userId; 
@@ -402,6 +425,14 @@ public class MuteCallResponseBody extends TeaModel {
             }
 
             /**
+             * SkillGroupId.
+             */
+            public Builder skillGroupId(String skillGroupId) {
+                this.skillGroupId = skillGroupId;
+                return this;
+            }
+
+            /**
              * Timestamp.
              */
             public Builder timestamp(Long timestamp) {
@@ -432,17 +463,23 @@ public class MuteCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MuteCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>MuteCallResponseBody</p>
+     */
     public static class CallContext extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("ChannelContexts")
-        private java.util.List < ChannelContexts> channelContexts;
+        @com.aliyun.core.annotation.NameInMap("ChannelContexts")
+        private java.util.List<ChannelContexts> channelContexts;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private CallContext(Builder builder) {
@@ -470,7 +507,7 @@ public class MuteCallResponseBody extends TeaModel {
         /**
          * @return channelContexts
          */
-        public java.util.List < ChannelContexts> getChannelContexts() {
+        public java.util.List<ChannelContexts> getChannelContexts() {
             return this.channelContexts;
         }
 
@@ -490,7 +527,7 @@ public class MuteCallResponseBody extends TeaModel {
 
         public static final class Builder {
             private String callType; 
-            private java.util.List < ChannelContexts> channelContexts; 
+            private java.util.List<ChannelContexts> channelContexts; 
             private String instanceId; 
             private String jobId; 
 
@@ -505,7 +542,7 @@ public class MuteCallResponseBody extends TeaModel {
             /**
              * ChannelContexts.
              */
-            public Builder channelContexts(java.util.List < ChannelContexts> channelContexts) {
+            public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
                 return this;
             }
@@ -533,44 +570,50 @@ public class MuteCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MuteCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>MuteCallResponseBody</p>
+     */
     public static class UserContext extends TeaModel {
-        @NameInMap("BreakCode")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("Heartbeat")
+        @com.aliyun.core.annotation.NameInMap("Heartbeat")
         private Long heartbeat;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("OutboundScenario")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("SignedSkillGroupIdList")
-        private java.util.List < String > signedSkillGroupIdList;
+        @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
+        private java.util.List<String> signedSkillGroupIdList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserState")
+        @com.aliyun.core.annotation.NameInMap("UserState")
         private String userState;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private UserContext(Builder builder) {
@@ -663,7 +706,7 @@ public class MuteCallResponseBody extends TeaModel {
         /**
          * @return signedSkillGroupIdList
          */
-        public java.util.List < String > getSignedSkillGroupIdList() {
+        public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
         }
 
@@ -698,7 +741,7 @@ public class MuteCallResponseBody extends TeaModel {
             private String mobile; 
             private Boolean outboundScenario; 
             private Long reserved; 
-            private java.util.List < String > signedSkillGroupIdList; 
+            private java.util.List<String> signedSkillGroupIdList; 
             private String userId; 
             private String userState; 
             private String workMode; 
@@ -778,7 +821,7 @@ public class MuteCallResponseBody extends TeaModel {
             /**
              * SignedSkillGroupIdList.
              */
-            public Builder signedSkillGroupIdList(java.util.List < String > signedSkillGroupIdList) {
+            public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
                 return this;
             }
@@ -814,11 +857,17 @@ public class MuteCallResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MuteCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>MuteCallResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CallContext")
+        @com.aliyun.core.annotation.NameInMap("CallContext")
         private CallContext callContext;
 
-        @NameInMap("UserContext")
+        @com.aliyun.core.annotation.NameInMap("UserContext")
         private UserContext userContext;
 
         private Data(Builder builder) {

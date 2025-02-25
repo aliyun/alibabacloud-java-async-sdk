@@ -166,22 +166,25 @@ public class SetBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(SetBackupPolicyRequest response) {
-            super(response);
-            this.backupDbNames = response.backupDbNames;
-            this.backupLevel = response.backupLevel;
-            this.backupLog = response.backupLog;
-            this.backupMode = response.backupMode;
-            this.dataBackupRetentionPeriod = response.dataBackupRetentionPeriod;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.logBackupRetentionPeriod = response.logBackupRetentionPeriod;
-            this.preferredBackupEndTime = response.preferredBackupEndTime;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupStartTime = response.preferredBackupStartTime;
+        private Builder(SetBackupPolicyRequest request) {
+            super(request);
+            this.backupDbNames = request.backupDbNames;
+            this.backupLevel = request.backupLevel;
+            this.backupLog = request.backupLog;
+            this.backupMode = request.backupMode;
+            this.dataBackupRetentionPeriod = request.dataBackupRetentionPeriod;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.preferredBackupEndTime = request.preferredBackupEndTime;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupStartTime = request.preferredBackupStartTime;
         } 
 
         /**
-         * BackupDbNames.
+         * The databases to be backed up. Separate multiple databases with commas (,).
+         * <p>
+         * 
+         * >  This parameter takes effect only when the backup level is database level.
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -190,7 +193,11 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupLevel.
+         * The level of the backup. Valid values:
+         * <p>
+         * 
+         * *   db: The database type.
+         * *   instance: instance
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -199,7 +206,11 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupLog.
+         * Specifies whether to enable log Backup. Valid values:
+         * <p>
+         * 
+         * *   1: enabled.
+         * *   0: disabled.
          */
         public Builder backupLog(String backupLog) {
             this.putQueryParameter("BackupLog", backupLog);
@@ -208,7 +219,11 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode. Valid values:
+         * <p>
+         * 
+         * *   **Logic **: logical backup
+         * *   **phy**: physical backup
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -217,7 +232,7 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * DataBackupRetentionPeriod.
+         * The retention period of the backup data. Value range: 7 to 730.
          */
         public Builder dataBackupRetentionPeriod(String dataBackupRetentionPeriod) {
             this.putQueryParameter("DataBackupRetentionPeriod", dataBackupRetentionPeriod);
@@ -226,7 +241,7 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -235,7 +250,7 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The log retention period. Valid values: 7 to 730. This value must be less than or equal to the number of data backup days.
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -244,7 +259,7 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupEndTime.
+         * The end time of the backup.
          */
         public Builder preferredBackupEndTime(String preferredBackupEndTime) {
             this.putQueryParameter("PreferredBackupEndTime", preferredBackupEndTime);
@@ -253,7 +268,16 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The backup cycle. Valid values:
+         * <p>
+         * 
+         * *   0: Monday
+         * *   1: Tuesday
+         * *   2: Wednesday
+         * *   3: Thursday
+         * *   4: Friday
+         * *   5: Saturday
+         * *   6: Sunday
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -262,7 +286,7 @@ public class SetBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupStartTime.
+         * The start time of the backup.
          */
         public Builder preferredBackupStartTime(String preferredBackupStartTime) {
             this.putQueryParameter("PreferredBackupStartTime", preferredBackupStartTime);

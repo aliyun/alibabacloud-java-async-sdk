@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateConfigDeliveryChannelsRequest} extends {@link RequestModel}
  *
  * <p>ListAggregateConfigDeliveryChannelsRequest</p>
  */
 public class ListAggregateConfigDeliveryChannelsRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("DeliveryChannelIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelIds")
     private String deliveryChannelIds;
 
     private ListAggregateConfigDeliveryChannelsRequest(Builder builder) {
@@ -69,10 +74,12 @@ public class ListAggregateConfigDeliveryChannelsRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-a4e5626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -81,7 +88,10 @@ public class ListAggregateConfigDeliveryChannelsRequest extends Request {
         }
 
         /**
-         * The IDs of the delivery channels. Separate multiple IDs with commas (,).
+         * <p>The IDs of the delivery channels. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdc-d9106457e0d900b1****</p>
          */
         public Builder deliveryChannelIds(String deliveryChannelIds) {
             this.putQueryParameter("DeliveryChannelIds", deliveryChannelIds);

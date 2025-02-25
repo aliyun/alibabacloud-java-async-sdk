@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupTrafficResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupTrafficResponseBody</p>
  */
 public class DescribeGroupTrafficResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrafficPerSecond")
+    @com.aliyun.core.annotation.NameInMap("TrafficPerSecond")
     private TrafficPerSecond trafficPerSecond;
 
     private DescribeGroupTrafficResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
         private TrafficPerSecond trafficPerSecond; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * The traffic information per second.
+         * <p>The traffic information per second.</p>
          */
         public Builder trafficPerSecond(TrafficPerSecond trafficPerSecond) {
             this.trafficPerSecond = trafficPerSecond;
@@ -71,14 +79,20 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupTrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupTrafficResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -122,11 +136,14 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>inbound: traffic consumed by requests</li>
+             * <li>outbound: traffic consumed by responses</li>
+             * </ul>
              * 
-             * *   inbound: traffic consumed by requests
-             * *   outbound: traffic consumed by responses
+             * <strong>example:</strong>
+             * <p>inbound</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -134,7 +151,10 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The corresponding time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
+             * <p>The corresponding time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-29T01:30:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -142,7 +162,10 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The traffic volume per second.
+             * <p>The traffic volume per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -156,9 +179,15 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupTrafficResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupTrafficResponseBody</p>
+     */
     public static class TrafficPerSecond extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private TrafficPerSecond(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -175,17 +204,17 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

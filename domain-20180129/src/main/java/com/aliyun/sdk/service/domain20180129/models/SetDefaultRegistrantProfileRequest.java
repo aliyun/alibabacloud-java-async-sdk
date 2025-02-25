@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDefaultRegistrantProfileRequest} extends {@link RequestModel}
  *
  * <p>SetDefaultRegistrantProfileRequest</p>
  */
 public class SetDefaultRegistrantProfileRequest extends Request {
-    @Query
-    @NameInMap("RegistrantProfileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantProfileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long registrantProfileId;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SetDefaultRegistrantProfileRequest(Builder builder) {
@@ -69,7 +69,10 @@ public class SetDefaultRegistrantProfileRequest extends Request {
         } 
 
         /**
-         * RegistrantProfileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);

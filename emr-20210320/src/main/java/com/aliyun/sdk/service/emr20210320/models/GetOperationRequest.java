@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationRequest} extends {@link RequestModel}
  *
  * <p>GetOperationRequest</p>
  */
 public class GetOperationRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("OperationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private GetOperationRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class GetOperationRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to query.
+         * <p>The ID of the cluster that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +103,16 @@ public class GetOperationRequest extends Request {
         }
 
         /**
-         * The ID of the operation.
+         * <p>The operation ID.</p>
+         * <p>References:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/454393.html">CreateCluster</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/454397.html">IncreaseNodes</a></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-13c37a77c505****</p>
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);
@@ -103,7 +121,11 @@ public class GetOperationRequest extends Request {
         }
 
         /**
-         * The district ID.
+         * <p>The district ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

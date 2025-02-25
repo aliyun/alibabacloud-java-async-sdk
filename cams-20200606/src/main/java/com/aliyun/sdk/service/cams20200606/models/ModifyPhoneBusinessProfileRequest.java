@@ -1,59 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPhoneBusinessProfileRequest} extends {@link RequestModel}
  *
  * <p>ModifyPhoneBusinessProfileRequest</p>
  */
 public class ModifyPhoneBusinessProfileRequest extends Request {
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("About")
+    private String about;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ProfilePictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProfilePictureUrl")
     private String profilePictureUrl;
 
-    @Query
-    @NameInMap("Vertical")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vertical")
     private String vertical;
 
-    @Query
-    @NameInMap("Websites")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Websites")
     private java.util.List < String > websites;
 
     private ModifyPhoneBusinessProfileRequest(Builder builder) {
         super(builder);
+        this.about = builder.about;
         this.address = builder.address;
         this.custSpaceId = builder.custSpaceId;
         this.description = builder.description;
         this.email = builder.email;
+        this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
         this.profilePictureUrl = builder.profilePictureUrl;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.vertical = builder.vertical;
         this.websites = builder.websites;
     }
@@ -69,6 +89,13 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return about
+     */
+    public String getAbout() {
+        return this.about;
     }
 
     /**
@@ -100,6 +127,13 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return phoneNumber
      */
     public String getPhoneNumber() {
@@ -111,6 +145,20 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
      */
     public String getProfilePictureUrl() {
         return this.profilePictureUrl;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -128,12 +176,16 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPhoneBusinessProfileRequest, Builder> {
+        private String about; 
         private String address; 
         private String custSpaceId; 
         private String description; 
         private String email; 
+        private Long ownerId; 
         private String phoneNumber; 
         private String profilePictureUrl; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String vertical; 
         private java.util.List < String > websites; 
 
@@ -143,18 +195,37 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
 
         private Builder(ModifyPhoneBusinessProfileRequest request) {
             super(request);
+            this.about = request.about;
             this.address = request.address;
             this.custSpaceId = request.custSpaceId;
             this.description = request.description;
             this.email = request.email;
+            this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
             this.profilePictureUrl = request.profilePictureUrl;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.vertical = request.vertical;
             this.websites = request.websites;
         } 
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * <p>The business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business profile</p>
+         */
+        public Builder about(String about) {
+            this.putQueryParameter("About", about);
+            this.about = about;
+            return this;
+        }
+
+        /**
+         * <p>The address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The phone number.</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -163,7 +234,11 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * Modifies the business information of the account to which a specified phone number is bound.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>293483938849****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -172,7 +247,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The address.
+         * <p>The description of the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +259,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -190,7 +271,20 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * <p>The mobile phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800001234</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -199,10 +293,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The industry.
-         * <p>
+         * <p>The URL of the profile picture.</p>
          * 
-         * > Enum: {OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, RESTAURANT}
+         * <strong>example:</strong>
+         * <p><a href="http://a.img">http://a.img</a></p>
          */
         public Builder profilePictureUrl(String profilePictureUrl) {
             this.putQueryParameter("ProfilePictureUrl", profilePictureUrl);
@@ -211,7 +305,31 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * Sichuan
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * <p>The industry.</p>
+         * <blockquote>
+         * <p> Valid values: OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, and RESTAURANT.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OTHER</p>
          */
         public Builder vertical(String vertical) {
             this.putQueryParameter("Vertical", vertical);
@@ -220,7 +338,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The email address.
+         * <p>The URLs of the websites.</p>
          */
         public Builder websites(java.util.List < String > websites) {
             String websitesShrink = shrink(websites, "Websites", "json");

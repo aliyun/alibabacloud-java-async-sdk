@@ -49,13 +49,16 @@ public class DescribeDrdsRdsInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsRdsInstancesRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DescribeDrdsRdsInstancesRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X instance.
+         * <p>
+         * 
+         * > You can call the [DescribeDrdsInstances](~~139284~~) operation to query the information about instances in the specified account, such as the IDs of the instances.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDirectoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDirectoriesResponseBody</p>
  */
 public class ListDirectoriesResponseBody extends TeaModel {
-    @NameInMap("Directories")
+    @com.aliyun.core.annotation.NameInMap("Directories")
     private java.util.List < Directories> directories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListDirectoriesResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The directories.
+         * <p>The directories.</p>
          */
         public Builder directories(java.util.List < Directories> directories) {
             this.directories = directories;
@@ -70,7 +70,10 @@ public class ListDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A504392-F06D-5029-AB64-6654CB9F1DC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of directories.
+         * <p>The number of directories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -91,20 +97,26 @@ public class ListDirectoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDirectoriesResponseBody</p>
+     */
     public static class Directories extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryName")
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Directories(Builder builder) {
@@ -166,7 +178,10 @@ public class ListDirectoriesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the directory was created.
+             * <p>The time when the directory was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T08:35:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -174,7 +189,10 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -182,7 +200,10 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the directory.
+             * <p>The name of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-example</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -190,7 +211,10 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the directory.
+             * <p>The region ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -198,7 +222,10 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the directory was modified.
+             * <p>The time when the directory was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-25T09:13:24Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

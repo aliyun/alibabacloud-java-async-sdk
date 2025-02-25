@@ -1,57 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceGroupResponseBody</p>
  */
 public class GetResourceGroupResponseBody extends TeaModel {
-    @NameInMap("ClusterID")
+    @com.aliyun.core.annotation.NameInMap("ClusterID")
     private String clusterID;
 
-    @NameInMap("ComputingResourceProvider")
+    @com.aliyun.core.annotation.NameInMap("ComputingResourceProvider")
     private String computingResourceProvider;
 
-    @NameInMap("CreatorID")
+    @com.aliyun.core.annotation.NameInMap("CreatorID")
     private String creatorID;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportRDMA")
+    @com.aliyun.core.annotation.NameInMap("SupportRDMA")
     private Boolean supportRDMA;
 
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @NameInMap("WorkspaceID")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceID")
     private String workspaceID;
 
     private GetResourceGroupResponseBody(Builder builder) {
         this.clusterID = builder.clusterID;
         this.computingResourceProvider = builder.computingResourceProvider;
         this.creatorID = builder.creatorID;
+        this.description = builder.description;
         this.gmtCreatedTime = builder.gmtCreatedTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.name = builder.name;
@@ -59,6 +71,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.supportRDMA = builder.supportRDMA;
+        this.tags = builder.tags;
         this.userVpc = builder.userVpc;
         this.workspaceID = builder.workspaceID;
     }
@@ -90,6 +103,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
      */
     public String getCreatorID() {
         return this.creatorID;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -142,6 +162,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return userVpc
      */
     public UserVpc getUserVpc() {
@@ -159,6 +186,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private String clusterID; 
         private String computingResourceProvider; 
         private String creatorID; 
+        private String description; 
         private String gmtCreatedTime; 
         private String gmtModifiedTime; 
         private String name; 
@@ -166,6 +194,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private String resourceType; 
         private String status; 
         private Boolean supportRDMA; 
+        private java.util.List<Tags> tags; 
         private UserVpc userVpc; 
         private String workspaceID; 
 
@@ -190,6 +219,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
          */
         public Builder creatorID(String creatorID) {
             this.creatorID = creatorID;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
@@ -250,6 +287,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * UserVpc.
          */
         public Builder userVpc(UserVpc userVpc) {
@@ -271,4 +316,71 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceGroupResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachApplication2ConnectorRequest} extends {@link RequestModel}
  *
  * <p>AttachApplication2ConnectorRequest</p>
  */
 public class AttachApplication2ConnectorRequest extends Request {
-    @Body
-    @NameInMap("ApplicationIds")
-    @Validation(required = true)
-    private java.util.List < String > applicationIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> applicationIds;
 
-    @Body
-    @NameInMap("ConnectorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConnectorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectorId;
 
     private AttachApplication2ConnectorRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class AttachApplication2ConnectorRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -56,7 +61,7 @@ public class AttachApplication2ConnectorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachApplication2ConnectorRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String connectorId; 
 
         private Builder() {
@@ -70,9 +75,9 @@ public class AttachApplication2ConnectorRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             String applicationIdsShrink = shrink(applicationIds, "ApplicationIds", "json");
             this.putBodyParameter("ApplicationIds", applicationIdsShrink);
             this.applicationIds = applicationIds;
@@ -80,7 +85,11 @@ public class AttachApplication2ConnectorRequest extends Request {
         }
 
         /**
-         * ConnectorID。
+         * <p>ConnectorID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-94db94e06b98****</p>
          */
         public Builder connectorId(String connectorId) {
             this.putBodyParameter("ConnectorId", connectorId);

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePortViewSourceCountriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePortViewSourceCountriesResponseBody</p>
  */
 public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceCountrys")
-    private java.util.List < SourceCountrys> sourceCountrys;
+    @com.aliyun.core.annotation.NameInMap("SourceCountrys")
+    private java.util.List<SourceCountrys> sourceCountrys;
 
     private DescribePortViewSourceCountriesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
     /**
      * @return sourceCountrys
      */
-    public java.util.List < SourceCountrys> getSourceCountrys() {
+    public java.util.List<SourceCountrys> getSourceCountrys() {
         return this.sourceCountrys;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SourceCountrys> sourceCountrys; 
+        private java.util.List<SourceCountrys> sourceCountrys; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of countries or areas from which the requests are sent.
+         * <p>An array consisting of countries or areas from which the requests are sent.</p>
          */
-        public Builder sourceCountrys(java.util.List < SourceCountrys> sourceCountrys) {
+        public Builder sourceCountrys(java.util.List<SourceCountrys> sourceCountrys) {
             this.sourceCountrys = sourceCountrys;
             return this;
         }
@@ -71,11 +79,17 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePortViewSourceCountriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePortViewSourceCountriesResponseBody</p>
+     */
     public static class SourceCountrys extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("CountryId")
+        @com.aliyun.core.annotation.NameInMap("CountryId")
         private String countryId;
 
         private SourceCountrys(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
             private String countryId; 
 
             /**
-             * The number of requests.
+             * <p>The number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3390671</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,10 +135,13 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the country or area. For example, **cn** indicates China and **us** indicates the United States.
-             * <p>
+             * <p>The abbreviation of the country or area. For example, <strong>cn</strong> indicates China and <strong>us</strong> indicates the United States.</p>
+             * <blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Location parameters</a>.</p>
+             * </blockquote>
              * 
-             * > For more information, see [Location parameters](~~167926~~).
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder countryId(String countryId) {
                 this.countryId = countryId;

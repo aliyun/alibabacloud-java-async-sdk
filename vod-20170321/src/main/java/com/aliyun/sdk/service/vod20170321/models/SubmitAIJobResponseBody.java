@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitAIJobResponseBody</p>
  */
 public class SubmitAIJobResponseBody extends TeaModel {
-    @NameInMap("AIJobList")
+    @com.aliyun.core.annotation.NameInMap("AIJobList")
     private AIJobList AIJobList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitAIJobResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class SubmitAIJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the AI jobs.
+         * <p>The information about the AI jobs.</p>
          */
         public Builder AIJobList(AIJobList AIJobList) {
             this.AIJobList = AIJobList;
@@ -58,7 +63,10 @@ public class SubmitAIJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D73936****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class SubmitAIJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitAIJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitAIJobResponseBody</p>
+     */
     public static class AIJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AIJob(Builder builder) {
@@ -122,7 +136,10 @@ public class SubmitAIJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the AI job.
+             * <p>The ID of the AI job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9e82640c85114bf5af23edfaf****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -130,7 +147,10 @@ public class SubmitAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * <p>The ID of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3D3D12340d92c641401fab46a0b847****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -138,11 +158,14 @@ public class SubmitAIJobResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the AI job. Valid values:
-             * <p>
+             * <p>The type of the AI job. Valid values:</p>
+             * <ul>
+             * <li><strong>AIMediaDNA</strong>: The media fingerprinting job.</li>
+             * <li><strong>AIVideoTag</strong>: The smart tagging job.</li>
+             * </ul>
              * 
-             * *   **AIMediaDNA**: The media fingerprinting job.
-             * *   **AIVideoTag**: The smart tagging job.
+             * <strong>example:</strong>
+             * <p>AIVideoTag</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -156,9 +179,15 @@ public class SubmitAIJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitAIJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitAIJobResponseBody</p>
+     */
     public static class AIJobList extends TeaModel {
-        @NameInMap("AIJob")
-        private java.util.List < AIJob> AIJob;
+        @com.aliyun.core.annotation.NameInMap("AIJob")
+        private java.util.List<AIJob> AIJob;
 
         private AIJobList(Builder builder) {
             this.AIJob = builder.AIJob;
@@ -175,17 +204,17 @@ public class SubmitAIJobResponseBody extends TeaModel {
         /**
          * @return AIJob
          */
-        public java.util.List < AIJob> getAIJob() {
+        public java.util.List<AIJob> getAIJob() {
             return this.AIJob;
         }
 
         public static final class Builder {
-            private java.util.List < AIJob> AIJob; 
+            private java.util.List<AIJob> AIJob; 
 
             /**
              * AIJob.
              */
-            public Builder AIJob(java.util.List < AIJob> AIJob) {
+            public Builder AIJob(java.util.List<AIJob> AIJob) {
                 this.AIJob = AIJob;
                 return this;
             }

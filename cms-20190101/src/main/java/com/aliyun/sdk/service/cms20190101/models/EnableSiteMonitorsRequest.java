@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableSiteMonitorsRequest} extends {@link RequestModel}
  *
  * <p>EnableSiteMonitorsRequest</p>
  */
 public class EnableSiteMonitorsRequest extends Request {
-    @Query
-    @NameInMap("TaskIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskIds;
 
     private EnableSiteMonitorsRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class EnableSiteMonitorsRequest extends Request {
         } 
 
         /**
-         * The IDs of the site monitoring tasks. Separate multiple instance IDs with commas (,).
+         * <p>The ID of the site monitoring task. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49f7b317-7645-4cc9-94fd-ea42e522****,49f7b317-7645-4cc9-94fd-ea42e522****</p>
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

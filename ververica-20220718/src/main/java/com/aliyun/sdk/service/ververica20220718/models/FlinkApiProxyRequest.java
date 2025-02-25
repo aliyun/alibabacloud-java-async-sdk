@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlinkApiProxyRequest} extends {@link RequestModel}
  *
  * <p>FlinkApiProxyRequest</p>
  */
 public class FlinkApiProxyRequest extends Request {
-    @Query
-    @NameInMap("flinkApiPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("flinkApiPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flinkApiPath;
 
-    @Query
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("resourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("resourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private FlinkApiProxyRequest(Builder builder) {
@@ -115,7 +120,11 @@ public class FlinkApiProxyRequest extends Request {
         } 
 
         /**
-         * flinkApiPath.
+         * <p>The path of the Flink UI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/jobs/4df35f8e54554b23bf7dcd38a151****</p>
          */
         public Builder flinkApiPath(String flinkApiPath) {
             this.putQueryParameter("flinkApiPath", flinkApiPath);
@@ -124,7 +133,11 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -133,7 +146,11 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a27a3aa-c5b9-4dc1-8c86-be57d2d6****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -142,7 +159,15 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>jobs</li>
+         * <li>sessionclusters</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobs</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -151,7 +176,11 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

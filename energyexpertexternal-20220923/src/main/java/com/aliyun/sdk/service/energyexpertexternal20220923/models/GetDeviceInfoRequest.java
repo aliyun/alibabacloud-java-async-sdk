@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceInfoRequest} extends {@link RequestModel}
  *
  * <p>GetDeviceInfoRequest</p>
  */
 public class GetDeviceInfoRequest extends Request {
-    @Query
-    @NameInMap("deviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("deviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("ds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ds;
 
-    @Query
-    @NameInMap("factoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("factoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String factoryId;
 
     private GetDeviceInfoRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class GetDeviceInfoRequest extends Request {
         } 
 
         /**
-         * deviceId.
+         * <p>The ID of the device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_69873</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("deviceId", deviceId);
@@ -94,7 +103,11 @@ public class GetDeviceInfoRequest extends Request {
         }
 
         /**
-         * ds.
+         * <p>The time string in the YYYY-mm-dd format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-26</p>
          */
         public Builder ds(String ds) {
             this.putQueryParameter("ds", ds);
@@ -103,7 +116,11 @@ public class GetDeviceInfoRequest extends Request {
         }
 
         /**
-         * factoryId.
+         * <p>The ID of the site.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_95</p>
          */
         public Builder factoryId(String factoryId) {
             this.putQueryParameter("factoryId", factoryId);

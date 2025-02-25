@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSourcesResponseBody</p>
  */
 public class DescribeInstanceSourcesResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceSourcesResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,13 +85,16 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>An array that consists of the queried data assets.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A7E8FB9-5011-5A90-97D9-AE587047****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,80 +148,86 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSourcesResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;
 
-        @NameInMap("AutoScan")
+        @com.aliyun.core.annotation.NameInMap("AutoScan")
         private Integer autoScan;
 
-        @NameInMap("CanModifyUserName")
+        @com.aliyun.core.annotation.NameInMap("CanModifyUserName")
         private Boolean canModifyUserName;
 
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private Integer checkStatus;
 
-        @NameInMap("DatamaskStatus")
+        @com.aliyun.core.annotation.NameInMap("DatamaskStatus")
         private Integer datamaskStatus;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceSize")
+        @com.aliyun.core.annotation.NameInMap("InstanceSize")
         private Long instanceSize;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LastModifyUserId")
+        @com.aliyun.core.annotation.NameInMap("LastModifyUserId")
         private String lastModifyUserId;
 
-        @NameInMap("LogStoreDay")
+        @com.aliyun.core.annotation.NameInMap("LogStoreDay")
         private Integer logStoreDay;
 
-        @NameInMap("PasswordStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordStatus")
         private Integer passwordStatus;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("SamplingSize")
+        @com.aliyun.core.annotation.NameInMap("SamplingSize")
         private Integer samplingSize;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Items(Builder builder) {
@@ -446,7 +469,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AuditStatus.
+             * <p>Indicates whether the security audit feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder auditStatus(Integer auditStatus) {
                 this.auditStatus = auditStatus;
@@ -454,7 +484,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoScan.
+             * <p>Indicates whether the automatic scan feature is enabled to detect sensitive data. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder autoScan(Integer autoScan) {
                 this.autoScan = autoScan;
@@ -462,7 +499,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CanModifyUserName.
+             * <p>Indicates whether the username and password can be changed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canModifyUserName(Boolean canModifyUserName) {
                 this.canModifyUserName = canModifyUserName;
@@ -470,7 +514,17 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * <p>The data detection status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The data detection is ready.</li>
+             * <li><strong>1</strong>: The data detection is running.</li>
+             * <li><strong>2</strong>: The connectivity test is in progress.</li>
+             * <li><strong>3</strong>: The connectivity test passed.</li>
+             * <li><strong>4</strong>: The connectivity test failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder checkStatus(Integer checkStatus) {
                 this.checkStatus = checkStatus;
@@ -478,7 +532,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DatamaskStatus.
+             * <p>Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder datamaskStatus(Integer datamaskStatus) {
                 this.datamaskStatus = datamaskStatus;
@@ -486,7 +547,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * <p>The name of the database to which the data asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -494,7 +558,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether sensitive data detection is enabled for the data asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -502,7 +573,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * <p>The type of the database engine. Valid values: <strong>MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -510,7 +584,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The password is invalid.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -518,7 +595,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625587423000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -526,7 +606,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -534,7 +617,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -542,7 +628,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -550,7 +639,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSize.
+             * <p>The storage space size of the instance. This parameter is valid only if the value of the ProductId parameter is 2. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>409600</p>
              */
             public Builder instanceSize(Long instanceSize) {
                 this.instanceSize = instanceSize;
@@ -558,7 +650,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * <p>The time when the data asset was last modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625587423000</p>
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -566,7 +661,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyUserId.
+             * <p>The ID of the account that is last used to modify the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder lastModifyUserId(String lastModifyUserId) {
                 this.lastModifyUserId = lastModifyUserId;
@@ -574,7 +672,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreDay.
+             * <p>The retention period of raw logs. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder logStoreDay(Integer logStoreDay) {
                 this.logStoreDay = logStoreDay;
@@ -582,7 +683,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordStatus.
+             * <p>Indicates whether the password is used. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passwordStatus(Integer passwordStatus) {
                 this.passwordStatus = passwordStatus;
@@ -590,7 +698,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The ID of the service to which the data asset belongs. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -598,7 +709,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -606,7 +720,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -614,7 +731,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingSize.
+             * <p>The number of sensitive data samples. Valid values: <strong>0</strong>, <strong>5</strong>, and <strong>10</strong>. Unit: data entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder samplingSize(Integer samplingSize) {
                 this.samplingSize = samplingSize;
@@ -622,7 +742,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -630,7 +753,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * <p>The name of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -638,7 +764,10 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User01</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

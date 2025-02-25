@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableMemResourceRequest</p>
  */
 public class DescribeAvailableMemResourceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CpuNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CpuNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long cpuNum;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("UnitNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnitNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long unitNum;
 
     private DescribeAvailableMemResourceRequest(Builder builder) {
@@ -123,7 +121,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The available memory size.
+         * The number of CPU cores.
          */
         public Builder cpuNum(Long cpuNum) {
             this.putBodyParameter("CpuNum", cpuNum);
@@ -132,7 +130,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -150,7 +148,9 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The number of resource units in the tenant.
+         * The number of resource distribution nodes in the tenant.   
+         * <p>
+         * The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
          */
         public Builder unitNum(Long unitNum) {
             this.putBodyParameter("UnitNum", unitNum);

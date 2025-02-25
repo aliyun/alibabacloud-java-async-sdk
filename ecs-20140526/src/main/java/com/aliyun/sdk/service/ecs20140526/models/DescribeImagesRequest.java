@@ -1,129 +1,134 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeImagesRequest</p>
  */
 public class DescribeImagesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ActionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionType")
     private String actionType;
 
-    @Query
-    @NameInMap("Architecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("ImageFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("ImageOwnerAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
     private String imageOwnerAlias;
 
-    @Query
-    @NameInMap("ImageOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOwnerId")
     private Long imageOwnerId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("IsPublic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsPublic")
     private Boolean isPublic;
 
-    @Query
-    @NameInMap("IsSupportCloudinit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSupportCloudinit")
     private Boolean isSupportCloudinit;
 
-    @Query
-    @NameInMap("IsSupportIoOptimized")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSupportIoOptimized")
     private Boolean isSupportIoOptimized;
 
-    @Query
-    @NameInMap("OSType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSType")
     private String OSType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ShowExpired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowExpired")
     private Boolean showExpired;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("Usage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usage")
     private String usage;
 
     private DescribeImagesRequest(Builder builder) {
@@ -202,7 +207,7 @@ public class DescribeImagesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -356,7 +361,7 @@ public class DescribeImagesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -372,7 +377,7 @@ public class DescribeImagesRequest extends Request {
         private String actionType; 
         private String architecture; 
         private Boolean dryRun; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String imageFamily; 
         private String imageId; 
         private String imageName; 
@@ -394,7 +399,7 @@ public class DescribeImagesRequest extends Request {
         private Boolean showExpired; 
         private String snapshotId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String usage; 
 
         private Builder() {
@@ -443,11 +448,14 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The scenario in which the image is used. Valid values:
-         * <p>
+         * <p>The scenario in which the image is used. Valid values:</p>
+         * <ul>
+         * <li>CreateEcs: instance creation</li>
+         * <li>ChangeOS: replacement of the system disk or OS</li>
+         * </ul>
          * 
-         * *   CreateEcs: instance creation
-         * *   ChangeOS: replacement of the system disk or OS
+         * <strong>example:</strong>
+         * <p>CreateEcs</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -456,12 +464,15 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The architecture of the image. Valid values:
-         * <p>
+         * <p>The architecture of the image. Valid values:</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * <li>arm64</li>
+         * </ul>
          * 
-         * *   i386
-         * *   x86\_64
-         * *   arm64
+         * <strong>example:</strong>
+         * <p>i386</p>
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -470,13 +481,15 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run without performing the actual request.
-         * <p>
+         * <p>Specifies whether to perform only a dry run without performing the actual request.</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -485,19 +498,23 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The list of filter conditions used to query resources.
+         * <p>The filter conditions used to query resources.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * The name of the image family. You can specify this parameter to query images of the specified image family.
-         * <p>
+         * <p>The name of the image family. You can set this parameter to query images of the specified image family.</p>
+         * <p>This parameter is empty by default.</p>
+         * <blockquote>
+         * <p> For information about image families that are associated with Alibaba Cloud official images, see <a href="https://help.aliyun.com/document_detail/108393.html">Overview of public images</a>.</p>
+         * </blockquote>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>hangzhou-daily-update</p>
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -506,7 +523,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The image IDs.
+         * <p>The image IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1g7004ksh0oeuc****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -515,7 +535,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The image name.
+         * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -524,23 +547,28 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The image source. Valid values:
-         * <p>
+         * <p>The image source. Valid values:</p>
+         * <ul>
+         * <li><p>system: images that are provided by Alibaba Cloud and are not released in Alibaba Cloud Marketplace, which are different from public images in the Elastic Compute Service (ECS) console.</p>
+         * </li>
+         * <li><p>self: your custom images</p>
+         * </li>
+         * <li><p>others: shared images (images shared by other Alibaba Cloud accounts) and community images (publicly available custom images that are published by other Alibaba Cloud accounts). Take note of the following items:</p>
+         * <ul>
+         * <li>To query community images, you must set IsPublic to true.</li>
+         * <li>To query shared images, you must set IsPublic to false or leave IsPublic empty.</li>
+         * </ul>
+         * </li>
+         * <li><p>marketplace: images released by Alibaba Cloud or independent software vendors (ISVs) in the Alibaba Cloud Marketplace, which must be purchased together with ECS instances. Take note of the billing details of the images.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is empty by default.</p>
+         * <blockquote>
+         * <p>By default, this parameter is empty, which indicates that the following images are queried: public images provided by Alibaba Cloud, custom images in your repository, shared images from other Alibaba Cloud accounts, and community images that are published by other Alibaba Cloud accounts.</p>
+         * </blockquote>
          * 
-         * *   system: images that are provided by Alibaba Cloud and are not released in Alibaba Cloud Marketplace, which are different from public images in the Elastic Compute Service (ECS) console.
-         * 
-         * *   self: your custom images
-         * 
-         * *   others: shared images (images shared by other Alibaba Cloud accounts) and community images (publicly available custom images that are published by other Alibaba Cloud accounts). Take note of the following items:
-         * 
-         *     *   To query community images, you must set IsPublic to true.
-         *     *   To query shared images, you must set IsPublic to false or leave IsPublic empty.
-         * 
-         * *   marketplace: images released by Alibaba Cloud or independent software vendors (ISVs) in the Alibaba Cloud Marketplace, which must be purchased together with ECS instances. Take note of the billing details of the images.
-         * 
-         * This parameter is empty by default.
-         * 
-         * > By default, this parameter is empty, which indicates that the following images are queried: public images provided by Alibaba Cloud, custom images in your repository, shared images from other Alibaba Cloud accounts, and community images that are published by other Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -549,7 +577,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.
+         * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only if you query shared images or community images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder imageOwnerId(Long imageOwnerId) {
             this.putQueryParameter("ImageOwnerId", imageOwnerId);
@@ -558,7 +589,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The instance type for which the image can be used.
+         * <p>The instance type for which the image can be used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -567,13 +601,15 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query published community images. Valid values:
-         * <p>
+         * <p>Specifies whether to query published community images. Valid values:</p>
+         * <ul>
+         * <li>true: queries published community images. When you set this parameter to true, you must set ImageOwnerAlias to others.</li>
+         * <li>false: queries image types other than the community images type. The specific image types to be queried are determined by the ImageOwnerAlias value.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: queries published community images. When you set this parameter to true, you must set ImageOwnerAlias to others.
-         * *   false: queries image types other than the community images type. The specific image types to be queried are determined by the ImageOwnerAlias value.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPublic(Boolean isPublic) {
             this.putQueryParameter("IsPublic", isPublic);
@@ -582,7 +618,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Specifies whether the image supports cloud-init.
+         * <p>Specifies whether the image supports cloud-init.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSupportCloudinit(Boolean isSupportCloudinit) {
             this.putQueryParameter("IsSupportCloudinit", isSupportCloudinit);
@@ -591,7 +630,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Specifies whether the image can be used on I/O optimized instances.
+         * <p>Specifies whether the image can be used on I/O optimized instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
             this.putQueryParameter("IsSupportIoOptimized", isSupportIoOptimized);
@@ -600,11 +642,14 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The operating system type of the image. Valid values:
-         * <p>
+         * <p>The operating system type of the image. Valid values:</p>
+         * <ul>
+         * <li>windows</li>
+         * <li>linux</li>
+         * </ul>
          * 
-         * *   windows
-         * *   linux
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -631,12 +676,12 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The page number to return.
-         * <p>
+         * <p>The page number to return.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -645,12 +690,12 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -659,7 +704,11 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -668,10 +717,13 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the custom image belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
-         * <p>
+         * <p>The ID of the resource group to which the custom image belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+         * </blockquote>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -698,10 +750,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Specifies whether the subscription image has expired.
-         * <p>
+         * <p>Specifies whether the subscription image has expired.</p>
          * 
-         * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showExpired(Boolean showExpired) {
             this.putQueryParameter("ShowExpired", showExpired);
@@ -710,7 +762,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot used to create the custom image.
+         * <p>The ID of the snapshot used to create the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp17ot2q7x72ggtw****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -719,17 +774,19 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The status of the image. By default, only images in the Available state are returned if you do not specify this parameter. Valid values:
-         * <p>
+         * <p>The status of the image. By default, if you do not specify this parameter, only images in the Available state are returned. Valid values:</p>
+         * <ul>
+         * <li>Creating: The image is being created.</li>
+         * <li>Waiting: The image is waiting to be processed.</li>
+         * <li>Available: The image is available.</li>
+         * <li>UnAvailable: The image is unavailable.</li>
+         * <li>CreateFailed: The image fails to be created.</li>
+         * <li>Deprecated: The image is no longer used.</li>
+         * </ul>
+         * <p>Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).</p>
          * 
-         * *   Creating: The image is being created.
-         * *   Waiting: The image is waiting to be processed.
-         * *   Available: The image is available.
-         * *   UnAvailable: The image is unavailable.
-         * *   CreateFailed: The image cannot be created.
-         * *   Deprecated: The image is deprecated.
-         * 
-         * Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -738,20 +795,23 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The tags list.
+         * <p>The tags list.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * Specifies whether the image is running on an Elastic Compute Service (ECS) instance. Valid values:
-         * <p>
+         * <p>Specifies whether the image is running on an Elastic Compute Service (ECS) instance. Valid values:</p>
+         * <ul>
+         * <li>instance: The image is already in use and running on an ECS instance.</li>
+         * <li>none: The image is idle.</li>
+         * </ul>
          * 
-         * *   instance: The image is already in use and running on an ECS instance.
-         * *   none: The image is idle.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("Usage", usage);
@@ -766,11 +826,17 @@ public class DescribeImagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filter(Builder builder) {
@@ -805,11 +871,15 @@ public class DescribeImagesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the filter condition used to query resources. Valid values:
-             * <p>
+             * <p>The key of filter N used to query resources. Valid values:</p>
+             * <ul>
+             * <li>If you set this parameter to <code>CreationStartTime</code>, you can query the resources that were created after the point in time specified by <code>Filter.N.Value</code>.</li>
+             * <li>If you set this parameter to <code>CreationEndTime</code>, you can query the resources that were created before the point in time specified by <code>Filter.N.Value</code>.</li>
+             * <li>If you set this parameter to <code>NetworkType</code>, you can query resources of the specified network type.</li>
+             * </ul>
              * 
-             * *   If you set this parameter to `CreationStartTime`, you can query the resources that were created after the point in time specified by the `Filter.N.Value` value.
-             * *   If you set this parameter to `CreationEndTime`, you can query the resources that were created before the point in time as specified by the `Filter.N.Value` value.
+             * <strong>example:</strong>
+             * <p>CreationStartTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -817,7 +887,14 @@ public class DescribeImagesRequest extends Request {
             }
 
             /**
-             * The value of filter N used to query resources. When you specify this parameter, you must also specify `Filter.N.Key`. Make sure the time is in the `yyyy-MM-ddTHH:mmZ` format and in UTC.
+             * <p>The value of filter N used to query resources. Valid values:</p>
+             * <ul>
+             * <li>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code> in the UTC+0 time zone.</li>
+             * <li>When <code>Filter.N.Key</code> is set to <code>NetworkType</code>, the valid values can be <code>vpc</code> or <code>classic</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-05T22:40Z</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -831,11 +908,17 @@ public class DescribeImagesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -870,10 +953,11 @@ public class DescribeImagesRequest extends Request {
             private String value; 
 
             /**
-             * The tag N key of the image. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The tag N key of the image. Valid values of N: 1 to 20.</p>
+             * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -881,7 +965,10 @@ public class DescribeImagesRequest extends Request {
             }
 
             /**
-             * The tag value of the image. Valid values of N: 1 to 20.
+             * <p>The tag value of the image. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

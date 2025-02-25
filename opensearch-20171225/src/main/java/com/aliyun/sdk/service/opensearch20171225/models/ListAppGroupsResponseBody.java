@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppGroupsResponseBody</p>
  */
 public class ListAppGroupsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListAppGroupsResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +69,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about each application.
+         * The information about the application.
          * <p>
          * 
          * For more information, see [AppGroup](~~170000~~).
@@ -95,13 +94,13 @@ public class ListAppGroupsResponseBody extends TeaModel {
     } 
 
     public static class Quota extends TeaModel {
-        @NameInMap("computeResource")
+        @com.aliyun.core.annotation.NameInMap("computeResource")
         private Integer computeResource;
 
-        @NameInMap("docSize")
+        @com.aliyun.core.annotation.NameInMap("docSize")
         private Integer docSize;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private Quota(Builder builder) {
@@ -145,7 +144,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The computing resources. Unit: logical computing units (LCUs).
+             * The computing resources. Unit: logical computing unit (LCU).
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -161,16 +160,16 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the application. Valid values:
+             * The specifications. Valid values:
              * <p>
              * 
-             * *   opensearch.share.junior: basic
-             * *   opensearch.share.common: shared general-purpose
-             * *   opensearch.share.compute: shared computing
-             * *   opensearch.share.storage: shared storage
-             * *   opensearch.private.common: exclusive general-purpose
-             * *   opensearch.private.compute: exclusive computing
-             * *   opensearch.private.storage: exclusive storage
+             * *   opensearch.share.junior: basic.
+             * *   opensearch.share.common: shared general-purpose.
+             * *   opensearch.share.compute: shared computing.
+             * *   opensearch.share.storage: shared storage.
+             * *   opensearch.private.common: exclusive general-purpose.
+             * *   opensearch.private.compute: exclusive computing.
+             * *   opensearch.private.storage: exclusive storage.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -185,10 +184,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
@@ -223,7 +222,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +230,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -246,82 +245,73 @@ public class ListAppGroupsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("chargeType")
+        @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
-        @NameInMap("chargingWay")
+        @com.aliyun.core.annotation.NameInMap("chargingWay")
         private Integer chargingWay;
 
-        @NameInMap("commodityCode")
+        @com.aliyun.core.annotation.NameInMap("commodityCode")
         private String commodityCode;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("currentVersion")
+        @com.aliyun.core.annotation.NameInMap("currentVersion")
         private String currentVersion;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("expireOn")
+        @com.aliyun.core.annotation.NameInMap("engineType")
+        private String engineType;
+
+        @com.aliyun.core.annotation.NameInMap("expireOn")
         private String expireOn;
 
-        @NameInMap("firstRankAlgoDeploymentId")
-        private Integer firstRankAlgoDeploymentId;
-
-        @NameInMap("hasPendingQuotaReviewTask")
+        @com.aliyun.core.annotation.NameInMap("hasPendingQuotaReviewTask")
         private Integer hasPendingQuotaReviewTask;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lockMode")
+        @com.aliyun.core.annotation.NameInMap("lockMode")
         private String lockMode;
 
-        @NameInMap("lockedByExpiration")
+        @com.aliyun.core.annotation.NameInMap("lockedByExpiration")
         private Integer lockedByExpiration;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("pendingSecondRankAlgoDeploymentId")
-        private Integer pendingSecondRankAlgoDeploymentId;
-
-        @NameInMap("processingOrderId")
-        private String processingOrderId;
-
-        @NameInMap("produced")
+        @com.aliyun.core.annotation.NameInMap("produced")
         private Integer produced;
 
-        @NameInMap("projectId")
+        @com.aliyun.core.annotation.NameInMap("projectId")
         private String projectId;
 
-        @NameInMap("quota")
+        @com.aliyun.core.annotation.NameInMap("quota")
         private Quota quota;
 
-        @NameInMap("secondRankAlgoDeploymentId")
-        private Integer secondRankAlgoDeploymentId;
-
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("switchedTime")
+        @com.aliyun.core.annotation.NameInMap("switchedTime")
         private Integer switchedTime;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -332,20 +322,17 @@ public class ListAppGroupsResponseBody extends TeaModel {
             this.currentVersion = builder.currentVersion;
             this.description = builder.description;
             this.domain = builder.domain;
+            this.engineType = builder.engineType;
             this.expireOn = builder.expireOn;
-            this.firstRankAlgoDeploymentId = builder.firstRankAlgoDeploymentId;
             this.hasPendingQuotaReviewTask = builder.hasPendingQuotaReviewTask;
             this.id = builder.id;
             this.instanceId = builder.instanceId;
             this.lockMode = builder.lockMode;
             this.lockedByExpiration = builder.lockedByExpiration;
             this.name = builder.name;
-            this.pendingSecondRankAlgoDeploymentId = builder.pendingSecondRankAlgoDeploymentId;
-            this.processingOrderId = builder.processingOrderId;
             this.produced = builder.produced;
             this.projectId = builder.projectId;
             this.quota = builder.quota;
-            this.secondRankAlgoDeploymentId = builder.secondRankAlgoDeploymentId;
             this.status = builder.status;
             this.switchedTime = builder.switchedTime;
             this.tags = builder.tags;
@@ -411,17 +398,17 @@ public class ListAppGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return engineType
+         */
+        public String getEngineType() {
+            return this.engineType;
+        }
+
+        /**
          * @return expireOn
          */
         public String getExpireOn() {
             return this.expireOn;
-        }
-
-        /**
-         * @return firstRankAlgoDeploymentId
-         */
-        public Integer getFirstRankAlgoDeploymentId() {
-            return this.firstRankAlgoDeploymentId;
         }
 
         /**
@@ -467,20 +454,6 @@ public class ListAppGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return pendingSecondRankAlgoDeploymentId
-         */
-        public Integer getPendingSecondRankAlgoDeploymentId() {
-            return this.pendingSecondRankAlgoDeploymentId;
-        }
-
-        /**
-         * @return processingOrderId
-         */
-        public String getProcessingOrderId() {
-            return this.processingOrderId;
-        }
-
-        /**
          * @return produced
          */
         public Integer getProduced() {
@@ -499,13 +472,6 @@ public class ListAppGroupsResponseBody extends TeaModel {
          */
         public Quota getQuota() {
             return this.quota;
-        }
-
-        /**
-         * @return secondRankAlgoDeploymentId
-         */
-        public Integer getSecondRankAlgoDeploymentId() {
-            return this.secondRankAlgoDeploymentId;
         }
 
         /**
@@ -551,20 +517,17 @@ public class ListAppGroupsResponseBody extends TeaModel {
             private String currentVersion; 
             private String description; 
             private String domain; 
+            private String engineType; 
             private String expireOn; 
-            private Integer firstRankAlgoDeploymentId; 
             private Integer hasPendingQuotaReviewTask; 
             private String id; 
             private String instanceId; 
             private String lockMode; 
             private Integer lockedByExpiration; 
             private String name; 
-            private Integer pendingSecondRankAlgoDeploymentId; 
-            private String processingOrderId; 
             private Integer produced; 
             private String projectId; 
             private Quota quota; 
-            private Integer secondRankAlgoDeploymentId; 
             private String status; 
             private Integer switchedTime; 
             private java.util.List < Tags> tags; 
@@ -572,11 +535,11 @@ public class ListAppGroupsResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * The billing method of the application. Valid values:
+             * The billing method. Valid values:
              * <p>
              * 
-             * *   POSTPAY: pay-as-you-go
-             * *   PREPAY: subscription
+             * *   POSTPAY: pay-as-you-go.
+             * *   PREPAY: subscription.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -584,11 +547,11 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing model. Valid values:
+             * The billable item. Valid values:
              * <p>
              * 
-             * *   1: computing resources
-             * *   2: queries per second (QPS)
+             * *   1: computing resources.
+             * *   2: queries per second (QPS).
              */
             public Builder chargingWay(Integer chargingWay) {
                 this.chargingWay = chargingWay;
@@ -596,7 +559,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity.
+             * The commodity code.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -628,7 +591,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * domain
+             * The industry of the application.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -636,7 +599,15 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * engineType.
+             */
+            public Builder engineType(String engineType) {
+                this.engineType = engineType;
+                return this;
+            }
+
+            /**
+             * The time when the application expired.
              */
             public Builder expireOn(String expireOn) {
                 this.expireOn = expireOn;
@@ -644,19 +615,11 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the created rough sort expression.
-             */
-            public Builder firstRankAlgoDeploymentId(Integer firstRankAlgoDeploymentId) {
-                this.firstRankAlgoDeploymentId = firstRankAlgoDeploymentId;
-                return this;
-            }
-
-            /**
-             * The approval status of the quotas. Valid values:
+             * The approval state of the quotas. Valid values:
              * <p>
              * 
-             * *   0: The quotas are approved.
-             * *   1: The quotas are being approved.
+             * *   0: The application is in service.
+             * *   1: The quotas are being reviewed.
              */
             public Builder hasPendingQuotaReviewTask(Integer hasPendingQuotaReviewTask) {
                 this.hasPendingQuotaReviewTask = hasPendingQuotaReviewTask;
@@ -664,7 +627,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -672,7 +635,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -680,10 +643,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode of the instance. Valid values:
+             * The lock state. Valid values:
              * <p>
              * 
-             * *   Unlock: The instance is not locked.
+             * *   Unlock: The instance is unlocked.
              * *   LockByExpiration: The instance is automatically locked after it expires.
              * *   ManualLock: The instance is manually locked.
              */
@@ -701,7 +664,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The application name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -709,27 +672,11 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the fine sort expression that is being created.
-             */
-            public Builder pendingSecondRankAlgoDeploymentId(Integer pendingSecondRankAlgoDeploymentId) {
-                this.pendingSecondRankAlgoDeploymentId = pendingSecondRankAlgoDeploymentId;
-                return this;
-            }
-
-            /**
-             * The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.
-             */
-            public Builder processingOrderId(String processingOrderId) {
-                this.processingOrderId = processingOrderId;
-                return this;
-            }
-
-            /**
-             * Indicates whether the order is complete. Valid values:
+             * Indicates whether the application is created. Valid values:
              * <p>
              * 
-             * *   0: The order is in progress.
-             * *   1: The order is complete.
+             * *   0: The application is being created.
+             * *   1: The application is created.
              */
             public Builder produced(Integer produced) {
                 this.produced = produced;
@@ -745,10 +692,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the quotas of the application.
-             * <p>
-             * 
-             * For more information, see [Quota](https://www.alibabacloud.com/help/doc-detail/170001.htm).
+             * The information about the quotas of the application. For more information, see [Quota](~~170001~~).
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -756,22 +700,14 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the created fine sort expression.
-             */
-            public Builder secondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {
-                this.secondRankAlgoDeploymentId = secondRankAlgoDeploymentId;
-                return this;
-            }
-
-            /**
-             * The status of the application. Valid values:
+             * The state of the application. Valid values:
              * <p>
              * 
-             * *   producing
-             * *   review_pending
-             * *   config_pending
-             * *   normal
-             * *   frozen
+             * *   producing: The application is being created.
+             * *   review_pending: The application is being reviewed.
+             * *   config_pending: The application is to be configured.
+             * *   normal: The application is in service.
+             * *   frozen: The application is frozen.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -787,7 +723,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * The application tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -798,9 +734,9 @@ public class ListAppGroupsResponseBody extends TeaModel {
              * The type of the application. Valid values:
              * <p>
              * 
-             * *   standard: a standard application.
-             * *   advance: an advanced application which is of an old application type. New applications cannot be of this type.
-             * *   enhanced: an advanced application which is of a new application type.
+             * *   standard: a High-performance Search Edition application.
+             * *
+             * *   enhanced: an Industry Algorithm Edition application.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorGroupsResponseBody</p>
  */
 public class DescribeMonitorGroupsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMonitorGroupsResponseBody(Builder builder) {
@@ -122,10 +122,13 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -133,7 +136,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -149,7 +158,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -157,7 +169,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F02B299A-D374-4595-9F55-7534D604F132</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +180,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that are associated with the application group.
+         * <p>The resources that are associated with the application group.</p>
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -173,11 +188,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -185,7 +203,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -198,8 +219,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
     public static class ContactGroup extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ContactGroup(Builder builder) {
@@ -225,7 +252,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the alert contact group.
+             * <p>The name of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudMonitor</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -239,8 +269,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < ContactGroup> contactGroup;
 
         private ContactGroups(Builder builder) {
@@ -280,11 +316,17 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -319,7 +361,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the application group.
+             * <p>The tag key of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -327,7 +372,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the application group.
+             * <p>The tag value of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -341,8 +389,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -382,8 +436,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
     public static class TemplateIds extends TeaModel {
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private java.util.List < String > templateId;
 
         private TemplateIds(Builder builder) {
@@ -423,47 +483,53 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("BindUrl")
+        @com.aliyun.core.annotation.NameInMap("BindUrl")
         private String bindUrl;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private ContactGroups contactGroups;
 
-        @NameInMap("DynamicTagRuleId")
+        @com.aliyun.core.annotation.NameInMap("DynamicTagRuleId")
         private String dynamicTagRuleId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GroupFounderTagKey")
+        @com.aliyun.core.annotation.NameInMap("GroupFounderTagKey")
         private String groupFounderTagKey;
 
-        @NameInMap("GroupFounderTagValue")
+        @com.aliyun.core.annotation.NameInMap("GroupFounderTagValue")
         private String groupFounderTagValue;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TemplateIds")
+        @com.aliyun.core.annotation.NameInMap("TemplateIds")
         private TemplateIds templateIds;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Resource(Builder builder) {
@@ -606,7 +672,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The URL of the ACK cluster from which the application group is synchronized.
+             * <p>The URL of the ACK cluster from which the application group is synchronized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
              */
             public Builder bindUrl(String bindUrl) {
                 this.bindUrl = bindUrl;
@@ -614,7 +683,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact groups.
+             * <p>The alert contact groups.</p>
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -622,7 +691,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag rule.
+             * <p>The ID of the tag rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6b882d9a-5117-42e2-9d0c-4749a0c6****</p>
              */
             public Builder dynamicTagRuleId(String dynamicTagRuleId) {
                 this.dynamicTagRuleId = dynamicTagRuleId;
@@ -630,7 +702,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application group was created. Unit: milliseconds.
+             * <p>The timestamp when the application group was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603181891000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -638,7 +713,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application group was modified. Unit: milliseconds.
+             * <p>The timestamp when the application group was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603181891000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -646,7 +724,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key that is created for the application group by using the tag rule.
+             * <p>The tag key that is created for the application group by using the tag rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GroupKey1</p>
              */
             public Builder groupFounderTagKey(String groupFounderTagKey) {
                 this.groupFounderTagKey = groupFounderTagKey;
@@ -654,7 +735,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value that is created for the application group by using the tag rule.
+             * <p>The tag value that is created for the application group by using the tag rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GroupValue1</p>
              */
             public Builder groupFounderTagValue(String groupFounderTagValue) {
                 this.groupFounderTagValue = groupFounderTagValue;
@@ -662,7 +746,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -670,7 +757,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -678,7 +768,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2hopjh*******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -686,7 +779,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud service.
+             * <p>The ID of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49****</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -694,7 +790,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the application group.
+             * <p>The tags that are attached to the application group.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -702,7 +798,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
              */
             public Builder templateIds(TemplateIds templateIds) {
                 this.templateIds = templateIds;
@@ -710,12 +806,15 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application group. Valid values:
-             * <p>
+             * <p>The type of the application group. Valid values:</p>
+             * <ul>
+             * <li>custom: a self-managed application group</li>
+             * <li>ehpc_cluster: an application group that is synchronized from an E-HPC cluster</li>
+             * <li>kubernetes: an application group that is synchronized from an ACK cluster</li>
+             * </ul>
              * 
-             * *   custom: a self-managed application group
-             * *   ehpc_cluster: an application group that is synchronized from an E-HPC cluster
-             * *   kubernetes: an application group that is synchronized from an ACK cluster
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -729,8 +828,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupsResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;
 
         private Resources(Builder builder) {

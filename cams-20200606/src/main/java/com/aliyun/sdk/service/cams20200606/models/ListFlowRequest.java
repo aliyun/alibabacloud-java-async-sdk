@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlowRequest} extends {@link RequestModel}
  *
  * <p>ListFlowRequest</p>
  */
 public class ListFlowRequest extends Request {
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("FlowName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
     private String flowName;
 
-    @Body
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
     private ListFlowRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class ListFlowRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99948484</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -91,7 +94,10 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * <p>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_001</p>
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -100,7 +106,7 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The returned pages.</p>
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -116,11 +122,17 @@ public class ListFlowRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListFlowRequest} extends {@link TeaModel}
+     *
+     * <p>ListFlowRequest</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private Page(Builder builder) {
@@ -155,7 +167,10 @@ public class ListFlowRequest extends Request {
             private Integer size; 
 
             /**
-             * Index.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -163,7 +178,10 @@ public class ListFlowRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;

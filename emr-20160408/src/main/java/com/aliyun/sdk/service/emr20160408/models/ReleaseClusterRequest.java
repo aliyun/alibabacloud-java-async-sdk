@@ -89,12 +89,12 @@ public class ReleaseClusterRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseClusterRequest response) {
-            super(response);
-            this.forceRelease = response.forceRelease;
-            this.id = response.id;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ReleaseClusterRequest request) {
+            super(request);
+            this.forceRelease = request.forceRelease;
+            this.id = request.id;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

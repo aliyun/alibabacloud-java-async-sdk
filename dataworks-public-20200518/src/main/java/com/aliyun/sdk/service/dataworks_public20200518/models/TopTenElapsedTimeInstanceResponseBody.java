@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TopTenElapsedTimeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>TopTenElapsedTimeInstanceResponseBody</p>
  */
 public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
-    @NameInMap("InstanceConsumeTimeRank")
+    @com.aliyun.core.annotation.NameInMap("InstanceConsumeTimeRank")
     private InstanceConsumeTimeRank instanceConsumeTimeRank;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TopTenElapsedTimeInstanceResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ranking record of the running durations of the instances.
+         * <p>The ranking record of the running durations of the instances.</p>
          */
         public Builder instanceConsumeTimeRank(InstanceConsumeTimeRank instanceConsumeTimeRank) {
             this.instanceConsumeTimeRank = instanceConsumeTimeRank;
@@ -58,7 +63,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6347364dadsfadf****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TopTenElapsedTimeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TopTenElapsedTimeInstanceResponseBody</p>
+     */
     public static class ConsumeTimeRank extends TeaModel {
-        @NameInMap("BusinessDate")
+        @com.aliyun.core.annotation.NameInMap("BusinessDate")
         private Long businessDate;
 
-        @NameInMap("Consumed")
+        @com.aliyun.core.annotation.NameInMap("Consumed")
         private Long consumed;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private Integer programType;
 
         private ConsumeTimeRank(Builder builder) {
@@ -170,7 +184,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             private Integer programType; 
 
             /**
-             * The data timestamp of the instance.
+             * <p>The data timestamp of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder businessDate(Long businessDate) {
                 this.businessDate = businessDate;
@@ -178,7 +195,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The running duration of the instance. Unit: seconds.
+             * <p>The run time length of the instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder consumed(Long consumed) {
                 this.consumed = consumed;
@@ -186,7 +206,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95279527</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -194,7 +217,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -202,7 +228,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -210,7 +239,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the owner of the node.
+             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952795279527</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -218,12 +250,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
-             * <p>
+             * <p>The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
              * 
-             * Valid values:
-             * 
-             * 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder programType(Integer programType) {
                 this.programType = programType;
@@ -237,11 +267,17 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TopTenElapsedTimeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>TopTenElapsedTimeInstanceResponseBody</p>
+     */
     public static class InstanceConsumeTimeRank extends TeaModel {
-        @NameInMap("ConsumeTimeRank")
-        private java.util.List < ConsumeTimeRank> consumeTimeRank;
+        @com.aliyun.core.annotation.NameInMap("ConsumeTimeRank")
+        private java.util.List<ConsumeTimeRank> consumeTimeRank;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private InstanceConsumeTimeRank(Builder builder) {
@@ -260,7 +296,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
         /**
          * @return consumeTimeRank
          */
-        public java.util.List < ConsumeTimeRank> getConsumeTimeRank() {
+        public java.util.List<ConsumeTimeRank> getConsumeTimeRank() {
             return this.consumeTimeRank;
         }
 
@@ -272,19 +308,22 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConsumeTimeRank> consumeTimeRank; 
+            private java.util.List<ConsumeTimeRank> consumeTimeRank; 
             private Long updateTime; 
 
             /**
-             * The ranking data of the running durations of the instances.
+             * <p>The ranking data of the running durations of the instances.</p>
              */
-            public Builder consumeTimeRank(java.util.List < ConsumeTimeRank> consumeTimeRank) {
+            public Builder consumeTimeRank(java.util.List<ConsumeTimeRank> consumeTimeRank) {
                 this.consumeTimeRank = consumeTimeRank;
                 return this;
             }
 
             /**
-             * The timestamp at which the ranking of the running durations of the instances was updated.
+             * <p>The timestamp at which the ranking of the running durations of the instances was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

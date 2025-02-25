@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateResourceResponseBody</p>
  */
 public class CreateResourceResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @NameInMap("OwnerUid")
+    @com.aliyun.core.annotation.NameInMap("OwnerUid")
     private String ownerUid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
     private CreateResourceResponseBody(Builder builder) {
@@ -57,7 +62,7 @@ public class CreateResourceResponseBody extends TeaModel {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -91,14 +96,17 @@ public class CreateResourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String clusterId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String ownerUid; 
         private String requestId; 
         private String resourceId; 
         private String resourceName; 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -106,15 +114,18 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIds.
+         * <p>The instance IDs.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * OwnerUid.
+         * <p>The user ID (UID) of the resource group owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14401087478****</p>
          */
         public Builder ownerUid(String ownerUid) {
             this.ownerUid = ownerUid;
@@ -122,7 +133,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-h7lcw24dyqztwxxxxxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -138,7 +155,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyResource</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;

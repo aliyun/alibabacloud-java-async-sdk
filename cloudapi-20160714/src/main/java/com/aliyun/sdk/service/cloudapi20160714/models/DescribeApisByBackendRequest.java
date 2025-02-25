@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApisByBackendRequest} extends {@link RequestModel}
  *
  * <p>DescribeApisByBackendRequest</p>
  */
 public class DescribeApisByBackendRequest extends Request {
-    @Query
-    @NameInMap("BackendId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StageName")
     private String stageName;
 
     private DescribeApisByBackendRequest(Builder builder) {
@@ -111,7 +116,11 @@ public class DescribeApisByBackendRequest extends Request {
         } 
 
         /**
-         * BackendId.
+         * <p>The ID of the backend service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ac69b7a17524781b275ed4c5eb25c54</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -120,7 +129,10 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,7 +141,10 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +162,16 @@ public class DescribeApisByBackendRequest extends Request {
         }
 
         /**
-         * StageName.
+         * <p>The environment to which the API is published. Valid values:</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>PRE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * <p>If you do not specify this parameter, APIs in the draft state are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpsecServersResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpsecServersResponseBody</p>
  */
 public class ListIpsecServersResponseBody extends TeaModel {
-    @NameInMap("IpsecServers")
-    private java.util.List < IpsecServers> ipsecServers;
+    @com.aliyun.core.annotation.NameInMap("IpsecServers")
+    private java.util.List<IpsecServers> ipsecServers;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListIpsecServersResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
     /**
      * @return ipsecServers
      */
-    public java.util.List < IpsecServers> getIpsecServers() {
+    public java.util.List<IpsecServers> getIpsecServers() {
         return this.ipsecServers;
     }
 
@@ -79,22 +84,25 @@ public class ListIpsecServersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpsecServers> ipsecServers; 
+        private java.util.List<IpsecServers> ipsecServers; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The list of IPsec servers.
+         * <p>The list of IPsec servers.</p>
          */
-        public Builder ipsecServers(java.util.List < IpsecServers> ipsecServers) {
+        public Builder ipsecServers(java.util.List<IpsecServers> ipsecServers) {
             this.ipsecServers = ipsecServers;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +110,14 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +125,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B457</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,29 +152,35 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpsecServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpsecServersResponseBody</p>
+     */
     public static class IkeConfig extends TeaModel {
-        @NameInMap("IkeAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
 
-        @NameInMap("IkeEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeEncAlg")
         private String ikeEncAlg;
 
-        @NameInMap("IkeLifetime")
+        @com.aliyun.core.annotation.NameInMap("IkeLifetime")
         private Long ikeLifetime;
 
-        @NameInMap("IkeMode")
+        @com.aliyun.core.annotation.NameInMap("IkeMode")
         private String ikeMode;
 
-        @NameInMap("IkePfs")
+        @com.aliyun.core.annotation.NameInMap("IkePfs")
         private String ikePfs;
 
-        @NameInMap("IkeVersion")
+        @com.aliyun.core.annotation.NameInMap("IkeVersion")
         private String ikeVersion;
 
-        @NameInMap("LocalId")
+        @com.aliyun.core.annotation.NameInMap("LocalId")
         private String localId;
 
-        @NameInMap("RemoteId")
+        @com.aliyun.core.annotation.NameInMap("RemoteId")
         private String remoteId;
 
         private IkeConfig(Builder builder) {
@@ -246,7 +269,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * The IKE authentication algorithm.
+             * <p>The IKE authentication algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -254,7 +280,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE encryption algorithm.
+             * <p>The IKE encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -262,7 +291,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE lifetime. Unit: seconds.
+             * <p>The IKE lifetime. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -270,10 +302,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values:
-             * <p>
+             * <p>The IKE negotiation mode. Valid values:</p>
+             * <p><strong>main</strong>: This mode offers higher security during negotiations.</p>
              * 
-             * **main**: This mode offers higher security during negotiations.
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -281,7 +314,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The Diffie-Hellman key exchange algorithm.
+             * <p>The Diffie-Hellman key exchange algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -289,7 +325,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE version.
+             * <p>The IKE version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ikev2</p>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -297,7 +336,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.
+             * <p>The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.64.XX.XX</p>
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -305,7 +347,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.
+             * <p>The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139.67.XX.XX</p>
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -319,17 +364,23 @@ public class ListIpsecServersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIpsecServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpsecServersResponseBody</p>
+     */
     public static class IpsecConfig extends TeaModel {
-        @NameInMap("IpsecAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
 
-        @NameInMap("IpsecEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecEncAlg")
         private String ipsecEncAlg;
 
-        @NameInMap("IpsecLifetime")
+        @com.aliyun.core.annotation.NameInMap("IpsecLifetime")
         private Long ipsecLifetime;
 
-        @NameInMap("IpsecPfs")
+        @com.aliyun.core.annotation.NameInMap("IpsecPfs")
         private String ipsecPfs;
 
         private IpsecConfig(Builder builder) {
@@ -382,7 +433,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * The IPsec authentication algorithm.
+             * <p>The IPsec authentication algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha1</p>
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -390,7 +444,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec encryption algorithm.
+             * <p>The IPsec encryption algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes</p>
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -398,7 +455,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec lifetime. Unit: seconds.
+             * <p>The IPsec lifetime. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -406,7 +466,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The Diffie-Hellman key exchange algorithm.
+             * <p>The Diffie-Hellman key exchange algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group2</p>
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -420,59 +483,65 @@ public class ListIpsecServersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIpsecServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpsecServersResponseBody</p>
+     */
     public static class IpsecServers extends TeaModel {
-        @NameInMap("ClientIpPool")
+        @com.aliyun.core.annotation.NameInMap("ClientIpPool")
         private String clientIpPool;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EffectImmediately")
+        @com.aliyun.core.annotation.NameInMap("EffectImmediately")
         private Boolean effectImmediately;
 
-        @NameInMap("IDaaSInstanceId")
+        @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
         private String iDaaSInstanceId;
 
-        @NameInMap("IkeConfig")
+        @com.aliyun.core.annotation.NameInMap("IkeConfig")
         private IkeConfig ikeConfig;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IpsecConfig")
+        @com.aliyun.core.annotation.NameInMap("IpsecConfig")
         private IpsecConfig ipsecConfig;
 
-        @NameInMap("IpsecServerId")
+        @com.aliyun.core.annotation.NameInMap("IpsecServerId")
         private String ipsecServerId;
 
-        @NameInMap("IpsecServerName")
+        @com.aliyun.core.annotation.NameInMap("IpsecServerName")
         private String ipsecServerName;
 
-        @NameInMap("LocalSubnet")
+        @com.aliyun.core.annotation.NameInMap("LocalSubnet")
         private String localSubnet;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MultiFactorAuthEnabled")
+        @com.aliyun.core.annotation.NameInMap("MultiFactorAuthEnabled")
         private Boolean multiFactorAuthEnabled;
 
-        @NameInMap("OnlineClientCount")
+        @com.aliyun.core.annotation.NameInMap("OnlineClientCount")
         private Integer onlineClientCount;
 
-        @NameInMap("Psk")
+        @com.aliyun.core.annotation.NameInMap("Psk")
         private String psk;
 
-        @NameInMap("PskEnabled")
+        @com.aliyun.core.annotation.NameInMap("PskEnabled")
         private Boolean pskEnabled;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("VpnGatewayId")
+        @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
         private String vpnGatewayId;
 
         private IpsecServers(Builder builder) {
@@ -651,7 +720,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             private String vpnGatewayId; 
 
             /**
-             * The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.
+             * <p>The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder clientIpPool(String clientIpPool) {
                 this.clientIpPool = clientIpPool;
@@ -659,10 +731,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the IPsec server was created.
-             * <p>
+             * <p>The time when the IPsec server was created.</p>
+             * <p>T is used as a delimiter. Z indicates that the time is in UTC.</p>
              * 
-             * T is used as a delimiter. Z indicates that the time is in UTC.
+             * <strong>example:</strong>
+             * <p>2018-12-03T10:11:55Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -670,11 +743,14 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:
-             * <p>
+             * <p>Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: immediately initiates negotiations after the configuration is completed.</li>
+             * <li><strong>false</strong>: initiates negotiations when inbound traffic is detected.</li>
+             * </ul>
              * 
-             * *   **true**: immediately initiates negotiations after the configuration is completed.
-             * *   **false**: initiates negotiations when inbound traffic is detected.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder effectImmediately(Boolean effectImmediately) {
                 this.effectImmediately = effectImmediately;
@@ -682,7 +758,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IDaaS instance.
+             * <p>The ID of the IDaaS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas-cn-hangzhou-****</p>
              */
             public Builder iDaaSInstanceId(String iDaaSInstanceId) {
                 this.iDaaSInstanceId = iDaaSInstanceId;
@@ -690,7 +769,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Phase 1 negotiations.
+             * <p>The configurations of Phase 1 negotiations.</p>
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -698,7 +777,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the VPN gateway.
+             * <p>The public IP address of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.22.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -706,7 +788,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of Phase 2 negotiations.
+             * <p>The configurations of Phase 2 negotiations.</p>
              */
             public Builder ipsecConfig(IpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -714,7 +796,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPsec server ID.
+             * <p>The IPsec server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iss-bp1bo3xuvcxo7ixll****</p>
              */
             public Builder ipsecServerId(String ipsecServerId) {
                 this.ipsecServerId = ipsecServerId;
@@ -722,7 +807,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IPsec server.
+             * <p>The name of the IPsec server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipsecServerName(String ipsecServerName) {
                 this.ipsecServerName = ipsecServerName;
@@ -730,7 +818,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.
+             * <p>The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16,172.17.0.0/16</p>
              */
             public Builder localSubnet(String localSubnet) {
                 this.localSubnet = localSubnet;
@@ -738,10 +829,13 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SSL-VPN connections supported by the VPN gateway.
-             * <p>
+             * <p>The number of SSL-VPN connections supported by the VPN gateway.</p>
+             * <blockquote>
+             * <p> The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.</p>
+             * </blockquote>
              * 
-             * >  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -749,11 +843,14 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether two-factor authentication is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong>: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder multiFactorAuthEnabled(Boolean multiFactorAuthEnabled) {
                 this.multiFactorAuthEnabled = multiFactorAuthEnabled;
@@ -761,7 +858,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of clients that are connected to the IPsec server.
+             * <p>The number of clients that are connected to the IPsec server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineClientCount(Integer onlineClientCount) {
                 this.onlineClientCount = onlineClientCount;
@@ -769,7 +869,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The pre-shared key.
+             * <p>The pre-shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pgw6dy7d****</p>
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -777,7 +880,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether pre-shared key authentication is enabled. Only **true** may be returned, which indicates that pre-shared key authentication is enabled.
+             * <p>Indicates whether pre-shared key authentication is enabled. Only <strong>true</strong> may be returned, which indicates that pre-shared key authentication is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pskEnabled(Boolean pskEnabled) {
                 this.pskEnabled = pskEnabled;
@@ -785,7 +891,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the IPsec server is created.
+             * <p>The ID of the region where the IPsec server is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -793,10 +902,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the IPsec server belongs.
-             * <p>
+             * <p>The ID of the resource group to which the IPsec server belongs.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</p>
              * 
-             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+             * <strong>example:</strong>
+             * <p>rg-acfmzs372yg****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -804,7 +914,10 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPN gateway.
+             * <p>The ID of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
              */
             public Builder vpnGatewayId(String vpnGatewayId) {
                 this.vpnGatewayId = vpnGatewayId;

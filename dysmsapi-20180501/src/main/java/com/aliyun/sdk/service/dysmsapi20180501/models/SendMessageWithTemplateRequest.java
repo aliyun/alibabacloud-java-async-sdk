@@ -1,47 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendMessageWithTemplateRequest} extends {@link RequestModel}
  *
  * <p>SendMessageWithTemplateRequest</p>
  */
 public class SendMessageWithTemplateRequest extends Request {
-    @Query
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    private String channelId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Query
-    @NameInMap("SmsUpExtendCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsUpExtendCode")
     private String smsUpExtendCode;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateParam")
     private String templateParam;
 
-    @Query
-    @NameInMap("To")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String to;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidityPeriod")
+    private Long validityPeriod;
 
     private SendMessageWithTemplateRequest(Builder builder) {
         super(builder);
+        this.channelId = builder.channelId;
         this.from = builder.from;
         this.smsUpExtendCode = builder.smsUpExtendCode;
         this.templateCode = builder.templateCode;
         this.templateParam = builder.templateParam;
         this.to = builder.to;
+        this.validityPeriod = builder.validityPeriod;
     }
 
     public static Builder builder() {
@@ -55,6 +65,13 @@ public class SendMessageWithTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return channelId
+     */
+    public String getChannelId() {
+        return this.channelId;
     }
 
     /**
@@ -92,12 +109,21 @@ public class SendMessageWithTemplateRequest extends Request {
         return this.to;
     }
 
+    /**
+     * @return validityPeriod
+     */
+    public Long getValidityPeriod() {
+        return this.validityPeriod;
+    }
+
     public static final class Builder extends Request.Builder<SendMessageWithTemplateRequest, Builder> {
+        private String channelId; 
         private String from; 
         private String smsUpExtendCode; 
         private String templateCode; 
         private String templateParam; 
         private String to; 
+        private Long validityPeriod; 
 
         private Builder() {
             super();
@@ -105,15 +131,33 @@ public class SendMessageWithTemplateRequest extends Request {
 
         private Builder(SendMessageWithTemplateRequest request) {
             super(request);
+            this.channelId = request.channelId;
             this.from = request.from;
             this.smsUpExtendCode = request.smsUpExtendCode;
             this.templateCode = request.templateCode;
             this.templateParam = request.templateParam;
             this.to = request.to;
+            this.validityPeriod = request.validityPeriod;
         } 
 
         /**
-         * The signature. To query the signature, log on to the [Short Message Service (SMS) console](https://sms-intl.console.aliyun.com/overview) and navigate to the **Signatures** tab of the **Go China** page.
+         * <p>The ID of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5739</p>
+         */
+        public Builder channelId(String channelId) {
+            this.putQueryParameter("ChannelId", channelId);
+            this.channelId = channelId;
+            return this;
+        }
+
+        /**
+         * <p>The signature. To query the signature, log on to the <a href="https://sms-intl.console.aliyun.com/overview">Short Message Service (SMS) console</a> and navigate to the <strong>Signatures</strong> tab of the <strong>Go China</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alicloud321</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -122,7 +166,10 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The extension code of the MO message.
+         * <p>The extension code of the MO message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90999</p>
          */
         public Builder smsUpExtendCode(String smsUpExtendCode) {
             this.putQueryParameter("SmsUpExtendCode", smsUpExtendCode);
@@ -131,7 +178,11 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The code of the message template. To query the code, log on to the [SMS console](https://sms-intl.console.aliyun.com/overview) and navigate to the **Templates** tab of the **Go China** page.
+         * <p>The code of the message template. To query the code, log on to the <a href="https://sms-intl.console.aliyun.com/overview">SMS console</a> and navigate to the <strong>Templates</strong> tab of the <strong>Go China</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS_****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -140,7 +191,10 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The value of the variable in the message template. If a variable exists in the template, the parameter is required.
+         * <p>The value of the variable in the message template. If a variable exists in the template, the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;1234&quot;,&quot;product&quot;:&quot;ytx&quot;}</p>
          */
         public Builder templateParam(String templateParam) {
             this.putQueryParameter("TemplateParam", templateParam);
@@ -149,14 +203,28 @@ public class SendMessageWithTemplateRequest extends Request {
         }
 
         /**
-         * The mobile phone number to which the message is sent. You must add the country code to the beginning of the mobile phone number. Example: 861503871\*\*\*\*.
-         * <p>
+         * <p>The mobile phone number to which the message is sent. You must add the country code to the beginning of the mobile phone number. Example: 861503871****.</p>
+         * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.367279cbwQFoeM">Dialing codes</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).
+         * <strong>example:</strong>
+         * <p>861503871****</p>
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);
             this.to = to;
+            return this;
+        }
+
+        /**
+         * <p>The validity period of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder validityPeriod(Long validityPeriod) {
+            this.putQueryParameter("ValidityPeriod", validityPeriod);
+            this.validityPeriod = validityPeriod;
             return this;
         }
 

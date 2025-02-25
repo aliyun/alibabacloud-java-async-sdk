@@ -1,45 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>DetachDBInstancesRequest</p>
  */
 public class DetachDBInstancesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstances")
-    @Validation(required = true)
-    private java.util.List < String > DBInstances;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstances")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> DBInstances;
 
-    @Query
-    @NameInMap("ForceDetach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDetach")
     private Boolean forceDetach;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveSecurityGroup")
+    private Boolean removeSecurityGroup;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private DetachDBInstancesRequest(Builder builder) {
@@ -49,6 +58,7 @@ public class DetachDBInstancesRequest extends Request {
         this.forceDetach = builder.forceDetach;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.removeSecurityGroup = builder.removeSecurityGroup;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scalingGroupId = builder.scalingGroupId;
     }
@@ -76,7 +86,7 @@ public class DetachDBInstancesRequest extends Request {
     /**
      * @return DBInstances
      */
-    public java.util.List < String > getDBInstances() {
+    public java.util.List<String> getDBInstances() {
         return this.DBInstances;
     }
 
@@ -102,6 +112,13 @@ public class DetachDBInstancesRequest extends Request {
     }
 
     /**
+     * @return removeSecurityGroup
+     */
+    public Boolean getRemoveSecurityGroup() {
+        return this.removeSecurityGroup;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -117,10 +134,11 @@ public class DetachDBInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DetachDBInstancesRequest, Builder> {
         private String clientToken; 
-        private java.util.List < String > DBInstances; 
+        private java.util.List<String> DBInstances; 
         private Boolean forceDetach; 
         private Long ownerId; 
         private String regionId; 
+        private Boolean removeSecurityGroup; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
 
@@ -135,12 +153,17 @@ public class DetachDBInstancesRequest extends Request {
             this.forceDetach = request.forceDetach;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.removeSecurityGroup = request.removeSecurityGroup;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,16 +172,25 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstances.
+         * <p>The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder DBInstances(java.util.List < String > DBInstances) {
+        public Builder DBInstances(java.util.List<String> DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
             this.DBInstances = DBInstances;
             return this;
         }
 
         /**
-         * ForceDetach.
+         * <p>Specifies whether to remove the private IP addresses of the existing instances in the scaling group from the IP address whitelist of the ApsaraDB RDS instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDetach(Boolean forceDetach) {
             this.putQueryParameter("ForceDetach", forceDetach);
@@ -176,11 +208,31 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to remove the security group. This parameter takes effect only if you set <code>AttachMode</code> to <code>SecurityGroup</code>. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder removeSecurityGroup(Boolean removeSecurityGroup) {
+            this.putQueryParameter("RemoveSecurityGroup", removeSecurityGroup);
+            this.removeSecurityGroup = removeSecurityGroup;
             return this;
         }
 
@@ -194,7 +246,11 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

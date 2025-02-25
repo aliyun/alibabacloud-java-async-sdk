@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCollectorsRequest} extends {@link RequestModel}
  *
  * <p>ListCollectorsRequest</p>
  */
 public class ListCollectorsRequest extends Request {
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("resId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resId")
     private String resId;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("sourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
     private ListCollectorsRequest(Builder builder) {
@@ -126,7 +126,10 @@ public class ListCollectorsRequest extends Request {
         } 
 
         /**
-         * The ID of the resource with which the shipper is associated.
+         * <p>The ID of the resource with which the shipper is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q8auz0003****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -135,7 +138,10 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * The name of the shipper.
+         * <p>The name of the shipper.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collectorName1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -144,7 +150,10 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: 1 to 200. Default value: 1.
+         * <p>The number of the page to return. Valid values: 1 to 200. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -153,7 +162,10 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * The ID of the shipper.
+         * <p>The ID of the shipper.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-cn-77uqof2s7rg5c****</p>
          */
         public Builder resId(String resId) {
             this.putQueryParameter("resId", resId);
@@ -162,7 +174,10 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.
+         * <p>The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -171,11 +186,14 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:
-         * <p>
+         * <p>The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:</p>
+         * <ul>
+         * <li>ECS</li>
+         * <li>ACK</li>
+         * </ul>
          * 
-         * *   ECS
-         * *   ACK
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);

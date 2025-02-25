@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotlineRecordDetailRequest} extends {@link RequestModel}
  *
  * <p>ListHotlineRecordDetailRequest</p>
  */
 public class ListHotlineRecordDetailRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CloseTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloseTimeEnd")
     private Long closeTimeEnd;
 
-    @Query
-    @NameInMap("CloseTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloseTimeStart")
     private Long closeTimeStart;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListHotlineRecordDetailRequest(Builder builder) {
@@ -125,7 +130,7 @@ public class ListHotlineRecordDetailRequest extends Request {
         } 
 
         /**
-         * clientToken
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -134,7 +139,7 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * 热线挂断的时间范围
+         * CloseTimeEnd.
          */
         public Builder closeTimeEnd(Long closeTimeEnd) {
             this.putQueryParameter("CloseTimeEnd", closeTimeEnd);
@@ -143,7 +148,7 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * 热线挂断的时间范围
+         * CloseTimeStart.
          */
         public Builder closeTimeStart(Long closeTimeStart) {
             this.putQueryParameter("CloseTimeStart", closeTimeStart);
@@ -152,7 +157,7 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * 当前页
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -161,7 +166,10 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * 实例id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +178,7 @@ public class ListHotlineRecordDetailRequest extends Request {
         }
 
         /**
-         * 每页数据量
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

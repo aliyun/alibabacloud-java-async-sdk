@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvoiceSearchResponseBody} extends {@link TeaModel}
  *
  * <p>InvoiceSearchResponseBody</p>
  */
 public class InvoiceSearchResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
-    private java.util.List < Module> module;
+    @com.aliyun.core.annotation.NameInMap("module")
+    private java.util.List<Module> module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private InvoiceSearchResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class InvoiceSearchResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -92,7 +97,7 @@ public class InvoiceSearchResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -116,7 +121,7 @@ public class InvoiceSearchResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -138,7 +143,10 @@ public class InvoiceSearchResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB68C364-F9A0-5046-910A-2DD92C277E71</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -151,14 +159,20 @@ public class InvoiceSearchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InvoiceSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvoiceSearchResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("third_part_invoice_id")
+        @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
         private String thirdPartInvoiceId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Module(Builder builder) {
@@ -202,7 +216,10 @@ public class InvoiceSearchResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * ID
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1478652</p>
              */
             public Builder id(Long id) {
                 this.id = id;

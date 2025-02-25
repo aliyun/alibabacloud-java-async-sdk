@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelActiveOperationTasksRequest} extends {@link RequestModel}
  *
  * <p>CancelActiveOperationTasksRequest</p>
  */
 public class CancelActiveOperationTasksRequest extends Request {
-    @Query
-    @NameInMap("Ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ids;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CancelActiveOperationTasksRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class CancelActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -79,7 +87,10 @@ public class CancelActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

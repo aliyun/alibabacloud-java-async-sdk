@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppInstanceGroupResponseBody</p>
  */
 public class GetAppInstanceGroupResponseBody extends TeaModel {
-    @NameInMap("AppInstanceGroupModels")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupModels")
     private AppInstanceGroupModels appInstanceGroupModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAppInstanceGroupResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppInstanceGroupModels
+         * <p>AppInstanceGroupModels</p>
          */
         public Builder appInstanceGroupModels(AppInstanceGroupModels appInstanceGroupModels) {
             this.appInstanceGroupModels = appInstanceGroupModels;
@@ -71,16 +76,34 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppInstanceGroupResponseBody</p>
+     */
     public static class Apps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppIcon")
+        private String appIcon;
+
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
+        private String appVersion;
+
+        @com.aliyun.core.annotation.NameInMap("AppVersionName")
+        private String appVersionName;
+
         private Apps(Builder builder) {
+            this.appIcon = builder.appIcon;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appVersion = builder.appVersion;
+            this.appVersionName = builder.appVersionName;
         }
 
         public static Builder builder() {
@@ -89,6 +112,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         public static Apps create() {
             return builder().build();
+        }
+
+        /**
+         * @return appIcon
+         */
+        public String getAppIcon() {
+            return this.appIcon;
         }
 
         /**
@@ -105,9 +135,34 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             return this.appName;
         }
 
+        /**
+         * @return appVersion
+         */
+        public String getAppVersion() {
+            return this.appVersion;
+        }
+
+        /**
+         * @return appVersionName
+         */
+        public String getAppVersionName() {
+            return this.appVersionName;
+        }
+
         public static final class Builder {
+            private String appIcon; 
             private String appId; 
             private String appName; 
+            private String appVersion; 
+            private String appVersionName; 
+
+            /**
+             * AppIcon.
+             */
+            public Builder appIcon(String appIcon) {
+                this.appIcon = appIcon;
+                return this;
+            }
 
             /**
              * AppId.
@@ -125,6 +180,22 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * AppVersion.
+             */
+            public Builder appVersion(String appVersion) {
+                this.appVersion = appVersion;
+                return this;
+            }
+
+            /**
+             * AppVersionName.
+             */
+            public Builder appVersionName(String appVersionName) {
+                this.appVersionName = appVersionName;
+                return this;
+            }
+
             public Apps build() {
                 return new Apps(this);
             } 
@@ -132,14 +203,20 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppInstanceGroupResponseBody</p>
+     */
     public static class TimerPeriods extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TimerPeriods(Builder builder) {
@@ -213,15 +290,21 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppInstanceGroupResponseBody</p>
+     */
     public static class RecurrenceSchedules extends TeaModel {
-        @NameInMap("RecurrenceType")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
-        @NameInMap("RecurrenceValues")
-        private java.util.List < Integer > recurrenceValues;
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValues")
+        private java.util.List<Integer> recurrenceValues;
 
-        @NameInMap("TimerPeriods")
-        private java.util.List < TimerPeriods> timerPeriods;
+        @com.aliyun.core.annotation.NameInMap("TimerPeriods")
+        private java.util.List<TimerPeriods> timerPeriods;
 
         private RecurrenceSchedules(Builder builder) {
             this.recurrenceType = builder.recurrenceType;
@@ -247,21 +330,21 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         /**
          * @return recurrenceValues
          */
-        public java.util.List < Integer > getRecurrenceValues() {
+        public java.util.List<Integer> getRecurrenceValues() {
             return this.recurrenceValues;
         }
 
         /**
          * @return timerPeriods
          */
-        public java.util.List < TimerPeriods> getTimerPeriods() {
+        public java.util.List<TimerPeriods> getTimerPeriods() {
             return this.timerPeriods;
         }
 
         public static final class Builder {
             private String recurrenceType; 
-            private java.util.List < Integer > recurrenceValues; 
-            private java.util.List < TimerPeriods> timerPeriods; 
+            private java.util.List<Integer> recurrenceValues; 
+            private java.util.List<TimerPeriods> timerPeriods; 
 
             /**
              * RecurrenceType.
@@ -274,7 +357,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             /**
              * RecurrenceValues.
              */
-            public Builder recurrenceValues(java.util.List < Integer > recurrenceValues) {
+            public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
                 return this;
             }
@@ -282,7 +365,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             /**
              * TimerPeriods.
              */
-            public Builder timerPeriods(java.util.List < TimerPeriods> timerPeriods) {
+            public Builder timerPeriods(java.util.List<TimerPeriods> timerPeriods) {
                 this.timerPeriods = timerPeriods;
                 return this;
             }
@@ -294,63 +377,73 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppInstanceGroupResponseBody</p>
+     */
     public static class NodePool extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("MaxScalingAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxIdleAppInstanceAmount")
+        private Integer maxIdleAppInstanceAmount;
+
+        @com.aliyun.core.annotation.NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
 
-        @NameInMap("NodeAmount")
+        @com.aliyun.core.annotation.NameInMap("NodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("NodeCapacity")
+        @com.aliyun.core.annotation.NameInMap("NodeCapacity")
         private Integer nodeCapacity;
 
-        @NameInMap("NodeInstanceType")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
         private String nodeInstanceType;
 
-        @NameInMap("NodePoolId")
+        @com.aliyun.core.annotation.NameInMap("NodePoolId")
         private String nodePoolId;
 
-        @NameInMap("NodeTypeName")
+        @com.aliyun.core.annotation.NameInMap("NodeTypeName")
         private String nodeTypeName;
 
-        @NameInMap("NodeUsed")
+        @com.aliyun.core.annotation.NameInMap("NodeUsed")
         private Integer nodeUsed;
 
-        @NameInMap("RecurrenceSchedules")
-        private java.util.List < RecurrenceSchedules> recurrenceSchedules;
+        @com.aliyun.core.annotation.NameInMap("RecurrenceSchedules")
+        private java.util.List<RecurrenceSchedules> recurrenceSchedules;
 
-        @NameInMap("ScalingDownAfterIdleMinutes")
+        @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
 
-        @NameInMap("ScalingNodeAmount")
+        @com.aliyun.core.annotation.NameInMap("ScalingNodeAmount")
         private Integer scalingNodeAmount;
 
-        @NameInMap("ScalingNodeUsed")
+        @com.aliyun.core.annotation.NameInMap("ScalingNodeUsed")
         private Integer scalingNodeUsed;
 
-        @NameInMap("ScalingStep")
+        @com.aliyun.core.annotation.NameInMap("ScalingStep")
         private Integer scalingStep;
 
-        @NameInMap("ScalingUsageThreshold")
+        @com.aliyun.core.annotation.NameInMap("ScalingUsageThreshold")
         private String scalingUsageThreshold;
 
-        @NameInMap("StrategyDisableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyDisableDate")
         private String strategyDisableDate;
 
-        @NameInMap("StrategyEnableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyEnableDate")
         private String strategyEnableDate;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("WarmUp")
+        @com.aliyun.core.annotation.NameInMap("WarmUp")
         private Boolean warmUp;
 
         private NodePool(Builder builder) {
             this.amount = builder.amount;
+            this.maxIdleAppInstanceAmount = builder.maxIdleAppInstanceAmount;
             this.maxScalingAmount = builder.maxScalingAmount;
             this.nodeAmount = builder.nodeAmount;
             this.nodeCapacity = builder.nodeCapacity;
@@ -383,6 +476,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
          */
         public Integer getAmount() {
             return this.amount;
+        }
+
+        /**
+         * @return maxIdleAppInstanceAmount
+         */
+        public Integer getMaxIdleAppInstanceAmount() {
+            return this.maxIdleAppInstanceAmount;
         }
 
         /**
@@ -437,7 +537,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         /**
          * @return recurrenceSchedules
          */
-        public java.util.List < RecurrenceSchedules> getRecurrenceSchedules() {
+        public java.util.List<RecurrenceSchedules> getRecurrenceSchedules() {
             return this.recurrenceSchedules;
         }
 
@@ -506,6 +606,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer amount; 
+            private Integer maxIdleAppInstanceAmount; 
             private Integer maxScalingAmount; 
             private Integer nodeAmount; 
             private Integer nodeCapacity; 
@@ -513,7 +614,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String nodePoolId; 
             private String nodeTypeName; 
             private Integer nodeUsed; 
-            private java.util.List < RecurrenceSchedules> recurrenceSchedules; 
+            private java.util.List<RecurrenceSchedules> recurrenceSchedules; 
             private Integer scalingDownAfterIdleMinutes; 
             private Integer scalingNodeAmount; 
             private Integer scalingNodeUsed; 
@@ -529,6 +630,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
+                return this;
+            }
+
+            /**
+             * MaxIdleAppInstanceAmount.
+             */
+            public Builder maxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
+                this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
                 return this;
             }
 
@@ -591,7 +700,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             /**
              * RecurrenceSchedules.
              */
-            public Builder recurrenceSchedules(java.util.List < RecurrenceSchedules> recurrenceSchedules) {
+            public Builder recurrenceSchedules(java.util.List<RecurrenceSchedules> recurrenceSchedules) {
                 this.recurrenceSchedules = recurrenceSchedules;
                 return this;
             }
@@ -675,14 +784,20 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppInstanceGroupResponseBody</p>
+     */
     public static class OtaInfo extends TeaModel {
-        @NameInMap("NewOtaVersion")
+        @com.aliyun.core.annotation.NameInMap("NewOtaVersion")
         private String newOtaVersion;
 
-        @NameInMap("OtaVersion")
+        @com.aliyun.core.annotation.NameInMap("OtaVersion")
         private String otaVersion;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private OtaInfo(Builder builder) {
@@ -756,98 +871,110 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAppInstanceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppInstanceGroupResponseBody</p>
+     */
     public static class AppInstanceGroupModels extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("AppCenterImageId")
+        @com.aliyun.core.annotation.NameInMap("AppCenterImageId")
         private String appCenterImageId;
 
-        @NameInMap("AppCenterImageName")
+        @com.aliyun.core.annotation.NameInMap("AppCenterImageName")
         private String appCenterImageName;
 
-        @NameInMap("AppInstanceGroupId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
-        @NameInMap("AppInstanceGroupName")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
         private String appInstanceGroupName;
 
-        @NameInMap("AppInstanceType")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceType")
         private String appInstanceType;
 
-        @NameInMap("AppInstanceTypeName")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceTypeName")
         private String appInstanceTypeName;
 
-        @NameInMap("AppPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AppPolicyId")
         private String appPolicyId;
 
-        @NameInMap("Apps")
-        private java.util.List < Apps> apps;
+        @com.aliyun.core.annotation.NameInMap("Apps")
+        private java.util.List<Apps> apps;
 
-        @NameInMap("ChargeResourceMode")
+        @com.aliyun.core.annotation.NameInMap("ChargeResourceMode")
         private String chargeResourceMode;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("MaxAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxAmount")
         private Integer maxAmount;
 
-        @NameInMap("MinAmount")
+        @com.aliyun.core.annotation.NameInMap("MinAmount")
         private Integer minAmount;
 
-        @NameInMap("NodePool")
-        private java.util.List < NodePool> nodePool;
+        @com.aliyun.core.annotation.NameInMap("NodePool")
+        private java.util.List<NodePool> nodePool;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+        private String officeSiteId;
+
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("OtaInfo")
+        @com.aliyun.core.annotation.NameInMap("OtaInfo")
         private OtaInfo otaInfo;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReserveAmountRatio")
+        @com.aliyun.core.annotation.NameInMap("ReserveAmountRatio")
         private String reserveAmountRatio;
 
-        @NameInMap("ReserveMaxAmount")
+        @com.aliyun.core.annotation.NameInMap("ReserveMaxAmount")
         private Integer reserveMaxAmount;
 
-        @NameInMap("ReserveMinAmount")
+        @com.aliyun.core.annotation.NameInMap("ReserveMinAmount")
         private Integer reserveMinAmount;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ScalingDownAfterIdleMinutes")
+        @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
 
-        @NameInMap("ScalingStep")
+        @com.aliyun.core.annotation.NameInMap("ScalingStep")
         private Integer scalingStep;
 
-        @NameInMap("ScalingUsageThreshold")
+        @com.aliyun.core.annotation.NameInMap("ScalingUsageThreshold")
         private String scalingUsageThreshold;
 
-        @NameInMap("SessionTimeout")
+        @com.aliyun.core.annotation.NameInMap("SessionTimeout")
         private String sessionTimeout;
 
-        @NameInMap("SkipUserAuthCheck")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
+        private String sessionType;
+
+        @com.aliyun.core.annotation.NameInMap("SkipUserAuthCheck")
         private Boolean skipUserAuthCheck;
 
-        @NameInMap("SpecId")
+        @com.aliyun.core.annotation.NameInMap("SpecId")
         private String specId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AppInstanceGroupModels(Builder builder) {
@@ -867,6 +994,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.maxAmount = builder.maxAmount;
             this.minAmount = builder.minAmount;
             this.nodePool = builder.nodePool;
+            this.officeSiteId = builder.officeSiteId;
             this.osType = builder.osType;
             this.otaInfo = builder.otaInfo;
             this.productType = builder.productType;
@@ -879,6 +1007,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.scalingStep = builder.scalingStep;
             this.scalingUsageThreshold = builder.scalingUsageThreshold;
             this.sessionTimeout = builder.sessionTimeout;
+            this.sessionType = builder.sessionType;
             this.skipUserAuthCheck = builder.skipUserAuthCheck;
             this.specId = builder.specId;
             this.status = builder.status;
@@ -951,7 +1080,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         /**
          * @return apps
          */
-        public java.util.List < Apps> getApps() {
+        public java.util.List<Apps> getApps() {
             return this.apps;
         }
 
@@ -1000,8 +1129,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         /**
          * @return nodePool
          */
-        public java.util.List < NodePool> getNodePool() {
+        public java.util.List<NodePool> getNodePool() {
             return this.nodePool;
+        }
+
+        /**
+         * @return officeSiteId
+         */
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
         }
 
         /**
@@ -1089,6 +1225,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionType
+         */
+        public String getSessionType() {
+            return this.sessionType;
+        }
+
+        /**
          * @return skipUserAuthCheck
          */
         public Boolean getSkipUserAuthCheck() {
@@ -1118,14 +1261,15 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String appInstanceType; 
             private String appInstanceTypeName; 
             private String appPolicyId; 
-            private java.util.List < Apps> apps; 
+            private java.util.List<Apps> apps; 
             private String chargeResourceMode; 
             private String chargeType; 
             private String expiredTime; 
             private String gmtCreate; 
             private Integer maxAmount; 
             private Integer minAmount; 
-            private java.util.List < NodePool> nodePool; 
+            private java.util.List<NodePool> nodePool; 
+            private String officeSiteId; 
             private String osType; 
             private OtaInfo otaInfo; 
             private String productType; 
@@ -1138,6 +1282,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private Integer scalingStep; 
             private String scalingUsageThreshold; 
             private String sessionTimeout; 
+            private String sessionType; 
             private Boolean skipUserAuthCheck; 
             private String specId; 
             private String status; 
@@ -1209,7 +1354,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             /**
              * Apps.
              */
-            public Builder apps(java.util.List < Apps> apps) {
+            public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
                 return this;
             }
@@ -1265,8 +1410,16 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             /**
              * NodePool.
              */
-            public Builder nodePool(java.util.List < NodePool> nodePool) {
+            public Builder nodePool(java.util.List<NodePool> nodePool) {
                 this.nodePool = nodePool;
+                return this;
+            }
+
+            /**
+             * OfficeSiteId.
+             */
+            public Builder officeSiteId(String officeSiteId) {
+                this.officeSiteId = officeSiteId;
                 return this;
             }
 
@@ -1363,6 +1516,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder sessionTimeout(String sessionTimeout) {
                 this.sessionTimeout = sessionTimeout;
+                return this;
+            }
+
+            /**
+             * SessionType.
+             */
+            public Builder sessionType(String sessionType) {
+                this.sessionType = sessionType;
                 return this;
             }
 

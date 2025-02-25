@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EstimatedRestartTimeResponseBody} extends {@link TeaModel}
  *
  * <p>EstimatedRestartTimeResponseBody</p>
  */
 public class EstimatedRestartTimeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private EstimatedRestartTimeResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +74,17 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EstimatedRestartTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>EstimatedRestartTimeResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Long value;
 
         private Result(Builder builder) {
@@ -110,7 +119,10 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>second</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -118,7 +130,10 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated restart time.
+             * <p>The estimated restart time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder value(Long value) {
                 this.value = value;

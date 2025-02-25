@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageRequest} extends {@link RequestModel}
  *
  * <p>CreateImageRequest</p>
  */
 public class CreateImageRequest extends Request {
-    @Query
-    @NameInMap("AutoCleanUserdata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCleanUserdata")
     private Boolean autoCleanUserdata;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
-    @Query
-    @NameInMap("DiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
     private String diskType;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("ImageResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageResourceType")
     private String imageResourceType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Query
-    @NameInMap("SnapshotIds")
-    private java.util.List < String > snapshotIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotIds")
+    private java.util.List<String> snapshotIds;
 
     private CreateImageRequest(Builder builder) {
         super(builder);
@@ -134,7 +139,7 @@ public class CreateImageRequest extends Request {
     /**
      * @return snapshotIds
      */
-    public java.util.List < String > getSnapshotIds() {
+    public java.util.List<String> getSnapshotIds() {
         return this.snapshotIds;
     }
 
@@ -147,7 +152,7 @@ public class CreateImageRequest extends Request {
         private String imageResourceType; 
         private String regionId; 
         private String snapshotId; 
-        private java.util.List < String > snapshotIds; 
+        private java.util.List<String> snapshotIds; 
 
         private Builder() {
             super();
@@ -167,7 +172,10 @@ public class CreateImageRequest extends Request {
         } 
 
         /**
-         * AutoCleanUserdata.
+         * <p>Specifies whether to clear private data of users. If you set AutoCleanUserdata to <code>true</code>, the custom image clears the data directories, excluding the <code>Administrator</code> and <code>Public</code> directories, in the <code>C:\Users</code> directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoCleanUserdata(Boolean autoCleanUserdata) {
             this.putQueryParameter("AutoCleanUserdata", autoCleanUserdata);
@@ -176,7 +184,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -185,7 +196,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -194,7 +208,15 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The disk data that is contained in the custom image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: only contain data from system disks.</li>
+         * <li>ALL: contain data from system disks and user disks. [default]</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -203,7 +225,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -212,7 +237,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * ImageResourceType.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden.</p>
          */
         public Builder imageResourceType(String imageResourceType) {
             this.putQueryParameter("ImageResourceType", imageResourceType);
@@ -221,7 +249,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +262,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zefuwk8l6ytcgd3bf4o</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -239,9 +274,9 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * SnapshotIds.
+         * <p>The IDs of the snapshots.</p>
          */
-        public Builder snapshotIds(java.util.List < String > snapshotIds) {
+        public Builder snapshotIds(java.util.List<String> snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
             this.snapshotIds = snapshotIds;
             return this;

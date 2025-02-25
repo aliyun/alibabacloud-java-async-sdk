@@ -1,57 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateIMRobotRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateIMRobotRequest</p>
  */
 public class CreateOrUpdateIMRobotRequest extends Request {
-    @Body
-    @NameInMap("CardTemplate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CardTemplate")
     private String cardTemplate;
 
-    @Body
-    @NameInMap("DailyNoc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DailyNoc")
     private Boolean dailyNoc;
 
-    @Body
-    @NameInMap("DailyNocTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DailyNocTime")
     private String dailyNocTime;
 
-    @Body
-    @NameInMap("DingSignKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DingSignKey")
     private String dingSignKey;
 
-    @Body
-    @NameInMap("EnableOutgoing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableOutgoing")
     private Boolean enableOutgoing;
 
-    @Body
-    @NameInMap("RobotAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String robotAddress;
 
-    @Body
-    @NameInMap("RobotId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotId")
     private Long robotId;
 
-    @Body
-    @NameInMap("RobotName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String robotName;
 
-    @Body
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateOrUpdateIMRobotRequest(Builder builder) {
@@ -182,7 +188,10 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         } 
 
         /**
-         * The configurations of the alert card template. For more information about the parameters in the template, see the following section.
+         * <p>The configurations of the alert card template. For more information about the parameters in the template, see the following section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;button&quot;: [         &quot;claim&quot;,         &quot;close&quot;,         &quot;follow&quot;,         &quot;send_itsm&quot;,         &quot;block&quot;,         &quot;unResolvedIncident&quot;     ],     &quot;field&quot;: [         {             &quot;fieldName&quot;: &quot;alarmName&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;notificationPolicy&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;alarmContent&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;alarmTime&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;seriesChart&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;includeEvent&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;assigned&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;similarAlarm&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;operator&quot;,             &quot;visible&quot;: true         }     ] }</p>
          */
         public Builder cardTemplate(String cardTemplate) {
             this.putBodyParameter("CardTemplate", cardTemplate);
@@ -191,11 +200,14 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * Specifies whether to send daily statistics. Valid values:
-         * <p>
+         * <p>Specifies whether to send daily statistics. Valid values:</p>
+         * <ul>
+         * <li><code>false</code> (default): Daily statistics are not sent.</li>
+         * <li><code>true</code>: Daily statistics are sent. If you set the value to <code>true</code>, the <strong>DailyNocTime</strong> parameter is required.</li>
+         * </ul>
          * 
-         * *   `false` (default): Daily statistics are not sent.
-         * *   `true`: Daily statistics are sent. If you set the value to `true`, the **DailyNocTime** parameter is required.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dailyNoc(Boolean dailyNoc) {
             this.putBodyParameter("DailyNoc", dailyNoc);
@@ -204,7 +216,10 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * The points in time at which the daily statistics are sent. Separate multiple points in time with commas (,). The points in time are in the HH:SS format. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.
+         * <p>The points in time at which the daily statistics are sent. Separate multiple points in time with commas (,). The points in time are in the HH:SS format. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:30,17:00</p>
          */
         public Builder dailyNocTime(String dailyNocTime) {
             this.putBodyParameter("DailyNocTime", dailyNocTime);
@@ -213,7 +228,10 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.
+         * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is <strong>Alert</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder dingSignKey(String dingSignKey) {
             this.putBodyParameter("DingSignKey", dingSignKey);
@@ -222,7 +240,10 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Outgoing feature.
+         * <p>Specifies whether to enable the Outgoing feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOutgoing(Boolean enableOutgoing) {
             this.putBodyParameter("EnableOutgoing", enableOutgoing);
@@ -231,7 +252,11 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * The webhook URL of the IM chatbot.
+         * <p>The webhook URL of the IM chatbot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
          */
         public Builder robotAddress(String robotAddress) {
             this.putBodyParameter("RobotAddress", robotAddress);
@@ -240,11 +265,13 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * The ID of the IM chatbot.
-         * <p>
+         * <p>The ID of the IM chatbot.</p>
+         * <blockquote>
+         * <p>If you do not specify the parameter, a new IM chatbot is created.</p>
+         * </blockquote>
          * 
-         * - If you do not specify the parameter, a new IM chatbot is created.
-         * - If you specify this parameter, the specified IM chatbot is modified.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder robotId(Long robotId) {
             this.putBodyParameter("RobotId", robotId);
@@ -253,7 +280,11 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * The name of the IM chatbot.
+         * <p>The name of the IM chatbot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chatbot name</p>
          */
         public Builder robotName(String robotName) {
             this.putBodyParameter("RobotName", robotName);
@@ -262,7 +293,10 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * The token required to enable the Outgoing feature.
+         * <p>The token required to enable the Outgoing feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656558719183be1245ab44********</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("Token", token);
@@ -271,11 +305,16 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         }
 
         /**
-         * The type of the IM chatbot. Valid values:
-         * <p>
+         * <p>The type of the IM chatbot. Valid values:</p>
+         * <ul>
+         * <li><code>dingding</code>: DingTalk chatbot</li>
+         * <li><code>wechat</code>: WeCom chatbot</li>
+         * <li><code>feishu</code>: Lark chatbot</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `dingding`: DingTalk chatbot
-         * *   `wechat`: WeCom chatbot
+         * <strong>example:</strong>
+         * <p>dingding</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRulesResponseBody</p>
  */
 public class ListRulesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    private java.util.List<Rules> rules;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListRulesResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListRulesResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -82,11 +87,14 @@ public class ListRulesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +117,10 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,15 +128,18 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The forwarding rules.
+         * <p>The details about the forwarding rule.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,23 +152,29 @@ public class ListRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class CorsConfig extends TeaModel {
-        @NameInMap("AllowCredentials")
+        @com.aliyun.core.annotation.NameInMap("AllowCredentials")
         private String allowCredentials;
 
-        @NameInMap("AllowHeaders")
-        private java.util.List < String > allowHeaders;
+        @com.aliyun.core.annotation.NameInMap("AllowHeaders")
+        private java.util.List<String> allowHeaders;
 
-        @NameInMap("AllowMethods")
-        private java.util.List < String > allowMethods;
+        @com.aliyun.core.annotation.NameInMap("AllowMethods")
+        private java.util.List<String> allowMethods;
 
-        @NameInMap("AllowOrigin")
-        private java.util.List < String > allowOrigin;
+        @com.aliyun.core.annotation.NameInMap("AllowOrigin")
+        private java.util.List<String> allowOrigin;
 
-        @NameInMap("ExposeHeaders")
-        private java.util.List < String > exposeHeaders;
+        @com.aliyun.core.annotation.NameInMap("ExposeHeaders")
+        private java.util.List<String> exposeHeaders;
 
-        @NameInMap("MaxAge")
+        @com.aliyun.core.annotation.NameInMap("MaxAge")
         private Long maxAge;
 
         private CorsConfig(Builder builder) {
@@ -181,28 +204,28 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return allowHeaders
          */
-        public java.util.List < String > getAllowHeaders() {
+        public java.util.List<String> getAllowHeaders() {
             return this.allowHeaders;
         }
 
         /**
          * @return allowMethods
          */
-        public java.util.List < String > getAllowMethods() {
+        public java.util.List<String> getAllowMethods() {
             return this.allowMethods;
         }
 
         /**
          * @return allowOrigin
          */
-        public java.util.List < String > getAllowOrigin() {
+        public java.util.List<String> getAllowOrigin() {
             return this.allowOrigin;
         }
 
         /**
          * @return exposeHeaders
          */
-        public java.util.List < String > getExposeHeaders() {
+        public java.util.List<String> getExposeHeaders() {
             return this.exposeHeaders;
         }
 
@@ -215,18 +238,21 @@ public class ListRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String allowCredentials; 
-            private java.util.List < String > allowHeaders; 
-            private java.util.List < String > allowMethods; 
-            private java.util.List < String > allowOrigin; 
-            private java.util.List < String > exposeHeaders; 
+            private java.util.List<String> allowHeaders; 
+            private java.util.List<String> allowMethods; 
+            private java.util.List<String> allowOrigin; 
+            private java.util.List<String> exposeHeaders; 
             private Long maxAge; 
 
             /**
-             * Indicates whether credentials can be carried in CORS requests. Valid values:
-             * <p>
+             * <p>Indicates whether credentials can be carried in CORS requests. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**
-             * *   **off**
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder allowCredentials(String allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -234,42 +260,43 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The allowed headers for CORS requests.
+             * <p>The allowed headers of CORS requests.</p>
              */
-            public Builder allowHeaders(java.util.List < String > allowHeaders) {
+            public Builder allowHeaders(java.util.List<String> allowHeaders) {
                 this.allowHeaders = allowHeaders;
                 return this;
             }
 
             /**
-             * The allowed HTTP methods for CORS requests.
+             * <p>The allowed HTTP methods of CORS requests.</p>
              */
-            public Builder allowMethods(java.util.List < String > allowMethods) {
+            public Builder allowMethods(java.util.List<String> allowMethods) {
                 this.allowMethods = allowMethods;
                 return this;
             }
 
             /**
-             * The allowed origins of CORS requests.
+             * <p>The allowed origins of CORS requests.</p>
              */
-            public Builder allowOrigin(java.util.List < String > allowOrigin) {
+            public Builder allowOrigin(java.util.List<String> allowOrigin) {
                 this.allowOrigin = allowOrigin;
                 return this;
             }
 
             /**
-             * The headers that can be exposed.
+             * <p>The headers that can be exposed.</p>
              */
-            public Builder exposeHeaders(java.util.List < String > exposeHeaders) {
+            public Builder exposeHeaders(java.util.List<String> exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
                 return this;
             }
 
             /**
-             * The maximum cache time of dry run requests in the browser. Unit: seconds.
-             * <p>
+             * <p>The maximum cache time of dry runs in the browser. Unit: seconds.</p>
+             * <p>Valid values: <strong>-1</strong> to <strong>172800</strong>.</p>
              * 
-             * Valid values: **-1** to **172800**.
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxAge(Long maxAge) {
                 this.maxAge = maxAge;
@@ -283,14 +310,20 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class FixedResponseConfig extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
         private FixedResponseConfig(Builder builder) {
@@ -334,7 +367,10 @@ public class ListRulesResponseBody extends TeaModel {
             private String httpCode; 
 
             /**
-             * The content of the custom response. The content is up to 1 KB in size, and can contain only ASCII characters.
+             * <p>The content of the custom response. The content can be up to 1 KB in size, and can contain only ASCII characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dssacav</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -342,10 +378,11 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The content type.
-             * <p>
+             * <p>The format of the response.</p>
+             * <p>Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
              * 
-             * Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.
+             * <strong>example:</strong>
+             * <p>text/plain</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -353,7 +390,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code in the response. Valid values: **HTTP\_2xx**, **HTTP\_4xx**, and **HTTP\_5xx**. **x** must be a digit.
+             * <p>The HTTP status code in responses. Valid values: <strong>HTTP_2xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong>. <strong>x</strong> is a digit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP_2xx</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -367,11 +407,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class ServerGroupStickySession extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
         private ServerGroupStickySession(Builder builder) {
@@ -406,7 +452,7 @@ public class ListRulesResponseBody extends TeaModel {
             private Integer timeout; 
 
             /**
-             * Enabled.
+             * <p>If the value of N in ServerGroupTuple.N is larger than 1, you can enable or disable session persistence for server groups.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -414,7 +460,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>If Enabled is set to True, you can specify a session persistence timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -428,11 +477,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private ServerGroupTuples(Builder builder) {
@@ -467,7 +522,10 @@ public class ListRulesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The server group to which requests are forwarded.
+             * <p>The server group to which requests are forwarded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-atstuj3rtoptyui****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -475,7 +533,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight. Valid values: **0** to **100**.
+             * <p>The weight of the server group. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -489,12 +550,18 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupStickySession")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupStickySession")
         private ServerGroupStickySession serverGroupStickySession;
 
-        @NameInMap("ServerGroupTuples")
-        private java.util.List < ServerGroupTuples> serverGroupTuples;
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
+        private java.util.List<ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
             this.serverGroupStickySession = builder.serverGroupStickySession;
@@ -519,16 +586,16 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < ServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<ServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
             private ServerGroupStickySession serverGroupStickySession; 
-            private java.util.List < ServerGroupTuples> serverGroupTuples; 
+            private java.util.List<ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * ServerGroupStickySession.
+             * <p>The session persistence configurations of the server group.</p>
              */
             public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
                 this.serverGroupStickySession = serverGroupStickySession;
@@ -536,9 +603,9 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The server groups to which requests are forwarded.
+             * <p>The server groups to which requests are forwarded.</p>
              */
-            public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -550,14 +617,20 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class InsertHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
         private InsertHeaderConfig(Builder builder) {
@@ -601,10 +674,13 @@ public class ListRulesResponseBody extends TeaModel {
             private String valueType; 
 
             /**
-             * The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The key specified in `InsertHeader` must be unique.
-             * <p>
+             * <p>The key of the header. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header key specified in <code>InsertHeader</code> must be unique.</p>
+             * <blockquote>
+             * <p> <strong>Cookie</strong> and <strong>Host</strong> are not supported.</p>
+             * </blockquote>
              * 
-             * > **Cookie** and **Host** are not supported.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -612,20 +688,25 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the header.
-             * <p>
+             * <p>The value of the header to be inserted.</p>
+             * <ul>
+             * <li><p>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, you can set the Value parameter to one of the following values:</p>
+             * <ul>
+             * <li><strong>ClientSrcPort</strong>: the client port.</li>
+             * <li><strong>ClientSrcIp</strong>: the IP address of the client.</li>
+             * <li><strong>Protocol</strong>: the request protocol (HTTP or HTTPS).</li>
+             * <li><strong>SLBId</strong>: the ID of the ALB instance.</li>
+             * <li><strong>SLBPort</strong>: the listener port.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain wildcard characters, such as asterisks (*) and question marks (?), and printable characters whose ASCII values are <code>larger than or equal to 32 and smaller than 127</code>. The header value cannot start or end with a space character.</p>
+             * </li>
+             * <li><p>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>, you can reference a value from a request header. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
+             * </li>
+             * </ul>
              * 
-             * *   If **ValueType** is set to **SystemDefined**, one of the following values is supported:
-             * 
-             *     *   **ClientSrcPort**: the client port.
-             *     *   **ClientSrcIp**: the client IP address.
-             *     *   **Protocol**: the request protocol (HTTP or HTTPS).
-             *     *   **SLBId**: the ID of the ALB instance.
-             *     *   **SLBPort**: the listener port.
-             * 
-             * *   If **ValueType** is set to **UserDefined**, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\*) and question marks (?) as wildcard characters. The header value cannot start or end with a space character.
-             * 
-             * *   If **ValueType** is set to **ReferenceHeader**, one of the request headers is referenced. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-).
+             * <strong>example:</strong>
+             * <p>ClientSrcPort</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -633,12 +714,15 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the header. Valid values:
-             * <p>
+             * <p>The type of the header value. Valid values:</p>
+             * <ul>
+             * <li><strong>UserDefined</strong>: a user-defined header value.</li>
+             * <li><strong>ReferenceHeader</strong>: a header value that is referenced from a request header.</li>
+             * <li><strong>SystemDefined:</strong> a system-defined header value.</li>
+             * </ul>
              * 
-             * *   **UserDefined**: a user-defined header.
-             * *   **ReferenceHeader**: a header that is referenced from a request header.
-             * *   **SystemDefined**: a system-defined header.
+             * <strong>example:</strong>
+             * <p>SystemDefined</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -652,23 +736,29 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class RedirectConfig extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private RedirectConfig(Builder builder) {
@@ -739,18 +829,23 @@ public class ListRulesResponseBody extends TeaModel {
             private String query; 
 
             /**
-             * The hostname to which requests are redirected. Valid values:
-             * <p>
+             * <p>The hostname to which requests are redirected. Valid values:</p>
+             * <ul>
+             * <li><p><strong>${host}</strong> (default): If ${host} is returned, no other characters are appended.</p>
+             * </li>
+             * <li><p>A custom value. Make sure that the custom value meets the following requirements:</p>
+             * <ul>
+             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), and question marks (?).</li>
+             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
+             * <li>The rightmost domain label can contain only letters and wildcard characters. It cannot contain digits or hyphens (-).</li>
+             * <li>The domain labels cannot start or end with a hyphen (-).</li>
+             * <li>You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **${host}** (default): If ${host} is returned, no other character is appended.
-             * 
-             * *   Limits on a custom value:
-             * 
-             *     *   The hostname is 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcard characters.
-             *     *   The hostname contains at least one period (.) but does not start or end with a period (.).
-             *     *   The rightmost domain label contains only letters and wildcard characters. It does not contain digits or hyphens (-).
-             *     *   The domain labels do not start or end with hyphens (-).
-             *     *   You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -758,7 +853,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The redirect type. Valid values: **301**, **302**, **303**, **307**, and **308**.
+             * <p>The forwarding method. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -766,15 +864,20 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The path to which requests are redirected. Valid values:
-             * <p>
+             * <p>The URL to which requests are redirected. Valid values:</p>
+             * <ul>
+             * <li><p><strong>${path}</strong> (default): You can reference **${host}<strong>, <strong>${protocol}</strong>, and</strong>${port}<strong>. The URL can consist of <strong>${host}</strong>,</strong>${protocol}**, and **${port}**. Each variable can be used only once. The preceding variables can be used at the same time or combined with a custom value.</p>
+             * </li>
+             * <li><p>A custom value. Make sure that the custom value meets the following requirements:</p>
+             * <ul>
+             * <li>The URL must be 1 to 128 characters in length.</li>
+             * <li>It must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ .+ / &amp; ~ @ :</code>. It cannot contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>. You can use asterisks (*) and question marks (?) as wildcard characters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **${path}** (default): You can reference \*\*${host}**, **${protocol}**, and**${port}**. The path can consist of **${host}**,**${protocol}**, and **${port}\*\*. Each variable can be used only once. The preceding variables can be used at the same time or combined with a custom value.
-             * 
-             * *   Limits on a custom value:
-             * 
-             *     *   The value is 1 to 128 characters in length.
-             *     *   It starts with a forward slash (/) and contains letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It does not contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -782,11 +885,14 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The port to which requests are redirected. Valid values:
-             * <p>
+             * <p>The port to which requests are redirected. Valid values:</p>
+             * <ul>
+             * <li><strong>${port}</strong> (default): If ${port} is returned, no other characters are appended.</li>
+             * <li>Other valid values: <strong>1 to 63335</strong>.</li>
+             * </ul>
              * 
-             * *   **${port}** (default): If ${port} is returned, no other character is appended.
-             * *   Other valid values: **1 to 63335**.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -794,13 +900,17 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The redirect protocol. Valid values:
-             * <p>
+             * <p>The redirect protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>${protocol}</strong> (default): If ${protocol} is returned, no other characters are appended.</li>
+             * <li><strong>HTTP</strong> or <strong>HTTPS</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> HTTPS listeners supports only HTTPS redirects.</p>
+             * </blockquote>
              * 
-             * *   **${protocol}** (default): If ${protocol} is returned, no other character is appended.
-             * *   **HTTP** or **HTTPS**.
-             * 
-             * > HTTPS listeners support only HTTP to HTTPS redirection.
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -808,7 +918,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The query string to which requests are redirected. The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \ | < > &`.
+             * <p>The query string of the URL to which requests are redirected. The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quert</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -822,8 +935,14 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class RemoveHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private RemoveHeaderConfig(Builder builder) {
@@ -849,11 +968,14 @@ public class ListRulesResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The key of the header to be removed. The key must be 1 to 40 characters in length and can contain letters, digits, underscores, and hyphens (-). The header key must be unique.
-             * <p>
+             * <p>The key of the header to be removed. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified in RemoveHeader must be unique.</p>
+             * <ul>
+             * <li>If Direction is set to Request, the specified headers are removed from requests. The following header keys are not supported (not case-sensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, and <code>authority</code>.</li>
+             * <li>If Direction is set to Response, the specified headers are removed from responses. The following header keys are not supported (not case-sensitive): <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, and <code>transfer-encoding</code>.</li>
+             * </ul>
              * 
-             * *   You cannot specify the following header keys for an inbound forwarding rule: `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`. The preceding keys are case-insensitive.
-             * *   You cannot specify the following header keys for an outbound forwarding rule: `connection`, `upgrade`, `content-length`, and `transfer-encoding`. The preceding keys are case-insensitive.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -867,14 +989,20 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class RewriteConfig extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private RewriteConfig(Builder builder) {
@@ -918,18 +1046,23 @@ public class ListRulesResponseBody extends TeaModel {
             private String query; 
 
             /**
-             * The hostname to which requests are forwarded. Valid values:
-             * <p>
+             * <p>The hostname to which requests are redirected. Valid values:</p>
+             * <ul>
+             * <li><p><strong>${host}</strong> (default): If ${host} is returned, no other characters are appended.</p>
+             * </li>
+             * <li><p>A custom value. Make sure that the custom value meets the following requirements:</p>
+             * <ul>
+             * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (*), and question marks (?).</li>
+             * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
+             * <li>The rightmost domain label can contain only letters and wildcard characters. It cannot contain digits or hyphens (-).</li>
+             * <li>The domain labels cannot start or end with a hyphen (-).</li>
+             * <li>You can use asterisks (*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   **${host}** (default): If ${host} is returned, no other character is appended.
-             * 
-             * *   Limits on a custom value:
-             * 
-             *     *   The hostname is 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcard characters.
-             *     *   The hostname contains at least one period (.) but does not start or end with a period (.).
-             *     *   The rightmost domain label contains only letters and wildcard characters. It does not contain digits or hyphens (-).
-             *     *   The domain labels do not start or end with hyphens (-).
-             *     *   You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -937,7 +1070,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The path to which requests are forwarded. The path is 1 to 128 characters in length and starts with a forward slash (/). The path can contain letters, digits, asterisks (\*), question marks (?), and the following special characters: `$ - _ . + / & ~ @ :`. The path does not contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`.
+             * <p>The URL to which requests are redirected. The URL must be 1 to 128 characters in length, and can contain letters, digits, asterisks (*), question marks (?), and the following special characters: <code>$ - _ . + / &amp; ~ @ :</code>. It must start with a forward slash (/) and does not contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tsdf</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -945,7 +1081,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The query string of the URL to which requests are forwarded. The query string is 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \ | < > &`.
+             * <p>The query string of the URL to which requests are redirected. The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quedsa</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -959,11 +1098,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class TrafficLimitConfig extends TeaModel {
-        @NameInMap("PerIpQps")
+        @com.aliyun.core.annotation.NameInMap("PerIpQps")
         private Integer perIpQps;
 
-        @NameInMap("QPS")
+        @com.aliyun.core.annotation.NameInMap("QPS")
         private Integer QPS;
 
         private TrafficLimitConfig(Builder builder) {
@@ -998,10 +1143,13 @@ public class ListRulesResponseBody extends TeaModel {
             private Integer QPS; 
 
             /**
-             * The QPS of each IP address. Valid values: **1 to 100000**.
-             * <p>
+             * <p>The number of requests per IP address. Valid values: <strong>1 to 100000</strong>.</p>
+             * <blockquote>
+             * <p> If both the <strong>QPS</strong> and <strong>PerIpQps</strong> parameters are specified, the value of the <strong>QPS</strong> parameter is smaller than the value of the PerIpQps parameter.</p>
+             * </blockquote>
              * 
-             * > If you specify this parameter and **QPS**, the value of **PerIpQps** must be smaller than the value of **QPS**.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder perIpQps(Integer perIpQps) {
                 this.perIpQps = perIpQps;
@@ -1009,7 +1157,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second (QPS). Valid values: **1** to **100000**.
+             * <p>The number of queries per second (QPS). Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder QPS(Integer QPS) {
                 this.QPS = QPS;
@@ -1023,11 +1174,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class MirrorGroupConfigServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private MirrorGroupConfigServerGroupTuples(Builder builder) {
@@ -1062,7 +1219,10 @@ public class ListRulesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The server group ID.
+             * <p>The ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srg-00mkgijak0w4qgz9****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -1070,7 +1230,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight. Valid values: **0** to **100**.
+             * <p>The weight of the server group. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1084,9 +1247,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class MirrorGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
-        private java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples;
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
+        private java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples;
 
         private MirrorGroupConfig(Builder builder) {
             this.serverGroupTuples = builder.serverGroupTuples;
@@ -1103,17 +1272,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < MirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<MirrorGroupConfigServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
-            private java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples; 
+            private java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples; 
 
             /**
-             * The server group to which traffic is mirrored.
+             * <p>The server group to which traffic is mirrored.</p>
              */
-            public Builder serverGroupTuples(java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -1125,11 +1294,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class TrafficMirrorConfig extends TeaModel {
-        @NameInMap("MirrorGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("MirrorGroupConfig")
         private MirrorGroupConfig mirrorGroupConfig;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TrafficMirrorConfig(Builder builder) {
@@ -1164,7 +1339,7 @@ public class ListRulesResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The configuration of the server group to which traffic is mirrored.
+             * <p>The configuration of the server group to which traffic is mirrored.</p>
              */
             public Builder mirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
                 this.mirrorGroupConfig = mirrorGroupConfig;
@@ -1172,7 +1347,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The destination to which traffic is mirrored. The destination can be a server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ForwardGroupMirror</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -1186,38 +1364,44 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class RuleActions extends TeaModel {
-        @NameInMap("CorsConfig")
+        @com.aliyun.core.annotation.NameInMap("CorsConfig")
         private CorsConfig corsConfig;
 
-        @NameInMap("FixedResponseConfig")
+        @com.aliyun.core.annotation.NameInMap("FixedResponseConfig")
         private FixedResponseConfig fixedResponseConfig;
 
-        @NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("InsertHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("InsertHeaderConfig")
         private InsertHeaderConfig insertHeaderConfig;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("RedirectConfig")
+        @com.aliyun.core.annotation.NameInMap("RedirectConfig")
         private RedirectConfig redirectConfig;
 
-        @NameInMap("RemoveHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("RemoveHeaderConfig")
         private RemoveHeaderConfig removeHeaderConfig;
 
-        @NameInMap("RewriteConfig")
+        @com.aliyun.core.annotation.NameInMap("RewriteConfig")
         private RewriteConfig rewriteConfig;
 
-        @NameInMap("TrafficLimitConfig")
+        @com.aliyun.core.annotation.NameInMap("TrafficLimitConfig")
         private TrafficLimitConfig trafficLimitConfig;
 
-        @NameInMap("TrafficMirrorConfig")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorConfig")
         private TrafficMirrorConfig trafficMirrorConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RuleActions(Builder builder) {
@@ -1333,7 +1517,7 @@ public class ListRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The CORS configuration.
+             * <p>The CORS configuration.</p>
              */
             public Builder corsConfig(CorsConfig corsConfig) {
                 this.corsConfig = corsConfig;
@@ -1341,7 +1525,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the custom response.
+             * <p>The configuration of the custom response.</p>
              */
             public Builder fixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
                 this.fixedResponseConfig = fixedResponseConfig;
@@ -1349,7 +1533,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the server groups.
+             * <p>The configurations of the server groups.</p>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -1357,7 +1541,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the header to be inserted.
+             * <p>The key of the header to be inserted.</p>
              */
             public Builder insertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
                 this.insertHeaderConfig = insertHeaderConfig;
@@ -1365,7 +1549,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the action. Valid values: **1 to 50000**. A smaller value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter is not empty. The priority of each action within a forwarding rule is unique.
+             * <p>The priority of the action. Valid values: <strong>1 to 50000</strong>. A smaller value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter cannot empty. The priority of each action within a forwarding rule must be unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -1373,7 +1560,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the redirect action.
+             * <p>The configuration of the redirect action.</p>
              */
             public Builder redirectConfig(RedirectConfig redirectConfig) {
                 this.redirectConfig = redirectConfig;
@@ -1381,7 +1568,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the header to be removed.
+             * <p>The HTTP header to be removed.</p>
              */
             public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
                 this.removeHeaderConfig = removeHeaderConfig;
@@ -1389,7 +1576,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the rewrite action.
+             * <p>The configuration of the rewrite action.</p>
              */
             public Builder rewriteConfig(RewriteConfig rewriteConfig) {
                 this.rewriteConfig = rewriteConfig;
@@ -1397,7 +1584,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the action to throttle traffic.
+             * <p>The configuration of traffic throttling.</p>
              */
             public Builder trafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
                 this.trafficLimitConfig = trafficLimitConfig;
@@ -1405,7 +1592,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the action to mirror traffic.
+             * <p>The configuration of traffic mirroring.</p>
              */
             public Builder trafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
                 this.trafficMirrorConfig = trafficMirrorConfig;
@@ -1413,23 +1600,26 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The action. Valid values:
-             * <p>
+             * <p>The action. Valid values:</p>
+             * <ul>
+             * <li><strong>ForwardGroup</strong>: distributes requests to multiple vServer groups.</li>
+             * <li><strong>Redirect</strong>: redirects requests.</li>
+             * <li><strong>FixedResponse</strong>: returns a custom response.</li>
+             * <li><strong>Rewrite</strong>: rewrites requests.</li>
+             * <li><strong>InsertHeader</strong>: inserts headers.</li>
+             * <li><strong>RemoveHeaderConfig</strong>: removes headers.</li>
+             * <li><strong>TrafficLimitConfig</strong>: throttles network traffic.</li>
+             * <li><strong>TrafficMirrorConfig</strong>: mirrors network traffic.</li>
+             * <li><strong>CorsConfig</strong>: forwards requests based on CORS.</li>
+             * </ul>
+             * <p>The preceding actions can be classified into two broad types:</p>
+             * <ul>
+             * <li><strong>FinalType</strong>: Each forwarding rule can contain only one FinalType action, which is performed at the end. You can specify only one of <strong>ForwardGroup</strong>, <strong>Redirect</strong>, and <strong>FixedResponse</strong>.</li>
+             * <li><strong>ExtType</strong>: Each forwarding rule can contain one or more <strong>ExtType</strong> actions, which are performed before the <strong>FinalType</strong> action. If you want to specify an ExtType action, you must also specify a <strong>FinalType</strong> action. You can specify multiple <strong>InsertHeader</strong> actions or one <strong>Rewrite</strong> action.</li>
+             * </ul>
              * 
-             * *   **ForwardGroup**: distributes requests to multiple vServer groups.
-             * *   **Redirect**: redirects a request.
-             * *   **FixedResponse**: returns a custom response.
-             * *   **Rewrite**: rewrites a request.
-             * *   **InsertHeader**: inserts a header.
-             * *   **RemoveHeaderConfig**: deletes a header.
-             * *   **TrafficLimitConfig**: throttles network traffic.
-             * *   **TrafficMirrorConfig**: mirrors traffic.
-             * *   **CorsConfig**: forwards requests based on CORS.
-             * 
-             * The preceding actions can be classified into two broad types:
-             * 
-             * *   **FinalType**: the last action to be performed in a forwarding rule. Each forwarding rule can contain only one FinalType action. You can specify a **ForwardGroup**, **Redirect**, or **FixedResponse** action as the FinalType action.
-             * *   **ExtType**: one or more actions to be performed before the **FinalType** action. A forwarding rule can contain one or more **ExtType** actions. To specify an ExtType action, you must specify a **FinalType** action. You can specify multiple **InsertHeader** actions or one **Rewrite** action.
+             * <strong>example:</strong>
+             * <p>ForwardGroup</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1443,11 +1633,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Values(Builder builder) {
@@ -1482,7 +1678,10 @@ public class ListRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the cookie. The key is 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+             * <p>The cookie key. The cookie key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1490,7 +1689,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the cookie. The value is 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). Uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.
+             * <p>The cookie value. The cookie value must be 1 to 128 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1504,9 +1706,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class CookieConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < Values> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Values> values;
 
         private CookieConfig(Builder builder) {
             this.values = builder.values;
@@ -1523,17 +1731,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
-             * The key-value pair of the cookie.
+             * <p>The cookie value.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }
@@ -1545,12 +1753,18 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class HeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private HeaderConfig(Builder builder) {
             this.key = builder.key;
@@ -1575,16 +1789,19 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The key of the header. The key must be 1 to 40 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_). Cookie and Host are not supported.
+             * <p>The key of the header. The header key must be 1 to 40 characters in length. It can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Port</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1592,9 +1809,9 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the header.
+             * <p>The value of the header.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1606,9 +1823,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class HostConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private HostConfig(Builder builder) {
             this.values = builder.values;
@@ -1625,17 +1848,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The hostnames.
+             * <p>The hostnames.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1647,9 +1870,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class MethodConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private MethodConfig(Builder builder) {
             this.values = builder.values;
@@ -1666,17 +1895,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The request methods.
+             * <p>The request methods.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1688,9 +1917,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class PathConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private PathConfig(Builder builder) {
             this.values = builder.values;
@@ -1707,17 +1942,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The paths.
+             * <p>The URLs to which requests are forwarded.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1729,11 +1964,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class QueryStringConfigValues extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueryStringConfigValues(Builder builder) {
@@ -1768,7 +2009,10 @@ public class ListRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+             * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1776,7 +2020,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.
+             * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1790,9 +2037,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class QueryStringConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < QueryStringConfigValues> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<QueryStringConfigValues> values;
 
         private QueryStringConfig(Builder builder) {
             this.values = builder.values;
@@ -1809,17 +2062,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < QueryStringConfigValues> getValues() {
+        public java.util.List<QueryStringConfigValues> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < QueryStringConfigValues> values; 
+            private java.util.List<QueryStringConfigValues> values; 
 
             /**
-             * The query string.
+             * <p>The query string.</p>
              */
-            public Builder values(java.util.List < QueryStringConfigValues> values) {
+            public Builder values(java.util.List<QueryStringConfigValues> values) {
                 this.values = values;
                 return this;
             }
@@ -1831,12 +2084,18 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class ResponseHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private ResponseHeaderConfig(Builder builder) {
             this.key = builder.key;
@@ -1861,16 +2120,19 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The header key. The key must be 1 to 40 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_). Cookie and Host are not supported.
+             * <p>The key of the HTTP header. The header key must be 1 to 40 characters in length, It can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1878,9 +2140,9 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The header values.
+             * <p>The values of the HTTP header.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1892,9 +2154,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class ResponseStatusCodeConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private ResponseStatusCodeConfig(Builder builder) {
             this.values = builder.values;
@@ -1911,17 +2179,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The response status codes.
+             * <p>The response status codes.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1933,9 +2201,15 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class SourceIpConfig extends TeaModel {
-        @NameInMap("Values")
-        private java.util.List < String > values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
 
         private SourceIpConfig(Builder builder) {
             this.values = builder.values;
@@ -1952,17 +2226,17 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * The source IP addresses.
+             * <p>The source IP addresses.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -1974,35 +2248,41 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class RuleConditions extends TeaModel {
-        @NameInMap("CookieConfig")
+        @com.aliyun.core.annotation.NameInMap("CookieConfig")
         private CookieConfig cookieConfig;
 
-        @NameInMap("HeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("HeaderConfig")
         private HeaderConfig headerConfig;
 
-        @NameInMap("HostConfig")
+        @com.aliyun.core.annotation.NameInMap("HostConfig")
         private HostConfig hostConfig;
 
-        @NameInMap("MethodConfig")
+        @com.aliyun.core.annotation.NameInMap("MethodConfig")
         private MethodConfig methodConfig;
 
-        @NameInMap("PathConfig")
+        @com.aliyun.core.annotation.NameInMap("PathConfig")
         private PathConfig pathConfig;
 
-        @NameInMap("QueryStringConfig")
+        @com.aliyun.core.annotation.NameInMap("QueryStringConfig")
         private QueryStringConfig queryStringConfig;
 
-        @NameInMap("ResponseHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("ResponseHeaderConfig")
         private ResponseHeaderConfig responseHeaderConfig;
 
-        @NameInMap("ResponseStatusCodeConfig")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatusCodeConfig")
         private ResponseStatusCodeConfig responseStatusCodeConfig;
 
-        @NameInMap("SourceIpConfig")
+        @com.aliyun.core.annotation.NameInMap("SourceIpConfig")
         private SourceIpConfig sourceIpConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RuleConditions(Builder builder) {
@@ -2109,7 +2389,7 @@ public class ListRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The configuration of the cookie.
+             * <p>The key-value pairs of the cookie.</p>
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -2117,7 +2397,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the header.
+             * <p>The configuration of the header.</p>
              */
             public Builder headerConfig(HeaderConfig headerConfig) {
                 this.headerConfig = headerConfig;
@@ -2125,7 +2405,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the hosts.
+             * <p>The configuration of the hosts.</p>
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -2133,7 +2413,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the request methods.
+             * <p>The configurations of the request methods.</p>
              */
             public Builder methodConfig(MethodConfig methodConfig) {
                 this.methodConfig = methodConfig;
@@ -2141,7 +2421,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the paths.
+             * <p>The configurations of the forwarding URLs.</p>
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -2149,7 +2429,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the query strings.
+             * <p>The configurations of the query strings.</p>
              */
             public Builder queryStringConfig(QueryStringConfig queryStringConfig) {
                 this.queryStringConfig = queryStringConfig;
@@ -2157,7 +2437,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the HTTP response header.
+             * <p>The HTTP header in responses.</p>
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -2165,7 +2445,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the response status codes.
+             * <p>The configurations of the response status codes.</p>
              */
             public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
                 this.responseStatusCodeConfig = responseStatusCodeConfig;
@@ -2173,7 +2453,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the source IP addresses based on which user traffic is matched.
+             * <p>Traffic matching based on source IP addresses.</p>
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -2181,16 +2461,19 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of forwarding rule. Valid values:
-             * <p>
+             * <p>The type of forwarding rule. Valid values:</p>
+             * <ul>
+             * <li><strong>Host</strong>: Responses are forwarded based on hosts.</li>
+             * <li><strong>Path</strong>: Responses are forwarded based on URLs.</li>
+             * <li><strong>Header</strong>: Responses are forwarded based on HTTP headers.</li>
+             * <li><strong>QueryString</strong>: Responses are forwarded based on query strings.</li>
+             * <li><strong>Method</strong>: Responses are forwarded based on request methods.</li>
+             * <li><strong>Cookie</strong>: Responses are forwarded based on cookies.</li>
+             * <li><strong>SourceIp</strong>: Responses are forwarded based on source IP addresses.</li>
+             * </ul>
              * 
-             * *   **Host**: Requests are forwarded based on hosts.
-             * *   **Path**: Requests are forwarded based on paths.
-             * *   **Header**: Requests are forwarded based on HTTP headers.
-             * *   **QueryString**: Requests are forwarded based on query strings.
-             * *   **Method**: Requests are forwarded based on request methods.
-             * *   **Cookie**: Requests are forwarded based on cookies.
-             * *   **SourceIp**: Requests are distributed based on source IP addresses.
+             * <strong>example:</strong>
+             * <p>Host</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2204,11 +2487,17 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -2243,7 +2532,10 @@ public class ListRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The header key. The key must be 1 to 40 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_). Cookie and Host are not supported.
+             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2251,7 +2543,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.
+             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2265,36 +2560,42 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RuleActions")
-        private java.util.List < RuleActions> ruleActions;
+        @com.aliyun.core.annotation.NameInMap("RuleActions")
+        private java.util.List<RuleActions> ruleActions;
 
-        @NameInMap("RuleConditions")
-        private java.util.List < RuleConditions> ruleConditions;
+        @com.aliyun.core.annotation.NameInMap("RuleConditions")
+        private java.util.List<RuleConditions> ruleConditions;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleStatus")
+        @com.aliyun.core.annotation.NameInMap("RuleStatus")
         private String ruleStatus;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Rules(Builder builder) {
             this.direction = builder.direction;
@@ -2348,14 +2649,14 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return ruleActions
          */
-        public java.util.List < RuleActions> getRuleActions() {
+        public java.util.List<RuleActions> getRuleActions() {
             return this.ruleActions;
         }
 
         /**
          * @return ruleConditions
          */
-        public java.util.List < RuleConditions> getRuleConditions() {
+        public java.util.List<RuleConditions> getRuleConditions() {
             return this.ruleConditions;
         }
 
@@ -2383,7 +2684,7 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -2392,21 +2693,25 @@ public class ListRulesResponseBody extends TeaModel {
             private String listenerId; 
             private String loadBalancerId; 
             private Integer priority; 
-            private java.util.List < RuleActions> ruleActions; 
-            private java.util.List < RuleConditions> ruleConditions; 
+            private java.util.List<RuleActions> ruleActions; 
+            private java.util.List<RuleConditions> ruleConditions; 
             private String ruleId; 
             private String ruleName; 
             private String ruleStatus; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The direction to which the forwarding rule is applied. Valid values:
-             * <p>
+             * <p>The direction to which the forwarding rule is applied. Valid values:</p>
+             * <ul>
+             * <li>Request (default): The forwarding rule is applied to requests. The forwarding action is performed on packets that are forwarded from clients to ALB.</li>
+             * <li>Responses: The forwarding rule is applied to responses. The forwarding action is performed on packets that are returned from backend servers to ALB.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Basic ALB instances support only the Response direction.</p>
+             * </blockquote>
              * 
-             * *   Request (default): The rule applies to client requests.
-             * *   Response: The rule applies to responses from backend servers.
-             * 
-             * > Response is not supported by basic ALB instances.
+             * <strong>example:</strong>
+             * <p>Request</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -2414,7 +2719,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the listener to which the forwarding rule belongs.
+             * <p>The ID of the listener that is associated with the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsn-i35udpz3pxsmnf****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -2422,7 +2730,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ALB instance to which the forwarding rule belongs.
+             * <p>The ID of the Application Load Balancer (ALB) instance that is associated with the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-x30o38azsuj0sx****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -2430,10 +2741,13 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the forwarding rule. Valid values: **1 to 10000**. A smaller value indicates a higher priority.
-             * <p>
+             * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
+             * <blockquote>
+             * <p> The priority of each forwarding rule added to a listener must be unique.</p>
+             * </blockquote>
              * 
-             * > The priority of each forwarding rule added to a listener must be unique.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -2441,23 +2755,26 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The action of the forwarding rule.
+             * <p>The action of the forwarding rule.</p>
              */
-            public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
+            public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
                 return this;
             }
 
             /**
-             * The conditions of the forwarding rule.
+             * <p>The conditions of the forwarding rule.</p>
              */
-            public Builder ruleConditions(java.util.List < RuleConditions> ruleConditions) {
+            public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
                 return this;
             }
 
             /**
-             * The forwarding rule ID.
+             * <p>The ID of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-bpn0kn908w4nbw****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2465,7 +2782,10 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+             * <p>The name of the forwarding rule. The name must be 2 to 128 letters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-instance-test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -2473,12 +2793,15 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the forwarding rule. Valid values:
-             * <p>
+             * <p>The status of the forwarding rule. Valid values:</p>
+             * <ul>
+             * <li><strong>Provisioning</strong>: The forwarding rule is being created.</li>
+             * <li><strong>Configuring</strong>: The forwarding rule is being modified.</li>
+             * <li><strong>Available</strong>: The forwarding rule is available.</li>
+             * </ul>
              * 
-             * *   **Provisioning**
-             * *   **Configuring**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -2486,9 +2809,9 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

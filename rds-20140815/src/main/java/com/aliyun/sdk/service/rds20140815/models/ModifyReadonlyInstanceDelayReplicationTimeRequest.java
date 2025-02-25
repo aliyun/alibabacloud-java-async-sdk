@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReadonlyInstanceDelayReplicationTimeRequest} extends {@link RequestModel}
  *
  * <p>ModifyReadonlyInstanceDelayReplicationTimeRequest</p>
  */
 public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReadSQLReplicationTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadSQLReplicationTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String readSQLReplicationTime;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyReadonlyInstanceDelayReplicationTimeRequest(Builder builder) {
@@ -126,7 +131,11 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         } 
 
         /**
-         * The ID of the read-only instance. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The ID of the read-only instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-bpxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -144,7 +153,11 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         }
 
         /**
-         * The replication latency of the data replication. Unit: seconds.
+         * <p>The replication latency of the data replication. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.putQueryParameter("ReadSQLReplicationTime", readSQLReplicationTime);
@@ -153,7 +166,10 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

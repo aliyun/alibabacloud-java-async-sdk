@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBlockchainApplicationRequest</p>
  */
 public class CreateBlockchainApplicationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Bizid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizid")
     private String bizid;
 
-    @Body
-    @NameInMap("BlockchainRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BlockchainRegionId")
     private String blockchainRegionId;
 
-    @Body
-    @NameInMap("BlockchainType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BlockchainType")
     private String blockchainType;
 
-    @Body
-    @NameInMap("CipherSuit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CipherSuit")
     private String cipherSuit;
 
-    @Body
-    @NameInMap("LiveTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LiveTime")
     private Integer liveTime;
 
-    @Body
-    @NameInMap("MachineNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MachineNum")
     private Integer machineNum;
 
-    @Body
-    @NameInMap("MerkleTreeSuit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MerkleTreeSuit")
     private String merkleTreeSuit;
 
-    @Body
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
-    @Body
-    @NameInMap("TlsAlgo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TlsAlgo")
     private String tlsAlgo;
 
     private CreateBlockchainApplicationRequest(Builder builder) {

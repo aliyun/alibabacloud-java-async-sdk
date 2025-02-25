@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetZookeeperDataImportUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetZookeeperDataImportUrlResponseBody</p>
  */
 public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetZookeeperDataImportUrlResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +150,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The URL that is used to upload the configuration file.
+         * <p>The URL that is used to upload the configuration file.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,10 +158,13 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -161,7 +172,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to perform this operation.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -169,7 +183,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -177,7 +194,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +205,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request was successfully processed.
+         * <p>The request was successfully processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The dynamic part in the error message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,11 +216,14 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>E4E2058F-C524-5C29-9BC7-5874EA8D7CE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -205,7 +231,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The status code. A value of 200 is returned if the request was successful.
+         * <p>The status code. A value of 200 is returned if the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,11 +247,17 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetZookeeperDataImportUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetZookeeperDataImportUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("MaxSize")
+        @com.aliyun.core.annotation.NameInMap("MaxSize")
         private String maxSize;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {
@@ -257,7 +292,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * code
+             * <p>code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250000</p>
              */
             public Builder maxSize(String maxSize) {
                 this.maxSize = maxSize;
@@ -265,7 +303,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of a file that can be uploaded each time. Unit: MB.
+             * <p>The maximum size of a file that can be uploaded each time. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxxxxxx">http://xxxxxxxxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

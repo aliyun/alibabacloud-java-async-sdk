@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DomainSpecialBizCancelRequest} extends {@link RequestModel}
  *
  * <p>DomainSpecialBizCancelRequest</p>
  */
 public class DomainSpecialBizCancelRequest extends Request {
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long bizId;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private DomainSpecialBizCancelRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class DomainSpecialBizCancelRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3666</p>
          */
         public Builder bizId(Long bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -78,7 +82,10 @@ public class DomainSpecialBizCancelRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

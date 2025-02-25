@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTableStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTableStatisticsResponseBody</p>
  */
 public class DescribeTableStatisticsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeTableStatisticsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The ID of the cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +109,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about table statistics.
+         * <p>The queried table statistics.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +117,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +128,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C4433FF-5D3A-4C3E-A19C-6D93B2******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -151,40 +166,62 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTableStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableStatisticsResponseBody</p>
+     */
     public static class TableStatisticRecords extends TeaModel {
-        @NameInMap("ColdDataSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSize")
         private Long coldDataSize;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("IndexSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataSize")
+        private Long hotDataSize;
+
+        @com.aliyun.core.annotation.NameInMap("IndexSize")
         private Long indexSize;
 
-        @NameInMap("PartitionCount")
+        @com.aliyun.core.annotation.NameInMap("OtherSize")
+        private Long otherSize;
+
+        @com.aliyun.core.annotation.NameInMap("PartitionCount")
         private Long partitionCount;
 
-        @NameInMap("PrimaryKeyIndexSize")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeyIndexSize")
         private Long primaryKeyIndexSize;
 
-        @NameInMap("RowCount")
+        @com.aliyun.core.annotation.NameInMap("RowCount")
         private Long rowCount;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("SpaceRatio")
+        private Double spaceRatio;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
+
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
+        private Long totalSize;
 
         private TableStatisticRecords(Builder builder) {
             this.coldDataSize = builder.coldDataSize;
             this.dataSize = builder.dataSize;
+            this.hotDataSize = builder.hotDataSize;
             this.indexSize = builder.indexSize;
+            this.otherSize = builder.otherSize;
             this.partitionCount = builder.partitionCount;
             this.primaryKeyIndexSize = builder.primaryKeyIndexSize;
             this.rowCount = builder.rowCount;
             this.schemaName = builder.schemaName;
+            this.spaceRatio = builder.spaceRatio;
             this.tableName = builder.tableName;
+            this.totalSize = builder.totalSize;
         }
 
         public static Builder builder() {
@@ -210,10 +247,24 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hotDataSize
+         */
+        public Long getHotDataSize() {
+            return this.hotDataSize;
+        }
+
+        /**
          * @return indexSize
          */
         public Long getIndexSize() {
             return this.indexSize;
+        }
+
+        /**
+         * @return otherSize
+         */
+        public Long getOtherSize() {
+            return this.otherSize;
         }
 
         /**
@@ -245,27 +296,48 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return spaceRatio
+         */
+        public Double getSpaceRatio() {
+            return this.spaceRatio;
+        }
+
+        /**
          * @return tableName
          */
         public String getTableName() {
             return this.tableName;
         }
 
+        /**
+         * @return totalSize
+         */
+        public Long getTotalSize() {
+            return this.totalSize;
+        }
+
         public static final class Builder {
             private Long coldDataSize; 
             private Long dataSize; 
+            private Long hotDataSize; 
             private Long indexSize; 
+            private Long otherSize; 
             private Long partitionCount; 
             private Long primaryKeyIndexSize; 
             private Long rowCount; 
             private String schemaName; 
+            private Double spaceRatio; 
             private String tableName; 
+            private Long totalSize; 
 
             /**
-             * The total amount of cold data. Unit: byte.
-             * <p>
+             * <p>The cold data size. Unit: bytes.</p>
+             * <blockquote>
+             * <p> The parameter is returned only for AnalyticDB for MySQL clusters of V3.1.3.4 or later.</p>
+             * </blockquote>
              * 
-             * >  The parameter is returned only when the engine version of the cluster is 3.1.3.4 or later.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder coldDataSize(Long coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -273,7 +345,13 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data in the table. Unit: byte.
+             * <p>The data size of table records. Unit: bytes.</p>
+             * <blockquote>
+             * <p> The data size of table records, excluding the data size of regular index and primary key indexes.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>15592</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -281,7 +359,21 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data in indexes. Unit: byte.
+             * <p>The hot data size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1048576</p>
+             */
+            public Builder hotDataSize(Long hotDataSize) {
+                this.hotDataSize = hotDataSize;
+                return this;
+            }
+
+            /**
+             * <p>The data size of regular indexes. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3076</p>
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -289,7 +381,21 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of partitions.
+             * <p>The data size of other data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1048576</p>
+             */
+            public Builder otherSize(Long otherSize) {
+                this.otherSize = otherSize;
+                return this;
+            }
+
+            /**
+             * <p>The number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder partitionCount(Long partitionCount) {
                 this.partitionCount = partitionCount;
@@ -297,7 +403,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data in primary key indexes. Unit: byte.
+             * <p>The data size of primary key indexes. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16340</p>
              */
             public Builder primaryKeyIndexSize(Long primaryKeyIndexSize) {
                 this.primaryKeyIndexSize = primaryKeyIndexSize;
@@ -305,7 +414,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows in the table.
+             * <p>The number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -313,7 +425,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_schema</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -321,10 +436,41 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The percentage of the table size. Unit: %.</p>
+             * <blockquote>
+             * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>66.23</p>
+             */
+            public Builder spaceRatio(Double spaceRatio) {
+                this.spaceRatio = spaceRatio;
+                return this;
+            }
+
+            /**
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
+                return this;
+            }
+
+            /**
+             * <p>The total data size. Unit: bytes.</p>
+             * <blockquote>
+             * <p> The following formulas can be used to calculate the total data size: Formula 1: Total data size = Hot data size + Cold data size. Formula 2: Total data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1577</p>
+             */
+            public Builder totalSize(Long totalSize) {
+                this.totalSize = totalSize;
                 return this;
             }
 
@@ -335,8 +481,14 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTableStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableStatisticsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("TableStatisticRecords")
+        @com.aliyun.core.annotation.NameInMap("TableStatisticRecords")
         private java.util.List < TableStatisticRecords> tableStatisticRecords;
 
         private Items(Builder builder) {

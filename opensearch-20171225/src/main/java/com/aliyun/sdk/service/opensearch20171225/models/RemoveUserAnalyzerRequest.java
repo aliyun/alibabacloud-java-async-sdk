@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveUserAnalyzerRequest</p>
  */
 public class RemoveUserAnalyzerRequest extends Request {
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private RemoveUserAnalyzerRequest(Builder builder) {
@@ -55,7 +54,7 @@ public class RemoveUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * "kevin_test"
+         * The name of the analyzer.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

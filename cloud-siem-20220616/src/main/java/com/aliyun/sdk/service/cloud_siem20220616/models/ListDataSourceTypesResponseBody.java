@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceTypesResponseBody</p>
  */
 public class ListDataSourceTypesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDataSourceTypesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("DataSourceType")
+        @com.aliyun.core.annotation.NameInMap("DataSourceType")
         private String dataSourceType;
 
         private Data(Builder builder) {
@@ -110,7 +109,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             private String dataSourceType; 
 
             /**
-             * CloudCode.
+             * The code of the third-party cloud service.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -118,7 +117,12 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   obs: Huawei Cloud Object Storage Service (OBS)
+             * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
+             * *   ckafka: Tencent Cloud Kafka (CKafka)
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;

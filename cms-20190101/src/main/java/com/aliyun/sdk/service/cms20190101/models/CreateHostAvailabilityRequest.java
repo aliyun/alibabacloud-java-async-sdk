@@ -1,55 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostAvailabilityRequest} extends {@link RequestModel}
  *
  * <p>CreateHostAvailabilityRequest</p>
  */
 public class CreateHostAvailabilityRequest extends Request {
-    @Query
-    @NameInMap("AlertConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfig")
     private AlertConfig alertConfig;
 
-    @Query
-    @NameInMap("TaskOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskOption")
     private TaskOption taskOption;
 
-    @Query
-    @NameInMap("AlertConfigEscalationList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfigEscalationList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AlertConfigEscalationList> alertConfigEscalationList;
 
-    @Query
-    @NameInMap("AlertConfigTargetList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfigTargetList")
     private java.util.List < AlertConfigTargetList> alertConfigTargetList;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List < String > instanceList;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskScope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskScope")
     private String taskScope;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private CreateHostAvailabilityRequest(Builder builder) {
@@ -188,7 +188,8 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * None
+         * <p>None</p>
+         * <p>This parameter is required.</p>
          */
         public Builder alertConfigEscalationList(java.util.List < AlertConfigEscalationList> alertConfigEscalationList) {
             this.putQueryParameter("AlertConfigEscalationList", alertConfigEscalationList);
@@ -197,7 +198,7 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The information about the resources for which alerts are triggered.
+         * <p>The resources for which alerts are triggered.</p>
          */
         public Builder alertConfigTargetList(java.util.List < AlertConfigTargetList> alertConfigTargetList) {
             this.putQueryParameter("AlertConfigTargetList", alertConfigTargetList);
@@ -206,7 +207,11 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -215,10 +220,13 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The ECS instances that are monitored. Valid values of N: 1 to 21.
-         * <p>
+         * <p>The ECS instances that are monitored. Valid values of N: 1 to 21.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when <code>TaskScope</code> is set to <code>GROUP_SPEC_INSTANCE</code>.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when `TaskScope` is set to `GROUP_SPEC_INSTANCE`.
+         * <strong>example:</strong>
+         * <p>i-absdfkwl321****</p>
          */
         public Builder instanceList(java.util.List < String > instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -227,7 +235,11 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).
+         * <p>The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -236,11 +248,14 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The range of instances that are monitored by the availability monitoring task. Valid values:
-         * <p>
+         * <p>The range of instances that are monitored by the availability monitoring task. Valid values:</p>
+         * <ul>
+         * <li>GROUP: All Elastic Compute Service (ECS) instances in the application group are monitored.</li>
+         * <li>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.</li>
+         * </ul>
          * 
-         * *   GROUP: All Elastic Compute Service (ECS) instances in the application group are monitored.
-         * *   GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.
+         * <strong>example:</strong>
+         * <p>GROUP</p>
          */
         public Builder taskScope(String taskScope) {
             this.putQueryParameter("TaskScope", taskScope);
@@ -249,12 +264,16 @@ public class CreateHostAvailabilityRequest extends Request {
         }
 
         /**
-         * The monitoring type of the availability monitoring task. Valid values:
-         * <p>
+         * <p>The monitoring type of the availability monitoring task. Valid values:</p>
+         * <ul>
+         * <li>PING</li>
+         * <li>TELNET</li>
+         * <li>HTTP</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   PING
-         * *   TELNET
-         * *   HTTP
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -269,21 +288,27 @@ public class CreateHostAvailabilityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHostAvailabilityRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHostAvailabilityRequest</p>
+     */
     public static class AlertConfig extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("NotifyType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer notifyType;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
-        @NameInMap("WebHook")
+        @com.aliyun.core.annotation.NameInMap("WebHook")
         private String webHook;
 
         private AlertConfig(Builder builder) {
@@ -345,12 +370,14 @@ public class CreateHostAvailabilityRequest extends Request {
             private String webHook; 
 
             /**
-             * The end of the time range during which the alert rule is effective. Valid values: 0 to 23.
-             * <p>
+             * <p>The end of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
+             * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+             * <blockquote>
+             * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+             * </blockquote>
              * 
-             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-             * 
-             * > Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -358,10 +385,12 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The alert notification methods. Valid values:
-             * <p>
+             * <p>The alert notification methods. Valid values:</p>
+             * <p>0: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+             * <p>This parameter is required.</p>
              * 
-             * 0: Alert notifications are sent by using emails and DingTalk chatbots.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notifyType(Integer notifyType) {
                 this.notifyType = notifyType;
@@ -369,7 +398,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.
+             * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder silenceTime(Integer silenceTime) {
                 this.silenceTime = silenceTime;
@@ -377,12 +409,14 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The beginning of the time range during which the alert rule is effective. Valid values: 0 to 23.
-             * <p>
+             * <p>The beginning of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
+             * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+             * <blockquote>
+             * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+             * </blockquote>
              * 
-             * For example, if the `AlertConfig.StartTime` parameter is set to 0 and the `AlertConfig.EndTime` parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.
-             * 
-             * > Alert notifications are sent based on the specified threshold only if the alert rule is effective.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -390,7 +424,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The callback URL.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/webhook.json">https://www.aliyun.com/webhook.json</a></p>
              */
             public Builder webHook(String webHook) {
                 this.webHook = webHook;
@@ -404,32 +441,38 @@ public class CreateHostAvailabilityRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHostAvailabilityRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHostAvailabilityRequest</p>
+     */
     public static class TaskOption extends TeaModel {
-        @NameInMap("HttpHeader")
+        @com.aliyun.core.annotation.NameInMap("HttpHeader")
         private String httpHeader;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("HttpNegative")
+        @com.aliyun.core.annotation.NameInMap("HttpNegative")
         private Boolean httpNegative;
 
-        @NameInMap("HttpPostContent")
+        @com.aliyun.core.annotation.NameInMap("HttpPostContent")
         private String httpPostContent;
 
-        @NameInMap("HttpResponseCharset")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseCharset")
         private String httpResponseCharset;
 
-        @NameInMap("HttpResponseMatchContent")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseMatchContent")
         private String httpResponseMatchContent;
 
-        @NameInMap("HttpURI")
+        @com.aliyun.core.annotation.NameInMap("HttpURI")
         private String httpURI;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("TelnetOrPingHost")
+        @com.aliyun.core.annotation.NameInMap("TelnetOrPingHost")
         private String telnetOrPingHost;
 
         private TaskOption(Builder builder) {
@@ -527,11 +570,13 @@ public class CreateHostAvailabilityRequest extends Request {
             private String telnetOrPingHost; 
 
             /**
-             * The header of the HTTP request. Format: `Parameter name:Parameter value`. Separate multiple parameters with carriage return characters. Example:
-             * <p>
+             * <p>The header of the HTTP request. Format: <code>Parameter name:Parameter value</code>. Separate multiple parameters with carriage return characters. Example:</p>
+             * <pre><code>params1:value1
+             * params2:value2
+             * </code></pre>
              * 
-             *     params1:value1
-             *     params2:value2
+             * <strong>example:</strong>
+             * <p>token:testTokenValue</p>
              */
             public Builder httpHeader(String httpHeader) {
                 this.httpHeader = httpHeader;
@@ -539,14 +584,18 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The HTTP request method. Valid values:
-             * <p>
+             * <p>The HTTP request method. Valid values:</p>
+             * <ul>
+             * <li>GET</li>
+             * <li>POST</li>
+             * <li>HEAD</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter must be specified when TaskType is set to HTTP.</p>
+             * </blockquote>
              * 
-             * *   GET
-             * *   POST
-             * *   HEAD
-             * 
-             * > This parameter must be specified when TaskType is set to HTTP.
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -554,13 +603,17 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:
-             * <p>
+             * <p>The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:</p>
+             * <ul>
+             * <li>true: If the HTTP response body includes the alert rule, an alert is triggered.</li>
+             * <li>false: If the HTTP response does not include the alert rule, an alert is triggered.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter must be specified when TaskType is set to HTTP.</p>
+             * </blockquote>
              * 
-             * *   true: If the HTTP response body includes the alert rule, an alert is triggered.
-             * *   false: If the HTTP response does not include the alert rule, an alert is triggered.
-             * 
-             * > This parameter must be specified when TaskType is set to HTTP.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder httpNegative(Boolean httpNegative) {
                 this.httpNegative = httpNegative;
@@ -568,7 +621,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The content of the HTTP POST request.
+             * <p>The content of the HTTP POST request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>params1=paramsValue1</p>
              */
             public Builder httpPostContent(String httpPostContent) {
                 this.httpPostContent = httpPostContent;
@@ -576,10 +632,13 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The character set that is used in the HTTP response.
-             * <p>
+             * <p>The character set that is used in the HTTP response.</p>
+             * <blockquote>
+             * <p>Only UTF-8 is supported.</p>
+             * </blockquote>
              * 
-             * > Only UTF-8 is supported.
+             * <strong>example:</strong>
+             * <p>UTF-8</p>
              */
             public Builder httpResponseCharset(String httpResponseCharset) {
                 this.httpResponseCharset = httpResponseCharset;
@@ -587,7 +646,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The response to the HTTP request.
+             * <p>The response to the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder httpResponseMatchContent(String httpResponseMatchContent) {
                 this.httpResponseMatchContent = httpResponseMatchContent;
@@ -595,7 +657,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The URI that you want to monitor. This parameter must be specified when TaskType is set to HTTP.
+             * <p>The URI that you want to monitor. This parameter is required if the TaskType parameter is set to HTTP or Telnet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
              */
             public Builder httpURI(String httpURI) {
                 this.httpURI = httpURI;
@@ -603,10 +668,13 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.
-             * <p>
+             * <p>The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.</p>
+             * <blockquote>
+             * <p>This parameter is available only for the CloudMonitor agent V3.5.1 or later.</p>
+             * </blockquote>
              * 
-             * > This parameter is available only for the CloudMonitor agent V3.5.1 or later.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -614,10 +682,13 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The domain name or IP address that you want to monitor.
-             * <p>
+             * <p>The domain name or IP address that you want to monitor.</p>
+             * <blockquote>
+             * <p> This parameter is required if the TaskType parameter is set to PING.</p>
+             * </blockquote>
              * 
-             * > This parameter must be specified when TaskType is set to PING or TELNET.
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder telnetOrPingHost(String telnetOrPingHost) {
                 this.telnetOrPingHost = telnetOrPingHost;
@@ -631,21 +702,27 @@ public class CreateHostAvailabilityRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHostAvailabilityRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHostAvailabilityRequest</p>
+     */
     public static class AlertConfigEscalationList extends TeaModel {
-        @NameInMap("Aggregate")
+        @com.aliyun.core.annotation.NameInMap("Aggregate")
         private String aggregate;
 
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AlertConfigEscalationList(Builder builder) {
@@ -707,16 +784,20 @@ public class CreateHostAvailabilityRequest extends Request {
             private String value; 
 
             /**
-             * The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:
-             * <p>
+             * <p>The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:</p>
+             * <ul>
+             * <li>HttpStatus: Value</li>
+             * <li>HttpLatency: Average</li>
+             * <li>TelnetStatus: Value</li>
+             * <li>TelnetLatency: Average</li>
+             * <li>PingLostRate: Average</li>
+             * </ul>
+             * <blockquote>
+             * <p>The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.</p>
+             * </blockquote>
              * 
-             * *   HttpStatus: Value
-             * *   HttpLatency: Average
-             * *   TelnetStatus: Value
-             * *   TelnetLatency: Average
-             * *   PingLostRate: Average
-             * 
-             * > The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.
+             * <strong>example:</strong>
+             * <p>Value</p>
              */
             public Builder aggregate(String aggregate) {
                 this.aggregate = aggregate;
@@ -724,14 +805,18 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:
-             * <p>
+             * <p>The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:</p>
+             * <ul>
+             * <li>HttpStatus: HTTP status code</li>
+             * <li>HttpLatency: HTTP response time</li>
+             * <li>TelnetStatus: Telnet status code</li>
+             * <li>TelnetLatency: Telnet response time</li>
+             * <li>PingLostRate: Ping packet loss rate</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   HttpStatus: HTTP status code
-             * *   HttpLatency: HTTP response time
-             * *   TelnetStatus: Telnet status code
-             * *   TelnetLatency: Telnet response time
-             * *   PingLostRate: Ping packet loss rate
+             * <strong>example:</strong>
+             * <p>HttpStatus</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -739,14 +824,18 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:
-             * <p>
+             * <p>The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:</p>
+             * <ul>
+             * <li><code>&gt;</code></li>
+             * <li><code>&gt;=</code></li>
+             * <li><code>&lt;</code></li>
+             * <li><code>&lt;=</code></li>
+             * <li><code>=</code></li>
+             * </ul>
              * 
-             * *   `>`
-             * *   `>=`
-             * *   `<`
-             * *   `<=`
-             * *   `=`
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -754,7 +843,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.
+             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -762,7 +854,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The alert threshold. Valid values of N: 1 to 21.
+             * <p>The alert threshold. Valid values of N: 1 to 21.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -776,17 +871,23 @@ public class CreateHostAvailabilityRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHostAvailabilityRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHostAvailabilityRequest</p>
+     */
     public static class AlertConfigTargetList extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private AlertConfigTargetList(Builder builder) {
@@ -839,24 +940,30 @@ public class CreateHostAvailabilityRequest extends Request {
             private String level; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
-             * <p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+             * <ul>
+             * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
+             * </li>
+             * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+             * </li>
+             * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+             * </li>
+             * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+             * <ul>
+             * <li><strong>queues</strong></li>
+             * <li><strong>topics</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>{Resource name}: the resource name.</p>
+             * <ul>
+             * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+             * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-             * 
-             * *   {userId}: the ID of the Alibaba Cloud account.
-             * 
-             * *   {regionId}: the region ID of the message queue or topic.
-             * 
-             * *   {Resource type}: the type of the resource that triggers the alert. Valid values:
-             * 
-             *     *   **queues**
-             *     *   **topics**
-             * 
-             * *   {Resource name}: the resource name.
-             * 
-             *     *   If the resource type is **queues**, the resource name is the queue name.
-             *     *   If the resource type is **topics**, the resource name is the topic name.
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -864,7 +971,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The ID of the resource for which alerts are triggered.
+             * <p>The ID of the resource for which alerts are triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -872,7 +982,10 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -880,12 +993,15 @@ public class CreateHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The alert level. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li>INFO</li>
+             * <li>WARN</li>
+             * <li>CRITICAL</li>
+             * </ul>
              * 
-             * *   INFO
-             * *   WARN
-             * *   CRITICAL
+             * <strong>example:</strong>
+             * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
              */
             public Builder level(String level) {
                 this.level = level;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceGroupPersonSchedulingRequest</p>
  */
 public class GetServiceGroupPersonSchedulingRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @Body
-    @NameInMap("serviceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupId")
     private Long serviceGroupId;
 
-    @Body
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
-    @Body
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userId")
     private Long userId;
 
     private GetServiceGroupPersonSchedulingRequest(Builder builder) {

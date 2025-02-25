@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBasicEndpointResponseBody</p>
  */
 public class GetBasicEndpointResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("EndPointId")
+    @com.aliyun.core.annotation.NameInMap("EndPointId")
     private String endPointId;
 
-    @NameInMap("EndpointAddress")
+    @com.aliyun.core.annotation.NameInMap("EndpointAddress")
     private String endpointAddress;
 
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("EndpointSubAddress")
+    @com.aliyun.core.annotation.NameInMap("EndpointSubAddress")
     private String endpointSubAddress;
 
-    @NameInMap("EndpointSubAddressType")
+    @com.aliyun.core.annotation.NameInMap("EndpointSubAddressType")
     private String endpointSubAddressType;
 
-    @NameInMap("EndpointType")
+    @com.aliyun.core.annotation.NameInMap("EndpointType")
     private String endpointType;
 
-    @NameInMap("EndpointZoneId")
+    @com.aliyun.core.annotation.NameInMap("EndpointZoneId")
     private String endpointZoneId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private GetBasicEndpointResponseBody(Builder builder) {

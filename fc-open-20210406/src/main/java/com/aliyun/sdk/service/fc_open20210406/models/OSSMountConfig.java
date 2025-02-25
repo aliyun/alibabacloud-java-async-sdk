@@ -38,7 +38,7 @@ public class OSSMountConfig extends TeaModel {
         private java.util.List < MountPoints> mountPoints; 
 
         /**
-         * OSS挂载点配置
+         * mountPoints.
          */
         public Builder mountPoints(java.util.List < MountPoints> mountPoints) {
             this.mountPoints = mountPoints;
@@ -126,7 +126,7 @@ public class OSSMountConfig extends TeaModel {
             private Boolean readOnly; 
 
             /**
-             * 挂载的OSS bucket
+             * bucketName.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -134,7 +134,7 @@ public class OSSMountConfig extends TeaModel {
             }
 
             /**
-             * 挂载的OSS bucket路径
+             * bucketPath.
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -142,7 +142,7 @@ public class OSSMountConfig extends TeaModel {
             }
 
             /**
-             * OSS访问地址
+             * endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -150,7 +150,7 @@ public class OSSMountConfig extends TeaModel {
             }
 
             /**
-             * 挂载目录
+             * mountDir.
              */
             public Builder mountDir(String mountDir) {
                 this.mountDir = mountDir;
@@ -158,7 +158,7 @@ public class OSSMountConfig extends TeaModel {
             }
 
             /**
-             * 是否只读
+             * readOnly.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;

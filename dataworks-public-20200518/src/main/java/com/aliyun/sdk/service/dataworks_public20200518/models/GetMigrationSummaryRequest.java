@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMigrationSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetMigrationSummaryRequest</p>
  */
 public class GetMigrationSummaryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("MigrationId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MigrationId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long migrationId;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 2)
     private Long projectId;
 
     private GetMigrationSummaryRequest(Builder builder) {
@@ -85,7 +89,7 @@ public class GetMigrationSummaryRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +98,12 @@ public class GetMigrationSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The migration task ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2809123.html">CreateImportMigration</a> operation to obtain the ID of the import task and call the <a href="https://help.aliyun.com/document_detail/3241603.html">CreateExportMigration</a> operation to obtain the ID of the export task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder migrationId(Long migrationId) {
             this.putBodyParameter("MigrationId", migrationId);
@@ -103,10 +112,11 @@ public class GetMigrationSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the migration task.
-         * <p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [CreateImportMigration](~~2809123~~) operation to obtain the ID of the import task and call the [CreateExportMigration](~~3241603~~) operation to obtain the ID of the export task.
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

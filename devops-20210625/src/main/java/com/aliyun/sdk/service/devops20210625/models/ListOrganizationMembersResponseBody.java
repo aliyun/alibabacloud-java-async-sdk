@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationMembersResponseBody</p>
  */
 public class ListOrganizationMembersResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("members")
-    private java.util.List < Members> members;
+    @com.aliyun.core.annotation.NameInMap("members")
+    private java.util.List<Members> members;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListOrganizationMembersResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
@@ -103,7 +108,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
@@ -128,7 +133,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         /**
          * members.
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             this.members = members;
             return this;
         }
@@ -171,11 +176,17 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationMembersResponseBody</p>
+     */
     public static class Identities extends TeaModel {
-        @NameInMap("externUid")
+        @com.aliyun.core.annotation.NameInMap("externUid")
         private String externUid;
 
-        @NameInMap("provider")
+        @com.aliyun.core.annotation.NameInMap("provider")
         private String provider;
 
         private Identities(Builder builder) {
@@ -232,44 +243,53 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOrganizationMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationMembersResponseBody</p>
+     */
     public static class Members extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private Long birthday;
 
-        @NameInMap("deptLists")
-        private java.util.List < String > deptLists;
+        @com.aliyun.core.annotation.NameInMap("deptLists")
+        private java.util.List<String> deptLists;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("hiredDate")
+        @com.aliyun.core.annotation.NameInMap("hiredDate")
         private Long hiredDate;
 
-        @NameInMap("identities")
+        @com.aliyun.core.annotation.NameInMap("identities")
         private Identities identities;
 
-        @NameInMap("joinTime")
+        @com.aliyun.core.annotation.NameInMap("jobNumber")
+        private String jobNumber;
+
+        @com.aliyun.core.annotation.NameInMap("joinTime")
         private Long joinTime;
 
-        @NameInMap("lastVisitTime")
+        @com.aliyun.core.annotation.NameInMap("lastVisitTime")
         private Long lastVisitTime;
 
-        @NameInMap("mobile")
+        @com.aliyun.core.annotation.NameInMap("mobile")
         private String mobile;
 
-        @NameInMap("organizationMemberName")
+        @com.aliyun.core.annotation.NameInMap("organizationMemberName")
         private String organizationMemberName;
 
-        @NameInMap("organizationRoleId")
+        @com.aliyun.core.annotation.NameInMap("organizationRoleId")
         private String organizationRoleId;
 
-        @NameInMap("organizationRoleName")
+        @com.aliyun.core.annotation.NameInMap("organizationRoleName")
         private String organizationRoleName;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Members(Builder builder) {
@@ -279,6 +299,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             this.email = builder.email;
             this.hiredDate = builder.hiredDate;
             this.identities = builder.identities;
+            this.jobNumber = builder.jobNumber;
             this.joinTime = builder.joinTime;
             this.lastVisitTime = builder.lastVisitTime;
             this.mobile = builder.mobile;
@@ -313,7 +334,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         /**
          * @return deptLists
          */
-        public java.util.List < String > getDeptLists() {
+        public java.util.List<String> getDeptLists() {
             return this.deptLists;
         }
 
@@ -336,6 +357,13 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
          */
         public Identities getIdentities() {
             return this.identities;
+        }
+
+        /**
+         * @return jobNumber
+         */
+        public String getJobNumber() {
+            return this.jobNumber;
         }
 
         /**
@@ -390,10 +418,11 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private Long birthday; 
-            private java.util.List < String > deptLists; 
+            private java.util.List<String> deptLists; 
             private String email; 
             private Long hiredDate; 
             private Identities identities; 
+            private String jobNumber; 
             private Long joinTime; 
             private Long lastVisitTime; 
             private String mobile; 
@@ -421,7 +450,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             /**
              * deptLists.
              */
-            public Builder deptLists(java.util.List < String > deptLists) {
+            public Builder deptLists(java.util.List<String> deptLists) {
                 this.deptLists = deptLists;
                 return this;
             }
@@ -447,6 +476,14 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
              */
             public Builder identities(Identities identities) {
                 this.identities = identities;
+                return this;
+            }
+
+            /**
+             * jobNumber.
+             */
+            public Builder jobNumber(String jobNumber) {
+                this.jobNumber = jobNumber;
                 return this;
             }
 

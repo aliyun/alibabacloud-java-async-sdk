@@ -1,132 +1,146 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationInput} extends {@link TeaModel}
  *
  * <p>CreateApplicationInput</p>
  */
 public class CreateApplicationInput extends TeaModel {
-    @NameInMap("applicationName")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("applicationName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String applicationName;
 
-    @NameInMap("args")
+    @com.aliyun.core.annotation.NameInMap("args")
     private String args;
 
-    @NameInMap("caPort")
+    @com.aliyun.core.annotation.NameInMap("caPort")
     private Integer caPort;
 
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private InputCodeLocation code;
 
-    @NameInMap("command")
+    @com.aliyun.core.annotation.NameInMap("command")
     private String command;
 
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Float cpu;
 
-    @NameInMap("customDNS")
+    @com.aliyun.core.annotation.NameInMap("customDNS")
     private CustomDNS customDNS;
 
-    @NameInMap("customHealthCheckConfig")
+    @com.aliyun.core.annotation.NameInMap("customHealthCheckConfig")
     private CustomHealthCheckConfig customHealthCheckConfig;
 
-    @NameInMap("customRuntimeConfig")
+    @com.aliyun.core.annotation.NameInMap("customHostAlias")
+    private CustomHostAlias customHostAlias;
+
+    @com.aliyun.core.annotation.NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("diskSize")
+    @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
-    @NameInMap("environmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    @com.aliyun.core.annotation.NameInMap("enableAppMetric")
+    private Boolean enableAppMetric;
 
-    @NameInMap("gpuMemorySize")
+    @com.aliyun.core.annotation.NameInMap("environmentVariables")
+    private java.util.Map<String, String> environmentVariables;
+
+    @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
     private Integer gpuMemorySize;
 
-    @NameInMap("handler")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("handler")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String handler;
 
-    @NameInMap("httpTriggerConfig")
+    @com.aliyun.core.annotation.NameInMap("httpTriggerConfig")
     private HTTPTriggerConfig httpTriggerConfig;
 
-    @NameInMap("imageConfig")
+    @com.aliyun.core.annotation.NameInMap("imageConfig")
     private ImageConfig imageConfig;
 
-    @NameInMap("initializationTimeout")
+    @com.aliyun.core.annotation.NameInMap("initializationTimeout")
     private Integer initializationTimeout;
 
-    @NameInMap("initializer")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("initializer")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String initializer;
 
-    @NameInMap("instanceConcurrency")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("instanceConcurrency")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer instanceConcurrency;
 
-    @NameInMap("instanceLifecycleConfig")
+    @com.aliyun.core.annotation.NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
-    @NameInMap("instanceSoftConcurrency")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("instanceSoftConcurrency")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer instanceSoftConcurrency;
 
-    @NameInMap("instanceType")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("instanceType")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String instanceType;
 
-    @NameInMap("internetAccess")
+    @com.aliyun.core.annotation.NameInMap("internetAccess")
     private Boolean internetAccess;
 
-    @NameInMap("layers")
-    private java.util.List < String > layers;
+    @com.aliyun.core.annotation.NameInMap("layers")
+    private java.util.List<String> layers;
 
-    @NameInMap("livenessProbe")
+    @com.aliyun.core.annotation.NameInMap("livenessProbe")
     private Probe livenessProbe;
 
-    @NameInMap("logConfig")
+    @com.aliyun.core.annotation.NameInMap("logConfig")
     private LogConfig logConfig;
 
-    @NameInMap("memorySize")
+    @com.aliyun.core.annotation.NameInMap("memorySize")
     private Integer memorySize;
 
-    @NameInMap("namespaceID")
+    @com.aliyun.core.annotation.NameInMap("namespaceID")
     private String namespaceID;
 
-    @NameInMap("nasConfig")
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
-    @NameInMap("ossMountConfig")
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.NameInMap("programmingLanguage")
+    private String programmingLanguage;
+
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
-    @NameInMap("scaleConfig")
+    @com.aliyun.core.annotation.NameInMap("scaleConfig")
     private ScaleConfig scaleConfig;
 
-    @NameInMap("slsConfig")
+    @com.aliyun.core.annotation.NameInMap("slsConfig")
     private SLSConfig slsConfig;
 
-    @NameInMap("startupProbe")
+    @com.aliyun.core.annotation.NameInMap("startupProbe")
     private Probe startupProbe;
 
-    @NameInMap("timeout")
+    @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
-    @NameInMap("tracingConfig")
+    @com.aliyun.core.annotation.NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
 
-    @NameInMap("vpcConfig")
+    @com.aliyun.core.annotation.NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
 
     private CreateApplicationInput(Builder builder) {
@@ -138,9 +152,11 @@ public class CreateApplicationInput extends TeaModel {
         this.cpu = builder.cpu;
         this.customDNS = builder.customDNS;
         this.customHealthCheckConfig = builder.customHealthCheckConfig;
+        this.customHostAlias = builder.customHostAlias;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
+        this.enableAppMetric = builder.enableAppMetric;
         this.environmentVariables = builder.environmentVariables;
         this.gpuMemorySize = builder.gpuMemorySize;
         this.handler = builder.handler;
@@ -160,6 +176,7 @@ public class CreateApplicationInput extends TeaModel {
         this.namespaceID = builder.namespaceID;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
+        this.programmingLanguage = builder.programmingLanguage;
         this.runtime = builder.runtime;
         this.scaleConfig = builder.scaleConfig;
         this.slsConfig = builder.slsConfig;
@@ -234,6 +251,13 @@ public class CreateApplicationInput extends TeaModel {
     }
 
     /**
+     * @return customHostAlias
+     */
+    public CustomHostAlias getCustomHostAlias() {
+        return this.customHostAlias;
+    }
+
+    /**
      * @return customRuntimeConfig
      */
     public CustomRuntimeConfig getCustomRuntimeConfig() {
@@ -255,9 +279,16 @@ public class CreateApplicationInput extends TeaModel {
     }
 
     /**
+     * @return enableAppMetric
+     */
+    public Boolean getEnableAppMetric() {
+        return this.enableAppMetric;
+    }
+
+    /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -341,7 +372,7 @@ public class CreateApplicationInput extends TeaModel {
     /**
      * @return layers
      */
-    public java.util.List < String > getLayers() {
+    public java.util.List<String> getLayers() {
         return this.layers;
     }
 
@@ -385,6 +416,13 @@ public class CreateApplicationInput extends TeaModel {
      */
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    /**
+     * @return programmingLanguage
+     */
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     /**
@@ -445,10 +483,12 @@ public class CreateApplicationInput extends TeaModel {
         private Float cpu; 
         private CustomDNS customDNS; 
         private CustomHealthCheckConfig customHealthCheckConfig; 
+        private CustomHostAlias customHostAlias; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private Integer diskSize; 
-        private java.util.Map < String, String > environmentVariables; 
+        private Boolean enableAppMetric; 
+        private java.util.Map<String, String> environmentVariables; 
         private Integer gpuMemorySize; 
         private String handler; 
         private HTTPTriggerConfig httpTriggerConfig; 
@@ -460,13 +500,14 @@ public class CreateApplicationInput extends TeaModel {
         private Integer instanceSoftConcurrency; 
         private String instanceType; 
         private Boolean internetAccess; 
-        private java.util.List < String > layers; 
+        private java.util.List<String> layers; 
         private Probe livenessProbe; 
         private LogConfig logConfig; 
         private Integer memorySize; 
         private String namespaceID; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
+        private String programmingLanguage; 
         private String runtime; 
         private ScaleConfig scaleConfig; 
         private SLSConfig slsConfig; 
@@ -540,6 +581,14 @@ public class CreateApplicationInput extends TeaModel {
         }
 
         /**
+         * customHostAlias.
+         */
+        public Builder customHostAlias(CustomHostAlias customHostAlias) {
+            this.customHostAlias = customHostAlias;
+            return this;
+        }
+
+        /**
          * customRuntimeConfig.
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
@@ -564,9 +613,17 @@ public class CreateApplicationInput extends TeaModel {
         }
 
         /**
+         * enableAppMetric.
+         */
+        public Builder enableAppMetric(Boolean enableAppMetric) {
+            this.enableAppMetric = enableAppMetric;
+            return this;
+        }
+
+        /**
          * environmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
@@ -662,7 +719,7 @@ public class CreateApplicationInput extends TeaModel {
         /**
          * layers.
          */
-        public Builder layers(java.util.List < String > layers) {
+        public Builder layers(java.util.List<String> layers) {
             this.layers = layers;
             return this;
         }
@@ -712,6 +769,14 @@ public class CreateApplicationInput extends TeaModel {
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * programmingLanguage.
+         */
+        public Builder programmingLanguage(String programmingLanguage) {
+            this.programmingLanguage = programmingLanguage;
             return this;
         }
 

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRecordInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainRecordInfoRequest</p>
  */
 public class DescribeDomainRecordInfoRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RecordId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private DescribeDomainRecordInfoRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class DescribeDomainRecordInfoRequest extends Request {
         } 
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,10 +100,12 @@ public class DescribeDomainRecordInfoRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
-         * <p>
+         * <p>The ID of the DNS record.</p>
+         * <p>This parameter is returned when you add a DNS record or when you query a list of DNS records.</p>
+         * <p>This parameter is required.</p>
          * 
-         * This parameter is returned when you add a DNS record or when you query the list of DNS records.
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -104,7 +114,10 @@ public class DescribeDomainRecordInfoRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

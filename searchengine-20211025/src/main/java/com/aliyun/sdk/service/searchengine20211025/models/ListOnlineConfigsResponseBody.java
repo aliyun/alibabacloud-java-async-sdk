@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOnlineConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOnlineConfigsResponseBody</p>
  */
 public class ListOnlineConfigsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
     private ListOnlineConfigsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * List
+         * <p>List</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -71,11 +79,17 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOnlineConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOnlineConfigsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private String config;
 
-        @NameInMap("indexName")
+        @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
 
         private Result(Builder builder) {
@@ -110,7 +124,10 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
             private String indexName; 
 
             /**
-             * config.
+             * <p>The configuration information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;specItems&quot;:[{&quot;specKey&quot;:&quot;YQ_KEYWORD_NUMBER_PLUS&quot;,&quot;value&quot;:&quot;1&quot;}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -118,7 +135,10 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * indexName.
+             * <p>The name of the index</p>
+             * 
+             * <strong>example:</strong>
+             * <p>generation</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;

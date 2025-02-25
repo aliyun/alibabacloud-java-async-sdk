@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSslVpnClientCertsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSslVpnClientCertsRequest</p>
  */
 public class DescribeSslVpnClientCertsRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SslVpnClientCertId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslVpnClientCertId")
     private String sslVpnClientCertId;
 
-    @Query
-    @NameInMap("SslVpnServerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslVpnServerId")
     private String sslVpnServerId;
 
     private DescribeSslVpnClientCertsRequest(Builder builder) {
@@ -195,7 +200,10 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         } 
 
         /**
-         * The name of the SSL client certificate.
+         * <p>The name of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -222,7 +230,10 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +242,10 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,10 +254,12 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The region ID of the SSL client certificate.
-         * <p>
+         * <p>The region ID of the SSL client certificate.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,11 +268,11 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the SSL client certificate belongs.
-         * <p>
+         * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
+         * <p>The SSL client certificate and its associated SSL server belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/2794078.html">DescribeSslVpnServers</a> operation to query the ID of the resource group to which the SSL server belongs.</p>
          * 
-         * The SSL client certificate is the same as the resource group of the SSL server associated with it.
-         * You can call the [DescribeSslVpnServers](~~2526933~~) operation to query the ID of the resource group to which the SSL server belongs.
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -283,7 +299,10 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The ID of the SSL client certificate.
+         * <p>The ID of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-bp1n8wcf134yl0osr****</p>
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.putQueryParameter("SslVpnClientCertId", sslVpnClientCertId);
@@ -292,7 +311,10 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The ID of the SSL server.
+         * <p>The ID of the SSL server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vss-bp18q7hzj6largv4v****</p>
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.putQueryParameter("SslVpnServerId", sslVpnServerId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregatorsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAggregatorsResponseBody</p>
  */
 public class ListAggregatorsResponseBody extends TeaModel {
-    @NameInMap("AggregatorsResult")
+    @com.aliyun.core.annotation.NameInMap("AggregatorsResult")
     private AggregatorsResult aggregatorsResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregatorsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The account groups returned.
+         * <p>The account groups.</p>
          */
         public Builder aggregatorsResult(AggregatorsResult aggregatorsResult) {
             this.aggregatorsResult = aggregatorsResult;
@@ -58,7 +63,10 @@ public class ListAggregatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20C8526D-12C5-4336-BC72-EBD5D1BA732F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,30 +79,39 @@ public class ListAggregatorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAggregatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregatorsResponseBody</p>
+     */
     public static class Aggregators extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorAccountCount")
+        @com.aliyun.core.annotation.NameInMap("AggregatorAccountCount")
         private Long aggregatorAccountCount;
 
-        @NameInMap("AggregatorCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("AggregatorCreateTimestamp")
         private Long aggregatorCreateTimestamp;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("AggregatorName")
+        @com.aliyun.core.annotation.NameInMap("AggregatorName")
         private String aggregatorName;
 
-        @NameInMap("AggregatorStatus")
+        @com.aliyun.core.annotation.NameInMap("AggregatorStatus")
         private Integer aggregatorStatus;
 
-        @NameInMap("AggregatorType")
+        @com.aliyun.core.annotation.NameInMap("AggregatorType")
         private String aggregatorType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("FolderId")
+        private String folderId;
 
         private Aggregators(Builder builder) {
             this.accountId = builder.accountId;
@@ -105,6 +122,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             this.aggregatorStatus = builder.aggregatorStatus;
             this.aggregatorType = builder.aggregatorType;
             this.description = builder.description;
+            this.folderId = builder.folderId;
         }
 
         public static Builder builder() {
@@ -171,6 +189,13 @@ public class ListAggregatorsResponseBody extends TeaModel {
             return this.description;
         }
 
+        /**
+         * @return folderId
+         */
+        public String getFolderId() {
+            return this.folderId;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private Long aggregatorAccountCount; 
@@ -180,9 +205,13 @@ public class ListAggregatorsResponseBody extends TeaModel {
             private Integer aggregatorStatus; 
             private String aggregatorType; 
             private String description; 
+            private String folderId; 
 
             /**
-             * The ID of the management account used to create the account group.
+             * <p>The ID of the management account that is used to create the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -190,7 +219,10 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of member accounts in the account group.
+             * <p>The number of member accounts in the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder aggregatorAccountCount(Long aggregatorAccountCount) {
                 this.aggregatorAccountCount = aggregatorAccountCount;
@@ -198,7 +230,10 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the account group was created.
+             * <p>The timestamp generated when the account group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623036305000</p>
              */
             public Builder aggregatorCreateTimestamp(Long aggregatorCreateTimestamp) {
                 this.aggregatorCreateTimestamp = aggregatorCreateTimestamp;
@@ -206,7 +241,10 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account group.
+             * <p>The ID of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-88ea626622af0055****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -214,7 +252,10 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account group.
+             * <p>The name of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test_Group</p>
              */
             public Builder aggregatorName(String aggregatorName) {
                 this.aggregatorName = aggregatorName;
@@ -222,11 +263,14 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account group. Valid values:
-             * <p>
+             * <p>The status of the account group. Valid values:</p>
+             * <ul>
+             * <li>0: The account group is being created.</li>
+             * <li>1: The account group was created.</li>
+             * </ul>
              * 
-             * *   0: being created.
-             * *   1: created.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder aggregatorStatus(Integer aggregatorStatus) {
                 this.aggregatorStatus = aggregatorStatus;
@@ -234,11 +278,15 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account group. Valid values:
-             * <p>
+             * <p>The type of the account group. Valid values:</p>
+             * <ul>
+             * <li>RD: global account group.</li>
+             * <li>FOLDER: account group of the folder.</li>
+             * <li>CUSTOM: custom account group.</li>
+             * </ul>
              * 
-             * *   RD: global account group.
-             * *   CUSTOM: custom account group.
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder aggregatorType(String aggregatorType) {
                 this.aggregatorType = aggregatorType;
@@ -246,10 +294,24 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the account group.
+             * <p>The description of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-BU****</p>
+             */
+            public Builder folderId(String folderId) {
+                this.folderId = folderId;
                 return this;
             }
 
@@ -260,11 +322,17 @@ public class ListAggregatorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregatorsResponseBody</p>
+     */
     public static class AggregatorsResult extends TeaModel {
-        @NameInMap("Aggregators")
-        private java.util.List < Aggregators> aggregators;
+        @com.aliyun.core.annotation.NameInMap("Aggregators")
+        private java.util.List<Aggregators> aggregators;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private AggregatorsResult(Builder builder) {
@@ -283,7 +351,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
         /**
          * @return aggregators
          */
-        public java.util.List < Aggregators> getAggregators() {
+        public java.util.List<Aggregators> getAggregators() {
             return this.aggregators;
         }
 
@@ -295,19 +363,22 @@ public class ListAggregatorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Aggregators> aggregators; 
+            private java.util.List<Aggregators> aggregators; 
             private String nextToken; 
 
             /**
-             * The information about the account groups.
+             * <p>The list of the account groups.</p>
              */
-            public Builder aggregators(java.util.List < Aggregators> aggregators) {
+            public Builder aggregators(java.util.List<Aggregators> aggregators) {
                 this.aggregators = aggregators;
                 return this;
             }
 
             /**
-             * The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
+             * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TGlzdFJlc291cmNlU2hhcmVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

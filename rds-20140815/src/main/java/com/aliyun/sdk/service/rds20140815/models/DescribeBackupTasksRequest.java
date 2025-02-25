@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupTasksRequest</p>
  */
 public class DescribeBackupTasksRequest extends Request {
-    @Query
-    @NameInMap("BackupJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupJobId")
     private Integer backupJobId;
 
-    @Query
-    @NameInMap("BackupJobStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupJobStatus")
     private String backupJobStatus;
 
-    @Query
-    @NameInMap("BackupMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMode")
     private String backupMode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Flag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Flag")
     private String flag;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeBackupTasksRequest(Builder builder) {
@@ -181,7 +186,10 @@ public class DescribeBackupTasksRequest extends Request {
         } 
 
         /**
-         * The ID of the backup task.
+         * <p>The ID of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4762614</p>
          */
         public Builder backupJobId(Integer backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -190,13 +198,15 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The status of the backup task. Valid values:
-         * <p>
+         * <p>The status of the backup task. Valid values:</p>
+         * <ul>
+         * <li><strong>NoStart</strong></li>
+         * <li><strong>Progressing</strong></li>
+         * </ul>
+         * <p>By default, this operation returns backup tasks in both states.</p>
          * 
-         * *   **NoStart**
-         * *   **Progressing**
-         * 
-         * By default, this operation returns backup tasks in both states.
+         * <strong>example:</strong>
+         * <p>NoStart</p>
          */
         public Builder backupJobStatus(String backupJobStatus) {
             this.putQueryParameter("BackupJobStatus", backupJobStatus);
@@ -205,11 +215,14 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The backup mode. Valid values:
-         * <p>
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
          * 
-         * *   **Automated**
-         * *   **Manual**
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -218,7 +231,10 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -227,7 +243,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -236,7 +256,10 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder flag(String flag) {
             this.putQueryParameter("Flag", flag);

@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQuotaRequest} extends {@link RequestModel}
  *
  * <p>CreateQuotaRequest</p>
  */
 public class CreateQuotaRequest extends Request {
-    @Body
-    @NameInMap("AllocateStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AllocateStrategy")
     private String allocateStrategy;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Labels")
-    private java.util.List < Label > labels;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Label> labels;
 
-    @Body
-    @NameInMap("Min")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Min")
     private ResourceSpec min;
 
-    @Body
-    @NameInMap("ParentQuotaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentQuotaId")
     private String parentQuotaId;
 
-    @Body
-    @NameInMap("QueueStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
 
-    @Body
-    @NameInMap("QuotaConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaConfig")
     private QuotaConfig quotaConfig;
 
-    @Body
-    @NameInMap("QuotaName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
     private String quotaName;
 
-    @Body
-    @NameInMap("ResourceGroupIds")
-    private java.util.List < String > resourceGroupIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
+    private java.util.List<String> resourceGroupIds;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private CreateQuotaRequest(Builder builder) {
@@ -96,7 +101,7 @@ public class CreateQuotaRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -138,7 +143,7 @@ public class CreateQuotaRequest extends Request {
     /**
      * @return resourceGroupIds
      */
-    public java.util.List < String > getResourceGroupIds() {
+    public java.util.List<String> getResourceGroupIds() {
         return this.resourceGroupIds;
     }
 
@@ -152,13 +157,13 @@ public class CreateQuotaRequest extends Request {
     public static final class Builder extends Request.Builder<CreateQuotaRequest, Builder> {
         private String allocateStrategy; 
         private String description; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private ResourceSpec min; 
         private String parentQuotaId; 
         private String queueStrategy; 
         private QuotaConfig quotaConfig; 
         private String quotaName; 
-        private java.util.List < String > resourceGroupIds; 
+        private java.util.List<String> resourceGroupIds; 
         private String resourceType; 
 
         private Builder() {
@@ -200,7 +205,7 @@ public class CreateQuotaRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -254,7 +259,7 @@ public class CreateQuotaRequest extends Request {
         /**
          * ResourceGroupIds.
          */
-        public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
+        public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putBodyParameter("ResourceGroupIds", resourceGroupIds);
             this.resourceGroupIds = resourceGroupIds;
             return this;

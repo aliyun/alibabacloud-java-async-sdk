@@ -1,30 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableSmbAclRequest} extends {@link RequestModel}
  *
  * <p>EnableSmbAclRequest</p>
  */
 public class EnableSmbAclRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("Keytab")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keytab")
     private String keytab;
 
-    @Query
-    @NameInMap("KeytabMd5")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeytabMd5")
     private String keytabMd5;
 
     private EnableSmbAclRequest(Builder builder) {
@@ -77,15 +80,19 @@ public class EnableSmbAclRequest extends Request {
             super();
         } 
 
-        private Builder(EnableSmbAclRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.keytab = response.keytab;
-            this.keytabMd5 = response.keytabMd5;
+        private Builder(EnableSmbAclRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.keytab = request.keytab;
+            this.keytabMd5 = request.keytabMd5;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31a8e4****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -94,7 +101,10 @@ public class EnableSmbAclRequest extends Request {
         }
 
         /**
-         * Keytab.
+         * <p>The string that is generated after the system encodes the keytab file by using Base64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BQIAAABHAAIADUFMSUFEVEVTVC5DT00ABGNpZnMAGXNtYnNlcnZlcjI0LmFsaWFkdGVzdC5jb20AAAABAAAAAAEAAQAIqIx6v7p11oUAAABHAAIADUFMSUFEVEVTVC5DT00ABGNpZnMAGXNtYnNlcnZlcjI0LmFsaWFkdGVzdC5jb20AAAABAAAAAAEAAwAIqIx6v7p11oUAAABPAAIADUFMSUFEVEVTVC5DT00ABGNpZnMAGXNtYnNlcnZlcjI0LmFsaWFkdGVzdC5jb20AAAABAAAAAAEAFwAQnQZWB3RAPHU7PMIJyBWePAAAAF8AAgANQUxJQURURVNULkNPTQAEY2lmcwAZc21ic2VydmVyMjQuYWxpYWR0ZXN0LmNvbQAAAAEAAAAAAQASACAGJ7F0s+bcBjf6jD5HlvlRLmPSOW+qDZe0Qk0lQcf8WwAAAE8AAgANQUxJQURURVNULkNPTQAEY2lmcwAZc21ic2VydmVyMjQuYWxpYWR0ZXN0LmNvbQAAAAEAAAAAAQARABDdFmanrSIatnDDhxxxxx</p>
          */
         public Builder keytab(String keytab) {
             this.putQueryParameter("Keytab", keytab);
@@ -103,7 +113,10 @@ public class EnableSmbAclRequest extends Request {
         }
 
         /**
-         * KeytabMd5.
+         * <p>The string that is generated after the system encodes the keytab file by using MD5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3CCF7E2416DF04FA958AA4513EAxxxx</p>
          */
         public Builder keytabMd5(String keytabMd5) {
             this.putQueryParameter("KeytabMd5", keytabMd5);

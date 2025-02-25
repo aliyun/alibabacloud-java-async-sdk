@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocatePublicIpAddressRequest} extends {@link RequestModel}
  *
  * <p>AllocatePublicIpAddressRequest</p>
  */
 public class AllocatePublicIpAddressRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VlanId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VlanId")
     private String vlanId;
 
     private AllocatePublicIpAddressRequest(Builder builder) {
@@ -162,7 +167,11 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which you want to assign a public IP address.
+         * <p>The ID of the instance to which you want to assign a public IP address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1gtjxuuvwj17zr****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -171,7 +180,13 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.
+         * <p>The static public IP address that you want to assign to the instance. This parameter is empty by default, which indicates that a static public IP address is randomly assigned by the system.</p>
+         * <blockquote>
+         * <p> Only users in the whitelist can specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><code>112.124.**.**</code></p>
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -216,10 +231,13 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The virtual LAN (VLAN) ID of the instance.
-         * <p>
+         * <p>The virtual LAN (VLAN) ID of the instance.</p>
+         * <blockquote>
+         * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+         * </blockquote>
          * 
-         * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder vlanId(String vlanId) {
             this.putQueryParameter("VlanId", vlanId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoleAclOnObjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetRoleAclOnObjectResponseBody</p>
  */
 public class GetRoleAclOnObjectResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetRoleAclOnObjectResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1366d16686529650188023ef87f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,16 +79,18 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRoleAclOnObjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleAclOnObjectResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("actions")
-        private java.util.List < String > actions;
-
-        @NameInMap("name")
-        private String name;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
 
         private Data(Builder builder) {
             this.actions = builder.actions;
-            this.name = builder.name;
         }
 
         public static Builder builder() {
@@ -94,34 +104,18 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
         public static final class Builder {
-            private java.util.List < String > actions; 
-            private String name; 
+            private java.util.List<String> actions; 
 
             /**
-             * The operations that were performed on the object.
+             * <p>The operations that were performed on the object.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
-                return this;
-            }
-
-            /**
-             * The name of the object.
-             */
-            public Builder name(String name) {
-                this.name = name;
                 return this;
             }
 

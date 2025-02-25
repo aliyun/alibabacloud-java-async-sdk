@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueryProcessorsRequest</p>
  */
 public class ListQueryProcessorsRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("appId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer appId;
 
-    @Query
-    @NameInMap("isActive")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isActive")
     private Integer isActive;
 
     private ListQueryProcessorsRequest(Builder builder) {
@@ -84,7 +83,7 @@ public class ListQueryProcessorsRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The application name.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +92,7 @@ public class ListQueryProcessorsRequest extends Request {
         }
 
         /**
-         * 110157886
+         * The application version number.
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -102,7 +101,12 @@ public class ListQueryProcessorsRequest extends Request {
         }
 
         /**
-         * 0
+         * The scope of query analysis rules to be queried. Default value: 0. Valid values:
+         * <p>
+         * 
+         * *   0: queries all query analysis rules.
+         * *   1: queries the default query analysis rules.
+         * *   2: queries the query analysis rules that are not the default rules.
          */
         public Builder isActive(Integer isActive) {
             this.putQueryParameter("isActive", isActive);

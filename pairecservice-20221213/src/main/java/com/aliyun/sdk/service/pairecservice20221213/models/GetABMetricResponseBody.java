@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetABMetricResponseBody</p>
  */
 public class GetABMetricResponseBody extends TeaModel {
-    @NameInMap("Definition")
+    @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("LeftMetricId")
+    @com.aliyun.core.annotation.NameInMap("LeftMetricId")
     private String leftMetricId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Operator")
+    @com.aliyun.core.annotation.NameInMap("Operator")
     private String operator;
 
-    @NameInMap("Realtime")
+    @com.aliyun.core.annotation.NameInMap("Realtime")
     private String realtime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResultResourceId")
     private String resultResourceId;
 
-    @NameInMap("ResultTableMetaId")
+    @com.aliyun.core.annotation.NameInMap("ResultTableMetaId")
     private String resultTableMetaId;
 
-    @NameInMap("RightMetricId")
+    @com.aliyun.core.annotation.NameInMap("RightMetricId")
     private String rightMetricId;
 
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
-    @NameInMap("SceneName")
+    @com.aliyun.core.annotation.NameInMap("SceneName")
     private String sceneName;
 
-    @NameInMap("StatisticsCycle")
+    @com.aliyun.core.annotation.NameInMap("StatisticsCycle")
     private Integer statisticsCycle;
 
-    @NameInMap("TableMetaId")
+    @com.aliyun.core.annotation.NameInMap("TableMetaId")
     private String tableMetaId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetABMetricResponseBody(Builder builder) {

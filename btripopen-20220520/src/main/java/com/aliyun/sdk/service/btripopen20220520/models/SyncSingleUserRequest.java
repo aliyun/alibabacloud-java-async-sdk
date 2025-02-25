@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncSingleUserRequest} extends {@link RequestModel}
  *
  * <p>SyncSingleUserRequest</p>
  */
 public class SyncSingleUserRequest extends Request {
-    @Body
-    @NameInMap("email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("email")
     private String email;
 
-    @Body
-    @NameInMap("job_no")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("job_no")
     private String jobNo;
 
-    @Body
-    @NameInMap("leave_status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("leave_status")
     private Integer leaveStatus;
 
-    @Body
-    @NameInMap("manager_user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("manager_user_id")
     private String managerUserId;
 
-    @Body
-    @NameInMap("phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
-    @Body
-    @NameInMap("position")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("position")
     private String position;
 
-    @Body
-    @NameInMap("position_level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("position_level")
     private String positionLevel;
 
-    @Body
-    @NameInMap("real_name_en")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("real_name_en")
     private String realNameEn;
 
-    @Body
-    @NameInMap("third_depart_id_list")
-    private java.util.List < String > thirdDepartIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_depart_id_list")
+    private java.util.List<String> thirdDepartIdList;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("user_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private SyncSingleUserRequest(Builder builder) {
@@ -150,7 +155,7 @@ public class SyncSingleUserRequest extends Request {
     /**
      * @return thirdDepartIdList
      */
-    public java.util.List < String > getThirdDepartIdList() {
+    public java.util.List<String> getThirdDepartIdList() {
         return this.thirdDepartIdList;
     }
 
@@ -184,7 +189,7 @@ public class SyncSingleUserRequest extends Request {
         private String position; 
         private String positionLevel; 
         private String realNameEn; 
-        private java.util.List < String > thirdDepartIdList; 
+        private java.util.List<String> thirdDepartIdList; 
         private String userId; 
         private String userName; 
         private String xAcsBtripSoCorpToken; 
@@ -284,7 +289,7 @@ public class SyncSingleUserRequest extends Request {
         /**
          * third_depart_id_list.
          */
-        public Builder thirdDepartIdList(java.util.List < String > thirdDepartIdList) {
+        public Builder thirdDepartIdList(java.util.List<String> thirdDepartIdList) {
             String thirdDepartIdListShrink = shrink(thirdDepartIdList, "third_depart_id_list", "json");
             this.putBodyParameter("third_depart_id_list", thirdDepartIdListShrink);
             this.thirdDepartIdList = thirdDepartIdList;
@@ -292,7 +297,10 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>573263</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -301,7 +309,7 @@ public class SyncSingleUserRequest extends Request {
         }
 
         /**
-         * user_name.
+         * <p>This parameter is required.</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);

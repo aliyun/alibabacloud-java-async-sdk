@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuthorizeMenuRequest} extends {@link RequestModel}
  *
  * <p>AuthorizeMenuRequest</p>
  */
 public class AuthorizeMenuRequest extends Request {
-    @Query
-    @NameInMap("AuthPointsValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthPointsValue")
     private Integer authPointsValue;
 
-    @Query
-    @NameInMap("DataPortalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataPortalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataPortalId;
 
-    @Query
-    @NameInMap("MenuIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MenuIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String menuIds;
 
-    @Query
-    @NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private String userGroupIds;
 
-    @Query
-    @NameInMap("UserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
     private String userIds;
 
     private AuthorizeMenuRequest(Builder builder) {
@@ -112,11 +117,14 @@ public class AuthorizeMenuRequest extends Request {
         } 
 
         /**
-         * Authorizes the permissions of the menu. Valid values:
-         * <p>
+         * <p>Authorizes the permissions of the menu. Valid values:</p>
+         * <ul>
+         * <li>1: view</li>
+         * <li>3: View + Export (default)</li>
+         * </ul>
          * 
-         * *   1: view
-         * *   3: View + Export (default)
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder authPointsValue(Integer authPointsValue) {
             this.putQueryParameter("AuthPointsValue", authPointsValue);
@@ -125,7 +133,11 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * The ID of the BI portal.
+         * <p>The ID of the BI portal.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d173abb53e84c8ca7495429163b****</p>
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);
@@ -134,11 +146,15 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * The menu ID of the BI portal leaf node.
-         * <p>
+         * <p>The menu ID of the BI portal leaf node.</p>
+         * <ul>
+         * <li>The directory menu cannot be authorized.</li>
+         * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The directory menu cannot be authorized.
-         * *   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.
+         * <strong>example:</strong>
+         * <p>54kqgoa****,pg1n135****</p>
          */
         public Builder menuIds(String menuIds) {
             this.putQueryParameter("MenuIds", menuIds);
@@ -147,11 +163,14 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * The IDs of the user groups.
-         * <p>
+         * <p>The IDs of the user groups.</p>
+         * <ul>
+         * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</li>
+         * <li>UserGroupIds and UserIds cannot be empty at the same time</li>
+         * </ul>
          * 
-         * *   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.
-         * *   UserGroupIds and UserIds cannot be empty at the same time
+         * <strong>example:</strong>
+         * <p>34fd141d-4598-4093-8c33-8e066dcb****,3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -160,10 +179,13 @@ public class AuthorizeMenuRequest extends Request {
         }
 
         /**
-         * The IDs of the end users. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
-         * <p>
+         * <p>The IDs of the end users. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * <ul>
+         * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</li>
+         * </ul>
          * 
-         * *   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.
+         * <strong>example:</strong>
+         * <p>204627493484****,121344444790****</p>
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);

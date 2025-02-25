@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadSQLLogsRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadSQLLogsRecordsResponseBody</p>
  */
 public class DownloadSQLLogsRecordsResponseBody extends TeaModel {
-    @NameInMap("DownloadId")
+    @com.aliyun.core.annotation.NameInMap("DownloadId")
     private Long downloadId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DownloadSQLLogsRecordsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DownloadSQLLogsRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the download task.
+         * <p>The ID of the download task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder downloadId(Long downloadId) {
             this.downloadId = downloadId;
@@ -58,7 +66,10 @@ public class DownloadSQLLogsRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

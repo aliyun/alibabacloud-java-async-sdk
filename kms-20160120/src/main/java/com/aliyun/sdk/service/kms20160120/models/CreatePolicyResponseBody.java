@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePolicyResponseBody</p>
  */
 public class CreatePolicyResponseBody extends TeaModel {
-    @NameInMap("AccessControlRules")
+    @com.aliyun.core.annotation.NameInMap("AccessControlRules")
     private String accessControlRules;
 
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("KmsInstance")
+    @com.aliyun.core.annotation.NameInMap("KmsInstance")
     private String kmsInstance;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private String permissions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private String resources;
 
     private CreatePolicyResponseBody(Builder builder) {
@@ -122,7 +121,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         private String resources; 
 
         /**
-         * AccessControlRules.
+         * The name of the access control rule.
          */
         public Builder accessControlRules(String accessControlRules) {
             this.accessControlRules = accessControlRules;
@@ -130,7 +129,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Arn.
+         * The ARN of the permission policy.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -138,7 +137,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -146,7 +145,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * KmsInstance.
+         * The scope of the permission policy.
          */
         public Builder kmsInstance(String kmsInstance) {
             this.kmsInstance = kmsInstance;
@@ -154,7 +153,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the permission policy.
          */
         public Builder name(String name) {
             this.name = name;
@@ -162,7 +161,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Permissions.
+         * The operations that can be performed.
          */
         public Builder permissions(String permissions) {
             this.permissions = permissions;
@@ -170,7 +169,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +177,11 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The key and secret that are allowed to access.
+         * <p>
+         * 
+         * *   `key/*` indicates that all keys of the KMS instance can be accessed.
+         * *   `secret/*` indicates all secrets of the KMS instance can be accessed.
          */
         public Builder resources(String resources) {
             this.resources = resources;

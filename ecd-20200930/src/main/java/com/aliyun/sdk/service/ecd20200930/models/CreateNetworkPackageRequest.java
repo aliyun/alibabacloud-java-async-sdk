@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkPackageRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkPackageRequest</p>
  */
 public class CreateNetworkPackageRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(required = true, maximum = 1000, minimum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 2)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateNetworkPackageRequest(Builder builder) {
@@ -183,7 +188,28 @@ public class CreateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment.
+         * <p>Specifies whether to enable the automatic payment feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true (default): enables the auto-payment feature.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -192,7 +218,26 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal.
+         * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -201,9 +246,16 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The maximum public bandwidth. Unit: Mbit/s.\
-         * <p>
-         * Valid values for the pay-by-data-transfer type (PayByTraffic): 10 to 200. Valid values for the pay-by-bandwith type (PayByBandwidth): 10 to 1000.
+         * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+         * <ul>
+         * <li>Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.</li>
+         * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.</li>
+         * <li>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -212,7 +264,23 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The metering method of the pay-as-you-go Internet access package. Valid values: PayByTraffic: pay-by-data-transfer. PayByBandwidth: pay-by-bandwidth. Default value: PayByTraffic.
+         * <p>The charge type of the premium bandwidth plan.</p>
+         * <ul>
+         * <li><p>Valid value when the <code>PayType</code> parameter is set to <code>PrePaid</code>:</p>
+         * <ul>
+         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when the <code>PayType</code> parameter is set to <code>PostPaid</code>:</p>
+         * <ul>
+         * <li>PayByTraffic: charges by data transfer.</li>
+         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -221,7 +289,11 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The office network ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -230,7 +302,15 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The billing method of the Internet access package.
+         * <p>The billing method of the premium bandwidth plan.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -239,7 +319,16 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The duration of the Internet access package.
+         * <p>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <code>PayType</code> parameter is set to <code>PrePaid</code>. The valid values of this parameter vary based on the <code>PeriodUnit</code> value.</p>
+         * <ul>
+         * <li>Valid value when the <code>PeriodUnit</code> parameter is set to <code>Week</code>: 1</li>
+         * <li>Valid values when the <code>PeriodUnit</code> parameter is set to <code>Month</code>: 1, 2, 3, and 6</li>
+         * <li>Valid values when the <code>PeriodUnit</code> parameter is set to <code>Year</code>: 1, 2, and 3</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -248,7 +337,33 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The unit of duration that you want to use for the Internet access package.
+         * <p>The unit of the subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <code>PayType</code> parameter is set to <code>PrePaid</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Month</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Year</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Week</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -257,7 +372,10 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The ID of the sales promotion.
+         * <p>The ID of the sales promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23141</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -266,7 +384,11 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

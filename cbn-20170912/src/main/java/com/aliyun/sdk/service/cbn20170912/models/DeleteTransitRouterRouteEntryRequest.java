@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTransitRouterRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteTransitRouterRouteEntryRequest</p>
  */
 public class DeleteTransitRouterRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     private String transitRouterRouteEntryDestinationCidrBlock;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryId")
     private String transitRouterRouteEntryId;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryNextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNextHopId")
     private String transitRouterRouteEntryNextHopId;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryNextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNextHopType")
     private String transitRouterRouteEntryNextHopType;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
     private String transitRouterRouteTableId;
 
     private DeleteTransitRouterRouteEntryRequest(Builder builder) {
@@ -194,12 +199,14 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,11 +215,14 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:
-         * <p>
+         * <p>Specifies whether to check the request but not perform the operation. The system checks the permissions and the status of the specified instances. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the route is deleted.</li>
+         * <li><strong>true</strong>: sends a precheck request. The route is not deleted after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.</li>
+         * </ul>
          * 
-         * *   **false** (default): sends the request. If the request passes the precheck, the route is deleted.
-         * *   **true**: sends a precheck request. The route is not deleted after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -257,7 +267,10 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The destination CIDR block.
+         * <p>The destination CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         public Builder transitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
             this.putQueryParameter("TransitRouterRouteEntryDestinationCidrBlock", transitRouterRouteEntryDestinationCidrBlock);
@@ -266,7 +279,10 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the route entry.
+         * <p>The ID of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-75eg4jprkvk0pw****</p>
          */
         public Builder transitRouterRouteEntryId(String transitRouterRouteEntryId) {
             this.putQueryParameter("TransitRouterRouteEntryId", transitRouterRouteEntryId);
@@ -275,7 +291,10 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection that you want to specify as the next hop.
+         * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-nls9fzkfat8934****</p>
          */
         public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopId", transitRouterRouteEntryNextHopId);
@@ -284,11 +303,14 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The type of the next hop. Valid values:
-         * <p>
+         * <p>The type of the next hop. Valid values:</p>
+         * <ul>
+         * <li><strong>BlackHole</strong>: a blackhole route. You do not need to specify a next hop.</li>
+         * <li><strong>Attachment</strong>: a network instance connection. You must specify a network instance connection as the next hop.</li>
+         * </ul>
          * 
-         * *   **BlackHole**: a blackhole route. You do not need to specify a next hop.
-         * *   **Attachment**: a network instance connection. You must specify a network instance connection as the next hop.
+         * <strong>example:</strong>
+         * <p>BlackHole</p>
          */
         public Builder transitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
             this.putQueryParameter("TransitRouterRouteEntryNextHopType", transitRouterRouteEntryNextHopType);
@@ -297,7 +319,10 @@ public class DeleteTransitRouterRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the Enterprise Edition transit router.
+         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp1dudbh2d5na6b50****</p>
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);

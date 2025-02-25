@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Query
-    @NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    private java.util.List<String> resourceId;
 
-    @Query
-    @NameInMap("ResourcePrincipalName")
-    private java.util.List < String > resourcePrincipalName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePrincipalName")
+    private java.util.List<String> resourcePrincipalName;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -52,14 +57,14 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
     /**
      * @return resourcePrincipalName
      */
-    public java.util.List < String > getResourcePrincipalName() {
+    public java.util.List<String> getResourcePrincipalName() {
         return this.resourcePrincipalName;
     }
 
@@ -73,15 +78,15 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
-        private java.util.List < String > resourceId; 
-        private java.util.List < String > resourcePrincipalName; 
+        private java.util.List<String> resourceId; 
+        private java.util.List<String> resourcePrincipalName; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -96,38 +101,42 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of resource N.
-         * <p>
-         * 
-         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.
-         * 
-         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+         * <p>The ID of resource N.</p>
+         * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
+         * </blockquote>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The name of resource N.
-         * <p>
+         * <p>The name of resource N.</p>
+         * <p>Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.</p>
+         * <blockquote>
+         * <p> You must specify only one of the following parameters: <code>ResourceId</code> and <code>ResourcePrincipalName</code>.</p>
+         * </blockquote>
          * 
-         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.
-         * 
-         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
+         * <strong>example:</strong>
+         * <p>TagResources</p>
          */
-        public Builder resourcePrincipalName(java.util.List < String > resourcePrincipalName) {
+        public Builder resourcePrincipalName(java.util.List<String> resourcePrincipalName) {
             this.putQueryParameter("ResourcePrincipalName", resourcePrincipalName);
             this.resourcePrincipalName = resourcePrincipalName;
             return this;
         }
 
         /**
-         * The type of the resource. Valid value:
-         * <p>
+         * <p>The type of the resource. Valid value:</p>
+         * <ul>
+         * <li>user: a Resource Access Management (RAM) user.</li>
+         * </ul>
          * 
-         * *   user: a RAM user
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -136,9 +145,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tag value.
+         * <p>The key of tag N.</p>
+         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length. The tag key cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -151,11 +161,17 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -190,10 +206,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
-             * <p>
+             * <p>The key of tag N.</p>
+             * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -201,10 +218,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
-             * <p>
+             * <p>The value of tag N.</p>
+             * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder value(String value) {
                 this.value = value;

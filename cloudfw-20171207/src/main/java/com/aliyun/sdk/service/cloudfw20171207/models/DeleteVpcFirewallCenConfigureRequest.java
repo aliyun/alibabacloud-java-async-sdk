@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcFirewallCenConfigureRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcFirewallCenConfigureRequest</p>
  */
 public class DeleteVpcFirewallCenConfigureRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("VpcFirewallIdList")
-    @Validation(required = true)
-    private java.util.List < String > vpcFirewallIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> vpcFirewallIdList;
 
     private DeleteVpcFirewallCenConfigureRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
     /**
      * @return vpcFirewallIdList
      */
-    public java.util.List < String > getVpcFirewallIdList() {
+    public java.util.List<String> getVpcFirewallIdList() {
         return this.vpcFirewallIdList;
     }
 
     public static final class Builder extends Request.Builder<DeleteVpcFirewallCenConfigureRequest, Builder> {
         private String lang; 
         private String memberUid; 
-        private java.util.List < String > vpcFirewallIdList; 
+        private java.util.List<String> vpcFirewallIdList; 
 
         private Builder() {
             super();
@@ -83,11 +88,14 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +104,10 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -105,9 +116,10 @@ public class DeleteVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The instance IDs of VPC firewalls.
+         * <p>The instance IDs of VPC firewalls.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder vpcFirewallIdList(java.util.List < String > vpcFirewallIdList) {
+        public Builder vpcFirewallIdList(java.util.List<String> vpcFirewallIdList) {
             this.putQueryParameter("VpcFirewallIdList", vpcFirewallIdList);
             this.vpcFirewallIdList = vpcFirewallIdList;
             return this;

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDatabasesResponseBody</p>
  */
 public class ListDatabasesResponseBody extends TeaModel {
-    @NameInMap("DatabaseList")
+    @com.aliyun.core.annotation.NameInMap("DatabaseList")
     private DatabaseList databaseList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDatabasesResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details of the databases.
+         * <p>The details of the databases.</p>
          */
         public Builder databaseList(DatabaseList databaseList) {
             this.databaseList = databaseList;
@@ -106,7 +111,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5541CDA6-F674-435C-81BD-40C2FB926CE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +144,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of databases that belong to an instance.
+         * <p>The number of databases that belong to an instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -151,9 +171,15 @@ public class ListDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class OwnerIdList extends TeaModel {
-        @NameInMap("OwnerIds")
-        private java.util.List < String > ownerIds;
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
+        private java.util.List<String> ownerIds;
 
         private OwnerIdList(Builder builder) {
             this.ownerIds = builder.ownerIds;
@@ -170,17 +196,17 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < String > getOwnerIds() {
+        public java.util.List<String> getOwnerIds() {
             return this.ownerIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerIds; 
+            private java.util.List<String> ownerIds; 
 
             /**
              * OwnerIds.
              */
-            public Builder ownerIds(java.util.List < String > ownerIds) {
+            public Builder ownerIds(java.util.List<String> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
@@ -192,9 +218,15 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class OwnerNameList extends TeaModel {
-        @NameInMap("OwnerNames")
-        private java.util.List < String > ownerNames;
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
+        private java.util.List<String> ownerNames;
 
         private OwnerNameList(Builder builder) {
             this.ownerNames = builder.ownerNames;
@@ -211,17 +243,17 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return ownerNames
          */
-        public java.util.List < String > getOwnerNames() {
+        public java.util.List<String> getOwnerNames() {
             return this.ownerNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerNames; 
+            private java.util.List<String> ownerNames; 
 
             /**
              * OwnerNames.
              */
-            public Builder ownerNames(java.util.List < String > ownerNames) {
+            public Builder ownerNames(java.util.List<String> ownerNames) {
                 this.ownerNames = ownerNames;
                 return this;
             }
@@ -233,53 +265,59 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class Database extends TeaModel {
-        @NameInMap("CatalogName")
+        @com.aliyun.core.annotation.NameInMap("CatalogName")
         private String catalogName;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbaId")
+        @com.aliyun.core.annotation.NameInMap("DbaId")
         private String dbaId;
 
-        @NameInMap("DbaName")
+        @com.aliyun.core.annotation.NameInMap("DbaName")
         private String dbaName;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OwnerIdList")
+        @com.aliyun.core.annotation.NameInMap("OwnerIdList")
         private OwnerIdList ownerIdList;
 
-        @NameInMap("OwnerNameList")
+        @com.aliyun.core.annotation.NameInMap("OwnerNameList")
         private OwnerNameList ownerNameList;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Database(Builder builder) {
@@ -440,7 +478,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The name of the catalog to which the database belongs.
+             * <p>The name of the catalog to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -448,7 +489,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -456,7 +500,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -464,7 +511,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DBA.
+             * <p>The ID of the DBA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -472,7 +522,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the Database administrator (DBA) to which the database belongs.
+             * <p>The nickname of the Database administrator (DBA) to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dba_user</p>
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -480,7 +533,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The encoding format of the database.
+             * <p>The encoding format of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf-8</p>
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -488,7 +544,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment to which the database belongs.
+             * <p>The type of the environment to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -496,7 +555,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance to which the database belongs.
+             * <p>The endpoint of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.xxx.xxx.xxx</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -504,7 +566,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the database belongs.
+             * <p>The ID of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -512,7 +577,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the owners of the database.
+             * <p>The IDs of the owners of the database.</p>
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -520,7 +585,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The nicknames of the database owners.
+             * <p>The nicknames of the database owners.</p>
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -528,7 +593,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The connection port of the instance to which the database belongs.
+             * <p>The connection port of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -536,7 +604,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -544,7 +615,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used for searching the database.
+             * <p>The name that is used for searching the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -552,7 +626,10 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The system ID (SID) of the instance to which the database belongs.
+             * <p>The system ID (SID) of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -560,13 +637,16 @@ public class ListDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database. Valid values:
-             * <p>
+             * <p>The state of the database. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The database is normal.</li>
+             * <li>DISABLE: The database is disabled.</li>
+             * <li>OFFLINE: The database is unpublished.</li>
+             * <li>NOT_EXIST: The database does not exist.</li>
+             * </ul>
              * 
-             * *   NORMAL: The database is normal.
-             * *   DISABLE: The database is disabled.
-             * *   OFFLINE: The database is unpublished.
-             * *   NOT_EXIST: The database does not exist.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -580,9 +660,15 @@ public class ListDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDatabasesResponseBody</p>
+     */
     public static class DatabaseList extends TeaModel {
-        @NameInMap("Database")
-        private java.util.List < Database> database;
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private java.util.List<Database> database;
 
         private DatabaseList(Builder builder) {
             this.database = builder.database;
@@ -599,17 +685,17 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return database
          */
-        public java.util.List < Database> getDatabase() {
+        public java.util.List<Database> getDatabase() {
             return this.database;
         }
 
         public static final class Builder {
-            private java.util.List < Database> database; 
+            private java.util.List<Database> database; 
 
             /**
              * Database.
              */
-            public Builder database(java.util.List < Database> database) {
+            public Builder database(java.util.List<Database> database) {
                 this.database = database;
                 return this;
             }

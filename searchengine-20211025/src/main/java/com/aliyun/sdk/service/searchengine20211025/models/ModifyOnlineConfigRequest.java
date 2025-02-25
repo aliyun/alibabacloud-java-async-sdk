@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOnlineConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyOnlineConfigRequest</p>
  */
 public class ModifyOnlineConfigRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("nodeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("nodeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeName;
 
-    @Path
-    @NameInMap("indexName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("indexName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexName;
 
-    @Body
-    @NameInMap("body")
-    private java.util.Map < String, String > body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.Map<String, String> body;
 
     private ModifyOnlineConfigRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class ModifyOnlineConfigRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, String > getBody() {
+    public java.util.Map<String, String> getBody() {
         return this.body;
     }
 
@@ -84,7 +89,7 @@ public class ModifyOnlineConfigRequest extends Request {
         private String instanceId; 
         private String nodeName; 
         private String indexName; 
-        private java.util.Map < String, String > body; 
+        private java.util.Map<String, String> body; 
 
         private Builder() {
             super();
@@ -99,7 +104,11 @@ public class ModifyOnlineConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the edge instance
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2ougaw02</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +117,11 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * The name of the document
+         * <p>The node name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder nodeName(String nodeName) {
             this.putPathParameter("nodeName", nodeName);
@@ -117,7 +130,11 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adsfasd</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -126,9 +143,9 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * ashortdescriptionofstruct
+         * <p>The request body.</p>
          */
-        public Builder body(java.util.Map < String, String > body) {
+        public Builder body(java.util.Map<String, String> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

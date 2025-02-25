@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceGatewayRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeviceGatewayRequest</p>
  */
 public class DescribeDeviceGatewayRequest extends Request {
-    @Query
-    @NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
-    @Query
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DescribeDeviceGatewayRequest(Builder builder) {
@@ -88,12 +93,12 @@ public class DescribeDeviceGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDeviceGatewayRequest response) {
-            super(response);
-            this.clientIp = response.clientIp;
-            this.expire = response.expire;
-            this.id = response.id;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDeviceGatewayRequest request) {
+            super(request);
+            this.clientIp = request.clientIp;
+            this.expire = request.expire;
+            this.id = request.id;
+            this.ownerId = request.ownerId;
         } 
 
         /**
@@ -115,7 +120,10 @@ public class DescribeDeviceGatewayRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24611****70597051-cn-beijing</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

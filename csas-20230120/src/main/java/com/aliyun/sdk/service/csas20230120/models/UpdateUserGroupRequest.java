@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserGroupRequest</p>
  */
 public class UpdateUserGroupRequest extends Request {
-    @Body
-    @NameInMap("Attributes")
-    private java.util.List < Attributes> attributes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Attributes")
+    private java.util.List<Attributes> attributes;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ModifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
     private String modifyType;
 
-    @Body
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private UpdateUserGroupRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class UpdateUserGroupRequest extends Request {
     /**
      * @return attributes
      */
-    public java.util.List < Attributes> getAttributes() {
+    public java.util.List<Attributes> getAttributes() {
         return this.attributes;
     }
 
@@ -79,7 +84,7 @@ public class UpdateUserGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateUserGroupRequest, Builder> {
-        private java.util.List < Attributes> attributes; 
+        private java.util.List<Attributes> attributes; 
         private String description; 
         private String modifyType; 
         private String userGroupId; 
@@ -99,7 +104,7 @@ public class UpdateUserGroupRequest extends Request {
         /**
          * Attributes.
          */
-        public Builder attributes(java.util.List < Attributes> attributes) {
+        public Builder attributes(java.util.List<Attributes> attributes) {
             this.putBodyParameter("Attributes", attributes);
             this.attributes = attributes;
             return this;
@@ -124,7 +129,10 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putBodyParameter("UserGroupId", userGroupId);
@@ -139,20 +147,26 @@ public class UpdateUserGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateUserGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateUserGroupRequest</p>
+     */
     public static class Attributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Relation")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String relation;
 
-        @NameInMap("UserGroupType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userGroupType;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Attributes(Builder builder) {
@@ -213,7 +227,10 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * Relation.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -221,7 +238,10 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * UserGroupType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -229,7 +249,7 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
              */
             public Builder value(String value) {
                 this.value = value;

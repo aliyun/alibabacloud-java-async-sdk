@@ -17,6 +17,10 @@ public class QueryDeviceVodUrlRequest extends Request {
     private String deviceName;
 
     @Query
+    @NameInMap("EnableStun")
+    private Boolean enableStun;
+
+    @Query
     @NameInMap("EncryptType")
     private Integer encryptType;
 
@@ -60,6 +64,7 @@ public class QueryDeviceVodUrlRequest extends Request {
     private QueryDeviceVodUrlRequest(Builder builder) {
         super(builder);
         this.deviceName = builder.deviceName;
+        this.enableStun = builder.enableStun;
         this.encryptType = builder.encryptType;
         this.fileName = builder.fileName;
         this.iotId = builder.iotId;
@@ -90,6 +95,13 @@ public class QueryDeviceVodUrlRequest extends Request {
      */
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    /**
+     * @return enableStun
+     */
+    public Boolean getEnableStun() {
+        return this.enableStun;
     }
 
     /**
@@ -164,6 +176,7 @@ public class QueryDeviceVodUrlRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryDeviceVodUrlRequest, Builder> {
         private String deviceName; 
+        private Boolean enableStun; 
         private Integer encryptType; 
         private String fileName; 
         private String iotId; 
@@ -179,19 +192,20 @@ public class QueryDeviceVodUrlRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceVodUrlRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.encryptType = response.encryptType;
-            this.fileName = response.fileName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.playUnLimited = response.playUnLimited;
-            this.productKey = response.productKey;
-            this.scheme = response.scheme;
-            this.seekTime = response.seekTime;
-            this.shouldEncrypt = response.shouldEncrypt;
-            this.urlValidDuration = response.urlValidDuration;
+        private Builder(QueryDeviceVodUrlRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.enableStun = request.enableStun;
+            this.encryptType = request.encryptType;
+            this.fileName = request.fileName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.playUnLimited = request.playUnLimited;
+            this.productKey = request.productKey;
+            this.scheme = request.scheme;
+            this.seekTime = request.seekTime;
+            this.shouldEncrypt = request.shouldEncrypt;
+            this.urlValidDuration = request.urlValidDuration;
         } 
 
         /**
@@ -200,6 +214,15 @@ public class QueryDeviceVodUrlRequest extends Request {
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
             this.deviceName = deviceName;
+            return this;
+        }
+
+        /**
+         * EnableStun.
+         */
+        public Builder enableStun(Boolean enableStun) {
+            this.putQueryParameter("EnableStun", enableStun);
+            this.enableStun = enableStun;
             return this;
         }
 

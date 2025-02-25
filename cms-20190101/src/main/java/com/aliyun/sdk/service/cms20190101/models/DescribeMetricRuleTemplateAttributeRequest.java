@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricRuleTemplateAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeMetricRuleTemplateAttributeRequest</p>
  */
 public class DescribeMetricRuleTemplateAttributeRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private DescribeMetricRuleTemplateAttributeRequest(Builder builder) {
@@ -68,10 +68,11 @@ public class DescribeMetricRuleTemplateAttributeRequest extends Request {
         } 
 
         /**
-         * The name of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
-         * <p>
+         * <p>The name of the alert template. You must specify at least one of the <code>Name</code> and <code>TemplateId</code> parameters.</p>
+         * <p>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
          * 
-         * For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
+         * <strong>example:</strong>
+         * <p>ECS_Template1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -80,10 +81,11 @@ public class DescribeMetricRuleTemplateAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
-         * <p>
+         * <p>The ID of the alert template. You must specify at least one of the <code>Name</code> and <code>TemplateId</code> parameters.</p>
+         * <p>For information about how to obtain the ID of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
          * 
-         * For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
+         * <strong>example:</strong>
+         * <p>70****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

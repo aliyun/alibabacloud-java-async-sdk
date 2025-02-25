@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrivateRegistryListResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrivateRegistryListResponseBody</p>
  */
 public class ListPrivateRegistryListResponseBody extends TeaModel {
-    @NameInMap("ImageRegistryInfos")
-    private java.util.List < ImageRegistryInfos> imageRegistryInfos;
+    @com.aliyun.core.annotation.NameInMap("ImageRegistryInfos")
+    private java.util.List<ImageRegistryInfos> imageRegistryInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrivateRegistryListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     /**
      * @return imageRegistryInfos
      */
-    public java.util.List < ImageRegistryInfos> getImageRegistryInfos() {
+    public java.util.List<ImageRegistryInfos> getImageRegistryInfos() {
         return this.imageRegistryInfos;
     }
 
@@ -46,19 +51,22 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageRegistryInfos> imageRegistryInfos; 
+        private java.util.List<ImageRegistryInfos> imageRegistryInfos; 
         private String requestId; 
 
         /**
-         * An array that consists of the image repositories.
+         * <p>An array that consists of the image repositories.</p>
          */
-        public Builder imageRegistryInfos(java.util.List < ImageRegistryInfos> imageRegistryInfos) {
+        public Builder imageRegistryInfos(java.util.List<ImageRegistryInfos> imageRegistryInfos) {
             this.imageRegistryInfos = imageRegistryInfos;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,59 +79,65 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrivateRegistryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrivateRegistryListResponseBody</p>
+     */
     public static class ImageRegistryInfos extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("JenkinsEnv")
+        @com.aliyun.core.annotation.NameInMap("JenkinsEnv")
         private String jenkinsEnv;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private Long netType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("PersistenceDay")
+        @com.aliyun.core.annotation.NameInMap("PersistenceDay")
         private Long persistenceDay;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private Long protocolType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegistryHostIp")
+        @com.aliyun.core.annotation.NameInMap("RegistryHostIp")
         private String registryHostIp;
 
-        @NameInMap("RegistryName")
+        @com.aliyun.core.annotation.NameInMap("RegistryName")
         private String registryName;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("RegistryVersion")
+        @com.aliyun.core.annotation.NameInMap("RegistryVersion")
         private String registryVersion;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TransPerHour")
+        @com.aliyun.core.annotation.NameInMap("TransPerHour")
         private Integer transPerHour;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private String whiteList;
 
         private ImageRegistryInfos(Builder builder) {
@@ -302,7 +316,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766185894******</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -310,7 +327,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the image repository.
+             * <p>The domain name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -318,7 +338,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66485</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -326,7 +349,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Jenkins environment.
+             * <p>The information about the Jenkins environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JenkinsInfo</p>
              */
             public Builder jenkinsEnv(String jenkinsEnv) {
                 this.jenkinsEnv = jenkinsEnv;
@@ -334,11 +360,14 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Internet</li>
+             * <li><strong>2</strong>: VPC</li>
+             * </ul>
              * 
-             * *   **1**: Internet
-             * *   **2**: VPC
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netType(Long netType) {
                 this.netType = netType;
@@ -346,7 +375,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The password used to log on to the image repository.
+             * <p>The password used to log on to the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Harbor******</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -354,7 +386,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days during which assets can be retained.
+             * <p>The number of days during which assets can be retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder persistenceDay(Long persistenceDay) {
                 this.persistenceDay = persistenceDay;
@@ -362,11 +397,14 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: HTTP</li>
+             * <li><strong>2</strong>: HTTPS</li>
+             * </ul>
              * 
-             * *   **1**: HTTP
-             * *   **2**: HTTPS
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder protocolType(Long protocolType) {
                 this.protocolType = protocolType;
@@ -374,7 +412,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the server.
+             * <p>The region ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -382,7 +423,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the image repository.
+             * <p>The IP address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.55.XXX.XXX</p>
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -390,7 +434,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the image repository.
+             * <p>The alias of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder registryName(String registryName) {
                 this.registryName = registryName;
@@ -398,13 +445,16 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository. Valid values:
-             * <p>
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>acr</strong>: Container Registry</li>
+             * <li><strong>harbor</strong>: Harbor</li>
+             * <li><strong>quay</strong>: Quay</li>
+             * <li><strong>CI/CD</strong>: Jenkins</li>
+             * </ul>
              * 
-             * *   **acr**: Container Registry
-             * *   **harbor**: Harbor
-             * *   **quay**: Quay
-             * *   **CI/CD**: Jenkins
+             * <strong>example:</strong>
+             * <p>harbor</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -412,11 +462,14 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image repository. Valid values:
-             * <p>
+             * <p>The version of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>V1</strong>: V1.0</li>
+             * <li><strong>V2</strong>: V2.0</li>
+             * </ul>
              * 
-             * *   **V1**: V1.0
-             * *   **V2**: V2.0
+             * <strong>example:</strong>
+             * <p>V1</p>
              */
             public Builder registryVersion(String registryVersion) {
                 this.registryVersion = registryVersion;
@@ -424,7 +477,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication token of the user.
+             * <p>The authentication token of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0da12bce-cc36-4c48-b3e6-2215fc3a****</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -432,7 +488,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images that can be scanned per hour.
+             * <p>The number of images that can be scanned per hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -440,7 +499,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The username used to log on to the image repository.
+             * <p>The username used to log on to the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegistryUser</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -448,7 +510,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp12897gqrex01zn0****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -456,7 +521,10 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist of IP addresses.
+             * <p>The whitelist of IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XXX.XXX</p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceGroupsResponseBody</p>
  */
 public class ListResourceGroupsResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListResourceGroupsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,21 +73,24 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The time when the resource group was last updated.
+         * <p>The resource groups.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +98,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The resource groups.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,19 +109,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the resource group. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
          * 
-         * *   0: The resource group is running or in service.
-         * *   1: The resource group has expired and is frozen.
-         * *   2: The resource group is released or destroyed.
-         * *   3: The resource group is being created or started.
-         * *   4: The resource group fails to be created or started.
-         * *   5: The resource group is being scaled out or upgraded.
-         * *   6: The resource group fails to be scaled out or upgraded.
-         * *   7: The resource group is being released or destroyed.
-         * *   8: The resource group fails to be released or destroyed.
-         * *   9: The operation performed on the resource group times out. All operations may time out. This value is temporarily available only for DataService Studio.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -123,11 +125,17 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -162,7 +170,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -170,7 +181,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -184,56 +198,62 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizExtKey")
+        @com.aliyun.core.annotation.NameInMap("BizExtKey")
         private String bizExtKey;
 
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private String cluster;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EnableKp")
+        @com.aliyun.core.annotation.NameInMap("EnableKp")
         private Boolean enableKp;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupType")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupType")
         private String resourceGroupType;
 
-        @NameInMap("ResourceManagerResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
         private String resourceManagerResourceGroupId;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Integer sequence;
 
-        @NameInMap("Specs")
-        private java.util.Map < String, ? > specs;
+        @com.aliyun.core.annotation.NameInMap("Specs")
+        private java.util.Map<String, ?> specs;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Data(Builder builder) {
@@ -351,7 +371,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * @return specs
          */
-        public java.util.Map < String, ? > getSpecs() {
+        public java.util.Map<String, ?> getSpecs() {
             return this.specs;
         }
 
@@ -365,7 +385,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -396,14 +416,21 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String resourceGroupType; 
             private String resourceManagerResourceGroupId; 
             private Integer sequence; 
-            private java.util.Map < String, ? > specs; 
+            private java.util.Map<String, ?> specs; 
             private Integer status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long tenantId; 
             private String updateTime; 
 
             /**
-             * The details of the resource group. The content enclosed in braces {} is the details of the resource group.
+             * <p>The category of the resource group. Valid values:</p>
+             * <ul>
+             * <li>default: shared resource group</li>
+             * <li>single: exclusive resource group</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder bizExtKey(String bizExtKey) {
                 this.bizExtKey = bizExtKey;
@@ -411,15 +438,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource group. Valid values:
-             * <p>
+             * <p>The name of the cluster. This parameter is returned only if the type of the resource group is MaxCompute or PAI.</p>
              * 
-             * *   0: DataWorks
-             * *   2: MaxCompute
-             * *   3: PAI
-             * *   4: Data Integration
-             * *   7: scheduling
-             * *   9: DataService Studio
+             * <strong>example:</strong>
+             * <p>AY18G</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -427,12 +449,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the resource group. Valid values:
-             * <p>
+             * <p>The time when the cluster was created. Example: Jul 9, 2018 2:43:37 PM.</p>
              * 
-             * *   ISOLATE: exclusive resource group that adopts the subscription billing method
-             * *   SHARE: shared resource group that adopts the pay-as-you-go billing method
-             * *   DEVELOP: resource group for developers
+             * <strong>example:</strong>
+             * <p>Jul 9, 2018 2:43:37 PM</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -440,7 +460,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created. Example: Jul 9, 2018 02:43:37 PM.
+             * <p>Indicates whether the UID of an Alibaba Cloud account is used for access. Valid values:</p>
+             * <ul>
+             * <li>true: The MaxCompute compute engine uses the UID of the Alibaba Cloud account as the display name of the account for access.</li>
+             * <li>false: The MaxCompute compute engine uses the name of the Alibaba Cloud account as the display name of the account for access. The remaining values are useless. This parameter is returned only if the type of the resource group is MaxCompute.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableKp(Boolean enableKp) {
                 this.enableKp = enableKp;
@@ -448,7 +475,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of your Alibaba Cloud resource group.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -456,11 +486,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the resource group. Valid values:
-             * <p>
+             * <p>The identifier of the resource group.</p>
              * 
-             * *   default: shared resource group
-             * *   single: exclusive resource group
+             * <strong>example:</strong>
+             * <p>e1815577-2f4e-4c5e-b29****</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -468,14 +497,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the UID of an Alibaba Cloud account is used for access. Valid values:
-             * <p>
+             * <p>Indicates whether the resource group is the default resource group. Valid values:</p>
+             * <ul>
+             * <li>true: The resource group is the default resource group.</li>
+             * <li>false: The resource group is not the default resource group.</li>
+             * </ul>
              * 
-             * *   true: The MaxCompute compute engine uses the UID of the Alibaba Cloud account as the display name of the account for access.
-             * 
-             * *   false: The MaxCompute compute engine uses the name of the Alibaba Cloud account as the display name of the account for access.
-             * 
-             *     The remaining values are useless. This parameter is returned only if the type of the resource group is MaxCompute.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -483,7 +512,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the resource group. Created resource groups are sorted in ascending order by sequence number.
+             * <p>The mode of the resource group. Valid values:</p>
+             * <ul>
+             * <li>ISOLATE: exclusive resource group that adopts the subscription billing method</li>
+             * <li>SHARE: shared resource group that adopts the pay-as-you-go billing method</li>
+             * <li>DEVELOP: resource group for developers</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SHARE</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -491,7 +528,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -499,7 +539,18 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the resource group.
+             * <p>The type of the resource group. Valid values:</p>
+             * <ul>
+             * <li>0: DataWorks</li>
+             * <li>2: MaxCompute</li>
+             * <li>3: PAI</li>
+             * <li>4: Data Integration</li>
+             * <li>7: scheduling</li>
+             * <li>9: DataService Studio</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder resourceGroupType(String resourceGroupType) {
                 this.resourceGroupType = resourceGroupType;
@@ -507,7 +558,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The ID of your Alibaba Cloud resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzbn7pti3zfa</p>
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -515,7 +569,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The sequence number of the resource group. Created resource groups are sorted in ascending order by sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -523,19 +580,33 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The details of the resource group. The content enclosed in braces {} is the details of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder specs(java.util.Map < String, ? > specs) {
+            public Builder specs(java.util.Map<String, ?> specs) {
                 this.specs = specs;
                 return this;
             }
 
             /**
-             * Indicates whether the resource group is the default resource group. Valid values:
-             * <p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>0: NORMAL, which indicates that the resource group is running or in service.</li>
+             * <li>1: STOP, which indicates that the resource group has expired and is frozen.</li>
+             * <li>2: DELETED, which indicates that the resource group is released or destroyed.</li>
+             * <li>3: CREATING, which indicates that the resource group is being created or started.</li>
+             * <li>4: CREATE_FAILED, which indicates that the resource group fails to be created or started.</li>
+             * <li>5: UPDATING, which indicates that the resource group is being scaled out or upgraded.</li>
+             * <li>6: UPDATE_FAILED, which indicates that the resource group fails to be scaled out or upgraded.</li>
+             * <li>7: DELETING, which indicates that the resource group is being released or destroyed.</li>
+             * <li>8: DELETE_FAILED, which indicates that the resource group fails to be released or destroyed.</li>
+             * <li>9: TIMEOUT, which indicates that the operation performed on the resource group times out. All operations may time out. This value is temporarily available only for DataService Studio.</li>
+             * </ul>
              * 
-             * *   true: The resource group is the default resource group.
-             * *   false: The resource group is not the default resource group.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -543,15 +614,18 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The tags.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -559,7 +633,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster. This parameter is returned only if the type of the resource group is MaxCompute or PAI.
+             * <p>The time when the resource group was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jul 9, 2018 2:43:37 PM</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

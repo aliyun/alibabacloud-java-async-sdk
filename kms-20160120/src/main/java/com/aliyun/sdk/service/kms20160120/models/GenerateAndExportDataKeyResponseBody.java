@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateAndExportDataKeyResponseBody</p>
  */
 public class GenerateAndExportDataKeyResponseBody extends TeaModel {
-    @NameInMap("CiphertextBlob")
+    @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
     private String ciphertextBlob;
 
-    @NameInMap("ExportedDataKey")
+    @com.aliyun.core.annotation.NameInMap("ExportedDataKey")
     private String exportedDataKey;
 
-    @NameInMap("KeyId")
+    @com.aliyun.core.annotation.NameInMap("KeyId")
     private String keyId;
 
-    @NameInMap("KeyVersionId")
+    @com.aliyun.core.annotation.NameInMap("KeyVersionId")
     private String keyVersionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateAndExportDataKeyResponseBody(Builder builder) {

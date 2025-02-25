@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRealTimeLogLogstoreRequest} extends {@link RequestModel}
  *
  * <p>DeleteRealTimeLogLogstoreRequest</p>
  */
 public class DeleteRealTimeLogLogstoreRequest extends Request {
-    @Query
-    @NameInMap("Logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Query
-    @NameInMap("Project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Project")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String project;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
     private DeleteRealTimeLogLogstoreRequest(Builder builder) {
@@ -85,7 +85,11 @@ public class DeleteRealTimeLogLogstoreRequest extends Request {
         } 
 
         /**
-         * The name of the Logstore to which log entries are delivered.
+         * <p>The name of the Logstore to which log entries are delivered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogstoreName</p>
          */
         public Builder logstore(String logstore) {
             this.putQueryParameter("Logstore", logstore);
@@ -94,7 +98,11 @@ public class DeleteRealTimeLogLogstoreRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project that is used for real-time log delivery.
+         * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectName</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -103,7 +111,11 @@ public class DeleteRealTimeLogLogstoreRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).
+         * <p>The ID of the region where the Log Service project is deployed. For more information, see <a href="https://help.aliyun.com/document_detail/144883.html">Regions that support real-time log delivery</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

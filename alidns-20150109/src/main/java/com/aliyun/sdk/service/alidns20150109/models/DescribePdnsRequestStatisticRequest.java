@@ -1,36 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsRequestStatisticRequest} extends {@link RequestModel}
  *
  * <p>DescribePdnsRequestStatisticRequest</p>
  */
 public class DescribePdnsRequestStatisticRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    @Query
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
 
     private DescribePdnsRequestStatisticRequest(Builder builder) {
         super(builder);
@@ -39,6 +48,7 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         this.lang = builder.lang;
         this.startDate = builder.startDate;
         this.subDomain = builder.subDomain;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -89,12 +99,20 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         return this.subDomain;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<DescribePdnsRequestStatisticRequest, Builder> {
         private String domainName; 
         private String endDate; 
         private String lang; 
         private String startDate; 
         private String subDomain; 
+        private String type; 
 
         private Builder() {
             super();
@@ -107,10 +125,14 @@ public class DescribePdnsRequestStatisticRequest extends Request {
             this.lang = request.lang;
             this.startDate = request.startDate;
             this.subDomain = request.subDomain;
+            this.type = request.type;
         } 
 
         /**
-         * DomainName.
+         * <p>The primary domain name whose statistics you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -119,7 +141,11 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end of the time range to query. Specify the time in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>The default value is the day when you query the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-7-1 00:00:00</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -128,7 +154,14 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -137,7 +170,11 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The beginning of the time range to query. Specify the time in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>You can query only records of the last 90 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-14 00:00:00</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -146,11 +183,31 @@ public class DescribePdnsRequestStatisticRequest extends Request {
         }
 
         /**
-         * SubDomain.
+         * <p>The subdomain name whose statistics you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
             this.subDomain = subDomain;
+            return this;
+        }
+
+        /**
+         * <p>The type of the request statistics that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>ACCOUNT</strong>: queries the request statistics by account.</li>
+         * <li><strong>DOMAIN</strong>: queries the request statistics by domain name.</li>
+         * <li><strong>SUB_DOMAIN</strong>: queries the request statistics by subdomain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACCOUNT</p>
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

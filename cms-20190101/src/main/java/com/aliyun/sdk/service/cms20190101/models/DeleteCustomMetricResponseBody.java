@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomMetricResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCustomMetricResponseBody</p>
  */
 public class DeleteCustomMetricResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteCustomMetricResponseBody(Builder builder) {
@@ -62,10 +62,13 @@ public class DeleteCustomMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call is successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -73,7 +76,10 @@ public class DeleteCustomMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -81,7 +87,10 @@ public class DeleteCustomMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05B36C2C-5F6E-48D5-8B41-CE36DD7EE8E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

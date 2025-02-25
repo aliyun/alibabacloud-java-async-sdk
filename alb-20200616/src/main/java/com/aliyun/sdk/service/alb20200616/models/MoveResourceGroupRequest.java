@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>MoveResourceGroupRequest</p>
  */
 public class MoveResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("NewResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newResourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private MoveResourceGroupRequest(Builder builder) {
@@ -85,10 +90,14 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which you want to move the resource.
-         * <p>
+         * <p>The ID of the resource group to which you want to transfer the cloud resource.</p>
+         * <blockquote>
+         * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~)
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -97,7 +106,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-hp34s2h0xx1ht4nwo****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -106,13 +119,17 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>loadbalancer</strong>: Application Load Balancer (ALB) instance</li>
+         * <li><strong>acl</strong>: access control list (ACL)</li>
+         * <li><strong>securitypolicy</strong>: security policy</li>
+         * <li><strong>servergroup</strong>: server group</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **loadbalancer**: Application Load Balancer (ALB) instance
-         * *   **acl**: access control list (ACL)
-         * *   **securitypolicy**: security policy
-         * *   **servergroup**: server group
+         * <strong>example:</strong>
+         * <p>ACL</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

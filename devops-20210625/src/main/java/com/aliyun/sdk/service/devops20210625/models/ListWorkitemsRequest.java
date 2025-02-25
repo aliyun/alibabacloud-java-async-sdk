@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkitemsRequest} extends {@link RequestModel}
  *
  * <p>ListWorkitemsRequest</p>
  */
 public class ListWorkitemsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("conditions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("conditions")
     private String conditions;
 
-    @Query
-    @NameInMap("extraConditions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("extraConditions")
     private String extraConditions;
 
-    @Query
-    @NameInMap("groupCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("groupCondition")
     private String groupCondition;
 
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private String maxResults;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("searchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchType")
     private String searchType;
 
-    @Query
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Query
-    @NameInMap("spaceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spaceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceType;
 
     private ListWorkitemsRequest(Builder builder) {
@@ -198,7 +203,10 @@ public class ListWorkitemsRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -207,7 +215,10 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Req</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -279,7 +290,10 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8fb83debd69a6c7c6626......</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -288,7 +302,10 @@ public class ListWorkitemsRequest extends Request {
         }
 
         /**
-         * spaceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);

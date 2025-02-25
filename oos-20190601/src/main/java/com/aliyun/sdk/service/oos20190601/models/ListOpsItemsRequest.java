@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOpsItemsRequest} extends {@link RequestModel}
  *
  * <p>ListOpsItemsRequest</p>
  */
 public class ListOpsItemsRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceTags")
-    private java.util.Map < String, ? > resourceTags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTags")
+    private java.util.Map<String, ?> resourceTags;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
     private ListOpsItemsRequest(Builder builder) {
         super(builder);
@@ -63,7 +68,7 @@ public class ListOpsItemsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -91,24 +96,24 @@ public class ListOpsItemsRequest extends Request {
     /**
      * @return resourceTags
      */
-    public java.util.Map < String, ? > getResourceTags() {
+    public java.util.Map<String, ?> getResourceTags() {
         return this.resourceTags;
     }
 
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListOpsItemsRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.Map < String, ? > resourceTags; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> resourceTags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -125,16 +130,19 @@ public class ListOpsItemsRequest extends Request {
         } 
 
         /**
-         * The filter rules for the component.
+         * <p>The filter rules for the component.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
+         * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -143,7 +151,10 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -152,7 +163,10 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,9 +175,15 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * The information about resource tags.
+         * <p>The information about resource tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;k1&quot;: &quot;v1&quot;,
+         *       &quot;k2&quot;: &quot;v2&quot;
+         * }</p>
          */
-        public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
+        public Builder resourceTags(java.util.Map<String, ?> resourceTags) {
             String resourceTagsShrink = shrink(resourceTags, "ResourceTags", "json");
             this.putQueryParameter("ResourceTags", resourceTagsShrink);
             this.resourceTags = resourceTags;
@@ -171,9 +191,12 @@ public class ListOpsItemsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -187,15 +210,21 @@ public class ListOpsItemsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListOpsItemsRequest} extends {@link TeaModel}
+     *
+     * <p>ListOpsItemsRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
-        private java.util.List < String > value;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -228,17 +257,20 @@ public class ListOpsItemsRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String name; 
             private String operator; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
-             * The parameter name of the filter.
+             * <p>The parameter name of the filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Status</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +278,10 @@ public class ListOpsItemsRequest extends Request {
             }
 
             /**
-             * The comparison operator that is used to filter property values.
+             * <p>The comparison operator that is used to filter property values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -254,9 +289,9 @@ public class ListOpsItemsRequest extends Request {
             }
 
             /**
-             * The parameter values of the filter.
+             * <p>The parameter values of the filter.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

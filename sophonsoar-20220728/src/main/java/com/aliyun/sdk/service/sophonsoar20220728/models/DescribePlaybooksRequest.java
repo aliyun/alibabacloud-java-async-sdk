@@ -1,51 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybooksRequest} extends {@link RequestModel}
  *
  * <p>DescribePlaybooksRequest</p>
  */
 public class DescribePlaybooksRequest extends Request {
-    @Query
-    @NameInMap("Active")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Active")
     private Integer active;
 
-    @Query
-    @NameInMap("EndMillis")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndMillis")
     private Long endMillis;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnType")
     private String ownType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamTypes")
+    private String paramTypes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
 
-    @Query
-    @NameInMap("StartMillis")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartMillis")
     private Long startMillis;
 
     private DescribePlaybooksRequest(Builder builder) {
@@ -54,10 +66,13 @@ public class DescribePlaybooksRequest extends Request {
         this.endMillis = builder.endMillis;
         this.lang = builder.lang;
         this.name = builder.name;
+        this.order = builder.order;
         this.ownType = builder.ownType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.paramTypes = builder.paramTypes;
         this.playbookUuid = builder.playbookUuid;
+        this.sort = builder.sort;
         this.startMillis = builder.startMillis;
     }
 
@@ -103,6 +118,13 @@ public class DescribePlaybooksRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
      * @return ownType
      */
     public String getOwnType() {
@@ -124,10 +146,24 @@ public class DescribePlaybooksRequest extends Request {
     }
 
     /**
+     * @return paramTypes
+     */
+    public String getParamTypes() {
+        return this.paramTypes;
+    }
+
+    /**
      * @return playbookUuid
      */
     public String getPlaybookUuid() {
         return this.playbookUuid;
+    }
+
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
     }
 
     /**
@@ -142,10 +178,13 @@ public class DescribePlaybooksRequest extends Request {
         private Long endMillis; 
         private String lang; 
         private String name; 
+        private String order; 
         private String ownType; 
         private String pageNumber; 
         private String pageSize; 
+        private String paramTypes; 
         private String playbookUuid; 
+        private String sort; 
         private Long startMillis; 
 
         private Builder() {
@@ -158,15 +197,25 @@ public class DescribePlaybooksRequest extends Request {
             this.endMillis = request.endMillis;
             this.lang = request.lang;
             this.name = request.name;
+            this.order = request.order;
             this.ownType = request.ownType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.paramTypes = request.paramTypes;
             this.playbookUuid = request.playbookUuid;
+            this.sort = request.sort;
             this.startMillis = request.startMillis;
         } 
 
         /**
-         * Active.
+         * <p>The status of the playbook. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder active(Integer active) {
             this.putQueryParameter("Active", active);
@@ -175,7 +224,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * EndMillis.
+         * <p>The end of the time range to query. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683858064361</p>
          */
         public Builder endMillis(Long endMillis) {
             this.putQueryParameter("EndMillis", endMillis);
@@ -184,7 +236,14 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -193,7 +252,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_playbook</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -202,7 +264,30 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * OwnType.
+         * <p>The sorting order. Default value: desc. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order</li>
+         * <li>asc: ascending order</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * <p>The type of the playbook. Valid values:</p>
+         * <ul>
+         * <li><strong>preset</strong>: predefined playbook</li>
+         * <li><strong>user</strong>: custom playbook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder ownType(String ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -211,7 +296,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +308,13 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +323,25 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * ParamTypes.
+         */
+        public Builder paramTypes(String paramTypes) {
+            this.putQueryParameter("ParamTypes", paramTypes);
+            this.paramTypes = paramTypes;
+            return this;
+        }
+
+        /**
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can use the UUID to query the information about a specific playbook.</p>
+         * </blockquote>
+         * <ul>
+         * <li>You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8baa6cff-319e-4ede-97bc-1xxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -238,7 +350,26 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * StartMillis.
+         * <p>The sorting basis. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: last modification time</li>
+         * <li>2: last execution time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. The value is a 13-digit timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683526277415</p>
          */
         public Builder startMillis(Long startMillis) {
             this.putQueryParameter("StartMillis", startMillis);

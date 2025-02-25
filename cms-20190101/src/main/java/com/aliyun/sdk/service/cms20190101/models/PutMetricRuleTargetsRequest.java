@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutMetricRuleTargetsRequest} extends {@link RequestModel}
  *
  * <p>PutMetricRuleTargetsRequest</p>
  */
 public class PutMetricRuleTargetsRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("Targets")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Targets")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Targets> targets;
 
     private PutMetricRuleTargetsRequest(Builder builder) {
@@ -70,10 +70,12 @@ public class PutMetricRuleTargetsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert rule.
-         * <p>
+         * <p>The ID of the alert rule.</p>
+         * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * <strong>example:</strong>
+         * <p>ae06917_75a8c43178ab66****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -82,7 +84,8 @@ public class PutMetricRuleTargetsRequest extends Request {
         }
 
         /**
-         * Targets.
+         * <p>None.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.putQueryParameter("Targets", targets);
@@ -97,19 +100,25 @@ public class PutMetricRuleTargetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutMetricRuleTargetsRequest} extends {@link TeaModel}
+     *
+     * <p>PutMetricRuleTargetsRequest</p>
+     */
     public static class Targets extends TeaModel {
-        @NameInMap("Arn")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Arn")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arn;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Targets(Builder builder) {
@@ -162,17 +171,37 @@ public class PutMetricRuleTargetsRequest extends Request {
             private String level; 
 
             /**
-             * The ARN of the resource.
-             * <p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Simple Message Queue (formerly MNS) (SMQ), Auto Scaling, Simple Log Service, and Function Compute are supported.</p>
+             * <p>The following part describes the ARN of SMQ and the parameters in the ARN:</p>
+             * <p><code>acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>.</p>
+             * <ul>
+             * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+             * </li>
+             * <li><p>{userId}: the ID of the Alibaba Cloud account that owns the resource.</p>
+             * </li>
+             * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+             * <ul>
+             * <li><strong>queues</strong></li>
+             * <li><strong>topics</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>{Resource name}: the resource name.</p>
+             * <ul>
+             * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+             * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <p>ARN of Auto Scaling:</p>
+             * <p>acs:ess:{regionId}:{userId}:scalingGroupId/{Scaling group ID}:scalingRuleId/{Scaling rule ID}</p>
+             * <p>ARN of Simple Log Service:</p>
+             * <p>acs:log:{regionId}:{userId}:project/{Project name}/logstore/{Logstore name}</p>
+             * <p>ARN of Function Compute:</p>
+             * <p>acs:fc:{regionId}:{userId}:services/{Service name}/functions/{Function name}</p>
+             * <p>This parameter is required.</p>
              * 
-             * For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
-             * 
-             * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
-             * 
-             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-             * *   {userId}: the ID of the Alibaba Cloud account.
-             * *   {regionId}: the region ID of the message queue or topic.
-             * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -180,10 +209,12 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The ID of the resource for which alerts are triggered.
-             * <p>
+             * <p>The ID of the resource for which alerts are triggered.</p>
+             * <p>For more information about how to obtain the ID of the resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -191,7 +222,10 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -199,12 +233,15 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The level of the alert. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li>INFO</li>
+             * <li>WARN</li>
+             * <li>CRITICAL</li>
+             * </ul>
              * 
-             * *   INFO: information
-             * *   WARN: warning
-             * *   CRITICAL: critical
+             * <strong>example:</strong>
+             * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
              */
             public Builder level(String level) {
                 this.level = level;

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceSpecRequest</p>
  */
 public class ModifyInstanceSpecRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceSpec;
 
-    @Query
-    @NameInMap("ModifyAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyAction")
     private String modifyAction;
 
-    @Query
-    @NameInMap("SkipWaitSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipWaitSwitch")
     private Boolean skipWaitSwitch;
 
-    @Query
-    @NameInMap("Token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String token;
 
     private ModifyInstanceSpecRequest(Builder builder) {
@@ -127,7 +132,15 @@ public class ModifyInstanceSpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether payment is automatically made during renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: Automatic payment is enabled. Make sure that your Alibaba Cloud account has adequate balance.</li>
+         * <li><strong>False</strong>: Automatic payment is disabled. You have to manually pay in the console. Log on to the console. In the upper-right corner, choose <strong>Expenses &gt; User Center</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the page that appears, find your order and complete the payment.</li>
+         * </ul>
+         * <p>Default value: <strong>False</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -136,7 +149,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cn-v6419k43xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +162,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * <p>The specifications of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.s1.small</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -154,7 +175,15 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ModifyAction.
+         * <p>Specifies whether to upgrade or downgrade the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>UPGRADE</strong></li>
+         * <li><strong>DOWNGRADE</strong></li>
+         * </ul>
+         * <p>Default value: <strong>UPGRADE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder modifyAction(String modifyAction) {
             this.putQueryParameter("ModifyAction", modifyAction);
@@ -163,7 +192,10 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * SkipWaitSwitch.
+         * <p>Specifies whether to skip the Waiting for Traffic Switchover state. During the upgrade or downgrade, a new outbound IP address may be added to the API Gateway instance. The Waiting for Traffic Switchover state is used to remind users of adding the new outbound IP address to the whitelist. If you set the SkipWaitSwitch parameter to true, the instance does not enter the Waiting for Traffic Switchover state when a new outbound IP address is available. Instead, the system sends internal messages to the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipWaitSwitch(Boolean skipWaitSwitch) {
             this.putQueryParameter("SkipWaitSwitch", skipWaitSwitch);
@@ -172,7 +204,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The password.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b5845042-2f2f-4e96-bd5c-36c6e5c2a68c</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

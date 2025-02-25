@@ -96,7 +96,7 @@ public class ListK8sIngressRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the Kubernetes cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotsUsageResponseBody</p>
  */
 public class DescribeSnapshotsUsageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotCount")
+    @com.aliyun.core.annotation.NameInMap("SnapshotCount")
     private Integer snapshotCount;
 
-    @NameInMap("SnapshotSize")
+    @com.aliyun.core.annotation.NameInMap("SnapshotSize")
     private Long snapshotSize;
 
     private DescribeSnapshotsUsageResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         private Long snapshotSize; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The number of snapshots stored in the current region.
+         * <p>The number of snapshots stored in the current region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder snapshotCount(Integer snapshotCount) {
             this.snapshotCount = snapshotCount;
@@ -78,7 +89,10 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The total size of snapshots stored in the current region. Unit: byte.
+         * <p>The total size of snapshots stored in the current region. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         public Builder snapshotSize(Long snapshotSize) {
             this.snapshotSize = snapshotSize;

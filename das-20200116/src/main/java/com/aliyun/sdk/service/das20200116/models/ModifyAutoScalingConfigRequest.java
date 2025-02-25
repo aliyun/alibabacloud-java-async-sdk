@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAutoScalingConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAutoScalingConfigRequest</p>
  */
 public class ModifyAutoScalingConfigRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Bandwidth bandwidth;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private Resource resource;
 
-    @Query
-    @NameInMap("Shard")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Shard")
     private Shard shard;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private Spec spec;
 
-    @Query
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private Storage storage;
 
     private ModifyAutoScalingConfigRequest(Builder builder) {
@@ -125,7 +130,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
         } 
 
         /**
-         * The configuration item of the automatic bandwidth adjustment feature.
+         * <p>The configuration item of the bandwidth auto scaling feature.</p>
          */
         public Builder bandwidth(Bandwidth bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -134,7 +139,11 @@ public class ModifyAutoScalingConfigRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -143,7 +152,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
         }
 
         /**
-         * The configuration item of the auto scaling feature for resources.
+         * <p>The configuration item of the resource auto scaling feature.</p>
          */
         public Builder resource(Resource resource) {
             this.putQueryParameter("Resource", resource);
@@ -152,7 +161,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
         }
 
         /**
-         * The configuration item of the auto scaling feature for shards.
+         * <p>The configuration item of the shard auto scaling feature.</p>
          */
         public Builder shard(Shard shard) {
             this.putQueryParameter("Shard", shard);
@@ -161,7 +170,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
         }
 
         /**
-         * The configuration item of the auto scaling feature for specifications.
+         * <p>The configuration item of the specification auto scaling feature.</p>
          */
         public Builder spec(Spec spec) {
             this.putQueryParameter("Spec", spec);
@@ -170,7 +179,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
         }
 
         /**
-         * The configuration item of the automatic storage expansion feature.
+         * <p>The configuration item of the automatic storage expansion feature.</p>
          */
         public Builder storage(Storage storage) {
             this.putQueryParameter("Storage", storage);
@@ -185,23 +194,31 @@ public class ModifyAutoScalingConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAutoScalingConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoScalingConfigRequest</p>
+     */
     public static class Bandwidth extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("BandwidthUsageLowerThreshold")
+        @com.aliyun.core.annotation.NameInMap("BandwidthUsageLowerThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 70, minimum = 10)
         private Integer bandwidthUsageLowerThreshold;
 
-        @NameInMap("BandwidthUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("BandwidthUsageUpperThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 95, minimum = 50)
         private Integer bandwidthUsageUpperThreshold;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("ObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("ObservationWindowSize")
         private String observationWindowSize;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Bandwidth(Builder builder) {
@@ -272,11 +289,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private Boolean upgrade; 
 
             /**
-             * Specifies whether to apply the **Bandwidth** configuration of the automatic bandwidth adjustment feature. Valid values:
-             * <p>
+             * <p>Specifies whether to apply the <strong>Bandwidth</strong> configuration of the bandwidth auto scaling feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder apply(Boolean apply) {
                 this.apply = apply;
@@ -284,12 +304,15 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %. Valid values:
-             * <p>
+             * <p>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>10</strong></li>
+             * <li><strong>20</strong></li>
+             * <li><strong>30</strong></li>
+             * </ul>
              * 
-             * *   **10**
-             * *   **20**
-             * *   **30**
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder bandwidthUsageLowerThreshold(Integer bandwidthUsageLowerThreshold) {
                 this.bandwidthUsageLowerThreshold = bandwidthUsageLowerThreshold;
@@ -297,15 +320,18 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average bandwidth usage threshold that triggers automatic bandwidth upgrade. Unit: %. Valid values:
-             * <p>
+             * <p>The average bandwidth usage threshold that triggers automatic bandwidth upgrade. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>50</strong></li>
+             * <li><strong>60</strong></li>
+             * <li><strong>70</strong></li>
+             * <li><strong>80</strong></li>
+             * <li><strong>90</strong></li>
+             * <li><strong>95</strong></li>
+             * </ul>
              * 
-             * *   **50**
-             * *   **60**
-             * *   **70**
-             * *   **80**
-             * *   **90**
-             * *   **95**
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder bandwidthUsageUpperThreshold(Integer bandwidthUsageUpperThreshold) {
                 this.bandwidthUsageUpperThreshold = bandwidthUsageUpperThreshold;
@@ -313,11 +339,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the automatic bandwidth downgrade feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic bandwidth downgrade. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder downgrade(Boolean downgrade) {
                 this.downgrade = downgrade;
@@ -325,14 +354,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The observation window of the automatic bandwidth upgrade feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
-             * <p>
+             * <p>The observation window of the bandwidth auto scaling feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+             * <ul>
+             * <li><strong>1m</strong></li>
+             * <li><strong>5m</strong></li>
+             * <li><strong>10m</strong></li>
+             * <li><strong>15m</strong></li>
+             * <li><strong>30m</strong></li>
+             * </ul>
              * 
-             * *   **1m**
-             * *   **5m**
-             * *   **10m**
-             * *   **15m**
-             * *   **30m**
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder observationWindowSize(String observationWindowSize) {
                 this.observationWindowSize = observationWindowSize;
@@ -340,11 +372,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the automatic bandwidth upgrade feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic bandwidth upgrade. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -358,20 +393,26 @@ public class ModifyAutoScalingConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAutoScalingConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoScalingConfigRequest</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("CpuUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuUsageUpperThreshold")
         private Integer cpuUsageUpperThreshold;
 
-        @NameInMap("DowngradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("DowngradeObservationWindowSize")
         private String downgradeObservationWindowSize;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("UpgradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeObservationWindowSize")
         private String upgradeObservationWindowSize;
 
         private Resource(Builder builder) {
@@ -433,11 +474,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private String upgradeObservationWindowSize; 
 
             /**
-             * Specifies whether to apply the **Resource** configuration of the auto scaling feature for resources. Valid values:
-             * <p>
+             * <p>Specifies whether to apply the <strong>Resource</strong> configuration of the resource auto scaling feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder apply(Boolean apply) {
                 this.apply = apply;
@@ -445,12 +489,15 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average CPU utilization threshold that triggers automatic scale-out of resources. Unit: %. Valid values:
-             * <p>
+             * <p>The average CPU utilization threshold that triggers automatic resource scale-out. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>70</strong></li>
+             * <li><strong>80</strong></li>
+             * <li><strong>90</strong></li>
+             * </ul>
              * 
-             * *   **70**
-             * *   **80**
-             * *   **90**
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder cpuUsageUpperThreshold(Integer cpuUsageUpperThreshold) {
                 this.cpuUsageUpperThreshold = cpuUsageUpperThreshold;
@@ -458,15 +505,18 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The observation window of the automatic resource scale-in feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
-             * <p>
+             * <p>The observation window of the automatic resource scale-in feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+             * <ul>
+             * <li><strong>1m</strong></li>
+             * <li><strong>3m</strong></li>
+             * <li><strong>5m</strong></li>
+             * <li><strong>10m</strong></li>
+             * <li><strong>20m</strong></li>
+             * <li><strong>30m</strong></li>
+             * </ul>
              * 
-             * *   **1m**
-             * *   **3m**
-             * *   **5m**
-             * *   **10m**
-             * *   **20m**
-             * *   **30m**
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder downgradeObservationWindowSize(String downgradeObservationWindowSize) {
                 this.downgradeObservationWindowSize = downgradeObservationWindowSize;
@@ -474,11 +524,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the auto scaling feature for resources. Valid values:
-             * <p>
+             * <p>Specifies whether to enable resource auto scaling. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -486,15 +539,18 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The observation window of the automatic resource scale-out feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
-             * <p>
+             * <p>The observation window of the automatic resource scale-out feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+             * <ul>
+             * <li><strong>1m</strong></li>
+             * <li><strong>3m</strong></li>
+             * <li><strong>5m</strong></li>
+             * <li><strong>10m</strong></li>
+             * <li><strong>20m</strong></li>
+             * <li><strong>30m</strong></li>
+             * </ul>
              * 
-             * *   **1m**
-             * *   **3m**
-             * *   **5m**
-             * *   **10m**
-             * *   **20m**
-             * *   **30m**
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder upgradeObservationWindowSize(String upgradeObservationWindowSize) {
                 this.upgradeObservationWindowSize = upgradeObservationWindowSize;
@@ -508,34 +564,40 @@ public class ModifyAutoScalingConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAutoScalingConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoScalingConfigRequest</p>
+     */
     public static class Shard extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("DowngradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("DowngradeObservationWindowSize")
         private String downgradeObservationWindowSize;
 
-        @NameInMap("MaxShards")
-        @Validation(maximum = 64, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("MaxShards")
+        @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 2)
         private Integer maxShards;
 
-        @NameInMap("MemUsageLowerThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageLowerThreshold")
         private Integer memUsageLowerThreshold;
 
-        @NameInMap("MemUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageUpperThreshold")
         private Integer memUsageUpperThreshold;
 
-        @NameInMap("MinShards")
-        @Validation(maximum = 64, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("MinShards")
+        @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 2)
         private Integer minShards;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
-        @NameInMap("UpgradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeObservationWindowSize")
         private String upgradeObservationWindowSize;
 
         private Shard(Builder builder) {
@@ -633,13 +695,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private String upgradeObservationWindowSize; 
 
             /**
-             * Specifies whether to apply the **Shard** configuration of the auto scaling feature for shards. Valid values:
-             * <p>
+             * <p>Specifies whether to apply the <strong>Shard</strong> configuration of the shard auto scaling feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> The shard auto scaling feature is available only for Tair (Redis OSS-compatible) cloud-native cluster instances on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  The auto scaling feature for shards is available only for ApsaraDB for Redis Community Edition instances that use cloud disks on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder apply(Boolean apply) {
                 this.apply = apply;
@@ -647,13 +713,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the feature of automatically removing shards. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic shard removal. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> The automatic shard removal feature is in a canary release.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  The feature of automatically removing shards is in canary release.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder downgrade(Boolean downgrade) {
                 this.downgrade = downgrade;
@@ -661,14 +731,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The observation window of the feature of automatically removing shards. The value of this parameter consists of a numeric value and a time unit suffix. The **h** time unit suffix specifies the hour. The **d** time unit suffix specifies the day. Valid values:
-             * <p>
+             * <p>The observation window of the automatic shard removal feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>h</strong> time unit suffix specifies the hour. The <strong>d</strong> time unit suffix specifies the day. Valid values:</p>
+             * <ul>
+             * <li><strong>1h</strong></li>
+             * <li><strong>2h</strong></li>
+             * <li><strong>3h</strong></li>
+             * <li><strong>1d</strong></li>
+             * <li><strong>7d</strong></li>
+             * </ul>
              * 
-             * *   **1h**
-             * *   **2h**
-             * *   **3h**
-             * *   **1d**
-             * *   **7d**
+             * <strong>example:</strong>
+             * <p>1h</p>
              */
             public Builder downgradeObservationWindowSize(String downgradeObservationWindowSize) {
                 this.downgradeObservationWindowSize = downgradeObservationWindowSize;
@@ -676,7 +749,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The maximum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.
+             * <p>The maximum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxShards(Integer maxShards) {
                 this.maxShards = maxShards;
@@ -684,12 +760,15 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average memory usage threshold that triggers automatic removal of shards. Unit: %. Valid values:
-             * <p>
+             * <p>The average memory usage threshold that triggers automatic shard removal. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>10</strong></li>
+             * <li><strong>20</strong></li>
+             * <li><strong>30</strong></li>
+             * </ul>
              * 
-             * *   **10**
-             * *   **20**
-             * *   **30**
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder memUsageLowerThreshold(Integer memUsageLowerThreshold) {
                 this.memUsageLowerThreshold = memUsageLowerThreshold;
@@ -697,14 +776,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average memory usage threshold that triggers automatic adding of shards. Unit: %. Valid values:
-             * <p>
+             * <p>The average memory usage threshold that triggers automatic shard addition. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>50</strong></li>
+             * <li><strong>60</strong></li>
+             * <li><strong>70</strong></li>
+             * <li><strong>80</strong></li>
+             * <li><strong>90</strong></li>
+             * </ul>
              * 
-             * *   **50**
-             * *   **60**
-             * *   **70**
-             * *   **80**
-             * *   **90**
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder memUsageUpperThreshold(Integer memUsageUpperThreshold) {
                 this.memUsageUpperThreshold = memUsageUpperThreshold;
@@ -712,7 +794,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The minimum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.
+             * <p>The minimum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder minShards(Integer minShards) {
                 this.minShards = minShards;
@@ -720,11 +805,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the feature of automatically adding shards. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic shard addition. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -732,13 +820,16 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The observation window of the feature of automatically adding shards. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
-             * <p>
+             * <p>The observation window of the automatic shard addition feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+             * <ul>
+             * <li><strong>5m</strong></li>
+             * <li><strong>10m</strong></li>
+             * <li><strong>15m</strong></li>
+             * <li><strong>30m</strong></li>
+             * </ul>
              * 
-             * *   **5m**
-             * *   **10m**
-             * *   **15m**
-             * *   **30m**
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder upgradeObservationWindowSize(String upgradeObservationWindowSize) {
                 this.upgradeObservationWindowSize = upgradeObservationWindowSize;
@@ -752,33 +843,39 @@ public class ModifyAutoScalingConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAutoScalingConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoScalingConfigRequest</p>
+     */
     public static class Spec extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("CoolDownTime")
+        @com.aliyun.core.annotation.NameInMap("CoolDownTime")
         private String coolDownTime;
 
-        @NameInMap("CpuUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuUsageUpperThreshold")
         private Integer cpuUsageUpperThreshold;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("MaxReadOnlyNodes")
-        @Validation(maximum = 15, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("MaxReadOnlyNodes")
+        @com.aliyun.core.annotation.Validation(maximum = 15, minimum = 1)
         private Integer maxReadOnlyNodes;
 
-        @NameInMap("MaxSpec")
+        @com.aliyun.core.annotation.NameInMap("MaxSpec")
         private String maxSpec;
 
-        @NameInMap("MemUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageUpperThreshold")
         private Integer memUsageUpperThreshold;
 
-        @NameInMap("ObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("ObservationWindowSize")
         private String observationWindowSize;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Spec(Builder builder) {
@@ -876,11 +973,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private Boolean upgrade; 
 
             /**
-             * Specifies whether to apply the **Spec** configuration of the auto scaling feature for specifications. Valid values:
-             * <p>
+             * <p>Specifies whether to apply the <strong>Spec</strong> configuration of the specification auto scaling feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder apply(Boolean apply) {
                 this.apply = apply;
@@ -888,11 +988,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The quiescent period. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute, the **h** time unit suffix specifies the hour, and the **d** time suffix unit specifies the day.
-             * <p>
+             * <p>The quiescent period. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute, the <strong>h</strong> time unit suffix specifies the hour, and the <strong>d</strong> time unit suffix specifies the day.</p>
+             * <ul>
+             * <li>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</li>
+             * <li>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or Enterprise SSDs (ESSDs): <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values for PolarDB for MySQL Cluster Edition instances: **5m**, **10m**, **30m**, **1h**, **2h**, **3h**, **1d**, and **7d**.
-             * *   Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: **5m**, **10m**, **30m**, **1h**, **2h**, **3h**, **1d**, and **7d**.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder coolDownTime(String coolDownTime) {
                 this.coolDownTime = coolDownTime;
@@ -900,16 +1003,20 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %. Valid values:
-             * <p>
+             * <p>The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>50</strong></li>
+             * <li><strong>60</strong></li>
+             * <li><strong>70</strong></li>
+             * <li><strong>80</strong></li>
+             * <li><strong>90</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+             * </blockquote>
              * 
-             * *   **50**
-             * *   **60**
-             * *   **70**
-             * *   **80**
-             * *   **90**
-             * 
-             * >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder cpuUsageUpperThreshold(Integer cpuUsageUpperThreshold) {
                 this.cpuUsageUpperThreshold = cpuUsageUpperThreshold;
@@ -917,13 +1024,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the automatic specification scale-down feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic specification scale-down. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder downgrade(Boolean downgrade) {
                 this.downgrade = downgrade;
@@ -931,10 +1042,13 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The maximum number of read-only nodes of the instance.
-             * <p>
+             * <p>The maximum number of read-only nodes of the instance.</p>
+             * <blockquote>
+             * <p> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</p>
+             * </blockquote>
              * 
-             * >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxReadOnlyNodes(Integer maxReadOnlyNodes) {
                 this.maxReadOnlyNodes = maxReadOnlyNodes;
@@ -942,11 +1056,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The maximum specifications to which the database instance can be upgraded. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, refer to the following topics:
-             * <p>
+             * <p>The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:</p>
+             * <ul>
+             * <li>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></li>
+             * <li>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></li>
+             * </ul>
              * 
-             * *   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~).
-             * *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~).
+             * <strong>example:</strong>
+             * <p>polar.mysql.x8.12xlarge</p>
              */
             public Builder maxSpec(String maxSpec) {
                 this.maxSpec = maxSpec;
@@ -954,16 +1071,20 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average memory usage threshold that triggers automatic specification scale-up. Unit: %. Valid values:
-             * <p>
+             * <p>The average memory usage threshold that triggers automatic specification scale-up. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>50</strong></li>
+             * <li><strong>60</strong></li>
+             * <li><strong>70</strong></li>
+             * <li><strong>80</strong></li>
+             * <li><strong>90</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter must be specified if the database instance is a Tair (Redis OSS-compatible) Community Edition cloud-native instance on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * *   **50**
-             * *   **60**
-             * *   **70**
-             * *   **80**
-             * *   **90**
-             * 
-             * >  This parameter must be specified if the database instance is an ApsaraDB for Redis Community Edition instance that uses cloud disks on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder memUsageUpperThreshold(Integer memUsageUpperThreshold) {
                 this.memUsageUpperThreshold = memUsageUpperThreshold;
@@ -971,12 +1092,15 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The observation window. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute and the **h** time unit suffix specifies the hour.
-             * <p>
+             * <p>The observation window. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute and the <strong>h</strong> time unit suffix specifies the hour.</p>
+             * <ul>
+             * <li>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</li>
+             * <li>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <strong>5m</strong>, <strong>20m</strong>, <strong>30m</strong>, <strong>40m</strong>, and <strong>1h</strong>.</li>
+             * <li>Valid values for Tair (Redis OSS-compatible) Community Edition cloud-native instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values for PolarDB for MySQL Cluster Edition instances: **5m**, **10m**, **15m**, and **30m**.
-             * *   Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: **5m**, **20m**, **30m**, **40m**, and **1h**.
-             * *   Valid values for ApsaraDB for Redis Community Edition instances that use cloud disks: **5m**, **10m**, **15m**, and **30m**.
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder observationWindowSize(String observationWindowSize) {
                 this.observationWindowSize = observationWindowSize;
@@ -984,11 +1108,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the automatic specification scale-up feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic specification scale-up. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -1002,18 +1129,24 @@ public class ModifyAutoScalingConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAutoScalingConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoScalingConfigRequest</p>
+     */
     public static class Storage extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("DiskUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("DiskUsageUpperThreshold")
         private Integer diskUsageUpperThreshold;
 
-        @NameInMap("MaxStorage")
-        @Validation(maximum = 32000, minimum = 20)
+        @com.aliyun.core.annotation.NameInMap("MaxStorage")
+        @com.aliyun.core.annotation.Validation(maximum = 32000, minimum = 20)
         private Integer maxStorage;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Storage(Builder builder) {
@@ -1066,11 +1199,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             private Boolean upgrade; 
 
             /**
-             * Specifies whether to apply the **Storage** configuration of the automatic storage expansion feature. Valid values:
-             * <p>
+             * <p>Specifies whether to apply the <strong>Storage</strong> configuration of the automatic storage expansion feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder apply(Boolean apply) {
                 this.apply = apply;
@@ -1078,14 +1214,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The average storage usage threshold that triggers automatic storage expansion. Unit: %. Valid values:
-             * <p>
+             * <p>The average storage usage threshold that triggers automatic storage expansion. Unit: %. Valid values:</p>
+             * <ul>
+             * <li><strong>50</strong></li>
+             * <li><strong>60</strong></li>
+             * <li><strong>70</strong></li>
+             * <li><strong>80</strong></li>
+             * <li><strong>90</strong></li>
+             * </ul>
              * 
-             * *   **50**
-             * *   **60**
-             * *   **70**
-             * *   **80**
-             * *   **90**
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder diskUsageUpperThreshold(Integer diskUsageUpperThreshold) {
                 this.diskUsageUpperThreshold = diskUsageUpperThreshold;
@@ -1093,13 +1232,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The maximum storage size of the database instance. The value must be greater than or equal to the total storage size of the instance. Valid values of different types of instances:
-             * <p>
+             * <p>The maximum storage size of the database instance. Unit: GB. The value must be greater than or equal to the total storage size of the instance.</p>
+             * <ul>
+             * <li>If the instance uses ESSDs, the maximum value of this parameter can be 32000.</li>
+             * <li>If the instance uses standard SSDs, the maximum value of this parameter can be 6000.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The standard SSD storage type is phased out. We recommend that you <a href="https://help.aliyun.com/document_detail/314678.html">upgrade the storage type of your instance from standard SSDs to ESSDs</a>.</p>
+             * </blockquote>
              * 
-             * *   If the ApsaraDB for RDS instance uses ESSDs, the value of this parameter can be set to 32000, in GB.
-             * *   If the ApsaraDB for RDS instance uses standard SSDs, the value of this parameter can be set to 6000, in GB.
-             * 
-             * >  The ApsaraDB RDS for MySQL instances that use standard SSDs are discontinued. We recommend that you [upgrade the storage type of an ApsaraDB RDS for MySQL instance from standard SSDs to ESSDs](~~314678~~).
+             * <strong>example:</strong>
+             * <p>32000</p>
              */
             public Builder maxStorage(Integer maxStorage) {
                 this.maxStorage = maxStorage;
@@ -1107,11 +1250,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the automatic storage expansion feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable automatic storage expansion. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;

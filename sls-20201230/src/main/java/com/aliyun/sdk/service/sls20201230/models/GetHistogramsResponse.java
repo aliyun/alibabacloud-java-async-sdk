@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetHistogramsResponse} extends {@link TeaModel}
  *
  * <p>GetHistogramsResponse</p>
  */
 public class GetHistogramsResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < GetHistogramsResponseBody> body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<GetHistogramsResponseBody> body;
 
     private GetHistogramsResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class GetHistogramsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class GetHistogramsResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < GetHistogramsResponseBody> getBody() {
+    public java.util.List<GetHistogramsResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<GetHistogramsResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < GetHistogramsResponseBody> body);
+        Builder body(java.util.List<GetHistogramsResponseBody> body);
 
         @Override
         GetHistogramsResponse build();
@@ -77,9 +79,9 @@ public class GetHistogramsResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<GetHistogramsResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < GetHistogramsResponseBody> body; 
+        private java.util.List<GetHistogramsResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class GetHistogramsResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class GetHistogramsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < GetHistogramsResponseBody> body) {
+        public Builder body(java.util.List<GetHistogramsResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -126,17 +128,23 @@ public class GetHistogramsResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link GetHistogramsResponse} extends {@link TeaModel}
+     *
+     * <p>GetHistogramsResponse</p>
+     */
     public static class GetHistogramsResponseBody extends TeaModel {
-        @NameInMap("from")
+        @com.aliyun.core.annotation.NameInMap("from")
         private Long from;
 
-        @NameInMap("to")
+        @com.aliyun.core.annotation.NameInMap("to")
         private Long to;
 
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Long count;
 
-        @NameInMap("progress")
+        @com.aliyun.core.annotation.NameInMap("progress")
         private String progress;
 
         private GetHistogramsResponseBody(Builder builder) {
@@ -189,10 +197,11 @@ public class GetHistogramsResponse extends Response {
             private String progress; 
 
             /**
-             * The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-             * <p>
+             * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.</p>
              * 
-             * The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
+             * <strong>example:</strong>
+             * <p>1409529600</p>
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -200,10 +209,11 @@ public class GetHistogramsResponse extends Response {
             }
 
             /**
-             * The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-             * <p>
+             * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.</p>
              * 
-             * The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
+             * <strong>example:</strong>
+             * <p>1409569200</p>
              */
             public Builder to(Long to) {
                 this.to = to;
@@ -211,7 +221,10 @@ public class GetHistogramsResponse extends Response {
             }
 
             /**
-             * The number of logs that are generated within the subinterval.
+             * <p>The number of logs that are generated within the subinterval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -219,12 +232,12 @@ public class GetHistogramsResponse extends Response {
             }
 
             /**
-             * Indicates whether the query and analysis results in the subinterval is complete. Valid values:
-             * <p>
+             * <p>Indicates whether the query and analysis results in the subinterval is complete. Valid values:</p>
+             * <p>Complete: The query is successful, and the complete query and analysis results are returned.</p>
+             * <p>Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.</p>
              * 
-             * Complete: The query is successful, and the complete query and analysis results are returned.
-             * 
-             * Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;

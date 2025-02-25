@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSpanNamesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSpanNamesResponseBody</p>
  */
 public class ListSpanNamesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpanNames")
+    @com.aliyun.core.annotation.NameInMap("SpanNames")
     private SpanNames spanNames;
 
     private ListSpanNamesResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ListSpanNamesResponseBody extends TeaModel {
         private SpanNames spanNames; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class ListSpanNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The span names.
+         * <p>The span names.</p>
          */
         public Builder spanNames(SpanNames spanNames) {
             this.spanNames = spanNames;
@@ -71,9 +79,15 @@ public class ListSpanNamesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSpanNamesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSpanNamesResponseBody</p>
+     */
     public static class SpanNames extends TeaModel {
-        @NameInMap("SpanName")
-        private java.util.List < String > spanName;
+        @com.aliyun.core.annotation.NameInMap("SpanName")
+        private java.util.List<String> spanName;
 
         private SpanNames(Builder builder) {
             this.spanName = builder.spanName;
@@ -90,17 +104,17 @@ public class ListSpanNamesResponseBody extends TeaModel {
         /**
          * @return spanName
          */
-        public java.util.List < String > getSpanName() {
+        public java.util.List<String> getSpanName() {
             return this.spanName;
         }
 
         public static final class Builder {
-            private java.util.List < String > spanName; 
+            private java.util.List<String> spanName; 
 
             /**
              * SpanName.
              */
-            public Builder spanName(java.util.List < String > spanName) {
+            public Builder spanName(java.util.List<String> spanName) {
                 this.spanName = spanName;
                 return this;
             }

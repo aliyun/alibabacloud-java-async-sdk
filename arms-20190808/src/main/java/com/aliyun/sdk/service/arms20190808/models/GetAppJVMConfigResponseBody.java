@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppJVMConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppJVMConfigResponseBody</p>
  */
 public class GetAppJVMConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("JvmInfoList")
-    private java.util.List < JvmInfoList> jvmInfoList;
+    @com.aliyun.core.annotation.NameInMap("JvmInfoList")
+    private java.util.List<JvmInfoList> jvmInfoList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAppJVMConfigResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
     /**
      * @return jvmInfoList
      */
-    public java.util.List < JvmInfoList> getJvmInfoList() {
+    public java.util.List<JvmInfoList> getJvmInfoList() {
         return this.jvmInfoList;
     }
 
@@ -80,13 +85,16 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < JvmInfoList> jvmInfoList; 
+        private java.util.List<JvmInfoList> jvmInfoList; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * <p>The response code. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,15 +102,18 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Java VM info list.
+         * <p>The list of JVM information.</p>
          */
-        public Builder jvmInfoList(java.util.List < JvmInfoList> jvmInfoList) {
+        public Builder jvmInfoList(java.util.List<JvmInfoList> jvmInfoList) {
             this.jvmInfoList = jvmInfoList;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
          * 
-         * *   `true`
-         * *   `false`
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,23 +148,29 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppJVMConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppJVMConfigResponseBody</p>
+     */
     public static class JvmInfoList extends TeaModel {
-        @NameInMap("AgentVersion")
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("ProcId")
+        @com.aliyun.core.annotation.NameInMap("ProcId")
         private String procId;
 
-        @NameInMap("VmArgs")
+        @com.aliyun.core.annotation.NameInMap("VmArgs")
         private String vmArgs;
 
         private JvmInfoList(Builder builder) {
@@ -222,7 +241,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             private String vmArgs; 
 
             /**
-             * Agent version.
+             * <p>The version of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.7.0-SNAPSHOT_3.0.3_3756244</p>
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -230,7 +252,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the elastic container instance.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host_name</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -238,7 +263,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ip address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.91.59.244</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -246,7 +274,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The PID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsv9zcel92@1455182510c5369</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -254,7 +285,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Process Id.
+             * <p>The process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder procId(String procId) {
                 this.procId = procId;
@@ -262,7 +296,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Java VM config.
+             * <p>The VM parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[-javaagent:/home/admin/.opt/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar, -Doneagent.plugin.arms-agent.enabled=true, -Darms.licenseKey=[******], -Darms.agent.env=K8s, -Darms.agent.podinfo.path=/etc/podinfo, -Darms.appName=productservice, -Doneagent.region=cn-hangzhou, -Dproject.name=Product]</p>
              */
             public Builder vmArgs(String vmArgs) {
                 this.vmArgs = vmArgs;

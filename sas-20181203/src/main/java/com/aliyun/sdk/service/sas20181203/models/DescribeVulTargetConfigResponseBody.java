@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulTargetConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulTargetConfigResponseBody</p>
  */
 public class DescribeVulTargetConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetConfigs")
-    private java.util.List < TargetConfigs> targetConfigs;
+    @com.aliyun.core.annotation.NameInMap("TargetConfigs")
+    private java.util.List<TargetConfigs> targetConfigs;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVulTargetConfigResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
     /**
      * @return targetConfigs
      */
-    public java.util.List < TargetConfigs> getTargetConfigs() {
+    public java.util.List<TargetConfigs> getTargetConfigs() {
         return this.targetConfigs;
     }
 
@@ -58,11 +63,14 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TargetConfigs> targetConfigs; 
+        private java.util.List<TargetConfigs> targetConfigs; 
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBC6E47-7508-58C9-9E76-528E118CB1CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations.
+         * <p>An array that consists of the configurations.</p>
          */
-        public Builder targetConfigs(java.util.List < TargetConfigs> targetConfigs) {
+        public Builder targetConfigs(java.util.List<TargetConfigs> targetConfigs) {
             this.targetConfigs = targetConfigs;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,14 +102,20 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulTargetConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulTargetConfigResponseBody</p>
+     */
     public static class TargetConfigs extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("OverAllConfig")
+        @com.aliyun.core.annotation.NameInMap("OverAllConfig")
         private String overAllConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TargetConfigs(Builder builder) {
@@ -142,11 +159,14 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the vulnerability scan feature is enabled for the server.
-             * <p>
+             * <p>Indicates whether the vulnerability scan feature is enabled for the server.</p>
+             * <ul>
+             * <li><strong>off</strong>: disabled</li>
+             * <li><strong>on</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -154,11 +174,14 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability scan feature is enabled for all servers. Valid values:
-             * <p>
+             * <p>Indicates whether the vulnerability scan feature is enabled for all servers. Valid values:</p>
+             * <ul>
+             * <li><strong>off</strong>: disabled</li>
+             * <li><strong>on</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder overAllConfig(String overAllConfig) {
                 this.overAllConfig = overAllConfig;
@@ -166,13 +189,16 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerability</li>
+             * <li><strong>sys</strong>: Windows system vulnerability</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+             * <li><strong>emg</strong>: urgent vulnerability</li>
+             * </ul>
              * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **emg**: urgent vulnerability
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;

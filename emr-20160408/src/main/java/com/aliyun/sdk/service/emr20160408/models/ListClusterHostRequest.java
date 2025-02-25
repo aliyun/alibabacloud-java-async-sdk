@@ -207,21 +207,21 @@ public class ListClusterHostRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterHostRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.componentName = response.componentName;
-            this.groupType = response.groupType;
-            this.hostGroupId = response.hostGroupId;
-            this.hostInstanceId = response.hostInstanceId;
-            this.hostName = response.hostName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.privateIp = response.privateIp;
-            this.publicIp = response.publicIp;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.statusList = response.statusList;
+        private Builder(ListClusterHostRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.componentName = request.componentName;
+            this.groupType = request.groupType;
+            this.hostGroupId = request.hostGroupId;
+            this.hostInstanceId = request.hostInstanceId;
+            this.hostName = request.hostName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.privateIp = request.privateIp;
+            this.publicIp = request.publicIp;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.statusList = request.statusList;
         } 
 
         /**

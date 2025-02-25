@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDiscoverDatabaseTaskResponseBody} extends {@link TeaModel}
  *
  * <p>StartDiscoverDatabaseTaskResponseBody</p>
  */
 public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
-    @NameInMap("CreateMark")
+    @com.aliyun.core.annotation.NameInMap("CreateMark")
     private String createMark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartDiscoverDatabaseTaskResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the scan task.
+         * <p>The ID of the scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48bced6d-2aee-4fa2-9aba-b846b77b****</p>
          */
         public Builder createMark(String createMark) {
             this.createMark = createMark;
@@ -58,7 +66,10 @@ public class StartDiscoverDatabaseTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F46921AF-CC55-5971-92C9-7E09E160****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

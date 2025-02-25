@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOnCallSchedulesDetailRequest} extends {@link RequestModel}
  *
  * <p>GetOnCallSchedulesDetailRequest</p>
  */
 public class GetOnCallSchedulesDetailRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private GetOnCallSchedulesDetailRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         } 
 
         /**
-         * The date on which the shift ends. Format: `yyyy-MM-dd`.
+         * <p>The date on which the shift ends. Format: <code>yyyy-MM-dd</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-30</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -92,7 +100,11 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         }
 
         /**
-         * The ID of the scheduling policy.
+         * <p>The ID of the scheduling policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -101,7 +113,10 @@ public class GetOnCallSchedulesDetailRequest extends Request {
         }
 
         /**
-         * The date from which the shift starts. Format: `yyyy-MM-dd`.
+         * <p>The date from which the shift starts. Format: <code>yyyy-MM-dd</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-01</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

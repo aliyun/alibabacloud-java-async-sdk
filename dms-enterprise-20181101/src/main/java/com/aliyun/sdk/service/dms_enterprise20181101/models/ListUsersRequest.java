@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersRequest} extends {@link RequestModel}
  *
  * <p>ListUsersRequest</p>
  */
 public class ListUsersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("UserState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserState")
     private String userState;
 
     private ListUsersRequest(Builder builder) {
@@ -147,7 +152,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,12 +164,12 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>**</p>
+         * <p>Valid values: 10, 20, 50, and 100.**** Default value: 10.</p>
          * 
-         * **
-         * 
-         * Valid values: 10, 20, 50, and 100.**** Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,16 +178,20 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The role that is assigned to the user. Valid values:
-         * <p>
+         * <p>The role that is assigned to the user. Valid values:</p>
+         * <ul>
+         * <li><strong>USER</strong>: a regular user.</li>
+         * <li><strong>DBA</strong> : a database administrator (DBA).</li>
+         * <li><strong>ADMIN</strong>: a Data Management (DMS) administrator.</li>
+         * <li><strong>SECURITY_ADMIN</strong>: a security administrator.</li>
+         * <li><strong>STRUCT_READ_ONLY</strong>: a schema read-only user.</li>
+         * </ul>
+         * <blockquote>
+         * <p> To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.</p>
+         * </blockquote>
          * 
-         * *   **USER**: a regular user.
-         * *   **DBA** : a database administrator (DBA).
-         * *   **ADMIN**: a Data Management (DMS) administrator.
-         * *   **SECURITY_ADMIN**: a security administrator.
-         * *   **STRUCT_READ_ONLY**: a schema read-only user.
-         * 
-         * >  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.
+         * <strong>example:</strong>
+         * <p>DBA</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -188,7 +200,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The search keyword. Fuzzy match is supported.
+         * <p>The search keyword. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -197,7 +212,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -206,12 +224,15 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The status of the user. Valid values:
-         * <p>
+         * <p>The status of the user. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The user is normal.</li>
+         * <li><strong>DISABLE</strong>: The user is disabled.</li>
+         * <li><strong>DELETE</strong>: The user is deleted.</li>
+         * </ul>
          * 
-         * *   **NORMAL**: The user is normal.
-         * *   **DISABLE**: The user is disabled.
-         * *   **DELETE**: The user is deleted.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder userState(String userState) {
             this.putQueryParameter("UserState", userState);

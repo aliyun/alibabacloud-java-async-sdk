@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackendListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackendListResponseBody</p>
  */
 public class DescribeBackendListResponseBody extends TeaModel {
-    @NameInMap("BackendInfoList")
-    private java.util.List < BackendInfoList> backendInfoList;
+    @com.aliyun.core.annotation.NameInMap("BackendInfoList")
+    private java.util.List<BackendInfoList> backendInfoList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBackendListResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
     /**
      * @return backendInfoList
      */
-    public java.util.List < BackendInfoList> getBackendInfoList() {
+    public java.util.List<BackendInfoList> getBackendInfoList() {
         return this.backendInfoList;
     }
 
@@ -79,22 +84,25 @@ public class DescribeBackendListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BackendInfoList> backendInfoList; 
+        private java.util.List<BackendInfoList> backendInfoList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The backend services.
+         * <p>The backend services.</p>
          */
-        public Builder backendInfoList(java.util.List < BackendInfoList> backendInfoList) {
+        public Builder backendInfoList(java.util.List<BackendInfoList> backendInfoList) {
             this.backendInfoList = backendInfoList;
             return this;
         }
 
         /**
-         * The number of the current page.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>090A0DF9-9144-5236-8CBA-E18DE317722D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeBackendListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackendListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>groupName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e3b881d0-e2d0-4dfb-b1fb-a2a3d1e534b7</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,27 +221,33 @@ public class DescribeBackendListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackendListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackendListResponseBody</p>
+     */
     public static class BackendInfoList extends TeaModel {
-        @NameInMap("BackendId")
+        @com.aliyun.core.annotation.NameInMap("BackendId")
         private String backendId;
 
-        @NameInMap("BackendName")
+        @com.aliyun.core.annotation.NameInMap("BackendName")
         private String backendName;
 
-        @NameInMap("BackendType")
+        @com.aliyun.core.annotation.NameInMap("BackendType")
         private String backendType;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private BackendInfoList(Builder builder) {
             this.backendId = builder.backendId;
@@ -277,7 +312,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -288,10 +323,13 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private String createdTime; 
             private String description; 
             private String modifiedTime; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The ID of the backend service.
+             * <p>The ID of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35bd31d32c9c425ebbe9330db9f8c375</p>
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -299,7 +337,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend service.
+             * <p>The name of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder backendName(String backendName) {
                 this.backendName = backendName;
@@ -307,7 +348,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend service.
+             * <p>The type of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder backendType(String backendType) {
                 this.backendType = backendType;
@@ -315,7 +359,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * <p>The time when the backend service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-25T11:22:29Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -323,7 +370,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the backend service.
+             * <p>The description of the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -331,7 +381,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was modified.
+             * <p>The time when the backend service was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-25T11:22:29Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -339,9 +392,9 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

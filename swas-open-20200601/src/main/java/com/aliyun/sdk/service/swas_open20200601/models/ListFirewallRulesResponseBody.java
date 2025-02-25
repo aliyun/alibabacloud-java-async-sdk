@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFirewallRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFirewallRulesResponseBody</p>
  */
 public class ListFirewallRulesResponseBody extends TeaModel {
-    @NameInMap("FirewallRules")
-    private java.util.List < FirewallRules> firewallRules;
+    @com.aliyun.core.annotation.NameInMap("FirewallRules")
+    private java.util.List<FirewallRules> firewallRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListFirewallRulesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
     /**
      * @return firewallRules
      */
-    public java.util.List < FirewallRules> getFirewallRules() {
+    public java.util.List<FirewallRules> getFirewallRules() {
         return this.firewallRules;
     }
 
@@ -79,22 +84,25 @@ public class ListFirewallRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FirewallRules> firewallRules; 
+        private java.util.List<FirewallRules> firewallRules; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Details about the firewall rules.
+         * <p>Details of the firewall rules.</p>
          */
-        public Builder firewallRules(java.util.List < FirewallRules> firewallRules) {
+        public Builder firewallRules(java.util.List<FirewallRules> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,24 +148,106 @@ public class ListFirewallRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFirewallRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFirewallRulesResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListFirewallRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFirewallRulesResponseBody</p>
+     */
     public static class FirewallRules extends TeaModel {
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleProtocol")
+        @com.aliyun.core.annotation.NameInMap("RuleProtocol")
         private String ruleProtocol;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private FirewallRules(Builder builder) {
             this.policy = builder.policy;
@@ -157,6 +256,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             this.ruleId = builder.ruleId;
             this.ruleProtocol = builder.ruleProtocol;
             this.sourceCidrIp = builder.sourceCidrIp;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -209,6 +309,13 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             return this.sourceCidrIp;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String policy; 
             private String port; 
@@ -216,13 +323,17 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleProtocol; 
             private String sourceCidrIp; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * The firewall policy.
-             * <p>
+             * <p>The firewall policy. Valid values:</p>
+             * <ul>
+             * <li>accept: Access is allowed.</li>
+             * <li>drop: Access is refused.</li>
+             * </ul>
              * 
-             * *   accept: Access is allowed.
-             * *   drop: Access is refused.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -230,7 +341,10 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The port range.
+             * <p>The port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -238,7 +352,10 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the firewall rule.
+             * <p>The remarks of the firewall rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -246,7 +363,10 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the firewall rule.
+             * <p>The ID of the firewall rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eeea34d9867b4d55a4ff8d5fcfbd****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -254,12 +374,15 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The transport layer protocol. Valid values:
-             * <p>
+             * <p>The transport layer protocol. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>TCP+UDP</li>
+             * </ul>
              * 
-             * *   TCP: the TCP protocol.
-             * *   UDP: the UDP protocol
-             * *   TCP+UDP: the TCP and UDP protocols
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -267,10 +390,21 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address or CIDR block that is allowed by the firewall rule.
+             * <p>The source CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
+                return this;
+            }
+
+            /**
+             * <p>The tags of the firewall rule.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

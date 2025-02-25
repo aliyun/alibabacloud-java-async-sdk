@@ -1,69 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesRequest</p>
  */
 public class DescribeDBInstancesRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceCategories")
-    private java.util.List < String > DBInstanceCategories;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceCategories")
+    private java.util.List<String> DBInstanceCategories;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("DBInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
     private String DBInstanceIds;
 
-    @Query
-    @NameInMap("DBInstanceModes")
-    private java.util.List < String > DBInstanceModes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceModes")
+    private java.util.List<String> DBInstanceModes;
 
-    @Query
-    @NameInMap("DBInstanceStatuses")
-    private java.util.List < String > DBInstanceStatuses;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStatuses")
+    private java.util.List<String> DBInstanceStatuses;
 
-    @Query
-    @NameInMap("InstanceDeployTypes")
-    private java.util.List < String > instanceDeployTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceDeployTypes")
+    private java.util.List<String> instanceDeployTypes;
 
-    @Query
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
 
     private DescribeDBInstancesRequest(Builder builder) {
         super(builder);
@@ -80,6 +89,7 @@ public class DescribeDBInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -98,7 +108,7 @@ public class DescribeDBInstancesRequest extends Request {
     /**
      * @return DBInstanceCategories
      */
-    public java.util.List < String > getDBInstanceCategories() {
+    public java.util.List<String> getDBInstanceCategories() {
         return this.DBInstanceCategories;
     }
 
@@ -119,21 +129,21 @@ public class DescribeDBInstancesRequest extends Request {
     /**
      * @return DBInstanceModes
      */
-    public java.util.List < String > getDBInstanceModes() {
+    public java.util.List<String> getDBInstanceModes() {
         return this.DBInstanceModes;
     }
 
     /**
      * @return DBInstanceStatuses
      */
-    public java.util.List < String > getDBInstanceStatuses() {
+    public java.util.List<String> getDBInstanceStatuses() {
         return this.DBInstanceStatuses;
     }
 
     /**
      * @return instanceDeployTypes
      */
-    public java.util.List < String > getInstanceDeployTypes() {
+    public java.util.List<String> getInstanceDeployTypes() {
         return this.instanceDeployTypes;
     }
 
@@ -182,24 +192,32 @@ public class DescribeDBInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
-        private java.util.List < String > DBInstanceCategories; 
+        private java.util.List<String> DBInstanceCategories; 
         private String DBInstanceDescription; 
         private String DBInstanceIds; 
-        private java.util.List < String > DBInstanceModes; 
-        private java.util.List < String > DBInstanceStatuses; 
-        private java.util.List < String > instanceDeployTypes; 
+        private java.util.List<String> DBInstanceModes; 
+        private java.util.List<String> DBInstanceStatuses; 
+        private java.util.List<String> instanceDeployTypes; 
         private String instanceNetworkType; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -220,12 +238,13 @@ public class DescribeDBInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * The edition of the instance. Separate multiple values with commas (,).
+         * <p>The edition of the instance. Separate multiple values with commas (,).</p>
          */
-        public Builder DBInstanceCategories(java.util.List < String > DBInstanceCategories) {
+        public Builder DBInstanceCategories(java.util.List<String> DBInstanceCategories) {
             String DBInstanceCategoriesShrink = shrink(DBInstanceCategories, "DBInstanceCategories", "simple");
             this.putQueryParameter("DBInstanceCategories", DBInstanceCategoriesShrink);
             this.DBInstanceCategories = DBInstanceCategories;
@@ -233,7 +252,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -242,7 +264,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. Separate multiple values with commas (,).
+         * <p>The instance ID. Separate multiple values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
@@ -251,9 +276,9 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The resource type of the instance. Separate multiple values with commas (,).
+         * <p>The resource type of the instance. Separate multiple values with commas (,).</p>
          */
-        public Builder DBInstanceModes(java.util.List < String > DBInstanceModes) {
+        public Builder DBInstanceModes(java.util.List<String> DBInstanceModes) {
             String DBInstanceModesShrink = shrink(DBInstanceModes, "DBInstanceModes", "simple");
             this.putQueryParameter("DBInstanceModes", DBInstanceModesShrink);
             this.DBInstanceModes = DBInstanceModes;
@@ -261,9 +286,9 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The state of the instance.
+         * <p>The state of the instance.</p>
          */
-        public Builder DBInstanceStatuses(java.util.List < String > DBInstanceStatuses) {
+        public Builder DBInstanceStatuses(java.util.List<String> DBInstanceStatuses) {
             String DBInstanceStatusesShrink = shrink(DBInstanceStatuses, "DBInstanceStatuses", "simple");
             this.putQueryParameter("DBInstanceStatuses", DBInstanceStatusesShrink);
             this.DBInstanceStatuses = DBInstanceStatuses;
@@ -271,9 +296,9 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
          */
-        public Builder instanceDeployTypes(java.util.List < String > instanceDeployTypes) {
+        public Builder instanceDeployTypes(java.util.List<String> instanceDeployTypes) {
             String instanceDeployTypesShrink = shrink(instanceDeployTypes, "InstanceDeployTypes", "simple");
             this.putQueryParameter("InstanceDeployTypes", instanceDeployTypesShrink);
             this.instanceDeployTypes = instanceDeployTypes;
@@ -281,13 +306,17 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>Classic</strong>: classic network.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, instances of all network types are returned.</p>
+         * </blockquote>
          * 
-         * *   **VPC**: virtual private cloud (VPC).
-         * *   **Classic**: classic network.
-         * 
-         * > If you do not specify this parameter, instances of all network types are returned.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -305,7 +334,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -314,14 +346,16 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -330,10 +364,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -342,7 +380,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -351,11 +392,23 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The tag value.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4nqyp3tc5mx7vy6****</p>
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 
@@ -366,11 +419,17 @@ public class DescribeDBInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -405,7 +464,10 @@ public class DescribeDBInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -413,7 +475,10 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -225,7 +225,7 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -252,11 +252,11 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * Specifies whether to sort the serverless jobs by the job start time. Valid value:
+         * Specifies whether to sort the serverless jobs by the job start time. Valid values:
          * <p>
          * 
-         * *   Asc: ascending order
-         * *   Desc: descending order
+         * *   Asc: ascending order.
+         * *   Desc: descending order.
          */
         public Builder startOrder(String startOrder) {
             this.putQueryParameter("StartOrder", startOrder);
@@ -265,7 +265,7 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * The status of the serverless job. Valid value:
+         * The status of the serverless job. Valid values:
          * <p>
          * 
          * *   All
@@ -284,11 +284,11 @@ public class ListServerlessJobsRequest extends Request {
         }
 
         /**
-         * Specifies whether to sort the serverless jobs by the job submission time. Valid value:
+         * Specifies whether to sort the serverless jobs by the job submission time. Valid values:
          * <p>
          * 
-         * *   Asc: ascending order
-         * *   Desc: descending order
+         * *   Asc: ascending order.
+         * *   Desc: descending order.
          */
         public Builder submitOrder(String submitOrder) {
             this.putQueryParameter("SubmitOrder", submitOrder);

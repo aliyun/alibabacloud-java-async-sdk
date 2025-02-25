@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcesharing20200110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceShareResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateResourceShareResponseBody</p>
  */
 public class UpdateResourceShareResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceShare")
+    @com.aliyun.core.annotation.NameInMap("ResourceShare")
     private ResourceShare resourceShare;
 
     private UpdateResourceShareResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpdateResourceShareResponseBody extends TeaModel {
         private ResourceShare resourceShare; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2860A3A4-D8C1-4EF4-954E-84A3945E26E5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class UpdateResourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource share.
+         * <p>The information of the resource share.</p>
          */
         public Builder resourceShare(ResourceShare resourceShare) {
             this.resourceShare = resourceShare;
@@ -71,26 +74,32 @@ public class UpdateResourceShareResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateResourceShareResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateResourceShareResponseBody</p>
+     */
     public static class ResourceShare extends TeaModel {
-        @NameInMap("AllowExternalTargets")
+        @com.aliyun.core.annotation.NameInMap("AllowExternalTargets")
         private Boolean allowExternalTargets;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ResourceShareId")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareId")
         private String resourceShareId;
 
-        @NameInMap("ResourceShareName")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareName")
         private String resourceShareName;
 
-        @NameInMap("ResourceShareOwner")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareOwner")
         private String resourceShareOwner;
 
-        @NameInMap("ResourceShareStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceShareStatus")
         private String resourceShareStatus;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ResourceShare(Builder builder) {
@@ -170,11 +179,14 @@ public class UpdateResourceShareResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
-             * <p>
+             * <p>Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
+             * <ul>
+             * <li>false: Resources in the resource share can be shared only with accounts in the resource directory.</li>
+             * <li>true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</li>
+             * </ul>
              * 
-             * *   false: Resources in the resource share can be shared only with accounts in the resource directory.
-             * *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowExternalTargets(Boolean allowExternalTargets) {
                 this.allowExternalTargets = allowExternalTargets;
@@ -182,7 +194,10 @@ public class UpdateResourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource share was created.
+             * <p>The time when the resource share was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-03T08:02:22.413Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -190,7 +205,10 @@ public class UpdateResourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource share.
+             * <p>The ID of the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rs-qSkW1HBY****</p>
              */
             public Builder resourceShareId(String resourceShareId) {
                 this.resourceShareId = resourceShareId;
@@ -198,7 +216,10 @@ public class UpdateResourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource share.
+             * <p>The name of the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new</p>
              */
             public Builder resourceShareName(String resourceShareName) {
                 this.resourceShareName = resourceShareName;
@@ -206,7 +227,10 @@ public class UpdateResourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the resource share.
+             * <p>The owner of the resource share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder resourceShareOwner(String resourceShareOwner) {
                 this.resourceShareOwner = resourceShareOwner;
@@ -214,15 +238,19 @@ public class UpdateResourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource share. Valid values:
-             * <p>
+             * <p>The status of the resource share. Valid values:</p>
+             * <ul>
+             * <li>Active: The resource share is enabled.</li>
+             * <li>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</li>
+             * <li>Deleting: The resource share is being deleted.</li>
+             * <li>Deleted: The resource share is deleted.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+             * </blockquote>
              * 
-             * *   Active: The resource share is enabled.
-             * *   Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.
-             * *   Deleting: The resource share is being deleted.
-             * *   Deleted: The resource share is deleted.
-             * 
-             * >  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder resourceShareStatus(String resourceShareStatus) {
                 this.resourceShareStatus = resourceShareStatus;
@@ -230,7 +258,10 @@ public class UpdateResourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource share was updated.
+             * <p>The time when the resource share was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-04T08:55:25.382Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

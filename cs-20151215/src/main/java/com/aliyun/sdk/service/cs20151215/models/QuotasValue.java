@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotasValue} extends {@link TeaModel}
  *
  * <p>QuotasValue</p>
  */
 public class QuotasValue extends TeaModel {
-    @NameInMap("quota")
+    @com.aliyun.core.annotation.NameInMap("quota")
     private String quota;
 
-    @NameInMap("operation_code")
+    @com.aliyun.core.annotation.NameInMap("operation_code")
     private String operationCode;
 
-    @NameInMap("adjustable")
+    @com.aliyun.core.annotation.NameInMap("adjustable")
     private Boolean adjustable;
 
-    @NameInMap("unit")
+    @com.aliyun.core.annotation.NameInMap("unit")
     private String unit;
 
     private QuotasValue(Builder builder) {
@@ -74,7 +79,10 @@ public class QuotasValue extends TeaModel {
         private String unit; 
 
         /**
-         * The value of the quota. If the quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.
+         * <p>The value of the quota. If the quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quota(String quota) {
             this.quota = quota;
@@ -82,7 +90,10 @@ public class QuotasValue extends TeaModel {
         }
 
         /**
-         * The quota code.
+         * <p>The quota code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_Kubernetes_Cluster</p>
          */
         public Builder operationCode(String operationCode) {
             this.operationCode = operationCode;
@@ -90,7 +101,10 @@ public class QuotasValue extends TeaModel {
         }
 
         /**
-         * Indicates whether the quota is adjustable.
+         * <p>Indicates whether the quota is adjustable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder adjustable(Boolean adjustable) {
             this.adjustable = adjustable;
@@ -98,7 +112,10 @@ public class QuotasValue extends TeaModel {
         }
 
         /**
-         * The unit.
+         * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster</p>
          */
         public Builder unit(String unit) {
             this.unit = unit;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnUserBillTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnUserBillTypeResponseBody</p>
  */
 public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
-    @NameInMap("BillTypeData")
+    @com.aliyun.core.annotation.NameInMap("BillTypeData")
     private BillTypeData billTypeData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnUserBillTypeResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the metering method.
+         * <p>The information about the metering method.</p>
          */
         public Builder billTypeData(BillTypeData billTypeData) {
             this.billTypeData = billTypeData;
@@ -58,7 +58,10 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +74,29 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnUserBillTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserBillTypeResponseBody</p>
+     */
     public static class BillTypeDataItem extends TeaModel {
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private BillTypeDataItem(Builder builder) {
@@ -158,20 +167,23 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The metering method. Valid values:
-             * <p>
+             * <p>The metering method. Valid values:</p>
+             * <ul>
+             * <li><strong>hour_flow</strong>: pay by hourly traffic</li>
+             * <li><strong>day_bandwidth</strong>: pay by daily bandwidth</li>
+             * <li><strong>month_95</strong>: pay by monthly 95th percentile</li>
+             * <li><strong>month_avg_day_bandwidth</strong>: pay by average daily peak bandwidth per month</li>
+             * <li><strong>month_4th_day_bandwidth</strong>: pay by 4th peak bandwidth per month</li>
+             * <li><strong>month_avg_day_95</strong>: pay by average daily 95th percentile per month</li>
+             * <li><strong>month_95_night_half</strong>: pay by 95th percentile (50% off during nighttime)</li>
+             * <li><strong>hour_vas</strong>: pay by value-added service per month</li>
+             * <li><strong>quic_hour_count</strong>: pay by QUIC request per hour</li>
+             * <li><strong>hour_count</strong>: pay by request per hour</li>
+             * <li><strong>rtlog_count_day</strong>: pay by the number of real-time logs per day</li>
+             * </ul>
              * 
-             * *   **hour_flow**: pay by hourly traffic
-             * *   **day_bandwidth**: pay by daily bandwidth
-             * *   **month\_95**: pay by monthly 95th percentile
-             * *   **month_avg_day_bandwidth**: pay by average daily peak bandwidth per month
-             * *   **month\_4th_day_bandwidth**: pay by 4th peak bandwidth per month
-             * *   **month_avg_day\_95**: pay by average daily 95th percentile per month
-             * *   **month\_95\_night_half**: pay by 95th percentile (50% off during nighttime)
-             * *   **hour_vas**: pay by value-added service per month
-             * *   **quic_hour_count**: pay by QUIC request per hour
-             * *   **hour_count**: pay by request per hour
-             * *   **rtlog_count_day**: pay by the number of real-time logs per day
+             * <strong>example:</strong>
+             * <p>month_avg_day_bandwidth_overseas</p>
              */
             public Builder billType(String billType) {
                 this.billType = billType;
@@ -179,7 +191,10 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The metering cycle.
+             * <p>The metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>month</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -187,14 +202,17 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension. Valid values:
-             * <p>
+             * <p>The dimension. Valid values:</p>
+             * <ul>
+             * <li><strong>flow</strong>: network traffic and bandwidth</li>
+             * <li><strong>vas</strong>: value-added services (HTTPS and requests for dynamic content)</li>
+             * <li><strong>websocket</strong>: WebSocket</li>
+             * <li><strong>quic</strong>: QUIC requests</li>
+             * <li><strong>rtlog2sls</strong>: log entries delivered to Log Service in real time</li>
+             * </ul>
              * 
-             * *   **flow**: network traffic and bandwidth
-             * *   **vas**: value-added services (HTTPS and requests for dynamic content)
-             * *   **websocket**: WebSocket
-             * *   **quic**: QUIC requests
-             * *   **rtlog2sls**: log entries delivered to Log Service in real time
+             * <strong>example:</strong>
+             * <p>flow</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -202,7 +220,10 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metering method ends.
+             * <p>The time when the metering method ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-31T16:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -210,7 +231,10 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdn</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -218,7 +242,10 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metering method takes effect.
+             * <p>The time when the metering method takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-30T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -232,8 +259,14 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnUserBillTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnUserBillTypeResponseBody</p>
+     */
     public static class BillTypeData extends TeaModel {
-        @NameInMap("BillTypeDataItem")
+        @com.aliyun.core.annotation.NameInMap("BillTypeDataItem")
         private java.util.List < BillTypeDataItem> billTypeDataItem;
 
         private BillTypeData(Builder builder) {

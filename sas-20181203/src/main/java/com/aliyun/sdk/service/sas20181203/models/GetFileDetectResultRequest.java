@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDetectResultRequest} extends {@link RequestModel}
  *
  * <p>GetFileDetectResultRequest</p>
  */
 public class GetFileDetectResultRequest extends Request {
-    @Query
-    @NameInMap("HashKeyList")
-    @Validation(required = true)
-    private java.util.List < String > hashKeyList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HashKeyList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> hashKeyList;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
     private GetFileDetectResultRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class GetFileDetectResultRequest extends Request {
     /**
      * @return hashKeyList
      */
-    public java.util.List < String > getHashKeyList() {
+    public java.util.List<String> getHashKeyList() {
         return this.hashKeyList;
     }
 
@@ -68,7 +73,7 @@ public class GetFileDetectResultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetFileDetectResultRequest, Builder> {
-        private java.util.List < String > hashKeyList; 
+        private java.util.List<String> hashKeyList; 
         private String sourceIp; 
         private Integer type; 
 
@@ -84,16 +89,20 @@ public class GetFileDetectResultRequest extends Request {
         } 
 
         /**
-         * The identifiers of files. Only MD5 hash values are supported.
+         * <p>The identifiers of files. Only MD5 hash values are supported.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder hashKeyList(java.util.List < String > hashKeyList) {
+        public Builder hashKeyList(java.util.List<String> hashKeyList) {
             this.putQueryParameter("HashKeyList", hashKeyList);
             this.hashKeyList = hashKeyList;
             return this;
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183.46.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -102,15 +111,20 @@ public class GetFileDetectResultRequest extends Request {
         }
 
         /**
-         * The type of the file. Valid values:
-         * <p>
+         * <p>The type of the file. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unknown file</li>
+         * <li><strong>1</strong>: binary file</li>
+         * <li><strong>2</strong>: webshell file</li>
+         * <li><strong>4</strong>: script file</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not know the type of the file, set this parameter to 0.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: unknown file
-         * *   **1**: binary file
-         * *   **2**: webshell file
-         * *   **4**: script file
-         * 
-         * > If you do not know the type of the file, set this parameter to 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceNetExpireTimeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceNetExpireTimeResponseBody</p>
  */
 public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("NetInfoItems")
+    @com.aliyun.core.annotation.NameInMap("NetInfoItems")
     private NetInfoItems netInfoItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyInstanceNetExpireTimeResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +73,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the extension period for which the classic network endpoint of the instance is retained.
+         * <p>Details of the extension period for which the classic network endpoint of the instance is retained.</p>
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -78,7 +81,10 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C4AF387-1EA3-4C84-8013-3F6B973EDDF5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +97,26 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceNetExpireTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceNetExpireTimeResponseBody</p>
+     */
     public static class NetInfoItem extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("DBInstanceNetType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
         private String DBInstanceNetType;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private NetInfoItem(Builder builder) {
@@ -166,7 +178,10 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * The endpoint of the classic network.
+             * <p>The endpoint of the classic network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -174,7 +189,10 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance. The returned value is **Classic**.
+             * <p>The network type of the instance. The returned value is <strong>Classic</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Classic</p>
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -182,7 +200,10 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the classic network endpoint.
+             * <p>The expiration time of the classic network endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-01T09:29:18Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -190,7 +211,10 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance in the classic network.
+             * <p>The IP address of the instance in the classic network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.118.142.***</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -198,7 +222,10 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is used to connect to the instance.
+             * <p>The port number that is used to connect to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6379</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -212,8 +239,14 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyInstanceNetExpireTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceNetExpireTimeResponseBody</p>
+     */
     public static class NetInfoItems extends TeaModel {
-        @NameInMap("NetInfoItem")
+        @com.aliyun.core.annotation.NameInMap("NetInfoItem")
         private java.util.List < NetInfoItem> netInfoItem;
 
         private NetInfoItems(Builder builder) {

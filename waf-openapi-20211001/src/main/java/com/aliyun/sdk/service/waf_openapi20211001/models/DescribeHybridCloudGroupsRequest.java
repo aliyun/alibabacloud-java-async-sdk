@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridCloudGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeHybridCloudGroupsRequest</p>
  */
 public class DescribeHybridCloudGroupsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private Long clusterId;
 
-    @Query
-    @NameInMap("ClusterProxyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterProxyType")
     private String clusterProxyType;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private Integer groupName;
 
-    @Query
-    @NameInMap("GroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
     private String groupType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceManagerResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
     private DescribeHybridCloudGroupsRequest(Builder builder) {
@@ -167,7 +172,10 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the hybrid cloud cluster.
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>428</p>
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -176,11 +184,14 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The type of proxy cluster that is used. Valid values:
-         * <p>
+         * <p>The type of proxy cluster that is used. Valid values:</p>
+         * <ul>
+         * <li><strong>service</strong>: service-based traffic mirroring.</li>
+         * <li><strong>cname</strong>: reverse proxy.</li>
+         * </ul>
          * 
-         * *   **service**: service-based traffic mirroring.
-         * *   **cname**: reverse proxy.
+         * <strong>example:</strong>
+         * <p>cname</p>
          */
         public Builder clusterProxyType(String clusterProxyType) {
             this.putQueryParameter("ClusterProxyType", clusterProxyType);
@@ -189,7 +200,10 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The name of the hybrid cloud node group that you want to query.
+         * <p>The name of the node group that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>groupName1</p>
          */
         public Builder groupName(Integer groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -198,13 +212,16 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The type of the node group. Valid values:
-         * <p>
+         * <p>The type of the node group. Valid values:</p>
+         * <ul>
+         * <li><strong>protect</strong></li>
+         * <li><strong>control</strong></li>
+         * <li><strong>storage</strong></li>
+         * <li><strong>controlStorage</strong></li>
+         * </ul>
          * 
-         * *   **protect**
-         * *   **control**
-         * *   **storage**
-         * *   **controlStorage**
+         * <strong>example:</strong>
+         * <p>protect</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -213,10 +230,14 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v3prepaid_public_cn-********w0b</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -225,7 +246,10 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,7 +258,10 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,11 +270,14 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the WAF instance. Valid values:
-         * <p>
+         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,7 +286,10 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

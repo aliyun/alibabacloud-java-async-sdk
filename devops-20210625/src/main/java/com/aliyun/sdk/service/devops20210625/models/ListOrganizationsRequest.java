@@ -1,28 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationsRequest} extends {@link RequestModel}
  *
  * <p>ListOrganizationsRequest</p>
  */
 public class ListOrganizationsRequest extends Request {
-    @Query
-    @NameInMap("accessLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessLevel")
     private Integer accessLevel;
 
-    @Query
-    @NameInMap("minAccessLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
+    private String accessToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minAccessLevel")
     private Integer minAccessLevel;
 
     private ListOrganizationsRequest(Builder builder) {
         super(builder);
         this.accessLevel = builder.accessLevel;
+        this.accessToken = builder.accessToken;
         this.minAccessLevel = builder.minAccessLevel;
     }
 
@@ -47,6 +57,13 @@ public class ListOrganizationsRequest extends Request {
     }
 
     /**
+     * @return accessToken
+     */
+    public String getAccessToken() {
+        return this.accessToken;
+    }
+
+    /**
      * @return minAccessLevel
      */
     public Integer getMinAccessLevel() {
@@ -55,6 +72,7 @@ public class ListOrganizationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListOrganizationsRequest, Builder> {
         private Integer accessLevel; 
+        private String accessToken; 
         private Integer minAccessLevel; 
 
         private Builder() {
@@ -64,6 +82,7 @@ public class ListOrganizationsRequest extends Request {
         private Builder(ListOrganizationsRequest request) {
             super(request);
             this.accessLevel = request.accessLevel;
+            this.accessToken = request.accessToken;
             this.minAccessLevel = request.minAccessLevel;
         } 
 
@@ -73,6 +92,15 @@ public class ListOrganizationsRequest extends Request {
         public Builder accessLevel(Integer accessLevel) {
             this.putQueryParameter("accessLevel", accessLevel);
             this.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * accessToken.
+         */
+        public Builder accessToken(String accessToken) {
+            this.putQueryParameter("accessToken", accessToken);
+            this.accessToken = accessToken;
             return this;
         }
 

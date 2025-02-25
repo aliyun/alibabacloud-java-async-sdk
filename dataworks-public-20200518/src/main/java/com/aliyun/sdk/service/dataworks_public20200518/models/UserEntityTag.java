@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UserEntityTag} extends {@link TeaModel}
  *
  * <p>UserEntityTag</p>
  */
 public class UserEntityTag extends TeaModel {
-    @NameInMap("TagKey")
+    @com.aliyun.core.annotation.NameInMap("TagKey")
     private String tagKey;
 
-    @NameInMap("TagValue")
+    @com.aliyun.core.annotation.NameInMap("TagValue")
     private String tagValue;
 
     private UserEntityTag(Builder builder) {

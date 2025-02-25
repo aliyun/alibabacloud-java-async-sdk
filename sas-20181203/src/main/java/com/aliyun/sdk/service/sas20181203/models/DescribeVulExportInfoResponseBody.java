@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulExportInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulExportInfoResponseBody</p>
  */
 public class DescribeVulExportInfoResponseBody extends TeaModel {
-    @NameInMap("CurrentCount")
+    @com.aliyun.core.annotation.NameInMap("CurrentCount")
     private Integer currentCount;
 
-    @NameInMap("ExportStatus")
+    @com.aliyun.core.annotation.NameInMap("ExportStatus")
     private String exportStatus;
 
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Link")
+    @com.aliyun.core.annotation.NameInMap("Link")
     private String link;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Integer progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVulExportInfoResponseBody(Builder builder) {
@@ -134,7 +139,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of exported entries.
+         * <p>The number of exported entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -142,12 +150,15 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the export task. Valid values:
-         * <p>
+         * <p>The status of the export task. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The task is being initialized.</li>
+         * <li><strong>exporting</strong>: The task is in progress.</li>
+         * <li><strong>success</strong>: The task is complete.</li>
+         * </ul>
          * 
-         * *   **init**: The task is being initialized.
-         * *   **exporting**: The task is in progress.
-         * *   **success**: The task is complete.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -155,7 +166,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the exported Excel file.
+         * <p>The name of the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_20210917</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -163,7 +177,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14356</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -171,7 +188,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The URL at which you can download the exported Excel file.
+         * <p>The URL at which you can download the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         public Builder link(String link) {
             this.link = link;
@@ -179,7 +199,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that shows the results of the task. The value is fixed as **success**, which indicates that the task is complete.
+         * <p>The message that shows the results of the task. The value is fixed as <strong>success</strong>, which indicates that the task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -187,7 +210,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the task.
+         * <p>The progress percentage of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -195,7 +221,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C1AE3F3-18FA-4108-BXXX-AFA1A032756C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +232,10 @@ public class DescribeVulExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries in the exported Excel file.
+         * <p>The total number of entries in the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

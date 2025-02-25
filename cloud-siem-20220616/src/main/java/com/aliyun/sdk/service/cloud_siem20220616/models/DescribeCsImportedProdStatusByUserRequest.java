@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCsImportedProdStatusByUserRequest</p>
  */
 public class DescribeCsImportedProdStatusByUserRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SourceLogProd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLogProd")
     private String sourceLogProd;
 
-    @Body
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private Long userId;
 
     private DescribeCsImportedProdStatusByUserRequest(Builder builder) {
@@ -82,7 +81,11 @@ public class DescribeCsImportedProdStatusByUserRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -91,7 +94,7 @@ public class DescribeCsImportedProdStatusByUserRequest extends Request {
         }
 
         /**
-         * SourceLogProd.
+         * The code of the cloud service.
          */
         public Builder sourceLogProd(String sourceLogProd) {
             this.putBodyParameter("SourceLogProd", sourceLogProd);
@@ -100,7 +103,7 @@ public class DescribeCsImportedProdStatusByUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);

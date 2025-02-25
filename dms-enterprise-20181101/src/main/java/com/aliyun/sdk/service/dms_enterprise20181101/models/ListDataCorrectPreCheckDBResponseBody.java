@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataCorrectPreCheckDBResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataCorrectPreCheckDBResponseBody</p>
  */
 public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PreCheckDBList")
-    private java.util.List < PreCheckDBList> preCheckDBList;
+    @com.aliyun.core.annotation.NameInMap("PreCheckDBList")
+    private java.util.List<PreCheckDBList> preCheckDBList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataCorrectPreCheckDBResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     /**
      * @return preCheckDBList
      */
-    public java.util.List < PreCheckDBList> getPreCheckDBList() {
+    public java.util.List<PreCheckDBList> getPreCheckDBList() {
         return this.preCheckDBList;
     }
 
@@ -81,12 +86,15 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < PreCheckDBList> preCheckDBList; 
+        private java.util.List<PreCheckDBList> preCheckDBList; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,15 +113,18 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the databases that are involved in the precheck.
+         * <p>The information about the databases that are involved in the precheck.</p>
          */
-        public Builder preCheckDBList(java.util.List < PreCheckDBList> preCheckDBList) {
+        public Builder preCheckDBList(java.util.List<PreCheckDBList> preCheckDBList) {
             this.preCheckDBList = preCheckDBList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95A972AF-FAED-4768-9360-7C0DF5D594D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +148,20 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataCorrectPreCheckDBResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataCorrectPreCheckDBResponseBody</p>
+     */
     public static class PreCheckDBList extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("SqlNum")
+        @com.aliyun.core.annotation.NameInMap("SqlNum")
         private Long sqlNum;
 
         private PreCheckDBList(Builder builder) {
@@ -182,7 +205,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             private Long sqlNum; 
 
             /**
-             * The ID of the database.
+             * <p>The ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43***</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -190,7 +216,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test@localhost:3306</p>
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -198,7 +227,10 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SQL statements.
+             * <p>The number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sqlNum(Long sqlNum) {
                 this.sqlNum = sqlNum;

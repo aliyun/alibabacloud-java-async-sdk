@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordTemplatesResponseBody</p>
  */
 public class DescribeRecordTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
-    private java.util.List < Templates> templates;
+    @com.aliyun.core.annotation.NameInMap("Templates")
+    private java.util.List<Templates> templates;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Long totalPage;
 
     private DescribeRecordTemplatesResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
@@ -69,7 +74,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
         private Long totalNum; 
         private Long totalPage; 
 
@@ -84,7 +89,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         /**
          * Templates.
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }
@@ -111,27 +116,33 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class Backgrounds extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Backgrounds(Builder builder) {
             this.display = builder.display;
@@ -140,7 +151,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -194,10 +205,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -207,7 +218,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -260,8 +271,8 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -272,24 +283,30 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class ClockWidgets extends TeaModel {
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("FontType")
+        @com.aliyun.core.annotation.NameInMap("FontType")
         private Integer fontType;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
             this.fontColor = builder.fontColor;
@@ -297,7 +314,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             this.fontType = builder.fontType;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -344,10 +361,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -356,7 +373,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Integer fontType; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * FontColor.
@@ -401,8 +418,8 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -413,30 +430,36 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class Watermarks extends TeaModel {
-        @NameInMap("Alpha")
+        @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
 
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
-        private Integer ZOrder;
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
+        private Integer zOrder;
 
         private Watermarks(Builder builder) {
             this.alpha = builder.alpha;
@@ -446,7 +469,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -507,10 +530,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -521,7 +544,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Alpha.
@@ -582,8 +605,8 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -594,60 +617,66 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
-        @NameInMap("BackgroundColor")
+        @com.aliyun.core.annotation.NameInMap("BackgroundColor")
         private Integer backgroundColor;
 
-        @NameInMap("Backgrounds")
-        private java.util.List < Backgrounds> backgrounds;
+        @com.aliyun.core.annotation.NameInMap("Backgrounds")
+        private java.util.List<Backgrounds> backgrounds;
 
-        @NameInMap("ClockWidgets")
-        private java.util.List < ClockWidgets> clockWidgets;
+        @com.aliyun.core.annotation.NameInMap("ClockWidgets")
+        private java.util.List<ClockWidgets> clockWidgets;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DelayStopTime")
+        @com.aliyun.core.annotation.NameInMap("DelayStopTime")
         private Integer delayStopTime;
 
-        @NameInMap("EnableM3u8DateTime")
+        @com.aliyun.core.annotation.NameInMap("EnableM3u8DateTime")
         private Boolean enableM3u8DateTime;
 
-        @NameInMap("FileSplitInterval")
+        @com.aliyun.core.annotation.NameInMap("FileSplitInterval")
         private Integer fileSplitInterval;
 
-        @NameInMap("Formats")
-        private java.util.List < String > formats;
+        @com.aliyun.core.annotation.NameInMap("Formats")
+        private java.util.List<String> formats;
 
-        @NameInMap("HttpCallbackUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpCallbackUrl")
         private String httpCallbackUrl;
 
-        @NameInMap("LayoutIds")
-        private java.util.List < Long > layoutIds;
+        @com.aliyun.core.annotation.NameInMap("LayoutIds")
+        private java.util.List<Long> layoutIds;
 
-        @NameInMap("MediaEncode")
+        @com.aliyun.core.annotation.NameInMap("MediaEncode")
         private Integer mediaEncode;
 
-        @NameInMap("MnsQueue")
+        @com.aliyun.core.annotation.NameInMap("MnsQueue")
         private String mnsQueue;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssFilePrefix")
+        @com.aliyun.core.annotation.NameInMap("OssFilePrefix")
         private String ossFilePrefix;
 
-        @NameInMap("TaskProfile")
+        @com.aliyun.core.annotation.NameInMap("TaskProfile")
         private String taskProfile;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Watermarks")
-        private java.util.List < Watermarks> watermarks;
+        @com.aliyun.core.annotation.NameInMap("Watermarks")
+        private java.util.List<Watermarks> watermarks;
 
         private Templates(Builder builder) {
             this.backgroundColor = builder.backgroundColor;
@@ -688,14 +717,14 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         /**
          * @return backgrounds
          */
-        public java.util.List < Backgrounds> getBackgrounds() {
+        public java.util.List<Backgrounds> getBackgrounds() {
             return this.backgrounds;
         }
 
         /**
          * @return clockWidgets
          */
-        public java.util.List < ClockWidgets> getClockWidgets() {
+        public java.util.List<ClockWidgets> getClockWidgets() {
             return this.clockWidgets;
         }
 
@@ -730,7 +759,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         /**
          * @return formats
          */
-        public java.util.List < String > getFormats() {
+        public java.util.List<String> getFormats() {
             return this.formats;
         }
 
@@ -744,7 +773,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         /**
          * @return layoutIds
          */
-        public java.util.List < Long > getLayoutIds() {
+        public java.util.List<Long> getLayoutIds() {
             return this.layoutIds;
         }
 
@@ -800,21 +829,21 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         /**
          * @return watermarks
          */
-        public java.util.List < Watermarks> getWatermarks() {
+        public java.util.List<Watermarks> getWatermarks() {
             return this.watermarks;
         }
 
         public static final class Builder {
             private Integer backgroundColor; 
-            private java.util.List < Backgrounds> backgrounds; 
-            private java.util.List < ClockWidgets> clockWidgets; 
+            private java.util.List<Backgrounds> backgrounds; 
+            private java.util.List<ClockWidgets> clockWidgets; 
             private String createTime; 
             private Integer delayStopTime; 
             private Boolean enableM3u8DateTime; 
             private Integer fileSplitInterval; 
-            private java.util.List < String > formats; 
+            private java.util.List<String> formats; 
             private String httpCallbackUrl; 
-            private java.util.List < Long > layoutIds; 
+            private java.util.List<Long> layoutIds; 
             private Integer mediaEncode; 
             private String mnsQueue; 
             private String name; 
@@ -822,7 +851,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private String ossFilePrefix; 
             private String taskProfile; 
             private String templateId; 
-            private java.util.List < Watermarks> watermarks; 
+            private java.util.List<Watermarks> watermarks; 
 
             /**
              * BackgroundColor.
@@ -835,7 +864,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * Backgrounds.
              */
-            public Builder backgrounds(java.util.List < Backgrounds> backgrounds) {
+            public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
                 this.backgrounds = backgrounds;
                 return this;
             }
@@ -843,7 +872,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * ClockWidgets.
              */
-            public Builder clockWidgets(java.util.List < ClockWidgets> clockWidgets) {
+            public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
                 this.clockWidgets = clockWidgets;
                 return this;
             }
@@ -883,7 +912,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * Formats.
              */
-            public Builder formats(java.util.List < String > formats) {
+            public Builder formats(java.util.List<String> formats) {
                 this.formats = formats;
                 return this;
             }
@@ -899,7 +928,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * LayoutIds.
              */
-            public Builder layoutIds(java.util.List < Long > layoutIds) {
+            public Builder layoutIds(java.util.List<Long> layoutIds) {
                 this.layoutIds = layoutIds;
                 return this;
             }
@@ -963,7 +992,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * Watermarks.
              */
-            public Builder watermarks(java.util.List < Watermarks> watermarks) {
+            public Builder watermarks(java.util.List<Watermarks> watermarks) {
                 this.watermarks = watermarks;
                 return this;
             }

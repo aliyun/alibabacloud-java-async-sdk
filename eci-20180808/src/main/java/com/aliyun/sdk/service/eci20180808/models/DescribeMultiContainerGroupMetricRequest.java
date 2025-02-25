@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMultiContainerGroupMetricRequest} extends {@link RequestModel}
  *
  * <p>DescribeMultiContainerGroupMetricRequest</p>
  */
 public class DescribeMultiContainerGroupMetricRequest extends Request {
-    @Query
-    @NameInMap("ContainerGroupIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupIds;
 
-    @Query
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeMultiContainerGroupMetricRequest(Builder builder) {
@@ -154,7 +154,11 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         } 
 
         /**
-         * The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.
+         * <p>The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;eci-2zegym1qhbmdfr1s****&quot;,&quot;eci-2ze39w5svzj5ic34****&quot;]</p>
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -163,7 +167,10 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The type of the monitoring data. Set the value to summary. This value indicates that records are returned.
+         * <p>The type of the monitoring data. Set the value to summary. This value indicates that records are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -190,7 +197,11 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +210,10 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the elastic container instances belong.
+         * <p>The ID of the resource group to which the elastic container instances belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzw2jz2z****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVulStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetVulStatisticsResponseBody</p>
  */
 public class GetVulStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulAsapSum")
+    @com.aliyun.core.annotation.NameInMap("VulAsapSum")
     private Integer vulAsapSum;
 
-    @NameInMap("VulLaterSum")
+    @com.aliyun.core.annotation.NameInMap("VulLaterSum")
     private Integer vulLaterSum;
 
-    @NameInMap("VulNntfSum")
+    @com.aliyun.core.annotation.NameInMap("VulNntfSum")
     private Integer vulNntfSum;
 
     private GetVulStatisticsResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         private Integer vulNntfSum; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE272FA-7263-4554-A90F-A7857945A6D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +90,10 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the high priority.
+         * <p>The number of vulnerabilities that have the high priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder vulAsapSum(Integer vulAsapSum) {
             this.vulAsapSum = vulAsapSum;
@@ -90,7 +101,10 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the medium priority.
+         * <p>The number of vulnerabilities that have the medium priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulLaterSum(Integer vulLaterSum) {
             this.vulLaterSum = vulLaterSum;
@@ -98,7 +112,10 @@ public class GetVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that have the low priority.
+         * <p>The number of vulnerabilities that have the low priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vulNntfSum(Integer vulNntfSum) {
             this.vulNntfSum = vulNntfSum;

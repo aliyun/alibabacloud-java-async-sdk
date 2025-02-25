@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPagedInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetPagedInstanceResponseBody</p>
  */
 public class GetPagedInstanceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Long pageIndex;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private GetPagedInstanceResponseBody(Builder builder) {
@@ -198,7 +203,10 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06e1e316757357507896067d3780</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -211,53 +219,59 @@ public class GetPagedInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPagedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPagedInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("BusinessTime")
+        @com.aliyun.core.annotation.NameInMap("BusinessTime")
         private String businessTime;
 
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private Long checkStatus;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("Delete")
+        @com.aliyun.core.annotation.NameInMap("Delete")
         private String delete;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HistoryDagId")
+        @com.aliyun.core.annotation.NameInMap("HistoryDagId")
         private Long historyDagId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LastRunningContext")
+        @com.aliyun.core.annotation.NameInMap("LastRunningContext")
         private String lastRunningContext;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Long taskType;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Long triggerType;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Instance(Builder builder) {
@@ -552,9 +566,15 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPagedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPagedInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private Data(Builder builder) {
             this.instance = builder.instance;
@@ -571,17 +591,17 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

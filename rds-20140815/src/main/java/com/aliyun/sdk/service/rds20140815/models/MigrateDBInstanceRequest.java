@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>MigrateDBInstanceRequest</p>
  */
 public class MigrateDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DedicatedHostGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedHostGroupId;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SpecifiedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecifiedTime")
     private String specifiedTime;
 
-    @Query
-    @NameInMap("TargetDedicatedHostIdForMaster")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDedicatedHostIdForMaster")
     private String targetDedicatedHostIdForMaster;
 
-    @Query
-    @NameInMap("TargetDedicatedHostIdForSlave")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDedicatedHostIdForSlave")
     private String targetDedicatedHostIdForSlave;
 
-    @Query
-    @NameInMap("ZoneIdForFollower")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdForFollower")
     private String zoneIdForFollower;
 
-    @Query
-    @NameInMap("ZoneIdForLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdForLog")
     private String zoneIdForLog;
 
     private MigrateDBInstanceRequest(Builder builder) {
@@ -210,7 +215,11 @@ public class MigrateDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -219,7 +228,11 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
+         * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-4n******</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -228,12 +241,15 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The time when you want the system to start the migration. Valid values:
-         * <p>
+         * <p>The time when you want the system to start the migration. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediately</strong>: The system immediately starts the migration. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: The system starts the migration during the specified maintenance window.</li>
+         * <li><strong>Specified</strong>: The system starts the migration at the specified point in time.</li>
+         * </ul>
          * 
-         * *   **Immediately**: The system immediately starts the migration. This is the default value.
-         * *   **MaintainTime**: The system starts the migration during the specified maintenance window.
-         * *   **Specified**: The system starts the migration at the specified point in time.
+         * <strong>example:</strong>
+         * <p>MaintainTime</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -251,7 +267,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,10 +297,13 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when you set <strong>EffectiveTime</strong> to <strong>Specified</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when you set **EffectiveTime** to **Specified**.
+         * <strong>example:</strong>
+         * <p>2019-10-21T10:00:00Z</p>
          */
         public Builder specifiedTime(String specifiedTime) {
             this.putQueryParameter("SpecifiedTime", specifiedTime);
@@ -290,7 +312,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
+         * <p>The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp******</p>
          */
         public Builder targetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
             this.putQueryParameter("TargetDedicatedHostIdForMaster", targetDedicatedHostIdForMaster);
@@ -299,7 +324,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
+         * <p>The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp******</p>
          */
         public Builder targetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
             this.putQueryParameter("TargetDedicatedHostIdForSlave", targetDedicatedHostIdForSlave);
@@ -308,7 +336,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary instance.
+         * <p>The zone ID of the secondary node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneIdForFollower(String zoneIdForFollower) {
             this.putQueryParameter("ZoneIdForFollower", zoneIdForFollower);
@@ -317,7 +348,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the logger instance.
+         * <p>The zone ID of the logger instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneIdForLog(String zoneIdForLog) {
             this.putQueryParameter("ZoneIdForLog", zoneIdForLog);

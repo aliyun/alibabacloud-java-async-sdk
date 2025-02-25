@@ -1,127 +1,143 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCommandRequest} extends {@link RequestModel}
  *
  * <p>RunCommandRequest</p>
  */
 public class RunCommandRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CommandContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandContent;
 
-    @Query
-    @NameInMap("ContainerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerId")
     private String containerId;
 
-    @Query
-    @NameInMap("ContainerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
 
-    @Query
-    @NameInMap("ContentEncoding")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentEncoding")
     private String contentEncoding;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableParameter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableParameter")
     private Boolean enableParameter;
 
-    @Query
-    @NameInMap("Frequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Frequency")
     private String frequency;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("KeepCommand")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepCommand")
     private Boolean keepCommand;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Launcher")
+    private String launcher;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map<String, ?> parameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RepeatMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatMode")
     private String repeatMode;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTag")
+    private java.util.List<ResourceTag> resourceTag;
 
-    @Query
-    @NameInMap("Timed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminationMode")
+    private String terminationMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timed")
     private Boolean timed;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
-    @Query
-    @NameInMap("WindowsPasswordName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WindowsPasswordName")
     private String windowsPasswordName;
 
-    @Query
-    @NameInMap("WorkingDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
     private RunCommandRequest(Builder builder) {
@@ -137,6 +153,7 @@ public class RunCommandRequest extends Request {
         this.frequency = builder.frequency;
         this.instanceId = builder.instanceId;
         this.keepCommand = builder.keepCommand;
+        this.launcher = builder.launcher;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -146,7 +163,9 @@ public class RunCommandRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceTag = builder.resourceTag;
         this.tag = builder.tag;
+        this.terminationMode = builder.terminationMode;
         this.timed = builder.timed;
         this.timeout = builder.timeout;
         this.type = builder.type;
@@ -234,7 +253,7 @@ public class RunCommandRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -243,6 +262,13 @@ public class RunCommandRequest extends Request {
      */
     public Boolean getKeepCommand() {
         return this.keepCommand;
+    }
+
+    /**
+     * @return launcher
+     */
+    public String getLauncher() {
+        return this.launcher;
     }
 
     /**
@@ -269,7 +295,7 @@ public class RunCommandRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -309,10 +335,24 @@ public class RunCommandRequest extends Request {
     }
 
     /**
+     * @return resourceTag
+     */
+    public java.util.List<ResourceTag> getResourceTag() {
+        return this.resourceTag;
+    }
+
+    /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
+    }
+
+    /**
+     * @return terminationMode
+     */
+    public String getTerminationMode() {
+        return this.terminationMode;
     }
 
     /**
@@ -367,18 +407,21 @@ public class RunCommandRequest extends Request {
         private String description; 
         private Boolean enableParameter; 
         private String frequency; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private Boolean keepCommand; 
+        private String launcher; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String repeatMode; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<ResourceTag> resourceTag; 
+        private java.util.List<Tag> tag; 
+        private String terminationMode; 
         private Boolean timed; 
         private Long timeout; 
         private String type; 
@@ -403,6 +446,7 @@ public class RunCommandRequest extends Request {
             this.frequency = request.frequency;
             this.instanceId = request.instanceId;
             this.keepCommand = request.keepCommand;
+            this.launcher = request.launcher;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -412,7 +456,9 @@ public class RunCommandRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceTag = request.resourceTag;
             this.tag = request.tag;
+            this.terminationMode = request.terminationMode;
             this.timed = request.timed;
             this.timeout = request.timeout;
             this.type = request.type;
@@ -431,7 +477,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value that is unique among different requests. The `ClientToken` value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -440,13 +489,57 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the command after it is run. Valid values:
-         * <p>
+         * <p>The content of the command. The command content can be plaintext or Base64-encoded. Take note of the following items:</p>
+         * <ul>
+         * <li><p>If you want to retain the command, make sure that the Base64-encoded command content does not exceed 18 KB in size. If you do not want to retain the command, make sure that the Base64-encoded command content does not exceed 24 KB in size. You can set the <code>KeepCommand</code> parameter to specify whether to retain the command.</p>
+         * </li>
+         * <li><p>If the command content is encoded in Base6, set <code>ContentEncoding</code> to Base64.</p>
+         * </li>
+         * <li><p>If you set the <code>EnableParameter</code> parameter to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:</p>
+         * <ul>
+         * <li>Specify custom parameters in the <code>{{}}</code> format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</li>
+         * <li>You can specify up to 20 custom parameters.</li>
+         * <li>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</li>
+         * <li>Each custom parameter name cannot exceed 64 bytes in length.</li>
+         * </ul>
+         * </li>
+         * <li><p>You can specify built-in environment parameters as custom parameters. Then, when you run a command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</p>
+         * <ul>
+         * <li><p><code>{{ACS::RegionId}}</code>: the region ID.</p>
+         * </li>
+         * <li><p><code>{{ACS::AccountId}}</code>: the UID of the Alibaba Cloud account.</p>
+         * </li>
+         * <li><p><code>{{ACS::InstanceId}}</code>: the instance ID. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
+         * <ul>
+         * <li>Linux: 2.2.3.309</li>
+         * <li>Windows: 2.1.3.309</li>
+         * </ul>
+         * </li>
+         * <li><p><code>{{ACS::InstanceName}}</code>: the instance name. If you want to run the command on multiple instances and specify <code>{{ACS::InstanceName}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
+         * <ul>
+         * <li>Linux: 2.2.3.344</li>
+         * <li>Windows: 2.1.3.344</li>
+         * </ul>
+         * </li>
+         * <li><p><code>{{ACS::InvokeId}}</code>: the ID of the task. If you want to specify <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
+         * <ul>
+         * <li>Linux: 2.2.3.309</li>
+         * <li>Windows: 2.1.3.309</li>
+         * </ul>
+         * </li>
+         * <li><p><code>{{ACS::CommandId}}</code>: the ID of the command. If you want to specify <code>{{ACS::CommandId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
+         * <ul>
+         * <li>Linux: 2.2.3.309</li>
+         * <li>Windows: 2.1.3.309</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The command is retained. You can call the InvokeCommand operation to run the command again. The retained command counts against the quota of Cloud Assistant commands.
-         * *   false: The command is not retained. The command is automatically deleted after it is run and does not count against the quota of Cloud Assistant commands.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>ZWNobyAxMjM=</p>
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -455,10 +548,17 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The value of tag N of the command. You can specify 1 to 20 tag keys for the command. The tag value can be an empty string.
-         * <p>
+         * <p>The ID of the container. Only 64-bit hexadecimal strings are supported. <code>docker://</code>, <code>containerd://</code>, or <code>cri-o://</code> can be used as the prefix to the container ID to specify the container runtime.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</li>
+         * <li>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</li>
+         * <li>If this parameter is specified, the specified <code>Username</code> and <code>WorkingDir</code> parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</li>
+         * <li>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <code>#!/usr/bin/python</code> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</li>
+         * </ul>
          * 
-         * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -467,7 +567,17 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Runs a shell, PowerShell, or batch command on one or more Elastic Compute Service (ECS) instances.
+         * <p>The name of the container.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</li>
+         * <li>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</li>
+         * <li>If this parameter is specified, the specified <code>Username</code> and <code>WorkingDir</code> parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</li>
+         * <li>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <code>#!/usr/bin/python</code> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test-container</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -476,13 +586,15 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to run the command on a schedule. Valid values:
-         * <p>
+         * <p>The encoding mode of command content (<code>CommandContent</code>). The valid values are case-insensitive. Valid values:</p>
+         * <ul>
+         * <li>PlainText: The command content is not encoded.</li>
+         * <li>Base64: The command content is encoded in Base64.</li>
+         * </ul>
+         * <p>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</p>
          * 
-         * *   true: runs the command on the schedule specified by `Frequency`. The results of each execution of a command do not affect the subsequent executions of the command.
-         * *   false: runs the command only once.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>Base64</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -491,45 +603,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The content of the command. The command content can be plaintext or Base64-encoded. Take note of the following items:
-         * <p>
+         * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
          * 
-         * *   If you want to retain the command, make sure that the Base64-encoded command content does not exceed 18 KB in size. If you do not want to retain the command, make sure that the Base64-encoded command content does not exceed 24 KB in size. You can set `KeepCommand` to specify whether to retain the command.
-         * 
-         * *   If the command content is Base64-encoded, set `ContentEncoding` to Base64.
-         * 
-         * *   When `EnableParameter` is set to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:
-         * 
-         *     *   Define custom parameters in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.
-         *     *   The number of custom parameters cannot exceed 20.
-         *     *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.
-         *     *   Each custom parameter name cannot exceed 64 bytes in length.
-         * 
-         * *   You can specify built-in environment parameters as custom parameters. Then, when you run the command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:
-         * 
-         *     *   `{{ACS::RegionId}}`: the ID of the region.
-         * 
-         *     *   `{{ACS::AccountId}}`: the UID of the Alibaba Cloud account.
-         * 
-         *     *   `{{ACS::InstanceId}}`: the ID of the instance. If you want to run the command on multiple instances and specify `{{ACS::InstanceId}}` as a built-in environment parameter, make sure that your Cloud Assistant is of the following versions or later:
-         * 
-         *         *   Linux: 2.2.3.309
-         *         *   Windows: 2.1.3.309
-         * 
-         *     *   `{{ACS::InstanceName}}`: the name of the instance. If you want to run the command on multiple instances and specify `{{ACS::InstanceName}}` as a built-in environment parameter, make sure that your Cloud Assistant is of the following versions or later:
-         * 
-         *         *   Linux: 2.2.3.344
-         *         *   Windows: 2.1.3.344
-         * 
-         *     *   `{{ACS::InvokeId}}`: the ID of the command task. If you want to specify `{{ACS::InvokeId}}` as a built-in environment variable, make sure that your Cloud Assistant is of the following versions or later:
-         * 
-         *         *   Linux: 2.2.3.309
-         *         *   Windows: 2.1.3.309
-         * 
-         *     *   `{{ACS::CommandId}}`: the ID of the command. If you want to specify `{{ACS::CommandId}}` as a built-in environment parameter, make sure that your Cloud Assistant is of the following versions or later:
-         * 
-         *         *   Linux: 2.2.3.309
-         *         *   Windows: 2.1.3.309
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -538,11 +615,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which you want to assign the command executions. When you set this parameter, take note of the following items:
-         * <p>
+         * <p>Specifies whether to include custom parameters in the command.</p>
+         * <p>Default value: false.</p>
          * 
-         * *   The instances specified by the InstanceId.N parameter must belong to the specified resource group.
-         * *   You can set this parameter to call the [DescribeInvocations](~~64840~~) or [DescribeInvocationResults](~~64845~~) operation to query execution results in the specified resource group.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableParameter(Boolean enableParameter) {
             this.putQueryParameter("EnableParameter", enableParameter);
@@ -551,7 +628,33 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The name of the command. The name supports all character sets and can be up to 128 characters in length.
+         * <p>The schedule on which to run the command. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specified time, or run at designated times based on a cron expression.</p>
+         * <ul>
+         * <li><p>To run a command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: <code>rate(&lt;Execution interval value&gt; &lt;Execution interval unit&gt;)</code>. For example, specify <code>rate(5m)</code> to run the command every 5 minutes. When you specify an interval, take note of the following limits:</p>
+         * <ul>
+         * <li>The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.</li>
+         * <li>The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before the system runs the command again.</li>
+         * <li>A task is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.</li>
+         * </ul>
+         * </li>
+         * <li><p>To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the <code>at(yyyy-MM-dd HH:mm:ss &lt;Time zone&gt;)</code> format, which indicates <code>at(Year-Month-Day Hour:Minute:Second &lt;Time zone&gt;)</code>. If you do not specify a time zone, the UTC time zone is used by default. You can specify the time zone in the following forms:</p>
+         * <ul>
+         * <li>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</li>
+         * <li>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</li>
+         * <li>The time zone abbreviation. Only UTC is supported.</li>
+         * </ul>
+         * <p>For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
+         * </li>
+         * <li><p>To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the <code>&lt;Cron expression&gt; &lt;Time zone&gt;</code> format. The cron expression is in the <code>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of the month&gt; &lt;month&gt; &lt;day of the week&gt; &lt;year (optional)&gt;</code> format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. You can specify the time zone in the following forms:</p>
+         * <ul>
+         * <li>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</li>
+         * <li>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</li>
+         * <li>The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Note</strong> The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.</p>
+         * </li>
+         * </ul>
          */
         public Builder frequency(String frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -560,24 +663,29 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The name of the password to use to run the command on Windows instances.
-         * <p>
+         * <p>The IDs of instances on which to run the command. N indicates that you can specify multiple instance IDs at the same time. Valid values of N: 1 to 100.</p>
+         * <p>If one of the specified instances does not meet the conditions for running the command, the call fails. To ensure that the call is successful, specify only the IDs of instances that meet the conditions.</p>
+         * <p>You can apply for a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.</p>
          * 
-         * If you do not want to use the default System user to run the command on Windows instances, you must specify both the WindowsPasswordName and `Username` parameters. The password is hosted in the parameter repository of Operation Orchestration Service (OOS) by using an encryption parameter to mitigate the risk of password leaks. Only the name of the encryption parameter that corresponds to the password is passed in by using the WindowsPasswordName parameter. For more information, see [Encrypt parameters](~~186828~~) and [Configure a regular user to run Cloud Assistant commands](~~203771~~).
-         * 
-         * >  If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify the WindowsPasswordName parameter.
+         * <strong>example:</strong>
+         * <p>i-bp185dy2o3o6neg****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
         }
 
         /**
-         * The ID of instance N on which to run the command. Valid values of N: 1 to 50.
-         * <p>
+         * <p>Specifies whether to retain the command after the command is run. Valid values:</p>
+         * <ul>
+         * <li>true: retains the command. Then, you can call the InvokeCommand operation to rerun the command. The retained command counts against the quota of Cloud Assistant commands.</li>
+         * <li>false: does not retain the command. The command is automatically deleted after it is run and does not count against the quota of Cloud Assistant commands.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * If one of the specified instances does not meet the conditions for running the command, the call fails. To ensure that the call is successful, specify only the IDs of instances that meet the conditions.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder keepCommand(Boolean keepCommand) {
             this.putQueryParameter("KeepCommand", keepCommand);
@@ -586,7 +694,22 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The ID of the command.
+         * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
+         */
+        public Builder launcher(String launcher) {
+            this.putQueryParameter("Launcher", launcher);
+            this.launcher = launcher;
+            return this;
+        }
+
+        /**
+         * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -613,15 +736,20 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The working directory of the command on the instance.
-         * <p>
+         * <p>The key-value pairs of the custom parameters that are passed in when the command that can include custom parameters is run. For example, assume that the command content is <code>echo {{name}}</code>. The <code>Parameter</code> parameter can be used to pass in the <code>{&quot;name&quot;:&quot;Jack&quot;}</code> key-value pair. The <code>name</code> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <code>echo Jack</code> command is run.</p>
+         * <p>You can specify up to 10 custom parameters. Take note of the following items:</p>
+         * <ul>
+         * <li>The key cannot be an empty string. It can be up to 64 characters in length.</li>
+         * <li>The value can be an empty string.</li>
+         * <li>If you want to retain the command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64-encoding does not exceed 24 KB in size. You can set <code>KeepCommand</code> to specify whether to retain the command.</li>
+         * <li>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</li>
+         * </ul>
+         * <p>This parameter is empty by default. You can leave this parameter empty to disable the custom parameter feature.</p>
          * 
-         * Default values:
-         * 
-         * *   For Linux instances, the default value is `/root`, which is the home directory of the administrator (the root user).
-         * *   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32`.
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -629,12 +757,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The language type of the command. Valid values:
-         * <p>
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   RunBatScript: batch command, applicable to Windows instances
-         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances
-         * *   RunShellScript: shell command, applicable to Linux instances
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -643,7 +770,41 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * root
+         * <p>Specifies how to run the command. Valid values:</p>
+         * <ul>
+         * <li>Once: immediately runs the command.</li>
+         * <li>Period: runs the command on a schedule. If you set this parameter to <code>Period</code>, you must also configure the <code>Frequency</code> parameter.</li>
+         * <li>NextRebootOnly: runs the command the next time the instances start.</li>
+         * <li>EveryReboot: runs the command every time the instances start. Specifies how to run the command. Valid values:</li>
+         * <li>Once: immediately runs the command.</li>
+         * <li>Period: runs the command on a schedule. If you set this parameter to <code>Period</code>, you must also configure the <code>Frequency</code> parameter.</li>
+         * <li>NextRebootOnly: runs the command the next time the instances start.</li>
+         * <li>EveryReboot: runs the command every time the instances start.</li>
+         * <li>DryRun: performs only a dry run, without running the actual command. The system checks the request parameters, the execution environments on the instances, and the status of Cloud Assistant Agent.</li>
+         * </ul>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If you do not specify the <code>Frequency</code> parameter, the default value is <code>Once</code>.</li>
+         * <li>If you specify the <code>Frequency</code> parameter, <code>Period</code> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</li>
+         * </ul>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</li>
+         * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <code>IncludeHistory</code> set to true to query the results of historical scheduled executions.</li>
+         * </ul>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If you do not specify the <code>Frequency</code> parameter, the default value is <code>Once</code>.</li>
+         * <li>If you specify the <code>Frequency</code> parameter, <code>Period</code> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</li>
+         * </ul>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</li>
+         * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <code>IncludeHistory</code> set to true to query the results of historical scheduled executions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Once</p>
          */
         public Builder repeatMode(String repeatMode) {
             this.putQueryParameter("RepeatMode", repeatMode);
@@ -652,7 +813,14 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The tags to add to the command.
+         * <p>The ID of the resource group to which to assign the command executions. When you set this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>The instances specified by InstanceId.N must belong to the specified resource group.</li>
+         * <li>After the command is run, you can set this parameter to call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation to query the execution results in the specified resource group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -679,26 +847,46 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The description of the command. The description supports all character sets and can be up to 512 characters in length.
+         * <p>The tags of the instance. If you do not specify InstanceId.N, the command is run on the instances that have the specified tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder resourceTag(java.util.List<ResourceTag> resourceTag) {
+            this.putQueryParameter("ResourceTag", resourceTag);
+            this.resourceTag = resourceTag;
+            return this;
+        }
+
+        /**
+         * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The key-value pairs of custom parameters to pass in when the command includes custom parameters. For example, assume that the command content is `echo {{name}}`. You can use the `Parameter` parameter to pass in the `{"name":"Jack"}` key-value pair. The `name` key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the `echo Jack` command is actually run.
-         * <p>
+         * <p>Specifies how to stop the command task when a command execution is manually stopped or times out. Valid values:</p>
+         * <ul>
+         * <li>Process: stops the process of the command.</li>
+         * <li>ProcessTree: stops the process tree of the command. In this case, the process of the command and all subprocesses of the process are stopped.</li>
+         * </ul>
          * 
-         * Number of custom parameters: 0 to 10. Take note of the following items:
+         * <strong>example:</strong>
+         * <p>ProcessTree</p>
+         */
+        public Builder terminationMode(String terminationMode) {
+            this.putQueryParameter("TerminationMode", terminationMode);
+            this.terminationMode = terminationMode;
+            return this;
+        }
+
+        /**
+         * <blockquote>
+         * <p> This parameter is no longer used and does not take effect.</p>
+         * </blockquote>
          * 
-         * *   The key cannot be an empty string. It can be up to 64 characters in length.
-         * *   The value can be an empty string.
-         * *   If you want to retain the command, make sure that the size of the Base64-encoded command content (including custom parameters and original command content) does not exceed 18 KB. If you do not want to retain the command, make sure that the size of the Base64-encoded command content does not exceed 24 KB. You can set `KeepCommand` to specify whether to retain the command.
-         * *   The custom parameter names specified in the value of Parameters must all be included in the custom parameter names specified when you created the command. You can use empty strings to represent the parameters that are not passed in.
-         * 
-         * This parameter is empty by default. You can leave this parameter empty to disable the custom parameter feature.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder timed(Boolean timed) {
             this.putQueryParameter("Timed", timed);
@@ -707,12 +895,12 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The timeout period for the command execution. Unit: seconds.
-         * <p>
+         * <p>The timeout period for the command execution. Unit: seconds.</p>
+         * <p>A timeout error occurs if the command cannot be run because the process slows down or because a specific module or Cloud Assistant Agent does not exist. When an execution times out, the command process is forcefully terminated.</p>
+         * <p>Default value: 60.</p>
          * 
-         * A timeout occurs when a command cannot be completed because the process gets stuck, the modules are missing, or the Cloud Assistant client is not installed on the instance. When an execution times out, the command process is forcefully terminated.
-         * 
-         * Default value: 60.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -721,7 +909,16 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The language type of the command. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript: batch command, applicable to Windows instances.</li>
+         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances.</li>
+         * <li>RunShellScript: shell command, applicable to Linux instances.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RunShellScript</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -730,10 +927,15 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the the custom parameter feature.
-         * <p>
+         * <p>The username to use to run the command on the ECS instances. The username cannot exceed 255 characters in length.</p>
+         * <ul>
+         * <li>For Linux instances, the root username is used by default.</li>
+         * <li>For Windows instances, the System username is used by default.</li>
+         * </ul>
+         * <p>You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</p>
          * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -742,10 +944,14 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The ID of instance N on which to run the command. Valid values of N: 1 to 50.
-         * <p>
+         * <p>The name of the password to use to run the command on a Windows instance. The name cannot exceed 255 characters in length.</p>
+         * <p>If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and <code>Username</code>. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Manage encryption parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</p>
+         * <blockquote>
+         * <p> If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify WindowsPasswordName.</p>
+         * </blockquote>
          * 
-         * If one of the specified instances does not meet the conditions for running the command, the call fails. To ensure that the call is successful, specify only the IDs of instances that meet the conditions.
+         * <strong>example:</strong>
+         * <p>axtSecretPassword</p>
          */
         public Builder windowsPasswordName(String windowsPasswordName) {
             this.putQueryParameter("WindowsPasswordName", windowsPasswordName);
@@ -754,7 +960,15 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The ID of the command task.
+         * <p>The working directory of the command on the instance. The value can be up to 200 characters in length.</p>
+         * <p>Default values:</p>
+         * <ul>
+         * <li>For Linux instances, the default value is <code>/root</code>, which is the home directory of the administrator (the root user).</li>
+         * <li>For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as <code>C:\Windows\System32</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/user</p>
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -769,11 +983,103 @@ public class RunCommandRequest extends Request {
 
     } 
 
-    public static class Tag extends TeaModel {
-        @NameInMap("Key")
+    /**
+     * 
+     * {@link RunCommandRequest} extends {@link TeaModel}
+     *
+     * <p>RunCommandRequest</p>
+     */
+    public static class ResourceTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ResourceTag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The key of tag N of the instance.</p>
+             * <p>Take note of the following items:</p>
+             * <ul>
+             * <li>This parameter and InstanceId.N are mutually exclusive.</li>
+             * <li>Valid values of N: 1 to 10. The tag key cannot be an empty string.</li>
+             * <li>The number of instances that have the specified tags cannot exceed 100. If more than 100 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 100 instances.</li>
+             * <li>The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N of the instance.</p>
+             * <p>Take note of the following items:</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 10.</li>
+             * <li>The tag value can be an empty string.</li>
+             * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ResourceTag build() {
+                return new ResourceTag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunCommandRequest} extends {@link TeaModel}
+     *
+     * <p>RunCommandRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -808,12 +1114,12 @@ public class RunCommandRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the command. You can specify 1 to 20 tag keys for the command. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a>.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have the specified tag are displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all specified tags are displayed in the response. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -821,7 +1127,11 @@ public class RunCommandRequest extends Request {
             }
 
             /**
-             * The tags to add to the command.
+             * <p>The value of tag N to add to the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

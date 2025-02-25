@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAlertLogListResponseBody</p>
  */
 public class DescribeAlertLogListResponseBody extends TeaModel {
-    @NameInMap("AlertLogList")
+    @com.aliyun.core.annotation.NameInMap("AlertLogList")
     private java.util.List < AlertLogList> alertLogList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAlertLogListResponseBody(Builder builder) {
@@ -110,7 +110,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The queried alert logs.
+         * <p>The queried alert logs.</p>
          */
         public Builder alertLogList(java.util.List < AlertLogList> alertLogList) {
             this.alertLogList = alertLogList;
@@ -118,10 +118,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +132,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -137,7 +143,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -145,7 +154,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -153,7 +165,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C4A3709-BF52-42EE-87B5-7435F0929585</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,11 +176,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,11 +196,17 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -217,7 +241,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the dimension.
+             * <p>The key of the dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -225,7 +252,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the dimension.
+             * <p>The value of the dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5e1qg6uo38rztr4****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -239,14 +269,20 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class Escalation extends TeaModel {
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Escalation(Builder builder) {
@@ -290,10 +326,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * The description of the alert rule.
-             * <p>
+             * <p>The description of the alert rule.</p>
+             * <blockquote>
+             * <p> The content of the alert rule. This parameter indicates the conditions that trigger an alert.</p>
+             * </blockquote>
              * 
-             * > The content of the alert rule. If the metric value meets the alert condition, an alert is triggered.
+             * <strong>example:</strong>
+             * <p>$Average&lt;90</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -301,11 +340,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level and notification methods of the alert. Valid values:
-             * <p>
+             * <p>The alert level and the methods that are used to send alert notifications. Valid values:</p>
+             * <ul>
+             * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+             * <li>OK: No alert is generated.</li>
+             * </ul>
              * 
-             * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
-             * *   OK: No alert is generated.
+             * <strong>example:</strong>
+             * <p>P4</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -313,7 +355,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.
+             * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -327,11 +372,17 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class ExtendedInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExtendedInfo(Builder builder) {
@@ -366,7 +417,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the extended field.
+             * <p>The name of the extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -374,7 +428,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the extended field.
+             * <p>The value of the extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120886317861****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -388,20 +445,26 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("notifyTargetList")
+        @com.aliyun.core.annotation.NameInMap("notifyTargetList")
         private java.util.List < String > notifyTargetList;
 
         private ResultList(Builder builder) {
@@ -463,11 +526,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < String > notifyTargetList; 
 
             /**
-             * The HTTP status code.
-             * <p>
+             * <p>The HTTP status code.</p>
+             * <ul>
+             * <li>If the value of the <code>Channel</code> parameter is <code>WEBHOOK</code>, the status code is 200 or 500.</li>
+             * <li>If the value of the <code>Channel</code> parameter is <code>MAIL</code>, <code>SMS</code>, <code>SLS</code>, <code>ONCALL</code>, <code>FC</code>, or <code>MNS</code>, this parameter is empty or not returned.</li>
+             * </ul>
              * 
-             * *   If the value of the `Channel` parameter is `WEBHOOK`, the status code is 200 or 500.
-             * *   If the value of the `Channel` parameter is `MAIL`, `SMS`, `SLS`, `ONCALL`, `FC`, or `MNS`, this parameter is empty or not returned.
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -475,7 +541,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the returned results.
+             * <p>The details of the returned results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ }</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -483,7 +552,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID returned when CloudMonitor calls another cloud service.
+             * <p>The request ID returned when CloudMonitor calls another cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0BDAF8A8-04DC-5F0C-90E4-724D42C4****</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -491,11 +563,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -503,7 +578,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The queried resources.
+             * notifyTargetList.
              */
             public Builder notifyTargetList(java.util.List < String > notifyTargetList) {
                 this.notifyTargetList = notifyTargetList;
@@ -517,11 +592,17 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class ChannelResultList extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
-        @NameInMap("ResultList")
+        @com.aliyun.core.annotation.NameInMap("ResultList")
         private java.util.List < ResultList> resultList;
 
         private ChannelResultList(Builder builder) {
@@ -556,16 +637,19 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < ResultList> resultList; 
 
             /**
-             * The method that is used to send alert notifications. Valid values:
-             * <p>
+             * <p>The method that is used to send alert notifications. Valid values:</p>
+             * <ul>
+             * <li>MAIL: email</li>
+             * <li>SMS: text message</li>
+             * <li>WEBHOOK: alert callback</li>
+             * <li>SLS: Simple Log Service</li>
+             * <li>ONCALL: phone call</li>
+             * <li>FC: Function Compute</li>
+             * <li>MNS: Message Service queue</li>
+             * </ul>
              * 
-             * *   MAIL: email
-             * *   SMS: text message
-             * *   WEBHOOK: alert callback
-             * *   SLS: Simple Log Service
-             * *   ONCALL: phone call
-             * *   FC: Function Compute
-             * *   MNS: Message Service queue
+             * <strong>example:</strong>
+             * <p>MAIL</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -573,7 +657,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The sending results of alert notifications.
+             * <p>The sending results of alert notifications.</p>
              */
             public Builder resultList(java.util.List < ResultList> resultList) {
                 this.resultList = resultList;
@@ -587,11 +671,17 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class SendDetail extends TeaModel {
-        @NameInMap("ChannelResultList")
+        @com.aliyun.core.annotation.NameInMap("ChannelResultList")
         private java.util.List < ChannelResultList> channelResultList;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
         private SendDetail(Builder builder) {
@@ -626,7 +716,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String resultCode; 
 
             /**
-             * The list of sending results that are categorized by notification method.
+             * <p>The list of sending results that are categorized by notification method.</p>
              */
             public Builder channelResultList(java.util.List < ChannelResultList> channelResultList) {
                 this.channelResultList = channelResultList;
@@ -634,11 +724,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert notifications are sent.
-             * <p>
+             * <p>Indicates whether the alert notifications are sent.</p>
+             * <ul>
+             * <li>If the alert notifications are sent, the value &quot;success&quot; is returned.</li>
+             * <li>If the configuration is invalid, no alert notification is sent and an error code is returned.</li>
+             * </ul>
              * 
-             * *   If the alert notifications are sent, the value "success" is returned.
-             * *   If the configuration is invalid, no alert notification is sent and an error code is returned.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -652,11 +745,17 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class SendResultList extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private SendResultList(Builder builder) {
@@ -691,15 +790,18 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < String > value; 
 
             /**
-             * The category of the alert notification method. Valid values:
-             * <p>
+             * <p>The category of the alert notification method. Valid values:</p>
+             * <ul>
+             * <li>MAIL: email</li>
+             * <li>ALIIM: TradeManager</li>
+             * <li>SMS: text message</li>
+             * <li>CALL: phone call</li>
+             * <li>DING: DingTalk chatbot</li>
+             * <li>Merged: alert merging</li>
+             * </ul>
              * 
-             * *   Mail: email
-             * *   ALIIM: TradeManager
-             * *   SMS: text message
-             * *   CALL: phone call
-             * *   DING: DingTalk chatbot
-             * *   Merged: alert merging
+             * <strong>example:</strong>
+             * <p>Mail</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -707,7 +809,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification methods.
+             * <p>The notification object corresponding to the alert notification method.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -721,14 +823,20 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class WebhookList extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private WebhookList(Builder builder) {
@@ -772,7 +880,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The status code of the alert callback.
+             * <p>The status code of the alert callback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -780,7 +891,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned for the alert callback.
+             * <p>The message returned for the alert callback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -788,7 +902,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URL.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/webhook.html">https://www.aliyun.com/webhook.html</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -802,101 +919,107 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogListResponseBody</p>
+     */
     public static class AlertLogList extends TeaModel {
-        @NameInMap("AlertTime")
+        @com.aliyun.core.annotation.NameInMap("AlertTime")
         private String alertTime;
 
-        @NameInMap("BlackListDetail")
+        @com.aliyun.core.annotation.NameInMap("BlackListDetail")
         private String blackListDetail;
 
-        @NameInMap("BlackListName")
+        @com.aliyun.core.annotation.NameInMap("BlackListName")
         private String blackListName;
 
-        @NameInMap("BlackListUUID")
+        @com.aliyun.core.annotation.NameInMap("BlackListUUID")
         private String blackListUUID;
 
-        @NameInMap("ContactALIIWWList")
+        @com.aliyun.core.annotation.NameInMap("ContactALIIWWList")
         private java.util.List < String > contactALIIWWList;
 
-        @NameInMap("ContactDingList")
+        @com.aliyun.core.annotation.NameInMap("ContactDingList")
         private java.util.List < String > contactDingList;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
 
-        @NameInMap("ContactMailList")
+        @com.aliyun.core.annotation.NameInMap("ContactMailList")
         private java.util.List < String > contactMailList;
 
-        @NameInMap("ContactOnCallList")
+        @com.aliyun.core.annotation.NameInMap("ContactOnCallList")
         private java.util.List < String > contactOnCallList;
 
-        @NameInMap("ContactSMSList")
+        @com.aliyun.core.annotation.NameInMap("ContactSMSList")
         private java.util.List < String > contactSMSList;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private java.util.List < Dimensions> dimensions;
 
-        @NameInMap("DingdingWebhookList")
+        @com.aliyun.core.annotation.NameInMap("DingdingWebhookList")
         private java.util.List < String > dingdingWebhookList;
 
-        @NameInMap("Escalation")
+        @com.aliyun.core.annotation.NameInMap("Escalation")
         private Escalation escalation;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("ExtendedInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendedInfo")
         private java.util.List < ExtendedInfo> extendedInfo;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LevelChange")
+        @com.aliyun.core.annotation.NameInMap("LevelChange")
         private String levelChange;
 
-        @NameInMap("LogId")
+        @com.aliyun.core.annotation.NameInMap("LogId")
         private String logId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SendDetail")
+        @com.aliyun.core.annotation.NameInMap("SendDetail")
         private SendDetail sendDetail;
 
-        @NameInMap("SendResultList")
+        @com.aliyun.core.annotation.NameInMap("SendResultList")
         private java.util.List < SendResultList> sendResultList;
 
-        @NameInMap("SendStatus")
+        @com.aliyun.core.annotation.NameInMap("SendStatus")
         private String sendStatus;
 
-        @NameInMap("WebhookList")
+        @com.aliyun.core.annotation.NameInMap("WebhookList")
         private java.util.List < WebhookList> webhookList;
 
         private AlertLogList(Builder builder) {
@@ -1201,7 +1324,11 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < WebhookList> webhookList; 
 
             /**
-             * The timestamp that was generated when the alert was triggered. Unit: milliseconds.
+             * <p>The timestamp that was generated when the alert was triggered.</p>
+             * <p>Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1610043776621</p>
              */
             public Builder alertTime(String alertTime) {
                 this.alertTime = alertTime;
@@ -1209,7 +1336,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the blacklist policy.
+             * <p>The details of the blacklist policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BlackListDetail</p>
              */
             public Builder blackListDetail(String blackListDetail) {
                 this.blackListDetail = blackListDetail;
@@ -1217,7 +1347,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the blacklist policy.
+             * <p>The name of the blacklist policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;id&quot;:123,&quot;metricProject&quot;:&quot;acs_ecs_dashboard&quot;,&quot;userId&quot;:1736511134389110,&quot;uuid&quot;:&quot;8410dbbd-7d30-41c5-94cb-<em><strong>&quot;,&quot;name&quot;:&quot;alert-</strong></em>&quot;,&quot;productCategory&quot;:&quot;ecs&quot;,&quot;instances&quot;:[{&quot;instanceId&quot;:&quot;host-***&quot;}],&quot;metrics&quot;:null,&quot;scopeType&quot;:&quot;USER&quot;,&quot;scopeValue&quot;:&quot;&quot;,&quot;startTime&quot;:&quot;0001-01-01T00:00:00Z&quot;,&quot;endTime&quot;:&quot;9999-12-31T23:59:59.999999999+08:00&quot;,&quot;effectiveTime&quot;:null,&quot;isEnable&quot;:true,&quot;status&quot;:1,&quot;gmtCreate&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;gmtModified&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;loadTime&quot;:&quot;2021-11-02T16:36:15.213072177+08:00&quot;}</p>
              */
             public Builder blackListName(String blackListName) {
                 this.blackListName = blackListName;
@@ -1225,7 +1358,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the blacklist policy.
+             * <p>The ID of the blacklist policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8410dbbd-7d30-41c5-94cb-*****</p>
              */
             public Builder blackListUUID(String blackListUUID) {
                 this.blackListUUID = blackListUUID;
@@ -1233,10 +1369,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The TradeManager IDs of the alert contacts.
-             * <p>
-             * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * ContactALIIWWList.
              */
             public Builder contactALIIWWList(java.util.List < String > contactALIIWWList) {
                 this.contactALIIWWList = contactALIIWWList;
@@ -1244,7 +1377,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The DingTalk chatbots of the alert contacts.
+             * ContactDingList.
              */
             public Builder contactDingList(java.util.List < String > contactDingList) {
                 this.contactDingList = contactDingList;
@@ -1252,7 +1385,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact groups.
+             * ContactGroups.
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -1260,7 +1393,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The email addresses of the alert contacts.
+             * ContactMailList.
              */
             public Builder contactMailList(java.util.List < String > contactMailList) {
                 this.contactMailList = contactMailList;
@@ -1268,10 +1401,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone numbers of the alert contacts that receive alert phone calls.
-             * <p>
-             * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * ContactOnCallList.
              */
             public Builder contactOnCallList(java.util.List < String > contactOnCallList) {
                 this.contactOnCallList = contactOnCallList;
@@ -1279,10 +1409,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone numbers of the alert contacts that receive alert text messages.
-             * <p>
-             * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * ContactSMSList.
              */
             public Builder contactSMSList(java.util.List < String > contactSMSList) {
                 this.contactSMSList = contactSMSList;
@@ -1290,7 +1417,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The dimensions of the resource that triggered alerts.
+             * <p>The dimensions of the resource that triggered alerts.</p>
              */
             public Builder dimensions(java.util.List < Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -1298,7 +1425,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URLs of the alert contacts.
+             * DingdingWebhookList.
              */
             public Builder dingdingWebhookList(java.util.List < String > dingdingWebhookList) {
                 this.dingdingWebhookList = dingdingWebhookList;
@@ -1306,7 +1433,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert rule based on which the alert is triggered.
+             * <p>The alert rule based on which the alert is triggered.</p>
              */
             public Builder escalation(Escalation escalation) {
                 this.escalation = escalation;
@@ -1314,7 +1441,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The event name.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IOHang</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -1322,7 +1452,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The extended fields.
+             * <p>The extended fields.</p>
              */
             public Builder extendedInfo(java.util.List < ExtendedInfo> extendedInfo) {
                 this.extendedInfo = extendedInfo;
@@ -1330,7 +1460,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application group.
+             * <p>The ID of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7301****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1338,7 +1471,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application group.
+             * <p>The name of the application group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_Instances</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1346,7 +1482,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5e1qg6uo38rztr4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1354,7 +1493,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>portalHost</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1362,11 +1504,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level and notification methods of the alert. Valid values:
-             * <p>
+             * <p>The alert level and the methods that are used to send alert notifications. Valid values:</p>
+             * <ul>
+             * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+             * <li>OK: No alert is generated.</li>
+             * </ul>
              * 
-             * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
-             * *   OK: No alert is generated.
+             * <strong>example:</strong>
+             * <p>P4</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1374,11 +1519,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert level was changed. Valid values:
-             * <p>
+             * <p>Indicates whether the alert level was changed. Valid values:</p>
+             * <ul>
+             * <li><code>P4-&gt;OK</code>: The alert level was changed from P4 to OK.</li>
+             * <li><code>P4-&gt;P4</code>: The alert level was still P4.</li>
+             * </ul>
              * 
-             * *   `P4->OK`: The alert level was changed from P4 to OK.
-             * *   `P4->P4`: The alert level was still P4.
+             * <strong>example:</strong>
+             * <p>P4-&gt;OK</p>
              */
             public Builder levelChange(String levelChange) {
                 this.levelChange = levelChange;
@@ -1386,7 +1534,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The log ID.
+             * <p>The log ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7818361[1523]@1671593992[1]</p>
              */
             public Builder logId(String logId) {
                 this.logId = logId;
@@ -1394,7 +1545,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert information in a JSON string.
+             * <p>The alert information in a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;alertName&quot;:&quot;e47aa0ac-4076-44db-a47d-d1083968****_Availability&quot;}</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1402,7 +1556,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The metric name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1410,7 +1567,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the cloud service.
+             * <p>The namespace of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs_ecs_dashboard</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1418,11 +1578,14 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the cloud service. Valid values:
-             * <p>
+             * <p>The identifier of the cloud service. Valid values:</p>
+             * <ul>
+             * <li>If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.</li>
+             * <li>If the cloud service is not provided by Alibaba Cloud, a value in the <code>acs_Service keyword</code> format is returned. Example: acs_networkmonitor.</li>
+             * </ul>
              * 
-             * *   If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.
-             * *   If the cloud service is not provided by Alibaba Cloud, a value in the `acs_Service keyword` format is returned. Example: acs_networkmonitor.
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -1430,7 +1593,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d582b9e9-b1c1-4f17-9279-0fe7333a****_ResponseTime</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1438,7 +1604,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert rule.
+             * <p>The name of the alert rule.</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1446,7 +1612,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the alert notification method.
+             * <p>The details about the sending results of alert notifications.</p>
              */
             public Builder sendDetail(SendDetail sendDetail) {
                 this.sendDetail = sendDetail;
@@ -1454,7 +1620,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The sending results of alert notifications.
+             * <p>The sending results of alert notifications.</p>
              */
             public Builder sendResultList(java.util.List < SendResultList> sendResultList) {
                 this.sendResultList = sendResultList;
@@ -1462,16 +1628,18 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the alert. Valid values:
-             * <p>
+             * <p>The status of the alert. Valid values:</p>
+             * <ul>
+             * <li>0: The alert is triggered or cleared.</li>
+             * <li>1: The alert is ineffective.</li>
+             * <li>2: The alert is muted.</li>
+             * <li>3: The host is restarting.</li>
+             * <li>4: No alert notification is sent.</li>
+             * </ul>
+             * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
              * 
-             * *   0: The alert is triggered or cleared.
-             * *   1: The alert is ineffective.
-             * *   2: The alert is muted.
-             * *   3: The host is restarting.
-             * *   4: No alert notification is sent.
-             * 
-             * If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sendStatus(String sendStatus) {
                 this.sendStatus = sendStatus;
@@ -1479,7 +1647,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The callback URLs.
+             * <p>The callback URLs.</p>
              */
             public Builder webhookList(java.util.List < WebhookList> webhookList) {
                 this.webhookList = webhookList;

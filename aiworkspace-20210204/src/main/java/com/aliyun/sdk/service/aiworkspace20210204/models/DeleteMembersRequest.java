@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMembersRequest} extends {@link RequestModel}
  *
  * <p>DeleteMembersRequest</p>
  */
 public class DeleteMembersRequest extends Request {
-    @Path
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Query
-    @NameInMap("MemberIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memberIds;
 
     private DeleteMembersRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class DeleteMembersRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -79,7 +82,10 @@ public class DeleteMembersRequest extends Request {
         }
 
         /**
-         * MemberIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145883-21513926<strong><strong><strong>88039,145883-2769726</strong></strong></strong>87513</p>
          */
         public Builder memberIds(String memberIds) {
             this.putQueryParameter("MemberIds", memberIds);

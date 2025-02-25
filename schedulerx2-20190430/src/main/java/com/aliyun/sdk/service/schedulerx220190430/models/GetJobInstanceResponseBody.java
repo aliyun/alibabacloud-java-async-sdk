@@ -1,33 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobInstanceResponseBody</p>
  */
 public class GetJobInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetJobInstanceResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -41,6 +45,13 @@ public class GetJobInstanceResponseBody extends TeaModel {
 
     public static GetJobInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,6 +90,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private Integer code; 
         private Data data; 
         private String message; 
@@ -86,7 +98,18 @@ public class GetJobInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the job instance.
+         * <p>The information about the job instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned only if the corresponding error occurs.
+         * <p>The error message that is returned only if the corresponding error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobid: 92583 not match groupId: testSchedulerx.defaultGroup</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +136,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +147,14 @@ public class GetJobInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,53 +167,226 @@ public class GetJobInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJobInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobInstanceResponseBody</p>
+     */
+    public static class AccessDeniedDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
+        private String authAction;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobInstanceResponseBody</p>
+     */
     public static class JobInstanceDetail extends TeaModel {
-        @NameInMap("DataTime")
+        @com.aliyun.core.annotation.NameInMap("DataTime")
         private String dataTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Executor")
+        @com.aliyun.core.annotation.NameInMap("Executor")
         private String executor;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TimeType")
+        @com.aliyun.core.annotation.NameInMap("TimeType")
         private Integer timeType;
 
-        @NameInMap("TraceId")
+        @com.aliyun.core.annotation.NameInMap("TraceId")
         private String traceId;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Integer triggerType;
 
-        @NameInMap("WorkAddr")
+        @com.aliyun.core.annotation.NameInMap("WorkAddr")
         private String workAddr;
 
         private JobInstanceDetail(Builder builder) {
@@ -342,7 +547,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             private String workAddr; 
 
             /**
-             * The data timestamp of the job instance.
+             * <p>The data timestamp of the job instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-27 11:52:10</p>
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -350,7 +558,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the job execution.
+             * <p>The end time of the job execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-27 11:52:10</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -358,7 +569,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The user who executes the job.
+             * <p>The user who executes the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -366,7 +580,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The job instance ID.
+             * <p>The job instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111111</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -374,7 +591,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92583</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -382,7 +602,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ManualJob</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -390,7 +613,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The parameters of the job instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;alertId&quot;:11111}</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -398,7 +624,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the job instance.
+             * <p>The progress of the job instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>complete</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -406,7 +635,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The execution results of the job instance.
+             * <p>The execution results of the job instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -414,7 +646,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was scheduled to run.
+             * <p>The time when the job was scheduled to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-27 11:52:10</p>
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -422,7 +657,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the job execution.
+             * <p>The start time of the job execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-27 11:52:10</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -430,16 +668,18 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the job instance. Valid values:
-             * <p>
+             * <p>The state of the job instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The job instance is waiting for execution.</li>
+             * <li><strong>3</strong>: The job instance is running.</li>
+             * <li><strong>4</strong>: The job instance is successful.</li>
+             * <li><strong>5</strong>: The job instance failed.</li>
+             * <li><strong>9</strong>: The job instance is rejected.</li>
+             * </ul>
+             * <p>Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus</p>
              * 
-             * *   **1**: The job instance is waiting for execution.
-             * *   **3**: The job instance is running.
-             * *   **4**: The job instance is successful.
-             * *   **5**: The job instance failed.
-             * *   **9**: The job instance is rejected.
-             * 
-             * Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -447,15 +687,17 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to specify the time when to schedule the job instance. Valid values:
-             * <p>
+             * <p>The method that is used to specify the time when to schedule the job instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: cron</li>
+             * <li><strong>3</strong>: fix_rate</li>
+             * <li><strong>4</strong>: second_delay</li>
+             * <li><strong>100</strong>: api</li>
+             * </ul>
+             * <p>Enumeration class: com.alibaba.schedulerx.common.domain.TimeType</p>
              * 
-             * *   **1**: cron
-             * *   **3**: fix_rate
-             * *   **4**: second_delay
-             * *   **100**: api
-             * 
-             * Enumeration class: com.alibaba.schedulerx.common.domain.TimeType
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeType(Integer timeType) {
                 this.timeType = timeType;
@@ -463,7 +705,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The trace ID, which can be used to query trace details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>210e845016596663430048015d0a2c</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -471,16 +716,18 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type of the job instance. Valid values:
-             * <p>
+             * <p>The trigger type of the job instance. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The job instance was triggered at the scheduled time.</li>
+             * <li><strong>2</strong>: The job instance was triggered due to data update.</li>
+             * <li><strong>3</strong>: The job instance was triggered by an API call.</li>
+             * <li><strong>4</strong>: The job instance was triggered because it is manually rerun.</li>
+             * <li><strong>5</strong>: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.</li>
+             * </ul>
+             * <p>Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType</p>
              * 
-             * *   **1**: The job instance was triggered at the scheduled time.
-             * *   **2**: The job instance was triggered due to data update.
-             * *   **3**: The job instance was triggered by an API call.
-             * *   **4**: The job instance was triggered because it is manually rerun.
-             * *   **5**: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
-             * 
-             * Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder triggerType(Integer triggerType) {
                 this.triggerType = triggerType;
@@ -488,7 +735,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the triggered client. The value is in the IP address:Port number format.
+             * <p>The endpoint of the triggered client. The value is in the IP address:Port number format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0:16</p>
              */
             public Builder workAddr(String workAddr) {
                 this.workAddr = workAddr;
@@ -502,8 +752,14 @@ public class GetJobInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("JobInstanceDetail")
+        @com.aliyun.core.annotation.NameInMap("JobInstanceDetail")
         private JobInstanceDetail jobInstanceDetail;
 
         private Data(Builder builder) {
@@ -529,7 +785,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
             private JobInstanceDetail jobInstanceDetail; 
 
             /**
-             * The details of the job instance.
+             * <p>The details of the job instance.</p>
              */
             public Builder jobInstanceDetail(JobInstanceDetail jobInstanceDetail) {
                 this.jobInstanceDetail = jobInstanceDetail;

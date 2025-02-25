@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoleAclRequest} extends {@link RequestModel}
  *
  * <p>GetRoleAclRequest</p>
  */
 public class GetRoleAclRequest extends Request {
-    @Path
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Path
-    @NameInMap("roleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("roleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
     private GetRoleAclRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class GetRoleAclRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -79,7 +88,11 @@ public class GetRoleAclRequest extends Request {
         }
 
         /**
-         * The name of the role.
+         * <p>The name of the role.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>roleA</p>
          */
         public Builder roleName(String roleName) {
             this.putPathParameter("roleName", roleName);

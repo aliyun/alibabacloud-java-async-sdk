@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcBindingRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcBindingRequest</p>
  */
 public class DeleteVpcBindingRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Path
-    @NameInMap("vpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private DeleteVpcBindingRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class DeleteVpcBindingRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +83,11 @@ public class DeleteVpcBindingRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp106zxlfj1fqc9</p>
          */
         public Builder vpcId(String vpcId) {
             this.putPathParameter("vpcId", vpcId);

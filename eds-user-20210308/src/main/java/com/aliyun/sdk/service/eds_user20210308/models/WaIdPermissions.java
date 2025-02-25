@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WaIdPermissions} extends {@link TeaModel}
  *
  * <p>WaIdPermissions</p>
  */
 public class WaIdPermissions extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IsBasicChild")
+    @com.aliyun.core.annotation.NameInMap("IsBasicChild")
     private Boolean isBasicChild;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("SubPermissions")
-    private java.util.List < WaIdPermissions > subPermissions;
+    @com.aliyun.core.annotation.NameInMap("SubPermissions")
+    private java.util.List<WaIdPermissions> subPermissions;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private WaIdPermissions(Builder builder) {
@@ -67,7 +72,7 @@ public class WaIdPermissions extends TeaModel {
     /**
      * @return subPermissions
      */
-    public java.util.List < WaIdPermissions > getSubPermissions() {
+    public java.util.List<WaIdPermissions> getSubPermissions() {
         return this.subPermissions;
     }
 
@@ -82,7 +87,7 @@ public class WaIdPermissions extends TeaModel {
         private String code; 
         private Boolean isBasicChild; 
         private String name; 
-        private java.util.List < WaIdPermissions > subPermissions; 
+        private java.util.List<WaIdPermissions> subPermissions; 
         private String type; 
 
         /**
@@ -112,7 +117,7 @@ public class WaIdPermissions extends TeaModel {
         /**
          * SubPermissions.
          */
-        public Builder subPermissions(java.util.List < WaIdPermissions > subPermissions) {
+        public Builder subPermissions(java.util.List<WaIdPermissions> subPermissions) {
             this.subPermissions = subPermissions;
             return this;
         }

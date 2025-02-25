@@ -1,87 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertLogListRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlertLogListRequest</p>
  */
 public class DescribeAlertLogListRequest extends Request {
-    @Query
-    @NameInMap("ContactGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroup")
     private String contactGroup;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("GroupBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupBy")
     private String groupBy;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("LastMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastMin")
     private String lastMin;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("SendStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendStatus")
     private String sendStatus;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private DescribeAlertLogListRequest(Builder builder) {
@@ -292,7 +292,10 @@ public class DescribeAlertLogListRequest extends Request {
         } 
 
         /**
-         * The alert contact group.
+         * <p>The alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         public Builder contactGroup(String contactGroup) {
             this.putQueryParameter("ContactGroup", contactGroup);
@@ -301,7 +304,15 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The end timestamp of the alert logs to be queried. Unit: milliseconds.
+         * <p>The end timestamp of the alert logs to be queried.</p>
+         * <p>Unit: milliseconds.</p>
+         * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <code>AlertLogList</code> parameter is empty.</p>
+         * <blockquote>
+         * <p> The time period between the start time specified by <code>StartTime</code> and end time specified by <code>EndTime</code> must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1610074409694</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -310,7 +321,14 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The type of the alert event. Valid values:</p>
+         * <ul>
+         * <li>TRIGGERED: The alert is triggered.</li>
+         * <li>RESOLVED: The alert is resolved.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TRIGGERED</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -319,14 +337,17 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
-         * <p>
+         * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
+         * <ul>
+         * <li><code>product</code>: aggregates data by cloud service.</li>
+         * <li><code>level</code>: aggregates data by alert level.</li>
+         * <li><code>groupId</code>: aggregates data by application group.</li>
+         * <li><code>contactGroup</code>: aggregates data by alert contact group.</li>
+         * <li><code>product,metricName</code>: aggregates data both by cloud service and by metric.</li>
+         * </ul>
          * 
-         * *   `product`: aggregates data by cloud service.
-         * *   `level`: aggregates data by alert level.
-         * *   `groupId`: aggregates data by application group.
-         * *   `contactGroup`: aggregates data by alert contact group.
-         * *   `product,metricName`: aggregates data both by cloud service and by metric.
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -335,7 +356,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7301****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -344,7 +368,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The statistical period of alert logs. Unit: minutes.
+         * <p>The statistical period of alert logs. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
          */
         public Builder lastMin(String lastMin) {
             this.putQueryParameter("LastMin", lastMin);
@@ -353,11 +380,14 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The severity level and notification methods of the alert. Valid values:
-         * <p>
+         * <p>The severity level and notification methods of the alert. Valid values:</p>
+         * <ul>
+         * <li>P4: Alert notifications are sent by using emails and DingTalk chatbots.</li>
+         * <li>OK: No alert is generated.</li>
+         * </ul>
          * 
-         * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
-         * *   OK: No alert is generated.
+         * <strong>example:</strong>
+         * <p>P4</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -366,10 +396,13 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The metric name.
-         * <p>
+         * <p>The metric name.</p>
+         * <blockquote>
+         * <p>For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>IntranetInRate</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -378,10 +411,13 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The namespace of the cloud service.
-         * <p>
+         * <p>The namespace of the cloud service.</p>
+         * <blockquote>
+         * <p> For information about how to query the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -390,7 +426,11 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -399,7 +439,11 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -408,7 +452,11 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The abbreviation of the cloud service name.
+         * <p>The abbreviation of the service name.</p>
+         * <p>For information about how to obtain the abbreviation of a cloud service name, see <a href="https://help.aliyun.com/document_detail/114930.html">DescribeProductsOfActiveMetricRule</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -417,7 +465,11 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule. For more information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * <p>The ID of the alert rule.</p>
+         * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bc369e8_30f87e517ed2fc****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -426,7 +478,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
+         * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -435,7 +490,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The search keyword that is used to query alert logs.
+         * <p>The search keyword that is used to query alert logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -444,16 +502,18 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The status of the alert. Valid values:
-         * <p>
+         * <p>The status of the alert. Valid values:</p>
+         * <ul>
+         * <li>0: The alert is triggered or cleared.</li>
+         * <li>1: The alert is ineffective.</li>
+         * <li>2: The alert is muted.</li>
+         * <li>3: The host is restarting.</li>
+         * <li>4: No alert notification is sent.</li>
+         * </ul>
+         * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
          * 
-         * *   0: The alert is triggered or cleared.
-         * *   1: The alert is ineffective.
-         * *   2: The alert is muted.
-         * *   3: The host is restarting.
-         * *   4: No alert notification is sent.
-         * 
-         * If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sendStatus(String sendStatus) {
             this.putQueryParameter("SendStatus", sendStatus);
@@ -462,7 +522,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the alert rule. Valid value: METRIC. This value indicates an alert rule for time series metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>METRIC</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -471,7 +534,15 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The start timestamp of the alert logs to be queried. Unit: milliseconds.
+         * <p>The start timestamp of the alert logs to be queried.</p>
+         * <p>Unit: milliseconds.</p>
+         * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <code>AlertLogList</code> parameter is empty.</p>
+         * <blockquote>
+         * <p> The time period between the start time specified by <code>StartTime</code> and the end time specified by <code>EndTime</code> must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1609988009694</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

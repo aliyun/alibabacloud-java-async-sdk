@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SignalResourceRequest} extends {@link RequestModel}
  *
  * <p>SignalResourceRequest</p>
  */
 public class SignalResourceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("LogicalResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logicalResourceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("UniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uniqueId;
 
     private SignalResourceRequest(Builder builder) {
@@ -129,12 +129,12 @@ public class SignalResourceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+         * <p>The token can be up to 64 characters in length and can contain letters, digits, hyphens (-) and underscores (_).</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
          * 
-         * The token can be up to 64 characters in length and can contain letters, digits, hyphens (-) and underscores (\_).
-         * 
-         * For more information, see [How to ensure idempotence](~~134212~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -143,7 +143,11 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * The logical ID of the resource as defined in the template.
+         * <p>The logical ID of the resource as defined in the template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebServer</p>
          */
         public Builder logicalResourceId(String logicalResourceId) {
             this.putQueryParameter("LogicalResourceId", logicalResourceId);
@@ -152,7 +156,11 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +169,11 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -170,12 +182,16 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * The status of the signal. Failure signals can cause stack creation or update to fail. If all signals are warnings, the stack cannot be created or updated. Valid values:
-         * <p>
+         * <p>The status of the signal. Failure signals can cause stack creation or update to fail. If all signals are warnings, the stack cannot be created or updated. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS</li>
+         * <li>FAILURE</li>
+         * <li>WARNING</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   SUCCESS
-         * *   FAILURE
-         * *   WARNING
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -184,7 +200,11 @@ public class SignalResourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the signal. The ID must be 1 to 64 characters in length. If multiple signals are sent to a single resource, each signal must have a unique ID.
+         * <p>The unique ID of the signal. The ID must be 1 to 64 characters in length. If multiple signals are sent to a single resource, each signal must have a unique ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27c7347b-352a-4377-accf-63d361c1****</p>
          */
         public Builder uniqueId(String uniqueId) {
             this.putQueryParameter("UniqueId", uniqueId);

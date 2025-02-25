@@ -1,53 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesRequest</p>
  */
 public class DescribeDBInstancesRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbVersion")
+    private String dbVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("MustHasCdc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MustHasCdc")
     private Boolean mustHasCdc;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 5)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Series")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Series")
     private String series;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
     private DescribeDBInstancesRequest(Builder builder) {
         super(builder);
+        this.dbVersion = builder.dbVersion;
         this.instanceId = builder.instanceId;
         this.mustHasCdc = builder.mustHasCdc;
         this.pageNumber = builder.pageNumber;
@@ -69,6 +79,13 @@ public class DescribeDBInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dbVersion
+     */
+    public String getDbVersion() {
+        return this.dbVersion;
     }
 
     /**
@@ -128,6 +145,7 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
+        private String dbVersion; 
         private String instanceId; 
         private Boolean mustHasCdc; 
         private Integer pageNumber; 
@@ -143,6 +161,7 @@ public class DescribeDBInstancesRequest extends Request {
 
         private Builder(DescribeDBInstancesRequest request) {
             super(request);
+            this.dbVersion = request.dbVersion;
             this.instanceId = request.instanceId;
             this.mustHasCdc = request.mustHasCdc;
             this.pageNumber = request.pageNumber;
@@ -152,6 +171,15 @@ public class DescribeDBInstancesRequest extends Request {
             this.series = request.series;
             this.tags = request.tags;
         } 
+
+        /**
+         * DbVersion.
+         */
+        public Builder dbVersion(String dbVersion) {
+            this.putQueryParameter("DbVersion", dbVersion);
+            this.dbVersion = dbVersion;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -190,7 +218,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

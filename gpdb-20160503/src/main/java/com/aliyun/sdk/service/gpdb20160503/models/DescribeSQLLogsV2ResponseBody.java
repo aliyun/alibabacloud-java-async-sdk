@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogsV2ResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogsV2ResponseBody</p>
  */
 public class DescribeSQLLogsV2ResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSQLLogsV2ResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.items = builder.items;
         this.pageNumber = builder.pageNumber;
         this.pageRecordCount = builder.pageRecordCount;
@@ -40,9 +49,16 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,21 +84,36 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private String accessDeniedDetail; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
 
         /**
-         * Details of the SQL logs.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account name invalid</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The queried SQL execution logs.</p>
+         */
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +121,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -98,7 +132,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7941C94-B92F-46A0-BD3E-2D**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,58 +148,80 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLLogsV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogsV2ResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBRole")
+        @com.aliyun.core.annotation.NameInMap("DBRole")
         private String DBRole;
 
-        @NameInMap("ExecuteCost")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteCost")
         private Float executeCost;
 
-        @NameInMap("ExecuteState")
+        @com.aliyun.core.annotation.NameInMap("ExecuteState")
         private String executeState;
 
-        @NameInMap("OperationClass")
+        @com.aliyun.core.annotation.NameInMap("OperationClass")
         private String operationClass;
 
-        @NameInMap("OperationExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("OperationExecuteTime")
         private String operationExecuteTime;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("QueryId")
+        private String queryId;
+
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("ScanRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ScanRowCounts")
         private Long scanRowCounts;
 
-        @NameInMap("SourceIP")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceIP")
         private String sourceIP;
 
-        @NameInMap("SourcePort")
+        @com.aliyun.core.annotation.NameInMap("SourcePort")
         private Integer sourcePort;
 
         private Items(Builder builder) {
             this.accountName = builder.accountName;
             this.DBName = builder.DBName;
             this.DBRole = builder.DBRole;
+            this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
             this.executeCost = builder.executeCost;
             this.executeState = builder.executeState;
             this.operationClass = builder.operationClass;
             this.operationExecuteTime = builder.operationExecuteTime;
             this.operationType = builder.operationType;
+            this.queryId = builder.queryId;
             this.returnRowCounts = builder.returnRowCounts;
             this.SQLText = builder.SQLText;
             this.scanRowCounts = builder.scanRowCounts;
+            this.sessionId = builder.sessionId;
             this.sourceIP = builder.sourceIP;
             this.sourcePort = builder.sourcePort;
         }
@@ -194,6 +253,20 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
          */
         public String getDBRole() {
             return this.DBRole;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -232,6 +305,13 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return queryId
+         */
+        public String getQueryId() {
+            return this.queryId;
+        }
+
+        /**
          * @return returnRowCounts
          */
         public Long getReturnRowCounts() {
@@ -253,6 +333,13 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
          * @return sourceIP
          */
         public String getSourceIP() {
@@ -270,19 +357,26 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             private String accountName; 
             private String DBName; 
             private String DBRole; 
+            private String errorCode; 
+            private String errorMsg; 
             private Float executeCost; 
             private String executeState; 
             private String operationClass; 
             private String operationExecuteTime; 
             private String operationType; 
+            private String queryId; 
             private Long returnRowCounts; 
             private String SQLText; 
             private Long scanRowCounts; 
+            private String sessionId; 
             private String sourceIP; 
             private Integer sourcePort; 
 
             /**
-             * The database account that executes the SQL statement.
+             * <p>The database account that executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testadmin</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -290,7 +384,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpgadmin</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -298,7 +395,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the database.
+             * <p>The role of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder DBRole(String DBRole) {
                 this.DBRole = DBRole;
@@ -306,7 +406,32 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the query.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternalError</p>
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User not authorized to operate on the specified resource.</p>
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
+                return this;
+            }
+
+            /**
+             * <p>The execution duration of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder executeCost(Float executeCost) {
                 this.executeCost = executeCost;
@@ -314,11 +439,14 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the query. Valid values:
-             * <p>
+             * <p>The execution status of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **fail**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder executeState(String executeState) {
                 this.executeState = executeState;
@@ -326,7 +454,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the query language.
+             * <p>The type of the query language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DQL</p>
              */
             public Builder operationClass(String operationClass) {
                 this.operationClass = operationClass;
@@ -334,7 +465,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was executed.
+             * <p>The time when the SQL statement was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15T17:02:32Z</p>
              */
             public Builder operationExecuteTime(String operationExecuteTime) {
                 this.operationExecuteTime = operationExecuteTime;
@@ -342,7 +476,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement.
+             * <p>The type of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -350,7 +487,21 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2548026401648157601713924318883</p>
+             */
+            public Builder queryId(String queryId) {
+                this.queryId = queryId;
+                return this;
+            }
+
+            /**
+             * <p>The number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -358,7 +509,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -366,7 +520,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries scanned.
+             * <p>The number of entries scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scanRowCounts(Long scanRowCounts) {
                 this.scanRowCounts = scanRowCounts;
@@ -374,7 +531,21 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efc33bd7-f1dc-4b24-b4fb-ab0d5329b7bb</p>
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.<strong>.</strong>.90</p>
              */
             public Builder sourceIP(String sourceIP) {
                 this.sourceIP = sourceIP;
@@ -382,7 +553,10 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the source port.
+             * <p>The number of the source port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50514</p>
              */
             public Builder sourcePort(Integer sourcePort) {
                 this.sourcePort = sourcePort;

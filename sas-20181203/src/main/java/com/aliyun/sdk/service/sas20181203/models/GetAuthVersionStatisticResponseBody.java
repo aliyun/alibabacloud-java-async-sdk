@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthVersionStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthVersionStatisticResponseBody</p>
  */
 public class GetAuthVersionStatisticResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
-    private java.util.List < Statistics> statistics;
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    private java.util.List<Statistics> statistics;
 
     private GetAuthVersionStatisticResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
     /**
      * @return statistics
      */
-    public java.util.List < Statistics> getStatistics() {
+    public java.util.List<Statistics> getStatistics() {
         return this.statistics;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Statistics> statistics; 
+        private java.util.List<Statistics> statistics; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CA2BDF6-F3BD-51A4-BAAC-30B02F7A3FBB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics about the numbers of assets protected by each edition of Security Center.
+         * <p>The statistics about the numbers of assets protected by each edition of Security Center.</p>
          */
-        public Builder statistics(java.util.List < Statistics> statistics) {
+        public Builder statistics(java.util.List<Statistics> statistics) {
             this.statistics = statistics;
             return this;
         }
@@ -71,11 +79,17 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthVersionStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthVersionStatisticResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
-        @NameInMap("AuthVersion")
+        @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private Statistics(Builder builder) {
@@ -110,15 +124,18 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The edition of Security Center. Valid values:
-             * <p>
+             * <p>The edition of Security Center. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Basic edition (Unauthorized)</li>
+             * <li><strong>6</strong>: Anti-virus edition</li>
+             * <li><strong>5</strong>: Advanced edition</li>
+             * <li><strong>3</strong>: Enterprise edition</li>
+             * <li><strong>7</strong>: Ultimate edition</li>
+             * <li><strong>10</strong>: Value-added Plan edition</li>
+             * </ul>
              * 
-             * *   **1**: Basic edition (Unauthorized)
-             * *   **6**: Anti-virus edition
-             * *   **5**: Advanced edition
-             * *   **3**: Enterprise edition
-             * *   **7**: Ultimate edition
-             * *   **10**: Value-added Plan edition
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -126,7 +143,10 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of authorized servers.
+             * <p>The number of authorized servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

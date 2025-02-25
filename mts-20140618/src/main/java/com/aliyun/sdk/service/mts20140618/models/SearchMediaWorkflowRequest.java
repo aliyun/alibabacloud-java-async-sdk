@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaWorkflowRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaWorkflowRequest</p>
  */
 public class SearchMediaWorkflowRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StateList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StateList")
     private String stateList;
 
     private SearchMediaWorkflowRequest(Builder builder) {
@@ -157,7 +157,10 @@ public class SearchMediaWorkflowRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +169,14 @@ public class SearchMediaWorkflowRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>A maximum of <strong>100</strong> entries can be returned on each page.</li>
+         * <li>Default value: <strong>10</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +203,15 @@ public class SearchMediaWorkflowRequest extends Request {
         }
 
         /**
-         * StateList.
+         * <p>The status of the media workflows that you want to query. You can specify multiple states. Separate multiple states with commas (,). Default value: <strong>Inactive,Active,Deleted</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>Inactive</strong>: Deactivated media workflows are queried.</li>
+         * <li><strong>Active</strong>: Activated media workflows are queried.</li>
+         * <li><strong>Deleted</strong>: Deleted media workflows are queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Inactive,Active,Deleted</p>
          */
         public Builder stateList(String stateList) {
             this.putQueryParameter("StateList", stateList);

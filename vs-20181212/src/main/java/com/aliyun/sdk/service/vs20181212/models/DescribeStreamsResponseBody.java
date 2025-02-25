@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStreamsResponseBody</p>
  */
 public class DescribeStreamsResponseBody extends TeaModel {
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Streams")
-    private java.util.List < Streams> streams;
+    @com.aliyun.core.annotation.NameInMap("Streams")
+    private java.util.List<Streams> streams;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeStreamsResponseBody(Builder builder) {
@@ -78,7 +83,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
     /**
      * @return streams
      */
-    public java.util.List < Streams> getStreams() {
+    public java.util.List<Streams> getStreams() {
         return this.streams;
     }
 
@@ -94,7 +99,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         private Long pageNum; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < Streams> streams; 
+        private java.util.List<Streams> streams; 
         private Long totalCount; 
 
         /**
@@ -132,7 +137,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         /**
          * Streams.
          */
-        public Builder streams(java.util.List < Streams> streams) {
+        public Builder streams(java.util.List<Streams> streams) {
             this.streams = streams;
             return this;
         }
@@ -151,44 +156,50 @@ public class DescribeStreamsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStreamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStreamsResponseBody</p>
+     */
     public static class Streams extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private String app;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PlayDomain")
+        @com.aliyun.core.annotation.NameInMap("PlayDomain")
         private String playDomain;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("PushDomain")
+        @com.aliyun.core.annotation.NameInMap("PushDomain")
         private String pushDomain;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private Streams(Builder builder) {

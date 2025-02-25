@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecoverIndexRequest} extends {@link RequestModel}
  *
  * <p>RecoverIndexRequest</p>
  */
 public class RecoverIndexRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("buildDeployId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buildDeployId")
     private Integer buildDeployId;
 
-    @Body
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Body
-    @NameInMap("generation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("generation")
     private String generation;
 
-    @Body
-    @NameInMap("indexName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexName")
     private String indexName;
 
     private RecoverIndexRequest(Builder builder) {
@@ -111,7 +116,11 @@ public class RecoverIndexRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2jlr2g03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +129,10 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * buildDeployId
+         * <p>The deployment ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>277</p>
          */
         public Builder buildDeployId(Integer buildDeployId) {
             this.putBodyParameter("buildDeployId", buildDeployId);
@@ -129,7 +141,10 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * The name of the data source
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04_odps_first</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -138,7 +153,10 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * generation
+         * <p>The ID of the full index version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653018575</p>
          */
         public Builder generation(String generation) {
             this.putBodyParameter("generation", generation);
@@ -147,7 +165,10 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * <p>The index name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main_index</p>
          */
         public Builder indexName(String indexName) {
             this.putBodyParameter("indexName", indexName);

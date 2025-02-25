@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePipelineRelationsRequest} extends {@link RequestModel}
  *
  * <p>DeletePipelineRelationsRequest</p>
  */
 public class DeletePipelineRelationsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("pipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pipelineId;
 
-    @Query
-    @NameInMap("relObjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("relObjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relObjectId;
 
-    @Query
-    @NameInMap("relObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("relObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relObjectType;
 
     private DeletePipelineRelationsRequest(Builder builder) {
@@ -100,7 +105,10 @@ public class DeletePipelineRelationsRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +117,10 @@ public class DeletePipelineRelationsRequest extends Request {
         }
 
         /**
-         * pipelineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -118,7 +129,10 @@ public class DeletePipelineRelationsRequest extends Request {
         }
 
         /**
-         * relObjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder relObjectId(String relObjectId) {
             this.putQueryParameter("relObjectId", relObjectId);
@@ -127,7 +141,10 @@ public class DeletePipelineRelationsRequest extends Request {
         }
 
         /**
-         * relObjectType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VARIABLE_GROUP</p>
          */
         public Builder relObjectType(String relObjectType) {
             this.putQueryParameter("relObjectType", relObjectType);

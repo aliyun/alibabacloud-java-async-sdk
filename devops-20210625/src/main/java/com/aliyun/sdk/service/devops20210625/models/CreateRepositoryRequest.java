@@ -1,101 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRepositoryRequest} extends {@link RequestModel}
  *
  * <p>CreateRepositoryRequest</p>
  */
 public class CreateRepositoryRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("avatarUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("avatarUrl")
     private String avatarUrl;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("gitignoreType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gitignoreType")
     private String gitignoreType;
 
-    @Body
-    @NameInMap("importAccount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("importAccount")
     private String importAccount;
 
-    @Body
-    @NameInMap("importDemoProject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("importDemoProject")
     private Boolean importDemoProject;
 
-    @Body
-    @NameInMap("importRepoType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("importRepoType")
     private String importRepoType;
 
-    @Body
-    @NameInMap("importToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("importToken")
     private String importToken;
 
-    @Body
-    @NameInMap("importTokenEncrypted")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("importTokenEncrypted")
     private String importTokenEncrypted;
 
-    @Body
-    @NameInMap("importUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("importUrl")
     private String importUrl;
 
-    @Body
-    @NameInMap("initStandardService")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("initStandardService")
     private Boolean initStandardService;
 
-    @Body
-    @NameInMap("isCryptoEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isCryptoEnabled")
     private Boolean isCryptoEnabled;
 
-    @Body
-    @NameInMap("localImportUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("localImportUrl")
     private String localImportUrl;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("namespaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("namespaceId")
     private Long namespaceId;
 
-    @Body
-    @NameInMap("path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("path")
     private String path;
 
-    @Body
-    @NameInMap("readmeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("readmeType")
     private String readmeType;
 
-    @Body
-    @NameInMap("visibilityLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibilityLevel")
     private Integer visibilityLevel;
 
-    @Query
-    @NameInMap("createParentPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createParentPath")
     private Boolean createParentPath;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("sync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sync")
     private Boolean sync;
 
     private CreateRepositoryRequest(Builder builder) {
@@ -453,7 +458,7 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -507,7 +512,10 @@ public class CreateRepositoryRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

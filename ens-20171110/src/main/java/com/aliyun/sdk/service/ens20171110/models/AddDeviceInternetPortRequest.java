@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDeviceInternetPortRequest} extends {@link RequestModel}
  *
  * <p>AddDeviceInternetPortRequest</p>
  */
 public class AddDeviceInternetPortRequest extends Request {
-    @Query
-    @NameInMap("ISP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ISP")
     private String ISP;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalIp;
 
-    @Query
-    @NameInMap("InternalPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
     private String internalPort;
 
-    @Query
-    @NameInMap("NatType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private AddDeviceInternetPortRequest(Builder builder) {
@@ -128,7 +133,16 @@ public class AddDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * ISP.
+         * <p>The Internet service provider (ISP). If you leave this parameter empty, the system automatically allows a random ISP. Valid values:</p>
+         * <ul>
+         * <li>telecom: China Telecom</li>
+         * <li>cmcc: China Mobile</li>
+         * <li>unicom: China Unicom</li>
+         * <li>cbn: China Broadcasting Network (CBN)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -137,7 +151,11 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance. You can specify the ID of the server or container.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5saiou41t6ude2ia56ri902ke</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +164,11 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * <p>The private IP address of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.50</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -155,7 +177,10 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * <p>The internal port number. Specify this parameter in the following format: first port/last port. Separate multiple port number groups with commas (,). Example: 1026/2001,2005/2005. This parameter is required if you set NatType to DNAT. If you set NatType to SNAT, the value of this parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12022/12022</p>
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -164,7 +189,15 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * NatType.
+         * <p>The type of the NAT gateway. The value of this parameter is of the enumerated data type. Valid values:</p>
+         * <ul>
+         * <li>SNAT</li>
+         * <li>DNAT</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DNAT</p>
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -173,7 +206,11 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wuxi-5</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

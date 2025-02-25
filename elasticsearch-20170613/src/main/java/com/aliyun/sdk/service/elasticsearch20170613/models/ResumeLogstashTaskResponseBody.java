@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeLogstashTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ResumeLogstashTaskResponseBody</p>
  */
 public class ResumeLogstashTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private ResumeLogstashTaskResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The error code returned. If the API operation is successfully called, this parameter is not returned.
+         * <p>The error code returned. If the API operation is successfully called, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,10 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned. If the API operation is successfully called, this parameter is not returned.
+         * <p>The error message returned. If the API operation is successfully called, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified cluster does not exist. Check the cluster status and try again.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +96,10 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FA05123-745C-42FD-A69B-AFF48EF9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +107,14 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the change task is resumed. Valid values:
-         * <p>
+         * <p>Indicates whether the change task is resumed. Valid values:</p>
+         * <ul>
+         * <li>true: The change task is resumed.</li>
+         * <li>false: The change task fails to be resumed.</li>
+         * </ul>
          * 
-         * *   true: The change task is resumed.
-         * *   false: The change task fails to be resumed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

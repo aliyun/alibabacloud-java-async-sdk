@@ -1,70 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNacosConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateNacosConfigRequest</p>
  */
 public class UpdateNacosConfigRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("BetaIps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BetaIps")
     private String betaIps;
 
-    @Query
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Query
-    @NameInMap("DataId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataId;
 
-    @Query
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Query
-    @NameInMap("EncryptedDataKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptedDataKey")
     private String encryptedDataKey;
 
-    @Query
-    @NameInMap("Group")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Group")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String group;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Md5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Md5")
     private String md5;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private UpdateNacosConfigRequest(Builder builder) {
@@ -225,11 +230,14 @@ public class UpdateNacosConfigRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -238,7 +246,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postoffice</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -247,7 +258,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The list of IP addresses where the beta release of the configuration is performed.
+         * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196.168.XX.XX</p>
          */
         public Builder betaIps(String betaIps) {
             this.putQueryParameter("BetaIps", betaIps);
@@ -256,16 +270,20 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The content of the configuration.
+         * Content.
          */
         public Builder content(String content) {
-            this.putQueryParameter("Content", content);
+            this.putBodyParameter("Content", content);
             this.content = content;
             return this;
         }
 
         /**
-         * The ID of the configuration.
+         * <p>The ID of the configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ky-check-****.yml</p>
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -274,7 +292,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The description of the configuration.
+         * <p>The description of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic configurations</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -283,7 +304,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The encryption key.
+         * <p>The encryption key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122wdwe****</p>
          */
         public Builder encryptedDataKey(String encryptedDataKey) {
             this.putQueryParameter("EncryptedDataKey", encryptedDataKey);
@@ -292,7 +316,11 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * <p>The name of the group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resource</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -301,7 +329,11 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-7pp2a****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -310,7 +342,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The MD5 value of the configuration.
+         * <p>The MD5 value of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>045439703a273a94306422b****</p>
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -319,7 +354,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78b7af66-d15f-4541-b886-11ed81ecb6c0</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -328,7 +366,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-20</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -337,7 +378,10 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.
+         * <p>The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

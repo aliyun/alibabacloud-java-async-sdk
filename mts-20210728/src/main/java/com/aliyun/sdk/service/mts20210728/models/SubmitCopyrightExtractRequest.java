@@ -21,6 +21,10 @@ public class SubmitCopyrightExtractRequest extends Request {
     private String input;
 
     @Body
+    @NameInMap("Params")
+    private String params;
+
+    @Body
     @NameInMap("Url")
     private String url;
 
@@ -32,6 +36,7 @@ public class SubmitCopyrightExtractRequest extends Request {
         super(builder);
         this.callBack = builder.callBack;
         this.input = builder.input;
+        this.params = builder.params;
         this.url = builder.url;
         this.userData = builder.userData;
     }
@@ -64,6 +69,13 @@ public class SubmitCopyrightExtractRequest extends Request {
     }
 
     /**
+     * @return params
+     */
+    public String getParams() {
+        return this.params;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -80,6 +92,7 @@ public class SubmitCopyrightExtractRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitCopyrightExtractRequest, Builder> {
         private String callBack; 
         private String input; 
+        private String params; 
         private String url; 
         private String userData; 
 
@@ -91,12 +104,13 @@ public class SubmitCopyrightExtractRequest extends Request {
             super(request);
             this.callBack = request.callBack;
             this.input = request.input;
+            this.params = request.params;
             this.url = request.url;
             this.userData = request.userData;
         } 
 
         /**
-         * 任务完成回调
+         * CallBack.
          */
         public Builder callBack(String callBack) {
             this.putBodyParameter("CallBack", callBack);
@@ -105,7 +119,7 @@ public class SubmitCopyrightExtractRequest extends Request {
         }
 
         /**
-         * 输入文件oss地址
+         * Input.
          */
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
@@ -114,7 +128,16 @@ public class SubmitCopyrightExtractRequest extends Request {
         }
 
         /**
-         * url链接
+         * Params.
+         */
+        public Builder params(String params) {
+            this.putBodyParameter("Params", params);
+            this.params = params;
+            return this;
+        }
+
+        /**
+         * Url.
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -123,7 +146,7 @@ public class SubmitCopyrightExtractRequest extends Request {
         }
 
         /**
-         * 用户数据
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);

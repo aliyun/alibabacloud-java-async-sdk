@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogStoreOfEndpointGroupResponseBody</p>
  */
 public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsLogStoreName")
+    @com.aliyun.core.annotation.NameInMap("SlsLogStoreName")
     private String slsLogStoreName;
 
-    @NameInMap("SlsProjectName")
+    @com.aliyun.core.annotation.NameInMap("SlsProjectName")
     private String slsProjectName;
 
-    @NameInMap("SlsRegionId")
+    @com.aliyun.core.annotation.NameInMap("SlsRegionId")
     private String slsRegionId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeLogStoreOfEndpointGroupResponseBody(Builder builder) {
@@ -146,7 +145,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The response parameters.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +161,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Log Service project.
+         * The name of the Simple Log Service project.
          */
         public Builder slsProjectName(String slsProjectName) {
             this.slsProjectName = slsProjectName;
@@ -170,7 +169,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the Log Service project.
+         * The region ID of the Simple Log Service project.
          */
         public Builder slsRegionId(String slsRegionId) {
             this.slsRegionId = slsRegionId;
@@ -178,7 +177,11 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the log.
+         * Indicates whether the endpoint group is bound to the Simple Log Service project.
+         * <p>
+         * 
+         * *   **on:** The endpoint group is bound to the Simple Log Service project.
+         * *   **off:** The endpoint group is not bound to the Simple Log Service project.
          */
         public Builder status(String status) {
             this.status = status;

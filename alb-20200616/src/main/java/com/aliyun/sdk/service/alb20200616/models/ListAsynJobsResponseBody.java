@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsynJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAsynJobsResponseBody</p>
  */
 public class ListAsynJobsResponseBody extends TeaModel {
-    @NameInMap("Jobs")
-    private java.util.List < Jobs> jobs;
+    @com.aliyun.core.annotation.NameInMap("Jobs")
+    private java.util.List<Jobs> jobs;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListAsynJobsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListAsynJobsResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -79,22 +84,25 @@ public class ListAsynJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The tasks.
+         * <p>The tasks.</p>
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +110,14 @@ public class ListAsynJobsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +125,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,35 +152,41 @@ public class ListAsynJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAsynJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAsynJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("OperateType")
+        @com.aliyun.core.annotation.NameInMap("OperateType")
         private String operateType;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Jobs(Builder builder) {
@@ -270,7 +293,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the operation.
+             * <p>The name of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateLoadBalancer</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -278,10 +304,11 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the start time of the task. Unit: milliseconds.
-             * <p>
+             * <p>The timestamp that indicates the start time of the task. Unit: milliseconds.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>2134663231234</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -289,7 +316,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * If the value of **Status** is Failed, an error code is returned.
+             * <p>If the value of <strong>Status</strong> is Failed, an error code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>506</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -297,7 +327,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * If the value of **Status** is Failed, an error message is returned.
+             * <p>If the value of <strong>Status</strong> is Failed, an error message is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AllocateEipAddress Failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -305,7 +338,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365F4154-92F6-4AE4-92F8-7FF34B5****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -313,10 +349,11 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the end time of the task. Unit: milliseconds.
-             * <p>
+             * <p>The timestamp that indicates the end time of the task. Unit: milliseconds.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>2144663233315</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -324,12 +361,15 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operation. Valid values:
-             * <p>
+             * <p>The type of the operation. Valid values:</p>
+             * <ul>
+             * <li><strong>Create</strong></li>
+             * <li><strong>Update</strong></li>
+             * <li><strong>Delete</strong></li>
+             * </ul>
              * 
-             * *   **Create**
-             * *   **Update**
-             * *   **Delete**
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -337,7 +377,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The associated resource ID.
+             * <p>The associated resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-o8mszt95oamfjy****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -345,15 +388,18 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the associated resource. Valid values:
-             * <p>
+             * <p>The type of the associated resource. Valid values:</p>
+             * <ul>
+             * <li><strong>loadbalancer</strong>: an ALB instance</li>
+             * <li><strong>listener</strong>: a listener</li>
+             * <li><strong>rule</strong>: a forwarding rule</li>
+             * <li><strong>acl</strong>: an ACL</li>
+             * <li><strong>securitypolicy</strong>: a security policy</li>
+             * <li><strong>servergroup</strong>: a server group</li>
+             * </ul>
              * 
-             * *   **loadbalancer**: an ALB instance
-             * *   **listener**: a listener
-             * *   **rule**: a forwarding rule
-             * *   **acl**: an ACL
-             * *   **securitypolicy**: a security policy
-             * *   **servergroup**: a server group
+             * <strong>example:</strong>
+             * <p>acl</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -361,12 +407,15 @@ public class ListAsynJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>Succeeded</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Processing</strong></li>
+             * </ul>
              * 
-             * *   **Succeeded**
-             * *   **Failed**
-             * *   **Processing**
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;

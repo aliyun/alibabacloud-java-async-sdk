@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCloudSiemCustomizeRulesResponseBody</p>
  */
 public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCloudSiemCustomizeRulesResponseBody(Builder builder) {
@@ -121,8 +120,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -136,13 +135,13 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,76 +216,84 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeMds")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeMds")
         private String alertTypeMds;
 
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @NameInMap("EventTransferExt")
+        @com.aliyun.core.annotation.NameInMap("AttCk")
+        private String attCk;
+
+        @com.aliyun.core.annotation.NameInMap("DataType")
+        private Integer dataType;
+
+        @com.aliyun.core.annotation.NameInMap("EventTransferExt")
         private String eventTransferExt;
 
-        @NameInMap("EventTransferSwitch")
+        @com.aliyun.core.annotation.NameInMap("EventTransferSwitch")
         private Integer eventTransferSwitch;
 
-        @NameInMap("EventTransferType")
+        @com.aliyun.core.annotation.NameInMap("EventTransferType")
         private String eventTransferType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LogSource")
+        @com.aliyun.core.annotation.NameInMap("LogSource")
         private String logSource;
 
-        @NameInMap("LogSourceMds")
+        @com.aliyun.core.annotation.NameInMap("LogSourceMds")
         private String logSourceMds;
 
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("LogTypeMds")
+        @com.aliyun.core.annotation.NameInMap("LogTypeMds")
         private String logTypeMds;
 
-        @NameInMap("QueryCycle")
+        @com.aliyun.core.annotation.NameInMap("QueryCycle")
         private String queryCycle;
 
-        @NameInMap("RuleCondition")
+        @com.aliyun.core.annotation.NameInMap("RuleCondition")
         private String ruleCondition;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleGroup")
+        @com.aliyun.core.annotation.NameInMap("RuleGroup")
         private String ruleGroup;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleThreshold")
+        @com.aliyun.core.annotation.NameInMap("RuleThreshold")
         private String ruleThreshold;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
         private ResponseData(Builder builder) {
             this.alertType = builder.alertType;
             this.alertTypeMds = builder.alertTypeMds;
             this.aliuid = builder.aliuid;
+            this.attCk = builder.attCk;
+            this.dataType = builder.dataType;
             this.eventTransferExt = builder.eventTransferExt;
             this.eventTransferSwitch = builder.eventTransferSwitch;
             this.eventTransferType = builder.eventTransferType;
@@ -335,6 +342,20 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
          */
         public Long getAliuid() {
             return this.aliuid;
+        }
+
+        /**
+         * @return attCk
+         */
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        /**
+         * @return dataType
+         */
+        public Integer getDataType() {
+            return this.dataType;
         }
 
         /**
@@ -474,6 +495,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             private String alertType; 
             private String alertTypeMds; 
             private Long aliuid; 
+            private String attCk; 
+            private Integer dataType; 
             private String eventTransferExt; 
             private Integer eventTransferSwitch; 
             private String eventTransferType; 
@@ -519,7 +542,26 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about event generation. If the value of eventTransferType is allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
+             * The alert additional field for ATT\&CK.
+             */
+            public Builder attCk(String attCk) {
+                this.attCk = attCk;
+                return this;
+            }
+
+            /**
+             * The type of the view. Valid values:
+             * <p>
+             * 
+             * 0: view of the current Alibaba Cloud account. 1: view of all accounts for the enterprise.
+             */
+            public Builder dataType(Integer dataType) {
+                this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * The extended information about event generation. If the value of **eventTransferType** is **allToSingle**, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
              */
             public Builder eventTransferExt(String eventTransferExt) {
                 this.eventTransferExt = eventTransferExt;
@@ -530,8 +572,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
              * Indicates whether the system generates an event for the alert. Valid values:
              * <p>
              * 
-             * *   0: no.
-             * *   1: yes.
+             * *   **0**: no.
+             * *   **1**: yes.
              */
             public Builder eventTransferSwitch(Integer eventTransferSwitch) {
                 this.eventTransferSwitch = eventTransferSwitch;
@@ -539,12 +581,12 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The event generation method. Valid values:
+             * The method that is used to generate an event. Valid values:
              * <p>
              * 
-             * *   default: The default method is used.
-             * *   singleToSingle: The system generates an event for each alert.
-             * *   allToSingle: The system generates an event for alerts within a period of time.
+             * *   **default**: built-in method.
+             * *   **singleToSingle**: The system generates an event for each alert.
+             * *   **allToSingle**: The system generates an event for alerts within a period of time.
              */
             public Builder eventTransferType(String eventTransferType) {
                 this.eventTransferType = eventTransferType;
@@ -616,7 +658,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The query condition of the rule in the JSON format. The HTML escape characters are reversed.
+             * The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.
              */
             public Builder ruleCondition(String ruleCondition) {
                 this.ruleCondition = ruleCondition;
@@ -632,7 +674,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.
+             * The log aggregation field. The value is in the JSON format. The HTML escape characters are reversed.
              */
             public Builder ruleGroup(String ruleGroup) {
                 this.ruleGroup = ruleGroup;
@@ -659,8 +701,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
              * The type of the rule. Valid values:
              * <p>
              * 
-             * *   predefine
-             * *   customize
+             * *   **predefine**
+             * *   **customize**
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -668,14 +710,14 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule status. Valid values:
+             * The status of the rule. Valid values:
              * <p>
              * 
-             * *   0: The rule is in the initial state.
-             * *   10: The simulation data is tested.
-             * *   15: The business data is being tested.
-             * *   20: The business data test ends.
-             * *   100: The rule takes effect.
+             * *   **0**: The rule is in the initial state.
+             * *   **10**: The simulation data is tested.
+             * *   **15**: The business data is being tested.
+             * *   **20**: The business data test is complete.
+             * *   **100**: The rule is in effect.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -683,12 +725,12 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The threat level. Valid values:
+             * The risk level. Valid values:
              * <p>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * *   **serious**: high-risk.
+             * *   **suspicious**: medium-risk.
+             * *   **remind**: low-risk.
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -703,10 +745,10 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {

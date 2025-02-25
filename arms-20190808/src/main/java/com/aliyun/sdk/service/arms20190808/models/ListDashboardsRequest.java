@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDashboardsRequest} extends {@link RequestModel}
  *
  * <p>ListDashboardsRequest</p>
  */
 public class ListDashboardsRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @Query
-    @NameInMap("DashboardName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DashboardName")
     private String dashboardName;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RecreateSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecreateSwitch")
     private Boolean recreateSwitch;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private ListDashboardsRequest(Builder builder) {
@@ -152,7 +157,10 @@ public class ListDashboardsRequest extends Request {
         } 
 
         /**
-         * The ID of the ACK cluster.
+         * <p>The ID of the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +169,10 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * Valid values: ACK, ASK, cloud-product-prometheus, and Node. You can query the dashboards of a virtual cluster by specifying the cluster type. For InfluxDB, set this parameter to `cloud-product-prometheus`.
+         * <p>Valid values: ACK, ASK, cloud-product-prometheus, and Node. You can query the dashboards of a virtual cluster by specifying the cluster type. For InfluxDB, set this parameter to <code>cloud-product-prometheus</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -170,7 +181,10 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * The unique names of the dashboards. You can query dashboards by specifying their names. The **dashboard title** can be changed whereas the **dashboard name** cannot. You can specify multiple names and separate them with commas (,), for example, `k8s-event,k8s-overview`. A dashboard may have multiple versions. If you want to specify a version, you can add version information after the name, for example, `k8s-event:v1,k8s-overview:latest`.
+         * <p>The unique names of the dashboards. You can query dashboards by specifying their names. The <strong>dashboard title</strong> can be changed whereas the <strong>dashboard name</strong> cannot. You can specify multiple names and separate them with commas (,), for example, <code>k8s-event,k8s-overview</code>. A dashboard may have multiple versions. If you want to specify a version, you can add version information after the name, for example, <code>k8s-event:v1,k8s-overview:latest</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-node-overview</p>
          */
         public Builder dashboardName(String dashboardName) {
             this.putQueryParameter("DashboardName", dashboardName);
@@ -179,7 +193,10 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * The language of the Grafana dashboards. Valid values: en and zh. Default value: en.
+         * <p>The language of the returned Grafana dashboard. Valid values: en and zh. Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -188,7 +205,10 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * The code of the cloud service. This parameter is required if you set the ClusterType parameter to `cloud-product-prometheus`. The following cloud services are available: Serverless App Engine, Microservices Engine, Message Queue for Apache RocketMQ, Lindorm, Message Queue for Apache Kafka, ApsaraDB for ClickHouse, Data Lake Analytics, Message Queue for RabbitMQ, ApsaraDB for MongoDB, Time Series Database (TSDB) for InfluxDB, MSE Cloud-native Gateway, Grafana Service, SchedulerX, Global Transaction Service, Enterprise Distributed Application Service, Machine Learning Platform for AI - Elastic Algorithm Service (EAS), Application High Availability Service, and Performance Testing.
+         * <p>The cloud service code. This parameter is required if you set the ClusterType parameter to <code>cloud-product-prometheus</code>. The following cloud services are available: Serverless App Engine, Microservices Engine, Message Queue for Apache RocketMQ, Lindorm, Message Queue for Apache Kafka, ApsaraDB for ClickHouse, Data Lake Analytics, Message Queue for RabbitMQ, ApsaraDB for MongoDB, Time Series Database (TSDB) for InfluxDB, MSE Cloud-native Gateway, Grafana Service, SchedulerX, Global Transaction Service, Enterprise Distributed Application Service, Machine Learning Platform for AI - Elastic Algorithm Service (EAS), Application High Availability Service, and Performance Testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -197,7 +217,10 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * Specifies whether to create or query a virtual cluster. This parameter provides backward compatibility.
+         * <p>Specifies whether to create or query a virtual cluster. This parameter provides backward compatibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recreateSwitch(Boolean recreateSwitch) {
             this.putQueryParameter("RecreateSwitch", recreateSwitch);
@@ -206,7 +229,10 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,7 +241,10 @@ public class ListDashboardsRequest extends Request {
         }
 
         /**
-         * The dashboard title. The dashboard title can be changed. We recommend that you specify the **DashboardName** parameter.
+         * <p>The dashboard title. The dashboard title can be changed. We recommend that you specify the <strong>DashboardName</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiServer</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

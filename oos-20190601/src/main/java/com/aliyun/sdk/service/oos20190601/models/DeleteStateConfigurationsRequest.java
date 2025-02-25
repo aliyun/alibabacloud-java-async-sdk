@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStateConfigurationsRequest} extends {@link RequestModel}
  *
  * <p>DeleteStateConfigurationsRequest</p>
  */
 public class DeleteStateConfigurationsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StateConfigurationIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StateConfigurationIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stateConfigurationIds;
 
     private DeleteStateConfigurationsRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class DeleteStateConfigurationsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde3OARpx77No54nv6</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +100,10 @@ public class DeleteStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +112,11 @@ public class DeleteStateConfigurationsRequest extends Request {
         }
 
         /**
-         * The IDs of desired-state configurations.
+         * <p>The IDs of desired-state configurations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sc-asfgdhj12345&quot;]</p>
          */
         public Builder stateConfigurationIds(String stateConfigurationIds) {
             this.putQueryParameter("StateConfigurationIds", stateConfigurationIds);

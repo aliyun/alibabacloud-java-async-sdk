@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAssetSelectionCriteriaRequest} extends {@link RequestModel}
  *
  * <p>AddAssetSelectionCriteriaRequest</p>
  */
 public class AddAssetSelectionCriteriaRequest extends Request {
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("CriteriaOperation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CriteriaOperation")
     private String criteriaOperation;
 
-    @Query
-    @NameInMap("SelectionKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectionKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String selectionKey;
 
-    @Query
-    @NameInMap("TargetOperationList")
-    private java.util.List < TargetOperationList> targetOperationList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetOperationList")
+    private java.util.List<TargetOperationList> targetOperationList;
 
     private AddAssetSelectionCriteriaRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
     /**
      * @return targetOperationList
      */
-    public java.util.List < TargetOperationList> getTargetOperationList() {
+    public java.util.List<TargetOperationList> getTargetOperationList() {
         return this.targetOperationList;
     }
 
@@ -82,7 +87,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         private String criteria; 
         private String criteriaOperation; 
         private String selectionKey; 
-        private java.util.List < TargetOperationList> targetOperationList; 
+        private java.util.List<TargetOperationList> targetOperationList; 
 
         private Builder() {
             super();
@@ -97,10 +102,13 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         } 
 
         /**
-         * The search conditions that are used to query assets. The value of this parameter is in the JSON format and is case-sensitive.
-         * <p>
+         * <p>The search conditions that are used to query assets. The value of this parameter is in the JSON format and is case-sensitive.</p>
+         * <blockquote>
+         * <p>A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+         * </blockquote>
          * 
-         * > A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
+         * <strong>example:</strong>
+         * <p>{&quot;LogicalExp&quot;:&quot;AND&quot;,&quot;Criteria&quot;:&quot;[{&quot;name&quot;:&quot;osType&quot;,&quot;value&quot;:&quot;linux&quot;,&quot;logicalExp&quot;:&quot;AND&quot;},{&quot;name&quot;:&quot;alarmStatus&quot;,&quot;value&quot;:&quot;YES&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]&quot;}</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -109,11 +117,14 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * The type of the operation on search conditions. Valid values:
-         * <p>
+         * <p>The type of the operation on search conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong>: adds assets.</li>
+         * <li><strong>del</strong>: deletes assets.</li>
+         * </ul>
          * 
-         * *   **add**: adds assets.
-         * *   **del**: deletes assets.
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder criteriaOperation(String criteriaOperation) {
             this.putQueryParameter("CriteriaOperation", criteriaOperation);
@@ -122,7 +133,11 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * The unique ID of the asset.
+         * <p>The unique ID of the asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5196d280-5bfa-496a-ba70-8a3935e3****</p>
          */
         public Builder selectionKey(String selectionKey) {
             this.putQueryParameter("SelectionKey", selectionKey);
@@ -131,9 +146,9 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * The list of assets.
+         * <p>The list of assets.</p>
          */
-        public Builder targetOperationList(java.util.List < TargetOperationList> targetOperationList) {
+        public Builder targetOperationList(java.util.List<TargetOperationList> targetOperationList) {
             this.putQueryParameter("TargetOperationList", targetOperationList);
             this.targetOperationList = targetOperationList;
             return this;
@@ -146,11 +161,17 @@ public class AddAssetSelectionCriteriaRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddAssetSelectionCriteriaRequest} extends {@link TeaModel}
+     *
+     * <p>AddAssetSelectionCriteriaRequest</p>
+     */
     public static class TargetOperationList extends TeaModel {
-        @NameInMap("Operation")
+        @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
         private TargetOperationList(Builder builder) {
@@ -185,11 +206,14 @@ public class AddAssetSelectionCriteriaRequest extends Request {
             private String target; 
 
             /**
-             * The type of the operation. Valid values:
-             * <p>
+             * <p>The type of the operation. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong></li>
+             * <li><strong>del</strong></li>
+             * </ul>
              * 
-             * *   **add**
-             * *   **del**
+             * <strong>example:</strong>
+             * <p>del</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -197,7 +221,10 @@ public class AddAssetSelectionCriteriaRequest extends Request {
             }
 
             /**
-             * The ID of the asset.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1188****</p>
              */
             public Builder target(String target) {
                 this.target = target;

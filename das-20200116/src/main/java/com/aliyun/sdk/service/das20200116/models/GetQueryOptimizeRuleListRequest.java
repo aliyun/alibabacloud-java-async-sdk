@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeRuleListRequest} extends {@link RequestModel}
  *
  * <p>GetQueryOptimizeRuleListRequest</p>
  */
 public class GetQueryOptimizeRuleListRequest extends Request {
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("TagNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagNames")
     private String tagNames;
 
     private GetQueryOptimizeRuleListRequest(Builder builder) {
@@ -97,12 +102,16 @@ public class GetQueryOptimizeRuleListRequest extends Request {
         } 
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PolarDBMySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **PolarDBMySQL**
-         * *   **PostgreSQL**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -111,7 +120,10 @@ public class GetQueryOptimizeRuleListRequest extends Request {
         }
 
         /**
-         * The instance IDs. Separate multiple IDs with commas (,).
+         * <p>The instance IDs. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -120,16 +132,19 @@ public class GetQueryOptimizeRuleListRequest extends Request {
         }
 
         /**
-         * The region in which the instance resides. Valid values:
-         * <p>
+         * <p>The region in which the instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-china</strong>: Chinese mainland</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
+         * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
+         * <blockquote>
+         * <p> If your instances reside in the regions in the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
+         * </blockquote>
          * 
-         * *   **cn-china**: Chinese mainland
-         * *   **cn-hongkong**: China (Hong Kong)
-         * *   **ap-southeast-1**: Singapore
-         * 
-         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****
-         * 
-         * >  If your instances reside in the regions in the Chinese mainland, set this parameter to **cn-china**.
+         * <strong>example:</strong>
+         * <p>cn-china</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -138,7 +153,10 @@ public class GetQueryOptimizeRuleListRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder tagNames(String tagNames) {
             this.putQueryParameter("TagNames", tagNames);

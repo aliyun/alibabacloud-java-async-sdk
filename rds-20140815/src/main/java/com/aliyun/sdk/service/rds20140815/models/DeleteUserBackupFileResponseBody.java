@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserBackupFileResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteUserBackupFileResponseBody</p>
  */
 public class DeleteUserBackupFileResponseBody extends TeaModel {
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteUserBackupFileResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteUserBackupFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the deleted full backup file.
+         * <p>The ID of the deleted full backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-w1haya7e4i25********</p>
          */
         public Builder backupId(String backupId) {
             this.backupId = backupId;
@@ -58,7 +66,10 @@ public class DeleteUserBackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F28AE40B-203B-4CFE-B81F-FD981CD97B17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

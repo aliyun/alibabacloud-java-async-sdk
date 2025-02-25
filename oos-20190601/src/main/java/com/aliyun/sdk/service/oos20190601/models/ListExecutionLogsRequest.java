@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExecutionLogsRequest} extends {@link RequestModel}
  *
  * <p>ListExecutionLogsRequest</p>
  */
 public class ListExecutionLogsRequest extends Request {
-    @Query
-    @NameInMap("ExecutionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionId;
 
-    @Query
-    @NameInMap("LogType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogType")
     private String logType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TaskExecutionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskExecutionId")
     private String taskExecutionId;
 
     private ListExecutionLogsRequest(Builder builder) {
@@ -125,7 +130,11 @@ public class ListExecutionLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the execution.
+         * <p>The ID of the execution.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -134,7 +143,10 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * The type of the log.
+         * <p>The type of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -143,7 +155,10 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -152,7 +167,10 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * <p>The token that is used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -161,7 +179,10 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to query the logs of the execution.
+         * <p>The ID of the region in which you want to query the logs of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +191,10 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * The execution ID of the task.
+         * <p>The execution ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-1234567zxcvb.t0010</p>
          */
         public Builder taskExecutionId(String taskExecutionId) {
             this.putQueryParameter("TaskExecutionId", taskExecutionId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BriefResourceSetting} extends {@link TeaModel}
  *
  * <p>BriefResourceSetting</p>
  */
 public class BriefResourceSetting extends TeaModel {
-    @NameInMap("batchResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("batchResourceSetting")
     private BatchResourceSetting batchResourceSetting;
 
-    @NameInMap("flinkConf")
-    private java.util.Map < String, ? > flinkConf;
+    @com.aliyun.core.annotation.NameInMap("flinkConf")
+    private java.util.Map<String, ?> flinkConf;
 
-    @NameInMap("streamingResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("streamingResourceSetting")
     private StreamingResourceSetting streamingResourceSetting;
 
     private BriefResourceSetting(Builder builder) {
@@ -45,7 +50,7 @@ public class BriefResourceSetting extends TeaModel {
     /**
      * @return flinkConf
      */
-    public java.util.Map < String, ? > getFlinkConf() {
+    public java.util.Map<String, ?> getFlinkConf() {
         return this.flinkConf;
     }
 
@@ -58,7 +63,7 @@ public class BriefResourceSetting extends TeaModel {
 
     public static final class Builder {
         private BatchResourceSetting batchResourceSetting; 
-        private java.util.Map < String, ? > flinkConf; 
+        private java.util.Map<String, ?> flinkConf; 
         private StreamingResourceSetting streamingResourceSetting; 
 
         /**
@@ -72,7 +77,7 @@ public class BriefResourceSetting extends TeaModel {
         /**
          * flinkConf.
          */
-        public Builder flinkConf(java.util.Map < String, ? > flinkConf) {
+        public Builder flinkConf(java.util.Map<String, ?> flinkConf) {
             this.flinkConf = flinkConf;
             return this;
         }

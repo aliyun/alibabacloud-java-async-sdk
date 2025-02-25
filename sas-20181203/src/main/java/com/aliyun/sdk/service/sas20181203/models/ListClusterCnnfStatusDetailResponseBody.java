@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterCnnfStatusDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterCnnfStatusDetailResponseBody</p>
  */
 public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterCnnfStatusDetailResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * An array that consists of the protection status of the container firewall.
+         * <p>An array that consists of the protection status of the container firewall.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64329F40-5C94-51D3-A400-37AA7BAC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,41 +79,47 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterCnnfStatusDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterCnnfStatusDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Installed")
+        @com.aliyun.core.annotation.NameInMap("Installed")
         private Boolean installed;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("InvalidType")
+        @com.aliyun.core.annotation.NameInMap("InvalidType")
         private String invalidType;
 
-        @NameInMap("MachineName")
+        @com.aliyun.core.annotation.NameInMap("MachineName")
         private String machineName;
 
-        @NameInMap("MachineType")
+        @com.aliyun.core.annotation.NameInMap("MachineType")
         private Integer machineType;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginVersion")
+        @com.aliyun.core.annotation.NameInMap("PluginVersion")
         private String pluginVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Data(Builder builder) {
@@ -230,7 +244,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -238,7 +255,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container firewall plug-in is installed.
+             * <p>Indicates whether the container firewall plug-in is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder installed(Boolean installed) {
                 this.installed = installed;
@@ -246,7 +266,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp180bogui4fc0z4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -254,7 +277,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the associated instance.
+             * <p>The public IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -262,7 +288,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the associated instance.
+             * <p>The private IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -270,12 +299,15 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The cause why the plug-in is invalid. Valid values:
-             * <p>
+             * <p>The cause why the plug-in is invalid. Valid values:</p>
+             * <ul>
+             * <li><strong>PLUGIN_OFFLINE</strong>: The plug-in is offline.</li>
+             * <li><strong>PLUGIN_NOT_INSTALLED</strong>: The plug-in is not installed.</li>
+             * <li><strong>PLUGIN_INVALID_VERSION</strong>: The version of the plug-in is invalid.</li>
+             * </ul>
              * 
-             * *   **PLUGIN_OFFLINE**: The plug-in is offline.
-             * *   **PLUGIN\_NOT_INSTALLED**: The plug-in is not installed.
-             * *   **PLUGIN\_INVALID_VERSION**: The version of the plug-in is invalid.
+             * <strong>example:</strong>
+             * <p>PLUGIN_OFFLINE</p>
              */
             public Builder invalidType(String invalidType) {
                 this.invalidType = invalidType;
@@ -283,7 +315,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>security</p>
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -291,7 +326,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The machine type of the instance. The value is fixed as **ecs**.
+             * <p>The machine type of the instance. The value is fixed as <strong>ecs</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder machineType(Integer machineType) {
                 this.machineType = machineType;
@@ -299,7 +337,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in. The value is fixed as **alinet**.
+             * <p>The name of the plug-in. The value is fixed as <strong>alinet</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alinet</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -307,7 +348,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the plug-in.
+             * <p>The version of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.3</p>
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -315,11 +359,14 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The online status of the plug-in. Valid values:
-             * <p>
+             * <p>The online status of the plug-in. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong>: The plug-in is offline.</li>
+             * <li><strong>true</strong>: The plug-in is online.</li>
+             * </ul>
              * 
-             * *   **false**: The plug-in is offline.
-             * *   **true**: The plug-in is online.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -327,7 +374,10 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

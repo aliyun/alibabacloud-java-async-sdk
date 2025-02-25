@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePreloadDetailByIdResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePreloadDetailByIdResponseBody</p>
  */
 public class DescribePreloadDetailByIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("UrlDetails")
+    @com.aliyun.core.annotation.NameInMap("UrlDetails")
     private java.util.List < UrlDetails> urlDetails;
 
     private DescribePreloadDetailByIdResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         private java.util.List < UrlDetails> urlDetails; 
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The number of queried tasks.
+         * <p>The number of queried tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +84,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the task, including the task ID, start time, end time, domain name, success rate, status, returned error code, and completion details of all URL resources.
+         * <p>The details of the task, including the task ID, start time, end time, domain name, success rate, status, returned error code, and completion details of all URL resources.</p>
          */
         public Builder urlDetails(java.util.List < UrlDetails> urlDetails) {
             this.urlDetails = urlDetails;
@@ -91,14 +97,20 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePreloadDetailByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePreloadDetailByIdResponseBody</p>
+     */
     public static class Urls extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Urls(Builder builder) {
@@ -142,11 +154,14 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The details of resource prefetch.
-             * <p>
+             * <p>The details of resource prefetch.</p>
+             * <ul>
+             * <li>If the resource is prefetched on all POPs, &quot;Successfully preloaded&quot; is returned.</li>
+             * <li>If the resource fails to be prefetched on some POPs, the failure details separated by vertical bars (|) are returned.</li>
+             * </ul>
              * 
-             * *   If the resource is prefetched on all POPs, "Successfully preloaded" is returned.
-             * *   If the resource fails to be prefetched on some POPs, the failure details separated by vertical bars (|) are returned.
+             * <strong>example:</strong>
+             * <p>Successfully preloaded</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +169,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The success percentage, which indicates the number of POPs on which the resource is prefetched.
+             * <p>The success percentage, which indicates the number of POPs on which the resource is prefetched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47%</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -162,7 +180,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the prefetched resource.
+             * <p>The URL of the prefetched resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/abc.jpg</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -176,29 +197,35 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePreloadDetailByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePreloadDetailByIdResponseBody</p>
+     */
     public static class UrlDetails extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("RetCode")
+        @com.aliyun.core.annotation.NameInMap("RetCode")
         private String retCode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Urls")
+        @com.aliyun.core.annotation.NameInMap("Urls")
         private java.util.List < Urls> urls;
 
         private UrlDetails(Builder builder) {
@@ -287,7 +314,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             private java.util.List < Urls> urls; 
 
             /**
-             * The time when the task was created. The time is displayed in UTC.
+             * <p>The time when the task was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-23T02:26:56Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -295,7 +325,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name for prefetching resources.
+             * <p>The domain name for prefetching resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -303,7 +336,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task ended. The time is displayed in UTC.
+             * <p>The time when the task ended. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-23T02:27:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -311,7 +347,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the prefetch task, which indicates the number of points of presence (POPs) on which the prefetch task is completed.
+             * <p>The progress of the prefetch task, which indicates the number of points of presence (POPs) on which the prefetch task is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -319,7 +358,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The turned error code. A value of `0` indicates that the task succeeded.
+             * <p>The turned error code. A value of <code>0</code> indicates that the task succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode(String retCode) {
                 this.retCode = retCode;
@@ -327,12 +369,15 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>Complete</strong></li>
+             * <li><strong>Refreshing</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * *   **Complete**
-             * *   **Refreshing**
-             * *   **Failed**
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -340,12 +385,12 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task that you want to query.
-             * <p>
+             * <p>The ID of the task that you want to query.</p>
+             * <p>You can call the PushObjectCache operation to query task IDs. Then, you can use the task IDs to query task status.</p>
+             * <p>You can query one task ID at a time.</p>
              * 
-             * You can call the PushObjectCache operation to query task IDs. Then, you can use the task IDs to query task status.
-             * 
-             * You can query one task ID at a time.
+             * <strong>example:</strong>
+             * <p>14286878547</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -353,7 +398,7 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             }
 
             /**
-             * The completion details of all URL resources in the task.
+             * <p>The completion details of all URL resources in the task.</p>
              */
             public Builder urls(java.util.List < Urls> urls) {
                 this.urls = urls;

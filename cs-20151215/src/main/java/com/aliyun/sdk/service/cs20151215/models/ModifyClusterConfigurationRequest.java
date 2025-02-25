@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterConfigurationRequest</p>
  */
 public class ModifyClusterConfigurationRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("customize_config")
-    private java.util.List < CustomizeConfig> customizeConfig;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customize_config")
+    private java.util.List<CustomizeConfig> customizeConfig;
 
     private ModifyClusterConfigurationRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class ModifyClusterConfigurationRequest extends Request {
     /**
      * @return customizeConfig
      */
-    public java.util.List < CustomizeConfig> getCustomizeConfig() {
+    public java.util.List<CustomizeConfig> getCustomizeConfig() {
         return this.customizeConfig;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterConfigurationRequest, Builder> {
         private String clusterId; 
-        private java.util.List < CustomizeConfig> customizeConfig; 
+        private java.util.List<CustomizeConfig> customizeConfig; 
 
         private Builder() {
             super();
@@ -69,7 +74,11 @@ public class ModifyClusterConfigurationRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc0f87de0b8fb403f86e10e204f83****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,9 +87,9 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         /**
-         * The custom configuration.
+         * <p>The custom configurations.</p>
          */
-        public Builder customizeConfig(java.util.List < CustomizeConfig> customizeConfig) {
+        public Builder customizeConfig(java.util.List<CustomizeConfig> customizeConfig) {
             this.putBodyParameter("customize_config", customizeConfig);
             this.customizeConfig = customizeConfig;
             return this;
@@ -93,11 +102,17 @@ public class ModifyClusterConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyClusterConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterConfigurationRequest</p>
+     */
     public static class Configs extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Configs(Builder builder) {
@@ -132,7 +147,10 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The name of the configuration item.
+             * <p>The name of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxRequestsInflight</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -140,7 +158,10 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the configuration item.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -154,11 +175,17 @@ public class ModifyClusterConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyClusterConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterConfigurationRequest</p>
+     */
     public static class CustomizeConfig extends TeaModel {
-        @NameInMap("configs")
-        private java.util.List < Configs> configs;
+        @com.aliyun.core.annotation.NameInMap("configs")
+        private java.util.List<Configs> configs;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private CustomizeConfig(Builder builder) {
@@ -177,7 +204,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         /**
          * @return configs
          */
-        public java.util.List < Configs> getConfigs() {
+        public java.util.List<Configs> getConfigs() {
             return this.configs;
         }
 
@@ -189,19 +216,22 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Configs> configs; 
+            private java.util.List<Configs> configs; 
             private String name; 
 
             /**
-             * The custom configuration.
+             * <p>The custom configurations.</p>
              */
-            public Builder configs(java.util.List < Configs> configs) {
+            public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
                 return this;
             }
 
             /**
-             * The name of the component.
+             * <p>The name of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube-apiserver</p>
              */
             public Builder name(String name) {
                 this.name = name;

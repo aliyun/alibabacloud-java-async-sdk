@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerCondition} extends {@link TeaModel}
  *
  * <p>TriggerCondition</p>
  */
 public class TriggerCondition extends TeaModel {
-    @NameInMap("ComparisonOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comparisonOperator;
 
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @NameInMap("Statistics")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statistics;
 
-    @NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tag> tags;
 
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double threshold;
 
     private TriggerCondition(Builder builder) {
@@ -71,7 +76,7 @@ public class TriggerCondition extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -86,18 +91,23 @@ public class TriggerCondition extends TeaModel {
         private String comparisonOperator; 
         private String metricName; 
         private String statistics; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
         private Double threshold; 
 
         /**
-         * 比较符。取值范围：
-         * <p>
-         * - EQ:等于。
-         * - NE:不等于。
-         * - GT:大于。
-         * - LT:小于。
-         * - GE:大于等于。
-         * - LE:小于等于。
+         * <p>比较符。取值范围：</p>
+         * <ul>
+         * <li>EQ:等于。</li>
+         * <li>NE:不等于。</li>
+         * <li>GT:大于。</li>
+         * <li>LT:小于。</li>
+         * <li>GE:大于等于。</li>
+         * <li>LE:小于等于。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LT</p>
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
@@ -105,7 +115,11 @@ public class TriggerCondition extends TeaModel {
         }
 
         /**
-         * 指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。
+         * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yarn_resourcemanager_root_availablememoryusage</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -113,11 +127,16 @@ public class TriggerCondition extends TeaModel {
         }
 
         /**
-         * 统计量名称。取值范围：
-         * <p>
-         * - MAX：最大值。
-         * - MIN：最小值。
-         * - AVG：平均值。
+         * <p>统计量名称。取值范围：</p>
+         * <ul>
+         * <li>MAX：最大值。</li>
+         * <li>MIN：最小值。</li>
+         * <li>AVG：平均值。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         public Builder statistics(String statistics) {
             this.statistics = statistics;
@@ -125,15 +144,19 @@ public class TriggerCondition extends TeaModel {
         }
 
         /**
-         * 指标Tag。
+         * <p>指标Tag。</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }
 
         /**
-         * 阈值。
+         * <p>阈值。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.5</p>
          */
         public Builder threshold(Double threshold) {
             this.threshold = threshold;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoProvisioningGroupHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoProvisioningGroupHistoryResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
-    @NameInMap("AutoProvisioningGroupHistories")
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupHistories")
     private AutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoProvisioningGroupHistoryResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array consisting of AutoProvisioningGroupHistory data.
+         * <p>An array consisting of AutoProvisioningGroupHistory data.</p>
          */
         public Builder autoProvisioningGroupHistories(AutoProvisioningGroupHistories autoProvisioningGroupHistories) {
             this.autoProvisioningGroupHistories = autoProvisioningGroupHistories;
@@ -94,7 +99,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of queried scheduling tasks in the auto provisioning group.
+         * <p>The number of queried scheduling tasks in the auto provisioning group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupHistoryResponseBody</p>
+     */
     public static class ActivityDetail extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ActivityDetail(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The execution details of instance creation performed by the single scheduling task.
+             * <p>The execution details of instance creation performed by the single scheduling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>New ECS instances &quot;i-bp67acfmxazb4p****, i-bp67acfmxazb5p****&quot; created.</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -178,13 +204,16 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The execution status of instance creation performed by the single scheduling task. Valid values:
-             * <p>
+             * <p>The execution status of instance creation performed by the single scheduling task. Valid values:</p>
+             * <ul>
+             * <li>Successful: Instances are created.</li>
+             * <li>Failed: Instances failed to be created.</li>
+             * <li>InProgress: Instances are being created.</li>
+             * <li>Warning: Some instances are created.</li>
+             * </ul>
              * 
-             * *   Successful: Instances are created.
-             * *   Failed: Instances failed to be created.
-             * *   InProgress: Instances are being created.
-             * *   Warning: Some instances are created.
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,9 +227,15 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupHistoryResponseBody</p>
+     */
     public static class ActivityDetails extends TeaModel {
-        @NameInMap("ActivityDetail")
-        private java.util.List < ActivityDetail> activityDetail;
+        @com.aliyun.core.annotation.NameInMap("ActivityDetail")
+        private java.util.List<ActivityDetail> activityDetail;
 
         private ActivityDetails(Builder builder) {
             this.activityDetail = builder.activityDetail;
@@ -217,17 +252,17 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         /**
          * @return activityDetail
          */
-        public java.util.List < ActivityDetail> getActivityDetail() {
+        public java.util.List<ActivityDetail> getActivityDetail() {
             return this.activityDetail;
         }
 
         public static final class Builder {
-            private java.util.List < ActivityDetail> activityDetail; 
+            private java.util.List<ActivityDetail> activityDetail; 
 
             /**
              * ActivityDetail.
              */
-            public Builder activityDetail(java.util.List < ActivityDetail> activityDetail) {
+            public Builder activityDetail(java.util.List<ActivityDetail> activityDetail) {
                 this.activityDetail = activityDetail;
                 return this;
             }
@@ -239,20 +274,26 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupHistoryResponseBody</p>
+     */
     public static class AutoProvisioningGroupHistory extends TeaModel {
-        @NameInMap("ActivityDetails")
+        @com.aliyun.core.annotation.NameInMap("ActivityDetails")
         private ActivityDetails activityDetails;
 
-        @NameInMap("LastEventTime")
+        @com.aliyun.core.annotation.NameInMap("LastEventTime")
         private String lastEventTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private AutoProvisioningGroupHistory(Builder builder) {
@@ -314,7 +355,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * An array consisting of ActivityDetail data.
+             * <p>An array consisting of ActivityDetail data.</p>
              */
             public Builder activityDetails(ActivityDetails activityDetails) {
                 this.activityDetails = activityDetails;
@@ -322,7 +363,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The execution time of the last instance creation performed by the single scheduling task.
+             * <p>The execution time of the last instance creation performed by the single scheduling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-01T15:10:20Z</p>
              */
             public Builder lastEventTime(String lastEventTime) {
                 this.lastEventTime = lastEventTime;
@@ -330,7 +374,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of executing the single scheduling task.
+             * <p>The start time of executing the single scheduling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-01T15:10:20Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,12 +385,15 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The execution status of the single scheduling task. Valid values:
-             * <p>
+             * <p>The execution status of the single scheduling task. Valid values:</p>
+             * <ul>
+             * <li>prepare: The scheduling task is being executed.</li>
+             * <li>success: The scheduling task is executed.</li>
+             * <li>failed: The scheduling task failed to be executed.</li>
+             * </ul>
              * 
-             * *   prepare: The scheduling task is being executed.
-             * *   success: The scheduling task is executed.
-             * *   failed: The scheduling task failed to be executed.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +401,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scheduling task.
+             * <p>The ID of the scheduling task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apg-task-bp67acfmxazb4p****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -365,9 +418,15 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupHistoryResponseBody</p>
+     */
     public static class AutoProvisioningGroupHistories extends TeaModel {
-        @NameInMap("AutoProvisioningGroupHistory")
-        private java.util.List < AutoProvisioningGroupHistory> autoProvisioningGroupHistory;
+        @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupHistory")
+        private java.util.List<AutoProvisioningGroupHistory> autoProvisioningGroupHistory;
 
         private AutoProvisioningGroupHistories(Builder builder) {
             this.autoProvisioningGroupHistory = builder.autoProvisioningGroupHistory;
@@ -384,17 +443,17 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         /**
          * @return autoProvisioningGroupHistory
          */
-        public java.util.List < AutoProvisioningGroupHistory> getAutoProvisioningGroupHistory() {
+        public java.util.List<AutoProvisioningGroupHistory> getAutoProvisioningGroupHistory() {
             return this.autoProvisioningGroupHistory;
         }
 
         public static final class Builder {
-            private java.util.List < AutoProvisioningGroupHistory> autoProvisioningGroupHistory; 
+            private java.util.List<AutoProvisioningGroupHistory> autoProvisioningGroupHistory; 
 
             /**
              * AutoProvisioningGroupHistory.
              */
-            public Builder autoProvisioningGroupHistory(java.util.List < AutoProvisioningGroupHistory> autoProvisioningGroupHistory) {
+            public Builder autoProvisioningGroupHistory(java.util.List<AutoProvisioningGroupHistory> autoProvisioningGroupHistory) {
                 this.autoProvisioningGroupHistory = autoProvisioningGroupHistory;
                 return this;
             }

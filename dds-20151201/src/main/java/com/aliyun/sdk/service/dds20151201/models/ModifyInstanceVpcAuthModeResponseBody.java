@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceVpcAuthModeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceVpcAuthModeResponseBody</p>
  */
 public class ModifyInstanceVpcAuthModeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyInstanceVpcAuthModeResponseBody(Builder builder) {
@@ -38,11 +43,10 @@ public class ModifyInstanceVpcAuthModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Specifies whether to enable authentication to allow access within a VPC. Valid values:
-         * <p>
+         * <p>The request ID.</p>
          * 
-         * *   **Open**: enables password-free access.
-         * *   **Close**: disables password-free access.
+         * <strong>example:</strong>
+         * <p>BA51E9D9-B14A-4542-B6E6-7DE00BECCB8C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

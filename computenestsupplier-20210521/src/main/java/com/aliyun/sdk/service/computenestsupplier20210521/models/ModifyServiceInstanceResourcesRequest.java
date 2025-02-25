@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyServiceInstanceResourcesRequest} extends {@link RequestModel}
  *
  * <p>ModifyServiceInstanceResourcesRequest</p>
  */
 public class ModifyServiceInstanceResourcesRequest extends Request {
-    @Query
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private String resources;
 
-    @Query
-    @NameInMap("ServiceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceInstanceId;
 
-    @Query
-    @NameInMap("ServiceInstanceResourcesAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceResourcesAction")
     private String serviceInstanceResourcesAction;
 
     private ModifyServiceInstanceResourcesRequest(Builder builder) {
@@ -83,7 +88,19 @@ public class ModifyServiceInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * Resources.
+         * <p>The imported resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+         *   &quot;Type&quot;: &quot;ResourceIds&quot;,
+         *   &quot;ResourceIds&quot;: {
+         *     &quot;ALIYUN::ECS::INSTANCE&quot;: [&quot;i-xxx&quot;, &quot;i-yyy&quot;],
+         *     &quot;ALIYUN::RDS::INSTANCE&quot;: [&quot;rm-xxx&quot;, &quot;rm-yyy&quot;],
+         *     &quot;ALIYUN::VPC::VPC&quot;: [&quot;vpc-xxx&quot;, &quot;vpc-yyy&quot;],
+         *     &quot;ALIYUN::SLB::INSTANCE&quot;: [&quot;lb-xxx&quot;, &quot;lb-yyy&quot;]
+         *   }
+         * }</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -92,7 +109,11 @@ public class ModifyServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * <p>The ID of the service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d8a0cc2a1ee04dce****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -101,7 +122,14 @@ public class ModifyServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ServiceInstanceResourcesAction.
+         * <p>The type of operation performed on the service instance resource. Valid values:</p>
+         * <ul>
+         * <li>Import: The resource is imported.</li>
+         * <li>UnImport: The resource import is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Import</p>
          */
         public Builder serviceInstanceResourcesAction(String serviceInstanceResourcesAction) {
             this.putQueryParameter("ServiceInstanceResourcesAction", serviceInstanceResourcesAction);

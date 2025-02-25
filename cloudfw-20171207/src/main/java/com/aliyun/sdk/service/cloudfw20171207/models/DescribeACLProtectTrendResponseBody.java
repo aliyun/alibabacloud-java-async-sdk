@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeACLProtectTrendResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeACLProtectTrendResponseBody</p>
  */
 public class DescribeACLProtectTrendResponseBody extends TeaModel {
-    @NameInMap("InProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("InProtectCnt")
     private Long inProtectCnt;
 
-    @NameInMap("InterVPCProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("InterVPCProtectCnt")
     private Long interVPCProtectCnt;
 
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @NameInMap("OutProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("OutProtectCnt")
     private Long outProtectCnt;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("TotalProtectCnt")
     private Long totalProtectCnt;
 
-    @NameInMap("TrendList")
-    private java.util.List < TrendList> trendList;
+    @com.aliyun.core.annotation.NameInMap("TrendList")
+    private java.util.List<TrendList> trendList;
 
     private DescribeACLProtectTrendResponseBody(Builder builder) {
         this.inProtectCnt = builder.inProtectCnt;
@@ -96,7 +101,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     /**
      * @return trendList
      */
-    public java.util.List < TrendList> getTrendList() {
+    public java.util.List<TrendList> getTrendList() {
         return this.trendList;
     }
 
@@ -107,10 +112,13 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         private Long outProtectCnt; 
         private String requestId; 
         private Long totalProtectCnt; 
-        private java.util.List < TrendList> trendList; 
+        private java.util.List<TrendList> trendList; 
 
         /**
-         * The number of internal requests that are blocked by the ACL feature.
+         * <p>The number of internal requests that are blocked by the ACL feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder inProtectCnt(Long inProtectCnt) {
             this.inProtectCnt = inProtectCnt;
@@ -118,7 +126,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder interVPCProtectCnt(Long interVPCProtectCnt) {
             this.interVPCProtectCnt = interVPCProtectCnt;
@@ -126,7 +137,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The interval for returning data. Unit: seconds.
+         * <p>The interval for returning data. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -134,7 +148,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The number of external requests that are blocked by the ACL feature.
+         * <p>The number of external requests that are blocked by the ACL feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder outProtectCnt(Long outProtectCnt) {
             this.outProtectCnt = outProtectCnt;
@@ -142,7 +159,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9063AB86-6FFA-5B2D-A16D-697C966DECA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +170,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of requests that are blocked by the ACL feature.
+         * <p>The total number of requests that are blocked by the ACL feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder totalProtectCnt(Long totalProtectCnt) {
             this.totalProtectCnt = totalProtectCnt;
@@ -158,9 +181,9 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on the requests that are blocked by the ACL feature.
+         * <p>The statistics on the requests that are blocked by the ACL feature.</p>
          */
-        public Builder trendList(java.util.List < TrendList> trendList) {
+        public Builder trendList(java.util.List<TrendList> trendList) {
             this.trendList = trendList;
             return this;
         }
@@ -171,11 +194,17 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeACLProtectTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeACLProtectTrendResponseBody</p>
+     */
     public static class TrendList extends TeaModel {
-        @NameInMap("ProtectCnt")
+        @com.aliyun.core.annotation.NameInMap("ProtectCnt")
         private Integer protectCnt;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private TrendList(Builder builder) {
@@ -210,7 +239,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The number of requests that are blocked by ACL on the current day.
+             * <p>The number of requests that are blocked by ACL on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder protectCnt(Integer protectCnt) {
                 this.protectCnt = protectCnt;
@@ -218,7 +250,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp at midnight (00:00:00) of each day, which indicates the date of the current day. Unit: seconds.
+             * <p>The UNIX timestamp at midnight (00:00:00) of each day, which indicates the date of the current day. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1697299200</p>
              */
             public Builder time(Long time) {
                 this.time = time;

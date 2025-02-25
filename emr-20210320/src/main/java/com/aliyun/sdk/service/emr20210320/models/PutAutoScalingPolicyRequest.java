@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutAutoScalingPolicyRequest} extends {@link RequestModel}
  *
  * <p>PutAutoScalingPolicyRequest</p>
  */
 public class PutAutoScalingPolicyRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Constraints")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Constraints")
     private ScalingConstraints constraints;
 
-    @Query
-    @NameInMap("NodeGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ScalingRules")
-    private java.util.List < ScalingRule > scalingRules;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRules")
+    private java.util.List<ScalingRule> scalingRules;
 
     private PutAutoScalingPolicyRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class PutAutoScalingPolicyRequest extends Request {
     /**
      * @return scalingRules
      */
-    public java.util.List < ScalingRule > getScalingRules() {
+    public java.util.List<ScalingRule> getScalingRules() {
         return this.scalingRules;
     }
 
@@ -97,7 +102,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         private ScalingConstraints constraints; 
         private String nodeGroupId; 
         private String regionId; 
-        private java.util.List < ScalingRule > scalingRules; 
+        private java.util.List<ScalingRule> scalingRules; 
 
         private Builder() {
             super();
@@ -113,7 +118,11 @@ public class PutAutoScalingPolicyRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,7 +131,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 最大最小值约束。
+         * <p>The maximum and minimum numbers of nodes in a node group.</p>
          */
         public Builder constraints(ScalingConstraints constraints) {
             this.putQueryParameter("Constraints", constraints);
@@ -131,7 +140,11 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 节点组ID。节点组 Id-针对 ACK 集群，此字段为空。
+         * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -140,7 +153,11 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>区域ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,11 +166,9 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 弹性伸缩规则描述列表。
-         * <p>
-         * <p>
+         * <p>The auto scaling rules. Number of elements in the array: 0 to 100.</p>
          */
-        public Builder scalingRules(java.util.List < ScalingRule > scalingRules) {
+        public Builder scalingRules(java.util.List<ScalingRule> scalingRules) {
             this.putQueryParameter("ScalingRules", scalingRules);
             this.scalingRules = scalingRules;
             return this;

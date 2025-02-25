@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CollectedNumberResponseBody} extends {@link TeaModel}
  *
  * <p>CollectedNumberResponseBody</p>
  */
 public class CollectedNumberResponseBody extends TeaModel {
-    @NameInMap("Action")
+    @com.aliyun.core.annotation.NameInMap("Action")
     private String action;
 
-    @NameInMap("ActionParams")
+    @com.aliyun.core.annotation.NameInMap("ActionParams")
     private String actionParams;
 
-    @NameInMap("Interruptible")
+    @com.aliyun.core.annotation.NameInMap("Interruptible")
     private Boolean interruptible;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TextResponse")
+    @com.aliyun.core.annotation.NameInMap("TextResponse")
     private String textResponse;
 
     private CollectedNumberResponseBody(Builder builder) {

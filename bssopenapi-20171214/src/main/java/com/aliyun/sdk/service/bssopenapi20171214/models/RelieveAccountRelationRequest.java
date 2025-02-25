@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RelieveAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>RelieveAccountRelationRequest</p>
  */
 public class RelieveAccountRelationRequest extends Request {
-    @Query
-    @NameInMap("ChildUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long childUserId;
 
-    @Query
-    @NameInMap("ParentUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long parentUserId;
 
-    @Query
-    @NameInMap("RelationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationId")
     private Long relationId;
 
-    @Query
-    @NameInMap("RelationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
     private String relationType;
 
-    @Query
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     private RelieveAccountRelationRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class RelieveAccountRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
+         * <p>The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512996702208737</p>
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -122,7 +130,10 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
+         * <p>The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738376485192612</p>
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -131,7 +142,10 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
+         * <p>The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RelationId</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -140,7 +154,10 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The type of the financial relationship. Set the value to enterprise_group.
+         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise_group</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -149,7 +166,11 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_id</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

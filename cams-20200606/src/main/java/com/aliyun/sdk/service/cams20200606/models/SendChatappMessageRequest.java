@@ -1,121 +1,125 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendChatappMessageRequest} extends {@link RequestModel}
  *
  * <p>SendChatappMessageRequest</p>
  */
 public class SendChatappMessageRequest extends Request {
-    @Body
-    @NameInMap("ChannelType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelType;
 
-    @Query
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("ContextMessageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContextMessageId")
     private String contextMessageId;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("CustWabaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustWabaId")
     @Deprecated
     private String custWabaId;
 
-    @Body
-    @NameInMap("FallBackContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackContent")
     private String fallBackContent;
 
-    @Body
-    @NameInMap("FallBackDuration")
-    @Validation(maximum = 43200, minimum = 60)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 43200, minimum = 10)
     private Integer fallBackDuration;
 
-    @Body
-    @NameInMap("FallBackId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackId")
     private String fallBackId;
 
-    @Body
-    @NameInMap("FallBackRule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackRule")
     private String fallBackRule;
 
-    @Body
-    @NameInMap("FlowAction")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowAction")
     private FlowAction flowAction;
 
-    @Body
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Body
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Body
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @Body
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Body
-    @NameInMap("MessageType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageType")
     private String messageType;
 
-    @Query
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private java.util.List < String > payload;
 
-    @Body
-    @NameInMap("ProductAction")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductAction")
     private ProductAction productAction;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @Body
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Body
-    @NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @Body
-    @NameInMap("TemplateParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateParams")
     private java.util.Map < String, String > templateParams;
 
-    @Body
-    @NameInMap("To")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("To")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String to;
 
-    @Body
-    @NameInMap("TrackingData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrackingData")
     private String trackingData;
 
-    @Body
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private SendChatappMessageRequest(Builder builder) {
@@ -140,6 +144,7 @@ public class SendChatappMessageRequest extends Request {
         this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
+        this.templateName = builder.templateName;
         this.templateParams = builder.templateParams;
         this.to = builder.to;
         this.trackingData = builder.trackingData;
@@ -301,6 +306,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return templateParams
      */
     public java.util.Map < String, String > getTemplateParams() {
@@ -356,6 +368,7 @@ public class SendChatappMessageRequest extends Request {
         private String tag; 
         private String taskId; 
         private String templateCode; 
+        private String templateName; 
         private java.util.Map < String, String > templateParams; 
         private String to; 
         private String trackingData; 
@@ -388,6 +401,7 @@ public class SendChatappMessageRequest extends Request {
             this.tag = request.tag;
             this.taskId = request.taskId;
             this.templateCode = request.templateCode;
+            this.templateName = request.templateName;
             this.templateParams = request.templateParams;
             this.to = request.to;
             this.trackingData = request.trackingData;
@@ -396,12 +410,16 @@ public class SendChatappMessageRequest extends Request {
         } 
 
         /**
-         * The type of the message channel. Valid values:
-         * <p>
+         * <p>The channel type. Valid values:</p>
+         * <ul>
+         * <li><strong>whatsapp</strong></li>
+         * <li><strong>viber</strong></li>
+         * <li><strong>line</strong> (under development)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **whatsapp**
-         * *   **viber**
-         * *   line. The feature that ChatAPP sends messages by using Line is under development.
+         * <strong>example:</strong>
+         * <p>whatsapp</p>
          */
         public Builder channelType(String channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -410,32 +428,34 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The content of the message.
-         * <p>
+         * <p>The message content.</p>
+         * <p><strong>Notes on WhatsApp messages:</strong></p>
+         * <ul>
+         * <li>If you set <strong>messageType</strong> to <strong>text</strong>, you must specify <strong>text</strong> and must not specify <strong>Caption</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>image</strong>, you must specify <strong>Link</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>video</strong>, you must specify <strong>Link</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>audio</strong>, <strong>Link</strong> is required and <strong>Caption</strong> is invalid.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>document</strong>, <strong>Link</strong> and <strong>FileName</strong> are required and <strong>Caption</strong> is invalid.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>interactive</strong>, you must specify <strong>type</strong> and <strong>action</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>contacts</strong>, you must specify <strong>name</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>location</strong>, you must specify <strong>longitude</strong> and <strong>latitude</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>sticker</strong>, you must specify <strong>Link</strong>, and <strong>Caption</strong> and <strong>FileName</strong> are invalid.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>reaction</strong>, you must specify <strong>messageId</strong> and <strong>emoji</strong>.</li>
+         * </ul>
+         * <p><strong>Notes on Viber messages:</strong></p>
+         * <ul>
+         * <li>If you set <strong>messageType</strong> to <strong>text</strong>, you must specify <strong>text</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>image</strong>, you must specify <strong>link</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>video</strong>, you must specify <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>document</strong>, you must specify <strong>link</strong>, <strong>fileName</strong>, and <strong>fileType</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>text_button</strong>, you must specify <strong>text</strong>, <strong>caption</strong>, and <strong>action</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>text_image_button</strong>, you must specify <strong>text</strong>, <strong>link</strong>, <strong>caption</strong>, and <strong>action</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>text_video</strong>, you must specify <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong>.</li>
+         * <li>If you set <strong>messageType</strong> to <strong>text_video_button</strong>, you must specify <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, <strong>duration</strong>, and <strong>caption</strong>. In addition, you must not specify <strong>action</strong>.</li>
+         * </ul>
          * 
-         * **Usage notes when you set the ChannelType parameter to whatsapp:**
-         * 
-         * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required and the **caption** parameter cannot be specified.
-         * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
-         * *   When you set the **MessageType** parameter to **video**, the **link** parameter is required.
-         * *   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and the **caption** parameter is invalid.
-         * *   When you set the **MessageType** parameter to **document**, the **link** and **fileName** parameters are required and the **caption** parameter is invalid.
-         * *   When you set the **MessageType** parameter to **interactive**, the **type** and **action** parameters are required.
-         * *   When you set the **MessageType** parameter to **contacts**, the **name** parameter is required.
-         * *   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.
-         * *   When you set the **MessageType** parameter to **sticker**, the **link** parameter is required, and the **caption** and **fileName** parameters are invalid.
-         * *   When you set the **MessageType** parameter to **reaction**, the **messageId** and **emoji** parameters are required.
-         * 
-         * **Usage notes when you set the ChannelType parameter to viber:**
-         * 
-         * *   When you set the **MessageType** parameter to **text**, the **text** parameter is required.
-         * *   When you set the **MessageType** parameter to **image**, the **link** parameter is required.
-         * *   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
-         * *   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.
-         * *   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.
-         * *   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.
-         * *   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.
-         * *   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required. The **action** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>{&quot;text&quot;: &quot;hello whatsapp&quot;, &quot;link&quot;: &quot;&quot;, &quot;caption&quot;: &quot;&quot;, &quot;fileName&quot;: &quot;&quot; }</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -444,7 +464,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The ID of the message to reply to.
+         * <p>The ID of the reply message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61851ccb2f1365b16aee****</p>
          */
         public Builder contextMessageId(String contextMessageId) {
             this.putBodyParameter("ContextMessageId", contextMessageId);
@@ -453,7 +476,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The space ID of the user.
+         * <p>The space ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28251486512358****</p>
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -462,7 +488,13 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp account that you register.
+         * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
+         * <blockquote>
+         * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>65921621816****</p>
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -471,7 +503,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The content of the fallback message.
+         * <p>The content of the fallback message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a fallback message.</p>
          */
         public Builder fallBackContent(String fallBackContent) {
             this.putBodyParameter("FallBackContent", fallBackContent);
@@ -480,7 +515,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * FallBackDuration.
+         * <p>Specifies the period of time after which the fallback message is sent if the message receipt that indicates the message is delivered to clients is not received. If this parameter is left empty, the fallback message is sent only when the <strong>message fails to be sent</strong> or <strong>the message receipt that indicates the message is not delivered to clients</strong> is received. Unit: seconds. Valid values: 60 to 43200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
             this.putBodyParameter("FallBackDuration", fallBackDuration);
@@ -489,7 +527,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The ID of the fallback strategy. You can create a fallback strategy and view the information in the console.
+         * <p>The ID of the fallback policy. You can create a fallback policy and view the information in the Chat App Message Service console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S_000001</p>
          */
         public Builder fallBackId(String fallBackId) {
             this.putBodyParameter("FallBackId", fallBackId);
@@ -498,7 +539,14 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * FallBackRule.
+         * <p>The fallback rule. Valid values:</p>
+         * <ul>
+         * <li><strong>undelivered</strong>: A fallback is triggered if the message is not delivered to clients. When the message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</li>
+         * <li><strong>sentFailed</strong>: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>undelivered</p>
          */
         public Builder fallBackRule(String fallBackRule) {
             this.putBodyParameter("FallBackRule", fallBackRule);
@@ -507,7 +555,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * FlowAction.
+         * <p>The Flow action.</p>
          */
         public Builder flowAction(FlowAction flowAction) {
             String flowActionShrink = shrink(flowAction, "FlowAction", "json");
@@ -517,10 +565,14 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The phone number of the message sender.
-         * <p>
+         * <p>The mobile phone number of the message sender.</p>
+         * <blockquote>
+         * <p> You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the Chat App Message Service console.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.
+         * <strong>example:</strong>
+         * <p>1360000****</p>
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -529,7 +581,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
+         * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdi3kksloslikdkkdk</p>
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -538,7 +593,14 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The type of the Viber message. This parameter is required if you set the ChannelType parameter to viber. Valid values: promotion and transaction.
+         * <p>The type of the Viber message. This parameter is required if ChannelType is set to viber. Valid values:</p>
+         * <ul>
+         * <li><strong>promotion</strong></li>
+         * <li><strong>transaction</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -547,7 +609,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. This parameter is required only if you set the Type parameter to **template**. For more information about language codes, see [Language codes](~~463420~~).
+         * <p>The language that is used in the message template. This parameter is required only if you set the Type parameter to <strong>template</strong>. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -556,35 +621,38 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The specific type of the message. This parameter is required only if you set the Type parameter to **message**.
-         * <p>
+         * <p>The specific type of the message. This parameter is required only if you set the Type parameter to <strong>message</strong>.</p>
+         * <p><strong>Valid values of MessageType when you set the ChannelType parameter to whatsapp:</strong></p>
+         * <ul>
+         * <li><strong>text</strong>: a text message.</li>
+         * <li><strong>image</strong>: an image message.</li>
+         * <li><strong>video</strong>: a video message.</li>
+         * <li><strong>audio</strong>: an audio message.</li>
+         * <li><strong>document</strong>: a document message.</li>
+         * <li><strong>interactive</strong>: an interactive message.</li>
+         * <li><strong>contacts</strong>: a contact message.</li>
+         * <li><strong>location</strong>: a location message.</li>
+         * <li><strong>sticker</strong>: a sticker message.</li>
+         * <li><strong>reaction</strong>: a reaction message.</li>
+         * </ul>
+         * <p><strong>Valid values of MessageType when you set the ChannelType parameter to viber:</strong></p>
+         * <ul>
+         * <li><strong>text</strong>: a text message.</li>
+         * <li><strong>image</strong>: an image message.</li>
+         * <li><strong>video</strong>: a video message.</li>
+         * <li><strong>document</strong>: a document message.</li>
+         * <li><strong>text_button</strong>: a message that contains the text and button media objects.</li>
+         * <li><strong>text_image_button</strong>: a message that contains multiple media objects, including the text, image, and button.</li>
+         * <li><strong>text_video</strong>: a message that contains the text and video media objects.</li>
+         * <li><strong>text_video_button</strong>: a message that contains multiple media objects, including text, video, and button.</li>
+         * <li><strong>text_image</strong>: a message that contains the text and image media objects.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/454530.html">Parameters of a message template</a>.</p>
+         * </blockquote>
          * 
-         * **Valid values of MessageType when you set the ChannelType parameter to whatsapp:**
-         * 
-         * *   **text**: a text message.
-         * *   **image**: an image message.
-         * *   **video**: a video message.
-         * *   **audio**: an audio message.
-         * *   **document**: a document message.
-         * *   **interactive**: an interactive message.
-         * *   **contacts**: a contact message.
-         * *   **location**: a location message.
-         * *   **sticker**: a sticker message.
-         * *   **reaction**: a reaction message.
-         * 
-         * **Valid values of MessageType when you set the ChannelType parameter to viber:**
-         * 
-         * *   **text**: a text message.
-         * *   **image**: an image message.
-         * *   **video**: a video message.
-         * *   **document**: a document message.
-         * *   **text_button**: a message that contains the text and button media objects.
-         * *   **text_image_button**: a message that contains multiple media objects, including the text, image, and button.
-         * *   **text_video**: a message that contains the text and video media objects.
-         * *   **text_video_button**: a message that contains multiple media objects, including text, video, and button.
-         * *   **text_image**: a message that contains the text and image media objects.
-         * 
-         * > For more information, see [Parameters of a message template](~~454530~~).
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder messageType(String messageType) {
             this.putBodyParameter("MessageType", messageType);
@@ -593,7 +661,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The payload of the button.
+         * <p>The payload of the button.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>payloadtext1,payloadtext2,payloadtext3</p>
          */
         public Builder payload(java.util.List < String > payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -603,7 +674,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The information about the products included in the WhatsApp catalog message or multi-product message (MPM).
+         * <p>The information about the products included in the WhatsApp catalog message or multi-product message (MPM).</p>
          */
         public Builder productAction(ProductAction productAction) {
             String productActionShrink = shrink(productAction, "ProductAction", "json");
@@ -613,7 +684,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The tag information of the Viber message.
+         * <p>The tag information of the Viber message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
@@ -622,7 +696,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000001</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
@@ -631,7 +708,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The code of the message template. This parameter is required only if you set the Type parameter to **template**.
+         * <p>The code of the message template. This parameter is required only if you set the Type parameter to <strong>template</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>744c4b5c79c9432497a075bdfca3****</p>
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -640,7 +720,19 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The variables of the message template.
+         * <p>The name of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
+         */
+        public Builder templateName(String templateName) {
+            this.putBodyParameter("TemplateName", templateName);
+            this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * <p>The variables of the message template.</p>
          */
         public Builder templateParams(java.util.Map < String, String > templateParams) {
             String templateParamsShrink = shrink(templateParams, "TemplateParams", "json");
@@ -650,7 +742,11 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The phone number that receives the message.
+         * <p>The mobile phone number of the message receiver.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder to(String to) {
             this.putBodyParameter("To", to);
@@ -659,7 +755,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The tracking ID of the Viber message.
+         * <p>The tracking data of the Viber message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tracking_id:123456</p>
          */
         public Builder trackingData(String trackingData) {
             this.putBodyParameter("TrackingData", trackingData);
@@ -668,7 +767,10 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The timeout period for sending the Viber message. Valid values: 30 to 1209600. Unit: seconds.
+         * <p>The timeout period for sending the Viber message. Valid values: 30 to 1209600. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("Ttl", ttl);
@@ -677,11 +779,15 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * The type of the message. Valid values:
-         * <p>
+         * <p>The message type. Valid values:</p>
+         * <ul>
+         * <li><strong>template</strong>: the template message. A template message is sent based on a template that is created and approved in the Chat App Message Service console. You can send template messages based on your business requirements.</li>
+         * <li><strong>message</strong>: the custom message. You can send a custom WhatsApp message to a user only within 24 hours after you receive the last message from the user. This limit does not apply to custom Viber messages.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **template**: a template message. A template message is sent based on a template that is created in the ChatAPP console and is approved. You can send template messages at any time based on your business requirements.
-         * *   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -696,11 +802,17 @@ public class SendChatappMessageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SendChatappMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMessageRequest</p>
+     */
     public static class FlowAction extends TeaModel {
-        @NameInMap("FlowActionData")
+        @com.aliyun.core.annotation.NameInMap("FlowActionData")
         private java.util.Map < String, String > flowActionData;
 
-        @NameInMap("FlowToken")
+        @com.aliyun.core.annotation.NameInMap("FlowToken")
         private String flowToken;
 
         private FlowAction(Builder builder) {
@@ -735,7 +847,7 @@ public class SendChatappMessageRequest extends Request {
             private String flowToken; 
 
             /**
-             * FlowActionData.
+             * <p>The default parameter of the Flow.</p>
              */
             public Builder flowActionData(java.util.Map < String, String > flowActionData) {
                 this.flowActionData = flowActionData;
@@ -743,7 +855,10 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * FlowToken.
+             * <p>The Flow token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1122***</p>
              */
             public Builder flowToken(String flowToken) {
                 this.flowToken = flowToken;
@@ -757,8 +872,14 @@ public class SendChatappMessageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendChatappMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMessageRequest</p>
+     */
     public static class ProductItems extends TeaModel {
-        @NameInMap("ProductRetailerId")
+        @com.aliyun.core.annotation.NameInMap("ProductRetailerId")
         private String productRetailerId;
 
         private ProductItems(Builder builder) {
@@ -784,7 +905,10 @@ public class SendChatappMessageRequest extends Request {
             private String productRetailerId; 
 
             /**
-             * The retailer ID of the product.
+             * <p>The retailer ID of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9I39E9E</p>
              */
             public Builder productRetailerId(String productRetailerId) {
                 this.productRetailerId = productRetailerId;
@@ -798,11 +922,17 @@ public class SendChatappMessageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendChatappMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMessageRequest</p>
+     */
     public static class Sections extends TeaModel {
-        @NameInMap("ProductItems")
+        @com.aliyun.core.annotation.NameInMap("ProductItems")
         private java.util.List < ProductItems> productItems;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Sections(Builder builder) {
@@ -837,7 +967,7 @@ public class SendChatappMessageRequest extends Request {
             private String title; 
 
             /**
-             * The products.
+             * <p>The products.</p>
              */
             public Builder productItems(java.util.List < ProductItems> productItems) {
                 this.productItems = productItems;
@@ -845,7 +975,10 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -859,11 +992,17 @@ public class SendChatappMessageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SendChatappMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatappMessageRequest</p>
+     */
     public static class ProductAction extends TeaModel {
-        @NameInMap("Sections")
+        @com.aliyun.core.annotation.NameInMap("Sections")
         private java.util.List < Sections> sections;
 
-        @NameInMap("ThumbnailProductRetailerId")
+        @com.aliyun.core.annotation.NameInMap("ThumbnailProductRetailerId")
         private String thumbnailProductRetailerId;
 
         private ProductAction(Builder builder) {
@@ -898,7 +1037,7 @@ public class SendChatappMessageRequest extends Request {
             private String thumbnailProductRetailerId; 
 
             /**
-             * The products. Up to 30 products can be added. The products can be divided into up to 10 categories.
+             * <p>The products. Up to 30 products and 10 categories can be added.</p>
              */
             public Builder sections(java.util.List < Sections> sections) {
                 this.sections = sections;
@@ -906,7 +1045,10 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * The retailer ID of the product.
+             * <p>The retailer ID of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S238SK</p>
              */
             public Builder thumbnailProductRetailerId(String thumbnailProductRetailerId) {
                 this.thumbnailProductRetailerId = thumbnailProductRetailerId;

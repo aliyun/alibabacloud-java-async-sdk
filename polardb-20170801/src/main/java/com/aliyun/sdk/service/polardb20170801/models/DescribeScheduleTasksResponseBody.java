@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScheduleTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScheduleTasksResponseBody</p>
  */
 public class DescribeScheduleTasksResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeScheduleTasksResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The result data that is returned.
+         * <p>The result data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,10 +87,13 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned for the request.
-         * <p>
+         * <p>The message that is returned for the request.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request is successful, **Successful** is returned. If the request fails, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +101,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>936C7025-27A5-4CB1-BB31-540E1F0CCA12</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +112,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -114,50 +128,64 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScheduleTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScheduleTasksResponseBody</p>
+     */
     public static class TimerInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("CrontabJobId")
+        private String crontabJobId;
+
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DbClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DbClusterDescription")
         private String dbClusterDescription;
 
-        @NameInMap("DbClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DbClusterStatus")
         private String dbClusterStatus;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("PlannedEndTime")
+        @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
         private String plannedEndTime;
 
-        @NameInMap("PlannedStartTime")
+        @com.aliyun.core.annotation.NameInMap("PlannedFlashingOffTime")
+        private String plannedFlashingOffTime;
+
+        @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
         private String plannedStartTime;
 
-        @NameInMap("PlannedTime")
+        @com.aliyun.core.annotation.NameInMap("PlannedTime")
         private String plannedTime;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskCancel")
+        @com.aliyun.core.annotation.NameInMap("TaskCancel")
         private Boolean taskCancel;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private TimerInfos(Builder builder) {
             this.action = builder.action;
+            this.crontabJobId = builder.crontabJobId;
             this.DBClusterId = builder.DBClusterId;
             this.dbClusterDescription = builder.dbClusterDescription;
             this.dbClusterStatus = builder.dbClusterStatus;
             this.orderId = builder.orderId;
             this.plannedEndTime = builder.plannedEndTime;
+            this.plannedFlashingOffTime = builder.plannedFlashingOffTime;
             this.plannedStartTime = builder.plannedStartTime;
             this.plannedTime = builder.plannedTime;
             this.region = builder.region;
@@ -179,6 +207,13 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
          */
         public String getAction() {
             return this.action;
+        }
+
+        /**
+         * @return crontabJobId
+         */
+        public String getCrontabJobId() {
+            return this.crontabJobId;
         }
 
         /**
@@ -214,6 +249,13 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
          */
         public String getPlannedEndTime() {
             return this.plannedEndTime;
+        }
+
+        /**
+         * @return plannedFlashingOffTime
+         */
+        public String getPlannedFlashingOffTime() {
+            return this.plannedFlashingOffTime;
         }
 
         /**
@@ -260,11 +302,13 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String action; 
+            private String crontabJobId; 
             private String DBClusterId; 
             private String dbClusterDescription; 
             private String dbClusterStatus; 
             private String orderId; 
             private String plannedEndTime; 
+            private String plannedFlashingOffTime; 
             private String plannedStartTime; 
             private String plannedTime; 
             private String region; 
@@ -273,7 +317,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The type of the scheduled tasks.
+             * <p>The type of the scheduled tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateDBNodes</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -281,7 +328,21 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86293c29-a03d-4872-b625-***********</p>
+             */
+            public Builder crontabJobId(String crontabJobId) {
+                this.crontabJobId = crontabJobId;
+                return this;
+            }
+
+            /**
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-**************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -289,7 +350,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cluster.
+             * <p>The description of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_cluster</p>
              */
             public Builder dbClusterDescription(String dbClusterDescription) {
                 this.dbClusterDescription = dbClusterDescription;
@@ -297,7 +361,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cluster.
+             * <p>The state of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder dbClusterStatus(String dbClusterStatus) {
                 this.dbClusterStatus = dbClusterStatus;
@@ -305,10 +372,13 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order.
-             * <p>
+             * <p>The ID of the order.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when you set the <code>Action</code> parameter to <strong>CreateDBNodes</strong> or <strong>ModifyDBNodeClass</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only when you set the `Action` parameter to **CreateDBNodes** or **ModifyDBNodeClass**.
+             * <strong>example:</strong>
+             * <p>208161753******</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -316,7 +386,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.
+             * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-28T12:30Z</p>
              */
             public Builder plannedEndTime(String plannedEndTime) {
                 this.plannedEndTime = plannedEndTime;
@@ -324,7 +397,18 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.
+             * PlannedFlashingOffTime.
+             */
+            public Builder plannedFlashingOffTime(String plannedFlashingOffTime) {
+                this.plannedFlashingOffTime = plannedFlashingOffTime;
+                return this;
+            }
+
+            /**
+             * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-28T12:00Z</p>
              */
             public Builder plannedStartTime(String plannedStartTime) {
                 this.plannedStartTime = plannedStartTime;
@@ -332,7 +416,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The expected start time of the task. The time is displayed in UTC.
+             * <p>The expected start time of the task. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-28T12:16Z</p>
              */
             public Builder plannedTime(String plannedTime) {
                 this.plannedTime = plannedTime;
@@ -340,7 +427,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the scheduled task runs.
+             * <p>The ID of the region in which the scheduled task runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -348,7 +438,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the scheduled task.
+             * <p>The state of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>finish</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -356,11 +449,14 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scheduled task can be canceled. Valid values:
-             * <p>
+             * <p>Indicates whether the scheduled task can be canceled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskCancel(Boolean taskCancel) {
                 this.taskCancel = taskCancel;
@@ -368,7 +464,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53879cdb-9a00-428e-acaf-ff4cff******</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -382,17 +481,23 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeScheduleTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScheduleTasksResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TimerInfos")
-        private java.util.List < TimerInfos> timerInfos;
+        @com.aliyun.core.annotation.NameInMap("TimerInfos")
+        private java.util.List<TimerInfos> timerInfos;
 
-        @NameInMap("TotalRecordCount")
+        @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
         private Integer totalRecordCount;
 
         private Data(Builder builder) {
@@ -427,7 +532,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         /**
          * @return timerInfos
          */
-        public java.util.List < TimerInfos> getTimerInfos() {
+        public java.util.List<TimerInfos> getTimerInfos() {
             return this.timerInfos;
         }
 
@@ -441,11 +546,14 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < TimerInfos> timerInfos; 
+            private java.util.List<TimerInfos> timerInfos; 
             private Integer totalRecordCount; 
 
             /**
-             * The page number of the page returned.
+             * <p>The page number of the page returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -453,7 +561,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -461,15 +572,18 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the scheduled task.
+             * <p>The details of the scheduled tasks.</p>
              */
-            public Builder timerInfos(java.util.List < TimerInfos> timerInfos) {
+            public Builder timerInfos(java.util.List<TimerInfos> timerInfos) {
                 this.timerInfos = timerInfos;
                 return this;
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalRecordCount(Integer totalRecordCount) {
                 this.totalRecordCount = totalRecordCount;

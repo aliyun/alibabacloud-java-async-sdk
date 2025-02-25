@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBResourcePoolResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBResourcePoolResponseBody</p>
  */
 public class DescribeDBResourcePoolResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("PoolsInfo")
+    @com.aliyun.core.annotation.NameInMap("PoolsInfo")
     private java.util.List < PoolsInfo> poolsInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBResourcePoolResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +73,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource group.
+         * <p>Details of the resource group.</p>
          */
         public Builder poolsInfo(java.util.List < PoolsInfo> poolsInfo) {
             this.poolsInfo = poolsInfo;
@@ -78,7 +81,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,23 +97,29 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBResourcePoolResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourcePoolResponseBody</p>
+     */
     public static class PoolsInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private Integer nodeNum;
 
-        @NameInMap("PoolName")
+        @com.aliyun.core.annotation.NameInMap("PoolName")
         private String poolName;
 
-        @NameInMap("PoolUsers")
+        @com.aliyun.core.annotation.NameInMap("PoolUsers")
         private String poolUsers;
 
-        @NameInMap("QueryType")
+        @com.aliyun.core.annotation.NameInMap("QueryType")
         private String queryType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private PoolsInfo(Builder builder) {
@@ -178,7 +190,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the resource group was created.
+             * <p>The time when the resource group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-09 16:57:35.241</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -186,10 +201,13 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
-             * <p>
+             * <p>The number of nodes.</p>
+             * <blockquote>
+             * <p> Each node consumes 16 cores and 64 GB memory.</p>
+             * </blockquote>
              * 
-             * >  Each node consumes 16 cores and 64 GB memory.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -197,7 +215,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_DEFAULT</p>
              */
             public Builder poolName(String poolName) {
                 this.poolName = poolName;
@@ -205,7 +226,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * The database accounts that are associated with the resource group.
+             * <p>The database accounts that are associated with the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testb,testc</p>
              */
             public Builder poolUsers(String poolUsers) {
                 this.poolUsers = poolUsers;
@@ -213,13 +237,17 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which SQL statements are executed.
-             * <p>
+             * <p>The mode in which SQL statements are executed.</p>
+             * <ul>
+             * <li><strong>batch</strong></li>
+             * <li><strong>interactive</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</p>
+             * </blockquote>
              * 
-             * *   **batch**
-             * *   **interactive**
-             * 
-             * >  For more information, see [Query execution modes](~~189502~~).
+             * <strong>example:</strong>
+             * <p>default_type</p>
              */
             public Builder queryType(String queryType) {
                 this.queryType = queryType;
@@ -227,7 +255,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was updated.
+             * <p>The time when the resource group was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-09 16:57:35.241</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

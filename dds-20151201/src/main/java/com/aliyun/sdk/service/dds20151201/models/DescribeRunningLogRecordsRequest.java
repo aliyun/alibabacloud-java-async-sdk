@@ -1,84 +1,97 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRunningLogRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRunningLogRecordsRequest</p>
  */
 public class DescribeRunningLogRecordsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalOperator")
+    private String logicalOperator;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 30)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKeywords")
+    private String queryKeywords;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
     private String roleId;
 
-    @Query
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private String roleType;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeRunningLogRecordsRequest(Builder builder) {
@@ -87,12 +100,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
         this.endTime = builder.endTime;
+        this.logicalOperator = builder.logicalOperator;
         this.nodeId = builder.nodeId;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.queryKeywords = builder.queryKeywords;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -143,6 +158,13 @@ public class DescribeRunningLogRecordsRequest extends Request {
     }
 
     /**
+     * @return logicalOperator
+     */
+    public String getLogicalOperator() {
+        return this.logicalOperator;
+    }
+
+    /**
      * @return nodeId
      */
     public String getNodeId() {
@@ -182,6 +204,13 @@ public class DescribeRunningLogRecordsRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return queryKeywords
+     */
+    public String getQueryKeywords() {
+        return this.queryKeywords;
     }
 
     /**
@@ -231,12 +260,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         private String DBInstanceId; 
         private String DBName; 
         private String endTime; 
+        private String logicalOperator; 
         private String nodeId; 
         private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String queryKeywords; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -254,12 +285,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
             this.endTime = request.endTime;
+            this.logicalOperator = request.logicalOperator;
             this.nodeId = request.nodeId;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.queryKeywords = request.queryKeywords;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -278,10 +311,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -290,7 +327,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodbtest</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -299,10 +339,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time and within 24 hours from the start time. Otherwise, the query fails.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The end time must be later than the start time and within 24 hours from the start time. Otherwise, the query fails.
+         * <strong>example:</strong>
+         * <p>2019-01-01T13:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -311,10 +355,29 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the mongos node or shard node whose operational logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
-         * <p>
+         * <p>The logical relationship among multiple keywords.</p>
+         * <ul>
+         * <li><strong>or</strong></li>
+         * <li><strong>and</strong> (default value)</li>
+         * </ul>
          * 
-         * >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>and</p>
+         */
+        public Builder logicalOperator(String logicalOperator) {
+            this.putQueryParameter("LogicalOperator", logicalOperator);
+            this.logicalOperator = logicalOperator;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the mongos node or shard node whose operational logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</p>
+         * <blockquote>
+         * <p> This parameter is valid only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bpxxxxxxxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -323,11 +386,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The order of time in which the operational log entries to return are sorted. Valid values:
-         * <p>
+         * <p>The order of time in which the operational log entries to return are sorted. Valid values:</p>
+         * <ul>
+         * <li>asc: The log entries are sorted by time in ascending order.</li>
+         * <li>desc: The log entries are sorted by time in descending order.</li>
+         * </ul>
          * 
-         * *   asc: The log entries are sorted by time in ascending order.
-         * *   desc: The log entries are sorted by time in descending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -354,7 +420,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -363,7 +432,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30** to **100**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -372,7 +444,22 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test test2</p>
+         */
+        public Builder queryKeywords(String queryKeywords) {
+            this.putQueryParameter("QueryKeywords", queryKeywords);
+            this.queryKeywords = queryKeywords;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bpxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -399,7 +486,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The role ID of the node. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID.
+         * <p>The role ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation to query the role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>651xxxxx</p>
          */
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
@@ -408,13 +498,17 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The role of the node whose error logs you want to query in the instance. Valid values:
-         * <p>
+         * <p>The role of the node whose error logs you want to query in the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>primary</strong></li>
+         * <li><strong>secondary</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set the <strong>NodeId</strong> parameter to the ID of a mongos node, the <strong>RoleType</strong> parameter must be set to <strong>primary</strong>.</p>
+         * </blockquote>
          * 
-         * *   **primary**
-         * *   **secondary**
-         * 
-         * >  If you set the **NodeId** parameter to the ID of a mongos node, the **RoleType** parameter must be set to **primary**.
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -423,7 +517,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T12:10Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

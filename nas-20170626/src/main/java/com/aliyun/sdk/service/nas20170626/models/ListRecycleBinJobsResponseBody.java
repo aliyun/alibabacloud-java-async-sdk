@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecycleBinJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRecycleBinJobsResponseBody</p>
  */
 public class ListRecycleBinJobsResponseBody extends TeaModel {
-    @NameInMap("Jobs")
-    private java.util.List < Jobs> jobs;
+    @com.aliyun.core.annotation.NameInMap("Jobs")
+    private java.util.List<Jobs> jobs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListRecycleBinJobsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -79,22 +84,25 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * Jobs.
+         * <p>The information about the jobs of the recycle bin.</p>
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of jobs returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E15E394-38A6-457A-A62A-D9797C9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,32 +148,38 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRecycleBinJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRecycleBinJobsResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Jobs(Builder builder) {
@@ -254,7 +277,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-30T10:08:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -262,7 +288,11 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code returned.</p>
+             * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidFileId.NotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -270,7 +300,11 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The Target File or Directory does not exist.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -278,7 +312,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The ID of the file or directory in the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04***08</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -286,7 +323,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file or directory that is associated with the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -294,7 +334,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8C****C54</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -302,7 +345,11 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the job.</p>
+             * <p>Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -310,7 +357,18 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li>Running: The job is running.</li>
+             * <li>Defragmenting: The job is defragmenting data.</li>
+             * <li>PartialSuccess: The job is partially completed.</li>
+             * <li>Success: The job is completed.</li>
+             * <li>Fail: The job failed.</li>
+             * <li>Cancelled: The job is canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Fail</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +376,14 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the job. Valid values:</p>
+             * <ul>
+             * <li>Restore: a file restoration job</li>
+             * <li>Delete: a file deletion job</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Restore</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportDataKeyRequest</p>
  */
 public class ExportDataKeyRequest extends Request {
-    @Query
-    @NameInMap("CiphertextBlob")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ciphertextBlob;
 
-    @Query
-    @NameInMap("EncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
-    @Query
-    @NameInMap("PublicKeyBlob")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKeyBlob")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String publicKeyBlob;
 
-    @Query
-    @NameInMap("WrappingAlgorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WrappingAlgorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wrappingAlgorithm;
 
-    @Query
-    @NameInMap("WrappingKeySpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WrappingKeySpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wrappingKeySpec;
 
     private ExportDataKeyRequest(Builder builder) {
         super(builder);
         this.ciphertextBlob = builder.ciphertextBlob;
+        this.dryRun = builder.dryRun;
         this.encryptionContext = builder.encryptionContext;
         this.publicKeyBlob = builder.publicKeyBlob;
         this.wrappingAlgorithm = builder.wrappingAlgorithm;
@@ -63,6 +67,13 @@ public class ExportDataKeyRequest extends Request {
      */
     public String getCiphertextBlob() {
         return this.ciphertextBlob;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -95,6 +106,7 @@ public class ExportDataKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExportDataKeyRequest, Builder> {
         private String ciphertextBlob; 
+        private String dryRun; 
         private java.util.Map < String, ? > encryptionContext; 
         private String publicKeyBlob; 
         private String wrappingAlgorithm; 
@@ -107,6 +119,7 @@ public class ExportDataKeyRequest extends Request {
         private Builder(ExportDataKeyRequest request) {
             super(request);
             this.ciphertextBlob = request.ciphertextBlob;
+            this.dryRun = request.dryRun;
             this.encryptionContext = request.encryptionContext;
             this.publicKeyBlob = request.publicKeyBlob;
             this.wrappingAlgorithm = request.wrappingAlgorithm;
@@ -119,6 +132,15 @@ public class ExportDataKeyRequest extends Request {
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
             this.ciphertextBlob = ciphertextBlob;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

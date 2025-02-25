@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCurrentNodeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCurrentNodeInfoResponseBody</p>
  */
 public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCurrentNodeInfoResponseBody(Builder builder) {
@@ -91,53 +96,59 @@ public class DescribeCurrentNodeInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCurrentNodeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCurrentNodeInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AllowRollbackNode")
+        @com.aliyun.core.annotation.NameInMap("AllowRollbackNode")
         private Boolean allowRollbackNode;
 
-        @NameInMap("AutoFinishNode")
+        @com.aliyun.core.annotation.NameInMap("AutoFinishNode")
         private Boolean autoFinishNode;
 
-        @NameInMap("FinalStepNo")
+        @com.aliyun.core.annotation.NameInMap("FinalStepNo")
         private Integer finalStepNo;
 
-        @NameInMap("GmtExpired")
+        @com.aliyun.core.annotation.NameInMap("GmtExpired")
         private Long gmtExpired;
 
-        @NameInMap("GmtFinished")
+        @com.aliyun.core.annotation.NameInMap("GmtFinished")
         private Long gmtFinished;
 
-        @NameInMap("GmtStart")
+        @com.aliyun.core.annotation.NameInMap("GmtStart")
         private Long gmtStart;
 
-        @NameInMap("NeedAttachment")
+        @com.aliyun.core.annotation.NameInMap("NeedAttachment")
         private Boolean needAttachment;
 
-        @NameInMap("NextNodeId")
+        @com.aliyun.core.annotation.NameInMap("NextNodeId")
         private Long nextNodeId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private String nodeStatus;
 
-        @NameInMap("OperatorRole")
+        @com.aliyun.core.annotation.NameInMap("OperatorRole")
         private String operatorRole;
 
-        @NameInMap("ParentNodeId")
+        @com.aliyun.core.annotation.NameInMap("ParentNodeId")
         private Long parentNodeId;
 
-        @NameInMap("PreviousNodeId")
+        @com.aliyun.core.annotation.NameInMap("PreviousNodeId")
         private Long previousNodeId;
 
-        @NameInMap("StepNo")
+        @com.aliyun.core.annotation.NameInMap("StepNo")
         private Integer stepNo;
 
-        @NameInMap("TemplateForm")
+        @com.aliyun.core.annotation.NameInMap("TemplateForm")
         private String templateForm;
 
         private Result(Builder builder) {

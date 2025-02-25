@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcesModificationRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourcesModificationRequest</p>
  */
 public class DescribeResourcesModificationRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Conditions")
-    private java.util.List < String > conditions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Conditions")
+    private java.util.List<String> conditions;
 
-    @Query
-    @NameInMap("Cores")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cores")
     private Integer cores;
 
-    @Query
-    @NameInMap("DestinationResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationResource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationResource;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Float memory;
 
-    @Query
-    @NameInMap("MigrateAcrossZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrateAcrossZone")
     private Boolean migrateAcrossZone;
 
-    @Query
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeResourcesModificationRequest(Builder builder) {
@@ -117,7 +122,7 @@ public class DescribeResourcesModificationRequest extends Request {
     /**
      * @return conditions
      */
-    public java.util.List < String > getConditions() {
+    public java.util.List<String> getConditions() {
         return this.conditions;
     }
 
@@ -214,7 +219,7 @@ public class DescribeResourcesModificationRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeResourcesModificationRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > conditions; 
+        private java.util.List<String> conditions; 
         private Integer cores; 
         private String destinationResource; 
         private String instanceType; 
@@ -262,19 +267,20 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The condition. If you specify this parameter, the system queries the resource types that the resource can be changed to after the resource meets the specified condition.
-         * <p>
-         * 
-         * Set the value to DiskCategory, which indicates a disk category change. When you set this parameter to DiskCategory, the system queries the instance types that the instance can be changed to after a disk category change.
+         * <p>The conditions.</p>
          */
-        public Builder conditions(java.util.List < String > conditions) {
+        public Builder conditions(java.util.List<String> conditions) {
             this.putQueryParameter("Conditions", conditions);
             this.conditions = conditions;
             return this;
         }
 
         /**
-         * The number of vCPU cores of the instance type. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.
+         * <p>The number of vCPUs of the instance type. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <p>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -283,11 +289,18 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The target resource type. Valid values:
-         * <p>
+         * <p>The resource type that you want to change. Valid values:</p>
+         * <ul>
+         * <li><p>InstanceType</p>
+         * </li>
+         * <li><p>SystemDisk</p>
+         * <p>If you set this parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   InstanceType
-         * *   SystemDisk
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         public Builder destinationResource(String destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);
@@ -296,7 +309,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list. This parameter is required when DestinationResource is set to SystemDisk.
+         * <p>The instance type to which you want to change the instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+         * <p>If you set the DestinationResource parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -305,7 +322,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The memory size of the instance type. Unit: GiB. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.
+         * <p>The memory size of the instance type. Unit: GiB. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <p>This parameter is valid only when the DestinationResource parameter is set to InstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -314,22 +335,26 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * Specifies whether cross-cluster instance type upgrades are supported. Valid values:
-         * <p>
+         * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
+         * <ul>
+         * <li><p>Instance that resides in the classic network:</p>
+         * <ul>
+         * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</li>
+         * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
+         * </ul>
+         * </li>
+         * <li><p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</p>
+         * </li>
+         * </ul>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * When MigrateAcrossZone is set to true and you upgrade the instance type of an Elastic Compute Service (ECS) instance based on the returned information, take note of the following items:
-         * 
-         * *   Instances that reside in the classic network:
-         * 
-         *     *   For [retired instance types](~~55263~~), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
-         *     *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.
-         * 
-         * *   Instances that reside in virtual private clouds (VPCs): For [retired instance types](~~55263~~), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder migrateAcrossZone(Boolean migrateAcrossZone) {
             this.putQueryParameter("MigrateAcrossZone", migrateAcrossZone);
@@ -338,19 +363,23 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The operation of changing resource configurations.
-         * <p>
+         * <p>The operation of changing resource configurations.</p>
+         * <ul>
+         * <li><p>Valid values for subscription resources:</p>
+         * <ul>
+         * <li>Upgrade: upgrades resources.</li>
+         * <li>Downgrade: downgrades resources.</li>
+         * <li>RenewDowngrade: renews and downgrades resources.</li>
+         * <li>RenewModify: renews an expired instance and changes its configurations.</li>
+         * </ul>
+         * </li>
+         * <li><p>Set the value to Upgrade for pay-as-you-go resources.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: Upgrade.</p>
          * 
-         * *   Valid values for subscription resources:
-         * 
-         *     *   Upgrade
-         *     *   Downgrade
-         *     *   RenewDowngrade
-         *     *   RenewModify
-         * 
-         * *   Valid values for pay-as-you-go resources: Upgrade
-         * 
-         * Default value: Upgrade.
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -377,7 +406,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance for which you want to change the instance type or system disk category. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -386,7 +419,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The ID of the resource. For example, when DestinationResource is set to InstanceType, this parameter can be interpreted as InstanceId.
+         * <p>The ID of the instance for which you want to change the instance type or system disk category.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -413,7 +450,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * <p>The ID of the destination zone to which you want to migrate the instance.</p>
+         * <p>If you want to change the instance type across zones, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

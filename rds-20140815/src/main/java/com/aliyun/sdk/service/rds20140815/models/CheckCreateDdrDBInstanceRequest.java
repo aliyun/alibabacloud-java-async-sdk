@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckCreateDdrDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CheckCreateDdrDBInstanceRequest</p>
  */
 public class CheckCreateDdrDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("BackupSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
 
-    @Query
-    @NameInMap("DBInstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer DBInstanceStorage;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("RestoreType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreType;
 
-    @Query
-    @NameInMap("SourceDBInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDBInstanceName")
     private String sourceDBInstanceName;
 
-    @Query
-    @NameInMap("SourceRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegion")
     private String sourceRegion;
 
     private CheckCreateDdrDBInstanceRequest(Builder builder) {
@@ -242,10 +247,13 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set that is used for the restoration. You can call the DescribeCrossRegionBackups operation to query the backup set ID.
-         * <p>
+         * <p>The ID of the backup set that is used for the restoration. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified when the <strong>RestoreType</strong> parameter is set to <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified when the **RestoreType** parameter is set to **0**.
+         * <strong>example:</strong>
+         * <p>14358</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -254,7 +262,11 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * <p>The instance type of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s1.small</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -263,7 +275,11 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary instance types](~~26312~~).
+         * <p>The storage capacity of the destination instance. Valid values: <strong>5 to 2000</strong>. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -272,12 +288,16 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The database engine of the destination instance. Valid values:
-         * <p>
+         * <p>The database engine of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **SQLServer**
-         * *   **PostgreSQL**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -286,12 +306,16 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.
-         * <p>
+         * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of <strong>Engine</strong>.</p>
+         * <ul>
+         * <li>Valid values when Engine is set to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></li>
+         * <li>Valid values when Engine is set to SQLServer: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</strong></li>
+         * <li>PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**
-         * *   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-         * *   PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -309,7 +333,11 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +346,10 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -345,10 +376,13 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-         * <p>
+         * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p>If you set <strong>RestoreType</strong> to <strong>1</strong>, you must also specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If you set **RestoreType** to **1**, you must also specify this parameter.
+         * <strong>example:</strong>
+         * <p>2019-05-30T03:29:10Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -357,13 +391,16 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The method that is used to restore data. Valid values:
-         * <p>
+         * <p>The method that is used to restore data. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: restores data from a backup set. If you set this parameter to 0, you must also specify the <strong>BackupSetId</strong> parameter.</li>
+         * <li><strong>1</strong>: restores data to a point in time. If you set this parameter to 1, you must also specify the <strong>RestoreTime</strong>, <strong>SourceRegion</strong>, and <strong>SourceDBInstanceName</strong> parameters.</li>
+         * </ul>
+         * <p>Default value: <strong>0</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: restores data from a backup set. If you set this parameter to 0, you must also specify the **BackupSetId** parameter.
-         * *   **1**: restores data to a point in time. If you set this parameter to 1, you must also specify the **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName** parameters.
-         * 
-         * Default value: **0**.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -372,10 +409,13 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the source instance if you want to restore data to a point in time.
-         * <p>
+         * <p>The ID of the source instance if you want to restore data to a point in time.</p>
+         * <blockquote>
+         * <p> This parameter must be specified when the <strong>RestoreType</strong> parameter is set to <strong>1</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified when the **RestoreType** parameter is set to **1**.
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);
@@ -384,10 +424,13 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the source instance if you want to restore data to a point in time.
-         * <p>
+         * <p>The region ID of the source instance if you want to restore data to a point in time.</p>
+         * <blockquote>
+         * <p>If you set <strong>RestoreType</strong> to <strong>1</strong>, you must also specify this parameter.</p>
+         * </blockquote>
          * 
-         * > If you set **RestoreType** to **1**, you must also specify this parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putQueryParameter("SourceRegion", sourceRegion);

@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceInstanceWorkerRequest} extends {@link RequestModel}
  *
  * <p>ListResourceInstanceWorkerRequest</p>
  */
 public class ListResourceInstanceWorkerRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Path
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkerName")
+    private String workerName;
 
     private ListResourceInstanceWorkerRequest(Builder builder) {
         super(builder);
@@ -42,6 +51,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.workerName = builder.workerName;
     }
 
     public static Builder builder() {
@@ -92,12 +102,20 @@ public class ListResourceInstanceWorkerRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return workerName
+     */
+    public String getWorkerName() {
+        return this.workerName;
+    }
+
     public static final class Builder extends Request.Builder<ListResourceInstanceWorkerRequest, Builder> {
         private String clusterId; 
         private String resourceId; 
         private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String workerName; 
 
         private Builder() {
             super();
@@ -110,10 +128,15 @@ public class ListResourceInstanceWorkerRequest extends Request {
             this.instanceName = request.instanceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.workerName = request.workerName;
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -122,7 +145,11 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-adfabas</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -131,7 +158,11 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance in a resource group. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cne10</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);
@@ -140,7 +171,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,11 +183,23 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * WorkerName.
+         */
+        public Builder workerName(String workerName) {
+            this.putQueryParameter("WorkerName", workerName);
+            this.workerName = workerName;
             return this;
         }
 

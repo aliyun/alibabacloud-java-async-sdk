@@ -118,7 +118,7 @@ public class CustomContainerConfigInfo extends TeaModel {
         }
 
         /**
-         * 镜像加速类型，取值Default为开启加速，None为关闭加速，默认开启
+         * accelerationType.
          */
         public Builder accelerationType(String accelerationType) {
             this.accelerationType = accelerationType;
@@ -126,7 +126,7 @@ public class CustomContainerConfigInfo extends TeaModel {
         }
 
         /**
-         * 容器启动参数
+         * args.
          */
         public Builder args(String args) {
             this.args = args;
@@ -134,7 +134,7 @@ public class CustomContainerConfigInfo extends TeaModel {
         }
 
         /**
-         * 容器启动命令，等同于 Docker ENTRYPOINT
+         * command.
          */
         public Builder command(String command) {
             this.command = command;
@@ -142,7 +142,7 @@ public class CustomContainerConfigInfo extends TeaModel {
         }
 
         /**
-         * 容器镜像地址，实例值： registry-vpc.cn-hangzhou.aliyuncs.com/fc-demo/helloworld:v1beta1
+         * image.
          */
         public Builder image(String image) {
             this.image = image;
@@ -150,7 +150,7 @@ public class CustomContainerConfigInfo extends TeaModel {
         }
 
         /**
-         * ACR企业版镜像仓库ID，使用ACR企业版镜像时须传入
+         * instanceID.
          */
         public Builder instanceID(String instanceID) {
             this.instanceID = instanceID;
@@ -158,7 +158,7 @@ public class CustomContainerConfigInfo extends TeaModel {
         }
 
         /**
-         * 镜像运行是否为Web Server模式，取值true需要在容器镜像中实现Web Server来监听端口并处理请求，取值false需要容器运行后主动退出进程，并且ExitCode需要为0。默认true
+         * webServerMode.
          */
         public Builder webServerMode(Boolean webServerMode) {
             this.webServerMode = webServerMode;

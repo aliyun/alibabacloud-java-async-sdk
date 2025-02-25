@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWhiteRuleListResponseBody</p>
  */
 public class DescribeWhiteRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeWhiteRuleListResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +101,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +109,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,13 +135,13 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -182,7 +185,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +193,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +201,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -213,19 +216,19 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Left extends TeaModel {
-        @NameInMap("IsVar")
+        @com.aliyun.core.annotation.NameInMap("IsVar")
         private Boolean isVar;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("ModifierParam")
+        @com.aliyun.core.annotation.NameInMap("ModifierParam")
         private java.util.Map < String, ? > modifierParam;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Left(Builder builder) {
@@ -287,7 +290,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * IsVar.
+             * Indicates whether the left operand is a variable. Valid values:
+             * <p>
+             * 
+             * *   true: variable.
+             * *   false: constant.
              */
             public Builder isVar(Boolean isVar) {
                 this.isVar = isVar;
@@ -295,7 +302,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * The remarks on the right operand.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -303,7 +310,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierParam.
+             * The key-value pair information of the remarks.
              */
             public Builder modifierParam(java.util.Map < String, ? > modifierParam) {
                 this.modifierParam = modifierParam;
@@ -311,7 +318,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * Indicates whether the left operand is a constant. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder type(String type) {
                 this.type = type;
@@ -319,7 +330,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The variable of the left operand.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -334,19 +345,19 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Right extends TeaModel {
-        @NameInMap("IsVar")
+        @com.aliyun.core.annotation.NameInMap("IsVar")
         private Boolean isVar;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("ModifierParam")
+        @com.aliyun.core.annotation.NameInMap("ModifierParam")
         private java.util.Map < String, ? > modifierParam;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Right(Builder builder) {
@@ -408,7 +419,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * IsVar.
+             * Indicates whether the right operand is a constant or a runtime variable that is obtained from the runtime context. Valid values:
+             * <p>
+             * 
+             * *   true: runtime variable.
+             * *   false: constant.
              */
             public Builder isVar(Boolean isVar) {
                 this.isVar = isVar;
@@ -416,7 +431,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * The remarks on the right operand.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -424,7 +439,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierParam.
+             * The key-value pair information of the remarks.
              */
             public Builder modifierParam(java.util.Map < String, ? > modifierParam) {
                 this.modifierParam = modifierParam;
@@ -432,7 +447,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the right operand.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -440,7 +455,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The right operand.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -455,19 +470,19 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("IsNot")
+        @com.aliyun.core.annotation.NameInMap("IsNot")
         private Boolean isNot;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Integer itemId;
 
-        @NameInMap("Left")
+        @com.aliyun.core.annotation.NameInMap("Left")
         private Left left;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Right")
+        @com.aliyun.core.annotation.NameInMap("Right")
         private Right right;
 
         private Conditions(Builder builder) {
@@ -529,7 +544,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private Right right; 
 
             /**
-             * IsNot.
+             * Indicates whether the result is inverted. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder isNot(Boolean isNot) {
                 this.isNot = isNot;
@@ -537,7 +556,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ItemId.
+             * The ID of the rule condition.
              */
             public Builder itemId(Integer itemId) {
                 this.itemId = itemId;
@@ -545,7 +564,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Left.
+             * The left operand of the rule condition.
              */
             public Builder left(Left left) {
                 this.left = left;
@@ -553,7 +572,15 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The logical operator of the rule condition. Valid values:
+             * <p>
+             * 
+             * *   `=`: equals to.
+             * *   `<>`: does not equal to.
+             * *   `in`: contains.
+             * *   `not in`: does not contain.
+             * *   `REGEXP`: matches a regular expression.
+             * *   `NOT REGEXP`: does not match a regular expression.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -561,7 +588,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Right.
+             * The right operand of the rule condition.
              */
             public Builder right(Right right) {
                 this.right = right;
@@ -576,10 +603,10 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Expression extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private String logic;
 
         private Expression(Builder builder) {
@@ -614,7 +641,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private String logic; 
 
             /**
-             * Conditions.
+             * The rule conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -622,7 +649,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * The logical relationships among the rule conditions.
              */
             public Builder logic(String logic) {
                 this.logic = logic;
@@ -637,43 +664,43 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertNameId")
+        @com.aliyun.core.annotation.NameInMap("AlertNameId")
         private String alertNameId;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeId")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeId")
         private String alertTypeId;
 
-        @NameInMap("AlertUuid")
+        @com.aliyun.core.annotation.NameInMap("AlertUuid")
         private String alertUuid;
 
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private Expression expression;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IncidentUuid")
+        @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubAliuid")
+        @com.aliyun.core.annotation.NameInMap("SubAliuid")
         private Long subAliuid;
 
         private ResponseData(Builder builder) {
@@ -807,7 +834,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private Long subAliuid; 
 
             /**
-             * AlertName.
+             * The alert name.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -815,7 +842,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNameId.
+             * The ID of the alert name.
              */
             public Builder alertNameId(String alertNameId) {
                 this.alertNameId = alertNameId;
@@ -823,7 +850,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The alert type.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -831,7 +858,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeId.
+             * The ID of the alert type.
              */
             public Builder alertTypeId(String alertTypeId) {
                 this.alertTypeId = alertTypeId;
@@ -839,7 +866,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUuid.
+             * The UUID of the alert.
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -847,7 +874,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -855,7 +882,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * The conditions in the rule. The value is a JSON array.
              */
             public Builder expression(Expression expression) {
                 this.expression = expression;
@@ -863,7 +890,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the whitelist rule was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -871,7 +898,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the whitelist rule was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -879,7 +906,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the whitelist rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -887,7 +914,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -895,7 +922,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the whitelist rule. Valid values:
+             * <p>
+             * 
+             * *   1: enabled.
+             * *   0: disabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -903,7 +934,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * SubAliuid.
+             * The ID of the Alibaba Cloud account that is used to create the whitelist rule.
              */
             public Builder subAliuid(Long subAliuid) {
                 this.subAliuid = subAliuid;
@@ -918,10 +949,10 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {
@@ -956,7 +987,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -964,7 +995,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

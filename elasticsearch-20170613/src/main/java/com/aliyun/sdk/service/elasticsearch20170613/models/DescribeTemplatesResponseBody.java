@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplatesResponseBody</p>
  */
 public class DescribeTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private DescribeTemplatesResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplatesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("templateName")
+        @com.aliyun.core.annotation.NameInMap("templateName")
         private String templateName;
 
         private Result(Builder builder) {

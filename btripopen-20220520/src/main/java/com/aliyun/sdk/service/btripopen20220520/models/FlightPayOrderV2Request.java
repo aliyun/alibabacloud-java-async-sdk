@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightPayOrderV2Request} extends {@link RequestModel}
  *
  * <p>FlightPayOrderV2Request</p>
  */
 public class FlightPayOrderV2Request extends Request {
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private String orderId;
 
-    @Body
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Body
-    @NameInMap("total_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_price")
     private Long totalPrice;
 
-    @Body
-    @NameInMap("total_service_fee_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_service_fee_price")
     private Long totalServiceFeePrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightPayOrderV2Request(Builder builder) {

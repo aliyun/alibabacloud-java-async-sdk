@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsRequest} extends {@link RequestModel}
  *
  * <p>ListProjectsRequest</p>
  */
 public class ListProjectsRequest extends Request {
-    @Query
-    @NameInMap("listSystemCatalog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("listSystemCatalog")
     private Boolean listSystemCatalog;
 
-    @Query
-    @NameInMap("marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("marker")
     private String marker;
 
-    @Query
-    @NameInMap("maxItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxItem")
     private Integer maxItem;
 
-    @Query
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("quotaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("quotaName")
     private String quotaName;
 
-    @Query
-    @NameInMap("quotaNickName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("quotaNickName")
     private String quotaNickName;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("saleTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("saleTags")
     private String saleTags;
 
-    @Query
-    @NameInMap("tenantId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListProjectsRequest(Builder builder) {
@@ -180,7 +185,15 @@ public class ListProjectsRequest extends Request {
         } 
 
         /**
-         * The flag to choose whether list the specific catalog - system_catalog.
+         * <p>Specifies whether to list the built-in <strong>SYSTEM_CATALOG</strong> projects that are used to provide data such as project metadata and historical usage data. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Tenant-level Information Schema</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: The built-in SYSTEM_CATALOG projects are listed.</li>
+         * <li>false: The built-in SYSTEM_CATALOG projects are not listed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder listSystemCatalog(Boolean listSystemCatalog) {
             this.putQueryParameter("listSystemCatalog", listSystemCatalog);
@@ -189,7 +202,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -198,7 +214,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxItem(Integer maxItem) {
             this.putQueryParameter("maxItem", maxItem);
@@ -207,7 +226,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * Specifies the marker after which the returned list begins.
+         * <p>Specifies the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -216,7 +238,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The name of the quota. The value of this parameter is the identifier of the quota in MaxCompute, which differs from the quotaNickname parameter. You can configure the quotaNickname parameter. The system automatically generates a value for the quotaName parameter. This parameter is only used to describe the tunnel quota.
+         * <p>The quota name that is automatically generated. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <strong>Workspace</strong> &gt; <strong>Quotas</strong> from the left-side navigation pane, and then view the quota name on the <strong>Quotas</strong> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;hsajkdgbkaubh&quot;</p>
          */
         public Builder quotaName(String quotaName) {
             this.putQueryParameter("quotaName", quotaName);
@@ -225,7 +250,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The name of the quota.
+         * <p>The quota nickname. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <strong>Workspace</strong> &gt; <strong>Quotas</strong> from the left-side navigation pane, and then view the quota nickname on the <strong>Quotas</strong> page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaA</p>
          */
         public Builder quotaNickName(String quotaNickName) {
             this.putQueryParameter("quotaNickName", quotaNickName);
@@ -234,7 +262,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -243,7 +274,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
+         * <p>The instance ID and billing method of the default computing quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;aaaa-bbbb&quot;</p>
          */
         public Builder saleTags(String saleTags) {
             this.putQueryParameter("saleTags", saleTags);
@@ -252,7 +286,10 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The tenant ID. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, and choose <strong>Tenants</strong> &gt; <strong>Tenant Property</strong> from the left-side navigation pane to view the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>549532154333697</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
@@ -261,7 +298,14 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The project type. Valid values: external and managed. The value external indicates an external project, which is used in the data lakehouse solution. The value managed indicates an internal project.
+         * <p>The project type. Valid values:</p>
+         * <ul>
+         * <li><strong>managed</strong>: internal project</li>
+         * <li><strong>external</strong>: external project</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;managed&quot;</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

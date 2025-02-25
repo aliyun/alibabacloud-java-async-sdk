@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePushRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePushRuleResponseBody</p>
  */
 public class CreatePushRuleResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private CreatePushRuleResponseBody(Builder builder) {
@@ -131,18 +136,24 @@ public class CreatePushRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePushRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePushRuleResponseBody</p>
+     */
     public static class RuleInfos extends TeaModel {
-        @NameInMap("checkerName")
+        @com.aliyun.core.annotation.NameInMap("checkerName")
         private String checkerName;
 
-        @NameInMap("checkerType")
+        @com.aliyun.core.annotation.NameInMap("checkerType")
         private String checkerType;
 
-        @NameInMap("extraMessage")
+        @com.aliyun.core.annotation.NameInMap("extraMessage")
         private String extraMessage;
 
-        @NameInMap("fileRuleRegexes")
-        private java.util.List < String > fileRuleRegexes;
+        @com.aliyun.core.annotation.NameInMap("fileRuleRegexes")
+        private java.util.List<String> fileRuleRegexes;
 
         private RuleInfos(Builder builder) {
             this.checkerName = builder.checkerName;
@@ -183,7 +194,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
         /**
          * @return fileRuleRegexes
          */
-        public java.util.List < String > getFileRuleRegexes() {
+        public java.util.List<String> getFileRuleRegexes() {
             return this.fileRuleRegexes;
         }
 
@@ -191,7 +202,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             private String checkerName; 
             private String checkerType; 
             private String extraMessage; 
-            private java.util.List < String > fileRuleRegexes; 
+            private java.util.List<String> fileRuleRegexes; 
 
             /**
              * checkerName.
@@ -220,7 +231,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             /**
              * fileRuleRegexes.
              */
-            public Builder fileRuleRegexes(java.util.List < String > fileRuleRegexes) {
+            public Builder fileRuleRegexes(java.util.List<String> fileRuleRegexes) {
                 this.fileRuleRegexes = fileRuleRegexes;
                 return this;
             }
@@ -232,18 +243,24 @@ public class CreatePushRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePushRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePushRuleResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("ruleInfos")
-        private java.util.List < RuleInfos> ruleInfos;
+        @com.aliyun.core.annotation.NameInMap("ruleInfos")
+        private java.util.List<RuleInfos> ruleInfos;
 
         private Result(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
@@ -284,7 +301,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
         /**
          * @return ruleInfos
          */
-        public java.util.List < RuleInfos> getRuleInfos() {
+        public java.util.List<RuleInfos> getRuleInfos() {
             return this.ruleInfos;
         }
 
@@ -292,7 +309,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
-            private java.util.List < RuleInfos> ruleInfos; 
+            private java.util.List<RuleInfos> ruleInfos; 
 
             /**
              * gmtCreate.
@@ -321,7 +338,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             /**
              * ruleInfos.
              */
-            public Builder ruleInfos(java.util.List < RuleInfos> ruleInfos) {
+            public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
                 this.ruleInfos = ruleInfos;
                 return this;
             }

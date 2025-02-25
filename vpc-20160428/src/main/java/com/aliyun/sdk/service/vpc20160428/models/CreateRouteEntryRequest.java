@@ -1,69 +1,74 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateRouteEntryRequest</p>
  */
 public class CreateRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("NextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopId")
     private String nextHopId;
 
-    @Query
-    @NameInMap("NextHopList")
-    private java.util.List < NextHopList> nextHopList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopList")
+    private java.util.List<NextHopList> nextHopList;
 
-    @Query
-    @NameInMap("NextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopType")
     private String nextHopType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryName")
     private String routeEntryName;
 
-    @Query
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
     private CreateRouteEntryRequest(Builder builder) {
@@ -127,7 +132,7 @@ public class CreateRouteEntryRequest extends Request {
     /**
      * @return nextHopList
      */
-    public java.util.List < NextHopList> getNextHopList() {
+    public java.util.List<NextHopList> getNextHopList() {
         return this.nextHopList;
     }
 
@@ -192,7 +197,7 @@ public class CreateRouteEntryRequest extends Request {
         private String description; 
         private String destinationCidrBlock; 
         private String nextHopId; 
-        private java.util.List < NextHopList> nextHopList; 
+        private java.util.List<NextHopList> nextHopList; 
         private String nextHopType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -224,12 +229,14 @@ public class CreateRouteEntryRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -238,10 +245,11 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The description of the custom route entry.
-         * <p>
+         * <p>The description of the custom route entry.</p>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -250,11 +258,15 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the custom route entry. Both IPv4 and IPv6 CIDR blocks are supported. Make sure that the destination CIDR block meets the following requirements:
-         * <p>
+         * <p>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 CIDR blocks are supported. Make sure that the destination CIDR block meets the following requirements:</p>
+         * <ul>
+         * <li>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</li>
+         * <li>The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.
-         * *   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -263,7 +275,10 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the next hop.
+         * <p>The ID of the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6c2fp57q8rr4jlu****</p>
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -272,27 +287,33 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHopList.
+         * <p>The next hop list.</p>
          */
-        public Builder nextHopList(java.util.List < NextHopList> nextHopList) {
+        public Builder nextHopList(java.util.List<NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);
             this.nextHopList = nextHopList;
             return this;
         }
 
         /**
-         * The type of next hop of the custom route entry. Valid values:
-         * <p>
+         * <p>The type of next hop of the custom route entry. Valid values:</p>
+         * <ul>
+         * <li><strong>Instance</strong>: an Elastic Compute Service (ECS) instance. This is the default value.</li>
+         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+         * <li><strong>RouterInterface</strong>: a router interface.</li>
+         * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI).</li>
+         * <li><strong>VpnGateway</strong>: a VPN gateway.</li>
+         * <li><strong>IPv6Gateway</strong>: an IPv6 gateway.</li>
+         * <li><strong>NatGateway</strong>: a NAT gateway.</li>
+         * <li><strong>Attachment</strong>: a transit router.</li>
+         * <li><strong>VpcPeer</strong>: a VPC peering connection.</li>
+         * <li><strong>Ipv4Gateway</strong>: an IPv4 gateway.</li>
+         * <li><strong>GatewayEndpoint</strong>: a gateway endpoint.</li>
+         * <li><strong>Ecr</strong>: a Express Connect Router (ECR).</li>
+         * </ul>
          * 
-         * *   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.
-         * *   **HaVip**: a high-availability virtual IP address (HAVIP).
-         * *   **RouterInterface**: a router interface.
-         * *   **NetworkInterface**: an elastic network interface (ENI).
-         * *   **VpnGateway**: a VPN gateway.
-         * *   **IPv6Gateway**: an IPv6 gateway.
-         * *   **NatGateway**: a NAT gateway.
-         * *   **Attachment**: a transit router.
-         * *   **VpcPeer**: a VPC peering connection.
+         * <strong>example:</strong>
+         * <p>RouterInterface</p>
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -319,10 +340,11 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The region ID of the route table.
-         * <p>
+         * <p>The region ID of the route table.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -349,10 +371,11 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The name of the custom route entry that you want to add.
-         * <p>
+         * <p>The name of the custom route entry that you want to add.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -361,7 +384,11 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the route table to which you want to add a custom route entry.
+         * <p>The ID of the route table to which you want to add a custom route entry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzd****</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -376,14 +403,20 @@ public class CreateRouteEntryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRouteEntryRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRouteEntryRequest</p>
+     */
     public static class NextHopList extends TeaModel {
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private NextHopList(Builder builder) {
@@ -427,7 +460,10 @@ public class CreateRouteEntryRequest extends Request {
             private Integer weight; 
 
             /**
-             * The ID of the next hop of the ECMP route.
+             * <p>The ID of the next hop of the ECMP route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ri-2zeo3xzyf3cd8r4****</p>
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -435,7 +471,10 @@ public class CreateRouteEntryRequest extends Request {
             }
 
             /**
-             * The type of next hop of the ECMP route entry. Set the value to **RouterInterface**.
+             * <p>The type of next hop of the ECMP route entry. Set the value to <strong>RouterInterface</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RouterInterface</p>
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -443,7 +482,10 @@ public class CreateRouteEntryRequest extends Request {
             }
 
             /**
-             * The weight of the next hop of the ECMP route entry.
+             * <p>The weight of the next hop of the ECMP route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

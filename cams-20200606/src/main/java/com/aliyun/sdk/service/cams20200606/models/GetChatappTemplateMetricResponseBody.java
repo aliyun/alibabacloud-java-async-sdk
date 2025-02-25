@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappTemplateMetricResponseBody} extends {@link TeaModel}
  *
  * <p>GetChatappTemplateMetricResponseBody</p>
  */
 public class GetChatappTemplateMetricResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetChatappTemplateMetricResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,11 +97,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The value OK indicates that the request was successful.</p>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +108,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +116,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +127,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,14 +143,20 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChatappTemplateMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChatappTemplateMetricResponseBody</p>
+     */
     public static class Cliented extends TeaModel {
-        @NameInMap("ButtonContent")
+        @com.aliyun.core.annotation.NameInMap("ButtonContent")
         private String buttonContent;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Cliented(Builder builder) {
@@ -186,7 +200,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Button name
+             * <p>The text on the button.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open url</p>
              */
             public Builder buttonContent(String buttonContent) {
                 this.buttonContent = buttonContent;
@@ -194,7 +211,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Clicked count
+             * <p>The number of clicks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -202,7 +222,16 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The type of button.
+             * <p>The button type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>phone_number_button</li>
+             * <li>url_button</li>
+             * <li>quick_relpy_button</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>quick_reply_button</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -216,29 +245,35 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetChatappTemplateMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChatappTemplateMetricResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Cliented")
+        @com.aliyun.core.annotation.NameInMap("Cliented")
         private java.util.List < Cliented> cliented;
 
-        @NameInMap("DeliveredCount")
+        @com.aliyun.core.annotation.NameInMap("DeliveredCount")
         private Integer deliveredCount;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("ReadCount")
+        @com.aliyun.core.annotation.NameInMap("ReadCount")
         private Integer readCount;
 
-        @NameInMap("SentCount")
+        @com.aliyun.core.annotation.NameInMap("SentCount")
         private Integer sentCount;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Long start;
 
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
         private Data(Builder builder) {
@@ -327,7 +362,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             private String templateCode; 
 
             /**
-             * Click Statistics
+             * <p>The statistics on button clicks.</p>
              */
             public Builder cliented(java.util.List < Cliented> cliented) {
                 this.cliented = cliented;
@@ -335,7 +370,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Delivered count
+             * <p>The number of delivered messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder deliveredCount(Integer deliveredCount) {
                 this.deliveredCount = deliveredCount;
@@ -343,7 +381,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The end of the time range you queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1668138331485</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -351,7 +392,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+             * <p>The template language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -359,7 +403,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Read count
+             * <p>The number of read messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder readCount(Integer readCount) {
                 this.readCount = readCount;
@@ -367,7 +414,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Sent count
+             * <p>The number of sent messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sentCount(Integer sentCount) {
                 this.sentCount = sentCount;
@@ -375,7 +425,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The beginning of the time range you queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673919240001</p>
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -383,7 +436,10 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the message template.
+             * <p>The template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83837774838*****</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;

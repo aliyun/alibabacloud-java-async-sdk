@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterEventsResponseBody</p>
  */
 public class DescribeClusterEventsResponseBody extends TeaModel {
-    @NameInMap("events")
-    private java.util.List < Events> events;
+    @com.aliyun.core.annotation.NameInMap("events")
+    private java.util.List<Events> events;
 
-    @NameInMap("page_info")
+    @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
     private DescribeClusterEventsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -46,19 +51,19 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private PageInfo pageInfo; 
 
         /**
-         * The list of events.
+         * <p>The list of events.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -71,14 +76,20 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterEventsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("reason")
+        @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
 
         private Data(Builder builder) {
@@ -122,34 +133,33 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The severity level of the event.
-             * <p>
+             * <p>The severity level of the event.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>warning</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   warning
+             * <!-- -->
+             * </li>
+             * <li><p>error</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>info</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   error
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   info
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>info</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -157,7 +167,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the event.
+             * <p>The details of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Start to upgrade NodePool nodePool/npdd89dc2b76c04f14b06774883b******</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -165,7 +178,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event.
+             * <p>The status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -179,26 +195,32 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterEventsResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("data")
+        @com.aliyun.core.annotation.NameInMap("data")
         private Data data;
 
-        @NameInMap("event_id")
+        @com.aliyun.core.annotation.NameInMap("event_id")
         private String eventId;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("time")
+        @com.aliyun.core.annotation.NameInMap("time")
         private String time;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Events(Builder builder) {
@@ -278,7 +300,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c82e6987e2961451182edacd74faf****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -286,7 +311,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the event.
+             * <p>The description of the event.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -294,7 +319,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-9ad04f72-8ee7-46bf-a02c-e4a06b39****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -302,7 +330,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event source.
+             * <p>The event source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -310,7 +341,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The subject related to the event.
+             * <p>The subject related to the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>npdd89dc2b76c04f14b06774883b******</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -318,7 +352,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event started.
+             * <p>The time when the event started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-01T17:31:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -326,7 +363,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of event. Valid values:
+             * <p>The type of event. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nodepool_update</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -340,14 +380,20 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterEventsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Long pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Long pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -391,7 +437,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of the page to return.
+             * <p>The number of the page to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -399,7 +448,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Valid values: 1 to 50. Default value: 50.
+             * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -407,7 +459,10 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

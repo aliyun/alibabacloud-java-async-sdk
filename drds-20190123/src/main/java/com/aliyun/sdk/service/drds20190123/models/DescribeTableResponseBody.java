@@ -62,7 +62,7 @@ public class DescribeTableResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates the returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeTableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeTableResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +178,7 @@ public class DescribeTableResponseBody extends TeaModel {
             private String isPk; 
 
             /**
-             * ColumnName.
+             * Indicates the name of a column.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -186,7 +186,7 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * Indicates the type of the column.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -194,7 +194,7 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * Extra.
+             * Extra
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -202,7 +202,7 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * Indicates the primary key of the table.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -210,7 +210,7 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * IsAllowNull.
+             * Indicates whether the column can be empty.
              */
             public Builder isAllowNull(String isAllowNull) {
                 this.isAllowNull = isAllowNull;
@@ -218,7 +218,7 @@ public class DescribeTableResponseBody extends TeaModel {
             }
 
             /**
-             * IsPk.
+             * Indicates whether the column is the primary key column of the table.
              */
             public Builder isPk(String isPk) {
                 this.isPk = isPk;
@@ -259,7 +259,7 @@ public class DescribeTableResponseBody extends TeaModel {
             private java.util.List < List> list; 
 
             /**
-             * List.
+             * Indicates the details about the table schema.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;

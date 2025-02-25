@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditZeroCreditShutdownResponseBody} extends {@link TeaModel}
  *
  * <p>EditZeroCreditShutdownResponseBody</p>
  */
 public class EditZeroCreditShutdownResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EditZeroCreditShutdownResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>Success or not</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Request ID</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +113,10 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Message</br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Message</br></p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>NO_STOP</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -118,7 +135,10 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosEventListResponseBody</p>
  */
 public class DescribeDdosEventListResponseBody extends TeaModel {
-    @NameInMap("DdosEventList")
+    @com.aliyun.core.annotation.NameInMap("DdosEventList")
     private DdosEventList ddosEventList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeDdosEventListResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * DdosEventList.
+         * An array that consists of the details of a DDoS attack event.
          */
         public Builder ddosEventList(DdosEventList ddosEventList) {
             this.ddosEventList = ddosEventList;
@@ -70,7 +69,7 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of DDoS attack events.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -92,22 +91,22 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
     } 
 
     public static class DdosEvent extends TeaModel {
-        @NameInMap("DdosStatus")
+        @com.aliyun.core.annotation.NameInMap("DdosStatus")
         private String ddosStatus;
 
-        @NameInMap("DdosType")
+        @com.aliyun.core.annotation.NameInMap("DdosType")
         private String ddosType;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Long delayTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("UnBlackholeTime")
+        @com.aliyun.core.annotation.NameInMap("UnBlackholeTime")
         private Long unBlackholeTime;
 
         private DdosEvent(Builder builder) {
@@ -178,7 +177,12 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
             private Long unBlackholeTime; 
 
             /**
-             * DdosStatus.
+             * The status of the DDoS attack event. Valid values:
+             * <p>
+             * 
+             * *   **mitigating**: indicates that traffic scrubbing is in progress.
+             * *   **blackholed**: indicates that blackhole filtering is triggered for the asset.
+             * *   **normal**: indicates that the DDoS attack event ends.
              */
             public Builder ddosStatus(String ddosStatus) {
                 this.ddosStatus = ddosStatus;
@@ -186,7 +190,11 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
             }
 
             /**
-             * DdosType.
+             * The type of the DDoS attack event. Valid values:
+             * <p>
+             * 
+             * *   **defense**: an attack event that triggers traffic scrubbing
+             * *   **blackhole**: an attack event that triggers blackhole filtering
              */
             public Builder ddosType(String ddosType) {
                 this.ddosType = ddosType;
@@ -194,7 +202,10 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
             }
 
             /**
-             * DelayTime.
+             * The time of the last attack. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>
+             * 
+             * > This parameter is returned only when the asset is attacked multiple times within a DDoS attack event.
              */
             public Builder delayTime(Long delayTime) {
                 this.delayTime = delayTime;
@@ -202,7 +213,7 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the DDoS attack event. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -210,7 +221,7 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the DDoS attack event. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -218,7 +229,10 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
             }
 
             /**
-             * UnBlackholeTime.
+             * The time when blackhole filtering is deactivated. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>
+             * 
+             * > This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.
              */
             public Builder unBlackholeTime(Long unBlackholeTime) {
                 this.unBlackholeTime = unBlackholeTime;
@@ -233,7 +247,7 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
 
     }
     public static class DdosEventList extends TeaModel {
-        @NameInMap("DdosEvent")
+        @com.aliyun.core.annotation.NameInMap("DdosEvent")
         private java.util.List < DdosEvent> ddosEvent;
 
         private DdosEventList(Builder builder) {

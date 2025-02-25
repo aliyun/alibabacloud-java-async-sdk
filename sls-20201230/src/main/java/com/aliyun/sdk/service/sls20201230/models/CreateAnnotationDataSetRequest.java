@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateAnnotationDataSetRequest} extends {@link RequestModel}
  *
  * <p>CreateAnnotationDataSetRequest</p>
  */
 public class CreateAnnotationDataSetRequest extends Request {
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private MLDataSetParam body;
 
-    @Query
-    @NameInMap("datasetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("datasetId")
     private String datasetId;
 
     private CreateAnnotationDataSetRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class CreateAnnotationDataSetRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The data structure of the request.</p>
          */
         public Builder body(MLDataSetParam body) {
             this.putBodyParameter("body", body);
@@ -77,7 +82,10 @@ public class CreateAnnotationDataSetRequest extends Request {
         }
 
         /**
-         * datasetId.
+         * <p>The unique identifier of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8cc4eb51a85e823471cdb368fae9be</p>
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("datasetId", datasetId);

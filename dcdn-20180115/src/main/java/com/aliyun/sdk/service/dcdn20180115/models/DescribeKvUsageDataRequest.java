@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKvUsageDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeKvUsageDataRequest</p>
  */
 public class DescribeKvUsageDataRequest extends Request {
-    @Query
-    @NameInMap("AccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessType")
     private String accessType;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Field")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Field")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String field;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("ResponseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseType")
     private String responseType;
 
-    @Query
-    @NameInMap("SplitBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SplitBy")
     private String splitBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeKvUsageDataRequest(Builder builder) {
@@ -139,7 +139,16 @@ public class DescribeKvUsageDataRequest extends Request {
         } 
 
         /**
-         * AccessType.
+         * <p>The request method. If the parameter is empty, data about all methods is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>get</strong></li>
+         * <li><strong>put</strong></li>
+         * <li><strong>list</strong></li>
+         * <li><strong>delete</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -148,7 +157,10 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-10T23:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -157,7 +169,11 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * Field.
+         * <p>The type of the request data. Set the value to <strong>acc</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acc</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -166,7 +182,11 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>The namespace ID. If the parameter is empty, data about all namespaces is returned.</p>
+         * <p>You can specify a maximum number of 30 namespace IDs and separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12423131231****</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -175,7 +195,15 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * ResponseType.
+         * <p>The type of the response data. Valid values:</p>
+         * <ul>
+         * <li><strong>detail</strong>: detailed data</li>
+         * <li><strong>total</strong>: summary data</li>
+         * </ul>
+         * <p>Default value: <strong>detail</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>detail</p>
          */
         public Builder responseType(String responseType) {
             this.putQueryParameter("ResponseType", responseType);
@@ -184,7 +212,16 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * SplitBy.
+         * <p>The key that is used to group data. Valid values: <strong>type</strong> and <strong>namespace</strong>.</p>
+         * <ul>
+         * <li><strong>type</strong>: Data is grouped by time. The data in the last 5 minutes is returned.</li>
+         * <li><strong>namespace</strong>: Data is grouped by namespace and is not padded with zeros.</li>
+         * <li>Default value: <strong>type</strong>.</li>
+         * </ul>
+         * <p>If <strong>ResponseType</strong> is set to <strong>total</strong>, data to return is not grouped by <strong>namespace</strong> but by <strong>type</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         public Builder splitBy(String splitBy) {
             this.putQueryParameter("SplitBy", splitBy);
@@ -193,7 +230,11 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The minimum data granularity is 1 hour. If you do not specify this parameter, the data in the last seven days is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-10T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

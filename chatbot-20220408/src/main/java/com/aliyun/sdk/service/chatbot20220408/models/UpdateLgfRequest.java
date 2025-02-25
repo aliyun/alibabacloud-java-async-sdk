@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLgfRequest} extends {@link RequestModel}
  *
  * <p>UpdateLgfRequest</p>
  */
 public class UpdateLgfRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LgfDefinition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LgfDefinition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private LgfDefinition lgfDefinition;
 
-    @Query
-    @NameInMap("LgfId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LgfId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long lgfId;
 
     private UpdateLgfRequest(Builder builder) {
@@ -131,7 +131,10 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot-cn-yjzbyrEvqd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,7 +143,7 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
-         * LgfDefinition.
+         * <p>This parameter is required.</p>
          */
         public Builder lgfDefinition(LgfDefinition lgfDefinition) {
             String lgfDefinitionShrink = shrink(lgfDefinition, "LgfDefinition", "json");
@@ -150,7 +153,11 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
-         * LGF ID
+         * <p>LGF ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12121</p>
          */
         public Builder lgfId(Long lgfId) {
             this.putQueryParameter("LgfId", lgfId);
@@ -165,13 +172,19 @@ public class UpdateLgfRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLgfRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLgfRequest</p>
+     */
     public static class LgfDefinition extends TeaModel {
-        @NameInMap("IntentId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IntentId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long intentId;
 
-        @NameInMap("RuleText")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleText")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleText;
 
         private LgfDefinition(Builder builder) {
@@ -206,7 +219,10 @@ public class UpdateLgfRequest extends Request {
             private String ruleText; 
 
             /**
-             * IntentId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23234523522</p>
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -214,7 +230,7 @@ public class UpdateLgfRequest extends Request {
             }
 
             /**
-             * RuleText.
+             * <p>This parameter is required.</p>
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

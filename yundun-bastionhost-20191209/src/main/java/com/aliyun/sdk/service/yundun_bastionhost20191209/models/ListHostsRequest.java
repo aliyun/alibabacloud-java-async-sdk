@@ -1,60 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostsRequest} extends {@link RequestModel}
  *
  * <p>ListHostsRequest</p>
  */
 public class ListHostsRequest extends Request {
-    @Query
-    @NameInMap("HostAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAddress")
     private String hostAddress;
 
-    @Query
-    @NameInMap("HostGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostGroupId")
     private String hostGroupId;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OSType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSType")
     private String OSType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("SourceInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
     private String sourceInstanceId;
 
-    @Query
-    @NameInMap("SourceInstanceState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceState")
     private String sourceInstanceState;
 
     private ListHostsRequest(Builder builder) {
@@ -195,7 +195,10 @@ public class ListHostsRequest extends Request {
         } 
 
         /**
-         * The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
+         * <p>The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -204,10 +207,13 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The ID of the host group to which the host to be queried belongs.
-         * <p>
+         * <p>The ID of the host group to which the host to be queried belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group.</p>
+         * </blockquote>
          * 
-         * > You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -216,7 +222,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The name of the host that you want to query. Only exact match is supported.
+         * <p>The name of the host that you want to query. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -225,10 +234,14 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host on which you want to query hosts.
-         * <p>
+         * <p>The ID of the bastion host on which you want to query hosts.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -237,11 +250,14 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The operating system of the host that you want to query. Valid values:
-         * <p>
+         * <p>The operating system of the host that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Linux</strong></li>
+         * <li><strong>Windows</strong></li>
+         * </ul>
          * 
-         * *   **Linux**
-         * *   **Windows**
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -250,7 +266,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -259,10 +278,13 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -271,10 +293,13 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The region ID of the bastion host on which you want to query hosts.
-         * <p>
+         * <p>The region ID of the bastion host on which you want to query hosts.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -283,12 +308,15 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The source of the host that you want to query. Valid values:
-         * <p>
+         * <p>The source of the host that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Local</strong>: a host in a data center</li>
+         * <li><strong>Ecs</strong>: an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Rds</strong>: a host in an ApsaraDB MyBase dedicated cluster</li>
+         * </ul>
          * 
-         * *   **Local**: a host in a data center
-         * *   **Ecs**: an Elastic Compute Service (ECS) instance
-         * *   **Rds**: a host in an ApsaraDB MyBase dedicated cluster
+         * <strong>example:</strong>
+         * <p>Local</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -297,7 +325,10 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster that you want to query. Only exact match is supported.
+         * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster that you want to query. Only exact match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp19ienyt0yax748****</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);
@@ -306,11 +337,14 @@ public class ListHostsRequest extends Request {
         }
 
         /**
-         * The status of the host that you want to query. Valid values:
-         * <p>
+         * <p>The status of the host that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: normal</li>
+         * <li><strong>Release</strong>: released</li>
+         * </ul>
          * 
-         * *   **Normal**: normal
-         * *   **Release**: released
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder sourceInstanceState(String sourceInstanceState) {
             this.putQueryParameter("SourceInstanceState", sourceInstanceState);

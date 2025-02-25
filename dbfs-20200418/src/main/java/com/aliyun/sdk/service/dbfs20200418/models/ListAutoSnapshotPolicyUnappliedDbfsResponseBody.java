@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAutoSnapshotPolicyUnappliedDbfsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAutoSnapshotPolicyUnappliedDbfsResponseBody</p>
  */
 public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
-    @NameInMap("DbfsList")
+    @com.aliyun.core.annotation.NameInMap("DbfsList")
     private java.util.List < DbfsList> dbfsList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAutoSnapshotPolicyUnappliedDbfsResponseBody(Builder builder) {
@@ -131,26 +131,32 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAutoSnapshotPolicyUnappliedDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAutoSnapshotPolicyUnappliedDbfsResponseBody</p>
+     */
     public static class DbfsList extends TeaModel {
-        @NameInMap("FsId")
+        @com.aliyun.core.annotation.NameInMap("FsId")
         private String fsId;
 
-        @NameInMap("FsName")
+        @com.aliyun.core.annotation.NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SizeG")
+        @com.aliyun.core.annotation.NameInMap("SizeG")
         private Long sizeG;
 
-        @NameInMap("SnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private Integer snapshotCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private DbfsList(Builder builder) {
@@ -230,7 +236,7 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * DBFS实例ID
+             * FsId.
              */
             public Builder fsId(String fsId) {
                 this.fsId = fsId;
@@ -238,7 +244,7 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             }
 
             /**
-             * DBFS实例名称
+             * FsName.
              */
             public Builder fsName(String fsName) {
                 this.fsName = fsName;
@@ -254,7 +260,7 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             }
 
             /**
-             * 容量（GB）
+             * SizeG.
              */
             public Builder sizeG(Long sizeG) {
                 this.sizeG = sizeG;

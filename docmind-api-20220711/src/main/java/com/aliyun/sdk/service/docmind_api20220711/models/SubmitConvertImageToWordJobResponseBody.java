@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitConvertImageToWordJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitConvertImageToWordJobResponseBody</p>
  */
 public class SubmitConvertImageToWordJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitConvertImageToWordJobResponseBody(Builder builder) {
@@ -111,8 +116,14 @@ public class SubmitConvertImageToWordJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitConvertImageToWordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitConvertImageToWordJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Data(Builder builder) {

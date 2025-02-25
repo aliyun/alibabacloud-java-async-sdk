@@ -40,8 +40,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.\\n
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <strong>Upgrade</strong>.\n</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of AddDataLevelPermissionRuleUsers  AddDataLevelPermissionRuleUsersRequest
+     * @return AddDataLevelPermissionRuleUsersResponse
      */
     @Override
     public CompletableFuture<AddDataLevelPermissionRuleUsersResponse> addDataLevelPermissionRuleUsers(AddDataLevelPermissionRuleUsersRequest request) {
@@ -58,8 +63,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ROW_LEVEL
-      *
+     * <b>description</b> :
+     * <p>ROW_LEVEL</p>
+     * 
+     * @param request the request parameters of AddDataLevelPermissionWhiteList  AddDataLevelPermissionWhiteListRequest
+     * @return AddDataLevelPermissionWhiteListResponse
      */
     @Override
     public CompletableFuture<AddDataLevelPermissionWhiteListResponse> addDataLevelPermissionWhiteList(AddDataLevelPermissionWhiteListRequest request) {
@@ -75,6 +83,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddShareReport  AddShareReportRequest
+     * @return AddShareReportResponse
+     */
     @Override
     public CompletableFuture<AddShareReportResponse> addShareReport(AddShareReportRequest request) {
         try {
@@ -89,11 +101,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUser  AddUserRequest
+     * @return AddUserResponse
+     */
     @Override
     public CompletableFuture<AddUserResponse> addUser(AddUserRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddUserResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -103,6 +119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUserGroupMember  AddUserGroupMemberRequest
+     * @return AddUserGroupMemberResponse
+     */
     @Override
     public CompletableFuture<AddUserGroupMemberResponse> addUserGroupMember(AddUserGroupMemberRequest request) {
         try {
@@ -117,6 +137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUserGroupMembers  AddUserGroupMembersRequest
+     * @return AddUserGroupMembersResponse
+     */
     @Override
     public CompletableFuture<AddUserGroupMembersResponse> addUserGroupMembers(AddUserGroupMembersRequest request) {
         try {
@@ -131,6 +155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUserTagMeta  AddUserTagMetaRequest
+     * @return AddUserTagMetaResponse
+     */
     @Override
     public CompletableFuture<AddUserTagMetaResponse> addUserTagMeta(AddUserTagMetaRequest request) {
         try {
@@ -145,6 +173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUserToWorkspace  AddUserToWorkspaceRequest
+     * @return AddUserToWorkspaceResponse
+     */
     @Override
     public CompletableFuture<AddUserToWorkspaceResponse> addUserToWorkspace(AddUserToWorkspaceRequest request) {
         try {
@@ -159,6 +191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddWorkspaceUsers  AddWorkspaceUsersRequest
+     * @return AddWorkspaceUsersResponse
+     */
     @Override
     public CompletableFuture<AddWorkspaceUsersResponse> addWorkspaceUsers(AddWorkspaceUsersRequest request) {
         try {
@@ -173,6 +209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AllotDatasetAccelerationTask  AllotDatasetAccelerationTaskRequest
+     * @return AllotDatasetAccelerationTaskResponse
+     */
     @Override
     public CompletableFuture<AllotDatasetAccelerationTaskResponse> allotDatasetAccelerationTask(AllotDatasetAccelerationTaskRequest request) {
         try {
@@ -187,6 +227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AuthorizeMenu  AuthorizeMenuRequest
+     * @return AuthorizeMenuResponse
+     */
     @Override
     public CompletableFuture<AuthorizeMenuResponse> authorizeMenu(AuthorizeMenuRequest request) {
         try {
@@ -201,6 +245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchAddFeishuUsers  BatchAddFeishuUsersRequest
+     * @return BatchAddFeishuUsersResponse
+     */
     @Override
     public CompletableFuture<BatchAddFeishuUsersResponse> batchAddFeishuUsers(BatchAddFeishuUsersRequest request) {
         try {
@@ -215,6 +263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelAuthorizationMenu  CancelAuthorizationMenuRequest
+     * @return CancelAuthorizationMenuResponse
+     */
     @Override
     public CompletableFuture<CancelAuthorizationMenuResponse> cancelAuthorizationMenu(CancelAuthorizationMenuRequest request) {
         try {
@@ -229,6 +281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelCollection  CancelCollectionRequest
+     * @return CancelCollectionResponse
+     */
     @Override
     public CompletableFuture<CancelCollectionResponse> cancelCollection(CancelCollectionRequest request) {
         try {
@@ -243,6 +299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelReportShare  CancelReportShareRequest
+     * @return CancelReportShareResponse
+     */
     @Override
     public CompletableFuture<CancelReportShareResponse> cancelReportShare(CancelReportShareRequest request) {
         try {
@@ -257,6 +317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeVisibilityModel  ChangeVisibilityModelRequest
+     * @return ChangeVisibilityModelResponse
+     */
     @Override
     public CompletableFuture<ChangeVisibilityModelResponse> changeVisibilityModel(ChangeVisibilityModelRequest request) {
         try {
@@ -271,6 +335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckReadable  CheckReadableRequest
+     * @return CheckReadableResponse
+     */
     @Override
     public CompletableFuture<CheckReadableResponse> checkReadable(CheckReadableRequest request) {
         try {
@@ -285,6 +353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTicket  CreateTicketRequest
+     * @return CreateTicketResponse
+     */
     @Override
     public CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request) {
         try {
@@ -299,6 +371,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTicket4Copilot  CreateTicket4CopilotRequest
+     * @return CreateTicket4CopilotResponse
+     */
+    @Override
+    public CompletableFuture<CreateTicket4CopilotResponse> createTicket4Copilot(CreateTicket4CopilotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateTicket4Copilot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTicket4CopilotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateTicket4CopilotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateUserGroup  CreateUserGroupRequest
+     * @return CreateUserGroupResponse
+     */
     @Override
     public CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request) {
         try {
@@ -313,6 +407,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DataSetBlood  DataSetBloodRequest
+     * @return DataSetBloodResponse
+     */
+    @Override
+    public CompletableFuture<DataSetBloodResponse> dataSetBlood(DataSetBloodRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DataSetBlood").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DataSetBloodResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DataSetBloodResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DataSourceBlood  DataSourceBloodRequest
+     * @return DataSourceBloodResponse
+     */
+    @Override
+    public CompletableFuture<DataSourceBloodResponse> dataSourceBlood(DataSourceBloodRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DataSourceBlood").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DataSourceBloodResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DataSourceBloodResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DelayTicketExpireTime  DelayTicketExpireTimeRequest
+     * @return DelayTicketExpireTimeResponse
+     */
     @Override
     public CompletableFuture<DelayTicketExpireTimeResponse> delayTicketExpireTime(DelayTicketExpireTimeRequest request) {
         try {
@@ -328,8 +462,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * {"ruleId":"a5bb24da-***-a891683e14da","cubeId":"7c7223ae-***-3c744528014b","delModel":{"userGroups":["0d5fb19b-***-1248fc27ca51","3d2c23d4-***-f6390f325c2d"],"users":["4334***358","Huang***3fa822"]}}
-      *
+     * <b>description</b> :
+     * <p>{&quot;ruleId&quot;:&quot;a5bb24da-<em><strong>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</strong></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><strong>-1248fc27ca51&quot;,&quot;3d2c23d4-</strong></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><strong>358&quot;,&quot;Huang</strong></em>3fa822&quot;]}}</p>
+     * 
+     * @param request the request parameters of DeleteDataLevelPermissionRuleUsers  DeleteDataLevelPermissionRuleUsersRequest
+     * @return DeleteDataLevelPermissionRuleUsersResponse
      */
     @Override
     public CompletableFuture<DeleteDataLevelPermissionRuleUsersResponse> deleteDataLevelPermissionRuleUsers(DeleteDataLevelPermissionRuleUsersRequest request) {
@@ -346,8 +483,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the training dataset that you want to remove from the specified custom linguistic model.
-      *
+     * <b>description</b> :
+     * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+     * 
+     * @param request the request parameters of DeleteDataLevelRuleConfig  DeleteDataLevelRuleConfigRequest
+     * @return DeleteDataLevelRuleConfigResponse
      */
     @Override
     public CompletableFuture<DeleteDataLevelRuleConfigResponse> deleteDataLevelRuleConfig(DeleteDataLevelRuleConfigRequest request) {
@@ -363,6 +503,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTicket  DeleteTicketRequest
+     * @return DeleteTicketResponse
+     */
     @Override
     public CompletableFuture<DeleteTicketResponse> deleteTicket(DeleteTicketRequest request) {
         try {
@@ -377,6 +521,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUser  DeleteUserRequest
+     * @return DeleteUserResponse
+     */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
         try {
@@ -391,6 +539,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserFromWorkspace  DeleteUserFromWorkspaceRequest
+     * @return DeleteUserFromWorkspaceResponse
+     */
     @Override
     public CompletableFuture<DeleteUserFromWorkspaceResponse> deleteUserFromWorkspace(DeleteUserFromWorkspaceRequest request) {
         try {
@@ -405,6 +557,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserGroup  DeleteUserGroupRequest
+     * @return DeleteUserGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteUserGroupResponse> deleteUserGroup(DeleteUserGroupRequest request) {
         try {
@@ -419,6 +575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserGroupMember  DeleteUserGroupMemberRequest
+     * @return DeleteUserGroupMemberResponse
+     */
     @Override
     public CompletableFuture<DeleteUserGroupMemberResponse> deleteUserGroupMember(DeleteUserGroupMemberRequest request) {
         try {
@@ -433,6 +593,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserGroupMembers  DeleteUserGroupMembersRequest
+     * @return DeleteUserGroupMembersResponse
+     */
     @Override
     public CompletableFuture<DeleteUserGroupMembersResponse> deleteUserGroupMembers(DeleteUserGroupMembersRequest request) {
         try {
@@ -447,6 +611,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUserTagMeta  DeleteUserTagMetaRequest
+     * @return DeleteUserTagMetaResponse
+     */
     @Override
     public CompletableFuture<DeleteUserTagMetaResponse> deleteUserTagMeta(DeleteUserTagMetaRequest request) {
         try {
@@ -461,6 +629,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataSourceConnectionInfo  GetDataSourceConnectionInfoRequest
+     * @return GetDataSourceConnectionInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetDataSourceConnectionInfoResponse> getDataSourceConnectionInfo(GetDataSourceConnectionInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataSourceConnectionInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataSourceConnectionInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataSourceConnectionInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMailTaskStatus  GetMailTaskStatusRequest
+     * @return GetMailTaskStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetMailTaskStatusResponse> getMailTaskStatus(GetMailTaskStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMailTaskStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMailTaskStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMailTaskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetUserGroupInfo  GetUserGroupInfoRequest
+     * @return GetUserGroupInfoResponse
+     */
     @Override
     public CompletableFuture<GetUserGroupInfoResponse> getUserGroupInfo(GetUserGroupInfoRequest request) {
         try {
@@ -475,6 +683,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWorksEmbedList  GetWorksEmbedListRequest
+     * @return GetWorksEmbedListResponse
+     */
+    @Override
+    public CompletableFuture<GetWorksEmbedListResponse> getWorksEmbedList(GetWorksEmbedListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetWorksEmbedList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorksEmbedListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorksEmbedListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListApiDatasource  ListApiDatasourceRequest
+     * @return ListApiDatasourceResponse
+     */
     @Override
     public CompletableFuture<ListApiDatasourceResponse> listApiDatasource(ListApiDatasourceRequest request) {
         try {
@@ -489,6 +719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListByUserGroupId  ListByUserGroupIdRequest
+     * @return ListByUserGroupIdResponse
+     */
     @Override
     public CompletableFuture<ListByUserGroupIdResponse> listByUserGroupId(ListByUserGroupIdRequest request) {
         try {
@@ -503,6 +737,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCollections  ListCollectionsRequest
+     * @return ListCollectionsResponse
+     */
     @Override
     public CompletableFuture<ListCollectionsResponse> listCollections(ListCollectionsRequest request) {
         try {
@@ -518,8 +756,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <strong>Upgrade</strong>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ListCubeDataLevelPermissionConfig  ListCubeDataLevelPermissionConfigRequest
+     * @return ListCubeDataLevelPermissionConfigResponse
      */
     @Override
     public CompletableFuture<ListCubeDataLevelPermissionConfigResponse> listCubeDataLevelPermissionConfig(ListCubeDataLevelPermissionConfigRequest request) {
@@ -535,6 +778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDataLevelPermissionWhiteList  ListDataLevelPermissionWhiteListRequest
+     * @return ListDataLevelPermissionWhiteListResponse
+     */
     @Override
     public CompletableFuture<ListDataLevelPermissionWhiteListResponse> listDataLevelPermissionWhiteList(ListDataLevelPermissionWhiteListRequest request) {
         try {
@@ -549,6 +796,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDataSource  ListDataSourceRequest
+     * @return ListDataSourceResponse
+     */
+    @Override
+    public CompletableFuture<ListDataSourceResponse> listDataSource(ListDataSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListFavoriteReports  ListFavoriteReportsRequest
+     * @return ListFavoriteReportsResponse
+     */
     @Override
     public CompletableFuture<ListFavoriteReportsResponse> listFavoriteReports(ListFavoriteReportsRequest request) {
         try {
@@ -563,6 +832,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOrganizationRoleUsers  ListOrganizationRoleUsersRequest
+     * @return ListOrganizationRoleUsersResponse
+     */
+    @Override
+    public CompletableFuture<ListOrganizationRoleUsersResponse> listOrganizationRoleUsers(ListOrganizationRoleUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListOrganizationRoleUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOrganizationRoleUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOrganizationRoleUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOrganizationRoles  ListOrganizationRolesRequest
+     * @return ListOrganizationRolesResponse
+     */
+    @Override
+    public CompletableFuture<ListOrganizationRolesResponse> listOrganizationRoles(ListOrganizationRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListOrganizationRoles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOrganizationRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOrganizationRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPortalMenuAuthorization  ListPortalMenuAuthorizationRequest
+     * @return ListPortalMenuAuthorizationResponse
+     */
     @Override
     public CompletableFuture<ListPortalMenuAuthorizationResponse> listPortalMenuAuthorization(ListPortalMenuAuthorizationRequest request) {
         try {
@@ -577,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPortalMenus  ListPortalMenusRequest
+     * @return ListPortalMenusResponse
+     */
     @Override
     public CompletableFuture<ListPortalMenusResponse> listPortalMenus(ListPortalMenusRequest request) {
         try {
@@ -591,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRecentViewReports  ListRecentViewReportsRequest
+     * @return ListRecentViewReportsResponse
+     */
     @Override
     public CompletableFuture<ListRecentViewReportsResponse> listRecentViewReports(ListRecentViewReportsRequest request) {
         try {
@@ -605,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSharedReports  ListSharedReportsRequest
+     * @return ListSharedReportsResponse
+     */
     @Override
     public CompletableFuture<ListSharedReportsResponse> listSharedReports(ListSharedReportsRequest request) {
         try {
@@ -619,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserGroupsByUserId  ListUserGroupsByUserIdRequest
+     * @return ListUserGroupsByUserIdResponse
+     */
     @Override
     public CompletableFuture<ListUserGroupsByUserIdResponse> listUserGroupsByUserId(ListUserGroupsByUserIdRequest request) {
         try {
@@ -633,6 +958,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkspaceRoleUsers  ListWorkspaceRoleUsersRequest
+     * @return ListWorkspaceRoleUsersResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkspaceRoleUsersResponse> listWorkspaceRoleUsers(ListWorkspaceRoleUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListWorkspaceRoleUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkspaceRoleUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkspaceRoleUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWorkspaceRoles  ListWorkspaceRolesRequest
+     * @return ListWorkspaceRolesResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkspaceRolesResponse> listWorkspaceRoles(ListWorkspaceRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListWorkspaceRoles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkspaceRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkspaceRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ManualRunMailTask  ManualRunMailTaskRequest
+     * @return ManualRunMailTaskResponse
+     */
+    @Override
+    public CompletableFuture<ManualRunMailTaskResponse> manualRunMailTask(ManualRunMailTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ManualRunMailTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManualRunMailTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ManualRunMailTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyApiDatasourceParameters  ModifyApiDatasourceParametersRequest
+     * @return ModifyApiDatasourceParametersResponse
+     */
     @Override
     public CompletableFuture<ModifyApiDatasourceParametersResponse> modifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request) {
         try {
@@ -647,6 +1030,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCopilotEmbedConfig  ModifyCopilotEmbedConfigRequest
+     * @return ModifyCopilotEmbedConfigResponse
+     */
+    @Override
+    public CompletableFuture<ModifyCopilotEmbedConfigResponse> modifyCopilotEmbedConfig(ModifyCopilotEmbedConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyCopilotEmbedConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyCopilotEmbedConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyCopilotEmbedConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryApprovalInfo  QueryApprovalInfoRequest
+     * @return QueryApprovalInfoResponse
+     */
+    @Override
+    public CompletableFuture<QueryApprovalInfoResponse> queryApprovalInfo(QueryApprovalInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryApprovalInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryApprovalInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryApprovalInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAuditLog  QueryAuditLogRequest
+     * @return QueryAuditLogResponse
+     */
+    @Override
+    public CompletableFuture<QueryAuditLogResponse> queryAuditLog(QueryAuditLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAuditLog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAuditLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAuditLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryComponentPerformance  QueryComponentPerformanceRequest
+     * @return QueryComponentPerformanceResponse
+     */
     @Override
     public CompletableFuture<QueryComponentPerformanceResponse> queryComponentPerformance(QueryComponentPerformanceRequest request) {
         try {
@@ -661,6 +1102,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCopilotEmbedConfig  QueryCopilotEmbedConfigRequest
+     * @return QueryCopilotEmbedConfigResponse
+     */
+    @Override
+    public CompletableFuture<QueryCopilotEmbedConfigResponse> queryCopilotEmbedConfig(QueryCopilotEmbedConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryCopilotEmbedConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryCopilotEmbedConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryCopilotEmbedConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryCubeOptimization  QueryCubeOptimizationRequest
+     * @return QueryCubeOptimizationResponse
+     */
     @Override
     public CompletableFuture<QueryCubeOptimizationResponse> queryCubeOptimization(QueryCubeOptimizationRequest request) {
         try {
@@ -675,6 +1138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryCubePerformance  QueryCubePerformanceRequest
+     * @return QueryCubePerformanceResponse
+     */
     @Override
     public CompletableFuture<QueryCubePerformanceResponse> queryCubePerformance(QueryCubePerformanceRequest request) {
         try {
@@ -690,8 +1157,47 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * f4cc43bc3***
-      *
+     * @param request the request parameters of QueryData  QueryDataRequest
+     * @return QueryDataResponse
+     */
+    @Override
+    public CompletableFuture<QueryDataResponse> queryData(QueryDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryDataRange  QueryDataRangeRequest
+     * @return QueryDataRangeResponse
+     */
+    @Override
+    public CompletableFuture<QueryDataRangeResponse> queryDataRange(QueryDataRangeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryDataRange").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDataRangeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDataRangeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>f4cc43bc3***</p>
+     * 
+     * @param request the request parameters of QueryDataService  QueryDataServiceRequest
+     * @return QueryDataServiceResponse
      */
     @Override
     public CompletableFuture<QueryDataServiceResponse> queryDataService(QueryDataServiceRequest request) {
@@ -708,8 +1214,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).
-      *
+     * @param request the request parameters of QueryDataServiceList  QueryDataServiceListRequest
+     * @return QueryDataServiceListResponse
+     */
+    @Override
+    public CompletableFuture<QueryDataServiceListResponse> queryDataServiceList(QueryDataServiceListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryDataServiceList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDataServiceListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDataServiceListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</p>
+     * 
+     * @param request the request parameters of QueryDatasetDetailInfo  QueryDatasetDetailInfoRequest
+     * @return QueryDatasetDetailInfoResponse
      */
     @Override
     public CompletableFuture<QueryDatasetDetailInfoResponse> queryDatasetDetailInfo(QueryDatasetDetailInfoRequest request) {
@@ -725,6 +1252,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDatasetInfo  QueryDatasetInfoRequest
+     * @return QueryDatasetInfoResponse
+     */
     @Override
     public CompletableFuture<QueryDatasetInfoResponse> queryDatasetInfo(QueryDatasetInfoRequest request) {
         try {
@@ -739,6 +1270,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDatasetList  QueryDatasetListRequest
+     * @return QueryDatasetListResponse
+     */
     @Override
     public CompletableFuture<QueryDatasetListResponse> queryDatasetList(QueryDatasetListRequest request) {
         try {
@@ -753,6 +1288,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDatasetSmartqStatus  QueryDatasetSmartqStatusRequest
+     * @return QueryDatasetSmartqStatusResponse
+     */
+    @Override
+    public CompletableFuture<QueryDatasetSmartqStatusResponse> queryDatasetSmartqStatus(QueryDatasetSmartqStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryDatasetSmartqStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryDatasetSmartqStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryDatasetSmartqStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryDatasetSwitchInfo  QueryDatasetSwitchInfoRequest
+     * @return QueryDatasetSwitchInfoResponse
+     */
     @Override
     public CompletableFuture<QueryDatasetSwitchInfoResponse> queryDatasetSwitchInfo(QueryDatasetSwitchInfoRequest request) {
         try {
@@ -767,6 +1324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEmbeddedInfo  QueryEmbeddedInfoRequest
+     * @return QueryEmbeddedInfoResponse
+     */
     @Override
     public CompletableFuture<QueryEmbeddedInfoResponse> queryEmbeddedInfo(QueryEmbeddedInfoRequest request) {
         try {
@@ -781,6 +1342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryEmbeddedStatus  QueryEmbeddedStatusRequest
+     * @return QueryEmbeddedStatusResponse
+     */
     @Override
     public CompletableFuture<QueryEmbeddedStatusResponse> queryEmbeddedStatus(QueryEmbeddedStatusRequest request) {
         try {
@@ -795,6 +1360,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryLlmCubeWithThemeListByUserId  QueryLlmCubeWithThemeListByUserIdRequest
+     * @return QueryLlmCubeWithThemeListByUserIdResponse
+     */
+    @Override
+    public CompletableFuture<QueryLlmCubeWithThemeListByUserIdResponse> queryLlmCubeWithThemeListByUserId(QueryLlmCubeWithThemeListByUserIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryLlmCubeWithThemeListByUserId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryLlmCubeWithThemeListByUserIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryLlmCubeWithThemeListByUserIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryOrganizationRoleConfig  QueryOrganizationRoleConfigRequest
+     * @return QueryOrganizationRoleConfigResponse
+     */
+    @Override
+    public CompletableFuture<QueryOrganizationRoleConfigResponse> queryOrganizationRoleConfig(QueryOrganizationRoleConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryOrganizationRoleConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryOrganizationRoleConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryOrganizationRoleConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryOrganizationWorkspaceList  QueryOrganizationWorkspaceListRequest
+     * @return QueryOrganizationWorkspaceListResponse
+     */
     @Override
     public CompletableFuture<QueryOrganizationWorkspaceListResponse> queryOrganizationWorkspaceList(QueryOrganizationWorkspaceListRequest request) {
         try {
@@ -809,6 +1414,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryReadableResourcesListByUserId  QueryReadableResourcesListByUserIdRequest
+     * @return QueryReadableResourcesListByUserIdResponse
+     */
     @Override
     public CompletableFuture<QueryReadableResourcesListByUserIdResponse> queryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request) {
         try {
@@ -823,6 +1432,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryReportPerformance  QueryReportPerformanceRequest
+     * @return QueryReportPerformanceResponse
+     */
     @Override
     public CompletableFuture<QueryReportPerformanceResponse> queryReportPerformance(QueryReportPerformanceRequest request) {
         try {
@@ -837,6 +1450,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryShareList  QueryShareListRequest
+     * @return QueryShareListResponse
+     */
     @Override
     public CompletableFuture<QueryShareListResponse> queryShareList(QueryShareListRequest request) {
         try {
@@ -851,6 +1468,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySharesToUserList  QuerySharesToUserListRequest
+     * @return QuerySharesToUserListResponse
+     */
     @Override
     public CompletableFuture<QuerySharesToUserListResponse> querySharesToUserList(QuerySharesToUserListRequest request) {
         try {
@@ -865,6 +1486,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySmartqPermissionByCubeId  QuerySmartqPermissionByCubeIdRequest
+     * @return QuerySmartqPermissionByCubeIdResponse
+     */
+    @Override
+    public CompletableFuture<QuerySmartqPermissionByCubeIdResponse> querySmartqPermissionByCubeId(QuerySmartqPermissionByCubeIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QuerySmartqPermissionByCubeId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuerySmartqPermissionByCubeIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuerySmartqPermissionByCubeIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryTicketInfo  QueryTicketInfoRequest
+     * @return QueryTicketInfoResponse
+     */
     @Override
     public CompletableFuture<QueryTicketInfoResponse> queryTicketInfo(QueryTicketInfoRequest request) {
         try {
@@ -879,6 +1522,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserGroupListByParentId  QueryUserGroupListByParentIdRequest
+     * @return QueryUserGroupListByParentIdResponse
+     */
     @Override
     public CompletableFuture<QueryUserGroupListByParentIdResponse> queryUserGroupListByParentId(QueryUserGroupListByParentIdRequest request) {
         try {
@@ -893,6 +1540,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserGroupMember  QueryUserGroupMemberRequest
+     * @return QueryUserGroupMemberResponse
+     */
     @Override
     public CompletableFuture<QueryUserGroupMemberResponse> queryUserGroupMember(QueryUserGroupMemberRequest request) {
         try {
@@ -907,6 +1558,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserInfoByAccount  QueryUserInfoByAccountRequest
+     * @return QueryUserInfoByAccountResponse
+     */
     @Override
     public CompletableFuture<QueryUserInfoByAccountResponse> queryUserInfoByAccount(QueryUserInfoByAccountRequest request) {
         try {
@@ -921,6 +1576,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserInfoByUserId  QueryUserInfoByUserIdRequest
+     * @return QueryUserInfoByUserIdResponse
+     */
     @Override
     public CompletableFuture<QueryUserInfoByUserIdResponse> queryUserInfoByUserId(QueryUserInfoByUserIdRequest request) {
         try {
@@ -935,6 +1594,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserList  QueryUserListRequest
+     * @return QueryUserListResponse
+     */
     @Override
     public CompletableFuture<QueryUserListResponse> queryUserList(QueryUserListRequest request) {
         try {
@@ -949,6 +1612,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserRoleInfoInWorkspace  QueryUserRoleInfoInWorkspaceRequest
+     * @return QueryUserRoleInfoInWorkspaceResponse
+     */
     @Override
     public CompletableFuture<QueryUserRoleInfoInWorkspaceResponse> queryUserRoleInfoInWorkspace(QueryUserRoleInfoInWorkspaceRequest request) {
         try {
@@ -963,6 +1630,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserTagMetaList  QueryUserTagMetaListRequest
+     * @return QueryUserTagMetaListResponse
+     */
     @Override
     public CompletableFuture<QueryUserTagMetaListResponse> queryUserTagMetaList(QueryUserTagMetaListRequest request) {
         try {
@@ -977,6 +1648,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserTagValueList  QueryUserTagValueListRequest
+     * @return QueryUserTagValueListResponse
+     */
     @Override
     public CompletableFuture<QueryUserTagValueListResponse> queryUserTagValueList(QueryUserTagValueListRequest request) {
         try {
@@ -991,6 +1666,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryWorks  QueryWorksRequest
+     * @return QueryWorksResponse
+     */
     @Override
     public CompletableFuture<QueryWorksResponse> queryWorks(QueryWorksRequest request) {
         try {
@@ -1005,6 +1684,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryWorksBloodRelationship  QueryWorksBloodRelationshipRequest
+     * @return QueryWorksBloodRelationshipResponse
+     */
     @Override
     public CompletableFuture<QueryWorksBloodRelationshipResponse> queryWorksBloodRelationship(QueryWorksBloodRelationshipRequest request) {
         try {
@@ -1019,6 +1702,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryWorksByOrganization  QueryWorksByOrganizationRequest
+     * @return QueryWorksByOrganizationResponse
+     */
     @Override
     public CompletableFuture<QueryWorksByOrganizationResponse> queryWorksByOrganization(QueryWorksByOrganizationRequest request) {
         try {
@@ -1033,6 +1720,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryWorksByWorkspace  QueryWorksByWorkspaceRequest
+     * @return QueryWorksByWorkspaceResponse
+     */
     @Override
     public CompletableFuture<QueryWorksByWorkspaceResponse> queryWorksByWorkspace(QueryWorksByWorkspaceRequest request) {
         try {
@@ -1047,6 +1738,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryWorkspaceRoleConfig  QueryWorkspaceRoleConfigRequest
+     * @return QueryWorkspaceRoleConfigResponse
+     */
+    @Override
+    public CompletableFuture<QueryWorkspaceRoleConfigResponse> queryWorkspaceRoleConfig(QueryWorkspaceRoleConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryWorkspaceRoleConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryWorkspaceRoleConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryWorkspaceRoleConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryWorkspaceUserList  QueryWorkspaceUserListRequest
+     * @return QueryWorkspaceUserListResponse
+     */
     @Override
     public CompletableFuture<QueryWorkspaceUserListResponse> queryWorkspaceUserList(QueryWorkspaceUserListRequest request) {
         try {
@@ -1061,6 +1774,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResultCallback  ResultCallbackRequest
+     * @return ResultCallbackResponse
+     */
     @Override
     public CompletableFuture<ResultCallbackResponse> resultCallback(ResultCallbackRequest request) {
         try {
@@ -1075,6 +1792,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveFavorites  SaveFavoritesRequest
+     * @return SaveFavoritesResponse
+     */
     @Override
     public CompletableFuture<SaveFavoritesResponse> saveFavorites(SaveFavoritesRequest request) {
         try {
@@ -1089,6 +1810,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDataLevelPermissionExtraConfig  SetDataLevelPermissionExtraConfigRequest
+     * @return SetDataLevelPermissionExtraConfigResponse
+     */
     @Override
     public CompletableFuture<SetDataLevelPermissionExtraConfigResponse> setDataLevelPermissionExtraConfig(SetDataLevelPermissionExtraConfigRequest request) {
         try {
@@ -1103,6 +1828,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetDataLevelPermissionRuleConfig  SetDataLevelPermissionRuleConfigRequest
+     * @return SetDataLevelPermissionRuleConfigResponse
+     */
     @Override
     public CompletableFuture<SetDataLevelPermissionRuleConfigResponse> setDataLevelPermissionRuleConfig(SetDataLevelPermissionRuleConfigRequest request) {
         try {
@@ -1118,8 +1847,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > : You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations> Security Configurations> Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click **Upgrade**.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <strong>Upgrade</strong>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of SetDataLevelPermissionWhiteList  SetDataLevelPermissionWhiteListRequest
+     * @return SetDataLevelPermissionWhiteListResponse
      */
     @Override
     public CompletableFuture<SetDataLevelPermissionWhiteListResponse> setDataLevelPermissionWhiteList(SetDataLevelPermissionWhiteListRequest request) {
@@ -1136,10 +1870,69 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The execution result of the interface. Valid values:
-      * *   true: The request was successful.
-      * *   false: The request failed.
-      *
+     * @param request the request parameters of SmartqAuthTransfer  SmartqAuthTransferRequest
+     * @return SmartqAuthTransferResponse
+     */
+    @Override
+    public CompletableFuture<SmartqAuthTransferResponse> smartqAuthTransfer(SmartqAuthTransferRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SmartqAuthTransfer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SmartqAuthTransferResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SmartqAuthTransferResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SmartqAuthorize  SmartqAuthorizeRequest
+     * @return SmartqAuthorizeResponse
+     */
+    @Override
+    public CompletableFuture<SmartqAuthorizeResponse> smartqAuthorize(SmartqAuthorizeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SmartqAuthorize").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SmartqAuthorizeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SmartqAuthorizeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SmartqQueryAbility  SmartqQueryAbilityRequest
+     * @return SmartqQueryAbilityResponse
+     */
+    @Override
+    public CompletableFuture<SmartqQueryAbilityResponse> smartqQueryAbility(SmartqQueryAbilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SmartqQueryAbility").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SmartqQueryAbilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SmartqQueryAbilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The execution result of the interface. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateDataLevelPermissionStatus  UpdateDataLevelPermissionStatusRequest
+     * @return UpdateDataLevelPermissionStatusResponse
      */
     @Override
     public CompletableFuture<UpdateDataLevelPermissionStatusResponse> updateDataLevelPermissionStatus(UpdateDataLevelPermissionStatusRequest request) {
@@ -1155,6 +1948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateEmbeddedStatus  UpdateEmbeddedStatusRequest
+     * @return UpdateEmbeddedStatusResponse
+     */
     @Override
     public CompletableFuture<UpdateEmbeddedStatusResponse> updateEmbeddedStatus(UpdateEmbeddedStatusRequest request) {
         try {
@@ -1169,6 +1966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTicketNum  UpdateTicketNumRequest
+     * @return UpdateTicketNumResponse
+     */
     @Override
     public CompletableFuture<UpdateTicketNumResponse> updateTicketNum(UpdateTicketNumRequest request) {
         try {
@@ -1183,6 +1984,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {
@@ -1197,6 +2002,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserGroup  UpdateUserGroupRequest
+     * @return UpdateUserGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateUserGroupResponse> updateUserGroup(UpdateUserGroupRequest request) {
         try {
@@ -1211,6 +2020,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserTagMeta  UpdateUserTagMetaRequest
+     * @return UpdateUserTagMetaResponse
+     */
     @Override
     public CompletableFuture<UpdateUserTagMetaResponse> updateUserTagMeta(UpdateUserTagMetaRequest request) {
         try {
@@ -1225,6 +2038,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUserTagValue  UpdateUserTagValueRequest
+     * @return UpdateUserTagValueResponse
+     */
     @Override
     public CompletableFuture<UpdateUserTagValueResponse> updateUserTagValue(UpdateUserTagValueRequest request) {
         try {
@@ -1239,6 +2056,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWorkspaceUserRole  UpdateWorkspaceUserRoleRequest
+     * @return UpdateWorkspaceUserRoleResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkspaceUserRoleResponse> updateWorkspaceUserRole(UpdateWorkspaceUserRoleRequest request) {
         try {
@@ -1253,6 +2074,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWorkspaceUsersRole  UpdateWorkspaceUsersRoleRequest
+     * @return UpdateWorkspaceUsersRoleResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkspaceUsersRoleResponse> updateWorkspaceUsersRole(UpdateWorkspaceUsersRoleRequest request) {
         try {
@@ -1267,6 +2092,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of WithdrawAllUserGroups  WithdrawAllUserGroupsRequest
+     * @return WithdrawAllUserGroupsResponse
+     */
     @Override
     public CompletableFuture<WithdrawAllUserGroupsResponse> withdrawAllUserGroups(WithdrawAllUserGroupsRequest request) {
         try {

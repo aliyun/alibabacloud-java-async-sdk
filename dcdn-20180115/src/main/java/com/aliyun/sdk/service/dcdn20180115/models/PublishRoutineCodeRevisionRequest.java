@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishRoutineCodeRevisionRequest} extends {@link RequestModel}
  *
  * <p>PublishRoutineCodeRevisionRequest</p>
  */
 public class PublishRoutineCodeRevisionRequest extends Request {
-    @Body
-    @NameInMap("Envs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Envs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, ? > envs;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("SelectCodeRevision")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SelectCodeRevision")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String selectCodeRevision;
 
     private PublishRoutineCodeRevisionRequest(Builder builder) {
@@ -85,14 +85,19 @@ public class PublishRoutineCodeRevisionRequest extends Request {
         } 
 
         /**
-         * The environment to which you want to publish the code.
-         * <p>
+         * <p>The environment to which you want to publish the code.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).</p>
+         * </li>
+         * <li><p>presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).
-         * 
-         * *   presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.
+         * <strong>example:</strong>
+         * <p>[&quot;production&quot;,&quot;presetCanaryZhejiang&quot;]</p>
          */
         public Builder envs(java.util.Map < String, ? > envs) {
             String envsShrink = shrink(envs, "Envs", "json");
@@ -102,7 +107,11 @@ public class PublishRoutineCodeRevisionRequest extends Request {
         }
 
         /**
-         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
+         * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -111,7 +120,11 @@ public class PublishRoutineCodeRevisionRequest extends Request {
         }
 
         /**
-         * The version of the routine code that you want to publish.
+         * <p>The version of the routine code that you want to publish.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620876959997924701</p>
          */
         public Builder selectCodeRevision(String selectCodeRevision) {
             this.putBodyParameter("SelectCodeRevision", selectCodeRevision);

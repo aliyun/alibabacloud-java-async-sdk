@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessRuleResponseBody</p>
  */
 public class CreateAccessRuleResponseBody extends TeaModel {
-    @NameInMap("AccessRuleId")
+    @com.aliyun.core.annotation.NameInMap("AccessRuleId")
     private String accessRuleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAccessRuleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessRuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder accessRuleId(String accessRuleId) {
             this.accessRuleId = accessRuleId;
@@ -58,7 +66,10 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A323836B-5BC6-45A6-8048-60675C23****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

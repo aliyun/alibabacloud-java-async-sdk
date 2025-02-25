@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDIProjectConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDIProjectConfigResponseBody</p>
  */
 public class UpdateDIProjectConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateDIProjectConfigResponseBody(Builder builder) {
@@ -62,11 +67,7 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the default global configuration of synchronization solutions was modified. Valid values:
-         * <p>
-         * 
-         * *   success: The default global configuration of synchronization solutions was modified.
-         * *   fail: The default global configuration of synchronization solutions failed to be modified.
+         * <p>The information about the modification.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -74,7 +75,10 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the modification.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +86,14 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,8 +106,14 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDIProjectConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateDIProjectConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -122,7 +139,14 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Status.
+             * <p>Indicates whether the default global configuration of synchronization solutions is modified. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>fail</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

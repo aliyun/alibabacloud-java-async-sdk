@@ -77,11 +77,11 @@ public class DescribeFlowProjectClusterSettingRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowProjectClusterSettingRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(DescribeFlowProjectClusterSettingRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

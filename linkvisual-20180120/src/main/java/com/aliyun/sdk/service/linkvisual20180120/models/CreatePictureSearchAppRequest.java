@@ -76,11 +76,11 @@ public class CreatePictureSearchAppRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePictureSearchAppRequest response) {
-            super(response);
-            this.desc = response.desc;
-            this.iotInstanceId = response.iotInstanceId;
-            this.name = response.name;
+        private Builder(CreatePictureSearchAppRequest request) {
+            super(request);
+            this.desc = request.desc;
+            this.iotInstanceId = request.iotInstanceId;
+            this.name = request.name;
         } 
 
         /**

@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafRuleRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnWafRuleRequest</p>
  */
 public class DescribeDcdnWafRuleRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleId;
 
     private DescribeDcdnWafRuleRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeDcdnWafRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the protection rule. You can specify only one ID in each request.
+         * <p>The ID of the protection rule. You can specify only one ID in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

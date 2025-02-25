@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListUserDefinedEventSourcesResponseBody</p>
  */
 public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListUserDefinedEventSourcesResponseBody(Builder builder) {
@@ -136,25 +135,25 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
     } 
 
     public static class SourceHttpEventParameters extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private java.util.List < String > method;
 
-        @NameInMap("PublicWebHookUrl")
+        @com.aliyun.core.annotation.NameInMap("PublicWebHookUrl")
         private java.util.List < String > publicWebHookUrl;
 
-        @NameInMap("Referer")
+        @com.aliyun.core.annotation.NameInMap("Referer")
         private java.util.List < String > referer;
 
-        @NameInMap("SecurityConfig")
+        @com.aliyun.core.annotation.NameInMap("SecurityConfig")
         private String securityConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VpcWebHookUrl")
+        @com.aliyun.core.annotation.NameInMap("VpcWebHookUrl")
         private java.util.List < String > vpcWebHookUrl;
 
         private SourceHttpEventParameters(Builder builder) {
@@ -318,34 +317,34 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class SourceKafkaParameters extends TeaModel {
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaximumTasks")
+        @com.aliyun.core.annotation.NameInMap("MaximumTasks")
         private Integer maximumTasks;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("OffsetReset")
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
         private String offsetReset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private String vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SourceKafkaParameters(Builder builder) {
@@ -452,7 +451,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the consumer group that subscribes to the topic.
+             * The ID of the consumer group that subscribes to the topic on the Message Queue for Apache Kafka instance.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -476,7 +475,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
+             * The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
              */
             public Builder network(String network) {
                 this.network = network;
@@ -492,7 +491,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the Message Queue for Apache Kafka instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -500,7 +499,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group to which the Message Queue for Apache Kafka instance belongs.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -516,7 +515,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -524,7 +523,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the VPC in which the Message Queue for Apache Kafka instance is deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -539,13 +538,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class SourceMNSParameters extends TeaModel {
-        @NameInMap("IsBase64Decode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
         private Boolean isBase64Decode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SourceMNSParameters(Builder builder) {
@@ -605,7 +604,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the MNS queue resides.
+             * The ID of the region where the MNS queue resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -620,16 +619,16 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class SourceRabbitMQParameters extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VirtualHostName")
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private String virtualHostName;
 
         private SourceRabbitMQParameters(Builder builder) {
@@ -721,52 +720,52 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class SourceRocketMQParameters extends TeaModel {
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("InstanceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
         private String instanceEndpoint;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceNetwork")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetwork")
         private String instanceNetwork;
 
-        @NameInMap("InstancePassword")
+        @com.aliyun.core.annotation.NameInMap("InstancePassword")
         private String instancePassword;
 
-        @NameInMap("InstanceSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("InstanceSecurityGroupId")
         private String instanceSecurityGroupId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceUsername")
+        @com.aliyun.core.annotation.NameInMap("InstanceUsername")
         private String instanceUsername;
 
-        @NameInMap("InstanceVSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceVSwitchIds")
         private String instanceVSwitchIds;
 
-        @NameInMap("InstanceVpcId")
+        @com.aliyun.core.annotation.NameInMap("InstanceVpcId")
         private String instanceVpcId;
 
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private String offset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Float timestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SourceRocketMQParameters(Builder builder) {
@@ -943,7 +942,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance endpoint.
+             * The endpoint that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -959,7 +958,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The network that is used by the Message Queue for Apache RocketMQ instance.
+             * The type of network over which the Message Queue for Apache RocketMQ instance is accessed.
              */
             public Builder instanceNetwork(String instanceNetwork) {
                 this.instanceNetwork = instanceNetwork;
@@ -967,7 +966,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance password.
+             * The password that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -975,7 +974,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -991,7 +990,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance username.
+             * The username that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -999,7 +998,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -1007,7 +1006,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance is deployed.
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -1030,7 +1029,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the Message Queue for Apache RocketMQ instance resides.
+             * The ID of the region where the Message Queue for Apache RocketMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1069,16 +1068,16 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class SourceSLSParameters extends TeaModel {
-        @NameInMap("ConsumePosition")
+        @com.aliyun.core.annotation.NameInMap("ConsumePosition")
         private String consumePosition;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private SourceSLSParameters(Builder builder) {
@@ -1131,7 +1130,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.
+             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.
              */
             public Builder consumePosition(String consumePosition) {
                 this.consumePosition = consumePosition;
@@ -1170,13 +1169,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class SourceScheduledEventParameters extends TeaModel {
-        @NameInMap("Schedule")
+        @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private SourceScheduledEventParameters(Builder builder) {
@@ -1236,7 +1235,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The JSON string.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1251,46 +1250,46 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class EventSourceList extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Ctime")
+        @com.aliyun.core.annotation.NameInMap("Ctime")
         private Float ctime;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("ExternalSourceType")
+        @com.aliyun.core.annotation.NameInMap("ExternalSourceType")
         private String externalSourceType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SourceHttpEventParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceHttpEventParameters")
         private SourceHttpEventParameters sourceHttpEventParameters;
 
-        @NameInMap("SourceKafkaParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
         private SourceKafkaParameters sourceKafkaParameters;
 
-        @NameInMap("SourceMNSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceMNSParameters")
         private SourceMNSParameters sourceMNSParameters;
 
-        @NameInMap("SourceRabbitMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
         private SourceRabbitMQParameters sourceRabbitMQParameters;
 
-        @NameInMap("SourceRocketMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceRocketMQParameters")
         private SourceRocketMQParameters sourceRocketMQParameters;
 
-        @NameInMap("SourceSLSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceSLSParameters")
         private SourceSLSParameters sourceSLSParameters;
 
-        @NameInMap("SourceScheduledEventParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceScheduledEventParameters")
         private SourceScheduledEventParameters sourceScheduledEventParameters;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EventSourceList(Builder builder) {
@@ -1552,11 +1551,19 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EventSourceList")
+        @com.aliyun.core.annotation.NameInMap("EventSourceList")
         private java.util.List < EventSourceList> eventSourceList;
+
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Integer total;
 
         private Data(Builder builder) {
             this.eventSourceList = builder.eventSourceList;
+            this.nextToken = builder.nextToken;
+            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -1574,14 +1581,46 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             return this.eventSourceList;
         }
 
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
+        }
+
         public static final class Builder {
             private java.util.List < EventSourceList> eventSourceList; 
+            private String nextToken; 
+            private Integer total; 
 
             /**
              * The event sources.
              */
             public Builder eventSourceList(java.util.List < EventSourceList> eventSourceList) {
                 this.eventSourceList = eventSourceList;
+                return this;
+            }
+
+            /**
+             * NextToken.
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * Total.
+             */
+            public Builder total(Integer total) {
+                this.total = total;
                 return this;
             }
 

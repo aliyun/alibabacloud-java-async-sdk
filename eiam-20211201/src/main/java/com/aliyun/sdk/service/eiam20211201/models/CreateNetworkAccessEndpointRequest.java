@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAccessEndpointRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkAccessEndpointRequest</p>
  */
 public class CreateNetworkAccessEndpointRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("NetworkAccessEndpointName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkAccessEndpointName;
 
-    @Query
-    @NameInMap("VSwitchIds")
-    @Validation(maxLength = 2)
-    private java.util.List < String > vSwitchIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Validation(maxLength = 2)
+    private java.util.List<String> vSwitchIds;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcRegionId;
 
     private CreateNetworkAccessEndpointRequest(Builder builder) {
@@ -100,7 +105,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -123,7 +128,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         private String clientToken; 
         private String instanceId; 
         private String networkAccessEndpointName; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
         private String vpcRegionId; 
 
@@ -152,7 +157,10 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-example</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -161,7 +169,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * IDaaS EIAM实例的ID。
+         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +182,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点名称。
+         * <p>专属网络端点名称。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx业务VPC访问端点</p>
          */
         public Builder networkAccessEndpointName(String networkAccessEndpointName) {
             this.putQueryParameter("NetworkAccessEndpointName", networkAccessEndpointName);
@@ -179,16 +195,23 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的指定vSwitch。
+         * <p>专属网络端点连接的指定vSwitch。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-examplexxx</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;
         }
 
         /**
-         * 专属网络端点连接的VpcID。
+         * <p>专属网络端点连接的VpcID。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-examplexxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -197,7 +220,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * 专属网络端点连接的VpcID所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。
+         * <p>专属网络端点连接的VpcID所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vpcRegionId(String vpcRegionId) {
             this.putQueryParameter("VpcRegionId", vpcRegionId);

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableRightsSeparationRequest} extends {@link RequestModel}
  *
  * <p>DisableRightsSeparationRequest</p>
  */
 public class DisableRightsSeparationRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("DbaAccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbaAccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbaAccountName;
 
-    @Query
-    @NameInMap("DbaAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbaAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbaAccountPassword;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DisableRightsSeparationRequest(Builder builder) {
@@ -100,7 +105,10 @@ public class DisableRightsSeparationRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-sprcym7g7w****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -109,7 +117,10 @@ public class DisableRightsSeparationRequest extends Request {
         }
 
         /**
-         * DbaAccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_1</p>
          */
         public Builder dbaAccountName(String dbaAccountName) {
             this.putQueryParameter("DbaAccountName", dbaAccountName);
@@ -118,7 +129,10 @@ public class DisableRightsSeparationRequest extends Request {
         }
 
         /**
-         * DbaAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder dbaAccountPassword(String dbaAccountPassword) {
             this.putQueryParameter("DbaAccountPassword", dbaAccountPassword);
@@ -127,7 +141,10 @@ public class DisableRightsSeparationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hanghzou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindPurchasedDeviceRequest} extends {@link RequestModel}
  *
  * <p>UnbindPurchasedDeviceRequest</p>
  */
 public class UnbindPurchasedDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private UnbindPurchasedDeviceRequest(Builder builder) {
@@ -62,14 +67,17 @@ public class UnbindPurchasedDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindPurchasedDeviceRequest response) {
-            super(response);
-            this.deviceId = response.deviceId;
-            this.ownerId = response.ownerId;
+        private Builder(UnbindPurchasedDeviceRequest request) {
+            super(request);
+            this.deviceId = request.deviceId;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DeviceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3939*****6580539-cn-qingdao</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);

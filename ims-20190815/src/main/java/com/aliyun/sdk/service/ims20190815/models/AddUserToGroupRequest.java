@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserToGroupRequest} extends {@link RequestModel}
  *
  * <p>AddUserToGroupRequest</p>
  */
 public class AddUserToGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("UserPrincipalName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrincipalName;
 
     private AddUserToGroupRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class AddUserToGroupRequest extends Request {
         } 
 
         /**
-         * The name of the RAM user group.
+         * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -78,7 +86,11 @@ public class AddUserToGroupRequest extends Request {
         }
 
         /**
-         * The logon name of the RAM user.
+         * <p>The logon name of the RAM user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

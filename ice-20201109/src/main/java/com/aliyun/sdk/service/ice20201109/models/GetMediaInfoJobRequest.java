@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaInfoJobRequest} extends {@link RequestModel}
  *
  * <p>GetMediaInfoJobRequest</p>
  */
 public class GetMediaInfoJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
     private GetMediaInfoJobRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetMediaInfoJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyForStreamAccessTokenRequest} extends {@link RequestModel}
  *
  * <p>ApplyForStreamAccessTokenRequest</p>
  */
 public class ApplyForStreamAccessTokenRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
     private ApplyForStreamAccessTokenRequest(Builder builder) {

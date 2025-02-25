@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ManageGetRecordingRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ManageGetRecordingRuleResponseBody</p>
  */
 public class ManageGetRecordingRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ManageGetRecordingRuleResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * <p>状态码。200为成功，其他状态码为异常。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,10 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--- groups: - name: &quot;recording_demo&quot;   rules:   - expr: &quot;sum(jvm_memory_max_bytes)&quot;     record: &quot;rate_coredns_demo&quot;</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +101,10 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>返回信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +112,10 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

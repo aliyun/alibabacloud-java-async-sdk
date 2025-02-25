@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperatorBasicInfo} extends {@link TeaModel}
  *
  * <p>OperatorBasicInfo</p>
  */
 public class OperatorBasicInfo extends TeaModel {
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Oid")
+    @com.aliyun.core.annotation.NameInMap("Oid")
     private String oid;
 
-    @NameInMap("Param")
+    @com.aliyun.core.annotation.NameInMap("Param")
     private Param param;
 
-    @NameInMap("QualityCheckType")
+    @com.aliyun.core.annotation.NameInMap("QualityCheckType")
     private Integer qualityCheckType;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UserGroup")
+    @com.aliyun.core.annotation.NameInMap("UserGroup")
     private String userGroup;
 
     private OperatorBasicInfo(Builder builder) {
@@ -171,164 +176,170 @@ public class OperatorBasicInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OperatorBasicInfo} extends {@link TeaModel}
+     *
+     * <p>OperatorBasicInfo</p>
+     */
     public static class Param extends TeaModel {
-        @NameInMap("AnswerThreshold")
+        @com.aliyun.core.annotation.NameInMap("AnswerThreshold")
         private String answerThreshold;
 
-        @NameInMap("AntModelInfo")
-        private java.util.Map < String, String > antModelInfo;
+        @com.aliyun.core.annotation.NameInMap("AntModelInfo")
+        private java.util.Map<String, String> antModelInfo;
 
-        @NameInMap("Average")
+        @com.aliyun.core.annotation.NameInMap("Average")
         private Boolean average;
 
-        @NameInMap("BeginType")
+        @com.aliyun.core.annotation.NameInMap("BeginType")
         private String beginType;
 
-        @NameInMap("BotId")
+        @com.aliyun.core.annotation.NameInMap("BotId")
         private String botId;
 
-        @NameInMap("Case_sensitive")
+        @com.aliyun.core.annotation.NameInMap("Case_sensitive")
         private Boolean caseSensitive;
 
-        @NameInMap("CategoryPathCode")
+        @com.aliyun.core.annotation.NameInMap("CategoryPathCode")
         private String categoryPathCode;
 
-        @NameInMap("CheckFirstSentence")
+        @com.aliyun.core.annotation.NameInMap("CheckFirstSentence")
         private Boolean checkFirstSentence;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("CompareOperator")
+        @com.aliyun.core.annotation.NameInMap("CompareOperator")
         private String compareOperator;
 
-        @NameInMap("ContextChatMatch")
+        @com.aliyun.core.annotation.NameInMap("ContextChatMatch")
         private Boolean contextChatMatch;
 
-        @NameInMap("CustomerParam")
+        @com.aliyun.core.annotation.NameInMap("CustomerParam")
         private JudgeNodeMetaDesc customerParam;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Integer delayTime;
 
-        @NameInMap("Different_role")
+        @com.aliyun.core.annotation.NameInMap("Different_role")
         private Boolean differentRole;
 
-        @NameInMap("EndType")
+        @com.aliyun.core.annotation.NameInMap("EndType")
         private String endType;
 
-        @NameInMap("Excludes")
-        private java.util.List < String > excludes;
+        @com.aliyun.core.annotation.NameInMap("Excludes")
+        private java.util.List<String> excludes;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("From_end")
+        @com.aliyun.core.annotation.NameInMap("From_end")
         private Boolean fromEnd;
 
-        @NameInMap("Hit_time")
+        @com.aliyun.core.annotation.NameInMap("Hit_time")
         private Integer hitTime;
 
-        @NameInMap("In_sentence")
+        @com.aliyun.core.annotation.NameInMap("In_sentence")
         private Boolean inSentence;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("IntervalEnd")
+        @com.aliyun.core.annotation.NameInMap("IntervalEnd")
         private Integer intervalEnd;
 
-        @NameInMap("KeywordExtension")
+        @com.aliyun.core.annotation.NameInMap("KeywordExtension")
         private Integer keywordExtension;
 
-        @NameInMap("KeywordMatchSize")
+        @com.aliyun.core.annotation.NameInMap("KeywordMatchSize")
         private Integer keywordMatchSize;
 
-        @NameInMap("Keywords")
-        private java.util.List < String > keywords;
+        @com.aliyun.core.annotation.NameInMap("Keywords")
+        private java.util.List<String> keywords;
 
-        @NameInMap("KnowledgeInfo")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeInfo")
         private String knowledgeInfo;
 
-        @NameInMap("KnowledgeSentenceNum")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeSentenceNum")
         private Integer knowledgeSentenceNum;
 
-        @NameInMap("KnowledgeTargetId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeTargetId")
         private String knowledgeTargetId;
 
-        @NameInMap("KnowledgeTargetName")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeTargetName")
         private String knowledgeTargetName;
 
-        @NameInMap("KnowledgeTargetType")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeTargetType")
         private Integer knowledgeTargetType;
 
-        @NameInMap("LgfSentences")
-        private java.util.List < String > lgfSentences;
+        @com.aliyun.core.annotation.NameInMap("LgfSentences")
+        private java.util.List<String> lgfSentences;
 
-        @NameInMap("MaxEmotionChangeValue")
+        @com.aliyun.core.annotation.NameInMap("MaxEmotionChangeValue")
         private Integer maxEmotionChangeValue;
 
-        @NameInMap("MinWordSize")
+        @com.aliyun.core.annotation.NameInMap("MinWordSize")
         private Integer minWordSize;
 
-        @NameInMap("Near_dialogue")
+        @com.aliyun.core.annotation.NameInMap("Near_dialogue")
         private Boolean nearDialogue;
 
-        @NameInMap("NotRegex")
+        @com.aliyun.core.annotation.NameInMap("NotRegex")
         private String notRegex;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private String phrase;
 
-        @NameInMap("Pkey")
+        @com.aliyun.core.annotation.NameInMap("Pkey")
         private String pkey;
 
-        @NameInMap("Poutput_type")
+        @com.aliyun.core.annotation.NameInMap("Poutput_type")
         private Integer poutputType;
 
-        @NameInMap("Pvalues")
-        private java.util.List < String > pvalues;
+        @com.aliyun.core.annotation.NameInMap("Pvalues")
+        private java.util.List<String> pvalues;
 
-        @NameInMap("QuestionThreshold")
+        @com.aliyun.core.annotation.NameInMap("QuestionThreshold")
         private String questionThreshold;
 
-        @NameInMap("References")
-        private java.util.List < String > references;
+        @com.aliyun.core.annotation.NameInMap("References")
+        private java.util.List<String> references;
 
-        @NameInMap("Regex")
+        @com.aliyun.core.annotation.NameInMap("Regex")
         private String regex;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private Integer roleId;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Similarity_threshold")
+        @com.aliyun.core.annotation.NameInMap("Similarity_threshold")
         private Double similarityThreshold;
 
-        @NameInMap("SimilarlySentences")
-        private java.util.List < String > similarlySentences;
+        @com.aliyun.core.annotation.NameInMap("SimilarlySentences")
+        private java.util.List<String> similarlySentences;
 
-        @NameInMap("Synonyms")
-        private java.util.Map < String, java.util.List<String>> synonyms;
+        @com.aliyun.core.annotation.NameInMap("Synonyms")
+        private java.util.Map<String, java.util.List<String>> synonyms;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Integer target;
 
-        @NameInMap("Target_role")
+        @com.aliyun.core.annotation.NameInMap("Target_role")
         private String targetRole;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("UseEasAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("UseEasAlgorithm")
         private Boolean useEasAlgorithm;
 
-        @NameInMap("Velocity")
+        @com.aliyun.core.annotation.NameInMap("Velocity")
         private Double velocity;
 
-        @NameInMap("VelocityInMint")
+        @com.aliyun.core.annotation.NameInMap("VelocityInMint")
         private Integer velocityInMint;
 
         private Param(Builder builder) {
@@ -405,7 +416,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return antModelInfo
          */
-        public java.util.Map < String, String > getAntModelInfo() {
+        public java.util.Map<String, String> getAntModelInfo() {
             return this.antModelInfo;
         }
 
@@ -503,7 +514,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return excludes
          */
-        public java.util.List < String > getExcludes() {
+        public java.util.List<String> getExcludes() {
             return this.excludes;
         }
 
@@ -566,7 +577,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return keywords
          */
-        public java.util.List < String > getKeywords() {
+        public java.util.List<String> getKeywords() {
             return this.keywords;
         }
 
@@ -608,7 +619,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return lgfSentences
          */
-        public java.util.List < String > getLgfSentences() {
+        public java.util.List<String> getLgfSentences() {
             return this.lgfSentences;
         }
 
@@ -664,7 +675,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return pvalues
          */
-        public java.util.List < String > getPvalues() {
+        public java.util.List<String> getPvalues() {
             return this.pvalues;
         }
 
@@ -678,7 +689,7 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return references
          */
-        public java.util.List < String > getReferences() {
+        public java.util.List<String> getReferences() {
             return this.references;
         }
 
@@ -713,14 +724,14 @@ public class OperatorBasicInfo extends TeaModel {
         /**
          * @return similarlySentences
          */
-        public java.util.List < String > getSimilarlySentences() {
+        public java.util.List<String> getSimilarlySentences() {
             return this.similarlySentences;
         }
 
         /**
          * @return synonyms
          */
-        public java.util.Map < String, java.util.List<String>> getSynonyms() {
+        public java.util.Map<String, java.util.List<String>> getSynonyms() {
             return this.synonyms;
         }
 
@@ -768,7 +779,7 @@ public class OperatorBasicInfo extends TeaModel {
 
         public static final class Builder {
             private String answerThreshold; 
-            private java.util.Map < String, String > antModelInfo; 
+            private java.util.Map<String, String> antModelInfo; 
             private Boolean average; 
             private String beginType; 
             private String botId; 
@@ -782,7 +793,7 @@ public class OperatorBasicInfo extends TeaModel {
             private Integer delayTime; 
             private Boolean differentRole; 
             private String endType; 
-            private java.util.List < String > excludes; 
+            private java.util.List<String> excludes; 
             private Integer from; 
             private Boolean fromEnd; 
             private Integer hitTime; 
@@ -791,13 +802,13 @@ public class OperatorBasicInfo extends TeaModel {
             private Integer intervalEnd; 
             private Integer keywordExtension; 
             private Integer keywordMatchSize; 
-            private java.util.List < String > keywords; 
+            private java.util.List<String> keywords; 
             private String knowledgeInfo; 
             private Integer knowledgeSentenceNum; 
             private String knowledgeTargetId; 
             private String knowledgeTargetName; 
             private Integer knowledgeTargetType; 
-            private java.util.List < String > lgfSentences; 
+            private java.util.List<String> lgfSentences; 
             private Integer maxEmotionChangeValue; 
             private Integer minWordSize; 
             private Boolean nearDialogue; 
@@ -805,15 +816,15 @@ public class OperatorBasicInfo extends TeaModel {
             private String phrase; 
             private String pkey; 
             private Integer poutputType; 
-            private java.util.List < String > pvalues; 
+            private java.util.List<String> pvalues; 
             private String questionThreshold; 
-            private java.util.List < String > references; 
+            private java.util.List<String> references; 
             private String regex; 
             private Integer roleId; 
             private Integer score; 
             private Double similarityThreshold; 
-            private java.util.List < String > similarlySentences; 
-            private java.util.Map < String, java.util.List<String>> synonyms; 
+            private java.util.List<String> similarlySentences; 
+            private java.util.Map<String, java.util.List<String>> synonyms; 
             private Integer target; 
             private String targetRole; 
             private Float threshold; 
@@ -832,7 +843,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * AntModelInfo.
              */
-            public Builder antModelInfo(java.util.Map < String, String > antModelInfo) {
+            public Builder antModelInfo(java.util.Map<String, String> antModelInfo) {
                 this.antModelInfo = antModelInfo;
                 return this;
             }
@@ -944,7 +955,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Excludes.
              */
-            public Builder excludes(java.util.List < String > excludes) {
+            public Builder excludes(java.util.List<String> excludes) {
                 this.excludes = excludes;
                 return this;
             }
@@ -1016,7 +1027,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Keywords.
              */
-            public Builder keywords(java.util.List < String > keywords) {
+            public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
                 return this;
             }
@@ -1064,7 +1075,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * LgfSentences.
              */
-            public Builder lgfSentences(java.util.List < String > lgfSentences) {
+            public Builder lgfSentences(java.util.List<String> lgfSentences) {
                 this.lgfSentences = lgfSentences;
                 return this;
             }
@@ -1128,7 +1139,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Pvalues.
              */
-            public Builder pvalues(java.util.List < String > pvalues) {
+            public Builder pvalues(java.util.List<String> pvalues) {
                 this.pvalues = pvalues;
                 return this;
             }
@@ -1144,7 +1155,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * References.
              */
-            public Builder references(java.util.List < String > references) {
+            public Builder references(java.util.List<String> references) {
                 this.references = references;
                 return this;
             }
@@ -1184,7 +1195,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * SimilarlySentences.
              */
-            public Builder similarlySentences(java.util.List < String > similarlySentences) {
+            public Builder similarlySentences(java.util.List<String> similarlySentences) {
                 this.similarlySentences = similarlySentences;
                 return this;
             }
@@ -1192,7 +1203,7 @@ public class OperatorBasicInfo extends TeaModel {
             /**
              * Synonyms.
              */
-            public Builder synonyms(java.util.Map < String, java.util.List<String>> synonyms) {
+            public Builder synonyms(java.util.Map<String, java.util.List<String>> synonyms) {
                 this.synonyms = synonyms;
                 return this;
             }

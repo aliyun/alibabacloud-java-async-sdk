@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("AccountList")
+    @com.aliyun.core.annotation.NameInMap("AccountList")
     private AccountList accountList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried database accounts.
+         * <p>The queried database accounts.</p>
          */
         public Builder accountList(AccountList accountList) {
             this.accountList = accountList;
@@ -58,7 +63,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CCFAAB4-97B7-5800-B9F2-685EB596E3EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,29 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DBAccount extends TeaModel {
-        @NameInMap("AccountDescription")
+        @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("RamUsers")
+        @com.aliyun.core.annotation.NameInMap("Engine")
+        private String engine;
+
+        @com.aliyun.core.annotation.NameInMap("RamUsers")
         private String ramUsers;
 
         private DBAccount(Builder builder) {
@@ -92,6 +109,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
+            this.engine = builder.engine;
             this.ramUsers = builder.ramUsers;
         }
 
@@ -132,6 +150,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return engine
+         */
+        public String getEngine() {
+            return this.engine;
+        }
+
+        /**
          * @return ramUsers
          */
         public String getRamUsers() {
@@ -143,10 +168,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountName; 
             private String accountStatus; 
             private String accountType; 
+            private String engine; 
             private String ramUsers; 
 
             /**
-             * The description of the database account.
+             * <p>The description of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_accout_des</p>
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -154,7 +183,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_accout</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -162,12 +194,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database account. Valid values:
-             * <p>
+             * <p>The status of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Available**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -175,11 +210,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database account. Valid values:
-             * <p>
+             * <p>The type of the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: standard account.</li>
+             * <li><strong>Super</strong>: privileged account.</li>
+             * </ul>
              * 
-             * *   **Normal**: standard account.
-             * *   **Super**: privileged account.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -187,7 +225,25 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * <p>The database engine of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>AnalyticDB</strong>: the AnalyticDB for MySQL engine.</li>
+             * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Clickhouse</p>
+             */
+            public Builder engine(String engine) {
+                this.engine = engine;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the Resource Access Management (RAM) user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1958134230****</p>
              */
             public Builder ramUsers(String ramUsers) {
                 this.ramUsers = ramUsers;
@@ -201,9 +257,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class AccountList extends TeaModel {
-        @NameInMap("DBAccount")
-        private java.util.List < DBAccount> DBAccount;
+        @com.aliyun.core.annotation.NameInMap("DBAccount")
+        private java.util.List<DBAccount> DBAccount;
 
         private AccountList(Builder builder) {
             this.DBAccount = builder.DBAccount;
@@ -220,17 +282,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return DBAccount
          */
-        public java.util.List < DBAccount> getDBAccount() {
+        public java.util.List<DBAccount> getDBAccount() {
             return this.DBAccount;
         }
 
         public static final class Builder {
-            private java.util.List < DBAccount> DBAccount; 
+            private java.util.List<DBAccount> DBAccount; 
 
             /**
              * DBAccount.
              */
-            public Builder DBAccount(java.util.List < DBAccount> DBAccount) {
+            public Builder DBAccount(java.util.List<DBAccount> DBAccount) {
                 this.DBAccount = DBAccount;
                 return this;
             }

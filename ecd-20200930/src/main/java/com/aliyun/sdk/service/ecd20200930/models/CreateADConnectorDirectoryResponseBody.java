@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateADConnectorDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateADConnectorDirectoryResponseBody</p>
  */
 public class CreateADConnectorDirectoryResponseBody extends TeaModel {
-    @NameInMap("AdConnectors")
-    private java.util.List < AdConnectors> adConnectors;
+    @com.aliyun.core.annotation.NameInMap("AdConnectors")
+    private java.util.List<AdConnectors> adConnectors;
 
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrustPassword")
+    @com.aliyun.core.annotation.NameInMap("TrustPassword")
     private String trustPassword;
 
     private CreateADConnectorDirectoryResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     /**
      * @return adConnectors
      */
-    public java.util.List < AdConnectors> getAdConnectors() {
+    public java.util.List<AdConnectors> getAdConnectors() {
         return this.adConnectors;
     }
 
@@ -68,21 +73,24 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AdConnectors> adConnectors; 
+        private java.util.List<AdConnectors> adConnectors; 
         private String directoryId; 
         private String requestId; 
         private String trustPassword; 
 
         /**
-         * AdConnectors.
+         * <p>The details of AD connectors.</p>
          */
-        public Builder adConnectors(java.util.List < AdConnectors> adConnectors) {
+        public Builder adConnectors(java.util.List<AdConnectors> adConnectors) {
             this.adConnectors = adConnectors;
             return this;
         }
 
         /**
-         * CreateADConnectorDirectory
+         * <p>The ID of the AD directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -90,7 +98,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Creates an Active Directory (AD) directory.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FE99D5E-93A1-493F-B1CB-0ABD4D05BEFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The DNS address of the enterprise AD subdomain.
+         * <p>The AD trust password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82Tg****</p>
          */
         public Builder trustPassword(String trustPassword) {
             this.trustPassword = trustPassword;
@@ -111,8 +125,14 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateADConnectorDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateADConnectorDirectoryResponseBody</p>
+     */
     public static class AdConnectors extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
         private AdConnectors(Builder builder) {
@@ -138,7 +158,10 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
             private String address; 
 
             /**
-             * Address.
+             * <p>The connection address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>127.0.**.**</code></p>
              */
             public Builder address(String address) {
                 this.address = address;

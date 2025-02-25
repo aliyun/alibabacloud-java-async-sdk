@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTicketsRequest} extends {@link RequestModel}
  *
  * <p>QueryTicketsRequest</p>
  */
 public class QueryTicketsRequest extends Request {
-    @Body
-    @NameInMap("CaseId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CaseId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long caseId;
 
-    @Body
-    @NameInMap("CaseStatus")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CaseStatus")
+    @com.aliyun.core.annotation.Validation()
     private Integer caseStatus;
 
-    @Body
-    @NameInMap("CaseType")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CaseType")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Integer caseType;
 
-    @Body
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Body
-    @NameInMap("ChannelType")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Validation()
     private Integer channelType;
 
-    @Body
-    @NameInMap("CurrentPage")
-    @Validation(maximum = 5000)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(maximum = 5000)
     private Integer currentPage;
 
-    @Body
-    @NameInMap("DealId")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DealId")
+    @com.aliyun.core.annotation.Validation()
     private Long dealId;
 
-    @Body
-    @NameInMap("Extra")
-    private java.util.Map < String, ? > extra;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extra")
+    private java.util.Map<String, ?> extra;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("SrType")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SrType")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long srType;
 
-    @Body
-    @NameInMap("TaskStatus")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Validation()
     private Integer taskStatus;
 
-    @Body
-    @NameInMap("TouchId")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TouchId")
+    @com.aliyun.core.annotation.Validation()
     private Long touchId;
 
     private QueryTicketsRequest(Builder builder) {
@@ -157,7 +162,7 @@ public class QueryTicketsRequest extends Request {
     /**
      * @return extra
      */
-    public java.util.Map < String, ? > getExtra() {
+    public java.util.Map<String, ?> getExtra() {
         return this.extra;
     }
 
@@ -204,7 +209,7 @@ public class QueryTicketsRequest extends Request {
         private Integer channelType; 
         private Integer currentPage; 
         private Long dealId; 
-        private java.util.Map < String, ? > extra; 
+        private java.util.Map<String, ?> extra; 
         private String instanceId; 
         private Integer pageSize; 
         private Long srType; 
@@ -298,7 +303,7 @@ public class QueryTicketsRequest extends Request {
         /**
          * Extra.
          */
-        public Builder extra(java.util.Map < String, ? > extra) {
+        public Builder extra(java.util.Map<String, ?> extra) {
             String extraShrink = shrink(extra, "Extra", "json");
             this.putBodyParameter("Extra", extraShrink);
             this.extra = extra;
@@ -306,7 +311,10 @@ public class QueryTicketsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

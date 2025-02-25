@@ -1,65 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInclinedTablesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInclinedTablesRequest</p>
  */
 public class DescribeInclinedTablesRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TableType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableType;
 
     private DescribeInclinedTablesRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.lang = builder.lang;
         this.order = builder.order;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tableType = builder.tableType;
@@ -83,6 +93,13 @@ public class DescribeInclinedTablesRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -121,6 +138,13 @@ public class DescribeInclinedTablesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -143,11 +167,13 @@ public class DescribeInclinedTablesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeInclinedTablesRequest, Builder> {
         private String DBClusterId; 
+        private String lang; 
         private String order; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String tableType; 
@@ -159,18 +185,24 @@ public class DescribeInclinedTablesRequest extends Request {
         private Builder(DescribeInclinedTablesRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.lang = request.lang;
             this.order = request.order;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tableType = request.tableType;
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bpxxxxxxxx47</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -179,31 +211,36 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * The order in which queries are sorted in the JSON format based on the specified fields. Specify the fields used to sort the queries and the order type.
-         * <p>
-         * 
-         * Example:
-         * 
-         * ```
-         * 
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * <p>The order in which queries are sorted in the JSON format based on the specified fields. Specify the fields used to sort the queries and the order type.</p>
+         * <p>Example:</p>
+         * <pre><code>
          * [
          * 
          *     {
          * 
-         *         "Field":"Name",
+         *         &quot;Field&quot;:&quot;Name&quot;,
          * 
-         *         "Type":"Asc"
+         *         &quot;Type&quot;:&quot;Asc&quot;
          * 
          *     }
          * 
          * ]
-         * ```
+         * </code></pre>
+         * <p>In the preceding code, Field indicates the field used to sort queries. Set the value of Field to Name.</p>
+         * <p>Type indicates the order type. Valid values of Type: Desc and Asc. A value of Desc indicates a descending order. A value of Asc indicates an ascending order.</p>
+         * <p>Both fields are not case-sensitive.</p>
          * 
-         * In the preceding code, Field indicates the field used to sort queries. Set the value of Field to Name.
-         * 
-         * Type indicates the order type. Valid values of Type: Desc and Asc. A value of Desc indicates a descending order. A value of Asc indicates an ascending order.
-         * 
-         * Both fields are not case-sensitive.
+         * <strong>example:</strong>
+         * <p>[      {          &quot;Field&quot;:&quot;Name&quot;,          &quot;Type&quot;:&quot;Asc&quot;      }  ]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -230,7 +267,10 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,18 +279,29 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>Default value: 30.</p>
          * 
-         * *   30
-         * *   50
-         * *   100
-         * 
-         * Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -273,11 +324,15 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * The type of the table. Valid values:
-         * <p>
+         * <p>The type of the table. Valid values:</p>
+         * <ul>
+         * <li>FactTable</li>
+         * <li>DimensionTable</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   FactTable
-         * *   DimensionTable
+         * <strong>example:</strong>
+         * <p>FactTable</p>
          */
         public Builder tableType(String tableType) {
             this.putQueryParameter("TableType", tableType);

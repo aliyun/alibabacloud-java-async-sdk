@@ -1,59 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIpv6InternetBandwidthRequest} extends {@link RequestModel}
  *
  * <p>ModifyIpv6InternetBandwidthRequest</p>
  */
 public class ModifyIpv6InternetBandwidthRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Ipv6AddressId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressId")
     private String ipv6AddressId;
 
-    @Query
-    @NameInMap("Ipv6InternetBandwidthId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6InternetBandwidthId")
     private String ipv6InternetBandwidthId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyIpv6InternetBandwidthRequest(Builder builder) {
         super(builder);
         this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ipv6AddressId = builder.ipv6AddressId;
         this.ipv6InternetBandwidthId = builder.ipv6InternetBandwidthId;
         this.ownerAccount = builder.ownerAccount;
@@ -88,6 +98,13 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -142,6 +159,7 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyIpv6InternetBandwidthRequest, Builder> {
         private Long bandwidth; 
         private String clientToken; 
+        private Boolean dryRun; 
         private String ipv6AddressId; 
         private String ipv6InternetBandwidthId; 
         private String ownerAccount; 
@@ -158,6 +176,7 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
             super(request);
             this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ipv6AddressId = request.ipv6AddressId;
             this.ipv6InternetBandwidthId = request.ipv6InternetBandwidthId;
             this.ownerAccount = request.ownerAccount;
@@ -168,7 +187,15 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * The Internet bandwidth for the IPv6 CIDR block. Unit: Mbit/s. Valid values: **1** to **5000**.
+         * <p>The Internet bandwidth value of the IPv6 address. Unit: Mbit/s.</p>
+         * <ul>
+         * <li>If the billing method is pay-by-data-transfer, valid values are <strong>1</strong> to <strong>1000</strong>.</li>
+         * <li>If the billing method is pay-by-bandwidth, valid values are <strong>1</strong> to <strong>2000</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -177,12 +204,14 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,10 +220,29 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 address.
-         * <p>
+         * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: pre-checks the request but does not create the IPv4 gateway. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the API request. After the request passes the check, an HTTP 2xx status code is returned and the IPv4 gateway is created.</li>
+         * </ul>
          * 
-         * >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the IPv6 address.</p>
+         * <blockquote>
+         * <p> You must specify one of <strong>Ipv6AddressId</strong> and <strong>Ipv6InternetBandwidthId</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6-2zen5j4axcp5l5qyy****</p>
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.putQueryParameter("Ipv6AddressId", ipv6AddressId);
@@ -203,10 +251,10 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the Internet bandwidth that you purchased for the IPv6 CIDR block.
-         * <p>
+         * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
          * 
-         * >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
+         * <strong>example:</strong>
+         * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
          */
         public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
             this.putQueryParameter("Ipv6InternetBandwidthId", ipv6InternetBandwidthId);
@@ -233,7 +281,11 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LifecycleResource</p>
  */
 public class LifecycleResource extends TeaModel {
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private Database database;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("DatabaseProfile")
+    @com.aliyun.core.annotation.NameInMap("DatabaseProfile")
     private DatabaseProfile databaseProfile;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("LifecycleRuleBizId")
+    @com.aliyun.core.annotation.NameInMap("LifecycleRuleBizId")
     private String lifecycleRuleBizId;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private Long owner;
 
-    @NameInMap("Table")
+    @com.aliyun.core.annotation.NameInMap("Table")
     private Table table;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("TableProfile")
+    @com.aliyun.core.annotation.NameInMap("TableProfile")
     private TableProfile tableProfile;
 
     private LifecycleResource(Builder builder) {
@@ -252,19 +251,19 @@ public class LifecycleResource extends TeaModel {
     } 
 
     public static class Database extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LocationUri")
+        @com.aliyun.core.annotation.NameInMap("LocationUri")
         private String locationUri;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Database(Builder builder) {
@@ -373,13 +372,13 @@ public class LifecycleResource extends TeaModel {
 
     }
     public static class SerDeInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.Map < String, String > parameters;
 
-        @NameInMap("SerializationLib")
+        @com.aliyun.core.annotation.NameInMap("SerializationLib")
         private String serializationLib;
 
         private SerDeInfo(Builder builder) {
@@ -454,22 +453,22 @@ public class LifecycleResource extends TeaModel {
 
     }
     public static class Sd extends TeaModel {
-        @NameInMap("BucketCols")
+        @com.aliyun.core.annotation.NameInMap("BucketCols")
         private java.util.List < String > bucketCols;
 
-        @NameInMap("InputFormat")
+        @com.aliyun.core.annotation.NameInMap("InputFormat")
         private String inputFormat;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("OutputFormat")
+        @com.aliyun.core.annotation.NameInMap("OutputFormat")
         private String outputFormat;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.Map < String, String > parameters;
 
-        @NameInMap("SerDeInfo")
+        @com.aliyun.core.annotation.NameInMap("SerDeInfo")
         private SerDeInfo serDeInfo;
 
         private Sd(Builder builder) {
@@ -595,22 +594,22 @@ public class LifecycleResource extends TeaModel {
 
     }
     public static class Table extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.Map < String, String > parameters;
 
-        @NameInMap("Sd")
+        @com.aliyun.core.annotation.NameInMap("Sd")
         private Sd sd;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableType")
+        @com.aliyun.core.annotation.NameInMap("TableType")
         private String tableType;
 
         private Table(Builder builder) {

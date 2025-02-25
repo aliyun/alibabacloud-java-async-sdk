@@ -1166,7 +1166,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The runtime parameters of the script.
+             * The runtime parameter of the script.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -1353,6 +1353,9 @@ public class DescribeClusterResponseBody extends TeaModel {
         @NameInMap("SchedulerType")
         private String schedulerType;
 
+        @NameInMap("SchedulerVersion")
+        private String schedulerVersion;
+
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -1428,6 +1431,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             this.sccClusterId = builder.sccClusterId;
             this.schedulerPreInstall = builder.schedulerPreInstall;
             this.schedulerType = builder.schedulerType;
+            this.schedulerVersion = builder.schedulerVersion;
             this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
@@ -1737,6 +1741,13 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulerVersion
+         */
+        public String getSchedulerVersion() {
+            return this.schedulerVersion;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -1855,6 +1866,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String sccClusterId; 
             private Integer schedulerPreInstall; 
             private String schedulerType; 
+            private String schedulerVersion; 
             private String securityGroupId; 
             private String status; 
             private String vSwitchId; 
@@ -2278,6 +2290,14 @@ public class DescribeClusterResponseBody extends TeaModel {
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
+                return this;
+            }
+
+            /**
+             * The version of the scheduler.
+             */
+            public Builder schedulerVersion(String schedulerVersion) {
+                this.schedulerVersion = schedulerVersion;
                 return this;
             }
 

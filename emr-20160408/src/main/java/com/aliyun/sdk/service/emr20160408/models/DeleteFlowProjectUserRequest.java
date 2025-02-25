@@ -77,11 +77,11 @@ public class DeleteFlowProjectUserRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFlowProjectUserRequest response) {
-            super(response);
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.userName = response.userName;
+        private Builder(DeleteFlowProjectUserRequest request) {
+            super(request);
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.userName = request.userName;
         } 
 
         /**

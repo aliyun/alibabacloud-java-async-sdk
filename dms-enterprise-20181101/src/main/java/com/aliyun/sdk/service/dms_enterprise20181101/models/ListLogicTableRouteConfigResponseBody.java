@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogicTableRouteConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogicTableRouteConfigResponseBody</p>
  */
 public class ListLogicTableRouteConfigResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LogicTableRouteConfigList")
+    @com.aliyun.core.annotation.NameInMap("LogicTableRouteConfigList")
     private LogicTableRouteConfigList logicTableRouteConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListLogicTableRouteConfigResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingTableId</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TableId is mandatory for this action.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The routing algorithms.
+         * <p>The routing algorithms.</p>
          */
         public Builder logicTableRouteConfigList(LogicTableRouteConfigList logicTableRouteConfigList) {
             this.logicTableRouteConfigList = logicTableRouteConfigList;
@@ -110,7 +121,10 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C6A0D7D-B034-59F6-854C-32425AC6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,14 +152,20 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogicTableRouteConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicTableRouteConfigResponseBody</p>
+     */
     public static class LogicTableRouteConfig extends TeaModel {
-        @NameInMap("RouteExpr")
+        @com.aliyun.core.annotation.NameInMap("RouteExpr")
         private String routeExpr;
 
-        @NameInMap("RouteKey")
+        @com.aliyun.core.annotation.NameInMap("RouteKey")
         private String routeKey;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private Long tableId;
 
         private LogicTableRouteConfig(Builder builder) {
@@ -186,7 +209,10 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
             private Long tableId; 
 
             /**
-             * The routing algorithm expression.
+             * <p>The routing algorithm expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#id#%16\t</p>
              */
             public Builder routeExpr(String routeExpr) {
                 this.routeExpr = routeExpr;
@@ -194,7 +220,10 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The unique key of the routing algorithm.
+             * <p>The unique key of the routing algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routeKey(String routeKey) {
                 this.routeKey = routeKey;
@@ -202,7 +231,10 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the logical table.
+             * <p>The ID of the logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4****</p>
              */
             public Builder tableId(Long tableId) {
                 this.tableId = tableId;
@@ -216,9 +248,15 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogicTableRouteConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogicTableRouteConfigResponseBody</p>
+     */
     public static class LogicTableRouteConfigList extends TeaModel {
-        @NameInMap("LogicTableRouteConfig")
-        private java.util.List < LogicTableRouteConfig> logicTableRouteConfig;
+        @com.aliyun.core.annotation.NameInMap("LogicTableRouteConfig")
+        private java.util.List<LogicTableRouteConfig> logicTableRouteConfig;
 
         private LogicTableRouteConfigList(Builder builder) {
             this.logicTableRouteConfig = builder.logicTableRouteConfig;
@@ -235,17 +273,17 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         /**
          * @return logicTableRouteConfig
          */
-        public java.util.List < LogicTableRouteConfig> getLogicTableRouteConfig() {
+        public java.util.List<LogicTableRouteConfig> getLogicTableRouteConfig() {
             return this.logicTableRouteConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LogicTableRouteConfig> logicTableRouteConfig; 
+            private java.util.List<LogicTableRouteConfig> logicTableRouteConfig; 
 
             /**
              * LogicTableRouteConfig.
              */
-            public Builder logicTableRouteConfig(java.util.List < LogicTableRouteConfig> logicTableRouteConfig) {
+            public Builder logicTableRouteConfig(java.util.List<LogicTableRouteConfig> logicTableRouteConfig) {
                 this.logicTableRouteConfig = logicTableRouteConfig;
                 return this;
             }

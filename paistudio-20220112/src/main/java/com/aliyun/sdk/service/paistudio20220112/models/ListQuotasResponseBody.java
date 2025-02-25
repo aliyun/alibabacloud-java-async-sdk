@@ -1,26 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotasResponseBody} extends {@link TeaModel}
  *
  * <p>ListQuotasResponseBody</p>
  */
 public class ListQuotasResponseBody extends TeaModel {
-    @NameInMap("Quotas")
-    private java.util.List < Quota > quotas;
+    @com.aliyun.core.annotation.NameInMap("Quotas")
+    private java.util.List<Quota> quotas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
 
     private ListQuotasResponseBody(Builder builder) {
         this.quotas = builder.quotas;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -34,7 +43,7 @@ public class ListQuotasResponseBody extends TeaModel {
     /**
      * @return quotas
      */
-    public java.util.List < Quota > getQuotas() {
+    public java.util.List<Quota> getQuotas() {
         return this.quotas;
     }
 
@@ -45,14 +54,22 @@ public class ListQuotasResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private java.util.List < Quota > quotas; 
+        private java.util.List<Quota> quotas; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
          * Quotas.
          */
-        public Builder quotas(java.util.List < Quota > quotas) {
+        public Builder quotas(java.util.List<Quota> quotas) {
             this.quotas = quotas;
             return this;
         }
@@ -62,6 +79,14 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

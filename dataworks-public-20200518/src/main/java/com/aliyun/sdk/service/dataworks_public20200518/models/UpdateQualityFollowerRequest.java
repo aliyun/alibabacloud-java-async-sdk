@@ -1,44 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQualityFollowerRequest} extends {@link RequestModel}
  *
  * <p>UpdateQualityFollowerRequest</p>
  */
 public class UpdateQualityFollowerRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlarmMode")
-    @Validation(required = true, maximum = 99)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlarmMode")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99)
     private Integer alarmMode;
 
-    @Body
-    @NameInMap("Follower")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Follower")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String follower;
 
-    @Body
-    @NameInMap("FollowerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FollowerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long followerId;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     private UpdateQualityFollowerRequest(Builder builder) {
@@ -129,7 +133,7 @@ public class UpdateQualityFollowerRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -138,7 +142,11 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * The notification method. Valid values: 1, 2, 4, and 5. 1 indicates that the notification is sent by email. 2 indicates that the notification is sent by email and text message. 4 indicates that the notification is sent by a DingTalk chatbot. 5 indicates that the notification is sent by a DingTalk chatbot to all members in a DingTalk group.
+         * <p>The notification method. Valid values: 1, 2, 4, 5, 6, 7, 8, and 9. The value 1 indicates that the notification is sent by email. The value 2 indicates that the notification is sent by email and text message. The value 4 indicates that the notification is sent by a DingTalk chatbot. The value 5 indicates that the notification is sent by a DingTalk chatbot to all members in a DingTalk group. The value 6 indicates that the notification is sent by Lark. The value 7 indicates that the notification is sent by WeCom. The value 8 indicates that the notification is sent by webhook. The value 9 indicates that the notification is sent by phone call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder alarmMode(Integer alarmMode) {
             this.putBodyParameter("AlarmMode", alarmMode);
@@ -147,7 +155,11 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * The name of the subscriber.
+         * <p>The name of the subscriber.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1912232****</p>
          */
         public Builder follower(String follower) {
             this.putBodyParameter("Follower", follower);
@@ -156,7 +168,11 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * The ID of the subscription relationship.
+         * <p>The ID of the subscription relationship.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder followerId(Long followerId) {
             this.putBodyParameter("FollowerId", followerId);
@@ -165,7 +181,10 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -174,7 +193,11 @@ public class UpdateQualityFollowerRequest extends Request {
         }
 
         /**
-         * The name of the computing engine instance or data source.
+         * <p>The name of the compute engine or data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

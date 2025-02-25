@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessPathsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNetworkAccessPathsResponseBody</p>
  */
 public class ListNetworkAccessPathsResponseBody extends TeaModel {
-    @NameInMap("NetworkAccessPaths")
-    private java.util.List < NetworkAccessPaths> networkAccessPaths;
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessPaths")
+    private java.util.List<NetworkAccessPaths> networkAccessPaths;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListNetworkAccessPathsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
     /**
      * @return networkAccessPaths
      */
-    public java.util.List < NetworkAccessPaths> getNetworkAccessPaths() {
+    public java.util.List<NetworkAccessPaths> getNetworkAccessPaths() {
         return this.networkAccessPaths;
     }
 
@@ -46,13 +51,13 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkAccessPaths> networkAccessPaths; 
+        private java.util.List<NetworkAccessPaths> networkAccessPaths; 
         private String requestId; 
 
         /**
          * NetworkAccessPaths.
          */
-        public Builder networkAccessPaths(java.util.List < NetworkAccessPaths> networkAccessPaths) {
+        public Builder networkAccessPaths(java.util.List<NetworkAccessPaths> networkAccessPaths) {
             this.networkAccessPaths = networkAccessPaths;
             return this;
         }
@@ -71,32 +76,38 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNetworkAccessPathsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkAccessPathsResponseBody</p>
+     */
     public static class NetworkAccessPaths extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NetworkAccessEndpointId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
         private String networkAccessEndpointId;
 
-        @NameInMap("NetworkAccessPathId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessPathId")
         private String networkAccessPathId;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkAccessPaths(Builder builder) {
@@ -194,7 +205,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * 专属网络端点访问路径创建时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点访问路径创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -202,7 +216,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * <p>实例ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +227,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点ID。
+             * <p>专属网络端点ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nae_examplexxx</p>
              */
             public Builder networkAccessEndpointId(String networkAccessEndpointId) {
                 this.networkAccessEndpointId = networkAccessEndpointId;
@@ -218,7 +238,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点访问路径ID。
+             * <p>专属网络端点访问路径ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nap_examplexxx</p>
              */
             public Builder networkAccessPathId(String networkAccessPathId) {
                 this.networkAccessPathId = networkAccessPathId;
@@ -226,7 +249,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点访问路径使用的ENI ID。
+             * <p>专属网络端点访问路径使用的ENI ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-examplexxx</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -234,7 +260,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点访问路径使用的ENI私网地址。
+             * <p>专属网络端点访问路径使用的ENI私网地址。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -242,7 +271,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点访问路径状态。
+             * <p>专属网络端点访问路径状态。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +282,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点访问路径最近更新时间，Unix时间戳格式，单位为毫秒。
+             * <p>专属网络端点访问路径最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -258,7 +293,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * 专属网络端点访问路径的ENI归属的交换机ID。
+             * <p>专属网络端点访问路径的ENI归属的交换机ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-examplexxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

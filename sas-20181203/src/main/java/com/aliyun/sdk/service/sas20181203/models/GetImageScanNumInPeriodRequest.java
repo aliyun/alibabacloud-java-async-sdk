@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageScanNumInPeriodRequest} extends {@link RequestModel}
  *
  * <p>GetImageScanNumInPeriodRequest</p>
  */
 public class GetImageScanNumInPeriodRequest extends Request {
-    @Query
-    @NameInMap("PastDay")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PastDay")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pastDay;
 
     private GetImageScanNumInPeriodRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetImageScanNumInPeriodRequest extends Request {
         } 
 
         /**
-         * The number of days.
+         * <p>The number of days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder pastDay(String pastDay) {
             this.putQueryParameter("PastDay", pastDay);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaRefreshJobsResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaRefreshJobsResponseBody</p>
  */
 public class GetMediaRefreshJobsResponseBody extends TeaModel {
-    @NameInMap("MediaRefreshJobs")
-    private java.util.List < MediaRefreshJobs> mediaRefreshJobs;
+    @com.aliyun.core.annotation.NameInMap("MediaRefreshJobs")
+    private java.util.List<MediaRefreshJobs> mediaRefreshJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaRefreshJobsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     /**
      * @return mediaRefreshJobs
      */
-    public java.util.List < MediaRefreshJobs> getMediaRefreshJobs() {
+    public java.util.List<MediaRefreshJobs> getMediaRefreshJobs() {
         return this.mediaRefreshJobs;
     }
 
@@ -46,19 +51,22 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MediaRefreshJobs> mediaRefreshJobs; 
+        private java.util.List<MediaRefreshJobs> mediaRefreshJobs; 
         private String requestId; 
 
         /**
-         * The media refresh or prefetch jobs.
+         * <p>The media refresh or prefetch jobs.</p>
          */
-        public Builder mediaRefreshJobs(java.util.List < MediaRefreshJobs> mediaRefreshJobs) {
+        public Builder mediaRefreshJobs(java.util.List<MediaRefreshJobs> mediaRefreshJobs) {
             this.mediaRefreshJobs = mediaRefreshJobs;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-D7393642CA58****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,41 +79,47 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaRefreshJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaRefreshJobsResponseBody</p>
+     */
     public static class MediaRefreshJobs extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FilterPolicy")
+        @com.aliyun.core.annotation.NameInMap("FilterPolicy")
         private String filterPolicy;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaRefreshJobId")
+        @com.aliyun.core.annotation.NameInMap("MediaRefreshJobId")
         private String mediaRefreshJobId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SuccessPlayUrls")
+        @com.aliyun.core.annotation.NameInMap("SuccessPlayUrls")
         private String successPlayUrls;
 
-        @NameInMap("TaskIds")
+        @com.aliyun.core.annotation.NameInMap("TaskIds")
         private String taskIds;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaRefreshJobs(Builder builder) {
@@ -230,7 +244,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * The error code. This parameter is returned if the refresh or prefetch task fails.
+             * <p>The error code. This parameter is returned if the refresh or prefetch task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PreloadQueueFull</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -238,7 +255,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message. This parameter is returned if the refresh or prefetch task fails.
+             * <p>The error message. This parameter is returned if the refresh or prefetch task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Preload queue is full, please try again later!</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -246,7 +266,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The filtering conditions for stream playback. The value is a JSON string. This parameter is used as a request parameter of the [RefreshMediaPlayUrls](~~RefreshMediaPlayUrls~~) operation.
+             * <p>The filtering conditions for stream playback. The value is a JSON string. This parameter is used as a request parameter of the <a href="~~RefreshMediaPlayUrls~~">RefreshMediaPlayUrls</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Formats&quot;:&quot;mp4,m3u8&quot;, &quot;Definitions&quot;:&quot;HD,SD&quot;,  &quot; StreamType&quot;:&quot;video&quot;,  &quot;ResultType&quot;:&quot;Single&quot;,  &quot; SliceFlag&quot;:false, &quot;SliceCount&quot;: 3}</p>
              */
             public Builder filterPolicy(String filterPolicy) {
                 this.filterPolicy = filterPolicy;
@@ -254,7 +277,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-20T08:23:22Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -262,7 +288,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was modified.
+             * <p>The time when the task was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-21T08:23:22Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -270,7 +299,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media file.
+             * <p>The ID of the media file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca3a8f6e4957b658067095869****</p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -278,7 +310,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * <p>The ID of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41d465e31957****</p>
              */
             public Builder mediaRefreshJobId(String mediaRefreshJobId) {
                 this.mediaRefreshJobId = mediaRefreshJobId;
@@ -286,11 +321,14 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **fail**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +336,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The playback URLs that were refreshed or prefetched.
+             * <p>The playback URLs that were refreshed or prefetched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8">https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8</a></p>
              */
             public Builder successPlayUrls(String successPlayUrls) {
                 this.successPlayUrls = successPlayUrls;
@@ -306,7 +347,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the refresh or prefetch tasks for the playback URLs of media files. Only one URL can be refreshed or prefetched in a task. This value is used in the [DescribeVodRefreshTasks](~~DescribeVodRefreshTasks~~) operation, which queries the status of refresh or prefetch tasks for playback URLs of media files.
+             * <p>The IDs of the refresh or prefetch tasks for the playback URLs of media files. Only one URL can be refreshed or prefetched in a task. This value is used in the <a href="~~DescribeVodRefreshTasks~~">DescribeVodRefreshTasks</a> operation, which queries the status of refresh or prefetch tasks for playback URLs of media files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70422****,9524****</p>
              */
             public Builder taskIds(String taskIds) {
                 this.taskIds = taskIds;
@@ -314,11 +358,14 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the job. Valid values:
-             * <p>
+             * <p>The type of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>Refresh</strong></li>
+             * <li><strong>Preload</strong></li>
+             * </ul>
              * 
-             * *   **Refresh**
-             * *   **Preload**
+             * <strong>example:</strong>
+             * <p>Preload</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -326,7 +373,10 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The user data that you passed when you submit a refresh or prefetch task.
+             * <p>The user data that you passed when you submit a refresh or prefetch task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

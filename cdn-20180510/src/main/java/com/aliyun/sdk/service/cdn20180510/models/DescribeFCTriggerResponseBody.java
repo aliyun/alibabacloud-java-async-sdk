@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFCTriggerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFCTriggerResponseBody</p>
  */
 public class DescribeFCTriggerResponseBody extends TeaModel {
-    @NameInMap("FCTrigger")
+    @com.aliyun.core.annotation.NameInMap("FCTrigger")
     private FCTrigger FCTrigger;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFCTriggerResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Function Compute trigger that you want to query.
+         * <p>The Function Compute trigger that you want to query.</p>
          */
         public Builder FCTrigger(FCTrigger FCTrigger) {
             this.FCTrigger = FCTrigger;
@@ -58,7 +58,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC046C5D-8CB4-4B6B-B7F8-B335E51EF90E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +74,29 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFCTriggerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFCTriggerResponseBody</p>
+     */
     public static class FCTrigger extends TeaModel {
-        @NameInMap("EventMetaName")
+        @com.aliyun.core.annotation.NameInMap("EventMetaName")
         private String eventMetaName;
 
-        @NameInMap("EventMetaVersion")
+        @com.aliyun.core.annotation.NameInMap("EventMetaVersion")
         private String eventMetaVersion;
 
-        @NameInMap("Notes")
+        @com.aliyun.core.annotation.NameInMap("Notes")
         private String notes;
 
-        @NameInMap("RoleARN")
+        @com.aliyun.core.annotation.NameInMap("RoleARN")
         private String roleARN;
 
-        @NameInMap("SourceArn")
+        @com.aliyun.core.annotation.NameInMap("SourceArn")
         private String sourceArn;
 
-        @NameInMap("TriggerARN")
+        @com.aliyun.core.annotation.NameInMap("TriggerARN")
         private String triggerARN;
 
         private FCTrigger(Builder builder) {
@@ -158,7 +167,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             private String triggerARN; 
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LogFileCreated</p>
              */
             public Builder eventMetaName(String eventMetaName) {
                 this.eventMetaName = eventMetaName;
@@ -166,7 +178,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the event.
+             * <p>The version of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder eventMetaVersion(String eventMetaVersion) {
                 this.eventMetaVersion = eventMetaVersion;
@@ -174,7 +189,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the Function Compute trigger.
+             * <p>The remarks of the Function Compute trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder notes(String notes) {
                 this.notes = notes;
@@ -182,7 +200,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The assigned Resource Access Management (RAM) role.
+             * <p>The assigned Resource Access Management (RAM) role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram:: 1234567890:role/aliyuncdneventnotificationrole</p>
              */
             public Builder roleARN(String roleARN) {
                 this.roleARN = roleARN;
@@ -190,7 +211,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The resources and filters for event listening.
+             * <p>The resources and filters for event listening.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:cdn:*:1234567890:domain/example.com</p>
              */
             public Builder sourceArn(String sourceArn) {
                 this.sourceArn = sourceArn;
@@ -198,7 +222,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger that corresponds to the Function Compute service.
+             * <p>The trigger that corresponds to the Function Compute service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:fc:cn-beijing: 1234567890:services/FCTestService/functions/printEvent/triggers/testtrigger</p>
              */
             public Builder triggerARN(String triggerARN) {
                 this.triggerARN = triggerARN;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDevicesDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDevicesDataResponseBody</p>
  */
 public class DescribeVsDevicesDataResponseBody extends TeaModel {
-    @NameInMap("DevicesDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("DevicesDataPerInterval")
     private DevicesDataPerInterval devicesDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsDevicesDataResponseBody(Builder builder) {
@@ -71,11 +76,17 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDevicesDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDevicesDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("DevicesDataValue")
+        @com.aliyun.core.annotation.NameInMap("DevicesDataValue")
         private String devicesDataValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -132,9 +143,15 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDevicesDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDevicesDataResponseBody</p>
+     */
     public static class DevicesDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private DevicesDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -151,17 +168,17 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSubCrowdsResponseBody</p>
  */
 public class ListSubCrowdsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCrowds")
+    @com.aliyun.core.annotation.NameInMap("SubCrowds")
     private java.util.List < SubCrowds> subCrowds;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListSubCrowdsResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ListSubCrowdsResponseBody extends TeaModel {
     } 
 
     public static class SubCrowds extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SubCrowdId")
+        @com.aliyun.core.annotation.NameInMap("SubCrowdId")
         private String subCrowdId;
 
-        @NameInMap("Users")
+        @com.aliyun.core.annotation.NameInMap("Users")
         private String users;
 
         private SubCrowds(Builder builder) {

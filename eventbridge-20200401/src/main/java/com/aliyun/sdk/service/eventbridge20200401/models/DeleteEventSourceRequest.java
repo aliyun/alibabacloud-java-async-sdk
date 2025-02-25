@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,13 +11,18 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>DeleteEventSourceRequest</p>
  */
 public class DeleteEventSourceRequest extends Request {
-    @Body
-    @NameInMap("EventSourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventBusName")
+    private String eventBusName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventSourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventSourceName;
 
     private DeleteEventSourceRequest(Builder builder) {
         super(builder);
+        this.eventBusName = builder.eventBusName;
         this.eventSourceName = builder.eventSourceName;
     }
 
@@ -36,6 +40,13 @@ public class DeleteEventSourceRequest extends Request {
     }
 
     /**
+     * @return eventBusName
+     */
+    public String getEventBusName() {
+        return this.eventBusName;
+    }
+
+    /**
      * @return eventSourceName
      */
     public String getEventSourceName() {
@@ -43,6 +54,7 @@ public class DeleteEventSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteEventSourceRequest, Builder> {
+        private String eventBusName; 
         private String eventSourceName; 
 
         private Builder() {
@@ -51,8 +63,18 @@ public class DeleteEventSourceRequest extends Request {
 
         private Builder(DeleteEventSourceRequest request) {
             super(request);
+            this.eventBusName = request.eventBusName;
             this.eventSourceName = request.eventSourceName;
         } 
+
+        /**
+         * EventBusName.
+         */
+        public Builder eventBusName(String eventBusName) {
+            this.putBodyParameter("EventBusName", eventBusName);
+            this.eventBusName = eventBusName;
+            return this;
+        }
 
         /**
          * The name of the event source.

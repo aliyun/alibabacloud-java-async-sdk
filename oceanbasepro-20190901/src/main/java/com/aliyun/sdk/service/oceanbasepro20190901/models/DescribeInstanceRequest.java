@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRequest</p>
  */
 public class DescribeInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxConnectionLimit")
+    private String maxConnectionLimit;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
     private DescribeInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.maxConnectionLimit = builder.maxConnectionLimit;
         this.pageNumber = builder.pageNumber;
     }
 
@@ -60,6 +64,13 @@ public class DescribeInstanceRequest extends Request {
     }
 
     /**
+     * @return maxConnectionLimit
+     */
+    public String getMaxConnectionLimit() {
+        return this.maxConnectionLimit;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -69,6 +80,7 @@ public class DescribeInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceRequest, Builder> {
         private String regionId; 
         private String instanceId; 
+        private String maxConnectionLimit; 
         private Integer pageNumber; 
 
         private Builder() {
@@ -79,6 +91,7 @@ public class DescribeInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.maxConnectionLimit = request.maxConnectionLimit;
             this.pageNumber = request.pageNumber;
         } 
 
@@ -97,6 +110,15 @@ public class DescribeInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxConnectionLimit.
+         */
+        public Builder maxConnectionLimit(String maxConnectionLimit) {
+            this.putBodyParameter("MaxConnectionLimit", maxConnectionLimit);
+            this.maxConnectionLimit = maxConnectionLimit;
             return this;
         }
 

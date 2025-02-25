@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,75 +11,79 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateListenerRequest</p>
  */
 public class CreateListenerRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientAffinity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientAffinity")
     private String clientAffinity;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CustomRoutingEndpointGroupConfigurations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomRoutingEndpointGroupConfigurations")
     private java.util.List < CustomRoutingEndpointGroupConfigurations> customRoutingEndpointGroupConfigurations;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndpointGroupConfigurations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupConfigurations")
     private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
 
-    @Query
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpVersion")
+    private String httpVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PortRanges")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRanges")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < PortRanges> portRanges;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("ProxyProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
     private Boolean proxyProtocol;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @Query
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("XForwardedForConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
 
     private CreateListenerRequest(Builder builder) {
@@ -92,6 +95,7 @@ public class CreateListenerRequest extends Request {
         this.customRoutingEndpointGroupConfigurations = builder.customRoutingEndpointGroupConfigurations;
         this.description = builder.description;
         this.endpointGroupConfigurations = builder.endpointGroupConfigurations;
+        this.httpVersion = builder.httpVersion;
         this.idleTimeout = builder.idleTimeout;
         this.name = builder.name;
         this.portRanges = builder.portRanges;
@@ -164,6 +168,13 @@ public class CreateListenerRequest extends Request {
      */
     public java.util.List < EndpointGroupConfigurations> getEndpointGroupConfigurations() {
         return this.endpointGroupConfigurations;
+    }
+
+    /**
+     * @return httpVersion
+     */
+    public String getHttpVersion() {
+        return this.httpVersion;
     }
 
     /**
@@ -244,6 +255,7 @@ public class CreateListenerRequest extends Request {
         private java.util.List < CustomRoutingEndpointGroupConfigurations> customRoutingEndpointGroupConfigurations; 
         private String description; 
         private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations; 
+        private String httpVersion; 
         private Integer idleTimeout; 
         private String name; 
         private java.util.List < PortRanges> portRanges; 
@@ -268,6 +280,7 @@ public class CreateListenerRequest extends Request {
             this.customRoutingEndpointGroupConfigurations = request.customRoutingEndpointGroupConfigurations;
             this.description = request.description;
             this.endpointGroupConfigurations = request.endpointGroupConfigurations;
+            this.httpVersion = request.httpVersion;
             this.idleTimeout = request.idleTimeout;
             this.name = request.name;
             this.portRanges = request.portRanges;
@@ -349,12 +362,12 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The endpoint group that is associated with the intelligent routing listener.
+         * The endpoint groups that are associated with the intelligent routing listener.
          * <p>
          * 
-         * You can configure at most 10 endpoint groups for an intelligent routing listener.
+         * You can configure up to 10 endpoint groups for an intelligent routing listener.
          * 
-         * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+         * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
          */
         public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
@@ -363,7 +376,28 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * IdleTimeout.
+         * The maximum version of the HTTP protocol. Valid values:
+         * <p>
+         * 
+         * *   **http3**
+         * *   **http2** (default)
+         * *   **http1.1**
+         * 
+         * >  Only HTTPS listeners support this parameter.
+         */
+        public Builder httpVersion(String httpVersion) {
+            this.putQueryParameter("HttpVersion", httpVersion);
+            this.httpVersion = httpVersion;
+            return this;
+        }
+
+        /**
+         * The timeout period of idle connections. Unit: seconds.
+         * <p>
+         * 
+         * *   TCP: 10-900. Default value: 900. Unit: seconds.
+         * *   UDP: 10-20. Default value: 20. Unit: seconds.
+         * *   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -432,7 +466,12 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * RequestTimeout.
+         * The timeout period for HTTP or HTTPS requests. Unit: seconds.
+         * <p>
+         * 
+         * Valid values: 1 to 180. Default value: 60. Unit: seconds.
+         * 
+         * >  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);
@@ -484,11 +523,8 @@ public class CreateListenerRequest extends Request {
          * *   **Standard** (default): intelligent routing
          * *   **CustomRouting**: custom routing
          * 
-         * > 
-         * 
-         * *   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.
-         * 
-         * *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).
+         * > *   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.
+         * > *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -513,7 +549,7 @@ public class CreateListenerRequest extends Request {
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Certificates(Builder builder) {
@@ -557,13 +593,13 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class DestinationConfigurations extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < String > protocols;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private DestinationConfigurations(Builder builder) {
@@ -657,10 +693,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PolicyConfigurationsPortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PolicyConfigurationsPortRanges(Builder builder) {
@@ -732,10 +768,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PolicyConfigurations extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PolicyConfigurationsPortRanges> portRanges;
 
         private PolicyConfigurations(Builder builder) {
@@ -809,16 +845,16 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("PolicyConfigurations")
+        @com.aliyun.core.annotation.NameInMap("PolicyConfigurations")
         private java.util.List < PolicyConfigurations> policyConfigurations;
 
-        @NameInMap("TrafficToEndpointPolicy")
+        @com.aliyun.core.annotation.NameInMap("TrafficToEndpointPolicy")
         private String trafficToEndpointPolicy;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EndpointConfigurations(Builder builder) {
@@ -932,19 +968,19 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class CustomRoutingEndpointGroupConfigurations extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationConfigurations")
+        @com.aliyun.core.annotation.NameInMap("DestinationConfigurations")
         private java.util.List < DestinationConfigurations> destinationConfigurations;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         private String endpointGroupRegion;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private CustomRoutingEndpointGroupConfigurations(Builder builder) {
@@ -1084,16 +1120,16 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class EndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private EndpointGroupConfigurationsEndpointConfigurations(Builder builder) {
@@ -1151,7 +1187,7 @@ public class CreateListenerRequest extends Request {
              * 
              * You can specify up to 100 endpoint IP addresses or domain names for an endpoint group of an intelligent routing listener.
              * 
-             * > If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
+             * >  If you set **Type** to **Standard**, you can configure endpoint groups and endpoints, and this parameter is required.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -1159,7 +1195,10 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * SubAddress.
+             * The private IP address of the elastic network interface (ENI).
+             * <p>
+             * 
+             * >  If the endpoint type is **ENI**, you can specify this parameter. If you do not specify this parameter, the primary private IP address of the ENI is used.
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -1167,7 +1206,7 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The endpoint type of the intelligent routing listener. Valid values:
+             * The type of the endpoint that is associated with the intelligent routing listener. Valid values:
              * <p>
              * 
              * *   **Domain**: a custom domain name
@@ -1180,15 +1219,11 @@ public class CreateListenerRequest extends Request {
              * 
              * You can specify up to 100 endpoint types for an endpoint group of an intelligent routing listener.
              * 
-             * > 
-             * 
-             * *   If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
-             * 
-             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.
-             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
-             * 
-             * For more information, see [Service-linked roles](~~178360~~).
+             * > *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
+             * >*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.  
+             * > For more information, see [Service linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1201,13 +1236,10 @@ public class CreateListenerRequest extends Request {
              * 
              * Valid values: **0** to **255**.
              * 
-             * You can set the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.
+             * You can specify the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.
              * 
-             * > 
-             * 
-             * *   If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
-             * 
-             * *   If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
+             * > *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.
+             * >*   If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -1222,10 +1254,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Long endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Long listenerPort;
 
         private PortOverrides(Builder builder) {
@@ -1265,11 +1297,8 @@ public class CreateListenerRequest extends Request {
              * 
              * You can specify up to five endpoint ports.
              * 
-             * > 
-             * 
-             * *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-             * 
-             * *   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support port mappings.
+             * >*   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+             * >*   Only HTTP and HTTPS intelligent routing listeners support port mappings.
              */
             public Builder endpointPort(Long endpointPort) {
                 this.endpointPort = endpointPort;
@@ -1282,12 +1311,9 @@ public class CreateListenerRequest extends Request {
              * 
              * You can specify up to five listener ports.
              * 
-             * > 
-             * 
-             * *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-             * 
-             * *   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support port mappings.
-             * *   The listener port in a port mapping must be the port that is used by the current listener.
+             * > *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+             * >*   Only HTTP and HTTPS intelligent routing listeners support port mappings.
+             * >*   The listener port in a port mapping must be the port that is used by the current listener.
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -1302,52 +1328,55 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class EndpointGroupConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservationProxyProtocol")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationProxyProtocol")
         private Boolean enableClientIPPreservationProxyProtocol;
 
-        @NameInMap("EnableClientIPPreservationToa")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationToa")
         private Boolean enableClientIPPreservationToa;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupDescription")
         private String endpointGroupDescription;
 
-        @NameInMap("EndpointGroupName")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupName")
         private String endpointGroupName;
 
-        @NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         private String endpointGroupRegion;
 
-        @NameInMap("EndpointGroupType")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
         private String endpointGroupType;
 
-        @NameInMap("EndpointRequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+        private String endpointProtocolVersion;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
         private String endpointRequestProtocol;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckIntervalSeconds")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
         private Long healthCheckIntervalSeconds;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
         private Long healthCheckPort;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("PortOverrides")
+        @com.aliyun.core.annotation.NameInMap("PortOverrides")
         private java.util.List < PortOverrides> portOverrides;
 
-        @NameInMap("ThresholdCount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdCount")
         private Long thresholdCount;
 
-        @NameInMap("TrafficPercentage")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
         private Long trafficPercentage;
 
         private EndpointGroupConfigurations(Builder builder) {
@@ -1358,6 +1387,7 @@ public class CreateListenerRequest extends Request {
             this.endpointGroupName = builder.endpointGroupName;
             this.endpointGroupRegion = builder.endpointGroupRegion;
             this.endpointGroupType = builder.endpointGroupType;
+            this.endpointProtocolVersion = builder.endpointProtocolVersion;
             this.endpointRequestProtocol = builder.endpointRequestProtocol;
             this.healthCheckEnabled = builder.healthCheckEnabled;
             this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
@@ -1424,6 +1454,13 @@ public class CreateListenerRequest extends Request {
          */
         public String getEndpointGroupType() {
             return this.endpointGroupType;
+        }
+
+        /**
+         * @return endpointProtocolVersion
+         */
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         /**
@@ -1497,6 +1534,7 @@ public class CreateListenerRequest extends Request {
             private String endpointGroupName; 
             private String endpointGroupRegion; 
             private String endpointGroupType; 
+            private String endpointProtocolVersion; 
             private String endpointRequestProtocol; 
             private Boolean healthCheckEnabled; 
             private Long healthCheckIntervalSeconds; 
@@ -1511,12 +1549,12 @@ public class CreateListenerRequest extends Request {
              * Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
              * <p>
              * 
-             * *   **true**: uses the proxy protocol to preserve client IP addresses.
-             * *   **false** (default): does not use the proxy protocol to preserve client IP addresses.
+             * *   **true**
+             * *   **false** (default)
              * 
-             * You can set this parameter for up to 10 endpoint groups.
+             * You can specify this parameter for up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder enableClientIPPreservationProxyProtocol(Boolean enableClientIPPreservationProxyProtocol) {
                 this.enableClientIPPreservationProxyProtocol = enableClientIPPreservationProxyProtocol;
@@ -1524,15 +1562,15 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to obtain and preserve the IP addresses of clients that access the endpoint by using the TCP Option Address (TOA) module. Valid values:
+             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:
              * <p>
              * 
-             * *   **true**: preserves client IP addresses by using the TOA module.
-             * *   **false** (default): does not preserve client IP addresses by using the TOA module.
+             * *   **true**
+             * *   **false** (default)
              * 
-             * You can set this parameter for up to 10 endpoint groups.
+             * You can specify this parameter for up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder enableClientIPPreservationToa(Boolean enableClientIPPreservationToa) {
                 this.enableClientIPPreservationToa = enableClientIPPreservationToa;
@@ -1551,11 +1589,11 @@ public class CreateListenerRequest extends Request {
              * The description of the endpoint group that is associated with the intelligent routing listener.
              * <p>
              * 
-             * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
+             * The description can be up to 256 characters in length and cannot contain `http://` or `https://`.
              * 
              * You can enter the descriptions of up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder endpointGroupDescription(String endpointGroupDescription) {
                 this.endpointGroupDescription = endpointGroupDescription;
@@ -1570,7 +1608,7 @@ public class CreateListenerRequest extends Request {
              * 
              * You can enter the names of up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder endpointGroupName(String endpointGroupName) {
                 this.endpointGroupName = endpointGroupName;
@@ -1583,7 +1621,7 @@ public class CreateListenerRequest extends Request {
              * 
              * You can enter the region IDs of up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder endpointGroupRegion(String endpointGroupRegion) {
                 this.endpointGroupRegion = endpointGroupRegion;
@@ -1591,19 +1629,16 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The endpoint group type of the intelligent routing listener. Valid values:
+             * The type of the endpoint group associated with the intelligent routing listener. Valid values:
              * <p>
              * 
-             * *   **default** (default): a default endpoint group.
-             * *   **virtual**: a virtual endpoint group.
+             * *   **default** (default)
+             * *   **virtual**
              * 
-             * You can specify the types of up to 10 endpoint groups.
+             * You can specify up to 10 endpoint group types.
              * 
-             * > 
-             * 
-             * *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-             * 
-             * *   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.
+             * > *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+             * >*   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
@@ -1611,20 +1646,25 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The protocol used by the endpoint that is associated with the intelligent routing listener. Valid values:
+             * EndpointProtocolVersion.
+             */
+            public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+                this.endpointProtocolVersion = endpointProtocolVersion;
+                return this;
+            }
+
+            /**
+             * The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:
              * <p>
              * 
-             * *   **HTTP** (default): HTTP
-             * *   **HTTPS**: HTTPS
+             * *   **HTTP** (default)
+             * *   **HTTPS**
              * 
-             * You can specify at most 10 protocols.
+             * You can specify up to 10 backend service protocols.
              * 
-             * > 
-             * 
-             * *   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
-             * 
-             * *   You can set this parameter only for HTTP intelligent routing listeners and HTTPS intelligent routing listeners.
-             * *   For an HTTP listener, the protocol must be **HTTP**.
+             * > *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.
+             * >*   You can specify this parameter only for HTTP and HTTPS intelligent routing listeners.
+             * >*   For an HTTP listener, the protocol must be **HTTP**.
              */
             public Builder endpointRequestProtocol(String endpointRequestProtocol) {
                 this.endpointRequestProtocol = endpointRequestProtocol;
@@ -1632,15 +1672,15 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable health checks for the endpoint group that is associated with the intelligent routing listener. Valid values:
+             * Specifies whether to enable health checks for the endpoint group. Valid values:
              * <p>
              * 
-             * *   **true**: enables the health check feature.
-             * *   **false** (default): disables the health check feature.
+             * *   **true**
+             * *   **false** (default)
              * 
              * You can enable the health check feature for up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
@@ -1648,12 +1688,12 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The interval at which you want to perform health checks. Unit: seconds.
+             * The interval at which health checks are performed. Unit: seconds.
              * <p>
              * 
              * You can specify up to 10 health check intervals.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder healthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
                 this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
@@ -1666,7 +1706,7 @@ public class CreateListenerRequest extends Request {
              * 
              * You can specify up to 10 health check paths.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -1677,9 +1717,9 @@ public class CreateListenerRequest extends Request {
              * The port that is used for health checks. Valid values: **1** to **65535**.
              * <p>
              * 
-             * You can specify up to 10 ports for health checks.
+             * You can specify up to 10 health check ports.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder healthCheckPort(Long healthCheckPort) {
                 this.healthCheckPort = healthCheckPort;
@@ -1690,13 +1730,13 @@ public class CreateListenerRequest extends Request {
              * The protocol over which health check requests are sent. Valid values:
              * <p>
              * 
-             * *   **tcp**: TCP
-             * *   **http**: HTTP
-             * *   **https**: HTTPS
+             * *   **tcp**
+             * *   **http**
+             * *   **https**
              * 
              * You can specify up to 10 health check protocols.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -1704,7 +1744,7 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The mappings between ports.
+             * The port mapping.
              */
             public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
                 this.portOverrides = portOverrides;
@@ -1715,9 +1755,9 @@ public class CreateListenerRequest extends Request {
              * The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy. Valid values: **2** to **10**. Default value: **3**.
              * <p>
              * 
-             * You can specify the number of consecutive health check successes or failures for at most 10 endpoint groups.
+             * You can specify the number of successful consecutive health checks or failed consecutive health checks for up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder thresholdCount(Long thresholdCount) {
                 this.thresholdCount = thresholdCount;
@@ -1725,14 +1765,14 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can use this parameter to specify the ratio of traffic that you want to distribute to each endpoint group.
+             * The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can configure this parameter to specify the ratio of traffic distributed to each endpoint group.
              * <p>
              * 
              * Valid values: **1** to **100**. Default value: **100**.
              * 
-             * You can specify the traffic distribution ratios for up to 10 endpoint groups.
+             * You can specify traffic distribution ratios for up to 10 endpoint groups.
              * 
-             * > You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.
+             * >  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.
              */
             public Builder trafficPercentage(Long trafficPercentage) {
                 this.trafficPercentage = trafficPercentage;
@@ -1747,12 +1787,12 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FromPort")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer fromPort;
 
-        @NameInMap("ToPort")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ToPort")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -1824,19 +1864,19 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForGaApEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaApEnabled")
         private Boolean xForwardedForGaApEnabled;
 
-        @NameInMap("XForwardedForGaIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaIdEnabled")
         private Boolean xForwardedForGaIdEnabled;
 
-        @NameInMap("XForwardedForPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForPortEnabled")
         private Boolean xForwardedForPortEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XRealIpEnabled")
+        @com.aliyun.core.annotation.NameInMap("XRealIpEnabled")
         private Boolean xRealIpEnabled;
 
         private XForwardedForConfig(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteServiceGroupSchedulingResponse</p>
  */
 public class DeleteServiceGroupSchedulingResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private DeleteServiceGroupSchedulingResponseBody body;
 
     private DeleteServiceGroupSchedulingResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class DeleteServiceGroupSchedulingResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DeleteServiceGroupSchedulingResponseBody getBody() {
@@ -52,6 +60,8 @@ public class DeleteServiceGroupSchedulingResponse extends Response {
     public interface Builder extends Response.Builder<DeleteServiceGroupSchedulingResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DeleteServiceGroupSchedulingResponseBody body);
 
@@ -64,6 +74,7 @@ public class DeleteServiceGroupSchedulingResponse extends Response {
             extends Response.BuilderImpl<DeleteServiceGroupSchedulingResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DeleteServiceGroupSchedulingResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class DeleteServiceGroupSchedulingResponse extends Response {
         private BuilderImpl(DeleteServiceGroupSchedulingResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class DeleteServiceGroupSchedulingResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

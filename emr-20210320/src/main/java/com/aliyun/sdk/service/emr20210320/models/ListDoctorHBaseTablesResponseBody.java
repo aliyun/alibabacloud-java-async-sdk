@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDoctorHBaseTablesResponseBody</p>
  */
 public class ListDoctorHBaseTablesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDoctorHBaseTablesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,22 +84,25 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * <p>The page number of the next page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,26 +148,32 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class Analysis extends TeaModel {
-        @NameInMap("ReadRequestHotspotRegionList")
-        private java.util.List < String > readRequestHotspotRegionList;
+        @com.aliyun.core.annotation.NameInMap("ReadRequestHotspotRegionList")
+        private java.util.List<String> readRequestHotspotRegionList;
 
-        @NameInMap("ReadRequestUnbalanceSuggestion")
+        @com.aliyun.core.annotation.NameInMap("ReadRequestUnbalanceSuggestion")
         private String readRequestUnbalanceSuggestion;
 
-        @NameInMap("RequestHotspotRegionList")
-        private java.util.List < String > requestHotspotRegionList;
+        @com.aliyun.core.annotation.NameInMap("RequestHotspotRegionList")
+        private java.util.List<String> requestHotspotRegionList;
 
-        @NameInMap("RequestUnbalanceSuggestion")
+        @com.aliyun.core.annotation.NameInMap("RequestUnbalanceSuggestion")
         private String requestUnbalanceSuggestion;
 
-        @NameInMap("TableScore")
+        @com.aliyun.core.annotation.NameInMap("TableScore")
         private Integer tableScore;
 
-        @NameInMap("WriteRequestHotspotRegionList")
-        private java.util.List < String > writeRequestHotspotRegionList;
+        @com.aliyun.core.annotation.NameInMap("WriteRequestHotspotRegionList")
+        private java.util.List<String> writeRequestHotspotRegionList;
 
-        @NameInMap("WriteRequestUnbalanceSuggestion")
+        @com.aliyun.core.annotation.NameInMap("WriteRequestUnbalanceSuggestion")
         private String writeRequestUnbalanceSuggestion;
 
         private Analysis(Builder builder) {
@@ -174,7 +197,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         /**
          * @return readRequestHotspotRegionList
          */
-        public java.util.List < String > getReadRequestHotspotRegionList() {
+        public java.util.List<String> getReadRequestHotspotRegionList() {
             return this.readRequestHotspotRegionList;
         }
 
@@ -188,7 +211,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         /**
          * @return requestHotspotRegionList
          */
-        public java.util.List < String > getRequestHotspotRegionList() {
+        public java.util.List<String> getRequestHotspotRegionList() {
             return this.requestHotspotRegionList;
         }
 
@@ -209,7 +232,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         /**
          * @return writeRequestHotspotRegionList
          */
-        public java.util.List < String > getWriteRequestHotspotRegionList() {
+        public java.util.List<String> getWriteRequestHotspotRegionList() {
             return this.writeRequestHotspotRegionList;
         }
 
@@ -221,24 +244,30 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > readRequestHotspotRegionList; 
+            private java.util.List<String> readRequestHotspotRegionList; 
             private String readRequestUnbalanceSuggestion; 
-            private java.util.List < String > requestHotspotRegionList; 
+            private java.util.List<String> requestHotspotRegionList; 
             private String requestUnbalanceSuggestion; 
             private Integer tableScore; 
-            private java.util.List < String > writeRequestHotspotRegionList; 
+            private java.util.List<String> writeRequestHotspotRegionList; 
             private String writeRequestUnbalanceSuggestion; 
 
             /**
-             * ReadRequestHotspotRegionList.
+             * <p>The regions that have read hotspot issues.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
-            public Builder readRequestHotspotRegionList(java.util.List < String > readRequestHotspotRegionList) {
+            public Builder readRequestHotspotRegionList(java.util.List<String> readRequestHotspotRegionList) {
                 this.readRequestHotspotRegionList = readRequestHotspotRegionList;
                 return this;
             }
 
             /**
-             * ReadRequestUnbalanceSuggestion.
+             * <p>The description of read imbalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read request unbalance is &lt;p class=&quot;report-detail-topic&quot;&gt;</p>
              */
             public Builder readRequestUnbalanceSuggestion(String readRequestUnbalanceSuggestion) {
                 this.readRequestUnbalanceSuggestion = readRequestUnbalanceSuggestion;
@@ -246,15 +275,21 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHotspotRegionList.
+             * <p>The regions that have read/write hotspot issues.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
-            public Builder requestHotspotRegionList(java.util.List < String > requestHotspotRegionList) {
+            public Builder requestHotspotRegionList(java.util.List<String> requestHotspotRegionList) {
                 this.requestHotspotRegionList = requestHotspotRegionList;
                 return this;
             }
 
             /**
-             * RequestUnbalanceSuggestion.
+             * <p>The description of read/write imbalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read request unbalance is &lt;p class=&quot;report-detail-topic&quot;&gt;</p>
              */
             public Builder requestUnbalanceSuggestion(String requestUnbalanceSuggestion) {
                 this.requestUnbalanceSuggestion = requestUnbalanceSuggestion;
@@ -262,7 +297,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableScore.
+             * <p>The score of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67</p>
              */
             public Builder tableScore(Integer tableScore) {
                 this.tableScore = tableScore;
@@ -270,15 +308,21 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * WriteRequestHotspotRegionList.
+             * <p>The regions that have write hotspot issues.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
-            public Builder writeRequestHotspotRegionList(java.util.List < String > writeRequestHotspotRegionList) {
+            public Builder writeRequestHotspotRegionList(java.util.List<String> writeRequestHotspotRegionList) {
                 this.writeRequestHotspotRegionList = writeRequestHotspotRegionList;
                 return this;
             }
 
             /**
-             * WriteRequestUnbalanceSuggestion.
+             * <p>The description of write imbalance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>write request unbalance is &lt;p class=&quot;report-detail-topic&quot;&gt;</p>
              */
             public Builder writeRequestUnbalanceSuggestion(String writeRequestUnbalanceSuggestion) {
                 this.writeRequestUnbalanceSuggestion = writeRequestUnbalanceSuggestion;
@@ -292,17 +336,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class ColdAccessDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdAccessDay(Builder builder) {
@@ -355,7 +405,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cold access day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -363,7 +416,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldAccessDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -371,7 +427,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -379,7 +438,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -393,17 +455,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class ColdConfigDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdConfigDay(Builder builder) {
@@ -456,7 +524,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cold config day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -464,7 +535,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldConfigDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -472,7 +546,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dat</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -480,7 +557,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -494,17 +574,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class ColdDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataSize(Builder builder) {
@@ -557,7 +643,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the cold data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -565,7 +654,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coldDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -573,7 +665,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -581,7 +676,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -595,17 +693,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class DailyReadRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private DailyReadRequest(Builder builder) {
@@ -658,7 +762,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of read requests per day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -666,7 +773,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyReadRequest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -674,7 +784,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -682,7 +795,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -696,17 +812,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private DailyReadRequestDayGrowthRatio(Builder builder) {
@@ -759,7 +881,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of read requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -767,7 +892,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyReadRequestDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -775,7 +903,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -783,7 +914,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -797,17 +931,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class DailyWriteRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private DailyWriteRequest(Builder builder) {
@@ -860,7 +1000,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of write requests per day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -868,7 +1011,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyWriteRequest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -876,7 +1022,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -884,7 +1033,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -898,17 +1050,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private DailyWriteRequestDayGrowthRatio(Builder builder) {
@@ -961,7 +1119,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -969,7 +1130,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dailyWriteRequestDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -977,7 +1141,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -985,7 +1152,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -999,17 +1169,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class FreezeConfigDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeConfigDay(Builder builder) {
@@ -1062,7 +1238,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Freeze config day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1070,7 +1249,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeConfigDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1078,7 +1260,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1086,7 +1271,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1100,17 +1288,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class FreezeDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataSize(Builder builder) {
@@ -1163,7 +1357,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the freeze data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1171,7 +1368,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>freezeDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1179,7 +1379,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1187,7 +1390,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1201,17 +1407,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class HotDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataSize(Builder builder) {
@@ -1264,7 +1476,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the hot data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1272,7 +1487,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hotDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1280,7 +1498,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1288,7 +1509,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1302,17 +1526,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class Locality extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private Locality(Builder builder) {
@@ -1365,7 +1595,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The locality of data</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1373,7 +1606,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>locality</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1381,7 +1617,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1389,7 +1628,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1403,17 +1645,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class ReadRequestBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ReadRequestBalance(Builder builder) {
@@ -1466,7 +1714,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing read requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1474,7 +1725,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>readRequestBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1482,7 +1736,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1490,7 +1747,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1504,17 +1764,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class RegionBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private RegionBalance(Builder builder) {
@@ -1567,7 +1833,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The ability to evenly distribute Regions on different RegionServer nodes</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1575,7 +1844,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1583,7 +1855,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1591,7 +1866,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1605,17 +1883,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class RegionCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private RegionCount(Builder builder) {
@@ -1668,7 +1952,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of regions count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1676,7 +1963,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1684,7 +1974,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1692,7 +1985,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1706,17 +2002,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class RegionCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private RegionCountDayGrowthRatio(Builder builder) {
@@ -1769,7 +2071,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of region count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1777,7 +2082,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1785,7 +2093,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1793,7 +2104,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1807,17 +2121,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class RegionServerCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private RegionServerCount(Builder builder) {
@@ -1870,7 +2190,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of region servers count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1878,7 +2201,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regionServerCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1886,7 +2212,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1894,7 +2223,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1908,17 +2240,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class RequestBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private RequestBalance(Builder builder) {
@@ -1971,7 +2309,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1979,7 +2320,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>requestBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1987,7 +2331,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1995,7 +2342,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2009,17 +2359,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class StoreFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private StoreFileCount(Builder builder) {
@@ -2072,7 +2428,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of store files</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2080,7 +2439,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storeFileCount</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2088,7 +2450,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2096,7 +2461,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2110,17 +2478,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class StoreFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private StoreFileCountDayGrowthRatio(Builder builder) {
@@ -2173,7 +2547,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of store file count</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2181,7 +2558,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storeFileCountDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2189,7 +2569,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2197,7 +2580,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2211,17 +2597,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class TableSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TableSize(Builder builder) {
@@ -2274,7 +2666,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the table</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2282,7 +2677,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2290,7 +2688,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2298,7 +2699,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>678</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2312,17 +2716,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class TableSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TableSizeDayGrowthRatio(Builder builder) {
@@ -2375,7 +2785,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Day growth ratio of table size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2383,7 +2796,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableSizeDayGrowthRatio</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2391,7 +2807,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2399,7 +2818,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2413,17 +2835,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class WarmConfigDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmConfigDay(Builder builder) {
@@ -2476,7 +2904,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Warm config day</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2484,7 +2915,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmConfigDay</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2492,7 +2926,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2500,7 +2937,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2514,17 +2954,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class WarmDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataSize(Builder builder) {
@@ -2577,7 +3023,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Size of the warm data size</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2585,7 +3034,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warmDataSize</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2593,7 +3045,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2601,7 +3056,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2615,17 +3073,23 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class WriteRequestBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private WriteRequestBalance(Builder builder) {
@@ -2678,7 +3142,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * <p>The description of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The balance of distributing write requests</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2686,7 +3153,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>writeRequestBalance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2694,7 +3164,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2702,7 +3175,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2716,77 +3192,83 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
-        @NameInMap("ColdAccessDay")
+        @com.aliyun.core.annotation.NameInMap("ColdAccessDay")
         private ColdAccessDay coldAccessDay;
 
-        @NameInMap("ColdConfigDay")
+        @com.aliyun.core.annotation.NameInMap("ColdConfigDay")
         private ColdConfigDay coldConfigDay;
 
-        @NameInMap("ColdDataSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSize")
         private ColdDataSize coldDataSize;
 
-        @NameInMap("DailyReadRequest")
+        @com.aliyun.core.annotation.NameInMap("DailyReadRequest")
         private DailyReadRequest dailyReadRequest;
 
-        @NameInMap("DailyReadRequestDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("DailyReadRequestDayGrowthRatio")
         private DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio;
 
-        @NameInMap("DailyWriteRequest")
+        @com.aliyun.core.annotation.NameInMap("DailyWriteRequest")
         private DailyWriteRequest dailyWriteRequest;
 
-        @NameInMap("DailyWriteRequestDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("DailyWriteRequestDayGrowthRatio")
         private DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio;
 
-        @NameInMap("FreezeConfigDay")
+        @com.aliyun.core.annotation.NameInMap("FreezeConfigDay")
         private FreezeConfigDay freezeConfigDay;
 
-        @NameInMap("FreezeDataSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSize")
         private FreezeDataSize freezeDataSize;
 
-        @NameInMap("HotDataSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataSize")
         private HotDataSize hotDataSize;
 
-        @NameInMap("Locality")
+        @com.aliyun.core.annotation.NameInMap("Locality")
         private Locality locality;
 
-        @NameInMap("ReadRequestBalance")
+        @com.aliyun.core.annotation.NameInMap("ReadRequestBalance")
         private ReadRequestBalance readRequestBalance;
 
-        @NameInMap("RegionBalance")
+        @com.aliyun.core.annotation.NameInMap("RegionBalance")
         private RegionBalance regionBalance;
 
-        @NameInMap("RegionCount")
+        @com.aliyun.core.annotation.NameInMap("RegionCount")
         private RegionCount regionCount;
 
-        @NameInMap("RegionCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("RegionCountDayGrowthRatio")
         private RegionCountDayGrowthRatio regionCountDayGrowthRatio;
 
-        @NameInMap("RegionServerCount")
+        @com.aliyun.core.annotation.NameInMap("RegionServerCount")
         private RegionServerCount regionServerCount;
 
-        @NameInMap("RequestBalance")
+        @com.aliyun.core.annotation.NameInMap("RequestBalance")
         private RequestBalance requestBalance;
 
-        @NameInMap("StoreFileCount")
+        @com.aliyun.core.annotation.NameInMap("StoreFileCount")
         private StoreFileCount storeFileCount;
 
-        @NameInMap("StoreFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("StoreFileCountDayGrowthRatio")
         private StoreFileCountDayGrowthRatio storeFileCountDayGrowthRatio;
 
-        @NameInMap("TableSize")
+        @com.aliyun.core.annotation.NameInMap("TableSize")
         private TableSize tableSize;
 
-        @NameInMap("TableSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TableSizeDayGrowthRatio")
         private TableSizeDayGrowthRatio tableSizeDayGrowthRatio;
 
-        @NameInMap("WarmConfigDay")
+        @com.aliyun.core.annotation.NameInMap("WarmConfigDay")
         private WarmConfigDay warmConfigDay;
 
-        @NameInMap("WarmDataSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSize")
         private WarmDataSize warmDataSize;
 
-        @NameInMap("WriteRequestBalance")
+        @com.aliyun.core.annotation.NameInMap("WriteRequestBalance")
         private WriteRequestBalance writeRequestBalance;
 
         private Metrics(Builder builder) {
@@ -3019,7 +3501,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private WriteRequestBalance writeRequestBalance; 
 
             /**
-             * ColdAccessDay.
+             * <p>The number of days during which the table was not accessed.</p>
              */
             public Builder coldAccessDay(ColdAccessDay coldAccessDay) {
                 this.coldAccessDay = coldAccessDay;
@@ -3027,7 +3509,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ColdConfigDay.
+             * <p>The number of consecutive days without access to data before the data is considered as very cold data.</p>
              */
             public Builder coldConfigDay(ColdConfigDay coldConfigDay) {
                 this.coldConfigDay = coldConfigDay;
@@ -3035,7 +3517,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataSize.
+             * <p>The size of cold data.</p>
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -3043,7 +3525,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReadRequest.
+             * <p>The total number of read requests for the table in a day.</p>
              */
             public Builder dailyReadRequest(DailyReadRequest dailyReadRequest) {
                 this.dailyReadRequest = dailyReadRequest;
@@ -3051,7 +3533,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReadRequestDayGrowthRatio.
+             * <p>The daily increment ratio of the number of read requests in a day.</p>
              */
             public Builder dailyReadRequestDayGrowthRatio(DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio) {
                 this.dailyReadRequestDayGrowthRatio = dailyReadRequestDayGrowthRatio;
@@ -3059,7 +3541,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DailyWriteRequest.
+             * <p>The total number of write requests for the table in a day.</p>
              */
             public Builder dailyWriteRequest(DailyWriteRequest dailyWriteRequest) {
                 this.dailyWriteRequest = dailyWriteRequest;
@@ -3067,7 +3549,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DailyWriteRequestDayGrowthRatio.
+             * <p>The daily increment ratio of the number of write requests in a day.</p>
              */
             public Builder dailyWriteRequestDayGrowthRatio(DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio) {
                 this.dailyWriteRequestDayGrowthRatio = dailyWriteRequestDayGrowthRatio;
@@ -3075,7 +3557,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeConfigDay.
+             * <p>The number of consecutive days without access to data before the data was considered as very cold data.</p>
              */
             public Builder freezeConfigDay(FreezeConfigDay freezeConfigDay) {
                 this.freezeConfigDay = freezeConfigDay;
@@ -3083,7 +3565,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataSize.
+             * <p>The size of very cold data.</p>
              */
             public Builder freezeDataSize(FreezeDataSize freezeDataSize) {
                 this.freezeDataSize = freezeDataSize;
@@ -3091,7 +3573,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataSize.
+             * <p>The size of hot data.</p>
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -3099,7 +3581,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Locality.
+             * <p>The localization rate.</p>
              */
             public Builder locality(Locality locality) {
                 this.locality = locality;
@@ -3107,7 +3589,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadRequestBalance.
+             * <p>The read balancing degree.</p>
              */
             public Builder readRequestBalance(ReadRequestBalance readRequestBalance) {
                 this.readRequestBalance = readRequestBalance;
@@ -3115,7 +3597,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionBalance.
+             * <p>The balancing degree.</p>
              */
             public Builder regionBalance(RegionBalance regionBalance) {
                 this.regionBalance = regionBalance;
@@ -3123,7 +3605,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCount.
+             * <p>The number of regions that host the table.</p>
              */
             public Builder regionCount(RegionCount regionCount) {
                 this.regionCount = regionCount;
@@ -3131,7 +3613,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCountDayGrowthRatio.
+             * <p>The daily increment ratio of the number of regions.</p>
              */
             public Builder regionCountDayGrowthRatio(RegionCountDayGrowthRatio regionCountDayGrowthRatio) {
                 this.regionCountDayGrowthRatio = regionCountDayGrowthRatio;
@@ -3139,7 +3621,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionServerCount.
+             * <p>The number of region servers that host the table.</p>
              */
             public Builder regionServerCount(RegionServerCount regionServerCount) {
                 this.regionServerCount = regionServerCount;
@@ -3147,7 +3629,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestBalance.
+             * <p>The request balancing degree.</p>
              */
             public Builder requestBalance(RequestBalance requestBalance) {
                 this.requestBalance = requestBalance;
@@ -3155,7 +3637,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StoreFileCount.
+             * <p>The number of StoreFiles.</p>
              */
             public Builder storeFileCount(StoreFileCount storeFileCount) {
                 this.storeFileCount = storeFileCount;
@@ -3163,7 +3645,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StoreFileCountDayGrowthRatio.
+             * <p>The daily increment ratio of the number of StoreFiles.</p>
              */
             public Builder storeFileCountDayGrowthRatio(StoreFileCountDayGrowthRatio storeFileCountDayGrowthRatio) {
                 this.storeFileCountDayGrowthRatio = storeFileCountDayGrowthRatio;
@@ -3171,7 +3653,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableSize.
+             * <p>The size of the table.</p>
              */
             public Builder tableSize(TableSize tableSize) {
                 this.tableSize = tableSize;
@@ -3179,7 +3661,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableSizeDayGrowthRatio.
+             * <p>The daily increment ratio of the table size.</p>
              */
             public Builder tableSizeDayGrowthRatio(TableSizeDayGrowthRatio tableSizeDayGrowthRatio) {
                 this.tableSizeDayGrowthRatio = tableSizeDayGrowthRatio;
@@ -3187,7 +3669,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * WarmConfigDay.
+             * <p>The number of consecutive days without access to data before the data is considered as cold data.</p>
              */
             public Builder warmConfigDay(WarmConfigDay warmConfigDay) {
                 this.warmConfigDay = warmConfigDay;
@@ -3195,7 +3677,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataSize.
+             * <p>The size of warm data.</p>
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -3203,7 +3685,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * WriteRequestBalance.
+             * <p>The write balancing degree.</p>
              */
             public Builder writeRequestBalance(WriteRequestBalance writeRequestBalance) {
                 this.writeRequestBalance = writeRequestBalance;
@@ -3217,14 +3699,20 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDoctorHBaseTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDoctorHBaseTablesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Analysis")
+        @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Data(Builder builder) {
@@ -3268,7 +3756,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Analysis.
+             * <p>The diagnosis result.</p>
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -3276,7 +3764,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>The metric information.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -3284,7 +3772,10 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tb_item</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

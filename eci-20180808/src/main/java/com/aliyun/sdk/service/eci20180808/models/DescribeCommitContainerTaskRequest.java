@@ -1,56 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommitContainerTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommitContainerTaskRequest</p>
  */
 public class DescribeCommitContainerTaskRequest extends Request {
-    @Query
-    @NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
     private String containerGroupId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private java.util.List < String > taskId;
 
-    @Query
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
     private DescribeCommitContainerTaskRequest(Builder builder) {
@@ -181,9 +181,10 @@ public class DescribeCommitContainerTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the elastic container instance on which the CommitContainer task is executed.\
-         * <p>
-         * You must enter the instance ID, the task ID, or both for the request.
+         * <p>The ID of the elastic container instance on which the CommitContainer task is executed.<br>You must enter the instance ID, the task ID, or both for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-2zelg8vwnlzdhf8hv****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -192,10 +193,10 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.\
-         * <p>
-         * Maximum value: 50.\
-         * Default value: 10.
+         * <p>The number of entries to return on each page.<br>Maximum value: 50.<br>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -204,7 +205,10 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last request.
+         * <p>The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -231,7 +235,11 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -258,7 +266,7 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
          */
         public Builder taskId(java.util.List < String > taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -267,12 +275,15 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * </ul>
          * 
-         * *   Running
-         * *   Succeeded
-         * *   Failed
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);

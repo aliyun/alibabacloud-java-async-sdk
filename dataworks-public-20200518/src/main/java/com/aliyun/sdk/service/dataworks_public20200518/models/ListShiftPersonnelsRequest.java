@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShiftPersonnelsRequest} extends {@link RequestModel}
  *
  * <p>ListShiftPersonnelsRequest</p>
  */
 public class ListShiftPersonnelsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTime;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Body
-    @NameInMap("ShiftPersonUID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShiftPersonUID")
     private String shiftPersonUID;
 
-    @Body
-    @NameInMap("ShiftScheduleIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShiftScheduleIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shiftScheduleIdentifier;
 
-    @Body
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private ListShiftPersonnelsRequest(Builder builder) {
@@ -136,7 +141,11 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.
+         * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593950832000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -145,7 +154,11 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593950832000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -154,7 +167,10 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.
+         * <p>The ID of the Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1933790****551</p>
          */
         public Builder shiftPersonUID(String shiftPersonUID) {
             this.putBodyParameter("ShiftPersonUID", shiftPersonUID);
@@ -163,7 +179,11 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.
+         * <p>The unique identifier of the shift schedule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ab6456ada634b2f938ee******9b45b</p>
          */
         public Builder shiftScheduleIdentifier(String shiftScheduleIdentifier) {
             this.putBodyParameter("ShiftScheduleIdentifier", shiftScheduleIdentifier);
@@ -172,7 +192,10 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.
+         * <p>The type of the on-duty engineer that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

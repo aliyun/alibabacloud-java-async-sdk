@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetViewDDLResponseBody} extends {@link TeaModel}
  *
  * <p>GetViewDDLResponseBody</p>
  */
 public class GetViewDDLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQL")
+    @com.aliyun.core.annotation.NameInMap("SQL")
     private String SQL;
 
     private GetViewDDLResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetViewDDLResponseBody extends TeaModel {
         private String SQL; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>421794A3-72A5-5D27-9E8B-A75A4C503E17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,14 @@ public class GetViewDDLResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the SQL statement.
+         * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE VIEW <code>test</code>.<code>test_view</code> AS SELECT
+         *   <code>id</code>
+         * , <code>name</code>
+         * FROM
+         *   <code>test_tbl_adb</code></p>
          */
         public Builder SQL(String SQL) {
             this.SQL = SQL;

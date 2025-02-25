@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyPayV2Request} extends {@link RequestModel}
  *
  * <p>FlightModifyPayV2Request</p>
  */
 public class FlightModifyPayV2Request extends Request {
-    @Body
-    @NameInMap("ext_params")
-    private java.util.Map < String, ? > extParams;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ext_params")
+    private java.util.Map<String, ?> extParams;
 
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("modify_pay_amount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modify_pay_amount")
     private Long modifyPayAmount;
 
-    @Body
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private Long orderId;
 
-    @Body
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Body
-    @NameInMap("out_sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_sub_order_id")
     private String outSubOrderId;
 
-    @Body
-    @NameInMap("sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_order_id")
     private Long subOrderId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightModifyPayV2Request(Builder builder) {
@@ -72,7 +77,7 @@ public class FlightModifyPayV2Request extends Request {
     /**
      * @return extParams
      */
-    public java.util.Map < String, ? > getExtParams() {
+    public java.util.Map<String, ?> getExtParams() {
         return this.extParams;
     }
 
@@ -126,7 +131,7 @@ public class FlightModifyPayV2Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<FlightModifyPayV2Request, Builder> {
-        private java.util.Map < String, ? > extParams; 
+        private java.util.Map<String, ?> extParams; 
         private String isvName; 
         private Long modifyPayAmount; 
         private Long orderId; 
@@ -154,7 +159,7 @@ public class FlightModifyPayV2Request extends Request {
         /**
          * ext_params.
          */
-        public Builder extParams(java.util.Map < String, ? > extParams) {
+        public Builder extParams(java.util.Map<String, ?> extParams) {
             String extParamsShrink = shrink(extParams, "ext_params", "json");
             this.putBodyParameter("ext_params", extParamsShrink);
             this.extParams = extParams;

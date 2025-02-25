@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoCcListCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoCcListCountResponseBody</p>
  */
 public class DescribeAutoCcListCountResponseBody extends TeaModel {
-    @NameInMap("BlackCount")
+    @com.aliyun.core.annotation.NameInMap("BlackCount")
     private Integer blackCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WhiteCount")
+    @com.aliyun.core.annotation.NameInMap("WhiteCount")
     private Integer whiteCount;
 
     private DescribeAutoCcListCountResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         private Integer whiteCount; 
 
         /**
-         * The total number of IP addresses in the blacklist.
+         * <p>The total number of IP addresses in the blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder blackCount(Integer blackCount) {
             this.blackCount = blackCount;
@@ -70,7 +78,10 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5AC3785F-C789-4622-87A4-F58BE7F6B184</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class DescribeAutoCcListCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of IP addresses in the whitelist.
+         * <p>The total number of IP addresses in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder whiteCount(Integer whiteCount) {
             this.whiteCount = whiteCount;

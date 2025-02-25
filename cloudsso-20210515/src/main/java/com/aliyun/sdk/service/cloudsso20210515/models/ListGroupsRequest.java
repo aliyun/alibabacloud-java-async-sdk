@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListGroupsRequest</p>
  */
 public class ListGroupsRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ProvisionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionType")
     private String provisionType;
 
     private ListGroupsRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -119,12 +122,12 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The filter condition.
-         * <p>
+         * <p>The filter condition.</p>
+         * <p>Specify the value in the <code>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</code> format. The value is not case sensitive. You can set <code>&lt;Attribute&gt;</code> only to <code>GroupName</code> and <code>&lt;Operator&gt;</code> only to <code>eq</code> or <code>sw</code>. The value eq indicates Equals. The value sw indicates Starts With.</p>
+         * <p>For example, if you set Filter to GroupName sw test, the operation queries the groups whose names start with test. If you set Filter to GroupName eq testgroup, the operation queries the group whose name is testgroup.</p>
          * 
-         * Specify the value in the `<Attribute> <Operator> <Value>` format. The value is not case sensitive. You can set `<Attribute>` only to `GroupName` and `<Operator>` only to `eq` or `sw`. The value eq indicates Equals. The value sw indicates Starts With.
-         * 
-         * For example, if you set Filter to GroupName sw test, the operation queries the groups whose names start with test. If you set Filter to GroupName eq testgroup, the operation queries the group whose name is testgroup.
+         * <strong>example:</strong>
+         * <p>GroupName eq testgroup</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -133,12 +136,12 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -147,10 +150,11 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The token to return for the next page. If this is your first time to call this operation, you do not need to specify `NextToken`.
-         * <p>
+         * <p>The token to return for the next page. If this is your first time to call this operation, you do not need to specify <code>NextToken</code>.</p>
+         * <p>When you call this operation for the first time, if the total number of entries to return exceeds the value of <code>MaxResults</code>, the entries are truncated. Only the entries that match the value of <code>MaxResults</code> are returned, and the excess entries are not returned. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>NextToken</code> is returned. In the next call, you can use the value of <code>NextToken</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
          * 
-         * When you call this operation for the first time, if the total number of entries to return exceeds the value of `MaxResults`, the entries are truncated. Only the entries that match the value of `MaxResults` are returned, and the excess entries are not returned. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -159,11 +163,14 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The type of the group. The type can be used to filter groups. Valid values:
-         * <p>
+         * <p>The type of the group. The type can be used to filter groups. Valid values:</p>
+         * <ul>
+         * <li>Manual: The group is manually created.</li>
+         * <li>Synchronized: The group is synchronized from an external identity provider (IdP).</li>
+         * </ul>
          * 
-         * *   Manual: The group is manually created.
-         * *   Synchronized: The group is synchronized from an external identity provider (IdP).
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder provisionType(String provisionType) {
             this.putQueryParameter("ProvisionType", provisionType);

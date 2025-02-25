@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAccessKeyRequest} extends {@link RequestModel}
  *
  * <p>UpdateAccessKeyRequest</p>
  */
 public class UpdateAccessKeyRequest extends Request {
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("UserAccessKeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAccessKeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userAccessKeyId;
 
-    @Query
-    @NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
     private String userPrincipalName;
 
     private UpdateAccessKeyRequest(Builder builder) {
@@ -84,11 +89,15 @@ public class UpdateAccessKeyRequest extends Request {
         } 
 
         /**
-         * The status of the AccessKey pair. Valid values:
-         * <p>
+         * <p>The status of the AccessKey pair. Valid values:</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Inactive</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Active
-         * *   Inactive
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -97,7 +106,11 @@ public class UpdateAccessKeyRequest extends Request {
         }
 
         /**
-         * The AccessKey ID of the AccessKey pair for which you want to modify the status.
+         * <p>The AccessKey ID of the AccessKey pair for which you want to modify the status.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4GFTgcR8m8cZQDTH****</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -106,10 +119,11 @@ public class UpdateAccessKeyRequest extends Request {
         }
 
         /**
-         * The logon name of the RAM user.
-         * <p>
+         * <p>The logon name of the RAM user.</p>
+         * <p>If this parameter is empty, the status of the AccessKey pair for the current user is modified.</p>
          * 
-         * If this parameter is empty, the status of the AccessKey pair for the current user is modified.
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

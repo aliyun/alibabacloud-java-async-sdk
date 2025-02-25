@@ -1,29 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeClusterResponse} extends {@link TeaModel}
  *
  * <p>UpgradeClusterResponse</p>
  */
 public class UpgradeClusterResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private UpgradeClusterResponseBody body;
 
     private UpgradeClusterResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
     public static UpgradeClusterResponse create() {
@@ -38,7 +45,7 @@ public class UpgradeClusterResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -49,11 +56,20 @@ public class UpgradeClusterResponse extends Response {
         return this.statusCode;
     }
 
+    /**
+     * @return body
+     */
+    public UpgradeClusterResponseBody getBody() {
+        return this.body;
+    }
+
     public interface Builder extends Response.Builder<UpgradeClusterResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
+
+        Builder body(UpgradeClusterResponseBody body);
 
         @Override
         UpgradeClusterResponse build();
@@ -63,8 +79,9 @@ public class UpgradeClusterResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<UpgradeClusterResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
+        private UpgradeClusterResponseBody body; 
 
         private BuilderImpl() {
             super();
@@ -74,13 +91,14 @@ public class UpgradeClusterResponse extends Response {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -91,6 +109,15 @@ public class UpgradeClusterResponse extends Response {
         @Override
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(UpgradeClusterResponseBody body) {
+            this.body = body;
             return this;
         }
 

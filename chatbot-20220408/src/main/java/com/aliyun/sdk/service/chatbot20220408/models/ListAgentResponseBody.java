@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentResponseBody</p>
  */
 public class ListAgentResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAgentResponseBody(Builder builder) {
@@ -110,7 +110,10 @@ public class ListAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F55D90C1-31BE-4B2A-AA3F-25EFC36F9419</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,17 +134,23 @@ public class ListAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private Long agentId;
 
-        @NameInMap("AgentKey")
+        @com.aliyun.core.annotation.NameInMap("AgentKey")
         private String agentKey;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("InstanceInfos")
+        @com.aliyun.core.annotation.NameInMap("InstanceInfos")
         private java.util.Map < String, ? > instanceInfos;
 
         private Data(Builder builder) {

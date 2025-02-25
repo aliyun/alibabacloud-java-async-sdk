@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetricRuleTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetricRuleTemplateRequest</p>
  */
 public class DeleteMetricRuleTemplateRequest extends Request {
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private DeleteMetricRuleTemplateRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the alert template.
+         * <p>The ID of the alert template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

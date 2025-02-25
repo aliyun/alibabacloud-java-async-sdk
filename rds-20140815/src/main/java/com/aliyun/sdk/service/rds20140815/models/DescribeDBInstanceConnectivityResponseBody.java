@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceConnectivityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceConnectivityResponseBody</p>
  */
 public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
-    @NameInMap("ConnCheckErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ConnCheckErrorCode")
     private String connCheckErrorCode;
 
-    @NameInMap("ConnCheckErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ConnCheckErrorMessage")
     private String connCheckErrorMessage;
 
-    @NameInMap("ConnCheckResult")
+    @com.aliyun.core.annotation.NameInMap("ConnCheckResult")
     private String connCheckResult;
 
-    @NameInMap("DbInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DbInstanceName")
     private String dbInstanceName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceConnectivityResponseBody(Builder builder) {
@@ -86,11 +91,14 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The error code for connection diagnosis. Valid values:
-         * <p>
+         * <p>The error code for connection diagnosis. Valid values:</p>
+         * <ul>
+         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist.</li>
+         * <li><strong>CONNECTION_ABNORMAL</strong>: The connection to the cluster is normal.</li>
+         * </ul>
          * 
-         * *   **SRC_IP_NOT_IN_USER_WHITELIST**: The source IP address is not added to the whitelist.
-         * *   **CONNECTION_ABNORMAL**: The connection to the cluster is normal.
+         * <strong>example:</strong>
+         * <p>SRC_IP_NOT_IN_USER_WHITELIST</p>
          */
         public Builder connCheckErrorCode(String connCheckErrorCode) {
             this.connCheckErrorCode = connCheckErrorCode;
@@ -98,7 +106,10 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message for connection diagnosis.
+         * <p>The error message for connection diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Src ip:39.106.64.59 not in user whitelist</p>
          */
         public Builder connCheckErrorMessage(String connCheckErrorMessage) {
             this.connCheckErrorMessage = connCheckErrorMessage;
@@ -106,11 +117,14 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The connection diagnosis result. Valid values:
-         * <p>
+         * <p>The connection diagnosis result. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
          * 
-         * *   **Success**
-         * *   **Failed**
+         * <strong>example:</strong>
+         * <p>Failed</p>
          */
         public Builder connCheckResult(String connCheckResult) {
             this.connCheckResult = connCheckResult;
@@ -118,7 +132,10 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze2za3is7baay1w4</p>
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.dbInstanceName = dbInstanceName;
@@ -126,7 +143,10 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D880212A-F21F-5722-8422-BD06B2874CC3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

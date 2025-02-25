@@ -1,39 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConnectionStringRequest</p>
  */
 public class ModifyDBInstanceConnectionStringRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStringPrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("CurrentConnectionString")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentConnectionString")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currentConnectionString;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String port;
 
     private ModifyDBInstanceConnectionStringRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.currentConnectionString = builder.currentConnectionString;
         this.DBInstanceId = builder.DBInstanceId;
@@ -51,6 +61,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -82,6 +99,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceConnectionStringRequest, Builder> {
+        private String clientToken; 
         private String connectionStringPrefix; 
         private String currentConnectionString; 
         private String DBInstanceId; 
@@ -93,6 +111,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
 
         private Builder(ModifyDBInstanceConnectionStringRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.currentConnectionString = request.currentConnectionString;
             this.DBInstanceId = request.DBInstanceId;
@@ -100,7 +119,23 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
-         * The endpoint prefix of the instance.
+         * <p>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The endpoint prefix of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-test</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -109,7 +144,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The current endpoint of the instance.
+         * <p>The current endpoint of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-t4n2qg19bnn98****-master.gpdb.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -118,7 +157,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-t4n2qg19bnn98****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -127,7 +170,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The port number. Example: 5432.
+         * <p>The port number. Example: 5432.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

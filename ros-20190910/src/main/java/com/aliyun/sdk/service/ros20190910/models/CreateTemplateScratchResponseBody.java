@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateScratchResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTemplateScratchResponseBody</p>
  */
 public class CreateTemplateScratchResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateScratchId")
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
     private String templateScratchId;
 
     private CreateTemplateScratchResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class CreateTemplateScratchResponseBody extends TeaModel {
         private String templateScratchId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84980977-22F0-5421-B30D-B201311D5DCF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class CreateTemplateScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scenario.
+         * <p>The ID of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ts-7f7a704cf71c49a6****</p>
          */
         public Builder templateScratchId(String templateScratchId) {
             this.templateScratchId = templateScratchId;

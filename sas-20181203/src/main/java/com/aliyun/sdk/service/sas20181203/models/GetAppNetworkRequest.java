@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppNetworkRequest} extends {@link RequestModel}
  *
  * <p>GetAppNetworkRequest</p>
  */
 public class GetAppNetworkRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private GetAppNetworkRequest(Builder builder) {
@@ -82,10 +87,13 @@ public class GetAppNetworkRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
+         * <p>The ID of the cluster to which the container belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>cf77xxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,10 +102,13 @@ public class GetAppNetworkRequest extends Request {
         }
 
         /**
-         * The end timestamp of the query. Unit: milliseconds.
-         * <p>
+         * <p>The end timestamp of the query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * </blockquote>
          * 
-         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+         * <strong>example:</strong>
+         * <p>1650470399999</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -106,10 +117,13 @@ public class GetAppNetworkRequest extends Request {
         }
 
         /**
-         * The start timestamp of the query. Unit: milliseconds.
-         * <p>
+         * <p>The start timestamp of the query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * </blockquote>
          * 
-         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+         * <strong>example:</strong>
+         * <p>1649260800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

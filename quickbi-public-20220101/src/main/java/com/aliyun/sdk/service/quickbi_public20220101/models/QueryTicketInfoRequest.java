@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTicketInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryTicketInfoRequest</p>
  */
 public class QueryTicketInfoRequest extends Request {
-    @Query
-    @NameInMap("Ticket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ticket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ticket;
 
     private QueryTicketInfoRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class QueryTicketInfoRequest extends Request {
         } 
 
         /**
-         * Obtains the details of a specified ticket for a report that is not embedded in the report.
+         * <p>Obtains the details of a specified ticket for a report that is not embedded in the report.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a27a9aec-<strong><strong>-</strong></strong>-bd40-1a21ea41d7c5</p>
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);

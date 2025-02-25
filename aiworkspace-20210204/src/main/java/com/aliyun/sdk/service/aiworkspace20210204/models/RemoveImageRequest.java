@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveImageRequest} extends {@link RequestModel}
  *
  * <p>RemoveImageRequest</p>
  */
 public class RemoveImageRequest extends Request {
-    @Path
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
     private RemoveImageRequest(Builder builder) {
@@ -55,7 +55,10 @@ public class RemoveImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-rbv******c9ks92</p>
          */
         public Builder imageId(String imageId) {
             this.putPathParameter("ImageId", imageId);

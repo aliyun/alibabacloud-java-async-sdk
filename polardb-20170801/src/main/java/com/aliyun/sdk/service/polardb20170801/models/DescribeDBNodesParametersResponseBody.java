@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBNodesParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBNodesParametersResponseBody</p>
  */
 public class DescribeDBNodesParametersResponseBody extends TeaModel {
-    @NameInMap("DBNodeIds")
-    private java.util.List < DBNodeIds> DBNodeIds;
+    @com.aliyun.core.annotation.NameInMap("DBNodeIds")
+    private java.util.List<DBNodeIds> DBNodeIds;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBNodesParametersResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     /**
      * @return DBNodeIds
      */
-    public java.util.List < DBNodeIds> getDBNodeIds() {
+    public java.util.List<DBNodeIds> getDBNodeIds() {
         return this.DBNodeIds;
     }
 
@@ -79,22 +84,25 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBNodeIds> DBNodeIds; 
+        private java.util.List<DBNodeIds> DBNodeIds; 
         private String DBType; 
         private String DBVersion; 
         private String engine; 
         private String requestId; 
 
         /**
-         * The IDs of the nodes.
+         * <p>The IDs of the nodes.</p>
          */
-        public Builder DBNodeIds(java.util.List < DBNodeIds> DBNodeIds) {
+        public Builder DBNodeIds(java.util.List<DBNodeIds> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
             return this;
         }
 
         /**
-         * The type of the database engine. Set the value to **MySQL**.
+         * <p>The type of the database engine. Set the value to <strong>MySQL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -102,12 +110,15 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the MySQL database engine. Valid values:
-         * <p>
+         * <p>The version of the MySQL database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
          * 
-         * *   **5.6**
-         * *   **5.7**
-         * *   **8.0**
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -115,7 +126,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The cluster engine.
+         * <p>The cluster engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -123,7 +137,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -136,41 +153,47 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBNodesParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodesParametersResponseBody</p>
+     */
     public static class RunningParameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DefaultParameterValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultParameterValue")
         private String defaultParameterValue;
 
-        @NameInMap("Factor")
+        @com.aliyun.core.annotation.NameInMap("Factor")
         private String factor;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Boolean forceRestart;
 
-        @NameInMap("IsModifiable")
+        @com.aliyun.core.annotation.NameInMap("IsModifiable")
         private Boolean isModifiable;
 
-        @NameInMap("IsNodeAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsNodeAvailable")
         private String isNodeAvailable;
 
-        @NameInMap("ParamRelyRule")
+        @com.aliyun.core.annotation.NameInMap("ParamRelyRule")
         private String paramRelyRule;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterStatus")
+        @com.aliyun.core.annotation.NameInMap("ParameterStatus")
         private String parameterStatus;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParameters(Builder builder) {
@@ -295,7 +318,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The valid values of the parameter.
+             * <p>The valid values of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[utf8|latin1|gbk|utf8mb4]</p>
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -303,12 +329,15 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter value. Valid values:
-             * <p>
+             * <p>The data type of the parameter value. Valid values:</p>
+             * <ul>
+             * <li><strong>INT</strong></li>
+             * <li><strong>STRING</strong></li>
+             * <li><strong>B</strong></li>
+             * </ul>
              * 
-             * *   **INT**
-             * *   **STRING**
-             * *   **B**
+             * <strong>example:</strong>
+             * <p>INT</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -316,7 +345,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder defaultParameterValue(String defaultParameterValue) {
                 this.defaultParameterValue = defaultParameterValue;
@@ -324,7 +356,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.
+             * <p>A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder factor(String factor) {
                 this.factor = factor;
@@ -332,11 +367,14 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:
-             * <p>
+             * <p>Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -344,11 +382,14 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter can be modified. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isModifiable(Boolean isModifiable) {
                 this.isModifiable = isModifiable;
@@ -356,11 +397,14 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is a global parameter. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: yes. The modified parameter value is synchronized to other nodes.</li>
+             * <li><strong>1</strong>: no. You can customize the nodes to which the modified parameter value can be synchronized to.</li>
+             * </ul>
              * 
-             * *   **0**: yes. The modified parameter value is synchronized to other nodes.
-             * *   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized to.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;
@@ -368,7 +412,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The dependencies of the parameter.
+             * <p>The dependencies of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -376,7 +423,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The server&quot;s default character set.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -384,7 +434,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>character_set_server</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -392,11 +445,14 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the parameter. Valid values:
-             * <p>
+             * <p>The status of the parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>modifying</strong></li>
+             * </ul>
              * 
-             * *   **normal**
-             * *   **modifying**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder parameterStatus(String parameterStatus) {
                 this.parameterStatus = parameterStatus;
@@ -404,7 +460,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -418,12 +477,18 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodesParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodesParametersResponseBody</p>
+     */
     public static class DBNodeIds extends TeaModel {
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("RunningParameters")
-        private java.util.List < RunningParameters> runningParameters;
+        @com.aliyun.core.annotation.NameInMap("RunningParameters")
+        private java.util.List<RunningParameters> runningParameters;
 
         private DBNodeIds(Builder builder) {
             this.DBNodeId = builder.DBNodeId;
@@ -448,16 +513,19 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         /**
          * @return runningParameters
          */
-        public java.util.List < RunningParameters> getRunningParameters() {
+        public java.util.List<RunningParameters> getRunningParameters() {
             return this.runningParameters;
         }
 
         public static final class Builder {
             private String DBNodeId; 
-            private java.util.List < RunningParameters> runningParameters; 
+            private java.util.List<RunningParameters> runningParameters; 
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-bp1r4qe3s534*****</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -465,9 +533,9 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the current node.
+             * <p>The parameters of the current node.</p>
              */
-            public Builder runningParameters(java.util.List < RunningParameters> runningParameters) {
+            public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;
                 return this;
             }

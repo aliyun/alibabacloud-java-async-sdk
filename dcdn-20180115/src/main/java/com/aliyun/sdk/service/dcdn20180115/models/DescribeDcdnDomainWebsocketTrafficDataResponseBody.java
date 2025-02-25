@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainWebsocketTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainWebsocketTrafficDataResponseBody</p>
  */
 public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("TrafficDataPerInterval")
     private TrafficDataPerInterval trafficDataPerInterval;
 
     private DescribeDcdnDomainWebsocketTrafficDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,10 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,10 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +153,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * The network traffic returned at each time interval. Unit: bytes.
+         * <p>The network traffic returned at each time interval. Unit: bytes.</p>
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -151,11 +166,17 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("WebsocketTraffic")
+        @com.aliyun.core.annotation.NameInMap("WebsocketTraffic")
         private Float websocketTraffic;
 
         private DataModule(Builder builder) {
@@ -190,7 +211,10 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
             private Float websocketTraffic; 
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +222,10 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
             }
 
             /**
-             * The total volume of traffic.
+             * <p>The total volume of traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182</p>
              */
             public Builder websocketTraffic(Float websocketTraffic) {
                 this.websocketTraffic = websocketTraffic;
@@ -212,8 +239,14 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketTrafficDataResponseBody</p>
+     */
     public static class TrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private TrafficDataPerInterval(Builder builder) {

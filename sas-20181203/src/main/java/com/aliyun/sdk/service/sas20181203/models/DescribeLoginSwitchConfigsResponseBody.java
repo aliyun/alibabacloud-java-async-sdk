@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoginSwitchConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoginSwitchConfigsResponseBody</p>
  */
 public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
-    @NameInMap("ConfigList")
-    private java.util.List < ConfigList> configList;
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
+    private java.util.List<ConfigList> configList;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLoginSwitchConfigsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
     /**
      * @return configList
      */
-    public java.util.List < ConfigList> getConfigList() {
+    public java.util.List<ConfigList> getConfigList() {
         return this.configList;
     }
 
@@ -57,20 +62,23 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConfigList> configList; 
+        private java.util.List<ConfigList> configList; 
         private Integer count; 
         private String requestId; 
 
         /**
-         * The configuration item returned.
+         * <p>The configuration item returned.</p>
          */
-        public Builder configList(java.util.List < ConfigList> configList) {
+        public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
             return this;
         }
 
         /**
-         * The number of returned configuration items.
+         * <p>The number of returned configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -78,7 +86,10 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +102,17 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoginSwitchConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoginSwitchConfigsResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private ConfigList(Builder builder) {
@@ -130,12 +147,15 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The type of the alert that you enabled or disabled. Valid values:
-             * <p>
+             * <p>The type of the alert that you enabled or disabled. Valid values:</p>
+             * <ul>
+             * <li><strong>login_common_ip</strong>: alerts for unapproved logon IP addresses</li>
+             * <li><strong>login_common_time</strong>: alerts for unapproved logon time ranges</li>
+             * <li><strong>login_common_account</strong>: alerts for unapproved logon accounts</li>
+             * </ul>
              * 
-             * *   **login\_common_ip**: alerts for unapproved logon IP addresses
-             * *   **login\_common_time**: alerts for unapproved logon time ranges
-             * *   **login\_common_account**: alerts for unapproved logon accounts
+             * <strong>example:</strong>
+             * <p>login_common_ip</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -143,11 +163,14 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Log Service feature. Valid values:
-             * <p>
+             * <p>The status of the Log Service feature. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The feature is disabled.</li>
+             * <li><strong>1</strong>: The feature is enabled.</li>
+             * </ul>
              * 
-             * *   **0**: The feature is disabled.
-             * *   **1**: The feature is enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

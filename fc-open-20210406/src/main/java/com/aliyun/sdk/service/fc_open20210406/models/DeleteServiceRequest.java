@@ -111,7 +111,7 @@ public class DeleteServiceRequest extends Request {
         } 
 
         /**
-         * Deletes a service.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -120,7 +120,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * Examples
+         * The value that is used to ensure that the modified service is consistent with the service to be modified. The value of this parameter comes from responses of the [CreateService](~~175256~~), [UpdateService](~~188167~~), and [GetService](~~189225~~) operation.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -129,7 +129,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * Liuxia
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -138,7 +138,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when the Function Compute API was called. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -147,7 +147,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

@@ -1,55 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantAccountPrivilegeRequest} extends {@link RequestModel}
  *
  * <p>GrantAccountPrivilegeRequest</p>
  */
 public class GrantAccountPrivilegeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPrivilege")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountPrivilege;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceBiz")
+    private String sourceBiz;
 
     private GrantAccountPrivilegeRequest(Builder builder) {
         super(builder);
@@ -62,6 +66,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.sourceBiz = builder.sourceBiz;
     }
 
     public static Builder builder() {
@@ -140,6 +145,13 @@ public class GrantAccountPrivilegeRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return sourceBiz
+     */
+    public String getSourceBiz() {
+        return this.sourceBiz;
+    }
+
     public static final class Builder extends Request.Builder<GrantAccountPrivilegeRequest, Builder> {
         private String regionId; 
         private String accountName; 
@@ -150,6 +162,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String sourceBiz; 
 
         private Builder() {
             super();
@@ -166,6 +179,7 @@ public class GrantAccountPrivilegeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.sourceBiz = request.sourceBiz;
         } 
 
         /**
@@ -178,7 +192,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * GrantAccountPrivilege
+         * <p>The name of the account. You can call the <a href="~~DescribeAccounts~~">DescribeAccounts</a> operation to obtain the name of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoaccount</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -187,11 +205,15 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The permissions of the account. Valid values:
-         * <p>
+         * <p>The permissions of the account. Default value: RoleReadWrite. Valid values:</p>
+         * <ul>
+         * <li>RoleReadOnly: The account has the read-only permissions.</li>
+         * <li>RoleReadWrite: The account has the read and write permissions.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RoleReadOnly**: The account has read-only permissions.
-         * *   **RoleReadWrite**: The account has read and write permissions.
+         * <strong>example:</strong>
+         * <p>RoleReadWrite</p>
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -200,7 +222,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * Modifies the permissions of an account for an ApsaraDB for Redis instance.
+         * <p>The ID of the instance to which the account belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -250,6 +276,15 @@ public class GrantAccountPrivilegeRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SourceBiz.
+         */
+        public Builder sourceBiz(String sourceBiz) {
+            this.putQueryParameter("SourceBiz", sourceBiz);
+            this.sourceBiz = sourceBiz;
             return this;
         }
 

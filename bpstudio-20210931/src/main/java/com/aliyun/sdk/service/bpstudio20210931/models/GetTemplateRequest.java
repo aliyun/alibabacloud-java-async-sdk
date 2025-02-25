@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateRequest</p>
  */
 public class GetTemplateRequest extends Request {
-    @Body
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private GetTemplateRequest(Builder builder) {
@@ -83,7 +83,10 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * Region.
+         * <p>Template Area</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -92,7 +95,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>ResourceGroup ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzhfgmw4e6fwq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +107,11 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>Template ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XFKR6WYRVS24S07R</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

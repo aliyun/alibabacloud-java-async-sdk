@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDBNameAvailableResponseBody} extends {@link TeaModel}
  *
  * <p>CheckDBNameAvailableResponseBody</p>
  */
 public class CheckDBNameAvailableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckDBNameAvailableResponseBody(Builder builder) {
@@ -38,10 +43,13 @@ public class CheckDBNameAvailableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
-         * <p>
+         * <p>The request ID.</p>
+         * <blockquote>
+         * <p> If this operation returns only the ID of the request, the database name conforms to the naming conventions. If an error message is returned, the database name is duplicate or does not conform to the naming conventions.</p>
+         * </blockquote>
          * 
-         * >  If this operation returns only the ID of the request, the database name conforms to the naming conventions. If an error message is returned, the database name is duplicate or does not conform to the naming conventions.
+         * <strong>example:</strong>
+         * <p>6EF82B07-28D2-48D1-B5D6-7E78FED277C7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

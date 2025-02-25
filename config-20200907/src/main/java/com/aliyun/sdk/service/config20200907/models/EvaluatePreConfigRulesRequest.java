@@ -1,30 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluatePreConfigRulesRequest} extends {@link RequestModel}
  *
  * <p>EvaluatePreConfigRulesRequest</p>
  */
 public class EvaluatePreConfigRulesRequest extends Request {
-    @Body
-    @NameInMap("EnableManagedRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableManagedRules")
     private Boolean enableManagedRules;
 
-    @Body
-    @NameInMap("ResourceEvaluateItems")
-    @Validation(required = true)
-    private java.util.List < ResourceEvaluateItems> resourceEvaluateItems;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceEvaluateItems")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ResourceEvaluateItems> resourceEvaluateItems;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceTypeFormat")
+    private String resourceTypeFormat;
 
     private EvaluatePreConfigRulesRequest(Builder builder) {
         super(builder);
         this.enableManagedRules = builder.enableManagedRules;
         this.resourceEvaluateItems = builder.resourceEvaluateItems;
+        this.resourceTypeFormat = builder.resourceTypeFormat;
     }
 
     public static Builder builder() {
@@ -50,13 +60,21 @@ public class EvaluatePreConfigRulesRequest extends Request {
     /**
      * @return resourceEvaluateItems
      */
-    public java.util.List < ResourceEvaluateItems> getResourceEvaluateItems() {
+    public java.util.List<ResourceEvaluateItems> getResourceEvaluateItems() {
         return this.resourceEvaluateItems;
+    }
+
+    /**
+     * @return resourceTypeFormat
+     */
+    public String getResourceTypeFormat() {
+        return this.resourceTypeFormat;
     }
 
     public static final class Builder extends Request.Builder<EvaluatePreConfigRulesRequest, Builder> {
         private Boolean enableManagedRules; 
-        private java.util.List < ResourceEvaluateItems> resourceEvaluateItems; 
+        private java.util.List<ResourceEvaluateItems> resourceEvaluateItems; 
+        private String resourceTypeFormat; 
 
         private Builder() {
             super();
@@ -66,16 +84,21 @@ public class EvaluatePreConfigRulesRequest extends Request {
             super(request);
             this.enableManagedRules = request.enableManagedRules;
             this.resourceEvaluateItems = request.resourceEvaluateItems;
+            this.resourceTypeFormat = request.resourceTypeFormat;
         } 
 
         /**
-         * Specifies whether to enable the managed rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the managed rule. Valid values:</p>
+         * <ul>
+         * <li>true: enables the managed rule.</li>
+         * <li>false: does not enable the managed rule. This is the default value.</li>
+         * </ul>
+         * <blockquote>
+         * <p> After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</p>
+         * </blockquote>
          * 
-         * *   true: enables the managed rule.
-         * *   false: does not enable the managed rule. This is the default value.
-         * 
-         * >  After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableManagedRules(Boolean enableManagedRules) {
             this.putBodyParameter("EnableManagedRules", enableManagedRules);
@@ -84,12 +107,22 @@ public class EvaluatePreConfigRulesRequest extends Request {
         }
 
         /**
-         * The resources that you want to evaluate.
+         * <p>The resources that you want to evaluate.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceEvaluateItems(java.util.List < ResourceEvaluateItems> resourceEvaluateItems) {
+        public Builder resourceEvaluateItems(java.util.List<ResourceEvaluateItems> resourceEvaluateItems) {
             String resourceEvaluateItemsShrink = shrink(resourceEvaluateItems, "ResourceEvaluateItems", "json");
             this.putBodyParameter("ResourceEvaluateItems", resourceEvaluateItemsShrink);
             this.resourceEvaluateItems = resourceEvaluateItems;
+            return this;
+        }
+
+        /**
+         * ResourceTypeFormat.
+         */
+        public Builder resourceTypeFormat(String resourceTypeFormat) {
+            this.putBodyParameter("ResourceTypeFormat", resourceTypeFormat);
+            this.resourceTypeFormat = resourceTypeFormat;
             return this;
         }
 
@@ -100,11 +133,17 @@ public class EvaluatePreConfigRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EvaluatePreConfigRulesRequest} extends {@link TeaModel}
+     *
+     * <p>EvaluatePreConfigRulesRequest</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("InputParameters")
+        @com.aliyun.core.annotation.NameInMap("InputParameters")
         private String inputParameters;
 
         private Rules(Builder builder) {
@@ -139,10 +178,11 @@ public class EvaluatePreConfigRulesRequest extends Request {
             private String inputParameters; 
 
             /**
-             * The identifier of the evaluation rule.
-             * <p>
+             * <p>The identifier of the evaluation rule.</p>
+             * <p>For more information about how to obtain the identifier of an evaluation rule, see <a href="https://help.aliyun.com/document_detail/467810.html">ListManagedRules</a>.</p>
              * 
-             * For more information about how to obtain the identifier of an evaluation rule, see [ListManagedRules](~~467810~~).
+             * <strong>example:</strong>
+             * <p>ecs-instance-deletion-protection-enabled</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -150,7 +190,10 @@ public class EvaluatePreConfigRulesRequest extends Request {
             }
 
             /**
-             * The input parameters of the evaluation rule.
+             * <p>The input parameters of the evaluation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder inputParameters(String inputParameters) {
                 this.inputParameters = inputParameters;
@@ -164,18 +207,24 @@ public class EvaluatePreConfigRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link EvaluatePreConfigRulesRequest} extends {@link TeaModel}
+     *
+     * <p>EvaluatePreConfigRulesRequest</p>
+     */
     public static class ResourceEvaluateItems extends TeaModel {
-        @NameInMap("ResourceLogicalId")
+        @com.aliyun.core.annotation.NameInMap("ResourceLogicalId")
         private String resourceLogicalId;
 
-        @NameInMap("ResourceProperties")
+        @com.aliyun.core.annotation.NameInMap("ResourceProperties")
         private String resourceProperties;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
         private ResourceEvaluateItems(Builder builder) {
             this.resourceLogicalId = builder.resourceLogicalId;
@@ -216,7 +265,7 @@ public class EvaluatePreConfigRulesRequest extends Request {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -224,10 +273,13 @@ public class EvaluatePreConfigRulesRequest extends Request {
             private String resourceLogicalId; 
             private String resourceProperties; 
             private String resourceType; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
-             * The logical ID of the resource.
+             * <p>The logical ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceLogicId-test</p>
              */
             public Builder resourceLogicalId(String resourceLogicalId) {
                 this.resourceLogicalId = resourceLogicalId;
@@ -235,7 +287,15 @@ public class EvaluatePreConfigRulesRequest extends Request {
             }
 
             /**
-             * The properties of the resource.
+             * <p>The properties of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;ImageId&quot;: &quot;ubuntu_18_04_64_20G_alibase_20190624.vhd&quot;,
+             *     &quot;SecurityGroupId&quot;: &quot;sg-bp15ed6xe1yxeycg****&quot;,
+             *     &quot;HostName&quot;: &quot;LocalHostName&quot;,
+             *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
+             * }</p>
              */
             public Builder resourceProperties(String resourceProperties) {
                 this.resourceProperties = resourceProperties;
@@ -243,7 +303,10 @@ public class EvaluatePreConfigRulesRequest extends Request {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -251,9 +314,9 @@ public class EvaluatePreConfigRulesRequest extends Request {
             }
 
             /**
-             * The evaluation rules.
+             * <p>The evaluation rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

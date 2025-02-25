@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkPackagesRequest} extends {@link RequestModel}
  *
  * <p>DeleteNetworkPackagesRequest</p>
  */
 public class DeleteNetworkPackagesRequest extends Request {
-    @Query
-    @NameInMap("NetworkPackageId")
-    @Validation(required = true)
-    private java.util.List < String > networkPackageId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> networkPackageId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteNetworkPackagesRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class DeleteNetworkPackagesRequest extends Request {
     /**
      * @return networkPackageId
      */
-    public java.util.List < String > getNetworkPackageId() {
+    public java.util.List<String> getNetworkPackageId() {
         return this.networkPackageId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteNetworkPackagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteNetworkPackagesRequest, Builder> {
-        private java.util.List < String > networkPackageId; 
+        private java.util.List<String> networkPackageId; 
         private String regionId; 
 
         private Builder() {
@@ -70,16 +75,21 @@ public class DeleteNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * NetworkPackageId.
+         * <p>The IDs of premium bandwidth plans. You can specify one or more IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder networkPackageId(java.util.List < String > networkPackageId) {
+        public Builder networkPackageId(java.util.List<String> networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
             this.networkPackageId = networkPackageId;
             return this;
         }
 
         /**
-         * DeleteNetworkPackages
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

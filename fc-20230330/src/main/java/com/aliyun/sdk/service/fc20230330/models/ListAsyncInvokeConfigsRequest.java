@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsyncInvokeConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListAsyncInvokeConfigsRequest</p>
  */
 public class ListAsyncInvokeConfigsRequest extends Request {
-    @Query
-    @NameInMap("functionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
-    @Query
-    @NameInMap("limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
     private ListAsyncInvokeConfigsRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -91,7 +94,10 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The maximum number of entries to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -100,7 +106,10 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The paging information. This parameter specifies the start point of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

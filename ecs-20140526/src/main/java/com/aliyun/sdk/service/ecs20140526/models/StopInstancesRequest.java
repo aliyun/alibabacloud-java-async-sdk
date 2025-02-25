@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstancesRequest} extends {@link RequestModel}
  *
  * <p>StopInstancesRequest</p>
  */
 public class StopInstancesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("BatchOptimization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchOptimization")
     private String batchOptimization;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ForceStop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceStop")
     private Boolean forceStop;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StoppedMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoppedMode")
     private String stoppedMode;
 
     private StopInstancesRequest(Builder builder) {
@@ -117,7 +122,7 @@ public class StopInstancesRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -168,7 +173,7 @@ public class StopInstancesRequest extends Request {
         private String batchOptimization; 
         private Boolean dryRun; 
         private Boolean forceStop; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -205,7 +210,15 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of instances.
+         * <p>The batch operation mode. Valid values:</p>
+         * <ul>
+         * <li>AllTogether: In this mode, if all instances are stopped, a success message is returned. If an instance fails the verification, all instances fail to stop and an error message is returned.</li>
+         * <li>SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.</li>
+         * </ul>
+         * <p>Default value: AllTogether.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AllTogether</p>
          */
         public Builder batchOptimization(String batchOptimization) {
             this.putQueryParameter("BatchOptimization", batchOptimization);
@@ -214,7 +227,20 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned, regardless of whether the request passes the dry run.</p>
+         * </blockquote>
+         * <ul>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, instances are stopped.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -223,13 +249,15 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The stop mode of the pay-as-you-go instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully stop instances. Valid values:</p>
+         * <ul>
+         * <li>true. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on instances is lost.</li>
+         * <li>false.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   StopCharging: economical mode. For information about the conditions on which `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).
-         * *   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.
-         * 
-         * Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -238,9 +266,13 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The ID of instance N. Valid values of N: 1 to 100.
+         * <p>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -265,13 +297,11 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly stop the instance. Valid values:
-         * <p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: forcibly stops the instance. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage devices on the instance is lost.
-         * *   false: normally stops the instance.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,13 +328,15 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies the batch operation mode. Valid values:
-         * <p>
+         * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
+         * <ul>
+         * <li>StopCharging: economical mode. For information about how <code>StopCharging</code> takes effect, see the &quot;Prerequisites&quot; section in <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</li>
+         * <li>KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.</li>
+         * </ul>
+         * <p>Default value: If the prerequisites required for enabling economical mode are met and you have enabled the mode in the ECS console, the default value is <a href="~~63353#default~~">StopCharging</a>. For more information, see the &quot;Enable economical mode&quot; section in <code>Economical mode</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
          * 
-         * *   AllTogether: In this mode, a success message is returned if all specified instances are stopped. If one or more of the specified instances fail the check when you set the DryRun parameter to false, none of the specified instances can be stopped and an error message is returned.
-         * *   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.
-         * 
-         * Default value: AllTogether.
+         * <strong>example:</strong>
+         * <p>KeepCharging</p>
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);

@@ -138,7 +138,7 @@ public class ListOnDemandConfigsRequest extends Request {
         } 
 
         /**
-         * $.parameters[8].schema.description
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -147,7 +147,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * $.parameters[8].schema.example
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -156,7 +156,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * $.parameters[8].schema.enumValueTitles
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -165,7 +165,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called.
+         * The maximum number of results to return. If this parameter is not set, 20 is returned by default, and the maximum value cannot exceed 100. The number of returned configurations is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -174,7 +174,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The token required to obtain more results. If the number of layers exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -183,7 +183,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * The returned data.
+         * The prefix that names of returned resources must contain. For example, if you set prefix to a, the names of returned resources must start with a.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -192,7 +192,7 @@ public class ListOnDemandConfigsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+         * The position from which the list begins. Results are sorted in alphabetical order and those results following startKey (inclusive) are listed.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

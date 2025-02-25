@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFeatureViewFieldRelationshipsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFeatureViewFieldRelationshipsResponseBody</p>
  */
 public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
-    @NameInMap("Relationships")
-    private java.util.List < Relationships> relationships;
+    @com.aliyun.core.annotation.NameInMap("Relationships")
+    private java.util.List<Relationships> relationships;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFeatureViewFieldRelationshipsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     /**
      * @return relationships
      */
-    public java.util.List < Relationships> getRelationships() {
+    public java.util.List<Relationships> getRelationships() {
         return this.relationships;
     }
 
@@ -46,13 +51,13 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Relationships> relationships; 
+        private java.util.List<Relationships> relationships; 
         private String requestId; 
 
         /**
          * Relationships.
          */
-        public Builder relationships(java.util.List < Relationships> relationships) {
+        public Builder relationships(java.util.List<Relationships> relationships) {
             this.relationships = relationships;
             return this;
         }
@@ -71,11 +76,17 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFeatureViewFieldRelationshipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFeatureViewFieldRelationshipsResponseBody</p>
+     */
     public static class Models extends TeaModel {
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private String modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
         private Models(Builder builder) {
@@ -132,17 +143,23 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFeatureViewFieldRelationshipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFeatureViewFieldRelationshipsResponseBody</p>
+     */
     public static class Relationships extends TeaModel {
-        @NameInMap("FeatureName")
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;
 
-        @NameInMap("Models")
-        private java.util.List < Models> models;
+        @com.aliyun.core.annotation.NameInMap("Models")
+        private java.util.List<Models> models;
 
-        @NameInMap("OfflineTableName")
+        @com.aliyun.core.annotation.NameInMap("OfflineTableName")
         private String offlineTableName;
 
-        @NameInMap("OnlineTableName")
+        @com.aliyun.core.annotation.NameInMap("OnlineTableName")
         private String onlineTableName;
 
         private Relationships(Builder builder) {
@@ -170,7 +187,7 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         /**
          * @return models
          */
-        public java.util.List < Models> getModels() {
+        public java.util.List<Models> getModels() {
             return this.models;
         }
 
@@ -190,7 +207,7 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String featureName; 
-            private java.util.List < Models> models; 
+            private java.util.List<Models> models; 
             private String offlineTableName; 
             private String onlineTableName; 
 
@@ -205,7 +222,7 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
             /**
              * Models.
              */
-            public Builder models(java.util.List < Models> models) {
+            public Builder models(java.util.List<Models> models) {
                 this.models = models;
                 return this;
             }

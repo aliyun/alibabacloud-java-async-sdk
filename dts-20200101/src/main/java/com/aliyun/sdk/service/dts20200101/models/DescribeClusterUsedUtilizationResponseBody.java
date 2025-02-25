@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterUsedUtilizationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterUsedUtilizationResponseBody</p>
  */
 public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CpuTotal")
+    @com.aliyun.core.annotation.NameInMap("CpuTotal")
     private Float cpuTotal;
 
-    @NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
     private String dedicatedClusterId;
 
-    @NameInMap("DiskTotal")
+    @com.aliyun.core.annotation.NameInMap("DiskTotal")
     private Float diskTotal;
 
-    @NameInMap("DiskUsed")
+    @com.aliyun.core.annotation.NameInMap("DiskUsed")
     private Float diskUsed;
 
-    @NameInMap("DuTotal")
+    @com.aliyun.core.annotation.NameInMap("DuTotal")
     private Integer duTotal;
 
-    @NameInMap("DuUsed")
+    @com.aliyun.core.annotation.NameInMap("DuUsed")
     private Integer duUsed;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MemoryTotal")
+    @com.aliyun.core.annotation.NameInMap("MemoryTotal")
     private Float memoryTotal;
 
-    @NameInMap("MemoryUsed")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsed")
     private Float memoryUsed;
 
-    @NameInMap("MemoryUsedPercentage")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsedPercentage")
     private Float memoryUsedPercentage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskRunning")
+    @com.aliyun.core.annotation.NameInMap("TaskRunning")
     private Integer taskRunning;
 
     private DescribeClusterUsedUtilizationResponseBody(Builder builder) {
@@ -230,7 +235,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         private Integer taskRunning; 
 
         /**
-         * The error code returned by the backend service. The number is incremented.
+         * <p>The error code returned by the backend service. The number is incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -238,7 +246,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The CPU utilization of the cluster. Unit: percentage.
+         * <p>The CPU utilization of the cluster. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder cpuTotal(Float cpuTotal) {
             this.cpuTotal = cpuTotal;
@@ -246,7 +257,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtscluster_h3fl1cs217sx952</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.dedicatedClusterId = dedicatedClusterId;
@@ -254,7 +268,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The total disk size of the cluster. Unit: GB.
+         * <p>The total disk size of the cluster. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder diskTotal(Float diskTotal) {
             this.diskTotal = diskTotal;
@@ -262,7 +279,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The disk usage of the cluster. Unit: GB.
+         * <p>The disk usage of the cluster. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder diskUsed(Float diskUsed) {
             this.diskUsed = diskUsed;
@@ -270,7 +290,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DTS units (DUs).
+         * <p>The total number of DTS units (DUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder duTotal(Integer duTotal) {
             this.duTotal = duTotal;
@@ -278,7 +301,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The usage of DUs.
+         * <p>The usage of DUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duUsed(Integer duUsed) {
             this.duUsed = duUsed;
@@ -286,7 +312,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.
+         * <p>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -294,7 +323,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -302,7 +334,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -310,7 +345,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -318,7 +356,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The total amount of memory. A value of 0 is temporarily returned.
+         * <p>The total amount of memory. A value of 0 is temporarily returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder memoryTotal(Float memoryTotal) {
             this.memoryTotal = memoryTotal;
@@ -326,7 +367,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The memory usage. A value of 0 is temporarily returned.
+         * <p>The memory usage. A value of 0 is temporarily returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder memoryUsed(Float memoryUsed) {
             this.memoryUsed = memoryUsed;
@@ -334,7 +378,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The memory usage.
+         * <p>The memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder memoryUsedPercentage(Float memoryUsedPercentage) {
             this.memoryUsedPercentage = memoryUsedPercentage;
@@ -342,7 +389,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -350,7 +400,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -358,7 +411,10 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * The number of tasks that are in progress.
+         * <p>The number of tasks that are in progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder taskRunning(Integer taskRunning) {
             this.taskRunning = taskRunning;

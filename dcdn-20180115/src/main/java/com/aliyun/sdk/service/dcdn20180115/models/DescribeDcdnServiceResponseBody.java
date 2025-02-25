@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnServiceResponseBody</p>
  */
 public class DescribeDcdnServiceResponseBody extends TeaModel {
-    @NameInMap("ChangingAffectTime")
+    @com.aliyun.core.annotation.NameInMap("ChangingAffectTime")
     private String changingAffectTime;
 
-    @NameInMap("ChangingChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChangingChargeType")
     private String changingChargeType;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @NameInMap("OpeningTime")
+    @com.aliyun.core.annotation.NameInMap("OpeningTime")
     private String openingTime;
 
-    @NameInMap("OperationLocks")
+    @com.aliyun.core.annotation.NameInMap("OperationLocks")
     private OperationLocks operationLocks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WebsocketChangingTime")
+    @com.aliyun.core.annotation.NameInMap("WebsocketChangingTime")
     private String websocketChangingTime;
 
-    @NameInMap("WebsocketChangingType")
+    @com.aliyun.core.annotation.NameInMap("WebsocketChangingType")
     private String websocketChangingType;
 
-    @NameInMap("WebsocketType")
+    @com.aliyun.core.annotation.NameInMap("WebsocketType")
     private String websocketType;
 
     private DescribeDcdnServiceResponseBody(Builder builder) {
@@ -146,7 +146,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         private String websocketType; 
 
         /**
-         * The time when the renewed secure DCDN takes effect. The time is displayed in UTC.
+         * <p>The time when the renewed secure DCDN takes effect. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-31T16:00:00Z</p>
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -154,16 +157,19 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The new metering method for the renewed secure DCDN. Valid values:
-         * <p>
+         * <p>The new metering method for the renewed secure DCDN. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+         * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+         * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+         * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+         * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay by data transfer
-         * *   **PayByBandwidth**: pay by bandwidth
-         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
-         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
-         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
-         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
-         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -171,7 +177,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FP-mkqgwxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -179,16 +188,19 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The current metering method. Valid values:
-         * <p>
+         * <p>The current metering method. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay by data transfer</li>
+         * <li><strong>PayByBandwidth</strong>: pay by bandwidth</li>
+         * <li><strong>PayByBandwidth95</strong>: pay by 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_monthavg</strong>: pay by monthly average bandwidth</li>
+         * <li><strong>PayByBandwidth_month4th</strong>: pay by fourth peak bandwidth per month</li>
+         * <li><strong>PayByBandwidth_monthday95avg</strong>: pay by monthly average 95th percentile bandwidth</li>
+         * <li><strong>PayByBandwidth_nighthalf95</strong>: pay by 95th percentile bandwidth (50% off during nighttime)</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay by data transfer
-         * *   **PayByBandwidth**: pay by bandwidth
-         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
-         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
-         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
-         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
-         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -196,7 +208,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the DCDN service was activated. The time follows the ISO 8601 standard.
+         * <p>The time when the DCDN service was activated. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-19T11:16:11Z</p>
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -204,7 +219,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The lock status of DCDN.
+         * <p>The lock status of DCDN.</p>
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -212,7 +227,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF2AEBC2-EDBD-41CF-BF64-7E095D42D6EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -220,7 +238,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the changes of the WebSocket configuration take effect. The value is the same as that of the ChangingAffectTime parameter. This parameter can be displayed in the console only if the specified time is later than the current time.
+         * <p>The time when the changes of the WebSocket configuration take effect. The value is the same as that of the ChangingAffectTime parameter. This parameter can be displayed in the console only if the specified time is later than the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-19T11:16:11Z</p>
          */
         public Builder websocketChangingTime(String websocketChangingTime) {
             this.websocketChangingTime = websocketChangingTime;
@@ -228,7 +249,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The next effective billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.
+         * <p>The next effective billing method of WebSocket. Valid values: <strong>websockettraffic</strong> and <strong>websocketbps</strong>. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>websocketbps</p>
          */
         public Builder websocketChangingType(String websocketChangingType) {
             this.websocketChangingType = websocketChangingType;
@@ -236,7 +260,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The current billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.
+         * <p>The current billing method of WebSocket. Valid values: <strong>websockettraffic</strong> and <strong>websocketbps</strong>. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>websocketbps</p>
          */
         public Builder websocketType(String websocketType) {
             this.websocketType = websocketType;
@@ -249,8 +276,14 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnServiceResponseBody</p>
+     */
     public static class LockReason extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
         private LockReason(Builder builder) {
@@ -276,7 +309,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.
+             * <p>The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>financial</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -290,8 +326,14 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnServiceResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
@@ -317,7 +359,10 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.
+             * <p>The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>financial</p>
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

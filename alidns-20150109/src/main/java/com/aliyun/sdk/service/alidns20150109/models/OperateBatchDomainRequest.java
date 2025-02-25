@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateBatchDomainRequest} extends {@link RequestModel}
  *
  * <p>OperateBatchDomainRequest</p>
  */
 public class OperateBatchDomainRequest extends Request {
-    @Query
-    @NameInMap("DomainRecordInfo")
-    @Validation(required = true)
-    private java.util.List < DomainRecordInfo> domainRecordInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainRecordInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<DomainRecordInfo> domainRecordInfo;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private OperateBatchDomainRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class OperateBatchDomainRequest extends Request {
     /**
      * @return domainRecordInfo
      */
-    public java.util.List < DomainRecordInfo> getDomainRecordInfo() {
+    public java.util.List<DomainRecordInfo> getDomainRecordInfo() {
         return this.domainRecordInfo;
     }
 
@@ -68,7 +73,7 @@ public class OperateBatchDomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OperateBatchDomainRequest, Builder> {
-        private java.util.List < DomainRecordInfo> domainRecordInfo; 
+        private java.util.List<DomainRecordInfo> domainRecordInfo; 
         private String lang; 
         private String type; 
 
@@ -84,22 +89,20 @@ public class OperateBatchDomainRequest extends Request {
         } 
 
         /**
-         * DomainRecordInfo.
+         * <p>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder domainRecordInfo(java.util.List < DomainRecordInfo> domainRecordInfo) {
+        public Builder domainRecordInfo(java.util.List<DomainRecordInfo> domainRecordInfo) {
             this.putQueryParameter("DomainRecordInfo", domainRecordInfo);
             this.domainRecordInfo = domainRecordInfo;
             return this;
         }
 
         /**
-         * The type of the batch operation. Valid values:
-         * <p>
+         * <p>The language.</p>
          * 
-         * *   **DOMAIN_ADD**: adds domain names in batches.
-         * *   **DOMAIN_DEL**: deletes domain names in batches.
-         * *   **RR_ADD**: adds DNS records in batches.
-         * *   **RR_DEL**: deletes DNS records in batches. (If RR or VALUE exists, DNS records corresponding to the specified RR or VALUE are deleted. If both of them exist, DNS records corresponding to the specified RR and VALUE are deleted. If no RR or VALUE is specified, the DNS records corresponding to the DomainName parameter are deleted.)
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,10 +111,17 @@ public class OperateBatchDomainRequest extends Request {
         }
 
         /**
-         * The type of DNS record N. For the DNS record types supported by Alibaba Cloud DNS, see [Resolution record type formats](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
-         * <p>
+         * <p>The type of the batch operation. Valid values:</p>
+         * <ul>
+         * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
+         * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
+         * <li><strong>RR_ADD</strong>: adds DNS records in batches.</li>
+         * <li><strong>RR_DEL</strong>: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you set the Type parameter to **RR_ADD**, you must also specify this parameter.
+         * <strong>example:</strong>
+         * <p>RR_ADD</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -126,36 +136,42 @@ public class OperateBatchDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link OperateBatchDomainRequest} extends {@link TeaModel}
+     *
+     * <p>OperateBatchDomainRequest</p>
+     */
     public static class DomainRecordInfo extends TeaModel {
-        @NameInMap("Domain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domain;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("NewRr")
+        @com.aliyun.core.annotation.NameInMap("NewRr")
         private String newRr;
 
-        @NameInMap("NewType")
+        @com.aliyun.core.annotation.NameInMap("NewType")
         private String newType;
 
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Rr")
+        @com.aliyun.core.annotation.NameInMap("Rr")
         private String rr;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DomainRecordInfo(Builder builder) {
@@ -262,10 +278,14 @@ public class OperateBatchDomainRequest extends Request {
             private String value; 
 
             /**
-             * The resolution line of DNS record N. Default value: default.
-             * <p>
+             * <p>The domain name.</p>
+             * <blockquote>
+             * <p> You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * For more information, see [Resolution line enumeration](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -273,10 +293,10 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * The host record corresponding to DNS record N.
-             * <p>
+             * <p>The DNS request source. Default value: default.</p>
              * 
-             * >  If you set the Type parameter to **RR_ADD**, you must also specify this parameter.
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -308,7 +328,11 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * The ID of the task.
+             * <p>The priority of the mail exchanger (MX) record.</p>
+             * <p>This parameter is required if the type of the DNS record is MX. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -316,10 +340,13 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * The priority of MX-type DNS record N.
-             * <p>
+             * <p>The hostname.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+             * </blockquote>
              * 
-             * This parameter must be specified if the type of the DNS record is MX. Default value: 10.
+             * <strong>example:</strong>
+             * <p>zhaohui</p>
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -327,10 +354,10 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * The domain name corresponding to DNS record N.
-             * <p>
+             * <p>The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: <em><strong>600</strong></em>.</p>
              * 
-             * >  N is specified by users. **N** starts from **1**. The maximum value of N is **1000**. Extra data entries are ignored.
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -338,10 +365,13 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * The value of DNS record N.
-             * <p>
+             * <p>The type of the DNS record. Valid values: A, AAAA, TXT, MX, and CNAME.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+             * </blockquote>
              * 
-             * >  If you set the Type parameter to **RR_ADD**, you must also specify this parameter.
+             * <strong>example:</strong>
+             * <p>MX</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -349,7 +379,13 @@ public class OperateBatchDomainRequest extends Request {
             }
 
             /**
-             * The TTL of DNS record N. Unit: seconds. Default value: **600**.
+             * <p>The record value.</p>
+             * <blockquote>
+             * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>fd87da3c4528844d45af39200155a905</p>
              */
             public Builder value(String value) {
                 this.value = value;

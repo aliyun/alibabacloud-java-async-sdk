@@ -1,55 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStackInstancesRequest} extends {@link RequestModel}
  *
  * <p>DeleteStackInstancesRequest</p>
  */
 public class DeleteStackInstancesRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List < String > accountIds;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeploymentTargets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentTargets")
     private DeploymentTargets deploymentTargets;
 
-    @Query
-    @NameInMap("OperationDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationDescription")
     private String operationDescription;
 
-    @Query
-    @NameInMap("OperationPreferences")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationPreferences")
     private java.util.Map < String, ? > operationPreferences;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RegionIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > regionIds;
 
-    @Query
-    @NameInMap("RetainStacks")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainStacks")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean retainStacks;
 
-    @Query
-    @NameInMap("StackGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackGroupName;
 
     private DeleteStackInstancesRequest(Builder builder) {
@@ -170,7 +170,10 @@ public class DeleteStackInstancesRequest extends Request {
         } 
 
         /**
-         * The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.
+         * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;151266687691****&quot;]</p>
          */
         public Builder accountIds(java.util.List < String > accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
@@ -180,10 +183,10 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-         * <p>
-         * The token can contain letters, digits, hyphens (-), and underscores (\_), and cannot exceed 64 characters in length.\
-         * For more information, see [How to ensure idempotence](~~134212~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.<br>The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,7 +195,7 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * The folders in which you want to deploy stacks in service-managed mode.
+         * <p>The folders in which you want to deploy stacks in service-managed mode.</p>
          */
         public Builder deploymentTargets(DeploymentTargets deploymentTargets) {
             String deploymentTargetsShrink = shrink(deploymentTargets, "DeploymentTargets", "json");
@@ -202,10 +205,11 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * The description of the delete operation.
-         * <p>
+         * <p>The description of the delete operation.</p>
+         * <p>The description must be 1 to 256 characters in length.</p>
          * 
-         * The description must be 1 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>Delete stack instances in hangzhou and beijing</p>
          */
         public Builder operationDescription(String operationDescription) {
             this.putQueryParameter("OperationDescription", operationDescription);
@@ -214,54 +218,49 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * The preference settings of the delete operation.
-         * <p>
+         * <p>The preference settings of the delete operation.</p>
+         * <p>The following parameters are available:</p>
+         * <ul>
+         * <li><p>{&quot;FailureToleranceCount&quot;: N}</p>
+         * <p> The number of accounts within which stack operation failures are allowed in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region. If ROS stops the operation in one region, ROS stops the operation in other regions.</p>
+         * <p> Valid values of N: 0 to 20.</p>
+         * <p> If you do not specify FailureToleranceCount, 0 is used as the default value.</p>
+         * </li>
+         * <li><p>{&quot;FailureTolerancePercentage&quot;: N}</p>
+         * <p> The percentage of the number of accounts within which stack operation failures are allowed to the total number of accounts in each region. If the value of this parameter is exceeded, ROS stops the operation in the region.</p>
+         * <p> Valid values of N: 0 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.</p>
+         * <p> If you do not specify FailureTolerancePercentage, 0 is used as the default value.</p>
+         * </li>
+         * <li><p>{&quot;MaxConcurrentCount&quot;: N}</p>
+         * <p> The maximum number of accounts within which multiple stacks are deployed at the same time in each region.</p>
+         * <p> Valid values of N: 1 to 20.</p>
+         * <p> If you do not specify MaxConcurrentCount, 1 is used as the default value.</p>
+         * </li>
+         * <li><p>{&quot;MaxConcurrentPercentage&quot;: N}</p>
+         * <p> The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.</p>
+         * <p> Valid values of N: 1 to 100. If the numeric value in the percentage is not an integer, ROS rounds the number down to the nearest integer.</p>
+         * <p> If you do not specify MaxConcurrentPercentage, 1 is used as the default value.</p>
+         * </li>
+         * <li><p>{&quot;RegionConcurrencyType&quot;: N}</p>
+         * <p>The mode that you want to use to deploy stacks across regions. Valid values:</p>
+         * <ul>
+         * <li><p>SEQUENTIAL (default): deploys stacks in the specified regions one by one in sequence. This way, ROS deploys stacks in only one region at a time. </p>
+         * </li>
+         * <li><p>PARALLEL: deploys stacks in all the specified regions in parallel.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>Separate multiple parameters with commas (,).</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify only one of the following parameters: MaxConcurrentCount and MaxConcurrentPercentage.</li>
+         * <li>You can specify only one of the following parameters: FailureToleranceCount and FailureTolerancePercentage.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * The following parameters are available:
-         * 
-         * -  {"FailureToleranceCount": N}
-         * 
-         *     The number of accounts within which stack operation failures are allowed in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region. If ROS stops the operation in one region, ROS stops the operation in other regions.
-         * 
-         *     Valid values of N: 0 to 20.
-         * 
-         *     If you do not specify FailureToleranceCount, 0 is used as the default value.
-         * 
-         * -  {"FailureTolerancePercentage": N}
-         * 
-         *     The percentage of the number of accounts within which stack operation failures are allowed to the total number of accounts in each region. If the value of this parameter is exceeded, ROS stops the operation in the region.
-         * 
-         *     Valid values of N: 0 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.
-         * 
-         *     If you do not specify FailureTolerancePercentage, 0 is used as the default value.
-         * 
-         * -  {"MaxConcurrentCount": N}
-         * 
-         *     The maximum number of accounts within which multiple stacks are deployed at the same time in each region.
-         * 
-         *     Valid values of N: 1 to 20.
-         * 
-         *     If you do not specify MaxConcurrentCount, 1 is used as the default value.
-         * 
-         * -  {"MaxConcurrentPercentage": N}
-         * 
-         *     The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.
-         * 
-         *     Valid values of N: 1 to 100. If the numeric value in the percentage is not an integer, ROS rounds the number down to the nearest integer.
-         * 
-         *     If you do not specify MaxConcurrentPercentage, 1 is used as the default value.
-         * 
-         * -   {"RegionConcurrencyType": N}
-         * 
-         *     The mode that you want to use to deploy stacks across regions. Valid values:
-         *     - SEQUENTIAL (default): deploys stacks in the specified regions one by one in sequence. This way, ROS deploys stacks in only one region at a time. 
-         * 
-         *      - PARALLEL: deploys stacks in all the specified regions in parallel. 
-         * 
-         * Separate multiple parameters with commas (,).
-         * 
-         * > - You can specify only one of the following parameters: MaxConcurrentCount and MaxConcurrentPercentage.
-         * > - You can specify only one of the following parameters: FailureToleranceCount and FailureTolerancePercentage.
+         * <strong>example:</strong>
+         * <p>{&quot;FailureToleranceCount&quot;: 1, &quot;MaxConcurrentCount&quot;: 2}</p>
          */
         public Builder operationPreferences(java.util.Map < String, ? > operationPreferences) {
             String operationPreferencesShrink = shrink(operationPreferences, "OperationPreferences", "json");
@@ -271,7 +270,11 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -280,7 +283,11 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the regions where you want to delete the stacks. You can specify up to 20 region IDs.
+         * <p>The IDs of the regions where you want to delete the stacks. You can specify up to 20 region IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-hangzhou&quot;, &quot;cn-beijing&quot;]</p>
          */
         public Builder regionIds(java.util.List < String > regionIds) {
             String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
@@ -290,13 +297,16 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the stacks.
-         * <p>
+         * <p>Specifies whether to delete the stacks.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: retains the stacks.</li>
+         * <li>false: deletes the stacks.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   true: retains the stacks.
-         * *   false: deletes the stacks.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder retainStacks(Boolean retainStacks) {
             this.putQueryParameter("RetainStacks", retainStacks);
@@ -305,9 +315,11 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
-         * The name of the stack group. The name must be unique within a region.\
-         * <p>
-         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+         * <p>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -322,11 +334,21 @@ public class DeleteStackInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteStackInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteStackInstancesRequest</p>
+     */
     public static class DeploymentTargets extends TeaModel {
-        @NameInMap("RdFolderIds")
+        @com.aliyun.core.annotation.NameInMap("AccountIds")
+        private java.util.List < String > accountIds;
+
+        @com.aliyun.core.annotation.NameInMap("RdFolderIds")
         private java.util.List < String > rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
+            this.accountIds = builder.accountIds;
             this.rdFolderIds = builder.rdFolderIds;
         }
 
@@ -339,6 +361,13 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
+         * @return accountIds
+         */
+        public java.util.List < String > getAccountIds() {
+            return this.accountIds;
+        }
+
+        /**
          * @return rdFolderIds
          */
         public java.util.List < String > getRdFolderIds() {
@@ -346,15 +375,26 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < String > accountIds; 
             private java.util.List < String > rdFolderIds; 
 
             /**
-             * The IDs of the folders in the resource directory. You can add up to five folder IDs.
-             * <p>
-             * 
-             * You can create stacks within all the member accounts in the specified folders. If you create stacks in the Root folder, the stacks are created within all member accounts in the resource directory.
-             * 
-             * > To view the folder IDs, go to the **Overview** page in the **Resource Management** console. For more information, see [View the basic information about a folder](~~111223~~).
+             * <p>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</p>
+             * <blockquote>
+             * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
+             * </blockquote>
+             */
+            public Builder accountIds(java.util.List < String > accountIds) {
+                this.accountIds = accountIds;
+                return this;
+            }
+
+            /**
+             * <p>The IDs of the folders in the resource directory. You can add up to five folder IDs.</p>
+             * <p>You can create stacks within all the member accounts in the specified folders. If you create stacks in the Root folder, the stacks are created within all member accounts in the resource directory.</p>
+             * <blockquote>
+             * <p>To view the folder IDs, go to the <strong>Overview</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information about a folder</a>.</p>
+             * </blockquote>
              */
             public Builder rdFolderIds(java.util.List < String > rdFolderIds) {
                 this.rdFolderIds = rdFolderIds;

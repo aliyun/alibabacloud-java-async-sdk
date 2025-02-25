@@ -1,40 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateConsumerGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateConsumerGroupRequest</p>
  */
 public class CreateConsumerGroupRequest extends Request {
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Body
-    @NameInMap("consumerGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("consumerGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroup;
 
-    @Body
-    @NameInMap("order")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean order;
 
-    @Body
-    @NameInMap("timeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeout;
 
     private CreateConsumerGroupRequest(Builder builder) {
@@ -115,7 +119,11 @@ public class CreateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -124,7 +132,11 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -133,7 +145,11 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The name of the consumer group. The name must be unique in a project.
+         * <p>The name of the consumer group. The name must be unique in a project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumerGroupX</p>
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putBodyParameter("consumerGroup", consumerGroup);
@@ -142,16 +158,22 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to consume data in sequence. Valid values:
-         * <p>
+         * <p>Specifies whether to consume data in sequence. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <ul>
+         * <li>In a shard, data is consumed in ascending order based on the value of the **<strong>tag</strong>:<strong>receive_time</strong>** field.</li>
+         * <li>If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.</li>
+         * <li>If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.</li>
+         * </ul>
+         * </li>
+         * <li><p>false Data in all shards is consumed at the same time. If a new shard is generated after a shard is split or after shards are merged, data in the new shard is immediately consumed.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * 
-         *     *   In a shard, data is consumed in ascending order based on the value of the \*\*\__tag\_\_:\__receive_time\_\_\*\* field.
-         *     *   If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.
-         *     *   If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.
-         * 
-         * *   false Data in all shards is consumed at the same time. If a new shard is generated after a shard is split or after shards are merged, data in the new shard is immediately consumed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder order(Boolean order) {
             this.putBodyParameter("order", order);
@@ -160,7 +182,11 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The timeout period. If the server does not receive heartbeats from a consumer within the timeout period, the server deletes the consumer. Unit: seconds.
+         * <p>The timeout period. If the server does not receive heartbeats from a consumer within the timeout period, the server deletes the consumer. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);

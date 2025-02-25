@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDBClusterResponseBody</p>
  */
 public class ModifyDBClusterResponseBody extends TeaModel {
-    @NameInMap("DBCluster")
+    @com.aliyun.core.annotation.NameInMap("DBCluster")
     private DBCluster DBCluster;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBClusterResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBCluster.
+         * <p>The information about the cluster.</p>
          */
         public Builder DBCluster(DBCluster DBCluster) {
             this.DBCluster = DBCluster;
@@ -58,7 +63,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA30A000-3A4D-5B97-9420-E5D0D49F7016</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ModifyDBClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDBClusterResponseBody</p>
+     */
     public static class DBCluster extends TeaModel {
-        @NameInMap("dbClusterId")
+        @com.aliyun.core.annotation.NameInMap("dbClusterId")
         private String dbClusterId;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private DBCluster(Builder builder) {
@@ -110,7 +124,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * dbClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp19lo45sy98x****</p>
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -118,7 +135,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * orderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21417210003****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

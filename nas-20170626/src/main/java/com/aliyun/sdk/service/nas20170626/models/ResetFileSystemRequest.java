@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetFileSystemRequest} extends {@link RequestModel}
  *
  * <p>ResetFileSystemRequest</p>
  */
 public class ResetFileSystemRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("SnapshotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
 
     private ResetFileSystemRequest(Builder builder) {
@@ -63,14 +68,18 @@ public class ResetFileSystemRequest extends Request {
             super();
         } 
 
-        private Builder(ResetFileSystemRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.snapshotId = response.snapshotId;
+        private Builder(ResetFileSystemRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the advanced Extreme NAS file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-012dd****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +88,11 @@ public class ResetFileSystemRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>The snapshot ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-extreme-snapsho****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleWithAdjustmentResponseBody} extends {@link TeaModel}
  *
  * <p>ScaleWithAdjustmentResponseBody</p>
  */
 public class ScaleWithAdjustmentResponseBody extends TeaModel {
-    @NameInMap("ActivityType")
+    @com.aliyun.core.annotation.NameInMap("ActivityType")
     private String activityType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingActivityId")
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
     private String scalingActivityId;
 
     private ScaleWithAdjustmentResponseBody(Builder builder) {
@@ -62,7 +67,12 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * ActivityType.
+         * <p>The type of the scaling activity.</p>
+         * <p>If <code>ActivityType</code> is set to <code>CapacityChange</code>, only the expected number of instances is changed during the scaling activity specified by ScalingActivityId and no scale-out is triggered.</p>
+         * <p>This parameter is applicable to only scaling groups that have an expected number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CapacityChange</p>
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;
@@ -70,7 +80,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +91,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityId.
+         * <p>The ID of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-bp175o6f6ego3r2j****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

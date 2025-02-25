@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInterceptionTargetRequest} extends {@link RequestModel}
  *
  * <p>ModifyInterceptionTargetRequest</p>
  */
 public class ModifyInterceptionTargetRequest extends Request {
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("ImageList")
-    private java.util.List < String > imageList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageList")
+    private java.util.List<String> imageList;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("TagList")
-    private java.util.List < String > tagList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    private java.util.List<String> tagList;
 
-    @Query
-    @NameInMap("TargetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long targetId;
 
-    @Query
-    @NameInMap("TargetName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetName;
 
-    @Query
-    @NameInMap("TargetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetType;
 
     private ModifyInterceptionTargetRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class ModifyInterceptionTargetRequest extends Request {
     /**
      * @return imageList
      */
-    public java.util.List < String > getImageList() {
+    public java.util.List<String> getImageList() {
         return this.imageList;
     }
 
@@ -92,7 +97,7 @@ public class ModifyInterceptionTargetRequest extends Request {
     /**
      * @return tagList
      */
-    public java.util.List < String > getTagList() {
+    public java.util.List<String> getTagList() {
         return this.tagList;
     }
 
@@ -119,9 +124,9 @@ public class ModifyInterceptionTargetRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyInterceptionTargetRequest, Builder> {
         private String appName; 
-        private java.util.List < String > imageList; 
+        private java.util.List<String> imageList; 
         private String namespace; 
-        private java.util.List < String > tagList; 
+        private java.util.List<String> tagList; 
         private Long targetId; 
         private String targetName; 
         private String targetType; 
@@ -142,10 +147,13 @@ public class ModifyInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * The name of the application.
-         * <p>
+         * <p>The name of the application.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>yasintt-daemonst</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -154,22 +162,26 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * An array that consists of images.
-         * <p>
-         * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <p>An array that consists of images.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
          */
-        public Builder imageList(java.util.List < String > imageList) {
+        public Builder imageList(java.util.List<String> imageList) {
             this.putQueryParameter("ImageList", imageList);
             this.imageList = imageList;
             return this;
         }
 
         /**
-         * The namespace.
-         * <p>
+         * <p>The namespace.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>demo4</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -178,22 +190,26 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * An array that consists of tags.
-         * <p>
-         * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <p>An array that consists of tags.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
          */
-        public Builder tagList(java.util.List < String > tagList) {
+        public Builder tagList(java.util.List<String> tagList) {
             this.putQueryParameter("TagList", tagList);
             this.tagList = tagList;
             return this;
         }
 
         /**
-         * The ID of the network object.
-         * <p>
+         * <p>The ID of the network object.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>400913</p>
          */
         public Builder targetId(Long targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -202,7 +218,11 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The name.
+         * <p>The name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test001</p>
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -211,10 +231,14 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The object type. Valid values:
-         * <p>
+         * <p>The object type. Valid values:</p>
+         * <ul>
+         * <li><strong>IMAGE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **IMAGE**
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCharacterSetNameResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCharacterSetNameResponseBody</p>
  */
 public class DescribeCharacterSetNameResponseBody extends TeaModel {
-    @NameInMap("CharacterSetNameItems")
+    @com.aliyun.core.annotation.NameInMap("CharacterSetNameItems")
     private CharacterSetNameItems characterSetNameItems;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCharacterSetNameResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The character sets that are supported.
+         * <p>The character sets that are supported.</p>
          */
         public Builder characterSetNameItems(CharacterSetNameItems characterSetNameItems) {
             this.characterSetNameItems = characterSetNameItems;
@@ -70,7 +75,10 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine.
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -78,7 +86,10 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34458CD3-33E0-4624-BFEF-840C15******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,9 +102,15 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCharacterSetNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCharacterSetNameResponseBody</p>
+     */
     public static class CharacterSetNameItems extends TeaModel {
-        @NameInMap("CharacterSetName")
-        private java.util.List < String > characterSetName;
+        @com.aliyun.core.annotation.NameInMap("CharacterSetName")
+        private java.util.List<String> characterSetName;
 
         private CharacterSetNameItems(Builder builder) {
             this.characterSetName = builder.characterSetName;
@@ -110,17 +127,17 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         /**
          * @return characterSetName
          */
-        public java.util.List < String > getCharacterSetName() {
+        public java.util.List<String> getCharacterSetName() {
             return this.characterSetName;
         }
 
         public static final class Builder {
-            private java.util.List < String > characterSetName; 
+            private java.util.List<String> characterSetName; 
 
             /**
              * CharacterSetName.
              */
-            public Builder characterSetName(java.util.List < String > characterSetName) {
+            public Builder characterSetName(java.util.List<String> characterSetName) {
                 this.characterSetName = characterSetName;
                 return this;
             }

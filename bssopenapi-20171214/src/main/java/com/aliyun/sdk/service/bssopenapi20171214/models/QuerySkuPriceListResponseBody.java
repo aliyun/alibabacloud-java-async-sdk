@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySkuPriceListResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySkuPriceListResponseBody</p>
  */
 public class QuerySkuPriceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySkuPriceListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned.
+         * <p>The message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +148,23 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySkuPriceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySkuPriceListResponseBody</p>
+     */
     public static class RangeList extends TeaModel {
-        @NameInMap("FactorCode")
+        @com.aliyun.core.annotation.NameInMap("FactorCode")
         private String factorCode;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private String min;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RangeList(Builder builder) {
@@ -194,7 +217,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The code of the pricing factor.
+             * <p>The code of the pricing factor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>212fbd27866307fc79ecf06934a88b2c</p>
              */
             public Builder factorCode(String factorCode) {
                 this.factorCode = factorCode;
@@ -202,7 +228,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder max(String max) {
                 this.max = max;
@@ -210,7 +239,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder min(String min) {
                 this.min = min;
@@ -218,7 +250,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The closure type of the interval.
+             * <p>The closure type of the interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LORC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -232,29 +267,35 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySkuPriceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySkuPriceListResponseBody</p>
+     */
     public static class CskuPriceList extends TeaModel {
-        @NameInMap("CskuCode")
+        @com.aliyun.core.annotation.NameInMap("CskuCode")
         private String cskuCode;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private String price;
 
-        @NameInMap("PriceMode")
+        @com.aliyun.core.annotation.NameInMap("PriceMode")
         private String priceMode;
 
-        @NameInMap("PriceType")
+        @com.aliyun.core.annotation.NameInMap("PriceType")
         private String priceType;
 
-        @NameInMap("PriceUnit")
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
 
-        @NameInMap("RangeList")
-        private java.util.List < RangeList> rangeList;
+        @com.aliyun.core.annotation.NameInMap("RangeList")
+        private java.util.List<RangeList> rangeList;
 
-        @NameInMap("UsageUnit")
+        @com.aliyun.core.annotation.NameInMap("UsageUnit")
         private String usageUnit;
 
         private CskuPriceList(Builder builder) {
@@ -321,7 +362,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return rangeList
          */
-        public java.util.List < RangeList> getRangeList() {
+        public java.util.List<RangeList> getRangeList() {
             return this.rangeList;
         }
 
@@ -339,11 +380,14 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private String priceMode; 
             private String priceType; 
             private String priceUnit; 
-            private java.util.List < RangeList> rangeList; 
+            private java.util.List<RangeList> rangeList; 
             private String usageUnit; 
 
             /**
-             * The unique code of the SKU price.
+             * <p>The unique code of the SKU price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac74dd7b52ae6389ddef099283fb8275</p>
              */
             public Builder cskuCode(String cskuCode) {
                 this.cskuCode = cskuCode;
@@ -351,7 +395,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -359,7 +406,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The price.
+             * <p>The price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder price(String price) {
                 this.price = price;
@@ -367,7 +417,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The pricing mode.
+             * <p>The pricing mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STEP_ARRIVE</p>
              */
             public Builder priceMode(String priceMode) {
                 this.priceMode = priceMode;
@@ -375,7 +428,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The pricing type.
+             * <p>The pricing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hourPrice</p>
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;
@@ -383,7 +439,10 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the price.
+             * <p>The unit of the price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD (per unit)</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -391,15 +450,18 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * If the PriceMode parameter is set to STEP_ACCUMULATION or STEP_ARRIVE, the value of this field exists and specifies the range. If the PriceMode parameter is set to NORMAL_PRICE, the value of this field is null.
+             * <p>If the PriceMode parameter is set to STEP_ACCUMULATION or STEP_ARRIVE, the value of this field exists and specifies the range. If the PriceMode parameter is set to NORMAL_PRICE, the value of this field is null.</p>
              */
-            public Builder rangeList(java.util.List < RangeList> rangeList) {
+            public Builder rangeList(java.util.List<RangeList> rangeList) {
                 this.rangeList = rangeList;
                 return this;
             }
 
             /**
-             * The usage unit.
+             * <p>The usage unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Count</p>
              */
             public Builder usageUnit(String usageUnit) {
                 this.usageUnit = usageUnit;
@@ -413,15 +475,21 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySkuPriceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySkuPriceListResponseBody</p>
+     */
     public static class SkuPriceList extends TeaModel {
-        @NameInMap("CskuPriceList")
-        private java.util.List < CskuPriceList> cskuPriceList;
+        @com.aliyun.core.annotation.NameInMap("CskuPriceList")
+        private java.util.List<CskuPriceList> cskuPriceList;
 
-        @NameInMap("SkuCode")
+        @com.aliyun.core.annotation.NameInMap("SkuCode")
         private String skuCode;
 
-        @NameInMap("SkuFactorMap")
-        private java.util.Map < String, String > skuFactorMap;
+        @com.aliyun.core.annotation.NameInMap("SkuFactorMap")
+        private java.util.Map<String, String> skuFactorMap;
 
         private SkuPriceList(Builder builder) {
             this.cskuPriceList = builder.cskuPriceList;
@@ -440,7 +508,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return cskuPriceList
          */
-        public java.util.List < CskuPriceList> getCskuPriceList() {
+        public java.util.List<CskuPriceList> getCskuPriceList() {
             return this.cskuPriceList;
         }
 
@@ -454,25 +522,28 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return skuFactorMap
          */
-        public java.util.Map < String, String > getSkuFactorMap() {
+        public java.util.Map<String, String> getSkuFactorMap() {
             return this.skuFactorMap;
         }
 
         public static final class Builder {
-            private java.util.List < CskuPriceList> cskuPriceList; 
+            private java.util.List<CskuPriceList> cskuPriceList; 
             private String skuCode; 
-            private java.util.Map < String, String > skuFactorMap; 
+            private java.util.Map<String, String> skuFactorMap; 
 
             /**
-             * The prices of the SKUs.
+             * <p>The prices of the SKUs.</p>
              */
-            public Builder cskuPriceList(java.util.List < CskuPriceList> cskuPriceList) {
+            public Builder cskuPriceList(java.util.List<CskuPriceList> cskuPriceList) {
                 this.cskuPriceList = cskuPriceList;
                 return this;
             }
 
             /**
-             * The code of the SKU.
+             * <p>The code of the SKU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>017c15a31507bc6de22aa93777461adc</p>
              */
             public Builder skuCode(String skuCode) {
                 this.skuCode = skuCode;
@@ -480,9 +551,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the pricing factors.
+             * <p>The values of the pricing factors.</p>
              */
-            public Builder skuFactorMap(java.util.Map < String, String > skuFactorMap) {
+            public Builder skuFactorMap(java.util.Map<String, String> skuFactorMap) {
                 this.skuFactorMap = skuFactorMap;
                 return this;
             }
@@ -494,14 +565,20 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySkuPriceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySkuPriceListResponseBody</p>
+     */
     public static class SkuPricePage extends TeaModel {
-        @NameInMap("NextPageToken")
+        @com.aliyun.core.annotation.NameInMap("NextPageToken")
         private String nextPageToken;
 
-        @NameInMap("SkuPriceList")
-        private java.util.List < SkuPriceList> skuPriceList;
+        @com.aliyun.core.annotation.NameInMap("SkuPriceList")
+        private java.util.List<SkuPriceList> skuPriceList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private SkuPricePage(Builder builder) {
@@ -528,7 +605,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return skuPriceList
          */
-        public java.util.List < SkuPriceList> getSkuPriceList() {
+        public java.util.List<SkuPriceList> getSkuPriceList() {
             return this.skuPriceList;
         }
 
@@ -541,11 +618,14 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String nextPageToken; 
-            private java.util.List < SkuPriceList> skuPriceList; 
+            private java.util.List<SkuPriceList> skuPriceList; 
             private Integer totalCount; 
 
             /**
-             * The token that is used to query the next page.
+             * <p>The token that is used to query the next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>080112060a0422020800180022490a470342000000315333303332363436363336333433393636333136333338333733373333333133373336363336323634363336363337333836333636333636313336363433363332</p>
              */
             public Builder nextPageToken(String nextPageToken) {
                 this.nextPageToken = nextPageToken;
@@ -553,15 +633,18 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             }
 
             /**
-             * The SKUs.
+             * <p>The SKUs.</p>
              */
-            public Builder skuPriceList(java.util.List < SkuPriceList> skuPriceList) {
+            public Builder skuPriceList(java.util.List<SkuPriceList> skuPriceList) {
                 this.skuPriceList = skuPriceList;
                 return this;
             }
 
             /**
-             * The total number of SKUs.
+             * <p>The total number of SKUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18732</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -575,8 +658,14 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySkuPriceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySkuPriceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SkuPricePage")
+        @com.aliyun.core.annotation.NameInMap("SkuPricePage")
         private SkuPricePage skuPricePage;
 
         private Data(Builder builder) {
@@ -602,7 +691,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private SkuPricePage skuPricePage; 
 
             /**
-             * The SKUs of the pricing object.
+             * <p>The SKUs of the pricing object.</p>
              */
             public Builder skuPricePage(SkuPricePage skuPricePage) {
                 this.skuPricePage = skuPricePage;

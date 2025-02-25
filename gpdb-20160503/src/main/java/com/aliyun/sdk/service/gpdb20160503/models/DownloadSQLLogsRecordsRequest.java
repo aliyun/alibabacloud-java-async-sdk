@@ -1,84 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadSQLLogsRecordsRequest} extends {@link RequestModel}
  *
  * <p>DownloadSQLLogsRecordsRequest</p>
  */
 public class DownloadSQLLogsRecordsRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("ExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteCost")
     private String executeCost;
 
-    @Query
-    @NameInMap("ExecuteState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteState")
     private String executeState;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MaxExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxExecuteCost")
     private String maxExecuteCost;
 
-    @Query
-    @NameInMap("MinExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinExecuteCost")
     private String minExecuteCost;
 
-    @Query
-    @NameInMap("OperationClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationClass")
     private String operationClass;
 
-    @Query
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 200)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryKeywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKeywords")
     private String queryKeywords;
 
-    @Query
-    @NameInMap("SourceIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIP")
     private String sourceIP;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DownloadSQLLogsRecordsRequest(Builder builder) {
@@ -269,10 +274,14 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -281,7 +290,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -290,7 +302,11 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The end time must be later than the start time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-08T06:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -299,7 +315,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The execution duration of the SQL statement. Unit: seconds.
+         * <p>The execution duration of the SQL statement. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executeCost(String executeCost) {
             this.putQueryParameter("ExecuteCost", executeCost);
@@ -308,11 +327,14 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The execution state of the SQL statement.
-         * <p>
+         * <p>The execution status of the SQL statement.</p>
+         * <ul>
+         * <li><strong>1</strong>: successful.</li>
+         * <li><strong>0</strong>: failed.</li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);
@@ -321,13 +343,16 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The language of the file that contains the query diagnostic information. Valid values:
-         * <p>
+         * <p>The language of the file that contains the query diagnostic information. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
          * 
-         * *   **zh**: simplified Chinese.
-         * *   **en**: English.
-         * *   **ja**: Japanese.
-         * *   **zh-tw**: traditional Chinese.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -336,7 +361,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
+         * <p>The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999</p>
          */
         public Builder maxExecuteCost(String maxExecuteCost) {
             this.putQueryParameter("MaxExecuteCost", maxExecuteCost);
@@ -345,7 +373,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
+         * <p>The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minExecuteCost(String minExecuteCost) {
             this.putQueryParameter("MinExecuteCost", minExecuteCost);
@@ -354,7 +385,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The type of the query language. Example: DQL, DML, or DDL.
+         * <p>The type of the query language. Example: DQL, DML, or DDL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DQL</p>
          */
         public Builder operationClass(String operationClass) {
             this.putQueryParameter("OperationClass", operationClass);
@@ -363,7 +397,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The type of the SQL statement. Example: SELECT.
+         * <p>The type of the SQL statement. Example: SELECT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -372,7 +409,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -381,14 +421,16 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -397,7 +439,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The keywords that are used for query.
+         * <p>The keywords that are used for query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -406,7 +451,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.XX.XX.90</p>
          */
         public Builder sourceIP(String sourceIP) {
             this.putQueryParameter("SourceIP", sourceIP);
@@ -415,7 +463,11 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-07T06:59Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -424,7 +476,10 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

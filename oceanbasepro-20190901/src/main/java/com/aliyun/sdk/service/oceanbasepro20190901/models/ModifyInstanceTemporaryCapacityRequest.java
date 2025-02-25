@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceTemporaryCapacityRequest</p>
  */
 public class ModifyInstanceTemporaryCapacityRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private String diskSize;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
     private ModifyInstanceTemporaryCapacityRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.acceptLanguage = builder.acceptLanguage;
         this.diskSize = builder.diskSize;
         this.instanceId = builder.instanceId;
         this.spec = builder.spec;
@@ -59,6 +63,13 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
     }
 
     /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    /**
      * @return diskSize
      */
     public String getDiskSize() {
@@ -81,6 +92,7 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyInstanceTemporaryCapacityRequest, Builder> {
         private String regionId; 
+        private String acceptLanguage; 
         private String diskSize; 
         private String instanceId; 
         private String spec; 
@@ -92,6 +104,7 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
         private Builder(ModifyInstanceTemporaryCapacityRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.acceptLanguage = request.acceptLanguage;
             this.diskSize = request.diskSize;
             this.instanceId = request.instanceId;
             this.spec = request.spec;
@@ -107,7 +120,16 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
         }
 
         /**
-         * DiskSize.
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putBodyParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * The disk size. Unit: GB.
          */
         public Builder diskSize(String diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
@@ -116,7 +138,7 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -125,7 +147,7 @@ public class ModifyInstanceTemporaryCapacityRequest extends Request {
         }
 
         /**
-         * Spec.
+         * Specification.
          */
         public Builder spec(String spec) {
             this.putBodyParameter("Spec", spec);

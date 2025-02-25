@@ -1,73 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountAuthorityRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountAuthorityRequest</p>
  */
 public class ModifyAccountAuthorityRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AllowDatabases")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowDatabases")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowDatabases;
 
-    @Query
-    @NameInMap("AllowDictionaries")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowDictionaries;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DdlAuthority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdlAuthority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean ddlAuthority;
 
-    @Query
-    @NameInMap("DmlAuthority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DmlAuthority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dmlAuthority;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TotalDatabases")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalDatabases")
     private String totalDatabases;
 
-    @Query
-    @NameInMap("TotalDictionaries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalDictionaries")
     private String totalDictionaries;
 
     private ModifyAccountAuthorityRequest(Builder builder) {
@@ -228,7 +233,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>The name of the database account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -237,7 +246,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDatabases.
+         * <p>The databases to which you want to grant permissions. Separate databases with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1</p>
          */
         public Builder allowDatabases(String allowDatabases) {
             this.putQueryParameter("AllowDatabases", allowDatabases);
@@ -246,7 +259,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDictionaries.
+         * <p>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt1</p>
          */
         public Builder allowDictionaries(String allowDictionaries) {
             this.putQueryParameter("AllowDictionaries", allowDictionaries);
@@ -255,7 +272,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp108z124a8o7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -264,7 +285,15 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DdlAuthority.
+         * <p>Specifies whether to grant DDL permissions to the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: grants DDL permissions to the database account.</li>
+         * <li><strong>false</strong>: does not grant DDL permissions to the database account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.putQueryParameter("DdlAuthority", ddlAuthority);
@@ -273,7 +302,15 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DmlAuthority.
+         * <p>Specifies whether to grant DML permissions to the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong></li>
+         * <li><strong>readonly,modify</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.putQueryParameter("DmlAuthority", dmlAuthority);
@@ -300,7 +337,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -327,7 +367,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * TotalDatabases.
+         * <p>All databases. Separate databases with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1,db2</p>
          */
         public Builder totalDatabases(String totalDatabases) {
             this.putQueryParameter("TotalDatabases", totalDatabases);
@@ -336,7 +379,10 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * TotalDictionaries.
+         * <p>All dictionaries. Separate dictionaries with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt1,dt2</p>
          */
         public Builder totalDictionaries(String totalDictionaries) {
             this.putQueryParameter("TotalDictionaries", totalDictionaries);

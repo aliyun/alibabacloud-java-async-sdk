@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribePolicyDetailsRequest</p>
  */
 public class DescribePolicyDetailsRequest extends Request {
-    @Path
-    @NameInMap("policy_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("policy_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
     private DescribePolicyDetailsRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DescribePolicyDetailsRequest extends Request {
         } 
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKAllowedRepos</p>
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);

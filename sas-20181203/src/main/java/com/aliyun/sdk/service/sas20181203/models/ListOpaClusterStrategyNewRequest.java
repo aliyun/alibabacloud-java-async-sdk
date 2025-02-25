@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOpaClusterStrategyNewRequest} extends {@link RequestModel}
  *
  * <p>ListOpaClusterStrategyNewRequest</p>
  */
 public class ListOpaClusterStrategyNewRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("ImageName")
-    private java.util.List < String > imageName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    private java.util.List<String> imageName;
 
-    @Query
-    @NameInMap("Label")
-    private java.util.List < String > label;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
+    private java.util.List<String> label;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StrategyName")
-    private java.util.List < String > strategyName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
+    private java.util.List<String> strategyName;
 
     private ListOpaClusterStrategyNewRequest(Builder builder) {
         super(builder);
@@ -64,14 +69,14 @@ public class ListOpaClusterStrategyNewRequest extends Request {
     /**
      * @return imageName
      */
-    public java.util.List < String > getImageName() {
+    public java.util.List<String> getImageName() {
         return this.imageName;
     }
 
     /**
      * @return label
      */
-    public java.util.List < String > getLabel() {
+    public java.util.List<String> getLabel() {
         return this.label;
     }
 
@@ -85,16 +90,16 @@ public class ListOpaClusterStrategyNewRequest extends Request {
     /**
      * @return strategyName
      */
-    public java.util.List < String > getStrategyName() {
+    public java.util.List<String> getStrategyName() {
         return this.strategyName;
     }
 
     public static final class Builder extends Request.Builder<ListOpaClusterStrategyNewRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < String > imageName; 
-        private java.util.List < String > label; 
+        private java.util.List<String> imageName; 
+        private java.util.List<String> label; 
         private Integer pageSize; 
-        private java.util.List < String > strategyName; 
+        private java.util.List<String> strategyName; 
 
         private Builder() {
             super();
@@ -110,7 +115,10 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,25 +127,28 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The image names.</p>
          */
-        public Builder imageName(java.util.List < String > imageName) {
+        public Builder imageName(java.util.List<String> imageName) {
             this.putQueryParameter("ImageName", imageName);
             this.imageName = imageName;
             return this;
         }
 
         /**
-         * Label.
+         * <p>The tags that are added to the container.</p>
          */
-        public Builder label(java.util.List < String > label) {
+        public Builder label(java.util.List<String> label) {
             this.putQueryParameter("Label", label);
             this.label = label;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,9 +157,9 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * <p>The rule names.</p>
          */
-        public Builder strategyName(java.util.List < String > strategyName) {
+        public Builder strategyName(java.util.List<String> strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
             this.strategyName = strategyName;
             return this;

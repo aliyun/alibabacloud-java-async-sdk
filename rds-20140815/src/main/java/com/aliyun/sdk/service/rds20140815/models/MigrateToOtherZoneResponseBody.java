@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateToOtherZoneResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateToOtherZoneResponseBody</p>
  */
 public class MigrateToOtherZoneResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private MigrateToOtherZoneResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +78,10 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order. This parameter is returned only when the instance runs MySQL.
+         * <p>The ID of the order. This parameter is returned only when the instance runs MySQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>213341575990728</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +89,10 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

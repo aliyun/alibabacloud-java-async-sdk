@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAutoRenewalAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAutoRenewalAttributeRequest</p>
  */
 public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyInstanceAutoRenewalAttributeRequest(Builder builder) {
@@ -176,13 +176,17 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: disables auto-renewal.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <strong>false</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: enables auto-renewal.
-         * *   **false**: disables auto-renewal.
-         * 
-         * > The default value is **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -191,10 +195,14 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance. Separate multiple instance IDs with commas (,).
-         * <p>
+         * <p>The ID of the instance. Separate multiple instance IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can specify up to 30 instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can specify up to 30 instance IDs.
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -203,10 +211,13 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal period. Valid values: **1** to **12**. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.
-         * <p>
+         * <p>The auto-renewal period. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is available and required only if the **AutoRenew** parameter is set to **true**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);

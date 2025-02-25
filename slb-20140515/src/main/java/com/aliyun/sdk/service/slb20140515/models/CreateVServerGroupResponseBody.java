@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVServerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVServerGroupResponseBody</p>
  */
 public class CreateVServerGroupResponseBody extends TeaModel {
-    @NameInMap("BackendServers")
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
     private BackendServers backendServers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
     private CreateVServerGroupResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         private String vServerGroupId; 
 
         /**
-         * The list of backend servers.
+         * <p>The list of backend servers.</p>
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -70,7 +75,10 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vServer group.
+         * <p>The ID of the vServer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6******</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.vServerGroupId = vServerGroupId;
@@ -91,20 +102,26 @@ public class CreateVServerGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVServerGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVServerGroupResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private BackendServer(Builder builder) {
@@ -166,7 +183,10 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The description of the vServer group.
+             * <p>The description of the vServer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backend server</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +194,10 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used by the backend server.
+             * <p>The port that is used by the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -182,7 +205,10 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance or ENI.
+             * <p>The ID of the ECS instance or ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-hhshhs****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -190,11 +216,15 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong> (default): ECS instance</li>
+             * <li><strong>eni</strong>: elastic network interface (ENI)</li>
+             * <li><strong>eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **ecs**: an ECS instance. This is the default value.
-             * *   **eni**: an ENI.
+             * <strong>example:</strong>
+             * <p>eni</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -202,7 +232,10 @@ public class CreateVServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -216,9 +249,15 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVServerGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVServerGroupResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
-        private java.util.List < BackendServer> backendServer;
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
+        private java.util.List<BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
             this.backendServer = builder.backendServer;
@@ -235,17 +274,17 @@ public class CreateVServerGroupResponseBody extends TeaModel {
         /**
          * @return backendServer
          */
-        public java.util.List < BackendServer> getBackendServer() {
+        public java.util.List<BackendServer> getBackendServer() {
             return this.backendServer;
         }
 
         public static final class Builder {
-            private java.util.List < BackendServer> backendServer; 
+            private java.util.List<BackendServer> backendServer; 
 
             /**
              * BackendServer.
              */
-            public Builder backendServer(java.util.List < BackendServer> backendServer) {
+            public Builder backendServer(java.util.List<BackendServer> backendServer) {
                 this.backendServer = backendServer;
                 return this;
             }

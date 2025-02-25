@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainSubnetListResponseBody</p>
  */
 public class DescribeAntChainSubnetListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAntChainSubnetListResponseBody(Builder builder) {
@@ -192,37 +191,37 @@ public class DescribeAntChainSubnetListResponseBody extends TeaModel {
     } 
 
     public static class BlockchainSubnetList extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("BlockHeight")
+        @com.aliyun.core.annotation.NameInMap("BlockHeight")
         private Long blockHeight;
 
-        @NameInMap("ConsortiumMember")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumMember")
         private Boolean consortiumMember;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Monitor")
+        @com.aliyun.core.annotation.NameInMap("Monitor")
         private Boolean monitor;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeSum")
+        @com.aliyun.core.annotation.NameInMap("NodeSum")
         private Integer nodeSum;
 
-        @NameInMap("Rest")
+        @com.aliyun.core.annotation.NameInMap("Rest")
         private String rest;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransactionSum")
+        @com.aliyun.core.annotation.NameInMap("TransactionSum")
         private Long transactionSum;
 
         private BlockchainSubnetList(Builder builder) {
@@ -433,16 +432,16 @@ public class DescribeAntChainSubnetListResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("BlockchainName")
+        @com.aliyun.core.annotation.NameInMap("BlockchainName")
         private String blockchainName;
 
-        @NameInMap("BlockchainSubnetList")
+        @com.aliyun.core.annotation.NameInMap("BlockchainSubnetList")
         private java.util.List < BlockchainSubnetList> blockchainSubnetList;
 
-        @NameInMap("ConsortiumAdmin")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumAdmin")
         private Boolean consortiumAdmin;
 
         private Result(Builder builder) {

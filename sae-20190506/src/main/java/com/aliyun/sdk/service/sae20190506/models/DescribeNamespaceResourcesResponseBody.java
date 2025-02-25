@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNamespaceResourcesResponseBody</p>
  */
 public class DescribeNamespaceResourcesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeNamespaceResourcesResponseBody(Builder builder) {
@@ -110,13 +115,16 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request failed.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request failed.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -124,7 +132,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -132,11 +140,11 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   The **ErrorCode** parameter is not returned when the request succeeds.
-         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -144,11 +152,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +167,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,11 +178,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the information about resources in the namespace was queried successfully. Valid values:
-         * <p>
+         * <p>Indicates whether the information about resources in the namespace was queried successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that the query was successful.</li>
+         * <li><strong>false</strong>: indicates that the query failed.</li>
+         * </ul>
          * 
-         * *   **true**: indicates that the query was successful.
-         * *   **false**: indicates that the query failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -176,7 +193,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -189,62 +209,68 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespaceResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceResourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppCount")
+        @com.aliyun.core.annotation.NameInMap("AppCount")
         private Long appCount;
 
-        @NameInMap("BelongRegion")
+        @com.aliyun.core.annotation.NameInMap("BelongRegion")
         private String belongRegion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("JumpServerAppId")
+        @com.aliyun.core.annotation.NameInMap("JumpServerAppId")
         private String jumpServerAppId;
 
-        @NameInMap("JumpServerIp")
+        @com.aliyun.core.annotation.NameInMap("JumpServerIp")
         private String jumpServerIp;
 
-        @NameInMap("LastChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderId")
         private String lastChangeOrderId;
 
-        @NameInMap("LastChangeOrderRunning")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderRunning")
         private Boolean lastChangeOrderRunning;
 
-        @NameInMap("LastChangeOrderStatus")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderStatus")
         private String lastChangeOrderStatus;
 
-        @NameInMap("NameSpaceShortId")
+        @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
         private String nameSpaceShortId;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("NotificationExpired")
+        @com.aliyun.core.annotation.NameInMap("NotificationExpired")
         private Boolean notificationExpired;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private Data(Builder builder) {
@@ -432,7 +458,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The number of applications.
+             * <p>The number of applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appCount(Long appCount) {
                 this.appCount = appCount;
@@ -440,7 +469,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the namespace belongs.
+             * <p>The region to which the namespace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder belongRegion(String belongRegion) {
                 this.belongRegion = belongRegion;
@@ -448,7 +480,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>decs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -456,7 +491,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the jump server application.
+             * <p>The ID of the jump server application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ec46468-6b26-4a3c-9f7c-bf88761a****</p>
              */
             public Builder jumpServerAppId(String jumpServerAppId) {
                 this.jumpServerAppId = jumpServerAppId;
@@ -464,7 +502,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the jump server.
+             * <p>The IP address of the jump server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.78.XXX.XX</p>
              */
             public Builder jumpServerIp(String jumpServerIp) {
                 this.jumpServerIp = jumpServerIp;
@@ -472,7 +513,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the change order.
+             * <p>The ID of the change order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>afedb3c4-63f8-4a3d-aaa3-2c30363f****</p>
              */
             public Builder lastChangeOrderId(String lastChangeOrderId) {
                 this.lastChangeOrderId = lastChangeOrderId;
@@ -480,11 +524,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a change order is being executed in the namespace. Valid values:
-             * <p>
+             * <p>Indicates whether a change order is being executed in the namespace. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: indicates that a change order is being executed in the namespace.</li>
+             * <li><strong>false</strong>: indicates that no change orders are being executed in the namespace.</li>
+             * </ul>
              * 
-             * *   **true**: indicates that a change order is being executed in the namespace.
-             * *   **false**: indicates that no change orders are being executed in the namespace.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder lastChangeOrderRunning(Boolean lastChangeOrderRunning) {
                 this.lastChangeOrderRunning = lastChangeOrderRunning;
@@ -492,19 +539,22 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the latest change order. Valid values:
-             * <p>
+             * <p>The status of the latest change order. Valid values:</p>
+             * <ul>
+             * <li><strong>READY</strong>: The change order is ready.</li>
+             * <li><strong>RUNNING</strong>: The change order is being executed.</li>
+             * <li><strong>SUCCESS</strong>: The change order was executed.</li>
+             * <li><strong>FAIL</strong>: The change order could not be executed.</li>
+             * <li><strong>ABORT</strong>: The change order was terminated.</li>
+             * <li><strong>WAIT_BATCH_CONFIRM</strong>: The change order is pending execution. You must manually confirm the release batch.</li>
+             * <li><strong>AUTO_BATCH_WAIT</strong>: The change order is pending execution. SAE will automatically confirm the release batch.</li>
+             * <li><strong>SYSTEM_FAIL</strong>: A system exception occurred.</li>
+             * <li><strong>WAIT_APPROVAL</strong>: The change order is pending approval.</li>
+             * <li><strong>APPROVED</strong>: The change order is approved and is pending execution.</li>
+             * </ul>
              * 
-             * *   **READY**: The change order is ready.
-             * *   **RUNNING**: The change order is being executed.
-             * *   **SUCCESS**: The change order was executed.
-             * *   **FAIL**: The change order could not be executed.
-             * *   **ABORT**: The change order was terminated.
-             * *   **WAIT_BATCH_CONFIRM**: The change order is pending execution. You must manually confirm the release batch.
-             * *   **AUTO_BATCH_WAIT**: The change order is pending execution. SAE will automatically confirm the release batch.
-             * *   **SYSTEM_FAIL**: A system exception occurred.
-             * *   **WAIT_APPROVAL**: The change order is pending approval.
-             * *   **APPROVED**: The change order is approved and is pending execution.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder lastChangeOrderStatus(String lastChangeOrderStatus) {
                 this.lastChangeOrderStatus = lastChangeOrderStatus;
@@ -520,7 +570,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shangha:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -528,7 +581,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -536,11 +592,14 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the notification of a change order is expired. Valid values:
-             * <p>
+             * <p>Indicates whether the notification of a change order is expired. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: indicates that the notification is expired.</li>
+             * <li><strong>false</strong>: indicates that the notification is not expired.</li>
+             * </ul>
              * 
-             * *   **true**: indicates that the notification is expired.
-             * *   **false**: indicates that the notification is not expired.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder notificationExpired(Boolean notificationExpired) {
                 this.notificationExpired = notificationExpired;
@@ -548,7 +607,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-wz969ngg2e49q5i4****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -556,7 +618,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant in the SAE namespace.
+             * <p>The ID of the tenant in the SAE namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>838cad95-973f-48fe-830b-2a8546d7****</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -564,7 +629,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -572,7 +640,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze559r1z1bpwqxwp****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -580,7 +651,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vSwitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -588,7 +662,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze0i263cnn311nvj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -596,7 +673,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

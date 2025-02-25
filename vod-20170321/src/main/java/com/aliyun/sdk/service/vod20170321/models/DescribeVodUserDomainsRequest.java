@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodUserDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodUserDomainsRequest</p>
  */
 public class DescribeVodUserDomainsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("DomainSearchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainSearchType")
     private String domainSearchType;
 
-    @Query
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private String domainStatus;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeVodUserDomainsRequest(Builder builder) {
         super(builder);
@@ -122,7 +127,7 @@ public class DescribeVodUserDomainsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -134,7 +139,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -153,7 +158,10 @@ public class DescribeVodUserDomainsRequest extends Request {
         } 
 
         /**
-         * The domain name. The value of this parameter is used as a filter condition for a fuzzy match.
+         * <p>The domain name. The value of this parameter is used as a filter condition for a fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -162,12 +170,16 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The search method. Valid values:
-         * <p>
-         * *   **fuzzy_match**: fuzzy match. This is the default value.
-         * *   **pre_match**: prefix match.
-         * *   **suf_match**: suffix match.
-         * *   **full_match**: exact match.
+         * <p>The search method. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy_match</strong> (default): fuzzy match.</li>
+         * <li><strong>pre_match</strong>: prefix match</li>
+         * <li><strong>suf_match</strong>: suffix match</li>
+         * <li><strong>full_match</strong>: exact match</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy_match</p>
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -176,14 +188,18 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:
-         * <p>
-         * *   **online**: indicates that the domain name is enabled.
-         * *   **offline**: indicates that the domain name is disabled.
-         * *   **configuring**: indicates that the domain name is being configured.
-         * *   **configure_failed**: indicates that the domain name failed to be configured.
-         * *   **checking**: indicates that the domain name is under review.
-         * *   **check_failed**: indicates that the domain name failed the review.
+         * <p>The status of the domain name. Value values:</p>
+         * <ul>
+         * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
+         * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
+         * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
+         * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
+         * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
+         * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -201,7 +217,10 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +229,10 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,9 +250,9 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -243,11 +265,17 @@ public class DescribeVodUserDomainsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodUserDomainsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVodUserDomainsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -282,10 +310,11 @@ public class DescribeVodUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: **1** to **20**.
-             * <p>
+             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <p>By default, all tag keys are queried.</p>
              * 
-             * If you do not specify this parameter, all tag keys are queried.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -293,10 +322,11 @@ public class DescribeVodUserDomainsRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: **1** to **20**.
-             * <p>
+             * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+             * <p>By default, all tag values are queried.</p>
              * 
-             * If you do not specify this parameter, all tag values are queried.
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

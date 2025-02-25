@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExportImageStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExportImageStatusResponseBody</p>
  */
 public class DescribeExportImageStatusResponseBody extends TeaModel {
-    @NameInMap("ImageExportStatus")
+    @com.aliyun.core.annotation.NameInMap("ImageExportStatus")
     private String imageExportStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeExportImageStatusResponseBody(Builder builder) {
@@ -50,7 +55,16 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageExportStatus.
+         * <p>The export status of the image. Valid values:</p>
+         * <ul>
+         * <li>Exporting</li>
+         * <li>Exported</li>
+         * <li>ExportError</li>
+         * <li>Unexported</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Exporting</p>
          */
         public Builder imageExportStatus(String imageExportStatus) {
             this.imageExportStatus = imageExportStatus;
@@ -58,7 +72,10 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14BBB3A0-3DBE-54F5-AEC8-01D3F6B1EBE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

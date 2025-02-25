@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkitemAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkitemAttachmentsResponseBody</p>
  */
 public class ListWorkitemAttachmentsResponseBody extends TeaModel {
-    @NameInMap("attachments")
-    private java.util.List < Attachments> attachments;
+    @com.aliyun.core.annotation.NameInMap("attachments")
+    private java.util.List<Attachments> attachments;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListWorkitemAttachmentsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     /**
      * @return attachments
      */
-    public java.util.List < Attachments> getAttachments() {
+    public java.util.List<Attachments> getAttachments() {
         return this.attachments;
     }
 
@@ -79,7 +84,7 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Attachments> attachments; 
+        private java.util.List<Attachments> attachments; 
         private String errorCode; 
         private String errorMsg; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
         /**
          * attachments.
          */
-        public Builder attachments(java.util.List < Attachments> attachments) {
+        public Builder attachments(java.util.List<Attachments> attachments) {
             this.attachments = attachments;
             return this;
         }
@@ -110,7 +115,10 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,26 +139,32 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkitemAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkitemAttachmentsResponseBody</p>
+     */
     public static class Attachments extends TeaModel {
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("fileIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fileIdentifier")
         private String fileIdentifier;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileSuffix")
+        @com.aliyun.core.annotation.NameInMap("fileSuffix")
         private String fileSuffix;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private String size;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Attachments(Builder builder) {

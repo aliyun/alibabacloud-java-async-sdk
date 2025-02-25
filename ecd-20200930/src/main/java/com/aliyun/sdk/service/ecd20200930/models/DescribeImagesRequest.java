@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeImagesRequest</p>
  */
 public class DescribeImagesRequest extends Request {
-    @Query
-    @NameInMap("DesktopInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopInstanceType")
     private String desktopInstanceType;
 
-    @Query
-    @NameInMap("FotaVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FotaVersion")
     private String fotaVersion;
 
-    @Query
-    @NameInMap("GpuCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuCategory")
     private Boolean gpuCategory;
 
-    @Query
-    @NameInMap("GpuDriverVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
     private String gpuDriverVersion;
 
-    @Query
-    @NameInMap("ImageId")
-    private java.util.List < String > imageId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private java.util.List<String> imageId;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("ImageStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageStatus")
     private String imageStatus;
 
-    @Query
-    @NameInMap("ImageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageType")
     private String imageType;
 
-    @Query
-    @NameInMap("LanguageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LanguageType")
     private String languageType;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SessionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionType")
     private String sessionType;
 
     private DescribeImagesRequest(Builder builder) {
@@ -137,7 +142,7 @@ public class DescribeImagesRequest extends Request {
     /**
      * @return imageId
      */
-    public java.util.List < String > getImageId() {
+    public java.util.List<String> getImageId() {
         return this.imageId;
     }
 
@@ -216,7 +221,7 @@ public class DescribeImagesRequest extends Request {
         private String fotaVersion; 
         private Boolean gpuCategory; 
         private String gpuDriverVersion; 
-        private java.util.List < String > imageId; 
+        private java.util.List<String> imageId; 
         private String imageName; 
         private String imageStatus; 
         private String imageType; 
@@ -252,7 +257,10 @@ public class DescribeImagesRequest extends Request {
         } 
 
         /**
-         * The cloud desktop type. You can call the [DescribeBundles](~~188884~~) operation to query the available cloud desktop types.
+         * <p>The instance type of the cloud computer. You can call the <a href="https://help.aliyun.com/document_detail/436816.html">DescribeDesktopTypes</a> operation to obtain the parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd.graphics.xlarge</p>
          */
         public Builder desktopInstanceType(String desktopInstanceType) {
             this.putQueryParameter("DesktopInstanceType", desktopInstanceType);
@@ -261,7 +269,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * FotaVersion.
+         * <p>The image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.3-R-20220616.133609</p>
          */
         public Builder fotaVersion(String fotaVersion) {
             this.putQueryParameter("FotaVersion", fotaVersion);
@@ -270,7 +281,26 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Specifies whether the image is a GPU-accelerated image.
+         * <p>Specifies whether the images are GPU-accelerated images.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder gpuCategory(Boolean gpuCategory) {
             this.putQueryParameter("GpuCategory", gpuCategory);
@@ -279,7 +309,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The version of the GPU driver.
+         * <p>The version of the GPU driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>417.22</p>
          */
         public Builder gpuDriverVersion(String gpuDriverVersion) {
             this.putQueryParameter("GpuDriverVersion", gpuDriverVersion);
@@ -288,16 +321,22 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The IDs of the images. You can specify one or more image IDs.
+         * <p>The IDs of the images. You can specify one or more image IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-gx2x1dhsmusr2****</p>
          */
-        public Builder imageId(java.util.List < String > imageId) {
+        public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
             return this;
         }
 
         /**
-         * ImageName.
+         * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Win_01</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -306,7 +345,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The state of the image.
+         * <p>The state of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder imageStatus(String imageStatus) {
             this.putQueryParameter("ImageStatus", imageStatus);
@@ -315,7 +357,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The type of the image.
+         * <p>The type of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -324,7 +369,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The language of the OS.
+         * <p>The language of the OS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder languageType(String languageType) {
             this.putQueryParameter("LanguageType", languageType);
@@ -333,11 +381,14 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -346,7 +397,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If you do not specify this parameter, all results are returned.
+         * <p>The token that determines the start point of the next query. If you do not specify this parameter, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -355,7 +409,26 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The type of the OS. Default value: `null`.
+         * <p>The type of the operating system of the images. Default value: <code>null</code>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Linux</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -364,7 +437,15 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The type of the protocol.
+         * <p>The protocol type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HDX: High-definition Experience (HDX) protocol</li>
+         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -373,7 +454,11 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -382,7 +467,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The session type.
+         * <p>The session type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SINGLE_SESSION</p>
          */
         public Builder sessionType(String sessionType) {
             this.putQueryParameter("SessionType", sessionType);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebhookContactsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebhookContactsResponseBody</p>
  */
 public class DescribeWebhookContactsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebhookContactsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned objects.
+         * <p>The returned objects.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +63,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebhookContactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebhookContactsResponseBody</p>
+     */
     public static class Webhook extends TeaModel {
-        @NameInMap("BizHeaders")
-        private java.util.Map < String, ? > bizHeaders;
+        @com.aliyun.core.annotation.NameInMap("BizHeaders")
+        private java.util.Map<String, ?> bizHeaders;
 
-        @NameInMap("BizParams")
-        private java.util.Map < String, ? > bizParams;
+        @com.aliyun.core.annotation.NameInMap("BizParams")
+        private java.util.Map<String, ?> bizParams;
 
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("RecoverBody")
+        @com.aliyun.core.annotation.NameInMap("RecoverBody")
         private String recoverBody;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Webhook(Builder builder) {
@@ -110,14 +124,14 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         /**
          * @return bizHeaders
          */
-        public java.util.Map < String, ? > getBizHeaders() {
+        public java.util.Map<String, ?> getBizHeaders() {
             return this.bizHeaders;
         }
 
         /**
          * @return bizParams
          */
-        public java.util.Map < String, ? > getBizParams() {
+        public java.util.Map<String, ?> getBizParams() {
             return this.bizParams;
         }
 
@@ -150,31 +164,40 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > bizHeaders; 
-            private java.util.Map < String, ? > bizParams; 
+            private java.util.Map<String, ?> bizHeaders; 
+            private java.util.Map<String, ?> bizParams; 
             private String body; 
             private String method; 
             private String recoverBody; 
             private String url; 
 
             /**
-             * The header of the HTTP request.
+             * <p>The header of the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Content-Type&quot;:&quot;application/json&quot;}]</p>
              */
-            public Builder bizHeaders(java.util.Map < String, ? > bizHeaders) {
+            public Builder bizHeaders(java.util.Map<String, ?> bizHeaders) {
                 this.bizHeaders = bizHeaders;
                 return this;
             }
 
             /**
-             * The parameters in the HTTP request.
+             * <p>The parameters in the HTTP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;content:&quot;mike&quot;}]</p>
              */
-            public Builder bizParams(java.util.Map < String, ? > bizParams) {
+            public Builder bizParams(java.util.Map<String, ?> bizParams) {
                 this.bizParams = bizParams;
                 return this;
             }
 
             /**
-             * The alert notification template.
+             * <p>The alert notification template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -182,11 +205,14 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method.
-             * <p>
+             * <p>The HTTP request method.</p>
+             * <ul>
+             * <li>Get</li>
+             * <li>Post</li>
+             * </ul>
              * 
-             * *   Get
-             * *   Post
+             * <strong>example:</strong>
+             * <p>Post</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -194,7 +220,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The notification template for clearing alerts.
+             * <p>The notification template for clearing alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
              */
             public Builder recoverBody(String recoverBody) {
                 this.recoverBody = recoverBody;
@@ -202,7 +231,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the request method.
+             * <p>The URL of the request method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -216,14 +248,20 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebhookContactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebhookContactsResponseBody</p>
+     */
     public static class WebhookContacts extends TeaModel {
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private Webhook webhook;
 
-        @NameInMap("WebhookId")
+        @com.aliyun.core.annotation.NameInMap("WebhookId")
         private Float webhookId;
 
-        @NameInMap("WebhookName")
+        @com.aliyun.core.annotation.NameInMap("WebhookName")
         private String webhookName;
 
         private WebhookContacts(Builder builder) {
@@ -267,7 +305,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private String webhookName; 
 
             /**
-             * The details of the webhook alert contact.
+             * <p>The details of the webhook alert contact.</p>
              */
             public Builder webhook(Webhook webhook) {
                 this.webhook = webhook;
@@ -275,7 +313,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the webhook alert contact.
+             * <p>The ID of the webhook alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder webhookId(Float webhookId) {
                 this.webhookId = webhookId;
@@ -283,7 +324,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the webhook alert contact.
+             * <p>The name of the webhook alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Webhook name</p>
              */
             public Builder webhookName(String webhookName) {
                 this.webhookName = webhookName;
@@ -297,18 +341,24 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebhookContactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebhookContactsResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("WebhookContacts")
-        private java.util.List < WebhookContacts> webhookContacts;
+        @com.aliyun.core.annotation.NameInMap("WebhookContacts")
+        private java.util.List<WebhookContacts> webhookContacts;
 
         private PageBean(Builder builder) {
             this.page = builder.page;
@@ -349,7 +399,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         /**
          * @return webhookContacts
          */
-        public java.util.List < WebhookContacts> getWebhookContacts() {
+        public java.util.List<WebhookContacts> getWebhookContacts() {
             return this.webhookContacts;
         }
 
@@ -357,10 +407,13 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
-            private java.util.List < WebhookContacts> webhookContacts; 
+            private java.util.List<WebhookContacts> webhookContacts; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -368,7 +421,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alert contacts displayed on each page.
+             * <p>The number of alert contacts displayed on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -376,7 +432,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alert contacts.
+             * <p>The total number of alert contacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -384,9 +443,9 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of webhook alert contacts.
+             * <p>The list of webhook alert contacts.</p>
              */
-            public Builder webhookContacts(java.util.List < WebhookContacts> webhookContacts) {
+            public Builder webhookContacts(java.util.List<WebhookContacts> webhookContacts) {
                 this.webhookContacts = webhookContacts;
                 return this;
             }

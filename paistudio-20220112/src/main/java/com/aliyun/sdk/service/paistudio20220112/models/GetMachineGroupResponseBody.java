@@ -1,67 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMachineGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetMachineGroupResponseBody</p>
  */
 public class GetMachineGroupResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("DefaultDriver")
+    @com.aliyun.core.annotation.NameInMap("DefaultDriver")
     private String defaultDriver;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @NameInMap("EcsType")
+    @com.aliyun.core.annotation.NameInMap("EcsType")
     private String ecsType;
 
-    @NameInMap("GmtCreated")
+    @com.aliyun.core.annotation.NameInMap("GmtCreated")
     private String gmtCreated;
 
-    @NameInMap("GmtExpired")
+    @com.aliyun.core.annotation.NameInMap("GmtExpired")
     private String gmtExpired;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("GmtStarted")
+    @com.aliyun.core.annotation.NameInMap("GmtStarted")
     private String gmtStarted;
 
-    @NameInMap("MachineGroupID")
+    @com.aliyun.core.annotation.NameInMap("MachineGroupID")
     private String machineGroupID;
 
-    @NameInMap("OrderID")
+    @com.aliyun.core.annotation.NameInMap("OrderID")
     private String orderID;
 
-    @NameInMap("PAIResourceID")
+    @com.aliyun.core.annotation.NameInMap("OrderInstanceId")
+    private String orderInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("PAIResourceID")
     private String PAIResourceID;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @NameInMap("RegionID")
+    @com.aliyun.core.annotation.NameInMap("RegionID")
     private String regionID;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportedDrivers")
-    private java.util.List < String > supportedDrivers;
+    @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
+    private java.util.List<String> supportedDrivers;
 
     private GetMachineGroupResponseBody(Builder builder) {
         this.count = builder.count;
@@ -74,6 +82,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         this.gmtStarted = builder.gmtStarted;
         this.machineGroupID = builder.machineGroupID;
         this.orderID = builder.orderID;
+        this.orderInstanceId = builder.orderInstanceId;
         this.PAIResourceID = builder.PAIResourceID;
         this.payType = builder.payType;
         this.pricingCycle = builder.pricingCycle;
@@ -162,6 +171,13 @@ public class GetMachineGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderInstanceId
+     */
+    public String getOrderInstanceId() {
+        return this.orderInstanceId;
+    }
+
+    /**
      * @return PAIResourceID
      */
     public String getPAIResourceID() {
@@ -206,7 +222,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
     /**
      * @return supportedDrivers
      */
-    public java.util.List < String > getSupportedDrivers() {
+    public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
     }
 
@@ -221,13 +237,14 @@ public class GetMachineGroupResponseBody extends TeaModel {
         private String gmtStarted; 
         private String machineGroupID; 
         private String orderID; 
+        private String orderInstanceId; 
         private String PAIResourceID; 
         private String payType; 
         private String pricingCycle; 
         private String regionID; 
         private String requestId; 
         private String status; 
-        private java.util.List < String > supportedDrivers; 
+        private java.util.List<String> supportedDrivers; 
 
         /**
          * Count.
@@ -310,6 +327,14 @@ public class GetMachineGroupResponseBody extends TeaModel {
         }
 
         /**
+         * OrderInstanceId.
+         */
+        public Builder orderInstanceId(String orderInstanceId) {
+            this.orderInstanceId = orderInstanceId;
+            return this;
+        }
+
+        /**
          * PAIResourceID.
          */
         public Builder PAIResourceID(String PAIResourceID) {
@@ -360,7 +385,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         /**
          * SupportedDrivers.
          */
-        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+        public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
             return this;
         }

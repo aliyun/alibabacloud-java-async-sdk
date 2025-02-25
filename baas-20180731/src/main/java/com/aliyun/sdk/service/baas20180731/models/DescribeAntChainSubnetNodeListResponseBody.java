@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainSubnetNodeListResponseBody</p>
  */
 public class DescribeAntChainSubnetNodeListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAntChainSubnetNodeListResponseBody(Builder builder) {
@@ -192,34 +191,34 @@ public class DescribeAntChainSubnetNodeListResponseBody extends TeaModel {
     } 
 
     public static class ChainNodeInfoList extends TeaModel {
-        @NameInMap("DiskTotal")
+        @com.aliyun.core.annotation.NameInMap("DiskTotal")
         private String diskTotal;
 
-        @NameInMap("DiskUse")
+        @com.aliyun.core.annotation.NameInMap("DiskUse")
         private String diskUse;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodePort")
+        @com.aliyun.core.annotation.NameInMap("NodePort")
         private String nodePort;
 
-        @NameInMap("NodeSource")
+        @com.aliyun.core.annotation.NameInMap("NodeSource")
         private String nodeSource;
 
-        @NameInMap("NodeState")
+        @com.aliyun.core.annotation.NameInMap("NodeState")
         private String nodeState;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("PublicKey")
+        @com.aliyun.core.annotation.NameInMap("PublicKey")
         private String publicKey;
 
         private ChainNodeInfoList(Builder builder) {
@@ -413,10 +412,10 @@ public class DescribeAntChainSubnetNodeListResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ChainNodeInfoList")
+        @com.aliyun.core.annotation.NameInMap("ChainNodeInfoList")
         private java.util.List < ChainNodeInfoList> chainNodeInfoList;
 
-        @NameInMap("ConsortiumAdmin")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumAdmin")
         private Boolean consortiumAdmin;
 
         private Result(Builder builder) {

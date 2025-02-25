@@ -1,72 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateResponseBody</p>
  */
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
     private String changeSetId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Interface")
+    @com.aliyun.core.annotation.NameInMap("Interface")
     private String _interface;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < Permissions> permissions;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
     private String stackGroupName;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("TemplateARN")
+    @com.aliyun.core.annotation.NameInMap("TemplateARN")
     private String templateARN;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private GetTemplateResponseBody(Builder builder) {
@@ -254,7 +254,10 @@ public class GetTemplateResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The ID of the change set. This parameter is returned only if you specify ChangeSetId.
+         * <p>The ID of the change set. This parameter is returned only if you specify ChangeSetId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e85abe0c-6528-43fb-ae93-fdf8de22****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.changeSetId = changeSetId;
@@ -262,11 +265,16 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the template was created. This parameter is returned only if you specify TemplateId.
-         * <p>
+         * <p>The time when the template was created. This parameter is returned only if you specify TemplateId.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.</li>
+         * <li>If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > - If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.
-         * > - If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.
+         * <strong>example:</strong>
+         * <p>2020-11-18T08:49:26</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -274,7 +282,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the template. This parameter is returned only if you specify TemplateId.
+         * <p>The description of the template. This parameter is returned only if you specify TemplateId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROS template for create ECS instance.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -282,7 +293,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the web UI in the ROS console.
+         * <p>The description of the web UI in the ROS console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder _interface(String _interface) {
             this._interface = _interface;
@@ -290,7 +304,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the template belongs. This parameter is returned only if you specify TemplateId.
+         * <p>The ID of the Alibaba Cloud account to which the template belongs. This parameter is returned only if you specify TemplateId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -298,11 +315,13 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the sharing status of the template. This parameter is returned only if you specify TemplateId and set IncludePermission to Enabled.
-         * <p>
-         * 
-         * > - If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.
-         * > - If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.
+         * <p>Details of the sharing status of the template. This parameter is returned only if you specify TemplateId and set IncludePermission to Enabled.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.</li>
+         * <li>If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.</li>
+         * </ul>
+         * </blockquote>
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
             this.permissions = permissions;
@@ -310,7 +329,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the stack or stack group that uses the template. This parameter is returned only if you specify StackId, ChangeSetId, or StackGroupName.
+         * <p>The region ID of the stack or stack group that uses the template. This parameter is returned only if you specify StackId, ChangeSetId, or StackGroupName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -318,7 +340,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -326,7 +351,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -334,13 +362,15 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The sharing type of the template. This parameter is returned only if you specify TemplateId.
-         * <p>
+         * <p>The sharing type of the template. This parameter is returned only if you specify TemplateId.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Private: The template belongs to the template owner.</li>
+         * <li>Shared: The template is shared by other users.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Private: The template belongs to the template owner.
-         * *   Shared: The template is shared by other users.
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder shareType(String shareType) {
             this.shareType = shareType;
@@ -348,7 +378,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the stack group. This parameter is returned only if you specify StackGroupName.
+         * <p>The name of the stack group. This parameter is returned only if you specify StackGroupName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.stackGroupName = stackGroupName;
@@ -356,7 +389,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack. This parameter is returned only if you specify StackId.
+         * <p>The ID of the stack. This parameter is returned only if you specify StackId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -364,7 +400,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The tags of the template.
+         * <p>The tags of the template.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -372,7 +408,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the template. This parameter is returned only if you specify TemplateId.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the template. This parameter is returned only if you specify TemplateId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ros:<em>:151266687691</em><em><strong>:template/a52f81be-496f-4e1c-a286-8852ab54</strong></em>*</p>
          */
         public Builder templateARN(String templateARN) {
             this.templateARN = templateARN;
@@ -380,7 +419,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the template.
+         * <p>The content of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;
@@ -388,10 +430,11 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the template. This parameter is returned only if you specify TemplateId.
-         * <p>
+         * <p>The ID of the template. This parameter is returned only if you specify TemplateId.</p>
+         * <p>If the template is a shared template, the value of this parameter is the same as the value of TemplateARN.</p>
          * 
-         * If the template is a shared template, the value of this parameter is the same as the value of TemplateARN.
+         * <strong>example:</strong>
+         * <p>a52f81be-496f-4e1c-a286-8852ab54****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -399,11 +442,16 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the template. This parameter is returned only if you specify TemplateId.
-         * <p>
+         * <p>The name of the template. This parameter is returned only if you specify TemplateId.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</li>
+         * <li>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > -   If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.
-         * > -  If you not specify TemplateVersion, the name of the template whose version is the default version is returned.
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -411,11 +459,11 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the template. This parameter is returned only if you specify TemplateId.\
-         * <p>
-         * If TemplateVersion is not specified or does not take effect, the default version is used.
+         * <p>The version of the template. This parameter is returned only if you specify TemplateId.<br>If TemplateVersion is not specified or does not take effect, the default version is used.</p>
+         * <p>If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.</p>
          * 
-         * If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.templateVersion = templateVersion;
@@ -423,11 +471,16 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the template was last updated. This parameter is returned only if you specify TemplateId.
-         * <p>
+         * <p>The time when the template was last updated. This parameter is returned only if you specify TemplateId.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.</li>
+         * <li>If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > - If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.
-         * > - If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.
+         * <strong>example:</strong>
+         * <p>2020-12-07T06:11:48</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -440,20 +493,26 @@ public class GetTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateResponseBody</p>
+     */
     public static class Permissions extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("ShareOption")
+        @com.aliyun.core.annotation.NameInMap("ShareOption")
         private String shareOption;
 
-        @NameInMap("ShareSource")
+        @com.aliyun.core.annotation.NameInMap("ShareSource")
         private String shareSource;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("VersionOption")
+        @com.aliyun.core.annotation.NameInMap("VersionOption")
         private String versionOption;
 
         private Permissions(Builder builder) {
@@ -515,7 +574,10 @@ public class GetTemplateResponseBody extends TeaModel {
             private String versionOption; 
 
             /**
-             * The ID of the Alibaba Cloud account with which the template is shared.
+             * <p>The ID of the Alibaba Cloud account with which the template is shared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>142437958638****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -523,10 +585,11 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The sharing option.
-             * <p>
+             * <p>The sharing option.</p>
+             * <p>The value ShareToAccounts indicates that the template is shared with one or more Alibaba Cloud accounts.</p>
              * 
-             * The value ShareToAccounts indicates that the template is shared with one or more Alibaba Cloud accounts.
+             * <strong>example:</strong>
+             * <p>ShareToAccounts</p>
              */
             public Builder shareOption(String shareOption) {
                 this.shareOption = shareOption;
@@ -534,14 +597,21 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The service that is used for resource sharing. Valid values:
-             * <p>
+             * <p>The service that is used for resource sharing. Valid values:</p>
+             * <ul>
+             * <li>ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.</li>
+             * <li>ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.<blockquote>
+             * <ul>
+             * <li>The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.</li>
+             * <li>The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.</li>
+             * <li>The shared resources from the resource directory can overwrite the shared resources from ROS.</li>
+             * </ul>
+             * </blockquote>
+             * </li>
+             * </ul>
              * 
-             * - ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.
-             * - ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.
-             * > -  The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.
-             * > -  The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.
-             * > -  The shared resources from the resource directory can overwrite the shared resources from ROS.
+             * <strong>example:</strong>
+             * <p>ROS</p>
              */
             public Builder shareSource(String shareSource) {
                 this.shareSource = shareSource;
@@ -549,10 +619,11 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts and set VersionOption to Specified or Current.
-             * <p>
+             * <p>The version of the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts and set VersionOption to Specified or Current.</p>
+             * <p>Valid values: v1 to v100.</p>
              * 
-             * Valid values: v1 to v100.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -560,15 +631,17 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The version option for the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts.
-             * <p>
+             * <p>The version option for the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AllVersions: All template versions are shared.</li>
+             * <li>Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.</li>
+             * <li>Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.</li>
+             * <li>Specified: Only the specified template version is shared.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   AllVersions: All template versions are shared.
-             * *   Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.
-             * *   Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.
-             * *   Specified: Only the specified template version is shared.
+             * <strong>example:</strong>
+             * <p>AllVersions</p>
              */
             public Builder versionOption(String versionOption) {
                 this.versionOption = versionOption;
@@ -582,11 +655,17 @@ public class GetTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -621,7 +700,10 @@ public class GetTemplateResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the template.
+             * <p>The tag key of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -629,7 +711,10 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the template.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

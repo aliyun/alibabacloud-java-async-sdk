@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchBindPurchasedDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>BatchBindPurchasedDevicesResponseBody</p>
  */
 public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
-    private java.util.List < Results> results;
+    @com.aliyun.core.annotation.NameInMap("Results")
+    private java.util.List<Results> results;
 
     private BatchBindPurchasedDevicesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         /**
          * Results.
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -71,17 +76,23 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchBindPurchasedDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchBindPurchasedDevicesResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private Results(Builder builder) {

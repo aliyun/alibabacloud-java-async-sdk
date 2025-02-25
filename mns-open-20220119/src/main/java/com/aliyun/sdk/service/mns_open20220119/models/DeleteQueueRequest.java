@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQueueRequest} extends {@link RequestModel}
  *
  * <p>DeleteQueueRequest</p>
  */
 public class DeleteQueueRequest extends Request {
-    @Query
-    @NameInMap("QueueName")
-    @Validation(required = true)
-    private String queueName;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String queueName;
 
     private DeleteQueueRequest(Builder builder) {
         super(builder);
-        this.queueName = builder.queueName;
         this.regionId = builder.regionId;
+        this.queueName = builder.queueName;
     }
 
     public static Builder builder() {
@@ -41,22 +46,22 @@ public class DeleteQueueRequest extends Request {
     }
 
     /**
-     * @return queueName
-     */
-    public String getQueueName() {
-        return this.queueName;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return queueName
+     */
+    public String getQueueName() {
+        return this.queueName;
+    }
+
     public static final class Builder extends Request.Builder<DeleteQueueRequest, Builder> {
-        private String queueName; 
         private String regionId; 
+        private String queueName; 
 
         private Builder() {
             super();
@@ -64,18 +69,9 @@ public class DeleteQueueRequest extends Request {
 
         private Builder(DeleteQueueRequest request) {
             super(request);
-            this.queueName = request.queueName;
             this.regionId = request.regionId;
+            this.queueName = request.queueName;
         } 
-
-        /**
-         * QueueName.
-         */
-        public Builder queueName(String queueName) {
-            this.putQueryParameter("QueueName", queueName);
-            this.queueName = queueName;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +79,19 @@ public class DeleteQueueRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-testAccMNSQueue-525478433321945943</p>
+         */
+        public Builder queueName(String queueName) {
+            this.putQueryParameter("QueueName", queueName);
+            this.queueName = queueName;
             return this;
         }
 

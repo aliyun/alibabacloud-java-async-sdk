@@ -1,80 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageCachesRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageCachesRequest</p>
  */
 public class DescribeImageCachesRequest extends Request {
-    @Query
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
-    @Query
-    @NameInMap("ImageCacheId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageCacheId")
     private String imageCacheId;
 
-    @Query
-    @NameInMap("ImageCacheName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageCacheName")
     private String imageCacheName;
 
-    @Query
-    @NameInMap("ImageFullMatch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFullMatch")
     private Boolean imageFullMatch;
 
-    @Query
-    @NameInMap("ImageMatchCountRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageMatchCountRequest")
     private Integer imageMatchCountRequest;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("MatchImage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchImage")
     private java.util.List < String > matchImage;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeImageCachesRequest(Builder builder) {
@@ -265,7 +265,10 @@ public class DescribeImageCachesRequest extends Request {
         } 
 
         /**
-         * The container images.
+         * <p>The container images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -274,7 +277,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The IDs of the image caches.
+         * <p>The IDs of the image caches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-bp195erqe9o2pb09****</p>
          */
         public Builder imageCacheId(String imageCacheId) {
             this.putQueryParameter("ImageCacheId", imageCacheId);
@@ -283,7 +289,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The names of the image caches.
+         * <p>The names of the image caches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testcache</p>
          */
         public Builder imageCacheName(String imageCacheName) {
             this.putQueryParameter("ImageCacheName", imageCacheName);
@@ -292,9 +301,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * Specifies whether the image layers of the image caches must contain all image layers of the container image.\
-         * <p>
-         * If you configure MatchImage, you can configure this parameter to further filter query results.
+         * <p>Specifies whether the image layers of the image caches must contain all image layers of the container image.<br>If you configure MatchImage, you can configure this parameter to further filter query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder imageFullMatch(Boolean imageFullMatch) {
             this.putQueryParameter("ImageFullMatch", imageFullMatch);
@@ -303,9 +313,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The quantity of image caches whose image layers contain all image layers of the container image.\
-         * <p>
-         * If you configure MatchImage, you can configure this parameter to further filter query results.
+         * <p>The quantity of image caches whose image layers contain all image layers of the container image.<br>If you configure MatchImage, you can configure this parameter to further filter query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder imageMatchCountRequest(Integer imageMatchCountRequest) {
             this.putQueryParameter("ImageMatchCountRequest", imageMatchCountRequest);
@@ -314,7 +325,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The maximum entries of query results that are allowed to be displayed.
+         * <p>The maximum entries of query results that are allowed to be displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -323,7 +337,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The container images used to match the image caches that you want to query. You can specify a maximum of 100 container images.
+         * <p>The container images used to match the image caches that you want to query. You can specify a maximum of 100 container images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:1.15.10-perl</p>
          */
         public Builder matchImage(java.util.List < String > matchImage) {
             this.putQueryParameter("MatchImage", matchImage);
@@ -332,7 +349,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -359,7 +379,11 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The region ID of the image caches.
+         * <p>The region ID of the image caches.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -368,7 +392,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the image caches belong.
+         * <p>The ID of the resource group to which the image caches belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-2df3isufhi38****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -395,7 +422,10 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The IDs of the snapshots that correspond to the image caches.
+         * <p>The IDs of the snapshots that correspond to the image caches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zec5oj8e1yhxijt****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -404,7 +434,7 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * The tags to add to the image caches.
+         * <p>The tags to add to the image caches.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -419,11 +449,17 @@ public class DescribeImageCachesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageCachesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImageCachesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -458,7 +494,10 @@ public class DescribeImageCachesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image cache.
+             * <p>The key of tag N of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -466,7 +505,10 @@ public class DescribeImageCachesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image cache.
+             * <p>The value of tag N of the image cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

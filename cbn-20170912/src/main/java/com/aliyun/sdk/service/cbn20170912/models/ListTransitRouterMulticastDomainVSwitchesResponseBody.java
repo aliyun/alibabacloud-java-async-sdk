@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterMulticastDomainVSwitchesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTransitRouterMulticastDomainVSwitchesResponseBody</p>
  */
 public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
 
     private ListTransitRouterMulticastDomainVSwitchesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
 
         /**
          * MaxResults.
@@ -120,7 +125,7 @@ public class ListTransitRouterMulticastDomainVSwitchesResponseBody extends TeaMo
         /**
          * VSwitchIds.
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }

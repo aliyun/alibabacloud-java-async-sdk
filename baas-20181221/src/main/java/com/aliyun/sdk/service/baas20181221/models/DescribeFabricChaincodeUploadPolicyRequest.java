@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricChaincodeUploadPolicyRequest</p>
  */
 public class DescribeFabricChaincodeUploadPolicyRequest extends Request {
-    @Body
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
-    private String organizationId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationId;
 
     private DescribeFabricChaincodeUploadPolicyRequest(Builder builder) {
         super(builder);
-        this.organizationId = builder.organizationId;
         this.regionId = builder.regionId;
+        this.organizationId = builder.organizationId;
     }
 
     public static Builder builder() {
@@ -41,41 +40,32 @@ public class DescribeFabricChaincodeUploadPolicyRequest extends Request {
     }
 
     /**
-     * @return organizationId
-     */
-    public String getOrganizationId() {
-        return this.organizationId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return organizationId
+     */
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFabricChaincodeUploadPolicyRequest, Builder> {
-        private String organizationId; 
         private String regionId; 
+        private String organizationId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFabricChaincodeUploadPolicyRequest response) {
-            super(response);
-            this.organizationId = response.organizationId;
-            this.regionId = response.regionId;
+        private Builder(DescribeFabricChaincodeUploadPolicyRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.organizationId = request.organizationId;
         } 
-
-        /**
-         * OrganizationId.
-         */
-        public Builder organizationId(String organizationId) {
-            this.putBodyParameter("OrganizationId", organizationId);
-            this.organizationId = organizationId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +73,15 @@ public class DescribeFabricChaincodeUploadPolicyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * OrganizationId.
+         */
+        public Builder organizationId(String organizationId) {
+            this.putBodyParameter("OrganizationId", organizationId);
+            this.organizationId = organizationId;
             return this;
         }
 

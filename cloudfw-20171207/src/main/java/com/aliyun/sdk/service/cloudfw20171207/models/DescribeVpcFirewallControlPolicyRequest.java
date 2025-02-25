@@ -1,70 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallControlPolicyRequest</p>
  */
 public class DescribeVpcFirewallControlPolicyRequest extends Request {
-    @Query
-    @NameInMap("AclAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclAction")
     private String aclAction;
 
-    @Query
-    @NameInMap("AclUuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclUuid")
     private String aclUuid;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Destination")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Destination")
     private String destination;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("Proto")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Proto")
     private String proto;
 
-    @Query
-    @NameInMap("Release")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Release")
     private String release;
 
-    @Query
-    @NameInMap("RepeatType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatType")
     private String repeatType;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("VpcFirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallId;
 
     private DescribeVpcFirewallControlPolicyRequest(Builder builder) {
@@ -225,14 +228,18 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         } 
 
         /**
-         * The action that Cloud Firewall performs on the traffic. Valid values:
-         * <p>
+         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the traffic.</li>
+         * <li><strong>drop</strong>: blocks the traffic.</li>
+         * <li><strong>log</strong>: monitors the traffic.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, access control policies are queried based on all actions.</p>
+         * </blockquote>
          * 
-         * *   **accept**: allows the traffic.
-         * *   **drop**: blocks the traffic.
-         * *   **log**: monitors the traffic.
-         * 
-         * > If you do not specify this parameter, access control policies are queried based on all actions.
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder aclAction(String aclAction) {
             this.putQueryParameter("AclAction", aclAction);
@@ -241,7 +248,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The unique ID of the access control policy.
+         * <p>The unique ID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4037fbf7-3e39-4634-92a4-d0155247****</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -250,7 +260,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -259,7 +272,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The description of the access control policy. Fuzzy match is supported.
+         * <p>The description of the access control policy. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -268,10 +284,13 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The destination address in the access control policy. Fuzzy match is supported.
-         * <p>
+         * <p>The destination address in the access control policy. Fuzzy match is supported.</p>
+         * <blockquote>
+         * <p>The value of this parameter can be a CIDR block or an address book name.</p>
+         * </blockquote>
          * 
-         * > The value of this parameter can be a CIDR block or an address book name.
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX/24</p>
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -280,13 +299,15 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -295,7 +316,10 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -304,10 +328,11 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 50.</p>
          * 
-         * Maximum value: 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -316,15 +341,19 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The protocol type in the access control policy. Valid values:
-         * <p>
+         * <p>The protocol type in the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>ICMP</strong></li>
+         * <li><strong>ANY</strong>: all protocol types</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+         * </blockquote>
          * 
-         * *   **TCP**
-         * *   **UDP**
-         * *   **ICMP**
-         * *   **ANY**: all protocol types
-         * 
-         * > If you do not specify this parameter, access control policies of all protocol types are queried.
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -333,11 +362,14 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:
-         * <p>
+         * <p>The status of the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **true**: The access control policy is enabled.
-         * *   **false**: The access control policy is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder release(String release) {
             this.putQueryParameter("Release", release);
@@ -346,7 +378,17 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatType.
+         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <ul>
+         * <li><strong>Permanent</strong> (default): The policy always takes effect.</li>
+         * <li><strong>None</strong>: The policy takes effect for only once.</li>
+         * <li><strong>Daily</strong>: The policy takes effect on a daily basis.</li>
+         * <li><strong>Weekly</strong>: The policy takes effect on a weekly basis.</li>
+         * <li><strong>Monthly</strong>: The policy takes effect on a monthly basis.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Permanent</p>
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -355,10 +397,13 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The source address in the access control policy. Fuzzy match is supported.
-         * <p>
+         * <p>The source address in the access control policy. Fuzzy match is supported.</p>
+         * <blockquote>
+         * <p>The value of this parameter can be a CIDR block or an address book name.</p>
+         * </blockquote>
          * 
-         * > The value of this parameter can be a CIDR block or an address book name.
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX/24</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -367,13 +412,18 @@ public class DescribeVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall. Valid values:
-         * <p>
+         * <p>The instance ID of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li>If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</li>
+         * <li>If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.
-         * *   If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
-         * 
-         * > You can call the [DescribeVpcFirewallAclGroupList](~~159760~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>vfw-a42bbb7b887148c9****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

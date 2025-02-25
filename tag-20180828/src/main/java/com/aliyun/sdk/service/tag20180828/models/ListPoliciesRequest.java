@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListPoliciesRequest</p>
  */
 public class ListPoliciesRequest extends Request {
-    @Query
-    @NameInMap("MaxResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResult")
     private Integer maxResult;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PolicyIds")
-    private java.util.List < String > policyIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyIds")
+    private java.util.List<String> policyIds;
 
-    @Query
-    @NameInMap("PolicyNames")
-    private java.util.List < String > policyNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyNames")
+    private java.util.List<String> policyNames;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private ListPoliciesRequest(Builder builder) {
@@ -105,14 +110,14 @@ public class ListPoliciesRequest extends Request {
     /**
      * @return policyIds
      */
-    public java.util.List < String > getPolicyIds() {
+    public java.util.List<String> getPolicyIds() {
         return this.policyIds;
     }
 
     /**
      * @return policyNames
      */
-    public java.util.List < String > getPolicyNames() {
+    public java.util.List<String> getPolicyNames() {
         return this.policyNames;
     }
 
@@ -142,8 +147,8 @@ public class ListPoliciesRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > policyIds; 
-        private java.util.List < String > policyNames; 
+        private java.util.List<String> policyIds; 
+        private java.util.List<String> policyNames; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private String userType; 
@@ -166,10 +171,11 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 50. Maximum value: 1000.</p>
          * 
-         * Default value: 50. Maximum value: 1000.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -178,7 +184,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -205,25 +214,28 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of a tag policy. This parameter specifies a filter condition for the query.
+         * <p>The ID of a tag policy. This parameter specifies a filter condition for the query.</p>
          */
-        public Builder policyIds(java.util.List < String > policyIds) {
+        public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
             this.policyIds = policyIds;
             return this;
         }
 
         /**
-         * The name of a tag policy. This parameter specifies a filter condition for the query.
+         * <p>The name of a tag policy. This parameter specifies a filter condition for the query.</p>
          */
-        public Builder policyNames(java.util.List < String > policyNames) {
+        public Builder policyNames(java.util.List<String> policyNames) {
             this.putQueryParameter("PolicyNames", policyNames);
             this.policyNames = policyNames;
             return this;
         }
 
         /**
-         * The region ID. Set the value to cn-shanghai.
+         * <p>The region ID. Set the value to cn-shanghai.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,15 +253,18 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:
-         * <p>
+         * <p>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</p>
+         * <ul>
+         * <li>USER: single-account mode</li>
+         * <li>RD: multi-account mode</li>
+         * </ul>
+         * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
+         * <blockquote>
+         * <p> The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
          * 
-         * *   USER: single-account mode
-         * *   RD: multi-account mode
-         * 
-         * For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-         * 
-         * >  The value of this parameter is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

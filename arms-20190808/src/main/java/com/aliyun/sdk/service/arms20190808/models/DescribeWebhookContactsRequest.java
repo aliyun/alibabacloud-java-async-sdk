@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebhookContactsRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebhookContactsRequest</p>
  */
 public class DescribeWebhookContactsRequest extends Request {
-    @Query
-    @NameInMap("ContactIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactIds")
     private String contactIds;
 
-    @Query
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long page;
 
-    @Query
-    @NameInMap("Size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long size;
 
-    @Query
-    @NameInMap("WebhookName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebhookName")
     private String webhookName;
 
     private DescribeWebhookContactsRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeWebhookContactsRequest extends Request {
         } 
 
         /**
-         * The ID of the alert contact.
+         * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -107,7 +115,11 @@ public class DescribeWebhookContactsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -116,7 +128,11 @@ public class DescribeWebhookContactsRequest extends Request {
         }
 
         /**
-         * The number of alert contacts displayed on each page.
+         * <p>The number of alert contacts displayed on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -125,7 +141,10 @@ public class DescribeWebhookContactsRequest extends Request {
         }
 
         /**
-         * The name of the webhook alert contact.
+         * <p>The name of the webhook alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Webhook name</p>
          */
         public Builder webhookName(String webhookName) {
             this.putQueryParameter("WebhookName", webhookName);

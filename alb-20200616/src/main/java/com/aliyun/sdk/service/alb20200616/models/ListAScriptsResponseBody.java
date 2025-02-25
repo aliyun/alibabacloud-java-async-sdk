@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAScriptsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAScriptsResponseBody</p>
  */
 public class ListAScriptsResponseBody extends TeaModel {
-    @NameInMap("AScripts")
-    private java.util.List < AScripts> aScripts;
+    @com.aliyun.core.annotation.NameInMap("AScripts")
+    private java.util.List<AScripts> aScripts;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAScriptsResponseBody(Builder builder) {
@@ -47,7 +52,7 @@ public class ListAScriptsResponseBody extends TeaModel {
     /**
      * @return aScripts
      */
-    public java.util.List < AScripts> getAScripts() {
+    public java.util.List<AScripts> getAScripts() {
         return this.aScripts;
     }
 
@@ -80,22 +85,25 @@ public class ListAScriptsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AScripts> aScripts; 
+        private java.util.List<AScripts> aScripts; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The AScript rules.
+         * <p>The AScript rules.</p>
          */
-        public Builder aScripts(java.util.List < AScripts> aScripts) {
+        public Builder aScripts(java.util.List<AScripts> aScripts) {
             this.aScripts = aScripts;
             return this;
         }
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -103,11 +111,15 @@ public class ListAScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -115,7 +127,10 @@ public class ListAScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CA81429-F160-593A-8AB5-A2A9617845B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,10 +138,13 @@ public class ListAScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
-         * <p>
+         * <p>The total number of entries returned.</p>
+         * <blockquote>
+         * <p>This parameter is optional. By default, this parameter is not returned.</p>
+         * </blockquote>
          * 
-         * > This parameter is optional. By default, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -139,26 +157,32 @@ public class ListAScriptsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAScriptsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAScriptsResponseBody</p>
+     */
     public static class AScripts extends TeaModel {
-        @NameInMap("AScriptId")
+        @com.aliyun.core.annotation.NameInMap("AScriptId")
         private String aScriptId;
 
-        @NameInMap("AScriptName")
+        @com.aliyun.core.annotation.NameInMap("AScriptName")
         private String aScriptName;
 
-        @NameInMap("AScriptStatus")
+        @com.aliyun.core.annotation.NameInMap("AScriptStatus")
         private String aScriptStatus;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("ScriptContent")
+        @com.aliyun.core.annotation.NameInMap("ScriptContent")
         private String scriptContent;
 
         private AScripts(Builder builder) {
@@ -238,7 +262,10 @@ public class ListAScriptsResponseBody extends TeaModel {
             private String scriptContent; 
 
             /**
-             * The AScript rule ID.
+             * <p>The AScript rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as-aznwocxofkakf7****</p>
              */
             public Builder aScriptId(String aScriptId) {
                 this.aScriptId = aScriptId;
@@ -246,7 +273,10 @@ public class ListAScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the AScript rule.
+             * <p>The name of the AScript rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder aScriptName(String aScriptName) {
                 this.aScriptName = aScriptName;
@@ -254,13 +284,16 @@ public class ListAScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the AScript rule. Valid values:
-             * <p>
+             * <p>The status of the AScript rule. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Configuring</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Available**
-             * *   **Configuring**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder aScriptStatus(String aScriptStatus) {
                 this.aScriptStatus = aScriptStatus;
@@ -268,11 +301,14 @@ public class ListAScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the AScript rule is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the AScript rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -280,7 +316,10 @@ public class ListAScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The listener ID.
+             * <p>The listener ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsn-t0w1m9r6suiwmc****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -288,7 +327,10 @@ public class ListAScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The Application Load Balancer (ALB) instance ID.
+             * <p>The Application Load Balancer (ALB) instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb-vv9rg2ub31tyec****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -296,7 +338,10 @@ public class ListAScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the AScript rule.
+             * <p>The content of the AScript rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{test}</p>
              */
             public Builder scriptContent(String scriptContent) {
                 this.scriptContent = scriptContent;

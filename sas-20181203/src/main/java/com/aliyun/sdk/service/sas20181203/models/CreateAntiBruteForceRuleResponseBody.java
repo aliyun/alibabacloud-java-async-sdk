@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAntiBruteForceRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAntiBruteForceRuleResponseBody</p>
  */
 public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
-    @NameInMap("CreateAntiBruteForceRule")
+    @com.aliyun.core.annotation.NameInMap("CreateAntiBruteForceRule")
     private CreateAntiBruteForceRule createAntiBruteForceRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAntiBruteForceRuleResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the defense rule.
+         * <p>The information about the defense rule.</p>
          */
         public Builder createAntiBruteForceRule(CreateAntiBruteForceRule createAntiBruteForceRule) {
             this.createAntiBruteForceRule = createAntiBruteForceRule;
@@ -58,7 +63,10 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAntiBruteForceRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAntiBruteForceRuleResponseBody</p>
+     */
     public static class CreateAntiBruteForceRule extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private CreateAntiBruteForceRule(Builder builder) {
@@ -98,7 +112,10 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The ID of the defense rule.
+             * <p>The ID of the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65778</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

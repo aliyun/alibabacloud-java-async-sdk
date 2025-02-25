@@ -1,63 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateTaskOrderRequest</p>
  */
 public class CreateTaskOrderRequest extends Request {
-    @Query
-    @NameInMap("CustomerRealName")
-    private String customerRealName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String createUserId;
 
-    @Query
-    @NameInMap("CustomerUserId")
-    private String customerUserId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsUrgent")
+    private Boolean isUrgent;
 
-    @Query
-    @NameInMap("ImportantDescription")
-    private String importantDescription;
-
-    @Query
-    @NameInMap("IsImportant")
-    @Validation(required = true)
-    private String isImportant;
-
-    @Query
-    @NameInMap("OpenGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
-    private String productType;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Overview")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String overview;
 
-    @Query
-    @NameInMap("ProductTypeName")
-    private String productTypeName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String productCode;
 
-    @Query
-    @NameInMap("TaskTitle")
-    @Validation(required = true)
-    private String taskTitle;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UrgentDescription")
+    private String urgentDescription;
 
     private CreateTaskOrderRequest(Builder builder) {
         super(builder);
-        this.customerRealName = builder.customerRealName;
-        this.customerUserId = builder.customerUserId;
-        this.importantDescription = builder.importantDescription;
-        this.isImportant = builder.isImportant;
+        this.createUserId = builder.createUserId;
+        this.isUrgent = builder.isUrgent;
         this.openGroupId = builder.openGroupId;
-        this.productType = builder.productType;
-        this.productTypeName = builder.productTypeName;
-        this.taskTitle = builder.taskTitle;
+        this.overview = builder.overview;
+        this.productCode = builder.productCode;
+        this.urgentDescription = builder.urgentDescription;
     }
 
     public static Builder builder() {
@@ -74,31 +69,17 @@ public class CreateTaskOrderRequest extends Request {
     }
 
     /**
-     * @return customerRealName
+     * @return createUserId
      */
-    public String getCustomerRealName() {
-        return this.customerRealName;
+    public String getCreateUserId() {
+        return this.createUserId;
     }
 
     /**
-     * @return customerUserId
+     * @return isUrgent
      */
-    public String getCustomerUserId() {
-        return this.customerUserId;
-    }
-
-    /**
-     * @return importantDescription
-     */
-    public String getImportantDescription() {
-        return this.importantDescription;
-    }
-
-    /**
-     * @return isImportant
-     */
-    public String getIsImportant() {
-        return this.isImportant;
+    public Boolean getIsUrgent() {
+        return this.isUrgent;
     }
 
     /**
@@ -109,90 +90,74 @@ public class CreateTaskOrderRequest extends Request {
     }
 
     /**
-     * @return productType
+     * @return overview
      */
-    public String getProductType() {
-        return this.productType;
+    public String getOverview() {
+        return this.overview;
     }
 
     /**
-     * @return productTypeName
+     * @return productCode
      */
-    public String getProductTypeName() {
-        return this.productTypeName;
+    public String getProductCode() {
+        return this.productCode;
     }
 
     /**
-     * @return taskTitle
+     * @return urgentDescription
      */
-    public String getTaskTitle() {
-        return this.taskTitle;
+    public String getUrgentDescription() {
+        return this.urgentDescription;
     }
 
     public static final class Builder extends Request.Builder<CreateTaskOrderRequest, Builder> {
-        private String customerRealName; 
-        private String customerUserId; 
-        private String importantDescription; 
-        private String isImportant; 
+        private String createUserId; 
+        private Boolean isUrgent; 
         private String openGroupId; 
-        private String productType; 
-        private String productTypeName; 
-        private String taskTitle; 
+        private String overview; 
+        private String productCode; 
+        private String urgentDescription; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateTaskOrderRequest response) {
-            super(response);
-            this.customerRealName = response.customerRealName;
-            this.customerUserId = response.customerUserId;
-            this.importantDescription = response.importantDescription;
-            this.isImportant = response.isImportant;
-            this.openGroupId = response.openGroupId;
-            this.productType = response.productType;
-            this.productTypeName = response.productTypeName;
-            this.taskTitle = response.taskTitle;
+        private Builder(CreateTaskOrderRequest request) {
+            super(request);
+            this.createUserId = request.createUserId;
+            this.isUrgent = request.isUrgent;
+            this.openGroupId = request.openGroupId;
+            this.overview = request.overview;
+            this.productCode = request.productCode;
+            this.urgentDescription = request.urgentDescription;
         } 
 
         /**
-         * 建单人姓名：快手客户
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
-        public Builder customerRealName(String customerRealName) {
-            this.putQueryParameter("CustomerRealName", customerRealName);
-            this.customerRealName = customerRealName;
+        public Builder createUserId(String createUserId) {
+            this.putQueryParameter("CreateUserId", createUserId);
+            this.createUserId = createUserId;
             return this;
         }
 
         /**
-         * 建单人：固定值
+         * IsUrgent.
          */
-        public Builder customerUserId(String customerUserId) {
-            this.putQueryParameter("CustomerUserId", customerUserId);
-            this.customerUserId = customerUserId;
+        public Builder isUrgent(Boolean isUrgent) {
+            this.putQueryParameter("IsUrgent", isUrgent);
+            this.isUrgent = isUrgent;
             return this;
         }
 
         /**
-         * 重要性描述
-         */
-        public Builder importantDescription(String importantDescription) {
-            this.putQueryParameter("ImportantDescription", importantDescription);
-            this.importantDescription = importantDescription;
-            return this;
-        }
-
-        /**
-         * 是否紧急
-         */
-        public Builder isImportant(String isImportant) {
-            this.putQueryParameter("IsImportant", isImportant);
-            this.isImportant = isImportant;
-            return this;
-        }
-
-        /**
-         * 主群关联Id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cid+lUpHxTIXt7DYqJDcpVxlA==</p>
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -201,29 +166,35 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * productType
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务单标题：必填</p>
          */
-        public Builder productType(String productType) {
-            this.putQueryParameter("ProductType", productType);
-            this.productType = productType;
+        public Builder overview(String overview) {
+            this.putQueryParameter("Overview", overview);
+            this.overview = overview;
             return this;
         }
 
         /**
-         * 问题分类名称
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
-        public Builder productTypeName(String productTypeName) {
-            this.putQueryParameter("ProductTypeName", productTypeName);
-            this.productTypeName = productTypeName;
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
             return this;
         }
 
         /**
-         * 任务单标题
+         * UrgentDescription.
          */
-        public Builder taskTitle(String taskTitle) {
-            this.putQueryParameter("TaskTitle", taskTitle);
-            this.taskTitle = taskTitle;
+        public Builder urgentDescription(String urgentDescription) {
+            this.putQueryParameter("UrgentDescription", urgentDescription);
+            this.urgentDescription = urgentDescription;
             return this;
         }
 

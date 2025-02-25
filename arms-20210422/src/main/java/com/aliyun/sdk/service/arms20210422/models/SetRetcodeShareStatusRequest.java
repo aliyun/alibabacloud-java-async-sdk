@@ -18,6 +18,10 @@ public class SetRetcodeShareStatusRequest extends Request {
     private String pid;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Status")
     @Validation(required = true)
     private Boolean status;
@@ -25,6 +29,7 @@ public class SetRetcodeShareStatusRequest extends Request {
     private SetRetcodeShareStatusRequest(Builder builder) {
         super(builder);
         this.pid = builder.pid;
+        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -49,6 +54,13 @@ public class SetRetcodeShareStatusRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return status
      */
     public Boolean getStatus() {
@@ -57,6 +69,7 @@ public class SetRetcodeShareStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetRetcodeShareStatusRequest, Builder> {
         private String pid; 
+        private String regionId; 
         private Boolean status; 
 
         private Builder() {
@@ -66,6 +79,7 @@ public class SetRetcodeShareStatusRequest extends Request {
         private Builder(SetRetcodeShareStatusRequest request) {
             super(request);
             this.pid = request.pid;
+            this.regionId = request.regionId;
             this.status = request.status;
         } 
 
@@ -75,6 +89,15 @@ public class SetRetcodeShareStatusRequest extends Request {
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
             this.pid = pid;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

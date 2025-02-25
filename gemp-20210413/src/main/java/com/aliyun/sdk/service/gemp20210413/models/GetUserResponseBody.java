@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetUserResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetUserResponseBody extends TeaModel {
     } 
 
     public static class ServiceGroups extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
         private ServiceGroups(Builder builder) {
@@ -133,46 +132,50 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("accountType")
+        @com.aliyun.core.annotation.NameInMap("accountType")
         private String accountType;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("isEditableUser")
+        @com.aliyun.core.annotation.NameInMap("isActive")
+        private Long isActive;
+
+        @com.aliyun.core.annotation.NameInMap("isEditableUser")
         private Boolean isEditableUser;
 
-        @NameInMap("isRelated")
+        @com.aliyun.core.annotation.NameInMap("isRelated")
         private String isRelated;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("ramId")
+        @com.aliyun.core.annotation.NameInMap("ramId")
         private String ramId;
 
-        @NameInMap("roleIdList")
+        @com.aliyun.core.annotation.NameInMap("roleIdList")
         private java.util.List < Long > roleIdList;
 
-        @NameInMap("roleNameList")
+        @com.aliyun.core.annotation.NameInMap("roleNameList")
         private java.util.List < String > roleNameList;
 
-        @NameInMap("serviceGroups")
+        @com.aliyun.core.annotation.NameInMap("serviceGroups")
         private java.util.List < ServiceGroups> serviceGroups;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Data(Builder builder) {
             this.accountType = builder.accountType;
             this.createTime = builder.createTime;
             this.email = builder.email;
+            this.isActive = builder.isActive;
             this.isEditableUser = builder.isEditableUser;
             this.isRelated = builder.isRelated;
             this.phone = builder.phone;
@@ -211,6 +214,13 @@ public class GetUserResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return isActive
+         */
+        public Long getIsActive() {
+            return this.isActive;
         }
 
         /**
@@ -280,6 +290,7 @@ public class GetUserResponseBody extends TeaModel {
             private String accountType; 
             private String createTime; 
             private String email; 
+            private Long isActive; 
             private Boolean isEditableUser; 
             private String isRelated; 
             private String phone; 
@@ -311,6 +322,14 @@ public class GetUserResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * isActive.
+             */
+            public Builder isActive(Long isActive) {
+                this.isActive = isActive;
                 return this;
             }
 

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseOrderCreateResult} extends {@link TeaModel}
  *
  * <p>PurchaseOrderCreateResult</p>
  */
 public class PurchaseOrderCreateResult extends TeaModel {
-    @NameInMap("purchaseOrderId")
+    @com.aliyun.core.annotation.NameInMap("purchaseOrderId")
     private String purchaseOrderId;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private PurchaseOrderCreateResult(Builder builder) {

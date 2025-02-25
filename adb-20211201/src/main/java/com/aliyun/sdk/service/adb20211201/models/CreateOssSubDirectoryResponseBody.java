@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOssSubDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOssSubDirectoryResponseBody</p>
  */
 public class CreateOssSubDirectoryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOssSubDirectoryResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +99,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +110,14 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, a <strong>success</strong> message is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +125,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A0DE2E0-A37B-5EE4-9136-C4C473714802</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +136,14 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +156,23 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOssSubDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOssSubDirectoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClientCRC")
+        @com.aliyun.core.annotation.NameInMap("ClientCRC")
         private Long clientCRC;
 
-        @NameInMap("ETag")
+        @com.aliyun.core.annotation.NameInMap("ETag")
         private String eTag;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ServerCRC")
+        @com.aliyun.core.annotation.NameInMap("ServerCRC")
         private Long serverCRC;
 
         private Data(Builder builder) {
@@ -194,7 +225,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             private Long serverCRC; 
 
             /**
-             * ClientCRC.
+             * <p>The cyclic redundancy check (CRC) value on the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clientCRC(Long clientCRC) {
                 this.clientCRC = clientCRC;
@@ -202,7 +236,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ETag.
+             * <p>The tag of the OSS path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eTag(String eTag) {
                 this.eTag = eTag;
@@ -210,7 +247,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3A0DE2E0-A37B-5EE4-9136-C4C473714802</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -218,7 +258,10 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCRC.
+             * <p>The CRC-64 value on the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serverCRC(Long serverCRC) {
                 this.serverCRC = serverCRC;

@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateAssociatedTransferSettingRequest extends Request {
     @Query
+    @NameInMap("EnableExistingResourcesTransfer")
+    private String enableExistingResourcesTransfer;
+
+    @Query
     @NameInMap("RuleSettings")
     private java.util.List < RuleSettings> ruleSettings;
 
     private UpdateAssociatedTransferSettingRequest(Builder builder) {
         super(builder);
+        this.enableExistingResourcesTransfer = builder.enableExistingResourcesTransfer;
         this.ruleSettings = builder.ruleSettings;
     }
 
@@ -35,6 +40,13 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
     }
 
     /**
+     * @return enableExistingResourcesTransfer
+     */
+    public String getEnableExistingResourcesTransfer() {
+        return this.enableExistingResourcesTransfer;
+    }
+
+    /**
      * @return ruleSettings
      */
     public java.util.List < RuleSettings> getRuleSettings() {
@@ -42,6 +54,7 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateAssociatedTransferSettingRequest, Builder> {
+        private String enableExistingResourcesTransfer; 
         private java.util.List < RuleSettings> ruleSettings; 
 
         private Builder() {
@@ -50,11 +63,21 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
 
         private Builder(UpdateAssociatedTransferSettingRequest request) {
             super(request);
+            this.enableExistingResourcesTransfer = request.enableExistingResourcesTransfer;
             this.ruleSettings = request.ruleSettings;
         } 
 
         /**
-         * RuleSettings.
+         * EnableExistingResourcesTransfer.
+         */
+        public Builder enableExistingResourcesTransfer(String enableExistingResourcesTransfer) {
+            this.putQueryParameter("EnableExistingResourcesTransfer", enableExistingResourcesTransfer);
+            this.enableExistingResourcesTransfer = enableExistingResourcesTransfer;
+            return this;
+        }
+
+        /**
+         * The settings of the transfer rules.
          */
         public Builder ruleSettings(java.util.List < RuleSettings> ruleSettings) {
             this.putQueryParameter("RuleSettings", ruleSettings);
@@ -145,7 +168,10 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             private String status; 
 
             /**
-             * AssociatedResourceType.
+             * The type of the associated resource.
+             * <p>
+             * 
+             * You can obtain the resource type from the **Resource type** column in [Services that work with Resource Group](~~94479~~).
              */
             public Builder associatedResourceType(String associatedResourceType) {
                 this.associatedResourceType = associatedResourceType;
@@ -153,7 +179,10 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * AssociatedService.
+             * The service code of the associated resource.
+             * <p>
+             * 
+             * You can obtain the service code from the **Service code** column in [Services that work with Resource Group](~~94479~~).
              */
             public Builder associatedService(String associatedService) {
                 this.associatedService = associatedService;
@@ -161,7 +190,10 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * MasterResourceType.
+             * The type of the primary resource.
+             * <p>
+             * 
+             * You can obtain the resource type from the **Resource type** column in [Services that work with Resource Group](~~94479~~).
              */
             public Builder masterResourceType(String masterResourceType) {
                 this.masterResourceType = masterResourceType;
@@ -169,7 +201,10 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * MasterService.
+             * The service code of the primary resource.
+             * <p>
+             * 
+             * You can obtain the service code from the **Service code** column in [Services that work with Resource Group](~~94479~~).
              */
             public Builder masterService(String masterService) {
                 this.masterService = masterService;
@@ -177,7 +212,11 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             }
 
             /**
-             * Status.
+             * The status of the Transfer Associated Resources feature. Valid values:
+             * <p>
+             * 
+             * - Enable: enabled
+             * - Disable: disabled
              */
             public Builder status(String status) {
                 this.status = status;

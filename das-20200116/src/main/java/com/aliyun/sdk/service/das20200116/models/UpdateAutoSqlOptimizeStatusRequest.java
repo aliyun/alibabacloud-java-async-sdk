@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAutoSqlOptimizeStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateAutoSqlOptimizeStatusRequest</p>
  */
 public class UpdateAutoSqlOptimizeStatusRequest extends Request {
-    @Query
-    @NameInMap("Instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instances;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
     private UpdateAutoSqlOptimizeStatusRequest(Builder builder) {
@@ -70,10 +75,14 @@ public class UpdateAutoSqlOptimizeStatusRequest extends Request {
         } 
 
         /**
-         * The database instance IDs. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The database instance IDs. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can specify up to 50 instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify up to 50 instance IDs.
+         * <strong>example:</strong>
+         * <p>rm-bp10usoc1erj7****,rm-bp10usoc1erj7****</p>
          */
         public Builder instances(String instances) {
             this.putQueryParameter("Instances", instances);
@@ -82,12 +91,16 @@ public class UpdateAutoSqlOptimizeStatusRequest extends Request {
         }
 
         /**
-         * The status of the automatic SQL optimization feature. Valid values:
-         * <p>
+         * <p>The status of the automatic SQL optimization feature. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The automatic SQL optimization feature is disabled.</li>
+         * <li><strong>1</strong>: <strong>SQL diagnosis and automatic index creation</strong> is specified.</li>
+         * <li><strong>3</strong>: <strong>SQL diagnosis only</strong> is specified.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: The automatic SQL optimization feature is disabled.
-         * *   **1**: **SQL diagnosis and automatic index creation** is specified.
-         * *   **3**: **SQL diagnosis only** is specified.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

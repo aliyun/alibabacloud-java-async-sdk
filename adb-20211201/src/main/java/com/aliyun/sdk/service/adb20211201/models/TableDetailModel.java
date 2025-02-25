@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TableDetailModel} extends {@link TeaModel}
  *
  * <p>TableDetailModel</p>
  */
 public class TableDetailModel extends TeaModel {
-    @NameInMap("Catalog")
+    @com.aliyun.core.annotation.NameInMap("Catalog")
     private String catalog;
 
-    @NameInMap("Columns")
-    private java.util.List < ColDetailModel > columns;
+    @com.aliyun.core.annotation.NameInMap("Columns")
+    private java.util.List<ColDetailModel> columns;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("SchemaName")
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("TableType")
+    @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private TableDetailModel(Builder builder) {
@@ -69,7 +74,7 @@ public class TableDetailModel extends TeaModel {
     /**
      * @return columns
      */
-    public java.util.List < ColDetailModel > getColumns() {
+    public java.util.List<ColDetailModel> getColumns() {
         return this.columns;
     }
 
@@ -124,7 +129,7 @@ public class TableDetailModel extends TeaModel {
 
     public static final class Builder {
         private String catalog; 
-        private java.util.List < ColDetailModel > columns; 
+        private java.util.List<ColDetailModel> columns; 
         private String createTime; 
         private String description; 
         private String owner; 
@@ -144,7 +149,7 @@ public class TableDetailModel extends TeaModel {
         /**
          * Columns.
          */
-        public Builder columns(java.util.List < ColDetailModel > columns) {
+        public Builder columns(java.util.List<ColDetailModel> columns) {
             this.columns = columns;
             return this;
         }

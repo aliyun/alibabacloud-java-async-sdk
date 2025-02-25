@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloseAITaskResponseBody} extends {@link TeaModel}
  *
  * <p>CloseAITaskResponseBody</p>
  */
 public class CloseAITaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private CloseAITaskResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CloseAITaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>936C7025-27A5-4CB1-BB31-540E1F0CCA12</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CloseAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task for disabling the PolarDB for AI feature.
+         * <p>The ID of the task for disabling the PolarDB for AI feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53879cdb-9a00-428e-acaf-ff4cff******</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

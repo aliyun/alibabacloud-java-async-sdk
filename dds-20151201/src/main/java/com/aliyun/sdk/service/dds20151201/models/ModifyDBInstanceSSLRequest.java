@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceSSLRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceSSLRequest</p>
  */
 public class ModifyDBInstanceSSLRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SSLAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLAction;
 
     private ModifyDBInstanceSSLRequest(Builder builder) {
@@ -149,7 +154,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2235****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -194,12 +203,16 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The operation on the SSL feature. Valid values: Valid values:
-         * <p>
+         * <p>The operation on the SSL feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Open</strong>: enables SSL encryption.</li>
+         * <li><strong>Close</strong>: disables SSL encryption.</li>
+         * <li><strong>Update</strong>: updates the SSL certificate.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Open**: enables SSL encryption.
-         * *   **Close**: disables SSL encryption.
-         * *   **Update**: updates the SSL certificate.
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         public Builder SSLAction(String SSLAction) {
             this.putQueryParameter("SSLAction", SSLAction);

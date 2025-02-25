@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUniBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteUniBackupPolicyRequest</p>
  */
 public class DeleteUniBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private Long policyId;
 
-    @Query
-    @NameInMap("PolicyIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyIds")
     private String policyIds;
 
     private DeleteUniBackupPolicyRequest(Builder builder) {
@@ -68,10 +73,13 @@ public class DeleteUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies. You must specify at least one of the PolicyId parameter and the <strong>PolicyIds</strong> parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the PolicyId parameter and the **PolicyIds** parameter.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -80,10 +88,13 @@ public class DeleteUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The IDs of anti-ransomware policies.
-         * <p>
+         * <p>The IDs of anti-ransomware policies.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies. You must specify at least one of the <strong>PolicyId</strong> parameter and the PolicyIds parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies. You must specify at least one of the **PolicyId** parameter and the PolicyIds parameter.
+         * <strong>example:</strong>
+         * <p>123,124</p>
          */
         public Builder policyIds(String policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);

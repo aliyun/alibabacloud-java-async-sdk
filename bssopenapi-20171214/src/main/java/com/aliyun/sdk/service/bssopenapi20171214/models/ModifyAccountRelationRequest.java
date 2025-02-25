@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountRelationRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountRelationRequest</p>
  */
 public class ModifyAccountRelationRequest extends Request {
-    @Query
-    @NameInMap("ChildNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildNick")
     private String childNick;
 
-    @Query
-    @NameInMap("ChildUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long childUserId;
 
-    @Query
-    @NameInMap("ParentUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long parentUserId;
 
-    @Query
-    @NameInMap("PermissionCodes")
-    private java.util.List < String > permissionCodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
+    private java.util.List<String> permissionCodes;
 
-    @Query
-    @NameInMap("RelationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationId")
     private Long relationId;
 
-    @Query
-    @NameInMap("RelationOperation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationOperation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relationOperation;
 
-    @Query
-    @NameInMap("RelationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
     private String relationType;
 
-    @Query
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
-    @Query
-    @NameInMap("RoleCodes")
-    private java.util.List < String > roleCodes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleCodes")
+    private java.util.List<String> roleCodes;
 
     private ModifyAccountRelationRequest(Builder builder) {
         super(builder);
@@ -102,7 +107,7 @@ public class ModifyAccountRelationRequest extends Request {
     /**
      * @return permissionCodes
      */
-    public java.util.List < String > getPermissionCodes() {
+    public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
     }
 
@@ -137,7 +142,7 @@ public class ModifyAccountRelationRequest extends Request {
     /**
      * @return roleCodes
      */
-    public java.util.List < String > getRoleCodes() {
+    public java.util.List<String> getRoleCodes() {
         return this.roleCodes;
     }
 
@@ -145,12 +150,12 @@ public class ModifyAccountRelationRequest extends Request {
         private String childNick; 
         private Long childUserId; 
         private Long parentUserId; 
-        private java.util.List < String > permissionCodes; 
+        private java.util.List<String> permissionCodes; 
         private Long relationId; 
         private String relationOperation; 
         private String relationType; 
         private String requestId; 
-        private java.util.List < String > roleCodes; 
+        private java.util.List<String> roleCodes; 
 
         private Builder() {
             super();
@@ -170,7 +175,10 @@ public class ModifyAccountRelationRequest extends Request {
         } 
 
         /**
-         * The display name of the member. This helps clarify the scenario in which the account is used.
+         * <p>The display name of the member. This helps clarify the scenario in which the account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Display name of the member</p>
          */
         public Builder childNick(String childNick) {
             this.putQueryParameter("ChildNick", childNick);
@@ -179,7 +187,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the member.
+         * <p>The ID of the Alibaba Cloud account that is used as the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512996702208737</p>
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -188,7 +199,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used as the management account.
+         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738376485192612</p>
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -197,25 +211,31 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The permissions that can be modified. Valid values:
-         * <p>
+         * <p>The permissions that can be modified. Valid values:</p>
+         * <ul>
+         * <li>SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.</li>
+         * <li>SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.</li>
+         * <li>FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.</li>
+         * <li>FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.</li>
+         * <li>CHECK_FINANCE_INFO: requests to view information about the financial relationship.</li>
+         * <li>MANAGE_TARGET_INVOICE: allows the member to manage invoices.</li>
+         * <li>CHECK_TARGET_CONSUMPTION: allows the member to view the bills.</li>
+         * </ul>
          * 
-         * *   SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.
-         * *   SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.
-         * *   FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.
-         * *   FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.
-         * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
-         * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
-         * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
+         * <strong>example:</strong>
+         * <p>SYNCHRONIZE_FINANCE_IDENTITY</p>
          */
-        public Builder permissionCodes(java.util.List < String > permissionCodes) {
+        public Builder permissionCodes(java.util.List<String> permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
             this.permissionCodes = permissionCodes;
             return this;
         }
 
         /**
-         * The ID of the financial relationship. Set this parameter to the value of the relationId response parameter returned by calling the QueryRelationList operation.
+         * <p>The ID of the financial relationship. Set this parameter to the value of the relationId response parameter returned by calling the QueryRelationList operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51463</p>
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -224,11 +244,15 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The operation to be performed. Valid values:
-         * <p>
+         * <p>The operation to be performed. Valid values:</p>
+         * <ul>
+         * <li>ADD</li>
+         * <li>DELETE</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ADD
-         * *   DELETE
+         * <strong>example:</strong>
+         * <p>ADD</p>
          */
         public Builder relationOperation(String relationOperation) {
             this.putQueryParameter("RelationOperation", relationOperation);
@@ -237,7 +261,10 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The type of the financial relationship. Set the value to enterprise_group.
+         * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise_group</p>
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -246,7 +273,11 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
+         * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_id</p>
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -255,9 +286,12 @@ public class ModifyAccountRelationRequest extends Request {
         }
 
         /**
-         * The roles that can be assigned to the member. You cannot modify the roles.
+         * <p>The roles that can be assigned to the member. You cannot modify the roles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trusteeship</p>
          */
-        public Builder roleCodes(java.util.List < String > roleCodes) {
+        public Builder roleCodes(java.util.List<String> roleCodes) {
             this.putQueryParameter("RoleCodes", roleCodes);
             this.roleCodes = roleCodes;
             return this;

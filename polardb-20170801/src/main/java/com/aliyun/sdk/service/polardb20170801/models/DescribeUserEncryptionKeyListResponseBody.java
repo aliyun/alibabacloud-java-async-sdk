@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserEncryptionKeyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserEncryptionKeyListResponseBody</p>
  */
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("KeyList")
-    private java.util.List < String > keyList;
+    @com.aliyun.core.annotation.NameInMap("KeyList")
+    private java.util.List<String> keyList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserEncryptionKeyListResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     /**
      * @return keyList
      */
-    public java.util.List < String > getKeyList() {
+    public java.util.List<String> getKeyList() {
         return this.keyList;
     }
 
@@ -58,11 +63,14 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < String > keyList; 
+        private java.util.List<String> keyList; 
         private String requestId; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,15 +78,18 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * KeyList.
+         * <p>Cluster key list.</p>
          */
-        public Builder keyList(java.util.List < String > keyList) {
+        public Builder keyList(java.util.List<String> keyList) {
             this.keyList = keyList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

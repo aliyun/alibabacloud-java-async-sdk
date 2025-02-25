@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorGroupInstancesResponseBody</p>
  */
 public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMonitorGroupInstancesResponseBody(Builder builder) {
@@ -122,10 +122,13 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The responses code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -133,7 +136,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -149,7 +158,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -157,7 +169,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97F2A410-9412-499C-9AD1-76EF7EC02DF2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +180,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resources in the application group.
+         * <p>The information about the resources in the application group.</p>
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -173,7 +188,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -181,7 +199,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -194,20 +215,26 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMonitorGroupInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupInstancesResponseBody</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Resource(Builder builder) {
@@ -269,7 +296,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The abbreviation of the service name.
+             * <p>The abbreviation of the service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -277,7 +307,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -285,7 +318,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze3w55tr2r****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -293,7 +329,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hostIP</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -301,7 +340,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance resides.
+             * <p>The ID of the region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -315,8 +357,14 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMonitorGroupInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMonitorGroupInstancesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;
 
         private Resources(Builder builder) {

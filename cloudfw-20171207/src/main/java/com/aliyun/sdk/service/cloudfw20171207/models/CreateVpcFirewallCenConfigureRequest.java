@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcFirewallCenConfigureRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcFirewallCenConfigureRequest</p>
  */
 public class CreateVpcFirewallCenConfigureRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("FirewallSwitch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallSwitch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String firewallSwitch;
 
-    @Query
-    @NameInMap("FirewallVSwitchCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVSwitchCidrBlock")
     private String firewallVSwitchCidrBlock;
 
-    @Query
-    @NameInMap("FirewallVpcCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcCidrBlock")
     private String firewallVpcCidrBlock;
 
-    @Query
-    @NameInMap("FirewallVpcZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcZoneId")
     private String firewallVpcZoneId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("NetworkInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkInstanceId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcFirewallName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallName;
 
-    @Query
-    @NameInMap("VpcRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcRegion;
 
     private CreateVpcFirewallCenConfigureRequest(Builder builder) {
@@ -199,7 +204,11 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-x5jayxou71ad73****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -208,11 +217,15 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the VPC firewall. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>open</strong>: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</li>
+         * <li><strong>close</strong>: After you create the VPC firewall, the VPC firewall is disabled. You can call the <a href="https://help.aliyun.com/document_detail/345780.html">ModifyVpcFirewallCenSwitchStatus</a> operation to manually enable the VPC firewall.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.
-         * *   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](~~345780~~) operation to manually enable the VPC firewall.
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder firewallSwitch(String firewallSwitch) {
             this.putQueryParameter("FirewallSwitch", firewallSwitch);
@@ -221,12 +234,11 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The CIDR block of the vSwitch that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VSWITCH VPC that is automatically created for the VPC firewall for traffic redirection. The CIDR block does not conflict with your network plan. The subnet mask of the CIDR block must be less than or equal to 29 bits in length. The CIDR block of the vSwitch must be within the network segment of the VPC.
-         * <p>
-         * 
-         * If you do not specify a value, the CIDR block 10.219.219.216/29 is automatically allocated.
-         * 
-         * >  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.
+         * <p>The CIDR block of the vSwitch that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VSWITCH VPC that is automatically created for the VPC firewall for traffic redirection. The CIDR block does not conflict with your network plan. The subnet mask of the CIDR block must be less than or equal to 29 bits in length. The CIDR block of the vSwitch must be within the network segment of the VPC.</p>
+         * <p>If you do not specify a value, the CIDR block 10.219.219.216/29 is automatically allocated.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+         * </blockquote>
          */
         public Builder firewallVSwitchCidrBlock(String firewallVSwitchCidrBlock) {
             this.putQueryParameter("FirewallVSwitchCidrBlock", firewallVSwitchCidrBlock);
@@ -235,12 +247,14 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The CIDR block of the VPC that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VPC VPC that is automatically created for the VPC firewall for traffic redirection. The subnet mask of the CIDR block must be less than or equal to 28 bits in length.
-         * <p>
+         * <p>The CIDR block of the VPC that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VPC VPC that is automatically created for the VPC firewall for traffic redirection. The subnet mask of the CIDR block must be less than or equal to 28 bits in length.</p>
+         * <p>If you do not specify a value, the CIDR block 10.0.0.0/8 is automatically allocated.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+         * </blockquote>
          * 
-         * If you do not specify a value, the CIDR block 10.0.0.0/8 is automatically allocated.
-         * 
-         * >  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         public Builder firewallVpcCidrBlock(String firewallVpcCidrBlock) {
             this.putQueryParameter("FirewallVpcCidrBlock", firewallVpcCidrBlock);
@@ -249,12 +263,14 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the vSwitch belongs. If your service is latency-sensitive, you can specify the same zone for the vSwitch of the firewall and the vSwitch of your business VPC to minimize latency.
-         * <p>
+         * <p>The ID of the zone to which the vSwitch belongs. If your service is latency-sensitive, you can specify the same zone for the vSwitch of the firewall and the vSwitch of your business VPC to minimize latency.</p>
+         * <p>If you do not specify a value, a zone is automatically assigned for the vSwitch.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see <a href="https://help.aliyun.com/document_detail/36064.html">Query zones</a>.</p>
+         * </blockquote>
          * 
-         * If you do not specify a value, a zone is automatically assigned for the vSwitch.
-         * 
-         * >  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see [Query zones](~~36064~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder firewallVpcZoneId(String firewallVpcZoneId) {
             this.putQueryParameter("FirewallVpcZoneId", firewallVpcZoneId);
@@ -263,11 +279,14 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -276,7 +295,10 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -285,7 +307,11 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The ID of the VPC for which you want to create the VPC firewall.
+         * <p>The ID of the VPC for which you want to create the VPC firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp10zlifxh6j0232w****</p>
          */
         public Builder networkInstanceId(String networkInstanceId) {
             this.putQueryParameter("NetworkInstanceId", networkInstanceId);
@@ -294,7 +320,10 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that is used to associate with the elastic network interface (ENI) required by the VPC firewall.
+         * <p>The ID of the vSwitch that is used to associate with the elastic network interface (ENI) required by the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-qzeaol304m***</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -303,7 +332,11 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The instance name of the VPC firewall.
+         * <p>The instance name of the VPC firewall.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);
@@ -312,10 +345,14 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the VPC belongs.
-         * <p>
+         * <p>The ID of the region to which the VPC belongs.</p>
+         * <blockquote>
+         * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For more information about the regions, see [Supported regions](~~195657~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vpcRegion(String vpcRegion) {
             this.putQueryParameter("VpcRegion", vpcRegion);

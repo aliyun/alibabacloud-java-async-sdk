@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsOperateLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsOperateLogsResponseBody</p>
  */
 public class DescribePdnsOperateLogsResponseBody extends TeaModel {
-    @NameInMap("Logs")
-    private java.util.List < Logs> logs;
+    @com.aliyun.core.annotation.NameInMap("Logs")
+    private java.util.List<Logs> logs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePdnsOperateLogsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < Logs> getLogs() {
+    public java.util.List<Logs> getLogs() {
         return this.logs;
     }
 
@@ -79,7 +84,7 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Logs> logs; 
+        private java.util.List<Logs> logs; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
         /**
          * Logs.
          */
-        public Builder logs(java.util.List < Logs> logs) {
+        public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
             return this;
         }
@@ -131,17 +136,23 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsOperateLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsOperateLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("OperateTime")
+        @com.aliyun.core.annotation.NameInMap("OperateTime")
         private String operateTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
         private Logs(Builder builder) {

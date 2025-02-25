@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InquiryPriceRefundInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>InquiryPriceRefundInstanceResponseBody</p>
  */
 public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private InquiryPriceRefundInstanceResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the execution result.
+         * <p>The description of the execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UUID</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,17 +148,23 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InquiryPriceRefundInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>InquiryPriceRefundInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RefundAmount")
+        @com.aliyun.core.annotation.NameInMap("RefundAmount")
         private Double refundAmount;
 
         private Data(Builder builder) {
@@ -194,7 +217,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             private Double refundAmount; 
 
             /**
-             * The currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY. CNY: Chinese Yuan. USD: United States dollar. JPY: Japanese Yen.</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -202,7 +228,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The site of the execution host.
+             * <p>The site of the execution host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -210,7 +239,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1etb69sqxgl4*******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,7 +250,10 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The refundable amount.
+             * <p>The refundable amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.34</p>
              */
             public Builder refundAmount(Double refundAmount) {
                 this.refundAmount = refundAmount;

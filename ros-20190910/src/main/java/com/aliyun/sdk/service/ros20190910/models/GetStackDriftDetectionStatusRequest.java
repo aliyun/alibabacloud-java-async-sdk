@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackDriftDetectionStatusRequest} extends {@link RequestModel}
  *
  * <p>GetStackDriftDetectionStatusRequest</p>
  */
 public class GetStackDriftDetectionStatusRequest extends Request {
-    @Query
-    @NameInMap("DriftDetectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driftDetectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private GetStackDriftDetectionStatusRequest(Builder builder) {
@@ -70,10 +70,12 @@ public class GetStackDriftDetectionStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the drift detection operation.
-         * <p>
+         * <p>The ID of the drift detection operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/155098.html">ListStackResourceDrifts</a> operation to obtain the ID of the drift detection operation.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListStackResourceDrifts](~~155098~~) operation to obtain the ID of the drift detection operation.
+         * <strong>example:</strong>
+         * <p>a7044f0d-6f2e-4128-a307-4524ef88****</p>
          */
         public Builder driftDetectionId(String driftDetectionId) {
             this.putQueryParameter("DriftDetectionId", driftDetectionId);
@@ -82,10 +84,12 @@ public class GetStackDriftDetectionStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the stack to be detected for drift.
-         * <p>
+         * <p>The region ID of the stack to be detected for drift.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSophonCommandsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSophonCommandsRequest</p>
  */
 public class DescribeSophonCommandsRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private DescribeSophonCommandsRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class DescribeSophonCommandsRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the command. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_process</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

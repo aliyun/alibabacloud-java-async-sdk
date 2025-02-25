@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageBaselineDetailResponseBody</p>
  */
 public class DescribeImageBaselineDetailResponseBody extends TeaModel {
-    @NameInMap("BaselineDetail")
+    @com.aliyun.core.annotation.NameInMap("BaselineDetail")
     private BaselineDetail baselineDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageBaselineDetailResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the image baseline.
+         * <p>The details about the image baseline.</p>
          */
         public Builder baselineDetail(BaselineDetail baselineDetail) {
             this.baselineDetail = baselineDetail;
@@ -58,7 +63,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +79,38 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageBaselineDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBaselineDetailResponseBody</p>
+     */
     public static class BaselineDetail extends TeaModel {
-        @NameInMap("Advice")
+        @com.aliyun.core.annotation.NameInMap("Advice")
         private String advice;
 
-        @NameInMap("BaselineClassAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineClassAlias")
         private String baselineClassAlias;
 
-        @NameInMap("BaselineItemAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemAlias")
         private String baselineItemAlias;
 
-        @NameInMap("BaselineItemKey")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemKey")
         private String baselineItemKey;
 
-        @NameInMap("BaselineNameAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameAlias")
         private String baselineNameAlias;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Prompt")
+        @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
 
-        @NameInMap("ResultId")
+        @com.aliyun.core.annotation.NameInMap("ResultId")
         private String resultId;
 
         private BaselineDetail(Builder builder) {
@@ -194,7 +208,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             private String resultId; 
 
             /**
-             * The suggestion for the management of the risk item.
+             * <p>The suggestion for the management of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Delete the leaked AccessKey pairs.</p>
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -202,7 +219,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline type.
+             * <p>The alias of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -210,7 +230,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline check item.
+             * <p>The alias of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessKey pair leak</p>
              */
             public Builder baselineItemAlias(String baselineItemAlias) {
                 this.baselineItemAlias = baselineItemAlias;
@@ -218,7 +241,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the baseline check item.
+             * <p>The key of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder baselineItemKey(String baselineItemKey) {
                 this.baselineItemKey = baselineItemKey;
@@ -226,7 +252,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline.
+             * <p>The alias of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessKey pair leak</p>
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -234,7 +263,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the risk item.
+             * <p>The description of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>If an AccessKey pair is leaked, the AccessKey pair may be fraudulently used.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,12 +274,15 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the baseline check item. Valid values:
-             * <p>
+             * <p>The risk level of the baseline check item. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -255,7 +290,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The issue that is detected by using the baseline.
+             * <p>The issue that is detected by using the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/aksk.txt:LTAI4GBEG5zaqX**********</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -263,7 +301,10 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asynchronous request.
+             * <p>The ID of the asynchronous request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>async__c6f3b0b54613383b40bdce593ffe****</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;

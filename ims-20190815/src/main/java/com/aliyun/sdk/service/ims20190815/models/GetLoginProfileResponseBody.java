@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoginProfileResponseBody} extends {@link TeaModel}
  *
  * <p>GetLoginProfileResponseBody</p>
  */
 public class GetLoginProfileResponseBody extends TeaModel {
-    @NameInMap("LoginProfile")
+    @com.aliyun.core.annotation.NameInMap("LoginProfile")
     private LoginProfile loginProfile;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLoginProfileResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The logon information.
+         * <p>The console logon configurations.</p>
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -58,7 +63,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E517F18B-632C-48FC-93F1-CDCBCC6F8444</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,36 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLoginProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginProfileResponseBody</p>
+     */
     public static class LoginProfile extends TeaModel {
-        @NameInMap("LastLoginTime")
+        @com.aliyun.core.annotation.NameInMap("AutoDisableLoginStatus")
+        private String autoDisableLoginStatus;
+
+        @com.aliyun.core.annotation.NameInMap("LastLoginTime")
         private String lastLoginTime;
 
-        @NameInMap("MFABindRequired")
+        @com.aliyun.core.annotation.NameInMap("MFABindRequired")
         private Boolean MFABindRequired;
 
-        @NameInMap("PasswordResetRequired")
+        @com.aliyun.core.annotation.NameInMap("PasswordResetRequired")
         private Boolean passwordResetRequired;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private LoginProfile(Builder builder) {
+            this.autoDisableLoginStatus = builder.autoDisableLoginStatus;
             this.lastLoginTime = builder.lastLoginTime;
             this.MFABindRequired = builder.MFABindRequired;
             this.passwordResetRequired = builder.passwordResetRequired;
@@ -105,6 +123,13 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
         public static LoginProfile create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoDisableLoginStatus
+         */
+        public String getAutoDisableLoginStatus() {
+            return this.autoDisableLoginStatus;
         }
 
         /**
@@ -150,6 +175,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoDisableLoginStatus; 
             private String lastLoginTime; 
             private Boolean MFABindRequired; 
             private Boolean passwordResetRequired; 
@@ -158,7 +184,18 @@ public class GetLoginProfileResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * The last time when the RAM user logged on to the console.
+             * AutoDisableLoginStatus.
+             */
+            public Builder autoDisableLoginStatus(String autoDisableLoginStatus) {
+                this.autoDisableLoginStatus = autoDisableLoginStatus;
+                return this;
+            }
+
+            /**
+             * <p>The time of the most recent logon. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-14T07:25:25Z</p>
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -166,7 +203,14 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether multi-factor authentication (MFA) must be enabled.
+             * <p>Indicates whether multi-factor authentication (MFA) must be enabled. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder MFABindRequired(Boolean MFABindRequired) {
                 this.MFABindRequired = MFABindRequired;
@@ -174,7 +218,14 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM user must reset the password at the next logon.
+             * <p>Indicates whether the RAM user is required to reset the password upon the next logon. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
@@ -182,7 +233,14 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The status of password-based logon.
+             * <p>Indicates whether console logon is enabled. Valid values:</p>
+             * <ul>
+             * <li>Active: enabled.</li>
+             * <li>Inactive: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -190,7 +248,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The modification time. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-14T06:56:45Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -198,7 +259,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the RAM user.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

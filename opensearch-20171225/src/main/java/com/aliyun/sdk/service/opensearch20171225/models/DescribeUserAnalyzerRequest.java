@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserAnalyzerRequest</p>
  */
 public class DescribeUserAnalyzerRequest extends Request {
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("with")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("with")
     private String with;
 
     private DescribeUserAnalyzerRequest(Builder builder) {
@@ -69,7 +68,7 @@ public class DescribeUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * kevin_test
+         * The name of the analyzer.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -78,7 +77,9 @@ public class DescribeUserAnalyzerRequest extends Request {
         }
 
         /**
-         * all
+         * The Associated information,output properties based on hierarchy.
+         * <p>
+         * * **all**: Outputs associated app information
          */
         public Builder with(String with) {
             this.putQueryParameter("with", with);

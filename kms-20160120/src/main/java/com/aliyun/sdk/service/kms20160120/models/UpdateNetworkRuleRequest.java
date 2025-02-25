@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateNetworkRuleRequest</p>
  */
 public class UpdateNetworkRuleRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("SourcePrivateIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePrivateIp")
     private String sourcePrivateIp;
 
     private UpdateNetworkRuleRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class UpdateNetworkRuleRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description after the update.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,7 +91,7 @@ public class UpdateNetworkRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the access control rule that you want to update.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +100,7 @@ public class UpdateNetworkRuleRequest extends Request {
         }
 
         /**
-         * SourcePrivateIp.
+         * The private IP address or CIDR block after the update. Separate multiple items with commas (,).
          */
         public Builder sourcePrivateIp(String sourcePrivateIp) {
             this.putQueryParameter("SourcePrivateIp", sourcePrivateIp);

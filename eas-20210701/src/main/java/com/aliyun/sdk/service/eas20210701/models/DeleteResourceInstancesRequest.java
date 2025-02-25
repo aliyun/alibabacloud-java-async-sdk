@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResourceInstancesRequest} extends {@link RequestModel}
  *
  * <p>DeleteResourceInstancesRequest</p>
  */
 public class DeleteResourceInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("AllFailed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllFailed")
     private Boolean allFailed;
 
-    @Query
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private String instanceList;
 
     private DeleteResourceInstancesRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class DeleteResourceInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +116,11 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -116,7 +129,14 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * AllFailed.
+         * <p>Specifies whether to delete all the instances that fail to be created. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allFailed(Boolean allFailed) {
             this.putQueryParameter("AllFailed", allFailed);
@@ -125,7 +145,10 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceList.
+         * <p>The instances. Separate multiple instances with commas (,), such as <code>instanceId1,instanceId2</code>. For more information about how to query the instances, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-i-xxxxxxx,eas-i-xxxxxxx</p>
          */
         public Builder instanceList(String instanceList) {
             this.putQueryParameter("InstanceList", instanceList);

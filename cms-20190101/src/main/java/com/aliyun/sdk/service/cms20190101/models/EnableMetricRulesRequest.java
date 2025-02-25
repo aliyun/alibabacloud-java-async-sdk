@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableMetricRulesRequest} extends {@link RequestModel}
  *
  * <p>EnableMetricRulesRequest</p>
  */
 public class EnableMetricRulesRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > ruleId;
 
     private EnableMetricRulesRequest(Builder builder) {
@@ -55,12 +55,13 @@ public class EnableMetricRulesRequest extends Request {
         } 
 
         /**
-         * The IDs of the alert rules.
-         * <p>
+         * <p>The IDs of the alert rules.</p>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <p>For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values of N: 1 to 100.
-         * 
-         * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * <strong>example:</strong>
+         * <p>ab05733c97b7ce239fb1b53393dc1697c123****</p>
          */
         public Builder ruleId(java.util.List < String > ruleId) {
             this.putQueryParameter("RuleId", ruleId);

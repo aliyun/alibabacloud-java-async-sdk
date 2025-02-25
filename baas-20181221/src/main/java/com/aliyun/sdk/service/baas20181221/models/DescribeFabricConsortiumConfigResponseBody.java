@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricConsortiumConfigResponseBody</p>
  */
 public class DescribeFabricConsortiumConfigResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeFabricConsortiumConfigResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeFabricConsortiumConfigResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("ChannelPolicy")
+        @com.aliyun.core.annotation.NameInMap("ChannelPolicy")
         private java.util.List < String > channelPolicy;
 
-        @NameInMap("OrdererType")
+        @com.aliyun.core.annotation.NameInMap("OrdererType")
         private java.util.List < String > ordererType;
 
         private Result(Builder builder) {

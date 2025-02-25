@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPageSmartShortUrlLogResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPageSmartShortUrlLogResponseBody</p>
  */
 public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryPageSmartShortUrlLogResponseBody(Builder builder) {
@@ -131,23 +136,29 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPageSmartShortUrlLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPageSmartShortUrlLogResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ClickState")
+        @com.aliyun.core.annotation.NameInMap("ClickState")
         private Long clickState;
 
-        @NameInMap("ClickTime")
+        @com.aliyun.core.annotation.NameInMap("ClickTime")
         private Long clickTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ShortName")
+        @com.aliyun.core.annotation.NameInMap("ShortName")
         private String shortName;
 
-        @NameInMap("ShortUrl")
+        @com.aliyun.core.annotation.NameInMap("ShortUrl")
         private String shortUrl;
 
         private List(Builder builder) {
@@ -272,20 +283,26 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPageSmartShortUrlLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPageSmartShortUrlLogResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Long totalPage;
 
         private Model(Builder builder) {
@@ -307,7 +324,7 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -340,7 +357,7 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long totalCount; 
@@ -349,7 +366,7 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

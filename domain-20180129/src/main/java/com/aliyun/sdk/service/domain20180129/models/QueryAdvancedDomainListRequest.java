@@ -1,129 +1,133 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAdvancedDomainListRequest} extends {@link RequestModel}
  *
  * <p>QueryAdvancedDomainListRequest</p>
  */
 public class QueryAdvancedDomainListRequest extends Request {
-    @Query
-    @NameInMap("DomainGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainGroupId")
     private Long domainGroupId;
 
-    @Query
-    @NameInMap("DomainNameSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNameSort")
     private Boolean domainNameSort;
 
-    @Query
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private Integer domainStatus;
 
-    @Query
-    @NameInMap("EndExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndExpirationDate")
     private Long endExpirationDate;
 
-    @Query
-    @NameInMap("EndLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndLength")
     private Integer endLength;
 
-    @Query
-    @NameInMap("EndRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndRegistrationDate")
     private Long endRegistrationDate;
 
-    @Query
-    @NameInMap("Excluded")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Excluded")
     private String excluded;
 
-    @Query
-    @NameInMap("ExcludedPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludedPrefix")
     private Boolean excludedPrefix;
 
-    @Query
-    @NameInMap("ExcludedSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludedSuffix")
     private Boolean excludedSuffix;
 
-    @Query
-    @NameInMap("ExpirationDateSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpirationDateSort")
     private Boolean expirationDateSort;
 
-    @Query
-    @NameInMap("Form")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Form")
     private Integer form;
 
-    @Query
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsPremiumDomain")
+    private Boolean isPremiumDomain;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Query
-    @NameInMap("KeyWordPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWordPrefix")
     private Boolean keyWordPrefix;
 
-    @Query
-    @NameInMap("KeyWordSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWordSuffix")
     private Boolean keyWordSuffix;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 200, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductDomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductDomainType")
     private String productDomainType;
 
-    @Query
-    @NameInMap("ProductDomainTypeSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductDomainTypeSort")
     private Boolean productDomainTypeSort;
 
-    @Query
-    @NameInMap("RegistrationDateSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrationDateSort")
     private Boolean registrationDateSort;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StartExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartExpirationDate")
     private Long startExpirationDate;
 
-    @Query
-    @NameInMap("StartLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartLength")
     private Integer startLength;
 
-    @Query
-    @NameInMap("StartRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartRegistrationDate")
     private Long startRegistrationDate;
 
-    @Query
-    @NameInMap("Suffixs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Suffixs")
     private String suffixs;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TradeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TradeType")
     private Integer tradeType;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private QueryAdvancedDomainListRequest(Builder builder) {
@@ -139,6 +143,7 @@ public class QueryAdvancedDomainListRequest extends Request {
         this.excludedSuffix = builder.excludedSuffix;
         this.expirationDateSort = builder.expirationDateSort;
         this.form = builder.form;
+        this.isPremiumDomain = builder.isPremiumDomain;
         this.keyWord = builder.keyWord;
         this.keyWordPrefix = builder.keyWordPrefix;
         this.keyWordSuffix = builder.keyWordSuffix;
@@ -246,6 +251,13 @@ public class QueryAdvancedDomainListRequest extends Request {
      */
     public Integer getForm() {
         return this.form;
+    }
+
+    /**
+     * @return isPremiumDomain
+     */
+    public Boolean getIsPremiumDomain() {
+        return this.isPremiumDomain;
     }
 
     /**
@@ -379,6 +391,7 @@ public class QueryAdvancedDomainListRequest extends Request {
         private Boolean excludedSuffix; 
         private Boolean expirationDateSort; 
         private Integer form; 
+        private Boolean isPremiumDomain; 
         private String keyWord; 
         private Boolean keyWordPrefix; 
         private Boolean keyWordSuffix; 
@@ -414,6 +427,7 @@ public class QueryAdvancedDomainListRequest extends Request {
             this.excludedSuffix = request.excludedSuffix;
             this.expirationDateSort = request.expirationDateSort;
             this.form = request.form;
+            this.isPremiumDomain = request.isPremiumDomain;
             this.keyWord = request.keyWord;
             this.keyWordPrefix = request.keyWordPrefix;
             this.keyWordSuffix = request.keyWordSuffix;
@@ -533,6 +547,15 @@ public class QueryAdvancedDomainListRequest extends Request {
         }
 
         /**
+         * IsPremiumDomain.
+         */
+        public Builder isPremiumDomain(Boolean isPremiumDomain) {
+            this.putQueryParameter("IsPremiumDomain", isPremiumDomain);
+            this.isPremiumDomain = isPremiumDomain;
+            return this;
+        }
+
+        /**
          * KeyWord.
          */
         public Builder keyWord(String keyWord) {
@@ -569,7 +592,10 @@ public class QueryAdvancedDomainListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -578,7 +604,10 @@ public class QueryAdvancedDomainListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -692,11 +721,17 @@ public class QueryAdvancedDomainListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAdvancedDomainListRequest} extends {@link TeaModel}
+     *
+     * <p>QueryAdvancedDomainListRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

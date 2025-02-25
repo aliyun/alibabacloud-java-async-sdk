@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMailAddressByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMailAddressByParamResponseBody</p>
  */
 public class QueryMailAddressByParamResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryMailAddressByParamResponseBody(Builder builder) {
@@ -131,41 +136,47 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMailAddressByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMailAddressByParamResponseBody</p>
+     */
     public static class MailAddress extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DailyCount")
+        @com.aliyun.core.annotation.NameInMap("DailyCount")
         private String dailyCount;
 
-        @NameInMap("DailyReqCount")
+        @com.aliyun.core.annotation.NameInMap("DailyReqCount")
         private String dailyReqCount;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("MailAddressId")
+        @com.aliyun.core.annotation.NameInMap("MailAddressId")
         private String mailAddressId;
 
-        @NameInMap("MonthCount")
+        @com.aliyun.core.annotation.NameInMap("MonthCount")
         private String monthCount;
 
-        @NameInMap("MonthReqCount")
+        @com.aliyun.core.annotation.NameInMap("MonthReqCount")
         private String monthReqCount;
 
-        @NameInMap("ReplyAddress")
+        @com.aliyun.core.annotation.NameInMap("ReplyAddress")
         private String replyAddress;
 
-        @NameInMap("ReplyStatus")
+        @com.aliyun.core.annotation.NameInMap("ReplyStatus")
         private String replyStatus;
 
-        @NameInMap("Sendtype")
+        @com.aliyun.core.annotation.NameInMap("Sendtype")
         private String sendtype;
 
         private MailAddress(Builder builder) {
@@ -392,9 +403,15 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMailAddressByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMailAddressByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("mailAddress")
-        private java.util.List < MailAddress> mailAddress;
+        @com.aliyun.core.annotation.NameInMap("mailAddress")
+        private java.util.List<MailAddress> mailAddress;
 
         private Data(Builder builder) {
             this.mailAddress = builder.mailAddress;
@@ -411,17 +428,17 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         /**
          * @return mailAddress
          */
-        public java.util.List < MailAddress> getMailAddress() {
+        public java.util.List<MailAddress> getMailAddress() {
             return this.mailAddress;
         }
 
         public static final class Builder {
-            private java.util.List < MailAddress> mailAddress; 
+            private java.util.List<MailAddress> mailAddress; 
 
             /**
              * mailAddress.
              */
-            public Builder mailAddress(java.util.List < MailAddress> mailAddress) {
+            public Builder mailAddress(java.util.List<MailAddress> mailAddress) {
                 this.mailAddress = mailAddress;
                 return this;
             }

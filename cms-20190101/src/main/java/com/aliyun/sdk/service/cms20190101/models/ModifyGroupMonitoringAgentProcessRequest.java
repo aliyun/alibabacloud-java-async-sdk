@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGroupMonitoringAgentProcessRequest} extends {@link RequestModel}
  *
  * <p>ModifyGroupMonitoringAgentProcessRequest</p>
  */
 public class ModifyGroupMonitoringAgentProcessRequest extends Request {
-    @Query
-    @NameInMap("AlertConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AlertConfig> alertConfig;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("MatchExpressFilterRelation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchExpressFilterRelation")
     private String matchExpressFilterRelation;
 
     private ModifyGroupMonitoringAgentProcessRequest(Builder builder) {
@@ -99,7 +99,8 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * AlertConfig.
+         * <p>The alert rule configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
             this.putQueryParameter("AlertConfig", alertConfig);
@@ -108,7 +109,11 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6780****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -117,7 +122,11 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The ID of the process monitoring task.
+         * <p>The ID of the process monitoring task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92E3065F-0980-4E31-9AA0-BA6****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -126,12 +135,15 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The logical operator used between conditional expressions that are used to match instances. Valid values:
-         * <p>
+         * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
+         * <ul>
+         * <li>all</li>
+         * <li>and</li>
+         * <li>or</li>
+         * </ul>
          * 
-         * *   all
-         * *   and
-         * *   or
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder matchExpressFilterRelation(String matchExpressFilterRelation) {
             this.putQueryParameter("MatchExpressFilterRelation", matchExpressFilterRelation);
@@ -146,17 +158,23 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyGroupMonitoringAgentProcessRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyGroupMonitoringAgentProcessRequest</p>
+     */
     public static class TargetList extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private TargetList(Builder builder) {
@@ -209,17 +227,27 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             private String level; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource.
-             * <p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+             * <p>For information about how to obtain the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
+             * <p>Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+             * <ul>
+             * <li>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</li>
+             * <li>{userId}: the ID of the Alibaba Cloud account.</li>
+             * <li>{regionId}: the region ID of the message queue or topic.</li>
+             * <li>{Resource type}: the type of the resource for which alerts are triggered. Valid values: <ul>
+             * <li><strong>queues</strong> </li>
+             * <li><strong>topics</strong></li>
+             * </ul>
+             * </li>
+             * <li>{Resourcename}: the name of the resource. <ul>
+             * <li>If the resource type is set to <strong>queues</strong>, the resource name is the name of the message queue. </li>
+             * <li>If the resource type is set to <strong>topics</strong>, the resource name is the name of the topic.`</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
-             * 
-             * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
-             * 
-             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-             * *   {userId}: the ID of the Alibaba Cloud account.
-             * *   {regionId}: the region ID of the message queue or topic.
-             * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</p>
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -227,10 +255,11 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The ID of the resource for which alerts are triggered.
-             * <p>
+             * <p>The ID of the resource for which alerts are triggered.</p>
+             * <p>For information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</p>
              * 
-             * For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -238,7 +267,10 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -246,12 +278,15 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The level of the alert. Valid values:
-             * <p>
+             * <p>The level of the alert. Valid values:</p>
+             * <ul>
+             * <li>INFO: information</li>
+             * <li>WARN: warning</li>
+             * <li>CRITICAL: critical</li>
+             * </ul>
              * 
-             * *   INFO: information
-             * *   WARN: warning
-             * *   CRITICAL: critical
+             * <strong>example:</strong>
+             * <p>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -265,39 +300,45 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyGroupMonitoringAgentProcessRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyGroupMonitoringAgentProcessRequest</p>
+     */
     public static class AlertConfig extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String comparisonOperator;
 
-        @NameInMap("EffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
         private String effectiveInterval;
 
-        @NameInMap("EscalationsLevel")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EscalationsLevel")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String escalationsLevel;
 
-        @NameInMap("NoEffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("NoEffectiveInterval")
         private String noEffectiveInterval;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private String silenceTime;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < TargetList> targetList;
 
-        @NameInMap("Threshold")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String threshold;
 
-        @NameInMap("Times")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Times")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String times;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private AlertConfig(Builder builder) {
@@ -404,20 +445,24 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             private String webhook; 
 
             /**
-             * The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:
-             * <p>
+             * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</li>
+             * <li>GreaterThanThreshold: greater than the threshold</li>
+             * <li>LessThanOrEqualToThreshold: less than or equal to the threshold</li>
+             * <li>LessThanThreshold: less than the threshold.</li>
+             * <li>NotEqualToThreshold: not equal to the threshold</li>
+             * <li>GreaterThanYesterday: greater than the metric value at the same time yesterday.</li>
+             * <li>LessThanYesterday: less than the metric value at the same time yesterday</li>
+             * <li>GreaterThanLastWeek: greater than the metric value at the same time last week</li>
+             * <li>LessThanLastWeek: less than the metric value at the same time last week</li>
+             * <li>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</li>
+             * <li>LessThanLastPeriod: less than the metric value in the last monitoring cycle</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
-             * *   GreaterThanThreshold: greater than the threshold
-             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
-             * *   LessThanThreshold: less than the threshold.
-             * *   NotEqualToThreshold: not equal to the threshold
-             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday.
-             * *   LessThanYesterday: less than the metric value at the same time yesterday
-             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
-             * *   LessThanLastWeek: less than the metric value at the same time last week
-             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
-             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -425,7 +470,10 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The time period during which the alert rule is effective. Valid values of N: 1 to 200.
+             * <p>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00-22:59</p>
              */
             public Builder effectiveInterval(String effectiveInterval) {
                 this.effectiveInterval = effectiveInterval;
@@ -433,12 +481,16 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The level of the alert. Valid values of N: 1 to 200. Valid values:
-             * <p>
+             * <p>The level of the alert. Valid values of N: 1 to 200. Valid values:</p>
+             * <ul>
+             * <li>critical (default value): critical</li>
+             * <li>warn: warning</li>
+             * <li>info: information</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   critical (default value): critical
-             * *   warn: warning
-             * *   info: information
+             * <strong>example:</strong>
+             * <p>warn</p>
              */
             public Builder escalationsLevel(String escalationsLevel) {
                 this.escalationsLevel = escalationsLevel;
@@ -446,7 +498,10 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.
+             * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:00-23:59</p>
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
@@ -454,12 +509,14 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.
-             * <p>
+             * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</p>
+             * <p>Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
+             * <blockquote>
+             * <p> Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
+             * </blockquote>
              * 
-             * Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
-             * 
-             * >  Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -467,10 +524,13 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.
-             * <p>
+             * <p>The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.</p>
+             * <blockquote>
+             * <p> Set the value to Average.</p>
+             * </blockquote>
              * 
-             * >  Set the value to Average.
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -478,7 +538,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * TargetList.
+             * <p>The alert trigger.</p>
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;
@@ -486,7 +546,11 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The alert threshold. Valid values of N: 1 to 200.
+             * <p>The alert threshold. Valid values of N: 1 to 200.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -494,10 +558,14 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.
-             * <p>
+             * <p>The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.</p>
+             * <blockquote>
+             * <p> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(String times) {
                 this.times = times;
@@ -505,7 +573,10 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.
+             * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

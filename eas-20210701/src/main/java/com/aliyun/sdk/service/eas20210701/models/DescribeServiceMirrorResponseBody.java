@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMirrorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceMirrorResponseBody</p>
  */
 public class DescribeServiceMirrorResponseBody extends TeaModel {
-    @NameInMap("Ratio")
+    @com.aliyun.core.annotation.NameInMap("Ratio")
     private String ratio;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Target")
+    @com.aliyun.core.annotation.NameInMap("Target")
     private String target;
 
     private DescribeServiceMirrorResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         private String target; 
 
         /**
-         * Ratio.
+         * <p>The percentage of traffic that you want to mirror. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder ratio(String ratio) {
             this.ratio = ratio;
@@ -82,7 +90,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +101,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -98,7 +112,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * Target.
+         * <p>The destination services to which you want to mirror traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo2,foo3</p>
          */
         public Builder target(String target) {
             this.target = target;

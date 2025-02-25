@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatabasesResponseBody</p>
  */
 public class DescribeDatabasesResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private Databases databases;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDatabasesResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about databases.
+         * <p>Details about databases.</p>
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -82,7 +87,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -98,7 +109,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1DF8CA6-2300-448B-9ABF-760C4B******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +125,23 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Account extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountPrivilege")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
         private String accountPrivilege;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("PrivilegeStatus")
+        @com.aliyun.core.annotation.NameInMap("PrivilegeStatus")
         private String privilegeStatus;
 
         private Account(Builder builder) {
@@ -174,10 +194,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String privilegeStatus; 
 
             /**
-             * The username of the account.
-             * <p>
+             * <p>The username of the account.</p>
+             * <blockquote>
+             * <p>A PolarDB for MySQL cluster does not support privileged accounts.</p>
+             * </blockquote>
              * 
-             * > A PolarDB for MySQL cluster does not support privileged accounts.
+             * <strong>example:</strong>
+             * <p>test_acc</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -185,14 +208,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions that are granted to the account. Valid values:
-             * <p>
+             * <p>The permissions that are granted to the account. Valid values:</p>
+             * <ul>
+             * <li><strong>ReadWrite</strong>: read and write permissions</li>
+             * <li><strong>ReadOnly</strong>: read-only permissions</li>
+             * <li><strong>DMLOnly</strong>: The account is granted the permissions to execute only DML statements on the database.</li>
+             * <li><strong>DDLOnly</strong>: The account is granted the permissions to execute only DDL statements on the database.</li>
+             * <li><strong>ReadIndex</strong>: The account has the read and index permissions on the database.</li>
+             * </ul>
              * 
-             * *   **ReadWrite**: read and write permissions
-             * *   **ReadOnly**: read-only permissions
-             * *   **DMLOnly**: The account is granted the permissions to execute only DML statements on the database.
-             * *   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.
-             * *   **ReadIndex**: The account has the read and index permissions on the database.
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -200,12 +226,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the account. Valid values:
-             * <p>
+             * <p>The state of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Available**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -213,12 +242,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization state of the account. Valid values:
-             * <p>
+             * <p>The authorization state of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>Empowering</strong>: The system is granting permissions to the account.</li>
+             * <li><strong>Empowered</strong>: Permissions are granted to the account.</li>
+             * <li><strong>Removing</strong>: The system is revoking permissions from the account.</li>
+             * </ul>
              * 
-             * *   **Empowering**: The system is granting permissions to the account.
-             * *   **Empowered**: Permissions are granted to the account.
-             * *   **Removing**: The system is revoking permissions from the account.
+             * <strong>example:</strong>
+             * <p>Empowered</p>
              */
             public Builder privilegeStatus(String privilegeStatus) {
                 this.privilegeStatus = privilegeStatus;
@@ -232,9 +264,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
-        private java.util.List < Account> account;
+        @com.aliyun.core.annotation.NameInMap("Account")
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -251,17 +289,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < Account> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < Account> account; 
+            private java.util.List<Account> account; 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List < Account> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }
@@ -273,26 +311,32 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Database extends TeaModel {
-        @NameInMap("Accounts")
+        @com.aliyun.core.annotation.NameInMap("Accounts")
         private Accounts accounts;
 
-        @NameInMap("CharacterSetName")
+        @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private String characterSetName;
 
-        @NameInMap("DBDescription")
+        @com.aliyun.core.annotation.NameInMap("DBDescription")
         private String DBDescription;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBStatus")
+        @com.aliyun.core.annotation.NameInMap("DBStatus")
         private String DBStatus;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("MasterID")
+        @com.aliyun.core.annotation.NameInMap("MasterID")
         private String masterID;
 
         private Database(Builder builder) {
@@ -372,10 +416,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String masterID; 
 
             /**
-             * Details about the accounts.
-             * <p>
-             * 
-             * > A PolarDB for MySQL cluster does not support privileged accounts.
+             * <p>Details about the accounts.</p>
+             * <blockquote>
+             * <p>A PolarDB for MySQL cluster does not support privileged accounts.</p>
+             * </blockquote>
              */
             public Builder accounts(Accounts accounts) {
                 this.accounts = accounts;
@@ -383,7 +427,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The character set that the database uses. For more information, see [Character set tables](~~99716~~).
+             * <p>The character set that the database uses. For more information, see <a href="https://help.aliyun.com/document_detail/99716.html">Character set tables</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
@@ -391,7 +438,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the database.
+             * <p>The description of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_des</p>
              */
             public Builder DBDescription(String DBDescription) {
                 this.DBDescription = DBDescription;
@@ -399,7 +449,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -407,12 +460,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database. Valid values:
-             * <p>
+             * <p>The state of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Running**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
@@ -420,12 +476,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine. Valid values:
-             * <p>
+             * <p>The type of the database engine. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * </ul>
              * 
-             * *   **MySQL**
-             * *   **Oracle**
-             * *   **PostgreSQL**
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -433,7 +492,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary node in the cluster of Multi-master Cluster (Database/Table) Edition.
+             * <p>The ID of the primary node in the cluster of Multi-master Cluster (Database/Table) Edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder masterID(String masterID) {
                 this.masterID = masterID;
@@ -447,9 +509,15 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabasesResponseBody</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("Database")
-        private java.util.List < Database> database;
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private java.util.List<Database> database;
 
         private Databases(Builder builder) {
             this.database = builder.database;
@@ -466,17 +534,17 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * @return database
          */
-        public java.util.List < Database> getDatabase() {
+        public java.util.List<Database> getDatabase() {
             return this.database;
         }
 
         public static final class Builder {
-            private java.util.List < Database> database; 
+            private java.util.List<Database> database; 
 
             /**
              * Database.
              */
-            public Builder database(java.util.List < Database> database) {
+            public Builder database(java.util.List<Database> database) {
                 this.database = database;
                 return this;
             }

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDevicesRequest} extends {@link RequestModel}
  *
  * <p>DeleteDevicesRequest</p>
  */
 public class DeleteDevicesRequest extends Request {
-    @Query
-    @NameInMap("ClientType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer clientType;
 
-    @Query
-    @NameInMap("DeviceIds")
-    @Validation(required = true)
-    private java.util.List < String > deviceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceIds;
 
-    @Query
-    @NameInMap("Force")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer force;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DeleteDevicesRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class DeleteDevicesRequest extends Request {
     /**
      * @return deviceIds
      */
-    public java.util.List < String > getDeviceIds() {
+    public java.util.List<String> getDeviceIds() {
         return this.deviceIds;
     }
 
@@ -82,7 +87,7 @@ public class DeleteDevicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteDevicesRequest, Builder> {
         private Integer clientType; 
-        private java.util.List < String > deviceIds; 
+        private java.util.List<String> deviceIds; 
         private Integer force; 
         private String regionId; 
 
@@ -99,11 +104,16 @@ public class DeleteDevicesRequest extends Request {
         } 
 
         /**
-         * The type of the device.
-         * <p>
+         * <p>The type of the client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>1: hardware client.</li>
+         * <li>2: software client.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: the hardware client device
-         * *   2: the software client device
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder clientType(Integer clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -112,20 +122,26 @@ public class DeleteDevicesRequest extends Request {
         }
 
         /**
-         * The list of universally unique identifiers (UUIDs) of devices.
+         * <p>The IDs of the devices. You can specify up to 200 IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceIds(java.util.List < String > deviceIds) {
+        public Builder deviceIds(java.util.List<String> deviceIds) {
             this.putQueryParameter("DeviceIds", deviceIds);
             this.deviceIds = deviceIds;
             return this;
         }
 
         /**
-         * Specifies whether to forcefully delete the device.
-         * <p>
+         * <p>Specifies whether to forcefully delete the device if the device is bound to a user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: do not forcefully delete the device.</li>
+         * <li>1: forcefully delete the device.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: forcefully deletes the device.
-         * *   0: does not forcefully delete the device. (You cannot delete a device to which a user is bound.)
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder force(Integer force) {
             this.putQueryParameter("Force", force);
@@ -134,7 +150,10 @@ public class DeleteDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

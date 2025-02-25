@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkspaceResourceRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkspaceResourceRequest</p>
  */
 public class UpdateWorkspaceResourceRequest extends Request {
-    @Path
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Body
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Body
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Labels> labels;
 
-    @Body
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Body
-    @NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
     private java.util.List < String > resourceIds;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Body
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private java.util.Map < String, ? > spec;
 
     private UpdateWorkspaceResourceRequest(Builder builder) {
@@ -153,7 +153,10 @@ public class UpdateWorkspaceResourceRequest extends Request {
         } 
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("WorkspaceId", workspaceId);
@@ -231,11 +234,17 @@ public class UpdateWorkspaceResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateWorkspaceResourceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateWorkspaceResourceRequest</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {

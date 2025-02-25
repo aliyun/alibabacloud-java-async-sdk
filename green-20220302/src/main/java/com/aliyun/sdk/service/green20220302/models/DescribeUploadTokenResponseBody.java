@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUploadTokenResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUploadTokenResponseBody</p>
  */
 public class DescribeUploadTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUploadTokenResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The returned HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The message that is returned in response to the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -98,7 +109,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,29 +125,35 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUploadTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUploadTokenResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private Integer expiration;
 
-        @NameInMap("FileNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("FileNamePrefix")
         private String fileNamePrefix;
 
-        @NameInMap("OssInternalEndPoint")
+        @com.aliyun.core.annotation.NameInMap("OssInternalEndPoint")
         private String ossInternalEndPoint;
 
-        @NameInMap("OssInternetEndPoint")
+        @com.aliyun.core.annotation.NameInMap("OssInternetEndPoint")
         private String ossInternetEndPoint;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
         private Data(Builder builder) {
@@ -222,7 +242,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * AccessKeyId.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NUEUjvDqMuvH6oQA1TXxxH4wVR</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -230,7 +253,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -238,7 +264,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cip-shanghai</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -246,7 +275,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * <p>The time when the file sharing link expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1720577200</p>
              */
             public Builder expiration(Integer expiration) {
                 this.expiration = expiration;
@@ -254,7 +286,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * FileNamePrefix.
+             * <p>The file prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upload/1xxb89/</p>
              */
             public Builder fileNamePrefix(String fileNamePrefix) {
                 this.fileNamePrefix = fileNamePrefix;
@@ -262,7 +297,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * OssInternalEndPoint.
+             * <p>the oss intranet point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cn-shanghai-internal.aliyuncs.com">https://oss-cn-shanghai-internal.aliyuncs.com</a></p>
              */
             public Builder ossInternalEndPoint(String ossInternalEndPoint) {
                 this.ossInternalEndPoint = ossInternalEndPoint;
@@ -270,7 +308,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * OssInternetEndPoint.
+             * <p>the oss internet point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-cn-shanghai.aliyuncs.com">https://oss-cn-shanghai.aliyuncs.com</a></p>
              */
             public Builder ossInternetEndPoint(String ossInternetEndPoint) {
                 this.ossInternetEndPoint = ossInternetEndPoint;
@@ -278,7 +319,10 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

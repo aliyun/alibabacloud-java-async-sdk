@@ -1,111 +1,122 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceInstanceResponseBody</p>
  */
 public class GetServiceInstanceResponseBody extends TeaModel {
-    @NameInMap("BizStatus")
+    @com.aliyun.core.annotation.NameInMap("BizStatus")
     private String bizStatus;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("EnableInstanceOps")
+    @com.aliyun.core.annotation.NameInMap("EnableInstanceOps")
     private Boolean enableInstanceOps;
 
-    @NameInMap("EnableUserPrometheus")
-    private String enableUserPrometheus;
+    @com.aliyun.core.annotation.NameInMap("EnableUserPrometheus")
+    private Boolean enableUserPrometheus;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("IsOperated")
+    @com.aliyun.core.annotation.NameInMap("GrafanaDashBoardUrl")
+    private String grafanaDashBoardUrl;
+
+    @com.aliyun.core.annotation.NameInMap("IsOperated")
     private Boolean isOperated;
 
-    @NameInMap("LicenseMetadata")
+    @com.aliyun.core.annotation.NameInMap("LicenseMetadata")
     private String licenseMetadata;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NetworkConfig")
+    @com.aliyun.core.annotation.NameInMap("NetworkConfig")
     private NetworkConfig networkConfig;
 
-    @NameInMap("OperatedServiceInstanceId")
+    @com.aliyun.core.annotation.NameInMap("OperatedServiceInstanceId")
     private String operatedServiceInstanceId;
 
-    @NameInMap("OperationEndTime")
+    @com.aliyun.core.annotation.NameInMap("OperationEndTime")
     private String operationEndTime;
 
-    @NameInMap("OperationStartTime")
+    @com.aliyun.core.annotation.NameInMap("OperationExtraInfo")
+    private String operationExtraInfo;
+
+    @com.aliyun.core.annotation.NameInMap("OperationStartTime")
     private String operationStartTime;
 
-    @NameInMap("Outputs")
+    @com.aliyun.core.annotation.NameInMap("Outputs")
     private String outputs;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private String parameters;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("PredefinedParameterName")
+    @com.aliyun.core.annotation.NameInMap("PredefinedParameterName")
     private String predefinedParameterName;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Long progress;
 
-    @NameInMap("RdAccountLoginUrl")
+    @com.aliyun.core.annotation.NameInMap("RdAccountLoginUrl")
     private String rdAccountLoginUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private String resources;
 
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.NameInMap("Service")
     private Service service;
 
-    @NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
     private String serviceInstanceId;
 
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusDetail")
+    @com.aliyun.core.annotation.NameInMap("StatusDetail")
     private String statusDetail;
 
-    @NameInMap("SupplierUid")
+    @com.aliyun.core.annotation.NameInMap("SupplierUid")
     private Long supplierUid;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private Long userId;
 
     private GetServiceInstanceResponseBody(Builder builder) {
@@ -114,12 +125,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.enableInstanceOps = builder.enableInstanceOps;
         this.enableUserPrometheus = builder.enableUserPrometheus;
         this.endTime = builder.endTime;
+        this.grafanaDashBoardUrl = builder.grafanaDashBoardUrl;
         this.isOperated = builder.isOperated;
         this.licenseMetadata = builder.licenseMetadata;
         this.name = builder.name;
         this.networkConfig = builder.networkConfig;
         this.operatedServiceInstanceId = builder.operatedServiceInstanceId;
         this.operationEndTime = builder.operationEndTime;
+        this.operationExtraInfo = builder.operationExtraInfo;
         this.operationStartTime = builder.operationStartTime;
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
@@ -175,7 +188,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     /**
      * @return enableUserPrometheus
      */
-    public String getEnableUserPrometheus() {
+    public Boolean getEnableUserPrometheus() {
         return this.enableUserPrometheus;
     }
 
@@ -184,6 +197,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return grafanaDashBoardUrl
+     */
+    public String getGrafanaDashBoardUrl() {
+        return this.grafanaDashBoardUrl;
     }
 
     /**
@@ -226,6 +246,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public String getOperationEndTime() {
         return this.operationEndTime;
+    }
+
+    /**
+     * @return operationExtraInfo
+     */
+    public String getOperationExtraInfo() {
+        return this.operationExtraInfo;
     }
 
     /**
@@ -350,7 +377,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -379,14 +406,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String bizStatus; 
         private String createTime; 
         private Boolean enableInstanceOps; 
-        private String enableUserPrometheus; 
+        private Boolean enableUserPrometheus; 
         private String endTime; 
+        private String grafanaDashBoardUrl; 
         private Boolean isOperated; 
         private String licenseMetadata; 
         private String name; 
         private NetworkConfig networkConfig; 
         private String operatedServiceInstanceId; 
         private String operationEndTime; 
+        private String operationExtraInfo; 
         private String operationStartTime; 
         private String outputs; 
         private String parameters; 
@@ -404,13 +433,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String status; 
         private String statusDetail; 
         private Long supplierUid; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateName; 
         private String updateTime; 
         private Long userId; 
 
         /**
-         * BizStatus.
+         * <p>The business status of the service instance. Valid values:</p>
+         * <ul>
+         * <li>Normal: The service instance is normal.</li>
+         * <li>Renewing: The service instance is being renewed.</li>
+         * <li>RenewFailed: The service instance failed to be renewed.</li>
+         * <li>Expired: The service instance expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder bizStatus(String bizStatus) {
             this.bizStatus = bizStatus;
@@ -418,7 +456,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the service instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -426,7 +467,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableInstanceOps.
+         * <p>Indicates whether the service instance supports the hosted O&amp;M feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableInstanceOps(Boolean enableInstanceOps) {
             this.enableInstanceOps = enableInstanceOps;
@@ -434,15 +482,21 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableUserPrometheus.
+         * <p>Indicates whether the Prometheus monitoring feature is enabled on the user side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
-        public Builder enableUserPrometheus(String enableUserPrometheus) {
+        public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.enableUserPrometheus = enableUserPrometheus;
             return this;
         }
 
         /**
-         * EndTime.
+         * <p>The time when the service instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-01T12:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -450,7 +504,25 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsOperated.
+         * <p>The URL of the Grafana dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://g.xxxxxx.aliyun.com/d/xxxxxxxx-cn-mariadb/mysql-xxxxxxxx-quickstart-and-dashboard?orgId=355401&refresh=10s">https://g.xxxxxx.aliyun.com/d/xxxxxxxx-cn-mariadb/mysql-xxxxxxxx-quickstart-and-dashboard?orgId=355401&amp;refresh=10s</a></p>
+         */
+        public Builder grafanaDashBoardUrl(String grafanaDashBoardUrl) {
+            this.grafanaDashBoardUrl = grafanaDashBoardUrl;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the hosted O&amp;M feature is enabled for the service instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isOperated(Boolean isOperated) {
             this.isOperated = isOperated;
@@ -458,7 +530,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * LicenseMetadata.
+         * <p>The license metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;renewType&quot;:&quot;MONTHLY&quot;}</p>
          */
         public Builder licenseMetadata(String licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
@@ -466,7 +541,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -474,7 +552,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkConfig.
+         * <p>The network configurations.</p>
+         * <blockquote>
+         * <p> This parameter is discontinued.</p>
+         * </blockquote>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
@@ -482,7 +563,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperatedServiceInstanceId.
+         * <p>The ID of the service instance that is used to implement hosted O&amp;M.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder operatedServiceInstanceId(String operatedServiceInstanceId) {
             this.operatedServiceInstanceId = operatedServiceInstanceId;
@@ -490,7 +574,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationEndTime.
+         * <p>The end of the time range during which hosted O&amp;M is implemented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-28T06:48:56Z</p>
          */
         public Builder operationEndTime(String operationEndTime) {
             this.operationEndTime = operationEndTime;
@@ -498,7 +585,21 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationStartTime.
+         * <p>Operate extra info</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc5ce3590ed7f5529e85fec</p>
+         */
+        public Builder operationExtraInfo(String operationExtraInfo) {
+            this.operationExtraInfo = operationExtraInfo;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range during which hosted O&amp;M is implemented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-29T06:48:56Z</p>
          */
         public Builder operationStartTime(String operationStartTime) {
             this.operationStartTime = operationStartTime;
@@ -506,7 +607,18 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Outputs.
+         * <p>The outputs returned from creating the service instance.</p>
+         * <ul>
+         * <li>If the service is deployed by using a ROS template, all output fields of the template are returned.</li>
+         * <li>If the service is deployed by calling an SPI operation, the output fields of the service provider and for the Compute Nest additional features are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;InstanceIds&quot;: [
+         *             &quot;i-hp38ofxl0dsyfi7z****&quot;
+         *       ]
+         * }</p>
          */
         public Builder outputs(String outputs) {
             this.outputs = outputs;
@@ -514,7 +626,12 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The parameters that are specified to deploy the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;param&quot;: &quot;value&quot;
+         * }</p>
          */
         public Builder parameters(String parameters) {
             this.parameters = parameters;
@@ -522,7 +639,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method of the service. Valid values:</p>
+         * <ul>
+         * <li>Permanent: Once you purchase the service, you can use it permanently.</li>
+         * <li>Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.</li>
+         * <li>PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.</li>
+         * <li>CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -530,7 +656,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PredefinedParameterName.
+         * <p>The package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Package 1</p>
          */
         public Builder predefinedParameterName(String predefinedParameterName) {
             this.predefinedParameterName = predefinedParameterName;
@@ -538,7 +667,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>The deployment progress of the service instance. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -546,7 +678,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RdAccountLoginUrl.
+         * <p>The logon URL for the accounts in the resource directory corresponding to the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://signin.aliyun.com/switchRole.htm?parentAlias=1307782318217247.onaliyun.com&roleName=ResourceDirectoryAccountAccessRole">https://signin.aliyun.com/switchRole.htm?parentAlias=1307782318217247.onaliyun.com&amp;roleName=ResourceDirectoryAccountAccessRole</a></p>
          */
         public Builder rdAccountLoginUrl(String rdAccountLoginUrl) {
             this.rdAccountLoginUrl = rdAccountLoginUrl;
@@ -554,7 +689,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -562,7 +700,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzkt5buxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -570,7 +711,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The list of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;StackId&quot;: &quot;stack-xxx&quot;
+         *       }
+         * ]</p>
          */
         public Builder resources(String resources) {
             this.resources = resources;
@@ -578,7 +726,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Service.
+         * <p>The information about the service to which the service instance belongs.</p>
          */
         public Builder service(Service service) {
             this.service = service;
@@ -586,7 +734,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstanceId.
+         * <p>The ID of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -594,7 +745,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * <p>The type of the service. Valid values:</p>
+         * <ul>
+         * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+         * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+         * <li>operation: The service is a hosted O&amp;M service.</li>
+         * <li>poc: The service is a trial service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -602,7 +762,15 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The source of the service instance. Valid values:</p>
+         * <ul>
+         * <li>User: Compute Nest customer</li>
+         * <li>Market: Alibaba Cloud Marketplace</li>
+         * <li>Supplier: Compute Nest service provider</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -610,7 +778,20 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The deployment state of the service instance. Valid values:</p>
+         * <ul>
+         * <li>Created</li>
+         * <li>Deploying</li>
+         * <li>DeployedFailed</li>
+         * <li>Deployed</li>
+         * <li>Upgrading</li>
+         * <li>Deleting</li>
+         * <li>Deleted</li>
+         * <li>DeletedFailed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -618,7 +799,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * StatusDetail.
+         * <p>The description of the deployment state of the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deploy successfully</p>
          */
         public Builder statusDetail(String statusDetail) {
             this.statusDetail = statusDetail;
@@ -626,7 +810,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierUid.
+         * <p>The Alibaba Cloud account ID of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1964460391538545</p>
          */
         public Builder supplierUid(Long supplierUid) {
             this.supplierUid = supplierUid;
@@ -634,15 +821,18 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
 
         /**
-         * TemplateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模板1</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -650,7 +840,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the service instance was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -658,7 +851,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The Alibaba Cloud account ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -671,29 +867,35 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
     public static class ConnectionConfigs extends TeaModel {
-        @NameInMap("ConnectBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ConnectBandwidth")
         private Integer connectBandwidth;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("EndpointIps")
-        private java.util.List < String > endpointIps;
+        @com.aliyun.core.annotation.NameInMap("EndpointIps")
+        private java.util.List<String> endpointIps;
 
-        @NameInMap("IngressEndpointStatus")
+        @com.aliyun.core.annotation.NameInMap("IngressEndpointStatus")
         private String ingressEndpointStatus;
 
-        @NameInMap("NetworkServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("NetworkServiceStatus")
         private String networkServiceStatus;
 
-        @NameInMap("SecurityGroups")
-        private java.util.List < String > securityGroups;
+        @com.aliyun.core.annotation.NameInMap("SecurityGroups")
+        private java.util.List<String> securityGroups;
 
-        @NameInMap("VSwitches")
-        private java.util.List < String > vSwitches;
+        @com.aliyun.core.annotation.NameInMap("VSwitches")
+        private java.util.List<String> vSwitches;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ConnectionConfigs(Builder builder) {
@@ -732,7 +934,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return endpointIps
          */
-        public java.util.List < String > getEndpointIps() {
+        public java.util.List<String> getEndpointIps() {
             return this.endpointIps;
         }
 
@@ -753,14 +955,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return securityGroups
          */
-        public java.util.List < String > getSecurityGroups() {
+        public java.util.List<String> getSecurityGroups() {
             return this.securityGroups;
         }
 
         /**
          * @return vSwitches
          */
-        public java.util.List < String > getVSwitches() {
+        public java.util.List<String> getVSwitches() {
             return this.vSwitches;
         }
 
@@ -774,15 +976,18 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Integer connectBandwidth; 
             private String domainName; 
-            private java.util.List < String > endpointIps; 
+            private java.util.List<String> endpointIps; 
             private String ingressEndpointStatus; 
             private String networkServiceStatus; 
-            private java.util.List < String > securityGroups; 
-            private java.util.List < String > vSwitches; 
+            private java.util.List<String> securityGroups; 
+            private java.util.List<String> vSwitches; 
             private String vpcId; 
 
             /**
-             * ConnectBandwidth.
+             * <p>The bandwidth limit for the private connection established based on the private network interconnection mode of Compute Nest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536Mbps</p>
              */
             public Builder connectBandwidth(Integer connectBandwidth) {
                 this.connectBandwidth = connectBandwidth;
@@ -790,7 +995,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -798,15 +1006,25 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointIps.
+             * <p>The IP addresses of the endpoints for private connections.</p>
              */
-            public Builder endpointIps(java.util.List < String > endpointIps) {
+            public Builder endpointIps(java.util.List<String> endpointIps) {
                 this.endpointIps = endpointIps;
                 return this;
             }
 
             /**
-             * IngressEndpointStatus.
+             * <p>The status of the Ingress endpoint. Valid values:</p>
+             * <ul>
+             * <li>Ready: The Ingress endpoint is connected.</li>
+             * <li>Pending: The Ingress endpoint is being connected.</li>
+             * <li>Failed: The Ingress endpoint fails to be connected.</li>
+             * <li>Deleted: The Ingress endpoint is deleted.</li>
+             * <li>Deleting: The Ingress endpoint is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder ingressEndpointStatus(String ingressEndpointStatus) {
                 this.ingressEndpointStatus = ingressEndpointStatus;
@@ -814,7 +1032,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkServiceStatus.
+             * <p>The status of the network service. Valid values:</p>
+             * <ul>
+             * <li>Ready: The network service is connected.</li>
+             * <li>Pending: The network service is being connected.</li>
+             * <li>Failed: The network service fails to be connected.</li>
+             * <li>Deleted: The network service is deleted.</li>
+             * <li>Deleting: The network service is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder networkServiceStatus(String networkServiceStatus) {
                 this.networkServiceStatus = networkServiceStatus;
@@ -822,23 +1050,26 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroups.
+             * <p>The names of the security groups.</p>
              */
-            public Builder securityGroups(java.util.List < String > securityGroups) {
+            public Builder securityGroups(java.util.List<String> securityGroups) {
                 this.securityGroups = securityGroups;
                 return this;
             }
 
             /**
-             * VSwitches.
+             * <p>The names of the vSwitches.</p>
              */
-            public Builder vSwitches(java.util.List < String > vSwitches) {
+            public Builder vSwitches(java.util.List<String> vSwitches) {
                 this.vSwitches = vSwitches;
                 return this;
             }
 
             /**
-             * VpcId.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1vwnn14rqpyiczj****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -852,17 +1083,23 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
     public static class PrivateVpcConnections extends TeaModel {
-        @NameInMap("ConnectionConfigs")
-        private java.util.List < ConnectionConfigs> connectionConfigs;
+        @com.aliyun.core.annotation.NameInMap("ConnectionConfigs")
+        private java.util.List<ConnectionConfigs> connectionConfigs;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointServiceId")
+        @com.aliyun.core.annotation.NameInMap("EndpointServiceId")
         private String endpointServiceId;
 
-        @NameInMap("PrivateZoneName")
+        @com.aliyun.core.annotation.NameInMap("PrivateZoneName")
         private String privateZoneName;
 
         private PrivateVpcConnections(Builder builder) {
@@ -883,7 +1120,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return connectionConfigs
          */
-        public java.util.List < ConnectionConfigs> getConnectionConfigs() {
+        public java.util.List<ConnectionConfigs> getConnectionConfigs() {
             return this.connectionConfigs;
         }
 
@@ -909,21 +1146,24 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConnectionConfigs> connectionConfigs; 
+            private java.util.List<ConnectionConfigs> connectionConfigs; 
             private String endpointId; 
             private String endpointServiceId; 
             private String privateZoneName; 
 
             /**
-             * ConnectionConfigs.
+             * <p>The network configurations, which are mainly used for the private connection.</p>
              */
-            public Builder connectionConfigs(java.util.List < ConnectionConfigs> connectionConfigs) {
+            public Builder connectionConfigs(java.util.List<ConnectionConfigs> connectionConfigs) {
                 this.connectionConfigs = connectionConfigs;
                 return this;
             }
 
             /**
-             * EndpointId.
+             * <p>The ID of the endpoint for the private connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-m5ei37240541816b****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -931,7 +1171,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointServiceId.
+             * <p>The ID of the endpoint service for the private connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epsrv-5ei07324541816bxxxx</p>
              */
             public Builder endpointServiceId(String endpointServiceId) {
                 this.endpointServiceId = endpointServiceId;
@@ -939,7 +1182,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateZoneName.
+             * <p>The custom domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.computenest.aliyuncs.com</p>
              */
             public Builder privateZoneName(String privateZoneName) {
                 this.privateZoneName = privateZoneName;
@@ -953,11 +1199,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
     public static class ReversePrivateVpcConnections extends TeaModel {
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointServiceId")
+        @com.aliyun.core.annotation.NameInMap("EndpointServiceId")
         private String endpointServiceId;
 
         private ReversePrivateVpcConnections(Builder builder) {
@@ -992,7 +1244,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String endpointServiceId; 
 
             /**
-             * EndpointId.
+             * <p>The ID of the endpoint for the reverse private connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-m5ei42370541816b****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -1000,7 +1255,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointServiceId.
+             * <p>The ID of the endpoint service for the reverse private connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epsrv-5ei07324541816bxxxx</p>
              */
             public Builder endpointServiceId(String endpointServiceId) {
                 this.endpointServiceId = endpointServiceId;
@@ -1014,18 +1272,24 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointServiceId")
+        @com.aliyun.core.annotation.NameInMap("EndpointServiceId")
         private String endpointServiceId;
 
-        @NameInMap("PrivateVpcConnections")
-        private java.util.List < PrivateVpcConnections> privateVpcConnections;
+        @com.aliyun.core.annotation.NameInMap("PrivateVpcConnections")
+        private java.util.List<PrivateVpcConnections> privateVpcConnections;
 
-        @NameInMap("ReversePrivateVpcConnections")
-        private java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections;
+        @com.aliyun.core.annotation.NameInMap("ReversePrivateVpcConnections")
+        private java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections;
 
         private NetworkConfig(Builder builder) {
             this.endpointId = builder.endpointId;
@@ -1059,25 +1323,31 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return privateVpcConnections
          */
-        public java.util.List < PrivateVpcConnections> getPrivateVpcConnections() {
+        public java.util.List<PrivateVpcConnections> getPrivateVpcConnections() {
             return this.privateVpcConnections;
         }
 
         /**
          * @return reversePrivateVpcConnections
          */
-        public java.util.List < ReversePrivateVpcConnections> getReversePrivateVpcConnections() {
+        public java.util.List<ReversePrivateVpcConnections> getReversePrivateVpcConnections() {
             return this.reversePrivateVpcConnections;
         }
 
         public static final class Builder {
             private String endpointId; 
             private String endpointServiceId; 
-            private java.util.List < PrivateVpcConnections> privateVpcConnections; 
-            private java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections; 
+            private java.util.List<PrivateVpcConnections> privateVpcConnections; 
+            private java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections; 
 
             /**
-             * EndpointId.
+             * <p>The ID of the endpoint for the private connection.</p>
+             * <blockquote>
+             * <p> This parameter is discontinued.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-m5ei37240541816b****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -1085,7 +1355,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointServiceId.
+             * <p>The ID of the endpoint service for the private connection.</p>
+             * <blockquote>
+             * <p> This parameter is discontinued.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>epsrv-5ei07324541816bxxxx</p>
              */
             public Builder endpointServiceId(String endpointServiceId) {
                 this.endpointServiceId = endpointServiceId;
@@ -1093,17 +1369,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateVpcConnections.
+             * <p>The information about private connections.</p>
              */
-            public Builder privateVpcConnections(java.util.List < PrivateVpcConnections> privateVpcConnections) {
+            public Builder privateVpcConnections(java.util.List<PrivateVpcConnections> privateVpcConnections) {
                 this.privateVpcConnections = privateVpcConnections;
                 return this;
             }
 
             /**
-             * ReversePrivateVpcConnections.
+             * <p>The information about the reverse private connection.</p>
              */
-            public Builder reversePrivateVpcConnections(java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections) {
+            public Builder reversePrivateVpcConnections(java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections) {
                 this.reversePrivateVpcConnections = reversePrivateVpcConnections;
                 return this;
             }
@@ -1115,17 +1391,23 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
     public static class ServiceInfos extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("Locale")
+        @com.aliyun.core.annotation.NameInMap("Locale")
         private String locale;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShortDescription")
+        @com.aliyun.core.annotation.NameInMap("ShortDescription")
         private String shortDescription;
 
         private ServiceInfos(Builder builder) {
@@ -1178,7 +1460,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String shortDescription; 
 
             /**
-             * Image.
+             * <p>The URL of the service icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png">https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png</a></p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1186,7 +1471,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Locale.
+             * <p>The language of the service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -1194,7 +1482,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WordPress</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1202,7 +1493,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ShortDescription.
+             * <p>The description of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -1216,47 +1510,129 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         } 
 
     }
-    public static class Service extends TeaModel {
-        @NameInMap("DeployMetadata")
-        private String deployMetadata;
-
-        @NameInMap("DeployType")
-        private String deployType;
-
-        @NameInMap("PublishTime")
-        private String publishTime;
-
-        @NameInMap("ServiceDocUrl")
-        private String serviceDocUrl;
-
-        @NameInMap("ServiceId")
-        private String serviceId;
-
-        @NameInMap("ServiceInfos")
-        private java.util.List < ServiceInfos> serviceInfos;
-
-        @NameInMap("ServiceProductUrl")
-        private String serviceProductUrl;
-
-        @NameInMap("ServiceType")
-        private String serviceType;
-
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("SupplierName")
-        private String supplierName;
-
-        @NameInMap("SupplierUrl")
-        private String supplierUrl;
-
-        @NameInMap("UpgradableServiceVersions")
-        private java.util.List < String > upgradableServiceVersions;
-
-        @NameInMap("Version")
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
+    public static class UpgradableServiceInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
+        private String versionName;
+
+        private UpgradableServiceInfos(Builder builder) {
+            this.version = builder.version;
+            this.versionName = builder.versionName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UpgradableServiceInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
+        public static final class Builder {
+            private String version; 
+            private String versionName; 
+
+            /**
+             * <p>The upgradable service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>The version name of an upgradable service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Init version</p>
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
+            public UpgradableServiceInfos build() {
+                return new UpgradableServiceInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
+    public static class Service extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeployMetadata")
+        private String deployMetadata;
+
+        @com.aliyun.core.annotation.NameInMap("DeployType")
+        private String deployType;
+
+        @com.aliyun.core.annotation.NameInMap("PublishTime")
+        private String publishTime;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceDocUrl")
+        private String serviceDocUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
+        private String serviceId;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceInfos")
+        private java.util.List<ServiceInfos> serviceInfos;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceProductUrl")
+        private String serviceProductUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
+        private String serviceType;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
+        private String supplierName;
+
+        @com.aliyun.core.annotation.NameInMap("SupplierUrl")
+        private String supplierUrl;
+
+        @com.aliyun.core.annotation.NameInMap("UpgradableServiceInfos")
+        private java.util.List<UpgradableServiceInfos> upgradableServiceInfos;
+
+        @com.aliyun.core.annotation.NameInMap("UpgradableServiceVersions")
+        private java.util.List<String> upgradableServiceVersions;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private Service(Builder builder) {
@@ -1271,6 +1647,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             this.status = builder.status;
             this.supplierName = builder.supplierName;
             this.supplierUrl = builder.supplierUrl;
+            this.upgradableServiceInfos = builder.upgradableServiceInfos;
             this.upgradableServiceVersions = builder.upgradableServiceVersions;
             this.version = builder.version;
             this.versionName = builder.versionName;
@@ -1322,7 +1699,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return serviceInfos
          */
-        public java.util.List < ServiceInfos> getServiceInfos() {
+        public java.util.List<ServiceInfos> getServiceInfos() {
             return this.serviceInfos;
         }
 
@@ -1362,9 +1739,16 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return upgradableServiceInfos
+         */
+        public java.util.List<UpgradableServiceInfos> getUpgradableServiceInfos() {
+            return this.upgradableServiceInfos;
+        }
+
+        /**
          * @return upgradableServiceVersions
          */
-        public java.util.List < String > getUpgradableServiceVersions() {
+        public java.util.List<String> getUpgradableServiceVersions() {
             return this.upgradableServiceVersions;
         }
 
@@ -1388,18 +1772,19 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String publishTime; 
             private String serviceDocUrl; 
             private String serviceId; 
-            private java.util.List < ServiceInfos> serviceInfos; 
+            private java.util.List<ServiceInfos> serviceInfos; 
             private String serviceProductUrl; 
             private String serviceType; 
             private String status; 
             private String supplierName; 
             private String supplierUrl; 
-            private java.util.List < String > upgradableServiceVersions; 
+            private java.util.List<UpgradableServiceInfos> upgradableServiceInfos; 
+            private java.util.List<String> upgradableServiceVersions; 
             private String version; 
             private String versionName; 
 
             /**
-             * DeployMetadata.
+             * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
              */
             public Builder deployMetadata(String deployMetadata) {
                 this.deployMetadata = deployMetadata;
@@ -1407,7 +1792,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DeployType.
+             * <p>The deployment type of the service. Valid values:</p>
+             * <ul>
+             * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
+             * <li>terraform: The service is deployed by using Terraform.</li>
+             * <li>ack: The service is deployed by using Container Service for Kubernetes (ACK).</li>
+             * <li>spi: The service is deployed by calling a service provider interface (SPI).</li>
+             * <li>operation: The service is deployed by using a hosted O&amp;M service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ros</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -1415,7 +1810,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * <p>The time when the service was published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-21T00:00:00Z</p>
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -1423,7 +1821,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDocUrl.
+             * <p>The URL of the service documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com">http://example.com</a></p>
              */
             public Builder serviceDocUrl(String serviceDocUrl) {
                 this.serviceDocUrl = serviceDocUrl;
@@ -1431,7 +1832,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-9c8a3522528b4fe8****</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1439,15 +1843,18 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInfos.
+             * <p>The information about the service.</p>
              */
-            public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
+            public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
                 return this;
             }
 
             /**
-             * ServiceProductUrl.
+             * <p>The URL of the service page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com">https://service-info-private.oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder serviceProductUrl(String serviceProductUrl) {
                 this.serviceProductUrl = serviceProductUrl;
@@ -1455,7 +1862,15 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The type of the service. Valid values:</p>
+             * <ul>
+             * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+             * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+             * <li>operation: The service is a hosted O&amp;M service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -1463,7 +1878,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the service. Valid values:</p>
+             * <p>Draft: The registration request of the service is pending to be submitted.</p>
+             * <p>Submitted: The registration request of the service is submitted.</p>
+             * <p>Approved: The registration request of the service is approved.</p>
+             * <p>Online: The service is published.</p>
+             * <p>Offline: The service is unpublished.</p>
+             * <p>Deleted: The service is deleted.</p>
+             * <p>Launching: The service is being published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1471,7 +1896,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * <p>The name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -1479,7 +1907,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierUrl.
+             * <p>The URL of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com">http://example.com</a></p>
              */
             public Builder supplierUrl(String supplierUrl) {
                 this.supplierUrl = supplierUrl;
@@ -1487,15 +1918,26 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradableServiceVersions.
+             * <p>The upgradable service Info.</p>
              */
-            public Builder upgradableServiceVersions(java.util.List < String > upgradableServiceVersions) {
+            public Builder upgradableServiceInfos(java.util.List<UpgradableServiceInfos> upgradableServiceInfos) {
+                this.upgradableServiceInfos = upgradableServiceInfos;
+                return this;
+            }
+
+            /**
+             * <p>The service versions that can be updated.</p>
+             */
+            public Builder upgradableServiceVersions(java.util.List<String> upgradableServiceVersions) {
                 this.upgradableServiceVersions = upgradableServiceVersions;
                 return this;
             }
 
             /**
-             * Version.
+             * <p>The service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1503,7 +1945,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The custom version name defined by the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20231127020225</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1517,11 +1962,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -1556,7 +2007,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1564,7 +2018,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

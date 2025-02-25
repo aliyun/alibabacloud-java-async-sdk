@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricChannelOrganizationsResponseBody</p>
  */
 public class DescribeFabricChannelOrganizationsResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeFabricChannelOrganizationsResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeFabricChannelOrganizationsResponseBody extends TeaModel {
     } 
 
     public static class AnchorPeers extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private AnchorPeers(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribeFabricChannelOrganizationsResponseBody extends TeaModel {
 
     }
     public static class OrdererNodes extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Certificate")
+        @com.aliyun.core.annotation.NameInMap("Certificate")
         private String certificate;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Tlsroot")
+        @com.aliyun.core.annotation.NameInMap("Tlsroot")
         private String tlsroot;
 
         private OrdererNodes(Builder builder) {
@@ -274,28 +273,28 @@ public class DescribeFabricChannelOrganizationsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AnchorPeers")
+        @com.aliyun.core.annotation.NameInMap("AnchorPeers")
         private java.util.List < AnchorPeers> anchorPeers;
 
-        @NameInMap("Crls")
+        @com.aliyun.core.annotation.NameInMap("Crls")
         private String crls;
 
-        @NameInMap("MspId")
+        @com.aliyun.core.annotation.NameInMap("MspId")
         private String mspId;
 
-        @NameInMap("MspType")
+        @com.aliyun.core.annotation.NameInMap("MspType")
         private String mspType;
 
-        @NameInMap("Orderer")
+        @com.aliyun.core.annotation.NameInMap("Orderer")
         private Boolean orderer;
 
-        @NameInMap("OrdererNodes")
+        @com.aliyun.core.annotation.NameInMap("OrdererNodes")
         private java.util.List < OrdererNodes> ordererNodes;
 
-        @NameInMap("RootCertificates")
+        @com.aliyun.core.annotation.NameInMap("RootCertificates")
         private String rootCertificates;
 
-        @NameInMap("TlsRootCertificates")
+        @com.aliyun.core.annotation.NameInMap("TlsRootCertificates")
         private String tlsRootCertificates;
 
         private Result(Builder builder) {

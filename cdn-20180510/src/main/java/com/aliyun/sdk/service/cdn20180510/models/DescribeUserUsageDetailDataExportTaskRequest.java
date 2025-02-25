@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserUsageDetailDataExportTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserUsageDetailDataExportTaskRequest</p>
  */
 public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private DescribeUserUsageDetailDataExportTaskRequest(Builder builder) {
@@ -68,7 +68,10 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**.
+         * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -77,10 +80,11 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>.</p>
+         * <p>Valid values: an integer from <strong>1</strong> to <strong>50</strong>.</p>
          * 
-         * Valid values: an integer from **1** to **50**.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

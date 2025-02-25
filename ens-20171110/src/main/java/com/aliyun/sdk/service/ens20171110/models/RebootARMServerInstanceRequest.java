@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootARMServerInstanceRequest} extends {@link RequestModel}
  *
  * <p>RebootARMServerInstanceRequest</p>
  */
 public class RebootARMServerInstanceRequest extends Request {
-    @Query
-    @NameInMap("ServerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerId")
     private String serverId;
-
-    @Query
-    @NameInMap("ServerIds")
-    private java.util.List < String > serverIds;
 
     private RebootARMServerInstanceRequest(Builder builder) {
         super(builder);
         this.serverId = builder.serverId;
-        this.serverIds = builder.serverIds;
     }
 
     public static Builder builder() {
@@ -46,16 +46,8 @@ public class RebootARMServerInstanceRequest extends Request {
         return this.serverId;
     }
 
-    /**
-     * @return serverIds
-     */
-    public java.util.List < String > getServerIds() {
-        return this.serverIds;
-    }
-
     public static final class Builder extends Request.Builder<RebootARMServerInstanceRequest, Builder> {
         private String serverId; 
-        private java.util.List < String > serverIds; 
 
         private Builder() {
             super();
@@ -64,25 +56,17 @@ public class RebootARMServerInstanceRequest extends Request {
         private Builder(RebootARMServerInstanceRequest request) {
             super(request);
             this.serverId = request.serverId;
-            this.serverIds = request.serverIds;
         } 
 
         /**
-         * ServerId.
+         * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourInstance ID</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
             this.serverId = serverId;
-            return this;
-        }
-
-        /**
-         * ServerIds.
-         */
-        public Builder serverIds(java.util.List < String > serverIds) {
-            String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
-            this.putQueryParameter("ServerIds", serverIdsShrink);
-            this.serverIds = serverIds;
             return this;
         }
 

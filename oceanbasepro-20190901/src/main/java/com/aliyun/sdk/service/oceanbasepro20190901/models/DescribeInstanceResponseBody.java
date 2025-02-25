@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -72,25 +71,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     } 
 
     public static class DataDiskAutoScaleConfig extends TeaModel {
-        @NameInMap("AutoScale")
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
 
-        @NameInMap("MaxDiskSize")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskSize")
         private Long maxDiskSize;
 
-        @NameInMap("ScaleStepInMerge")
+        @com.aliyun.core.annotation.NameInMap("ScaleStepInMerge")
         private Long scaleStepInMerge;
 
-        @NameInMap("ScaleStepInNormal")
+        @com.aliyun.core.annotation.NameInMap("ScaleStepInNormal")
         private Long scaleStepInNormal;
 
-        @NameInMap("UpperMergeThreshold")
+        @com.aliyun.core.annotation.NameInMap("UpperMergeThreshold")
         private Long upperMergeThreshold;
 
-        @NameInMap("UpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("UpperScaleStep")
+        private String upperScaleStep;
+
+        @com.aliyun.core.annotation.NameInMap("UpperScaleStrategy")
+        private String upperScaleStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("UpperThreshold")
         private Long upperThreshold;
 
-        @NameInMap("Upperbound")
+        @com.aliyun.core.annotation.NameInMap("Upperbound")
         private Long upperbound;
 
         private DataDiskAutoScaleConfig(Builder builder) {
@@ -99,6 +104,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.scaleStepInMerge = builder.scaleStepInMerge;
             this.scaleStepInNormal = builder.scaleStepInNormal;
             this.upperMergeThreshold = builder.upperMergeThreshold;
+            this.upperScaleStep = builder.upperScaleStep;
+            this.upperScaleStrategy = builder.upperScaleStrategy;
             this.upperThreshold = builder.upperThreshold;
             this.upperbound = builder.upperbound;
         }
@@ -147,6 +154,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return upperScaleStep
+         */
+        public String getUpperScaleStep() {
+            return this.upperScaleStep;
+        }
+
+        /**
+         * @return upperScaleStrategy
+         */
+        public String getUpperScaleStrategy() {
+            return this.upperScaleStrategy;
+        }
+
+        /**
          * @return upperThreshold
          */
         public Long getUpperThreshold() {
@@ -166,6 +187,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long scaleStepInMerge; 
             private Long scaleStepInNormal; 
             private Long upperMergeThreshold; 
+            private String upperScaleStep; 
+            private String upperScaleStrategy; 
             private Long upperThreshold; 
             private Long upperbound; 
 
@@ -210,6 +233,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * UpperScaleStep.
+             */
+            public Builder upperScaleStep(String upperScaleStep) {
+                this.upperScaleStep = upperScaleStep;
+                return this;
+            }
+
+            /**
+             * UpperScaleStrategy.
+             */
+            public Builder upperScaleStrategy(String upperScaleStrategy) {
+                this.upperScaleStrategy = upperScaleStrategy;
+                return this;
+            }
+
+            /**
              * UpperThreshold.
              */
             public Builder upperThreshold(Long upperThreshold) {
@@ -233,13 +272,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class CapacityUnit extends TeaModel {
-        @NameInMap("MaxCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
-        @NameInMap("MinCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
         private Integer minCapacityUnit;
 
-        @NameInMap("UsedCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacityUnit")
         private String usedCapacityUnit;
 
         private CapacityUnit(Builder builder) {
@@ -314,16 +353,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Cpu extends TeaModel {
-        @NameInMap("OriginalTotalCpu")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalCpu")
         private Long originalTotalCpu;
 
-        @NameInMap("TotalCpu")
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Long totalCpu;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Long unitCpu;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Long usedCpu;
 
         private Cpu(Builder builder) {
@@ -338,6 +377,732 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static Cpu create() {
+            return builder().build();
+        }
+
+        /**
+         * @return originalTotalCpu
+         */
+        public Long getOriginalTotalCpu() {
+            return this.originalTotalCpu;
+        }
+
+        /**
+         * @return totalCpu
+         */
+        public Long getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        /**
+         * @return unitCpu
+         */
+        public Long getUnitCpu() {
+            return this.unitCpu;
+        }
+
+        /**
+         * @return usedCpu
+         */
+        public Long getUsedCpu() {
+            return this.usedCpu;
+        }
+
+        public static final class Builder {
+            private Long originalTotalCpu; 
+            private Long totalCpu; 
+            private Long unitCpu; 
+            private Long usedCpu; 
+
+            /**
+             * OriginalTotalCpu.
+             */
+            public Builder originalTotalCpu(Long originalTotalCpu) {
+                this.originalTotalCpu = originalTotalCpu;
+                return this;
+            }
+
+            /**
+             * TotalCpu.
+             */
+            public Builder totalCpu(Long totalCpu) {
+                this.totalCpu = totalCpu;
+                return this;
+            }
+
+            /**
+             * UnitCpu.
+             */
+            public Builder unitCpu(Long unitCpu) {
+                this.unitCpu = unitCpu;
+                return this;
+            }
+
+            /**
+             * UsedCpu.
+             */
+            public Builder usedCpu(Long usedCpu) {
+                this.usedCpu = usedCpu;
+                return this;
+            }
+
+            public Cpu build() {
+                return new Cpu(this);
+            } 
+
+        } 
+
+    }
+    public static class DiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataUsedSize")
+        private Double dataUsedSize;
+
+        @com.aliyun.core.annotation.NameInMap("MaxDiskSize")
+        private Double maxDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
+        private java.util.List < String > maxDiskUsedObServer;
+
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
+        private Double maxDiskUsedPercent;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalDiskSize")
+        private Long originalTotalDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
+        private Long totalDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
+        private Long unitDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
+        private Long usedDiskSize;
+
+        private DiskSize(Builder builder) {
+            this.dataUsedSize = builder.dataUsedSize;
+            this.maxDiskSize = builder.maxDiskSize;
+            this.maxDiskUsedObServer = builder.maxDiskUsedObServer;
+            this.maxDiskUsedPercent = builder.maxDiskUsedPercent;
+            this.originalTotalDiskSize = builder.originalTotalDiskSize;
+            this.totalDiskSize = builder.totalDiskSize;
+            this.unitDiskSize = builder.unitDiskSize;
+            this.usedDiskSize = builder.usedDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataUsedSize
+         */
+        public Double getDataUsedSize() {
+            return this.dataUsedSize;
+        }
+
+        /**
+         * @return maxDiskSize
+         */
+        public Double getMaxDiskSize() {
+            return this.maxDiskSize;
+        }
+
+        /**
+         * @return maxDiskUsedObServer
+         */
+        public java.util.List < String > getMaxDiskUsedObServer() {
+            return this.maxDiskUsedObServer;
+        }
+
+        /**
+         * @return maxDiskUsedPercent
+         */
+        public Double getMaxDiskUsedPercent() {
+            return this.maxDiskUsedPercent;
+        }
+
+        /**
+         * @return originalTotalDiskSize
+         */
+        public Long getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
+        }
+
+        /**
+         * @return totalDiskSize
+         */
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        /**
+         * @return unitDiskSize
+         */
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+        /**
+         * @return usedDiskSize
+         */
+        public Long getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+        public static final class Builder {
+            private Double dataUsedSize; 
+            private Double maxDiskSize; 
+            private java.util.List < String > maxDiskUsedObServer; 
+            private Double maxDiskUsedPercent; 
+            private Long originalTotalDiskSize; 
+            private Long totalDiskSize; 
+            private Long unitDiskSize; 
+            private Long usedDiskSize; 
+
+            /**
+             * DataUsedSize.
+             */
+            public Builder dataUsedSize(Double dataUsedSize) {
+                this.dataUsedSize = dataUsedSize;
+                return this;
+            }
+
+            /**
+             * MaxDiskSize.
+             */
+            public Builder maxDiskSize(Double maxDiskSize) {
+                this.maxDiskSize = maxDiskSize;
+                return this;
+            }
+
+            /**
+             * MaxDiskUsedObServer.
+             */
+            public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
+                this.maxDiskUsedObServer = maxDiskUsedObServer;
+                return this;
+            }
+
+            /**
+             * MaxDiskUsedPercent.
+             */
+            public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
+                this.maxDiskUsedPercent = maxDiskUsedPercent;
+                return this;
+            }
+
+            /**
+             * OriginalTotalDiskSize.
+             */
+            public Builder originalTotalDiskSize(Long originalTotalDiskSize) {
+                this.originalTotalDiskSize = originalTotalDiskSize;
+                return this;
+            }
+
+            /**
+             * TotalDiskSize.
+             */
+            public Builder totalDiskSize(Long totalDiskSize) {
+                this.totalDiskSize = totalDiskSize;
+                return this;
+            }
+
+            /**
+             * UnitDiskSize.
+             */
+            public Builder unitDiskSize(Long unitDiskSize) {
+                this.unitDiskSize = unitDiskSize;
+                return this;
+            }
+
+            /**
+             * UsedDiskSize.
+             */
+            public Builder usedDiskSize(Long usedDiskSize) {
+                this.usedDiskSize = usedDiskSize;
+                return this;
+            }
+
+            public DiskSize build() {
+                return new DiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class LogDiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LogAssignedSize")
+        private String logAssignedSize;
+
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedObServer")
+        private java.util.List < String > maxLogAssignedObServer;
+
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedPercent")
+        private String maxLogAssignedPercent;
+
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
+        private Long totalDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
+        private Long unitDiskSize;
+
+        private LogDiskSize(Builder builder) {
+            this.logAssignedSize = builder.logAssignedSize;
+            this.maxLogAssignedObServer = builder.maxLogAssignedObServer;
+            this.maxLogAssignedPercent = builder.maxLogAssignedPercent;
+            this.totalDiskSize = builder.totalDiskSize;
+            this.unitDiskSize = builder.unitDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logAssignedSize
+         */
+        public String getLogAssignedSize() {
+            return this.logAssignedSize;
+        }
+
+        /**
+         * @return maxLogAssignedObServer
+         */
+        public java.util.List < String > getMaxLogAssignedObServer() {
+            return this.maxLogAssignedObServer;
+        }
+
+        /**
+         * @return maxLogAssignedPercent
+         */
+        public String getMaxLogAssignedPercent() {
+            return this.maxLogAssignedPercent;
+        }
+
+        /**
+         * @return totalDiskSize
+         */
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        /**
+         * @return unitDiskSize
+         */
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+        public static final class Builder {
+            private String logAssignedSize; 
+            private java.util.List < String > maxLogAssignedObServer; 
+            private String maxLogAssignedPercent; 
+            private Long totalDiskSize; 
+            private Long unitDiskSize; 
+
+            /**
+             * LogAssignedSize.
+             */
+            public Builder logAssignedSize(String logAssignedSize) {
+                this.logAssignedSize = logAssignedSize;
+                return this;
+            }
+
+            /**
+             * MaxLogAssignedObServer.
+             */
+            public Builder maxLogAssignedObServer(java.util.List < String > maxLogAssignedObServer) {
+                this.maxLogAssignedObServer = maxLogAssignedObServer;
+                return this;
+            }
+
+            /**
+             * MaxLogAssignedPercent.
+             */
+            public Builder maxLogAssignedPercent(String maxLogAssignedPercent) {
+                this.maxLogAssignedPercent = maxLogAssignedPercent;
+                return this;
+            }
+
+            /**
+             * TotalDiskSize.
+             */
+            public Builder totalDiskSize(Long totalDiskSize) {
+                this.totalDiskSize = totalDiskSize;
+                return this;
+            }
+
+            /**
+             * UnitDiskSize.
+             */
+            public Builder unitDiskSize(Long unitDiskSize) {
+                this.unitDiskSize = unitDiskSize;
+                return this;
+            }
+
+            public LogDiskSize build() {
+                return new LogDiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class Memory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalMemory")
+        private Long originalTotalMemory;
+
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
+        private Long totalMemory;
+
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
+        private Long unitMemory;
+
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
+        private Long usedMemory;
+
+        private Memory(Builder builder) {
+            this.originalTotalMemory = builder.originalTotalMemory;
+            this.totalMemory = builder.totalMemory;
+            this.unitMemory = builder.unitMemory;
+            this.usedMemory = builder.usedMemory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Memory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return originalTotalMemory
+         */
+        public Long getOriginalTotalMemory() {
+            return this.originalTotalMemory;
+        }
+
+        /**
+         * @return totalMemory
+         */
+        public Long getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        /**
+         * @return unitMemory
+         */
+        public Long getUnitMemory() {
+            return this.unitMemory;
+        }
+
+        /**
+         * @return usedMemory
+         */
+        public Long getUsedMemory() {
+            return this.usedMemory;
+        }
+
+        public static final class Builder {
+            private Long originalTotalMemory; 
+            private Long totalMemory; 
+            private Long unitMemory; 
+            private Long usedMemory; 
+
+            /**
+             * OriginalTotalMemory.
+             */
+            public Builder originalTotalMemory(Long originalTotalMemory) {
+                this.originalTotalMemory = originalTotalMemory;
+                return this;
+            }
+
+            /**
+             * TotalMemory.
+             */
+            public Builder totalMemory(Long totalMemory) {
+                this.totalMemory = totalMemory;
+                return this;
+            }
+
+            /**
+             * UnitMemory.
+             */
+            public Builder unitMemory(Long unitMemory) {
+                this.unitMemory = unitMemory;
+                return this;
+            }
+
+            /**
+             * UsedMemory.
+             */
+            public Builder usedMemory(Long usedMemory) {
+                this.usedMemory = usedMemory;
+                return this;
+            }
+
+            public Memory build() {
+                return new Memory(this);
+            } 
+
+        } 
+
+    }
+    public static class ReadOnlyResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
+        private CapacityUnit capacityUnit;
+
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Cpu cpu;
+
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private DiskSize diskSize;
+
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
+        private LogDiskSize logDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private Memory memory;
+
+        @com.aliyun.core.annotation.NameInMap("UnitCount")
+        private Long unitCount;
+
+        private ReadOnlyResource(Builder builder) {
+            this.capacityUnit = builder.capacityUnit;
+            this.cpu = builder.cpu;
+            this.diskSize = builder.diskSize;
+            this.logDiskSize = builder.logDiskSize;
+            this.memory = builder.memory;
+            this.unitCount = builder.unitCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReadOnlyResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacityUnit
+         */
+        public CapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Cpu getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public DiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        /**
+         * @return logDiskSize
+         */
+        public LogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        /**
+         * @return memory
+         */
+        public Memory getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return unitCount
+         */
+        public Long getUnitCount() {
+            return this.unitCount;
+        }
+
+        public static final class Builder {
+            private CapacityUnit capacityUnit; 
+            private Cpu cpu; 
+            private DiskSize diskSize; 
+            private LogDiskSize logDiskSize; 
+            private Memory memory; 
+            private Long unitCount; 
+
+            /**
+             * CapacityUnit.
+             */
+            public Builder capacityUnit(CapacityUnit capacityUnit) {
+                this.capacityUnit = capacityUnit;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Cpu cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * DiskSize.
+             */
+            public Builder diskSize(DiskSize diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * LogDiskSize.
+             */
+            public Builder logDiskSize(LogDiskSize logDiskSize) {
+                this.logDiskSize = logDiskSize;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Memory memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * UnitCount.
+             */
+            public Builder unitCount(Long unitCount) {
+                this.unitCount = unitCount;
+                return this;
+            }
+
+            public ReadOnlyResource build() {
+                return new ReadOnlyResource(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceCapacityUnit extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
+        private Integer maxCapacityUnit;
+
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
+        private Integer minCapacityUnit;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCapacityUnit")
+        private String usedCapacityUnit;
+
+        private ResourceCapacityUnit(Builder builder) {
+            this.maxCapacityUnit = builder.maxCapacityUnit;
+            this.minCapacityUnit = builder.minCapacityUnit;
+            this.usedCapacityUnit = builder.usedCapacityUnit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceCapacityUnit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacityUnit
+         */
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        /**
+         * @return minCapacityUnit
+         */
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        /**
+         * @return usedCapacityUnit
+         */
+        public String getUsedCapacityUnit() {
+            return this.usedCapacityUnit;
+        }
+
+        public static final class Builder {
+            private Integer maxCapacityUnit; 
+            private Integer minCapacityUnit; 
+            private String usedCapacityUnit; 
+
+            /**
+             * MaxCapacityUnit.
+             */
+            public Builder maxCapacityUnit(Integer maxCapacityUnit) {
+                this.maxCapacityUnit = maxCapacityUnit;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnit.
+             */
+            public Builder minCapacityUnit(Integer minCapacityUnit) {
+                this.minCapacityUnit = minCapacityUnit;
+                return this;
+            }
+
+            /**
+             * UsedCapacityUnit.
+             */
+            public Builder usedCapacityUnit(String usedCapacityUnit) {
+                this.usedCapacityUnit = usedCapacityUnit;
+                return this;
+            }
+
+            public ResourceCapacityUnit build() {
+                return new ResourceCapacityUnit(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceCpu extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalCpu")
+        private Long originalTotalCpu;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
+        private Long totalCpu;
+
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
+        private Long unitCpu;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
+        private Long usedCpu;
+
+        private ResourceCpu(Builder builder) {
+            this.originalTotalCpu = builder.originalTotalCpu;
+            this.totalCpu = builder.totalCpu;
+            this.unitCpu = builder.unitCpu;
+            this.usedCpu = builder.usedCpu;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceCpu create() {
             return builder().build();
         }
 
@@ -413,39 +1178,39 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
-            public Cpu build() {
-                return new Cpu(this);
+            public ResourceCpu build() {
+                return new ResourceCpu(this);
             } 
 
         } 
 
     }
-    public static class DiskSize extends TeaModel {
-        @NameInMap("DataUsedSize")
+    public static class ResourceDiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataUsedSize")
         private Double dataUsedSize;
 
-        @NameInMap("MaxDiskSize")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskSize")
         private Double maxDiskSize;
 
-        @NameInMap("MaxDiskUsedObServer")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
         private java.util.List < String > maxDiskUsedObServer;
 
-        @NameInMap("MaxDiskUsedPercent")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
         private Double maxDiskUsedPercent;
 
-        @NameInMap("OriginalTotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalDiskSize")
         private Long originalTotalDiskSize;
 
-        @NameInMap("TotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
-        @NameInMap("UnitDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
         private Long unitDiskSize;
 
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Long usedDiskSize;
 
-        private DiskSize(Builder builder) {
+        private ResourceDiskSize(Builder builder) {
             this.dataUsedSize = builder.dataUsedSize;
             this.maxDiskSize = builder.maxDiskSize;
             this.maxDiskUsedObServer = builder.maxDiskUsedObServer;
@@ -460,7 +1225,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DiskSize create() {
+        public static ResourceDiskSize create() {
             return builder().build();
         }
 
@@ -605,33 +1370,37 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
-            public DiskSize build() {
-                return new DiskSize(this);
+            public ResourceDiskSize build() {
+                return new ResourceDiskSize(this);
             } 
 
         } 
 
     }
-    public static class LogDiskSize extends TeaModel {
-        @NameInMap("LogAssignedSize")
+    public static class ResourceLogDiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LogAssignedSize")
         private String logAssignedSize;
 
-        @NameInMap("MaxLogAssignedObServer")
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedObServer")
         private java.util.List < String > maxLogAssignedObServer;
 
-        @NameInMap("MaxLogAssignedPercent")
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedPercent")
         private String maxLogAssignedPercent;
 
-        @NameInMap("TotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalDiskSize")
+        private Integer originalTotalDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
-        @NameInMap("UnitDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
         private Long unitDiskSize;
 
-        private LogDiskSize(Builder builder) {
+        private ResourceLogDiskSize(Builder builder) {
             this.logAssignedSize = builder.logAssignedSize;
             this.maxLogAssignedObServer = builder.maxLogAssignedObServer;
             this.maxLogAssignedPercent = builder.maxLogAssignedPercent;
+            this.originalTotalDiskSize = builder.originalTotalDiskSize;
             this.totalDiskSize = builder.totalDiskSize;
             this.unitDiskSize = builder.unitDiskSize;
         }
@@ -640,7 +1409,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static LogDiskSize create() {
+        public static ResourceLogDiskSize create() {
             return builder().build();
         }
 
@@ -666,6 +1435,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalTotalDiskSize
+         */
+        public Integer getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
+        }
+
+        /**
          * @return totalDiskSize
          */
         public Long getTotalDiskSize() {
@@ -683,6 +1459,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String logAssignedSize; 
             private java.util.List < String > maxLogAssignedObServer; 
             private String maxLogAssignedPercent; 
+            private Integer originalTotalDiskSize; 
             private Long totalDiskSize; 
             private Long unitDiskSize; 
 
@@ -711,6 +1488,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * OriginalTotalDiskSize.
+             */
+            public Builder originalTotalDiskSize(Integer originalTotalDiskSize) {
+                this.originalTotalDiskSize = originalTotalDiskSize;
+                return this;
+            }
+
+            /**
              * The ID of the region.
              */
             public Builder totalDiskSize(Long totalDiskSize) {
@@ -726,27 +1511,27 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
-            public LogDiskSize build() {
-                return new LogDiskSize(this);
+            public ResourceLogDiskSize build() {
+                return new ResourceLogDiskSize(this);
             } 
 
         } 
 
     }
-    public static class Memory extends TeaModel {
-        @NameInMap("OriginalTotalMemory")
+    public static class ResourceMemory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalMemory")
         private Long originalTotalMemory;
 
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Long totalMemory;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Long unitMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Long usedMemory;
 
-        private Memory(Builder builder) {
+        private ResourceMemory(Builder builder) {
             this.originalTotalMemory = builder.originalTotalMemory;
             this.totalMemory = builder.totalMemory;
             this.unitMemory = builder.unitMemory;
@@ -757,7 +1542,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Memory create() {
+        public static ResourceMemory create() {
             return builder().build();
         }
 
@@ -827,30 +1612,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
-            public Memory build() {
-                return new Memory(this);
+            public ResourceMemory build() {
+                return new ResourceMemory(this);
             } 
 
         } 
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("CapacityUnit")
-        private CapacityUnit capacityUnit;
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
+        private ResourceCapacityUnit capacityUnit;
 
-        @NameInMap("Cpu")
-        private Cpu cpu;
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private ResourceCpu cpu;
 
-        @NameInMap("DiskSize")
-        private DiskSize diskSize;
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private ResourceDiskSize diskSize;
 
-        @NameInMap("LogDiskSize")
-        private LogDiskSize logDiskSize;
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
+        private ResourceLogDiskSize logDiskSize;
 
-        @NameInMap("Memory")
-        private Memory memory;
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private ResourceMemory memory;
 
-        @NameInMap("UnitCount")
+        @com.aliyun.core.annotation.NameInMap("UnitCount")
         private Long unitCount;
 
         private Resource(Builder builder) {
@@ -873,35 +1658,35 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return capacityUnit
          */
-        public CapacityUnit getCapacityUnit() {
+        public ResourceCapacityUnit getCapacityUnit() {
             return this.capacityUnit;
         }
 
         /**
          * @return cpu
          */
-        public Cpu getCpu() {
+        public ResourceCpu getCpu() {
             return this.cpu;
         }
 
         /**
          * @return diskSize
          */
-        public DiskSize getDiskSize() {
+        public ResourceDiskSize getDiskSize() {
             return this.diskSize;
         }
 
         /**
          * @return logDiskSize
          */
-        public LogDiskSize getLogDiskSize() {
+        public ResourceLogDiskSize getLogDiskSize() {
             return this.logDiskSize;
         }
 
         /**
          * @return memory
          */
-        public Memory getMemory() {
+        public ResourceMemory getMemory() {
             return this.memory;
         }
 
@@ -913,17 +1698,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private CapacityUnit capacityUnit; 
-            private Cpu cpu; 
-            private DiskSize diskSize; 
-            private LogDiskSize logDiskSize; 
-            private Memory memory; 
+            private ResourceCapacityUnit capacityUnit; 
+            private ResourceCpu cpu; 
+            private ResourceDiskSize diskSize; 
+            private ResourceLogDiskSize logDiskSize; 
+            private ResourceMemory memory; 
             private Long unitCount; 
 
             /**
              * CapacityUnit.
              */
-            public Builder capacityUnit(CapacityUnit capacityUnit) {
+            public Builder capacityUnit(ResourceCapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
                 return this;
             }
@@ -931,7 +1716,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * The information of the OceanBase cluster.
              */
-            public Builder cpu(Cpu cpu) {
+            public Builder cpu(ResourceCpu cpu) {
                 this.cpu = cpu;
                 return this;
             }
@@ -942,7 +1727,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
              * - Start value: 1  
              * - Default value: 1
              */
-            public Builder diskSize(DiskSize diskSize) {
+            public Builder diskSize(ResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
                 return this;
             }
@@ -950,7 +1735,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * The server with the highest disk usage.
              */
-            public Builder logDiskSize(LogDiskSize logDiskSize) {
+            public Builder logDiskSize(ResourceLogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
                 return this;
             }
@@ -958,7 +1743,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * The name of the OceanBase cluster.
              */
-            public Builder memory(Memory memory) {
+            public Builder memory(ResourceMemory memory) {
                 this.memory = memory;
                 return this;
             }
@@ -979,10 +1764,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class TenantCreatable extends TeaModel {
-        @NameInMap("DisableCreateTenantReason")
+        @com.aliyun.core.annotation.NameInMap("DisableCreateTenantReason")
         private String disableCreateTenantReason;
 
-        @NameInMap("EnableCreateTenant")
+        @com.aliyun.core.annotation.NameInMap("EnableCreateTenant")
         private Boolean enableCreateTenant;
 
         private TenantCreatable(Builder builder) {
@@ -1040,115 +1825,150 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AllowCreateProxySqlFirewallRule")
+        private Boolean allowCreateProxySqlFirewallRule;
+
+        @com.aliyun.core.annotation.NameInMap("AllowModifyInternetAddressConnectionLimit")
+        private Boolean allowModifyInternetAddressConnectionLimit;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("AutoUpgradeObVersion")
+        @com.aliyun.core.annotation.NameInMap("AutoUpgradeObVersion")
         private Boolean autoUpgradeObVersion;
 
-        @NameInMap("AvailableZones")
+        @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private java.util.List < String > availableZones;
 
-        @NameInMap("CpuArchitecture")
+        @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
         private String cpuArchitecture;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataDiskAutoScale")
+        @com.aliyun.core.annotation.NameInMap("DataDiskAutoScale")
         private Boolean dataDiskAutoScale;
 
-        @NameInMap("DataDiskAutoScaleConfig")
+        @com.aliyun.core.annotation.NameInMap("DataDiskAutoScaleConfig")
         private DataDiskAutoScaleConfig dataDiskAutoScaleConfig;
 
-        @NameInMap("DataMergeTime")
+        @com.aliyun.core.annotation.NameInMap("DataMergeTime")
         private String dataMergeTime;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("EnableIsolationOptimization")
+        @com.aliyun.core.annotation.NameInMap("EnableIsolationOptimization")
         private Boolean enableIsolationOptimization;
 
-        @NameInMap("EnableProxyService")
+        @com.aliyun.core.annotation.NameInMap("EnableProxyService")
         private Boolean enableProxyService;
 
-        @NameInMap("EnableUpgradeLogDisk")
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplica")
+        private Boolean enableReadOnlyReplica;
+
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplicaManagement")
+        private Boolean enableReadOnlyReplicaManagement;
+
+        @com.aliyun.core.annotation.NameInMap("EnableUpgradeLogDisk")
         private Boolean enableUpgradeLogDisk;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveUnitNumLimit")
+        private Integer exclusiveUnitNumLimit;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("InTempCapacityStatus")
+        @com.aliyun.core.annotation.NameInMap("InTempCapacityStatus")
         private Boolean inTempCapacityStatus;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceRole")
+        @com.aliyun.core.annotation.NameInMap("InstanceRole")
         private String instanceRole;
 
-        @NameInMap("IsLatestObVersion")
+        @com.aliyun.core.annotation.NameInMap("IsLatestObVersion")
         private Boolean isLatestObVersion;
 
-        @NameInMap("IsTrustEcs")
+        @com.aliyun.core.annotation.NameInMap("IsTrustEcs")
         private Boolean isTrustEcs;
 
-        @NameInMap("IsolationOptimization")
+        @com.aliyun.core.annotation.NameInMap("IsolationOptimization")
         private Boolean isolationOptimization;
 
-        @NameInMap("MaintainTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainTime")
         private String maintainTime;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private String nodeNum;
 
-        @NameInMap("ObRpmVersion")
+        @com.aliyun.core.annotation.NameInMap("ObRpmVersion")
         private String obRpmVersion;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ProxyClusterId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryInstance")
+        private String primaryInstance;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryRegion")
+        private String primaryRegion;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyClusterId")
         private String proxyClusterId;
 
-        @NameInMap("ProxyServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ProxyServiceStatus")
         private String proxyServiceStatus;
 
-        @NameInMap("ReplicaMode")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyResource")
+        private ReadOnlyResource readOnlyResource;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicaMode")
         private String replicaMode;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SharedUnitNumLimit")
+        private Integer sharedUnitNumLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SpecType")
+        private String specType;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantCreatable")
+        @com.aliyun.core.annotation.NameInMap("TenantCreatable")
         private TenantCreatable tenantCreatable;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("UnitSpec")
+        private String unitSpec;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < String > zones;
 
         private Instance(Builder builder) {
+            this.allowCreateProxySqlFirewallRule = builder.allowCreateProxySqlFirewallRule;
+            this.allowModifyInternetAddressConnectionLimit = builder.allowModifyInternetAddressConnectionLimit;
             this.autoRenewal = builder.autoRenewal;
             this.autoUpgradeObVersion = builder.autoUpgradeObVersion;
             this.availableZones = builder.availableZones;
@@ -1162,7 +1982,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.diskType = builder.diskType;
             this.enableIsolationOptimization = builder.enableIsolationOptimization;
             this.enableProxyService = builder.enableProxyService;
+            this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
+            this.enableReadOnlyReplicaManagement = builder.enableReadOnlyReplicaManagement;
             this.enableUpgradeLogDisk = builder.enableUpgradeLogDisk;
+            this.exclusiveUnitNumLimit = builder.exclusiveUnitNumLimit;
             this.expireTime = builder.expireTime;
             this.inTempCapacityStatus = builder.inTempCapacityStatus;
             this.instanceClass = builder.instanceClass;
@@ -1176,13 +1999,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.nodeNum = builder.nodeNum;
             this.obRpmVersion = builder.obRpmVersion;
             this.payType = builder.payType;
+            this.primaryInstance = builder.primaryInstance;
+            this.primaryRegion = builder.primaryRegion;
             this.proxyClusterId = builder.proxyClusterId;
             this.proxyServiceStatus = builder.proxyServiceStatus;
+            this.readOnlyResource = builder.readOnlyResource;
             this.replicaMode = builder.replicaMode;
             this.resource = builder.resource;
             this.series = builder.series;
+            this.sharedUnitNumLimit = builder.sharedUnitNumLimit;
+            this.specType = builder.specType;
             this.status = builder.status;
             this.tenantCreatable = builder.tenantCreatable;
+            this.unitSpec = builder.unitSpec;
             this.version = builder.version;
             this.zones = builder.zones;
         }
@@ -1193,6 +2022,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowCreateProxySqlFirewallRule
+         */
+        public Boolean getAllowCreateProxySqlFirewallRule() {
+            return this.allowCreateProxySqlFirewallRule;
+        }
+
+        /**
+         * @return allowModifyInternetAddressConnectionLimit
+         */
+        public Boolean getAllowModifyInternetAddressConnectionLimit() {
+            return this.allowModifyInternetAddressConnectionLimit;
         }
 
         /**
@@ -1287,10 +2130,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableReadOnlyReplica
+         */
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
+        }
+
+        /**
+         * @return enableReadOnlyReplicaManagement
+         */
+        public Boolean getEnableReadOnlyReplicaManagement() {
+            return this.enableReadOnlyReplicaManagement;
+        }
+
+        /**
          * @return enableUpgradeLogDisk
          */
         public Boolean getEnableUpgradeLogDisk() {
             return this.enableUpgradeLogDisk;
+        }
+
+        /**
+         * @return exclusiveUnitNumLimit
+         */
+        public Integer getExclusiveUnitNumLimit() {
+            return this.exclusiveUnitNumLimit;
         }
 
         /**
@@ -1385,6 +2249,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryInstance
+         */
+        public String getPrimaryInstance() {
+            return this.primaryInstance;
+        }
+
+        /**
+         * @return primaryRegion
+         */
+        public String getPrimaryRegion() {
+            return this.primaryRegion;
+        }
+
+        /**
          * @return proxyClusterId
          */
         public String getProxyClusterId() {
@@ -1396,6 +2274,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public String getProxyServiceStatus() {
             return this.proxyServiceStatus;
+        }
+
+        /**
+         * @return readOnlyResource
+         */
+        public ReadOnlyResource getReadOnlyResource() {
+            return this.readOnlyResource;
         }
 
         /**
@@ -1420,6 +2305,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return sharedUnitNumLimit
+         */
+        public Integer getSharedUnitNumLimit() {
+            return this.sharedUnitNumLimit;
+        }
+
+        /**
+         * @return specType
+         */
+        public String getSpecType() {
+            return this.specType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1431,6 +2330,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public TenantCreatable getTenantCreatable() {
             return this.tenantCreatable;
+        }
+
+        /**
+         * @return unitSpec
+         */
+        public String getUnitSpec() {
+            return this.unitSpec;
         }
 
         /**
@@ -1448,6 +2354,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowCreateProxySqlFirewallRule; 
+            private Boolean allowModifyInternetAddressConnectionLimit; 
             private Boolean autoRenewal; 
             private Boolean autoUpgradeObVersion; 
             private java.util.List < String > availableZones; 
@@ -1461,7 +2369,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String diskType; 
             private Boolean enableIsolationOptimization; 
             private Boolean enableProxyService; 
+            private Boolean enableReadOnlyReplica; 
+            private Boolean enableReadOnlyReplicaManagement; 
             private Boolean enableUpgradeLogDisk; 
+            private Integer exclusiveUnitNumLimit; 
             private String expireTime; 
             private Boolean inTempCapacityStatus; 
             private String instanceClass; 
@@ -1475,15 +2386,37 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String nodeNum; 
             private String obRpmVersion; 
             private String payType; 
+            private String primaryInstance; 
+            private String primaryRegion; 
             private String proxyClusterId; 
             private String proxyServiceStatus; 
+            private ReadOnlyResource readOnlyResource; 
             private String replicaMode; 
             private Resource resource; 
             private String series; 
+            private Integer sharedUnitNumLimit; 
+            private String specType; 
             private String status; 
             private TenantCreatable tenantCreatable; 
+            private String unitSpec; 
             private String version; 
             private java.util.List < String > zones; 
+
+            /**
+             * AllowCreateProxySqlFirewallRule.
+             */
+            public Builder allowCreateProxySqlFirewallRule(Boolean allowCreateProxySqlFirewallRule) {
+                this.allowCreateProxySqlFirewallRule = allowCreateProxySqlFirewallRule;
+                return this;
+            }
+
+            /**
+             * AllowModifyInternetAddressConnectionLimit.
+             */
+            public Builder allowModifyInternetAddressConnectionLimit(Boolean allowModifyInternetAddressConnectionLimit) {
+                this.allowModifyInternetAddressConnectionLimit = allowModifyInternetAddressConnectionLimit;
+                return this;
+            }
 
             /**
              * The operation that you want to perform. <br>Set the value to **DescribeInstance**.
@@ -1590,10 +2523,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * EnableReadOnlyReplica.
+             */
+            public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+                this.enableReadOnlyReplica = enableReadOnlyReplica;
+                return this;
+            }
+
+            /**
+             * EnableReadOnlyReplicaManagement.
+             */
+            public Builder enableReadOnlyReplicaManagement(Boolean enableReadOnlyReplicaManagement) {
+                this.enableReadOnlyReplicaManagement = enableReadOnlyReplicaManagement;
+                return this;
+            }
+
+            /**
              * EnableUpgradeLogDisk.
              */
             public Builder enableUpgradeLogDisk(Boolean enableUpgradeLogDisk) {
                 this.enableUpgradeLogDisk = enableUpgradeLogDisk;
+                return this;
+            }
+
+            /**
+             * ExclusiveUnitNumLimit.
+             */
+            public Builder exclusiveUnitNumLimit(Integer exclusiveUnitNumLimit) {
+                this.exclusiveUnitNumLimit = exclusiveUnitNumLimit;
                 return this;
             }
 
@@ -1702,6 +2659,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * PrimaryInstance.
+             */
+            public Builder primaryInstance(String primaryInstance) {
+                this.primaryInstance = primaryInstance;
+                return this;
+            }
+
+            /**
+             * PrimaryRegion.
+             */
+            public Builder primaryRegion(String primaryRegion) {
+                this.primaryRegion = primaryRegion;
+                return this;
+            }
+
+            /**
              * ProxyClusterId.
              */
             public Builder proxyClusterId(String proxyClusterId) {
@@ -1714,6 +2687,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder proxyServiceStatus(String proxyServiceStatus) {
                 this.proxyServiceStatus = proxyServiceStatus;
+                return this;
+            }
+
+            /**
+             * ReadOnlyResource.
+             */
+            public Builder readOnlyResource(ReadOnlyResource readOnlyResource) {
+                this.readOnlyResource = readOnlyResource;
                 return this;
             }
 
@@ -1742,6 +2723,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * SharedUnitNumLimit.
+             */
+            public Builder sharedUnitNumLimit(Integer sharedUnitNumLimit) {
+                this.sharedUnitNumLimit = sharedUnitNumLimit;
+                return this;
+            }
+
+            /**
+             * SpecType.
+             */
+            public Builder specType(String specType) {
+                this.specType = specType;
+                return this;
+            }
+
+            /**
              * The information about cluster resources.
              */
             public Builder status(String status) {
@@ -1754,6 +2751,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder tenantCreatable(TenantCreatable tenantCreatable) {
                 this.tenantCreatable = tenantCreatable;
+                return this;
+            }
+
+            /**
+             * UnitSpec.
+             */
+            public Builder unitSpec(String unitSpec) {
+                this.unitSpec = unitSpec;
                 return this;
             }
 

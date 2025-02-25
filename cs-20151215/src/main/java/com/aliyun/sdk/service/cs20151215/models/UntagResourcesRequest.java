@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("all")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("all")
     private Boolean all;
 
-    @Query
-    @NameInMap("region_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("resource_ids")
-    @Validation(required = true)
-    private java.util.List < String > resourceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resource_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceIds;
 
-    @Query
-    @NameInMap("resource_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resource_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("tag_keys")
-    @Validation(required = true)
-    private java.util.List < String > tagKeys;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tag_keys")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> tagKeys;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -89,16 +94,16 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKeys
      */
-    public java.util.List < String > getTagKeys() {
+    public java.util.List<String> getTagKeys() {
         return this.tagKeys;
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String regionId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
-        private java.util.List < String > tagKeys; 
+        private java.util.List<String> tagKeys; 
 
         private Builder() {
             super();
@@ -114,11 +119,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all custom labels. This parameter takes effect only when `tag_keys` is left empty. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all custom labels. This parameter takes effect only when <code>tag_keys</code> is left empty. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Remove all custom labels.</li>
+         * <li><code>false</code>: Do not remove all custom labels.</li>
+         * </ul>
          * 
-         * *   `true`: Remove all custom labels.
-         * *   `false`: Do not remove all custom labels.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -127,7 +135,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resources.
+         * <p>The region ID of the resources.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -136,9 +148,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * <p>The list of resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
             this.putQueryParameter("resource_ids", resourceIdsShrink);
             this.resourceIds = resourceIds;
@@ -146,7 +159,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of resource. Set the value to `CLUSTER`.
+         * <p>The type of resource. Set the value to <code>CLUSTER</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resource_type", resourceType);
@@ -155,9 +172,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of keys of the labels that you want to remove.
+         * <p>The list of keys of the labels that you want to remove.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tagKeys(java.util.List < String > tagKeys) {
+        public Builder tagKeys(java.util.List<String> tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "tag_keys", "json");
             this.putQueryParameter("tag_keys", tagKeysShrink);
             this.tagKeys = tagKeys;

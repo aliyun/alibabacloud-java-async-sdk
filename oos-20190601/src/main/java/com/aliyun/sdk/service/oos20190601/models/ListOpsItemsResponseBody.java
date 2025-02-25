@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOpsItemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListOpsItemsResponseBody</p>
  */
 public class ListOpsItemsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("OpsItems")
-    private java.util.List < OpsItems> opsItems;
+    @com.aliyun.core.annotation.NameInMap("OpsItems")
+    private java.util.List<OpsItems> opsItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListOpsItemsResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
     /**
      * @return opsItems
      */
-    public java.util.List < OpsItems> getOpsItems() {
+    public java.util.List<OpsItems> getOpsItems() {
         return this.opsItems;
     }
 
@@ -81,12 +86,15 @@ public class ListOpsItemsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < OpsItems> opsItems; 
+        private java.util.List<OpsItems> opsItems; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that can be used in the next request to retrieve a new page of results.
+         * <p>The pagination token that can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC6KPDUL0FIIb</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,15 +113,18 @@ public class ListOpsItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of O\&M items.
+         * <p>The list of O&amp;M items.</p>
          */
-        public Builder opsItems(java.util.List < OpsItems> opsItems) {
+        public Builder opsItems(java.util.List<OpsItems> opsItems) {
             this.opsItems = opsItems;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113DD533-389C-5F83-9C69-F64D5BAB10B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,38 +148,44 @@ public class ListOpsItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOpsItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOpsItemsResponseBody</p>
+     */
     public static class OpsItems extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("OpsItemId")
+        @com.aliyun.core.annotation.NameInMap("OpsItemId")
         private String opsItemId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Resources")
-        private java.util.List < String > resources;
+        @com.aliyun.core.annotation.NameInMap("Resources")
+        private java.util.List<String> resources;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private OpsItems(Builder builder) {
@@ -218,7 +241,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < String > getResources() {
+        public java.util.List<String> getResources() {
             return this.resources;
         }
 
@@ -246,7 +269,7 @@ public class ListOpsItemsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -269,16 +292,19 @@ public class ListOpsItemsResponseBody extends TeaModel {
             private String createDate; 
             private String opsItemId; 
             private Integer priority; 
-            private java.util.List < String > resources; 
+            private java.util.List<String> resources; 
             private String severity; 
             private String source; 
             private String status; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String title; 
             private String updateDate; 
 
             /**
-             * The category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -286,7 +312,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the O\&M item was created.
+             * <p>The time when the O&amp;M item was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-09T10:01Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -294,7 +323,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the O\&M item.
+             * <p>The ID of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oi-d52b08695e2b46ae8413</p>
              */
             public Builder opsItemId(String opsItemId) {
                 this.opsItemId = opsItemId;
@@ -302,7 +334,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -310,15 +345,18 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Resource Names (ARNs) of the associated resources.
+             * <p>The Alibaba Resource Names (ARNs) of the associated resources.</p>
              */
-            public Builder resources(java.util.List < String > resources) {
+            public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;
                 return this;
             }
 
             /**
-             * The severity level.
+             * <p>The severity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -326,7 +364,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The source business.
+             * <p>The source business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/aliyun/ecs</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -334,7 +375,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the O\&M item.
+             * <p>The status of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -342,15 +386,21 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The title of the O\&M item.
+             * <p>The title of the O&amp;M item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -358,7 +408,10 @@ public class ListOpsItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the O\&M item was updated.
+             * <p>The time when the O&amp;M item was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-09T10:01Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

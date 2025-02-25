@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnosticsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDiagnosticsResponseBody</p>
  */
 public class ListDiagnosticsResponseBody extends TeaModel {
-    @NameInMap("Diagnostics")
+    @com.aliyun.core.annotation.NameInMap("Diagnostics")
     private java.util.List < Diagnostics> diagnostics;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private ListDiagnosticsResponseBody(Builder builder) {
@@ -98,7 +98,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Diagnostics.
+         * <p>The items that are diagnosed.</p>
          */
         public Builder diagnostics(java.util.List < Diagnostics> diagnostics) {
             this.diagnostics = diagnostics;
@@ -106,7 +106,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned. The value 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +117,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to complete this action.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f01****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1983D1C4-88EA-5D7D-90AB-467D01867A5D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -151,20 +170,26 @@ public class ListDiagnosticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDiagnosticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiagnosticsResponseBody</p>
+     */
     public static class Diagnostics extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DiagnosticKey")
+        @com.aliyun.core.annotation.NameInMap("DiagnosticKey")
         private String diagnosticKey;
 
-        @NameInMap("DiagnosticProduct")
+        @com.aliyun.core.annotation.NameInMap("DiagnosticProduct")
         private String diagnosticProduct;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Diagnostics(Builder builder) {
@@ -226,7 +251,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * <p>The time when the diagnostic report was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01T02:23:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -234,7 +262,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnosticKey.
+             * <p>The keyword in the diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>047D84D9-D3EB-5DA8-87F1-9A7DD5598A5D</p>
              */
             public Builder diagnosticKey(String diagnosticKey) {
                 this.diagnosticKey = diagnosticKey;
@@ -242,7 +273,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnosticProduct.
+             * <p>The product that is diagnosed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ros</p>
              */
             public Builder diagnosticProduct(String diagnosticProduct) {
                 this.diagnosticProduct = diagnosticProduct;
@@ -250,7 +284,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The ID of the diagnostic report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-2963bfbcac834f1a****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -258,7 +295,10 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The diagnosis status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

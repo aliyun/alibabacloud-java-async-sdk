@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreloadVodObjectCachesResponseBody} extends {@link TeaModel}
  *
  * <p>PreloadVodObjectCachesResponseBody</p>
  */
 public class PreloadVodObjectCachesResponseBody extends TeaModel {
-    @NameInMap("PreloadTaskId")
+    @com.aliyun.core.annotation.NameInMap("PreloadTaskId")
     private String preloadTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PreloadVodObjectCachesResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class PreloadVodObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the prefetch task. Separate multiple task IDs with commas (,).
+         * <p>The ID of the prefetch task. Separate multiple task IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9524****</p>
          */
         public Builder preloadTaskId(String preloadTaskId) {
             this.preloadTaskId = preloadTaskId;
@@ -58,7 +66,10 @@ public class PreloadVodObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5BD4B50-7A02-493A-*****-97B9024B4135</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

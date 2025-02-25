@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartMigrationRequest} extends {@link RequestModel}
  *
  * <p>StartMigrationRequest</p>
  */
 public class StartMigrationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("MigrationId")
-    @Validation(required = true, minimum = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MigrationId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 2)
     private Long migrationId;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 2)
     private Long projectId;
 
     private StartMigrationRequest(Builder builder) {
@@ -85,7 +89,7 @@ public class StartMigrationRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +98,11 @@ public class StartMigrationRequest extends Request {
         }
 
         /**
-         * The ID of the migration package. You can call the [CreateImportMigration](~~206094~~) operation to obtain the ID of the import package and call the [CreateExportMigration](~~349325~~) operation to obtain the ID of the export package.
+         * <p>The migration package ID. You can call the <a href="https://help.aliyun.com/document_detail/206094.html">CreateImportMigration</a> operation to query the ID of the import package and call the <a href="https://help.aliyun.com/document_detail/349325.html">CreateExportMigration</a> operation to query the ID of the export package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder migrationId(Long migrationId) {
             this.putBodyParameter("MigrationId", migrationId);
@@ -103,7 +111,11 @@ public class StartMigrationRequest extends Request {
         }
 
         /**
-         * The ID of the workspace. You can go to the Workspace Management page of the DataWorks console to view the ID.
+         * <p>The workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

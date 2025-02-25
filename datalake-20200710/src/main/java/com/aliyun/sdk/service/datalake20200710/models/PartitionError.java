@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PartitionError</p>
  */
 public class PartitionError extends TeaModel {
-    @NameInMap("ErrorDetail")
+    @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private ErrorDetail errorDetail;
 
-    @NameInMap("PartitionValues")
+    @com.aliyun.core.annotation.NameInMap("PartitionValues")
     private java.util.List < String > partitionValues;
 
     private PartitionError(Builder builder) {

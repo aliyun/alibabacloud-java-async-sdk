@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRequestLogsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRequestLogsResponseBody</p>
  */
 public class QueryRequestLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestLogs")
+    @com.aliyun.core.annotation.NameInMap("RequestLogs")
     private RequestLogs requestLogs;
 
     private QueryRequestLogsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         private RequestLogs requestLogs; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE5722A6-AE78-4741-A9B0-6C81********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request logs.
+         * <p>The request logs.</p>
          */
         public Builder requestLogs(RequestLogs requestLogs) {
             this.requestLogs = requestLogs;
@@ -71,137 +79,143 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRequestLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRequestLogsResponseBody</p>
+     */
     public static class RequestLog extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BackendRequestEnd")
+        @com.aliyun.core.annotation.NameInMap("BackendRequestEnd")
         private Long backendRequestEnd;
 
-        @NameInMap("BackendRequestStart")
+        @com.aliyun.core.annotation.NameInMap("BackendRequestStart")
         private Long backendRequestStart;
 
-        @NameInMap("BackendResponseEnd")
+        @com.aliyun.core.annotation.NameInMap("BackendResponseEnd")
         private Long backendResponseEnd;
 
-        @NameInMap("BackendResponseStart")
+        @com.aliyun.core.annotation.NameInMap("BackendResponseStart")
         private Long backendResponseStart;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientNonce")
+        @com.aliyun.core.annotation.NameInMap("ClientNonce")
         private String clientNonce;
 
-        @NameInMap("ConsumerAppId")
+        @com.aliyun.core.annotation.NameInMap("ConsumerAppId")
         private String consumerAppId;
 
-        @NameInMap("ConsumerAppKey")
+        @com.aliyun.core.annotation.NameInMap("ConsumerAppKey")
         private String consumerAppKey;
 
-        @NameInMap("CustomTraceId")
+        @com.aliyun.core.annotation.NameInMap("CustomTraceId")
         private String customTraceId;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Exception")
+        @com.aliyun.core.annotation.NameInMap("Exception")
         private String exception;
 
-        @NameInMap("FrontRequestEnd")
+        @com.aliyun.core.annotation.NameInMap("FrontRequestEnd")
         private Long frontRequestEnd;
 
-        @NameInMap("FrontRequestStart")
+        @com.aliyun.core.annotation.NameInMap("FrontRequestStart")
         private Long frontRequestStart;
 
-        @NameInMap("FrontResponseEnd")
+        @com.aliyun.core.annotation.NameInMap("FrontResponseEnd")
         private Long frontResponseEnd;
 
-        @NameInMap("FrontResponseStart")
+        @com.aliyun.core.annotation.NameInMap("FrontResponseStart")
         private Long frontResponseStart;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("HttpPath")
+        @com.aliyun.core.annotation.NameInMap("HttpPath")
         private String httpPath;
 
-        @NameInMap("InitialRequestId")
+        @com.aliyun.core.annotation.NameInMap("InitialRequestId")
         private String initialRequestId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JwtClaims")
+        @com.aliyun.core.annotation.NameInMap("JwtClaims")
         private String jwtClaims;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RequestBody")
+        @com.aliyun.core.annotation.NameInMap("RequestBody")
         private String requestBody;
 
-        @NameInMap("RequestHeaders")
+        @com.aliyun.core.annotation.NameInMap("RequestHeaders")
         private String requestHeaders;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("RequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("RequestProtocol")
         private String requestProtocol;
 
-        @NameInMap("RequestQueryString")
+        @com.aliyun.core.annotation.NameInMap("RequestQueryString")
         private String requestQueryString;
 
-        @NameInMap("RequestSize")
+        @com.aliyun.core.annotation.NameInMap("RequestSize")
         private String requestSize;
 
-        @NameInMap("RequestTime")
+        @com.aliyun.core.annotation.NameInMap("RequestTime")
         private String requestTime;
 
-        @NameInMap("ResponseBody")
+        @com.aliyun.core.annotation.NameInMap("ResponseBody")
         private String responseBody;
 
-        @NameInMap("ResponseHeaders")
+        @com.aliyun.core.annotation.NameInMap("ResponseHeaders")
         private String responseHeaders;
 
-        @NameInMap("ResponseSize")
+        @com.aliyun.core.annotation.NameInMap("ResponseSize")
         private String responseSize;
 
-        @NameInMap("ServiceLatency")
+        @com.aliyun.core.annotation.NameInMap("ServiceLatency")
         private String serviceLatency;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("TotalLatency")
+        @com.aliyun.core.annotation.NameInMap("TotalLatency")
         private String totalLatency;
 
-        @NameInMap("plugin")
+        @com.aliyun.core.annotation.NameInMap("plugin")
         private String plugin;
 
         private RequestLog(Builder builder) {
@@ -614,7 +628,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             private String plugin; 
 
             /**
-             * The API ID.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4b83229ebcab4ecd88956fb3********</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -622,7 +639,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The API name.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApiName</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -630,7 +650,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VIPROOM_VIPROOM</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -638,7 +661,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway finished forwarding the request to the backend service.
+             * <p>The time when API Gateway finished forwarding the request to the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224969</p>
              */
             public Builder backendRequestEnd(Long backendRequestEnd) {
                 this.backendRequestEnd = backendRequestEnd;
@@ -646,7 +672,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway started to forward the request to the backend service.
+             * <p>The time when API Gateway started to forward the request to the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224969</p>
              */
             public Builder backendRequestStart(Long backendRequestStart) {
                 this.backendRequestStart = backendRequestStart;
@@ -654,7 +683,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway finished receiving the response from the backend service.
+             * <p>The time when API Gateway finished receiving the response from the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder backendResponseEnd(Long backendResponseEnd) {
                 this.backendResponseEnd = backendResponseEnd;
@@ -662,7 +694,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway started to receive the response from the backend service.
+             * <p>The time when API Gateway started to receive the response from the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder backendResponseStart(Long backendResponseStart) {
                 this.backendResponseStart = backendResponseStart;
@@ -670,7 +705,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that sends the request.
+             * <p>The IP address of the client that sends the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21.237.XXX.XXX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -678,7 +716,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The X-Ca-Nonce header included in the request from the client.
+             * <p>The X-Ca-Nonce header included in the request from the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d43df9db-3b05-4cd6-888a-1c0b********</p>
              */
             public Builder clientNonce(String clientNonce) {
                 this.clientNonce = clientNonce;
@@ -686,7 +727,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID that is used by the caller.
+             * <p>The application ID that is used by the caller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11096****</p>
              */
             public Builder consumerAppId(String consumerAppId) {
                 this.consumerAppId = consumerAppId;
@@ -694,7 +738,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The App Key that is used by the caller.
+             * <p>The App Key that is used by the caller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20412****</p>
              */
             public Builder consumerAppKey(String consumerAppKey) {
                 this.consumerAppKey = consumerAppKey;
@@ -702,7 +749,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom trace ID.
+             * <p>The custom trace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95657ED9-2F6F-426F-BD99-79C8********</p>
              */
             public Builder customTraceId(String customTraceId) {
                 this.customTraceId = customTraceId;
@@ -710,7 +760,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The requested domain name in the request.
+             * <p>The requested domain name in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360bdd88695c48ae8085c7f2********-ap-southeast-1.alicloudapi.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -718,7 +771,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned.
+             * <p>The error code that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X500ER</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -726,7 +782,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the call fails.
+             * <p>The error message returned if the call fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Backend service connect failed <code>Timeout connecting to [/1XX.20.0.XX:8080]</code></p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -734,7 +793,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The specific error message returned by the backend service.
+             * <p>The specific error message returned by the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error msg</p>
              */
             public Builder exception(String exception) {
                 this.exception = exception;
@@ -742,7 +804,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway finished receiving the request.
+             * <p>The time when API Gateway finished receiving the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224968</p>
              */
             public Builder frontRequestEnd(Long frontRequestEnd) {
                 this.frontRequestEnd = frontRequestEnd;
@@ -750,7 +815,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway started to receive the request.
+             * <p>The time when API Gateway started to receive the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224968</p>
              */
             public Builder frontRequestStart(Long frontRequestStart) {
                 this.frontRequestStart = frontRequestStart;
@@ -758,7 +826,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway finished forwarding the response to the client.
+             * <p>The time when API Gateway finished forwarding the response to the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder frontResponseEnd(Long frontResponseEnd) {
                 this.frontResponseEnd = frontResponseEnd;
@@ -766,7 +837,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when API Gateway started to forward the response to the client.
+             * <p>The time when API Gateway started to forward the response to the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder frontResponseStart(Long frontResponseStart) {
                 this.frontResponseStart = frontResponseStart;
@@ -774,7 +848,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group to which the API belongs.
+             * <p>The ID of the API group to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc024277fe6c4cada79ba0bd6********</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -782,7 +859,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group to which the API belongs.
+             * <p>The name of the API group to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GroupName</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -790,7 +870,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method that is used to send the request.
+             * <p>The HTTP method that is used to send the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -798,7 +881,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the request.
+             * <p>The path of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/testPath</p>
              */
             public Builder httpPath(String httpPath) {
                 this.httpPath = httpPath;
@@ -806,7 +892,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, the initialRequestId parameter in the log of API-2 indicates the ID of the request from API-1.
+             * <p>The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, the initialRequestId parameter in the log of API-2 indicates the ID of the request from API-1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95657ED9-2F6F-426F-BD99-79C8********</p>
              */
             public Builder initialRequestId(String initialRequestId) {
                 this.initialRequestId = initialRequestId;
@@ -814,7 +903,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API Gateway instance to which the API belongs.
+             * <p>The ID of the API Gateway instance to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apigateway-bj-ab2b********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -822,7 +914,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The JSON web token (JWT) claims. The claims can be configured at the group level.
+             * <p>The JSON web token (JWT) claims. The claims can be configured at the group level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder jwtClaims(String jwtClaims) {
                 this.jwtClaims = jwtClaims;
@@ -830,7 +925,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the instance resides.
+             * <p>The region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -838,7 +936,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The request body. A request body cannot exceed 1,024 bytes in size.
+             * <p>The request body. A request body cannot exceed 1,024 bytes in size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param=paramName</p>
              */
             public Builder requestBody(String requestBody) {
                 this.requestBody = requestBody;
@@ -846,7 +947,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The request headers.
+             * <p>The request headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content-type: application/x-www-form-urlencoded</p>
              */
             public Builder requestHeaders(String requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -854,7 +958,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95657ED9-2F6F-426F-BD99-79C8********</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -862,7 +969,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol used by the client to send the request. Valid values: HTTP, HTTPS, and WS.
+             * <p>The protocol used by the client to send the request. Valid values: HTTP, HTTPS, and WS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder requestProtocol(String requestProtocol) {
                 this.requestProtocol = requestProtocol;
@@ -870,7 +980,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The query string for the request.
+             * <p>The query string for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username=name</p>
              */
             public Builder requestQueryString(String requestQueryString) {
                 this.requestQueryString = requestQueryString;
@@ -878,7 +991,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the request. Unit: bytes.
+             * <p>The size of the request. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1923</p>
              */
             public Builder requestSize(String requestSize) {
                 this.requestSize = requestSize;
@@ -886,7 +1002,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The request time, in UTC.
+             * <p>The request time, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-29T03:59:59Z</p>
              */
             public Builder requestTime(String requestTime) {
                 this.requestTime = requestTime;
@@ -894,7 +1013,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The response body. A response body cannot exceed 1,024 bytes in size.
+             * <p>The response body. A response body cannot exceed 1,024 bytes in size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param=paramName</p>
              */
             public Builder responseBody(String responseBody) {
                 this.responseBody = responseBody;
@@ -902,7 +1024,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The headers in the API response.
+             * <p>The headers in the API response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content-type: application/x-www-form-urlencoded</p>
              */
             public Builder responseHeaders(String responseHeaders) {
                 this.responseHeaders = responseHeaders;
@@ -910,7 +1035,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of returned data. Unit: bytes.
+             * <p>The size of returned data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23441</p>
              */
             public Builder responseSize(String responseSize) {
                 this.responseSize = responseSize;
@@ -918,7 +1046,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total time consumed to access the backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
+             * <p>The total time consumed to access the backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>324</p>
              */
             public Builder serviceLatency(String serviceLatency) {
                 this.serviceLatency = serviceLatency;
@@ -926,7 +1057,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API environment.
+             * <p>The ID of the API environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8a305b7f10334052a52d9156********</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -934,7 +1068,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API environment.
+             * <p>The name of the API environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -942,7 +1079,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The status code returned.
+             * <p>The status code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -950,7 +1090,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total time consumed by the request. Unit: milliseconds.
+             * <p>The total time consumed by the request. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1345</p>
              */
             public Builder totalLatency(String totalLatency) {
                 this.totalLatency = totalLatency;
@@ -958,7 +1101,10 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-in hit by the request and the relevant context.
+             * <p>The plug-in hit by the request and the relevant context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder plugin(String plugin) {
                 this.plugin = plugin;
@@ -972,9 +1118,15 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRequestLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRequestLogsResponseBody</p>
+     */
     public static class RequestLogs extends TeaModel {
-        @NameInMap("RequestLog")
-        private java.util.List < RequestLog> requestLog;
+        @com.aliyun.core.annotation.NameInMap("RequestLog")
+        private java.util.List<RequestLog> requestLog;
 
         private RequestLogs(Builder builder) {
             this.requestLog = builder.requestLog;
@@ -991,17 +1143,17 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         /**
          * @return requestLog
          */
-        public java.util.List < RequestLog> getRequestLog() {
+        public java.util.List<RequestLog> getRequestLog() {
             return this.requestLog;
         }
 
         public static final class Builder {
-            private java.util.List < RequestLog> requestLog; 
+            private java.util.List<RequestLog> requestLog; 
 
             /**
              * RequestLog.
              */
-            public Builder requestLog(java.util.List < RequestLog> requestLog) {
+            public Builder requestLog(java.util.List<RequestLog> requestLog) {
                 this.requestLog = requestLog;
                 return this;
             }

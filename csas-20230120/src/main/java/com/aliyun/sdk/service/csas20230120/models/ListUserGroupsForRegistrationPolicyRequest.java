@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsForRegistrationPolicyRequest} extends {@link RequestModel}
  *
  * <p>ListUserGroupsForRegistrationPolicyRequest</p>
  */
 public class ListUserGroupsForRegistrationPolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyIds")
-    @Validation(required = true)
-    private java.util.List < String > policyIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> policyIds;
 
     private ListUserGroupsForRegistrationPolicyRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class ListUserGroupsForRegistrationPolicyRequest extends Request {
     /**
      * @return policyIds
      */
-    public java.util.List < String > getPolicyIds() {
+    public java.util.List<String> getPolicyIds() {
         return this.policyIds;
     }
 
     public static final class Builder extends Request.Builder<ListUserGroupsForRegistrationPolicyRequest, Builder> {
-        private java.util.List < String > policyIds; 
+        private java.util.List<String> policyIds; 
 
         private Builder() {
             super();
@@ -55,9 +60,9 @@ public class ListUserGroupsForRegistrationPolicyRequest extends Request {
         } 
 
         /**
-         * PolicyIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder policyIds(java.util.List < String > policyIds) {
+        public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
             this.policyIds = policyIds;
             return this;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableRecoveryTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableRecoveryTimeResponseBody</p>
  */
 public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
-    @NameInMap("CrossBackupId")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupId")
     private Integer crossBackupId;
 
-    @NameInMap("RecoveryBeginTime")
+    @com.aliyun.core.annotation.NameInMap("RecoveryBeginTime")
     private String recoveryBeginTime;
 
-    @NameInMap("RecoveryEndTime")
+    @com.aliyun.core.annotation.NameInMap("RecoveryEndTime")
     private String recoveryEndTime;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableRecoveryTimeResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cross-region data backup file.
+         * <p>The ID of the cross-region data backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14377</p>
          */
         public Builder crossBackupId(Integer crossBackupId) {
             this.crossBackupId = crossBackupId;
@@ -94,7 +102,10 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The start time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The start time from which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-12T05:22:29Z</p>
          */
         public Builder recoveryBeginTime(String recoveryBeginTime) {
             this.recoveryBeginTime = recoveryBeginTime;
@@ -102,7 +113,10 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The end time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The end time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-12T07:33:12Z</p>
          */
         public Builder recoveryEndTime(String recoveryEndTime) {
             this.recoveryEndTime = recoveryEndTime;
@@ -110,7 +124,10 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The region where the source instance resides.
+         * <p>The region where the source instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -118,7 +135,10 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CCBF4BA-7CE1-47E1-B49F-E97EA200A40D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

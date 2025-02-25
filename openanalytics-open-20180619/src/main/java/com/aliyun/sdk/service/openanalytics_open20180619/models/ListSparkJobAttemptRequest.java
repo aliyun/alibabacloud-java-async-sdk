@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSparkJobAttemptRequest} extends {@link RequestModel}
  *
  * <p>ListSparkJobAttemptRequest</p>
  */
 public class ListSparkJobAttemptRequest extends Request {
-    @Query
-    @NameInMap("Condition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Condition")
     private java.util.Map < String, ? > condition;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("VcName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VcName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vcName;
 
     private ListSparkJobAttemptRequest(Builder builder) {
@@ -104,26 +104,30 @@ public class ListSparkJobAttemptRequest extends Request {
             super();
         } 
 
-        private Builder(ListSparkJobAttemptRequest response) {
-            super(response);
-            this.condition = response.condition;
-            this.jobId = response.jobId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.vcName = response.vcName;
+        private Builder(ListSparkJobAttemptRequest request) {
+            super(request);
+            this.condition = request.condition;
+            this.jobId = request.jobId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.vcName = request.vcName;
         } 
 
         /**
          * Condition.
          */
         public Builder condition(java.util.Map < String, ? > condition) {
-            this.putQueryParameter("Condition", condition);
+            String conditionShrink = shrink(condition, "Condition", "json");
+            this.putQueryParameter("Condition", conditionShrink);
             this.condition = condition;
             return this;
         }
 
         /**
-         * JobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j202105272322hangzhou5d64f1560000128</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -132,7 +136,10 @@ public class ListSparkJobAttemptRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -141,7 +148,10 @@ public class ListSparkJobAttemptRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,7 +160,10 @@ public class ListSparkJobAttemptRequest extends Request {
         }
 
         /**
-         * VcName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release-test</p>
          */
         public Builder vcName(String vcName) {
             this.putQueryParameter("VcName", vcName);

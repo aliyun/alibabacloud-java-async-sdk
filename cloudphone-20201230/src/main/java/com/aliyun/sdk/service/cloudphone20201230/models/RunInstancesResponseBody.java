@@ -74,7 +74,7 @@ public class RunInstancesResponseBody extends TeaModel {
         private Float tradePrice; 
 
         /**
-         * InstanceIds.
+         * The IDs of the ECP instances.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -82,7 +82,7 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -90,7 +90,7 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TradePrice.
+         * The price of the ECP resource.
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

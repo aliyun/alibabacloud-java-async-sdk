@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyBusinessLicenseRequest} extends {@link RequestModel}
  *
  * <p>VerifyBusinessLicenseRequest</p>
  */
 public class VerifyBusinessLicenseRequest extends Request {
-    @Query
-    @NameInMap("CompanyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompanyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String companyName;
 
-    @Query
-    @NameInMap("CreditCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreditCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String creditCode;
 
-    @Query
-    @NameInMap("LegalPerson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LegalPerson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String legalPerson;
 
     private VerifyBusinessLicenseRequest(Builder builder) {
@@ -85,7 +85,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         } 
 
         /**
-         * CompanyName.
+         * <p>This parameter is required.</p>
          */
         public Builder companyName(String companyName) {
             this.putQueryParameter("CompanyName", companyName);
@@ -94,7 +94,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         }
 
         /**
-         * CreditCode.
+         * <p>This parameter is required.</p>
          */
         public Builder creditCode(String creditCode) {
             this.putQueryParameter("CreditCode", creditCode);
@@ -103,7 +103,7 @@ public class VerifyBusinessLicenseRequest extends Request {
         }
 
         /**
-         * LegalPerson.
+         * <p>This parameter is required.</p>
          */
         public Builder legalPerson(String legalPerson) {
             this.putQueryParameter("LegalPerson", legalPerson);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUploadVideoResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUploadVideoResponseBody</p>
  */
 public class CreateUploadVideoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadAddress")
+    @com.aliyun.core.annotation.NameInMap("UploadAddress")
     private String uploadAddress;
 
-    @NameInMap("UploadAuth")
+    @com.aliyun.core.annotation.NameInMap("UploadAuth")
     private String uploadAuth;
 
-    @NameInMap("VideoId")
+    @com.aliyun.core.annotation.NameInMap("VideoId")
     private String videoId;
 
     private CreateUploadVideoResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         private String videoId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4AF6-04D5-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,10 +90,13 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The upload URL.
-         * <p>
+         * <p>The upload URL.</p>
+         * <blockquote>
+         * <p>The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the Object Storage Service (OSS) SDK or call an OSS API operation to upload media files.</p>
+         * </blockquote>
          * 
-         * > The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the Object Storage Service (OSS) SDK or call an OSS API operation to upload media files.
+         * <strong>example:</strong>
+         * <p>eyJTZWN1cml0a2VuIjoiQ0FJU3p3TjF****</p>
          */
         public Builder uploadAddress(String uploadAddress) {
             this.uploadAddress = uploadAddress;
@@ -93,10 +104,13 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The upload credential.
-         * <p>
+         * <p>The upload credential.</p>
+         * <blockquote>
+         * <p>The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+         * </blockquote>
          * 
-         * > The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.
+         * <strong>example:</strong>
+         * <p>eyJFbmRwb2ludCI6Imm****</p>
          */
         public Builder uploadAuth(String uploadAuth) {
             this.uploadAuth = uploadAuth;
@@ -104,7 +118,10 @@ public class CreateUploadVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the audio or video file. VideoId can be used as a request parameter when you call an operation for media asset management, media processing, or media review.
+         * <p>The ID of the audio or video file. VideoId can be used as a request parameter when you call an operation for media asset management, media processing, or media review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f54b6e91d24d81d44****</p>
          */
         public Builder videoId(String videoId) {
             this.videoId = videoId;

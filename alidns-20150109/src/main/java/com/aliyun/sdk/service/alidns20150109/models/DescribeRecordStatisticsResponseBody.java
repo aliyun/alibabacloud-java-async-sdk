@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordStatisticsResponseBody</p>
  */
 public class DescribeRecordStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
+    @com.aliyun.core.annotation.NameInMap("Statistics")
     private Statistics statistics;
 
     private DescribeRecordStatisticsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         private Statistics statistics; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6AEC7A64-3CB1-4C49-8B35-0B901F1E26BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of query volume records.
+         * <p>The statistics on the DNS requests.</p>
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -71,11 +79,17 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecordStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordStatisticsResponseBody</p>
+     */
     public static class Statistic extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Statistic(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The number of queries.
+             * <p>The number of DNS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15292887</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +135,10 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp representing the collection time.
+             * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1556640000000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -132,9 +152,15 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordStatisticsResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
-        @NameInMap("Statistic")
-        private java.util.List < Statistic> statistic;
+        @com.aliyun.core.annotation.NameInMap("Statistic")
+        private java.util.List<Statistic> statistic;
 
         private Statistics(Builder builder) {
             this.statistic = builder.statistic;
@@ -151,17 +177,17 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         /**
          * @return statistic
          */
-        public java.util.List < Statistic> getStatistic() {
+        public java.util.List<Statistic> getStatistic() {
             return this.statistic;
         }
 
         public static final class Builder {
-            private java.util.List < Statistic> statistic; 
+            private java.util.List<Statistic> statistic; 
 
             /**
              * Statistic.
              */
-            public Builder statistic(java.util.List < Statistic> statistic) {
+            public Builder statistic(java.util.List<Statistic> statistic) {
                 this.statistic = statistic;
                 return this;
             }

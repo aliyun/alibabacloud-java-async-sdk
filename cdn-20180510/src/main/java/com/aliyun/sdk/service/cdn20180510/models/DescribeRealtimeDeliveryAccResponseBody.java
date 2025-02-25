@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRealtimeDeliveryAccResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRealtimeDeliveryAccResponseBody</p>
  */
 public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
-    @NameInMap("ReatTimeDeliveryAccData")
+    @com.aliyun.core.annotation.NameInMap("ReatTimeDeliveryAccData")
     private ReatTimeDeliveryAccData reatTimeDeliveryAccData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRealtimeDeliveryAccResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics about real-time log deliveries.
+         * <p>The statistics about real-time log deliveries.</p>
          */
         public Builder reatTimeDeliveryAccData(ReatTimeDeliveryAccData reatTimeDeliveryAccData) {
             this.reatTimeDeliveryAccData = reatTimeDeliveryAccData;
@@ -58,7 +58,10 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>684306D2-2511-4977-991D-CE97E91FD7C0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRealtimeDeliveryAccResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRealtimeDeliveryAccResponseBody</p>
+     */
     public static class AccData extends TeaModel {
-        @NameInMap("FailedNum")
+        @com.aliyun.core.annotation.NameInMap("FailedNum")
         private Integer failedNum;
 
-        @NameInMap("SuccessNum")
+        @com.aliyun.core.annotation.NameInMap("SuccessNum")
         private Integer successNum;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private AccData(Builder builder) {
@@ -122,7 +131,10 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The number of failed attempts to deliver log data to Log Service.
+             * <p>The number of failed attempts to deliver log data to Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder failedNum(Integer failedNum) {
                 this.failedNum = failedNum;
@@ -130,7 +142,10 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful deliveries of log data to Log Service.
+             * <p>The number of successful deliveries of log data to Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder successNum(Integer successNum) {
                 this.successNum = successNum;
@@ -138,7 +153,10 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-03T06:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -152,8 +170,14 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRealtimeDeliveryAccResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRealtimeDeliveryAccResponseBody</p>
+     */
     public static class ReatTimeDeliveryAccData extends TeaModel {
-        @NameInMap("AccData")
+        @com.aliyun.core.annotation.NameInMap("AccData")
         private java.util.List < AccData> accData;
 
         private ReatTimeDeliveryAccData(Builder builder) {

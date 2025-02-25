@@ -1,0 +1,9 @@
+2024-12-19 Version: 2.0.0
+- Generated java-async 2018-01-16 for linkedmall.
+
+2024-01-22 Version: 1.0.1
+- Generated java-async 2018-01-16 for linkedmall.
+
+2024-01-19 Version: 1.0.0
+- Generated java-async 2018-01-16 for linkedmall.
+

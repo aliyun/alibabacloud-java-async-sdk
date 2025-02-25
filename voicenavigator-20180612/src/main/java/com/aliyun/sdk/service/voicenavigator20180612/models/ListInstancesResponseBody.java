@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
  */
 public class ListInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListInstancesResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -79,7 +84,7 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * Instances.
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -131,44 +136,50 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("ApplicableOperations")
-        private java.util.List < String > applicableOperations;
+        @com.aliyun.core.annotation.NameInMap("ApplicableOperations")
+        private java.util.List<String> applicableOperations;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Long concurrency;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("ModifyUserName")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserName")
         private String modifyUserName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NluServiceParamsJson")
+        @com.aliyun.core.annotation.NameInMap("NluServiceParamsJson")
         private String nluServiceParamsJson;
 
-        @NameInMap("Numbers")
-        private java.util.List < String > numbers;
+        @com.aliyun.core.annotation.NameInMap("Numbers")
+        private java.util.List<String> numbers;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UnionInstanceId")
+        @com.aliyun.core.annotation.NameInMap("UnionInstanceId")
         private String unionInstanceId;
 
-        @NameInMap("UnionSource")
+        @com.aliyun.core.annotation.NameInMap("UnionSource")
         private String unionSource;
 
         private Instances(Builder builder) {
@@ -198,7 +209,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return applicableOperations
          */
-        public java.util.List < String > getApplicableOperations() {
+        public java.util.List<String> getApplicableOperations() {
             return this.applicableOperations;
         }
 
@@ -261,7 +272,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return numbers
          */
-        public java.util.List < String > getNumbers() {
+        public java.util.List<String> getNumbers() {
             return this.numbers;
         }
 
@@ -287,7 +298,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > applicableOperations; 
+            private java.util.List<String> applicableOperations; 
             private Long concurrency; 
             private Long createTime; 
             private String description; 
@@ -296,7 +307,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String modifyUserName; 
             private String name; 
             private String nluServiceParamsJson; 
-            private java.util.List < String > numbers; 
+            private java.util.List<String> numbers; 
             private String status; 
             private String unionInstanceId; 
             private String unionSource; 
@@ -304,7 +315,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * ApplicableOperations.
              */
-            public Builder applicableOperations(java.util.List < String > applicableOperations) {
+            public Builder applicableOperations(java.util.List<String> applicableOperations) {
                 this.applicableOperations = applicableOperations;
                 return this;
             }
@@ -376,7 +387,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * Numbers.
              */
-            public Builder numbers(java.util.List < String > numbers) {
+            public Builder numbers(java.util.List<String> numbers) {
                 this.numbers = numbers;
                 return this;
             }

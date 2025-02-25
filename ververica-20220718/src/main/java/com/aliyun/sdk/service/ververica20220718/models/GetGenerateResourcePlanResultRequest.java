@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGenerateResourcePlanResultRequest} extends {@link RequestModel}
  *
  * <p>GetGenerateResourcePlanResultRequest</p>
  */
 public class GetGenerateResourcePlanResultRequest extends Request {
-    @Path
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Path
-    @NameInMap("ticketId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ticketId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ticketId;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private GetGenerateResourcePlanResultRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class GetGenerateResourcePlanResultRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -94,7 +103,11 @@ public class GetGenerateResourcePlanResultRequest extends Request {
         }
 
         /**
-         * ticketId.
+         * <p>The ID of the asynchronous ticket. You can submit an application for an asynchronous operation to obtain this ticket ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a8fc49-e090-430a-85d8-3ee8c79c****</p>
          */
         public Builder ticketId(String ticketId) {
             this.putPathParameter("ticketId", ticketId);
@@ -103,7 +116,11 @@ public class GetGenerateResourcePlanResultRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

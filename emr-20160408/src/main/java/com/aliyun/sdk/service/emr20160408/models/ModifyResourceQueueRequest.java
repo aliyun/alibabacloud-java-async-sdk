@@ -170,18 +170,18 @@ public class ModifyResourceQueueRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyResourceQueueRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.config = response.config;
-            this.id = response.id;
-            this.leaf = response.leaf;
-            this.name = response.name;
-            this.parentQueueId = response.parentQueueId;
-            this.qualifiedName = response.qualifiedName;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourcePoolId = response.resourcePoolId;
+        private Builder(ModifyResourceQueueRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.config = request.config;
+            this.id = request.id;
+            this.leaf = request.leaf;
+            this.name = request.name;
+            this.parentQueueId = request.parentQueueId;
+            this.qualifiedName = request.qualifiedName;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePoolId = request.resourcePoolId;
         } 
 
         /**

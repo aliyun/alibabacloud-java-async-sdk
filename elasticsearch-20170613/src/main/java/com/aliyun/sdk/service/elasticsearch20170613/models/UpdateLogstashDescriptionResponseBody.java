@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLogstashDescriptionResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLogstashDescriptionResponseBody</p>
  */
 public class UpdateLogstashDescriptionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private UpdateLogstashDescriptionResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * <p>The result returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,8 +74,14 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLogstashDescriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateLogstashDescriptionResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
         private Result(Builder builder) {
@@ -98,7 +107,10 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstash_name</p>
              */
             public Builder description(String description) {
                 this.description = description;

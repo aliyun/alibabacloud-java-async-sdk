@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsInstanceCreateResponseBody} extends {@link TeaModel}
  *
  * <p>OnsInstanceCreateResponseBody</p>
  */
 public class OnsInstanceCreateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsInstanceCreateResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results that are returned.
+         * <p>The result returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07E3902-B92E-44A6-B6C5-6AA111111****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsInstanceCreateResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsInstanceCreateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private Integer instanceType;
 
         private Data(Builder builder) {
@@ -110,7 +119,10 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
             private Integer instanceType; 
 
             /**
-             * The ID of the instance that you created.
+             * <p>The ID of the instance that you created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_188077086902****_BXSuW61e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -118,10 +130,13 @@ public class OnsInstanceCreateResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the instance. Valid value:
-             * <p>
+             * <p>The edition of the instance that you created. Valid value:</p>
+             * <ul>
+             * <li><strong>1</strong>: Standard Edition instances</li>
+             * </ul>
              * 
-             * *   **1**: Standard Edition
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceType(Integer instanceType) {
                 this.instanceType = instanceType;

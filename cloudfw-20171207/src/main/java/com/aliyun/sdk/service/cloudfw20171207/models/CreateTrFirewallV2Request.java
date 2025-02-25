@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrFirewallV2Request} extends {@link RequestModel}
  *
  * <p>CreateTrFirewallV2Request</p>
  */
 public class CreateTrFirewallV2Request extends Request {
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("FirewallDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallDescription")
     private String firewallDescription;
 
-    @Query
-    @NameInMap("FirewallName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallName")
     private String firewallName;
 
-    @Query
-    @NameInMap("FirewallSubnetCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallSubnetCidr")
     private String firewallSubnetCidr;
 
-    @Query
-    @NameInMap("FirewallVpcCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcCidr")
     private String firewallVpcCidr;
 
-    @Query
-    @NameInMap("FirewallVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcId")
     private String firewallVpcId;
 
-    @Query
-    @NameInMap("FirewallVswitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVswitchId")
     private String firewallVswitchId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
     private String regionNo;
 
-    @Query
-    @NameInMap("RouteMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteMode")
     private String routeMode;
 
-    @Query
-    @NameInMap("TrAttachmentMasterCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterCidr")
     private String trAttachmentMasterCidr;
 
-    @Query
-    @NameInMap("TrAttachmentMasterZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterZone")
     private String trAttachmentMasterZone;
 
-    @Query
-    @NameInMap("TrAttachmentSlaveCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveCidr")
     private String trAttachmentSlaveCidr;
 
-    @Query
-    @NameInMap("TrAttachmentSlaveZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveZone")
     private String trAttachmentSlaveZone;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private CreateTrFirewallV2Request(Builder builder) {
@@ -250,7 +255,10 @@ public class CreateTrFirewallV2Request extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-4xbjup276au29r****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -259,7 +267,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The description of the firewall.
+         * <p>The description of the firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-sz</p>
          */
         public Builder firewallDescription(String firewallDescription) {
             this.putQueryParameter("FirewallDescription", firewallDescription);
@@ -268,7 +279,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The name of the firewall.
+         * <p>The name of the firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfw_test2</p>
          */
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);
@@ -277,7 +291,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.
+         * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.1.0/24</p>
          */
         public Builder firewallSubnetCidr(String firewallSubnetCidr) {
             this.putQueryParameter("FirewallSubnetCidr", firewallSubnetCidr);
@@ -286,7 +303,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.
+         * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/16</p>
          */
         public Builder firewallVpcCidr(String firewallVpcCidr) {
             this.putQueryParameter("FirewallVpcCidr", firewallVpcCidr);
@@ -295,7 +315,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The ID of the VPC in which the ENI associated with the VPC firewall is created in manual mode.
+         * <p>The ID of the VPC in which the ENI associated with the VPC firewall is created in manual mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9r5qvryn0lg3atb****</p>
          */
         public Builder firewallVpcId(String firewallVpcId) {
             this.putQueryParameter("FirewallVpcId", firewallVpcId);
@@ -304,7 +327,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The ID of the vSwitch that is used to create the ENI in manual mode.
+         * <p>The ID of the vSwitch that is used to create the ENI in manual mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6ydz3vqj77mr5l6****</p>
          */
         public Builder firewallVswitchId(String firewallVswitchId) {
             this.putQueryParameter("FirewallVswitchId", firewallVswitchId);
@@ -313,11 +339,14 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -326,7 +355,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The region ID of the route router.
+         * <p>The region ID of the route router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -335,11 +367,14 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The routing mode of the VPC firewall. Valid values:
-         * <p>
+         * <p>The routing mode of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>managed</strong>: automatic mode</li>
+         * <li><strong>manual</strong>: manual mode</li>
+         * </ul>
          * 
-         * *   **managed**: automatic mode
-         * *   **manual**: manual mode
+         * <strong>example:</strong>
+         * <p>managed</p>
          */
         public Builder routeMode(String routeMode) {
             this.putQueryParameter("RouteMode", routeMode);
@@ -348,7 +383,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
+         * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.3.0/24</p>
          */
         public Builder trAttachmentMasterCidr(String trAttachmentMasterCidr) {
             this.putQueryParameter("TrAttachmentMasterCidr", trAttachmentMasterCidr);
@@ -357,7 +395,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TrAttachmentMasterZone.
+         * <p>The primary zone for the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-a</p>
          */
         public Builder trAttachmentMasterZone(String trAttachmentMasterZone) {
             this.putQueryParameter("TrAttachmentMasterZone", trAttachmentMasterZone);
@@ -366,7 +407,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.
+         * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.16/28</p>
          */
         public Builder trAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
             this.putQueryParameter("TrAttachmentSlaveCidr", trAttachmentSlaveCidr);
@@ -375,7 +419,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TrAttachmentSlaveZone.
+         * <p>The secondary zone for the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-b</p>
          */
         public Builder trAttachmentSlaveZone(String trAttachmentSlaveZone) {
             this.putQueryParameter("TrAttachmentSlaveZone", trAttachmentSlaveZone);
@@ -384,7 +431,10 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-m5etmb2q7e0mxcur****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

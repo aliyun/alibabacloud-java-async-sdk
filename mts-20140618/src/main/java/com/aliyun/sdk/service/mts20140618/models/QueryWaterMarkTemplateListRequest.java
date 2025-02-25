@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWaterMarkTemplateListRequest} extends {@link RequestModel}
  *
  * <p>QueryWaterMarkTemplateListRequest</p>
  */
 public class QueryWaterMarkTemplateListRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("WaterMarkTemplateIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WaterMarkTemplateIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String waterMarkTemplateIds;
 
     private QueryWaterMarkTemplateListRequest(Builder builder) {
@@ -147,7 +147,11 @@ public class QueryWaterMarkTemplateListRequest extends Request {
         }
 
         /**
-         * WaterMarkTemplateIds.
+         * <p>The IDs of the watermark templates that you want to query. To obtain the IDs of the watermark templates, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Watermark Templates</strong> in the left-side navigation pane. You can query up to 10 watermark templates at a time. Separate multiple IDs of watermark templates with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3780bd69b2b74540bc7b1096f564****</p>
          */
         public Builder waterMarkTemplateIds(String waterMarkTemplateIds) {
             this.putQueryParameter("WaterMarkTemplateIds", waterMarkTemplateIds);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSqlOptimizeAdviceResponseBody} extends {@link TeaModel}
  *
  * <p>GetSqlOptimizeAdviceResponseBody</p>
  */
 public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetSqlOptimizeAdviceResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information, including the error codes and the number of entries that are returned.
+         * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,23 +155,29 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSqlOptimizeAdviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSqlOptimizeAdviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {
@@ -225,7 +248,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632303861000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -233,7 +259,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the file.
+             * <p>The URL that is used to download the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://das-sql-optimize.oss-cn-shanghai.aliyuncs.com/adb/oss_sql_optimize_advice/1083">https://das-sql-optimize.oss-cn-shanghai.aliyuncs.com/adb/oss_sql_optimize_advice/1083</a>*******</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -241,10 +270,13 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the file expires. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-             * <p>
+             * <p>The time when the file expires. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <blockquote>
+             * <p> The file expires three days after the task is created.</p>
+             * </blockquote>
              * 
-             * >  The file expires three days after the task is created.
+             * <strong>example:</strong>
+             * <p>1632563061000</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -252,13 +284,16 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is being initialized.</li>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>FINISH</strong>: The task is complete.</li>
+             * <li><strong>FAILED</strong>: The task failed.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is being initialized.
-             * *   **RUNNING**: The task is running.
-             * *   **FINISH**: The task is complete.
-             * *   **FAILED**: The task failed.
+             * <strong>example:</strong>
+             * <p>FINISH</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -266,12 +301,15 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the task. Valid values:
-             * <p>
+             * <p>The status code of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>NO_DATA</strong>: No data is returned.</li>
+             * <li><strong>INTERNAL_ERROR</strong>: An internal error occurred.</li>
+             * <li><strong>SUCCESS</strong>: The task is successful.</li>
+             * </ul>
              * 
-             * *   **NO_DATA**: No data is returned.
-             * *   **INTERNAL_ERROR**: An internal error occurred.
-             * *   **SUCCESS**: The task is successful.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -279,7 +317,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021091710461519216****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

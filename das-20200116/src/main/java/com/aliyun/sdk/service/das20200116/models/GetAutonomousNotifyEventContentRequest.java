@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutonomousNotifyEventContentRequest} extends {@link RequestModel}
  *
  * <p>GetAutonomousNotifyEventContentRequest</p>
  */
 public class GetAutonomousNotifyEventContentRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SpanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spanId;
 
-    @Query
-    @NameInMap("__context")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("__context")
     private String context;
 
     private GetAutonomousNotifyEventContentRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class GetAutonomousNotifyEventContentRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-18ff4a195d****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +102,11 @@ public class GetAutonomousNotifyEventContentRequest extends Request {
         }
 
         /**
-         * The unique identifier of the event. You can call the [GetAutonomousNotifyEventsInRange](~~288371~~) operation to query the unique identifier returned by the SpanId response parameter.
+         * <p>The unique identifier of the event. You can call the <a href="https://help.aliyun.com/document_detail/288371.html">GetAutonomousNotifyEventsInRange</a> operation to query the unique identifier returned by the SpanId response parameter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7e7b2774-95b8-4fa3-bd9c-0ab47cb7****</p>
          */
         public Builder spanId(String spanId) {
             this.putQueryParameter("SpanId", spanId);
@@ -102,7 +115,10 @@ public class GetAutonomousNotifyEventContentRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder context(String context) {
             this.putQueryParameter("__context", context);

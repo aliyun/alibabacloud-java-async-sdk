@@ -1,84 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UserViewMetric} extends {@link TeaModel}
  *
  * <p>UserViewMetric</p>
  */
 public class UserViewMetric extends TeaModel {
-    @NameInMap("CPUNodeNumber")
+    @com.aliyun.core.annotation.NameInMap("CPUNodeNumber")
     private Integer CPUNodeNumber;
 
-    @NameInMap("CPUUsageRate")
+    @com.aliyun.core.annotation.NameInMap("CPUUsageRate")
     private String CPUUsageRate;
 
-    @NameInMap("CpuJobNames")
-    private java.util.List < String > cpuJobNames;
+    @com.aliyun.core.annotation.NameInMap("CpuJobNames")
+    private java.util.List<String> cpuJobNames;
 
-    @NameInMap("CpuNodeNames")
-    private java.util.List < String > cpuNodeNames;
+    @com.aliyun.core.annotation.NameInMap("CpuNodeNames")
+    private java.util.List<String> cpuNodeNames;
 
-    @NameInMap("DiskReadRate")
+    @com.aliyun.core.annotation.NameInMap("DiskReadRate")
     private String diskReadRate;
 
-    @NameInMap("DiskWriteRate")
+    @com.aliyun.core.annotation.NameInMap("DiskWriteRate")
     private String diskWriteRate;
 
-    @NameInMap("GPUNodeNumber")
+    @com.aliyun.core.annotation.NameInMap("GPUNodeNumber")
     private Integer GPUNodeNumber;
 
-    @NameInMap("GPUUsageRate")
+    @com.aliyun.core.annotation.NameInMap("GPUUsageRate")
     private String GPUUsageRate;
 
-    @NameInMap("GpuJobNames")
-    private java.util.List < String > gpuJobNames;
+    @com.aliyun.core.annotation.NameInMap("GpuJobNames")
+    private java.util.List<String> gpuJobNames;
 
-    @NameInMap("GpuNodeNames")
-    private java.util.List < String > gpuNodeNames;
+    @com.aliyun.core.annotation.NameInMap("GpuNodeNames")
+    private java.util.List<String> gpuNodeNames;
 
-    @NameInMap("JobType")
+    @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
-    @NameInMap("MemoryUsageRate")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsageRate")
     private String memoryUsageRate;
 
-    @NameInMap("NetworkInputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkInputRate")
     private String networkInputRate;
 
-    @NameInMap("NetworkOutputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkOutputRate")
     private String networkOutputRate;
 
-    @NameInMap("NodeNames")
-    private java.util.List < String > nodeNames;
+    @com.aliyun.core.annotation.NameInMap("NodeNames")
+    private java.util.List<String> nodeNames;
 
-    @NameInMap("RequestCPU")
+    @com.aliyun.core.annotation.NameInMap("RequestCPU")
     private Integer requestCPU;
 
-    @NameInMap("RequestGPU")
+    @com.aliyun.core.annotation.NameInMap("RequestGPU")
     private Integer requestGPU;
 
-    @NameInMap("RequestMemory")
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
     private Long requestMemory;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("TotalCPU")
+    @com.aliyun.core.annotation.NameInMap("TotalCPU")
     private Integer totalCPU;
 
-    @NameInMap("TotalGPU")
+    @com.aliyun.core.annotation.NameInMap("TotalGPU")
     private Integer totalGPU;
 
-    @NameInMap("TotalMemory")
+    @com.aliyun.core.annotation.NameInMap("TotalMemory")
     private Long totalMemory;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private UserViewMetric(Builder builder) {
@@ -132,14 +137,14 @@ public class UserViewMetric extends TeaModel {
     /**
      * @return cpuJobNames
      */
-    public java.util.List < String > getCpuJobNames() {
+    public java.util.List<String> getCpuJobNames() {
         return this.cpuJobNames;
     }
 
     /**
      * @return cpuNodeNames
      */
-    public java.util.List < String > getCpuNodeNames() {
+    public java.util.List<String> getCpuNodeNames() {
         return this.cpuNodeNames;
     }
 
@@ -174,14 +179,14 @@ public class UserViewMetric extends TeaModel {
     /**
      * @return gpuJobNames
      */
-    public java.util.List < String > getGpuJobNames() {
+    public java.util.List<String> getGpuJobNames() {
         return this.gpuJobNames;
     }
 
     /**
      * @return gpuNodeNames
      */
-    public java.util.List < String > getGpuNodeNames() {
+    public java.util.List<String> getGpuNodeNames() {
         return this.gpuNodeNames;
     }
 
@@ -216,7 +221,7 @@ public class UserViewMetric extends TeaModel {
     /**
      * @return nodeNames
      */
-    public java.util.List < String > getNodeNames() {
+    public java.util.List<String> getNodeNames() {
         return this.nodeNames;
     }
 
@@ -279,19 +284,19 @@ public class UserViewMetric extends TeaModel {
     public static final class Builder {
         private Integer CPUNodeNumber; 
         private String CPUUsageRate; 
-        private java.util.List < String > cpuJobNames; 
-        private java.util.List < String > cpuNodeNames; 
+        private java.util.List<String> cpuJobNames; 
+        private java.util.List<String> cpuNodeNames; 
         private String diskReadRate; 
         private String diskWriteRate; 
         private Integer GPUNodeNumber; 
         private String GPUUsageRate; 
-        private java.util.List < String > gpuJobNames; 
-        private java.util.List < String > gpuNodeNames; 
+        private java.util.List<String> gpuJobNames; 
+        private java.util.List<String> gpuNodeNames; 
         private String jobType; 
         private String memoryUsageRate; 
         private String networkInputRate; 
         private String networkOutputRate; 
-        private java.util.List < String > nodeNames; 
+        private java.util.List<String> nodeNames; 
         private Integer requestCPU; 
         private Integer requestGPU; 
         private Long requestMemory; 
@@ -320,7 +325,7 @@ public class UserViewMetric extends TeaModel {
         /**
          * CpuJobNames.
          */
-        public Builder cpuJobNames(java.util.List < String > cpuJobNames) {
+        public Builder cpuJobNames(java.util.List<String> cpuJobNames) {
             this.cpuJobNames = cpuJobNames;
             return this;
         }
@@ -328,7 +333,7 @@ public class UserViewMetric extends TeaModel {
         /**
          * CpuNodeNames.
          */
-        public Builder cpuNodeNames(java.util.List < String > cpuNodeNames) {
+        public Builder cpuNodeNames(java.util.List<String> cpuNodeNames) {
             this.cpuNodeNames = cpuNodeNames;
             return this;
         }
@@ -368,7 +373,7 @@ public class UserViewMetric extends TeaModel {
         /**
          * GpuJobNames.
          */
-        public Builder gpuJobNames(java.util.List < String > gpuJobNames) {
+        public Builder gpuJobNames(java.util.List<String> gpuJobNames) {
             this.gpuJobNames = gpuJobNames;
             return this;
         }
@@ -376,7 +381,7 @@ public class UserViewMetric extends TeaModel {
         /**
          * GpuNodeNames.
          */
-        public Builder gpuNodeNames(java.util.List < String > gpuNodeNames) {
+        public Builder gpuNodeNames(java.util.List<String> gpuNodeNames) {
             this.gpuNodeNames = gpuNodeNames;
             return this;
         }
@@ -416,7 +421,7 @@ public class UserViewMetric extends TeaModel {
         /**
          * NodeNames.
          */
-        public Builder nodeNames(java.util.List < String > nodeNames) {
+        public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
             return this;
         }

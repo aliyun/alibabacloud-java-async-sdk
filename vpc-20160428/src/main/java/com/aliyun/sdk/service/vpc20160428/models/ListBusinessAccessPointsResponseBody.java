@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBusinessAccessPointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListBusinessAccessPointsResponseBody</p>
  */
 public class ListBusinessAccessPointsResponseBody extends TeaModel {
-    @NameInMap("BusinessAccessPoints")
-    private java.util.List < BusinessAccessPoints> businessAccessPoints;
+    @com.aliyun.core.annotation.NameInMap("BusinessAccessPoints")
+    private java.util.List<BusinessAccessPoints> businessAccessPoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListBusinessAccessPointsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     /**
      * @return businessAccessPoints
      */
-    public java.util.List < BusinessAccessPoints> getBusinessAccessPoints() {
+    public java.util.List<BusinessAccessPoints> getBusinessAccessPoints() {
         return this.businessAccessPoints;
     }
 
@@ -46,19 +51,22 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BusinessAccessPoints> businessAccessPoints; 
+        private java.util.List<BusinessAccessPoints> businessAccessPoints; 
         private String requestId; 
 
         /**
-         * The list of access points.
+         * <p>The list of access points.</p>
          */
-        public Builder businessAccessPoints(java.util.List < BusinessAccessPoints> businessAccessPoints) {
+        public Builder businessAccessPoints(java.util.List<BusinessAccessPoints> businessAccessPoints) {
             this.businessAccessPoints = businessAccessPoints;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBusinessAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBusinessAccessPointsResponseBody</p>
+     */
     public static class BusinessAccessPoints extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("AccessPointName")
+        @com.aliyun.core.annotation.NameInMap("AccessPointName")
         private String accessPointName;
 
-        @NameInMap("CloudBoxInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("CloudBoxInstanceIds")
         private String cloudBoxInstanceIds;
 
-        @NameInMap("Latitude")
+        @com.aliyun.core.annotation.NameInMap("Latitude")
         private Double latitude;
 
-        @NameInMap("Longitude")
+        @com.aliyun.core.annotation.NameInMap("Longitude")
         private Double longitude;
 
-        @NameInMap("SupportLineOperator")
+        @com.aliyun.core.annotation.NameInMap("SupportLineOperator")
         private String supportLineOperator;
 
-        @NameInMap("SupportPortTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportPortTypes")
         private String supportPortTypes;
 
         private BusinessAccessPoints(Builder builder) {
@@ -170,7 +184,10 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             private String supportPortTypes; 
 
             /**
-             * The ID of the access point.
+             * <p>The ID of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-cn-hangzhou-xs-B</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -178,7 +195,10 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access point.
+             * <p>The name of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou-xs-B</p>
              */
             public Builder accessPointName(String accessPointName) {
                 this.accessPointName = accessPointName;
@@ -186,10 +206,13 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud box.
-             * <p>
+             * <p>The ID of the cloud box.</p>
+             * <blockquote>
+             * <p> You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</p>
+             * </blockquote>
              * 
-             * >  You can query this parameter if the Express Connect circuits and access points are of the cloud box type.
+             * <strong>example:</strong>
+             * <p>cb-****</p>
              */
             public Builder cloudBoxInstanceIds(String cloudBoxInstanceIds) {
                 this.cloudBoxInstanceIds = cloudBoxInstanceIds;
@@ -197,7 +220,10 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The latitude of the access point.
+             * <p>The latitude of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.198416</p>
              */
             public Builder latitude(Double latitude) {
                 this.latitude = latitude;
@@ -205,7 +231,10 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The longitude of the access point.
+             * <p>The longitude of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.247514</p>
              */
             public Builder longitude(Double longitude) {
                 this.longitude = longitude;
@@ -213,15 +242,18 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The connectivity provider of the Express Connect circuit. Valid values:
-             * <p>
+             * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>CT</strong>: China Telecom.</li>
+             * <li><strong>CU</strong>: China Unicom.</li>
+             * <li><strong>CM</strong>: China Mobile.</li>
+             * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
+             * <li><strong>Equinix</strong>: Equinix.</li>
+             * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+             * </ul>
              * 
-             * *   **CT**: China Telecom.
-             * *   **CU**: China Unicom.
-             * *   **CM**: China Mobile.
-             * *   **CO**: other connectivity providers in the Chinese mainland.
-             * *   **Equinix**: Equinix.
-             * *   **Other**: other connectivity providers outside the Chinese mainland.
+             * <strong>example:</strong>
+             * <p>CT</p>
              */
             public Builder supportLineOperator(String supportLineOperator) {
                 this.supportLineOperator = supportLineOperator;
@@ -229,18 +261,22 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The port type supported by the access point. Valid values:
-             * <p>
+             * <p>The port type supported by the access point. Valid values:</p>
+             * <ul>
+             * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+             * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
+             * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
+             * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+             * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
+             * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+             * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+             * </ul>
+             * <blockquote>
+             * <p> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+             * </blockquote>
              * 
-             * *   **100Base-T**: 100 Mbit/s copper Ethernet port
-             * *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
-             * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
-             * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-             * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
-             * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-             * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
-             * 
-             * >  To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.
+             * <strong>example:</strong>
+             * <p>1000Base-T</p>
              */
             public Builder supportPortTypes(String supportPortTypes) {
                 this.supportPortTypes = supportPortTypes;

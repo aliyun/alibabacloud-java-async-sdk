@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyAdviceByIdRequest} extends {@link RequestModel}
  *
  * <p>ApplyAdviceByIdRequest</p>
  */
 public class ApplyAdviceByIdRequest extends Request {
-    @Query
-    @NameInMap("AdviceDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdviceDate")
     private Long adviceDate;
 
-    @Query
-    @NameInMap("AdviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdviceId")
     private String adviceId;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ApplyAdviceByIdRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class ApplyAdviceByIdRequest extends Request {
         } 
 
         /**
-         * The date when the suggestion is generated. Specify the date in the yyyyMMdd format. The date must be in UTC.
+         * <p>The date when the suggestion is generated. Specify the date in the yyyyMMdd format. The date must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20221101</p>
          */
         public Builder adviceDate(Long adviceDate) {
             this.putQueryParameter("AdviceDate", adviceDate);
@@ -107,7 +110,10 @@ public class ApplyAdviceByIdRequest extends Request {
         }
 
         /**
-         * The suggestion ID.
+         * <p>The suggestion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0baf1f52-53df-487f-8292-99a03716****</p>
          */
         public Builder adviceId(String adviceId) {
             this.putQueryParameter("AdviceId", adviceId);
@@ -116,10 +122,14 @@ public class ApplyAdviceByIdRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of Data Warehouse Edition (V3.0) clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
+         * <strong>example:</strong>
+         * <p>am-uf6g8w25jacm7****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -128,10 +138,14 @@ public class ApplyAdviceByIdRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
-         * <p>
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

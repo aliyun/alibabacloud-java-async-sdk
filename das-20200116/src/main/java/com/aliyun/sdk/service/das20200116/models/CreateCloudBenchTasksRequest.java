@@ -1,127 +1,132 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudBenchTasksRequest} extends {@link RequestModel}
  *
  * <p>CreateCloudBenchTasksRequest</p>
  */
 public class CreateCloudBenchTasksRequest extends Request {
-    @Query
-    @NameInMap("Amount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
     private String amount;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("BackupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupTime")
     private String backupTime;
 
-    @Query
-    @NameInMap("ClientType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientType;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("DstConnectionString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstConnectionString")
     private String dstConnectionString;
 
-    @Query
-    @NameInMap("DstInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstInstanceId")
     private String dstInstanceId;
 
-    @Query
-    @NameInMap("DstPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstPort")
     private String dstPort;
 
-    @Query
-    @NameInMap("DstSuperAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstSuperAccount")
     private String dstSuperAccount;
 
-    @Query
-    @NameInMap("DstSuperPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstSuperPassword")
     private String dstSuperPassword;
 
-    @Query
-    @NameInMap("DstType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstType")
     private String dstType;
 
-    @Query
-    @NameInMap("DtsJobClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobClass")
     private String dtsJobClass;
 
-    @Query
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Query
-    @NameInMap("EndState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndState")
     private String endState;
 
-    @Query
-    @NameInMap("GatewayVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayVpcId")
     private String gatewayVpcId;
 
-    @Query
-    @NameInMap("GatewayVpcIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayVpcIp")
     private String gatewayVpcIp;
 
-    @Query
-    @NameInMap("Rate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rate")
     private String rate;
 
-    @Query
-    @NameInMap("RequestDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestDuration")
     private String requestDuration;
 
-    @Query
-    @NameInMap("RequestEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestEndTime")
     private String requestEndTime;
 
-    @Query
-    @NameInMap("RequestStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestStartTime")
     private String requestStartTime;
 
-    @Query
-    @NameInMap("SmartPressureTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmartPressureTime")
     private String smartPressureTime;
 
-    @Query
-    @NameInMap("SrcInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcInstanceId;
 
-    @Query
-    @NameInMap("SrcPublicIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcPublicIp")
     private String srcPublicIp;
 
-    @Query
-    @NameInMap("SrcSuperAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcSuperAccount")
     private String srcSuperAccount;
 
-    @Query
-    @NameInMap("SrcSuperPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcSuperPassword")
     private String srcSuperPassword;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
-    @Query
-    @NameInMap("WorkDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkDir")
     private String workDir;
 
     private CreateCloudBenchTasksRequest(Builder builder) {
@@ -422,7 +427,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         } 
 
         /**
-         * The total number of stress testing tasks that you want to create. Valid values: **0** to **30**. Default value: **1**.
+         * <p>The total number of stress testing tasks that you want to create. Valid values: <strong>0</strong> to <strong>30</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -431,7 +439,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
+         * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/26273.html">DescribeBackups</a> operation to query the ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>229132</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -440,7 +451,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The time when the backup starts. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The time when the backup starts. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-23T13:22:14Z</p>
          */
         public Builder backupTime(String backupTime) {
             this.putQueryParameter("BackupTime", backupTime);
@@ -449,11 +463,15 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The type of the stress testing client. Valid values:
-         * <p>
+         * <p>The type of the stress testing client. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS</strong>: indicates that you must create the <a href="https://help.aliyun.com/document_detail/64905.html">DBGateway</a>.</li>
+         * <li><strong>DAS_ECS</strong>: indicates that DAS automatically purchases and deploys an Elastic Compute Service (ECS) instance for stress testing.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ECS**: indicates that you must create the [DBGateway](~~64905~~).
-         * *   **DAS_ECS**: indicates that DAS automatically purchases and deploys an Elastic Compute Service (ECS) instance for stress testing.
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -462,7 +480,11 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The description of the stress testing task.
+         * <p>The description of the stress testing task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-das-bench-0501</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -471,10 +493,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The endpoint of the destination instance. The specified endpoint must be the endpoint of an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance.
-         * <p>
+         * <p>The endpoint of the destination instance. The specified endpoint must be the endpoint of an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>DstType</strong> to <strong>ConnectionString</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only if you set **DstType** to **ConnectionString**.
+         * <strong>example:</strong>
+         * <p>rm-de21209****.mysql.rds.aliyuncs.com</p>
          */
         public Builder dstConnectionString(String dstConnectionString) {
             this.putQueryParameter("DstConnectionString", dstConnectionString);
@@ -483,10 +508,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The ID of the destination instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](~~202857~~) operation to query the ID.
-         * <p>
+         * <p>The ID of the destination instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the <a href="https://help.aliyun.com/document_detail/202857.html">GetInstanceInspections</a> operation to query the ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if you set <strong>DstType</strong> to <strong>Instance</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if you set **DstType** to **Instance**.
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder dstInstanceId(String dstInstanceId) {
             this.putQueryParameter("DstInstanceId", dstInstanceId);
@@ -495,10 +523,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The port number of the instance that you want to access.
-         * <p>
+         * <p>The port number of the instance that you want to access.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>DstType</strong> to <strong>ConnectionString</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only if you set **DstType** to **ConnectionString**.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder dstPort(String dstPort) {
             this.putQueryParameter("DstPort", dstPort);
@@ -507,7 +538,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The name of the privileged account for the destination instance.
+         * <p>The name of the privileged account for the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder dstSuperAccount(String dstSuperAccount) {
             this.putQueryParameter("DstSuperAccount", dstSuperAccount);
@@ -516,7 +550,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The password of the privileged account for the destination instance.
+         * <p>The password of the privileged account for the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder dstSuperPassword(String dstSuperPassword) {
             this.putQueryParameter("DstSuperPassword", dstSuperPassword);
@@ -525,11 +562,14 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The type of the identifier that is used to indicate the destination instance. Valid values:
-         * <p>
+         * <p>The type of the identifier that is used to indicate the destination instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Instance</strong>: the instance ID. This is the default value.</li>
+         * <li><strong>ConnectionString</strong>: the endpoint of the instance.</li>
+         * </ul>
          * 
-         * *   **Instance**: the instance ID. This is the default value.
-         * *   **ConnectionString**: the endpoint of the instance.
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder dstType(String dstType) {
             this.putQueryParameter("DstType", dstType);
@@ -538,10 +578,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The specification of the Data Transmission Service (DTS) migration task. You can call the [DescribeCloudbenchTask](~~230669~~) operation to query the specification.
-         * <p>
+         * <p>The specification of the Data Transmission Service (DTS) migration task. You can call the <a href="https://help.aliyun.com/document_detail/230669.html">DescribeCloudbenchTask</a> operation to query the specification.</p>
+         * <blockquote>
+         * <p> You must migrate the basic data in the source instance to the destination instance before you start a stress testing task. When you create a DTS migration task, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  You must migrate the basic data in the source instance to the destination instance before you start a stress testing task. When you create a DTS migration task, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         public Builder dtsJobClass(String dtsJobClass) {
             this.putQueryParameter("DtsJobClass", dtsJobClass);
@@ -550,10 +593,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The ID of the DTS migration task. You can call the [ConfigureDtsJob](~~208399~~) operation to query the ID.
-         * <p>
+         * <p>The ID of the DTS migration task. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to query the ID.</p>
+         * <blockquote>
+         * <p> After a DTS migration task is created in the DTS console, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  After a DTS migration task is created in the DTS console, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>23127</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -562,15 +608,19 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The state that specifies the last operation that is performed for the stress testing task. Valid values:
-         * <p>
+         * <p>The state that specifies the last operation that is performed for the stress testing task. Valid values:</p>
+         * <ul>
+         * <li><strong>WAIT_TARGET</strong>: prepares the destination instance</li>
+         * <li><strong>WAIT_DBGATEWAY</strong>: prepares the DBGateway</li>
+         * <li><strong>WAIT_SQL</strong>: prepares the full SQL statistics</li>
+         * <li><strong>WAIT_LOGIC</strong>: prepares to replay the traffic</li>
+         * </ul>
+         * <blockquote>
+         * <p> When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task becomes completed.</p>
+         * </blockquote>
          * 
-         * *   **WAIT_TARGET**: prepares the destination instance
-         * *   **WAIT_DBGATEWAY**: prepares the DBGateway
-         * *   **WAIT_SQL**: prepares the full SQL statistics
-         * *   **WAIT_LOGIC**: prepares to replay the traffic
-         * 
-         * >  When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task becomes completed.
+         * <strong>example:</strong>
+         * <p>WAIT_TARGET</p>
          */
         public Builder endState(String endState) {
             this.putQueryParameter("EndState", endState);
@@ -579,10 +629,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) in which the database gateway (DBGateway) is deployed.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) in which the database gateway (DBGateway) is deployed.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if you set <strong>ClientType</strong> to <strong>ECS</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if you set **ClientType** to **ECS**.
+         * <strong>example:</strong>
+         * <p>vpc-t4nsnwvpbc1h76ja4****</p>
          */
         public Builder gatewayVpcId(String gatewayVpcId) {
             this.putQueryParameter("GatewayVpcId", gatewayVpcId);
@@ -591,10 +644,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The IP address or domain name of the DBGateway.
-         * <p>
+         * <p>The IP address or domain name of the DBGateway.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if you set <strong>ClientType</strong> to <strong>ECS</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if you set **ClientType** to **ECS**.
+         * <strong>example:</strong>
+         * <p>172.30.XX.XX</p>
          */
         public Builder gatewayVpcIp(String gatewayVpcIp) {
             this.putQueryParameter("GatewayVpcIp", gatewayVpcIp);
@@ -603,7 +659,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The rate at which the traffic captured from the source instance is replayed on the destination instance. The value must be a positive integer. Valid values: **1** to **30**. Default value: **1**.
+         * <p>The rate at which the traffic captured from the source instance is replayed on the destination instance. The value must be a positive integer. Valid values: <strong>1</strong> to <strong>30</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rate(String rate) {
             this.putQueryParameter("Rate", rate);
@@ -612,7 +671,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The duration of the stress testing task for which the traffic is captured from the source instance. Unit: milliseconds.
+         * <p>The duration of the stress testing task for which the traffic is captured from the source instance. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400000</p>
          */
         public Builder requestDuration(String requestDuration) {
             this.putQueryParameter("RequestDuration", requestDuration);
@@ -621,7 +683,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The time when the stress testing task ends. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the stress testing task ends. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296001</p>
          */
         public Builder requestEndTime(String requestEndTime) {
             this.putQueryParameter("RequestEndTime", requestEndTime);
@@ -630,7 +695,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The time when the stress testing task starts. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the stress testing task starts. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         public Builder requestStartTime(String requestStartTime) {
             this.putQueryParameter("RequestStartTime", requestStartTime);
@@ -639,10 +707,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The duration within which the traffic generation stressing test takes effect. Unit: milliseconds.
-         * <p>
+         * <p>The duration within which the traffic generation stressing test takes effect. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if you set <strong>TaskType</strong> to <strong>smart pressure test</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if you set **TaskType** to **smart pressure test**.
+         * <strong>example:</strong>
+         * <p>86400000</p>
          */
         public Builder smartPressureTime(String smartPressureTime) {
             this.putQueryParameter("SmartPressureTime", smartPressureTime);
@@ -651,10 +722,14 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The ID of the source instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](~~202857~~) operation to query the ID.
-         * <p>
+         * <p>The ID of the source instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the <a href="https://help.aliyun.com/document_detail/202857.html">GetInstanceInspections</a> operation to query the ID.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if you set <strong>DstType</strong> to <strong>Instance</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This parameter must be specified if you set **DstType** to **Instance**.
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder srcInstanceId(String srcInstanceId) {
             this.putQueryParameter("SrcInstanceId", srcInstanceId);
@@ -663,7 +738,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The reserved parameter.
+         * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder srcPublicIp(String srcPublicIp) {
             this.putQueryParameter("SrcPublicIp", srcPublicIp);
@@ -672,10 +750,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The name of the privileged account for the source instance. Set the value to **admin**.
-         * <p>
+         * <p>The name of the privileged account for the source instance. Set the value to <strong>admin</strong>.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if you set <strong>DstType</strong> to <strong>Instance</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if you set **DstType** to **Instance**.
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder srcSuperAccount(String srcSuperAccount) {
             this.putQueryParameter("SrcSuperAccount", srcSuperAccount);
@@ -684,10 +765,13 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The password of the privileged account for the source instance.
-         * <p>
+         * <p>The password of the privileged account for the source instance.</p>
+         * <blockquote>
+         * <p> This parameter must be specified if you set <strong>DstType</strong> to <strong>Instance</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified if you set **DstType** to **Instance**.
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder srcSuperPassword(String srcSuperPassword) {
             this.putQueryParameter("SrcSuperPassword", srcSuperPassword);
@@ -696,11 +780,15 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The type of the stress testing task. Valid values:
-         * <p>
+         * <p>The type of the stress testing task. Valid values:</p>
+         * <ul>
+         * <li><strong>pressure test</strong> (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</li>
+         * <li><strong>smart pressure test</strong>: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.
-         * *   **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.
+         * <strong>example:</strong>
+         * <p>pressure test</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -709,7 +797,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * The temporary directory generated for stress testing.
+         * <p>The temporary directory generated for stress testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tmp/bench/</p>
          */
         public Builder workDir(String workDir) {
             this.putQueryParameter("WorkDir", workDir);

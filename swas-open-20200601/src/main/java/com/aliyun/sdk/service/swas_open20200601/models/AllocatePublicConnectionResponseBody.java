@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocatePublicConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>AllocatePublicConnectionResponseBody</p>
  */
 public class AllocatePublicConnectionResponseBody extends TeaModel {
-    @NameInMap("PublicConnection")
+    @com.aliyun.core.annotation.NameInMap("PublicConnection")
     private String publicConnection;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocatePublicConnectionResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class AllocatePublicConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The public endpoint that is assigned to the Simple Database Service instance.
+         * <p>The public endpoint that is assigned to the Simple Database Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db-38263fa955774501a2ae1bdaed6f****.mysql.rds.aliyuncs.com</p>
          */
         public Builder publicConnection(String publicConnection) {
             this.publicConnection = publicConnection;
@@ -58,7 +66,10 @@ public class AllocatePublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

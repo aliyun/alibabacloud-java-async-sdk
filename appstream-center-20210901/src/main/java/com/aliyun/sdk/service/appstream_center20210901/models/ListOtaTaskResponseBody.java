@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOtaTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListOtaTaskResponseBody</p>
  */
 public class ListOtaTaskResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskList")
-    private java.util.List < TaskList> taskList;
+    @com.aliyun.core.annotation.NameInMap("TaskList")
+    private java.util.List<TaskList> taskList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListOtaTaskResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
     /**
      * @return taskList
      */
-    public java.util.List < TaskList> getTaskList() {
+    public java.util.List<TaskList> getTaskList() {
         return this.taskList;
     }
 
@@ -82,11 +87,14 @@ public class ListOtaTaskResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < TaskList> taskList; 
+        private java.util.List<TaskList> taskList; 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +124,18 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskList.
+         * <p>The OTA update tasks.</p>
          */
-        public Builder taskList(java.util.List < TaskList> taskList) {
+        public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of OTA update tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class ListOtaTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOtaTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOtaTaskResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
-        @NameInMap("OtaVersion")
+        @com.aliyun.core.annotation.NameInMap("OtaVersion")
         private String otaVersion;
 
-        @NameInMap("TaskDisplayStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskDisplayStatus")
         private String taskDisplayStatus;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskStartTime")
+        @com.aliyun.core.annotation.NameInMap("TaskStartTime")
         private String taskStartTime;
 
         private TaskList(Builder builder) {
@@ -194,7 +217,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
             private String taskStartTime; 
 
             /**
-             * OtaVersion.
+             * <p>The OTA version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1-R-20220708.110604</p>
              */
             public Builder otaVersion(String otaVersion) {
                 this.otaVersion = otaVersion;
@@ -202,7 +228,19 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDisplayStatus.
+             * <p>The task status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>FAILED</li>
+             * <li>RUNNING</li>
+             * <li>TERMINATED</li>
+             * <li>PART_FINISHED</li>
+             * <li>STANDBY</li>
+             * <li>FINISHED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder taskDisplayStatus(String taskDisplayStatus) {
                 this.taskDisplayStatus = taskDisplayStatus;
@@ -210,7 +248,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ota-be7jzm29wrrz5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -218,7 +259,11 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStartTime.
+             * <p>The start time of the OTA update task. The time follows the ISO 8601 standard.</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-04T14:36:00+08:00</p>
              */
             public Builder taskStartTime(String taskStartTime) {
                 this.taskStartTime = taskStartTime;

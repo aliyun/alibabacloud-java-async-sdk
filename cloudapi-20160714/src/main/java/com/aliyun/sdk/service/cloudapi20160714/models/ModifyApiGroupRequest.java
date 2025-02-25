@@ -1,86 +1,106 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApiGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyApiGroupRequest</p>
  */
 public class ModifyApiGroupRequest extends Request {
-    @Query
-    @NameInMap("BasePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BasePath")
     private String basePath;
 
-    @Query
-    @NameInMap("CompatibleFlags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompatibleFlags")
     private String compatibleFlags;
 
-    @Query
-    @NameInMap("CustomTraceConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAppCodeConfig")
+    private String customAppCodeConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomTraceConfig")
     private String customTraceConfig;
 
-    @Query
-    @NameInMap("CustomerConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerConfigs")
     private String customerConfigs;
 
-    @Query
-    @NameInMap("DefaultDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultDomain")
     private String defaultDomain;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterAppCodeForBackend")
+    private String filterAppCodeForBackend;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("PassthroughHeaders")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PassthroughHeaders")
     private String passthroughHeaders;
 
-    @Query
-    @NameInMap("RpcPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RpcPattern")
     private String rpcPattern;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RpsLimitForServerless")
+    private String rpsLimitForServerless;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SupportSSE")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportSSE")
     private String supportSSE;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("UserLogConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserLogConfig")
     private String userLogConfig;
 
     private ModifyApiGroupRequest(Builder builder) {
         super(builder);
         this.basePath = builder.basePath;
         this.compatibleFlags = builder.compatibleFlags;
+        this.customAppCodeConfig = builder.customAppCodeConfig;
         this.customTraceConfig = builder.customTraceConfig;
         this.customerConfigs = builder.customerConfigs;
         this.defaultDomain = builder.defaultDomain;
         this.description = builder.description;
+        this.filterAppCodeForBackend = builder.filterAppCodeForBackend;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
         this.passthroughHeaders = builder.passthroughHeaders;
         this.rpcPattern = builder.rpcPattern;
+        this.rpsLimitForServerless = builder.rpsLimitForServerless;
         this.securityToken = builder.securityToken;
         this.supportSSE = builder.supportSSE;
         this.tag = builder.tag;
@@ -115,6 +135,13 @@ public class ModifyApiGroupRequest extends Request {
     }
 
     /**
+     * @return customAppCodeConfig
+     */
+    public String getCustomAppCodeConfig() {
+        return this.customAppCodeConfig;
+    }
+
+    /**
      * @return customTraceConfig
      */
     public String getCustomTraceConfig() {
@@ -140,6 +167,13 @@ public class ModifyApiGroupRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return filterAppCodeForBackend
+     */
+    public String getFilterAppCodeForBackend() {
+        return this.filterAppCodeForBackend;
     }
 
     /**
@@ -171,6 +205,13 @@ public class ModifyApiGroupRequest extends Request {
     }
 
     /**
+     * @return rpsLimitForServerless
+     */
+    public String getRpsLimitForServerless() {
+        return this.rpsLimitForServerless;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -187,7 +228,7 @@ public class ModifyApiGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -201,17 +242,20 @@ public class ModifyApiGroupRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyApiGroupRequest, Builder> {
         private String basePath; 
         private String compatibleFlags; 
+        private String customAppCodeConfig; 
         private String customTraceConfig; 
         private String customerConfigs; 
         private String defaultDomain; 
         private String description; 
+        private String filterAppCodeForBackend; 
         private String groupId; 
         private String groupName; 
         private String passthroughHeaders; 
         private String rpcPattern; 
+        private String rpsLimitForServerless; 
         private String securityToken; 
         private String supportSSE; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String userLogConfig; 
 
         private Builder() {
@@ -222,14 +266,17 @@ public class ModifyApiGroupRequest extends Request {
             super(request);
             this.basePath = request.basePath;
             this.compatibleFlags = request.compatibleFlags;
+            this.customAppCodeConfig = request.customAppCodeConfig;
             this.customTraceConfig = request.customTraceConfig;
             this.customerConfigs = request.customerConfigs;
             this.defaultDomain = request.defaultDomain;
             this.description = request.description;
+            this.filterAppCodeForBackend = request.filterAppCodeForBackend;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
             this.passthroughHeaders = request.passthroughHeaders;
             this.rpcPattern = request.rpcPattern;
+            this.rpsLimitForServerless = request.rpsLimitForServerless;
             this.securityToken = request.securityToken;
             this.supportSSE = request.supportSSE;
             this.tag = request.tag;
@@ -237,7 +284,10 @@ public class ModifyApiGroupRequest extends Request {
         } 
 
         /**
-         * The root path of the API.
+         * <p>The root path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/eeee</p>
          */
         public Builder basePath(String basePath) {
             this.putQueryParameter("BasePath", basePath);
@@ -246,7 +296,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The list of associated tags. Separate multiple tags with commas (,).
+         * <p>The list of associated tags. Separate multiple tags with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>depart:dep1</p>
          */
         public Builder compatibleFlags(String compatibleFlags) {
             this.putQueryParameter("CompatibleFlags", compatibleFlags);
@@ -255,7 +308,22 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The custom trace configuration.
+         * <p>The custom appcode configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</p>
+         */
+        public Builder customAppCodeConfig(String customAppCodeConfig) {
+            this.putQueryParameter("CustomAppCodeConfig", customAppCodeConfig);
+            this.customAppCodeConfig = customAppCodeConfig;
+            return this;
+        }
+
+        /**
+         * <p>The custom trace configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;parameterLocation&quot;:&quot;HEADER&quot;,&quot;parameterName&quot;:&quot;traceId&quot;}</p>
          */
         public Builder customTraceConfig(String customTraceConfig) {
             this.putQueryParameter("CustomTraceConfig", customTraceConfig);
@@ -264,7 +332,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The data of custom configuration items.
+         * <p>The data of custom configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>removeResponseServerHeader</p>
          */
         public Builder customerConfigs(String customerConfigs) {
             this.putQueryParameter("CustomerConfigs", customerConfigs);
@@ -273,7 +344,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The default domain name.
+         * <p>The default domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mkt.api.gaore.com</p>
          */
         public Builder defaultDomain(String defaultDomain) {
             this.putQueryParameter("DefaultDomain", defaultDomain);
@@ -282,7 +356,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The API group description that you want to specify, which cannot exceed 180 characters. If this parameter is not specified, the group description is not modified.
+         * <p>The API group description that you want to specify, which cannot exceed 180 characters. If this parameter is not specified, the group description is not modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New weather informations.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -291,7 +368,23 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The ID of the API group. This ID is generated by the system and globally unique.
+         * <p>If filter AppCode for backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder filterAppCodeForBackend(String filterAppCodeForBackend) {
+            this.putQueryParameter("FilterAppCodeForBackend", filterAppCodeForBackend);
+            this.filterAppCodeForBackend = filterAppCodeForBackend;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the API group. This ID is generated by the system and globally unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>523e8dc7bbe04613b5b1d726c2a7889d</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -300,7 +393,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The API group name must be globally unique. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_). If this parameter is not specified, the group name is not modified.
+         * <p>The API group name must be globally unique. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_). If this parameter is not specified, the group name is not modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewWeather</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -309,7 +405,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to pass headers.
+         * <p>Specifies whether to pass headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eagleeye-rpcid,x-b3-traceid,host</p>
          */
         public Builder passthroughHeaders(String passthroughHeaders) {
             this.putQueryParameter("PassthroughHeaders", passthroughHeaders);
@@ -318,11 +417,23 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The RPC mode.
+         * <p>The RPC mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder rpcPattern(String rpcPattern) {
             this.putQueryParameter("RpcPattern", rpcPattern);
             this.rpcPattern = rpcPattern;
+            return this;
+        }
+
+        /**
+         * RpsLimitForServerless.
+         */
+        public Builder rpsLimitForServerless(String rpsLimitForServerless) {
+            this.putQueryParameter("RpsLimitForServerless", rpsLimitForServerless);
+            this.rpsLimitForServerless = rpsLimitForServerless;
             return this;
         }
 
@@ -336,7 +447,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * SupportSSE.
+         * <p>If support SSE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportSSE(String supportSSE) {
             this.putQueryParameter("SupportSSE", supportSSE);
@@ -345,16 +459,22 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * The object tags that match the lifecycle rule. You can specify multiple tags.
+         * <p>The object tags that match the lifecycle rule. You can specify multiple tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The user log configuration.
+         * <p>The user log configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;requestBody&quot;:false,&quot;responseBody&quot;:false,&quot;queryString&quot;:&quot;&quot;,&quot;requestHeaders&quot;:&quot;&quot;,&quot;responseHeaders&quot;:&quot;&quot;,&quot;jwtClaims&quot;:&quot;&quot;}</p>
          */
         public Builder userLogConfig(String userLogConfig) {
             this.putQueryParameter("UserLogConfig", userLogConfig);
@@ -369,13 +489,19 @@ public class ModifyApiGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyApiGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyApiGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {
@@ -410,7 +536,11 @@ public class ModifyApiGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -418,7 +548,11 @@ public class ModifyApiGroupRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uat</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAllInstanceIdListResponseBody} extends {@link TeaModel}
  *
  * <p>GetAllInstanceIdListResponseBody</p>
  */
 public class GetAllInstanceIdListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceIds")
-    private java.util.Map < String, ? > instanceIds;
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.Map<String, ?> instanceIds;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAllInstanceIdListResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
     /**
      * @return instanceIds
      */
-    public java.util.Map < String, ? > getInstanceIds() {
+    public java.util.Map<String, ?> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -80,13 +85,16 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.Map < String, ? > instanceIds; 
+        private java.util.Map<String, ?> instanceIds; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,15 +102,21 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of instances that are managed by the Alibaba Cloud account in all the regions.
+         * <p>The IDs of instances that are managed by the Alibaba Cloud account in all the regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;cn-shenzhen&quot;: [&quot;alikafka_post-cn-7pp2btvo****&quot;],&quot;us-west-1&quot;: [&quot;alikafka_pre-cn-i7m2lxid****&quot;],&quot;cn-hangzhou&quot;: [&quot;alikafka_pre-cn-i7m2hflj****&quot;,&quot;alikafka_pre-cn-zvp2hsje****&quot;,&quot;alikafka_pre-cn-zvp2kvc9****&quot;]}]</p>
          */
-        public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
+        public Builder instanceIds(java.util.Map<String, ?> instanceIds) {
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABA4A7FD-E10F-45C7-9774-A5236015****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

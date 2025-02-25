@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAclResponseBody</p>
  */
 public class GetAclResponseBody extends TeaModel {
-    @NameInMap("AclEntries")
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
     private java.util.List < AclEntries> aclEntries;
 
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("AclName")
+    @com.aliyun.core.annotation.NameInMap("AclName")
     private String aclName;
 
-    @NameInMap("AclStatus")
+    @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
-    @NameInMap("AddressIPVersion")
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
     private String addressIPVersion;
 
-    @NameInMap("RelatedListeners")
+    @com.aliyun.core.annotation.NameInMap("RelatedListeners")
     private java.util.List < RelatedListeners> relatedListeners;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private GetAclResponseBody(Builder builder) {
@@ -134,14 +133,7 @@ public class GetAclResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * The state of the network ACL. Valid values:
-         * <p>
-         * 
-         * *   **init**: The network ACL is being initialized.
-         * *   **active**: The network ACL is available.
-         * *   **configuring**: The network ACL is being configured.
-         * *   **updating**: The network ACL is being updated.
-         * *   **deleting**: The network ACL is being deleted.
+         * The entries of the ACL.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -185,7 +177,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the network ACL entry.
+         * The listeners that are associated with the ACL.
          */
         public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
             this.relatedListeners = relatedListeners;
@@ -209,7 +201,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * The tag of the ACL.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -223,10 +215,10 @@ public class GetAclResponseBody extends TeaModel {
     } 
 
     public static class AclEntries extends TeaModel {
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
-        @NameInMap("EntryDescription")
+        @com.aliyun.core.annotation.NameInMap("EntryDescription")
         private String entryDescription;
 
         private AclEntries(Builder builder) {
@@ -261,7 +253,7 @@ public class GetAclResponseBody extends TeaModel {
             private String entryDescription; 
 
             /**
-             * The list of network ACL entries that are returned. A maximum of 20 network ACL entries can be returned.
+             * An IP address entry (192.168.XX.XX) or a CIDR block entry (10.0.XX.XX/24).
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -269,7 +261,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The network ACL entry.
+             * The description of the ACL entry.
              */
             public Builder entryDescription(String entryDescription) {
                 this.entryDescription = entryDescription;
@@ -284,13 +276,13 @@ public class GetAclResponseBody extends TeaModel {
 
     }
     public static class RelatedListeners extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
         private RelatedListeners(Builder builder) {
@@ -334,11 +326,7 @@ public class GetAclResponseBody extends TeaModel {
             private String listenerId; 
 
             /**
-             * The type of the network ACL.
-             * <p>
-             * 
-             * *   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specified IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are forwarded by the listener. If the whitelist is enabled but no IP addresses are added to the network ACL, the listener does not forward requests.
-             * *   **Black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists apply to scenarios in which you want to deny access from specific IP addresses to an application. If the blacklist is enabled but no IP addresses are added to the network ACL, the listener forwards all requests.
+             * The ID of the GA instance.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -346,7 +334,11 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the listener.
+             * The type of the ACL. Valid values:
+             * <p>
+             * 
+             * *   **white**: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
+             * *   **black**: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -354,7 +346,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The listeners that are associated with the network ACL.
+             * The ID of the listener.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -369,10 +361,10 @@ public class GetAclResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -407,7 +399,7 @@ public class GetAclResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tags of the ACL.
+             * The key of tag N that is add to the ACL.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +407,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key
+             * The value of tag N that is add to the ACL.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBinarySecurityPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteBinarySecurityPolicyRequest</p>
  */
 public class DeleteBinarySecurityPolicyRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private DeleteBinarySecurityPolicyRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class DeleteBinarySecurityPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the binary security policy.
+         * <p>The name of the binary security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-auto-bfu7pm</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -100,7 +108,10 @@ public class DeleteBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

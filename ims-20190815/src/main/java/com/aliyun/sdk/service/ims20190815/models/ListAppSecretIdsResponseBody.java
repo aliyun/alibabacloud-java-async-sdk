@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppSecretIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppSecretIdsResponseBody</p>
  */
 public class ListAppSecretIdsResponseBody extends TeaModel {
-    @NameInMap("AppSecrets")
+    @com.aliyun.core.annotation.NameInMap("AppSecrets")
     private AppSecrets appSecrets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAppSecretIdsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the application secret.
+         * <p>The details of the application secret.</p>
          */
         public Builder appSecrets(AppSecrets appSecrets) {
             this.appSecrets = appSecrets;
@@ -58,7 +63,10 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F2FD500-7173-47D6-BD2F-EB60879B4F16</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppSecretIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppSecretIdsResponseBody</p>
+     */
     public static class AppSecret extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppSecretId")
+        @com.aliyun.core.annotation.NameInMap("AppSecretId")
         private String appSecretId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
         private AppSecret(Builder builder) {
@@ -122,7 +136,10 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
             private String createDate; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>472457090344041****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -130,7 +147,10 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application secret.
+             * <p>The ID of the application secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2efd5004-005c-4f05-83c6-5b1dd176****</p>
              */
             public Builder appSecretId(String appSecretId) {
                 this.appSecretId = appSecretId;
@@ -138,7 +158,10 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-26T03:18:39Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -152,9 +175,15 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAppSecretIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppSecretIdsResponseBody</p>
+     */
     public static class AppSecrets extends TeaModel {
-        @NameInMap("AppSecret")
-        private java.util.List < AppSecret> appSecret;
+        @com.aliyun.core.annotation.NameInMap("AppSecret")
+        private java.util.List<AppSecret> appSecret;
 
         private AppSecrets(Builder builder) {
             this.appSecret = builder.appSecret;
@@ -171,17 +200,17 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         /**
          * @return appSecret
          */
-        public java.util.List < AppSecret> getAppSecret() {
+        public java.util.List<AppSecret> getAppSecret() {
             return this.appSecret;
         }
 
         public static final class Builder {
-            private java.util.List < AppSecret> appSecret; 
+            private java.util.List<AppSecret> appSecret; 
 
             /**
              * AppSecret.
              */
-            public Builder appSecret(java.util.List < AppSecret> appSecret) {
+            public Builder appSecret(java.util.List<AppSecret> appSecret) {
                 this.appSecret = appSecret;
                 return this;
             }

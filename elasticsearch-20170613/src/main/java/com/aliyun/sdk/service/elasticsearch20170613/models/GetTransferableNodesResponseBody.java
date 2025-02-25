@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTransferableNodesResponseBody} extends {@link TeaModel}
  *
  * <p>GetTransferableNodesResponseBody</p>
  */
 public class GetTransferableNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private GetTransferableNodesResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetTransferableNodesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetTransferableNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -71,11 +74,17 @@ public class GetTransferableNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTransferableNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTransferableNodesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
         private Result(Builder builder) {
@@ -110,7 +119,10 @@ public class GetTransferableNodesResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * The IP address of the node.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>192.168.**.**</code></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -118,7 +130,10 @@ public class GetTransferableNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The access port of the node.
+             * <p>The access port of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

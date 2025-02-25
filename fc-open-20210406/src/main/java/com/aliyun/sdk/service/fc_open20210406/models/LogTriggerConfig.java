@@ -86,7 +86,7 @@ public class LogTriggerConfig extends TeaModel {
         private SourceConfig sourceConfig; 
 
         /**
-         * enable
+         * enable.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -94,7 +94,7 @@ public class LogTriggerConfig extends TeaModel {
         }
 
         /**
-         * functionParameter
+         * functionParameter.
          */
         public Builder functionParameter(java.util.Map < String, String > functionParameter) {
             this.functionParameter = functionParameter;

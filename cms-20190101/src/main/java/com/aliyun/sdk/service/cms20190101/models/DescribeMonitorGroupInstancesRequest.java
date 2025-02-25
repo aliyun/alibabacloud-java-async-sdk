@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorGroupInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitorGroupInstancesRequest</p>
  */
 public class DescribeMonitorGroupInstancesRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeMonitorGroupInstancesRequest(Builder builder) {
@@ -125,46 +125,13 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         } 
 
         /**
-         * The abbreviation of the name of the service to which the instances in the application group belong. Valid values:
-         * <p>
+         * <p>The abbreviation of the cloud service name. Valid values of N: 1 to 200.</p>
+         * <blockquote>
+         * <p> For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
+         * </blockquote>
          * 
-         * *   ECS: Elastic Compute Service (ECS) instances provided by Alibaba Cloud and hosts not provided by Alibaba Cloud
-         * *   RDS: ApsaraDB for RDS
-         * *   ADS: AnalyticDB
-         * *   SLB: Server Load Balancer (SLB)
-         * *   VPC: Virtual Private Cloud (VPC)
-         * *   APIGATEWAY: API Gateway
-         * *   CDN: Alibaba Cloud Content Delivery Network (CDN)
-         * *   CS: Container Service for Swarm
-         * *   DCDN: Dynamic Route for CDN
-         * *   DDoS: Anti-DDoS Pro
-         * *   EIP: Elastic IP Address (EIP)
-         * *   ELASTICSEARCH: Elasticsearch
-         * *   EMR: E-MapReduce
-         * *   ESS: Auto Scaling
-         * *   HBASE: ApsaraDB for Hbase
-         * *   IOT_EDGE: IoT Edge
-         * *   K8S_POD: pods in Container Service for Kubernetes
-         * *   KVSTORE_SHARDING: ApsaraDB for Redis of the cluster architecture
-         * *   KVSTORE_SPLITRW: ApsaraDB for Redis of the read/write splitting architecture
-         * *   KVSTORE_STANDARD: ApsaraDB for Redis of the standard architecture
-         * *   MEMCACHE: ApsaraDB for Memcache
-         * *   MNS: Message Service (MNS)
-         * *   MONGODB: ApsaraDB for MongoDB of the replica set architecture
-         * *   MONGODB_CLUSTER: ApsaraDB for MongoDB of the cluster architecture
-         * *   MONGODB_SHARDING: ApsaraDB for MongoDB of the sharded cluster architecture
-         * *   MQ_TOPIC: MNS topics
-         * *   OCS: ApsaraDB for Memcache of earlier versions
-         * *   OPENSEARCH: Open Search
-         * *   OSS: Object Storage Service (OSS)
-         * *   POLARDB: PolarDB
-         * *   PETADATA: HybridDB for MySQL
-         * *   SCDN: Secure Content Delivery Network (SCDN)
-         * *   SHAREBANDWIDTHPACKAGES: EIP Bandwidth Plan
-         * *   SLS: Log Service
-         * *   VPN: VPN Gateway
-         * 
-         * Valid values of N: 1 to 200.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -173,7 +140,11 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the application group.
+         * <p>The ID of the application group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -182,7 +153,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can query multiple instances by specifying multiple IDs.
+         * <p>The instance ID. You can query multiple instances by specifying multiple IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-x1234568</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -191,7 +165,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The keyword used to search for instances. Fuzzy search based on instance name is supported.
+         * <p>The keyword used to search for instances. Fuzzy search based on instance names is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s1</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -200,7 +177,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,7 +189,10 @@ public class DescribeMonitorGroupInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

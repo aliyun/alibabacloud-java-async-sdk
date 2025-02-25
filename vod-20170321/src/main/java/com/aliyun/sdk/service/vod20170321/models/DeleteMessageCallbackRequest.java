@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMessageCallbackRequest} extends {@link RequestModel}
  *
  * <p>DeleteMessageCallbackRequest</p>
  */
 public class DeleteMessageCallbackRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
     private DeleteMessageCallbackRequest(Builder builder) {
@@ -68,7 +73,10 @@ public class DeleteMessageCallbackRequest extends Request {
         } 
 
         /**
-         * The ID of the application. If you do not set this parameter, the default value **app-1000000** is used.
+         * <p>The ID of the application. If you do not set this parameter, the default value <strong>app-1000000</strong> is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

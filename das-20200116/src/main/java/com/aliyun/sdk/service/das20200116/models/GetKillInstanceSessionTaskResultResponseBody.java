@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetKillInstanceSessionTaskResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetKillInstanceSessionTaskResultResponseBody</p>
  */
 public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetKillInstanceSessionTaskResultResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,38 +155,44 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetKillInstanceSessionTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetKillInstanceSessionTaskResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private String db;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Result(Builder builder) {
@@ -285,10 +308,13 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Indicates whether the session is active.
-             * <p>
+             * <p>Indicates whether the session is active.</p>
+             * <blockquote>
+             * <p>If the type of the command is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+             * </blockquote>
              * 
-             * > If the type of the command is Query or Execute and the session in the transaction is not terminated, the session is active.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -296,7 +322,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the command executed in the session.
+             * <p>The type of the command executed in the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sleep</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -304,7 +333,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbTest</p>
              */
             public Builder db(String db) {
                 this.db = db;
@@ -312,7 +344,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address and port number of the host that initiated the session.
+             * <p>The IP address and port number of the host that initiated the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX:23428</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -320,7 +355,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The session ID.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8357518</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -328,7 +366,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement executed in the session.
+             * <p>The SQL statement executed in the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT sleep(60)</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -336,17 +377,20 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the session when the session was terminated.
-             * <p>
+             * <p>The description of the session when the session was terminated.</p>
+             * <ul>
+             * <li><strong>SESSION_KILLED</strong>: The session is terminated.</li>
+             * <li><strong>SESSION_EXPIRED</strong>: The session has expired.</li>
+             * <li><strong>SESSION_NO_PERMISSION</strong>: The account used to terminate the session has insufficient permissions.</li>
+             * <li><strong>SESSION_ACCOUNT_ERROR</strong>: The account or password used to terminate the session is invalid.</li>
+             * <li><strong>SESSION_IGNORED_USER</strong>: The session of the account does not need to be terminated.</li>
+             * <li><strong>SESSION_INTERNAL_USER_OR_COMMAND</strong>: The session is a session initiated by or a command run by an Alibaba Cloud O&amp;M account.</li>
+             * <li><strong>SESSION_KILL_TASK_TIMEOUT</strong>: Timeout occurs when the session is terminated.</li>
+             * <li><strong>SESSION_OTHER_ERROR</strong>: Other errors occurred.</li>
+             * </ul>
              * 
-             * *   **SESSION_KILLED**: The session is terminated.
-             * *   **SESSION_EXPIRED**: The session has expired.
-             * *   **SESSION_NO_PERMISSION**: The account used to terminate the session has insufficient permissions.
-             * *   **SESSION_ACCOUNT_ERROR**: The account or password used to terminate the session is invalid.
-             * *   **SESSION_IGNORED_USER**: The session of the account does not need to be terminated.
-             * *   **SESSION_INTERNAL_USER_OR_COMMAND**: The session is a session initiated by or a command run by an Alibaba Cloud O\&M account.
-             * *   **SESSION_KILL_TASK_TIMEOUT**: Timeout occurs when the session is terminated.
-             * *   **SESSION_OTHER_ERROR**: Other errors occurred.
+             * <strong>example:</strong>
+             * <p>SESSION_KILLED</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -354,7 +398,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the session.
+             * <p>The status of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sending data</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -362,7 +409,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the subtask that terminates the session.
+             * <p>The ID of the subtask that terminates the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_d9e94107-6116-4ac3-b874-81466aff****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -370,7 +420,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration. Unit: seconds.
+             * <p>The execution duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -378,7 +431,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The account of the database.
+             * <p>The account of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testUser</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -392,35 +448,41 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetKillInstanceSessionTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetKillInstanceSessionTaskResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("IgnoredUserSessionCount")
+        @com.aliyun.core.annotation.NameInMap("IgnoredUserSessionCount")
         private Long ignoredUserSessionCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("KillFailCount")
+        @com.aliyun.core.annotation.NameInMap("KillFailCount")
         private Long killFailCount;
 
-        @NameInMap("KillSuccessCount")
+        @com.aliyun.core.annotation.NameInMap("KillSuccessCount")
         private Long killSuccessCount;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Result")
-        private java.util.List < Result> result;
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
-        @NameInMap("Sessions")
-        private java.util.List < Long > sessions;
+        @com.aliyun.core.annotation.NameInMap("Sessions")
+        private java.util.List<Long> sessions;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
@@ -482,14 +544,14 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         /**
          * @return sessions
          */
-        public java.util.List < Long > getSessions() {
+        public java.util.List<Long> getSessions() {
             return this.sessions;
         }
 
@@ -520,14 +582,17 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             private Long killFailCount; 
             private Long killSuccessCount; 
             private String nodeId; 
-            private java.util.List < Result> result; 
-            private java.util.List < Long > sessions; 
+            private java.util.List<Result> result; 
+            private java.util.List<Long> sessions; 
             private String taskId; 
             private String taskState; 
             private String userId; 
 
             /**
-             * The number of ignored sessions, including sessions of the accounts that are specified by IgnoredUsers, sessions of internal O\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions.
+             * <p>The number of ignored sessions, including sessions of the accounts that are specified by IgnoredUsers, sessions of internal O&amp;M accounts of Alibaba Cloud, and <strong>Binlog Dump</strong> sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder ignoredUserSessionCount(Long ignoredUserSessionCount) {
                 this.ignoredUserSessionCount = ignoredUserSessionCount;
@@ -535,7 +600,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1jdv45i7l6****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -543,7 +611,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sessions that failed to be terminated.
+             * <p>The number of sessions that failed to be terminated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder killFailCount(Long killFailCount) {
                 this.killFailCount = killFailCount;
@@ -551,7 +622,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sessions that were terminated.
+             * <p>The number of sessions that were terminated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder killSuccessCount(Long killSuccessCount) {
                 this.killSuccessCount = killSuccessCount;
@@ -559,10 +633,13 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
-             * <p>
+             * <p>The node ID.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the instance is a PolarDB for MySQL cluster.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the instance is a PolarDB for MySQL cluster.
+             * <strong>example:</strong>
+             * <p>pi-bp1h12rv501cv****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -570,26 +647,29 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the task that terminated sessions.
+             * <p>The details of the task that terminated sessions.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
 
             /**
-             * The session IDs.
-             * <p>
-             * 
-             * >  If all sessions are terminated, the IDs of all sessions on the instance or node are returned.
+             * <p>The session IDs.</p>
+             * <blockquote>
+             * <p> If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</p>
+             * </blockquote>
              */
-            public Builder sessions(java.util.List < Long > sessions) {
+            public Builder sessions(java.util.List<Long> sessions) {
                 this.sessions = sessions;
                 return this;
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f77d535b45405bd462b21caa3ee8****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -597,13 +677,16 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task that terminates sessions.
-             * <p>
+             * <p>The state of the task that terminates sessions.</p>
+             * <ul>
+             * <li><strong>RUNNING</strong>: The task is in progress.</li>
+             * <li><strong>SUCCESS</strong>: The task is successful.</li>
+             * <li><strong>FAILURE</strong>: The task failed.</li>
+             * <li><strong>ERROR</strong>: Other errors occur.</li>
+             * </ul>
              * 
-             * *   **RUNNING**: The task is in progress.
-             * *   **SUCCESS**: The task is successful.
-             * *   **FAILURE**: The task failed.
-             * *   **ERROR**: Other errors occur.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -611,7 +694,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>164882191396****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

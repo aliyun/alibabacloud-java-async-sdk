@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ForceSwitchRequest} extends {@link RequestModel}
  *
  * <p>ForceSwitchRequest</p>
  */
 public class ForceSwitchRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("fsmId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("fsmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsmId;
 
     private ForceSwitchRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class ForceSwitchRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32m2c4u01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +88,11 @@ public class ForceSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tisplus_opensearch@roll_index_fsm@ha-cn-0ju2je4zj01@bj_vpc_domain_2@null@bj_vpc_domain_2_general_odps_false@1644312508597@934743</p>
          */
         public Builder fsmId(String fsmId) {
             this.putPathParameter("fsmId", fsmId);

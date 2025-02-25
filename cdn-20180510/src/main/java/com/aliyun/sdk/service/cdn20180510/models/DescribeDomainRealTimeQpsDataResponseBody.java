@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRealTimeQpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRealTimeQpsDataResponseBody</p>
  */
 public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainRealTimeQpsDataResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainRealTimeQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRealTimeQpsDataResponseBody</p>
+     */
     public static class QpsModel extends TeaModel {
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Float qps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private QpsModel(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The number of queries per second.
+             * <p>The number of queries per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1851.25</p>
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -118,7 +130,10 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the data returned. The time follows the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard and is in UTC.
+             * <p>The timestamp of the data returned. The time follows the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard and is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-12-02T11:25:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -132,8 +147,14 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainRealTimeQpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainRealTimeQpsDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("QpsModel")
+        @com.aliyun.core.annotation.NameInMap("QpsModel")
         private java.util.List < QpsModel> qpsModel;
 
         private Data(Builder builder) {

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskFlowConstantsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskFlowConstantsResponseBody</p>
  */
 public class ListTaskFlowConstantsResponseBody extends TeaModel {
-    @NameInMap("DagConstants")
+    @com.aliyun.core.annotation.NameInMap("DagConstants")
     private DagConstants dagConstants;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTaskFlowConstantsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * A list of constant key-value pairs for the task flow.
+         * <p>A list of constant key-value pairs for the task flow.</p>
          */
         public Builder dagConstants(DagConstants dagConstants) {
             this.dagConstants = dagConstants;
@@ -94,7 +99,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028BF827-3801-5869-8548-F4A039256304</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,11 +152,17 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskFlowConstantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowConstantsResponseBody</p>
+     */
     public static class DagConstant extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DagConstant(Builder builder) {
@@ -174,7 +197,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The constant key.
+             * <p>The constant key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +208,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
             }
 
             /**
-             * The constant value.
+             * <p>The constant value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -196,9 +225,15 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTaskFlowConstantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskFlowConstantsResponseBody</p>
+     */
     public static class DagConstants extends TeaModel {
-        @NameInMap("DagConstant")
-        private java.util.List < DagConstant> dagConstant;
+        @com.aliyun.core.annotation.NameInMap("DagConstant")
+        private java.util.List<DagConstant> dagConstant;
 
         private DagConstants(Builder builder) {
             this.dagConstant = builder.dagConstant;
@@ -215,17 +250,17 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         /**
          * @return dagConstant
          */
-        public java.util.List < DagConstant> getDagConstant() {
+        public java.util.List<DagConstant> getDagConstant() {
             return this.dagConstant;
         }
 
         public static final class Builder {
-            private java.util.List < DagConstant> dagConstant; 
+            private java.util.List<DagConstant> dagConstant; 
 
             /**
              * DagConstant.
              */
-            public Builder dagConstant(java.util.List < DagConstant> dagConstant) {
+            public Builder dagConstant(java.util.List<DagConstant> dagConstant) {
                 this.dagConstant = dagConstant;
                 return this;
             }

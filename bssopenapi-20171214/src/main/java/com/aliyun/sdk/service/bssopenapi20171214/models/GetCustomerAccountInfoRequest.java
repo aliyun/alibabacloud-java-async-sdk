@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomerAccountInfoRequest} extends {@link RequestModel}
  *
  * <p>GetCustomerAccountInfoRequest</p>
  */
 public class GetCustomerAccountInfoRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ownerId;
 
     private GetCustomerAccountInfoRequest(Builder builder) {
@@ -55,7 +60,7 @@ public class GetCustomerAccountInfoRequest extends Request {
         } 
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

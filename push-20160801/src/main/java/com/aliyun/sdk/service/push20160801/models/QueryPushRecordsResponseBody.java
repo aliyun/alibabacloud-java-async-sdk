@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPushRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPushRecordsResponseBody</p>
  */
 public class QueryPushRecordsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PushInfos")
+    @com.aliyun.core.annotation.NameInMap("PushInfos")
     private PushInfos pushInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private QueryPushRecordsResponseBody(Builder builder) {
@@ -151,35 +151,41 @@ public class QueryPushRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPushRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushRecordsResponseBody</p>
+     */
     public static class PushInfo extends TeaModel {
-        @NameInMap("AppKey")
+        @com.aliyun.core.annotation.NameInMap("AppKey")
         private Long appKey;
 
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
-        @NameInMap("PushTime")
+        @com.aliyun.core.annotation.NameInMap("PushTime")
         private String pushTime;
 
-        @NameInMap("PushType")
+        @com.aliyun.core.annotation.NameInMap("PushType")
         private String pushType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private PushInfo(Builder builder) {
@@ -372,8 +378,14 @@ public class QueryPushRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryPushRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPushRecordsResponseBody</p>
+     */
     public static class PushInfos extends TeaModel {
-        @NameInMap("PushInfo")
+        @com.aliyun.core.annotation.NameInMap("PushInfo")
         private java.util.List < PushInfo> pushInfo;
 
         private PushInfos(Builder builder) {

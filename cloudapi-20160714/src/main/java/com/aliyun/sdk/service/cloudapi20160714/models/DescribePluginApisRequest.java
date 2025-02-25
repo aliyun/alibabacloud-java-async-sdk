@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginApisRequest} extends {@link RequestModel}
  *
  * <p>DescribePluginApisRequest</p>
  */
 public class DescribePluginApisRequest extends Request {
-    @Query
-    @NameInMap("ApiId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
     private String apiId;
 
-    @Query
-    @NameInMap("ApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
     private String apiName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Method")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Method")
     private String method;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @Query
-    @NameInMap("PluginId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pluginId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribePluginApisRequest(Builder builder) {
@@ -182,7 +187,10 @@ public class DescribePluginApisRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * <p>The ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6b0dd188b0e4e408e12f926********</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -191,7 +199,10 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -200,7 +211,10 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -209,7 +223,10 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231a4bb81ee94da785733c29********</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -218,7 +235,10 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * Method.
+         * <p>The request HTTP method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -227,7 +247,10 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -236,7 +259,11 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.
+         * Default value:10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -245,7 +272,10 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sendVerifyCode</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -254,7 +284,11 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The ID of the gateway plug-in.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf6583efcef44c51adb00c4e********</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);

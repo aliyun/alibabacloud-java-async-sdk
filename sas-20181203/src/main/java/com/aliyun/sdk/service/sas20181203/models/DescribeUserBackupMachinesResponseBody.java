@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserBackupMachinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserBackupMachinesResponseBody</p>
  */
 public class DescribeUserBackupMachinesResponseBody extends TeaModel {
-    @NameInMap("Machines")
-    private java.util.List < Machines> machines;
+    @com.aliyun.core.annotation.NameInMap("Machines")
+    private java.util.List<Machines> machines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserBackupMachinesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     /**
      * @return machines
      */
-    public java.util.List < Machines> getMachines() {
+    public java.util.List<Machines> getMachines() {
         return this.machines;
     }
 
@@ -46,19 +51,22 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Machines> machines; 
+        private java.util.List<Machines> machines; 
         private String requestId; 
 
         /**
-         * An array consisting of the servers to which the anti-ransomware policy is applied.
+         * <p>An array consisting of the servers to which the anti-ransomware policy is applied.</p>
          */
-        public Builder machines(java.util.List < Machines> machines) {
+        public Builder machines(java.util.List<Machines> machines) {
             this.machines = machines;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA04B21</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserBackupMachinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserBackupMachinesResponseBody</p>
+     */
     public static class Machines extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Machines(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the anti-ransomware policy that is applied to the server.
+             * <p>The ID of the anti-ransomware policy that is applied to the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -130,7 +147,10 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the anti-ransomware policy that is applied to the server.
+             * <p>The name of the anti-ransomware policy that is applied to the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy_name_A</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -138,7 +158,10 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server to which the anti-ransomware policy is applied.
+             * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

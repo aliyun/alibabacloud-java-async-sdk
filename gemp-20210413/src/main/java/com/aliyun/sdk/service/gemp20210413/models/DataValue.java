@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataValue</p>
  */
 public class DataValue extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("configDescription")
+    @com.aliyun.core.annotation.NameInMap("configDescription")
     private String configDescription;
 
-    @NameInMap("configCode")
+    @com.aliyun.core.annotation.NameInMap("configCode")
     private String configCode;
 
-    @NameInMap("parentCode")
+    @com.aliyun.core.annotation.NameInMap("parentCode")
     private String parentCode;
 
-    @NameInMap("configKey")
+    @com.aliyun.core.annotation.NameInMap("configKey")
     private String configKey;
 
-    @NameInMap("configValue")
+    @com.aliyun.core.annotation.NameInMap("configValue")
     private String configValue;
 
-    @NameInMap("requirement")
+    @com.aliyun.core.annotation.NameInMap("requirement")
     private Boolean requirement;
 
     private DataValue(Builder builder) {

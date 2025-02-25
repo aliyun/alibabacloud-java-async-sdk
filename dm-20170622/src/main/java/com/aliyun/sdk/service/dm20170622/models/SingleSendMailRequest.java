@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,78 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SingleSendMailRequest</p>
  */
 public class SingleSendMailRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AddressType")
-    @Validation(required = true, maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
     private Integer addressType;
 
-    @Query
-    @NameInMap("ClickTrace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClickTrace")
     private String clickTrace;
 
-    @Query
-    @NameInMap("FromAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromAlias")
     private String fromAlias;
 
-    @Query
-    @NameInMap("HtmlBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HtmlBody")
     private String htmlBody;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReplyAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplyAddress")
     private String replyAddress;
 
-    @Query
-    @NameInMap("ReplyAddressAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplyAddressAlias")
     private String replyAddressAlias;
 
-    @Query
-    @NameInMap("ReplyToAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplyToAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean replyToAddress;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Subject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
-    @Query
-    @NameInMap("TagName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
     private String tagName;
 
-    @Query
-    @NameInMap("TextBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TextBody")
     private String textBody;
 
-    @Query
-    @NameInMap("ToAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String toAddress;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnSubscribeFilterLevel")
+    private String unSubscribeFilterLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnSubscribeLinkType")
+    private String unSubscribeLinkType;
 
     private SingleSendMailRequest(Builder builder) {
         super(builder);
@@ -94,6 +101,8 @@ public class SingleSendMailRequest extends Request {
         this.tagName = builder.tagName;
         this.textBody = builder.textBody;
         this.toAddress = builder.toAddress;
+        this.unSubscribeFilterLevel = builder.unSubscribeFilterLevel;
+        this.unSubscribeLinkType = builder.unSubscribeLinkType;
     }
 
     public static Builder builder() {
@@ -214,6 +223,20 @@ public class SingleSendMailRequest extends Request {
         return this.toAddress;
     }
 
+    /**
+     * @return unSubscribeFilterLevel
+     */
+    public String getUnSubscribeFilterLevel() {
+        return this.unSubscribeFilterLevel;
+    }
+
+    /**
+     * @return unSubscribeLinkType
+     */
+    public String getUnSubscribeLinkType() {
+        return this.unSubscribeLinkType;
+    }
+
     public static final class Builder extends Request.Builder<SingleSendMailRequest, Builder> {
         private String accountName; 
         private Integer addressType; 
@@ -230,6 +253,8 @@ public class SingleSendMailRequest extends Request {
         private String tagName; 
         private String textBody; 
         private String toAddress; 
+        private String unSubscribeFilterLevel; 
+        private String unSubscribeLinkType; 
 
         private Builder() {
             super();
@@ -252,6 +277,8 @@ public class SingleSendMailRequest extends Request {
             this.tagName = request.tagName;
             this.textBody = request.textBody;
             this.toAddress = request.toAddress;
+            this.unSubscribeFilterLevel = request.unSubscribeFilterLevel;
+            this.unSubscribeLinkType = request.unSubscribeLinkType;
         } 
 
         /**
@@ -386,6 +413,24 @@ public class SingleSendMailRequest extends Request {
         public Builder toAddress(String toAddress) {
             this.putQueryParameter("ToAddress", toAddress);
             this.toAddress = toAddress;
+            return this;
+        }
+
+        /**
+         * UnSubscribeFilterLevel.
+         */
+        public Builder unSubscribeFilterLevel(String unSubscribeFilterLevel) {
+            this.putQueryParameter("UnSubscribeFilterLevel", unSubscribeFilterLevel);
+            this.unSubscribeFilterLevel = unSubscribeFilterLevel;
+            return this;
+        }
+
+        /**
+         * UnSubscribeLinkType.
+         */
+        public Builder unSubscribeLinkType(String unSubscribeLinkType) {
+            this.putQueryParameter("UnSubscribeLinkType", unSubscribeLinkType);
+            this.unSubscribeLinkType = unSubscribeLinkType;
             return this;
         }
 

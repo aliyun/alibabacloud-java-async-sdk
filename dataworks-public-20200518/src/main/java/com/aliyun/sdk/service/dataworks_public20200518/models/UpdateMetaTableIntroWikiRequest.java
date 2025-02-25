@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMetaTableIntroWikiRequest} extends {@link RequestModel}
  *
  * <p>UpdateMetaTableIntroWikiRequest</p>
  */
 public class UpdateMetaTableIntroWikiRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("TableGuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableGuid;
 
     private UpdateMetaTableIntroWikiRequest(Builder builder) {
@@ -85,7 +89,7 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +98,11 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * The details of the instructions on how to use the metatable.
+         * <p>The details of the instructions on how to use the metatable.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -103,7 +111,11 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable. Specify the GUID in the format of odps.{projectName}.{tableName}.
+         * <p>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.test.table1</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

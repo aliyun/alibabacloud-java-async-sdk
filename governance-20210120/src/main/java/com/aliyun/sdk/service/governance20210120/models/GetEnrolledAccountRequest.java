@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEnrolledAccountRequest} extends {@link RequestModel}
  *
  * <p>GetEnrolledAccountRequest</p>
  */
 public class GetEnrolledAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long accountUid;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetEnrolledAccountRequest(Builder builder) {
@@ -69,7 +69,11 @@ public class GetEnrolledAccountRequest extends Request {
         } 
 
         /**
-         * 账号ID
+         * <p>The account ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552****</p>
          */
         public Builder accountUid(Long accountUid) {
             this.putQueryParameter("AccountUid", accountUid);
@@ -78,7 +82,10 @@ public class GetEnrolledAccountRequest extends Request {
         }
 
         /**
-         * RegionId
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceEndpointRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceEndpointRequest</p>
  */
 public class ModifyDBInstanceEndpointRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceEndpointDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointDescription")
     private String DBInstanceEndpointDescription;
 
-    @Query
-    @NameInMap("DBInstanceEndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceEndpointId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NodeItems")
-    private java.util.List < NodeItems> nodeItems;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeItems")
+    private java.util.List<NodeItems> nodeItems;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBInstanceEndpointRequest(Builder builder) {
@@ -92,7 +97,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
     /**
      * @return nodeItems
      */
-    public java.util.List < NodeItems> getNodeItems() {
+    public java.util.List<NodeItems> getNodeItems() {
         return this.nodeItems;
     }
 
@@ -108,7 +113,7 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         private String DBInstanceEndpointDescription; 
         private String DBInstanceEndpointId; 
         private String DBInstanceId; 
-        private java.util.List < NodeItems> nodeItems; 
+        private java.util.List<NodeItems> nodeItems; 
         private Long resourceOwnerId; 
 
         private Builder() {
@@ -126,10 +131,11 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -138,7 +144,10 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The user-defined description of the endpoint.
+         * <p>The user-defined description of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for readonly business</p>
          */
         public Builder DBInstanceEndpointDescription(String DBInstanceEndpointDescription) {
             this.putQueryParameter("DBInstanceEndpointDescription", DBInstanceEndpointDescription);
@@ -147,7 +156,11 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.
+         * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -156,7 +169,11 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -165,9 +182,9 @@ public class ModifyDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The information about the node that is configured for the endpoint.
+         * <p>The information about the endpoint.</p>
          */
-        public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
+        public Builder nodeItems(java.util.List<NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
             this.putQueryParameter("NodeItems", nodeItemsShrink);
             this.nodeItems = nodeItems;
@@ -190,14 +207,20 @@ public class ModifyDBInstanceEndpointRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBInstanceEndpointRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBInstanceEndpointRequest</p>
+     */
     public static class NodeItems extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private NodeItems(Builder builder) {
@@ -241,7 +264,10 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             private Long weight; 
 
             /**
-             * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+             * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -249,13 +275,15 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * The node ID.
-             * <p>
+             * <p>The node ID.</p>
+             * <p>You can query the node ID by using the following methods:</p>
+             * <ul>
+             * <li>Log on the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology in the lower part of the instance details page.</li>
+             * <li>Call the DescribeDBInstanceAttribute operation to query the node ID.</li>
+             * </ul>
              * 
-             * You can use one of the following methods to query the ID of the node:
-             * 
-             * *   Log on to the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology section.
-             * *   Call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the ID of the node.
+             * <strong>example:</strong>
+             * <p>rn-xxxx-****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -263,10 +291,11 @@ public class ModifyDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * The weight of the node. Read requests are distributed based on the weight.
-             * <p>
+             * <p>The weight of the node. Read requests are distributed based on the weight.</p>
+             * <p>Valid values: 0 to 100.</p>
              * 
-             * Valid values: 0 to 100.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Long weight) {
                 this.weight = weight;

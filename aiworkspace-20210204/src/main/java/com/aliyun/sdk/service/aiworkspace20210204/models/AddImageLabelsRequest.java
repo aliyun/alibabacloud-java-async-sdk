@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageLabelsRequest} extends {@link RequestModel}
  *
  * <p>AddImageLabelsRequest</p>
  */
 public class AddImageLabelsRequest extends Request {
-    @Path
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Body
-    @NameInMap("Labels")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Labels> labels;
 
     private AddImageLabelsRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class AddImageLabelsRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-4c62******53uor</p>
          */
         public Builder imageId(String imageId) {
             this.putPathParameter("ImageId", imageId);
@@ -79,7 +82,7 @@ public class AddImageLabelsRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List < Labels> labels) {
             this.putBodyParameter("Labels", labels);
@@ -94,11 +97,17 @@ public class AddImageLabelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddImageLabelsRequest} extends {@link TeaModel}
+     *
+     * <p>AddImageLabelsRequest</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {

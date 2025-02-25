@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStagingIpResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStagingIpResponseBody</p>
  */
 public class DescribeStagingIpResponseBody extends TeaModel {
-    @NameInMap("IPV4s")
+    @com.aliyun.core.annotation.NameInMap("IPV4s")
     private IPV4s IPV4s;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeStagingIpResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeStagingIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IPv4 addresses.
+         * <p>IPv4 addresses.</p>
          */
         public Builder IPV4s(IPV4s IPV4s) {
             this.IPV4s = IPV4s;
@@ -58,7 +58,10 @@ public class DescribeStagingIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B9E0E83-24AC-49F4-9EE0-BF5EB03E8381</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +74,14 @@ public class DescribeStagingIpResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStagingIpResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStagingIpResponseBody</p>
+     */
     public static class IPV4s extends TeaModel {
-        @NameInMap("IPV4")
+        @com.aliyun.core.annotation.NameInMap("IPV4")
         private java.util.List < String > IPV4;
 
         private IPV4s(Builder builder) {

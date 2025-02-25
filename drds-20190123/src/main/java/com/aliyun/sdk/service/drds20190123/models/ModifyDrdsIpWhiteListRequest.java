@@ -116,18 +116,18 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDrdsIpWhiteListRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.groupAttribute = response.groupAttribute;
-            this.groupName = response.groupName;
-            this.ipWhiteList = response.ipWhiteList;
-            this.mode = response.mode;
+        private Builder(ModifyDrdsIpWhiteListRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.groupAttribute = request.groupAttribute;
+            this.groupName = request.groupName;
+            this.ipWhiteList = request.ipWhiteList;
+            this.mode = request.mode;
         } 
 
         /**
-         * DbName.
+         * The name of the DRDS database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -136,7 +136,7 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the Message Queue for Apache Kafka instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -145,7 +145,7 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * GroupAttribute.
+         * The attribute of the IP address whitelist group.
          */
         public Builder groupAttribute(String groupAttribute) {
             this.putQueryParameter("GroupAttribute", groupAttribute);
@@ -154,7 +154,7 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the IP address whitelist group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -163,7 +163,7 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * IpWhiteList.
+         * The modified whitelist. Separate multiple IP addresses with commas (,).
          */
         public Builder ipWhiteList(String ipWhiteList) {
             this.putQueryParameter("IpWhiteList", ipWhiteList);
@@ -172,7 +172,11 @@ public class ModifyDrdsIpWhiteListRequest extends Request {
         }
 
         /**
-         * Mode.
+         * Specifies the mode. Valid values:
+         * <p>
+         * 
+         * *   `True`: append modifications
+         * *   `False`: overwrite modification
          */
         public Builder mode(Boolean mode) {
             this.putQueryParameter("Mode", mode);

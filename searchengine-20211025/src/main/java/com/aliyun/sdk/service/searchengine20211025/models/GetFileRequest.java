@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileRequest} extends {@link RequestModel}
  *
  * <p>GetFileRequest</p>
  */
 public class GetFileRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("indexName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("indexName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexName;
 
-    @Path
-    @NameInMap("versionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("versionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
-    @Query
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
     private GetFileRequest(Builder builder) {
@@ -100,14 +105,11 @@ public class GetFileRequest extends Request {
         } 
 
         /**
-         * ## Method
-         * <p>
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         *     GET
-         * 
-         * ## URI
-         * 
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+         * <strong>example:</strong>
+         * <p>ha-cn-i7m2rpzm605</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -116,22 +118,11 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * ## Sample responses
-         * <p>
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Success responses
-         * 
-         *     {
-         *       "requestId": "e1eef569-1ff7-4bf8-acf7-1cecca9894ce",
-         *       "result": {
-         *         "name":"version1",  // The file name
-         *         "fullPathName": "/root/version1",   // The name of the full path
-         *         "dataSource": "odps1", // The data source
-         *         "partition": 1,  // The number of shards
-         *         "isDir": false, // Indicates whether it is a directory.
-         *         "content": ""
-         *       }
-         *     }
+         * <strong>example:</strong>
+         * <p>ecmon_table_index_test</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -140,7 +131,11 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * versionName.
+         * <p>The version name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32nd2nq01@ha-cn-tl32nd2nq01_00@bj_vpc_domain_1@point_cloud_3d@index_config_edit</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);
@@ -149,7 +144,11 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * <p>The name of the file in full path</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/schemas/automobile_vector_schema.json</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

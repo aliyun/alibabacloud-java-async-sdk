@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIntegrationsRequest} extends {@link RequestModel}
  *
  * <p>DeleteIntegrationsRequest</p>
  */
 public class DeleteIntegrationsRequest extends Request {
-    @Query
-    @NameInMap("IntegrationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntegrationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long integrationId;
 
     private DeleteIntegrationsRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DeleteIntegrationsRequest extends Request {
         } 
 
         /**
-         * IntegrationId.
+         * <p>The ID of the alert integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder integrationId(Long integrationId) {
             this.putQueryParameter("IntegrationId", integrationId);

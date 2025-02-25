@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAssetCleanConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAssetCleanConfigRequest</p>
  */
 public class ModifyAssetCleanConfigRequest extends Request {
-    @Query
-    @NameInMap("AssetCleanConfigs")
-    private java.util.List < AssetCleanConfigs> assetCleanConfigs;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetCleanConfigs")
+    private java.util.List<AssetCleanConfigs> assetCleanConfigs;
 
     private ModifyAssetCleanConfigRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ModifyAssetCleanConfigRequest extends Request {
     /**
      * @return assetCleanConfigs
      */
-    public java.util.List < AssetCleanConfigs> getAssetCleanConfigs() {
+    public java.util.List<AssetCleanConfigs> getAssetCleanConfigs() {
         return this.assetCleanConfigs;
     }
 
     public static final class Builder extends Request.Builder<ModifyAssetCleanConfigRequest, Builder> {
-        private java.util.List < AssetCleanConfigs> assetCleanConfigs; 
+        private java.util.List<AssetCleanConfigs> assetCleanConfigs; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class ModifyAssetCleanConfigRequest extends Request {
         } 
 
         /**
-         * The asset cleanup configurations.
+         * <p>The asset cleanup configurations.</p>
          */
-        public Builder assetCleanConfigs(java.util.List < AssetCleanConfigs> assetCleanConfigs) {
+        public Builder assetCleanConfigs(java.util.List<AssetCleanConfigs> assetCleanConfigs) {
             this.putQueryParameter("AssetCleanConfigs", assetCleanConfigs);
             this.assetCleanConfigs = assetCleanConfigs;
             return this;
@@ -69,14 +74,20 @@ public class ModifyAssetCleanConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAssetCleanConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAssetCleanConfigRequest</p>
+     */
     public static class AssetCleanConfigs extends TeaModel {
-        @NameInMap("CleanDays")
+        @com.aliyun.core.annotation.NameInMap("CleanDays")
         private Integer cleanDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private AssetCleanConfigs(Builder builder) {
@@ -120,7 +131,10 @@ public class ModifyAssetCleanConfigRequest extends Request {
             private Integer type; 
 
             /**
-             * The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.
+             * <p>The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder cleanDays(Integer cleanDays) {
                 this.cleanDays = cleanDays;
@@ -128,11 +142,14 @@ public class ModifyAssetCleanConfigRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the feature of cleaning the offline hosts whose provider cannot be identified. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the feature of cleaning the offline hosts whose provider cannot be identified. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disables the feature.</li>
+             * <li><strong>1</strong>: enables the feature.</li>
+             * </ul>
              * 
-             * *   **0**: disables the feature.
-             * *   **1**: enables the feature.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -140,10 +157,11 @@ public class ModifyAssetCleanConfigRequest extends Request {
             }
 
             /**
-             * The type of hosts that you want to clean.
-             * <p>
+             * <p>The type of hosts that you want to clean.</p>
+             * <p>Set the value to <strong>1</strong>, which indicates hosts whose provider cannot be identified.</p>
              * 
-             * Set the value to **1**, which indicates hosts whose provider cannot be identified.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

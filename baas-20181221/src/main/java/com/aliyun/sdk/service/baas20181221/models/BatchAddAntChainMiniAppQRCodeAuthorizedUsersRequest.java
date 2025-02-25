@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest</p>
  */
 public class BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("PhoneList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, ? > phoneList;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.phoneList = builder.phoneList;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +46,13 @@ public class BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest extends Request
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return antChainId
      */
     public String getAntChainId() {
@@ -60,28 +66,30 @@ public class BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest extends Request
         return this.phoneList;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest, Builder> {
+        private String regionId; 
         private String antChainId; 
         private java.util.Map < String, ? > phoneList; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.phoneList = response.phoneList;
-            this.regionId = response.regionId;
+        private Builder(BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.phoneList = request.phoneList;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -96,17 +104,9 @@ public class BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest extends Request
          * PhoneList.
          */
         public Builder phoneList(java.util.Map < String, ? > phoneList) {
-            this.putBodyParameter("PhoneList", phoneList);
+            String phoneListShrink = shrink(phoneList, "PhoneList", "json");
+            this.putBodyParameter("PhoneList", phoneListShrink);
             this.phoneList = phoneList;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

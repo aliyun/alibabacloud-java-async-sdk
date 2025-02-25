@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainWebsocketBpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainWebsocketBpsDataResponseBody</p>
  */
 public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
-    @NameInMap("BpsDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("BpsDataPerInterval")
     private BpsDataPerInterval bpsDataPerInterval;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnDomainWebsocketBpsDataResponseBody(Builder builder) {
@@ -98,7 +98,7 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The bandwidth data returned at each interval.
+         * <p>The bandwidth data returned at each interval.</p>
          */
         public Builder bpsDataPerInterval(BpsDataPerInterval bpsDataPerInterval) {
             this.bpsDataPerInterval = bpsDataPerInterval;
@@ -106,7 +106,10 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between the data entries returned. Unit: seconds.
+         * <p>The time interval between the data entries returned. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -114,7 +117,10 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -122,7 +128,10 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +139,10 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,11 +166,17 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketBpsDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("WebsocketBps")
+        @com.aliyun.core.annotation.NameInMap("WebsocketBps")
         private Float websocketBps;
 
         private DataModule(Builder builder) {
@@ -190,7 +211,10 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
             private Float websocketBps; 
 
             /**
-             * The timestamp of the returned data.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +222,10 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value. Unit: bit/s.
+             * <p>The bandwidth value. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11288111</p>
              */
             public Builder websocketBps(Float websocketBps) {
                 this.websocketBps = websocketBps;
@@ -212,8 +239,14 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainWebsocketBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainWebsocketBpsDataResponseBody</p>
+     */
     public static class BpsDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private BpsDataPerInterval(Builder builder) {

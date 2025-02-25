@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCustomerAddressListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCustomerAddressListResponseBody</p>
  */
 public class QueryCustomerAddressListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCustomerAddressListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,41 +148,47 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCustomerAddressListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCustomerAddressListResponseBody</p>
+     */
     public static class CustomerInvoiceAddress extends TeaModel {
-        @NameInMap("Addressee")
+        @com.aliyun.core.annotation.NameInMap("Addressee")
         private String addressee;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("County")
+        @com.aliyun.core.annotation.NameInMap("County")
         private String county;
 
-        @NameInMap("DeliveryAddress")
+        @com.aliyun.core.annotation.NameInMap("DeliveryAddress")
         private String deliveryAddress;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("PostalCode")
+        @com.aliyun.core.annotation.NameInMap("PostalCode")
         private String postalCode;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("Street")
+        @com.aliyun.core.annotation.NameInMap("Street")
         private String street;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private CustomerInvoiceAddress(Builder builder) {
@@ -290,7 +313,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             private String userNick; 
 
             /**
-             * The addressee.
+             * <p>The addressee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder addressee(String addressee) {
                 this.addressee = addressee;
@@ -298,7 +324,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The business type.
+             * <p>The business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -306,7 +335,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The city to which the invoice is mailed.
+             * <p>The city to which the invoice is mailed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -314,7 +346,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the district to which the invoice is mailed.
+             * <p>The name of the district to which the invoice is mailed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test District</p>
              */
             public Builder county(String county) {
                 this.county = county;
@@ -322,7 +357,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed address to which the invoice is mailed. This parameter is returned after fields are concatenated.
+             * <p>The detailed address to which the invoice is mailed. This parameter is returned after fields are concatenated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Address</p>
              */
             public Builder deliveryAddress(String deliveryAddress) {
                 this.deliveryAddress = deliveryAddress;
@@ -330,7 +368,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>311601051</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -338,7 +379,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the addressee.
+             * <p>The phone number of the addressee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138xxxxxxxx</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -346,7 +390,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The postcode.
+             * <p>The postcode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000</p>
              */
             public Builder postalCode(String postalCode) {
                 this.postalCode = postalCode;
@@ -354,7 +401,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The province to which the invoice is mailed.
+             * <p>The province to which the invoice is mailed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -362,7 +412,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the street to which the invoice is mailed.
+             * <p>The name of the street to which the invoice is mailed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Street</p>
              */
             public Builder street(String street) {
                 this.street = street;
@@ -370,7 +423,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4382956342857</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -378,7 +434,10 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the user.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNick</p>
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -392,9 +451,15 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCustomerAddressListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCustomerAddressListResponseBody</p>
+     */
     public static class CustomerInvoiceAddressList extends TeaModel {
-        @NameInMap("CustomerInvoiceAddress")
-        private java.util.List < CustomerInvoiceAddress> customerInvoiceAddress;
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoiceAddress")
+        private java.util.List<CustomerInvoiceAddress> customerInvoiceAddress;
 
         private CustomerInvoiceAddressList(Builder builder) {
             this.customerInvoiceAddress = builder.customerInvoiceAddress;
@@ -411,17 +476,17 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         /**
          * @return customerInvoiceAddress
          */
-        public java.util.List < CustomerInvoiceAddress> getCustomerInvoiceAddress() {
+        public java.util.List<CustomerInvoiceAddress> getCustomerInvoiceAddress() {
             return this.customerInvoiceAddress;
         }
 
         public static final class Builder {
-            private java.util.List < CustomerInvoiceAddress> customerInvoiceAddress; 
+            private java.util.List<CustomerInvoiceAddress> customerInvoiceAddress; 
 
             /**
              * CustomerInvoiceAddress.
              */
-            public Builder customerInvoiceAddress(java.util.List < CustomerInvoiceAddress> customerInvoiceAddress) {
+            public Builder customerInvoiceAddress(java.util.List<CustomerInvoiceAddress> customerInvoiceAddress) {
                 this.customerInvoiceAddress = customerInvoiceAddress;
                 return this;
             }
@@ -433,8 +498,14 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCustomerAddressListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCustomerAddressListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CustomerInvoiceAddressList")
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoiceAddressList")
         private CustomerInvoiceAddressList customerInvoiceAddressList;
 
         private Data(Builder builder) {
@@ -460,7 +531,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             private CustomerInvoiceAddressList customerInvoiceAddressList; 
 
             /**
-             * The details of addresses to which invoices are mailed.
+             * <p>The details of addresses to which invoices are mailed.</p>
              */
             public Builder customerInvoiceAddressList(CustomerInvoiceAddressList customerInvoiceAddressList) {
                 this.customerInvoiceAddressList = customerInvoiceAddressList;

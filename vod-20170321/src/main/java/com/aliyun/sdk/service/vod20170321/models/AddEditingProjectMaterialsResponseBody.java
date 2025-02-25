@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddEditingProjectMaterialsResponseBody} extends {@link TeaModel}
  *
  * <p>AddEditingProjectMaterialsResponseBody</p>
  */
 public class AddEditingProjectMaterialsResponseBody extends TeaModel {
-    @NameInMap("MaterialList")
-    private java.util.List < MaterialList> materialList;
+    @com.aliyun.core.annotation.NameInMap("MaterialList")
+    private java.util.List<MaterialList> materialList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddEditingProjectMaterialsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     /**
      * @return materialList
      */
-    public java.util.List < MaterialList> getMaterialList() {
+    public java.util.List<MaterialList> getMaterialList() {
         return this.materialList;
     }
 
@@ -46,19 +51,22 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MaterialList> materialList; 
+        private java.util.List<MaterialList> materialList; 
         private String requestId; 
 
         /**
-         * MaterialList.
+         * <p>The materials.</p>
          */
-        public Builder materialList(java.util.List < MaterialList> materialList) {
+        public Builder materialList(java.util.List<MaterialList> materialList) {
             this.materialList = materialList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85237CDA-0B54-5CED-BA10-A8A71AA13C1A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,56 +79,62 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddEditingProjectMaterialsResponseBody</p>
+     */
     public static class MaterialList extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Integer cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CustomerId")
+        @com.aliyun.core.annotation.NameInMap("CustomerId")
         private Long customerId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("MaterialId")
+        @com.aliyun.core.annotation.NameInMap("MaterialId")
         private String materialId;
 
-        @NameInMap("MaterialType")
+        @com.aliyun.core.annotation.NameInMap("MaterialType")
         private String materialType;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
-        private java.util.List < String > snapshots;
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
+        private java.util.List<String> snapshots;
 
-        @NameInMap("SpriteConfig")
+        @com.aliyun.core.annotation.NameInMap("SpriteConfig")
         private String spriteConfig;
 
-        @NameInMap("Sprites")
-        private java.util.List < String > sprites;
+        @com.aliyun.core.annotation.NameInMap("Sprites")
+        private java.util.List<String> sprites;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private MaterialList(Builder builder) {
@@ -231,7 +245,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return snapshots
          */
-        public java.util.List < String > getSnapshots() {
+        public java.util.List<String> getSnapshots() {
             return this.snapshots;
         }
 
@@ -245,7 +259,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return sprites
          */
-        public java.util.List < String > getSprites() {
+        public java.util.List<String> getSprites() {
             return this.sprites;
         }
 
@@ -282,15 +296,18 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             private String materialType; 
             private String modifyTime; 
             private Long size; 
-            private java.util.List < String > snapshots; 
+            private java.util.List<String> snapshots; 
             private String spriteConfig; 
-            private java.util.List < String > sprites; 
+            private java.util.List<String> sprites; 
             private String status; 
             private String tags; 
             private String title; 
 
             /**
-             * CateId.
+             * <p>The ID of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000487543</p>
              */
             public Builder cateId(Integer cateId) {
                 this.cateId = cateId;
@@ -298,7 +315,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * <p>The category name of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate1</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -306,7 +326,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The thumbnail URL.</p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -314,7 +334,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the material was created. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-02T08:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -322,7 +345,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerId.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234751840694470</p>
              */
             public Builder customerId(Long customerId) {
                 this.customerId = customerId;
@@ -330,7 +356,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test material</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +367,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the material. Unit: seconds. The value is accurate to four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3690.2332</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -346,7 +378,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialId.
+             * <p>The ID of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85befc4118b84c6723e53b80b1****</p>
              */
             public Builder materialId(String materialId) {
                 this.materialId = materialId;
@@ -354,7 +389,15 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialType.
+             * <p>The type of the material. Valid values:</p>
+             * <ul>
+             * <li><strong>video</strong></li>
+             * <li><strong>audio</strong></li>
+             * <li><strong>image</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder materialType(String materialType) {
                 this.materialType = materialType;
@@ -362,7 +405,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the <em>YYYY-MM-DD**Thh:mm:ss</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-25T07:28:34Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -370,7 +416,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682694</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -378,15 +427,18 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The URLs of snapshots.</p>
              */
-            public Builder snapshots(java.util.List < String > snapshots) {
+            public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
                 return this;
             }
 
             /**
-             * SpriteConfig.
+             * <p>The configuration of the sprite snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder spriteConfig(String spriteConfig) {
                 this.spriteConfig = spriteConfig;
@@ -394,15 +446,23 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Sprites.
+             * <p>The URLs of sprite snapshots.</p>
              */
-            public Builder sprites(java.util.List < String > sprites) {
+            public Builder sprites(java.util.List<String> sprites) {
                 this.sprites = sprites;
                 return this;
             }
 
             /**
-             * Status.
+             * <p>The status of the material. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>Uploading</strong></li>
+             * <li><strong>UploadFail</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -410,7 +470,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1,tag2</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -418,7 +481,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;

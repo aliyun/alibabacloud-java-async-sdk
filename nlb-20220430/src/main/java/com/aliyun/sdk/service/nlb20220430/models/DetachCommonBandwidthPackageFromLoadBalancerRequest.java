@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachCommonBandwidthPackageFromLoadBalancerRequest} extends {@link RequestModel}
  *
  * <p>DetachCommonBandwidthPackageFromLoadBalancerRequest</p>
  */
 public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends Request {
-    @Body
-    @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bandwidthPackageId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DetachCommonBandwidthPackageFromLoadBalancerRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends Request
         } 
 
         /**
-         * The ID of the EIP bandwidth plan.
+         * <p>The ID of the EIP bandwidth plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-bp1pzf0ym72pu3y76****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putBodyParameter("BandwidthPackageId", bandwidthPackageId);
@@ -121,12 +130,14 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends Request
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -135,11 +146,14 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends Request
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether only to precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request but does not disassociate the NLB instance from the EIP bandwidth plan. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not disassociate the NLB instance from the EIP bandwidth plan. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -148,7 +162,11 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends Request
         }
 
         /**
-         * The ID of the NLB instance.
+         * <p>The ID of the NLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-83ckzc8d4xlp8o****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putBodyParameter("LoadBalancerId", loadBalancerId);
@@ -157,10 +175,11 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends Request
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

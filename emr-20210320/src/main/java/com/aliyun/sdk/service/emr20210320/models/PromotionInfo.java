@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PromotionInfo} extends {@link TeaModel}
  *
  * <p>PromotionInfo</p>
  */
 public class PromotionInfo extends TeaModel {
-    @NameInMap("CanPromFee")
+    @com.aliyun.core.annotation.NameInMap("CanPromFee")
     private String canPromFee;
 
-    @NameInMap("IsSelected")
+    @com.aliyun.core.annotation.NameInMap("IsSelected")
     private String isSelected;
 
-    @NameInMap("PromotionDesc")
+    @com.aliyun.core.annotation.NameInMap("PromotionDesc")
     private String promotionDesc;
 
-    @NameInMap("PromotionName")
+    @com.aliyun.core.annotation.NameInMap("PromotionName")
     private String promotionName;
 
-    @NameInMap("PromotionOptionCode")
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionCode")
     private String promotionOptionCode;
 
-    @NameInMap("PromotionOptionNo")
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
     private String promotionOptionNo;
 
     private PromotionInfo(Builder builder) {

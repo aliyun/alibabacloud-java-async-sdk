@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnDomainStagingConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnDomainStagingConfigResponseBody</p>
  */
 public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
-    @NameInMap("DomainConfigs")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigs")
     private java.util.List < DomainConfigs> domainConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainStagingConfigResponseBody(Builder builder) {
@@ -50,13 +50,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of the feature. Valid values:
-         * <p>
-         * 
-         * *   success
-         * *   testing
-         * *   failed
-         * *   configuring
+         * <p>The configurations of accelerated domain names returned.</p>
          */
         public Builder domainConfigs(java.util.List < DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -64,7 +58,10 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of accelerated domain names returned.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C80705BF-0F76-41FA-BAD1-5B59296A4E59</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +74,17 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnDomainStagingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainStagingConfigResponseBody</p>
+     */
     public static class FunctionArgs extends TeaModel {
-        @NameInMap("ArgName")
+        @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
 
-        @NameInMap("ArgValue")
+        @com.aliyun.core.annotation.NameInMap("ArgValue")
         private String argValue;
 
         private FunctionArgs(Builder builder) {
@@ -116,7 +119,10 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * The value of the configuration.
+             * <p>The name of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auth_type</p>
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -124,7 +130,10 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * <p>The value of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>req_auth</p>
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -138,17 +147,23 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnDomainStagingConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnDomainStagingConfigResponseBody</p>
+     */
     public static class DomainConfigs extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("FunctionArgs")
+        @com.aliyun.core.annotation.NameInMap("FunctionArgs")
         private java.util.List < FunctionArgs> functionArgs;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DomainConfigs(Builder builder) {
@@ -201,7 +216,10 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the feature.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6295</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -209,7 +227,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration.
+             * <p>The following table describes the features.</p>
              */
             public Builder functionArgs(java.util.List < FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
@@ -217,7 +235,10 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The descriptions of a feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliauth</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -225,7 +246,16 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>success: The configuration is successful.</li>
+             * <li>testing: The configuration is under testing.</li>
+             * <li>failed: The task failed.</li>
+             * <li>configuring: The feature is being configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

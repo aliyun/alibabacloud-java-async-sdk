@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReceiverDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryReceiverDetailResponseBody</p>
  */
 public class QueryReceiverDetailResponseBody extends TeaModel {
-    @NameInMap("DataSchema")
+    @com.aliyun.core.annotation.NameInMap("DataSchema")
     private String dataSchema;
 
-    @NameInMap("NextStart")
+    @com.aliyun.core.annotation.NameInMap("NextStart")
     private String nextStart;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryReceiverDetailResponseBody(Builder builder) {
@@ -131,17 +136,23 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryReceiverDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReceiverDetailResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("UtcCreateTime")
+        @com.aliyun.core.annotation.NameInMap("UtcCreateTime")
         private Long utcCreateTime;
 
         private Detail(Builder builder) {
@@ -232,9 +243,15 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryReceiverDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryReceiverDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("detail")
-        private java.util.List < Detail> detail;
+        @com.aliyun.core.annotation.NameInMap("detail")
+        private java.util.List<Detail> detail;
 
         private Data(Builder builder) {
             this.detail = builder.detail;
@@ -251,17 +268,17 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < Detail> getDetail() {
+        public java.util.List<Detail> getDetail() {
             return this.detail;
         }
 
         public static final class Builder {
-            private java.util.List < Detail> detail; 
+            private java.util.List<Detail> detail; 
 
             /**
              * detail.
              */
-            public Builder detail(java.util.List < Detail> detail) {
+            public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
                 return this;
             }

@@ -70,7 +70,7 @@ public class AdjustJMeterSceneSpeedRequest extends Request {
         } 
 
         /**
-         * 报告id
+         * ReportId.
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -79,7 +79,7 @@ public class AdjustJMeterSceneSpeedRequest extends Request {
         }
 
         /**
-         * 要调整到的压力值
+         * Speed.
          */
         public Builder speed(Integer speed) {
             this.putQueryParameter("Speed", speed);

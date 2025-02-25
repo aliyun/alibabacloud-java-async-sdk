@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppendCasesRequest} extends {@link RequestModel}
  *
  * <p>AppendCasesRequest</p>
  */
 public class AppendCasesRequest extends Request {
-    @Query
-    @NameInMap("CampaignId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CampaignId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String campaignId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
-    private java.util.List < AppendCasesRequestBody> body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<AppendCasesRequestBody> body;
 
     private AppendCasesRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class AppendCasesRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < AppendCasesRequestBody> getBody() {
+    public java.util.List<AppendCasesRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<AppendCasesRequest, Builder> {
         private String campaignId; 
         private String instanceId; 
-        private java.util.List < AppendCasesRequestBody> body; 
+        private java.util.List<AppendCasesRequestBody> body; 
 
         private Builder() {
             super();
@@ -84,7 +89,10 @@ public class AppendCasesRequest extends Request {
         } 
 
         /**
-         * CampaignId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78cf6864-9a22-4ea8-a59d-5adc2d747b0e</p>
          */
         public Builder campaignId(String campaignId) {
             this.putQueryParameter("CampaignId", campaignId);
@@ -93,7 +101,10 @@ public class AppendCasesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,7 +115,7 @@ public class AppendCasesRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < AppendCasesRequestBody> body) {
+        public Builder body(java.util.List<AppendCasesRequestBody> body) {
             String bodyShrink = shrink(body, "body", "json");
             this.putBodyParameter("body", bodyShrink);
             this.body = body;
@@ -118,23 +129,29 @@ public class AppendCasesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AppendCasesRequest} extends {@link TeaModel}
+     *
+     * <p>AppendCasesRequest</p>
+     */
     public static class AppendCasesRequestBody extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("CustomVariables")
+        @com.aliyun.core.annotation.NameInMap("CustomVariables")
         private String customVariables;
 
-        @NameInMap("MaskedCallee")
+        @com.aliyun.core.annotation.NameInMap("MaskedCallee")
         private String maskedCallee;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
         private AppendCasesRequestBody(Builder builder) {

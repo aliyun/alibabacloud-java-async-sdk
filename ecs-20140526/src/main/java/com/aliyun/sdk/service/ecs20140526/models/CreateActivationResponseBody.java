@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateActivationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateActivationResponseBody</p>
  */
 public class CreateActivationResponseBody extends TeaModel {
-    @NameInMap("ActivationCode")
+    @com.aliyun.core.annotation.NameInMap("ActivationCode")
     private String activationCode;
 
-    @NameInMap("ActivationId")
+    @com.aliyun.core.annotation.NameInMap("ActivationId")
     private String activationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateActivationResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateActivationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be subsequently queried. Make sure that you properly save the return value.
+         * <p>The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be queried afterward. Properly save the return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a-hz0ch3SwhOlE1234+Xo32lAZC****</p>
          */
         public Builder activationCode(String activationCode) {
             this.activationCode = activationCode;
@@ -70,7 +78,10 @@ public class CreateActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the activation code.
+         * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
          */
         public Builder activationId(String activationId) {
             this.activationId = activationId;
@@ -78,7 +89,10 @@ public class CreateActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

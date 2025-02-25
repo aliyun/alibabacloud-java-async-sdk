@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Function</p>
  */
 public class Function extends TeaModel {
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @NameInMap("ClassName")
+    @com.aliyun.core.annotation.NameInMap("ClassName")
     private String className;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Integer createTime;
 
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("FunctionName")
+    @com.aliyun.core.annotation.NameInMap("FunctionName")
     private String functionName;
 
-    @NameInMap("FunctionType")
+    @com.aliyun.core.annotation.NameInMap("FunctionType")
     private String functionType;
 
-    @NameInMap("OwnerName")
+    @com.aliyun.core.annotation.NameInMap("OwnerName")
     private String ownerName;
 
-    @NameInMap("OwnerType")
+    @com.aliyun.core.annotation.NameInMap("OwnerType")
     private String ownerType;
 
-    @NameInMap("ResourceUri")
+    @com.aliyun.core.annotation.NameInMap("ResourceUri")
     private java.util.List < ResourceUri > resourceUri;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private Integer updateTime;
 
     private Function(Builder builder) {

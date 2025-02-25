@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshContainerAssetsRequest} extends {@link RequestModel}
  *
  * <p>RefreshContainerAssetsRequest</p>
  */
 public class RefreshContainerAssetsRequest extends Request {
-    @Query
-    @NameInMap("AssetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String assetType;
 
     private RefreshContainerAssetsRequest(Builder builder) {
@@ -55,11 +60,15 @@ public class RefreshContainerAssetsRequest extends Request {
         } 
 
         /**
-         * The type of the container asset whose statistics you want to refresh. Valid values:
-         * <p>
+         * <p>The type of the container asset whose statistics you want to refresh. Valid values:</p>
+         * <ul>
+         * <li><strong>IMAGE</strong></li>
+         * <li><strong>CONTAINER</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **IMAGE**
-         * *   **CONTAINER**
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);

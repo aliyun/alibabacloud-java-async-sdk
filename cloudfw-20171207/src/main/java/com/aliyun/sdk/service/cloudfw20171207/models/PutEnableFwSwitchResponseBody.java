@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutEnableFwSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>PutEnableFwSwitchResponseBody</p>
  */
 public class PutEnableFwSwitchResponseBody extends TeaModel {
-    @NameInMap("AbnormalResourceStatusList")
-    private java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList;
+    @com.aliyun.core.annotation.NameInMap("AbnormalResourceStatusList")
+    private java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutEnableFwSwitchResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     /**
      * @return abnormalResourceStatusList
      */
-    public java.util.List < AbnormalResourceStatusList> getAbnormalResourceStatusList() {
+    public java.util.List<AbnormalResourceStatusList> getAbnormalResourceStatusList() {
         return this.abnormalResourceStatusList;
     }
 
@@ -46,19 +51,22 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList; 
+        private java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList; 
         private String requestId; 
 
         /**
-         * The status information of the asset when it is not synchronized to Cloud Firewall.
+         * <p>The status information of the asset when it is not synchronized to Cloud Firewall.</p>
          */
-        public Builder abnormalResourceStatusList(java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList) {
+        public Builder abnormalResourceStatusList(java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList) {
             this.abnormalResourceStatusList = abnormalResourceStatusList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PutEnableFwSwitchResponseBody} extends {@link TeaModel}
+     *
+     * <p>PutEnableFwSwitchResponseBody</p>
+     */
     public static class AbnormalResourceStatusList extends TeaModel {
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AbnormalResourceStatusList(Builder builder) {
@@ -122,10 +136,13 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The message displayed when the asset is not synchronized to Cloud Firewall. Valid values:
-             * <p>
+             * <p>The message displayed when the asset is not synchronized to Cloud Firewall. Valid values:</p>
+             * <ul>
+             * <li>cloudfirewall do not sync this ip address: This IP address is not synchronized to Cloud Firewall.</li>
+             * </ul>
              * 
-             * *   cloudfirewall do not sync this ip address: This IP address is not synchronized to Cloud Firewall.
+             * <strong>example:</strong>
+             * <p>cloudfirewall do not sync this ip address</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -133,7 +150,10 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the asset.
+             * <p>The IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.0.113.0</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -141,10 +161,13 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the asset when it is not synchronized to Cloud Firewall. Valid values:
-             * <p>
+             * <p>The status of the asset when it is not synchronized to Cloud Firewall. Valid values:</p>
+             * <ul>
+             * <li>ip_not_sync: The asset is not synchronized.</li>
+             * </ul>
              * 
-             * *   ip_not_sync: The asset is not synchronized.
+             * <strong>example:</strong>
+             * <p>ip_not_sync</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBusinessCategoryListResponseBody} extends {@link TeaModel}
  *
  * <p>GetBusinessCategoryListResponseBody</p>
  */
 public class GetBusinessCategoryListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetBusinessCategoryListResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBusinessCategoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBusinessCategoryListResponseBody</p>
+     */
     public static class BusinessCategoryBasicInfo extends TeaModel {
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private Integer bid;
 
-        @NameInMap("BusinessName")
+        @com.aliyun.core.annotation.NameInMap("BusinessName")
         private String businessName;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private Integer serviceType;
 
         private BusinessCategoryBasicInfo(Builder builder) {
@@ -212,9 +223,15 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBusinessCategoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBusinessCategoryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BusinessCategoryBasicInfo")
-        private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo;
+        @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfo")
+        private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo;
 
         private Data(Builder builder) {
             this.businessCategoryBasicInfo = builder.businessCategoryBasicInfo;
@@ -231,17 +248,17 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         /**
          * @return businessCategoryBasicInfo
          */
-        public java.util.List < BusinessCategoryBasicInfo> getBusinessCategoryBasicInfo() {
+        public java.util.List<BusinessCategoryBasicInfo> getBusinessCategoryBasicInfo() {
             return this.businessCategoryBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
+            private java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo; 
 
             /**
              * BusinessCategoryBasicInfo.
              */
-            public Builder businessCategoryBasicInfo(java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo) {
+            public Builder businessCategoryBasicInfo(java.util.List<BusinessCategoryBasicInfo> businessCategoryBasicInfo) {
                 this.businessCategoryBasicInfo = businessCategoryBasicInfo;
                 return this;
             }

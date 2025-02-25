@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceLogsResponseBody</p>
  */
 public class ListDataSourceLogsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDataSourceLogsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
     } 
 
     public static class LogParams extends TeaModel {
-        @NameInMap("ParaCode")
+        @com.aliyun.core.annotation.NameInMap("ParaCode")
         private String paraCode;
 
-        @NameInMap("ParaValue")
+        @com.aliyun.core.annotation.NameInMap("ParaValue")
         private String paraValue;
 
         private LogParams(Builder builder) {
@@ -110,7 +109,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             private String paraValue; 
 
             /**
-             * ParaCode.
+             * The parameter code of the log.
              */
             public Builder paraCode(String paraCode) {
                 this.paraCode = paraCode;
@@ -118,7 +117,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ParaValue.
+             * The parameter value of the log.
              */
             public Builder paraValue(String paraValue) {
                 this.paraValue = paraValue;
@@ -133,19 +132,19 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
 
     }
     public static class DataSourceInstanceLogs extends TeaModel {
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("LogInstanceId")
+        @com.aliyun.core.annotation.NameInMap("LogInstanceId")
         private String logInstanceId;
 
-        @NameInMap("LogMdsCode")
+        @com.aliyun.core.annotation.NameInMap("LogMdsCode")
         private String logMdsCode;
 
-        @NameInMap("LogParams")
+        @com.aliyun.core.annotation.NameInMap("LogParams")
         private java.util.List < LogParams> logParams;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
         private DataSourceInstanceLogs(Builder builder) {
@@ -207,7 +206,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             private Integer taskStatus; 
 
             /**
-             * LogCode.
+             * The code of the log.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -215,7 +214,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogInstanceId.
+             * The ID of the log. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.
              */
             public Builder logInstanceId(String logInstanceId) {
                 this.logInstanceId = logInstanceId;
@@ -223,7 +222,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogMdsCode.
+             * The display code of the log.
              */
             public Builder logMdsCode(String logMdsCode) {
                 this.logMdsCode = logMdsCode;
@@ -231,7 +230,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogParams.
+             * The parameters of the log.
              */
             public Builder logParams(java.util.List < LogParams> logParams) {
                 this.logParams = logParams;
@@ -239,7 +238,11 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * Indicates whether the task for which logs are collected is enabled. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -254,25 +257,25 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("DataSourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceId")
         private String dataSourceInstanceId;
 
-        @NameInMap("DataSourceInstanceLogs")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceLogs")
         private java.util.List < DataSourceInstanceLogs> dataSourceInstanceLogs;
 
-        @NameInMap("DataSourceInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceName")
         private String dataSourceInstanceName;
 
-        @NameInMap("DataSourceInstanceRemark")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceRemark")
         private String dataSourceInstanceRemark;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
         private Data(Builder builder) {
@@ -352,7 +355,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -360,7 +363,12 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code that is used for multi-cloud environments. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud
+             * *   aliyun: Alibaba Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -368,7 +376,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInstanceId.
+             * The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.
              */
             public Builder dataSourceInstanceId(String dataSourceInstanceId) {
                 this.dataSourceInstanceId = dataSourceInstanceId;
@@ -376,7 +384,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInstanceLogs.
+             * The logs of the data source.
              */
             public Builder dataSourceInstanceLogs(java.util.List < DataSourceInstanceLogs> dataSourceInstanceLogs) {
                 this.dataSourceInstanceLogs = dataSourceInstanceLogs;
@@ -384,7 +392,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInstanceName.
+             * The name of the data source.
              */
             public Builder dataSourceInstanceName(String dataSourceInstanceName) {
                 this.dataSourceInstanceName = dataSourceInstanceName;
@@ -392,7 +400,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInstanceRemark.
+             * The remarks of the data source.
              */
             public Builder dataSourceInstanceRemark(String dataSourceInstanceRemark) {
                 this.dataSourceInstanceRemark = dataSourceInstanceRemark;
@@ -400,7 +408,7 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;

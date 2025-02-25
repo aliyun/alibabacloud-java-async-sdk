@@ -126,7 +126,7 @@ public class ListEventSourcesRequest extends Request {
         } 
 
         /**
-         * The ARN of the event source.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -144,7 +144,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.enumValueTitles
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -153,7 +153,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * $.parameters[8].schema.description
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -162,7 +162,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * $.parameters[8].schema.example
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -171,7 +171,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.example
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

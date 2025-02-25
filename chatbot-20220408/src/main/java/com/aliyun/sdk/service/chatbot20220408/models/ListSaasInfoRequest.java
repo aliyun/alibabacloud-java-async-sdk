@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSaasInfoRequest} extends {@link RequestModel}
  *
  * <p>ListSaasInfoRequest</p>
  */
 public class ListSaasInfoRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("SaasGroupCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaasGroupCodes")
     private String saasGroupCodes;
 
-    @Query
-    @NameInMap("SaasName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaasName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String saasName;
 
     private ListSaasInfoRequest(Builder builder) {
@@ -101,7 +101,10 @@ public class ListSaasInfoRequest extends Request {
         }
 
         /**
-         * SaasName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userTest</p>
          */
         public Builder saasName(String saasName) {
             this.putQueryParameter("SaasName", saasName);

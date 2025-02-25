@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountAttributesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccountAttributesRequest</p>
  */
 public class DescribeAccountAttributesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AttributeName")
-    private java.util.List < String > attributeName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttributeName")
+    private java.util.List<String> attributeName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeAccountAttributesRequest(Builder builder) {
@@ -75,7 +80,7 @@ public class DescribeAccountAttributesRequest extends Request {
     /**
      * @return attributeName
      */
-    public java.util.List < String > getAttributeName() {
+    public java.util.List<String> getAttributeName() {
         return this.attributeName;
     }
 
@@ -116,7 +121,7 @@ public class DescribeAccountAttributesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAccountAttributesRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > attributeName; 
+        private java.util.List<String> attributeName; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -148,46 +153,47 @@ public class DescribeAccountAttributesRequest extends Request {
         }
 
         /**
-         * The type of resource quota N. Valid values of N: 1 to 8. Valid values:
-         * <p>
+         * <p>The type of resource quota N. Valid values of N: 1 to 8. Valid values:</p>
+         * <ul>
+         * <li><p>instance-network-type: the available network types.</p>
+         * </li>
+         * <li><p>max-security-groups: the maximum number of security groups.</p>
+         * </li>
+         * <li><p>max-elastic-network-interfaces: the maximum number of ENIs.</p>
+         * </li>
+         * <li><p>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</p>
+         * </li>
+         * <li><p>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</p>
+         * </li>
+         * <li><p>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances.</p>
+         * </li>
+         * <li><p>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances.</p>
+         * </li>
+         * <li><p>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</p>
+         * </li>
+         * <li><p>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that have been created. (The value is deprecated.)</p>
+         * </li>
+         * <li><p>max-dedicated-hosts: the maximum number of dedicated hosts.</p>
+         * </li>
+         * <li><p>supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances.</p>
+         * </li>
+         * <li><p>max-axt-command-count: the maximum number of Cloud Assistant commands.</p>
+         * </li>
+         * <li><p>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</p>
+         * </li>
+         * <li><p>real-name-authentication: whether the account has completed the real-name verification.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> To create an ECS instance in a region in the Chinese mainland, you must complete the real-name verification.</p>
+         * </li>
+         * <li><p>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is empty by default.</p>
          * 
-         * *   instance-network-type: available network types
-         * 
-         * *   max-security-groups: the maximum number of security groups
-         * 
-         * *   max-elastic-network-interfaces: the maximum number of ENIs
-         * 
-         * *   max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances
-         * 
-         * *   max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances
-         * 
-         * *   used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances
-         * 
-         * *   used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances
-         * 
-         * *   max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks
-         * 
-         * *   used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created
-         * 
-         * *   max-dedicated-hosts: the maximum number of dedicated hosts
-         * 
-         * *   supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances
-         * 
-         * *   max-axt-command-count: the maximum number of Cloud Assistant commands
-         * 
-         * *   max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day
-         * 
-         * *   real-name-authentication: whether the account has passed the real-name verification
-         * 
-         *     **
-         * 
-         *     **Note**You must pass the real-name verification before you create an ECS instance in the Chinese mainland regions.
-         * 
-         * *   max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances
-         * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>max-security-groups</p>
          */
-        public Builder attributeName(java.util.List < String > attributeName) {
+        public Builder attributeName(java.util.List<String> attributeName) {
             this.putQueryParameter("AttributeName", attributeName);
             this.attributeName = attributeName;
             return this;
@@ -203,7 +209,11 @@ public class DescribeAccountAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +240,10 @@ public class DescribeAccountAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which the resource resides.
+         * <p>The ID of the zone in which the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

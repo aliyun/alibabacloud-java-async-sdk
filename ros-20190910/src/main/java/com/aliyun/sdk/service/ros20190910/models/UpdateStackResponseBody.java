@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStackResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateStackResponseBody</p>
  */
 public class UpdateStackResponseBody extends TeaModel {
-    @NameInMap("DryRunResult")
+    @com.aliyun.core.annotation.NameInMap("DryRunResult")
     private DryRunResult dryRunResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
     private UpdateStackResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class UpdateStackResponseBody extends TeaModel {
         private String stackId; 
 
         /**
-         * The dry run result. This parameter is returned only if DryRun is set to true.
+         * <p>The dry run result. This parameter is returned only if DryRun is set to true.</p>
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -70,7 +70,10 @@ public class UpdateStackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class UpdateStackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stack.
+         * <p>The ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -91,35 +97,41 @@ public class UpdateStackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateStackResponseBody</p>
+     */
     public static class DryRunResult extends TeaModel {
-        @NameInMap("ParametersAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersAllowedToBeModified")
         private java.util.List < String > parametersAllowedToBeModified;
 
-        @NameInMap("ParametersCauseInterruptionIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersCauseInterruptionIfModified")
         private java.util.List < String > parametersCauseInterruptionIfModified;
 
-        @NameInMap("ParametersCauseReplacementIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersCauseReplacementIfModified")
         private java.util.List < String > parametersCauseReplacementIfModified;
 
-        @NameInMap("ParametersConditionallyAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyAllowedToBeModified")
         private java.util.List < String > parametersConditionallyAllowedToBeModified;
 
-        @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         private java.util.List < String > parametersConditionallyCauseInterruptionIfModified;
 
-        @NameInMap("ParametersConditionallyCauseReplacementIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyCauseReplacementIfModified")
         private java.util.List < String > parametersConditionallyCauseReplacementIfModified;
 
-        @NameInMap("ParametersNotAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersNotAllowedToBeModified")
         private java.util.List < String > parametersNotAllowedToBeModified;
 
-        @NameInMap("ParametersUncertainlyAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyAllowedToBeModified")
         private java.util.List < String > parametersUncertainlyAllowedToBeModified;
 
-        @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified;
 
-        @NameInMap("ParametersUncertainlyCauseReplacementIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyCauseReplacementIfModified")
         private java.util.List < String > parametersUncertainlyCauseReplacementIfModified;
 
         private DryRunResult(Builder builder) {
@@ -226,7 +238,7 @@ public class UpdateStackResponseBody extends TeaModel {
             private java.util.List < String > parametersUncertainlyCauseReplacementIfModified; 
 
             /**
-             * The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.
+             * <p>The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.</p>
              */
             public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
@@ -234,10 +246,13 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes cause service interruptions.
-             * <p>
-             * > - This parameter is supported only for a small number of resource types.
-             * > - This parameter is valid only for updates on ROS stacks.
+             * <p>The parameters whose changes cause service interruptions.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is supported only for a small number of resource types.</li>
+             * <li>This parameter is valid only for updates on ROS stacks.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder parametersCauseInterruptionIfModified(java.util.List < String > parametersCauseInterruptionIfModified) {
                 this.parametersCauseInterruptionIfModified = parametersCauseInterruptionIfModified;
@@ -245,11 +260,13 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes trigger replacement updates for resources.
-             * <p>
-             * 
-             * > -  This parameter can be returned only if ReplacementOption is set to Enabled.
-             * > -  This parameter is valid only for updates on ROS stacks.
+             * <p>The parameters whose changes trigger replacement updates for resources.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
+             * <li>This parameter is valid only for updates on ROS stacks.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder parametersCauseReplacementIfModified(java.util.List < String > parametersCauseReplacementIfModified) {
                 this.parametersCauseReplacementIfModified = parametersCauseReplacementIfModified;
@@ -257,7 +274,7 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.
+             * <p>The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.</p>
              */
             public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
@@ -265,11 +282,13 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes cause service interruptions under specific conditions.
-             * <p>
-             * 
-             * > - This parameter is supported only for a small number of resource types.
-             * > -  This parameter is valid only for updates on ROS stacks.
+             * <p>The parameters whose changes cause service interruptions under specific conditions.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is supported only for a small number of resource types.</li>
+             * <li>This parameter is valid only for updates on ROS stacks.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List < String > parametersConditionallyCauseInterruptionIfModified) {
                 this.parametersConditionallyCauseInterruptionIfModified = parametersConditionallyCauseInterruptionIfModified;
@@ -277,11 +296,13 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes trigger replacement updates for resources under specific conditions.
-             * <p>
-             * 
-             * > - This parameter can be returned only if ReplacementOption is set to Enabled.
-             * > - This parameter is valid only for updates on ROS stacks.
+             * <p>The parameters whose changes trigger replacement updates for resources under specific conditions.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
+             * <li>This parameter is valid only for updates on ROS stacks.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder parametersConditionallyCauseReplacementIfModified(java.util.List < String > parametersConditionallyCauseReplacementIfModified) {
                 this.parametersConditionallyCauseReplacementIfModified = parametersConditionallyCauseReplacementIfModified;
@@ -289,7 +310,7 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.
+             * <p>The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.</p>
              */
             public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;
@@ -297,7 +318,7 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.
+             * <p>The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.</p>
              */
             public Builder parametersUncertainlyAllowedToBeModified(java.util.List < String > parametersUncertainlyAllowedToBeModified) {
                 this.parametersUncertainlyAllowedToBeModified = parametersUncertainlyAllowedToBeModified;
@@ -305,11 +326,13 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes cause service interruptions under uncertain conditions.
-             * <p>
-             * 
-             * > - This parameter is supported only for a small number of resource types.
-             * > - This parameter is valid only for updates on ROS stacks.
+             * <p>The parameters whose changes cause service interruptions under uncertain conditions.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is supported only for a small number of resource types.</li>
+             * <li>This parameter is valid only for updates on ROS stacks.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List < String > parametersUncertainlyCauseInterruptionIfModified) {
                 this.parametersUncertainlyCauseInterruptionIfModified = parametersUncertainlyCauseInterruptionIfModified;
@@ -317,11 +340,13 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters whose changes trigger replacement updates for resources under uncertain conditions.
-             * <p>
-             * 
-             * > - This parameter can be returned only if ReplacementOption is set to Enabled.
-             * > - This parameter is valid only for updates on ROS stacks.
+             * <p>The parameters whose changes trigger replacement updates for resources under uncertain conditions.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
+             * <li>This parameter is valid only for updates on ROS stacks.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder parametersUncertainlyCauseReplacementIfModified(java.util.List < String > parametersUncertainlyCauseReplacementIfModified) {
                 this.parametersUncertainlyCauseReplacementIfModified = parametersUncertainlyCauseReplacementIfModified;

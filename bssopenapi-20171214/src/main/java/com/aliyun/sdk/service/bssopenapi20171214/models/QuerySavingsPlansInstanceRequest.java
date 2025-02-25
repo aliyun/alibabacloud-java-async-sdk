@@ -1,51 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansInstanceRequest} extends {@link RequestModel}
  *
  * <p>QuerySavingsPlansInstanceRequest</p>
  */
 public class QuerySavingsPlansInstanceRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    private String commodityCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Locale")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locale")
     private String locale;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private QuerySavingsPlansInstanceRequest(Builder builder) {
         super(builder);
+        this.commodityCode = builder.commodityCode;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.locale = builder.locale;
@@ -67,6 +77,13 @@ public class QuerySavingsPlansInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return commodityCode
+     */
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     /**
@@ -121,11 +138,12 @@ public class QuerySavingsPlansInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<QuerySavingsPlansInstanceRequest, Builder> {
+        private String commodityCode; 
         private String endTime; 
         private String instanceId; 
         private String locale; 
@@ -133,7 +151,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         private Integer pageSize; 
         private String startTime; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -141,6 +159,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
 
         private Builder(QuerySavingsPlansInstanceRequest request) {
             super(request);
+            this.commodityCode = request.commodityCode;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.locale = request.locale;
@@ -152,7 +171,19 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * CommodityCode.
+         */
+        public Builder commodityCode(String commodityCode) {
+            this.putQueryParameter("CommodityCode", commodityCode);
+            this.commodityCode = commodityCode;
+            return this;
+        }
+
+        /**
+         * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-01 00:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +192,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the savings plan instance.
+         * <p>The ID of the savings plan instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-xxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,11 +204,14 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The language of the return data. Valid values:
-         * <p>
+         * <p>The language of the return data. Valid values:</p>
+         * <ul>
+         * <li>ZH: Chinese</li>
+         * <li>EN: English</li>
+         * </ul>
          * 
-         * *   ZH: Chinese
-         * *   EN: English
+         * <strong>example:</strong>
+         * <p>ZH</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -183,7 +220,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -192,7 +232,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,7 +244,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -210,11 +256,14 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The status of the Instance. 
-         * <p>
+         * <p>The status of the Instance. </p>
+         * <ul>
+         * <li>NORMAL</li>
+         * <li>RELEASE</li>
+         * </ul>
          * 
-         * *  NORMAL
-         * * RELEASE
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -223,9 +272,9 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -238,11 +287,17 @@ public class QuerySavingsPlansInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySavingsPlansInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -277,7 +332,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to query.
+             * <p>The key of the tag to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -285,7 +343,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             }
 
             /**
-             * The value of the tag to query.
+             * <p>The value of the tag to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>001</p>
              */
             public Builder value(String value) {
                 this.value = value;

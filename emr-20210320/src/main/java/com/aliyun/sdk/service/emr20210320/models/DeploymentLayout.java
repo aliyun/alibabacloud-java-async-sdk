@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeploymentLayout} extends {@link TeaModel}
  *
  * <p>DeploymentLayout</p>
  */
 public class DeploymentLayout extends TeaModel {
-    @NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
     private String applicationName;
 
-    @NameInMap("ComponentName")
+    @com.aliyun.core.annotation.NameInMap("ComponentName")
     private String componentName;
 
-    @NameInMap("NodeSelector")
+    @com.aliyun.core.annotation.NameInMap("NodeSelector")
     private NodeSelector nodeSelector;
 
     private DeploymentLayout(Builder builder) {

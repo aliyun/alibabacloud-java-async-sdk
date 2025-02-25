@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIPv6TranslatorAclListEntryRequest} extends {@link RequestModel}
  *
  * <p>ModifyIPv6TranslatorAclListEntryRequest</p>
  */
 public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
-    @Query
-    @NameInMap("AclEntryComment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclEntryComment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclEntryComment;
 
-    @Query
-    @NameInMap("AclEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclEntryId;
 
-    @Query
-    @NameInMap("AclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyIPv6TranslatorAclListEntryRequest(Builder builder) {
@@ -156,10 +161,12 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         } 
 
         /**
-         * The remarks of the ACL rule.
-         * <p>
+         * <p>The remarks of the ACL rule.</p>
+         * <p>It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * It must be 2 to 100 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>client IP</p>
          */
         public Builder aclEntryComment(String aclEntryComment) {
             this.putQueryParameter("AclEntryComment", aclEntryComment);
@@ -168,7 +175,11 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the ACL rule to which the IP entry belongs.
+         * <p>The ID of the ACL rule to which the IP entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transaclentry-bp1jzyn7ra8pyxehd****</p>
          */
         public Builder aclEntryId(String aclEntryId) {
             this.putQueryParameter("AclEntryId", aclEntryId);
@@ -177,7 +188,11 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the ACL to which the IP entry belongs.
+         * <p>The ID of the ACL to which the IP entry belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1b4z3tleyhq1s50****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -204,7 +219,11 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends Request {
         }
 
         /**
-         * The region of the ACL.
+         * <p>The region of the ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductDimensionGroupsResponseBody</p>
  */
 public class ListProductDimensionGroupsResponseBody extends TeaModel {
-    @NameInMap("DimensionGroups")
+    @com.aliyun.core.annotation.NameInMap("DimensionGroups")
     private java.util.List < DimensionGroups> dimensionGroups;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListProductDimensionGroupsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
     } 
 
     public static class DimensionGroups extends TeaModel {
-        @NameInMap("DimensionKeys")
+        @com.aliyun.core.annotation.NameInMap("DimensionKeys")
         private java.util.List < String > dimensionKeys;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
         private DimensionGroups(Builder builder) {

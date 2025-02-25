@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerPlaybookResponseBody} extends {@link TeaModel}
  *
  * <p>TriggerPlaybookResponseBody</p>
  */
 public class TriggerPlaybookResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TriggerUuid")
+    @com.aliyun.core.annotation.NameInMap("TriggerUuid")
     private String triggerUuid;
 
     private TriggerPlaybookResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class TriggerPlaybookResponseBody extends TeaModel {
         private String triggerUuid; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD5A8DB6-A42C-532B-BCE8-83E69550CD59</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class TriggerPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * TriggerUuid.
+         * <p>The running UUID of the playbook. This parameter is used to query the running result of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55E63C57-D6C8-5036-A770-5CB10AC807AA</p>
          */
         public Builder triggerUuid(String triggerUuid) {
             this.triggerUuid = triggerUuid;

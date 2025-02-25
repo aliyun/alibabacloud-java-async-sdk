@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLgfResponseBody} extends {@link TeaModel}
  *
  * <p>ListLgfResponseBody</p>
  */
 public class ListLgfResponseBody extends TeaModel {
-    @NameInMap("Lgfs")
+    @com.aliyun.core.annotation.NameInMap("Lgfs")
     private java.util.List < Lgfs> lgfs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLgfResponseBody(Builder builder) {
@@ -131,20 +131,26 @@ public class ListLgfResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLgfResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLgfResponseBody</p>
+     */
     public static class Lgfs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private Long intentId;
 
-        @NameInMap("LgfId")
+        @com.aliyun.core.annotation.NameInMap("LgfId")
         private Long lgfId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("RuleText")
+        @com.aliyun.core.annotation.NameInMap("RuleText")
         private String ruleText;
 
         private Lgfs(Builder builder) {
@@ -222,7 +228,10 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * LGF ID
+             * <p>LGF ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder lgfId(Long lgfId) {
                 this.lgfId = lgfId;

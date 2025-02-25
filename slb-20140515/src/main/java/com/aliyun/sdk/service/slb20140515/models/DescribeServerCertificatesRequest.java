@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServerCertificatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeServerCertificatesRequest</p>
  */
 public class DescribeServerCertificatesRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ServerCertificateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
     private String serverCertificateId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeServerCertificatesRequest(Builder builder) {
         super(builder);
@@ -121,7 +126,7 @@ public class DescribeServerCertificatesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -133,7 +138,7 @@ public class DescribeServerCertificatesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String serverCertificateId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -170,12 +175,14 @@ public class DescribeServerCertificatesRequest extends Request {
         }
 
         /**
-         * The region where the CLB instances are deployed.
-         * <p>
+         * <p>The region where the CLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <blockquote>
+         * <p> If the endpoint of the selected region is slb.aliyuncs.com, you must specify <code>RegionId</code>.</p>
+         * </blockquote>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
-         * 
-         * >  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +191,10 @@ public class DescribeServerCertificatesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -211,7 +221,10 @@ public class DescribeServerCertificatesRequest extends Request {
         }
 
         /**
-         * The ID of the server certificate.
+         * <p>The server certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12315790*******_166f8204689_1714763408_709981430</p>
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.putQueryParameter("ServerCertificateId", serverCertificateId);
@@ -220,9 +233,9 @@ public class DescribeServerCertificatesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -235,11 +248,17 @@ public class DescribeServerCertificatesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServerCertificatesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeServerCertificatesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -274,7 +293,11 @@ public class DescribeServerCertificatesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
+             * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs</code>:. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -282,7 +305,11 @@ public class DescribeServerCertificatesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value cannot be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

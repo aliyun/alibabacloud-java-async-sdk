@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AliyunAccounts} extends {@link TeaModel}
  *
  * <p>AliyunAccounts</p>
  */
 public class AliyunAccounts extends TeaModel {
-    @NameInMap("AliyunUid")
+    @com.aliyun.core.annotation.NameInMap("AliyunUid")
     private String aliyunUid;
 
-    @NameInMap("EmployeeId")
+    @com.aliyun.core.annotation.NameInMap("EmployeeId")
     private String employeeId;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
     private AliyunAccounts(Builder builder) {

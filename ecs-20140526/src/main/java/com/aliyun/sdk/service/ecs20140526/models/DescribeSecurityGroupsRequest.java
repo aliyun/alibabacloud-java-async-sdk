@@ -1,102 +1,111 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityGroupsRequest</p>
  */
 public class DescribeSecurityGroupsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("FuzzyQuery")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuzzyQuery")
     private Boolean fuzzyQuery;
 
-    @Query
-    @NameInMap("IsQueryEcsCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsQueryEcsCount")
     private Boolean isQueryEcsCount;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     private String securityGroupIds;
 
-    @Query
-    @NameInMap("SecurityGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
 
-    @Query
-    @NameInMap("SecurityGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupType")
     private String securityGroupType;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeSecurityGroupsRequest(Builder builder) {
@@ -120,6 +129,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         this.securityGroupIds = builder.securityGroupIds;
         this.securityGroupName = builder.securityGroupName;
         this.securityGroupType = builder.securityGroupType;
+        this.serviceManaged = builder.serviceManaged;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -271,9 +281,16 @@ public class DescribeSecurityGroupsRequest extends Request {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -304,7 +321,8 @@ public class DescribeSecurityGroupsRequest extends Request {
         private String securityGroupIds; 
         private String securityGroupName; 
         private String securityGroupType; 
-        private java.util.List < Tag> tag; 
+        private Boolean serviceManaged; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -332,6 +350,7 @@ public class DescribeSecurityGroupsRequest extends Request {
             this.securityGroupIds = request.securityGroupIds;
             this.securityGroupName = request.securityGroupName;
             this.securityGroupType = request.securityGroupType;
+            this.serviceManaged = request.serviceManaged;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
@@ -346,13 +365,15 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -361,7 +382,12 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder fuzzyQuery(Boolean fuzzyQuery) {
             this.putQueryParameter("FuzzyQuery", fuzzyQuery);
@@ -370,7 +396,13 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * <p>Specifies whether to query the capacity of the security group. If you set this parameter to True, the <code>EcsCount</code> and <code>AvailableInstanceAmount</code> values in the response are valid.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder isQueryEcsCount(Boolean isQueryEcsCount) {
             this.putQueryParameter("IsQueryEcsCount", isQueryEcsCount);
@@ -379,12 +411,12 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. If you specify this parameter, both `MaxResults` and `NextToken` are used for a paged query.
-         * <p>
+         * <p>The maximum number of entries per page. If you specify this parameter, both <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -393,11 +425,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The network type of the security group. Valid values:
-         * <p>
+         * <p>The network type of the security group. Valid values:</p>
+         * <ul>
+         * <li>vpc</li>
+         * <li>classic</li>
+         * </ul>
          * 
-         * *   vpc
-         * *   classic
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -406,7 +441,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9cc11</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -433,14 +471,12 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
-         * 
-         * > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -449,14 +485,12 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
-         * 
-         * > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -465,7 +499,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -474,10 +512,13 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
-         * <p>
+         * <p>The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the most recent resource group list.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is configured.</p>
+         * </blockquote>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of how this parameter is configured.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -504,7 +545,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The security group ID.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -513,7 +557,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The security group IDs. Set this parameter to a JSON array that consists of up to 100 security group IDs. Separate the security group IDs with commas (,).
+         * <p>The security group IDs. Set this parameter to a JSON array that consists of up to 100 security group IDs. Separate the security group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;,....]</p>
          */
         public Builder securityGroupIds(String securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -522,7 +569,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The name of the security group.
+         * <p>The name of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SGTestName</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -531,13 +581,17 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The type of the security group. Valid values:
-         * <p>
+         * <p>The type of the security group. Valid values:</p>
+         * <ul>
+         * <li>normal: basic security group</li>
+         * <li>enterprise: advanced security group</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, both basic and advanced security groups are queried.</p>
+         * </blockquote>
          * 
-         * *   normal: basic security group
-         * *   enterprise: advanced security group
-         * 
-         * > If you do not specify this parameter, both basic and advanced security groups are queried.
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
@@ -546,16 +600,35 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * The tags to add to the security groups.
+         * <p>Specifies whether to query managed security groups. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * <p>The tags to add to the security groups.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the security group belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the security group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp67acfmxazb4p****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -570,11 +643,17 @@ public class DescribeSecurityGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -609,10 +688,11 @@ public class DescribeSecurityGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the security group. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N to add to the security group. Valid values of N: 1 to 20.</p>
+             * <p>Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -620,7 +700,10 @@ public class DescribeSecurityGroupsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the security group. Valid values of N: 1 to 20.
+             * <p>The value of tag N to add to the security group. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

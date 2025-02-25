@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSetDcdnIpaDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>BatchSetDcdnIpaDomainConfigsRequest</p>
  */
 public class BatchSetDcdnIpaDomainConfigsRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("Functions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Functions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functions;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private BatchSetDcdnIpaDomainConfigsRequest(Builder builder) {
@@ -112,7 +112,11 @@ public class BatchSetDcdnIpaDomainConfigsRequest extends Request {
         } 
 
         /**
-         * The domain names accelerated by IPA. Separate multiple domain names with commas (,).
+         * <p>The domain names accelerated by IPA. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,7 +125,11 @@ public class BatchSetDcdnIpaDomainConfigsRequest extends Request {
         }
 
         /**
-         * The list of features. `[{"functionArgs":[{"argName":"parameter name","argValue":"parameter value"}],"functionName":"feature name"}]`
+         * <p>The list of features. <code>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;parameter name&quot;,&quot;argValue&quot;:&quot;parameter value&quot;}],&quot;functionName&quot;:&quot;feature name&quot;}]</code></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;domain_name&quot;,&quot;argValue&quot;:&quot;api.*com&quot;}],&quot;functionName&quot;:&quot;protogw&quot;}]</p>
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);

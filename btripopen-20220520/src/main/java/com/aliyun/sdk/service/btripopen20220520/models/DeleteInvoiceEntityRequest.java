@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInvoiceEntityRequest} extends {@link RequestModel}
  *
  * <p>DeleteInvoiceEntityRequest</p>
  */
 public class DeleteInvoiceEntityRequest extends Request {
-    @Query
-    @NameInMap("del_all")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("del_all")
     private Boolean delAll;
 
-    @Query
-    @NameInMap("entities")
-    private java.util.List < Entities> entities;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("entities")
+    private java.util.List<Entities> entities;
 
-    @Query
-    @NameInMap("third_part_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("third_part_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private DeleteInvoiceEntityRequest(Builder builder) {
@@ -60,7 +65,7 @@ public class DeleteInvoiceEntityRequest extends Request {
     /**
      * @return entities
      */
-    public java.util.List < Entities> getEntities() {
+    public java.util.List<Entities> getEntities() {
         return this.entities;
     }
 
@@ -80,7 +85,7 @@ public class DeleteInvoiceEntityRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteInvoiceEntityRequest, Builder> {
         private Boolean delAll; 
-        private java.util.List < Entities> entities; 
+        private java.util.List<Entities> entities; 
         private String thirdPartId; 
         private String xAcsBtripCorpToken; 
 
@@ -108,7 +113,7 @@ public class DeleteInvoiceEntityRequest extends Request {
         /**
          * entities.
          */
-        public Builder entities(java.util.List < Entities> entities) {
+        public Builder entities(java.util.List<Entities> entities) {
             String entitiesShrink = shrink(entities, "entities", "json");
             this.putQueryParameter("entities", entitiesShrink);
             this.entities = entities;
@@ -116,7 +121,10 @@ public class DeleteInvoiceEntityRequest extends Request {
         }
 
         /**
-         * third_part_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340049</p>
          */
         public Builder thirdPartId(String thirdPartId) {
             this.putQueryParameter("third_part_id", thirdPartId);
@@ -140,11 +148,17 @@ public class DeleteInvoiceEntityRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteInvoiceEntityRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteInvoiceEntityRequest</p>
+     */
     public static class Entities extends TeaModel {
-        @NameInMap("entity_id")
+        @com.aliyun.core.annotation.NameInMap("entity_id")
         private String entityId;
 
-        @NameInMap("entity_type")
+        @com.aliyun.core.annotation.NameInMap("entity_type")
         private String entityType;
 
         private Entities(Builder builder) {

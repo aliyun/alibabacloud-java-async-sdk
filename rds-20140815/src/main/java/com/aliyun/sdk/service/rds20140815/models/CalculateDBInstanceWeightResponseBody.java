@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CalculateDBInstanceWeightResponseBody} extends {@link TeaModel}
  *
  * <p>CalculateDBInstanceWeightResponseBody</p>
  */
 public class CalculateDBInstanceWeightResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CalculateDBInstanceWeightResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of information about the system-assigned read weight.
+         * <p>An array that consists of information about the system-assigned read weight.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CalculateDBInstanceWeightResponseBody} extends {@link TeaModel}
+     *
+     * <p>CalculateDBInstanceWeightResponseBody</p>
+     */
     public static class DBInstanceWeight extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("ReadonlyInstanceSQLDelayedTime")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceSQLDelayedTime")
         private String readonlyInstanceSQLDelayedTime;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private DBInstanceWeight(Builder builder) {
@@ -134,7 +148,10 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The instance ID
+             * <p>The instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5xxxxxxx</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -142,11 +159,14 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values:
-             * <p>
+             * <p>The type of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: primary instance</li>
+             * <li><strong>Readonly</strong>: read-only instance</li>
+             * </ul>
              * 
-             * *   **Master**: primary instance
-             * *   **Readonly**: read-only instance
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -154,7 +174,10 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the **ReadonlyInstanceSQLDelayedTime** parameter. Unit: seconds.
+             * <p>The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the <strong>ReadonlyInstanceSQLDelayedTime</strong> parameter. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder readonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {
                 this.readonlyInstanceSQLDelayedTime = readonlyInstanceSQLDelayedTime;
@@ -162,7 +185,10 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * The read weight that the system calculates in real time for the instance.
+             * <p>The read weight that the system calculates in real time for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -176,9 +202,15 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CalculateDBInstanceWeightResponseBody} extends {@link TeaModel}
+     *
+     * <p>CalculateDBInstanceWeightResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceWeight")
-        private java.util.List < DBInstanceWeight> DBInstanceWeight;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceWeight")
+        private java.util.List<DBInstanceWeight> DBInstanceWeight;
 
         private Items(Builder builder) {
             this.DBInstanceWeight = builder.DBInstanceWeight;
@@ -195,17 +227,17 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         /**
          * @return DBInstanceWeight
          */
-        public java.util.List < DBInstanceWeight> getDBInstanceWeight() {
+        public java.util.List<DBInstanceWeight> getDBInstanceWeight() {
             return this.DBInstanceWeight;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceWeight> DBInstanceWeight; 
+            private java.util.List<DBInstanceWeight> DBInstanceWeight; 
 
             /**
              * DBInstanceWeight.
              */
-            public Builder DBInstanceWeight(java.util.List < DBInstanceWeight> DBInstanceWeight) {
+            public Builder DBInstanceWeight(java.util.List<DBInstanceWeight> DBInstanceWeight) {
                 this.DBInstanceWeight = DBInstanceWeight;
                 return this;
             }

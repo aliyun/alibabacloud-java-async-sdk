@@ -89,12 +89,12 @@ public class DeleteClusterTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteClusterTemplateRequest response) {
-            super(response);
-            this.bizId = response.bizId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteClusterTemplateRequest request) {
+            super(request);
+            this.bizId = request.bizId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

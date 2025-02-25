@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomerListResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomerListResponseBody</p>
  */
 public class GetCustomerListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCustomerListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetCustomerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,9 +152,15 @@ public class GetCustomerListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomerListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomerListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("UidList")
-        private java.util.List < String > uidList;
+        @com.aliyun.core.annotation.NameInMap("UidList")
+        private java.util.List<String> uidList;
 
         private Data(Builder builder) {
             this.uidList = builder.uidList;
@@ -154,17 +177,17 @@ public class GetCustomerListResponseBody extends TeaModel {
         /**
          * @return uidList
          */
-        public java.util.List < String > getUidList() {
+        public java.util.List<String> getUidList() {
             return this.uidList;
         }
 
         public static final class Builder {
-            private java.util.List < String > uidList; 
+            private java.util.List<String> uidList; 
 
             /**
-             * The list of customer IDs.
+             * <p>The list of customer IDs.</p>
              */
-            public Builder uidList(java.util.List < String > uidList) {
+            public Builder uidList(java.util.List<String> uidList) {
                 this.uidList = uidList;
                 return this;
             }

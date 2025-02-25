@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantResponseBody</p>
  */
 public class DescribeTenantResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tenant")
+    @com.aliyun.core.annotation.NameInMap("Tenant")
     private Tenant tenant;
 
     private DescribeTenantResponseBody(Builder builder) {
@@ -71,383 +70,14 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     } 
 
-    public static class TenantConnections extends TeaModel {
-        @NameInMap("AddressType")
-        private String addressType;
-
-        @NameInMap("ConnectionZones")
-        private java.util.List < String > connectionZones;
-
-        @NameInMap("EnableTransactionSplit")
-        private Boolean enableTransactionSplit;
-
-        @NameInMap("InternetAddress")
-        private String internetAddress;
-
-        @NameInMap("InternetAddressStatus")
-        private String internetAddressStatus;
-
-        @NameInMap("InternetPort")
-        private Integer internetPort;
-
-        @NameInMap("IntranetAddress")
-        private String intranetAddress;
-
-        @NameInMap("IntranetAddressMasterZoneId")
-        private String intranetAddressMasterZoneId;
-
-        @NameInMap("IntranetAddressSlaveZoneId")
-        private String intranetAddressSlaveZoneId;
-
-        @NameInMap("IntranetAddressStatus")
-        private String intranetAddressStatus;
-
-        @NameInMap("IntranetPort")
-        private Integer intranetPort;
-
-        @NameInMap("MaxConnectionNum")
-        private Long maxConnectionNum;
-
-        @NameInMap("ParallelQueryDegree")
-        private Long parallelQueryDegree;
-
-        @NameInMap("TenantEndpointId")
-        private String tenantEndpointId;
-
-        @NameInMap("TransactionSplit")
-        private Boolean transactionSplit;
-
-        @NameInMap("VSwitchId")
-        private String vSwitchId;
-
-        @NameInMap("VpcId")
-        private String vpcId;
-
-        private TenantConnections(Builder builder) {
-            this.addressType = builder.addressType;
-            this.connectionZones = builder.connectionZones;
-            this.enableTransactionSplit = builder.enableTransactionSplit;
-            this.internetAddress = builder.internetAddress;
-            this.internetAddressStatus = builder.internetAddressStatus;
-            this.internetPort = builder.internetPort;
-            this.intranetAddress = builder.intranetAddress;
-            this.intranetAddressMasterZoneId = builder.intranetAddressMasterZoneId;
-            this.intranetAddressSlaveZoneId = builder.intranetAddressSlaveZoneId;
-            this.intranetAddressStatus = builder.intranetAddressStatus;
-            this.intranetPort = builder.intranetPort;
-            this.maxConnectionNum = builder.maxConnectionNum;
-            this.parallelQueryDegree = builder.parallelQueryDegree;
-            this.tenantEndpointId = builder.tenantEndpointId;
-            this.transactionSplit = builder.transactionSplit;
-            this.vSwitchId = builder.vSwitchId;
-            this.vpcId = builder.vpcId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TenantConnections create() {
-            return builder().build();
-        }
-
-        /**
-         * @return addressType
-         */
-        public String getAddressType() {
-            return this.addressType;
-        }
-
-        /**
-         * @return connectionZones
-         */
-        public java.util.List < String > getConnectionZones() {
-            return this.connectionZones;
-        }
-
-        /**
-         * @return enableTransactionSplit
-         */
-        public Boolean getEnableTransactionSplit() {
-            return this.enableTransactionSplit;
-        }
-
-        /**
-         * @return internetAddress
-         */
-        public String getInternetAddress() {
-            return this.internetAddress;
-        }
-
-        /**
-         * @return internetAddressStatus
-         */
-        public String getInternetAddressStatus() {
-            return this.internetAddressStatus;
-        }
-
-        /**
-         * @return internetPort
-         */
-        public Integer getInternetPort() {
-            return this.internetPort;
-        }
-
-        /**
-         * @return intranetAddress
-         */
-        public String getIntranetAddress() {
-            return this.intranetAddress;
-        }
-
-        /**
-         * @return intranetAddressMasterZoneId
-         */
-        public String getIntranetAddressMasterZoneId() {
-            return this.intranetAddressMasterZoneId;
-        }
-
-        /**
-         * @return intranetAddressSlaveZoneId
-         */
-        public String getIntranetAddressSlaveZoneId() {
-            return this.intranetAddressSlaveZoneId;
-        }
-
-        /**
-         * @return intranetAddressStatus
-         */
-        public String getIntranetAddressStatus() {
-            return this.intranetAddressStatus;
-        }
-
-        /**
-         * @return intranetPort
-         */
-        public Integer getIntranetPort() {
-            return this.intranetPort;
-        }
-
-        /**
-         * @return maxConnectionNum
-         */
-        public Long getMaxConnectionNum() {
-            return this.maxConnectionNum;
-        }
-
-        /**
-         * @return parallelQueryDegree
-         */
-        public Long getParallelQueryDegree() {
-            return this.parallelQueryDegree;
-        }
-
-        /**
-         * @return tenantEndpointId
-         */
-        public String getTenantEndpointId() {
-            return this.tenantEndpointId;
-        }
-
-        /**
-         * @return transactionSplit
-         */
-        public Boolean getTransactionSplit() {
-            return this.transactionSplit;
-        }
-
-        /**
-         * @return vSwitchId
-         */
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        /**
-         * @return vpcId
-         */
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public static final class Builder {
-            private String addressType; 
-            private java.util.List < String > connectionZones; 
-            private Boolean enableTransactionSplit; 
-            private String internetAddress; 
-            private String internetAddressStatus; 
-            private Integer internetPort; 
-            private String intranetAddress; 
-            private String intranetAddressMasterZoneId; 
-            private String intranetAddressSlaveZoneId; 
-            private String intranetAddressStatus; 
-            private Integer intranetPort; 
-            private Long maxConnectionNum; 
-            private Long parallelQueryDegree; 
-            private String tenantEndpointId; 
-            private Boolean transactionSplit; 
-            private String vSwitchId; 
-            private String vpcId; 
-
-            /**
-             * The primary zone of the tenant.
-             */
-            public Builder addressType(String addressType) {
-                this.addressType = addressType;
-                return this;
-            }
-
-            /**
-             * The Internet address for accessing the tenant.
-             */
-            public Builder connectionZones(java.util.List < String > connectionZones) {
-                this.connectionZones = connectionZones;
-                return this;
-            }
-
-            /**
-             * EnableTransactionSplit.
-             */
-            public Builder enableTransactionSplit(Boolean enableTransactionSplit) {
-                this.enableTransactionSplit = enableTransactionSplit;
-                return this;
-            }
-
-            /**
-             * The ID of the VPC.
-             */
-            public Builder internetAddress(String internetAddress) {
-                this.internetAddress = internetAddress;
-                return this;
-            }
-
-            /**
-             * 实例系列
-             */
-            public Builder internetAddressStatus(String internetAddressStatus) {
-                this.internetAddressStatus = internetAddressStatus;
-                return this;
-            }
-
-            /**
-             * 实例类型
-             */
-            public Builder internetPort(Integer internetPort) {
-                this.internetPort = internetPort;
-                return this;
-            }
-
-            /**
-             * The deployment type of the cluster. Valid values:  
-             * <p>
-             * - multiple: multi-IDC deployment   
-             * - single: single-IDC deployment   
-             * - dual: dual-IDC deployment
-             */
-            public Builder intranetAddress(String intranetAddress) {
-                this.intranetAddress = intranetAddress;
-                return this;
-            }
-
-            /**
-             * PayCore business database
-             */
-            public Builder intranetAddressMasterZoneId(String intranetAddressMasterZoneId) {
-                this.intranetAddressMasterZoneId = intranetAddressMasterZoneId;
-                return this;
-            }
-
-            /**
-             * The total number of CPU cores of the tenant.
-             */
-            public Builder intranetAddressSlaveZoneId(String intranetAddressSlaveZoneId) {
-                this.intranetAddressSlaveZoneId = intranetAddressSlaveZoneId;
-                return this;
-            }
-
-            /**
-             * 付费类型
-             */
-            public Builder intranetAddressStatus(String intranetAddressStatus) {
-                this.intranetAddressStatus = intranetAddressStatus;
-                return this;
-            }
-
-            /**
-             * The ID of the tenant.
-             */
-            public Builder intranetPort(Integer intranetPort) {
-                this.intranetPort = intranetPort;
-                return this;
-            }
-
-            /**
-             * MaxConnectionNum.
-             */
-            public Builder maxConnectionNum(Long maxConnectionNum) {
-                this.maxConnectionNum = maxConnectionNum;
-                return this;
-            }
-
-            /**
-             * ParallelQueryDegree.
-             */
-            public Builder parallelQueryDegree(Long parallelQueryDegree) {
-                this.parallelQueryDegree = parallelQueryDegree;
-                return this;
-            }
-
-            /**
-             * TenantEndpointId.
-             */
-            public Builder tenantEndpointId(String tenantEndpointId) {
-                this.tenantEndpointId = tenantEndpointId;
-                return this;
-            }
-
-            /**
-             * The primary zone corresponding to the address for accessing the tenant.
-             */
-            public Builder transactionSplit(Boolean transactionSplit) {
-                this.transactionSplit = transactionSplit;
-                return this;
-            }
-
-            /**
-             * The connection access information of the tenant.
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * The service mode of the connection address. Valid values:  
-             * <p>
-             * ReadWrite: provides strong-consistency read and write services.   
-             * ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
-             * Clog: provides transaction log services.
-             */
-            public Builder vpcId(String vpcId) {
-                this.vpcId = vpcId;
-                return this;
-            }
-
-            public TenantConnections build() {
-                return new TenantConnections(this);
-            } 
-
-        } 
-
-    }
     public static class CapacityUnit extends TeaModel {
-        @NameInMap("MaxCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
-        @NameInMap("MinCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
         private Integer minCapacityUnit;
 
-        @NameInMap("UsedCapacit")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacit")
         private Integer usedCapacit;
 
         private CapacityUnit(Builder builder) {
@@ -522,13 +152,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class Cpu extends TeaModel {
-        @NameInMap("TotalCpu")
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Float totalCpu;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Float unitCpu;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Float usedCpu;
 
         private Cpu(Builder builder) {
@@ -542,6 +172,1061 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static Cpu create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalCpu
+         */
+        public Float getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        /**
+         * @return unitCpu
+         */
+        public Float getUnitCpu() {
+            return this.unitCpu;
+        }
+
+        /**
+         * @return usedCpu
+         */
+        public Float getUsedCpu() {
+            return this.usedCpu;
+        }
+
+        public static final class Builder {
+            private Float totalCpu; 
+            private Float unitCpu; 
+            private Float usedCpu; 
+
+            /**
+             * TotalCpu.
+             */
+            public Builder totalCpu(Float totalCpu) {
+                this.totalCpu = totalCpu;
+                return this;
+            }
+
+            /**
+             * UnitCpu.
+             */
+            public Builder unitCpu(Float unitCpu) {
+                this.unitCpu = unitCpu;
+                return this;
+            }
+
+            /**
+             * UsedCpu.
+             */
+            public Builder usedCpu(Float usedCpu) {
+                this.usedCpu = usedCpu;
+                return this;
+            }
+
+            public Cpu build() {
+                return new Cpu(this);
+            } 
+
+        } 
+
+    }
+    public static class DiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
+        private Float usedDiskSize;
+
+        private DiskSize(Builder builder) {
+            this.usedDiskSize = builder.usedDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return usedDiskSize
+         */
+        public Float getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+        public static final class Builder {
+            private Float usedDiskSize; 
+
+            /**
+             * UsedDiskSize.
+             */
+            public Builder usedDiskSize(Float usedDiskSize) {
+                this.usedDiskSize = usedDiskSize;
+                return this;
+            }
+
+            public DiskSize build() {
+                return new DiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class LogDiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalLogDisk")
+        private Integer totalLogDisk;
+
+        @com.aliyun.core.annotation.NameInMap("UnitLogDisk")
+        private Integer unitLogDisk;
+
+        private LogDiskSize(Builder builder) {
+            this.totalLogDisk = builder.totalLogDisk;
+            this.unitLogDisk = builder.unitLogDisk;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalLogDisk
+         */
+        public Integer getTotalLogDisk() {
+            return this.totalLogDisk;
+        }
+
+        /**
+         * @return unitLogDisk
+         */
+        public Integer getUnitLogDisk() {
+            return this.unitLogDisk;
+        }
+
+        public static final class Builder {
+            private Integer totalLogDisk; 
+            private Integer unitLogDisk; 
+
+            /**
+             * TotalLogDisk.
+             */
+            public Builder totalLogDisk(Integer totalLogDisk) {
+                this.totalLogDisk = totalLogDisk;
+                return this;
+            }
+
+            /**
+             * UnitLogDisk.
+             */
+            public Builder unitLogDisk(Integer unitLogDisk) {
+                this.unitLogDisk = unitLogDisk;
+                return this;
+            }
+
+            public LogDiskSize build() {
+                return new LogDiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class Memory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
+        private Float totalMemory;
+
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
+        private Float unitMemory;
+
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
+        private Float usedMemory;
+
+        private Memory(Builder builder) {
+            this.totalMemory = builder.totalMemory;
+            this.unitMemory = builder.unitMemory;
+            this.usedMemory = builder.usedMemory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Memory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalMemory
+         */
+        public Float getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        /**
+         * @return unitMemory
+         */
+        public Float getUnitMemory() {
+            return this.unitMemory;
+        }
+
+        /**
+         * @return usedMemory
+         */
+        public Float getUsedMemory() {
+            return this.usedMemory;
+        }
+
+        public static final class Builder {
+            private Float totalMemory; 
+            private Float unitMemory; 
+            private Float usedMemory; 
+
+            /**
+             * TotalMemory.
+             */
+            public Builder totalMemory(Float totalMemory) {
+                this.totalMemory = totalMemory;
+                return this;
+            }
+
+            /**
+             * UnitMemory.
+             */
+            public Builder unitMemory(Float unitMemory) {
+                this.unitMemory = unitMemory;
+                return this;
+            }
+
+            /**
+             * UsedMemory.
+             */
+            public Builder usedMemory(Float usedMemory) {
+                this.usedMemory = usedMemory;
+                return this;
+            }
+
+            public Memory build() {
+                return new Memory(this);
+            } 
+
+        } 
+
+    }
+    public static class ReadOnlyResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
+        private CapacityUnit capacityUnit;
+
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Cpu cpu;
+
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private DiskSize diskSize;
+
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
+        private LogDiskSize logDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private Memory memory;
+
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
+        private Integer unitNum;
+
+        private ReadOnlyResource(Builder builder) {
+            this.capacityUnit = builder.capacityUnit;
+            this.cpu = builder.cpu;
+            this.diskSize = builder.diskSize;
+            this.logDiskSize = builder.logDiskSize;
+            this.memory = builder.memory;
+            this.unitNum = builder.unitNum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReadOnlyResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacityUnit
+         */
+        public CapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Cpu getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public DiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        /**
+         * @return logDiskSize
+         */
+        public LogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        /**
+         * @return memory
+         */
+        public Memory getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return unitNum
+         */
+        public Integer getUnitNum() {
+            return this.unitNum;
+        }
+
+        public static final class Builder {
+            private CapacityUnit capacityUnit; 
+            private Cpu cpu; 
+            private DiskSize diskSize; 
+            private LogDiskSize logDiskSize; 
+            private Memory memory; 
+            private Integer unitNum; 
+
+            /**
+             * CapacityUnit.
+             */
+            public Builder capacityUnit(CapacityUnit capacityUnit) {
+                this.capacityUnit = capacityUnit;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Cpu cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * DiskSize.
+             */
+            public Builder diskSize(DiskSize diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * LogDiskSize.
+             */
+            public Builder logDiskSize(LogDiskSize logDiskSize) {
+                this.logDiskSize = logDiskSize;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Memory memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * UnitNum.
+             */
+            public Builder unitNum(Integer unitNum) {
+                this.unitNum = unitNum;
+                return this;
+            }
+
+            public ReadOnlyResource build() {
+                return new ReadOnlyResource(this);
+            } 
+
+        } 
+
+    }
+    public static class TenantConnections extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddressType")
+        private String addressType;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionLogicalZones")
+        private java.util.List < String > connectionLogicalZones;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionReplicaType")
+        private String connectionReplicaType;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionZones")
+        private java.util.List < String > connectionZones;
+
+        @com.aliyun.core.annotation.NameInMap("EnableTransactionSplit")
+        private Boolean enableTransactionSplit;
+
+        @com.aliyun.core.annotation.NameInMap("InternetAddress")
+        private String internetAddress;
+
+        @com.aliyun.core.annotation.NameInMap("InternetAddressStatus")
+        private String internetAddressStatus;
+
+        @com.aliyun.core.annotation.NameInMap("InternetMaxConnectionLimit")
+        private Long internetMaxConnectionLimit;
+
+        @com.aliyun.core.annotation.NameInMap("InternetMaxConnectionNum")
+        private Long internetMaxConnectionNum;
+
+        @com.aliyun.core.annotation.NameInMap("InternetPort")
+        private Integer internetPort;
+
+        @com.aliyun.core.annotation.NameInMap("InternetRpcPort")
+        private Integer internetRpcPort;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetAddress")
+        private String intranetAddress;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetAddressMasterZoneId")
+        private String intranetAddressMasterZoneId;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetAddressSlaveZoneId")
+        private String intranetAddressSlaveZoneId;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetAddressStatus")
+        private String intranetAddressStatus;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetPort")
+        private Integer intranetPort;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetRpcPort")
+        private Integer intranetRpcPort;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetSqlPort")
+        private Integer intranetSqlPort;
+
+        @com.aliyun.core.annotation.NameInMap("MaxConnectionLimit")
+        private Long maxConnectionLimit;
+
+        @com.aliyun.core.annotation.NameInMap("MaxConnectionNum")
+        private Long maxConnectionNum;
+
+        @com.aliyun.core.annotation.NameInMap("OdpVersion")
+        private String odpVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ParallelQueryDegree")
+        private Long parallelQueryDegree;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyClusterId")
+        private String proxyClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("TenantEndpointId")
+        private String tenantEndpointId;
+
+        @com.aliyun.core.annotation.NameInMap("TransactionSplit")
+        private Boolean transactionSplit;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private TenantConnections(Builder builder) {
+            this.addressType = builder.addressType;
+            this.connectionLogicalZones = builder.connectionLogicalZones;
+            this.connectionReplicaType = builder.connectionReplicaType;
+            this.connectionZones = builder.connectionZones;
+            this.enableTransactionSplit = builder.enableTransactionSplit;
+            this.internetAddress = builder.internetAddress;
+            this.internetAddressStatus = builder.internetAddressStatus;
+            this.internetMaxConnectionLimit = builder.internetMaxConnectionLimit;
+            this.internetMaxConnectionNum = builder.internetMaxConnectionNum;
+            this.internetPort = builder.internetPort;
+            this.internetRpcPort = builder.internetRpcPort;
+            this.intranetAddress = builder.intranetAddress;
+            this.intranetAddressMasterZoneId = builder.intranetAddressMasterZoneId;
+            this.intranetAddressSlaveZoneId = builder.intranetAddressSlaveZoneId;
+            this.intranetAddressStatus = builder.intranetAddressStatus;
+            this.intranetPort = builder.intranetPort;
+            this.intranetRpcPort = builder.intranetRpcPort;
+            this.intranetSqlPort = builder.intranetSqlPort;
+            this.maxConnectionLimit = builder.maxConnectionLimit;
+            this.maxConnectionNum = builder.maxConnectionNum;
+            this.odpVersion = builder.odpVersion;
+            this.parallelQueryDegree = builder.parallelQueryDegree;
+            this.proxyClusterId = builder.proxyClusterId;
+            this.tenantEndpointId = builder.tenantEndpointId;
+            this.transactionSplit = builder.transactionSplit;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantConnections create() {
+            return builder().build();
+        }
+
+        /**
+         * @return addressType
+         */
+        public String getAddressType() {
+            return this.addressType;
+        }
+
+        /**
+         * @return connectionLogicalZones
+         */
+        public java.util.List < String > getConnectionLogicalZones() {
+            return this.connectionLogicalZones;
+        }
+
+        /**
+         * @return connectionReplicaType
+         */
+        public String getConnectionReplicaType() {
+            return this.connectionReplicaType;
+        }
+
+        /**
+         * @return connectionZones
+         */
+        public java.util.List < String > getConnectionZones() {
+            return this.connectionZones;
+        }
+
+        /**
+         * @return enableTransactionSplit
+         */
+        public Boolean getEnableTransactionSplit() {
+            return this.enableTransactionSplit;
+        }
+
+        /**
+         * @return internetAddress
+         */
+        public String getInternetAddress() {
+            return this.internetAddress;
+        }
+
+        /**
+         * @return internetAddressStatus
+         */
+        public String getInternetAddressStatus() {
+            return this.internetAddressStatus;
+        }
+
+        /**
+         * @return internetMaxConnectionLimit
+         */
+        public Long getInternetMaxConnectionLimit() {
+            return this.internetMaxConnectionLimit;
+        }
+
+        /**
+         * @return internetMaxConnectionNum
+         */
+        public Long getInternetMaxConnectionNum() {
+            return this.internetMaxConnectionNum;
+        }
+
+        /**
+         * @return internetPort
+         */
+        public Integer getInternetPort() {
+            return this.internetPort;
+        }
+
+        /**
+         * @return internetRpcPort
+         */
+        public Integer getInternetRpcPort() {
+            return this.internetRpcPort;
+        }
+
+        /**
+         * @return intranetAddress
+         */
+        public String getIntranetAddress() {
+            return this.intranetAddress;
+        }
+
+        /**
+         * @return intranetAddressMasterZoneId
+         */
+        public String getIntranetAddressMasterZoneId() {
+            return this.intranetAddressMasterZoneId;
+        }
+
+        /**
+         * @return intranetAddressSlaveZoneId
+         */
+        public String getIntranetAddressSlaveZoneId() {
+            return this.intranetAddressSlaveZoneId;
+        }
+
+        /**
+         * @return intranetAddressStatus
+         */
+        public String getIntranetAddressStatus() {
+            return this.intranetAddressStatus;
+        }
+
+        /**
+         * @return intranetPort
+         */
+        public Integer getIntranetPort() {
+            return this.intranetPort;
+        }
+
+        /**
+         * @return intranetRpcPort
+         */
+        public Integer getIntranetRpcPort() {
+            return this.intranetRpcPort;
+        }
+
+        /**
+         * @return intranetSqlPort
+         */
+        public Integer getIntranetSqlPort() {
+            return this.intranetSqlPort;
+        }
+
+        /**
+         * @return maxConnectionLimit
+         */
+        public Long getMaxConnectionLimit() {
+            return this.maxConnectionLimit;
+        }
+
+        /**
+         * @return maxConnectionNum
+         */
+        public Long getMaxConnectionNum() {
+            return this.maxConnectionNum;
+        }
+
+        /**
+         * @return odpVersion
+         */
+        public String getOdpVersion() {
+            return this.odpVersion;
+        }
+
+        /**
+         * @return parallelQueryDegree
+         */
+        public Long getParallelQueryDegree() {
+            return this.parallelQueryDegree;
+        }
+
+        /**
+         * @return proxyClusterId
+         */
+        public String getProxyClusterId() {
+            return this.proxyClusterId;
+        }
+
+        /**
+         * @return tenantEndpointId
+         */
+        public String getTenantEndpointId() {
+            return this.tenantEndpointId;
+        }
+
+        /**
+         * @return transactionSplit
+         */
+        public Boolean getTransactionSplit() {
+            return this.transactionSplit;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String addressType; 
+            private java.util.List < String > connectionLogicalZones; 
+            private String connectionReplicaType; 
+            private java.util.List < String > connectionZones; 
+            private Boolean enableTransactionSplit; 
+            private String internetAddress; 
+            private String internetAddressStatus; 
+            private Long internetMaxConnectionLimit; 
+            private Long internetMaxConnectionNum; 
+            private Integer internetPort; 
+            private Integer internetRpcPort; 
+            private String intranetAddress; 
+            private String intranetAddressMasterZoneId; 
+            private String intranetAddressSlaveZoneId; 
+            private String intranetAddressStatus; 
+            private Integer intranetPort; 
+            private Integer intranetRpcPort; 
+            private Integer intranetSqlPort; 
+            private Long maxConnectionLimit; 
+            private Long maxConnectionNum; 
+            private String odpVersion; 
+            private Long parallelQueryDegree; 
+            private String proxyClusterId; 
+            private String tenantEndpointId; 
+            private Boolean transactionSplit; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            /**
+             * The primary zone of the tenant.
+             */
+            public Builder addressType(String addressType) {
+                this.addressType = addressType;
+                return this;
+            }
+
+            /**
+             * ConnectionLogicalZones.
+             */
+            public Builder connectionLogicalZones(java.util.List < String > connectionLogicalZones) {
+                this.connectionLogicalZones = connectionLogicalZones;
+                return this;
+            }
+
+            /**
+             * ConnectionReplicaType.
+             */
+            public Builder connectionReplicaType(String connectionReplicaType) {
+                this.connectionReplicaType = connectionReplicaType;
+                return this;
+            }
+
+            /**
+             * The Internet address for accessing the tenant.
+             */
+            public Builder connectionZones(java.util.List < String > connectionZones) {
+                this.connectionZones = connectionZones;
+                return this;
+            }
+
+            /**
+             * EnableTransactionSplit.
+             */
+            public Builder enableTransactionSplit(Boolean enableTransactionSplit) {
+                this.enableTransactionSplit = enableTransactionSplit;
+                return this;
+            }
+
+            /**
+             * The ID of the VPC.
+             */
+            public Builder internetAddress(String internetAddress) {
+                this.internetAddress = internetAddress;
+                return this;
+            }
+
+            /**
+             * 实例系列
+             */
+            public Builder internetAddressStatus(String internetAddressStatus) {
+                this.internetAddressStatus = internetAddressStatus;
+                return this;
+            }
+
+            /**
+             * InternetMaxConnectionLimit.
+             */
+            public Builder internetMaxConnectionLimit(Long internetMaxConnectionLimit) {
+                this.internetMaxConnectionLimit = internetMaxConnectionLimit;
+                return this;
+            }
+
+            /**
+             * InternetMaxConnectionNum.
+             */
+            public Builder internetMaxConnectionNum(Long internetMaxConnectionNum) {
+                this.internetMaxConnectionNum = internetMaxConnectionNum;
+                return this;
+            }
+
+            /**
+             * 实例类型
+             */
+            public Builder internetPort(Integer internetPort) {
+                this.internetPort = internetPort;
+                return this;
+            }
+
+            /**
+             * InternetRpcPort.
+             */
+            public Builder internetRpcPort(Integer internetRpcPort) {
+                this.internetRpcPort = internetRpcPort;
+                return this;
+            }
+
+            /**
+             * The deployment type of the cluster. Valid values:  
+             * <p>
+             * - multiple: multi-IDC deployment   
+             * - single: single-IDC deployment   
+             * - dual: dual-IDC deployment
+             */
+            public Builder intranetAddress(String intranetAddress) {
+                this.intranetAddress = intranetAddress;
+                return this;
+            }
+
+            /**
+             * PayCore business database
+             */
+            public Builder intranetAddressMasterZoneId(String intranetAddressMasterZoneId) {
+                this.intranetAddressMasterZoneId = intranetAddressMasterZoneId;
+                return this;
+            }
+
+            /**
+             * The total number of CPU cores of the tenant.
+             */
+            public Builder intranetAddressSlaveZoneId(String intranetAddressSlaveZoneId) {
+                this.intranetAddressSlaveZoneId = intranetAddressSlaveZoneId;
+                return this;
+            }
+
+            /**
+             * 付费类型
+             */
+            public Builder intranetAddressStatus(String intranetAddressStatus) {
+                this.intranetAddressStatus = intranetAddressStatus;
+                return this;
+            }
+
+            /**
+             * The ID of the tenant.
+             */
+            public Builder intranetPort(Integer intranetPort) {
+                this.intranetPort = intranetPort;
+                return this;
+            }
+
+            /**
+             * IntranetRpcPort.
+             */
+            public Builder intranetRpcPort(Integer intranetRpcPort) {
+                this.intranetRpcPort = intranetRpcPort;
+                return this;
+            }
+
+            /**
+             * IntranetSqlPort.
+             */
+            public Builder intranetSqlPort(Integer intranetSqlPort) {
+                this.intranetSqlPort = intranetSqlPort;
+                return this;
+            }
+
+            /**
+             * MaxConnectionLimit.
+             */
+            public Builder maxConnectionLimit(Long maxConnectionLimit) {
+                this.maxConnectionLimit = maxConnectionLimit;
+                return this;
+            }
+
+            /**
+             * MaxConnectionNum.
+             */
+            public Builder maxConnectionNum(Long maxConnectionNum) {
+                this.maxConnectionNum = maxConnectionNum;
+                return this;
+            }
+
+            /**
+             * OdpVersion.
+             */
+            public Builder odpVersion(String odpVersion) {
+                this.odpVersion = odpVersion;
+                return this;
+            }
+
+            /**
+             * ParallelQueryDegree.
+             */
+            public Builder parallelQueryDegree(Long parallelQueryDegree) {
+                this.parallelQueryDegree = parallelQueryDegree;
+                return this;
+            }
+
+            /**
+             * ProxyClusterId.
+             */
+            public Builder proxyClusterId(String proxyClusterId) {
+                this.proxyClusterId = proxyClusterId;
+                return this;
+            }
+
+            /**
+             * TenantEndpointId.
+             */
+            public Builder tenantEndpointId(String tenantEndpointId) {
+                this.tenantEndpointId = tenantEndpointId;
+                return this;
+            }
+
+            /**
+             * The primary zone corresponding to the address for accessing the tenant.
+             */
+            public Builder transactionSplit(Boolean transactionSplit) {
+                this.transactionSplit = transactionSplit;
+                return this;
+            }
+
+            /**
+             * The connection access information of the tenant.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * The service mode of the connection address. Valid values:  
+             * <p>
+             * ReadWrite: provides strong-consistency read and write services.   
+             * ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
+             * Clog: provides transaction log services.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public TenantConnections build() {
+                return new TenantConnections(this);
+            } 
+
+        } 
+
+    }
+    public static class TenantResourceCapacityUnit extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
+        private Integer maxCapacityUnit;
+
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
+        private Integer minCapacityUnit;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCapacit")
+        private Integer usedCapacit;
+
+        private TenantResourceCapacityUnit(Builder builder) {
+            this.maxCapacityUnit = builder.maxCapacityUnit;
+            this.minCapacityUnit = builder.minCapacityUnit;
+            this.usedCapacit = builder.usedCapacit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantResourceCapacityUnit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacityUnit
+         */
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        /**
+         * @return minCapacityUnit
+         */
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        /**
+         * @return usedCapacit
+         */
+        public Integer getUsedCapacit() {
+            return this.usedCapacit;
+        }
+
+        public static final class Builder {
+            private Integer maxCapacityUnit; 
+            private Integer minCapacityUnit; 
+            private Integer usedCapacit; 
+
+            /**
+             * MaxCapacityUnit.
+             */
+            public Builder maxCapacityUnit(Integer maxCapacityUnit) {
+                this.maxCapacityUnit = maxCapacityUnit;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnit.
+             */
+            public Builder minCapacityUnit(Integer minCapacityUnit) {
+                this.minCapacityUnit = minCapacityUnit;
+                return this;
+            }
+
+            /**
+             * UsedCapacit.
+             */
+            public Builder usedCapacit(Integer usedCapacit) {
+                this.usedCapacit = usedCapacit;
+                return this;
+            }
+
+            public TenantResourceCapacityUnit build() {
+                return new TenantResourceCapacityUnit(this);
+            } 
+
+        } 
+
+    }
+    public static class TenantResourceCpu extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
+        private Float totalCpu;
+
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
+        private Float unitCpu;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
+        private Float usedCpu;
+
+        private TenantResourceCpu(Builder builder) {
+            this.totalCpu = builder.totalCpu;
+            this.unitCpu = builder.unitCpu;
+            this.usedCpu = builder.usedCpu;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantResourceCpu create() {
             return builder().build();
         }
 
@@ -605,18 +1290,18 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public Cpu build() {
-                return new Cpu(this);
+            public TenantResourceCpu build() {
+                return new TenantResourceCpu(this);
             } 
 
         } 
 
     }
-    public static class DiskSize extends TeaModel {
-        @NameInMap("UsedDiskSize")
+    public static class TenantResourceDiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Float usedDiskSize;
 
-        private DiskSize(Builder builder) {
+        private TenantResourceDiskSize(Builder builder) {
             this.usedDiskSize = builder.usedDiskSize;
         }
 
@@ -624,7 +1309,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DiskSize create() {
+        public static TenantResourceDiskSize create() {
             return builder().build();
         }
 
@@ -646,21 +1331,21 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public DiskSize build() {
-                return new DiskSize(this);
+            public TenantResourceDiskSize build() {
+                return new TenantResourceDiskSize(this);
             } 
 
         } 
 
     }
-    public static class LogDiskSize extends TeaModel {
-        @NameInMap("TotalLogDisk")
+    public static class TenantResourceLogDiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalLogDisk")
         private Integer totalLogDisk;
 
-        @NameInMap("UnitLogDisk")
+        @com.aliyun.core.annotation.NameInMap("UnitLogDisk")
         private Integer unitLogDisk;
 
-        private LogDiskSize(Builder builder) {
+        private TenantResourceLogDiskSize(Builder builder) {
             this.totalLogDisk = builder.totalLogDisk;
             this.unitLogDisk = builder.unitLogDisk;
         }
@@ -669,7 +1354,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static LogDiskSize create() {
+        public static TenantResourceLogDiskSize create() {
             return builder().build();
         }
 
@@ -707,24 +1392,24 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public LogDiskSize build() {
-                return new LogDiskSize(this);
+            public TenantResourceLogDiskSize build() {
+                return new TenantResourceLogDiskSize(this);
             } 
 
         } 
 
     }
-    public static class Memory extends TeaModel {
-        @NameInMap("TotalMemory")
+    public static class TenantResourceMemory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Float totalMemory;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Float unitMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Float usedMemory;
 
-        private Memory(Builder builder) {
+        private TenantResourceMemory(Builder builder) {
             this.totalMemory = builder.totalMemory;
             this.unitMemory = builder.unitMemory;
             this.usedMemory = builder.usedMemory;
@@ -734,7 +1419,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Memory create() {
+        public static TenantResourceMemory create() {
             return builder().build();
         }
 
@@ -793,30 +1478,30 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public Memory build() {
-                return new Memory(this);
+            public TenantResourceMemory build() {
+                return new TenantResourceMemory(this);
             } 
 
         } 
 
     }
     public static class TenantResource extends TeaModel {
-        @NameInMap("CapacityUnit")
-        private CapacityUnit capacityUnit;
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
+        private TenantResourceCapacityUnit capacityUnit;
 
-        @NameInMap("Cpu")
-        private Cpu cpu;
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private TenantResourceCpu cpu;
 
-        @NameInMap("DiskSize")
-        private DiskSize diskSize;
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private TenantResourceDiskSize diskSize;
 
-        @NameInMap("LogDiskSize")
-        private LogDiskSize logDiskSize;
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
+        private TenantResourceLogDiskSize logDiskSize;
 
-        @NameInMap("Memory")
-        private Memory memory;
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private TenantResourceMemory memory;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Integer unitNum;
 
         private TenantResource(Builder builder) {
@@ -839,35 +1524,35 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return capacityUnit
          */
-        public CapacityUnit getCapacityUnit() {
+        public TenantResourceCapacityUnit getCapacityUnit() {
             return this.capacityUnit;
         }
 
         /**
          * @return cpu
          */
-        public Cpu getCpu() {
+        public TenantResourceCpu getCpu() {
             return this.cpu;
         }
 
         /**
          * @return diskSize
          */
-        public DiskSize getDiskSize() {
+        public TenantResourceDiskSize getDiskSize() {
             return this.diskSize;
         }
 
         /**
          * @return logDiskSize
          */
-        public LogDiskSize getLogDiskSize() {
+        public TenantResourceLogDiskSize getLogDiskSize() {
             return this.logDiskSize;
         }
 
         /**
          * @return memory
          */
-        public Memory getMemory() {
+        public TenantResourceMemory getMemory() {
             return this.memory;
         }
 
@@ -879,17 +1564,17 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private CapacityUnit capacityUnit; 
-            private Cpu cpu; 
-            private DiskSize diskSize; 
-            private LogDiskSize logDiskSize; 
-            private Memory memory; 
+            private TenantResourceCapacityUnit capacityUnit; 
+            private TenantResourceCpu cpu; 
+            private TenantResourceDiskSize diskSize; 
+            private TenantResourceLogDiskSize logDiskSize; 
+            private TenantResourceMemory memory; 
             private Integer unitNum; 
 
             /**
              * CapacityUnit.
              */
-            public Builder capacityUnit(CapacityUnit capacityUnit) {
+            public Builder capacityUnit(TenantResourceCapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
                 return this;
             }
@@ -900,7 +1585,7 @@ public class DescribeTenantResponseBody extends TeaModel {
              * CLOSED: The Clog service is disabled.  
              * - ONLINE: The Clog service is running.
              */
-            public Builder cpu(Cpu cpu) {
+            public Builder cpu(TenantResourceCpu cpu) {
                 this.cpu = cpu;
                 return this;
             }
@@ -910,7 +1595,7 @@ public class DescribeTenantResponseBody extends TeaModel {
              * <p>
              * The value ONLINE indicates that the address is in service.
              */
-            public Builder diskSize(DiskSize diskSize) {
+            public Builder diskSize(TenantResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
                 return this;
             }
@@ -918,7 +1603,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * LogDiskSize.
              */
-            public Builder logDiskSize(LogDiskSize logDiskSize) {
+            public Builder logDiskSize(TenantResourceLogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
                 return this;
             }
@@ -926,7 +1611,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * The description of the tenant.
              */
-            public Builder memory(Memory memory) {
+            public Builder memory(TenantResourceMemory memory) {
                 this.memory = memory;
                 return this;
             }
@@ -946,19 +1631,164 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    public static class TenantZoneReplicas extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FullCopyId")
+        private Integer fullCopyId;
+
+        @com.aliyun.core.annotation.NameInMap("LogicZoneName")
+        private String logicZoneName;
+
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyCopyId")
+        private String readOnlyCopyId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneCopyId")
+        private Integer zoneCopyId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneNodes")
+        private String zoneNodes;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneReplicaType")
+        private String zoneReplicaType;
+
+        private TenantZoneReplicas(Builder builder) {
+            this.fullCopyId = builder.fullCopyId;
+            this.logicZoneName = builder.logicZoneName;
+            this.readOnlyCopyId = builder.readOnlyCopyId;
+            this.zoneCopyId = builder.zoneCopyId;
+            this.zoneNodes = builder.zoneNodes;
+            this.zoneReplicaType = builder.zoneReplicaType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantZoneReplicas create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fullCopyId
+         */
+        public Integer getFullCopyId() {
+            return this.fullCopyId;
+        }
+
+        /**
+         * @return logicZoneName
+         */
+        public String getLogicZoneName() {
+            return this.logicZoneName;
+        }
+
+        /**
+         * @return readOnlyCopyId
+         */
+        public String getReadOnlyCopyId() {
+            return this.readOnlyCopyId;
+        }
+
+        /**
+         * @return zoneCopyId
+         */
+        public Integer getZoneCopyId() {
+            return this.zoneCopyId;
+        }
+
+        /**
+         * @return zoneNodes
+         */
+        public String getZoneNodes() {
+            return this.zoneNodes;
+        }
+
+        /**
+         * @return zoneReplicaType
+         */
+        public String getZoneReplicaType() {
+            return this.zoneReplicaType;
+        }
+
+        public static final class Builder {
+            private Integer fullCopyId; 
+            private String logicZoneName; 
+            private String readOnlyCopyId; 
+            private Integer zoneCopyId; 
+            private String zoneNodes; 
+            private String zoneReplicaType; 
+
+            /**
+             * FullCopyId.
+             */
+            public Builder fullCopyId(Integer fullCopyId) {
+                this.fullCopyId = fullCopyId;
+                return this;
+            }
+
+            /**
+             * LogicZoneName.
+             */
+            public Builder logicZoneName(String logicZoneName) {
+                this.logicZoneName = logicZoneName;
+                return this;
+            }
+
+            /**
+             * ReadOnlyCopyId.
+             */
+            public Builder readOnlyCopyId(String readOnlyCopyId) {
+                this.readOnlyCopyId = readOnlyCopyId;
+                return this;
+            }
+
+            /**
+             * ZoneCopyId.
+             */
+            public Builder zoneCopyId(Integer zoneCopyId) {
+                this.zoneCopyId = zoneCopyId;
+                return this;
+            }
+
+            /**
+             * ZoneNodes.
+             */
+            public Builder zoneNodes(String zoneNodes) {
+                this.zoneNodes = zoneNodes;
+                return this;
+            }
+
+            /**
+             * ZoneReplicaType.
+             */
+            public Builder zoneReplicaType(String zoneReplicaType) {
+                this.zoneReplicaType = zoneReplicaType;
+                return this;
+            }
+
+            public TenantZoneReplicas build() {
+                return new TenantZoneReplicas(this);
+            } 
+
+        } 
+
+    }
     public static class TenantZones extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("TenantZoneId")
+        @com.aliyun.core.annotation.NameInMap("TenantZoneId")
         private String tenantZoneId;
 
-        @NameInMap("TenantZoneRole")
+        @com.aliyun.core.annotation.NameInMap("TenantZoneReplicas")
+        private java.util.List < TenantZoneReplicas> tenantZoneReplicas;
+
+        @com.aliyun.core.annotation.NameInMap("TenantZoneRole")
         private String tenantZoneRole;
 
         private TenantZones(Builder builder) {
             this.region = builder.region;
             this.tenantZoneId = builder.tenantZoneId;
+            this.tenantZoneReplicas = builder.tenantZoneReplicas;
             this.tenantZoneRole = builder.tenantZoneRole;
         }
 
@@ -985,6 +1815,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantZoneReplicas
+         */
+        public java.util.List < TenantZoneReplicas> getTenantZoneReplicas() {
+            return this.tenantZoneReplicas;
+        }
+
+        /**
          * @return tenantZoneRole
          */
         public String getTenantZoneRole() {
@@ -994,6 +1831,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static final class Builder {
             private String region; 
             private String tenantZoneId; 
+            private java.util.List < TenantZoneReplicas> tenantZoneReplicas; 
             private String tenantZoneRole; 
 
             /**
@@ -1013,6 +1851,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * TenantZoneReplicas.
+             */
+            public Builder tenantZoneReplicas(java.util.List < TenantZoneReplicas> tenantZoneReplicas) {
+                this.tenantZoneReplicas = tenantZoneReplicas;
+                return this;
+            }
+
+            /**
              * The character set.
              */
             public Builder tenantZoneRole(String tenantZoneRole) {
@@ -1028,94 +1874,115 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class Tenant extends TeaModel {
-        @NameInMap("AvailableZones")
+        @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private java.util.List < String > availableZones;
 
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("ClogServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ClogServiceStatus")
         private String clogServiceStatus;
 
-        @NameInMap("Collation")
+        @com.aliyun.core.annotation.NameInMap("Collation")
         private String collation;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DataMergeTime")
+        private String dataMergeTime;
+
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("EnableBinlogService")
+        @com.aliyun.core.annotation.NameInMap("EnableBinlogService")
         private Boolean enableBinlogService;
 
-        @NameInMap("EnableClogService")
+        @com.aliyun.core.annotation.NameInMap("EnableClogService")
         private Boolean enableClogService;
 
-        @NameInMap("EnableInternetAddressService")
+        @com.aliyun.core.annotation.NameInMap("EnableInternetAddressService")
         private Boolean enableInternetAddressService;
 
-        @NameInMap("EnableParallelQuery")
+        @com.aliyun.core.annotation.NameInMap("EnableParallelQuery")
         private Boolean enableParallelQuery;
 
-        @NameInMap("EnableReadWriteSplit")
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplica")
+        private Boolean enableReadOnlyReplica;
+
+        @com.aliyun.core.annotation.NameInMap("EnableReadWriteSplit")
         private Boolean enableReadWriteSplit;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MasterIntranetAddressZone")
+        @com.aliyun.core.annotation.NameInMap("LowerCaseTableNames")
+        private Integer lowerCaseTableNames;
+
+        @com.aliyun.core.annotation.NameInMap("MasterIntranetAddressZone")
         private String masterIntranetAddressZone;
 
-        @NameInMap("MaxParallelQueryDegree")
+        @com.aliyun.core.annotation.NameInMap("MaxParallelQueryDegree")
         private Long maxParallelQueryDegree;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("OdpVersion")
+        private String odpVersion;
+
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("PrimaryZone")
+        @com.aliyun.core.annotation.NameInMap("PrimaryZone")
         private String primaryZone;
 
-        @NameInMap("PrimaryZoneDeployType")
+        @com.aliyun.core.annotation.NameInMap("PrimaryZoneDeployType")
         private String primaryZoneDeployType;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyResource")
+        private ReadOnlyResource readOnlyResource;
+
+        @com.aliyun.core.annotation.NameInMap("RecycleBinStatus")
+        private String recycleBinStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantConnections")
+        @com.aliyun.core.annotation.NameInMap("TenantConnections")
         private java.util.List < TenantConnections> tenantConnections;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantMode")
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
         private String tenantMode;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TenantResource")
+        @com.aliyun.core.annotation.NameInMap("TenantResource")
         private TenantResource tenantResource;
 
-        @NameInMap("TenantZones")
+        @com.aliyun.core.annotation.NameInMap("TenantZones")
         private java.util.List < TenantZones> tenantZones;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Tenant(Builder builder) {
@@ -1124,6 +1991,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.clogServiceStatus = builder.clogServiceStatus;
             this.collation = builder.collation;
             this.createTime = builder.createTime;
+            this.dataMergeTime = builder.dataMergeTime;
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.description = builder.description;
@@ -1132,13 +2000,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.enableClogService = builder.enableClogService;
             this.enableInternetAddressService = builder.enableInternetAddressService;
             this.enableParallelQuery = builder.enableParallelQuery;
+            this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
             this.enableReadWriteSplit = builder.enableReadWriteSplit;
             this.instanceType = builder.instanceType;
+            this.lowerCaseTableNames = builder.lowerCaseTableNames;
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
             this.maxParallelQueryDegree = builder.maxParallelQueryDegree;
+            this.odpVersion = builder.odpVersion;
             this.payType = builder.payType;
             this.primaryZone = builder.primaryZone;
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
+            this.readOnlyResource = builder.readOnlyResource;
+            this.recycleBinStatus = builder.recycleBinStatus;
             this.series = builder.series;
             this.status = builder.status;
             this.tenantConnections = builder.tenantConnections;
@@ -1148,6 +2021,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.tenantResource = builder.tenantResource;
             this.tenantZones = builder.tenantZones;
             this.timeZone = builder.timeZone;
+            this.version = builder.version;
             this.vpcId = builder.vpcId;
         }
 
@@ -1192,6 +2066,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dataMergeTime
+         */
+        public String getDataMergeTime() {
+            return this.dataMergeTime;
         }
 
         /**
@@ -1251,6 +2132,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableReadOnlyReplica
+         */
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
+        }
+
+        /**
          * @return enableReadWriteSplit
          */
         public Boolean getEnableReadWriteSplit() {
@@ -1265,6 +2153,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return lowerCaseTableNames
+         */
+        public Integer getLowerCaseTableNames() {
+            return this.lowerCaseTableNames;
+        }
+
+        /**
          * @return masterIntranetAddressZone
          */
         public String getMasterIntranetAddressZone() {
@@ -1276,6 +2171,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public Long getMaxParallelQueryDegree() {
             return this.maxParallelQueryDegree;
+        }
+
+        /**
+         * @return odpVersion
+         */
+        public String getOdpVersion() {
+            return this.odpVersion;
         }
 
         /**
@@ -1297,6 +2199,20 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getPrimaryZoneDeployType() {
             return this.primaryZoneDeployType;
+        }
+
+        /**
+         * @return readOnlyResource
+         */
+        public ReadOnlyResource getReadOnlyResource() {
+            return this.readOnlyResource;
+        }
+
+        /**
+         * @return recycleBinStatus
+         */
+        public String getRecycleBinStatus() {
+            return this.recycleBinStatus;
         }
 
         /**
@@ -1363,6 +2279,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -1375,6 +2298,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String clogServiceStatus; 
             private String collation; 
             private String createTime; 
+            private String dataMergeTime; 
             private String deployMode; 
             private String deployType; 
             private String description; 
@@ -1383,13 +2307,18 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Boolean enableClogService; 
             private Boolean enableInternetAddressService; 
             private Boolean enableParallelQuery; 
+            private Boolean enableReadOnlyReplica; 
             private Boolean enableReadWriteSplit; 
             private String instanceType; 
+            private Integer lowerCaseTableNames; 
             private String masterIntranetAddressZone; 
             private Long maxParallelQueryDegree; 
+            private String odpVersion; 
             private String payType; 
             private String primaryZone; 
             private String primaryZoneDeployType; 
+            private ReadOnlyResource readOnlyResource; 
+            private String recycleBinStatus; 
             private String series; 
             private String status; 
             private java.util.List < TenantConnections> tenantConnections; 
@@ -1399,6 +2328,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private TenantResource tenantResource; 
             private java.util.List < TenantZones> tenantZones; 
             private String timeZone; 
+            private String version; 
             private String vpcId; 
 
             /**
@@ -1438,6 +2368,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DataMergeTime.
+             */
+            public Builder dataMergeTime(String dataMergeTime) {
+                this.dataMergeTime = dataMergeTime;
                 return this;
             }
 
@@ -1502,6 +2440,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder enableParallelQuery(Boolean enableParallelQuery) {
                 this.enableParallelQuery = enableParallelQuery;
+                return this;
+            }
+
+            /**
+             * EnableReadOnlyReplica.
+             */
+            public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+                this.enableReadOnlyReplica = enableReadOnlyReplica;
                 return this;
             }
 
@@ -1579,6 +2525,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * LowerCaseTableNames.
+             */
+            public Builder lowerCaseTableNames(Integer lowerCaseTableNames) {
+                this.lowerCaseTableNames = lowerCaseTableNames;
+                return this;
+            }
+
+            /**
              * ```
              * <p>
              * http(s)://[Endpoint]/?Action=DescribeTenant
@@ -1597,6 +2551,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder maxParallelQueryDegree(Long maxParallelQueryDegree) {
                 this.maxParallelQueryDegree = maxParallelQueryDegree;
+                return this;
+            }
+
+            /**
+             * OdpVersion.
+             */
+            public Builder odpVersion(String odpVersion) {
+                this.odpVersion = odpVersion;
                 return this;
             }
 
@@ -1621,6 +2583,22 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
+                return this;
+            }
+
+            /**
+             * ReadOnlyResource.
+             */
+            public Builder readOnlyResource(ReadOnlyResource readOnlyResource) {
+                this.readOnlyResource = readOnlyResource;
+                return this;
+            }
+
+            /**
+             * RecycleBinStatus.
+             */
+            public Builder recycleBinStatus(String recycleBinStatus) {
+                this.recycleBinStatus = recycleBinStatus;
                 return this;
             }
 
@@ -1757,6 +2735,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

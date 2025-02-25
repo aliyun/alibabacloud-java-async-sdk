@@ -1,45 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuditTTSVoiceRequest} extends {@link RequestModel}
  *
  * <p>AuditTTSVoiceRequest</p>
  */
 public class AuditTTSVoiceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
+    private String accessKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    private String appKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SpeechRate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PitchRate")
+    private String pitchRate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretKey")
+    private String secretKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeechRate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String speechRate;
 
-    @Query
-    @NameInMap("Text")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Text")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String text;
 
-    @Query
-    @NameInMap("Voice")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Voice")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voice;
 
-    @Query
-    @NameInMap("Volume")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String volume;
 
     private AuditTTSVoiceRequest(Builder builder) {
         super(builder);
+        this.accessKey = builder.accessKey;
+        this.appKey = builder.appKey;
+        this.engine = builder.engine;
         this.instanceId = builder.instanceId;
+        this.pitchRate = builder.pitchRate;
+        this.secretKey = builder.secretKey;
         this.speechRate = builder.speechRate;
         this.text = builder.text;
         this.voice = builder.voice;
@@ -60,10 +90,45 @@ public class AuditTTSVoiceRequest extends Request {
     }
 
     /**
+     * @return accessKey
+     */
+    public String getAccessKey() {
+        return this.accessKey;
+    }
+
+    /**
+     * @return appKey
+     */
+    public String getAppKey() {
+        return this.appKey;
+    }
+
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return pitchRate
+     */
+    public String getPitchRate() {
+        return this.pitchRate;
+    }
+
+    /**
+     * @return secretKey
+     */
+    public String getSecretKey() {
+        return this.secretKey;
     }
 
     /**
@@ -95,7 +160,12 @@ public class AuditTTSVoiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AuditTTSVoiceRequest, Builder> {
+        private String accessKey; 
+        private String appKey; 
+        private String engine; 
         private String instanceId; 
+        private String pitchRate; 
+        private String secretKey; 
         private String speechRate; 
         private String text; 
         private String voice; 
@@ -107,7 +177,12 @@ public class AuditTTSVoiceRequest extends Request {
 
         private Builder(AuditTTSVoiceRequest request) {
             super(request);
+            this.accessKey = request.accessKey;
+            this.appKey = request.appKey;
+            this.engine = request.engine;
             this.instanceId = request.instanceId;
+            this.pitchRate = request.pitchRate;
+            this.secretKey = request.secretKey;
             this.speechRate = request.speechRate;
             this.text = request.text;
             this.voice = request.voice;
@@ -115,7 +190,37 @@ public class AuditTTSVoiceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * AccessKey.
+         */
+        public Builder accessKey(String accessKey) {
+            this.putQueryParameter("AccessKey", accessKey);
+            this.accessKey = accessKey;
+            return this;
+        }
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(String appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +229,28 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * SpeechRate.
+         * PitchRate.
+         */
+        public Builder pitchRate(String pitchRate) {
+            this.putQueryParameter("PitchRate", pitchRate);
+            this.pitchRate = pitchRate;
+            return this;
+        }
+
+        /**
+         * SecretKey.
+         */
+        public Builder secretKey(String secretKey) {
+            this.putQueryParameter("SecretKey", secretKey);
+            this.secretKey = secretKey;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder speechRate(String speechRate) {
             this.putQueryParameter("SpeechRate", speechRate);
@@ -133,7 +259,7 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>This parameter is required.</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -142,7 +268,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * Voice.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aixia</p>
          */
         public Builder voice(String voice) {
             this.putQueryParameter("Voice", voice);
@@ -151,7 +280,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * Volume.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder volume(String volume) {
             this.putQueryParameter("Volume", volume);

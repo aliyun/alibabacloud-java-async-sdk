@@ -1,76 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupsRequest</p>
  */
 public class DescribeBackupsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackupId")
-    private Integer backupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    private Long backupId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupJobId")
+    private Long backupJobId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NeedAof")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedAof")
     private String needAof;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeBackupsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.backupId = builder.backupId;
+        this.backupJobId = builder.backupJobId;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.needAof = builder.needAof;
@@ -107,8 +112,15 @@ public class DescribeBackupsRequest extends Request {
     /**
      * @return backupId
      */
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.backupId;
+    }
+
+    /**
+     * @return backupJobId
+     */
+    public Long getBackupJobId() {
+        return this.backupJobId;
     }
 
     /**
@@ -190,7 +202,8 @@ public class DescribeBackupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeBackupsRequest, Builder> {
         private String regionId; 
-        private Integer backupId; 
+        private Long backupId; 
+        private Long backupJobId; 
         private String endTime; 
         private String instanceId; 
         private String needAof; 
@@ -211,6 +224,7 @@ public class DescribeBackupsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.backupId = request.backupId;
+            this.backupJobId = request.backupJobId;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.needAof = request.needAof;
@@ -234,16 +248,35 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the backup file.
+         * <p>The ID of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11611111</p>
          */
-        public Builder backupId(Integer backupId) {
+        public Builder backupId(Long backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
             return this;
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The backup task ID, returned by CreateBackup. If CreateBackup returns multiple BackupJobIds, you need to use this interface to query each of them separately.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
+        public Builder backupJobId(Long backupJobId) {
+            this.putQueryParameter("BackupJobId", backupJobId);
+            this.backupJobId = backupJobId;
+            return this;
+        }
+
+        /**
+         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-14T18:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -252,7 +285,11 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose backup files you want to query.
+         * <p>The ID of the instance whose backup files you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -261,13 +298,17 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable append-only files (AOFs) persistence. Valid values:
-         * <p>
+         * <p>Specifies whether to enable append-only files (AOFs) persistence. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * *   **0**: no
-         * *   **1**: yes
-         * 
-         * >  The default value is **0**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder needAof(String needAof) {
             this.putQueryParameter("NeedAof", needAof);
@@ -294,7 +335,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * <p>The page number. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -303,7 +347,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 30, 50, 100, 200, and 300.
+         * <p>The maximum number of entries per page. Valid values: 30, 50, 100, 200, and 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -339,7 +386,11 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-11T10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

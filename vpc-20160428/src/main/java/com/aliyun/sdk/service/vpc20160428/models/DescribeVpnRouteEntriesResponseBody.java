@@ -1,30 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpnRouteEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpnRouteEntriesResponseBody</p>
  */
 public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnRouteEntries")
+    @com.aliyun.core.annotation.NameInMap("VpnRouteCounts")
+    private VpnRouteCounts vpnRouteCounts;
+
+    @com.aliyun.core.annotation.NameInMap("VpnRouteEntries")
     private VpnRouteEntries vpnRouteEntries;
 
     private DescribeVpnRouteEntriesResponseBody(Builder builder) {
@@ -32,6 +40,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
+        this.vpnRouteCounts = builder.vpnRouteCounts;
         this.vpnRouteEntries = builder.vpnRouteEntries;
     }
 
@@ -72,6 +81,13 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     }
 
     /**
+     * @return vpnRouteCounts
+     */
+    public VpnRouteCounts getVpnRouteCounts() {
+        return this.vpnRouteCounts;
+    }
+
+    /**
      * @return vpnRouteEntries
      */
     public VpnRouteEntries getVpnRouteEntries() {
@@ -83,10 +99,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+        private VpnRouteCounts vpnRouteCounts; 
         private VpnRouteEntries vpnRouteEntries; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +114,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +125,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF3995A6-FA4F-4C74-B90F-89ECF4BFF4D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +136,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +147,18 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of route entries.
+         * <p>The information about route entries of the VPN gateway in dual-tunnel mode.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
+         * </blockquote>
+         */
+        public Builder vpnRouteCounts(VpnRouteCounts vpnRouteCounts) {
+            this.vpnRouteCounts = vpnRouteCounts;
+            return this;
+        }
+
+        /**
+         * <p>The route entry list.</p>
          */
         public Builder vpnRouteEntries(VpnRouteEntries vpnRouteEntries) {
             this.vpnRouteEntries = vpnRouteEntries;
@@ -131,38 +171,195 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
 
     } 
 
-    public static class VpnRouteEntry extends TeaModel {
-        @NameInMap("AsPath")
-        private String asPath;
+    /**
+     * 
+     * {@link DescribeVpnRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnRouteEntriesResponseBody</p>
+     */
+    public static class VpnRouteCount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RouteCount")
+        private Integer routeCount;
 
-        @NameInMap("Community")
-        private String community;
-
-        @NameInMap("CreateTime")
-        private Long createTime;
-
-        @NameInMap("NextHop")
-        private String nextHop;
-
-        @NameInMap("NextHopTunnelId")
-        private String nextHopTunnelId;
-
-        @NameInMap("RouteDest")
-        private String routeDest;
-
-        @NameInMap("RouteEntryType")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryType")
         private String routeEntryType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("State")
+        private VpnRouteCount(Builder builder) {
+            this.routeCount = builder.routeCount;
+            this.routeEntryType = builder.routeEntryType;
+            this.source = builder.source;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpnRouteCount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return routeCount
+         */
+        public Integer getRouteCount() {
+            return this.routeCount;
+        }
+
+        /**
+         * @return routeEntryType
+         */
+        public String getRouteEntryType() {
+            return this.routeEntryType;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        public static final class Builder {
+            private Integer routeCount; 
+            private String routeEntryType; 
+            private String source; 
+
+            /**
+             * <p>The number of route entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder routeCount(Integer routeCount) {
+                this.routeCount = routeCount;
+                return this;
+            }
+
+            /**
+             * <p>The route type. Valid values:</p>
+             * <ul>
+             * <li><strong>custom</strong> (default): destination-based route.</li>
+             * <li><strong>bgp</strong> : BGP route entry.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>bgp</p>
+             */
+            public Builder routeEntryType(String routeEntryType) {
+                this.routeEntryType = routeEntryType;
+                return this;
+            }
+
+            /**
+             * <p>The source of the BGP route. Valid values:</p>
+             * <ul>
+             * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
+             * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPN_BGP</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            public VpnRouteCount build() {
+                return new VpnRouteCount(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeVpnRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnRouteEntriesResponseBody</p>
+     */
+    public static class VpnRouteCounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VpnRouteCount")
+        private java.util.List<VpnRouteCount> vpnRouteCount;
+
+        private VpnRouteCounts(Builder builder) {
+            this.vpnRouteCount = builder.vpnRouteCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpnRouteCounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vpnRouteCount
+         */
+        public java.util.List<VpnRouteCount> getVpnRouteCount() {
+            return this.vpnRouteCount;
+        }
+
+        public static final class Builder {
+            private java.util.List<VpnRouteCount> vpnRouteCount; 
+
+            /**
+             * VpnRouteCount.
+             */
+            public Builder vpnRouteCount(java.util.List<VpnRouteCount> vpnRouteCount) {
+                this.vpnRouteCount = vpnRouteCount;
+                return this;
+            }
+
+            public VpnRouteCounts build() {
+                return new VpnRouteCounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeVpnRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnRouteEntriesResponseBody</p>
+     */
+    public static class VpnRouteEntry extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsPath")
+        private String asPath;
+
+        @com.aliyun.core.annotation.NameInMap("Community")
+        private String community;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("NextHop")
+        private String nextHop;
+
+        @com.aliyun.core.annotation.NameInMap("NextHopTunnelId")
+        private String nextHopTunnelId;
+
+        @com.aliyun.core.annotation.NameInMap("RouteDest")
+        private String routeDest;
+
+        @com.aliyun.core.annotation.NameInMap("RouteEntryType")
+        private String routeEntryType;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("VpnInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpnInstanceId")
         private String vpnInstanceId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private VpnRouteEntry(Builder builder) {
@@ -278,7 +475,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The AS path of the route entry.
+             * <p>The AS path of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65501,65001,60011</p>
              */
             public Builder asPath(String asPath) {
                 this.asPath = asPath;
@@ -286,7 +486,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The community attributes of the route entry.
+             * <p>The community attributes of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65001:1000,65501:2000</p>
              */
             public Builder community(String community) {
                 this.community = community;
@@ -294,7 +497,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the route entry was created.
+             * <p>The timestamp when the route entry was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1563874074000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -302,7 +508,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The next hop of the route entry.
+             * <p>The next hop of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vco-bp1tui07ob10fmuro****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -310,11 +519,13 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tunnel associated with the next hop. 
-             * <p>
+             * <p>The ID of the tunnel associated with the next hop. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
+             * </blockquote>
              * 
-             * 
-             * > This parameter is returned only if the VPN gateway supports the dual-tunnel mode.
+             * <strong>example:</strong>
+             * <p>tun-36cfgpwjn58axj****</p>
              */
             public Builder nextHopTunnelId(String nextHopTunnelId) {
                 this.nextHopTunnelId = nextHopTunnelId;
@@ -322,7 +533,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block of the route entry.
+             * <p>The destination CIDR block of the route entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder routeDest(String routeDest) {
                 this.routeDest = routeDest;
@@ -330,11 +544,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route entry. Valid values:
-             * <p>
+             * <p>The type of the route entry. Valid values:</p>
+             * <ul>
+             * <li><strong>Custom</strong>: custom</li>
+             * <li><strong>System</strong>: system</li>
+             * </ul>
              * 
-             * *   **Custom**: custom
-             * *   **System**: system
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -342,7 +559,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The source CIDR block of the route entry.
+             * <p>The source of the BGP route. Valid values:</p>
+             * <ul>
+             * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
+             * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.0/24</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -350,11 +574,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route entry. Valid values:
-             * <p>
+             * <p>The status of the route entry. Valid values:</p>
+             * <ul>
+             * <li><strong>published</strong>: advertised</li>
+             * <li><strong>normal</strong>: not advertised</li>
+             * </ul>
              * 
-             * *   **published**: advertised
-             * *   **normal**: not advertised
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -362,7 +589,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPN gateway.
+             * <p>The ID of the VPN gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpn-bp1cmw7jh1nfe43m9****</p>
              */
             public Builder vpnInstanceId(String vpnInstanceId) {
                 this.vpnInstanceId = vpnInstanceId;
@@ -370,11 +600,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the route entry. Valid values: **0** and **100**.
-             * <p>
+             * <p>The weight of the route entry. Valid values: <strong>0</strong> and <strong>100</strong>.</p>
+             * <ul>
+             * <li><strong>0</strong>: a low priority</li>
+             * <li><strong>100</strong>: a high priority</li>
+             * </ul>
              * 
-             * *   **0**: a low priority
-             * *   **100**: a high priority
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -388,9 +621,15 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpnRouteEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpnRouteEntriesResponseBody</p>
+     */
     public static class VpnRouteEntries extends TeaModel {
-        @NameInMap("VpnRouteEntry")
-        private java.util.List < VpnRouteEntry> vpnRouteEntry;
+        @com.aliyun.core.annotation.NameInMap("VpnRouteEntry")
+        private java.util.List<VpnRouteEntry> vpnRouteEntry;
 
         private VpnRouteEntries(Builder builder) {
             this.vpnRouteEntry = builder.vpnRouteEntry;
@@ -407,17 +646,17 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         /**
          * @return vpnRouteEntry
          */
-        public java.util.List < VpnRouteEntry> getVpnRouteEntry() {
+        public java.util.List<VpnRouteEntry> getVpnRouteEntry() {
             return this.vpnRouteEntry;
         }
 
         public static final class Builder {
-            private java.util.List < VpnRouteEntry> vpnRouteEntry; 
+            private java.util.List<VpnRouteEntry> vpnRouteEntry; 
 
             /**
              * VpnRouteEntry.
              */
-            public Builder vpnRouteEntry(java.util.List < VpnRouteEntry> vpnRouteEntry) {
+            public Builder vpnRouteEntry(java.util.List<VpnRouteEntry> vpnRouteEntry) {
                 this.vpnRouteEntry = vpnRouteEntry;
                 return this;
             }

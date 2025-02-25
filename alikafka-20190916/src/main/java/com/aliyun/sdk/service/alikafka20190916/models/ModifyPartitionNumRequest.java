@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPartitionNumRequest} extends {@link RequestModel}
  *
  * <p>ModifyPartitionNumRequest</p>
  */
 public class ModifyPartitionNumRequest extends Request {
-    @Query
-    @NameInMap("AddPartitionNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddPartitionNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer addPartitionNum;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private ModifyPartitionNumRequest(Builder builder) {
@@ -100,12 +105,16 @@ public class ModifyPartitionNumRequest extends Request {
         } 
 
         /**
-         * The number of partitions that you want to add to the topic.
-         * <p>
+         * <p>The number of partitions that you want to add to the topic.</p>
+         * <ul>
+         * <li>The value must be an integer that is greater than 0.</li>
+         * <li>To reduce the risk of data skew, we recommend that you set the value to a multiple of 6.</li>
+         * <li>The number of total partitions ranges from 1 to 360.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value must be an integer that is greater than 0.
-         * *   To reduce the risk of data skew, we recommend that you set the value to a multiple of 6.
-         * *   The number of total partitions ranges from 1 to 360.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder addPartitionNum(Integer addPartitionNum) {
             this.putQueryParameter("AddPartitionNum", addPartitionNum);
@@ -114,7 +123,11 @@ public class ModifyPartitionNumRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-0pp1l9z****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +136,11 @@ public class ModifyPartitionNumRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +149,11 @@ public class ModifyPartitionNumRequest extends Request {
         }
 
         /**
-         * The topic name.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TopicPartitionNum</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

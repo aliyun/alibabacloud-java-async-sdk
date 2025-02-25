@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveTranscodeTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveTranscodeTemplatesResponseBody</p>
  */
 public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateContentList")
-    private java.util.List < TemplateContentList> templateContentList;
+    @com.aliyun.core.annotation.NameInMap("TemplateContentList")
+    private java.util.List<TemplateContentList> templateContentList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLiveTranscodeTemplatesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     /**
      * @return templateContentList
      */
-    public java.util.List < TemplateContentList> getTemplateContentList() {
+    public java.util.List<TemplateContentList> getTemplateContentList() {
         return this.templateContentList;
     }
 
@@ -58,11 +63,14 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TemplateContentList> templateContentList; 
+        private java.util.List<TemplateContentList> templateContentList; 
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateContentList.
+         * <p>The list of transcoding templates.</p>
          */
-        public Builder templateContentList(java.util.List < TemplateContentList> templateContentList) {
+        public Builder templateContentList(java.util.List<TemplateContentList> templateContentList) {
             this.templateContentList = templateContentList;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +102,26 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveTranscodeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeTemplatesResponseBody</p>
+     */
     public static class AudioParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
         private AudioParams(Builder builder) {
@@ -166,7 +183,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             private String samplerate; 
 
             /**
-             * Bitrate.
+             * <p>The audio bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -174,7 +194,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of sound channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -182,7 +205,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * <p>The audio codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -190,7 +216,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -198,7 +227,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Samplerate.
+             * <p>The audio sampling rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -212,26 +244,32 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeTemplatesResponseBody</p>
+     */
     public static class VideoParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private String gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private VideoParams(Builder builder) {
@@ -311,7 +349,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The video bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -319,7 +360,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * <p>The encoding format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -327,7 +371,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The video frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -335,7 +382,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Gop.
+             * <p>The group of pictures (GOP) of the output video. Unit: frame.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -343,7 +393,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The vertical resolution of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -351,7 +404,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The encoding profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -359,7 +415,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The horizontal resolution of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -373,11 +432,17 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeTemplatesResponseBody</p>
+     */
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("AudioParams")
+        @com.aliyun.core.annotation.NameInMap("AudioParams")
         private AudioParams audioParams;
 
-        @NameInMap("VideoParams")
+        @com.aliyun.core.annotation.NameInMap("VideoParams")
         private VideoParams videoParams;
 
         private TemplateConfig(Builder builder) {
@@ -412,7 +477,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             private VideoParams videoParams; 
 
             /**
-             * AudioParams.
+             * <p>The audio parameters.</p>
              */
             public Builder audioParams(AudioParams audioParams) {
                 this.audioParams = audioParams;
@@ -420,7 +485,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * VideoParams.
+             * <p>The video parameters.</p>
              */
             public Builder videoParams(VideoParams videoParams) {
                 this.videoParams = videoParams;
@@ -434,23 +499,29 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveTranscodeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveTranscodeTemplatesResponseBody</p>
+     */
     public static class TemplateContentList extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private TemplateConfig templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TemplateContentList(Builder builder) {
@@ -521,7 +592,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Category.
+             * <p>The category of the template. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -529,7 +603,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T03:26:36Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -537,7 +614,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -545,7 +625,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateConfig.
+             * <p>The configuration of the template.</p>
              */
             public Builder templateConfig(TemplateConfig templateConfig) {
                 this.templateConfig = templateConfig;
@@ -553,7 +633,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9b1571b513cb44f7a1ba6ae561ff46f7</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -561,7 +644,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder type(String type) {
                 this.type = type;

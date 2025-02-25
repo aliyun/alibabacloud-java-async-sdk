@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyPasswordRequest</p>
  */
 public class ModifyPasswordRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @Body
-    @NameInMap("username")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("username")
     private String username;
 
     private ModifyPasswordRequest(Builder builder) {
@@ -83,7 +88,11 @@ public class ModifyPasswordRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7pp2pcna701</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +101,10 @@ public class ModifyPasswordRequest extends Request {
         }
 
         /**
-         * The password
+         * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -101,7 +113,10 @@ public class ModifyPasswordRequest extends Request {
         }
 
         /**
-         * The username
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;username&quot;</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);

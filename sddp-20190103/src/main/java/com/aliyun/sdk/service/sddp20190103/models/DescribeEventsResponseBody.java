@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventsResponseBody</p>
  */
 public class DescribeEventsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEventsResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,13 +85,16 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>An array that consists of the anomalous events.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,65 +148,71 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("AlertTime")
+        @com.aliyun.core.annotation.NameInMap("AlertTime")
         private Long alertTime;
 
-        @NameInMap("Backed")
+        @com.aliyun.core.annotation.NameInMap("Backed")
         private Boolean backed;
 
-        @NameInMap("DealDisplayName")
+        @com.aliyun.core.annotation.NameInMap("DealDisplayName")
         private String dealDisplayName;
 
-        @NameInMap("DealLoginName")
+        @com.aliyun.core.annotation.NameInMap("DealLoginName")
         private String dealLoginName;
 
-        @NameInMap("DealTime")
+        @com.aliyun.core.annotation.NameInMap("DealTime")
         private Long dealTime;
 
-        @NameInMap("DealUserId")
+        @com.aliyun.core.annotation.NameInMap("DealUserId")
         private Long dealUserId;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusName")
+        @com.aliyun.core.annotation.NameInMap("StatusName")
         private String statusName;
 
-        @NameInMap("SubTypeCode")
+        @com.aliyun.core.annotation.NameInMap("SubTypeCode")
         private String subTypeCode;
 
-        @NameInMap("SubTypeName")
+        @com.aliyun.core.annotation.NameInMap("SubTypeName")
         private String subTypeName;
 
-        @NameInMap("TargetProductCode")
+        @com.aliyun.core.annotation.NameInMap("TargetProductCode")
         private String targetProductCode;
 
-        @NameInMap("TypeCode")
+        @com.aliyun.core.annotation.NameInMap("TypeCode")
         private String typeCode;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("WarnLevel")
+        @com.aliyun.core.annotation.NameInMap("WarnLevel")
         private Integer warnLevel;
 
         private Items(Builder builder) {
@@ -386,7 +409,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             private Integer warnLevel; 
 
             /**
-             * AlertTime.
+             * <p>The time when an alert was triggered for the anomalous event. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>154529000</p>
              */
             public Builder alertTime(Long alertTime) {
                 this.alertTime = alertTime;
@@ -394,7 +420,14 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Backed.
+             * <p>Indicates whether the detection of anomalous events is enhanced. If the detection of anomalous events is enhanced, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:</p>
+             * <ul>
+             * <li>true: yes</li>
+             * <li>false: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder backed(Boolean backed) {
                 this.backed = backed;
@@ -402,7 +435,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealDisplayName.
+             * <p>The display name of the account that is used to handle the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yundunsr</p>
              */
             public Builder dealDisplayName(String dealDisplayName) {
                 this.dealDisplayName = dealDisplayName;
@@ -410,7 +446,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealLoginName.
+             * <p>The username of the account that is used to handle the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>det1111</p>
              */
             public Builder dealLoginName(String dealLoginName) {
                 this.dealLoginName = dealLoginName;
@@ -418,7 +457,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealTime.
+             * <p>The time when the anomalous event was handled. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12223300</p>
              */
             public Builder dealTime(Long dealTime) {
                 this.dealTime = dealTime;
@@ -426,7 +468,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealUserId.
+             * <p>The ID of the account that is used to handle the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>229157443385014***</p>
              */
             public Builder dealUserId(Long dealUserId) {
                 this.dealUserId = dealUserId;
@@ -434,7 +479,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the account that triggered the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yundunsr</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -442,7 +490,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The time when the anomalous event occurred. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1545829129000</p>
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -450,7 +501,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42233335555</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -458,7 +512,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * <p>The username of the account that triggered the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>det1111</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -466,7 +523,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The name of the service in which the anomalous event was detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -474,7 +534,15 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The handling status for the anomalous event. Valid values:</p>
+             * <ul>
+             * <li>0: unhandled</li>
+             * <li>1: confirmed</li>
+             * <li>2: marked as false positive</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -482,7 +550,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusName.
+             * <p>The name of the handling status for the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -490,7 +561,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubTypeCode.
+             * <p>The code of the anomalous event subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>020008</p>
              */
             public Builder subTypeCode(String subTypeCode) {
                 this.subTypeCode = subTypeCode;
@@ -498,7 +572,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubTypeName.
+             * <p>The name of the anomalous event subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anomalous volume of downloaded data</p>
              */
             public Builder subTypeName(String subTypeName) {
                 this.subTypeName = subTypeName;
@@ -506,7 +583,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetProductCode.
+             * <p>The name of the destination service in an anomalous data flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder targetProductCode(String targetProductCode) {
                 this.targetProductCode = targetProductCode;
@@ -514,7 +594,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TypeCode.
+             * <p>The code of the anomalous event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02</p>
              */
             public Builder typeCode(String typeCode) {
                 this.typeCode = typeCode;
@@ -522,7 +605,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The name of the anomalous event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anomalous data flow</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -530,7 +616,10 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the account that triggered the anomalous event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1978132506596***</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -538,7 +627,15 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * WarnLevel.
+             * <p>The severity of the anomalous event.</p>
+             * <ul>
+             * <li><strong>1</strong>: low</li>
+             * <li><strong>2</strong>: medium</li>
+             * <li><strong>3</strong>: high</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder warnLevel(Integer warnLevel) {
                 this.warnLevel = warnLevel;

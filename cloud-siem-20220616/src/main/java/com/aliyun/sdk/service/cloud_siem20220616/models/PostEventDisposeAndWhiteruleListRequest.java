@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostEventDisposeAndWhiteruleListRequest</p>
  */
 public class PostEventDisposeAndWhiteruleListRequest extends Request {
-    @Body
-    @NameInMap("EventDispose")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventDispose")
     private String eventDispose;
 
-    @Body
-    @NameInMap("IncidentUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     private String incidentUuid;
 
-    @Body
-    @NameInMap("ReceiverInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReceiverInfo")
     private String receiverInfo;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private PostEventDisposeAndWhiteruleListRequest(Builder builder) {
@@ -43,6 +50,8 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         this.receiverInfo = builder.receiverInfo;
         this.regionId = builder.regionId;
         this.remark = builder.remark;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.status = builder.status;
     }
 
@@ -95,6 +104,20 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -107,6 +130,8 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         private String receiverInfo; 
         private String regionId; 
         private String remark; 
+        private Long roleFor; 
+        private Integer roleType; 
         private Integer status; 
 
         private Builder() {
@@ -120,6 +145,8 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
             this.receiverInfo = request.receiverInfo;
             this.regionId = request.regionId;
             this.remark = request.remark;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.status = request.status;
         } 
 
@@ -169,6 +196,27 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

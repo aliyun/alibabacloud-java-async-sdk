@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosCreditResponseBody</p>
  */
 public class DescribeDdosCreditResponseBody extends TeaModel {
-    @NameInMap("DdosCredit")
+    @com.aliyun.core.annotation.NameInMap("DdosCredit")
     private DdosCredit ddosCredit;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDdosCreditResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DdosCredit.
+         * The details of the security credit score of the current Alibaba Cloud account in the specified region.
          */
         public Builder ddosCredit(DdosCredit ddosCredit) {
             this.ddosCredit = ddosCredit;
@@ -70,7 +69,7 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,11 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -92,13 +95,13 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
     } 
 
     public static class DdosCredit extends TeaModel {
-        @NameInMap("BlackholeTime")
+        @com.aliyun.core.annotation.NameInMap("BlackholeTime")
         private Integer blackholeTime;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("ScoreLevel")
+        @com.aliyun.core.annotation.NameInMap("ScoreLevel")
         private String scoreLevel;
 
         private DdosCredit(Builder builder) {
@@ -142,7 +145,7 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
             private String scoreLevel; 
 
             /**
-             * BlackholeTime.
+             * The time period after which blackhole filtering is automatically deactivated in the specified region. Unit: minutes.
              */
             public Builder blackholeTime(Integer blackholeTime) {
                 this.blackholeTime = blackholeTime;
@@ -150,7 +153,7 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The security credit score. The full score is **1000**.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -158,7 +161,15 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreLevel.
+             * The security credit level. Valid values:
+             * <p>
+             * 
+             * *   **A**: outstanding
+             * *   **B**: excellent
+             * *   **C**: good
+             * *   **D**: average
+             * *   **E**: poor
+             * *   **F**: poorer
              */
             public Builder scoreLevel(String scoreLevel) {
                 this.scoreLevel = scoreLevel;

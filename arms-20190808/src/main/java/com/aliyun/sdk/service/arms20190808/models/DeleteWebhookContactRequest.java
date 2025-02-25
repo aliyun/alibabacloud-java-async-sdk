@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWebhookContactRequest} extends {@link RequestModel}
  *
  * <p>DeleteWebhookContactRequest</p>
  */
 public class DeleteWebhookContactRequest extends Request {
-    @Query
-    @NameInMap("WebhookId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebhookId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long webhookId;
 
     private DeleteWebhookContactRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class DeleteWebhookContactRequest extends Request {
         } 
 
         /**
-         * WebhookId.
+         * <p>The ID of the webhook alert contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder webhookId(Long webhookId) {
             this.putQueryParameter("WebhookId", webhookId);

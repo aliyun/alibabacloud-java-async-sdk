@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewInstanceRequest</p>
  */
 public class RenewInstanceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("autoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("duration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("duration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer duration;
 
     private RenewInstanceRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hgprecn-cn-i7m2v08uu00a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,13 +102,17 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you enable auto-renewal for an instance for which auto-renewal is enabled, an error is reported.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * >  If you enable auto-renewal for an instance for which auto-renewal is enabled, an error is reported.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("autoRenew", autoRenew);
@@ -108,7 +121,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The renewal duration. Unit: month.
+         * <p>The renewal duration. Unit: month.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("duration", duration);

@@ -1,68 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitMediaCensorJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitMediaCensorJobRequest</p>
  */
 public class SubmitMediaCensorJobRequest extends Request {
-    @Query
-    @NameInMap("Barrages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Barrages")
     private String barrages;
 
-    @Query
-    @NameInMap("CoverImages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverImages")
     private String coverImages;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExternalUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalUrl")
     private String externalUrl;
 
-    @Query
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VideoCensorConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoCensorConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoCensorConfig;
 
     private SubmitMediaCensorJobRequest(Builder builder) {
@@ -223,7 +223,10 @@ public class SubmitMediaCensorJobRequest extends Request {
         } 
 
         /**
-         * Barrages.
+         * <p>The live comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello world</p>
          */
         public Builder barrages(String barrages) {
             this.putQueryParameter("Barrages", barrages);
@@ -232,7 +235,20 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * CoverImages.
+         * <p>The OSS URL of the image file that is used as the thumbnail. To view the OSS URL of the image file, you can log on to the <strong>MPS console</strong> and choose <strong>Media Management</strong> &gt; <strong>Media List</strong> in the left-side navigation pane. You can specify up to five thumbnails in a JSON array.</p>
+         * <ul>
+         * <li><p>Bucket: the name of the OSS bucket that stores the input file.</p>
+         * </li>
+         * <li><p>Location: the OSS region. The OSS region must be the same as the region in which your MPS service is activated.</p>
+         * </li>
+         * <li><p>Object: the OSS object to be moderated.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>The name of the object cannot start with a forward slash (/). Otherwise, the operation fails to be called.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Bucket&quot;:&quot;example-bucket-<strong><strong>&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example-</strong></strong>.jpeg&quot;}]</p>
          */
         public Builder coverImages(String coverImages) {
             this.putQueryParameter("CoverImages", coverImages);
@@ -241,7 +257,10 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the video. The value can be up to 128 bytes in size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -250,7 +269,7 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * ExternalUrl.
+         * <p>The URL of the video.</p>
          */
         public Builder externalUrl(String externalUrl) {
             this.putQueryParameter("ExternalUrl", externalUrl);
@@ -259,7 +278,20 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The Object Storage Service (OSS) URL of the media file to be moderated. To view the OSS URL of the media file, you can log on to the <strong>MPS console</strong> and choose <strong>Media Management</strong> &gt; <strong>Media List</strong> in the left-side navigation pane. To moderate an image file, use the <code>CoverImage</code> parameter to specify the OSS URL of the image file. The value is a JSON object. For more information, see the &quot;Input&quot; section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+         * <ul>
+         * <li><p>Bucket: the name of the OSS bucket that stores the input file.</p>
+         * </li>
+         * <li><p>Location: the OSS region. The OSS region must be the same as the region in which your MPS service is activated.</p>
+         * </li>
+         * <li><p>Object: the OSS object to be moderated.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong>The name of the object cannot start with a forward slash (/). Otherwise, the operation fails to be called.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;:&quot;example-bucket-<strong><strong>&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example-</strong></strong>.flv&quot;}</p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -286,7 +318,13 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * <p>The ID of the MPS queue. This ID can be used to associate the job with a notification method. To view the ID of the MPS queue, you can log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane. An empty string (&quot;&quot;) indicates that the default MPS queue is used to run the job. By default, an MPS queue can process a maximum of 10 concurrent content moderation jobs. To increase the limit, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.12246746.top-nav.ditem-sub.35da7bbcitpQnr#/ticket/createIndex">submit a ticket</a>.</p>
+         * <blockquote>
+         * <p>MPS queues are automatically created by the system. For more information about how to query and update MPS queues, see the <a href="https://help.aliyun.com/document_detail/188374.html">UpdatePipeline</a> topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>b22c173cced04565b1f38f1ecc39****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -313,7 +351,10 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title of the video. The value can be up to 64 bytes in size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello World</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -322,7 +363,10 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom data. The value can be up to 128 bytes in size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDatatestid-001-****</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -331,7 +375,40 @@ public class SubmitMediaCensorJobRequest extends Request {
         }
 
         /**
-         * VideoCensorConfig.
+         * <p>The video moderation configurations and the OSS URLs of the output snapshots. To view the OSS URL of the media file, you can log on to the <strong>MPS console</strong> and choose <strong>Media Management</strong> &gt; <strong>Media List</strong> in the left-side navigation pane.</p>
+         * <p>The value is a JSON object.</p>
+         * <ul>
+         * <li><p>OutputFile:</p>
+         * <ul>
+         * <li>Bucket: the name of the OSS bucket that stores the output file.</li>
+         * <li>Location: the OSS region. The OSS region must be the same as the region in which your MPS service is activated.</li>
+         * <li>Object: the OSS object to be generated. In the value, {Count} indicates the sequence number of the frame snapshot.</li>
+         * </ul>
+         * </li>
+         * <li><p>StoreVideoTimeline: specifies whether to generate the <code>{jobId}.video_timeline</code> file. The file is stored in OSS. A value of true indicates that the file is generated. A value of false indicates that the file is not generated. If you do not specify this parameter, the file is not generated by default. For more information about the format of the file, see the &quot;VideoTimelines&quot; parameter in the <a href="https://help.aliyun.com/document_detail/91779.html">QueryMediaCensorJobDetail</a> topic.</p>
+         * </li>
+         * <li><p>SaveType: the output mode. A value of abnormal indicates that snapshots are generated only for illegal frames. A value of all indicates that snapshots are generated for all frames.</p>
+         * </li>
+         * <li><p>Biztype: the moderation template. If you do not specify this parameter or set the value to common, the default template is used. You can submit a ticket to create a custom moderation template. Then, set this parameter to your user ID to use the custom moderation template.</p>
+         * </li>
+         * <li><p>Scenes: the moderation scenarios. You can specify the moderation scenarios that you want to use. If you do not specify this parameter, the terrorism and porn moderation scenarios are used by default. Valid values:</p>
+         * <ul>
+         * <li>porn: pornographic content detection</li>
+         * <li>terrorism: terrorist content detection</li>
+         * <li>ad: ad violation detection</li>
+         * <li>live: undesirable scene detection</li>
+         * <li>logo: special logo detection</li>
+         * <li>audio: audio anti-spam</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If the input file contains audio tracks and the audio moderation scenario is specified, the audio tracks are moderated. If the input file does not contain audio tracks, you do not need to specify the audio moderation scenario.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Scenes&quot; : [&quot;porn&quot;], &quot;OutputFile&quot;:{&quot;Bucket&quot;: &quot;example-001&quot;,&quot;Location&quot;: &quot;oss-cn-hangzhou&quot;,&quot;Object&quot;: &quot;test/example-{Count}.jpg&quot;},&quot;SaveType&quot; : &quot;abnormal&quot;,&quot;BizType&quot;:&quot;common&quot;}</p>
          */
         public Builder videoCensorConfig(String videoCensorConfig) {
             this.putQueryParameter("VideoCensorConfig", videoCensorConfig);

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCallInTransferRecordResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCallInTransferRecordResponseBody</p>
  */
 public class QueryCallInTransferRecordResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryCallInTransferRecordResponseBody(Builder builder) {
@@ -74,7 +74,14 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +89,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +97,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +108,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BF47617-7851-48F7-A3A1-2021342A78E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,23 +124,29 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCallInTransferRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCallInTransferRecordResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("CallInCalled")
+        @com.aliyun.core.annotation.NameInMap("CallInCalled")
         private String callInCalled;
 
-        @NameInMap("CallInCaller")
+        @com.aliyun.core.annotation.NameInMap("CallInCaller")
         private String callInCaller;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("RecordUrl")
+        @com.aliyun.core.annotation.NameInMap("RecordUrl")
         private String recordUrl;
 
-        @NameInMap("TransferCalled")
+        @com.aliyun.core.annotation.NameInMap("TransferCalled")
         private String transferCalled;
 
-        @NameInMap("TransferCaller")
+        @com.aliyun.core.annotation.NameInMap("TransferCaller")
         private String transferCaller;
 
         private Values(Builder builder) {
@@ -198,7 +217,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             private String transferCaller; 
 
             /**
-             * CallInCalled.
+             * <p>The called number of the inbound call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150****0000</p>
              */
             public Builder callInCalled(String callInCalled) {
                 this.callInCalled = callInCalled;
@@ -206,7 +228,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CallInCaller.
+             * <p>The calling number of the inbound call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150****0000</p>
              */
             public Builder callInCaller(String callInCaller) {
                 this.callInCaller = callInCaller;
@@ -214,7 +239,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the call was initiated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-03 10:21:21</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -222,7 +250,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RecordUrl.
+             * <p>The recording URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://alicom-fc-media.cn-hangzhou.oss.aliyun-inc.com/dayuBizVoiceMrg/4238c230-9e74-41be-90b8-2fbe7684****.wav?Expires=1627538265&OSSAccessKeyId=bypFNbGJVk73****&Signature=****mUqkPqIQ%3D">http://alicom-fc-media.cn-hangzhou.oss.aliyun-inc.com/dayuBizVoiceMrg/4238c230-9e74-41be-90b8-2fbe7684****.wav?Expires=1627538265&amp;OSSAccessKeyId=bypFNbGJVk73****&amp;Signature=****mUqkPqIQ%3D</a></p>
              */
             public Builder recordUrl(String recordUrl) {
                 this.recordUrl = recordUrl;
@@ -230,7 +261,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TransferCalled.
+             * <p>The phone number to which the call was transferred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151****0000</p>
              */
             public Builder transferCalled(String transferCalled) {
                 this.transferCalled = transferCalled;
@@ -238,7 +272,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TransferCaller.
+             * <p>The calling number that transferred the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151****0000</p>
              */
             public Builder transferCaller(String transferCaller) {
                 this.transferCaller = transferCaller;
@@ -252,17 +289,23 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCallInTransferRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCallInTransferRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < Values> values;
 
         private Data(Builder builder) {
@@ -315,7 +358,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * PageNo.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -323,7 +369,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -331,7 +380,10 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -339,7 +391,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The call transfer records.</p>
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

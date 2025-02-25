@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileTypeStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileTypeStatisticResponseBody</p>
  */
 public class GetFileTypeStatisticResponseBody extends TeaModel {
-    @NameInMap("ProgramTypeAndCounts")
-    private java.util.List < ProgramTypeAndCounts> programTypeAndCounts;
+    @com.aliyun.core.annotation.NameInMap("ProgramTypeAndCounts")
+    private java.util.List<ProgramTypeAndCounts> programTypeAndCounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileTypeStatisticResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
     /**
      * @return programTypeAndCounts
      */
-    public java.util.List < ProgramTypeAndCounts> getProgramTypeAndCounts() {
+    public java.util.List<ProgramTypeAndCounts> getProgramTypeAndCounts() {
         return this.programTypeAndCounts;
     }
 
@@ -46,19 +51,22 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProgramTypeAndCounts> programTypeAndCounts; 
+        private java.util.List<ProgramTypeAndCounts> programTypeAndCounts; 
         private String requestId; 
 
         /**
-         * An array of node types and quantity.
+         * <p>An array of node types and quantity.</p>
          */
-        public Builder programTypeAndCounts(java.util.List < ProgramTypeAndCounts> programTypeAndCounts) {
+        public Builder programTypeAndCounts(java.util.List<ProgramTypeAndCounts> programTypeAndCounts) {
             this.programTypeAndCounts = programTypeAndCounts;
             return this;
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileTypeStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileTypeStatisticResponseBody</p>
+     */
     public static class ProgramTypeAndCounts extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
         private ProgramTypeAndCounts(Builder builder) {
@@ -110,7 +124,10 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
             private String programType; 
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,12 +135,12 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
-             * <p>
+             * <p>The type of the node.</p>
+             * <p>Valid values:</p>
+             * <p>6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time data synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).</p>
              * 
-             * Valid values:
-             * 
-             * 6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time data synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;

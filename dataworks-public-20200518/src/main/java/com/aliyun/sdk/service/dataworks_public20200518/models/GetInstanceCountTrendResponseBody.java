@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceCountTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceCountTrendResponseBody</p>
  */
 public class GetInstanceCountTrendResponseBody extends TeaModel {
-    @NameInMap("InstanceCounts")
-    private java.util.List < InstanceCounts> instanceCounts;
+    @com.aliyun.core.annotation.NameInMap("InstanceCounts")
+    private java.util.List<InstanceCounts> instanceCounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceCountTrendResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
     /**
      * @return instanceCounts
      */
-    public java.util.List < InstanceCounts> getInstanceCounts() {
+    public java.util.List<InstanceCounts> getInstanceCounts() {
         return this.instanceCounts;
     }
 
@@ -46,19 +51,22 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceCounts> instanceCounts; 
+        private java.util.List<InstanceCounts> instanceCounts; 
         private String requestId; 
 
         /**
-         * InstanceCounts.
+         * <p>The quantity trend of instances.</p>
          */
-        public Builder instanceCounts(java.util.List < InstanceCounts> instanceCounts) {
+        public Builder instanceCounts(java.util.List<InstanceCounts> instanceCounts) {
             this.instanceCounts = instanceCounts;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527adhfj****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceCountTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceCountTrendResponseBody</p>
+     */
     public static class InstanceCounts extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
 
         private InstanceCounts(Builder builder) {
@@ -110,7 +124,10 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
             private Long date; 
 
             /**
-             * Count.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9527</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +135,10 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * <p>The data timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600963200000</p>
              */
             public Builder date(Long date) {
                 this.date = date;

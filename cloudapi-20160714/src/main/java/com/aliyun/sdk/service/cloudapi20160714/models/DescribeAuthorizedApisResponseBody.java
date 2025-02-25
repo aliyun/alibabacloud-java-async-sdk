@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAuthorizedApisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAuthorizedApisResponseBody</p>
  */
 public class DescribeAuthorizedApisResponseBody extends TeaModel {
-    @NameInMap("AuthorizedApis")
+    @com.aliyun.core.annotation.NameInMap("AuthorizedApis")
     private AuthorizedApis authorizedApis;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAuthorizedApisResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The authorized API set.
+         * <p>The authorized API set.</p>
          */
         public Builder authorizedApis(AuthorizedApis authorizedApis) {
             this.authorizedApis = authorizedApis;
@@ -94,7 +99,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6E46F10-F26C-4AA0-BB69-FE2743D9AE62</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,38 +148,44 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAuthorizedApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthorizedApisResponseBody</p>
+     */
     public static class AuthorizedApi extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AuthVaildTime")
+        @com.aliyun.core.annotation.NameInMap("AuthVaildTime")
         private String authVaildTime;
 
-        @NameInMap("AuthorizationSource")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationSource")
         private String authorizationSource;
 
-        @NameInMap("AuthorizedTime")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedTime")
         private String authorizedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private AuthorizedApi(Builder builder) {
@@ -278,7 +301,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The unique identifier of the API, which is automatically generated by the system.
+             * <p>The unique identifier of the API, which is automatically generated by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baacc592e63a4cb6a41920d9d3f91f38</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -286,7 +312,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API
+             * <p>The name of the API</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AreaWeather</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -294,7 +323,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the authorization in UTC.
+             * <p>The expiration time of the authorization in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-10-05T16:00:00Z</p>
              */
             public Builder authVaildTime(String authVaildTime) {
                 this.authVaildTime = authVaildTime;
@@ -302,11 +334,14 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization source. Valid values:
-             * <p>
+             * <p>The authorization source. Valid values:</p>
+             * <ul>
+             * <li><strong>CONSOLE</strong></li>
+             * <li><strong>API</strong></li>
+             * </ul>
              * 
-             * *   **CONSOLE**
-             * *   **API**
+             * <strong>example:</strong>
+             * <p>CONSOLE</p>
              */
             public Builder authorizationSource(String authorizationSource) {
                 this.authorizationSource = authorizationSource;
@@ -314,7 +349,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization time in UTC.
+             * <p>The authorization time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-07-21T06:17:20</p>
              */
             public Builder authorizedTime(String authorizedTime) {
                 this.authorizedTime = authorizedTime;
@@ -322,7 +360,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * Authorization description
+             * <p>Authorization description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries weather based on the region name</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +371,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the API group. This ID is generated by the system and globally unique.
+             * <p>The ID of the API group. This ID is generated by the system and globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>523e8dc7bbe04613b5b1d726c2a7889d</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -338,7 +382,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group.
+             * <p>The name of the API group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weather</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -346,11 +393,14 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The authorizer. Valid values:
-             * <p>
+             * <p>The authorizer. Valid values:</p>
+             * <ul>
+             * <li><strong>PROVIDER:</strong> API owner</li>
+             * <li><strong>CONSUMER:</strong> API caller</li>
+             * </ul>
              * 
-             * *   **PROVIDER:** API owner
-             * *   **CONSUMER:** API caller
+             * <strong>example:</strong>
+             * <p>PROVIDER</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -358,7 +408,10 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the API belongs.
+             * <p>The region to which the API belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -366,11 +419,14 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
-             * <p>
+             * <p>The name of the runtime environment. Valid values:</p>
+             * <ul>
+             * <li><strong>RELEASE</strong></li>
+             * <li><strong>TEST</strong>: the test environment</li>
+             * </ul>
              * 
-             * *   **RELEASE**
-             * *   **TEST**: the test environment
+             * <strong>example:</strong>
+             * <p>RELEASE</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -384,9 +440,15 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAuthorizedApisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAuthorizedApisResponseBody</p>
+     */
     public static class AuthorizedApis extends TeaModel {
-        @NameInMap("AuthorizedApi")
-        private java.util.List < AuthorizedApi> authorizedApi;
+        @com.aliyun.core.annotation.NameInMap("AuthorizedApi")
+        private java.util.List<AuthorizedApi> authorizedApi;
 
         private AuthorizedApis(Builder builder) {
             this.authorizedApi = builder.authorizedApi;
@@ -403,17 +465,17 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         /**
          * @return authorizedApi
          */
-        public java.util.List < AuthorizedApi> getAuthorizedApi() {
+        public java.util.List<AuthorizedApi> getAuthorizedApi() {
             return this.authorizedApi;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorizedApi> authorizedApi; 
+            private java.util.List<AuthorizedApi> authorizedApi; 
 
             /**
              * AuthorizedApi.
              */
-            public Builder authorizedApi(java.util.List < AuthorizedApi> authorizedApi) {
+            public Builder authorizedApi(java.util.List<AuthorizedApi> authorizedApi) {
                 this.authorizedApi = authorizedApi;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LoginInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>LoginInstanceResponseBody</p>
  */
 public class LoginInstanceResponseBody extends TeaModel {
-    @NameInMap("RedirectUrl")
+    @com.aliyun.core.annotation.NameInMap("RedirectUrl")
     private String redirectUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private LoginInstanceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class LoginInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The URL that you use to log on to the server.
+         * <p>The URL that you use to log on to the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ecs-workbench.aliyun.com/view/instance/single/gbktfz">https://ecs-workbench.aliyun.com/view/instance/single/gbktfz</a>****</p>
          */
         public Builder redirectUrl(String redirectUrl) {
             this.redirectUrl = redirectUrl;
@@ -58,7 +66,10 @@ public class LoginInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2DE174B-7196-5778-A00D-6EA2601B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

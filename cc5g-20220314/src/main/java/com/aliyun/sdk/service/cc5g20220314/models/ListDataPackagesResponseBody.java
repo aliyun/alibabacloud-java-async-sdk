@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataPackagesResponseBody</p>
  */
 public class ListDataPackagesResponseBody extends TeaModel {
-    @NameInMap("DataPackages")
+    @com.aliyun.core.annotation.NameInMap("DataPackages")
     private java.util.List < DataPackages> dataPackages;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListDataPackagesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListDataPackagesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * 数组，返回示例目录。
+         * DataPackages.
          */
         public Builder dataPackages(java.util.List < DataPackages> dataPackages) {
             this.dataPackages = dataPackages;
@@ -110,7 +109,7 @@ public class ListDataPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,28 +131,28 @@ public class ListDataPackagesResponseBody extends TeaModel {
     } 
 
     public static class DataPackages extends TeaModel {
-        @NameInMap("CardCount")
+        @com.aliyun.core.annotation.NameInMap("CardCount")
         private String cardCount;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataPackageId")
+        @com.aliyun.core.annotation.NameInMap("DataPackageId")
         private String dataPackageId;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataPackages(Builder builder) {

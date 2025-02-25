@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListStackEventsResponseBody</p>
  */
 public class ListStackEventsResponseBody extends TeaModel {
-    @NameInMap("Events")
+    @com.aliyun.core.annotation.NameInMap("Events")
     private java.util.List < Events> events;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListStackEventsResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class ListStackEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The events.
+         * <p>The events.</p>
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -94,10 +94,10 @@ public class ListStackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.\
-         * <p>
-         * Pages start from page 1.\
-         * Default value: 1.
+         * <p>The page number of the returned page.<br>Pages start from page 1.<br>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,10 +105,10 @@ public class ListStackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.\
-         * <p>
-         * Maximum value: 50.\
-         * Default value: 10.
+         * <p>The number of entries returned per page.<br>Maximum value: 50.<br>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -116,7 +116,10 @@ public class ListStackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +127,10 @@ public class ListStackEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned events.
+         * <p>The total number of returned events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,32 +143,38 @@ public class ListStackEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStackEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStackEventsResponseBody</p>
+     */
     public static class Events extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("PhysicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
         private String physicalResourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("StackName")
+        @com.aliyun.core.annotation.NameInMap("StackName")
         private String stackName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private Events(Builder builder) {
@@ -260,7 +272,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             private String statusReason; 
 
             /**
-             * The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-01T04:07:39</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -268,7 +283,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0086612d-77cf-4056-b0b5-ff8e94ad****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -276,7 +294,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.
+             * <p>The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebServer</p>
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -284,7 +305,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The physical ID of the resource.
+             * <p>The physical ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5e3tfdbinchnexh****</p>
              */
             public Builder physicalResourceId(String physicalResourceId) {
                 this.physicalResourceId = physicalResourceId;
@@ -292,7 +316,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ECS::Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -300,7 +327,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The stack ID.
+             * <p>The stack ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -308,7 +338,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The stack name.
+             * <p>The stack name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StackName</p>
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -316,7 +349,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the resource.
+             * <p>The state of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE_COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -324,7 +360,10 @@ public class ListStackEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the resource is in the current state.
+             * <p>The reason why the resource is in the current state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>state changed</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

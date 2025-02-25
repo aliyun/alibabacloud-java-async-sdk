@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportSwaggerRequest} extends {@link RequestModel}
  *
  * <p>ImportSwaggerRequest</p>
  */
 public class ImportSwaggerRequest extends Request {
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Query
-    @NameInMap("DataFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataFormat;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("GlobalCondition")
-    private java.util.Map < String, ? > globalCondition;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalCondition")
+    private java.util.Map<String, ?> globalCondition;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Overwrite")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Overwrite")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean overwrite;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ImportSwaggerRequest(Builder builder) {
@@ -92,7 +97,7 @@ public class ImportSwaggerRequest extends Request {
     /**
      * @return globalCondition
      */
-    public java.util.Map < String, ? > getGlobalCondition() {
+    public java.util.Map<String, ?> getGlobalCondition() {
         return this.globalCondition;
     }
 
@@ -121,7 +126,7 @@ public class ImportSwaggerRequest extends Request {
         private String data; 
         private String dataFormat; 
         private Boolean dryRun; 
-        private java.util.Map < String, ? > globalCondition; 
+        private java.util.Map<String, ?> globalCondition; 
         private String groupId; 
         private Boolean overwrite; 
         private String securityToken; 
@@ -142,7 +147,11 @@ public class ImportSwaggerRequest extends Request {
         } 
 
         /**
-         * The Swagger text content.
+         * <p>The Swagger text content.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;A Swagger API definition in YAML&quot;</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -151,11 +160,15 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The Swagger text format:
-         * <p>
+         * <p>The Swagger text format:</p>
+         * <ul>
+         * <li>json</li>
+         * <li>yaml</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   json
-         * *   yaml
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         public Builder dataFormat(String dataFormat) {
             this.putQueryParameter("DataFormat", dataFormat);
@@ -164,7 +177,10 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The pre-inspection.
+         * <p>The pre-inspection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -173,9 +189,12 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The global conditions.
+         * <p>The global conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder globalCondition(java.util.Map < String, ? > globalCondition) {
+        public Builder globalCondition(java.util.Map<String, ?> globalCondition) {
             String globalConditionShrink = shrink(globalCondition, "GlobalCondition", "json");
             this.putQueryParameter("GlobalCondition", globalConditionShrink);
             this.globalCondition = globalCondition;
@@ -183,7 +202,11 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * The ID of the API group to which the Swagger is imported.
+         * <p>The ID of the API group to which the Swagger is imported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0009db9c828549768a200320714b8930</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -192,10 +215,12 @@ public class ImportSwaggerRequest extends Request {
         }
 
         /**
-         * Specifies whether to overwrite the existing API.
-         * <p>
+         * <p>Specifies whether to overwrite the existing API.</p>
+         * <p>APIs with the same HTTP request type and backend request path are considered the same.</p>
+         * <p>This parameter is required.</p>
          * 
-         * APIs with the same HTTP request type and backend request path are considered the same.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);

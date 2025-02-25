@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnRealTimeLogProjectRequest} extends {@link RequestModel}
  *
  * <p>DeleteDcdnRealTimeLogProjectRequest</p>
  */
 public class DeleteDcdnRealTimeLogProjectRequest extends Request {
-    @Query
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     private DeleteDcdnRealTimeLogProjectRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteDcdnRealTimeLogProjectRequest extends Request {
         } 
 
         /**
-         * The name of a real-time log delivery project.
+         * <p>The name of a real-time log delivery project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

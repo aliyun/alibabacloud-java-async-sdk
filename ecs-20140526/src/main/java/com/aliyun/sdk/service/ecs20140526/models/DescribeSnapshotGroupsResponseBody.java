@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotGroupsResponseBody</p>
  */
 public class DescribeSnapshotGroupsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotGroups")
+    @com.aliyun.core.annotation.NameInMap("SnapshotGroups")
     private SnapshotGroups snapshotGroups;
 
     private DescribeSnapshotGroupsResponseBody(Builder builder) {
@@ -62,10 +67,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         private SnapshotGroups snapshotGroups; 
 
         /**
-         * The token used to start the next query.
-         * <p>
+         * <p>The token used to start the next query.</p>
+         * <blockquote>
+         * <p>If the return value is empty, no more data exists.</p>
+         * </blockquote>
          * 
-         * > If the return value is empty, no more data exists.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +81,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F9A4CC4-362F-469A-B9EF-B3204EF8AA3A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +92,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the snapshot-consistent groups.
+         * <p>The information about the snapshot-consistent groups.</p>
          */
         public Builder snapshotGroups(SnapshotGroups snapshotGroups) {
             this.snapshotGroups = snapshotGroups;
@@ -94,11 +105,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -133,7 +150,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
+             * <p>The tag key of the snapshot. The default values of Key and Value contain snapshot source information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ecs:createFrom</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -141,7 +161,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of each snapshot in the snapshot- consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
+             * <p>The tag value of the snapshot. The default values of Key and Value contain snapshot source information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp11qm0o3dk4iuc****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -155,9 +178,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -174,17 +203,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -196,29 +225,35 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class Snapshot extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
 
-        @NameInMap("InstantAccess")
+        @com.aliyun.core.annotation.NameInMap("InstantAccess")
         private Boolean instantAccess;
 
-        @NameInMap("InstantAccessRetentionDays")
+        @com.aliyun.core.annotation.NameInMap("InstantAccessRetentionDays")
         private Integer instantAccessRetentionDays;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SourceDiskId")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private Snapshot(Builder builder) {
@@ -307,7 +342,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * Available.
+             * <p>Indicates whether the snapshot can be shared and be used to create or roll back a disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -315,11 +357,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instant access feature was enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: The instant access feature is enabled. By default, the instant access feature is enabled for ESSDs.</li>
+             * <li>false: The instant access feature is disabled. The snapshot is a standard snapshot for which the instant access feature is disabled.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+             * </blockquote>
              * 
-             * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -327,7 +375,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.
+             * <p>The validity period of the instant access feature. When the validity period ends, the instant access snapshot is automatically released.</p>
+             * <blockquote>
+             * <p> This parameter is no longer used. By default, standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -335,7 +389,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the snapshot creation task. Unit: percent (%).
+             * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -343,7 +400,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * <p>The ID of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-j6cbzmrlbf09w72q****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -351,7 +411,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter is retained even after the source disk is released.
+             * <p>The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-j6c3ogynmvpi6wy7****</p>
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -359,11 +422,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source disk. Valid values:
-             * <p>
+             * <p>The type of the source disk. Valid values:</p>
+             * <ul>
+             * <li>system: system disk</li>
+             * <li>data: data disk</li>
+             * </ul>
              * 
-             * *   system: system disk
-             * *   data: data disk
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -371,7 +437,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot belongs.
+             * <p>The tags of the snapshot. The default values contain snapshot source information.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -385,9 +451,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
-        private java.util.List < Snapshot> snapshot;
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
+        private java.util.List<Snapshot> snapshot;
 
         private Snapshots(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -404,17 +476,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < Snapshot> getSnapshot() {
+        public java.util.List<Snapshot> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < Snapshot> snapshot; 
+            private java.util.List<Snapshot> snapshot; 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < Snapshot> snapshot) {
+            public Builder snapshot(java.util.List<Snapshot> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }
@@ -426,11 +498,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class TagsTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagsTag(Builder builder) {
@@ -465,7 +543,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the snapshot-consistent group.
+             * <p>The tag key of the snapshot-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -473,7 +554,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the snapshot-consistent group.
+             * <p>The tag value of the snapshot-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -487,9 +571,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class SnapshotGroupTags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < TagsTag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<TagsTag> tag;
 
         private SnapshotGroupTags(Builder builder) {
             this.tag = builder.tag;
@@ -506,17 +596,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < TagsTag> getTag() {
+        public java.util.List<TagsTag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < TagsTag> tag; 
+            private java.util.List<TagsTag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < TagsTag> tag) {
+            public Builder tag(java.util.List<TagsTag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -528,35 +618,41 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class SnapshotGroup extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProgressStatus")
+        @com.aliyun.core.annotation.NameInMap("ProgressStatus")
         private String progressStatus;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SnapshotGroupId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroupId")
         private String snapshotGroupId;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private Snapshots snapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private SnapshotGroupTags tags;
 
         private SnapshotGroup(Builder builder) {
@@ -663,7 +759,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private SnapshotGroupTags tags; 
 
             /**
-             * The time when the snapshot-consistent group was created.
+             * <p>The time when the snapshot-consistent group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-23T10:58:48Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -671,7 +770,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the snapshot-consistent group.
+             * <p>The description of the snapshot-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -679,7 +781,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can use parameters starting with `Snapshots.Snapshot.Tags.` in the response to view the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
+             * <p>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with <code>Snapshots.Snapshot.Tags.</code> to determine the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-j6ca469urv8ei629****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -687,7 +792,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the snapshot-consistent group.
+             * <p>The name of the snapshot-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -695,7 +803,12 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder progressStatus(String progressStatus) {
                 this.progressStatus = progressStatus;
@@ -703,7 +816,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the snapshot-consistent group belongs.
+             * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -711,7 +827,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot-consistent group.
+             * <p>The ID of the snapshot-consistent group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssg-j6ciyh3k52qp7ovm****</p>
              */
             public Builder snapshotGroupId(String snapshotGroupId) {
                 this.snapshotGroupId = snapshotGroupId;
@@ -719,7 +838,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the snapshots in the snapshot-consistent group.
+             * <p>The information about the snapshots in the snapshot-consistent group.</p>
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -727,12 +846,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the snapshot-consistent group. Valid values:
-             * <p>
+             * <p>The state of the snapshot-consistent group. Valid values:</p>
+             * <ul>
+             * <li>progressing: The snapshot-consistent group was being created.</li>
+             * <li>accomplished: The snapshot-consistent group was created.</li>
+             * <li>failed: The snapshot-consistent group failed to be created.</li>
+             * </ul>
              * 
-             * *   progressing: The snapshot-consistent group is being created.
-             * *   accomplished: The snapshot-consistent group is created.
-             * *   failed: The snapshot-consistent group fails to be created.
+             * <strong>example:</strong>
+             * <p>accomplished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -740,7 +862,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the snapshot-consistent group.
+             * <p>The tags of the snapshot-consistent group.</p>
              */
             public Builder tags(SnapshotGroupTags tags) {
                 this.tags = tags;
@@ -754,9 +876,15 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotGroupsResponseBody</p>
+     */
     public static class SnapshotGroups extends TeaModel {
-        @NameInMap("SnapshotGroup")
-        private java.util.List < SnapshotGroup> snapshotGroup;
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroup")
+        private java.util.List<SnapshotGroup> snapshotGroup;
 
         private SnapshotGroups(Builder builder) {
             this.snapshotGroup = builder.snapshotGroup;
@@ -773,17 +901,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return snapshotGroup
          */
-        public java.util.List < SnapshotGroup> getSnapshotGroup() {
+        public java.util.List<SnapshotGroup> getSnapshotGroup() {
             return this.snapshotGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SnapshotGroup> snapshotGroup; 
+            private java.util.List<SnapshotGroup> snapshotGroup; 
 
             /**
              * SnapshotGroup.
              */
-            public Builder snapshotGroup(java.util.List < SnapshotGroup> snapshotGroup) {
+            public Builder snapshotGroup(java.util.List<SnapshotGroup> snapshotGroup) {
                 this.snapshotGroup = snapshotGroup;
                 return this;
             }

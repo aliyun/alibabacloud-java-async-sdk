@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricsDataResponseBody</p>
  */
 public class DescribeMetricsDataResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private String data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List < String > data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMetricsDataResponseBody(Builder builder) {
@@ -34,7 +33,7 @@ public class DescribeMetricsDataResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public java.util.List < String > getData() {
         return this.data;
     }
 
@@ -46,13 +45,13 @@ public class DescribeMetricsDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String data; 
+        private java.util.List < String > data; 
         private String requestId; 
 
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(java.util.List < String > data) {
             this.data = data;
             return this;
         }

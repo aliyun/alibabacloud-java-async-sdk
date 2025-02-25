@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
  * <p>HotelBillSettlementQueryResponseBody</p>
  */
 public class HotelBillSettlementQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelBillSettlementQueryResponseBody(Builder builder) {
@@ -151,236 +156,309 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelBillSettlementQueryResponseBody</p>
+     */
     public static class DataList extends TeaModel {
-        @NameInMap("alipay_trade_no")
+        @com.aliyun.core.annotation.NameInMap("agreement_promotion_fee")
+        private Double agreementPromotionFee;
+
+        @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
-        @NameInMap("apply_arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("apply_arr_city_code")
         private String applyArrCityCode;
 
-        @NameInMap("apply_arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("apply_arr_city_name")
         private String applyArrCityName;
 
-        @NameInMap("apply_dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("apply_dep_city_code")
         private String applyDepCityCode;
 
-        @NameInMap("apply_dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("apply_dep_city_name")
         private String applyDepCityName;
 
-        @NameInMap("apply_extend_field")
+        @com.aliyun.core.annotation.NameInMap("apply_extend_field")
         private String applyExtendField;
 
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("average_nights")
+        @com.aliyun.core.annotation.NameInMap("average_nights")
         private String averageNights;
 
-        @NameInMap("bill_record_time")
+        @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
-        @NameInMap("book_reason")
+        @com.aliyun.core.annotation.NameInMap("billing_entity")
+        private String billingEntity;
+
+        @com.aliyun.core.annotation.NameInMap("book_mode")
+        private String bookMode;
+
+        @com.aliyun.core.annotation.NameInMap("book_reason")
         private String bookReason;
 
-        @NameInMap("book_time")
+        @com.aliyun.core.annotation.NameInMap("book_time")
         private String bookTime;
 
-        @NameInMap("booker_id")
+        @com.aliyun.core.annotation.NameInMap("booker_id")
         private String bookerId;
 
-        @NameInMap("booker_job_no")
+        @com.aliyun.core.annotation.NameInMap("booker_job_no")
         private String bookerJobNo;
 
-        @NameInMap("booker_name")
+        @com.aliyun.core.annotation.NameInMap("booker_name")
         private String bookerName;
 
-        @NameInMap("brand_group")
+        @com.aliyun.core.annotation.NameInMap("brand_group")
         private String brandGroup;
 
-        @NameInMap("brand_name")
+        @com.aliyun.core.annotation.NameInMap("brand_name")
         private String brandName;
 
-        @NameInMap("business_trip_result")
+        @com.aliyun.core.annotation.NameInMap("business_trip_result")
         private String businessTripResult;
 
-        @NameInMap("capital_direction")
+        @com.aliyun.core.annotation.NameInMap("cancel_or_modify_reason")
+        private String cancelOrModifyReason;
+
+        @com.aliyun.core.annotation.NameInMap("cancel_or_modify_scene")
+        private String cancelOrModifyScene;
+
+        @com.aliyun.core.annotation.NameInMap("capital_direction")
         private String capitalDirection;
 
-        @NameInMap("cascade_department")
+        @com.aliyun.core.annotation.NameInMap("cascade_department")
         private String cascadeDepartment;
 
-        @NameInMap("check_in_date")
+        @com.aliyun.core.annotation.NameInMap("category_desc")
+        private String categoryDesc;
+
+        @com.aliyun.core.annotation.NameInMap("check_in_date")
         private String checkInDate;
 
-        @NameInMap("checkout_date")
+        @com.aliyun.core.annotation.NameInMap("checkout_date")
         private String checkoutDate;
 
-        @NameInMap("city")
+        @com.aliyun.core.annotation.NameInMap("city")
         private String city;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_county")
+        @com.aliyun.core.annotation.NameInMap("city_county")
         private String cityCounty;
 
-        @NameInMap("city_county_code")
+        @com.aliyun.core.annotation.NameInMap("city_county_code")
         private String cityCountyCode;
 
-        @NameInMap("corp_refund_fee")
+        @com.aliyun.core.annotation.NameInMap("corp_refund_fee")
         private Double corpRefundFee;
 
-        @NameInMap("corp_total_fee")
+        @com.aliyun.core.annotation.NameInMap("corp_total_fee")
         private Double corpTotalFee;
 
-        @NameInMap("cost_center")
+        @com.aliyun.core.annotation.NameInMap("cost_center")
         private String costCenter;
 
-        @NameInMap("cost_center_number")
+        @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
-        @NameInMap("department")
+        @com.aliyun.core.annotation.NameInMap("deductible_tax")
+        private Double deductibleTax;
+
+        @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
-        @NameInMap("department_id")
+        @com.aliyun.core.annotation.NameInMap("department_id")
         private String departmentId;
 
-        @NameInMap("exceed_reason")
+        @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
 
-        @NameInMap("fee_type")
+        @com.aliyun.core.annotation.NameInMap("fee_type")
         private String feeType;
 
-        @NameInMap("fees")
+        @com.aliyun.core.annotation.NameInMap("fee_type_desc")
+        private String feeTypeDesc;
+
+        @com.aliyun.core.annotation.NameInMap("fees")
         private Double fees;
 
-        @NameInMap("fines")
+        @com.aliyun.core.annotation.NameInMap("fines")
         private Double fines;
 
-        @NameInMap("fu_point_fee")
+        @com.aliyun.core.annotation.NameInMap("fu_point_fee")
         private Double fuPointFee;
 
-        @NameInMap("hotel_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_name")
         private String hotelName;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("ins_order_id")
+        private String insOrderId;
+
+        @com.aliyun.core.annotation.NameInMap("insurance_number")
+        private String insuranceNumber;
+
+        @com.aliyun.core.annotation.NameInMap("insurance_price")
+        private Double insurancePrice;
+
+        @com.aliyun.core.annotation.NameInMap("insurance_product_name")
+        private String insuranceProductName;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("is_early_departure")
+        @com.aliyun.core.annotation.NameInMap("is_early_departure")
         private String isEarlyDeparture;
 
-        @NameInMap("is_negotiation")
+        @com.aliyun.core.annotation.NameInMap("is_negotiation")
         private String isNegotiation;
 
-        @NameInMap("is_share_str")
+        @com.aliyun.core.annotation.NameInMap("is_share_str")
         private String isShareStr;
 
-        @NameInMap("nights")
+        @com.aliyun.core.annotation.NameInMap("nights")
         private Integer nights;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("no_advance_booking_reason")
+        private String noAdvanceBookingReason;
+
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
 
-        @NameInMap("order_price")
+        @com.aliyun.core.annotation.NameInMap("order_price")
         private Double orderPrice;
 
-        @NameInMap("order_type")
+        @com.aliyun.core.annotation.NameInMap("order_type")
         private String orderType;
 
-        @NameInMap("over_apply_id")
+        @com.aliyun.core.annotation.NameInMap("original_reserve_rule")
+        private String originalReserveRule;
+
+        @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
 
-        @NameInMap("payment_department_id")
+        @com.aliyun.core.annotation.NameInMap("payment_department_id")
         private String paymentDepartmentId;
 
-        @NameInMap("payment_department_name")
+        @com.aliyun.core.annotation.NameInMap("payment_department_name")
         private String paymentDepartmentName;
 
-        @NameInMap("person_refund_fee")
+        @com.aliyun.core.annotation.NameInMap("person_refund_fee")
         private Double personRefundFee;
 
-        @NameInMap("person_settle_price")
+        @com.aliyun.core.annotation.NameInMap("person_settle_price")
         private Double personSettlePrice;
 
-        @NameInMap("primary_id")
+        @com.aliyun.core.annotation.NameInMap("primary_id")
         private Long primaryId;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_name")
+        @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
 
-        @NameInMap("promotion_fee")
+        @com.aliyun.core.annotation.NameInMap("promotion_fee")
         private Double promotionFee;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("recover_money_receipt_amt")
+        private Double recoverMoneyReceiptAmt;
+
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("reserve_rule")
+        @com.aliyun.core.annotation.NameInMap("reserve_rule")
         private String reserveRule;
 
-        @NameInMap("room_no")
+        @com.aliyun.core.annotation.NameInMap("room_no")
         private String roomNo;
 
-        @NameInMap("room_number")
+        @com.aliyun.core.annotation.NameInMap("room_number")
         private Integer roomNumber;
 
-        @NameInMap("room_price")
+        @com.aliyun.core.annotation.NameInMap("room_price")
         private Double roomPrice;
 
-        @NameInMap("room_type")
+        @com.aliyun.core.annotation.NameInMap("room_type")
         private String roomType;
 
-        @NameInMap("service_fee")
+        @com.aliyun.core.annotation.NameInMap("scene_id")
+        private String sceneId;
+
+        @com.aliyun.core.annotation.NameInMap("scene_name")
+        private String sceneName;
+
+        @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
-        @NameInMap("settlement_fee")
+        @com.aliyun.core.annotation.NameInMap("settle_type_desc")
+        private String settleTypeDesc;
+
+        @com.aliyun.core.annotation.NameInMap("settlement_fee")
         private Double settlementFee;
 
-        @NameInMap("settlement_grant_fee")
+        @com.aliyun.core.annotation.NameInMap("settlement_grant_fee")
         private Double settlementGrantFee;
 
-        @NameInMap("settlement_time")
+        @com.aliyun.core.annotation.NameInMap("settlement_time")
         private String settlementTime;
 
-        @NameInMap("settlement_type")
+        @com.aliyun.core.annotation.NameInMap("settlement_type")
         private String settlementType;
 
-        @NameInMap("star")
+        @com.aliyun.core.annotation.NameInMap("star")
         private String star;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("status_desc")
+        private String statusDesc;
+
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("third_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("third_itinerary_id")
         private String thirdItineraryId;
 
-        @NameInMap("total_nights")
+        @com.aliyun.core.annotation.NameInMap("total_nights")
         private Integer totalNights;
 
-        @NameInMap("traveler_id")
+        @com.aliyun.core.annotation.NameInMap("trade_action_desc")
+        private String tradeActionDesc;
+
+        @com.aliyun.core.annotation.NameInMap("traveler_id")
         private String travelerId;
 
-        @NameInMap("traveler_job_no")
+        @com.aliyun.core.annotation.NameInMap("traveler_job_no")
         private String travelerJobNo;
 
-        @NameInMap("traveler_member_type_name")
+        @com.aliyun.core.annotation.NameInMap("traveler_member_type_name")
         private String travelerMemberTypeName;
 
-        @NameInMap("traveler_name")
+        @com.aliyun.core.annotation.NameInMap("traveler_name")
         private String travelerName;
 
-        @NameInMap("voucher_type")
+        @com.aliyun.core.annotation.NameInMap("unbooked_lowest_price_reason")
+        private String unbookedLowestPriceReason;
+
+        @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
+        @com.aliyun.core.annotation.NameInMap("voucher_type_desc")
+        private String voucherTypeDesc;
+
         private DataList(Builder builder) {
+            this.agreementPromotionFee = builder.agreementPromotionFee;
             this.alipayTradeNo = builder.alipayTradeNo;
             this.applyArrCityCode = builder.applyArrCityCode;
             this.applyArrCityName = builder.applyArrCityName;
@@ -390,6 +468,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.applyId = builder.applyId;
             this.averageNights = builder.averageNights;
             this.billRecordTime = builder.billRecordTime;
+            this.billingEntity = builder.billingEntity;
+            this.bookMode = builder.bookMode;
             this.bookReason = builder.bookReason;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
@@ -398,8 +478,11 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.brandGroup = builder.brandGroup;
             this.brandName = builder.brandName;
             this.businessTripResult = builder.businessTripResult;
+            this.cancelOrModifyReason = builder.cancelOrModifyReason;
+            this.cancelOrModifyScene = builder.cancelOrModifyScene;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
+            this.categoryDesc = builder.categoryDesc;
             this.checkInDate = builder.checkInDate;
             this.checkoutDate = builder.checkoutDate;
             this.city = builder.city;
@@ -410,23 +493,31 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.corpTotalFee = builder.corpTotalFee;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
+            this.deductibleTax = builder.deductibleTax;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.exceedReason = builder.exceedReason;
             this.feeType = builder.feeType;
+            this.feeTypeDesc = builder.feeTypeDesc;
             this.fees = builder.fees;
             this.fines = builder.fines;
             this.fuPointFee = builder.fuPointFee;
             this.hotelName = builder.hotelName;
             this.index = builder.index;
+            this.insOrderId = builder.insOrderId;
+            this.insuranceNumber = builder.insuranceNumber;
+            this.insurancePrice = builder.insurancePrice;
+            this.insuranceProductName = builder.insuranceProductName;
             this.invoiceTitle = builder.invoiceTitle;
             this.isEarlyDeparture = builder.isEarlyDeparture;
             this.isNegotiation = builder.isNegotiation;
             this.isShareStr = builder.isShareStr;
             this.nights = builder.nights;
+            this.noAdvanceBookingReason = builder.noAdvanceBookingReason;
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
             this.orderType = builder.orderType;
+            this.originalReserveRule = builder.originalReserveRule;
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
@@ -436,27 +527,35 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
             this.promotionFee = builder.promotionFee;
+            this.recoverMoneyReceiptAmt = builder.recoverMoneyReceiptAmt;
             this.remark = builder.remark;
             this.reserveRule = builder.reserveRule;
             this.roomNo = builder.roomNo;
             this.roomNumber = builder.roomNumber;
             this.roomPrice = builder.roomPrice;
             this.roomType = builder.roomType;
+            this.sceneId = builder.sceneId;
+            this.sceneName = builder.sceneName;
             this.serviceFee = builder.serviceFee;
+            this.settleTypeDesc = builder.settleTypeDesc;
             this.settlementFee = builder.settlementFee;
             this.settlementGrantFee = builder.settlementGrantFee;
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.star = builder.star;
             this.status = builder.status;
+            this.statusDesc = builder.statusDesc;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
             this.totalNights = builder.totalNights;
+            this.tradeActionDesc = builder.tradeActionDesc;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerMemberTypeName = builder.travelerMemberTypeName;
             this.travelerName = builder.travelerName;
+            this.unbookedLowestPriceReason = builder.unbookedLowestPriceReason;
             this.voucherType = builder.voucherType;
+            this.voucherTypeDesc = builder.voucherTypeDesc;
         }
 
         public static Builder builder() {
@@ -465,6 +564,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         public static DataList create() {
             return builder().build();
+        }
+
+        /**
+         * @return agreementPromotionFee
+         */
+        public Double getAgreementPromotionFee() {
+            return this.agreementPromotionFee;
         }
 
         /**
@@ -531,6 +637,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return billingEntity
+         */
+        public String getBillingEntity() {
+            return this.billingEntity;
+        }
+
+        /**
+         * @return bookMode
+         */
+        public String getBookMode() {
+            return this.bookMode;
+        }
+
+        /**
          * @return bookReason
          */
         public String getBookReason() {
@@ -587,6 +707,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return cancelOrModifyReason
+         */
+        public String getCancelOrModifyReason() {
+            return this.cancelOrModifyReason;
+        }
+
+        /**
+         * @return cancelOrModifyScene
+         */
+        public String getCancelOrModifyScene() {
+            return this.cancelOrModifyScene;
+        }
+
+        /**
          * @return capitalDirection
          */
         public String getCapitalDirection() {
@@ -598,6 +732,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getCascadeDepartment() {
             return this.cascadeDepartment;
+        }
+
+        /**
+         * @return categoryDesc
+         */
+        public String getCategoryDesc() {
+            return this.categoryDesc;
         }
 
         /**
@@ -671,6 +812,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return deductibleTax
+         */
+        public Double getDeductibleTax() {
+            return this.deductibleTax;
+        }
+
+        /**
          * @return department
          */
         public String getDepartment() {
@@ -696,6 +844,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getFeeType() {
             return this.feeType;
+        }
+
+        /**
+         * @return feeTypeDesc
+         */
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         /**
@@ -734,6 +889,34 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return insOrderId
+         */
+        public String getInsOrderId() {
+            return this.insOrderId;
+        }
+
+        /**
+         * @return insuranceNumber
+         */
+        public String getInsuranceNumber() {
+            return this.insuranceNumber;
+        }
+
+        /**
+         * @return insurancePrice
+         */
+        public Double getInsurancePrice() {
+            return this.insurancePrice;
+        }
+
+        /**
+         * @return insuranceProductName
+         */
+        public String getInsuranceProductName() {
+            return this.insuranceProductName;
+        }
+
+        /**
          * @return invoiceTitle
          */
         public String getInvoiceTitle() {
@@ -769,6 +952,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return noAdvanceBookingReason
+         */
+        public String getNoAdvanceBookingReason() {
+            return this.noAdvanceBookingReason;
+        }
+
+        /**
          * @return orderId
          */
         public String getOrderId() {
@@ -787,6 +977,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getOrderType() {
             return this.orderType;
+        }
+
+        /**
+         * @return originalReserveRule
+         */
+        public String getOriginalReserveRule() {
+            return this.originalReserveRule;
         }
 
         /**
@@ -853,6 +1050,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return recoverMoneyReceiptAmt
+         */
+        public Double getRecoverMoneyReceiptAmt() {
+            return this.recoverMoneyReceiptAmt;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -895,10 +1099,31 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return sceneId
+         */
+        public String getSceneId() {
+            return this.sceneId;
+        }
+
+        /**
+         * @return sceneName
+         */
+        public String getSceneName() {
+            return this.sceneName;
+        }
+
+        /**
          * @return serviceFee
          */
         public Double getServiceFee() {
             return this.serviceFee;
+        }
+
+        /**
+         * @return settleTypeDesc
+         */
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
         }
 
         /**
@@ -944,6 +1169,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusDesc
+         */
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
+        /**
          * @return taxRate
          */
         public String getTaxRate() {
@@ -962,6 +1194,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public Integer getTotalNights() {
             return this.totalNights;
+        }
+
+        /**
+         * @return tradeActionDesc
+         */
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         /**
@@ -993,13 +1232,28 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return unbookedLowestPriceReason
+         */
+        public String getUnbookedLowestPriceReason() {
+            return this.unbookedLowestPriceReason;
+        }
+
+        /**
          * @return voucherType
          */
         public Integer getVoucherType() {
             return this.voucherType;
         }
 
+        /**
+         * @return voucherTypeDesc
+         */
+        public String getVoucherTypeDesc() {
+            return this.voucherTypeDesc;
+        }
+
         public static final class Builder {
+            private Double agreementPromotionFee; 
             private String alipayTradeNo; 
             private String applyArrCityCode; 
             private String applyArrCityName; 
@@ -1009,6 +1263,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String applyId; 
             private String averageNights; 
             private String billRecordTime; 
+            private String billingEntity; 
+            private String bookMode; 
             private String bookReason; 
             private String bookTime; 
             private String bookerId; 
@@ -1017,8 +1273,11 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String brandGroup; 
             private String brandName; 
             private String businessTripResult; 
+            private String cancelOrModifyReason; 
+            private String cancelOrModifyScene; 
             private String capitalDirection; 
             private String cascadeDepartment; 
+            private String categoryDesc; 
             private String checkInDate; 
             private String checkoutDate; 
             private String city; 
@@ -1029,23 +1288,31 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private Double corpTotalFee; 
             private String costCenter; 
             private String costCenterNumber; 
+            private Double deductibleTax; 
             private String department; 
             private String departmentId; 
             private String exceedReason; 
             private String feeType; 
+            private String feeTypeDesc; 
             private Double fees; 
             private Double fines; 
             private Double fuPointFee; 
             private String hotelName; 
             private String index; 
+            private String insOrderId; 
+            private String insuranceNumber; 
+            private Double insurancePrice; 
+            private String insuranceProductName; 
             private String invoiceTitle; 
             private String isEarlyDeparture; 
             private String isNegotiation; 
             private String isShareStr; 
             private Integer nights; 
+            private String noAdvanceBookingReason; 
             private String orderId; 
             private Double orderPrice; 
             private String orderType; 
+            private String originalReserveRule; 
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1055,27 +1322,43 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String projectCode; 
             private String projectName; 
             private Double promotionFee; 
+            private Double recoverMoneyReceiptAmt; 
             private String remark; 
             private String reserveRule; 
             private String roomNo; 
             private Integer roomNumber; 
             private Double roomPrice; 
             private String roomType; 
+            private String sceneId; 
+            private String sceneName; 
             private Double serviceFee; 
+            private String settleTypeDesc; 
             private Double settlementFee; 
             private Double settlementGrantFee; 
             private String settlementTime; 
             private String settlementType; 
             private String star; 
             private Integer status; 
+            private String statusDesc; 
             private String taxRate; 
             private String thirdItineraryId; 
             private Integer totalNights; 
+            private String tradeActionDesc; 
             private String travelerId; 
             private String travelerJobNo; 
             private String travelerMemberTypeName; 
             private String travelerName; 
+            private String unbookedLowestPriceReason; 
             private Integer voucherType; 
+            private String voucherTypeDesc; 
+
+            /**
+             * agreement_promotion_fee.
+             */
+            public Builder agreementPromotionFee(Double agreementPromotionFee) {
+                this.agreementPromotionFee = agreementPromotionFee;
+                return this;
+            }
 
             /**
              * alipay_trade_no.
@@ -1118,7 +1401,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 审批扩展自定义字段
+             * <p>审批扩展自定义字段</p>
              */
             public Builder applyExtendField(String applyExtendField) {
                 this.applyExtendField = applyExtendField;
@@ -1146,6 +1429,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
+                return this;
+            }
+
+            /**
+             * billing_entity.
+             */
+            public Builder billingEntity(String billingEntity) {
+                this.billingEntity = billingEntity;
+                return this;
+            }
+
+            /**
+             * book_mode.
+             */
+            public Builder bookMode(String bookMode) {
+                this.bookMode = bookMode;
                 return this;
             }
 
@@ -1214,6 +1513,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * cancel_or_modify_reason.
+             */
+            public Builder cancelOrModifyReason(String cancelOrModifyReason) {
+                this.cancelOrModifyReason = cancelOrModifyReason;
+                return this;
+            }
+
+            /**
+             * cancel_or_modify_scene.
+             */
+            public Builder cancelOrModifyScene(String cancelOrModifyScene) {
+                this.cancelOrModifyScene = cancelOrModifyScene;
+                return this;
+            }
+
+            /**
              * capital_direction.
              */
             public Builder capitalDirection(String capitalDirection) {
@@ -1226,6 +1541,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder cascadeDepartment(String cascadeDepartment) {
                 this.cascadeDepartment = cascadeDepartment;
+                return this;
+            }
+
+            /**
+             * category_desc.
+             */
+            public Builder categoryDesc(String categoryDesc) {
+                this.categoryDesc = categoryDesc;
                 return this;
             }
 
@@ -1310,6 +1633,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * deductible_tax.
+             */
+            public Builder deductibleTax(Double deductibleTax) {
+                this.deductibleTax = deductibleTax;
+                return this;
+            }
+
+            /**
              * department.
              */
             public Builder department(String department) {
@@ -1338,6 +1669,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder feeType(String feeType) {
                 this.feeType = feeType;
+                return this;
+            }
+
+            /**
+             * fee_type_desc.
+             */
+            public Builder feeTypeDesc(String feeTypeDesc) {
+                this.feeTypeDesc = feeTypeDesc;
                 return this;
             }
 
@@ -1382,6 +1721,38 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * ins_order_id.
+             */
+            public Builder insOrderId(String insOrderId) {
+                this.insOrderId = insOrderId;
+                return this;
+            }
+
+            /**
+             * insurance_number.
+             */
+            public Builder insuranceNumber(String insuranceNumber) {
+                this.insuranceNumber = insuranceNumber;
+                return this;
+            }
+
+            /**
+             * insurance_price.
+             */
+            public Builder insurancePrice(Double insurancePrice) {
+                this.insurancePrice = insurancePrice;
+                return this;
+            }
+
+            /**
+             * insurance_product_name.
+             */
+            public Builder insuranceProductName(String insuranceProductName) {
+                this.insuranceProductName = insuranceProductName;
+                return this;
+            }
+
+            /**
              * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
@@ -1422,6 +1793,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * no_advance_booking_reason.
+             */
+            public Builder noAdvanceBookingReason(String noAdvanceBookingReason) {
+                this.noAdvanceBookingReason = noAdvanceBookingReason;
+                return this;
+            }
+
+            /**
              * order_id.
              */
             public Builder orderId(String orderId) {
@@ -1442,6 +1821,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
+                return this;
+            }
+
+            /**
+             * original_reserve_rule.
+             */
+            public Builder originalReserveRule(String originalReserveRule) {
+                this.originalReserveRule = originalReserveRule;
                 return this;
             }
 
@@ -1518,6 +1905,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * recover_money_receipt_amt.
+             */
+            public Builder recoverMoneyReceiptAmt(Double recoverMoneyReceiptAmt) {
+                this.recoverMoneyReceiptAmt = recoverMoneyReceiptAmt;
+                return this;
+            }
+
+            /**
              * remark.
              */
             public Builder remark(String remark) {
@@ -1566,10 +1961,34 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * scene_id.
+             */
+            public Builder sceneId(String sceneId) {
+                this.sceneId = sceneId;
+                return this;
+            }
+
+            /**
+             * scene_name.
+             */
+            public Builder sceneName(String sceneName) {
+                this.sceneName = sceneName;
+                return this;
+            }
+
+            /**
              * service_fee.
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
+                return this;
+            }
+
+            /**
+             * settle_type_desc.
+             */
+            public Builder settleTypeDesc(String settleTypeDesc) {
+                this.settleTypeDesc = settleTypeDesc;
                 return this;
             }
 
@@ -1622,7 +2041,18 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * 税率
+             * status_desc.
+             */
+            public Builder statusDesc(String statusDesc) {
+                this.statusDesc = statusDesc;
+                return this;
+            }
+
+            /**
+             * <p>税率</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6%</p>
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
@@ -1642,6 +2072,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder totalNights(Integer totalNights) {
                 this.totalNights = totalNights;
+                return this;
+            }
+
+            /**
+             * trade_action_desc.
+             */
+            public Builder tradeActionDesc(String tradeActionDesc) {
+                this.tradeActionDesc = tradeActionDesc;
                 return this;
             }
 
@@ -1678,10 +2116,26 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * unbooked_lowest_price_reason.
+             */
+            public Builder unbookedLowestPriceReason(String unbookedLowestPriceReason) {
+                this.unbookedLowestPriceReason = unbookedLowestPriceReason;
+                return this;
+            }
+
+            /**
              * voucher_type.
              */
             public Builder voucherType(Integer voucherType) {
                 this.voucherType = voucherType;
+                return this;
+            }
+
+            /**
+             * voucher_type_desc.
+             */
+            public Builder voucherTypeDesc(String voucherTypeDesc) {
+                this.voucherTypeDesc = voucherTypeDesc;
                 return this;
             }
 
@@ -1692,23 +2146,32 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelBillSettlementQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelBillSettlementQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("category")
+        @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("data_list")
-        private java.util.List < DataList> dataList;
+        @com.aliyun.core.annotation.NameInMap("data_list")
+        private java.util.List<DataList> dataList;
 
-        @NameInMap("period_end")
+        @com.aliyun.core.annotation.NameInMap("period_end")
         private String periodEnd;
 
-        @NameInMap("period_start")
+        @com.aliyun.core.annotation.NameInMap("period_start")
         private String periodStart;
 
-        @NameInMap("total_num")
+        @com.aliyun.core.annotation.NameInMap("scroll_id")
+        private String scrollId;
+
+        @com.aliyun.core.annotation.NameInMap("total_num")
         private Long totalNum;
 
         private Module(Builder builder) {
@@ -1717,6 +2180,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.dataList = builder.dataList;
             this.periodEnd = builder.periodEnd;
             this.periodStart = builder.periodStart;
+            this.scrollId = builder.scrollId;
             this.totalNum = builder.totalNum;
         }
 
@@ -1745,7 +2209,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         /**
          * @return dataList
          */
-        public java.util.List < DataList> getDataList() {
+        public java.util.List<DataList> getDataList() {
             return this.dataList;
         }
 
@@ -1764,6 +2228,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return scrollId
+         */
+        public String getScrollId() {
+            return this.scrollId;
+        }
+
+        /**
          * @return totalNum
          */
         public Long getTotalNum() {
@@ -1773,9 +2244,10 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer category; 
             private String corpId; 
-            private java.util.List < DataList> dataList; 
+            private java.util.List<DataList> dataList; 
             private String periodEnd; 
             private String periodStart; 
+            private String scrollId; 
             private Long totalNum; 
 
             /**
@@ -1797,7 +2269,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             /**
              * data_list.
              */
-            public Builder dataList(java.util.List < DataList> dataList) {
+            public Builder dataList(java.util.List<DataList> dataList) {
                 this.dataList = dataList;
                 return this;
             }
@@ -1815,6 +2287,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder periodStart(String periodStart) {
                 this.periodStart = periodStart;
+                return this;
+            }
+
+            /**
+             * scroll_id.
+             */
+            public Builder scrollId(String scrollId) {
+                this.scrollId = scrollId;
                 return this;
             }
 

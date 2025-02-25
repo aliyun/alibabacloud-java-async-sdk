@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecurityPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateSecurityPolicyRequest</p>
  */
 public class CreateSecurityPolicyRequest extends Request {
-    @Query
-    @NameInMap("Ciphers")
-    @Validation(required = true)
-    private java.util.List < String > ciphers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ciphers")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> ciphers;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityPolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityPolicyName;
 
-    @Query
-    @NameInMap("TLSVersions")
-    @Validation(required = true)
-    private java.util.List < String > TLSVersions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TLSVersions")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> TLSVersions;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateSecurityPolicyRequest(Builder builder) {
         super(builder);
@@ -70,7 +75,7 @@ public class CreateSecurityPolicyRequest extends Request {
     /**
      * @return ciphers
      */
-    public java.util.List < String > getCiphers() {
+    public java.util.List<String> getCiphers() {
         return this.ciphers;
     }
 
@@ -105,25 +110,25 @@ public class CreateSecurityPolicyRequest extends Request {
     /**
      * @return TLSVersions
      */
-    public java.util.List < String > getTLSVersions() {
+    public java.util.List<String> getTLSVersions() {
         return this.TLSVersions;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateSecurityPolicyRequest, Builder> {
-        private java.util.List < String > ciphers; 
+        private java.util.List<String> ciphers; 
         private String clientToken; 
         private Boolean dryRun; 
         private String resourceGroupId; 
         private String securityPolicyName; 
-        private java.util.List < String > TLSVersions; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> TLSVersions; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -141,19 +146,23 @@ public class CreateSecurityPolicyRequest extends Request {
         } 
 
         /**
-         * The supported cipher suites.
+         * <p>The supported cipher suites.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder ciphers(java.util.List < String > ciphers) {
+        public Builder ciphers(java.util.List<String> ciphers) {
             this.putQueryParameter("Ciphers", ciphers);
             this.ciphers = ciphers;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
          * 
-         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,11 +171,14 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -175,7 +187,10 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -184,10 +199,12 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * The name of the security policy.
-         * <p>
+         * <p>The name of the security policy.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>test-secrity</p>
          */
         public Builder securityPolicyName(String securityPolicyName) {
             this.putQueryParameter("SecurityPolicyName", securityPolicyName);
@@ -196,18 +213,19 @@ public class CreateSecurityPolicyRequest extends Request {
         }
 
         /**
-         * The supported Transport Layer Security (TLS) protocol versions.
+         * <p>The supported Transport Layer Security (TLS) protocol versions.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder TLSVersions(java.util.List < String > TLSVersions) {
+        public Builder TLSVersions(java.util.List<String> TLSVersions) {
             this.putQueryParameter("TLSVersions", TLSVersions);
             this.TLSVersions = TLSVersions;
             return this;
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -220,11 +238,17 @@ public class CreateSecurityPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSecurityPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSecurityPolicyRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -259,7 +283,10 @@ public class CreateSecurityPolicyRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -267,7 +294,10 @@ public class CreateSecurityPolicyRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

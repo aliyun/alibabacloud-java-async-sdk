@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductAmortizedCostByAmortizationPeriodRequest} extends {@link RequestModel}
  *
  * <p>DescribeProductAmortizedCostByAmortizationPeriodRequest</p>
  */
 public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Request {
-    @Body
-    @NameInMap("BillOwnerIdList")
-    private java.util.List < String > billOwnerIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
+    private java.util.List<String> billOwnerIdList;
 
-    @Body
-    @NameInMap("BillUserIdList")
-    private java.util.List < String > billUserIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillUserIdList")
+    private java.util.List<String> billUserIdList;
 
-    @Body
-    @NameInMap("BillingCycle")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String billingCycle;
 
-    @Body
-    @NameInMap("ConsumePeriodFilter")
-    private java.util.List < String > consumePeriodFilter;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsumePeriodFilter")
+    private java.util.List<String> consumePeriodFilter;
 
-    @Body
-    @NameInMap("CostUnitCode")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CostUnitCode")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String costUnitCode;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
-    @Validation(maxLength = 2560)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 2560)
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String productCode;
 
-    @Body
-    @NameInMap("ProductDetail")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductDetail")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String productDetail;
 
-    @Body
-    @NameInMap("SubscriptionType")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String subscriptionType;
 
     private DescribeProductAmortizedCostByAmortizationPeriodRequest(Builder builder) {
@@ -88,14 +93,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
     /**
      * @return billOwnerIdList
      */
-    public java.util.List < String > getBillOwnerIdList() {
+    public java.util.List<String> getBillOwnerIdList() {
         return this.billOwnerIdList;
     }
 
     /**
      * @return billUserIdList
      */
-    public java.util.List < String > getBillUserIdList() {
+    public java.util.List<String> getBillUserIdList() {
         return this.billUserIdList;
     }
 
@@ -109,7 +114,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
     /**
      * @return consumePeriodFilter
      */
-    public java.util.List < String > getConsumePeriodFilter() {
+    public java.util.List<String> getConsumePeriodFilter() {
         return this.consumePeriodFilter;
     }
 
@@ -156,10 +161,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
     }
 
     public static final class Builder extends Request.Builder<DescribeProductAmortizedCostByAmortizationPeriodRequest, Builder> {
-        private java.util.List < String > billOwnerIdList; 
-        private java.util.List < String > billUserIdList; 
+        private java.util.List<String> billOwnerIdList; 
+        private java.util.List<String> billUserIdList; 
         private String billingCycle; 
-        private java.util.List < String > consumePeriodFilter; 
+        private java.util.List<String> consumePeriodFilter; 
         private String costUnitCode; 
         private Integer maxResults; 
         private String nextToken; 
@@ -186,25 +191,29 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         } 
 
         /**
-         * The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.
+         * <p>The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.</p>
          */
-        public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
+        public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
             this.billOwnerIdList = billOwnerIdList;
             return this;
         }
 
         /**
-         * The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.
+         * <p>The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.</p>
          */
-        public Builder billUserIdList(java.util.List < String > billUserIdList) {
+        public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
             this.billUserIdList = billUserIdList;
             return this;
         }
 
         /**
-         * The allocation month. Format: YYYY-MM.
+         * <p>The allocation month. Format: YYYY-MM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putBodyParameter("BillingCycle", billingCycle);
@@ -213,16 +222,19 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.
+         * <p>The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.</p>
          */
-        public Builder consumePeriodFilter(java.util.List < String > consumePeriodFilter) {
+        public Builder consumePeriodFilter(java.util.List<String> consumePeriodFilter) {
             this.putBodyParameter("ConsumePeriodFilter", consumePeriodFilter);
             this.consumePeriodFilter = consumePeriodFilter;
             return this;
         }
 
         /**
-         * The code of the cost center.
+         * <p>The code of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123#</p>
          */
         public Builder costUnitCode(String costUnitCode) {
             this.putBodyParameter("CostUnitCode", costUnitCode);
@@ -231,7 +243,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * The maximum number of entries to return. Default value: 20. Maximum value: 300.
+         * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -240,7 +255,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.
+         * <p>The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -249,7 +267,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.
+         * <p>The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -258,7 +279,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * The specific service resource.
+         * <p>The specific service resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productDetail(String productDetail) {
             this.putBodyParameter("ProductDetail", productDetail);
@@ -267,11 +291,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: the subscription billing method</li>
+         * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+         * </ul>
          * 
-         * *   Subscription: the subscription billing method
-         * *   PayAsYouGo: the pay-as-you-go billing method
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putBodyParameter("SubscriptionType", subscriptionType);

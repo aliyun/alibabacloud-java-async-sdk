@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserBackupFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserBackupFilesResponseBody</p>
  */
 public class ListUserBackupFilesResponseBody extends TeaModel {
-    @NameInMap("Records")
-    private java.util.List < Records> records;
+    @com.aliyun.core.annotation.NameInMap("Records")
+    private java.util.List<Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserBackupFilesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -46,19 +51,22 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
 
         /**
-         * The information about the full backup files.
+         * <p>The information about the full backup files.</p>
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD67C22F-64F3-4448-A9A8-D1606D242879</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,62 +79,68 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserBackupFilesResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BinlogInfo")
+        @com.aliyun.core.annotation.NameInMap("BinlogInfo")
         private String binlogInfo;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssFileMetaData")
+        @com.aliyun.core.annotation.NameInMap("OssFileMetaData")
         private String ossFileMetaData;
 
-        @NameInMap("OssFileName")
+        @com.aliyun.core.annotation.NameInMap("OssFileName")
         private String ossFileName;
 
-        @NameInMap("OssFilePath")
+        @com.aliyun.core.annotation.NameInMap("OssFilePath")
         private String ossFilePath;
 
-        @NameInMap("OssFileSize")
+        @com.aliyun.core.annotation.NameInMap("OssFileSize")
         private Long ossFileSize;
 
-        @NameInMap("OssUrl")
+        @com.aliyun.core.annotation.NameInMap("OssUrl")
         private String ossUrl;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RestoreSize")
+        @com.aliyun.core.annotation.NameInMap("RestoreSize")
         private String restoreSize;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Integer retention;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Records(Builder builder) {
@@ -314,7 +328,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the full backup file.
+             * <p>The ID of the full backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b-kwwvr7v8t7of********</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -322,7 +339,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the binary log file that contains incremental data. If incremental data is generated during the full backup, this parameter is returned.
+             * <p>The information about the binary log file that contains incremental data. If incremental data is generated during the full backup, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;binlogPosition&quot;:&quot;154&quot;,&quot;binlogFile&quot;:&quot;0.000002&quot;}</p>
              */
             public Builder binlogInfo(String binlogInfo) {
                 this.binlogInfo = binlogInfo;
@@ -330,7 +350,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the full backup file.
+             * <p>The description of the full backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BackupTest</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -338,7 +361,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the system started to import the full backup file. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the system started to import the full backup file. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623231084000</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -346,7 +372,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -354,7 +383,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -362,7 +394,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623231750000</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -370,7 +405,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the full backup file is successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623231750000</p>
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -378,7 +416,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS bucket in which the full backup file is stored as an object.
+             * <p>The name of the OSS bucket in which the full backup file is stored as an object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BackupTest</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -386,7 +427,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the full backup file. For more information, see [Manage object metadata](~~31859~~).
+             * <p>The metadata of the full backup file. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Accept-Ranges&quot;:&quot;bytes&quot;,&quot;Connection&quot;:&quot;keep-alive&quot;,&quot;Content-Length&quot;:81014337,&quot;Content-Type&quot;:&quot;application/octet-stream&quot;,&quot;Date&quot;:1623309548000,&quot;ETag&quot;:&quot;889FE9E5FCEBFE4781829488A352863B-1&quot;,&quot;Last-Modified&quot;:1622186844000,&quot;Server&quot;:&quot;AliyunOSS&quot;,&quot;x-oss-hash-crc64ecma&quot;:&quot;5793608435727323129&quot;,&quot;x-oss-object-type&quot;:&quot;Multipart&quot;,&quot;x-oss-request-id&quot;:&quot;60C1BCEC92572F37318BD499&quot;,&quot;x-oss-server-time&quot;:&quot;166&quot;,&quot;x-oss-storage-class&quot;:&quot;Standard&quot;}</p>
              */
             public Builder ossFileMetaData(String ossFileMetaData) {
                 this.ossFileMetaData = ossFileMetaData;
@@ -394,7 +438,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the full backup file that is stored as an object in an OSS bucket.
+             * <p>The name of the full backup file that is stored as an object in an OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup_qp.xb</p>
              */
             public Builder ossFileName(String ossFileName) {
                 this.ossFileName = ossFileName;
@@ -402,7 +449,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the full backup file that is stored as an object in an OSS bucket.
+             * <p>The path of the full backup file that is stored as an object in an OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test/backup_qp.xb</p>
              */
             public Builder ossFilePath(String ossFilePath) {
                 this.ossFilePath = ossFilePath;
@@ -410,7 +460,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the full backup file that is stored as an object in an OSS bucket. Unit: KB.
+             * <p>The size of the full backup file that is stored as an object in an OSS bucket. Unit: KB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79115</p>
              */
             public Builder ossFileSize(Long ossFileSize) {
                 this.ossFileSize = ossFileSize;
@@ -418,7 +471,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL to download the full backup file from the OSS bucket.
+             * <p>The URL to download the full backup file from the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<strong><strong><strong>.oss-ap-</strong></strong></strong>**.aliyuncs.com/backup_qp.xb</p>
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -426,7 +482,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the full backup file failed to be imported.
+             * <p>The reason why the full backup file failed to be imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -434,7 +493,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of storage that is required to restore the data of the full backup file. Unit: GB.
+             * <p>The amount of storage that is required to restore the data of the full backup file. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder restoreSize(String restoreSize) {
                 this.restoreSize = restoreSize;
@@ -442,7 +504,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the full backup file. Unit: days.
+             * <p>The retention period of the full backup file. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder retention(Integer retention) {
                 this.retention = retention;
@@ -450,14 +515,17 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the full backup file. Valid values:
-             * <p>
+             * <p>The status of the full backup file. Valid values:</p>
+             * <ul>
+             * <li><strong>Importing</strong>: The full backup file is being imported.</li>
+             * <li><strong>Failed</strong>: The full backup file fails to be imported.</li>
+             * <li><strong>CheckSucccess</strong>: The full backup file passes the check.</li>
+             * <li><strong>BackupSuccess</strong>: The full backup file is imported.</li>
+             * <li><strong>Deleted</strong>: The full backup file is deleted.</li>
+             * </ul>
              * 
-             * *   **Importing**: The full backup file is being imported.
-             * *   **Failed**: The full backup file fails to be imported.
-             * *   **CheckSucccess**: The full backup file passes the check.
-             * *   **BackupSuccess**: The full backup file is imported.
-             * *   **Deleted**: The full backup file is deleted.
+             * <strong>example:</strong>
+             * <p>BackupSuccess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -465,7 +533,10 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the full backup file.
+             * <p>The zone ID of the full backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

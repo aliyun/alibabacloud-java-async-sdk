@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScheduledTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScheduledTasksResponseBody</p>
  */
 public class DescribeScheduledTasksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScheduledTasks")
-    private java.util.List < ScheduledTasks> scheduledTasks;
+    @com.aliyun.core.annotation.NameInMap("ScheduledTasks")
+    private java.util.List<ScheduledTasks> scheduledTasks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeScheduledTasksResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
     /**
      * @return scheduledTasks
      */
-    public java.util.List < ScheduledTasks> getScheduledTasks() {
+    public java.util.List<ScheduledTasks> getScheduledTasks() {
         return this.scheduledTasks;
     }
 
@@ -82,11 +87,14 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ScheduledTasks> scheduledTasks; 
+        private java.util.List<ScheduledTasks> scheduledTasks; 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +124,18 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * ScheduledTasks.
+         * <p>The information collection of the scheduled tasks.</p>
          */
-        public Builder scheduledTasks(java.util.List < ScheduledTasks> scheduledTasks) {
+        public Builder scheduledTasks(java.util.List<ScheduledTasks> scheduledTasks) {
             this.scheduledTasks = scheduledTasks;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of scheduled tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,47 +148,53 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScheduledTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScheduledTasksResponseBody</p>
+     */
     public static class ScheduledTasks extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesiredCapacity")
+        @com.aliyun.core.annotation.NameInMap("DesiredCapacity")
         private Integer desiredCapacity;
 
-        @NameInMap("LaunchExpirationTime")
+        @com.aliyun.core.annotation.NameInMap("LaunchExpirationTime")
         private Integer launchExpirationTime;
 
-        @NameInMap("LaunchTime")
+        @com.aliyun.core.annotation.NameInMap("LaunchTime")
         private String launchTime;
 
-        @NameInMap("MaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Integer maxValue;
 
-        @NameInMap("MinValue")
+        @com.aliyun.core.annotation.NameInMap("MinValue")
         private Integer minValue;
 
-        @NameInMap("RecurrenceEndTime")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceEndTime")
         private String recurrenceEndTime;
 
-        @NameInMap("RecurrenceType")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
-        @NameInMap("RecurrenceValue")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
         private String recurrenceValue;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("ScheduledAction")
+        @com.aliyun.core.annotation.NameInMap("ScheduledAction")
         private String scheduledAction;
 
-        @NameInMap("ScheduledTaskId")
+        @com.aliyun.core.annotation.NameInMap("ScheduledTaskId")
         private String scheduledTaskId;
 
-        @NameInMap("ScheduledTaskName")
+        @com.aliyun.core.annotation.NameInMap("ScheduledTaskName")
         private String scheduledTaskName;
 
-        @NameInMap("TaskEnabled")
+        @com.aliyun.core.annotation.NameInMap("TaskEnabled")
         private Boolean taskEnabled;
 
         private ScheduledTasks(Builder builder) {
@@ -314,7 +337,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             private Boolean taskEnabled; 
 
             /**
-             * Description.
+             * <p>The description of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test scheduled task.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -322,7 +348,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DesiredCapacity.
+             * <p>The expected number of instances in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder desiredCapacity(Integer desiredCapacity) {
                 this.desiredCapacity = desiredCapacity;
@@ -330,7 +359,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchExpirationTime.
+             * <p>The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder launchExpirationTime(Integer launchExpirationTime) {
                 this.launchExpirationTime = launchExpirationTime;
@@ -338,7 +370,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTime.
+             * <p>The point in time at which the scheduled task is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-08-18T10:52Z</p>
              */
             public Builder launchTime(String launchTime) {
                 this.launchTime = launchTime;
@@ -346,7 +381,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -354,7 +392,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * <p>The minimum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -362,7 +403,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceEndTime.
+             * <p>The end time of the recurrence of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-08-20T16:55Z</p>
              */
             public Builder recurrenceEndTime(String recurrenceEndTime) {
                 this.recurrenceEndTime = recurrenceEndTime;
@@ -370,7 +414,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceType.
+             * <p>The recurring interval of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -378,7 +425,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceValue.
+             * <p>The frequency of recurrence of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -386,7 +436,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupId.
+             * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp1bo5tca4m56nap****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -394,7 +447,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledAction.
+             * <p>The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ari:acs:ess:cn-hangzhou:1406926474****:scalingrule/asr-bp1id5rhu8edp7kd****</p>
              */
             public Builder scheduledAction(String scheduledAction) {
                 this.scheduledAction = scheduledAction;
@@ -402,7 +458,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledTaskId.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edRtShc57WGXdt8TlPbr****</p>
              */
             public Builder scheduledTaskId(String scheduledTaskId) {
                 this.scheduledTaskId = scheduledTaskId;
@@ -410,7 +469,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledTaskName.
+             * <p>The name of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scheduled****</p>
              */
             public Builder scheduledTaskName(String scheduledTaskName) {
                 this.scheduledTaskName = scheduledTaskName;
@@ -418,7 +480,15 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskEnabled.
+             * <p>Indicates whether the scheduled task is enabled.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskEnabled(Boolean taskEnabled) {
                 this.taskEnabled = taskEnabled;

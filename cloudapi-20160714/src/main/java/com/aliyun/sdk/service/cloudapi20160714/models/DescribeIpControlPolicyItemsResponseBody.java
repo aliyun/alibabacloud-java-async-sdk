@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpControlPolicyItemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpControlPolicyItemsResponseBody</p>
  */
 public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
-    @NameInMap("IpControlPolicyItems")
+    @com.aliyun.core.annotation.NameInMap("IpControlPolicyItems")
     private IpControlPolicyItems ipControlPolicyItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpControlPolicyItemsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about policies. The information is an array of IpControlPolicyItem data.
+         * <p>The information about policies. The information is an array of IpControlPolicyItem data.</p>
          */
         public Builder ipControlPolicyItems(IpControlPolicyItems ipControlPolicyItems) {
             this.ipControlPolicyItems = ipControlPolicyItems;
@@ -94,7 +99,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +148,26 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpControlPolicyItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpControlPolicyItemsResponseBody</p>
+     */
     public static class IpControlPolicyItem extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PolicyItemId")
+        @com.aliyun.core.annotation.NameInMap("PolicyItemId")
         private String policyItemId;
 
         private IpControlPolicyItem(Builder builder) {
@@ -206,7 +229,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             private String policyItemId; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11112</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -214,7 +240,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses or CIDR blocks.
+             * <p>The IP addresses or CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113.125.XX.XX;101.11.XX.XX</p>
              */
             public Builder cidrIp(String cidrIp) {
                 this.cidrIp = cidrIp;
@@ -222,7 +251,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy was created. The time is displayed in UTC.
+             * <p>The time when the policy was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-17T06:20:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -230,7 +262,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy was modified. The time is displayed in UTC.
+             * <p>The time when the policy was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-17T06:25:13Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -238,7 +273,10 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P151617000829241</p>
              */
             public Builder policyItemId(String policyItemId) {
                 this.policyItemId = policyItemId;
@@ -252,9 +290,15 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpControlPolicyItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpControlPolicyItemsResponseBody</p>
+     */
     public static class IpControlPolicyItems extends TeaModel {
-        @NameInMap("IpControlPolicyItem")
-        private java.util.List < IpControlPolicyItem> ipControlPolicyItem;
+        @com.aliyun.core.annotation.NameInMap("IpControlPolicyItem")
+        private java.util.List<IpControlPolicyItem> ipControlPolicyItem;
 
         private IpControlPolicyItems(Builder builder) {
             this.ipControlPolicyItem = builder.ipControlPolicyItem;
@@ -271,17 +315,17 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         /**
          * @return ipControlPolicyItem
          */
-        public java.util.List < IpControlPolicyItem> getIpControlPolicyItem() {
+        public java.util.List<IpControlPolicyItem> getIpControlPolicyItem() {
             return this.ipControlPolicyItem;
         }
 
         public static final class Builder {
-            private java.util.List < IpControlPolicyItem> ipControlPolicyItem; 
+            private java.util.List<IpControlPolicyItem> ipControlPolicyItem; 
 
             /**
              * IpControlPolicyItem.
              */
-            public Builder ipControlPolicyItem(java.util.List < IpControlPolicyItem> ipControlPolicyItem) {
+            public Builder ipControlPolicyItem(java.util.List<IpControlPolicyItem> ipControlPolicyItem) {
                 this.ipControlPolicyItem = ipControlPolicyItem;
                 return this;
             }

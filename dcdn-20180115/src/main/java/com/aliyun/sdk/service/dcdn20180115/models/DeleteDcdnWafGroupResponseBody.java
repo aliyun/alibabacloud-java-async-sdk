@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDcdnWafGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDcdnWafGroupResponseBody</p>
  */
 public class DeleteDcdnWafGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteDcdnWafGroupResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteDcdnWafGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2430E05E-1340-5773-B5E1-B743929F46F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

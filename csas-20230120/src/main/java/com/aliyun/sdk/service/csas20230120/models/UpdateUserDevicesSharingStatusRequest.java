@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserDevicesSharingStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserDevicesSharingStatusRequest</p>
  */
 public class UpdateUserDevicesSharingStatusRequest extends Request {
-    @Body
-    @NameInMap("DeviceTags")
-    @Validation(required = true)
-    private java.util.List < String > deviceTags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceTags")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> deviceTags;
 
-    @Body
-    @NameInMap("SharingStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SharingStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean sharingStatus;
 
     private UpdateUserDevicesSharingStatusRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class UpdateUserDevicesSharingStatusRequest extends Request {
     /**
      * @return deviceTags
      */
-    public java.util.List < String > getDeviceTags() {
+    public java.util.List<String> getDeviceTags() {
         return this.deviceTags;
     }
 
@@ -56,7 +61,7 @@ public class UpdateUserDevicesSharingStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateUserDevicesSharingStatusRequest, Builder> {
-        private java.util.List < String > deviceTags; 
+        private java.util.List<String> deviceTags; 
         private Boolean sharingStatus; 
 
         private Builder() {
@@ -70,16 +75,19 @@ public class UpdateUserDevicesSharingStatusRequest extends Request {
         } 
 
         /**
-         * DeviceTags.
+         * <p>This parameter is required.</p>
          */
-        public Builder deviceTags(java.util.List < String > deviceTags) {
+        public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);
             this.deviceTags = deviceTags;
             return this;
         }
 
         /**
-         * SharingStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sharingStatus(Boolean sharingStatus) {
             this.putBodyParameter("SharingStatus", sharingStatus);

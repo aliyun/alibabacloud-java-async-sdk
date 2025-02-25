@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLSamplesResponseBody</p>
  */
 public class DescribeSQLSamplesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSQLSamplesResponseBody(Builder builder) {
@@ -72,160 +71,166 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AffectedRows")
+        @com.aliyun.core.annotation.NameInMap("AffectedRows")
         private Double affectedRows;
 
-        @NameInMap("ApplicationWaitTime")
+        @com.aliyun.core.annotation.NameInMap("ApplicationWaitTime")
         private Double applicationWaitTime;
 
-        @NameInMap("BlockCacheHit")
+        @com.aliyun.core.annotation.NameInMap("BlockCacheHit")
         private Double blockCacheHit;
 
-        @NameInMap("BlockIndexCacheHit")
+        @com.aliyun.core.annotation.NameInMap("BlockIndexCacheHit")
         private Double blockIndexCacheHit;
 
-        @NameInMap("BloomFilterCacheHit")
+        @com.aliyun.core.annotation.NameInMap("BloomFilterCacheHit")
         private Double bloomFilterCacheHit;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientPort")
+        @com.aliyun.core.annotation.NameInMap("ClientPort")
         private String clientPort;
 
-        @NameInMap("ConcurrencyWaitTime")
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyWaitTime")
         private Double concurrencyWaitTime;
 
-        @NameInMap("ConsistencyLevel")
+        @com.aliyun.core.annotation.NameInMap("ConsistencyLevel")
         private String consistencyLevel;
 
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Double cpuTime;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DecodeTime")
+        @com.aliyun.core.annotation.NameInMap("DecodeTime")
         private Double decodeTime;
 
-        @NameInMap("DiskReads")
+        @com.aliyun.core.annotation.NameInMap("DiskReads")
         private Double diskReads;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Double elapsedTime;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Double executeTime;
 
-        @NameInMap("ExecutorRpc")
+        @com.aliyun.core.annotation.NameInMap("ExecutorRpc")
         private Boolean executorRpc;
 
-        @NameInMap("ExpectedWorkerCount")
+        @com.aliyun.core.annotation.NameInMap("ExpectedWorkerCount")
         private Double expectedWorkerCount;
 
-        @NameInMap("FullSqlText")
+        @com.aliyun.core.annotation.NameInMap("FullSqlText")
         private String fullSqlText;
 
-        @NameInMap("GetPlanTime")
+        @com.aliyun.core.annotation.NameInMap("GetPlanTime")
         private Double getPlanTime;
 
-        @NameInMap("HitPlan")
+        @com.aliyun.core.annotation.NameInMap("HitPlan")
         private Boolean hitPlan;
 
-        @NameInMap("Inner")
+        @com.aliyun.core.annotation.NameInMap("Inner")
         private Boolean inner;
 
-        @NameInMap("MemstoreReadRows")
+        @com.aliyun.core.annotation.NameInMap("MemstoreReadRows")
         private Double memstoreReadRows;
 
-        @NameInMap("NetTime")
+        @com.aliyun.core.annotation.NameInMap("NetTime")
         private Double netTime;
 
-        @NameInMap("NetWaitTime")
+        @com.aliyun.core.annotation.NameInMap("NetWaitTime")
         private Double netWaitTime;
 
-        @NameInMap("ObDbId")
+        @com.aliyun.core.annotation.NameInMap("ObDbId")
         private Double obDbId;
 
-        @NameInMap("ObServerId")
+        @com.aliyun.core.annotation.NameInMap("ObServerId")
         private Double obServerId;
 
-        @NameInMap("ObUserId")
+        @com.aliyun.core.annotation.NameInMap("ObUserId")
         private Double obUserId;
 
-        @NameInMap("PartitionCount")
+        @com.aliyun.core.annotation.NameInMap("ParamsValue")
+        private String paramsValue;
+
+        @com.aliyun.core.annotation.NameInMap("PartitionCount")
         private Double partitionCount;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private Double planId;
 
-        @NameInMap("PlanType")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
-        @NameInMap("QueueTime")
+        @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Double queueTime;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("RequestTime")
+        @com.aliyun.core.annotation.NameInMap("RequestTime")
         private String requestTime;
 
-        @NameInMap("RetCode")
+        @com.aliyun.core.annotation.NameInMap("RetCode")
         private Double retCode;
 
-        @NameInMap("RetryCount")
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Double retryCount;
 
-        @NameInMap("ReturnRows")
+        @com.aliyun.core.annotation.NameInMap("ReturnRows")
         private Double returnRows;
 
-        @NameInMap("RowCacheHit")
+        @com.aliyun.core.annotation.NameInMap("RowCacheHit")
         private Double rowCacheHit;
 
-        @NameInMap("RpcCount")
+        @com.aliyun.core.annotation.NameInMap("RpcCount")
         private Double rpcCount;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private Double scheduleTime;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlText")
+        private String sqlText;
+
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("SsstoreReadRows")
+        @com.aliyun.core.annotation.NameInMap("SsstoreReadRows")
         private Double ssstoreReadRows;
 
-        @NameInMap("Statement")
+        @com.aliyun.core.annotation.NameInMap("Statement")
         private String statement;
 
-        @NameInMap("TableScan")
+        @com.aliyun.core.annotation.NameInMap("TableScan")
         private Boolean tableScan;
 
-        @NameInMap("TraceId")
+        @com.aliyun.core.annotation.NameInMap("TraceId")
         private String traceId;
 
-        @NameInMap("TransHash")
+        @com.aliyun.core.annotation.NameInMap("TransHash")
         private String transHash;
 
-        @NameInMap("UsedWorkerCount")
+        @com.aliyun.core.annotation.NameInMap("UsedWorkerCount")
         private Double usedWorkerCount;
 
-        @NameInMap("UserIoWaitTime")
+        @com.aliyun.core.annotation.NameInMap("UserIoWaitTime")
         private Double userIoWaitTime;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("WaitCount")
+        @com.aliyun.core.annotation.NameInMap("WaitCount")
         private Double waitCount;
 
-        @NameInMap("WaitEvent")
+        @com.aliyun.core.annotation.NameInMap("WaitEvent")
         private String waitEvent;
 
-        @NameInMap("WaitTime")
+        @com.aliyun.core.annotation.NameInMap("WaitTime")
         private Double waitTime;
 
         private Data(Builder builder) {
@@ -256,6 +261,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             this.obDbId = builder.obDbId;
             this.obServerId = builder.obServerId;
             this.obUserId = builder.obUserId;
+            this.paramsValue = builder.paramsValue;
             this.partitionCount = builder.partitionCount;
             this.planId = builder.planId;
             this.planType = builder.planType;
@@ -269,6 +275,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             this.rpcCount = builder.rpcCount;
             this.scheduleTime = builder.scheduleTime;
             this.server = builder.server;
+            this.sqlText = builder.sqlText;
             this.sqlType = builder.sqlType;
             this.ssstoreReadRows = builder.ssstoreReadRows;
             this.statement = builder.statement;
@@ -481,6 +488,13 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         }
 
         /**
+         * @return paramsValue
+         */
+        public String getParamsValue() {
+            return this.paramsValue;
+        }
+
+        /**
          * @return partitionCount
          */
         public Double getPartitionCount() {
@@ -569,6 +583,13 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
          */
         public String getServer() {
             return this.server;
+        }
+
+        /**
+         * @return sqlText
+         */
+        public String getSqlText() {
+            return this.sqlText;
         }
 
         /**
@@ -683,6 +704,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double obDbId; 
             private Double obServerId; 
             private Double obUserId; 
+            private String paramsValue; 
             private Double partitionCount; 
             private Double planId; 
             private String planType; 
@@ -696,6 +718,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double rpcCount; 
             private Double scheduleTime; 
             private String server; 
+            private String sqlText; 
             private String sqlType; 
             private Double ssstoreReadRows; 
             private String statement; 
@@ -926,6 +949,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             }
 
             /**
+             * ParamsValue.
+             */
+            public Builder paramsValue(String paramsValue) {
+                this.paramsValue = paramsValue;
+                return this;
+            }
+
+            /**
              * Average number of partition accessed during the execution period.
              */
             public Builder partitionCount(Double partitionCount) {
@@ -1026,6 +1057,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              */
             public Builder server(String server) {
                 this.server = server;
+                return this;
+            }
+
+            /**
+             * SqlText.
+             */
+            public Builder sqlText(String sqlText) {
+                this.sqlText = sqlText;
                 return this;
             }
 

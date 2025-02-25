@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCollationTimeZoneRequest} extends {@link RequestModel}
  *
  * <p>ModifyCollationTimeZoneRequest</p>
  */
 public class ModifyCollationTimeZoneRequest extends Request {
-    @Query
-    @NameInMap("Collation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collation")
     private String collation;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Timezone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
     private ModifyCollationTimeZoneRequest(Builder builder) {
@@ -125,24 +130,29 @@ public class ModifyCollationTimeZoneRequest extends Request {
         } 
 
         /**
-         * The character set collation of the instance. Valid values:
-         * <p>
+         * <p>The character set collation of the instance. By default, the system does not modify the character set collation of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Chinese_PRC_CI_AS</strong></li>
+         * <li><strong>Chinese_PRC_CS_AS</strong></li>
+         * <li><strong>Chinese_PRC_BIN</strong></li>
+         * <li><strong>Latin1_General_CI_AS</strong></li>
+         * <li><strong>Latin1_General_CS_AS</strong></li>
+         * <li><strong>SQL_Latin1_General_CP1_CI_AS</strong></li>
+         * <li><strong>SQL_Latin1_General_CP1_CS_AS</strong></li>
+         * <li><strong>Japanese_CI_AS</strong></li>
+         * <li><strong>Japanese_CS_AS</strong></li>
+         * <li><strong>Chinese_Taiwan_Stroke_CI_AS</strong></li>
+         * <li><strong>Chinese_Taiwan_Stroke_CS_AS</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>The default character set collation of the instance is <strong>Chinese_PRC_CI_AS</strong>.</li>
+         * <li>You must specify one of the <strong>Collation</strong> and <strong>Timezone</strong> parameters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **Latin1\_General_CI_AS**
-         * *   **Latin1\_General_CS_AS**
-         * *   **SQL_Latin1\_General_CP1\_CI_AS**
-         * *   **SQL_Latin1\_General_CP1\_CS_AS**
-         * *   **Chinese_PRC_CS_AS**
-         * *   **Chinese_PRC_BIN**
-         * *   **Chinese_PRC_CI_AS**
-         * *   **Japanese_CI_AS**
-         * *   **Japanese_CS_AS**
-         * *   **Chinese_Taiwan_Stroke_CI_AS**
-         * *   **Chinese_Taiwan_Stroke_CS_AS**
-         * 
-         * By default, the system does not modify the character set collation of the instance.
-         * 
-         * > You must specify one of the **Collation** and **Timezone** parameters.
+         * <strong>example:</strong>
+         * <p>Latin1_General_CI_AS</p>
          */
         public Builder collation(String collation) {
             this.putQueryParameter("Collation", collation);
@@ -151,7 +161,11 @@ public class ModifyCollationTimeZoneRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -187,10 +201,16 @@ public class ModifyCollationTimeZoneRequest extends Request {
         }
 
         /**
-         * The time zone of the instance. By default, the system does not modify the time zone.
-         * <p>
+         * <p>The time zone of the instance. By default, the system does not modify the time zone.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The default time zone of the instance is <strong>China Standard Time</strong>.</li>
+         * <li>You must specify one of the <strong>Collation</strong> and <strong>Timezone</strong> parameters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > You must specify one of the **Collation** and **Timezone** parameters.
+         * <strong>example:</strong>
+         * <p>China Standard Time</p>
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);

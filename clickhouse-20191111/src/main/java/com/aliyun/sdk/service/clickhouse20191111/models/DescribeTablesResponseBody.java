@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTablesResponseBody</p>
  */
 public class DescribeTablesResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTablesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * <p>The information about the tables.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +63,10 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTablesResponseBody</p>
+     */
     public static class Table extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Table(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp108z124a8o7****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -130,7 +147,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -138,7 +158,10 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -152,9 +175,15 @@ public class DescribeTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTablesResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Table")
-        private java.util.List < Table> table;
+        @com.aliyun.core.annotation.NameInMap("Table")
+        private java.util.List<Table> table;
 
         private Items(Builder builder) {
             this.table = builder.table;
@@ -171,17 +200,17 @@ public class DescribeTablesResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < Table> table; 
+            private java.util.List<Table> table; 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }

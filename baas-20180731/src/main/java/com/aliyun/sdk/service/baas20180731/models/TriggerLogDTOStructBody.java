@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TriggerLogDTOStructBody</p>
  */
 public class TriggerLogDTOStructBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
-    @NameInMap("Position")
+    @com.aliyun.core.annotation.NameInMap("Position")
     private PositionStructBody position;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private TriggerLogDTOStructBody(Builder builder) {

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsResourceSettingsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRdsResourceSettingsRequest</p>
  */
 public class DescribeRdsResourceSettingsRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceNiche")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceNiche")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceNiche;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeRdsResourceSettingsRequest(Builder builder) {
@@ -106,7 +111,7 @@ public class DescribeRdsResourceSettingsRequest extends Request {
         }
 
         /**
-         * ResourceNiche.
+         * <p>This parameter is required.</p>
          */
         public Builder resourceNiche(String resourceNiche) {
             this.putQueryParameter("ResourceNiche", resourceNiche);

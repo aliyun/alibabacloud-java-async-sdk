@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainTopReferVisitResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainTopReferVisitResponseBody</p>
  */
 public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TopReferList")
+    @com.aliyun.core.annotation.NameInMap("TopReferList")
     private TopReferList topReferList;
 
     private DescribeDomainTopReferVisitResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         private TopReferList topReferList; 
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -82,7 +85,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95994621-8382-464B-8762-C708E73568D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +96,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that was queried.
+         * <p>The beginning of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-21T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -98,7 +107,7 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * The most frequently requested web pages.
+         * <p>The most frequently requested web pages.</p>
          */
         public Builder topReferList(TopReferList topReferList) {
             this.topReferList = topReferList;
@@ -111,20 +120,26 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainTopReferVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainTopReferVisitResponseBody</p>
+     */
     public static class ReferList extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("FlowProportion")
+        @com.aliyun.core.annotation.NameInMap("FlowProportion")
         private Float flowProportion;
 
-        @NameInMap("ReferDetail")
+        @com.aliyun.core.annotation.NameInMap("ReferDetail")
         private String referDetail;
 
-        @NameInMap("VisitData")
+        @com.aliyun.core.annotation.NameInMap("VisitData")
         private String visitData;
 
-        @NameInMap("VisitProportion")
+        @com.aliyun.core.annotation.NameInMap("VisitProportion")
         private Float visitProportion;
 
         private ReferList(Builder builder) {
@@ -186,7 +201,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * The amount of network traffic. Unit: bytes.
+             * <p>The amount of network traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -194,7 +212,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -202,7 +223,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The URLs to the most frequently requested web pages.
+             * <p>The URLs to the most frequently requested web pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>learn.aliyundoc.com</p>
              */
             public Builder referDetail(String referDetail) {
                 this.referDetail = referDetail;
@@ -210,7 +234,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits to the URL.
+             * <p>The number of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -218,7 +245,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of visits to the URL.
+             * <p>The proportion of visits to the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -232,8 +262,14 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainTopReferVisitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainTopReferVisitResponseBody</p>
+     */
     public static class TopReferList extends TeaModel {
-        @NameInMap("ReferList")
+        @com.aliyun.core.annotation.NameInMap("ReferList")
         private java.util.List < ReferList> referList;
 
         private TopReferList(Builder builder) {

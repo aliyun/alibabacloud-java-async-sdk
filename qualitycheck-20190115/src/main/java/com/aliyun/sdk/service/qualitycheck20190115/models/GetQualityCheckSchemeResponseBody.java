@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityCheckSchemeResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityCheckSchemeResponseBody</p>
  */
 public class GetQualityCheckSchemeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Messages")
-    private java.util.List < String > messages;
+    @com.aliyun.core.annotation.NameInMap("Messages")
+    private java.util.List<String> messages;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityCheckSchemeResponseBody(Builder builder) {
@@ -82,7 +87,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public java.util.List < String > getMessages() {
+    public java.util.List<String> getMessages() {
         return this.messages;
     }
 
@@ -105,7 +110,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > messages; 
+        private java.util.List<String> messages; 
         private String requestId; 
         private Boolean success; 
 
@@ -144,7 +149,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(java.util.List < String > messages) {
+        public Builder messages(java.util.List<String> messages) {
             this.messages = messages;
             return this;
         }
@@ -171,23 +176,29 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityCheckSchemeResponseBody</p>
+     */
     public static class SchemeCheckTypeList extends TeaModel {
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Long checkType;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("SchemeId")
+        @com.aliyun.core.annotation.NameInMap("SchemeId")
         private Long schemeId;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("SourceScore")
+        @com.aliyun.core.annotation.NameInMap("SourceScore")
         private Integer sourceScore;
 
         private SchemeCheckTypeList(Builder builder) {
@@ -312,53 +323,62 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQualityCheckSchemeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityCheckSchemeResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserName")
         private String createUserName;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private Integer dataType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("InitScore")
+        private String initScore;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleIds")
-        private java.util.List < String > ruleIds;
+        @com.aliyun.core.annotation.NameInMap("RuleIds")
+        private java.util.List<String> ruleIds;
 
-        @NameInMap("RuleList")
-        private java.util.List < RulesInfo > ruleList;
+        @com.aliyun.core.annotation.NameInMap("RuleList")
+        private java.util.List<RulesInfo> ruleList;
 
-        @NameInMap("SchemeCheckTypeList")
-        private java.util.List < SchemeCheckTypeList> schemeCheckTypeList;
+        @com.aliyun.core.annotation.NameInMap("SchemeCheckTypeList")
+        private java.util.List<SchemeCheckTypeList> schemeCheckTypeList;
 
-        @NameInMap("SchemeId")
+        @com.aliyun.core.annotation.NameInMap("SchemeId")
         private Long schemeId;
 
-        @NameInMap("SchemeTemplateId")
+        @com.aliyun.core.annotation.NameInMap("SchemeTemplateId")
         private Long schemeTemplateId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private Integer templateType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateUserName")
+        @com.aliyun.core.annotation.NameInMap("UpdateUserName")
         private String updateUserName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Data(Builder builder) {
@@ -366,6 +386,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             this.createUserName = builder.createUserName;
             this.dataType = builder.dataType;
             this.description = builder.description;
+            this.initScore = builder.initScore;
             this.name = builder.name;
             this.ruleIds = builder.ruleIds;
             this.ruleList = builder.ruleList;
@@ -417,6 +438,13 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         }
 
         /**
+         * @return initScore
+         */
+        public String getInitScore() {
+            return this.initScore;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -426,21 +454,21 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         /**
          * @return ruleIds
          */
-        public java.util.List < String > getRuleIds() {
+        public java.util.List<String> getRuleIds() {
             return this.ruleIds;
         }
 
         /**
          * @return ruleList
          */
-        public java.util.List < RulesInfo > getRuleList() {
+        public java.util.List<RulesInfo> getRuleList() {
             return this.ruleList;
         }
 
         /**
          * @return schemeCheckTypeList
          */
-        public java.util.List < SchemeCheckTypeList> getSchemeCheckTypeList() {
+        public java.util.List<SchemeCheckTypeList> getSchemeCheckTypeList() {
             return this.schemeCheckTypeList;
         }
 
@@ -505,10 +533,11 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             private String createUserName; 
             private Integer dataType; 
             private String description; 
+            private String initScore; 
             private String name; 
-            private java.util.List < String > ruleIds; 
-            private java.util.List < RulesInfo > ruleList; 
-            private java.util.List < SchemeCheckTypeList> schemeCheckTypeList; 
+            private java.util.List<String> ruleIds; 
+            private java.util.List<RulesInfo> ruleList; 
+            private java.util.List<SchemeCheckTypeList> schemeCheckTypeList; 
             private Long schemeId; 
             private Long schemeTemplateId; 
             private Integer status; 
@@ -551,6 +580,14 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
+             * InitScore.
+             */
+            public Builder initScore(String initScore) {
+                this.initScore = initScore;
+                return this;
+            }
+
+            /**
              * Name.
              */
             public Builder name(String name) {
@@ -561,7 +598,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             /**
              * RuleIds.
              */
-            public Builder ruleIds(java.util.List < String > ruleIds) {
+            public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
                 return this;
             }
@@ -569,7 +606,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             /**
              * RuleList.
              */
-            public Builder ruleList(java.util.List < RulesInfo > ruleList) {
+            public Builder ruleList(java.util.List<RulesInfo> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
@@ -577,7 +614,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             /**
              * SchemeCheckTypeList.
              */
-            public Builder schemeCheckTypeList(java.util.List < SchemeCheckTypeList> schemeCheckTypeList) {
+            public Builder schemeCheckTypeList(java.util.List<SchemeCheckTypeList> schemeCheckTypeList) {
                 this.schemeCheckTypeList = schemeCheckTypeList;
                 return this;
             }

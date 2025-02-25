@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AcceptDemand  AcceptDemandRequest
+     * @return AcceptDemandResponse
+     */
     @Override
     public CompletableFuture<AcceptDemandResponse> acceptDemand(AcceptDemandRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BidDomain  BidDomainRequest
+     * @return BidDomainResponse
+     */
     @Override
     public CompletableFuture<BidDomainResponse> bidDomain(BidDomainRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeAuction  ChangeAuctionRequest
+     * @return ChangeAuctionResponse
+     */
     @Override
     public CompletableFuture<ChangeAuctionResponse> changeAuction(ChangeAuctionRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckDomainStatus  CheckDomainStatusRequest
+     * @return CheckDomainStatusResponse
+     */
     @Override
     public CompletableFuture<CheckDomainStatusResponse> checkDomainStatus(CheckDomainStatusRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckSelectedDomainStatus  CheckSelectedDomainStatusRequest
+     * @return CheckSelectedDomainStatusResponse
+     */
     @Override
     public CompletableFuture<CheckSelectedDomainStatusResponse> checkSelectedDomainStatus(CheckSelectedDomainStatusRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFixedPriceDemandOrder  CreateFixedPriceDemandOrderRequest
+     * @return CreateFixedPriceDemandOrderResponse
+     */
     @Override
     public CompletableFuture<CreateFixedPriceDemandOrderResponse> createFixedPriceDemandOrder(CreateFixedPriceDemandOrderRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFixedPriceSelectedOrder  CreateFixedPriceSelectedOrderRequest
+     * @return CreateFixedPriceSelectedOrderResponse
+     */
     @Override
     public CompletableFuture<CreateFixedPriceSelectedOrderResponse> createFixedPriceSelectedOrder(CreateFixedPriceSelectedOrderRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FailDemand  FailDemandRequest
+     * @return FailDemandResponse
+     */
     @Override
     public CompletableFuture<FailDemandResponse> failDemand(FailDemandRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FinishDemand  FinishDemandRequest
+     * @return FinishDemandResponse
+     */
     @Override
     public CompletableFuture<FinishDemandResponse> finishDemand(FinishDemandRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIntlDomainDownloadUrl  GetIntlDomainDownloadUrlRequest
+     * @return GetIntlDomainDownloadUrlResponse
+     */
     @Override
     public CompletableFuture<GetIntlDomainDownloadUrlResponse> getIntlDomainDownloadUrl(GetIntlDomainDownloadUrlRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetReserveDomainUrl  GetReserveDomainUrlRequest
+     * @return GetReserveDomainUrlResponse
+     */
     @Override
     public CompletableFuture<GetReserveDomainUrlResponse> getReserveDomainUrl(GetReserveDomainUrlRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PurchaseIntlDomain  PurchaseIntlDomainRequest
+     * @return PurchaseIntlDomainResponse
+     */
     @Override
     public CompletableFuture<PurchaseIntlDomainResponse> purchaseIntlDomain(PurchaseIntlDomainRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAuctionDetail  QueryAuctionDetailRequest
+     * @return QueryAuctionDetailResponse
+     */
     @Override
     public CompletableFuture<QueryAuctionDetailResponse> queryAuctionDetail(QueryAuctionDetailRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAuctions  QueryAuctionsRequest
+     * @return QueryAuctionsResponse
+     */
     @Override
     public CompletableFuture<QueryAuctionsResponse> queryAuctions(QueryAuctionsRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBidRecords  QueryBidRecordsRequest
+     * @return QueryBidRecordsResponse
+     */
     @Override
     public CompletableFuture<QueryBidRecordsResponse> queryBidRecords(QueryBidRecordsRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBookingDomainInfo  QueryBookingDomainInfoRequest
+     * @return QueryBookingDomainInfoResponse
+     */
     @Override
     public CompletableFuture<QueryBookingDomainInfoResponse> queryBookingDomainInfo(QueryBookingDomainInfoRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBrokerDemand  QueryBrokerDemandRequest
+     * @return QueryBrokerDemandResponse
+     */
     @Override
     public CompletableFuture<QueryBrokerDemandResponse> queryBrokerDemand(QueryBrokerDemandRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBrokerDemandRecord  QueryBrokerDemandRecordRequest
+     * @return QueryBrokerDemandRecordResponse
+     */
     @Override
     public CompletableFuture<QueryBrokerDemandRecordResponse> queryBrokerDemandRecord(QueryBrokerDemandRecordRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDomainTransferStatus  QueryDomainTransferStatusRequest
+     * @return QueryDomainTransferStatusResponse
+     */
     @Override
     public CompletableFuture<QueryDomainTransferStatusResponse> queryDomainTransferStatus(QueryDomainTransferStatusRequest request) {
         try {
@@ -305,6 +381,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryExchangeRate  QueryExchangeRateRequest
+     * @return QueryExchangeRateResponse
+     */
+    @Override
+    public CompletableFuture<QueryExchangeRateResponse> queryExchangeRate(QueryExchangeRateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryExchangeRate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryExchangeRateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryExchangeRateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryPurchasedDomains  QueryPurchasedDomainsRequest
+     * @return QueryPurchasedDomainsResponse
+     */
     @Override
     public CompletableFuture<QueryPurchasedDomainsResponse> queryPurchasedDomains(QueryPurchasedDomainsRequest request) {
         try {
@@ -319,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecordDemand  RecordDemandRequest
+     * @return RecordDemandResponse
+     */
     @Override
     public CompletableFuture<RecordDemandResponse> recordDemand(RecordDemandRequest request) {
         try {
@@ -333,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefuseDemand  RefuseDemandRequest
+     * @return RefuseDemandResponse
+     */
     @Override
     public CompletableFuture<RefuseDemandResponse> refuseDemand(RefuseDemandRequest request) {
         try {
@@ -347,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RequestPayDemand  RequestPayDemandRequest
+     * @return RequestPayDemandResponse
+     */
     @Override
     public CompletableFuture<RequestPayDemandResponse> requestPayDemand(RequestPayDemandRequest request) {
         try {
@@ -361,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReserveDomain  ReserveDomainRequest
+     * @return ReserveDomainResponse
+     */
     @Override
     public CompletableFuture<ReserveDomainResponse> reserveDomain(ReserveDomainRequest request) {
         try {
@@ -375,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReserveIntlDomain  ReserveIntlDomainRequest
+     * @return ReserveIntlDomainResponse
+     */
     @Override
     public CompletableFuture<ReserveIntlDomainResponse> reserveIntlDomain(ReserveIntlDomainRequest request) {
         try {
@@ -389,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SelectedDomainList  SelectedDomainListRequest
+     * @return SelectedDomainListResponse
+     */
     @Override
     public CompletableFuture<SelectedDomainListResponse> selectedDomainList(SelectedDomainListRequest request) {
         try {
@@ -403,6 +525,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitPurchaseInfo  SubmitPurchaseInfoRequest
+     * @return SubmitPurchaseInfoResponse
+     */
+    @Override
+    public CompletableFuture<SubmitPurchaseInfoResponse> submitPurchaseInfo(SubmitPurchaseInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitPurchaseInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitPurchaseInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitPurchaseInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdatePartnerReservePrice  UpdatePartnerReservePriceRequest
+     * @return UpdatePartnerReservePriceResponse
+     */
     @Override
     public CompletableFuture<UpdatePartnerReservePriceResponse> updatePartnerReservePrice(UpdatePartnerReservePriceRequest request) {
         try {

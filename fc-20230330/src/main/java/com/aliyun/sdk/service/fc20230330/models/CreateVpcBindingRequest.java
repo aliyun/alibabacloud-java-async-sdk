@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcBindingRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcBindingRequest</p>
  */
 public class CreateVpcBindingRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CreateVpcBindingInput body;
 
     private CreateVpcBindingRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class CreateVpcBindingRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +83,8 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The VPC binding configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(CreateVpcBindingInput body) {
             this.putBodyParameter("body", body);

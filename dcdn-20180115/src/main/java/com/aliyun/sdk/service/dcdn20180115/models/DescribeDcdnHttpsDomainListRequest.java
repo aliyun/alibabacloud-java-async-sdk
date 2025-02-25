@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnHttpsDomainListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDcdnHttpsDomainListRequest</p>
  */
 public class DescribeDcdnHttpsDomainListRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeDcdnHttpsDomainListRequest(Builder builder) {
@@ -82,13 +82,10 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         } 
 
         /**
-         * The status of the certificate. Valid values:
-         * <p>
+         * <p>The keyword that is used to search for certificates.</p>
          * 
-         * *   **ok**: The certificate is working as expected.
-         * *   **mismatch**: The certificate does not match the specified domain name.
-         * *   **expired**: The certificate has expired.
-         * *   **expire_soon**: The certificate is about to expire.
+         * <strong>example:</strong>
+         * <p>cert</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -97,7 +94,10 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The number of returned pages. Valid values: <strong>1 to 100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,12 +106,10 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The type of the certificate. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
          * 
-         * *   **free**: A free certificate.
-         * *   **cas**: A certificate that is purchased through Alibaba Cloud SSL Certificates Service.
-         * *   **upload**: A user-uploaded certificate.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

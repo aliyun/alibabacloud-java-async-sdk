@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainAccountsResponseBody</p>
  */
 public class DescribeAntChainAccountsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainAccountsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
     } 
 
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("AccountPublicKey")
+        @com.aliyun.core.annotation.NameInMap("AccountPublicKey")
         private String accountPublicKey;
 
-        @NameInMap("AccountRecoveryKey")
+        @com.aliyun.core.annotation.NameInMap("AccountRecoveryKey")
         private String accountRecoveryKey;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
         private Accounts(Builder builder) {
@@ -193,13 +192,13 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Pagination(Builder builder) {
@@ -274,10 +273,10 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Accounts")
+        @com.aliyun.core.annotation.NameInMap("Accounts")
         private java.util.List < Accounts> accounts;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
         private Result(Builder builder) {

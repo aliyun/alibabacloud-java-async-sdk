@@ -125,7 +125,7 @@ public class ListNodesNoPagingRequest extends Request {
          * *   Login: logon node
          * *   Compute: compute node
          * 
-         * Default value: Compute
+         * Default value: Compute.
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -140,7 +140,7 @@ public class ListNodesNoPagingRequest extends Request {
          * *   Forward: sorts the nodes in chronological order.
          * *   Backward: sorts the nodes in reverse chronological order.
          * 
-         * Default value: Forward
+         * Default value: Forward.
          */
         public Builder sequence(String sequence) {
             this.putQueryParameter("Sequence", sequence);

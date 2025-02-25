@@ -138,7 +138,7 @@ public class ListProvisionConfigsRequest extends Request {
         } 
 
         /**
-         * The actual number of provisioned instances.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -147,7 +147,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * Specifies whether to always allocate CPU to a function instance.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -156,7 +156,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * The configurations of scheduled auto scaling.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -165,7 +165,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * Queries provisioned instances.
+         * The maximum number of results to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("limit", limit);
@@ -174,7 +174,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
+         * The token required to obtain more results. You do not need to specify this parameter in the first call. If a NextToken value is returned by a previous call, more results are available.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -183,7 +183,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * The token used to obtain more results.
+         * The qualifier of the service to which resources belong. The qualifier must be aliasName and used together with the serviceName parameter.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -192,7 +192,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.
+         * The name of the service to which resources belong.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("serviceName", serviceName);

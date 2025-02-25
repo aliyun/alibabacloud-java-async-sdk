@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InputCodeLocation} extends {@link TeaModel}
  *
  * <p>InputCodeLocation</p>
  */
 public class InputCodeLocation extends TeaModel {
-    @NameInMap("ossBucketName")
-    @Validation(maxLength = 63, minLength = 3)
+    @com.aliyun.core.annotation.NameInMap("ossBucketName")
+    @com.aliyun.core.annotation.Validation(maxLength = 63, minLength = 3)
     private String ossBucketName;
 
-    @NameInMap("ossObjectName")
+    @com.aliyun.core.annotation.NameInMap("ossObjectName")
     private String ossObjectName;
 
-    @NameInMap("zipFile")
+    @com.aliyun.core.annotation.NameInMap("zipFile")
     private String zipFile;
 
     private InputCodeLocation(Builder builder) {

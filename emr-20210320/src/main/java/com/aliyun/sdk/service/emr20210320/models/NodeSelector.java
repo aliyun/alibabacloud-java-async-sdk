@@ -1,36 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NodeSelector} extends {@link TeaModel}
  *
  * <p>NodeSelector</p>
  */
 public class NodeSelector extends TeaModel {
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
+    @Deprecated
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupIds")
+    private java.util.List<String> nodeGroupIds;
+
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
+    @Deprecated
     private String nodeGroupName;
 
-    @NameInMap("NodeGroupTypes")
-    private java.util.List < String > nodeGroupTypes;
+    @com.aliyun.core.annotation.NameInMap("NodeGroupNames")
+    private java.util.List<String> nodeGroupNames;
 
-    @NameInMap("NodeNames")
-    private java.util.List < String > nodeNames;
+    @com.aliyun.core.annotation.NameInMap("NodeGroupTypes")
+    private java.util.List<String> nodeGroupTypes;
 
-    @NameInMap("NodeSelectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NodeNames")
+    private java.util.List<String> nodeNames;
+
+    @com.aliyun.core.annotation.NameInMap("NodeSelectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeSelectType;
 
     private NodeSelector(Builder builder) {
         this.nodeGroupId = builder.nodeGroupId;
+        this.nodeGroupIds = builder.nodeGroupIds;
         this.nodeGroupName = builder.nodeGroupName;
+        this.nodeGroupNames = builder.nodeGroupNames;
         this.nodeGroupTypes = builder.nodeGroupTypes;
         this.nodeNames = builder.nodeNames;
         this.nodeSelectType = builder.nodeSelectType;
@@ -52,6 +67,13 @@ public class NodeSelector extends TeaModel {
     }
 
     /**
+     * @return nodeGroupIds
+     */
+    public java.util.List<String> getNodeGroupIds() {
+        return this.nodeGroupIds;
+    }
+
+    /**
      * @return nodeGroupName
      */
     public String getNodeGroupName() {
@@ -59,16 +81,23 @@ public class NodeSelector extends TeaModel {
     }
 
     /**
+     * @return nodeGroupNames
+     */
+    public java.util.List<String> getNodeGroupNames() {
+        return this.nodeGroupNames;
+    }
+
+    /**
      * @return nodeGroupTypes
      */
-    public java.util.List < String > getNodeGroupTypes() {
+    public java.util.List<String> getNodeGroupTypes() {
         return this.nodeGroupTypes;
     }
 
     /**
      * @return nodeNames
      */
-    public java.util.List < String > getNodeNames() {
+    public java.util.List<String> getNodeNames() {
         return this.nodeNames;
     }
 
@@ -81,13 +110,18 @@ public class NodeSelector extends TeaModel {
 
     public static final class Builder {
         private String nodeGroupId; 
+        private java.util.List<String> nodeGroupIds; 
         private String nodeGroupName; 
-        private java.util.List < String > nodeGroupTypes; 
-        private java.util.List < String > nodeNames; 
+        private java.util.List<String> nodeGroupNames; 
+        private java.util.List<String> nodeGroupTypes; 
+        private java.util.List<String> nodeNames; 
         private String nodeSelectType; 
 
         /**
-         * 节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。
+         * <p>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -95,7 +129,18 @@ public class NodeSelector extends TeaModel {
         }
 
         /**
-         * 节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。
+         * NodeGroupIds.
+         */
+        public Builder nodeGroupIds(java.util.List<String> nodeGroupIds) {
+            this.nodeGroupIds = nodeGroupIds;
+            return this;
+        }
+
+        /**
+         * <p>节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master-1</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -103,27 +148,46 @@ public class NodeSelector extends TeaModel {
         }
 
         /**
-         * 节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。
+         * NodeGroupNames.
          */
-        public Builder nodeGroupTypes(java.util.List < String > nodeGroupTypes) {
+        public Builder nodeGroupNames(java.util.List<String> nodeGroupNames) {
+            this.nodeGroupNames = nodeGroupNames;
+            return this;
+        }
+
+        /**
+         * <p>节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;CORE&quot;,&quot;TASK&quot;]</p>
+         */
+        public Builder nodeGroupTypes(java.util.List<String> nodeGroupTypes) {
             this.nodeGroupTypes = nodeGroupTypes;
             return this;
         }
 
         /**
-         * 节点名称列表。当NodeSelectType取值Node时，该参数生效。
+         * <p>节点名称列表。当NodeSelectType取值Node时，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;core1-1&quot;]</p>
          */
-        public Builder nodeNames(java.util.List < String > nodeNames) {
+        public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
             return this;
         }
 
         /**
-         * 节点选择类型。取值范围：
-         * <p>
-         * - CLUSTER：集群。
-         * - NODE_GROUP：节点组。
-         * - NODE：节点。
+         * <p>节点选择类型。取值范围：</p>
+         * <ul>
+         * <li>CLUSTER：集群。</li>
+         * <li>NODE_GROUP：节点组。</li>
+         * <li>NODE：节点。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder nodeSelectType(String nodeSelectType) {
             this.nodeSelectType = nodeSelectType;

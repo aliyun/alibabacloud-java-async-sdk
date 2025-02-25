@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDirectoryStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetDirectoryStatisticsResponseBody</p>
  */
 public class GetDirectoryStatisticsResponseBody extends TeaModel {
-    @NameInMap("DirectoryStatistics")
+    @com.aliyun.core.annotation.NameInMap("DirectoryStatistics")
     private DirectoryStatistics directoryStatistics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDirectoryStatisticsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics of the directory.
+         * <p>The statistics of the directory.</p>
          */
         public Builder directoryStatistics(DirectoryStatistics directoryStatistics) {
             this.directoryStatistics = directoryStatistics;
@@ -58,7 +58,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B7228B0-A435-5D27-A6B2-ED3571F0654B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,50 +74,59 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDirectoryStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDirectoryStatisticsResponseBody</p>
+     */
     public static class DirectoryStatistics extends TeaModel {
-        @NameInMap("AccessAssignmentCount")
+        @com.aliyun.core.annotation.NameInMap("AccessAssignmentCount")
         private Integer accessAssignmentCount;
 
-        @NameInMap("AccessConfigurationCount")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationCount")
         private Integer accessConfigurationCount;
 
-        @NameInMap("AccessConfigurationQuota")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationQuota")
         private Integer accessConfigurationQuota;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryName")
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @NameInMap("GroupCount")
+        @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
-        @NameInMap("GroupQuota")
+        @com.aliyun.core.annotation.NameInMap("GroupQuota")
         private Integer groupQuota;
 
-        @NameInMap("InProgressTaskCount")
+        @com.aliyun.core.annotation.NameInMap("InProgressTaskCount")
         private Integer inProgressTaskCount;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("InlinePolicyPerAccessConfigurationQuota")
+        private Integer inlinePolicyPerAccessConfigurationQuota;
+
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SCIMServerCredentialCount")
+        @com.aliyun.core.annotation.NameInMap("SCIMServerCredentialCount")
         private Integer SCIMServerCredentialCount;
 
-        @NameInMap("SCIMSyncEnabled")
+        @com.aliyun.core.annotation.NameInMap("SCIMSyncEnabled")
         private Boolean SCIMSyncEnabled;
 
-        @NameInMap("SSOEnabled")
+        @com.aliyun.core.annotation.NameInMap("SSOEnabled")
         private Boolean SSOEnabled;
 
-        @NameInMap("SystemPolicyPerAccessConfigurationQuota")
+        @com.aliyun.core.annotation.NameInMap("SystemPolicyPerAccessConfigurationQuota")
         private Integer systemPolicyPerAccessConfigurationQuota;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
-        @NameInMap("UserQuota")
+        @com.aliyun.core.annotation.NameInMap("UserQuota")
         private Integer userQuota;
 
         private DirectoryStatistics(Builder builder) {
@@ -126,6 +138,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             this.groupCount = builder.groupCount;
             this.groupQuota = builder.groupQuota;
             this.inProgressTaskCount = builder.inProgressTaskCount;
+            this.inlinePolicyPerAccessConfigurationQuota = builder.inlinePolicyPerAccessConfigurationQuota;
             this.region = builder.region;
             this.SCIMServerCredentialCount = builder.SCIMServerCredentialCount;
             this.SCIMSyncEnabled = builder.SCIMSyncEnabled;
@@ -200,6 +213,13 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return inlinePolicyPerAccessConfigurationQuota
+         */
+        public Integer getInlinePolicyPerAccessConfigurationQuota() {
+            return this.inlinePolicyPerAccessConfigurationQuota;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -257,6 +277,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             private Integer groupCount; 
             private Integer groupQuota; 
             private Integer inProgressTaskCount; 
+            private Integer inlinePolicyPerAccessConfigurationQuota; 
             private String region; 
             private Integer SCIMServerCredentialCount; 
             private Boolean SCIMSyncEnabled; 
@@ -266,7 +287,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             private Integer userQuota; 
 
             /**
-             * The number of access permissions that are assigned.
+             * <p>The number of access permissions that are assigned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder accessAssignmentCount(Integer accessAssignmentCount) {
                 this.accessAssignmentCount = accessAssignmentCount;
@@ -274,7 +298,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of access configurations.
+             * <p>The number of access configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder accessConfigurationCount(Integer accessConfigurationCount) {
                 this.accessConfigurationCount = accessConfigurationCount;
@@ -282,7 +309,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The quota for access configurations.
+             * <p>The quota for access configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder accessConfigurationQuota(Integer accessConfigurationQuota) {
                 this.accessConfigurationQuota = accessConfigurationQuota;
@@ -290,7 +320,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -298,7 +331,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the directory.
+             * <p>The name of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-example</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -306,7 +342,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of user groups.
+             * <p>The number of user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -314,7 +353,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The quota for user groups.
+             * <p>The quota for user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder groupQuota(Integer groupQuota) {
                 this.groupQuota = groupQuota;
@@ -322,7 +364,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that are being performed.
+             * <p>The number of tasks that are being performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inProgressTaskCount(Integer inProgressTaskCount) {
                 this.inProgressTaskCount = inProgressTaskCount;
@@ -330,7 +375,21 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the directory.
+             * <p>The number of inline policies that can be configured for an access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder inlinePolicyPerAccessConfigurationQuota(Integer inlinePolicyPerAccessConfigurationQuota) {
+                this.inlinePolicyPerAccessConfigurationQuota = inlinePolicyPerAccessConfigurationQuota;
+                return this;
+            }
+
+            /**
+             * <p>The region ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -338,7 +397,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of SCIM credentials.
+             * <p>The number of SCIM credentials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder SCIMServerCredentialCount(Integer SCIMServerCredentialCount) {
                 this.SCIMServerCredentialCount = SCIMServerCredentialCount;
@@ -346,11 +408,14 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SCIM synchronization is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SCIM synchronization is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder SCIMSyncEnabled(Boolean SCIMSyncEnabled) {
                 this.SCIMSyncEnabled = SCIMSyncEnabled;
@@ -358,11 +423,14 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSO is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSO is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder SSOEnabled(Boolean SSOEnabled) {
                 this.SSOEnabled = SSOEnabled;
@@ -370,7 +438,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The quota for system policies that can be configured for an access configuration.
+             * <p>The quota for system policies that can be configured for an access configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder systemPolicyPerAccessConfigurationQuota(Integer systemPolicyPerAccessConfigurationQuota) {
                 this.systemPolicyPerAccessConfigurationQuota = systemPolicyPerAccessConfigurationQuota;
@@ -378,7 +449,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of users.
+             * <p>The number of users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -386,7 +460,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The quota for users.
+             * <p>The quota for users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder userQuota(Integer userQuota) {
                 this.userQuota = userQuota;

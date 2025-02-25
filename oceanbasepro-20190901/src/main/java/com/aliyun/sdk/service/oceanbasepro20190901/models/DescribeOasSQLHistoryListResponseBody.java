@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOasSQLHistoryListResponseBody</p>
  */
 public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOasSQLHistoryListResponseBody(Builder builder) {
@@ -72,205 +71,211 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AvgAffectedRows")
+        @com.aliyun.core.annotation.NameInMap("AvgAffectedRows")
         private Long avgAffectedRows;
 
-        @NameInMap("AvgApplicationWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgApplicationWaitTime")
         private Double avgApplicationWaitTime;
 
-        @NameInMap("AvgBlockCacheHit")
+        @com.aliyun.core.annotation.NameInMap("AvgBlockCacheHit")
         private Long avgBlockCacheHit;
 
-        @NameInMap("AvgBlockIndexCacheHit")
+        @com.aliyun.core.annotation.NameInMap("AvgBlockIndexCacheHit")
         private Long avgBlockIndexCacheHit;
 
-        @NameInMap("AvgBloomFilterCacheHit")
+        @com.aliyun.core.annotation.NameInMap("AvgBloomFilterCacheHit")
         private Long avgBloomFilterCacheHit;
 
-        @NameInMap("AvgConcurrencyWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgConcurrencyWaitTime")
         private Double avgConcurrencyWaitTime;
 
-        @NameInMap("AvgCpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
 
-        @NameInMap("AvgDecodeTime")
+        @com.aliyun.core.annotation.NameInMap("AvgDbTime")
+        private Double avgDbTime;
+
+        @com.aliyun.core.annotation.NameInMap("AvgDecodeTime")
         private Double avgDecodeTime;
 
-        @NameInMap("AvgDiskReads")
+        @com.aliyun.core.annotation.NameInMap("AvgDiskReads")
         private Long avgDiskReads;
 
-        @NameInMap("AvgElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("AvgElapsedTime")
         private Double avgElapsedTime;
 
-        @NameInMap("AvgExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("AvgExecuteTime")
         private Double avgExecuteTime;
 
-        @NameInMap("AvgExecutorRpcCount")
+        @com.aliyun.core.annotation.NameInMap("AvgExecutorRpcCount")
         private Double avgExecutorRpcCount;
 
-        @NameInMap("AvgExpectedWorkerCount")
+        @com.aliyun.core.annotation.NameInMap("AvgExpectedWorkerCount")
         private Double avgExpectedWorkerCount;
 
-        @NameInMap("AvgGetPlanTime")
+        @com.aliyun.core.annotation.NameInMap("AvgGetPlanTime")
         private Double avgGetPlanTime;
 
-        @NameInMap("AvgLogicalReads")
+        @com.aliyun.core.annotation.NameInMap("AvgLogicalReads")
         private Long avgLogicalReads;
 
-        @NameInMap("AvgMemstoreReadRows")
+        @com.aliyun.core.annotation.NameInMap("AvgMemstoreReadRows")
         private Long avgMemstoreReadRows;
 
-        @NameInMap("AvgNetTime")
+        @com.aliyun.core.annotation.NameInMap("AvgNetTime")
         private Double avgNetTime;
 
-        @NameInMap("AvgNetWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgNetWaitTime")
         private Double avgNetWaitTime;
 
-        @NameInMap("AvgPartitionCount")
+        @com.aliyun.core.annotation.NameInMap("AvgPartitionCount")
         private Double avgPartitionCount;
 
-        @NameInMap("AvgQueueTime")
+        @com.aliyun.core.annotation.NameInMap("AvgQueueTime")
         private Double avgQueueTime;
 
-        @NameInMap("AvgReturnRows")
+        @com.aliyun.core.annotation.NameInMap("AvgReturnRows")
         private Long avgReturnRows;
 
-        @NameInMap("AvgRowCacheHit")
+        @com.aliyun.core.annotation.NameInMap("AvgRowCacheHit")
         private Long avgRowCacheHit;
 
-        @NameInMap("AvgRpcCount")
+        @com.aliyun.core.annotation.NameInMap("AvgRpcCount")
         private Long avgRpcCount;
 
-        @NameInMap("AvgScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("AvgScheduleTime")
         private Double avgScheduleTime;
 
-        @NameInMap("AvgSsstoreReadRows")
+        @com.aliyun.core.annotation.NameInMap("AvgSsstoreReadRows")
         private Long avgSsstoreReadRows;
 
-        @NameInMap("AvgUsedWorkerCount")
+        @com.aliyun.core.annotation.NameInMap("AvgUsedWorkerCount")
         private Double avgUsedWorkerCount;
 
-        @NameInMap("AvgUserIoWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgUserIoWaitTime")
         private Double avgUserIoWaitTime;
 
-        @NameInMap("AvgWaitCount")
+        @com.aliyun.core.annotation.NameInMap("AvgWaitCount")
         private Double avgWaitCount;
 
-        @NameInMap("AvgWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgWaitTime")
         private Double avgWaitTime;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DistPlanPercentage")
+        @com.aliyun.core.annotation.NameInMap("DistPlanPercentage")
         private Double distPlanPercentage;
 
-        @NameInMap("ExecPs")
+        @com.aliyun.core.annotation.NameInMap("ExecPs")
         private Double execPs;
 
-        @NameInMap("Executions")
+        @com.aliyun.core.annotation.NameInMap("Executions")
         private Long executions;
 
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Long failCount;
 
-        @NameInMap("FailPercentage")
+        @com.aliyun.core.annotation.NameInMap("FailPercentage")
         private Double failPercentage;
 
-        @NameInMap("LocalPlanPercentage")
+        @com.aliyun.core.annotation.NameInMap("LocalPlanPercentage")
         private Double localPlanPercentage;
 
-        @NameInMap("MaxAffectedRows")
+        @com.aliyun.core.annotation.NameInMap("MaxAffectedRows")
         private Double maxAffectedRows;
 
-        @NameInMap("MaxApplicationWaitTime")
+        @com.aliyun.core.annotation.NameInMap("MaxApplicationWaitTime")
         private Double maxApplicationWaitTime;
 
-        @NameInMap("MaxConcurrencyWaitTime")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrencyWaitTime")
         private Double maxConcurrencyWaitTime;
 
-        @NameInMap("MaxCpuTime")
+        @com.aliyun.core.annotation.NameInMap("MaxCpuTime")
         private Double maxCpuTime;
 
-        @NameInMap("MaxDiskReads")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskReads")
         private Double maxDiskReads;
 
-        @NameInMap("MaxElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("MaxElapsedTime")
         private Double maxElapsedTime;
 
-        @NameInMap("MaxReturnRows")
+        @com.aliyun.core.annotation.NameInMap("MaxReturnRows")
         private Double maxReturnRows;
 
-        @NameInMap("MaxUserIoWaitTime")
+        @com.aliyun.core.annotation.NameInMap("MaxUserIoWaitTime")
         private Double maxUserIoWaitTime;
 
-        @NameInMap("MaxWaitTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWaitTime")
         private Double maxWaitTime;
 
-        @NameInMap("MissPlanPercentage")
+        @com.aliyun.core.annotation.NameInMap("MissPlanPercentage")
         private Double missPlanPercentage;
 
-        @NameInMap("MissPlans")
+        @com.aliyun.core.annotation.NameInMap("MissPlans")
         private Long missPlans;
 
-        @NameInMap("RemotePlanPercentage")
+        @com.aliyun.core.annotation.NameInMap("RemotePlanPercentage")
         private Double remotePlanPercentage;
 
-        @NameInMap("RemotePlans")
+        @com.aliyun.core.annotation.NameInMap("RemotePlans")
         private Long remotePlans;
 
-        @NameInMap("RetCode4012Count")
+        @com.aliyun.core.annotation.NameInMap("RetCode4012Count")
         private Double retCode4012Count;
 
-        @NameInMap("RetCode4013Count")
+        @com.aliyun.core.annotation.NameInMap("RetCode4013Count")
         private Double retCode4013Count;
 
-        @NameInMap("RetCode5001Count")
+        @com.aliyun.core.annotation.NameInMap("RetCode5001Count")
         private Double retCode5001Count;
 
-        @NameInMap("RetCode5024Count")
+        @com.aliyun.core.annotation.NameInMap("RetCode5024Count")
         private Double retCode5024Count;
 
-        @NameInMap("RetCode5167Count")
+        @com.aliyun.core.annotation.NameInMap("RetCode5167Count")
         private Double retCode5167Count;
 
-        @NameInMap("RetCode5217Count")
+        @com.aliyun.core.annotation.NameInMap("RetCode5217Count")
         private Double retCode5217Count;
 
-        @NameInMap("RetCode6002Count")
+        @com.aliyun.core.annotation.NameInMap("RetCode6002Count")
         private Double retCode6002Count;
 
-        @NameInMap("RetryCount")
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Long retryCount;
 
-        @NameInMap("SQLId")
+        @com.aliyun.core.annotation.NameInMap("SQLId")
         private String SQLId;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("StrongConsistencyPercentage")
+        @com.aliyun.core.annotation.NameInMap("StrongConsistencyPercentage")
         private Double strongConsistencyPercentage;
 
-        @NameInMap("SumElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("SumDbTime")
+        private Double sumDbTime;
+
+        @com.aliyun.core.annotation.NameInMap("SumElapsedTime")
         private Double sumElapsedTime;
 
-        @NameInMap("SumLogicalReads")
+        @com.aliyun.core.annotation.NameInMap("SumLogicalReads")
         private Double sumLogicalReads;
 
-        @NameInMap("SumWaitTime")
+        @com.aliyun.core.annotation.NameInMap("SumWaitTime")
         private Double sumWaitTime;
 
-        @NameInMap("TableScanPercentage")
+        @com.aliyun.core.annotation.NameInMap("TableScanPercentage")
         private Double tableScanPercentage;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("WeakConsistencyPercentage")
+        @com.aliyun.core.annotation.NameInMap("WeakConsistencyPercentage")
         private Double weakConsistencyPercentage;
 
         private Data(Builder builder) {
@@ -281,6 +286,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             this.avgBloomFilterCacheHit = builder.avgBloomFilterCacheHit;
             this.avgConcurrencyWaitTime = builder.avgConcurrencyWaitTime;
             this.avgCpuTime = builder.avgCpuTime;
+            this.avgDbTime = builder.avgDbTime;
             this.avgDecodeTime = builder.avgDecodeTime;
             this.avgDiskReads = builder.avgDiskReads;
             this.avgElapsedTime = builder.avgElapsedTime;
@@ -334,6 +340,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             this.SQLId = builder.SQLId;
             this.server = builder.server;
             this.strongConsistencyPercentage = builder.strongConsistencyPercentage;
+            this.sumDbTime = builder.sumDbTime;
             this.sumElapsedTime = builder.sumElapsedTime;
             this.sumLogicalReads = builder.sumLogicalReads;
             this.sumWaitTime = builder.sumWaitTime;
@@ -398,6 +405,13 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
          */
         public Double getAvgCpuTime() {
             return this.avgCpuTime;
+        }
+
+        /**
+         * @return avgDbTime
+         */
+        public Double getAvgDbTime() {
+            return this.avgDbTime;
         }
 
         /**
@@ -772,6 +786,13 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sumDbTime
+         */
+        public Double getSumDbTime() {
+            return this.sumDbTime;
+        }
+
+        /**
          * @return sumElapsedTime
          */
         public Double getSumElapsedTime() {
@@ -828,6 +849,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             private Long avgBloomFilterCacheHit; 
             private Double avgConcurrencyWaitTime; 
             private Double avgCpuTime; 
+            private Double avgDbTime; 
             private Double avgDecodeTime; 
             private Long avgDiskReads; 
             private Double avgElapsedTime; 
@@ -881,6 +903,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             private String SQLId; 
             private String server; 
             private Double strongConsistencyPercentage; 
+            private Double sumDbTime; 
             private Double sumElapsedTime; 
             private Double sumLogicalReads; 
             private Double sumWaitTime; 
@@ -942,6 +965,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              */
             public Builder avgCpuTime(Double avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
+                return this;
+            }
+
+            /**
+             * AvgDbTime.
+             */
+            public Builder avgDbTime(Double avgDbTime) {
+                this.avgDbTime = avgDbTime;
                 return this;
             }
 
@@ -1366,6 +1397,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              */
             public Builder strongConsistencyPercentage(Double strongConsistencyPercentage) {
                 this.strongConsistencyPercentage = strongConsistencyPercentage;
+                return this;
+            }
+
+            /**
+             * SumDbTime.
+             */
+            public Builder sumDbTime(Double sumDbTime) {
+                this.sumDbTime = sumDbTime;
                 return this;
             }
 

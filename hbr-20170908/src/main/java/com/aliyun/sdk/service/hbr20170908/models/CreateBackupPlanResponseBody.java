@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupPlanResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBackupPlanResponseBody</p>
  */
 public class CreateBackupPlanResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PlanId")
+    @com.aliyun.core.annotation.NameInMap("PlanId")
     private String planId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateBackupPlanResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Return code, 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the return message, usually returns &quot;successful&quot; upon success, and corresponding error messages in case of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +113,10 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * PlanId.
+         * <p>Backup plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-*********************</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -110,7 +124,10 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,14 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * <ul>
+         * <li>true: Success.</li>
+         * <li>false: Failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

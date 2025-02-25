@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableCenVbrHealthCheckResponseBody} extends {@link TeaModel}
  *
  * <p>EnableCenVbrHealthCheckResponseBody</p>
  */
 public class EnableCenVbrHealthCheckResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EnableCenVbrHealthCheckResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class EnableCenVbrHealthCheckResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F59F19C-EFD2-40B1-94D5-65B40CA8E34A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

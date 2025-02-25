@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticityAssuranceInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticityAssuranceInstancesResponseBody</p>
  */
 public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
-    @NameInMap("ElasticityAssuranceItem")
+    @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceItem")
     private ElasticityAssuranceItem elasticityAssuranceItem;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeElasticityAssuranceInstancesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the instances that match and use the elasticity assurance.
+         * <p>Details about the instances that match and use the elasticity assurance.</p>
          */
         public Builder elasticityAssuranceItem(ElasticityAssuranceItem elasticityAssuranceItem) {
             this.elasticityAssuranceItem = elasticityAssuranceItem;
@@ -94,7 +99,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to start the next query.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,8 +148,14 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticityAssuranceInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssuranceInstancesResponseBody</p>
+     */
     public static class InstanceIdSet extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceIdSet(Builder builder) {
@@ -158,7 +181,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The instance ID
+             * <p>The instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -172,9 +198,15 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssuranceInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssuranceInstancesResponseBody</p>
+     */
     public static class ElasticityAssuranceItem extends TeaModel {
-        @NameInMap("InstanceIdSet")
-        private java.util.List < InstanceIdSet> instanceIdSet;
+        @com.aliyun.core.annotation.NameInMap("InstanceIdSet")
+        private java.util.List<InstanceIdSet> instanceIdSet;
 
         private ElasticityAssuranceItem(Builder builder) {
             this.instanceIdSet = builder.instanceIdSet;
@@ -191,17 +223,17 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         /**
          * @return instanceIdSet
          */
-        public java.util.List < InstanceIdSet> getInstanceIdSet() {
+        public java.util.List<InstanceIdSet> getInstanceIdSet() {
             return this.instanceIdSet;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceIdSet> instanceIdSet; 
+            private java.util.List<InstanceIdSet> instanceIdSet; 
 
             /**
              * InstanceIdSet.
              */
-            public Builder instanceIdSet(java.util.List < InstanceIdSet> instanceIdSet) {
+            public Builder instanceIdSet(java.util.List<InstanceIdSet> instanceIdSet) {
                 this.instanceIdSet = instanceIdSet;
                 return this;
             }

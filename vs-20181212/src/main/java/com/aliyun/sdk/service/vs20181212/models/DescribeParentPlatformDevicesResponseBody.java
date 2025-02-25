@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParentPlatformDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParentPlatformDevicesResponseBody</p>
  */
 public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
-    private java.util.List < Devices> devices;
+    @com.aliyun.core.annotation.NameInMap("Devices")
+    private java.util.List<Devices> devices;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeParentPlatformDevicesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     /**
      * @return devices
      */
-    public java.util.List < Devices> getDevices() {
+    public java.util.List<Devices> getDevices() {
         return this.devices;
     }
 
@@ -90,7 +95,7 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Devices> devices; 
+        private java.util.List<Devices> devices; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -100,7 +105,7 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         /**
          * Devices.
          */
-        public Builder devices(java.util.List < Devices> devices) {
+        public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
             return this;
         }
@@ -151,20 +156,26 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParentPlatformDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParentPlatformDevicesResponseBody</p>
+     */
     public static class Devices extends TeaModel {
-        @NameInMap("GbId")
+        @com.aliyun.core.annotation.NameInMap("GbId")
         private String gbId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
         private Devices(Builder builder) {

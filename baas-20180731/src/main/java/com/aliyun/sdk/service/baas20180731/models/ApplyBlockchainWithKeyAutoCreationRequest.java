@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyBlockchainWithKeyAutoCreationRequest</p>
  */
 public class ApplyBlockchainWithKeyAutoCreationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Bizid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizid")
     private String bizid;
 
-    @Body
-    @NameInMap("CommonName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommonName")
     private String commonName;
 
-    @Body
-    @NameInMap("CountryName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CountryName")
     private String countryName;
 
-    @Body
-    @NameInMap("LocalityName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocalityName")
     private String localityName;
 
-    @Body
-    @NameInMap("OrganizationName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationName")
     private String organizationName;
 
-    @Body
-    @NameInMap("OrganizationUnitName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnitName")
     private String organizationUnitName;
 
-    @Body
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Body
-    @NameInMap("StateOrProvinceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StateOrProvinceName")
     private String stateOrProvinceName;
 
     private ApplyBlockchainWithKeyAutoCreationRequest(Builder builder) {

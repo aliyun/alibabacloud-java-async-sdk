@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoSnapshotPolicyRequest</p>
  */
 public class DeleteAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("AutoSnapshotPolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String autoSnapshotPolicyId;
 
     private DeleteAutoSnapshotPolicyRequest(Builder builder) {
@@ -49,13 +54,18 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAutoSnapshotPolicyRequest response) {
-            super(response);
-            this.autoSnapshotPolicyId = response.autoSnapshotPolicyId;
+        private Builder(DeleteAutoSnapshotPolicyRequest request) {
+            super(request);
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
         } 
 
         /**
-         * AutoSnapshotPolicyId.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/126583.html">DescribeAutoSnapshotPolicies</a> operation to view available automatic snapshot policies.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-extreme-233e6****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);

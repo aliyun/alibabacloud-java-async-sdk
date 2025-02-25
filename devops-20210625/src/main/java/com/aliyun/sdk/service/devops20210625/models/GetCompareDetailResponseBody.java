@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetCompareDetailResponseBody</p>
  */
 public class GetCompareDetailResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetCompareDetailResponseBody(Builder builder) {
@@ -131,23 +136,29 @@ public class GetCompareDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Author extends TeaModel {
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Author(Builder builder) {
@@ -272,23 +283,29 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Committer extends TeaModel {
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Committer(Builder builder) {
@@ -413,50 +430,56 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Commits extends TeaModel {
-        @NameInMap("author")
+        @com.aliyun.core.annotation.NameInMap("author")
         private Author author;
 
-        @NameInMap("authorEmail")
+        @com.aliyun.core.annotation.NameInMap("authorEmail")
         private String authorEmail;
 
-        @NameInMap("authorName")
+        @com.aliyun.core.annotation.NameInMap("authorName")
         private String authorName;
 
-        @NameInMap("authoredDate")
+        @com.aliyun.core.annotation.NameInMap("authoredDate")
         private String authoredDate;
 
-        @NameInMap("commentsCount")
+        @com.aliyun.core.annotation.NameInMap("commentsCount")
         private Long commentsCount;
 
-        @NameInMap("committedDate")
+        @com.aliyun.core.annotation.NameInMap("committedDate")
         private String committedDate;
 
-        @NameInMap("committer")
+        @com.aliyun.core.annotation.NameInMap("committer")
         private Committer committer;
 
-        @NameInMap("committerEmail")
+        @com.aliyun.core.annotation.NameInMap("committerEmail")
         private String committerEmail;
 
-        @NameInMap("committerName")
+        @com.aliyun.core.annotation.NameInMap("committerName")
         private String committerName;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("parentIds")
-        private java.util.List < String > parentIds;
+        @com.aliyun.core.annotation.NameInMap("parentIds")
+        private java.util.List<String> parentIds;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Commits(Builder builder) {
@@ -572,7 +595,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
         /**
          * @return parentIds
          */
-        public java.util.List < String > getParentIds() {
+        public java.util.List<String> getParentIds() {
             return this.parentIds;
         }
 
@@ -603,7 +626,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             private String createdAt; 
             private String id; 
             private String message; 
-            private java.util.List < String > parentIds; 
+            private java.util.List<String> parentIds; 
             private String shortId; 
             private String title; 
 
@@ -706,7 +729,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             /**
              * parentIds.
              */
-            public Builder parentIds(java.util.List < String > parentIds) {
+            public Builder parentIds(java.util.List<String> parentIds) {
                 this.parentIds = parentIds;
                 return this;
             }
@@ -734,44 +757,50 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Diffs extends TeaModel {
-        @NameInMap("aMode")
+        @com.aliyun.core.annotation.NameInMap("aMode")
         private String aMode;
 
-        @NameInMap("bMode")
+        @com.aliyun.core.annotation.NameInMap("bMode")
         private String bMode;
 
-        @NameInMap("deletedFile")
+        @com.aliyun.core.annotation.NameInMap("deletedFile")
         private Boolean deletedFile;
 
-        @NameInMap("diff")
+        @com.aliyun.core.annotation.NameInMap("diff")
         private String diff;
 
-        @NameInMap("isBinary")
+        @com.aliyun.core.annotation.NameInMap("isBinary")
         private Boolean isBinary;
 
-        @NameInMap("isNewLfs")
+        @com.aliyun.core.annotation.NameInMap("isNewLfs")
         private Boolean isNewLfs;
 
-        @NameInMap("isOldLfs")
+        @com.aliyun.core.annotation.NameInMap("isOldLfs")
         private Boolean isOldLfs;
 
-        @NameInMap("newFile")
+        @com.aliyun.core.annotation.NameInMap("newFile")
         private Boolean newFile;
 
-        @NameInMap("newId")
+        @com.aliyun.core.annotation.NameInMap("newId")
         private String newId;
 
-        @NameInMap("newPath")
+        @com.aliyun.core.annotation.NameInMap("newPath")
         private String newPath;
 
-        @NameInMap("oldId")
+        @com.aliyun.core.annotation.NameInMap("oldId")
         private String oldId;
 
-        @NameInMap("oldPath")
+        @com.aliyun.core.annotation.NameInMap("oldPath")
         private String oldPath;
 
-        @NameInMap("renamedFile")
+        @com.aliyun.core.annotation.NameInMap("renamedFile")
         private Boolean renamedFile;
 
         private Diffs(Builder builder) {
@@ -1015,15 +1044,21 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("commits")
-        private java.util.List < Commits> commits;
+        @com.aliyun.core.annotation.NameInMap("commits")
+        private java.util.List<Commits> commits;
 
-        @NameInMap("diffs")
-        private java.util.List < Diffs> diffs;
+        @com.aliyun.core.annotation.NameInMap("diffs")
+        private java.util.List<Diffs> diffs;
 
-        @NameInMap("messages")
-        private java.util.List < String > messages;
+        @com.aliyun.core.annotation.NameInMap("messages")
+        private java.util.List<String> messages;
 
         private Result(Builder builder) {
             this.commits = builder.commits;
@@ -1042,33 +1077,33 @@ public class GetCompareDetailResponseBody extends TeaModel {
         /**
          * @return commits
          */
-        public java.util.List < Commits> getCommits() {
+        public java.util.List<Commits> getCommits() {
             return this.commits;
         }
 
         /**
          * @return diffs
          */
-        public java.util.List < Diffs> getDiffs() {
+        public java.util.List<Diffs> getDiffs() {
             return this.diffs;
         }
 
         /**
          * @return messages
          */
-        public java.util.List < String > getMessages() {
+        public java.util.List<String> getMessages() {
             return this.messages;
         }
 
         public static final class Builder {
-            private java.util.List < Commits> commits; 
-            private java.util.List < Diffs> diffs; 
-            private java.util.List < String > messages; 
+            private java.util.List<Commits> commits; 
+            private java.util.List<Diffs> diffs; 
+            private java.util.List<String> messages; 
 
             /**
              * commits.
              */
-            public Builder commits(java.util.List < Commits> commits) {
+            public Builder commits(java.util.List<Commits> commits) {
                 this.commits = commits;
                 return this;
             }
@@ -1076,7 +1111,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             /**
              * diffs.
              */
-            public Builder diffs(java.util.List < Diffs> diffs) {
+            public Builder diffs(java.util.List<Diffs> diffs) {
                 this.diffs = diffs;
                 return this;
             }
@@ -1084,7 +1119,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             /**
              * messages.
              */
-            public Builder messages(java.util.List < String > messages) {
+            public Builder messages(java.util.List<String> messages) {
                 this.messages = messages;
                 return this;
             }

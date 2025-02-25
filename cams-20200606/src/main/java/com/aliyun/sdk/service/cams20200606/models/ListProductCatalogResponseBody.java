@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductCatalogResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductCatalogResponseBody</p>
  */
 public class ListProductCatalogResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListProductCatalogResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,11 +109,14 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,7 +135,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned data.</p>
          */
         public Builder model(Model model) {
             this.model = model;
@@ -134,7 +143,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,11 +154,14 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,11 +174,17 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductCatalogResponseBody</p>
+     */
     public static class Cursors extends TeaModel {
-        @NameInMap("After")
+        @com.aliyun.core.annotation.NameInMap("After")
         private String after;
 
-        @NameInMap("Before")
+        @com.aliyun.core.annotation.NameInMap("Before")
         private String before;
 
         private Cursors(Builder builder) {
@@ -198,7 +219,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
             private String before; 
 
             /**
-             * The cursor that points to the end of the page of the returned data.
+             * <p>The cursor that points to the end of the page of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjsuueu83838</p>
              */
             public Builder after(String after) {
                 this.after = after;
@@ -206,7 +230,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * The cursor that points to the beginning of the page of the returned data.
+             * <p>The cursor that points to the beginning of the page of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjjsjdjjdjd83883</p>
              */
             public Builder before(String before) {
                 this.before = before;
@@ -220,8 +247,14 @@ public class ListProductCatalogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductCatalogResponseBody</p>
+     */
     public static class Paging extends TeaModel {
-        @NameInMap("Cursors")
+        @com.aliyun.core.annotation.NameInMap("Cursors")
         private Cursors cursors;
 
         private Paging(Builder builder) {
@@ -247,7 +280,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             private Cursors cursors; 
 
             /**
-             * The cursors for pagination.
+             * <p>The cursors for pagination.</p>
              */
             public Builder cursors(Cursors cursors) {
                 this.cursors = cursors;
@@ -261,11 +294,17 @@ public class ListProductCatalogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductCatalogResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < java.util.Map<String, ?>> data;
 
-        @NameInMap("Paging")
+        @com.aliyun.core.annotation.NameInMap("Paging")
         private Paging paging;
 
         private Model(Builder builder) {
@@ -300,7 +339,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             private Paging paging; 
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
             public Builder data(java.util.List < java.util.Map<String, ?>> data) {
                 this.data = data;
@@ -308,7 +347,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination details.
+             * <p>The pagination details.</p>
              */
             public Builder paging(Paging paging) {
                 this.paging = paging;

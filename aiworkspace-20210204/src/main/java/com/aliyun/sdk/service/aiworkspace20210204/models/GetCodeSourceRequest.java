@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCodeSourceRequest} extends {@link RequestModel}
  *
  * <p>GetCodeSourceRequest</p>
  */
 public class GetCodeSourceRequest extends Request {
-    @Path
-    @NameInMap("CodeSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("CodeSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeSourceId;
 
     private GetCodeSourceRequest(Builder builder) {
@@ -55,7 +55,10 @@ public class GetCodeSourceRequest extends Request {
         } 
 
         /**
-         * CodeSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code-202**********</p>
          */
         public Builder codeSourceId(String codeSourceId) {
             this.putPathParameter("CodeSourceId", codeSourceId);

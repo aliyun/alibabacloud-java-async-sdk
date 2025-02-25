@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCollationTimeZoneResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCollationTimeZoneResponseBody</p>
  */
 public class ModifyCollationTimeZoneResponseBody extends TeaModel {
-    @NameInMap("Collation")
+    @com.aliyun.core.annotation.NameInMap("Collation")
     private String collation;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("Timezone")
+    @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
     private ModifyCollationTimeZoneResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         private String timezone; 
 
         /**
-         * The character set collation of the instance.
+         * <p>The character set collation of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Latin1_General_CI_AS</p>
          */
         public Builder collation(String collation) {
             this.collation = collation;
@@ -94,7 +102,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +113,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8EA054AF-DFA7-497D-9F57-790FFC974C0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114413215</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -118,7 +135,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The time zone of the instance.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Standard Time</p>
          */
         public Builder timezone(String timezone) {
             this.timezone = timezone;

@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceSpecsResponseBody</p>
  */
 public class ListInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
     private ListInstanceSpecsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of the instances.
+         * <p>The instance types.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -71,17 +79,23 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceSpecsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("cpu")
+        @com.aliyun.core.annotation.NameInMap("cpu")
         private Integer cpu;
 
-        @NameInMap("maxDisk")
+        @com.aliyun.core.annotation.NameInMap("maxDisk")
         private Integer maxDisk;
 
-        @NameInMap("mem")
+        @com.aliyun.core.annotation.NameInMap("mem")
         private Integer mem;
 
-        @NameInMap("minDisk")
+        @com.aliyun.core.annotation.NameInMap("minDisk")
         private Integer minDisk;
 
         private Result(Builder builder) {
@@ -134,7 +148,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             private Integer minDisk; 
 
             /**
-             * The number of CPU cores.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -142,7 +159,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum storage space of a searcher worker.
+             * <p>The maximum storage of a single data node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder maxDisk(Integer maxDisk) {
                 this.maxDisk = maxDisk;
@@ -150,7 +170,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GB.
+             * <p>The memory of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -158,7 +181,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage space of a searcher worker.
+             * <p>The minimum storage of a single data node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder minDisk(Integer minDisk) {
                 this.minDisk = minDisk;

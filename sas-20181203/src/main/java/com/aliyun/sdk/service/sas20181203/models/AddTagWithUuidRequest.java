@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTagWithUuidRequest} extends {@link RequestModel}
  *
  * <p>AddTagWithUuidRequest</p>
  */
 public class AddTagWithUuidRequest extends Request {
-    @Query
-    @NameInMap("TagName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagName;
 
-    @Query
-    @NameInMap("UuidList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
     private String uuidList;
 
     private AddTagWithUuidRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class AddTagWithUuidRequest extends Request {
         } 
 
         /**
-         * The name of the tag.
+         * <p>The name of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternetIp</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -78,10 +87,13 @@ public class AddTagWithUuidRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>71f5313e-4355-4c59-86d1-557dda7b****,71f5313e-4355-4c59-86d1-557dda7b****</p>
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

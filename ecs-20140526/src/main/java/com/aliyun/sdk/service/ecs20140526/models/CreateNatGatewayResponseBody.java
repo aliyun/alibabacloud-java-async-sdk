@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNatGatewayResponseBody</p>
  */
 public class CreateNatGatewayResponseBody extends TeaModel {
-    @NameInMap("BandwidthPackageIds")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageIds")
     private BandwidthPackageIds bandwidthPackageIds;
 
-    @NameInMap("ForwardTableIds")
+    @com.aliyun.core.annotation.NameInMap("ForwardTableIds")
     private ForwardTableIds forwardTableIds;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNatGatewayResponseBody(Builder builder) {
@@ -111,9 +116,15 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayResponseBody</p>
+     */
     public static class BandwidthPackageIds extends TeaModel {
-        @NameInMap("BandwidthPackageId")
-        private java.util.List < String > bandwidthPackageId;
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+        private java.util.List<String> bandwidthPackageId;
 
         private BandwidthPackageIds(Builder builder) {
             this.bandwidthPackageId = builder.bandwidthPackageId;
@@ -130,17 +141,17 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         /**
          * @return bandwidthPackageId
          */
-        public java.util.List < String > getBandwidthPackageId() {
+        public java.util.List<String> getBandwidthPackageId() {
             return this.bandwidthPackageId;
         }
 
         public static final class Builder {
-            private java.util.List < String > bandwidthPackageId; 
+            private java.util.List<String> bandwidthPackageId; 
 
             /**
              * BandwidthPackageId.
              */
-            public Builder bandwidthPackageId(java.util.List < String > bandwidthPackageId) {
+            public Builder bandwidthPackageId(java.util.List<String> bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
                 return this;
             }
@@ -152,9 +163,15 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayResponseBody</p>
+     */
     public static class ForwardTableIds extends TeaModel {
-        @NameInMap("ForwardTableId")
-        private java.util.List < String > forwardTableId;
+        @com.aliyun.core.annotation.NameInMap("ForwardTableId")
+        private java.util.List<String> forwardTableId;
 
         private ForwardTableIds(Builder builder) {
             this.forwardTableId = builder.forwardTableId;
@@ -171,17 +188,17 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         /**
          * @return forwardTableId
          */
-        public java.util.List < String > getForwardTableId() {
+        public java.util.List<String> getForwardTableId() {
             return this.forwardTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > forwardTableId; 
+            private java.util.List<String> forwardTableId; 
 
             /**
              * ForwardTableId.
              */
-            public Builder forwardTableId(java.util.List < String > forwardTableId) {
+            public Builder forwardTableId(java.util.List<String> forwardTableId) {
                 this.forwardTableId = forwardTableId;
                 return this;
             }

@@ -38,6 +38,7 @@ public class DescribeDrdsInstancesRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -165,22 +166,22 @@ public class DescribeDrdsInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsInstancesRequest response) {
-            super(response);
-            this.description = response.description;
-            this.expired = response.expired;
-            this.mix = response.mix;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.productVersion = response.productVersion;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tag = response.tag;
-            this.type = response.type;
+        private Builder(DescribeDrdsInstancesRequest request) {
+            super(request);
+            this.description = request.description;
+            this.expired = request.expired;
+            this.mix = request.mix;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.productVersion = request.productVersion;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
+            this.type = request.type;
         } 
 
         /**
-         * Description.
+         * The description of the instances.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -189,7 +190,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * Expired.
+         * Specifies whether the instances that you want to query expire.
          */
         public Builder expired(Boolean expired) {
             this.putQueryParameter("Expired", expired);
@@ -198,7 +199,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * Mix.
+         * Specifies whether hybrid queries are supported.
          */
         public Builder mix(Boolean mix) {
             this.putQueryParameter("Mix", mix);
@@ -207,7 +208,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +217,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of instances returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +226,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * ProductVersion.
+         * The version of the service.
          */
         public Builder productVersion(String productVersion) {
             this.putQueryParameter("ProductVersion", productVersion);
@@ -234,7 +235,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +244,7 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instances you want to query belong. The value of this parameter can be NULL.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -261,7 +262,11 @@ public class DescribeDrdsInstancesRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the instances that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **0**: shared instances
+         * *   **1**: dedicated instances
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -315,7 +320,7 @@ public class DescribeDrdsInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag configured for the instances you want to query.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -323,7 +328,7 @@ public class DescribeDrdsInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag configured for the instances you want to query.
              */
             public Builder value(String value) {
                 this.value = value;

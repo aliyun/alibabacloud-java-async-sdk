@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhysicalConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePhysicalConnectionResponseBody</p>
  */
 public class CreatePhysicalConnectionResponseBody extends TeaModel {
-    @NameInMap("PhysicalConnectionId")
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
     private String physicalConnectionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePhysicalConnectionResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Express Connect circuit.
+         * <p>The ID of the Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1ciz7ekd2grn1as****</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.physicalConnectionId = physicalConnectionId;
@@ -58,7 +66,10 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A6A5EC5-6F6C-4906-9689-56ACE58A13E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

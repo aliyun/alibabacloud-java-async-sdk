@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserProvisioningStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserProvisioningStatisticsResponseBody</p>
  */
 public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserProvisioningStatistics")
+    @com.aliyun.core.annotation.NameInMap("UserProvisioningStatistics")
     private UserProvisioningStatistics userProvisioningStatistics;
 
     private GetUserProvisioningStatisticsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
         private UserProvisioningStatistics userProvisioningStatistics; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6F90F3D-4502-5877-B80B-97476F6AE2CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * UserProvisioningStatistics.
+         * <p>The statistics of the RAM user provisioning.</p>
          */
         public Builder userProvisioningStatistics(UserProvisioningStatistics userProvisioningStatistics) {
             this.userProvisioningStatistics = userProvisioningStatistics;
@@ -71,23 +74,29 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserProvisioningStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserProvisioningStatisticsResponseBody</p>
+     */
     public static class UserProvisioningStatistics extends TeaModel {
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("FailedEventCount")
+        @com.aliyun.core.annotation.NameInMap("FailedEventCount")
         private Long failedEventCount;
 
-        @NameInMap("LatestAsyncTime")
+        @com.aliyun.core.annotation.NameInMap("LatestAsyncTime")
         private String latestAsyncTime;
 
-        @NameInMap("OwnerPk")
+        @com.aliyun.core.annotation.NameInMap("OwnerPk")
         private String ownerPk;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UserProvisioningStatistics(Builder builder) {
@@ -158,7 +167,10 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DirectoryId.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-003qew84****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -166,7 +178,10 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The entity ID, which is the ID of the RAM user provisioning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up-002axzhapcbz6e63****</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -174,7 +189,10 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedEventCount.
+             * <p>The number of failed RAM user provisioning events that are associated with the RAM user provisioning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder failedEventCount(Long failedEventCount) {
                 this.failedEventCount = failedEventCount;
@@ -182,7 +200,10 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * LatestAsyncTime.
+             * <p>The time when the RAM user provisioning was last performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-28T03:55:42Z</p>
              */
             public Builder latestAsyncTime(String latestAsyncTime) {
                 this.latestAsyncTime = latestAsyncTime;
@@ -190,7 +211,10 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerPk.
+             * <p>The ID of the Alibaba Cloud account to which the resource directory belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139665787317****</p>
              */
             public Builder ownerPk(String ownerPk) {
                 this.ownerPk = ownerPk;
@@ -198,7 +222,10 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The entity type. The value is fixed as <code>User Provisioning</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User Provisioning</p>
              */
             public Builder type(String type) {
                 this.type = type;

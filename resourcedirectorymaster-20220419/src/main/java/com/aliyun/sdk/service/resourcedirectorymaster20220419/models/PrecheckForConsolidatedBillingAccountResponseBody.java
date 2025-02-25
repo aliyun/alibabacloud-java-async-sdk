@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PrecheckForConsolidatedBillingAccountResponseBody} extends {@link TeaModel}
  *
  * <p>PrecheckForConsolidatedBillingAccountResponseBody</p>
  */
 public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel {
-    @NameInMap("Reasons")
-    private java.util.List < Reasons> reasons;
+    @com.aliyun.core.annotation.NameInMap("Reasons")
+    private java.util.List<Reasons> reasons;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private PrecheckForConsolidatedBillingAccountResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
     /**
      * @return reasons
      */
-    public java.util.List < Reasons> getReasons() {
+    public java.util.List<Reasons> getReasons() {
         return this.reasons;
     }
 
@@ -57,20 +62,23 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List < Reasons> reasons; 
+        private java.util.List<Reasons> reasons; 
         private String requestId; 
         private Boolean result; 
 
         /**
-         * The cause of the check failure.
+         * <p>The cause of the check failure.</p>
          */
-        public Builder reasons(java.util.List < Reasons> reasons) {
+        public Builder reasons(java.util.List<Reasons> reasons) {
             this.reasons = reasons;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E6B6CA8-9E7A-521F-A743-AA582714727E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +86,14 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
         }
 
         /**
-         * Indicates whether the check was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the check was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -95,11 +106,17 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link PrecheckForConsolidatedBillingAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>PrecheckForConsolidatedBillingAccountResponseBody</p>
+     */
     public static class Reasons extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Reasons(Builder builder) {
@@ -134,7 +151,10 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
             private String message; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PaymentAccountEnterpriseInvoiceError</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -142,7 +162,10 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No enterprise invoice header information is set for the payment account.</p>
              */
             public Builder message(String message) {
                 this.message = message;

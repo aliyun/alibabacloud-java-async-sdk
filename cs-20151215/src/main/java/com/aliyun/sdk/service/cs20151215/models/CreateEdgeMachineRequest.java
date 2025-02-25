@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEdgeMachineRequest} extends {@link RequestModel}
  *
  * <p>CreateEdgeMachineRequest</p>
  */
 public class CreateEdgeMachineRequest extends Request {
-    @Body
-    @NameInMap("hostname")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("hostname")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hostname;
 
-    @Body
-    @NameInMap("model")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("model")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String model;
 
-    @Body
-    @NameInMap("sn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sn;
 
     private CreateEdgeMachineRequest(Builder builder) {
@@ -85,10 +90,14 @@ public class CreateEdgeMachineRequest extends Request {
         } 
 
         /**
-         * The `hostname` of the cloud-native box.
-         * <p>
+         * <p>The <code>hostname</code> of the cloud-native box.</p>
+         * <blockquote>
+         * <p> After the cloud-native box is activated, the <code>hostname</code> is automatically modified. The <code>hostname</code> is prefixed with the model and the prefix is followed by a random string.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  After the cloud-native box is activated, the `hostname` is automatically modified. The `hostname` is prefixed with the model and the prefix is followed by a random string.
+         * <strong>example:</strong>
+         * <p>ACK-B-B010-****</p>
          */
         public Builder hostname(String hostname) {
             this.putBodyParameter("hostname", hostname);
@@ -97,7 +106,11 @@ public class CreateEdgeMachineRequest extends Request {
         }
 
         /**
-         * The model of the cloud-native box.
+         * <p>The model of the cloud-native box.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-V-B010</p>
          */
         public Builder model(String model) {
             this.putBodyParameter("model", model);
@@ -106,7 +119,11 @@ public class CreateEdgeMachineRequest extends Request {
         }
 
         /**
-         * The serial number of the cloud-native box.
+         * <p>The serial number of the cloud-native box.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q2CB5XZAFBFG****</p>
          */
         public Builder sn(String sn) {
             this.putBodyParameter("sn", sn);

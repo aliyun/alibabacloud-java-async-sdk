@@ -1,44 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSaslUserRequest} extends {@link RequestModel}
  *
  * <p>CreateSaslUserRequest</p>
  */
 public class CreateSaslUserRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mechanism")
+    private String mechanism;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private CreateSaslUserRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.mechanism = builder.mechanism;
         this.password = builder.password;
         this.regionId = builder.regionId;
         this.type = builder.type;
@@ -63,6 +73,13 @@ public class CreateSaslUserRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return mechanism
+     */
+    public String getMechanism() {
+        return this.mechanism;
     }
 
     /**
@@ -95,6 +112,7 @@ public class CreateSaslUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSaslUserRequest, Builder> {
         private String instanceId; 
+        private String mechanism; 
         private String password; 
         private String regionId; 
         private String type; 
@@ -107,6 +125,7 @@ public class CreateSaslUserRequest extends Request {
         private Builder(CreateSaslUserRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.mechanism = request.mechanism;
             this.password = request.password;
             this.regionId = request.regionId;
             this.type = request.type;
@@ -114,7 +133,11 @@ public class CreateSaslUserRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-v0h1cng0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +146,30 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * The password of the SASL user.
+         * <p>The encryption method. Valid values:</p>
+         * <ul>
+         * <li>SCRAM-SHA-512 (default)</li>
+         * <li>SCRAM-SHA-256</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for ApsaraMQ for Kafka serverless instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SCRAM-SHA-256</p>
+         */
+        public Builder mechanism(String mechanism) {
+            this.putQueryParameter("Mechanism", mechanism);
+            this.mechanism = mechanism;
+            return this;
+        }
+
+        /**
+         * <p>The password of the SASL user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -132,7 +178,11 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,13 +191,16 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * The SASL mechanism. Valid values:
-         * <p>
+         * <p>The type of the Simple Authentication and Security Layer (SASL) user. Valid values:</p>
+         * <ul>
+         * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
+         * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
+         * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
+         * </ul>
+         * <p>Default value: <strong>plain</strong>.</p>
          * 
-         * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
-         * *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
-         * 
-         * Default value: **plain**.
+         * <strong>example:</strong>
+         * <p>plain</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -156,7 +209,11 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * The name of the SASL user.
+         * <p>The name of the SASL user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test***</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

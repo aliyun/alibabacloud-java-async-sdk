@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClientConfSetupRequest} extends {@link RequestModel}
  *
  * <p>ModifyClientConfSetupRequest</p>
  */
 public class ModifyClientConfSetupRequest extends Request {
-    @Query
-    @NameInMap("StrategyConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyConfig")
     private String strategyConfig;
 
-    @Query
-    @NameInMap("StrategyTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyTag;
 
-    @Query
-    @NameInMap("StrategyTagValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyTagValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyTagValue;
 
     private ModifyClientConfSetupRequest(Builder builder) {
@@ -84,11 +89,16 @@ public class ModifyClientConfSetupRequest extends Request {
         } 
 
         /**
-         * The configurations of the Security Center agent.
-         * <p>
+         * <p>The configurations of the Security Center agent.</p>
+         * <ul>
+         * <li>cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server</li>
+         * <li>mem: the maximum memory usage that can be occupied by the Security Center agent on the server</li>
+         * </ul>
          * 
-         * *   cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server
-         * *   mem: the maximum memory usage that can be occupied by the Security Center agent on the server
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;cpu&quot;: &quot;20&quot;
+         * }</p>
          */
         public Builder strategyConfig(String strategyConfig) {
             this.putQueryParameter("StrategyConfig", strategyConfig);
@@ -97,7 +107,11 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * The type of the tag.
+         * <p>The type of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>machineResource</p>
          */
         public Builder strategyTag(String strategyTag) {
             this.putQueryParameter("StrategyTag", strategyTag);
@@ -106,12 +120,16 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * The value of the tag. Valid values:
-         * <p>
+         * <p>The value of the tag. Valid values:</p>
+         * <ul>
+         * <li>major</li>
+         * <li>advanced</li>
+         * <li>basic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   major
-         * *   advanced
-         * *   basic
+         * <strong>example:</strong>
+         * <p>major</p>
          */
         public Builder strategyTagValue(String strategyTagValue) {
             this.putQueryParameter("StrategyTagValue", strategyTagValue);

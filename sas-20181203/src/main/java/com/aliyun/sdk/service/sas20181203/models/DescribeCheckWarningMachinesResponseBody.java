@@ -1,29 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningMachinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckWarningMachinesResponseBody</p>
  */
 public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Machines")
-    private java.util.List < Machines> machines;
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    private Integer currentPage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("Machines")
+    private java.util.List<Machines> machines;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCheckWarningMachinesResponseBody(Builder builder) {
         this.count = builder.count;
+        this.currentPage = builder.currentPage;
         this.machines = builder.machines;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
     }
 
@@ -43,10 +56,24 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return machines
      */
-    public java.util.List < Machines> getMachines() {
+    public java.util.List<Machines> getMachines() {
         return this.machines;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -58,11 +85,16 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Machines> machines; 
+        private Integer currentPage; 
+        private java.util.List<Machines> machines; 
+        private Integer pageSize; 
         private String requestId; 
 
         /**
-         * The number of the servers on which the same risk item is detected.
+         * <p>The number of the servers on which the same risk item is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,15 +102,40 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The servers on which the same risk item is detected.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
-        public Builder machines(java.util.List < Machines> machines) {
+        public Builder currentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * <p>The servers on which the same risk item is detected.</p>
+         */
+        public Builder machines(java.util.List<Machines> machines) {
             this.machines = machines;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B3D989EB-2E59-584C-8438-5DFAA34A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,26 +148,32 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckWarningMachinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckWarningMachinesResponseBody</p>
+     */
     public static class Machines extends TeaModel {
-        @NameInMap("Bind")
+        @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Machines(Builder builder) {
@@ -190,11 +253,14 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Indicates whether Security Center is authorized to protect the asset. Valid values:
-             * <p>
+             * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -202,7 +268,10 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1dp42hgn1xcq8l****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +279,10 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the server.
+             * <p>The instance name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win-oracl****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -218,7 +290,10 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -226,7 +301,10 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -234,7 +312,10 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server resides.
+             * <p>The ID of the region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -242,7 +323,10 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

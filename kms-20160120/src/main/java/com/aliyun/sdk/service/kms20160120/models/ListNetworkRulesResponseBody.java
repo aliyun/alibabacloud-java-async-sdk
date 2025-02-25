@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNetworkRulesResponseBody</p>
  */
 public class ListNetworkRulesResponseBody extends TeaModel {
-    @NameInMap("NetworkRules")
+    @com.aliyun.core.annotation.NameInMap("NetworkRules")
     private NetworkRules networkRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListNetworkRulesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NetworkRules.
+         * A list of access control rules.
          */
         public Builder networkRules(NetworkRules networkRules) {
             this.networkRules = networkRules;
@@ -94,7 +93,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +101,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +109,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,10 +131,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
     } 
 
     public static class NetworkRule extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NetworkRule(Builder builder) {
@@ -170,7 +169,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The name of the access control rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +177,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -193,7 +192,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
 
     }
     public static class NetworkRules extends TeaModel {
-        @NameInMap("NetworkRule")
+        @com.aliyun.core.annotation.NameInMap("NetworkRule")
         private java.util.List < NetworkRule> networkRule;
 
         private NetworkRules(Builder builder) {

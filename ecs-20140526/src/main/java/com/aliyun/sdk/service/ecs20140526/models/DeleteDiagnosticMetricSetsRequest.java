@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDiagnosticMetricSetsRequest} extends {@link RequestModel}
  *
  * <p>DeleteDiagnosticMetricSetsRequest</p>
  */
 public class DeleteDiagnosticMetricSetsRequest extends Request {
-    @Query
-    @NameInMap("MetricSetIds")
-    @Validation(required = true)
-    private java.util.List < String > metricSetIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricSetIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> metricSetIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteDiagnosticMetricSetsRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
     /**
      * @return metricSetIds
      */
-    public java.util.List < String > getMetricSetIds() {
+    public java.util.List<String> getMetricSetIds() {
         return this.metricSetIds;
     }
 
@@ -56,7 +61,7 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDiagnosticMetricSetsRequest, Builder> {
-        private java.util.List < String > metricSetIds; 
+        private java.util.List<String> metricSetIds; 
         private String regionId; 
 
         private Builder() {
@@ -70,16 +75,21 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         } 
 
         /**
-         * The ID of diagnostic metric set.
+         * <p>The IDs of diagnostic metric sets. You can specify up to 10 set IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder metricSetIds(java.util.List < String > metricSetIds) {
+        public Builder metricSetIds(java.util.List<String> metricSetIds) {
             this.putQueryParameter("MetricSetIds", metricSetIds);
             this.metricSetIds = metricSetIds;
             return this;
         }
 
         /**
-         * The IDs of diagnostic metric sets. You can specify up to 10 set IDs.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

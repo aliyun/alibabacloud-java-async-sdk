@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadRecordsResponseBody</p>
  */
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDownloadRecordsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the download tasks.
+         * <p>Details about the download tasks.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>987F51BE-C4CB-332A-B159-63CE87******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +74,26 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadRecordsResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("DownloadId")
+        @com.aliyun.core.annotation.NameInMap("DownloadId")
         private Long downloadId;
 
-        @NameInMap("ExceptionMsg")
+        @com.aliyun.core.annotation.NameInMap("ExceptionMsg")
         private String exceptionMsg;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Records(Builder builder) {
@@ -146,7 +155,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The ID of the download task.
+             * <p>The ID of the download task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder downloadId(Long downloadId) {
                 this.downloadId = downloadId;
@@ -154,7 +166,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the download task has failed.
+             * <p>The error message returned when the download task has failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The query result is empty.</p>
              */
             public Builder exceptionMsg(String exceptionMsg) {
                 this.exceptionMsg = exceptionMsg;
@@ -162,7 +177,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the downloaded file.
+             * <p>The name of the downloaded file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20210806094635-20210806095135</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -170,12 +188,15 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the download task.
-             * <p>
+             * <p>The status of the download task.</p>
+             * <ul>
+             * <li><strong>running</strong>: The download task is currently in progress.</li>
+             * <li><strong>finished</strong>: The download task is complete.</li>
+             * <li><strong>failed</strong>: The download task has failed.</li>
+             * </ul>
              * 
-             * *   **running**: The download task is currently in progress.
-             * *   **finished**: The download task is complete.
-             * *   **failed**: The download task has failed.
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -183,7 +204,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL of the file.
+             * <p>The download URL of the file.</p>
              */
             public Builder url(String url) {
                 this.url = url;

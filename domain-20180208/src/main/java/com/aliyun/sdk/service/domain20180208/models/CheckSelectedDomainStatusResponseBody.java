@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSelectedDomainStatusResponseBody} extends {@link TeaModel}
  *
  * <p>CheckSelectedDomainStatusResponseBody</p>
  */
 public class CheckSelectedDomainStatusResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckSelectedDomainStatusResponseBody(Builder builder) {
@@ -131,26 +136,36 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckSelectedDomainStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckSelectedDomainStatusResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("DeadDate")
+        @com.aliyun.core.annotation.NameInMap("DeadDate")
         private Long deadDate;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Premium")
+        private Boolean premium;
+
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Double price;
 
-        @NameInMap("RegDate")
+        @com.aliyun.core.annotation.NameInMap("RegDate")
         private Long regDate;
 
         private Module(Builder builder) {
             this.deadDate = builder.deadDate;
             this.domain = builder.domain;
             this.endTime = builder.endTime;
+            this.premium = builder.premium;
             this.price = builder.price;
             this.regDate = builder.regDate;
         }
@@ -185,6 +200,13 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return premium
+         */
+        public Boolean getPremium() {
+            return this.premium;
+        }
+
+        /**
          * @return price
          */
         public Double getPrice() {
@@ -202,6 +224,7 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
             private Long deadDate; 
             private String domain; 
             private Long endTime; 
+            private Boolean premium; 
             private Double price; 
             private Long regDate; 
 
@@ -226,6 +249,14 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Premium.
+             */
+            public Builder premium(Boolean premium) {
+                this.premium = premium;
                 return this;
             }
 

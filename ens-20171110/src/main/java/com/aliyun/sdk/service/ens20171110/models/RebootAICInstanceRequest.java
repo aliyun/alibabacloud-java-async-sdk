@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootAICInstanceRequest} extends {@link RequestModel}
  *
  * <p>RebootAICInstanceRequest</p>
  */
 public class RebootAICInstanceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("ServerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerId")
     private String serverId;
 
     private RebootAICInstanceRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class RebootAICInstanceRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -67,7 +72,7 @@ public class RebootAICInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<RebootAICInstanceRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String serverId; 
 
         private Builder() {
@@ -82,7 +87,10 @@ public class RebootAICInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-instance****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,9 +99,9 @@ public class RebootAICInstanceRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the AIC instance groups.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -101,7 +109,10 @@ public class RebootAICInstanceRequest extends Request {
         }
 
         /**
-         * ServerId.
+         * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-instance****</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);

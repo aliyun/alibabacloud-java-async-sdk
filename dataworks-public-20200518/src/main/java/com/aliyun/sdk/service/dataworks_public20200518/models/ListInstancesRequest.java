@@ -1,83 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BeginBizdate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BeginBizdate")
     private String beginBizdate;
 
-    @Body
-    @NameInMap("BizName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizName")
     private String bizName;
 
-    @Body
-    @NameInMap("Bizdate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizdate")
     private String bizdate;
 
-    @Body
-    @NameInMap("DagId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DagId")
     private Long dagId;
 
-    @Body
-    @NameInMap("EndBizdate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndBizdate")
     private String endBizdate;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private Long nodeId;
 
-    @Body
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
-    @Body
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProgramType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProgramType")
     private String programType;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListInstancesRequest(Builder builder) {
@@ -268,7 +272,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -277,7 +281,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The parameters related to the node.
+         * <p>The parameters related to the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-02 00:00:00</p>
          */
         public Builder beginBizdate(String beginBizdate) {
             this.putBodyParameter("BeginBizdate", beginBizdate);
@@ -286,7 +293,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_bizName</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -295,7 +305,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-02 00:00:00</p>
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -304,7 +317,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+         * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         public Builder dagId(Long dagId) {
             this.putBodyParameter("DagId", dagId);
@@ -313,7 +329,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the workflow.
+         * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-03 00:00:00</p>
          */
         public Builder endBizdate(String endBizdate) {
             this.putBodyParameter("EndBizdate", endBizdate);
@@ -322,11 +341,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:
-         * <p>
+         * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</p>
+         * <ul>
+         * <li>0: The instance is associated with a monitoring rule in Data Quality.</li>
+         * <li>1: The instance is not associated with a monitoring rule in Data Quality.</li>
+         * </ul>
          * 
-         * *   0: The instance is associated with a monitoring rule in Data Quality.
-         * *   1: The instance is not associated with a monitoring rule in Data Quality.
+         * <strong>example:</strong>
+         * <p>100000000000</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -335,7 +357,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Indicates whether the node can be rerun.
+         * <p>Indicates whether the node can be rerun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openmr_8****</p>
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -344,7 +369,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting rule of the instances to be returned. Valid values:</p>
+         * <ul>
+         * <li>CREATE_TIME_DESC: The instances are sorted in descending order of their creation time.</li>
+         * <li>INSTANCE_ID_DESC (default): The instances are sorted in descending order of their IDs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE_ID_DESC</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("OrderBy", orderBy);
@@ -353,7 +385,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The connection string.
+         * <p>The connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>193379****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -362,7 +397,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.
+         * <p>The operation that you want to perform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -371,7 +409,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the node.
+         * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -380,7 +421,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         public Builder programType(String programType) {
             this.putBodyParameter("ProgramType", programType);
@@ -389,7 +433,11 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The time when the node was last modified.
+         * <p>The environment in which the node runs. Valid values: DEV and PROD.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -398,7 +446,11 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the baseline.
+         * <p>The ID of the baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -407,7 +459,20 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The time when the instance started to wait to be scheduled.
+         * <p>The status of the node. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN: The node is not run.</li>
+         * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
+         * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
+         * <li>RUNNING: The node is running.</li>
+         * <li>CHECKING: Data quality is being checked for the node.</li>
+         * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
+         * <li>FAILURE: The node fails to run.</li>
+         * <li>SUCCESS: The node is successfully run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_RUN</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

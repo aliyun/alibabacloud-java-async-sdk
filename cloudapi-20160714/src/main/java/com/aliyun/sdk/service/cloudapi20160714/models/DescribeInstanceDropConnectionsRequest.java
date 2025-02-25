@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceDropConnectionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceDropConnectionsRequest</p>
  */
 public class DescribeInstanceDropConnectionsRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SbcName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SbcName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sbcName;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeInstanceDropConnectionsRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         } 
 
         /**
-         * The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-31T07:00:09Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +132,11 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated instance.
+         * <p>The ID of the dedicated instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cn-n6w1v1234501</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,12 +145,16 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         }
 
         /**
-         * The statistical metric. Valid values:
-         * <p>
+         * <p>The statistical metric. Valid values:</p>
+         * <ul>
+         * <li>Maximum</li>
+         * <li>Minimum</li>
+         * <li>Average</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Maximum
-         * *   Minimum
-         * *   Average
+         * <strong>example:</strong>
+         * <p>Maximum</p>
          */
         public Builder sbcName(String sbcName) {
             this.putQueryParameter("SbcName", sbcName);
@@ -155,7 +172,11 @@ public class DescribeInstanceDropConnectionsRequest extends Request {
         }
 
         /**
-         * The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+         * <p>The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-31T06:00:09Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

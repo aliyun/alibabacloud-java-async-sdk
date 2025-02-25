@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMetricRequest</p>
  */
 public class QueryMetricRequest extends Request {
-    @Query
-    @NameInMap("Bizid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bizid")
     private String bizid;
 
-    @Body
-    @NameInMap("InnerIp")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InnerIp")
     private String innerIp;
 
-    @Body
-    @NameInMap("Metric")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metric")
     private String metric;
 
-    @Body
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Body
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @Body
-    @NameInMap("TimeArea")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeArea")
     private String timeArea;
 
     private QueryMetricRequest(Builder builder) {

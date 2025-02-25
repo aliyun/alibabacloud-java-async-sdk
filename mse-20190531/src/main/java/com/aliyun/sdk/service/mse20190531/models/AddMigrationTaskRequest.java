@@ -1,55 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMigrationTaskRequest} extends {@link RequestModel}
  *
  * <p>AddMigrationTaskRequest</p>
  */
 public class AddMigrationTaskRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @Query
-    @NameInMap("OriginInstanceAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginInstanceAddress")
     private String originInstanceAddress;
 
-    @Query
-    @NameInMap("OriginInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginInstanceName")
     private String originInstanceName;
 
-    @Query
-    @NameInMap("OriginInstanceNamespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginInstanceNamespace")
     private String originInstanceNamespace;
 
-    @Query
-    @NameInMap("ProjectDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectDesc")
     private String projectDesc;
 
-    @Query
-    @NameInMap("RequestPars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPars")
     private String requestPars;
 
-    @Query
-    @NameInMap("TargetClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncType")
+    private String syncType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetClusterName")
     private String targetClusterName;
 
-    @Query
-    @NameInMap("TargetClusterUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetClusterUrl")
     private String targetClusterUrl;
 
-    @Query
-    @NameInMap("TargetInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
     private String targetInstanceId;
 
     private AddMigrationTaskRequest(Builder builder) {
@@ -61,6 +70,7 @@ public class AddMigrationTaskRequest extends Request {
         this.originInstanceNamespace = builder.originInstanceNamespace;
         this.projectDesc = builder.projectDesc;
         this.requestPars = builder.requestPars;
+        this.syncType = builder.syncType;
         this.targetClusterName = builder.targetClusterName;
         this.targetClusterUrl = builder.targetClusterUrl;
         this.targetInstanceId = builder.targetInstanceId;
@@ -129,6 +139,13 @@ public class AddMigrationTaskRequest extends Request {
     }
 
     /**
+     * @return syncType
+     */
+    public String getSyncType() {
+        return this.syncType;
+    }
+
+    /**
      * @return targetClusterName
      */
     public String getTargetClusterName() {
@@ -157,6 +174,7 @@ public class AddMigrationTaskRequest extends Request {
         private String originInstanceNamespace; 
         private String projectDesc; 
         private String requestPars; 
+        private String syncType; 
         private String targetClusterName; 
         private String targetClusterUrl; 
         private String targetInstanceId; 
@@ -174,17 +192,21 @@ public class AddMigrationTaskRequest extends Request {
             this.originInstanceNamespace = request.originInstanceNamespace;
             this.projectDesc = request.projectDesc;
             this.requestPars = request.requestPars;
+            this.syncType = request.syncType;
             this.targetClusterName = request.targetClusterName;
             this.targetClusterUrl = request.targetClusterUrl;
             this.targetInstanceId = request.targetInstanceId;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -193,12 +215,15 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The type of the instance. Valid values:
-         * <p>
+         * <p>The type of the instance. Valid values:</p>
+         * <ul>
+         * <li>Nacos-Ans</li>
+         * <li>ZooKeeper</li>
+         * <li>Eureka</li>
+         * </ul>
          * 
-         * *   Nacos-Ans
-         * *   ZooKeeper
-         * *   Eureka
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -207,7 +232,10 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The endpoint of the source instance node.
+         * <p>The endpoint of the source instance node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1:8848</p>
          */
         public Builder originInstanceAddress(String originInstanceAddress) {
             this.putQueryParameter("OriginInstanceAddress", originInstanceAddress);
@@ -216,7 +244,10 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the source instance.
+         * <p>The name of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Source instance</p>
          */
         public Builder originInstanceName(String originInstanceName) {
             this.putQueryParameter("OriginInstanceName", originInstanceName);
@@ -225,7 +256,10 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.
+         * <p>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namesapceId1,namesapceId2</p>
          */
         public Builder originInstanceNamespace(String originInstanceNamespace) {
             this.putQueryParameter("OriginInstanceNamespace", originInstanceNamespace);
@@ -234,7 +268,10 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description.</p>
          */
         public Builder projectDesc(String projectDesc) {
             this.putQueryParameter("ProjectDesc", projectDesc);
@@ -243,7 +280,10 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * <p>The extended request parameters in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -252,7 +292,19 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The name of the destination instance.
+         * SyncType.
+         */
+        public Builder syncType(String syncType) {
+            this.putQueryParameter("SyncType", syncType);
+            this.syncType = syncType;
+            return this;
+        }
+
+        /**
+         * <p>The name of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Destination instance</p>
          */
         public Builder targetClusterName(String targetClusterName) {
             this.putQueryParameter("TargetClusterName", targetClusterName);
@@ -261,7 +313,10 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The URL of the destination instance.
+         * <p>The URL of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-66*****-nacos-ans.mse.aliyuncs.com:8848</p>
          */
         public Builder targetClusterUrl(String targetClusterUrl) {
             this.putQueryParameter("TargetClusterUrl", targetClusterUrl);
@@ -270,7 +325,10 @@ public class AddMigrationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the destination instance.
+         * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-ud82*****</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putQueryParameter("TargetInstanceId", targetInstanceId);

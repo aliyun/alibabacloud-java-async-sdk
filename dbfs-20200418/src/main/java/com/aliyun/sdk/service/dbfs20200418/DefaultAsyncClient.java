@@ -77,6 +77,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddTagsBatch  AddTagsBatchRequest
+     * @return AddTagsBatchResponse
+     */
     @Override
     public CompletableFuture<AddTagsBatchResponse> addTagsBatch(AddTagsBatchRequest request) {
         try {
@@ -91,6 +95,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyAutoSnapshotPolicy  ApplyAutoSnapshotPolicyRequest
+     * @return ApplyAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<ApplyAutoSnapshotPolicyResponse> applyAutoSnapshotPolicy(ApplyAutoSnapshotPolicyRequest request) {
         try {
@@ -105,6 +113,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AttachDbfs  AttachDbfsRequest
+     * @return AttachDbfsResponse
+     */
     @Override
     public CompletableFuture<AttachDbfsResponse> attachDbfs(AttachDbfsRequest request) {
         try {
@@ -119,6 +131,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelAutoSnapshotPolicy  CancelAutoSnapshotPolicyRequest
+     * @return CancelAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<CancelAutoSnapshotPolicyResponse> cancelAutoSnapshotPolicy(CancelAutoSnapshotPolicyRequest request) {
         try {
@@ -133,6 +149,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAutoSnapshotPolicy  CreateAutoSnapshotPolicyRequest
+     * @return CreateAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateAutoSnapshotPolicyResponse> createAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request) {
         try {
@@ -147,6 +167,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDbfs  CreateDbfsRequest
+     * @return CreateDbfsResponse
+     */
     @Override
     public CompletableFuture<CreateDbfsResponse> createDbfs(CreateDbfsRequest request) {
         try {
@@ -161,6 +185,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request) {
         try {
@@ -175,6 +203,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
     @Override
     public CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request) {
         try {
@@ -189,6 +221,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAutoSnapshotPolicy  DeleteAutoSnapshotPolicyRequest
+     * @return DeleteAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteAutoSnapshotPolicyResponse> deleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request) {
         try {
@@ -203,6 +239,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDbfs  DeleteDbfsRequest
+     * @return DeleteDbfsResponse
+     */
     @Override
     public CompletableFuture<DeleteDbfsResponse> deleteDbfs(DeleteDbfsRequest request) {
         try {
@@ -217,6 +257,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
+     */
     @Override
     public CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request) {
         try {
@@ -231,6 +275,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTagsBatch  DeleteTagsBatchRequest
+     * @return DeleteTagsBatchResponse
+     */
     @Override
     public CompletableFuture<DeleteTagsBatchResponse> deleteTagsBatch(DeleteTagsBatchRequest request) {
         try {
@@ -245,6 +293,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDbfsSpecifications  DescribeDbfsSpecificationsRequest
+     * @return DescribeDbfsSpecificationsResponse
+     */
     @Override
     public CompletableFuture<DescribeDbfsSpecificationsResponse> describeDbfsSpecifications(DescribeDbfsSpecificationsRequest request) {
         try {
@@ -259,6 +311,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceTypes  DescribeInstanceTypesRequest
+     * @return DescribeInstanceTypesResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceTypesResponse> describeInstanceTypes(DescribeInstanceTypesRequest request) {
         try {
@@ -273,6 +329,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetachDbfs  DetachDbfsRequest
+     * @return DetachDbfsResponse
+     */
     @Override
     public CompletableFuture<DetachDbfsResponse> detachDbfs(DetachDbfsRequest request) {
         try {
@@ -287,6 +347,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAutoSnapshotPolicy  GetAutoSnapshotPolicyRequest
+     * @return GetAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<GetAutoSnapshotPolicyResponse> getAutoSnapshotPolicy(GetAutoSnapshotPolicyRequest request) {
         try {
@@ -301,6 +365,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDbfs  GetDbfsRequest
+     * @return GetDbfsResponse
+     */
     @Override
     public CompletableFuture<GetDbfsResponse> getDbfs(GetDbfsRequest request) {
         try {
@@ -315,6 +383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceLinkedRole  GetServiceLinkedRoleRequest
+     * @return GetServiceLinkedRoleResponse
+     */
     @Override
     public CompletableFuture<GetServiceLinkedRoleResponse> getServiceLinkedRole(GetServiceLinkedRoleRequest request) {
         try {
@@ -329,6 +401,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSnapshotLink  GetSnapshotLinkRequest
+     * @return GetSnapshotLinkResponse
+     */
     @Override
     public CompletableFuture<GetSnapshotLinkResponse> getSnapshotLink(GetSnapshotLinkRequest request) {
         try {
@@ -343,6 +419,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAutoSnapshotPolicies  ListAutoSnapshotPoliciesRequest
+     * @return ListAutoSnapshotPoliciesResponse
+     */
     @Override
     public CompletableFuture<ListAutoSnapshotPoliciesResponse> listAutoSnapshotPolicies(ListAutoSnapshotPoliciesRequest request) {
         try {
@@ -357,6 +437,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAutoSnapshotPolicyAppliedDbfs  ListAutoSnapshotPolicyAppliedDbfsRequest
+     * @return ListAutoSnapshotPolicyAppliedDbfsResponse
+     */
     @Override
     public CompletableFuture<ListAutoSnapshotPolicyAppliedDbfsResponse> listAutoSnapshotPolicyAppliedDbfs(ListAutoSnapshotPolicyAppliedDbfsRequest request) {
         try {
@@ -371,6 +455,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAutoSnapshotPolicyUnappliedDbfs  ListAutoSnapshotPolicyUnappliedDbfsRequest
+     * @return ListAutoSnapshotPolicyUnappliedDbfsResponse
+     */
     @Override
     public CompletableFuture<ListAutoSnapshotPolicyUnappliedDbfsResponse> listAutoSnapshotPolicyUnappliedDbfs(ListAutoSnapshotPolicyUnappliedDbfsRequest request) {
         try {
@@ -385,6 +473,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDbfs  ListDbfsRequest
+     * @return ListDbfsResponse
+     */
     @Override
     public CompletableFuture<ListDbfsResponse> listDbfs(ListDbfsRequest request) {
         try {
@@ -399,6 +491,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDbfsAttachableEcsInstances  ListDbfsAttachableEcsInstancesRequest
+     * @return ListDbfsAttachableEcsInstancesResponse
+     */
     @Override
     public CompletableFuture<ListDbfsAttachableEcsInstancesResponse> listDbfsAttachableEcsInstances(ListDbfsAttachableEcsInstancesRequest request) {
         try {
@@ -413,6 +509,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDbfsAttachedEcsInstances  ListDbfsAttachedEcsInstancesRequest
+     * @return ListDbfsAttachedEcsInstancesResponse
+     */
     @Override
     public CompletableFuture<ListDbfsAttachedEcsInstancesResponse> listDbfsAttachedEcsInstances(ListDbfsAttachedEcsInstancesRequest request) {
         try {
@@ -427,6 +527,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSnapshot  ListSnapshotRequest
+     * @return ListSnapshotResponse
+     */
     @Override
     public CompletableFuture<ListSnapshotResponse> listSnapshot(ListSnapshotRequest request) {
         try {
@@ -441,6 +545,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSnapshotLinks  ListSnapshotLinksRequest
+     * @return ListSnapshotLinksResponse
+     */
     @Override
     public CompletableFuture<ListSnapshotLinksResponse> listSnapshotLinks(ListSnapshotLinksRequest request) {
         try {
@@ -455,6 +563,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagKeys  ListTagKeysRequest
+     * @return ListTagKeysResponse
+     */
     @Override
     public CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request) {
         try {
@@ -469,6 +581,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagValues  ListTagValuesRequest
+     * @return ListTagValuesResponse
+     */
     @Override
     public CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request) {
         try {
@@ -483,6 +599,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAutoSnapshotPolicy  ModifyAutoSnapshotPolicyRequest
+     * @return ModifyAutoSnapshotPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyAutoSnapshotPolicyResponse> modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request) {
         try {
@@ -497,6 +617,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySnapshotAttribute  ModifySnapshotAttributeRequest
+     * @return ModifySnapshotAttributeResponse
+     */
     @Override
     public CompletableFuture<ModifySnapshotAttributeResponse> modifySnapshotAttribute(ModifySnapshotAttributeRequest request) {
         try {
@@ -511,6 +635,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenameDbfs  RenameDbfsRequest
+     * @return RenameDbfsResponse
+     */
     @Override
     public CompletableFuture<RenameDbfsResponse> renameDbfs(RenameDbfsRequest request) {
         try {
@@ -525,6 +653,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResizeDbfs  ResizeDbfsRequest
+     * @return ResizeDbfsResponse
+     */
     @Override
     public CompletableFuture<ResizeDbfsResponse> resizeDbfs(ResizeDbfsRequest request) {
         try {
@@ -539,6 +671,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagDbfs  TagDbfsRequest
+     * @return TagDbfsResponse
+     */
     @Override
     public CompletableFuture<TagDbfsResponse> tagDbfs(TagDbfsRequest request) {
         try {
@@ -553,6 +689,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDbfs  UpdateDbfsRequest
+     * @return UpdateDbfsResponse
+     */
     @Override
     public CompletableFuture<UpdateDbfsResponse> updateDbfs(UpdateDbfsRequest request) {
         try {

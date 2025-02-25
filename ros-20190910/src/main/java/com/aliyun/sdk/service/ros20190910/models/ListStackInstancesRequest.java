@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStackInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListStackInstancesRequest</p>
  */
 public class ListStackInstancesRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackGroupName;
 
-    @Query
-    @NameInMap("StackInstanceAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackInstanceAccountId")
     private String stackInstanceAccountId;
 
-    @Query
-    @NameInMap("StackInstanceRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackInstanceRegionId")
     private String stackInstanceRegionId;
 
     private ListStackInstancesRequest(Builder builder) {
@@ -126,11 +126,14 @@ public class ListStackInstancesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,11 +142,14 @@ public class ListStackInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 50.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 50.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +158,11 @@ public class ListStackInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,9 +171,11 @@ public class ListStackInstancesRequest extends Request {
         }
 
         /**
-         * The name of the stack group. The name must be unique within a region.\
-         * <p>
-         * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or letter.
+         * <p>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         public Builder stackGroupName(String stackGroupName) {
             this.putQueryParameter("StackGroupName", stackGroupName);
@@ -172,13 +184,17 @@ public class ListStackInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the destination account to which the stack belongs.
-         * <p>
+         * <p>The ID of the destination account to which the stack belongs.</p>
+         * <ul>
+         * <li>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</li>
+         * <li>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about the destination account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+         * </blockquote>
          * 
-         * *   If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.
-         * *   If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.
-         * 
-         * > For more information about the destination account, see [Overview](~~154578~~).
+         * <strong>example:</strong>
+         * <p>156552876021****</p>
          */
         public Builder stackInstanceAccountId(String stackInstanceAccountId) {
             this.putQueryParameter("StackInstanceAccountId", stackInstanceAccountId);
@@ -187,7 +203,10 @@ public class ListStackInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the stack.
+         * <p>The region ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder stackInstanceRegionId(String stackInstanceRegionId) {
             this.putQueryParameter("StackInstanceRegionId", stackInstanceRegionId);

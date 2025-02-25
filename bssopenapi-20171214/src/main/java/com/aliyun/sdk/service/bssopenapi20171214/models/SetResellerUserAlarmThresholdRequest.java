@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetResellerUserAlarmThresholdRequest} extends {@link RequestModel}
  *
  * <p>SetResellerUserAlarmThresholdRequest</p>
  */
 public class SetResellerUserAlarmThresholdRequest extends Request {
-    @Query
-    @NameInMap("AlarmThresholds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmThresholds")
     private String alarmThresholds;
 
-    @Query
-    @NameInMap("AlarmType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alarmType;
 
-    @Query
-    @NameInMap("OwnerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ownerId;
 
     private SetResellerUserAlarmThresholdRequest(Builder builder) {
@@ -93,7 +98,10 @@ public class SetResellerUserAlarmThresholdRequest extends Request {
         }
 
         /**
-         * AlarmType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_low_balance</p>
          */
         public Builder alarmType(String alarmType) {
             this.putQueryParameter("AlarmType", alarmType);
@@ -102,7 +110,7 @@ public class SetResellerUserAlarmThresholdRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

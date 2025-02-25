@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShiftSchedulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListShiftSchedulesResponseBody</p>
  */
 public class ListShiftSchedulesResponseBody extends TeaModel {
-    @NameInMap("Paging")
+    @com.aliyun.core.annotation.NameInMap("Paging")
     private Paging paging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListShiftSchedulesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The page number of the returned page. Minimum value:1. Maximum value: 100.
+         * <p>The pagination data.</p>
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -58,7 +63,10 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination data.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListShiftSchedulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListShiftSchedulesResponseBody</p>
+     */
     public static class ShiftSchedules extends TeaModel {
-        @NameInMap("ShiftScheduleIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ShiftScheduleIdentifier")
         private String shiftScheduleIdentifier;
 
-        @NameInMap("ShiftScheduleName")
+        @com.aliyun.core.annotation.NameInMap("ShiftScheduleName")
         private String shiftScheduleName;
 
         private ShiftSchedules(Builder builder) {
@@ -110,7 +124,10 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             private String shiftScheduleName; 
 
             /**
-             * The name of the shift schedule.
+             * <p>The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ab6456ada634b2f938ee******9b45b</p>
              */
             public Builder shiftScheduleIdentifier(String shiftScheduleIdentifier) {
                 this.shiftScheduleIdentifier = shiftScheduleIdentifier;
@@ -118,7 +135,10 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * ShiftScheduleName.
+             * <p>The name of the shift schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Duty table name</p>
              */
             public Builder shiftScheduleName(String shiftScheduleName) {
                 this.shiftScheduleName = shiftScheduleName;
@@ -132,17 +152,23 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListShiftSchedulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListShiftSchedulesResponseBody</p>
+     */
     public static class Paging extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ShiftSchedules")
-        private java.util.List < ShiftSchedules> shiftSchedules;
+        @com.aliyun.core.annotation.NameInMap("ShiftSchedules")
+        private java.util.List<ShiftSchedules> shiftSchedules;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Paging(Builder builder) {
@@ -177,7 +203,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         /**
          * @return shiftSchedules
          */
-        public java.util.List < ShiftSchedules> getShiftSchedules() {
+        public java.util.List<ShiftSchedules> getShiftSchedules() {
             return this.shiftSchedules;
         }
 
@@ -191,11 +217,14 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < ShiftSchedules> shiftSchedules; 
+            private java.util.List<ShiftSchedules> shiftSchedules; 
             private Integer totalCount; 
 
             /**
-             * The number of entries returned per page.
+             * <p>The page number. Minimum value: 1. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -203,7 +232,10 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -211,15 +243,18 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.
+             * <p>The shift schedules.</p>
              */
-            public Builder shiftSchedules(java.util.List < ShiftSchedules> shiftSchedules) {
+            public Builder shiftSchedules(java.util.List<ShiftSchedules> shiftSchedules) {
                 this.shiftSchedules = shiftSchedules;
                 return this;
             }
 
             /**
-             * The shift schedules.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

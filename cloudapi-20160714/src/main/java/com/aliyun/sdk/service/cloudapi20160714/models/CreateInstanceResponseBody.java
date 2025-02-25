@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceResponseBody</p>
  */
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagStatus")
+    @com.aliyun.core.annotation.NameInMap("TagStatus")
     private Boolean tagStatus;
 
     private CreateInstanceResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Boolean tagStatus; 
 
         /**
-         * InstanceId.
+         * <p>Instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-hz-b3c5dadd5***</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +78,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TagStatus.
+         * <p>Indicates whether the tag exists. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder tagStatus(Boolean tagStatus) {
             this.tagStatus = tagStatus;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProblemsRequest</p>
  */
 public class ListProblemsRequest extends Request {
-    @Body
-    @NameInMap("affectServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("affectServiceId")
     private Long affectServiceId;
 
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("discoveryEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("discoveryEndTime")
     private String discoveryEndTime;
 
-    @Body
-    @NameInMap("discoveryStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("discoveryStartTime")
     private String discoveryStartTime;
 
-    @Body
-    @NameInMap("mainHandlerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mainHandlerId")
     private Long mainHandlerId;
 
-    @Body
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Body
-    @NameInMap("problemLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemLevel")
     private String problemLevel;
 
-    @Body
-    @NameInMap("problemStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemStatus")
     private String problemStatus;
 
-    @Body
-    @NameInMap("queryType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("queryType")
     private String queryType;
 
-    @Body
-    @NameInMap("repeaterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("repeaterId")
     private Long repeaterId;
 
-    @Body
-    @NameInMap("restoreEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("restoreEndTime")
     private String restoreEndTime;
 
-    @Body
-    @NameInMap("restoreStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("restoreStartTime")
     private String restoreStartTime;
 
-    @Body
-    @NameInMap("serviceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupId")
     private Long serviceGroupId;
 
     private ListProblemsRequest(Builder builder) {

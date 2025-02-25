@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckUsedPropertyValueResponseBody} extends {@link TeaModel}
  *
  * <p>CheckUsedPropertyValueResponseBody</p>
  */
 public class CheckUsedPropertyValueResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UseCount")
+    @com.aliyun.core.annotation.NameInMap("UseCount")
     private Long useCount;
 
     private CheckUsedPropertyValueResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
         private Long useCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
         }
 
         /**
-         * The number of convenience users that are associated with the property value.
+         * <p>The number of convenience users that are associated with the property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder useCount(Long useCount) {
             this.useCount = useCount;

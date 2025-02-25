@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResourceInstanceWorker} extends {@link TeaModel}
  *
  * <p>ResourceInstanceWorker</p>
  */
 public class ResourceInstanceWorker extends TeaModel {
-    @NameInMap("CpuLimit")
+    @com.aliyun.core.annotation.NameInMap("CpuLimit")
     private Integer cpuLimit;
 
-    @NameInMap("CpuRequest")
+    @com.aliyun.core.annotation.NameInMap("CpuRequest")
     private Integer cpuRequest;
 
-    @NameInMap("GpuLimit")
+    @com.aliyun.core.annotation.NameInMap("GpuLimit")
     private Integer gpuLimit;
 
-    @NameInMap("GpuRequest")
+    @com.aliyun.core.annotation.NameInMap("GpuRequest")
     private Integer gpuRequest;
 
-    @NameInMap("MemoryLimit")
+    @com.aliyun.core.annotation.NameInMap("MemoryLimit")
     private Integer memoryLimit;
 
-    @NameInMap("MemoryRquest")
+    @com.aliyun.core.annotation.NameInMap("MemoryRquest")
     private Integer memoryRquest;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Ready")
+    @com.aliyun.core.annotation.NameInMap("Ready")
     private Boolean ready;
 
-    @NameInMap("RestartCount")
+    @com.aliyun.core.annotation.NameInMap("RestartCount")
     private Integer restartCount;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ResourceInstanceWorker(Builder builder) {

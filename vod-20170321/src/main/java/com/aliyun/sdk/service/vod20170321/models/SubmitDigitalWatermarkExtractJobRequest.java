@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitDigitalWatermarkExtractJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitDigitalWatermarkExtractJobRequest</p>
  */
 public class SubmitDigitalWatermarkExtractJobRequest extends Request {
-    @Query
-    @NameInMap("ExtractType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtractType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String extractType;
 
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
     private SubmitDigitalWatermarkExtractJobRequest(Builder builder) {
@@ -126,11 +131,15 @@ public class SubmitDigitalWatermarkExtractJobRequest extends Request {
         } 
 
         /**
-         * The type of the digital watermark that you want to extract. Valid values:
-         * <p>
+         * <p>The type of the watermark that you want to extract. Valid values:</p>
+         * <ul>
+         * <li><strong>TraceMark</strong>: user-tracing watermark</li>
+         * <li><strong>CopyrightMark</strong>: copyright watermark</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   TraceMark: tracing watermark
-         * *   CopyrightMark: copyright watermark
+         * <strong>example:</strong>
+         * <p>TraceMark</p>
          */
         public Builder extractType(String extractType) {
             this.putQueryParameter("ExtractType", extractType);
@@ -139,7 +148,15 @@ public class SubmitDigitalWatermarkExtractJobRequest extends Request {
         }
 
         /**
-         * The ID of the video file. You can query the video ID by using the ApsaraVideo VOD console or calling the SearchMedia operation.
+         * <p>The ID of the video from which you want to extract the watermark. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+         * <li>Obtain the VideoId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0222e203cf80f9c22870a4d2c****</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

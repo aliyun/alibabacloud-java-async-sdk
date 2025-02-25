@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStrategyTemplateDetailRequest} extends {@link RequestModel}
  *
  * <p>GetStrategyTemplateDetailRequest</p>
  */
 public class GetStrategyTemplateDetailRequest extends Request {
-    @Query
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private Long strategyId;
 
     private GetStrategyTemplateDetailRequest(Builder builder) {
@@ -54,10 +59,13 @@ public class GetStrategyTemplateDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the template.
-         * <p>
+         * <p>The ID of the template.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetOpaStrategyTemplateSummary~~">GetOpaStrategyTemplateSummary</a> operation to query the IDs of templates.</p>
+         * </blockquote>
          * 
-         * >  You can call the [GetOpaStrategyTemplateSummary](~~GetOpaStrategyTemplateSummary~~) operation to query the IDs of templates.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAuthResourceRequest} extends {@link RequestModel}
  *
  * <p>AddAuthResourceRequest</p>
  */
 public class AddAuthResourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AuthId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthId")
     private Long authId;
 
-    @Query
-    @NameInMap("AuthResourceHeaderList")
-    private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthResourceHeaderList")
+    private java.util.List<AuthResourceHeaderList> authResourceHeaderList;
 
-    @Query
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private Long domainId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("IgnoreCase")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreCase")
     private Boolean ignoreCase;
 
-    @Query
-    @NameInMap("MatchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchType")
     private String matchType;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
     private AddAuthResourceRequest(Builder builder) {
@@ -86,7 +91,7 @@ public class AddAuthResourceRequest extends Request {
     /**
      * @return authResourceHeaderList
      */
-    public java.util.List < AuthResourceHeaderList> getAuthResourceHeaderList() {
+    public java.util.List<AuthResourceHeaderList> getAuthResourceHeaderList() {
         return this.authResourceHeaderList;
     }
 
@@ -128,7 +133,7 @@ public class AddAuthResourceRequest extends Request {
     public static final class Builder extends Request.Builder<AddAuthResourceRequest, Builder> {
         private String acceptLanguage; 
         private Long authId; 
-        private java.util.List < AuthResourceHeaderList> authResourceHeaderList; 
+        private java.util.List<AuthResourceHeaderList> authResourceHeaderList; 
         private Long domainId; 
         private String gatewayUniqueId; 
         private Boolean ignoreCase; 
@@ -152,11 +157,14 @@ public class AddAuthResourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -165,7 +173,10 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The ID of the authorization record.
+         * <p>The ID of the authorization record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder authId(Long authId) {
             this.putQueryParameter("AuthId", authId);
@@ -174,9 +185,9 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The authentication resource headers.
+         * <p>The authentication resource headers.</p>
          */
-        public Builder authResourceHeaderList(java.util.List < AuthResourceHeaderList> authResourceHeaderList) {
+        public Builder authResourceHeaderList(java.util.List<AuthResourceHeaderList> authResourceHeaderList) {
             String authResourceHeaderListShrink = shrink(authResourceHeaderList, "AuthResourceHeaderList", "json");
             this.putQueryParameter("AuthResourceHeaderList", authResourceHeaderListShrink);
             this.authResourceHeaderList = authResourceHeaderList;
@@ -184,7 +195,10 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -193,7 +207,10 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -202,7 +219,10 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether the matching is not case-sensitive. Default value: true.
+         * <p>Specifies whether the matching is not case-sensitive. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ignoreCase(Boolean ignoreCase) {
             this.putQueryParameter("IgnoreCase", ignoreCase);
@@ -211,12 +231,15 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The matching type. Valid values:
-         * <p>
+         * <p>The matching type. Valid values:</p>
+         * <ul>
+         * <li>EQUAL</li>
+         * <li>PRE</li>
+         * <li>ERGULAR</li>
+         * </ul>
          * 
-         * *   EQUAL
-         * *   PRE
-         * *   ERGULAR
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -225,7 +248,10 @@ public class AddAuthResourceRequest extends Request {
         }
 
         /**
-         * The path.
+         * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/abc</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -240,14 +266,20 @@ public class AddAuthResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddAuthResourceRequest} extends {@link TeaModel}
+     *
+     * <p>AddAuthResourceRequest</p>
+     */
     public static class AuthResourceHeaderList extends TeaModel {
-        @NameInMap("HeaderKey")
+        @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
 
-        @NameInMap("HeaderMethod")
+        @com.aliyun.core.annotation.NameInMap("HeaderMethod")
         private String headerMethod;
 
-        @NameInMap("HeaderValue")
+        @com.aliyun.core.annotation.NameInMap("HeaderValue")
         private String headerValue;
 
         private AuthResourceHeaderList(Builder builder) {
@@ -291,7 +323,10 @@ public class AddAuthResourceRequest extends Request {
             private String headerValue; 
 
             /**
-             * The parameter of the HTTP header.
+             * <p>The parameter of the HTTP header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Access-Control-Allow-Origin</p>
              */
             public Builder headerKey(String headerKey) {
                 this.headerKey = headerKey;
@@ -299,82 +334,75 @@ public class AddAuthResourceRequest extends Request {
             }
 
             /**
-             * The header matching mode.
-             * <p>
+             * <p>The header matching mode.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>SUFFIX</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   SUFFIX
+             * <!-- -->
+             * </li>
+             * <li><p>EXIST</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>PREFIX</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   EXIST
+             * <!-- -->
+             * </li>
+             * <li><p>EQUAL</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>EXCLUDE</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   PREFIX
+             * <!-- -->
+             * </li>
+             * <li><p>NOT_EQUAL</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>NOT_EXIST</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   EQUAL
+             * <!-- -->
+             * </li>
+             * <li><p>REGREX</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>INCLUDE</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   EXCLUDE
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   NOT_EQUAL
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   NOT_EXIST
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   REGREX
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   INCLUDE
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder headerMethod(String headerMethod) {
                 this.headerMethod = headerMethod;
@@ -382,7 +410,12 @@ public class AddAuthResourceRequest extends Request {
             }
 
             /**
-             * The parameter value of the HTTP header.
+             * <p>The parameter value of the HTTP header.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;

@@ -62,7 +62,7 @@ public class MnsTopicTriggerConfig extends TeaModel {
         private String notifyStrategy; 
 
         /**
-         * filterTag
+         * filterTag.
          */
         public Builder filterTag(String filterTag) {
             this.filterTag = filterTag;
@@ -70,7 +70,7 @@ public class MnsTopicTriggerConfig extends TeaModel {
         }
 
         /**
-         * notifyContentFormat
+         * notifyContentFormat.
          */
         public Builder notifyContentFormat(String notifyContentFormat) {
             this.notifyContentFormat = notifyContentFormat;
@@ -78,7 +78,7 @@ public class MnsTopicTriggerConfig extends TeaModel {
         }
 
         /**
-         * notifyStrategy
+         * notifyStrategy.
          */
         public Builder notifyStrategy(String notifyStrategy) {
             this.notifyStrategy = notifyStrategy;

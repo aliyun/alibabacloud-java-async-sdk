@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualPhysicalConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVirtualPhysicalConnectionResponseBody</p>
  */
 public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualPhysicalConnection")
+    @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnection")
     private String virtualPhysicalConnection;
 
     private CreateVirtualPhysicalConnectionResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
         private String virtualPhysicalConnection; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD14EA74-E9C3-59A9-942A-DFEC7E12818D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the hosted connection.
+         * <p>The ID of the hosted connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1mrgfbtmc9brre7****</p>
          */
         public Builder virtualPhysicalConnection(String virtualPhysicalConnection) {
             this.virtualPhysicalConnection = virtualPhysicalConnection;

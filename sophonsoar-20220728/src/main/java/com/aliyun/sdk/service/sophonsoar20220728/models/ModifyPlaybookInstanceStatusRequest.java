@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPlaybookInstanceStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyPlaybookInstanceStatusRequest</p>
  */
 public class ModifyPlaybookInstanceStatusRequest extends Request {
-    @Body
-    @NameInMap("Active")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Active")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer active;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Body
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
     private ModifyPlaybookInstanceStatusRequest(Builder builder) {
@@ -84,7 +84,15 @@ public class ModifyPlaybookInstanceStatusRequest extends Request {
         } 
 
         /**
-         * Active.
+         * <p>The playbook status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: starts the playbook.</li>
+         * <li><strong>0</strong>: stops the playbook.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder active(Integer active) {
             this.putBodyParameter("Active", active);
@@ -93,7 +101,14 @@ public class ModifyPlaybookInstanceStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +117,14 @@ public class ModifyPlaybookInstanceStatusRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9fcd3829-80ff-4681-be1e-xxxxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

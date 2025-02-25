@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchStartCdnDomainRequest} extends {@link RequestModel}
  *
  * <p>BatchStartCdnDomainRequest</p>
  */
 public class BatchStartCdnDomainRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private BatchStartCdnDomainRequest(Builder builder) {
@@ -83,7 +83,11 @@ public class BatchStartCdnDomainRequest extends Request {
         } 
 
         /**
-         * The accelerated domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).
+         * <p>The accelerated domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);

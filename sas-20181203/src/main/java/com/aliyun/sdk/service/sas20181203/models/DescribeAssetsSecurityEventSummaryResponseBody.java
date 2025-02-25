@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetsSecurityEventSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetsSecurityEventSummaryResponseBody</p>
  */
 public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
-    @NameInMap("Assets")
-    private java.util.List < Assets> assets;
+    @com.aliyun.core.annotation.NameInMap("Assets")
+    private java.util.List<Assets> assets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAssetsSecurityEventSummaryResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
     /**
      * @return assets
      */
-    public java.util.List < Assets> getAssets() {
+    public java.util.List<Assets> getAssets() {
         return this.assets;
     }
 
@@ -46,19 +51,22 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Assets> assets; 
+        private java.util.List<Assets> assets; 
         private String requestId; 
 
         /**
-         * An array that consists of risk information about containers.
+         * <p>An array that consists of risk information about containers.</p>
          */
-        public Builder assets(java.util.List < Assets> assets) {
+        public Builder assets(java.util.List<Assets> assets) {
             this.assets = assets;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetsSecurityEventSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetsSecurityEventSummaryResponseBody</p>
+     */
     public static class Assets extends TeaModel {
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Assets(Builder builder) {
@@ -122,16 +136,19 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>namespace</strong></li>
+             * <li><strong>clusters</strong></li>
+             * <li><strong>applications</strong></li>
+             * <li><strong>pods</strong></li>
+             * <li><strong>containers</strong></li>
+             * <li><strong>images</strong></li>
+             * <li><strong>hosts</strong></li>
+             * </ul>
              * 
-             * *   **namespace**
-             * *   **clusters**
-             * *   **applications**
-             * *   **pods**
-             * *   **containers**
-             * *   **images**
-             * *   **hosts**
+             * <strong>example:</strong>
+             * <p>namespace</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -139,7 +156,10 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of potential risky assets.
+             * <p>The number of potential risky assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -147,7 +167,10 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of assets.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

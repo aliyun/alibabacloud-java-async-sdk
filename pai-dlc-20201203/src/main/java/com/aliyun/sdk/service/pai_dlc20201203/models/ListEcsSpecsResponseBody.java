@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEcsSpecsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEcsSpecsResponseBody</p>
  */
 public class ListEcsSpecsResponseBody extends TeaModel {
-    @NameInMap("EcsSpecs")
-    private java.util.List < EcsSpec > ecsSpecs;
+    @com.aliyun.core.annotation.NameInMap("EcsSpecs")
+    private java.util.List<EcsSpec> ecsSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListEcsSpecsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     /**
      * @return ecsSpecs
      */
-    public java.util.List < EcsSpec > getEcsSpecs() {
+    public java.util.List<EcsSpec> getEcsSpecs() {
         return this.ecsSpecs;
     }
 
@@ -57,14 +62,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EcsSpec > ecsSpecs; 
+        private java.util.List<EcsSpec> ecsSpecs; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * EcsSpecs.
          */
-        public Builder ecsSpecs(java.util.List < EcsSpec > ecsSpecs) {
+        public Builder ecsSpecs(java.util.List<EcsSpec> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
             return this;
         }

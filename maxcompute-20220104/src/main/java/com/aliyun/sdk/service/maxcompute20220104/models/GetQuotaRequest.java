@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQuotaRequest} extends {@link RequestModel}
  *
  * <p>GetQuotaRequest</p>
  */
 public class GetQuotaRequest extends Request {
-    @Path
-    @NameInMap("nickname")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("nickname")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nickname;
 
-    @Query
-    @NameInMap("AkProven")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AkProven")
     private String akProven;
 
-    @Query
-    @NameInMap("mock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("mock")
     private Boolean mock;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("tenantId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
     private GetQuotaRequest(Builder builder) {
@@ -111,7 +116,11 @@ public class GetQuotaRequest extends Request {
         } 
 
         /**
-         * nickname.
+         * <p>The name of the quota.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_a</p>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -120,7 +129,10 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * AkProven.
+         * <p>The trusted AccessKey pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder akProven(String akProven) {
             this.putQueryParameter("AkProven", akProven);
@@ -129,7 +141,10 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * mock.
+         * <p>Specifies whether to include submodules. Valid values: -true: The request includes submodules. -false: The request does not include submodules. This is the default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder mock(Boolean mock) {
             this.putQueryParameter("mock", mock);
@@ -138,7 +153,10 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -147,7 +165,10 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520539530998273</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

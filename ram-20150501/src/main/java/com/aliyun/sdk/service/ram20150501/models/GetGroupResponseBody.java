@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetGroupResponseBody</p>
  */
 public class GetGroupResponseBody extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetGroupResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Group.
+         * <p>The information of the RAM user group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +63,10 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4065824-E422-3ED6-68B1-1AF7D5C7804C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Group(Builder builder) {
@@ -146,7 +160,10 @@ public class GetGroupResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Comments.
+             * <p>The description of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev-Team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -154,7 +171,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * <p>The time when the RAM user group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +182,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-FpMEHiMysofp****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -170,7 +193,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev-Team</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -178,7 +204,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * <p>The time when the information of the RAM user group was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-02-11T03:15:21Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

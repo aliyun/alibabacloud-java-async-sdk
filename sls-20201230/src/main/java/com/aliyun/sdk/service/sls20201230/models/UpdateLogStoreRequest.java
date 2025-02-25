@@ -1,72 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpdateLogStoreRequest} extends {@link RequestModel}
  *
  * <p>UpdateLogStoreRequest</p>
  */
 public class UpdateLogStoreRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Body
-    @NameInMap("appendMeta")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("appendMeta")
     private Boolean appendMeta;
 
-    @Body
-    @NameInMap("autoSplit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoSplit")
     private Boolean autoSplit;
 
-    @Body
-    @NameInMap("enable_tracking")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enable_tracking")
     private Boolean enableTracking;
 
-    @Body
-    @NameInMap("encrypt_conf")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("encrypt_conf")
     private EncryptConf encryptConf;
 
-    @Body
-    @NameInMap("hot_ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("hot_ttl")
     private Integer hotTtl;
 
-    @Body
-    @NameInMap("logstoreName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("infrequentAccessTTL")
+    private Integer infrequentAccessTTL;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("logstoreName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstoreName;
 
-    @Body
-    @NameInMap("maxSplitShard")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maxSplitShard")
     private Integer maxSplitShard;
 
-    @Body
-    @NameInMap("mode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mode")
     private String mode;
 
-    @Body
-    @NameInMap("shardCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("shardCount")
+    @Deprecated
     private Integer shardCount;
 
-    @Body
-    @NameInMap("telemetryType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("telemetryType")
+    @Deprecated
     private String telemetryType;
 
-    @Body
-    @NameInMap("ttl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ttl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ttl;
 
     private UpdateLogStoreRequest(Builder builder) {
@@ -78,6 +87,7 @@ public class UpdateLogStoreRequest extends Request {
         this.enableTracking = builder.enableTracking;
         this.encryptConf = builder.encryptConf;
         this.hotTtl = builder.hotTtl;
+        this.infrequentAccessTTL = builder.infrequentAccessTTL;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
         this.mode = builder.mode;
@@ -149,6 +159,13 @@ public class UpdateLogStoreRequest extends Request {
     }
 
     /**
+     * @return infrequentAccessTTL
+     */
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
+    }
+
+    /**
      * @return logstoreName
      */
     public String getLogstoreName() {
@@ -198,6 +215,7 @@ public class UpdateLogStoreRequest extends Request {
         private Boolean enableTracking; 
         private EncryptConf encryptConf; 
         private Integer hotTtl; 
+        private Integer infrequentAccessTTL; 
         private String logstoreName; 
         private Integer maxSplitShard; 
         private String mode; 
@@ -218,6 +236,7 @@ public class UpdateLogStoreRequest extends Request {
             this.enableTracking = request.enableTracking;
             this.encryptConf = request.encryptConf;
             this.hotTtl = request.hotTtl;
+            this.infrequentAccessTTL = request.infrequentAccessTTL;
             this.logstoreName = request.logstoreName;
             this.maxSplitShard = request.maxSplitShard;
             this.mode = request.mode;
@@ -227,7 +246,11 @@ public class UpdateLogStoreRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -236,7 +259,11 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -245,11 +272,14 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to record public IP addresses. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to record public IP addresses. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder appendMeta(Boolean appendMeta) {
             this.putBodyParameter("appendMeta", appendMeta);
@@ -258,11 +288,14 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic sharding. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic sharding. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoSplit(Boolean autoSplit) {
             this.putBodyParameter("autoSplit", autoSplit);
@@ -271,11 +304,14 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the web tracking feature. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the web tracking feature. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableTracking(Boolean enableTracking) {
             this.putBodyParameter("enable_tracking", enableTracking);
@@ -284,7 +320,7 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The data structure of the encryption configuration.
+         * <p>The data structure of the encryption configuration.</p>
          */
         public Builder encryptConf(EncryptConf encryptConf) {
             this.putBodyParameter("encrypt_conf", encryptConf);
@@ -293,7 +329,10 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The retention period of data in the hot storage tier of the Logstore. Minimum value: 30. Unit: day. You can specify a value that ranges from 30 to the value of ttl. Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see [Enable hot and cold-tiered storage for a Logstore](~~308645~~).
+         * <p>The retention period of data in the hot storage tier of the Logstore. Valid values: 7 to 3000. Unit: days. After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder hotTtl(Integer hotTtl) {
             this.putBodyParameter("hot_ttl", hotTtl);
@@ -302,7 +341,23 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The retention period of data in the IA storage tier of the Logstore. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        public Builder infrequentAccessTTL(Integer infrequentAccessTTL) {
+            this.putBodyParameter("infrequentAccessTTL", infrequentAccessTTL);
+            this.infrequentAccessTTL = infrequentAccessTTL;
+            return this;
+        }
+
+        /**
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.putBodyParameter("logstoreName", logstoreName);
@@ -311,10 +366,13 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 64.
-         * <p>
+         * <p>The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 256.</p>
+         * <blockquote>
+         * <p> If you set autoSplit to true, you must specify maxSplitShard.</p>
+         * </blockquote>
          * 
-         * > If you set autoSplit to true, you must specify maxSplitShard.
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder maxSplitShard(Integer maxSplitShard) {
             this.putBodyParameter("maxSplitShard", maxSplitShard);
@@ -323,11 +381,14 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores.
-         * <p>
+         * <p>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</p>
+         * <ul>
+         * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</li>
+         * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.</li>
+         * </ul>
          * 
-         * *   **standard**: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.
-         * *   **query**: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the volume of data is large, the log retention period is long, or log analysis is not required. Log retention periods of weeks or months are considered long.
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder mode(String mode) {
             this.putBodyParameter("mode", mode);
@@ -336,10 +397,13 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The number of shards.
-         * <p>
+         * <p>The number of shards.</p>
+         * <blockquote>
+         * <p> You cannot call the UpdateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</p>
+         * </blockquote>
          * 
-         * > You cannot call the UpdateLogstore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.putBodyParameter("shardCount", shardCount);
@@ -348,11 +412,14 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The type of the log that you want to query. Valid values:
-         * <p>
+         * <p>The type of the observable data. Valid values:</p>
+         * <ul>
+         * <li>None (default): log data.</li>
+         * <li>Metrics: metric data.</li>
+         * </ul>
          * 
-         * *   None: all types of logs.
-         * *   Metrics: metrics.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder telemetryType(String telemetryType) {
             this.putBodyParameter("telemetryType", telemetryType);
@@ -361,7 +428,11 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * The retention period of data. Unit: day. Valid values: 1 to 3650. If you set ttl to 3650, data is permanently stored.
+         * <p>The retention period of data. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, logs are permanently stored.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);

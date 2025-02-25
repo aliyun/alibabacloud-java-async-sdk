@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNacosClusterRequest} extends {@link RequestModel}
  *
  * <p>UpdateNacosClusterRequest</p>
  */
 public class UpdateNacosClusterRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("CheckPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPort")
     private Integer checkPort;
 
-    @Query
-    @NameInMap("ClusterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("HealthChecker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthChecker")
     private String healthChecker;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Query
-    @NameInMap("UseInstancePortForCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseInstancePortForCheck")
     private Boolean useInstancePortForCheck;
 
     private UpdateNacosClusterRequest(Builder builder) {
@@ -170,11 +175,14 @@ public class UpdateNacosClusterRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -183,7 +191,10 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The port used for health checks.
+         * <p>The port used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder checkPort(Integer checkPort) {
             this.putQueryParameter("CheckPort", checkPort);
@@ -192,7 +203,11 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The name of the Nacos cluster.
+         * <p>The name of the Nacos cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -201,7 +216,11 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The name of the group.
+         * <p>The name of the group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -210,7 +229,10 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The type of the health check.
+         * <p>The type of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;none&quot;}</p>
          */
         public Builder healthChecker(String healthChecker) {
             this.putQueryParameter("HealthChecker", healthChecker);
@@ -219,7 +241,11 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-123456</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,7 +254,10 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e78a671-4b9b-4dd4-99c1-0b9da87d3dec</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -237,7 +266,11 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello_service</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -246,7 +279,10 @@ public class UpdateNacosClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the port of the instance for a health check.
+         * <p>Specifies whether to use the port of the instance for a health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useInstancePortForCheck(Boolean useInstancePortForCheck) {
             this.putQueryParameter("UseInstancePortForCheck", useInstancePortForCheck);

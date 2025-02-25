@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserPublicKeyRequest} extends {@link RequestModel}
  *
  * <p>CreateUserPublicKeyRequest</p>
  */
 public class CreateUserPublicKeyRequest extends Request {
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PublicKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String publicKey;
 
-    @Query
-    @NameInMap("PublicKeyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKeyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String publicKeyName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private CreateUserPublicKeyRequest(Builder builder) {
@@ -128,7 +128,10 @@ public class CreateUserPublicKeyRequest extends Request {
         } 
 
         /**
-         * The description of the public key. The description can be up to 500 characters in length.
+         * <p>The description of the public key. The description can be up to 500 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -137,10 +140,14 @@ public class CreateUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host on which you want to create a public key for the user.
-         * <p>
+         * <p>The ID of the bastion host on which you want to create a public key for the user.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">listinstances</a> operation to query the ID of the bastion host.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [listinstances](~~204522~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-st220aw****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +156,11 @@ public class CreateUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The public key. Encode the value by using the Base64 algorithm.
+         * <p>The public key. Encode the value by using the Base64 algorithm.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUxGQnQxUUpyT3IxK2hTTGRkbERMZUx4WGRIZ3hBalBxWHJIbWNFNWxqSk8gbm93Y29kZXJAbm93Y29kZXJkZU1hY0Jvb2stUHJvLmxvY2Fs</p>
          */
         public Builder publicKey(String publicKey) {
             this.putQueryParameter("PublicKey", publicKey);
@@ -158,7 +169,11 @@ public class CreateUserPublicKeyRequest extends Request {
         }
 
         /**
-         * The name of the public key.
+         * <p>The name of the public key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public key of a user</p>
          */
         public Builder publicKeyName(String publicKeyName) {
             this.putQueryParameter("PublicKeyName", publicKeyName);
@@ -167,10 +182,13 @@ public class CreateUserPublicKeyRequest extends Request {
         }
 
         /**
-         * Specifies the region ID of the bastion host on which you want to create a public key for the user.
-         * <p>
+         * <p>Specifies the region ID of the bastion host on which you want to create a public key for the user.</p>
+         * <blockquote>
+         * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,7 +197,14 @@ public class CreateUserPublicKeyRequest extends Request {
         }
 
         /**
-         * Specifies the ID of the user for whom you want to create a public key.
+         * <p>The ID of the user for whom you want to create a public key.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

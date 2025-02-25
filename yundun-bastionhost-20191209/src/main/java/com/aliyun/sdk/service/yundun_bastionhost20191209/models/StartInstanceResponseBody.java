@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>StartInstanceResponseBody</p>
  */
 public class StartInstanceResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartInstanceResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class StartInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the bastion host that you enable.
+         * <p>The ID of the bastion host that you enable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-78v1gh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -58,7 +61,10 @@ public class StartInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F85AE0A-6A87-48F3-A0C7-90B998788A36</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

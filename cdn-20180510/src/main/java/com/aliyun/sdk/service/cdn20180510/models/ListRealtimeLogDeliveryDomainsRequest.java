@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRealtimeLogDeliveryDomainsRequest} extends {@link RequestModel}
  *
  * <p>ListRealtimeLogDeliveryDomainsRequest</p>
  */
 public class ListRealtimeLogDeliveryDomainsRequest extends Request {
-    @Query
-    @NameInMap("Logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Query
-    @NameInMap("Project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Project")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String project;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
     private ListRealtimeLogDeliveryDomainsRequest(Builder builder) {
@@ -85,7 +85,11 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
         } 
 
         /**
-         * The name of the Logstore that collects log data from Alibaba Cloud CDN in real time. You can specify multiple Logstore names and separate them with commas (,).
+         * <p>The name of the Logstore that collects log data from Alibaba Cloud CDN in real time. You can specify multiple Logstore names and separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogstoreName</p>
          */
         public Builder logstore(String logstore) {
             this.putQueryParameter("Logstore", logstore);
@@ -94,7 +98,11 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project that is used for real-time log delivery. You can specify multiple project names and separate them with commas (,).
+         * <p>The name of the Log Service project that is used for real-time log delivery. You can specify multiple project names and separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectName</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -103,10 +111,12 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Log Service project is deployed. You can specify multiple region IDs and separate them with commas (,).
-         * <p>
+         * <p>The ID of the region where the Log Service project is deployed. You can specify multiple region IDs and separate them with commas (,).</p>
+         * <p>For more information about regions, see <a href="https://help.aliyun.com/document_detail/144883.html">Regions that support real-time log delivery</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about regions, see [Regions that support real-time log delivery](~~144883~~).
+         * <strong>example:</strong>
+         * <p>ch-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddControlPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>AddControlPolicyResponseBody</p>
  */
 public class AddControlPolicyResponseBody extends TeaModel {
-    @NameInMap("AclUuid")
+    @com.aliyun.core.annotation.NameInMap("AclUuid")
     private String aclUuid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddControlPolicyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class AddControlPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the access control policy that is created on the Internet firewall.
+         * <p>The ID of the access control policy that is created on the Internet firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00281255-d220-4db1-8f4f-c4df221ad84c</p>
          */
         public Builder aclUuid(String aclUuid) {
             this.aclUuid = aclUuid;
@@ -58,7 +66,10 @@ public class AddControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

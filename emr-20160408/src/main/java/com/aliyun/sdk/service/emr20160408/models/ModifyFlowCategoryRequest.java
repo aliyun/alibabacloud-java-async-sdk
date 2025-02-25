@@ -103,13 +103,13 @@ public class ModifyFlowCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFlowCategoryRequest response) {
-            super(response);
-            this.id = response.id;
-            this.name = response.name;
-            this.parentId = response.parentId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(ModifyFlowCategoryRequest request) {
+            super(request);
+            this.id = request.id;
+            this.name = request.name;
+            this.parentId = request.parentId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

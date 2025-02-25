@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotEventsRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotEventsRequest</p>
  */
 public class ListHoneypotEventsRequest extends Request {
-    @Body
-    @NameInMap("AgentIdList")
-    private java.util.List < String > agentIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentIdList")
+    private java.util.List<String> agentIdList;
 
-    @Body
-    @NameInMap("AlarmEventId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlarmEventId")
     private Long alarmEventId;
 
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Body
-    @NameInMap("HoneypotIdList")
-    private java.util.List < String > honeypotIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HoneypotIdList")
+    private java.util.List<String> honeypotIdList;
 
-    @Body
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PortraitId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortraitId")
     private String portraitId;
 
-    @Body
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @Body
-    @NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevelList")
+    private java.util.List<String> riskLevelList;
 
-    @Query
-    @NameInMap("SrcIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcIp")
     private String srcIp;
 
     private ListHoneypotEventsRequest(Builder builder) {
@@ -87,7 +92,7 @@ public class ListHoneypotEventsRequest extends Request {
     /**
      * @return agentIdList
      */
-    public java.util.List < String > getAgentIdList() {
+    public java.util.List<String> getAgentIdList() {
         return this.agentIdList;
     }
 
@@ -115,7 +120,7 @@ public class ListHoneypotEventsRequest extends Request {
     /**
      * @return honeypotIdList
      */
-    public java.util.List < String > getHoneypotIdList() {
+    public java.util.List<String> getHoneypotIdList() {
         return this.honeypotIdList;
     }
 
@@ -150,7 +155,7 @@ public class ListHoneypotEventsRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -162,16 +167,16 @@ public class ListHoneypotEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListHoneypotEventsRequest, Builder> {
-        private java.util.List < String > agentIdList; 
+        private java.util.List<String> agentIdList; 
         private Long alarmEventId; 
         private Integer currentPage; 
         private String dealed; 
-        private java.util.List < String > honeypotIdList; 
+        private java.util.List<String> honeypotIdList; 
         private String lang; 
         private Integer pageSize; 
         private String portraitId; 
         private String requestId; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
 
         private Builder() {
@@ -194,16 +199,19 @@ public class ListHoneypotEventsRequest extends Request {
         } 
 
         /**
-         * The probe IDs.
+         * <p>The probe IDs.</p>
          */
-        public Builder agentIdList(java.util.List < String > agentIdList) {
+        public Builder agentIdList(java.util.List<String> agentIdList) {
             this.putBodyParameter("AgentIdList", agentIdList);
             this.agentIdList = agentIdList;
             return this;
         }
 
         /**
-         * The ID of the alert.
+         * <p>The ID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1259925</p>
          */
         public Builder alarmEventId(Long alarmEventId) {
             this.putBodyParameter("AlarmEventId", alarmEventId);
@@ -212,7 +220,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -221,12 +232,15 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The status of the event. Valid values:
-         * <p>
+         * <p>The status of the event. Valid values:</p>
+         * <ul>
+         * <li><strong>y</strong>: handled</li>
+         * <li><strong>n</strong>: unhandled</li>
+         * <li><strong>a</strong>: all statuses</li>
+         * </ul>
          * 
-         * *   **y**: handled
-         * *   **n**: unhandled
-         * *   **a**: all statuses
+         * <strong>example:</strong>
+         * <p>y</p>
          */
         public Builder dealed(String dealed) {
             this.putBodyParameter("Dealed", dealed);
@@ -235,20 +249,23 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The honeypot IDs.
+         * <p>The honeypot IDs.</p>
          */
-        public Builder honeypotIdList(java.util.List < String > honeypotIdList) {
+        public Builder honeypotIdList(java.util.List<String> honeypotIdList) {
             this.putBodyParameter("HoneypotIdList", honeypotIdList);
             this.honeypotIdList = honeypotIdList;
             return this;
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -257,7 +274,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -266,7 +286,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The ID of the attacker profile.
+         * <p>The ID of the attacker profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd48604a-1694-4f03-ade0-ec6994c3*****</p>
          */
         public Builder portraitId(String portraitId) {
             this.putQueryParameter("PortraitId", portraitId);
@@ -275,7 +298,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F9CE167-58D5-5DA6-AA3B-923EED02****</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -284,16 +310,19 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The risk levels.
+         * <p>The risk levels.</p>
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putBodyParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;
         }
 
         /**
-         * The source IP address of the attack.
+         * <p>The source IP address of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185.237.96.***</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);

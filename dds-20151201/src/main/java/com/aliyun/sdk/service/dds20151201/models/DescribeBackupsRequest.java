@@ -1,64 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupsRequest</p>
  */
 public class DescribeBackupsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeBackupsRequest(Builder builder) {
@@ -66,6 +79,7 @@ public class DescribeBackupsRequest extends Request {
         this.regionId = builder.regionId;
         this.backupId = builder.backupId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.destRegion = builder.destRegion;
         this.endTime = builder.endTime;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
@@ -74,6 +88,7 @@ public class DescribeBackupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.srcRegion = builder.srcRegion;
         this.startTime = builder.startTime;
     }
 
@@ -109,6 +124,13 @@ public class DescribeBackupsRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     /**
@@ -168,6 +190,13 @@ public class DescribeBackupsRequest extends Request {
     }
 
     /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -178,6 +207,7 @@ public class DescribeBackupsRequest extends Request {
         private String regionId; 
         private String backupId; 
         private String DBInstanceId; 
+        private String destRegion; 
         private String endTime; 
         private String nodeId; 
         private String ownerAccount; 
@@ -186,6 +216,7 @@ public class DescribeBackupsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String srcRegion; 
         private String startTime; 
 
         private Builder() {
@@ -197,6 +228,7 @@ public class DescribeBackupsRequest extends Request {
             this.regionId = request.regionId;
             this.backupId = request.backupId;
             this.DBInstanceId = request.DBInstanceId;
+            this.destRegion = request.destRegion;
             this.endTime = request.endTime;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
@@ -205,6 +237,7 @@ public class DescribeBackupsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.srcRegion = request.srcRegion;
             this.startTime = request.startTime;
         } 
 
@@ -218,10 +251,11 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the backup set. You can call the [CreateBackup](~~62171~~) operation to obtain the value of this parameter.
-         * <p>
+         * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/62171.html">CreateBackup</a> operation to query the backup set ID.</p>
+         * <p>If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shard nodes. Multiple backup IDs are separated with commas (,).</p>
          * 
-         * If you set the DBInstanceId parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shards. Multiple , with commas (,) in the middle.
+         * <strong>example:</strong>
+         * <p>2072****,2072****,2072****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -230,10 +264,14 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * <strong>example:</strong>
+         * <p>dds-bp1a7009eb24****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -242,7 +280,25 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The region ID of the Cross-regional backup.</p>
+         * <blockquote>
+         * <p> This parameter is required for the Cross-regional backup.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T13:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -251,10 +307,13 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the shard node in the sharded cluster instance.
-         * <p>
+         * <p>The ID of the shard node in the sharded cluster instance.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
+         * <strong>example:</strong>
+         * <p>d-bp128a003436****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -281,7 +340,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -290,7 +352,15 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.
+         * <p>The number of entries to return per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -317,7 +387,28 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required if you want to query the backup sets of a released instance.</li>
+         * <li>This parameter is required if you want to query cross-region backups.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-13T13:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

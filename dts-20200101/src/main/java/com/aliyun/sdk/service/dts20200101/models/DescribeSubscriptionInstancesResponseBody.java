@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSubscriptionInstancesResponseBody</p>
  */
 public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubscriptionInstances")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstances")
     private SubscriptionInstances subscriptionInstances;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeSubscriptionInstancesResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -130,7 +138,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -138,7 +149,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +160,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries that can be displayed on the current page.
+         * <p>The maximum number of entries that can be displayed on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -154,7 +171,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC3BAAF2-74E3-4471-8EB5-96202D6A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +182,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of change tracking instances and the details of each instance.
+         * <p>The list of change tracking instances and the details of each instance.</p>
          */
         public Builder subscriptionInstances(SubscriptionInstances subscriptionInstances) {
             this.subscriptionInstances = subscriptionInstances;
@@ -170,7 +190,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -178,7 +201,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of change tracking instances that belong to your Alibaba Cloud account.
+         * <p>The total number of change tracking instances that belong to your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -191,11 +217,17 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private SourceEndpoint(Builder builder) {
@@ -230,7 +262,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1162kryivb8****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -238,10 +273,13 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source instance.
-             * <p>
+             * <p>The type of the source instance.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for change tracking instances of the new version.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only for change tracking instances of the new version.
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -255,11 +293,17 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class SubscriptionDataType extends TeaModel {
-        @NameInMap("DDL")
+        @com.aliyun.core.annotation.NameInMap("DDL")
         private Boolean DDL;
 
-        @NameInMap("DML")
+        @com.aliyun.core.annotation.NameInMap("DML")
         private Boolean DML;
 
         private SubscriptionDataType(Builder builder) {
@@ -294,11 +338,14 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private Boolean DML; 
 
             /**
-             * Indicates whether data definition language (DDL) operations are tracked. Valid values:
-             * <p>
+             * <p>Indicates whether data definition language (DDL) operations are tracked. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder DDL(Boolean DDL) {
                 this.DDL = DDL;
@@ -306,11 +353,14 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data manipulation language (DML) operations are tracked. Valid values:
-             * <p>
+             * <p>Indicates whether data manipulation language (DML) operations are tracked. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder DML(Boolean DML) {
                 this.DML = DML;
@@ -324,14 +374,20 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class SubscriptionHost extends TeaModel {
-        @NameInMap("PrivateHost")
+        @com.aliyun.core.annotation.NameInMap("PrivateHost")
         private String privateHost;
 
-        @NameInMap("PublicHost")
+        @com.aliyun.core.annotation.NameInMap("PublicHost")
         private String publicHost;
 
-        @NameInMap("VPCHost")
+        @com.aliyun.core.annotation.NameInMap("VPCHost")
         private String VPCHost;
 
         private SubscriptionHost(Builder builder) {
@@ -375,7 +431,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private String VPCHost; 
 
             /**
-             * The private endpoint of the change tracking instance. The format is `<Address>:<Port number>`.
+             * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts-cn-****-internal.aliyuncs.com:18002</p>
              */
             public Builder privateHost(String privateHost) {
                 this.privateHost = privateHost;
@@ -383,7 +442,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the change tracking instance. The format is `<Address>:<Port number>`.
+             * <p>The public endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts-cn-****.aliyuncs.com:18001</p>
              */
             public Builder publicHost(String publicHost) {
                 this.publicHost = publicHost;
@@ -391,7 +453,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) endpoint of the change tracking instance. The format is `<Address>:<Port number>`.
+             * <p>The virtual private cloud (VPC) endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts-cn-****-vpc.aliyuncs.com:18003</p>
              */
             public Builder VPCHost(String VPCHost) {
                 this.VPCHost = VPCHost;
@@ -405,9 +470,15 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class TableList extends TeaModel {
-        @NameInMap("Table")
-        private java.util.List < String > table;
+        @com.aliyun.core.annotation.NameInMap("Table")
+        private java.util.List<String> table;
 
         private TableList(Builder builder) {
             this.table = builder.table;
@@ -424,17 +495,17 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < String > getTable() {
+        public java.util.List<String> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < String > table; 
+            private java.util.List<String> table; 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < String > table) {
+            public Builder table(java.util.List<String> table) {
                 this.table = table;
                 return this;
             }
@@ -446,14 +517,20 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class SynchronousObject extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("TableList")
+        @com.aliyun.core.annotation.NameInMap("TableList")
         private TableList tableList;
 
-        @NameInMap("WholeDatabase")
+        @com.aliyun.core.annotation.NameInMap("WholeDatabase")
         private String wholeDatabase;
 
         private SynchronousObject(Builder builder) {
@@ -497,7 +574,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private String wholeDatabase; 
 
             /**
-             * The name of the database to which the object belongs.
+             * <p>The name of the database to which the object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -505,7 +585,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The table name.</p>
              */
             public Builder tableList(TableList tableList) {
                 this.tableList = tableList;
@@ -513,11 +593,14 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data of an entire database is tracked. Valid values:
-             * <p>
+             * <p>Indicates whether the data of an entire database is tracked. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder wholeDatabase(String wholeDatabase) {
                 this.wholeDatabase = wholeDatabase;
@@ -531,9 +614,15 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class SubscriptionObject extends TeaModel {
-        @NameInMap("SynchronousObject")
-        private java.util.List < SynchronousObject> synchronousObject;
+        @com.aliyun.core.annotation.NameInMap("SynchronousObject")
+        private java.util.List<SynchronousObject> synchronousObject;
 
         private SubscriptionObject(Builder builder) {
             this.synchronousObject = builder.synchronousObject;
@@ -550,17 +639,17 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         /**
          * @return synchronousObject
          */
-        public java.util.List < SynchronousObject> getSynchronousObject() {
+        public java.util.List<SynchronousObject> getSynchronousObject() {
             return this.synchronousObject;
         }
 
         public static final class Builder {
-            private java.util.List < SynchronousObject> synchronousObject; 
+            private java.util.List<SynchronousObject> synchronousObject; 
 
             /**
              * SynchronousObject.
              */
-            public Builder synchronousObject(java.util.List < SynchronousObject> synchronousObject) {
+            public Builder synchronousObject(java.util.List<SynchronousObject> synchronousObject) {
                 this.synchronousObject = synchronousObject;
                 return this;
             }
@@ -572,11 +661,17 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -611,7 +706,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -619,7 +717,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value that corresponds to the tag key.
+             * <p>The tag value that corresponds to the tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -633,9 +734,15 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -652,17 +759,17 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -674,56 +781,62 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class SubscriptionInstance extends TeaModel {
-        @NameInMap("BeginTimestamp")
+        @com.aliyun.core.annotation.NameInMap("BeginTimestamp")
         private String beginTimestamp;
 
-        @NameInMap("ConsumptionCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionCheckpoint")
         private String consumptionCheckpoint;
 
-        @NameInMap("ConsumptionClient")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionClient")
         private String consumptionClient;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private String endTimestamp;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("InstanceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("InstanceCreateTime")
         private String instanceCreateTime;
 
-        @NameInMap("JobCreateTime")
+        @com.aliyun.core.annotation.NameInMap("JobCreateTime")
         private String jobCreateTime;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("SourceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
         private SourceEndpoint sourceEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubscribeTopic")
+        @com.aliyun.core.annotation.NameInMap("SubscribeTopic")
         private String subscribeTopic;
 
-        @NameInMap("SubscriptionDataType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionDataType")
         private SubscriptionDataType subscriptionDataType;
 
-        @NameInMap("SubscriptionHost")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionHost")
         private SubscriptionHost subscriptionHost;
 
-        @NameInMap("SubscriptionInstanceID")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceID")
         private String subscriptionInstanceID;
 
-        @NameInMap("SubscriptionInstanceName")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceName")
         private String subscriptionInstanceName;
 
-        @NameInMap("SubscriptionObject")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionObject")
         private SubscriptionObject subscriptionObject;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private SubscriptionInstance(Builder builder) {
@@ -893,7 +1006,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The start of the time range for change tracking. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
+             * <p>The start of the time range for change tracking. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-21T08:25:43Z</p>
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -901,7 +1017,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption checkpoint of the change tracking instance. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
+             * <p>The consumption checkpoint of the change tracking instance. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-21T09:30:31Z</p>
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -909,7 +1028,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The downstream client information, in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
+             * <p>The downstream client information, in the following format: &lt;IP address of the downstream client&gt;:&lt;Random ID generated by DTS&gt;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.<em><strong>.</strong></em>.<strong>:dts</strong>******</p>
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -917,7 +1039,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range for change tracking. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
+             * <p>The end of the time range for change tracking. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-21T10:17:21Z</p>
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -925,7 +1050,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if change tracking failed.
+             * <p>The error message returned if change tracking failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -933,7 +1061,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change tracking instance was created. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+             * <p>The time when the change tracking instance was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-21T02:48:20Z</p>
              */
             public Builder instanceCreateTime(String instanceCreateTime) {
                 this.instanceCreateTime = instanceCreateTime;
@@ -941,7 +1072,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the change tracking task was created. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
+             * <p>The time when the change tracking task was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-21T02:48:20Z</p>
              */
             public Builder jobCreateTime(String jobCreateTime) {
                 this.jobCreateTime = jobCreateTime;
@@ -949,11 +1083,14 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the change tracking instance. Valid values:
-             * <p>
+             * <p>The billing method of the change tracking instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   **PrePaid**: subscription
-             * *   **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -961,7 +1098,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the source instance.
+             * <p>The connection settings of the source instance.</p>
              */
             public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -969,15 +1106,18 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the change tracking task. Valid values:
-             * <p>
+             * <p>The status of the change tracking task. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started.</li>
+             * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
+             * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
+             * <li><strong>Starting</strong>: The task is being started.</li>
+             * <li><strong>Normal</strong>: The task is running as expected.</li>
+             * <li><strong>Abnormal</strong>: The task is not running as expected.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: The task is not started.
-             * *   **Prechecking**: The task is being prechecked.
-             * *   **PrecheckFailed**: The task failed to pass the precheck.
-             * *   **Starting**: The task is being started.
-             * *   **Normal**: The task is running as expected.
-             * *   **Abnormal**: The task is not running as expected.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -985,10 +1125,13 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The topic of the change tracking instance.
-             * <p>
+             * <p>The topic of the change tracking instance.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if your change tracking instances are of the new version and you have called the <a href="https://help.aliyun.com/document_detail/122863.html">CreateConsumerGroup</a> operation to create a consumer group.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if your change tracking instances are of the new version and you have called the [CreateConsumerGroup](~~122863~~) operation to create a consumer group.
+             * <strong>example:</strong>
+             * <p>cn_hangzhou_rm_bp1162kryivb8****_dtstest_version2</p>
              */
             public Builder subscribeTopic(String subscribeTopic) {
                 this.subscribeTopic = subscribeTopic;
@@ -996,7 +1139,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The types of operations that are tracked by the task.
+             * <p>The types of operations that are tracked by the task.</p>
              */
             public Builder subscriptionDataType(SubscriptionDataType subscriptionDataType) {
                 this.subscriptionDataType = subscriptionDataType;
@@ -1004,7 +1147,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the change tracking instance.
+             * <p>The endpoint of the change tracking instance.</p>
              */
             public Builder subscriptionHost(SubscriptionHost subscriptionHost) {
                 this.subscriptionHost = subscriptionHost;
@@ -1012,7 +1155,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the change tracking instance.
+             * <p>The ID of the change tracking instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1162kryivb8****</p>
              */
             public Builder subscriptionInstanceID(String subscriptionInstanceID) {
                 this.subscriptionInstanceID = subscriptionInstanceID;
@@ -1020,7 +1166,10 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the change tracking instance.
+             * <p>The name of the change tracking instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder subscriptionInstanceName(String subscriptionInstanceName) {
                 this.subscriptionInstanceName = subscriptionInstanceName;
@@ -1028,7 +1177,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The objects for change tracking.
+             * <p>The objects for change tracking.</p>
              */
             public Builder subscriptionObject(SubscriptionObject subscriptionObject) {
                 this.subscriptionObject = subscriptionObject;
@@ -1036,7 +1185,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The collection of tags.
+             * <p>The collection of tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1050,9 +1199,15 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesResponseBody</p>
+     */
     public static class SubscriptionInstances extends TeaModel {
-        @NameInMap("SubscriptionInstance")
-        private java.util.List < SubscriptionInstance> subscriptionInstance;
+        @com.aliyun.core.annotation.NameInMap("SubscriptionInstance")
+        private java.util.List<SubscriptionInstance> subscriptionInstance;
 
         private SubscriptionInstances(Builder builder) {
             this.subscriptionInstance = builder.subscriptionInstance;
@@ -1069,17 +1224,17 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         /**
          * @return subscriptionInstance
          */
-        public java.util.List < SubscriptionInstance> getSubscriptionInstance() {
+        public java.util.List<SubscriptionInstance> getSubscriptionInstance() {
             return this.subscriptionInstance;
         }
 
         public static final class Builder {
-            private java.util.List < SubscriptionInstance> subscriptionInstance; 
+            private java.util.List<SubscriptionInstance> subscriptionInstance; 
 
             /**
              * SubscriptionInstance.
              */
-            public Builder subscriptionInstance(java.util.List < SubscriptionInstance> subscriptionInstance) {
+            public Builder subscriptionInstance(java.util.List<SubscriptionInstance> subscriptionInstance) {
                 this.subscriptionInstance = subscriptionInstance;
                 return this;
             }

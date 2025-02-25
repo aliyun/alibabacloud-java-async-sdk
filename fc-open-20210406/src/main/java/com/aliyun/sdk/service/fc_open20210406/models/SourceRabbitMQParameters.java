@@ -77,7 +77,7 @@ public class SourceRabbitMQParameters extends TeaModel {
         private String virtualHostName; 
 
         /**
-         * InstanceId
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -85,7 +85,7 @@ public class SourceRabbitMQParameters extends TeaModel {
         }
 
         /**
-         * QueueName
+         * QueueName.
          */
         public Builder queueName(String queueName) {
             this.queueName = queueName;
@@ -93,7 +93,7 @@ public class SourceRabbitMQParameters extends TeaModel {
         }
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -101,7 +101,7 @@ public class SourceRabbitMQParameters extends TeaModel {
         }
 
         /**
-         * VirtualHostName
+         * VirtualHostName.
          */
         public Builder virtualHostName(String virtualHostName) {
             this.virtualHostName = virtualHostName;

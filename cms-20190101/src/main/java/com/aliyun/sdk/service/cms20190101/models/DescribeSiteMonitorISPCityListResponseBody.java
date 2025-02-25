@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSiteMonitorISPCityListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSiteMonitorISPCityListResponseBody</p>
  */
 public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IspCityList")
+    @com.aliyun.core.annotation.NameInMap("IspCityList")
     private IspCityList ispCityList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeSiteMonitorISPCityListResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The status code.
-         * <p>
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * The queried detection points.
+         * <p>The queried detection points.</p>
          */
         public Builder ispCityList(IspCityList ispCityList) {
             this.ispCityList = ispCityList;
@@ -105,7 +108,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B35D7D84-547B-4E61-B909-48A1F8A0C756</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +130,14 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,8 +150,14 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSiteMonitorISPCityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorISPCityListResponseBody</p>
+     */
     public static class IPPool extends TeaModel {
-        @NameInMap("IPPool")
+        @com.aliyun.core.annotation.NameInMap("IPPool")
         private java.util.List < String > IPPool;
 
         private IPPool(Builder builder) {
@@ -179,56 +197,62 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorISPCityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorISPCityListResponseBody</p>
+     */
     public static class IspCity extends TeaModel {
-        @NameInMap("Area.en")
+        @com.aliyun.core.annotation.NameInMap("Area.en")
         private String area_en;
 
-        @NameInMap("Area.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("Area.zh_CN")
         private String area_zh_cN;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CityName.en")
+        @com.aliyun.core.annotation.NameInMap("CityName.en")
         private String cityName_en;
 
-        @NameInMap("CityName.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("CityName.zh_CN")
         private String cityName_zh_cN;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Country.en")
+        @com.aliyun.core.annotation.NameInMap("Country.en")
         private String country_en;
 
-        @NameInMap("Country.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("Country.zh_CN")
         private String country_zh_cN;
 
-        @NameInMap("IPPool")
+        @com.aliyun.core.annotation.NameInMap("IPPool")
         private IPPool IPPool;
 
-        @NameInMap("IPV4ProbeCount")
+        @com.aliyun.core.annotation.NameInMap("IPV4ProbeCount")
         private String IPV4ProbeCount;
 
-        @NameInMap("IPV6ProbeCount")
+        @com.aliyun.core.annotation.NameInMap("IPV6ProbeCount")
         private String IPV6ProbeCount;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("IspName.en")
+        @com.aliyun.core.annotation.NameInMap("IspName.en")
         private String ispName_en;
 
-        @NameInMap("IspName.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("IspName.zh_CN")
         private String ispName_zh_cN;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Region.en")
+        @com.aliyun.core.annotation.NameInMap("Region.en")
         private String region_en;
 
-        @NameInMap("Region.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("Region.zh_CN")
         private String region_zh_cN;
 
         private IspCity(Builder builder) {
@@ -414,7 +438,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * The city ID.
+             * <p>The city ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -438,10 +465,13 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * The country name.
-             * <p>
+             * <p>The country name.</p>
+             * <blockquote>
+             * <p>This parameter is valid only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>629</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -465,7 +495,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address pool.
+             * <p>The IP address pool.</p>
              */
             public Builder IPPool(IPPool IPPool) {
                 this.IPPool = IPPool;
@@ -473,7 +503,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv4 probes.
+             * <p>The number of IPv4 probes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder IPV4ProbeCount(String IPV4ProbeCount) {
                 this.IPV4ProbeCount = IPV4ProbeCount;
@@ -481,7 +514,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6 probes.
+             * <p>The number of IPv6 probes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder IPV6ProbeCount(String IPV6ProbeCount) {
                 this.IPV6ProbeCount = IPV6ProbeCount;
@@ -489,7 +525,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * The carrier ID.
+             * <p>The carrier ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -513,7 +552,10 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
             }
 
             /**
-             * The province name.
+             * <p>The province name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>264</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -543,8 +585,14 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSiteMonitorISPCityListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSiteMonitorISPCityListResponseBody</p>
+     */
     public static class IspCityList extends TeaModel {
-        @NameInMap("IspCity")
+        @com.aliyun.core.annotation.NameInMap("IspCity")
         private java.util.List < IspCity> ispCity;
 
         private IspCityList(Builder builder) {

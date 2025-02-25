@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiagnosisItemsRequest} extends {@link RequestModel}
  *
  * <p>ListDiagnosisItemsRequest</p>
  */
 public class ListDiagnosisItemsRequest extends Request {
-    @Query
-    @NameInMap("lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("lang")
     private String lang;
 
     private ListDiagnosisItemsRequest(Builder builder) {

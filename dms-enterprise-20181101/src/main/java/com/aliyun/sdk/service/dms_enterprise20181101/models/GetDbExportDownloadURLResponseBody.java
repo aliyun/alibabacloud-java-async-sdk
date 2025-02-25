@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDbExportDownloadURLResponseBody} extends {@link TeaModel}
  *
  * <p>GetDbExportDownloadURLResponseBody</p>
  */
 public class GetDbExportDownloadURLResponseBody extends TeaModel {
-    @NameInMap("DownloadURLResult")
+    @com.aliyun.core.annotation.NameInMap("DownloadURLResult")
     private DownloadURLResult downloadURLResult;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDbExportDownloadURLResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDbExportDownloadURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbExportDownloadURLResponseBody</p>
+     */
     public static class DownloadURLResult extends TeaModel {
-        @NameInMap("HasResult")
+        @com.aliyun.core.annotation.NameInMap("HasResult")
         private Boolean hasResult;
 
-        @NameInMap("TipMessage")
+        @com.aliyun.core.annotation.NameInMap("TipMessage")
         private String tipMessage;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private DownloadURLResult(Builder builder) {

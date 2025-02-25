@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowJSONAssestResponseBody} extends {@link TeaModel}
  *
  * <p>GetFlowJSONAssestResponseBody</p>
  */
 public class GetFlowJSONAssestResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFlowJSONAssestResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +120,17 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFlowJSONAssestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowJSONAssestResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
         private Data(Builder builder) {
@@ -150,7 +165,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
             private String flowId; 
 
             /**
-             * FilePath.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://url.com/json.json">https://url.com/json.json</a></p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -158,7 +176,10 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
             }
 
             /**
-             * flow ID。
+             * <p>The Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow_id_arms</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

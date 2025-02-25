@@ -1,34 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBClusterPayTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBClusterPayTypeRequest</p>
  */
 public class ModifyDBClusterPayTypeRequest extends Request {
-    @Query
-    @NameInMap("DbClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbClusterId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("UsedTime")
-    @Validation(maximum = 9, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Validation(maximum = 9, minimum = 1)
     private String usedTime;
 
     private ModifyDBClusterPayTypeRequest(Builder builder) {
@@ -36,6 +40,7 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         this.dbClusterId = builder.dbClusterId;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.regionId = builder.regionId;
         this.usedTime = builder.usedTime;
     }
 
@@ -74,6 +79,13 @@ public class ModifyDBClusterPayTypeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -84,6 +96,7 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         private String dbClusterId; 
         private String payType; 
         private String period; 
+        private String regionId; 
         private String usedTime; 
 
         private Builder() {
@@ -95,11 +108,16 @@ public class ModifyDBClusterPayTypeRequest extends Request {
             this.dbClusterId = request.dbClusterId;
             this.payType = request.payType;
             this.period = request.period;
+            this.regionId = request.regionId;
             this.usedTime = request.usedTime;
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp11q28kvl688****</p>
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -108,11 +126,15 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Postpaid**: pay-as-you-go.
-         * *   **Prepaid**: subscription.
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -121,13 +143,17 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * The subscription type of the subscription cluster. Valid values:
-         * <p>
+         * <p>The subscription type of the subscription cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: subscription on a yearly basis.</li>
+         * <li><strong>Month</strong>: subscription on a monthly basis.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when PayType is set to Prepaid.</p>
+         * </blockquote>
          * 
-         * *   **Year**: subscription on a yearly basis.
-         * *   **Month**: subscription on a monthly basis.
-         * 
-         * > This parameter must be specified when PayType is set to Prepaid.
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -136,17 +162,31 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration of the subscription cluster.
-         * <p>
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The subscription duration of the subscription cluster.</p>
+         * <ul>
+         * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).</li>
+         * <li>Valid values when Period is set to Month: 1 to 11 (integer).</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified when PayType is set to Prepaid.</p>
+         * </li>
+         * <li><p>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).
-         * *   Valid values when Period is set to Month: 1 to 11 (integer).
-         * 
-         * > 
-         * 
-         * *   This parameter must be specified when PayType is set to Prepaid.
-         * 
-         * *   Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

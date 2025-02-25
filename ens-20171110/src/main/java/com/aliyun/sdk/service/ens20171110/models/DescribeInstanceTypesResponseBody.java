@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTypesResponseBody</p>
  */
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private InstanceTypes instanceTypes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTypesResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +78,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceTypes.
+         * <p>Details about the instance types.</p>
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -78,7 +86,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D452D190-BADF-5D09-910D-599B96D42AAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +102,23 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class InstanceType extends TeaModel {
-        @NameInMap("CpuCoreCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
-        @NameInMap("InstanceTypeId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
-        @NameInMap("InstanceTypeName")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeName")
         private String instanceTypeName;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Integer memorySize;
 
         private InstanceType(Builder builder) {
@@ -154,7 +171,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer memorySize; 
 
             /**
-             * CpuCoreCount.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -162,7 +182,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeId.
+             * <p>This parameter is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This parameter is not needed temporarily.</p>
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -170,7 +193,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeName.
+             * <p>The name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ens.xxx.small</p>
              */
             public Builder instanceTypeName(String instanceTypeName) {
                 this.instanceTypeName = instanceTypeName;
@@ -178,7 +204,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -192,9 +221,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceType")
-        private java.util.List < InstanceType> instanceType;
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private java.util.List<InstanceType> instanceType;
 
         private InstanceTypes(Builder builder) {
             this.instanceType = builder.instanceType;
@@ -211,17 +246,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * @return instanceType
          */
-        public java.util.List < InstanceType> getInstanceType() {
+        public java.util.List<InstanceType> getInstanceType() {
             return this.instanceType;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceType> instanceType; 
+            private java.util.List<InstanceType> instanceType; 
 
             /**
              * InstanceType.
              */
-            public Builder instanceType(java.util.List < InstanceType> instanceType) {
+            public Builder instanceType(java.util.List<InstanceType> instanceType) {
                 this.instanceType = instanceType;
                 return this;
             }

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckMonitorAlertResponseBody} extends {@link TeaModel}
  *
  * <p>CheckMonitorAlertResponseBody</p>
  */
 public class CheckMonitorAlertResponseBody extends TeaModel {
-    @NameInMap("Parameter")
+    @com.aliyun.core.annotation.NameInMap("Parameter")
     private String parameter;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private CheckMonitorAlertResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * Parameter.
+         * <p>The parameters that are used to configure the monitoring and alerting feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;monitor&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   },   &quot;alert&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   } }</p>
          */
         public Builder parameter(String parameter) {
             this.parameter = parameter;
@@ -70,7 +78,10 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94F92113-FF63-5E57-8401-6FE123AD11DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,14 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>Indicates whether the monitoring and alerting feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: The monitoring and alerting feature is enabled.</li>
+         * <li><strong>disable</strong>: The monitoring and alerting feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder state(String state) {
             this.state = state;

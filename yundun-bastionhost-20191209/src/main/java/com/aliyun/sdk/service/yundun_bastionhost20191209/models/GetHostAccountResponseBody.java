@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHostAccountResponseBody} extends {@link TeaModel}
  *
  * <p>GetHostAccountResponseBody</p>
  */
 public class GetHostAccountResponseBody extends TeaModel {
-    @NameInMap("HostAccount")
+    @com.aliyun.core.annotation.NameInMap("HostAccount")
     private HostAccount hostAccount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHostAccountResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetHostAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the host account that was queried.
+         * <p>The details of the host account that was queried.</p>
          */
         public Builder hostAccount(HostAccount hostAccount) {
             this.hostAccount = hostAccount;
@@ -58,7 +58,10 @@ public class GetHostAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +74,35 @@ public class GetHostAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHostAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostAccountResponseBody</p>
+     */
     public static class HostAccount extends TeaModel {
-        @NameInMap("HasPassword")
+        @com.aliyun.core.annotation.NameInMap("HasPassword")
         private Boolean hasPassword;
 
-        @NameInMap("HostAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
-        @NameInMap("HostAccountName")
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
         private String hostAccountName;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostShareKeyId")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
         private String hostShareKeyId;
 
-        @NameInMap("HostShareKeyName")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyName")
         private String hostShareKeyName;
 
-        @NameInMap("PrivateKeyFingerprint")
+        @com.aliyun.core.annotation.NameInMap("PrivateKeyFingerprint")
         private String privateKeyFingerprint;
 
-        @NameInMap("ProtocolName")
+        @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
 
         private HostAccount(Builder builder) {
@@ -182,11 +191,14 @@ public class GetHostAccountResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * Indicates whether a password is configured for the host account. Valid values:
-             * <p>
+             * <p>Indicates whether a password is configured for the host account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -194,7 +206,10 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host account.
+             * <p>The ID of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -202,7 +217,10 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host account.
+             * <p>The name of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -210,7 +228,10 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host to which the host account belongs.
+             * <p>The ID of the host to which the host account belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -218,7 +239,10 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the shared key.
+             * <p>The ID of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -226,7 +250,10 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the shared key.
+             * <p>The name of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -234,7 +261,10 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the private key.
+             * <p>The fingerprint of the private key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<strong>:</strong></p>
              */
             public Builder privateKeyFingerprint(String privateKeyFingerprint) {
                 this.privateKeyFingerprint = privateKeyFingerprint;
@@ -242,11 +272,14 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the host. Valid values:
-             * <p>
+             * <p>The protocol that is used by the host. Valid values:</p>
+             * <ul>
+             * <li><strong>SSH</strong></li>
+             * <li><strong>RDP</strong></li>
+             * </ul>
              * 
-             * *   **SSH**
-             * *   **RDP**
+             * <strong>example:</strong>
+             * <p>SSH</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

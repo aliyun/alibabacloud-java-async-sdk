@@ -1,3 +1,30 @@
+2024-06-14 Version: 2.0.1
+- Generated java-async 2020-06-29 for alinlp.
+
+2024-05-20 Version: 2.0.0
+- Generated java-async 2020-06-29 for alinlp.
+
+2024-04-10 Version: 1.0.8
+- Generated java-async 2020-06-29 for alinlp.
+
+2024-04-10 Version: 1.0.7
+- Generated java-async 2020-06-29 for alinlp.
+
+2024-03-29 Version: 1.0.6
+- Generated java-async 2020-06-29 for alinlp.
+
+2024-03-27 Version: 1.0.5
+- Generated java-async 2020-06-29 for alinlp.
+
+2024-03-11 Version: 1.0.4
+- Generated java-async 2020-06-29 for alinlp.
+
+2024-01-23 Version: 1.0.3
+- Generated java-async 2020-06-29 for alinlp.
+
+2023-12-26 Version: 1.0.2
+- Generated java-async 2020-06-29 for alinlp.
+
 2023-02-27 Version: 1.0.1
 - Supported SDK for AliNLP version-2.
 

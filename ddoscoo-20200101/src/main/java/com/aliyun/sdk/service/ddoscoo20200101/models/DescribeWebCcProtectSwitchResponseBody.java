@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCcProtectSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebCcProtectSwitchResponseBody</p>
  */
 public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
-    @NameInMap("ProtectSwitchList")
-    private java.util.List < ProtectSwitchList> protectSwitchList;
+    @com.aliyun.core.annotation.NameInMap("ProtectSwitchList")
+    private java.util.List<ProtectSwitchList> protectSwitchList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebCcProtectSwitchResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     /**
      * @return protectSwitchList
      */
-    public java.util.List < ProtectSwitchList> getProtectSwitchList() {
+    public java.util.List<ProtectSwitchList> getProtectSwitchList() {
         return this.protectSwitchList;
     }
 
@@ -46,19 +51,22 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProtectSwitchList> protectSwitchList; 
+        private java.util.List<ProtectSwitchList> protectSwitchList; 
         private String requestId; 
 
         /**
-         * The status of each protection policy for a website.
+         * <p>The status of each mitigation policy for the website.</p>
          */
-        public Builder protectSwitchList(java.util.List < ProtectSwitchList> protectSwitchList) {
+        public Builder protectSwitchList(java.util.List<ProtectSwitchList> protectSwitchList) {
             this.protectSwitchList = protectSwitchList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ADD9EED-CA4B-488C-BC82-01B0B899363D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,35 +79,44 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebCcProtectSwitchResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebCcProtectSwitchResponseBody</p>
+     */
     public static class ProtectSwitchList extends TeaModel {
-        @NameInMap("AiMode")
+        @com.aliyun.core.annotation.NameInMap("AiMode")
         private String aiMode;
 
-        @NameInMap("AiRuleEnable")
+        @com.aliyun.core.annotation.NameInMap("AiRuleEnable")
         private Integer aiRuleEnable;
 
-        @NameInMap("AiTemplate")
+        @com.aliyun.core.annotation.NameInMap("AiTemplate")
         private String aiTemplate;
 
-        @NameInMap("BlackWhiteListEnable")
+        @com.aliyun.core.annotation.NameInMap("BlackWhiteListEnable")
         private Integer blackWhiteListEnable;
 
-        @NameInMap("CcCustomRuleEnable")
+        @com.aliyun.core.annotation.NameInMap("CcCustomRuleEnable")
         private Integer ccCustomRuleEnable;
 
-        @NameInMap("CcEnable")
+        @com.aliyun.core.annotation.NameInMap("CcEnable")
         private Integer ccEnable;
 
-        @NameInMap("CcTemplate")
+        @com.aliyun.core.annotation.NameInMap("CcGlobalSwitch")
+        private String ccGlobalSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("PreciseRuleEnable")
+        @com.aliyun.core.annotation.NameInMap("PreciseRuleEnable")
         private Integer preciseRuleEnable;
 
-        @NameInMap("RegionBlockEnable")
+        @com.aliyun.core.annotation.NameInMap("RegionBlockEnable")
         private Integer regionBlockEnable;
 
         private ProtectSwitchList(Builder builder) {
@@ -109,6 +126,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             this.blackWhiteListEnable = builder.blackWhiteListEnable;
             this.ccCustomRuleEnable = builder.ccCustomRuleEnable;
             this.ccEnable = builder.ccEnable;
+            this.ccGlobalSwitch = builder.ccGlobalSwitch;
             this.ccTemplate = builder.ccTemplate;
             this.domain = builder.domain;
             this.preciseRuleEnable = builder.preciseRuleEnable;
@@ -166,6 +184,13 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         }
 
         /**
+         * @return ccGlobalSwitch
+         */
+        public String getCcGlobalSwitch() {
+            return this.ccGlobalSwitch;
+        }
+
+        /**
          * @return ccTemplate
          */
         public String getCcTemplate() {
@@ -200,17 +225,21 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             private Integer blackWhiteListEnable; 
             private Integer ccCustomRuleEnable; 
             private Integer ccEnable; 
+            private String ccGlobalSwitch; 
             private String ccTemplate; 
             private String domain; 
             private Integer preciseRuleEnable; 
             private Integer regionBlockEnable; 
 
             /**
-             * The mode of the Intelligent Protection policy. Valid values:
-             * <p>
+             * <p>The mode of Intelligent Protection. Valid values:</p>
+             * <ul>
+             * <li><strong>watch</strong>: Warning</li>
+             * <li><strong>defense</strong>: Defense</li>
+             * </ul>
              * 
-             * *   **watch**: the Warning mode
-             * *   **defense**: the Defense mode
+             * <strong>example:</strong>
+             * <p>defense</p>
              */
             public Builder aiMode(String aiMode) {
                 this.aiMode = aiMode;
@@ -218,11 +247,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Intelligent Protection policy. Valid values:
-             * <p>
+             * <p>The status of Intelligent Protection. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: turned off</li>
+             * <li><strong>1:</strong> turned on</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder aiRuleEnable(Integer aiRuleEnable) {
                 this.aiRuleEnable = aiRuleEnable;
@@ -230,12 +262,15 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the Intelligent Protection policy. Valid values:
-             * <p>
+             * <p>The level of Intelligent Protection. Valid values:</p>
+             * <ul>
+             * <li><strong>level30</strong>: Loose</li>
+             * <li><strong>level60</strong>: Normal</li>
+             * <li><strong>level90</strong>: Strict</li>
+             * </ul>
              * 
-             * *   **level30**: the Low level
-             * *   **level60**: the Normal level
-             * *   **level90**: the Strict level
+             * <strong>example:</strong>
+             * <p>level60</p>
              */
             public Builder aiTemplate(String aiTemplate) {
                 this.aiTemplate = aiTemplate;
@@ -243,11 +278,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Black Lists and White Lists (Domain Names) policy. Valid values:
-             * <p>
+             * <p>The status of Blacklist/Whitelist (Domain Names). Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: turned off</li>
+             * <li><strong>1:</strong> turned on</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder blackWhiteListEnable(Integer blackWhiteListEnable) {
                 this.blackWhiteListEnable = blackWhiteListEnable;
@@ -255,11 +293,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Custom Rule switch for the Frequency Control policy. Valid values:
-             * <p>
+             * <p>The status of the Custom Rules switch for Frequency Control. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: turned off</li>
+             * <li><strong>1:</strong> turned on</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ccCustomRuleEnable(Integer ccCustomRuleEnable) {
                 this.ccCustomRuleEnable = ccCustomRuleEnable;
@@ -267,11 +308,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Frequency Control policy. Valid values:
-             * <p>
+             * <p>The status of Frequency Control. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: turned off</li>
+             * <li><strong>1:</strong> turned on</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ccEnable(Integer ccEnable) {
                 this.ccEnable = ccEnable;
@@ -279,13 +323,24 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Frequency Control policy. Valid values:
-             * <p>
+             * CcGlobalSwitch.
+             */
+            public Builder ccGlobalSwitch(String ccGlobalSwitch) {
+                this.ccGlobalSwitch = ccGlobalSwitch;
+                return this;
+            }
+
+            /**
+             * <p>The mode of Frequency Control. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: Normal</li>
+             * <li><strong>gf_under_attack</strong>: Emergency</li>
+             * <li><strong>gf_sos_verify</strong>: Strict</li>
+             * <li><strong>gf_sos_enhance</strong>: Super Strict</li>
+             * </ul>
              * 
-             * *   **default**: Normal
-             * *   **gf_under_attack**: Emergency
-             * *   **gf_sos_verify**: Strict
-             * *   **gf_sos_enhance**: Super Strict
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder ccTemplate(String ccTemplate) {
                 this.ccTemplate = ccTemplate;
@@ -293,7 +348,10 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -301,11 +359,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Accurate Access Control policy. Valid values:
-             * <p>
+             * <p>The status of Accurate Access Control. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: turned off</li>
+             * <li><strong>1:</strong> turned on</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder preciseRuleEnable(Integer preciseRuleEnable) {
                 this.preciseRuleEnable = preciseRuleEnable;
@@ -313,11 +374,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Location Blacklist (Domain Names) policy. Valid values:
-             * <p>
+             * <p>The status of Location Blacklist (Domain Names). Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: turned off</li>
+             * <li><strong>1:</strong> turned on</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder regionBlockEnable(Integer regionBlockEnable) {
                 this.regionBlockEnable = regionBlockEnable;

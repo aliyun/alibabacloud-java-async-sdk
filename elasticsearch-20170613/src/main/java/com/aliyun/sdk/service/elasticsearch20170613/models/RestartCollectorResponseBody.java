@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartCollectorResponseBody} extends {@link TeaModel}
  *
  * <p>RestartCollectorResponseBody</p>
  */
 public class RestartCollectorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private RestartCollectorResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class RestartCollectorResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84B4038A-AF38-4BF4-9FAD-EA92A4FFF00A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +61,14 @@ public class RestartCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the shipper is restarted. Valid values:
-         * <p>
+         * <p>Indicates whether the shipper is restarted. Valid values:</p>
+         * <ul>
+         * <li>true: The shipper is restarted.</li>
+         * <li>false: The shipper fails to be restarted.</li>
+         * </ul>
          * 
-         * *   true: The shipper is restarted.
-         * *   false: The shipper fails to be restarted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

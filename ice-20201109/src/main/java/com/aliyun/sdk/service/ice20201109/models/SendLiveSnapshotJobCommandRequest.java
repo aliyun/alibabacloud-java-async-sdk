@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendLiveSnapshotJobCommandRequest} extends {@link RequestModel}
  *
  * <p>SendLiveSnapshotJobCommandRequest</p>
  */
 public class SendLiveSnapshotJobCommandRequest extends Request {
-    @Body
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String command;
 
-    @Body
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private SendLiveSnapshotJobCommandRequest(Builder builder) {
@@ -70,7 +75,17 @@ public class SendLiveSnapshotJobCommandRequest extends Request {
         } 
 
         /**
-         * Command.
+         * <p>The operation command.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>stop</li>
+         * <li>restart</li>
+         * <li>start</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         public Builder command(String command) {
             this.putBodyParameter("Command", command);
@@ -79,7 +94,11 @@ public class SendLiveSnapshotJobCommandRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the snapshot job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

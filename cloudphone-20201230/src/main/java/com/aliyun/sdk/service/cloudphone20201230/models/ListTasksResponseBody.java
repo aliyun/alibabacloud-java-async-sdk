@@ -98,7 +98,7 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The maximum number of entries that is returned on each page. Valid values: 1 to 200. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -106,7 +106,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -122,7 +122,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -138,7 +138,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +262,7 @@ public class ListTasksResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * CreateTime.
+             * The time when the task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +270,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteMsg.
+             * The content that is returned after the task is executed. The content can be up to 1,024 bytes in length.
              */
             public Builder executeMsg(String executeMsg) {
                 this.executeMsg = executeMsg;
@@ -278,7 +278,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * The time when the task ended.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -286,7 +286,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -294,7 +294,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The task progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -302,7 +302,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -310,7 +310,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The task state.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -318,7 +318,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The task type.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

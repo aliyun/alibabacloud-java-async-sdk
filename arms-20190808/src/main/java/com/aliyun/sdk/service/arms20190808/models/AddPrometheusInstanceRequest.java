@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrometheusInstanceRequest} extends {@link RequestModel}
  *
  * <p>AddPrometheusInstanceRequest</p>
  */
 public class AddPrometheusInstanceRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private AddPrometheusInstanceRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class AddPrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the Prometheus instance for Remote Write.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>notificationpolicy_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -94,7 +103,11 @@ public class AddPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +116,11 @@ public class AddPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the Prometheus instance. Only Prometheus instances for Remote Write is supported. Set the value to RW.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RW</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

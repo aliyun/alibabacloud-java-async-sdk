@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateResourceEvaluationResultsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAggregateResourceEvaluationResultsResponseBody</p>
  */
 public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel {
-    @NameInMap("EvaluationResults")
+    @com.aliyun.core.annotation.NameInMap("EvaluationResults")
     private EvaluationResults evaluationResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateResourceEvaluationResultsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The information about the compliance evaluation results returned.
+         * <p>The information about the compliance evaluation results returned.</p>
          */
         public Builder evaluationResults(EvaluationResults evaluationResults) {
             this.evaluationResults = evaluationResults;
@@ -58,7 +63,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25C89DDB-BB79-487D-88C3-4A561F21EFC4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +79,35 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListAggregateResourceEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateResourceEvaluationResultsResponseBody</p>
+     */
     public static class EvaluationResultQualifier extends TeaModel {
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("IgnoreDate")
+        @com.aliyun.core.annotation.NameInMap("IgnoreDate")
         private String ignoreDate;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private EvaluationResultQualifier(Builder builder) {
@@ -182,7 +196,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private String resourceType; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the rule.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:config::100931896542****:rule/cr-7f7d626622af0041****</p>
              */
             public Builder configRuleArn(String configRuleArn) {
                 this.configRuleArn = configRuleArn;
@@ -190,7 +207,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-7f7d626622af0041****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -198,7 +218,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The name of the monitoring rule.
+             * <p>The name of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-rule-name</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -206,10 +229,13 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The date from which the system automatically re-evaluates the ignored incompliant resources.
-             * <p>
+             * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+             * <blockquote>
+             * <p> If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+             * </blockquote>
              * 
-             * >  If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.
+             * <strong>example:</strong>
+             * <p>2022-06-01</p>
              */
             public Builder ignoreDate(String ignoreDate) {
                 this.ignoreDate = ignoreDate;
@@ -217,7 +243,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the region where the resource resides.
+             * <p>The ID of the region where the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -225,7 +254,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23642660635396****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -233,7 +265,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd_member</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -241,7 +276,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::RAM::User</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -255,11 +293,17 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateResourceEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateResourceEvaluationResultsResponseBody</p>
+     */
     public static class EvaluationResultIdentifier extends TeaModel {
-        @NameInMap("EvaluationResultQualifier")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultQualifier")
         private EvaluationResultQualifier evaluationResultQualifier;
 
-        @NameInMap("OrderingTimestamp")
+        @com.aliyun.core.annotation.NameInMap("OrderingTimestamp")
         private Long orderingTimestamp;
 
         private EvaluationResultIdentifier(Builder builder) {
@@ -294,7 +338,7 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private Long orderingTimestamp; 
 
             /**
-             * The information about the evaluated resource in the compliance evaluation result.
+             * <p>The information about the evaluated resource in the compliance evaluation result.</p>
              */
             public Builder evaluationResultQualifier(EvaluationResultQualifier evaluationResultQualifier) {
                 this.evaluationResultQualifier = evaluationResultQualifier;
@@ -302,7 +346,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The timestamp when the compliance evaluation was performed. Unit: milliseconds.
+             * <p>The timestamp when the compliance evaluation was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624932227157</p>
              */
             public Builder orderingTimestamp(Long orderingTimestamp) {
                 this.orderingTimestamp = orderingTimestamp;
@@ -316,29 +363,35 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateResourceEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateResourceEvaluationResultsResponseBody</p>
+     */
     public static class EvaluationResultList extends TeaModel {
-        @NameInMap("Annotation")
+        @com.aliyun.core.annotation.NameInMap("Annotation")
         private String annotation;
 
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("ConfigRuleInvokedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleInvokedTimestamp")
         private Long configRuleInvokedTimestamp;
 
-        @NameInMap("EvaluationResultIdentifier")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultIdentifier")
         private EvaluationResultIdentifier evaluationResultIdentifier;
 
-        @NameInMap("InvokingEventMessageType")
+        @com.aliyun.core.annotation.NameInMap("InvokingEventMessageType")
         private String invokingEventMessageType;
 
-        @NameInMap("RemediationEnabled")
+        @com.aliyun.core.annotation.NameInMap("RemediationEnabled")
         private Boolean remediationEnabled;
 
-        @NameInMap("ResultRecordedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ResultRecordedTimestamp")
         private Long resultRecordedTimestamp;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private EvaluationResultList(Builder builder) {
@@ -427,7 +480,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private Integer riskLevel; 
 
             /**
-             * The annotation to the resource that is evaluated as incompliant.
+             * <p>The annotation to the resource that is evaluated as incompliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;configuration&quot;:&quot;false&quot;,&quot;desiredValue&quot;:&quot;True&quot;,&quot;operator&quot;:&quot;StringEquals&quot;,&quot;property&quot;:&quot;$.LoginProfile.MFABindRequired&quot;}</p>
              */
             public Builder annotation(String annotation) {
                 this.annotation = annotation;
@@ -435,14 +491,17 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The compliance evaluation result of the resources. Valid values:
-             * <p>
+             * <p>The compliance evaluation result of the resources. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The resources are evaluated as incompliant.</li>
+             * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
+             * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+             * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+             * </ul>
              * 
-             * *   COMPLIANT: The resources are evaluated as compliant.
-             * *   NON_COMPLIANT: The resources are evaluated as incompliant.
-             * *   NOT_APPLICABLE: The rule does not apply to your resources.
-             * *   INSUFFICIENT_DATA: No resource data is available.
-             * *   IGNORED: The resource is ignored during compliance evaluation.
+             * <strong>example:</strong>
+             * <p>NON_COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -450,7 +509,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The timestamp when the rule was triggered. Unit: milliseconds.
+             * <p>The timestamp when the rule was triggered. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624932227157</p>
              */
             public Builder configRuleInvokedTimestamp(Long configRuleInvokedTimestamp) {
                 this.configRuleInvokedTimestamp = configRuleInvokedTimestamp;
@@ -458,7 +520,7 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The identifying information about the compliance evaluation result.
+             * <p>The identifying information about the compliance evaluation result.</p>
              */
             public Builder evaluationResultIdentifier(EvaluationResultIdentifier evaluationResultIdentifier) {
                 this.evaluationResultIdentifier = evaluationResultIdentifier;
@@ -466,11 +528,14 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The trigger type of the managed rule. Valid values:
-             * <p>
+             * <p>The trigger type of the managed rule. Valid values:</p>
+             * <ul>
+             * <li>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</li>
+             * <li>ScheduledNotification: The managed rule is periodically triggered.</li>
+             * </ul>
              * 
-             * *   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.
-             * *   ScheduledNotification: The managed rule is periodically triggered.
+             * <strong>example:</strong>
+             * <p>ScheduledNotification</p>
              */
             public Builder invokingEventMessageType(String invokingEventMessageType) {
                 this.invokingEventMessageType = invokingEventMessageType;
@@ -478,11 +543,14 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * Indicates whether the remediation template is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the remediation template is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: The remediation template is enabled.</li>
+             * <li>false: The remediation template is disabled.</li>
+             * </ul>
              * 
-             * - true: The remediation template is enabled.
-             * - false: The remediation template is disabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remediationEnabled(Boolean remediationEnabled) {
                 this.remediationEnabled = remediationEnabled;
@@ -490,7 +558,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The timestamp when the compliance evaluation result was recorded. Unit: milliseconds.
+             * <p>The timestamp when the compliance evaluation result was recorded. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624932227595</p>
              */
             public Builder resultRecordedTimestamp(Long resultRecordedTimestamp) {
                 this.resultRecordedTimestamp = resultRecordedTimestamp;
@@ -498,12 +569,15 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high risk level</li>
+             * <li>2: medium risk level</li>
+             * <li>3: low risk level</li>
+             * </ul>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -517,14 +591,20 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateResourceEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateResourceEvaluationResultsResponseBody</p>
+     */
     public static class EvaluationResults extends TeaModel {
-        @NameInMap("EvaluationResultList")
-        private java.util.List < EvaluationResultList> evaluationResultList;
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultList")
+        private java.util.List<EvaluationResultList> evaluationResultList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private EvaluationResults(Builder builder) {
@@ -544,7 +624,7 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         /**
          * @return evaluationResultList
          */
-        public java.util.List < EvaluationResultList> getEvaluationResultList() {
+        public java.util.List<EvaluationResultList> getEvaluationResultList() {
             return this.evaluationResultList;
         }
 
@@ -563,20 +643,23 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         }
 
         public static final class Builder {
-            private java.util.List < EvaluationResultList> evaluationResultList; 
+            private java.util.List<EvaluationResultList> evaluationResultList; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * The details of the compliance evaluation result.
+             * <p>The details of the compliance evaluation result.</p>
              */
-            public Builder evaluationResultList(java.util.List < EvaluationResultList> evaluationResultList) {
+            public Builder evaluationResultList(java.util.List<EvaluationResultList> evaluationResultList) {
                 this.evaluationResultList = evaluationResultList;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned on each page.
+             * <p>The maximum number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -584,7 +667,10 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             }
 
             /**
-             * The token that was used to initiate the next request.
+             * <p>The token that was used to initiate the next request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IWBjqMYSy0is7zSMGu16****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

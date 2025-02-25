@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBaselineRequest} extends {@link RequestModel}
  *
  * <p>CreateBaselineRequest</p>
  */
 public class CreateBaselineRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlertMarginThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertMarginThreshold")
     private Integer alertMarginThreshold;
 
-    @Body
-    @NameInMap("BaselineName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baselineName;
 
-    @Body
-    @NameInMap("BaselineType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baselineType;
 
-    @Body
-    @NameInMap("NodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIds")
     private String nodeIds;
 
-    @Body
-    @NameInMap("OvertimeSettings")
-    @Validation(required = true)
-    private java.util.List < OvertimeSettings> overtimeSettings;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OvertimeSettings")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<OvertimeSettings> overtimeSettings;
 
-    @Body
-    @NameInMap("Owner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String owner;
 
-    @Body
-    @NameInMap("Priority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer priority;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
     private CreateBaselineRequest(Builder builder) {
@@ -118,7 +123,7 @@ public class CreateBaselineRequest extends Request {
     /**
      * @return overtimeSettings
      */
-    public java.util.List < OvertimeSettings> getOvertimeSettings() {
+    public java.util.List<OvertimeSettings> getOvertimeSettings() {
         return this.overtimeSettings;
     }
 
@@ -149,7 +154,7 @@ public class CreateBaselineRequest extends Request {
         private String baselineName; 
         private String baselineType; 
         private String nodeIds; 
-        private java.util.List < OvertimeSettings> overtimeSettings; 
+        private java.util.List<OvertimeSettings> overtimeSettings; 
         private String owner; 
         private Integer priority; 
         private Long projectId; 
@@ -181,7 +186,10 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * AlertMarginThreshold.
+         * <p>The alert margin threshold of the baseline. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder alertMarginThreshold(Integer alertMarginThreshold) {
             this.putBodyParameter("AlertMarginThreshold", alertMarginThreshold);
@@ -190,7 +198,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * BaselineName.
+         * <p>The name of the baseline.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BaselineName</p>
          */
         public Builder baselineName(String baselineName) {
             this.putBodyParameter("BaselineName", baselineName);
@@ -199,7 +211,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * BaselineType.
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         public Builder baselineType(String baselineType) {
             this.putBodyParameter("BaselineType", baselineType);
@@ -208,7 +224,10 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>The ancestor nodes of nodes in the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210001233239,210001236482</p>
          */
         public Builder nodeIds(String nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -217,16 +236,21 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * OvertimeSettings.
+         * <p>The settings of the committed completion time of the baseline.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
+        public Builder overtimeSettings(java.util.List<OvertimeSettings> overtimeSettings) {
             this.putBodyParameter("OvertimeSettings", overtimeSettings);
             this.overtimeSettings = overtimeSettings;
             return this;
         }
 
         /**
-         * Owner.
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000001</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -235,7 +259,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,3,5,7,8</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -244,7 +272,11 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -259,11 +291,17 @@ public class CreateBaselineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBaselineRequest</p>
+     */
     public static class OvertimeSettings extends TeaModel {
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private OvertimeSettings(Builder builder) {
@@ -298,7 +336,10 @@ public class CreateBaselineRequest extends Request {
             private String time; 
 
             /**
-             * Cycle.
+             * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -306,7 +347,10 @@ public class CreateBaselineRequest extends Request {
             }
 
             /**
-             * Time.
+             * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder time(String time) {
                 this.time = time;

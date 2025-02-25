@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainAverageResponseTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainAverageResponseTimeResponseBody</p>
  */
 public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
-    @NameInMap("AvgRTPerInterval")
+    @com.aliyun.core.annotation.NameInMap("AvgRTPerInterval")
     private AvgRTPerInterval avgRTPerInterval;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainAverageResponseTimeResponseBody(Builder builder) {
@@ -98,7 +98,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The average response time data for time intervals.
+         * <p>The average response time data for time intervals.</p>
          */
         public Builder avgRTPerInterval(AvgRTPerInterval avgRTPerInterval) {
             this.avgRTPerInterval = avgRTPerInterval;
@@ -106,7 +106,10 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval between the data entries returned.
+         * <p>The time interval between the data entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -114,7 +117,10 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -122,7 +128,10 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +139,10 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:33:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,11 +166,17 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainAverageResponseTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainAverageResponseTimeResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -190,7 +211,10 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the data returned.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +222,10 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The average response time.
+             * <p>The average response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,8 +239,14 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainAverageResponseTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainAverageResponseTimeResponseBody</p>
+     */
     public static class AvgRTPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private AvgRTPerInterval(Builder builder) {

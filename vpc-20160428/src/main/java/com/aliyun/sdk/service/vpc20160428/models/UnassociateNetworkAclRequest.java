@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateNetworkAclRequest} extends {@link RequestModel}
  *
  * <p>UnassociateNetworkAclRequest</p>
  */
 public class UnassociateNetworkAclRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("NetworkAclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkAclId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Resource")
-    private java.util.List < Resource> resource;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    private java.util.List<Resource> resource;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private UnassociateNetworkAclRequest(Builder builder) {
@@ -121,7 +126,7 @@ public class UnassociateNetworkAclRequest extends Request {
     /**
      * @return resource
      */
-    public java.util.List < Resource> getResource() {
+    public java.util.List<Resource> getResource() {
         return this.resource;
     }
 
@@ -146,7 +151,7 @@ public class UnassociateNetworkAclRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < Resource> resource; 
+        private java.util.List<Resource> resource; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -168,12 +173,14 @@ public class UnassociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -182,7 +189,12 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+         * <p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -191,7 +203,11 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The ID of the network ACL that you want to disassociate from a resource.
+         * <p>The ID of the network ACL that you want to disassociate from a resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-a2do9e413e0sp****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -218,10 +234,12 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The region ID of the network ACL.
-         * <p>
+         * <p>The region ID of the network ACL.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,9 +248,9 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The information about the associated resource.
+         * <p>The information about the associated resource.</p>
          */
-        public Builder resource(java.util.List < Resource> resource) {
+        public Builder resource(java.util.List<Resource> resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
             return this;
@@ -263,11 +281,17 @@ public class UnassociateNetworkAclRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UnassociateNetworkAclRequest} extends {@link TeaModel}
+     *
+     * <p>UnassociateNetworkAclRequest</p>
+     */
     public static class Resource extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private Resource(Builder builder) {
@@ -302,7 +326,10 @@ public class UnassociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the resource from which you want to disassociate the network ACL.
+             * <p>The ID of the resource from which you want to disassociate the network ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1de348lntdw****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -310,10 +337,11 @@ public class UnassociateNetworkAclRequest extends Request {
             }
 
             /**
-             * The type of the resource from which you want to disassociate the network ACL. Set the value to **VSwitch**.
-             * <p>
+             * <p>The type of the resource from which you want to disassociate the network ACL. Set the value to <strong>VSwitch</strong>.</p>
+             * <p>Valid values of <strong>N</strong>: 0 to 29. You can disassociate a network ACL from at most 30 resources at a time.</p>
              * 
-             * Valid values of **N**: 0 to 29. You can disassociate a network ACL from at most 30 resources at a time.
+             * <strong>example:</strong>
+             * <p>VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

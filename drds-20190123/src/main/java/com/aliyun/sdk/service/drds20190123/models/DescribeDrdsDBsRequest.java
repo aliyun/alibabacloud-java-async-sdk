@@ -27,6 +27,7 @@ public class DescribeDrdsDBsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private DescribeDrdsDBsRequest(Builder builder) {
@@ -88,16 +89,16 @@ public class DescribeDrdsDBsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsDBsRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeDrdsDBsRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -106,7 +107,7 @@ public class DescribeDrdsDBsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +116,10 @@ public class DescribeDrdsDBsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of databases to return on each page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +128,7 @@ public class DescribeDrdsDBsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the PolarDB-X 1.0 instance is created.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

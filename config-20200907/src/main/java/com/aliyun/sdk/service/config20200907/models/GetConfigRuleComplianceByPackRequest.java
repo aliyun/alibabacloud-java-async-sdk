@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConfigRuleComplianceByPackRequest} extends {@link RequestModel}
  *
  * <p>GetConfigRuleComplianceByPackRequest</p>
  */
 public class GetConfigRuleComplianceByPackRequest extends Request {
-    @Query
-    @NameInMap("CompliancePackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String compliancePackId;
 
     private GetConfigRuleComplianceByPackRequest(Builder builder) {
@@ -55,10 +60,12 @@ public class GetConfigRuleComplianceByPackRequest extends Request {
         } 
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).
+         * <strong>example:</strong>
+         * <p>cp-541e626622af0087****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);

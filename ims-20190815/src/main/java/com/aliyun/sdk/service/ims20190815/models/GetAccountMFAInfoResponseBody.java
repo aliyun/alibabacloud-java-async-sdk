@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountMFAInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountMFAInfoResponseBody</p>
  */
 public class GetAccountMFAInfoResponseBody extends TeaModel {
-    @NameInMap("IsMFAEnable")
+    @com.aliyun.core.annotation.NameInMap("IsMFAEnable")
     private Boolean isMFAEnable;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountMFAInfoResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether MFA is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether MFA devices are enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isMFAEnable(Boolean isMFAEnable) {
             this.isMFAEnable = isMFAEnable;
@@ -62,7 +70,10 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4BE83135-0B08-467C-B3A2-27B312FD0F57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

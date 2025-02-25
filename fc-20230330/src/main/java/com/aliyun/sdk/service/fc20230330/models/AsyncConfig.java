@@ -1,36 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AsyncConfig} extends {@link TeaModel}
  *
  * <p>AsyncConfig</p>
  */
 public class AsyncConfig extends TeaModel {
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("asyncTask")
+    private Boolean asyncTask;
+
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("destinationConfig")
+    @com.aliyun.core.annotation.NameInMap("destinationConfig")
     private DestinationConfig destinationConfig;
 
-    @NameInMap("functionArn")
+    @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("maxAsyncEventAgeInSeconds")
+    @com.aliyun.core.annotation.NameInMap("maxAsyncEventAgeInSeconds")
     private Long maxAsyncEventAgeInSeconds;
 
-    @NameInMap("maxAsyncRetryAttempts")
+    @com.aliyun.core.annotation.NameInMap("maxAsyncRetryAttempts")
     private Long maxAsyncRetryAttempts;
 
     private AsyncConfig(Builder builder) {
+        this.asyncTask = builder.asyncTask;
         this.createdTime = builder.createdTime;
         this.destinationConfig = builder.destinationConfig;
         this.functionArn = builder.functionArn;
@@ -45,6 +49,13 @@ public class AsyncConfig extends TeaModel {
 
     public static AsyncConfig create() {
         return builder().build();
+    }
+
+    /**
+     * @return asyncTask
+     */
+    public Boolean getAsyncTask() {
+        return this.asyncTask;
     }
 
     /**
@@ -90,12 +101,21 @@ public class AsyncConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean asyncTask; 
         private String createdTime; 
         private DestinationConfig destinationConfig; 
         private String functionArn; 
         private String lastModifiedTime; 
         private Long maxAsyncEventAgeInSeconds; 
         private Long maxAsyncRetryAttempts; 
+
+        /**
+         * asyncTask.
+         */
+        public Builder asyncTask(Boolean asyncTask) {
+            this.asyncTask = asyncTask;
+            return this;
+        }
 
         /**
          * createdTime.

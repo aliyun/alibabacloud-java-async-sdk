@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetArtifactRepositoryCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetArtifactRepositoryCredentialsResponseBody</p>
  */
 public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
-    @NameInMap("AvailableResources")
-    private java.util.List < AvailableResources> availableResources;
+    @com.aliyun.core.annotation.NameInMap("AvailableResources")
+    private java.util.List<AvailableResources> availableResources;
 
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private Credentials credentials;
 
-    @NameInMap("ExpireDate")
+    @com.aliyun.core.annotation.NameInMap("ExpireDate")
     private String expireDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetArtifactRepositoryCredentialsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     /**
      * @return availableResources
      */
-    public java.util.List < AvailableResources> getAvailableResources() {
+    public java.util.List<AvailableResources> getAvailableResources() {
         return this.availableResources;
     }
 
@@ -68,21 +73,21 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableResources> availableResources; 
+        private java.util.List<AvailableResources> availableResources; 
         private Credentials credentials; 
         private String expireDate; 
         private String requestId; 
 
         /**
-         * AvailableResources.
+         * <p>The information about the resources that can be uploaded.</p>
          */
-        public Builder availableResources(java.util.List < AvailableResources> availableResources) {
+        public Builder availableResources(java.util.List<AvailableResources> availableResources) {
             this.availableResources = availableResources;
             return this;
         }
 
         /**
-         * Credentials.
+         * <p>The credentials.</p>
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -90,7 +95,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireDate.
+         * <p>The time when the credentials expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1526549792000</p>
          */
         public Builder expireDate(String expireDate) {
             this.expireDate = expireDate;
@@ -98,7 +106,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94E89857-B994-44B6-9C4F-DBD200E9XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +122,20 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetArtifactRepositoryCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactRepositoryCredentialsResponseBody</p>
+     */
     public static class AvailableResources extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepositoryName")
+        @com.aliyun.core.annotation.NameInMap("RepositoryName")
         private String repositoryName;
 
         private AvailableResources(Builder builder) {
@@ -162,7 +179,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String repositoryName; 
 
             /**
-             * Path.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;/xxx/&quot;</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -170,7 +190,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -178,7 +201,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * RepositoryName.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>computenest-artifacts-draft-cn-hangzhou</p>
              */
             public Builder repositoryName(String repositoryName) {
                 this.repositoryName = repositoryName;
@@ -192,20 +218,26 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetArtifactRepositoryCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetArtifactRepositoryCredentialsResponseBody</p>
+     */
     public static class Credentials extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Credentials(Builder builder) {
@@ -267,7 +299,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * AccessKeyId.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.xxx</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -275,7 +310,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * <p>The AccessKey secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -283,7 +321,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJ0aW1lIjoiMTUyNjU0OTc5:0705733****</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -291,7 +332,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The Security Token Service (STS) token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -299,7 +343,10 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder username(String username) {
                 this.username = username;

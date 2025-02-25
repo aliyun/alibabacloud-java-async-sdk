@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductsResponseBody</p>
  */
 public class ListProductsResponseBody extends TeaModel {
-    @NameInMap("Products")
+    @com.aliyun.core.annotation.NameInMap("Products")
     private java.util.List < Products> products;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Services")
+    @com.aliyun.core.annotation.NameInMap("Services")
     private java.util.List < Services> services;
 
     private ListProductsResponseBody(Builder builder) {
@@ -91,20 +91,26 @@ public class ListProductsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class Products extends TeaModel {
-        @NameInMap("HasPermissionToPurchase")
+        @com.aliyun.core.annotation.NameInMap("HasPermissionToPurchase")
         private Boolean hasPermissionToPurchase;
 
-        @NameInMap("IsPurchased")
+        @com.aliyun.core.annotation.NameInMap("IsPurchased")
         private Boolean isPurchased;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ProductInstanceId")
         private String productInstanceId;
 
-        @NameInMap("PurchaseUrl")
+        @com.aliyun.core.annotation.NameInMap("PurchaseUrl")
         private String purchaseUrl;
 
         private Products(Builder builder) {
@@ -212,14 +218,20 @@ public class ListProductsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class Services extends TeaModel {
-        @NameInMap("IsOpen")
+        @com.aliyun.core.annotation.NameInMap("IsOpen")
         private Boolean isOpen;
 
-        @NameInMap("OpenUrl")
+        @com.aliyun.core.annotation.NameInMap("OpenUrl")
         private String openUrl;
 
-        @NameInMap("ServiceCode")
+        @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
 
         private Services(Builder builder) {

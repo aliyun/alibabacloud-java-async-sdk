@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataSourceDeployRequest} extends {@link RequestModel}
  *
  * <p>GetDataSourceDeployRequest</p>
  */
 public class GetDataSourceDeployRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("deployName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("deployName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deployName;
 
-    @Path
-    @NameInMap("dataSourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceName;
 
     private GetDataSourceDeployRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class GetDataSourceDeployRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-uax37kni501</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +103,10 @@ public class GetDataSourceDeployRequest extends Request {
         }
 
         /**
-         * deployName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         public Builder deployName(String deployName) {
             this.putPathParameter("deployName", deployName);
@@ -103,7 +115,11 @@ public class GetDataSourceDeployRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * <p>The name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-9lb34d9ee01_image_embedding</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);

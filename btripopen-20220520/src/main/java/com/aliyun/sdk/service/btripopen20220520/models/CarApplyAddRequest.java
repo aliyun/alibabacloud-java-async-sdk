@@ -1,99 +1,102 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CarApplyAddRequest} extends {@link RequestModel}
  *
  * <p>CarApplyAddRequest</p>
  */
 public class CarApplyAddRequest extends Request {
-    @Body
-    @NameInMap("cause")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cause")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cause;
 
-    @Body
-    @NameInMap("city")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("city")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String city;
 
-    @Body
-    @NameInMap("city_code_set")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("city_code_set")
     private String cityCodeSet;
 
-    @Body
-    @NameInMap("date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String date;
 
-    @Body
-    @NameInMap("finished_date")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("finished_date")
     private String finishedDate;
 
-    @Body
-    @NameInMap("project_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("project_code")
     private String projectCode;
 
-    @Body
-    @NameInMap("project_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("project_name")
     private String projectName;
 
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("third_part_apply_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartApplyId;
 
-    @Body
-    @NameInMap("third_part_cost_center_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_cost_center_id")
     private String thirdPartCostCenterId;
 
-    @Body
-    @NameInMap("third_part_invoice_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
     private String thirdPartInvoiceId;
 
-    @Body
-    @NameInMap("times_total")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("times_total")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesTotal;
 
-    @Body
-    @NameInMap("times_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("times_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesType;
 
-    @Body
-    @NameInMap("times_used")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("times_used")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesUsed;
 
-    @Body
-    @NameInMap("title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @Body
-    @NameInMap("traveler_standard")
-    private java.util.List < TravelerStandard> travelerStandard;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("traveler_standard")
+    private java.util.List<TravelerStandard> travelerStandard;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private CarApplyAddRequest(Builder builder) {
@@ -239,7 +242,7 @@ public class CarApplyAddRequest extends Request {
     /**
      * @return travelerStandard
      */
-    public java.util.List < TravelerStandard> getTravelerStandard() {
+    public java.util.List<TravelerStandard> getTravelerStandard() {
         return this.travelerStandard;
     }
 
@@ -273,7 +276,7 @@ public class CarApplyAddRequest extends Request {
         private Integer timesType; 
         private Integer timesUsed; 
         private String title; 
-        private java.util.List < TravelerStandard> travelerStandard; 
+        private java.util.List<TravelerStandard> travelerStandard; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -304,7 +307,7 @@ public class CarApplyAddRequest extends Request {
         } 
 
         /**
-         * cause.
+         * <p>This parameter is required.</p>
          */
         public Builder cause(String cause) {
             this.putBodyParameter("cause", cause);
@@ -313,7 +316,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * city.
+         * <p>This parameter is required.</p>
          */
         public Builder city(String city) {
             this.putBodyParameter("city", city);
@@ -331,7 +334,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-12 14:52:52</p>
          */
         public Builder date(String date) {
             this.putBodyParameter("date", date);
@@ -367,7 +373,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -376,7 +385,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * third_part_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IRGS1413</p>
          */
         public Builder thirdPartApplyId(String thirdPartApplyId) {
             this.putBodyParameter("third_part_apply_id", thirdPartApplyId);
@@ -403,7 +415,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * times_total.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timesTotal(Integer timesTotal) {
             this.putBodyParameter("times_total", timesTotal);
@@ -412,7 +427,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * times_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timesType(Integer timesType) {
             this.putBodyParameter("times_type", timesType);
@@ -421,7 +439,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * times_used.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timesUsed(Integer timesUsed) {
             this.putBodyParameter("times_used", timesUsed);
@@ -430,7 +451,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -441,7 +462,7 @@ public class CarApplyAddRequest extends Request {
         /**
          * traveler_standard.
          */
-        public Builder travelerStandard(java.util.List < TravelerStandard> travelerStandard) {
+        public Builder travelerStandard(java.util.List<TravelerStandard> travelerStandard) {
             String travelerStandardShrink = shrink(travelerStandard, "traveler_standard", "json");
             this.putBodyParameter("traveler_standard", travelerStandardShrink);
             this.travelerStandard = travelerStandard;
@@ -449,7 +470,10 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN1415614</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -473,13 +497,19 @@ public class CarApplyAddRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CarApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>CarApplyAddRequest</p>
+     */
     public static class CarCitySet extends TeaModel {
-        @NameInMap("city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityCode;
 
-        @NameInMap("city_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityName;
 
         private CarCitySet(Builder builder) {
@@ -514,7 +544,7 @@ public class CarApplyAddRequest extends Request {
             private String cityName; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -522,7 +552,7 @@ public class CarApplyAddRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -536,12 +566,18 @@ public class CarApplyAddRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CarApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>CarApplyAddRequest</p>
+     */
     public static class TravelerStandard extends TeaModel {
-        @NameInMap("car_city_set")
-        private java.util.List < CarCitySet> carCitySet;
+        @com.aliyun.core.annotation.NameInMap("car_city_set")
+        private java.util.List<CarCitySet> carCitySet;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private TravelerStandard(Builder builder) {
@@ -560,7 +596,7 @@ public class CarApplyAddRequest extends Request {
         /**
          * @return carCitySet
          */
-        public java.util.List < CarCitySet> getCarCitySet() {
+        public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
         }
 
@@ -572,19 +608,19 @@ public class CarApplyAddRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < CarCitySet> carCitySet; 
+            private java.util.List<CarCitySet> carCitySet; 
             private String userId; 
 
             /**
              * car_city_set.
              */
-            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+            public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
                 return this;
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

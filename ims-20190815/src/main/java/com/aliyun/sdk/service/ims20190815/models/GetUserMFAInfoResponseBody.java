@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserMFAInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserMFAInfoResponseBody</p>
  */
 public class GetUserMFAInfoResponseBody extends TeaModel {
-    @NameInMap("IsMFAEnable")
+    @com.aliyun.core.annotation.NameInMap("IsMFAEnable")
     private Boolean isMFAEnable;
 
-    @NameInMap("MFADevice")
+    @com.aliyun.core.annotation.NameInMap("MFADevice")
     private MFADevice MFADevice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetUserMFAInfoResponseBody(Builder builder) {
@@ -62,11 +67,14 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the MFA device is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the MFA device is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMFAEnable(Boolean isMFAEnable) {
             this.isMFAEnable = isMFAEnable;
@@ -74,7 +82,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the MFA device.
+         * <p>The information about the MFA device.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -82,7 +90,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCF7322A-20A9-4F68-8B7F-F86958839BC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,11 +106,17 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserMFAInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserMFAInfoResponseBody</p>
+     */
     public static class MFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MFADevice(Builder builder) {
@@ -134,7 +151,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The serial number of the MFA device.
+             * <p>The serial number of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::177242285274****:mfa/device001</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -142,11 +162,14 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the MFA device. Valid values:
-             * <p>
+             * <p>The type of the MFA device. Valid values:</p>
+             * <ul>
+             * <li>VMFA: virtual MFA device</li>
+             * <li>U2F: Universal 2nd Factor (U2F) security key</li>
+             * </ul>
              * 
-             * *   VMFA: virtual MFA device
-             * *   U2F: Universal 2nd Factor (U2F) security key
+             * <strong>example:</strong>
+             * <p>VMFA</p>
              */
             public Builder type(String type) {
                 this.type = type;

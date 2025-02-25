@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeLindormInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeLindormInstanceResponseBody</p>
  */
 public class UpgradeLindormInstanceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpgradeLindormInstanceResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class UpgradeLindormInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111111</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -58,7 +66,10 @@ public class UpgradeLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A7D4F9D-AA26-4E15-A2B1-3E4792C6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

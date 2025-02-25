@@ -1,3 +1,90 @@
+2025-01-07 Version: 4.0.7
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-12-17 Version: 4.0.6
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-10-15 Version: 4.0.5
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-08-01 Version: 4.0.4
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-07-31 Version: 4.0.3
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-07-26 Version: 4.0.2
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-07-11 Version: 4.0.1
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-07-08 Version: 4.0.0
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-07-01 Version: 3.0.6
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-06-26 Version: 3.0.5
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-06-24 Version: 3.0.4
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-06-12 Version: 3.0.3
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-06-03 Version: 3.0.2
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-05-21 Version: 3.0.1
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-05-13 Version: 3.0.0
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-05-09 Version: 2.0.8
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-04-12 Version: 2.0.7
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-04-08 Version: 2.0.6
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-03-19 Version: 2.0.5
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-03-13 Version: 2.0.4
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-03-13 Version: 2.0.3
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-03-01 Version: 2.0.2
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-02-28 Version: 2.0.1
+- Update SDK.
+
+2024-02-22 Version: 2.0.0
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-02-19 Version: 1.1.50
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-02-06 Version: 1.1.49
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-02-04 Version: 1.1.48
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-01-30 Version: 1.1.47
+- Generated java-async 2022-05-20 for btripOpen.
+
+2024-01-26 Version: 1.1.46
+- Generated java-async 2022-05-20 for btripOpen.
+
 2023-12-20 Version: 1.1.45
 - Generated java-async 2022-05-20 for btripOpen.
 

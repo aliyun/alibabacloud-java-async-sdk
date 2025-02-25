@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpRiskDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpRiskDataResponseBody</p>
  */
 public class GetOpRiskDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskData")
+    @com.aliyun.core.annotation.NameInMap("RiskData")
     private String riskData;
 
     private GetOpRiskDataResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetOpRiskDataResponseBody extends TeaModel {
         private String riskData; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,17 +66,30 @@ public class GetOpRiskDataResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the risky sensitive data returned. The information includes totalCount and opRiskDatas.
-         * <p>
+         * <p>The information about the high-risk sensitive data. The information includes totalCount and opRiskDatas. opRiskDatas includes the following parameters:</p>
+         * <ul>
+         * <li>sensType: the type of the sensitive data</li>
+         * <li>sensLevel: the sensitivity level of the sensitive data</li>
+         * <li>opType: the type of the operation</li>
+         * <li>sql: the SQL statement that is executed</li>
+         * <li>opAccount: the account that is used to perform the operation</li>
+         * <li>opTime: the time when the operation was performed</li>
+         * </ul>
          * 
-         * opRiskDatas includes the following parameters:
-         * 
-         * *   sensType: the type of the sensitive data
-         * *   sensLevel: the sensitivity level of the sensitive data
-         * *   opType: the type of the operation
-         * *   sql: the SQL statement that is executed
-         * *   opAccount: the account that is used to perform the operation
-         * *   opTime: the time when the operation was performed
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;opRiskDatas&quot;: [
+         *             {
+         *                   &quot;riskType&quot;: &quot;Hierarchical dimension, EMR engine dimension and project dimension, EMR engine project dimension operation data, export method dimension, EMR engine&quot;,
+         *                   &quot;opTime&quot;: &quot;2021-01-04 23:39:13&quot;,
+         *                   &quot;opType&quot;: &quot;SQL_SELECT&quot;,
+         *                   &quot;opAccount&quot;: &quot;user&quot;,
+         *                   &quot;sensType&quot;: &quot;Email/name/mobile phone number&quot;,
+         *                   &quot;sql&quot;: &quot;SELECT * FROM default.jiade_1219_test_create LIMIT 20&quot;
+         *             }
+         *       ],
+         *       &quot;totalCount&quot;: 499
+         * }</p>
          */
         public Builder riskData(String riskData) {
             this.riskData = riskData;

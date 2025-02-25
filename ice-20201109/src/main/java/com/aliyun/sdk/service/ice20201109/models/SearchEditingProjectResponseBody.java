@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchEditingProjectResponseBody} extends {@link TeaModel}
  *
  * <p>SearchEditingProjectResponseBody</p>
  */
 public class SearchEditingProjectResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("ProjectList")
-    private java.util.List < ProjectList> projectList;
+    @com.aliyun.core.annotation.NameInMap("ProjectList")
+    private java.util.List<ProjectList> projectList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private SearchEditingProjectResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     /**
      * @return projectList
      */
-    public java.util.List < ProjectList> getProjectList() {
+    public java.util.List<ProjectList> getProjectList() {
         return this.projectList;
     }
 
@@ -81,12 +86,17 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     public static final class Builder {
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < ProjectList> projectList; 
+        private java.util.List<ProjectList> projectList; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned on a single page. The value is set to the maximum number of entries returned on each page except for the last page.</p>
+         * <p>Examples:</p>
+         * <p>Valid example: 10,10,5. Invalid example: 10,5,10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +104,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,15 +115,18 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectList.
+         * <p>The queried online editing projects.</p>
          */
-        public Builder projectList(java.util.List < ProjectList> projectList) {
+        public Builder projectList(java.util.List<ProjectList> projectList) {
             this.projectList = projectList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>9262E3DA-07FA-4862-FCBB6BC61D08</strong></strong>*</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +134,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Optional. The total number of entries returned. By default, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -131,56 +150,62 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchEditingProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchEditingProjectResponseBody</p>
+     */
     public static class ProjectList extends TeaModel {
-        @NameInMap("BusinessConfig")
+        @com.aliyun.core.annotation.NameInMap("BusinessConfig")
         private String businessConfig;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateSource")
+        @com.aliyun.core.annotation.NameInMap("CreateSource")
         private String createSource;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ModifiedSource")
+        @com.aliyun.core.annotation.NameInMap("ModifiedSource")
         private String modifiedSource;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectType")
+        @com.aliyun.core.annotation.NameInMap("ProjectType")
         private String projectType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
-        @NameInMap("Timeline")
+        @com.aliyun.core.annotation.NameInMap("Timeline")
         private String timeline;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private ProjectList(Builder builder) {
@@ -350,7 +375,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * BusinessConfig.
+             * <p>The business configuration of the project. This parameter can be ignored for general editing projects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;OutputMediaConfig&quot; : { &quot;StorageLocation&quot;: &quot;test-bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;Path&quot;: &quot;test-path&quot; }, &quot;OutputMediaTarget&quot;: &quot;oss-object&quot;, &quot;ReservationTime&quot;: &quot;2021-06-21T08:05:00Z&quot; }</p>
              */
             public Builder businessConfig(String businessConfig) {
                 this.businessConfig = businessConfig;
@@ -358,7 +386,18 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * <p>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>BroadCasting:</li>
+             * <li>ReservationCanceled</li>
+             * <li>LiveFinished</li>
+             * <li>LoadingFailed</li>
+             * <li>Reserving</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Reserving</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -366,7 +405,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The thumbnail URL of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example-cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example-cover.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -374,7 +416,19 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * CreateSource.
+             * <p>The method for editing the online editing project.</p>
+             * <p>-OpenAPI</p>
+             * <p>-AliyunConsole</p>
+             * <p>-WebSDK</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AliyunConsole: The project is created in the Alibaba Cloud console.</li>
+             * <li>WebSDK: The project is created by using the SDK for Web.</li>
+             * <li>OpenAPI: The project is created by calling API operations.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI</p>
              */
             public Builder createSource(String createSource) {
                 this.createSource = createSource;
@@ -382,7 +436,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the online editing project was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-11T12:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -390,7 +447,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -398,7 +458,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The total length of the online editing project. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.100000</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -406,7 +469,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code returned if the production of the online editing project failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -414,7 +480,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned if the production of the online editing project failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;EventTime&quot;:&quot;2021-08-12T10:04:15Z&quot;,&quot;ErrorCode&quot;:&quot;InvalidParameter&quot;,&quot;ErrorMessage&quot;:&quot;The specified parameter &quot;LiveStreamConfig&quot; is not valid. specified parameter example is not valid.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -422,7 +491,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedSource.
+             * <p>The method used when the online editing project was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-11T12:00:00Z</p>
              */
             public Builder modifiedSource(String modifiedSource) {
                 this.modifiedSource = modifiedSource;
@@ -430,7 +502,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the online editing project was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-11T12:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -438,7 +513,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -446,7 +524,15 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectType.
+             * <p>The type of the editing project.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>LiveEditingProject: a live stream editing project.</li>
+             * <li>EditingProject: a regular editing project.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EditingProject</p>
              */
             public Builder projectType(String projectType) {
                 this.projectType = projectType;
@@ -454,7 +540,23 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the online editing project. Valid values:</p>
+             * <p>-Draft</p>
+             * <p>-Editing</p>
+             * <p>-Producing</p>
+             * <p>-Produced</p>
+             * <p>-ProduceFailed</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Draft</li>
+             * <li>Produced</li>
+             * <li>Editing</li>
+             * <li>Producing</li>
+             * <li>ProduceFailed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRODUCE_FAILED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -462,7 +564,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Timeline</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -470,7 +575,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Timeline.
+             * <p>The timeline of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
              */
             public Builder timeline(String timeline) {
                 this.timeline = timeline;
@@ -478,7 +586,10 @@ public class SearchEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the online editing project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder title(String title) {
                 this.title = title;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OutputCodeLocation} extends {@link TeaModel}
  *
  * <p>OutputCodeLocation</p>
  */
 public class OutputCodeLocation extends TeaModel {
-    @NameInMap("location")
+    @com.aliyun.core.annotation.NameInMap("location")
     private String location;
 
-    @NameInMap("repositoryType")
+    @com.aliyun.core.annotation.NameInMap("repositoryType")
     private String repositoryType;
 
     private OutputCodeLocation(Builder builder) {

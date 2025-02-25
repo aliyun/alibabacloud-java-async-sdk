@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopsPolicyGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDesktopsPolicyGroupResponseBody</p>
  */
 public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
-    @NameInMap("ModifyResults")
-    private java.util.List < ModifyResults> modifyResults;
+    @com.aliyun.core.annotation.NameInMap("ModifyResults")
+    private java.util.List<ModifyResults> modifyResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDesktopsPolicyGroupResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
     /**
      * @return modifyResults
      */
-    public java.util.List < ModifyResults> getModifyResults() {
+    public java.util.List<ModifyResults> getModifyResults() {
         return this.modifyResults;
     }
 
@@ -46,19 +51,22 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ModifyResults> modifyResults; 
+        private java.util.List<ModifyResults> modifyResults; 
         private String requestId; 
 
         /**
-         * ModifyResults.
+         * <p>The modification results.</p>
          */
-        public Builder modifyResults(java.util.List < ModifyResults> modifyResults) {
+        public Builder modifyResults(java.util.List<ModifyResults> modifyResults) {
             this.modifyResults = modifyResults;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDesktopsPolicyGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyDesktopsPolicyGroupResponseBody</p>
+     */
     public static class ModifyResults extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private ModifyResults(Builder builder) {
@@ -122,7 +136,10 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * <p>The result of the modification. A value of success indicates that the policy is modified. If the policy failed to be modified, an error message is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +147,10 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The ID of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-7w78ozhjcwa3u****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -138,7 +158,10 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message returned if the request failed. This parameter is not returned if the value of Code is success.``</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified param DesktopId ecd-ia2zw38bi6cm7**** is not found.</p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBlackholeRequest} extends {@link RequestModel}
  *
  * <p>DeleteBlackholeRequest</p>
  */
 public class DeleteBlackholeRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Ip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ip;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DeleteBlackholeRequest(Builder builder) {
@@ -98,10 +98,14 @@ public class DeleteBlackholeRequest extends Request {
         } 
 
         /**
-         * The ID of the Anti-DDoS Origin instance.
-         * <p>
+         * <p>The ID of the Anti-DDoS Origin instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -110,10 +114,14 @@ public class DeleteBlackholeRequest extends Request {
         }
 
         /**
-         * The IP address for which you want to deactivate blackhole filtering.
-         * <p>
+         * <p>The IP address for which you want to deactivate blackhole filtering.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> operation to query all the IP addresses that are protected by the Anti-DDoS Origin instance and the protection status of the IP addresses. For example, you can query whether blackhole filtering is triggered for an IP address.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribePackIpList](~~118701~~) operation to query all the IP addresses that are protected by the Anti-DDoS Origin instance and the protection status of the IP addresses. For example, you can query whether blackhole filtering is triggered for an IP address.
+         * <strong>example:</strong>
+         * <p>47.89.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -122,10 +130,13 @@ public class DeleteBlackholeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
-         * <p>
+         * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -134,10 +145,11 @@ public class DeleteBlackholeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

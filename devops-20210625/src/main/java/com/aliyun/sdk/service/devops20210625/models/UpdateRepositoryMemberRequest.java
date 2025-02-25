@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepositoryMemberRequest} extends {@link RequestModel}
  *
  * <p>UpdateRepositoryMemberRequest</p>
  */
 public class UpdateRepositoryMemberRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Path
-    @NameInMap("aliyunPk")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("aliyunPk")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aliyunPk;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("accessLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("accessLevel")
     private Integer accessLevel;
 
-    @Body
-    @NameInMap("expireAt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expireAt")
     private String expireAt;
 
-    @Body
-    @NameInMap("memberType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("memberType")
     private String memberType;
 
-    @Body
-    @NameInMap("relatedId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedId")
     private String relatedId;
 
-    @Body
-    @NameInMap("relatedInfos")
-    private java.util.List < RelatedInfos> relatedInfos;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedInfos")
+    private java.util.List<RelatedInfos> relatedInfos;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpdateRepositoryMemberRequest(Builder builder) {
@@ -129,7 +134,7 @@ public class UpdateRepositoryMemberRequest extends Request {
     /**
      * @return relatedInfos
      */
-    public java.util.List < RelatedInfos> getRelatedInfos() {
+    public java.util.List<RelatedInfos> getRelatedInfos() {
         return this.relatedInfos;
     }
 
@@ -148,7 +153,7 @@ public class UpdateRepositoryMemberRequest extends Request {
         private String expireAt; 
         private String memberType; 
         private String relatedId; 
-        private java.util.List < RelatedInfos> relatedInfos; 
+        private java.util.List<RelatedInfos> relatedInfos; 
         private String organizationId; 
 
         private Builder() {
@@ -169,7 +174,10 @@ public class UpdateRepositoryMemberRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>889910</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -178,7 +186,10 @@ public class UpdateRepositoryMemberRequest extends Request {
         }
 
         /**
-         * aliyunPk.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232456789123467</p>
          */
         public Builder aliyunPk(String aliyunPk) {
             this.putPathParameter("aliyunPk", aliyunPk);
@@ -234,14 +245,17 @@ public class UpdateRepositoryMemberRequest extends Request {
         /**
          * relatedInfos.
          */
-        public Builder relatedInfos(java.util.List < RelatedInfos> relatedInfos) {
+        public Builder relatedInfos(java.util.List<RelatedInfos> relatedInfos) {
             this.putBodyParameter("relatedInfos", relatedInfos);
             this.relatedInfos = relatedInfos;
             return this;
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -256,14 +270,20 @@ public class UpdateRepositoryMemberRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRepositoryMemberRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryMemberRequest</p>
+     */
     public static class RelatedInfos extends TeaModel {
-        @NameInMap("relatedId")
+        @com.aliyun.core.annotation.NameInMap("relatedId")
         private String relatedId;
 
-        @NameInMap("sourceId")
+        @com.aliyun.core.annotation.NameInMap("sourceId")
         private Long sourceId;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
         private RelatedInfos(Builder builder) {

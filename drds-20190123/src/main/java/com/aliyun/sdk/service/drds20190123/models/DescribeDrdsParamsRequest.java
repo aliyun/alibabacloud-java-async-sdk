@@ -89,16 +89,16 @@ public class DescribeDrdsParamsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsParamsRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.paramLevel = response.paramLevel;
-            this.regionId = response.regionId;
+        private Builder(DescribeDrdsParamsRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.paramLevel = request.paramLevel;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -107,7 +107,7 @@ public class DescribeDrdsParamsRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -116,7 +116,11 @@ public class DescribeDrdsParamsRequest extends Request {
         }
 
         /**
-         * ParamLevel.
+         * The type of nodes whose parameters you want to query. Valid values:
+         * <p>
+         * 
+         * *   **INSTANCE: the instance level.**
+         * *   **DB**: the database level.
          */
         public Builder paramLevel(String paramLevel) {
             this.putQueryParameter("ParamLevel", paramLevel);
@@ -125,7 +129,7 @@ public class DescribeDrdsParamsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the PolarDB-X 1.0 instance is created.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

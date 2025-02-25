@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRuleByIdRequest} extends {@link RequestModel}
  *
  * <p>UpdateRuleByIdRequest</p>
  */
 public class UpdateRuleByIdRequest extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Body
-    @NameInMap("IsCopy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsCopy")
     private Boolean isCopy;
 
-    @Body
-    @NameInMap("JsonStrForRule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JsonStrForRule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStrForRule;
 
-    @Body
-    @NameInMap("ReturnRelatedSchemes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReturnRelatedSchemes")
     private Boolean returnRelatedSchemes;
 
-    @Body
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
     private UpdateRuleByIdRequest(Builder builder) {
@@ -111,7 +116,7 @@ public class UpdateRuleByIdRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -129,7 +134,10 @@ public class UpdateRuleByIdRequest extends Request {
         }
 
         /**
-         * JsonStrForRule.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder jsonStrForRule(String jsonStrForRule) {
             this.putBodyParameter("JsonStrForRule", jsonStrForRule);

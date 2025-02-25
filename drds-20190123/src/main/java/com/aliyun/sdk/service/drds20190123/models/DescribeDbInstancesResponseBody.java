@@ -50,7 +50,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * The details of the instance.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,6 +113,9 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
+        @NameInMap("AllowAllCategory")
+        private Boolean allowAllCategory;
+
         @NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
@@ -144,6 +147,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.allowAllCategory = builder.allowAllCategory;
             this.DBInstanceDescription = builder.DBInstanceDescription;
             this.DBInstanceId = builder.DBInstanceId;
             this.DBInstanceStatus = builder.DBInstanceStatus;
@@ -162,6 +166,13 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowAllCategory
+         */
+        public Boolean getAllowAllCategory() {
+            return this.allowAllCategory;
         }
 
         /**
@@ -235,6 +246,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowAllCategory; 
             private String DBInstanceDescription; 
             private String DBInstanceId; 
             private Integer DBInstanceStatus; 
@@ -247,7 +259,15 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * DBInstanceDescription.
+             * AllowAllCategory.
+             */
+            public Builder allowAllCategory(Boolean allowAllCategory) {
+                this.allowAllCategory = allowAllCategory;
+                return this;
+            }
+
+            /**
+             * The description of the storage instance.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -255,7 +275,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the storage instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -263,7 +283,16 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * Storage layer instance status. Valid values:
+             * <p>
+             * 
+             * *   **0**: creating
+             * *   **1**: In use
+             * *   **3**: Deleting
+             * *   **5**: restarting
+             * *   **6**: upgrading /Downgrading
+             * *   **7**: Recovering
+             * *   **8**: switching the Internet and intranet
              */
             public Builder DBInstanceStatus(Integer DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -271,7 +300,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceType.
+             * The storage layer instance type.
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -279,7 +308,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The engine of the storage instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -287,7 +316,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version of the engine for the storage instance.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -295,7 +324,11 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNetworkType.
+             * The network type of the storage layer. Valid values:
+             * <p>
+             * 
+             * *   **VPC**: VPC
+             * *   **CLASSIC **: Classic Network
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -303,7 +336,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyDBInstanceId.
+             * The details about a read-only storage instance.
              */
             public Builder readOnlyDBInstanceId(ReadOnlyDBInstanceId readOnlyDBInstanceId) {
                 this.readOnlyDBInstanceId = readOnlyDBInstanceId;
@@ -311,7 +344,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the storage instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -319,7 +352,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone where the storage instance resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

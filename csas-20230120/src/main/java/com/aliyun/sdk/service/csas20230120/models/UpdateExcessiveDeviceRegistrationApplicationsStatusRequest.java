@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateExcessiveDeviceRegistrationApplicationsStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateExcessiveDeviceRegistrationApplicationsStatusRequest</p>
  */
 public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends Request {
-    @Body
-    @NameInMap("ApplicationIds")
-    @Validation(required = true)
-    private java.util.List < String > applicationIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> applicationIds;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private UpdateExcessiveDeviceRegistrationApplicationsStatusRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -56,7 +61,7 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
     }
 
     public static final class Builder extends Request.Builder<UpdateExcessiveDeviceRegistrationApplicationsStatusRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String status; 
 
         private Builder() {
@@ -70,16 +75,19 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
         } 
 
         /**
-         * ApplicationIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

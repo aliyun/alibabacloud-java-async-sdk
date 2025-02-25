@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchUnbindTemplatesRequest} extends {@link RequestModel}
  *
  * <p>BatchUnbindTemplatesRequest</p>
  */
 public class BatchUnbindTemplatesRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private BatchUnbindTemplatesRequest(Builder builder) {
@@ -102,17 +107,20 @@ public class BatchUnbindTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(BatchUnbindTemplatesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.ownerId = response.ownerId;
-            this.templateId = response.templateId;
-            this.templateType = response.templateType;
+        private Builder(BatchUnbindTemplatesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.ownerId = request.ownerId;
+            this.templateId = request.templateId;
+            this.templateType = request.templateType;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400941290881239938-cn-beijing</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,7 +129,10 @@ public class BatchUnbindTemplatesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stream</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

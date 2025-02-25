@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDistinctReleasesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDistinctReleasesRequest</p>
  */
 public class DescribeDistinctReleasesRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
-    @Query
-    @NameInMap("TaskflowMd5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
     private String taskflowMd5;
 
     private DescribeDistinctReleasesRequest(Builder builder) {
@@ -83,7 +83,14 @@ public class DescribeDistinctReleasesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +99,14 @@ public class DescribeDistinctReleasesRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * <p>The playbook UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bc0b8424-535c-4ed5-bd94-xxxxxx</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -101,7 +115,10 @@ public class DescribeDistinctReleasesRequest extends Request {
         }
 
         /**
-         * TaskflowMd5.
+         * <p>The MD5 value of the playbook XML configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be0a4ef084dd174abe47xxxxx</p>
          */
         public Builder taskflowMd5(String taskflowMd5) {
             this.putQueryParameter("TaskflowMd5", taskflowMd5);

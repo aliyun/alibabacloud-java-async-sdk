@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssStorageAndAccByBucketsResponseBody} extends {@link TeaModel}
  *
  * <p>GetOssStorageAndAccByBucketsResponseBody</p>
  */
 public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
-    @NameInMap("BucketList")
-    private java.util.List < BucketList> bucketList;
+    @com.aliyun.core.annotation.NameInMap("BucketList")
+    private java.util.List<BucketList> bucketList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOssStorageAndAccByBucketsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     /**
      * @return bucketList
      */
-    public java.util.List < BucketList> getBucketList() {
+    public java.util.List<BucketList> getBucketList() {
         return this.bucketList;
     }
 
@@ -46,19 +51,22 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BucketList> bucketList; 
+        private java.util.List<BucketList> bucketList; 
         private String requestId; 
 
         /**
-         * BucketList.
+         * <p>The information about the bucket.</p>
          */
-        public Builder bucketList(java.util.List < BucketList> bucketList) {
+        public Builder bucketList(java.util.List<BucketList> bucketList) {
             this.bucketList = bucketList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112F4860-F1B2-58DD-8FC0-75F19DA1C4BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOssStorageAndAccByBucketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOssStorageAndAccByBucketsResponseBody</p>
+     */
     public static class BucketList extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
 
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("StorageUsageByte")
+        @com.aliyun.core.annotation.NameInMap("StorageUsageByte")
         private Long storageUsageByte;
 
         private BucketList(Builder builder) {
@@ -122,7 +136,10 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             private Long storageUsageByte; 
 
             /**
-             * Acc.
+             * <p>The number of times that the bucket is accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -130,7 +147,10 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket.
+             * <p>The name of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -138,7 +158,10 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsageByte.
+             * <p>The storage usage of the bucket. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder storageUsageByte(Long storageUsageByte) {
                 this.storageUsageByte = storageUsageByte;

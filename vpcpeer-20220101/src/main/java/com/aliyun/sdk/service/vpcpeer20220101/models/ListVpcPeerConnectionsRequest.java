@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcpeer20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcPeerConnectionsRequest} extends {@link RequestModel}
  *
  * <p>ListVpcPeerConnectionsRequest</p>
  */
 public class ListVpcPeerConnectionsRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @Body
-    @NameInMap("VpcId")
-    private java.util.List < String > vpcId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private java.util.List<String> vpcId;
 
     private ListVpcPeerConnectionsRequest(Builder builder) {
         super(builder);
@@ -114,14 +119,14 @@ public class ListVpcPeerConnectionsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return vpcId
      */
-    public java.util.List < String > getVpcId() {
+    public java.util.List<String> getVpcId() {
         return this.vpcId;
     }
 
@@ -132,8 +137,8 @@ public class ListVpcPeerConnectionsRequest extends Request {
         private String nextToken; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > vpcId; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> vpcId; 
 
         private Builder() {
             super();
@@ -152,7 +157,10 @@ public class ListVpcPeerConnectionsRequest extends Request {
         } 
 
         /**
-         * The ID of the VPC peering connection that you want to query.
+         * <p>The ID of the VPC peering connection that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcc-lnk0m24khwvtkm****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -161,7 +169,10 @@ public class ListVpcPeerConnectionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -170,7 +181,10 @@ public class ListVpcPeerConnectionsRequest extends Request {
         }
 
         /**
-         * The name of the VPC peering connection that you want to query.
+         * <p>The name of the VPC peering connection that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcpeer</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -179,11 +193,14 @@ public class ListVpcPeerConnectionsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -192,10 +209,11 @@ public class ListVpcPeerConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to query VPC peering connections.
-         * <p>
+         * <p>The ID of the region where you want to query VPC peering connections.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -204,10 +222,11 @@ public class ListVpcPeerConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
-         * <p>
+         * <p>The ID of the resource group.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
          * 
-         * For more information about resource groups, see [What is a resource group?](~~94475~~)
+         * <strong>example:</strong>
+         * <p>rg-acfm2ggeub5uf3y</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -216,18 +235,18 @@ public class ListVpcPeerConnectionsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tag list.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * The ID of the requester VPC or accepter VPC of the VPC peering connection that you want to query.
+         * <p>The ID of the requester VPC or accepter VPC of the VPC peering connection that you want to query.</p>
          */
-        public Builder vpcId(java.util.List < String > vpcId) {
+        public Builder vpcId(java.util.List<String> vpcId) {
             String vpcIdShrink = shrink(vpcId, "VpcId", "simple");
             this.putBodyParameter("VpcId", vpcIdShrink);
             this.vpcId = vpcId;
@@ -241,11 +260,17 @@ public class ListVpcPeerConnectionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcPeerConnectionsRequest} extends {@link TeaModel}
+     *
+     * <p>ListVpcPeerConnectionsRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -280,10 +305,11 @@ public class ListVpcPeerConnectionsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. It cannot be an empty string.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -291,10 +317,11 @@ public class ListVpcPeerConnectionsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag key can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

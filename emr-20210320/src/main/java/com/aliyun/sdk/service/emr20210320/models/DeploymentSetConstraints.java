@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeploymentSetConstraints} extends {@link TeaModel}
  *
  * <p>DeploymentSetConstraints</p>
  */
 public class DeploymentSetConstraints extends TeaModel {
-    @NameInMap("DefaultValue")
+    @com.aliyun.core.annotation.NameInMap("DefaultValue")
     private String defaultValue;
 
-    @NameInMap("EnableState")
+    @com.aliyun.core.annotation.NameInMap("EnableState")
     private String enableState;
 
-    @NameInMap("ReplacementStrategy")
+    @com.aliyun.core.annotation.NameInMap("ReplacementStrategy")
     private ReplacementStrategy replacementStrategy;
 
-    @NameInMap("Values")
-    private java.util.List < String > values;
+    @com.aliyun.core.annotation.NameInMap("Values")
+    private java.util.List<String> values;
 
     private DeploymentSetConstraints(Builder builder) {
         this.defaultValue = builder.defaultValue;
@@ -63,7 +68,7 @@ public class DeploymentSetConstraints extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
@@ -71,10 +76,13 @@ public class DeploymentSetConstraints extends TeaModel {
         private String defaultValue; 
         private String enableState; 
         private ReplacementStrategy replacementStrategy; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
 
         /**
-         * 默认值。
+         * <p>默认值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder defaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
@@ -90,7 +98,7 @@ public class DeploymentSetConstraints extends TeaModel {
         }
 
         /**
-         * 替换策略。
+         * <p>替换策略。</p>
          */
         public Builder replacementStrategy(ReplacementStrategy replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
@@ -98,9 +106,12 @@ public class DeploymentSetConstraints extends TeaModel {
         }
 
         /**
-         * 枚举值。
+         * <p>枚举值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;CLUSTER&quot;,&quot;NODE_GROUP&quot;,&quot;NONE&quot;]</p>
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

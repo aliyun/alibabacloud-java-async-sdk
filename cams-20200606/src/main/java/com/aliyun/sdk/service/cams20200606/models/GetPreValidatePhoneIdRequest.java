@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPreValidatePhoneIdRequest} extends {@link RequestModel}
  *
  * <p>GetPreValidatePhoneIdRequest</p>
  */
 public class GetPreValidatePhoneIdRequest extends Request {
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Body
-    @NameInMap("VerifyCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VerifyCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifyCode;
 
     private GetPreValidatePhoneIdRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class GetPreValidatePhoneIdRequest extends Request {
         } 
 
         /**
-         * PhoneNumber.
+         * <p>The phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861380000</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -79,7 +83,11 @@ public class GetPreValidatePhoneIdRequest extends Request {
         }
 
         /**
-         * VerifyCode.
+         * <p>The verification code provided when you purchased the pre-registered phone number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208393</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.putBodyParameter("VerifyCode", verifyCode);

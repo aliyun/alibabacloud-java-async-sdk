@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HealthCheck} extends {@link TeaModel}
  *
  * <p>HealthCheck</p>
  */
 public class HealthCheck extends TeaModel {
-    @NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
-    @NameInMap("HealthCheckConnectPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckConnectPort;
 
-    @NameInMap("HealthCheckConnectTimeout")
-    @Validation(maximum = 300, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 1)
     private Integer healthCheckConnectTimeout;
 
-    @NameInMap("HealthCheckDomain")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckDomain")
     private String healthCheckDomain;
 
-    @NameInMap("HealthCheckHttpCode")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
     private String healthCheckHttpCode;
 
-    @NameInMap("HealthCheckInterval")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer healthCheckInterval;
 
-    @NameInMap("HealthCheckMethod")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
     private String healthCheckMethod;
 
-    @NameInMap("HealthCheckTimeout")
-    @Validation(maximum = 300, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 1)
     private Integer healthCheckTimeout;
 
-    @NameInMap("HealthCheckType")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckType")
     private String healthCheckType;
 
-    @NameInMap("HealthCheckURI")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckURI")
     private String healthCheckURI;
 
-    @NameInMap("HealthyThreshold")
-    @Validation(maximum = 10, minimum = 2)
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer healthyThreshold;
 
-    @NameInMap("UnhealthyThreshold")
-    @Validation(maximum = 10, minimum = 2)
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer unhealthyThreshold;
 
     private HealthCheck(Builder builder) {

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataExportPreCheckDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataExportPreCheckDetailResponseBody</p>
  */
 public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PreCheckResult")
+    @com.aliyun.core.annotation.NameInMap("PreCheckResult")
     private PreCheckResult preCheckResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataExportPreCheckDetailResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the result of the precheck task.
+         * <p>Indicates the result of the precheck task.</p>
          */
         public Builder preCheckResult(PreCheckResult preCheckResult) {
             this.preCheckResult = preCheckResult;
@@ -110,7 +121,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1D39814-9808-47F8-AFE0-AF167239AC9B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,11 +152,17 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataExportPreCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataExportPreCheckDetailResponseBody</p>
+     */
     public static class PreCheckDetailList extends TeaModel {
-        @NameInMap("AffectRows")
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
         private Long affectRows;
 
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private String SQL;
 
         private PreCheckDetailList(Builder builder) {
@@ -174,7 +197,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             private String SQL; 
 
             /**
-             * The estimated number of data rows to be affected.
+             * <p>The estimated number of data rows to be affected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -182,7 +208,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM tmp_table LIMIT 1</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -196,9 +225,15 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataExportPreCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataExportPreCheckDetailResponseBody</p>
+     */
     public static class PreCheckResultPreCheckDetailList extends TeaModel {
-        @NameInMap("PreCheckDetailList")
-        private java.util.List < PreCheckDetailList> preCheckDetailList;
+        @com.aliyun.core.annotation.NameInMap("PreCheckDetailList")
+        private java.util.List<PreCheckDetailList> preCheckDetailList;
 
         private PreCheckResultPreCheckDetailList(Builder builder) {
             this.preCheckDetailList = builder.preCheckDetailList;
@@ -215,17 +250,17 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         /**
          * @return preCheckDetailList
          */
-        public java.util.List < PreCheckDetailList> getPreCheckDetailList() {
+        public java.util.List<PreCheckDetailList> getPreCheckDetailList() {
             return this.preCheckDetailList;
         }
 
         public static final class Builder {
-            private java.util.List < PreCheckDetailList> preCheckDetailList; 
+            private java.util.List<PreCheckDetailList> preCheckDetailList; 
 
             /**
              * PreCheckDetailList.
              */
-            public Builder preCheckDetailList(java.util.List < PreCheckDetailList> preCheckDetailList) {
+            public Builder preCheckDetailList(java.util.List<PreCheckDetailList> preCheckDetailList) {
                 this.preCheckDetailList = preCheckDetailList;
                 return this;
             }
@@ -237,11 +272,17 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataExportPreCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataExportPreCheckDetailResponseBody</p>
+     */
     public static class PreCheckResult extends TeaModel {
-        @NameInMap("IgnoreAffectRows")
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRows")
         private Boolean ignoreAffectRows;
 
-        @NameInMap("PreCheckDetailList")
+        @com.aliyun.core.annotation.NameInMap("PreCheckDetailList")
         private PreCheckResultPreCheckDetailList preCheckDetailList;
 
         private PreCheckResult(Builder builder) {
@@ -276,11 +317,14 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             private PreCheckResultPreCheckDetailList preCheckDetailList; 
 
             /**
-             * Specifies whether to skip verification. Valid values:
-             * <p>
+             * <p>Specifies whether to skip verification. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -288,7 +332,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of pre-check details.
+             * <p>The list of pre-check details.</p>
              */
             public Builder preCheckDetailList(PreCheckResultPreCheckDetailList preCheckDetailList) {
                 this.preCheckDetailList = preCheckDetailList;

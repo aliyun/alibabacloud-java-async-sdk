@@ -1,112 +1,117 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelSearchRequest} extends {@link RequestModel}
  *
  * <p>HotelSearchRequest</p>
  */
 public class HotelSearchRequest extends Request {
-    @Query
-    @NameInMap("adult_num")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("adult_num")
     private String adultNum;
 
-    @Query
-    @NameInMap("brand_code")
-    private java.util.List < String > brandCode;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("brand_code")
+    private java.util.List<String> brandCode;
 
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("check_in_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_in_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkInDate;
 
-    @Query
-    @NameInMap("check_out_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_out_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkOutDate;
 
-    @Query
-    @NameInMap("city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("city_code")
     private String cityCode;
 
-    @Query
-    @NameInMap("dir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dir")
     private Integer dir;
 
-    @Query
-    @NameInMap("distance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("distance")
     private Integer distance;
 
-    @Query
-    @NameInMap("district_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("district_code")
     private String districtCode;
 
-    @Query
-    @NameInMap("hotel_star")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hotel_star")
     private String hotelStar;
 
-    @Query
-    @NameInMap("is_protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("is_protocol")
     private Boolean isProtocol;
 
-    @Query
-    @NameInMap("key_words")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("key_words")
     private String keyWords;
 
-    @Query
-    @NameInMap("location")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("location")
     private String location;
 
-    @Query
-    @NameInMap("max_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("max_price")
     private Double maxPrice;
 
-    @Query
-    @NameInMap("min_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("min_price")
     private Double minPrice;
 
-    @Query
-    @NameInMap("page_no")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_no")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("page_size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("pay_over_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pay_over_type")
     private Integer payOverType;
 
-    @Query
-    @NameInMap("payment_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("payment_type")
     private Integer paymentType;
 
-    @Query
-    @NameInMap("shids")
-    private java.util.List < Long > shids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("shids")
+    private java.util.List<Long> shids;
 
-    @Query
-    @NameInMap("sort_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer sortCode;
 
-    @Query
-    @NameInMap("super_man")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("super_man")
     private Integer superMan;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelSearchRequest(Builder builder) {
@@ -159,7 +164,7 @@ public class HotelSearchRequest extends Request {
     /**
      * @return brandCode
      */
-    public java.util.List < String > getBrandCode() {
+    public java.util.List<String> getBrandCode() {
         return this.brandCode;
     }
 
@@ -285,7 +290,7 @@ public class HotelSearchRequest extends Request {
     /**
      * @return shids
      */
-    public java.util.List < Long > getShids() {
+    public java.util.List<Long> getShids() {
         return this.shids;
     }
 
@@ -312,7 +317,7 @@ public class HotelSearchRequest extends Request {
 
     public static final class Builder extends Request.Builder<HotelSearchRequest, Builder> {
         private String adultNum; 
-        private java.util.List < String > brandCode; 
+        private java.util.List<String> brandCode; 
         private String btripUserId; 
         private String checkInDate; 
         private String checkOutDate; 
@@ -330,7 +335,7 @@ public class HotelSearchRequest extends Request {
         private Integer pageSize; 
         private Integer payOverType; 
         private Integer paymentType; 
-        private java.util.List < Long > shids; 
+        private java.util.List<Long> shids; 
         private Integer sortCode; 
         private Integer superMan; 
         private String xAcsBtripCorpToken; 
@@ -378,7 +383,7 @@ public class HotelSearchRequest extends Request {
         /**
          * brand_code.
          */
-        public Builder brandCode(java.util.List < String > brandCode) {
+        public Builder brandCode(java.util.List<String> brandCode) {
             String brandCodeShrink = shrink(brandCode, "brand_code", "json");
             this.putQueryParameter("brand_code", brandCodeShrink);
             this.brandCode = brandCode;
@@ -395,7 +400,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * check_in_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-22</p>
          */
         public Builder checkInDate(String checkInDate) {
             this.putQueryParameter("check_in_date", checkInDate);
@@ -404,7 +412,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * check_out_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-22</p>
          */
         public Builder checkOutDate(String checkOutDate) {
             this.putQueryParameter("check_out_date", checkOutDate);
@@ -503,7 +514,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * page_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("page_no", pageNo);
@@ -512,7 +526,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -541,7 +558,7 @@ public class HotelSearchRequest extends Request {
         /**
          * shids.
          */
-        public Builder shids(java.util.List < Long > shids) {
+        public Builder shids(java.util.List<Long> shids) {
             String shidsShrink = shrink(shids, "shids", "json");
             this.putQueryParameter("shids", shidsShrink);
             this.shids = shids;
@@ -549,7 +566,10 @@ public class HotelSearchRequest extends Request {
         }
 
         /**
-         * sort_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sortCode(Integer sortCode) {
             this.putQueryParameter("sort_code", sortCode);

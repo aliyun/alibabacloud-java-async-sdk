@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryFinancialAccountInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryFinancialAccountInfoResponseBody</p>
  */
 public class QueryFinancialAccountInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryFinancialAccountInfoResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97426BC2-792E-41F5-92B8-73C710DA7779</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +148,29 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryFinancialAccountInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryFinancialAccountInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("IsFinancialAccount")
+        @com.aliyun.core.annotation.NameInMap("IsFinancialAccount")
         private Boolean isFinancialAccount;
 
-        @NameInMap("MemberGroupId")
+        @com.aliyun.core.annotation.NameInMap("MemberGroupId")
         private Long memberGroupId;
 
-        @NameInMap("MemberGroupName")
+        @com.aliyun.core.annotation.NameInMap("MemberGroupName")
         private String memberGroupName;
 
-        @NameInMap("MemberNickName")
+        @com.aliyun.core.annotation.NameInMap("MemberNickName")
         private String memberNickName;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Data(Builder builder) {
@@ -218,7 +241,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.
+             * <p>The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MEMBER</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -226,7 +252,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account is a financial account. A value of true indicates that the account is a financial account. A value of false indicates that the account is not a financial account.
+             * <p>Indicates whether the account is a financial account. A value of true indicates that the account is a financial account. A value of false indicates that the account is not a financial account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinancialAccount(Boolean isFinancialAccount) {
                 this.isFinancialAccount = isFinancialAccount;
@@ -234,7 +263,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group to which the member belongs.
+             * <p>The ID of the group to which the member belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>124</p>
              */
             public Builder memberGroupId(Long memberGroupId) {
                 this.memberGroupId = memberGroupId;
@@ -242,7 +274,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the member belongs.
+             * <p>The name of the group to which the member belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test group</p>
              */
             public Builder memberGroupName(String memberGroupName) {
                 this.memberGroupName = memberGroupName;
@@ -250,7 +285,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * <p>The display name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder memberNickName(String memberNickName) {
                 this.memberNickName = memberNickName;
@@ -258,7 +296,10 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>killortop3</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

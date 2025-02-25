@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateDefenseRuleRequest</p>
  */
 public class CreateDefenseRuleRequest extends Request {
-    @Query
-    @NameInMap("DefenseScene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseScene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String defenseScene;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceManagerResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("Rules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rules;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long templateId;
 
     private CreateDefenseRuleRequest(Builder builder) {
@@ -128,19 +133,23 @@ public class CreateDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The module to which the protection rule that you want to create belongs.
-         * <p>
+         * <p>The module to which the protection rule that you want to create belongs.</p>
+         * <ul>
+         * <li><strong>waf_group:</strong> the basic protection rule module.</li>
+         * <li><strong>antiscan:</strong> the scan protection module.</li>
+         * <li><strong>ip_blacklist:</strong> the IP address blacklist module.</li>
+         * <li><strong>custom_acl:</strong> the custom rule module.</li>
+         * <li><strong>whitelist:</strong> the whitelist module.</li>
+         * <li><strong>region_block:</strong> the region blacklist module.</li>
+         * <li><strong>custom_response:</strong> the custom response module.</li>
+         * <li><strong>cc:</strong> the HTTP flood protection module.</li>
+         * <li><strong>tamperproof:</strong> the website tamper-proofing module.</li>
+         * <li><strong>dlp:</strong> the data leakage prevention module.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **waf_group:** the basic protection rule module.
-         * *   **antiscan:** the scan protection module.
-         * *   **ip_blacklist:** the IP address blacklist module.
-         * *   **custom_acl:** the custom rule module.
-         * *   **whitelist:** the whitelist module.
-         * *   **region_block:** the region blacklist module.
-         * *   **custom_response:** the custom response module.
-         * *   **cc:** the HTTP flood protection module.
-         * *   **tamperproof:** the website tamper-proofing module.
-         * *   **dlp:** the data leakage prevention module.
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -149,10 +158,14 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,11 +174,14 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +190,10 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -183,19 +202,20 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * The configurations of the protection rule. Specify a string that contains multiple parameters in the JSON format.
-         * <p>
-         * 
-         * >  The parameters vary based on the value of the **DefenseScene** parameter. For more information, see the "**Protection rule parameters**" section in this topic.
+         * <p>This parameter is required.</p>
          */
         public Builder rules(String rules) {
-            this.putQueryParameter("Rules", rules);
+            this.putBodyParameter("Rules", rules);
             this.rules = rules;
             return this;
         }
 
         /**
-         * The ID of the protection rule template for which you want to create a protection rule.
+         * <p>The ID of the rule template for which you want to create a protection rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1122</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

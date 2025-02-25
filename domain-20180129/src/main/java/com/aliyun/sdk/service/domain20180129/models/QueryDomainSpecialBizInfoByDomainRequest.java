@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainSpecialBizInfoByDomainRequest} extends {@link RequestModel}
  *
  * <p>QueryDomainSpecialBizInfoByDomainRequest</p>
  */
 public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
-    @Body
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Body
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private QueryDomainSpecialBizInfoByDomainRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>The business type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>govRegister</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -93,7 +97,11 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test003.cn</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -102,7 +110,10 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

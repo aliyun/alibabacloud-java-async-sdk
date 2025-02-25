@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>GetTableTopologyResponseBody</p>
  */
 public class GetTableTopologyResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableTopology")
+    @com.aliyun.core.annotation.NameInMap("TableTopology")
     private TableTopology tableTopology;
 
     private GetTableTopologyResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
         private TableTopology tableTopology; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5ED6A40-F344-4C7D-A8F0-5685CA584CA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +135,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The topology information.
+         * <p>The topology information.</p>
          */
         public Builder tableTopology(TableTopology tableTopology) {
             this.tableTopology = tableTopology;
@@ -131,38 +148,44 @@ public class GetTableTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTableTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableTopologyResponseBody</p>
+     */
     public static class TableTopologyInfoList extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DbSearchName")
+        @com.aliyun.core.annotation.NameInMap("DbSearchName")
         private String dbSearchName;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceResourceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceResourceId")
         private String instanceResourceId;
 
-        @NameInMap("InstanceSource")
+        @com.aliyun.core.annotation.NameInMap("InstanceSource")
         private String instanceSource;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("TableCount")
+        @com.aliyun.core.annotation.NameInMap("TableCount")
         private Long tableCount;
 
-        @NameInMap("TableNameExpr")
+        @com.aliyun.core.annotation.NameInMap("TableNameExpr")
         private String tableNameExpr;
 
-        @NameInMap("TableNameList")
+        @com.aliyun.core.annotation.NameInMap("TableNameList")
         private String tableNameList;
 
         private TableTopologyInfoList(Builder builder) {
@@ -278,7 +301,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             private String tableNameList; 
 
             /**
-             * The ID of the physical database.
+             * <p>The ID of the physical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43215</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -286,7 +312,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuyang_test</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -294,9 +323,14 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name that is used to search for the database.
-             * <p>
-             * > We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.
+             * <p>The name that is used to search for the database.</p>
+             * <blockquote>
+             * <p>We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>yuyang_test@localhost:3306
+             * [yuyang_test_dev]</p>
              */
             public Builder dbSearchName(String dbSearchName) {
                 this.dbSearchName = dbSearchName;
@@ -304,7 +338,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine.
+             * <p>The database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -312,7 +349,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the physical database belongs.
+             * <p>The ID of the instance to which the physical database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4325325</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -320,14 +360,17 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.
-             * <p>
+             * <p>The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.</p>
+             * <ul>
+             * <li><strong>RDS</strong>:The ID of the ApsaraDB RDS instance.</li>
+             * <li><strong>ECS_OWN</strong>: The ID of the Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>PUBLIC_OWN</strong>: This parameter is left empty for self-managed database instances that are connected over the Internet.</li>
+             * <li><strong>VPC_ID</strong>:The ID of the virtual private cloud (VPC).</li>
+             * <li><strong>GATEWAY</strong>: The ID of the database gateway.</li>
+             * </ul>
              * 
-             * *   **RDS**:The ID of the ApsaraDB RDS instance.
-             * *   **ECS_OWN**: The ID of the Elastic Compute Service (ECS) instance.
-             * *   **PUBLIC_OWN**: This parameter is left empty for self-managed database instances that are connected over the Internet.
-             * *   **VPC_ID**:The ID of the virtual private cloud (VPC).
-             * *   **GATEWAY**: The ID of the database gateway.
+             * <strong>example:</strong>
+             * <p>rm-xxx</p>
              */
             public Builder instanceResourceId(String instanceResourceId) {
                 this.instanceResourceId = instanceResourceId;
@@ -335,14 +378,17 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database instance. Valid values:
-             * <p>
+             * <p>The type of the database instance. Valid values:</p>
+             * <ul>
+             * <li><strong>RDS</strong>: an ApsaraDB RDS instance.</li>
+             * <li><strong>ECS_OWN</strong>: a self-managed database that is deployed on an ECS instance</li>
+             * <li><strong>PUBLIC_OWN</strong>: a self-managed database instance that is connected over the Internet.</li>
+             * <li><strong>VPC_ID</strong>: a self-managed database instance in a VPC that is connected over Express Connect circuits.</li>
+             * <li><strong>GATEWAY</strong>: a database instance connected by using a database gateway.</li>
+             * </ul>
              * 
-             * *   **RDS**: an ApsaraDB RDS instance.
-             * *   **ECS_OWN**: a self-managed database that is deployed on an ECS instance
-             * *   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.
-             * *   **VPC_ID**: a self-managed database instance in a VPC that is connected over Express Connect circuits.
-             * *   **GATEWAY**: a database instance connected by using a database gateway.
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -350,7 +396,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -358,7 +407,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables.
+             * <p>The number of tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder tableCount(Long tableCount) {
                 this.tableCount = tableCount;
@@ -366,12 +418,12 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The expression of the names of logical tables.
-             * <p>
+             * <p>The expression of the names of logical tables.</p>
+             * <p>**</p>
+             * <p><strong>Description</strong> This parameter is not returned for physical tables.</p>
              * 
-             * **
-             * 
-             * **Description** This parameter is not returned for physical tables.
+             * <strong>example:</strong>
+             * <p>test_ch_[0000-0005]</p>
              */
             public Builder tableNameExpr(String tableNameExpr) {
                 this.tableNameExpr = tableNameExpr;
@@ -379,10 +431,13 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The names of tables.
-             * <p>
+             * <p>The names of tables.</p>
+             * <blockquote>
+             * <p>The table names are separated by commas (,).</p>
+             * </blockquote>
              * 
-             * > The table names are separated by commas (,).
+             * <strong>example:</strong>
+             * <p>test_ch_0000,test_ch_0001,test_ch_0002,test_ch_0003,test_ch_0004,test_ch_0005</p>
              */
             public Builder tableNameList(String tableNameList) {
                 this.tableNameList = tableNameList;
@@ -396,18 +451,24 @@ public class GetTableTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTableTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTableTopologyResponseBody</p>
+     */
     public static class TableTopology extends TeaModel {
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableTopologyInfoList")
-        private java.util.List < TableTopologyInfoList> tableTopologyInfoList;
+        @com.aliyun.core.annotation.NameInMap("TableTopologyInfoList")
+        private java.util.List<TableTopologyInfoList> tableTopologyInfoList;
 
         private TableTopology(Builder builder) {
             this.logic = builder.logic;
@@ -448,7 +509,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         /**
          * @return tableTopologyInfoList
          */
-        public java.util.List < TableTopologyInfoList> getTableTopologyInfoList() {
+        public java.util.List<TableTopologyInfoList> getTableTopologyInfoList() {
             return this.tableTopologyInfoList;
         }
 
@@ -456,14 +517,17 @@ public class GetTableTopologyResponseBody extends TeaModel {
             private Boolean logic; 
             private String tableGuid; 
             private String tableName; 
-            private java.util.List < TableTopologyInfoList> tableTopologyInfoList; 
+            private java.util.List<TableTopologyInfoList> tableTopologyInfoList; 
 
             /**
-             * Indicates whether the table is a logical table. Valid values:
-             * <p>
+             * <p>Indicates whether the table is a logical table. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -471,7 +535,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the table in DMS.
+             * <p>The GUID of the table in DMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDB_L_308302.yuyang_test.test_ch</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -479,7 +546,10 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_ch</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -487,9 +557,9 @@ public class GetTableTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Information of the topology of the table.
+             * <p>Information of the topology of the table.</p>
              */
-            public Builder tableTopologyInfoList(java.util.List < TableTopologyInfoList> tableTopologyInfoList) {
+            public Builder tableTopologyInfoList(java.util.List<TableTopologyInfoList> tableTopologyInfoList) {
                 this.tableTopologyInfoList = tableTopologyInfoList;
                 return this;
             }

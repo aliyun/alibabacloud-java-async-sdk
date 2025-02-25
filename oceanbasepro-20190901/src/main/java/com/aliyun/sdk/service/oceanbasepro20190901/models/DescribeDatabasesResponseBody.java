@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabasesResponseBody</p>
  */
 public class DescribeDatabasesResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < Databases> databases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDatabasesResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the tenant.
+         * The list of databases in the tenant.
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.databases = databases;
@@ -70,7 +69,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The search keyword.
+         * The total number of databases in the tenant.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -92,7 +91,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     } 
 
     public static class Tables extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Tables(Builder builder) {
@@ -118,7 +117,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * TableName.
+             * The name of the database table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -133,16 +132,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("Privileges")
+        @com.aliyun.core.annotation.NameInMap("Privileges")
         private String privileges;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private Users(Builder builder) {
@@ -195,7 +194,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * Privileges.
+             * If you have granted custom privileges on the database, this parameter indicates the custom privileges, separated by commas (,). Otherwise, no data is returned for this parameter.
              */
             public Builder privileges(String privileges) {
                 this.privileges = privileges;
@@ -203,7 +202,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * The role of the account.    
+             * <p>
+             * In MySQL mode, a role is a database-level role. Valid values:  
+             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  
+             * - ReadOnly: a role that has only the read-only privilege SELECT.   
+             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
+             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -211,7 +216,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Example 1
+             * The name of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -219,7 +224,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account. Valid values:  - Admin: the super administrator account. - Normal: a general account.
+             * The type of the account. Valid values:  
+             * <p>
+             * - Admin: the super administrator account. 
+             * - Normal: a general account.
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -234,46 +242,46 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("Collation")
+        @com.aliyun.core.annotation.NameInMap("Collation")
         private String collation;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Double dataSize;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RequiredSize")
+        @com.aliyun.core.annotation.NameInMap("RequiredSize")
         private Double requiredSize;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < Tables> tables;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("Users")
+        @com.aliyun.core.annotation.NameInMap("Users")
         private java.util.List < Users> users;
 
         private Databases(Builder builder) {
@@ -416,7 +424,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * Collation.
+             * The collation.
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -424,9 +432,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to return the information of tables in the database.   
-             * <p>
-             * Default value: false.
+             * The time when the database was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -434,7 +440,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSize.
+             * The actual data size, in GB. 
+             * <p>
+             * ><notice>This parameter is no longer used in later versions. RequiredSize is used instead.></notice>
              */
             public Builder dataSize(Double dataSize) {
                 this.dataSize = dataSize;
@@ -442,10 +450,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return.   
-             * <p>
-             * - Start value: 1   
-             * - Default value: 1
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -453,7 +458,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The return result of the request.
+             * The database type.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -461,10 +466,34 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The description of the database.
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.
+             */
+            public Builder encoding(String encoding) {
+                this.encoding = encoding;
+                return this;
+            }
+
+            /**
+             * The ID of the cluster to which the tenant belongs.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The storage space required, in GB.
+             */
+            public Builder requiredSize(Double requiredSize) {
+                this.requiredSize = requiredSize;
                 return this;
             }
 
@@ -474,37 +503,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * - ONLINE: The database is running.  
              * - DELETING: The database is being deleted.
              */
-            public Builder encoding(String encoding) {
-                this.encoding = encoding;
-                return this;
-            }
-
-            /**
-             * InstanceId.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * RequiredSize.
-             */
-            public Builder requiredSize(Double requiredSize) {
-                this.requiredSize = requiredSize;
-                return this;
-            }
-
-            /**
-             * The list of databases in the tenant.
-             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * Tables.
+             * The list of database tables.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -512,7 +517,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -520,7 +525,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * The name of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -528,7 +533,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database table.
+             * The list of accounts that are granted privileges on this database.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

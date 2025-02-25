@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoadBalancerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLoadBalancerResponseBody</p>
  */
 public class CreateLoadBalancerResponseBody extends TeaModel {
-    @NameInMap("LoadbalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadbalancerId")
     private String loadbalancerId;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateLoadBalancerResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the NLB instance.
+         * <p>The ID of the NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-83ckzc8d4xlp8o****</p>
          */
         public Builder loadbalancerId(String loadbalancerId) {
             this.loadbalancerId = loadbalancerId;
@@ -70,7 +78,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order for the NLB instance.
+         * <p>The ID of the order for the NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230000</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +89,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

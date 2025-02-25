@@ -1,92 +1,97 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIPv6TranslatorEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeIPv6TranslatorEntriesRequest</p>
  */
 public class DescribeIPv6TranslatorEntriesRequest extends Request {
-    @Query
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @Query
-    @NameInMap("AclStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
-    @Query
-    @NameInMap("AclType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclType")
     private String aclType;
 
-    @Query
-    @NameInMap("AllocateIpv6Addr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocateIpv6Addr")
     private String allocateIpv6Addr;
 
-    @Query
-    @NameInMap("AllocateIpv6Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocateIpv6Port")
     private Integer allocateIpv6Port;
 
-    @Query
-    @NameInMap("BackendIpv4Addr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendIpv4Addr")
     private String backendIpv4Addr;
 
-    @Query
-    @NameInMap("BackendIpv4Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendIpv4Port")
     private Integer backendIpv4Port;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryName")
     private String entryName;
 
-    @Query
-    @NameInMap("Ipv6TranslatorEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
     private String ipv6TranslatorEntryId;
 
-    @Query
-    @NameInMap("Ipv6TranslatorId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorId")
     private String ipv6TranslatorId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransProtocol")
     private String transProtocol;
 
     private DescribeIPv6TranslatorEntriesRequest(Builder builder) {
@@ -307,7 +312,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         } 
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de2****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -316,11 +324,14 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable access control lists (ACLs). Valid values:
-         * <p>
+         * <p>Specifies whether to enable access control lists (ACLs). Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder aclStatus(String aclStatus) {
             this.putQueryParameter("AclStatus", aclStatus);
@@ -329,11 +340,14 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The ACL type. Valid values:
-         * <p>
+         * <p>The ACL type. Valid values:</p>
+         * <ul>
+         * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
+         * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
+         * </ul>
          * 
-         * *   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.
-         * *   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -342,7 +356,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The IPv6 address allocated to the IPv6 Translation Service instance.
+         * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2400:3200:1600::XX</p>
          */
         public Builder allocateIpv6Addr(String allocateIpv6Addr) {
             this.putQueryParameter("AllocateIpv6Addr", allocateIpv6Addr);
@@ -351,7 +368,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The port used by the IPv6 address allocated to the IPv6 Translation Service instance.
+         * <p>The port used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder allocateIpv6Port(Integer allocateIpv6Port) {
             this.putQueryParameter("AllocateIpv6Port", allocateIpv6Port);
@@ -360,7 +380,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The public IPv4 address that needs to provide IPv6 services.
+         * <p>The public IPv4 address that needs to provide IPv6 services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.99.XX.XX</p>
          */
         public Builder backendIpv4Addr(String backendIpv4Addr) {
             this.putQueryParameter("BackendIpv4Addr", backendIpv4Addr);
@@ -369,7 +392,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The port used by the public IPv4 address that needs to provide IPv6 services.
+         * <p>The port used by the public IPv4 address that needs to provide IPv6 services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder backendIpv4Port(Integer backendIpv4Port) {
             this.putQueryParameter("BackendIpv4Port", backendIpv4Port);
@@ -378,10 +404,11 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -390,7 +417,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The name of the IPv6 mapping entry.
+         * <p>The name of the IPv6 mapping entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entryname</p>
          */
         public Builder entryName(String entryName) {
             this.putQueryParameter("EntryName", entryName);
@@ -399,10 +429,13 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 mapping entry.
-         * <p>
+         * <p>The ID of the IPv6 mapping entry.</p>
+         * <blockquote>
+         * <p>If <strong>Ipv6TranslatorId</strong> and <strong>Ipv6TranslatorEntryId</strong> are empty, information about all IPv6 mapping entries is returned. If only <strong>Ipv6TranslatorEntryId</strong> is empty, information about the IPv6 mapping entries of the current IPv6 Translation Service instance is returned.</p>
+         * </blockquote>
          * 
-         * > If **Ipv6TranslatorId** and **Ipv6TranslatorEntryId** are empty, information about all IPv6 mapping entries is returned. If only **Ipv6TranslatorEntryId** is empty, information about the IPv6 mapping entries of the current IPv6 Translation Service instance is returned.
+         * <strong>example:</strong>
+         * <p>ipv6transentry-bp1g8bhrde****</p>
          */
         public Builder ipv6TranslatorEntryId(String ipv6TranslatorEntryId) {
             this.putQueryParameter("Ipv6TranslatorEntryId", ipv6TranslatorEntryId);
@@ -411,7 +444,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 Translation Service instance.
+         * <p>The ID of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1858ysxx****</p>
          */
         public Builder ipv6TranslatorId(String ipv6TranslatorId) {
             this.putQueryParameter("Ipv6TranslatorId", ipv6TranslatorId);
@@ -438,7 +474,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -447,7 +486,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -456,7 +498,11 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.
+         * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -483,7 +529,10 @@ public class DescribeIPv6TranslatorEntriesRequest extends Request {
         }
 
         /**
-         * The protocol used by the data to be forwarded.
+         * <p>The protocol used by the data to be forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder transProtocol(String transProtocol) {
             this.putQueryParameter("TransProtocol", transProtocol);

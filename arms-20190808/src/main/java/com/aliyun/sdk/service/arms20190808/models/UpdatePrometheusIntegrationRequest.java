@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePrometheusIntegrationRequest} extends {@link RequestModel}
  *
  * <p>UpdatePrometheusIntegrationRequest</p>
  */
 public class UpdatePrometheusIntegrationRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
-    @Query
-    @NameInMap("IntegrationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntegrationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationType;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String param;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdatePrometheusIntegrationRequest(Builder builder) {
@@ -114,7 +119,11 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
+         * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -123,7 +132,10 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The exporter ID.
+         * <p>The exporter ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2893</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,7 +144,11 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The type of the integration.
+         * <p>The type of the integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
@@ -141,7 +157,19 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The configurations of the exporter. The value is a JSON string.
+         * <p>The configurations of the exporter. The value is a JSON string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;port&quot;: &quot;5554&quot;,
+         *       &quot;name&quot;: &quot;kafka-test12&quot;,
+         *       &quot;kafka_instance&quot;: &quot;kafka-test&quot;,
+         *       &quot;__label_value&quot;: &quot;kafka-test&quot;,
+         *       &quot;scrape_interval&quot;: 33,
+         *       &quot;metrics_path&quot;: &quot;/metrics&quot;,
+         *       &quot;__label_key&quot;: &quot;kafka-test&quot;
+         * }</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -150,7 +178,11 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody</p>
  */
 public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extends TeaModel {
-    @NameInMap("InstanceTypeFamilies")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
     private String instanceTypeFamilies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         private String requestId; 
 
         /**
-         * The instance families that support deployment sets.
+         * <p>The instance families that support the deployment strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.i2g,ecs.i1,ecs.i2ne,ecs.i2gne</p>
          */
         public Builder instanceTypeFamilies(String instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -58,7 +66,10 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B7DB-A3DC7DE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

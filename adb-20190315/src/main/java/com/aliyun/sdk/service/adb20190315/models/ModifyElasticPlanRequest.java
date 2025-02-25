@@ -1,83 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElasticPlanRequest} extends {@link RequestModel}
  *
  * <p>ModifyElasticPlanRequest</p>
  */
 public class ModifyElasticPlanRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("ElasticPlanEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanEnable")
     private Boolean elasticPlanEnable;
 
-    @Query
-    @NameInMap("ElasticPlanEndDay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanEndDay")
     private String elasticPlanEndDay;
 
-    @Query
-    @NameInMap("ElasticPlanName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanMonthlyRepeat")
+    private String elasticPlanMonthlyRepeat;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String elasticPlanName;
 
-    @Query
-    @NameInMap("ElasticPlanNodeNum")
-    @Validation(maximum = 10000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanNodeNum")
+    @com.aliyun.core.annotation.Validation(maximum = 10000)
     private Integer elasticPlanNodeNum;
 
-    @Query
-    @NameInMap("ElasticPlanStartDay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanStartDay")
     private String elasticPlanStartDay;
 
-    @Query
-    @NameInMap("ElasticPlanTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanTimeEnd")
     private String elasticPlanTimeEnd;
 
-    @Query
-    @NameInMap("ElasticPlanTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanTimeStart")
     private String elasticPlanTimeStart;
 
-    @Query
-    @NameInMap("ElasticPlanType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanType")
     private String elasticPlanType;
 
-    @Query
-    @NameInMap("ElasticPlanWeeklyRepeat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanWeeklyRepeat")
     private String elasticPlanWeeklyRepeat;
 
-    @Query
-    @NameInMap("ElasticPlanWorkerSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticPlanWorkerSpec")
     private String elasticPlanWorkerSpec;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourcePoolName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePoolName")
     private String resourcePoolName;
 
     private ModifyElasticPlanRequest(Builder builder) {
@@ -85,6 +88,7 @@ public class ModifyElasticPlanRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.elasticPlanEnable = builder.elasticPlanEnable;
         this.elasticPlanEndDay = builder.elasticPlanEndDay;
+        this.elasticPlanMonthlyRepeat = builder.elasticPlanMonthlyRepeat;
         this.elasticPlanName = builder.elasticPlanName;
         this.elasticPlanNodeNum = builder.elasticPlanNodeNum;
         this.elasticPlanStartDay = builder.elasticPlanStartDay;
@@ -132,6 +136,13 @@ public class ModifyElasticPlanRequest extends Request {
      */
     public String getElasticPlanEndDay() {
         return this.elasticPlanEndDay;
+    }
+
+    /**
+     * @return elasticPlanMonthlyRepeat
+     */
+    public String getElasticPlanMonthlyRepeat() {
+        return this.elasticPlanMonthlyRepeat;
     }
 
     /**
@@ -229,6 +240,7 @@ public class ModifyElasticPlanRequest extends Request {
         private String DBClusterId; 
         private Boolean elasticPlanEnable; 
         private String elasticPlanEndDay; 
+        private String elasticPlanMonthlyRepeat; 
         private String elasticPlanName; 
         private Integer elasticPlanNodeNum; 
         private String elasticPlanStartDay; 
@@ -252,6 +264,7 @@ public class ModifyElasticPlanRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.elasticPlanEnable = request.elasticPlanEnable;
             this.elasticPlanEndDay = request.elasticPlanEndDay;
+            this.elasticPlanMonthlyRepeat = request.elasticPlanMonthlyRepeat;
             this.elasticPlanName = request.elasticPlanName;
             this.elasticPlanNodeNum = request.elasticPlanNodeNum;
             this.elasticPlanStartDay = request.elasticPlanStartDay;
@@ -268,10 +281,14 @@ public class ModifyElasticPlanRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
+         * <strong>example:</strong>
+         * <p>am-bp1rqvm70uh2v****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -280,11 +297,14 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * Specifies whether the scaling plan takes effect. Valid values:
-         * <p>
+         * <p>Specifies whether the scaling plan takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true** (default)
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder elasticPlanEnable(Boolean elasticPlanEnable) {
             this.putQueryParameter("ElasticPlanEnable", elasticPlanEnable);
@@ -293,7 +313,10 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The end date of the scaling plan. Specify the date in the yyyy-MM-dd format.
+         * <p>The end date of the scaling plan. Specify the date in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-09</p>
          */
         public Builder elasticPlanEndDay(String elasticPlanEndDay) {
             this.putQueryParameter("ElasticPlanEndDay", elasticPlanEndDay);
@@ -302,13 +325,30 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The name of the scaling plan.
-         * <p>
+         * <p>The dates of the month when you want to execute the scaling plan. A number specifies a date of the month. Separate multiple values with commas (,).</p>
          * 
-         * *   The name must be 2 to 30 characters in length.
-         * *   The name can contain letters, digits, and underscores (\_).
+         * <strong>example:</strong>
+         * <p>1,15,25</p>
+         */
+        public Builder elasticPlanMonthlyRepeat(String elasticPlanMonthlyRepeat) {
+            this.putQueryParameter("ElasticPlanMonthlyRepeat", elasticPlanMonthlyRepeat);
+            this.elasticPlanMonthlyRepeat = elasticPlanMonthlyRepeat;
+            return this;
+        }
+
+        /**
+         * <p>The name of the scaling plan.</p>
+         * <ul>
+         * <li>The name must be 2 to 30 characters in length.</li>
+         * <li>The name can contain letters, digits, and underscores (_).</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/190596.html">DescribeElasticPlan</a> operation to query the information about all scaling plans of a cluster, including the scaling plan names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeElasticPlan](~~190596~~) operation to query the information about all scaling plans of a cluster, including the scaling plan names.
+         * <strong>example:</strong>
+         * <p>realtime</p>
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -317,11 +357,14 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The number of nodes that are involved in the scaling plan.
-         * <p>
+         * <p>The number of nodes that are involved in the scaling plan.</p>
+         * <ul>
+         * <li>If ElasticPlanType is set to <strong>worker</strong>, you can set this parameter to 0 or leave this parameter empty.</li>
+         * <li>If ElasticPlanType is set to <strong>executorcombineworker</strong> or <strong>executor</strong>, you must set this parameter to a value that is greater than 0.</li>
+         * </ul>
          * 
-         * *   If ElasticPlanType is set to **worker**, you can set this parameter to 0 or leave this parameter empty.
-         * *   If ElasticPlanType is set to **executorcombineworker** or **executor**, you must set this parameter to a value that is greater than 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder elasticPlanNodeNum(Integer elasticPlanNodeNum) {
             this.putQueryParameter("ElasticPlanNodeNum", elasticPlanNodeNum);
@@ -330,7 +373,10 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The start date of the scaling plan. Specify the date in the yyyy-MM-dd format.
+         * <p>The start date of the scaling plan. Specify the date in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-02</p>
          */
         public Builder elasticPlanStartDay(String elasticPlanStartDay) {
             this.putQueryParameter("ElasticPlanStartDay", elasticPlanStartDay);
@@ -339,7 +385,10 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The restoration time of the scaling plan. Specify the time on the hour in the HH:mm:ss format. The interval between the scale-up time and the restoration time cannot be more than 24 hours.
+         * <p>The restoration time of the scaling plan. Specify the time on the hour in the HH:mm:ss format. The interval between the scale-up time and the restoration time cannot be more than 24 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10:00:00</p>
          */
         public Builder elasticPlanTimeEnd(String elasticPlanTimeEnd) {
             this.putQueryParameter("ElasticPlanTimeEnd", elasticPlanTimeEnd);
@@ -348,7 +397,10 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The scale-up time of the scaling plan. Specify the time on the hour in the HH:mm:ss format.
+         * <p>The scale-up time of the scaling plan. Specify the time on the hour in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8:00:00</p>
          */
         public Builder elasticPlanTimeStart(String elasticPlanTimeStart) {
             this.putQueryParameter("ElasticPlanTimeStart", elasticPlanTimeStart);
@@ -357,18 +409,23 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The type of the scaling plan. Valid values:
-         * <p>
+         * <p>The type of the scaling plan. Valid values:</p>
+         * <ul>
+         * <li><strong>worker</strong>: scales only elastic I/O resources.</li>
+         * <li><strong>executor</strong>: scales only computing resources.</li>
+         * <li><strong>executorcombineworker</strong> (default): scales both elastic I/O resources and computing resources by proportion.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you want to set this parameter to <strong>executorcombineworker</strong>, make sure that the cluster runs a minor version of 3.1.3.2 or later.</p>
+         * </li>
+         * <li><p>If you want to set this parameter to <strong>worker</strong> or <strong>executor</strong>, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to <strong>worker</strong> or <strong>executor</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **worker**: scales only elastic I/O resources.
-         * *   **executor**: scales only computing resources.
-         * *   **executorcombineworker** (default): scales both elastic I/O resources and computing resources by proportion.
-         * 
-         * > 
-         * 
-         * *   If you want to set this parameter to **executorcombineworker**, make sure that the cluster runs a minor version of 3.1.3.2 or later.
-         * 
-         * *   If you want to set this parameter to **worker** or **executor**, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to **worker** or **executor**.
+         * <strong>example:</strong>
+         * <p>worker</p>
          */
         public Builder elasticPlanType(String elasticPlanType) {
             this.putQueryParameter("ElasticPlanType", elasticPlanType);
@@ -377,7 +434,10 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The days of the week when you want to execute the scaling plan. Valid values: 0 to 6, which indicate Sunday to Saturday. Separate multiple values with commas (,).
+         * <p>The days of the week when you want to execute the scaling plan. Valid values: 0 to 6, which indicate Sunday to Saturday. Separate multiple values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5</p>
          */
         public Builder elasticPlanWeeklyRepeat(String elasticPlanWeeklyRepeat) {
             this.putQueryParameter("ElasticPlanWeeklyRepeat", elasticPlanWeeklyRepeat);
@@ -386,16 +446,19 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The resource specifications that can be scaled up by the scaling plan. Valid values:
-         * <p>
+         * <p>The resource specifications that can be scaled up by the scaling plan. Valid values:</p>
+         * <ul>
+         * <li>8 Core 64 GB (default)</li>
+         * <li>16 Core 64 GB</li>
+         * <li>32 Core 64 GB</li>
+         * <li>64 Core 128 GB</li>
+         * <li>12 Core 96 GB</li>
+         * <li>24 Core 96 GB</li>
+         * <li>52 Core 86 GB</li>
+         * </ul>
          * 
-         * *   8 Core 64 GB (default)
-         * *   16 Core 64 GB
-         * *   32 Core 64 GB
-         * *   64 Core 128 GB
-         * *   12 Core 96 GB
-         * *   24 Core 96 GB
-         * *   52 Core 86 GB
+         * <strong>example:</strong>
+         * <p>16 Core 64 GB</p>
          */
         public Builder elasticPlanWorkerSpec(String elasticPlanWorkerSpec) {
             this.putQueryParameter("ElasticPlanWorkerSpec", elasticPlanWorkerSpec);
@@ -440,10 +503,13 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
+         * <p>The name of the resource group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourcePoolName(String resourcePoolName) {
             this.putQueryParameter("ResourcePoolName", resourcePoolName);

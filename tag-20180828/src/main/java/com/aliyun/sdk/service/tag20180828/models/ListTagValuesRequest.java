@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesRequest} extends {@link RequestModel}
  *
  * <p>ListTagValuesRequest</p>
  */
 public class ListTagValuesRequest extends Request {
-    @Query
-    @NameInMap("TagFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagFilter")
     private TagFilter tagFilter;
 
-    @Query
-    @NameInMap("FuzzyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuzzyType")
     private String fuzzyType;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private String queryType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private ListTagValuesRequest(Builder builder) {
@@ -205,13 +210,14 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The type of the query. Valid values:
-         * <p>
+         * <p>The type of the query. Valid values:</p>
+         * <ul>
+         * <li>EQUAL (default): exact match</li>
+         * <li>PREFIX: prefix-based fuzzy match</li>
+         * </ul>
          * 
-         * *   EQUAL: exact match. This is the default value.
-         * *   PREFIX: prefix-based fuzzy match.
-         * 
-         * >  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
          */
         public Builder fuzzyType(String fuzzyType) {
             this.putQueryParameter("FuzzyType", fuzzyType);
@@ -220,7 +226,11 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The tag key. This parameter specifies a filter condition for the query.
+         * <p>The tag key. This parameter specifies a filter condition for the query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -229,7 +239,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -256,10 +269,11 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The number of tag values to return on each page.
-         * <p>
+         * <p>The number of tag values to return on each page.</p>
+         * <p>Maximum value: 1000. Default value: 50.</p>
          * 
-         * Maximum value: 1000. Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,13 +282,17 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The category of the tags. This parameter specifies a filter condition for the query. Valid values:
-         * <p>
+         * <p>The category of the tags. This parameter specifies a filter condition for the query. Valid values:</p>
+         * <ul>
+         * <li>ResourceTag: resource tags, including custom and system tags. This is the default value.</li>
+         * <li>MetaTag: preset tags.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
          * 
-         * *   ResourceTag: resource tags, including custom and system tags. This is the default value.
-         * *   MetaTag: preset tags.
-         * 
-         * >  The value of this parameter is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>ResourceTag</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -283,10 +301,12 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/2330902.html">Endpoints</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about region IDs, see [Endpoints](~~2330902~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -304,13 +324,15 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The resource type. This parameter specifies a filter condition for the query.
-         * <p>
+         * <p>The resource type. This parameter specifies a filter condition for the query.</p>
+         * <p>Format: <code>ALIYUN::${ProductCode}::${ResourceType}</code>. All letters in the value of this parameter must be in uppercase.</p>
+         * <ul>
+         * <li><code>ProductCode</code>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+         * <li><code>ResourceType</code>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+         * </ul>
          * 
-         * Format: `ALIYUN::${ProductCode}::${ResourceType}`. All letters in the value of this parameter must be in uppercase.
-         * 
-         * *   `ProductCode`: the service code. You can set this field to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
-         * *   `ResourceType`: the resource type. You can set this field to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -325,8 +347,14 @@ public class ListTagValuesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagValuesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagValuesRequest</p>
+     */
     public static class TagFilter extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagFilter(Builder builder) {
@@ -352,12 +380,11 @@ public class ListTagValuesRequest extends Request {
             private String value; 
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value for a fuzzy query.</p>
+             * <p>This parameter is used together with the <code>FuzzyType</code> parameter.</p>
              * 
-             * This parameter is used together with the `FuzzyType` parameter.
-             * 
-             * >  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

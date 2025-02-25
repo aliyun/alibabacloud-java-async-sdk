@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConfigNumListRequest} extends {@link RequestModel}
  *
  * <p>GetConfigNumListRequest</p>
  */
 public class GetConfigNumListRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Query
-    @NameInMap("DepartmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentId")
     private Long departmentId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetConfigNumListRequest(Builder builder) {
@@ -83,7 +88,7 @@ public class GetConfigNumListRequest extends Request {
         } 
 
         /**
-         * 账号名称
+         * AccountName.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -92,7 +97,7 @@ public class GetConfigNumListRequest extends Request {
         }
 
         /**
-         * 部门ID
+         * DepartmentId.
          */
         public Builder departmentId(Long departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -101,7 +106,10 @@ public class GetConfigNumListRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

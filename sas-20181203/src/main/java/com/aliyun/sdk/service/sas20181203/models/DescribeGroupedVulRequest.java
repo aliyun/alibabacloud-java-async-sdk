@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedVulRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupedVulRequest</p>
  */
 public class DescribeGroupedVulRequest extends Request {
-    @Query
-    @NameInMap("AliasName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
-    @Query
-    @NameInMap("AssetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
     private String assetType;
 
-    @Query
-    @NameInMap("AttachTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachTypes")
     private String attachTypes;
 
-    @Query
-    @NameInMap("ContainerFieldName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldName")
     private String containerFieldName;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Necessity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Necessity")
     private String necessity;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceDirectoryAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
-    @Query
-    @NameInMap("SearchTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchTags")
     private String searchTags;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
     private DescribeGroupedVulRequest(Builder builder) {
@@ -250,7 +255,10 @@ public class DescribeGroupedVulRequest extends Request {
         } 
 
         /**
-         * The alias of the vulnerability.
+         * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2019:0230-Important: polkit security update</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -259,11 +267,14 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The type of the asset on which the vulnerability is detected. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The type of the asset on which the vulnerability is detected. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>CONTAINER</strong>: container</li>
+         * </ul>
          * 
-         * *   **ECS**: Elastic Compute Service (ECS) instance
-         * *   **CONTAINER**: container
+         * <strong>example:</strong>
+         * <p>ECS,CONTAINER</p>
          */
         public Builder assetType(String assetType) {
             this.putQueryParameter("AssetType", assetType);
@@ -272,11 +283,14 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. This parameter is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The type of the vulnerability. This parameter is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
+         * <li><strong>app</strong>: application vulnerability</li>
+         * </ul>
          * 
-         * *   **sca**: vulnerability that is detected based on software component analysis
-         * *   **app**: application vulnerability
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         public Builder attachTypes(String attachTypes) {
             this.putQueryParameter("AttachTypes", attachTypes);
@@ -285,21 +299,24 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The key of the condition that is used to query containers. Valid values:
-         * <p>
+         * <p>The key of the condition that is used to query containers. Valid values:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the asset</li>
+         * <li><strong>appName</strong>: the name of the application</li>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>regionId</strong>: the ID of the region</li>
+         * <li><strong>nodeName</strong>: the name of the node</li>
+         * <li><strong>namespace</strong>: the namespace</li>
+         * <li><strong>clusterName</strong>: the name of the cluster</li>
+         * <li><strong>image</strong>: the name of the image</li>
+         * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+         * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+         * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
+         * <li><strong>imageDigest</strong>: the digest of the image</li>
+         * </ul>
          * 
-         * *   **instanceId**: the ID of the asset
-         * *   **appName**: the name of the application
-         * *   **clusterId**: the ID of the cluster
-         * *   **regionId**: the ID of the region
-         * *   **nodeName**: the name of the node
-         * *   **namespace**: the namespace
-         * *   **clusterName**: the name of the cluster
-         * *   **image**: the name of the image
-         * *   **imageRepoName**: the name of the image repository
-         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
-         * *   **imageRepoTag**: the tag that is added to the image
-         * *   **imageDigest**: the digest of the image
+         * <strong>example:</strong>
+         * <p>appName</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -308,7 +325,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -317,11 +337,14 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * Specifies whether the vulnerability is handled. Valid values:
-         * <p>
+         * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+         * <ul>
+         * <li><strong>y</strong>: handled</li>
+         * <li><strong>n</strong>: not handled</li>
+         * </ul>
          * 
-         * *   **y**: handled
-         * *   **n**: not handled
+         * <strong>example:</strong>
+         * <p>n</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -330,7 +353,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
+         * <p>The ID of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235454</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -339,11 +365,14 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -352,12 +381,15 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The priorities to fix the vulnerabilities. Separate multiple priorities with commas (,). Valid values:
-         * <p>
+         * <p>The priorities to fix the vulnerabilities. Separate multiple priorities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>asap</strong>: high</li>
+         * <li><strong>later</strong>: medium</li>
+         * <li><strong>nntf</strong>: low</li>
+         * </ul>
          * 
-         * *   **asap**: high
-         * *   **later**: medium
-         * *   **nntf**: low
+         * <strong>example:</strong>
+         * <p>asap,later,nntf</p>
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -366,7 +398,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -375,10 +410,13 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -387,15 +425,18 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The tag that is used to search for the vulnerability. Valid values:
-         * <p>
+         * <p>The tag that is used to search for the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>Restart required</strong></li>
+         * <li><strong>Remote utilization</strong></li>
+         * <li><strong>EXP exists</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Elevation of Privilege</strong></li>
+         * <li><strong>Code Execution</strong></li>
+         * </ul>
          * 
-         * *   **Restart required**
-         * *   **Remote utilization**
-         * *   **EXP exists**
-         * *   **Available**
-         * *   **Elevation of Privilege**
-         * *   **Code Execution**
+         * <strong>example:</strong>
+         * <p>Code Execution</p>
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -404,11 +445,14 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The query type for containers. Valid values:
-         * <p>
+         * <p>The query type for containers. Valid values:</p>
+         * <ul>
+         * <li><strong>containerId</strong>: the ID of the container</li>
+         * <li><strong>uuid</strong>: the ID of the asset</li>
+         * </ul>
          * 
-         * *   **containerId**: the ID of the container
-         * *   **uuid**: the ID of the asset
+         * <strong>example:</strong>
+         * <p>containerId</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -417,14 +461,17 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability that you want to query. Default value: cve. Valid values:
-         * <p>
+         * <p>The type of the vulnerability that you want to query. Default value: cve. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>app</strong>: application vulnerability that is detected by network scanning</li>
+         * <li><strong>sca</strong>: application vulnerability that is detected by software component analysis</li>
+         * </ul>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerability that is detected by network scanning
-         * *   **sca**: application vulnerability that is detected by software component analysis
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -433,7 +480,10 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The UUID of the server. Separate multiple UUIDs with commas (,).
+         * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d42f938c-d962-48a0-90f9-05e4ea****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

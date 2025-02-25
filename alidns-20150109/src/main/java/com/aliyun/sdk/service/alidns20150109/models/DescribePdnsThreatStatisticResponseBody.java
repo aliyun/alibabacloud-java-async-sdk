@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsThreatStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsThreatStatisticResponseBody</p>
  */
 public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePdnsThreatStatisticResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,13 +51,13 @@ public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -71,23 +76,29 @@ public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsThreatStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsThreatStatisticResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DohTotalCount")
+        @com.aliyun.core.annotation.NameInMap("DohTotalCount")
         private Long dohTotalCount;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
-        @NameInMap("ThreatType")
+        @com.aliyun.core.annotation.NameInMap("ThreatType")
         private String threatType;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("UdpTotalCount")
+        @com.aliyun.core.annotation.NameInMap("UdpTotalCount")
         private Long udpTotalCount;
 
         private Data(Builder builder) {

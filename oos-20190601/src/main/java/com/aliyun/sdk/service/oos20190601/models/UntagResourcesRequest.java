@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("All")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
     private Boolean all;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
-    private java.util.Map < String, ? > resourceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> resourceIds;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKeys")
-    private java.util.Map < String, ? > tagKeys;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
+    private java.util.Map<String, ?> tagKeys;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.Map < String, ? > getResourceIds() {
+    public java.util.Map<String, ?> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -88,16 +93,16 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKeys
      */
-    public java.util.Map < String, ? > getTagKeys() {
+    public java.util.Map<String, ?> getTagKeys() {
         return this.tagKeys;
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String regionId; 
-        private java.util.Map < String, ? > resourceIds; 
+        private java.util.Map<String, ?> resourceIds; 
         private String resourceType; 
-        private java.util.Map < String, ? > tagKeys; 
+        private java.util.Map<String, ?> tagKeys; 
 
         private Builder() {
             super();
@@ -113,7 +118,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags. This parameter takes effect only if TagKeys is left empty. Valid values: true and false. Default value: false. TagKeys is required if this parameter is set to false.
+         * <p>Specifies whether to remove all tags. This parameter takes effect only if TagKeys is left empty. Valid values: true and false. Default value: false. TagKeys is required if this parameter is set to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -122,7 +130,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,16 +143,20 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.
-         * <p>
+         * <p>The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.</p>
+         * <ul>
+         * <li>If you set ResourceType to template, specify ResourceIds in the [&quot;TemplateName1&quot;,&quot;TemplateName2&quot;] format.</li>
+         * <li>If you set ResourceType to parameter, specify ResourceIds in the [&quot;Name1&quot;,&quot;Name2&quot;] format.</li>
+         * <li>If you set ResourceType to secretparameter, specify ResourceIds in the [&quot;Name1&quot;,&quot;Name2&quot;] format.</li>
+         * <li>If you set ResourceType to stateconfiguration, specify ResourceIds in the [&quot;StateConfigurationId 1&quot;,&quot;StateConfigurationId 2&quot;] format.</li>
+         * <li>If you set ResourceType to application, specify ResourceIds in the [&quot;Name1&quot;,&quot;Name2&quot;] format.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set ResourceType to template, specify ResourceIds in the \["TemplateName1","TemplateName2"] format.
-         * *   If you set ResourceType to parameter, specify ResourceIds in the \["Name1","Name2"] format.
-         * *   If you set ResourceType to secretparameter, specify ResourceIds in the \["Name1","Name2"] format.
-         * *   If you set ResourceType to stateconfiguration, specify ResourceIds in the \["StateConfigurationId 1","StateConfigurationId 2"] format.
-         * *   If you set ResourceType to application, specify ResourceIds in the \["Name1","Name2"] format.
+         * <strong>example:</strong>
+         * <p>[&quot;templateName1&quot;,&quot;templateName2&quot;]</p>
          */
-        public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
+        public Builder resourceIds(java.util.Map<String, ?> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
             this.putQueryParameter("ResourceIds", resourceIdsShrink);
             this.resourceIds = resourceIds;
@@ -148,14 +164,18 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource for which you want to modify the resource group. Valid values:
-         * <p>
+         * <p>The type of the resource for which you want to modify the resource group. Valid values:</p>
+         * <ul>
+         * <li>template: template.</li>
+         * <li>parameter: parameter.</li>
+         * <li>secretparameter: encryption parameter.</li>
+         * <li>stateconfiguration: desired-state configuration.</li>
+         * <li>application: application.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   template: template.
-         * *   parameter: parameter.
-         * *   secretparameter: encryption parameter.
-         * *   stateconfiguration: desired-state configuration.
-         * *   application: application.
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -164,9 +184,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys. The number of keys ranges from 1 to 20.
+         * <p>The tag keys. The number of keys ranges from 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;k1&quot;,&quot;k2&quot;]</p>
          */
-        public Builder tagKeys(java.util.Map < String, ? > tagKeys) {
+        public Builder tagKeys(java.util.Map<String, ?> tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");
             this.putQueryParameter("TagKeys", tagKeysShrink);
             this.tagKeys = tagKeys;

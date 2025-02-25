@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRealtimeCampaignStatsResponseBody} extends {@link TeaModel}
  *
  * <p>GetRealtimeCampaignStatsResponseBody</p>
  */
 public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRealtimeCampaignStatsResponseBody(Builder builder) {
@@ -131,38 +136,44 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRealtimeCampaignStatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRealtimeCampaignStatsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BreakingAgents")
+        @com.aliyun.core.annotation.NameInMap("BreakingAgents")
         private Long breakingAgents;
 
-        @NameInMap("Caps")
+        @com.aliyun.core.annotation.NameInMap("Caps")
         private Long caps;
 
-        @NameInMap("LoggedInAgents")
+        @com.aliyun.core.annotation.NameInMap("LoggedInAgents")
         private Long loggedInAgents;
 
-        @NameInMap("OutboundScenarioBreakingAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioBreakingAgents")
         private Long outboundScenarioBreakingAgents;
 
-        @NameInMap("OutboundScenarioReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioReadyAgents")
         private Long outboundScenarioReadyAgents;
 
-        @NameInMap("OutboundScenarioTalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioTalkingAgents")
         private Long outboundScenarioTalkingAgents;
 
-        @NameInMap("OutboundScenarioWorkingAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioWorkingAgents")
         private Long outboundScenarioWorkingAgents;
 
-        @NameInMap("ReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("ReadyAgents")
         private Long readyAgents;
 
-        @NameInMap("TalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("TalkingAgents")
         private Long talkingAgents;
 
-        @NameInMap("TotalAgents")
+        @com.aliyun.core.annotation.NameInMap("TotalAgents")
         private Long totalAgents;
 
-        @NameInMap("WorkingAgents")
+        @com.aliyun.core.annotation.NameInMap("WorkingAgents")
         private Long workingAgents;
 
         private Data(Builder builder) {

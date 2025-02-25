@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetGtmMonitorStatusRequest} extends {@link RequestModel}
  *
  * <p>SetGtmMonitorStatusRequest</p>
  */
 public class SetGtmMonitorStatusRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MonitorConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String monitorConfigId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private SetGtmMonitorStatusRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class SetGtmMonitorStatusRequest extends Request {
         } 
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -93,7 +101,11 @@ public class SetGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * The health check ID.
+         * <p>The health check ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc1234</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -102,11 +114,15 @@ public class SetGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether health check is enabled for the address pool. Valid values:
-         * <p>
+         * <p>Specifies whether health check is enabled for the address pool. Valid values:</p>
+         * <ul>
+         * <li><strong>OPEN</strong>: Enabled</li>
+         * <li><strong>CLOSE</strong>: Disabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **OPEN**: Enabled
-         * *   **CLOSE**: Disabled
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

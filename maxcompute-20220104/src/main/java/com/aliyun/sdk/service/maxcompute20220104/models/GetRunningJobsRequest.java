@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRunningJobsRequest} extends {@link RequestModel}
  *
  * <p>GetRunningJobsRequest</p>
  */
 public class GetRunningJobsRequest extends Request {
-    @Query
-    @NameInMap("from")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("from")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long from;
 
-    @Query
-    @NameInMap("jobOwnerList")
-    private java.util.List < String > jobOwnerList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("jobOwnerList")
+    private java.util.List<String> jobOwnerList;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("quotaNicknameList")
-    private java.util.List < String > quotaNicknameList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("quotaNicknameList")
+    private java.util.List<String> quotaNicknameList;
 
-    @Query
-    @NameInMap("to")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("to")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long to;
 
     private GetRunningJobsRequest(Builder builder) {
@@ -71,7 +76,7 @@ public class GetRunningJobsRequest extends Request {
     /**
      * @return jobOwnerList
      */
-    public java.util.List < String > getJobOwnerList() {
+    public java.util.List<String> getJobOwnerList() {
         return this.jobOwnerList;
     }
 
@@ -92,7 +97,7 @@ public class GetRunningJobsRequest extends Request {
     /**
      * @return quotaNicknameList
      */
-    public java.util.List < String > getQuotaNicknameList() {
+    public java.util.List<String> getQuotaNicknameList() {
         return this.quotaNicknameList;
     }
 
@@ -105,10 +110,10 @@ public class GetRunningJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetRunningJobsRequest, Builder> {
         private Long from; 
-        private java.util.List < String > jobOwnerList; 
+        private java.util.List<String> jobOwnerList; 
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < String > quotaNicknameList; 
+        private java.util.List<String> quotaNicknameList; 
         private Long to; 
 
         private Builder() {
@@ -126,11 +131,15 @@ public class GetRunningJobsRequest extends Request {
         } 
 
         /**
-         * The time when the query starts. This parameter specifies the time when a job is submitted.
-         * <p>
+         * <p>The time when the query starts. This parameter specifies the time when a job is submitted.</p>
+         * <ul>
+         * <li>The time range that is specified by the <strong>from</strong> and <strong>to</strong> request parameters is a closed interval. The start time and end time are included in the range. If the value of <strong>from</strong> is the same as the value of <strong>to</strong>, the time range is invalid, and a null value is returned.</li>
+         * <li>The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The time range that is specified by the **from** and **to** request parameters is a closed interval. The start time and end time are included in the range. If the value of **from** is the same as the value of **to**, the time range is invalid, and a null value is returned.
-         * *   The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1683785928</p>
          */
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
@@ -139,9 +148,9 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * The list of job executors.
+         * <p>The list of job executors.</p>
          */
-        public Builder jobOwnerList(java.util.List < String > jobOwnerList) {
+        public Builder jobOwnerList(java.util.List<String> jobOwnerList) {
             String jobOwnerListShrink = shrink(jobOwnerList, "jobOwnerList", "simple");
             this.putQueryParameter("jobOwnerList", jobOwnerListShrink);
             this.jobOwnerList = jobOwnerList;
@@ -149,7 +158,10 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -158,7 +170,10 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 20.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -167,9 +182,9 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * The list of nicknames of quotas that are used by jobs.
+         * <p>The list of nicknames of quotas that are used by jobs.</p>
          */
-        public Builder quotaNicknameList(java.util.List < String > quotaNicknameList) {
+        public Builder quotaNicknameList(java.util.List<String> quotaNicknameList) {
             String quotaNicknameListShrink = shrink(quotaNicknameList, "quotaNicknameList", "simple");
             this.putQueryParameter("quotaNicknameList", quotaNicknameListShrink);
             this.quotaNicknameList = quotaNicknameList;
@@ -177,11 +192,15 @@ public class GetRunningJobsRequest extends Request {
         }
 
         /**
-         * The time when the query ends. This parameter specifies the time when a job is submitted.
-         * <p>
+         * <p>The time when the query ends. This parameter specifies the time when a job is submitted.</p>
+         * <ul>
+         * <li>The time interval that is specified by the <strong>from</strong> and <strong>to</strong> request parameters is a closed interval. The start time and end time are included in the interval. If the value of <strong>from</strong> is the same as the value of <strong>to</strong>, the interval is invalid, and a null value is returned.</li>
+         * <li>The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The time interval that is specified by the **from** and **to** request parameters is a closed interval. The start time and end time are included in the interval. If the value of **from** is the same as the value of **to**, the interval is invalid, and a null value is returned.
-         * *   The value is a UNIX timestamp that represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1683612946</p>
          */
         public Builder to(Long to) {
             this.putQueryParameter("to", to);

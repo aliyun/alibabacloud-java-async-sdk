@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableCenVbrHealthCheckRequest} extends {@link RequestModel}
  *
  * <p>DisableCenVbrHealthCheckRequest</p>
  */
 public class DisableCenVbrHealthCheckRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VbrInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrInstanceId;
 
-    @Query
-    @NameInMap("VbrInstanceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceOwnerId")
     private Long vbrInstanceOwnerId;
 
-    @Query
-    @NameInMap("VbrInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrInstanceRegionId;
 
     private DisableCenVbrHealthCheckRequest(Builder builder) {
@@ -155,7 +160,11 @@ public class DisableCenVbrHealthCheckRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-sjfoejfghhjgghjghkg****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -200,7 +209,11 @@ public class DisableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * <p>The ID of the VBR.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-wz95o9aylj181n5****</p>
          */
         public Builder vbrInstanceId(String vbrInstanceId) {
             this.putQueryParameter("VbrInstanceId", vbrInstanceId);
@@ -209,10 +222,13 @@ public class DisableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VBR belongs.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <blockquote>
+         * <p>This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);
@@ -221,10 +237,12 @@ public class DisableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
-         * <p>
+         * <p>The ID of the region where the VBR is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder vbrInstanceRegionId(String vbrInstanceRegionId) {
             this.putQueryParameter("VbrInstanceRegionId", vbrInstanceRegionId);

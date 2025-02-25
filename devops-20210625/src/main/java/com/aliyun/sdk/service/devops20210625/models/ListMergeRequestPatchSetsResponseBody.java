@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMergeRequestPatchSetsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMergeRequestPatchSetsResponseBody</p>
  */
 public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListMergeRequestPatchSetsResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -82,7 +87,7 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -112,7 +117,7 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -131,26 +136,32 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMergeRequestPatchSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMergeRequestPatchSetsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("commitId")
+        @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("patchSetBizId")
+        @com.aliyun.core.annotation.NameInMap("patchSetBizId")
         private String patchSetBizId;
 
-        @NameInMap("patchSetName")
+        @com.aliyun.core.annotation.NameInMap("patchSetName")
         private String patchSetName;
 
-        @NameInMap("patchSetNo")
+        @com.aliyun.core.annotation.NameInMap("patchSetNo")
         private Long patchSetNo;
 
-        @NameInMap("relatedMergeItemType")
+        @com.aliyun.core.annotation.NameInMap("relatedMergeItemType")
         private String relatedMergeItemType;
 
-        @NameInMap("shortCommitId")
+        @com.aliyun.core.annotation.NameInMap("shortCommitId")
         private String shortCommitId;
 
         private Result(Builder builder) {

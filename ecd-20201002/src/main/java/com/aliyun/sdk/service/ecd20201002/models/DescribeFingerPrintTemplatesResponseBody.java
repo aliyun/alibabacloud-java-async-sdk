@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFingerPrintTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFingerPrintTemplatesResponseBody</p>
  */
 public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
-    @NameInMap("FingerPrintTemplates")
-    private java.util.List < FingerPrintTemplates> fingerPrintTemplates;
+    @com.aliyun.core.annotation.NameInMap("FingerPrintTemplates")
+    private java.util.List<FingerPrintTemplates> fingerPrintTemplates;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFingerPrintTemplatesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     /**
      * @return fingerPrintTemplates
      */
-    public java.util.List < FingerPrintTemplates> getFingerPrintTemplates() {
+    public java.util.List<FingerPrintTemplates> getFingerPrintTemplates() {
         return this.fingerPrintTemplates;
     }
 
@@ -46,13 +51,13 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FingerPrintTemplates> fingerPrintTemplates; 
+        private java.util.List<FingerPrintTemplates> fingerPrintTemplates; 
         private String requestId; 
 
         /**
          * FingerPrintTemplates.
          */
-        public Builder fingerPrintTemplates(java.util.List < FingerPrintTemplates> fingerPrintTemplates) {
+        public Builder fingerPrintTemplates(java.util.List<FingerPrintTemplates> fingerPrintTemplates) {
             this.fingerPrintTemplates = fingerPrintTemplates;
             return this;
         }
@@ -71,26 +76,32 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFingerPrintTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFingerPrintTemplatesResponseBody</p>
+     */
     public static class FingerPrintTemplates extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("LoginTime")
+        @com.aliyun.core.annotation.NameInMap("LoginTime")
         private String loginTime;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
         private FingerPrintTemplates(Builder builder) {

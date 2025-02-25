@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTableLevelResponseBody} extends {@link TeaModel}
  *
  * <p>ListTableLevelResponseBody</p>
  */
 public class ListTableLevelResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableLevelInfo")
+    @com.aliyun.core.annotation.NameInMap("TableLevelInfo")
     private TableLevelInfo tableLevelInfo;
 
     private ListTableLevelResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         private TableLevelInfo tableLevelInfo; 
 
         /**
-         * The error code returned.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +114,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +125,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +136,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +147,10 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +158,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the table levels.
+         * <p>The information about the table levels.</p>
          */
         public Builder tableLevelInfo(TableLevelInfo tableLevelInfo) {
             this.tableLevelInfo = tableLevelInfo;
@@ -151,20 +171,26 @@ public class ListTableLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTableLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableLevelResponseBody</p>
+     */
     public static class LevelList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LevelId")
+        @com.aliyun.core.annotation.NameInMap("LevelId")
         private Long levelId;
 
-        @NameInMap("LevelType")
+        @com.aliyun.core.annotation.NameInMap("LevelType")
         private Integer levelType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private LevelList(Builder builder) {
@@ -226,7 +252,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The description of the table level.
+             * <p>The description of the table level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +263,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table level.
+             * <p>The table level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -242,7 +274,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+             * <p>The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelType(Integer levelType) {
                 this.levelType = levelType;
@@ -250,7 +285,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table level.
+             * <p>The name of the table level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +296,10 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DataWorks workspace.
+             * <p>The ID of the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -272,11 +313,17 @@ public class ListTableLevelResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTableLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTableLevelResponseBody</p>
+     */
     public static class TableLevelInfo extends TeaModel {
-        @NameInMap("LevelList")
-        private java.util.List < LevelList> levelList;
+        @com.aliyun.core.annotation.NameInMap("LevelList")
+        private java.util.List<LevelList> levelList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TableLevelInfo(Builder builder) {
@@ -295,7 +342,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         /**
          * @return levelList
          */
-        public java.util.List < LevelList> getLevelList() {
+        public java.util.List<LevelList> getLevelList() {
             return this.levelList;
         }
 
@@ -307,19 +354,22 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LevelList> levelList; 
+            private java.util.List<LevelList> levelList; 
             private Long totalCount; 
 
             /**
-             * The list of table levels.
+             * <p>The list of table levels.</p>
              */
-            public Builder levelList(java.util.List < LevelList> levelList) {
+            public Builder levelList(java.util.List<LevelList> levelList) {
                 this.levelList = levelList;
                 return this;
             }
 
             /**
-             * The total number of table levels returned.
+             * <p>The total number of table levels returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

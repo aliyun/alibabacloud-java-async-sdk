@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListListenersByConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListListenersByConfigResponseBody</p>
  */
 public class ListListenersByConfigResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Listeners")
-    private java.util.List < Listeners> listeners;
+    @com.aliyun.core.annotation.NameInMap("Listeners")
+    private java.util.List<Listeners> listeners;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListListenersByConfigResponseBody(Builder builder) {
@@ -76,7 +81,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     /**
      * @return listeners
      */
-    public java.util.List < Listeners> getListeners() {
+    public java.util.List<Listeners> getListeners() {
         return this.listeners;
     }
 
@@ -125,7 +130,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String httpCode; 
-        private java.util.List < Listeners> listeners; 
+        private java.util.List<Listeners> listeners; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -134,7 +139,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +150,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -150,15 +161,18 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The information about listeners.
+         * <p>The information about listeners.</p>
          */
-        public Builder listeners(java.util.List < Listeners> listeners) {
+        public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
             return this;
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +180,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +191,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +202,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75E1442F-11EC-567A-9CF0-5A36F7904F39</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +213,14 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +228,10 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -215,20 +244,42 @@ public class ListListenersByConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListListenersByConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListListenersByConfigResponseBody</p>
+     */
     public static class Listeners extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.Map<String, String> labels;
+
+        @com.aliyun.core.annotation.NameInMap("MatchRuleName")
+        private String matchRuleName;
+
+        @com.aliyun.core.annotation.NameInMap("MatchRuleType")
+        private String matchRuleType;
+
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
 
         private Listeners(Builder builder) {
             this.ip = builder.ip;
+            this.labels = builder.labels;
+            this.matchRuleName = builder.matchRuleName;
+            this.matchRuleType = builder.matchRuleType;
             this.md5 = builder.md5;
             this.status = builder.status;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -247,6 +298,27 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
+        }
+
+        /**
+         * @return matchRuleName
+         */
+        public String getMatchRuleName() {
+            return this.matchRuleName;
+        }
+
+        /**
+         * @return matchRuleType
+         */
+        public String getMatchRuleType() {
+            return this.matchRuleType;
+        }
+
+        /**
          * @return md5
          */
         public String getMd5() {
@@ -260,13 +332,27 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private String ip; 
+            private java.util.Map<String, String> labels; 
+            private String matchRuleName; 
+            private String matchRuleType; 
             private String md5; 
             private String status; 
+            private String version; 
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -274,7 +360,34 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The verification string.
+             * <p>The label of the listener.</p>
+             */
+            public Builder labels(java.util.Map<String, String> labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * MatchRuleName.
+             */
+            public Builder matchRuleName(String matchRuleName) {
+                this.matchRuleName = matchRuleName;
+                return this;
+            }
+
+            /**
+             * MatchRuleType.
+             */
+            public Builder matchRuleType(String matchRuleType) {
+                this.matchRuleType = matchRuleType;
+                return this;
+            }
+
+            /**
+             * <p>The verification string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23sdfdf</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -282,10 +395,24 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>beta</p>
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The current version of the listener. Valid values: gray and normal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

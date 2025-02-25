@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBenchmarkTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBenchmarkTaskResponseBody</p>
  */
 public class CreateBenchmarkTaskResponseBody extends TeaModel {
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private CreateBenchmarkTaskResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Benchmark  task [foo] is Creating</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -82,7 +90,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>The ID of the region where the stress testing task is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -90,7 +101,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +112,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-1076</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

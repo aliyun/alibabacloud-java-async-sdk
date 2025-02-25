@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePipelineExecutionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeImagePipelineExecutionsRequest</p>
  */
 public class DescribeImagePipelineExecutionsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ExecutionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionId")
     private String executionId;
 
-    @Query
-    @NameInMap("ImagePipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
     private String imagePipelineId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeImagePipelineExecutionsRequest(Builder builder) {
         super(builder);
@@ -171,7 +176,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -187,7 +192,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -219,7 +224,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the image creation task.
+         * <p>The ID of the image creation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-5fb8facb8ed7427c****</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -228,7 +236,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the image template.
+         * <p>The ID of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -237,10 +248,11 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Valid values: 1 to 500.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 500.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -249,7 +261,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -276,7 +291,11 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -303,18 +322,27 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:
-         * <p>
+         * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
+         * <ul>
+         * <li>PREPARING: Resources, such as the intermediate instance, are being created.</li>
+         * <li>REPAIRING: The source image is being repaired.</li>
+         * <li>BUILDING: The user-defined commands are being run and an image is being created.</li>
+         * <li>TESTING: The user-defined test commands are being run.</li>
+         * <li>DISTRIBUTING: The created image is being copied and shared.</li>
+         * <li>RELEASING: The temporary resources generated during the image creation process are being released.</li>
+         * <li>SUCCESS: The image creation task is completed.</li>
+         * <li>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</li>
+         * <li>FAILED: The image creation task fails.</li>
+         * <li>TEST_FAILED: The image is created, but the test fails.</li>
+         * <li>CANCELLING: The image creation task is being canceled.</li>
+         * <li>CANCELLED: The image creation task is canceled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you leave this parameter empty, all image creation tasks are queried regardless of task status.</p>
+         * </blockquote>
          * 
-         * *   BUILDING
-         * *   DISTRIBUTING
-         * *   RELEASING
-         * *   SUCCESS
-         * *   FAILED
-         * *   CANCELLING
-         * *   CANCELLED
-         * 
-         * > If you want to query the image creation tasks in all states, specify all values.
+         * <strong>example:</strong>
+         * <p>BUILDING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -323,9 +351,9 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * > This parameter is not publicly available.
+         * <p>The tags of the image creation task.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -338,11 +366,17 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagePipelineExecutionsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelineExecutionsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -377,7 +411,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is not publicly available.
+             * <p>The key of tag N of the image creation task. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -385,7 +422,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <p>The value of tag N of the image creation task. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(String value) {
                 this.value = value;

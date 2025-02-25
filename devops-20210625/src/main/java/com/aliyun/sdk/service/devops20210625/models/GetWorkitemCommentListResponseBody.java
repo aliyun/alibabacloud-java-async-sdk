@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkitemCommentListResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkitemCommentListResponseBody</p>
  */
 public class GetWorkitemCommentListResponseBody extends TeaModel {
-    @NameInMap("commentList")
-    private java.util.List < CommentList> commentList;
+    @com.aliyun.core.annotation.NameInMap("commentList")
+    private java.util.List<CommentList> commentList;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private String success;
 
     private GetWorkitemCommentListResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
     /**
      * @return commentList
      */
-    public java.util.List < CommentList> getCommentList() {
+    public java.util.List<CommentList> getCommentList() {
         return this.commentList;
     }
 
@@ -79,7 +84,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CommentList> commentList; 
+        private java.util.List<CommentList> commentList; 
         private String errorCode; 
         private String errorMsg; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         /**
          * commentList.
          */
-        public Builder commentList(java.util.List < CommentList> commentList) {
+        public Builder commentList(java.util.List<CommentList> commentList) {
             this.commentList = commentList;
             return this;
         }
@@ -110,7 +115,10 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,20 +139,26 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkitemCommentListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkitemCommentListResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("account")
+        @com.aliyun.core.annotation.NameInMap("account")
         private String account;
 
-        @NameInMap("avatar")
+        @com.aliyun.core.annotation.NameInMap("avatar")
         private String avatar;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("nickName")
+        @com.aliyun.core.annotation.NameInMap("nickName")
         private String nickName;
 
-        @NameInMap("realName")
+        @com.aliyun.core.annotation.NameInMap("realName")
         private String realName;
 
         private User(Builder builder) {
@@ -252,38 +266,44 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkitemCommentListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkitemCommentListResponseBody</p>
+     */
     public static class CommentList extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("formatType")
+        @com.aliyun.core.annotation.NameInMap("formatType")
         private String formatType;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("isTop")
+        @com.aliyun.core.annotation.NameInMap("isTop")
         private Boolean isTop;
 
-        @NameInMap("modifiedTime")
+        @com.aliyun.core.annotation.NameInMap("modifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("parentId")
+        @com.aliyun.core.annotation.NameInMap("parentId")
         private Long parentId;
 
-        @NameInMap("targetIdentifier")
+        @com.aliyun.core.annotation.NameInMap("targetIdentifier")
         private String targetIdentifier;
 
-        @NameInMap("targetType")
+        @com.aliyun.core.annotation.NameInMap("targetType")
         private String targetType;
 
-        @NameInMap("topTime")
+        @com.aliyun.core.annotation.NameInMap("topTime")
         private Long topTime;
 
-        @NameInMap("user")
+        @com.aliyun.core.annotation.NameInMap("user")
         private User user;
 
         private CommentList(Builder builder) {

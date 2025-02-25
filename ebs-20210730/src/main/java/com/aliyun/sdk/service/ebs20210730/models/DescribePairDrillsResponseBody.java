@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePairDrillsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePairDrillsResponseBody</p>
  */
 public class DescribePairDrillsResponseBody extends TeaModel {
-    @NameInMap("Drills")
-    private java.util.List < Drills> drills;
+    @com.aliyun.core.annotation.NameInMap("Drills")
+    private java.util.List<Drills> drills;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePairDrillsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
     /**
      * @return drills
      */
-    public java.util.List < Drills> getDrills() {
+    public java.util.List<Drills> getDrills() {
         return this.drills;
     }
 
@@ -90,7 +95,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Drills> drills; 
+        private java.util.List<Drills> drills; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -98,15 +103,18 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Drills.
+         * <p>The information of disaster recovery drills that were performed on the replication pair.</p>
          */
-        public Builder drills(java.util.List < Drills> drills) {
+        public Builder drills(java.util.List<Drills> drills) {
             this.drills = drills;
             return this;
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +122,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +133,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +144,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C46FF5A8-C5F0-4024-8262-B16B6392****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -151,26 +171,32 @@ public class DescribePairDrillsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePairDrillsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePairDrillsResponseBody</p>
+     */
     public static class Drills extends TeaModel {
-        @NameInMap("DrillDiskId")
+        @com.aliyun.core.annotation.NameInMap("DrillDiskId")
         private String drillDiskId;
 
-        @NameInMap("DrillDiskStatus")
+        @com.aliyun.core.annotation.NameInMap("DrillDiskStatus")
         private String drillDiskStatus;
 
-        @NameInMap("DrillId")
+        @com.aliyun.core.annotation.NameInMap("DrillId")
         private String drillId;
 
-        @NameInMap("RecoverPoint")
+        @com.aliyun.core.annotation.NameInMap("RecoverPoint")
         private Long recoverPoint;
 
-        @NameInMap("StartAt")
+        @com.aliyun.core.annotation.NameInMap("StartAt")
         private Long startAt;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
         private Drills(Builder builder) {
@@ -250,7 +276,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * DrillDiskId.
+             * <p>The ID of the drill disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-xxx</p>
              */
             public Builder drillDiskId(String drillDiskId) {
                 this.drillDiskId = drillDiskId;
@@ -258,7 +287,19 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * DrillDiskStatus.
+             * <p>The status of the drill disk. Valid values:</p>
+             * <ul>
+             * <li>created</li>
+             * <li>deleted</li>
+             * <li>creating</li>
+             * <li>deleting</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter can also display error code details if your drill disk fails to be created or deleted.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder drillDiskStatus(String drillDiskStatus) {
                 this.drillDiskStatus = drillDiskStatus;
@@ -266,7 +307,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * DrillId.
+             * <p>The ID of the drill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drill-xxx</p>
              */
             public Builder drillId(String drillId) {
                 this.drillId = drillId;
@@ -274,7 +318,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * RecoverPoint.
+             * <p>The recovery point of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690855931</p>
              */
             public Builder recoverPoint(Long recoverPoint) {
                 this.recoverPoint = recoverPoint;
@@ -282,7 +329,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * StartAt.
+             * <p>The beginning time of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1690855888</p>
              */
             public Builder startAt(Long startAt) {
                 this.startAt = startAt;
@@ -290,7 +340,17 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the drill. Valid values:</p>
+             * <ul>
+             * <li>execute_failed</li>
+             * <li>executed</li>
+             * <li>executing</li>
+             * <li>clear_failed</li>
+             * <li>clearing</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +358,10 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * <p>The error message that was displayed if the drill failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAIR_SYNCPOINT_NOT_FOUND</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;

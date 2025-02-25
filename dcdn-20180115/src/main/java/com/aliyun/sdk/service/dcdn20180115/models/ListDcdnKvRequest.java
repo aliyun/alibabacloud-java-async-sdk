@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDcdnKvRequest} extends {@link RequestModel}
  *
  * <p>ListDcdnKvRequest</p>
  */
 public class ListDcdnKvRequest extends Request {
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
     private ListDcdnKvRequest(Builder builder) {
@@ -98,7 +98,11 @@ public class ListDcdnKvRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -107,7 +111,10 @@ public class ListDcdnKvRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The product of PageNumber and PageSize cannot exceed 50,000.
+         * <p>The number of the page to return. The product of PageNumber and PageSize cannot exceed 50,000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +123,10 @@ public class ListDcdnKvRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 50. Maximum value: 100.
+         * <p>The number of entries to return on each page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +135,10 @@ public class ListDcdnKvRequest extends Request {
         }
 
         /**
-         * The prefix to query.
+         * <p>The prefix to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix-</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);

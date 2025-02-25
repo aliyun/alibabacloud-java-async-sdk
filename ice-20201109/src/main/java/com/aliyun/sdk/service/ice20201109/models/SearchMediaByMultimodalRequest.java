@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaByMultimodalRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaByMultimodalRequest</p>
  */
 public class SearchMediaByMultimodalRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchLibName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchLibName")
     private String searchLibName;
 
-    @Query
-    @NameInMap("Text")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Text")
     private String text;
 
     private SearchMediaByMultimodalRequest(Builder builder) {
@@ -133,7 +138,15 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of the media assets.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>image</li>
+         * <li>video (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -142,7 +155,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -151,7 +167,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +179,10 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -169,7 +191,7 @@ public class SearchMediaByMultimodalRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The content that you want to query. You can describe the content in natural language.</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);

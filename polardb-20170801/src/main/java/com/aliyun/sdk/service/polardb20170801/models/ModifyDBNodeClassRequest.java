@@ -1,66 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBNodeClassRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBNodeClassRequest</p>
  */
 public class ModifyDBNodeClassRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DBNodeTargetClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeTargetClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeTargetClass;
 
-    @Query
-    @NameInMap("DBNodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeType")
     private String DBNodeType;
 
-    @Query
-    @NameInMap("ModifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modifyType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlannedEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
     private String plannedEndTime;
 
-    @Query
-    @NameInMap("PlannedStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedFlashingOffTime")
+    private String plannedFlashingOffTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
     private String plannedStartTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SubCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubCategory")
     private String subCategory;
 
     private ModifyDBNodeClassRequest(Builder builder) {
@@ -73,6 +82,7 @@ public class ModifyDBNodeClassRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.plannedEndTime = builder.plannedEndTime;
+        this.plannedFlashingOffTime = builder.plannedFlashingOffTime;
         this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -149,6 +159,13 @@ public class ModifyDBNodeClassRequest extends Request {
     }
 
     /**
+     * @return plannedFlashingOffTime
+     */
+    public String getPlannedFlashingOffTime() {
+        return this.plannedFlashingOffTime;
+    }
+
+    /**
      * @return plannedStartTime
      */
     public String getPlannedStartTime() {
@@ -185,6 +202,7 @@ public class ModifyDBNodeClassRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String plannedEndTime; 
+        private String plannedFlashingOffTime; 
         private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -204,6 +222,7 @@ public class ModifyDBNodeClassRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.plannedEndTime = request.plannedEndTime;
+            this.plannedFlashingOffTime = request.plannedFlashingOffTime;
             this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -211,7 +230,10 @@ public class ModifyDBNodeClassRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -220,7 +242,11 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -229,7 +255,11 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * The specifications of all nodes. For more information, see [Specifications of computing nodes](~~102542~~).
+         * <p>The specifications of all nodes. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of computing nodes</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         public Builder DBNodeTargetClass(String DBNodeTargetClass) {
             this.putQueryParameter("DBNodeTargetClass", DBNodeTargetClass);
@@ -238,7 +268,15 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * DBNodeType.
+         * <p>The type of the node. Valid values:</p>
+         * <ul>
+         * <li>RO</li>
+         * <li>STANDBY</li>
+         * <li>DLNode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DLNode</p>
          */
         public Builder DBNodeType(String DBNodeType) {
             this.putQueryParameter("DBNodeType", DBNodeType);
@@ -247,11 +285,15 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * The type of the configuration change. Valid values:
-         * <p>
+         * <p>The type of the configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>Upgrade</strong></li>
+         * <li><strong>Downgrade</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Upgrade**
-         * *   **Downgrade**
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -278,11 +320,16 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * The latest start time to run the task. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * <p>The latest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</li>
+         * <li>By default, if you specify <code>PlannedStartTime</code> but do not specify PlannedEndTime, the latest start time of the task is set to <code>Value of PlannedEndTime + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and you do not specify PlannedEndTime, the latest start time of the task is <code>2021-01-14T09:30:00Z</code>.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.
-         * > *   If you specify the `PlannedStartTime` parameter but do not specify a value for the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by `the value of the PlannedEndTime parameter + 30 minutes` by default. For example, if you set the `PlannedStartTime` parameter to `2021-01-14T09:00:00Z` and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -291,12 +338,26 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
-         * <p>
+         * PlannedFlashingOffTime.
+         */
+        public Builder plannedFlashingOffTime(String plannedFlashingOffTime) {
+            this.putQueryParameter("PlannedFlashingOffTime", plannedFlashingOffTime);
+            this.plannedFlashingOffTime = plannedFlashingOffTime;
+            return this;
+        }
+
+        /**
+         * <p>The earliest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter takes effect only when <code>ModifyType</code> is set to <code>Upgrade</code>.</li>
+         * <li>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time that ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+         * <li>If this parameter is left empty, the upgrade task is immediately performed.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   This parameter takes effect only when `ModifyType` is set to `Upgrade`.
-         * > *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time range from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.
-         * > *   If this parameter is empty, the upgrade task is immediately performed.
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -323,11 +384,14 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * The category of the cluster. Valid values:
-         * <p>
+         * <p>The category of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>normal_exclusive</strong>: dedicated.</li>
+         * <li><strong>normal_general</strong>: genera-purpose.</li>
+         * </ul>
          * 
-         * *   **normal_exclusive**: dedicated
-         * *   **normal_general**: genera-purpose
+         * <strong>example:</strong>
+         * <p>normal_general</p>
          */
         public Builder subCategory(String subCategory) {
             this.putQueryParameter("SubCategory", subCategory);

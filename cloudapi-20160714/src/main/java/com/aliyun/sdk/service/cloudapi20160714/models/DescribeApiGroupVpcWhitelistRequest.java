@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiGroupVpcWhitelistRequest} extends {@link RequestModel}
  *
  * <p>DescribeApiGroupVpcWhitelistRequest</p>
  */
 public class DescribeApiGroupVpcWhitelistRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeApiGroupVpcWhitelistRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class DescribeApiGroupVpcWhitelistRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * <p>The ID of the API group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f6c64214dc27400196eef954575d60d3</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

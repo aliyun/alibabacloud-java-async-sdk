@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceDataSkewResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceDataSkewResponseBody</p>
  */
 public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstanceDataSkewResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,21 +73,24 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Details about data skew.
+         * <p>Details about data skew.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -111,32 +125,38 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceDataSkewResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceDataSkewResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DistributeKey")
+        @com.aliyun.core.annotation.NameInMap("DistributeKey")
         private String distributeKey;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Integer sequence;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableSize")
+        @com.aliyun.core.annotation.NameInMap("TableSize")
         private String tableSize;
 
-        @NameInMap("TableSkew")
+        @com.aliyun.core.annotation.NameInMap("TableSkew")
         private String tableSkew;
 
-        @NameInMap("TimeLastUpdated")
+        @com.aliyun.core.annotation.NameInMap("TimeLastUpdated")
         private String timeLastUpdated;
 
         private Items(Builder builder) {
@@ -234,7 +254,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             private String timeLastUpdated; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbtest</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -242,7 +265,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The distribution key of the table.
+             * <p>The distribution key of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ItemId</p>
              */
             public Builder distributeKey(String distributeKey) {
                 this.distributeKey = distributeKey;
@@ -250,7 +276,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the table.
+             * <p>The owner of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpguser</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -258,7 +287,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the schema.
+             * <p>The name of the schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema1</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -266,7 +298,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the data skew case. All data skew cases are sorted by severity in descending order.
+             * <p>The sequence number of the data skew case. All data skew cases are sorted by severity in descending order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -274,7 +309,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tab1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -282,7 +320,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rows in the table.
+             * <p>The total number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder tableSize(String tableSize) {
                 this.tableSize = tableSize;
@@ -290,7 +331,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The skew ratio of the table. Valid values: 0 to 100. Unit: %. A greater value indicates that the table is more severely skewed. A smaller value indicates less impact on query performance. A value of 0 indicates no data skew.
+             * <p>The skew ratio of the table. Valid values: 0 to 100. Unit: %. A greater value indicates that the table is more severely skewed. A smaller value indicates less impact on query performance. A value of 0 indicates no data skew.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.23</p>
              */
             public Builder tableSkew(String tableSkew) {
                 this.tableSkew = tableSkew;
@@ -298,7 +342,10 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the table was last deleted, inserted, or updated.
+             * <p>The time when the table was last deleted, inserted, or updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-08T20:00:00Z</p>
              */
             public Builder timeLastUpdated(String timeLastUpdated) {
                 this.timeLastUpdated = timeLastUpdated;

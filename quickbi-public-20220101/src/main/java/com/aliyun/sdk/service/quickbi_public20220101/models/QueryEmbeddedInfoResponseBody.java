@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEmbeddedInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEmbeddedInfoResponseBody</p>
  */
 public class QueryEmbeddedInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEmbeddedInfoResponseBody(Builder builder) {
@@ -78,11 +83,14 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,14 +103,20 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEmbeddedInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEmbeddedInfoResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("DashboardOfflineQuery")
+        @com.aliyun.core.annotation.NameInMap("DashboardOfflineQuery")
         private Integer dashboardOfflineQuery;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("Report")
+        @com.aliyun.core.annotation.NameInMap("Report")
         private Integer report;
 
         private Detail(Builder builder) {
@@ -176,14 +190,20 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEmbeddedInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEmbeddedInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("EmbeddedCount")
+        @com.aliyun.core.annotation.NameInMap("EmbeddedCount")
         private Integer embeddedCount;
 
-        @NameInMap("MaxCount")
+        @com.aliyun.core.annotation.NameInMap("MaxCount")
         private Integer maxCount;
 
         private Result(Builder builder) {

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUniqueDeviceStatResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUniqueDeviceStatResponseBody</p>
  */
 public class QueryUniqueDeviceStatResponseBody extends TeaModel {
-    @NameInMap("AppDeviceStats")
+    @com.aliyun.core.annotation.NameInMap("AppDeviceStats")
     private AppDeviceStats appDeviceStats;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryUniqueDeviceStatResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUniqueDeviceStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUniqueDeviceStatResponseBody</p>
+     */
     public static class AppDeviceStat extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private AppDeviceStat(Builder builder) {
@@ -132,8 +138,14 @@ public class QueryUniqueDeviceStatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUniqueDeviceStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUniqueDeviceStatResponseBody</p>
+     */
     public static class AppDeviceStats extends TeaModel {
-        @NameInMap("AppDeviceStat")
+        @com.aliyun.core.annotation.NameInMap("AppDeviceStat")
         private java.util.List < AppDeviceStat> appDeviceStat;
 
         private AppDeviceStats(Builder builder) {

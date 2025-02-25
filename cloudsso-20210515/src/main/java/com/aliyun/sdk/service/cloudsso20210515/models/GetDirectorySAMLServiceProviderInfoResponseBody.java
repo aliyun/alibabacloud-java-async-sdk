@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDirectorySAMLServiceProviderInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetDirectorySAMLServiceProviderInfoResponseBody</p>
  */
 public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLServiceProvider")
+    @com.aliyun.core.annotation.NameInMap("SAMLServiceProvider")
     private SAMLServiceProvider SAMLServiceProvider;
 
     private GetDirectorySAMLServiceProviderInfoResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         private SAMLServiceProvider SAMLServiceProvider; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4632107D-BCE1-5A96-B30B-182EE0709625</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SP.
+         * <p>The information about the SP.</p>
          */
         public Builder SAMLServiceProvider(SAMLServiceProvider SAMLServiceProvider) {
             this.SAMLServiceProvider = SAMLServiceProvider;
@@ -71,26 +74,32 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDirectorySAMLServiceProviderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDirectorySAMLServiceProviderInfoResponseBody</p>
+     */
     public static class SAMLServiceProvider extends TeaModel {
-        @NameInMap("AcsUrl")
+        @com.aliyun.core.annotation.NameInMap("AcsUrl")
         private String acsUrl;
 
-        @NameInMap("AuthnSignAlgo")
+        @com.aliyun.core.annotation.NameInMap("AuthnSignAlgo")
         private String authnSignAlgo;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EncodedMetadataDocument")
+        @com.aliyun.core.annotation.NameInMap("EncodedMetadataDocument")
         private String encodedMetadataDocument;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("SupportEncryptedAssertion")
+        @com.aliyun.core.annotation.NameInMap("SupportEncryptedAssertion")
         private Boolean supportEncryptedAssertion;
 
         private SAMLServiceProvider(Builder builder) {
@@ -170,7 +179,10 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             private Boolean supportEncryptedAssertion; 
 
             /**
-             * The Assertion Consumer Service (ACS) URL of the SP.
+             * <p>The Assertion Consumer Service (ACS) URL of the SP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://signin-cn-shanghai.alibabacloudsso.com/saml/acs/51d298a9-2a3f-4e23-97c7-7ad1cfa9">https://signin-cn-shanghai.alibabacloudsso.com/saml/acs/51d298a9-2a3f-4e23-97c7-7ad1cfa9</a>****</p>
              */
             public Builder acsUrl(String acsUrl) {
                 this.acsUrl = acsUrl;
@@ -194,7 +206,10 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-00fc2p61****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -202,7 +217,10 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata file of the SP. The value of this parameter is Base64-encoded.
+             * <p>The metadata file of the SP. The value of this parameter is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PD94bWwgdmVyc2lv****</p>
              */
             public Builder encodedMetadataDocument(String encodedMetadataDocument) {
                 this.encodedMetadataDocument = encodedMetadataDocument;
@@ -210,7 +228,10 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The entity ID of the SP.
+             * <p>The entity ID of the SP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://signin-cn-shanghai.alibabacloudsso.com/saml/sp/d-00fc2p61">https://signin-cn-shanghai.alibabacloudsso.com/saml/sp/d-00fc2p61</a>****</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;

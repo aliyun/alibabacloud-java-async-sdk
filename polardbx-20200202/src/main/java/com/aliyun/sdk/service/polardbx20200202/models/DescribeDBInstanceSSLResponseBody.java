@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSSLResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSSLResponseBody</p>
  */
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceSSLResponseBody(Builder builder) {
@@ -71,14 +76,20 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceSSLResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceSSLResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CertCommonName")
+        @com.aliyun.core.annotation.NameInMap("CertCommonName")
         private String certCommonName;
 
-        @NameInMap("SSLEnabled")
+        @com.aliyun.core.annotation.NameInMap("SSLEnabled")
         private Boolean SSLEnabled;
 
-        @NameInMap("SSLExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("SSLExpiredTime")
         private String SSLExpiredTime;
 
         private Data(Builder builder) {

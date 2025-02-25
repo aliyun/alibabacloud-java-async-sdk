@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
  */
 public class ChangeResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("NewResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newResourceGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private ChangeResourceGroupRequest(Builder builder) {
@@ -100,10 +105,14 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the new resource group.
-         * <p>
+         * <p>The ID of the new resource group.</p>
+         * <blockquote>
+         * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+         * <strong>example:</strong>
+         * <p>rg-bp1drpcfz9srr393h****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -112,10 +121,12 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the new resource group belongs.
-         * <p>
+         * <p>The ID of the region to which the new resource group belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +135,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit whose resource group you want to modify.
+         * <p>The ID of the Express Connect circuit whose resource group you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp16qjewdsunr41m1****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -133,12 +148,16 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
+         * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
+         * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PHYSICALCONNECTION**: Express Connect circuit.
-         * *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
-         * *   **ROUTERINTERFACE**: router interface.
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

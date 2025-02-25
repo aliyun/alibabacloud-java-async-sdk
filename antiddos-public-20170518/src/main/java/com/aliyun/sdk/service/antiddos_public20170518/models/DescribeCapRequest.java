@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCapRequest</p>
  */
 public class DescribeCapRequest extends Request {
-    @Query
-    @NameInMap("BegTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BegTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long begTime;
 
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
     private DescribeCapRequest(Builder builder) {
@@ -114,7 +113,10 @@ public class DescribeCapRequest extends Request {
         } 
 
         /**
-         * BegTime.
+         * The start time of the DDoS attack event. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>
+         * 
+         * > You can call the [DescribeDdosEventList](~~354236~~) operation to query the start time of each DDoS attack event that occurred on an asset.
          */
         public Builder begTime(Long begTime) {
             this.putQueryParameter("BegTime", begTime);
@@ -123,7 +125,10 @@ public class DescribeCapRequest extends Request {
         }
 
         /**
-         * DdosRegionId.
+         * The region ID of the asset that is under DDoS attacks. The asset is assigned a public IP address.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -132,7 +137,10 @@ public class DescribeCapRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the asset that is under DDoS attacks.
+         * <p>
+         * 
+         * > You can call the [DescribeInstance](~~354191~~) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -141,7 +149,12 @@ public class DescribeCapRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the asset that is under DDoS attacks. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: ECS instance
+         * *   **slb**: SLB instance
+         * *   **eip**: EIP
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -150,7 +163,7 @@ public class DescribeCapRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * The public IP address of the asset that is under DDoS attacks.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);

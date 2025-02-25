@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileUploadLimitResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileUploadLimitResponseBody</p>
  */
 public class GetFileUploadLimitResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileUploadLimitResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned if the request is successful.
+         * <p>The data returned if the request is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A975D03-5F49-5354-B2CB-3918D5DA431A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileUploadLimitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileUploadLimitResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private String limit;
 
         private Data(Builder builder) {
@@ -98,7 +112,10 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
             private String limit; 
 
             /**
-             * The QPS limit on the files uploaded from the client.
+             * <p>The QPS limit on the files uploaded from the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder limit(String limit) {
                 this.limit = limit;

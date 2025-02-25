@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecretRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecretRequest</p>
  */
 public class DescribeSecretRequest extends Request {
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Query
-    @NameInMap("SecretId")
-    @Validation(required = true, maximum = 1000000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000000000, minimum = 1)
     private Long secretId;
 
     private DescribeSecretRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DescribeSecretRequest extends Request {
         } 
 
         /**
-         * The ID of the namespace in which the Secret instance resides. By default, the namespace ID is the same as the region ID.
+         * <p>The ID of the namespace in which the Secret instance resides. By default, the namespace ID is the same as the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -79,7 +88,11 @@ public class DescribeSecretRequest extends Request {
         }
 
         /**
-         * The ID of the Secret instance to be queried. You can call the [ListSecrets](~~466929~~) operation to view the IDs of Secrete instances.
+         * <p>The ID of the Secret instance to be queried. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to view the IDs of Secrete instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder secretId(Long secretId) {
             this.putQueryParameter("SecretId", secretId);

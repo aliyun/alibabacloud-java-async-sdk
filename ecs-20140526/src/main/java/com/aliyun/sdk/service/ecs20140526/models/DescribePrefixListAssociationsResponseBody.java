@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrefixListAssociationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePrefixListAssociationsResponseBody</p>
  */
 public class DescribePrefixListAssociationsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PrefixListAssociations")
+    @com.aliyun.core.annotation.NameInMap("PrefixListAssociations")
     private PrefixListAssociations prefixListAssociations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePrefixListAssociationsResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +78,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
          */
         public Builder prefixListAssociations(PrefixListAssociations prefixListAssociations) {
             this.prefixListAssociations = prefixListAssociations;
@@ -78,7 +86,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the resources that are associated with the prefix list.
+         * <p>Details about the resources that are associated with the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,11 +102,17 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePrefixListAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListAssociationsResponseBody</p>
+     */
     public static class PrefixListAssociation extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private PrefixListAssociation(Builder builder) {
@@ -130,7 +147,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp11ujym6xsff6l0****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -152,9 +172,15 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePrefixListAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListAssociationsResponseBody</p>
+     */
     public static class PrefixListAssociations extends TeaModel {
-        @NameInMap("PrefixListAssociation")
-        private java.util.List < PrefixListAssociation> prefixListAssociation;
+        @com.aliyun.core.annotation.NameInMap("PrefixListAssociation")
+        private java.util.List<PrefixListAssociation> prefixListAssociation;
 
         private PrefixListAssociations(Builder builder) {
             this.prefixListAssociation = builder.prefixListAssociation;
@@ -171,17 +197,17 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         /**
          * @return prefixListAssociation
          */
-        public java.util.List < PrefixListAssociation> getPrefixListAssociation() {
+        public java.util.List<PrefixListAssociation> getPrefixListAssociation() {
             return this.prefixListAssociation;
         }
 
         public static final class Builder {
-            private java.util.List < PrefixListAssociation> prefixListAssociation; 
+            private java.util.List<PrefixListAssociation> prefixListAssociation; 
 
             /**
              * PrefixListAssociation.
              */
-            public Builder prefixListAssociation(java.util.List < PrefixListAssociation> prefixListAssociation) {
+            public Builder prefixListAssociation(java.util.List<PrefixListAssociation> prefixListAssociation) {
                 this.prefixListAssociation = prefixListAssociation;
                 return this;
             }

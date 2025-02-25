@@ -1,50 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateClusterSpecRequest} extends {@link RequestModel}
  *
  * <p>UpdateClusterSpecRequest</p>
  */
 public class UpdateClusterSpecRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterSpecification")
     private String clusterSpecification;
 
-    @Query
-    @NameInMap("InstanceCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceCount")
     private Integer instanceCount;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MseVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MseVersion")
     private String mseVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PubNetworkFlow")
+    private Integer pubNetworkFlow;
 
     private UpdateClusterSpecRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.autoPay = builder.autoPay;
         this.clusterId = builder.clusterId;
         this.clusterSpecification = builder.clusterSpecification;
         this.instanceCount = builder.instanceCount;
         this.instanceId = builder.instanceId;
         this.mseVersion = builder.mseVersion;
+        this.pubNetworkFlow = builder.pubNetworkFlow;
     }
 
     public static Builder builder() {
@@ -65,6 +80,13 @@ public class UpdateClusterSpecRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -102,13 +124,22 @@ public class UpdateClusterSpecRequest extends Request {
         return this.mseVersion;
     }
 
+    /**
+     * @return pubNetworkFlow
+     */
+    public Integer getPubNetworkFlow() {
+        return this.pubNetworkFlow;
+    }
+
     public static final class Builder extends Request.Builder<UpdateClusterSpecRequest, Builder> {
         private String acceptLanguage; 
+        private Boolean autoPay; 
         private String clusterId; 
         private String clusterSpecification; 
         private Integer instanceCount; 
         private String instanceId; 
         private String mseVersion; 
+        private Integer pubNetworkFlow; 
 
         private Builder() {
             super();
@@ -117,19 +148,24 @@ public class UpdateClusterSpecRequest extends Request {
         private Builder(UpdateClusterSpecRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.autoPay = request.autoPay;
             this.clusterId = request.clusterId;
             this.clusterSpecification = request.clusterSpecification;
             this.instanceCount = request.instanceCount;
             this.instanceId = request.instanceId;
             this.mseVersion = request.mseVersion;
+            this.pubNetworkFlow = request.pubNetworkFlow;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -138,7 +174,19 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-09k1q11****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -147,7 +195,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The destination engine specifications.
+         * <p>The destination engine specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_SC_2_4_200_c</p>
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -156,7 +207,10 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The number of destination nodes.
+         * <p>The number of destination nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);
@@ -165,7 +219,11 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,11 +232,23 @@ public class UpdateClusterSpecRequest extends Request {
         }
 
         /**
-         * The MSE version.
+         * <p>The MSE version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
             this.mseVersion = mseVersion;
+            return this;
+        }
+
+        /**
+         * PubNetworkFlow.
+         */
+        public Builder pubNetworkFlow(Integer pubNetworkFlow) {
+            this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
+            this.pubNetworkFlow = pubNetworkFlow;
             return this;
         }
 

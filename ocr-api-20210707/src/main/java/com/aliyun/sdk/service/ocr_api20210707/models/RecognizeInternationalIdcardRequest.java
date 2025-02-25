@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeInternationalIdcardRequest} extends {@link RequestModel}
  *
  * <p>RecognizeInternationalIdcardRequest</p>
  */
 public class RecognizeInternationalIdcardRequest extends Request {
-    @Query
-    @NameInMap("Country")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String country;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(maxLength = 2048)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeInternationalIdcardRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class RecognizeInternationalIdcardRequest extends Request {
         } 
 
         /**
-         * Country.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vietnam</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);

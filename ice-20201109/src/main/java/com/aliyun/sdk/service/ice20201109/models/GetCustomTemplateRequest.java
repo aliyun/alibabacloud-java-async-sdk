@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetCustomTemplateRequest</p>
  */
 public class GetCustomTemplateRequest extends Request {
-    @Query
-    @NameInMap("Subtype")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subtype")
     private Integer subtype;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
     private GetCustomTemplateRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class GetCustomTemplateRequest extends Request {
         } 
 
         /**
-         * Subtype.
+         * <p>The template subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subtype(Integer subtype) {
             this.putQueryParameter("Subtype", subtype);
@@ -91,7 +99,10 @@ public class GetCustomTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -100,7 +111,10 @@ public class GetCustomTemplateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The ID of the template type that is used to query the default template. This parameter is required if TemplateId is not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

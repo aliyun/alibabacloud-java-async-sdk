@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricConsortiumsResponseBody</p>
  */
 public class DescribeFabricConsortiumsResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeFabricConsortiumsResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeFabricConsortiumsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -173,58 +172,61 @@ public class DescribeFabricConsortiumsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ChannelCount")
+        @com.aliyun.core.annotation.NameInMap("ChannelCount")
         private Integer channelCount;
 
-        @NameInMap("ChannelPolicy")
+        @com.aliyun.core.annotation.NameInMap("ChannelPolicy")
         private String channelPolicy;
 
-        @NameInMap("CodeName")
+        @com.aliyun.core.annotation.NameInMap("CodeName")
         private String codeName;
 
-        @NameInMap("ConsortiumId")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumId")
         private String consortiumId;
 
-        @NameInMap("ConsortiumName")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumName")
         private String consortiumName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("OrganizationCount")
+        @com.aliyun.core.annotation.NameInMap("MajorVersion")
+        private String majorVersion;
+
+        @com.aliyun.core.annotation.NameInMap("OrganizationCount")
         private Integer organizationCount;
 
-        @NameInMap("OwnerBid")
+        @com.aliyun.core.annotation.NameInMap("OwnerBid")
         private String ownerBid;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("SpecName")
+        @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("SupportChannelConfig")
+        @com.aliyun.core.annotation.NameInMap("SupportChannelConfig")
         private Boolean supportChannelConfig;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private Result(Builder builder) {
@@ -236,6 +238,7 @@ public class DescribeFabricConsortiumsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.domain = builder.domain;
             this.expiredTime = builder.expiredTime;
+            this.majorVersion = builder.majorVersion;
             this.organizationCount = builder.organizationCount;
             this.ownerBid = builder.ownerBid;
             this.ownerName = builder.ownerName;
@@ -310,6 +313,13 @@ public class DescribeFabricConsortiumsResponseBody extends TeaModel {
          */
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        /**
+         * @return majorVersion
+         */
+        public String getMajorVersion() {
+            return this.majorVersion;
         }
 
         /**
@@ -391,6 +401,7 @@ public class DescribeFabricConsortiumsResponseBody extends TeaModel {
             private String createTime; 
             private String domain; 
             private String expiredTime; 
+            private String majorVersion; 
             private Integer organizationCount; 
             private String ownerBid; 
             private String ownerName; 
@@ -463,6 +474,14 @@ public class DescribeFabricConsortiumsResponseBody extends TeaModel {
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * MajorVersion.
+             */
+            public Builder majorVersion(String majorVersion) {
+                this.majorVersion = majorVersion;
                 return this;
             }
 

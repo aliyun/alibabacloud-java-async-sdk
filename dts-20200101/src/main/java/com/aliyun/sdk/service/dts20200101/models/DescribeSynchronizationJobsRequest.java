@@ -1,49 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynchronizationJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSynchronizationJobsRequest</p>
  */
 public class DescribeSynchronizationJobsRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SynchronizationJobName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobName")
     private String synchronizationJobName;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeSynchronizationJobsRequest(Builder builder) {
         super(builder);
@@ -53,6 +62,7 @@ public class DescribeSynchronizationJobsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.synchronizationJobName = builder.synchronizationJobName;
         this.tag = builder.tag;
     }
@@ -113,6 +123,13 @@ public class DescribeSynchronizationJobsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return synchronizationJobName
      */
     public String getSynchronizationJobName() {
@@ -122,7 +139,7 @@ public class DescribeSynchronizationJobsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -133,8 +150,9 @@ public class DescribeSynchronizationJobsRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String synchronizationJobName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -148,12 +166,16 @@ public class DescribeSynchronizationJobsRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.synchronizationJobName = request.synchronizationJobName;
             this.tag = request.tag;
         } 
 
         /**
-         * The page number of the returned page.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -162,12 +184,10 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
-         * > 
-         * *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.
-         * *   This parameter can be an empty string.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +205,10 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -194,7 +217,10 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,10 +229,10 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * The name of the data synchronization task.
-         * <p>
+         * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
          * 
-         * >  Fuzzy matching is supported.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,12 +241,25 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.
-         * <p>
+         * <p>The resource group ID.</p>
          * 
-         * > 
-         * *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
-         * *   This parameter cannot be an empty string.
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the data synchronization task.</p>
+         * <blockquote>
+         * <p> Fuzzy matching is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.putQueryParameter("SynchronizationJobName", synchronizationJobName);
@@ -229,9 +268,15 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+         * <li>This parameter cannot be an empty string.</li>
+         * </ul>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -244,12 +289,18 @@ public class DescribeSynchronizationJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSynchronizationJobsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSynchronizationJobsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -284,7 +335,17 @@ public class DescribeSynchronizationJobsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the request.
+             * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+             * <li>This parameter cannot be an empty string.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -292,7 +353,16 @@ public class DescribeSynchronizationJobsRequest extends Request {
             }
 
             /**
-             * The maximum number of entries that can be displayed on the current page.
+             * <p>The tag value. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag value.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
+             * <li>This parameter can be an empty string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

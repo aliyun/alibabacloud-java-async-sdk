@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiskSize} extends {@link TeaModel}
  *
  * <p>DiskSize</p>
  */
 public class DiskSize extends TeaModel {
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
     private DiskSize(Builder builder) {
@@ -51,7 +56,11 @@ public class DiskSize extends TeaModel {
         private Integer size; 
 
         /**
-         * 磁盘类型。
+         * <p>磁盘类型。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -59,7 +68,10 @@ public class DiskSize extends TeaModel {
         }
 
         /**
-         * 单位GB。
+         * <p>单位GB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder size(Integer size) {
             this.size = size;

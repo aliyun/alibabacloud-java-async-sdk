@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchNodesByOutputRequest} extends {@link RequestModel}
  *
  * <p>SearchNodesByOutputRequest</p>
  */
 public class SearchNodesByOutputRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Outputs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Outputs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputs;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
     private SearchNodesByOutputRequest(Builder builder) {
@@ -85,7 +89,7 @@ public class SearchNodesByOutputRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +98,11 @@ public class SearchNodesByOutputRequest extends Request {
         }
 
         /**
-         * Outputs.
+         * <p>The output names of the node. If you specify multiple output names, separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaaaa.1231412_out,bbbb.12313123_out</p>
          */
         public Builder outputs(String outputs) {
             this.putBodyParameter("Outputs", outputs);
@@ -103,7 +111,11 @@ public class SearchNodesByOutputRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * <p>The environment of Operation Center. Valid values: PROD and DEV.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

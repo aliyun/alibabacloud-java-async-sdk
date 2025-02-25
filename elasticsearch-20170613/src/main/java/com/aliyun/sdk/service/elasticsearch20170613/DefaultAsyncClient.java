@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ActivateZones  ActivateZonesRequest
+     * @return ActivateZonesResponse
+     */
     @Override
     public CompletableFuture<ActivateZonesResponse> activateZones(ActivateZonesRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddConnectableCluster  AddConnectableClusterRequest
+     * @return AddConnectableClusterResponse
+     */
     @Override
     public CompletableFuture<AddConnectableClusterResponse> addConnectableCluster(AddConnectableClusterRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddSnapshotRepo  AddSnapshotRepoRequest
+     * @return AddSnapshotRepoResponse
+     */
     @Override
     public CompletableFuture<AddSnapshotRepoResponse> addSnapshotRepo(AddSnapshotRepoRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelDeletion  CancelDeletionRequest
+     * @return CancelDeletionResponse
+     */
     @Override
     public CompletableFuture<CancelDeletionResponse> cancelDeletion(CancelDeletionRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelLogstashDeletion  CancelLogstashDeletionRequest
+     * @return CancelLogstashDeletionResponse
+     */
     @Override
     public CompletableFuture<CancelLogstashDeletionResponse> cancelLogstashDeletion(CancelLogstashDeletionRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelTask  CancelTaskRequest
+     * @return CancelTaskResponse
+     */
     @Override
     public CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CapacityPlan  CapacityPlanRequest
+     * @return CapacityPlanResponse
+     */
     @Override
     public CompletableFuture<CapacityPlanResponse> capacityPlan(CapacityPlanRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseDiagnosis  CloseDiagnosisRequest
+     * @return CloseDiagnosisResponse
+     */
     @Override
     public CompletableFuture<CloseDiagnosisResponse> closeDiagnosis(CloseDiagnosisRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseHttps  CloseHttpsRequest
+     * @return CloseHttpsResponse
+     */
     @Override
     public CompletableFuture<CloseHttpsResponse> closeHttps(CloseHttpsRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CloseManagedIndex  CloseManagedIndexRequest
+     * @return CloseManagedIndexResponse
+     */
     @Override
     public CompletableFuture<CloseManagedIndexResponse> closeManagedIndex(CloseManagedIndexRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCollector  CreateCollectorRequest
+     * @return CreateCollectorResponse
+     */
     @Override
     public CompletableFuture<CreateCollectorResponse> createCollector(CreateCollectorRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateComponentIndex  CreateComponentIndexRequest
+     * @return CreateComponentIndexResponse
+     */
     @Override
     public CompletableFuture<CreateComponentIndexResponse> createComponentIndex(CreateComponentIndexRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDataStream  CreateDataStreamRequest
+     * @return CreateDataStreamResponse
+     */
     @Override
     public CompletableFuture<CreateDataStreamResponse> createDataStream(CreateDataStreamRequest request) {
         try {
@@ -222,26 +274,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * Before you call this operation, note that:
-      * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-      * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-      *
+     * @param request the request parameters of CreateILMPolicy  CreateILMPolicyRequest
+     * @return CreateILMPolicyResponse
      */
-    @Override
-    public CompletableFuture<CreateDataTasksResponse> createDataTasks(CreateDataTasksRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDataTasks").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/data-task").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataTasksResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateDataTasksResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<CreateILMPolicyResponse> createILMPolicy(CreateILMPolicyRequest request) {
         try {
@@ -256,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIndexTemplate  CreateIndexTemplateRequest
+     * @return CreateIndexTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateIndexTemplateResponse> createIndexTemplate(CreateIndexTemplateRequest request) {
         try {
@@ -270,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLogstash  CreateLogstashRequest
+     * @return CreateLogstashResponse
+     */
     @Override
     public CompletableFuture<CreateLogstashResponse> createLogstash(CreateLogstashRequest request) {
         try {
@@ -284,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePipelines  CreatePipelinesRequest
+     * @return CreatePipelinesResponse
+     */
     @Override
     public CompletableFuture<CreatePipelinesResponse> createPipelines(CreatePipelinesRequest request) {
         try {
@@ -298,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
     @Override
     public CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request) {
         try {
@@ -313,8 +364,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\\*\\*\\*
-      *
+     * <b>description</b> :
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\<em>\</em>\*</p>
+     * 
+     * @param request the request parameters of CreateVpcEndpoint  CreateVpcEndpointRequest
+     * @return CreateVpcEndpointResponse
      */
     @Override
     public CompletableFuture<CreateVpcEndpointResponse> createVpcEndpoint(CreateVpcEndpointRequest request) {
@@ -330,6 +384,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeactivateZones  DeactivateZonesRequest
+     * @return DeactivateZonesResponse
+     */
     @Override
     public CompletableFuture<DeactivateZonesResponse> deactivateZones(DeactivateZonesRequest request) {
         try {
@@ -344,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCollector  DeleteCollectorRequest
+     * @return DeleteCollectorResponse
+     */
     @Override
     public CompletableFuture<DeleteCollectorResponse> deleteCollector(DeleteCollectorRequest request) {
         try {
@@ -358,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteComponentIndex  DeleteComponentIndexRequest
+     * @return DeleteComponentIndexResponse
+     */
     @Override
     public CompletableFuture<DeleteComponentIndexResponse> deleteComponentIndex(DeleteComponentIndexRequest request) {
         try {
@@ -372,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConnectedCluster  DeleteConnectedClusterRequest
+     * @return DeleteConnectedClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteConnectedClusterResponse> deleteConnectedCluster(DeleteConnectedClusterRequest request) {
         try {
@@ -386,6 +456,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDataStream  DeleteDataStreamRequest
+     * @return DeleteDataStreamResponse
+     */
     @Override
     public CompletableFuture<DeleteDataStreamResponse> deleteDataStream(DeleteDataStreamRequest request) {
         try {
@@ -400,6 +474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDataTask  DeleteDataTaskRequest
+     * @return DeleteDataTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteDataTaskResponse> deleteDataTask(DeleteDataTaskRequest request) {
         try {
@@ -414,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDeprecatedTemplate  DeleteDeprecatedTemplateRequest
+     * @return DeleteDeprecatedTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteDeprecatedTemplateResponse> deleteDeprecatedTemplate(DeleteDeprecatedTemplateRequest request) {
         try {
@@ -428,6 +510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteILMPolicy  DeleteILMPolicyRequest
+     * @return DeleteILMPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteILMPolicyResponse> deleteILMPolicy(DeleteILMPolicyRequest request) {
         try {
@@ -442,6 +528,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIndexTemplate  DeleteIndexTemplateRequest
+     * @return DeleteIndexTemplateResponse
+     */
     @Override
     public CompletableFuture<DeleteIndexTemplateResponse> deleteIndexTemplate(DeleteIndexTemplateRequest request) {
         try {
@@ -456,6 +546,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -471,8 +565,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.</p>
+     * 
+     * @param request the request parameters of DeleteLogstash  DeleteLogstashRequest
+     * @return DeleteLogstashResponse
      */
     @Override
     public CompletableFuture<DeleteLogstashResponse> deleteLogstash(DeleteLogstashRequest request) {
@@ -488,6 +585,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePipelines  DeletePipelinesRequest
+     * @return DeletePipelinesResponse
+     */
     @Override
     public CompletableFuture<DeletePipelinesResponse> deletePipelines(DeletePipelinesRequest request) {
         try {
@@ -502,6 +603,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSnapshotRepo  DeleteSnapshotRepoRequest
+     * @return DeleteSnapshotRepoResponse
+     */
     @Override
     public CompletableFuture<DeleteSnapshotRepoResponse> deleteSnapshotRepo(DeleteSnapshotRepoRequest request) {
         try {
@@ -516,6 +621,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVpcEndpoint  DeleteVpcEndpointRequest
+     * @return DeleteVpcEndpointResponse
+     */
     @Override
     public CompletableFuture<DeleteVpcEndpointResponse> deleteVpcEndpoint(DeleteVpcEndpointRequest request) {
         try {
@@ -531,8 +640,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeAckOperator  DescribeAckOperatorRequest
+     * @return DescribeAckOperatorResponse
      */
     @Override
     public CompletableFuture<DescribeAckOperatorResponse> describeAckOperator(DescribeAckOperatorRequest request) {
@@ -548,6 +662,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApm  DescribeApmRequest
+     * @return DescribeApmResponse
+     */
     @Override
     public CompletableFuture<DescribeApmResponse> describeApm(DescribeApmRequest request) {
         try {
@@ -562,6 +680,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCollector  DescribeCollectorRequest
+     * @return DescribeCollectorResponse
+     */
     @Override
     public CompletableFuture<DescribeCollectorResponse> describeCollector(DescribeCollectorRequest request) {
         try {
@@ -576,6 +698,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComponentIndex  DescribeComponentIndexRequest
+     * @return DescribeComponentIndexResponse
+     */
     @Override
     public CompletableFuture<DescribeComponentIndexResponse> describeComponentIndex(DescribeComponentIndexRequest request) {
         try {
@@ -590,6 +716,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeConnectableClusters  DescribeConnectableClustersRequest
+     * @return DescribeConnectableClustersResponse
+     */
     @Override
     public CompletableFuture<DescribeConnectableClustersResponse> describeConnectableClusters(DescribeConnectableClustersRequest request) {
         try {
@@ -604,6 +734,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeprecatedTemplate  DescribeDeprecatedTemplateRequest
+     * @return DescribeDeprecatedTemplateResponse
+     */
     @Override
     public CompletableFuture<DescribeDeprecatedTemplateResponse> describeDeprecatedTemplate(DescribeDeprecatedTemplateRequest request) {
         try {
@@ -618,6 +752,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiagnoseReport  DescribeDiagnoseReportRequest
+     * @return DescribeDiagnoseReportResponse
+     */
     @Override
     public CompletableFuture<DescribeDiagnoseReportResponse> describeDiagnoseReport(DescribeDiagnoseReportRequest request) {
         try {
@@ -632,6 +770,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDiagnosisSettings  DescribeDiagnosisSettingsRequest
+     * @return DescribeDiagnosisSettingsResponse
+     */
     @Override
     public CompletableFuture<DescribeDiagnosisSettingsResponse> describeDiagnosisSettings(DescribeDiagnosisSettingsRequest request) {
         try {
@@ -646,6 +788,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDynamicSettings  DescribeDynamicSettingsRequest
+     * @return DescribeDynamicSettingsResponse
+     */
     @Override
     public CompletableFuture<DescribeDynamicSettingsResponse> describeDynamicSettings(DescribeDynamicSettingsRequest request) {
         try {
@@ -661,11 +807,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * An Elasticsearch cluster can be in a health state indicated by one of the following colors:
-      * *   GREEN: Primary shards and replica shards for the primary shards are normally allocated.
-      * *   YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.
-      * *   RED: Primary shards are not normally allocated.
-      *
+     * <b>description</b> :
+     * <p>An Elasticsearch cluster can be in a health state indicated by one of the following colors:</p>
+     * <ul>
+     * <li>GREEN: Primary shards and replica shards for the primary shards are normally allocated.</li>
+     * <li>YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.</li>
+     * <li>RED: Primary shards are not normally allocated.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeElasticsearchHealth  DescribeElasticsearchHealthRequest
+     * @return DescribeElasticsearchHealthResponse
      */
     @Override
     public CompletableFuture<DescribeElasticsearchHealthResponse> describeElasticsearchHealth(DescribeElasticsearchHealthRequest request) {
@@ -681,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeILMPolicy  DescribeILMPolicyRequest
+     * @return DescribeILMPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeILMPolicyResponse> describeILMPolicy(DescribeILMPolicyRequest request) {
         try {
@@ -695,6 +850,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIndexTemplate  DescribeIndexTemplateRequest
+     * @return DescribeIndexTemplateResponse
+     */
     @Override
     public CompletableFuture<DescribeIndexTemplateResponse> describeIndexTemplate(DescribeIndexTemplateRequest request) {
         try {
@@ -709,6 +868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstance  DescribeInstanceRequest
+     * @return DescribeInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceResponse> describeInstance(DescribeInstanceRequest request) {
         try {
@@ -723,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeKibanaSettings  DescribeKibanaSettingsRequest
+     * @return DescribeKibanaSettingsResponse
+     */
     @Override
     public CompletableFuture<DescribeKibanaSettingsResponse> describeKibanaSettings(DescribeKibanaSettingsRequest request) {
         try {
@@ -737,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLogstash  DescribeLogstashRequest
+     * @return DescribeLogstashResponse
+     */
     @Override
     public CompletableFuture<DescribeLogstashResponse> describeLogstash(DescribeLogstashRequest request) {
         try {
@@ -751,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePipeline  DescribePipelineRequest
+     * @return DescribePipelineResponse
+     */
     @Override
     public CompletableFuture<DescribePipelineResponse> describePipeline(DescribePipelineRequest request) {
         try {
@@ -765,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePipelineManagementConfig  DescribePipelineManagementConfigRequest
+     * @return DescribePipelineManagementConfigResponse
+     */
     @Override
     public CompletableFuture<DescribePipelineManagementConfigResponse> describePipelineManagementConfig(DescribePipelineManagementConfigRequest request) {
         try {
@@ -779,6 +958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -793,6 +976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSnapshotSetting  DescribeSnapshotSettingRequest
+     * @return DescribeSnapshotSettingResponse
+     */
     @Override
     public CompletableFuture<DescribeSnapshotSettingResponse> describeSnapshotSetting(DescribeSnapshotSettingRequest request) {
         try {
@@ -807,6 +994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTemplates  DescribeTemplatesRequest
+     * @return DescribeTemplatesResponse
+     */
     @Override
     public CompletableFuture<DescribeTemplatesResponse> describeTemplates(DescribeTemplatesRequest request) {
         try {
@@ -821,6 +1012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeXpackMonitorConfig  DescribeXpackMonitorConfigRequest
+     * @return DescribeXpackMonitorConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeXpackMonitorConfigResponse> describeXpackMonitorConfig(DescribeXpackMonitorConfigRequest request) {
         try {
@@ -835,6 +1030,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DiagnoseInstance  DiagnoseInstanceRequest
+     * @return DiagnoseInstanceResponse
+     */
     @Override
     public CompletableFuture<DiagnoseInstanceResponse> diagnoseInstance(DiagnoseInstanceRequest request) {
         try {
@@ -849,6 +1048,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableKibanaPvlNetwork  DisableKibanaPvlNetworkRequest
+     * @return DisableKibanaPvlNetworkResponse
+     */
+    @Override
+    public CompletableFuture<DisableKibanaPvlNetworkResponse> disableKibanaPvlNetwork(DisableKibanaPvlNetworkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableKibanaPvlNetwork").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/actions/disable-kibana-private").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableKibanaPvlNetworkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableKibanaPvlNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableKibanaPvlNetwork  EnableKibanaPvlNetworkRequest
+     * @return EnableKibanaPvlNetworkResponse
+     */
+    @Override
+    public CompletableFuture<EnableKibanaPvlNetworkResponse> enableKibanaPvlNetwork(EnableKibanaPvlNetworkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableKibanaPvlNetwork").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/actions/enable-kibana-private").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableKibanaPvlNetworkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableKibanaPvlNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EstimatedLogstashRestartTime  EstimatedLogstashRestartTimeRequest
+     * @return EstimatedLogstashRestartTimeResponse
+     */
     @Override
     public CompletableFuture<EstimatedLogstashRestartTimeResponse> estimatedLogstashRestartTime(EstimatedLogstashRestartTimeRequest request) {
         try {
@@ -863,6 +1102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EstimatedRestartTime  EstimatedRestartTimeRequest
+     * @return EstimatedRestartTimeResponse
+     */
     @Override
     public CompletableFuture<EstimatedRestartTimeResponse> estimatedRestartTime(EstimatedRestartTimeRequest request) {
         try {
@@ -877,6 +1120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClusterDataInformation  GetClusterDataInformationRequest
+     * @return GetClusterDataInformationResponse
+     */
     @Override
     public CompletableFuture<GetClusterDataInformationResponse> getClusterDataInformation(GetClusterDataInformationRequest request) {
         try {
@@ -891,6 +1138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetElastictask  GetElastictaskRequest
+     * @return GetElastictaskResponse
+     */
     @Override
     public CompletableFuture<GetElastictaskResponse> getElastictask(GetElastictaskRequest request) {
         try {
@@ -905,6 +1156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEmonGrafanaAlerts  GetEmonGrafanaAlertsRequest
+     * @return GetEmonGrafanaAlertsResponse
+     */
     @Override
     public CompletableFuture<GetEmonGrafanaAlertsResponse> getEmonGrafanaAlerts(GetEmonGrafanaAlertsRequest request) {
         try {
@@ -919,6 +1174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEmonGrafanaDashboards  GetEmonGrafanaDashboardsRequest
+     * @return GetEmonGrafanaDashboardsResponse
+     */
     @Override
     public CompletableFuture<GetEmonGrafanaDashboardsResponse> getEmonGrafanaDashboards(GetEmonGrafanaDashboardsRequest request) {
         try {
@@ -933,6 +1192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEmonMonitorData  GetEmonMonitorDataRequest
+     * @return GetEmonMonitorDataResponse
+     */
     @Override
     public CompletableFuture<GetEmonMonitorDataResponse> getEmonMonitorData(GetEmonMonitorDataRequest request) {
         try {
@@ -947,6 +1210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpenStoreUsage  GetOpenStoreUsageRequest
+     * @return GetOpenStoreUsageResponse
+     */
     @Override
     public CompletableFuture<GetOpenStoreUsageResponse> getOpenStoreUsage(GetOpenStoreUsageRequest request) {
         try {
@@ -961,6 +1228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRegionConfiguration  GetRegionConfigurationRequest
+     * @return GetRegionConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetRegionConfigurationResponse> getRegionConfiguration(GetRegionConfigurationRequest request) {
         try {
@@ -975,6 +1246,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRegionalInstanceConfig  GetRegionalInstanceConfigRequest
+     * @return GetRegionalInstanceConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetRegionalInstanceConfigResponse> getRegionalInstanceConfig(GetRegionalInstanceConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRegionalInstanceConfig").setMethod(HttpMethod.GET).setPathRegex("/openapi/regions/instance-config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRegionalInstanceConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRegionalInstanceConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetSuggestShrinkableNodes  GetSuggestShrinkableNodesRequest
+     * @return GetSuggestShrinkableNodesResponse
+     */
     @Override
     public CompletableFuture<GetSuggestShrinkableNodesResponse> getSuggestShrinkableNodes(GetSuggestShrinkableNodesRequest request) {
         try {
@@ -989,6 +1282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTransferableNodes  GetTransferableNodesRequest
+     * @return GetTransferableNodesResponse
+     */
     @Override
     public CompletableFuture<GetTransferableNodesResponse> getTransferableNodes(GetTransferableNodesRequest request) {
         try {
@@ -1004,8 +1301,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of InitializeOperationRole  InitializeOperationRoleRequest
+     * @return InitializeOperationRoleResponse
      */
     @Override
     public CompletableFuture<InitializeOperationRoleResponse> initializeOperationRole(InitializeOperationRoleRequest request) {
@@ -1022,8 +1324,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of InstallAckOperator  InstallAckOperatorRequest
+     * @return InstallAckOperatorResponse
      */
     @Override
     public CompletableFuture<InstallAckOperatorResponse> installAckOperator(InstallAckOperatorRequest request) {
@@ -1039,6 +1346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallKibanaSystemPlugin  InstallKibanaSystemPluginRequest
+     * @return InstallKibanaSystemPluginResponse
+     */
     @Override
     public CompletableFuture<InstallKibanaSystemPluginResponse> installKibanaSystemPlugin(InstallKibanaSystemPluginRequest request) {
         try {
@@ -1054,8 +1365,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ls-cn-oew1qbgl\\*\\*\\*\\*
-      *
+     * <b>description</b> :
+     * <p>ls-cn-oew1qbgl\<em>\</em>\<em>\</em></p>
+     * 
+     * @param request the request parameters of InstallLogstashSystemPlugin  InstallLogstashSystemPluginRequest
+     * @return InstallLogstashSystemPluginResponse
      */
     @Override
     public CompletableFuture<InstallLogstashSystemPluginResponse> installLogstashSystemPlugin(InstallLogstashSystemPluginRequest request) {
@@ -1071,6 +1385,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallSystemPlugin  InstallSystemPluginRequest
+     * @return InstallSystemPluginResponse
+     */
     @Override
     public CompletableFuture<InstallSystemPluginResponse> installSystemPlugin(InstallSystemPluginRequest request) {
         try {
@@ -1085,6 +1403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallUserPlugins  InstallUserPluginsRequest
+     * @return InstallUserPluginsResponse
+     */
     @Override
     public CompletableFuture<InstallUserPluginsResponse> installUserPlugins(InstallUserPluginsRequest request) {
         try {
@@ -1099,6 +1421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InterruptElasticsearchTask  InterruptElasticsearchTaskRequest
+     * @return InterruptElasticsearchTaskResponse
+     */
     @Override
     public CompletableFuture<InterruptElasticsearchTaskResponse> interruptElasticsearchTask(InterruptElasticsearchTaskRequest request) {
         try {
@@ -1113,6 +1439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InterruptLogstashTask  InterruptLogstashTaskRequest
+     * @return InterruptLogstashTaskResponse
+     */
     @Override
     public CompletableFuture<InterruptLogstashTaskResponse> interruptLogstashTask(InterruptLogstashTaskRequest request) {
         try {
@@ -1127,6 +1457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAckClusters  ListAckClustersRequest
+     * @return ListAckClustersResponse
+     */
     @Override
     public CompletableFuture<ListAckClustersResponse> listAckClusters(ListAckClustersRequest request) {
         try {
@@ -1142,8 +1476,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ListAckNamespaces  ListAckNamespacesRequest
+     * @return ListAckNamespacesResponse
      */
     @Override
     public CompletableFuture<ListAckNamespacesResponse> listAckNamespaces(ListAckNamespacesRequest request) {
@@ -1159,6 +1498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListActionRecords  ListActionRecordsRequest
+     * @return ListActionRecordsResponse
+     */
     @Override
     public CompletableFuture<ListActionRecordsResponse> listActionRecords(ListActionRecordsRequest request) {
         try {
@@ -1173,6 +1516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAllNode  ListAllNodeRequest
+     * @return ListAllNodeResponse
+     */
     @Override
     public CompletableFuture<ListAllNodeResponse> listAllNode(ListAllNodeRequest request) {
         try {
@@ -1187,6 +1534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAlternativeSnapshotRepos  ListAlternativeSnapshotReposRequest
+     * @return ListAlternativeSnapshotReposResponse
+     */
     @Override
     public CompletableFuture<ListAlternativeSnapshotReposResponse> listAlternativeSnapshotRepos(ListAlternativeSnapshotReposRequest request) {
         try {
@@ -1201,6 +1552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApm  ListApmRequest
+     * @return ListApmResponse
+     */
     @Override
     public CompletableFuture<ListApmResponse> listApm(ListApmRequest request) {
         try {
@@ -1215,6 +1570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvailableEsInstanceIds  ListAvailableEsInstanceIdsRequest
+     * @return ListAvailableEsInstanceIdsResponse
+     */
     @Override
     public CompletableFuture<ListAvailableEsInstanceIdsResponse> listAvailableEsInstanceIds(ListAvailableEsInstanceIdsRequest request) {
         try {
@@ -1229,6 +1588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCollectors  ListCollectorsRequest
+     * @return ListCollectorsResponse
+     */
     @Override
     public CompletableFuture<ListCollectorsResponse> listCollectors(ListCollectorsRequest request) {
         try {
@@ -1243,6 +1606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListComponentIndices  ListComponentIndicesRequest
+     * @return ListComponentIndicesResponse
+     */
     @Override
     public CompletableFuture<ListComponentIndicesResponse> listComponentIndices(ListComponentIndicesRequest request) {
         try {
@@ -1257,6 +1624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConnectedClusters  ListConnectedClustersRequest
+     * @return ListConnectedClustersResponse
+     */
     @Override
     public CompletableFuture<ListConnectedClustersResponse> listConnectedClusters(ListConnectedClustersRequest request) {
         try {
@@ -1271,6 +1642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDataStreams  ListDataStreamsRequest
+     * @return ListDataStreamsResponse
+     */
     @Override
     public CompletableFuture<ListDataStreamsResponse> listDataStreams(ListDataStreamsRequest request) {
         try {
@@ -1285,6 +1660,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDataTasks  ListDataTasksRequest
+     * @return ListDataTasksResponse
+     */
     @Override
     public CompletableFuture<ListDataTasksResponse> listDataTasks(ListDataTasksRequest request) {
         try {
@@ -1299,6 +1678,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDefaultCollectorConfigurations  ListDefaultCollectorConfigurationsRequest
+     * @return ListDefaultCollectorConfigurationsResponse
+     */
     @Override
     public CompletableFuture<ListDefaultCollectorConfigurationsResponse> listDefaultCollectorConfigurations(ListDefaultCollectorConfigurationsRequest request) {
         try {
@@ -1313,6 +1696,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDeprecatedTemplates  ListDeprecatedTemplatesRequest
+     * @return ListDeprecatedTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListDeprecatedTemplatesResponse> listDeprecatedTemplates(ListDeprecatedTemplatesRequest request) {
         try {
@@ -1327,6 +1714,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDiagnoseIndices  ListDiagnoseIndicesRequest
+     * @return ListDiagnoseIndicesResponse
+     */
     @Override
     public CompletableFuture<ListDiagnoseIndicesResponse> listDiagnoseIndices(ListDiagnoseIndicesRequest request) {
         try {
@@ -1341,6 +1732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDiagnoseReport  ListDiagnoseReportRequest
+     * @return ListDiagnoseReportResponse
+     */
     @Override
     public CompletableFuture<ListDiagnoseReportResponse> listDiagnoseReport(ListDiagnoseReportRequest request) {
         try {
@@ -1355,6 +1750,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDiagnoseReportIds  ListDiagnoseReportIdsRequest
+     * @return ListDiagnoseReportIdsResponse
+     */
     @Override
     public CompletableFuture<ListDiagnoseReportIdsResponse> listDiagnoseReportIds(ListDiagnoseReportIdsRequest request) {
         try {
@@ -1369,6 +1768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDiagnosisItems  ListDiagnosisItemsRequest
+     * @return ListDiagnosisItemsResponse
+     */
     @Override
     public CompletableFuture<ListDiagnosisItemsResponse> listDiagnosisItems(ListDiagnosisItemsRequest request) {
         try {
@@ -1383,6 +1786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDictInformation  ListDictInformationRequest
+     * @return ListDictInformationResponse
+     */
     @Override
     public CompletableFuture<ListDictInformationResponse> listDictInformation(ListDictInformationRequest request) {
         try {
@@ -1397,6 +1804,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDicts  ListDictsRequest
+     * @return ListDictsResponse
+     */
     @Override
     public CompletableFuture<ListDictsResponse> listDicts(ListDictsRequest request) {
         try {
@@ -1412,8 +1823,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Important** To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see [Collect ECS service logs](~~146446~~).
-      *
+     * <b>description</b> :
+     * <p><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
+     * 
+     * @param request the request parameters of ListEcsInstances  ListEcsInstancesRequest
+     * @return ListEcsInstancesResponse
      */
     @Override
     public CompletableFuture<ListEcsInstancesResponse> listEcsInstances(ListEcsInstancesRequest request) {
@@ -1429,6 +1843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListExtendfiles  ListExtendfilesRequest
+     * @return ListExtendfilesResponse
+     */
     @Override
     public CompletableFuture<ListExtendfilesResponse> listExtendfiles(ListExtendfilesRequest request) {
         try {
@@ -1443,6 +1861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListILMPolicies  ListILMPoliciesRequest
+     * @return ListILMPoliciesResponse
+     */
     @Override
     public CompletableFuture<ListILMPoliciesResponse> listILMPolicies(ListILMPoliciesRequest request) {
         try {
@@ -1457,6 +1879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIndexTemplates  ListIndexTemplatesRequest
+     * @return ListIndexTemplatesResponse
+     */
     @Override
     public CompletableFuture<ListIndexTemplatesResponse> listIndexTemplates(ListIndexTemplatesRequest request) {
         try {
@@ -1471,6 +1897,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstance  ListInstanceRequest
+     * @return ListInstanceResponse
+     */
     @Override
     public CompletableFuture<ListInstanceResponse> listInstance(ListInstanceRequest request) {
         try {
@@ -1485,6 +1915,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceHistoryEvents  ListInstanceHistoryEventsRequest
+     * @return ListInstanceHistoryEventsResponse
+     */
     @Override
     public CompletableFuture<ListInstanceHistoryEventsResponse> listInstanceHistoryEvents(ListInstanceHistoryEventsRequest request) {
         try {
@@ -1499,6 +1933,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceIndices  ListInstanceIndicesRequest
+     * @return ListInstanceIndicesResponse
+     */
     @Override
     public CompletableFuture<ListInstanceIndicesResponse> listInstanceIndices(ListInstanceIndicesRequest request) {
         try {
@@ -1513,6 +1951,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListKibanaPlugins  ListKibanaPluginsRequest
+     * @return ListKibanaPluginsResponse
+     */
     @Override
     public CompletableFuture<ListKibanaPluginsResponse> listKibanaPlugins(ListKibanaPluginsRequest request) {
         try {
@@ -1527,6 +1969,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListKibanaPvlNetwork  ListKibanaPvlNetworkRequest
+     * @return ListKibanaPvlNetworkResponse
+     */
+    @Override
+    public CompletableFuture<ListKibanaPvlNetworkResponse> listKibanaPvlNetwork(ListKibanaPvlNetworkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListKibanaPvlNetwork").setMethod(HttpMethod.GET).setPathRegex("/openapi/instances/{InstanceId}/actions/get-kibana-private").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKibanaPvlNetworkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKibanaPvlNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListLogstash  ListLogstashRequest
+     * @return ListLogstashResponse
+     */
     @Override
     public CompletableFuture<ListLogstashResponse> listLogstash(ListLogstashRequest request) {
         try {
@@ -1541,6 +2005,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogstashLog  ListLogstashLogRequest
+     * @return ListLogstashLogResponse
+     */
     @Override
     public CompletableFuture<ListLogstashLogResponse> listLogstashLog(ListLogstashLogRequest request) {
         try {
@@ -1555,6 +2023,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogstashPlugins  ListLogstashPluginsRequest
+     * @return ListLogstashPluginsResponse
+     */
     @Override
     public CompletableFuture<ListLogstashPluginsResponse> listLogstashPlugins(ListLogstashPluginsRequest request) {
         try {
@@ -1569,6 +2041,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNodes  ListNodesRequest
+     * @return ListNodesResponse
+     */
     @Override
     public CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request) {
         try {
@@ -1583,6 +2059,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPipeline  ListPipelineRequest
+     * @return ListPipelineResponse
+     */
     @Override
     public CompletableFuture<ListPipelineResponse> listPipeline(ListPipelineRequest request) {
         try {
@@ -1597,6 +2077,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPipelineIds  ListPipelineIdsRequest
+     * @return ListPipelineIdsResponse
+     */
     @Override
     public CompletableFuture<ListPipelineIdsResponse> listPipelineIds(ListPipelineIdsRequest request) {
         try {
@@ -1611,6 +2095,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPlugins  ListPluginsRequest
+     * @return ListPluginsResponse
+     */
     @Override
     public CompletableFuture<ListPluginsResponse> listPlugins(ListPluginsRequest request) {
         try {
@@ -1625,6 +2113,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSearchLog  ListSearchLogRequest
+     * @return ListSearchLogResponse
+     */
     @Override
     public CompletableFuture<ListSearchLogResponse> listSearchLog(ListSearchLogRequest request) {
         try {
@@ -1640,8 +2132,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ListShardRecoveries  ListShardRecoveriesRequest
+     * @return ListShardRecoveriesResponse
      */
     @Override
     public CompletableFuture<ListShardRecoveriesResponse> listShardRecoveries(ListShardRecoveriesRequest request) {
@@ -1657,6 +2154,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSnapshotReposByInstanceId  ListSnapshotReposByInstanceIdRequest
+     * @return ListSnapshotReposByInstanceIdResponse
+     */
     @Override
     public CompletableFuture<ListSnapshotReposByInstanceIdResponse> listSnapshotReposByInstanceId(ListSnapshotReposByInstanceIdRequest request) {
         try {
@@ -1671,6 +2172,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1685,6 +2190,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTags  ListTagsRequest
+     * @return ListTagsResponse
+     */
     @Override
     public CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request) {
         try {
@@ -1699,6 +2208,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVpcEndpoints  ListVpcEndpointsRequest
+     * @return ListVpcEndpointsResponse
+     */
     @Override
     public CompletableFuture<ListVpcEndpointsResponse> listVpcEndpoints(ListVpcEndpointsRequest request) {
         try {
@@ -1714,12 +2227,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:
-      * *   The error message returned because the current account is in a zone that has sufficient resources.
-      *     After migrating nodes with current specifications to another zone, you need to manually [upgrade cluster](~~96650~~) because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.
-      * *   The cluster is in the healthy state.
-      *     Can be passed`  GET _cat/health?v  `command to view the health status of the cluster.
-      *
+     * <b>description</b> :
+     * <p>If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:</p>
+     * <ul>
+     * <li>The error message returned because the current account is in a zone that has sufficient resources.
+     * After migrating nodes with current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade cluster</a> because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.</li>
+     * <li>The cluster is in the healthy state.
+     * Can be passed<code> GET _cat/health?v </code>command to view the health status of the cluster.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of MigrateToOtherZone  MigrateToOtherZoneRequest
+     * @return MigrateToOtherZoneResponse
      */
     @Override
     public CompletableFuture<MigrateToOtherZoneResponse> migrateToOtherZone(MigrateToOtherZoneRequest request) {
@@ -1735,6 +2253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDeployMachine  ModifyDeployMachineRequest
+     * @return ModifyDeployMachineResponse
+     */
     @Override
     public CompletableFuture<ModifyDeployMachineResponse> modifyDeployMachine(ModifyDeployMachineRequest request) {
         try {
@@ -1749,6 +2271,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyElastictask  ModifyElastictaskRequest
+     * @return ModifyElastictaskResponse
+     */
     @Override
     public CompletableFuture<ModifyElastictaskResponse> modifyElastictask(ModifyElastictaskRequest request) {
         try {
@@ -1764,8 +2290,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * es-cn-n6w1o1x0w001c\\*\\*\\*\\*
-      *
+     * <b>description</b> :
+     * <p>es-cn-n6w1o1x0w001c\<em>\</em>\<em>\</em></p>
+     * 
+     * @param request the request parameters of ModifyInstanceMaintainTime  ModifyInstanceMaintainTimeRequest
+     * @return ModifyInstanceMaintainTimeResponse
      */
     @Override
     public CompletableFuture<ModifyInstanceMaintainTimeResponse> modifyInstanceMaintainTime(ModifyInstanceMaintainTimeRequest request) {
@@ -1782,8 +2311,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the cluster.
-      *
+     * <b>description</b> :
+     * <p>The ID of the cluster.</p>
+     * 
+     * @param request the request parameters of ModifyWhiteIps  ModifyWhiteIpsRequest
+     * @return ModifyWhiteIpsResponse
      */
     @Override
     public CompletableFuture<ModifyWhiteIpsResponse> modifyWhiteIps(ModifyWhiteIpsRequest request) {
@@ -1799,6 +2331,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest
+     * @return MoveResourceGroupResponse
+     */
     @Override
     public CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request) {
         try {
@@ -1813,6 +2349,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenDiagnosis  OpenDiagnosisRequest
+     * @return OpenDiagnosisResponse
+     */
     @Override
     public CompletableFuture<OpenDiagnosisResponse> openDiagnosis(OpenDiagnosisRequest request) {
         try {
@@ -1828,8 +2368,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  To ensure data security, we recommend that you enable HTTPS.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> To ensure data security, we recommend that you enable HTTPS.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of OpenHttps  OpenHttpsRequest
+     * @return OpenHttpsResponse
      */
     @Override
     public CompletableFuture<OpenHttpsResponse> openHttps(OpenHttpsRequest request) {
@@ -1845,6 +2390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PostEmonTryAlarmRule  PostEmonTryAlarmRuleRequest
+     * @return PostEmonTryAlarmRuleResponse
+     */
     @Override
     public CompletableFuture<PostEmonTryAlarmRuleResponse> postEmonTryAlarmRule(PostEmonTryAlarmRuleRequest request) {
         try {
@@ -1859,6 +2408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RecommendTemplates  RecommendTemplatesRequest
+     * @return RecommendTemplatesResponse
+     */
     @Override
     public CompletableFuture<RecommendTemplatesResponse> recommendTemplates(RecommendTemplatesRequest request) {
         try {
@@ -1873,6 +2426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReinstallCollector  ReinstallCollectorRequest
+     * @return ReinstallCollectorResponse
+     */
     @Override
     public CompletableFuture<ReinstallCollectorResponse> reinstallCollector(ReinstallCollectorRequest request) {
         try {
@@ -1887,6 +2444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveApm  RemoveApmRequest
+     * @return RemoveApmResponse
+     */
     @Override
     public CompletableFuture<RemoveApmResponse> removeApm(RemoveApmRequest request) {
         try {
@@ -1901,6 +2462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewInstance  RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
     @Override
     public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
         try {
@@ -1915,6 +2480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenewLogstash  RenewLogstashRequest
+     * @return RenewLogstashResponse
+     */
     @Override
     public CompletableFuture<RenewLogstashResponse> renewLogstash(RenewLogstashRequest request) {
         try {
@@ -1929,6 +2498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartCollector  RestartCollectorRequest
+     * @return RestartCollectorResponse
+     */
     @Override
     public CompletableFuture<RestartCollectorResponse> restartCollector(RestartCollectorRequest request) {
         try {
@@ -1944,8 +2517,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of RestartInstance  RestartInstanceRequest
+     * @return RestartInstanceResponse
      */
     @Override
     public CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request) {
@@ -1961,6 +2539,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartLogstash  RestartLogstashRequest
+     * @return RestartLogstashResponse
+     */
     @Override
     public CompletableFuture<RestartLogstashResponse> restartLogstash(RestartLogstashRequest request) {
         try {
@@ -1975,6 +2557,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResumeElasticsearchTask  ResumeElasticsearchTaskRequest
+     * @return ResumeElasticsearchTaskResponse
+     */
     @Override
     public CompletableFuture<ResumeElasticsearchTaskResponse> resumeElasticsearchTask(ResumeElasticsearchTaskRequest request) {
         try {
@@ -1989,6 +2575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResumeLogstashTask  ResumeLogstashTaskRequest
+     * @return ResumeLogstashTaskResponse
+     */
     @Override
     public CompletableFuture<ResumeLogstashTaskResponse> resumeLogstashTask(ResumeLogstashTaskRequest request) {
         try {
@@ -2003,6 +2593,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RolloverDataStream  RolloverDataStreamRequest
+     * @return RolloverDataStreamResponse
+     */
     @Override
     public CompletableFuture<RolloverDataStreamResponse> rolloverDataStream(RolloverDataStreamRequest request) {
         try {
@@ -2017,6 +2611,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunPipelines  RunPipelinesRequest
+     * @return RunPipelinesResponse
+     */
     @Override
     public CompletableFuture<RunPipelinesResponse> runPipelines(RunPipelinesRequest request) {
         try {
@@ -2031,6 +2629,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ShrinkNode  ShrinkNodeRequest
+     * @return ShrinkNodeResponse
+     */
     @Override
     public CompletableFuture<ShrinkNodeResponse> shrinkNode(ShrinkNodeRequest request) {
         try {
@@ -2045,6 +2647,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartApm  StartApmRequest
+     * @return StartApmResponse
+     */
     @Override
     public CompletableFuture<StartApmResponse> startApm(StartApmRequest request) {
         try {
@@ -2059,6 +2665,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartCollector  StartCollectorRequest
+     * @return StartCollectorResponse
+     */
     @Override
     public CompletableFuture<StartCollectorResponse> startCollector(StartCollectorRequest request) {
         try {
@@ -2073,6 +2683,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopApm  StopApmRequest
+     * @return StopApmResponse
+     */
     @Override
     public CompletableFuture<StopApmResponse> stopApm(StopApmRequest request) {
         try {
@@ -2087,6 +2701,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopCollector  StopCollectorRequest
+     * @return StopCollectorResponse
+     */
     @Override
     public CompletableFuture<StopCollectorResponse> stopCollector(StopCollectorRequest request) {
         try {
@@ -2101,6 +2719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopPipelines  StopPipelinesRequest
+     * @return StopPipelinesResponse
+     */
     @Override
     public CompletableFuture<StopPipelinesResponse> stopPipelines(StopPipelinesRequest request) {
         try {
@@ -2115,6 +2737,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -2129,6 +2755,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TransferNode  TransferNodeRequest
+     * @return TransferNodeResponse
+     */
     @Override
     public CompletableFuture<TransferNodeResponse> transferNode(TransferNodeRequest request) {
         try {
@@ -2143,6 +2773,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TriggerNetwork  TriggerNetworkRequest
+     * @return TriggerNetworkResponse
+     */
     @Override
     public CompletableFuture<TriggerNetworkResponse> triggerNetwork(TriggerNetworkRequest request) {
         try {
@@ -2157,6 +2791,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallKibanaPlugin  UninstallKibanaPluginRequest
+     * @return UninstallKibanaPluginResponse
+     */
     @Override
     public CompletableFuture<UninstallKibanaPluginResponse> uninstallKibanaPlugin(UninstallKibanaPluginRequest request) {
         try {
@@ -2171,6 +2809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallLogstashPlugin  UninstallLogstashPluginRequest
+     * @return UninstallLogstashPluginResponse
+     */
     @Override
     public CompletableFuture<UninstallLogstashPluginResponse> uninstallLogstashPlugin(UninstallLogstashPluginRequest request) {
         try {
@@ -2185,6 +2827,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallPlugin  UninstallPluginRequest
+     * @return UninstallPluginResponse
+     */
     @Override
     public CompletableFuture<UninstallPluginResponse> uninstallPlugin(UninstallPluginRequest request) {
         try {
@@ -2200,11 +2846,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   You can only delete user tags.
-      * > User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.
-      * *   If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can only delete user tags.<blockquote>
+     * <p>User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.</p>
+     * </blockquote>
+     * </li>
+     * <li>If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
      */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
@@ -2221,8 +2874,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-      *
+     * <b>description</b> :
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></p>
+     * 
+     * @param request the request parameters of UpdateAdminPassword  UpdateAdminPasswordRequest
+     * @return UpdateAdminPasswordResponse
      */
     @Override
     public CompletableFuture<UpdateAdminPasswordResponse> updateAdminPassword(UpdateAdminPasswordRequest request) {
@@ -2238,6 +2894,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAdvancedSetting  UpdateAdvancedSettingRequest
+     * @return UpdateAdvancedSettingResponse
+     */
     @Override
     public CompletableFuture<UpdateAdvancedSettingResponse> updateAdvancedSetting(UpdateAdvancedSettingRequest request) {
         try {
@@ -2253,11 +2913,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.
-      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.</li>
+     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
+     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateAliwsDict  UpdateAliwsDictRequest
+     * @return UpdateAliwsDictResponse
      */
     @Override
     public CompletableFuture<UpdateAliwsDictResponse> updateAliwsDict(UpdateAliwsDictRequest request) {
@@ -2273,6 +2938,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApm  UpdateApmRequest
+     * @return UpdateApmResponse
+     */
     @Override
     public CompletableFuture<UpdateApmResponse> updateApm(UpdateApmRequest request) {
         try {
@@ -2288,9 +2957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI UpdateBlackIps is deprecated  * @param request  the request parameters of UpdateBlackIps  UpdateBlackIpsRequest
+     * @return UpdateBlackIpsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateBlackIpsResponse> updateBlackIps(UpdateBlackIpsRequest request) {
         try {
@@ -2305,6 +2975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCollector  UpdateCollectorRequest
+     * @return UpdateCollectorResponse
+     */
     @Override
     public CompletableFuture<UpdateCollectorResponse> updateCollector(UpdateCollectorRequest request) {
         try {
@@ -2319,6 +2993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCollectorName  UpdateCollectorNameRequest
+     * @return UpdateCollectorNameResponse
+     */
     @Override
     public CompletableFuture<UpdateCollectorNameResponse> updateCollectorName(UpdateCollectorNameRequest request) {
         try {
@@ -2333,6 +3011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateComponentIndex  UpdateComponentIndexRequest
+     * @return UpdateComponentIndexResponse
+     */
     @Override
     public CompletableFuture<UpdateComponentIndexResponse> updateComponentIndex(UpdateComponentIndexRequest request) {
         try {
@@ -2347,6 +3029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDescription  UpdateDescriptionRequest
+     * @return UpdateDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdateDescriptionResponse> updateDescription(UpdateDescriptionRequest request) {
         try {
@@ -2361,6 +3047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDiagnosisSettings  UpdateDiagnosisSettingsRequest
+     * @return UpdateDiagnosisSettingsResponse
+     */
     @Override
     public CompletableFuture<UpdateDiagnosisSettingsResponse> updateDiagnosisSettings(UpdateDiagnosisSettingsRequest request) {
         try {
@@ -2376,10 +3066,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
+     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateDict  UpdateDictRequest
+     * @return UpdateDictResponse
      */
     @Override
     public CompletableFuture<UpdateDictResponse> updateDict(UpdateDictRequest request) {
@@ -2395,6 +3090,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDynamicSettings  UpdateDynamicSettingsRequest
+     * @return UpdateDynamicSettingsResponse
+     */
     @Override
     public CompletableFuture<UpdateDynamicSettingsResponse> updateDynamicSettings(UpdateDynamicSettingsRequest request) {
         try {
@@ -2409,6 +3108,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateExtendConfig  UpdateExtendConfigRequest
+     * @return UpdateExtendConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateExtendConfigResponse> updateExtendConfig(UpdateExtendConfigRequest request) {
         try {
@@ -2424,8 +3127,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.</p>
+     * 
+     * @param request the request parameters of UpdateExtendfiles  UpdateExtendfilesRequest
+     * @return UpdateExtendfilesResponse
      */
     @Override
     public CompletableFuture<UpdateExtendfilesResponse> updateExtendfiles(UpdateExtendfilesRequest request) {
@@ -2442,10 +3148,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
+     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateHotIkDicts  UpdateHotIkDictsRequest
+     * @return UpdateHotIkDictsResponse
      */
     @Override
     public CompletableFuture<UpdateHotIkDictsResponse> updateHotIkDicts(UpdateHotIkDictsRequest request) {
@@ -2461,6 +3172,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateILMPolicy  UpdateILMPolicyRequest
+     * @return UpdateILMPolicyResponse
+     */
     @Override
     public CompletableFuture<UpdateILMPolicyResponse> updateILMPolicy(UpdateILMPolicyRequest request) {
         try {
@@ -2475,6 +3190,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIndexTemplate  UpdateIndexTemplateRequest
+     * @return UpdateIndexTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateIndexTemplateResponse> updateIndexTemplate(UpdateIndexTemplateRequest request) {
         try {
@@ -2490,8 +3209,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * es-cn-n6w1ptcb30009\\*\\*\\*\\*
-      *
+     * <b>description</b> :
+     * <p>es-cn-n6w1ptcb30009\<em>\</em>\<em>\</em></p>
+     * 
+     * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
+     * @return UpdateInstanceResponse
      */
     @Override
     public CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request) {
@@ -2507,6 +3229,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateInstanceChargeType  UpdateInstanceChargeTypeRequest
+     * @return UpdateInstanceChargeTypeResponse
+     */
     @Override
     public CompletableFuture<UpdateInstanceChargeTypeResponse> updateInstanceChargeType(UpdateInstanceChargeTypeRequest request) {
         try {
@@ -2522,9 +3248,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:
+     * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.</p>
+     * 
+     * @param request the request parameters of UpdateInstanceSettings  UpdateInstanceSettingsRequest
+     * @return UpdateInstanceSettingsResponse
      */
     @Override
     public CompletableFuture<UpdateInstanceSettingsResponse> updateInstanceSettings(UpdateInstanceSettingsRequest request) {
@@ -2540,6 +3269,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateKibanaPvlNetwork  UpdateKibanaPvlNetworkRequest
+     * @return UpdateKibanaPvlNetworkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKibanaPvlNetworkResponse> updateKibanaPvlNetwork(UpdateKibanaPvlNetworkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateKibanaPvlNetwork").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/actions/update-kibana-private").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKibanaPvlNetworkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKibanaPvlNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKibanaSettings  UpdateKibanaSettingsRequest
+     * @return UpdateKibanaSettingsResponse
+     */
     @Override
     public CompletableFuture<UpdateKibanaSettingsResponse> updateKibanaSettings(UpdateKibanaSettingsRequest request) {
         try {
@@ -2555,12 +3306,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.
-      * *   You can update an IP address whitelist by using the following parameters:
-      *     *   kibanaIPWhitelist
-      *     *   modifyMode and whiteIpGroup
-      * *   You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.
-      *
+     * <b>description</b> :
+     * <p>  Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.</p>
+     * <ul>
+     * <li>You can update an IP address whitelist by using the following parameters:<ul>
+     * <li>kibanaIPWhitelist</li>
+     * <li>modifyMode and whiteIpGroup</li>
+     * </ul>
+     * </li>
+     * <li>You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateKibanaWhiteIps  UpdateKibanaWhiteIpsRequest
+     * @return UpdateKibanaWhiteIpsResponse
      */
     @Override
     public CompletableFuture<UpdateKibanaWhiteIpsResponse> updateKibanaWhiteIps(UpdateKibanaWhiteIpsRequest request) {
@@ -2576,6 +3334,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLogstash  UpdateLogstashRequest
+     * @return UpdateLogstashResponse
+     */
     @Override
     public CompletableFuture<UpdateLogstashResponse> updateLogstash(UpdateLogstashRequest request) {
         try {
@@ -2590,6 +3352,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateLogstashChargeType  UpdateLogstashChargeTypeRequest
+     * @return UpdateLogstashChargeTypeResponse
+     */
     @Override
     public CompletableFuture<UpdateLogstashChargeTypeResponse> updateLogstashChargeType(UpdateLogstashChargeTypeRequest request) {
         try {
@@ -2605,8 +3371,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.</p>
+     * 
+     * @param request the request parameters of UpdateLogstashDescription  UpdateLogstashDescriptionRequest
+     * @return UpdateLogstashDescriptionResponse
      */
     @Override
     public CompletableFuture<UpdateLogstashDescriptionResponse> updateLogstashDescription(UpdateLogstashDescriptionRequest request) {
@@ -2623,9 +3392,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:
+     * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.</p>
+     * 
+     * @param request the request parameters of UpdateLogstashSettings  UpdateLogstashSettingsRequest
+     * @return UpdateLogstashSettingsResponse
      */
     @Override
     public CompletableFuture<UpdateLogstashSettingsResponse> updateLogstashSettings(UpdateLogstashSettingsRequest request) {
@@ -2641,6 +3413,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePipelineManagementConfig  UpdatePipelineManagementConfigRequest
+     * @return UpdatePipelineManagementConfigResponse
+     */
     @Override
     public CompletableFuture<UpdatePipelineManagementConfigResponse> updatePipelineManagementConfig(UpdatePipelineManagementConfigRequest request) {
         try {
@@ -2655,6 +3431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePipelines  UpdatePipelinesRequest
+     * @return UpdatePipelinesResponse
+     */
     @Override
     public CompletableFuture<UpdatePipelinesResponse> updatePipelines(UpdatePipelinesRequest request) {
         try {
@@ -2670,8 +3450,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpdatePrivateNetworkWhiteIps  UpdatePrivateNetworkWhiteIpsRequest
+     * @return UpdatePrivateNetworkWhiteIpsResponse
      */
     @Override
     public CompletableFuture<UpdatePrivateNetworkWhiteIpsResponse> updatePrivateNetworkWhiteIps(UpdatePrivateNetworkWhiteIpsRequest request) {
@@ -2688,9 +3473,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
-      *
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following items:
+     * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.</p>
+     * 
+     * @param request the request parameters of UpdatePublicNetwork  UpdatePublicNetworkRequest
+     * @return UpdatePublicNetworkResponse
      */
     @Override
     public CompletableFuture<UpdatePublicNetworkResponse> updatePublicNetwork(UpdatePublicNetworkRequest request) {
@@ -2707,8 +3495,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpdatePublicWhiteIps  UpdatePublicWhiteIpsRequest
+     * @return UpdatePublicWhiteIpsResponse
      */
     @Override
     public CompletableFuture<UpdatePublicWhiteIpsResponse> updatePublicWhiteIps(UpdatePublicWhiteIpsRequest request) {
@@ -2724,6 +3517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateReadWritePolicy  UpdateReadWritePolicyRequest
+     * @return UpdateReadWritePolicyResponse
+     */
     @Override
     public CompletableFuture<UpdateReadWritePolicyResponse> updateReadWritePolicy(UpdateReadWritePolicyRequest request) {
         try {
@@ -2738,6 +3535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSnapshotSetting  UpdateSnapshotSettingRequest
+     * @return UpdateSnapshotSettingResponse
+     */
     @Override
     public CompletableFuture<UpdateSnapshotSettingResponse> updateSnapshotSetting(UpdateSnapshotSettingRequest request) {
         try {
@@ -2753,10 +3554,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, take note of the following items:
-      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
+     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateSynonymsDicts  UpdateSynonymsDictsRequest
+     * @return UpdateSynonymsDictsResponse
      */
     @Override
     public CompletableFuture<UpdateSynonymsDictsResponse> updateSynonymsDicts(UpdateSynonymsDictsRequest request) {
@@ -2772,6 +3578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTemplate  UpdateTemplateRequest
+     * @return UpdateTemplateResponse
+     */
     @Override
     public CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request) {
         try {
@@ -2787,8 +3597,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see [ListInstance](~~142230~~). You cannot force your program to obtain these parameters.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force your program to obtain these parameters.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of UpdateWhiteIps  UpdateWhiteIpsRequest
+     * @return UpdateWhiteIpsResponse
      */
     @Override
     public CompletableFuture<UpdateWhiteIpsResponse> updateWhiteIps(UpdateWhiteIpsRequest request) {
@@ -2804,6 +3619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateXpackMonitorConfig  UpdateXpackMonitorConfigRequest
+     * @return UpdateXpackMonitorConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateXpackMonitorConfigResponse> updateXpackMonitorConfig(UpdateXpackMonitorConfigRequest request) {
         try {
@@ -2819,8 +3638,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-      *
+     * <b>description</b> :
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></p>
+     * 
+     * @param request the request parameters of UpgradeEngineVersion  UpgradeEngineVersionRequest
+     * @return UpgradeEngineVersionResponse
      */
     @Override
     public CompletableFuture<UpgradeEngineVersionResponse> upgradeEngineVersion(UpgradeEngineVersionRequest request) {
@@ -2837,8 +3659,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ValidateConnection  ValidateConnectionRequest
+     * @return ValidateConnectionResponse
      */
     @Override
     public CompletableFuture<ValidateConnectionResponse> validateConnection(ValidateConnectionRequest request) {
@@ -2854,6 +3681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateShrinkNodes  ValidateShrinkNodesRequest
+     * @return ValidateShrinkNodesResponse
+     */
     @Override
     public CompletableFuture<ValidateShrinkNodesResponse> validateShrinkNodes(ValidateShrinkNodesRequest request) {
         try {
@@ -2868,6 +3699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateSlrPermission  ValidateSlrPermissionRequest
+     * @return ValidateSlrPermissionResponse
+     */
     @Override
     public CompletableFuture<ValidateSlrPermissionResponse> validateSlrPermission(ValidateSlrPermissionRequest request) {
         try {
@@ -2882,6 +3717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateTransferableNodes  ValidateTransferableNodesRequest
+     * @return ValidateTransferableNodesResponse
+     */
     @Override
     public CompletableFuture<ValidateTransferableNodesResponse> validateTransferableNodes(ValidateTransferableNodesRequest request) {
         try {
@@ -2897,8 +3736,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The configurations of warm nodes.
-      *
+     * <b>description</b> :
+     * <p>The configurations of warm nodes.</p>
+     * 
+     * @param request the request parameters of createInstance  CreateInstanceRequest
+     * @return CreateInstanceResponse
      */
     @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {

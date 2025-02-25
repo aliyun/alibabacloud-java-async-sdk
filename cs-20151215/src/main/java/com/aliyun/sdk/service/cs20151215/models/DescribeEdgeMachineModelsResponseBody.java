@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdgeMachineModelsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEdgeMachineModelsResponseBody</p>
  */
 public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
-    @NameInMap("models")
-    private java.util.List < Models> models;
+    @com.aliyun.core.annotation.NameInMap("models")
+    private java.util.List<Models> models;
 
     private DescribeEdgeMachineModelsResponseBody(Builder builder) {
         this.models = builder.models;
@@ -30,17 +35,17 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
     /**
      * @return models
      */
-    public java.util.List < Models> getModels() {
+    public java.util.List<Models> getModels() {
         return this.models;
     }
 
     public static final class Builder {
-        private java.util.List < Models> models; 
+        private java.util.List<Models> models; 
 
         /**
-         * The cloud-native box models.
+         * <p>The cloud-native box models.</p>
          */
-        public Builder models(java.util.List < Models> models) {
+        public Builder models(java.util.List<Models> models) {
             this.models = models;
             return this;
         }
@@ -51,29 +56,35 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEdgeMachineModelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEdgeMachineModelsResponseBody</p>
+     */
     public static class Models extends TeaModel {
-        @NameInMap("cpu")
+        @com.aliyun.core.annotation.NameInMap("cpu")
         private Integer cpu;
 
-        @NameInMap("cpu_arch")
+        @com.aliyun.core.annotation.NameInMap("cpu_arch")
         private String cpuArch;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("manage_runtime")
+        @com.aliyun.core.annotation.NameInMap("manage_runtime")
         private Integer manageRuntime;
 
-        @NameInMap("memory")
+        @com.aliyun.core.annotation.NameInMap("memory")
         private Integer memory;
 
-        @NameInMap("model")
+        @com.aliyun.core.annotation.NameInMap("model")
         private String model;
 
-        @NameInMap("model_id")
+        @com.aliyun.core.annotation.NameInMap("model_id")
         private String modelId;
 
         private Models(Builder builder) {
@@ -162,7 +173,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             private String modelId; 
 
             /**
-             * The number of vCores.
+             * <p>The number of vCores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -170,7 +184,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU architecture.
+             * <p>The CPU architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64/arm64</p>
              */
             public Builder cpuArch(String cpuArch) {
                 this.cpuArch = cpuArch;
@@ -178,7 +195,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud-native box was created.
+             * <p>The time when the cloud-native box was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-07T20:44:00+08:00</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -186,7 +206,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cloud-native box.
+             * <p>The description of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B010</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -194,7 +217,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud-native box model manages the Docker runtime.
+             * <p>Indicates whether the cloud-native box model manages the Docker runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/1</p>
              */
             public Builder manageRuntime(Integer manageRuntime) {
                 this.manageRuntime = manageRuntime;
@@ -202,7 +228,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory. Unit: GB.
+             * <p>The memory. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -210,7 +239,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The model of the cloud-native box.
+             * <p>The model of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK-V-B010</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -218,7 +250,10 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud-native box.
+             * <p>The ID of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c34cc753-8908-4739-bd10-ebd922a4****</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;

@@ -13,12 +13,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeregisterEventSourceResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
+
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
     private DeregisterEventSourceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
     }
 
     public static DeregisterEventSourceResponse create() {
@@ -37,9 +40,18 @@ public class DeregisterEventSourceResponse extends Response {
         return this.headers;
     }
 
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
     public interface Builder extends Response.Builder<DeregisterEventSourceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         @Override
         DeregisterEventSourceResponse build();
@@ -50,6 +62,7 @@ public class DeregisterEventSourceResponse extends Response {
             extends Response.BuilderImpl<DeregisterEventSourceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
 
         private BuilderImpl() {
             super();
@@ -58,6 +71,7 @@ public class DeregisterEventSourceResponse extends Response {
         private BuilderImpl(DeregisterEventSourceResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
         } 
 
         /**
@@ -66,6 +80,15 @@ public class DeregisterEventSourceResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

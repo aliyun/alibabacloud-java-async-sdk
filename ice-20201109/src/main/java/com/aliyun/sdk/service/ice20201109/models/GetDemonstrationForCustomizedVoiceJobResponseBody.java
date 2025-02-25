@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDemonstrationForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetDemonstrationForCustomizedVoiceJobResponseBody</p>
  */
 public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDemonstrationForCustomizedVoiceJobResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,14 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,14 +106,20 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link GetDemonstrationForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDemonstrationForCustomizedVoiceJobResponseBody</p>
+     */
     public static class DemonstrationList extends TeaModel {
-        @NameInMap("AudioId")
+        @com.aliyun.core.annotation.NameInMap("AudioId")
         private Integer audioId;
 
-        @NameInMap("DemoAudio")
+        @com.aliyun.core.annotation.NameInMap("DemoAudio")
         private String demoAudio;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private DemonstrationList(Builder builder) {
@@ -142,7 +163,10 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             private String text; 
 
             /**
-             * AudioId.
+             * <p>The sequence number of the text, which corresponds to the AduioRecordId parameter to be passed during audio check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder audioId(Integer audioId) {
                 this.audioId = audioId;
@@ -150,7 +174,16 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             }
 
             /**
-             * DemoAudio.
+             * <p>The URL of the sample audio.</p>
+             * <ul>
+             * <li><p>The value is an Object Storage Service (OSS) URL.</p>
+             * <p>**</p>
+             * <p><strong>Note</strong>: The URL expires in 12 hours.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav">http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav</a></p>
              */
             public Builder demoAudio(String demoAudio) {
                 this.demoAudio = demoAudio;
@@ -158,7 +191,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
             }
 
             /**
-             * Text.
+             * <p>The text content to be read.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -172,9 +205,15 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link GetDemonstrationForCustomizedVoiceJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDemonstrationForCustomizedVoiceJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DemonstrationList")
-        private java.util.List < DemonstrationList> demonstrationList;
+        @com.aliyun.core.annotation.NameInMap("DemonstrationList")
+        private java.util.List<DemonstrationList> demonstrationList;
 
         private Data(Builder builder) {
             this.demonstrationList = builder.demonstrationList;
@@ -191,17 +230,17 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         /**
          * @return demonstrationList
          */
-        public java.util.List < DemonstrationList> getDemonstrationList() {
+        public java.util.List<DemonstrationList> getDemonstrationList() {
             return this.demonstrationList;
         }
 
         public static final class Builder {
-            private java.util.List < DemonstrationList> demonstrationList; 
+            private java.util.List<DemonstrationList> demonstrationList; 
 
             /**
-             * DemonstrationList.
+             * <p>A list of 20 text entries to be read and the corresponding sample audio.</p>
              */
-            public Builder demonstrationList(java.util.List < DemonstrationList> demonstrationList) {
+            public Builder demonstrationList(java.util.List<DemonstrationList> demonstrationList) {
                 this.demonstrationList = demonstrationList;
                 return this;
             }

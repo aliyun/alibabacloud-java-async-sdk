@@ -74,7 +74,10 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code returned when the activity fails.
+         * <p>
+         * 
+         * >  This parameter appears only when an error occurs during the API call.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the public IP address was created.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class CreateInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

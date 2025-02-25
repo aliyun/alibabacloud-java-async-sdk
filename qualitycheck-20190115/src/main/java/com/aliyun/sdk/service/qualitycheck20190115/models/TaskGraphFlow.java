@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskGraphFlow} extends {@link TeaModel}
  *
  * <p>TaskGraphFlow</p>
  */
 public class TaskGraphFlow extends TeaModel {
-    @NameInMap("FlowRuleScoreType")
+    @com.aliyun.core.annotation.NameInMap("FlowRuleScoreType")
     private Integer flowRuleScoreType;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Nodes")
-    private java.util.List < GraphFlowNode > nodes;
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<GraphFlowNode> nodes;
 
-    @NameInMap("Rid")
+    @com.aliyun.core.annotation.NameInMap("Rid")
     private Long rid;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @NameInMap("ShowProperties")
+    @com.aliyun.core.annotation.NameInMap("ShowProperties")
     private String showProperties;
 
-    @NameInMap("SkipWhenFirstSessionNodeMiss")
+    @com.aliyun.core.annotation.NameInMap("SkipWhenFirstSessionNodeMiss")
     private Boolean skipWhenFirstSessionNodeMiss;
 
     private TaskGraphFlow(Builder builder) {
@@ -68,7 +73,7 @@ public class TaskGraphFlow extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < GraphFlowNode > getNodes() {
+    public java.util.List<GraphFlowNode> getNodes() {
         return this.nodes;
     }
 
@@ -103,7 +108,7 @@ public class TaskGraphFlow extends TeaModel {
     public static final class Builder {
         private Integer flowRuleScoreType; 
         private Long id; 
-        private java.util.List < GraphFlowNode > nodes; 
+        private java.util.List<GraphFlowNode> nodes; 
         private Long rid; 
         private String ruleName; 
         private String showProperties; 
@@ -128,7 +133,7 @@ public class TaskGraphFlow extends TeaModel {
         /**
          * Nodes.
          */
-        public Builder nodes(java.util.List < GraphFlowNode > nodes) {
+        public Builder nodes(java.util.List<GraphFlowNode> nodes) {
             this.nodes = nodes;
             return this;
         }

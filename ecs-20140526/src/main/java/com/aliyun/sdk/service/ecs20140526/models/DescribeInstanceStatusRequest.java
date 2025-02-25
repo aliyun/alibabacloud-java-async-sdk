@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceStatusRequest</p>
  */
 public class DescribeInstanceStatusRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeInstanceStatusRequest(Builder builder) {
@@ -103,7 +108,7 @@ public class DescribeInstanceStatusRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -166,7 +171,7 @@ public class DescribeInstanceStatusRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceStatusRequest, Builder> {
         private String sourceRegionId; 
         private String clusterId; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -205,7 +210,13 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The cluster ID of the instances.
+         * <p>The ID of the cluster to which the ECS instances belong.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. We recommend that you do not use this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cls-bp67acfmxazb4p****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -214,9 +225,13 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: `InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****`.
+         * <p>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</p>
+         * <p>Example: [&quot;i-bp1j4i2jdf3owlhe****&quot;, &quot;i-bp1j4i2jdf3o1234****&quot;].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1j4i2jdf3owlhe****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -241,12 +256,12 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -255,10 +270,11 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 50</p>
+         * <p>Default value: 10</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -267,7 +283,11 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -294,7 +314,10 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The zone ID of the instances. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

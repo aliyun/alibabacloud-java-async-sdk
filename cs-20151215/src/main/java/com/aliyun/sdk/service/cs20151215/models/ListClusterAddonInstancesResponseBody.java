@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterAddonInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterAddonInstancesResponseBody</p>
  */
 public class ListClusterAddonInstancesResponseBody extends TeaModel {
-    @NameInMap("addons")
-    private java.util.List < Addons> addons;
+    @com.aliyun.core.annotation.NameInMap("addons")
+    private java.util.List<Addons> addons;
 
     private ListClusterAddonInstancesResponseBody(Builder builder) {
         this.addons = builder.addons;
@@ -30,17 +35,17 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
     /**
      * @return addons
      */
-    public java.util.List < Addons> getAddons() {
+    public java.util.List<Addons> getAddons() {
         return this.addons;
     }
 
     public static final class Builder {
-        private java.util.List < Addons> addons; 
+        private java.util.List<Addons> addons; 
 
         /**
-         * addons.
+         * <p>A list of components that are installed in the cluster.</p>
          */
-        public Builder addons(java.util.List < Addons> addons) {
+        public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
             return this;
         }
@@ -51,14 +56,20 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterAddonInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterAddonInstancesResponseBody</p>
+     */
     public static class Addons extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Addons(Builder builder) {
@@ -102,7 +113,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coredns</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -110,7 +124,16 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The status of the component. Valid values:</p>
+             * <ul>
+             * <li>active: The component is installed.</li>
+             * <li>updating: The component is being modified.</li>
+             * <li>upgrading: The component is being updated.</li>
+             * <li>deleting: The component is being uninstalled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -118,7 +141,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.9.3.10-7dfca203-aliyun</p>
              */
             public Builder version(String version) {
                 this.version = version;

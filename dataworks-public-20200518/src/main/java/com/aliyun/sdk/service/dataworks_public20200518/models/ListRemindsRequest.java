@@ -1,50 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRemindsRequest} extends {@link RequestModel}
  *
  * <p>ListRemindsRequest</p>
  */
 public class ListRemindsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlertTarget")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertTarget")
     private String alertTarget;
 
-    @Body
-    @NameInMap("Founder")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Founder")
     private String founder;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private Long nodeId;
 
-    @Body
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RemindTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindTypes")
     private String remindTypes;
 
-    @Body
-    @NameInMap("SearchText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchText")
     private String searchText;
 
     private ListRemindsRequest(Builder builder) {
@@ -155,7 +159,7 @@ public class ListRemindsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -164,7 +168,10 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used to receive alert notifications.
+         * <p>The ID of the Alibaba Cloud account that is used to receive alert notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         public Builder alertTarget(String alertTarget) {
             this.putBodyParameter("AlertTarget", alertTarget);
@@ -173,7 +180,10 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used to create the custom alert rules.
+         * <p>The ID of the Alibaba Cloud account that is used to create the custom alert rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         public Builder founder(String founder) {
             this.putBodyParameter("Founder", founder);
@@ -182,7 +192,10 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * The ID of the node to which the custom alert rules are applied. You can use the ID to search for the custom alert rules that are applied to the node.
+         * <p>The ID of the node to which the custom alert rules are applied. You can use the ID to search for the custom alert rules that are applied to the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -191,7 +204,11 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
+         * <p>The number of the page to return. Valid values: 1 to 30. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -200,7 +217,11 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -209,7 +230,10 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * The conditions that trigger an alert for the node. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. The value FINISHED indicates that the node finishes running. The value UNFINISHED indicates that the node is still running at the specified point in time. The value ERROR indicates that an error occurs when the node is running. The value CYCLE_UNFINISHED indicates that the node does not finish running in the specified scheduling cycle. The value TIMEOUT indicates that the node times out. You can specify multiple conditions for a custom alert rule. If you specify multiple condition, separate them with commas (,).
+         * <p>The conditions that trigger an alert for the node. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. The value FINISHED indicates that the node finishes running. The value UNFINISHED indicates that the node is still running at the specified point in time. The value ERROR indicates that an error occurs when the node is running. The value CYCLE_UNFINISHED indicates that the node does not finish running in the specified scheduling cycle. The value TIMEOUT indicates that the node times out. You can specify multiple conditions for a custom alert rule. If you specify multiple condition, separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED,ERROR</p>
          */
         public Builder remindTypes(String remindTypes) {
             this.putBodyParameter("RemindTypes", remindTypes);
@@ -218,7 +242,10 @@ public class ListRemindsRequest extends Request {
         }
 
         /**
-         * The keyword in a rule name that is used to search for the rule. Fuzzy search is supported.
+         * <p>The keyword in a rule name that is used to search for the rule. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Keyword</p>
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);

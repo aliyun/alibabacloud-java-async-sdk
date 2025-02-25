@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListScheduledTasksRequest</p>
  */
 public class ListScheduledTasksRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListScheduledTasksRequest(Builder builder) {
@@ -97,7 +96,7 @@ public class ListScheduledTasksRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The application name.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,7 +105,7 @@ public class ListScheduledTasksRequest extends Request {
         }
 
         /**
-         * 1
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -115,7 +114,7 @@ public class ListScheduledTasksRequest extends Request {
         }
 
         /**
-         * 10
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -124,7 +123,13 @@ public class ListScheduledTasksRequest extends Request {
         }
 
         /**
-         * wipe
+         * The scheduled task type. Valid values:
+         * <p>
+         * 
+         * *   wipe: data cleaning.
+         * *   fork: reindexing.
+         * *   check-status: application status check.
+         * *   index: reindexing.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

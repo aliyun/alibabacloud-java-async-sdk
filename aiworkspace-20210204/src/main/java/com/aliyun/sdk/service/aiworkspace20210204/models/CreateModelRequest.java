@@ -1,78 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateModelRequest} extends {@link RequestModel}
  *
  * <p>CreateModelRequest</p>
  */
 public class CreateModelRequest extends Request {
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @Body
-    @NameInMap("ModelDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelDescription")
     private String modelDescription;
 
-    @Body
-    @NameInMap("ModelDoc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelDoc")
     private String modelDoc;
 
-    @Body
-    @NameInMap("ModelName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelName;
 
-    @Body
-    @NameInMap("OrderNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelType")
+    private String modelType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderNumber")
     private Long orderNumber;
 
-    @Body
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @Body
-    @NameInMap("SourceId")
-    private String sourceId;
-
-    @Body
-    @NameInMap("SourceType")
-    private String sourceType;
-
-    @Body
-    @NameInMap("Task")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateModelRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
         this.domain = builder.domain;
+        this.extraInfo = builder.extraInfo;
         this.labels = builder.labels;
         this.modelDescription = builder.modelDescription;
         this.modelDoc = builder.modelDoc;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
         this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
-        this.sourceId = builder.sourceId;
-        this.sourceType = builder.sourceType;
         this.task = builder.task;
         this.workspaceId = builder.workspaceId;
     }
@@ -105,6 +105,13 @@ public class CreateModelRequest extends Request {
     }
 
     /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
+    }
+
+    /**
      * @return labels
      */
     public java.util.List < Label > getLabels() {
@@ -133,6 +140,13 @@ public class CreateModelRequest extends Request {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
      * @return orderNumber
      */
     public Long getOrderNumber() {
@@ -144,20 +158,6 @@ public class CreateModelRequest extends Request {
      */
     public String getOrigin() {
         return this.origin;
-    }
-
-    /**
-     * @return sourceId
-     */
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    /**
-     * @return sourceType
-     */
-    public String getSourceType() {
-        return this.sourceType;
     }
 
     /**
@@ -177,14 +177,14 @@ public class CreateModelRequest extends Request {
     public static final class Builder extends Request.Builder<CreateModelRequest, Builder> {
         private String accessibility; 
         private String domain; 
+        private java.util.Map < String, ? > extraInfo; 
         private java.util.List < Label > labels; 
         private String modelDescription; 
         private String modelDoc; 
         private String modelName; 
+        private String modelType; 
         private Long orderNumber; 
         private String origin; 
-        private String sourceId; 
-        private String sourceType; 
         private String task; 
         private String workspaceId; 
 
@@ -196,14 +196,14 @@ public class CreateModelRequest extends Request {
             super(request);
             this.accessibility = request.accessibility;
             this.domain = request.domain;
+            this.extraInfo = request.extraInfo;
             this.labels = request.labels;
             this.modelDescription = request.modelDescription;
             this.modelDoc = request.modelDoc;
             this.modelName = request.modelName;
+            this.modelType = request.modelType;
             this.orderNumber = request.orderNumber;
             this.origin = request.origin;
-            this.sourceId = request.sourceId;
-            this.sourceType = request.sourceType;
             this.task = request.task;
             this.workspaceId = request.workspaceId;
         } 
@@ -223,6 +223,15 @@ public class CreateModelRequest extends Request {
         public Builder domain(String domain) {
             this.putBodyParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.putBodyParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
             return this;
         }
 
@@ -254,11 +263,20 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * <p>This parameter is required.</p>
          */
         public Builder modelName(String modelName) {
             this.putBodyParameter("ModelName", modelName);
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.putBodyParameter("ModelType", modelType);
+            this.modelType = modelType;
             return this;
         }
 
@@ -277,24 +295,6 @@ public class CreateModelRequest extends Request {
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
             this.origin = origin;
-            return this;
-        }
-
-        /**
-         * SourceId.
-         */
-        public Builder sourceId(String sourceId) {
-            this.putBodyParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
-            return this;
-        }
-
-        /**
-         * SourceType.
-         */
-        public Builder sourceType(String sourceType) {
-            this.putBodyParameter("SourceType", sourceType);
-            this.sourceType = sourceType;
             return this;
         }
 

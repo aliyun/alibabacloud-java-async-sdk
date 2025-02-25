@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpdateBackendTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpdateBackendTaskResponseBody</p>
  */
 public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
-    @NameInMap("ApiUpdateBackendResults")
+    @com.aliyun.core.annotation.NameInMap("ApiUpdateBackendResults")
     private ApiUpdateBackendResults apiUpdateBackendResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUpdateBackendTaskResponseBody(Builder builder) {
@@ -71,32 +76,38 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpdateBackendTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpdateBackendTaskResponseBody</p>
+     */
     public static class ApiUpdateBackendResult extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("BackendId")
+        @com.aliyun.core.annotation.NameInMap("BackendId")
         private String backendId;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ApiUpdateBackendResult(Builder builder) {
@@ -272,9 +283,15 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUpdateBackendTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpdateBackendTaskResponseBody</p>
+     */
     public static class ApiUpdateBackendResults extends TeaModel {
-        @NameInMap("ApiUpdateBackendResult")
-        private java.util.List < ApiUpdateBackendResult> apiUpdateBackendResult;
+        @com.aliyun.core.annotation.NameInMap("ApiUpdateBackendResult")
+        private java.util.List<ApiUpdateBackendResult> apiUpdateBackendResult;
 
         private ApiUpdateBackendResults(Builder builder) {
             this.apiUpdateBackendResult = builder.apiUpdateBackendResult;
@@ -291,17 +308,17 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
         /**
          * @return apiUpdateBackendResult
          */
-        public java.util.List < ApiUpdateBackendResult> getApiUpdateBackendResult() {
+        public java.util.List<ApiUpdateBackendResult> getApiUpdateBackendResult() {
             return this.apiUpdateBackendResult;
         }
 
         public static final class Builder {
-            private java.util.List < ApiUpdateBackendResult> apiUpdateBackendResult; 
+            private java.util.List<ApiUpdateBackendResult> apiUpdateBackendResult; 
 
             /**
              * ApiUpdateBackendResult.
              */
-            public Builder apiUpdateBackendResult(java.util.List < ApiUpdateBackendResult> apiUpdateBackendResult) {
+            public Builder apiUpdateBackendResult(java.util.List<ApiUpdateBackendResult> apiUpdateBackendResult) {
                 this.apiUpdateBackendResult = apiUpdateBackendResult;
                 return this;
             }

@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DivisionQuery} extends {@link TeaModel}
  *
  * <p>DivisionQuery</p>
  */
 public class DivisionQuery extends TeaModel {
-    @NameInMap("divisionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String divisionCode;
 
     private DivisionQuery(Builder builder) {
@@ -39,7 +44,10 @@ public class DivisionQuery extends TeaModel {
         private String divisionCode; 
 
         /**
-         * divisionCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;

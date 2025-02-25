@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemAdminAccountFirstActivationTime")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("SystemAdminAccountFirstActivationTime")
     private String systemAdminAccountFirstActivationTime;
 
-    @NameInMap("SystemAdminAccountStatus")
+    @com.aliyun.core.annotation.NameInMap("SystemAdminAccountStatus")
     private String systemAdminAccountStatus;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeAccountsResponseBody(Builder builder) {
         this.accounts = builder.accounts;
         this.pageNumber = builder.pageNumber;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.systemAdminAccountFirstActivationTime = builder.systemAdminAccountFirstActivationTime;
         this.systemAdminAccountStatus = builder.systemAdminAccountStatus;
         this.totalRecordCount = builder.totalRecordCount;
@@ -69,6 +78,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return systemAdminAccountFirstActivationTime
      */
     public String getSystemAdminAccountFirstActivationTime() {
@@ -93,12 +109,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private Accounts accounts; 
         private Integer pageNumber; 
         private String requestId; 
+        private String resourceGroupId; 
         private String systemAdminAccountFirstActivationTime; 
         private String systemAdminAccountStatus; 
         private Integer totalRecordCount; 
 
         /**
-         * The details about the account.
+         * <p>The information about the account.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -106,7 +123,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +134,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2E94301-D07F-4457-9B49-6AA2BB388C85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,10 +145,24 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-         * <p>
+         * <p>The resource group ID.</p>
          * 
-         * >  This parameter is returned only for instances that run SQL Server.
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-06T11:00:00Z</p>
          */
         public Builder systemAdminAccountFirstActivationTime(String systemAdminAccountFirstActivationTime) {
             this.systemAdminAccountFirstActivationTime = systemAdminAccountFirstActivationTime;
@@ -133,13 +170,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the system admin account was enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the system admin account was enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system admin account was enabled.</li>
+         * <li><strong>false</strong>: The system admin account was disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The <a href="https://help.aliyun.com/document_detail/170736.html">system admin account</a> is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
+         * </blockquote>
          * 
-         * *   **true**: The system admin account was enabled.
-         * *   **false**: The system admin account was disabled.
-         * 
-         * >  The [system admin account](~~170736~~) is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder systemAdminAccountStatus(String systemAdminAccountStatus) {
             this.systemAdminAccountStatus = systemAdminAccountStatus;
@@ -147,7 +188,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -160,14 +204,20 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DatabasePrivilege extends TeaModel {
-        @NameInMap("AccountPrivilege")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
         private String accountPrivilege;
 
-        @NameInMap("AccountPrivilegeDetail")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilegeDetail")
         private String accountPrivilegeDetail;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
         private DatabasePrivilege(Builder builder) {
@@ -211,14 +261,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String DBName; 
 
             /**
-             * The type of the permissions. Valid values:
-             * <p>
+             * <p>The type of the permissions. Valid values:</p>
+             * <ul>
+             * <li><strong>ReadWrite</strong>: read and write permissions.</li>
+             * <li><strong>ReadOnly</strong>: read-only permissions.</li>
+             * <li><strong>DDLOnly</strong>: DDL-only permissions.</li>
+             * <li><strong>DMLOnly</strong>: DML-only permissions.</li>
+             * <li><strong>Custom</strong>: custom permissions. You can modify the permissions of the account by using SQL commands.</li>
+             * </ul>
              * 
-             * *   **ReadWrite**: read and write permissions.
-             * *   **ReadOnly**: read-only permissions.
-             * *   **DDLOnly**: DDL-only permissions.
-             * *   **DMLOnly**: DML-only permissions.
-             * *   **Custom**: custom permissions. You can modify the permissions of the account by using SQL commands.
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -226,7 +279,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions that are granted to the account. For more information, see [Account permissions](~~146395~~).
+             * <p>The permissions that are granted to the account. For more information, see <a href="https://help.aliyun.com/document_detail/146395.html">Account permissions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT,INSERT</p>
              */
             public Builder accountPrivilegeDetail(String accountPrivilegeDetail) {
                 this.accountPrivilegeDetail = accountPrivilegeDetail;
@@ -234,7 +290,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -248,9 +307,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DatabasePrivileges extends TeaModel {
-        @NameInMap("DatabasePrivilege")
-        private java.util.List < DatabasePrivilege> databasePrivilege;
+        @com.aliyun.core.annotation.NameInMap("DatabasePrivilege")
+        private java.util.List<DatabasePrivilege> databasePrivilege;
 
         private DatabasePrivileges(Builder builder) {
             this.databasePrivilege = builder.databasePrivilege;
@@ -267,17 +332,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return databasePrivilege
          */
-        public java.util.List < DatabasePrivilege> getDatabasePrivilege() {
+        public java.util.List<DatabasePrivilege> getDatabasePrivilege() {
             return this.databasePrivilege;
         }
 
         public static final class Builder {
-            private java.util.List < DatabasePrivilege> databasePrivilege; 
+            private java.util.List<DatabasePrivilege> databasePrivilege; 
 
             /**
              * DatabasePrivilege.
              */
-            public Builder databasePrivilege(java.util.List < DatabasePrivilege> databasePrivilege) {
+            public Builder databasePrivilege(java.util.List<DatabasePrivilege> databasePrivilege) {
                 this.databasePrivilege = databasePrivilege;
                 return this;
             }
@@ -289,41 +354,53 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DBInstanceAccount extends TeaModel {
-        @NameInMap("AccountDescription")
+        @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("BypassRLS")
+        @com.aliyun.core.annotation.NameInMap("BypassRLS")
         private String bypassRLS;
 
-        @NameInMap("CreateDB")
+        @com.aliyun.core.annotation.NameInMap("CheckPolicy")
+        private Boolean checkPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("CreateDB")
         private String createDB;
 
-        @NameInMap("CreateRole")
+        @com.aliyun.core.annotation.NameInMap("CreateRole")
         private String createRole;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DatabasePrivileges")
+        @com.aliyun.core.annotation.NameInMap("DatabasePrivileges")
         private DatabasePrivileges databasePrivileges;
 
-        @NameInMap("PrivExceeded")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireTime")
+        private String passwordExpireTime;
+
+        @com.aliyun.core.annotation.NameInMap("PrivExceeded")
         private String privExceeded;
 
-        @NameInMap("Replication")
+        @com.aliyun.core.annotation.NameInMap("Replication")
         private String replication;
 
-        @NameInMap("ValidUntil")
+        @com.aliyun.core.annotation.NameInMap("ValidUntil")
         private String validUntil;
 
         private DBInstanceAccount(Builder builder) {
@@ -332,10 +409,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
             this.bypassRLS = builder.bypassRLS;
+            this.checkPolicy = builder.checkPolicy;
             this.createDB = builder.createDB;
             this.createRole = builder.createRole;
             this.DBInstanceId = builder.DBInstanceId;
             this.databasePrivileges = builder.databasePrivileges;
+            this.passwordExpireTime = builder.passwordExpireTime;
             this.privExceeded = builder.privExceeded;
             this.replication = builder.replication;
             this.validUntil = builder.validUntil;
@@ -385,6 +464,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return checkPolicy
+         */
+        public Boolean getCheckPolicy() {
+            return this.checkPolicy;
+        }
+
+        /**
          * @return createDB
          */
         public String getCreateDB() {
@@ -410,6 +496,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
          */
         public DatabasePrivileges getDatabasePrivileges() {
             return this.databasePrivileges;
+        }
+
+        /**
+         * @return passwordExpireTime
+         */
+        public String getPasswordExpireTime() {
+            return this.passwordExpireTime;
         }
 
         /**
@@ -439,16 +532,21 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountStatus; 
             private String accountType; 
             private String bypassRLS; 
+            private Boolean checkPolicy; 
             private String createDB; 
             private String createRole; 
             private String DBInstanceId; 
             private DatabasePrivileges databasePrivileges; 
+            private String passwordExpireTime; 
             private String privExceeded; 
             private String replication; 
             private String validUntil; 
 
             /**
-             * The description of the account.
+             * <p>The description of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test account</p>
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -456,7 +554,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -464,11 +565,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account. Valid values:
-             * <p>
+             * <p>The status of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>Unavailable</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Unavailable**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -476,12 +580,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account. Valid values:
-             * <p>
+             * <p>The type of the account. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: standard account</li>
+             * <li><strong>Super</strong>: privileged account</li>
+             * <li><strong>Sysadmin</strong>: system admin account, which is supported only for instances running SQL Server</li>
+             * </ul>
              * 
-             * *   **Normal**: standard account
-             * *   **Super**: privileged account
-             * *   **Sysadmin**: system admin account, which is supported only for instances running SQL Server
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -489,13 +596,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account has the row-level security (RLS) permissions. Valid values:
-             * <p>
+             * <p>Indicates whether the account has the row-level security (RLS) permissions. Valid values:</p>
+             * <ul>
+             * <li><strong>t</strong>: The account has the RLS permissions.</li>
+             * <li><strong>f</strong>: The account does not have the RLS permissions.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * *   **t**: The account has the RLS permissions.
-             * *   **f**: The account does not have the RLS permissions.
-             * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>f</p>
              */
             public Builder bypassRLS(String bypassRLS) {
                 this.bypassRLS = bypassRLS;
@@ -503,13 +614,31 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account has the permissions to create databases. Valid values:
-             * <p>
+             * <p>Indicates whether the password policy is applied.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run SQL Server.</p>
+             * </blockquote>
              * 
-             * *   **t**: The account has the permissions to create databases.
-             * *   **f**: The account does not have the permissions to create databases.
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder checkPolicy(Boolean checkPolicy) {
+                this.checkPolicy = checkPolicy;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the account has the permissions to create databases. Valid values:</p>
+             * <ul>
+             * <li><strong>t</strong>: The account has the permissions to create databases.</li>
+             * <li><strong>f</strong>: The account does not have the permissions to create databases.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder createDB(String createDB) {
                 this.createDB = createDB;
@@ -517,13 +646,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account has the permissions to create roles. Valid values:
-             * <p>
+             * <p>Indicates whether the account has the permissions to create roles. Valid values:</p>
+             * <ul>
+             * <li><strong>t</strong>: The account has the permissions to create roles.</li>
+             * <li><strong>f</strong>: The account does not have the permissions to create roles.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * *   **t**: The account has the permissions to create roles.
-             * *   **f**: The account does not have the permissions to create roles.
-             * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder createRole(String createRole) {
                 this.createRole = createRole;
@@ -531,7 +664,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the account belongs.
+             * <p>The ID of the instance to which the account belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6wjk5*****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -539,7 +675,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the permissions that are granted to the account.
+             * <p>The details about the permissions that are granted to the account.</p>
              */
             public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;
@@ -547,11 +683,28 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:
-             * <p>
+             * <p>The expiration time of the password.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run SQL Server.</p>
+             * </blockquote>
              * 
-             * *   **1**: The number of databases that are managed by the account exceeds the upper limit.
-             * *   **0**: The number of databases that are managed by the account does not exceed the upper limit.
+             * <strong>example:</strong>
+             * <p>2024-10-21</p>
+             */
+            public Builder passwordExpireTime(String passwordExpireTime) {
+                this.passwordExpireTime = passwordExpireTime;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The number of databases that are managed by the account exceeds the upper limit.</li>
+             * <li><strong>0</strong>: The number of databases that are managed by the account does not exceed the upper limit.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder privExceeded(String privExceeded) {
                 this.privExceeded = privExceeded;
@@ -559,13 +712,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account has the replication permissions. Valid values:
-             * <p>
+             * <p>Indicates whether the account has the replication permissions. Valid values:</p>
+             * <ul>
+             * <li><strong>t</strong>: The account has the replication permissions.</li>
+             * <li><strong>f</strong>: The account does not have the replication permissions.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * *   **t**: The account has the replication permissions.
-             * *   **f**: The account does not have the replication permissions.
-             * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>t</p>
              */
             public Builder replication(String replication) {
                 this.replication = replication;
@@ -573,14 +730,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the password. Valid values:
-             * <p>
+             * <p>The expiration time of the password. Valid values:</p>
+             * <ul>
+             * <li><strong>infinity</strong>: The password never expires.</li>
+             * <li><strong>Empty</strong>: The expiration time is not specified.</li>
+             * <li><strong>Actual expiration time</strong>: in the format of <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z in UTC. Example: 2022-10-01T00:00:00Z.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+             * </blockquote>
              * 
-             * *   **infinity**: The password never expires.
-             * *   **Empty**: The expiration time is not specified.
-             * *   **Actual expiration time**: in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.
-             * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * <strong>example:</strong>
+             * <p>2022-10-01T00:00:00Z</p>
              */
             public Builder validUntil(String validUntil) {
                 this.validUntil = validUntil;
@@ -594,9 +755,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
-        @NameInMap("DBInstanceAccount")
-        private java.util.List < DBInstanceAccount> DBInstanceAccount;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceAccount")
+        private java.util.List<DBInstanceAccount> DBInstanceAccount;
 
         private Accounts(Builder builder) {
             this.DBInstanceAccount = builder.DBInstanceAccount;
@@ -613,17 +780,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return DBInstanceAccount
          */
-        public java.util.List < DBInstanceAccount> getDBInstanceAccount() {
+        public java.util.List<DBInstanceAccount> getDBInstanceAccount() {
             return this.DBInstanceAccount;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceAccount> DBInstanceAccount; 
+            private java.util.List<DBInstanceAccount> DBInstanceAccount; 
 
             /**
              * DBInstanceAccount.
              */
-            public Builder DBInstanceAccount(java.util.List < DBInstanceAccount> DBInstanceAccount) {
+            public Builder DBInstanceAccount(java.util.List<DBInstanceAccount> DBInstanceAccount) {
                 this.DBInstanceAccount = DBInstanceAccount;
                 return this;
             }

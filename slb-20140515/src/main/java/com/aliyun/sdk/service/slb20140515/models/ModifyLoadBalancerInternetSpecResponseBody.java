@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLoadBalancerInternetSpecResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyLoadBalancerInternetSpecResponseBody</p>
  */
 public class ModifyLoadBalancerInternetSpecResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyLoadBalancerInternetSpecResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ModifyLoadBalancerInternetSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The order ID of the subscription CLB instance.
+         * <p>The order ID of the subscription CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20142961978****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -58,7 +66,10 @@ public class ModifyLoadBalancerInternetSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

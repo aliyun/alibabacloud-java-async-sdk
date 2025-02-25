@@ -1,30 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Machine} extends {@link TeaModel}
  *
  * <p>Machine</p>
  */
 public class Machine extends TeaModel {
-    @NameInMap("ip")
+    @com.aliyun.core.annotation.NameInMap("host-id")
+    private String hostId;
+
+    @com.aliyun.core.annotation.NameInMap("ip")
     private String ip;
 
-    @NameInMap("lastHeartbeatTime")
+    @com.aliyun.core.annotation.NameInMap("lastHeartbeatTime")
     private Long lastHeartbeatTime;
 
-    @NameInMap("machine-uniqueid")
+    @com.aliyun.core.annotation.NameInMap("machine-uniqueid")
     private String machineUniqueid;
 
-    @NameInMap("userdefined-id")
+    @com.aliyun.core.annotation.NameInMap("userdefined-id")
     private String userdefinedId;
 
     private Machine(Builder builder) {
+        this.hostId = builder.hostId;
         this.ip = builder.ip;
         this.lastHeartbeatTime = builder.lastHeartbeatTime;
         this.machineUniqueid = builder.machineUniqueid;
@@ -37,6 +46,13 @@ public class Machine extends TeaModel {
 
     public static Machine create() {
         return builder().build();
+    }
+
+    /**
+     * @return hostId
+     */
+    public String getHostId() {
+        return this.hostId;
     }
 
     /**
@@ -68,10 +84,19 @@ public class Machine extends TeaModel {
     }
 
     public static final class Builder {
+        private String hostId; 
         private String ip; 
         private Long lastHeartbeatTime; 
         private String machineUniqueid; 
         private String userdefinedId; 
+
+        /**
+         * host-id.
+         */
+        public Builder hostId(String hostId) {
+            this.hostId = hostId;
+            return this;
+        }
 
         /**
          * ip.

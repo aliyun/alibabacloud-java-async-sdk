@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupCorpTokenRequest} extends {@link RequestModel}
  *
  * <p>GroupCorpTokenRequest</p>
  */
 public class GroupCorpTokenRequest extends Request {
-    @Query
-    @NameInMap("app_secret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("app_secret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appSecret;
 
-    @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("corp_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String corpId;
 
-    @Query
-    @NameInMap("sub_corp_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subCorpId;
 
-    @Header
-    @NameInMap("x-acs-btrip-access-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-access-token")
     private String xAcsBtripAccessToken;
 
     private GroupCorpTokenRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class GroupCorpTokenRequest extends Request {
         } 
 
         /**
-         * app_secret.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZzljczY5dnFjNDAwVlNofiwoWX5ZWCxlcjVTKnVoZS0</p>
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("app_secret", appSecret);
@@ -108,7 +116,10 @@ public class GroupCorpTokenRequest extends Request {
         }
 
         /**
-         * corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open12g9sfbmm5i07v10wDzRSK9w00</p>
          */
         public Builder corpId(String corpId) {
             this.putQueryParameter("corp_id", corpId);
@@ -117,7 +128,10 @@ public class GroupCorpTokenRequest extends Request {
         }
 
         /**
-         * sub_corp_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>btripuyxmbg3cs286734u_mow6q</p>
          */
         public Builder subCorpId(String subCorpId) {
             this.putQueryParameter("sub_corp_id", subCorpId);

@@ -62,7 +62,7 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * LogTimeRange.
+         * The time range for log query.
          */
         public Builder logTimeRange(LogTimeRange logTimeRange) {
             this.logTimeRange = logTimeRange;
@@ -70,7 +70,7 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
             private Long supportOldestTime; 
 
             /**
-             * SupportLatestTime.
+             * The start time of the query time range.
              */
             public Builder supportLatestTime(Long supportLatestTime) {
                 this.supportLatestTime = supportLatestTime;
@@ -138,7 +138,7 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SupportOldestTime.
+             * The end time of the task.
              */
             public Builder supportOldestTime(Long supportOldestTime) {
                 this.supportOldestTime = supportOldestTime;

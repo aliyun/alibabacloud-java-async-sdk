@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterCustomFaceResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterCustomFaceResponseBody</p>
  */
 public class RegisterCustomFaceResponseBody extends TeaModel {
-    @NameInMap("FaceId")
+    @com.aliyun.core.annotation.NameInMap("FaceId")
     private String faceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RegisterCustomFaceResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class RegisterCustomFaceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FaceId.
+         * <p>The ID of the face.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c6cc71cb44a9491093818faf9d60****</p>
          */
         public Builder faceId(String faceId) {
             this.faceId = faceId;
@@ -58,7 +61,10 @@ public class RegisterCustomFaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91AEA76D-25B5-50DF-9126-AA6BB10FDAF4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

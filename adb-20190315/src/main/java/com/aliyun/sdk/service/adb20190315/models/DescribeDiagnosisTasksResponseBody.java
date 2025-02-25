@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisTasksResponseBody</p>
  */
 public class DescribeDiagnosisTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskList")
+    @com.aliyun.core.annotation.NameInMap("TaskList")
     private java.util.List < TaskList> taskList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDiagnosisTasksResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0983B43-B2EC-536A-8791-142B5CF1E9B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The queried tasks.
+         * <p>The queried tasks.</p>
          */
         public Builder taskList(java.util.List < TaskList> taskList) {
             this.taskList = taskList;
@@ -78,7 +81,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks in the stage.
+         * <p>The total number of tasks in the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,59 +97,65 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisTasksResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
-        @NameInMap("ComputeTimeRatio")
+        @com.aliyun.core.annotation.NameInMap("ComputeTimeRatio")
         private String computeTimeRatio;
 
-        @NameInMap("Drivers")
+        @com.aliyun.core.annotation.NameInMap("Drivers")
         private String drivers;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Long elapsedTime;
 
-        @NameInMap("InputDataSize")
+        @com.aliyun.core.annotation.NameInMap("InputDataSize")
         private Long inputDataSize;
 
-        @NameInMap("InputRows")
+        @com.aliyun.core.annotation.NameInMap("InputRows")
         private Long inputRows;
 
-        @NameInMap("OperatorCost")
+        @com.aliyun.core.annotation.NameInMap("OperatorCost")
         private Long operatorCost;
 
-        @NameInMap("OutputDataSize")
+        @com.aliyun.core.annotation.NameInMap("OutputDataSize")
         private Long outputDataSize;
 
-        @NameInMap("OutputRows")
+        @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("QueuedTime")
+        @com.aliyun.core.annotation.NameInMap("QueuedTime")
         private String queuedTime;
 
-        @NameInMap("ScanCost")
+        @com.aliyun.core.annotation.NameInMap("ScanCost")
         private Long scanCost;
 
-        @NameInMap("ScanDataSize")
+        @com.aliyun.core.annotation.NameInMap("ScanDataSize")
         private Long scanDataSize;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TaskCreateTime")
+        @com.aliyun.core.annotation.NameInMap("TaskCreateTime")
         private Long taskCreateTime;
 
-        @NameInMap("TaskEndTime")
+        @com.aliyun.core.annotation.NameInMap("TaskEndTime")
         private Long taskEndTime;
 
-        @NameInMap("TaskHost")
+        @com.aliyun.core.annotation.NameInMap("TaskHost")
         private String taskHost;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private TaskList(Builder builder) {
@@ -322,7 +334,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The compute time ratio, which can be used to determine whether the task is really time-consuming. This parameter can be calculated by using the following formula: OperatorCost/Drivers/ElapsedTime. A greater value indicates that the task was executed for computing for most of the task time. A less value indicates that the task was waiting for scheduling or blocked due to other reasons for most of the task time.
+             * <p>The compute time ratio, which can be used to determine whether the task is really time-consuming. This parameter can be calculated by using the following formula: OperatorCost/Drivers/ElapsedTime. A greater value indicates that the task was executed for computing for most of the task time. A less value indicates that the task was waiting for scheduling or blocked due to other reasons for most of the task time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.89</p>
              */
             public Builder computeTimeRatio(String computeTimeRatio) {
                 this.computeTimeRatio = computeTimeRatio;
@@ -330,7 +345,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that can be executed concurrently.
+             * <p>The number of tasks that can be executed concurrently.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder drivers(String drivers) {
                 this.drivers = drivers;
@@ -338,7 +356,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that elapsed from when the task was created to when the task was completed. Unit: milliseconds.
+             * <p>The amount of time that elapsed from when the task was created to when the task was completed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -346,7 +367,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of input data in the task. Unit: bytes.
+             * <p>The amount of input data in the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inputDataSize(Long inputDataSize) {
                 this.inputDataSize = inputDataSize;
@@ -354,7 +378,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of input rows in the task.
+             * <p>The number of input rows in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105</p>
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -362,7 +389,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of time that is consumed by all operators in the task on a node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.
+             * <p>The total amount of time that is consumed by all operators in the task on a node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -370,7 +400,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of output data in the task. Unit: bytes.
+             * <p>The amount of output data in the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder outputDataSize(Long outputDataSize) {
                 this.outputDataSize = outputDataSize;
@@ -378,7 +411,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of output rows in the task.
+             * <p>The number of output rows in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -386,7 +422,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The peak memory of the task. Unit: bytes.
+             * <p>The peak memory of the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -394,7 +433,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The queuing duration of the task. Unit: milliseconds.
+             * <p>The queuing duration of the task. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder queuedTime(String queuedTime) {
                 this.queuedTime = queuedTime;
@@ -402,7 +444,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that is consumed to scan data from a data source in the task. Unit: milliseconds.
+             * <p>The amount of time that is consumed to scan data from a data source in the task. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanCost(Long scanCost) {
                 this.scanCost = scanCost;
@@ -410,7 +455,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of scanned data in the task. Unit: bytes.
+             * <p>The amount of scanned data in the task. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder scanDataSize(Long scanDataSize) {
                 this.scanDataSize = scanDataSize;
@@ -418,7 +466,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are scanned from a data source in the task.
+             * <p>The number of rows that are scanned from a data source in the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -426,13 +477,16 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The final execution state of the task. Valid values:
-             * <p>
+             * <p>The final execution state of the task. Valid values:</p>
+             * <ul>
+             * <li>FINISHED</li>
+             * <li>CANCELED</li>
+             * <li>ABORTED</li>
+             * <li>FAILED</li>
+             * </ul>
              * 
-             * *   FINISHED
-             * *   CANCELED
-             * *   ABORTED
-             * *   FAILED
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -440,7 +494,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task was created.
+             * <p>The timestamp when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-12 00:00:12</p>
              */
             public Builder taskCreateTime(Long taskCreateTime) {
                 this.taskCreateTime = taskCreateTime;
@@ -448,7 +505,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task ends.
+             * <p>The timestamp when the task ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-22 00:00:00</p>
              */
             public Builder taskEndTime(Long taskEndTime) {
                 this.taskEndTime = taskEndTime;
@@ -456,7 +516,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host where the task was executed.
+             * <p>The IP address of the host where the task was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder taskHost(String taskHost) {
                 this.taskHost = taskHost;
@@ -464,7 +527,10 @@ public class DescribeDiagnosisTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22568****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

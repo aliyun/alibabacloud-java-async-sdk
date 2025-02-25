@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOssScanConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteOssScanConfigRequest</p>
  */
 public class DeleteOssScanConfigRequest extends Request {
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
     private DeleteOssScanConfigRequest(Builder builder) {
@@ -54,7 +59,13 @@ public class DeleteOssScanConfigRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The configuration ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListOssScanConfig~~">ListOssScanConfig</a> operation to query configuration IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1589</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

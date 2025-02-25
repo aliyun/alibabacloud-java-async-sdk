@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDbfsSpecificationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDbfsSpecificationsRequest</p>
  */
 public class DescribeDbfsSpecificationsRequest extends Request {
-    @Query
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("EcsInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ecsInstanceType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDbfsSpecificationsRequest(Builder builder) {
@@ -85,7 +85,10 @@ public class DescribeDbfsSpecificationsRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -94,7 +97,10 @@ public class DescribeDbfsSpecificationsRequest extends Request {
         }
 
         /**
-         * EcsInstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g7se</p>
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putQueryParameter("EcsInstanceType", ecsInstanceType);
@@ -103,7 +109,10 @@ public class DescribeDbfsSpecificationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

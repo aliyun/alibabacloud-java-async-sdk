@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSourcesToTrafficMirrorSessionResponseBody} extends {@link TeaModel}
  *
  * <p>AddSourcesToTrafficMirrorSessionResponseBody</p>
  */
 public class AddSourcesToTrafficMirrorSessionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddSourcesToTrafficMirrorSessionResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class AddSourcesToTrafficMirrorSessionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87F70089-5B38-41A8-BAD8-0B55E2F8DC57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

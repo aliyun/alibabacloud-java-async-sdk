@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserResponseBody</p>
  */
 public class CreateUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private CreateUserResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BB8C44A-2862-4922-AD43-03924749173B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the RAM user.
+         * <p>The information about the RAM user.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -71,11 +79,17 @@ public class CreateUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUserResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -110,7 +124,10 @@ public class CreateUserResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +135,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -132,9 +152,15 @@ public class CreateUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUserResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -151,17 +177,17 @@ public class CreateUserResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -173,38 +199,44 @@ public class CreateUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUserResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LastLoginDate")
+        @com.aliyun.core.annotation.NameInMap("LastLoginDate")
         private String lastLoginDate;
 
-        @NameInMap("MobilePhone")
+        @com.aliyun.core.annotation.NameInMap("MobilePhone")
         private String mobilePhone;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private User(Builder builder) {
@@ -320,7 +352,10 @@ public class CreateUserResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a cloud computing engineer.</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -328,7 +363,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM user was created.
+             * <p>The time when the RAM user was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-12T09:12:00Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -336,7 +374,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the RAM user.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -344,10 +385,13 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the RAM user.
-             * <p>
+             * <p>The email address of the RAM user.</p>
+             * <blockquote>
+             * <p>This parameter is valid only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -355,7 +399,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the RAM user logged on to the Alibaba Cloud Management Console.
+             * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-12T09:12:00Z</p>
              */
             public Builder lastLoginDate(String lastLoginDate) {
                 this.lastLoginDate = lastLoginDate;
@@ -363,10 +410,13 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number of the RAM user.
-             * <p>
+             * <p>The mobile phone number of the RAM user.</p>
+             * <blockquote>
+             * <p>This parameter is valid only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>86-1868888****</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -374,12 +424,15 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the RAM user. Valid values:
-             * <p>
+             * <p>The source of the RAM user. Valid values:</p>
+             * <ul>
+             * <li>Manual: The RAM user is manually created in the RAM console.</li>
+             * <li>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</li>
+             * <li>CloudSSO: The RAM user is mapped from a CloudSSO user.</li>
+             * </ul>
              * 
-             * *   Manual: The RAM user is manually created in the RAM console.
-             * *   SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).
-             * *   CloudSSO: The RAM user is mapped from a CloudSSO user.
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -387,7 +440,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -395,7 +448,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the RAM user was updated.
+             * <p>The time when the information about the RAM user was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-12T09:12:00Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -403,7 +459,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * <p>The ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20732900249392****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -411,7 +470,10 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The logon name of the RAM user.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

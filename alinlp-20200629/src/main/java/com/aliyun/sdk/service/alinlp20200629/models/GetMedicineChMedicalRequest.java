@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMedicineChMedicalRequest</p>
  */
 public class GetMedicineChMedicalRequest extends Request {
-    @Body
-    @NameInMap("Factory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Factory")
     private String factory;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
-    @Body
-    @NameInMap("Specification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Specification")
     private String specification;
 
-    @Body
-    @NameInMap("Unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Unit")
     private String unit;
 
     private GetMedicineChMedicalRequest(Builder builder) {

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateChatappTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateChatappTemplateResponseBody</p>
  */
 public class CreateChatappTemplateResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateChatappTemplateResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 访问被拒绝详细信息。
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,11 +97,14 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The HTTP status code returned.</p>
+         * <ul>
+         * <li>A value of OK indicates that the call is successful.</li>
+         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +112,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;templateCode&quot;: &quot;****4b5c79c9432497a075bdfca36bf5&quot;，&quot;templateName&quot;: &quot;hello_whatsapp&quot;}</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +123,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +134,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,11 +150,17 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateChatappTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateChatappTemplateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private Data(Builder builder) {
@@ -174,7 +195,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * The code of the message template.
+             * <p>The code of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS_232907****</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -182,7 +206,10 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the message template.
+             * <p>The name of the message template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello_whatsapp</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

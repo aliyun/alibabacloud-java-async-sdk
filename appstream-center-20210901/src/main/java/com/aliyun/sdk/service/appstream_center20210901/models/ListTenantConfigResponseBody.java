@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTenantConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListTenantConfigResponseBody</p>
  */
 public class ListTenantConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantConfigModel")
+    @com.aliyun.core.annotation.NameInMap("TenantConfigModel")
     private TenantConfigModel tenantConfigModel;
 
     private ListTenantConfigResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ListTenantConfigResponseBody extends TeaModel {
         private TenantConfigModel tenantConfigModel; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class ListTenantConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TenantConfigModel.
+         * <p>The user configurations.</p>
          */
         public Builder tenantConfigModel(TenantConfigModel tenantConfigModel) {
             this.tenantConfigModel = tenantConfigModel;
@@ -71,8 +79,14 @@ public class ListTenantConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTenantConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTenantConfigResponseBody</p>
+     */
     public static class TenantConfigModel extends TeaModel {
-        @NameInMap("AppInstanceGroupExpireRemind")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupExpireRemind")
         private Boolean appInstanceGroupExpireRemind;
 
         private TenantConfigModel(Builder builder) {
@@ -98,7 +112,15 @@ public class ListTenantConfigResponseBody extends TeaModel {
             private Boolean appInstanceGroupExpireRemind; 
 
             /**
-             * AppInstanceGroupExpireRemind.
+             * <p>Indicates whether the resource expiration reminder feature is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder appInstanceGroupExpireRemind(Boolean appInstanceGroupExpireRemind) {
                 this.appInstanceGroupExpireRemind = appInstanceGroupExpireRemind;

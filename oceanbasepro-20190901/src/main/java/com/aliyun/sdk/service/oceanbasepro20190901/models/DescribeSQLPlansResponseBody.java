@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLPlansResponseBody</p>
  */
 public class DescribeSQLPlansResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLPlans")
+    @com.aliyun.core.annotation.NameInMap("SQLPlans")
     private java.util.List < SQLPlans> SQLPlans;
 
     private DescribeSQLPlansResponseBody(Builder builder) {
@@ -72,52 +71,52 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
     } 
 
     public static class SQLPlans extends TeaModel {
-        @NameInMap("AvgExecutionMS")
+        @com.aliyun.core.annotation.NameInMap("AvgExecutionMS")
         private Float avgExecutionMS;
 
-        @NameInMap("AvgExecutionTimeMS")
+        @com.aliyun.core.annotation.NameInMap("AvgExecutionTimeMS")
         private Long avgExecutionTimeMS;
 
-        @NameInMap("FirstLoadTime")
+        @com.aliyun.core.annotation.NameInMap("FirstLoadTime")
         private Long firstLoadTime;
 
-        @NameInMap("FirstLoadTimeUTCString")
+        @com.aliyun.core.annotation.NameInMap("FirstLoadTimeUTCString")
         private String firstLoadTimeUTCString;
 
-        @NameInMap("HitCount")
+        @com.aliyun.core.annotation.NameInMap("HitCount")
         private Integer hitCount;
 
-        @NameInMap("MergedVersion")
+        @com.aliyun.core.annotation.NameInMap("MergedVersion")
         private Integer mergedVersion;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("OutlineData")
+        @com.aliyun.core.annotation.NameInMap("OutlineData")
         private String outlineData;
 
-        @NameInMap("OutlineId")
+        @com.aliyun.core.annotation.NameInMap("OutlineId")
         private Long outlineId;
 
-        @NameInMap("OutlineTime")
+        @com.aliyun.core.annotation.NameInMap("OutlineTime")
         private Long outlineTime;
 
-        @NameInMap("OutlineTimeUTCString")
+        @com.aliyun.core.annotation.NameInMap("OutlineTimeUTCString")
         private String outlineTimeUTCString;
 
-        @NameInMap("PlanFull")
+        @com.aliyun.core.annotation.NameInMap("PlanFull")
         private String planFull;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private Integer planId;
 
-        @NameInMap("PlanInfo")
+        @com.aliyun.core.annotation.NameInMap("PlanInfo")
         private String planInfo;
 
-        @NameInMap("PlanUnionHash")
+        @com.aliyun.core.annotation.NameInMap("PlanUnionHash")
         private String planUnionHash;
 
-        @NameInMap("QuerySQL")
+        @com.aliyun.core.annotation.NameInMap("QuerySQL")
         private String querySQL;
 
         private SQLPlans(Builder builder) {

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOAuthTokenRequest} extends {@link RequestModel}
  *
  * <p>CreateOAuthTokenRequest</p>
  */
 public class CreateOAuthTokenRequest extends Request {
-    @Body
-    @NameInMap("clientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Body
-    @NameInMap("clientSecret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientSecret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientSecret;
 
-    @Body
-    @NameInMap("code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @Body
-    @NameInMap("grantType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("grantType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String grantType;
 
-    @Body
-    @NameInMap("login")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("login")
     private String login;
 
-    @Body
-    @NameInMap("scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
     private CreateOAuthTokenRequest(Builder builder) {
@@ -128,7 +133,11 @@ public class CreateOAuthTokenRequest extends Request {
         } 
 
         /**
-         * clientId
+         * <p>clientId</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc7e0b3c00a3e58f46</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("clientId", clientId);
@@ -137,7 +146,11 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * client_secret
+         * <p>client_secret</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a433294edea39cae7e7870</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putBodyParameter("clientSecret", clientSecret);
@@ -155,7 +168,10 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * grantType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder grantType(String grantType) {
             this.putBodyParameter("grantType", grantType);
@@ -173,7 +189,10 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>read:repo</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);

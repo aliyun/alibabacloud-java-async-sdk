@@ -1,54 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainStatusCodeCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainStatusCodeCountResponseBody</p>
  */
 public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status200")
+    @com.aliyun.core.annotation.NameInMap("Status200")
     private Long status200;
 
-    @NameInMap("Status2XX")
+    @com.aliyun.core.annotation.NameInMap("Status2XX")
     private Long status2XX;
 
-    @NameInMap("Status3XX")
+    @com.aliyun.core.annotation.NameInMap("Status3XX")
     private Long status3XX;
 
-    @NameInMap("Status403")
+    @com.aliyun.core.annotation.NameInMap("Status403")
     private Long status403;
 
-    @NameInMap("Status404")
+    @com.aliyun.core.annotation.NameInMap("Status404")
     private Long status404;
 
-    @NameInMap("Status405")
+    @com.aliyun.core.annotation.NameInMap("Status405")
     private Long status405;
 
-    @NameInMap("Status4XX")
+    @com.aliyun.core.annotation.NameInMap("Status410")
+    private Long status410;
+
+    @com.aliyun.core.annotation.NameInMap("Status499")
+    private Long status499;
+
+    @com.aliyun.core.annotation.NameInMap("Status4XX")
     private Long status4XX;
 
-    @NameInMap("Status501")
+    @com.aliyun.core.annotation.NameInMap("Status501")
     private Long status501;
 
-    @NameInMap("Status502")
+    @com.aliyun.core.annotation.NameInMap("Status502")
     private Long status502;
 
-    @NameInMap("Status503")
+    @com.aliyun.core.annotation.NameInMap("Status503")
     private Long status503;
 
-    @NameInMap("Status504")
+    @com.aliyun.core.annotation.NameInMap("Status504")
     private Long status504;
 
-    @NameInMap("Status5XX")
+    @com.aliyun.core.annotation.NameInMap("Status5XX")
     private Long status5XX;
 
     private DescribeDomainStatusCodeCountResponseBody(Builder builder) {
@@ -59,6 +70,8 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         this.status403 = builder.status403;
         this.status404 = builder.status404;
         this.status405 = builder.status405;
+        this.status410 = builder.status410;
+        this.status499 = builder.status499;
         this.status4XX = builder.status4XX;
         this.status501 = builder.status501;
         this.status502 = builder.status502;
@@ -125,6 +138,20 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
     }
 
     /**
+     * @return status410
+     */
+    public Long getStatus410() {
+        return this.status410;
+    }
+
+    /**
+     * @return status499
+     */
+    public Long getStatus499() {
+        return this.status499;
+    }
+
+    /**
      * @return status4XX
      */
     public Long getStatus4XX() {
@@ -174,6 +201,8 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         private Long status403; 
         private Long status404; 
         private Long status405; 
+        private Long status410; 
+        private Long status499; 
         private Long status4XX; 
         private Long status501; 
         private Long status502; 
@@ -182,7 +211,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         private Long status5XX; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +222,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 200 status codes within the specified period of time.
+         * <p>The number of 200 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>951159</p>
          */
         public Builder status200(Long status200) {
             this.status200 = status200;
@@ -198,7 +233,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 2xx status codes within the specified period of time.
+         * <p>The number of 2xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>951472</p>
          */
         public Builder status2XX(Long status2XX) {
             this.status2XX = status2XX;
@@ -206,7 +244,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 3xx status codes within the specified period of time.
+         * <p>The number of 3xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133209</p>
          */
         public Builder status3XX(Long status3XX) {
             this.status3XX = status3XX;
@@ -214,7 +255,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 403 status codes within the specified period of time.
+         * <p>The number of 403 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status403(Long status403) {
             this.status403 = status403;
@@ -222,7 +266,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 404 status codes within the specified period of time.
+         * <p>The number of 404 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>897</p>
          */
         public Builder status404(Long status404) {
             this.status404 = status404;
@@ -230,7 +277,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 405 status codes within the specified period of time.
+         * <p>The number of 405 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status405(Long status405) {
             this.status405 = status405;
@@ -238,7 +288,26 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 4xx status codes within the specified period of time.
+         * Status410.
+         */
+        public Builder status410(Long status410) {
+            this.status410 = status410;
+            return this;
+        }
+
+        /**
+         * Status499.
+         */
+        public Builder status499(Long status499) {
+            this.status499 = status499;
+            return this;
+        }
+
+        /**
+         * <p>The number of 4xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5653</p>
          */
         public Builder status4XX(Long status4XX) {
             this.status4XX = status4XX;
@@ -246,7 +315,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 501 status codes within the specified period of time.
+         * <p>The number of 501 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status501(Long status501) {
             this.status501 = status501;
@@ -254,7 +326,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 502 status codes within the specified period of time.
+         * <p>The number of 502 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status502(Long status502) {
             this.status502 = status502;
@@ -262,7 +337,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 503 status codes within the specified period of time.
+         * <p>The number of 503 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status503(Long status503) {
             this.status503 = status503;
@@ -270,7 +348,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 504 status codes within the specified period of time.
+         * <p>The number of 504 status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status504(Long status504) {
             this.status504 = status504;
@@ -278,7 +359,10 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of 5xx status codes within the specified period of time.
+         * <p>The number of 5xx status codes within the specified period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder status5XX(Long status5XX) {
             this.status5XX = status5XX;

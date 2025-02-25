@@ -1205,7 +1205,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.You can call the ListResourceGroups operation to query the IDs of resource groups.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

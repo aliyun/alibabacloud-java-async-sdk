@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppsResponseBody</p>
  */
 public class DescribeAppsResponseBody extends TeaModel {
-    @NameInMap("Apps")
+    @com.aliyun.core.annotation.NameInMap("Apps")
     private Apps apps;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAppsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned app information. It is an array consisting of AppItem data.
+         * <p>The returned app information. It is an array consisting of AppItem data.</p>
          */
         public Builder apps(Apps apps) {
             this.apps = apps;
@@ -94,7 +99,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class AppItem extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private AppItem(Builder builder) {
@@ -182,7 +205,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The ID of the app.
+             * <p>The ID of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20112314518278</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -190,7 +216,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the app.
+             * <p>The name of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateApptest</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -198,7 +227,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the app.
+             * <p>The description of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>App test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -212,9 +244,15 @@ public class DescribeAppsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppsResponseBody</p>
+     */
     public static class Apps extends TeaModel {
-        @NameInMap("AppItem")
-        private java.util.List < AppItem> appItem;
+        @com.aliyun.core.annotation.NameInMap("AppItem")
+        private java.util.List<AppItem> appItem;
 
         private Apps(Builder builder) {
             this.appItem = builder.appItem;
@@ -231,17 +269,17 @@ public class DescribeAppsResponseBody extends TeaModel {
         /**
          * @return appItem
          */
-        public java.util.List < AppItem> getAppItem() {
+        public java.util.List<AppItem> getAppItem() {
             return this.appItem;
         }
 
         public static final class Builder {
-            private java.util.List < AppItem> appItem; 
+            private java.util.List<AppItem> appItem; 
 
             /**
              * AppItem.
              */
-            public Builder appItem(java.util.List < AppItem> appItem) {
+            public Builder appItem(java.util.List<AppItem> appItem) {
                 this.appItem = appItem;
                 return this;
             }

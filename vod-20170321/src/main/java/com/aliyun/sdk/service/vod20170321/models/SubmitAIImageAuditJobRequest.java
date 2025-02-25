@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitAIImageAuditJobRequest} extends {@link RequestModel}
  *
  * <p>SubmitAIImageAuditJobRequest</p>
  */
 public class SubmitAIImageAuditJobRequest extends Request {
-    @Query
-    @NameInMap("MediaAuditConfiguration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaAuditConfiguration")
     private String mediaAuditConfiguration;
 
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private SubmitAIImageAuditJobRequest(Builder builder) {
@@ -140,14 +145,20 @@ public class SubmitAIImageAuditJobRequest extends Request {
         } 
 
         /**
-         * The configuration information about the review task.
-         * <p>
+         * <p>The configuration information about the review job.</p>
+         * <ul>
+         * <li>Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.</li>
+         * <li>The value of ResourceType can contain only letters, digits, and underscores (_).</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a>. The value takes effect after Alibaba Cloud processes your ticket.</li>
+         * <li>If you want to change moderation policies and rules based on ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a ticket</a> to contact technical support.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   Other configuration items of the review task. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.
-         * *   If you want to adjust moderation policies and rules based on ResourceType, submit a ticket to request technical support.
-         * *   The value of ResourceType can contain only letters, digits, and underscores (\_).
-         * 
-         * >  You can specify a value for the ResourceType field based on the preceding limits. After you specify a value for the ResourceType field, you must submit a ticket. The value takes effect after Alibaba Cloud processes your ticket.
+         * <strong>example:</strong>
+         * <p>{&quot;ResourceType&quot;:&quot;****_short_video&quot;}</p>
          */
         public Builder mediaAuditConfiguration(String mediaAuditConfiguration) {
             this.putQueryParameter("MediaAuditConfiguration", mediaAuditConfiguration);
@@ -156,10 +167,12 @@ public class SubmitAIImageAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the image.
-         * <p>
+         * <p>The ID of the image.</p>
+         * <p>The unique ID of the image is returned after the image is uploaded to ApsaraVideo VOD.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The unique ID of the image is returned after the image is uploaded to ApsaraVideo VOD.
+         * <strong>example:</strong>
+         * <p>f1aa3024aee64*****6dc8ca20dbc320</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -204,17 +217,15 @@ public class SubmitAIImageAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the review template.
-         * <p>
+         * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
+         * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102936.html">ListAITemplate</a> operation that you call to create an AI template.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * If you want to use an AI template, you can call the following operations:
-         * 
-         * *   [ListAITemplate](~~102936~~)
-         * *   [AddAITemplate](~~102930~~)
-         * *   [GetAITemplate](~~102933~~)
-         * *   [SetDefaultAITemplate](~~102937~~)
-         * 
-         * If you do not specify this parameter, the ID of the default AI template for automated review is used.
+         * <strong>example:</strong>
+         * <p>VOD-0003-00****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

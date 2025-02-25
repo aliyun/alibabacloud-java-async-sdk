@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserGroupResponseBody</p>
  */
 public class GetUserGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserGroup")
+    @com.aliyun.core.annotation.NameInMap("UserGroup")
     private UserGroup userGroup;
 
     private GetUserGroupResponseBody(Builder builder) {
@@ -71,17 +76,23 @@ public class GetUserGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserGroupResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Attributes(Builder builder) {
@@ -172,20 +183,26 @@ public class GetUserGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUserGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserGroupResponseBody</p>
+     */
     public static class UserGroup extends TeaModel {
-        @NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private java.util.List<Attributes> attributes;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private UserGroup(Builder builder) {
@@ -207,7 +224,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -240,7 +257,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String createTime; 
             private String description; 
             private String name; 
@@ -249,7 +266,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }

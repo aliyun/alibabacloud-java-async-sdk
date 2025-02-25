@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCostUnitRequest} extends {@link RequestModel}
  *
  * <p>ModifyCostUnitRequest</p>
  */
 public class ModifyCostUnitRequest extends Request {
-    @Query
-    @NameInMap("UnitEntityList")
-    private java.util.List < UnitEntityList> unitEntityList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnitEntityList")
+    private java.util.List<UnitEntityList> unitEntityList;
 
     private ModifyCostUnitRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ModifyCostUnitRequest extends Request {
     /**
      * @return unitEntityList
      */
-    public java.util.List < UnitEntityList> getUnitEntityList() {
+    public java.util.List<UnitEntityList> getUnitEntityList() {
         return this.unitEntityList;
     }
 
     public static final class Builder extends Request.Builder<ModifyCostUnitRequest, Builder> {
-        private java.util.List < UnitEntityList> unitEntityList; 
+        private java.util.List<UnitEntityList> unitEntityList; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class ModifyCostUnitRequest extends Request {
         } 
 
         /**
-         * The cost centers to be modified.
+         * <p>The cost centers to be modified.</p>
          */
-        public Builder unitEntityList(java.util.List < UnitEntityList> unitEntityList) {
+        public Builder unitEntityList(java.util.List<UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
             this.unitEntityList = unitEntityList;
             return this;
@@ -69,17 +74,23 @@ public class ModifyCostUnitRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCostUnitRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCostUnitRequest</p>
+     */
     public static class UnitEntityList extends TeaModel {
-        @NameInMap("NewUnitName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NewUnitName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String newUnitName;
 
-        @NameInMap("OwnerUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long ownerUid;
 
-        @NameInMap("UnitId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UnitId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long unitId;
 
         private UnitEntityList(Builder builder) {
@@ -123,7 +134,11 @@ public class ModifyCostUnitRequest extends Request {
             private Long unitId; 
 
             /**
-             * The new name of the cost center.
+             * <p>The new name of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>newTest</p>
              */
             public Builder newUnitName(String newUnitName) {
                 this.newUnitName = newUnitName;
@@ -131,7 +146,11 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * The user ID of the cost center owner.
+             * <p>The user ID of the cost center owner.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1321312312</p>
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -139,7 +158,11 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * The ID of the cost center.
+             * <p>The ID of the cost center.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2524352</p>
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;

@@ -1,110 +1,124 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatGatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateNatGatewayRequest</p>
  */
 public class CreateNatGatewayRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessMode")
+    private AccessMode accessMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @Query
-    @NameInMap("EipBindMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipBindMode")
     private String eipBindMode;
 
-    @Query
-    @NameInMap("IcmpReplyEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IcmpReplyEnabled")
     private Boolean icmpReplyEnabled;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NatType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatType")
     private String natType;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateLinkEnabled")
+    private Boolean privateLinkEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityProtectionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityProtectionEnabled")
     @Deprecated
     private Boolean securityProtectionEnabled;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateNatGatewayRequest(Builder builder) {
         super(builder);
+        this.accessMode = builder.accessMode;
         this.autoPay = builder.autoPay;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
@@ -119,6 +133,7 @@ public class CreateNatGatewayRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pricingCycle = builder.pricingCycle;
+        this.privateLinkEnabled = builder.privateLinkEnabled;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -140,6 +155,13 @@ public class CreateNatGatewayRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessMode
+     */
+    public AccessMode getAccessMode() {
+        return this.accessMode;
     }
 
     /**
@@ -241,6 +263,13 @@ public class CreateNatGatewayRequest extends Request {
     }
 
     /**
+     * @return privateLinkEnabled
+     */
+    public Boolean getPrivateLinkEnabled() {
+        return this.privateLinkEnabled;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -278,7 +307,7 @@ public class CreateNatGatewayRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -297,6 +326,7 @@ public class CreateNatGatewayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNatGatewayRequest, Builder> {
+        private AccessMode accessMode; 
         private Boolean autoPay; 
         private String clientToken; 
         private String description; 
@@ -311,12 +341,13 @@ public class CreateNatGatewayRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String pricingCycle; 
+        private Boolean privateLinkEnabled; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean securityProtectionEnabled; 
         private String spec; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -326,6 +357,7 @@ public class CreateNatGatewayRequest extends Request {
 
         private Builder(CreateNatGatewayRequest request) {
             super(request);
+            this.accessMode = request.accessMode;
             this.autoPay = request.autoPay;
             this.clientToken = request.clientToken;
             this.description = request.description;
@@ -340,6 +372,7 @@ public class CreateNatGatewayRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pricingCycle = request.pricingCycle;
+            this.privateLinkEnabled = request.privateLinkEnabled;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -351,7 +384,20 @@ public class CreateNatGatewayRequest extends Request {
         } 
 
         /**
-         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
+         * <p>The access mode for reverse access to the VPC NAT gateway.</p>
+         */
+        public Builder accessMode(AccessMode accessMode) {
+            String accessModeShrink = shrink(accessMode, "AccessMode", "json");
+            this.putQueryParameter("AccessMode", accessModeShrink);
+            this.accessMode = accessMode;
+            return this;
+        }
+
+        /**
+         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter.</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -360,12 +406,14 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -374,10 +422,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The description of the NAT gateway.
-         * <p>
+         * <p>The description of the NAT gateway.</p>
+         * <p>You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>testnat</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -386,7 +435,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
+         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter.</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -395,16 +447,19 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The mode in which the EIP is associated with the NAT gateway. Valid values:
-         * <p>
+         * <p>The mode in which the EIP is associated with the NAT gateway. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MULTI_BINDED</strong>(default): the multi-EIP-to-ENI mode.</p>
+         * </li>
+         * <li><p><strong>NAT</strong>: NAT mode, which is compatible with IPv4 addresses.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If an EIP is associated with a NAT gateway in NAT mode, the EIP occupies a private IP address of the vSwitch where the NAT gateway is deployed. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, EIPs cannot be associated with the NAT gateway. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.</p>
+         * </blockquote>
          * 
-         * *   **MULTI_BINDED** (default): Multi-EIP-to-ENI mode.
-         * 
-         * *   **NAT**: NAT mode. IPv4 gateways are supported in this mode.
-         * 
-         *     **
-         * 
-         *     **Note** If a NAT gateway is associated with an EIP in NAT mode, the EIP occupies one private IP address in the vSwitch. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.
+         * <strong>example:</strong>
+         * <p>MULTI_BINDED</p>
          */
         public Builder eipBindMode(String eipBindMode) {
             this.putQueryParameter("EipBindMode", eipBindMode);
@@ -413,11 +468,14 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable ICMP retrieval. Valid values:
-         * <p>
+         * <p>Specifies whether to enable ICMP retrieval. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true** (default)
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
             this.putQueryParameter("IcmpReplyEnabled", icmpReplyEnabled);
@@ -426,12 +484,12 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The billing method of the NAT gateway.
-         * <p>
+         * <p>The billing method of the NAT gateway.</p>
+         * <p>Set the value to <strong>PostPaid</strong> (pay-as-you-go), which is the default value.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</p>
          * 
-         * Set the value to **PostPaid** (pay-as-you-go), which is the default value.
-         * 
-         * For more information, see [Internet NAT gateway billing](~~48126~~) and [VPC NAT gateway billing](~~270913~~).
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -440,7 +498,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The metering method of the NAT gateway. Set the value to **PayByLcu**, which specifies the pay-by-CU metering method.
+         * <p>The metering method of the NAT gateway. Set the value to <strong>PayByLcu</strong>, which specifies the pay-by-CU metering method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByLcu</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -449,12 +510,12 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The name of the NAT gateway.
-         * <p>
+         * <p>The name of the NAT gateway.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>If this parameter is not set, the system assigns a default name to the NAT gateway.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
-         * 
-         * If this parameter is not set, the system assigns a default name to the NAT gateway.
+         * <strong>example:</strong>
+         * <p>fortest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -463,7 +524,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The type of NAT gateway. Set the value to **Enhanced**, which specifies enhanced NAT gateway.
+         * <p>The type of NAT gateway. Set the value to <strong>Enhanced</strong>, which specifies enhanced NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enhanced</p>
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -472,11 +536,14 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The network type of the NAT gateway. Valid values:
-         * <p>
+         * <p>The network type of the NAT gateway. Valid values:</p>
+         * <ul>
+         * <li><strong>internet</strong>: Internet</li>
+         * <li><strong>intranet</strong>: VPC</li>
+         * </ul>
          * 
-         * *   **internet**: Internet
-         * *   **intranet**: VPC
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -503,7 +570,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
+         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter.</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -512,10 +582,21 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The region ID of the NAT gateway.
-         * <p>
+         * <p>PrivateLink is not supported by default. If you set the value to true, PrivateLink is supported.</p>
+         */
+        public Builder privateLinkEnabled(Boolean privateLinkEnabled) {
+            this.putQueryParameter("PrivateLinkEnabled", privateLinkEnabled);
+            this.privateLinkEnabled = privateLinkEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the NAT gateway.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -542,10 +623,13 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the firewall feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the firewall feature. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)&gt;Notice: This parameter is deprecated.</li>
+         * </ul>
          * 
-         * *   **false** (default)><notice>This parameter is deprecated.></notice>
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
@@ -554,7 +638,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.
+         * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid parameter.</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -563,24 +650,30 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MULTI_BINDED</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the vSwitch to which the NAT gateway is attached.
-         * <p>
+         * <p>The ID of the vSwitch to which the NAT gateway is attached.</p>
+         * <p>When you create a NAT gateway, you must specify a vSwitch for the NAT gateway. Then, the system assigns an idle private IP address from the vSwitch to the NAT gateway.</p>
+         * <ul>
+         * <li>To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.</li>
+         * <li>If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/182292.html">ListEnhanhcedNatGatewayAvailableZones</a> operation to query zones that support NAT gateways. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query idle IP addresses in a vSwitch.</p>
+         * </blockquote>
          * 
-         * When you create a NAT gateway, you must specify a vSwitch for the NAT gateway. Then, the system assigns an idle private IP address from the vSwitch to the NAT gateway.
-         * 
-         * *   To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.
-         * *   If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.
-         * 
-         * >  You can call the [ListEnhanhcedNatGatewayAvailableZones](~~182292~~) operation to query zones that support NAT gateways. You can call the [DescribeVSwitches](~~35748~~) operation to query idle IP addresses in a vSwitch.
+         * <strong>example:</strong>
+         * <p>vsw-bp1e3se98n9fq8hle****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -589,7 +682,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the VPC where you want to create the NAT gateway.
+         * <p>The ID of the VPC where you want to create the NAT gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1di7uewzmtvfuq8****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -604,11 +701,102 @@ public class CreateNatGatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNatGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayRequest</p>
+     */
+    public static class AccessMode extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ModeValue")
+        private String modeValue;
+
+        @com.aliyun.core.annotation.NameInMap("TunnelType")
+        private String tunnelType;
+
+        private AccessMode(Builder builder) {
+            this.modeValue = builder.modeValue;
+            this.tunnelType = builder.tunnelType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessMode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return modeValue
+         */
+        public String getModeValue() {
+            return this.modeValue;
+        }
+
+        /**
+         * @return tunnelType
+         */
+        public String getTunnelType() {
+            return this.tunnelType;
+        }
+
+        public static final class Builder {
+            private String modeValue; 
+            private String tunnelType; 
+
+            /**
+             * <p>Access mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>route</strong>: route mode</p>
+             * </li>
+             * <li><p><strong>tunnel</strong>: tunnel mode</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>If this parameter is specified, you must set <strong>PrivateLinkEnabled</strong> to <strong>true</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>route</p>
+             */
+            public Builder modeValue(String modeValue) {
+                this.modeValue = modeValue;
+                return this;
+            }
+
+            /**
+             * <p>Tunnel mode type:</p>
+             * <ul>
+             * <li><strong>geneve</strong>: Geneve type</li>
+             * </ul>
+             * <blockquote>
+             * <p>This value takes effect if the access mode is the tunnel mode.</p>
+             * </blockquote>
+             */
+            public Builder tunnelType(String tunnelType) {
+                this.tunnelType = tunnelType;
+                return this;
+            }
+
+            public AccessMode build() {
+                return new AccessMode(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateNatGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -643,7 +831,10 @@ public class CreateNatGatewayRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * <p>The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -651,7 +842,10 @@ public class CreateNatGatewayRequest extends Request {
             }
 
             /**
-             * The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * <p>The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

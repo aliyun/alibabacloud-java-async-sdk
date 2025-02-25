@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyRouteRuleRequest</p>
  */
 public class VerifyRouteRuleRequest extends Request {
-    @Body
-    @NameInMap("routeRuleId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("routeRuleId")
     private Long routeRuleId;
 
-    @Body
-    @NameInMap("testSourceEvents")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("testSourceEvents")
     private java.util.List < TestSourceEvents> testSourceEvents;
 
     private VerifyRouteRuleRequest(Builder builder) {
@@ -93,16 +92,16 @@ public class VerifyRouteRuleRequest extends Request {
     } 
 
     public static class TestSourceEvents extends TeaModel {
-        @NameInMap("eventJson")
+        @com.aliyun.core.annotation.NameInMap("eventJson")
         private String eventJson;
 
-        @NameInMap("eventTime")
+        @com.aliyun.core.annotation.NameInMap("eventTime")
         private String eventTime;
 
-        @NameInMap("monitorSourceId")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceId")
         private Long monitorSourceId;
 
-        @NameInMap("monitorSourceName")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceName")
         private String monitorSourceName;
 
         private TestSourceEvents(Builder builder) {

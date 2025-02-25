@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkAclEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteNetworkAclEntryRequest</p>
  */
 public class DeleteNetworkAclEntryRequest extends Request {
-    @Query
-    @NameInMap("NetworkAclEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
     private String networkAclEntryId;
 
     private DeleteNetworkAclEntryRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class DeleteNetworkAclEntryRequest extends Request {
         } 
 
         /**
-         * NetworkAclEntryId.
+         * <p>The ID of the network ACL for which you want to delete a rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae-5****</p>
          */
         public Builder networkAclEntryId(String networkAclEntryId) {
             this.putQueryParameter("NetworkAclEntryId", networkAclEntryId);

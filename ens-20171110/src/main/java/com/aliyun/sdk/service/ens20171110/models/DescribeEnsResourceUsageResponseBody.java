@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEnsResourceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEnsResourceUsageResponseBody</p>
  */
 public class DescribeEnsResourceUsageResponseBody extends TeaModel {
-    @NameInMap("EnsResourceUsage")
-    private java.util.List < EnsResourceUsage> ensResourceUsage;
+    @com.aliyun.core.annotation.NameInMap("EnsResourceUsage")
+    private java.util.List<EnsResourceUsage> ensResourceUsage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsResourceUsageResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
     /**
      * @return ensResourceUsage
      */
-    public java.util.List < EnsResourceUsage> getEnsResourceUsage() {
+    public java.util.List<EnsResourceUsage> getEnsResourceUsage() {
         return this.ensResourceUsage;
     }
 
@@ -46,19 +51,22 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EnsResourceUsage> ensResourceUsage; 
+        private java.util.List<EnsResourceUsage> ensResourceUsage; 
         private String requestId; 
 
         /**
-         * EnsResourceUsage.
+         * <p>The resource usage data.</p>
          */
-        public Builder ensResourceUsage(java.util.List < EnsResourceUsage> ensResourceUsage) {
+        public Builder ensResourceUsage(java.util.List<EnsResourceUsage> ensResourceUsage) {
             this.ensResourceUsage = ensResourceUsage;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E	 Request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEnsResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEnsResourceUsageResponseBody</p>
+     */
     public static class EnsResourceUsage extends TeaModel {
-        @NameInMap("ComputeResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ComputeResourceCount")
         private Integer computeResourceCount;
 
-        @NameInMap("CpuSum")
+        @com.aliyun.core.annotation.NameInMap("CpuSum")
         private Long cpuSum;
 
-        @NameInMap("DiskCount")
+        @com.aliyun.core.annotation.NameInMap("DiskCount")
         private Integer diskCount;
 
-        @NameInMap("DownCount")
+        @com.aliyun.core.annotation.NameInMap("DownCount")
         private Integer downCount;
 
-        @NameInMap("ExpiredCount")
+        @com.aliyun.core.annotation.NameInMap("ExpiredCount")
         private Integer expiredCount;
 
-        @NameInMap("ExpiringCount")
+        @com.aliyun.core.annotation.NameInMap("ExpiringCount")
         private Integer expiringCount;
 
-        @NameInMap("GpuSum")
+        @com.aliyun.core.annotation.NameInMap("GpuSum")
         private Long gpuSum;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("RunningCount")
+        @com.aliyun.core.annotation.NameInMap("RunningCount")
         private Integer runningCount;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("StorageSum")
+        @com.aliyun.core.annotation.NameInMap("StorageSum")
         private Long storageSum;
 
         private EnsResourceUsage(Builder builder) {
@@ -218,7 +232,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             private Long storageSum; 
 
             /**
-             * ComputeResourceCount.
+             * <p>The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder computeResourceCount(Integer computeResourceCount) {
                 this.computeResourceCount = computeResourceCount;
@@ -226,7 +243,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * CpuSum.
+             * <p>The CPU usage. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpuSum(Long cpuSum) {
                 this.cpuSum = cpuSum;
@@ -234,7 +254,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * DiskCount.
+             * <p>The number of data disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder diskCount(Integer diskCount) {
                 this.diskCount = diskCount;
@@ -242,7 +265,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * DownCount.
+             * <p>The number of stopped VMs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder downCount(Integer downCount) {
                 this.downCount = downCount;
@@ -250,7 +276,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredCount.
+             * <p>The number of expired VM instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder expiredCount(Integer expiredCount) {
                 this.expiredCount = expiredCount;
@@ -258,7 +287,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiringCount.
+             * <p>The number of VM instances that are about to expire.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder expiringCount(Integer expiringCount) {
                 this.expiringCount = expiringCount;
@@ -266,7 +298,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSum.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder gpuSum(Long gpuSum) {
                 this.gpuSum = gpuSum;
@@ -274,7 +309,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -282,7 +320,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * RunningCount.
+             * <p>The number of running instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -290,7 +331,15 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * <p>The type of the service. Valid values:</p>
+             * <ul>
+             * <li>1: subscription instance.</li>
+             * <li>2: edge service instance.</li>
+             * <li>3: pay-as-you-go instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -298,7 +347,10 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSum.
+             * <p>The total disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder storageSum(Long storageSum) {
                 this.storageSum = storageSum;

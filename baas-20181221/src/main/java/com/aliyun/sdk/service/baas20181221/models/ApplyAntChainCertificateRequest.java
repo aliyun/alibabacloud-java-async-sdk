@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyAntChainCertificateRequest</p>
  */
 public class ApplyAntChainCertificateRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
-    private String antChainId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("UploadReq")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String antChainId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UploadReq")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uploadReq;
 
     private ApplyAntChainCertificateRequest(Builder builder) {
         super(builder);
-        this.antChainId = builder.antChainId;
         this.regionId = builder.regionId;
+        this.antChainId = builder.antChainId;
         this.uploadReq = builder.uploadReq;
     }
 
@@ -47,17 +46,17 @@ public class ApplyAntChainCertificateRequest extends Request {
     }
 
     /**
-     * @return antChainId
-     */
-    public String getAntChainId() {
-        return this.antChainId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return antChainId
+     */
+    public String getAntChainId() {
+        return this.antChainId;
     }
 
     /**
@@ -68,29 +67,20 @@ public class ApplyAntChainCertificateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ApplyAntChainCertificateRequest, Builder> {
-        private String antChainId; 
         private String regionId; 
+        private String antChainId; 
         private String uploadReq; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ApplyAntChainCertificateRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.regionId = response.regionId;
-            this.uploadReq = response.uploadReq;
+        private Builder(ApplyAntChainCertificateRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.uploadReq = request.uploadReq;
         } 
-
-        /**
-         * AntChainId.
-         */
-        public Builder antChainId(String antChainId) {
-            this.putBodyParameter("AntChainId", antChainId);
-            this.antChainId = antChainId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -98,6 +88,15 @@ public class ApplyAntChainCertificateRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AntChainId.
+         */
+        public Builder antChainId(String antChainId) {
+            this.putBodyParameter("AntChainId", antChainId);
+            this.antChainId = antChainId;
             return this;
         }
 

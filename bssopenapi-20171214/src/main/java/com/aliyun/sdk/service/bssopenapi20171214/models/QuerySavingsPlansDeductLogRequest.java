@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansDeductLogRequest} extends {@link RequestModel}
  *
  * <p>QuerySavingsPlansDeductLogRequest</p>
  */
 public class QuerySavingsPlansDeductLogRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("Locale")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locale")
     private String locale;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private QuerySavingsPlansDeductLogRequest(Builder builder) {
@@ -139,7 +144,10 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-05 00:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -148,7 +156,10 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-XXXXXXX</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -157,11 +168,14 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * The type of the instance ID based on which the data is queried. Valid values:
-         * <p>
+         * <p>The type of the instance ID based on which the data is queried. Valid values:</p>
+         * <ul>
+         * <li>spn: queries data based on the ID of the savings plan instance.</li>
+         * <li>product: queries data based on the ID of the cloud service instance.</li>
+         * </ul>
          * 
-         * *   spn: queries data based on the ID of the savings plan instance.
-         * *   product: queries data based on the ID of the cloud service instance.
+         * <strong>example:</strong>
+         * <p>spn</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -170,11 +184,14 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * The language of the return data. Valid values:
-         * <p>
+         * <p>The language of the return data. Valid values:</p>
+         * <ul>
+         * <li>ZH: Chinese</li>
+         * <li>EN: English</li>
+         * </ul>
          * 
-         * *   ZH: Chinese
-         * *   EN: English
+         * <strong>example:</strong>
+         * <p>ZH</p>
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -183,7 +200,10 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -192,7 +212,10 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,7 +224,10 @@ public class QuerySavingsPlansDeductLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-01 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

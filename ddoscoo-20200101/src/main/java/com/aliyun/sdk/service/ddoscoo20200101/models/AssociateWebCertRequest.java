@@ -1,53 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateWebCertRequest} extends {@link RequestModel}
  *
  * <p>AssociateWebCertRequest</p>
  */
 public class AssociateWebCertRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @Query
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private Integer certId;
 
-    @Query
-    @NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
-    @Query
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @Query
-    @NameInMap("CertRegion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertRegion")
     private String certRegion;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
-
-    @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
 
     private AssociateWebCertRequest(Builder builder) {
         super(builder);
@@ -59,7 +60,6 @@ public class AssociateWebCertRequest extends Request {
         this.certRegion = builder.certRegion;
         this.domain = builder.domain;
         this.key = builder.key;
-        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -131,13 +131,6 @@ public class AssociateWebCertRequest extends Request {
         return this.key;
     }
 
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public static final class Builder extends Request.Builder<AssociateWebCertRequest, Builder> {
         private String regionId; 
         private String cert; 
@@ -147,7 +140,6 @@ public class AssociateWebCertRequest extends Request {
         private String certRegion; 
         private String domain; 
         private String key; 
-        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -163,7 +155,6 @@ public class AssociateWebCertRequest extends Request {
             this.certRegion = request.certRegion;
             this.domain = request.domain;
             this.key = request.key;
-            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -176,89 +167,74 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * The public key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Key**.
-         * <p>
-         * 
-         * > If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.
+         * Cert.
          */
         public Builder cert(String cert) {
-            this.putQueryParameter("Cert", cert);
+            this.putBodyParameter("Cert", cert);
             this.cert = cert;
             return this;
         }
 
         /**
-         * The ID of the certificate that you want to associate. If the certificate that you want to associate has been issued in Certificate Management Service, you can specify the certificate ID to associate the certificate.
-         * <p>
-         * 
-         * > If you specify the certificate ID, you do not need to specify a value for the **CertName**, **Cert**, and **Key** parameters.
+         * CertId.
          */
         public Builder certId(Integer certId) {
-            this.putQueryParameter("CertId", certId);
+            this.putBodyParameter("CertId", certId);
             this.certId = certId;
             return this;
         }
 
         /**
-         * CertIdentifier.
+         * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-cn-hangzhou.</p>
+         * <blockquote>
+         * <p> You can specify only one of this parameter and the CertId parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>9430680-cn-hangzhou</p>
          */
         public Builder certIdentifier(String certIdentifier) {
-            this.putQueryParameter("CertIdentifier", certIdentifier);
+            this.putBodyParameter("CertIdentifier", certIdentifier);
             this.certIdentifier = certIdentifier;
             return this;
         }
 
         /**
-         * The name of the certificate that you want to associate. This parameter must be used together with the **Cert** and **Key** parameters.
-         * <p>
-         * 
-         * > If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.
+         * CertName.
          */
         public Builder certName(String certName) {
-            this.putQueryParameter("CertName", certName);
+            this.putBodyParameter("CertName", certName);
             this.certName = certName;
             return this;
         }
 
         /**
-         * CertRegion.
+         * <p>The region of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder certRegion(String certRegion) {
-            this.putQueryParameter("CertRegion", certRegion);
+            this.putBodyParameter("CertRegion", certRegion);
             this.certRegion = certRegion;
             return this;
         }
 
         /**
-         * The domain name of the website.
-         * <p>
-         * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <p>This parameter is required.</p>
          */
         public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
+            this.putBodyParameter("Domain", domain);
             this.domain = domain;
             return this;
         }
 
         /**
-         * The private key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Cert**.
-         * <p>
-         * 
-         * > If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.
+         * Key.
          */
         public Builder key(String key) {
-            this.putQueryParameter("Key", key);
+            this.putBodyParameter("Key", key);
             this.key = key;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPreManagedRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPreManagedRulesResponseBody</p>
  */
 public class ListPreManagedRulesResponseBody extends TeaModel {
-    @NameInMap("ManagedRules")
-    private java.util.List < ManagedRules> managedRules;
+    @com.aliyun.core.annotation.NameInMap("ManagedRules")
+    private java.util.List<ManagedRules> managedRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPreManagedRulesResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
     /**
      * @return managedRules
      */
-    public java.util.List < ManagedRules> getManagedRules() {
+    public java.util.List<ManagedRules> getManagedRules() {
         return this.managedRules;
     }
 
@@ -68,21 +73,24 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ManagedRules> managedRules; 
+        private java.util.List<ManagedRules> managedRules; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
 
         /**
-         * The evaluation rules.
+         * <p>The evaluation rules.</p>
          */
-        public Builder managedRules(java.util.List < ManagedRules> managedRules) {
+        public Builder managedRules(java.util.List<ManagedRules> managedRules) {
             this.managedRules = managedRules;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -98,7 +109,10 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2A9F1BE-0712-1B26-9899-D82F7DA8476C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,26 +125,32 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPreManagedRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPreManagedRulesResponseBody</p>
+     */
     public static class ManagedRules extends TeaModel {
-        @NameInMap("CompulsoryInputParameterDetails")
-        private java.util.Map < String, ? > compulsoryInputParameterDetails;
+        @com.aliyun.core.annotation.NameInMap("CompulsoryInputParameterDetails")
+        private java.util.Map<String, ?> compulsoryInputParameterDetails;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HelpUrls")
+        @com.aliyun.core.annotation.NameInMap("HelpUrls")
         private String helpUrls;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("OptionalInputParameterDetails")
-        private java.util.Map < String, ? > optionalInputParameterDetails;
+        @com.aliyun.core.annotation.NameInMap("OptionalInputParameterDetails")
+        private java.util.Map<String, ?> optionalInputParameterDetails;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ManagedRules(Builder builder) {
@@ -154,7 +174,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         /**
          * @return compulsoryInputParameterDetails
          */
-        public java.util.Map < String, ? > getCompulsoryInputParameterDetails() {
+        public java.util.Map<String, ?> getCompulsoryInputParameterDetails() {
             return this.compulsoryInputParameterDetails;
         }
 
@@ -189,7 +209,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         /**
          * @return optionalInputParameterDetails
          */
-        public java.util.Map < String, ? > getOptionalInputParameterDetails() {
+        public java.util.Map<String, ?> getOptionalInputParameterDetails() {
             return this.optionalInputParameterDetails;
         }
 
@@ -201,24 +221,30 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > compulsoryInputParameterDetails; 
+            private java.util.Map<String, ?> compulsoryInputParameterDetails; 
             private String configRuleName; 
             private String description; 
             private String helpUrls; 
             private String identifier; 
-            private java.util.Map < String, ? > optionalInputParameterDetails; 
+            private java.util.Map<String, ?> optionalInputParameterDetails; 
             private String resourceType; 
 
             /**
-             * The required input parameters of the evaluation rule.
+             * <p>The details of the required input parameters of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder compulsoryInputParameterDetails(java.util.Map < String, ? > compulsoryInputParameterDetails) {
+            public Builder compulsoryInputParameterDetails(java.util.Map<String, ?> compulsoryInputParameterDetails) {
                 this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
                 return this;
             }
 
             /**
-             * The name of the evaluation rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ram-user-ak-used-expired-check</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -226,7 +252,10 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the evaluation rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +263,10 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the topic that describes how the managed rule remediates the incompliant configurations.
+             * <p>The URL of the topic that describes how the evaluation rule remediates the incompliant configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></p>
              */
             public Builder helpUrls(String helpUrls) {
                 this.helpUrls = helpUrls;
@@ -242,7 +274,10 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the evaluation rule.
+             * <p>The identifier of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-instance-deletion-protection-enabled</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -250,15 +285,21 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the optional input parameters of the evaluation rule.
+             * <p>The details of the optional input parameters of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder optionalInputParameterDetails(java.util.Map < String, ? > optionalInputParameterDetails) {
+            public Builder optionalInputParameterDetails(java.util.Map<String, ?> optionalInputParameterDetails) {
                 this.optionalInputParameterDetails = optionalInputParameterDetails;
                 return this;
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

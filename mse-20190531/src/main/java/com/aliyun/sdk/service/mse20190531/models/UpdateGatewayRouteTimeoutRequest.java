@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRouteTimeoutRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRouteTimeoutRequest</p>
  */
 public class UpdateGatewayRouteTimeoutRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("TimeoutJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutJSON")
     private TimeoutJSON timeoutJSON;
 
     private UpdateGatewayRouteTimeoutRequest(Builder builder) {
@@ -110,11 +115,14 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +131,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The ID of the gateway.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -132,7 +143,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-533290d279c1405f9628c64f7c8272ee</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -141,7 +155,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The ID of the associated record.
+         * <p>The ID of the associated record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>567</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -150,7 +167,7 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
         }
 
         /**
-         * The timeout period.
+         * <p>The timeout period.</p>
          */
         public Builder timeoutJSON(TimeoutJSON timeoutJSON) {
             String timeoutJSONShrink = shrink(timeoutJSON, "TimeoutJSON", "json");
@@ -166,14 +183,20 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGatewayRouteTimeoutRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGatewayRouteTimeoutRequest</p>
+     */
     public static class TimeoutJSON extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Integer unitNum;
 
         private TimeoutJSON(Builder builder) {
@@ -217,7 +240,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             private Integer unitNum; 
 
             /**
-             * The status of the policy.
+             * <p>The status of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -225,7 +251,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             }
 
             /**
-             * The unit of time. A value of s indicates seconds.
+             * <p>The unit of time. A value of s indicates seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -233,7 +262,10 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
             }
 
             /**
-             * The value of the timeout period.
+             * <p>The value of the timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;

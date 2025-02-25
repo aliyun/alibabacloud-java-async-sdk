@@ -1,40 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVideoInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateVideoInfoRequest</p>
  */
 public class UpdateVideoInfoRequest extends Request {
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private UpdateVideoInfoRequest(Builder builder) {
@@ -44,6 +53,7 @@ public class UpdateVideoInfoRequest extends Request {
         this.description = builder.description;
         this.tags = builder.tags;
         this.title = builder.title;
+        this.userData = builder.userData;
         this.videoId = builder.videoId;
     }
 
@@ -96,6 +106,13 @@ public class UpdateVideoInfoRequest extends Request {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return videoId
      */
     public String getVideoId() {
@@ -108,6 +125,7 @@ public class UpdateVideoInfoRequest extends Request {
         private String description; 
         private String tags; 
         private String title; 
+        private String userData; 
         private String videoId; 
 
         private Builder() {
@@ -121,11 +139,15 @@ public class UpdateVideoInfoRequest extends Request {
             this.description = request.description;
             this.tags = request.tags;
             this.title = request.title;
+            this.userData = request.userData;
             this.videoId = request.videoId;
         } 
 
         /**
-         * The ID of the video category.
+         * <p>The ID of the video category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>384761111</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -134,7 +156,10 @@ public class UpdateVideoInfoRequest extends Request {
         }
 
         /**
-         * The URL of the video thumbnail.
+         * <p>The URL of the video thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -143,11 +168,14 @@ public class UpdateVideoInfoRequest extends Request {
         }
 
         /**
-         * The description of the video.
-         * <p>
+         * <p>The description of the video.</p>
+         * <ul>
+         * <li>The value can be up to 1,024 bytes in length.</li>
+         * <li>The string must be encoded in the UTF-8 format.</li>
+         * </ul>
          * 
-         * *   The value can be up to 1,024 bytes in length.
-         * *   The string must be encoded in the UTF-8 format.
+         * <strong>example:</strong>
+         * <p>video description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -156,12 +184,15 @@ public class UpdateVideoInfoRequest extends Request {
         }
 
         /**
-         * The tags of the video.
-         * <p>
+         * <p>The tags of the video.</p>
+         * <ul>
+         * <li>Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.</li>
+         * <li>Separate multiple tags with commas (,).</li>
+         * <li>The string must be encoded in the UTF-8 format.</li>
+         * </ul>
          * 
-         * *   Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.
-         * *   Separate multiple tags with commas (,).
-         * *   The string must be encoded in the UTF-8 format.
+         * <strong>example:</strong>
+         * <p>tag1,tag2</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -170,11 +201,14 @@ public class UpdateVideoInfoRequest extends Request {
         }
 
         /**
-         * The title of the video.
-         * <p>
+         * <p>The title of the video.</p>
+         * <ul>
+         * <li>The value can be up to 128 bytes in length.</li>
+         * <li>The string must be encoded in the UTF-8 format.</li>
+         * </ul>
          * 
-         * *   The value can be up to 128 bytes in length.
-         * *   The string must be encoded in the UTF-8 format.
+         * <strong>example:</strong>
+         * <p>video title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -183,7 +217,20 @@ public class UpdateVideoInfoRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the video.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2deda93265312baf9b0ed810d****</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

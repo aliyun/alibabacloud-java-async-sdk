@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAxgGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAxgGroupResponseBody</p>
  */
 public class CreateAxgGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAxgGroupResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,10 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of number group G. The value of this parameter is required when the <a href="https://help.aliyun.com/document_detail/110249.html">BindAxg</a> operation is called to add an AXG binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000000000001</p>
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
@@ -90,7 +105,10 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +116,10 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>635C0FDA-9EBC-43D7-B368-9F583C08A126</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

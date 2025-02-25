@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafFilterInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafFilterInfoResponseBody</p>
  */
 public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.List < Content> content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafFilterInfoResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned information.
+         * <p>The returned information.</p>
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -58,7 +58,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153ca2cd-3c01-44be-204c-64dbc6c88630</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnWafFilterInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafFilterInfoResponseBody</p>
+     */
     public static class Regexp extends TeaModel {
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private String pattern;
 
         private Regexp(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             private String pattern; 
 
             /**
-             * The error message returned because no items match the regular expression.
+             * <p>The error message returned when no items match the regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Specify this field.</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -118,7 +130,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression.
+             * <p>The regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^\S+$</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -132,26 +147,36 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafFilterInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafFilterInfoResponseBody</p>
+     */
     public static class LogicalSymbol extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private Integer attributes;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MaxLength")
+        @com.aliyun.core.annotation.NameInMap("MaxLength")
         private Integer maxLength;
 
-        @NameInMap("Regexp")
+        @com.aliyun.core.annotation.NameInMap("Regexp")
         private Regexp regexp;
 
-        @NameInMap("Symbol")
+        @com.aliyun.core.annotation.NameInMap("Symbol")
         private String symbol;
 
-        @NameInMap("Tip")
+        @com.aliyun.core.annotation.NameInMap("Tip")
         private String tip;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private LogicalSymbol(Builder builder) {
+            this.attributes = builder.attributes;
             this.description = builder.description;
             this.maxLength = builder.maxLength;
             this.regexp = builder.regexp;
@@ -166,6 +191,13 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
         public static LogicalSymbol create() {
             return builder().build();
+        }
+
+        /**
+         * @return attributes
+         */
+        public Integer getAttributes() {
+            return this.attributes;
         }
 
         /**
@@ -211,6 +243,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer attributes; 
             private String description; 
             private Integer maxLength; 
             private Regexp regexp; 
@@ -219,7 +252,26 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The logical symbol that is displayed in the Dynamic Content Delivery Network (DCDN) console.
+             * <p>The configurable attributes, which are bit-field variables that are shown in the following list.<br>For example, 1(00000001) indicates that case sensitivity can be enabled and stream match cannot be enabled, and 3(00000011) indicates that case sensitivity and stream match can be enabled.</p>
+             * <ul>
+             * <li>Bit (low to high) - Description</li>
+             * <li>1 - Case sensitivity</li>
+             * <li>2 - Stream match</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder attributes(Integer attributes) {
+                this.attributes = attributes;
+                return this;
+            }
+
+            /**
+             * <p>The logical symbol that is displayed in the Dynamic Content Delivery Network (DCDN) console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal to one of multiple values.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -227,12 +279,15 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of match contents that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:
-             * <p>
+             * <p>The maximum number of match items that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:</p>
+             * <ul>
+             * <li>If <strong>multi</strong> is returned for the Type parameter, the value of this parameter indicates the maximum number of match items.</li>
+             * <li>If <strong>single</strong> is returned for the Type parameter, the value of this parameter is 1.</li>
+             * <li>If <strong>none</strong> is returned for the Type parameter, the value of this parameter is 0.</li>
+             * </ul>
              * 
-             * *   If **multi** is returned for the Type parameter, the value of this parameter indicates the maximum number of match contents.
-             * *   If **single** is returned for the Type parameter, the value of this parameter is 1.
-             * *   If **none** is returned for the Type parameter, the value of this parameter is 0.
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -240,7 +295,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression.
+             * <p>The information about the regular expression.</p>
              */
             public Builder regexp(Regexp regexp) {
                 this.regexp = regexp;
@@ -248,7 +303,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The logical symbol that is passed to the backend.
+             * <p>The logical symbol that is passed to the backend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>match-one</p>
              */
             public Builder symbol(String symbol) {
                 this.symbol = symbol;
@@ -256,7 +314,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tips that are displayed in the match content.
+             * <p>The tips that are displayed in the match item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You can enter up to 50 tips. Press the Enter key.</p>
              */
             public Builder tip(String tip) {
                 this.tip = tip;
@@ -264,12 +325,15 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of match contents. Valid values:
-             * <p>
+             * <p>The number of match items. Valid values:</p>
+             * <ul>
+             * <li>multi: You can specify multiple match items.</li>
+             * <li>single: You can specify only a match item.</li>
+             * <li>none: no match items.</li>
+             * </ul>
              * 
-             * *   multi: multiple match contents
-             * *   single: one match content
-             * *   none: no match contents
+             * <strong>example:</strong>
+             * <p>multi</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -283,14 +347,20 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafFilterInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafFilterInfoResponseBody</p>
+     */
     public static class Fields extends TeaModel {
-        @NameInMap("ExtendField")
+        @com.aliyun.core.annotation.NameInMap("ExtendField")
         private String extendField;
 
-        @NameInMap("LogicalSymbol")
+        @com.aliyun.core.annotation.NameInMap("LogicalSymbol")
         private java.util.List < LogicalSymbol> logicalSymbol;
 
-        @NameInMap("MatchField")
+        @com.aliyun.core.annotation.NameInMap("MatchField")
         private String matchField;
 
         private Fields(Builder builder) {
@@ -334,7 +404,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             private String matchField; 
 
             /**
-             * The description of the match field. This parameter is not returned or is empty if no match fields are found.
+             * <p>The description of the match field. This parameter is not returned or is empty if no match fields are found.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom Header</p>
              */
             public Builder extendField(String extendField) {
                 this.extendField = extendField;
@@ -342,7 +415,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator.
+             * <p>The information about the logical symbol.</p>
              */
             public Builder logicalSymbol(java.util.List < LogicalSymbol> logicalSymbol) {
                 this.logicalSymbol = logicalSymbol;
@@ -350,7 +423,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The match field.
+             * <p>The match field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header</p>
              */
             public Builder matchField(String matchField) {
                 this.matchField = matchField;
@@ -364,11 +440,17 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnWafFilterInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnWafFilterInfoResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("Fields")
+        @com.aliyun.core.annotation.NameInMap("Fields")
         private java.util.List < Fields> fields;
 
         private Content(Builder builder) {
@@ -403,7 +485,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             private java.util.List < Fields> fields; 
 
             /**
-             * The type of the protection policy. The value of this parameter is the same as that of the DefenseScenes parameter in the request.
+             * <p>The type of the protection policy. The value of this parameter is the same as that of the DefenseScenes parameter in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_acl</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -411,7 +496,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the match condition.
+             * <p>The information about the match condition.</p>
              */
             public Builder fields(java.util.List < Fields> fields) {
                 this.fields = fields;

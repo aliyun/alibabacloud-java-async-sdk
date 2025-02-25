@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesForUserRequest} extends {@link RequestModel}
  *
  * <p>ListPoliciesForUserRequest</p>
  */
 public class ListPoliciesForUserRequest extends Request {
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private ListPoliciesForUserRequest(Builder builder) {
@@ -48,13 +53,16 @@ public class ListPoliciesForUserRequest extends Request {
             super();
         } 
 
-        private Builder(ListPoliciesForUserRequest response) {
-            super(response);
-            this.userName = response.userName;
+        private Builder(ListPoliciesForUserRequest request) {
+            super(request);
+            this.userName = request.userName;
         } 
 
         /**
-         * UserName.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

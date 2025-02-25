@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBackupPolicyResponseBody</p>
  */
 public class CreateBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupPolicy")
+    @com.aliyun.core.annotation.NameInMap("BackupPolicy")
     private BackupPolicy backupPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBackupPolicyResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the anti-ransomware policy.
+         * <p>The information about the anti-ransomware policy.</p>
          */
         public Builder backupPolicy(BackupPolicy backupPolicy) {
             this.backupPolicy = backupPolicy;
@@ -58,7 +63,10 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateBackupPolicyResponseBody</p>
+     */
     public static class BackupPolicy extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private BackupPolicy(Builder builder) {
@@ -110,7 +124,10 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the anti-ransomware policy.
+             * <p>The ID of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1301575</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -118,13 +135,17 @@ public class CreateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the anti-ransomware policy. Valid values:
-             * <p>
+             * <p>The status of the anti-ransomware policy. Valid values:</p>
+             * <ul>
+             * <li><strong>enabled</strong></li>
+             * <li><strong>disabled</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> After you create an anti-ransomware policy, the policy is enabled by default.</p>
+             * </blockquote>
              * 
-             * *   **enabled**
-             * *   **disabled**
-             * 
-             * >  After you create an anti-ransomware policy, the policy is enabled by default.
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

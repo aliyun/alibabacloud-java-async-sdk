@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceTimelineResponseBody</p>
  */
 public class DescribeResourceTimelineResponseBody extends TeaModel {
-    @NameInMap("AvailableEvents")
-    private java.util.List < AvailableEvents> availableEvents;
+    @com.aliyun.core.annotation.NameInMap("AvailableEvents")
+    private java.util.List<AvailableEvents> availableEvents;
 
-    @NameInMap("BizEvents")
-    private java.util.List < BizEvents> bizEvents;
+    @com.aliyun.core.annotation.NameInMap("BizEvents")
+    private java.util.List<BizEvents> bizEvents;
 
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @NameInMap("InventoryEvents")
-    private java.util.List < InventoryEvents> inventoryEvents;
+    @com.aliyun.core.annotation.NameInMap("InventoryEvents")
+    private java.util.List<InventoryEvents> inventoryEvents;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReserveEvents")
-    private java.util.List < ReserveEvents> reserveEvents;
+    @com.aliyun.core.annotation.NameInMap("ReserveEvents")
+    private java.util.List<ReserveEvents> reserveEvents;
 
     private DescribeResourceTimelineResponseBody(Builder builder) {
         this.availableEvents = builder.availableEvents;
@@ -54,14 +59,14 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
     /**
      * @return availableEvents
      */
-    public java.util.List < AvailableEvents> getAvailableEvents() {
+    public java.util.List<AvailableEvents> getAvailableEvents() {
         return this.availableEvents;
     }
 
     /**
      * @return bizEvents
      */
-    public java.util.List < BizEvents> getBizEvents() {
+    public java.util.List<BizEvents> getBizEvents() {
         return this.bizEvents;
     }
 
@@ -75,7 +80,7 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
     /**
      * @return inventoryEvents
      */
-    public java.util.List < InventoryEvents> getInventoryEvents() {
+    public java.util.List<InventoryEvents> getInventoryEvents() {
         return this.inventoryEvents;
     }
 
@@ -96,23 +101,23 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
     /**
      * @return reserveEvents
      */
-    public java.util.List < ReserveEvents> getReserveEvents() {
+    public java.util.List<ReserveEvents> getReserveEvents() {
         return this.reserveEvents;
     }
 
     public static final class Builder {
-        private java.util.List < AvailableEvents> availableEvents; 
-        private java.util.List < BizEvents> bizEvents; 
+        private java.util.List<AvailableEvents> availableEvents; 
+        private java.util.List<BizEvents> bizEvents; 
         private String desc; 
-        private java.util.List < InventoryEvents> inventoryEvents; 
+        private java.util.List<InventoryEvents> inventoryEvents; 
         private String msg; 
         private String requestId; 
-        private java.util.List < ReserveEvents> reserveEvents; 
+        private java.util.List<ReserveEvents> reserveEvents; 
 
         /**
          * AvailableEvents.
          */
-        public Builder availableEvents(java.util.List < AvailableEvents> availableEvents) {
+        public Builder availableEvents(java.util.List<AvailableEvents> availableEvents) {
             this.availableEvents = availableEvents;
             return this;
         }
@@ -120,7 +125,7 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         /**
          * BizEvents.
          */
-        public Builder bizEvents(java.util.List < BizEvents> bizEvents) {
+        public Builder bizEvents(java.util.List<BizEvents> bizEvents) {
             this.bizEvents = bizEvents;
             return this;
         }
@@ -136,7 +141,7 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         /**
          * InventoryEvents.
          */
-        public Builder inventoryEvents(java.util.List < InventoryEvents> inventoryEvents) {
+        public Builder inventoryEvents(java.util.List<InventoryEvents> inventoryEvents) {
             this.inventoryEvents = inventoryEvents;
             return this;
         }
@@ -160,7 +165,7 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         /**
          * ReserveEvents.
          */
-        public Builder reserveEvents(java.util.List < ReserveEvents> reserveEvents) {
+        public Builder reserveEvents(java.util.List<ReserveEvents> reserveEvents) {
             this.reserveEvents = reserveEvents;
             return this;
         }
@@ -171,17 +176,23 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class AvailableEvents extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private String occurrenceTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AvailableEvents(Builder builder) {
@@ -272,17 +283,23 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class BizEvents extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private String occurrenceTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BizEvents(Builder builder) {
@@ -373,17 +390,23 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class InventoryEvents extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private String occurrenceTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private InventoryEvents(Builder builder) {
@@ -474,17 +497,23 @@ public class DescribeResourceTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeResourceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceTimelineResponseBody</p>
+     */
     public static class ReserveEvents extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private String occurrenceTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ReserveEvents(Builder builder) {

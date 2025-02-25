@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEntitiesByTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEntitiesByTagsResponseBody</p>
  */
 public class ListEntitiesByTagsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEntitiesByTagsResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101011005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Entity.EntityTypeNotSupported</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,11 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true<br>false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,11 +172,17 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEntitiesByTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEntitiesByTagsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EntityList")
-        private java.util.List < Entity > entityList;
+        @com.aliyun.core.annotation.NameInMap("EntityList")
+        private java.util.List<Entity> entityList;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -174,7 +201,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         /**
          * @return entityList
          */
-        public java.util.List < Entity > getEntityList() {
+        public java.util.List<Entity> getEntityList() {
             return this.entityList;
         }
 
@@ -186,19 +213,22 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Entity > entityList; 
+            private java.util.List<Entity> entityList; 
             private String nextToken; 
 
             /**
-             * EntityList.
+             * <p>The entities.</p>
              */
-            public Builder entityList(java.util.List < Entity > entityList) {
+            public Builder entityList(java.util.List<Entity> entityList) {
                 this.entityList = entityList;
                 return this;
             }
 
             /**
-             * NextToken.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

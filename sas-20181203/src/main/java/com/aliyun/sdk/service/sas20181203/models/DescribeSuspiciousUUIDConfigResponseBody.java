@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspiciousUUIDConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSuspiciousUUIDConfigResponseBody</p>
  */
 public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UUIDList")
-    private java.util.List < String > UUIDList;
+    @com.aliyun.core.annotation.NameInMap("UUIDList")
+    private java.util.List<String> UUIDList;
 
     private DescribeSuspiciousUUIDConfigResponseBody(Builder builder) {
         this.count = builder.count;
@@ -52,17 +57,20 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
     /**
      * @return UUIDList
      */
-    public java.util.List < String > getUUIDList() {
+    public java.util.List<String> getUUIDList() {
         return this.UUIDList;
     }
 
     public static final class Builder {
         private Integer count; 
         private String requestId; 
-        private java.util.List < String > UUIDList; 
+        private java.util.List<String> UUIDList; 
 
         /**
-         * The total number of servers on which proactive defense of the specified type takes effect.
+         * <p>The total number of servers on which proactive defense of the specified type takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +78,10 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6044DC07-86F1-5DDA-A611-EC578EA4EEE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +89,9 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The UUIDs of servers on which proactive defense of the specified type takes effect.
+         * <p>The UUIDs of servers on which proactive defense of the specified type takes effect.</p>
          */
-        public Builder UUIDList(java.util.List < String > UUIDList) {
+        public Builder UUIDList(java.util.List<String> UUIDList) {
             this.UUIDList = UUIDList;
             return this;
         }

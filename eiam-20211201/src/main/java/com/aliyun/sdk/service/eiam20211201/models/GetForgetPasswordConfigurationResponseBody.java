@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetForgetPasswordConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetForgetPasswordConfigurationResponseBody</p>
  */
 public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
-    @NameInMap("OpenForgetPasswordConfiguration")
+    @com.aliyun.core.annotation.NameInMap("OpenForgetPasswordConfiguration")
     private OpenForgetPasswordConfiguration openForgetPasswordConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetForgetPasswordConfigurationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The forgot password configurations.
+         * <p>The forgot password configurations.</p>
          */
         public Builder openForgetPasswordConfiguration(OpenForgetPasswordConfiguration openForgetPasswordConfiguration) {
             this.openForgetPasswordConfiguration = openForgetPasswordConfiguration;
@@ -58,7 +63,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetForgetPasswordConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetForgetPasswordConfigurationResponseBody</p>
+     */
     public static class OpenForgetPasswordConfiguration extends TeaModel {
-        @NameInMap("AuthenticationChannels")
-        private java.util.List < String > authenticationChannels;
+        @com.aliyun.core.annotation.NameInMap("AuthenticationChannels")
+        private java.util.List<String> authenticationChannels;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("EnableEmail")
+        @com.aliyun.core.annotation.NameInMap("EnableEmail")
         private Boolean enableEmail;
 
-        @NameInMap("EnableSms")
+        @com.aliyun.core.annotation.NameInMap("EnableSms")
         private Boolean enableSms;
 
-        @NameInMap("ForgetPasswordStatus")
+        @com.aliyun.core.annotation.NameInMap("ForgetPasswordStatus")
         private String forgetPasswordStatus;
 
         private OpenForgetPasswordConfiguration(Builder builder) {
@@ -106,7 +120,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         /**
          * @return authenticationChannels
          */
-        public java.util.List < String > getAuthenticationChannels() {
+        public java.util.List<String> getAuthenticationChannels() {
             return this.authenticationChannels;
         }
 
@@ -139,22 +153,25 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > authenticationChannels; 
+            private java.util.List<String> authenticationChannels; 
             private Boolean enable; 
             private Boolean enableEmail; 
             private Boolean enableSms; 
             private String forgetPasswordStatus; 
 
             /**
-             * 表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)
+             * <p>表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)</p>
              */
-            public Builder authenticationChannels(java.util.List < String > authenticationChannels) {
+            public Builder authenticationChannels(java.util.List<String> authenticationChannels) {
                 this.authenticationChannels = authenticationChannels;
                 return this;
             }
 
             /**
-             * Indicates whether the forgot password feature is enabled.
+             * <p>Indicates whether the forgot password feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -162,7 +179,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether email authentication is enabled for the forgot password feature.
+             * <p>Indicates whether email authentication is enabled for the forgot password feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableEmail(Boolean enableEmail) {
                 this.enableEmail = enableEmail;
@@ -170,7 +190,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.
+             * <p>Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSms(Boolean enableSms) {
                 this.enableSms = enableSms;
@@ -178,7 +201,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * 表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)
+             * <p>表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
              */
             public Builder forgetPasswordStatus(String forgetPasswordStatus) {
                 this.forgetPasswordStatus = forgetPasswordStatus;

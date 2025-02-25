@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccountAccessIdRequest</p>
  */
 public class ListAccountAccessIdRequest extends Request {
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
 
     private ListAccountAccessIdRequest(Builder builder) {
         super(builder);
         this.cloudCode = builder.cloudCode;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
@@ -54,9 +63,25 @@ public class ListAccountAccessIdRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
     public static final class Builder extends Request.Builder<ListAccountAccessIdRequest, Builder> {
         private String cloudCode; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
@@ -66,10 +91,18 @@ public class ListAccountAccessIdRequest extends Request {
             super(request);
             this.cloudCode = request.cloudCode;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
-         * CloudCode.
+         * The code of the cloud service provider.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   qcloud
+         * *   hcloud
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -78,11 +111,36 @@ public class ListAccountAccessIdRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

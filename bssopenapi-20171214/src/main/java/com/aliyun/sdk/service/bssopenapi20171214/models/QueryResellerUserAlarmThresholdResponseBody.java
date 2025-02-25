@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryResellerUserAlarmThresholdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryResellerUserAlarmThresholdResponseBody</p>
  */
 public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryResellerUserAlarmThresholdResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -92,7 +97,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -116,7 +121,7 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,17 +156,23 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryResellerUserAlarmThresholdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryResellerUserAlarmThresholdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Denominator")
+        @com.aliyun.core.annotation.NameInMap("Denominator")
         private Integer denominator;
 
-        @NameInMap("Numerator")
+        @com.aliyun.core.annotation.NameInMap("Numerator")
         private Integer numerator;
 
-        @NameInMap("ThresholdAmount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdAmount")
         private String thresholdAmount;
 
-        @NameInMap("ThresholdType")
+        @com.aliyun.core.annotation.NameInMap("ThresholdType")
         private Integer thresholdType;
 
         private Data(Builder builder) {

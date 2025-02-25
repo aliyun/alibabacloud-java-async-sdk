@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPrometheusMonitoringResponseBody} extends {@link TeaModel}
  *
  * <p>GetPrometheusMonitoringResponseBody</p>
  */
 public class GetPrometheusMonitoringResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPrometheusMonitoringResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * <p>The status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,20 +125,26 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPrometheusMonitoringResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPrometheusMonitoringResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ConfigYaml")
+        @com.aliyun.core.annotation.NameInMap("ConfigYaml")
         private String configYaml;
 
-        @NameInMap("MonitoringName")
+        @com.aliyun.core.annotation.NameInMap("MonitoringName")
         private String monitoringName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {
@@ -186,7 +206,10 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Prometheus Instance ID.
+             * <p>The ID of the Prometheus instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -194,7 +217,24 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring configuration. The value is a YAML string.
+             * <p>The monitoring configuration. The value is a YAML string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiVersion: monitoring.coreos.com/v1
+             * kind: ServiceMonitor
+             * metadata:
+             *   name: tomcat-demo
+             *   namespace: default
+             * spec:
+             *   endpoints:
+             *     - interval: 30s
+             *       path: /metrics
+             *       port: tomcat-monitor
+             *   namespaceSelector:
+             *     any: true
+             *   selector:
+             *     matchLabels:
+             *       app: tomcat</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -202,7 +242,10 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitoring configuration.
+             * <p>The name of the monitoring configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customJob1</p>
              */
             public Builder monitoringName(String monitoringName) {
                 this.monitoringName = monitoringName;
@@ -210,7 +253,10 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the monitoring configuration. Valid values: run and stop.
+             * <p>The status of the monitoring configuration. Valid values: run and stop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +264,10 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring configuration. Valid values: serviceMonitor, podMonitor, customJob, and probe.
+             * <p>The type of the monitoring configuration. Valid values: serviceMonitor, podMonitor, customJob, and probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serviceMonitor</p>
              */
             public Builder type(String type) {
                 this.type = type;

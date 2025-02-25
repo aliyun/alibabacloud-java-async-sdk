@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClustersResponse} extends {@link TeaModel}
  *
  * <p>DescribeClustersResponse</p>
  */
 public class DescribeClustersResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < DescribeClustersResponseBody> body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<DescribeClustersResponseBody> body;
 
     private DescribeClustersResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class DescribeClustersResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class DescribeClustersResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribeClustersResponseBody> getBody() {
+    public java.util.List<DescribeClustersResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribeClustersResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribeClustersResponseBody> body);
+        Builder body(java.util.List<DescribeClustersResponseBody> body);
 
         @Override
         DescribeClustersResponse build();
@@ -77,9 +79,9 @@ public class DescribeClustersResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeClustersResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribeClustersResponseBody> body; 
+        private java.util.List<DescribeClustersResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class DescribeClustersResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class DescribeClustersResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribeClustersResponseBody> body) {
+        public Builder body(java.util.List<DescribeClustersResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -126,11 +128,17 @@ public class DescribeClustersResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClustersResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClustersResponse</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
@@ -187,92 +195,98 @@ public class DescribeClustersResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClustersResponse} extends {@link TeaModel}
+     *
+     * <p>DescribeClustersResponse</p>
+     */
     public static class DescribeClustersResponseBody extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("cluster_type")
+        @com.aliyun.core.annotation.NameInMap("cluster_type")
         private String clusterType;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("current_version")
+        @com.aliyun.core.annotation.NameInMap("current_version")
         private String currentVersion;
 
-        @NameInMap("data_disk_category")
+        @com.aliyun.core.annotation.NameInMap("data_disk_category")
         private String dataDiskCategory;
 
-        @NameInMap("data_disk_size")
+        @com.aliyun.core.annotation.NameInMap("data_disk_size")
         private Long dataDiskSize;
 
-        @NameInMap("deletion_protection")
+        @com.aliyun.core.annotation.NameInMap("deletion_protection")
         private Boolean deletionProtection;
 
-        @NameInMap("docker_version")
+        @com.aliyun.core.annotation.NameInMap("docker_version")
         private String dockerVersion;
 
-        @NameInMap("external_loadbalancer_id")
+        @com.aliyun.core.annotation.NameInMap("external_loadbalancer_id")
         private String externalLoadbalancerId;
 
-        @NameInMap("init_version")
+        @com.aliyun.core.annotation.NameInMap("init_version")
         private String initVersion;
 
-        @NameInMap("master_url")
+        @com.aliyun.core.annotation.NameInMap("master_url")
         private String masterUrl;
 
-        @NameInMap("meta_data")
+        @com.aliyun.core.annotation.NameInMap("meta_data")
         private String metaData;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("network_mode")
+        @com.aliyun.core.annotation.NameInMap("network_mode")
         private String networkMode;
 
-        @NameInMap("private_zone")
+        @com.aliyun.core.annotation.NameInMap("private_zone")
         private Boolean privateZone;
 
-        @NameInMap("profile")
+        @com.aliyun.core.annotation.NameInMap("profile")
         private String profile;
 
-        @NameInMap("region_id")
+        @com.aliyun.core.annotation.NameInMap("region_id")
         private String regionId;
 
-        @NameInMap("resource_group_id")
+        @com.aliyun.core.annotation.NameInMap("resource_group_id")
         private String resourceGroupId;
 
-        @NameInMap("security_group_id")
+        @com.aliyun.core.annotation.NameInMap("security_group_id")
         private String securityGroupId;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("subnet_cidr")
+        @com.aliyun.core.annotation.NameInMap("subnet_cidr")
         private String subnetCidr;
 
-        @NameInMap("tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
-        @NameInMap("vpc_id")
+        @com.aliyun.core.annotation.NameInMap("vpc_id")
         private String vpcId;
 
-        @NameInMap("vswitch_cidr")
+        @com.aliyun.core.annotation.NameInMap("vswitch_cidr")
         private String vswitchCidr;
 
-        @NameInMap("vswitch_id")
+        @com.aliyun.core.annotation.NameInMap("vswitch_id")
         private String vswitchId;
 
-        @NameInMap("worker_ram_role_name")
+        @com.aliyun.core.annotation.NameInMap("worker_ram_role_name")
         private String workerRamRoleName;
 
-        @NameInMap("zone_id")
+        @com.aliyun.core.annotation.NameInMap("zone_id")
         private String zoneId;
 
         private DescribeClustersResponseBody(Builder builder) {
@@ -472,7 +486,7 @@ public class DescribeClustersResponse extends Response {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -541,7 +555,7 @@ public class DescribeClustersResponse extends Response {
             private Long size; 
             private String state; 
             private String subnetCidr; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updated; 
             private String vpcId; 
             private String vswitchCidr; 
@@ -728,7 +742,7 @@ public class DescribeClustersResponse extends Response {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

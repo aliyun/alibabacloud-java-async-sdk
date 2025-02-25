@@ -1,63 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEngineVersionResponseBody</p>
  */
 public class DescribeEngineVersionResponseBody extends TeaModel {
-    @NameInMap("DBLatestMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("DBLatestMinorVersion")
     private DBLatestMinorVersion DBLatestMinorVersion;
 
-    @NameInMap("DBVersionRelease")
+    @com.aliyun.core.annotation.NameInMap("DBVersionRelease")
     private String DBVersionRelease;
 
-    @NameInMap("EnableUpgradeMajorVersion")
+    @com.aliyun.core.annotation.NameInMap("EnableUpgradeMajorVersion")
     private Boolean enableUpgradeMajorVersion;
 
-    @NameInMap("EnableUpgradeMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("EnableUpgradeMinorVersion")
     private Boolean enableUpgradeMinorVersion;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("IsAutoUpgradeOpen")
+    @com.aliyun.core.annotation.NameInMap("IsAutoUpgradeOpen")
     private String isAutoUpgradeOpen;
 
-    @NameInMap("IsLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
     private Boolean isLatestVersion;
 
-    @NameInMap("IsNewSSLMode")
+    @com.aliyun.core.annotation.NameInMap("IsNewSSLMode")
     private String isNewSSLMode;
 
-    @NameInMap("IsRedisCompatibleVersion")
+    @com.aliyun.core.annotation.NameInMap("IsOpenNGLB")
+    private String isOpenNGLB;
+
+    @com.aliyun.core.annotation.NameInMap("IsRedisCompatibleVersion")
     private String isRedisCompatibleVersion;
 
-    @NameInMap("IsSSLEnable")
+    @com.aliyun.core.annotation.NameInMap("IsSSLEnable")
     private String isSSLEnable;
 
-    @NameInMap("MajorVersion")
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
     private String majorVersion;
 
-    @NameInMap("MinorVersion")
+    @com.aliyun.core.annotation.NameInMap("MinorVersion")
     private String minorVersion;
 
-    @NameInMap("ProxyLatestMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("ProxyLatestMinorVersion")
     private ProxyLatestMinorVersion proxyLatestMinorVersion;
 
-    @NameInMap("ProxyMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("ProxyMinorVersion")
     private String proxyMinorVersion;
 
-    @NameInMap("ProxyVersionRelease")
+    @com.aliyun.core.annotation.NameInMap("ProxyVersionRelease")
     private String proxyVersionRelease;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEngineVersionResponseBody(Builder builder) {
@@ -69,6 +72,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         this.isAutoUpgradeOpen = builder.isAutoUpgradeOpen;
         this.isLatestVersion = builder.isLatestVersion;
         this.isNewSSLMode = builder.isNewSSLMode;
+        this.isOpenNGLB = builder.isOpenNGLB;
         this.isRedisCompatibleVersion = builder.isRedisCompatibleVersion;
         this.isSSLEnable = builder.isSSLEnable;
         this.majorVersion = builder.majorVersion;
@@ -144,6 +148,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return isOpenNGLB
+     */
+    public String getIsOpenNGLB() {
+        return this.isOpenNGLB;
+    }
+
+    /**
      * @return isRedisCompatibleVersion
      */
     public String getIsRedisCompatibleVersion() {
@@ -208,6 +219,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         private String isAutoUpgradeOpen; 
         private Boolean isLatestVersion; 
         private String isNewSSLMode; 
+        private String isOpenNGLB; 
         private String isRedisCompatibleVersion; 
         private String isSSLEnable; 
         private String majorVersion; 
@@ -218,7 +230,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBLatestMinorVersion.
+         * <p>该实例当前可升级至最新的小版本信息。</p>
          */
         public Builder DBLatestMinorVersion(DBLatestMinorVersion DBLatestMinorVersion) {
             this.DBLatestMinorVersion = DBLatestMinorVersion;
@@ -226,7 +238,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.
+         * <p>The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;releaseInfo&quot;:{&quot;createTime&quot;:&quot;2021-07-27&quot;,&quot;level&quot;:1,&quot;releaseVersion&quot;:&quot;0.5.4&quot;,&quot;releaseNote&quot;:&quot;功能更新：增强稳定性。&quot;}],&quot;versionChangesLevel&quot;:2}</p>
          */
         public Builder DBVersionRelease(String DBVersionRelease) {
             this.DBVersionRelease = DBVersionRelease;
@@ -234,13 +249,17 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance major version can be upgraded. Valid values:
-         * <p>
+         * <p>Indicates whether the major version can be upgraded for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The major version can be upgraded.</li>
+         * <li><strong>false</strong>: The major version is the latest version and cannot be upgraded.</li>
+         * </ul>
+         * <blockquote>
+         * <p> To upgrade the major version, call the <a href="https://help.aliyun.com/document_detail/95259.html">ModifyInstanceMajorVersion</a> operation.</p>
+         * </blockquote>
          * 
-         * *   **true**: The major version can be upgraded.
-         * *   **false**: The major version is the latest version and cannot be upgraded.
-         * 
-         * > To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableUpgradeMajorVersion(Boolean enableUpgradeMajorVersion) {
             this.enableUpgradeMajorVersion = enableUpgradeMajorVersion;
@@ -248,13 +267,17 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance minor version can be updated. Valid values:
-         * <p>
+         * <p>Indicates whether the minor version can be updated for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The minor version can be updated.</li>
+         * <li><strong>false</strong>: The minor version is the latest version and cannot be updated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> operation.</p>
+         * </blockquote>
          * 
-         * *   **true**: The minor version can be updated.
-         * *   **false**: The minor version is the latest version and cannot be updated.
-         * 
-         * > To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableUpgradeMinorVersion(Boolean enableUpgradeMinorVersion) {
             this.enableUpgradeMinorVersion = enableUpgradeMinorVersion;
@@ -262,7 +285,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance. Valid values: **redis** and **memcache**.
+         * <p>The database engine of the instance. Valid values: <strong>redis</strong> and <strong>memcache</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -270,7 +296,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * IsAutoUpgradeOpen.
+         * <p>是否打开了小版本升级。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isAutoUpgradeOpen(String isAutoUpgradeOpen) {
             this.isAutoUpgradeOpen = isAutoUpgradeOpen;
@@ -278,11 +307,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance uses the latest minor version. Valid values:
-         * <p>
+         * <p>Indicates whether the instance minor version is the latest version. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance minor version is the latest version.</li>
+         * <li><strong>false</strong>: The instance minor version is not the latest version.</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isLatestVersion(Boolean isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
@@ -290,7 +322,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance supports the new SSL encryption feature.
+         * <p>是否支持新版 ssl。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isNewSSLMode(String isNewSSLMode) {
             this.isNewSSLMode = isNewSSLMode;
@@ -298,7 +333,18 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance runs a Redis version.
+         * IsOpenNGLB.
+         */
+        public Builder isOpenNGLB(String isOpenNGLB) {
+            this.isOpenNGLB = isOpenNGLB;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the instance supports the new SSL encryption feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isRedisCompatibleVersion(String isRedisCompatibleVersion) {
             this.isRedisCompatibleVersion = isRedisCompatibleVersion;
@@ -306,7 +352,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicate whether the instance has the SSL encryption feature enabled.
+         * <p>是否打开了小版本升级。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isSSLEnable(String isSSLEnable) {
             this.isSSLEnable = isSSLEnable;
@@ -314,7 +363,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The major version of the instance.
+         * <p>The major version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         public Builder majorVersion(String majorVersion) {
             this.majorVersion = majorVersion;
@@ -322,7 +374,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The minor version of the instance.
+         * <p>The minor version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis-5.0_0.5.0</p>
          */
         public Builder minorVersion(String minorVersion) {
             this.minorVersion = minorVersion;
@@ -330,7 +385,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyLatestMinorVersion.
+         * <p>该Proxy节点当前可升级至最新的小版本信息。</p>
          */
         public Builder proxyLatestMinorVersion(ProxyLatestMinorVersion proxyLatestMinorVersion) {
             this.proxyLatestMinorVersion = proxyLatestMinorVersion;
@@ -338,10 +393,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The minor version of proxy nodes.
-         * <p>
+         * <p>The minor version of proxy nodes.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for cluster and read/write splitting instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned only for cluster and read/write splitting instances.
+         * <strong>example:</strong>
+         * <p>6.6.0</p>
          */
         public Builder proxyMinorVersion(String proxyMinorVersion) {
             this.proxyMinorVersion = proxyMinorVersion;
@@ -349,10 +407,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.
-         * <p>
+         * <p>The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for cluster and read/write splitting instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned only for cluster and read/write splitting instances.
+         * <strong>example:</strong>
+         * <p>{&quot;releaseInfo&quot;:[{&quot;createTime&quot;:&quot;2021-06-08&quot;,&quot;level&quot;:0,&quot;releaseVersion&quot;:&quot;6.6.2&quot;,&quot;releaseNote&quot;:&quot;新特性：增加对部分内部命令的支持。&quot;}],&quot;versionChangesLevel&quot;:2}</p>
          */
         public Builder proxyVersionRelease(String proxyVersionRelease) {
             this.proxyVersionRelease = proxyVersionRelease;
@@ -360,7 +421,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A52974D1-9D57-4805-86CC-92E6EDE8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -373,20 +437,26 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class ReleaseInfoList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseNoteEn")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteEn")
         private String releaseNoteEn;
 
-        @NameInMap("ReleaseVersion")
+        @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
         private String releaseVersion;
 
         private ReleaseInfoList(Builder builder) {
@@ -448,7 +518,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String releaseVersion; 
 
             /**
-             * CreateTime.
+             * <p>实例的创建时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-21T13:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -456,7 +529,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>重要等级。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -464,7 +540,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * <p>版本发布说明。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>发布说明</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -472,7 +551,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteEn.
+             * <p>可升级的版本英文描述。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>版本升级英文描述</p>
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -480,7 +562,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseVersion.
+             * <p>EMR发行版。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EMR-5.7.0</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -494,8 +579,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class ReleaseInfo extends TeaModel {
-        @NameInMap("ReleaseInfoList")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfoList")
         private java.util.List < ReleaseInfoList> releaseInfoList;
 
         private ReleaseInfo(Builder builder) {
@@ -535,11 +626,17 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class VersionRelease extends TeaModel {
-        @NameInMap("ReleaseInfo")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfo")
         private ReleaseInfo releaseInfo;
 
-        @NameInMap("VersionChangesLevel")
+        @com.aliyun.core.annotation.NameInMap("VersionChangesLevel")
         private String versionChangesLevel;
 
         private VersionRelease(Builder builder) {
@@ -574,7 +671,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String versionChangesLevel; 
 
             /**
-             * ReleaseInfo.
+             * <p>小版本信息。</p>
              */
             public Builder releaseInfo(ReleaseInfo releaseInfo) {
                 this.releaseInfo = releaseInfo;
@@ -582,7 +679,15 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionChangesLevel.
+             * <p>版本升级的重要性（推荐升级程度），取值：</p>
+             * <ul>
+             * <li>0：一般重要</li>
+             * <li>1：比较重要</li>
+             * <li>2：非常重要</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder versionChangesLevel(String versionChangesLevel) {
                 this.versionChangesLevel = versionChangesLevel;
@@ -596,14 +701,20 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class DBLatestMinorVersion extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("VersionRelease")
+        @com.aliyun.core.annotation.NameInMap("VersionRelease")
         private VersionRelease versionRelease;
 
         private DBLatestMinorVersion(Builder builder) {
@@ -647,7 +758,15 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private VersionRelease versionRelease; 
 
             /**
-             * Level.
+             * <p>版本变更的重要性，取值：</p>
+             * <ul>
+             * <li><strong>0</strong>：一般重要</li>
+             * <li><strong>1</strong>：比较重要</li>
+             * <li><strong>2</strong>：非常重要</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -655,7 +774,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The minor version of the instance.
+             * <p>版本号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.0.1.4</p>
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -663,7 +785,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionRelease.
+             * <p>从实例当前小版本到最新小版本的版本演进路线，与版本文档一致，可以直接至版本说明文档查看更详细的信息。</p>
              */
             public Builder versionRelease(VersionRelease versionRelease) {
                 this.versionRelease = versionRelease;
@@ -677,20 +799,26 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class ReleaseInfoReleaseInfoList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseNoteEn")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteEn")
         private String releaseNoteEn;
 
-        @NameInMap("ReleaseVersion")
+        @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
         private String releaseVersion;
 
         private ReleaseInfoReleaseInfoList(Builder builder) {
@@ -752,7 +880,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String releaseVersion; 
 
             /**
-             * CreateTime.
+             * <p>版本的发布时间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-23T14:26:20Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -760,7 +891,15 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>版本变更的重要性，取值：</p>
+             * <ul>
+             * <li><strong>0</strong>：一般重要</li>
+             * <li><strong>1</strong>：比较重要</li>
+             * <li><strong>2</strong>：非常重要</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -768,7 +907,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * <p>版本的变更说明。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>版本变更说明</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -776,7 +918,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteEn.
+             * <p>可升级的版本英文描述。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>版本升级英文描述</p>
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -784,7 +929,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseVersion.
+             * <p>EMR发行版。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EMR-5.9.1</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -798,8 +946,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class VersionReleaseReleaseInfo extends TeaModel {
-        @NameInMap("ReleaseInfoList")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfoList")
         private java.util.List < ReleaseInfoReleaseInfoList> releaseInfoList;
 
         private VersionReleaseReleaseInfo(Builder builder) {
@@ -839,11 +993,17 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class ProxyLatestMinorVersionVersionRelease extends TeaModel {
-        @NameInMap("ReleaseInfo")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfo")
         private VersionReleaseReleaseInfo releaseInfo;
 
-        @NameInMap("VersionChangesLevel")
+        @com.aliyun.core.annotation.NameInMap("VersionChangesLevel")
         private String versionChangesLevel;
 
         private ProxyLatestMinorVersionVersionRelease(Builder builder) {
@@ -878,7 +1038,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String versionChangesLevel; 
 
             /**
-             * ReleaseInfo.
+             * <p>小版本信息。</p>
              */
             public Builder releaseInfo(VersionReleaseReleaseInfo releaseInfo) {
                 this.releaseInfo = releaseInfo;
@@ -886,7 +1046,15 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionChangesLevel.
+             * <p>版本升级的重要性（推荐升级程度），取值：</p>
+             * <ul>
+             * <li>0：一般重要</li>
+             * <li>1：比较重要</li>
+             * <li>2：非常重要</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder versionChangesLevel(String versionChangesLevel) {
                 this.versionChangesLevel = versionChangesLevel;
@@ -900,14 +1068,20 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEngineVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEngineVersionResponseBody</p>
+     */
     public static class ProxyLatestMinorVersion extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("VersionRelease")
+        @com.aliyun.core.annotation.NameInMap("VersionRelease")
         private ProxyLatestMinorVersionVersionRelease versionRelease;
 
         private ProxyLatestMinorVersion(Builder builder) {
@@ -951,7 +1125,15 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private ProxyLatestMinorVersionVersionRelease versionRelease; 
 
             /**
-             * Level.
+             * <p>版本变更的重要性，取值：</p>
+             * <ul>
+             * <li><strong>0</strong>：一般重要</li>
+             * <li><strong>1</strong>：比较重要</li>
+             * <li><strong>2</strong>：非常重要</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -959,7 +1141,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The minor version of the instance.
+             * <p>版本号。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.0.6</p>
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -967,7 +1152,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionRelease.
+             * <p>从实例当前小版本到最新小版本的版本演进路线，与版本文档一致，可以直接至版本说明文档查看更详细的信息。</p>
              */
             public Builder versionRelease(ProxyLatestMinorVersionVersionRelease versionRelease) {
                 this.versionRelease = versionRelease;

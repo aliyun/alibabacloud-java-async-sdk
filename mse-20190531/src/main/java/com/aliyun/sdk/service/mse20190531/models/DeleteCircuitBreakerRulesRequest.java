@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCircuitBreakerRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteCircuitBreakerRulesRequest</p>
  */
 public class DeleteCircuitBreakerRulesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("Ids")
-    private java.util.List < Long > ids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    private java.util.List<Long> ids;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private DeleteCircuitBreakerRulesRequest(Builder builder) {
@@ -80,7 +85,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
@@ -95,7 +100,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         private String regionId; 
         private String acceptLanguage; 
         private String appName; 
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
         private String namespace; 
 
         private Builder() {
@@ -121,7 +126,10 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.
+         * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -130,7 +138,11 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -139,9 +151,9 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The IDs of the rules that you want to delete.
+         * <p>The IDs of the rules that you want to delete.</p>
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putQueryParameter("Ids", idsShrink);
             this.ids = ids;
@@ -149,7 +161,11 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * The microservice namespace to which the application belongs.
+         * <p>The microservice namespace to which the application belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

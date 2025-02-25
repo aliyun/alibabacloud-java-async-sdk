@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListArtifactVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListArtifactVersionsResponseBody</p>
  */
 public class ListArtifactVersionsResponseBody extends TeaModel {
-    @NameInMap("Artifacts")
-    private java.util.List < Artifacts> artifacts;
+    @com.aliyun.core.annotation.NameInMap("Artifacts")
+    private java.util.List<Artifacts> artifacts;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListArtifactVersionsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     /**
      * @return artifacts
      */
-    public java.util.List < Artifacts> getArtifacts() {
+    public java.util.List<Artifacts> getArtifacts() {
         return this.artifacts;
     }
 
@@ -79,22 +84,25 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Artifacts> artifacts; 
+        private java.util.List<Artifacts> artifacts; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Artifacts.
+         * <p>The version information about the deployment package.</p>
          */
-        public Builder artifacts(java.util.List < Artifacts> artifacts) {
+        public Builder artifacts(java.util.List<Artifacts> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46577928-3162-15A6-9084-69820EB9xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,47 +148,64 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListArtifactVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListArtifactVersionsResponseBody</p>
+     */
     public static class Artifacts extends TeaModel {
-        @NameInMap("ArtifactId")
+        @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+        private String artifactBuildProperty;
+
+        @com.aliyun.core.annotation.NameInMap("ArtifactBuildType")
+        private String artifactBuildType;
+
+        @com.aliyun.core.annotation.NameInMap("ArtifactId")
         private String artifactId;
 
-        @NameInMap("ArtifactProperty")
+        @com.aliyun.core.annotation.NameInMap("ArtifactProperty")
         private String artifactProperty;
 
-        @NameInMap("ArtifactType")
+        @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
 
-        @NameInMap("ArtifactVersion")
+        @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
         private String artifactVersion;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("ImageDelivery")
-        private java.util.Map < String, String > imageDelivery;
+        @com.aliyun.core.annotation.NameInMap("ImageDelivery")
+        private java.util.Map<String, String> imageDelivery;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ResultFile")
+        @com.aliyun.core.annotation.NameInMap("ResultFile")
         private String resultFile;
 
-        @NameInMap("SecurityAuditResult")
+        @com.aliyun.core.annotation.NameInMap("SecurityAuditResult")
         private String securityAuditResult;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportRegionIds")
+        @com.aliyun.core.annotation.NameInMap("StatusDetail")
+        private String statusDetail;
+
+        @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
         private String supportRegionIds;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private Artifacts(Builder builder) {
+            this.artifactBuildProperty = builder.artifactBuildProperty;
+            this.artifactBuildType = builder.artifactBuildType;
             this.artifactId = builder.artifactId;
             this.artifactProperty = builder.artifactProperty;
             this.artifactType = builder.artifactType;
@@ -183,6 +217,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             this.resultFile = builder.resultFile;
             this.securityAuditResult = builder.securityAuditResult;
             this.status = builder.status;
+            this.statusDetail = builder.statusDetail;
             this.supportRegionIds = builder.supportRegionIds;
             this.versionName = builder.versionName;
         }
@@ -193,6 +228,20 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
 
         public static Artifacts create() {
             return builder().build();
+        }
+
+        /**
+         * @return artifactBuildProperty
+         */
+        public String getArtifactBuildProperty() {
+            return this.artifactBuildProperty;
+        }
+
+        /**
+         * @return artifactBuildType
+         */
+        public String getArtifactBuildType() {
+            return this.artifactBuildType;
         }
 
         /**
@@ -240,7 +289,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         /**
          * @return imageDelivery
          */
-        public java.util.Map < String, String > getImageDelivery() {
+        public java.util.Map<String, String> getImageDelivery() {
             return this.imageDelivery;
         }
 
@@ -273,6 +322,13 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusDetail
+         */
+        public String getStatusDetail() {
+            return this.statusDetail;
+        }
+
+        /**
          * @return supportRegionIds
          */
         public String getSupportRegionIds() {
@@ -287,22 +343,50 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String artifactBuildProperty; 
+            private String artifactBuildType; 
             private String artifactId; 
             private String artifactProperty; 
             private String artifactType; 
             private String artifactVersion; 
             private String gmtCreate; 
             private String gmtModified; 
-            private java.util.Map < String, String > imageDelivery; 
+            private java.util.Map<String, String> imageDelivery; 
             private String progress; 
             private String resultFile; 
             private String securityAuditResult; 
             private String status; 
+            private String statusDetail; 
             private String supportRegionIds; 
             private String versionName; 
 
             /**
-             * ArtifactId.
+             * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;RegionId&quot;:&quot;xxx&quot;, &quot;SourceImageId&quot;:&quot;xxx&quot;, &quot;&quot;:&quot;xxx&quot;, &quot;CommandType&quot;:&quot;xxx&quot;, &quot;CommandContent&quot;:&quot;xxx&quot;}&quot;</p>
+             */
+            public Builder artifactBuildProperty(String artifactBuildProperty) {
+                this.artifactBuildProperty = artifactBuildProperty;
+                return this;
+            }
+
+            /**
+             * <p>The type of the deployment package to be built.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dockerfile</p>
+             */
+            public Builder artifactBuildType(String artifactBuildType) {
+                this.artifactBuildType = artifactBuildType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>artifact-eea08d1e2d3a43aexxxx</p>
              */
             public Builder artifactId(String artifactId) {
                 this.artifactId = artifactId;
@@ -310,7 +394,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactProperty.
+             * <p>The properties of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;CommodityCode&quot;:&quot;cmjj0005xxxx&quot;,&quot;CommodityVersion&quot;:&quot;V2022xxxx&quot;}</p>
              */
             public Builder artifactProperty(String artifactProperty) {
                 this.artifactProperty = artifactProperty;
@@ -318,7 +405,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactType.
+             * <p>The type of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsImage</p>
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -326,7 +416,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactVersion.
+             * <p>The version of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder artifactVersion(String artifactVersion) {
                 this.artifactVersion = artifactVersion;
@@ -334,7 +427,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the certificate was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-20T02:19:53Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -342,7 +438,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the deployment package was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-20T02:19:55Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -350,15 +449,18 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageDelivery.
+             * <p>The distribution result of the image.</p>
              */
-            public Builder imageDelivery(java.util.Map < String, String > imageDelivery) {
+            public Builder imageDelivery(java.util.Map<String, String> imageDelivery) {
                 this.imageDelivery = imageDelivery;
                 return this;
             }
 
             /**
-             * Progress.
+             * <p>The distribution progress of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -366,7 +468,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultFile.
+             * <p>The result file of the security scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://compute-nest-security-audit-bucket-ap-southeast-1.oss-ap-southeast-1.aliyuncs.com/51416747xxxx/xxxx">https://compute-nest-security-audit-bucket-ap-southeast-1.oss-ap-southeast-1.aliyuncs.com/51416747xxxx/xxxx</a></p>
              */
             public Builder resultFile(String resultFile) {
                 this.resultFile = resultFile;
@@ -374,7 +479,15 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityAuditResult.
+             * <p>The result of the security scan. Valid values:</p>
+             * <ul>
+             * <li>Normal: No risks exist on the deployment package.</li>
+             * <li>AtRisk: Risks exist on the deployment package.</li>
+             * <li>Processing: The deployment package is being scanned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder securityAuditResult(String securityAuditResult) {
                 this.securityAuditResult = securityAuditResult;
@@ -382,7 +495,18 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the deployment package. Valid values:</p>
+             * <ul>
+             * <li>Created: The deployment package is created.</li>
+             * <li>Scanning: The deployment package is being scanned.</li>
+             * <li>ScanFailed: The deployment package failed to be scanned.</li>
+             * <li>Delivering: The deployment package is being distributed.</li>
+             * <li>Available: The deployment package is available.</li>
+             * <li>Deleted: The deployment package is deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -390,7 +514,25 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportRegionIds.
+             * <p>The description of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</p>
+             */
+            public Builder statusDetail(String statusDetail) {
+                this.statusDetail = statusDetail;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the region that supports the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *                     &quot;cn-beijing&quot;,
+             *                     &quot;cn-hangzhou&quot;,
+             *                     &quot;cn-shanghai&quot;
+             *                 ]</p>
              */
             public Builder supportRegionIds(String supportRegionIds) {
                 this.supportRegionIds = supportRegionIds;
@@ -398,7 +540,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The version name of the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

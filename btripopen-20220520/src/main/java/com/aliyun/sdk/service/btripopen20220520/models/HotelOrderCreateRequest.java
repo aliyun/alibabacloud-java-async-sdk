@@ -1,124 +1,129 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelOrderCreateRequest} extends {@link RequestModel}
  *
  * <p>HotelOrderCreateRequest</p>
  */
 public class HotelOrderCreateRequest extends Request {
-    @Body
-    @NameInMap("btrip_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
 
-    @Body
-    @NameInMap("check_in")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("check_in")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkIn;
 
-    @Body
-    @NameInMap("check_out")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("check_out")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkOut;
 
-    @Body
-    @NameInMap("contract_email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contract_email")
     private String contractEmail;
 
-    @Body
-    @NameInMap("contract_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contract_name")
     private String contractName;
 
-    @Body
-    @NameInMap("contract_phone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contract_phone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contractPhone;
 
-    @Body
-    @NameInMap("corp_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long corpPayPrice;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra")
     private String extra;
 
-    @Body
-    @NameInMap("invoice_info")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("invoice_info")
     private InvoiceInfo invoiceInfo;
 
-    @Body
-    @NameInMap("item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long itemId;
 
-    @Body
-    @NameInMap("itinerary_no")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("itinerary_no")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itineraryNo;
 
-    @Body
-    @NameInMap("occupant_info_list")
-    @Validation(required = true)
-    private java.util.List < OccupantInfoList> occupantInfoList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("occupant_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<OccupantInfoList> occupantInfoList;
 
-    @Body
-    @NameInMap("person_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("person_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long personPayPrice;
 
-    @Body
-    @NameInMap("promotion_info")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("promotion_info")
     private PromotionInfo promotionInfo;
 
-    @Body
-    @NameInMap("rate_plan_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rate_plan_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ratePlanId;
 
-    @Body
-    @NameInMap("room_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("room_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long roomId;
 
-    @Body
-    @NameInMap("room_num")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("room_num")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer roomNum;
 
-    @Body
-    @NameInMap("seller_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("seller_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sellerId;
 
-    @Body
-    @NameInMap("shid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("shid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long shid;
 
-    @Body
-    @NameInMap("total_order_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_order_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long totalOrderPrice;
 
-    @Body
-    @NameInMap("validate_res_key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("validate_res_key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String validateResKey;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelOrderCreateRequest(Builder builder) {
@@ -248,7 +253,7 @@ public class HotelOrderCreateRequest extends Request {
     /**
      * @return occupantInfoList
      */
-    public java.util.List < OccupantInfoList> getOccupantInfoList() {
+    public java.util.List<OccupantInfoList> getOccupantInfoList() {
         return this.occupantInfoList;
     }
 
@@ -335,7 +340,7 @@ public class HotelOrderCreateRequest extends Request {
         private InvoiceInfo invoiceInfo; 
         private Long itemId; 
         private String itineraryNo; 
-        private java.util.List < OccupantInfoList> occupantInfoList; 
+        private java.util.List<OccupantInfoList> occupantInfoList; 
         private Long personPayPrice; 
         private PromotionInfo promotionInfo; 
         private Long ratePlanId; 
@@ -379,7 +384,10 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
         /**
-         * btrip_user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123122</p>
          */
         public Builder btripUserId(String btripUserId) {
             this.putBodyParameter("btrip_user_id", btripUserId);
@@ -388,7 +396,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * check_in.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-20</p>
          */
         public Builder checkIn(String checkIn) {
             this.putBodyParameter("check_in", checkIn);
@@ -397,7 +408,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * check_out.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-20</p>
          */
         public Builder checkOut(String checkOut) {
             this.putBodyParameter("check_out", checkOut);
@@ -424,7 +438,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * contract_phone.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19281772123</p>
          */
         public Builder contractPhone(String contractPhone) {
             this.putBodyParameter("contract_phone", contractPhone);
@@ -433,7 +450,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * corp_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder corpPayPrice(Long corpPayPrice) {
             this.putBodyParameter("corp_pay_price", corpPayPrice);
@@ -442,7 +462,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * dis_order_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dis123</p>
          */
         public Builder disOrderId(String disOrderId) {
             this.putBodyParameter("dis_order_id", disOrderId);
@@ -470,7 +493,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>671570615157</p>
          */
         public Builder itemId(Long itemId) {
             this.putBodyParameter("item_id", itemId);
@@ -479,7 +505,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * itinerary_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb5e1abf33924b6c912bd6d80deec0eb-1</p>
          */
         public Builder itineraryNo(String itineraryNo) {
             this.putBodyParameter("itinerary_no", itineraryNo);
@@ -488,9 +517,9 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * occupant_info_list.
+         * <p>This parameter is required.</p>
          */
-        public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
+        public Builder occupantInfoList(java.util.List<OccupantInfoList> occupantInfoList) {
             String occupantInfoListShrink = shrink(occupantInfoList, "occupant_info_list", "json");
             this.putBodyParameter("occupant_info_list", occupantInfoListShrink);
             this.occupantInfoList = occupantInfoList;
@@ -498,7 +527,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * person_pay_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder personPayPrice(Long personPayPrice) {
             this.putBodyParameter("person_pay_price", personPayPrice);
@@ -517,7 +549,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * rate_plan_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1399417428510</p>
          */
         public Builder ratePlanId(Long ratePlanId) {
             this.putBodyParameter("rate_plan_id", ratePlanId);
@@ -526,7 +561,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * room_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>187211</p>
          */
         public Builder roomId(Long roomId) {
             this.putBodyParameter("room_id", roomId);
@@ -535,7 +573,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * room_num.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roomNum(Integer roomNum) {
             this.putBodyParameter("room_num", roomNum);
@@ -544,7 +585,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * seller_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2088441675613762</p>
          */
         public Builder sellerId(Long sellerId) {
             this.putBodyParameter("seller_id", sellerId);
@@ -553,7 +597,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * shid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2198781</p>
          */
         public Builder shid(Long shid) {
             this.putBodyParameter("shid", shid);
@@ -562,7 +609,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * total_order_price.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalOrderPrice(Long totalOrderPrice) {
             this.putBodyParameter("total_order_price", totalOrderPrice);
@@ -571,7 +621,10 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
-         * validate_res_key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nonUltron_1673575241156_d91ea8ad16735752359161037bf6cf_c54d3768312a4b249b719f126377bf82</p>
          */
         public Builder validateResKey(String validateResKey) {
             this.putBodyParameter("validate_res_key", validateResKey);
@@ -595,56 +648,62 @@ public class HotelOrderCreateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class InvoiceInfo extends TeaModel {
-        @NameInMap("buyer_add")
+        @com.aliyun.core.annotation.NameInMap("buyer_add")
         private String buyerAdd;
 
-        @NameInMap("buyer_bank_acc")
+        @com.aliyun.core.annotation.NameInMap("buyer_bank_acc")
         private String buyerBankAcc;
 
-        @NameInMap("buyer_bank_add")
+        @com.aliyun.core.annotation.NameInMap("buyer_bank_add")
         private String buyerBankAdd;
 
-        @NameInMap("buyer_phone")
+        @com.aliyun.core.annotation.NameInMap("buyer_phone")
         private String buyerPhone;
 
-        @NameInMap("buyer_tax_num")
+        @com.aliyun.core.annotation.NameInMap("buyer_tax_num")
         private String buyerTaxNum;
 
-        @NameInMap("delivery_address")
+        @com.aliyun.core.annotation.NameInMap("delivery_address")
         private String deliveryAddress;
 
-        @NameInMap("delivery_area")
+        @com.aliyun.core.annotation.NameInMap("delivery_area")
         private String deliveryArea;
 
-        @NameInMap("delivery_city")
+        @com.aliyun.core.annotation.NameInMap("delivery_city")
         private String deliveryCity;
 
-        @NameInMap("delivery_province")
+        @com.aliyun.core.annotation.NameInMap("delivery_province")
         private String deliveryProvince;
 
-        @NameInMap("delivery_street")
+        @com.aliyun.core.annotation.NameInMap("delivery_street")
         private String deliveryStreet;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("invoice_material")
+        @com.aliyun.core.annotation.NameInMap("invoice_material")
         private Integer invoiceMaterial;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("invoice_type")
+        @com.aliyun.core.annotation.NameInMap("invoice_type")
         private Integer invoiceType;
 
-        @NameInMap("receiver_name")
+        @com.aliyun.core.annotation.NameInMap("receiver_name")
         private String receiverName;
 
-        @NameInMap("receiver_phone")
+        @com.aliyun.core.annotation.NameInMap("receiver_phone")
         private String receiverPhone;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
         private InvoiceInfo(Builder builder) {
@@ -956,49 +1015,55 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class OccupantInfoList extends TeaModel {
-        @NameInMap("card_no")
+        @com.aliyun.core.annotation.NameInMap("card_no")
         private String cardNo;
 
-        @NameInMap("card_type")
+        @com.aliyun.core.annotation.NameInMap("card_type")
         private Integer cardType;
 
-        @NameInMap("customer_type")
+        @com.aliyun.core.annotation.NameInMap("customer_type")
         private Integer customerType;
 
-        @NameInMap("department_id")
+        @com.aliyun.core.annotation.NameInMap("department_id")
         private String departmentId;
 
-        @NameInMap("department_name")
+        @com.aliyun.core.annotation.NameInMap("department_name")
         private String departmentName;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("employee_type")
+        @com.aliyun.core.annotation.NameInMap("employee_type")
         private Integer employeeType;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("phone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("phone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String phone;
 
-        @NameInMap("room_no")
+        @com.aliyun.core.annotation.NameInMap("room_no")
         private Integer roomNo;
 
-        @NameInMap("staff_no")
+        @com.aliyun.core.annotation.NameInMap("staff_no")
         private String staffNo;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private OccupantInfoList(Builder builder) {
@@ -1213,7 +1278,7 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>This parameter is required.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1221,7 +1286,10 @@ public class HotelOrderCreateRequest extends Request {
             }
 
             /**
-             * phone.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18277123451</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -1259,26 +1327,32 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class PromotionDetailInfoList extends TeaModel {
-        @NameInMap("check_status")
+        @com.aliyun.core.annotation.NameInMap("check_status")
         private Boolean checkStatus;
 
-        @NameInMap("need_check")
+        @com.aliyun.core.annotation.NameInMap("need_check")
         private Boolean needCheck;
 
-        @NameInMap("promotion_code")
+        @com.aliyun.core.annotation.NameInMap("promotion_code")
         private String promotionCode;
 
-        @NameInMap("promotion_id")
+        @com.aliyun.core.annotation.NameInMap("promotion_id")
         private String promotionId;
 
-        @NameInMap("promotion_name")
+        @com.aliyun.core.annotation.NameInMap("promotion_name")
         private String promotionName;
 
-        @NameInMap("promotion_price")
+        @com.aliyun.core.annotation.NameInMap("promotion_price")
         private Long promotionPrice;
 
-        @NameInMap("promotion_type")
+        @com.aliyun.core.annotation.NameInMap("promotion_type")
         private String promotionType;
 
         private PromotionDetailInfoList(Builder builder) {
@@ -1420,11 +1494,17 @@ public class HotelOrderCreateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelOrderCreateRequest} extends {@link TeaModel}
+     *
+     * <p>HotelOrderCreateRequest</p>
+     */
     public static class PromotionInfo extends TeaModel {
-        @NameInMap("promotion_detail_info_list")
-        private java.util.List < PromotionDetailInfoList> promotionDetailInfoList;
+        @com.aliyun.core.annotation.NameInMap("promotion_detail_info_list")
+        private java.util.List<PromotionDetailInfoList> promotionDetailInfoList;
 
-        @NameInMap("promotion_total_price")
+        @com.aliyun.core.annotation.NameInMap("promotion_total_price")
         private Long promotionTotalPrice;
 
         private PromotionInfo(Builder builder) {
@@ -1443,7 +1523,7 @@ public class HotelOrderCreateRequest extends Request {
         /**
          * @return promotionDetailInfoList
          */
-        public java.util.List < PromotionDetailInfoList> getPromotionDetailInfoList() {
+        public java.util.List<PromotionDetailInfoList> getPromotionDetailInfoList() {
             return this.promotionDetailInfoList;
         }
 
@@ -1455,13 +1535,13 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < PromotionDetailInfoList> promotionDetailInfoList; 
+            private java.util.List<PromotionDetailInfoList> promotionDetailInfoList; 
             private Long promotionTotalPrice; 
 
             /**
              * promotion_detail_info_list.
              */
-            public Builder promotionDetailInfoList(java.util.List < PromotionDetailInfoList> promotionDetailInfoList) {
+            public Builder promotionDetailInfoList(java.util.List<PromotionDetailInfoList> promotionDetailInfoList) {
                 this.promotionDetailInfoList = promotionDetailInfoList;
                 return this;
             }

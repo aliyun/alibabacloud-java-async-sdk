@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteScenarioRequest} extends {@link RequestModel}
  *
  * <p>DeleteScenarioRequest</p>
  */
 public class DeleteScenarioRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ScenarioId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScenarioId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long scenarioId;
 
     private DeleteScenarioRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class DeleteScenarioRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjaikou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +86,11 @@ public class DeleteScenarioRequest extends Request {
         }
 
         /**
-         * The ID of the business monitoring job. You can obtain the ID by calling the ListScenario operation.
+         * <p>The ID of the business monitoring job. You can obtain the ID by calling the ListScenario operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder scenarioId(Long scenarioId) {
             this.putQueryParameter("ScenarioId", scenarioId);

@@ -45,6 +45,9 @@ public class CreateServiceResponseBody extends TeaModel {
     @NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
 
+    @NameInMap("useSLRAuthentication")
+    private Boolean useSLRAuthentication;
+
     @NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
 
@@ -60,6 +63,7 @@ public class CreateServiceResponseBody extends TeaModel {
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
         this.tracingConfig = builder.tracingConfig;
+        this.useSLRAuthentication = builder.useSLRAuthentication;
         this.vpcConfig = builder.vpcConfig;
     }
 
@@ -149,6 +153,13 @@ public class CreateServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return useSLRAuthentication
+     */
+    public Boolean getUseSLRAuthentication() {
+        return this.useSLRAuthentication;
+    }
+
+    /**
      * @return vpcConfig
      */
     public VPCConfig getVpcConfig() {
@@ -167,6 +178,7 @@ public class CreateServiceResponseBody extends TeaModel {
         private String serviceId; 
         private String serviceName; 
         private TracingConfig tracingConfig; 
+        private Boolean useSLRAuthentication; 
         private VPCConfig vpcConfig; 
 
         /**
@@ -262,6 +274,14 @@ public class CreateServiceResponseBody extends TeaModel {
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;
+            return this;
+        }
+
+        /**
+         * useSLRAuthentication.
+         */
+        public Builder useSLRAuthentication(Boolean useSLRAuthentication) {
+            this.useSLRAuthentication = useSLRAuthentication;
             return this;
         }
 

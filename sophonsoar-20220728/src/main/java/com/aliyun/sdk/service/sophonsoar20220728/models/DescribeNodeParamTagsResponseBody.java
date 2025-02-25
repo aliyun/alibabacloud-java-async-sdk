@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNodeParamTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNodeParamTagsResponseBody</p>
  */
 public class DescribeNodeParamTagsResponseBody extends TeaModel {
-    @NameInMap("ParamReferredPaths")
+    @com.aliyun.core.annotation.NameInMap("ParamReferredPaths")
     private java.util.List < ParamReferredPaths> paramReferredPaths;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNodeParamTagsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ParamReferredPaths.
+         * <p>The configuration of the recommended path.</p>
          */
         public Builder paramReferredPaths(java.util.List < ParamReferredPaths> paramReferredPaths) {
             this.paramReferredPaths = paramReferredPaths;
@@ -58,7 +58,10 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BE94351-712A-505D-A40A-BC77CC8254A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +74,17 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNodeParamTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNodeParamTagsResponseBody</p>
+     */
     public static class ParamReferredPaths extends TeaModel {
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ReferredPath")
+        @com.aliyun.core.annotation.NameInMap("ReferredPath")
         private java.util.List < String > referredPath;
 
         private ParamReferredPaths(Builder builder) {
@@ -110,7 +119,10 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
             private java.util.List < String > referredPath; 
 
             /**
-             * ParamName.
+             * <p>The name of the upstream node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DataFormat_1</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -118,7 +130,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferredPath.
+             * <p>The paths.</p>
              */
             public Builder referredPath(java.util.List < String > referredPath) {
                 this.referredPath = referredPath;

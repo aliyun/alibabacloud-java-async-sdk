@@ -1,180 +1,185 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RuleInfo} extends {@link TeaModel}
  *
  * <p>RuleInfo</p>
  */
 public class RuleInfo extends TeaModel {
-    @NameInMap("AutoReview")
+    @com.aliyun.core.annotation.NameInMap("AutoReview")
     private Integer autoReview;
 
-    @NameInMap("BusinessCategoryNameList")
-    private java.util.List < String > businessCategoryNameList;
+    @com.aliyun.core.annotation.NameInMap("BusinessCategoryNameList")
+    private java.util.List<String> businessCategoryNameList;
 
-    @NameInMap("CheckType")
+    @com.aliyun.core.annotation.NameInMap("CheckType")
     private Long checkType;
 
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @NameInMap("ConfigType")
+    @com.aliyun.core.annotation.NameInMap("ConfigType")
     private Integer configType;
 
-    @NameInMap("CreateEmpName")
+    @com.aliyun.core.annotation.NameInMap("CreateEmpName")
     private String createEmpName;
 
-    @NameInMap("CreateEmpid")
+    @com.aliyun.core.annotation.NameInMap("CreateEmpid")
     private String createEmpid;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Deny")
+    @com.aliyun.core.annotation.NameInMap("Deny")
     private Integer deny;
 
-    @NameInMap("Dialogues")
-    private java.util.List < RuleTestDialogue > dialogues;
+    @com.aliyun.core.annotation.NameInMap("Dialogues")
+    private java.util.List<RuleTestDialogue> dialogues;
 
-    @NameInMap("Effective")
+    @com.aliyun.core.annotation.NameInMap("Effective")
     private Integer effective;
 
-    @NameInMap("EffectiveEndTime")
+    @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
     private String effectiveEndTime;
 
-    @NameInMap("EffectiveStartTime")
+    @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
     private String effectiveStartTime;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("ExternalProperty")
+    @com.aliyun.core.annotation.NameInMap("ExternalProperty")
     private Integer externalProperty;
 
-    @NameInMap("FullCycle")
+    @com.aliyun.core.annotation.NameInMap("FullCycle")
     private Integer fullCycle;
 
-    @NameInMap("GraphFlow")
+    @com.aliyun.core.annotation.NameInMap("GraphFlow")
     private Object graphFlow;
 
-    @NameInMap("IsDelete")
+    @com.aliyun.core.annotation.NameInMap("IsDelete")
     private Integer isDelete;
 
-    @NameInMap("IsOnline")
+    @com.aliyun.core.annotation.NameInMap("IsOnline")
     private Integer isOnline;
 
-    @NameInMap("Lambda")
+    @com.aliyun.core.annotation.NameInMap("Lambda")
     private String lambda;
 
-    @NameInMap("LastUpdateEmpName")
+    @com.aliyun.core.annotation.NameInMap("LastUpdateEmpName")
     private String lastUpdateEmpName;
 
-    @NameInMap("LastUpdateEmpid")
+    @com.aliyun.core.annotation.NameInMap("LastUpdateEmpid")
     private String lastUpdateEmpid;
 
-    @NameInMap("LastUpdateTime")
+    @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
     private String lastUpdateTime;
 
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.NameInMap("Level")
     private Integer level;
 
-    @NameInMap("Meet")
+    @com.aliyun.core.annotation.NameInMap("Meet")
     private Integer meet;
 
-    @NameInMap("ModifyType")
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
     private Integer modifyType;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OperationMode")
+    @com.aliyun.core.annotation.NameInMap("OperationMode")
     private Integer operationMode;
 
-    @NameInMap("QualityCheckType")
+    @com.aliyun.core.annotation.NameInMap("QualityCheckType")
     private Integer qualityCheckType;
 
-    @NameInMap("Rid")
+    @com.aliyun.core.annotation.NameInMap("Rid")
     private String rid;
 
-    @NameInMap("RuleCategoryName")
+    @com.aliyun.core.annotation.NameInMap("RuleCategoryName")
     private String ruleCategoryName;
 
-    @NameInMap("RuleScoreType")
+    @com.aliyun.core.annotation.NameInMap("RuleScoreType")
     private Integer ruleScoreType;
 
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private Integer ruleType;
 
-    @NameInMap("SchemeCheckType")
+    @com.aliyun.core.annotation.NameInMap("SchemeCheckType")
     private SchemeCheckType schemeCheckType;
 
-    @NameInMap("SchemeId")
+    @com.aliyun.core.annotation.NameInMap("SchemeId")
     private Long schemeId;
 
-    @NameInMap("SchemeName")
+    @com.aliyun.core.annotation.NameInMap("SchemeName")
     private String schemeName;
 
-    @NameInMap("SchemeRuleMappingId")
+    @com.aliyun.core.annotation.NameInMap("SchemeRuleMappingId")
     private Long schemeRuleMappingId;
 
-    @NameInMap("ScoreDeleted")
+    @com.aliyun.core.annotation.NameInMap("ScoreDeleted")
     private Boolean scoreDeleted;
 
-    @NameInMap("ScoreId")
+    @com.aliyun.core.annotation.NameInMap("ScoreId")
     private Long scoreId;
 
-    @NameInMap("ScoreName")
+    @com.aliyun.core.annotation.NameInMap("ScoreName")
     private String scoreName;
 
-    @NameInMap("ScoreNum")
+    @com.aliyun.core.annotation.NameInMap("ScoreNum")
     private Integer scoreNum;
 
-    @NameInMap("ScoreNumType")
+    @com.aliyun.core.annotation.NameInMap("ScoreNumType")
     private Integer scoreNumType;
 
-    @NameInMap("ScoreRuleHitType")
+    @com.aliyun.core.annotation.NameInMap("ScoreRuleHitType")
     private Integer scoreRuleHitType;
 
-    @NameInMap("ScoreSubId")
+    @com.aliyun.core.annotation.NameInMap("ScoreSubId")
     private Long scoreSubId;
 
-    @NameInMap("ScoreSubName")
+    @com.aliyun.core.annotation.NameInMap("ScoreSubName")
     private String scoreSubName;
 
-    @NameInMap("ScoreType")
+    @com.aliyun.core.annotation.NameInMap("ScoreType")
     private Integer scoreType;
 
-    @NameInMap("SortIndex")
+    @com.aliyun.core.annotation.NameInMap("SortIndex")
     private Integer sortIndex;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private Integer targetType;
 
-    @NameInMap("TaskFlowId")
+    @com.aliyun.core.annotation.NameInMap("TaskFlowId")
     private Long taskFlowId;
 
-    @NameInMap("TaskFlowType")
+    @com.aliyun.core.annotation.NameInMap("TaskFlowType")
     private Integer taskFlowType;
 
-    @NameInMap("Triggers")
-    private java.util.List < String > triggers;
+    @com.aliyun.core.annotation.NameInMap("Triggers")
+    private java.util.List<String> triggers;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private String weight;
 
     private RuleInfo(Builder builder) {
@@ -253,7 +258,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return businessCategoryNameList
      */
-    public java.util.List < String > getBusinessCategoryNameList() {
+    public java.util.List<String> getBusinessCategoryNameList() {
         return this.businessCategoryNameList;
     }
 
@@ -309,7 +314,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return dialogues
      */
-    public java.util.List < RuleTestDialogue > getDialogues() {
+    public java.util.List<RuleTestDialogue> getDialogues() {
         return this.dialogues;
     }
 
@@ -610,7 +615,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return triggers
      */
-    public java.util.List < String > getTriggers() {
+    public java.util.List<String> getTriggers() {
         return this.triggers;
     }
 
@@ -630,7 +635,7 @@ public class RuleInfo extends TeaModel {
 
     public static final class Builder {
         private Integer autoReview; 
-        private java.util.List < String > businessCategoryNameList; 
+        private java.util.List<String> businessCategoryNameList; 
         private Long checkType; 
         private String comments; 
         private Integer configType; 
@@ -638,7 +643,7 @@ public class RuleInfo extends TeaModel {
         private String createEmpid; 
         private String createTime; 
         private Integer deny; 
-        private java.util.List < RuleTestDialogue > dialogues; 
+        private java.util.List<RuleTestDialogue> dialogues; 
         private Integer effective; 
         private String effectiveEndTime; 
         private String effectiveStartTime; 
@@ -681,7 +686,7 @@ public class RuleInfo extends TeaModel {
         private Integer targetType; 
         private Long taskFlowId; 
         private Integer taskFlowType; 
-        private java.util.List < String > triggers; 
+        private java.util.List<String> triggers; 
         private Integer type; 
         private String weight; 
 
@@ -696,7 +701,7 @@ public class RuleInfo extends TeaModel {
         /**
          * BusinessCategoryNameList.
          */
-        public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
+        public Builder businessCategoryNameList(java.util.List<String> businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
             return this;
         }
@@ -760,7 +765,7 @@ public class RuleInfo extends TeaModel {
         /**
          * Dialogues.
          */
-        public Builder dialogues(java.util.List < RuleTestDialogue > dialogues) {
+        public Builder dialogues(java.util.List<RuleTestDialogue> dialogues) {
             this.dialogues = dialogues;
             return this;
         }
@@ -1104,7 +1109,7 @@ public class RuleInfo extends TeaModel {
         /**
          * Triggers.
          */
-        public Builder triggers(java.util.List < String > triggers) {
+        public Builder triggers(java.util.List<String> triggers) {
             this.triggers = triggers;
             return this;
         }

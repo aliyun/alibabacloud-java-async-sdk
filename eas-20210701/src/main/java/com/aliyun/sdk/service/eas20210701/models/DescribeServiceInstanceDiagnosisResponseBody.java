@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceInstanceDiagnosisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceInstanceDiagnosisResponseBody</p>
  */
 public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
-    @NameInMap("Diagnosis")
+    @com.aliyun.core.annotation.NameInMap("Diagnosis")
     private Diagnosis diagnosis;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeServiceInstanceDiagnosisResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Diagnosis.
+         * <p>The diagnostics information.</p>
          */
         public Builder diagnosis(Diagnosis diagnosis) {
             this.diagnosis = diagnosis;
@@ -58,7 +63,10 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceInstanceDiagnosisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceInstanceDiagnosisResponseBody</p>
+     */
     public static class Diagnosis extends TeaModel {
-        @NameInMap("Advices")
-        private java.util.List < String > advices;
+        @com.aliyun.core.annotation.NameInMap("Advices")
+        private java.util.List<String> advices;
 
-        @NameInMap("Causes")
-        private java.util.List < String > causes;
+        @com.aliyun.core.annotation.NameInMap("Causes")
+        private java.util.List<String> causes;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
         private Diagnosis(Builder builder) {
@@ -98,14 +112,14 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         /**
          * @return advices
          */
-        public java.util.List < String > getAdvices() {
+        public java.util.List<String> getAdvices() {
             return this.advices;
         }
 
         /**
          * @return causes
          */
-        public java.util.List < String > getCauses() {
+        public java.util.List<String> getCauses() {
             return this.causes;
         }
 
@@ -117,28 +131,31 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > advices; 
-            private java.util.List < String > causes; 
+            private java.util.List<String> advices; 
+            private java.util.List<String> causes; 
             private String error; 
 
             /**
-             * Advices.
+             * <p>The solutions to the errors.</p>
              */
-            public Builder advices(java.util.List < String > advices) {
+            public Builder advices(java.util.List<String> advices) {
                 this.advices = advices;
                 return this;
             }
 
             /**
-             * Causes.
+             * <p>The causes of the errors.</p>
              */
-            public Builder causes(java.util.List < String > causes) {
+            public Builder causes(java.util.List<String> causes) {
                 this.causes = causes;
                 return this;
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Container worker0 failed to pull image.</p>
              */
             public Builder error(String error) {
                 this.error = error;

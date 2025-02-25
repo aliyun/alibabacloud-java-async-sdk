@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClientUserDefineRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClientUserDefineRulesResponseBody</p>
  */
 public class ListClientUserDefineRulesResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDefineRuleList")
-    private java.util.List < UserDefineRuleList> userDefineRuleList;
+    @com.aliyun.core.annotation.NameInMap("UserDefineRuleList")
+    private java.util.List<UserDefineRuleList> userDefineRuleList;
 
     private ListClientUserDefineRulesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
     /**
      * @return userDefineRuleList
      */
-    public java.util.List < UserDefineRuleList> getUserDefineRuleList() {
+    public java.util.List<UserDefineRuleList> getUserDefineRuleList() {
         return this.userDefineRuleList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < UserDefineRuleList> userDefineRuleList; 
+        private java.util.List<UserDefineRuleList> userDefineRuleList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the rules.
+         * <p>An array that consists of the rules.</p>
          */
-        public Builder userDefineRuleList(java.util.List < UserDefineRuleList> userDefineRuleList) {
+        public Builder userDefineRuleList(java.util.List<UserDefineRuleList> userDefineRuleList) {
             this.userDefineRuleList = userDefineRuleList;
             return this;
         }
@@ -91,14 +99,20 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClientUserDefineRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClientUserDefineRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -142,7 +156,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -150,7 +167,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +178,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -172,23 +195,29 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClientUserDefineRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClientUserDefineRulesResponseBody</p>
+     */
     public static class UserDefineRuleList extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private Integer actionType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("SwitchId")
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private UserDefineRuleList(Builder builder) {
@@ -259,11 +288,14 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The action of the rule. Valid values:
-             * <p>
+             * <p>The action of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: allow</li>
+             * <li><strong>1</strong>: block</li>
+             * </ul>
              * 
-             * *   **0**: allow
-             * *   **1**: block
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder actionType(Integer actionType) {
                 this.actionType = actionType;
@@ -271,7 +303,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -279,7 +314,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,12 +325,15 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * <li><strong>all</strong>: all types</li>
+             * </ul>
              * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
-             * *   **all**: all types
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -300,7 +341,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the rule.
+             * <p>The switch ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-DEFINE-RULE-SWITCH-TYPE_200****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -308,16 +352,19 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Process hash</li>
+             * <li><strong>2</strong>: Command line</li>
+             * <li><strong>3</strong>: Process Network</li>
+             * <li><strong>4</strong>: File Read and Write</li>
+             * <li><strong>5</strong>: Operation on Registry</li>
+             * <li><strong>6</strong>: Dynamic-link Library Loading</li>
+             * <li><strong>7</strong>: File Renaming</li>
+             * </ul>
              * 
-             * *   **1**: Process hash
-             * *   **2**: Command line
-             * *   **3**: Process Network
-             * *   **4**: File Read and Write
-             * *   **5**: Operation on Registry
-             * *   **6**: Dynamic-link Library Loading
-             * *   **7**: File Renaming
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

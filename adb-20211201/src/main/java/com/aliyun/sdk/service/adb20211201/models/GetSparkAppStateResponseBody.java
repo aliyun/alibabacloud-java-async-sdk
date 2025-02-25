@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkAppStateResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkAppStateResponseBody</p>
  */
 public class GetSparkAppStateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkAppStateResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetSparkAppStateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkAppStateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkAppStateResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Data(Builder builder) {
@@ -146,7 +160,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the application.
+             * <p>The Spark application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202204191546hzpread6a896000****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -154,7 +171,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -162,7 +182,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Database.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-clusterxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -170,7 +193,10 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The alert message returned for the operation, such as task execution failure or insufficient resources. Null is returned if no alert occurs.
+             * <p>The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Insufficient resources.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,20 +204,23 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the application. Valid values:
-             * <p>
+             * <p>The execution state of the application. Valid values:</p>
+             * <ul>
+             * <li><strong>SUBMITTED</strong></li>
+             * <li><strong>STARTING</strong></li>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>FAILING</strong></li>
+             * <li><strong>FAILED</strong></li>
+             * <li><strong>KILLING</strong></li>
+             * <li><strong>KILLED</strong></li>
+             * <li><strong>SUCCEEDING</strong></li>
+             * <li><strong>COMPLETED</strong></li>
+             * <li><strong>FATAL</strong></li>
+             * <li><strong>UNKNOWN</strong></li>
+             * </ul>
              * 
-             * *   **SUBMITTED**: The application is submitted.
-             * *   **STARTING**: The application task is starting.
-             * *   **RUNNING**: The application task is being executed.
-             * *   **FAILING**: The application task failed, and the environment is being cleared.
-             * *   **FAILED**: The application task failed.
-             * *   **KILLING**: The application task is terminated, and the environment is being cleared.
-             * *   **KILLED**: The application task is terminated.
-             * *   **SUCCEEDING**: The application task is completed, and the environment is being cleared.
-             * *   **COMPLETED**: The application task is completed.
-             * *   **FATAL**: An unexpected failure occurred.
-             * *   **UNKNOWN**: An unknown error occurred.
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder state(String state) {
                 this.state = state;

@@ -1,88 +1,88 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutCustomMetricRuleRequest} extends {@link RequestModel}
  *
  * <p>PutCustomMetricRuleRequest</p>
  */
 public class PutCustomMetricRuleRequest extends Request {
-    @Query
-    @NameInMap("ComparisonOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comparisonOperator;
 
-    @Query
-    @NameInMap("ContactGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroups;
 
-    @Query
-    @NameInMap("EffectiveInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
     private String effectiveInterval;
 
-    @Query
-    @NameInMap("EmailSubject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailSubject")
     private String emailSubject;
 
-    @Query
-    @NameInMap("EvaluationCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer evaluationCount;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Level")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String level;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resources;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("SilenceTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Integer silenceTime;
 
-    @Query
-    @NameInMap("Statistics")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statistics;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String threshold;
 
-    @Query
-    @NameInMap("Webhook")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Webhook")
     private String webhook;
 
     private PutCustomMetricRuleRequest(Builder builder) {
@@ -273,15 +273,21 @@ public class PutCustomMetricRuleRequest extends Request {
         } 
 
         /**
-         * The comparison operator before the threshold. Valid values:
-         * <p>
+         * <p>The comparison operator before the threshold. Valid values:</p>
+         * <ul>
+         * <li><code>&gt;=</code></li>
+         * <li><code>=</code></li>
+         * <li><code>&lt;=</code></li>
+         * <li><code>&gt;</code></li>
+         * <li><code>&lt;</code></li>
+         * <li><code>!=</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `>=`
-         * *   `=`
-         * *   `<=`
-         * *   `>`
-         * *   `<`
-         * *   `!=`
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=</p>
+         * </blockquote>
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.putQueryParameter("ComparisonOperator", comparisonOperator);
@@ -290,7 +296,11 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The alert group that receives alert notifications. Separate multiple alert groups with commas (,).
+         * <p>The alert group that receives alert notifications. Separate multiple alert groups with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Group</p>
          */
         public Builder contactGroups(String contactGroups) {
             this.putQueryParameter("ContactGroups", contactGroups);
@@ -299,7 +309,10 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.
+         * <p>The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00-23:59</p>
          */
         public Builder effectiveInterval(String effectiveInterval) {
             this.putQueryParameter("EffectiveInterval", effectiveInterval);
@@ -308,7 +321,7 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The subject of the alert notification email.
+         * <p>The subject of the alert notification email.</p>
          */
         public Builder emailSubject(String emailSubject) {
             this.putQueryParameter("EmailSubject", emailSubject);
@@ -317,7 +330,11 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The consecutive number of times for which the metric value is measured before an alert is triggered.
+         * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -326,10 +343,13 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The ID of the application group to which the custom monitoring data belongs.
-         * <p>
+         * <p>The ID of the application group to which the custom monitoring data belongs.</p>
+         * <blockquote>
+         * <p> The value 0 indicates that the reported custom monitoring data does not belong to an application group.</p>
+         * </blockquote>
          * 
-         * >  The value 0 indicates that the reported custom monitoring data does not belong to an application group.
+         * <strong>example:</strong>
+         * <p>7378****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -338,12 +358,16 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The level of the alert. Valid values:
-         * <p>
+         * <p>The level of the alert. Valid values:</p>
+         * <ul>
+         * <li>CRITICAL</li>
+         * <li>WARN</li>
+         * <li>INFO</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CRITICAL
-         * *   WARN
-         * *   INFO
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -352,10 +376,14 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The name of the metric.
-         * <p>
+         * <p>The name of the metric.</p>
+         * <blockquote>
+         * <p> For more information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/115005.html">DescribeCustomMetricList</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about how to obtain the metric name, see [DescribeCustomMetricList](~~115005~~).
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -364,7 +392,10 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The cycle that is used to aggregate custom monitoring data. Unit: seconds. Set the value to an integral multiple of 60. The original reporting cycle of custom monitoring data is used by default.
+         * <p>The cycle that is used to aggregate custom monitoring data. Unit: seconds. Set the value to an integral multiple of 60. The original reporting cycle of custom monitoring data is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -373,7 +404,11 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The custom monitoring data to which the alert rule applies. The value includes the application group ID to which the custom monitoring data belongs and the dimension to which the metric belongs.
+         * <p>The custom monitoring data to which the alert rule applies. The value includes the application group ID to which the custom monitoring data belongs and the dimension to which the metric belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;groupId&quot;:7378****,&quot;dimension&quot;:&quot;instanceId=i-hp3543t5e4sudb3s****&quot;}]</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -382,10 +417,14 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
-         * <p>
+         * <p>The ID of the alert rule.</p>
+         * <blockquote>
+         * <p> You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.
+         * <strong>example:</strong>
+         * <p>MyRuleId1</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -394,7 +433,10 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The name of the alert rule.
+         * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuUsage</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -403,10 +445,13 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400. The default value indicates one day.
-         * <p>
+         * <p>The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400. The default value indicates one day.</p>
+         * <blockquote>
+         * <p> Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.</p>
+         * </blockquote>
          * 
-         * >  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder silenceTime(Integer silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);
@@ -415,7 +460,11 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The method that is used to calculate the metric values that trigger alerts.
+         * <p>The method that is used to calculate the metric values that trigger alerts.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         public Builder statistics(String statistics) {
             this.putQueryParameter("Statistics", statistics);
@@ -424,7 +473,11 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The threshold of the metric value.
+         * <p>The threshold of the metric value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder threshold(String threshold) {
             this.putQueryParameter("Threshold", threshold);
@@ -433,7 +486,10 @@ public class PutCustomMetricRuleRequest extends Request {
         }
 
         /**
-         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         public Builder webhook(String webhook) {
             this.putQueryParameter("Webhook", webhook);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>AddTemplateResponseBody</p>
  */
 public class AddTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Template")
+    @com.aliyun.core.annotation.NameInMap("Template")
     private Template template;
 
     private AddTemplateResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class AddTemplateResponseBody extends TeaModel {
         private Template template; 
 
         /**
-         * Id of the request
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class AddTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Template.
+         * <p>The template information.</p>
          */
         public Builder template(Template template) {
             this.template = template;
@@ -71,32 +79,38 @@ public class AddTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddTemplateResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("CoverUrl")
+        @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;
 
-        @NameInMap("CreateSource")
+        @com.aliyun.core.annotation.NameInMap("CreateSource")
         private String createSource;
 
-        @NameInMap("ModifiedSource")
+        @com.aliyun.core.annotation.NameInMap("ModifiedSource")
         private String modifiedSource;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PreviewMedia")
+        @com.aliyun.core.annotation.NameInMap("PreviewMedia")
         private String previewMedia;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Template(Builder builder) {
@@ -194,7 +208,10 @@ public class AddTemplateResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Config.
+             * <p>The template configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>参见Timeline模板Config文档</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -202,7 +219,10 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The URL of the template thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -210,7 +230,16 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateSource.
+             * <p>The source from which the template was created.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AliyunConsole</li>
+             * <li>WebSDK</li>
+             * <li>OpenAPI</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI</p>
              */
             public Builder createSource(String createSource) {
                 this.createSource = createSource;
@@ -218,7 +247,16 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedSource.
+             * <p>The source from which the template was modified.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AliyunConsole</li>
+             * <li>WebSDK</li>
+             * <li>OpenAPI</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI</p>
              */
             public Builder modifiedSource(String modifiedSource) {
                 this.modifiedSource = modifiedSource;
@@ -226,7 +264,10 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>视频添加水印模板</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +275,10 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewMedia.
+             * <p>The ID of the preview video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
              */
             public Builder previewMedia(String previewMedia) {
                 this.previewMedia = previewMedia;
@@ -242,7 +286,19 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The template state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>UploadFailed: Failed to upload the video.</li>
+             * <li>ProcessFailed: Failed to process the advanced template.</li>
+             * <li>Available: The template is available.</li>
+             * <li>Uploading: The video is being uploaded.</li>
+             * <li>Created: The template is created but not ready for use.</li>
+             * <li>Processing: The advanced template is being processed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +306,10 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -258,7 +317,15 @@ public class AddTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The template type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Timeline: regular template.</li>
+             * <li>VETemplate: advanced template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Timeline</p>
              */
             public Builder type(String type) {
                 this.type = type;

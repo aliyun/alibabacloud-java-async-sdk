@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DatabaseProfile</p>
  */
 public class DatabaseProfile extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("FileCnt")
+    @com.aliyun.core.annotation.NameInMap("FileCnt")
     private Long fileCnt;
 
-    @NameInMap("FileSize")
+    @com.aliyun.core.annotation.NameInMap("FileSize")
     private Long fileSize;
 
-    @NameInMap("LatestDate")
+    @com.aliyun.core.annotation.NameInMap("LatestDate")
     private String latestDate;
 
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("ObjectCnt")
+    @com.aliyun.core.annotation.NameInMap("ObjectCnt")
     private Long objectCnt;
 
-    @NameInMap("ObjectSize")
+    @com.aliyun.core.annotation.NameInMap("ObjectSize")
     private Long objectSize;
 
     private DatabaseProfile(Builder builder) {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModuleFlightItemListBestPriceItemFlightRuleInfosValue} extends {@link TeaModel}
  *
  * <p>ModuleFlightItemListBestPriceItemFlightRuleInfosValue</p>
  */
 public class ModuleFlightItemListBestPriceItemFlightRuleInfosValue extends TeaModel {
-    @NameInMap("refund_change_rule_desc")
+    @com.aliyun.core.annotation.NameInMap("refund_change_rule_desc")
     private String refundChangeRuleDesc;
 
-    @NameInMap("baggage_desc")
+    @com.aliyun.core.annotation.NameInMap("baggage_desc")
     private String baggageDesc;
 
     private ModuleFlightItemListBestPriceItemFlightRuleInfosValue(Builder builder) {

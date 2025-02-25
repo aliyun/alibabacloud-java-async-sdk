@@ -1,74 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Deployment} extends {@link TeaModel}
  *
  * <p>Deployment</p>
  */
 public class Deployment extends TeaModel {
-    @NameInMap("artifact")
+    @com.aliyun.core.annotation.NameInMap("artifact")
     private Artifact artifact;
 
-    @NameInMap("batchResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("batchResourceSetting")
     private BatchResourceSetting batchResourceSetting;
 
-    @NameInMap("creator")
+    @com.aliyun.core.annotation.NameInMap("createdAt")
+    private String createdAt;
+
+    @com.aliyun.core.annotation.NameInMap("creator")
     private String creator;
 
-    @NameInMap("creatorName")
+    @com.aliyun.core.annotation.NameInMap("creatorName")
     private String creatorName;
 
-    @NameInMap("deploymentHasChanged")
+    @com.aliyun.core.annotation.NameInMap("deploymentHasChanged")
     private Boolean deploymentHasChanged;
 
-    @NameInMap("deploymentId")
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
     private String deploymentId;
 
-    @NameInMap("deploymentTarget")
+    @com.aliyun.core.annotation.NameInMap("deploymentTarget")
     private BriefDeploymentTarget deploymentTarget;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("engineVersion")
+    @com.aliyun.core.annotation.NameInMap("engineVersion")
     private String engineVersion;
 
-    @NameInMap("executionMode")
+    @com.aliyun.core.annotation.NameInMap("executionMode")
     private String executionMode;
 
-    @NameInMap("flinkConf")
-    private java.util.Map < String, ? > flinkConf;
+    @com.aliyun.core.annotation.NameInMap("flinkConf")
+    private java.util.Map<String, ?> flinkConf;
 
-    @NameInMap("jobSummary")
+    @com.aliyun.core.annotation.NameInMap("jobSummary")
     private JobSummary jobSummary;
 
-    @NameInMap("logging")
+    @com.aliyun.core.annotation.NameInMap("labels")
+    private java.util.Map<String, ?> labels;
+
+    @com.aliyun.core.annotation.NameInMap("localVariables")
+    private java.util.List<LocalVariable> localVariables;
+
+    @com.aliyun.core.annotation.NameInMap("logging")
     private Logging logging;
 
-    @NameInMap("modifier")
+    @com.aliyun.core.annotation.NameInMap("modifiedAt")
+    private String modifiedAt;
+
+    @com.aliyun.core.annotation.NameInMap("modifier")
     private String modifier;
 
-    @NameInMap("modifierName")
+    @com.aliyun.core.annotation.NameInMap("modifierName")
     private String modifierName;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("namespace")
+    @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @NameInMap("streamingResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("referencedDeploymentDraftId")
+    private String referencedDeploymentDraftId;
+
+    @com.aliyun.core.annotation.NameInMap("streamingResourceSetting")
     private StreamingResourceSetting streamingResourceSetting;
+
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    private String workspace;
 
     private Deployment(Builder builder) {
         this.artifact = builder.artifact;
         this.batchResourceSetting = builder.batchResourceSetting;
+        this.createdAt = builder.createdAt;
         this.creator = builder.creator;
         this.creatorName = builder.creatorName;
         this.deploymentHasChanged = builder.deploymentHasChanged;
@@ -79,12 +103,17 @@ public class Deployment extends TeaModel {
         this.executionMode = builder.executionMode;
         this.flinkConf = builder.flinkConf;
         this.jobSummary = builder.jobSummary;
+        this.labels = builder.labels;
+        this.localVariables = builder.localVariables;
         this.logging = builder.logging;
+        this.modifiedAt = builder.modifiedAt;
         this.modifier = builder.modifier;
         this.modifierName = builder.modifierName;
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.referencedDeploymentDraftId = builder.referencedDeploymentDraftId;
         this.streamingResourceSetting = builder.streamingResourceSetting;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -107,6 +136,13 @@ public class Deployment extends TeaModel {
      */
     public BatchResourceSetting getBatchResourceSetting() {
         return this.batchResourceSetting;
+    }
+
+    /**
+     * @return createdAt
+     */
+    public String getCreatedAt() {
+        return this.createdAt;
     }
 
     /**
@@ -168,7 +204,7 @@ public class Deployment extends TeaModel {
     /**
      * @return flinkConf
      */
-    public java.util.Map < String, ? > getFlinkConf() {
+    public java.util.Map<String, ?> getFlinkConf() {
         return this.flinkConf;
     }
 
@@ -180,10 +216,31 @@ public class Deployment extends TeaModel {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map<String, ?> getLabels() {
+        return this.labels;
+    }
+
+    /**
+     * @return localVariables
+     */
+    public java.util.List<LocalVariable> getLocalVariables() {
+        return this.localVariables;
+    }
+
+    /**
      * @return logging
      */
     public Logging getLogging() {
         return this.logging;
+    }
+
+    /**
+     * @return modifiedAt
+     */
+    public String getModifiedAt() {
+        return this.modifiedAt;
     }
 
     /**
@@ -215,15 +272,30 @@ public class Deployment extends TeaModel {
     }
 
     /**
+     * @return referencedDeploymentDraftId
+     */
+    public String getReferencedDeploymentDraftId() {
+        return this.referencedDeploymentDraftId;
+    }
+
+    /**
      * @return streamingResourceSetting
      */
     public StreamingResourceSetting getStreamingResourceSetting() {
         return this.streamingResourceSetting;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder {
         private Artifact artifact; 
         private BatchResourceSetting batchResourceSetting; 
+        private String createdAt; 
         private String creator; 
         private String creatorName; 
         private Boolean deploymentHasChanged; 
@@ -232,14 +304,19 @@ public class Deployment extends TeaModel {
         private String description; 
         private String engineVersion; 
         private String executionMode; 
-        private java.util.Map < String, ? > flinkConf; 
+        private java.util.Map<String, ?> flinkConf; 
         private JobSummary jobSummary; 
+        private java.util.Map<String, ?> labels; 
+        private java.util.List<LocalVariable> localVariables; 
         private Logging logging; 
+        private String modifiedAt; 
         private String modifier; 
         private String modifierName; 
         private String name; 
         private String namespace; 
+        private String referencedDeploymentDraftId; 
         private StreamingResourceSetting streamingResourceSetting; 
+        private String workspace; 
 
         /**
          * artifact.
@@ -254,6 +331,14 @@ public class Deployment extends TeaModel {
          */
         public Builder batchResourceSetting(BatchResourceSetting batchResourceSetting) {
             this.batchResourceSetting = batchResourceSetting;
+            return this;
+        }
+
+        /**
+         * createdAt.
+         */
+        public Builder createdAt(String createdAt) {
+            this.createdAt = createdAt;
             return this;
         }
 
@@ -324,7 +409,7 @@ public class Deployment extends TeaModel {
         /**
          * flinkConf.
          */
-        public Builder flinkConf(java.util.Map < String, ? > flinkConf) {
+        public Builder flinkConf(java.util.Map<String, ?> flinkConf) {
             this.flinkConf = flinkConf;
             return this;
         }
@@ -338,10 +423,34 @@ public class Deployment extends TeaModel {
         }
 
         /**
+         * labels.
+         */
+        public Builder labels(java.util.Map<String, ?> labels) {
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * localVariables.
+         */
+        public Builder localVariables(java.util.List<LocalVariable> localVariables) {
+            this.localVariables = localVariables;
+            return this;
+        }
+
+        /**
          * logging.
          */
         public Builder logging(Logging logging) {
             this.logging = logging;
+            return this;
+        }
+
+        /**
+         * modifiedAt.
+         */
+        public Builder modifiedAt(String modifiedAt) {
+            this.modifiedAt = modifiedAt;
             return this;
         }
 
@@ -378,10 +487,26 @@ public class Deployment extends TeaModel {
         }
 
         /**
+         * referencedDeploymentDraftId.
+         */
+        public Builder referencedDeploymentDraftId(String referencedDeploymentDraftId) {
+            this.referencedDeploymentDraftId = referencedDeploymentDraftId;
+            return this;
+        }
+
+        /**
          * streamingResourceSetting.
          */
         public Builder streamingResourceSetting(StreamingResourceSetting streamingResourceSetting) {
             this.streamingResourceSetting = streamingResourceSetting;
+            return this;
+        }
+
+        /**
+         * workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.workspace = workspace;
             return this;
         }
 

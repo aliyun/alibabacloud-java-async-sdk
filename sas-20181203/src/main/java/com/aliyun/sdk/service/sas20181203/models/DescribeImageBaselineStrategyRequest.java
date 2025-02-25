@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineStrategyRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageBaselineStrategyRequest</p>
  */
 public class DescribeImageBaselineStrategyRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private Long strategyId;
 
     private DescribeImageBaselineStrategyRequest(Builder builder) {
@@ -82,11 +87,14 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,11 +103,14 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * The data source. Default value: default. Valid values:
-         * <p>
+         * <p>The data source. Default value: default. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: queries the information about a baseline check policy for images.</li>
+         * <li><strong>agentless</strong>: queries the information about a baseline check policy for agentless detection.</li>
+         * </ul>
          * 
-         * *   **default**: queries the information about a baseline check policy for images.
-         * *   **agentless**: queries the information about a baseline check policy for agentless detection.
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -108,7 +119,10 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
+         * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8037</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

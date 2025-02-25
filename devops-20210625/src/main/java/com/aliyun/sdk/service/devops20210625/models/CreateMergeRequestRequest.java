@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMergeRequestRequest} extends {@link RequestModel}
  *
  * <p>CreateMergeRequestRequest</p>
  */
 public class CreateMergeRequestRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("createFrom")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createFrom")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String createFrom;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("reviewerIds")
-    private java.util.List < String > reviewerIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reviewerIds")
+    private java.util.List<String> reviewerIds;
 
-    @Body
-    @NameInMap("sourceBranch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceBranch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceBranch;
 
-    @Body
-    @NameInMap("sourceProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sourceProjectId;
 
-    @Body
-    @NameInMap("targetBranch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("targetBranch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetBranch;
 
-    @Body
-    @NameInMap("targetProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("targetProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long targetProjectId;
 
-    @Body
-    @NameInMap("title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @Body
-    @NameInMap("workItemIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workItemIds")
     private String workItemIds;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private CreateMergeRequestRequest(Builder builder) {
@@ -128,7 +133,7 @@ public class CreateMergeRequestRequest extends Request {
     /**
      * @return reviewerIds
      */
-    public java.util.List < String > getReviewerIds() {
+    public java.util.List<String> getReviewerIds() {
         return this.reviewerIds;
     }
 
@@ -186,7 +191,7 @@ public class CreateMergeRequestRequest extends Request {
         private String accessToken; 
         private String createFrom; 
         private String description; 
-        private java.util.List < String > reviewerIds; 
+        private java.util.List<String> reviewerIds; 
         private String sourceBranch; 
         private Long sourceProjectId; 
         private String targetBranch; 
@@ -216,7 +221,10 @@ public class CreateMergeRequestRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2369234</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -234,7 +242,10 @@ public class CreateMergeRequestRequest extends Request {
         }
 
         /**
-         * createFrom.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEB</p>
          */
         public Builder createFrom(String createFrom) {
             this.putBodyParameter("createFrom", createFrom);
@@ -254,14 +265,17 @@ public class CreateMergeRequestRequest extends Request {
         /**
          * reviewerIds.
          */
-        public Builder reviewerIds(java.util.List < String > reviewerIds) {
+        public Builder reviewerIds(java.util.List<String> reviewerIds) {
             this.putBodyParameter("reviewerIds", reviewerIds);
             this.reviewerIds = reviewerIds;
             return this;
         }
 
         /**
-         * sourceBranch.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sourceBranch</p>
          */
         public Builder sourceBranch(String sourceBranch) {
             this.putBodyParameter("sourceBranch", sourceBranch);
@@ -270,7 +284,10 @@ public class CreateMergeRequestRequest extends Request {
         }
 
         /**
-         * sourceProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2369234</p>
          */
         public Builder sourceProjectId(Long sourceProjectId) {
             this.putBodyParameter("sourceProjectId", sourceProjectId);
@@ -279,7 +296,10 @@ public class CreateMergeRequestRequest extends Request {
         }
 
         /**
-         * targetBranch.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>targetBranch</p>
          */
         public Builder targetBranch(String targetBranch) {
             this.putBodyParameter("targetBranch", targetBranch);
@@ -288,7 +308,10 @@ public class CreateMergeRequestRequest extends Request {
         }
 
         /**
-         * targetProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2369234</p>
          */
         public Builder targetProjectId(Long targetProjectId) {
             this.putBodyParameter("targetProjectId", targetProjectId);
@@ -297,7 +320,7 @@ public class CreateMergeRequestRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -315,7 +338,10 @@ public class CreateMergeRequestRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6270e731cfea268afc21ccac</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

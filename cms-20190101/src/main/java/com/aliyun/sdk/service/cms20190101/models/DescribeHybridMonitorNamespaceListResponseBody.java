@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHybridMonitorNamespaceListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHybridMonitorNamespaceListResponseBody</p>
  */
 public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DescribeHybridMonitorNamespace")
+    @com.aliyun.core.annotation.NameInMap("DescribeHybridMonitorNamespace")
     private java.util.List < DescribeHybridMonitorNamespace> describeHybridMonitorNamespace;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeHybridMonitorNamespaceListResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The returned message.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the namespaces.
+         * <p>The details of the namespaces.</p>
          */
         public Builder describeHybridMonitorNamespace(java.util.List < DescribeHybridMonitorNamespace> describeHybridMonitorNamespace) {
             this.describeHybridMonitorNamespace = describeHybridMonitorNamespace;
@@ -138,7 +141,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified parameter PageSize is not valid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EC450A4-3221-5148-B77E-2827576CFE48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +185,14 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -182,7 +200,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -195,11 +216,17 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHybridMonitorNamespaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorNamespaceListResponseBody</p>
+     */
     public static class MetricList extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < String > list;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Long period;
 
         private MetricList(Builder builder) {
@@ -234,7 +261,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private Long period; 
 
             /**
-             * The metrics.
+             * <p>The metrics.</p>
              */
             public Builder list(java.util.List < String > list) {
                 this.list = list;
@@ -242,10 +269,11 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which metrics are collected.
-             * <p>
+             * <p>The collection period of the metric.</p>
+             * <p>Unit: seconds.</p>
              * 
-             * Unit: seconds.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -259,11 +287,17 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHybridMonitorNamespaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorNamespaceListResponseBody</p>
+     */
     public static class NamespaceList extends TeaModel {
-        @NameInMap("MetricList")
+        @com.aliyun.core.annotation.NameInMap("MetricList")
         private java.util.List < MetricList> metricList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private NamespaceList(Builder builder) {
@@ -298,7 +332,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String namespace; 
 
             /**
-             * The list of metrics for the Alibaba Cloud service.
+             * <p>The metrics for the Alibaba Cloud service.</p>
              */
             public Builder metricList(java.util.List < MetricList> metricList) {
                 this.metricList = metricList;
@@ -306,7 +340,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace for the Alibaba Cloud service.
+             * <p>The namespace for the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs_ecs_dashboard</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -320,14 +357,20 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHybridMonitorNamespaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorNamespaceListResponseBody</p>
+     */
     public static class AliyunProductMetricList extends TeaModel {
-        @NameInMap("NamespaceList")
+        @com.aliyun.core.annotation.NameInMap("NamespaceList")
         private java.util.List < NamespaceList> namespaceList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("YAMLConfig")
+        @com.aliyun.core.annotation.NameInMap("YAMLConfig")
         private String YAMLConfig;
 
         private AliyunProductMetricList(Builder builder) {
@@ -371,7 +414,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String YAMLConfig; 
 
             /**
-             * The list of namespaces.
+             * <p>The namespaces.</p>
              */
             public Builder namespaceList(java.util.List < NamespaceList> namespaceList) {
                 this.namespaceList = namespaceList;
@@ -379,7 +422,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The account that is used to create the namespace.
+             * <p>The account that is used to create the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120886317861****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -387,7 +433,15 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * YAMLConfig.
+             * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
+             * <ul>
+             * <li>namespace: the namespace of the Alibaba Cloud service.</li>
+             * <li>metric_list: the metrics of the Alibaba Cloud service.</li>
+             * <li>dimension: the resources of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring. If you do not specify a dimension, all resources of the Alibaba Cloud service are monitored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>products:- namespace: acs_ecs_dashboard metric_info: - metric_list: - cpu_total dimension: &quot;&quot;</p>
              */
             public Builder YAMLConfig(String YAMLConfig) {
                 this.YAMLConfig = YAMLConfig;
@@ -401,14 +455,20 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHybridMonitorNamespaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorNamespaceListResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("NamespaceRegion")
+        @com.aliyun.core.annotation.NameInMap("NamespaceRegion")
         private String namespaceRegion;
 
-        @NameInMap("SLSProject")
+        @com.aliyun.core.annotation.NameInMap("SLSProject")
         private String SLSProject;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
         private Detail(Builder builder) {
@@ -452,7 +512,13 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * NamespaceRegion.
+             * <p>The region where the metric data is stored.</p>
+             * <blockquote>
+             * <p> This parameter is returned if you select <code>m_prom_user</code> for <code>NamespaceType</code> when you create a namespace.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder namespaceRegion(String namespaceRegion) {
                 this.namespaceRegion = namespaceRegion;
@@ -460,7 +526,13 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * SLSProject.
+             * <p>The project where the metric data is located.</p>
+             * <blockquote>
+             * <p> This parameter is returned if you select <code>m_prom_user</code> for <code>NamespaceType</code> when you create a namespace.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cms-hybrid-120886317861****-cn-hangzhou-a83d</p>
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;
@@ -468,15 +540,18 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The data retention period. Valid values:
-             * <p>
+             * <p>The data retention period. Valid values:</p>
+             * <ul>
+             * <li>cms.s1.large (Retention Period 15 Days)</li>
+             * <li>cms.s1.xlarge (Retention Period 32 Days)</li>
+             * <li>cms.s1.2xlarge (Retention Period 63 Days)</li>
+             * <li>cms.s1.3xlarge (Retention Period 93 Days)</li>
+             * <li>cms.s1.6xlarge (Retention Period 185 Days)</li>
+             * <li>cms.s1.12xlarge (Retention Period 367 Days)</li>
+             * </ul>
              * 
-             * *   cms.s1.large: Data is stored for 15 days.
-             * *   cms.s1.xlarge: Data is stored for 32 days.
-             * *   cms.s1.2xlarge: Data is stored for 63 days.
-             * *   cms.s1.3xlarge: Data is stored for 93 days.
-             * *   cms.s1.6xlarge: Data is stored for 185 days.
-             * *   cms.s1.12xlarge: Data is stored for 376 days.
+             * <strong>example:</strong>
+             * <p>cms.s1.3xlarge</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -490,35 +565,41 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHybridMonitorNamespaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHybridMonitorNamespaceListResponseBody</p>
+     */
     public static class DescribeHybridMonitorNamespace extends TeaModel {
-        @NameInMap("AliyunProductMetricList")
+        @com.aliyun.core.annotation.NameInMap("AliyunProductMetricList")
         private java.util.List < AliyunProductMetricList> aliyunProductMetricList;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsDelete")
+        @com.aliyun.core.annotation.NameInMap("IsDelete")
         private Integer isDelete;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NamespaceType")
+        @com.aliyun.core.annotation.NameInMap("NamespaceType")
         private String namespaceType;
 
-        @NameInMap("NotAliyunTaskNumber")
+        @com.aliyun.core.annotation.NameInMap("NotAliyunTaskNumber")
         private Long notAliyunTaskNumber;
 
         private DescribeHybridMonitorNamespace(Builder builder) {
@@ -625,7 +706,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private Long notAliyunTaskNumber; 
 
             /**
-             * The configuration details of metric import tasks for Alibaba Cloud services.
+             * <p>The configuration details of metric import tasks for Alibaba Cloud services.</p>
              */
             public Builder aliyunProductMetricList(java.util.List < AliyunProductMetricList> aliyunProductMetricList) {
                 this.aliyunProductMetricList = aliyunProductMetricList;
@@ -633,10 +714,11 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that was generated when the namespace was created.
-             * <p>
+             * <p>The timestamp that was generated when the namespace was created.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1652682744000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -644,7 +726,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -652,7 +737,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data retention period.
+             * <p>The details of the data retention period.</p>
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -660,7 +745,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -668,11 +756,14 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the namespace is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the namespace is deleted. Valid values:</p>
+             * <ul>
+             * <li>0: The namespace is not deleted.</li>
+             * <li>1: The namespace is deleted.</li>
+             * </ul>
              * 
-             * *   0: The namespace is not deleted.
-             * *   1: The namespace is deleted.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isDelete(Integer isDelete) {
                 this.isDelete = isDelete;
@@ -680,7 +771,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that was generated when the namespace was last modified.
+             * <p>The timestamp that was generated when the namespace was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652682744000</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -688,7 +782,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-test</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -696,7 +793,14 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceType.
+             * <p>The storage scheme of metric data. Valid values:</p>
+             * <ul>
+             * <li>m_prom_user: The metric data is stored in Simple Log Service.</li>
+             * <li>m_prom_pool: The metric data is stored in the storage space provided by CloudMonitor.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>m_prom_user</p>
              */
             public Builder namespaceType(String namespaceType) {
                 this.namespaceType = namespaceType;
@@ -704,7 +808,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of metric import tasks for third-party services.
+             * <p>The number of metric import tasks for third-party services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notAliyunTaskNumber(Long notAliyunTaskNumber) {
                 this.notAliyunTaskNumber = notAliyunTaskNumber;

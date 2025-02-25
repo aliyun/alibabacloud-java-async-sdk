@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesAsCsvRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesAsCsvRequest</p>
  */
 public class DescribeDBInstancesAsCsvRequest extends Request {
-    @Query
-    @NameInMap("CachedAsync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CachedAsync")
     private Boolean cachedAsync;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("ExportKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportKey")
     private String exportKey;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeDBInstancesAsCsvRequest(Builder builder) {
@@ -153,7 +158,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         } 
 
         /**
-         * A deprecated parameter. You do not need to configure this parameter.
+         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder cachedAsync(Boolean cachedAsync) {
             this.putQueryParameter("CachedAsync", cachedAsync);
@@ -162,7 +170,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the IDs of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +182,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * A deprecated parameter. You do not need to configure this parameter.
+         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder exportKey(String exportKey) {
             this.putQueryParameter("ExportKey", exportKey);
@@ -189,7 +203,11 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +216,10 @@ public class DescribeDBInstancesAsCsvRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserResourcePackageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnUserResourcePackageResponseBody</p>
  */
 public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourcePackageInfos")
+    @com.aliyun.core.annotation.NameInMap("ResourcePackageInfos")
     private ResourcePackageInfos resourcePackageInfos;
 
     private DescribeCdnUserResourcePackageResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         private ResourcePackageInfos resourcePackageInfos; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84839536-2B7E-457D-9D8C-82E6C7D4E1A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about resource plans. The returned information is displayed in an array of ResourcePackageInfo nodes.
+         * <p>The detailed information about resource plans. The returned information is displayed in an array of ResourcePackageInfo nodes.</p>
          */
         public Builder resourcePackageInfos(ResourcePackageInfos resourcePackageInfos) {
             this.resourcePackageInfos = resourcePackageInfos;
@@ -71,32 +74,38 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnUserResourcePackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserResourcePackageResponseBody</p>
+     */
     public static class ResourcePackageInfo extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CurrCapacity")
+        @com.aliyun.core.annotation.NameInMap("CurrCapacity")
         private String currCapacity;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InitCapacity")
+        @com.aliyun.core.annotation.NameInMap("InitCapacity")
         private String initCapacity;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private ResourcePackageInfo(Builder builder) {
@@ -194,7 +203,10 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * The ID of the resource plan.
+             * <p>The ID of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdnflowbag</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -202,11 +214,14 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota of the resource plan.
-             * <p>
+             * <p>The remaining quota of the resource plan.</p>
+             * <ul>
+             * <li>For a data transfer plan, the quota is measured in bytes.</li>
+             * <li>For a request resource plan, the quota is measured in the number of requests.</li>
+             * </ul>
              * 
-             * *   For a data transfer plan, the quota is measured in bytes.
-             * *   For a request resource plan, the quota is measured in the number of requests.
+             * <strong>example:</strong>
+             * <p>10995089554629</p>
              */
             public Builder currCapacity(String currCapacity) {
                 this.currCapacity = currCapacity;
@@ -214,7 +229,10 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource plan.
+             * <p>The name of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDN data transfer plan (Chinese mainland)</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -222,7 +240,10 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-01T08:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -230,11 +251,14 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota of the resource plan.
-             * <p>
+             * <p>The total quota of the resource plan.</p>
+             * <ul>
+             * <li>For a data transfer plan, the quota is measured in bytes.</li>
+             * <li>For a request resource plan, the quota is measured in the number of requests.</li>
+             * </ul>
              * 
-             * *   For a data transfer plan, the quota is measured in bytes.
-             * *   For a request resource plan, the quota is measured in the number of requests.
+             * <strong>example:</strong>
+             * <p>536870912000</p>
              */
             public Builder initCapacity(String initCapacity) {
                 this.initCapacity = initCapacity;
@@ -242,7 +266,10 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FP-ilttxc23a</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -250,7 +277,10 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The effective time.
+             * <p>The effective time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-05T19:10:58Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -258,11 +288,14 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource plan. Valid values:
-             * <p>
+             * <p>The status of the resource plan. Valid values:</p>
+             * <ul>
+             * <li><strong>valid</strong>: valid</li>
+             * <li><strong>closed</strong>: expired</li>
+             * </ul>
              * 
-             * *   **valid**: valid
-             * *   **closed**: expired
+             * <strong>example:</strong>
+             * <p>valid</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +303,10 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDN data transfer plan</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -284,8 +320,14 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCdnUserResourcePackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserResourcePackageResponseBody</p>
+     */
     public static class ResourcePackageInfos extends TeaModel {
-        @NameInMap("ResourcePackageInfo")
+        @com.aliyun.core.annotation.NameInMap("ResourcePackageInfo")
         private java.util.List < ResourcePackageInfo> resourcePackageInfo;
 
         private ResourcePackageInfos(Builder builder) {

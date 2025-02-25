@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHoneypotPresetRequest} extends {@link RequestModel}
  *
  * <p>UpdateHoneypotPresetRequest</p>
  */
 public class UpdateHoneypotPresetRequest extends Request {
-    @Query
-    @NameInMap("HoneypotImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotImageName")
     private String honeypotImageName;
 
-    @Query
-    @NameInMap("HoneypotPresetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotPresetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String honeypotPresetId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Meta")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Meta")
     private String meta;
 
-    @Query
-    @NameInMap("PresetName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PresetName")
     private String presetName;
 
     private UpdateHoneypotPresetRequest(Builder builder) {
@@ -111,7 +116,10 @@ public class UpdateHoneypotPresetRequest extends Request {
         } 
 
         /**
-         * The name of the image that is used for the honeypot.
+         * <p>The name of the image that is used for the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metabase</p>
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -120,10 +128,14 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The ID of the honeypot template.
-         * <p>
+         * <p>The ID of the honeypot template.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotPreset~~">ListHoneypotPreset</a> operation to query the IDs of honeypot templates.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotPreset](~~ListHoneypotPreset~~) operation to query the IDs of honeypot templates.
+         * <strong>example:</strong>
+         * <p>f75eddce-e9d3-4a88-af95-b10b6f65xxxx</p>
          */
         public Builder honeypotPresetId(String honeypotPresetId) {
             this.putQueryParameter("HoneypotPresetId", honeypotPresetId);
@@ -132,11 +144,14 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -145,12 +160,15 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:
-         * <p>
+         * <p>The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><strong>portrait_option</strong>: Social Source Tracing</li>
+         * <li><strong>burp</strong>: Burp-specific Defense</li>
+         * <li><strong>trojan_git</strong>: Git-specific Defense</li>
+         * </ul>
          * 
-         * *   **portrait_option**: Social Source Tracing
-         * *   **burp**: Burp-specific Defense
-         * *   **trojan_git**: Git-specific Defense
+         * <strong>example:</strong>
+         * <p>{&quot;portrait_option&quot;:true,&quot;burp&quot;:&quot;open&quot;}</p>
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);
@@ -159,7 +177,10 @@ public class UpdateHoneypotPresetRequest extends Request {
         }
 
         /**
-         * The custom name of the honeypot template.
+         * <p>The custom name of the honeypot template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apc_web_python</p>
          */
         public Builder presetName(String presetName) {
             this.putQueryParameter("PresetName", presetName);

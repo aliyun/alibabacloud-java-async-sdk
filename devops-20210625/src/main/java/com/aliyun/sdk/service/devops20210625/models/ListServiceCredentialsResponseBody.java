@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceCredentialsResponseBody</p>
  */
 public class ListServiceCredentialsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("serviceCredentials")
-    private java.util.List < ServiceCredentials> serviceCredentials;
+    @com.aliyun.core.annotation.NameInMap("serviceCredentials")
+    private java.util.List<ServiceCredentials> serviceCredentials;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListServiceCredentialsResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
     /**
      * @return serviceCredentials
      */
-    public java.util.List < ServiceCredentials> getServiceCredentials() {
+    public java.util.List<ServiceCredentials> getServiceCredentials() {
         return this.serviceCredentials;
     }
 
@@ -82,7 +87,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < ServiceCredentials> serviceCredentials; 
+        private java.util.List<ServiceCredentials> serviceCredentials; 
         private Boolean success; 
 
         /**
@@ -112,7 +117,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         /**
          * serviceCredentials.
          */
-        public Builder serviceCredentials(java.util.List < ServiceCredentials> serviceCredentials) {
+        public Builder serviceCredentials(java.util.List<ServiceCredentials> serviceCredentials) {
             this.serviceCredentials = serviceCredentials;
             return this;
         }
@@ -131,17 +136,23 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceCredentialsResponseBody</p>
+     */
     public static class ServiceCredentials extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("ownerName")
+        @com.aliyun.core.annotation.NameInMap("ownerName")
         private String ownerName;
 
-        @NameInMap("ownerStaffId")
+        @com.aliyun.core.annotation.NameInMap("ownerStaffId")
         private String ownerStaffId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private ServiceCredentials(Builder builder) {

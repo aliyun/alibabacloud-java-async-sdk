@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSearchCodePreviewRequest} extends {@link RequestModel}
  *
  * <p>GetSearchCodePreviewRequest</p>
  */
 public class GetSearchCodePreviewRequest extends Request {
-    @Query
-    @NameInMap("docId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("docId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String docId;
 
-    @Query
-    @NameInMap("isDsl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isDsl")
     private Boolean isDsl;
 
-    @Query
-    @NameInMap("keyword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private GetSearchCodePreviewRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class GetSearchCodePreviewRequest extends Request {
         } 
 
         /**
-         * docId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60d54f3daccf2bbd6659f3ad/gitlabhq/master/config/environments/test.rb</p>
          */
         public Builder docId(String docId) {
             this.putQueryParameter("docId", docId);
@@ -117,7 +125,10 @@ public class GetSearchCodePreviewRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -126,7 +137,10 @@ public class GetSearchCodePreviewRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>627475075b46541dd2ff01bc</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

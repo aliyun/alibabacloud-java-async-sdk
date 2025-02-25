@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RescaleDeviceServiceRequest} extends {@link RequestModel}
  *
  * <p>RescaleDeviceServiceRequest</p>
  */
 public class RescaleDeviceServiceRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("IpType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpType")
     private Integer ipType;
 
-    @Query
-    @NameInMap("RescaleLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rescaleLevel;
 
-    @Query
-    @NameInMap("RescaleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rescaleType;
 
-    @Body
-    @NameInMap("ResourceInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceInfo")
     private String resourceInfo;
 
-    @Body
-    @NameInMap("ResourceSelector")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceSelector")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceSelector;
 
-    @Query
-    @NameInMap("ResourceSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceSpec")
     private String resourceSpec;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
     private RescaleDeviceServiceRequest(Builder builder) {
@@ -183,7 +188,10 @@ public class RescaleDeviceServiceRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7aedc50b-b1cb-4a7c-9e3d-4cf3c9ee55a4</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -192,7 +200,10 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-5rynw9g1ow1e928lb83bqmbnf</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -201,7 +212,14 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * IpType.
+         * <p>The type of the network. The value must be of the enumerated data type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> (default): Internet</li>
+         * <li><strong>2</strong>: internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipType(Integer ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -210,7 +228,11 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * RescaleLevel.
+         * <p>The region level of the scale-out. Set the value to RegionId. RegionId specifies that resource scale-out is performed based on the ID of the edge node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionId</p>
          */
         public Builder rescaleLevel(String rescaleLevel) {
             this.putQueryParameter("RescaleLevel", rescaleLevel);
@@ -219,7 +241,11 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * RescaleType.
+         * <p>The scaling operation. Set the value to Add to add new resources.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add</p>
          */
         public Builder rescaleType(String rescaleType) {
             this.putQueryParameter("RescaleType", rescaleType);
@@ -228,7 +254,10 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ResourceInfo.
+         * <p>The information about the resource specification template. The value must be a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;imageId&quot;:&quot;m-5s4z4c10avgwvwtn33gl2vgob&quot;,&quot;ipType&quot;:2,&quot;specName&quot;:&quot;ens.pfb-c3m7.medium&quot;}</p>
          */
         public Builder resourceInfo(String resourceInfo) {
             this.putBodyParameter("ResourceInfo", resourceInfo);
@@ -237,7 +266,11 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ResourceSelector.
+         * <p>The required resources. The value must be a JSON string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;regionCode&quot;: &quot;cn-wuxi-telecom_unicom_cmcc-3&quot;,    &quot;ispCode&quot;: &quot;telecom&quot;,    &quot;count&quot;: 2	},{    &quot;regionCode&quot;: &quot;cn-shanghai-cmcc&quot;,    &quot;count&quot;: 4	}]</p>
          */
         public Builder resourceSelector(String resourceSelector) {
             this.putBodyParameter("ResourceSelector", resourceSelector);
@@ -246,7 +279,10 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * <p>The resource specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.a6e.large</p>
          */
         public Builder resourceSpec(String resourceSpec) {
             this.putQueryParameter("ResourceSpec", resourceSpec);
@@ -255,7 +291,10 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-01c6dd6e93f040698566</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -264,7 +303,10 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period for asynchronous scale-out. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);

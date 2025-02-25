@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInterceptionRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteInterceptionRuleRequest</p>
  */
 public class DeleteInterceptionRuleRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("RuleIds")
-    private java.util.List < Long > ruleIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
+    private java.util.List<Long> ruleIds;
 
     private DeleteInterceptionRuleRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DeleteInterceptionRuleRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < Long > getRuleIds() {
+    public java.util.List<Long> getRuleIds() {
         return this.ruleIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteInterceptionRuleRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Long > ruleIds; 
+        private java.util.List<Long> ruleIds; 
 
         private Builder() {
             super();
@@ -69,10 +74,14 @@ public class DeleteInterceptionRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to query.
-         * <p>
+         * <p>The ID of the cluster that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>cdf629147cc3747d292a3f587xxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -81,9 +90,9 @@ public class DeleteInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The IDs of the rules that you want to delete.
+         * <p>The IDs of the rules that you want to delete.</p>
          */
-        public Builder ruleIds(java.util.List < Long > ruleIds) {
+        public Builder ruleIds(java.util.List<Long> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
             return this;

@@ -1,65 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGrantVSwitchesToCenRequest} extends {@link RequestModel}
  *
  * <p>ListGrantVSwitchesToCenRequest</p>
  */
 public class ListGrantVSwitchesToCenRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnabledIpv6")
+    private Boolean enabledIpv6;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private ListGrantVSwitchesToCenRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
+        this.enabledIpv6 = builder.enabledIpv6;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -89,6 +99,13 @@ public class ListGrantVSwitchesToCenRequest extends Request {
      */
     public String getCenId() {
         return this.cenId;
+    }
+
+    /**
+     * @return enabledIpv6
+     */
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     /**
@@ -156,6 +173,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGrantVSwitchesToCenRequest, Builder> {
         private String cenId; 
+        private Boolean enabledIpv6; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -173,6 +191,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         private Builder(ListGrantVSwitchesToCenRequest request) {
             super(request);
             this.cenId = request.cenId;
+            this.enabledIpv6 = request.enabledIpv6;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -185,11 +204,27 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The CEN instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-44m0p68spvlrqq****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable IPv6. true: enables IPv6. false: disables IPv6. If you do not specify a value, vSwitches are not filtered based on this attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder enabledIpv6(Boolean enabledIpv6) {
+            this.putQueryParameter("EnabledIpv6", enabledIpv6);
+            this.enabledIpv6 = enabledIpv6;
             return this;
         }
 
@@ -212,7 +247,10 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The page number of the page to return. Default value: **1**.
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +259,10 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,10 +271,12 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +303,11 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The VPC ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12ge2tq5gzdc915****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -269,13 +316,15 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
-         * <p>
+         * <p>The ID of the zone.</p>
+         * <ul>
+         * <li>If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</li>
+         * <li>If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</li>
+         * </ul>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
          * 
-         * *   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.
-         * *   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.
-         * 
-         * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

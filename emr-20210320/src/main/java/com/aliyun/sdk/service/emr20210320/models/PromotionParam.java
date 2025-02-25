@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PromotionParam} extends {@link TeaModel}
  *
  * <p>PromotionParam</p>
  */
 public class PromotionParam extends TeaModel {
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("PromotionOptionCode")
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionCode")
     private String promotionOptionCode;
 
-    @NameInMap("PromotionOptionNo")
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
     private String promotionOptionNo;
 
     private PromotionParam(Builder builder) {

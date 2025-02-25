@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConfigRulesReportRequest} extends {@link RequestModel}
  *
  * <p>GetConfigRulesReportRequest</p>
  */
 public class GetConfigRulesReportRequest extends Request {
-    @Query
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
     private GetConfigRulesReportRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetConfigRulesReportRequest extends Request {
         } 
 
         /**
-         * The ID of the compliance evaluation report.
+         * <p>The ID of the compliance evaluation report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-88176457e0d900c9****</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);

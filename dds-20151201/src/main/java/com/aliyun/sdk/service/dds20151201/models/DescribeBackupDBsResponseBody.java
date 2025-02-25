@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupDBsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupDBsResponseBody</p>
  */
 public class DescribeBackupDBsResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private Databases databases;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBackupDBsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the databases.
+         * <p>The details of the databases.</p>
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -94,7 +99,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AF0AD89-ED4F-44AD-B65F-BFC1D5CD9455</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned databases.
+         * <p>The number of returned databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,8 +148,14 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupDBsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDBsResponseBody</p>
+     */
     public static class Database extends TeaModel {
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
         private Database(Builder builder) {
@@ -158,7 +181,10 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
             private String DBName; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongodbtest</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -172,9 +198,15 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupDBsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDBsResponseBody</p>
+     */
     public static class Databases extends TeaModel {
-        @NameInMap("Database")
-        private java.util.List < Database> database;
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private java.util.List<Database> database;
 
         private Databases(Builder builder) {
             this.database = builder.database;
@@ -191,17 +223,17 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         /**
          * @return database
          */
-        public java.util.List < Database> getDatabase() {
+        public java.util.List<Database> getDatabase() {
             return this.database;
         }
 
         public static final class Builder {
-            private java.util.List < Database> database; 
+            private java.util.List<Database> database; 
 
             /**
              * Database.
              */
-            public Builder database(java.util.List < Database> database) {
+            public Builder database(java.util.List<Database> database) {
                 this.database = database;
                 return this;
             }

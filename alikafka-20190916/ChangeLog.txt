@@ -1,3 +1,60 @@
+2025-02-12 Version: 1.0.29
+- Generated java-async 2019-09-16 for alikafka.
+
+2025-02-11 Version: 1.0.28
+- Generated java-async 2019-09-16 for alikafka.
+
+2025-01-06 Version: 1.0.27
+- Generated java-async 2019-09-16 for alikafka.
+
+2025-01-02 Version: 1.0.26
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-11-14 Version: 1.0.25
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-08-02 Version: 1.0.24
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-07-30 Version: 1.0.23
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-05-16 Version: 1.0.22
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-04-23 Version: 1.0.21
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-04-11 Version: 1.0.20
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-04-03 Version: 1.0.19
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-03-25 Version: 1.0.18
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-03-15 Version: 1.0.17
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-03-13 Version: 1.0.16
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-03-01 Version: 1.0.15
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-02-27 Version: 1.0.14
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-02-27 Version: 1.0.13
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-02-26 Version: 1.0.12
+- Generated java-async 2019-09-16 for alikafka.
+
+2024-01-18 Version: 1.0.11
+- Generated java-async 2019-09-16 for alikafka.
+
 2023-10-09 Version: 1.0.10
 - Generated java-async 2019-09-16 for alikafka.
 

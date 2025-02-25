@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchNetworkResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchNetworkResponseBody</p>
  */
 public class SwitchNetworkResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private SwitchNetworkResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class SwitchNetworkResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Switches the network type of an ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC).
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0997EE8-F4C2-4503-9168-85177ED78C70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,13 +61,10 @@ public class SwitchNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to retain the original endpoint for the classic network after you switch the instance from classic network to VPC. Valid values:
-         * <p>
+         * <p>The ID of the task.</p>
          * 
-         * *   **True**: retains the original endpoint.
-         * *   **False**: does not retain the original endpoint. This is the default value.
-         * 
-         * >  This parameter can be used only when the network type of the instance is classic network.
+         * <strong>example:</strong>
+         * <p>578678678</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

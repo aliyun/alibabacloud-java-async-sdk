@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUsageDetailDataExportTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateUsageDetailDataExportTaskRequest</p>
  */
 public class CreateUsageDetailDataExportTaskRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
     private String domainNames;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Group")
     private String group;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateUsageDetailDataExportTaskRequest(Builder builder) {
@@ -141,10 +141,11 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         } 
 
         /**
-         * The domain names. If you do not specify the Group parameter, resource usage details of these domain names are exported.
-         * <p>
+         * <p>The domain names. If you do not specify the Group parameter, resource usage details of these domain names are exported.</p>
+         * <p>If you do not specify this parameter, resource usage details are exported based on accounts.</p>
          * 
-         * If you do not specify this parameter, resource usage details are exported based on accounts.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -153,12 +154,15 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
-         * <p>
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>2019-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -167,7 +171,10 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * The domain name group. If you specify this parameter, the **DomainNames** parameter is ignored.
+         * <p>The domain name group. If you specify this parameter, the <strong>DomainNames</strong> parameter is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -176,11 +183,14 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * The language in which you want to export the file. Valid values:
-         * <p>
+         * <p>The language in which you want to export the file. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-cn</strong>: Chinese. This is the default value.</li>
+         * <li><strong>en-us</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh-cn**: Chinese. This is the default value.
-         * *   **en-us**: English
+         * <strong>example:</strong>
+         * <p>en-us</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -189,10 +199,12 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
-         * <p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <strong>example:</strong>
+         * <p>2019-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -201,7 +213,10 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * The name of the task.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refresh</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -210,11 +225,15 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * The type of resource usage data to query. Valid values:
-         * <p>
+         * <p>The type of resource usage data to query. Valid values:</p>
+         * <ul>
+         * <li><strong>flow</strong>: traffic and bandwidth</li>
+         * <li><strong>vas</strong>: requests</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **flow**: traffic and bandwidth
-         * *   **vas**: requests
+         * <strong>example:</strong>
+         * <p>flow</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

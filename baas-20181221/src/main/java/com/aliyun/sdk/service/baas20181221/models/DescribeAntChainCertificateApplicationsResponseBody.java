@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainCertificateApplicationsResponseBody</p>
  */
 public class DescribeAntChainCertificateApplicationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainCertificateApplicationsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
     } 
 
     public static class CertificateApplications extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private String bid;
 
-        @NameInMap("Createtime")
+        @com.aliyun.core.annotation.NameInMap("Createtime")
         private Long createtime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Updatetime")
+        @com.aliyun.core.annotation.NameInMap("Updatetime")
         private Long updatetime;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private CertificateApplications(Builder builder) {
@@ -166,7 +165,7 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
             }
 
             /**
-             * Bid.
+             * Bid
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -213,13 +212,13 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Pagination(Builder builder) {
@@ -294,10 +293,10 @@ public class DescribeAntChainCertificateApplicationsResponseBody extends TeaMode
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("CertificateApplications")
+        @com.aliyun.core.annotation.NameInMap("CertificateApplications")
         private java.util.List < CertificateApplications> certificateApplications;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
         private Result(Builder builder) {

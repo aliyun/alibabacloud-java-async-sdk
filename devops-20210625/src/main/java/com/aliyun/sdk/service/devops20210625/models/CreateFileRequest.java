@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileRequest} extends {@link RequestModel}
  *
  * <p>CreateFileRequest</p>
  */
 public class CreateFileRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("branchName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("branchName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String branchName;
 
-    @Body
-    @NameInMap("commitMessage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("commitMessage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commitMessage;
 
-    @Body
-    @NameInMap("content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("encoding")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("encoding")
     private String encoding;
 
-    @Body
-    @NameInMap("filePath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("filePath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String filePath;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private CreateFileRequest(Builder builder) {
@@ -158,7 +163,10 @@ public class CreateFileRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2080972</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -176,7 +184,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * branchName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder branchName(String branchName) {
             this.putBodyParameter("branchName", branchName);
@@ -185,7 +196,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * commitMessage.
+         * <p>This parameter is required.</p>
          */
         public Builder commitMessage(String commitMessage) {
             this.putBodyParameter("commitMessage", commitMessage);
@@ -194,7 +205,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -212,7 +223,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * filePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/src/main/test.java</p>
          */
         public Builder filePath(String filePath) {
             this.putBodyParameter("filePath", filePath);
@@ -221,7 +235,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

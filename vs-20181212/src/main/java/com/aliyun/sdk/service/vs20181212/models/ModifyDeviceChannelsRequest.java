@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDeviceChannelsRequest} extends {@link RequestModel}
  *
  * <p>ModifyDeviceChannelsRequest</p>
  */
 public class ModifyDeviceChannelsRequest extends Request {
-    @Query
-    @NameInMap("Channels")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channels")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channels;
 
-    @Query
-    @NameInMap("DeviceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceStatus")
     private String deviceStatus;
 
-    @Query
-    @NameInMap("Dsn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dsn")
     private String dsn;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private ModifyDeviceChannelsRequest(Builder builder) {
@@ -102,17 +107,17 @@ public class ModifyDeviceChannelsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDeviceChannelsRequest response) {
-            super(response);
-            this.channels = response.channels;
-            this.deviceStatus = response.deviceStatus;
-            this.dsn = response.dsn;
-            this.id = response.id;
-            this.ownerId = response.ownerId;
+        private Builder(ModifyDeviceChannelsRequest request) {
+            super(request);
+            this.channels = request.channels;
+            this.deviceStatus = request.deviceStatus;
+            this.dsn = request.dsn;
+            this.id = request.id;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Channels.
+         * <p>This parameter is required.</p>
          */
         public Builder channels(String channels) {
             this.putQueryParameter("Channels", channels);
@@ -139,7 +144,10 @@ public class ModifyDeviceChannelsRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

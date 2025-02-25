@@ -1,22 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesOutput} extends {@link TeaModel}
  *
  * <p>ListInstancesOutput</p>
  */
 public class ListInstancesOutput extends TeaModel {
-    @NameInMap("instances")
+    @com.aliyun.core.annotation.NameInMap("instances")
     private java.util.List < InstanceInfo > instances;
+
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
 
     private ListInstancesOutput(Builder builder) {
         this.instances = builder.instances;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class ListInstancesOutput extends TeaModel {
         return this.instances;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
         private java.util.List < InstanceInfo > instances; 
+        private String requestId; 
 
         /**
          * instances.
          */
         public Builder instances(java.util.List < InstanceInfo > instances) {
             this.instances = instances;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

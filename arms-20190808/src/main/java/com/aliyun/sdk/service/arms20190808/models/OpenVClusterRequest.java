@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenVClusterRequest} extends {@link RequestModel}
  *
  * <p>OpenVClusterRequest</p>
  */
 public class OpenVClusterRequest extends Request {
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("Length")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Length")
     private Integer length;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RecreateSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecreateSwitch")
     private Boolean recreateSwitch;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private OpenVClusterRequest(Builder builder) {
@@ -112,7 +117,11 @@ public class OpenVClusterRequest extends Request {
         } 
 
         /**
-         * The type of the cluster. For cloud services, set this parameter to `cloud-product-prometheus`.
+         * <p>The type of the cluster. For cloud services, set this parameter to <code>cloud-product-prometheus</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-product-prometheus</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -121,7 +130,10 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * The length of the cluster ID. Default value: 10.
+         * <p>The length of the cluster ID. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder length(Integer length) {
             this.putQueryParameter("Length", length);
@@ -130,7 +142,10 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * The name of the cloud service. This parameter is required if you set ClusterType to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.
+         * <p>The name of the cloud service. This parameter must be specified when ClusterType is set to <code>cloud-product-prometheus</code>. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>influxdb</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -139,7 +154,10 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to create or query a virtual cluster. This parameter provides backward compatibility.
+         * <p>Specifies whether to create or query a virtual cluster. This parameter provides backward compatibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recreateSwitch(Boolean recreateSwitch) {
             this.putQueryParameter("RecreateSwitch", recreateSwitch);
@@ -148,7 +166,11 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

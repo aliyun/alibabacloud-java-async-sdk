@@ -1,35 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTableThemeRequest} extends {@link RequestModel}
  *
  * <p>UpdateTableThemeRequest</p>
  */
 public class UpdateTableThemeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long projectId;
 
-    @Query
-    @NameInMap("ThemeId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThemeId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long themeId;
 
     private UpdateTableThemeRequest(Builder builder) {
@@ -100,7 +104,7 @@ public class UpdateTableThemeRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,7 +113,11 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The name of the table folder.
+         * <p>The name of the theme.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table folder name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -118,7 +126,10 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -127,7 +138,11 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the table folder.
+         * <p>The ID of the theme.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder themeId(Long themeId) {
             this.putQueryParameter("ThemeId", themeId);

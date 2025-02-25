@@ -1,37 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeClusterRequest} extends {@link RequestModel}
  *
  * <p>UpgradeClusterRequest</p>
  */
 public class UpgradeClusterRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("component_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("component_name")
     @Deprecated
     private String componentName;
 
-    @Body
-    @NameInMap("master_only")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_only")
     private Boolean masterOnly;
 
-    @Body
-    @NameInMap("next_version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("next_version")
     private String nextVersion;
 
-    @Body
-    @NameInMap("version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rolling_policy")
+    private RollingPolicy rollingPolicy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("version")
     @Deprecated
     private String version;
 
@@ -41,6 +50,7 @@ public class UpgradeClusterRequest extends Request {
         this.componentName = builder.componentName;
         this.masterOnly = builder.masterOnly;
         this.nextVersion = builder.nextVersion;
+        this.rollingPolicy = builder.rollingPolicy;
         this.version = builder.version;
     }
 
@@ -86,6 +96,13 @@ public class UpgradeClusterRequest extends Request {
     }
 
     /**
+     * @return rollingPolicy
+     */
+    public RollingPolicy getRollingPolicy() {
+        return this.rollingPolicy;
+    }
+
+    /**
      * @return version
      */
     public String getVersion() {
@@ -97,6 +114,7 @@ public class UpgradeClusterRequest extends Request {
         private String componentName; 
         private Boolean masterOnly; 
         private String nextVersion; 
+        private RollingPolicy rollingPolicy; 
         private String version; 
 
         private Builder() {
@@ -109,11 +127,16 @@ public class UpgradeClusterRequest extends Request {
             this.componentName = request.componentName;
             this.masterOnly = request.masterOnly;
             this.nextVersion = request.nextVersion;
+            this.rollingPolicy = request.rollingPolicy;
             this.version = request.version;
         } 
 
         /**
-         * The ID of the cluster that you want to upgrade.
+         * <p>The ID of the cluster that you want to upgrade.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -122,7 +145,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * The name of the component. Set the value to `k8s`.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s</p>
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("component_name", componentName);
@@ -131,11 +157,14 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to update only master nodes. Valid values:
-         * <p>
+         * <p>Specifies whether to update only the master nodes. Valid values:</p>
+         * <ul>
+         * <li>true: updates only the master nodes.</li>
+         * <li>false: updates the master nodes and worker nodes.</li>
+         * </ul>
          * 
-         * *   true: update only master nodes.
-         * *   false: update master and worker nodes.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder masterOnly(Boolean masterOnly) {
             this.putBodyParameter("master_only", masterOnly);
@@ -144,7 +173,10 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * The Kubernetes version to which the cluster can be updated.
+         * <p>The Kubernetes version to which you want to update the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.16.9-aliyun.1</p>
          */
         public Builder nextVersion(String nextVersion) {
             this.putBodyParameter("next_version", nextVersion);
@@ -153,7 +185,19 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](~~185269~~).
+         * <p>The rotation configuration.</p>
+         */
+        public Builder rollingPolicy(RollingPolicy rollingPolicy) {
+            this.putBodyParameter("rolling_policy", rollingPolicy);
+            this.rollingPolicy = rollingPolicy;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.14.8-aliyun.1</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -168,4 +212,54 @@ public class UpgradeClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpgradeClusterRequest} extends {@link TeaModel}
+     *
+     * <p>UpgradeClusterRequest</p>
+     */
+    public static class RollingPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("max_parallelism")
+        private Integer maxParallelism;
+
+        private RollingPolicy(Builder builder) {
+            this.maxParallelism = builder.maxParallelism;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RollingPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxParallelism
+         */
+        public Integer getMaxParallelism() {
+            return this.maxParallelism;
+        }
+
+        public static final class Builder {
+            private Integer maxParallelism; 
+
+            /**
+             * <p>The maximum size of each batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder maxParallelism(Integer maxParallelism) {
+                this.maxParallelism = maxParallelism;
+                return this;
+            }
+
+            public RollingPolicy build() {
+                return new RollingPolicy(this);
+            } 
+
+        } 
+
+    }
 }

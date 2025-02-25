@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainGroupListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainGroupListResponseBody</p>
  */
 public class QueryDomainGroupListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDomainGroupListResponseBody(Builder builder) {
@@ -71,26 +71,32 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainGroupListResponseBody</p>
+     */
     public static class DomainGroup extends TeaModel {
-        @NameInMap("BeingDeleted")
+        @com.aliyun.core.annotation.NameInMap("BeingDeleted")
         private Boolean beingDeleted;
 
-        @NameInMap("CreationDate")
+        @com.aliyun.core.annotation.NameInMap("CreationDate")
         private String creationDate;
 
-        @NameInMap("DomainGroupId")
+        @com.aliyun.core.annotation.NameInMap("DomainGroupId")
         private String domainGroupId;
 
-        @NameInMap("DomainGroupName")
+        @com.aliyun.core.annotation.NameInMap("DomainGroupName")
         private String domainGroupName;
 
-        @NameInMap("DomainGroupStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainGroupStatus")
         private String domainGroupStatus;
 
-        @NameInMap("ModificationDate")
+        @com.aliyun.core.annotation.NameInMap("ModificationDate")
         private String modificationDate;
 
-        @NameInMap("TotalNumber")
+        @com.aliyun.core.annotation.NameInMap("TotalNumber")
         private Integer totalNumber;
 
         private DomainGroup(Builder builder) {
@@ -232,8 +238,14 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainGroupListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DomainGroup")
+        @com.aliyun.core.annotation.NameInMap("DomainGroup")
         private java.util.List < DomainGroup> domainGroup;
 
         private Data(Builder builder) {

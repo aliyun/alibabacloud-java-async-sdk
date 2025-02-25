@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCountriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCountriesResponseBody</p>
  */
 public class ListCountriesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < String > data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<String> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCountriesResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class ListCountriesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -80,13 +85,20 @@ public class ListCountriesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < String > data; 
+        private java.util.List<String> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Error Code</p>
+         * <ul>
+         * <li>200: OK</li>
+         * <li>1109: System error</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +106,18 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>List of Region Code</p>
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * <p>Message information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +125,10 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A747A00F-E096-5244-88B3-3E474BAE3AE4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +136,10 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

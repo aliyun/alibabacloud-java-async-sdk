@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientUserDefineRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetClientUserDefineRuleResponseBody</p>
  */
 public class GetClientUserDefineRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDefineRuleDetail")
+    @com.aliyun.core.annotation.NameInMap("UserDefineRuleDetail")
     private UserDefineRuleDetail userDefineRuleDetail;
 
     private GetClientUserDefineRuleResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         private UserDefineRuleDetail userDefineRuleDetail; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the custom defense rule.
+         * <p>The information about the custom defense rule.</p>
          */
         public Builder userDefineRuleDetail(UserDefineRuleDetail userDefineRuleDetail) {
             this.userDefineRuleDetail = userDefineRuleDetail;
@@ -71,67 +79,77 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClientUserDefineRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientUserDefineRuleResponseBody</p>
+     */
     public static class UserDefineRuleDetail extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("Cmdline")
+        @com.aliyun.core.annotation.NameInMap("Cmdline")
         private String cmdline;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        private String domain;
+
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Md5List")
+        @com.aliyun.core.annotation.NameInMap("Md5List")
         private String md5List;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NewFilePath")
+        @com.aliyun.core.annotation.NameInMap("NewFilePath")
         private String newFilePath;
 
-        @NameInMap("ParentCmdline")
+        @com.aliyun.core.annotation.NameInMap("ParentCmdline")
         private String parentCmdline;
 
-        @NameInMap("ParentProcPath")
+        @com.aliyun.core.annotation.NameInMap("ParentProcPath")
         private String parentProcPath;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("PortStr")
+        @com.aliyun.core.annotation.NameInMap("PortStr")
         private String portStr;
 
-        @NameInMap("ProcPath")
+        @com.aliyun.core.annotation.NameInMap("ProcPath")
         private String procPath;
 
-        @NameInMap("RegistryContent")
+        @com.aliyun.core.annotation.NameInMap("RegistryContent")
         private String registryContent;
 
-        @NameInMap("RegistryKey")
+        @com.aliyun.core.annotation.NameInMap("RegistryKey")
         private String registryKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private UserDefineRuleDetail(Builder builder) {
             this.actionType = builder.actionType;
             this.cmdline = builder.cmdline;
+            this.domain = builder.domain;
             this.filePath = builder.filePath;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -171,6 +189,13 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
          */
         public String getCmdline() {
             return this.cmdline;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
         }
 
         /**
@@ -295,6 +320,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String actionType; 
             private String cmdline; 
+            private String domain; 
             private String filePath; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -314,11 +340,14 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The action of the custom defense rule. Valid values:
-             * <p>
+             * <p>The action of the custom defense rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: allow</li>
+             * <li><strong>1</strong>: block</li>
+             * </ul>
              * 
-             * *   **0**: allow
-             * *   **1**: block
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -326,7 +355,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The command line.
+             * <p>The command line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sbin/s****</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -334,7 +366,21 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The file path.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/pam****</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -342,7 +388,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the custom defense rule was created.
+             * <p>The time when the custom defense rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167118088****</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -350,7 +399,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the custom defense rule was last modified.
+             * <p>The time when the custom defense rule was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167118088****</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -358,7 +410,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.240.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -366,7 +421,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom defense rule.
+             * <p>The ID of the custom defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -374,7 +432,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The hash values of processes.
+             * <p>The hash values of processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c9045b5bec90f9825f1f3f64dd4****</p>
              */
             public Builder md5List(String md5List) {
                 this.md5List = md5List;
@@ -382,7 +443,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom defense rule.
+             * <p>The name of the custom defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +454,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The new file path after the file is renamed.
+             * <p>The new file path after the file is renamed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/pam****</p>
              */
             public Builder newFilePath(String newFilePath) {
                 this.newFilePath = newFilePath;
@@ -398,7 +465,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The parent command line.
+             * <p>The parent command line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sbin/s****</p>
              */
             public Builder parentCmdline(String parentCmdline) {
                 this.parentCmdline = parentCmdline;
@@ -406,7 +476,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the parent process.
+             * <p>The path to the parent process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c:/windows/system32/i****</p>
              */
             public Builder parentProcPath(String parentProcPath) {
                 this.parentProcPath = parentProcPath;
@@ -414,12 +487,15 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>linux</strong></li>
+             * <li><strong>windows</strong></li>
+             * <li><strong>all</strong></li>
+             * </ul>
              * 
-             * *   **linux**
-             * *   **windows**
-             * *   **all**
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -427,7 +503,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -435,7 +514,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The port number. Valid values: 1 to 65535.
+             * <p>The port number. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder portStr(String portStr) {
                 this.portStr = portStr;
@@ -443,7 +525,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the process.
+             * <p>The path to the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c:/windows/system32/i****</p>
              */
             public Builder procPath(String procPath) {
                 this.procPath = procPath;
@@ -451,7 +536,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The registry value.
+             * <p>The registry value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em>SECOH-QAD.exe</em></p>
              */
             public Builder registryContent(String registryContent) {
                 this.registryContent = registryContent;
@@ -459,7 +547,10 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The registry key.
+             * <p>The registry key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HKEY_DYN_****</p>
              */
             public Builder registryKey(String registryKey) {
                 this.registryKey = registryKey;
@@ -467,16 +558,19 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the custom defense rule. Valid values:
-             * <p>
+             * <p>The type of the custom defense rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Process hash</li>
+             * <li><strong>2</strong>: Command line</li>
+             * <li><strong>3</strong>: Process Network</li>
+             * <li><strong>4</strong>: File Read and Write</li>
+             * <li><strong>5</strong>: Operation on Registry</li>
+             * <li><strong>6</strong>: Dynamic-link Library Loading</li>
+             * <li><strong>7</strong>: File Renaming</li>
+             * </ul>
              * 
-             * *   **1**: Process hash
-             * *   **2**: Command line
-             * *   **3**: Process Network
-             * *   **4**: File Read and Write
-             * *   **5**: Operation on Registry
-             * *   **6**: Dynamic-link Library Loading
-             * *   **7**: File Renaming
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

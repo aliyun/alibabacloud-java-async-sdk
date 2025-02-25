@@ -1,53 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDdTaskOrderRequest} extends {@link RequestModel}
  *
  * <p>ListDdTaskOrderRequest</p>
  */
 public class ListDdTaskOrderRequest extends Request {
-    @Query
-    @NameInMap("CallerParentId")
-    private Long callerParentId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateRealName")
+    private String createRealName;
 
-    @Query
-    @NameInMap("CallerType")
-    private String callerType;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
 
-    @Query
-    @NameInMap("CallerUid")
-    private Long callerUid;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsUrgent")
+    private Boolean isUrgent;
 
-    @Query
-    @NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
-    @Query
-    @NameInMap("OrderId")
-    private String orderId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    private Long pageNo;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Long pageSize;
 
-    @Query
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
     private ListDdTaskOrderRequest(Builder builder) {
         super(builder);
-        this.callerParentId = builder.callerParentId;
-        this.callerType = builder.callerType;
-        this.callerUid = builder.callerUid;
+        this.createRealName = builder.createRealName;
+        this.endTime = builder.endTime;
+        this.isUrgent = builder.isUrgent;
         this.openGroupId = builder.openGroupId;
-        this.orderId = builder.orderId;
-        this.requestId = builder.requestId;
+        this.pageNo = builder.pageNo;
+        this.pageSize = builder.pageSize;
+        this.startTime = builder.startTime;
         this.taskStatus = builder.taskStatus;
     }
 
@@ -65,24 +76,24 @@ public class ListDdTaskOrderRequest extends Request {
     }
 
     /**
-     * @return callerParentId
+     * @return createRealName
      */
-    public Long getCallerParentId() {
-        return this.callerParentId;
+    public String getCreateRealName() {
+        return this.createRealName;
     }
 
     /**
-     * @return callerType
+     * @return endTime
      */
-    public String getCallerType() {
-        return this.callerType;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
-     * @return callerUid
+     * @return isUrgent
      */
-    public Long getCallerUid() {
-        return this.callerUid;
+    public Boolean getIsUrgent() {
+        return this.isUrgent;
     }
 
     /**
@@ -93,17 +104,24 @@ public class ListDdTaskOrderRequest extends Request {
     }
 
     /**
-     * @return orderId
+     * @return pageNo
      */
-    public String getOrderId() {
-        return this.orderId;
+    public Long getPageNo() {
+        return this.pageNo;
     }
 
     /**
-     * @return requestId
+     * @return pageSize
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
     }
 
     /**
@@ -114,58 +132,70 @@ public class ListDdTaskOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDdTaskOrderRequest, Builder> {
-        private Long callerParentId; 
-        private String callerType; 
-        private Long callerUid; 
+        private String createRealName; 
+        private String endTime; 
+        private Boolean isUrgent; 
         private String openGroupId; 
-        private String orderId; 
-        private String requestId; 
+        private Long pageNo; 
+        private Long pageSize; 
+        private String startTime; 
         private String taskStatus; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDdTaskOrderRequest response) {
-            super(response);
-            this.callerParentId = response.callerParentId;
-            this.callerType = response.callerType;
-            this.callerUid = response.callerUid;
-            this.openGroupId = response.openGroupId;
-            this.orderId = response.orderId;
-            this.requestId = response.requestId;
-            this.taskStatus = response.taskStatus;
+        private Builder(ListDdTaskOrderRequest request) {
+            super(request);
+            this.createRealName = request.createRealName;
+            this.endTime = request.endTime;
+            this.isUrgent = request.isUrgent;
+            this.openGroupId = request.openGroupId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.taskStatus = request.taskStatus;
         } 
 
         /**
-         * callerParentId
+         * <p>createRealName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
          */
-        public Builder callerParentId(Long callerParentId) {
-            this.putQueryParameter("CallerParentId", callerParentId);
-            this.callerParentId = callerParentId;
+        public Builder createRealName(String createRealName) {
+            this.putQueryParameter("CreateRealName", createRealName);
+            this.createRealName = createRealName;
             return this;
         }
 
         /**
-         * callerType
+         * <p>endTime</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-20 14:09:16</p>
          */
-        public Builder callerType(String callerType) {
-            this.putQueryParameter("CallerType", callerType);
-            this.callerType = callerType;
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
         /**
-         * callerUid
+         * IsUrgent.
          */
-        public Builder callerUid(Long callerUid) {
-            this.putQueryParameter("CallerUid", callerUid);
-            this.callerUid = callerUid;
+        public Builder isUrgent(Boolean isUrgent) {
+            this.putQueryParameter("IsUrgent", isUrgent);
+            this.isUrgent = isUrgent;
             return this;
         }
 
         /**
-         * openGroupId
+         * <p>openGroupId</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAWNN14N</p>
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -174,25 +204,46 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * orderId
+         * <p>pageNo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
-        public Builder orderId(String orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
+        public Builder pageNo(Long pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
             return this;
         }
 
         /**
-         * requestId
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * taskStatus
+         * <p>startTime</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-01 14:09:11</p>
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * <p>taskStatus</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dealingNode</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageSupportInstanceTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageSupportInstanceTypesRequest</p>
  */
 public class DescribeImageSupportInstanceTypesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ActionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionType")
     private String actionType;
 
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeImageSupportInstanceTypesRequest(Builder builder) {
@@ -87,7 +92,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -129,7 +134,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeImageSupportInstanceTypesRequest, Builder> {
         private String sourceRegionId; 
         private String actionType; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String imageId; 
         private Long ownerId; 
         private String regionId; 
@@ -162,11 +167,14 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The scenario in which you want to use the image. Valid values:
-         * <p>
+         * <p>The scenario in which the image is used. Valid values:</p>
+         * <ul>
+         * <li>CreateEcs (default): instance creation</li>
+         * <li>ChangeOS: replacement of the system disk or operating system</li>
+         * </ul>
          * 
-         * - CreateEcs (default): instance creation
-         * - ChangeOS: replacement of the system disk or operating system
+         * <strong>example:</strong>
+         * <p>CreateEcs</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -175,16 +183,19 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the instance type.
+         * <p>The number of vCPUs of the instance type.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-o6w3gy99qf89rkga****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -202,7 +213,11 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * Details about the instance types that are supported by the image.
+         * <p>Details about the instance types that are supported by the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,11 +250,17 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageSupportInstanceTypesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSupportInstanceTypesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filter(Builder builder) {
@@ -274,7 +295,10 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             private String value; 
 
             /**
-             * Filter N used to filter instance types.
+             * <p>Filter N used to filter instance types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imageId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -282,7 +306,10 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-o6w3gy99qf89rkga****</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSingleTaskForAssociatingEnsRequest} extends {@link RequestModel}
  *
  * <p>SaveSingleTaskForAssociatingEnsRequest</p>
  */
 public class SaveSingleTaskForAssociatingEnsRequest extends Request {
-    @Query
-    @NameInMap("Address")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String address;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveSingleTaskForAssociatingEnsRequest(Builder builder) {
@@ -98,7 +98,10 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x1234567890123456789012345678901234567890</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -107,7 +110,10 @@ public class SaveSingleTaskForAssociatingEnsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.luxe</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

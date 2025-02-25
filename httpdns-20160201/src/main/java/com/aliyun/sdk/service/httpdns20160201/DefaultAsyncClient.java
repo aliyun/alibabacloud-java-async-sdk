@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddDomain  AddDomainRequest
+     * @return AddDomainResponse
+     */
     @Override
     public CompletableFuture<AddDomainResponse> addDomain(AddDomainRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomain  DeleteDomainRequest
+     * @return DeleteDomainResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomains  DescribeDomainsRequest
+     * @return DescribeDomainsResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountInfo  GetAccountInfoRequest
+     * @return GetAccountInfoResponse
+     */
     @Override
     public CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResolveCountSummary  GetResolveCountSummaryRequest
+     * @return GetResolveCountSummaryResponse
+     */
     @Override
     public CompletableFuture<GetResolveCountSummaryResponse> getResolveCountSummary(GetResolveCountSummaryRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResolveStatistics  GetResolveStatisticsRequest
+     * @return GetResolveStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetResolveStatisticsResponse> getResolveStatistics(GetResolveStatisticsRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDomains  ListDomainsRequest
+     * @return ListDomainsResponse
+     */
     @Override
     public CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request) {
         try {
@@ -132,6 +160,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RefreshResolveCache  RefreshResolveCacheRequest
+     * @return RefreshResolveCacheResponse
+     */
+    @Override
+    public CompletableFuture<RefreshResolveCacheResponse> refreshResolveCache(RefreshResolveCacheRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshResolveCache").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshResolveCacheResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshResolveCacheResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

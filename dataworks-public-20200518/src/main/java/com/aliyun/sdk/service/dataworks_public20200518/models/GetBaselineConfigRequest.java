@@ -1,25 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBaselineConfigRequest} extends {@link RequestModel}
  *
  * <p>GetBaselineConfigRequest</p>
  */
 public class GetBaselineConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BaselineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long baselineId;
 
     private GetBaselineConfigRequest(Builder builder) {
@@ -70,7 +74,7 @@ public class GetBaselineConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -79,7 +83,11 @@ public class GetBaselineConfigRequest extends Request {
         }
 
         /**
-         * The ID of the baseline. You can call the [GetNode](~~173977~~) operation to obtain the ID.
+         * <p>The baseline ID. You can call the <a href="https://help.aliyun.com/document_detail/173977.html">GetNode</a> operation to query the baseline ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApprovePermissionApplyOrderResponseBody} extends {@link TeaModel}
  *
  * <p>ApprovePermissionApplyOrderResponseBody</p>
  */
 public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
-    @NameInMap("ApproveSuccess")
+    @com.aliyun.core.annotation.NameInMap("ApproveSuccess")
     private Boolean approveSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ApprovePermissionApplyOrderResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates that the approval is successful.
+         * <p>Indicates whether the permission request order is processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder approveSuccess(Boolean approveSuccess) {
             this.approveSuccess = approveSuccess;
@@ -58,7 +66,10 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

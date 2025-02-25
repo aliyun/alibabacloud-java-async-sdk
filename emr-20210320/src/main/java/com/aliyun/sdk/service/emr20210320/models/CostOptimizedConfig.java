@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CostOptimizedConfig} extends {@link TeaModel}
  *
  * <p>CostOptimizedConfig</p>
  */
 public class CostOptimizedConfig extends TeaModel {
-    @NameInMap("OnDemandBaseCapacity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer onDemandBaseCapacity;
 
-    @NameInMap("OnDemandPercentageAboveBaseCapacity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer onDemandPercentageAboveBaseCapacity;
 
-    @NameInMap("SpotInstancePools")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("SpotInstancePools")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer spotInstancePools;
 
     private CostOptimizedConfig(Builder builder) {
@@ -65,7 +70,11 @@ public class CostOptimizedConfig extends TeaModel {
         private Integer spotInstancePools; 
 
         /**
-         * 按量实例个数的最小值。节点组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。
+         * <p>按量实例个数的最小值。节点组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder onDemandBaseCapacity(Integer onDemandBaseCapacity) {
             this.onDemandBaseCapacity = onDemandBaseCapacity;
@@ -73,7 +82,11 @@ public class CostOptimizedConfig extends TeaModel {
         }
 
         /**
-         * 节点组满足最小按量实例OnDemandBaseCapacity要求后，超出的实例中按量实例应占的比例，取值范围：0～100。
+         * <p>节点组满足最小按量实例OnDemandBaseCapacity要求后，超出的实例中按量实例应占的比例，取值范围：0～100。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder onDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
             this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -81,7 +94,11 @@ public class CostOptimizedConfig extends TeaModel {
         }
 
         /**
-         * 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：0~10。
+         * <p>指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：0~10。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder spotInstancePools(Integer spotInstancePools) {
             this.spotInstancePools = spotInstancePools;

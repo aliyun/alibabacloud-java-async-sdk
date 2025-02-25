@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRulesRequest} extends {@link RequestModel}
  *
  * <p>ListRulesRequest</p>
  */
 public class ListRulesRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("ListenerIds")
-    private java.util.List < String > listenerIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerIds")
+    private java.util.List<String> listenerIds;
 
-    @Query
-    @NameInMap("LoadBalancerIds")
-    private java.util.List < String > loadBalancerIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
+    private java.util.List<String> loadBalancerIds;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RuleIds")
-    private java.util.List < String > ruleIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
+    private java.util.List<String> ruleIds;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ListRulesRequest(Builder builder) {
         super(builder);
@@ -74,14 +79,14 @@ public class ListRulesRequest extends Request {
     /**
      * @return listenerIds
      */
-    public java.util.List < String > getListenerIds() {
+    public java.util.List<String> getListenerIds() {
         return this.listenerIds;
     }
 
     /**
      * @return loadBalancerIds
      */
-    public java.util.List < String > getLoadBalancerIds() {
+    public java.util.List<String> getLoadBalancerIds() {
         return this.loadBalancerIds;
     }
 
@@ -102,25 +107,25 @@ public class ListRulesRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < String > getRuleIds() {
+    public java.util.List<String> getRuleIds() {
         return this.ruleIds;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListRulesRequest, Builder> {
         private String direction; 
-        private java.util.List < String > listenerIds; 
-        private java.util.List < String > loadBalancerIds; 
+        private java.util.List<String> listenerIds; 
+        private java.util.List<String> loadBalancerIds; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > ruleIds; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> ruleIds; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -138,13 +143,17 @@ public class ListRulesRequest extends Request {
         } 
 
         /**
-         * The direction to which the forwarding rule is applied. Valid values:
-         * <p>
+         * <p>The direction to which the forwarding rule is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>Request</strong> (default): The forwarding rule is applied to the client requests received by ALB.</li>
+         * <li><strong>Response</strong>: The forwarding rule is applied to the responses returned by backend servers.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You cannot set this parameter to Response if you use basic ALB instances.</p>
+         * </blockquote>
          * 
-         * *   **Request** (default): The forwarding rule is applied to the client requests received by ALB.
-         * *   **Response**: The forwarding rule is applied to the responses returned by backend servers.
-         * 
-         * > You cannot set this parameter to Response if you use basic ALB instances.
+         * <strong>example:</strong>
+         * <p>Request</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -153,32 +162,33 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * The listener IDs.
+         * <p>The listener IDs.</p>
          */
-        public Builder listenerIds(java.util.List < String > listenerIds) {
+        public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
             this.listenerIds = listenerIds;
             return this;
         }
 
         /**
-         * The Application Load Balancer (ALB) instance IDs.
+         * <p>The Application Load Balancer (ALB) instance IDs.</p>
          */
-        public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
+        public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
             this.loadBalancerIds = loadBalancerIds;
             return this;
         }
 
         /**
-         * The maximum number of entries to return.
-         * <p>
+         * <p>The maximum number of entries to return.</p>
+         * <p>Valid values: <strong>1 to 100</strong>.</p>
+         * <p>Default value: <strong>20</strong>. If you do not specify this parameter, the default value is used.</p>
+         * <blockquote>
+         * <p>This parameter is optional.</p>
+         * </blockquote>
          * 
-         * Valid values: **1 to 100**.
-         * 
-         * Default value: **20**. If you do not specify this parameter, the default value is used.
-         * 
-         * > This parameter is optional.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -187,7 +197,10 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * The starting point of the current query. If you do not specify this parameter, the query starts from the beginning.
+         * <p>The starting point of the current query. If you do not specify this parameter, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -196,18 +209,18 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * The forwarding rules.
+         * <p>The forwarding rules.</p>
          */
-        public Builder ruleIds(java.util.List < String > ruleIds) {
+        public Builder ruleIds(java.util.List<String> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
             return this;
         }
 
         /**
-         * Tag.
+         * <p>The tag.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -220,11 +233,17 @@ public class ListRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListRulesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -259,7 +278,10 @@ public class ListRulesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -267,7 +289,10 @@ public class ListRulesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

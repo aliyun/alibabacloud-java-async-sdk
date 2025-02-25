@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateClusterWithTemplateRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("ClusterName")
     private String clusterName;
 
@@ -35,6 +39,7 @@ public class CreateClusterWithTemplateRequest extends Request {
 
     private CreateClusterWithTemplateRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.clusterName = builder.clusterName;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -53,6 +58,13 @@ public class CreateClusterWithTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -91,6 +103,7 @@ public class CreateClusterWithTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateClusterWithTemplateRequest, Builder> {
+        private String clientToken; 
         private String clusterName; 
         private String resourceGroupId; 
         private Long resourceOwnerId; 
@@ -101,14 +114,24 @@ public class CreateClusterWithTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateClusterWithTemplateRequest response) {
-            super(response);
-            this.clusterName = response.clusterName;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.templateBizId = response.templateBizId;
-            this.uniqueTag = response.uniqueTag;
+        private Builder(CreateClusterWithTemplateRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.clusterName = request.clusterName;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.templateBizId = request.templateBizId;
+            this.uniqueTag = request.uniqueTag;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * ClusterName.

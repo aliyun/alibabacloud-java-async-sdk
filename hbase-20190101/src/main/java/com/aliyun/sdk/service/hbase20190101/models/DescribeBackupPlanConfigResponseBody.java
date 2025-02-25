@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPlanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPlanConfigResponseBody</p>
  */
 public class DescribeBackupPlanConfigResponseBody extends TeaModel {
-    @NameInMap("FullBackupCycle")
+    @com.aliyun.core.annotation.NameInMap("FullBackupCycle")
     private Integer fullBackupCycle;
 
-    @NameInMap("MinHFileBackupCount")
+    @com.aliyun.core.annotation.NameInMap("MinHFileBackupCount")
     private Integer minHFileBackupCount;
 
-    @NameInMap("NextFullBackupDate")
+    @com.aliyun.core.annotation.NameInMap("NextFullBackupDate")
     private String nextFullBackupDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tables")
+    @com.aliyun.core.annotation.NameInMap("Tables")
     private Tables tables;
 
     private DescribeBackupPlanConfigResponseBody(Builder builder) {
@@ -131,9 +136,15 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPlanConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPlanConfigResponseBody</p>
+     */
     public static class Tables extends TeaModel {
-        @NameInMap("Table")
-        private java.util.List < String > table;
+        @com.aliyun.core.annotation.NameInMap("Table")
+        private java.util.List<String> table;
 
         private Tables(Builder builder) {
             this.table = builder.table;
@@ -150,17 +161,17 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < String > getTable() {
+        public java.util.List<String> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < String > table; 
+            private java.util.List<String> table; 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < String > table) {
+            public Builder table(java.util.List<String> table) {
                 this.table = table;
                 return this;
             }

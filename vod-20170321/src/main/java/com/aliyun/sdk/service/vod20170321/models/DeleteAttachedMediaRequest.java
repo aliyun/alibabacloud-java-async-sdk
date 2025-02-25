@@ -1,19 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAttachedMediaRequest} extends {@link RequestModel}
  *
  * <p>DeleteAttachedMediaRequest</p>
  */
 public class DeleteAttachedMediaRequest extends Request {
-    @Query
-    @NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
     private DeleteAttachedMediaRequest(Builder builder) {
@@ -54,11 +60,15 @@ public class DeleteAttachedMediaRequest extends Request {
         } 
 
         /**
-         * The list of auxiliary media asset IDs.
-         * <p>
+         * <p>The ID of the auxiliary media asset that you want to delete.</p>
+         * <ul>
+         * <li>Separate multiple IDs with commas (,). You can specify up to 20 IDs.</li>
+         * <li>You can obtain the ID from the response to the <a href="~~CreateUploadAttachedMedia~~">CreateUploadAttachedMedia</a> operation that you call to obtain the upload URL and credential.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Separate multiple IDs with commas (,).
-         * *   A maximum of 20 IDs can be specified.
+         * <strong>example:</strong>
+         * <p>8bc8e94fe4e55abde85718****,eb186180e989dd56****</p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRealtimeInstanceStatesResponseBody} extends {@link TeaModel}
  *
  * <p>GetRealtimeInstanceStatesResponseBody</p>
  */
 public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRealtimeInstanceStatesResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRealtimeInstanceStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRealtimeInstanceStatesResponseBody</p>
+     */
     public static class BreakCodeDetailList extends TeaModel {
-        @NameInMap("BreakCode")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
         private BreakCodeDetailList(Builder builder) {
@@ -192,38 +203,44 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRealtimeInstanceStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRealtimeInstanceStatesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BreakCodeDetailList")
-        private java.util.List < BreakCodeDetailList> breakCodeDetailList;
+        @com.aliyun.core.annotation.NameInMap("BreakCodeDetailList")
+        private java.util.List<BreakCodeDetailList> breakCodeDetailList;
 
-        @NameInMap("BreakingAgents")
+        @com.aliyun.core.annotation.NameInMap("BreakingAgents")
         private Long breakingAgents;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InteractiveCalls")
+        @com.aliyun.core.annotation.NameInMap("InteractiveCalls")
         private Long interactiveCalls;
 
-        @NameInMap("LoggedInAgents")
+        @com.aliyun.core.annotation.NameInMap("LoggedInAgents")
         private Long loggedInAgents;
 
-        @NameInMap("LongestWaitingTime")
+        @com.aliyun.core.annotation.NameInMap("LongestWaitingTime")
         private Long longestWaitingTime;
 
-        @NameInMap("ReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("ReadyAgents")
         private Long readyAgents;
 
-        @NameInMap("TalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("TalkingAgents")
         private Long talkingAgents;
 
-        @NameInMap("TotalAgents")
+        @com.aliyun.core.annotation.NameInMap("TotalAgents")
         private Long totalAgents;
 
-        @NameInMap("WaitingCalls")
+        @com.aliyun.core.annotation.NameInMap("WaitingCalls")
         private Long waitingCalls;
 
-        @NameInMap("WorkingAgents")
+        @com.aliyun.core.annotation.NameInMap("WorkingAgents")
         private Long workingAgents;
 
         private Data(Builder builder) {
@@ -251,7 +268,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         /**
          * @return breakCodeDetailList
          */
-        public java.util.List < BreakCodeDetailList> getBreakCodeDetailList() {
+        public java.util.List<BreakCodeDetailList> getBreakCodeDetailList() {
             return this.breakCodeDetailList;
         }
 
@@ -326,7 +343,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BreakCodeDetailList> breakCodeDetailList; 
+            private java.util.List<BreakCodeDetailList> breakCodeDetailList; 
             private Long breakingAgents; 
             private String instanceId; 
             private Long interactiveCalls; 
@@ -341,7 +358,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             /**
              * BreakCodeDetailList.
              */
-            public Builder breakCodeDetailList(java.util.List < BreakCodeDetailList> breakCodeDetailList) {
+            public Builder breakCodeDetailList(java.util.List<BreakCodeDetailList> breakCodeDetailList) {
                 this.breakCodeDetailList = breakCodeDetailList;
                 return this;
             }

@@ -1,84 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterMulticastGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterMulticastGroupsRequest</p>
  */
 public class ListTransitRouterMulticastGroupsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("GroupIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIpAddress")
     private String groupIpAddress;
 
-    @Query
-    @NameInMap("IsGroupMember")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsGroupMember")
     private Boolean isGroupMember;
 
-    @Query
-    @NameInMap("IsGroupSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsGroupSource")
     private Boolean isGroupSource;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NetworkInterfaceIds")
-    private java.util.List < String > networkInterfaceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+    private java.util.List<String> networkInterfaceIds;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerTransitRouterMulticastDomains")
-    private java.util.List < String > peerTransitRouterMulticastDomains;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerTransitRouterMulticastDomains")
+    private java.util.List<String> peerTransitRouterMulticastDomains;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
     private String transitRouterMulticastDomainId;
 
-    @Query
-    @NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
 
     private ListTransitRouterMulticastGroupsRequest(Builder builder) {
         super(builder);
@@ -152,7 +157,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
@@ -180,7 +185,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
     /**
      * @return peerTransitRouterMulticastDomains
      */
-    public java.util.List < String > getPeerTransitRouterMulticastDomains() {
+    public java.util.List<String> getPeerTransitRouterMulticastDomains() {
         return this.peerTransitRouterMulticastDomains;
     }
 
@@ -229,7 +234,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -239,18 +244,18 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         private Boolean isGroupMember; 
         private Boolean isGroupSource; 
         private Long maxResults; 
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > peerTransitRouterMulticastDomains; 
+        private java.util.List<String> peerTransitRouterMulticastDomains; 
         private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
         private String transitRouterAttachmentId; 
         private String transitRouterMulticastDomainId; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
 
         private Builder() {
             super();
@@ -278,10 +283,11 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -290,10 +296,11 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The IP address of the multicast group.
-         * <p>
+         * <p>The IP address of the multicast group.</p>
+         * <p>Each multicast group is identified by its IP address.</p>
          * 
-         * Each multicast group is identified by its IP address.
+         * <strong>example:</strong>
+         * <p>239.XX.XX.2</p>
          */
         public Builder groupIpAddress(String groupIpAddress) {
             this.putQueryParameter("GroupIpAddress", groupIpAddress);
@@ -302,15 +309,21 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * Specified whether to query the multicast members. Valid values:
-         * <p>
+         * <p>Specified whether to query the multicast members. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter must be specified together with the IsGroupMember parameter.</li>
+         * <li>If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</li>
+         * <li>If you set only one of them or both of them, the specified values prevail.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **false**: no
-         * *   **true**: yes
-         * 
-         * >- This parameter can be set together with the IsGroupMember parameter.
-         * >- If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
-         * >- If you set only one of them or both of them, the specified values prevail.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isGroupMember(Boolean isGroupMember) {
             this.putQueryParameter("IsGroupMember", isGroupMember);
@@ -319,15 +332,23 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the multicast sources. Valid values:
-         * <p>
+         * <p>Specifies whether to query the multicast sources. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter must be specified together with the IsGroupMember parameter.</li>
+         * </ul>
+         * <ul>
+         * <li>If you do not specify IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</li>
+         * <li>If you specify only one of them or both of them, the specified values prevail.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **false**: no
-         * *   **true**: yes
-         * 
-         * >- This parameter can be set together with the IsGroupMember parameter.
-         * >- If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.
-         * >- If you set only one of them or both of them, the specified values prevail.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isGroupSource(Boolean isGroupSource) {
             this.putQueryParameter("IsGroupSource", isGroupSource);
@@ -336,7 +357,10 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -345,20 +369,23 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of ENIs.
+         * <p>The IDs of ENIs.</p>
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -385,16 +412,19 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the inter-region multicast domain.
+         * <p>The ID of the inter-region multicast domain.</p>
          */
-        public Builder peerTransitRouterMulticastDomains(java.util.List < String > peerTransitRouterMulticastDomains) {
+        public Builder peerTransitRouterMulticastDomains(java.util.List<String> peerTransitRouterMulticastDomains) {
             this.putQueryParameter("PeerTransitRouterMulticastDomains", peerTransitRouterMulticastDomains);
             this.peerTransitRouterMulticastDomains = peerTransitRouterMulticastDomains;
             return this;
         }
 
         /**
-         * The ID of the resource associated with the multicast resource.
+         * <p>The ID of the resource associated with the multicast resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-p0w9alkte4w2htrqe****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -421,11 +451,14 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The type of the multicast resource. Valid values:
-         * <p>
+         * <p>The type of the multicast resource. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: queries multicast resources by VPC.</li>
+         * <li><strong>TR</strong>: queries multicast resources that are also deployed in a different region.</li>
+         * </ul>
          * 
-         * *   **VPC**: queries multicast resources by VPC.
-         * *   **TR**: queries multicast resources that are also deployed in a different region.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -434,7 +467,11 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection.
+         * <p>The ID of the network instance connection</p>
+         * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-g3kz2k3u76amsk****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -443,7 +480,11 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the multicast domain.
+         * <p>The ID of the multicast domain.</p>
+         * <p>You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-mcast-domain-5mjb5gjb6dgu98****</p>
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);
@@ -452,9 +493,9 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The vSwitch IDs.
+         * <p>The vSwitch IDs.</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;

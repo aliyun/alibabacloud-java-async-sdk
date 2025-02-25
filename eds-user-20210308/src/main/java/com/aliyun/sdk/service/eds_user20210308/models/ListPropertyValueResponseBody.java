@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPropertyValueResponseBody} extends {@link TeaModel}
  *
  * <p>ListPropertyValueResponseBody</p>
  */
 public class ListPropertyValueResponseBody extends TeaModel {
-    @NameInMap("PropertyValueInfos")
-    private java.util.List < PropertyValueInfos> propertyValueInfos;
+    @com.aliyun.core.annotation.NameInMap("PropertyValueInfos")
+    private java.util.List<PropertyValueInfos> propertyValueInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPropertyValueResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
     /**
      * @return propertyValueInfos
      */
-    public java.util.List < PropertyValueInfos> getPropertyValueInfos() {
+    public java.util.List<PropertyValueInfos> getPropertyValueInfos() {
         return this.propertyValueInfos;
     }
 
@@ -46,19 +51,22 @@ public class ListPropertyValueResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PropertyValueInfos> propertyValueInfos; 
+        private java.util.List<PropertyValueInfos> propertyValueInfos; 
         private String requestId; 
 
         /**
-         * Details about property values.
+         * <p>Details about property values.</p>
          */
-        public Builder propertyValueInfos(java.util.List < PropertyValueInfos> propertyValueInfos) {
+        public Builder propertyValueInfos(java.util.List<PropertyValueInfos> propertyValueInfos) {
             this.propertyValueInfos = propertyValueInfos;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C52013A5-3422-5D1F-B22C-A57110972AD9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListPropertyValueResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPropertyValueResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPropertyValueResponseBody</p>
+     */
     public static class PropertyValueInfos extends TeaModel {
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
-        @NameInMap("PropertyValueId")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueId")
         private Long propertyValueId;
 
         private PropertyValueInfos(Builder builder) {
@@ -110,7 +124,10 @@ public class ListPropertyValueResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * The value of the property.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HR</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -118,7 +135,10 @@ public class ListPropertyValueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property value.
+             * <p>The ID of the property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>978</p>
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;

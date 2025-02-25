@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCheckInstanceResultRequest} extends {@link RequestModel}
  *
  * <p>VerifyCheckInstanceResultRequest</p>
  */
 public class VerifyCheckInstanceResultRequest extends Request {
-    @Query
-    @NameInMap("CheckId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckId")
     private Long checkId;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
     private VerifyCheckInstanceResultRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class VerifyCheckInstanceResultRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     public static final class Builder extends Request.Builder<VerifyCheckInstanceResultRequest, Builder> {
         private Long checkId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
 
         private Builder() {
             super();
@@ -68,10 +73,13 @@ public class VerifyCheckInstanceResultRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
-         * <p>
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          * 
-         * > You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -80,9 +88,9 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The instance IDs of the assets on which risks are detected based on the check item.
+         * <p>The instance IDs of the assets on which risks are detected based on the check item.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

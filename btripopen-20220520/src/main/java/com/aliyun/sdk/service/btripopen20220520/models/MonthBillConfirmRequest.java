@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MonthBillConfirmRequest} extends {@link RequestModel}
  *
  * <p>MonthBillConfirmRequest</p>
  */
 public class MonthBillConfirmRequest extends Request {
-    @Body
-    @NameInMap("mail_bill_date")
-    @Validation(required = true, maximum = 99999999, minimum = 20000101)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mail_bill_date")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999, minimum = 20000101)
     private Integer mailBillDate;
 
-    @Body
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private MonthBillConfirmRequest(Builder builder) {
@@ -83,7 +88,10 @@ public class MonthBillConfirmRequest extends Request {
         } 
 
         /**
-         * mail_bill_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20221001</p>
          */
         public Builder mailBillDate(Integer mailBillDate) {
             this.putBodyParameter("mail_bill_date", mailBillDate);

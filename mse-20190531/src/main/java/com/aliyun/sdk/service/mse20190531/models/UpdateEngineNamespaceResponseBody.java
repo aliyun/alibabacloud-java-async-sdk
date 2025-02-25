@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEngineNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEngineNamespaceResponseBody</p>
  */
 public class UpdateEngineNamespaceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateEngineNamespaceResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +99,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,23 +152,29 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateEngineNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateEngineNamespaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConfigCount")
+        @com.aliyun.core.annotation.NameInMap("ConfigCount")
         private Integer configCount;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NamespaceDesc")
+        @com.aliyun.core.annotation.NameInMap("NamespaceDesc")
         private String namespaceDesc;
 
-        @NameInMap("NamespaceShowName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceShowName")
         private String namespaceShowName;
 
-        @NameInMap("Quota")
+        @com.aliyun.core.annotation.NameInMap("Quota")
         private Integer quota;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Data(Builder builder) {
@@ -222,7 +245,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The quota value.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configCount(Integer configCount) {
                 this.configCount = configCount;
@@ -230,7 +256,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -238,7 +267,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytest</p>
              */
             public Builder namespaceDesc(String namespaceDesc) {
                 this.namespaceDesc = namespaceDesc;
@@ -246,7 +278,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the namespace.
+             * <p>The display name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytestshowname</p>
              */
             public Builder namespaceShowName(String namespaceShowName) {
                 this.namespaceShowName = namespaceShowName;
@@ -254,7 +289,10 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The quota of configurations.
+             * <p>The quota of configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quota(Integer quota) {
                 this.quota = quota;
@@ -262,12 +300,15 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the namespace. Valid values:
-             * <p>
+             * <p>The type of the namespace. Valid values:</p>
+             * <ul>
+             * <li><code>0</code>: global configuration</li>
+             * <li><code>1</code>: default namespace</li>
+             * <li><code>2</code>: custom namespace</li>
+             * </ul>
              * 
-             * *   `0`: global configuration
-             * *   `1`: default namespace
-             * *   `2`: custom namespace
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateAvailableZoneResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateAvailableZoneResponseBody</p>
  */
 public class MigrateAvailableZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private MigrateAvailableZoneResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class MigrateAvailableZoneResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FDDC511-7252-4A4A-ADDA-5CB1BF63****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

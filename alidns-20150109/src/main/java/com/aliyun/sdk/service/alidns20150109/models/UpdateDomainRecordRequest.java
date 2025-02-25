@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainRecordRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainRecordRequest</p>
  */
 public class UpdateDomainRecordRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Long priority;
 
-    @Query
-    @NameInMap("RR")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RR")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rr;
 
-    @Query
-    @NameInMap("RecordId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordId;
 
-    @Query
-    @NameInMap("TTL")
-    @Validation(maximum = 86400, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TTL")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
     private Long TTL;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private UpdateDomainRecordRequest(Builder builder) {
@@ -172,7 +177,10 @@ public class UpdateDomainRecordRequest extends Request {
         } 
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -181,7 +189,12 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The resolution line. Default value: **default**.
+         * <p>The resolution line. Default value: <strong>default</strong>.</p>
+         * <p>For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS resolution lines</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -190,10 +203,11 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The priority of an MX-type DNS record. Valid values: `[1,50]`.
-         * <p>
+         * <p>The priority of the mail exchanger (MX) record. Valid values: <code>1 to 50</code>.</p>
+         * <p>This parameter is required if the type of the DNS record is MX.</p>
          * 
-         * This parameter must be specified if the type of the DNS record is MX.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Long priority) {
             this.putQueryParameter("Priority", priority);
@@ -202,10 +216,12 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The host record.
-         * <p>
+         * <p>The hostname.</p>
+         * <p>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder rr(String rr) {
             this.putQueryParameter("RR", rr);
@@ -214,7 +230,11 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -223,7 +243,12 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The TTL of the resolution. Default value: 600. Unit: seconds.
+         * <p>The time to live (TTL) period of the Alibaba Cloud DNS (DNS) record. Default value: 600. Unit: seconds.</p>
+         * <p>For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder TTL(Long TTL) {
             this.putQueryParameter("TTL", TTL);
@@ -232,7 +257,12 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The type of the DNS record.
+         * <p>The type of the DNS record. For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -241,7 +271,10 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -250,7 +283,11 @@ public class UpdateDomainRecordRequest extends Request {
         }
 
         /**
-         * The value of the DNS record.
+         * <p>The record value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.254</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

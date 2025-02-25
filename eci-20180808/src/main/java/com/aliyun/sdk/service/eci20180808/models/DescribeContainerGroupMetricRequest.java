@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupMetricRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerGroupMetricRequest</p>
  */
 public class DescribeContainerGroupMetricRequest extends Request {
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeContainerGroupMetricRequest(Builder builder) {
@@ -167,7 +167,11 @@ public class DescribeContainerGroupMetricRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp17da5olmkuagfr****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -176,10 +180,11 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The default value is the current time.
-         * <p>
+         * <p>The end of the time range to query. The default value is the current time.</p>
+         * <p>Specify the time in RFC 3339 format.</p>
          * 
-         * Specify the time in RFC 3339 format.
+         * <strong>example:</strong>
+         * <p>2019-09-12T01:05:00.000Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -206,10 +211,13 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The data aggregation period. Unit: seconds. Valid values: 15, 30, 60, and 600. Default value: 60.
-         * <p>
+         * <p>The data aggregation period. Unit: seconds. Valid values: 15, 30, 60, and 600. Default value: 60.</p>
+         * <blockquote>
+         * <p> If the StartTime and EndTime parameters are not specified, the system returns the monitoring data generated in the last 5 minutes with a data aggregation period of 15s. The Period parameter is ignored.</p>
+         * </blockquote>
          * 
-         * >  If the StartTime and EndTime parameters are not specified, the system returns the monitoring data generated in the last 5 minutes with a data aggregation period of 15s. The Period parameter is ignored.
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -218,7 +226,10 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -245,10 +256,11 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The beginning of the time range must be a time point in the last 30 days. The default value is 5 minutes before the value of EndTime.
-         * <p>
+         * <p>The beginning of the time range to query. The beginning of the time range must be a time point in the last 30 days. The default value is 5 minutes before the value of EndTime.</p>
+         * <p>Specify the time in RFC 3339 format. For example, to query the data starting from March 12, 2019, 09:00 UTC+8, you can set the parameter to 2019-03-12T09:00:00.000+08:00 or 2019-03-12T01:00:00.000Z.</p>
          * 
-         * Specify the time in RFC 3339 format. For example, to query the data starting from March 12, 2019, 09:00 UTC+8, you can set the parameter to 2019-03-12T09:00:00.000+08:00 or 2019-03-12T01:00:00.000Z.
+         * <strong>example:</strong>
+         * <p>2019-03-12T01:00:00.000Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

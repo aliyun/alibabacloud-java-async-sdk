@@ -1,125 +1,150 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobResponseBody</p>
  */
 public class GetJobResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("CodeSource")
+    @com.aliyun.core.annotation.NameInMap("CodeSource")
     private CodeSource codeSource;
 
-    @NameInMap("DataSources")
-    private java.util.List < DataSources> dataSources;
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DataSources")
+    private java.util.List<DataSources> dataSources;
+
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Long duration;
 
-    @NameInMap("ElasticSpec")
+    @com.aliyun.core.annotation.NameInMap("ElasticSpec")
     private JobElasticSpec elasticSpec;
 
-    @NameInMap("EnabledDebugger")
+    @com.aliyun.core.annotation.NameInMap("EnabledDebugger")
     private Boolean enabledDebugger;
 
-    @NameInMap("Envs")
-    private java.util.Map < String, String > envs;
+    @com.aliyun.core.annotation.NameInMap("Envs")
+    private java.util.Map<String, String> envs;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtFailedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtFailedTime")
     private String gmtFailedTime;
 
-    @NameInMap("GmtFinishTime")
+    @com.aliyun.core.annotation.NameInMap("GmtFinishTime")
     private String gmtFinishTime;
 
-    @NameInMap("GmtRunningTime")
+    @com.aliyun.core.annotation.NameInMap("GmtRunningTime")
     private String gmtRunningTime;
 
-    @NameInMap("GmtStoppedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStoppedTime")
     private String gmtStoppedTime;
 
-    @NameInMap("GmtSubmittedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtSubmittedTime")
     private String gmtSubmittedTime;
 
-    @NameInMap("GmtSuccessedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtSuccessedTime")
     private String gmtSuccessedTime;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobSpecs")
-    private java.util.List < JobSpec > jobSpecs;
+    @com.aliyun.core.annotation.NameInMap("JobSpecs")
+    private java.util.List<JobSpec> jobSpecs;
 
-    @NameInMap("JobType")
+    @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
-    @NameInMap("Pods")
-    private java.util.List < Pods> pods;
+    @com.aliyun.core.annotation.NameInMap("Pods")
+    private java.util.List<Pods> pods;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceLevel")
+    @com.aliyun.core.annotation.NameInMap("ResourceLevel")
     private String resourceLevel;
 
-    @NameInMap("RestartTimes")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.NameInMap("RestartTimes")
     private String restartTimes;
 
-    @NameInMap("Settings")
+    @com.aliyun.core.annotation.NameInMap("Settings")
     private JobSettings settings;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SubStatus")
+    @com.aliyun.core.annotation.NameInMap("StatusHistory")
+    private java.util.List<StatusTransitionItem> statusHistory;
+
+    @com.aliyun.core.annotation.NameInMap("SubStatus")
     private String subStatus;
 
-    @NameInMap("ThirdpartyLibDir")
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
+    @com.aliyun.core.annotation.NameInMap("ThirdpartyLibDir")
     private String thirdpartyLibDir;
 
-    @NameInMap("ThirdpartyLibs")
-    private java.util.List < String > thirdpartyLibs;
+    @com.aliyun.core.annotation.NameInMap("ThirdpartyLibs")
+    private java.util.List<String> thirdpartyLibs;
 
-    @NameInMap("UserCommand")
+    @com.aliyun.core.annotation.NameInMap("UserCommand")
     private String userCommand;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
+    private UserVpc userVpc;
+
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
     private GetJobResponseBody(Builder builder) {
+        this.accessibility = builder.accessibility;
         this.clusterId = builder.clusterId;
         this.codeSource = builder.codeSource;
+        this.credentialConfig = builder.credentialConfig;
         this.dataSources = builder.dataSources;
         this.displayName = builder.displayName;
         this.duration = builder.duration;
@@ -143,14 +168,18 @@ public class GetJobResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
         this.resourceLevel = builder.resourceLevel;
+        this.resourceType = builder.resourceType;
         this.restartTimes = builder.restartTimes;
         this.settings = builder.settings;
         this.status = builder.status;
+        this.statusHistory = builder.statusHistory;
         this.subStatus = builder.subStatus;
+        this.tenantId = builder.tenantId;
         this.thirdpartyLibDir = builder.thirdpartyLibDir;
         this.thirdpartyLibs = builder.thirdpartyLibs;
         this.userCommand = builder.userCommand;
         this.userId = builder.userId;
+        this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
         this.workspaceName = builder.workspaceName;
     }
@@ -161,6 +190,13 @@ public class GetJobResponseBody extends TeaModel {
 
     public static GetJobResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -178,9 +214,16 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
+    }
+
+    /**
      * @return dataSources
      */
-    public java.util.List < DataSources> getDataSources() {
+    public java.util.List<DataSources> getDataSources() {
         return this.dataSources;
     }
 
@@ -215,7 +258,7 @@ public class GetJobResponseBody extends TeaModel {
     /**
      * @return envs
      */
-    public java.util.Map < String, String > getEnvs() {
+    public java.util.Map<String, String> getEnvs() {
         return this.envs;
     }
 
@@ -278,7 +321,7 @@ public class GetJobResponseBody extends TeaModel {
     /**
      * @return jobSpecs
      */
-    public java.util.List < JobSpec > getJobSpecs() {
+    public java.util.List<JobSpec> getJobSpecs() {
         return this.jobSpecs;
     }
 
@@ -292,7 +335,7 @@ public class GetJobResponseBody extends TeaModel {
     /**
      * @return pods
      */
-    public java.util.List < Pods> getPods() {
+    public java.util.List<Pods> getPods() {
         return this.pods;
     }
 
@@ -339,6 +382,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return restartTimes
      */
     public String getRestartTimes() {
@@ -360,10 +410,24 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return statusHistory
+     */
+    public java.util.List<StatusTransitionItem> getStatusHistory() {
+        return this.statusHistory;
+    }
+
+    /**
      * @return subStatus
      */
     public String getSubStatus() {
         return this.subStatus;
+    }
+
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     /**
@@ -376,7 +440,7 @@ public class GetJobResponseBody extends TeaModel {
     /**
      * @return thirdpartyLibs
      */
-    public java.util.List < String > getThirdpartyLibs() {
+    public java.util.List<String> getThirdpartyLibs() {
         return this.thirdpartyLibs;
     }
 
@@ -395,6 +459,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return userVpc
+     */
+    public UserVpc getUserVpc() {
+        return this.userVpc;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -409,14 +480,16 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessibility; 
         private String clusterId; 
         private CodeSource codeSource; 
-        private java.util.List < DataSources> dataSources; 
+        private CredentialConfig credentialConfig; 
+        private java.util.List<DataSources> dataSources; 
         private String displayName; 
         private Long duration; 
         private JobElasticSpec elasticSpec; 
         private Boolean enabledDebugger; 
-        private java.util.Map < String, String > envs; 
+        private java.util.Map<String, String> envs; 
         private String gmtCreateTime; 
         private String gmtFailedTime; 
         private String gmtFinishTime; 
@@ -425,25 +498,37 @@ public class GetJobResponseBody extends TeaModel {
         private String gmtSubmittedTime; 
         private String gmtSuccessedTime; 
         private String jobId; 
-        private java.util.List < JobSpec > jobSpecs; 
+        private java.util.List<JobSpec> jobSpecs; 
         private String jobType; 
-        private java.util.List < Pods> pods; 
+        private java.util.List<Pods> pods; 
         private Integer priority; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
         private String resourceId; 
         private String resourceLevel; 
+        private String resourceType; 
         private String restartTimes; 
         private JobSettings settings; 
         private String status; 
+        private java.util.List<StatusTransitionItem> statusHistory; 
         private String subStatus; 
+        private String tenantId; 
         private String thirdpartyLibDir; 
-        private java.util.List < String > thirdpartyLibs; 
+        private java.util.List<String> thirdpartyLibs; 
         private String userCommand; 
         private String userId; 
+        private UserVpc userVpc; 
         private String workspaceId; 
         private String workspaceName; 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * ClusterId.
@@ -462,9 +547,17 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.credentialConfig = credentialConfig;
+            return this;
+        }
+
+        /**
          * DataSources.
          */
-        public Builder dataSources(java.util.List < DataSources> dataSources) {
+        public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
             return this;
         }
@@ -504,7 +597,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * Envs.
          */
-        public Builder envs(java.util.Map < String, String > envs) {
+        public Builder envs(java.util.Map<String, String> envs) {
             this.envs = envs;
             return this;
         }
@@ -576,7 +669,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * JobSpecs.
          */
-        public Builder jobSpecs(java.util.List < JobSpec > jobSpecs) {
+        public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.jobSpecs = jobSpecs;
             return this;
         }
@@ -592,7 +685,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * Pods.
          */
-        public Builder pods(java.util.List < Pods> pods) {
+        public Builder pods(java.util.List<Pods> pods) {
             this.pods = pods;
             return this;
         }
@@ -646,6 +739,14 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
          * RestartTimes.
          */
         public Builder restartTimes(String restartTimes) {
@@ -670,10 +771,26 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * StatusHistory.
+         */
+        public Builder statusHistory(java.util.List<StatusTransitionItem> statusHistory) {
+            this.statusHistory = statusHistory;
+            return this;
+        }
+
+        /**
          * SubStatus.
          */
         public Builder subStatus(String subStatus) {
             this.subStatus = subStatus;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
 
@@ -688,7 +805,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * ThirdpartyLibs.
          */
-        public Builder thirdpartyLibs(java.util.List < String > thirdpartyLibs) {
+        public Builder thirdpartyLibs(java.util.List<String> thirdpartyLibs) {
             this.thirdpartyLibs = thirdpartyLibs;
             return this;
         }
@@ -706,6 +823,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder userId(String userId) {
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * UserVpc.
+         */
+        public Builder userVpc(UserVpc userVpc) {
+            this.userVpc = userVpc;
             return this;
         }
 
@@ -731,17 +856,23 @@ public class GetJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class CodeSource extends TeaModel {
-        @NameInMap("Branch")
+        @com.aliyun.core.annotation.NameInMap("Branch")
         private String branch;
 
-        @NameInMap("CodeSourceId")
+        @com.aliyun.core.annotation.NameInMap("CodeSourceId")
         private String codeSourceId;
 
-        @NameInMap("Commit")
+        @com.aliyun.core.annotation.NameInMap("Commit")
         private String commit;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         private CodeSource(Builder builder) {
@@ -832,14 +963,20 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class DataSources extends TeaModel {
-        @NameInMap("DataSourceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private String dataSourceId;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private DataSources(Builder builder) {
@@ -913,35 +1050,41 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class HistoryPods extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtFinishTime")
+        @com.aliyun.core.annotation.NameInMap("GmtFinishTime")
         private String gmtFinishTime;
 
-        @NameInMap("GmtStartTime")
+        @com.aliyun.core.annotation.NameInMap("GmtStartTime")
         private String gmtStartTime;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("PodId")
+        @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
 
-        @NameInMap("PodUid")
+        @com.aliyun.core.annotation.NameInMap("PodUid")
         private String podUid;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubStatus")
+        @com.aliyun.core.annotation.NameInMap("SubStatus")
         private String subStatus;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private HistoryPods(Builder builder) {
@@ -1134,38 +1277,44 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class Pods extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtFinishTime")
+        @com.aliyun.core.annotation.NameInMap("GmtFinishTime")
         private String gmtFinishTime;
 
-        @NameInMap("GmtStartTime")
+        @com.aliyun.core.annotation.NameInMap("GmtStartTime")
         private String gmtStartTime;
 
-        @NameInMap("HistoryPods")
-        private java.util.List < HistoryPods> historyPods;
+        @com.aliyun.core.annotation.NameInMap("HistoryPods")
+        private java.util.List<HistoryPods> historyPods;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("PodId")
+        @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
 
-        @NameInMap("PodUid")
+        @com.aliyun.core.annotation.NameInMap("PodUid")
         private String podUid;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubStatus")
+        @com.aliyun.core.annotation.NameInMap("SubStatus")
         private String subStatus;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Pods(Builder builder) {
@@ -1214,7 +1363,7 @@ public class GetJobResponseBody extends TeaModel {
         /**
          * @return historyPods
          */
-        public java.util.List < HistoryPods> getHistoryPods() {
+        public java.util.List<HistoryPods> getHistoryPods() {
             return this.historyPods;
         }
 
@@ -1271,7 +1420,7 @@ public class GetJobResponseBody extends TeaModel {
             private String gmtCreateTime; 
             private String gmtFinishTime; 
             private String gmtStartTime; 
-            private java.util.List < HistoryPods> historyPods; 
+            private java.util.List<HistoryPods> historyPods; 
             private String ip; 
             private String podId; 
             private String podUid; 
@@ -1307,7 +1456,7 @@ public class GetJobResponseBody extends TeaModel {
             /**
              * HistoryPods.
              */
-            public Builder historyPods(java.util.List < HistoryPods> historyPods) {
+            public Builder historyPods(java.util.List<HistoryPods> historyPods) {
                 this.historyPods = historyPods;
                 return this;
             }
@@ -1370,6 +1519,133 @@ public class GetJobResponseBody extends TeaModel {
 
             public Pods build() {
                 return new Pods(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
+    public static class UserVpc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
+        private String defaultRoute;
+
+        @com.aliyun.core.annotation.NameInMap("ExtendedCidrs")
+        private java.util.List<String> extendedCidrs;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
+        private String switchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private UserVpc(Builder builder) {
+            this.defaultRoute = builder.defaultRoute;
+            this.extendedCidrs = builder.extendedCidrs;
+            this.securityGroupId = builder.securityGroupId;
+            this.switchId = builder.switchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserVpc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultRoute
+         */
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        /**
+         * @return extendedCidrs
+         */
+        public java.util.List<String> getExtendedCidrs() {
+            return this.extendedCidrs;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return switchId
+         */
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String defaultRoute; 
+            private java.util.List<String> extendedCidrs; 
+            private String securityGroupId; 
+            private String switchId; 
+            private String vpcId; 
+
+            /**
+             * DefaultRoute.
+             */
+            public Builder defaultRoute(String defaultRoute) {
+                this.defaultRoute = defaultRoute;
+                return this;
+            }
+
+            /**
+             * ExtendedCidrs.
+             */
+            public Builder extendedCidrs(java.util.List<String> extendedCidrs) {
+                this.extendedCidrs = extendedCidrs;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SwitchId.
+             */
+            public Builder switchId(String switchId) {
+                this.switchId = switchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public UserVpc build() {
+                return new UserVpc(this);
             } 
 
         } 

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessPointsResponseBody</p>
  */
 public class DescribeAccessPointsResponseBody extends TeaModel {
-    @NameInMap("AccessPointSet")
+    @com.aliyun.core.annotation.NameInMap("AccessPointSet")
     private AccessPointSet accessPointSet;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessPointsResponseBody(Builder builder) {
@@ -131,29 +136,35 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointType extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("AttachedRegionNo")
+        @com.aliyun.core.annotation.NameInMap("AttachedRegionNo")
         private String attachedRegionNo;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HostOperator")
+        @com.aliyun.core.annotation.NameInMap("HostOperator")
         private String hostOperator;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AccessPointType(Builder builder) {
@@ -312,9 +323,15 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointSet extends TeaModel {
-        @NameInMap("AccessPointType")
-        private java.util.List < AccessPointType> accessPointType;
+        @com.aliyun.core.annotation.NameInMap("AccessPointType")
+        private java.util.List<AccessPointType> accessPointType;
 
         private AccessPointSet(Builder builder) {
             this.accessPointType = builder.accessPointType;
@@ -331,17 +348,17 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         /**
          * @return accessPointType
          */
-        public java.util.List < AccessPointType> getAccessPointType() {
+        public java.util.List<AccessPointType> getAccessPointType() {
             return this.accessPointType;
         }
 
         public static final class Builder {
-            private java.util.List < AccessPointType> accessPointType; 
+            private java.util.List<AccessPointType> accessPointType; 
 
             /**
              * AccessPointType.
              */
-            public Builder accessPointType(java.util.List < AccessPointType> accessPointType) {
+            public Builder accessPointType(java.util.List<AccessPointType> accessPointType) {
                 this.accessPointType = accessPointType;
                 return this;
             }

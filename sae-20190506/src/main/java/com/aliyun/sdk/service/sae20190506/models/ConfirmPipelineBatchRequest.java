@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmPipelineBatchRequest} extends {@link RequestModel}
  *
  * <p>ConfirmPipelineBatchRequest</p>
  */
 public class ConfirmPipelineBatchRequest extends Request {
-    @Query
-    @NameInMap("Confirm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Confirm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean confirm;
 
-    @Query
-    @NameInMap("PipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pipelineId;
 
     private ConfirmPipelineBatchRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class ConfirmPipelineBatchRequest extends Request {
         } 
 
         /**
-         * true
+         * <p>true</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder confirm(Boolean confirm) {
             this.putQueryParameter("Confirm", confirm);
@@ -79,7 +88,11 @@ public class ConfirmPipelineBatchRequest extends Request {
         }
 
         /**
-         * e2e-vds-feh-\*\*\*
+         * <p>e2e-vds-feh-***</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2e-vds-feh-***</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);

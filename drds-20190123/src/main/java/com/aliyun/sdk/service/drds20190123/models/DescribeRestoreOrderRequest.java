@@ -114,18 +114,18 @@ public class DescribeRestoreOrderRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreOrderRequest response) {
-            super(response);
-            this.backupDbNames = response.backupDbNames;
-            this.backupId = response.backupId;
-            this.backupLevel = response.backupLevel;
-            this.backupMode = response.backupMode;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.preferredBackupTime = response.preferredBackupTime;
+        private Builder(DescribeRestoreOrderRequest request) {
+            super(request);
+            this.backupDbNames = request.backupDbNames;
+            this.backupId = request.backupId;
+            this.backupLevel = request.backupLevel;
+            this.backupMode = request.backupMode;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.preferredBackupTime = request.preferredBackupTime;
         } 
 
         /**
-         * BackupDbNames.
+         * The name of the database involved in the backup.
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -134,7 +134,7 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -143,7 +143,11 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * BackupLevel.
+         * The level of the backup. Valid values:
+         * <p>
+         * 
+         * *   **DB**: The database Level
+         * *   **instance **: instance level
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -152,7 +156,7 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode. Valid values: **logic** or **phy**.
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -161,7 +165,7 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance for which to modify the backup policy.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -170,7 +174,7 @@ public class DescribeRestoreOrderRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The preferred backup time.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

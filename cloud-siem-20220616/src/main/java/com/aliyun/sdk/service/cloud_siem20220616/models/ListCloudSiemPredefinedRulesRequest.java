@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,95 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCloudSiemPredefinedRulesRequest</p>
  */
 public class ListCloudSiemPredefinedRulesRequest extends Request {
-    @Body
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private String alertType;
 
-    @Body
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AttCk")
+    private String attCk;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventTransferType")
+    private String eventTransferType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogSource")
+    private String logSource;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderField")
+    private String orderField;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Body
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private String ruleType;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Body
-    @NameInMap("ThreatLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThreatLevel")
     private java.util.List < String > threatLevel;
 
     private ListCloudSiemPredefinedRulesRequest(Builder builder) {
         super(builder);
         this.alertType = builder.alertType;
+        this.attCk = builder.attCk;
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
+        this.eventTransferType = builder.eventTransferType;
         this.id = builder.id;
+        this.logSource = builder.logSource;
+        this.order = builder.order;
+        this.orderField = builder.orderField;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
         this.ruleType = builder.ruleType;
         this.startTime = builder.startTime;
@@ -94,6 +128,13 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     }
 
     /**
+     * @return attCk
+     */
+    public String getAttCk() {
+        return this.attCk;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
@@ -108,10 +149,38 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     }
 
     /**
+     * @return eventTransferType
+     */
+    public String getEventTransferType() {
+        return this.eventTransferType;
+    }
+
+    /**
      * @return id
      */
     public String getId() {
         return this.id;
+    }
+
+    /**
+     * @return logSource
+     */
+    public String getLogSource() {
+        return this.logSource;
+    }
+
+    /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
+     * @return orderField
+     */
+    public String getOrderField() {
+        return this.orderField;
     }
 
     /**
@@ -126,6 +195,20 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     /**
@@ -165,11 +248,18 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListCloudSiemPredefinedRulesRequest, Builder> {
         private String alertType; 
+        private String attCk; 
         private Integer currentPage; 
         private Long endTime; 
+        private String eventTransferType; 
         private String id; 
+        private String logSource; 
+        private String order; 
+        private String orderField; 
         private Integer pageSize; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleName; 
         private String ruleType; 
         private Long startTime; 
@@ -183,11 +273,18 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         private Builder(ListCloudSiemPredefinedRulesRequest request) {
             super(request);
             this.alertType = request.alertType;
+            this.attCk = request.attCk;
             this.currentPage = request.currentPage;
             this.endTime = request.endTime;
+            this.eventTransferType = request.eventTransferType;
             this.id = request.id;
+            this.logSource = request.logSource;
+            this.order = request.order;
+            this.orderField = request.orderField;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleName = request.ruleName;
             this.ruleType = request.ruleType;
             this.startTime = request.startTime;
@@ -201,6 +298,15 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
             this.alertType = alertType;
+            return this;
+        }
+
+        /**
+         * The ATT\&CK information.
+         */
+        public Builder attCk(String attCk) {
+            this.putBodyParameter("AttCk", attCk);
+            this.attCk = attCk;
             return this;
         }
 
@@ -223,11 +329,60 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
+         * The method that is used to generate an event. Valid values:
+         * <p>
+         * 
+         * *   default: built-in method.
+         * *   singleToSingle: The system generates an event for each alert.
+         * *   allToSingle: The system generates an event for alerts within a period of time.
+         */
+        public Builder eventTransferType(String eventTransferType) {
+            this.putBodyParameter("EventTransferType", eventTransferType);
+            this.eventTransferType = eventTransferType;
+            return this;
+        }
+
+        /**
          * The ID of the rule.
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * The log source.
+         */
+        public Builder logSource(String logSource) {
+            this.putBodyParameter("LogSource", logSource);
+            this.logSource = logSource;
+            return this;
+        }
+
+        /**
+         * The sort method. Valid values:
+         * <p>
+         * 
+         * *   desc: descending order.
+         * *   asc: ascending order.
+         */
+        public Builder order(String order) {
+            this.putBodyParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * The field that is used to sort the rules. Valid values:
+         * <p>
+         * 
+         * *   GmtModified: The rules are sorted based on the modification time.
+         * *   Id (default): The rules are sorted based on the rule ID.
+         */
+        public Builder orderField(String orderField) {
+            this.putBodyParameter("OrderField", orderField);
+            this.orderField = orderField;
             return this;
         }
 
@@ -250,6 +405,28 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the destination account to which you switch the view from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view.
+         * <p>
+         * 
+         * *   0: view of the current Alibaba Cloud account.
+         * *   1: view of all accounts for the enterprise.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

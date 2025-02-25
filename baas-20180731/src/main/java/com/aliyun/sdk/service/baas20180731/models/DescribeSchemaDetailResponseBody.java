@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSchemaDetailResponseBody</p>
  */
 public class DescribeSchemaDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeSchemaDetailResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeSchemaDetailResponseBody extends TeaModel {
     } 
 
     public static class DataSource extends TeaModel {
-        @NameInMap("AllowNull")
+        @com.aliyun.core.annotation.NameInMap("AllowNull")
         private Integer allowNull;
 
-        @NameInMap("Annotation")
+        @com.aliyun.core.annotation.NameInMap("Annotation")
         private String annotation;
 
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("Indexes")
+        @com.aliyun.core.annotation.NameInMap("Indexes")
         private Integer indexes;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private Integer key;
 
-        @NameInMap("Length")
+        @com.aliyun.core.annotation.NameInMap("Length")
         private Integer length;
 
-        @NameInMap("Reg")
+        @com.aliyun.core.annotation.NameInMap("Reg")
         private String reg;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataSource(Builder builder) {
@@ -253,10 +252,10 @@ public class DescribeSchemaDetailResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("DataSource")
+        @com.aliyun.core.annotation.NameInMap("DataSource")
         private java.util.List < DataSource> dataSource;
 
         private Properties(Builder builder) {
@@ -314,16 +313,16 @@ public class DescribeSchemaDetailResponseBody extends TeaModel {
 
     }
     public static class Responses extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
         private Responses(Builder builder) {
@@ -415,25 +414,25 @@ public class DescribeSchemaDetailResponseBody extends TeaModel {
 
     }
     public static class Schema extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsTemplate")
+        @com.aliyun.core.annotation.NameInMap("IsTemplate")
         private Boolean isTemplate;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Schema(Builder builder) {
@@ -576,10 +575,10 @@ public class DescribeSchemaDetailResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Responses")
+        @com.aliyun.core.annotation.NameInMap("Responses")
         private java.util.List < Responses> responses;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private Schema schema;
 
         private Result(Builder builder) {

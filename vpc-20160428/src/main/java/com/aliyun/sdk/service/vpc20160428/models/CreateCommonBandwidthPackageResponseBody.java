@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommonBandwidthPackageResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCommonBandwidthPackageResponseBody</p>
  */
 public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
-    @NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
     private String bandwidthPackageId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private CreateCommonBandwidthPackageResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The ID of the Internet Shared Bandwidth instance.
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-bp1vevu8h3ieh****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -70,7 +78,10 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FF39F653-033E-4CD9-9EDF-3CCA5A71FBC3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

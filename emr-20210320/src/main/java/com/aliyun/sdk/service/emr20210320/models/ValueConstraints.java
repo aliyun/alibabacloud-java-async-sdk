@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValueConstraints} extends {@link TeaModel}
  *
  * <p>ValueConstraints</p>
  */
 public class ValueConstraints extends TeaModel {
-    @NameInMap("DefaultValue")
+    @com.aliyun.core.annotation.NameInMap("DefaultValue")
     private Integer defaultValue;
 
-    @NameInMap("End")
+    @com.aliyun.core.annotation.NameInMap("End")
     private Integer end;
 
-    @NameInMap("Start")
+    @com.aliyun.core.annotation.NameInMap("Start")
     private Integer start;
 
-    @NameInMap("Step")
+    @com.aliyun.core.annotation.NameInMap("Step")
     private Integer step;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Values")
-    private java.util.List < Integer > values;
+    @com.aliyun.core.annotation.NameInMap("Values")
+    private java.util.List<Integer> values;
 
     private ValueConstraints(Builder builder) {
         this.defaultValue = builder.defaultValue;
@@ -85,7 +90,7 @@ public class ValueConstraints extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < Integer > getValues() {
+    public java.util.List<Integer> getValues() {
         return this.values;
     }
 
@@ -95,10 +100,10 @@ public class ValueConstraints extends TeaModel {
         private Integer start; 
         private Integer step; 
         private String type; 
-        private java.util.List < Integer > values; 
+        private java.util.List<Integer> values; 
 
         /**
-         * 默认值。
+         * <p>默认值。</p>
          */
         public Builder defaultValue(Integer defaultValue) {
             this.defaultValue = defaultValue;
@@ -106,7 +111,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 结束值。
+         * <p>结束值。</p>
          */
         public Builder end(Integer end) {
             this.end = end;
@@ -114,7 +119,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 起始值。
+         * <p>起始值。</p>
          */
         public Builder start(Integer start) {
             this.start = start;
@@ -122,7 +127,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 步长。
+         * <p>步长。</p>
          */
         public Builder step(Integer step) {
             this.step = step;
@@ -130,7 +135,7 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 值限制类型。
+         * <p>值限制类型。</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -138,9 +143,12 @@ public class ValueConstraints extends TeaModel {
         }
 
         /**
-         * 枚举值。
+         * <p>枚举值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder values(java.util.List < Integer > values) {
+        public Builder values(java.util.List<Integer> values) {
             this.values = values;
             return this;
         }

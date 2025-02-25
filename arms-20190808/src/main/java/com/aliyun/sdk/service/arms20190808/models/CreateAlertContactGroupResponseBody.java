@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAlertContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAlertContactGroupResponseBody</p>
  */
 public class CreateAlertContactGroupResponseBody extends TeaModel {
-    @NameInMap("ContactGroupId")
+    @com.aliyun.core.annotation.NameInMap("ContactGroupId")
     private String contactGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAlertContactGroupResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContactGroupId.
+         * <p>The ID of the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>446*</p>
          */
         public Builder contactGroupId(String contactGroupId) {
             this.contactGroupId = contactGroupId;
@@ -58,7 +66,10 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

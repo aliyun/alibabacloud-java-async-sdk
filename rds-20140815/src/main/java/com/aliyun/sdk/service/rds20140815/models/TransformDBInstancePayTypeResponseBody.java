@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransformDBInstancePayTypeResponseBody} extends {@link TeaModel}
  *
  * <p>TransformDBInstancePayTypeResponseBody</p>
  */
 public class TransformDBInstancePayTypeResponseBody extends TeaModel {
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TransformDBInstancePayTypeResponseBody(Builder builder) {
@@ -86,11 +91,14 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The payment type.
-         * <p>
+         * <p>The payment type.</p>
+         * <ul>
+         * <li>Valid value if the new billing method is pay-as-you-go: POSTPAY</li>
+         * <li>Valid value if the new billing method is subscription: PREPAY</li>
+         * </ul>
          * 
-         * *   Valid value if the new billing method is pay-as-you-go: POSTPAY
-         * *   Valid value if the new billing method is subscription: PREPAY
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -98,7 +106,10 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,10 +117,13 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time.
-         * <p>
+         * <p>The expiration time.</p>
+         * <blockquote>
+         * <p>If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.</p>
+         * </blockquote>
          * 
-         * > If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>2020-04-20T10:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -117,7 +131,10 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>205157600280623</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -125,7 +142,10 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E6E09DE-5B12-4BFF-A55E-1C86EDE06D9A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteIpSetsRequest</p>
  */
 public class DeleteIpSetsRequest extends Request {
-    @Query
-    @NameInMap("IpSetIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpSetIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > ipSetIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteIpSetsRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class DeleteIpSetsRequest extends Request {
         } 
 
         /**
-         * The ID of the acceleration region that you want to delete.
+         * The IDs of the acceleration regions that you want to delete.
          */
         public Builder ipSetIds(java.util.List < String > ipSetIds) {
             this.putQueryParameter("IpSetIds", ipSetIds);
@@ -79,7 +78,7 @@ public class DeleteIpSetsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

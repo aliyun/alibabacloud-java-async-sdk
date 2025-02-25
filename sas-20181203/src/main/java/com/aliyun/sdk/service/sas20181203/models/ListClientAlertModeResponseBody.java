@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClientAlertModeResponseBody} extends {@link TeaModel}
  *
  * <p>ListClientAlertModeResponseBody</p>
  */
 public class ListClientAlertModeResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClientAlertModeResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,12 +79,18 @@ public class ListClientAlertModeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClientAlertModeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClientAlertModeResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Uuids")
-        private java.util.List < String > uuids;
+        @com.aliyun.core.annotation.NameInMap("Uuids")
+        private java.util.List<String> uuids;
 
         private Data(Builder builder) {
             this.count = builder.count;
@@ -101,16 +115,19 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         /**
          * @return uuids
          */
-        public java.util.List < String > getUuids() {
+        public java.util.List<String> getUuids() {
             return this.uuids;
         }
 
         public static final class Builder {
             private Integer count; 
-            private java.util.List < String > uuids; 
+            private java.util.List<String> uuids; 
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,9 +135,9 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             }
 
             /**
-             * The UUIDs of the assets.
+             * <p>The UUIDs of the assets.</p>
              */
-            public Builder uuids(java.util.List < String > uuids) {
+            public Builder uuids(java.util.List<String> uuids) {
                 this.uuids = uuids;
                 return this;
             }

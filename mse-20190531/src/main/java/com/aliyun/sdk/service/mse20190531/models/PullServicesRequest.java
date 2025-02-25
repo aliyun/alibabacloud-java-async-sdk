@@ -1,31 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PullServicesRequest} extends {@link RequestModel}
  *
  * <p>PullServicesRequest</p>
  */
 public class PullServicesRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    private Long sourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private PullServicesRequest(Builder builder) {
@@ -33,6 +42,7 @@ public class PullServicesRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.namespace = builder.namespace;
+        this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
     }
 
@@ -71,6 +81,13 @@ public class PullServicesRequest extends Request {
     }
 
     /**
+     * @return sourceId
+     */
+    public Long getSourceId() {
+        return this.sourceId;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -81,6 +98,7 @@ public class PullServicesRequest extends Request {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
         private String namespace; 
+        private Long sourceId; 
         private String sourceType; 
 
         private Builder() {
@@ -92,15 +110,19 @@ public class PullServicesRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.namespace = request.namespace;
+            this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -109,7 +131,10 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-eccf313e2224438ba53d95d039e5****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -118,7 +143,10 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -127,7 +155,19 @@ public class PullServicesRequest extends Request {
         }
 
         /**
-         * The type of the service source.
+         * SourceId.
+         */
+        public Builder sourceId(Long sourceId) {
+            this.putQueryParameter("SourceId", sourceId);
+            this.sourceId = sourceId;
+            return this;
+        }
+
+        /**
+         * <p>The type of the service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K8s</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

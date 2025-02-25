@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTagValRequest} extends {@link RequestModel}
  *
  * <p>GetTagValRequest</p>
  */
 public class GetTagValRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("SpanName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpanName")
     private String spanName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("TagKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagKey;
 
     private GetTagValRequest(Builder builder) {
@@ -125,7 +130,13 @@ public class GetTagValRequest extends Request {
         } 
 
         /**
-         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <blockquote>
+         * <p> This value is of the LONG type, and precision loss may occur during serialization or deserialization. Do not set this parameter to a value greater than 9007199254740991.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1575622455686</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -134,7 +145,10 @@ public class GetTagValRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -143,7 +157,10 @@ public class GetTagValRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appTest</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -152,7 +169,10 @@ public class GetTagValRequest extends Request {
         }
 
         /**
-         * The name of the span.
+         * <p>The name of the span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>createOrder</p>
          */
         public Builder spanName(String spanName) {
             this.putQueryParameter("SpanName", spanName);
@@ -161,7 +181,13 @@ public class GetTagValRequest extends Request {
         }
 
         /**
-         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <blockquote>
+         * <p> This value is of the LONG type, and precision loss may occur during serialization or deserialization. Do not set this parameter to a value greater than 9007199254740991.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1575561600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -170,7 +196,12 @@ public class GetTagValRequest extends Request {
         }
 
         /**
-         * The tag key.
+         * <p>The tag key.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2399667.html">GetTagKey</a> operation to obtain a tag key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>span.kind</p>
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);

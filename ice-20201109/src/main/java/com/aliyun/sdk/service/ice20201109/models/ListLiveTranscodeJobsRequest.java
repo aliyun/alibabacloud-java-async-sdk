@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveTranscodeJobsRequest} extends {@link RequestModel}
  *
  * <p>ListLiveTranscodeJobsRequest</p>
  */
 public class ListLiveTranscodeJobsRequest extends Request {
-    @Query
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("StartMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartMode")
     private Integer startMode;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ListLiveTranscodeJobsRequest(Builder builder) {
@@ -138,7 +143,10 @@ public class ListLiveTranscodeJobsRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs. If you search for jobs by name, fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24ecbb5c-4f98-4194-9400-f17102e27fc5</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -147,7 +155,10 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -156,7 +167,10 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +179,14 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+         * <ul>
+         * <li>asc</li>
+         * <li>desc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -174,7 +195,14 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * StartMode.
+         * <p>The start mode of the transcoding job.</p>
+         * <ul>
+         * <li>0: The transcoding job immediately starts.</li>
+         * <li>1: The transcoding job starts at the scheduled time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder startMode(Integer startMode) {
             this.putQueryParameter("StartMode", startMode);
@@ -183,7 +211,11 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The state of the job.</p>
+         * <p>0: The job is not started. 1: The job is in progress. 2: The job is stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -192,7 +224,16 @@ public class ListLiveTranscodeJobsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the template used by the transcoding job.</p>
+         * <ul>
+         * <li>normal</li>
+         * <li>narrow-band</li>
+         * <li>audio-only</li>
+         * <li>origin</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

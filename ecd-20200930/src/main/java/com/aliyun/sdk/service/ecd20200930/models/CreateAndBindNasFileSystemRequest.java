@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAndBindNasFileSystemRequest} extends {@link RequestModel}
  *
  * <p>CreateAndBindNasFileSystemRequest</p>
  */
 public class CreateAndBindNasFileSystemRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DesktopGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
     private Integer encryptType;
 
-    @Query
-    @NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    private java.util.List<String> endUserIds;
 
-    @Query
-    @NameInMap("FileSystemName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemName;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
 
     private CreateAndBindNasFileSystemRequest(Builder builder) {
@@ -98,7 +103,7 @@ public class CreateAndBindNasFileSystemRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
@@ -134,7 +139,7 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         private String description; 
         private String desktopGroupId; 
         private Integer encryptType; 
-        private java.util.List < String > endUserIds; 
+        private java.util.List<String> endUserIds; 
         private String fileSystemName; 
         private String officeSiteId; 
         private String regionId; 
@@ -157,7 +162,10 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -166,7 +174,11 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * DesktopGroupId.
+         * <p>The ID of the desktop group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-fh0vdzyh6rdc*****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -175,7 +187,16 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * <p>Specifies whether to encrypt data in the NAS file system. You can use keys that are hosted by Key Management Service (KMS) to encrypt data in a file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:</p>
+         * <ul>
+         * <li>0: does not encrypt data in the NAS file system.</li>
+         * <li>1: encrypts data in the NAS file system by using a NAS-managed key. <code>If you set </code>FileSystemType<code> to </code>standard<code> or </code>extreme<code>, you can use a NAS-managed key to encrypt data in a NAS file system.</code></li>
+         * <li>2: encrypts data in the NAS file system by using a KMS-managed key. <code>If</code> you set FileSystemType<code> to </code>extreme<code>, you can use a KMS-managed key to encrypt data in a NAS file system.</code></li>
+         * </ul>
+         * <p>Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder encryptType(Integer encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -184,16 +205,20 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * <p>The list of users.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;
         }
 
         /**
-         * FileSystemName.
+         * <p>The name of the NAS file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>szy-asp-upm-test</p>
          */
         public Builder fileSystemName(String fileSystemName) {
             this.putQueryParameter("FileSystemName", fileSystemName);
@@ -202,7 +227,11 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing+dir-15657*****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -211,7 +240,11 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +253,16 @@ public class CreateAndBindNasFileSystemRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type of the NAS file system. Valid values:</p>
+         * <ul>
+         * <li>Capacity</li>
+         * <li>Performance</li>
+         * </ul>
+         * <p>Default value: Capacity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

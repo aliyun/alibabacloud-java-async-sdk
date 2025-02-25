@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDoctorApplicationsRequest} extends {@link RequestModel}
  *
  * <p>ListDoctorApplicationsRequest</p>
  */
 public class ListDoctorApplicationsRequest extends Request {
-    @Query
-    @NameInMap("AppIds")
-    private java.util.List < String > appIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIds")
+    private java.util.List<String> appIds;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DateTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dateTime;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("Queues")
-    private java.util.List < String > queues;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Queues")
+    private java.util.List<String> queues;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Types")
-    private java.util.List < String > types;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Types")
+    private java.util.List<String> types;
 
-    @Query
-    @NameInMap("Users")
-    private java.util.List < String > users;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Users")
+    private java.util.List<String> users;
 
     private ListDoctorApplicationsRequest(Builder builder) {
         super(builder);
@@ -90,7 +95,7 @@ public class ListDoctorApplicationsRequest extends Request {
     /**
      * @return appIds
      */
-    public java.util.List < String > getAppIds() {
+    public java.util.List<String> getAppIds() {
         return this.appIds;
     }
 
@@ -139,7 +144,7 @@ public class ListDoctorApplicationsRequest extends Request {
     /**
      * @return queues
      */
-    public java.util.List < String > getQueues() {
+    public java.util.List<String> getQueues() {
         return this.queues;
     }
 
@@ -153,29 +158,29 @@ public class ListDoctorApplicationsRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
     public static final class Builder extends Request.Builder<ListDoctorApplicationsRequest, Builder> {
-        private java.util.List < String > appIds; 
+        private java.util.List<String> appIds; 
         private String clusterId; 
         private String dateTime; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderBy; 
         private String orderType; 
-        private java.util.List < String > queues; 
+        private java.util.List<String> queues; 
         private String regionId; 
-        private java.util.List < String > types; 
-        private java.util.List < String > users; 
+        private java.util.List<String> types; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
@@ -197,16 +202,23 @@ public class ListDoctorApplicationsRequest extends Request {
         } 
 
         /**
-         * The IDs of jobs that are submitted to YARN.
+         * <p>The IDs of jobs that are submitted to YARN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder appIds(java.util.List < String > appIds) {
+        public Builder appIds(java.util.List<String> appIds) {
             this.putQueryParameter("AppIds", appIds);
             this.appIds = appIds;
             return this;
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -215,7 +227,11 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
+         * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -224,7 +240,10 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -233,7 +252,10 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results.
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -242,16 +264,19 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * The field that you use to sort the query results. Valid values:
-         * <p>
+         * <p>The field that you use to sort the query results. Valid values:</p>
+         * <ol>
+         * <li>startTime: the time when the job starts</li>
+         * <li>endTime: the time when the job ends</li>
+         * <li>vcoreUtilization: the vCPU utilization of the job</li>
+         * <li>memUtilization: the memory usage of the job</li>
+         * <li>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</li>
+         * <li>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</li>
+         * <li>score: the score of the job</li>
+         * </ol>
          * 
-         * 1.  startTime: the time when the job starts
-         * 2.  endTime: the time when the job ends
-         * 3.  vcoreUtilization: the vCPU utilization of the job
-         * 4.  memUtilization: the memory usage of the job
-         * 5.  vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running
-         * 6.  memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running
-         * 7.  score: the score of the job
+         * <strong>example:</strong>
+         * <p>score</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -260,11 +285,14 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>ASC: the ascending order</li>
+         * <li>DESC: the descending order</li>
+         * </ul>
          * 
-         * *   ASC: the ascending order
-         * *   DESC: the descending order
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -273,16 +301,23 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * The YARN queues to which the jobs are submitted.
+         * <p>The YARN queues to which the jobs are submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder queues(java.util.List < String > queues) {
+        public Builder queues(java.util.List<String> queues) {
             this.putQueryParameter("Queues", queues);
             this.queues = queues;
             return this;
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,18 +326,24 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * The YARN engines to which the jobs are submitted.
+         * <p>The YARN engines to which the jobs are submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
             this.types = types;
             return this;
         }
 
         /**
-         * The users who submit the jobs.
+         * <p>The users who submit the jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putQueryParameter("Users", users);
             this.users = users;
             return this;

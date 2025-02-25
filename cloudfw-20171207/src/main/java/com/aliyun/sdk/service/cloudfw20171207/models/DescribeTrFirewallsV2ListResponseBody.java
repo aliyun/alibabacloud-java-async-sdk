@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrFirewallsV2ListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTrFirewallsV2ListResponseBody</p>
  */
 public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("VpcTrFirewalls")
-    private java.util.List < VpcTrFirewalls> vpcTrFirewalls;
+    @com.aliyun.core.annotation.NameInMap("VpcTrFirewalls")
+    private java.util.List<VpcTrFirewalls> vpcTrFirewalls;
 
     private DescribeTrFirewallsV2ListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,17 +57,20 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
     /**
      * @return vpcTrFirewalls
      */
-    public java.util.List < VpcTrFirewalls> getVpcTrFirewalls() {
+    public java.util.List<VpcTrFirewalls> getVpcTrFirewalls() {
         return this.vpcTrFirewalls;
     }
 
     public static final class Builder {
         private String requestId; 
         private String totalCount; 
-        private java.util.List < VpcTrFirewalls> vpcTrFirewalls; 
+        private java.util.List<VpcTrFirewalls> vpcTrFirewalls; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1471E2EC-F706-5F11-A79B-BD583ACB8297</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -78,9 +89,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         /**
-         * The VPC firewalls.
+         * <p>The information about the VPC firewalls.</p>
          */
-        public Builder vpcTrFirewalls(java.util.List < VpcTrFirewalls> vpcTrFirewalls) {
+        public Builder vpcTrFirewalls(java.util.List<VpcTrFirewalls> vpcTrFirewalls) {
             this.vpcTrFirewalls = vpcTrFirewalls;
             return this;
         }
@@ -91,19 +102,29 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrFirewallsV2ListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallsV2ListResponseBody</p>
+     */
     public static class IpsConfig extends TeaModel {
-        @NameInMap("BasicRules")
+        @com.aliyun.core.annotation.NameInMap("BasicRules")
         private Integer basicRules;
 
-        @NameInMap("EnableAllPatch")
+        @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
         private Integer enableAllPatch;
 
-        @NameInMap("RunMode")
+        @com.aliyun.core.annotation.NameInMap("RuleClass")
+        private Integer ruleClass;
+
+        @com.aliyun.core.annotation.NameInMap("RunMode")
         private Integer runMode;
 
         private IpsConfig(Builder builder) {
             this.basicRules = builder.basicRules;
             this.enableAllPatch = builder.enableAllPatch;
+            this.ruleClass = builder.ruleClass;
             this.runMode = builder.runMode;
         }
 
@@ -130,6 +151,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleClass
+         */
+        public Integer getRuleClass() {
+            return this.ruleClass;
+        }
+
+        /**
          * @return runMode
          */
         public Integer getRunMode() {
@@ -139,14 +167,18 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         public static final class Builder {
             private Integer basicRules; 
             private Integer enableAllPatch; 
+            private Integer ruleClass; 
             private Integer runMode; 
 
             /**
-             * Indicates whether basic protection is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether basic protection is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder basicRules(Integer basicRules) {
                 this.basicRules = basicRules;
@@ -154,11 +186,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether virtual patching is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether virtual patching is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableAllPatch(Integer enableAllPatch) {
                 this.enableAllPatch = enableAllPatch;
@@ -166,11 +201,30 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the IPS. Valid values:
-             * <p>
+             * <p>The level of the rule group for the IPS. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: loose.</li>
+             * <li><strong>2</strong>: medium.</li>
+             * <li><strong>3</strong>: strict.</li>
+             * </ul>
              * 
-             * *   **1**: block mode
-             * *   **0**: monitor mode
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder ruleClass(Integer ruleClass) {
+                this.ruleClass = ruleClass;
+                return this;
+            }
+
+            /**
+             * <p>The mode of the IPS. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: block mode</li>
+             * <li><strong>0</strong>: monitor mode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runMode(Integer runMode) {
                 this.runMode = runMode;
@@ -184,24 +238,34 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrFirewallsV2ListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallsV2ListResponseBody</p>
+     */
     public static class ProtectedResource extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("PeerTrList")
-        private java.util.List < String > peerTrList;
+        @com.aliyun.core.annotation.NameInMap("EcrList")
+        private java.util.List<String> ecrList;
 
-        @NameInMap("VbrList")
-        private java.util.List < String > vbrList;
+        @com.aliyun.core.annotation.NameInMap("PeerTrList")
+        private java.util.List<String> peerTrList;
 
-        @NameInMap("VpcList")
-        private java.util.List < String > vpcList;
+        @com.aliyun.core.annotation.NameInMap("VbrList")
+        private java.util.List<String> vbrList;
 
-        @NameInMap("VpnList")
-        private java.util.List < String > vpnList;
+        @com.aliyun.core.annotation.NameInMap("VpcList")
+        private java.util.List<String> vpcList;
+
+        @com.aliyun.core.annotation.NameInMap("VpnList")
+        private java.util.List<String> vpnList;
 
         private ProtectedResource(Builder builder) {
             this.count = builder.count;
+            this.ecrList = builder.ecrList;
             this.peerTrList = builder.peerTrList;
             this.vbrList = builder.vbrList;
             this.vpcList = builder.vpcList;
@@ -224,42 +288,53 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ecrList
+         */
+        public java.util.List<String> getEcrList() {
+            return this.ecrList;
+        }
+
+        /**
          * @return peerTrList
          */
-        public java.util.List < String > getPeerTrList() {
+        public java.util.List<String> getPeerTrList() {
             return this.peerTrList;
         }
 
         /**
          * @return vbrList
          */
-        public java.util.List < String > getVbrList() {
+        public java.util.List<String> getVbrList() {
             return this.vbrList;
         }
 
         /**
          * @return vpcList
          */
-        public java.util.List < String > getVpcList() {
+        public java.util.List<String> getVpcList() {
             return this.vpcList;
         }
 
         /**
          * @return vpnList
          */
-        public java.util.List < String > getVpnList() {
+        public java.util.List<String> getVpnList() {
             return this.vpnList;
         }
 
         public static final class Builder {
             private Integer count; 
-            private java.util.List < String > peerTrList; 
-            private java.util.List < String > vbrList; 
-            private java.util.List < String > vpcList; 
-            private java.util.List < String > vpnList; 
+            private java.util.List<String> ecrList; 
+            private java.util.List<String> peerTrList; 
+            private java.util.List<String> vbrList; 
+            private java.util.List<String> vpcList; 
+            private java.util.List<String> vpnList; 
 
             /**
-             * The number of protected resources.
+             * <p>The number of protected resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -267,33 +342,41 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The protected peer transit routers.
+             * <p>The protected express connect routers.</p>
              */
-            public Builder peerTrList(java.util.List < String > peerTrList) {
+            public Builder ecrList(java.util.List<String> ecrList) {
+                this.ecrList = ecrList;
+                return this;
+            }
+
+            /**
+             * <p>The protected peer transit routers.</p>
+             */
+            public Builder peerTrList(java.util.List<String> peerTrList) {
                 this.peerTrList = peerTrList;
                 return this;
             }
 
             /**
-             * The protected virtual border routers (VBRs).
+             * <p>The protected virtual border routers (VBRs).</p>
              */
-            public Builder vbrList(java.util.List < String > vbrList) {
+            public Builder vbrList(java.util.List<String> vbrList) {
                 this.vbrList = vbrList;
                 return this;
             }
 
             /**
-             * The protected VPCs.
+             * <p>The protected VPCs.</p>
              */
-            public Builder vpcList(java.util.List < String > vpcList) {
+            public Builder vpcList(java.util.List<String> vpcList) {
                 this.vpcList = vpcList;
                 return this;
             }
 
             /**
-             * The protected VPN gateways.
+             * <p>The protected VPN gateways.</p>
              */
-            public Builder vpnList(java.util.List < String > vpnList) {
+            public Builder vpnList(java.util.List<String> vpnList) {
                 this.vpnList = vpnList;
                 return this;
             }
@@ -305,24 +388,34 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrFirewallsV2ListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallsV2ListResponseBody</p>
+     */
     public static class UnprotectedResource extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("PeerTrList")
-        private java.util.List < String > peerTrList;
+        @com.aliyun.core.annotation.NameInMap("EcrList")
+        private java.util.List<String> ecrList;
 
-        @NameInMap("VbrList")
-        private java.util.List < String > vbrList;
+        @com.aliyun.core.annotation.NameInMap("PeerTrList")
+        private java.util.List<String> peerTrList;
 
-        @NameInMap("VpcList")
-        private java.util.List < String > vpcList;
+        @com.aliyun.core.annotation.NameInMap("VbrList")
+        private java.util.List<String> vbrList;
 
-        @NameInMap("VpnList")
-        private java.util.List < String > vpnList;
+        @com.aliyun.core.annotation.NameInMap("VpcList")
+        private java.util.List<String> vpcList;
+
+        @com.aliyun.core.annotation.NameInMap("VpnList")
+        private java.util.List<String> vpnList;
 
         private UnprotectedResource(Builder builder) {
             this.count = builder.count;
+            this.ecrList = builder.ecrList;
             this.peerTrList = builder.peerTrList;
             this.vbrList = builder.vbrList;
             this.vpcList = builder.vpcList;
@@ -345,42 +438,53 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ecrList
+         */
+        public java.util.List<String> getEcrList() {
+            return this.ecrList;
+        }
+
+        /**
          * @return peerTrList
          */
-        public java.util.List < String > getPeerTrList() {
+        public java.util.List<String> getPeerTrList() {
             return this.peerTrList;
         }
 
         /**
          * @return vbrList
          */
-        public java.util.List < String > getVbrList() {
+        public java.util.List<String> getVbrList() {
             return this.vbrList;
         }
 
         /**
          * @return vpcList
          */
-        public java.util.List < String > getVpcList() {
+        public java.util.List<String> getVpcList() {
             return this.vpcList;
         }
 
         /**
          * @return vpnList
          */
-        public java.util.List < String > getVpnList() {
+        public java.util.List<String> getVpnList() {
             return this.vpnList;
         }
 
         public static final class Builder {
             private Integer count; 
-            private java.util.List < String > peerTrList; 
-            private java.util.List < String > vbrList; 
-            private java.util.List < String > vpcList; 
-            private java.util.List < String > vpnList; 
+            private java.util.List<String> ecrList; 
+            private java.util.List<String> peerTrList; 
+            private java.util.List<String> vbrList; 
+            private java.util.List<String> vpcList; 
+            private java.util.List<String> vpnList; 
 
             /**
-             * The number of unprotected resources.
+             * <p>The number of unprotected resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -388,33 +492,41 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The unprotected peer transit routers.
+             * <p>The unprotected express connect routers.</p>
              */
-            public Builder peerTrList(java.util.List < String > peerTrList) {
+            public Builder ecrList(java.util.List<String> ecrList) {
+                this.ecrList = ecrList;
+                return this;
+            }
+
+            /**
+             * <p>The unprotected peer transit routers.</p>
+             */
+            public Builder peerTrList(java.util.List<String> peerTrList) {
                 this.peerTrList = peerTrList;
                 return this;
             }
 
             /**
-             * The unprotected VBRs.
+             * <p>The unprotected VBRs.</p>
              */
-            public Builder vbrList(java.util.List < String > vbrList) {
+            public Builder vbrList(java.util.List<String> vbrList) {
                 this.vbrList = vbrList;
                 return this;
             }
 
             /**
-             * The unprotected VPCs.
+             * <p>The unprotected VPCs.</p>
              */
-            public Builder vpcList(java.util.List < String > vpcList) {
+            public Builder vpcList(java.util.List<String> vpcList) {
                 this.vpcList = vpcList;
                 return this;
             }
 
             /**
-             * The unprotected VPN gateways.
+             * <p>The unprotected VPN gateways.</p>
              */
-            public Builder vpnList(java.util.List < String > vpnList) {
+            public Builder vpnList(java.util.List<String> vpnList) {
                 this.vpnList = vpnList;
                 return this;
             }
@@ -426,55 +538,65 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTrFirewallsV2ListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallsV2ListResponseBody</p>
+     */
     public static class VpcTrFirewalls extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenName")
+        @com.aliyun.core.annotation.NameInMap("CenName")
         private String cenName;
 
-        @NameInMap("FirewallId")
+        @com.aliyun.core.annotation.NameInMap("CloudFirewallVpcOrderType")
+        private String cloudFirewallVpcOrderType;
+
+        @com.aliyun.core.annotation.NameInMap("FirewallId")
         private String firewallId;
 
-        @NameInMap("FirewallSwitchStatus")
+        @com.aliyun.core.annotation.NameInMap("FirewallSwitchStatus")
         private String firewallSwitchStatus;
 
-        @NameInMap("IpsConfig")
+        @com.aliyun.core.annotation.NameInMap("IpsConfig")
         private IpsConfig ipsConfig;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("PrecheckStatus")
+        @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
         private String precheckStatus;
 
-        @NameInMap("ProtectedResource")
+        @com.aliyun.core.annotation.NameInMap("ProtectedResource")
         private ProtectedResource protectedResource;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("RegionStatus")
+        @com.aliyun.core.annotation.NameInMap("RegionStatus")
         private String regionStatus;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
-        @NameInMap("RouteMode")
+        @com.aliyun.core.annotation.NameInMap("RouteMode")
         private String routeMode;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("UnprotectedResource")
+        @com.aliyun.core.annotation.NameInMap("UnprotectedResource")
         private UnprotectedResource unprotectedResource;
 
-        @NameInMap("VpcFirewallName")
+        @com.aliyun.core.annotation.NameInMap("VpcFirewallName")
         private String vpcFirewallName;
 
         private VpcTrFirewalls(Builder builder) {
             this.cenId = builder.cenId;
             this.cenName = builder.cenName;
+            this.cloudFirewallVpcOrderType = builder.cloudFirewallVpcOrderType;
             this.firewallId = builder.firewallId;
             this.firewallSwitchStatus = builder.firewallSwitchStatus;
             this.ipsConfig = builder.ipsConfig;
@@ -510,6 +632,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
          */
         public String getCenName() {
             return this.cenName;
+        }
+
+        /**
+         * @return cloudFirewallVpcOrderType
+         */
+        public String getCloudFirewallVpcOrderType() {
+            return this.cloudFirewallVpcOrderType;
         }
 
         /**
@@ -606,6 +735,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         public static final class Builder {
             private String cenId; 
             private String cenName; 
+            private String cloudFirewallVpcOrderType; 
             private String firewallId; 
             private String firewallSwitchStatus; 
             private IpsConfig ipsConfig; 
@@ -621,7 +751,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             private String vpcFirewallName; 
 
             /**
-             * The ID of the CEN instance.
+             * <p>The ID of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen-03f8s0z052ka3v****</p>
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -629,7 +762,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CEN instance.
+             * <p>The name of the CEN instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cen_swas</p>
              */
             public Builder cenName(String cenName) {
                 this.cenName = cenName;
@@ -637,7 +773,25 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the VPC firewall.
+             * <p>The party responsible for the TR fees generated by the VPC firewall. Values:</p>
+             * <ul>
+             * <li><strong>PayByCloudFirewall</strong>: Fees are borne by the Cloud Firewall.</li>
+             * <li><strong>PayByCenOwner</strong>: Fees are borne by the account to which the CEN instance belongs.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayByCenOwner</p>
+             */
+            public Builder cloudFirewallVpcOrderType(String cloudFirewallVpcOrderType) {
+                this.cloudFirewallVpcOrderType = cloudFirewallVpcOrderType;
+                return this;
+            }
+
+            /**
+             * <p>The instance ID of the VPC firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vfw-tr-99bc4f0fc88b4d00****</p>
              */
             public Builder firewallId(String firewallId) {
                 this.firewallId = firewallId;
@@ -645,18 +799,22 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC firewall. Valid values:
-             * <p>
+             * <p>The status of the VPC firewall. Valid values:</p>
+             * <ul>
+             * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+             * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+             * <li><strong>notconfigured</strong>: The VPC firewall is not created.</li>
+             * <li><strong>configured</strong>: The VPC firewall is created but is not enabled.</li>
+             * <li><strong>creating</strong>: The VPC firewall is being created.</li>
+             * <li><strong>opening</strong>: The VPC firewall is being enabled.</li>
+             * <li><strong>deleting</strong>: The VPC firewall is being deleted.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+             * </blockquote>
              * 
-             * *   **opened**: The VPC firewall is enabled.
-             * *   **closed**: The VPC firewall is disabled.
-             * *   **notconfigured**: The VPC firewall is not created.
-             * *   **configured**: The VPC firewall is created but is not enabled.
-             * *   **creating**: The VPC firewall is being created.
-             * *   **opening**: The VPC firewall is being enabled.
-             * *   **deleting**: The VPC firewall is being deleted.
-             * 
-             * >  If you do not specify this parameter, VPC firewalls in all states are queried.
+             * <strong>example:</strong>
+             * <p>opened</p>
              */
             public Builder firewallSwitchStatus(String firewallSwitchStatus) {
                 this.firewallSwitchStatus = firewallSwitchStatus;
@@ -664,7 +822,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the intrusion prevention system (IPS) configuration.
+             * <p>The intrusion prevention system (IPS) configurations.</p>
              */
             public Builder ipsConfig(IpsConfig ipsConfig) {
                 this.ipsConfig = ipsConfig;
@@ -672,7 +830,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the VPC belongs.
+             * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>171761785151****</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -680,12 +841,15 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the VPC firewall can be automatically enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the VPC firewall can be automatically enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>passed</strong>: yes</li>
+             * <li><strong>failed</strong>: no</li>
+             * <li><strong>unknown</strong></li>
+             * </ul>
              * 
-             * *   **passed**: yes
-             * *   **failed**: no
-             * *   **unknown**
+             * <strong>example:</strong>
+             * <p>passed</p>
              */
             public Builder precheckStatus(String precheckStatus) {
                 this.precheckStatus = precheckStatus;
@@ -693,7 +857,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The protected resources.
+             * <p>The protected resources.</p>
              */
             public Builder protectedResource(ProtectedResource protectedResource) {
                 this.protectedResource = protectedResource;
@@ -701,7 +865,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the transit router.
+             * <p>The region ID of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -709,11 +876,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether you can create a VPC firewall in a specified region. Valid values:
-             * <p>
+             * <p>Indicates whether you can create a VPC firewall in a specified region. Valid values:</p>
+             * <ul>
+             * <li><strong>enable</strong>: yes</li>
+             * <li><strong>disable</strong>: no</li>
+             * </ul>
              * 
-             * *   **enable**: yes
-             * *   **disable**: no
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder regionStatus(String regionStatus) {
                 this.regionStatus = regionStatus;
@@ -721,11 +891,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The result code of the operation that creates the VPC firewall. Valid values:
-             * <p>
+             * <p>The result code of the operation that creates the VPC firewall. Valid values:</p>
+             * <ul>
+             * <li><strong>RegionDisable</strong>: VPC Firewall is not supported in the region of the network instance. You cannot create a VPC firewall for the network instance.</li>
+             * <li><strong>Empty string</strong>: You can create a VPC firewall for the network instance.</li>
+             * </ul>
              * 
-             * *   **RegionDisable**: VPC Firewall is not supported in the region of the network instance. You cannot create a VPC firewall for the network instance.
-             * *   **Empty string**: You can create a VPC firewall for the network instance.
+             * <strong>example:</strong>
+             * <p>RegionDisable</p>
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -733,11 +906,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The routing mode of the VPC firewall. Valid values:
-             * <p>
+             * <p>The routing mode of the VPC firewall. Valid values:</p>
+             * <ul>
+             * <li><strong>managed</strong>: automatic mode</li>
+             * <li><strong>manual</strong>: manual mode</li>
+             * </ul>
              * 
-             * *   **managed**: automatic mode
-             * *   **manual**: manual mode
+             * <strong>example:</strong>
+             * <p>managed</p>
              */
             public Builder routeMode(String routeMode) {
                 this.routeMode = routeMode;
@@ -745,7 +921,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * <p>The ID of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-2vcmhjs88nil55fvu****</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -753,7 +932,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The unprotected resources.
+             * <p>The unprotected resources.</p>
              */
             public Builder unprotectedResource(UnprotectedResource unprotectedResource) {
                 this.unprotectedResource = unprotectedResource;
@@ -761,7 +940,10 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the VPC firewall.
+             * <p>The instance name of the VPC firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vpcFirewallName(String vpcFirewallName) {
                 this.vpcFirewallName = vpcFirewallName;

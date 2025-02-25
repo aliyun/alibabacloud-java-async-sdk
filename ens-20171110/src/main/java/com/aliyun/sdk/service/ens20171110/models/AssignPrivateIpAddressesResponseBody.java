@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>AssignPrivateIpAddressesResponseBody</p>
  */
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
-    @NameInMap("AssignedPrivateIpAddressesSet")
+    @com.aliyun.core.annotation.NameInMap("AssignedPrivateIpAddressesSet")
     private AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssignPrivateIpAddressesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssignedPrivateIpAddressesSet.
+         * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -58,7 +63,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,12 +79,18 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class AssignedPrivateIpAddressesSet extends TeaModel {
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PrivateIpSet")
-        private java.util.List < String > privateIpSet;
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
+        private java.util.List<String> privateIpSet;
 
         private AssignedPrivateIpAddressesSet(Builder builder) {
             this.networkInterfaceId = builder.networkInterfaceId;
@@ -101,16 +115,19 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         /**
          * @return privateIpSet
          */
-        public java.util.List < String > getPrivateIpSet() {
+        public java.util.List<String> getPrivateIpSet() {
             return this.privateIpSet;
         }
 
         public static final class Builder {
             private String networkInterfaceId; 
-            private java.util.List < String > privateIpSet; 
+            private java.util.List<String> privateIpSet; 
 
             /**
-             * NetworkInterfaceId.
+             * <p>The ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-uf620pb4d19ljnu4a64m</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -118,9 +135,9 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpSet.
+             * <p>The assigned private IP addresses.</p>
              */
-            public Builder privateIpSet(java.util.List < String > privateIpSet) {
+            public Builder privateIpSet(java.util.List<String> privateIpSet) {
                 this.privateIpSet = privateIpSet;
                 return this;
             }

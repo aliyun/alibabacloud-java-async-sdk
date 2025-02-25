@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootInstancesRequest} extends {@link RequestModel}
  *
  * <p>RebootInstancesRequest</p>
  */
 public class RebootInstancesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("BatchOptimization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchOptimization")
     private String batchOptimization;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ForceReboot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceReboot")
     private Boolean forceReboot;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private RebootInstancesRequest(Builder builder) {
@@ -112,7 +117,7 @@ public class RebootInstancesRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -156,7 +161,7 @@ public class RebootInstancesRequest extends Request {
         private String batchOptimization; 
         private Boolean dryRun; 
         private Boolean forceReboot; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -191,13 +196,15 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * The batch operation mode. Valid values:
-         * <p>
+         * <p>The batch operation mode. Valid values:</p>
+         * <ul>
+         * <li>AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted and an error message is returned.</li>
+         * <li>SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.</li>
+         * </ul>
+         * <p>Default value: AllTogether.</p>
          * 
-         * *   AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted, and an error message is returned.
-         * *   SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.
-         * 
-         * Default value: AllTogether.
+         * <strong>example:</strong>
+         * <p>AllTogether</p>
          */
         public Builder batchOptimization(String batchOptimization) {
             this.putQueryParameter("BatchOptimization", batchOptimization);
@@ -206,16 +213,20 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned regardless of whether the request passes the dry run.</p>
+         * </blockquote>
+         * <ul>
+         * <li>false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * 
-         * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
-         * 
-         * *   false: performs a dry run and performs the actual request.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -224,13 +235,15 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully restart the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully restart the instance. Valid values:</p>
+         * <ul>
+         * <li>true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
+         * <li>false: normally restarts the instance.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance will be lost.
-         * *   false: normally restarts the instance.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceReboot(Boolean forceReboot) {
             this.putQueryParameter("ForceReboot", forceReboot);
@@ -239,9 +252,13 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * The instance IDs. You can specify up to 100 instance IDs.
+         * <p>The IDs of ECS instances. Valid values of N: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -266,7 +283,11 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

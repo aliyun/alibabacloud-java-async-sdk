@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchRetcodeAppByPageRequest} extends {@link RequestModel}
  *
  * <p>SearchRetcodeAppByPageRequest</p>
  */
 public class SearchRetcodeAppByPageRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("RetcodeAppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetcodeAppId")
     private String retcodeAppId;
 
-    @Query
-    @NameInMap("RetcodeAppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetcodeAppName")
     private String retcodeAppName;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private SearchRetcodeAppByPageRequest(Builder builder) {
         super(builder);
@@ -110,7 +115,7 @@ public class SearchRetcodeAppByPageRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -121,7 +126,7 @@ public class SearchRetcodeAppByPageRequest extends Request {
         private String resourceGroupId; 
         private String retcodeAppId; 
         private String retcodeAppName; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -139,7 +144,10 @@ public class SearchRetcodeAppByPageRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +156,10 @@ public class SearchRetcodeAppByPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,7 +168,11 @@ public class SearchRetcodeAppByPageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -166,7 +181,10 @@ public class SearchRetcodeAppByPageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.
+         * <p>The ID of the resource group. You can obtain the resource group ID in the <strong>Resource Management</strong> console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -175,10 +193,11 @@ public class SearchRetcodeAppByPageRequest extends Request {
         }
 
         /**
-         * The ID of the application.
-         * <p>
+         * <p>The application ID.</p>
+         * <p>Log on to the <strong>ARMS console</strong>. In the left-side navigation pane, choose <strong>Browser Monitoring</strong> &gt; <strong>Browser Monitoring</strong>. On the Browser Monitoring page, click the name of an application. The URL in the browser address bar contains the pid of this application in the format of <code>pid=xxx</code>. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is <code>xxx%4074xxx</code>, you must replace <strong>%40</strong> with the at sign (@). The actual PID is <code>xxx@74xxx</code>.</p>
          * 
-         * Log on to the **ARMS console**. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the browser address bar contains the pid of this application in the format of `pid=xxx`. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is `xxx%4074xxx`, you must replace **%40** with the at sign (@). The actual PID is `xxx@74xxx`.
+         * <strong>example:</strong>
+         * <p>eb4zdose6v@9781be0f44d****</p>
          */
         public Builder retcodeAppId(String retcodeAppId) {
             this.putQueryParameter("RetcodeAppId", retcodeAppId);
@@ -187,7 +206,10 @@ public class SearchRetcodeAppByPageRequest extends Request {
         }
 
         /**
-         * The name of the application that is monitored by Browser Monitoring.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>App1</p>
          */
         public Builder retcodeAppName(String retcodeAppName) {
             this.putQueryParameter("RetcodeAppName", retcodeAppName);
@@ -196,9 +218,9 @@ public class SearchRetcodeAppByPageRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tag.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -211,11 +233,17 @@ public class SearchRetcodeAppByPageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchRetcodeAppByPageRequest} extends {@link TeaModel}
+     *
+     * <p>SearchRetcodeAppByPageRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -250,7 +278,10 @@ public class SearchRetcodeAppByPageRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +289,10 @@ public class SearchRetcodeAppByPageRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

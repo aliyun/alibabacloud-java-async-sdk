@@ -1,401 +1,476 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Body
-    @NameInMap("access_control_list")
-    private java.util.List < String > accessControlList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("access_control_list")
+    private java.util.List<String> accessControlList;
 
-    @Body
-    @NameInMap("addons")
-    private java.util.List < Addon > addons;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("addons")
+    private java.util.List<Addon> addons;
 
-    @Body
-    @NameInMap("api_audiences")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("api_audiences")
     private String apiAudiences;
 
-    @Body
-    @NameInMap("charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auto_renew")
+    @Deprecated
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auto_renew_period")
+    @Deprecated
+    private Long autoRenewPeriod;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("charge_type")
+    @Deprecated
     private String chargeType;
 
-    @Body
-    @NameInMap("cis_enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cis_enabled")
+    @Deprecated
     private Boolean cisEnabled;
 
-    @Body
-    @NameInMap("cloud_monitor_flags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
+    @Deprecated
     private Boolean cloudMonitorFlags;
 
-    @Body
-    @NameInMap("cluster_domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_domain")
     private String clusterDomain;
 
-    @Body
-    @NameInMap("cluster_spec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
     private String clusterSpec;
 
-    @Body
-    @NameInMap("cluster_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Body
-    @NameInMap("container_cidr")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("container_cidr")
     private String containerCidr;
 
-    @Body
-    @NameInMap("controlplane_log_components")
-    private java.util.List < String > controlplaneLogComponents;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("control_plane_config")
+    private ControlPlaneConfig controlPlaneConfig;
 
-    @Body
-    @NameInMap("controlplane_log_project")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("controlplane_log_components")
+    private java.util.List<String> controlplaneLogComponents;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("controlplane_log_project")
     private String controlplaneLogProject;
 
-    @Body
-    @NameInMap("controlplane_log_ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("controlplane_log_ttl")
     private String controlplaneLogTtl;
 
-    @Body
-    @NameInMap("cpu_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu_policy")
+    @Deprecated
     private String cpuPolicy;
 
-    @Body
-    @NameInMap("custom_san")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("custom_san")
     private String customSan;
 
-    @Body
-    @NameInMap("deletion_protection")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deletion_protection")
     private Boolean deletionProtection;
 
-    @Body
-    @NameInMap("disable_rollback")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("disable_rollback")
+    @Deprecated
     private Boolean disableRollback;
 
-    @Body
-    @NameInMap("enable_rrsa")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enable_rrsa")
     private Boolean enableRrsa;
 
-    @Body
-    @NameInMap("encryption_provider_key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("encryption_provider_key")
     private String encryptionProviderKey;
 
-    @Body
-    @NameInMap("endpoint_public_access")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endpoint_public_access")
     private Boolean endpointPublicAccess;
 
-    @Body
-    @NameInMap("format_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk")
+    @Deprecated
     private Boolean formatDisk;
 
-    @Body
-    @NameInMap("image_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_id")
+    @Deprecated
     private String imageId;
 
-    @Body
-    @NameInMap("image_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_type")
+    @Deprecated
     private String imageType;
 
-    @Body
-    @NameInMap("instances")
-    private java.util.List < String > instances;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instances")
+    @Deprecated
+    private java.util.List<String> instances;
 
-    @Body
-    @NameInMap("ip_stack")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ip_stack")
     private String ipStack;
 
-    @Body
-    @NameInMap("is_enterprise_security_group")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_enterprise_security_group")
     private Boolean isEnterpriseSecurityGroup;
 
-    @Body
-    @NameInMap("keep_instance_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep_instance_name")
+    @Deprecated
     private Boolean keepInstanceName;
 
-    @Body
-    @NameInMap("key_pair")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("key_pair")
+    @Deprecated
     private String keyPair;
 
-    @Body
-    @NameInMap("kubernetes_version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kubernetes_version")
     private String kubernetesVersion;
 
-    @Body
-    @NameInMap("load_balancer_spec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("load_balancer_id")
+    private String loadBalancerId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("load_balancer_spec")
+    @Deprecated
     private String loadBalancerSpec;
 
-    @Body
-    @NameInMap("logging_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("logging_type")
     private String loggingType;
 
-    @Body
-    @NameInMap("login_password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("login_password")
+    @Deprecated
     private String loginPassword;
 
-    @Body
-    @NameInMap("master_auto_renew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maintenance_window")
+    private MaintenanceWindow maintenanceWindow;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_auto_renew")
+    @Deprecated
     private Boolean masterAutoRenew;
 
-    @Body
-    @NameInMap("master_auto_renew_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_auto_renew_period")
+    @Deprecated
     private Long masterAutoRenewPeriod;
 
-    @Body
-    @NameInMap("master_count")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_count")
+    @Deprecated
     private Long masterCount;
 
-    @Body
-    @NameInMap("master_instance_charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_instance_charge_type")
+    @Deprecated
     private String masterInstanceChargeType;
 
-    @Body
-    @NameInMap("master_instance_types")
-    private java.util.List < String > masterInstanceTypes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_instance_types")
+    @Deprecated
+    private java.util.List<String> masterInstanceTypes;
 
-    @Body
-    @NameInMap("master_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_period")
+    @Deprecated
     private Long masterPeriod;
 
-    @Body
-    @NameInMap("master_period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_period_unit")
+    @Deprecated
     private String masterPeriodUnit;
 
-    @Body
-    @NameInMap("master_system_disk_category")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_category")
+    @Deprecated
     private String masterSystemDiskCategory;
 
-    @Body
-    @NameInMap("master_system_disk_performance_level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_performance_level")
+    @Deprecated
     private String masterSystemDiskPerformanceLevel;
 
-    @Body
-    @NameInMap("master_system_disk_size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_size")
+    @Deprecated
     private Long masterSystemDiskSize;
 
-    @Body
-    @NameInMap("master_system_disk_snapshot_policy_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_snapshot_policy_id")
+    @Deprecated
     private String masterSystemDiskSnapshotPolicyId;
 
-    @Body
-    @NameInMap("master_vswitch_ids")
-    private java.util.List < String > masterVswitchIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_vswitch_ids")
+    @Deprecated
+    private java.util.List<String> masterVswitchIds;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("nat_gateway")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nat_gateway")
     private Boolean natGateway;
 
-    @Body
-    @NameInMap("node_cidr_mask")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_cidr_mask")
     private String nodeCidrMask;
 
-    @Body
-    @NameInMap("node_name_mode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_name_mode")
+    @Deprecated
     private String nodeNameMode;
 
-    @Body
-    @NameInMap("node_port_range")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_port_range")
     private String nodePortRange;
 
-    @Body
-    @NameInMap("nodepools")
-    private java.util.List < Nodepool > nodepools;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodepools")
+    private java.util.List<Nodepool> nodepools;
 
-    @Body
-    @NameInMap("num_of_nodes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("num_of_nodes")
     @Deprecated
     private Long numOfNodes;
 
-    @Body
-    @NameInMap("os_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operation_policy")
+    private OperationPolicy operationPolicy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("os_type")
+    @Deprecated
     private String osType;
 
-    @Body
-    @NameInMap("period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("period")
+    @Deprecated
     private Long period;
 
-    @Body
-    @NameInMap("period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("period_unit")
+    @Deprecated
     private String periodUnit;
 
-    @Body
-    @NameInMap("platform")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("platform")
+    @Deprecated
     private String platform;
 
-    @Body
-    @NameInMap("pod_vswitch_ids")
-    private java.util.List < String > podVswitchIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pod_vswitch_ids")
+    private java.util.List<String> podVswitchIds;
 
-    @Body
-    @NameInMap("profile")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("profile")
     private String profile;
 
-    @Body
-    @NameInMap("proxy_mode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("proxy_mode")
     private String proxyMode;
 
-    @Body
-    @NameInMap("rds_instances")
-    private java.util.List < String > rdsInstances;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rds_instances")
+    @Deprecated
+    private java.util.List<String> rdsInstances;
 
-    @Body
-    @NameInMap("region_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("region_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("resource_group_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resource_group_id")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private Runtime runtime;
 
-    @Body
-    @NameInMap("security_group_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("security_group_id")
     private String securityGroupId;
 
-    @Body
-    @NameInMap("service_account_issuer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("security_hardening_os")
+    @Deprecated
+    private Boolean securityHardeningOs;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("service_account_issuer")
     private String serviceAccountIssuer;
 
-    @Body
-    @NameInMap("service_cidr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("service_cidr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCidr;
 
-    @Body
-    @NameInMap("service_discovery_types")
-    private java.util.List < String > serviceDiscoveryTypes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("service_discovery_types")
+    private java.util.List<String> serviceDiscoveryTypes;
 
-    @Body
-    @NameInMap("snat_entry")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("snat_entry")
     private Boolean snatEntry;
 
-    @Body
-    @NameInMap("soc_enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("soc_enabled")
+    @Deprecated
     private Boolean socEnabled;
 
-    @Body
-    @NameInMap("ssh_flags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ssh_flags")
     private Boolean sshFlags;
 
-    @Body
-    @NameInMap("tags")
-    private java.util.List < Tag > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tag> tags;
 
-    @Body
-    @NameInMap("taints")
-    private java.util.List < Taint > taints;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taints")
+    @Deprecated
+    private java.util.List<Taint> taints;
 
-    @Body
-    @NameInMap("timeout_mins")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timeout_mins")
+    @Deprecated
     private Long timeoutMins;
 
-    @Body
-    @NameInMap("timezone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timezone")
     private String timezone;
 
-    @Body
-    @NameInMap("user_ca")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_ca")
     private String userCa;
 
-    @Body
-    @NameInMap("user_data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_data")
     private String userData;
 
-    @Body
-    @NameInMap("vpcid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcid")
     private String vpcid;
 
-    @Body
-    @NameInMap("vswitch_ids")
-    @Validation(required = true)
-    private java.util.List < String > vswitchIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vswitch_ids")
+    private java.util.List<String> vswitchIds;
 
-    @Body
-    @NameInMap("worker_auto_renew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew")
     @Deprecated
     private Boolean workerAutoRenew;
 
-    @Body
-    @NameInMap("worker_auto_renew_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew_period")
     @Deprecated
     private Long workerAutoRenewPeriod;
 
-    @Body
-    @NameInMap("worker_data_disks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_data_disks")
     @Deprecated
-    private java.util.List < WorkerDataDisks> workerDataDisks;
+    private java.util.List<WorkerDataDisks> workerDataDisks;
 
-    @Body
-    @NameInMap("worker_instance_charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_charge_type")
     @Deprecated
     private String workerInstanceChargeType;
 
-    @Body
-    @NameInMap("worker_instance_types")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_types")
     @Deprecated
-    private java.util.List < String > workerInstanceTypes;
+    private java.util.List<String> workerInstanceTypes;
 
-    @Body
-    @NameInMap("worker_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period")
     @Deprecated
     private Long workerPeriod;
 
-    @Body
-    @NameInMap("worker_period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period_unit")
     @Deprecated
     private String workerPeriodUnit;
 
-    @Body
-    @NameInMap("worker_system_disk_category")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_category")
     @Deprecated
     private String workerSystemDiskCategory;
 
-    @Body
-    @NameInMap("worker_system_disk_performance_level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_performance_level")
     @Deprecated
     private String workerSystemDiskPerformanceLevel;
 
-    @Body
-    @NameInMap("worker_system_disk_size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_size")
     @Deprecated
     private Long workerSystemDiskSize;
 
-    @Body
-    @NameInMap("worker_system_disk_snapshot_policy_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_snapshot_policy_id")
     @Deprecated
     private String workerSystemDiskSnapshotPolicyId;
 
-    @Body
-    @NameInMap("worker_vswitch_ids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_vswitch_ids")
     @Deprecated
-    private java.util.List < String > workerVswitchIds;
+    private java.util.List<String> workerVswitchIds;
 
-    @Body
-    @NameInMap("zone_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("zone_id")
+    @Deprecated
     private String zoneId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("zone_ids")
+    private java.util.List<String> zoneIds;
 
     private CreateClusterRequest(Builder builder) {
         super(builder);
         this.accessControlList = builder.accessControlList;
         this.addons = builder.addons;
         this.apiAudiences = builder.apiAudiences;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
         this.cisEnabled = builder.cisEnabled;
         this.cloudMonitorFlags = builder.cloudMonitorFlags;
@@ -403,6 +478,7 @@ public class CreateClusterRequest extends Request {
         this.clusterSpec = builder.clusterSpec;
         this.clusterType = builder.clusterType;
         this.containerCidr = builder.containerCidr;
+        this.controlPlaneConfig = builder.controlPlaneConfig;
         this.controlplaneLogComponents = builder.controlplaneLogComponents;
         this.controlplaneLogProject = builder.controlplaneLogProject;
         this.controlplaneLogTtl = builder.controlplaneLogTtl;
@@ -422,9 +498,11 @@ public class CreateClusterRequest extends Request {
         this.keepInstanceName = builder.keepInstanceName;
         this.keyPair = builder.keyPair;
         this.kubernetesVersion = builder.kubernetesVersion;
+        this.loadBalancerId = builder.loadBalancerId;
         this.loadBalancerSpec = builder.loadBalancerSpec;
         this.loggingType = builder.loggingType;
         this.loginPassword = builder.loginPassword;
+        this.maintenanceWindow = builder.maintenanceWindow;
         this.masterAutoRenew = builder.masterAutoRenew;
         this.masterAutoRenewPeriod = builder.masterAutoRenewPeriod;
         this.masterCount = builder.masterCount;
@@ -444,6 +522,7 @@ public class CreateClusterRequest extends Request {
         this.nodePortRange = builder.nodePortRange;
         this.nodepools = builder.nodepools;
         this.numOfNodes = builder.numOfNodes;
+        this.operationPolicy = builder.operationPolicy;
         this.osType = builder.osType;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -456,6 +535,7 @@ public class CreateClusterRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.runtime = builder.runtime;
         this.securityGroupId = builder.securityGroupId;
+        this.securityHardeningOs = builder.securityHardeningOs;
         this.serviceAccountIssuer = builder.serviceAccountIssuer;
         this.serviceCidr = builder.serviceCidr;
         this.serviceDiscoveryTypes = builder.serviceDiscoveryTypes;
@@ -483,6 +563,7 @@ public class CreateClusterRequest extends Request {
         this.workerSystemDiskSnapshotPolicyId = builder.workerSystemDiskSnapshotPolicyId;
         this.workerVswitchIds = builder.workerVswitchIds;
         this.zoneId = builder.zoneId;
+        this.zoneIds = builder.zoneIds;
     }
 
     public static Builder builder() {
@@ -501,14 +582,14 @@ public class CreateClusterRequest extends Request {
     /**
      * @return accessControlList
      */
-    public java.util.List < String > getAccessControlList() {
+    public java.util.List<String> getAccessControlList() {
         return this.accessControlList;
     }
 
     /**
      * @return addons
      */
-    public java.util.List < Addon > getAddons() {
+    public java.util.List<Addon> getAddons() {
         return this.addons;
     }
 
@@ -517,6 +598,20 @@ public class CreateClusterRequest extends Request {
      */
     public String getApiAudiences() {
         return this.apiAudiences;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Long getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -569,9 +664,16 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return controlPlaneConfig
+     */
+    public ControlPlaneConfig getControlPlaneConfig() {
+        return this.controlPlaneConfig;
+    }
+
+    /**
      * @return controlplaneLogComponents
      */
-    public java.util.List < String > getControlplaneLogComponents() {
+    public java.util.List<String> getControlplaneLogComponents() {
         return this.controlplaneLogComponents;
     }
 
@@ -662,7 +764,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < String > getInstances() {
+    public java.util.List<String> getInstances() {
         return this.instances;
     }
 
@@ -702,6 +804,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return loadBalancerId
+     */
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    /**
      * @return loadBalancerSpec
      */
     public String getLoadBalancerSpec() {
@@ -720,6 +829,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getLoginPassword() {
         return this.loginPassword;
+    }
+
+    /**
+     * @return maintenanceWindow
+     */
+    public MaintenanceWindow getMaintenanceWindow() {
+        return this.maintenanceWindow;
     }
 
     /**
@@ -753,7 +869,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return masterInstanceTypes
      */
-    public java.util.List < String > getMasterInstanceTypes() {
+    public java.util.List<String> getMasterInstanceTypes() {
         return this.masterInstanceTypes;
     }
 
@@ -802,7 +918,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return masterVswitchIds
      */
-    public java.util.List < String > getMasterVswitchIds() {
+    public java.util.List<String> getMasterVswitchIds() {
         return this.masterVswitchIds;
     }
 
@@ -844,7 +960,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return nodepools
      */
-    public java.util.List < Nodepool > getNodepools() {
+    public java.util.List<Nodepool> getNodepools() {
         return this.nodepools;
     }
 
@@ -853,6 +969,13 @@ public class CreateClusterRequest extends Request {
      */
     public Long getNumOfNodes() {
         return this.numOfNodes;
+    }
+
+    /**
+     * @return operationPolicy
+     */
+    public OperationPolicy getOperationPolicy() {
+        return this.operationPolicy;
     }
 
     /**
@@ -886,7 +1009,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return podVswitchIds
      */
-    public java.util.List < String > getPodVswitchIds() {
+    public java.util.List<String> getPodVswitchIds() {
         return this.podVswitchIds;
     }
 
@@ -907,7 +1030,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return rdsInstances
      */
-    public java.util.List < String > getRdsInstances() {
+    public java.util.List<String> getRdsInstances() {
         return this.rdsInstances;
     }
 
@@ -940,6 +1063,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return securityHardeningOs
+     */
+    public Boolean getSecurityHardeningOs() {
+        return this.securityHardeningOs;
+    }
+
+    /**
      * @return serviceAccountIssuer
      */
     public String getServiceAccountIssuer() {
@@ -956,7 +1086,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return serviceDiscoveryTypes
      */
-    public java.util.List < String > getServiceDiscoveryTypes() {
+    public java.util.List<String> getServiceDiscoveryTypes() {
         return this.serviceDiscoveryTypes;
     }
 
@@ -984,14 +1114,14 @@ public class CreateClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     /**
      * @return taints
      */
-    public java.util.List < Taint > getTaints() {
+    public java.util.List<Taint> getTaints() {
         return this.taints;
     }
 
@@ -1033,7 +1163,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return vswitchIds
      */
-    public java.util.List < String > getVswitchIds() {
+    public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
     }
 
@@ -1054,7 +1184,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return workerDataDisks
      */
-    public java.util.List < WorkerDataDisks> getWorkerDataDisks() {
+    public java.util.List<WorkerDataDisks> getWorkerDataDisks() {
         return this.workerDataDisks;
     }
 
@@ -1068,7 +1198,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return workerInstanceTypes
      */
-    public java.util.List < String > getWorkerInstanceTypes() {
+    public java.util.List<String> getWorkerInstanceTypes() {
         return this.workerInstanceTypes;
     }
 
@@ -1117,7 +1247,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return workerVswitchIds
      */
-    public java.util.List < String > getWorkerVswitchIds() {
+    public java.util.List<String> getWorkerVswitchIds() {
         return this.workerVswitchIds;
     }
 
@@ -1128,10 +1258,19 @@ public class CreateClusterRequest extends Request {
         return this.zoneId;
     }
 
+    /**
+     * @return zoneIds
+     */
+    public java.util.List<String> getZoneIds() {
+        return this.zoneIds;
+    }
+
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
-        private java.util.List < String > accessControlList; 
-        private java.util.List < Addon > addons; 
+        private java.util.List<String> accessControlList; 
+        private java.util.List<Addon> addons; 
         private String apiAudiences; 
+        private Boolean autoRenew; 
+        private Long autoRenewPeriod; 
         private String chargeType; 
         private Boolean cisEnabled; 
         private Boolean cloudMonitorFlags; 
@@ -1139,7 +1278,8 @@ public class CreateClusterRequest extends Request {
         private String clusterSpec; 
         private String clusterType; 
         private String containerCidr; 
-        private java.util.List < String > controlplaneLogComponents; 
+        private ControlPlaneConfig controlPlaneConfig; 
+        private java.util.List<String> controlplaneLogComponents; 
         private String controlplaneLogProject; 
         private String controlplaneLogTtl; 
         private String cpuPolicy; 
@@ -1152,73 +1292,78 @@ public class CreateClusterRequest extends Request {
         private Boolean formatDisk; 
         private String imageId; 
         private String imageType; 
-        private java.util.List < String > instances; 
+        private java.util.List<String> instances; 
         private String ipStack; 
         private Boolean isEnterpriseSecurityGroup; 
         private Boolean keepInstanceName; 
         private String keyPair; 
         private String kubernetesVersion; 
+        private String loadBalancerId; 
         private String loadBalancerSpec; 
         private String loggingType; 
         private String loginPassword; 
+        private MaintenanceWindow maintenanceWindow; 
         private Boolean masterAutoRenew; 
         private Long masterAutoRenewPeriod; 
         private Long masterCount; 
         private String masterInstanceChargeType; 
-        private java.util.List < String > masterInstanceTypes; 
+        private java.util.List<String> masterInstanceTypes; 
         private Long masterPeriod; 
         private String masterPeriodUnit; 
         private String masterSystemDiskCategory; 
         private String masterSystemDiskPerformanceLevel; 
         private Long masterSystemDiskSize; 
         private String masterSystemDiskSnapshotPolicyId; 
-        private java.util.List < String > masterVswitchIds; 
+        private java.util.List<String> masterVswitchIds; 
         private String name; 
         private Boolean natGateway; 
         private String nodeCidrMask; 
         private String nodeNameMode; 
         private String nodePortRange; 
-        private java.util.List < Nodepool > nodepools; 
+        private java.util.List<Nodepool> nodepools; 
         private Long numOfNodes; 
+        private OperationPolicy operationPolicy; 
         private String osType; 
         private Long period; 
         private String periodUnit; 
         private String platform; 
-        private java.util.List < String > podVswitchIds; 
+        private java.util.List<String> podVswitchIds; 
         private String profile; 
         private String proxyMode; 
-        private java.util.List < String > rdsInstances; 
+        private java.util.List<String> rdsInstances; 
         private String regionId; 
         private String resourceGroupId; 
         private Runtime runtime; 
         private String securityGroupId; 
+        private Boolean securityHardeningOs; 
         private String serviceAccountIssuer; 
         private String serviceCidr; 
-        private java.util.List < String > serviceDiscoveryTypes; 
+        private java.util.List<String> serviceDiscoveryTypes; 
         private Boolean snatEntry; 
         private Boolean socEnabled; 
         private Boolean sshFlags; 
-        private java.util.List < Tag > tags; 
-        private java.util.List < Taint > taints; 
+        private java.util.List<Tag> tags; 
+        private java.util.List<Taint> taints; 
         private Long timeoutMins; 
         private String timezone; 
         private String userCa; 
         private String userData; 
         private String vpcid; 
-        private java.util.List < String > vswitchIds; 
+        private java.util.List<String> vswitchIds; 
         private Boolean workerAutoRenew; 
         private Long workerAutoRenewPeriod; 
-        private java.util.List < WorkerDataDisks> workerDataDisks; 
+        private java.util.List<WorkerDataDisks> workerDataDisks; 
         private String workerInstanceChargeType; 
-        private java.util.List < String > workerInstanceTypes; 
+        private java.util.List<String> workerInstanceTypes; 
         private Long workerPeriod; 
         private String workerPeriodUnit; 
         private String workerSystemDiskCategory; 
         private String workerSystemDiskPerformanceLevel; 
         private Long workerSystemDiskSize; 
         private String workerSystemDiskSnapshotPolicyId; 
-        private java.util.List < String > workerVswitchIds; 
+        private java.util.List<String> workerVswitchIds; 
         private String zoneId; 
+        private java.util.List<String> zoneIds; 
 
         private Builder() {
             super();
@@ -1229,6 +1374,8 @@ public class CreateClusterRequest extends Request {
             this.accessControlList = request.accessControlList;
             this.addons = request.addons;
             this.apiAudiences = request.apiAudiences;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
             this.cisEnabled = request.cisEnabled;
             this.cloudMonitorFlags = request.cloudMonitorFlags;
@@ -1236,6 +1383,7 @@ public class CreateClusterRequest extends Request {
             this.clusterSpec = request.clusterSpec;
             this.clusterType = request.clusterType;
             this.containerCidr = request.containerCidr;
+            this.controlPlaneConfig = request.controlPlaneConfig;
             this.controlplaneLogComponents = request.controlplaneLogComponents;
             this.controlplaneLogProject = request.controlplaneLogProject;
             this.controlplaneLogTtl = request.controlplaneLogTtl;
@@ -1255,9 +1403,11 @@ public class CreateClusterRequest extends Request {
             this.keepInstanceName = request.keepInstanceName;
             this.keyPair = request.keyPair;
             this.kubernetesVersion = request.kubernetesVersion;
+            this.loadBalancerId = request.loadBalancerId;
             this.loadBalancerSpec = request.loadBalancerSpec;
             this.loggingType = request.loggingType;
             this.loginPassword = request.loginPassword;
+            this.maintenanceWindow = request.maintenanceWindow;
             this.masterAutoRenew = request.masterAutoRenew;
             this.masterAutoRenewPeriod = request.masterAutoRenewPeriod;
             this.masterCount = request.masterCount;
@@ -1277,6 +1427,7 @@ public class CreateClusterRequest extends Request {
             this.nodePortRange = request.nodePortRange;
             this.nodepools = request.nodepools;
             this.numOfNodes = request.numOfNodes;
+            this.operationPolicy = request.operationPolicy;
             this.osType = request.osType;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -1289,6 +1440,7 @@ public class CreateClusterRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.runtime = request.runtime;
             this.securityGroupId = request.securityGroupId;
+            this.securityHardeningOs = request.securityHardeningOs;
             this.serviceAccountIssuer = request.serviceAccountIssuer;
             this.serviceCidr = request.serviceCidr;
             this.serviceDiscoveryTypes = request.serviceDiscoveryTypes;
@@ -1316,58 +1468,53 @@ public class CreateClusterRequest extends Request {
             this.workerSystemDiskSnapshotPolicyId = request.workerSystemDiskSnapshotPolicyId;
             this.workerVswitchIds = request.workerVswitchIds;
             this.zoneId = request.zoneId;
+            this.zoneIds = request.zoneIds;
         } 
 
         /**
-         * The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
+         * <p>The ACL rule of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
          */
-        public Builder accessControlList(java.util.List < String > accessControlList) {
+        public Builder accessControlList(java.util.List<String> accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
             this.accessControlList = accessControlList;
             return this;
         }
 
         /**
-         * The components that you want to install in the cluster. When you create a cluster, you can set the `addons` parameter to install specific components.
-         * <p>
-         * 
-         * **Network plug-in**: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.
-         * 
-         * *   Specify the Flannel plug-in in the following format: \[{"name":"flannel","config":""}].
-         * *   Specify the Terway plug-in in the following format: \[{"name": "terway-eniip","config": ""}].
-         * 
-         * **Volume plug-in**: required. The `CSI` and `FlexVolume` volume plug-ins are supported.
-         * 
-         * *   Specify the `CSI` plug-in in the following format: \[{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].
-         * *   Specify the `FlexVolume` plug-in in the following format: \[{"name": "flexvolume","config": ""}].
-         * 
-         * **Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.
-         * 
-         * *   Use an existing `Simple Log Service project`: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].
-         * *   To create a `Simple Log Service project`, specify the component in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].
-         * 
-         * **Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.
-         * 
-         * *   To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: \[{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].
-         * *   If you do not want to install nginx-ingress-controller, specify the component in the following format: \[{"name": "nginx-ingress-controller","config": "","disabled": true}].
-         * 
-         * **Event center**: optional. By default, the event center feature is enabled.
-         * 
-         * You can use Kubernetes event centers to store and query events, and configure alert rules. You can use the Logstores that are associated with Kubernetes event centers for free within 90 days. For more information, see [Create and use an event center](https://help.aliyun.com/document_detail/150476.html#task-2389213).
-         * 
-         * Enable the ack-node-problem-detector component in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
+         * <p>The components that you want to install in the cluster. When you create a cluster, you can specify <code>addons</code> to install specific components.</p>
+         * <p><strong>Network plug-in</strong>: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</p>
+         * <ul>
+         * <li>Specify the Flannel plug-in in the following format: [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}].</li>
+         * <li>If you want to use the Terway component, specify the value in the [{&quot;Name&quot;: &quot;terway-eniip&quot;,&quot;Config&quot;: &quot;&quot;}] format.</li>
+         * </ul>
+         * <p><strong>Volume plug-in</strong>: optional. Only the <code>CSI</code> plug-in is supported.</p>
+         * <p>Specify the <code>CSI</code> plug-in in the following format: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}].</p>
+         * <p><strong>Simple Log Service component</strong>: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
+         * <ul>
+         * <li>Specify an existing <code>Simple Log Service project</code> in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</li>
+         * <li>To create a <code>Simple Log Service project</code>, specify the component in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</li>
+         * </ul>
+         * <p><strong>Ingress controller</strong><code>: optional. By default, the nginx-ingress-controller component is installed in ACK dedicated clusters.</code></p>
+         * <ul>
+         * <li>To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</li>
+         * <li>To disable the automatic installation of nginx-ingress-controller, specify the component in the following format: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</li>
+         * </ul>
+         * <p><strong>Event center</strong>: optional. By default, the event center feature is enabled.</p>
+         * <p>You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use an event center</a>.</p>
+         * <p>Enable the ack-node-problem-detector component in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</p>
          */
-        public Builder addons(java.util.List < Addon > addons) {
+        public Builder addons(java.util.List<Addon> addons) {
             this.putBodyParameter("addons", addons);
             this.addons = addons;
             return this;
         }
 
         /**
-         * Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `api-audiences` are used by the `API server` to check whether the `tokens` of requests are legitimate.`` Separate multiple `audiences` with commas (,).
-         * <p>
+         * <p>Provides identities for pods when pods communicate with the <code>API server</code> of the cluster. <code>api-audiences</code> are used by the <code>API server</code> to check whether the <code>tokens</code> of requests are legitimate.<code> Separate multiple values with commas (,).</code></p>
+         * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
          * 
-         * For more information about `ServiceAccount`, see [Enable service account token volume projection](~~160384~~).
+         * <strong>example:</strong>
+         * <p>kubernetes.default.svc</p>
          */
         public Builder apiAudiences(String apiAudiences) {
             this.putBodyParameter("api_audiences", apiAudiences);
@@ -1376,7 +1523,57 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method of the cluster.
+         * <p><strong>This parameter is deprecated.</strong></p>
+         * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putBodyParameter("auto_renew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * <p><strong>This parameter is deprecated.</strong></p>
+         * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
+         * <p>Default value: 1.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder autoRenewPeriod(Long autoRenewPeriod) {
+            this.putBodyParameter("auto_renew_period", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+
+        /**
+         * <p>The billing method of the Classic Load Balancer (CLB) instance that is used by the API server. Default value: PostPaid. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription. The newly created billing method for the CLB instance is not supported.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * </li>
+         * <li><p>Starting from December 1, 2024, new CLB instances no longer support the subscription billing method and will be charged for the instances.</p>
+         * </li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2839797.html">CLB billing adjustments</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("charge_type", chargeType);
@@ -1385,15 +1582,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Center for Internet Security (CIS) reinforcement. For more information, see [CIS reinforcement](~~223744~~).
-         * <p>
+         * <p>This parameter is deprecated. Use security_hardening_os instead.</p>
          * 
-         * Valid values:
-         * 
-         * *   `true`: enables CIS reinforcement.
-         * *   `false`: disables CIS reinforcement.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder cisEnabled(Boolean cisEnabled) {
             this.putBodyParameter("cis_enabled", cisEnabled);
@@ -1402,13 +1594,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to install the CloudMonitor agent. Valid values:
-         * <p>
+         * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: installs the CloudMonitor agent.</li>
+         * <li><code>false</code>: does not install the CloudMonitor agent.</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
          * 
-         * *   `true`: installs the CloudMonitor agent.
-         * *   `false`: does not install the CloudMonitor agent.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
             this.putBodyParameter("cloud_monitor_flags", cloudMonitorFlags);
@@ -1417,10 +1611,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The domain name of the cluster.
-         * <p>
+         * <p>The domain name of the cluster.</p>
+         * <p>The domain name can contain one or more parts that are separated by periods (.). Each part cannot exceed 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.</p>
          * 
-         * The domain name can contain one or more parts that are separated by periods (.). Each part cannot exceed 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.
+         * <strong>example:</strong>
+         * <p>cluster.local</p>
          */
         public Builder clusterDomain(String clusterDomain) {
             this.putBodyParameter("cluster_domain", clusterDomain);
@@ -1429,15 +1624,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of ACK managed cluster. Valid values:
-         * <p>
+         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and specify <code>profile</code>, you can further specify the edition of the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>ack.pro.small</code>: creates an ACK Pro cluster.</li>
+         * <li><code>ack.standard</code>: creates an ACK Basic cluster. If you leave the parameter empty, an ACK Basic cluster is created.</li>
+         * </ul>
          * 
-         * *   `ack.pro.small`: ACK Pro cluster.
-         * *   `ack.standard`: ACK Basic cluster.
-         * 
-         * Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster.is created.
-         * 
-         * For more information, see [Overview of ACK Pro clusters](https://help.aliyun.com/document_detail/173290.html).
+         * <strong>example:</strong>
+         * <p>ack.pro.small</p>
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("cluster_spec", clusterSpec);
@@ -1446,13 +1640,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The cluster type. Valid values:
-         * <p>
+         * <ul>
+         * <li><code>Kubernetes</code>: an ACK dedicated cluster.</li>
+         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
+         * <li><code>ExternalKubernetes</code>: a registered cluster.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `Kubernetes`: ACK dedicated cluster.
-         * *   `ManagedKubernetes`: ACK Basic cluster or ACK Edge cluster.
-         * *   `Ask`: ACK Serverless Basic cluster.
-         * *   `ExternalKubernetes`: external cluster that is registered to ACK.
+         * <strong>example:</strong>
+         * <p>Kubernetes</p>
          */
         public Builder clusterType(String clusterType) {
             this.putBodyParameter("cluster_type", clusterType);
@@ -1461,12 +1657,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The CIDR block of pods. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the CIDR block of pods. The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.
-         * <p>
+         * <p>The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
+         * <p>For more information about how to plan the network of an ACK cluster, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan the network of an ACK cluster</a>.</p>
+         * <blockquote>
+         * <p> This parameter is required if the cluster uses the Flannel plug-in.</p>
+         * </blockquote>
          * 
-         * For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](~~86500~~).
-         * 
-         * >  This parameter is required if the cluster uses the Flannel plug-in.
+         * <strong>example:</strong>
+         * <p>172.20.0.0/16</p>
          */
         public Builder containerCidr(String containerCidr) {
             this.putBodyParameter("container_cidr", containerCidr);
@@ -1475,19 +1673,29 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of control plane components for which you want to enable log collection.
-         * <p>
-         * 
-         * By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.
+         * <p>The control plane configurations of an ACK dedicated cluster.</p>
          */
-        public Builder controlplaneLogComponents(java.util.List < String > controlplaneLogComponents) {
+        public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
+            this.putBodyParameter("control_plane_config", controlPlaneConfig);
+            this.controlPlaneConfig = controlPlaneConfig;
+            return this;
+        }
+
+        /**
+         * <p>The control plane component for which you want to enable log collection.</p>
+         * <p>By default, the log of kube-apiserver, kube-controller-manager, and kube-scheduler is collected.</p>
+         */
+        public Builder controlplaneLogComponents(java.util.List<String> controlplaneLogComponents) {
             this.putBodyParameter("controlplane_log_components", controlplaneLogComponents);
             this.controlplaneLogComponents = controlplaneLogComponents;
             return this;
         }
 
         /**
-         * The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the `k8s-log-{ClusterID}` format.
+         * <p>The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the <code>k8s-log-{ClusterID}</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-xxx</p>
          */
         public Builder controlplaneLogProject(String controlplaneLogProject) {
             this.putBodyParameter("controlplane_log_project", controlplaneLogProject);
@@ -1496,7 +1704,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The retention period of control plane logs in days.
+         * <p>The retention period of control plane logs in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder controlplaneLogTtl(String controlplaneLogTtl) {
             this.putBodyParameter("controlplane_log_ttl", controlplaneLogTtl);
@@ -1505,13 +1716,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The CPU management policy of the nodes in a node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
-         * <p>
+         * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <ul>
+         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity</li>
+         * <li><code>none</code>: specifies that the default CPU affinity is used</li>
+         * </ul>
+         * <p>Default value: <code>none</code>.</p>
          * 
-         * *   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.
-         * *   `none`: specifies that the default CPU affinity is used.
-         * 
-         * Default value: `none`.
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -1520,7 +1733,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Multiple IP addresses and domain names are separated by commas (,).
+         * <p>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs.aliyun.com</p>
          */
         public Builder customSan(String customSan) {
             this.putBodyParameter("custom_san", customSan);
@@ -1529,13 +1745,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable deletion protection for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
-         * <p>
+         * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The cluster cannot be deleted in the Container Service console or by calling API operations.</li>
+         * <li><code>false</code>: The cluster can be deleted in the Container Service console or by calling API operations.</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
          * 
-         * *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.
-         * *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -1544,13 +1762,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a rollback if the cluster fails to be created. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a rollback if the cluster fails to be created. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: performs a rollback when the cluster fails to be created.</li>
+         * <li><code>false</code>: does not perform a rollback when the cluster fails to be created.</li>
+         * </ul>
+         * <p>Default value: <code>true</code></p>
          * 
-         * *   `true`: performs a rollback if the system fails to create the cluster.
-         * *   `false`: does not perform a rollback if the system fails to create the cluster.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putBodyParameter("disable_rollback", disableRollback);
@@ -1559,7 +1779,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature.
+         * <p>Specifies whether to enable the Resource Access Management (RAM) Roles for Service Accounts (RRSA) feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -1568,10 +1791,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see [KMS](~~28935~~).
-         * <p>
+         * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">What is KMS?</a></p>
+         * <blockquote>
+         * <p> The key can be used only in ACK Pro clusters.</p>
+         * </blockquote>
          * 
-         * >  This feature supports only ACK Pro clusters.
+         * <strong>example:</strong>
+         * <p>0fe64791-55eb-4fc7-84c5-c6c7cdca****</p>
          */
         public Builder encryptionProviderKey(String encryptionProviderKey) {
             this.putBodyParameter("encryption_provider_key", encryptionProviderKey);
@@ -1580,13 +1806,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet.
-         * <p>
+         * <p>Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Internet access for the cluster.</li>
+         * <li><code>false</code>: disables Internet access for the cluster. If you set the value to false, the API server cannot be accessed over the Internet.</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
          * 
-         * *   `true`: enables Internet access.
-         * *   `false`: disables Internet access. If you set this parameter to false, the API server cannot be accessed over the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             this.putBodyParameter("endpoint_public_access", endpointPublicAccess);
@@ -1595,18 +1823,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:
-         * <p>
+         * <p>Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: stores the data of containers and images on a data disk. The existing data stored in the data disk is lost. Back up the existing data first.</li>
+         * <li><code>false</code>: does not store the data of containers and images on a data disk.</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
+         * <p>How data disks are mounted:</p>
+         * <ul>
+         * <li>If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.</li>
+         * <li>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</li>
+         * </ul>
          * 
-         * *   `true`: stores the data of containers and images on a data disk. Back up the existing data on the data disk first.
-         * *   `false`: does not store the data of containers and images on a data disk.
-         * 
-         * Default value: `false`.
-         * 
-         * How to mount a data disk:
-         * 
-         * *   If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.
-         * *   If no data disk is attached to the ECS instances, the system does not purchase a new data disk.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -1615,7 +1845,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).
+         * <p>The custom image. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Use a custom image to create an ACK cluster</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp16z7xko3vvv8gt****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -1624,20 +1857,22 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:
-         * <p>
+         * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>AliyunLinux</li>
+         * <li>AliyunLinux Qboot</li>
+         * <li>AliyunLinuxUEFI</li>
+         * <li>AliyunLinux3</li>
+         * <li>Windows</li>
+         * <li>WindowsCore</li>
+         * <li>AliyunLinux3Arm64</li>
+         * <li>ContainerOS</li>
+         * </ul>
+         * <p>Default value: <code>CentOS</code>.</p>
          * 
-         * *   CentOS
-         * *   AliyunLinux
-         * *   AliyunLinux Qboot
-         * *   AliyunLinuxUEFI
-         * *   AliyunLinux3
-         * *   Windows
-         * *   WindowsCore
-         * *   AliyunLinux3Arm64
-         * *   ContainerOS
-         * 
-         * Default value: `CentOS`.
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
          */
         public Builder imageType(String imageType) {
             this.putBodyParameter("image_type", imageType);
@@ -1646,19 +1881,23 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of existing ECS instances that are specified as worker nodes for the cluster.
-         * <p>
-         * 
-         * >  This parameter is required when you create worker nodes on existing ECS instances.
+         * <p>The existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.</p>
+         * <blockquote>
+         * <p> This parameter is required if you create worker nodes on existing ECS instances.</p>
+         * </blockquote>
          */
-        public Builder instances(java.util.List < String > instances) {
+        public Builder instances(java.util.List<String> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
             return this;
         }
 
         /**
-         * The cluster IP stack.
+         * <p>The IP stack of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Optional value: ipv4 (Single stack) or ipv6 (Dual Stack)
+         * Default value: IPV4</p>
          */
         public Builder ipStack(String ipStack) {
             this.putBodyParameter("ip_stack", ipStack);
@@ -1667,15 +1906,18 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to create an advanced security group. This parameter takes effect only if `security_group_id` is left empty.
-         * <p>
+         * <p>Specifies whether to create an advanced security group. This parameter takes effect only if <code>security_group_id</code> is not specified.</p>
+         * <blockquote>
+         * <p> To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that uses Terway.</p>
+         * </blockquote>
+         * <ul>
+         * <li><code>true</code>: creates an advanced security group.</li>
+         * <li><code>false</code>: does not create an advanced security group.</li>
+         * </ul>
+         * <p>Default value: <code>true</code></p>
          * 
-         * >  To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, if the cluster uses Terway, we recommend that you use an advanced security group.
-         * 
-         * *   `true`: creates an advanced security group.
-         * *   `false`: does not create an advanced security group.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
             this.putBodyParameter("is_enterprise_security_group", isEnterpriseSecurityGroup);
@@ -1684,13 +1926,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: retains the names.</li>
+         * <li><code>false</code>: does not retain the names. The system assigns new names.</li>
+         * </ul>
+         * <p>Default value: <code>true</code></p>
          * 
-         * *   `true`: retains the names.
-         * *   `false`: does not retain the names. The new names are assigned by the system.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -1699,7 +1943,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the key pair. You must set this parameter or the `login_password` parameter.
+         * <p>The name of the key pair. You must configure this parameter or the <code>login_password</code> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secrity-key</p>
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -1708,10 +1955,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not set this parameter, the latest Kubernetes version is used.
-         * <p>
+         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
+         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the ACK API. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Support for Kubernetes versions</a>.</p>
          * 
-         * You can create clusters of the latest two Kubernetes versions in the ACK console. You can create clusters of earlier Kubernetes versions by calling API operations. For more information about the Kubernetes versions supported by ACK, see [Release notes on Kubernetes versions](~~185269~~).
+         * <strong>example:</strong>
+         * <p>1.16.9-aliyun.1</p>
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -1720,17 +1968,31 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The specification of the Server Load Balancer (SLB) instance. Valid values:
-         * <p>
+         * <p>Specifies the ID of the CLB instance for accessing the API server. If this parameter is specified, the system does not automatically create a CLB instance for the API server.</p>
          * 
-         * *   slb.s1.small
-         * *   slb.s2.small
-         * *   slb.s2.medium
-         * *   slb.s3.small
-         * *   slb.s3.medium
-         * *   slb.s3.large
+         * <strong>example:</strong>
+         * <p>lb-wz9t256gqa3vbouk****</p>
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            this.putBodyParameter("load_balancer_id", loadBalancerId);
+            this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+
+        /**
+         * <p>The specification of the Server Load Balancer (SLB) instance. Valid values:</p>
+         * <ul>
+         * <li>slb.s1.small</li>
+         * <li>slb.s2.small</li>
+         * <li>slb.s2.medium</li>
+         * <li>slb.s3.small</li>
+         * <li>slb.s3.medium</li>
+         * <li>slb.s3.large</li>
+         * </ul>
+         * <p>Default value: <code>slb.s2.small</code>.</p>
          * 
-         * Default value: `slb.s2.small`.
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putBodyParameter("load_balancer_spec", loadBalancerSpec);
@@ -1739,7 +2001,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Simple Log Service for the cluster. Set the value to `SLS`. This parameter takes effect only for ACK Serverless clusters.
+         * <p>Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Valid value: <code>SLS</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder loggingType(String loggingType) {
             this.putBodyParameter("logging_type", loggingType);
@@ -1748,7 +2013,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * <p>The password for SSH logon. You must set this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello@1234</p>
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -1757,13 +2025,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only if `master_instance_charge_type` is set to `PrePaid`. Valid values:
-         * <p>
+         * <p>The configurations of the cluster maintenance window.</p>
+         */
+        public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
+            this.putBodyParameter("maintenance_window", maintenanceWindow);
+            this.maintenanceWindow = maintenanceWindow;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal</li>
+         * </ul>
+         * <p>Default value: <code>true</code></p>
          * 
-         * *   `true`: enables auto-renewal.
-         * *   `false`: disables auto-renewal.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder masterAutoRenew(Boolean masterAutoRenew) {
             this.putBodyParameter("master_auto_renew", masterAutoRenew);
@@ -1772,12 +2051,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The auto-renewal period for master nodes after the subscriptions of master nodes expire. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.
-         * <p>
+         * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</p>
+         * <p>Valid values: 1, 2, 3, 6, and 12.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, and 12.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder masterAutoRenewPeriod(Long masterAutoRenewPeriod) {
             this.putBodyParameter("master_auto_renew_period", masterAutoRenewPeriod);
@@ -1786,10 +2065,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The number of master nodes. Valid values: `3` and `5`.
-         * <p>
+         * <p>The number of master nodes. Valid values: <code>3</code> and <code>5</code>.</p>
+         * <p>Default value: <code>3</code>.</p>
          * 
-         * Default value: `3`.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder masterCount(Long masterCount) {
             this.putBodyParameter("master_count", masterCount);
@@ -1798,13 +2078,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method of master nodes. Valid values:
-         * <p>
+         * <p>The billing method of master nodes. Valid values:</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go</li>
+         * </ul>
+         * <p>Default value: <code>PostPaid</code></p>
          * 
-         * *   `PrePaid`: subscription.
-         * *   `PostPaid`: pay-as-you-go.
-         * 
-         * Default value: `PostPaid`.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder masterInstanceChargeType(String masterInstanceChargeType) {
             this.putBodyParameter("master_instance_charge_type", masterInstanceChargeType);
@@ -1813,21 +2095,21 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The Elastic Compute Service (ECS) instance types of master nodes. For more information, see [Overview of instance families](~~25378~~).
+         * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
          */
-        public Builder masterInstanceTypes(java.util.List < String > masterInstanceTypes) {
+        public Builder masterInstanceTypes(java.util.List<String> masterInstanceTypes) {
             this.putBodyParameter("master_instance_types", masterInstanceTypes);
             this.masterInstanceTypes = masterInstanceTypes;
             return this;
         }
 
         /**
-         * The subscription duration of master nodes. This parameter takes effect and is required only if `master_instance_charge_type` is set to `PrePaid`.
-         * <p>
+         * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder masterPeriod(Long masterPeriod) {
             this.putBodyParameter("master_period", masterPeriod);
@@ -1836,10 +2118,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing cycle of master nodes. This parameter is required if master_instance_charge_type is set to `PrePaid`.
-         * <p>
+         * <p>The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to <code>PrePaid</code>.</p>
+         * <p>Valid value: <code>Month</code>, which indicates that master nodes are billed only on a monthly basis.</p>
          * 
-         * Set the value to `Month`. Master nodes are billed only on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder masterPeriodUnit(String masterPeriodUnit) {
             this.putBodyParameter("master_period_unit", masterPeriodUnit);
@@ -1848,14 +2131,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of system disk that you want to use for master nodes. Valid values:
-         * <p>
+         * <p>The system disk type of master nodes. Valid values:</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra disk</li>
+         * <li><code>cloud_ssd</code>: standard SSD</li>
+         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD)</li>
+         * </ul>
+         * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
          * 
-         * *   `cloud_efficiency`: ultra disk.
-         * *   `cloud_ssd`: standard SSD.
-         * *   `cloud_essd`: ESSD.
-         * 
-         * Default value: `cloud_ssd`. The default value may vary in different zones.
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder masterSystemDiskCategory(String masterSystemDiskCategory) {
             this.putBodyParameter("master_system_disk_category", masterSystemDiskCategory);
@@ -1864,7 +2149,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for enhanced SSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](~~122389~~).
+         * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder masterSystemDiskPerformanceLevel(String masterSystemDiskPerformanceLevel) {
             this.putBodyParameter("master_system_disk_performance_level", masterSystemDiskPerformanceLevel);
@@ -1873,10 +2161,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The size of the system disk that you want to use for master nodes. Valid values: 40 to 500. Unit: GiB.
-         * <p>
+         * <p>The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.</p>
+         * <p>Default value: <code>120</code>.</p>
          * 
-         * Default value: `120`.
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder masterSystemDiskSize(Long masterSystemDiskSize) {
             this.putBodyParameter("master_system_disk_size", masterSystemDiskSize);
@@ -1885,7 +2174,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy that you want to use for the system disks of master nodes.
+         * <p>The ID of the automatic snapshot policy that is used by the system disk specified for master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-2zej1nogjvovnz4z****</p>
          */
         public Builder masterSystemDiskSnapshotPolicyId(String masterSystemDiskSnapshotPolicyId) {
             this.putBodyParameter("master_system_disk_snapshot_policy_id", masterSystemDiskSnapshotPolicyId);
@@ -1894,22 +2186,22 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.
-         * <p>
-         * 
-         * The number of vSwitches must be the same as that specified in `master_count` and the same as those specified in `master_vswitch_ids`.
+         * <p>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</p>
+         * <p>The number of vSwitches must be the same as that specified in <code>master_count</code> and the same as those specified in <code>master_vswitch_ids</code>.</p>
          */
-        public Builder masterVswitchIds(java.util.List < String > masterVswitchIds) {
+        public Builder masterVswitchIds(java.util.List<String> masterVswitchIds) {
             this.putBodyParameter("master_vswitch_ids", masterVswitchIds);
             this.masterVswitchIds = masterVswitchIds;
             return this;
         }
 
         /**
-         * The cluster name.
-         * <p>
+         * <p>The cluster name.</p>
+         * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and underscores (_). The cluster name cannot start with a hyphen (-).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>cluster-demo</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -1918,13 +2210,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a NAT gateway and configure Source Network Address Translation (SNAT) rules when the system creates the ACK Serverless cluster. Valid values:
-         * <p>
+         * <p>This parameter is deprecated. Use <code>snat_entry</code> instead.</p>
          * 
-         * *   `true`: automatically creates a NAT gateway and configures SNAT rules. This enables Internet access for the VPC in which the cluster is deployed.
-         * *   `false`: does not create a NAT gateway or configure SNAT rules. In this case, the cluster in the VPC cannot access the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder natGateway(Boolean natGateway) {
             this.putBodyParameter("nat_gateway", natGateway);
@@ -1933,10 +2222,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel as the network plug-in.
-         * <p>
+         * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel network plug-in.</p>
+         * <p>Default value: <code>26</code>.</p>
          * 
-         * Default value: `26`.
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder nodeCidrMask(String nodeCidrMask) {
             this.putBodyParameter("node_cidr_mask", nodeCidrMask);
@@ -1945,15 +2235,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the custom node.
-         * <p>
+         * <p>The custom node name.</p>
+         * <p>A custom node name consists of a prefix, a node IP address, and a suffix.</p>
+         * <ul>
+         * <li>The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.</li>
+         * <li>The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</li>
+         * </ul>
+         * <p>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name is aliyun.com00055test.</p>
          * 
-         * A custom node name consists of a prefix, an IP substring, and a suffix.
-         * 
-         * *   The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.
-         * *   The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.
-         * 
-         * For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the length of the IP address substring is 5, and the suffix is test, the node name will be aliyun.com00055test.
+         * <strong>example:</strong>
+         * <p>aliyun.com00055test</p>
          */
         public Builder nodeNameMode(String nodeNameMode) {
             this.putBodyParameter("node_name_mode", nodeNameMode);
@@ -1962,10 +2253,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The node port range. Valid values: 30000 to 65535.
-         * <p>
+         * <p>The node port range. Valid values: 30000 to 65535.</p>
+         * <p>Default value: <code>30000-32767</code>.</p>
          * 
-         * Default value: `30000-32767`.
+         * <strong>example:</strong>
+         * <p>30000~32767</p>
          */
         public Builder nodePortRange(String nodePortRange) {
             this.putBodyParameter("node_port_range", nodePortRange);
@@ -1974,16 +2266,19 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of node pools.
+         * <p>The list of node pools.</p>
          */
-        public Builder nodepools(java.util.List < Nodepool > nodepools) {
+        public Builder nodepools(java.util.List<Nodepool> nodepools) {
             this.putBodyParameter("nodepools", nodepools);
             this.nodepools = nodepools;
             return this;
         }
 
         /**
-         * The number of worker nodes. Valid values: 0 to 100.
+         * <p>The number of worker nodes. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder numOfNodes(Long numOfNodes) {
             this.putBodyParameter("num_of_nodes", numOfNodes);
@@ -1992,13 +2287,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of OS. Valid values:
-         * <p>
+         * <p>The automatic O&amp;M policy of the cluster.</p>
+         */
+        public Builder operationPolicy(OperationPolicy operationPolicy) {
+            this.putBodyParameter("operation_policy", operationPolicy);
+            this.operationPolicy = operationPolicy;
+            return this;
+        }
+
+        /**
+         * <p>The type of OS. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * <p>Default value: <code>Linux</code>.</p>
          * 
-         * *   Windows
-         * *   Linux
-         * 
-         * Default value: `Linux`.
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder osType(String osType) {
             this.putBodyParameter("os_type", osType);
@@ -2007,7 +2313,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration.
+         * <p><strong>This parameter is deprecated.</strong></p>
+         * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
+         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FY2023</p>
          */
         public Builder period(Long period) {
             this.putBodyParameter("period", period);
@@ -2016,7 +2329,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration.
+         * <p><strong>This parameter is deprecated.</strong></p>
+         * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
+         * <p>Valid value: Month, which indicates that resources are billed only on a monthly basis.</p>
+         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("period_unit", periodUnit);
@@ -2025,17 +2344,19 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The release version of the operating system. Valid values:
-         * <p>
+         * <p>The OS distribution that is used. Valid values:</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>AliyunLinux</li>
+         * <li>QbootAliyunLinux</li>
+         * <li>Qboot</li>
+         * <li>Windows</li>
+         * <li>WindowsCore</li>
+         * </ul>
+         * <p>Default value: <code>CentOS</code>.</p>
          * 
-         * *   CentOS
-         * *   AliyunLinux
-         * *   QbootAliyunLinux
-         * *   Qboot
-         * *   Windows
-         * *   WindowsCore
-         * 
-         * Default value: `CentOS`.
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         public Builder platform(String platform) {
             this.putBodyParameter("platform", platform);
@@ -2044,23 +2365,28 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch and the pod vSwitches must not be the same as the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no greater than 19.
-         * <p>
-         * 
-         * >  The `pod_vswitch_ids` parameter is required if the cluster uses Terway as the network plug-in.
+         * <p>If you select Terway as the network plug-in, you must allocate vSwitches to pods. Each pod vSwitch must correspond to a worker node vSwitch. Pod vSwitches and worker node vSwitches must reside in the same zone.</p>
+         * <blockquote>
+         * <p> We recommend that you select pod vSwitches whose subnet mask lengths are no longer than 19 bits. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask length is longer than 25 bits, the IP addresses that can be allocated to pods may be insufficient.</p>
+         * </blockquote>
          */
-        public Builder podVswitchIds(java.util.List < String > podVswitchIds) {
+        public Builder podVswitchIds(java.util.List<String> podVswitchIds) {
             this.putBodyParameter("pod_vswitch_ids", podVswitchIds);
             this.podVswitchIds = podVswitchIds;
             return this;
         }
 
         /**
-         * The identifier that indicates whether the cluster is an ACK Edge cluster. To create an ACK Edge cluster, you must set this parameter to `Edge`.
-         * <p>
+         * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
+         * <ul>
+         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+         * </ul>
          * 
-         * *   `Default`: The cluster is not an ACK Edge cluster.
-         * *   `Edge`: The cluster is an ACK Edge cluster.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder profile(String profile) {
             this.putBodyParameter("profile", profile);
@@ -2069,13 +2395,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The kube-proxy mode. Valid values:
-         * <p>
+         * <p>The kube-proxy mode. Valid values:</p>
+         * <ul>
+         * <li><code>iptables</code>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+         * <li><code>ipvs</code>: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.</li>
+         * </ul>
+         * <p>Default value: <code>ipvs</code>.</p>
          * 
-         * *   `iptables`: iptables is a mature and stable kube-proxy mode. It uses iptables rules to conduct service discovery and load balancing. The performance of this mode is restricted by the size of the Kubernetes cluster. This mode is suitable for Kubernetes clusters that manage a small number of Services.
-         * *   `ipvs`: IPVS is a high-performance kube-proxy mode. It uses Linux Virtual Server (LVS) to conduct service discovery and load balancing. This mode is suitable for clusters that manage a large number of Services. We recommend that you use this mode in scenarios where high-performance load balancing is required.
-         * 
-         * Default value: `ipvs`.
+         * <strong>example:</strong>
+         * <p>ipvs</p>
          */
         public Builder proxyMode(String proxyMode) {
             this.putBodyParameter("proxy_mode", proxyMode);
@@ -2084,16 +2412,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of ApsaraDB RDS instances. Select the ApsaraDB RDS instances that you want to add to the whitelist. We recommend that you add the CIDR block of pods and CIDR block of nodes to the ApsaraDB RDS instances in the ApsaraDB RDS console. When you set the ApsaraDB RDS instances, you cannot scale out the number of nodes because the instances are not in the Running state.
+         * <p>The ApsaraDB RDS instances. Select the ApsaraDB RDS instances that you want to add to the whitelist. We recommend that you add the pod CIDR block and node CIDR block to the ApsaraDB RDS instances in the ApsaraDB RDS console. When you configure the ApsaraDB RDS instances, you cannot scale out the number of nodes because the instances are not in the Running state.</p>
          */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+        public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
             this.rdsInstances = rdsInstances;
             return this;
         }
 
         /**
-         * The ID of the region in which you want to deploy the cluster.
+         * <p>The ID of the region in which the cluster is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -2102,7 +2434,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.
+         * <p>The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3mkrure****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);
@@ -2111,10 +2446,8 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.
-         * <p>
-         * 
-         * For more information about how to select a proper container runtime, see [Comparison of Docker, containerd, and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).
+         * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
+         * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</p>
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -2123,7 +2456,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of an existing security group. You need to choose between this parameter and the `is_enterprise_security_group` parameter. Cluster nodes are automatically added to the security group.
+         * <p>The ID of an existing security group. You must specify this parameter or <code>is_enterprise_security_group</code>. Cluster nodes are automatically added to the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1bdue0qc1g7k****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("security_group_id", securityGroupId);
@@ -2132,10 +2468,28 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `service-account-issuer` is the issuer of the `serviceaccount token`, which corresponds to the `iss` field in the `token payload`.
-         * <p>
+         * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
+         * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
          * 
-         * For more information about `ServiceAccount`, see [Enable service account token volume projection](~~160384~~).
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder securityHardeningOs(Boolean securityHardeningOs) {
+            this.putBodyParameter("security_hardening_os", securityHardeningOs);
+            this.securityHardeningOs = securityHardeningOs;
+            return this;
+        }
+
+        /**
+         * <p>Provides identities for pods when pods communicate with the <code>API server</code> of the cluster. <code>service-account-issuer</code> specifies the issuer of the <code>serviceaccount token</code>, which is specified by using the <code>iss</code> field in the <code>token payload</code>.</p>
+         * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kubernetes.default.svc</p>
          */
         public Builder serviceAccountIssuer(String serviceAccountIssuer) {
             this.putBodyParameter("service_account_issuer", serviceAccountIssuer);
@@ -2144,10 +2498,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The CIDR block of Services. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block of Services cannot overlap with the CIDR block of the VPC (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the CIDR block of Services after the cluster is created.
-         * <p>
+         * <p>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the CIDR block of the VPC (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the CIDR block of Services after the cluster is created.</p>
+         * <p>By default, the Service CIDR block is set to 172.19.0.0/20.</p>
+         * <p>This parameter is required.</p>
          * 
-         * By default, the CIDR block of Services is set to 172.19.0.0/20.
+         * <strong>example:</strong>
+         * <p>172.21.0.0/20</p>
          */
         public Builder serviceCidr(String serviceCidr) {
             this.putBodyParameter("service_cidr", serviceCidr);
@@ -2156,30 +2512,32 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of service discovery that is implemented in the `ACK Serverless` cluster.
-         * <p>
-         * 
-         * *   `CoreDNS`: a standard service discovery plug-in provided by open source Kubernetes. To use the Domain Name System (DNS) resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 CPU cores and 512 MiB of memory.
-         * *   `PrivateZone`: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.
-         * 
-         * By default, this parameter is not specified.
+         * <p>The methods for implementing service discovery in <code>ACK Serverless</code> clusters.</p>
+         * <ul>
+         * <li><code>CoreDNS</code>: a standard service discovery plug-in that is provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCPUs and 512 MiB of memory.</li>
+         * <li><code>PrivateZone</code>: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.</li>
+         * </ul>
+         * <p>By default, this parameter is not specified.</p>
          */
-        public Builder serviceDiscoveryTypes(java.util.List < String > serviceDiscoveryTypes) {
+        public Builder serviceDiscoveryTypes(java.util.List<String> serviceDiscoveryTypes) {
             this.putBodyParameter("service_discovery_types", serviceDiscoveryTypes);
             this.serviceDiscoveryTypes = serviceDiscoveryTypes;
             return this;
         }
 
         /**
-         * Specifies whether to configure SNAT rules for the VPC where your cluster is deployed. Valid values:
-         * <p>
+         * <p>Specifies whether to configure Source Network Address Translation (SNAT) rules for the VPC in which your cluster is deployed. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. Set the value to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
+         * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/178480.html">Enable an existing ACK cluster to access the Internet</a>.</p>
+         * </blockquote>
+         * <p>Default value: <code>true</code></p>
          * 
-         * *   `true`: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to `true` if nodes and applications in the cluster need to access the Internet.
-         * *   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.
-         * 
-         * >  If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder snatEntry(Boolean snatEntry) {
             this.putBodyParameter("snat_entry", snatEntry);
@@ -2188,15 +2546,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Reinforcement based on classified protection. For more information, see [ACK reinforcement based on classified protection](~~196148~~).
-         * <p>
+         * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables MLPS security hardening.</li>
+         * <li><code>false</code>: disables MLPS security hardening.</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
          * 
-         * Valid values:
-         * 
-         * *   `true`: enables reinforcement based on classified protection.
-         * *   `false`: disables reinforcement based on classified protection.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder socEnabled(Boolean socEnabled) {
             this.putBodyParameter("soc_enabled", socEnabled);
@@ -2205,13 +2564,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable SSH logon over the Internet. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect in ACK managed clusters.
-         * <p>
+         * <p>Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect for ACK managed clusters. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables SSH logon.</li>
+         * <li><code>false</code>: disables SSH logon.</li>
+         * </ul>
+         * <p>Default value: <code>false</code></p>
          * 
-         * *   `true`: enables SSH logon over the Internet.
-         * *   `false`: disables SSH logon over the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sshFlags(Boolean sshFlags) {
             this.putBodyParameter("ssh_flags", sshFlags);
@@ -2220,32 +2581,33 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The labels that you want to add to nodes. You must add tags based on the following rules:
-         * <p>
-         * 
-         * *   Each label is a case-sensitive key-value pair. You can add up to 20 labels.
-         * *   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
+         * <p>The tags to be added to nodes. When you add tags to a node, the following rules apply:</p>
+         * <ul>
+         * <li>A tag is a case-sensitive key-value pair. You can add up to 20 tags.</li>
+         * <li>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * </ul>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [Taints and Tolerations](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+         * <p>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
-        public Builder taints(java.util.List < Taint > taints) {
+        public Builder taints(java.util.List<Taint> taints) {
             this.putBodyParameter("taints", taints);
             this.taints = taints;
             return this;
         }
 
         /**
-         * Specifies the timeout period of cluster creation. Unit: minutes.
-         * <p>
+         * <p>Specifies the timeout period of cluster creation. Unit: minutes.</p>
+         * <p>Default value: <code>60</code>.</p>
          * 
-         * Default value: `60`.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutMins(Long timeoutMins) {
             this.putBodyParameter("timeout_mins", timeoutMins);
@@ -2254,7 +2616,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The time zone of the cluster.
+         * <p>The time zone of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("timezone", timezone);
@@ -2263,7 +2628,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The custom certificate authority (CA) certificate used by the cluster.
+         * <p>The custom Certificate Authority (CA) certificate used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----****</p>
          */
         public Builder userCa(String userCa) {
             this.putBodyParameter("user_ca", userCa);
@@ -2272,7 +2640,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The user data of nodes.
+         * <p>The user data of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);
@@ -2281,7 +2652,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.
+         * <p>The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zeik9h3ahvv2zz95****</p>
          */
         public Builder vpcid(String vpcid) {
             this.putBodyParameter("vpcid", vpcid);
@@ -2290,22 +2664,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The vSwitches that are specified for nodes in the cluster. This parameter is required when you create a managed Kubernetes cluster that does not contain nodes.
+         * <p>The vSwitches that are specified for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.</p>
          */
-        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
             this.vswitchIds = vswitchIds;
             return this;
         }
 
         /**
-         * Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect only if `worker_instance_charge_type` is set to `PrePaid`. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto renewal for worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: enables auto-renewal.</li>
+         * <li><code>false</code>: disables auto-renewal</li>
+         * </ul>
+         * <p>Default value: <code>true</code></p>
          * 
-         * *   `true`: enables auto-renewal.
-         * *   `false`: disables auto-renewal.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder workerAutoRenew(Boolean workerAutoRenew) {
             this.putBodyParameter("worker_auto_renew", workerAutoRenew);
@@ -2314,10 +2690,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The auto-renewal period for worker nodes after the subscriptions of worker nodes expire. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.
-         * <p>
+         * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
+         * <p>Valid values: 1, 2, 3, 6, and 12.</p>
          * 
-         * Valid values: 1, 2, 3, 6, and 12.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workerAutoRenewPeriod(Long workerAutoRenewPeriod) {
             this.putBodyParameter("worker_auto_renew_period", workerAutoRenewPeriod);
@@ -2326,22 +2703,24 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The configuration of the data disk that is mounted to worker nodes. The configuration includes disk type and disk size.
+         * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.</p>
          */
-        public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
+        public Builder workerDataDisks(java.util.List<WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
             this.workerDataDisks = workerDataDisks;
             return this;
         }
 
         /**
-         * The billing method of worker nodes. Valid values:
-         * <p>
+         * <p>The billing method of worker nodes. Valid values:</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   `PrePaid`: subscription.
-         * *   `PostPaid`: pay-as-you-go.
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder workerInstanceChargeType(String workerInstanceChargeType) {
             this.putBodyParameter("worker_instance_charge_type", workerInstanceChargeType);
@@ -2350,21 +2729,21 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The instance configurations of worker nodes.
+         * <p>The instance configurations of worker nodes.</p>
          */
-        public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
+        public Builder workerInstanceTypes(java.util.List<String> workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
             this.workerInstanceTypes = workerInstanceTypes;
             return this;
         }
 
         /**
-         * The subscription duration of worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`.
-         * <p>
+         * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workerPeriod(Long workerPeriod) {
             this.putBodyParameter("worker_period", workerPeriod);
@@ -2373,10 +2752,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to `PrePaid`.
-         * <p>
+         * <p>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
+         * <p>Valid value: <code>Month</code>, which indicates that worker nodes are billed only on a monthly basis.</p>
          * 
-         * Set the value to `Month`. Worker nodes are billed only on a monthly basis.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder workerPeriodUnit(String workerPeriodUnit) {
             this.putBodyParameter("worker_period_unit", workerPeriodUnit);
@@ -2385,15 +2765,16 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The category of the system disk that you attach to the worker node. For more information, see [Elastic Block Storage devices](~~63136~~).
-         * <p>
+         * <p>The system disk category of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra disk</li>
+         * <li><code>cloud_ssd</code>: standard SSD</li>
+         * </ul>
+         * <p>Default value: <code>cloud_ssd</code></p>
          * 
-         * Valid values:
-         * 
-         * *   `cloud_efficiency`: ultra disk.
-         * *   `cloud_ssd`: standard SSD.
-         * 
-         * Default value: `cloud_ssd`.
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         public Builder workerSystemDiskCategory(String workerSystemDiskCategory) {
             this.putBodyParameter("worker_system_disk_category", workerSystemDiskCategory);
@@ -2402,15 +2783,17 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see [ESSDs](~~122389~~).
-         * <p>
+         * <p>If the system disk is an ESSD, you can specify the PL of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   PL0
-         * *   PL1
-         * *   PL2
-         * *   PL3
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder workerSystemDiskPerformanceLevel(String workerSystemDiskPerformanceLevel) {
             this.putBodyParameter("worker_system_disk_performance_level", workerSystemDiskPerformanceLevel);
@@ -2419,14 +2802,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The size of the system disk that you want to use for worker nodes. Unit: GiB.
-         * <p>
+         * <p>The system disk size of worker nodes. Unit: GiB.</p>
+         * <p>Valid values: 40 to 500.</p>
+         * <p>The value of this parameter must be at least 40 and greater than or equal to the image size.</p>
+         * <p>Default value: <code>120</code>.</p>
          * 
-         * Valid values: 40 to 500.
-         * 
-         * The value of this parameter must be at least 40 and no less than the image size.
-         * 
-         * Default value: `120`.
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder workerSystemDiskSize(Long workerSystemDiskSize) {
             this.putBodyParameter("worker_system_disk_size", workerSystemDiskSize);
@@ -2435,7 +2817,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy that you want to use for the system disks of worker nodes.
+         * <p>The ID of the automatic snapshot policy that is used by the system disk specified for worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-2zej1nogjvovnz4z****</p>
          */
         public Builder workerSystemDiskSnapshotPolicyId(String workerSystemDiskSnapshotPolicyId) {
             this.putBodyParameter("worker_system_disk_snapshot_policy_id", workerSystemDiskSnapshotPolicyId);
@@ -2444,26 +2829,36 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of vSwitches that are specified for nodes. Each node is allocated a vSwitch.
-         * <p>
-         * 
-         * The `worker_vswitch_ids` parameter is optional but the `vswitch_ids` parameter is required when you create an ACK managed cluster that does not contain nodes.
+         * <p>The vSwitches that are specified for worker nodes. Each worker node is allocated a vSwitch.</p>
+         * <p><code>worker_vswitch_ids</code> is optional but <code>vswitch_ids</code> is required if you create an ACK managed cluster that does not contain nodes.</p>
          */
-        public Builder workerVswitchIds(java.util.List < String > workerVswitchIds) {
+        public Builder workerVswitchIds(java.util.List<String> workerVswitchIds) {
             this.putBodyParameter("worker_vswitch_ids", workerVswitchIds);
             this.workerVswitchIds = workerVswitchIds;
             return this;
         }
 
         /**
-         * The ID of the zone in which the cluster is deployed. This parameter takes effect in only ACK Serverless clusters.
-         * <p>
+         * <p>This parameter is deprecated. Use <code>zone_ids</code> instead.</p>
+         * <p>The ID of the zone to which the cluster belongs. This parameter is specific to ACK managed clusters.</p>
+         * <p>When you create an ACK managed cluster, you must set the <code>zone_id</code> parameter if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified. This way, the system automatically creates a VPC in the specified zone. This parameter is invalid if you specify the <code>vpc_id</code> and <code>vswitch_ids</code> parameters.</p>
          * 
-         * When you create an ACK Serverless cluster, you must configure `zone_id` if `vpc_id` and `vswitch_ids` are not configured. This way, the system automatically creates a VPC in the specified zone.
+         * <strong>example:</strong>
+         * <p>cn-beiji****</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("zone_id", zoneId);
             this.zoneId = zoneId;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of the zone in which the cluster is deployed. This parameter is specific to ACK managed clusters.</p>
+         * <p>When you create an ACK managed cluster, you must set the <code>zone_id</code> parameter if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified. This way, the system automatically creates a VPC in the specified zone. This parameter is invalid if you specify the <code>vpc_id</code> and <code>vswitch_ids</code> parameters.</p>
+         */
+        public Builder zoneIds(java.util.List<String> zoneIds) {
+            this.putBodyParameter("zone_ids", zoneIds);
+            this.zoneIds = zoneIds;
             return this;
         }
 
@@ -2474,19 +2869,726 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class ControlPlaneConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_renew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("auto_renew_period")
+        private Long autoRenewPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("charge_type")
+        private String chargeType;
+
+        @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
+        private Boolean cloudMonitorFlags;
+
+        @com.aliyun.core.annotation.NameInMap("cpu_policy")
+        private String cpuPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("deploymentset_id")
+        private String deploymentsetId;
+
+        @com.aliyun.core.annotation.NameInMap("image_id")
+        private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("image_type")
+        private String imageType;
+
+        @com.aliyun.core.annotation.NameInMap("instance_types")
+        private java.util.List<String> instanceTypes;
+
+        @com.aliyun.core.annotation.NameInMap("key_pair")
+        private String keyPair;
+
+        @com.aliyun.core.annotation.NameInMap("login_password")
+        private String loginPassword;
+
+        @com.aliyun.core.annotation.NameInMap("node_port_range")
+        private String nodePortRange;
+
+        @com.aliyun.core.annotation.NameInMap("period")
+        private Long period;
+
+        @com.aliyun.core.annotation.NameInMap("period_unit")
+        private String periodUnit;
+
+        @com.aliyun.core.annotation.NameInMap("runtime")
+        private String runtime;
+
+        @com.aliyun.core.annotation.NameInMap("security_hardening_os")
+        private Boolean securityHardeningOs;
+
+        @com.aliyun.core.annotation.NameInMap("size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("soc_enabled")
+        private Boolean socEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_bursting_enabled")
+        private Boolean systemDiskBurstingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_category")
+        private String systemDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_performance_level")
+        private String systemDiskPerformanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_provisioned_iops")
+        private Long systemDiskProvisionedIops;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_size")
+        private Long systemDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("system_disk_snapshot_policy_id")
+        private String systemDiskSnapshotPolicyId;
+
+        private ControlPlaneConfig(Builder builder) {
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.chargeType = builder.chargeType;
+            this.cloudMonitorFlags = builder.cloudMonitorFlags;
+            this.cpuPolicy = builder.cpuPolicy;
+            this.deploymentsetId = builder.deploymentsetId;
+            this.imageId = builder.imageId;
+            this.imageType = builder.imageType;
+            this.instanceTypes = builder.instanceTypes;
+            this.keyPair = builder.keyPair;
+            this.loginPassword = builder.loginPassword;
+            this.nodePortRange = builder.nodePortRange;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
+            this.runtime = builder.runtime;
+            this.securityHardeningOs = builder.securityHardeningOs;
+            this.size = builder.size;
+            this.socEnabled = builder.socEnabled;
+            this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
+            this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
+            this.systemDiskSize = builder.systemDiskSize;
+            this.systemDiskSnapshotPolicyId = builder.systemDiskSnapshotPolicyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ControlPlaneConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Long getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return cloudMonitorFlags
+         */
+        public Boolean getCloudMonitorFlags() {
+            return this.cloudMonitorFlags;
+        }
+
+        /**
+         * @return cpuPolicy
+         */
+        public String getCpuPolicy() {
+            return this.cpuPolicy;
+        }
+
+        /**
+         * @return deploymentsetId
+         */
+        public String getDeploymentsetId() {
+            return this.deploymentsetId;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return imageType
+         */
+        public String getImageType() {
+            return this.imageType;
+        }
+
+        /**
+         * @return instanceTypes
+         */
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        /**
+         * @return keyPair
+         */
+        public String getKeyPair() {
+            return this.keyPair;
+        }
+
+        /**
+         * @return loginPassword
+         */
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
+        /**
+         * @return nodePortRange
+         */
+        public String getNodePortRange() {
+            return this.nodePortRange;
+        }
+
+        /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return runtime
+         */
+        public String getRuntime() {
+            return this.runtime;
+        }
+
+        /**
+         * @return securityHardeningOs
+         */
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return socEnabled
+         */
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
+        /**
+         * @return systemDiskBurstingEnabled
+         */
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskPerformanceLevel
+         */
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskProvisionedIops
+         */
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        /**
+         * @return systemDiskSnapshotPolicyId
+         */
+        public String getSystemDiskSnapshotPolicyId() {
+            return this.systemDiskSnapshotPolicyId;
+        }
+
+        public static final class Builder {
+            private Boolean autoRenew; 
+            private Long autoRenewPeriod; 
+            private String chargeType; 
+            private Boolean cloudMonitorFlags; 
+            private String cpuPolicy; 
+            private String deploymentsetId; 
+            private String imageId; 
+            private String imageType; 
+            private java.util.List<String> instanceTypes; 
+            private String keyPair; 
+            private String loginPassword; 
+            private String nodePortRange; 
+            private Long period; 
+            private String periodUnit; 
+            private String runtime; 
+            private Boolean securityHardeningOs; 
+            private Long size; 
+            private Boolean socEnabled; 
+            private Boolean systemDiskBurstingEnabled; 
+            private String systemDiskCategory; 
+            private String systemDiskPerformanceLevel; 
+            private Long systemDiskProvisionedIops; 
+            private Long systemDiskSize; 
+            private String systemDiskSnapshotPolicyId; 
+
+            /**
+             * <p>Indicates whether auto-renewal is enabled for the control plane node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * <p>The auto-renewal duration for the control plane node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder autoRenewPeriod(Long autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * <p>The billing method of the control plane node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether to install CloudMonitor for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
+                this.cloudMonitorFlags = cloudMonitorFlags;
+                return this;
+            }
+
+            /**
+             * <p>The CPU management policy of nodes in the node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
+             */
+            public Builder cpuPolicy(String cpuPolicy) {
+                this.cpuPolicy = cpuPolicy;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp10b35imuam5amw****</p>
+             */
+            public Builder deploymentsetId(String deploymentsetId) {
+                this.deploymentsetId = deploymentsetId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * <p>The type of the OS image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunLinux3</p>
+             */
+            public Builder imageType(String imageType) {
+                this.imageType = imageType;
+                return this;
+            }
+
+            /**
+             * <p>The instance type of the node.</p>
+             */
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
+                this.instanceTypes = instanceTypes;
+                return this;
+            }
+
+            /**
+             * <p>The name of the key pair. You must set key_pair or login_password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack</p>
+             */
+            public Builder keyPair(String keyPair) {
+                this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * <p>The SSH logon password. The password must be 8 to 30 characters in length and contain a minimum of three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must set login_password or key_pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack@Test</p>
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
+                return this;
+            }
+
+            /**
+             * <p>The node port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000-32767</p>
+             */
+            public Builder nodePortRange(String nodePortRange) {
+                this.nodePortRange = nodePortRange;
+                return this;
+            }
+
+            /**
+             * <p>The subscription duration of the control plane node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder period(Long period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * <p>The unit of the subscription duration of the control plane node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * <p>The runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd</p>
+             */
+            public Builder runtime(String runtime) {
+                this.runtime = runtime;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether to enable Alibaba Cloud Linux Security Hardening.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder securityHardeningOs(Boolean securityHardeningOs) {
+                this.securityHardeningOs = securityHardeningOs;
+                return this;
+            }
+
+            /**
+             * <p>The number of control plane nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether to enable MLPS security hardening.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder socEnabled(Boolean socEnabled) {
+                this.socEnabled = socEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether to enable the burst feature for the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+                this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+                return this;
+            }
+
+            /**
+             * <p>The category of the system disk for nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
+             */
+            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * <p>The preset read/write IOPS of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
+             */
+            public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+                this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+                return this;
+            }
+
+            /**
+             * <p>The system disk size of the node. The value must be at least 40 GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
+             */
+            public Builder systemDiskSize(Long systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * <p>The automatic snapshot policy of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-2zej1nogjvovnz4z****</p>
+             */
+            public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
+                this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
+                return this;
+            }
+
+            public ControlPlaneConfig build() {
+                return new ControlPlaneConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class ClusterAutoUpgrade extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("channel")
+        private String channel;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private ClusterAutoUpgrade(Builder builder) {
+            this.channel = builder.channel;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClusterAutoUpgrade create() {
+            return builder().build();
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private String channel; 
+            private Boolean enabled; 
+
+            /**
+             * <p>The automatic update frequency. Valid values:</p>
+             * <ul>
+             * <li>patch</li>
+             * <li>stable</li>
+             * <li>rapid</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>patch</p>
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable auto cluster update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public ClusterAutoUpgrade build() {
+                return new ClusterAutoUpgrade(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class OperationPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cluster_auto_upgrade")
+        private ClusterAutoUpgrade clusterAutoUpgrade;
+
+        private OperationPolicy(Builder builder) {
+            this.clusterAutoUpgrade = builder.clusterAutoUpgrade;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterAutoUpgrade
+         */
+        public ClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
+        public static final class Builder {
+            private ClusterAutoUpgrade clusterAutoUpgrade; 
+
+            /**
+             * <p>The configurations of auto cluster update.</p>
+             */
+            public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
+                this.clusterAutoUpgrade = clusterAutoUpgrade;
+                return this;
+            }
+
+            public OperationPolicy build() {
+                return new OperationPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class WorkerDataDisks extends TeaModel {
-        @NameInMap("category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("encrypted")
+        @com.aliyun.core.annotation.NameInMap("encrypted")
         private String encrypted;
 
-        @NameInMap("performance_level")
+        @com.aliyun.core.annotation.NameInMap("performance_level")
         private String performanceLevel;
 
-        @NameInMap("size")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("size")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String size;
 
         private WorkerDataDisks(Builder builder) {
@@ -2539,7 +3641,11 @@ public class CreateClusterRequest extends Request {
             private String size; 
 
             /**
-             * The data disk type.
+             * <p>The data disk type.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2547,13 +3653,15 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt a data disk. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the data disks. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: encrypts the data disk.</li>
+             * <li><code>false</code>: does not encrypt the data disk.</li>
+             * </ul>
+             * <p>Default value: <code>false</code></p>
              * 
-             * *   `true`: encrypts a data disk.
-             * *   `false`: does not encrypt a data disk.
-             * 
-             * Default value: `false`.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -2561,7 +3669,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The performance level (PL) of a data disk. This parameter takes effect only on ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](~~122389~~).
+             * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -2569,7 +3680,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The size of the data disk. Valid values: 40 to 32767.
+             * <p>The data disk size. Valid values: 40 to 32767. Unit: GiB.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder size(String size) {
                 this.size = size;

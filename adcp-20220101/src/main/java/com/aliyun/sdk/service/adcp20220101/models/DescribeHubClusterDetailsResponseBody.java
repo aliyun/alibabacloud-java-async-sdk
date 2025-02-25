@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHubClusterDetailsResponseBody</p>
  */
 public class DescribeHubClusterDetailsResponseBody extends TeaModel {
-    @NameInMap("Cluster")
+    @com.aliyun.core.annotation.NameInMap("Cluster")
     private Cluster cluster;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHubClusterDetailsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     } 
 
     public static class ApiServer extends TeaModel {
-        @NameInMap("ApiServerEipId")
+        @com.aliyun.core.annotation.NameInMap("ApiServerEipId")
         private String apiServerEipId;
 
-        @NameInMap("EnabledPublic")
+        @com.aliyun.core.annotation.NameInMap("EnabledPublic")
         private Boolean enabledPublic;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
         private ApiServer(Builder builder) {
@@ -156,35 +155,474 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         } 
 
     }
+    public static class GitOps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessControlList")
+        private java.util.List < String > accessControlList;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("HAEnabled")
+        private Boolean HAEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("PublicAccessEnabled")
+        private Boolean publicAccessEnabled;
+
+        private GitOps(Builder builder) {
+            this.accessControlList = builder.accessControlList;
+            this.enabled = builder.enabled;
+            this.HAEnabled = builder.HAEnabled;
+            this.publicAccessEnabled = builder.publicAccessEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GitOps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessControlList
+         */
+        public java.util.List < String > getAccessControlList() {
+            return this.accessControlList;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return HAEnabled
+         */
+        public Boolean getHAEnabled() {
+            return this.HAEnabled;
+        }
+
+        /**
+         * @return publicAccessEnabled
+         */
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > accessControlList; 
+            private Boolean enabled; 
+            private Boolean HAEnabled; 
+            private Boolean publicAccessEnabled; 
+
+            /**
+             * The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.
+             */
+            public Builder accessControlList(java.util.List < String > accessControlList) {
+                this.accessControlList = accessControlList;
+                return this;
+            }
+
+            /**
+             * Indicates whether GitOps is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: GitOps is enabled.
+             * *   false: GitOps is disabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Indicates whether GitOps High Availability is enabled. Valid values:
+             * <p>
+             * 
+             * *   true:  GitOps High Availability is enabled.
+             * *   false:  GitOps High Availability is disabled.
+             */
+            public Builder HAEnabled(Boolean HAEnabled) {
+                this.HAEnabled = HAEnabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
+                this.publicAccessEnabled = publicAccessEnabled;
+                return this;
+            }
+
+            public GitOps build() {
+                return new GitOps(this);
+            } 
+
+        } 
+
+    }
+    public static class ArgoWorkflow extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessControlList")
+        private java.util.List < String > accessControlList;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("PublicAccessEnabled")
+        private Boolean publicAccessEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("ServerEnabled")
+        private String serverEnabled;
+
+        private ArgoWorkflow(Builder builder) {
+            this.accessControlList = builder.accessControlList;
+            this.enabled = builder.enabled;
+            this.publicAccessEnabled = builder.publicAccessEnabled;
+            this.serverEnabled = builder.serverEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ArgoWorkflow create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessControlList
+         */
+        public java.util.List < String > getAccessControlList() {
+            return this.accessControlList;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return publicAccessEnabled
+         */
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        /**
+         * @return serverEnabled
+         */
+        public String getServerEnabled() {
+            return this.serverEnabled;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > accessControlList; 
+            private Boolean enabled; 
+            private Boolean publicAccessEnabled; 
+            private String serverEnabled; 
+
+            /**
+             * The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.
+             */
+            public Builder accessControlList(java.util.List < String > accessControlList) {
+                this.accessControlList = accessControlList;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable the argo workflow. Valid values:
+             * <p>
+             * 
+             * *   **false** (default)
+             * *   **true**
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
+                this.publicAccessEnabled = publicAccessEnabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable the argo workflow. UI Valid values:
+             * <p>
+             * 
+             * *   **false** (default)
+             * *   **true**
+             */
+            public Builder serverEnabled(String serverEnabled) {
+                this.serverEnabled = serverEnabled;
+                return this;
+            }
+
+            public ArgoWorkflow build() {
+                return new ArgoWorkflow(this);
+            } 
+
+        } 
+
+    }
+    public static class WorkFlow extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArgoWorkflow")
+        private ArgoWorkflow argoWorkflow;
+
+        private WorkFlow(Builder builder) {
+            this.argoWorkflow = builder.argoWorkflow;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkFlow create() {
+            return builder().build();
+        }
+
+        /**
+         * @return argoWorkflow
+         */
+        public ArgoWorkflow getArgoWorkflow() {
+            return this.argoWorkflow;
+        }
+
+        public static final class Builder {
+            private ArgoWorkflow argoWorkflow; 
+
+            /**
+             * The Argo workflow metadata.
+             */
+            public Builder argoWorkflow(ArgoWorkflow argoWorkflow) {
+                this.argoWorkflow = argoWorkflow;
+                return this;
+            }
+
+            public WorkFlow build() {
+                return new WorkFlow(this);
+            } 
+
+        } 
+
+    }
+    public static class ACKOne extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GitOps")
+        private GitOps gitOps;
+
+        @com.aliyun.core.annotation.NameInMap("WorkFlow")
+        private WorkFlow workFlow;
+
+        private ACKOne(Builder builder) {
+            this.gitOps = builder.gitOps;
+            this.workFlow = builder.workFlow;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ACKOne create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gitOps
+         */
+        public GitOps getGitOps() {
+            return this.gitOps;
+        }
+
+        /**
+         * @return workFlow
+         */
+        public WorkFlow getWorkFlow() {
+            return this.workFlow;
+        }
+
+        public static final class Builder {
+            private GitOps gitOps; 
+            private WorkFlow workFlow; 
+
+            /**
+             * The GitOps metadata.
+             */
+            public Builder gitOps(GitOps gitOps) {
+                this.gitOps = gitOps;
+                return this;
+            }
+
+            /**
+             * The workflow metadata.
+             */
+            public Builder workFlow(WorkFlow workFlow) {
+                this.workFlow = workFlow;
+                return this;
+            }
+
+            public ACKOne build() {
+                return new ACKOne(this);
+            } 
+
+        } 
+
+    }
+    public static class MetaData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ACKOne")
+        private ACKOne ACKOne;
+
+        private MetaData(Builder builder) {
+            this.ACKOne = builder.ACKOne;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MetaData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ACKOne
+         */
+        public ACKOne getACKOne() {
+            return this.ACKOne;
+        }
+
+        public static final class Builder {
+            private ACKOne ACKOne; 
+
+            /**
+             * The cluster metadata.
+             */
+            public Builder ACKOne(ACKOne ACKOne) {
+                this.ACKOne = ACKOne;
+                return this;
+            }
+
+            public MetaData build() {
+                return new MetaData(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ClusterInfo extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterSpec")
+        @com.aliyun.core.annotation.NameInMap("ClusterSpec")
         private String clusterSpec;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("MetaData")
+        private MetaData metaData;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
+        private String resourceGroupID;
+
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ClusterInfo(Builder builder) {
@@ -192,10 +630,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             this.clusterSpec = builder.clusterSpec;
             this.creationTime = builder.creationTime;
             this.errorMessage = builder.errorMessage;
+            this.metaData = builder.metaData;
             this.name = builder.name;
             this.profile = builder.profile;
             this.regionId = builder.regionId;
+            this.resourceGroupID = builder.resourceGroupID;
             this.state = builder.state;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
             this.version = builder.version;
         }
@@ -237,6 +678,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return metaData
+         */
+        public MetaData getMetaData() {
+            return this.metaData;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -258,10 +706,24 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupID
+         */
+        public String getResourceGroupID() {
+            return this.resourceGroupID;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
             return this.state;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -283,10 +745,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String clusterSpec; 
             private String creationTime; 
             private String errorMessage; 
+            private MetaData metaData; 
             private String name; 
             private String profile; 
             private String regionId; 
+            private String resourceGroupID; 
             private String state; 
+            private java.util.List < Tags> tags; 
             private String updateTime; 
             private String version; 
 
@@ -326,6 +791,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
+             * The cluster metadata.
+             */
+            public Builder metaData(MetaData metaData) {
+                this.metaData = metaData;
+                return this;
+            }
+
+            /**
              * The name of the master instance.
              */
             public Builder name(String name) {
@@ -350,6 +823,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
+             * The ID of Resource Group.
+             */
+            public Builder resourceGroupID(String resourceGroupID) {
+                this.resourceGroupID = resourceGroupID;
+                return this;
+            }
+
+            /**
              * The status of the master instance. Valid values:
              * <p>
              * 
@@ -363,6 +844,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -390,16 +879,16 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Conditions(Builder builder) {
@@ -496,10 +985,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class Endpoints extends TeaModel {
-        @NameInMap("IntranetApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("IntranetApiServerEndpoint")
         private String intranetApiServerEndpoint;
 
-        @NameInMap("PublicApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PublicApiServerEndpoint")
         private String publicApiServerEndpoint;
 
         private Endpoints(Builder builder) {
@@ -557,13 +1046,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class LogConfig extends TeaModel {
-        @NameInMap("EnableLog")
+        @com.aliyun.core.annotation.NameInMap("EnableLog")
         private Boolean enableLog;
 
-        @NameInMap("LogProject")
+        @com.aliyun.core.annotation.NameInMap("LogProject")
         private String logProject;
 
-        @NameInMap("LogStoreTTL")
+        @com.aliyun.core.annotation.NameInMap("LogStoreTTL")
         private String logStoreTTL;
 
         private LogConfig(Builder builder) {
@@ -642,10 +1131,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class MeshConfig extends TeaModel {
-        @NameInMap("EnableMesh")
+        @com.aliyun.core.annotation.NameInMap("EnableMesh")
         private Boolean enableMesh;
 
-        @NameInMap("MeshId")
+        @com.aliyun.core.annotation.NameInMap("MeshId")
         private String meshId;
 
         private MeshConfig(Builder builder) {
@@ -707,19 +1196,19 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("ClusterDomain")
+        @com.aliyun.core.annotation.NameInMap("ClusterDomain")
         private String clusterDomain;
 
-        @NameInMap("IPStack")
+        @com.aliyun.core.annotation.NameInMap("IPStack")
         private String IPStack;
 
-        @NameInMap("SecurityGroupIDs")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIDs")
         private java.util.List < String > securityGroupIDs;
 
-        @NameInMap("VSwitches")
+        @com.aliyun.core.annotation.NameInMap("VSwitches")
         private java.util.List < String > vSwitches;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Network(Builder builder) {
@@ -833,10 +1322,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class VSwitches extends TeaModel {
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private VSwitches(Builder builder) {
@@ -871,7 +1360,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * VswitchId.
+             * The ID of the vSwitch.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -879,7 +1368,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the cluster.
+             * <p>
+             * 
+             * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -894,13 +1386,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class WorkflowUnits extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VSwitches")
+        @com.aliyun.core.annotation.NameInMap("VSwitches")
         private java.util.List < VSwitches> vSwitches;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private WorkflowUnits(Builder builder) {
@@ -944,7 +1436,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the region in which the master instance resides.
+             * The region ID of the cluster.
+             * <p>
+             * 
+             * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -952,7 +1447,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the vSwitches.
+             * The vSwitches.
              */
             public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
@@ -960,7 +1455,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the master instance resides.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -975,16 +1470,16 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class WorkflowConfig extends TeaModel {
-        @NameInMap("ArgoServerEnabled")
+        @com.aliyun.core.annotation.NameInMap("ArgoServerEnabled")
         private Boolean argoServerEnabled;
 
-        @NameInMap("PriceLimit")
+        @com.aliyun.core.annotation.NameInMap("PriceLimit")
         private String priceLimit;
 
-        @NameInMap("WorkflowScheduleMode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowScheduleMode")
         private String workflowScheduleMode;
 
-        @NameInMap("WorkflowUnits")
+        @com.aliyun.core.annotation.NameInMap("WorkflowUnits")
         private java.util.List < WorkflowUnits> workflowUnits;
 
         private WorkflowConfig(Builder builder) {
@@ -1037,7 +1532,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private java.util.List < WorkflowUnits> workflowUnits; 
 
             /**
-             * ArgoServerEnabled.
+             * Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder argoServerEnabled(Boolean argoServerEnabled) {
                 this.argoServerEnabled = argoServerEnabled;
@@ -1045,7 +1544,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PriceLimit.
+             * The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.
              */
             public Builder priceLimit(String priceLimit) {
                 this.priceLimit = priceLimit;
@@ -1053,7 +1552,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowScheduleMode.
+             * The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:
+             * <p>
+             * 
+             * *   cost-optimized: cost-prioritized scheduling mode.
+             * *   stock-optimized: inventory-prioritized scheduling mode.
              */
             public Builder workflowScheduleMode(String workflowScheduleMode) {
                 this.workflowScheduleMode = workflowScheduleMode;
@@ -1061,7 +1564,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowUnits.
+             * The Argo workflow regions  configuration.
              */
             public Builder workflowUnits(java.util.List < WorkflowUnits> workflowUnits) {
                 this.workflowUnits = workflowUnits;
@@ -1076,28 +1579,28 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
     public static class Cluster extends TeaModel {
-        @NameInMap("ApiServer")
+        @com.aliyun.core.annotation.NameInMap("ApiServer")
         private ApiServer apiServer;
 
-        @NameInMap("ClusterInfo")
+        @com.aliyun.core.annotation.NameInMap("ClusterInfo")
         private ClusterInfo clusterInfo;
 
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private Endpoints endpoints;
 
-        @NameInMap("LogConfig")
+        @com.aliyun.core.annotation.NameInMap("LogConfig")
         private LogConfig logConfig;
 
-        @NameInMap("MeshConfig")
+        @com.aliyun.core.annotation.NameInMap("MeshConfig")
         private MeshConfig meshConfig;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
-        @NameInMap("WorkflowConfig")
+        @com.aliyun.core.annotation.NameInMap("WorkflowConfig")
         private WorkflowConfig workflowConfig;
 
         private Cluster(Builder builder) {
@@ -1242,7 +1745,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowConfig.
+             * The Argo workflow configuration.
              */
             public Builder workflowConfig(WorkflowConfig workflowConfig) {
                 this.workflowConfig = workflowConfig;

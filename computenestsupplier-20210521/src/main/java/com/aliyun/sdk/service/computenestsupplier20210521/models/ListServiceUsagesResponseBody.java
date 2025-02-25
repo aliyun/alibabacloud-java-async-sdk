@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceUsagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceUsagesResponseBody</p>
  */
 public class ListServiceUsagesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceUsages")
-    private java.util.List < ServiceUsages> serviceUsages;
+    @com.aliyun.core.annotation.NameInMap("ServiceUsages")
+    private java.util.List<ServiceUsages> serviceUsages;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListServiceUsagesResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     /**
      * @return serviceUsages
      */
-    public java.util.List < ServiceUsages> getServiceUsages() {
+    public java.util.List<ServiceUsages> getServiceUsages() {
         return this.serviceUsages;
     }
 
@@ -82,11 +87,14 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ServiceUsages> serviceUsages; 
+        private java.util.List<ServiceUsages> serviceUsages; 
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +113,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18AD0960-A9FE-1AC8-ADF8-22131Fxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +124,18 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceUsages.
+         * <p>The service applications.</p>
          */
-        public Builder serviceUsages(java.util.List < ServiceUsages> serviceUsages) {
+        public Builder serviceUsages(java.util.List<ServiceUsages> serviceUsages) {
             this.serviceUsages = serviceUsages;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,414 +148,39 @@ public class ListServiceUsagesResponseBody extends TeaModel {
 
     } 
 
-    public static class UserInformation extends TeaModel {
-        @NameInMap("Company")
-        private String company;
-
-        @NameInMap("ContactEmail")
-        private String contactEmail;
-
-        @NameInMap("ContactNumber")
-        private String contactNumber;
-
-        @NameInMap("ContactPerson")
-        private String contactPerson;
-
-        @NameInMap("ContactPersonTitle")
-        private String contactPersonTitle;
-
-        @NameInMap("Country")
-        private String country;
-
-        @NameInMap("EmailAddress")
-        private String emailAddress;
-
-        @NameInMap("Industry")
-        private String industry;
-
-        @NameInMap("Name")
-        private String name;
-
-        @NameInMap("ProductBusiness")
-        private String productBusiness;
-
-        @NameInMap("ProductDeliveryTypes")
-        private String productDeliveryTypes;
-
-        @NameInMap("ProductSellTypes")
-        private String productSellTypes;
-
-        @NameInMap("Source")
-        private String source;
-
-        @NameInMap("SupplierDesc")
-        private String supplierDesc;
-
-        @NameInMap("SupplierName")
-        private String supplierName;
-
-        @NameInMap("SupplierUrl")
-        private String supplierUrl;
-
-        @NameInMap("Telephone")
-        private String telephone;
-
-        @NameInMap("Title")
-        private String title;
-
-        private UserInformation(Builder builder) {
-            this.company = builder.company;
-            this.contactEmail = builder.contactEmail;
-            this.contactNumber = builder.contactNumber;
-            this.contactPerson = builder.contactPerson;
-            this.contactPersonTitle = builder.contactPersonTitle;
-            this.country = builder.country;
-            this.emailAddress = builder.emailAddress;
-            this.industry = builder.industry;
-            this.name = builder.name;
-            this.productBusiness = builder.productBusiness;
-            this.productDeliveryTypes = builder.productDeliveryTypes;
-            this.productSellTypes = builder.productSellTypes;
-            this.source = builder.source;
-            this.supplierDesc = builder.supplierDesc;
-            this.supplierName = builder.supplierName;
-            this.supplierUrl = builder.supplierUrl;
-            this.telephone = builder.telephone;
-            this.title = builder.title;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static UserInformation create() {
-            return builder().build();
-        }
-
-        /**
-         * @return company
-         */
-        public String getCompany() {
-            return this.company;
-        }
-
-        /**
-         * @return contactEmail
-         */
-        public String getContactEmail() {
-            return this.contactEmail;
-        }
-
-        /**
-         * @return contactNumber
-         */
-        public String getContactNumber() {
-            return this.contactNumber;
-        }
-
-        /**
-         * @return contactPerson
-         */
-        public String getContactPerson() {
-            return this.contactPerson;
-        }
-
-        /**
-         * @return contactPersonTitle
-         */
-        public String getContactPersonTitle() {
-            return this.contactPersonTitle;
-        }
-
-        /**
-         * @return country
-         */
-        public String getCountry() {
-            return this.country;
-        }
-
-        /**
-         * @return emailAddress
-         */
-        public String getEmailAddress() {
-            return this.emailAddress;
-        }
-
-        /**
-         * @return industry
-         */
-        public String getIndustry() {
-            return this.industry;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return productBusiness
-         */
-        public String getProductBusiness() {
-            return this.productBusiness;
-        }
-
-        /**
-         * @return productDeliveryTypes
-         */
-        public String getProductDeliveryTypes() {
-            return this.productDeliveryTypes;
-        }
-
-        /**
-         * @return productSellTypes
-         */
-        public String getProductSellTypes() {
-            return this.productSellTypes;
-        }
-
-        /**
-         * @return source
-         */
-        public String getSource() {
-            return this.source;
-        }
-
-        /**
-         * @return supplierDesc
-         */
-        public String getSupplierDesc() {
-            return this.supplierDesc;
-        }
-
-        /**
-         * @return supplierName
-         */
-        public String getSupplierName() {
-            return this.supplierName;
-        }
-
-        /**
-         * @return supplierUrl
-         */
-        public String getSupplierUrl() {
-            return this.supplierUrl;
-        }
-
-        /**
-         * @return telephone
-         */
-        public String getTelephone() {
-            return this.telephone;
-        }
-
-        /**
-         * @return title
-         */
-        public String getTitle() {
-            return this.title;
-        }
-
-        public static final class Builder {
-            private String company; 
-            private String contactEmail; 
-            private String contactNumber; 
-            private String contactPerson; 
-            private String contactPersonTitle; 
-            private String country; 
-            private String emailAddress; 
-            private String industry; 
-            private String name; 
-            private String productBusiness; 
-            private String productDeliveryTypes; 
-            private String productSellTypes; 
-            private String source; 
-            private String supplierDesc; 
-            private String supplierName; 
-            private String supplierUrl; 
-            private String telephone; 
-            private String title; 
-
-            /**
-             * Company.
-             */
-            public Builder company(String company) {
-                this.company = company;
-                return this;
-            }
-
-            /**
-             * ContactEmail.
-             */
-            public Builder contactEmail(String contactEmail) {
-                this.contactEmail = contactEmail;
-                return this;
-            }
-
-            /**
-             * ContactNumber.
-             */
-            public Builder contactNumber(String contactNumber) {
-                this.contactNumber = contactNumber;
-                return this;
-            }
-
-            /**
-             * ContactPerson.
-             */
-            public Builder contactPerson(String contactPerson) {
-                this.contactPerson = contactPerson;
-                return this;
-            }
-
-            /**
-             * ContactPersonTitle.
-             */
-            public Builder contactPersonTitle(String contactPersonTitle) {
-                this.contactPersonTitle = contactPersonTitle;
-                return this;
-            }
-
-            /**
-             * Country.
-             */
-            public Builder country(String country) {
-                this.country = country;
-                return this;
-            }
-
-            /**
-             * EmailAddress.
-             */
-            public Builder emailAddress(String emailAddress) {
-                this.emailAddress = emailAddress;
-                return this;
-            }
-
-            /**
-             * Industry.
-             */
-            public Builder industry(String industry) {
-                this.industry = industry;
-                return this;
-            }
-
-            /**
-             * Name.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * ProductBusiness.
-             */
-            public Builder productBusiness(String productBusiness) {
-                this.productBusiness = productBusiness;
-                return this;
-            }
-
-            /**
-             * ProductDeliveryTypes.
-             */
-            public Builder productDeliveryTypes(String productDeliveryTypes) {
-                this.productDeliveryTypes = productDeliveryTypes;
-                return this;
-            }
-
-            /**
-             * ProductSellTypes.
-             */
-            public Builder productSellTypes(String productSellTypes) {
-                this.productSellTypes = productSellTypes;
-                return this;
-            }
-
-            /**
-             * Source.
-             */
-            public Builder source(String source) {
-                this.source = source;
-                return this;
-            }
-
-            /**
-             * SupplierDesc.
-             */
-            public Builder supplierDesc(String supplierDesc) {
-                this.supplierDesc = supplierDesc;
-                return this;
-            }
-
-            /**
-             * SupplierName.
-             */
-            public Builder supplierName(String supplierName) {
-                this.supplierName = supplierName;
-                return this;
-            }
-
-            /**
-             * SupplierUrl.
-             */
-            public Builder supplierUrl(String supplierUrl) {
-                this.supplierUrl = supplierUrl;
-                return this;
-            }
-
-            /**
-             * Telephone.
-             */
-            public Builder telephone(String telephone) {
-                this.telephone = telephone;
-                return this;
-            }
-
-            /**
-             * Title.
-             */
-            public Builder title(String title) {
-                this.title = title;
-                return this;
-            }
-
-            public UserInformation build() {
-                return new UserInformation(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link ListServiceUsagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceUsagesResponseBody</p>
+     */
     public static class ServiceUsages extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupplierName")
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
         private String supplierName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserAliUid")
+        @com.aliyun.core.annotation.NameInMap("UserAliUid")
         private Long userAliUid;
 
-        @NameInMap("UserInformation")
-        private UserInformation userInformation;
+        @com.aliyun.core.annotation.NameInMap("UserInformation")
+        private java.util.Map<String, String> userInformation;
 
         private ServiceUsages(Builder builder) {
             this.comments = builder.comments;
@@ -619,7 +261,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         /**
          * @return userInformation
          */
-        public UserInformation getUserInformation() {
+        public java.util.Map<String, String> getUserInformation() {
             return this.userInformation;
         }
 
@@ -632,10 +274,13 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             private String supplierName; 
             private String updateTime; 
             private Long userAliUid; 
-            private UserInformation userInformation; 
+            private java.util.Map<String, String> userInformation; 
 
             /**
-             * Comments.
+             * <p>The comment on the approval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reject</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -643,7 +288,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25T02:02:02Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -651,7 +299,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-c9f36ec6d19b4exxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -659,7 +310,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceTest</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -667,7 +321,16 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the service application. Valid values:</p>
+             * <ul>
+             * <li>Submitted: The application is submitted or is to be approved.</li>
+             * <li>Approved: The application is approved.</li>
+             * <li>Rejected: The application is rejected.</li>
+             * <li>Canceled: The application is canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Submitted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -675,7 +338,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * <p>The name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SupplierAAA</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -683,7 +349,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25T02:02:02Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -691,7 +360,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UserAliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127383705958xxxx</p>
              */
             public Builder userAliUid(Long userAliUid) {
                 this.userAliUid = userAliUid;
@@ -699,9 +371,9 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UserInformation.
+             * <p>The user information.</p>
              */
-            public Builder userInformation(UserInformation userInformation) {
+            public Builder userInformation(java.util.Map<String, String> userInformation) {
                 this.userInformation = userInformation;
                 return this;
             }

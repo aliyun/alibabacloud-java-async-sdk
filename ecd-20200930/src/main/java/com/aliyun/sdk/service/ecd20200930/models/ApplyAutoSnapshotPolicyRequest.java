@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>ApplyAutoSnapshotPolicyRequest</p>
  */
 public class ApplyAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
-    private java.util.List < String > desktopId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> desktopId;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ApplyAutoSnapshotPolicyRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -69,7 +74,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ApplyAutoSnapshotPolicyRequest, Builder> {
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String policyId; 
         private String regionId; 
 
@@ -85,16 +90,21 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The IDs of cloud desktops. You can specify 1 to 20 cloud desktops.
+         * <p>The IDs of the cloud computers. You can specify 1 to 20 IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
         }
 
         /**
-         * The ID of the automatic snapshot policy.
+         * <p>The ID of the automatic snapshot policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-ejtum8j5tfcw7****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -103,7 +113,11 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

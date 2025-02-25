@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmAccessStrategyRequest} extends {@link RequestModel}
  *
  * <p>AddGtmAccessStrategyRequest</p>
  */
 public class AddGtmAccessStrategyRequest extends Request {
-    @Query
-    @NameInMap("AccessLines")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLines")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessLines;
 
-    @Query
-    @NameInMap("DefaultAddrPoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String defaultAddrPoolId;
 
-    @Query
-    @NameInMap("FailoverAddrPoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String failoverAddrPoolId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StrategyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyName;
 
     private AddGtmAccessStrategyRequest(Builder builder) {
@@ -129,7 +134,11 @@ public class AddGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * The line codes of access regions.
+         * <p>The line codes of access regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;default&quot;, &quot;drpeng&quot;]</p>
          */
         public Builder accessLines(String accessLines) {
             this.putQueryParameter("AccessLines", accessLines);
@@ -138,7 +147,11 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the default address pool.
+         * <p>The ID of the default address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hrsix</p>
          */
         public Builder defaultAddrPoolId(String defaultAddrPoolId) {
             this.putQueryParameter("DefaultAddrPoolId", defaultAddrPoolId);
@@ -147,10 +160,12 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the failover address pool.
-         * <p>
+         * <p>The ID of the failover address pool.</p>
+         * <p>If the failover address pool is not set, pass the <strong>Empty</strong> value.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If the failover address pool is not set, pass the **Empty** value.
+         * <strong>example:</strong>
+         * <p>hrsyw</p>
          */
         public Builder failoverAddrPoolId(String failoverAddrPoolId) {
             this.putQueryParameter("FailoverAddrPoolId", failoverAddrPoolId);
@@ -159,7 +174,11 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the GTM instance for which you want to create an access policy.
+         * <p>The ID of the GTM instance for which you want to create an access policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,7 +187,10 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -177,7 +199,8 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The name of the access policy.
+         * <p>The name of the access policy.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

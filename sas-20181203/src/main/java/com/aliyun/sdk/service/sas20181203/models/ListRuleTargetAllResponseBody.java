@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRuleTargetAllResponseBody} extends {@link TeaModel}
  *
  * <p>ListRuleTargetAllResponseBody</p>
  */
 public class ListRuleTargetAllResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleTargetList")
-    private java.util.List < RuleTargetList> ruleTargetList;
+    @com.aliyun.core.annotation.NameInMap("RuleTargetList")
+    private java.util.List<RuleTargetList> ruleTargetList;
 
     private ListRuleTargetAllResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
     /**
      * @return ruleTargetList
      */
-    public java.util.List < RuleTargetList> getRuleTargetList() {
+    public java.util.List<RuleTargetList> getRuleTargetList() {
         return this.ruleTargetList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleTargetList> ruleTargetList; 
+        private java.util.List<RuleTargetList> ruleTargetList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the network objects.
+         * <p>An array that consists of the network objects.</p>
          */
-        public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
+        public Builder ruleTargetList(java.util.List<RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
             return this;
         }
@@ -71,14 +79,20 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRuleTargetAllResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRuleTargetAllResponseBody</p>
+     */
     public static class RuleTargetList extends TeaModel {
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private RuleTargetList(Builder builder) {
@@ -122,7 +136,10 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the network object.
+             * <p>The ID of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301944</p>
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -130,7 +147,10 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network object.
+             * <p>The name of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source-test-obj-xFKcx</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -138,10 +158,13 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li>IMAGE</li>
+             * </ul>
              * 
-             * *   IMAGE
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

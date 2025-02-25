@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPhoneNoAByTrackNoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPhoneNoAByTrackNoResponseBody</p>
  */
 public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Module")
-    private java.util.List < Module> module;
+    @com.aliyun.core.annotation.NameInMap("Module")
+    private java.util.List<Module> module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryPhoneNoAByTrackNoResponseBody(Builder builder) {
@@ -56,7 +61,7 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -70,11 +75,18 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,10 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,15 +105,18 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The information returned after the phone numbers were bound.</p>
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8906582E-6722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +129,20 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryPhoneNoAByTrackNoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPhoneNoAByTrackNoResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("PhoneNoA")
+        @com.aliyun.core.annotation.NameInMap("PhoneNoA")
         private String phoneNoA;
 
-        @NameInMap("PhoneNoX")
+        @com.aliyun.core.annotation.NameInMap("PhoneNoX")
         private String phoneNoX;
 
         private Module(Builder builder) {
@@ -162,7 +186,10 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
             private String phoneNoX; 
 
             /**
-             * Extension.
+             * <p>The extension of phone number X.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130</p>
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -170,7 +197,10 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNoA.
+             * <p>Phone number A.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1310000****</p>
              */
             public Builder phoneNoA(String phoneNoA) {
                 this.phoneNoA = phoneNoA;
@@ -178,7 +208,10 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNoX.
+             * <p>The private number, that is, phone number X.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710000****</p>
              */
             public Builder phoneNoX(String phoneNoX) {
                 this.phoneNoX = phoneNoX;

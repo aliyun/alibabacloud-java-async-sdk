@@ -1,144 +1,152 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Service} extends {@link TeaModel}
  *
  * <p>Service</p>
  */
 public class Service extends TeaModel {
-    @NameInMap("AccessToken")
+    @com.aliyun.core.annotation.NameInMap("AccessToken")
     private String accessToken;
 
-    @NameInMap("AppConfig")
+    @com.aliyun.core.annotation.NameInMap("AppConfig")
     private String appConfig;
 
-    @NameInMap("AppSpecName")
+    @com.aliyun.core.annotation.NameInMap("AppSpecName")
     private String appSpecName;
 
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @NameInMap("CallerUid")
+    @com.aliyun.core.annotation.NameInMap("CallerUid")
     private String callerUid;
 
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Integer cpu;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CurrentVersion")
+    @com.aliyun.core.annotation.NameInMap("CurrentVersion")
     private Integer currentVersion;
 
-    @NameInMap("ExtraData")
+    @com.aliyun.core.annotation.NameInMap("ExtraData")
     private String extraData;
 
-    @NameInMap("Gpu")
+    @com.aliyun.core.annotation.NameInMap("Gpu")
     private Integer gpu;
 
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
-    @NameInMap("InternetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
     private String internetEndpoint;
 
-    @NameInMap("IntranetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
     private String intranetEndpoint;
 
-    @NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
 
-    @NameInMap("LatestVersion")
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
     private Integer latestVersion;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("ParentUid")
+    @com.aliyun.core.annotation.NameInMap("ParentUid")
     private String parentUid;
 
-    @NameInMap("PendingInstance")
+    @com.aliyun.core.annotation.NameInMap("PendingInstance")
     private Integer pendingInstance;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private String resource;
 
-    @NameInMap("ResourceAlias")
+    @com.aliyun.core.annotation.NameInMap("ResourceAlias")
     private String resourceAlias;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @NameInMap("RoleAttrs")
+    @com.aliyun.core.annotation.NameInMap("RoleAttrs")
     private String roleAttrs;
 
-    @NameInMap("RunningInstance")
+    @com.aliyun.core.annotation.NameInMap("RunningInstance")
     private Integer runningInstance;
 
-    @NameInMap("SafetyLock")
+    @com.aliyun.core.annotation.NameInMap("SafetyLock")
     private String safetyLock;
 
-    @NameInMap("SecondaryInternetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("SecondaryInternetEndpoint")
     private String secondaryInternetEndpoint;
 
-    @NameInMap("SecondaryIntranetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("SecondaryIntranetEndpoint")
     private String secondaryIntranetEndpoint;
 
-    @NameInMap("ServiceConfig")
+    @com.aliyun.core.annotation.NameInMap("ServiceConfig")
     private String serviceConfig;
 
-    @NameInMap("ServiceGroup")
+    @com.aliyun.core.annotation.NameInMap("ServiceGroup")
     private String serviceGroup;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("ServiceUid")
+    @com.aliyun.core.annotation.NameInMap("ServiceUid")
     private String serviceUid;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TotalInstance")
+    @com.aliyun.core.annotation.NameInMap("TotalInstance")
     private Integer totalInstance;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("TrafficState")
+    private String trafficState;
+
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private Service(Builder builder) {
@@ -182,6 +190,7 @@ public class Service extends TeaModel {
         this.source = builder.source;
         this.status = builder.status;
         this.totalInstance = builder.totalInstance;
+        this.trafficState = builder.trafficState;
         this.updateTime = builder.updateTime;
         this.weight = builder.weight;
         this.workspaceId = builder.workspaceId;
@@ -296,7 +305,7 @@ public class Service extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -476,6 +485,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return trafficState
+     */
+    public String getTrafficState() {
+        return this.trafficState;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -511,7 +527,7 @@ public class Service extends TeaModel {
         private String image; 
         private String internetEndpoint; 
         private String intranetEndpoint; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private Integer latestVersion; 
         private Integer memory; 
         private String message; 
@@ -537,6 +553,7 @@ public class Service extends TeaModel {
         private String source; 
         private String status; 
         private Integer totalInstance; 
+        private String trafficState; 
         private String updateTime; 
         private Integer weight; 
         private String workspaceId; 
@@ -656,7 +673,7 @@ public class Service extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }
@@ -862,6 +879,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * TrafficState.
+         */
+        public Builder trafficState(String trafficState) {
+            this.trafficState = trafficState;
+            return this;
+        }
+
+        /**
          * UpdateTime.
          */
         public Builder updateTime(String updateTime) {
@@ -891,11 +916,17 @@ public class Service extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
     public static class Labels extends TeaModel {
-        @NameInMap("LabelKey")
+        @com.aliyun.core.annotation.NameInMap("LabelKey")
         private String labelKey;
 
-        @NameInMap("LabelValue")
+        @com.aliyun.core.annotation.NameInMap("LabelValue")
         private String labelValue;
 
         private Labels(Builder builder) {

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreJobsResponseBody</p>
  */
 public class DescribeRestoreJobsResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreJobs")
-    private java.util.List < RestoreJobs> restoreJobs;
+    @com.aliyun.core.annotation.NameInMap("RestoreJobs")
+    private java.util.List<RestoreJobs> restoreJobs;
 
     private DescribeRestoreJobsResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,17 +57,17 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
     /**
      * @return restoreJobs
      */
-    public java.util.List < RestoreJobs> getRestoreJobs() {
+    public java.util.List<RestoreJobs> getRestoreJobs() {
         return this.restoreJobs;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RestoreJobs> restoreJobs; 
+        private java.util.List<RestoreJobs> restoreJobs; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +75,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED92280-4363-57D3-A4D3-4D3FBC99B29F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +86,9 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the restoration tasks.
+         * <p>The details about the restoration tasks.</p>
          */
-        public Builder restoreJobs(java.util.List < RestoreJobs> restoreJobs) {
+        public Builder restoreJobs(java.util.List<RestoreJobs> restoreJobs) {
             this.restoreJobs = restoreJobs;
             return this;
         }
@@ -91,17 +99,23 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreJobsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -154,7 +168,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of restoration tasks returned on the current page.
+             * <p>The number of restoration tasks returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -162,7 +179,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -170,7 +190,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -178,7 +201,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of restoration tasks returned.
+             * <p>The total number of restoration tasks returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -192,128 +218,134 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreJobsResponseBody</p>
+     */
     public static class RestoreJobs extends TeaModel {
-        @NameInMap("ActualBytes")
+        @com.aliyun.core.annotation.NameInMap("ActualBytes")
         private Long actualBytes;
 
-        @NameInMap("BytesDone")
+        @com.aliyun.core.annotation.NameInMap("BytesDone")
         private Long bytesDone;
 
-        @NameInMap("BytesTotal")
+        @com.aliyun.core.annotation.NameInMap("BytesTotal")
         private Long bytesTotal;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private Long completeTime;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("ErrorCount")
+        @com.aliyun.core.annotation.NameInMap("ErrorCount")
         private Long errorCount;
 
-        @NameInMap("ErrorFile")
+        @com.aliyun.core.annotation.NameInMap("ErrorFile")
         private String errorFile;
 
-        @NameInMap("ErrorFileUrl")
+        @com.aliyun.core.annotation.NameInMap("ErrorFileUrl")
         private String errorFileUrl;
 
-        @NameInMap("ErrorType")
+        @com.aliyun.core.annotation.NameInMap("ErrorType")
         private String errorType;
 
-        @NameInMap("Eta")
+        @com.aliyun.core.annotation.NameInMap("Eta")
         private Long eta;
 
-        @NameInMap("Excludes")
+        @com.aliyun.core.annotation.NameInMap("Excludes")
         private String excludes;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private String exitCode;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Includes")
+        @com.aliyun.core.annotation.NameInMap("Includes")
         private String includes;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("ItemsDone")
+        @com.aliyun.core.annotation.NameInMap("ItemsDone")
         private Long itemsDone;
 
-        @NameInMap("ItemsTotal")
+        @com.aliyun.core.annotation.NameInMap("ItemsTotal")
         private Long itemsTotal;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private Integer percentage;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("RestoreId")
+        @com.aliyun.core.annotation.NameInMap("RestoreId")
         private String restoreId;
 
-        @NameInMap("RestoreName")
+        @com.aliyun.core.annotation.NameInMap("RestoreName")
         private String restoreName;
 
-        @NameInMap("RestoreType")
+        @com.aliyun.core.annotation.NameInMap("RestoreType")
         private String restoreType;
 
-        @NameInMap("SnapshotHash")
+        @com.aliyun.core.annotation.NameInMap("SnapshotHash")
         private String snapshotHash;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotVersion")
+        @com.aliyun.core.annotation.NameInMap("SnapshotVersion")
         private String snapshotVersion;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceClientId")
+        @com.aliyun.core.annotation.NameInMap("SourceClientId")
         private String sourceClientId;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private Long speed;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VaultId")
+        @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
 
-        @NameInMap("VaultRegionId")
+        @com.aliyun.core.annotation.NameInMap("VaultRegionId")
         private String vaultRegionId;
 
         private RestoreJobs(Builder builder) {
@@ -699,7 +731,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private String vaultRegionId; 
 
             /**
-             * The size of backup data. Unit: bytes.
+             * <p>The size of backup data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -707,7 +742,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of data that is restored. Unit: bytes.
+             * <p>The total size of data that is restored. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -715,7 +753,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of data that you want to restore. Unit: bytes.
+             * <p>The total size of data that you want to restore. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -723,7 +764,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware agent that is used to restore data.
+             * <p>The ID of the anti-ransomware agent that is used to perform the restoration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-000frxwusjauhp9ajpu6</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -731,7 +775,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the restoration task is complete. Unit: milliseconds.
+             * <p>The timestamp when the restoration task is complete. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583289054000</p>
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -739,7 +786,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the restoration task is created. Unit: milliseconds.
+             * <p>The timestamp when the restoration task is created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583289052000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -747,7 +797,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the restoration task. Unit: seconds.
+             * <p>The duration of the restoration task. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -755,7 +808,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the restoration tasks on which errors occur.
+             * <p>The number of the restoration tasks on which errors occur.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -763,7 +819,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CSV file. The CSV file contains the files that fail to be restored.
+             * <p>The name of the CSV file. The CSV file contains the files that fail to be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-000f4wxm8f7gur6g2otm.csv</p>
              */
             public Builder errorFile(String errorFile) {
                 this.errorFile = errorFile;
@@ -771,7 +830,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL to download the CSV file. The CSV file contains the files that fail to be restored.
+             * <p>The URL to download the CSV file. The CSV file contains the files that fail to be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/home/user&quot;]</p>
              */
             public Builder errorFileUrl(String errorFileUrl) {
                 this.errorFileUrl = errorFileUrl;
@@ -779,7 +841,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned for the restoration task.
+             * <p>The error code that is returned for the restoration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NONE</p>
              */
             public Builder errorType(String errorType) {
                 this.errorType = errorType;
@@ -787,7 +852,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the in-progress restoration task is expected to be complete. Unit: seconds.
+             * <p>The timestamp when the in-progress restoration task is expected to be complete. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583299054</p>
              */
             public Builder eta(Long eta) {
                 this.eta = eta;
@@ -795,7 +863,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The directory excluded from the anti-ransomware policy. The value is the directory that you specify to skip protection when you create the anti-ransomware policy.
+             * <p>The directory excluded from the anti-ransomware policy. The value is the directory that you specify to skip protection when you create the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/home/user&quot;]</p>
              */
             public Builder excludes(String excludes) {
                 this.excludes = excludes;
@@ -803,7 +874,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The return value of the restoration task.
+             * <p>The return value of the restoration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(String exitCode) {
                 this.exitCode = exitCode;
@@ -811,7 +885,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the restoration task is created.
+             * <p>The time when the restoration task is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-25T19:11Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -819,7 +896,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the restoration task is updated.
+             * <p>The time when the restoration task is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-25T19:11Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -827,7 +907,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
+             * <p>The directory in which the restored file is stored. The value is the directory that you specify for protection when you create the anti-ransomware policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/root/disk-uuid-test&quot;,&quot;/root/install.sh&quot;]</p>
              */
             public Builder includes(String includes) {
                 this.includes = includes;
@@ -835,7 +918,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server whose data you want to restore.
+             * <p>The ID of the server whose data you want to restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp12xnvdax6307gw****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -843,7 +929,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server whose data you want to restore.
+             * <p>The name of the server whose data you want to restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win2012-01</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -851,7 +940,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server whose data you want to restore.
+             * <p>The public IP address of the server whose data you want to restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -859,7 +951,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address of the server whose data you want to restore.
+             * <p>The internal IP address of the server whose data you want to restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.1.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -867,7 +962,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of files that are backed up.
+             * <p>The number of files that are restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -875,7 +973,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files that you want to restore.
+             * <p>The total number of files that need to be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -883,7 +984,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -891,7 +995,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the restoration task in percentage.
+             * <p>The progress of the restoration task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -899,7 +1006,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request, which is used to locate and troubleshoot issues.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ED92280-4363-57D3-A4D3-4D3FBC99B29F</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -907,7 +1017,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the restoration task.
+             * <p>The ID of the restoration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-000gmcypy5dyf9ey3uv7</p>
              */
             public Builder restoreId(String restoreId) {
                 this.restoreId = restoreId;
@@ -915,7 +1028,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the restoration task.
+             * <p>The name of the restoration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Restore</p>
              */
             public Builder restoreName(String restoreName) {
                 this.restoreName = restoreName;
@@ -923,11 +1039,14 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file that is restored. Valid values:
-             * <p>
+             * <p>The type of the file that is restored. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS_FILE</strong>: files on Elastic Compute Service (ECS) instances</li>
+             * <li><strong>FILE</strong>: files on servers in data centers</li>
+             * </ul>
              * 
-             * *   **ECS_FILE**: files on Elastic Compute Service (ECS) instances
-             * *   **FILE**: files on servers in data centers
+             * <strong>example:</strong>
+             * <p>ECS_FILE</p>
              */
             public Builder restoreType(String restoreType) {
                 this.restoreType = restoreType;
@@ -935,7 +1054,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The hash value of the snapshot that stores backup data when the data is backed up.
+             * <p>The hash value of the snapshot that stores backup data when the data is backed up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3992de83f529b844135fe795d949181735a7d20e0ac8539485c61b7983e618f</p>
              */
             public Builder snapshotHash(String snapshotHash) {
                 this.snapshotHash = snapshotHash;
@@ -943,7 +1065,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The hash value ID of the snapshot that stores backup data when the data is backed up.
+             * <p>The hash value ID of the snapshot that stores backup data when the data is backed up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-000gmcypy5dy54e39yny</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -951,7 +1076,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the backup data.
+             * <p>The version of the backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-03 18:00</p>
              */
             public Builder snapshotVersion(String snapshotVersion) {
                 this.snapshotVersion = snapshotVersion;
@@ -959,7 +1087,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the source file that you want to restore.
+             * <p>The restored content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/home/admin&quot;,&quot;\\servername\sharename&quot;]</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -967,7 +1098,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware agent that is used to back up data.
+             * <p>The ID of the anti-ransomware agent that is used to back up data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-000gmcypy5dyf9ey3uv7</p>
              */
             public Builder sourceClientId(String sourceClientId) {
                 this.sourceClientId = sourceClientId;
@@ -975,7 +1109,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The speed of data restoration. Unit: byte/s.
+             * <p>The speed at which data is restored. Unit: byte/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25766558</p>
              */
             public Builder speed(Long speed) {
                 this.speed = speed;
@@ -983,19 +1120,22 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the restoration task. Valid values:
-             * <p>
+             * <p>The status of the restoration task. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong>: The task is running.</li>
+             * <li><strong>COMPLETE</strong>: The task is complete.</li>
+             * <li><strong>FAILED</strong>: The task fails.</li>
+             * <li><strong>CANCELING</strong>: The task is being canceled.</li>
+             * <li><strong>CANCELED</strong>: The task is canceled.</li>
+             * <li><strong>PARTIAL_COMPLETE</strong>: The task is partially successful.</li>
+             * <li><strong>CREATED</strong>: The task was created but is not run.</li>
+             * <li><strong>EXPIRED</strong>: The task is not updated.</li>
+             * <li><strong>QUEUED</strong>: The task is waiting to be run.</li>
+             * <li><strong>CLIENT_DELETED</strong>: The task fails because the anti-ransomware agent is uninstalled.</li>
+             * </ul>
              * 
-             * *   **RUNNING**: The task is running.
-             * *   **COMPLETE**: The task is complete.
-             * *   **FAILED**: The task fails.
-             * *   **CANCELING**: The task is being canceled.
-             * *   **CANCELED**: The task is canceled.
-             * *   **PARTIAL_COMPLETE**: The task is partially successful.
-             * *   **CREATED**: The task is created but is not run.
-             * *   **EXPIRED**: The task is not updated.
-             * *   **QUEUED**: The task is waiting to be run.
-             * *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1003,7 +1143,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The folder to which the backup data is restored. After you create the restoration task, the backup data is restored to the specified folder.
+             * <p>The folder to which the backup data is restored. After you create the restoration task, the backup data is restored to the specified folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -1011,7 +1154,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the restoration task was last updated. Unit: milliseconds.
+             * <p>The timestamp when the restoration task was last updated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1583289054000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -1019,7 +1165,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server whose data you want to restore.
+             * <p>The UUID of the server whose data you want to restore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6E3DABB6-3F6A-40DB-9492-2C8B59C****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1027,7 +1176,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup vault in which the backup data is stored.
+             * <p>The ID of the backup vault in which the backup data is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-000b0v0jqzmse2yz06zw</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
@@ -1035,7 +1187,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the backup vault resides.
+             * <p>The ID of the region where the backup vault resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vaultRegionId(String vaultRegionId) {
                 this.vaultRegionId = vaultRegionId;

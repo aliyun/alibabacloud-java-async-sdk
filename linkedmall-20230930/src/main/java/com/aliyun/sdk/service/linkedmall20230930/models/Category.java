@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Category} extends {@link TeaModel}
  *
  * <p>Category</p>
  */
 public class Category extends TeaModel {
-    @NameInMap("categoryId")
+    @com.aliyun.core.annotation.NameInMap("categoryId")
     private Long categoryId;
 
-    @NameInMap("isLeaf")
+    @com.aliyun.core.annotation.NameInMap("isLeaf")
     private Boolean isLeaf;
 
-    @NameInMap("level")
+    @com.aliyun.core.annotation.NameInMap("level")
     private Integer level;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("parentId")
+    @com.aliyun.core.annotation.NameInMap("parentId")
     private Long parentId;
 
     private Category(Builder builder) {

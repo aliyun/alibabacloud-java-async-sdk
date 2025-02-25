@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCodeSourceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCodeSourceResponseBody</p>
  */
 public class DeleteCodeSourceResponseBody extends TeaModel {
-    @NameInMap("CodeSourceId")
+    @com.aliyun.core.annotation.NameInMap("CodeSourceId")
     private String codeSourceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteCodeSourceResponseBody(Builder builder) {

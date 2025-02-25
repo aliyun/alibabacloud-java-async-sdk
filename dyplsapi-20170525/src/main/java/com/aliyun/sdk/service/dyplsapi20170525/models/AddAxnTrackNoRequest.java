@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAxnTrackNoRequest} extends {@link RequestModel}
  *
  * <p>AddAxnTrackNoRequest</p>
  */
 public class AddAxnTrackNoRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNoX")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNoX;
 
-    @Query
-    @NameInMap("PoolKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SubsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subsId;
 
-    @Query
-    @NameInMap("trackNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trackNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trackNo;
 
     private AddAxnTrackNoRequest(Builder builder) {
@@ -151,7 +156,12 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * PhoneNoX.
+         * <p>The private number in the AXN binding, that is, phone number X.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of PhoneNoX.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000****</p>
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -160,7 +170,11 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC2235****</p>
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -187,7 +201,12 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * SubsId.
+         * <p>The binding ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of SubsId.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15678890****</p>
          */
         public Builder subsId(String subsId) {
             this.putQueryParameter("SubsId", subsId);
@@ -196,7 +215,11 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * trackNo.
+         * <p>The tracking number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde*****</p>
          */
         public Builder trackNo(String trackNo) {
             this.putQueryParameter("trackNo", trackNo);

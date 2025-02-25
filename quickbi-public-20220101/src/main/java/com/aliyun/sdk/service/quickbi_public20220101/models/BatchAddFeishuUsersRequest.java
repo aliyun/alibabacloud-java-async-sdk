@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAddFeishuUsersRequest} extends {@link RequestModel}
  *
  * <p>BatchAddFeishuUsersRequest</p>
  */
 public class BatchAddFeishuUsersRequest extends Request {
-    @Query
-    @NameInMap("FeishuUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeishuUsers")
     private String feishuUsers;
 
-    @Query
-    @NameInMap("IsAdmin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAdmin")
     private Boolean isAdmin;
 
-    @Query
-    @NameInMap("IsAuthAdmin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAuthAdmin")
     private Boolean isAuthAdmin;
 
-    @Query
-    @NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private String userGroupIds;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private Integer userType;
 
     private BatchAddFeishuUsersRequest(Builder builder) {

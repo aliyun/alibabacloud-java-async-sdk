@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostShareKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostShareKeysResponseBody</p>
  */
 public class ListHostShareKeysResponseBody extends TeaModel {
-    @NameInMap("HostShareKeys")
+    @com.aliyun.core.annotation.NameInMap("HostShareKeys")
     private java.util.List < HostShareKeys> hostShareKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListHostShareKeysResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the shared keys.
+         * <p>An array that consists of the shared keys.</p>
          */
         public Builder hostShareKeys(java.util.List < HostShareKeys> hostShareKeys) {
             this.hostShareKeys = hostShareKeys;
@@ -70,7 +70,10 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListHostShareKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the shared keys.
+         * <p>The total number of the shared keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -91,20 +97,26 @@ public class ListHostShareKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostShareKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostShareKeysResponseBody</p>
+     */
     public static class HostShareKeys extends TeaModel {
-        @NameInMap("HostAccountCount")
+        @com.aliyun.core.annotation.NameInMap("HostAccountCount")
         private Long hostAccountCount;
 
-        @NameInMap("HostShareKeyId")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
         private String hostShareKeyId;
 
-        @NameInMap("HostShareKeyName")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyName")
         private String hostShareKeyName;
 
-        @NameInMap("LastModifyKeyAt")
+        @com.aliyun.core.annotation.NameInMap("LastModifyKeyAt")
         private Long lastModifyKeyAt;
 
-        @NameInMap("PrivateKeyFingerPrint")
+        @com.aliyun.core.annotation.NameInMap("PrivateKeyFingerPrint")
         private String privateKeyFingerPrint;
 
         private HostShareKeys(Builder builder) {
@@ -166,7 +178,10 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             private String privateKeyFingerPrint; 
 
             /**
-             * The number of the associated host accounts.
+             * <p>The number of the associated host accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder hostAccountCount(Long hostAccountCount) {
                 this.hostAccountCount = hostAccountCount;
@@ -174,7 +189,10 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host account.
+             * <p>The shared key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10247</p>
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -182,7 +200,10 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the shared key.
+             * <p>The name of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
@@ -190,7 +211,10 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the shared key was last modified.
+             * <p>The time when the shared key was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644806406</p>
              */
             public Builder lastModifyKeyAt(Long lastModifyKeyAt) {
                 this.lastModifyKeyAt = lastModifyKeyAt;
@@ -198,7 +222,10 @@ public class ListHostShareKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the private key.
+             * <p>The fingerprint of the private key.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder privateKeyFingerPrint(String privateKeyFingerPrint) {
                 this.privateKeyFingerPrint = privateKeyFingerPrint;

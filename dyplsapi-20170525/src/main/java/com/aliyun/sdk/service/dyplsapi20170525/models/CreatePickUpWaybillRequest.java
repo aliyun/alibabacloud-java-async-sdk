@@ -1,89 +1,94 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePickUpWaybillRequest} extends {@link RequestModel}
  *
  * <p>CreatePickUpWaybillRequest</p>
  */
 public class CreatePickUpWaybillRequest extends Request {
-    @Query
-    @NameInMap("AppointGotEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppointGotEndTime")
     private String appointGotEndTime;
 
-    @Query
-    @NameInMap("AppointGotStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppointGotStartTime")
     private String appointGotStartTime;
 
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private Integer bizType;
 
-    @Query
-    @NameInMap("ConsigneeAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsigneeAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ConsigneeAddress consigneeAddress;
 
-    @Query
-    @NameInMap("ConsigneeMobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsigneeMobile")
     private String consigneeMobile;
 
-    @Query
-    @NameInMap("ConsigneeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsigneeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consigneeName;
 
-    @Query
-    @NameInMap("ConsigneePhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsigneePhone")
     private String consigneePhone;
 
-    @Header
-    @NameInMap("Content-Type")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("Content-Type")
     private String contentType;
 
-    @Query
-    @NameInMap("CpCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpCode")
     private String cpCode;
 
-    @Query
-    @NameInMap("GoodsInfos")
-    private java.util.List < GoodsInfos> goodsInfos;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GoodsInfos")
+    private java.util.List<GoodsInfos> goodsInfos;
 
-    @Query
-    @NameInMap("OrderChannels")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderChannels")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderChannels;
 
-    @Query
-    @NameInMap("OuterOrderCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterOrderCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerOrderCode;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("SendAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private SendAddress sendAddress;
 
-    @Query
-    @NameInMap("SendMobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendMobile")
     private String sendMobile;
 
-    @Query
-    @NameInMap("SendName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sendName;
 
-    @Query
-    @NameInMap("SendPhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendPhone")
     private String sendPhone;
 
     private CreatePickUpWaybillRequest(Builder builder) {
@@ -186,7 +191,7 @@ public class CreatePickUpWaybillRequest extends Request {
     /**
      * @return goodsInfos
      */
-    public java.util.List < GoodsInfos> getGoodsInfos() {
+    public java.util.List<GoodsInfos> getGoodsInfos() {
         return this.goodsInfos;
     }
 
@@ -249,7 +254,7 @@ public class CreatePickUpWaybillRequest extends Request {
         private String consigneePhone; 
         private String contentType; 
         private String cpCode; 
-        private java.util.List < GoodsInfos> goodsInfos; 
+        private java.util.List<GoodsInfos> goodsInfos; 
         private String orderChannels; 
         private String outerOrderCode; 
         private String remark; 
@@ -284,7 +289,13 @@ public class CreatePickUpWaybillRequest extends Request {
         } 
 
         /**
-         * AppointGotEndTime.
+         * <p>The end time of the door-to-door pickup in the appointment. The value of <strong>AppointGotEndTime</strong> is the value of <strong>EndTime</strong> of <strong>AppointTimes</strong> in <strong>CpTimeSelectList</strong> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</p>
+         * <blockquote>
+         * <p> This parameter is required when <strong>BizType</strong> is set to <strong>1</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-01 12:00:00</p>
          */
         public Builder appointGotEndTime(String appointGotEndTime) {
             this.putQueryParameter("AppointGotEndTime", appointGotEndTime);
@@ -293,7 +304,13 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * AppointGotStartTime.
+         * <p>The start time of the door-to-door pickup in the appointment. The value of <strong>AppointGotStartTime</strong> is the value of <strong>StartTime</strong> of <strong>AppointTimes</strong> in <strong>CpTimeSelectList</strong> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</p>
+         * <blockquote>
+         * <p> This parameter is required when <strong>BizType</strong> is set to <strong>1</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-01 10:00:00</p>
          */
         public Builder appointGotStartTime(String appointGotStartTime) {
             this.putQueryParameter("AppointGotStartTime", appointGotStartTime);
@@ -302,7 +319,14 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The pickup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): real-time order.</li>
+         * <li><strong>1</strong>: appointment order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder bizType(Integer bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -311,7 +335,8 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * ConsigneeAddress.
+         * <p>The address of the consignee.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder consigneeAddress(ConsigneeAddress consigneeAddress) {
             String consigneeAddressShrink = shrink(consigneeAddress, "ConsigneeAddress", "json");
@@ -321,7 +346,13 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * ConsigneeMobile.
+         * <p>The mobile phone number of the consignee.</p>
+         * <blockquote>
+         * <p> Either ConsigneeMobile or ConsigneePhone must be set.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1580000****</p>
          */
         public Builder consigneeMobile(String consigneeMobile) {
             this.putQueryParameter("ConsigneeMobile", consigneeMobile);
@@ -330,7 +361,11 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * ConsigneeName.
+         * <p>The name of the consignee.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Li</p>
          */
         public Builder consigneeName(String consigneeName) {
             this.putQueryParameter("ConsigneeName", consigneeName);
@@ -339,7 +374,13 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * ConsigneePhone.
+         * <p>The landline phone number of the consignee.</p>
+         * <blockquote>
+         * <p> Either ConsigneeMobile or ConsigneePhone must be set.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0570000****</p>
          */
         public Builder consigneePhone(String consigneePhone) {
             this.putQueryParameter("ConsigneePhone", consigneePhone);
@@ -348,7 +389,10 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * Content-Type.
+         * <p>The content type of the HTTP request. This parameter is optional. If you specify this parameter, enter application/json;chatset=UTF-8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json;chatset=UTF-8</p>
          */
         public Builder contentType(String contentType) {
             this.putHeaderParameter("Content-Type", contentType);
@@ -357,7 +401,10 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * CpCode.
+         * <p>The code of the courier company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YTO</p>
          */
         public Builder cpCode(String cpCode) {
             this.putQueryParameter("CpCode", cpCode);
@@ -366,9 +413,9 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * GoodsInfos.
+         * <p>The items.</p>
          */
-        public Builder goodsInfos(java.util.List < GoodsInfos> goodsInfos) {
+        public Builder goodsInfos(java.util.List<GoodsInfos> goodsInfos) {
             String goodsInfosShrink = shrink(goodsInfos, "GoodsInfos", "json");
             this.putQueryParameter("GoodsInfos", goodsInfosShrink);
             this.goodsInfos = goodsInfos;
@@ -376,7 +423,11 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * OrderChannels.
+         * <p>The external channel sources.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YUN_DIAN_SHANG</p>
          */
         public Builder orderChannels(String orderChannels) {
             this.putQueryParameter("OrderChannels", orderChannels);
@@ -385,7 +436,11 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * OuterOrderCode.
+         * <p>The ID of the external order.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>143234234266****</p>
          */
         public Builder outerOrderCode(String outerOrderCode) {
             this.putQueryParameter("OuterOrderCode", outerOrderCode);
@@ -394,7 +449,10 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The additional information about the order. The additional information will be printed on the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fragile</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -403,7 +461,8 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * SendAddress.
+         * <p>The address of the sender.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder sendAddress(SendAddress sendAddress) {
             String sendAddressShrink = shrink(sendAddress, "SendAddress", "json");
@@ -413,7 +472,13 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * SendMobile.
+         * <p>The mobile phone number of the sender.</p>
+         * <blockquote>
+         * <p> Either SendMobile or SendPhone must be set.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1596714****</p>
          */
         public Builder sendMobile(String sendMobile) {
             this.putQueryParameter("SendMobile", sendMobile);
@@ -422,7 +487,11 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * SendName.
+         * <p>The name of the sender.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wang</p>
          */
         public Builder sendName(String sendName) {
             this.putQueryParameter("SendName", sendName);
@@ -431,7 +500,13 @@ public class CreatePickUpWaybillRequest extends Request {
         }
 
         /**
-         * SendPhone.
+         * <p>The landline phone number of the sender.</p>
+         * <blockquote>
+         * <p> Either SendMobile or SendPhone must be set.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>05718845****</p>
          */
         public Builder sendPhone(String sendPhone) {
             this.putQueryParameter("SendPhone", sendPhone);
@@ -446,24 +521,30 @@ public class CreatePickUpWaybillRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePickUpWaybillRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillRequest</p>
+     */
     public static class ConsigneeAddress extends TeaModel {
-        @NameInMap("AddressDetail")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AddressDetail")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String addressDetail;
 
-        @NameInMap("AreaName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AreaName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String areaName;
 
-        @NameInMap("CityName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CityName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityName;
 
-        @NameInMap("ProvinceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ProvinceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String provinceName;
 
-        @NameInMap("TownName")
+        @com.aliyun.core.annotation.NameInMap("TownName")
         private String townName;
 
         private ConsigneeAddress(Builder builder) {
@@ -525,7 +606,11 @@ public class CreatePickUpWaybillRequest extends Request {
             private String townName; 
 
             /**
-             * AddressDetail.
+             * <p>The detailed address of the consignee.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX community</p>
              */
             public Builder addressDetail(String addressDetail) {
                 this.addressDetail = addressDetail;
@@ -533,7 +618,11 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * AreaName.
+             * <p>The district where the consignee is located.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xihu</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -541,7 +630,11 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * CityName.
+             * <p>The city where the consignee is located.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -549,7 +642,11 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * ProvinceName.
+             * <p>The province where the consignee is located.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhejiang</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -557,7 +654,10 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * TownName.
+             * <p>The street where the consignee is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX Street</p>
              */
             public Builder townName(String townName) {
                 this.townName = townName;
@@ -571,14 +671,20 @@ public class CreatePickUpWaybillRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillRequest</p>
+     */
     public static class GoodsInfos extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private String quantity;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private GoodsInfos(Builder builder) {
@@ -622,7 +728,10 @@ public class CreatePickUpWaybillRequest extends Request {
             private String weight; 
 
             /**
-             * Name.
+             * <p>The item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhang</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -630,7 +739,10 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * Quantity.
+             * <p>The item quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quantity(String quantity) {
                 this.quantity = quantity;
@@ -638,7 +750,10 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The item weight. Unit: gram.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -652,24 +767,30 @@ public class CreatePickUpWaybillRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePickUpWaybillRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePickUpWaybillRequest</p>
+     */
     public static class SendAddress extends TeaModel {
-        @NameInMap("AddressDetail")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AddressDetail")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String addressDetail;
 
-        @NameInMap("AreaName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AreaName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String areaName;
 
-        @NameInMap("CityName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CityName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityName;
 
-        @NameInMap("ProvinceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ProvinceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String provinceName;
 
-        @NameInMap("TownName")
+        @com.aliyun.core.annotation.NameInMap("TownName")
         private String townName;
 
         private SendAddress(Builder builder) {
@@ -731,7 +852,11 @@ public class CreatePickUpWaybillRequest extends Request {
             private String townName; 
 
             /**
-             * AddressDetail.
+             * <p>The detailed address of the sender.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX community</p>
              */
             public Builder addressDetail(String addressDetail) {
                 this.addressDetail = addressDetail;
@@ -739,7 +864,11 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * AreaName.
+             * <p>The district where the sender is located.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wenjiang</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -747,7 +876,11 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * CityName.
+             * <p>The city where the sender is located.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chengdu</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -755,7 +888,11 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * ProvinceName.
+             * <p>The province where the sender is located.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sichuan</p>
              */
             public Builder provinceName(String provinceName) {
                 this.provinceName = provinceName;
@@ -763,7 +900,10 @@ public class CreatePickUpWaybillRequest extends Request {
             }
 
             /**
-             * TownName.
+             * <p>The street where the sender is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX Street</p>
              */
             public Builder townName(String townName) {
                 this.townName = townName;

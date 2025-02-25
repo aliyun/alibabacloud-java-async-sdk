@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceTopologyResponseBody</p>
  */
 public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceTopologyResponseBody(Builder builder) {
@@ -71,29 +76,35 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class HistoryItems extends TeaModel {
-        @NameInMap("Activated")
+        @com.aliyun.core.annotation.NameInMap("Activated")
         private Boolean activated;
 
-        @NameInMap("Azone")
+        @com.aliyun.core.annotation.NameInMap("Azone")
         private String azone;
 
-        @NameInMap("CharacterType")
+        @com.aliyun.core.annotation.NameInMap("CharacterType")
         private String characterType;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("PhyInstanceName")
+        @com.aliyun.core.annotation.NameInMap("PhyInstanceName")
         private String phyInstanceName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
         private HistoryItems(Builder builder) {
@@ -252,11 +263,17 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class AzoneRoleList extends TeaModel {
-        @NameInMap("Azone")
+        @com.aliyun.core.annotation.NameInMap("Azone")
         private String azone;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
         private AzoneRoleList(Builder builder) {
@@ -313,14 +330,20 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class ConnectionIp extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("DBInstanceNetType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
         private Integer DBInstanceNetType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private ConnectionIp(Builder builder) {
@@ -394,86 +417,95 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Activated")
+        @com.aliyun.core.annotation.NameInMap("Activated")
         private Boolean activated;
 
-        @NameInMap("Azone")
+        @com.aliyun.core.annotation.NameInMap("Azone")
         private String azone;
 
-        @NameInMap("AzoneRoleList")
-        private java.util.List < AzoneRoleList> azoneRoleList;
+        @com.aliyun.core.annotation.NameInMap("AzoneRoleList")
+        private java.util.List<AzoneRoleList> azoneRoleList;
 
-        @NameInMap("CharacterType")
+        @com.aliyun.core.annotation.NameInMap("CharacterType")
         private String characterType;
 
-        @NameInMap("ConnectionIp")
-        private java.util.List < ConnectionIp> connectionIp;
+        @com.aliyun.core.annotation.NameInMap("ConnectionIp")
+        private java.util.List<ConnectionIp> connectionIp;
 
-        @NameInMap("DBInstanceConnType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceConnType")
         private Integer DBInstanceConnType;
 
-        @NameInMap("DBInstanceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceCreateTime")
         private String DBInstanceCreateTime;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private Integer DBInstanceStatus;
 
-        @NameInMap("DBInstanceStatusDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatusDescription")
         private String DBInstanceStatusDescription;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Long diskSize;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private Integer lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIops")
+        @com.aliyun.core.annotation.NameInMap("MaxIops")
         private Integer maxIops;
 
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("PhyInstanceName")
+        @com.aliyun.core.annotation.NameInMap("PhyInstanceName")
         private String phyInstanceName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("StorageUsed")
+        private String storageUsed;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Items(Builder builder) {
@@ -503,6 +535,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             this.region = builder.region;
             this.role = builder.role;
             this.status = builder.status;
+            this.storageUsed = builder.storageUsed;
             this.version = builder.version;
         }
 
@@ -531,7 +564,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return azoneRoleList
          */
-        public java.util.List < AzoneRoleList> getAzoneRoleList() {
+        public java.util.List<AzoneRoleList> getAzoneRoleList() {
             return this.azoneRoleList;
         }
 
@@ -545,7 +578,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return connectionIp
          */
-        public java.util.List < ConnectionIp> getConnectionIp() {
+        public java.util.List<ConnectionIp> getConnectionIp() {
             return this.connectionIp;
         }
 
@@ -697,6 +730,13 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageUsed
+         */
+        public String getStorageUsed() {
+            return this.storageUsed;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -706,9 +746,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean activated; 
             private String azone; 
-            private java.util.List < AzoneRoleList> azoneRoleList; 
+            private java.util.List<AzoneRoleList> azoneRoleList; 
             private String characterType; 
-            private java.util.List < ConnectionIp> connectionIp; 
+            private java.util.List<ConnectionIp> connectionIp; 
             private Integer DBInstanceConnType; 
             private String DBInstanceCreateTime; 
             private String DBInstanceDescription; 
@@ -730,6 +770,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private String region; 
             private String role; 
             private String status; 
+            private String storageUsed; 
             private String version; 
 
             /**
@@ -751,7 +792,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * AzoneRoleList.
              */
-            public Builder azoneRoleList(java.util.List < AzoneRoleList> azoneRoleList) {
+            public Builder azoneRoleList(java.util.List<AzoneRoleList> azoneRoleList) {
                 this.azoneRoleList = azoneRoleList;
                 return this;
             }
@@ -767,7 +808,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * ConnectionIp.
              */
-            public Builder connectionIp(java.util.List < ConnectionIp> connectionIp) {
+            public Builder connectionIp(java.util.List<ConnectionIp> connectionIp) {
                 this.connectionIp = connectionIp;
                 return this;
             }
@@ -941,6 +982,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
+             * StorageUsed.
+             */
+            public Builder storageUsed(String storageUsed) {
+                this.storageUsed = storageUsed;
+                return this;
+            }
+
+            /**
              * Version.
              */
             public Builder version(String version) {
@@ -955,53 +1004,59 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class LogicInstanceTopology extends TeaModel {
-        @NameInMap("DBInstanceConnType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceConnType")
         private String DBInstanceConnType;
 
-        @NameInMap("DBInstanceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceCreateTime")
         private String DBInstanceCreateTime;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private Integer DBInstanceStatus;
 
-        @NameInMap("DBInstanceStatusDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatusDescription")
         private String DBInstanceStatusDescription;
 
-        @NameInMap("DBInstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
         private Integer DBInstanceStorage;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("HistoryItems")
-        private java.util.List < HistoryItems> historyItems;
+        @com.aliyun.core.annotation.NameInMap("HistoryItems")
+        private java.util.List<HistoryItems> historyItems;
 
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private Integer lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
         private LogicInstanceTopology(Builder builder) {
@@ -1104,14 +1159,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return historyItems
          */
-        public java.util.List < HistoryItems> getHistoryItems() {
+        public java.util.List<HistoryItems> getHistoryItems() {
             return this.historyItems;
         }
 
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1154,8 +1209,8 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private Integer DBInstanceStorage; 
             private String engine; 
             private String engineVersion; 
-            private java.util.List < HistoryItems> historyItems; 
-            private java.util.List < Items> items; 
+            private java.util.List<HistoryItems> historyItems; 
+            private java.util.List<Items> items; 
             private Integer lockMode; 
             private String lockReason; 
             private String maintainEndTime; 
@@ -1244,7 +1299,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * HistoryItems.
              */
-            public Builder historyItems(java.util.List < HistoryItems> historyItems) {
+            public Builder historyItems(java.util.List<HistoryItems> historyItems) {
                 this.historyItems = historyItems;
                 return this;
             }
@@ -1252,7 +1307,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -1296,8 +1351,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceTopologyResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("LogicInstanceTopology")
+        @com.aliyun.core.annotation.NameInMap("LogicInstanceTopology")
         private LogicInstanceTopology logicInstanceTopology;
 
         private Data(Builder builder) {

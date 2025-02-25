@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContactGroupListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContactGroupListResponseBody</p>
  */
 public class DescribeContactGroupListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ContactGroupList")
+    @com.aliyun.core.annotation.NameInMap("ContactGroupList")
     private ContactGroupList contactGroupList;
 
-    @NameInMap("ContactGroups")
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
     private ContactGroups contactGroups;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeContactGroupListResponseBody(Builder builder) {
@@ -110,10 +110,13 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +124,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about alert groups that were queried.
+         * <p>The information about alert groups that were queried.</p>
          */
         public Builder contactGroupList(ContactGroupList contactGroupList) {
             this.contactGroupList = contactGroupList;
@@ -129,7 +132,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The names of alert groups.
+         * <p>The names of alert groups.</p>
          */
         public Builder contactGroups(ContactGroups contactGroups) {
             this.contactGroups = contactGroups;
@@ -137,7 +140,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Request is not authorization.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -145,7 +151,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>916EE694-03C2-47B6-85EE-5054E3C168D3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,11 +162,14 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -165,7 +177,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned entries.
+         * <p>The total number of the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -178,8 +193,14 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContactGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactGroupListResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < String > contact;
 
         private Contacts(Builder builder) {
@@ -219,26 +240,32 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactGroupListResponseBody</p>
+     */
     public static class ContactGroup extends TeaModel {
-        @NameInMap("Contacts")
+        @com.aliyun.core.annotation.NameInMap("Contacts")
         private Contacts contacts;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Describe")
+        @com.aliyun.core.annotation.NameInMap("Describe")
         private String describe;
 
-        @NameInMap("EnableSubscribed")
+        @com.aliyun.core.annotation.NameInMap("EnableSubscribed")
         private Boolean enableSubscribed;
 
-        @NameInMap("EnabledWeeklyReport")
+        @com.aliyun.core.annotation.NameInMap("EnabledWeeklyReport")
         private Boolean enabledWeeklyReport;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private ContactGroup(Builder builder) {
@@ -318,7 +345,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The alert contacts in the alert group.
+             * <p>The alert contacts in the alert group.</p>
              */
             public Builder contacts(Contacts contacts) {
                 this.contacts = contacts;
@@ -326,7 +353,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1507070598000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -334,7 +364,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert group.
+             * <p>The description of the alert group.</p>
              */
             public Builder describe(String describe) {
                 this.describe = describe;
@@ -342,11 +372,14 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert group subscribes to weekly reports. Valid values:
-             * <p>
+             * <p>Indicates whether the alert group subscribes to weekly reports. Valid values:</p>
+             * <ul>
+             * <li>true: The alert group subscribes to weekly reports.</li>
+             * <li>false: The alert group does not subscribe to weekly reports.</li>
+             * </ul>
              * 
-             * *   true: The alert group subscribes to weekly reports.
-             * *   false: The alert group does not subscribe to weekly reports.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSubscribed(Boolean enableSubscribed) {
                 this.enableSubscribed = enableSubscribed;
@@ -354,13 +387,17 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert group can subscribe to weekly reports. Valid values:
-             * <p>
+             * <p>Indicates whether the alert group can subscribe to weekly reports. Valid values:</p>
+             * <ul>
+             * <li>true: The alert group can subscribe to weekly reports.</li>
+             * <li>false: The alert group cannot subscribe to weekly reports.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.</p>
+             * </blockquote>
              * 
-             * *   true: The alert group can subscribe to weekly reports.
-             * *   false: The alert group cannot subscribe to weekly reports.
-             * 
-             * >  The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabledWeeklyReport(Boolean enabledWeeklyReport) {
                 this.enabledWeeklyReport = enabledWeeklyReport;
@@ -368,7 +405,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert group.
+             * <p>The name of the alert group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Contact1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -376,7 +416,10 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589447759000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -390,8 +433,14 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactGroupListResponseBody</p>
+     */
     public static class ContactGroupList extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < ContactGroup> contactGroup;
 
         private ContactGroupList(Builder builder) {
@@ -431,8 +480,14 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContactGroupListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContactGroupListResponseBody</p>
+     */
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < String > contactGroup;
 
         private ContactGroups(Builder builder) {

@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTrafficRequest} extends {@link RequestModel}
  *
  * <p>DescribeTrafficRequest</p>
  */
 public class DescribeTrafficRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Integer endTime;
 
-    @Query
-    @NameInMap("FlowType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowType")
     private String flowType;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("Ipnet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipnet")
     private String ipnet;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer startTime;
 
     private DescribeTrafficRequest(Builder builder) {
@@ -167,10 +167,11 @@ public class DescribeTrafficRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>If you do not specify this parameter, the current system time is used as the end time.</p>
          * 
-         * If you do not specify this parameter, the current system time is used as the end time.
+         * <strong>example:</strong>
+         * <p>1563445054</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,11 +180,14 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The type of the traffic statistics to query. Valid values:
-         * <p>
+         * <p>The type of the traffic statistics to query. Valid values:</p>
+         * <ul>
+         * <li><strong>max</strong>: the peak traffic within the specified interval</li>
+         * <li><strong>avg</strong>: the average traffic within the specified interval</li>
+         * </ul>
          * 
-         * *   **max**: the peak traffic within the specified interval
-         * *   **avg**: the average traffic within the specified interval
+         * <strong>example:</strong>
+         * <p>max</p>
          */
         public Builder flowType(String flowType) {
             this.putQueryParameter("FlowType", flowType);
@@ -192,12 +196,14 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The ID of the Anti-DDoS Origin instance to query.
-         * <p>
+         * <p>The ID of the Anti-DDoS Origin instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+         * </blockquote>
+         * <p>If you specify an on-demand instance, you must configure the <strong>Interval</strong> parameter.</p>
          * 
-         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
-         * 
-         * If you specify an on-demand instance, you must configure the **Interval** parameter.
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w203qg****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -206,7 +212,10 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The interval at which the traffic statistics are calculated. Unit: seconds. Default value: **5**.
+         * <p>The interval at which the traffic statistics are calculated. Unit: seconds. Default value: <strong>5</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -215,10 +224,13 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The public IP address of the asset to query. If you do not specify this parameter, the traffic statistics of all public IP addresses that are protected by the Anti-DDoS Origin instance are queried.
-         * <p>
+         * <p>The public IP address of the asset to query. If you do not specify this parameter, the traffic statistics of all public IP addresses that are protected by the Anti-DDoS Origin instance are queried.</p>
+         * <blockquote>
+         * <p> The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> operation to query all protected objects of the Anti-DDoS Origin instance.</p>
+         * </blockquote>
          * 
-         * >  The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the [DescribePackIpList](~~118701~~) operation to query all protected objects of the Anti-DDoS Origin instance.
+         * <strong>example:</strong>
+         * <p>39.XX.XX.96</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -227,7 +239,10 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The Classless Inter-Domain Routing (CIDR) block of the on-demand instance that you want to query.
+         * <p>The Classless Inter-Domain Routing (CIDR) block of the on-demand instance that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111.XX.XX.0/24</p>
          */
         public Builder ipnet(String ipnet) {
             this.putQueryParameter("Ipnet", ipnet);
@@ -236,10 +251,13 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
-         * <p>
+         * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,10 +266,11 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
-         * <p>
+         * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,7 +279,11 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619798400</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

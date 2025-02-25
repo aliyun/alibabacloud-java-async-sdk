@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSimulatedSystemEventsRequest} extends {@link RequestModel}
  *
  * <p>CreateSimulatedSystemEventsRequest</p>
  */
 public class CreateSimulatedSystemEventsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("EventType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> instanceId;
 
-    @Query
-    @NameInMap("NotBefore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotBefore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notBefore;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateSimulatedSystemEventsRequest(Builder builder) {
@@ -95,7 +100,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -144,7 +149,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSimulatedSystemEventsRequest, Builder> {
         private String sourceRegionId; 
         private String eventType; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String notBefore; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -179,17 +184,20 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The type of the system event. Valid values:
-         * <p>
+         * <p>The type of the system event. Valid values:</p>
+         * <ul>
+         * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
+         * <li>SystemFailure.Reboot: The instance is restarted due to a system error.</li>
+         * <li>InstanceFailure.Reboot: The instance is restarted due to an instance error.</li>
+         * <li>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</li>
+         * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
+         * <li>SystemFailure.Redeploy: The instance is redeployed due to a system error.</li>
+         * <li>SystemFailure.Stop: The instance is stopped due to a system error.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
-         * *   SystemFailure.Reboot: The instance is restarted due to a system error.
-         * *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
-         * *   SystemMaintenance.Stop: The instance is stopped due to system maintenance.
-         * *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
-         * *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
-         * *   SystemFailure.Stop: The instance is stopped due to a system error.
-         * *
+         * <strong>example:</strong>
+         * <p>SystemMaintenance.Reboot</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -198,19 +206,27 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. You can specify up to 100 instance IDs.
+         * <p>The IDs of the instances. You can specify up to 100 instance IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1gtjxuuvwj17zr****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
         }
 
         /**
-         * The scheduled start time of the event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The scheduled start time of the event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>For events that occur due to system errors or instance errors, the simulated events of such events enter the <code>Executing</code> state when the simulated events are created. The value of <code>NotBefore</code> is the time when the simulated events enter the <code>Executed</code> state.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For events that occur due to system errors or instance errors, the simulated events of such events enter the `Executing` state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the `Executed` state.
+         * <strong>example:</strong>
+         * <p>2018-12-01T06:32:31Z</p>
          */
         public Builder notBefore(String notBefore) {
             this.putQueryParameter("NotBefore", notBefore);
@@ -237,7 +253,11 @@ public class CreateSimulatedSystemEventsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

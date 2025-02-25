@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListMachinesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMachinesResponseBody</p>
  */
 public class ListMachinesResponseBody extends TeaModel {
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
-    @NameInMap("machines")
-    private java.util.List < Machine > machines;
+    @com.aliyun.core.annotation.NameInMap("machines")
+    private java.util.List<Machine> machines;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
 
     private ListMachinesResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListMachinesResponseBody extends TeaModel {
     /**
      * @return machines
      */
-    public java.util.List < Machine > getMachines() {
+    public java.util.List<Machine> getMachines() {
         return this.machines;
     }
 
@@ -58,11 +63,14 @@ public class ListMachinesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Machine > machines; 
+        private java.util.List<Machine> machines; 
         private Integer total; 
 
         /**
-         * The number of machines that are returned on the current page.
+         * <p>The number of machines that are returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,15 +78,18 @@ public class ListMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * The machines that are returned.
+         * <p>The machines that are returned.</p>
          */
-        public Builder machines(java.util.List < Machine > machines) {
+        public Builder machines(java.util.List<Machine> machines) {
             this.machines = machines;
             return this;
         }
 
         /**
-         * The total number of machines.
+         * <p>The total number of machines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder total(Integer total) {
             this.total = total;

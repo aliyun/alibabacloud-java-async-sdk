@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCapacityReservationsResponseBody</p>
  */
 public class DescribeCapacityReservationsResponseBody extends TeaModel {
-    @NameInMap("CapacityReservationSet")
+    @com.aliyun.core.annotation.NameInMap("CapacityReservationSet")
     private CapacityReservationSet capacityReservationSet;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCapacityReservationsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the capacity reservations.
+         * <p>Details of the capacity reservations.</p>
          */
         public Builder capacityReservationSet(CapacityReservationSet capacityReservationSet) {
             this.capacityReservationSet = capacityReservationSet;
@@ -94,7 +99,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +110,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +121,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,20 +148,177 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     } 
 
-    public static class AllocatedResource extends TeaModel {
-        @NameInMap("InstanceType")
-        private String instanceType;
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
+    public static class CapacityReservationUsage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
 
-        @NameInMap("TotalAmount")
-        private Integer totalAmount;
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
+        private String serviceName;
 
-        @NameInMap("UsedAmount")
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
         private Integer usedAmount;
 
-        @NameInMap("zoneId")
+        private CapacityReservationUsage(Builder builder) {
+            this.accountId = builder.accountId;
+            this.serviceName = builder.serviceName;
+            this.usedAmount = builder.usedAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityReservationUsage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
+         * @return usedAmount
+         */
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        public static final class Builder {
+            private String accountId; 
+            private String serviceName; 
+            private Integer usedAmount; 
+
+            /**
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105909559088****</p>
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute.aliyuncs.com</p>
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * <p>The number of instances that are used by the Alibaba Cloud account or service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder usedAmount(Integer usedAmount) {
+                this.usedAmount = usedAmount;
+                return this;
+            }
+
+            public CapacityReservationUsage build() {
+                return new CapacityReservationUsage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
+    public static class CapacityReservationUsages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationUsage")
+        private java.util.List<CapacityReservationUsage> capacityReservationUsage;
+
+        private CapacityReservationUsages(Builder builder) {
+            this.capacityReservationUsage = builder.capacityReservationUsage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityReservationUsages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacityReservationUsage
+         */
+        public java.util.List<CapacityReservationUsage> getCapacityReservationUsage() {
+            return this.capacityReservationUsage;
+        }
+
+        public static final class Builder {
+            private java.util.List<CapacityReservationUsage> capacityReservationUsage; 
+
+            /**
+             * CapacityReservationUsage.
+             */
+            public Builder capacityReservationUsage(java.util.List<CapacityReservationUsage> capacityReservationUsage) {
+                this.capacityReservationUsage = capacityReservationUsage;
+                return this;
+            }
+
+            public CapacityReservationUsages build() {
+                return new CapacityReservationUsages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
+    public static class AllocatedResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
+        private Integer availableAmount;
+
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationUsages")
+        private CapacityReservationUsages capacityReservationUsages;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("TotalAmount")
+        private Integer totalAmount;
+
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
+        private Integer usedAmount;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private AllocatedResource(Builder builder) {
+            this.availableAmount = builder.availableAmount;
+            this.capacityReservationUsages = builder.capacityReservationUsages;
             this.instanceType = builder.instanceType;
             this.totalAmount = builder.totalAmount;
             this.usedAmount = builder.usedAmount;
@@ -157,6 +331,20 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         public static AllocatedResource create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableAmount
+         */
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
+        }
+
+        /**
+         * @return capacityReservationUsages
+         */
+        public CapacityReservationUsages getCapacityReservationUsages() {
+            return this.capacityReservationUsages;
         }
 
         /**
@@ -188,13 +376,37 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer availableAmount; 
+            private CapacityReservationUsages capacityReservationUsages; 
             private String instanceType; 
             private Integer totalAmount; 
             private Integer usedAmount; 
             private String zoneId; 
 
             /**
-             * The instance type.
+             * <p>The number of available instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
+             */
+            public Builder availableAmount(Integer availableAmount) {
+                this.availableAmount = availableAmount;
+                return this;
+            }
+
+            /**
+             * <p>Details of instance usage.</p>
+             */
+            public Builder capacityReservationUsages(CapacityReservationUsages capacityReservationUsages) {
+                this.capacityReservationUsages = capacityReservationUsages;
+                return this;
+            }
+
+            /**
+             * <p>The instance type of the instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c6.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -202,7 +414,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances for which capacity of an instance type is reserved.
+             * <p>The total number of instances for which the capacity of an instance type is reserved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -210,7 +425,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that have used the capacity reservation.
+             * <p>The number of instances that have used the capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -218,7 +436,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -232,9 +453,15 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
     public static class AllocatedResources extends TeaModel {
-        @NameInMap("AllocatedResource")
-        private java.util.List < AllocatedResource> allocatedResource;
+        @com.aliyun.core.annotation.NameInMap("AllocatedResource")
+        private java.util.List<AllocatedResource> allocatedResource;
 
         private AllocatedResources(Builder builder) {
             this.allocatedResource = builder.allocatedResource;
@@ -251,17 +478,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * @return allocatedResource
          */
-        public java.util.List < AllocatedResource> getAllocatedResource() {
+        public java.util.List<AllocatedResource> getAllocatedResource() {
             return this.allocatedResource;
         }
 
         public static final class Builder {
-            private java.util.List < AllocatedResource> allocatedResource; 
+            private java.util.List<AllocatedResource> allocatedResource; 
 
             /**
              * AllocatedResource.
              */
-            public Builder allocatedResource(java.util.List < AllocatedResource> allocatedResource) {
+            public Builder allocatedResource(java.util.List<AllocatedResource> allocatedResource) {
                 this.allocatedResource = allocatedResource;
                 return this;
             }
@@ -273,11 +500,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -312,7 +545,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -320,7 +556,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -334,9 +573,15 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -353,17 +598,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -375,63 +620,73 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
     public static class CapacityReservationItem extends TeaModel {
-        @NameInMap("AllocatedResources")
+        @com.aliyun.core.annotation.NameInMap("AllocatedResources")
         private AllocatedResources allocatedResources;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationOwnerId")
+        private String capacityReservationOwnerId;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EndTimeType")
+        @com.aliyun.core.annotation.NameInMap("EndTimeType")
         private String endTimeType;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("PrivatePoolOptionsId")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsMatchCriteria")
         private String privatePoolOptionsMatchCriteria;
 
-        @NameInMap("PrivatePoolOptionsName")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsName")
         private String privatePoolOptionsName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
         private String reservedInstanceId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SavingPlanId")
+        @com.aliyun.core.annotation.NameInMap("SavingPlanId")
         private String savingPlanId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StartTimeType")
+        @com.aliyun.core.annotation.NameInMap("StartTimeType")
         private String startTimeType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TimeSlot")
+        @com.aliyun.core.annotation.NameInMap("TimeSlot")
         private String timeSlot;
 
         private CapacityReservationItem(Builder builder) {
             this.allocatedResources = builder.allocatedResources;
+            this.capacityReservationOwnerId = builder.capacityReservationOwnerId;
             this.description = builder.description;
             this.endTime = builder.endTime;
             this.endTimeType = builder.endTimeType;
@@ -464,6 +719,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
          */
         public AllocatedResources getAllocatedResources() {
             return this.allocatedResources;
+        }
+
+        /**
+         * @return capacityReservationOwnerId
+         */
+        public String getCapacityReservationOwnerId() {
+            return this.capacityReservationOwnerId;
         }
 
         /**
@@ -587,6 +849,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private AllocatedResources allocatedResources; 
+            private String capacityReservationOwnerId; 
             private String description; 
             private String endTime; 
             private String endTimeType; 
@@ -606,7 +869,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             private String timeSlot; 
 
             /**
-             * Details of the allocated resources.
+             * <p>Details of the allocated resources.</p>
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -614,7 +877,21 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the capacity reservation.
+             * <p>The ID of the capacity reservation owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100************7</p>
+             */
+            public Builder capacityReservationOwnerId(String capacityReservationOwnerId) {
+                this.capacityReservationOwnerId = capacityReservationOwnerId;
+                return this;
+            }
+
+            /**
+             * <p>The description of the capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -622,7 +899,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the capacity reservation expires.
+             * <p>The time when the capacity reservation expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-19T03:02Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -630,11 +910,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The release mode of the capacity reservation. Valid values:
-             * <p>
+             * <p>The release mode of the capacity reservation. Valid values:</p>
+             * <ul>
+             * <li>Limited: The capacity reservation is automatically released at a specified time.</li>
+             * <li>Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.</li>
+             * </ul>
              * 
-             * *   Limited: The capacity reservation is automatically released at the specified time.
-             * *   Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.
+             * <strong>example:</strong>
+             * <p>Unlimited</p>
              */
             public Builder endTimeType(String endTimeType) {
                 this.endTimeType = endTimeType;
@@ -642,11 +925,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of instances in the capacity reservation. Valid values:
-             * <p>
+             * <p>The billing method of the instances created by using the capacity reservation. Valid values:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go.</li>
+             * <li>PrePaid: subscription.</li>
+             * </ul>
              * 
-             * *   PostPaid: pay-as-you-go.
-             * *   PrePaid: subscription.
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -654,11 +940,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the instances. Valid values:
-             * <p>
+             * <p>The operating system type of the instances created by using the capacity reservation. Valid values:</p>
+             * <ul>
+             * <li>windows</li>
+             * <li>linux</li>
+             * </ul>
              * 
-             * *   windows: Windows operating systems.
-             * *   linux: Linux operating systems.
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -666,7 +955,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the capacity reservation.
+             * <p>The ID of the capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-bp1gubrkqutenqdd****</p>
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -674,11 +966,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the private pool generated after the capacity reservation takes effect. Valid values:
-             * <p>
+             * <p>The type of the private pool generated after the capacity reservation takes effect. Valid values:</p>
+             * <ul>
+             * <li>Open: open private pool. If you use the capacity reservation to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the capacity reservation is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the instances.</li>
+             * <li>Target: targeted private pool. If you use the capacity reservation to create ECS instances, the targeted private pool that is associated with the capacity reservation is automatically matched. If no capacity is available in the private pool, the instances fail to be created.</li>
+             * </ul>
              * 
-             * *   Open: open private pool.
-             * *   Target: targeted private pool.
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
@@ -686,7 +981,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the capacity reservation.
+             * <p>The name of the capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crpTestName</p>
              */
             public Builder privatePoolOptionsName(String privatePoolOptionsName) {
                 this.privatePoolOptionsName = privatePoolOptionsName;
@@ -694,7 +992,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the capacity reservation.
+             * <p>The region ID of the capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -702,7 +1003,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the reserved instance used with the capacity reservation.
+             * <p>The ID of the reserved instance used with the capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ri-bpzhex2ulpzf53****</p>
              */
             public Builder reservedInstanceId(String reservedInstanceId) {
                 this.reservedInstanceId = reservedInstanceId;
@@ -710,7 +1014,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the capacity reservation belongs.
+             * <p>The ID of the resource group to which the capacity reservation belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -718,7 +1025,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the savings plan used with the capacity reservation.
+             * <p>The ID of the savings plan used with the capacity reservation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spn-c29b5e18pJMT****</p>
              */
             public Builder savingPlanId(String savingPlanId) {
                 this.savingPlanId = savingPlanId;
@@ -726,7 +1036,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the capacity reservation takes effect.
+             * <p>The time when the capacity reservation takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-19T02:01Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -734,11 +1047,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the capacity reservation takes effect. Valid values:
-             * <p>
+             * <p>The mode in which the capacity reservation takes effect. Valid values:</p>
+             * <ul>
+             * <li>Now: The capacity reservation takes effect immediately after it is created.</li>
+             * <li>Later: The capacity reservation takes effect at a specified time.</li>
+             * </ul>
              * 
-             * *   Now: The capacity reservation takes effect as soon as it is created.
-             * *   Later: The capacity reservation takes effect at the specified time.
+             * <strong>example:</strong>
+             * <p>Now</p>
              */
             public Builder startTimeType(String startTimeType) {
                 this.startTimeType = startTimeType;
@@ -746,14 +1062,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the capacity reservation. Valid values:
-             * <p>
+             * <p>The status of the capacity reservation. Valid values:</p>
+             * <ul>
+             * <li>Pending: The capacity reservation is being initialized.</li>
+             * <li>Preparing: The capacity reservation is being prepared.</li>
+             * <li>Prepared: The capacity reservation is to take effect.</li>
+             * <li>Active: The capacity reservation is in effect.</li>
+             * <li>Released: The capacity reservation has been released manually or automatically when it expired.</li>
+             * </ul>
              * 
-             * *   Pending: The capacity reservation is being initialized.
-             * *   Preparing: The capacity reservation is being prepared.
-             * *   Prepared: The capacity reservation is to take effect.
-             * *   Active: The capacity reservation is in effect.
-             * *   Released: The capacity reservation has been released manually or automatically when it expired.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -761,7 +1080,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the capacity reservation.
+             * <p>The tags that are added to the capacity reservation.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -769,7 +1088,12 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder timeSlot(String timeSlot) {
                 this.timeSlot = timeSlot;
@@ -783,9 +1107,15 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsResponseBody</p>
+     */
     public static class CapacityReservationSet extends TeaModel {
-        @NameInMap("CapacityReservationItem")
-        private java.util.List < CapacityReservationItem> capacityReservationItem;
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationItem")
+        private java.util.List<CapacityReservationItem> capacityReservationItem;
 
         private CapacityReservationSet(Builder builder) {
             this.capacityReservationItem = builder.capacityReservationItem;
@@ -802,17 +1132,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * @return capacityReservationItem
          */
-        public java.util.List < CapacityReservationItem> getCapacityReservationItem() {
+        public java.util.List<CapacityReservationItem> getCapacityReservationItem() {
             return this.capacityReservationItem;
         }
 
         public static final class Builder {
-            private java.util.List < CapacityReservationItem> capacityReservationItem; 
+            private java.util.List<CapacityReservationItem> capacityReservationItem; 
 
             /**
              * CapacityReservationItem.
              */
-            public Builder capacityReservationItem(java.util.List < CapacityReservationItem> capacityReservationItem) {
+            public Builder capacityReservationItem(java.util.List<CapacityReservationItem> capacityReservationItem) {
                 this.capacityReservationItem = capacityReservationItem;
                 return this;
             }

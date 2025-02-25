@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRoleAclOnObjectRequest} extends {@link RequestModel}
  *
  * <p>GetRoleAclOnObjectRequest</p>
  */
 public class GetRoleAclOnObjectRequest extends Request {
-    @Path
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Path
-    @NameInMap("roleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("roleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleName;
 
-    @Query
-    @NameInMap("objectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("objectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectName;
 
-    @Query
-    @NameInMap("objectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("objectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectType;
 
     private GetRoleAclOnObjectRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class GetRoleAclOnObjectRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -109,7 +118,11 @@ public class GetRoleAclOnObjectRequest extends Request {
         }
 
         /**
-         * The name of the role.
+         * <p>The name of the role.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>roleA</p>
          */
         public Builder roleName(String roleName) {
             this.putPathParameter("roleName", roleName);
@@ -118,7 +131,11 @@ public class GetRoleAclOnObjectRequest extends Request {
         }
 
         /**
-         * The name of the object.
+         * <p>The name of the object.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableA</p>
          */
         public Builder objectName(String objectName) {
             this.putQueryParameter("objectName", objectName);
@@ -127,7 +144,11 @@ public class GetRoleAclOnObjectRequest extends Request {
         }
 
         /**
-         * The type of the object.
+         * <p>The type of the object.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("objectType", objectType);

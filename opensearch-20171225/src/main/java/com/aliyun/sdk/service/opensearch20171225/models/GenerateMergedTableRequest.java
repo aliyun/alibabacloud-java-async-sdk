@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateMergedTableRequest</p>
  */
 public class GenerateMergedTableRequest extends Request {
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private Schema body;
 
-    @Query
-    @NameInMap("spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spec")
     private String spec;
 
     private GenerateMergedTableRequest(Builder builder) {
@@ -68,7 +67,7 @@ public class GenerateMergedTableRequest extends Request {
         } 
 
         /**
-         * body.
+         * The request body parameters.
          */
         public Builder body(Schema body) {
             this.putBodyParameter("body", body);
@@ -77,7 +76,12 @@ public class GenerateMergedTableRequest extends Request {
         }
 
         /**
-         * \-
+         * The specifications of the OpenSearch instance. This parameter is used to check whether the OpenSearch instance meets the special limits on an exclusive instance.
+         * <p>
+         * 
+         * Default value: opensearch.share.common.
+         * 
+         * For more information, see the description of the spec field in the Quota topic.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("spec", spec);

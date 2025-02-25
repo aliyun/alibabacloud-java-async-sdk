@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTemplateQuotaItemRequest</p>
  */
 public class DeleteTemplateQuotaItemRequest extends Request {
-    @Body
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
     private DeleteTemplateQuotaItemRequest(Builder builder) {
@@ -56,6 +55,9 @@ public class DeleteTemplateQuotaItemRequest extends Request {
 
         /**
          * The ID of the quota template.
+         * <p>
+         * 
+         * You can call the [ListQuotaApplicationTemplates](~~450403~~) operation to obtain the ID of a quota template.
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);

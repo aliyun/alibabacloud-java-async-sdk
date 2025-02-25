@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveEntriesFromAclRequest</p>
  */
 public class RemoveEntriesFromAclRequest extends Request {
-    @Query
-    @NameInMap("AclEntries")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AclEntries> aclEntries;
 
-    @Query
-    @NameInMap("AclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private RemoveEntriesFromAclRequest(Builder builder) {
@@ -113,7 +112,7 @@ public class RemoveEntriesFromAclRequest extends Request {
         } 
 
         /**
-         * The IP addresses or CIDR blocks that you want to delete from the ACL. You can delete up to 20 entries in each request.
+         * The entries (IP addresses or CIDR blocks) that you want to delete from the ACL. You can delete a maximum of 20 entries at a time.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.putQueryParameter("AclEntries", aclEntries);
@@ -136,7 +135,7 @@ public class RemoveEntriesFromAclRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -174,7 +173,7 @@ public class RemoveEntriesFromAclRequest extends Request {
     } 
 
     public static class AclEntries extends TeaModel {
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
         private AclEntries(Builder builder) {
@@ -200,10 +199,10 @@ public class RemoveEntriesFromAclRequest extends Request {
             private String entry; 
 
             /**
-             * The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to delete from the ACL. You can delete up to 20 entries in each request.
+             * The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to delete from the ACL. You can delete a maximum of 50 entries at a time.
              * <p>
              * 
-             * > This parameter is required.
+             * >  This parameter is required.
              */
             public Builder entry(String entry) {
                 this.entry = entry;

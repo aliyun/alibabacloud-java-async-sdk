@@ -1,91 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClientUserDefineRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyClientUserDefineRuleRequest</p>
  */
 public class ModifyClientUserDefineRuleRequest extends Request {
-    @Query
-    @NameInMap("ActionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer actionType;
 
-    @Query
-    @NameInMap("Cmdline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cmdline")
     private String cmdline;
 
-    @Query
-    @NameInMap("FilePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    private String domain;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilePath")
     private String filePath;
 
-    @Query
-    @NameInMap("IP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IP")
     private String ip;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("Md5List")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Md5List")
     private String md5List;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NewFilePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewFilePath")
     private String newFilePath;
 
-    @Query
-    @NameInMap("ParentCmdline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentCmdline")
     private String parentCmdline;
 
-    @Query
-    @NameInMap("ParentProcPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentProcPath")
     private String parentProcPath;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @Query
-    @NameInMap("PortStr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortStr")
     private String portStr;
 
-    @Query
-    @NameInMap("ProcPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcPath")
     private String procPath;
 
-    @Query
-    @NameInMap("RegistryContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistryContent")
     private String registryContent;
 
-    @Query
-    @NameInMap("RegistryKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistryKey")
     private String registryKey;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
     private ModifyClientUserDefineRuleRequest(Builder builder) {
         super(builder);
         this.actionType = builder.actionType;
         this.cmdline = builder.cmdline;
+        this.domain = builder.domain;
         this.filePath = builder.filePath;
         this.ip = builder.ip;
         this.id = builder.id;
@@ -128,6 +138,13 @@ public class ModifyClientUserDefineRuleRequest extends Request {
      */
     public String getCmdline() {
         return this.cmdline;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -238,6 +255,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyClientUserDefineRuleRequest, Builder> {
         private Integer actionType; 
         private String cmdline; 
+        private String domain; 
         private String filePath; 
         private String ip; 
         private Long id; 
@@ -262,6 +280,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
             super(request);
             this.actionType = request.actionType;
             this.cmdline = request.cmdline;
+            this.domain = request.domain;
             this.filePath = request.filePath;
             this.ip = request.ip;
             this.id = request.id;
@@ -280,11 +299,15 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * The action of the rule. Valid values:
-         * <p>
+         * <p>The action of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: allow</li>
+         * <li><strong>1</strong>: block</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: allow
-         * *   **1**: block
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -293,7 +316,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The command line.
+         * <p>The command line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sbin/s****</p>
          */
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
@@ -302,7 +328,22 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The file path.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/pam.d/su****</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -311,7 +352,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The IP address.
+         * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("IP", ip);
@@ -320,10 +364,14 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> operation to query the IDs of rules.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) operation to query the IDs of rules.
+         * <strong>example:</strong>
+         * <p>210****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -332,7 +380,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The hash values of processes.
+         * <p>The hash values of processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa5ee3ed4363c9d195a591a70281****,3e522d6f3bf5cf88bb77e9ff3d13****</p>
          */
         public Builder md5List(String md5List) {
             this.putQueryParameter("Md5List", md5List);
@@ -341,7 +392,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -350,7 +404,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The new file path after the file is renamed.
+         * <p>The new file path after the file is renamed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/pam****</p>
          */
         public Builder newFilePath(String newFilePath) {
             this.putQueryParameter("NewFilePath", newFilePath);
@@ -359,7 +416,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The parent command line.
+         * <p>The parent command line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sbin/s****</p>
          */
         public Builder parentCmdline(String parentCmdline) {
             this.putQueryParameter("ParentCmdline", parentCmdline);
@@ -368,7 +428,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The path to the parent process.
+         * <p>The path to the parent process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C:/Windows/System32/cmd****</p>
          */
         public Builder parentProcPath(String parentProcPath) {
             this.putQueryParameter("ParentProcPath", parentProcPath);
@@ -377,12 +440,15 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * <li><strong>all</strong>: all types</li>
+         * </ul>
          * 
-         * *   **windows**: Windows
-         * *   **linux**: Linux
-         * *   **all**: all types
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -391,7 +457,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The port number. This parameter is deprecated.
+         * <p>The port number. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -400,7 +469,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The port number. Valid values: 1 to 65535.
+         * <p>The port number. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder portStr(String portStr) {
             this.putQueryParameter("PortStr", portStr);
@@ -409,7 +481,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The path to the process.
+         * <p>The path to the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/1111/****</p>
          */
         public Builder procPath(String procPath) {
             this.putQueryParameter("ProcPath", procPath);
@@ -418,7 +493,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The registry value.
+         * <p>The registry value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SECOH-QAD****</p>
          */
         public Builder registryContent(String registryContent) {
             this.putQueryParameter("RegistryContent", registryContent);
@@ -427,7 +505,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The registry key.
+         * <p>The registry key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HKEY_DYN_****</p>
          */
         public Builder registryKey(String registryKey) {
             this.putQueryParameter("RegistryKey", registryKey);
@@ -436,16 +517,19 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         }
 
         /**
-         * The type of the rule. Valid values:
-         * <p>
+         * <p>The type of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Process hash</li>
+         * <li><strong>2</strong>: Command line</li>
+         * <li><strong>3</strong>: Process Network</li>
+         * <li><strong>4</strong>: File Read and Write</li>
+         * <li><strong>5</strong>: Operation on Registry</li>
+         * <li><strong>6</strong>: Dynamic-link Library Loading</li>
+         * <li><strong>7</strong>: File Renaming</li>
+         * </ul>
          * 
-         * *   **1**: Process hash
-         * *   **2**: Command line
-         * *   **3**: Process Network
-         * *   **4**: File Read and Write
-         * *   **5**: Operation on Registry
-         * *   **6**: Dynamic-link Library Loading
-         * *   **7**: File Renaming
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

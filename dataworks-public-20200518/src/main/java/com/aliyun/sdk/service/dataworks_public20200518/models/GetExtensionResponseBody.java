@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExtensionResponseBody} extends {@link TeaModel}
  *
  * <p>GetExtensionResponseBody</p>
  */
 public class GetExtensionResponseBody extends TeaModel {
-    @NameInMap("Extension")
+    @com.aliyun.core.annotation.NameInMap("Extension")
     private Extension extension;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetExtensionResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetExtensionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the extension.
+         * <p>The details of the extension.</p>
          */
         public Builder extension(Extension extension) {
             this.extension = extension;
@@ -58,7 +63,10 @@ public class GetExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetExtensionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExtensionResponseBody</p>
+     */
     public static class BindEventList extends TeaModel {
-        @NameInMap("EventCode")
+        @com.aliyun.core.annotation.NameInMap("EventCode")
         private String eventCode;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
         private BindEventList(Builder builder) {
@@ -110,7 +124,10 @@ public class GetExtensionResponseBody extends TeaModel {
             private String eventName; 
 
             /**
-             * The code of the extension point event.
+             * <p>The code of the extension point event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commit-file</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -118,7 +135,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension point event.
+             * <p>The name of the extension point event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File submission pre-event</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -132,11 +152,17 @@ public class GetExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExtensionResponseBody</p>
+     */
     public static class EventCategoryList extends TeaModel {
-        @NameInMap("CategoryCode")
+        @com.aliyun.core.annotation.NameInMap("CategoryCode")
         private String categoryCode;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
         private EventCategoryList(Builder builder) {
@@ -171,7 +197,10 @@ public class GetExtensionResponseBody extends TeaModel {
             private String categoryName; 
 
             /**
-             * The code of the event type.
+             * <p>The code of the event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file-change</p>
              */
             public Builder categoryCode(String categoryCode) {
                 this.categoryCode = categoryCode;
@@ -179,7 +208,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event type.
+             * <p>The name of the event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File change event</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -193,38 +225,44 @@ public class GetExtensionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetExtensionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExtensionResponseBody</p>
+     */
     public static class Extension extends TeaModel {
-        @NameInMap("BindEventList")
-        private java.util.List < BindEventList> bindEventList;
+        @com.aliyun.core.annotation.NameInMap("BindEventList")
+        private java.util.List<BindEventList> bindEventList;
 
-        @NameInMap("DetailUrl")
+        @com.aliyun.core.annotation.NameInMap("DetailUrl")
         private String detailUrl;
 
-        @NameInMap("EventCategoryList")
-        private java.util.List < EventCategoryList> eventCategoryList;
+        @com.aliyun.core.annotation.NameInMap("EventCategoryList")
+        private java.util.List<EventCategoryList> eventCategoryList;
 
-        @NameInMap("ExtensionCode")
+        @com.aliyun.core.annotation.NameInMap("ExtensionCode")
         private String extensionCode;
 
-        @NameInMap("ExtensionDesc")
+        @com.aliyun.core.annotation.NameInMap("ExtensionDesc")
         private String extensionDesc;
 
-        @NameInMap("ExtensionName")
+        @com.aliyun.core.annotation.NameInMap("ExtensionName")
         private String extensionName;
 
-        @NameInMap("HelpDocUrl")
+        @com.aliyun.core.annotation.NameInMap("HelpDocUrl")
         private String helpDocUrl;
 
-        @NameInMap("OptionSetting")
+        @com.aliyun.core.annotation.NameInMap("OptionSetting")
         private String optionSetting;
 
-        @NameInMap("ParameterSetting")
+        @com.aliyun.core.annotation.NameInMap("ParameterSetting")
         private String parameterSetting;
 
-        @NameInMap("ProjectTesting")
+        @com.aliyun.core.annotation.NameInMap("ProjectTesting")
         private Long projectTesting;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Extension(Builder builder) {
@@ -252,7 +290,7 @@ public class GetExtensionResponseBody extends TeaModel {
         /**
          * @return bindEventList
          */
-        public java.util.List < BindEventList> getBindEventList() {
+        public java.util.List<BindEventList> getBindEventList() {
             return this.bindEventList;
         }
 
@@ -266,7 +304,7 @@ public class GetExtensionResponseBody extends TeaModel {
         /**
          * @return eventCategoryList
          */
-        public java.util.List < EventCategoryList> getEventCategoryList() {
+        public java.util.List<EventCategoryList> getEventCategoryList() {
             return this.eventCategoryList;
         }
 
@@ -327,9 +365,9 @@ public class GetExtensionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BindEventList> bindEventList; 
+            private java.util.List<BindEventList> bindEventList; 
             private String detailUrl; 
-            private java.util.List < EventCategoryList> eventCategoryList; 
+            private java.util.List<EventCategoryList> eventCategoryList; 
             private String extensionCode; 
             private String extensionDesc; 
             private String extensionName; 
@@ -340,15 +378,18 @@ public class GetExtensionResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The extension point events.
+             * <p>The list of extension points.</p>
              */
-            public Builder bindEventList(java.util.List < BindEventList> bindEventList) {
+            public Builder bindEventList(java.util.List<BindEventList> bindEventList) {
                 this.bindEventList = bindEventList;
                 return this;
             }
 
             /**
-             * The URL of the help document about the extension. You can visit the URL for the details of the extension.
+             * <p>The URL of the extension details page, on which users can view the details of the process blocked by the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
              */
             public Builder detailUrl(String detailUrl) {
                 this.detailUrl = detailUrl;
@@ -356,15 +397,18 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the events.
+             * <p>The list of event types.</p>
              */
-            public Builder eventCategoryList(java.util.List < EventCategoryList> eventCategoryList) {
+            public Builder eventCategoryList(java.util.List<EventCategoryList> eventCategoryList) {
                 this.eventCategoryList = eventCategoryList;
                 return this;
             }
 
             /**
-             * The unique code of the extension.
+             * <p>The unique code of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ce4*********086da5</p>
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -372,7 +416,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the extension.
+             * <p>The description of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a description</p>
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -380,7 +427,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension.
+             * <p>The name of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Extension name</p>
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -388,7 +438,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the help document about the extension.
+             * <p>The URL of the help documentation of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
              */
             public Builder helpDocUrl(String helpDocUrl) {
                 this.helpDocUrl = helpDocUrl;
@@ -396,7 +449,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The option settings of the extension.
+             * <p>The options defined for the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Option configuration</p>
              */
             public Builder optionSetting(String optionSetting) {
                 this.optionSetting = optionSetting;
@@ -404,7 +460,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter settings of the extension. For more information, visit https://www.alibabacloud.com/help/en/dataworks/latest/set-extension-parameters.
+             * <p>The parameter settings of the extension. For more information, see <a href="https://help.aliyun.com/document_detail/405354.html">Configure extension parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>extension.project.disabled=projectId1,projectId2,projectId3</p>
              */
             public Builder parameterSetting(String parameterSetting) {
                 this.parameterSetting = parameterSetting;
@@ -412,7 +471,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace for testing. If the extension is in the testing state, the extension can be used only in the workspace for testing.
+             * <p>The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13552</p>
              */
             public Builder projectTesting(Long projectTesting) {
                 this.projectTesting = projectTesting;
@@ -420,7 +482,10 @@ public class GetExtensionResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the extension. 0: testing. 1: publishing. 3: disabled. 4: approving. 5: approved. 6: approval failed.
+             * <p>The state of the extension. 0: Testing, 1: Publishing, 3: Disabled, 4: Processing, 5: Approved, 6: Approve Failed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

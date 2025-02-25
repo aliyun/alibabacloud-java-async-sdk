@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HTTPTriggerConfig} extends {@link TeaModel}
  *
  * <p>HTTPTriggerConfig</p>
  */
 public class HTTPTriggerConfig extends TeaModel {
-    @NameInMap("aclConfig")
+    @com.aliyun.core.annotation.NameInMap("aclConfig")
     private AclConfig aclConfig;
 
-    @NameInMap("authConfig")
+    @com.aliyun.core.annotation.NameInMap("authConfig")
     private Object authConfig;
 
-    @NameInMap("authType")
+    @com.aliyun.core.annotation.NameInMap("authType")
     private String authType;
 
-    @NameInMap("disableURLInternet")
+    @com.aliyun.core.annotation.NameInMap("disableURLInternet")
     private Boolean disableURLInternet;
 
-    @NameInMap("safeMode")
+    @com.aliyun.core.annotation.NameInMap("safeMode")
     private Boolean safeMode;
 
     private HTTPTriggerConfig(Builder builder) {

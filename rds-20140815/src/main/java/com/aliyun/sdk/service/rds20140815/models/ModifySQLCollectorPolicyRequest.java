@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySQLCollectorPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifySQLCollectorPolicyRequest</p>
  */
 public class ModifySQLCollectorPolicyRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SQLCollectorStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SQLCollectorStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SQLCollectorStatus;
 
     private ModifySQLCollectorPolicyRequest(Builder builder) {
@@ -140,7 +145,11 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -167,7 +176,10 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call theDescribeDBInstanceAttribute operation to query the most recent region list.
+         * <p>The resource group ID. You can call theDescribeDBInstanceAttribute operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx**********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -194,11 +206,15 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SQL Explorer (SQL Audit) feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the SQL Explorer (SQL Audit) feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Enable**
-         * *   **Disabled**
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SQLCollectorStatus(String SQLCollectorStatus) {
             this.putQueryParameter("SQLCollectorStatus", SQLCollectorStatus);

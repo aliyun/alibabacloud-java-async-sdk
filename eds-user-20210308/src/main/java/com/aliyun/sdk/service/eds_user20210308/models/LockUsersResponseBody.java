@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LockUsersResponseBody} extends {@link TeaModel}
  *
  * <p>LockUsersResponseBody</p>
  */
 public class LockUsersResponseBody extends TeaModel {
-    @NameInMap("LockUsersResult")
+    @com.aliyun.core.annotation.NameInMap("LockUsersResult")
     private LockUsersResult lockUsersResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private LockUsersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class LockUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LockUsersResult.
+         * <p>The result of the locking the convenience user.</p>
          */
         public Builder lockUsersResult(LockUsersResult lockUsersResult) {
             this.lockUsersResult = lockUsersResult;
@@ -58,7 +63,10 @@ public class LockUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class LockUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link LockUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>LockUsersResponseBody</p>
+     */
     public static class FailedUsers extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
         private FailedUsers(Builder builder) {
@@ -122,7 +136,10 @@ public class LockUsersResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * EndUserId.
+             * <p>The ID of the convenience user that failed to be locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -130,7 +147,10 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidUsername</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -138,7 +158,10 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test123 is an invalid username.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -152,12 +175,18 @@ public class LockUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link LockUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>LockUsersResponseBody</p>
+     */
     public static class LockUsersResult extends TeaModel {
-        @NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        @com.aliyun.core.annotation.NameInMap("FailedUsers")
+        private java.util.List<FailedUsers> failedUsers;
 
-        @NameInMap("LockedUsers")
-        private java.util.List < String > lockedUsers;
+        @com.aliyun.core.annotation.NameInMap("LockedUsers")
+        private java.util.List<String> lockedUsers;
 
         private LockUsersResult(Builder builder) {
             this.failedUsers = builder.failedUsers;
@@ -175,33 +204,33 @@ public class LockUsersResponseBody extends TeaModel {
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         /**
          * @return lockedUsers
          */
-        public java.util.List < String > getLockedUsers() {
+        public java.util.List<String> getLockedUsers() {
             return this.lockedUsers;
         }
 
         public static final class Builder {
-            private java.util.List < FailedUsers> failedUsers; 
-            private java.util.List < String > lockedUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
+            private java.util.List<String> lockedUsers; 
 
             /**
-             * FailedUsers.
+             * <p>The convenience users that failed to be locked.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }
 
             /**
-             * LockedUsers.
+             * <p>The convenience users that were locked.</p>
              */
-            public Builder lockedUsers(java.util.List < String > lockedUsers) {
+            public Builder lockedUsers(java.util.List<String> lockedUsers) {
                 this.lockedUsers = lockedUsers;
                 return this;
             }

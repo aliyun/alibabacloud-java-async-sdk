@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShiftPersonnelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListShiftPersonnelsResponseBody</p>
  */
 public class ListShiftPersonnelsResponseBody extends TeaModel {
-    @NameInMap("Paging")
+    @com.aliyun.core.annotation.NameInMap("Paging")
     private Paging paging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListShiftPersonnelsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The page number of the returned page. Minimum value: 1. Maximum value: 100. Default value: 1.
+         * <p>The pagination data.</p>
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -58,7 +63,10 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination data.
+         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListShiftPersonnelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListShiftPersonnelsResponseBody</p>
+     */
     public static class ShiftPersons extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ShiftPersonName")
+        @com.aliyun.core.annotation.NameInMap("ShiftPersonName")
         private String shiftPersonName;
 
-        @NameInMap("ShiftPersonUID")
+        @com.aliyun.core.annotation.NameInMap("ShiftPersonUID")
         private String shiftPersonUID;
 
         private ShiftPersons(Builder builder) {
@@ -134,7 +148,10 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             private String shiftPersonUID; 
 
             /**
-             * The time when the on-duty engineer ends the shift.
+             * <p>The time when the on-duty engineer starts the shift.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593950832000</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -142,7 +159,10 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the on-duty engineer ends the shift.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593950832000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -150,7 +170,10 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the on-duty engineer starts the shift.
+             * <p>The name of the on-duty engineer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder shiftPersonName(String shiftPersonName) {
                 this.shiftPersonName = shiftPersonName;
@@ -158,7 +181,10 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the on-duty engineer.
+             * <p>The UID of the on-duty engineer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3726346****</p>
              */
             public Builder shiftPersonUID(String shiftPersonUID) {
                 this.shiftPersonUID = shiftPersonUID;
@@ -172,17 +198,23 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListShiftPersonnelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListShiftPersonnelsResponseBody</p>
+     */
     public static class Paging extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ShiftPersons")
-        private java.util.List < ShiftPersons> shiftPersons;
+        @com.aliyun.core.annotation.NameInMap("ShiftPersons")
+        private java.util.List<ShiftPersons> shiftPersons;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Paging(Builder builder) {
@@ -217,7 +249,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         /**
          * @return shiftPersons
          */
-        public java.util.List < ShiftPersons> getShiftPersons() {
+        public java.util.List<ShiftPersons> getShiftPersons() {
             return this.shiftPersons;
         }
 
@@ -231,11 +263,14 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < ShiftPersons> shiftPersons; 
+            private java.util.List<ShiftPersons> shiftPersons; 
             private Integer totalCount; 
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * <p>The page number. Valid values: 1 to 100. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -243,7 +278,10 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -251,15 +289,18 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the on-duty engineer.
+             * <p>A list of on-duty engineers in a shift schedule.</p>
              */
-            public Builder shiftPersons(java.util.List < ShiftPersons> shiftPersons) {
+            public Builder shiftPersons(java.util.List<ShiftPersons> shiftPersons) {
                 this.shiftPersons = shiftPersons;
                 return this;
             }
 
             /**
-             * The on-duty engineers in the shift schedule.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,59 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
-    @Validation(maximum = 730, minimum = 7)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 730, minimum = 7)
     private Integer logBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyBackupPolicyRequest(Builder builder) {
@@ -184,10 +183,13 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The number of days for which to retain full backup files. Valid values: 7 to 730.
-         * <p>
+         * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, the default value 7 is used.</p>
+         * </blockquote>
          * 
-         * >  If you leave this parameter empty, the default value 7 is used.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -196,7 +198,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp1xxxxxxxx47</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -205,14 +211,19 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable real-time log backup. Valid values:
-         * <p>
+         * <p>Specifies whether to enable real-time log backup. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enable</strong></p>
+         * </li>
+         * <li><p><strong>Disable</strong></p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If you leave this parameter empty, the default value Enable is used.</p>
+         * </blockquote>
          * 
-         * *   **Enable**
-         * 
-         * *   **Disable**
-         * 
-         * > If you leave this parameter empty, the default value Enable is used.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -221,10 +232,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The number of days for which to retain log backup files. Valid values: 7 to 730.
-         * <p>
+         * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, the default value 7 is used.</p>
+         * </blockquote>
          * 
-         * >  If you leave this parameter empty, the default value 7 is used.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -251,18 +265,22 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The days of the week on which to perform full backup. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The days of the week on which to perform full backup. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> To ensure data security, we recommend that you specify at least two values.</p>
+         * </blockquote>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
-         * 
-         * >  To ensure data security, we recommend that you specify at least two values.
+         * <strong>example:</strong>
+         * <p>Monday,Wednesday,Friday,Sunday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -271,10 +289,14 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The start time of the full backup within a time range. Specify the time range in the HH:mmZ-HH:mmZ format. The time must be in UTC.
-         * <p>
+         * <p>The start time of the full backup within a time range. Specify the time range in the HH:mmZ-HH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The time range is 1 hour.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The time range is 1 hour.
+         * <strong>example:</strong>
+         * <p>00:00Z-01:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

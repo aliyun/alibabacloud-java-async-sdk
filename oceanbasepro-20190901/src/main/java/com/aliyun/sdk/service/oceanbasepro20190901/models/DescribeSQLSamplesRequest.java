@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLSamplesRequest</p>
  */
 public class DescribeSQLSamplesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("SqlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReturnSqlText")
+    private Boolean returnSqlText;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sqlId;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
     private DescribeSQLSamplesRequest(Builder builder) {
@@ -51,6 +53,7 @@ public class DescribeSQLSamplesRequest extends Request {
         this.dbName = builder.dbName;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.returnSqlText = builder.returnSqlText;
         this.sqlId = builder.sqlId;
         this.startTime = builder.startTime;
         this.tenantId = builder.tenantId;
@@ -98,6 +101,13 @@ public class DescribeSQLSamplesRequest extends Request {
     }
 
     /**
+     * @return returnSqlText
+     */
+    public Boolean getReturnSqlText() {
+        return this.returnSqlText;
+    }
+
+    /**
      * @return sqlId
      */
     public String getSqlId() {
@@ -123,6 +133,7 @@ public class DescribeSQLSamplesRequest extends Request {
         private String dbName; 
         private String endTime; 
         private String instanceId; 
+        private Boolean returnSqlText; 
         private String sqlId; 
         private String startTime; 
         private String tenantId; 
@@ -137,6 +148,7 @@ public class DescribeSQLSamplesRequest extends Request {
             this.dbName = request.dbName;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.returnSqlText = request.returnSqlText;
             this.sqlId = request.sqlId;
             this.startTime = request.startTime;
             this.tenantId = request.tenantId;
@@ -177,6 +189,15 @@ public class DescribeSQLSamplesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ReturnSqlText.
+         */
+        public Builder returnSqlText(Boolean returnSqlText) {
+            this.putBodyParameter("ReturnSqlText", returnSqlText);
+            this.returnSqlText = returnSqlText;
             return this;
         }
 

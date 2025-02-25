@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SkuQueryParam} extends {@link TeaModel}
  *
  * <p>SkuQueryParam</p>
  */
 public class SkuQueryParam extends TeaModel {
-    @NameInMap("productId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("productId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @NameInMap("skuId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("skuId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skuId;
 
     private SkuQueryParam(Builder builder) {
@@ -52,7 +57,10 @@ public class SkuQueryParam extends TeaModel {
         private String skuId; 
 
         /**
-         * productId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822080</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -60,7 +68,10 @@ public class SkuQueryParam extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>660460842235822081</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;

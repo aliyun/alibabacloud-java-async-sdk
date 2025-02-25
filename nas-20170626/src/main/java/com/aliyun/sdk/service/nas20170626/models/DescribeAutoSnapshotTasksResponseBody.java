@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoSnapshotTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoSnapshotTasksResponseBody</p>
  */
 public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
-    @NameInMap("AutoSnapshotTasks")
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotTasks")
     private AutoSnapshotTasks autoSnapshotTasks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoSnapshotTasksResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AutoSnapshotTasks.
+         * <p>The queried automatic snapshot tasks.</p>
          */
         public Builder autoSnapshotTasks(AutoSnapshotTasks autoSnapshotTasks) {
             this.autoSnapshotTasks = autoSnapshotTasks;
@@ -94,7 +99,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of automatic snapshot tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoSnapshotTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotTasksResponseBody</p>
+     */
     public static class AutoSnapshotTask extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("SourceFileSystemId")
+        @com.aliyun.core.annotation.NameInMap("SourceFileSystemId")
         private String sourceFileSystemId;
 
         private AutoSnapshotTask(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
             private String sourceFileSystemId; 
 
             /**
-             * AutoSnapshotPolicyId.
+             * <p>The ID of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-extreme-233e6****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -178,7 +204,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceFileSystemId.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>extreme-233e6****</p>
              */
             public Builder sourceFileSystemId(String sourceFileSystemId) {
                 this.sourceFileSystemId = sourceFileSystemId;
@@ -192,9 +221,15 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotTasksResponseBody</p>
+     */
     public static class AutoSnapshotTasks extends TeaModel {
-        @NameInMap("AutoSnapshotTask")
-        private java.util.List < AutoSnapshotTask> autoSnapshotTask;
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotTask")
+        private java.util.List<AutoSnapshotTask> autoSnapshotTask;
 
         private AutoSnapshotTasks(Builder builder) {
             this.autoSnapshotTask = builder.autoSnapshotTask;
@@ -211,17 +246,17 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         /**
          * @return autoSnapshotTask
          */
-        public java.util.List < AutoSnapshotTask> getAutoSnapshotTask() {
+        public java.util.List<AutoSnapshotTask> getAutoSnapshotTask() {
             return this.autoSnapshotTask;
         }
 
         public static final class Builder {
-            private java.util.List < AutoSnapshotTask> autoSnapshotTask; 
+            private java.util.List<AutoSnapshotTask> autoSnapshotTask; 
 
             /**
              * AutoSnapshotTask.
              */
-            public Builder autoSnapshotTask(java.util.List < AutoSnapshotTask> autoSnapshotTask) {
+            public Builder autoSnapshotTask(java.util.List<AutoSnapshotTask> autoSnapshotTask) {
                 this.autoSnapshotTask = autoSnapshotTask;
                 return this;
             }

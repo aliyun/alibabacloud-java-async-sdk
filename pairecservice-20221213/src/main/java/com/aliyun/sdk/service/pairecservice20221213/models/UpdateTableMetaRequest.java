@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableMetaRequest</p>
  */
 public class UpdateTableMetaRequest extends Request {
-    @Path
-    @NameInMap("TableMetaId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TableMetaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableMetaId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Fields> fields;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Module")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String module;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
     private UpdateTableMetaRequest(Builder builder) {
@@ -231,20 +237,33 @@ public class UpdateTableMetaRequest extends Request {
     } 
 
     public static class Fields extends TeaModel {
-        @NameInMap("IsDimensionField")
+        @com.aliyun.core.annotation.NameInMap("DataType")
+        private String dataType;
+
+        @com.aliyun.core.annotation.NameInMap("IsDimensionField")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean isDimensionField;
 
-        @NameInMap("Meaning")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionField")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String isPartitionField;
+
+        @com.aliyun.core.annotation.NameInMap("Meaning")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String meaning;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Fields(Builder builder) {
+            this.dataType = builder.dataType;
             this.isDimensionField = builder.isDimensionField;
+            this.isPartitionField = builder.isPartitionField;
             this.meaning = builder.meaning;
             this.name = builder.name;
             this.type = builder.type;
@@ -259,10 +278,24 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * @return dataType
+         */
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        /**
          * @return isDimensionField
          */
         public Boolean getIsDimensionField() {
             return this.isDimensionField;
+        }
+
+        /**
+         * @return isPartitionField
+         */
+        public String getIsPartitionField() {
+            return this.isPartitionField;
         }
 
         /**
@@ -287,16 +320,34 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         public static final class Builder {
+            private String dataType; 
             private Boolean isDimensionField; 
+            private String isPartitionField; 
             private String meaning; 
             private String name; 
             private String type; 
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
 
             /**
              * IsDimensionField.
              */
             public Builder isDimensionField(Boolean isDimensionField) {
                 this.isDimensionField = isDimensionField;
+                return this;
+            }
+
+            /**
+             * IsPartitionField.
+             */
+            public Builder isPartitionField(String isPartitionField) {
+                this.isPartitionField = isPartitionField;
                 return this;
             }
 

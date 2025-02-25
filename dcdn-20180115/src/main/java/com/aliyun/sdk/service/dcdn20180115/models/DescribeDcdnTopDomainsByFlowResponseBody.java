@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnTopDomainsByFlowResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnTopDomainsByFlowResponseBody</p>
  */
 public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
-    @NameInMap("DomainCount")
+    @com.aliyun.core.annotation.NameInMap("DomainCount")
     private Long domainCount;
 
-    @NameInMap("DomainOnlineCount")
+    @com.aliyun.core.annotation.NameInMap("DomainOnlineCount")
     private Long domainOnlineCount;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TopDomains")
+    @com.aliyun.core.annotation.NameInMap("TopDomains")
     private TopDomains topDomains;
 
     private DescribeDcdnTopDomainsByFlowResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         private TopDomains topDomains; 
 
         /**
-         * The total number of accelerated domains under your account.
+         * <p>The total number of accelerated domains under your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder domainCount(Long domainCount) {
             this.domainCount = domainCount;
@@ -106,7 +109,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of accelerated domains that are in the **Enabled** state under your account.
+         * <p>The total number of accelerated domains that are in the <strong>Enabled</strong> state under your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder domainOnlineCount(Long domainOnlineCount) {
             this.domainOnlineCount = domainOnlineCount;
@@ -114,7 +120,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the reporting period.
+         * <p>The end of the reporting period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-03-14T07:34:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E09C5D7-E1CF-4CAA-A45E-8727F4C8FD70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the reporting period.
+         * <p>The beginning of the reporting period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-03-14T06:34:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +153,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The top N domain names ranked by network traffic.
+         * <p>The top N domain names ranked by network traffic.</p>
          */
         public Builder topDomains(TopDomains topDomains) {
             this.topDomains = topDomains;
@@ -151,26 +166,32 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomain extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("MaxBps")
+        @com.aliyun.core.annotation.NameInMap("MaxBps")
         private Long maxBps;
 
-        @NameInMap("MaxBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxBpsTime")
         private String maxBpsTime;
 
-        @NameInMap("Rank")
+        @com.aliyun.core.annotation.NameInMap("Rank")
         private Long rank;
 
-        @NameInMap("TotalAccess")
+        @com.aliyun.core.annotation.NameInMap("TotalAccess")
         private Long totalAccess;
 
-        @NameInMap("TotalTraffic")
+        @com.aliyun.core.annotation.NameInMap("TotalTraffic")
         private String totalTraffic;
 
-        @NameInMap("TrafficPercent")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercent")
         private String trafficPercent;
 
         private TopDomain(Builder builder) {
@@ -250,7 +271,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             private String trafficPercent; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -258,7 +282,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The peak bandwidth value.
+             * <p>The peak bandwidth value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22139626</p>
              */
             public Builder maxBps(Long maxBps) {
                 this.maxBps = maxBps;
@@ -266,7 +293,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-01T08:10:00Z</p>
              */
             public Builder maxBpsTime(String maxBpsTime) {
                 this.maxBpsTime = maxBpsTime;
@@ -274,7 +304,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ranking of the accelerated domain name.
+             * <p>The ranking of the accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rank(Long rank) {
                 this.rank = rank;
@@ -282,7 +315,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The number of visits.
+             * <p>The number of visits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalAccess(Long totalAccess) {
                 this.totalAccess = totalAccess;
@@ -290,7 +326,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of network traffic.
+             * <p>The total amount of network traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder totalTraffic(String totalTraffic) {
                 this.totalTraffic = totalTraffic;
@@ -298,7 +337,10 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic consumed to access the URL.
+             * <p>The proportion of network traffic consumed to access the URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21.686305274906182</p>
              */
             public Builder trafficPercent(String trafficPercent) {
                 this.trafficPercent = trafficPercent;
@@ -312,8 +354,14 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomains extends TeaModel {
-        @NameInMap("TopDomain")
+        @com.aliyun.core.annotation.NameInMap("TopDomain")
         private java.util.List < TopDomain> topDomain;
 
         private TopDomains(Builder builder) {

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OrderPageQuery} extends {@link TeaModel}
  *
  * <p>OrderPageQuery</p>
  */
 public class OrderPageQuery extends TeaModel {
-    @NameInMap("orderIdList")
-    private java.util.List < String > orderIdList;
+    @com.aliyun.core.annotation.NameInMap("orderIdList")
+    private java.util.List<String> orderIdList;
 
-    @NameInMap("pageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @NameInMap("purchaseOrderId")
+    @com.aliyun.core.annotation.NameInMap("purchaseOrderId")
     private String purchaseOrderId;
 
     private OrderPageQuery(Builder builder) {
@@ -44,7 +49,7 @@ public class OrderPageQuery extends TeaModel {
     /**
      * @return orderIdList
      */
-    public java.util.List < String > getOrderIdList() {
+    public java.util.List<String> getOrderIdList() {
         return this.orderIdList;
     }
 
@@ -70,7 +75,7 @@ public class OrderPageQuery extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > orderIdList; 
+        private java.util.List<String> orderIdList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String purchaseOrderId; 
@@ -78,13 +83,16 @@ public class OrderPageQuery extends TeaModel {
         /**
          * orderIdList.
          */
-        public Builder orderIdList(java.util.List < String > orderIdList) {
+        public Builder orderIdList(java.util.List<String> orderIdList) {
             this.orderIdList = orderIdList;
             return this;
         }
 
         /**
-         * pageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -92,7 +100,10 @@ public class OrderPageQuery extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceAttributeRequest</p>
  */
 public class ModifyDBInstanceAttributeRequest extends Request {
-    @Query
-    @NameInMap("AttributeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttributeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String attributeType;
 
-    @Query
-    @NameInMap("AttributeValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttributeValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String attributeValue;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyDBInstanceAttributeRequest(Builder builder) {
@@ -114,7 +119,15 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * AttributeType.
+         * <p>The configuration that you want to modify.</p>
+         * <ul>
+         * <li>MaintainTime: the O&amp;M time</li>
+         * <li>DBInstanceDescription: the cluster name</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBInstanceDescription</p>
          */
         public Builder attributeType(String attributeType) {
             this.putQueryParameter("AttributeType", attributeType);
@@ -123,7 +136,10 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * AttributeValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder attributeValue(String attributeValue) {
             this.putQueryParameter("AttributeValue", attributeValue);
@@ -132,7 +148,10 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-xxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -141,7 +160,10 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Product.
+         * <p>The code of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -150,7 +172,10 @@ public class ModifyDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

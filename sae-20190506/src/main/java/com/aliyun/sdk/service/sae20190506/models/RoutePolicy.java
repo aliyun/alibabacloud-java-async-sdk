@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RoutePolicy} extends {@link TeaModel}
  *
  * <p>RoutePolicy</p>
  */
 public class RoutePolicy extends TeaModel {
-    @NameInMap("condition")
+    @com.aliyun.core.annotation.NameInMap("condition")
     private String condition;
 
-    @NameInMap("policyItems")
-    private java.util.List < PolicyItem > policyItems;
+    @com.aliyun.core.annotation.NameInMap("policyItems")
+    private java.util.List<PolicyItem> policyItems;
 
     private RoutePolicy(Builder builder) {
         this.condition = builder.condition;
@@ -41,13 +46,13 @@ public class RoutePolicy extends TeaModel {
     /**
      * @return policyItems
      */
-    public java.util.List < PolicyItem > getPolicyItems() {
+    public java.util.List<PolicyItem> getPolicyItems() {
         return this.policyItems;
     }
 
     public static final class Builder {
         private String condition; 
-        private java.util.List < PolicyItem > policyItems; 
+        private java.util.List<PolicyItem> policyItems; 
 
         /**
          * condition.
@@ -60,7 +65,7 @@ public class RoutePolicy extends TeaModel {
         /**
          * policyItems.
          */
-        public Builder policyItems(java.util.List < PolicyItem > policyItems) {
+        public Builder policyItems(java.util.List<PolicyItem> policyItems) {
             this.policyItems = policyItems;
             return this;
         }

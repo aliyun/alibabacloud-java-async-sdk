@@ -63,14 +63,14 @@ public class RemoveInstanceAccountRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveInstanceAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(RemoveInstanceAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * AccountName.
+         * The name of the member account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -79,7 +79,7 @@ public class RemoveInstanceAccountRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

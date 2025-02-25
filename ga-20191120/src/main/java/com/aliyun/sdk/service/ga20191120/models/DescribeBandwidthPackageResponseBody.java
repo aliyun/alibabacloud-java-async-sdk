@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBandwidthPackageResponseBody</p>
  */
 public class DescribeBandwidthPackageResponseBody extends TeaModel {
-    @NameInMap("Accelerators")
+    @com.aliyun.core.annotation.NameInMap("Accelerators")
     private java.util.List < String > accelerators;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
     private String bandwidthPackageId;
 
-    @NameInMap("BandwidthType")
+    @com.aliyun.core.annotation.NameInMap("BandwidthType")
     private String bandwidthType;
 
-    @NameInMap("BillingType")
+    @com.aliyun.core.annotation.NameInMap("BillingType")
     private String billingType;
 
-    @NameInMap("CbnGeographicRegionIdA")
+    @com.aliyun.core.annotation.NameInMap("CbnGeographicRegionIdA")
     private String cbnGeographicRegionIdA;
 
-    @NameInMap("CbnGeographicRegionIdB")
+    @com.aliyun.core.annotation.NameInMap("CbnGeographicRegionIdB")
     private String cbnGeographicRegionIdB;
 
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Ratio")
+    @com.aliyun.core.annotation.NameInMap("Ratio")
     private Integer ratio;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeBandwidthPackageResponseBody(Builder builder) {
@@ -325,7 +324,11 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
+         * The billing method of the bandwidth plan.
+         * <p>
+         * 
+         * *   **PREPAY**: subscription. This is the default value.
+         * *   **POSTPAY**: pay-as-you-go.
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -443,10 +446,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -481,7 +484,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key
+             * The key of tag N that is added to the bandwidth plan.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -489,7 +492,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N that is added to the bandwidth plan.
              */
             public Builder value(String value) {
                 this.value = value;

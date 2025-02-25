@@ -1,65 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateZoneRecordRequest} extends {@link RequestModel}
  *
  * <p>UpdateZoneRecordRequest</p>
  */
 public class UpdateZoneRecordRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(maximum = 99, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(maximum = 99, minimum = 1)
     private Integer priority;
 
-    @Query
-    @NameInMap("RecordId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long recordId;
 
-    @Query
-    @NameInMap("Rr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rr;
 
-    @Query
-    @NameInMap("Ttl")
-    @Validation(maximum = 86400, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ttl")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 5)
     private Integer ttl;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
-    @Query
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
     private UpdateZoneRecordRequest(Builder builder) {
@@ -200,7 +200,10 @@ public class UpdateZoneRecordRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6447728c8578e66aacf062d2df4446dc</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,7 +212,15 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -218,7 +229,10 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Line.
+         * <p>The resolution line. Default value: default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -227,7 +241,13 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the MX record. You can set priorities for different email servers. Valid values: 1 to 99. A smaller value indicates a higher priority.</p>
+         * <blockquote>
+         * <p> This parameter is required if the type of the DNS record is MX.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -236,7 +256,11 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * <p>The ID of the DNS record. You can call the DescribeZoneRecords operation to query a list of DNS records.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172223****</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -245,7 +269,12 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Rr.
+         * <p>The hostname. The hostname is the prefix of the subdomain name for zone. Example: www, @, * (used for wildcard DNS resolution), and mail (used for specifying the mail server that receives emails).</p>
+         * <p>For example, if you want to resolve the domain name @.exmaple.com, you must set Rr to @ instead of leaving Rr empty.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder rr(String rr) {
             this.putQueryParameter("Rr", rr);
@@ -254,7 +283,10 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>The TTL period. Valid values: 5, 30, 60, 3600, 43200, and 86400. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -263,7 +295,23 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the DNS record. Valid values:</p>
+         * <ul>
+         * <li><strong>A</strong>: An A record maps a domain name to an IPv4 address in the dotted decimal notation format.</li>
+         * <li><strong>AAAA</strong>: An AAAA record maps a domain name to an IPv6 address.</li>
+         * <li><strong>CNAME</strong>: A canonical name (CNAME) record maps a domain name to another domain name.</li>
+         * <li><strong>TXT</strong>: A text (TXT) record usually serves as a Sender Policy Framework (SPF) record to prevent email spam. The record value of the TXT record can be up to 255 characters in length.</li>
+         * <li><strong>MX</strong>: A mail exchanger (MX) record maps a domain name to the domain name of a mail server.</li>
+         * <li><strong>PTR</strong>: A pointer (PTR) record maps an IP address to a domain name.</li>
+         * <li><strong>SRV</strong>: A service (SRV) record specifies a server that hosts a specific service. Enter a record value in the format of Priority Weight Port Destination domain name. Separate these items with spaces.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Before you add a PTR record, you must configure a reverse lookup zone. For more information, see <a href="https://help.aliyun.com/document_detail/2592976.html">Add PTR records</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -272,7 +320,10 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -281,7 +332,11 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>The record value. You need to enter the record value based on the DNS record type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.16.XX.XX</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);
@@ -290,7 +345,10 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Weight.
+         * <p>The weight value of the address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for DNS requests. A weight value must be an integer that ranges from 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

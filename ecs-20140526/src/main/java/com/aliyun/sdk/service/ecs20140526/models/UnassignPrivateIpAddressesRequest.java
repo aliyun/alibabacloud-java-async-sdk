@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassignPrivateIpAddressesRequest} extends {@link RequestModel}
  *
  * <p>UnassignPrivateIpAddressesRequest</p>
  */
 public class UnassignPrivateIpAddressesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Ipv4Prefix")
-    private java.util.List < String > ipv4Prefix;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
+    private java.util.List<String> ipv4Prefix;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
-    private java.util.List < String > privateIpAddress;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+    private java.util.List<String> privateIpAddress;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private UnassignPrivateIpAddressesRequest(Builder builder) {
@@ -86,7 +91,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     /**
      * @return ipv4Prefix
      */
-    public java.util.List < String > getIpv4Prefix() {
+    public java.util.List<String> getIpv4Prefix() {
         return this.ipv4Prefix;
     }
 
@@ -114,7 +119,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
     /**
      * @return privateIpAddress
      */
-    public java.util.List < String > getPrivateIpAddress() {
+    public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -141,11 +146,11 @@ public class UnassignPrivateIpAddressesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UnassignPrivateIpAddressesRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > ipv4Prefix; 
+        private java.util.List<String> ipv4Prefix; 
         private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > privateIpAddress; 
+        private java.util.List<String> privateIpAddress; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -177,16 +182,20 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * <p>The IPv4 prefixes to unassign.</p>
          */
-        public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
+        public Builder ipv4Prefix(java.util.List<String> ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
             this.ipv4Prefix = ipv4Prefix;
             return this;
         }
 
         /**
-         * The secondary private IP addresses to unassign.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp67acfmxazb4ph****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -213,16 +222,23 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * Secondary private IP address N to unassign Valid values of N: 1 to 10.
+         * <p>The secondary private IP addresses to unassign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>192.168.**.**</code></p>
          */
-        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+        public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

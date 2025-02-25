@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectMemberResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateProjectMemberResponseBody</p>
  */
 public class UpdateProjectMemberResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("member")
+    @com.aliyun.core.annotation.NameInMap("member")
     private Member member;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private UpdateProjectMemberResponseBody(Builder builder) {
@@ -131,29 +136,35 @@ public class UpdateProjectMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProjectMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectMemberResponseBody</p>
+     */
     public static class Member extends TeaModel {
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("roleIdentifier")
+        @com.aliyun.core.annotation.NameInMap("roleIdentifier")
         private String roleIdentifier;
 
-        @NameInMap("targetIdentifier")
+        @com.aliyun.core.annotation.NameInMap("targetIdentifier")
         private String targetIdentifier;
 
-        @NameInMap("targetType")
+        @com.aliyun.core.annotation.NameInMap("targetType")
         private String targetType;
 
-        @NameInMap("userIdentifier")
+        @com.aliyun.core.annotation.NameInMap("userIdentifier")
         private String userIdentifier;
 
-        @NameInMap("userType")
+        @com.aliyun.core.annotation.NameInMap("userType")
         private String userType;
 
         private Member(Builder builder) {

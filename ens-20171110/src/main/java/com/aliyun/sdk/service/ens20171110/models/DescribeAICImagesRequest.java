@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAICImagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAICImagesRequest</p>
  */
 public class DescribeAICImagesRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageType")
     private String imageType;
 
-    @Query
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Query
-    @NameInMap("MaxDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDate")
     private String maxDate;
 
-    @Query
-    @NameInMap("MinDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDate")
     private String minDate;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeAICImagesRequest(Builder builder) {
@@ -166,7 +171,10 @@ public class DescribeAICImagesRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test operation of console</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -175,7 +183,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-ad0ddaddc2d54adeaa09b7c0f1e****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -184,7 +195,14 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * <p>The type of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>public</strong>: public image</li>
+         * <li><strong>private</strong>: custom image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -193,7 +211,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * <p>The URL of the AIC image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****.alibaba-inc.com/aic/socimage:test</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -202,7 +223,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * MaxDate.
+         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-02</p>
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -211,7 +235,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02</p>
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -220,7 +247,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -229,7 +259,10 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The maximum value is <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +271,15 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the image. Valid values:</p>
+         * <ul>
+         * <li><strong>verifying</strong></li>
+         * <li><strong>disable</strong></li>
+         * <li><strong>available</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateProjectRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectRequest</p>
  */
 public class CreateProjectRequest extends Request {
-    @Body
-    @NameInMap("dataRedundancyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataRedundancyType")
     private String dataRedundancyType;
 
-    @Body
-    @NameInMap("description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
     private CreateProjectRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * Data redundancy type
+         * <p>Data redundancy type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LRS</p>
          */
         public Builder dataRedundancyType(String dataRedundancyType) {
             this.putBodyParameter("dataRedundancyType", dataRedundancyType);
@@ -107,7 +115,11 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The description of the project.
+         * <p>The description of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -116,13 +128,17 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The name of the project. The name must be unique in a region. You cannot change the name after you create the project. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the project. The name must be unique in a region. You cannot change the name after you create the project. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be unique.</li>
+         * <li>It can contain only lowercase letters, digits, and hyphens (-).</li>
+         * <li>It must start and end with a lowercase letter or a digit.</li>
+         * <li>It must be 3 to 63 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name must be unique.
-         * *   It can contain only lowercase letters, digits, and hyphens (-).
-         * *   It must start and end with a lowercase letter or a digit.
-         * *   It must be 3 to 63 characters in length.
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("projectName", projectName);
@@ -131,7 +147,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzf******sxby</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);

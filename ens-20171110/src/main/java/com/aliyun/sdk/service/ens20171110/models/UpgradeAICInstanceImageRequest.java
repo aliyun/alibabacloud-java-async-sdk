@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeAICInstanceImageRequest} extends {@link RequestModel}
  *
  * <p>UpgradeAICInstanceImageRequest</p>
  */
 public class UpgradeAICInstanceImageRequest extends Request {
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("ServerIds")
-    @Validation(required = true)
-    private java.util.List < String > serverIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> serverIds;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
     private UpgradeAICInstanceImageRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
     /**
      * @return serverIds
      */
-    public java.util.List < String > getServerIds() {
+    public java.util.List<String> getServerIds() {
         return this.serverIds;
     }
 
@@ -69,7 +74,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeAICInstanceImageRequest, Builder> {
         private String imageId; 
-        private java.util.List < String > serverIds; 
+        private java.util.List<String> serverIds; 
         private Integer timeout; 
 
         private Builder() {
@@ -84,7 +89,11 @@ public class UpgradeAICInstanceImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>The ID of the AIC image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -93,9 +102,10 @@ public class UpgradeAICInstanceImageRequest extends Request {
         }
 
         /**
-         * ServerIds.
+         * <p>The IDs of the servers.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder serverIds(java.util.List < String > serverIds) {
+        public Builder serverIds(java.util.List<String> serverIds) {
             String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
             this.putQueryParameter("ServerIds", serverIdsShrink);
             this.serverIds = serverIds;
@@ -103,7 +113,10 @@ public class UpgradeAICInstanceImageRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period of the update. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

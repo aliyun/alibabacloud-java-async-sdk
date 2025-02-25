@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody} extends {@link TeaModel}
  *
  * <p>VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody</p>
  */
 public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends TeaModel {
-    @NameInMap("Quota")
+    @com.aliyun.core.annotation.NameInMap("Quota")
     private Long quota;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         private String requestId; 
 
         /**
-         * The number of endpoints that can be created.
+         * <p>The number of endpoints that can be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -58,7 +66,10 @@ public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends T
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

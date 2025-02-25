@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeRulesRequest</p>
  */
 public class DescribeRulesRequest extends Request {
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeRulesRequest(Builder builder) {
@@ -155,10 +160,12 @@ public class DescribeRulesRequest extends Request {
         } 
 
         /**
-         * The frontend listener port that is used by the Server Load Balancer (SLB) instance.
-         * <p>
+         * <p>The frontend listener port that is used by the Server Load Balancer (SLB) instance.</p>
+         * <p>Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1 to 65535**.
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -167,10 +174,13 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The frontend listener protocol that is used by the SLB instance.
-         * <p>
+         * <p>The frontend listener protocol that is used by the SLB instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when listeners that use different protocols listen on the same port.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when listeners that use different protocols listen on the same port.
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -179,7 +189,11 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1ca0zt07t934****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -206,10 +220,12 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the SLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the SLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

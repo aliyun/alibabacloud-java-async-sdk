@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListContainerDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>ListContainerDefenseRuleRequest</p>
  */
 public class ListContainerDefenseRuleRequest extends Request {
-    @Query
-    @NameInMap("Conditions")
-    private java.util.List < Conditions> conditions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Conditions")
+    private java.util.List<Conditions> conditions;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("IsDefaultRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefaultRule")
     private Integer isDefaultRule;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private Integer ruleType;
 
     private ListContainerDefenseRuleRequest(Builder builder) {
@@ -62,7 +67,7 @@ public class ListContainerDefenseRuleRequest extends Request {
     /**
      * @return conditions
      */
-    public java.util.List < Conditions> getConditions() {
+    public java.util.List<Conditions> getConditions() {
         return this.conditions;
     }
 
@@ -102,7 +107,7 @@ public class ListContainerDefenseRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListContainerDefenseRuleRequest, Builder> {
-        private java.util.List < Conditions> conditions; 
+        private java.util.List<Conditions> conditions; 
         private Integer currentPage; 
         private Integer isDefaultRule; 
         private String lang; 
@@ -124,16 +129,19 @@ public class ListContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The details of the condition.
+         * <p>The details of the condition.</p>
          */
-        public Builder conditions(java.util.List < Conditions> conditions) {
+        public Builder conditions(java.util.List<Conditions> conditions) {
             this.putQueryParameter("Conditions", conditions);
             this.conditions = conditions;
             return this;
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -142,10 +150,13 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to query system rules.
-         * <p>
+         * <p>Specifies whether to query system rules.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
          * 
-         * >  This parameter is deprecated.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isDefaultRule(Integer isDefaultRule) {
             this.putQueryParameter("IsDefaultRule", isDefaultRule);
@@ -154,11 +165,14 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -167,10 +181,13 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,11 +196,14 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The rule type. Valid values:
-         * <p>
+         * <p>The rule type. Valid values:</p>
+         * <ul>
+         * <li>1: system rule</li>
+         * <li>2: user-defined rule</li>
+         * </ul>
          * 
-         * *   1: system rule
-         * *   2: user-defined rule
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -198,11 +218,17 @@ public class ListContainerDefenseRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListContainerDefenseRuleRequest} extends {@link TeaModel}
+     *
+     * <p>ListContainerDefenseRuleRequest</p>
+     */
     public static class Conditions extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Conditions(Builder builder) {
@@ -237,10 +263,13 @@ public class ListContainerDefenseRuleRequest extends Request {
             private String value; 
 
             /**
-             * The condition type. Valid values:
-             * <p>
+             * <p>The condition type. Valid values:</p>
+             * <ul>
+             * <li><strong>ruleName</strong>: the rule name</li>
+             * </ul>
              * 
-             * *   **ruleName**: the rule name
+             * <strong>example:</strong>
+             * <p>ruleName</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -248,7 +277,10 @@ public class ListContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * The rule content.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto-test-rule-**</p>
              */
             public Builder value(String value) {
                 this.value = value;

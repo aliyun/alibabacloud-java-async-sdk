@@ -143,16 +143,16 @@ public class SubmitFlowJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitFlowJobRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.conf = response.conf;
-            this.hostName = response.hostName;
-            this.jobId = response.jobId;
-            this.jobInstanceId = response.jobInstanceId;
-            this.namespace = response.namespace;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(SubmitFlowJobRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.conf = request.conf;
+            this.hostName = request.hostName;
+            this.jobId = request.jobId;
+            this.jobInstanceId = request.jobInstanceId;
+            this.namespace = request.namespace;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

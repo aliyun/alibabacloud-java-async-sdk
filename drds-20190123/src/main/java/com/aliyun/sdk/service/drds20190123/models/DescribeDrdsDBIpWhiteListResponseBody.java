@@ -62,7 +62,7 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * IpWhiteList.
+         * The IP address whitelist.
          */
         public Builder ipWhiteList(IpWhiteList ipWhiteList) {
             this.ipWhiteList = ipWhiteList;
@@ -70,7 +70,7 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

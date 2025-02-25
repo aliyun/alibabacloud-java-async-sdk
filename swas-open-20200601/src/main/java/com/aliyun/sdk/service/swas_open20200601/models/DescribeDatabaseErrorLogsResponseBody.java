@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabaseErrorLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatabaseErrorLogsResponseBody</p>
  */
 public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
-    @NameInMap("ErrorLogs")
-    private java.util.List < ErrorLogs> errorLogs;
+    @com.aliyun.core.annotation.NameInMap("ErrorLogs")
+    private java.util.List<ErrorLogs> errorLogs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDatabaseErrorLogsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
     /**
      * @return errorLogs
      */
-    public java.util.List < ErrorLogs> getErrorLogs() {
+    public java.util.List<ErrorLogs> getErrorLogs() {
         return this.errorLogs;
     }
 
@@ -79,25 +84,28 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ErrorLogs> errorLogs; 
+        private java.util.List<ErrorLogs> errorLogs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The time when the error log entry was generated. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
-         * <p>
-         * 
-         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
+         * <p>The time when the error log entry was generated. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p>The time displayed in the Simple Application Server console is in the format of UTC+8.</p>
+         * </blockquote>
          */
-        public Builder errorLogs(java.util.List < ErrorLogs> errorLogs) {
+        public Builder errorLogs(java.util.List<ErrorLogs> errorLogs) {
             this.errorLogs = errorLogs;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +113,10 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +124,10 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +135,10 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,11 +151,17 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatabaseErrorLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabaseErrorLogsResponseBody</p>
+     */
     public static class ErrorLogs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
         private ErrorLogs(Builder builder) {
@@ -173,7 +196,10 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
             private String errorInfo; 
 
             /**
-             * CreateTime.
+             * <p>The time when the resource was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-08T12:11:04Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -181,7 +207,10 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorInfo.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spid52 DBCC TRACEON 3499, server process ID (SPID) 52. This is an informational message only; no user action is required</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;

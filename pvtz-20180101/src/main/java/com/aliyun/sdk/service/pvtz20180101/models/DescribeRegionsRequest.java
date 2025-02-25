@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AuthorizedUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
     private Long authorizedUserId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Scene")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
     private String scene;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("VpcType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcType")
     private String vpcType;
 
     private DescribeRegionsRequest(Builder builder) {
@@ -124,7 +124,18 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The supported language. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
+         * <p>Default value: en-US.</p>
+         * <blockquote>
+         * <p> AcceptLanguage has a higher priority than Lang.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +144,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * AuthorizedUserId.
+         * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141339776561****</p>
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);
@@ -142,7 +156,18 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * <blockquote>
+         * <p> Lang has a lower priority than AcceptLanguage.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +176,15 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>The scenario. Valid values:</p>
+         * <ul>
+         * <li>AUTH: the built-in authoritative module</li>
+         * <li>FWD: the forward module</li>
+         * <li>RA: the traffic analysis module</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTH</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -160,7 +193,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -169,7 +205,14 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * VpcType.
+         * <p>The VPC type. Valid values:</p>
+         * <ul>
+         * <li>STANDARD: standard VPC</li>
+         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vpcType(String vpcType) {
             this.putQueryParameter("VpcType", vpcType);

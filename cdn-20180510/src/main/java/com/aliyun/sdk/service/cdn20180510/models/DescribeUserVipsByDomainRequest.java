@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserVipsByDomainRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserVipsByDomainRequest</p>
  */
 public class DescribeUserVipsByDomainRequest extends Request {
-    @Query
-    @NameInMap("Available")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Available")
     private String available;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
     private DescribeUserVipsByDomainRequest(Builder builder) {
@@ -69,11 +69,14 @@ public class DescribeUserVipsByDomainRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:
-         * <p>
+         * <p>Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: healthy CDN edge nodes.</li>
+         * <li><strong>off</strong>: all CDN edge nodes.</li>
+         * </ul>
          * 
-         * *   **on**: healthy CDN edge nodes.
-         * *   **off**: all CDN edge nodes.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder available(String available) {
             this.putQueryParameter("Available", available);
@@ -82,7 +85,11 @@ public class DescribeUserVipsByDomainRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. You can specify only one domain name.
+         * <p>The accelerated domain name. You can specify only one domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

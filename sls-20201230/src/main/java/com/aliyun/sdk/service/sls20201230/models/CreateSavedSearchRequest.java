@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateSavedSearchRequest} extends {@link RequestModel}
  *
  * <p>CreateSavedSearchRequest</p>
  */
 public class CreateSavedSearchRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Body
-    @NameInMap("displayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("displayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Body
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Body
-    @NameInMap("savedsearchName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("savedsearchName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String savedsearchName;
 
-    @Body
-    @NameInMap("searchQuery")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("searchQuery")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String searchQuery;
 
-    @Body
-    @NameInMap("topic")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private CreateSavedSearchRequest(Builder builder) {
@@ -129,7 +134,11 @@ public class CreateSavedSearchRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -138,7 +147,11 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * The display name.
+         * <p>The display name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>displayname</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -147,7 +160,11 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * The name of the Logstore to which the saved search belongs.
+         * <p>The name of the Logstore to which the saved search belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putBodyParameter("logstore", logstore);
@@ -156,7 +173,11 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * The name of the saved search. The name must be 3 to 63 characters in length.
+         * <p>The name of the saved search. The name must be 3 to 63 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv in minutes</p>
          */
         public Builder savedsearchName(String savedsearchName) {
             this.putBodyParameter("savedsearchName", savedsearchName);
@@ -165,7 +186,11 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the `Search statement|Analytic statement` format. For more information about search statements and analytic statements, see [Log search overview](~~43772~~) and [Log analysis overview](~~53608~~).
+         * <p>The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the <code>Search statement|Analytic statement</code> format. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis overview</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em>|select date_format(<strong>time</strong>-<strong>time</strong>%60, &quot;%H:%i:%s&quot;) as time, COUNT(</em>) as pv group by time</p>
          */
         public Builder searchQuery(String searchQuery) {
             this.putBodyParameter("searchQuery", searchQuery);
@@ -174,7 +199,11 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * The topic of the log.
+         * <p>The topic of the logs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>theme</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("topic", topic);

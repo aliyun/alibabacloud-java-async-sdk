@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Collection} extends {@link TeaModel}
  *
  * <p>Collection</p>
  */
 public class Collection extends TeaModel {
-    @NameInMap("CollectionType")
+    @com.aliyun.core.annotation.NameInMap("CollectionType")
     private String collectionType;
 
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.NameInMap("Level")
     private Integer level;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("OwnerName")
+    @com.aliyun.core.annotation.NameInMap("OwnerName")
     private String ownerName;
 
-    @NameInMap("QualifiedName")
+    @com.aliyun.core.annotation.NameInMap("QualifiedName")
     private String qualifiedName;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private Long updateTime;
 
     private Collection(Builder builder) {

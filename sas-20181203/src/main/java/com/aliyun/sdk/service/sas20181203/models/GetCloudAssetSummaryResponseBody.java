@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudAssetSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetCloudAssetSummaryResponseBody</p>
  */
 public class GetCloudAssetSummaryResponseBody extends TeaModel {
-    @NameInMap("GroupedFields")
+    @com.aliyun.core.annotation.NameInMap("GroupedFields")
     private GroupedFields groupedFields;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCloudAssetSummaryResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The summary of cloud services.
+         * <p>The summary of cloud services.</p>
          */
         public Builder groupedFields(GroupedFields groupedFields) {
             this.groupedFields = groupedFields;
@@ -58,7 +63,10 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCloudAssetSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCloudAssetSummaryResponseBody</p>
+     */
     public static class CloudAssetSummaryMetas extends TeaModel {
-        @NameInMap("AssetSubType")
+        @com.aliyun.core.annotation.NameInMap("AssetSubType")
         private Integer assetSubType;
 
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private Integer assetType;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("InstanceRiskCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceRiskCount")
         private Integer instanceRiskCount;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
         private CloudAssetSummaryMetas(Builder builder) {
@@ -146,7 +160,10 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             private Integer vendor; 
 
             /**
-             * The subtype of the cloud service.
+             * <p>The subtype of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -154,34 +171,37 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud service. Valid values:
-             * <p>
+             * <p>The type of the cloud service. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Elastic Compute Service (ECS)</li>
+             * <li><strong>1</strong>: Server Load Balancer (SLB)</li>
+             * <li><strong>3</strong>: ApsaraDB RDS</li>
+             * <li><strong>4</strong>: ApsaraDB for MongoDB (MongoDB)</li>
+             * <li><strong>5</strong>: ApsaraDB for Redis (Redis)</li>
+             * <li><strong>6</strong>: Container Registry</li>
+             * <li><strong>8</strong>: Container Service for Kubernetes (ACK)</li>
+             * <li><strong>9</strong>: Virtual Private Cloud (VPC)</li>
+             * <li><strong>11</strong>: ActionTrail</li>
+             * <li><strong>12</strong>: Alibaba Cloud CDN (CDN)</li>
+             * <li><strong>13</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+             * <li><strong>14</strong>: Apsara Devops</li>
+             * <li><strong>15</strong>: Resource Access Management (RAM)</li>
+             * <li><strong>16</strong>: Anti-DDoS</li>
+             * <li><strong>17</strong>: Web Application Firewall (WAF)</li>
+             * <li><strong>18</strong>: Object Storage Service (OSS)</li>
+             * <li><strong>19</strong>: PolarDB</li>
+             * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
+             * <li><strong>21</strong>: Microservices Engine (MSE)</li>
+             * <li><strong>22</strong>: File Storage NAS (NAS)</li>
+             * <li><strong>23</strong>: Data Security Center (DSC)</li>
+             * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
+             * <li><strong>25</strong>: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)</li>
+             * <li><strong>26</strong>: PolarDB for Xscale (PolarDB-X)</li>
+             * <li><strong>27</strong>: Elasticsearch</li>
+             * </ul>
              * 
-             * *   **0**: Elastic Compute Service (ECS)
-             * *   **1**: Server Load Balancer (SLB)
-             * *   **3**: ApsaraDB RDS
-             * *   **4**: ApsaraDB for MongoDB (MongoDB)
-             * *   **5**: ApsaraDB for Redis (Redis)
-             * *   **6**: Container Registry
-             * *   **8**: Container Service for Kubernetes (ACK)
-             * *   **9**: Virtual Private Cloud (VPC)
-             * *   **11**: ActionTrail
-             * *   **12**: Alibaba Cloud CDN (CDN)
-             * *   **13**: Certificate Management Service (formerly SSL Certificates Service)
-             * *   **14**: Apsara Devops
-             * *   **15**: Resource Access Management (RAM)
-             * *   **16**: Anti-DDoS
-             * *   **17**: Web Application Firewall (WAF)
-             * *   **18**: Object Storage Service (OSS)
-             * *   **19**: PolarDB
-             * *   **20**: ApsaraDB RDS for PostgreSQL
-             * *   **21**: Microservices Engine (MSE)
-             * *   **22**: Apsara File Storage NAS (NAS)
-             * *   **23**: Data Security Center (DSC)
-             * *   **24**: Elastic IP Address (EIP)
-             * *   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)
-             * *   **26**: PolarDB for Xscale (PolarDB-X)
-             * *   **27**: Elasticsearch
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -189,7 +209,10 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud service instances of this type.
+             * <p>The total number of cloud service instances of this type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -197,7 +220,10 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud service instances that are at risk of this type.
+             * <p>The total number of cloud service instances that are at risk of this type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder instanceRiskCount(Integer instanceRiskCount) {
                 this.instanceRiskCount = instanceRiskCount;
@@ -205,14 +231,17 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The server type. Valid values:
-             * <p>
+             * <p>The server type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+             * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
+             * <li><strong>2</strong>: an asset in a data center</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset provided by a third-party service provider</li>
+             * <li><strong>8</strong>: a lightweight asset</li>
+             * </ul>
              * 
-             * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: an asset outside Alibaba Cloud
-             * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: an asset provided by a third-party service provider
-             * *   **8**: a lightweight asset
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -226,14 +255,20 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCloudAssetSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCloudAssetSummaryResponseBody</p>
+     */
     public static class GroupedFields extends TeaModel {
-        @NameInMap("CloudAssetSummaryMetas")
-        private java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas;
+        @com.aliyun.core.annotation.NameInMap("CloudAssetSummaryMetas")
+        private java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas;
 
-        @NameInMap("InstanceCountTotal")
+        @com.aliyun.core.annotation.NameInMap("InstanceCountTotal")
         private Integer instanceCountTotal;
 
-        @NameInMap("InstanceRiskCountTotal")
+        @com.aliyun.core.annotation.NameInMap("InstanceRiskCountTotal")
         private Integer instanceRiskCountTotal;
 
         private GroupedFields(Builder builder) {
@@ -253,7 +288,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         /**
          * @return cloudAssetSummaryMetas
          */
-        public java.util.List < CloudAssetSummaryMetas> getCloudAssetSummaryMetas() {
+        public java.util.List<CloudAssetSummaryMetas> getCloudAssetSummaryMetas() {
             return this.cloudAssetSummaryMetas;
         }
 
@@ -272,20 +307,23 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas; 
+            private java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas; 
             private Integer instanceCountTotal; 
             private Integer instanceRiskCountTotal; 
 
             /**
-             * The statistics of cloud services.
+             * <p>The statistics of cloud services.</p>
              */
-            public Builder cloudAssetSummaryMetas(java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas) {
+            public Builder cloudAssetSummaryMetas(java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas) {
                 this.cloudAssetSummaryMetas = cloudAssetSummaryMetas;
                 return this;
             }
 
             /**
-             * The total number of cloud service instances.
+             * <p>The total number of cloud service instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>919</p>
              */
             public Builder instanceCountTotal(Integer instanceCountTotal) {
                 this.instanceCountTotal = instanceCountTotal;
@@ -293,7 +331,10 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud service instances that are at risk.
+             * <p>The total number of cloud service instances that are at risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>544</p>
              */
             public Builder instanceRiskCountTotal(Integer instanceRiskCountTotal) {
                 this.instanceRiskCountTotal = instanceRiskCountTotal;

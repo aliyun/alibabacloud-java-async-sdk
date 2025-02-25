@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFileSystemsResponseBody</p>
  */
 public class DescribeFileSystemsResponseBody extends TeaModel {
-    @NameInMap("FileSystems")
-    private java.util.List < FileSystems> fileSystems;
+    @com.aliyun.core.annotation.NameInMap("FileSystems")
+    private java.util.List<FileSystems> fileSystems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeFileSystemsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     /**
      * @return fileSystems
      */
-    public java.util.List < FileSystems> getFileSystems() {
+    public java.util.List<FileSystems> getFileSystems() {
         return this.fileSystems;
     }
 
@@ -79,22 +84,25 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FileSystems> fileSystems; 
+        private java.util.List<FileSystems> fileSystems; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * FileSystems.
+         * <p>The information about the file systems.</p>
          */
-        public Builder fileSystems(java.util.List < FileSystems> fileSystems) {
+        public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>762DD527-358B-1E48-8005-CCE3ED4EB9E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class MountTargets extends TeaModel {
-        @NameInMap("MountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
         private String mountTargetDomain;
 
-        @NameInMap("MountTargetName")
+        @com.aliyun.core.annotation.NameInMap("MountTargetName")
         private String mountTargetName;
 
-        @NameInMap("NetWorkId")
+        @com.aliyun.core.annotation.NameInMap("NetWorkId")
         private String netWorkId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MountTargets(Builder builder) {
@@ -194,7 +217,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * MountTargetDomain.
+             * <p>The path of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em>.</em>.<em>.</em>:/${FileSystemName}/{MountTargetName}</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -202,7 +228,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetName.
+             * <p>The name of the mount target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>target1</p>
              */
             public Builder mountTargetName(String mountTargetName) {
                 this.mountTargetName = mountTargetName;
@@ -210,7 +239,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * NetWorkId.
+             * <p>The ID of the network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n-****</p>
              */
             public Builder netWorkId(String netWorkId) {
                 this.netWorkId = netWorkId;
@@ -218,7 +250,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the mount target. Valid values:</p>
+             * <ul>
+             * <li>active: The mount target is available.</li>
+             * <li>inactive: The mount target is unavailable.</li>
+             * <li>pending: The task is running.</li>
+             * <li>deleting: The mount target is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -232,38 +273,44 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class FileSystems extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("FileSystemName")
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
         private String fileSystemName;
 
-        @NameInMap("MeteredSize")
+        @com.aliyun.core.annotation.NameInMap("MeteredSize")
         private Long meteredSize;
 
-        @NameInMap("MountTargets")
-        private java.util.List < MountTargets> mountTargets;
+        @com.aliyun.core.annotation.NameInMap("MountTargets")
+        private java.util.List<MountTargets> mountTargets;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private FileSystems(Builder builder) {
@@ -333,7 +380,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return mountTargets
          */
-        public java.util.List < MountTargets> getMountTargets() {
+        public java.util.List<MountTargets> getMountTargets() {
             return this.mountTargets;
         }
 
@@ -372,14 +419,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String fileSystemId; 
             private String fileSystemName; 
             private Long meteredSize; 
-            private java.util.List < MountTargets> mountTargets; 
+            private java.util.List<MountTargets> mountTargets; 
             private String payType; 
             private String protocolType; 
             private String status; 
             private String storageType; 
 
             /**
-             * Capacity.
+             * <p>The capacity of the file system. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -387,7 +437,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the file system was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-31 12:00:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -395,7 +448,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-cmcc</p>
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -403,7 +459,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The ID of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c50f8*****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -411,7 +470,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemName.
+             * <p>The name of the file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FileSystem1</p>
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -419,7 +481,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteredSize.
+             * <p>The storage usage of the file system. The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102400</p>
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -427,15 +492,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargets.
+             * <p>The information about mount targets.</p>
              */
-            public Builder mountTargets(java.util.List < MountTargets> mountTargets) {
+            public Builder mountTargets(java.util.List<MountTargets> mountTargets) {
                 this.mountTargets = mountTargets;
                 return this;
             }
 
             /**
-             * PayType.
+             * <p>The billing method. PostPaid is returned. PostPaid indicates the pay-as-you-go billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -443,7 +511,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type of the file system. Valid values:</p>
+             * <ul>
+             * <li>NFS: Network File System (NFS)</li>
+             * <li>SMB: Server Message Block (SMB)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -451,7 +526,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the file system. Valid values:</p>
+             * <ul>
+             * <li>pending: The file system is being created or modified.</li>
+             * <li>running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.</li>
+             * <li>stopped: The file system is unavailable.</li>
+             * <li>extending: The file system is being scaled out.</li>
+             * <li>stopping: The file system is being disabled.</li>
+             * <li>deleting: The file system is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -459,7 +545,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li>capacity: Capacity NAS file systems</li>
+             * <li>performance: Performance NAS file systems</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>capacity</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

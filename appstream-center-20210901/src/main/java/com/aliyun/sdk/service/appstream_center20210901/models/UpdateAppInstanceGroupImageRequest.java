@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppInstanceGroupImageRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppInstanceGroupImageRequest</p>
  */
 public class UpdateAppInstanceGroupImageRequest extends Request {
-    @Query
-    @NameInMap("AppCenterImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCenterImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appCenterImageId;
 
-    @Query
-    @NameInMap("AppInstanceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupId;
 
-    @Query
-    @NameInMap("BizRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizRegionId;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
     private UpdateAppInstanceGroupImageRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         } 
 
         /**
-         * AppCenterImageId.
+         * <p>The image ID of the application. You can obtain the ID from the Images page in the App Streaming console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-8z4nztpaqvay4****</p>
          */
         public Builder appCenterImageId(String appCenterImageId) {
             this.putQueryParameter("AppCenterImageId", appCenterImageId);
@@ -109,7 +118,11 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupId.
+         * <p>The ID of the delivery group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -118,7 +131,16 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-shanghai: China (Shanghai).</li>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -127,7 +149,15 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

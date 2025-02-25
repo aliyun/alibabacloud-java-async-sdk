@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatappEmbedSignUpRequest} extends {@link RequestModel}
  *
  * <p>ChatappEmbedSignUpRequest</p>
  */
 public class ChatappEmbedSignUpRequest extends Request {
-    @Body
-    @NameInMap("InputToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputToken;
 
     private ChatappEmbedSignUpRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class ChatappEmbedSignUpRequest extends Request {
         } 
 
         /**
-         * The InputToken returned after the embedded signup flow is complete.
+         * <p>The InputToken returned after the embedded signup flow is complete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wlelkelwidilwloe-ewlwols0lwsllsld</p>
          */
         public Builder inputToken(String inputToken) {
             this.putBodyParameter("InputToken", inputToken);

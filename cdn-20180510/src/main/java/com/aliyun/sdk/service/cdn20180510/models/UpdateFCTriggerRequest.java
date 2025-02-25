@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFCTriggerRequest} extends {@link RequestModel}
  *
  * <p>UpdateFCTriggerRequest</p>
  */
 public class UpdateFCTriggerRequest extends Request {
-    @Body
-    @NameInMap("FunctionARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FunctionARN")
     private String functionARN;
 
-    @Body
-    @NameInMap("Notes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Notes")
     private String notes;
 
-    @Body
-    @NameInMap("RoleARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleARN")
     private String roleARN;
 
-    @Body
-    @NameInMap("SourceARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceARN")
     private String sourceARN;
 
-    @Query
-    @NameInMap("TriggerARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerARN;
 
     private UpdateFCTriggerRequest(Builder builder) {
@@ -111,7 +111,10 @@ public class UpdateFCTriggerRequest extends Request {
         } 
 
         /**
-         * The feature trigger.
+         * <p>The feature trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:1223455566666:123:services/myservice/functions/myfunction</p>
          */
         public Builder functionARN(String functionARN) {
             this.putBodyParameter("FunctionARN", functionARN);
@@ -120,7 +123,10 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * The remarks.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("Notes", notes);
@@ -129,7 +135,10 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * The assigned RAM role.
+         * <p>The assigned RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:: 1234567890:role/aliyuncdneventnotificationrole</p>
          */
         public Builder roleARN(String roleARN) {
             this.putBodyParameter("RoleARN", roleARN);
@@ -138,7 +147,10 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * The resources and filters for event listening.
+         * <p>The resources and filters for event listening.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:cdn:*:1234567890:domain/example.com</p>
          */
         public Builder sourceARN(String sourceARN) {
             this.putBodyParameter("SourceARN", sourceARN);
@@ -147,7 +159,11 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * The trigger that corresponds to the Function Compute service.
+         * <p>The trigger that corresponds to the Function Compute service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-beijing: 1234567890:services/FCTestService/functions/printEvent/triggers/testtrigger</p>
          */
         public Builder triggerARN(String triggerARN) {
             this.putQueryParameter("TriggerARN", triggerARN);

@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
  */
 public class DescribeInstancesRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("FeatureType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureType")
     private Integer featureType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductId")
     private Long productId;
 
-    @Query
-    @NameInMap("RiskLevelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevelId")
     private Long riskLevelId;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
-    @Query
-    @NameInMap("ServiceRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
     private String serviceRegionId;
 
     private DescribeInstancesRequest(Builder builder) {
@@ -180,7 +185,10 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -189,7 +197,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * FeatureType.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -198,7 +209,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -207,7 +225,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The keyword that is used to search for data assets. DSC searches for data assets based on the keyword that you specify in fuzzy match mode. For example, if you specify data, all data assets whose names contain data are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -216,7 +237,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +249,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which DSC can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -234,7 +261,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The ID of the service to which the data asset belongs. You can call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to query the ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -243,7 +273,23 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * <p>The sensitivity level ID of the data asset. A higher sensitivity level indicates that the identified data is more sensitive. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: No sensitive data is identified.</li>
+         * <li><strong>2</strong>: sensitive data at level 1.</li>
+         * <li><strong>3</strong>: sensitive data at level 2.</li>
+         * <li><strong>4</strong>: sensitive data at level 3</li>
+         * <li><strong>5</strong>: sensitive data at level 4.</li>
+         * <li><strong>6</strong>: sensitive data at level 5.</li>
+         * <li><strong>7</strong>: sensitive data at level 6.</li>
+         * <li><strong>8</strong>: sensitive data at level 7.</li>
+         * <li><strong>9</strong>: sensitive data at level 8.</li>
+         * <li><strong>10</strong>: sensitive data at level 9.</li>
+         * <li><strong>11</strong>: sensitive data at level 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -252,7 +298,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the sensitive data detection rule that the data asset hits. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation and obtain the ID of the sensitive data detection rule from the <strong>Id</strong> response parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111111</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -261,7 +310,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * <p>The region where the data asset resides. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);

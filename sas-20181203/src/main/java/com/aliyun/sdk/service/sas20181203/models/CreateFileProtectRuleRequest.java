@@ -1,52 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateFileProtectRuleRequest</p>
  */
 public class CreateFileProtectRuleRequest extends Request {
-    @Query
-    @NameInMap("AlertLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertLevel")
     private Integer alertLevel;
 
-    @Query
-    @NameInMap("FileOps")
-    @Validation(required = true)
-    private java.util.List < String > fileOps;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileOps")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> fileOps;
 
-    @Query
-    @NameInMap("FilePaths")
-    @Validation(required = true)
-    private java.util.List < String > filePaths;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilePaths")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> filePaths;
 
-    @Query
-    @NameInMap("ProcPaths")
-    @Validation(required = true)
-    private java.util.List < String > procPaths;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    private String platform;
 
-    @Query
-    @NameInMap("RuleAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcPaths")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> procPaths;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleAction;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Query
-    @NameInMap("SwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchId")
     private String switchId;
 
     private CreateFileProtectRuleRequest(Builder builder) {
@@ -54,6 +63,7 @@ public class CreateFileProtectRuleRequest extends Request {
         this.alertLevel = builder.alertLevel;
         this.fileOps = builder.fileOps;
         this.filePaths = builder.filePaths;
+        this.platform = builder.platform;
         this.procPaths = builder.procPaths;
         this.ruleAction = builder.ruleAction;
         this.ruleName = builder.ruleName;
@@ -84,21 +94,28 @@ public class CreateFileProtectRuleRequest extends Request {
     /**
      * @return fileOps
      */
-    public java.util.List < String > getFileOps() {
+    public java.util.List<String> getFileOps() {
         return this.fileOps;
     }
 
     /**
      * @return filePaths
      */
-    public java.util.List < String > getFilePaths() {
+    public java.util.List<String> getFilePaths() {
         return this.filePaths;
+    }
+
+    /**
+     * @return platform
+     */
+    public String getPlatform() {
+        return this.platform;
     }
 
     /**
      * @return procPaths
      */
-    public java.util.List < String > getProcPaths() {
+    public java.util.List<String> getProcPaths() {
         return this.procPaths;
     }
 
@@ -132,9 +149,10 @@ public class CreateFileProtectRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateFileProtectRuleRequest, Builder> {
         private Integer alertLevel; 
-        private java.util.List < String > fileOps; 
-        private java.util.List < String > filePaths; 
-        private java.util.List < String > procPaths; 
+        private java.util.List<String> fileOps; 
+        private java.util.List<String> filePaths; 
+        private String platform; 
+        private java.util.List<String> procPaths; 
         private String ruleAction; 
         private String ruleName; 
         private Integer status; 
@@ -149,6 +167,7 @@ public class CreateFileProtectRuleRequest extends Request {
             this.alertLevel = request.alertLevel;
             this.fileOps = request.fileOps;
             this.filePaths = request.filePaths;
+            this.platform = request.platform;
             this.procPaths = request.procPaths;
             this.ruleAction = request.ruleAction;
             this.ruleName = request.ruleName;
@@ -157,13 +176,16 @@ public class CreateFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The severity of alerts. Valid values:
-         * <p>
+         * <p>The severity of alerts. Valid values:</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
          * 
-         * *   0: does not generate alerts
-         * *   1: sends notifications
-         * *   2: suspicious
-         * *   3: high-risk
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -172,38 +194,61 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The operations that you want to perform on the files.
+         * <p>The operations that you want to perform on the files.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder fileOps(java.util.List < String > fileOps) {
+        public Builder fileOps(java.util.List<String> fileOps) {
             this.putQueryParameter("FileOps", fileOps);
             this.fileOps = fileOps;
             return this;
         }
 
         /**
-         * The paths to the files that you want to monitor. Wildcard characters are supported.
+         * <p>The paths to the files that you want to monitor. Wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder filePaths(java.util.List < String > filePaths) {
+        public Builder filePaths(java.util.List<String> filePaths) {
             this.putQueryParameter("FilePaths", filePaths);
             this.filePaths = filePaths;
             return this;
         }
 
         /**
-         * The paths to the processes that you want to monitor. Wildcard characters are supported.
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
-        public Builder procPaths(java.util.List < String > procPaths) {
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
+            return this;
+        }
+
+        /**
+         * <p>The paths to the processes that you want to monitor. Wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
+         */
+        public Builder procPaths(java.util.List<String> procPaths) {
             this.putQueryParameter("ProcPaths", procPaths);
             this.procPaths = procPaths;
             return this;
         }
 
         /**
-         * The handling method of the rule. Valid values:
-         * <p>
+         * <p>The handling method of the rule. Valid values:</p>
+         * <ul>
+         * <li>pass: allow</li>
+         * <li>alert</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   pass: allow
-         * *   alert
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -212,7 +257,11 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tetsRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -221,11 +270,14 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -234,7 +286,10 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The switch ID of the rule.
+         * <p>The switch ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>
          */
         public Builder switchId(String switchId) {
             this.putQueryParameter("SwitchId", switchId);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachServerGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DetachServerGroupsResponseBody</p>
  */
 public class DetachServerGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingActivityId")
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
     private String scalingActivityId;
 
     private DetachServerGroupsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DetachServerGroupsResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF9BFEE-FE07-4627-B8FB-14326FB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +66,13 @@ public class DetachServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scaling activity in which you detach the server group from the scaling group and Auto Scaling removes the ECS instances from the server group.
-         * <p>
+         * <p>The ID of the scaling activity. During the scaling activity, the server group is detached from the scaling group and the existing servers, which are the ECS instances or elastic container instances in the scaling group, are removed from the server group.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you set <code>ForceDetach</code> to <code>true</code>.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned only if you set the ForceAttach parameter to true.
+         * <strong>example:</strong>
+         * <p>asa-bp1gbswjhjrw8tko****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

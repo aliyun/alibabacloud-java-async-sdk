@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountDeletionCheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountDeletionCheckResultResponseBody</p>
  */
 public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
-    @NameInMap("AccountDeletionCheckResultInfo")
+    @com.aliyun.core.annotation.NameInMap("AccountDeletionCheckResultInfo")
     private AccountDeletionCheckResultInfo accountDeletionCheckResultInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountDeletionCheckResultResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of the deletion check for the member.
+         * <p>The result of the deletion check for the member.</p>
          */
         public Builder accountDeletionCheckResultInfo(AccountDeletionCheckResultInfo accountDeletionCheckResultInfo) {
             this.accountDeletionCheckResultInfo = accountDeletionCheckResultInfo;
@@ -58,7 +63,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54AC391D-4F7F-5F08-B8D3-0AECDE6EC5BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountDeletionCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountDeletionCheckResultResponseBody</p>
+     */
     public static class AbandonableChecks extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private AbandonableChecks(Builder builder) {
@@ -122,7 +136,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NON_SP_cs</p>
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -130,7 +147,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service to which the check item belongs.
+             * <p>The name of the cloud service to which the check item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Container Service for Kubernetes</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -138,7 +158,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An instance of a cloud service is running within the member. Submit a ticket to contact Alibaba Cloud technical support.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -152,14 +175,20 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAccountDeletionCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountDeletionCheckResultResponseBody</p>
+     */
     public static class NotAllowReason extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private NotAllowReason(Builder builder) {
@@ -203,7 +232,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NON_SP_efc</p>
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -211,7 +243,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service to which the check item belongs.
+             * <p>The name of the cloud service to which the check item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enterprise finance</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -219,7 +254,10 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This account is an Enterprise Finance associated account. Please remove the financial association of this account before deleting it.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,17 +271,23 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAccountDeletionCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountDeletionCheckResultResponseBody</p>
+     */
     public static class AccountDeletionCheckResultInfo extends TeaModel {
-        @NameInMap("AbandonableChecks")
-        private java.util.List < AbandonableChecks> abandonableChecks;
+        @com.aliyun.core.annotation.NameInMap("AbandonableChecks")
+        private java.util.List<AbandonableChecks> abandonableChecks;
 
-        @NameInMap("AllowDelete")
+        @com.aliyun.core.annotation.NameInMap("AllowDelete")
         private String allowDelete;
 
-        @NameInMap("NotAllowReason")
-        private java.util.List < NotAllowReason> notAllowReason;
+        @com.aliyun.core.annotation.NameInMap("NotAllowReason")
+        private java.util.List<NotAllowReason> notAllowReason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AccountDeletionCheckResultInfo(Builder builder) {
@@ -264,7 +308,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         /**
          * @return abandonableChecks
          */
-        public java.util.List < AbandonableChecks> getAbandonableChecks() {
+        public java.util.List<AbandonableChecks> getAbandonableChecks() {
             return this.abandonableChecks;
         }
 
@@ -278,7 +322,7 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         /**
          * @return notAllowReason
          */
-        public java.util.List < NotAllowReason> getNotAllowReason() {
+        public java.util.List<NotAllowReason> getNotAllowReason() {
             return this.notAllowReason;
         }
 
@@ -290,28 +334,31 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AbandonableChecks> abandonableChecks; 
+            private java.util.List<AbandonableChecks> abandonableChecks; 
             private String allowDelete; 
-            private java.util.List < NotAllowReason> notAllowReason; 
+            private java.util.List<NotAllowReason> notAllowReason; 
             private String status; 
 
             /**
-             * The check items that you can choose to ignore for the member deletion.
-             * <p>
-             * 
-             * > This parameter may be returned if the value of AllowDelete is true.
+             * <p>The check items that you can choose to ignore for the member deletion.</p>
+             * <blockquote>
+             * <p>This parameter may be returned if the value of AllowDelete is true.</p>
+             * </blockquote>
              */
-            public Builder abandonableChecks(java.util.List < AbandonableChecks> abandonableChecks) {
+            public Builder abandonableChecks(java.util.List<AbandonableChecks> abandonableChecks) {
                 this.abandonableChecks = abandonableChecks;
                 return this;
             }
 
             /**
-             * Indicates whether the member can be deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the member can be deleted. Valid values:</p>
+             * <ul>
+             * <li>true: The member can be deleted.</li>
+             * <li>false: The member cannot be deleted.</li>
+             * </ul>
              * 
-             * *   true: The member can be deleted.
-             * *   false: The member cannot be deleted.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowDelete(String allowDelete) {
                 this.allowDelete = allowDelete;
@@ -319,22 +366,25 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons why the member cannot be deleted.
-             * <p>
-             * 
-             * > This parameter is returned only if the value of AllowDelete is false.
+             * <p>The reasons why the member cannot be deleted.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if the value of AllowDelete is false.</p>
+             * </blockquote>
              */
-            public Builder notAllowReason(java.util.List < NotAllowReason> notAllowReason) {
+            public Builder notAllowReason(java.util.List<NotAllowReason> notAllowReason) {
                 this.notAllowReason = notAllowReason;
                 return this;
             }
 
             /**
-             * The status of the check. Valid values:
-             * <p>
+             * <p>The status of the check. Valid values:</p>
+             * <ul>
+             * <li>PreCheckComplete: The check is complete.</li>
+             * <li>PreChecking: The check is in progress.</li>
+             * </ul>
              * 
-             * *   PreCheckComplete: The check is complete.
-             * *   PreChecking: The check is in progress.
+             * <strong>example:</strong>
+             * <p>PreCheckComplete</p>
              */
             public Builder status(String status) {
                 this.status = status;

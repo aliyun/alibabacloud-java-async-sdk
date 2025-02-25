@@ -1,47 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNsasSuspEventTypeRequest} extends {@link RequestModel}
  *
  * <p>DescribeNsasSuspEventTypeRequest</p>
  */
 public class DescribeNsasSuspEventTypeRequest extends Request {
-    @Query
-    @NameInMap("ContainerFieldName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldName")
     private String containerFieldName;
 
-    @Query
-    @NameInMap("ContainerFieldValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerFieldValue")
     private String containerFieldValue;
 
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAccountActionType")
+    private Integer multiAccountActionType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
     private DescribeNsasSuspEventTypeRequest(Builder builder) {
@@ -50,6 +59,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         this.containerFieldValue = builder.containerFieldValue;
         this.from = builder.from;
         this.lang = builder.lang;
+        this.multiAccountActionType = builder.multiAccountActionType;
         this.name = builder.name;
         this.remark = builder.remark;
         this.sourceIp = builder.sourceIp;
@@ -98,6 +108,13 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
     }
 
     /**
+     * @return multiAccountActionType
+     */
+    public Integer getMultiAccountActionType() {
+        return this.multiAccountActionType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -130,6 +147,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         private String containerFieldValue; 
         private String from; 
         private String lang; 
+        private Integer multiAccountActionType; 
         private String name; 
         private String remark; 
         private String sourceIp; 
@@ -145,6 +163,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
             this.containerFieldValue = request.containerFieldValue;
             this.from = request.from;
             this.lang = request.lang;
+            this.multiAccountActionType = request.multiAccountActionType;
             this.name = request.name;
             this.remark = request.remark;
             this.sourceIp = request.sourceIp;
@@ -152,10 +171,13 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         } 
 
         /**
-         * The name of the container field. Valid values:
-         * <p>
+         * <p>The name of the container field. Valid values:</p>
+         * <ul>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * </ul>
          * 
-         * *   **clusterId**: the ID of the cluster
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -164,7 +186,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The value of the container field.
+         * <p>The value of the container field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca3108551c83c4d949106e1ab9e1e****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -173,7 +198,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The ID of the request source. Set the value to **sas**, which indicates that the request is sent from Security Center.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>, which indicates that the request is sent from Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -182,11 +210,14 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -195,7 +226,26 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The name of the alert type.
+         * <p>The type of the accounts that you want to query. Default value: <strong>0</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the current account.</li>
+         * <li><strong>1</strong>: all accounts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder multiAccountActionType(Integer multiAccountActionType) {
+            this.putQueryParameter("MultiAccountActionType", multiAccountActionType);
+            this.multiAccountActionType = multiAccountActionType;
+            return this;
+        }
+
+        /**
+         * <p>The name of the alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -204,7 +254,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The name of the server.
+         * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testECS</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -213,7 +266,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180.212.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -222,10 +278,13 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>f56406cb-916d-42db-b6f7-2ff79e34****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

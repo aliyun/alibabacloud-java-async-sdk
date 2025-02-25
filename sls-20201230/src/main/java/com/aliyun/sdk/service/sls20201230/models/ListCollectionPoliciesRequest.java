@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListCollectionPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListCollectionPoliciesRequest</p>
  */
 public class ListCollectionPoliciesRequest extends Request {
-    @Query
-    @NameInMap("attribute")
-    private Attribute attribute;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("centralProject")
+    private String centralProject;
 
-    @Query
-    @NameInMap("dataCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataCode")
     private String dataCode;
 
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("pageNum")
-    private Integer pageNum;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("offset")
+    private Integer offset;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(maximum = 100, minimum = 1)
-    private Integer pageSize;
-
-    @Query
-    @NameInMap("policyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("policyName")
     private String policyName;
 
-    @Query
-    @NameInMap("productCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("productCode")
     private String productCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    private Integer size;
 
     private ListCollectionPoliciesRequest(Builder builder) {
         super(builder);
-        this.attribute = builder.attribute;
+        this.centralProject = builder.centralProject;
         this.dataCode = builder.dataCode;
         this.instanceId = builder.instanceId;
-        this.pageNum = builder.pageNum;
-        this.pageSize = builder.pageSize;
+        this.offset = builder.offset;
         this.policyName = builder.policyName;
         this.productCode = builder.productCode;
+        this.size = builder.size;
     }
 
     public static Builder builder() {
@@ -66,10 +71,10 @@ public class ListCollectionPoliciesRequest extends Request {
     }
 
     /**
-     * @return attribute
+     * @return centralProject
      */
-    public Attribute getAttribute() {
-        return this.attribute;
+    public String getCentralProject() {
+        return this.centralProject;
     }
 
     /**
@@ -87,17 +92,10 @@ public class ListCollectionPoliciesRequest extends Request {
     }
 
     /**
-     * @return pageNum
+     * @return offset
      */
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Integer getOffset() {
+        return this.offset;
     }
 
     /**
@@ -114,14 +112,21 @@ public class ListCollectionPoliciesRequest extends Request {
         return this.productCode;
     }
 
+    /**
+     * @return size
+     */
+    public Integer getSize() {
+        return this.size;
+    }
+
     public static final class Builder extends Request.Builder<ListCollectionPoliciesRequest, Builder> {
-        private Attribute attribute; 
+        private String centralProject; 
         private String dataCode; 
         private String instanceId; 
-        private Integer pageNum; 
-        private Integer pageSize; 
+        private Integer offset; 
         private String policyName; 
         private String productCode; 
+        private Integer size; 
 
         private Builder() {
             super();
@@ -129,22 +134,21 @@ public class ListCollectionPoliciesRequest extends Request {
 
         private Builder(ListCollectionPoliciesRequest request) {
             super(request);
-            this.attribute = request.attribute;
+            this.centralProject = request.centralProject;
             this.dataCode = request.dataCode;
             this.instanceId = request.instanceId;
-            this.pageNum = request.pageNum;
-            this.pageSize = request.pageSize;
+            this.offset = request.offset;
             this.policyName = request.policyName;
             this.productCode = request.productCode;
+            this.size = request.size;
         } 
 
         /**
-         * attribute.
+         * centralProject.
          */
-        public Builder attribute(Attribute attribute) {
-            String attributeShrink = shrink(attribute, "attribute", "json");
-            this.putQueryParameter("attribute", attributeShrink);
-            this.attribute = attribute;
+        public Builder centralProject(String centralProject) {
+            this.putQueryParameter("centralProject", centralProject);
+            this.centralProject = centralProject;
             return this;
         }
 
@@ -167,20 +171,11 @@ public class ListCollectionPoliciesRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * offset.
          */
-        public Builder pageNum(Integer pageNum) {
-            this.putQueryParameter("pageNum", pageNum);
-            this.pageNum = pageNum;
-            return this;
-        }
-
-        /**
-         * pageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder offset(Integer offset) {
+            this.putQueryParameter("offset", offset);
+            this.offset = offset;
             return this;
         }
 
@@ -194,11 +189,23 @@ public class ListCollectionPoliciesRequest extends Request {
         }
 
         /**
-         * productCode.
+         * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("productCode", productCode);
             this.productCode = productCode;
+            return this;
+        }
+
+        /**
+         * size.
+         */
+        public Builder size(Integer size) {
+            this.putQueryParameter("size", size);
+            this.size = size;
             return this;
         }
 
@@ -209,65 +216,4 @@ public class ListCollectionPoliciesRequest extends Request {
 
     } 
 
-    public static class Attribute extends TeaModel {
-        @NameInMap("app")
-        private String app;
-
-        @NameInMap("policyGroup")
-        private String policyGroup;
-
-        private Attribute(Builder builder) {
-            this.app = builder.app;
-            this.policyGroup = builder.policyGroup;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Attribute create() {
-            return builder().build();
-        }
-
-        /**
-         * @return app
-         */
-        public String getApp() {
-            return this.app;
-        }
-
-        /**
-         * @return policyGroup
-         */
-        public String getPolicyGroup() {
-            return this.policyGroup;
-        }
-
-        public static final class Builder {
-            private String app; 
-            private String policyGroup; 
-
-            /**
-             * app.
-             */
-            public Builder app(String app) {
-                this.app = app;
-                return this;
-            }
-
-            /**
-             * policyGroup.
-             */
-            public Builder policyGroup(String policyGroup) {
-                this.policyGroup = policyGroup;
-                return this;
-            }
-
-            public Attribute build() {
-                return new Attribute(this);
-            } 
-
-        } 
-
-    }
 }

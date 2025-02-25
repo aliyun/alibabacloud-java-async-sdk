@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGtmAddressPoolRequest} extends {@link RequestModel}
  *
  * <p>DeleteGtmAddressPoolRequest</p>
  */
 public class DeleteGtmAddressPoolRequest extends Request {
-    @Query
-    @NameInMap("AddrPoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddrPoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addrPoolId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DeleteGtmAddressPoolRequest(Builder builder) {
@@ -69,7 +74,11 @@ public class DeleteGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * The ID of the address pool that you want to delete.
+         * <p>The ID of the address pool that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -78,7 +87,10 @@ public class DeleteGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

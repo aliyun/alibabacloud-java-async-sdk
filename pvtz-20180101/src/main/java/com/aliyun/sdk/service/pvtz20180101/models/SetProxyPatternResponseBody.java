@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetProxyPatternResponseBody} extends {@link TeaModel}
  *
  * <p>SetProxyPatternResponseBody</p>
  */
 public class SetProxyPatternResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private SetProxyPatternResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class SetProxyPatternResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class SetProxyPatternResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The global ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df2d03865266bd9842306db586d3****</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

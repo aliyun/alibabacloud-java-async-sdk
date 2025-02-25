@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskFlowConstantsRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskFlowConstantsRequest</p>
  */
 public class UpdateTaskFlowConstantsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DagConstants")
-    private java.util.List < DagConstants> dagConstants;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DagConstants")
+    private java.util.List<DagConstants> dagConstants;
 
-    @Query
-    @NameInMap("DagId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DagId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dagId;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private UpdateTaskFlowConstantsRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
     /**
      * @return dagConstants
      */
-    public java.util.List < DagConstants> getDagConstants() {
+    public java.util.List<DagConstants> getDagConstants() {
         return this.dagConstants;
     }
 
@@ -81,7 +86,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTaskFlowConstantsRequest, Builder> {
         private String regionId; 
-        private java.util.List < DagConstants> dagConstants; 
+        private java.util.List<DagConstants> dagConstants; 
         private Long dagId; 
         private Long tid; 
 
@@ -107,9 +112,9 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         }
 
         /**
-         * The constants for the task flow.
+         * <p>The constants for the task flow.</p>
          */
-        public Builder dagConstants(java.util.List < DagConstants> dagConstants) {
+        public Builder dagConstants(java.util.List<DagConstants> dagConstants) {
             String dagConstantsShrink = shrink(dagConstants, "DagConstants", "json");
             this.putQueryParameter("DagConstants", dagConstantsShrink);
             this.dagConstants = dagConstants;
@@ -117,7 +122,11 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         }
 
         /**
-         * The ID of the task flow. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+         * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3****</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -126,7 +135,10 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -141,11 +153,17 @@ public class UpdateTaskFlowConstantsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTaskFlowConstantsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTaskFlowConstantsRequest</p>
+     */
     public static class DagConstants extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DagConstants(Builder builder) {
@@ -180,7 +198,10 @@ public class UpdateTaskFlowConstantsRequest extends Request {
             private String value; 
 
             /**
-             * The key name of a constant for the task flow.
+             * <p>The key name of a constant for the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc_test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -188,7 +209,10 @@ public class UpdateTaskFlowConstantsRequest extends Request {
             }
 
             /**
-             * The key value of a constant for the task flow.
+             * <p>The key value of a constant for the task flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>poc_test</p>
              */
             public Builder value(String value) {
                 this.value = value;

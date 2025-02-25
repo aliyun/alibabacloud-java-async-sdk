@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlayTopVideosResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlayTopVideosResponseBody</p>
  */
 public class DescribePlayTopVideosResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TopPlayVideos")
+    @com.aliyun.core.annotation.NameInMap("TopPlayVideos")
     private TopPlayVideos topPlayVideos;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private DescribePlayTopVideosResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         private Long totalNum; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -94,7 +102,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B0BCF9F-2FD5-4817-****-7BEBBE3AF90B&quot;</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * The daily playback statistics on each top video.
+         * <p>The daily playback statistics on each top video.</p>
          */
         public Builder topPlayVideos(TopPlayVideos topPlayVideos) {
             this.topPlayVideos = topPlayVideos;
@@ -118,7 +132,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that were collected in playback statistics on top videos.
+         * <p>The total number of entries that were collected in playback statistics on top videos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -131,20 +148,26 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlayTopVideosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayTopVideosResponseBody</p>
+     */
     public static class TopPlayVideoStatis extends TeaModel {
-        @NameInMap("PlayDuration")
+        @com.aliyun.core.annotation.NameInMap("PlayDuration")
         private String playDuration;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UV")
+        @com.aliyun.core.annotation.NameInMap("UV")
         private String uv;
 
-        @NameInMap("VV")
+        @com.aliyun.core.annotation.NameInMap("VV")
         private String vv;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private TopPlayVideoStatis(Builder builder) {
@@ -206,7 +229,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The playback duration. Unit: milliseconds.
+             * <p>The total playback duration. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4640369</p>
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;
@@ -214,7 +240,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the video.
+             * <p>The title of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Four streams (two streams encrypted): LD-HLS-encrypted + SD-MP4 + HD-H</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -222,7 +251,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unique visitors.
+             * <p>The number of unique visitors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder uv(String uv) {
                 this.uv = uv;
@@ -230,7 +262,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * The number of video views.
+             * <p>The number of video views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107</p>
              */
             public Builder vv(String vv) {
                 this.vv = vv;
@@ -238,7 +273,10 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * <p>The ID of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2a8d4cb9ecbb487681473a15****8fda</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;
@@ -252,9 +290,15 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlayTopVideosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlayTopVideosResponseBody</p>
+     */
     public static class TopPlayVideos extends TeaModel {
-        @NameInMap("TopPlayVideoStatis")
-        private java.util.List < TopPlayVideoStatis> topPlayVideoStatis;
+        @com.aliyun.core.annotation.NameInMap("TopPlayVideoStatis")
+        private java.util.List<TopPlayVideoStatis> topPlayVideoStatis;
 
         private TopPlayVideos(Builder builder) {
             this.topPlayVideoStatis = builder.topPlayVideoStatis;
@@ -271,17 +315,17 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         /**
          * @return topPlayVideoStatis
          */
-        public java.util.List < TopPlayVideoStatis> getTopPlayVideoStatis() {
+        public java.util.List<TopPlayVideoStatis> getTopPlayVideoStatis() {
             return this.topPlayVideoStatis;
         }
 
         public static final class Builder {
-            private java.util.List < TopPlayVideoStatis> topPlayVideoStatis; 
+            private java.util.List<TopPlayVideoStatis> topPlayVideoStatis; 
 
             /**
              * TopPlayVideoStatis.
              */
-            public Builder topPlayVideoStatis(java.util.List < TopPlayVideoStatis> topPlayVideoStatis) {
+            public Builder topPlayVideoStatis(java.util.List<TopPlayVideoStatis> topPlayVideoStatis) {
                 this.topPlayVideoStatis = topPlayVideoStatis;
                 return this;
             }

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlaEventListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSlaEventListRequest</p>
  */
 public class DescribeSlaEventListRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Long page;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeSlaEventListRequest(Builder builder) {
@@ -127,7 +132,14 @@ public class DescribeSlaEventListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3289457398</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,7 +148,10 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -145,7 +160,10 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -154,7 +172,10 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +184,15 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The type of the service Valid values:</p>
+         * <ul>
+         * <li><strong>cn</strong>: Anti-DDoS Pro</li>
+         * <li><strong>cn-hongkong</strong>: Anti-DDoS Premium</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -172,7 +201,14 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3289457398</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,41 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateTemplateRequest</p>
  */
 public class CreateTemplateRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidationOptions")
+    private java.util.List < String > validationOptions;
 
     private CreateTemplateRequest(Builder builder) {
         super(builder);
@@ -45,6 +49,7 @@ public class CreateTemplateRequest extends Request {
         this.templateBody = builder.templateBody;
         this.templateName = builder.templateName;
         this.templateURL = builder.templateURL;
+        this.validationOptions = builder.validationOptions;
     }
 
     public static Builder builder() {
@@ -102,6 +107,13 @@ public class CreateTemplateRequest extends Request {
         return this.templateURL;
     }
 
+    /**
+     * @return validationOptions
+     */
+    public java.util.List < String > getValidationOptions() {
+        return this.validationOptions;
+    }
+
     public static final class Builder extends Request.Builder<CreateTemplateRequest, Builder> {
         private String description; 
         private String resourceGroupId; 
@@ -109,6 +121,7 @@ public class CreateTemplateRequest extends Request {
         private String templateBody; 
         private String templateName; 
         private String templateURL; 
+        private java.util.List < String > validationOptions; 
 
         private Builder() {
             super();
@@ -122,10 +135,14 @@ public class CreateTemplateRequest extends Request {
             this.templateBody = request.templateBody;
             this.templateName = request.templateName;
             this.templateURL = request.templateURL;
+            this.validationOptions = request.validationOptions;
         } 
 
         /**
-         * The description of the template. The description can be up to 256 characters in length.
+         * <p>The description of the template. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,9 +151,10 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.\
-         * <p>
-         * For more information about resource groups, see [Resource groups](~~94475~~).
+         * <p>The ID of the resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -145,7 +163,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The tags of the template.
+         * <p>The tags of the template.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -154,34 +172,20 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
-         * 
-         * > You must specify TemplateBody or TemplateURL.
-         * 
-         * You can create a Terraform template based on your business requirements. The following sample code provides an example on how to create a Terraform template:
-         * 
-         *     {
-         *       "ROSTemplateFormatVersion": "2015-09-01",
-         *       "Transform": "Aliyun::Terraform-v1.0",
-         *       "Workspace": {
-         *         "main.tf": "variable  \"name\" {  default = \"auto_provisioning_group\"}"
-         *       },
-         *       "Outputs": {}
-         *     }
-         * 
-         * For more information about Terraform templates, see [Structure of Terraform templates](~~184397~~).
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }
 
         /**
-         * The name of the template.\
-         * <p>
-         * The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (\_). It must start with a digit or a letter.
+         * <p>The name of the template.<br>The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -190,14 +194,26 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body must be 1 to 1,024 bytes in length. If you do not specify the region of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body must be 1 to 1,024 bytes in length. If you do not specify the region of the OSS bucket, the value of RegionId is used.</p>
+         * <blockquote>
+         * <p>You must specify TemplateBody or TemplateURL.</p>
+         * </blockquote>
          * 
-         * > You must specify TemplateBody or TemplateURL.
+         * <strong>example:</strong>
+         * <p>oss://ros/template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
             this.templateURL = templateURL;
+            return this;
+        }
+
+        /**
+         * ValidationOptions.
+         */
+        public Builder validationOptions(java.util.List < String > validationOptions) {
+            this.putQueryParameter("ValidationOptions", validationOptions);
+            this.validationOptions = validationOptions;
             return this;
         }
 
@@ -208,12 +224,18 @@ public class CreateTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTemplateRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -248,10 +270,14 @@ public class CreateTemplateRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the template.
-             * <p>
+             * <p>The tag key of the template.</p>
+             * <blockquote>
+             * <p>Tags is optional. If you need to specify Tags, you must also specify Key.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > Tags is optional. If you need to specify Tags, you must also specify Key.
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +285,10 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * The tag value of the template.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenamePlaybookNodeResponseBody} extends {@link TeaModel}
  *
  * <p>RenamePlaybookNodeResponseBody</p>
  */
 public class RenamePlaybookNodeResponseBody extends TeaModel {
-    @NameInMap("RenameResult")
+    @com.aliyun.core.annotation.NameInMap("RenameResult")
     private String renameResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RenamePlaybookNodeResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RenameResult.
+         * <p>The returned new name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_process</p>
          */
         public Builder renameResult(String renameResult) {
             this.renameResult = renameResult;
@@ -58,7 +61,10 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E1EC464-3BD7-518F-9937-BCC12E6855FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

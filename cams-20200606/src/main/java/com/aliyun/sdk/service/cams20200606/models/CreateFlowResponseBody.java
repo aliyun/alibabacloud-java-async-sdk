@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFlowResponseBody</p>
  */
 public class CreateFlowResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateFlowResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class CreateFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>If OK is returned, the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,10 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,10 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +120,20 @@ public class CreateFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFlowResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
         private Data(Builder builder) {
@@ -162,7 +177,7 @@ public class CreateFlowResponseBody extends TeaModel {
             private String flowName; 
 
             /**
-             * Categories.
+             * <p>The categories of the Flow.</p>
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -170,7 +185,10 @@ public class CreateFlowResponseBody extends TeaModel {
             }
 
             /**
-             * flow ID。
+             * <p>The Flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>333993838***</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -178,7 +196,10 @@ public class CreateFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * <p>The name of the Flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

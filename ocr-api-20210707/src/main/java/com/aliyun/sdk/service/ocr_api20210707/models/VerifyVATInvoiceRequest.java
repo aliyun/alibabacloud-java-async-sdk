@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyVATInvoiceRequest} extends {@link RequestModel}
  *
  * <p>VerifyVATInvoiceRequest</p>
  */
 public class VerifyVATInvoiceRequest extends Request {
-    @Query
-    @NameInMap("InvoiceCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceCode")
     private String invoiceCode;
 
-    @Query
-    @NameInMap("InvoiceDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invoiceDate;
 
-    @Query
-    @NameInMap("InvoiceNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceKind")
+    private Integer invoiceKind;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invoiceNo;
 
-    @Query
-    @NameInMap("InvoiceSum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceSum")
     private String invoiceSum;
 
-    @Query
-    @NameInMap("VerifyCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyCode")
     private String verifyCode;
 
     private VerifyVATInvoiceRequest(Builder builder) {
         super(builder);
         this.invoiceCode = builder.invoiceCode;
         this.invoiceDate = builder.invoiceDate;
+        this.invoiceKind = builder.invoiceKind;
         this.invoiceNo = builder.invoiceNo;
         this.invoiceSum = builder.invoiceSum;
         this.verifyCode = builder.verifyCode;
@@ -71,6 +76,13 @@ public class VerifyVATInvoiceRequest extends Request {
     }
 
     /**
+     * @return invoiceKind
+     */
+    public Integer getInvoiceKind() {
+        return this.invoiceKind;
+    }
+
+    /**
      * @return invoiceNo
      */
     public String getInvoiceNo() {
@@ -94,6 +106,7 @@ public class VerifyVATInvoiceRequest extends Request {
     public static final class Builder extends Request.Builder<VerifyVATInvoiceRequest, Builder> {
         private String invoiceCode; 
         private String invoiceDate; 
+        private Integer invoiceKind; 
         private String invoiceNo; 
         private String invoiceSum; 
         private String verifyCode; 
@@ -106,6 +119,7 @@ public class VerifyVATInvoiceRequest extends Request {
             super(request);
             this.invoiceCode = request.invoiceCode;
             this.invoiceDate = request.invoiceDate;
+            this.invoiceKind = request.invoiceKind;
             this.invoiceNo = request.invoiceNo;
             this.invoiceSum = request.invoiceSum;
             this.verifyCode = request.verifyCode;
@@ -121,7 +135,7 @@ public class VerifyVATInvoiceRequest extends Request {
         }
 
         /**
-         * InvoiceDate.
+         * <p>This parameter is required.</p>
          */
         public Builder invoiceDate(String invoiceDate) {
             this.putQueryParameter("InvoiceDate", invoiceDate);
@@ -130,7 +144,16 @@ public class VerifyVATInvoiceRequest extends Request {
         }
 
         /**
-         * InvoiceNo.
+         * InvoiceKind.
+         */
+        public Builder invoiceKind(Integer invoiceKind) {
+            this.putQueryParameter("InvoiceKind", invoiceKind);
+            this.invoiceKind = invoiceKind;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder invoiceNo(String invoiceNo) {
             this.putQueryParameter("InvoiceNo", invoiceNo);

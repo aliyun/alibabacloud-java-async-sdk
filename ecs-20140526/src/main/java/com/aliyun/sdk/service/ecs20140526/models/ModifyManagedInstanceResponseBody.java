@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyManagedInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyManagedInstanceResponseBody</p>
  */
 public class ModifyManagedInstanceResponseBody extends TeaModel {
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyManagedInstanceResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the managed instance.
+         * <p>The name of the managed instance.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -58,7 +63,10 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the managed instance.
+         * <p>Details of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyManagedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyManagedInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
         private Instance(Builder builder) {
@@ -110,7 +124,10 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
             private String instanceName; 
 
             /**
-             * InstanceId.
+             * <p>The managed instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mi-hz01nmcf****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -118,7 +135,10 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the managed instance.
+             * <p>The ID of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testInstanceName</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

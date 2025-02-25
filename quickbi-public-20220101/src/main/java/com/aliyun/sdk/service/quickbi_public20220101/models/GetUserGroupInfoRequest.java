@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserGroupInfoRequest} extends {@link RequestModel}
  *
  * <p>GetUserGroupInfoRequest</p>
  */
 public class GetUserGroupInfoRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
     private GetUserGroupInfoRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class GetUserGroupInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the user group.
+         * <p>The ID of the user group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSnapshotUrlsResponseBody} extends {@link TeaModel}
  *
  * <p>GetSnapshotUrlsResponseBody</p>
  */
 public class GetSnapshotUrlsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotUrls")
-    private java.util.List < String > snapshotUrls;
+    @com.aliyun.core.annotation.NameInMap("SnapshotUrls")
+    private java.util.List<String> snapshotUrls;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
-    @NameInMap("WebVTTUrl")
+    @com.aliyun.core.annotation.NameInMap("WebVTTUrl")
     private String webVTTUrl;
 
     private GetSnapshotUrlsResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
     /**
      * @return snapshotUrls
      */
-    public java.util.List < String > getSnapshotUrls() {
+    public java.util.List<String> getSnapshotUrls() {
         return this.snapshotUrls;
     }
 
@@ -69,12 +74,15 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > snapshotUrls; 
+        private java.util.List<String> snapshotUrls; 
         private Integer total; 
         private String webVTTUrl; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,15 +90,18 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotUrls.
+         * <p>The list of snapshot URLs.</p>
          */
-        public Builder snapshotUrls(java.util.List < String > snapshotUrls) {
+        public Builder snapshotUrls(java.util.List<String> snapshotUrls) {
             this.snapshotUrls = snapshotUrls;
             return this;
         }
 
         /**
-         * Total.
+         * <p>The total number of snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -98,7 +109,10 @@ public class GetSnapshotUrlsResponseBody extends TeaModel {
         }
 
         /**
-         * WebVTTUrl.
+         * <p>The URL of the WebVTT file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt">http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt</a></p>
          */
         public Builder webVTTUrl(String webVTTUrl) {
             this.webVTTUrl = webVTTUrl;

@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchRepositoryRequest} extends {@link RequestModel}
  *
  * <p>ListSearchRepositoryRequest</p>
  */
 public class ListSearchRepositoryRequest extends Request {
-    @Body
-    @NameInMap("aliyunPk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aliyunPk")
     private String aliyunPk;
 
-    @Body
-    @NameInMap("keyword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
-    @Body
-    @NameInMap("order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order")
     private String order;
 
-    @Body
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("repoPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("repoPath")
     private RepoPath repoPath;
 
-    @Body
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @Body
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
-    @Body
-    @NameInMap("visibilityLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibilityLevel")
     private Integer visibilityLevel;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private ListSearchRepositoryRequest(Builder builder) {
@@ -191,7 +196,10 @@ public class ListSearchRepositoryRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -263,7 +271,10 @@ public class ListSearchRepositoryRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61e54b0e0bb300d827e1ae27</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -278,14 +289,20 @@ public class ListSearchRepositoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSearchRepositoryRequest} extends {@link TeaModel}
+     *
+     * <p>ListSearchRepositoryRequest</p>
+     */
     public static class RepoPath extends TeaModel {
-        @NameInMap("matchType")
+        @com.aliyun.core.annotation.NameInMap("matchType")
         private String matchType;
 
-        @NameInMap("operatorType")
+        @com.aliyun.core.annotation.NameInMap("operatorType")
         private String operatorType;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RepoPath(Builder builder) {

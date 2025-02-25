@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmMonitorRequest} extends {@link RequestModel}
  *
  * <p>AddGtmMonitorRequest</p>
  */
 public class AddGtmMonitorRequest extends Request {
-    @Query
-    @NameInMap("AddrPoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddrPoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addrPoolId;
 
-    @Query
-    @NameInMap("EvaluationCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer evaluationCount;
 
-    @Query
-    @NameInMap("Interval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer interval;
 
-    @Query
-    @NameInMap("IspCityNode")
-    @Validation(required = true)
-    private java.util.List < IspCityNode> ispCityNode;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspCityNode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<IspCityNode> ispCityNode;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MonitorExtendInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorExtendInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String monitorExtendInfo;
 
-    @Query
-    @NameInMap("ProtocolType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocolType;
 
-    @Query
-    @NameInMap("Timeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeout;
 
     private AddGtmMonitorRequest(Builder builder) {
@@ -100,7 +105,7 @@ public class AddGtmMonitorRequest extends Request {
     /**
      * @return ispCityNode
      */
-    public java.util.List < IspCityNode> getIspCityNode() {
+    public java.util.List<IspCityNode> getIspCityNode() {
         return this.ispCityNode;
     }
 
@@ -136,7 +141,7 @@ public class AddGtmMonitorRequest extends Request {
         private String addrPoolId; 
         private Integer evaluationCount; 
         private Integer interval; 
-        private java.util.List < IspCityNode> ispCityNode; 
+        private java.util.List<IspCityNode> ispCityNode; 
         private String lang; 
         private String monitorExtendInfo; 
         private String protocolType; 
@@ -159,7 +164,11 @@ public class AddGtmMonitorRequest extends Request {
         } 
 
         /**
-         * The ID of the address pool.
+         * <p>The ID of the address pool.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -168,7 +177,11 @@ public class AddGtmMonitorRequest extends Request {
         }
 
         /**
-         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+         * <p>The number of consecutive failures.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -177,7 +190,11 @@ public class AddGtmMonitorRequest extends Request {
         }
 
         /**
-         * The health check interval. Unit: seconds. Set the value to 60.
+         * <p>The health check interval. Unit: seconds. Set the value to 60.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -186,16 +203,20 @@ public class AddGtmMonitorRequest extends Request {
         }
 
         /**
-         * The monitored nodes.
+         * <p>The nodes for monitoring.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
+        public Builder ispCityNode(java.util.List<IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
             this.ispCityNode = ispCityNode;
             return this;
         }
 
         /**
-         * The language of the values of specific response parameters.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -204,27 +225,30 @@ public class AddGtmMonitorRequest extends Request {
         }
 
         /**
-         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
-         * <p>
+         * <p>The extended information. The required parameters vary based on the health check protocol.</p>
+         * <p>HTTP or HTTPS</p>
+         * <ul>
+         * <li>port: the port that you want to check</li>
+         * <li>failureRate: the failure rate</li>
+         * <li>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</li>
+         * <li>host: the host settings</li>
+         * <li>path: the URL path</li>
+         * </ul>
+         * <p>PING</p>
+         * <ul>
+         * <li>packetNum: the number of ping packets</li>
+         * <li>packetLossRate: the packet loss rate</li>
+         * <li>failureRate: the failure rate</li>
+         * </ul>
+         * <p>TCP</p>
+         * <ul>
+         * <li>port: the port that you want to check</li>
+         * <li>failureRate: the failure rate</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * HTTP or HTTPS:
-         * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
-         * *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
-         * *   host: the host configuration.
-         * *   path: the health check URL.
-         * 
-         * PING:
-         * 
-         * *   packetNum: the number of ping packets.
-         * *   packetLossRate: the loss rate of ping packets.
-         * *   failureRate: the failure rate.
-         * 
-         * TCP:
-         * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:200,&quot;path&quot;:&quot;/index.htm&quot;,&quot;host&quot;:&quot;aliyun.com&quot;}</p>
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -233,13 +257,17 @@ public class AddGtmMonitorRequest extends Request {
         }
 
         /**
-         * The protocol used for the health check. Valid values:
-         * <p>
+         * <p>The protocol used for the health check. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * <li>PING</li>
+         * <li>TCP</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   HTTP
-         * *   HTTPS
-         * *   PING
-         * *   TCP
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -248,7 +276,11 @@ public class AddGtmMonitorRequest extends Request {
         }
 
         /**
-         * The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
+         * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -263,11 +295,17 @@ public class AddGtmMonitorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddGtmMonitorRequest} extends {@link TeaModel}
+     *
+     * <p>AddGtmMonitorRequest</p>
+     */
     public static class IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
         private IspCityNode(Builder builder) {
@@ -302,10 +340,11 @@ public class AddGtmMonitorRequest extends Request {
             private String ispCode; 
 
             /**
-             * The code of the city where the monitored node is deployed.
-             * <p>
+             * <p>The city code.</p>
+             * <p>Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.</p>
              * 
-             * For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
+             * <strong>example:</strong>
+             * <p>503</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -313,11 +352,14 @@ public class AddGtmMonitorRequest extends Request {
             }
 
             /**
-             * The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
-             * <p>
+             * <p>The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.</p>
+             * <ul>
+             * <li>If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.</li>
+             * <li>If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.</li>
+             * </ul>
              * 
-             * *   If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.
-             * *   If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

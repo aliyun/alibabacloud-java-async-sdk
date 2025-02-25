@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSavedQueryResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSavedQueryResponseBody</p>
  */
 public class DeleteSavedQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSavedQueryResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class DeleteSavedQueryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D170D58E-6256-5344-8F5E-922EC9ECB7EA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

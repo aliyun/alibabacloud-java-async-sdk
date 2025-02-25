@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReportABMetricGroupRequest</p>
  */
 public class ReportABMetricGroupRequest extends Request {
-    @Path
-    @NameInMap("ABMetricGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ABMetricGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ABMetricGroupId;
 
-    @Body
-    @NameInMap("BaseExperimentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaseExperimentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baseExperimentId;
 
-    @Body
-    @NameInMap("DimensionFields")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DimensionFields")
     private String dimensionFields;
 
-    @Body
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Body
-    @NameInMap("ExperimentGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExperimentGroupId")
     private String experimentGroupId;
 
-    @Body
-    @NameInMap("ExperimentIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExperimentIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String experimentIds;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("ReportType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReportType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportType;
 
-    @Body
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
-    @Body
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    @Body
-    @NameInMap("TimeStatisticsMethod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeStatisticsMethod")
     private String timeStatisticsMethod;
 
     private ReportABMetricGroupRequest(Builder builder) {

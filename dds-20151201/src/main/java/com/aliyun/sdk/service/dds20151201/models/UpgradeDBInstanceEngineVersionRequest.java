@@ -1,46 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceEngineVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBInstanceEngineVersionRequest</p>
  */
 public class UpgradeDBInstanceEngineVersionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
+    private Integer switchMode;
 
     private UpgradeDBInstanceEngineVersionRequest(Builder builder) {
         super(builder);
@@ -51,6 +61,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -115,6 +126,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return switchMode
+     */
+    public Integer getSwitchMode() {
+        return this.switchMode;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeDBInstanceEngineVersionRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -123,6 +141,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer switchMode; 
 
         private Builder() {
             super();
@@ -137,6 +156,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -149,7 +169,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -158,10 +182,14 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The database version to which you want to upgrade. Valid values: **3.4**, **4.0**, and **4.2**.
-         * <p>
+         * <p>The database version to which you want to upgrade. Valid values: <strong>3.4</strong>, <strong>4.0</strong>, and <strong>4.2</strong>.</p>
+         * <blockquote>
+         * <p> This database version must be later than the current database version of the instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This database version must be later than the current database version of the instance.
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -202,6 +230,22 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * <p>The time when to perform the upgrade. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: immediately performs the upgrade.</li>
+         * <li><strong>1</strong>: performs the upgrade during the maintenance window.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder switchMode(Integer switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

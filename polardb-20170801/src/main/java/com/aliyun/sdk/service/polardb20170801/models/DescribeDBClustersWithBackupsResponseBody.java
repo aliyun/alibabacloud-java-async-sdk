@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClustersWithBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClustersWithBackupsResponseBody</p>
  */
 public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBClustersWithBackupsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details about the cluster.
+         * <p>The details about the cluster.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +99,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned pages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of clusters returned per page.
+         * <p>The number of clusters returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8529AA2-522F-4B30-B80B-8F7D39******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,62 +148,68 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClustersWithBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClustersWithBackupsResponseBody</p>
+     */
     public static class DBCluster extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
         private String DBClusterDescription;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBClusterNetworkType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
         private String DBClusterNetworkType;
 
-        @NameInMap("DBClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
         private String DBClusterStatus;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("DeletedTime")
+        @com.aliyun.core.annotation.NameInMap("DeletedTime")
         private String deletedTime;
 
-        @NameInMap("DeletionLock")
+        @com.aliyun.core.annotation.NameInMap("DeletionLock")
         private Integer deletionLock;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("IsDeleted")
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
         private Integer isDeleted;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBCluster(Builder builder) {
@@ -374,7 +397,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-09T09:33:51Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -382,7 +408,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -390,7 +419,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of cluster.
+             * <p>The ID of cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-****************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -398,7 +430,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the cluster.
+             * <p>The network type of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder DBClusterNetworkType(String DBClusterNetworkType) {
                 this.DBClusterNetworkType = DBClusterNetworkType;
@@ -406,20 +441,23 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>Creating: The cluster is being created.</li>
+             * <li>Running: The cluster is running.</li>
+             * <li>Deleting: The cluster is being released.</li>
+             * <li>Rebooting: The cluster is restarting.</li>
+             * <li>DBNodeCreating: The node is being added.</li>
+             * <li>DBNodeDeleting: The node is being deleted.</li>
+             * <li>ClassChanging: The specifications of the node are being changed.</li>
+             * <li>NetAddressCreating: The network connection is being created.</li>
+             * <li>NetAddressDeleting: The network connection is being deleted.</li>
+             * <li>NetAddressModifying: The network connection is being modified.</li>
+             * <li>Deleted: The cluster has been released.</li>
+             * </ul>
              * 
-             * *   Creating: The cluster is being created.
-             * *   Running: The cluster is running.
-             * *   Deleting: The cluster is being released.
-             * *   Rebooting: The cluster is restarting.
-             * *   DBNodeCreating: The node is being added.
-             * *   DBNodeDeleting: The node is being deleted.
-             * *   ClassChanging: The specifications of the node are being changed.
-             * *   NetAddressCreating: The network connection is being created.
-             * *   NetAddressDeleting: The network connection is being deleted.
-             * *   NetAddressModifying: The network connection is being modified.
-             * *   Deleted: The cluster has been released.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -427,7 +465,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the node.
+             * <p>The specifications of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.medium</p>
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -435,7 +476,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -443,7 +487,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * <p>The version of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -451,7 +498,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was deleted.
+             * <p>The time when the cluster was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-12T03:25:37Z</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -459,11 +509,14 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster is locked and can be deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the cluster is locked and can be deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The cluster is not locked and can be deleted.</li>
+             * <li><strong>1</strong>: The cluster is locked and cannot be deleted.</li>
+             * </ul>
              * 
-             * *   **0**: The cluster is not locked and can be deleted.
-             * *   **1**: The cluster is locked and cannot be deleted.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deletionLock(Integer deletionLock) {
                 this.deletionLock = deletionLock;
@@ -471,7 +524,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POLARDB</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -479,10 +535,13 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster expires.
-             * <p>
+             * <p>The time when the cluster expires.</p>
+             * <blockquote>
+             * <p>A specific value will be returned only for subscription clusters. For pay-as-you-go clusters, an empty string will be returned.</p>
+             * </blockquote>
              * 
-             * > A specific value will be returned only for subscription clusters. For pay-as-you-go clusters, an empty string will be returned.
+             * <strong>example:</strong>
+             * <p>2022-09-14T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -490,10 +549,13 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster has expired.
-             * <p>
+             * <p>Indicates whether the cluster has expired.</p>
+             * <blockquote>
+             * <p>A specific value will be returned only for subscription clusters.</p>
+             * </blockquote>
              * 
-             * > A specific value will be returned only for subscription clusters.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -501,11 +563,14 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster was released. Valid values:
-             * <p>
+             * <p>Indicates whether the cluster was released. Valid values:</p>
+             * <ul>
+             * <li>1: released</li>
+             * <li>0: not released</li>
+             * </ul>
              * 
-             * *   1: released
-             * *   0: not released
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDeleted(Integer isDeleted) {
                 this.isDeleted = isDeleted;
@@ -513,12 +578,15 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cluster lock. Valid values:
-             * <p>
+             * <p>The state of the cluster lock. Valid values:</p>
+             * <ul>
+             * <li><strong>Unlock</strong>: The cluster is not locked.</li>
+             * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
+             * <li><strong>LockByExpiration</strong>: The cluster is automatically locked after the cluster expires.</li>
+             * </ul>
              * 
-             * *   **Unlock**: The cluster is not locked.
-             * *   **ManualLock**: The cluster is manually locked.
-             * *   **LockByExpiration**: The cluster is automatically locked after the cluster expires.
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -526,11 +594,14 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+             * <li><strong>Prepaid</strong>: subscription</li>
+             * </ul>
              * 
-             * *   **Postpaid**: pay-as-you-go.
-             * *   **Prepaid**: subscription
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -538,7 +609,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the cluster.
+             * <p>The region ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -546,7 +620,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the cluster.
+             * <p>The VPC ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-******************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -554,7 +631,10 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance is located.
+             * <p>The ID of the zone in which the instance is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -568,9 +648,15 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClustersWithBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClustersWithBackupsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBCluster")
-        private java.util.List < DBCluster> DBCluster;
+        @com.aliyun.core.annotation.NameInMap("DBCluster")
+        private java.util.List<DBCluster> DBCluster;
 
         private Items(Builder builder) {
             this.DBCluster = builder.DBCluster;
@@ -587,17 +673,17 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         /**
          * @return DBCluster
          */
-        public java.util.List < DBCluster> getDBCluster() {
+        public java.util.List<DBCluster> getDBCluster() {
             return this.DBCluster;
         }
 
         public static final class Builder {
-            private java.util.List < DBCluster> DBCluster; 
+            private java.util.List<DBCluster> DBCluster; 
 
             /**
              * DBCluster.
              */
-            public Builder DBCluster(java.util.List < DBCluster> DBCluster) {
+            public Builder DBCluster(java.util.List<DBCluster> DBCluster) {
                 this.DBCluster = DBCluster;
                 return this;
             }

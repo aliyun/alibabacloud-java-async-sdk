@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLabelTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListLabelTablesResponseBody</p>
  */
 public class ListLabelTablesResponseBody extends TeaModel {
-    @NameInMap("LabelTables")
-    private java.util.List < LabelTables> labelTables;
+    @com.aliyun.core.annotation.NameInMap("LabelTables")
+    private java.util.List<LabelTables> labelTables;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLabelTablesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListLabelTablesResponseBody extends TeaModel {
     /**
      * @return labelTables
      */
-    public java.util.List < LabelTables> getLabelTables() {
+    public java.util.List<LabelTables> getLabelTables() {
         return this.labelTables;
     }
 
@@ -57,14 +62,14 @@ public class ListLabelTablesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LabelTables> labelTables; 
+        private java.util.List<LabelTables> labelTables; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * LabelTables.
          */
-        public Builder labelTables(java.util.List < LabelTables> labelTables) {
+        public Builder labelTables(java.util.List<LabelTables> labelTables) {
             this.labelTables = labelTables;
             return this;
         }
@@ -91,32 +96,38 @@ public class ListLabelTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLabelTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLabelTablesResponseBody</p>
+     */
     public static class LabelTables extends TeaModel {
-        @NameInMap("DatasourceId")
+        @com.aliyun.core.annotation.NameInMap("DatasourceId")
         private String datasourceId;
 
-        @NameInMap("DatasourceName")
+        @com.aliyun.core.annotation.NameInMap("DatasourceName")
         private String datasourceName;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("LabelTableId")
+        @com.aliyun.core.annotation.NameInMap("LabelTableId")
         private String labelTableId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
         private LabelTables(Builder builder) {

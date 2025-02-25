@@ -1,34 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScheduledAction} extends {@link TeaModel}
  *
  * <p>ScheduledAction</p>
  */
 public class ScheduledAction extends TeaModel {
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("scheduleExpression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("scheduleExpression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleExpression;
 
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
-    @NameInMap("target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long target;
+
+    @com.aliyun.core.annotation.NameInMap("timeZone")
+    private String timeZone;
 
     private ScheduledAction(Builder builder) {
         this.endTime = builder.endTime;
@@ -36,6 +39,7 @@ public class ScheduledAction extends TeaModel {
         this.scheduleExpression = builder.scheduleExpression;
         this.startTime = builder.startTime;
         this.target = builder.target;
+        this.timeZone = builder.timeZone;
     }
 
     public static Builder builder() {
@@ -81,12 +85,20 @@ public class ScheduledAction extends TeaModel {
         return this.target;
     }
 
+    /**
+     * @return timeZone
+     */
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
     public static final class Builder {
         private String endTime; 
         private String name; 
         private String scheduleExpression; 
         private String startTime; 
         private Long target; 
+        private String timeZone; 
 
         /**
          * endTime.
@@ -97,7 +109,10 @@ public class ScheduledAction extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -105,7 +120,10 @@ public class ScheduledAction extends TeaModel {
         }
 
         /**
-         * scheduleExpression.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron(0 0 22 * * *)</p>
          */
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
@@ -121,10 +139,21 @@ public class ScheduledAction extends TeaModel {
         }
 
         /**
-         * target.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder target(Long target) {
             this.target = target;
+            return this;
+        }
+
+        /**
+         * timeZone.
+         */
+        public Builder timeZone(String timeZone) {
+            this.timeZone = timeZone;
             return this;
         }
 

@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMessageResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMessageResponseBody</p>
  */
 public class QueryMessageResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorDescription")
+    @com.aliyun.core.annotation.NameInMap("ErrorDescription")
     private String errorDescription;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
-    @NameInMap("NumberDetail")
+    @com.aliyun.core.annotation.NameInMap("NumberDetail")
     private NumberDetail numberDetail;
 
-    @NameInMap("ReceiveDate")
+    @com.aliyun.core.annotation.NameInMap("ReceiveDate")
     private String receiveDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseCode")
+    @com.aliyun.core.annotation.NameInMap("ResponseCode")
     private String responseCode;
 
-    @NameInMap("ResponseDescription")
+    @com.aliyun.core.annotation.NameInMap("ResponseDescription")
     private String responseDescription;
 
-    @NameInMap("SendDate")
+    @com.aliyun.core.annotation.NameInMap("SendDate")
     private String sendDate;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("To")
+    @com.aliyun.core.annotation.NameInMap("To")
     private String to;
 
     private QueryMessageResponseBody(Builder builder) {
@@ -170,7 +170,10 @@ public class QueryMessageResponseBody extends TeaModel {
         private String to; 
 
         /**
-         * The status code of the message.
+         * <p>The status code of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELIVERED</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -178,7 +181,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the status code.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorDescription(String errorDescription) {
             this.errorDescription = errorDescription;
@@ -186,7 +192,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the message.
+         * <p>The content of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -194,7 +203,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the message.
+         * <p>The ID of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1008030xxx3003</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -202,7 +214,7 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the mobile phone number.
+         * <p>The details about the mobile phone number.</p>
          */
         public Builder numberDetail(NumberDetail numberDetail) {
             this.numberDetail = numberDetail;
@@ -210,7 +222,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the delivery receipt was received from the carrier.
+         * <p>The time when the delivery receipt was received from the carrier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mon, 24 Dec 2018 16:58:22 +0800</p>
          */
         public Builder receiveDate(String receiveDate) {
             this.receiveDate = receiveDate;
@@ -218,7 +233,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F655A8D5-B967-440B-8683-DAD6FF8D28D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +244,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The status code of the delivery request.
+         * <p>The status code of the delivery request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder responseCode(String responseCode) {
             this.responseCode = responseCode;
@@ -234,7 +255,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the delivery request status.
+         * <p>The description of the delivery request status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The SMS Send Request was accepted</p>
          */
         public Builder responseDescription(String responseDescription) {
             this.responseDescription = responseDescription;
@@ -242,7 +266,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the message was sent to the carrier.
+         * <p>The time when the message was sent to the carrier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mon, 24 Dec 2018 16:58:22 +0800</p>
          */
         public Builder sendDate(String sendDate) {
             this.sendDate = sendDate;
@@ -250,12 +277,15 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The delivery status of the message.
-         * <p>
+         * <p>The delivery status of the message.</p>
+         * <ul>
+         * <li>1: The message was sent.</li>
+         * <li>2: The message failed to be sent.</li>
+         * <li>3: The message is being sent.</li>
+         * </ul>
          * 
-         * *   1: The message was sent.
-         * *   2: The message failed to be sent.
-         * *   3: The message is being sent.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -263,7 +293,10 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The mobile phone number to which the message was sent.
+         * <p>The mobile phone number to which the message was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6581xxx810</p>
          */
         public Builder to(String to) {
             this.to = to;
@@ -276,14 +309,20 @@ public class QueryMessageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMessageResponseBody</p>
+     */
     public static class NumberDetail extends TeaModel {
-        @NameInMap("Carrier")
+        @com.aliyun.core.annotation.NameInMap("Carrier")
         private String carrier;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private NumberDetail(Builder builder) {
@@ -327,7 +366,10 @@ public class QueryMessageResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The carrier that owns the mobile phone number.
+             * <p>The carrier that owns the mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CMI</p>
              */
             public Builder carrier(String carrier) {
                 this.carrier = carrier;
@@ -335,7 +377,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The country to which the mobile phone number belongs.
+             * <p>The country to which the mobile phone number belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -343,7 +388,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the mobile phone number belongs.
+             * <p>The region to which the mobile phone number belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HongKong</p>
              */
             public Builder region(String region) {
                 this.region = region;

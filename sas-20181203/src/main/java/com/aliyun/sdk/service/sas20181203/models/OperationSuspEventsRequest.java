@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationSuspEventsRequest} extends {@link RequestModel}
  *
  * <p>OperationSuspEventsRequest</p>
  */
 public class OperationSuspEventsRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("Operation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Operation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operation;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("SubOperation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubOperation")
     private String subOperation;
 
-    @Query
-    @NameInMap("SuspiciousEventIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SuspiciousEventIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String suspiciousEventIds;
 
-    @Query
-    @NameInMap("WarnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarnType")
     private String warnType;
 
     private OperationSuspEventsRequest(Builder builder) {
@@ -126,10 +131,11 @@ public class OperationSuspEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the request source.
-         * <p>
+         * <p>The ID of the request source.</p>
+         * <p>Set the value to <strong>sas</strong>, which indicates that the request is sent from Security Center.</p>
          * 
-         * Set the value to **sas**, which indicates that the request is sent from Security Center.
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -138,14 +144,18 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on alerts. Valid values:
-         * <p>
+         * <p>The operation that you want to perform on alerts. Valid values:</p>
+         * <ul>
+         * <li><strong>deal</strong>: quarantines the source file of the malicious process.</li>
+         * <li><strong>ignore</strong>: ignores the alerts.</li>
+         * <li><strong>mark_mis_info</strong>: marks the alerts as false positives by adding the alerts to the whitelist.</li>
+         * <li><strong>rm_mark_mis_info</strong>: cancels false positives by removing the alerts from the whitelist.</li>
+         * <li><strong>offline_handled</strong>: marks the alerts as handled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **deal**: quarantines the source file of the malicious process.
-         * *   **ignore**: ignores the alerts.
-         * *   **mark_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.
-         * *   **rm_mark_mis_info**: cancels false positives by removing the alerts from the whitelist.
-         * *   **offline_handled**: marks the alerts as handled.
+         * <strong>example:</strong>
+         * <p>deal</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -154,7 +164,10 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -163,12 +176,15 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The suboperation that you want to perform when you quarantine the source file of the malicious process. Valid values:
-         * <p>
+         * <p>The suboperation that you want to perform when you quarantine the source file of the malicious process. Valid values:</p>
+         * <ul>
+         * <li><strong>killAndQuaraFileByPidAndMd5andPath</strong>: terminates the process based on its process ID (PID) and quarantines the source file of the process.</li>
+         * <li><strong>quaraFileByMd5andPath</strong>: quarantines the source file of the process.</li>
+         * <li><strong>killAndQuaraFileByMd5andPath</strong>: terminates the process and quarantines the source file of the process.</li>
+         * </ul>
          * 
-         * *   **killAndQuaraFileByPidAndMd5andPath**: terminates the process based on its process ID (PID) and quarantines the source file of the process.
-         * *   **quaraFileByMd5andPath**: quarantines the source file of the process.
-         * *   **killAndQuaraFileByMd5andPath**: terminates the process and quarantines the source file of the process.
+         * <strong>example:</strong>
+         * <p>killAndQuaraFileByPidAndMd5andPath</p>
          */
         public Builder subOperation(String subOperation) {
             this.putQueryParameter("SubOperation", subOperation);
@@ -177,10 +193,14 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The IDs of alert events.
-         * <p>
+         * <p>The IDs of alert events.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the IDs of alert events from the SecurityEventIds response parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
+         * <strong>example:</strong>
+         * <p>290852</p>
          */
         public Builder suspiciousEventIds(String suspiciousEventIds) {
             this.putQueryParameter("SuspiciousEventIds", suspiciousEventIds);
@@ -189,11 +209,14 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * The type of the exceptions. Valid values:
-         * <p>
+         * <p>The type of the exceptions. Valid values:</p>
+         * <ul>
+         * <li><strong>alarm</strong>: alerts</li>
+         * <li><strong>null</strong>: exceptions</li>
+         * </ul>
          * 
-         * *   **alarm**: alerts
-         * *   **null**: exceptions
+         * <strong>example:</strong>
+         * <p>alarm</p>
          */
         public Builder warnType(String warnType) {
             this.putQueryParameter("WarnType", warnType);

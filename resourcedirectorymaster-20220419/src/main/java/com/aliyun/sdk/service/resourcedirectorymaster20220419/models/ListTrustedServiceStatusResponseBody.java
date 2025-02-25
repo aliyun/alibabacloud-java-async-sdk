@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrustedServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListTrustedServiceStatusResponseBody</p>
  */
 public class ListTrustedServiceStatusResponseBody extends TeaModel {
-    @NameInMap("EnabledServicePrincipals")
+    @com.aliyun.core.annotation.NameInMap("EnabledServicePrincipals")
     private EnabledServicePrincipals enabledServicePrincipals;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTrustedServiceStatusResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the trusted services that are enabled.
+         * <p>The information about the trusted services that are enabled.</p>
          */
         public Builder enabledServicePrincipals(EnabledServicePrincipals enabledServicePrincipals) {
             this.enabledServicePrincipals = enabledServicePrincipals;
@@ -94,7 +99,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTrustedServiceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrustedServiceStatusResponseBody</p>
+     */
     public static class EnabledServicePrincipal extends TeaModel {
-        @NameInMap("EnableTime")
+        @com.aliyun.core.annotation.NameInMap("EnableTime")
         private String enableTime;
 
-        @NameInMap("ServicePrincipal")
+        @com.aliyun.core.annotation.NameInMap("ServicePrincipal")
         private String servicePrincipal;
 
         private EnabledServicePrincipal(Builder builder) {
@@ -170,7 +193,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             private String servicePrincipal; 
 
             /**
-             * The time when the trusted service was enabled.
+             * <p>The time when the trusted service was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-18T15:32:10.473Z</p>
              */
             public Builder enableTime(String enableTime) {
                 this.enableTime = enableTime;
@@ -178,7 +204,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the trusted service.
+             * <p>The identifier of the trusted service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>config.aliyuncs.com</p>
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;
@@ -192,9 +221,15 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTrustedServiceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTrustedServiceStatusResponseBody</p>
+     */
     public static class EnabledServicePrincipals extends TeaModel {
-        @NameInMap("EnabledServicePrincipal")
-        private java.util.List < EnabledServicePrincipal> enabledServicePrincipal;
+        @com.aliyun.core.annotation.NameInMap("EnabledServicePrincipal")
+        private java.util.List<EnabledServicePrincipal> enabledServicePrincipal;
 
         private EnabledServicePrincipals(Builder builder) {
             this.enabledServicePrincipal = builder.enabledServicePrincipal;
@@ -211,17 +246,17 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         /**
          * @return enabledServicePrincipal
          */
-        public java.util.List < EnabledServicePrincipal> getEnabledServicePrincipal() {
+        public java.util.List<EnabledServicePrincipal> getEnabledServicePrincipal() {
             return this.enabledServicePrincipal;
         }
 
         public static final class Builder {
-            private java.util.List < EnabledServicePrincipal> enabledServicePrincipal; 
+            private java.util.List<EnabledServicePrincipal> enabledServicePrincipal; 
 
             /**
              * EnabledServicePrincipal.
              */
-            public Builder enabledServicePrincipal(java.util.List < EnabledServicePrincipal> enabledServicePrincipal) {
+            public Builder enabledServicePrincipal(java.util.List<EnabledServicePrincipal> enabledServicePrincipal) {
                 this.enabledServicePrincipal = enabledServicePrincipal;
                 return this;
             }

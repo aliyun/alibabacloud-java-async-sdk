@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecreaseNodesResponseBody} extends {@link TeaModel}
  *
  * <p>DecreaseNodesResponseBody</p>
  */
 public class DecreaseNodesResponseBody extends TeaModel {
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DecreaseNodesResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DecreaseNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Operation ID.
+         * <p>Operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-13c37a77c505****</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -58,7 +66,10 @@ public class DecreaseNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44430037-E59A-3E66-A2B0-97D155346F22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -331,6 +331,9 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
         @Validation(maximum = 500)
         private Integer pitchRate;
 
+        @NameInMap("SampleRate")
+        private Integer sampleRate;
+
         @NameInMap("SpeechRate")
         @Validation(maximum = 500)
         private Integer speechRate;
@@ -344,6 +347,7 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
 
         private AudioInfo(Builder builder) {
             this.pitchRate = builder.pitchRate;
+            this.sampleRate = builder.sampleRate;
             this.speechRate = builder.speechRate;
             this.voice = builder.voice;
             this.volume = builder.volume;
@@ -362,6 +366,13 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
          */
         public Integer getPitchRate() {
             return this.pitchRate;
+        }
+
+        /**
+         * @return sampleRate
+         */
+        public Integer getSampleRate() {
+            return this.sampleRate;
         }
 
         /**
@@ -387,6 +398,7 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
 
         public static final class Builder {
             private Integer pitchRate; 
+            private Integer sampleRate; 
             private Integer speechRate; 
             private String voice; 
             private Integer volume; 
@@ -396,6 +408,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
+                return this;
+            }
+
+            /**
+             * SampleRate.
+             */
+            public Builder sampleRate(Integer sampleRate) {
+                this.sampleRate = sampleRate;
                 return this;
             }
 
@@ -551,6 +571,127 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
         } 
 
     }
+    public static class SubtitleStyle extends TeaModel {
+        @NameInMap("Color")
+        private String color;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("OutlineColor")
+        private String outlineColor;
+
+        @NameInMap("Size")
+        private Integer size;
+
+        @NameInMap("Y")
+        private Integer y;
+
+        private SubtitleStyle(Builder builder) {
+            this.color = builder.color;
+            this.name = builder.name;
+            this.outlineColor = builder.outlineColor;
+            this.size = builder.size;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubtitleStyle create() {
+            return builder().build();
+        }
+
+        /**
+         * @return color
+         */
+        public String getColor() {
+            return this.color;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return outlineColor
+         */
+        public String getOutlineColor() {
+            return this.outlineColor;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private String color; 
+            private String name; 
+            private String outlineColor; 
+            private Integer size; 
+            private Integer y; 
+
+            /**
+             * Color.
+             */
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * OutlineColor.
+             */
+            public Builder outlineColor(String outlineColor) {
+                this.outlineColor = outlineColor;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
+                return this;
+            }
+
+            public SubtitleStyle build() {
+                return new SubtitleStyle(this);
+            } 
+
+        } 
+
+    }
     public static class VideoInfo extends TeaModel {
         @NameInMap("AlphaFormat")
         private Integer alphaFormat;
@@ -571,6 +712,9 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
         @NameInMap("SubtitleEmbedded")
         private Boolean subtitleEmbedded;
 
+        @NameInMap("SubtitleStyle")
+        private SubtitleStyle subtitleStyle;
+
         private VideoInfo(Builder builder) {
             this.alphaFormat = builder.alphaFormat;
             this.backgroundImageUrl = builder.backgroundImageUrl;
@@ -578,6 +722,7 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
             this.isSubtitles = builder.isSubtitles;
             this.resolution = builder.resolution;
             this.subtitleEmbedded = builder.subtitleEmbedded;
+            this.subtitleStyle = builder.subtitleStyle;
         }
 
         public static Builder builder() {
@@ -630,6 +775,13 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
             return this.subtitleEmbedded;
         }
 
+        /**
+         * @return subtitleStyle
+         */
+        public SubtitleStyle getSubtitleStyle() {
+            return this.subtitleStyle;
+        }
+
         public static final class Builder {
             private Integer alphaFormat; 
             private String backgroundImageUrl; 
@@ -637,6 +789,7 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
             private Boolean isSubtitles; 
             private Integer resolution; 
             private Boolean subtitleEmbedded; 
+            private SubtitleStyle subtitleStyle; 
 
             /**
              * AlphaFormat.
@@ -683,6 +836,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
              */
             public Builder subtitleEmbedded(Boolean subtitleEmbedded) {
                 this.subtitleEmbedded = subtitleEmbedded;
+                return this;
+            }
+
+            /**
+             * SubtitleStyle.
+             */
+            public Builder subtitleStyle(SubtitleStyle subtitleStyle) {
+                this.subtitleStyle = subtitleStyle;
                 return this;
             }
 

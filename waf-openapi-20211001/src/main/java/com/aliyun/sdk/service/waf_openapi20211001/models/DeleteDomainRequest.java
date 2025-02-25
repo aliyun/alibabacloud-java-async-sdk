@@ -1,43 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainRequest</p>
  */
 public class DeleteDomainRequest extends Request {
-    @Query
-    @NameInMap("AccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessType")
     private String accessType;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private String domainId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
-
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
 
     private DeleteDomainRequest(Builder builder) {
         super(builder);
@@ -46,7 +47,6 @@ public class DeleteDomainRequest extends Request {
         this.domainId = builder.domainId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -97,20 +97,12 @@ public class DeleteDomainRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<DeleteDomainRequest, Builder> {
         private String accessType; 
         private String domain; 
         private String domainId; 
         private String instanceId; 
         private String regionId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -123,15 +115,17 @@ public class DeleteDomainRequest extends Request {
             this.domainId = request.domainId;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * The mode in which the domain name is added to WAF. Valid values:
-         * <p>
+         * <p>The mode in which the domain name is added to WAF. Valid values:</p>
+         * <ul>
+         * <li><strong>share:</strong> CNAME record mode. This is the default value.</li>
+         * <li><strong>hybrid_cloud_cname:</strong> hybrid cloud reverse proxy mode.</li>
+         * </ul>
          * 
-         * *   **share:** CNAME record mode. This is the default value.
-         * *   **hybrid_cloud_cname:** hybrid cloud reverse proxy mode.
+         * <strong>example:</strong>
+         * <p>share</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -140,7 +134,11 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * The domain name that you want to delete.
+         * <p>The domain name that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -149,7 +147,10 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * The ID of the domain name.
+         * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
          */
         public Builder domainId(String domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -158,10 +159,14 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * The ID of the WAF instance.
-         * <p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * <strong>example:</strong>
+         * <p>waf_cdnsdf3****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,24 +175,19 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request. The value of this parameter is specified by the system.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

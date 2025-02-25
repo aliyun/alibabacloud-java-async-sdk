@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagsRequest} extends {@link RequestModel}
  *
  * <p>ListTagsRequest</p>
  */
 public class ListTagsRequest extends Request {
-    @Query
-    @NameInMap("pageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("resourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceType")
     private String resourceType;
 
     private ListTagsRequest(Builder builder) {
@@ -69,7 +69,10 @@ public class ListTagsRequest extends Request {
         } 
 
         /**
-         * The return results.
+         * <p>The return results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -78,7 +81,10 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * The tag value of the ENI.
+         * <p>The tag value of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

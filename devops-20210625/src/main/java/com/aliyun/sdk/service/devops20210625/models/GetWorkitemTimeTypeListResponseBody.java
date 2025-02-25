@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkitemTimeTypeListResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkitemTimeTypeListResponseBody</p>
  */
 public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private String success;
 
-    @NameInMap("timeType")
-    private java.util.List < TimeType> timeType;
+    @com.aliyun.core.annotation.NameInMap("timeType")
+    private java.util.List<TimeType> timeType;
 
     private GetWorkitemTimeTypeListResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -74,7 +79,7 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
     /**
      * @return timeType
      */
-    public java.util.List < TimeType> getTimeType() {
+    public java.util.List<TimeType> getTimeType() {
         return this.timeType;
     }
 
@@ -83,7 +88,7 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private String success; 
-        private java.util.List < TimeType> timeType; 
+        private java.util.List<TimeType> timeType; 
 
         /**
          * errorCode.
@@ -102,7 +107,10 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HC93CE1A-8D7A-13A9-8306-7465DE2E5C0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +128,7 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
         /**
          * timeType.
          */
-        public Builder timeType(java.util.List < TimeType> timeType) {
+        public Builder timeType(java.util.List<TimeType> timeType) {
             this.timeType = timeType;
             return this;
         }
@@ -131,20 +139,26 @@ public class GetWorkitemTimeTypeListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkitemTimeTypeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkitemTimeTypeListResponseBody</p>
+     */
     public static class TimeType extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("position")
+        @com.aliyun.core.annotation.NameInMap("position")
         private Long position;
 
         private TimeType(Builder builder) {

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDefenseRuleStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDefenseRuleStatusResponseBody</p>
  */
 public class ModifyDefenseRuleStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDefenseRuleStatusResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ModifyDefenseRuleStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB305BF3-3C71-57A9-9704-E22F567689B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

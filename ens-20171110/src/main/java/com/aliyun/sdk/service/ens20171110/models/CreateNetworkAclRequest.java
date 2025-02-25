@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAclRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkAclRequest</p>
  */
 public class CreateNetworkAclRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("NetworkAclName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclName")
     private String networkAclName;
 
     private CreateNetworkAclRequest(Builder builder) {
@@ -68,7 +73,11 @@ public class CreateNetworkAclRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the network ACL.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my NetworkAcl.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -77,7 +86,11 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * NetworkAclName.
+         * <p>Enter a name for the network ACL.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-1</p>
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);

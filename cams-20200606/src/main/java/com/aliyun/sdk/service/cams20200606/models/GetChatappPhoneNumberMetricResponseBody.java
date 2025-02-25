@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChatappPhoneNumberMetricResponseBody} extends {@link TeaModel}
  *
  * <p>GetChatappPhoneNumberMetricResponseBody</p>
  */
 public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetChatappPhoneNumberMetricResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,11 +97,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
+         * <p>The value OK indicates that the request was successful.</p>
          * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +108,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +116,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +127,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612C226-E271-4CFE-9F18-4066D******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,23 +143,29 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetChatappPhoneNumberMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetChatappPhoneNumberMetricResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DeliveredCount")
+        @com.aliyun.core.annotation.NameInMap("DeliveredCount")
         private Integer deliveredCount;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Granularity")
+        @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("SentCount")
+        @com.aliyun.core.annotation.NameInMap("SentCount")
         private Integer sentCount;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Long start;
 
         private Data(Builder builder) {
@@ -222,7 +236,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             private Long start; 
 
             /**
-             * Delivered count
+             * <p>The number of delivered messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder deliveredCount(Integer deliveredCount) {
                 this.deliveredCount = deliveredCount;
@@ -230,7 +247,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The end of the time range that you queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1667196043904</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -238,7 +258,15 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The granularity at which bills are queried.
+             * <p>The granularity of the metric.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DAILY</li>
+             * <li>HALF_HOUR</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -246,7 +274,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The business phone number.
+             * <p>The business phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>861380000</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -254,7 +285,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Sent count
+             * <p>The number of sent messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sentCount(Integer sentCount) {
                 this.sentCount = sentCount;
@@ -262,7 +296,10 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The beginning of the time range that you queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669619491000</p>
              */
             public Builder start(Long start) {
                 this.start = start;

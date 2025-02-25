@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHASwitchConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyHASwitchConfigRequest</p>
  */
 public class ModifyHASwitchConfigRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("HAConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HAConfig")
     private String HAConfig;
 
-    @Query
-    @NameInMap("ManualHATime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManualHATime")
     private String manualHATime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyHASwitchConfigRequest(Builder builder) {
@@ -140,7 +145,11 @@ public class ModifyHASwitchConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -149,15 +158,18 @@ public class ModifyHASwitchConfigRequest extends Request {
         }
 
         /**
-         * The mode of the automatic primary/secondary switchover feature. Valid values:
-         * <p>
+         * <p>The mode of the automatic primary/secondary switchover feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Auto</strong>: The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</li>
+         * <li><strong>Manual</strong>: The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.</li>
+         * </ul>
+         * <p>Default value: <strong>Auto</strong>.</p>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>Manual</strong>, you must specify the <strong>ManualHATime</strong> parameter.</p>
+         * </blockquote>
          * 
-         * *   **Auto**: The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.
-         * *   **Manual**: The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.
-         * 
-         * Default value: **Auto**.
-         * 
-         * >  If you set this parameter to **Manual**, you must specify the **ManualHATime** parameter.
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder HAConfig(String HAConfig) {
             this.putQueryParameter("HAConfig", HAConfig);
@@ -166,10 +178,13 @@ public class ModifyHASwitchConfigRequest extends Request {
         }
 
         /**
-         * The time to disable the automatic primary/secondary switchover feature. The time can range from the current time to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The time to disable the automatic primary/secondary switchover feature. The time can range from the current time to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when you set the <strong>HAConfig</strong> parameter to <strong>Manual</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only when you set the **HAConfig** parameter to **Manual**.
+         * <strong>example:</strong>
+         * <p>2019-08-29T15:00:00Z</p>
          */
         public Builder manualHATime(String manualHATime) {
             this.putQueryParameter("ManualHATime", manualHATime);
@@ -187,7 +202,11 @@ public class ModifyHASwitchConfigRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

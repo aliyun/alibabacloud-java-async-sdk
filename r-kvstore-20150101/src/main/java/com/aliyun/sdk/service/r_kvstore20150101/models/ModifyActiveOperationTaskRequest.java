@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyActiveOperationTaskRequest} extends {@link RequestModel}
  *
  * <p>ModifyActiveOperationTaskRequest</p>
  */
 public class ModifyActiveOperationTaskRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ids;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SwitchTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String switchTime;
 
     private ModifyActiveOperationTaskRequest(Builder builder) {
@@ -163,10 +163,14 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the O\&M task. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the O&amp;M task. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to query the ID of an O&amp;M task.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeActiveOperationTask](~~197387~~) operation to query the ID of an O\&M task.
+         * <strong>example:</strong>
+         * <p>11111,22222</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -220,10 +224,14 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The time cannot be later than the latest operation time. You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to obtain the latest operation time, which is the value of the <strong>Deadline</strong> parameter in the response.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The time cannot be later than the latest operation time. You can call the [DescribeActiveOperationTask](~~197387~~) operation to obtain the latest operation time, which is the value of the **Deadline** parameter in the response.
+         * <strong>example:</strong>
+         * <p>2019-10-17T18:50:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);

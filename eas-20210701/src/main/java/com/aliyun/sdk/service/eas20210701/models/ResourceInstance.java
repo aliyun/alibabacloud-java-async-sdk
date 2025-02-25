@@ -1,84 +1,92 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResourceInstance} extends {@link TeaModel}
  *
  * <p>ResourceInstance</p>
  */
 public class ResourceInstance extends TeaModel {
-    @NameInMap("Arch")
+    @com.aliyun.core.annotation.NameInMap("Arch")
     private String arch;
 
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("InstanceCpuCount")
+    @com.aliyun.core.annotation.NameInMap("InstanceCpuCount")
     private Integer instanceCpuCount;
 
-    @NameInMap("InstanceGpuCount")
+    @com.aliyun.core.annotation.NameInMap("InstanceGpuCount")
     private Integer instanceGpuCount;
 
-    @NameInMap("InstanceGpuMemory")
+    @com.aliyun.core.annotation.NameInMap("InstanceGpuMemory")
     private String instanceGpuMemory;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceIp")
+    @com.aliyun.core.annotation.NameInMap("InstanceIp")
     private String instanceIp;
 
-    @NameInMap("InstanceMemory")
+    @com.aliyun.core.annotation.NameInMap("InstanceMemory")
     private String instanceMemory;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @NameInMap("InstanceSystemDiskSize")
+    @com.aliyun.core.annotation.NameInMap("InstanceSystemDiskSize")
     private Integer instanceSystemDiskSize;
 
-    @NameInMap("InstanceTenantIp")
+    @com.aliyun.core.annotation.NameInMap("InstanceTenantIp")
     private String instanceTenantIp;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("InstanceUsedCpu")
+    @com.aliyun.core.annotation.NameInMap("InstanceUsedCpu")
     private Float instanceUsedCpu;
 
-    @NameInMap("InstanceUsedGpu")
+    @com.aliyun.core.annotation.NameInMap("InstanceUsedGpu")
     private Float instanceUsedGpu;
 
-    @NameInMap("InstanceUsedGpuMemory")
+    @com.aliyun.core.annotation.NameInMap("InstanceUsedGpuMemory")
     private String instanceUsedGpuMemory;
 
-    @NameInMap("InstanceUsedMemory")
+    @com.aliyun.core.annotation.NameInMap("InstanceUsedMemory")
     private String instanceUsedMemory;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
+
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("Zone")
+    @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
     private ResourceInstance(Builder builder) {
@@ -102,6 +110,7 @@ public class ResourceInstance extends TeaModel {
         this.instanceUsedGpu = builder.instanceUsedGpu;
         this.instanceUsedGpuMemory = builder.instanceUsedGpuMemory;
         this.instanceUsedMemory = builder.instanceUsedMemory;
+        this.labels = builder.labels;
         this.region = builder.region;
         this.resourceId = builder.resourceId;
         this.zone = builder.zone;
@@ -256,6 +265,13 @@ public class ResourceInstance extends TeaModel {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.List<Labels> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -297,6 +313,7 @@ public class ResourceInstance extends TeaModel {
         private Float instanceUsedGpu; 
         private String instanceUsedGpuMemory; 
         private String instanceUsedMemory; 
+        private java.util.List<Labels> labels; 
         private String region; 
         private String resourceId; 
         private String zone; 
@@ -462,6 +479,14 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
+         * Labels.
+         */
+        public Builder labels(java.util.List<Labels> labels) {
+            this.labels = labels;
+            return this;
+        }
+
+        /**
          * Region.
          */
         public Builder region(String region) {
@@ -491,4 +516,71 @@ public class ResourceInstance extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ResourceInstance} extends {@link TeaModel}
+     *
+     * <p>ResourceInstance</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LabelKey")
+        private String labelKey;
+
+        @com.aliyun.core.annotation.NameInMap("LabelValue")
+        private String labelValue;
+
+        private Labels(Builder builder) {
+            this.labelKey = builder.labelKey;
+            this.labelValue = builder.labelValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelKey
+         */
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        /**
+         * @return labelValue
+         */
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+        public static final class Builder {
+            private String labelKey; 
+            private String labelValue; 
+
+            /**
+             * LabelKey.
+             */
+            public Builder labelKey(String labelKey) {
+                this.labelKey = labelKey;
+                return this;
+            }
+
+            /**
+             * LabelValue.
+             */
+            public Builder labelValue(String labelValue) {
+                this.labelValue = labelValue;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
 }

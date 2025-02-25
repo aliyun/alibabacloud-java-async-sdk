@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBackendServersRequest} extends {@link RequestModel}
  *
  * <p>RemoveBackendServersRequest</p>
  */
 public class RemoveBackendServersRequest extends Request {
-    @Query
-    @NameInMap("BackendServers")
-    @Validation(required = true)
-    private java.util.List < BackendServers> backendServers;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<BackendServers> backendServers;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
     private RemoveBackendServersRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class RemoveBackendServersRequest extends Request {
     /**
      * @return backendServers
      */
-    public java.util.List < BackendServers> getBackendServers() {
+    public java.util.List<BackendServers> getBackendServers() {
         return this.backendServers;
     }
 
@@ -56,7 +61,7 @@ public class RemoveBackendServersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveBackendServersRequest, Builder> {
-        private java.util.List < BackendServers> backendServers; 
+        private java.util.List<BackendServers> backendServers; 
         private String loadBalancerId; 
 
         private Builder() {
@@ -70,9 +75,10 @@ public class RemoveBackendServersRequest extends Request {
         } 
 
         /**
-         * BackendServers.
+         * <p>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder backendServers(java.util.List < BackendServers> backendServers) {
+        public Builder backendServers(java.util.List<BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
             this.putQueryParameter("BackendServers", backendServersShrink);
             this.backendServers = backendServers;
@@ -80,7 +86,11 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5ovkn1piwqmoqrfjdyhq4****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -95,23 +105,29 @@ public class RemoveBackendServersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveBackendServersRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveBackendServersRequest</p>
+     */
     public static class BackendServers extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
-        @Validation(maximum = 65535)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
-        @Validation(maximum = 100)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer weight;
 
         private BackendServers(Builder builder) {
@@ -173,7 +189,10 @@ public class RemoveBackendServersRequest extends Request {
             private Integer weight; 
 
             /**
-             * Ip.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.XXX.X.X</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -181,7 +200,10 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The backend port that is used by the Edge Load Balancer (ELB) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -189,7 +211,11 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * ServerId.
+             * <p>The instance ID of the backend server.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5uf68ts0fqexe1a4n****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -197,7 +223,14 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ens</strong>: an Edge Node Service (ENS) instance.</li>
+             * <li><strong>eni</strong>: an Elastic Network Interface (ENI).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ens</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -205,7 +238,10 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

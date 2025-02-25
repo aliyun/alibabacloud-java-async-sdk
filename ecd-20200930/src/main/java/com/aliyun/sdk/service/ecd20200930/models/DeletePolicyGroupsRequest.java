@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePolicyGroupsRequest} extends {@link RequestModel}
  *
  * <p>DeletePolicyGroupsRequest</p>
  */
 public class DeletePolicyGroupsRequest extends Request {
-    @Query
-    @NameInMap("PolicyGroupId")
-    @Validation(required = true)
-    private java.util.List < String > policyGroupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> policyGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeletePolicyGroupsRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class DeletePolicyGroupsRequest extends Request {
     /**
      * @return policyGroupId
      */
-    public java.util.List < String > getPolicyGroupId() {
+    public java.util.List<String> getPolicyGroupId() {
         return this.policyGroupId;
     }
 
@@ -56,7 +61,7 @@ public class DeletePolicyGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeletePolicyGroupsRequest, Builder> {
-        private java.util.List < String > policyGroupId; 
+        private java.util.List<String> policyGroupId; 
         private String regionId; 
 
         private Builder() {
@@ -70,16 +75,24 @@ public class DeletePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * PolicyGroupId.
+         * <p>The ID of the policy. You can specify 1 to 100 policy IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
-        public Builder policyGroupId(java.util.List < String > policyGroupId) {
+        public Builder policyGroupId(java.util.List<String> policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
             return this;
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

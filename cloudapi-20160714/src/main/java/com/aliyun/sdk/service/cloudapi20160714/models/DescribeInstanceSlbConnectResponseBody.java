@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSlbConnectResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSlbConnectResponseBody</p>
  */
 public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
-    @NameInMap("InstanceSlbConnect")
+    @com.aliyun.core.annotation.NameInMap("InstanceSlbConnect")
     private InstanceSlbConnect instanceSlbConnect;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSlbConnectResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of concurrent connections in the instance.
+         * <p>The list of concurrent connections in the instance.</p>
          */
         public Builder instanceSlbConnect(InstanceSlbConnect instanceSlbConnect) {
             this.instanceSlbConnect = instanceSlbConnect;
@@ -58,7 +63,10 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7FE7172-AA75-5880-B6F7-C00893E9BC06</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSlbConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSlbConnectResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -122,12 +136,15 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The metric. Valid values:
-             * <p>
+             * <p>The metric. Valid values:</p>
+             * <ul>
+             * <li>InstanceMaxConnection: the maximum number of connections</li>
+             * <li>InstanceInactiveConnection: the number of inactive connections</li>
+             * <li>InstanceActiveConnection: the number of active connections</li>
+             * </ul>
              * 
-             * *   InstanceMaxConnection: the maximum number of connections
-             * *   InstanceInactiveConnection: the number of inactive connections
-             * *   InstanceActiveConnection: the number of active connections
+             * <strong>example:</strong>
+             * <p>InstanceActiveConnection</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -135,7 +152,10 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-15T15:07:06Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -143,7 +163,10 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The number of concurrent connections in the instance.
+             * <p>The number of concurrent connections in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -157,9 +180,15 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceSlbConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSlbConnectResponseBody</p>
+     */
     public static class InstanceSlbConnect extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private InstanceSlbConnect(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -176,17 +205,17 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

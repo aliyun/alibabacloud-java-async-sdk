@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,46 +11,58 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>UpdateEventSourceRequest</p>
  */
 public class UpdateEventSourceRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("EventBusName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventBusName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventBusName;
 
-    @Body
-    @NameInMap("EventSourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventSourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventSourceName;
 
-    @Body
-    @NameInMap("SourceHttpEventParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalSourceConfig")
+    private java.util.Map < String, ? > externalSourceConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalSourceType")
+    private String externalSourceType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LinkedExternalSource")
+    private Boolean linkedExternalSource;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceHttpEventParameters")
     private SourceHttpEventParameters sourceHttpEventParameters;
 
-    @Body
-    @NameInMap("SourceKafkaParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
     private SourceKafkaParameters sourceKafkaParameters;
 
-    @Body
-    @NameInMap("SourceMNSParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceMNSParameters")
     private SourceMNSParameters sourceMNSParameters;
 
-    @Body
-    @NameInMap("SourceRabbitMQParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
     private SourceRabbitMQParameters sourceRabbitMQParameters;
 
-    @Body
-    @NameInMap("SourceRocketMQParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceRocketMQParameters")
     private SourceRocketMQParameters sourceRocketMQParameters;
 
-    @Body
-    @NameInMap("SourceSLSParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceSLSParameters")
     private SourceSLSParameters sourceSLSParameters;
 
-    @Body
-    @NameInMap("SourceScheduledEventParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceScheduledEventParameters")
     private SourceScheduledEventParameters sourceScheduledEventParameters;
 
     private UpdateEventSourceRequest(Builder builder) {
@@ -59,6 +70,9 @@ public class UpdateEventSourceRequest extends Request {
         this.description = builder.description;
         this.eventBusName = builder.eventBusName;
         this.eventSourceName = builder.eventSourceName;
+        this.externalSourceConfig = builder.externalSourceConfig;
+        this.externalSourceType = builder.externalSourceType;
+        this.linkedExternalSource = builder.linkedExternalSource;
         this.sourceHttpEventParameters = builder.sourceHttpEventParameters;
         this.sourceKafkaParameters = builder.sourceKafkaParameters;
         this.sourceMNSParameters = builder.sourceMNSParameters;
@@ -100,6 +114,27 @@ public class UpdateEventSourceRequest extends Request {
      */
     public String getEventSourceName() {
         return this.eventSourceName;
+    }
+
+    /**
+     * @return externalSourceConfig
+     */
+    public java.util.Map < String, ? > getExternalSourceConfig() {
+        return this.externalSourceConfig;
+    }
+
+    /**
+     * @return externalSourceType
+     */
+    public String getExternalSourceType() {
+        return this.externalSourceType;
+    }
+
+    /**
+     * @return linkedExternalSource
+     */
+    public Boolean getLinkedExternalSource() {
+        return this.linkedExternalSource;
     }
 
     /**
@@ -155,6 +190,9 @@ public class UpdateEventSourceRequest extends Request {
         private String description; 
         private String eventBusName; 
         private String eventSourceName; 
+        private java.util.Map < String, ? > externalSourceConfig; 
+        private String externalSourceType; 
+        private Boolean linkedExternalSource; 
         private SourceHttpEventParameters sourceHttpEventParameters; 
         private SourceKafkaParameters sourceKafkaParameters; 
         private SourceMNSParameters sourceMNSParameters; 
@@ -172,6 +210,9 @@ public class UpdateEventSourceRequest extends Request {
             this.description = request.description;
             this.eventBusName = request.eventBusName;
             this.eventSourceName = request.eventSourceName;
+            this.externalSourceConfig = request.externalSourceConfig;
+            this.externalSourceType = request.externalSourceType;
+            this.linkedExternalSource = request.linkedExternalSource;
             this.sourceHttpEventParameters = request.sourceHttpEventParameters;
             this.sourceKafkaParameters = request.sourceKafkaParameters;
             this.sourceMNSParameters = request.sourceMNSParameters;
@@ -205,6 +246,34 @@ public class UpdateEventSourceRequest extends Request {
         public Builder eventSourceName(String eventSourceName) {
             this.putBodyParameter("EventSourceName", eventSourceName);
             this.eventSourceName = eventSourceName;
+            return this;
+        }
+
+        /**
+         * ExternalSourceConfig.
+         */
+        public Builder externalSourceConfig(java.util.Map < String, ? > externalSourceConfig) {
+            String externalSourceConfigShrink = shrink(externalSourceConfig, "ExternalSourceConfig", "json");
+            this.putBodyParameter("ExternalSourceConfig", externalSourceConfigShrink);
+            this.externalSourceConfig = externalSourceConfig;
+            return this;
+        }
+
+        /**
+         * ExternalSourceType.
+         */
+        public Builder externalSourceType(String externalSourceType) {
+            this.putBodyParameter("ExternalSourceType", externalSourceType);
+            this.externalSourceType = externalSourceType;
+            return this;
+        }
+
+        /**
+         * LinkedExternalSource.
+         */
+        public Builder linkedExternalSource(Boolean linkedExternalSource) {
+            this.putBodyParameter("LinkedExternalSource", linkedExternalSource);
+            this.linkedExternalSource = linkedExternalSource;
             return this;
         }
 
@@ -286,19 +355,19 @@ public class UpdateEventSourceRequest extends Request {
     } 
 
     public static class SourceHttpEventParameters extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private java.util.List < String > method;
 
-        @NameInMap("Referer")
+        @com.aliyun.core.annotation.NameInMap("Referer")
         private java.util.List < String > referer;
 
-        @NameInMap("SecurityConfig")
+        @com.aliyun.core.annotation.NameInMap("SecurityConfig")
         private String securityConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private SourceHttpEventParameters(Builder builder) {
@@ -428,34 +497,34 @@ public class UpdateEventSourceRequest extends Request {
 
     }
     public static class SourceKafkaParameters extends TeaModel {
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaximumTasks")
+        @com.aliyun.core.annotation.NameInMap("MaximumTasks")
         private Integer maximumTasks;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("OffsetReset")
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
         private String offsetReset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private String vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SourceKafkaParameters(Builder builder) {
@@ -649,13 +718,13 @@ public class UpdateEventSourceRequest extends Request {
 
     }
     public static class SourceMNSParameters extends TeaModel {
-        @NameInMap("IsBase64Decode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
         private Boolean isBase64Decode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SourceMNSParameters(Builder builder) {
@@ -730,16 +799,16 @@ public class UpdateEventSourceRequest extends Request {
 
     }
     public static class SourceRabbitMQParameters extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VirtualHostName")
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private String virtualHostName;
 
         private SourceRabbitMQParameters(Builder builder) {
@@ -831,52 +900,52 @@ public class UpdateEventSourceRequest extends Request {
 
     }
     public static class SourceRocketMQParameters extends TeaModel {
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("GroupID")
+        @com.aliyun.core.annotation.NameInMap("GroupID")
         private String groupID;
 
-        @NameInMap("InstanceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
         private String instanceEndpoint;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceNetwork")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetwork")
         private String instanceNetwork;
 
-        @NameInMap("InstancePassword")
+        @com.aliyun.core.annotation.NameInMap("InstancePassword")
         private String instancePassword;
 
-        @NameInMap("InstanceSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("InstanceSecurityGroupId")
         private String instanceSecurityGroupId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceUsername")
+        @com.aliyun.core.annotation.NameInMap("InstanceUsername")
         private String instanceUsername;
 
-        @NameInMap("InstanceVSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceVSwitchIds")
         private String instanceVSwitchIds;
 
-        @NameInMap("InstanceVpcId")
+        @com.aliyun.core.annotation.NameInMap("InstanceVpcId")
         private String instanceVpcId;
 
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private String offset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SourceRocketMQParameters(Builder builder) {
@@ -1183,16 +1252,16 @@ public class UpdateEventSourceRequest extends Request {
 
     }
     public static class SourceSLSParameters extends TeaModel {
-        @NameInMap("ConsumePosition")
+        @com.aliyun.core.annotation.NameInMap("ConsumePosition")
         private String consumePosition;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private SourceSLSParameters(Builder builder) {
@@ -1284,13 +1353,13 @@ public class UpdateEventSourceRequest extends Request {
 
     }
     public static class SourceScheduledEventParameters extends TeaModel {
-        @NameInMap("Schedule")
+        @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private SourceScheduledEventParameters(Builder builder) {
@@ -1350,7 +1419,7 @@ public class UpdateEventSourceRequest extends Request {
             }
 
             /**
-             * UserData.
+             * The user data that is displayed in a JSON string.
              */
             public Builder userData(String userData) {
                 this.userData = userData;

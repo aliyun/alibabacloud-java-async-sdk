@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetProjectDetailResponseBody</p>
  */
 public class GetProjectDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetProjectDetailResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The information about the workspace.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +87,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +98,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,11 +125,17 @@ public class GetProjectDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectDetailResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -150,7 +170,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,7 +181,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -172,77 +198,83 @@ public class GetProjectDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DefaultDiResourceGroupIdentifier")
+        @com.aliyun.core.annotation.NameInMap("DefaultDiResourceGroupIdentifier")
         private String defaultDiResourceGroupIdentifier;
 
-        @NameInMap("DevelopmentType")
+        @com.aliyun.core.annotation.NameInMap("DevelopmentType")
         private Integer developmentType;
 
-        @NameInMap("DisableDevelopment")
+        @com.aliyun.core.annotation.NameInMap("DisableDevelopment")
         private Boolean disableDevelopment;
 
-        @NameInMap("EnvTypes")
-        private java.util.List < String > envTypes;
+        @com.aliyun.core.annotation.NameInMap("EnvTypes")
+        private java.util.List<String> envTypes;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IsAllowDownload")
+        @com.aliyun.core.annotation.NameInMap("IsAllowDownload")
         private Integer isAllowDownload;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Integer isDefault;
 
-        @NameInMap("ProjectDescription")
+        @com.aliyun.core.annotation.NameInMap("ProjectDescription")
         private String projectDescription;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Integer projectId;
 
-        @NameInMap("ProjectIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
         private String projectIdentifier;
 
-        @NameInMap("ProjectMode")
+        @com.aliyun.core.annotation.NameInMap("ProjectMode")
         private Integer projectMode;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ProjectOwnerBaseId")
+        @com.aliyun.core.annotation.NameInMap("ProjectOwnerBaseId")
         private String projectOwnerBaseId;
 
-        @NameInMap("ProtectedMode")
+        @com.aliyun.core.annotation.NameInMap("ProtectedMode")
         private Integer protectedMode;
 
-        @NameInMap("ResidentArea")
+        @com.aliyun.core.annotation.NameInMap("ResidentArea")
         private String residentArea;
 
-        @NameInMap("ResourceManagerResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
         private String resourceManagerResourceGroupId;
 
-        @NameInMap("SchedulerMaxRetryTimes")
+        @com.aliyun.core.annotation.NameInMap("SchedulerMaxRetryTimes")
         private Integer schedulerMaxRetryTimes;
 
-        @NameInMap("SchedulerRetryInterval")
+        @com.aliyun.core.annotation.NameInMap("SchedulerRetryInterval")
         private Integer schedulerRetryInterval;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TablePrivacyMode")
+        @com.aliyun.core.annotation.NameInMap("TablePrivacyMode")
         private Integer tablePrivacyMode;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("UseProxyOdpsAccount")
+        @com.aliyun.core.annotation.NameInMap("UseProxyOdpsAccount")
         private Boolean useProxyOdpsAccount;
 
         private Data(Builder builder) {
@@ -304,7 +336,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
         /**
          * @return envTypes
          */
-        public java.util.List < String > getEnvTypes() {
+        public java.util.List<String> getEnvTypes() {
             return this.envTypes;
         }
 
@@ -430,7 +462,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -452,7 +484,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             private String defaultDiResourceGroupIdentifier; 
             private Integer developmentType; 
             private Boolean disableDevelopment; 
-            private java.util.List < String > envTypes; 
+            private java.util.List<String> envTypes; 
             private String gmtCreate; 
             private String gmtModified; 
             private Integer isAllowDownload; 
@@ -470,12 +502,15 @@ public class GetProjectDetailResponseBody extends TeaModel {
             private Integer schedulerRetryInterval; 
             private Integer status; 
             private Integer tablePrivacyMode; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long tenantId; 
             private Boolean useProxyOdpsAccount; 
 
             /**
-             * DefaultDiResourceGroupIdentifier.
+             * <p>The identifier of the shared resource group for Data Integration on which nodes are run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_280749521****</p>
              */
             public Builder defaultDiResourceGroupIdentifier(String defaultDiResourceGroupIdentifier) {
                 this.defaultDiResourceGroupIdentifier = defaultDiResourceGroupIdentifier;
@@ -483,7 +518,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DevelopmentType.
+             * <p>The development type of the workspace. The value is fixed to 4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder developmentType(Integer developmentType) {
                 this.developmentType = developmentType;
@@ -491,7 +529,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisableDevelopment.
+             * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong> (default)</li>
+             * <li><strong>true</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder disableDevelopment(Boolean disableDevelopment) {
                 this.disableDevelopment = disableDevelopment;
@@ -499,15 +544,18 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnvTypes.
+             * <p>The environments of workspaces in different modes. Workspaces in basic mode provide only the production environment. Workspaces in standard mode provide both the development environment and the production environment.</p>
              */
-            public Builder envTypes(java.util.List < String > envTypes) {
+            public Builder envTypes(java.util.List<String> envTypes) {
                 this.envTypes = envTypes;
                 return this;
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the workspace was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oct 10, 2019 3:42:53 PM</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -515,7 +563,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the workspace was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dec 3, 2019 9:12:20 PM</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -523,7 +574,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsAllowDownload.
+             * <p>Indicates whether the download operation is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isAllowDownload(Integer isAllowDownload) {
                 this.isAllowDownload = isAllowDownload;
@@ -531,7 +585,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the workspace is a default workspace. Valid values:</p>
+             * <ul>
+             * <li>1: The workspace is a default workspace.</li>
+             * <li>0: The workspace is not a default workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDefault(Integer isDefault) {
                 this.isDefault = isDefault;
@@ -539,7 +600,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectDescription.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder projectDescription(String projectDescription) {
                 this.projectDescription = projectDescription;
@@ -547,7 +611,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -555,7 +622,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectIdentifier.
+             * <p>The unique identifier of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder projectIdentifier(String projectIdentifier) {
                 this.projectIdentifier = projectIdentifier;
@@ -563,7 +633,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectMode.
+             * <p>The mode of the workspace. The value 2 indicates that the workspace is in basic mode. The value 3 indicates that the workspace is in standard mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder projectMode(Integer projectMode) {
                 this.projectMode = projectMode;
@@ -571,7 +644,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The display name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -579,7 +655,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectOwnerBaseId.
+             * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18229311****</p>
              */
             public Builder projectOwnerBaseId(String projectOwnerBaseId) {
                 this.projectOwnerBaseId = projectOwnerBaseId;
@@ -587,7 +666,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedMode.
+             * <p>Indicates whether the workspace protection feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder protectedMode(Integer protectedMode) {
                 this.protectedMode = protectedMode;
@@ -595,7 +677,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResidentArea.
+             * <p>The type of the workspace. Valid values: private and swap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder residentArea(String residentArea) {
                 this.residentArea = residentArea;
@@ -603,7 +688,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceManagerResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzbn7pti3zfa</p>
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -611,7 +699,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerMaxRetryTimes.
+             * <p>The default maximum number of automatic reruns that are allowed after an error occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder schedulerMaxRetryTimes(Integer schedulerMaxRetryTimes) {
                 this.schedulerMaxRetryTimes = schedulerMaxRetryTimes;
@@ -619,7 +710,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerRetryInterval.
+             * <p>The interval between automatic reruns after an error occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120000</p>
              */
             public Builder schedulerRetryInterval(Integer schedulerRetryInterval) {
                 this.schedulerRetryInterval = schedulerRetryInterval;
@@ -627,7 +721,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -635,7 +732,14 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TablePrivacyMode.
+             * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
+             * <ul>
+             * <li>0: The MaxCompute tables in the workspace are not visible to the users within a tenant.</li>
+             * <li>1: The MaxCompute tables in the workspace are visible to the users within a tenant.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tablePrivacyMode(Integer tablePrivacyMode) {
                 this.tablePrivacyMode = tablePrivacyMode;
@@ -643,15 +747,18 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag information.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>280749521950784</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -659,7 +766,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UseProxyOdpsAccount.
+             * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useProxyOdpsAccount(Boolean useProxyOdpsAccount) {
                 this.useProxyOdpsAccount = useProxyOdpsAccount;

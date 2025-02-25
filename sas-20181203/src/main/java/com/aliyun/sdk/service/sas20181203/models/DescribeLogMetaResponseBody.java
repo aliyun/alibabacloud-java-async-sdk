@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogMetaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogMetaResponseBody</p>
  */
 public class DescribeLogMetaResponseBody extends TeaModel {
-    @NameInMap("LogMetaList")
-    private java.util.List < LogMetaList> logMetaList;
+    @com.aliyun.core.annotation.NameInMap("LogMetaList")
+    private java.util.List<LogMetaList> logMetaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLogMetaResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
     /**
      * @return logMetaList
      */
-    public java.util.List < LogMetaList> getLogMetaList() {
+    public java.util.List<LogMetaList> getLogMetaList() {
         return this.logMetaList;
     }
 
@@ -57,20 +62,23 @@ public class DescribeLogMetaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LogMetaList> logMetaList; 
+        private java.util.List<LogMetaList> logMetaList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * An array that consists of the configurations of the log analysis feature.
+         * <p>An array that consists of the configurations of the log analysis feature.</p>
          */
-        public Builder logMetaList(java.util.List < LogMetaList> logMetaList) {
+        public Builder logMetaList(java.util.List<LogMetaList> logMetaList) {
             this.logMetaList = logMetaList;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA04B21</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,38 +102,44 @@ public class DescribeLogMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogMetaResponseBody</p>
+     */
     public static class LogMetaList extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("HotTtl")
+        @com.aliyun.core.annotation.NameInMap("HotTtl")
         private Integer hotTtl;
 
-        @NameInMap("LogDesc")
+        @com.aliyun.core.annotation.NameInMap("LogDesc")
         private String logDesc;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("UserLogStore")
+        @com.aliyun.core.annotation.NameInMap("UserLogStore")
         private String userLogStore;
 
-        @NameInMap("UserProject")
+        @com.aliyun.core.annotation.NameInMap("UserProject")
         private String userProject;
 
-        @NameInMap("UserRegion")
+        @com.aliyun.core.annotation.NameInMap("UserRegion")
         private String userRegion;
 
         private LogMetaList(Builder builder) {
@@ -238,12 +255,15 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             private String userRegion; 
 
             /**
-             * The category of logs. Valid values:
-             * <p>
+             * <p>The category of logs. Valid values:</p>
+             * <ul>
+             * <li><strong>host</strong></li>
+             * <li><strong>network</strong></li>
+             * <li><strong>security</strong></li>
+             * </ul>
              * 
-             * *   **host**: host logs
-             * *   **network**: network logs
-             * *   **security**: security logs
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -251,10 +271,13 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The time period after which logs in hot storage are moved to cold storage. Unit: days.
-             * <p>
+             * <p>The time period after which logs in hot storage are moved to cold storage. Unit: days.</p>
+             * <blockquote>
+             * <p> If the value is -1, logs that are stored in hot storage are not moved to cold storage.</p>
+             * </blockquote>
              * 
-             * >  If the value is **-1**, logs that are stored in hot storage are not moved to cold storage.
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder hotTtl(Integer hotTtl) {
                 this.hotTtl = hotTtl;
@@ -262,7 +285,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log type.
+             * <p>The name of the log type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login</p>
              */
             public Builder logDesc(String logDesc) {
                 this.logDesc = logDesc;
@@ -270,7 +296,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated Logstore in which logs are stored.
+             * <p>The name of the dedicated Logstore in which logs are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis-log-login</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -278,7 +307,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis-log</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -286,11 +318,14 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the log analysis feature. Valid values:
-             * <p>
+             * <p>The status of the log analysis feature. Valid values:</p>
+             * <ul>
+             * <li><strong>disabled</strong></li>
+             * <li><strong>enabled</strong></li>
+             * </ul>
              * 
-             * *   **disabled**
-             * *   **enabled**
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +333,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The topic of logs that are delivered.
+             * <p>The topic of logs that are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis-log-login</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -306,7 +344,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days during which logs can be retained.
+             * <p>The number of days during which logs can be retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -314,7 +355,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated Logstore in which user logs are stored.
+             * <p>The name of the dedicated Logstore in which user logs are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis-log-network</p>
              */
             public Builder userLogStore(String userLogStore) {
                 this.userLogStore = userLogStore;
@@ -322,7 +366,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated project in which logs are stored.
+             * <p>The name of the dedicated project in which logs are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sasnew-log-XXXX-cn-hangzhou</p>
              */
             public Builder userProject(String userProject) {
                 this.userProject = userProject;
@@ -330,7 +377,10 @@ public class DescribeLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder userRegion(String userRegion) {
                 this.userRegion = userRegion;

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAccessKeyRequest} extends {@link RequestModel}
  *
  * <p>UpdateAccessKeyRequest</p>
  */
 public class UpdateAccessKeyRequest extends Request {
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("UserAccessKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAccessKeyId")
     private String userAccessKeyId;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private UpdateAccessKeyRequest(Builder builder) {
@@ -74,15 +79,18 @@ public class UpdateAccessKeyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateAccessKeyRequest response) {
-            super(response);
-            this.status = response.status;
-            this.userAccessKeyId = response.userAccessKeyId;
-            this.userName = response.userName;
+        private Builder(UpdateAccessKeyRequest request) {
+            super(request);
+            this.status = request.status;
+            this.userAccessKeyId = request.userAccessKeyId;
+            this.userName = request.userName;
         } 
 
         /**
-         * Status.
+         * <p>The status of the AccessKey pair. Valid values: <code>Active</code> and <code>Inactive</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Inactive</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -91,7 +99,10 @@ public class UpdateAccessKeyRequest extends Request {
         }
 
         /**
-         * UserAccessKeyId.
+         * <p>The AccessKey ID in the AccessKey pair whose status you want to change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0wNEpMMlzy7s****</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -100,7 +111,10 @@ public class UpdateAccessKeyRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

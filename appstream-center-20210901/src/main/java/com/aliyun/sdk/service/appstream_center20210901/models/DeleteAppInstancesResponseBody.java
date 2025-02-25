@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAppInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAppInstancesResponseBody</p>
  */
 public class DeleteAppInstancesResponseBody extends TeaModel {
-    @NameInMap("DeleteAppInstanceModels")
-    private java.util.List < DeleteAppInstanceModels> deleteAppInstanceModels;
+    @com.aliyun.core.annotation.NameInMap("DeleteAppInstanceModels")
+    private java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAppInstancesResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
     /**
      * @return deleteAppInstanceModels
      */
-    public java.util.List < DeleteAppInstanceModels> getDeleteAppInstanceModels() {
+    public java.util.List<DeleteAppInstanceModels> getDeleteAppInstanceModels() {
         return this.deleteAppInstanceModels;
     }
 
@@ -46,19 +51,22 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeleteAppInstanceModels> deleteAppInstanceModels; 
+        private java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels; 
         private String requestId; 
 
         /**
-         * DeleteAppInstanceModels.
+         * <p>The data returned.</p>
          */
-        public Builder deleteAppInstanceModels(java.util.List < DeleteAppInstanceModels> deleteAppInstanceModels) {
+        public Builder deleteAppInstanceModels(java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels) {
             this.deleteAppInstanceModels = deleteAppInstanceModels;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +79,23 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAppInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteAppInstancesResponseBody</p>
+     */
     public static class DeleteAppInstanceModels extends TeaModel {
-        @NameInMap("AppInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceId")
         private String appInstanceId;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private DeleteAppInstanceModels(Builder builder) {
@@ -134,7 +148,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * AppInstanceId.
+             * <p>The ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-gbuea*****</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -142,7 +159,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.ProductType</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -150,7 +170,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The parameter ProductType is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -158,7 +181,15 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Specifies whether the application instance is deleted.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

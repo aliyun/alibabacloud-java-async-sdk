@@ -1,65 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstanceBillRequest} extends {@link RequestModel}
  *
  * <p>QueryInstanceBillRequest</p>
  */
 public class QueryInstanceBillRequest extends Request {
-    @Query
-    @NameInMap("BillOwnerId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillOwnerId")
+    @com.aliyun.core.annotation.Validation()
     private Long billOwnerId;
 
-    @Query
-    @NameInMap("BillingCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billingCycle;
 
-    @Query
-    @NameInMap("BillingDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingDate")
     private String billingDate;
 
-    @Query
-    @NameInMap("Granularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
     private String granularity;
 
-    @Query
-    @NameInMap("IsBillingItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsBillingItem")
     private Boolean isBillingItem;
 
-    @Query
-    @NameInMap("IsHideZeroCharge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsHideZeroCharge")
     private Boolean isHideZeroCharge;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
     private QueryInstanceBillRequest(Builder builder) {
@@ -210,7 +215,10 @@ public class QueryInstanceBillRequest extends Request {
         } 
 
         /**
-         * The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.
+         * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -219,7 +227,11 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The billing cycle. Format: YYYY-MM.
+         * <p>The billing cycle. Format: YYYY-MM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03</p>
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -228,7 +240,10 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The billing date. This parameter is required only if the **Granularity** parameter is set to DAILY. Format: YYYY-MM-DD.
+         * <p>The billing date. This parameter is required only if the <strong>Granularity</strong> parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-03</p>
          */
         public Builder billingDate(String billingDate) {
             this.putQueryParameter("BillingDate", billingDate);
@@ -237,13 +252,15 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The granularity at which bills are queried. Valid values:
-         * <p>
+         * <p>The granularity at which bills are queried. Valid values:</p>
+         * <ul>
+         * <li>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</li>
+         * <li>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</li>
+         * </ul>
+         * <p>You must set the <strong>BillingDate</strong> parameter before you can set the Granularity parameter to DAILY.</p>
          * 
-         * *   MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.
-         * *   DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.
-         * 
-         * You must set the **BillingDate** parameter before you can set the Granularity parameter to DAILY.
+         * <strong>example:</strong>
+         * <p>MONTHLY</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -252,13 +269,15 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to query data by billable item. Valid values:
-         * <p>
+         * <p>Specifies whether to query data by billable item. Valid values:</p>
+         * <ul>
+         * <li>false: does not query data by billable item. The data queried is consistent with the data that is displayed for the specified instance on the Billing Details tab of the Bill Details page in User Center.</li>
+         * <li>true: queries data by billable item. The data queried is consistent with the data that is displayed for the specified billable item on the Billing Details tab of the Bill Details page in User Center.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   false: does not query data by billable item. The data queried is consistent with the data that is displayed for the specified instance on the Billing Details tab of the Bill Details page in User Center.
-         * *   true: queries data by billable item. The data queried is consistent with the data that is displayed for the specified billable item on the Billing Details tab of the Bill Details page in User Center.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isBillingItem(Boolean isBillingItem) {
             this.putQueryParameter("IsBillingItem", isBillingItem);
@@ -267,11 +286,14 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter out a bill whose pretax gross amount and pretax amount are 0. Default value: false.******** Valid values:
-         * <p>
+         * <p>Specifies whether to filter out a bill whose pretax gross amount and pretax amount are 0. Default value: false.******** Valid values:</p>
+         * <ul>
+         * <li>false: does not filter the bill.</li>
+         * <li>true: filters the bill.</li>
+         * </ul>
          * 
-         * *   false: does not filter the bill.
-         * *   true: filters the bill.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -289,7 +311,10 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -298,7 +323,10 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
+         * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -307,7 +335,10 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -316,7 +347,10 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The type of the service. This parameter is required if the ProductCode parameter is set to the service code of Alibaba Cloud Marketplace.
+         * <p>The type of the service. This parameter is required if the ProductCode parameter is set to the service code of Alibaba Cloud Marketplace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -325,15 +359,16 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: the subscription billing method</li>
+         * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+         * </ul>
+         * <p>**</p>
+         * <p>****This parameter must be used together with the <strong>ProductCode</strong> parameter.</p>
          * 
-         * *   Subscription: the subscription billing method
-         * *   PayAsYouGo: the pay-as-you-go billing method
-         * 
-         * **
-         * 
-         * ****This parameter must be used together with the **ProductCode** parameter.
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

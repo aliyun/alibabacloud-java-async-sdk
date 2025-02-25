@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUsersResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUsersResponseBody</p>
  */
 public class CreateUsersResponseBody extends TeaModel {
-    @NameInMap("CreateResult")
+    @com.aliyun.core.annotation.NameInMap("CreateResult")
     private CreateResult createResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateUsersResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class CreateUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of user creation.
+         * <p>The result of user creation.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -58,7 +63,10 @@ public class CreateUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,33 @@ public class CreateUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUsersResponseBody</p>
+     */
     public static class CreatedUsers extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
+        private String realNickName;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private CreatedUsers(Builder builder) {
             this.email = builder.email;
             this.endUserId = builder.endUserId;
             this.phone = builder.phone;
+            this.realNickName = builder.realNickName;
             this.remark = builder.remark;
         }
 
@@ -121,6 +139,13 @@ public class CreateUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return realNickName
+         */
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -131,10 +156,14 @@ public class CreateUsersResponseBody extends TeaModel {
             private String email; 
             private String endUserId; 
             private String phone; 
+            private String realNickName; 
             private String remark; 
 
             /**
-             * The email address of the end user.
+             * <p>The email address of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -142,7 +171,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * <p>The name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -150,7 +182,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the end user.
+             * <p>The mobile number of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -158,7 +193,21 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the end user.
+             * <p>The display name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bean</p>
+             */
+            public Builder realNickName(String realNickName) {
+                this.realNickName = realNickName;
+                return this;
+            }
+
+            /**
+             * <p>The remarks of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark1</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -172,20 +221,26 @@ public class CreateUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUsersResponseBody</p>
+     */
     public static class FailedUsers extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private FailedUsers(Builder builder) {
@@ -247,7 +302,10 @@ public class CreateUsersResponseBody extends TeaModel {
             private String phone; 
 
             /**
-             * The email address of the end user.
+             * <p>The email address of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username2@example.com">username2@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -255,7 +313,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * <p>The name of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test2</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -263,7 +324,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * <p>The error code returned if the request failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExistedEndUserId</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -271,7 +335,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The username test is used by another user.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -279,7 +346,10 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the end user.
+             * <p>The mobile number of the end user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -293,12 +363,18 @@ public class CreateUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateUsersResponseBody</p>
+     */
     public static class CreateResult extends TeaModel {
-        @NameInMap("CreatedUsers")
-        private java.util.List < CreatedUsers> createdUsers;
+        @com.aliyun.core.annotation.NameInMap("CreatedUsers")
+        private java.util.List<CreatedUsers> createdUsers;
 
-        @NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        @com.aliyun.core.annotation.NameInMap("FailedUsers")
+        private java.util.List<FailedUsers> failedUsers;
 
         private CreateResult(Builder builder) {
             this.createdUsers = builder.createdUsers;
@@ -316,33 +392,33 @@ public class CreateUsersResponseBody extends TeaModel {
         /**
          * @return createdUsers
          */
-        public java.util.List < CreatedUsers> getCreatedUsers() {
+        public java.util.List<CreatedUsers> getCreatedUsers() {
             return this.createdUsers;
         }
 
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         public static final class Builder {
-            private java.util.List < CreatedUsers> createdUsers; 
-            private java.util.List < FailedUsers> failedUsers; 
+            private java.util.List<CreatedUsers> createdUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
 
             /**
-             * Details of the created convenience users.
+             * <p>Details of the created convenience users.</p>
              */
-            public Builder createdUsers(java.util.List < CreatedUsers> createdUsers) {
+            public Builder createdUsers(java.util.List<CreatedUsers> createdUsers) {
                 this.createdUsers = createdUsers;
                 return this;
             }
 
             /**
-             * Details of the convenience users that failed to be created.
+             * <p>Details of the convenience users that failed to be created.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }

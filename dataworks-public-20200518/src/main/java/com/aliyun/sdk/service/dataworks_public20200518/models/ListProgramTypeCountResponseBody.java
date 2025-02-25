@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProgramTypeCountResponseBody} extends {@link TeaModel}
  *
  * <p>ListProgramTypeCountResponseBody</p>
  */
 public class ListProgramTypeCountResponseBody extends TeaModel {
-    @NameInMap("ProgramTypeAndCounts")
-    private java.util.List < ProgramTypeAndCounts> programTypeAndCounts;
+    @com.aliyun.core.annotation.NameInMap("ProgramTypeAndCounts")
+    private java.util.List<ProgramTypeAndCounts> programTypeAndCounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProgramTypeCountResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     /**
      * @return programTypeAndCounts
      */
-    public java.util.List < ProgramTypeAndCounts> getProgramTypeAndCounts() {
+    public java.util.List<ProgramTypeAndCounts> getProgramTypeAndCounts() {
         return this.programTypeAndCounts;
     }
 
@@ -46,19 +51,22 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProgramTypeAndCounts> programTypeAndCounts; 
+        private java.util.List<ProgramTypeAndCounts> programTypeAndCounts; 
         private String requestId; 
 
         /**
-         * The type and number of nodes.
+         * <p>The list of node types and quantity.</p>
          */
-        public Builder programTypeAndCounts(java.util.List < ProgramTypeAndCounts> programTypeAndCounts) {
+        public Builder programTypeAndCounts(java.util.List<ProgramTypeAndCounts> programTypeAndCounts) {
             this.programTypeAndCounts = programTypeAndCounts;
             return this;
         }
 
         /**
-         * The ID of the request, which is used to locate logs and troubleshoot problems.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProgramTypeCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProgramTypeCountResponseBody</p>
+     */
     public static class ProgramTypeAndCounts extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
         private ProgramTypeAndCounts(Builder builder) {
@@ -110,7 +124,10 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
             private String programType; 
 
             /**
-             * The number of nodes.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +135,10 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder programType(String programType) {
                 this.programType = programType;

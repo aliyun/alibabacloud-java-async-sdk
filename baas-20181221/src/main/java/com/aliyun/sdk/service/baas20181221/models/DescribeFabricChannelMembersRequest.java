@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricChannelMembersRequest</p>
  */
 public class DescribeFabricChannelMembersRequest extends Request {
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
-    private String channelId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String channelId;
 
     private DescribeFabricChannelMembersRequest(Builder builder) {
         super(builder);
-        this.channelId = builder.channelId;
         this.regionId = builder.regionId;
+        this.channelId = builder.channelId;
     }
 
     public static Builder builder() {
@@ -41,41 +40,32 @@ public class DescribeFabricChannelMembersRequest extends Request {
     }
 
     /**
-     * @return channelId
-     */
-    public String getChannelId() {
-        return this.channelId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return channelId
+     */
+    public String getChannelId() {
+        return this.channelId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFabricChannelMembersRequest, Builder> {
-        private String channelId; 
         private String regionId; 
+        private String channelId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFabricChannelMembersRequest response) {
-            super(response);
-            this.channelId = response.channelId;
-            this.regionId = response.regionId;
+        private Builder(DescribeFabricChannelMembersRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.channelId = request.channelId;
         } 
-
-        /**
-         * ChannelId.
-         */
-        public Builder channelId(String channelId) {
-            this.putQueryParameter("ChannelId", channelId);
-            this.channelId = channelId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +73,15 @@ public class DescribeFabricChannelMembersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ChannelId.
+         */
+        public Builder channelId(String channelId) {
+            this.putQueryParameter("ChannelId", channelId);
+            this.channelId = channelId;
             return this;
         }
 

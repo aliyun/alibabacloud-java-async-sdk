@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyMetricRuleTemplateRequest} extends {@link RequestModel}
  *
  * <p>ApplyMetricRuleTemplateRequest</p>
  */
 public class ApplyMetricRuleTemplateRequest extends Request {
-    @Query
-    @NameInMap("ApplyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppendMode")
+    private String appendMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyMode")
     private String applyMode;
 
-    @Query
-    @NameInMap("EnableEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEndTime")
     private Long enableEndTime;
 
-    @Query
-    @NameInMap("EnableStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableStartTime")
     private Long enableStartTime;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("NotifyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyLevel")
     private Long notifyLevel;
 
-    @Query
-    @NameInMap("SilenceTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Long silenceTime;
 
-    @Query
-    @NameInMap("TemplateIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateIds;
 
-    @Query
-    @NameInMap("Webhook")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Webhook")
     private String webhook;
 
     private ApplyMetricRuleTemplateRequest(Builder builder) {
         super(builder);
+        this.appendMode = builder.appendMode;
         this.applyMode = builder.applyMode;
         this.enableEndTime = builder.enableEndTime;
         this.enableStartTime = builder.enableStartTime;
@@ -69,6 +74,13 @@ public class ApplyMetricRuleTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appendMode
+     */
+    public String getAppendMode() {
+        return this.appendMode;
     }
 
     /**
@@ -128,6 +140,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ApplyMetricRuleTemplateRequest, Builder> {
+        private String appendMode; 
         private String applyMode; 
         private Long enableEndTime; 
         private Long enableStartTime; 
@@ -143,6 +156,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
 
         private Builder(ApplyMetricRuleTemplateRequest request) {
             super(request);
+            this.appendMode = request.appendMode;
             this.applyMode = request.applyMode;
             this.enableEndTime = request.enableEndTime;
             this.enableStartTime = request.enableStartTime;
@@ -154,11 +168,30 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * The mode in which the alert template is applied. Valid values:
-         * <p>
+         * <p>The template application policy. Valid values:</p>
+         * <ul>
+         * <li>all (default): deletes all the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the template.</li>
+         * <li>append: deletes the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the existing template.</li>
+         * </ul>
          * 
-         * *   GROUP_INSTANCE_FIRST: The metrics in the application group take precedence. If a metric specified in the alert template does not exist in the application group, the system does not generate an alert rule for the metric based on the alert template.
-         * *   ALARM_TEMPLATE_FIRST: The metrics specified in the alert template take precedence. If a metric specified in the alert template does not exist in the application group, the system still generates an alert rule for the metric based on the alert template.
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
+        public Builder appendMode(String appendMode) {
+            this.putQueryParameter("AppendMode", appendMode);
+            this.appendMode = appendMode;
+            return this;
+        }
+
+        /**
+         * <p>The mode in which the alert template is applied. Valid values:</p>
+         * <ul>
+         * <li>GROUP_INSTANCE_FIRST: The metrics in the application group take precedence. If a metric specified in the alert template does not exist in the application group, the system does not generate an alert rule for the metric based on the alert template.</li>
+         * <li>ALARM_TEMPLATE_FIRST: The metrics specified in the alert template take precedence. If a metric specified in the alert template does not exist in the application group, the system still generates an alert rule for the metric based on the alert template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GROUP_INSTANCE_FIRST</p>
          */
         public Builder applyMode(String applyMode) {
             this.putQueryParameter("ApplyMode", applyMode);
@@ -167,7 +200,10 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The end of the time period during which the alert rule is effective. Valid values: 00 to 23. A value of 00 indicates 00:59 and a value of 23 indicates 23:59.
+         * <p>The end of the time period during which the alert rule is effective. Valid values: 00 to 23. A value of 00 indicates 00:59 and a value of 23 indicates 23:59.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder enableEndTime(Long enableEndTime) {
             this.putQueryParameter("EnableEndTime", enableEndTime);
@@ -176,7 +212,10 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The beginning of the time period during which the alert rule is effective. Valid values: 00 to 23. A value of 00 indicates 00:00 and a value of 23 indicates 23:00.
+         * <p>The beginning of the time period during which the alert rule is effective. Valid values: 00 to 23. A value of 00 indicates 00:00 and a value of 23 indicates 23:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00</p>
          */
         public Builder enableStartTime(Long enableStartTime) {
             this.putQueryParameter("EnableStartTime", enableStartTime);
@@ -185,10 +224,12 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the application group to which the alert template is applied.
-         * <p>
+         * <p>The ID of the application group to which the alert template is applied.</p>
+         * <p>For more information about how to query the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -197,10 +238,11 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The alert notification method. Valid values:
-         * <p>
+         * <p>The alert notification method. Valid values:</p>
+         * <p>Set the value to 4. A value of 4 indicates that alert notifications are sent by using TradeManager and DingTalk chatbots.</p>
          * 
-         * Set the value to 4. A value of 4 indicates that alert notifications are sent by using TradeManager and DingTalk chatbots.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder notifyLevel(Long notifyLevel) {
             this.putQueryParameter("NotifyLevel", notifyLevel);
@@ -209,10 +251,13 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400.
-         * <p>
+         * <p>The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400.</p>
+         * <blockquote>
+         * <p> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+         * </blockquote>
          * 
-         * >  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder silenceTime(Long silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);
@@ -221,10 +266,12 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the alert template.
-         * <p>
+         * <p>The ID of the alert template.</p>
+         * <p>For more information about how to query the IDs of alert templates, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query the IDs of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
+         * <strong>example:</strong>
+         * <p>700****</p>
          */
         public Builder templateIds(String templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
@@ -233,7 +280,10 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         }
 
         /**
-         * The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         public Builder webhook(String webhook) {
             this.putQueryParameter("Webhook", webhook);

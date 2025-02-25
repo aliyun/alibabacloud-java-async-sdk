@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    private java.util.List < String > resourceId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceId;
 
-    @Body
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Body
-    @NameInMap("Tag")
-    @Validation(required = true)
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -63,7 +68,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -77,15 +82,15 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -100,7 +105,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the tags.
+         * <p>The region ID of the tags.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -109,23 +118,28 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can add tags to up to 50 resources.
+         * <p>The resource IDs. You can add tags to up to 50 resources.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><code>ACS::Config::Rule</code></li>
+         * <li><code>ACS::Config::AggregateConfigRule</code></li>
+         * <li><code>ACS::Config::Aggregator</code></li>
+         * <li><code>ACS::Config::CompliancePack</code></li>
+         * <li><code>ACS::Config::AggregateCompliancePack</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `ACS::Config::Rule`
-         * *   `ACS::Config::AggregateConfigRule`
-         * *   `ACS::Config::Aggregator`
-         * *   `ACS::Config::CompliancePack`
-         * *   `ACS::Config::AggregateCompliancePack`
+         * <strong>example:</strong>
+         * <p>ACS::Config::Rule</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -134,12 +148,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tag value of the resource.
-         * <p>
-         * 
-         * You can specify up to 20 tag values.
+         * <p>The tag value of the resource.</p>
+         * <p>You can specify up to 20 tag values.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
             this.putBodyParameter("Tag", tagShrink);
             this.tag = tag;
@@ -153,11 +166,17 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -192,10 +211,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the resource.
-             * <p>
+             * <p>The key of the tag that is added to the resource.</p>
+             * <p>You can add up to 20 tag keys to a resource.</p>
              * 
-             * You can add up to 20 tag keys to a resource.
+             * <strong>example:</strong>
+             * <p>Env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -203,10 +223,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the resource.
-             * <p>
+             * <p>The value of the tag that is added to the resource.</p>
+             * <p>You can add up to 20 tag values to a resource.</p>
              * 
-             * You can add up to 20 tag values to a resource.
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

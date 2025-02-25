@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegexRule} extends {@link TeaModel}
  *
  * <p>RegexRule</p>
  */
 public class RegexRule extends TeaModel {
-    @NameInMap("match")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("match")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String match;
 
-    @NameInMap("replacement")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("replacement")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String replacement;
 
     private RegexRule(Builder builder) {
@@ -52,7 +52,10 @@ public class RegexRule extends TeaModel {
         private String replacement; 
 
         /**
-         * match.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^/api/.+?/(.*)</p>
          */
         public Builder match(String match) {
             this.match = match;
@@ -60,7 +63,10 @@ public class RegexRule extends TeaModel {
         }
 
         /**
-         * replacement.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api/v2/$1</p>
          */
         public Builder replacement(String replacement) {
             this.replacement = replacement;

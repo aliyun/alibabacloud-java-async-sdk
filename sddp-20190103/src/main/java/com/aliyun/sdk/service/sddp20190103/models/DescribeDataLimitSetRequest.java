@@ -1,31 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataLimitSetRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataLimitSetRequest</p>
  */
 public class DescribeDataLimitSetRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureType")
+    private Integer featureType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private String parentId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private Integer resourceType;
 
     private DescribeDataLimitSetRequest(Builder builder) {
         super(builder);
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.parentId = builder.parentId;
         this.resourceType = builder.resourceType;
@@ -42,6 +52,13 @@ public class DescribeDataLimitSetRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -66,6 +83,7 @@ public class DescribeDataLimitSetRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDataLimitSetRequest, Builder> {
+        private Integer featureType; 
         private String lang; 
         private String parentId; 
         private Integer resourceType; 
@@ -76,13 +94,33 @@ public class DescribeDataLimitSetRequest extends Request {
 
         private Builder(DescribeDataLimitSetRequest request) {
             super(request);
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.parentId = request.parentId;
             this.resourceType = request.resourceType;
         } 
 
         /**
-         * Lang.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+         * <li><strong>en_us</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -91,7 +129,11 @@ public class DescribeDataLimitSetRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>The parent asset ID of the data asset.</p>
+         * <p>You can call the <a href="~~DescribeDataLimitDetail~~">DescribeDataLimitDetail</a> or <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain the parent asset ID of the data asset from the value of the <strong>ParentId</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -100,7 +142,17 @@ public class DescribeDataLimitSetRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of service to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

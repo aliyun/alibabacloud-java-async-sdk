@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomLineRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomLineRequest</p>
  */
 public class UpdateCustomLineRequest extends Request {
-    @Query
-    @NameInMap("IpSegment")
-    private java.util.List < IpSegment> ipSegment;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpSegment")
+    private java.util.List<IpSegment> ipSegment;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long lineId;
 
-    @Query
-    @NameInMap("LineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineName")
     private String lineName;
 
     private UpdateCustomLineRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class UpdateCustomLineRequest extends Request {
     /**
      * @return ipSegment
      */
-    public java.util.List < IpSegment> getIpSegment() {
+    public java.util.List<IpSegment> getIpSegment() {
         return this.ipSegment;
     }
 
@@ -79,7 +84,7 @@ public class UpdateCustomLineRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCustomLineRequest, Builder> {
-        private java.util.List < IpSegment> ipSegment; 
+        private java.util.List<IpSegment> ipSegment; 
         private String lang; 
         private Long lineId; 
         private String lineName; 
@@ -97,16 +102,19 @@ public class UpdateCustomLineRequest extends Request {
         } 
 
         /**
-         * IpSegment.
+         * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
          */
-        public Builder ipSegment(java.util.List < IpSegment> ipSegment) {
+        public Builder ipSegment(java.util.List<IpSegment> ipSegment) {
             this.putQueryParameter("IpSegment", ipSegment);
             this.ipSegment = ipSegment;
             return this;
         }
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +123,11 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * The unique ID of the custom line.
+         * <p>The unique ID of the custom line.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder lineId(Long lineId) {
             this.putQueryParameter("LineId", lineId);
@@ -124,7 +136,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * The new name of the custom line.
+         * <p>The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          */
         public Builder lineName(String lineName) {
             this.putQueryParameter("LineName", lineName);
@@ -139,11 +151,17 @@ public class UpdateCustomLineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCustomLineRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomLineRequest</p>
+     */
     public static class IpSegment extends TeaModel {
-        @NameInMap("EndIp")
+        @com.aliyun.core.annotation.NameInMap("EndIp")
         private String endIp;
 
-        @NameInMap("StartIp")
+        @com.aliyun.core.annotation.NameInMap("StartIp")
         private String startIp;
 
         private IpSegment(Builder builder) {
@@ -178,7 +196,10 @@ public class UpdateCustomLineRequest extends Request {
             private String startIp; 
 
             /**
-             * The end IP address of the CIDR block.
+             * <p>The end IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.2.2</p>
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -186,7 +207,10 @@ public class UpdateCustomLineRequest extends Request {
             }
 
             /**
-             * The start IP address of the CIDR block.
+             * <p>The start IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseApplicationRequest} extends {@link RequestModel}
  *
  * <p>ReleaseApplicationRequest</p>
  */
 public class ReleaseApplicationRequest extends Request {
-    @Body
-    @NameInMap("ApplicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ReleaseApplicationRequest(Builder builder) {
         super(builder);
         this.applicationId = builder.applicationId;
+        this.clientToken = builder.clientToken;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -48,6 +53,13 @@ public class ReleaseApplicationRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -56,6 +68,7 @@ public class ReleaseApplicationRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReleaseApplicationRequest, Builder> {
         private String applicationId; 
+        private String clientToken; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -65,11 +78,16 @@ public class ReleaseApplicationRequest extends Request {
         private Builder(ReleaseApplicationRequest request) {
             super(request);
             this.applicationId = request.applicationId;
+            this.clientToken = request.clientToken;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7QSXFQW46ZNGOUDM</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -78,7 +96,22 @@ public class ReleaseApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600765710019</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

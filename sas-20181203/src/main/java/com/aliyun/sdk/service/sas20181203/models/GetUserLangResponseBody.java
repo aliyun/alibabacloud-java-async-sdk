@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserLangResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserLangResponseBody</p>
  */
 public class GetUserLangResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SasUserLang")
+    @com.aliyun.core.annotation.NameInMap("SasUserLang")
     private SasUserLang sasUserLang;
 
     private GetUserLangResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetUserLangResponseBody extends TeaModel {
         private SasUserLang sasUserLang; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23AD0BD2-8771-5647-819E-6BA51E21****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetUserLangResponseBody extends TeaModel {
         }
 
         /**
-         * The language settings.
+         * <p>The language settings.</p>
          */
         public Builder sasUserLang(SasUserLang sasUserLang) {
             this.sasUserLang = sasUserLang;
@@ -71,8 +79,14 @@ public class GetUserLangResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserLangResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserLangResponseBody</p>
+     */
     public static class SasUserLang extends TeaModel {
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
         private SasUserLang(Builder builder) {
@@ -98,11 +112,14 @@ public class GetUserLangResponseBody extends TeaModel {
             private String lang; 
 
             /**
-             * The language specified for log analysis. Valid values:
-             * <p>
+             * <p>The language specified for log analysis. Valid values:</p>
+             * <ul>
+             * <li>zh: Chinese</li>
+             * <li>en: English</li>
+             * </ul>
              * 
-             * *   zh: Chinese
-             * *   en: English
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;

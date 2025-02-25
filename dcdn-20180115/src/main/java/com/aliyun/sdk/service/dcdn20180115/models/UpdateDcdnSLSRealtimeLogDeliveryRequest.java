@@ -1,49 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDcdnSLSRealtimeLogDeliveryRequest} extends {@link RequestModel}
  *
  * <p>UpdateDcdnSLSRealtimeLogDeliveryRequest</p>
  */
 public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
-    @Body
-    @NameInMap("DataCenter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataCenter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataCenter;
 
-    @Body
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("SLSLogStore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SLSLogStore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSLogStore;
 
-    @Body
-    @NameInMap("SLSProject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SLSProject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSProject;
 
-    @Body
-    @NameInMap("SLSRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SLSRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSRegion;
 
-    @Body
-    @NameInMap("SamplingRate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SamplingRate")
     private String samplingRate;
 
     private UpdateDcdnSLSRealtimeLogDeliveryRequest(Builder builder) {
@@ -144,14 +144,18 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * The region from which logs are collected.
-         * <p>
+         * <p>The region from which logs are collected.</p>
+         * <ul>
+         * <li><strong>cn</strong>: Chinese mainland</li>
+         * <li><strong>sg</strong>: Singapore</li>
+         * <li><strong>in</strong>: India</li>
+         * <li><strong>eu</strong>: Europe</li>
+         * <li><strong>us</strong>: United States</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cn**: Chinese mainland
-         * *   **sg**: Singapore
-         * *   **in**: India
-         * *   **eu**: Europe
-         * *   **us**: United States
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder dataCenter(String dataCenter) {
             this.putBodyParameter("DataCenter", dataCenter);
@@ -160,7 +164,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
+         * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -169,7 +177,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -178,7 +190,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cn</p>
          */
         public Builder SLSLogStore(String SLSLogStore) {
             this.putBodyParameter("SLSLogStore", SLSLogStore);
@@ -187,7 +203,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The name of the log file.
+         * <p>The name of the log file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cn</p>
          */
         public Builder SLSProject(String SLSProject) {
             this.putBodyParameter("SLSProject", SLSProject);
@@ -196,7 +216,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The region to which logs were delivered.
+         * <p>The region to which logs were delivered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder SLSRegion(String SLSRegion) {
             this.putBodyParameter("SLSRegion", SLSRegion);
@@ -205,7 +229,10 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * The sampling rate.
+         * <p>The sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder samplingRate(String samplingRate) {
             this.putBodyParameter("SamplingRate", samplingRate);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnSecSpecInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnSecSpecInfoResponseBody</p>
  */
 public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpecInfos")
+    @com.aliyun.core.annotation.NameInMap("SpecInfos")
     private java.util.List < SpecInfos> specInfos;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private DescribeDcdnSecSpecInfoResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32f6cbb7-13e5-403a-9941-4d4e978dd227</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +73,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The code and configurations of the security rules.
+         * <p>The code and configurations of the security rules.</p>
          */
         public Builder specInfos(java.util.List < SpecInfos> specInfos) {
             this.specInfos = specInfos;
@@ -78,7 +81,10 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The version of secure DCDN.
+         * <p>The version of secure DCDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -91,14 +97,20 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDcdnSecSpecInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSecSpecInfoResponseBody</p>
+     */
     public static class RuleConfigs extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Expr")
+        @com.aliyun.core.annotation.NameInMap("Expr")
         private String expr;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RuleConfigs(Builder builder) {
@@ -142,7 +154,10 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The configuration code of the security rule.
+             * <p>The configuration code of the security rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_****_number</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -150,7 +165,10 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration expression of the security rule.
+             * <p>The configuration expression of the security rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>equal</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -158,7 +176,10 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration expression of the security rule.
+             * <p>The value of the configuration expression of the security rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -172,11 +193,17 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDcdnSecSpecInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDcdnSecSpecInfoResponseBody</p>
+     */
     public static class SpecInfos extends TeaModel {
-        @NameInMap("RuleCode")
+        @com.aliyun.core.annotation.NameInMap("RuleCode")
         private String ruleCode;
 
-        @NameInMap("RuleConfigs")
+        @com.aliyun.core.annotation.NameInMap("RuleConfigs")
         private java.util.List < RuleConfigs> ruleConfigs;
 
         private SpecInfos(Builder builder) {
@@ -211,7 +238,10 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             private java.util.List < RuleConfigs> ruleConfigs; 
 
             /**
-             * The code of the security rule.
+             * <p>The code of the security rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accurate_***</p>
              */
             public Builder ruleCode(String ruleCode) {
                 this.ruleCode = ruleCode;
@@ -219,7 +249,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the security rule.
+             * <p>The configurations of the security rule.</p>
              */
             public Builder ruleConfigs(java.util.List < RuleConfigs> ruleConfigs) {
                 this.ruleConfigs = ruleConfigs;

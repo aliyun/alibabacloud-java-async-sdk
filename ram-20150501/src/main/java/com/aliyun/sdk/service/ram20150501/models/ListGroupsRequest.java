@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListGroupsRequest</p>
  */
 public class ListGroupsRequest extends Request {
-    @Query
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @Query
-    @NameInMap("MaxItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxItems")
     private Integer maxItems;
 
     private ListGroupsRequest(Builder builder) {
@@ -61,14 +66,17 @@ public class ListGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupsRequest response) {
-            super(response);
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
+        private Builder(ListGroupsRequest request) {
+            super(request);
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
         } 
 
         /**
-         * Marker.
+         * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -77,7 +85,11 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * MaxItems.
+         * <p>The number of entries to return. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> is <code>true</code>.</p>
+         * <p>Valid values: 1 to 1000. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);

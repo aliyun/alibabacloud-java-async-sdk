@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLiveRecordTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetLiveRecordTemplateResponseBody</p>
  */
 public class GetLiveRecordTemplateResponseBody extends TeaModel {
-    @NameInMap("RecordTemplate")
+    @com.aliyun.core.annotation.NameInMap("RecordTemplate")
     private RecordTemplate recordTemplate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLiveRecordTemplateResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 录制模板
+         * <p>The recording template.</p>
          */
         public Builder recordTemplate(RecordTemplate recordTemplate) {
             this.recordTemplate = recordTemplate;
@@ -58,7 +63,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C892855F-95DF-50D6-A28C-279ABDB76810</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLiveRecordTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordTemplateResponseBody</p>
+     */
     public static class RecordFormatList extends TeaModel {
-        @NameInMap("CycleDuration")
+        @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("OssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("OssObjectPrefix")
         private String ossObjectPrefix;
 
-        @NameInMap("SliceDuration")
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
         private Integer sliceDuration;
 
-        @NameInMap("SliceOssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("SliceOssObjectPrefix")
         private String sliceOssObjectPrefix;
 
         private RecordFormatList(Builder builder) {
@@ -146,7 +160,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             private String sliceOssObjectPrefix; 
 
             /**
-             * CycleDuration.
+             * <p>The duration of the recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder cycleDuration(Integer cycleDuration) {
                 this.cycleDuration = cycleDuration;
@@ -154,7 +171,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 格式
+             * <p>The output file format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m3u8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -162,7 +182,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Oss对象名，不包含后缀
+             * <p>The name of the recording file that is stored in Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{Sequence}{EscapedStartTime}{EscapedEndTime}</p>
              */
             public Builder ossObjectPrefix(String ossObjectPrefix) {
                 this.ossObjectPrefix = ossObjectPrefix;
@@ -170,7 +193,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SliceDuration.
+             * <p>The duration of a single segment. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder sliceDuration(Integer sliceDuration) {
                 this.sliceDuration = sliceDuration;
@@ -178,7 +204,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 切片Oss对象名，不包含后缀
+             * <p>The name of the TS segment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
              */
             public Builder sliceOssObjectPrefix(String sliceOssObjectPrefix) {
                 this.sliceOssObjectPrefix = sliceOssObjectPrefix;
@@ -192,23 +221,29 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLiveRecordTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLiveRecordTemplateResponseBody</p>
+     */
     public static class RecordTemplate extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RecordFormatList")
-        private java.util.List < RecordFormatList> recordFormatList;
+        @com.aliyun.core.annotation.NameInMap("RecordFormatList")
+        private java.util.List<RecordFormatList> recordFormatList;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RecordTemplate(Builder builder) {
@@ -252,7 +287,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         /**
          * @return recordFormatList
          */
-        public java.util.List < RecordFormatList> getRecordFormatList() {
+        public java.util.List<RecordFormatList> getRecordFormatList() {
             return this.recordFormatList;
         }
 
@@ -274,12 +309,16 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             private String createTime; 
             private String lastModified; 
             private String name; 
-            private java.util.List < RecordFormatList> recordFormatList; 
+            private java.util.List<RecordFormatList> recordFormatList; 
             private String templateId; 
             private String type; 
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>The time when the job was created.</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T03:26:36Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -287,7 +326,11 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 代表创建时间的资源属性字段
+             * <p>The time when the template was last modified.</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-20T03:26:36Z</p>
              */
             public Builder lastModified(String lastModified) {
                 this.lastModified = lastModified;
@@ -295,7 +338,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test template</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -303,15 +349,18 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 录制格式
+             * <p>The list of recording formats.</p>
              */
-            public Builder recordFormatList(java.util.List < RecordFormatList> recordFormatList) {
+            public Builder recordFormatList(java.util.List<RecordFormatList> recordFormatList) {
                 this.recordFormatList = recordFormatList;
                 return this;
             }
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -319,7 +368,15 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>The type of the template.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>custom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder type(String type) {
                 this.type = type;

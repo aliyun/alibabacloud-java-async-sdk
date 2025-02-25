@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDNADBRequest} extends {@link RequestModel}
  *
  * <p>CreateDNADBRequest</p>
  */
 public class CreateDNADBRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Model")
     private String model;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateDNADBRequest(Builder builder) {
@@ -139,7 +144,7 @@ public class CreateDNADBRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the media fingerprint library.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -148,7 +153,16 @@ public class CreateDNADBRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model of the media fingerprint library. Valid values:</p>
+         * <ul>
+         * <li><strong>Video</strong></li>
+         * <li><strong>Audio</strong></li>
+         * <li><strong>Image</strong></li>
+         * <li><strong>Text</strong> (supported only in the China (Shanghai) region)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Video</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -157,7 +171,11 @@ public class CreateDNADBRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the media fingerprint library.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResourceTableRequest</p>
  */
 public class GetInstanceResourceTableRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Path
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
+
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private GetInstanceResourceTableRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.resourceId = builder.resourceId;
         this.tableName = builder.tableName;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -65,10 +72,18 @@ public class GetInstanceResourceTableRequest extends Request {
         return this.tableName;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<GetInstanceResourceTableRequest, Builder> {
         private String instanceId; 
         private String resourceId; 
         private String tableName; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -79,6 +94,7 @@ public class GetInstanceResourceTableRequest extends Request {
             this.instanceId = request.instanceId;
             this.resourceId = request.resourceId;
             this.tableName = request.tableName;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -105,6 +121,15 @@ public class GetInstanceResourceTableRequest extends Request {
         public Builder tableName(String tableName) {
             this.putPathParameter("TableName", tableName);
             this.tableName = tableName;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

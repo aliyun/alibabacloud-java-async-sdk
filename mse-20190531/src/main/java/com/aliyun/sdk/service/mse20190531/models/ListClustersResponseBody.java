@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListClustersResponseBody</p>
  */
 public class ListClustersResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListClustersResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListClustersResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -123,7 +128,7 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String httpCode; 
         private String message; 
@@ -134,15 +139,18 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +158,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +169,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +180,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +191,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +202,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +213,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +228,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -215,11 +244,17 @@ public class ListClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class MaintenancePeriod extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private MaintenancePeriod(Builder builder) {
@@ -276,68 +311,74 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("CanUpdate")
+        @com.aliyun.core.annotation.NameInMap("CanUpdate")
         private Boolean canUpdate;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ClusterAliasName")
+        @com.aliyun.core.annotation.NameInMap("ClusterAliasName")
         private String clusterAliasName;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("InitStatus")
+        @com.aliyun.core.annotation.NameInMap("InitStatus")
         private String initStatus;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Long instanceCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetAddress")
+        @com.aliyun.core.annotation.NameInMap("InternetAddress")
         private String internetAddress;
 
-        @NameInMap("InternetDomain")
+        @com.aliyun.core.annotation.NameInMap("InternetDomain")
         private String internetDomain;
 
-        @NameInMap("IntranetAddress")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
 
-        @NameInMap("IntranetDomain")
+        @com.aliyun.core.annotation.NameInMap("IntranetDomain")
         private String intranetDomain;
 
-        @NameInMap("MaintenancePeriod")
+        @com.aliyun.core.annotation.NameInMap("MaintenancePeriod")
         private MaintenancePeriod maintenancePeriod;
 
-        @NameInMap("MseVersion")
+        @com.aliyun.core.annotation.NameInMap("MseVersion")
         private String mseVersion;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, ?> tags;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {
@@ -501,7 +542,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -538,12 +579,15 @@ public class ListClustersResponseBody extends TeaModel {
             private MaintenancePeriod maintenancePeriod; 
             private String mseVersion; 
             private String resourceGroupId; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String versionCode; 
             private String vpcId; 
 
             /**
-             * The application version.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.9.3</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -551,7 +595,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance can be upgraded.
+             * <p>Indicates whether the instance can be upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canUpdate(Boolean canUpdate) {
                 this.canUpdate = canUpdate;
@@ -559,7 +606,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method, such as subscription or pay-as-you-go.
+             * <p>The billing method, such as subscription or pay-as-you-go.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pay-as-you-go</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -567,7 +617,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the cluster.
+             * <p>The alias of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-7413****</p>
              */
             public Builder clusterAliasName(String clusterAliasName) {
                 this.clusterAliasName = clusterAliasName;
@@ -575,7 +628,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-st21ri2****</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -583,7 +639,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
+             * <p>The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Eureka</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -591,7 +650,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-07-31 11:36:08</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -599,7 +661,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster expires.
+             * <p>The time when the cluster expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-01 00:00:00</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -607,7 +672,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The initialization status of the instance.
+             * <p>The initialization status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RESTART_SUCCESS</p>
              */
             public Builder initStatus(String initStatus) {
                 this.initStatus = initStatus;
@@ -615,7 +683,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of clusters.
+             * <p>The number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -623,7 +694,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-cn-st21ri2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -631,7 +705,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.98.XX.XX</p>
              */
             public Builder internetAddress(String internetAddress) {
                 this.internetAddress = internetAddress;
@@ -639,7 +716,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-7413****-p.eureka.mse.aliyuncs.com</p>
              */
             public Builder internetDomain(String internetDomain) {
                 this.internetDomain = internetDomain;
@@ -647,7 +727,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address.
+             * <p>The internal IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -655,7 +738,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-7413****-eureka.mse.aliyuncs.com</p>
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
@@ -671,7 +757,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the cluster.
+             * <p>The edition of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse_pro</p>
              */
             public Builder mseVersion(String mseVersion) {
                 this.mseVersion = mseVersion;
@@ -679,7 +768,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmv7jiavm4uxa</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -687,15 +779,18 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the instance.
+             * <p>The tags that are attached to the instance.</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The version information.
+             * <p>The version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EUREKA_1_9_3</p>
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;

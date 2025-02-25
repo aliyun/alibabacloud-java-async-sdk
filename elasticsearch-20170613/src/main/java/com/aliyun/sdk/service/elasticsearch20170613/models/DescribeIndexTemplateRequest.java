@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIndexTemplateRequest} extends {@link RequestModel}
  *
  * <p>DescribeIndexTemplateRequest</p>
  */
 public class DescribeIndexTemplateRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("IndexTemplate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("IndexTemplate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexTemplate;
 
     private DescribeIndexTemplateRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class DescribeIndexTemplateRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w24n9u900am****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -79,7 +82,10 @@ public class DescribeIndexTemplateRequest extends Request {
         }
 
         /**
-         * IndexTemplate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-stream-default</p>
          */
         public Builder indexTemplate(String indexTemplate) {
             this.putPathParameter("IndexTemplate", indexTemplate);

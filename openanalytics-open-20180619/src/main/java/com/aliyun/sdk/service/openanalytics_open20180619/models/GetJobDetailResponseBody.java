@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openanalytics_open20180619.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobDetailResponseBody</p>
  */
 public class GetJobDetailResponseBody extends TeaModel {
-    @NameInMap("JobDetail")
+    @com.aliyun.core.annotation.NameInMap("JobDetail")
     private JobDetail jobDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetJobDetailResponseBody(Builder builder) {
@@ -71,53 +71,59 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobDetailResponseBody</p>
+     */
     public static class JobDetail extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeValue")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeValue")
         private String createTimeValue;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("DriverResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("DriverResourceSpec")
         private String driverResourceSpec;
 
-        @NameInMap("ExecutorInstances")
+        @com.aliyun.core.annotation.NameInMap("ExecutorInstances")
         private String executorInstances;
 
-        @NameInMap("ExecutorResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("ExecutorResourceSpec")
         private String executorResourceSpec;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("LastJobAttemptId")
+        @com.aliyun.core.annotation.NameInMap("LastJobAttemptId")
         private String lastJobAttemptId;
 
-        @NameInMap("SparkUI")
+        @com.aliyun.core.annotation.NameInMap("SparkUI")
         private String sparkUI;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubmitTime")
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
 
-        @NameInMap("SubmitTimeValue")
+        @com.aliyun.core.annotation.NameInMap("SubmitTimeValue")
         private String submitTimeValue;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimeValue")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimeValue")
         private String updateTimeValue;
 
-        @NameInMap("VcName")
+        @com.aliyun.core.annotation.NameInMap("VcName")
         private String vcName;
 
         private JobDetail(Builder builder) {

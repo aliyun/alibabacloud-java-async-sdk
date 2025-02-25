@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileDetectUploadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFileDetectUploadUrlResponseBody</p>
  */
 public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadUrlList")
-    private java.util.List < UploadUrlList> uploadUrlList;
+    @com.aliyun.core.annotation.NameInMap("UploadUrlList")
+    private java.util.List<UploadUrlList> uploadUrlList;
 
     private CreateFileDetectUploadUrlResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     /**
      * @return uploadUrlList
      */
-    public java.util.List < UploadUrlList> getUploadUrlList() {
+    public java.util.List<UploadUrlList> getUploadUrlList() {
         return this.uploadUrlList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UploadUrlList> uploadUrlList; 
+        private java.util.List<UploadUrlList> uploadUrlList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the parameters that are required to upload a file.
+         * <p>An array consisting of the parameters that are required to upload a file.</p>
          */
-        public Builder uploadUrlList(java.util.List < UploadUrlList> uploadUrlList) {
+        public Builder uploadUrlList(java.util.List<UploadUrlList> uploadUrlList) {
             this.uploadUrlList = uploadUrlList;
             return this;
         }
@@ -71,17 +79,23 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFileDetectUploadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFileDetectUploadUrlResponseBody</p>
+     */
     public static class Context extends TeaModel {
-        @NameInMap("AccessId")
+        @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
 
-        @NameInMap("OssKey")
+        @com.aliyun.core.annotation.NameInMap("OssKey")
         private String ossKey;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
         private Context(Builder builder) {
@@ -134,7 +148,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             private String signature; 
 
             /**
-             * The AccessKey ID that is used to access the OSS bucket.
+             * <p>The AccessKey ID that is used to access the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI4G1mgPbjvGQuiV1X****</p>
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -142,7 +159,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the file that is used after the file is uploaded to the OSS bucket.
+             * <p>The key of the file that is used after the file is uploaded to the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
@@ -150,7 +170,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The policy that poses limits on file upload. For example, the policy can limit the size of the file.
+             * <p>The policy that poses limits on file upload. For example, the policy can limit the size of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF0aW9uIjoiMjAyMi0wNy0yM1QxMDo1ODoxMC43NTNaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMjA5NzE1MjBdLFsiZXEiLCIka2V5IiwiMS8yMDIyLzA2LzIzLzE4LzU4LzE2NTU5ODE4OTA3NTM4NTc2MjFkNS1kN2E1LTQ5YzAtOGJjZi0yMTMyY2JiYTdmYzMi****</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -158,7 +181,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The signature that is used to upload the file.
+             * <p>The signature that is used to upload the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wDhPgVdnY/bkKFYcYFl+4crl****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -172,29 +198,35 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFileDetectUploadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFileDetectUploadUrlResponseBody</p>
+     */
     public static class UploadUrlList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Context")
+        @com.aliyun.core.annotation.NameInMap("Context")
         private Context context;
 
-        @NameInMap("Expire")
+        @com.aliyun.core.annotation.NameInMap("Expire")
         private String expire;
 
-        @NameInMap("FileExist")
+        @com.aliyun.core.annotation.NameInMap("FileExist")
         private Boolean fileExist;
 
-        @NameInMap("HashKey")
+        @com.aliyun.core.annotation.NameInMap("HashKey")
         private String hashKey;
 
-        @NameInMap("InternalUrl")
+        @com.aliyun.core.annotation.NameInMap("InternalUrl")
         private String internalUrl;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PublicUrl")
+        @com.aliyun.core.annotation.NameInMap("PublicUrl")
         private String publicUrl;
 
         private UploadUrlList(Builder builder) {
@@ -283,7 +315,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             private String publicUrl; 
 
             /**
-             * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+             * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -291,7 +326,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The signature information.
+             * <p>The signature information.</p>
              */
             public Builder context(Context context) {
                 this.context = context;
@@ -299,7 +334,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the values of the parameters expire. Unit: milliseconds.
+             * <p>The timestamp when the values of the parameters expire. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1658562101370</p>
              */
             public Builder expire(String expire) {
                 this.expire = expire;
@@ -307,11 +345,14 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the file exists in the cloud. Valid values:
-             * <p>
+             * <p>Indicates whether the file exists in the cloud. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The file exists in the cloud. You do not need to upload the file.</li>
+             * <li><strong>false</strong>: The file does not exist in the cloud. You must upload the file.</li>
+             * </ul>
              * 
-             * *   **true**: The file exists in the cloud. You do not need to upload the file.
-             * *   **false**: The file does not exist in the cloud. You must upload the file.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fileExist(Boolean fileExist) {
                 this.fileExist = fileExist;
@@ -319,7 +360,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the file.
+             * <p>The identifier of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a212417e65c26ff133cfff28f6c****</p>
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
@@ -327,7 +371,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the URL to which the file is uploaded.
+             * <p>The internal endpoint of the URL to which the file is uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com">http://example.com</a></p>
              */
             public Builder internalUrl(String internalUrl) {
                 this.internalUrl = internalUrl;
@@ -335,7 +382,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -343,7 +393,10 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the URL to which the file is uploaded.
+             * <p>The public endpoint of the URL to which the file is uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com">http://example.com</a></p>
              */
             public Builder publicUrl(String publicUrl) {
                 this.publicUrl = publicUrl;

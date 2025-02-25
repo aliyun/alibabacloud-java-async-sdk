@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotaReviewTasksResponseBody</p>
  */
 public class ListQuotaReviewTasksResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListQuotaReviewTasksResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,10 +69,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the ticket for application quota approval.
-         * <p>
-         * 
-         * For more information, see [QuotaReviewTask](~~173609~~).
+         * The information about the tickets. For more information, see [QuotaReviewTask](~~173609~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -81,7 +77,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the returned tickets.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -95,52 +91,52 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("appGroupId")
+        @com.aliyun.core.annotation.NameInMap("appGroupId")
         private Integer appGroupId;
 
-        @NameInMap("appGroupName")
+        @com.aliyun.core.annotation.NameInMap("appGroupName")
         private String appGroupName;
 
-        @NameInMap("appGroupType")
+        @com.aliyun.core.annotation.NameInMap("appGroupType")
         private String appGroupType;
 
-        @NameInMap("approved")
+        @com.aliyun.core.annotation.NameInMap("approved")
         private Boolean approved;
 
-        @NameInMap("available")
+        @com.aliyun.core.annotation.NameInMap("available")
         private Boolean available;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Integer id;
 
-        @NameInMap("memo")
+        @com.aliyun.core.annotation.NameInMap("memo")
         private String memo;
 
-        @NameInMap("newComputeResource")
+        @com.aliyun.core.annotation.NameInMap("newComputeResource")
         private Integer newComputeResource;
 
-        @NameInMap("newSocSize")
+        @com.aliyun.core.annotation.NameInMap("newSocSize")
         private Integer newSocSize;
 
-        @NameInMap("newSpec")
+        @com.aliyun.core.annotation.NameInMap("newSpec")
         private String newSpec;
 
-        @NameInMap("oldComputeResource")
+        @com.aliyun.core.annotation.NameInMap("oldComputeResource")
         private Integer oldComputeResource;
 
-        @NameInMap("oldDocSize")
+        @com.aliyun.core.annotation.NameInMap("oldDocSize")
         private Integer oldDocSize;
 
-        @NameInMap("oldSpec")
+        @com.aliyun.core.annotation.NameInMap("oldSpec")
         private String oldSpec;
 
-        @NameInMap("pending")
+        @com.aliyun.core.annotation.NameInMap("pending")
         private Boolean pending;
 
         private Result(Builder builder) {
@@ -301,7 +297,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             private Boolean pending; 
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder appGroupId(Integer appGroupId) {
                 this.appGroupId = appGroupId;
@@ -309,7 +305,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The application name.
              */
             public Builder appGroupName(String appGroupName) {
                 this.appGroupName = appGroupName;
@@ -317,7 +313,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application.
+             * The application type.
              */
             public Builder appGroupType(String appGroupType) {
                 this.appGroupType = appGroupType;
@@ -333,7 +329,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the model is available.
+             * Indicates whether the application is available.
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -357,7 +353,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ticket.
+             * The ticket ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -365,7 +361,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the ticket.
+             * The remarks.
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -413,7 +409,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The original application specifications.
+             * The original specifications of the application.
              */
             public Builder oldSpec(String oldSpec) {
                 this.oldSpec = oldSpec;

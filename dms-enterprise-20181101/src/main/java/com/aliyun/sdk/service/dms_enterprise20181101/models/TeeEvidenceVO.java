@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TeeEvidenceVO} extends {@link TeaModel}
  *
  * <p>TeeEvidenceVO</p>
  */
 public class TeeEvidenceVO extends TeaModel {
-    @NameInMap("CipherSuite")
+    @com.aliyun.core.annotation.NameInMap("CipherSuite")
     private String cipherSuite;
 
-    @NameInMap("EnclaveData")
+    @com.aliyun.core.annotation.NameInMap("EnclaveData")
     private String enclaveData;
 
-    @NameInMap("EncryptPublicKeyPem")
+    @com.aliyun.core.annotation.NameInMap("EncryptPublicKeyPem")
     private String encryptPublicKeyPem;
 
-    @NameInMap("EncryptPublicKeyType")
+    @com.aliyun.core.annotation.NameInMap("EncryptPublicKeyType")
     private String encryptPublicKeyType;
 
-    @NameInMap("ModifiedDate")
+    @com.aliyun.core.annotation.NameInMap("ModifiedDate")
     private String modifiedDate;
 
-    @NameInMap("PublicKey")
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
     private String publicKey;
 
-    @NameInMap("PublicKeyRaBase64")
+    @com.aliyun.core.annotation.NameInMap("PublicKeyRaBase64")
     private String publicKeyRaBase64;
 
-    @NameInMap("PublicKeyRaType")
+    @com.aliyun.core.annotation.NameInMap("PublicKeyRaType")
     private String publicKeyRaType;
 
-    @NameInMap("QuoteReport")
+    @com.aliyun.core.annotation.NameInMap("QuoteReport")
     private String quoteReport;
 
-    @NameInMap("SignPublicKeyPem")
+    @com.aliyun.core.annotation.NameInMap("SignPublicKeyPem")
     private String signPublicKeyPem;
 
-    @NameInMap("SignPublicKeyType")
+    @com.aliyun.core.annotation.NameInMap("SignPublicKeyType")
     private String signPublicKeyType;
 
-    @NameInMap("TrustedMrEnclave")
-    private java.util.List < String > trustedMrEnclave;
+    @com.aliyun.core.annotation.NameInMap("TrustedMrEnclave")
+    private java.util.List<String> trustedMrEnclave;
 
     private TeeEvidenceVO(Builder builder) {
         this.cipherSuite = builder.cipherSuite;
@@ -151,7 +156,7 @@ public class TeeEvidenceVO extends TeaModel {
     /**
      * @return trustedMrEnclave
      */
-    public java.util.List < String > getTrustedMrEnclave() {
+    public java.util.List<String> getTrustedMrEnclave() {
         return this.trustedMrEnclave;
     }
 
@@ -167,7 +172,7 @@ public class TeeEvidenceVO extends TeaModel {
         private String quoteReport; 
         private String signPublicKeyPem; 
         private String signPublicKeyType; 
-        private java.util.List < String > trustedMrEnclave; 
+        private java.util.List<String> trustedMrEnclave; 
 
         /**
          * CipherSuite.
@@ -260,7 +265,7 @@ public class TeeEvidenceVO extends TeaModel {
         /**
          * TrustedMrEnclave.
          */
-        public Builder trustedMrEnclave(java.util.List < String > trustedMrEnclave) {
+        public Builder trustedMrEnclave(java.util.List<String> trustedMrEnclave) {
             this.trustedMrEnclave = trustedMrEnclave;
             return this;
         }

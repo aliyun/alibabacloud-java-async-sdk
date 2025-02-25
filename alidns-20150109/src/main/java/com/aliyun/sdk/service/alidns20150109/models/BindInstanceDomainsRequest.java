@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindInstanceDomainsRequest} extends {@link RequestModel}
  *
  * <p>BindInstanceDomainsRequest</p>
  */
 public class BindInstanceDomainsRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private BindInstanceDomainsRequest(Builder builder) {
@@ -84,10 +89,14 @@ public class BindInstanceDomainsRequest extends Request {
         } 
 
         /**
-         * The list of domain names.
-         * <p>
+         * <p>The domain names.</p>
+         * <blockquote>
+         * <p> Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Separate multiple domain names with commas (,). A maximum of 100 domain names can be entered.
+         * <strong>example:</strong>
+         * <p>example.com,example.net</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -96,7 +105,11 @@ public class BindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfasdf</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +118,10 @@ public class BindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

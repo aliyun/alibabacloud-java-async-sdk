@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQueryOptimizeTagRequest} extends {@link RequestModel}
  *
  * <p>CreateQueryOptimizeTagRequest</p>
  */
 public class CreateQueryOptimizeTagRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SqlIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sqlIds;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Query
-    @NameInMap("Tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tags;
 
     private CreateQueryOptimizeTagRequest(Builder builder) {
@@ -129,10 +134,11 @@ public class CreateQueryOptimizeTagRequest extends Request {
         } 
 
         /**
-         * The remarks.
-         * <p>
+         * <p>The remarks.</p>
+         * <p>The remarks can be 1 to 300 characters in length.</p>
          * 
-         * The remarks can be 1 to 300 characters in length.
+         * <strong>example:</strong>
+         * <p>Slow SQL queries of offline synchronization. No optimization is required.</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -141,12 +147,16 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * The database engine. Valid values:
-         * <p>
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
+         * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
+         * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**: ApsaraDB RDS for MySQL
-         * *   **PolarDBMySQL**: PolarDB for MySQL
-         * *   **PostgreSQL**: ApsaraDB RDS for PostgreSQL
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -155,7 +165,11 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,7 +178,11 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](~~405261~~) operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).
+         * <p>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeExecErrorStats</a> operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0e941</p>
          */
         public Builder sqlIds(String sqlIds) {
             this.putQueryParameter("SqlIds", sqlIds);
@@ -173,11 +191,15 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * The status of **Tags**. Valid values:
-         * <p>
+         * <p>The status of <strong>Tags</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: removes all tags added to the SQL templates that are specified by <strong>SqlIds</strong> and leaves <strong>Tags</strong> empty.</li>
+         * <li><strong>1</strong>: adds the tags specified by <strong>Tags</strong> to the SQL templates that are specified by <strong>SqlIds</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: removes all tags added to the SQL templates that are specified by **SqlIds** and leaves **Tags** empty.
-         * *   **1**: adds the tags specified by **Tags** to the SQL templates that are specified by **SqlIds**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -186,13 +208,17 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * The SQL tags. Separate multiple SQL tags with commas (,). Valid values:
-         * <p>
+         * <p>The SQL tags. Separate multiple SQL tags with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>DAS_IMPORTANT</strong>: The SQL template is important.</li>
+         * <li><strong>DAS_NOT_IMPORTANT</strong>: The SQL template is unimportant.</li>
+         * <li><strong>USER_IGNORE</strong>: The scheduling of the SQL template does not need to be optimized.</li>
+         * <li><strong>DAS_IN_PLAN</strong>: The scheduling of the SQL template needs to be optimized.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **DAS_IMPORTANT**: The SQL template is important.
-         * *   **DAS_NOT_IMPORTANT**: The SQL template is unimportant.
-         * *   **USER_IGNORE**: The scheduling of the SQL template does not need to be optimized.
-         * *   **DAS_IN_PLAN**: The scheduling of the SQL template needs to be optimized.
+         * <strong>example:</strong>
+         * <p>DAS_IN_PLAN,DAS_NOT_IMPORTANT</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

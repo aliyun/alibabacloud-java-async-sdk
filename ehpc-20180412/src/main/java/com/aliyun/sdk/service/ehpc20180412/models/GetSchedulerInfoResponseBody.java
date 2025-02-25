@@ -50,7 +50,7 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
         private java.util.List < SchedInfo> schedInfo; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateScratchRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateScratchRequest</p>
  */
 public class GetTemplateScratchRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ShowDataOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowDataOption")
     private String showDataOption;
 
-    @Query
-    @NameInMap("TemplateScratchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
     private String templateScratchId;
 
     private GetTemplateScratchRequest(Builder builder) {
@@ -83,10 +83,12 @@ public class GetTemplateScratchRequest extends Request {
         } 
 
         /**
-         * The region ID of the scenario.
-         * <p>
+         * <p>The region ID of the resource scenario.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -95,16 +97,20 @@ public class GetTemplateScratchRequest extends Request {
         }
 
         /**
-         * The data display option. Valid values:
-         * <p>
+         * <p>The data display option. Valid values:</p>
+         * <ul>
+         * <li>Sources: displays only the data of source nodes. This setting takes effect only when TemplateScratchType is set to ArchitectureDetection.</li>
+         * <li>Source: displays only the data of the source node. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</li>
+         * <li>Provisions: displays only the data of new nodes. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</li>
+         * <li>All: displays all data.</li>
+         * </ul>
+         * <p>For more information about source nodes and new nodes, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the node data is not displayed.</p>
+         * </blockquote>
          * 
-         * *   Source: displays only the data of source nodes.
-         * *   Provisions: displays only the data of new nodes.
-         * *   All: displays the data of all nodes.
-         * 
-         * For more information about source nodes and new nodes, see [Overview](~~352074~~).
-         * 
-         * > If you do not specify this parameter, the node data is not displayed.
+         * <strong>example:</strong>
+         * <p>Source</p>
          */
         public Builder showDataOption(String showDataOption) {
             this.putQueryParameter("ShowDataOption", showDataOption);
@@ -113,7 +119,10 @@ public class GetTemplateScratchRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
+         * <p>The ID of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ts-7f7a704cf71c49a6****</p>
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);

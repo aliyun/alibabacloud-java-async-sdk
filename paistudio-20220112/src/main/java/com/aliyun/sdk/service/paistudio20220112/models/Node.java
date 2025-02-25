@@ -1,76 +1,111 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Node} extends {@link TeaModel}
  *
  * <p>Node</p>
  */
 public class Node extends TeaModel {
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @NameInMap("BoundQuotas")
-    private java.util.List < QuotaIdName > boundQuotas;
+    @com.aliyun.core.annotation.NameInMap("BoundQuotas")
+    private java.util.List<QuotaIdName> boundQuotas;
 
-    @NameInMap("CPU")
+    @com.aliyun.core.annotation.NameInMap("CPU")
     private String CPU;
 
-    @NameInMap("CreatorId")
+    @com.aliyun.core.annotation.NameInMap("CreatorId")
     private String creatorId;
 
-    @NameInMap("GPU")
+    @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUMemory")
+    private String GPUMemory;
+
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("GmtExpiredTime")
     private String gmtExpiredTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("IsBound")
+    @com.aliyun.core.annotation.NameInMap("IsBound")
     private Boolean isBound;
 
-    @NameInMap("MachineGroupId")
+    @com.aliyun.core.annotation.NameInMap("LimitCPU")
+    private String limitCPU;
+
+    @com.aliyun.core.annotation.NameInMap("LimitGPU")
+    private String limitGPU;
+
+    @com.aliyun.core.annotation.NameInMap("LimitMemory")
+    private String limitMemory;
+
+    @com.aliyun.core.annotation.NameInMap("MachineGroupId")
     private String machineGroupId;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private String memory;
 
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
-    @NameInMap("NodeStatus")
+    @com.aliyun.core.annotation.NameInMap("NodeStatus")
     private String nodeStatus;
 
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @NameInMap("OrderStatus")
+    @com.aliyun.core.annotation.NameInMap("OrderStatus")
     private String orderStatus;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("PodNum")
+    private Long podNum;
+
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("RequestCPU")
+    private String requestCPU;
+
+    @com.aliyun.core.annotation.NameInMap("RequestGPU")
+    private String requestGPU;
+
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
+    private String requestMemory;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
+
+    @com.aliyun.core.annotation.NameInMap("Users")
+    private java.util.List<UserInfo> users;
+
+    @com.aliyun.core.annotation.NameInMap("WorkloadNum")
+    private Long workloadNum;
 
     private Node(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
@@ -78,21 +113,31 @@ public class Node extends TeaModel {
         this.CPU = builder.CPU;
         this.creatorId = builder.creatorId;
         this.GPU = builder.GPU;
+        this.GPUMemory = builder.GPUMemory;
         this.GPUType = builder.GPUType;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtExpiredTime = builder.gmtExpiredTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.isBound = builder.isBound;
+        this.limitCPU = builder.limitCPU;
+        this.limitGPU = builder.limitGPU;
+        this.limitMemory = builder.limitMemory;
         this.machineGroupId = builder.machineGroupId;
         this.memory = builder.memory;
         this.nodeName = builder.nodeName;
         this.nodeStatus = builder.nodeStatus;
         this.nodeType = builder.nodeType;
         this.orderStatus = builder.orderStatus;
+        this.podNum = builder.podNum;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
+        this.requestCPU = builder.requestCPU;
+        this.requestGPU = builder.requestGPU;
+        this.requestMemory = builder.requestMemory;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceGroupName = builder.resourceGroupName;
+        this.users = builder.users;
+        this.workloadNum = builder.workloadNum;
     }
 
     public static Builder builder() {
@@ -113,7 +158,7 @@ public class Node extends TeaModel {
     /**
      * @return boundQuotas
      */
-    public java.util.List < QuotaIdName > getBoundQuotas() {
+    public java.util.List<QuotaIdName> getBoundQuotas() {
         return this.boundQuotas;
     }
 
@@ -136,6 +181,13 @@ public class Node extends TeaModel {
      */
     public String getGPU() {
         return this.GPU;
+    }
+
+    /**
+     * @return GPUMemory
+     */
+    public String getGPUMemory() {
+        return this.GPUMemory;
     }
 
     /**
@@ -171,6 +223,27 @@ public class Node extends TeaModel {
      */
     public Boolean getIsBound() {
         return this.isBound;
+    }
+
+    /**
+     * @return limitCPU
+     */
+    public String getLimitCPU() {
+        return this.limitCPU;
+    }
+
+    /**
+     * @return limitGPU
+     */
+    public String getLimitGPU() {
+        return this.limitGPU;
+    }
+
+    /**
+     * @return limitMemory
+     */
+    public String getLimitMemory() {
+        return this.limitMemory;
     }
 
     /**
@@ -216,6 +289,13 @@ public class Node extends TeaModel {
     }
 
     /**
+     * @return podNum
+     */
+    public Long getPodNum() {
+        return this.podNum;
+    }
+
+    /**
      * @return reasonCode
      */
     public String getReasonCode() {
@@ -227,6 +307,27 @@ public class Node extends TeaModel {
      */
     public String getReasonMessage() {
         return this.reasonMessage;
+    }
+
+    /**
+     * @return requestCPU
+     */
+    public String getRequestCPU() {
+        return this.requestCPU;
+    }
+
+    /**
+     * @return requestGPU
+     */
+    public String getRequestGPU() {
+        return this.requestGPU;
+    }
+
+    /**
+     * @return requestMemory
+     */
+    public String getRequestMemory() {
+        return this.requestMemory;
     }
 
     /**
@@ -243,27 +344,51 @@ public class Node extends TeaModel {
         return this.resourceGroupName;
     }
 
+    /**
+     * @return users
+     */
+    public java.util.List<UserInfo> getUsers() {
+        return this.users;
+    }
+
+    /**
+     * @return workloadNum
+     */
+    public Long getWorkloadNum() {
+        return this.workloadNum;
+    }
+
     public static final class Builder {
         private String acceleratorType; 
-        private java.util.List < QuotaIdName > boundQuotas; 
+        private java.util.List<QuotaIdName> boundQuotas; 
         private String CPU; 
         private String creatorId; 
         private String GPU; 
+        private String GPUMemory; 
         private String GPUType; 
         private String gmtCreateTime; 
         private String gmtExpiredTime; 
         private String gmtModifiedTime; 
         private Boolean isBound; 
+        private String limitCPU; 
+        private String limitGPU; 
+        private String limitMemory; 
         private String machineGroupId; 
         private String memory; 
         private String nodeName; 
         private String nodeStatus; 
         private String nodeType; 
         private String orderStatus; 
+        private Long podNum; 
         private String reasonCode; 
         private String reasonMessage; 
+        private String requestCPU; 
+        private String requestGPU; 
+        private String requestMemory; 
         private String resourceGroupId; 
         private String resourceGroupName; 
+        private java.util.List<UserInfo> users; 
+        private Long workloadNum; 
 
         /**
          * AcceleratorType.
@@ -276,7 +401,7 @@ public class Node extends TeaModel {
         /**
          * BoundQuotas.
          */
-        public Builder boundQuotas(java.util.List < QuotaIdName > boundQuotas) {
+        public Builder boundQuotas(java.util.List<QuotaIdName> boundQuotas) {
             this.boundQuotas = boundQuotas;
             return this;
         }
@@ -302,6 +427,14 @@ public class Node extends TeaModel {
          */
         public Builder GPU(String GPU) {
             this.GPU = GPU;
+            return this;
+        }
+
+        /**
+         * GPUMemory.
+         */
+        public Builder GPUMemory(String GPUMemory) {
+            this.GPUMemory = GPUMemory;
             return this;
         }
 
@@ -342,6 +475,30 @@ public class Node extends TeaModel {
          */
         public Builder isBound(Boolean isBound) {
             this.isBound = isBound;
+            return this;
+        }
+
+        /**
+         * LimitCPU.
+         */
+        public Builder limitCPU(String limitCPU) {
+            this.limitCPU = limitCPU;
+            return this;
+        }
+
+        /**
+         * LimitGPU.
+         */
+        public Builder limitGPU(String limitGPU) {
+            this.limitGPU = limitGPU;
+            return this;
+        }
+
+        /**
+         * LimitMemory.
+         */
+        public Builder limitMemory(String limitMemory) {
+            this.limitMemory = limitMemory;
             return this;
         }
 
@@ -394,6 +551,14 @@ public class Node extends TeaModel {
         }
 
         /**
+         * PodNum.
+         */
+        public Builder podNum(Long podNum) {
+            this.podNum = podNum;
+            return this;
+        }
+
+        /**
          * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
@@ -410,6 +575,30 @@ public class Node extends TeaModel {
         }
 
         /**
+         * RequestCPU.
+         */
+        public Builder requestCPU(String requestCPU) {
+            this.requestCPU = requestCPU;
+            return this;
+        }
+
+        /**
+         * RequestGPU.
+         */
+        public Builder requestGPU(String requestGPU) {
+            this.requestGPU = requestGPU;
+            return this;
+        }
+
+        /**
+         * RequestMemory.
+         */
+        public Builder requestMemory(String requestMemory) {
+            this.requestMemory = requestMemory;
+            return this;
+        }
+
+        /**
          * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
@@ -422,6 +611,22 @@ public class Node extends TeaModel {
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * Users.
+         */
+        public Builder users(java.util.List<UserInfo> users) {
+            this.users = users;
+            return this;
+        }
+
+        /**
+         * WorkloadNum.
+         */
+        public Builder workloadNum(Long workloadNum) {
+            this.workloadNum = workloadNum;
             return this;
         }
 

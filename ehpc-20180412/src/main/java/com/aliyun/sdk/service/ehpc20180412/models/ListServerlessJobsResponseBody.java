@@ -286,7 +286,7 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the serverless job or subtask (array job).
+             * The ID of the serverless job or the subtask (array job).
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTriggerRequest} extends {@link RequestModel}
  *
  * <p>UpdateTriggerRequest</p>
  */
 public class UpdateTriggerRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Path
-    @NameInMap("triggerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("triggerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerName;
 
-    @Body
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private UpdateTriggerInput body;
 
     private UpdateTriggerRequest(Builder builder) {
@@ -85,7 +85,11 @@ public class UpdateTriggerRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -94,7 +98,11 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * triggerName.
+         * <p>The trigger name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-trigger</p>
          */
         public Builder triggerName(String triggerName) {
             this.putPathParameter("triggerName", triggerName);
@@ -103,7 +111,8 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The trigger configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(UpdateTriggerInput body) {
             this.putBodyParameter("body", body);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ImportDataSourcesResponseBody</p>
  */
 public class ImportDataSourcesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ImportDataSourcesResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ImportDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the import operation.
+         * <p>The information about the imported data sources.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class ImportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +86,14 @@ public class ImportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,11 +106,17 @@ public class ImportDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ImportDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ImportDataSourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
         private Data(Builder builder) {
@@ -134,7 +151,10 @@ public class ImportDataSourcesResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * The reason why the data sources failed to be imported. If the data sources were imported, this parameter is left empty.
+             * <p>The reason why the data sources failed to be imported. If the data sources were imported, this parameter is left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data source DEV XXX already exists</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -142,11 +162,14 @@ public class ImportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data sources were imported. Valid values:
-             * <p>
+             * <p>Indicates whether the data sources were imported. Valid values:</p>
+             * <ul>
+             * <li>true: All data sources were imported.</li>
+             * <li>false: Specific data sources failed to be imported. You can troubleshoot issues based on the Message parameter.</li>
+             * </ul>
              * 
-             * *   true: All the data sources were imported.
-             * *   false: Some of the data sources failed to be imported. You can troubleshoot issues based on the Message parameter.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

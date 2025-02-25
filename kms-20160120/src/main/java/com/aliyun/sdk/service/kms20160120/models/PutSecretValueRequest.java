@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutSecretValueRequest</p>
  */
 public class PutSecretValueRequest extends Request {
-    @Query
-    @NameInMap("SecretData")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretData")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretData;
 
-    @Query
-    @NameInMap("SecretDataType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretDataType")
     private String secretDataType;
 
-    @Query
-    @NameInMap("SecretName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretName;
 
-    @Query
-    @NameInMap("VersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionId;
 
-    @Query
-    @NameInMap("VersionStages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionStages")
     private String versionStages;
 
     private PutSecretValueRequest(Builder builder) {

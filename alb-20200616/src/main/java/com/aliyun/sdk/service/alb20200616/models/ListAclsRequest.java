@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAclsRequest} extends {@link RequestModel}
  *
  * <p>ListAclsRequest</p>
  */
 public class ListAclsRequest extends Request {
-    @Query
-    @NameInMap("AclIds")
-    private java.util.List < String > aclIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclIds")
+    private java.util.List<String> aclIds;
 
-    @Query
-    @NameInMap("AclNames")
-    private java.util.List < String > aclNames;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclNames")
+    private java.util.List<String> aclNames;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private ListAclsRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class ListAclsRequest extends Request {
     /**
      * @return aclIds
      */
-    public java.util.List < String > getAclIds() {
+    public java.util.List<String> getAclIds() {
         return this.aclIds;
     }
 
     /**
      * @return aclNames
      */
-    public java.util.List < String > getAclNames() {
+    public java.util.List<String> getAclNames() {
         return this.aclNames;
     }
 
@@ -98,17 +103,17 @@ public class ListAclsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListAclsRequest, Builder> {
-        private java.util.List < String > aclIds; 
-        private java.util.List < String > aclNames; 
+        private java.util.List<String> aclIds; 
+        private java.util.List<String> aclNames; 
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -125,25 +130,28 @@ public class ListAclsRequest extends Request {
         } 
 
         /**
-         * The ACL IDs.
+         * <p>Filter access control lists (ACLs) by ACL ID. You can specify at most 20 ACL IDs in each call.</p>
          */
-        public Builder aclIds(java.util.List < String > aclIds) {
+        public Builder aclIds(java.util.List<String> aclIds) {
             this.putQueryParameter("AclIds", aclIds);
             this.aclIds = aclIds;
             return this;
         }
 
         /**
-         * The ACL names. You can specify up to 10 ACL names in each request.
+         * <p>The ACL names. You can specify up to 10 ACL names in each call.</p>
          */
-        public Builder aclNames(java.util.List < String > aclNames) {
+        public Builder aclNames(java.util.List<String> aclNames) {
             this.putQueryParameter("AclNames", aclNames);
             this.aclNames = aclNames;
             return this;
         }
 
         /**
-         * The maximum number of entries to return. This parameter is optional. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The maximum number of entries to return. This parameter is optional. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -152,11 +160,14 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -165,7 +176,10 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can filter the results based on the specified ID.
+         * <p>The ID of the resource group. You can filter the query results based on the specified ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtopty****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -174,9 +188,9 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -189,11 +203,17 @@ public class ListAclsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAclsRequest} extends {@link TeaModel}
+     *
+     * <p>ListAclsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -228,7 +248,10 @@ public class ListAclsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +259,10 @@ public class ListAclsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;

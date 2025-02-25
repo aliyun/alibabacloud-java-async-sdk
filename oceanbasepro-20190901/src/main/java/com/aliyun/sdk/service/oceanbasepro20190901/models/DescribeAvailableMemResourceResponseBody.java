@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableMemResourceResponseBody</p>
  */
 public class DescribeAvailableMemResourceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableMemResourceResponseBody(Builder builder) {
@@ -50,15 +49,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ```
-         * <p>
-         * http(s)://[Endpoint]/?Action=DescribeAvailableMemResource
-         * &InstanceId=ob317v4uif****
-         * &TenantId=ob2mr3oae0****
-         * &UnitNum=2
-         * &CpuNum=14
-         * &Common request parameters
-         * ```
+         * The available memory size.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -66,7 +57,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of CPU cores.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,16 +71,16 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("MaxMem")
+        @com.aliyun.core.annotation.NameInMap("MaxMem")
         private Long maxMem;
 
-        @NameInMap("MinMem")
+        @com.aliyun.core.annotation.NameInMap("MinMem")
         private Long minMem;
 
-        @NameInMap("SafeMem")
+        @com.aliyun.core.annotation.NameInMap("SafeMem")
         private String safeMem;
 
-        @NameInMap("UsedMem")
+        @com.aliyun.core.annotation.NameInMap("UsedMem")
         private Long usedMem;
 
         private Data(Builder builder) {
@@ -142,7 +133,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             private Long usedMem; 
 
             /**
-             * MaxMem.
+             * The maximum memory size for each resource unit, in GB.
              */
             public Builder maxMem(Long maxMem) {
                 this.maxMem = maxMem;
@@ -150,7 +141,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * You can call this operation to query the available memory resource of an OceanBase Database tenant.
+             * The minimum memory size required for each resource unit, in GB.
              */
             public Builder minMem(Long minMem) {
                 this.minMem = minMem;
@@ -158,7 +149,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SafeMem.
+             * The maximum allowed memory usage, in GB.
              */
             public Builder safeMem(String safeMem) {
                 this.safeMem = safeMem;
@@ -166,7 +157,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * UsedMem.
+             * The number of resource units in the tenant.
              */
             public Builder usedMem(Long usedMem) {
                 this.usedMem = usedMem;

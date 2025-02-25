@@ -1,52 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUsersRequest} extends {@link RequestModel}
  *
  * <p>DescribeUsersRequest</p>
  */
 public class DescribeUsersRequest extends Request {
-    @Body
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Body
-    @NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    private java.util.List<String> endUserIds;
 
-    @Body
-    @NameInMap("ExcludeEndUserIds")
-    private java.util.List < String > excludeEndUserIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeEndUserIds")
+    private java.util.List<String> excludeEndUserIds;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Body
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterWithAssignedResources")
+    private java.util.Map<String, Boolean> filterWithAssignedResources;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsQueryAllSubOrgs")
+    private Boolean isQueryAllSubOrgs;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("OrgId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrgId")
     private String orgId;
 
-    @Body
-    @NameInMap("SolutionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShowExtras")
+    private java.util.Map<String, ?> showExtras;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SolutionId")
     private String solutionId;
 
     private DescribeUsersRequest(Builder builder) {
@@ -55,10 +72,13 @@ public class DescribeUsersRequest extends Request {
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.filter = builder.filter;
+        this.filterWithAssignedResources = builder.filterWithAssignedResources;
         this.groupId = builder.groupId;
+        this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgId = builder.orgId;
+        this.showExtras = builder.showExtras;
         this.solutionId = builder.solutionId;
     }
 
@@ -85,14 +105,14 @@ public class DescribeUsersRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
     /**
      * @return excludeEndUserIds
      */
-    public java.util.List < String > getExcludeEndUserIds() {
+    public java.util.List<String> getExcludeEndUserIds() {
         return this.excludeEndUserIds;
     }
 
@@ -104,10 +124,24 @@ public class DescribeUsersRequest extends Request {
     }
 
     /**
+     * @return filterWithAssignedResources
+     */
+    public java.util.Map<String, Boolean> getFilterWithAssignedResources() {
+        return this.filterWithAssignedResources;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
         return this.groupId;
+    }
+
+    /**
+     * @return isQueryAllSubOrgs
+     */
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     /**
@@ -132,6 +166,13 @@ public class DescribeUsersRequest extends Request {
     }
 
     /**
+     * @return showExtras
+     */
+    public java.util.Map<String, ?> getShowExtras() {
+        return this.showExtras;
+    }
+
+    /**
      * @return solutionId
      */
     public String getSolutionId() {
@@ -140,13 +181,16 @@ public class DescribeUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
         private String bizType; 
-        private java.util.List < String > endUserIds; 
-        private java.util.List < String > excludeEndUserIds; 
+        private java.util.List<String> endUserIds; 
+        private java.util.List<String> excludeEndUserIds; 
         private String filter; 
+        private java.util.Map<String, Boolean> filterWithAssignedResources; 
         private String groupId; 
+        private Boolean isQueryAllSubOrgs; 
         private Long maxResults; 
         private String nextToken; 
         private String orgId; 
+        private java.util.Map<String, ?> showExtras; 
         private String solutionId; 
 
         private Builder() {
@@ -159,10 +203,13 @@ public class DescribeUsersRequest extends Request {
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.filter = request.filter;
+            this.filterWithAssignedResources = request.filterWithAssignedResources;
             this.groupId = request.groupId;
+            this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgId = request.orgId;
+            this.showExtras = request.showExtras;
             this.solutionId = request.solutionId;
         } 
 
@@ -176,25 +223,28 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The list of usernames that must be exactly matched.
+         * <p>The list of usernames that must be exactly matched.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;
         }
 
         /**
-         * The list of usernames to be exactly excluded.
+         * <p>The list of usernames to be exactly excluded.</p>
          */
-        public Builder excludeEndUserIds(java.util.List < String > excludeEndUserIds) {
+        public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putBodyParameter("ExcludeEndUserIds", excludeEndUserIds);
             this.excludeEndUserIds = excludeEndUserIds;
             return this;
         }
 
         /**
-         * The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (\*) are supported. For example, if you set this parameter to `a*m`, usernames or email addresses that start with `a` and end with `m` are returned.
+         * <p>The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (*) are supported. For example, if you set this parameter to <code>a*m</code>, usernames or email addresses that start with <code>a</code> and end with <code>m</code> are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a*m</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -203,7 +253,20 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * FilterWithAssignedResources.
+         */
+        public Builder filterWithAssignedResources(java.util.Map<String, Boolean> filterWithAssignedResources) {
+            String filterWithAssignedResourcesShrink = shrink(filterWithAssignedResources, "FilterWithAssignedResources", "json");
+            this.putBodyParameter("FilterWithAssignedResources", filterWithAssignedResourcesShrink);
+            this.filterWithAssignedResources = filterWithAssignedResources;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the organization in which you want to query convenience users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ug-12341234****</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -212,11 +275,23 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * IsQueryAllSubOrgs.
+         */
+        public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+            this.putBodyParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
+            this.isQueryAllSubOrgs = isQueryAllSubOrgs;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 500</li>
+         * <li>Default value: 500</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 500
-         * *   Default value: 500
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -225,9 +300,10 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.\
-         * <p>
-         * If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the return value of NextToken to perform the next query.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.<br>If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the return value of NextToken to perform the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -236,11 +312,24 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * The ID of the organization in which you want to query users.
+         * <p>The ID of the organization in which you want to query users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org-4mdgc1cocc59z****</p>
          */
         public Builder orgId(String orgId) {
             this.putBodyParameter("OrgId", orgId);
             this.orgId = orgId;
+            return this;
+        }
+
+        /**
+         * ShowExtras.
+         */
+        public Builder showExtras(java.util.Map<String, ?> showExtras) {
+            String showExtrasShrink = shrink(showExtras, "ShowExtras", "json");
+            this.putBodyParameter("ShowExtras", showExtrasShrink);
+            this.showExtras = showExtras;
             return this;
         }
 

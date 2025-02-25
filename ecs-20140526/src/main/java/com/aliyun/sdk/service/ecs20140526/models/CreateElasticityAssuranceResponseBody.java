@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateElasticityAssuranceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateElasticityAssuranceResponseBody</p>
  */
 public class CreateElasticityAssuranceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("PrivatePoolOptionsId")
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsId")
     private String privatePoolOptionsId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateElasticityAssuranceResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,7 +78,10 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         }
 
         /**
-         * The elasticity assurance ID.
+         * <p>The elasticity assurance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp67acfmxazb4****</p>
          */
         public Builder privatePoolOptionsId(String privatePoolOptionsId) {
             this.privatePoolOptionsId = privatePoolOptionsId;
@@ -78,7 +89,10 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

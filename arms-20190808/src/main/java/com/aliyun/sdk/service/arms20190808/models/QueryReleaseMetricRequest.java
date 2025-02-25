@@ -1,56 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReleaseMetricRequest} extends {@link RequestModel}
  *
  * <p>QueryReleaseMetricRequest</p>
  */
 public class QueryReleaseMetricRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ChangeOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderId;
 
-    @Query
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @Query
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Query
-    @NameInMap("Pid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
-    @Query
-    @NameInMap("ProxyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyUserId")
     private String proxyUserId;
 
-    @Query
-    @NameInMap("ReleaseEndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseEndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long releaseEndTime;
 
-    @Query
-    @NameInMap("ReleaseStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long releaseStartTime;
 
-    @Query
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
     private QueryReleaseMetricRequest(Builder builder) {
@@ -171,7 +175,7 @@ public class QueryReleaseMetricRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -180,7 +184,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ChangeOrderId.
+         * <p>The ID of the change order.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a341a2f2-ed07-4257-aae9-dfb1be******</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);
@@ -189,7 +197,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the change order was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634005438000</p>
          */
         public Builder createTime(Long createTime) {
             this.putQueryParameter("CreateTime", createTime);
@@ -198,7 +209,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>The type of the metric that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemContrast</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -207,7 +221,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * Pid.
+         * <p>The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8b46d03f-5947-449d-90fd-3a96c2******</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -216,7 +234,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ProxyUserId.
+         * <p>This parameter is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder proxyUserId(String proxyUserId) {
             this.putQueryParameter("ProxyUserId", proxyUserId);
@@ -225,7 +246,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ReleaseEndTime.
+         * <p>The end time of the version release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632798718632</p>
          */
         public Builder releaseEndTime(Long releaseEndTime) {
             this.putQueryParameter("ReleaseEndTime", releaseEndTime);
@@ -234,7 +259,11 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ReleaseStartTime.
+         * <p>The start time of the version release.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632798686692</p>
          */
         public Builder releaseStartTime(Long releaseStartTime) {
             this.putQueryParameter("ReleaseStartTime", releaseStartTime);
@@ -243,7 +272,10 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * Service.
+         * <p>The service that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clothservice</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

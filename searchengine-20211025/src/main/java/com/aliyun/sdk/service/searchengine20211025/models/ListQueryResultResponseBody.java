@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueryResultResponseBody} extends {@link TeaModel}
  *
  * <p>ListQueryResultResponseBody</p>
  */
 public class ListQueryResultResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListQueryResultResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ListQueryResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * <p>The ID of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E5BCFAA-98B3-51D0-9188-B1BC07589337</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

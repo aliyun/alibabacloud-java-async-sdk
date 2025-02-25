@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>CopyDatabaseResponseBody</p>
  */
 public class CopyDatabaseResponseBody extends TeaModel {
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @NameInMap("DBStatus")
+    @com.aliyun.core.annotation.NameInMap("DBStatus")
     private String DBStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private CopyDatabaseResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CopyDatabaseResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test02</p>
          */
         public Builder DBName(String DBName) {
             this.DBName = DBName;
@@ -82,12 +90,15 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the database. Valid values:
-         * <p>
+         * <p>The status of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
          * 
-         * *   **Creating**
-         * *   **Running**
-         * *   **Deleting**
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder DBStatus(String DBStatus) {
             this.DBStatus = DBStatus;
@@ -95,7 +106,10 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +117,10 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2562****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

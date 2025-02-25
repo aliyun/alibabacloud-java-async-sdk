@@ -1,40 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockBindListRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebLockBindListRequest</p>
  */
 public class DescribeWebLockBindListRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    private String uuid;
 
     private DescribeWebLockBindListRequest(Builder builder) {
         super(builder);
@@ -44,6 +53,7 @@ public class DescribeWebLockBindListRequest extends Request {
         this.remark = builder.remark;
         this.sourceIp = builder.sourceIp;
         this.status = builder.status;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -101,6 +111,13 @@ public class DescribeWebLockBindListRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<DescribeWebLockBindListRequest, Builder> {
         private Integer currentPage; 
         private String lang; 
@@ -108,6 +125,7 @@ public class DescribeWebLockBindListRequest extends Request {
         private String remark; 
         private String sourceIp; 
         private String status; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -121,10 +139,14 @@ public class DescribeWebLockBindListRequest extends Request {
             this.remark = request.remark;
             this.sourceIp = request.sourceIp;
             this.status = request.status;
+            this.uuid = request.uuid;
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,11 +155,14 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +171,10 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +183,10 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * The string that allows you to search for servers in fuzzy match mode. You can enter a server name or IP address.
+         * <p>The string that allows you to search for servers in fuzzy match mode. You can enter a server name or IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -164,7 +195,10 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.30.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -173,15 +207,33 @@ public class DescribeWebLockBindListRequest extends Request {
         }
 
         /**
-         * The protection status of the server that you want to query. Valid values:
-         * <p>
+         * <p>The protection status of the server that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: protected</li>
+         * <li><strong>off</strong>: unprotected</li>
+         * </ul>
          * 
-         * *   **on**: protected
-         * *   **off**: unprotected
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The UUID of the asset that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>7151f27e-1d51-4e98-a540-8936a****</p>
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

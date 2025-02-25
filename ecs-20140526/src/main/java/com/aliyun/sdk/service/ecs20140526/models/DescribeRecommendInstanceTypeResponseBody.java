@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecommendInstanceTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecommendInstanceTypeResponseBody</p>
  */
 public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRecommendInstanceTypeResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the recommended instance types.
+         * <p>The details of the recommended instance types.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecommendInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendInstanceTypeResponseBody</p>
+     */
     public static class InstanceType extends TeaModel {
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
-        @NameInMap("Generation")
+        @com.aliyun.core.annotation.NameInMap("Generation")
         private String generation;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("SupportIoOptimized")
+        @com.aliyun.core.annotation.NameInMap("SupportIoOptimized")
         private String supportIoOptimized;
 
         private InstanceType(Builder builder) {
@@ -158,7 +172,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private String supportIoOptimized; 
 
             /**
-             * The number of vCPUs of the instance type.
+             * <p>The number of vCPUs of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -166,7 +183,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The generation of the instance family.
+             * <p>The generation of the instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-4</p>
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -174,7 +194,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance type.
+             * <p>The name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.hfg6.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -182,7 +205,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family.
+             * <p>The instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.hfg6</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -190,7 +216,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance type. Unit: MB.
+             * <p>The memory size of the instance type. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -198,7 +227,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance type supports I/O optimization.
+             * <p>Indicates whether the instance type supports I/O optimization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>optimized</p>
              */
             public Builder supportIoOptimized(String supportIoOptimized) {
                 this.supportIoOptimized = supportIoOptimized;
@@ -212,9 +244,15 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendInstanceTypeResponseBody</p>
+     */
     public static class NetworkTypes extends TeaModel {
-        @NameInMap("NetworkType")
-        private java.util.List < String > networkType;
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private java.util.List<String> networkType;
 
         private NetworkTypes(Builder builder) {
             this.networkType = builder.networkType;
@@ -231,17 +269,17 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         /**
          * @return networkType
          */
-        public java.util.List < String > getNetworkType() {
+        public java.util.List<String> getNetworkType() {
             return this.networkType;
         }
 
         public static final class Builder {
-            private java.util.List < String > networkType; 
+            private java.util.List<String> networkType; 
 
             /**
              * NetworkType.
              */
-            public Builder networkType(java.util.List < String > networkType) {
+            public Builder networkType(java.util.List<String> networkType) {
                 this.networkType = networkType;
                 return this;
             }
@@ -253,11 +291,17 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendInstanceTypeResponseBody</p>
+     */
     public static class Zone extends TeaModel {
-        @NameInMap("NetworkTypes")
+        @com.aliyun.core.annotation.NameInMap("NetworkTypes")
         private NetworkTypes networkTypes;
 
-        @NameInMap("ZoneNo")
+        @com.aliyun.core.annotation.NameInMap("ZoneNo")
         private String zoneNo;
 
         private Zone(Builder builder) {
@@ -292,7 +336,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private String zoneNo; 
 
             /**
-             * The details of network types of instance types.
+             * <p>The details of network types of instance types.</p>
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
@@ -300,7 +344,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the instance type is available.
+             * <p>The ID of the zone where the instance type is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneNo(String zoneNo) {
                 this.zoneNo = zoneNo;
@@ -314,9 +361,15 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendInstanceTypeResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("zone")
-        private java.util.List < Zone> zone;
+        @com.aliyun.core.annotation.NameInMap("zone")
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -333,17 +386,17 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
 
             /**
              * zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }
@@ -355,35 +408,41 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendInstanceTypeResponseBody</p>
+     */
     public static class RecommendInstanceType extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private InstanceType instanceType;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private Zones zones;
 
         private RecommendInstanceType(Builder builder) {
@@ -490,7 +549,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             private Zones zones; 
 
             /**
-             * The commodity code of the instance type.
+             * <p>The commodity code of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -498,7 +560,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance.
+             * <p>The billing method of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -506,7 +571,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance type.
+             * <p>The name of the instance type.</p>
              */
             public Builder instanceType(InstanceType instanceType) {
                 this.instanceType = instanceType;
@@ -514,7 +579,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance.
+             * <p>The network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -522,7 +590,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The priority based on which the system sorts the instance types.
+             * <p>The priority based on which the system sorts the instance types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -530,7 +601,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance type.
+             * <p>The region ID of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -538,7 +612,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The scenarios in which the instance type is recommended.
+             * <p>The scenarios in which the instance type is recommended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -546,7 +623,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding policy for the preemptible instance.
+             * <p>The bidding policy for the preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -554,7 +634,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance type is available.
+             * <p>The ID of the zone in which the instance type is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -562,7 +645,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the zones where the instance types resides.
+             * <p>The details of the zones where the instance types resides.</p>
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;
@@ -576,9 +659,15 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecommendInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecommendInstanceTypeResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("RecommendInstanceType")
-        private java.util.List < RecommendInstanceType> recommendInstanceType;
+        @com.aliyun.core.annotation.NameInMap("RecommendInstanceType")
+        private java.util.List<RecommendInstanceType> recommendInstanceType;
 
         private Data(Builder builder) {
             this.recommendInstanceType = builder.recommendInstanceType;
@@ -595,17 +684,17 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         /**
          * @return recommendInstanceType
          */
-        public java.util.List < RecommendInstanceType> getRecommendInstanceType() {
+        public java.util.List<RecommendInstanceType> getRecommendInstanceType() {
             return this.recommendInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < RecommendInstanceType> recommendInstanceType; 
+            private java.util.List<RecommendInstanceType> recommendInstanceType; 
 
             /**
              * RecommendInstanceType.
              */
-            public Builder recommendInstanceType(java.util.List < RecommendInstanceType> recommendInstanceType) {
+            public Builder recommendInstanceType(java.util.List<RecommendInstanceType> recommendInstanceType) {
                 this.recommendInstanceType = recommendInstanceType;
                 return this;
             }

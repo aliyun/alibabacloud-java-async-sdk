@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataResultValue} extends {@link TeaModel}
  *
  * <p>DataResultValue</p>
  */
 public class DataResultValue extends TeaModel {
-    @NameInMap("sqlId")
+    @com.aliyun.core.annotation.NameInMap("sqlId")
     private String sqlId;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
     private DataResultValue(Builder builder) {
@@ -62,7 +67,7 @@ public class DataResultValue extends TeaModel {
         private Integer count; 
 
         /**
-         * The SQL ID.
+         * sqlId.
          */
         public Builder sqlId(String sqlId) {
             this.sqlId = sqlId;
@@ -70,7 +75,7 @@ public class DataResultValue extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +83,7 @@ public class DataResultValue extends TeaModel {
         }
 
         /**
-         * The number of failed executions.
+         * count.
          */
         public Builder count(Integer count) {
             this.count = count;

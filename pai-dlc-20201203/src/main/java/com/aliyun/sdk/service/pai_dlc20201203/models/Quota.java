@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Quota} extends {@link TeaModel}
  *
  * <p>Quota</p>
  */
 public class Quota extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("QuotaConfig")
+    @com.aliyun.core.annotation.NameInMap("QuotaConfig")
     private QuotaConfig quotaConfig;
 
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @NameInMap("QuotaName")
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
     private String quotaName;
 
-    @NameInMap("QuotaType")
+    @com.aliyun.core.annotation.NameInMap("QuotaType")
     private String quotaType;
 
-    @NameInMap("TotalQuota")
+    @com.aliyun.core.annotation.NameInMap("TotalQuota")
     private QuotaDetail totalQuota;
 
-    @NameInMap("TotalTideQuota")
+    @com.aliyun.core.annotation.NameInMap("TotalTideQuota")
     private QuotaDetail totalTideQuota;
 
-    @NameInMap("UsedQuota")
+    @com.aliyun.core.annotation.NameInMap("UsedQuota")
     private QuotaDetail usedQuota;
 
-    @NameInMap("UsedTideQuota")
+    @com.aliyun.core.annotation.NameInMap("UsedTideQuota")
     private QuotaDetail usedTideQuota;
 
     private Quota(Builder builder) {

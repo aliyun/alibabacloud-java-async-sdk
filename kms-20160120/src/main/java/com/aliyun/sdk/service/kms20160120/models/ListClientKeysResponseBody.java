@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClientKeysResponseBody</p>
  */
 public class ListClientKeysResponseBody extends TeaModel {
-    @NameInMap("ClientKeys")
+    @com.aliyun.core.annotation.NameInMap("ClientKeys")
     private java.util.List < ClientKeys> clientKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClientKeysResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListClientKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientKeys.
+         * A list of client keys.
          */
         public Builder clientKeys(java.util.List < ClientKeys> clientKeys) {
             this.clientKeys = clientKeys;
@@ -58,7 +57,7 @@ public class ListClientKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,28 +71,28 @@ public class ListClientKeysResponseBody extends TeaModel {
     } 
 
     public static class ClientKeys extends TeaModel {
-        @NameInMap("AapName")
+        @com.aliyun.core.annotation.NameInMap("AapName")
         private String aapName;
 
-        @NameInMap("ClientKeyId")
+        @com.aliyun.core.annotation.NameInMap("ClientKeyId")
         private String clientKeyId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("KeyAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("KeyAlgorithm")
         private String keyAlgorithm;
 
-        @NameInMap("KeyOrigin")
+        @com.aliyun.core.annotation.NameInMap("KeyOrigin")
         private String keyOrigin;
 
-        @NameInMap("NotAfter")
+        @com.aliyun.core.annotation.NameInMap("NotAfter")
         private String notAfter;
 
-        @NameInMap("NotBefore")
+        @com.aliyun.core.annotation.NameInMap("NotBefore")
         private String notBefore;
 
-        @NameInMap("PublicKeyData")
+        @com.aliyun.core.annotation.NameInMap("PublicKeyData")
         private String publicKeyData;
 
         private ClientKeys(Builder builder) {
@@ -182,7 +181,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             private String publicKeyData; 
 
             /**
-             * AapName.
+             * The name of the AAP.
              */
             public Builder aapName(String aapName) {
                 this.aapName = aapName;
@@ -190,7 +189,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ClientKeyId.
+             * The ID of the client key.
              */
             public Builder clientKeyId(String clientKeyId) {
                 this.clientKeyId = clientKeyId;
@@ -198,7 +197,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the client key was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -206,7 +205,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyAlgorithm.
+             * The private key algorithm of the client key.
              */
             public Builder keyAlgorithm(String keyAlgorithm) {
                 this.keyAlgorithm = keyAlgorithm;
@@ -214,7 +213,10 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyOrigin.
+             * The provider of the client key.
+             * <p>
+             * 
+             * Currently, only KMS is supported. The value is fixed as KMS_PROVIDED.
              */
             public Builder keyOrigin(String keyOrigin) {
                 this.keyOrigin = keyOrigin;
@@ -222,7 +224,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * NotAfter.
+             * The end of the validity period of the client key.
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -230,7 +232,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * The beginning of the validity period of the client key.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -238,7 +240,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * PublicKeyData.
+             * The public key of the client key.
              */
             public Builder publicKeyData(String publicKeyData) {
                 this.publicKeyData = publicKeyData;

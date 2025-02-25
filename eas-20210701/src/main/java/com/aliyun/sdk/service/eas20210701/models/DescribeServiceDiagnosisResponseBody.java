@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceDiagnosisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceDiagnosisResponseBody</p>
  */
 public class DescribeServiceDiagnosisResponseBody extends TeaModel {
-    @NameInMap("DiagnosisList")
-    private java.util.List < DiagnosisList> diagnosisList;
+    @com.aliyun.core.annotation.NameInMap("DiagnosisList")
+    private java.util.List<DiagnosisList> diagnosisList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeServiceDiagnosisResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
     /**
      * @return diagnosisList
      */
-    public java.util.List < DiagnosisList> getDiagnosisList() {
+    public java.util.List<DiagnosisList> getDiagnosisList() {
         return this.diagnosisList;
     }
 
@@ -46,19 +51,22 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DiagnosisList> diagnosisList; 
+        private java.util.List<DiagnosisList> diagnosisList; 
         private String requestId; 
 
         /**
-         * DiagnosisList.
+         * <p>The diagnostics list.</p>
          */
-        public Builder diagnosisList(java.util.List < DiagnosisList> diagnosisList) {
+        public Builder diagnosisList(java.util.List<DiagnosisList> diagnosisList) {
             this.diagnosisList = diagnosisList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceDiagnosisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceDiagnosisResponseBody</p>
+     */
     public static class DiagnosisList extends TeaModel {
-        @NameInMap("Advices")
-        private java.util.List < String > advices;
+        @com.aliyun.core.annotation.NameInMap("Advices")
+        private java.util.List<String> advices;
 
-        @NameInMap("Causes")
-        private java.util.List < String > causes;
+        @com.aliyun.core.annotation.NameInMap("Causes")
+        private java.util.List<String> causes;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
         private DiagnosisList(Builder builder) {
@@ -98,14 +112,14 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
         /**
          * @return advices
          */
-        public java.util.List < String > getAdvices() {
+        public java.util.List<String> getAdvices() {
             return this.advices;
         }
 
         /**
          * @return causes
          */
-        public java.util.List < String > getCauses() {
+        public java.util.List<String> getCauses() {
             return this.causes;
         }
 
@@ -117,28 +131,31 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > advices; 
-            private java.util.List < String > causes; 
+            private java.util.List<String> advices; 
+            private java.util.List<String> causes; 
             private String error; 
 
             /**
-             * Advices.
+             * <p>The suggestions about how to handle the errors.</p>
              */
-            public Builder advices(java.util.List < String > advices) {
+            public Builder advices(java.util.List<String> advices) {
                 this.advices = advices;
                 return this;
             }
 
             /**
-             * Causes.
+             * <p>The causes of the errors.</p>
              */
-            public Builder causes(java.util.List < String > causes) {
+            public Builder causes(java.util.List<String> causes) {
                 this.causes = causes;
                 return this;
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Container worker0 failed to pull image.</p>
              */
             public Builder error(String error) {
                 this.error = error;

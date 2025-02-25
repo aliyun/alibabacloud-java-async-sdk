@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiagnosticMetricSetRequest} extends {@link RequestModel}
  *
  * <p>CreateDiagnosticMetricSetRequest</p>
  */
 public class CreateDiagnosticMetricSetRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 255)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String description;
 
-    @Query
-    @NameInMap("MetricIds")
-    @Validation(required = true)
-    private java.util.List < String > metricIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> metricIds;
 
-    @Query
-    @NameInMap("MetricSetName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricSetName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String metricSetName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private CreateDiagnosticMetricSetRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
     /**
      * @return metricIds
      */
-    public java.util.List < String > getMetricIds() {
+    public java.util.List<String> getMetricIds() {
         return this.metricIds;
     }
 
@@ -109,7 +114,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDiagnosticMetricSetRequest, Builder> {
         private String sourceRegionId; 
         private String description; 
-        private java.util.List < String > metricIds; 
+        private java.util.List<String> metricIds; 
         private String metricSetName; 
         private String regionId; 
         private String resourceType; 
@@ -138,7 +143,10 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * testDescription
+         * <p>The description of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the request.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -147,16 +155,20 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The ID of diagnostic metric.
+         * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder metricIds(java.util.List < String > metricIds) {
+        public Builder metricIds(java.util.List<String> metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
             this.metricIds = metricIds;
             return this;
         }
 
         /**
-         * my_dms
+         * <p>The name of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
          */
         public Builder metricSetName(String metricSetName) {
             this.putQueryParameter("MetricSetName", metricSetName);
@@ -165,10 +177,11 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Default value: instance.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +190,12 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The name of the diagnostic metric set.
+         * <p>The type of the resource.</p>
+         * <p>Default value: instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -1,12 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountAliasRequest} extends {@link RequestModel}
  *
  * <p>GetAccountAliasRequest</p>
@@ -35,8 +40,8 @@ public class GetAccountAliasRequest extends Request {
             super();
         } 
 
-        private Builder(GetAccountAliasRequest response) {
-            super(response);
+        private Builder(GetAccountAliasRequest request) {
+            super(request);
         } 
 
         @Override

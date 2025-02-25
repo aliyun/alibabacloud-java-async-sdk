@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticReportsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosticReportsRequest</p>
  */
 public class DescribeDiagnosticReportsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReportIds")
-    private java.util.List < String > reportIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportIds")
+    private java.util.List<String> reportIds;
 
-    @Query
-    @NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    private java.util.List<String> resourceIds;
 
-    @Query
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private String severity;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDiagnosticReportsRequest(Builder builder) {
@@ -102,14 +107,14 @@ public class DescribeDiagnosticReportsRequest extends Request {
     /**
      * @return reportIds
      */
-    public java.util.List < String > getReportIds() {
+    public java.util.List<String> getReportIds() {
         return this.reportIds;
     }
 
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -132,8 +137,8 @@ public class DescribeDiagnosticReportsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.List < String > reportIds; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> reportIds; 
+        private java.util.List<String> resourceIds; 
         private String severity; 
         private String status; 
 
@@ -163,13 +168,15 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If this parameter is left empty, the default value is 10.</li>
+         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * </ul>
          * 
-         * Default value:
-         * 
-         * *   If this parameter is left empty, the default value is 10.
-         * *   If this parameter is set to a value greater than 100, the default value is 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -178,7 +185,10 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticReports operation. Leave this parameter empty the first time you call this operation.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -187,7 +197,11 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,32 +210,35 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic reports. You can specify up to 100 report IDs.
+         * <p>The IDs of diagnostic reports.</p>
          */
-        public Builder reportIds(java.util.List < String > reportIds) {
+        public Builder reportIds(java.util.List<String> reportIds) {
             this.putQueryParameter("ReportIds", reportIds);
             this.reportIds = reportIds;
             return this;
         }
 
         /**
-         * The IDs of resources. You can specify up to 100 resource IDs.
+         * <p>The IDs of resources. You can specify up to 100 resource IDs.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
         }
 
         /**
-         * The severity level of the diagnostic report. Valid values:
-         * <p>
+         * <p>The severity level of the diagnostic report. Valid values:</p>
+         * <ul>
+         * <li>Unknown: The diagnostic does not start, fails to run, or unexpectedly exits without a diagnosis.</li>
+         * <li>Normal: No exceptions are detected.</li>
+         * <li>Info: Diagnostic information is recorded and may be related to exceptions.</li>
+         * <li>Warn: Diagnostic information is recorded and may indicate exceptions.</li>
+         * <li>Critical: Critical exceptions are detected.</li>
+         * </ul>
          * 
-         * * Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-         * * Normal: No exceptions are detected.
-         * * Info: Diagnostic information is recorded and may be related to exceptions.
-         * * Warn: Diagnostic information is recorded and may indicate exceptions.
-         * * Critical: Critical exceptions are detected.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -230,12 +247,15 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The state of the diagnostic report. Valid values:
-         * <p>
+         * <p>The status of the diagnostic report. Valid values:</p>
+         * <ul>
+         * <li>InProgress</li>
+         * <li>Failed</li>
+         * <li>Finished</li>
+         * </ul>
          * 
-         * *   InProgress: The diagnostic is in progress.
-         * *   Failed: The diagnostic failed.
-         * *   Finished: The diagnostic is complete.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

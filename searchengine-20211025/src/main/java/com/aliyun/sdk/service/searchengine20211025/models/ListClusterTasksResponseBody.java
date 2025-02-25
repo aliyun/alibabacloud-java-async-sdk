@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterTasksResponseBody</p>
  */
 public class ListClusterTasksResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List<Result> result;
 
     private ListClusterTasksResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListClusterTasksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
-         * id of request
+         * <p>id of request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC5EC8FA-5C0D-56AF-BEF4-6FCCEABD0511</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The date when the task was completed.
+         * <p>The index information.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -71,11 +79,17 @@ public class ListClusterTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterTasksResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("msg")
+        @com.aliyun.core.annotation.NameInMap("msg")
         private String msg;
 
-        @NameInMap("tagLevel")
+        @com.aliyun.core.annotation.NameInMap("tagLevel")
         private String tagLevel;
 
         private Tags(Builder builder) {
@@ -110,7 +124,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             private String tagLevel; 
 
             /**
-             * msg.
+             * <p>The tag content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>succeed in handling request</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -118,7 +135,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tagLevel.
+             * <p>The tag level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder tagLevel(String tagLevel) {
                 this.tagLevel = tagLevel;
@@ -132,17 +152,23 @@ public class ListClusterTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterTasksResponseBody</p>
+     */
     public static class TaskNodes extends TeaModel {
-        @NameInMap("finishDate")
+        @com.aliyun.core.annotation.NameInMap("finishDate")
         private String finishDate;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Long index;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private TaskNodes(Builder builder) {
@@ -195,7 +221,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * finishDate.
+             * <p>The time when the task was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder finishDate(String finishDate) {
                 this.finishDate = finishDate;
@@ -203,7 +232,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * <p>The ordinal number of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -211,7 +243,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,7 +254,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,38 +271,44 @@ public class ListClusterTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterTasksResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("extraAttribute")
+        @com.aliyun.core.annotation.NameInMap("extraAttribute")
         private String extraAttribute;
 
-        @NameInMap("field3")
+        @com.aliyun.core.annotation.NameInMap("field3")
         private String field3;
 
-        @NameInMap("fsmId")
+        @com.aliyun.core.annotation.NameInMap("fsmId")
         private String fsmId;
 
-        @NameInMap("groupType")
+        @com.aliyun.core.annotation.NameInMap("groupType")
         private String groupType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("taskNodes")
-        private java.util.List < TaskNodes> taskNodes;
+        @com.aliyun.core.annotation.NameInMap("taskNodes")
+        private java.util.List<TaskNodes> taskNodes;
 
-        @NameInMap("time")
+        @com.aliyun.core.annotation.NameInMap("time")
         private String time;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("user")
+        @com.aliyun.core.annotation.NameInMap("user")
         private String user;
 
         private Result(Builder builder) {
@@ -334,14 +378,14 @@ public class ListClusterTasksResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return taskNodes
          */
-        public java.util.List < TaskNodes> getTaskNodes() {
+        public java.util.List<TaskNodes> getTaskNodes() {
             return this.taskNodes;
         }
 
@@ -373,14 +417,17 @@ public class ListClusterTasksResponseBody extends TeaModel {
             private String groupType; 
             private String name; 
             private String status; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < TaskNodes> taskNodes; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<TaskNodes> taskNodes; 
             private String time; 
             private String type; 
             private String user; 
 
             /**
-             * extraAttribute.
+             * <p>The additional attributes of the card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder extraAttribute(String extraAttribute) {
                 this.extraAttribute = extraAttribute;
@@ -388,7 +435,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * field3.
+             * <p>The field3 field that was passed when the FSM was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder field3(String field3) {
                 this.field3 = field3;
@@ -396,7 +446,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * fsmId
+             * <p>The ID of the finite state machine (FSM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-zvp2ljiwe01_api2@bj_vpc_domain_1@null@MANUAL-ha-cn-zvp2ljiwe01_api2@1649729867698@028315</p>
              */
             public Builder fsmId(String fsmId) {
                 this.fsmId = fsmId;
@@ -404,18 +457,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ### Method
-             * <p>
+             * <p>The change group type.</p>
              * 
-             * ```java
-             * GET
-             * ```
-             * 
-             * ### URI
-             * 
-             * ```java
-             * /openapi/ha3/instances/{instanceId}/cluster-tasks
-             * ```
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -423,7 +468,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Displays cluster tasks .
+             * <p>The card name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-pl32rf0js04_qrs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +479,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The FSM status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>onlyPublished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -439,23 +490,26 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags of the progress bar.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * taskNodes.
+             * <p>The task information.</p>
              */
-            public Builder taskNodes(java.util.List < TaskNodes> taskNodes) {
+            public Builder taskNodes(java.util.List<TaskNodes> taskNodes) {
                 this.taskNodes = taskNodes;
                 return this;
             }
 
             /**
-             * time.
+             * <p>The timestamp of the card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657610520</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -463,7 +517,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The card type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qrs</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -471,7 +528,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * user.
+             * <p>The user who triggered the generation of the FSM process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder user(String user) {
                 this.user = user;

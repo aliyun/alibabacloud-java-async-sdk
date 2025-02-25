@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomDomainInput} extends {@link TeaModel}
  *
  * <p>CreateCustomDomainInput</p>
  */
 public class CreateCustomDomainInput extends TeaModel {
-    @NameInMap("authConfig")
+    @com.aliyun.core.annotation.NameInMap("authConfig")
     private AuthConfig authConfig;
 
-    @NameInMap("certConfig")
+    @com.aliyun.core.annotation.NameInMap("certConfig")
     private CertConfig certConfig;
 
-    @NameInMap("domainName")
-    @Validation(required = true, maxLength = 256, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("domainName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String domainName;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("routeConfig")
+    @com.aliyun.core.annotation.NameInMap("routeConfig")
     private RouteConfig routeConfig;
 
-    @NameInMap("tlsConfig")
+    @com.aliyun.core.annotation.NameInMap("tlsConfig")
     private TLSConfig tlsConfig;
 
-    @NameInMap("wafConfig")
+    @com.aliyun.core.annotation.NameInMap("wafConfig")
     private WAFConfig wafConfig;
 
     private CreateCustomDomainInput(Builder builder) {
@@ -127,7 +127,10 @@ public class CreateCustomDomainInput extends TeaModel {
         }
 
         /**
-         * domainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;

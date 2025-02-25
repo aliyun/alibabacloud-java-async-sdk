@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSparkTemplateFileContentResponseBody} extends {@link TeaModel}
  *
  * <p>GetSparkTemplateFileContentResponseBody</p>
  */
 public class GetSparkTemplateFileContentResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkTemplateFileContentResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSparkTemplateFileContentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSparkTemplateFileContentResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {
@@ -146,12 +160,15 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The type of the application. Valid values:
-             * <p>
+             * <p>The application type. Valid values:</p>
+             * <ul>
+             * <li><strong>SQL</strong></li>
+             * <li><strong>STREAMING</strong></li>
+             * <li><strong>BATCH</strong></li>
+             * </ul>
              * 
-             * *   **SQL**: SQL application
-             * *   **STREAMING**: streaming application
-             * *   **BATCH**: batch application
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -159,7 +176,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the template.
+             * <p>The content of the application template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>set spark.driver.resourceSpec=medium;set spark.executor.instances=2;set spark.executor.resourceSpec=medium;set spark.app.name=Spark SQL Test;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -167,7 +187,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application template.
+             * <p>The application template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>725204</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -175,7 +198,10 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -183,11 +209,14 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file. Valid values:
-             * <p>
+             * <p>The file type. Valid values:</p>
+             * <ul>
+             * <li><strong>folder</strong></li>
+             * <li><strong>file</strong></li>
+             * </ul>
              * 
-             * *   **folder**
-             * *   **file**
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;

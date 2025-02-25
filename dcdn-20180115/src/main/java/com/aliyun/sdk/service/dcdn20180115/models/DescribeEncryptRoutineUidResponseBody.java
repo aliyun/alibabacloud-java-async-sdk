@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEncryptRoutineUidResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEncryptRoutineUidResponseBody</p>
  */
 public class DescribeEncryptRoutineUidResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEncryptRoutineUidResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeEncryptRoutineUidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * <p>The returned ciphertext, which contains the Alibaba Cloud account ID, timestamp, and time to live (TTL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXXXj20p4UB/xgdOH5LtXXXXXX</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +61,10 @@ public class DescribeEncryptRoutineUidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DBA68F5-04A9-406B-B1E4-F2CB635E103F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

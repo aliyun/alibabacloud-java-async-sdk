@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHoneypotProbeRequest} extends {@link RequestModel}
  *
  * <p>CreateHoneypotProbeRequest</p>
  */
 public class CreateHoneypotProbeRequest extends Request {
-    @Query
-    @NameInMap("Arp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arp")
     private Boolean arp;
 
-    @Query
-    @NameInMap("BusinessGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessGroupId")
     private String businessGroupId;
 
-    @Query
-    @NameInMap("ControlNodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String controlNodeId;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("HoneypotBindList")
-    private java.util.List < HoneypotBindList> honeypotBindList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotBindList")
+    private java.util.List<HoneypotBindList> honeypotBindList;
 
-    @Query
-    @NameInMap("Ping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ping")
     private Boolean ping;
 
-    @Query
-    @NameInMap("ProbeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String probeType;
 
-    @Query
-    @NameInMap("ProbeVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeVersion")
     private String probeVersion;
 
-    @Query
-    @NameInMap("ProxyIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyIp")
     private String proxyIp;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateHoneypotProbeRequest(Builder builder) {
@@ -118,7 +123,7 @@ public class CreateHoneypotProbeRequest extends Request {
     /**
      * @return honeypotBindList
      */
-    public java.util.List < HoneypotBindList> getHoneypotBindList() {
+    public java.util.List<HoneypotBindList> getHoneypotBindList() {
         return this.honeypotBindList;
     }
 
@@ -169,7 +174,7 @@ public class CreateHoneypotProbeRequest extends Request {
         private String businessGroupId; 
         private String controlNodeId; 
         private String displayName; 
-        private java.util.List < HoneypotBindList> honeypotBindList; 
+        private java.util.List<HoneypotBindList> honeypotBindList; 
         private Boolean ping; 
         private String probeType; 
         private String probeVersion; 
@@ -197,11 +202,14 @@ public class CreateHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable Address Resolution Protocol (ARP) spoofing. Valid values:
-         * <p>
+         * <p>Specifies whether to enable Address Resolution Protocol (ARP) spoofing. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder arp(Boolean arp) {
             this.putQueryParameter("Arp", arp);
@@ -210,7 +218,10 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the business group.
+         * <p>The ID of the business group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022011817324588686</p>
          */
         public Builder businessGroupId(String businessGroupId) {
             this.putQueryParameter("BusinessGroupId", businessGroupId);
@@ -219,10 +230,14 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the management node.
-         * <p>
+         * <p>The ID of the management node.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+         * <strong>example:</strong>
+         * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
          */
         public Builder controlNodeId(String controlNodeId) {
             this.putQueryParameter("ControlNodeId", controlNodeId);
@@ -231,7 +246,11 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The name of the probe.
+         * <p>The name of the probe.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testHoneyPotProbe</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -240,20 +259,23 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The configuration of the probe.
+         * <p>The configuration of the probe.</p>
          */
-        public Builder honeypotBindList(java.util.List < HoneypotBindList> honeypotBindList) {
+        public Builder honeypotBindList(java.util.List<HoneypotBindList> honeypotBindList) {
             this.putQueryParameter("HoneypotBindList", honeypotBindList);
             this.honeypotBindList = honeypotBindList;
             return this;
         }
 
         /**
-         * Specifies whether to enable ping scan. Valid values:
-         * <p>
+         * <p>Specifies whether to enable ping scan. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ping(Boolean ping) {
             this.putQueryParameter("Ping", ping);
@@ -262,11 +284,15 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The type of the probe. Valid values:
-         * <p>
+         * <p>The type of the probe. Valid values:</p>
+         * <ul>
+         * <li><strong>host_probe</strong>: host probe</li>
+         * <li><strong>vpc_black_hole_probe</strong>: virtual private cloud (VPC) probe</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **host_probe**: host probe
-         * *   **vpc_black_hole_probe**: virtual private cloud (VPC) probe
+         * <strong>example:</strong>
+         * <p>host_probe</p>
          */
         public Builder probeType(String probeType) {
             this.putQueryParameter("ProbeType", probeType);
@@ -275,7 +301,10 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The version of the probe.
+         * <p>The version of the probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0</p>
          */
         public Builder probeVersion(String probeVersion) {
             this.putQueryParameter("ProbeVersion", probeVersion);
@@ -284,7 +313,10 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The IP address of the proxy.
+         * <p>The IP address of the proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder proxyIp(String proxyIp) {
             this.putQueryParameter("ProxyIp", proxyIp);
@@ -293,10 +325,13 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The UUID of the instance.
-         * <p>
+         * <p>The UUID of the instance.</p>
+         * <blockquote>
+         * <p>If <strong>ProbeType</strong> is set to <strong>host_probe</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If **ProbeType** is set to **host_probe**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>e4af3620-6895-4e2f-a641-a9d8fb53****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -305,10 +340,13 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
-         * <p>
+         * <p>The ID of the VPC.</p>
+         * <blockquote>
+         * <p>If <strong>ProbeType</strong> is set to <strong>vpc_black_hole_probe</strong>, this parameter is required. You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</p>
+         * </blockquote>
          * 
-         * > If **ProbeType** is set to **vpc_black_hole_probe**, this parameter is required. You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.
+         * <strong>example:</strong>
+         * <p>vpc-zm0asrkpv1q8gnk7mn4dn</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -323,20 +361,26 @@ public class CreateHoneypotProbeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHoneypotProbeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHoneypotProbeRequest</p>
+     */
     public static class BindPortList extends TeaModel {
-        @NameInMap("BindPort")
+        @com.aliyun.core.annotation.NameInMap("BindPort")
         private Boolean bindPort;
 
-        @NameInMap("EndPort")
+        @com.aliyun.core.annotation.NameInMap("EndPort")
         private Integer endPort;
 
-        @NameInMap("Fixed")
+        @com.aliyun.core.annotation.NameInMap("Fixed")
         private Boolean fixed;
 
-        @NameInMap("StartPort")
+        @com.aliyun.core.annotation.NameInMap("StartPort")
         private Integer startPort;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private BindPortList(Builder builder) {
@@ -398,11 +442,14 @@ public class CreateHoneypotProbeRequest extends Request {
             private Integer targetPort; 
 
             /**
-             * Specifies whether to bind a port. Valid values:
-             * <p>
+             * <p>Specifies whether to bind a port. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bindPort(Boolean bindPort) {
                 this.bindPort = bindPort;
@@ -410,7 +457,10 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * The end of the port range.
+             * <p>The end of the port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder endPort(Integer endPort) {
                 this.endPort = endPort;
@@ -418,11 +468,14 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * Specifies whether the port is a fixed port. Valid values:
-             * <p>
+             * <p>Specifies whether the port is a fixed port. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fixed(Boolean fixed) {
                 this.fixed = fixed;
@@ -430,7 +483,10 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * The start of the port range.
+             * <p>The start of the port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder startPort(Integer startPort) {
                 this.startPort = startPort;
@@ -438,10 +494,13 @@ public class CreateHoneypotProbeRequest extends Request {
             }
 
             /**
-             * The destination port.
-             * <p>
+             * <p>The destination port.</p>
+             * <blockquote>
+             * <p>If <strong>HoneypotId</strong> is specified, this parameter is required.</p>
+             * </blockquote>
              * 
-             * > If **HoneypotId** is specified, this parameter is required.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -455,11 +514,17 @@ public class CreateHoneypotProbeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateHoneypotProbeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHoneypotProbeRequest</p>
+     */
     public static class HoneypotBindList extends TeaModel {
-        @NameInMap("BindPortList")
-        private java.util.List < BindPortList> bindPortList;
+        @com.aliyun.core.annotation.NameInMap("BindPortList")
+        private java.util.List<BindPortList> bindPortList;
 
-        @NameInMap("HoneypotId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
 
         private HoneypotBindList(Builder builder) {
@@ -478,7 +543,7 @@ public class CreateHoneypotProbeRequest extends Request {
         /**
          * @return bindPortList
          */
-        public java.util.List < BindPortList> getBindPortList() {
+        public java.util.List<BindPortList> getBindPortList() {
             return this.bindPortList;
         }
 
@@ -490,22 +555,25 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < BindPortList> bindPortList; 
+            private java.util.List<BindPortList> bindPortList; 
             private String honeypotId; 
 
             /**
-             * The listener ports.
+             * <p>The listener ports.</p>
              */
-            public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
+            public Builder bindPortList(java.util.List<BindPortList> bindPortList) {
                 this.bindPortList = bindPortList;
                 return this;
             }
 
             /**
-             * The ID of the honeypot.
-             * <p>
+             * <p>The ID of the honeypot.</p>
+             * <blockquote>
+             * <p>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</p>
+             * </blockquote>
              * 
-             * > You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+             * <strong>example:</strong>
+             * <p>1a5eda2d40f92ac87d6b63e1a5ad4b76fe0d4110c4a3e2fa85438a29ae55****</p>
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;

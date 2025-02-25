@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMultiAccountTagKeysRequest} extends {@link RequestModel}
  *
  * <p>ListMultiAccountTagKeysRequest</p>
  */
 public class ListMultiAccountTagKeysRequest extends Request {
-    @Query
-    @NameInMap("MatchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchType")
     private String matchType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
-    @Query
-    @NameInMap("TagKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
     private String tagKey;
 
     private ListMultiAccountTagKeysRequest(Builder builder) {
@@ -111,11 +111,14 @@ public class ListMultiAccountTagKeysRequest extends Request {
         } 
 
         /**
-         * The matching mode. Valid values:
-         * <p>
+         * <p>The matching mode. Valid values:</p>
+         * <ul>
+         * <li>Equals: equal match</li>
+         * <li>Prefix: match by prefix</li>
+         * </ul>
          * 
-         * *   Equals: equal match
-         * *   Prefix: match by prefix
+         * <strong>example:</strong>
+         * <p>Equals</p>
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -124,12 +127,12 @@ public class ListMultiAccountTagKeysRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 20.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 20.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -138,10 +141,11 @@ public class ListMultiAccountTagKeysRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>If the total number of entries returned for the current request exceeds the value of the <code>MaxResults</code> parameter, the entries are truncated. In this case, you can use the <code>token</code> to initiate another request and obtain the remaining entries.</p>
          * 
-         * If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -150,13 +154,17 @@ public class ListMultiAccountTagKeysRequest extends Request {
         }
 
         /**
-         * The search scope. You can set the value to one of the following items:
-         * <p>
+         * <p>The search scope. You can set the value to one of the following items:</p>
+         * <ul>
+         * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID.</li>
+         * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</li>
+         * <li>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</li>
+         * <li>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to obtain the ID.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the [GetResourceDirectory](~~159995~~) operation to obtain the ID.
-         * *   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
-         * *   ID of a folder: Resources within all members in the folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
-         * *   ID of a member: Resources within the member are searched. You can call the [ListAccounts](~~160016~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>rd-r4****</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -165,7 +173,10 @@ public class ListMultiAccountTagKeysRequest extends Request {
         }
 
         /**
-         * The tag key.
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key</p>
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);

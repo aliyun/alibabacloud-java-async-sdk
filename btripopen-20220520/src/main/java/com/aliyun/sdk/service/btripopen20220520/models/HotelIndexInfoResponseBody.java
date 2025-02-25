@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelIndexInfoResponseBody} extends {@link TeaModel}
  *
  * <p>HotelIndexInfoResponseBody</p>
  */
 public class HotelIndexInfoResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelIndexInfoResponseBody(Builder builder) {
@@ -151,11 +156,17 @@ public class HotelIndexInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelIndexInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelIndexInfoResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("hotel_id")
+        @com.aliyun.core.annotation.NameInMap("hotel_id")
         private String hotelId;
 
-        @NameInMap("hotel_status")
+        @com.aliyun.core.annotation.NameInMap("hotel_status")
         private String hotelStatus;
 
         private Items(Builder builder) {
@@ -212,14 +223,20 @@ public class HotelIndexInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelIndexInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelIndexInfoResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<Items> items;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("page_token")
+        @com.aliyun.core.annotation.NameInMap("page_token")
         private String pageToken;
 
         private Module(Builder builder) {
@@ -239,7 +256,7 @@ public class HotelIndexInfoResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -258,14 +275,14 @@ public class HotelIndexInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageSize; 
             private String pageToken; 
 
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteExporterOutputRequest} extends {@link RequestModel}
  *
  * <p>DeleteExporterOutputRequest</p>
  */
 public class DeleteExporterOutputRequest extends Request {
-    @Query
-    @NameInMap("DestName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destName;
 
     private DeleteExporterOutputRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DeleteExporterOutputRequest extends Request {
         } 
 
         /**
-         * The name of the configuration set.
+         * <p>The name of the configuration set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder destName(String destName) {
             this.putQueryParameter("DestName", destName);

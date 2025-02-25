@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMediaMarksRequest} extends {@link RequestModel}
  *
  * <p>UpdateMediaMarksRequest</p>
  */
 public class UpdateMediaMarksRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("MediaMarks")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaMarks")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaMarks;
 
     private UpdateMediaMarksRequest(Builder builder) {
@@ -93,7 +98,11 @@ public class UpdateMediaMarksRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53afdf003a******6a16b5feac6402</p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -102,7 +111,8 @@ public class UpdateMediaMarksRequest extends Request {
         }
 
         /**
-         * MediaMarks.
+         * <p>The marks of the media asset.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder mediaMarks(String mediaMarks) {
             this.putQueryParameter("MediaMarks", mediaMarks);

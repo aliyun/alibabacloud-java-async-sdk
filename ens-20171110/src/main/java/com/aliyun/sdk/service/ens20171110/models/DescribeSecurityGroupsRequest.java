@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityGroupsRequest</p>
  */
 public class DescribeSecurityGroupsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private DescribeSecurityGroupsRequest(Builder builder) {
         super(builder);
@@ -40,7 +40,6 @@ public class DescribeSecurityGroupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupName = builder.securityGroupName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -84,19 +83,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         return this.securityGroupName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeSecurityGroupsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityGroupId; 
         private String securityGroupName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -108,11 +99,17 @@ public class DescribeSecurityGroupsRequest extends Request {
             this.pageSize = request.pageSize;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupName = request.securityGroupName;
-            this.version = request.version;
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -121,7 +118,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * <ul>
+         * <li>Maximum value: 50.</li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +134,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4ph***</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -139,20 +146,14 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * <p>The name of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DocTest</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
             this.securityGroupName = securityGroupName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

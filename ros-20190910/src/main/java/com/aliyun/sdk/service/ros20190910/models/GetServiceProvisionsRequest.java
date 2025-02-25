@@ -1,44 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceProvisionsRequest} extends {@link RequestModel}
  *
  * <p>GetServiceProvisionsRequest</p>
  */
 public class GetServiceProvisionsRequest extends Request {
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Services")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Services")
     private java.util.List < Services> services;
 
-    @Query
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
     private GetServiceProvisionsRequest(Builder builder) {
@@ -139,7 +139,7 @@ public class GetServiceProvisionsRequest extends Request {
         } 
 
         /**
-         * The parameters.
+         * <p>The parameters.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -148,7 +148,11 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -157,7 +161,7 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The services.
+         * <p>The services.</p>
          */
         public Builder services(java.util.List < Services> services) {
             this.putQueryParameter("Services", services);
@@ -166,22 +170,20 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
-         * 
-         * You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }
 
         /**
-         * The template ID. This parameter applies to shared and private templates.
-         * <p>
+         * <p>The template ID. This parameter applies to shared and private templates.</p>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
          * 
-         * You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -190,10 +192,11 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
-         * <p>
+         * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+         * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
          * 
-         * You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
+         * <strong>example:</strong>
+         * <p>oss://ros-template/demo</p>
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -202,10 +205,11 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The version of the template. If you do not specify this parameter, the latest version is used.
-         * <p>
+         * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
+         * <p>This parameter takes effect only when TemplateId is specified.</p>
          * 
-         * This parameter takes effect only when TemplateId is specified.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);
@@ -220,13 +224,19 @@ public class GetServiceProvisionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceProvisionsRequest} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvisionsRequest</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -261,10 +271,14 @@ public class GetServiceProvisionsRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.
-             * <p>
+             * <p>The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</p>
+             * <blockquote>
+             * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.
+             * <strong>example:</strong>
+             * <p>Amount</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -272,10 +286,14 @@ public class GetServiceProvisionsRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
-             * <p>
+             * <p>The value of the parameter.</p>
+             * <blockquote>
+             * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -289,9 +307,15 @@ public class GetServiceProvisionsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetServiceProvisionsRequest} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvisionsRequest</p>
+     */
     public static class Services extends TeaModel {
-        @NameInMap("ServiceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serviceName;
 
         private Services(Builder builder) {
@@ -317,44 +341,48 @@ public class GetServiceProvisionsRequest extends Request {
             private String serviceName; 
 
             /**
-             * The service or feature name. Valid values:
-             * <p>
+             * <p>The name of the service or feature. Valid values:</p>
+             * <ul>
+             * <li>AHAS: Application High Availability Service</li>
+             * <li>ARMS: Application Real-Time Monitoring Service (ARMS)</li>
+             * <li>ApiGateway: API Gateway</li>
+             * <li>BatchCompute: Batch Compute</li>
+             * <li>BrainIndustrial: Industrial Brain</li>
+             * <li>CloudStorageGateway: Cloud Storage Gateway (CSG)</li>
+             * <li>CMS: CloudMonitor</li>
+             * <li>CR: Container Registry</li>
+             * <li>CS: Container Service for Kubernetes (ACK)</li>
+             * <li>DCDN: Dynamic Content Delivery Network (DCDN)</li>
+             * <li>DataHub: DataHub</li>
+             * <li>DataWorks: DataWorks</li>
+             * <li>EDAS: Enterprise Distributed Application Service (EDAS)</li>
+             * <li>EHPC: E-HPC</li>
+             * <li>EMAS: Enterprise Mobile Application Studio (EMAS)</li>
+             * <li>FC: Function Compute</li>
+             * <li>FNF: CloudFlow (SWF)</li>
+             * <li>MaxCompute: MaxCompute</li>
+             * <li>MNS: Message Service (MNS)</li>
+             * <li>HBR: Cloud Backup</li>
+             * <li>IMM: Intelligent Media Management (IMM)</li>
+             * <li>IOT: IoT Platform</li>
+             * <li>KMS: Key Management Service (KMS)</li>
+             * <li>NAS: Apsara File Storage NAS (NAS)</li>
+             * <li>NLP: Natural Language Processing (NLP)</li>
+             * <li>OSS: Object Storage Service (OSS)</li>
+             * <li>OTS: Tablestore</li>
+             * <li>PrivateLink: PrivateLink</li>
+             * <li>PrivateZone: Alibaba Cloud DNS PrivateZone</li>
+             * <li>RocketMQ: ApsaraMQ for RocketMQ</li>
+             * <li>SAE: Serverless App Engine (SAE)</li>
+             * <li>SLS: Simple Log Service (SLS)</li>
+             * <li>TrafficMirror: traffic mirroring</li>
+             * <li>VS: Video Surveillance System</li>
+             * <li>Xtrace: Managed Service for OpenTelemetry</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   AHAS: Application High Availability Service
-             * *   ARMS: Application Real-Time Monitoring Service (ARMS)
-             * *   ApiGateway: API Gateway
-             * *   BatchCompute: Batch Compute
-             * *   BrainIndustrial: Industrial Brain
-             * *   CloudStorageGateway: Cloud Storage Gateway (CSG)
-             * *   CMS: CloudMonitor
-             * *   CR: Container Registry
-             * *   CS: Container Service for Kubernetes (ACK)
-             * *   DCDN: Dynamic Content Delivery Network (DCDN)
-             * *   DataHub: DataHub
-             * *   DataWorks: DataWorks
-             * *   EDAS: Enterprise Distributed Application Service (EDAS)
-             * *   EHPC: Elastic High Performance Computing (E-HPC)
-             * *   EMAS: Enterprise Mobile Application Studio (EMAS)
-             * *   FC: Function Compute
-             * *   FNF: Serverless Workflow (SWF)
-             * *   MaxCompute: MaxCompute
-             * *   MNS: Message Service (MNS)
-             * *   HBR: Hybrid Backup Recovery (HBR)
-             * *   IMM: Intelligent Media Management
-             * *   IOT: IoT Platform
-             * *   KMS: Key Management Service (KMS)
-             * *   NAS: Apsara File Storage NAS (NAS)
-             * *   NLP: Natural Language Processing (NLP)
-             * *   OSS: OSS
-             * *   OTS: Tablestore
-             * *   PrivateLink: PrivateLink
-             * *   PrivateZone: Alibaba Cloud DNS PrivateZone
-             * *   RocketMQ: ApsaraMQ for RocketMQ
-             * *   SAE: Serverless App Engine (SAE)
-             * *   SLS: Log Service
-             * *   TrafficMirror: the traffic mirroring feature
-             * *   VS: Video Surveillance System
-             * *   Xtrace: Managed Service for OpenTelemetry
+             * <strong>example:</strong>
+             * <p>EHPC</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleQuotaRequest} extends {@link RequestModel}
  *
  * <p>ScaleQuotaRequest</p>
  */
 public class ScaleQuotaRequest extends Request {
-    @Path
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @Body
-    @NameInMap("Min")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Min")
     private ResourceSpec min;
 
-    @Body
-    @NameInMap("ResourceGroupIds")
-    private java.util.List < String > resourceGroupIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
+    private java.util.List<String> resourceGroupIds;
 
     private ScaleQuotaRequest(Builder builder) {
         super(builder);
@@ -61,14 +66,14 @@ public class ScaleQuotaRequest extends Request {
     /**
      * @return resourceGroupIds
      */
-    public java.util.List < String > getResourceGroupIds() {
+    public java.util.List<String> getResourceGroupIds() {
         return this.resourceGroupIds;
     }
 
     public static final class Builder extends Request.Builder<ScaleQuotaRequest, Builder> {
         private String quotaId; 
         private ResourceSpec min; 
-        private java.util.List < String > resourceGroupIds; 
+        private java.util.List<String> resourceGroupIds; 
 
         private Builder() {
             super();
@@ -82,7 +87,10 @@ public class ScaleQuotaRequest extends Request {
         } 
 
         /**
-         * Quota ID
+         * <p>Quota ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotamtl37ge7gkvdz</p>
          */
         public Builder quotaId(String quotaId) {
             this.putPathParameter("QuotaId", quotaId);
@@ -102,7 +110,7 @@ public class ScaleQuotaRequest extends Request {
         /**
          * ResourceGroupIds.
          */
-        public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
+        public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putBodyParameter("ResourceGroupIds", resourceGroupIds);
             this.resourceGroupIds = resourceGroupIds;
             return this;

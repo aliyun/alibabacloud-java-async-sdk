@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBackupRecordResponseBody} extends {@link TeaModel}
  *
  * <p>ListBackupRecordResponseBody</p>
  */
 public class ListBackupRecordResponseBody extends TeaModel {
-    @NameInMap("BackupRecordList")
-    private java.util.List < BackupRecordList> backupRecordList;
+    @com.aliyun.core.annotation.NameInMap("BackupRecordList")
+    private java.util.List<BackupRecordList> backupRecordList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListBackupRecordResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
     /**
      * @return backupRecordList
      */
-    public java.util.List < BackupRecordList> getBackupRecordList() {
+    public java.util.List<BackupRecordList> getBackupRecordList() {
         return this.backupRecordList;
     }
 
@@ -57,20 +62,20 @@ public class ListBackupRecordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BackupRecordList> backupRecordList; 
+        private java.util.List<BackupRecordList> backupRecordList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The details of the backup record.
+         * <p>The details of the backup record.</p>
          */
-        public Builder backupRecordList(java.util.List < BackupRecordList> backupRecordList) {
+        public Builder backupRecordList(java.util.List<BackupRecordList> backupRecordList) {
             this.backupRecordList = backupRecordList;
             return this;
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID, which is used to locate and troubleshoot issues.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,50 +99,56 @@ public class ListBackupRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBackupRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBackupRecordResponseBody</p>
+     */
     public static class BackupRecordList extends TeaModel {
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private Long backupEndTime;
 
-        @NameInMap("BackupJobId")
+        @com.aliyun.core.annotation.NameInMap("BackupJobId")
         private String backupJobId;
 
-        @NameInMap("BackupPlanId")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanId")
         private String backupPlanId;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private Long backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private BackupRecordList(Builder builder) {
@@ -286,7 +300,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The timestamp when the backup task ended. Unit: milliseconds.
+             * <p>The timestamp when the backup task ended. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1699600611000</p>
              */
             public Builder backupEndTime(Long backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -294,7 +311,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The backup task ID.
+             * <p>The backup task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a006f24d069843c88688672d74ee****</p>
              */
             public Builder backupJobId(String backupJobId) {
                 this.backupJobId = backupJobId;
@@ -302,7 +322,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The backup plan ID.
+             * <p>The backup plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plan-000c4tt43nolmx96****</p>
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -310,7 +333,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the backup task started. Unit: milliseconds.
+             * <p>The timestamp when the backup task started. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1699514211000</p>
              */
             public Builder backupStartTime(Long backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -318,12 +344,15 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The backup task status. Valid value:
-             * <p>
+             * <p>The backup task status. Valid value:</p>
+             * <ul>
+             * <li><strong>BACKUP_COMPLETE</strong>: The backup task is successful.</li>
+             * <li><strong>BACKUP_FAILED</strong>: The backup task failed.</li>
+             * <li><strong>PARTIAL_COMPLETE</strong>: The backup task is partially successful.</li>
+             * </ul>
              * 
-             * *   **BACKUP_COMPLETE**: The backup task is successful.
-             * *   **BACKUP_FAILED**: The backup task failed.
-             * *   **PARTIAL_COMPLETE**: The backup task is partially successful.
+             * <strong>example:</strong>
+             * <p>BACKUP_COMPLETE</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -331,7 +360,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware agent.
+             * <p>The ID of the anti-ransomware agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-0002bgagelj3d2sc****</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -339,7 +371,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The error code of the backup task.
+             * <p>The error code of the backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE_CACHE_NO_SPACE</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -347,7 +382,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The error message of the backup task.
+             * <p>The error message of the backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE_CACHE_NO_SPACE</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -355,7 +393,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9ikn44p46krnic****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -363,7 +404,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the asset.
+             * <p>The instance name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openapi</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -371,7 +415,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -379,7 +426,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -387,7 +437,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -395,7 +448,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the backup is stored.
+             * <p>The ID of the region in which the backup is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -403,7 +459,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server whose data is backed up based on the anti-ransomware policy.
+             * <p>The UUID of the server whose data is backed up based on the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b93cccb9-f19f-4886-97fe-47df26ba****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -417,17 +476,23 @@ public class ListBackupRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBackupRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBackupRecordResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -480,7 +545,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -488,7 +556,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -496,7 +567,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -504,7 +578,10 @@ public class ListBackupRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

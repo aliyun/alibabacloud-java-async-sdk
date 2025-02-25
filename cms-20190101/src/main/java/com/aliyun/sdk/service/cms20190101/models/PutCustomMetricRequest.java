@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutCustomMetricRequest} extends {@link RequestModel}
  *
  * <p>PutCustomMetricRequest</p>
  */
 public class PutCustomMetricRequest extends Request {
-    @Query
-    @NameInMap("MetricList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MetricList> metricList;
 
     private PutCustomMetricRequest(Builder builder) {
@@ -55,7 +55,7 @@ public class PutCustomMetricRequest extends Request {
         } 
 
         /**
-         * MetricList.
+         * <p>This parameter is required.</p>
          */
         public Builder metricList(java.util.List < MetricList> metricList) {
             this.putQueryParameter("MetricList", metricList);
@@ -70,31 +70,37 @@ public class PutCustomMetricRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutCustomMetricRequest} extends {@link TeaModel}
+     *
+     * <p>PutCustomMetricRequest</p>
+     */
     public static class MetricList extends TeaModel {
-        @NameInMap("Dimensions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dimensions;
 
-        @NameInMap("GroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String groupId;
 
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Values")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Values")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String values;
 
         private MetricList(Builder builder) {
@@ -174,16 +180,17 @@ public class PutCustomMetricRequest extends Request {
             private String values; 
 
             /**
-             * The dimensions that specify the resources whose monitoring data you want to query. Valid values of N: 1 to 21.
-             * <p>
+             * <p>The dimensions that specify the resources whose monitoring data you want to query. Valid values of N: 1 to 21.</p>
+             * <p>Set the value to a collection of key-value pairs. Format:<code>{&quot;Key&quot;:&quot;Value&quot;}</code>.</p>
+             * <p>The key or value must be 1 to 64 bytes in length. Excessive characters are truncated.</p>
+             * <p>The key or value can contain letters, digits, periods (.), hyphens (-), underscores (_), forward slashes (/), and backslashes (\).</p>
+             * <blockquote>
+             * <p> Dimensions must be formatted as a JSON string in a specified order.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Set the value to a collection of key-value pairs. Format:`{"Key":"Value"}`.
-             * 
-             * The key or value must be 1 to 64 bytes in length. Excessive characters are truncated.
-             * 
-             * The key or value can contain letters, digits, periods (.), hyphens (-), underscores (\_), forward slashes (/), and backslashes (\\).
-             * 
-             * >  Dimensions must be formatted as a JSON string in a specified order.
+             * <strong>example:</strong>
+             * <p>{&quot;sampleName1&quot;:&quot;value1&quot;,&quot;sampleName2&quot;:&quot;value2&quot;}</p>
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -191,10 +198,14 @@ public class PutCustomMetricRequest extends Request {
             }
 
             /**
-             * The ID of the application group. Valid values of N: 1 to 21.
-             * <p>
+             * <p>The ID of the application group. Valid values of N: 1 to 21.</p>
+             * <blockquote>
+             * <p> If the metric does not belong to any application group, enter 0.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  If the metric does not belong to any application group, enter 0.
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -202,7 +213,11 @@ public class PutCustomMetricRequest extends Request {
             }
 
             /**
-             * The name of the metric. Valid values of N: 1 to 21. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * <p>The name of the metric. Valid values of N: 1 to 21. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -210,10 +225,13 @@ public class PutCustomMetricRequest extends Request {
             }
 
             /**
-             * The aggregation period. Valid values of N: 1 to 21. Unit: seconds. Valid values: 60 and 300.
-             * <p>
+             * <p>The aggregation period. Valid values of N: 1 to 21. Unit: seconds. Valid values: 60 and 300.</p>
+             * <blockquote>
+             * <p> If the MetricList.N.Type parameter is set to 1, the MetricList.N.Period parameter is required.</p>
+             * </blockquote>
              * 
-             * >  If the MetricList.N.Type parameter is set to 1, the MetricList.N.Period parameter is required.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -221,11 +239,14 @@ public class PutCustomMetricRequest extends Request {
             }
 
             /**
-             * The timestamp when the metric data is generated. Valid values of N: 1 to 21. The timestamp can be in one of the following formats:
-             * <p>
+             * <p>The timestamp when the metric data is generated. Valid values of N: 1 to 21. The timestamp can be in one of the following formats:</p>
+             * <ul>
+             * <li>The UTC timestamp that is in the YYYY-MM-DDThh:mm:ssZ format. Example: 20171012T132456.888+0800.</li>
+             * <li>The UNIX timestamp of the LONG type. Example: 1508136760000.</li>
+             * </ul>
              * 
-             * *   The UTC timestamp that is in the YYYY-MM-DDThh:mm:ssZ format. Example: 20171012T132456.888+0800.
-             * *   The UNIX timestamp of the LONG type. Example: 1508136760000.
+             * <strong>example:</strong>
+             * <p>1508136760000</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -233,13 +254,18 @@ public class PutCustomMetricRequest extends Request {
             }
 
             /**
-             * The type of the reported data. Valid values of N: 1 to 21. Valid values:
-             * <p>
+             * <p>The type of the reported data. Valid values of N: 1 to 21. Valid values:</p>
+             * <ul>
+             * <li>0: reports raw data</li>
+             * <li>1: reports aggregate data</li>
+             * </ul>
+             * <blockquote>
+             * <p> We recommend that you report aggregate data in both the aggregation periods of 60s and 300s. Otherwise, you cannot query monitoring data in a time span that is more than seven days.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   0: reports raw data
-             * *   1: reports aggregate data
-             * 
-             * >  We recommend that you report aggregate data in both the aggregation periods of 60s and 300s. Otherwise, you cannot query monitoring data in a time span that is more than seven days.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -247,10 +273,14 @@ public class PutCustomMetricRequest extends Request {
             }
 
             /**
-             * The collection of metric values. Valid values of N: 1 to 21.
-             * <p>
+             * <p>The collection of metric values. Valid values of N: 1 to 21.</p>
+             * <blockquote>
+             * <p> If the MetricList.N.Type parameter is set to 0, the keys in this parameter must be set to the specified value. CloudMonitor aggregates raw data in each aggregation period to generate multiple statistical values, such as the maximum value, the count, and the total value.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  If the MetricList.N.Type parameter is set to 0, the keys in this parameter must be set to the specified value. CloudMonitor aggregates raw data in each aggregation period to generate multiple statistical values, such as the maximum value, the count, and the total value.
+             * <strong>example:</strong>
+             * <p>{&quot;value&quot;:10.5}</p>
              */
             public Builder values(String values) {
                 this.values = values;

@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoSnapshotPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoSnapshotPolicyRequest</p>
  */
 public class DeleteAutoSnapshotPolicyRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("autoSnapshotPolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("autoSnapshotPolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String autoSnapshotPolicyId;
 
-    @Query
-    @NameInMap("regionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteAutoSnapshotPolicyRequest(Builder builder) {
@@ -135,7 +140,10 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>RAM用户的虚拟账号ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -144,7 +152,10 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * <p>资源主账号的账号名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECSforCloud</p>
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -153,7 +164,10 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * <p>资源主账号的ID，亦即UID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -162,7 +176,11 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query the available automatic snapshot policies.
+         * <p>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query the IDs of available automatic snapshot policies.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp14yziiuvu3s6jn****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("autoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -171,7 +189,11 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID of the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region to which the automatic snapshot policy belongs. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

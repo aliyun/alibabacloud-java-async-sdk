@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomRoutingEndPointTrafficPolicyResponseBody</p>
  */
 public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private String policyId;
 
-    @NameInMap("PortRanges")
+    @com.aliyun.core.annotation.NameInMap("PortRanges")
     private java.util.List < PortRanges> portRanges;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceManaged")
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @NameInMap("ServiceManagedInfos")
+    @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
     private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private DescribeCustomRoutingEndPointTrafficPolicyResponseBody(Builder builder) {
@@ -254,10 +253,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The service ID to which the managed instance belongs.
+         * The ID of the service that manages the instance.
          * <p>
          * 
-         * >  Valid only when the ServiceManaged parameter is True.
+         * >  This parameter is returned only if the value of **ServiceManaged** is **true**.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -265,11 +264,11 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * Is it a managed instance. Valid values:
+         * Indicates whether the instance is managed. Valid values:
          * <p>
          * 
-         * - true
-         * - false
+         * *   **true**
+         * *   **false**
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -277,7 +276,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * A list of action policies that users can execute on this managed instance.
+         * The actions that users can perform on the managed instance.
+         * <p>
+         * > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
+         * > *   Users can perform only specific actions on a managed instance.
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -305,10 +307,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -343,7 +345,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             private Integer toPort; 
 
             /**
-             * The port range of the traffic destination.
+             * The first port of the port range used by the traffic destination to process requests.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -351,7 +353,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * The first port of the port range.
+             * The last port of the port range used by the traffic destination to process requests.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -366,13 +368,13 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -416,14 +418,15 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name, Valid values:
+             * The name of the action performed on the managed instance. Valid values:
              * <p>
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * 
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
+             * *   **Associate**
+             * *   **UserUnmanaged**
+             * *   **CreateChild**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -431,18 +434,18 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * Sub resource type, Valid values:
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
+             * *   **Listener**: listener.
+             * *   **IpSet**: acceleration region.
+             * *   **EndpointGroup**: endpoint group.
+             * *   **ForwardingRule**: forwarding rule.
+             * *   **Endpoint**: endpoint.
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group that is associated with a custom routing listener.
+             * *   **EndpointPolicy**: traffic policy of an endpoint that is associated with a custom routing listener.
              * 
-             * >Only valid when the Action parameter is CreateChild.
+             * >  This parameter takes effect only if the value of **Action** is **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -450,12 +453,11 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
+             * Indicates whether the specified actions are managed.
              * <p>
              * 
-             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

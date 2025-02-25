@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataLimitSetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataLimitSetResponseBody</p>
  */
 public class DescribeDataLimitSetResponseBody extends TeaModel {
-    @NameInMap("DataLimitSet")
+    @com.aliyun.core.annotation.NameInMap("DataLimitSet")
     private DataLimitSet dataLimitSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDataLimitSetResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataLimitSet.
+         * <p>The information about the data asset.</p>
          */
         public Builder dataLimitSet(DataLimitSet dataLimitSet) {
             this.dataLimitSet = dataLimitSet;
@@ -58,7 +63,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,38 +79,44 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataLimitSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataLimitSetResponseBody</p>
+     */
     public static class DataLimitList extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private Integer checkStatus;
 
-        @NameInMap("CheckStatusName")
+        @com.aliyun.core.annotation.NameInMap("CheckStatusName")
         private String checkStatusName;
 
-        @NameInMap("Connector")
+        @com.aliyun.core.annotation.NameInMap("Connector")
         private String connector;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
 
-        @NameInMap("ResourceTypeCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCode")
         private String resourceTypeCode;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private DataLimitList(Builder builder) {
@@ -218,7 +232,15 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * CheckStatus.
+             * <p>Indicates whether the test of connectivity between DSC and the data asset is passed.</p>
+             * <ul>
+             * <li><strong>2</strong>: The connectivity test is in progress.</li>
+             * <li><strong>3</strong>: The connectivity test is passed.</li>
+             * <li><strong>4</strong>: The connectivity test failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder checkStatus(Integer checkStatus) {
                 this.checkStatus = checkStatus;
@@ -226,7 +248,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatusName.
+             * <p>The name of the data detection status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connectivity test status</p>
              */
             public Builder checkStatusName(String checkStatusName) {
                 this.checkStatusName = checkStatusName;
@@ -234,7 +259,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * Connector.
+             * <p>The connection string that is used to access the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connection string</p>
              */
             public Builder connector(String connector) {
                 this.connector = connector;
@@ -242,7 +270,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the data asset was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625587423000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -250,7 +281,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -258,7 +292,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * <p>The region in which the data asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -266,7 +303,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent asset ID of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -274,7 +314,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region in which the data asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-****</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -282,7 +325,17 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of service to which the data asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute</li>
+             * <li><strong>2</strong>: OSS</li>
+             * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+             * <li><strong>4</strong>: Tablestore</li>
+             * <li><strong>5</strong>: ApsaraDB RDS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder resourceType(Long resourceType) {
                 this.resourceType = resourceType;
@@ -290,7 +343,17 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypeCode.
+             * <p>The code of the service to which the data asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>ODPS</strong></li>
+             * <li><strong>OSS</strong></li>
+             * <li><strong>ADS</strong></li>
+             * <li><strong>OTS</strong></li>
+             * <li><strong>RDS</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -298,7 +361,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username that is used to access the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tsts</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -312,11 +378,17 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataLimitSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataLimitSetResponseBody</p>
+     */
     public static class OssBucketList extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private OssBucketList(Builder builder) {
@@ -351,7 +423,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * BucketName.
+             * <p>The name of the OSS bucket to which the OSS object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -359,7 +434,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-****</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -373,11 +451,17 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataLimitSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataLimitSetResponseBody</p>
+     */
     public static class RegionList extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private RegionList(Builder builder) {
@@ -412,7 +496,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * LocalName.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -420,7 +507,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-****</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -434,23 +524,29 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataLimitSetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataLimitSetResponseBody</p>
+     */
     public static class DataLimitSet extends TeaModel {
-        @NameInMap("DataLimitList")
-        private java.util.List < DataLimitList> dataLimitList;
+        @com.aliyun.core.annotation.NameInMap("DataLimitList")
+        private java.util.List<DataLimitList> dataLimitList;
 
-        @NameInMap("OssBucketList")
-        private java.util.List < OssBucketList> ossBucketList;
+        @com.aliyun.core.annotation.NameInMap("OssBucketList")
+        private java.util.List<OssBucketList> ossBucketList;
 
-        @NameInMap("RegionList")
-        private java.util.List < RegionList> regionList;
+        @com.aliyun.core.annotation.NameInMap("RegionList")
+        private java.util.List<RegionList> regionList;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
 
-        @NameInMap("ResourceTypeCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCode")
         private String resourceTypeCode;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DataLimitSet(Builder builder) {
@@ -473,21 +569,21 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         /**
          * @return dataLimitList
          */
-        public java.util.List < DataLimitList> getDataLimitList() {
+        public java.util.List<DataLimitList> getDataLimitList() {
             return this.dataLimitList;
         }
 
         /**
          * @return ossBucketList
          */
-        public java.util.List < OssBucketList> getOssBucketList() {
+        public java.util.List<OssBucketList> getOssBucketList() {
             return this.ossBucketList;
         }
 
         /**
          * @return regionList
          */
-        public java.util.List < RegionList> getRegionList() {
+        public java.util.List<RegionList> getRegionList() {
             return this.regionList;
         }
 
@@ -513,39 +609,49 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataLimitList> dataLimitList; 
-            private java.util.List < OssBucketList> ossBucketList; 
-            private java.util.List < RegionList> regionList; 
+            private java.util.List<DataLimitList> dataLimitList; 
+            private java.util.List<OssBucketList> ossBucketList; 
+            private java.util.List<RegionList> regionList; 
             private Long resourceType; 
             private String resourceTypeCode; 
             private Integer totalCount; 
 
             /**
-             * DataLimitList.
+             * <p>An array that consists of data assets that DSC is authorized to scan.</p>
              */
-            public Builder dataLimitList(java.util.List < DataLimitList> dataLimitList) {
+            public Builder dataLimitList(java.util.List<DataLimitList> dataLimitList) {
                 this.dataLimitList = dataLimitList;
                 return this;
             }
 
             /**
-             * OssBucketList.
+             * <p>An array consisting of the OSS objects that DSC is authorized to scan.</p>
              */
-            public Builder ossBucketList(java.util.List < OssBucketList> ossBucketList) {
+            public Builder ossBucketList(java.util.List<OssBucketList> ossBucketList) {
                 this.ossBucketList = ossBucketList;
                 return this;
             }
 
             /**
-             * RegionList.
+             * <p>An array consisting of the regions in which the data assets can be scanned.</p>
              */
-            public Builder regionList(java.util.List < RegionList> regionList) {
+            public Builder regionList(java.util.List<RegionList> regionList) {
                 this.regionList = regionList;
                 return this;
             }
 
             /**
-             * ResourceType.
+             * <p>The type of service to which the data asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute</li>
+             * <li><strong>2</strong>: OSS</li>
+             * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+             * <li><strong>4</strong>: Tablestore</li>
+             * <li><strong>5</strong>: ApsaraDB RDS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder resourceType(Long resourceType) {
                 this.resourceType = resourceType;
@@ -553,7 +659,17 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypeCode.
+             * <p>The service to which the data asset belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>ODPS</strong></li>
+             * <li><strong>OSS</strong></li>
+             * <li><strong>ADS</strong></li>
+             * <li><strong>OTS</strong></li>
+             * <li><strong>RDS</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -561,7 +677,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of data objects in the data assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

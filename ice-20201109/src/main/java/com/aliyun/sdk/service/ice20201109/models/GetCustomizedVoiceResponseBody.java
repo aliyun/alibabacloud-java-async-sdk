@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomizedVoiceResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomizedVoiceResponseBody</p>
  */
 public class GetCustomizedVoiceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCustomizedVoiceResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,14 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -91,23 +106,29 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomizedVoiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomizedVoiceResponseBody</p>
+     */
     public static class CustomizedVoice extends TeaModel {
-        @NameInMap("DemoAudioMediaId")
+        @com.aliyun.core.annotation.NameInMap("DemoAudioMediaId")
         private String demoAudioMediaId;
 
-        @NameInMap("Gender")
+        @com.aliyun.core.annotation.NameInMap("Gender")
         private String gender;
 
-        @NameInMap("Scenario")
+        @com.aliyun.core.annotation.NameInMap("Scenario")
         private String scenario;
 
-        @NameInMap("VoiceDesc")
+        @com.aliyun.core.annotation.NameInMap("VoiceDesc")
         private String voiceDesc;
 
-        @NameInMap("VoiceId")
+        @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
-        @NameInMap("VoiceName")
+        @com.aliyun.core.annotation.NameInMap("VoiceName")
         private String voiceName;
 
         private CustomizedVoice(Builder builder) {
@@ -178,7 +199,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             private String voiceName; 
 
             /**
-             * DemoAudioMediaId.
+             * <p>The media asset ID of the sample audio file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>42d3c312402982be65975f5b</strong></strong></p>
              */
             public Builder demoAudioMediaId(String demoAudioMediaId) {
                 this.demoAudioMediaId = demoAudioMediaId;
@@ -186,7 +210,14 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Gender.
+             * <p>The gender. Valid values:</p>
+             * <ul>
+             * <li>female</li>
+             * <li>male</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>female</p>
              */
             public Builder gender(String gender) {
                 this.gender = gender;
@@ -194,7 +225,16 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Scenario.
+             * <p>The demonstration scenario.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>story</strong></li>
+             * <li><strong>interaction</strong></li>
+             * <li><strong>navigation</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>interaction</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -202,7 +242,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceDesc.
+             * <p>The voice description.</p>
              */
             public Builder voiceDesc(String voiceDesc) {
                 this.voiceDesc = voiceDesc;
@@ -210,7 +250,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceId.
+             * <p>The voice ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaozhuan</p>
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
@@ -218,7 +261,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceName.
+             * <p>The voice name.</p>
              */
             public Builder voiceName(String voiceName) {
                 this.voiceName = voiceName;
@@ -232,8 +275,14 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCustomizedVoiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomizedVoiceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CustomizedVoice")
+        @com.aliyun.core.annotation.NameInMap("CustomizedVoice")
         private CustomizedVoice customizedVoice;
 
         private Data(Builder builder) {
@@ -259,7 +308,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
             private CustomizedVoice customizedVoice; 
 
             /**
-             * CustomizedVoice.
+             * <p>The personalized human voice.</p>
              */
             public Builder customizedVoice(CustomizedVoice customizedVoice) {
                 this.customizedVoice = customizedVoice;

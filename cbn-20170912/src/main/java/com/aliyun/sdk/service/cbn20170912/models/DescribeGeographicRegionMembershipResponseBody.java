@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGeographicRegionMembershipResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGeographicRegionMembershipResponseBody</p>
  */
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionIds")
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
     private RegionIds regionIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeGeographicRegionMembershipResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * RegionIds.
+         * <p>The list of regions.</p>
          */
         public Builder regionIds(RegionIds regionIds) {
             this.regionIds = regionIds;
@@ -110,7 +121,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC9EB0C9-60AF-4A09-A36C-608F70130274</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,8 +148,14 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGeographicRegionMembershipResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGeographicRegionMembershipResponseBody</p>
+     */
     public static class RegionId extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private RegionId(Builder builder) {
@@ -158,7 +181,11 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-west-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -172,9 +199,15 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGeographicRegionMembershipResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGeographicRegionMembershipResponseBody</p>
+     */
     public static class RegionIds extends TeaModel {
-        @NameInMap("RegionId")
-        private java.util.List < RegionId> regionId;
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private java.util.List<RegionId> regionId;
 
         private RegionIds(Builder builder) {
             this.regionId = builder.regionId;
@@ -191,17 +224,21 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         /**
          * @return regionId
          */
-        public java.util.List < RegionId> getRegionId() {
+        public java.util.List<RegionId> getRegionId() {
             return this.regionId;
         }
 
         public static final class Builder {
-            private java.util.List < RegionId> regionId; 
+            private java.util.List<RegionId> regionId; 
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-west-1</p>
              */
-            public Builder regionId(java.util.List < RegionId> regionId) {
+            public Builder regionId(java.util.List<RegionId> regionId) {
                 this.regionId = regionId;
                 return this;
             }

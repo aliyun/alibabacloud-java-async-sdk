@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWaterMarkTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteWaterMarkTemplateResponseBody</p>
  */
 public class DeleteWaterMarkTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WaterMarkTemplateId")
+    @com.aliyun.core.annotation.NameInMap("WaterMarkTemplateId")
     private String waterMarkTemplateId;
 
     private DeleteWaterMarkTemplateResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DeleteWaterMarkTemplateResponseBody extends TeaModel {
         private String waterMarkTemplateId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>030E2671-806A-52AF-A93C-DA8E308603A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,10 @@ public class DeleteWaterMarkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * WaterMarkTemplateId.
+         * <p>The ID of the deleted watermark template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3780bd69b2b74540bc7b1096f564****</p>
          */
         public Builder waterMarkTemplateId(String waterMarkTemplateId) {
             this.waterMarkTemplateId = waterMarkTemplateId;

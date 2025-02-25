@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDiskRequest} extends {@link RequestModel}
  *
  * <p>DetachDiskRequest</p>
  */
 public class DetachDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DeleteWithInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
     private Boolean deleteWithInstance;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DetachDiskRequest(Builder builder) {
@@ -163,18 +168,21 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the system disk when the instance from which you want to detach the system disk is released. Valid values:
-         * <p>
+         * <p>Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:</p>
+         * <ul>
+         * <li>true: releases the disk when the instance is released.</li>
+         * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</li>
+         * <li>If a data disk is to be detached, the default value is <code>false</code>.</li>
+         * <li>If you want to detach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
+         * </ul>
          * 
-         * *   true: releases the system disk when the instance is released.
-         * *   false: does not release the system disk when the instance is released. The system disk is retained as a pay-as-you-go data disk.
-         * 
-         * Default value: true.
-         * 
-         * If you specify this parameter, take note of the following items:
-         * 
-         * *   You cannot specify this parameter for disks for which the multi-attach feature is enabled.
-         * *   If you detach a data disk, the default value of this parameter is `false`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -183,7 +191,16 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk that you want to detach.
+         * <p>The ID of the disk that you want to detach.</p>
+         * <ul>
+         * <li>The disk that you want to detach must be attached to an ECS instance and in the In Use (<code>In_use</code>) state.</li>
+         * <li>The instance from which you want to detach a data disk must be in the <code>Running</code> or <code>Stopped</code> state.</li>
+         * <li>The instance from which you want to detach the system disk must be in the <code>Stopped</code> state.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -192,7 +209,11 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance from which you want to detach the disk.
+         * <p>The ID of the ECS instance from which you want to detach the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -1,81 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTransferInByInstanceIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTransferInByInstanceIdResponseBody</p>
  */
 public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @NameInMap("ExpirationDate")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDate")
     private String expirationDate;
 
-    @NameInMap("ExpirationDateLong")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDateLong")
     private Long expirationDateLong;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("ModificationDate")
+    @com.aliyun.core.annotation.NameInMap("ModificationDate")
     private String modificationDate;
 
-    @NameInMap("ModificationDateLong")
+    @com.aliyun.core.annotation.NameInMap("ModificationDateLong")
     private Long modificationDateLong;
 
-    @NameInMap("NeedMailCheck")
+    @com.aliyun.core.annotation.NameInMap("NeedMailCheck")
     private Boolean needMailCheck;
 
-    @NameInMap("ProgressBarType")
+    @com.aliyun.core.annotation.NameInMap("ProgressBarType")
     private Integer progressBarType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultDate")
+    @com.aliyun.core.annotation.NameInMap("ResultDate")
     private String resultDate;
 
-    @NameInMap("ResultDateLong")
+    @com.aliyun.core.annotation.NameInMap("ResultDateLong")
     private Long resultDateLong;
 
-    @NameInMap("ResultMsg")
+    @com.aliyun.core.annotation.NameInMap("ResultMsg")
     private String resultMsg;
 
-    @NameInMap("SimpleTransferInStatus")
+    @com.aliyun.core.annotation.NameInMap("SimpleTransferInStatus")
     private String simpleTransferInStatus;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @NameInMap("SubmissionDate")
+    @com.aliyun.core.annotation.NameInMap("SubmissionDate")
     private String submissionDate;
 
-    @NameInMap("SubmissionDateLong")
+    @com.aliyun.core.annotation.NameInMap("SubmissionDateLong")
     private Long submissionDateLong;
 
-    @NameInMap("TransferAuthorizationCodeSubmissionDate")
+    @com.aliyun.core.annotation.NameInMap("TransferAuthorizationCodeSubmissionDate")
     private String transferAuthorizationCodeSubmissionDate;
 
-    @NameInMap("TransferAuthorizationCodeSubmissionDateLong")
+    @com.aliyun.core.annotation.NameInMap("TransferAuthorizationCodeSubmissionDateLong")
     private Long transferAuthorizationCodeSubmissionDateLong;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("WhoisMailStatus")
+    @com.aliyun.core.annotation.NameInMap("WhoisMailStatus")
     private Boolean whoisMailStatus;
 
     private QueryTransferInByInstanceIdResponseBody(Builder builder) {

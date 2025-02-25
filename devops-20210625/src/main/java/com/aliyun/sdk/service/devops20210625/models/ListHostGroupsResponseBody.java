@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostGroupsResponseBody</p>
  */
 public class ListHostGroupsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("hostGroups")
-    private java.util.List < HostGroups> hostGroups;
+    @com.aliyun.core.annotation.NameInMap("hostGroups")
+    private java.util.List<HostGroups> hostGroups;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListHostGroupsResponseBody(Builder builder) {
@@ -68,7 +73,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
     /**
      * @return hostGroups
      */
-    public java.util.List < HostGroups> getHostGroups() {
+    public java.util.List<HostGroups> getHostGroups() {
         return this.hostGroups;
     }
 
@@ -103,7 +108,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < HostGroups> hostGroups; 
+        private java.util.List<HostGroups> hostGroups; 
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
@@ -128,7 +133,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         /**
          * hostGroups.
          */
-        public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
+        public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
             return this;
         }
@@ -171,47 +176,53 @@ public class ListHostGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostGroupsResponseBody</p>
+     */
     public static class HostGroups extends TeaModel {
-        @NameInMap("aliyunRegion")
+        @com.aliyun.core.annotation.NameInMap("aliyunRegion")
         private String aliyunRegion;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("ecsLabelKey")
+        @com.aliyun.core.annotation.NameInMap("ecsLabelKey")
         private String ecsLabelKey;
 
-        @NameInMap("ecsLabelValue")
+        @com.aliyun.core.annotation.NameInMap("ecsLabelValue")
         private String ecsLabelValue;
 
-        @NameInMap("ecsType")
+        @com.aliyun.core.annotation.NameInMap("ecsType")
         private String ecsType;
 
-        @NameInMap("hostNum")
+        @com.aliyun.core.annotation.NameInMap("hostNum")
         private Long hostNum;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modifierAccountId")
+        @com.aliyun.core.annotation.NameInMap("modifierAccountId")
         private String modifierAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("serviceConnectionId")
+        @com.aliyun.core.annotation.NameInMap("serviceConnectionId")
         private Long serviceConnectionId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private HostGroups(Builder builder) {
@@ -418,7 +429,10 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 323232
+             * <p>323232</p>
+             * 
+             * <strong>example:</strong>
+             * <p>部署组Id</p>
              */
             public Builder id(Long id) {
                 this.id = id;

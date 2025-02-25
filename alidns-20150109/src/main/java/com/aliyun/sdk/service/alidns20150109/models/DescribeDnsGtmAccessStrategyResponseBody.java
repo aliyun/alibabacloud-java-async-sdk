@@ -1,93 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmAccessStrategyResponseBody</p>
  */
 public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
-    @NameInMap("AccessMode")
+    @com.aliyun.core.annotation.NameInMap("AccessMode")
     private String accessMode;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("DefaultAddrPoolGroupStatus")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolGroupStatus")
     private String defaultAddrPoolGroupStatus;
 
-    @NameInMap("DefaultAddrPoolType")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolType")
     private String defaultAddrPoolType;
 
-    @NameInMap("DefaultAddrPools")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPools")
     private DefaultAddrPools defaultAddrPools;
 
-    @NameInMap("DefaultAvailableAddrNum")
+    @com.aliyun.core.annotation.NameInMap("DefaultAvailableAddrNum")
     private Integer defaultAvailableAddrNum;
 
-    @NameInMap("DefaultLatencyOptimization")
+    @com.aliyun.core.annotation.NameInMap("DefaultLatencyOptimization")
     private String defaultLatencyOptimization;
 
-    @NameInMap("DefaultLbaStrategy")
+    @com.aliyun.core.annotation.NameInMap("DefaultLbaStrategy")
     private String defaultLbaStrategy;
 
-    @NameInMap("DefaultMaxReturnAddrNum")
+    @com.aliyun.core.annotation.NameInMap("DefaultMaxReturnAddrNum")
     private Integer defaultMaxReturnAddrNum;
 
-    @NameInMap("DefaultMinAvailableAddrNum")
+    @com.aliyun.core.annotation.NameInMap("DefaultMinAvailableAddrNum")
     private Integer defaultMinAvailableAddrNum;
 
-    @NameInMap("EffectiveAddrPoolGroupType")
+    @com.aliyun.core.annotation.NameInMap("EffectiveAddrPoolGroupType")
     private String effectiveAddrPoolGroupType;
 
-    @NameInMap("FailoverAddrPoolGroupStatus")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolGroupStatus")
     private String failoverAddrPoolGroupStatus;
 
-    @NameInMap("FailoverAddrPoolType")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolType")
     private String failoverAddrPoolType;
 
-    @NameInMap("FailoverAddrPools")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPools")
     private FailoverAddrPools failoverAddrPools;
 
-    @NameInMap("FailoverAvailableAddrNum")
+    @com.aliyun.core.annotation.NameInMap("FailoverAvailableAddrNum")
     private Integer failoverAvailableAddrNum;
 
-    @NameInMap("FailoverLatencyOptimization")
+    @com.aliyun.core.annotation.NameInMap("FailoverLatencyOptimization")
     private String failoverLatencyOptimization;
 
-    @NameInMap("FailoverLbaStrategy")
+    @com.aliyun.core.annotation.NameInMap("FailoverLbaStrategy")
     private String failoverLbaStrategy;
 
-    @NameInMap("FailoverMaxReturnAddrNum")
+    @com.aliyun.core.annotation.NameInMap("FailoverMaxReturnAddrNum")
     private Integer failoverMaxReturnAddrNum;
 
-    @NameInMap("FailoverMinAvailableAddrNum")
+    @com.aliyun.core.annotation.NameInMap("FailoverMinAvailableAddrNum")
     private Integer failoverMinAvailableAddrNum;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private Lines lines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private String strategyId;
 
-    @NameInMap("StrategyMode")
+    @com.aliyun.core.annotation.NameInMap("StrategyMode")
     private String strategyMode;
 
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
     private DescribeDnsGtmAccessStrategyResponseBody(Builder builder) {
@@ -338,12 +343,15 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyName; 
 
         /**
-         * The primary/secondary switchover policy for address pool groups. Valid values:
-         * <p>
+         * <p>The primary/secondary switchover policy for address pool groups. Valid values:</p>
+         * <ul>
+         * <li>AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</li>
+         * <li>DEFAULT: uses the primary address pool group.</li>
+         * <li>FAILOVER: uses the secondary address pool group.</li>
+         * </ul>
          * 
-         * *   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.
-         * *   DEFAULT: uses the primary address pool group.
-         * *   FAILOVER: uses the secondary address pool group.
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder accessMode(String accessMode) {
             this.accessMode = accessMode;
@@ -351,7 +359,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the access policy was created.
+         * <p>The time when the access policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-09T00:10Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -359,7 +370,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the access policy was created.
+         * <p>The timestamp that indicates when the access policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1533773400000</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -367,11 +381,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the primary address pool group. Valid values:
-         * <p>
+         * <p>The status of the primary address pool group. Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE: available</li>
+         * <li>NOT_AVAILABLE: unavailable</li>
+         * </ul>
          * 
-         * *   AVAILABLE: available
-         * *   NOT_AVAILABLE: unavailable
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder defaultAddrPoolGroupStatus(String defaultAddrPoolGroupStatus) {
             this.defaultAddrPoolGroupStatus = defaultAddrPoolGroupStatus;
@@ -379,12 +396,15 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the primary address pool. Valid values:
-         * <p>
+         * <p>The type of the primary address pool. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * <li>DOMAIN</li>
+         * </ul>
          * 
-         * *   IPV4
-         * *   IPV6
-         * *   DOMAIN
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder defaultAddrPoolType(String defaultAddrPoolType) {
             this.defaultAddrPoolType = defaultAddrPoolType;
@@ -392,7 +412,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The address pools in the primary address pool group.
+         * <p>The address pools in the primary address pool group.</p>
          */
         public Builder defaultAddrPools(DefaultAddrPools defaultAddrPools) {
             this.defaultAddrPools = defaultAddrPools;
@@ -400,7 +420,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of available addresses in the primary address pool.
+         * <p>The number of available addresses in the primary address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultAvailableAddrNum(Integer defaultAvailableAddrNum) {
             this.defaultAvailableAddrNum = defaultAvailableAddrNum;
@@ -408,11 +431,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether scheduling optimization for latency resolution was enabled for the primary address pool group. Valid values:
-         * <p>
+         * <p>Indicates whether scheduling optimization for latency resolution was enabled for the primary address pool group. Valid values:</p>
+         * <ul>
+         * <li>OPEN: enabled</li>
+         * <li>CLOSE: disabled</li>
+         * </ul>
          * 
-         * *   OPEN: enabled
-         * *   CLOSE: disabled
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder defaultLatencyOptimization(String defaultLatencyOptimization) {
             this.defaultLatencyOptimization = defaultLatencyOptimization;
@@ -420,11 +446,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The load balancing policy of the primary address pool group. Valid values:
-         * <p>
+         * <p>The load balancing policy of the primary address pool group. Valid values:</p>
+         * <ul>
+         * <li>ALL_RR: returns all addresses.</li>
+         * <li>RATIO: returns addresses by weight.</li>
+         * </ul>
          * 
-         * *   ALL_RR: returns all addresses.
-         * *   RATIO: returns addresses by weight.
+         * <strong>example:</strong>
+         * <p>all_rr</p>
          */
         public Builder defaultLbaStrategy(String defaultLbaStrategy) {
             this.defaultLbaStrategy = defaultLbaStrategy;
@@ -432,7 +461,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of addresses returned from the primary address pool group.
+         * <p>The maximum number of addresses returned from the primary address pool group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultMaxReturnAddrNum(Integer defaultMaxReturnAddrNum) {
             this.defaultMaxReturnAddrNum = defaultMaxReturnAddrNum;
@@ -440,7 +472,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum number of available addresses in the primary address pool group.
+         * <p>The minimum number of available addresses in the primary address pool group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultMinAvailableAddrNum(Integer defaultMinAvailableAddrNum) {
             this.defaultMinAvailableAddrNum = defaultMinAvailableAddrNum;
@@ -448,11 +483,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the active address pool group. Valid values:
-         * <p>
+         * <p>The type of the active address pool group. Valid values:</p>
+         * <ul>
+         * <li>DEFAULT: the primary address pool group</li>
+         * <li>FAILOVER: the secondary address pool group</li>
+         * </ul>
          * 
-         * *   DEFAULT: the primary address pool group
-         * *   FAILOVER: the secondary address pool group
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder effectiveAddrPoolGroupType(String effectiveAddrPoolGroupType) {
             this.effectiveAddrPoolGroupType = effectiveAddrPoolGroupType;
@@ -460,11 +498,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the secondary address pool group. Valid values:
-         * <p>
+         * <p>The status of the secondary address pool group. Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE: available</li>
+         * <li>NOT_AVAILABLE: unavailable</li>
+         * </ul>
          * 
-         * *   AVAILABLE: available
-         * *   NOT_AVAILABLE: unavailable
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder failoverAddrPoolGroupStatus(String failoverAddrPoolGroupStatus) {
             this.failoverAddrPoolGroupStatus = failoverAddrPoolGroupStatus;
@@ -472,12 +513,15 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the secondary address pool. Valid values:
-         * <p>
+         * <p>The type of the secondary address pool. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * <li>DOMAIN</li>
+         * </ul>
          * 
-         * *   IPV4
-         * *   IPV6
-         * *   DOMAIN
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder failoverAddrPoolType(String failoverAddrPoolType) {
             this.failoverAddrPoolType = failoverAddrPoolType;
@@ -485,7 +529,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The address pools in the secondary address pool group.
+         * <p>The address pools in the secondary address pool group.</p>
          */
         public Builder failoverAddrPools(FailoverAddrPools failoverAddrPools) {
             this.failoverAddrPools = failoverAddrPools;
@@ -493,7 +537,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of available addresses in the secondary address pool.
+         * <p>The number of available addresses in the secondary address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failoverAvailableAddrNum(Integer failoverAvailableAddrNum) {
             this.failoverAvailableAddrNum = failoverAvailableAddrNum;
@@ -501,11 +548,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether scheduling optimization for latency resolution was enabled for the secondary address pool group. Valid values:
-         * <p>
+         * <p>Indicates whether scheduling optimization for latency resolution was enabled for the secondary address pool group. Valid values:</p>
+         * <ul>
+         * <li>OPEN: enabled</li>
+         * <li>CLOSE: disabled</li>
+         * </ul>
          * 
-         * *   OPEN: enabled
-         * *   CLOSE: disabled
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder failoverLatencyOptimization(String failoverLatencyOptimization) {
             this.failoverLatencyOptimization = failoverLatencyOptimization;
@@ -513,11 +563,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The load balancing policy of the secondary address pool group. Valid values:
-         * <p>
+         * <p>The load balancing policy of the secondary address pool group. Valid values:</p>
+         * <ul>
+         * <li>ALL_RR: returns all addresses.</li>
+         * <li>RATIO: returns addresses by weight.</li>
+         * </ul>
          * 
-         * *   ALL_RR: returns all addresses.
-         * *   RATIO: returns addresses by weight.
+         * <strong>example:</strong>
+         * <p>all_rr</p>
          */
         public Builder failoverLbaStrategy(String failoverLbaStrategy) {
             this.failoverLbaStrategy = failoverLbaStrategy;
@@ -525,7 +578,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of addresses returned from the secondary address pool group.
+         * <p>The maximum number of addresses returned from the secondary address pool group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failoverMaxReturnAddrNum(Integer failoverMaxReturnAddrNum) {
             this.failoverMaxReturnAddrNum = failoverMaxReturnAddrNum;
@@ -533,7 +589,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum number of available addresses in the secondary address pool group.
+         * <p>The minimum number of available addresses in the secondary address pool group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failoverMinAvailableAddrNum(Integer failoverMinAvailableAddrNum) {
             this.failoverMinAvailableAddrNum = failoverMinAvailableAddrNum;
@@ -541,7 +600,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the associated instance.
+         * <p>The ID of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -549,7 +611,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The source regions.
+         * <p>The source regions.</p>
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -557,7 +619,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA1608CA-834C-4E63-8682-8AF0B11ED72D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -565,7 +630,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the access policy.
+         * <p>The ID of the access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategyId1</p>
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;
@@ -573,11 +641,14 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the access policy. Valid values:
-         * <p>
+         * <p>The type of the access policy. Valid values:</p>
+         * <ul>
+         * <li>GEO: geographical location-based</li>
+         * <li>LATENCY: latency-based</li>
+         * </ul>
          * 
-         * *   GEO: geographical location-based
-         * *   LATENCY: latency-based
+         * <strong>example:</strong>
+         * <p>geo</p>
          */
         public Builder strategyMode(String strategyMode) {
             this.strategyMode = strategyMode;
@@ -585,7 +656,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the access policy.
+         * <p>The name of the access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategyName1</p>
          */
         public Builder strategyName(String strategyName) {
             this.strategyName = strategyName;
@@ -598,17 +672,23 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyResponseBody</p>
+     */
     public static class DefaultAddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private DefaultAddrPool(Builder builder) {
@@ -661,7 +741,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The number of addresses in the address pool.
+             * <p>The number of addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -669,7 +752,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -677,7 +763,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the address pool.
+             * <p>The weight of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -685,7 +774,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -699,9 +791,15 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyResponseBody</p>
+     */
     public static class DefaultAddrPools extends TeaModel {
-        @NameInMap("DefaultAddrPool")
-        private java.util.List < DefaultAddrPool> defaultAddrPool;
+        @com.aliyun.core.annotation.NameInMap("DefaultAddrPool")
+        private java.util.List<DefaultAddrPool> defaultAddrPool;
 
         private DefaultAddrPools(Builder builder) {
             this.defaultAddrPool = builder.defaultAddrPool;
@@ -718,17 +816,17 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return defaultAddrPool
          */
-        public java.util.List < DefaultAddrPool> getDefaultAddrPool() {
+        public java.util.List<DefaultAddrPool> getDefaultAddrPool() {
             return this.defaultAddrPool;
         }
 
         public static final class Builder {
-            private java.util.List < DefaultAddrPool> defaultAddrPool; 
+            private java.util.List<DefaultAddrPool> defaultAddrPool; 
 
             /**
              * DefaultAddrPool.
              */
-            public Builder defaultAddrPool(java.util.List < DefaultAddrPool> defaultAddrPool) {
+            public Builder defaultAddrPool(java.util.List<DefaultAddrPool> defaultAddrPool) {
                 this.defaultAddrPool = defaultAddrPool;
                 return this;
             }
@@ -740,17 +838,23 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyResponseBody</p>
+     */
     public static class FailoverAddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private FailoverAddrPool(Builder builder) {
@@ -803,7 +907,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The number of addresses in the address pool.
+             * <p>The number of addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -811,7 +918,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -819,7 +929,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the address pool.
+             * <p>The weight of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -827,7 +940,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -841,9 +957,15 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyResponseBody</p>
+     */
     public static class FailoverAddrPools extends TeaModel {
-        @NameInMap("FailoverAddrPool")
-        private java.util.List < FailoverAddrPool> failoverAddrPool;
+        @com.aliyun.core.annotation.NameInMap("FailoverAddrPool")
+        private java.util.List<FailoverAddrPool> failoverAddrPool;
 
         private FailoverAddrPools(Builder builder) {
             this.failoverAddrPool = builder.failoverAddrPool;
@@ -860,17 +982,17 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return failoverAddrPool
          */
-        public java.util.List < FailoverAddrPool> getFailoverAddrPool() {
+        public java.util.List<FailoverAddrPool> getFailoverAddrPool() {
             return this.failoverAddrPool;
         }
 
         public static final class Builder {
-            private java.util.List < FailoverAddrPool> failoverAddrPool; 
+            private java.util.List<FailoverAddrPool> failoverAddrPool; 
 
             /**
              * FailoverAddrPool.
              */
-            public Builder failoverAddrPool(java.util.List < FailoverAddrPool> failoverAddrPool) {
+            public Builder failoverAddrPool(java.util.List<FailoverAddrPool> failoverAddrPool) {
                 this.failoverAddrPool = failoverAddrPool;
                 return this;
             }
@@ -882,17 +1004,23 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyResponseBody</p>
+     */
     public static class Line extends TeaModel {
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private Line(Builder builder) {
@@ -945,7 +1073,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The code of the source region group.
+             * <p>The code of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -953,7 +1084,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source region group.
+             * <p>The name of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -961,7 +1095,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The line code of the source region.
+             * <p>The line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -969,7 +1106,10 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The line name of the source region.
+             * <p>The line name of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -983,9 +1123,15 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyResponseBody</p>
+     */
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
-        private java.util.List < Line> line;
+        @com.aliyun.core.annotation.NameInMap("Line")
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -1002,17 +1148,17 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }

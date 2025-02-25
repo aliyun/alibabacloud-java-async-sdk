@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEipAddressAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyEipAddressAttributeRequest</p>
  */
 public class ModifyEipAddressAttributeRequest extends Request {
-    @Query
-    @NameInMap("AllocationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allocationId;
 
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private String bandwidth;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyEipAddressAttributeRequest(Builder builder) {
@@ -167,7 +172,11 @@ public class ModifyEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the pay-as-you-go EIP.
+         * <p>The ID of the pay-as-you-go EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7uj6i0d****</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -176,11 +185,14 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The new maximum bandwidth of the EIP. Valid values:
-         * <p>
+         * <p>The new maximum bandwidth of the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong> to <strong>200</strong> if the metering method is pay-by-data-transfer. Unit: Mbit/s.</li>
+         * <li><strong>1</strong> to <strong>500</strong> if the metering method is pay-by-bandwidth. Unit: Mbit/s.</li>
+         * </ul>
          * 
-         * *   **1** to **200** if the metering method is pay-by-data-transfer. Unit: Mbit/s.
-         * *   **1** to **500** if the metering method is pay-by-bandwidth. Unit: Mbit/s.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -189,10 +201,11 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the EIP.
-         * <p>
+         * <p>The new description of the EIP.</p>
+         * <p>The description must be 2 to 256 characters in length and start with a letter. The description cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length and start with a letter. The description cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -201,10 +214,11 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the EIP.
-         * <p>
+         * <p>The new name of the EIP.</p>
+         * <p>The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>Test123</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -231,10 +245,11 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the EIP.
-         * <p>
+         * <p>The region ID of the EIP.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

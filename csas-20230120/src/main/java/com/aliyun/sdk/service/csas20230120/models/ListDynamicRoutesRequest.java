@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDynamicRoutesRequest} extends {@link RequestModel}
  *
  * <p>ListDynamicRoutesRequest</p>
  */
 public class ListDynamicRoutesRequest extends Request {
-    @Query
-    @NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
     private String applicationId;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DynamicRouteIds")
-    private java.util.List < String > dynamicRouteIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DynamicRouteIds")
+    private java.util.List<String> dynamicRouteIds;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NextHop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHop")
     private String nextHop;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionIds")
-    private java.util.List < String > regionIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
+    private java.util.List<String> regionIds;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TagId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagId")
     private String tagId;
 
     private ListDynamicRoutesRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class ListDynamicRoutesRequest extends Request {
     /**
      * @return dynamicRouteIds
      */
-    public java.util.List < String > getDynamicRouteIds() {
+    public java.util.List<String> getDynamicRouteIds() {
         return this.dynamicRouteIds;
     }
 
@@ -121,7 +126,7 @@ public class ListDynamicRoutesRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -142,11 +147,11 @@ public class ListDynamicRoutesRequest extends Request {
     public static final class Builder extends Request.Builder<ListDynamicRoutesRequest, Builder> {
         private String applicationId; 
         private Integer currentPage; 
-        private java.util.List < String > dynamicRouteIds; 
+        private java.util.List<String> dynamicRouteIds; 
         private String name; 
         private String nextHop; 
         private Integer pageSize; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private String status; 
         private String tagId; 
 
@@ -177,7 +182,10 @@ public class ListDynamicRoutesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -188,7 +196,7 @@ public class ListDynamicRoutesRequest extends Request {
         /**
          * DynamicRouteIds.
          */
-        public Builder dynamicRouteIds(java.util.List < String > dynamicRouteIds) {
+        public Builder dynamicRouteIds(java.util.List<String> dynamicRouteIds) {
             this.putQueryParameter("DynamicRouteIds", dynamicRouteIds);
             this.dynamicRouteIds = dynamicRouteIds;
             return this;
@@ -213,7 +221,10 @@ public class ListDynamicRoutesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +235,7 @@ public class ListDynamicRoutesRequest extends Request {
         /**
          * RegionIds.
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             this.putQueryParameter("RegionIds", regionIds);
             this.regionIds = regionIds;
             return this;

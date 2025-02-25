@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConfigurationRecorderResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateConfigurationRecorderResponseBody</p>
  */
 public class UpdateConfigurationRecorderResponseBody extends TeaModel {
-    @NameInMap("ConfigurationRecorder")
+    @com.aliyun.core.annotation.NameInMap("ConfigurationRecorder")
     private ConfigurationRecorder configurationRecorder;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateConfigurationRecorderResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateConfigurationRecorderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the configuration recorder.
+         * <p>The details of the configuration recorder.</p>
          */
         public Builder configurationRecorder(ConfigurationRecorder configurationRecorder) {
             this.configurationRecorder = configurationRecorder;
@@ -58,7 +63,10 @@ public class UpdateConfigurationRecorderResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A1D5095-D1F9-56B6-A712-EA495608E79A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,12 +79,18 @@ public class UpdateConfigurationRecorderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateConfigurationRecorderResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateConfigurationRecorderResponseBody</p>
+     */
     public static class ConfigurationRecorder extends TeaModel {
-        @NameInMap("ConfigurationRecorderStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigurationRecorderStatus")
         private String configurationRecorderStatus;
 
-        @NameInMap("ResourceTypes")
-        private java.util.List < String > resourceTypes;
+        @com.aliyun.core.annotation.NameInMap("ResourceTypes")
+        private java.util.List<String> resourceTypes;
 
         private ConfigurationRecorder(Builder builder) {
             this.configurationRecorderStatus = builder.configurationRecorderStatus;
@@ -101,22 +115,25 @@ public class UpdateConfigurationRecorderResponseBody extends TeaModel {
         /**
          * @return resourceTypes
          */
-        public java.util.List < String > getResourceTypes() {
+        public java.util.List<String> getResourceTypes() {
             return this.resourceTypes;
         }
 
         public static final class Builder {
             private String configurationRecorderStatus; 
-            private java.util.List < String > resourceTypes; 
+            private java.util.List<String> resourceTypes; 
 
             /**
-             * The status of the configuration recorder. Valid values:
-             * <p>
+             * <p>The status of the configuration recorder. Valid values:</p>
+             * <ul>
+             * <li>REGISTRABLE: The configuration recorder has not been registered.</li>
+             * <li>BUILDING: The configuration recorder is being deployed.</li>
+             * <li>REGISTERED: The configuration recorder has been registered.</li>
+             * <li>REBUILDING: The configuration recorder is being redeployed.</li>
+             * </ul>
              * 
-             * *   REGISTRABLE: The configuration recorder has not been registered.
-             * *   BUILDING: The configuration recorder is being deployed.
-             * *   REGISTERED: The configuration recorder has been registered.
-             * *   REBUILDING: The configuration recorder is being redeployed.
+             * <strong>example:</strong>
+             * <p>REGISTERED</p>
              */
             public Builder configurationRecorderStatus(String configurationRecorderStatus) {
                 this.configurationRecorderStatus = configurationRecorderStatus;
@@ -124,9 +141,9 @@ public class UpdateConfigurationRecorderResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the resources that are monitored by Cloud Config.
+             * <p>The types of the resources that are monitored by Cloud Config.</p>
              */
-            public Builder resourceTypes(java.util.List < String > resourceTypes) {
+            public Builder resourceTypes(java.util.List<String> resourceTypes) {
                 this.resourceTypes = resourceTypes;
                 return this;
             }

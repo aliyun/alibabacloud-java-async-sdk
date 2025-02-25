@@ -1,57 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCollectionDataMetadataRequest} extends {@link RequestModel}
  *
  * <p>UpdateCollectionDataMetadataRequest</p>
  */
 public class UpdateCollectionDataMetadataRequest extends Request {
-    @Query
-    @NameInMap("Collection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("Ids")
-    private java.util.List < String > ids;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    private java.util.List<String> ids;
 
-    @Query
-    @NameInMap("Metadata")
-    @Validation(required = true)
-    private java.util.Map < String, ? > metadata;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metadata")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> metadata;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("NamespacePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespacePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespacePassword;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
 
     private UpdateCollectionDataMetadataRequest(Builder builder) {
         super(builder);
@@ -64,6 +72,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         this.namespacePassword = builder.namespacePassword;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -103,14 +112,14 @@ public class UpdateCollectionDataMetadataRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < String > getIds() {
+    public java.util.List<String> getIds() {
         return this.ids;
     }
 
     /**
      * @return metadata
      */
-    public java.util.Map < String, ? > getMetadata() {
+    public java.util.Map<String, ?> getMetadata() {
         return this.metadata;
     }
 
@@ -142,16 +151,24 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateCollectionDataMetadataRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
         private String filter; 
-        private java.util.List < String > ids; 
-        private java.util.Map < String, ? > metadata; 
+        private java.util.List<String> ids; 
+        private java.util.Map<String, ?> metadata; 
         private String namespace; 
         private String namespacePassword; 
         private Long ownerId; 
         private String regionId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -168,10 +185,18 @@ public class UpdateCollectionDataMetadataRequest extends Request {
             this.namespacePassword = request.namespacePassword;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * Collection.
+         * <p>Collection name.</p>
+         * <blockquote>
+         * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API to view the list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -180,7 +205,13 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>Instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-j788ghhjjxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -189,7 +220,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>Filter condition for the data to be updated, in SQL WHERE format. This field cannot be empty at the same time as the Ids field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business_value = &quot;chat_file_1&quot;</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -198,9 +232,9 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>ID list of the data to be updated, i.e., the Row.Id specified when uploading the data. This field cannot be empty at the same time as the Filter field.</p>
          */
-        public Builder ids(java.util.List < String > ids) {
+        public Builder ids(java.util.List<String> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putQueryParameter("Ids", idsShrink);
             this.ids = ids;
@@ -208,9 +242,16 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Metadata.
+         * <p>Data to be updated, in a JSON string of MAP format. The key is the field name, and the value is the new data value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;title&quot;: &quot;new title&quot;,
+         *       &quot;content&quot;: &quot;new content&quot;
+         * }</p>
          */
-        public Builder metadata(java.util.Map < String, ? > metadata) {
+        public Builder metadata(java.util.Map<String, ?> metadata) {
             String metadataShrink = shrink(metadata, "Metadata", "json");
             this.putQueryParameter("Metadata", metadataShrink);
             this.metadata = metadata;
@@ -218,7 +259,13 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>Namespace.</p>
+         * <blockquote>
+         * <p>You can use the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API to view the list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -227,7 +274,11 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * <p>Password corresponding to the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -245,11 +296,27 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID where the instance is located.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>ID of the Workspace composed of multiple database instances. This parameter and the DBInstanceId parameter cannot both be empty. When both are specified, this parameter takes precedence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

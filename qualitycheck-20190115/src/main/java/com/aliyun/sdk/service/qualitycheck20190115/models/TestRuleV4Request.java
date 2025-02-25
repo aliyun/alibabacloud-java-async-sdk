@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TestRuleV4Request} extends {@link RequestModel}
  *
  * <p>TestRuleV4Request</p>
  */
 public class TestRuleV4Request extends Request {
-    @Body
-    @NameInMap("IsSchemeData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsSchemeData")
     private Integer isSchemeData;
 
-    @Body
-    @NameInMap("TestJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TestJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String testJson;
 
     private TestRuleV4Request(Builder builder) {
@@ -78,7 +83,7 @@ public class TestRuleV4Request extends Request {
         }
 
         /**
-         * TestJson.
+         * <p>This parameter is required.</p>
          */
         public Builder testJson(String testJson) {
             this.putBodyParameter("TestJson", testJson);

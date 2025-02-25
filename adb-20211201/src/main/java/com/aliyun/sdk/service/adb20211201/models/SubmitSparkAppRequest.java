@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSparkAppRequest} extends {@link RequestModel}
  *
  * <p>SubmitSparkAppRequest</p>
  */
 public class SubmitSparkAppRequest extends Request {
-    @Body
-    @NameInMap("AgentSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentSource")
     private String agentSource;
 
-    @Body
-    @NameInMap("AgentVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentVersion")
     private String agentVersion;
 
-    @Body
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Body
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Body
-    @NameInMap("ResourceGroupName")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String resourceGroupName;
 
-    @Body
-    @NameInMap("TemplateFileId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateFileId")
     private Long templateFileId;
 
     private SubmitSparkAppRequest(Builder builder) {
@@ -155,7 +160,10 @@ public class SubmitSparkAppRequest extends Request {
         } 
 
         /**
-         * The type of the client. The value can be up to 64 characters in length.
+         * <p>The type of the client. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSOLE</p>
          */
         public Builder agentSource(String agentSource) {
             this.putBodyParameter("AgentSource", agentSource);
@@ -164,7 +172,10 @@ public class SubmitSparkAppRequest extends Request {
         }
 
         /**
-         * The version of the client. The value can be up to 64 characters in length.
+         * <p>The version of the client. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.091</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putBodyParameter("AgentVersion", agentVersion);
@@ -173,7 +184,10 @@ public class SubmitSparkAppRequest extends Request {
         }
 
         /**
-         * The name of the application. The value can be up to 64 characters in length.
+         * <p>The name of the application. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestApp</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -182,12 +196,15 @@ public class SubmitSparkAppRequest extends Request {
         }
 
         /**
-         * The type of the application. Valid values:
-         * <p>
+         * <p>The type of the application. Valid values:</p>
+         * <ul>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>STREAMING</strong></li>
+         * <li><strong>BATCH</strong> (default)</li>
+         * </ul>
          * 
-         * *   **SQL**
-         * *   **STREAMING**
-         * *   **BATCH** (default)
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -196,10 +213,14 @@ public class SubmitSparkAppRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBClusters](~~454250~~) operation to query cluster IDs.
+         * <strong>example:</strong>
+         * <p>amv-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -208,10 +229,14 @@ public class SubmitSparkAppRequest extends Request {
         }
 
         /**
-         * The data of the application template.
-         * <p>
+         * <p>The data of the application template.</p>
+         * <blockquote>
+         * <p>For information about the application template configuration, see <a href="https://help.aliyun.com/document_detail/452402.html">Spark application configuration guide</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > For information about the application template configuration, see [Spark application configuration guide](~~452402~~).
+         * <strong>example:</strong>
+         * <p>conf spark.driver.resourceSpec=small; conf spark.executor.instances=1; conf spark.executor.resourceSpec=small; conf spark.app.name=TestApp;</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -220,10 +245,14 @@ public class SubmitSparkAppRequest extends Request {
         }
 
         /**
-         * The name of the job resource group.
-         * <p>
+         * <p>The name of the job resource group.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeDBResourceGroup](~~612413~~) operation to query the resource group IDs of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <strong>example:</strong>
+         * <p>adb</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putBodyParameter("ResourceGroupName", resourceGroupName);
@@ -232,10 +261,13 @@ public class SubmitSparkAppRequest extends Request {
         }
 
         /**
-         * The ID of the application template.
-         * <p>
+         * <p>The ID of the application template.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/456205.html">GetSparkTemplateFullTree</a> operation to query the application template ID.</p>
+         * </blockquote>
          * 
-         * > You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the application template ID.
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder templateFileId(Long templateFileId) {
             this.putBodyParameter("TemplateFileId", templateFileId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RequestTableQAOnlineRequest</p>
  */
 public class RequestTableQAOnlineRequest extends Request {
-    @Body
-    @NameInMap("BotId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BotId")
     private String botId;
 
-    @Body
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Body
-    @NameInMap("Question")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Question")
     private String question;
 
-    @Body
-    @NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
     private String serviceCode;
 
     private RequestTableQAOnlineRequest(Builder builder) {

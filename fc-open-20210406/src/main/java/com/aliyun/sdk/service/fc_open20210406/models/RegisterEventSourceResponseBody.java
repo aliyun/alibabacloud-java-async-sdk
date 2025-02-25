@@ -50,7 +50,7 @@ public class RegisterEventSourceResponseBody extends TeaModel {
         private String sourceArn; 
 
         /**
-         * 创建时间
+         * The time when the event source was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -58,7 +58,7 @@ public class RegisterEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * 事件源资源标识符
+         * The Alibaba Cloud Resource Name (ARN) of the event source.
          */
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = sourceArn;

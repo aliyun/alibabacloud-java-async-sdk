@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMetaTableBasicInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetMetaTableBasicInfoResponseBody</p>
  */
 public class GetMetaTableBasicInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableBasicInfoResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of times the metatable was added to a favorite list. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -106,7 +111,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the metatable.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +122,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +133,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +144,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The business data returned.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,86 +171,92 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMetaTableBasicInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMetaTableBasicInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ColumnCount")
+        @com.aliyun.core.annotation.NameInMap("ColumnCount")
         private Integer columnCount;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private Integer envType;
 
-        @NameInMap("FavoriteCount")
+        @com.aliyun.core.annotation.NameInMap("FavoriteCount")
         private Long favoriteCount;
 
-        @NameInMap("IsPartitionTable")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionTable")
         private Boolean isPartitionTable;
 
-        @NameInMap("IsView")
+        @com.aliyun.core.annotation.NameInMap("IsView")
         private Boolean isView;
 
-        @NameInMap("IsVisible")
+        @com.aliyun.core.annotation.NameInMap("IsVisible")
         private Integer isVisible;
 
-        @NameInMap("LastAccessTime")
+        @com.aliyun.core.annotation.NameInMap("LastAccessTime")
         private Long lastAccessTime;
 
-        @NameInMap("LastDdlTime")
+        @com.aliyun.core.annotation.NameInMap("LastDdlTime")
         private Long lastDdlTime;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LifeCycle")
+        @com.aliyun.core.annotation.NameInMap("LifeCycle")
         private Integer lifeCycle;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("PartitionKeys")
+        @com.aliyun.core.annotation.NameInMap("PartitionKeys")
         private String partitionKeys;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ReadCount")
+        @com.aliyun.core.annotation.NameInMap("ReadCount")
         private Long readCount;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("ViewCount")
+        @com.aliyun.core.annotation.NameInMap("ViewCount")
         private Long viewCount;
 
         private Data(Builder builder) {
@@ -490,7 +516,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             private Long viewCount; 
 
             /**
-             * The schema information of the metatable. This parameter is returned only if you enable the table schema in MaxCompute.
+             * <p>The display name of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -498,11 +527,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the metatable is a view. Valid values:
-             * <p>
+             * <p>The ID of the EMR cluster.</p>
              * 
-             * *   true: The metatable is a view.
-             * *   false: The metatable is not a view.
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -510,7 +538,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * <p>The number of fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder columnCount(Integer columnCount) {
                 this.columnCount = columnCount;
@@ -518,7 +549,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was created.
+             * <p>The comment of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test table</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -526,7 +560,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the metatable owner.
+             * <p>The time when the metatable was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870294000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -534,7 +571,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the schema of the metatable was last changed.
+             * <p>The size of storage space that is occupied by the metatable. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -542,7 +582,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * <p>The name of the metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -550,13 +593,14 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The scope in which the metatable is visible. Valid values:
-             * <p>
+             * <p>The type of the environment. Valid values:</p>
+             * <ul>
+             * <li>0: development environment</li>
+             * <li>1: production environment</li>
+             * </ul>
              * 
-             * *   0: The metatable is visible to workspace members.
-             * *   1: The metatable is visible to users within the tenant.
-             * *   2: The metatable is visible to all tenants.
-             * *   3: The metatable is visible only to the metatable owner.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -564,7 +608,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of fields.
+             * <p>The number of times the metatable was added to a favorite list. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder favoriteCount(Long favoriteCount) {
                 this.favoriteCount = favoriteCount;
@@ -572,7 +619,14 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of the metatable. Unit: days.
+             * <p>Indicates whether the metatable is a partitioned table. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPartitionTable(Boolean isPartitionTable) {
                 this.isPartitionTable = isPartitionTable;
@@ -580,7 +634,14 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * <p>Indicates whether the metatable is a view. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isView(Boolean isView) {
                 this.isView = isView;
@@ -588,7 +649,16 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times the metatable was read. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.
+             * <p>The scope in which the metatable is visible. Valid values:</p>
+             * <ul>
+             * <li>0: The metatable is visible to workspace members.</li>
+             * <li>1: The metatable is visible to users within the tenant.</li>
+             * <li>2: The metatable is visible to all tenants.</li>
+             * <li>3: The metatable is visible only to the metatable owner.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isVisible(Integer isVisible) {
                 this.isVisible = isVisible;
@@ -596,7 +666,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was last updated.
+             * <p>The time when the metatable was last accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870294000</p>
              */
             public Builder lastAccessTime(Long lastAccessTime) {
                 this.lastAccessTime = lastAccessTime;
@@ -604,7 +677,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The storage path of the Hive metadatabase.
+             * <p>The time when the schema of the metatable was last changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870294000</p>
              */
             public Builder lastDdlTime(Long lastDdlTime) {
                 this.lastDdlTime = lastDdlTime;
@@ -612,7 +688,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The partition key of the Hive metatable.
+             * <p>The time when the metatable was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589870294000</p>
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -620,7 +699,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times the metatable was viewed. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.
+             * <p>The lifecycle of the metatable. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder lifeCycle(Integer lifeCycle) {
                 this.lifeCycle = lifeCycle;
@@ -628,7 +710,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The storage path of the Hive metadatabase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs://</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -636,7 +721,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metadatabase.
+             * <p>The ID of the metatable owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -644,7 +732,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the metatable.
+             * <p>The partition key of the Hive metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab</p>
              */
             public Builder partitionKeys(String partitionKeys) {
                 this.partitionKeys = partitionKeys;
@@ -652,11 +743,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment. Valid values:
-             * <p>
+             * <p>The workspace ID.</p>
              * 
-             * *   0: development environment
-             * *   1: production environment
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -664,7 +754,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was last accessed.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -672,11 +765,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the metatable is a partitioned table. Valid values:
-             * <p>
+             * <p>The number of times the metatable was read. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.</p>
              * 
-             * *   true: The metatable is a partitioned table.
-             * *   false: The metatable is a non-partitioned table.
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder readCount(Long readCount) {
                 this.readCount = readCount;
@@ -684,7 +776,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * <p>The schema information of the metatable. This parameter is returned if the three-layer model of MaxCompute is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -692,7 +787,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EMR cluster.
+             * <p>The GUID of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.engine_name.table_name</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -700,7 +798,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The comment of the metatable.
+             * <p>The name of the metatable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_name</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -708,7 +809,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -716,7 +820,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of storage space that is occupied by the metatable. Unit: bytes.
+             * <p>The number of times the metatable was viewed. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder viewCount(Long viewCount) {
                 this.viewCount = viewCount;

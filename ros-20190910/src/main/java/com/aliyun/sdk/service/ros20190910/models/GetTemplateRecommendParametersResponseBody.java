@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRecommendParametersResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateRecommendParametersResponseBody</p>
  */
 public class GetTemplateRecommendParametersResponseBody extends TeaModel {
-    @NameInMap("RecommendParameterValues")
+    @com.aliyun.core.annotation.NameInMap("RecommendParameterValues")
     private java.util.List < RecommendParameterValues> recommendParameterValues;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTemplateRecommendParametersResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class GetTemplateRecommendParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTemplateRecommendParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTemplateRecommendParametersResponseBody</p>
+     */
     public static class RecommendParameterValues extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("RecommendValue")
+        @com.aliyun.core.annotation.NameInMap("RecommendValue")
         private String recommendValue;
 
         private RecommendParameterValues(Builder builder) {

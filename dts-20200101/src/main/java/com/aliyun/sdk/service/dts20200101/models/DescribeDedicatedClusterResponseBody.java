@@ -1,93 +1,98 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedClusterResponseBody</p>
  */
 public class DescribeDedicatedClusterResponseBody extends TeaModel {
-    @NameInMap("CpuUtilization")
+    @com.aliyun.core.annotation.NameInMap("CpuUtilization")
     private Long cpuUtilization;
 
-    @NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
     private String dedicatedClusterId;
 
-    @NameInMap("DedicatedClusterName")
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterName")
     private String dedicatedClusterName;
 
-    @NameInMap("DiskUtilization")
+    @com.aliyun.core.annotation.NameInMap("DiskUtilization")
     private Long diskUtilization;
 
-    @NameInMap("DtsInstanceID")
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
     private String dtsInstanceID;
 
-    @NameInMap("Du")
+    @com.aliyun.core.annotation.NameInMap("Du")
     private Long du;
 
-    @NameInMap("DuUtilization")
+    @com.aliyun.core.annotation.NameInMap("DuUtilization")
     private Long duUtilization;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("GmtCreated")
+    @com.aliyun.core.annotation.NameInMap("GmtCreated")
     private Long gmtCreated;
 
-    @NameInMap("GmtFinished")
+    @com.aliyun.core.annotation.NameInMap("GmtFinished")
     private Long gmtFinished;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("MemUtilization")
+    @com.aliyun.core.annotation.NameInMap("MemUtilization")
     private Long memUtilization;
 
-    @NameInMap("NodeCount")
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
     private Long nodeCount;
 
-    @NameInMap("OversoldDu")
+    @com.aliyun.core.annotation.NameInMap("OversoldDu")
     private Long oversoldDu;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalCpuCore")
+    @com.aliyun.core.annotation.NameInMap("TotalCpuCore")
     private Long totalCpuCore;
 
-    @NameInMap("TotalDiskGBSize")
+    @com.aliyun.core.annotation.NameInMap("TotalDiskGBSize")
     private Long totalDiskGBSize;
 
-    @NameInMap("TotalMemGBSize")
+    @com.aliyun.core.annotation.NameInMap("TotalMemGBSize")
     private Long totalMemGBSize;
 
-    @NameInMap("UsedCpuCore")
+    @com.aliyun.core.annotation.NameInMap("UsedCpuCore")
     private Long usedCpuCore;
 
-    @NameInMap("UsedDiskGBSize")
+    @com.aliyun.core.annotation.NameInMap("UsedDiskGBSize")
     private Long usedDiskGBSize;
 
-    @NameInMap("UsedDu")
+    @com.aliyun.core.annotation.NameInMap("UsedDu")
     private Long usedDu;
 
-    @NameInMap("UsedMemGBSize")
+    @com.aliyun.core.annotation.NameInMap("UsedMemGBSize")
     private Long usedMemGBSize;
 
     private DescribeDedicatedClusterResponseBody(Builder builder) {
@@ -338,7 +343,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         private Long usedMemGBSize; 
 
         /**
-         * The CPU utilization. Unit: percentage.
+         * <p>The CPU utilization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder cpuUtilization(Long cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
@@ -346,7 +354,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsCluster****</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.dedicatedClusterId = dedicatedClusterId;
@@ -354,7 +365,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily_test</p>
          */
         public Builder dedicatedClusterName(String dedicatedClusterName) {
             this.dedicatedClusterName = dedicatedClusterName;
@@ -362,7 +376,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The disk usage.
+         * <p>The disk usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder diskUtilization(Long diskUtilization) {
             this.diskUtilization = diskUtilization;
@@ -370,7 +387,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsb8r****</p>
          */
         public Builder dtsInstanceID(String dtsInstanceID) {
             this.dtsInstanceID = dtsInstanceID;
@@ -378,7 +398,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of DTS units (DUs).
+         * <p>The number of DTS units (DUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder du(Long du) {
             this.du = du;
@@ -386,7 +409,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The DU usage. Unit: percentage.
+         * <p>The DU usage. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder duUtilization(Long duUtilization) {
             this.duUtilization = duUtilization;
@@ -394,7 +420,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -402,7 +431,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -410,7 +442,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the cluster was created.
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642476144000</p>
          */
         public Builder gmtCreated(Long gmtCreated) {
             this.gmtCreated = gmtCreated;
@@ -418,7 +453,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the cluster stopped.
+         * <p>The time when the cluster stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645200000000</p>
          */
         public Builder gmtFinished(Long gmtFinished) {
             this.gmtFinished = gmtFinished;
@@ -426,7 +464,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -434,7 +475,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The memory usage.
+         * <p>The memory usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder memUtilization(Long memUtilization) {
             this.memUtilization = memUtilization;
@@ -442,7 +486,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of nodes in the cluster.
+         * <p>The number of nodes in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder nodeCount(Long nodeCount) {
             this.nodeCount = nodeCount;
@@ -450,7 +497,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of DUs that exceeds the upper limit.
+         * <p>The number of DUs that exceeds the upper limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder oversoldDu(Long oversoldDu) {
             this.oversoldDu = oversoldDu;
@@ -458,7 +508,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -466,7 +519,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -474,17 +530,20 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the cluster. Valid values:
-         * <p>
+         * <p>The status of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The cluster is being initialized.</li>
+         * <li><strong>schedule</strong>: The cluster is pending scheduling.</li>
+         * <li><strong>running</strong>: The cluster is running.</li>
+         * <li><strong>upgrade</strong>: The cluster is being upgraded.</li>
+         * <li><strong>downgrade</strong>: The cluster is being downgraded.</li>
+         * <li><strong>locked</strong>: The cluster is locked.</li>
+         * <li><strong>releasing</strong>: The cluster is being released.</li>
+         * <li><strong>released</strong>: The cluster is released.</li>
+         * </ul>
          * 
-         * *   **init**: The cluster is being initialized.
-         * *   **schedule**: The cluster is pending scheduling.
-         * *   **running**: The cluster is running.
-         * *   **upgrade**: The cluster is being upgraded.
-         * *   **downgrade**: The cluster is being downgraded.
-         * *   **locked**: The cluster is locked.
-         * *   **releasing**: The cluster is being released.
-         * *   **released**: The cluster is released.
+         * <strong>example:</strong>
+         * <p>inti</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -492,7 +551,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -500,7 +562,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CPU cores.
+         * <p>The total number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCpuCore(Long totalCpuCore) {
             this.totalCpuCore = totalCpuCore;
@@ -508,7 +573,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The total disk size. Unit: GB.
+         * <p>The total disk size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder totalDiskGBSize(Long totalDiskGBSize) {
             this.totalDiskGBSize = totalDiskGBSize;
@@ -516,7 +584,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The total amount of memory. Unit: GB.
+         * <p>The total amount of memory. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         public Builder totalMemGBSize(Long totalMemGBSize) {
             this.totalMemGBSize = totalMemGBSize;
@@ -524,7 +595,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of used CPU cores.
+         * <p>The number of used CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder usedCpuCore(Long usedCpuCore) {
             this.usedCpuCore = usedCpuCore;
@@ -532,7 +606,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The used disk size. Unit: GB.
+         * <p>The used disk size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder usedDiskGBSize(Long usedDiskGBSize) {
             this.usedDiskGBSize = usedDiskGBSize;
@@ -540,7 +617,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of used DUs.
+         * <p>The number of used DUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder usedDu(Long usedDu) {
             this.usedDu = usedDu;
@@ -548,7 +628,10 @@ public class DescribeDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The amount of used memory. Unit: GB.
+         * <p>The amount of used memory. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         public Builder usedMemGBSize(Long usedMemGBSize) {
             this.usedMemGBSize = usedMemGBSize;

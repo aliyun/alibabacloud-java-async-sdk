@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDTCSecurityIpHostsForSQLServerResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDTCSecurityIpHostsForSQLServerResponseBody</p>
  */
 public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DTCSetResult")
+    @com.aliyun.core.annotation.NameInMap("DTCSetResult")
     private String DTCSetResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private ModifyDTCSecurityIpHostsForSQLServerResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,11 +90,14 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the IP address whitelist configuration. Valid values:
-         * <p>
+         * <p>The result of the IP address whitelist configuration. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Fail</strong></li>
+         * </ul>
          * 
-         * *   **Success**
-         * *   **Fail**
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder DTCSetResult(String DTCSetResult) {
             this.DTCSetResult = DTCSetResult;
@@ -94,7 +105,10 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>671B6D32-B907-4EFF-A3B7-94D2EAD5E3A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +116,10 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>178968983</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -1,3 +1,54 @@
+2025-01-14 Version: 1.1.39
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-12-16 Version: 1.1.38
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-11-15 Version: 1.1.37
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-10-14 Version: 1.1.36
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-09-10 Version: 1.1.35
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-08-22 Version: 1.1.34
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-08-14 Version: 1.1.33
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-08-01 Version: 1.1.32
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-07-26 Version: 1.1.31
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-07-25 Version: 1.1.30
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-07-08 Version: 1.1.29
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-06-24 Version: 1.1.28
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-06-07 Version: 1.1.27
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-06-04 Version: 1.1.26
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-04-12 Version: 1.1.25
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-02-22 Version: 1.1.24
+- Generated java-async 2022-01-01 for pai-dsw.
+
+2024-01-09 Version: 1.1.23
+- Generated java-async 2022-01-01 for pai-dsw.
+
 2023-08-14 Version: 1.1.22
 - Generated java-async 2022-01-01 for pai-dsw.
 

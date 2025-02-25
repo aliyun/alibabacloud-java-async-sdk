@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkAccessEndpointAvailableZonesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNetworkAccessEndpointAvailableZonesResponseBody</p>
  */
 public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
-    private java.util.List < Zones> zones;
+    @com.aliyun.core.annotation.NameInMap("Zones")
+    private java.util.List<Zones> zones;
 
     private ListNetworkAccessEndpointAvailableZonesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
     /**
      * @return zones
      */
-    public java.util.List < Zones> getZones() {
+    public java.util.List<Zones> getZones() {
         return this.zones;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Zones> zones; 
+        private java.util.List<Zones> zones; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
         /**
          * Zones.
          */
-        public Builder zones(java.util.List < Zones> zones) {
+        public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
             return this;
         }
@@ -71,11 +76,17 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link ListNetworkAccessEndpointAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkAccessEndpointAvailableZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zones(Builder builder) {
@@ -110,7 +121,10 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
             private String zoneId; 
 
             /**
-             * 可用区名称。
+             * <p>可用区名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东1（杭州）可用区J</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -118,7 +132,10 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
             }
 
             /**
-             * 可用区ID。
+             * <p>可用区ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

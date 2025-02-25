@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateServerGroupResponseBody</p>
  */
 public class CreateServerGroupResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
     private String serverGroupId;
 
     private CreateServerGroupResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         private String serverGroupId; 
 
         /**
-         * The ID of the asynchronous job.
+         * <p>The ID of the asynchronous job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -70,7 +78,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the server group.
+         * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.serverGroupId = serverGroupId;

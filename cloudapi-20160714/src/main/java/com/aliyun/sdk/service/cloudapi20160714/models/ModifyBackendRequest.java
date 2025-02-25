@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackendRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackendRequest</p>
  */
 public class ModifyBackendRequest extends Request {
-    @Query
-    @NameInMap("BackendId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendId;
 
-    @Query
-    @NameInMap("BackendName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendName;
 
-    @Query
-    @NameInMap("BackendType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyBackendRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class ModifyBackendRequest extends Request {
         } 
 
         /**
-         * BackendId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -122,7 +130,10 @@ public class ModifyBackendRequest extends Request {
         }
 
         /**
-         * BackendName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testHttpModify</p>
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -131,7 +142,10 @@ public class ModifyBackendRequest extends Request {
         }
 
         /**
-         * BackendType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);

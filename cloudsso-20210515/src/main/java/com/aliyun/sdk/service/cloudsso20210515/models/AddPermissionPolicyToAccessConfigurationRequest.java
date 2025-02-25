@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPermissionPolicyToAccessConfigurationRequest} extends {@link RequestModel}
  *
  * <p>AddPermissionPolicyToAccessConfigurationRequest</p>
  */
 public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("InlinePolicyDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InlinePolicyDocument")
     private String inlinePolicyDocument;
 
-    @Query
-    @NameInMap("PermissionPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionPolicyName")
     private String permissionPolicyName;
 
-    @Query
-    @NameInMap("PermissionPolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionPolicyType")
     private String permissionPolicyType;
 
     private AddPermissionPolicyToAccessConfigurationRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the access configuration.
+         * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -119,7 +122,10 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -128,12 +134,12 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The configurations of the inline policy.
-         * <p>
+         * <p>The configurations of the inline policy.</p>
+         * <p>The value can be up to 4,096 characters in length.</p>
+         * <p>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must specify this parameter. For more information about the syntax and structure of RAM policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
          * 
-         * The value can be up to 4,096 characters in length.
-         * 
-         * If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</p>
          */
         public Builder inlinePolicyDocument(String inlinePolicyDocument) {
             this.putQueryParameter("InlinePolicyDocument", inlinePolicyDocument);
@@ -142,11 +148,14 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the policy.
-         * <p>
+         * <p>The name of the policy.</p>
+         * <ul>
+         * <li>If you set <code>PermissionPolicyType</code> to <code>System</code>, you must set this parameter to the name of the system policy. You can obtain the name of the system policy from RAM.</li>
+         * <li>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must set this parameter to the name of the inline policy. A custom value is supported.</li>
+         * </ul>
          * 
-         * *   If you set `PermissionPolicyType` to `System`, you must set this parameter to the name of the system policy. You can obtain the name of the system policy from RAM.
-         * *   If you set `PermissionPolicyType` to `Inline`, you must set this parameter to the name of the inline policy. A custom value is supported.
+         * <strong>example:</strong>
+         * <p>AliyunECSFullAccess</p>
          */
         public Builder permissionPolicyName(String permissionPolicyName) {
             this.putQueryParameter("PermissionPolicyName", permissionPolicyName);
@@ -155,11 +164,14 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li>System: system policy. Resource Access Management (RAM) system policies are reused.</li>
+         * <li>Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</li>
+         * </ul>
          * 
-         * *   System: system policy. Resource Access Management (RAM) system policies are reused.
-         * *   Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder permissionPolicyType(String permissionPolicyType) {
             this.putQueryParameter("PermissionPolicyType", permissionPolicyType);

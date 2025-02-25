@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDbfsResponseBody} extends {@link TeaModel}
  *
  * <p>GetDbfsResponseBody</p>
  */
 public class GetDbfsResponseBody extends TeaModel {
-    @NameInMap("DBFSInfo")
+    @com.aliyun.core.annotation.NameInMap("DBFSInfo")
     private DBFSInfo DBFSInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDbfsResponseBody(Builder builder) {
@@ -71,11 +71,17 @@ public class GetDbfsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbfsResponseBody</p>
+     */
     public static class EbsList extends TeaModel {
-        @NameInMap("EbsId")
+        @com.aliyun.core.annotation.NameInMap("EbsId")
         private String ebsId;
 
-        @NameInMap("SizeG")
+        @com.aliyun.core.annotation.NameInMap("SizeG")
         private Integer sizeG;
 
         private EbsList(Builder builder) {
@@ -132,8 +138,14 @@ public class GetDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbfsResponseBody</p>
+     */
     public static class EcsList extends TeaModel {
-        @NameInMap("EcsId")
+        @com.aliyun.core.annotation.NameInMap("EcsId")
         private String ecsId;
 
         private EcsList(Builder builder) {
@@ -173,17 +185,23 @@ public class GetDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbfsResponseBody</p>
+     */
     public static class SnapshotInfo extends TeaModel {
-        @NameInMap("LinkId")
+        @com.aliyun.core.annotation.NameInMap("LinkId")
         private String linkId;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("SnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private Integer snapshotCount;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private SnapshotInfo(Builder builder) {
@@ -274,14 +292,20 @@ public class GetDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbfsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -355,86 +379,99 @@ public class GetDbfsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDbfsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDbfsResponseBody</p>
+     */
     public static class DBFSInfo extends TeaModel {
-        @NameInMap("AttachNodeNumber")
+        @com.aliyun.core.annotation.NameInMap("AdvancedFeatures")
+        private String advancedFeatures;
+
+        @com.aliyun.core.annotation.NameInMap("AttachNodeNumber")
         private Integer attachNodeNumber;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DBFSClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBFSClusterId")
         private String DBFSClusterId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EbsList")
+        @com.aliyun.core.annotation.NameInMap("EbsList")
         private java.util.List < EbsList> ebsList;
 
-        @NameInMap("EcsList")
+        @com.aliyun.core.annotation.NameInMap("EcsList")
         private java.util.List < EcsList> ecsList;
 
-        @NameInMap("EnableRaid")
+        @com.aliyun.core.annotation.NameInMap("EnableRaid")
         private Boolean enableRaid;
 
-        @NameInMap("Encryption")
+        @com.aliyun.core.annotation.NameInMap("Encryption")
         private Boolean encryption;
 
-        @NameInMap("FsId")
+        @com.aliyun.core.annotation.NameInMap("FsId")
         private String fsId;
 
-        @NameInMap("FsName")
+        @com.aliyun.core.annotation.NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("LastFailed")
+        @com.aliyun.core.annotation.NameInMap("LastFailed")
         private String lastFailed;
 
-        @NameInMap("LastMountTime")
+        @com.aliyun.core.annotation.NameInMap("LastMountTime")
         private String lastMountTime;
 
-        @NameInMap("LastUmountTime")
+        @com.aliyun.core.annotation.NameInMap("LastUmountTime")
         private String lastUmountTime;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("RaidStrip")
+        @com.aliyun.core.annotation.NameInMap("RaidStrip")
         private Integer raidStrip;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SizeG")
+        @com.aliyun.core.annotation.NameInMap("SizeG")
         private Integer sizeG;
 
-        @NameInMap("SnapshotInfo")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
+        private String snapshotId;
+
+        @com.aliyun.core.annotation.NameInMap("SnapshotInfo")
         private SnapshotInfo snapshotInfo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UsedScene")
+        @com.aliyun.core.annotation.NameInMap("UsedScene")
         private String usedScene;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBFSInfo(Builder builder) {
+            this.advancedFeatures = builder.advancedFeatures;
             this.attachNodeNumber = builder.attachNodeNumber;
             this.category = builder.category;
             this.createdTime = builder.createdTime;
@@ -456,6 +493,7 @@ public class GetDbfsResponseBody extends TeaModel {
             this.raidStrip = builder.raidStrip;
             this.regionId = builder.regionId;
             this.sizeG = builder.sizeG;
+            this.snapshotId = builder.snapshotId;
             this.snapshotInfo = builder.snapshotInfo;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -469,6 +507,13 @@ public class GetDbfsResponseBody extends TeaModel {
 
         public static DBFSInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return advancedFeatures
+         */
+        public String getAdvancedFeatures() {
+            return this.advancedFeatures;
         }
 
         /**
@@ -619,6 +664,13 @@ public class GetDbfsResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        /**
          * @return snapshotInfo
          */
         public SnapshotInfo getSnapshotInfo() {
@@ -654,6 +706,7 @@ public class GetDbfsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String advancedFeatures; 
             private Integer attachNodeNumber; 
             private String category; 
             private String createdTime; 
@@ -675,11 +728,20 @@ public class GetDbfsResponseBody extends TeaModel {
             private Integer raidStrip; 
             private String regionId; 
             private Integer sizeG; 
+            private String snapshotId; 
             private SnapshotInfo snapshotInfo; 
             private String status; 
             private java.util.List < Tags> tags; 
             private String usedScene; 
             private String zoneId; 
+
+            /**
+             * AdvancedFeatures.
+             */
+            public Builder advancedFeatures(String advancedFeatures) {
+                this.advancedFeatures = advancedFeatures;
+                return this;
+            }
 
             /**
              * AttachNodeNumber.
@@ -846,6 +908,14 @@ public class GetDbfsResponseBody extends TeaModel {
              */
             public Builder sizeG(Integer sizeG) {
                 this.sizeG = sizeG;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 

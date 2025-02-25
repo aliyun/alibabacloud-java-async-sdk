@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecurityPolicyRelationsRequest} extends {@link RequestModel}
  *
  * <p>ListSecurityPolicyRelationsRequest</p>
  */
 public class ListSecurityPolicyRelationsRequest extends Request {
-    @Query
-    @NameInMap("SecurityPolicyIds")
-    @Validation(required = true)
-    private java.util.List < String > securityPolicyIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> securityPolicyIds;
 
     private ListSecurityPolicyRelationsRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class ListSecurityPolicyRelationsRequest extends Request {
     /**
      * @return securityPolicyIds
      */
-    public java.util.List < String > getSecurityPolicyIds() {
+    public java.util.List<String> getSecurityPolicyIds() {
         return this.securityPolicyIds;
     }
 
     public static final class Builder extends Request.Builder<ListSecurityPolicyRelationsRequest, Builder> {
-        private java.util.List < String > securityPolicyIds; 
+        private java.util.List<String> securityPolicyIds; 
 
         private Builder() {
             super();
@@ -55,9 +60,10 @@ public class ListSecurityPolicyRelationsRequest extends Request {
         } 
 
         /**
-         * The security policy IDs. You can specify up to five IDs.
+         * <p>The security policy IDs. You can specify up to five IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder securityPolicyIds(java.util.List < String > securityPolicyIds) {
+        public Builder securityPolicyIds(java.util.List<String> securityPolicyIds) {
             this.putQueryParameter("SecurityPolicyIds", securityPolicyIds);
             this.securityPolicyIds = securityPolicyIds;
             return this;

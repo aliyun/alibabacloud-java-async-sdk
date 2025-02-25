@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDcdnIpaDomainRequest} extends {@link RequestModel}
  *
  * <p>AddDcdnIpaDomainRequest</p>
  */
 public class AddDcdnIpaDomainRequest extends Request {
-    @Query
-    @NameInMap("CheckUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckUrl")
     private String checkUrl;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Sources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sources;
 
-    @Query
-    @NameInMap("TopLevelDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopLevelDomain")
     private String topLevelDomain;
 
     private AddDcdnIpaDomainRequest(Builder builder) {
@@ -182,7 +182,10 @@ public class AddDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * The URL that is used for health checks.
+         * <p>The URL that is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/image_01.png</p>
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -191,10 +194,12 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * The domain name to be added to IPA.
-         * <p>
+         * <p>The domain name to be added to IPA.</p>
+         * <p>A wildcard domain that starts with a period (.) is supported, such as .example.com.</p>
+         * <p>This parameter is required.</p>
          * 
-         * A wildcard domain that starts with a period (.) is supported, such as .example.com.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -221,15 +226,16 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * The protocol. Valid values:
-         * <p>
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong></li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Description</strong> For example: <code>{&quot;protocol&quot;:&quot;udp&quot;}</code>.</p>
          * 
-         * *   **udp**
-         * *   **tcp**
-         * 
-         * **
-         * 
-         * **Description** For example: `{"protocol":"udp"}`.
+         * <strong>example:</strong>
+         * <p>udp</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -238,7 +244,10 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.
+         * <p>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -247,12 +256,15 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * The acceleration region. Default value: domestic. Valid values:
-         * <p>
+         * <p>The acceleration region. Default value: domestic. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * <li><strong>global</strong>: global</li>
+         * </ul>
          * 
-         * *   **domestic**: Chinese mainland
-         * *   **overseas**: outside the Chinese mainland
-         * *   **global**: global
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -270,7 +282,11 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
+         * <p>The information about the addresses of origin servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;10.10.10.10&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</p>
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -279,7 +295,10 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * The top-level domain.
+         * <p>The top-level domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.com</p>
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

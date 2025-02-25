@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalSecurityIPGroupRelationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGlobalSecurityIPGroupRelationResponseBody</p>
  */
 public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("GlobalSecurityIPGroupRel")
-    private java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
+    @com.aliyun.core.annotation.NameInMap("GlobalSecurityIPGroupRel")
+    private java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGlobalSecurityIPGroupRelationResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     /**
      * @return globalSecurityIPGroupRel
      */
-    public java.util.List < GlobalSecurityIPGroupRel> getGlobalSecurityIPGroupRel() {
+    public java.util.List<GlobalSecurityIPGroupRel> getGlobalSecurityIPGroupRel() {
         return this.globalSecurityIPGroupRel;
     }
 
@@ -58,11 +63,14 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel; 
+        private java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel; 
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-2ze6069764423m0l</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,15 +78,18 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         }
 
         /**
-         * GlobalSecurityIPGroupRel.
+         * <p>The global IP whitelist templates associated with the instance.</p>
          */
-        public Builder globalSecurityIPGroupRel(java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
+        public Builder globalSecurityIPGroupRel(java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
             this.globalSecurityIPGroupRel = globalSecurityIPGroupRel;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,17 +102,23 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGlobalSecurityIPGroupRelationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalSecurityIPGroupRelationResponseBody</p>
+     */
     public static class GlobalSecurityIPGroupRel extends TeaModel {
-        @NameInMap("GIpList")
+        @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
 
-        @NameInMap("GlobalIgName")
+        @com.aliyun.core.annotation.NameInMap("GlobalIgName")
         private String globalIgName;
 
-        @NameInMap("GlobalSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupId")
         private String globalSecurityGroupId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private GlobalSecurityIPGroupRel(Builder builder) {
@@ -154,7 +171,13 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             private String regionId; 
 
             /**
-             * GIpList.
+             * <p>The IP addresses in the whitelist template.</p>
+             * <blockquote>
+             * <p> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>27.16.214.10,111.60.117.181</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -162,7 +185,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             }
 
             /**
-             * GlobalIgName.
+             * <p>The name of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev_baoxian_k8s_bj</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -170,7 +196,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             }
 
             /**
-             * GlobalSecurityGroupId.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-gfurfpsh4ycbrm2avst7</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -178,7 +207,10 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hongkong</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendLiveTranscodeJobCommandRequest} extends {@link RequestModel}
  *
  * <p>SendLiveTranscodeJobCommandRequest</p>
  */
 public class SendLiveTranscodeJobCommandRequest extends Request {
-    @Query
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String command;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private SendLiveTranscodeJobCommandRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class SendLiveTranscodeJobCommandRequest extends Request {
         } 
 
         /**
-         * Command.
+         * <p>The operation command. Only the stop command is supported. This command is used to stop a transcoding job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stop</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -79,7 +88,11 @@ public class SendLiveTranscodeJobCommandRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the transcoding job.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

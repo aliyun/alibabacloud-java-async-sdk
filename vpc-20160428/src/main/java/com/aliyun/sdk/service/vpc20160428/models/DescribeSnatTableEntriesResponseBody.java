@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnatTableEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnatTableEntriesResponseBody</p>
  */
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnatTableEntries")
+    @com.aliyun.core.annotation.NameInMap("SnatTableEntries")
     private SnatTableEntries snatTableEntries;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnatTableEntriesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D7E89B1-1C5B-412B-8585-4908E222EED5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of SNAT entries.
+         * <p>Details of SNAT entries.</p>
          */
         public Builder snatTableEntries(SnatTableEntries snatTableEntries) {
             this.snatTableEntries = snatTableEntries;
@@ -118,7 +132,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,33 +148,47 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnatTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnatTableEntriesResponseBody</p>
+     */
     public static class SnatTableEntry extends TeaModel {
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("EipAffinity")
+        private String eipAffinity;
+
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("SnatEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+        private String networkInterfaceId;
+
+        @com.aliyun.core.annotation.NameInMap("SnatEntryId")
         private String snatEntryId;
 
-        @NameInMap("SnatEntryName")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryName")
         private String snatEntryName;
 
-        @NameInMap("SnatIp")
+        @com.aliyun.core.annotation.NameInMap("SnatIp")
         private String snatIp;
 
-        @NameInMap("SnatTableId")
+        @com.aliyun.core.annotation.NameInMap("SnatTableId")
         private String snatTableId;
 
-        @NameInMap("SourceCIDR")
+        @com.aliyun.core.annotation.NameInMap("SourceCIDR")
         private String sourceCIDR;
 
-        @NameInMap("SourceVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("SourceVSwitchId")
         private String sourceVSwitchId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SnatTableEntry(Builder builder) {
+            this.eipAffinity = builder.eipAffinity;
             this.natGatewayId = builder.natGatewayId;
+            this.networkInterfaceId = builder.networkInterfaceId;
             this.snatEntryId = builder.snatEntryId;
             this.snatEntryName = builder.snatEntryName;
             this.snatIp = builder.snatIp;
@@ -176,10 +207,24 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return eipAffinity
+         */
+        public String getEipAffinity() {
+            return this.eipAffinity;
+        }
+
+        /**
          * @return natGatewayId
          */
         public String getNatGatewayId() {
             return this.natGatewayId;
+        }
+
+        /**
+         * @return networkInterfaceId
+         */
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
         }
 
         /**
@@ -232,7 +277,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String eipAffinity; 
             private String natGatewayId; 
+            private String networkInterfaceId; 
             private String snatEntryId; 
             private String snatEntryName; 
             private String snatIp; 
@@ -242,7 +289,18 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the NAT gateway to which the SNAT entry belongs.
+             * EipAffinity.
+             */
+            public Builder eipAffinity(String eipAffinity) {
+                this.eipAffinity = eipAffinity;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the NAT gateway to which the SNAT entry belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ngw-bp1uewa15k4iy5770****</p>
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -250,7 +308,18 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SNAT entry.
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(String networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snat-kmd6nv8fy****</p>
              */
             public Builder snatEntryId(String snatEntryId) {
                 this.snatEntryId = snatEntryId;
@@ -258,7 +327,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SNAT entry.
+             * <p>The name of the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SnatEntry-1</p>
              */
             public Builder snatEntryName(String snatEntryName) {
                 this.snatEntryName = snatEntryName;
@@ -266,9 +338,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * *   When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.
-             * <p>
-             * *   When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.
+             * <ul>
+             * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.</li>
+             * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>116.22.XX.XX</p>
              */
             public Builder snatIp(String snatIp) {
                 this.snatIp = snatIp;
@@ -276,7 +352,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SNAT table to which the SNAT entry belongs.
+             * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stb-gz3r3odawdgffde****</p>
              */
             public Builder snatTableId(String snatTableId) {
                 this.snatTableId = snatTableId;
@@ -284,7 +363,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The source CIDR block specified in the SNAT entry.
+             * <p>The source CIDR block specified in the SNAT entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.22.XX.XX/24</p>
              */
             public Builder sourceCIDR(String sourceCIDR) {
                 this.sourceCIDR = sourceCIDR;
@@ -292,9 +374,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * *   When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.
-             * <p>
-             * *   When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.
+             * <ul>
+             * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.</li>
+             * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-3xbdsffvfgdfds****</p>
              */
             public Builder sourceVSwitchId(String sourceVSwitchId) {
                 this.sourceVSwitchId = sourceVSwitchId;
@@ -302,12 +388,15 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SNAT entry. Valid values:
-             * <p>
+             * <p>The status of the SNAT entry. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Pending**
-             * *   **Available**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -321,9 +410,15 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnatTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnatTableEntriesResponseBody</p>
+     */
     public static class SnatTableEntries extends TeaModel {
-        @NameInMap("SnatTableEntry")
-        private java.util.List < SnatTableEntry> snatTableEntry;
+        @com.aliyun.core.annotation.NameInMap("SnatTableEntry")
+        private java.util.List<SnatTableEntry> snatTableEntry;
 
         private SnatTableEntries(Builder builder) {
             this.snatTableEntry = builder.snatTableEntry;
@@ -340,17 +435,17 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         /**
          * @return snatTableEntry
          */
-        public java.util.List < SnatTableEntry> getSnatTableEntry() {
+        public java.util.List<SnatTableEntry> getSnatTableEntry() {
             return this.snatTableEntry;
         }
 
         public static final class Builder {
-            private java.util.List < SnatTableEntry> snatTableEntry; 
+            private java.util.List<SnatTableEntry> snatTableEntry; 
 
             /**
              * SnatTableEntry.
              */
-            public Builder snatTableEntry(java.util.List < SnatTableEntry> snatTableEntry) {
+            public Builder snatTableEntry(java.util.List<SnatTableEntry> snatTableEntry) {
                 this.snatTableEntry = snatTableEntry;
                 return this;
             }

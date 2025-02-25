@@ -1,40 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTableThemeRequest} extends {@link RequestModel}
  *
  * <p>CreateTableThemeRequest</p>
  */
 public class CreateTableThemeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Level")
-    @Validation(required = true, maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10, minimum = 1)
     private Integer level;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ParentId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long parentId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long projectId;
 
     private CreateTableThemeRequest(Builder builder) {
@@ -115,7 +119,7 @@ public class CreateTableThemeRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -124,7 +128,11 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a first-level table folder. A value of 2 indicates a second-level table folder.
+         * <p>The level of the table theme. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder level(Integer level) {
             this.putQueryParameter("Level", level);
@@ -133,7 +141,11 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The name of the table folder.
+         * <p>The name of the table theme.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -142,7 +154,10 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the level of the parent table folder.
+         * <p>The ID of the level of the parent table theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -151,7 +166,10 @@ public class CreateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

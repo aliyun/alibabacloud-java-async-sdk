@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableCustomInstanceBlockRecordRequest} extends {@link RequestModel}
  *
  * <p>EnableCustomInstanceBlockRecordRequest</p>
  */
 public class EnableCustomInstanceBlockRecordRequest extends Request {
-    @Query
-    @NameInMap("BlockIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlockIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blockIp;
 
-    @Query
-    @NameInMap("Bound")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bound")
     private String bound;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private EnableCustomInstanceBlockRecordRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that you want to block.
+         * <p>The IP address that you want to block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -107,11 +116,14 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction from the IP address that you want to block. Valid value:
-         * <p>
+         * <p>The traffic direction from the IP address that you want to block. Valid value:</p>
+         * <ul>
+         * <li><strong>in</strong></li>
+         * <li><strong>out</strong></li>
+         * </ul>
          * 
-         * *   **in**
-         * *   **out**
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -129,7 +141,11 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

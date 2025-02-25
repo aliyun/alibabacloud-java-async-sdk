@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassociateVpcCidrBlockRequest} extends {@link RequestModel}
  *
  * <p>UnassociateVpcCidrBlockRequest</p>
  */
 public class UnassociateVpcCidrBlockRequest extends Request {
-    @Query
-    @NameInMap("IPv6CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPv6CidrBlock")
     private String iPv6CidrBlock;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecondaryCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
     private String secondaryCidrBlock;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private UnassociateVpcCidrBlockRequest(Builder builder) {
@@ -154,10 +159,13 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         } 
 
         /**
-         * The secondary IPv6 CIDR block to be deleted.
-         * <p>
+         * <p>The secondary IPv6 CIDR block to be deleted.</p>
+         * <blockquote>
+         * <p> You must set one of the <strong>Ipv6CidrBlock</strong> and <strong>SecondaryCidrBlock</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must set one of the **Ipv6CidrBlock** and **SecondaryCidrBlock** parameters.
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:6a::/56</p>
          */
         public Builder iPv6CidrBlock(String iPv6CidrBlock) {
             this.putQueryParameter("IPv6CidrBlock", iPv6CidrBlock);
@@ -184,10 +192,12 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC to which the secondary CIDR block to be deleted belongs.
-         * <p>
+         * <p>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>ch-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -214,10 +224,13 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * The secondary IPv4 CIDR block to be deleted.
-         * <p>
+         * <p>The secondary IPv4 CIDR block to be deleted.</p>
+         * <blockquote>
+         * <p> You must set one of the <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         public Builder secondaryCidrBlock(String secondaryCidrBlock) {
             this.putQueryParameter("SecondaryCidrBlock", secondaryCidrBlock);
@@ -226,7 +239,11 @@ public class UnassociateVpcCidrBlockRequest extends Request {
         }
 
         /**
-         * The ID of the VPC from which you want to delete a secondary CIDR block.
+         * <p>The ID of the VPC from which you want to delete a secondary CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-o6wrloqsdqc9io3mg****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

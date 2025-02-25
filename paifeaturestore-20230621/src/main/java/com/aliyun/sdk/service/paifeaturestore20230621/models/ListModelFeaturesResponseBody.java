@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListModelFeaturesResponseBody} extends {@link TeaModel}
  *
  * <p>ListModelFeaturesResponseBody</p>
  */
 public class ListModelFeaturesResponseBody extends TeaModel {
-    @NameInMap("ModelFeatures")
-    private java.util.List < ModelFeatures> modelFeatures;
+    @com.aliyun.core.annotation.NameInMap("ModelFeatures")
+    private java.util.List<ModelFeatures> modelFeatures;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListModelFeaturesResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListModelFeaturesResponseBody extends TeaModel {
     /**
      * @return modelFeatures
      */
-    public java.util.List < ModelFeatures> getModelFeatures() {
+    public java.util.List<ModelFeatures> getModelFeatures() {
         return this.modelFeatures;
     }
 
@@ -57,14 +62,14 @@ public class ListModelFeaturesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ModelFeatures> modelFeatures; 
+        private java.util.List<ModelFeatures> modelFeatures; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * ModelFeatures.
          */
-        public Builder modelFeatures(java.util.List < ModelFeatures> modelFeatures) {
+        public Builder modelFeatures(java.util.List<ModelFeatures> modelFeatures) {
             this.modelFeatures = modelFeatures;
             return this;
         }
@@ -91,29 +96,35 @@ public class ListModelFeaturesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListModelFeaturesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListModelFeaturesResponseBody</p>
+     */
     public static class ModelFeatures extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("LabelTableName")
+        @com.aliyun.core.annotation.NameInMap("LabelTableName")
         private String labelTableName;
 
-        @NameInMap("ModelFeatureId")
+        @com.aliyun.core.annotation.NameInMap("ModelFeatureId")
         private String modelFeatureId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
         private ModelFeatures(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRegisteredLocationRequest</p>
  */
 public class UpdateRegisteredLocationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InventoryCollectEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InventoryCollectEnabled")
     private Boolean inventoryCollectEnabled;
 
-    @Body
-    @NameInMap("LocationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String locationId;
 
-    @Body
-    @NameInMap("OssLogCollectEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssLogCollectEnabled")
     private Boolean ossLogCollectEnabled;
 
     private UpdateRegisteredLocationRequest(Builder builder) {

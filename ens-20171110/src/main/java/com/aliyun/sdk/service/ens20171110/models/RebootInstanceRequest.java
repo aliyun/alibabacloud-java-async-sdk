@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootInstanceRequest} extends {@link RequestModel}
  *
  * <p>RebootInstanceRequest</p>
  */
 public class RebootInstanceRequest extends Request {
-    @Query
-    @NameInMap("ForceStop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceStop")
     private String forceStop;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private RebootInstanceRequest(Builder builder) {
@@ -69,7 +74,14 @@ public class RebootInstanceRequest extends Request {
         } 
 
         /**
-         * ForceStop.
+         * <p>Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceStop(String forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -78,7 +90,11 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance that you want to reboot. You can specify only one instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-instanceid****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

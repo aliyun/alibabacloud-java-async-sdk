@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynchronizationJobReplicatorCompareResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynchronizationJobReplicatorCompareResponseBody</p>
  */
 public class DescribeSynchronizationJobReplicatorCompareResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("SynchronizationReplicatorCompareEnable")
+    @com.aliyun.core.annotation.NameInMap("SynchronizationReplicatorCompareEnable")
     private Boolean synchronizationReplicatorCompareEnable;
 
     private DescribeSynchronizationJobReplicatorCompareResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         private Boolean synchronizationReplicatorCompareEnable; 
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -94,7 +102,10 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -102,7 +113,10 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6EB407F-C59F-4682-A682-A00FA6A2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -118,11 +135,14 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * Indicates whether image matching is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether image matching is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Image matching is enabled.</li>
+         * <li><strong>false</strong>: Image matching is disabled.</li>
+         * </ul>
          * 
-         * *   **true**: Image matching is enabled.
-         * *   **false**: Image matching is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder synchronizationReplicatorCompareEnable(Boolean synchronizationReplicatorCompareEnable) {
             this.synchronizationReplicatorCompareEnable = synchronizationReplicatorCompareEnable;

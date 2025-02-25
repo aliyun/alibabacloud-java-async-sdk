@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserStatusRequest</p>
  */
 public class UpdateUserStatusRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("NewStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewStatus")
     private String newStatus;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private UpdateUserStatusRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class UpdateUserStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,11 +94,14 @@ public class UpdateUserStatusRequest extends Request {
         }
 
         /**
-         * The new status of the user. Valid values:
-         * <p>
+         * <p>The new status of the user. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The logon of the user is enabled.</li>
+         * <li>Disabled: The logon of the user is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The logon of the user is enabled.
-         * *   Disabled: The logon of the user is disabled.
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder newStatus(String newStatus) {
             this.putQueryParameter("NewStatus", newStatus);
@@ -104,7 +110,10 @@ public class UpdateUserStatusRequest extends Request {
         }
 
         /**
-         * The ID of the user.
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

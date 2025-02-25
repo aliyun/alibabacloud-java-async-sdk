@@ -1,55 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkflowRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkflowRequest</p>
  */
 public class UpdateWorkflowRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("NamespaceSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("TimeExpression")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeExpression")
     private String timeExpression;
 
-    @Body
-    @NameInMap("TimeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeType")
     private Integer timeType;
 
-    @Body
-    @NameInMap("WorkflowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkflowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workflowId;
 
     private UpdateWorkflowRequest(Builder builder) {
@@ -170,7 +170,10 @@ public class UpdateWorkflowRequest extends Request {
         } 
 
         /**
-         * The description of the workflow.
+         * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -179,7 +182,11 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.
+         * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -188,7 +195,10 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The name of the workflow.
+         * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helloworld</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -197,7 +207,11 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -206,7 +220,10 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The source of the namespace. This parameter is required only for a special third party.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -215,7 +232,11 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,11 +245,14 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The time expression. You can set the time expression based on the selected method that is used to specify time.
-         * <p>
+         * <p>The time expression. You can set the time expression based on the selected method that is used to specify time.</p>
+         * <ul>
+         * <li>If you set TimeType to cron, you need to enter a standard cron expression. Online verification is supported.</li>
+         * <li>If you set TimeType to api, no time expression is required.</li>
+         * </ul>
          * 
-         * *   If you set TimeType to cron, you need to enter a standard cron expression. Online verification is supported.
-         * *   If you set TimeType to api, no time expression is required.
+         * <strong>example:</strong>
+         * <p>0 0/10 * * * ?</p>
          */
         public Builder timeExpression(String timeExpression) {
             this.putBodyParameter("TimeExpression", timeExpression);
@@ -237,11 +261,14 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The method that is used to specify the time. Valid values:
-         * <p>
+         * <p>The method that is used to specify the time. Valid values:</p>
+         * <ul>
+         * <li>1: cron</li>
+         * <li>100: api</li>
+         * </ul>
          * 
-         * *   1: cron
-         * *   100: api
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeType(Integer timeType) {
             this.putBodyParameter("TimeType", timeType);
@@ -250,7 +277,11 @@ public class UpdateWorkflowRequest extends Request {
         }
 
         /**
-         * The workflow ID.
+         * <p>The workflow ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder workflowId(String workflowId) {
             this.putBodyParameter("WorkflowId", workflowId);

@@ -1,40 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainResourceRequest</p>
  */
 public class DescribeDomainResourceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryDomainPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDomainPattern")
     private String queryDomainPattern;
 
     private DescribeDomainResourceRequest(Builder builder) {
@@ -77,7 +81,7 @@ public class DescribeDomainResourceRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -105,7 +109,7 @@ public class DescribeDomainResourceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainResourceRequest, Builder> {
         private String regionId; 
         private String domain; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryDomainPattern; 
@@ -134,7 +138,10 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * The domain name of the website that you want to query.
+         * <p>The domain name of the website that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -143,16 +150,19 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of instances to query.
+         * <p>An array that consists of the IDs of instances to query.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +171,10 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,11 +183,14 @@ public class DescribeDomainResourceRequest extends Request {
         }
 
         /**
-         * The match mode. Valid values:
-         * <p>
+         * <p>The match mode. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy</strong>: fuzzy match. This is the default value.</li>
+         * <li><strong>exact</strong>: exact match.</li>
+         * </ul>
          * 
-         * *   **fuzzy**: fuzzy match. This is the default value.
-         * *   **exact**: exact match.
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder queryDomainPattern(String queryDomainPattern) {
             this.putQueryParameter("QueryDomainPattern", queryDomainPattern);

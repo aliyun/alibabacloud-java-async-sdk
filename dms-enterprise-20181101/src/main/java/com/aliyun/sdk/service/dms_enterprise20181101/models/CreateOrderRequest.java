@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderRequest</p>
  */
 public class CreateOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Body
-    @NameInMap("PluginParam")
-    @Validation(required = true)
-    private java.util.Map < String, ? > pluginParam;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PluginParam")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> pluginParam;
 
-    @Query
-    @NameInMap("PluginType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pluginType;
 
-    @Query
-    @NameInMap("RelatedUserList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private String relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private CreateOrderRequest(Builder builder) {
@@ -91,7 +96,7 @@ public class CreateOrderRequest extends Request {
     /**
      * @return pluginParam
      */
-    public java.util.Map < String, ? > getPluginParam() {
+    public java.util.Map<String, ?> getPluginParam() {
         return this.pluginParam;
     }
 
@@ -120,7 +125,7 @@ public class CreateOrderRequest extends Request {
         private String regionId; 
         private String attachmentKey; 
         private String comment; 
-        private java.util.Map < String, ? > pluginParam; 
+        private java.util.Map<String, ?> pluginParam; 
         private String pluginType; 
         private String relatedUserList; 
         private Long tid; 
@@ -150,7 +155,10 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.
+         * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to query the key of the attachment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_AttachmentKey</p>
          */
         public Builder attachmentKey(String attachmentKey) {
             this.putQueryParameter("AttachmentKey", attachmentKey);
@@ -159,7 +167,11 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The description of the ticket to be created.
+         * <p>The description of the ticket to be created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -168,9 +180,13 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The ticket creation parameter. The value is a JSON string. The value of this parameter differs based on the type of the ticket. For more information, see the **PluginParam parameter** section in this topic.
+         * <p>The ticket creation parameter. The value is a JSON string. The value of this parameter differs based on the type of the ticket. For more information, see the <strong>PluginParam parameter</strong> section in this topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{PluginParam_test}</p>
          */
-        public Builder pluginParam(java.util.Map < String, ? > pluginParam) {
+        public Builder pluginParam(java.util.Map<String, ?> pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
             this.putBodyParameter("PluginParam", pluginParamShrink);
             this.pluginParam = pluginParam;
@@ -178,7 +194,11 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The type of the ticket. For more information, see [PluginType parameter](~~429109~~).
+         * <p>The type of the ticket. For more information, see <a href="https://help.aliyun.com/document_detail/429109.html">PluginType parameter</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_EXPORT</p>
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -187,7 +207,10 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The IDs of the stakeholders that are involved in the ticket. Separate multiple IDs with commas (,).
+         * <p>The IDs of the stakeholders that are involved in the ticket. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1,user2</p>
          */
         public Builder relatedUserList(String relatedUserList) {
             this.putQueryParameter("RelatedUserList", relatedUserList);
@@ -196,7 +219,10 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

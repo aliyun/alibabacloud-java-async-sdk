@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClassListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClassListResponseBody</p>
  */
 public class DescribeClassListResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClassListResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class DescribeClassListResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -57,20 +62,23 @@ public class DescribeClassListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String regionId; 
         private String requestId; 
 
         /**
-         * The specifications of the cluster.
+         * <p>The cluster specifications.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,13 +86,10 @@ public class DescribeClassListResponseBody extends TeaModel {
         }
 
         /**
-         * The price.
-         * <p>
+         * <p>The ID of the request.</p>
          * 
-         * Unit: cents (US dollars).
-         * 
-         * > *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
-         * > *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
+         * <strong>example:</strong>
+         * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,50 +102,62 @@ public class DescribeClassListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClassListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClassListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("ClassCode")
+        @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
 
-        @NameInMap("ClassGroup")
+        @com.aliyun.core.annotation.NameInMap("ClassGroup")
         private String classGroup;
 
-        @NameInMap("ClassTypeLevel")
+        @com.aliyun.core.annotation.NameInMap("ClassTypeLevel")
         private String classTypeLevel;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("EssdMaxStorageCapacity")
+        private String essdMaxStorageCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private String maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private String maxIOPS;
 
-        @NameInMap("MaxStorageCapacity")
+        @com.aliyun.core.annotation.NameInMap("MaxStorageCapacity")
         private String maxStorageCapacity;
 
-        @NameInMap("MemoryClass")
+        @com.aliyun.core.annotation.NameInMap("MemoryClass")
         private String memoryClass;
 
-        @NameInMap("Pl1MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Pl1MaxIOPS")
         private String pl1MaxIOPS;
 
-        @NameInMap("Pl2MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Pl2MaxIOPS")
         private String pl2MaxIOPS;
 
-        @NameInMap("Pl3MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Pl3MaxIOPS")
         private String pl3MaxIOPS;
 
-        @NameInMap("Psl4MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("PolarStoreMaxStorageCapacity")
+        private String polarStoreMaxStorageCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("Psl4MaxIOPS")
         private String psl4MaxIOPS;
 
-        @NameInMap("Psl5MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Psl5MaxIOPS")
         private String psl5MaxIOPS;
 
-        @NameInMap("ReferenceExtPrice")
+        @com.aliyun.core.annotation.NameInMap("ReferenceExtPrice")
         private String referenceExtPrice;
 
-        @NameInMap("ReferencePrice")
+        @com.aliyun.core.annotation.NameInMap("ReferencePrice")
         private String referencePrice;
 
         private Items(Builder builder) {
@@ -148,6 +165,7 @@ public class DescribeClassListResponseBody extends TeaModel {
             this.classGroup = builder.classGroup;
             this.classTypeLevel = builder.classTypeLevel;
             this.cpu = builder.cpu;
+            this.essdMaxStorageCapacity = builder.essdMaxStorageCapacity;
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.maxStorageCapacity = builder.maxStorageCapacity;
@@ -155,6 +173,7 @@ public class DescribeClassListResponseBody extends TeaModel {
             this.pl1MaxIOPS = builder.pl1MaxIOPS;
             this.pl2MaxIOPS = builder.pl2MaxIOPS;
             this.pl3MaxIOPS = builder.pl3MaxIOPS;
+            this.polarStoreMaxStorageCapacity = builder.polarStoreMaxStorageCapacity;
             this.psl4MaxIOPS = builder.psl4MaxIOPS;
             this.psl5MaxIOPS = builder.psl5MaxIOPS;
             this.referenceExtPrice = builder.referenceExtPrice;
@@ -195,6 +214,13 @@ public class DescribeClassListResponseBody extends TeaModel {
          */
         public String getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return essdMaxStorageCapacity
+         */
+        public String getEssdMaxStorageCapacity() {
+            return this.essdMaxStorageCapacity;
         }
 
         /**
@@ -247,6 +273,13 @@ public class DescribeClassListResponseBody extends TeaModel {
         }
 
         /**
+         * @return polarStoreMaxStorageCapacity
+         */
+        public String getPolarStoreMaxStorageCapacity() {
+            return this.polarStoreMaxStorageCapacity;
+        }
+
+        /**
          * @return psl4MaxIOPS
          */
         public String getPsl4MaxIOPS() {
@@ -279,6 +312,7 @@ public class DescribeClassListResponseBody extends TeaModel {
             private String classGroup; 
             private String classTypeLevel; 
             private String cpu; 
+            private String essdMaxStorageCapacity; 
             private String maxConnections; 
             private String maxIOPS; 
             private String maxStorageCapacity; 
@@ -286,13 +320,17 @@ public class DescribeClassListResponseBody extends TeaModel {
             private String pl1MaxIOPS; 
             private String pl2MaxIOPS; 
             private String pl3MaxIOPS; 
+            private String polarStoreMaxStorageCapacity; 
             private String psl4MaxIOPS; 
             private String psl5MaxIOPS; 
             private String referenceExtPrice; 
             private String referencePrice; 
 
             /**
-             * The specifications of the cluster.
+             * <p>The specifications of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.x4.medium</p>
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -300,13 +338,16 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family of the cluster. Valid values:
-             * <p>
+             * <p>The instance family of the cluster. Valid values:</p>
+             * <ul>
+             * <li>Exclusive package: dedicated</li>
+             * <li>Exclusive physical machine: dedicated host</li>
+             * <li>Beginner: starter</li>
+             * <li>Historical specifications: historical</li>
+             * </ul>
              * 
-             * *   Exclusive package: dedicated
-             * *   Exclusive physical machine: dedicated host
-             * *   Beginner: starter
-             * *   Historical specifications: historical
+             * <strong>example:</strong>
+             * <p>Exclusive package</p>
              */
             public Builder classGroup(String classGroup) {
                 this.classGroup = classGroup;
@@ -314,7 +355,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The specification type of the cluster.
+             * <p>The specification type of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enterprise</p>
              */
             public Builder classTypeLevel(String classTypeLevel) {
                 this.classTypeLevel = classTypeLevel;
@@ -322,7 +366,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPU cores. Unit: cores.
+             * <p>The number of vCPU cores. Unit: cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -330,7 +377,21 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections in the cluster.
+             * <p>The maximum ESSD storage capacity. Unit: TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
+             */
+            public Builder essdMaxStorageCapacity(String essdMaxStorageCapacity) {
+                this.essdMaxStorageCapacity = essdMaxStorageCapacity;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of concurrent connections in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder maxConnections(String maxConnections) {
                 this.maxConnections = maxConnections;
@@ -338,7 +399,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS. Unit: operations per second.
+             * <p>The maximum IOPS. Unit: operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32000</p>
              */
             public Builder maxIOPS(String maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -346,7 +410,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum storage capacity. Unit: TB.
+             * <p>The maximum storage capacity. Unit: TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxStorageCapacity(String maxStorageCapacity) {
                 this.maxStorageCapacity = maxStorageCapacity;
@@ -354,7 +421,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GB.
+             * <p>The memory size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memoryClass(String memoryClass) {
                 this.memoryClass = memoryClass;
@@ -362,7 +432,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS of an enhanced SSD (ESSD) of performance level 1 (PL1). Unit: operations per second.
+             * <p>The maximum IOPS of an enhanced SSD (ESSD) of performance level 1 (PL1). Unit: operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder pl1MaxIOPS(String pl1MaxIOPS) {
                 this.pl1MaxIOPS = pl1MaxIOPS;
@@ -370,7 +443,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS of an ESSD of performance level 2 (PL2). Unit: operations per second.
+             * <p>The maximum IOPS of an ESSD of performance level 2 (PL2). Unit: operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder pl2MaxIOPS(String pl2MaxIOPS) {
                 this.pl2MaxIOPS = pl2MaxIOPS;
@@ -378,7 +454,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS of an ESSD of performance level 3 (PL3). Unit: operations per second.
+             * <p>The maximum IOPS of an ESSD of performance level 3 (PL3). Unit: operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder pl3MaxIOPS(String pl3MaxIOPS) {
                 this.pl3MaxIOPS = pl3MaxIOPS;
@@ -386,7 +465,21 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum Input/output operations per second (IOPS) for PolarStore Level 4 (PSL4). Unit: operations per second.
+             * <p>The maximum PSL4/PSL5 storage capacity. Unit: TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
+             */
+            public Builder polarStoreMaxStorageCapacity(String polarStoreMaxStorageCapacity) {
+                this.polarStoreMaxStorageCapacity = polarStoreMaxStorageCapacity;
+                return this;
+            }
+
+            /**
+             * <p>The maximum Input/output operations per second (IOPS) for PolarStore Level 4 (PSL4). Unit: operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48000</p>
              */
             public Builder psl4MaxIOPS(String psl4MaxIOPS) {
                 this.psl4MaxIOPS = psl4MaxIOPS;
@@ -394,7 +487,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum IOPS for PolarStore Level 5 (PSL5). Unit: operations per second.
+             * <p>The maximum IOPS for PolarStore Level 5 (PSL5). Unit: operations per second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96000</p>
              */
             public Builder psl5MaxIOPS(String psl5MaxIOPS) {
                 this.psl5MaxIOPS = psl5MaxIOPS;
@@ -402,13 +498,17 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The additional price.
-             * <p>
+             * <p>The additional price.</p>
+             * <p>Unit: cents (USD).</p>
+             * <blockquote>
+             * <ul>
+             * <li>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the same as the value of ReferencePrice.</li>
+             * <li>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the price of the single-node cluster.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * Unit: cents (USD).
-             * 
-             * >- If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the same as the value of ReferencePrice.
-             * >- If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the price of the single-node cluster.
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder referenceExtPrice(String referenceExtPrice) {
                 this.referenceExtPrice = referenceExtPrice;
@@ -416,13 +516,17 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * The price.
-             * <p>
+             * <p>The price.</p>
+             * <p>Unit: cents (USD).</p>
+             * <blockquote>
+             * <ul>
+             * <li>If you set CommodityCode to a commodity that uses the pay-as-you-go billing method, ReferencePrice indicates the hourly fee that you need to pay.</li>
+             * <li>If you set CommodityCode to a commodity that uses the subscription billing method, ReferencePrice indicates the monthly fee that you need to pay.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * Unit: cents (USD).
-             * 
-             * >- If you set CommodityCode to a commodity that uses the pay-as-you-go billing method, ReferencePrice indicates the hourly fee that you need to pay.
-             * >- If you set CommodityCode to a commodity that uses the subscription billing method, ReferencePrice indicates the monthly fee that you need to pay.
+             * <strong>example:</strong>
+             * <p>200000</p>
              */
             public Builder referencePrice(String referencePrice) {
                 this.referencePrice = referencePrice;

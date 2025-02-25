@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesRequest} extends {@link RequestModel}
  *
  * <p>ListNodesRequest</p>
  */
 public class ListNodesRequest extends Request {
-    @Path
-    @NameInMap("ResId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resId;
 
-    @Query
-    @NameInMap("ecsInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ecsInstanceIds")
     private String ecsInstanceIds;
 
-    @Query
-    @NameInMap("ecsInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ecsInstanceName")
     private String ecsInstanceName;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
     private ListNodesRequest(Builder builder) {
@@ -127,7 +127,11 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * The ID of the shipper.
+         * <p>The ID of the shipper.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-cn-l871nd0u73c45****</p>
          */
         public Builder resId(String resId) {
             this.putPathParameter("ResId", resId);
@@ -136,7 +140,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances.
+         * <p>The IDs of the ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1ei8ysh7orb6eq****</p>
          */
         public Builder ecsInstanceIds(String ecsInstanceIds) {
             this.putQueryParameter("ecsInstanceIds", ecsInstanceIds);
@@ -145,7 +152,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The name of the ECS instance.
+         * <p>The name of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ecsInstanceName(String ecsInstanceName) {
             this.putQueryParameter("ecsInstanceName", ecsInstanceName);
@@ -154,7 +164,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -163,7 +176,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -172,7 +188,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * The tags of the ECS instance. You must configure tagKey and tagValue.
+         * <p>The tags of the ECS instance. You must configure tagKey and tagValue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey&quot;:&quot;abc&quot;,&quot;tagValue&quot;:&quot;xyz&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);

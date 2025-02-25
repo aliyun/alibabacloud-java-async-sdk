@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZoneRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZoneRecordsResponseBody</p>
  */
 public class DescribeZoneRecordsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private Records records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeZoneRecordsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +109,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +120,7 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The DNS records.</p>
          */
         public Builder records(Records records) {
             this.records = records;
@@ -122,7 +128,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B07FBC3-3A53-4939-A3C6-2BDFE407BAB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +150,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -151,50 +166,56 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZoneRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneRecordsResponseBody</p>
+     */
     public static class Record extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private Long recordId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Rr")
+        @com.aliyun.core.annotation.NameInMap("Rr")
         private String rr;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Record(Builder builder) {
@@ -346,7 +367,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CreateTime.
+             * <p>The time when the DNS record was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-14T03:47Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -354,7 +378,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672740294000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -362,7 +389,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Line.
+             * <p>The resolution line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -370,7 +400,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the mail exchanger (MX) record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -378,7 +411,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The ID of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>246959****</p>
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -386,7 +422,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the DNS record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -394,7 +433,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Rr.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www</p>
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -402,7 +444,14 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the DNS record. Valid values:</p>
+             * <ul>
+             * <li>ENABLE: The DNS record is enabled.</li>
+             * <li>DISABLE: The DNS record is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -410,7 +459,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * <p>The time to live (TTL) period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -418,7 +470,19 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the DNS record. Valid values:</p>
+             * <ul>
+             * <li><strong>A</strong>: An A record points a domain name to an IPv4 address.</li>
+             * <li><strong>AAAA</strong>: An AAAA record points a domain name to an IPv6 address.</li>
+             * <li><strong>CNAME</strong>: A canonical name (CNAME) record points a domain name to another domain name.</li>
+             * <li><strong>TXT</strong>: A text (TXT) record usually serves as a Sender Policy Framework (SPF) record to prevent email spam. The record value of the TXT record can be up to 255 characters in length.</li>
+             * <li><strong>MX</strong>: A mail exchanger (MX) record points a domain name to a mail server address.</li>
+             * <li><strong>PTR</strong>: A pointer (PTR) points an IP address to a domain name.</li>
+             * <li><strong>SRV</strong>: A service (SRV) record specifies a server that hosts a specific service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -426,7 +490,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the DNS record was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-08T02:31Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -434,7 +501,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1654777678000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -442,7 +512,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The record value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.XX.XX</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -450,7 +523,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight value of the address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for DNS requests. A weight value must be an integer that ranges from 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -458,7 +534,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a49f55537f3b0b1e6e43add0bf5f****</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -472,8 +551,14 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZoneRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneRecordsResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("Record")
+        @com.aliyun.core.annotation.NameInMap("Record")
         private java.util.List < Record> record;
 
         private Records(Builder builder) {

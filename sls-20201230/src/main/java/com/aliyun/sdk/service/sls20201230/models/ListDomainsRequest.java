@@ -1,32 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListDomainsRequest} extends {@link RequestModel}
  *
  * <p>ListDomainsRequest</p>
  */
 public class ListDomainsRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Query
-    @NameInMap("domainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("domainName")
     private String domainName;
 
-    @Query
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Integer offset;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
     private ListDomainsRequest(Builder builder) {
@@ -97,7 +101,11 @@ public class ListDomainsRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +114,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The domain name that is used to match custom domain names. For example, if you set domainName to `example.com`, the matched domain names are `a.example.com` and `b.example.com`.
+         * <p>The domain name that is used to match custom domain names. For example, if you set domainName to <code>example.com</code>, the matched domain names are <code>a.example.com</code> and <code>b.example.com</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("domainName", domainName);
@@ -115,7 +126,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The line from which the query starts. Default value: 0.
+         * <p>The line from which the query starts. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -124,7 +138,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 500. Maximum value: 500.
+         * <p>The number of entries per page. Default value: 500. Maximum value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

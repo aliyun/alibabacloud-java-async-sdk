@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
  *
  * <p>GetEditingProjectMaterialsResponseBody</p>
  */
 public class GetEditingProjectMaterialsResponseBody extends TeaModel {
-    @NameInMap("LiveMaterials")
-    private java.util.List < LiveMaterials> liveMaterials;
+    @com.aliyun.core.annotation.NameInMap("LiveMaterials")
+    private java.util.List<LiveMaterials> liveMaterials;
 
-    @NameInMap("MediaInfos")
-    private java.util.List < MediaInfos> mediaInfos;
+    @com.aliyun.core.annotation.NameInMap("MediaInfos")
+    private java.util.List<MediaInfos> mediaInfos;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("ProjectMaterials")
-    private java.util.List < String > projectMaterials;
+    @com.aliyun.core.annotation.NameInMap("ProjectMaterials")
+    private java.util.List<String> projectMaterials;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetEditingProjectMaterialsResponseBody(Builder builder) {
@@ -46,14 +51,14 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     /**
      * @return liveMaterials
      */
-    public java.util.List < LiveMaterials> getLiveMaterials() {
+    public java.util.List<LiveMaterials> getLiveMaterials() {
         return this.liveMaterials;
     }
 
     /**
      * @return mediaInfos
      */
-    public java.util.List < MediaInfos> getMediaInfos() {
+    public java.util.List<MediaInfos> getMediaInfos() {
         return this.mediaInfos;
     }
 
@@ -67,7 +72,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     /**
      * @return projectMaterials
      */
-    public java.util.List < String > getProjectMaterials() {
+    public java.util.List<String> getProjectMaterials() {
         return this.projectMaterials;
     }
 
@@ -79,30 +84,33 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LiveMaterials> liveMaterials; 
-        private java.util.List < MediaInfos> mediaInfos; 
+        private java.util.List<LiveMaterials> liveMaterials; 
+        private java.util.List<MediaInfos> mediaInfos; 
         private String projectId; 
-        private java.util.List < String > projectMaterials; 
+        private java.util.List<String> projectMaterials; 
         private String requestId; 
 
         /**
-         * LiveMaterials.
+         * <p>The materials associated with the live stream.</p>
          */
-        public Builder liveMaterials(java.util.List < LiveMaterials> liveMaterials) {
+        public Builder liveMaterials(java.util.List<LiveMaterials> liveMaterials) {
             this.liveMaterials = liveMaterials;
             return this;
         }
 
         /**
-         * MediaInfos.
+         * <p>The media assets that meet the specified conditions.</p>
          */
-        public Builder mediaInfos(java.util.List < MediaInfos> mediaInfos) {
+        public Builder mediaInfos(java.util.List<MediaInfos> mediaInfos) {
             this.mediaInfos = mediaInfos;
             return this;
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong><strong>67ae06542b9b93e0d1c387</strong></strong></em></p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -110,15 +118,21 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectMaterials.
+         * <p>The materials associated with the editing project. A live stream editing project will be associated with a regular editing project after the live streaming ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong><strong>9b145c5cafc2e057304fcd</strong></strong></em></p>
          */
-        public Builder projectMaterials(java.util.List < String > projectMaterials) {
+        public Builder projectMaterials(java.util.List<String> projectMaterials) {
             this.projectMaterials = projectMaterials;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>89-C21D-4B78-AE24-3788B8</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,17 +145,23 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class LiveMaterials extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("LiveUrl")
+        @com.aliyun.core.annotation.NameInMap("LiveUrl")
         private String liveUrl;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private LiveMaterials(Builder builder) {
@@ -194,7 +214,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             private String streamName; 
 
             /**
-             * AppName.
+             * <p>The application name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testrecord</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -202,7 +225,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.alivecdn.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -210,7 +236,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * LiveUrl.
+             * <p>The URL of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://test.alivecdn.com/testrecord/teststream</p>
              */
             public Builder liveUrl(String liveUrl) {
                 this.liveUrl = liveUrl;
@@ -218,7 +247,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testrecord</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -232,38 +264,44 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class FileBasicInfo extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("FileStatus")
+        @com.aliyun.core.annotation.NameInMap("FileStatus")
         private String fileStatus;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private FileBasicInfo(Builder builder) {
@@ -379,7 +417,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1132.68</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -387,7 +428,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216.206667</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -395,7 +439,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.mp4</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -403,7 +450,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30611502</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -411,7 +461,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * FileStatus.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder fileStatus(String fileStatus) {
                 this.fileStatus = fileStatus;
@@ -419,7 +472,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -427,7 +483,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -435,7 +494,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -443,7 +505,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -451,7 +516,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the file resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -459,7 +527,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -473,8 +544,14 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class FileInfoList extends TeaModel {
-        @NameInMap("FileBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("FileBasicInfo")
         private FileBasicInfo fileBasicInfo;
 
         private FileInfoList(Builder builder) {
@@ -500,7 +577,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             private FileBasicInfo fileBasicInfo; 
 
             /**
-             * FileBasicInfo.
+             * <p>The basic information of the file, such as the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -514,59 +591,65 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class MediaBasicInfo extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletedTime")
+        @com.aliyun.core.annotation.NameInMap("DeletedTime")
         private String deletedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InputURL")
+        @com.aliyun.core.annotation.NameInMap("InputURL")
         private String inputURL;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaTags")
+        @com.aliyun.core.annotation.NameInMap("MediaTags")
         private String mediaTags;
 
-        @NameInMap("MediaType")
+        @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private String snapshots;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SpriteImages")
+        @com.aliyun.core.annotation.NameInMap("SpriteImages")
         private String spriteImages;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("TranscodeStatus")
+        @com.aliyun.core.annotation.NameInMap("TranscodeStatus")
         private String transcodeStatus;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaBasicInfo(Builder builder) {
@@ -745,7 +828,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * BusinessType.
+             * <p>The business type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -753,7 +839,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The category of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -761,7 +850,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The thumbnail URL of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://sample-bucket.oss-cn-shanghai.aliyuncs.com/sample-corver.jpg?Expires=1628670610&OSSAccessKeyId=AK&Signature=signature">http://sample-bucket.oss-cn-shanghai.aliyuncs.com/sample-corver.jpg?Expires=1628670610&amp;OSSAccessKeyId=AK&amp;Signature=signature</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -769,7 +861,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the media asset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -777,7 +872,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * <p>The time when the media asset was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -785,7 +883,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sample_description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -793,7 +894,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * InputURL.
+             * <p>The URL of the media asset in another service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/file.mp4">http://bucket.oss-cn-shanghai.aliyuncs.com/file.mp4</a></p>
              */
             public Builder inputURL(String inputURL) {
                 this.inputURL = inputURL;
@@ -801,7 +905,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong><strong>64623a94eca8516569c8f</strong></strong></em></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -809,7 +916,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags of the media asset.</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -817,7 +924,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -825,7 +935,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the media asset was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -833,7 +946,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The snapshots of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder snapshots(String snapshots) {
                 this.snapshots = snapshots;
@@ -841,7 +957,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -849,7 +968,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteImages.
+             * <p>The sprite of the media asset</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder spriteImages(String spriteImages) {
                 this.spriteImages = spriteImages;
@@ -857,7 +979,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -865,7 +990,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file.mp4</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -873,7 +1001,17 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeStatus.
+             * <p>The transcoding status of the media asset.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>TranscodeSuccess: transcoding completed.</li>
+             * <li>TranscodeFailed: transcoding failed.</li>
+             * <li>Init: initializing.</li>
+             * <li>Transcoding: transcoding in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Init</p>
              */
             public Builder transcodeStatus(String transcodeStatus) {
                 this.transcodeStatus = transcodeStatus;
@@ -881,7 +1019,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userData</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -895,14 +1036,20 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEditingProjectMaterialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEditingProjectMaterialsResponseBody</p>
+     */
     public static class MediaInfos extends TeaModel {
-        @NameInMap("FileInfoList")
-        private java.util.List < FileInfoList> fileInfoList;
+        @com.aliyun.core.annotation.NameInMap("FileInfoList")
+        private java.util.List<FileInfoList> fileInfoList;
 
-        @NameInMap("MediaBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaInfos(Builder builder) {
@@ -922,7 +1069,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         /**
          * @return fileInfoList
          */
-        public java.util.List < FileInfoList> getFileInfoList() {
+        public java.util.List<FileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
@@ -941,20 +1088,20 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FileInfoList> fileInfoList; 
+            private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
             /**
-             * FileInfos
+             * <p>The information about the file.</p>
              */
-            public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
+            public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
                 return this;
             }
 
             /**
-             * BasicInfo
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -962,7 +1109,10 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong><strong>64623a94eca8516569c8fe</strong></strong></em></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

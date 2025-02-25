@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PathConfig} extends {@link TeaModel}
  *
  * <p>PathConfig</p>
  */
 public class PathConfig extends TeaModel {
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @NameInMap("methods")
+    @com.aliyun.core.annotation.NameInMap("methods")
     private java.util.List < String > methods;
 
-    @NameInMap("path")
-    @Validation(required = true, maxLength = 2048)
+    @com.aliyun.core.annotation.NameInMap("path")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 2048)
     private String path;
 
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @NameInMap("rewriteConfig")
+    @com.aliyun.core.annotation.NameInMap("rewriteConfig")
     private RewriteConfig rewriteConfig;
 
     private PathConfig(Builder builder) {
@@ -88,7 +88,10 @@ public class PathConfig extends TeaModel {
         private RewriteConfig rewriteConfig; 
 
         /**
-         * functionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFunction</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -104,7 +107,10 @@ public class PathConfig extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api/*</p>
          */
         public Builder path(String path) {
             this.path = path;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAttackAnalysisMaxQpsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAttackAnalysisMaxQpsResponseBody</p>
  */
 public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
-    @NameInMap("Qps")
+    @com.aliyun.core.annotation.NameInMap("Qps")
     private Long qps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAttackAnalysisMaxQpsResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The peak queries per second (QPS) of DDoS attacks. Units: QPS.
+         * <p>The peak queries per second (QPS) of DDoS attacks. Units: QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41652</p>
          */
         public Builder qps(Long qps) {
             this.qps = qps;
@@ -58,7 +66,10 @@ public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8DFB602D-1AAC-46C4-90F2-C84086E7A6E4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

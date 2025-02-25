@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceMajorVersionPrecheckResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeDBInstanceMajorVersionPrecheckResponseBody</p>
  */
 public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetMajorVersion")
+    @com.aliyun.core.annotation.NameInMap("TargetMajorVersion")
     private String targetMajorVersion;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private UpgradeDBInstanceMajorVersionPrecheckResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         private String taskId; 
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1c808s731l****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +90,10 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99C1FEEE-FB44-5342-8EBA-DC1E1A1557A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +101,10 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         }
 
         /**
-         * The new major engine version of the instance.
+         * <p>The new major engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0</p>
          */
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.targetMajorVersion = targetMajorVersion;
@@ -98,7 +112,10 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41698****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

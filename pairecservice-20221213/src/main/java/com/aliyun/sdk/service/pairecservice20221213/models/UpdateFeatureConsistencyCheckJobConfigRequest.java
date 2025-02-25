@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,130 +11,158 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateFeatureConsistencyCheckJobConfigRequest</p>
  */
 public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
-    @Path
-    @NameInMap("FeatureConsistencyCheckJobConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureConsistencyCheckJobConfigId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CompareFeature")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompareFeature")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean compareFeature;
 
-    @Body
-    @NameInMap("EasServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EasServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String easServiceName;
 
-    @Body
-    @NameInMap("EasyRecPackagePath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EasyRecPackagePath")
     private String easyRecPackagePath;
 
-    @Body
-    @NameInMap("EasyRecVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EasyRecVersion")
     private String easyRecVersion;
 
-    @Body
-    @NameInMap("FeatureDisplayExclude")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureDisplayExclude")
     private String featureDisplayExclude;
 
-    @Body
-    @NameInMap("FeatureLandingResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureLandingResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureLandingResourceId;
 
-    @Body
-    @NameInMap("FeaturePriority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeaturePriority")
     private String featurePriority;
 
-    @Body
-    @NameInMap("FgJarVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreItemId")
+    private String featureStoreItemId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreModelId")
+    private String featureStoreModelId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectId")
+    private String featureStoreProjectId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectName")
+    private String featureStoreProjectName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreSeqFeatureView")
+    private String featureStoreSeqFeatureView;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreUserId")
+    private String featureStoreUserId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FgJarVersion")
     private String fgJarVersion;
 
-    @Body
-    @NameInMap("FgJsonFileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FgJsonFileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fgJsonFileName;
 
-    @Body
-    @NameInMap("GenerateZip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GenerateZip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean generateZip;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("ItemIdField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsUseFeatureStore")
+    private Boolean isUseFeatureStore;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemIdField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemIdField;
 
-    @Body
-    @NameInMap("ItemTable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemTable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemTable;
 
-    @Body
-    @NameInMap("ItemTablePartitionField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemTablePartitionField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemTablePartitionField;
 
-    @Body
-    @NameInMap("ItemTablePartitionFieldFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemTablePartitionFieldFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemTablePartitionFieldFormat;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("OssResourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssResourceId")
     private String ossResourceId;
 
-    @Body
-    @NameInMap("SampleRate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SampleRate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double sampleRate;
 
-    @Body
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Body
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Body
-    @NameInMap("UserIdField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserIdField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userIdField;
 
-    @Body
-    @NameInMap("UserTable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserTable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTable;
 
-    @Body
-    @NameInMap("UserTablePartitionField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserTablePartitionField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTablePartitionField;
 
-    @Body
-    @NameInMap("UserTablePartitionFieldFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserTablePartitionFieldFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTablePartitionFieldFormat;
 
-    @Body
-    @NameInMap("WorkflowName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkflowName")
     private String workflowName;
 
     private UpdateFeatureConsistencyCheckJobConfigRequest(Builder builder) {
@@ -149,10 +176,17 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         this.featureDisplayExclude = builder.featureDisplayExclude;
         this.featureLandingResourceId = builder.featureLandingResourceId;
         this.featurePriority = builder.featurePriority;
+        this.featureStoreItemId = builder.featureStoreItemId;
+        this.featureStoreModelId = builder.featureStoreModelId;
+        this.featureStoreProjectId = builder.featureStoreProjectId;
+        this.featureStoreProjectName = builder.featureStoreProjectName;
+        this.featureStoreSeqFeatureView = builder.featureStoreSeqFeatureView;
+        this.featureStoreUserId = builder.featureStoreUserId;
         this.fgJarVersion = builder.fgJarVersion;
         this.fgJsonFileName = builder.fgJsonFileName;
         this.generateZip = builder.generateZip;
         this.instanceId = builder.instanceId;
+        this.isUseFeatureStore = builder.isUseFeatureStore;
         this.itemIdField = builder.itemIdField;
         this.itemTable = builder.itemTable;
         this.itemTablePartitionField = builder.itemTablePartitionField;
@@ -246,6 +280,48 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return featureStoreItemId
+     */
+    public String getFeatureStoreItemId() {
+        return this.featureStoreItemId;
+    }
+
+    /**
+     * @return featureStoreModelId
+     */
+    public String getFeatureStoreModelId() {
+        return this.featureStoreModelId;
+    }
+
+    /**
+     * @return featureStoreProjectId
+     */
+    public String getFeatureStoreProjectId() {
+        return this.featureStoreProjectId;
+    }
+
+    /**
+     * @return featureStoreProjectName
+     */
+    public String getFeatureStoreProjectName() {
+        return this.featureStoreProjectName;
+    }
+
+    /**
+     * @return featureStoreSeqFeatureView
+     */
+    public String getFeatureStoreSeqFeatureView() {
+        return this.featureStoreSeqFeatureView;
+    }
+
+    /**
+     * @return featureStoreUserId
+     */
+    public String getFeatureStoreUserId() {
+        return this.featureStoreUserId;
+    }
+
+    /**
      * @return fgJarVersion
      */
     public String getFgJarVersion() {
@@ -271,6 +347,13 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return isUseFeatureStore
+     */
+    public Boolean getIsUseFeatureStore() {
+        return this.isUseFeatureStore;
     }
 
     /**
@@ -381,10 +464,17 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         private String featureDisplayExclude; 
         private String featureLandingResourceId; 
         private String featurePriority; 
+        private String featureStoreItemId; 
+        private String featureStoreModelId; 
+        private String featureStoreProjectId; 
+        private String featureStoreProjectName; 
+        private String featureStoreSeqFeatureView; 
+        private String featureStoreUserId; 
         private String fgJarVersion; 
         private String fgJsonFileName; 
         private Boolean generateZip; 
         private String instanceId; 
+        private Boolean isUseFeatureStore; 
         private String itemIdField; 
         private String itemTable; 
         private String itemTablePartitionField; 
@@ -415,10 +505,17 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
             this.featureDisplayExclude = request.featureDisplayExclude;
             this.featureLandingResourceId = request.featureLandingResourceId;
             this.featurePriority = request.featurePriority;
+            this.featureStoreItemId = request.featureStoreItemId;
+            this.featureStoreModelId = request.featureStoreModelId;
+            this.featureStoreProjectId = request.featureStoreProjectId;
+            this.featureStoreProjectName = request.featureStoreProjectName;
+            this.featureStoreSeqFeatureView = request.featureStoreSeqFeatureView;
+            this.featureStoreUserId = request.featureStoreUserId;
             this.fgJarVersion = request.fgJarVersion;
             this.fgJsonFileName = request.fgJsonFileName;
             this.generateZip = request.generateZip;
             this.instanceId = request.instanceId;
+            this.isUseFeatureStore = request.isUseFeatureStore;
             this.itemIdField = request.itemIdField;
             this.itemTable = request.itemTable;
             this.itemTablePartitionField = request.itemTablePartitionField;
@@ -517,6 +614,60 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * FeatureStoreItemId.
+         */
+        public Builder featureStoreItemId(String featureStoreItemId) {
+            this.putBodyParameter("FeatureStoreItemId", featureStoreItemId);
+            this.featureStoreItemId = featureStoreItemId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreModelId.
+         */
+        public Builder featureStoreModelId(String featureStoreModelId) {
+            this.putBodyParameter("FeatureStoreModelId", featureStoreModelId);
+            this.featureStoreModelId = featureStoreModelId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectId.
+         */
+        public Builder featureStoreProjectId(String featureStoreProjectId) {
+            this.putBodyParameter("FeatureStoreProjectId", featureStoreProjectId);
+            this.featureStoreProjectId = featureStoreProjectId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectName.
+         */
+        public Builder featureStoreProjectName(String featureStoreProjectName) {
+            this.putBodyParameter("FeatureStoreProjectName", featureStoreProjectName);
+            this.featureStoreProjectName = featureStoreProjectName;
+            return this;
+        }
+
+        /**
+         * FeatureStoreSeqFeatureView.
+         */
+        public Builder featureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
+            this.putBodyParameter("FeatureStoreSeqFeatureView", featureStoreSeqFeatureView);
+            this.featureStoreSeqFeatureView = featureStoreSeqFeatureView;
+            return this;
+        }
+
+        /**
+         * FeatureStoreUserId.
+         */
+        public Builder featureStoreUserId(String featureStoreUserId) {
+            this.putBodyParameter("FeatureStoreUserId", featureStoreUserId);
+            this.featureStoreUserId = featureStoreUserId;
+            return this;
+        }
+
+        /**
          * FgJarVersion.
          */
         public Builder fgJarVersion(String fgJarVersion) {
@@ -549,6 +700,15 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * IsUseFeatureStore.
+         */
+        public Builder isUseFeatureStore(Boolean isUseFeatureStore) {
+            this.putBodyParameter("IsUseFeatureStore", isUseFeatureStore);
+            this.isUseFeatureStore = isUseFeatureStore;
             return this;
         }
 

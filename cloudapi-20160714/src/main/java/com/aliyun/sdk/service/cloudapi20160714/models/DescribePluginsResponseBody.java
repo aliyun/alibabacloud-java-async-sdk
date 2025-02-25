@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePluginsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePluginsResponseBody</p>
  */
 public class DescribePluginsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Plugins")
+    @com.aliyun.core.annotation.NameInMap("Plugins")
     private Plugins plugins;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePluginsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribePluginsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,7 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information about the plug-in. It is an array consisting of PluginAttribute data.
+         * <p>The returned information about the plug-in. It is an array consisting of PluginAttribute data.</p>
          */
         public Builder plugins(Plugins plugins) {
             this.plugins = plugins;
@@ -110,7 +121,10 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46373DC4-19F1-4DC8-8C31-1107289BB5E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribePluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribePluginsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginsResponseBody</p>
+     */
     public static class TagInfo extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagInfo(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +204,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tetstvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,9 +221,15 @@ public class DescribePluginsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
+        private java.util.List<TagInfo> tagInfo;
 
         private Tags(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -211,17 +246,17 @@ public class DescribePluginsResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }
@@ -233,32 +268,38 @@ public class DescribePluginsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginsResponseBody</p>
+     */
     public static class PluginAttribute extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PluginData")
+        @com.aliyun.core.annotation.NameInMap("PluginData")
         private String pluginData;
 
-        @NameInMap("PluginId")
+        @com.aliyun.core.annotation.NameInMap("PluginId")
         private String pluginId;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginType")
+        @com.aliyun.core.annotation.NameInMap("PluginType")
         private String pluginType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private PluginAttribute(Builder builder) {
@@ -356,7 +397,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The creation time (UTC) of the plug-in.
+             * <p>The creation time (UTC) of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-11T09:29:58Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -364,7 +408,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The plug-in description.
+             * <p>The plug-in description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Throttling</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -372,7 +419,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time (UTC) of the plug-in.
+             * <p>The last modification time (UTC) of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-11T09:29:58Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -380,7 +430,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The definition statement of the plug-in.
+             * <p>The definition statement of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;unit&quot;:&quot;MINUTE&quot;,&quot;apiDefault&quot;:20}</p>
              */
             public Builder pluginData(String pluginData) {
                 this.pluginData = pluginData;
@@ -388,7 +441,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plug-in.
+             * <p>The ID of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9a3f1a5279434f2ba74ccd91c295af9f</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -396,7 +452,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>firstPlugin</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -404,7 +463,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the plug-in.
+             * <p>The type of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trafficControl</p>
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -412,7 +474,10 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the plug-in is located.
+             * <p>The region where the plug-in is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -420,7 +485,7 @@ public class DescribePluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -434,9 +499,15 @@ public class DescribePluginsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePluginsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePluginsResponseBody</p>
+     */
     public static class Plugins extends TeaModel {
-        @NameInMap("PluginAttribute")
-        private java.util.List < PluginAttribute> pluginAttribute;
+        @com.aliyun.core.annotation.NameInMap("PluginAttribute")
+        private java.util.List<PluginAttribute> pluginAttribute;
 
         private Plugins(Builder builder) {
             this.pluginAttribute = builder.pluginAttribute;
@@ -453,17 +524,17 @@ public class DescribePluginsResponseBody extends TeaModel {
         /**
          * @return pluginAttribute
          */
-        public java.util.List < PluginAttribute> getPluginAttribute() {
+        public java.util.List<PluginAttribute> getPluginAttribute() {
             return this.pluginAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < PluginAttribute> pluginAttribute; 
+            private java.util.List<PluginAttribute> pluginAttribute; 
 
             /**
              * PluginAttribute.
              */
-            public Builder pluginAttribute(java.util.List < PluginAttribute> pluginAttribute) {
+            public Builder pluginAttribute(java.util.List<PluginAttribute> pluginAttribute) {
                 this.pluginAttribute = pluginAttribute;
                 return this;
             }

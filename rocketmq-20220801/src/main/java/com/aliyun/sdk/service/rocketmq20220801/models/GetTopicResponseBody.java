@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicResponseBody} extends {@link TeaModel}
  *
  * <p>GetTopicResponseBody</p>
  */
 public class GetTopicResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("dynamicCode")
+    @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
 
-    @NameInMap("dynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("dynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetTopicResponseBody(Builder builder) {
@@ -122,7 +127,10 @@ public class GetTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +138,7 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * <p>The result data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +146,10 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TopicName</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -146,7 +157,10 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topicName</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -154,7 +168,10 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +179,10 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The topic cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +190,10 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +201,10 @@ public class GetTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,34 +217,44 @@ public class GetTopicResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTopicResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("messageType")
+        @com.aliyun.core.annotation.NameInMap("maxSendTps")
+        private Long maxSendTps;
+
+        @com.aliyun.core.annotation.NameInMap("messageType")
         private String messageType;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("topicName")
+        @com.aliyun.core.annotation.NameInMap("topicName")
         private String topicName;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Data(Builder builder) {
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
+            this.maxSendTps = builder.maxSendTps;
             this.messageType = builder.messageType;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
@@ -247,6 +283,13 @@ public class GetTopicResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return maxSendTps
+         */
+        public Long getMaxSendTps() {
+            return this.maxSendTps;
         }
 
         /**
@@ -294,6 +337,7 @@ public class GetTopicResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String instanceId; 
+            private Long maxSendTps; 
             private String messageType; 
             private String regionId; 
             private String remark; 
@@ -302,7 +346,10 @@ public class GetTopicResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the topic was created.
+             * <p>The time when the topic was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -310,7 +357,10 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -318,15 +368,25 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * The message type of the topic.
-             * <p>
+             * maxSendTps.
+             */
+            public Builder maxSendTps(Long maxSendTps) {
+                this.maxSendTps = maxSendTps;
+                return this;
+            }
+
+            /**
+             * <p>The message type of the topic.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>TRANSACTION: transactional message</li>
+             * <li>FIFO: ordered message</li>
+             * <li>DELAY: scheduled or delayed message</li>
+             * <li>NORMAL: normal message</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   TRANSACTION: transactional message
-             * *   FIFO: ordered message
-             * *   DELAY: scheduled or delayed message
-             * *   NORMAL: normal message
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -334,7 +394,10 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -342,7 +405,10 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the topic.
+             * <p>The remarks on the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the remark for test.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -350,13 +416,15 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the topic.
-             * <p>
+             * <p>The state of the topic.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RUNNING: The topic is running.</li>
+             * <li>CREATING: The topic is being created.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   RUNNING: The topic is running.
-             * *   CREATING: The topic is being created.
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -364,7 +432,10 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic.
+             * <p>The name of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -372,7 +443,10 @@ public class GetTopicResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the topic was last updated.
+             * <p>The time when the topic was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

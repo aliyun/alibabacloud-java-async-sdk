@@ -116,7 +116,7 @@ public class ListOpenJMeterScenesRequest extends Request {
         }
 
         /**
-         * 场景id
+         * SceneId.
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -125,7 +125,7 @@ public class ListOpenJMeterScenesRequest extends Request {
         }
 
         /**
-         * 场景名
+         * SceneName.
          */
         public Builder sceneName(String sceneName) {
             this.putQueryParameter("SceneName", sceneName);

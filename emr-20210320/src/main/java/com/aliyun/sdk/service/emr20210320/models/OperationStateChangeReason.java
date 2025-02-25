@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationStateChangeReason} extends {@link TeaModel}
  *
  * <p>OperationStateChangeReason</p>
  */
 public class OperationStateChangeReason extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
     private OperationStateChangeReason(Builder builder) {
@@ -50,7 +55,10 @@ public class OperationStateChangeReason extends TeaModel {
         private String message; 
 
         /**
-         * 状态码。
+         * <p>状态码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OutOfStock</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -58,7 +66,10 @@ public class OperationStateChangeReason extends TeaModel {
         }
 
         /**
-         * 状态变化信息。
+         * <p>状态变化信息。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The requested resource is sold out in the specified zone, try other types of resources or other regions and zones.</p>
          */
         public Builder message(String message) {
             this.message = message;

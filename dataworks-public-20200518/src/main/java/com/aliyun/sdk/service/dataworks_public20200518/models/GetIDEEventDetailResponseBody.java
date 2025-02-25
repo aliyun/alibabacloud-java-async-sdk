@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetIDEEventDetailResponseBody</p>
  */
 public class GetIDEEventDetailResponseBody extends TeaModel {
-    @NameInMap("EventDetail")
+    @com.aliyun.core.annotation.NameInMap("EventDetail")
     private EventDetail eventDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetIDEEventDetailResponseBody(Builder builder) {
@@ -50,10 +55,8 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data snapshot that is generated when the extension point event is triggered.
-         * <p>
-         * 
-         * The fields contained in data snapshots vary based on the types of the triggered extension point events. For more information, see the description of the fields.
+         * <p>The data snapshot that is generated when an extension point event is triggered.</p>
+         * <p>The fields contained in data snapshots vary based on the types of the triggered extension point events. For more information, see the description of the fields.</p>
          */
         public Builder eventDetail(EventDetail eventDetail) {
             this.eventDetail = eventDetail;
@@ -61,7 +64,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -74,23 +80,29 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class FilePropertyContent extends TeaModel {
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("CurrentVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private Long currentVersion;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ParentFileId")
+        @com.aliyun.core.annotation.NameInMap("ParentFileId")
         private Long parentFileId;
 
         private FilePropertyContent(Builder builder) {
@@ -161,7 +173,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Long parentFileId; 
 
             /**
-             * The ID of the workflow to which the file belongs.
+             * <p>The ID of the workflow to which the file belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74328</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -169,7 +184,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version number of the file.
+             * <p>The latest version number of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -177,7 +195,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance with which the file is associated.
+             * <p>The name of the data source with which the file is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -185,7 +206,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.
+             * <p>The ID of the folder to which the file belongs. You can call the <a href="https://help.aliyun.com/document_detail/173952.html">GetFolder</a> operation to query the details of the file based on the folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aldurie78l2falure</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -193,7 +217,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the file.
+             * <p>The file owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7384234****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -201,7 +228,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the do-while node or for-each node that corresponds to the file.
+             * <p>The ID of the do-while node or for-each node that corresponds to the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234122</p>
              */
             public Builder parentFileId(Long parentFileId) {
                 this.parentFileId = parentFileId;
@@ -215,11 +245,17 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class InputList extends TeaModel {
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
-        @NameInMap("ParseType")
+        @com.aliyun.core.annotation.NameInMap("ParseType")
         private String parseType;
 
         private InputList(Builder builder) {
@@ -254,10 +290,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String parseType; 
 
             /**
-             * The output names of the parent files on which the current file depends.
-             * <p>
+             * <p>The output name of the parent file on which the current file depends.</p>
+             * <p>This parameter corresponds to the Output Name of Ancestor Node parameter under Parent Nodes in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
-             * This parameter is equivalent to the Output Name parameter under Parent Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <strong>example:</strong>
+             * <p>dw_project_root</p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -265,11 +302,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the configuration file dependency. Valid values:
-             * <p>
+             * <p>The mode of the configuration file dependency. Valid values:</p>
+             * <ul>
+             * <li>MANUAL: Scheduling dependencies are manually configured.</li>
+             * <li>AUTO: Scheduling dependencies are automatically parsed.</li>
+             * </ul>
              * 
-             * *   MANUAL: The scheduling dependencies are manually configured.
-             * *   AUTO: The scheduling dependencies are automatically parsed.
+             * <strong>example:</strong>
+             * <p>MANUAL</p>
              */
             public Builder parseType(String parseType) {
                 this.parseType = parseType;
@@ -283,11 +323,17 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class OutputList extends TeaModel {
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("RefTableName")
+        @com.aliyun.core.annotation.NameInMap("RefTableName")
         private String refTableName;
 
         private OutputList(Builder builder) {
@@ -322,10 +368,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String refTableName; 
 
             /**
-             * The output name of the current file.
-             * <p>
+             * <p>The output name of the current file.</p>
+             * <p>This parameter corresponds to the Output Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
-             * This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <strong>example:</strong>
+             * <p>dw_project.002_out</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -333,10 +380,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The output table name of the current file.
-             * <p>
+             * <p>The output table name of the current file.</p>
+             * <p>This parameter corresponds to the Output Table Name parameter under Output Name of Current Node in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
-             * This parameter is equivalent to the Output Table Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <strong>example:</strong>
+             * <p>ods_user_info_d</p>
              */
             public Builder refTableName(String refTableName) {
                 this.refTableName = refTableName;
@@ -350,41 +398,47 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class NodeConfiguration extends TeaModel {
-        @NameInMap("AutoRerunIntervalMillis")
+        @com.aliyun.core.annotation.NameInMap("AutoRerunIntervalMillis")
         private Long autoRerunIntervalMillis;
 
-        @NameInMap("AutoRerunTimes")
+        @com.aliyun.core.annotation.NameInMap("AutoRerunTimes")
         private Long autoRerunTimes;
 
-        @NameInMap("CronExpress")
+        @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
 
-        @NameInMap("CycleType")
+        @com.aliyun.core.annotation.NameInMap("CycleType")
         private String cycleType;
 
-        @NameInMap("DependentNodeIdList")
+        @com.aliyun.core.annotation.NameInMap("DependentNodeIdList")
         private String dependentNodeIdList;
 
-        @NameInMap("DependentType")
+        @com.aliyun.core.annotation.NameInMap("DependentType")
         private String dependentType;
 
-        @NameInMap("InputList")
-        private java.util.List < InputList> inputList;
+        @com.aliyun.core.annotation.NameInMap("InputList")
+        private java.util.List<InputList> inputList;
 
-        @NameInMap("OutputList")
-        private java.util.List < OutputList> outputList;
+        @com.aliyun.core.annotation.NameInMap("OutputList")
+        private java.util.List<OutputList> outputList;
 
-        @NameInMap("ParaValue")
+        @com.aliyun.core.annotation.NameInMap("ParaValue")
         private String paraValue;
 
-        @NameInMap("RerunMode")
+        @com.aliyun.core.annotation.NameInMap("RerunMode")
         private String rerunMode;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private Long resourceGroupId;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private NodeConfiguration(Builder builder) {
@@ -455,14 +509,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * @return inputList
          */
-        public java.util.List < InputList> getInputList() {
+        public java.util.List<InputList> getInputList() {
             return this.inputList;
         }
 
         /**
          * @return outputList
          */
-        public java.util.List < OutputList> getOutputList() {
+        public java.util.List<OutputList> getOutputList() {
             return this.outputList;
         }
 
@@ -501,15 +555,18 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String cycleType; 
             private String dependentNodeIdList; 
             private String dependentType; 
-            private java.util.List < InputList> inputList; 
-            private java.util.List < OutputList> outputList; 
+            private java.util.List<InputList> inputList; 
+            private java.util.List<OutputList> outputList; 
             private String paraValue; 
             private String rerunMode; 
             private Long resourceGroupId; 
             private String schedulerType; 
 
             /**
-             * The interval at which the node corresponding to the file is rerun. Unit: milliseconds.
+             * <p>The interval at which the node corresponding to the file is rerun. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120000</p>
              */
             public Builder autoRerunIntervalMillis(Long autoRerunIntervalMillis) {
                 this.autoRerunIntervalMillis = autoRerunIntervalMillis;
@@ -517,7 +574,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the node corresponding to the file can be rerun.
+             * <p>The number of times that the node corresponding to the file can be rerun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder autoRerunTimes(Long autoRerunTimes) {
                 this.autoRerunTimes = autoRerunTimes;
@@ -525,7 +585,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression that is used to schedule the node corresponding to the file.
+             * <p>The CRON expression that is used to schedule the node corresponding to the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 05 00 * * ?</p>
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -533,10 +596,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. A value of NOT_DAY indicates that the node is scheduled to run by minute or hour. A value of DAY indicates that the node is scheduled to run by day, week, or month.
-             * <p>
+             * <p>The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.</p>
+             * <p>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
-             * This parameter is equivalent to the Scheduling Cycle parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <strong>example:</strong>
+             * <p>DAY</p>
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -544,10 +608,11 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the nodes on which the node corresponding to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).
-             * <p>
+             * <p>The ID of the node on which the node that corresponds to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).</p>
+             * <p>The value of this parameter is equivalent to the ID of the node that you specified after you select Other Nodes for Cross-Cycle Dependency (Original Previous-Cycle Dependency) in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
-             * This parameter is equivalent to the field that appears after Previous Cycle is selected and the Depend On parameter is set to Other Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <strong>example:</strong>
+             * <p>5,10,15,20</p>
              */
             public Builder dependentNodeIdList(String dependentNodeIdList) {
                 this.dependentNodeIdList = dependentNodeIdList;
@@ -555,13 +620,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cross-cycle scheduling dependency of the node that corresponds to the file. Valid values:
-             * <p>
+             * <p>The type of the cross-cycle scheduling dependency of the node. Valid values:</p>
+             * <ul>
+             * <li>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</li>
+             * <li>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</li>
+             * <li>USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</li>
+             * <li>NONE: No cross-cycle scheduling dependency type is selected for the node.</li>
+             * </ul>
              * 
-             * *   SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.
-             * *   CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.
-             * *   USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.
-             * *   NONE: No cross-cycle scheduling dependency type is selected for the node.
+             * <strong>example:</strong>
+             * <p>USER_DEFINE</p>
              */
             public Builder dependentType(String dependentType) {
                 this.dependentType = dependentType;
@@ -569,29 +637,28 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The output names of the parent files on which the current file depends.
+             * <p>The output names of the parent files on which the current file depends.</p>
              */
-            public Builder inputList(java.util.List < InputList> inputList) {
+            public Builder inputList(java.util.List<InputList> inputList) {
                 this.inputList = inputList;
                 return this;
             }
 
             /**
-             * The output names of the current file.
-             * <p>
-             * 
-             * This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <p>The output names of the current file.</p>
+             * <p>This parameter corresponds to the Output Name of Current Node parameter in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              */
-            public Builder outputList(java.util.List < OutputList> outputList) {
+            public Builder outputList(java.util.List<OutputList> outputList) {
                 this.outputList = outputList;
                 return this;
             }
 
             /**
-             * The scheduling parameters.
-             * <p>
+             * <p>The scheduling parameters of the node.</p>
+             * <p>This parameter corresponds to the Scheduling Parameter section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information about the configurations of the scheduling parameters, see <a href="https://help.aliyun.com/document_detail/137548.html">Configure scheduling parameters</a>.</p>
              * 
-             * This parameter is equivalent to the configuration of the scheduling parameters in the Parameters section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](~~137548~~).
+             * <strong>example:</strong>
+             * <p>a=x b=y</p>
              */
             public Builder paraValue(String paraValue) {
                 this.paraValue = paraValue;
@@ -599,14 +666,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node can be rerun. Valid values:
-             * <p>
+             * <p>Indicates whether the node that corresponds to the file can be rerun. Valid values:</p>
+             * <ul>
+             * <li>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * <li>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</li>
+             * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+             * </ul>
+             * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              * 
-             * *   ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.
-             * *   FAILURE_ALLOWED: The node can be rerun only after it fails to run.
-             * *   ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.
-             * 
-             * This parameter is equivalent to the Rerun parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).
+             * <strong>example:</strong>
+             * <p>ALL_ALLOWED</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -614,7 +683,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group that is used to run the node that corresponds to the file. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.
+             * <p>The ID of the resource group that is used to run the node that corresponds to the file. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the available resource groups in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>375827434852437</p>
              */
             public Builder resourceGroupId(Long resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -622,13 +694,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling type of the node. Valid values:
-             * <p>
+             * <p>The scheduling type of the node. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The node is an auto triggered node.</li>
+             * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</li>
+             * <li>PAUSE: The node is a paused node.</li>
+             * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
+             * </ul>
              * 
-             * *   NORMAL: The node is an auto triggered node.
-             * *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.
-             * *   PAUSE: The node is a paused node.
-             * *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -642,38 +717,44 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class CommittedFile extends TeaModel {
-        @NameInMap("ChangeType")
+        @com.aliyun.core.annotation.NameInMap("ChangeType")
         private String changeType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Committor")
+        @com.aliyun.core.annotation.NameInMap("Committor")
         private String committor;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePropertyContent")
+        @com.aliyun.core.annotation.NameInMap("FilePropertyContent")
         private FilePropertyContent filePropertyContent;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Long fileType;
 
-        @NameInMap("NodeConfiguration")
+        @com.aliyun.core.annotation.NameInMap("NodeConfiguration")
         private NodeConfiguration nodeConfiguration;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("UseType")
+        @com.aliyun.core.annotation.NameInMap("UseType")
         private String useType;
 
         private CommittedFile(Builder builder) {
@@ -789,7 +870,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.
+             * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPDATE</p>
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -797,7 +881,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the file version.
+             * <p>The description of the file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Second version submission</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -805,7 +892,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the file of the current version.
+             * <p>The ID of the Alibaba Cloud account that is used to generate the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7384234****</p>
              */
             public Builder committor(String committor) {
                 this.committor = committor;
@@ -813,7 +903,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code in the file of the current version.
+             * <p>The code in the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHOW TABLES;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -821,7 +914,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -829,7 +925,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello_dataworks.sql</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -837,7 +936,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the file.
+             * <p>The details of the file.</p>
              */
             public Builder filePropertyContent(FilePropertyContent filePropertyContent) {
                 this.filePropertyContent = filePropertyContent;
@@ -845,7 +944,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
+             * <p>The type of the code for the file. The code of files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fileType(Long fileType) {
                 this.fileType = fileType;
@@ -853,7 +955,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling properties of the node that corresponds to the file.
+             * <p>The scheduling properties of the node that corresponds to the file.</p>
              */
             public Builder nodeConfiguration(NodeConfiguration nodeConfiguration) {
                 this.nodeConfiguration = nodeConfiguration;
@@ -861,7 +963,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node that is scheduled.
+             * <p>The ID of the node that is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>421429</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -869,15 +974,18 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The module to which the file belongs. Valid values:
-             * <p>
+             * <p>The module to which the file belongs. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The file is used for DataStudio.</li>
+             * <li>MANUAL: The file is used for a manually triggered node.</li>
+             * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
+             * <li>SKIP: The file is used for a dry-run DataStudio node.</li>
+             * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
+             * <li>COMPONENT: The file is used for a snippet.</li>
+             * </ul>
              * 
-             * *   NORMAL: The file is used for DataStudio.
-             * *   MANUAL: The file is used for a manually triggered node.
-             * *   MANUAL_BIZ: The file is used for a manually triggered workflow.
-             * *   SKIP: The file is used for a dry-run DataStudio node.
-             * *   ADHOCQUERY: The file is used for an ad hoc query.
-             * *   COMPONENT: The file is used for a snippet.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -891,41 +999,47 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class DeletedFile extends TeaModel {
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CurrentVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private Long currentVersion;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Long fileType;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ParentFileId")
+        @com.aliyun.core.annotation.NameInMap("ParentFileId")
         private Long parentFileId;
 
-        @NameInMap("UseType")
+        @com.aliyun.core.annotation.NameInMap("UseType")
         private String useType;
 
         private DeletedFile(Builder builder) {
@@ -1050,7 +1164,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * The ID of the workflow to which the file belongs.
+             * <p>The ID of the workflow to which the file belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74328</p>
              */
             public Builder businessId(Long businessId) {
                 this.businessId = businessId;
@@ -1058,7 +1175,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code in the file of the current version.
+             * <p>The code in the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHOW TABLES;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1066,7 +1186,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version number of the file.
+             * <p>The latest version number of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -1074,7 +1197,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance with which the file is associated.
+             * <p>The name of the data source with which the file is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1082,7 +1208,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -1090,7 +1219,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello_dataworks.sql</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1098,7 +1230,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
+             * <p>The type of the code for the file. The code of files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fileType(Long fileType) {
                 this.fileType = fileType;
@@ -1106,7 +1241,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.
+             * <p>The ID of the folder to which the file belongs. You can call the <a href="https://help.aliyun.com/document_detail/173952.html">GetFolder</a> operation to query the details of the file based on the folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aldurie78l2falure</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -1114,7 +1252,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node that is scheduled.
+             * <p>The ID of the node that is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>421429</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -1122,7 +1263,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the file.
+             * <p>The file owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7384234****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1130,7 +1274,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the do-while node or for-each node that corresponds to the file.
+             * <p>The ID of the do-while node or for-each node that corresponds to the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234122</p>
              */
             public Builder parentFileId(Long parentFileId) {
                 this.parentFileId = parentFileId;
@@ -1138,15 +1285,18 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The module to which the file belongs. Valid values:
-             * <p>
+             * <p>The module to which the file belongs. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The file is used for DataStudio.</li>
+             * <li>MANUAL: The file is used for a manually triggered node.</li>
+             * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
+             * <li>SKIP: The file is used for a dry-run DataStudio node.</li>
+             * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
+             * <li>COMPONENT: The file is used for a snippet.</li>
+             * </ul>
              * 
-             * *   NORMAL: The file is used for DataStudio.
-             * *   MANUAL: The file is used for a manually triggered node.
-             * *   MANUAL_BIZ: The file is used for a manually triggered workflow.
-             * *   SKIP: The file is used for a dry-run DataStudio node.
-             * *   ADHOCQUERY: The file is used for an ad hoc query.
-             * *   COMPONENT: The file is used for a snippet.
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -1160,17 +1310,23 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class FileExecutionCommand extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Long fileType;
 
         private FileExecutionCommand(Builder builder) {
@@ -1223,7 +1379,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Long fileType; 
 
             /**
-             * The code in the file of the current version.
+             * <p>The code in the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHOW TABLES;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1231,7 +1390,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance with which the file is associated.
+             * <p>The name of the data source with which the file is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1239,7 +1401,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the file.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -1247,7 +1412,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).
+             * <p>The type of the code for the file. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fileType(Long fileType) {
                 this.fileType = fileType;
@@ -1261,17 +1429,23 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("IsPartitionColumn")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionColumn")
         private Boolean isPartitionColumn;
 
         private Columns(Builder builder) {
@@ -1324,7 +1498,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private Boolean isPartitionColumn; 
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -1332,7 +1509,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the column.
+             * <p>The data type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -1340,7 +1520,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the column.
+             * <p>The remarks of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1348,11 +1531,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the column is a partition key column. Valid values:
-             * <p>
+             * <p>Indicates whether the column is a partition key column. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true: The column is a partition key column.
-             * - false: The column is not a partition key column.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPartitionColumn(Boolean isPartitionColumn) {
                 this.isPartitionColumn = isPartitionColumn;
@@ -1366,26 +1552,32 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class TableModel extends TeaModel {
-        @NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        @com.aliyun.core.annotation.NameInMap("Columns")
+        private java.util.List<Columns> columns;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("Env")
+        @com.aliyun.core.annotation.NameInMap("Env")
         private String env;
 
-        @NameInMap("LifeCycle")
+        @com.aliyun.core.annotation.NameInMap("LifeCycle")
         private Long lifeCycle;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableModel(Builder builder) {
@@ -1409,7 +1601,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -1456,7 +1648,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String comment; 
             private String dataSourceName; 
             private String env; 
@@ -1465,15 +1657,18 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The columns in the table.
+             * <p>The columns in the table.</p>
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }
 
             /**
-             * The description of the table.
+             * <p>The remarks of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A new table</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1481,7 +1676,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance to which the table belongs.
+             * <p>The name of the data source to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_first</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1489,11 +1687,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The environment in which the table is used. Valid values:
-             * <p>
+             * <p>The environment in which the table is used. Valid values:</p>
+             * <ul>
+             * <li>DEV</li>
+             * <li>PROD</li>
+             * </ul>
              * 
-             * - DEV: development environment
-             * - PROD: production environment
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1501,7 +1702,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of the table. Unit: days.
+             * <p>The lifecycle of the metatable. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder lifeCycle(Long lifeCycle) {
                 this.lifeCycle = lifeCycle;
@@ -1509,7 +1713,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the table.
+             * <p>The path of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs://path/to/object</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1517,7 +1724,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tb_hello</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1531,17 +1741,23 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIDEEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIDEEventDetailResponseBody</p>
+     */
     public static class EventDetail extends TeaModel {
-        @NameInMap("CommittedFile")
+        @com.aliyun.core.annotation.NameInMap("CommittedFile")
         private CommittedFile committedFile;
 
-        @NameInMap("DeletedFile")
+        @com.aliyun.core.annotation.NameInMap("DeletedFile")
         private DeletedFile deletedFile;
 
-        @NameInMap("FileExecutionCommand")
+        @com.aliyun.core.annotation.NameInMap("FileExecutionCommand")
         private FileExecutionCommand fileExecutionCommand;
 
-        @NameInMap("TableModel")
+        @com.aliyun.core.annotation.NameInMap("TableModel")
         private TableModel tableModel;
 
         private EventDetail(Builder builder) {
@@ -1594,10 +1810,8 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private TableModel tableModel; 
 
             /**
-             * The data snapshot when the file is committed and deployed.
-             * <p>
-             * 
-             * The value of this parameter is not empty only when the message type is IDE_FILE_SUBMIT_BEFORE or IDE_FILE_DEPLOY_BEFORE.
+             * <p>The data snapshot when the file is committed and deployed.</p>
+             * <p>This parameter is valid only if the message type is IDE_FILE_SUBMIT_BEFORE or IDE_FILE_DEPLOY_BEFORE.</p>
              */
             public Builder committedFile(CommittedFile committedFile) {
                 this.committedFile = committedFile;
@@ -1605,7 +1819,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data snapshot when the file is deleted. The value of this parameter is not empty only when the message type is IDE_FILE_DELETE_BEFORE.
+             * <p>The data snapshot when the file is deleted. This parameter is valid only if the message type is IDE_FILE_DELETE_BEFORE.</p>
              */
             public Builder deletedFile(DeletedFile deletedFile) {
                 this.deletedFile = deletedFile;
@@ -1613,7 +1827,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data snapshot when the code in the file is run. The value of this parameter is not empty only when the message type is IDE_FILE_EXECUTE_BEFORE.
+             * <p>The data snapshot when the code in the file is run. This parameter is valid only if the message type is IDE_FILE_EXECUTE_BEFORE.</p>
              */
             public Builder fileExecutionCommand(FileExecutionCommand fileExecutionCommand) {
                 this.fileExecutionCommand = fileExecutionCommand;
@@ -1621,7 +1835,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data snapshot when the table is committed and deployed. The value of this parameter is not empty only when the message type is IDE_TABLE_SUBMIT_BEFORE or IDE_TABLE_DEPLOY_BEFORE.
+             * <p>The data snapshot when the table is committed and deployed. This parameter is valid only if the message type is IDE_TABLE_SUBMIT_BEFORE or IDE_TABLE_DEPLOY_BEFORE.</p>
              */
             public Builder tableModel(TableModel tableModel) {
                 this.tableModel = tableModel;

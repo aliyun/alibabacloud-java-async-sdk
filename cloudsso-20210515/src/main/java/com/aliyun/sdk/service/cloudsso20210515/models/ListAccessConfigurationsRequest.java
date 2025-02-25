@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessConfigurationsRequest} extends {@link RequestModel}
  *
  * <p>ListAccessConfigurationsRequest</p>
  */
 public class ListAccessConfigurationsRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("StatusNotifications")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusNotifications")
     private String statusNotifications;
 
     private ListAccessConfigurationsRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class ListAccessConfigurationsRequest extends Request {
         } 
 
         /**
-         * The ID of the directory.
+         * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -119,12 +122,12 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * The filter condition.
-         * <p>
+         * <p>The filter condition.</p>
+         * <p>Specify the value in the &lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt; format. The value is not case sensitive. You can set &lt;Attribute&gt; only to AccessConfigurationName and &lt;Operator&gt; only to eq or sw. The value eq indicates Equals. The value sw indicates Starts With.</p>
+         * <p>For example, if you set Filter to AccessConfigurationName sw test, the operation queries all access configurations whose names start with test. If you set Filter to AccessConfigurationName eq TestAccessConfiguration, the operation queries the access configuration whose name is TestAccessConfiguration.</p>
          * 
-         * Specify the value in the \<Attribute> \<Operator> \<Value> format. The value is not case sensitive. You can set \<Attribute> only to AccessConfigurationName and \<Operator> only to eq or sw. The value eq indicates Equals. The value sw indicates Starts With.
-         * 
-         * For example, if you set Filter to AccessConfigurationName sw test, the operation queries all access configurations whose names start with test. If you set Filter to AccessConfigurationName eq TestAccessConfiguration, the operation queries the access configuration whose name is TestAccessConfiguration.
+         * <strong>example:</strong>
+         * <p>AccessConfigurationName sw test</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -133,12 +136,12 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -147,10 +150,11 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * The token to return for the next page. If this is your first time to call this operation, you do not need to specify the `NextToken` parameter.
-         * <p>
+         * <p>The token to return for the next page. If this is your first time to call this operation, you do not need to specify the <code>NextToken</code> parameter.</p>
+         * <p>When you call this operation for the first time, if the total number of entries to return exceeds the value of <code>MaxResults</code>, the entries are truncated. Only the entries that match the value of <code>MaxResults</code> are returned, and the excess entries are not returned. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>NextToken</code> is returned. In the next call, you can use the value of <code>NextToken</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
          * 
-         * When you call this operation for the first time, if the total number of entries to return exceeds the value of `MaxResults`, the entries are truncated. Only the entries that match the value of `MaxResults` are returned, and the excess entries are not returned. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.
+         * <strong>example:</strong>
+         * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -159,10 +163,11 @@ public class ListAccessConfigurationsRequest extends Request {
         }
 
         /**
-         * The status notification. The status notification can be used to filter access configurations.
-         * <p>
+         * <p>The status notification. The status notification can be used to filter access configurations.</p>
+         * <p>Set the value to ReprovisionRequired, which indicates that the operation queries all access configurations that need to be re-provisioned.</p>
          * 
-         * Set the value to ReprovisionRequired, which indicates that the operation queries all access configurations that need to be re-provisioned.
+         * <strong>example:</strong>
+         * <p>ReprovisionRequired</p>
          */
         public Builder statusNotifications(String statusNotifications) {
             this.putQueryParameter("StatusNotifications", statusNotifications);

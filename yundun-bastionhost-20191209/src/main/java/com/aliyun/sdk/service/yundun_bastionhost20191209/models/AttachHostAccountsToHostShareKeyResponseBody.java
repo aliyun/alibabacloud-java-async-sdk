@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.yundun_bastionhost20191209.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachHostAccountsToHostShareKeyResponseBody} extends {@link TeaModel}
  *
  * <p>AttachHostAccountsToHostShareKeyResponseBody</p>
  */
 public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private AttachHostAccountsToHostShareKeyResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the call.
+         * <p>The result of the call.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -71,17 +74,23 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AttachHostAccountsToHostShareKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachHostAccountsToHostShareKeyResponseBody</p>
+     */
     public static class Results extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("HostAccountId")
+        @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
-        @NameInMap("HostShareKeyId")
+        @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
         private String hostShareKeyId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Results(Builder builder) {
@@ -134,7 +143,10 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code returned. If **OK** is returned, the association was successful. If another error code is returned, the association failed.
+             * <p>The error code returned. If <strong>OK</strong> is returned, the association was successful. If another error code is returned, the association failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -142,7 +154,10 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host account.
+             * <p>The ID of the host account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1201</p>
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -150,7 +165,10 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the shared key.
+             * <p>The ID of the shared key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10267</p>
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -158,7 +176,10 @@ public class AttachHostAccountsToHostShareKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The host account does not exist</p>
              */
             public Builder message(String message) {
                 this.message = message;

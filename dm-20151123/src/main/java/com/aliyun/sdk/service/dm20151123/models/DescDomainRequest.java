@@ -1,38 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescDomainRequest} extends {@link RequestModel}
  *
  * <p>DescDomainRequest</p>
  */
 public class DescDomainRequest extends Request {
-    @Query
-    @NameInMap("DomainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer domainId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireRealTimeDnsRecords")
+    private Boolean requireRealTimeDnsRecords;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescDomainRequest(Builder builder) {
         super(builder);
         this.domainId = builder.domainId;
         this.ownerId = builder.ownerId;
+        this.requireRealTimeDnsRecords = builder.requireRealTimeDnsRecords;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -65,6 +75,13 @@ public class DescDomainRequest extends Request {
     }
 
     /**
+     * @return requireRealTimeDnsRecords
+     */
+    public Boolean getRequireRealTimeDnsRecords() {
+        return this.requireRealTimeDnsRecords;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -81,6 +98,7 @@ public class DescDomainRequest extends Request {
     public static final class Builder extends Request.Builder<DescDomainRequest, Builder> {
         private Integer domainId; 
         private Long ownerId; 
+        private Boolean requireRealTimeDnsRecords; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -92,12 +110,17 @@ public class DescDomainRequest extends Request {
             super(request);
             this.domainId = request.domainId;
             this.ownerId = request.ownerId;
+            this.requireRealTimeDnsRecords = request.requireRealTimeDnsRecords;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * DomainId.
+         * <p>The ID of the domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13464</p>
          */
         public Builder domainId(Integer domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -111,6 +134,18 @@ public class DescDomainRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * <p>Determine whether to perform real-time DNS resolution</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder requireRealTimeDnsRecords(Boolean requireRealTimeDnsRecords) {
+            this.putQueryParameter("RequireRealTimeDnsRecords", requireRealTimeDnsRecords);
+            this.requireRealTimeDnsRecords = requireRealTimeDnsRecords;
             return this;
         }
 

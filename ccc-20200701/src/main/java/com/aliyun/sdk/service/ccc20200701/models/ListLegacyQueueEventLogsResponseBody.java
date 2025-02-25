@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLegacyQueueEventLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLegacyQueueEventLogsResponseBody</p>
  */
 public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListLegacyQueueEventLogsResponseBody(Builder builder) {
@@ -151,38 +156,44 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLegacyQueueEventLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyQueueEventLogsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Acid")
+        @com.aliyun.core.annotation.NameInMap("Acid")
         private String acid;
 
-        @NameInMap("Ani")
+        @com.aliyun.core.annotation.NameInMap("Ani")
         private String ani;
 
-        @NameInMap("AnswerPhone")
+        @com.aliyun.core.annotation.NameInMap("AnswerPhone")
         private String answerPhone;
 
-        @NameInMap("AnswerTime")
+        @com.aliyun.core.annotation.NameInMap("AnswerTime")
         private Long answerTime;
 
-        @NameInMap("Cause")
+        @com.aliyun.core.annotation.NameInMap("Cause")
         private String cause;
 
-        @NameInMap("Dnis")
+        @com.aliyun.core.annotation.NameInMap("Dnis")
         private String dnis;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("QueueTime")
+        @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
 
-        @NameInMap("StatisticDate")
+        @com.aliyun.core.annotation.NameInMap("StatisticDate")
         private String statisticDate;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("Vq")
+        @com.aliyun.core.annotation.NameInMap("Vq")
         private String vq;
 
         private List(Builder builder) {
@@ -392,17 +403,23 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLegacyQueueEventLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLegacyQueueEventLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -423,7 +440,7 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -449,7 +466,7 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -457,7 +474,7 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

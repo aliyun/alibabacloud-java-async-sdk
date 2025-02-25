@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveRecordVideoResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveRecordVideoResponseBody</p>
  */
 public class ListLiveRecordVideoResponseBody extends TeaModel {
-    @NameInMap("LiveRecordVideoList")
+    @com.aliyun.core.annotation.NameInMap("LiveRecordVideoList")
     private LiveRecordVideoList liveRecordVideoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListLiveRecordVideoResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The list of videos.
+         * <p>The list of videos.</p>
          */
         public Builder liveRecordVideoList(LiveRecordVideoList liveRecordVideoList) {
             this.liveRecordVideoList = liveRecordVideoList;
@@ -70,7 +75,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-****-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of videos returned.
+         * <p>The total number of videos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,9 +102,15 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveRecordVideoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveRecordVideoResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
-        private java.util.List < String > snapshot;
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
+        private java.util.List<String> snapshot;
 
         private Snapshots(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -110,17 +127,17 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < String > getSnapshot() {
+        public java.util.List<String> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < String > snapshot; 
+            private java.util.List<String> snapshot; 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < String > snapshot) {
+            public Builder snapshot(java.util.List<String> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }
@@ -132,47 +149,53 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveRecordVideoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveRecordVideoResponseBody</p>
+     */
     public static class Video extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Integer cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private Snapshots snapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("TemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
         private String templateGroupId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private Video(Builder builder) {
@@ -315,7 +338,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The ID of the video category.
+             * <p>The ID of the video category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78</p>
              */
             public Builder cateId(Integer cateId) {
                 this.cateId = cateId;
@@ -323,7 +349,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the video category.
+             * <p>The category of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Category name</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -331,7 +360,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The thumbnail URL of the video.
+             * <p>The URL of the video thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.aliyundoc.com/coversample.jpg">https://example.aliyundoc.com/coversample.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -339,7 +371,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the audio or video file was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-08T07:40:56Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -347,7 +382,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the video.
+             * <p>The description of the video file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description of the ApsaraVideo VOD video</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +393,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video. Unit: seconds.
+             * <p>The duration of the video file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135.6</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -363,7 +404,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the video was updated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-08T09:40:56Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -371,7 +415,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the mezzanine file. Unit: byte.
+             * <p>The size of the source video file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10897890</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -379,7 +426,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The array of video snapshot URLs.
+             * <p>The array of video snapshot URLs.</p>
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -387,15 +434,19 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the video. Valid values:
-             * <p>
-             * *   **Uploading:**: indicates that the video is being uploaded.
-             * *   **UploadFail**: indicates that the video failed to be uploaded.
-             * *   **UploadSucces**: indicates that the video was uploaded.
-             * *   **Transcoding**: indicates that the video is being transcoded.
-             * *   **TranscodeFail**: indicates that the video failed to be transcoded.
-             * *   **Blocked**: indicates that the video is blocked.
-             * *   **Normal**: indicates that the video is in a normal state.
+             * <p>The status of the video. Valid values:</p>
+             * <ul>
+             * <li><strong>Uploading</strong></li>
+             * <li><strong>UploadFail</strong></li>
+             * <li><strong>UploadSuccess</strong></li>
+             * <li><strong>Transcoding</strong></li>
+             * <li><strong>TranscodeFail</strong></li>
+             * <li><strong>Blocked</strong></li>
+             * <li><strong>Normal</strong>: The video is normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -403,7 +454,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the video. Separate multiple tags with commas (,).
+             * <p>The tags of the video. Multiple tags are separated with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1, tag2</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -411,7 +465,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template group.
+             * <p>The ID of the transcoding template group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder templateGroupId(String templateGroupId) {
                 this.templateGroupId = templateGroupId;
@@ -419,7 +476,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the video.
+             * <p>The title of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Title of the ApsaraVideo VOD video</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -427,7 +487,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the video.
+             * <p>The ID of the video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93ab850b4f6f*****54b6e91d24d81d4</p>
              */
             public Builder videoId(String videoId) {
                 this.videoId = videoId;
@@ -441,26 +504,32 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveRecordVideoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveRecordVideoResponseBody</p>
+     */
     public static class LiveRecordVideo extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("PlaylistId")
+        @com.aliyun.core.annotation.NameInMap("PlaylistId")
         private String playlistId;
 
-        @NameInMap("RecordEndTime")
+        @com.aliyun.core.annotation.NameInMap("RecordEndTime")
         private String recordEndTime;
 
-        @NameInMap("RecordStartTime")
+        @com.aliyun.core.annotation.NameInMap("RecordStartTime")
         private String recordStartTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("Video")
+        @com.aliyun.core.annotation.NameInMap("Video")
         private Video video;
 
         private LiveRecordVideo(Builder builder) {
@@ -540,7 +609,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             private Video video; 
 
             /**
-             * The name of the application.
+             * <p>The name of the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testApp</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -548,7 +620,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -556,7 +631,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the playlist.
+             * <p>The ID of the playlist.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder playlistId(String playlistId) {
                 this.playlistId = playlistId;
@@ -564,7 +642,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The recording end time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-08T08:44:56Z</p>
              */
             public Builder recordEndTime(String recordEndTime) {
                 this.recordEndTime = recordEndTime;
@@ -572,7 +653,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The recording start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-08T07:40:56Z</p>
              */
             public Builder recordStartTime(String recordStartTime) {
                 this.recordStartTime = recordStartTime;
@@ -580,7 +664,10 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the live stream.
+             * <p>The name of the live-to-VOD file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>live-test</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -588,7 +675,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the video.
+             * <p>The information about the live-to-VOD file.</p>
              */
             public Builder video(Video video) {
                 this.video = video;
@@ -602,9 +689,15 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveRecordVideoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveRecordVideoResponseBody</p>
+     */
     public static class LiveRecordVideoList extends TeaModel {
-        @NameInMap("LiveRecordVideo")
-        private java.util.List < LiveRecordVideo> liveRecordVideo;
+        @com.aliyun.core.annotation.NameInMap("LiveRecordVideo")
+        private java.util.List<LiveRecordVideo> liveRecordVideo;
 
         private LiveRecordVideoList(Builder builder) {
             this.liveRecordVideo = builder.liveRecordVideo;
@@ -621,17 +714,17 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         /**
          * @return liveRecordVideo
          */
-        public java.util.List < LiveRecordVideo> getLiveRecordVideo() {
+        public java.util.List<LiveRecordVideo> getLiveRecordVideo() {
             return this.liveRecordVideo;
         }
 
         public static final class Builder {
-            private java.util.List < LiveRecordVideo> liveRecordVideo; 
+            private java.util.List<LiveRecordVideo> liveRecordVideo; 
 
             /**
              * LiveRecordVideo.
              */
-            public Builder liveRecordVideo(java.util.List < LiveRecordVideo> liveRecordVideo) {
+            public Builder liveRecordVideo(java.util.List<LiveRecordVideo> liveRecordVideo) {
                 this.liveRecordVideo = liveRecordVideo;
                 return this;
             }

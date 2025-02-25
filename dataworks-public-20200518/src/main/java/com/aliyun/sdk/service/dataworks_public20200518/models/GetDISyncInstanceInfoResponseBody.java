@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDISyncInstanceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetDISyncInstanceInfoResponseBody</p>
  */
 public class GetDISyncInstanceInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDISyncInstanceInfoResponseBody(Builder builder) {
@@ -62,9 +67,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * *   If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization node. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.
-         * <p>
-         * *   If the TaskType parameter is set to DI_SOLITION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.
+         * <p>The status of the real-time synchronization task or data synchronization solution.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -72,7 +75,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the real-time synchronization node or data synchronization solution.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,7 +86,14 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -93,17 +106,23 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDISyncInstanceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncInstanceInfoResponseBody</p>
+     */
     public static class StepDetail extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StepId")
+        @com.aliyun.core.annotation.NameInMap("StepId")
         private Long stepId;
 
-        @NameInMap("StepName")
+        @com.aliyun.core.annotation.NameInMap("StepName")
         private String stepName;
 
         private StepDetail(Builder builder) {
@@ -156,7 +175,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String stepName; 
 
             /**
-             * Info.
+             * <p>The information of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fusionProps&quot;:{&quot;dataSource&quot;:[{&quot;fileName&quot;:&quot;holo_20221020161613&quot;,&quot;status&quot;:&quot;SUCCESS&quot;}]},&quot;customProps&quot;:{&quot;showSN&quot;:true,&quot;columns&quot;:[{&quot;dataIndex&quot;:&quot;fileName&quot;,&quot;width&quot;:0.8,&quot;title&quot;:&quot;Real-time synchronization name&quot;},{&quot;dataIndex&quot;:&quot;status&quot;,&quot;width&quot;:0.2,&quot;title&quot;:&quot;Status&quot;}]},&quot;componentName&quot;:&quot;Table&quot;}</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -164,7 +186,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the step in the data synchronization solution.
+             * <p>The status of the step in the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -172,7 +197,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the step in the data synchronization solution.
+             * <p>The ID of the step in the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder stepId(Long stepId) {
                 this.stepId = stepId;
@@ -180,7 +208,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the data synchronization solution.
+             * <p>The name of the step in the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create a base table</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -194,18 +225,24 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDISyncInstanceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncInstanceInfoResponseBody</p>
+     */
     public static class SolutionInfo extends TeaModel {
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StepDetail")
-        private java.util.List < StepDetail> stepDetail;
+        @com.aliyun.core.annotation.NameInMap("StepDetail")
+        private java.util.List<StepDetail> stepDetail;
 
         private SolutionInfo(Builder builder) {
             this.creatorName = builder.creatorName;
@@ -246,7 +283,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         /**
          * @return stepDetail
          */
-        public java.util.List < StepDetail> getStepDetail() {
+        public java.util.List<StepDetail> getStepDetail() {
             return this.stepDetail;
         }
 
@@ -254,10 +291,13 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String creatorName; 
             private Long id; 
             private String status; 
-            private java.util.List < StepDetail> stepDetail; 
+            private java.util.List<StepDetail> stepDetail; 
 
             /**
-             * The step details of the synchronization solution.
+             * <p>The creator of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataworks_3h1</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -265,7 +305,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the data synchronization solution.
+             * <p>The ID of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -273,7 +316,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization solution.
+             * <p>The status of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -281,9 +327,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the step in the data synchronization solution.
+             * <p>The step details of the data synchronization solution.</p>
              */
-            public Builder stepDetail(java.util.List < StepDetail> stepDetail) {
+            public Builder stepDetail(java.util.List<StepDetail> stepDetail) {
                 this.stepDetail = stepDetail;
                 return this;
             }
@@ -295,17 +341,23 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDISyncInstanceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncInstanceInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SolutionInfo")
+        @com.aliyun.core.annotation.NameInMap("SolutionInfo")
         private SolutionInfo solutionInfo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -358,9 +410,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * *   If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization node.
-             * <p>
-             * *   If the TaskType parameter is set to DI_SOLITION, the value null is returned.
+             * <p>The cause of the failure to obtain the status of the real-time synchronization task or data synchronization solution. If the status of the real-time synchronization task or data synchronization solution is obtained, the value null is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileId[100] is invalid</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -368,9 +421,13 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * *   If the TaskType parameter is set to DI_REALTIME, the value null is returned.
-             * <p>
-             * *   If the TaskType parameter is set to DI_SOLITION, the SolutionInfo parameter indicates the details of the data synchronization solution.
+             * <ul>
+             * <li>If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization task.</li>
+             * <li>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>streamx_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -378,7 +435,10 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data synchronization solution.
+             * <ul>
+             * <li>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</li>
+             * <li>If the TaskType parameter is set to DI_SOLUTION, the SolutionInfo parameter indicates the details of the data synchronization solution.</li>
+             * </ul>
              */
             public Builder solutionInfo(SolutionInfo solutionInfo) {
                 this.solutionInfo = solutionInfo;
@@ -386,7 +446,13 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the failure to obtain the status of the real-time synchronization node or data synchronization solution. If the status of the real-time synchronization node or data synchronization solution is obtained, the value null is returned.
+             * <ul>
+             * <li>If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization task. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.</li>
+             * <li>If the TaskType parameter is set to DI_SOLUTION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUN</p>
              */
             public Builder status(String status) {
                 this.status = status;

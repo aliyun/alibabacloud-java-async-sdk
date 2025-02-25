@@ -371,6 +371,9 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("SortOrder")
+        private Integer sortOrder;
+
         @NameInMap("Type")
         private String type;
 
@@ -381,6 +384,7 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
             this.files = builder.files;
             this.id = builder.id;
             this.name = builder.name;
+            this.sortOrder = builder.sortOrder;
             this.type = builder.type;
         }
 
@@ -435,6 +439,13 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sortOrder
+         */
+        public Integer getSortOrder() {
+            return this.sortOrder;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -448,6 +459,7 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
             private java.util.Map < String, ? > files; 
             private String id; 
             private String name; 
+            private Integer sortOrder; 
             private String type; 
 
             /**
@@ -495,6 +507,14 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * SortOrder.
+             */
+            public Builder sortOrder(Integer sortOrder) {
+                this.sortOrder = sortOrder;
                 return this;
             }
 

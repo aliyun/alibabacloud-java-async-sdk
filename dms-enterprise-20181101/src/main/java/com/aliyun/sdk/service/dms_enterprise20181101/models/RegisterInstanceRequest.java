@@ -1,136 +1,141 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterInstanceRequest} extends {@link RequestModel}
  *
  * <p>RegisterInstanceRequest</p>
  */
 public class RegisterInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DataLinkName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLinkName")
     private String dataLinkName;
 
-    @Query
-    @NameInMap("DatabasePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabasePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databasePassword;
 
-    @Query
-    @NameInMap("DatabaseUser")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseUser")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseUser;
 
-    @Query
-    @NameInMap("DbaUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbaUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dbaUid;
 
-    @Query
-    @NameInMap("DbaUidByString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbaUidByString")
     private String dbaUidByString;
 
-    @Query
-    @NameInMap("DdlOnline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdlOnline")
     private Integer ddlOnline;
 
-    @Query
-    @NameInMap("EcsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
     private String ecsInstanceId;
 
-    @Query
-    @NameInMap("EcsRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsRegion")
     private String ecsRegion;
 
-    @Query
-    @NameInMap("EnableSellSitd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSellSitd")
     private String enableSellSitd;
 
-    @Query
-    @NameInMap("EnvType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String envType;
 
-    @Query
-    @NameInMap("ExportTimeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportTimeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer exportTimeout;
 
-    @Query
-    @NameInMap("Host")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Host")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String host;
 
-    @Query
-    @NameInMap("InstanceAlias")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAlias")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceAlias;
 
-    @Query
-    @NameInMap("InstanceSource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceSource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceSource;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("NetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkType;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer port;
 
-    @Query
-    @NameInMap("QueryTimeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryTimeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer queryTimeout;
 
-    @Query
-    @NameInMap("SafeRule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SafeRule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String safeRule;
 
-    @Query
-    @NameInMap("Sid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sid")
     private String sid;
 
-    @Query
-    @NameInMap("SkipTest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipTest")
     private Boolean skipTest;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Long templateId;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("UseDsql")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseDsql")
     private Integer useDsql;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private RegisterInstanceRequest(Builder builder) {
@@ -440,16 +445,20 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The name of the database link for cross-database queries.
-         * <p>
+         * <p>The name of the database link for cross-database queries.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required if UseDsql is set to 1.</p>
+         * </li>
+         * <li><p>The name can contain only lowercase letters and underscores (_).</p>
+         * </li>
+         * <li><p>The name must be unique within a tenant.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter is required if UseDsql is set to 1.
-         * 
-         * *   The name can contain only lowercase letters and underscores (\_).
-         * 
-         * *   The name must be unique within a tenant.
+         * <strong>example:</strong>
+         * <p>dblink_test</p>
          */
         public Builder dataLinkName(String dataLinkName) {
             this.putQueryParameter("DataLinkName", dataLinkName);
@@ -458,7 +467,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The password that is used to log on to the database.
+         * <p>The password that is used to log on to the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder databasePassword(String databasePassword) {
             this.putQueryParameter("DatabasePassword", databasePassword);
@@ -467,7 +480,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The account that is used to log on to the database.
+         * <p>The account that is used to log on to the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest</p>
          */
         public Builder databaseUser(String databaseUser) {
             this.putQueryParameter("DatabaseUser", databaseUser);
@@ -476,7 +493,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the user who assumes the DBA role of the database instance. You can call the [ListUsers](~~141938~~) or [GetInstance](~~141567~~) operation to query the user ID.
+         * <p>The ID of the user who assumes the DBA role of the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22275482072787****</p>
          */
         public Builder dbaUid(Long dbaUid) {
             this.putQueryParameter("DbaUid", dbaUid);
@@ -485,7 +506,10 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * DbaUidByString.
+         * <p>The ID of the user who assumes the DBA role of the database instance. If the user ID is a non-numeric value such as a role or an account, you can use this parameter to replace DbaUid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22275482072787****</p>
          */
         public Builder dbaUidByString(String dbaUidByString) {
             this.putQueryParameter("DbaUidByString", dbaUidByString);
@@ -494,14 +518,18 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the lock-free schema change feature.</li>
+         * <li><strong>1</strong>: uses the online DDL of MySQL first.</li>
+         * <li><strong>2</strong>: uses the lock-free schema change feature of DMS first.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Supported database types: ApsaraDB RDS for MySQL, PolarDB for MySQL, ApsaraDB MyBase for MySQL, and third-party MySQL databases.</p>
+         * </blockquote>
          * 
-         * *   **0**: disables the lock-free schema change feature.
-         * *   **1**: uses the online DDL of MySQL first.
-         * *   **2**: uses the lock-free schema change feature of DMS first.
-         * 
-         * > Supported database types: ApsaraDB RDS for MySQL, PolarDB for MySQL, ApsaraDB MyBase for MySQL, and third-party MySQL databases.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder ddlOnline(Integer ddlOnline) {
             this.putQueryParameter("DdlOnline", ddlOnline);
@@ -510,10 +538,13 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance on which the database instance is deployed.
-         * <p>
+         * <p>The ID of the ECS instance on which the database instance is deployed.</p>
+         * <blockquote>
+         * <p>This parameter is required if the InstanceSource parameter is set to ECS_OWN.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the InstanceSource parameter is set to ECS_OWN.
+         * <strong>example:</strong>
+         * <p>i-2zei9gs1t7h8l7ac****</p>
          */
         public Builder ecsInstanceId(String ecsInstanceId) {
             this.putQueryParameter("EcsInstanceId", ecsInstanceId);
@@ -522,10 +553,13 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the database instance resides.
-         * <p>
+         * <p>The ID of the region in which the database instance resides.</p>
+         * <blockquote>
+         * <p>This parameter is required if the InstanceSource parameter is set to RDS, ECS_OWN, or VPC_IDC.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the InstanceSource parameter is set to RDS, ECS_OWN, or VPC_IDC.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder ecsRegion(String ecsRegion) {
             this.putQueryParameter("EcsRegion", ecsRegion);
@@ -534,9 +568,13 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * *   **Y:** enables the sensitive data protection feature
-         * <p>
-         * *   **NULL or other:** disables the sensitive data protection feature
+         * <ul>
+         * <li><strong>Y:</strong> enables the sensitive data protection feature</li>
+         * <li><strong>NULL or other:</strong> disables the sensitive data protection feature</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder enableSellSitd(String enableSellSitd) {
             this.putQueryParameter("EnableSellSitd", enableSellSitd);
@@ -545,17 +583,21 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The type of the environment in which the database instance is deployed. Valid values:
-         * <p>
+         * <p>The type of the environment in which the database instance is deployed. Valid values:</p>
+         * <ul>
+         * <li>product: production environment</li>
+         * <li>dev: development environment</li>
+         * <li>pre: pre-release environment</li>
+         * <li>test: test environment</li>
+         * <li>sit: system integration testing (SIT) environment</li>
+         * <li>uat: user acceptance testing (UAT) environment</li>
+         * <li>pet: stress testing environment</li>
+         * <li>stag: staging environment</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   product: production environment
-         * *   dev: development environment
-         * *   pre: pre-release environment
-         * *   test: test environment
-         * *   sit: system integration testing (SIT) environment
-         * *   uat: user acceptance testing (UAT) environment
-         * *   pet: stress testing environment
-         * *   stag: staging environment
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -564,7 +606,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The timeout period for exporting data from the database instance. Unit: seconds.
+         * <p>The timeout period for exporting data from the database instance. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder exportTimeout(Integer exportTimeout) {
             this.putQueryParameter("ExportTimeout", exportTimeout);
@@ -573,7 +619,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The host address that is used to connect to the database instance.
+         * <p>The host address that is used to connect to the database instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XX.XXX.254</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -582,7 +632,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.
+         * <p>The alias of the database instance. Specify an alias that can help you identify the database instance in DMS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance</p>
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -591,13 +645,17 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The source of the database instance. Valid values:
-         * <p>
+         * <p>The source of the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC_OWN:</strong> a self-managed database instance that is deployed on the Internet</li>
+         * <li><strong>RDS:</strong> an ApsaraDB RDS instance</li>
+         * <li><strong>ECS_OWN:</strong> a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>VPC_IDC:</strong> a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet
-         * *   **RDS:** an ApsaraDB RDS instance
-         * *   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance
-         * *   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder instanceSource(String instanceSource) {
             this.putQueryParameter("InstanceSource", instanceSource);
@@ -606,7 +664,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -615,11 +677,15 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the database instance. Valid values:
-         * <p>
+         * <p>The network type of the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC:</strong> classic network</li>
+         * <li><strong>VPC:</strong> VPC</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CLASSIC:** classic network
-         * *   **VPC:** VPC
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -628,7 +694,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The port that is used to connect to the database instance.
+         * <p>The port that is used to connect to the database instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -637,7 +707,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The timeout period for querying data in the database instance. Unit: seconds.
+         * <p>The timeout period for querying data in the database instance. Unit: seconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder queryTimeout(Integer queryTimeout) {
             this.putQueryParameter("QueryTimeout", queryTimeout);
@@ -646,7 +720,11 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The name of the security rule set (GroupName) for the database instance. You can call the [ListStandardGroups](~~417891~~) or [GetInstance](~~141567~~) operation to query the name of the security rule set.
+         * <p>The name of the security rule set (GroupName) for the database instance. You can call the <a href="https://help.aliyun.com/document_detail/417891.html">ListStandardGroups</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the name of the security rule set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder safeRule(String safeRule) {
             this.putQueryParameter("SafeRule", safeRule);
@@ -655,10 +733,13 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The system ID (SID) of the database.
-         * <p>
+         * <p>The system ID (SID) of the database.</p>
+         * <blockquote>
+         * <p>This parameter is required if the InstanceType parameter is set to ORACLE.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the InstanceType parameter is set to ORACLE.
+         * <strong>example:</strong>
+         * <p>XXX</p>
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -667,11 +748,14 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to skip the connectivity test. Valid values:
-         * <p>
+         * <p>Specifies whether to skip the connectivity test. Valid values:</p>
+         * <ul>
+         * <li><strong>true:</strong> skips the connectivity test</li>
+         * <li><strong>false:</strong> does not skip the connectivity test</li>
+         * </ul>
          * 
-         * *   **true:** skips the connectivity test
-         * *   **false:** does not skip the connectivity test
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder skipTest(Boolean skipTest) {
             this.putQueryParameter("SkipTest", skipTest);
@@ -680,7 +764,10 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template ID.
+         * <p>The ID of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31***</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -689,7 +776,10 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the template type.
+         * <p>The type of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INNER</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -698,7 +788,10 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -707,13 +800,17 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the cross-database query feature for the database instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the cross-database query feature for the database instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the cross-database query feature.</li>
+         * <li><strong>1</strong>: enables the cross-database query feature.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for PostgreSQL (compatible with Oracle), and ApsaraDB for Redis.</p>
+         * </blockquote>
          * 
-         * *   **0**: disables the cross-database query feature.
-         * *   **1**: enables the cross-database query feature.
-         * 
-         * > Supported database types: MySQL, SQL Server, PostgreSQL, PolarDB for PostgreSQL (compatible with Oracle), and ApsaraDB for Redis.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder useDsql(Integer useDsql) {
             this.putQueryParameter("UseDsql", useDsql);
@@ -722,10 +819,13 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the database instance belongs.
-         * <p>
+         * <p>The ID of the VPC to which the database instance belongs.</p>
+         * <blockquote>
+         * <p>This parameter is required if the InstanceSource parameter is set to VPC_IDC.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the InstanceSource parameter is set to VPC_IDC.
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

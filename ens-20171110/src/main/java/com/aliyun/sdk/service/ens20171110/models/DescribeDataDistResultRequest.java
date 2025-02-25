@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataDistResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataDistResultRequest</p>
  */
 public class DescribeDataDistResultRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("DataNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataNames")
     private String dataNames;
 
-    @Query
-    @NameInMap("DataVersions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataVersions")
     private String dataVersions;
 
-    @Query
-    @NameInMap("EnsRegionIds")
-    private java.util.List < String > ensRegionIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
+    private java.util.List<String> ensRegionIds;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("MaxDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDate")
     private String maxDate;
 
-    @Query
-    @NameInMap("MinDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDate")
     private String minDate;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeDataDistResultRequest(Builder builder) {
@@ -99,7 +104,7 @@ public class DescribeDataDistResultRequest extends Request {
     /**
      * @return ensRegionIds
      */
-    public java.util.List < String > getEnsRegionIds() {
+    public java.util.List<String> getEnsRegionIds() {
         return this.ensRegionIds;
     }
 
@@ -142,7 +147,7 @@ public class DescribeDataDistResultRequest extends Request {
         private String appId; 
         private String dataNames; 
         private String dataVersions; 
-        private java.util.List < String > ensRegionIds; 
+        private java.util.List<String> ensRegionIds; 
         private String instanceIds; 
         private String maxDate; 
         private String minDate; 
@@ -167,7 +172,11 @@ public class DescribeDataDistResultRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e76f8985-7965-41fc-925b-9648bb6bf650</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -176,7 +185,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * DataNames.
+         * <p>The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudgame-shanghai/deploy_app/20220215/1644895216305ACG_M21B-ota-1.1.2-D-0215.0628_V1_0002-pre-weiduan.zip</p>
          */
         public Builder dataNames(String dataNames) {
             this.putQueryParameter("DataNames", dataNames);
@@ -185,7 +197,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * DataVersions.
+         * <p>The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4885</p>
          */
         public Builder dataVersions(String dataVersions) {
             this.putQueryParameter("DataVersions", dataVersions);
@@ -194,9 +209,9 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * <p>The IDs of the ENS nodes.</p>
          */
-        public Builder ensRegionIds(java.util.List < String > ensRegionIds) {
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
             this.putQueryParameter("EnsRegionIds", ensRegionIdsShrink);
             this.ensRegionIds = ensRegionIds;
@@ -204,7 +219,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of ENS instances. Separate multiple IDs with commas (,). By default, all instances are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-7ecpqvkicnchxccozrp,i-6ecpqvkicnchxccozrp</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -213,7 +231,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * MaxDate.
+         * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-01</p>
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -222,7 +243,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02</p>
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -231,7 +255,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the distribution status of all data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -240,7 +267,10 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. This parameter is optional if you want to return the distribution status of all data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClusterScript} extends {@link TeaModel}
  *
  * <p>ClusterScript</p>
  */
 public class ClusterScript extends TeaModel {
-    @NameInMap("ExecutionFailStrategy")
+    @com.aliyun.core.annotation.NameInMap("ExecutionFailStrategy")
     private String executionFailStrategy;
 
-    @NameInMap("ExecutionMoment")
+    @com.aliyun.core.annotation.NameInMap("ExecutionMoment")
     private String executionMoment;
 
-    @NameInMap("NodeSelect")
+    @com.aliyun.core.annotation.NameInMap("NodeSelect")
     private NodeSelector nodeSelect;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @NameInMap("ScriptArgs")
+    @com.aliyun.core.annotation.NameInMap("ScriptArgs")
     private String scriptArgs;
 
-    @NameInMap("ScriptName")
+    @com.aliyun.core.annotation.NameInMap("ScriptName")
     private String scriptName;
 
-    @NameInMap("ScriptPath")
+    @com.aliyun.core.annotation.NameInMap("ScriptPath")
     private String scriptPath;
 
     private ClusterScript(Builder builder) {

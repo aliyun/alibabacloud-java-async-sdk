@@ -1,58 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCdsFileRequest} extends {@link RequestModel}
  *
  * <p>CreateCdsFileRequest</p>
  */
 public class CreateCdsFileRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("ConflictPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConflictPolicy")
     private String conflictPolicy;
 
-    @Query
-    @NameInMap("EndUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("FileHash")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileHash")
     private String fileHash;
 
-    @Query
-    @NameInMap("FileLength")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileLength")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long fileLength;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true, maxLength = 256, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String fileName;
 
-    @Query
-    @NameInMap("FileType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileType;
 
-    @Query
-    @NameInMap("ParentFileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    private String groupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentFileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentFileId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateCdsFileRequest(Builder builder) {
@@ -64,6 +72,7 @@ public class CreateCdsFileRequest extends Request {
         this.fileLength = builder.fileLength;
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
+        this.groupId = builder.groupId;
         this.parentFileId = builder.parentFileId;
         this.regionId = builder.regionId;
     }
@@ -131,6 +140,13 @@ public class CreateCdsFileRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return parentFileId
      */
     public String getParentFileId() {
@@ -152,6 +168,7 @@ public class CreateCdsFileRequest extends Request {
         private Long fileLength; 
         private String fileName; 
         private String fileType; 
+        private String groupId; 
         private String parentFileId; 
         private String regionId; 
 
@@ -168,12 +185,17 @@ public class CreateCdsFileRequest extends Request {
             this.fileLength = request.fileLength;
             this.fileName = request.fileName;
             this.fileType = request.fileType;
+            this.groupId = request.groupId;
             this.parentFileId = request.parentFileId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the cloud disk.
+         * <p>The ID of the cloud disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-82414*****</p>
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -182,66 +204,57 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The policy that is used when the file that you want to upload has the same name as an existing file in the cloud disk.
-         * <p>
+         * <p>The policy that is used when the file that you want to upload has the same name as an existing file in the cloud disk.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>refuse</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   refuse
+         * <p>denies creating the file</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * <li><p>auto_rename</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>automatically renames the file</p>
+         * <!-- -->
          * 
-         *     denies creating the file
+         * <p>.</p>
+         * </li>
+         * <li><p>ignore</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     .
+         * <p>allows the file to use the same name as the existing file in the cloud disk</p>
+         * <!-- -->
          * 
-         * *   auto_rename
+         * <p>.</p>
+         * </li>
+         * <li><p>over_write</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>overwrites the existing file in the cloud disk</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * </ul>
          * 
-         *     automatically renames the file
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   ignore
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     allows the file to use the same name as the existing file in the cloud disk
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   over_write
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     overwrites the existing file in the cloud disk
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
@@ -250,7 +263,10 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -259,7 +275,10 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The hash value of the SHA1 algorithm that is used by the file.
+         * <p>The hash value of the SHA1 algorithm that is used by the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C4A8D09CA3762AF61E59520943DC26494F8****</p>
          */
         public Builder fileHash(String fileHash) {
             this.putQueryParameter("FileHash", fileHash);
@@ -268,7 +287,11 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The file size. Unit: bytes.
+         * <p>The file size. Unit: bytes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder fileLength(Long fileLength) {
             this.putQueryParameter("FileLength", fileLength);
@@ -277,7 +300,11 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The file name.
+         * <p>The file name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testFile.txt</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -286,26 +313,27 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The file type.
-         * <p>
+         * <p>The file type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>file</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   file
+         * <!-- -->
+         * </li>
+         * <li><p>folder</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         *     <!-- -->
-         * 
-         * *   folder
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -314,7 +342,20 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder.
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the parent folder.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>637c9163b453b1a384874264ba79f3f9eab9****</p>
          */
         public Builder parentFileId(String parentFileId) {
             this.putQueryParameter("ParentFileId", parentFileId);
@@ -323,7 +364,11 @@ public class CreateCdsFileRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

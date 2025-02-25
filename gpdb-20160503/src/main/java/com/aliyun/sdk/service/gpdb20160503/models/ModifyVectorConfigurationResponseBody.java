@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVectorConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyVectorConfigurationResponseBody</p>
  */
 public class ModifyVectorConfigurationResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
     private ModifyVectorConfigurationResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class ModifyVectorConfigurationResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,10 +90,11 @@ public class ModifyVectorConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
-         * <p>
+         * <p>The error message that is returned.</p>
+         * <p>This parameter is returned only if the request fails.</p>
          * 
-         * This parameter is returned only if the request fails.
+         * <strong>example:</strong>
+         * <p>Failed to modify vector configuration.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -93,7 +102,10 @@ public class ModifyVectorConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107BE202-D1A2-479E-98E0-A8**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,11 +113,14 @@ public class ModifyVectorConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

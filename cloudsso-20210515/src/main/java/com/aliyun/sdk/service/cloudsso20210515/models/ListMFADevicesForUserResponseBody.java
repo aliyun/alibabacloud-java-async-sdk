@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMFADevicesForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListMFADevicesForUserResponseBody</p>
  */
 public class ListMFADevicesForUserResponseBody extends TeaModel {
-    @NameInMap("MFADevices")
+    @com.aliyun.core.annotation.NameInMap("MFADevices")
     private java.util.List < MFADevices> MFADevices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListMFADevicesForUserResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * The MFA devices.
+         * <p>The MFA devices.</p>
          */
         public Builder MFADevices(java.util.List < MFADevices> MFADevices) {
             this.MFADevices = MFADevices;
@@ -70,7 +70,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B9982ED-FD0D-5622-8EA0-7B768685DCE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of MFA devices.
+         * <p>The total number of MFA devices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -91,20 +97,26 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMFADevicesForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMFADevicesForUserResponseBody</p>
+     */
     public static class MFADevices extends TeaModel {
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private MFADevices(Builder builder) {
@@ -166,7 +178,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The ID of the MFA device.
+             * <p>The ID of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mfa-00ujhet8pycljj7j****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -174,7 +189,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MFA device.
+             * <p>The name of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice-MFA1</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -182,7 +200,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the MFA device. The value is fixed as TOTP, which indicates a virtual MFA device. Virtual MFA devices are based on the Time-based One-time Password (TOTP) algorithm.
+             * <p>The type of the MFA device. The value is fixed as TOTP, which indicates a virtual MFA device. Virtual MFA devices are based on the Time-based One-time Password (TOTP) algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TOTP</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -190,7 +211,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the MFA device was enabled.
+             * <p>The time when the MFA device was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-29T09:14:06Z</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -198,7 +222,10 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>u-00q8wbq42wiltcrk****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

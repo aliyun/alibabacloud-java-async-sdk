@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertLogCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAlertLogCountResponseBody</p>
  */
 public class DescribeAlertLogCountResponseBody extends TeaModel {
-    @NameInMap("AlertLogCount")
+    @com.aliyun.core.annotation.NameInMap("AlertLogCount")
     private java.util.List < AlertLogCount> alertLogCount;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAlertLogCountResponseBody(Builder builder) {
@@ -86,7 +86,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The statistics of alert logs.
+         * <p>The statistics of alert logs.</p>
          */
         public Builder alertLogCount(java.util.List < AlertLogCount> alertLogCount) {
             this.alertLogCount = alertLogCount;
@@ -94,10 +94,13 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p>The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +108,10 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +119,10 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C4A3709-BF52-42EE-87B5-7435F0929585</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +130,14 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,11 +150,17 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAlertLogCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogCountResponseBody</p>
+     */
     public static class Logs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Logs(Builder builder) {
@@ -177,7 +195,10 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the dimension field based on which alert logs are aggregated.
+             * <p>The name of the dimension field based on which alert logs are aggregated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -185,7 +206,10 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the dimension field based on which alert logs are aggregated.
+             * <p>The value of the dimension field based on which alert logs are aggregated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -199,11 +223,17 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertLogCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertLogCountResponseBody</p>
+     */
     public static class AlertLogCount extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < Logs> logs;
 
         private AlertLogCount(Builder builder) {
@@ -238,7 +268,10 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             private java.util.List < Logs> logs; 
 
             /**
-             * The number of alert logs.
+             * <p>The number of alert logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -246,7 +279,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * The details about alert logs.
+             * <p>The details about alert logs.</p>
              */
             public Builder logs(java.util.List < Logs> logs) {
                 this.logs = logs;

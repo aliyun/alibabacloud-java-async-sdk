@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpgradeMajorVersionPrecheckTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpgradeMajorVersionPrecheckTaskResponseBody</p>
  */
 public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeUpgradeMajorVersionPrecheckTaskResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,22 +84,25 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
         private Integer totalRecordCount; 
 
         /**
-         * The information about the upgrade check report.
+         * <p>The information about the upgrade check report.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +121,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The request ID.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1586777-41B5-5F9E-81E8-93DFDD379024</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The total number of entries in the upgrade check report.
+         * <p>The total number of entries in the upgrade check report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -131,32 +148,50 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpgradeMajorVersionPrecheckTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpgradeMajorVersionPrecheckTaskResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("CheckTime")
+        @com.aliyun.core.annotation.NameInMap("CheckTime")
         private String checkTime;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("RecommendDiskSize")
+        private Integer recommendDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("RecommendLeastMemSize")
+        private Integer recommendLeastMemSize;
+
+        @com.aliyun.core.annotation.NameInMap("RecommendMemSize")
+        private Integer recommendMemSize;
+
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("SourceMajorVersion")
+        @com.aliyun.core.annotation.NameInMap("SourceMajorVersion")
         private String sourceMajorVersion;
 
-        @NameInMap("TargetMajorVersion")
+        @com.aliyun.core.annotation.NameInMap("TargetMajorVersion")
         private String targetMajorVersion;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
 
         private Items(Builder builder) {
             this.checkTime = builder.checkTime;
             this.detail = builder.detail;
             this.effectiveTime = builder.effectiveTime;
+            this.recommendDiskSize = builder.recommendDiskSize;
+            this.recommendLeastMemSize = builder.recommendLeastMemSize;
+            this.recommendMemSize = builder.recommendMemSize;
             this.result = builder.result;
             this.sourceMajorVersion = builder.sourceMajorVersion;
             this.targetMajorVersion = builder.targetMajorVersion;
@@ -193,6 +228,27 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
+         * @return recommendDiskSize
+         */
+        public Integer getRecommendDiskSize() {
+            return this.recommendDiskSize;
+        }
+
+        /**
+         * @return recommendLeastMemSize
+         */
+        public Integer getRecommendLeastMemSize() {
+            return this.recommendLeastMemSize;
+        }
+
+        /**
+         * @return recommendMemSize
+         */
+        public Integer getRecommendMemSize() {
+            return this.recommendMemSize;
+        }
+
+        /**
          * @return result
          */
         public String getResult() {
@@ -224,16 +280,20 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             private String checkTime; 
             private String detail; 
             private String effectiveTime; 
+            private Integer recommendDiskSize; 
+            private Integer recommendLeastMemSize; 
+            private Integer recommendMemSize; 
             private String result; 
             private String sourceMajorVersion; 
             private String targetMajorVersion; 
             private Integer taskId; 
 
             /**
-             * The time at which the upgrade check was performed.
-             * <p>
+             * <p>The time at which the upgrade check was performed.</p>
+             * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
              * 
-             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1635143903000</p>
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -241,7 +301,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The content of the upgrade check report.
+             * <p>The content of the upgrade check report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[user_check_report]User check success\n[pg_upgrade_internal.log]Performing...</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -249,10 +312,11 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The expiration time of the upgrade check report.
-             * <p>
+             * <p>The expiration time of the upgrade check report.</p>
+             * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
              * 
-             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1635748703000</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -260,15 +324,61 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The result of the upgrade check.
-             * <p>
+             * <p>The minimum recommended disk capacity for upgrading. Unit: GB.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * </blockquote>
              * 
-             * Valid values:
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder recommendDiskSize(Integer recommendDiskSize) {
+                this.recommendDiskSize = recommendDiskSize;
+                return this;
+            }
+
+            /**
+             * <p>The minimum recommended memory for upgrading. Unit: GB.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * </blockquote>
              * 
-             * *   Success
-             * *   Fail
+             * <strong>example:</strong>
+             * <p>8</p>
+             */
+            public Builder recommendLeastMemSize(Integer recommendLeastMemSize) {
+                this.recommendLeastMemSize = recommendLeastMemSize;
+                return this;
+            }
+
+            /**
+             * <p>Recommended memory when upgrading. Unit: GB.</p>
+             * <p>When the memory of the instance is greater than or equal to the recommended memory, it will be upgraded at the fastest speed to minimize the read-only time of the instance.</p>
+             * <blockquote>
+             * <p>This parameter is returned only for RDS PostgreSQL instances.</p>
+             * </blockquote>
              * 
-             * >  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](~~218391~~).
+             * <strong>example:</strong>
+             * <p>32</p>
+             */
+            public Builder recommendMemSize(Integer recommendMemSize) {
+                this.recommendMemSize = recommendMemSize;
+                return this;
+            }
+
+            /**
+             * <p>The result of the upgrade check.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Success</li>
+             * <li>Fail</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the check result is <strong>Fail</strong>, you must check the value of the <strong>Detail</strong> parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see <a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -276,7 +386,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The original major engine version of the instance.
+             * <p>The original major engine version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.0</p>
              */
             public Builder sourceMajorVersion(String sourceMajorVersion) {
                 this.sourceMajorVersion = sourceMajorVersion;
@@ -284,7 +397,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The new major engine version of the instance.
+             * <p>The new major engine version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.0</p>
              */
             public Builder targetMajorVersion(String targetMajorVersion) {
                 this.targetMajorVersion = targetMajorVersion;
@@ -292,7 +408,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
             }
 
             /**
-             * The ID of the upgrade check task.
+             * <p>The ID of the upgrade check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>416980000</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskInfoHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskInfoHistoryResponseBody</p>
  */
 public class QueryTaskInfoHistoryResponseBody extends TeaModel {
-    @NameInMap("CurrentPageCursor")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageCursor")
     private CurrentPageCursor currentPageCursor;
 
-    @NameInMap("NextPageCursor")
+    @com.aliyun.core.annotation.NameInMap("NextPageCursor")
     private NextPageCursor nextPageCursor;
 
-    @NameInMap("Objects")
+    @com.aliyun.core.annotation.NameInMap("Objects")
     private java.util.List < Objects> objects;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePageCursor")
+    @com.aliyun.core.annotation.NameInMap("PrePageCursor")
     private PrePageCursor prePageCursor;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryTaskInfoHistoryResponseBody(Builder builder) {
@@ -151,32 +151,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskInfoHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskInfoHistoryResponseBody</p>
+     */
     public static class CurrentPageCursor extends TeaModel {
-        @NameInMap("Clientip")
+        @com.aliyun.core.annotation.NameInMap("Clientip")
         private String clientip;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeLong")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeLong")
         private Long createTimeLong;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskNum")
+        @com.aliyun.core.annotation.NameInMap("TaskNum")
         private Integer taskNum;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
         private CurrentPageCursor(Builder builder) {
@@ -352,32 +358,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskInfoHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskInfoHistoryResponseBody</p>
+     */
     public static class NextPageCursor extends TeaModel {
-        @NameInMap("Clientip")
+        @com.aliyun.core.annotation.NameInMap("Clientip")
         private String clientip;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeLong")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeLong")
         private Long createTimeLong;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskNum")
+        @com.aliyun.core.annotation.NameInMap("TaskNum")
         private Integer taskNum;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
         private NextPageCursor(Builder builder) {
@@ -553,32 +565,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskInfoHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskInfoHistoryResponseBody</p>
+     */
     public static class Objects extends TeaModel {
-        @NameInMap("Clientip")
+        @com.aliyun.core.annotation.NameInMap("Clientip")
         private String clientip;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeLong")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeLong")
         private Long createTimeLong;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskNum")
+        @com.aliyun.core.annotation.NameInMap("TaskNum")
         private Integer taskNum;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
         private Objects(Builder builder) {
@@ -754,32 +772,38 @@ public class QueryTaskInfoHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskInfoHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskInfoHistoryResponseBody</p>
+     */
     public static class PrePageCursor extends TeaModel {
-        @NameInMap("Clientip")
+        @com.aliyun.core.annotation.NameInMap("Clientip")
         private String clientip;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeLong")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeLong")
         private Long createTimeLong;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskNum")
+        @com.aliyun.core.annotation.NameInMap("TaskNum")
         private Integer taskNum;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
         private PrePageCursor(Builder builder) {

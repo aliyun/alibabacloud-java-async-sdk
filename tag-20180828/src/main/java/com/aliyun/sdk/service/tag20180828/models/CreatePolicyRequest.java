@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreatePolicyRequest</p>
  */
 public class CreatePolicyRequest extends Request {
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PolicyContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyContent;
 
-    @Query
-    @NameInMap("PolicyDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyDesc")
     private String policyDesc;
 
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private CreatePolicyRequest(Builder builder) {
@@ -168,11 +173,14 @@ public class CreatePolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to perform a dry run for the request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>false (default): performs a dry run and performs the actual request.</li>
+         * <li>true: performs only a dry run.</li>
+         * </ul>
          * 
-         * *   false: The system performs the related operation based on the parameter settings in the request. This is the default value.
-         * *   true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -199,10 +207,12 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The document of the tag policy.
-         * <p>
+         * <p>The document of the tag policy.</p>
+         * <p>For more information about the syntax of a tag policy, see <a href="https://help.aliyun.com/document_detail/417436.html">Syntax of a tag policy</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about the syntax of a tag policy, see [Syntax of a tag policy](~~417436~~).
+         * <strong>example:</strong>
+         * <p>{&quot;tags&quot;:{&quot;CostCenter&quot;:{&quot;tag_value&quot;:{&quot;@@assign&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;]},&quot;tag_key&quot;:{&quot;@@assign&quot;:&quot;CostCenter&quot;}}}}</p>
          */
         public Builder policyContent(String policyContent) {
             this.putQueryParameter("PolicyContent", policyContent);
@@ -211,10 +221,11 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The description of the tag policy.
-         * <p>
+         * <p>The description of the tag policy.</p>
+         * <p>The description must be 0 to 512 characters in length.</p>
          * 
-         * The description must be 0 to 512 characters in length.
+         * <strong>example:</strong>
+         * <p>This is a tag policy example.</p>
          */
         public Builder policyDesc(String policyDesc) {
             this.putQueryParameter("PolicyDesc", policyDesc);
@@ -223,10 +234,12 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The name of the tag policy.
-         * <p>
+         * <p>The name of the tag policy.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (\_).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -235,7 +248,10 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-shanghai.
+         * <p>The region ID. Set the value to cn-shanghai.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,13 +269,15 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The mode of the Tag Policy feature. Valid values:
-         * <p>
+         * <p>The mode of the Tag Policy feature. Valid values:</p>
+         * <ul>
+         * <li>USER: single-account mode. Set the value to USER if you use an Alibaba Cloud account or a member of a resource directory to call this API operation to create a tag policy for the Alibaba Cloud account or member.</li>
+         * <li>RD: multi-account mode. Set the value to RD if you use the management account of a resource directory to call this API operation to create a tag policy for the resource directory.</li>
+         * </ul>
+         * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
          * 
-         * *   USER: single-account mode. Set the value to USER if you use an Alibaba Cloud account or a member of a resource directory to call this API operation to create a tag policy for the Alibaba Cloud account or member.
-         * *   RD: multi-account mode. Set the value to RD if you use the management account of a resource directory to call this API operation to create a tag policy for the resource directory.
-         * 
-         * For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
+         * <strong>example:</strong>
+         * <p>RD</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

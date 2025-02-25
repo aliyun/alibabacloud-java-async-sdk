@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSaasPermissionGroupInfosResponseBody} extends {@link TeaModel}
  *
  * <p>ListSaasPermissionGroupInfosResponseBody</p>
  */
 public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSaasPermissionGroupInfosResponseBody(Builder builder) {
@@ -58,7 +58,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSaasPermissionGroupInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSaasPermissionGroupInfosResponseBody</p>
+     */
     public static class PgInfos extends TeaModel {
-        @NameInMap("PgCode")
+        @com.aliyun.core.annotation.NameInMap("PgCode")
         private String pgCode;
 
-        @NameInMap("PgEnName")
+        @com.aliyun.core.annotation.NameInMap("PgEnName")
         private String pgEnName;
 
-        @NameInMap("PgName")
+        @com.aliyun.core.annotation.NameInMap("PgName")
         private String pgName;
 
         private PgInfos(Builder builder) {
@@ -152,17 +161,23 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSaasPermissionGroupInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSaasPermissionGroupInfosResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PgInfos")
+        @com.aliyun.core.annotation.NameInMap("PgInfos")
         private java.util.List < PgInfos> pgInfos;
 
-        @NameInMap("SaasCode")
+        @com.aliyun.core.annotation.NameInMap("SaasCode")
         private String saasCode;
 
         private Data(Builder builder) {

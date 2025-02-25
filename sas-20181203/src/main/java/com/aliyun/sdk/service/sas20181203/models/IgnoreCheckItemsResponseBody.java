@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IgnoreCheckItemsResponseBody} extends {@link TeaModel}
  *
  * <p>IgnoreCheckItemsResponseBody</p>
  */
 public class IgnoreCheckItemsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private IgnoreCheckItemsResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class IgnoreCheckItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11EBEC99-B4B5-542E-8C17-B87B624C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

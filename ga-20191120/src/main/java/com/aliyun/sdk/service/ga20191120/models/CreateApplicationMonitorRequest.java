@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApplicationMonitorRequest</p>
  */
 public class CreateApplicationMonitorRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("Address")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String address;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DetectEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectEnable")
     private Boolean detectEnable;
 
-    @Query
-    @NameInMap("DetectThreshold")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer detectThreshold;
 
-    @Query
-    @NameInMap("DetectTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectTimes")
     private Integer detectTimes;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("OptionsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OptionsJson")
     private String optionsJson;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SilenceTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Integer silenceTime;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
     private CreateApplicationMonitorRequest(Builder builder) {
@@ -200,7 +199,7 @@ public class CreateApplicationMonitorRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance on which to execute the origin probing task.
+         * The ID of the GA instance on which you want to perform the origin probing task.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -221,9 +220,9 @@ public class CreateApplicationMonitorRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -232,11 +231,11 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the automatic diagnostics feature. Default value: false. Valid values:
+         * Specifies whether to enable the automatic diagnostics feature. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder detectEnable(Boolean detectEnable) {
             this.putQueryParameter("DetectEnable", detectEnable);
@@ -245,7 +244,7 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The threshold that is used to trigger the automatic diagnostics feature. Unit: %.
+         * The threshold that is used to trigger the automatic diagnostics feature. Unit: percentage.
          * <p>
          * 
          * Valid values: **0** to **100**.
@@ -259,7 +258,7 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The number of times that are required to reach the threshold before the automatic diagnostics feature can be triggered.
+         * The number of times that the threshold must be reached before the automatic diagnostics feature is triggered.
          * <p>
          * 
          * Valid values: **1** to **20**. Default value: **1**.
@@ -271,7 +270,7 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the listener on which to execute the origin probing task.
+         * The ID of the listener on which you want to perform the origin probing task.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -289,7 +288,7 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,10 +297,10 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The silence period of the automatic diagnostics feature. This parameter specifies the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.
+         * The silence period of the automatic diagnostics feature. This parameter specifies the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.
          * <p>
          * 
-         * If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of the **DetectTimes** parameter, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
+         * If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of **DetectTimes**, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
          * 
          * Unit: seconds. Valid values: **300** to **86400**. Default value: **300**.
          */
@@ -315,7 +314,7 @@ public class CreateApplicationMonitorRequest extends Request {
          * The name of the origin probing task.
          * <p>
          * 
-         * The name must be 4 to 100 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

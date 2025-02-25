@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDNAJobListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDNAJobListResponseBody</p>
  */
 public class QueryDNAJobListResponseBody extends TeaModel {
-    @NameInMap("JobList")
-    private java.util.List < JobList> jobList;
+    @com.aliyun.core.annotation.NameInMap("JobList")
+    private java.util.List<JobList> jobList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDNAJobListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     /**
      * @return jobList
      */
-    public java.util.List < JobList> getJobList() {
+    public java.util.List<JobList> getJobList() {
         return this.jobList;
     }
 
@@ -46,19 +51,22 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobList> jobList; 
+        private java.util.List<JobList> jobList; 
         private String requestId; 
 
         /**
-         * JobList.
+         * <p>The queried media fingerprint analysis jobs.</p>
          */
-        public Builder jobList(java.util.List < JobList> jobList) {
+        public Builder jobList(java.util.List<JobList> jobList) {
             this.jobList = jobList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class QueryDNAJobListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDNAJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDNAJobListResponseBody</p>
+     */
     public static class Input extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Input(Builder builder) {
@@ -110,7 +124,13 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Media.
+             * <p>The input file. The file can be an OSS object or a media asset. The path of an OSS object can be in one of the following formats:</p>
+             * <p>1. oss://bucket/object</p>
+             * <p>2. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+             * <p>In the preceding paths, bucket indicates an OSS bucket that resides in the same region as the current project, and object indicates the path of the object in the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1b1b9cd148034739af413150fded****</p>
              */
             public Builder media(String media) {
                 this.media = media;
@@ -118,7 +138,14 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the input file. Valid values:</p>
+             * <ol>
+             * <li>OSS: Object Storage Service (OSS) object.</li>
+             * <li>Media: media asset.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -132,41 +159,47 @@ public class QueryDNAJobListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDNAJobListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDNAJobListResponseBody</p>
+     */
     public static class JobList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DBId")
+        @com.aliyun.core.annotation.NameInMap("DBId")
         private String DBId;
 
-        @NameInMap("DNAResult")
+        @com.aliyun.core.annotation.NameInMap("DNAResult")
         private String DNAResult;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private JobList(Builder builder) {
@@ -291,7 +324,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Code.
+             * <p>The response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;InvalidParameter.ResourceNotFound&quot;</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -299,7 +335,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The configurations of the media fingerprint analysis job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -307,7 +346,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-28T03:21:37Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -315,7 +357,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * DBId.
+             * <p>The ID of the media fingerprint library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2288c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder DBId(String DBId) {
                 this.DBId = DBId;
@@ -323,7 +368,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * DNAResult.
+             * <p>The URL of the media fingerprint analysis result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://test_bucket.oss-cn-shanghai.aliyuncs.com/fingerprint/video/search_result/5/5.txt">http://test_bucket.oss-cn-shanghai.aliyuncs.com/fingerprint/video/search_result/5/5.txt</a></p>
              */
             public Builder DNAResult(String DNAResult) {
                 this.DNAResult = DNAResult;
@@ -331,7 +379,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>The time when the job was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-28T03:21:44Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -339,7 +390,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88c6ca184c0e47098a5b665e2a12****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -347,7 +401,7 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The details of the input file.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -355,7 +409,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;The resource operated &quot;a887d0b***d805ef6f7f6786302&quot; cannot be found&quot;</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -363,7 +420,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * <p>The primary key of the video. You must make sure that each primary key is unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3ca84a39a9024f19853b21be9cf9****</p>
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -371,7 +431,16 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job state. Valid values:</p>
+             * <ul>
+             * <li><strong>Queuing</strong>: The job is waiting in the queue.</li>
+             * <li><strong>Analysing</strong>: The job is in progress.</li>
+             * <li><strong>Success</strong>: The job is successful.</li>
+             * <li><strong>Fail</strong>: The job failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Queuing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,7 +448,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdna</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

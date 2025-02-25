@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AutoRenewInstanceParam} extends {@link TeaModel}
  *
  * <p>AutoRenewInstanceParam</p>
  */
 public class AutoRenewInstanceParam extends TeaModel {
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private String autoRenewDuration;
 
-    @NameInMap("AutoRenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDurationUnit")
     private String autoRenewDurationUnit;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
     private AutoRenewInstanceParam(Builder builder) {

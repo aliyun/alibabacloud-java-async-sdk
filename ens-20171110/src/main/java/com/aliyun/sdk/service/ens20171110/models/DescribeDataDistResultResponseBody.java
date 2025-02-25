@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataDistResultResponseBody</p>
  */
 public class DescribeDataDistResultResponseBody extends TeaModel {
-    @NameInMap("DistResults")
+    @com.aliyun.core.annotation.NameInMap("DistResults")
     private DistResults distResults;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataDistResultResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DistResults.
+         * <p>The distribution status of data files on edge instances.</p>
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -94,7 +99,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50373E71-7710-4620-8AAB-133CCE49451C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,17 +148,23 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StatusDescrip")
+        @com.aliyun.core.annotation.NameInMap("StatusDescrip")
         private String statusDescrip;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Instance(Builder builder) {
@@ -194,7 +217,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-5qzje8f5un1wmi341m2yetaxv</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -202,7 +228,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the distribution. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-19T07:24:52Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -210,7 +239,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescrip.
+             * <p>The description of the distribution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -218,7 +250,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the distribution status was last updated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-11T02:38:19Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -232,9 +267,15 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        @com.aliyun.core.annotation.NameInMap("Instance")
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -251,17 +292,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }
@@ -273,14 +314,20 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class StatusStat extends TeaModel {
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private String instanceCount;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Instances instances;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StatusStat(Builder builder) {
@@ -324,7 +371,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * InstanceCount.
+             * <p>The number of associated edge instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -332,7 +382,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * <p>The distribution status of the edge instance.</p>
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -340,7 +390,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The distribution status. The value is of the enumeration type. Valid values:</p>
+             * <ul>
+             * <li>SUCCESS: The distribution is successful.</li>
+             * <li>FAILED: The distribution failed.</li>
+             * <li>DISTING: The data is being distributed.</li>
+             * <li>POD_RESTARTING: The idle pod is being restarted.</li>
+             * <li>DELETED: The data is cleared or removed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -354,9 +414,15 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class StatusStats extends TeaModel {
-        @NameInMap("StatusStat")
-        private java.util.List < StatusStat> statusStat;
+        @com.aliyun.core.annotation.NameInMap("StatusStat")
+        private java.util.List<StatusStat> statusStat;
 
         private StatusStats(Builder builder) {
             this.statusStat = builder.statusStat;
@@ -373,17 +439,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         /**
          * @return statusStat
          */
-        public java.util.List < StatusStat> getStatusStat() {
+        public java.util.List<StatusStat> getStatusStat() {
             return this.statusStat;
         }
 
         public static final class Builder {
-            private java.util.List < StatusStat> statusStat; 
+            private java.util.List<StatusStat> statusStat; 
 
             /**
              * StatusStat.
              */
-            public Builder statusStat(java.util.List < StatusStat> statusStat) {
+            public Builder statusStat(java.util.List<StatusStat> statusStat) {
                 this.statusStat = statusStat;
                 return this;
             }
@@ -395,14 +461,20 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class DistResult extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StatusStats")
+        @com.aliyun.core.annotation.NameInMap("StatusStats")
         private StatusStats statusStats;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private DistResult(Builder builder) {
@@ -446,7 +518,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name.
+             * <p>The name of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gcs-prod-websocket-eip-unicom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,7 +529,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusStats.
+             * <p>The distribution status statistics.</p>
              */
             public Builder statusStats(StatusStats statusStats) {
                 this.statusStats = statusStats;
@@ -462,7 +537,10 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number of the data file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -476,9 +554,15 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataDistResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataDistResultResponseBody</p>
+     */
     public static class DistResults extends TeaModel {
-        @NameInMap("DistResult")
-        private java.util.List < DistResult> distResult;
+        @com.aliyun.core.annotation.NameInMap("DistResult")
+        private java.util.List<DistResult> distResult;
 
         private DistResults(Builder builder) {
             this.distResult = builder.distResult;
@@ -495,17 +579,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         /**
          * @return distResult
          */
-        public java.util.List < DistResult> getDistResult() {
+        public java.util.List<DistResult> getDistResult() {
             return this.distResult;
         }
 
         public static final class Builder {
-            private java.util.List < DistResult> distResult; 
+            private java.util.List<DistResult> distResult; 
 
             /**
              * DistResult.
              */
-            public Builder distResult(java.util.List < DistResult> distResult) {
+            public Builder distResult(java.util.List<DistResult> distResult) {
                 this.distResult = distResult;
                 return this;
             }

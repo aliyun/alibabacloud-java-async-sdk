@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HandleActiveSQLRecordRequest} extends {@link RequestModel}
  *
  * <p>HandleActiveSQLRecordRequest</p>
  */
 public class HandleActiveSQLRecordRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OperateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateType")
     private Integer operateType;
 
-    @Query
-    @NameInMap("Pids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pids;
 
     private HandleActiveSQLRecordRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class HandleActiveSQLRecordRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -93,7 +102,15 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * <p>The type of the operation on the process ID. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: cancel.</li>
+         * <li><strong>1</strong>: terminate.</li>
+         * <li><strong>2</strong>: forcefully terminate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder operateType(Integer operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -102,7 +119,11 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * Pids.
+         * <p>The process IDs. A process ID is a unique identifier of a query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;3003925,3003928&quot;</p>
          */
         public Builder pids(String pids) {
             this.putQueryParameter("Pids", pids);

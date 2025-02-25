@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindResolverRuleVpcRequest} extends {@link RequestModel}
  *
  * <p>BindResolverRuleVpcRequest</p>
  */
 public class BindResolverRuleVpcRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("Vpc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vpc")
     private java.util.List < Vpc> vpc;
 
     private BindResolverRuleVpcRequest(Builder builder) {
@@ -83,7 +83,15 @@ public class BindResolverRuleVpcRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +100,11 @@ public class BindResolverRuleVpcRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the forwarding rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hr****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -101,7 +113,7 @@ public class BindResolverRuleVpcRequest extends Request {
         }
 
         /**
-         * Vpc.
+         * <p>The VPCs that you want to associate with the forwarding rule.</p>
          */
         public Builder vpc(java.util.List < Vpc> vpc) {
             this.putQueryParameter("Vpc", vpc);
@@ -116,14 +128,20 @@ public class BindResolverRuleVpcRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BindResolverRuleVpcRequest} extends {@link TeaModel}
+     *
+     * <p>BindResolverRuleVpcRequest</p>
+     */
     public static class Vpc extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
         private Vpc(Builder builder) {
@@ -167,7 +185,10 @@ public class BindResolverRuleVpcRequest extends Request {
             private String vpcType; 
 
             /**
-             * RegionId.
+             * <p>The region ID of the outbound VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -175,7 +196,10 @@ public class BindResolverRuleVpcRequest extends Request {
             }
 
             /**
-             * vpcID
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-f8zvrvr1payllgz38****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -183,7 +207,14 @@ public class BindResolverRuleVpcRequest extends Request {
             }
 
             /**
-             * VpcType.
+             * <p>The VPC type. Valid values:</p>
+             * <ul>
+             * <li>STANDARD: standard VPC</li>
+             * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;

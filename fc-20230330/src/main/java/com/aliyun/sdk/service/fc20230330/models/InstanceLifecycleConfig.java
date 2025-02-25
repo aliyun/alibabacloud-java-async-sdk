@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstanceLifecycleConfig} extends {@link TeaModel}
  *
  * <p>InstanceLifecycleConfig</p>
  */
 public class InstanceLifecycleConfig extends TeaModel {
-    @NameInMap("initializer")
+    @com.aliyun.core.annotation.NameInMap("initializer")
     private LifecycleHook initializer;
 
-    @NameInMap("preStop")
+    @com.aliyun.core.annotation.NameInMap("preStop")
     private LifecycleHook preStop;
 
     private InstanceLifecycleConfig(Builder builder) {

@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpgradeMajorVersionPrecheckTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeUpgradeMajorVersionPrecheckTaskRequest</p>
  */
 public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 30)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TargetMajorVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetMajorVersion")
     private String targetMajorVersion;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Integer taskId;
 
     private DescribeUpgradeMajorVersionPrecheckTaskRequest(Builder builder) {
@@ -169,7 +174,11 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1c808s731l****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -196,10 +205,11 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Valid values: any non-zero positive integer. Default value: 1</p>
          * 
-         * Valid values: any non-zero positive integer. Default value: 1
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -208,14 +218,16 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>30 (default)</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   30 (default)
-         * *   50
-         * *   100
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,7 +254,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * The new major engine version of the instance. The new major engine version must be later than the original major engine version.
+         * <p>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0</p>
          */
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);
@@ -251,7 +266,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.
+         * <p>The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the <strong>TaskId</strong> parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>416980000</p>
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

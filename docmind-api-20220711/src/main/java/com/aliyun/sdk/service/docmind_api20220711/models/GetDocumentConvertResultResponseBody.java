@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentConvertResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentConvertResultResponseBody</p>
  */
 public class GetDocumentConvertResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Completed")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Completed")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean completed;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private GetDocumentConvertResultResponseBody(Builder builder) {
@@ -66,7 +71,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -94,7 +99,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Boolean completed; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private String status; 
@@ -108,7 +113,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         }
 
         /**
-         * Completed.
+         * <p>This parameter is required.</p>
          */
         public Builder completed(Boolean completed) {
             this.completed = completed;
@@ -118,7 +123,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -140,7 +145,10 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -153,17 +161,23 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentConvertResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentConvertResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyGtmConfigRequest} extends {@link RequestModel}
  *
  * <p>CopyGtmConfigRequest</p>
  */
 public class CopyGtmConfigRequest extends Request {
-    @Query
-    @NameInMap("CopyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CopyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String copyType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceId;
 
-    @Query
-    @NameInMap("TargetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetId;
 
     private CopyGtmConfigRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class CopyGtmConfigRequest extends Request {
         } 
 
         /**
-         * The type of the object that you want to copy. Only the INSTANCE type is supported.
+         * <p>The type of the object that is copied. Only the INSTANCE type is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder copyType(String copyType) {
             this.putQueryParameter("CopyType", copyType);
@@ -108,7 +117,10 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * The language that specific response parameters will use.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +129,11 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * The ID of the source object. Only instance IDs are supported.
+         * <p>The ID of the source object. Only instance IDs are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-0pp1j84v60d</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -126,7 +142,11 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * The ID of the target object. Only instance IDs are supported.
+         * <p>The ID of the target object. Only instance IDs are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-v0h1gaujg06</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopTimingSyntheticTaskRequest} extends {@link RequestModel}
  *
  * <p>StopTimingSyntheticTaskRequest</p>
  */
 public class StopTimingSyntheticTaskRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TaskIds")
-    @Validation(required = true)
-    private java.util.List < String > taskIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> taskIds;
 
     private StopTimingSyntheticTaskRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class StopTimingSyntheticTaskRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < String > getTaskIds() {
+    public java.util.List<String> getTaskIds() {
         return this.taskIds;
     }
 
     public static final class Builder extends Request.Builder<StopTimingSyntheticTaskRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > taskIds; 
+        private java.util.List<String> taskIds; 
 
         private Builder() {
             super();
@@ -69,7 +74,10 @@ public class StopTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,9 +86,10 @@ public class StopTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * The task IDs.
+         * <p>The task IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder taskIds(java.util.List < String > taskIds) {
+        public Builder taskIds(java.util.List<String> taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");
             this.putQueryParameter("TaskIds", taskIdsShrink);
             this.taskIds = taskIds;

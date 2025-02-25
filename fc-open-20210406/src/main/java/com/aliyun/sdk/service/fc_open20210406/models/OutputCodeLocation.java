@@ -50,7 +50,7 @@ public class OutputCodeLocation extends TeaModel {
         private String repositoryType; 
 
         /**
-         * location
+         * location.
          */
         public Builder location(String location) {
             this.location = location;
@@ -58,7 +58,7 @@ public class OutputCodeLocation extends TeaModel {
         }
 
         /**
-         * repositoryType
+         * repositoryType.
          */
         public Builder repositoryType(String repositoryType) {
             this.repositoryType = repositoryType;

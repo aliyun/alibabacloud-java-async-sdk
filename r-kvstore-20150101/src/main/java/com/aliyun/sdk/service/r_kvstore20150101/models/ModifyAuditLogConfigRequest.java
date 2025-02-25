@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAuditLogConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAuditLogConfigRequest</p>
  */
 public class ModifyAuditLogConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DbAudit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbAudit")
     private Boolean dbAudit;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Retention")
-    @Validation(maximum = 365, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
+    @com.aliyun.core.annotation.Validation(maximum = 365, minimum = 1)
     private Integer retention;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ModifyAuditLogConfigRequest(Builder builder) {
@@ -177,13 +177,17 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the audit log feature. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the audit log feature. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the audit log feature.</li>
+         * <li><strong>false</strong>: disables the audit log feature.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting architecture</a>, the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.</p>
+         * </blockquote>
          * 
-         * *   **true**: enables the audit log feature.
-         * *   **false**: disables the audit log feature.
-         * 
-         * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dbAudit(Boolean dbAudit) {
             this.putQueryParameter("DbAudit", dbAudit);
@@ -192,7 +196,11 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -237,11 +245,16 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The retention period of audit logs. Valid values: **1** to **365**. Unit: days.
-         * <p>
+         * <p>The retention period of audit logs. Valid values: <strong>1</strong> to <strong>365</strong>. Unit: days.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required only if the <strong>DbAudit</strong> parameter is set to <strong>true</strong>.</li>
+         * <li>The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   This parameter is required only if the **DbAudit** parameter is set to **true**.
-         * > *   The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);

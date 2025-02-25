@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachEnsInstancesRequest} extends {@link RequestModel}
  *
  * <p>AttachEnsInstancesRequest</p>
  */
 public class AttachEnsInstancesRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Scripts")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scripts")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scripts;
 
     private AttachEnsInstancesRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class AttachEnsInstancesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance. You can specify only one instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstacneId</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +88,11 @@ public class AttachEnsInstancesRequest extends Request {
         }
 
         /**
-         * Scripts.
+         * <p>The command that you want to execute on the instance. The command must be encoded in Base64 or UTF-8.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wget d2dldCBodHRwOi8vYWxpYWNzLWs4cy1jbxxxx</p>
          */
         public Builder scripts(String scripts) {
             this.putQueryParameter("Scripts", scripts);

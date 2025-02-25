@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetInstanceHealthResponseBody} extends {@link TeaModel}
  *
  * <p>SetInstanceHealthResponseBody</p>
  */
 public class SetInstanceHealthResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetInstanceHealthResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class SetInstanceHealthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B755AE57-6093-43E4-938E-DEA422A9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

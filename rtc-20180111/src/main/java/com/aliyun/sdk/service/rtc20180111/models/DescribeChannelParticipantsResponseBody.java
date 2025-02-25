@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChannelParticipantsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChannelParticipantsResponseBody</p>
  */
 public class DescribeChannelParticipantsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Integer timestamp;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
-    @NameInMap("UserList")
+    @com.aliyun.core.annotation.NameInMap("UserList")
     private UserList userList;
 
     private DescribeChannelParticipantsResponseBody(Builder builder) {
@@ -131,9 +136,15 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChannelParticipantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChannelParticipantsResponseBody</p>
+     */
     public static class UserList extends TeaModel {
-        @NameInMap("User")
-        private java.util.List < String > user;
+        @com.aliyun.core.annotation.NameInMap("User")
+        private java.util.List<String> user;
 
         private UserList(Builder builder) {
             this.user = builder.user;
@@ -150,17 +161,17 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         /**
          * @return user
          */
-        public java.util.List < String > getUser() {
+        public java.util.List<String> getUser() {
             return this.user;
         }
 
         public static final class Builder {
-            private java.util.List < String > user; 
+            private java.util.List<String> user; 
 
             /**
              * User.
              */
-            public Builder user(java.util.List < String > user) {
+            public Builder user(java.util.List<String> user) {
                 this.user = user;
                 return this;
             }

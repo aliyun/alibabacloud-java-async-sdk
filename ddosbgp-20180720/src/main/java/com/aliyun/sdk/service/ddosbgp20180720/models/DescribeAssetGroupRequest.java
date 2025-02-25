@@ -1,37 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeAssetGroupRequest</p>
  */
 public class DescribeAssetGroupRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private DescribeAssetGroupRequest(Builder builder) {
@@ -39,7 +35,6 @@ public class DescribeAssetGroupRequest extends Request {
         this.name = builder.name;
         this.region = builder.region;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
         this.type = builder.type;
     }
 
@@ -78,13 +73,6 @@ public class DescribeAssetGroupRequest extends Request {
     }
 
     /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    /**
      * @return type
      */
     public String getType() {
@@ -95,7 +83,6 @@ public class DescribeAssetGroupRequest extends Request {
         private String name; 
         private String region; 
         private String regionId; 
-        private String sourceIp; 
         private String type; 
 
         private Builder() {
@@ -107,12 +94,14 @@ public class DescribeAssetGroupRequest extends Request {
             this.name = request.name;
             this.region = request.region;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
 
         /**
-         * Name.
+         * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-lbj382l****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -121,7 +110,11 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region ID of the asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -130,7 +123,13 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,16 +138,15 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
-        /**
-         * Type.
+         * <p>The type of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>waf</strong>: WAF instance</li>
+         * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

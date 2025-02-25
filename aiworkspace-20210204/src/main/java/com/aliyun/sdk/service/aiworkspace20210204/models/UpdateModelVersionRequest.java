@@ -1,57 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateModelVersionRequest} extends {@link RequestModel}
  *
  * <p>UpdateModelVersionRequest</p>
  */
 public class UpdateModelVersionRequest extends Request {
-    @Path
-    @NameInMap("ModelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelId;
 
-    @Path
-    @NameInMap("VersionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("VersionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
-    @Body
-    @NameInMap("ApprovalStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
     private String approvalStatus;
 
-    @Body
-    @NameInMap("InferenceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompressionSpec")
+    private java.util.Map < String, ? > compressionSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
+    private java.util.Map < String, ? > evaluationSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InferenceSpec")
     private java.util.Map < String, ? > inferenceSpec;
 
-    @Body
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.Map < String, ? > metrics;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Body
-    @NameInMap("TrainingSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrainingSpec")
     private java.util.Map < String, ? > trainingSpec;
 
-    @Body
-    @NameInMap("VersionDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionDescription")
     private String versionDescription;
 
     private UpdateModelVersionRequest(Builder builder) {
@@ -59,6 +71,9 @@ public class UpdateModelVersionRequest extends Request {
         this.modelId = builder.modelId;
         this.versionName = builder.versionName;
         this.approvalStatus = builder.approvalStatus;
+        this.compressionSpec = builder.compressionSpec;
+        this.evaluationSpec = builder.evaluationSpec;
+        this.extraInfo = builder.extraInfo;
         this.inferenceSpec = builder.inferenceSpec;
         this.metrics = builder.metrics;
         this.options = builder.options;
@@ -100,6 +115,27 @@ public class UpdateModelVersionRequest extends Request {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return compressionSpec
+     */
+    public java.util.Map < String, ? > getCompressionSpec() {
+        return this.compressionSpec;
+    }
+
+    /**
+     * @return evaluationSpec
+     */
+    public java.util.Map < String, ? > getEvaluationSpec() {
+        return this.evaluationSpec;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -155,6 +191,9 @@ public class UpdateModelVersionRequest extends Request {
         private String modelId; 
         private String versionName; 
         private String approvalStatus; 
+        private java.util.Map < String, ? > compressionSpec; 
+        private java.util.Map < String, ? > evaluationSpec; 
+        private java.util.Map < String, ? > extraInfo; 
         private java.util.Map < String, ? > inferenceSpec; 
         private java.util.Map < String, ? > metrics; 
         private String options; 
@@ -172,6 +211,9 @@ public class UpdateModelVersionRequest extends Request {
             this.modelId = request.modelId;
             this.versionName = request.versionName;
             this.approvalStatus = request.approvalStatus;
+            this.compressionSpec = request.compressionSpec;
+            this.evaluationSpec = request.evaluationSpec;
+            this.extraInfo = request.extraInfo;
             this.inferenceSpec = request.inferenceSpec;
             this.metrics = request.metrics;
             this.options = request.options;
@@ -182,7 +224,10 @@ public class UpdateModelVersionRequest extends Request {
         } 
 
         /**
-         * ModelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-dfs1****5c</p>
          */
         public Builder modelId(String modelId) {
             this.putPathParameter("ModelId", modelId);
@@ -191,7 +236,10 @@ public class UpdateModelVersionRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("VersionName", versionName);
@@ -205,6 +253,33 @@ public class UpdateModelVersionRequest extends Request {
         public Builder approvalStatus(String approvalStatus) {
             this.putBodyParameter("ApprovalStatus", approvalStatus);
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * CompressionSpec.
+         */
+        public Builder compressionSpec(java.util.Map < String, ? > compressionSpec) {
+            this.putBodyParameter("CompressionSpec", compressionSpec);
+            this.compressionSpec = compressionSpec;
+            return this;
+        }
+
+        /**
+         * EvaluationSpec.
+         */
+        public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            this.putBodyParameter("EvaluationSpec", evaluationSpec);
+            this.evaluationSpec = evaluationSpec;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.putBodyParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
             return this;
         }
 

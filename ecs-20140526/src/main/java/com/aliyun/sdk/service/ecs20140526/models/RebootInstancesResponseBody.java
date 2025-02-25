@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>RebootInstancesResponseBody</p>
  */
 public class RebootInstancesResponseBody extends TeaModel {
-    @NameInMap("InstanceResponses")
+    @com.aliyun.core.annotation.NameInMap("InstanceResponses")
     private InstanceResponses instanceResponses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RebootInstancesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class RebootInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the responses returned for the instances, which contain the status of each instance before and after the operation is called and the operation results.
+         * <p>Details about instance-specific responses, which contain the status of each instance before and after the operation is called and the results of the operation.</p>
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -58,7 +63,10 @@ public class RebootInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class RebootInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RebootInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RebootInstancesResponseBody</p>
+     */
     public static class InstanceResponse extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CurrentStatus")
+        @com.aliyun.core.annotation.NameInMap("CurrentStatus")
         private String currentStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PreviousStatus")
+        @com.aliyun.core.annotation.NameInMap("PreviousStatus")
         private String previousStatus;
 
         private InstanceResponse(Builder builder) {
@@ -146,7 +160,10 @@ public class RebootInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * The error code that is returned for the operation on the instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+             * <p>The error code returned for the instance. A return value of 200 indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -154,7 +171,10 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The current status of the instance.
+             * <p>The current state of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stopping</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -162,7 +182,10 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1g6zv0ce8oghu7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +193,10 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned for the operation on the instance. The return value Success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+             * <p>The error message that is returned for the operation on the instance. The return value Success indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,7 +204,10 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance before the operation is called.
+             * <p>The state of the instance before the operation is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;
@@ -192,9 +221,15 @@ public class RebootInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RebootInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RebootInstancesResponseBody</p>
+     */
     public static class InstanceResponses extends TeaModel {
-        @NameInMap("InstanceResponse")
-        private java.util.List < InstanceResponse> instanceResponse;
+        @com.aliyun.core.annotation.NameInMap("InstanceResponse")
+        private java.util.List<InstanceResponse> instanceResponse;
 
         private InstanceResponses(Builder builder) {
             this.instanceResponse = builder.instanceResponse;
@@ -211,17 +246,17 @@ public class RebootInstancesResponseBody extends TeaModel {
         /**
          * @return instanceResponse
          */
-        public java.util.List < InstanceResponse> getInstanceResponse() {
+        public java.util.List<InstanceResponse> getInstanceResponse() {
             return this.instanceResponse;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceResponse> instanceResponse; 
+            private java.util.List<InstanceResponse> instanceResponse; 
 
             /**
              * InstanceResponse.
              */
-            public Builder instanceResponse(java.util.List < InstanceResponse> instanceResponse) {
+            public Builder instanceResponse(java.util.List<InstanceResponse> instanceResponse) {
                 this.instanceResponse = instanceResponse;
                 return this;
             }

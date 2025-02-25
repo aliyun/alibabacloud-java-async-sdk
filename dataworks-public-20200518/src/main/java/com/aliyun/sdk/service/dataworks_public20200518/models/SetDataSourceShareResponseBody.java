@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDataSourceShareResponseBody} extends {@link TeaModel}
  *
  * <p>SetDataSourceShareResponseBody</p>
  */
 public class SetDataSourceShareResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SetDataSourceShareResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class SetDataSourceShareResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the sharing operation.
+         * <p>The information about the sharing operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +75,10 @@ public class SetDataSourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +86,14 @@ public class SetDataSourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,11 +106,17 @@ public class SetDataSourceShareResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetDataSourceShareResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetDataSourceShareResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -134,7 +151,10 @@ public class SetDataSourceShareResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the data source failed to be shared. If the data source was shared, this parameter is left empty.
+             * <p>The reason why the data source failed to be shared. If the data source is successfully shared, the value of this parameter is an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datasource is wrong</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -142,11 +162,14 @@ public class SetDataSourceShareResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data source was shared. Valid values:
-             * <p>
+             * <p>Indicates whether the data source was shared. Valid values:</p>
+             * <ul>
+             * <li>success.</li>
+             * <li>fail. You can view the value of the Message parameter to identify the cause of the failure.</li>
+             * </ul>
              * 
-             * *   success: The data source was shared.
-             * *   fail: The data source failed to be shared. You can troubleshoot issues based on the Message parameter.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

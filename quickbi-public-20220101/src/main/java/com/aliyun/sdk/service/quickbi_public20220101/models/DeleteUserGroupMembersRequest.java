@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserGroupMembersRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserGroupMembersRequest</p>
  */
 public class DeleteUserGroupMembersRequest extends Request {
-    @Query
-    @NameInMap("UserGroupIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupIds;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private DeleteUserGroupMembersRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class DeleteUserGroupMembersRequest extends Request {
         } 
 
         /**
-         * UserGroupIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34fd141d-4598-4093-8c33-8e066dcb****,3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
@@ -79,7 +87,10 @@ public class DeleteUserGroupMembersRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>204627493484****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRoutineRelatedDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRoutineRelatedDomainsRequest</p>
  */
 public class DescribeRoutineRelatedDomainsRequest extends Request {
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private DescribeRoutineRelatedDomainsRequest(Builder builder) {
@@ -55,7 +55,11 @@ public class DescribeRoutineRelatedDomainsRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the routine. The name is unique in the same account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>routine_test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

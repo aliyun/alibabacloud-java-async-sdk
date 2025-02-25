@@ -62,7 +62,7 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AuditInfo.
+         * The details of the SQL audit.
          */
         public Builder auditInfo(AuditInfo auditInfo) {
             this.auditInfo = auditInfo;
@@ -70,7 +70,7 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
             private String project; 
 
             /**
-             * LogStore.
+             * The name of the LogStore.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -138,7 +138,7 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The name of the Log Service project.
              */
             public Builder project(String project) {
                 this.project = project;

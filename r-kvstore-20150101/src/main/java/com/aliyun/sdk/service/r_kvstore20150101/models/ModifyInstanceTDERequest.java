@@ -1,61 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceTDERequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceTDERequest</p>
  */
 public class ModifyInstanceTDERequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @Query
-    @NameInMap("EncryptionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionName")
     private String encryptionName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("TDEStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TDEStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String TDEStatus;
 
     private ModifyInstanceTDERequest(Builder builder) {
@@ -205,14 +205,18 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * The ID of the custom key. You can call the [DescribeEncryptionKeyList](~~302339~~) operation to query the key ID.
-         * <p>
+         * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/302339.html">DescribeEncryptionKeyList</a> operation to query the key ID.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> automatically generates a key.</p>
+         * </li>
+         * <li><p>To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of the KMS API.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If you do not specify this parameter, [Key Management Service (KMS)](~~28935~~) automatically generates a key.
-         * 
-         * *   To create a custom key, you can call the [CreateKey](~~28947~~) operation of the KMS API.
+         * <strong>example:</strong>
+         * <p>ad463061-992d-4195-8a94-ed63********</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -221,10 +225,13 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * The encryption algorithm. Default value: AES-CTR-256.
-         * <p>
+         * <p>The encryption algorithm. Default value: AES-CTR-256.</p>
+         * <blockquote>
+         * <p>This parameter is available only if the <strong>TDEStatus</strong> parameter is set to <strong>Enabled</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only if the **TDEStatus** parameter is set to **Enabled**.
+         * <strong>example:</strong>
+         * <p>AES-CTR-256</p>
          */
         public Builder encryptionName(String encryptionName) {
             this.putQueryParameter("EncryptionName", encryptionName);
@@ -233,7 +240,11 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -278,14 +289,18 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of `acs:ram::$accountID:role/$roleName`. After the role is attached, your ApsaraDB for Redis instance can use KMS.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of <code>acs:ram::$accountID:role/$roleName</code>. After the role is attached, your ApsaraDB for Redis instance can use KMS.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p><code>$accountID</code>: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click <strong>Security Settings</strong>.</p>
+         * </li>
+         * <li><p><code>$roleName</code>: the name of the RAM role. Replace $roleName with <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   `$accountID`: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click **Security Settings**.
-         * 
-         * *   `$roleName`: the name of the RAM role. Replace $roleName with **AliyunRdsInstanceEncryptionDefaultRole**.
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -303,10 +318,14 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * Specifies whether to enable TDE. Set the value to **Enabled**.
-         * <p>
+         * <p>Specifies whether to enable TDE. Set the value to <strong>Enabled</strong>.</p>
+         * <blockquote>
+         * <p>TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see [Enable TDE](~~265913~~).
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder TDEStatus(String TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);

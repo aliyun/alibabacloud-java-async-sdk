@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySavingsPlansDeductLogResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySavingsPlansDeductLogResponseBody</p>
  */
 public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySavingsPlansDeductLogResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PARAM_ERROR</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * <p>The return data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +118,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +129,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,59 +145,65 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySavingsPlansDeductLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansDeductLogResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BillModule")
+        @com.aliyun.core.annotation.NameInMap("BillModule")
         private String billModule;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("BillingOfficialPrice")
+        @com.aliyun.core.annotation.NameInMap("BillingOfficialPrice")
         private String billingOfficialPrice;
 
-        @NameInMap("DeductCommodity")
+        @com.aliyun.core.annotation.NameInMap("DeductCommodity")
         private String deductCommodity;
 
-        @NameInMap("DeductFee")
+        @com.aliyun.core.annotation.NameInMap("DeductFee")
         private String deductFee;
 
-        @NameInMap("DeductInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DeductInstanceId")
         private String deductInstanceId;
 
-        @NameInMap("DeductRate")
+        @com.aliyun.core.annotation.NameInMap("DeductRate")
         private String deductRate;
 
-        @NameInMap("DeductedOfficialPrice")
+        @com.aliyun.core.annotation.NameInMap("DeductedOfficialPrice")
         private String deductedOfficialPrice;
 
-        @NameInMap("DiscountRate")
+        @com.aliyun.core.annotation.NameInMap("DiscountRate")
         private String discountRate;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SavingsType")
+        @com.aliyun.core.annotation.NameInMap("SavingsType")
         private String savingsType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private Items(Builder builder) {
@@ -362,7 +382,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The billable item for which the fee is deducted.
+             * <p>The billable item for which the fee is deducted.</p>
              */
             public Builder billModule(String billModule) {
                 this.billModule = billModule;
@@ -386,7 +406,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The service for which the fee is deducted.
+             * <p>The service for which the fee is deducted.</p>
              */
             public Builder deductCommodity(String deductCommodity) {
                 this.deductCommodity = deductCommodity;
@@ -394,7 +414,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The deducted amount.
+             * <p>The deducted amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.52</p>
              */
             public Builder deductFee(String deductFee) {
                 this.deductFee = deductFee;
@@ -402,7 +425,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance for which the fee is deducted.
+             * <p>The ID of the instance for which the fee is deducted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-XXXXXXXXX</p>
              */
             public Builder deductInstanceId(String deductInstanceId) {
                 this.deductInstanceId = deductInstanceId;
@@ -410,7 +436,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The deduction rate.
+             * <p>The deduction rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder deductRate(String deductRate) {
                 this.deductRate = deductRate;
@@ -426,7 +455,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The discount used for the current deduction.
+             * <p>The discount used for the current deduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.069</p>
              */
             public Builder discountRate(String discountRate) {
                 this.discountRate = discountRate;
@@ -434,7 +466,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the billing cycle for which the fee is deducted.
+             * <p>The end of the billing cycle for which the fee is deducted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-01 01:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -442,7 +477,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the savings plan instance.
+             * <p>The ID of the savings plan instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spn-xxxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -482,11 +520,14 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the savings plan. Valid values:
-             * <p>
+             * <p>The type of the savings plan. Valid values:</p>
+             * <ul>
+             * <li>universal: general-purpose</li>
+             * <li>ecs: ECS compute</li>
+             * </ul>
              * 
-             * *   universal: general-purpose
-             * *   ecs: ECS compute
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder savingsType(String savingsType) {
                 this.savingsType = savingsType;
@@ -494,7 +535,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the billing cycle for which the fee is deducted. The time is in the format of yyyy-MM-dd HH:mm:ss.
+             * <p>The beginning of the billing cycle for which the fee is deducted. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -502,7 +546,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1906589291020438</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -516,17 +563,23 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QuerySavingsPlansDeductLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySavingsPlansDeductLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < Items> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<Items> items;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -547,7 +600,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -573,21 +626,24 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * The deduction details.
+             * <p>The deduction details.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -595,7 +651,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -603,7 +662,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

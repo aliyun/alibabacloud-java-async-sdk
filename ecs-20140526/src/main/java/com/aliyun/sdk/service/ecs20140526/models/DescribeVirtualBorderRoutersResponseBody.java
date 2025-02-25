@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVirtualBorderRoutersResponseBody</p>
  */
 public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VirtualBorderRouterSet")
+    @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterSet")
     private VirtualBorderRouterSet virtualBorderRouterSet;
 
     private DescribeVirtualBorderRoutersResponseBody(Builder builder) {
@@ -131,65 +136,71 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class VirtualBorderRouterType extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("ActivationTime")
+        @com.aliyun.core.annotation.NameInMap("ActivationTime")
         private String activationTime;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LocalGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
         private String localGatewayIp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PeerGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
 
-        @NameInMap("PeeringSubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
         private String peeringSubnetMask;
 
-        @NameInMap("PhysicalConnectionBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionBusinessStatus")
         private String physicalConnectionBusinessStatus;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PhysicalConnectionOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionOwnerUid")
         private String physicalConnectionOwnerUid;
 
-        @NameInMap("PhysicalConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionStatus")
         private String physicalConnectionStatus;
 
-        @NameInMap("RecoveryTime")
+        @com.aliyun.core.annotation.NameInMap("RecoveryTime")
         private String recoveryTime;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TerminationTime")
+        @com.aliyun.core.annotation.NameInMap("TerminationTime")
         private String terminationTime;
 
-        @NameInMap("VbrId")
+        @com.aliyun.core.annotation.NameInMap("VbrId")
         private String vbrId;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private Integer vlanId;
 
-        @NameInMap("VlanInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("VlanInterfaceId")
         private String vlanInterfaceId;
 
         private VirtualBorderRouterType(Builder builder) {
@@ -552,9 +563,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class VirtualBorderRouterSet extends TeaModel {
-        @NameInMap("VirtualBorderRouterType")
-        private java.util.List < VirtualBorderRouterType> virtualBorderRouterType;
+        @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterType")
+        private java.util.List<VirtualBorderRouterType> virtualBorderRouterType;
 
         private VirtualBorderRouterSet(Builder builder) {
             this.virtualBorderRouterType = builder.virtualBorderRouterType;
@@ -571,17 +588,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * @return virtualBorderRouterType
          */
-        public java.util.List < VirtualBorderRouterType> getVirtualBorderRouterType() {
+        public java.util.List<VirtualBorderRouterType> getVirtualBorderRouterType() {
             return this.virtualBorderRouterType;
         }
 
         public static final class Builder {
-            private java.util.List < VirtualBorderRouterType> virtualBorderRouterType; 
+            private java.util.List<VirtualBorderRouterType> virtualBorderRouterType; 
 
             /**
              * VirtualBorderRouterType.
              */
-            public Builder virtualBorderRouterType(java.util.List < VirtualBorderRouterType> virtualBorderRouterType) {
+            public Builder virtualBorderRouterType(java.util.List<VirtualBorderRouterType> virtualBorderRouterType) {
                 this.virtualBorderRouterType = virtualBorderRouterType;
                 return this;
             }

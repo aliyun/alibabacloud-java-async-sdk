@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitSnapshotJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitSnapshotJobResponseBody</p>
  */
 public class SubmitSnapshotJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotJob")
+    @com.aliyun.core.annotation.NameInMap("SnapshotJob")
     private SnapshotJob snapshotJob;
 
     private SubmitSnapshotJobResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         private SnapshotJob snapshotJob; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-5EB0-4AF6-D7393642****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the snapshot job.
+         * <p>The information about the snapshot job.</p>
          */
         public Builder snapshotJob(SnapshotJob snapshotJob) {
             this.snapshotJob = snapshotJob;
@@ -71,8 +79,14 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSnapshotJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitSnapshotJobResponseBody</p>
+     */
     public static class SnapshotJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private SnapshotJob(Builder builder) {
@@ -98,7 +112,10 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * The ID of the snapshot job.
+             * <p>The ID of the snapshot job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad90a501b1b94b72374ad0050464****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

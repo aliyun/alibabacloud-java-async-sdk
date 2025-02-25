@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchStopDevicesRequest} extends {@link RequestModel}
  *
  * <p>BatchStopDevicesRequest</p>
  */
 public class BatchStopDevicesRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private BatchStopDevicesRequest(Builder builder) {
@@ -75,15 +80,18 @@ public class BatchStopDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(BatchStopDevicesRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(BatchStopDevicesRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32388487****92996</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

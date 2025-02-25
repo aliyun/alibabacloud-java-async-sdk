@@ -1,34 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckFileDeploymentRequest} extends {@link RequestModel}
  *
  * <p>CheckFileDeploymentRequest</p>
  */
 public class CheckFileDeploymentRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CheckDetailUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckDetailUrl")
     private String checkDetailUrl;
 
-    @Body
-    @NameInMap("CheckerInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckerInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkerInstanceId;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private CheckFileDeploymentRequest(Builder builder) {
@@ -99,7 +103,7 @@ public class CheckFileDeploymentRequest extends Request {
         } 
 
         /**
-         * The ID of the region where DataWorks is activated. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -108,7 +112,10 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://result.aliyun.com/?checkerInstanceId=">https://result.aliyun.com/?checkerInstanceId=</a></p>
          */
         public Builder checkDetailUrl(String checkDetailUrl) {
             this.putBodyParameter("CheckDetailUrl", checkDetailUrl);
@@ -117,7 +124,11 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.
+         * <p>The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66_123455623_2</p>
          */
         public Builder checkerInstanceId(String checkerInstanceId) {
             this.putBodyParameter("CheckerInstanceId", checkerInstanceId);
@@ -126,12 +137,16 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * The check status of the file that you want to deploy. Valid values:
-         * <p>
+         * <p>The check status of the file that you want to deploy. Valid values:</p>
+         * <ul>
+         * <li>OK: The file passes the check.</li>
+         * <li>WARN: The file passes the check, but an alert is reported.</li>
+         * <li>FAIL: The file fails the check.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   OK: The file passes the check.
-         * *   WARN: The file passes the check, but an alert is reported.
-         * *   FAIL: The file fails the check.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

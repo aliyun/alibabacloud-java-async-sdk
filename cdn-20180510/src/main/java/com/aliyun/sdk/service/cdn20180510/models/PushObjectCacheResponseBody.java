@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushObjectCacheResponseBody} extends {@link TeaModel}
  *
  * <p>PushObjectCacheResponseBody</p>
  */
 public class PushObjectCacheResponseBody extends TeaModel {
-    @NameInMap("PushTaskId")
+    @com.aliyun.core.annotation.NameInMap("PushTaskId")
     private String pushTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PushObjectCacheResponseBody(Builder builder) {
@@ -50,11 +50,14 @@ public class PushObjectCacheResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the prefetch task. If multiple tasks are returned, the IDs are separated by commas (,). The task IDs are merged based on the following rules:
-         * <p>
+         * <p>The ID of the prefetch task. If multiple tasks are returned, the IDs are separated by commas (,). The task IDs are merged based on the following rules:</p>
+         * <ul>
+         * <li>If the tasks are set for the same accelerated domain name, submitted within the same second, and prefetch content from URLs instead of directories, the tasks IDs are merged into the same task ID (RushTaskId).</li>
+         * <li>If the number of tasks that are set for the same accelerated domain name, submitted within the same second, and prefetch content from URLs instead of directories exceeds 500, every 500 task IDs are merged into the same task ID (RushTaskId).</li>
+         * </ul>
          * 
-         * *   If the tasks are set for the same accelerated domain name, submitted within the same second, and prefetch content from URLs instead of directories, the tasks IDs are merged into the same task ID (RushTaskId).
-         * *   If the number of tasks that are set for the same accelerated domain name, submitted within the same second, and prefetch content from URLs instead of directories exceeds 500, every 500 task IDs are merged into the same task ID (RushTaskId).
+         * <strong>example:</strong>
+         * <p>9524xxxx</p>
          */
         public Builder pushTaskId(String pushTaskId) {
             this.pushTaskId = pushTaskId;
@@ -62,7 +65,10 @@ public class PushObjectCacheResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

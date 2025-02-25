@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMemberResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMemberResponseBody</p>
  */
 public class UpdateMemberResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Member data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private UpdateMemberResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class UpdateMemberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * data.
+         * <p>If the value of success was true, the member that was created was returned. If the value of success was false, a null value was returned.</p>
          */
         public Builder data(Member data) {
             this.data = data;
@@ -106,7 +111,13 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <ul>
+         * <li>If the value of success was false, an error code was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +125,13 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <ul>
+         * <li>If the value of success was false, an error message was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +139,10 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -130,7 +150,10 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +161,10 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

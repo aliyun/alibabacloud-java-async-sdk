@@ -1,49 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetRenewalRequest} extends {@link RequestModel}
  *
  * <p>SetRenewalRequest</p>
  */
 public class SetRenewalRequest extends Request {
-    @Query
-    @NameInMap("InstanceIDs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIDs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIDs;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("RenewalPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewalPeriod")
     private Integer renewalPeriod;
 
-    @Query
-    @NameInMap("RenewalPeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewalPeriodUnit")
     private String renewalPeriodUnit;
 
-    @Query
-    @NameInMap("RenewalStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewalStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String renewalStatus;
 
-    @Query
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
     private SetRenewalRequest(Builder builder) {
@@ -154,7 +160,11 @@ public class SetRenewalRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).
+         * <p>The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-askjdhaskfjh</p>
          */
         public Builder instanceIDs(String instanceIDs) {
             this.putQueryParameter("InstanceIDs", instanceIDs);
@@ -172,7 +182,11 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -181,7 +195,10 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * The type of the service.
+         * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -190,16 +207,20 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * The auto-renewal period. Valid values:
-         * <p>
+         * <p>The auto-renewal period. Valid values:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>6</li>
+         * <li>12</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+         * </blockquote>
          * 
-         * *   1
-         * *   2
-         * *   3
-         * *   6
-         * *   12
-         * 
-         * >  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder renewalPeriod(Integer renewalPeriod) {
             this.putQueryParameter("RenewalPeriod", renewalPeriod);
@@ -208,13 +229,17 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * The unit of the auto-renewal period. Valid values:
-         * <p>
+         * <p>The unit of the auto-renewal period. Valid values:</p>
+         * <ul>
+         * <li>M: months</li>
+         * <li>Y: years</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+         * </blockquote>
          * 
-         * *   M: months
-         * *   Y: years
-         * 
-         * >  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.
+         * <strong>example:</strong>
+         * <p>M</p>
          */
         public Builder renewalPeriodUnit(String renewalPeriodUnit) {
             this.putQueryParameter("RenewalPeriodUnit", renewalPeriodUnit);
@@ -223,12 +248,16 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * The status of renewal. Valid values:
-         * <p>
+         * <p>The status of renewal. Valid values:</p>
+         * <ul>
+         * <li>AutoRenewal: The instance is automatically renewed.</li>
+         * <li>ManualRenewal: The instance is manually renewed.</li>
+         * <li>NotRenewal: The instance is not renewed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   AutoRenewal: The instance is automatically renewed.
-         * *   ManualRenewal: The instance is manually renewed.
-         * *   NotRenewal: The instance is not renewed.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -237,11 +266,14 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   Subscription: subscription
-         * *   PayAsYouGo: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

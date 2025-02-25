@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStrategyRequest} extends {@link RequestModel}
  *
  * <p>DescribeStrategyRequest</p>
  */
 public class DescribeStrategyRequest extends Request {
-    @Query
-    @NameInMap("CustomType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomType")
     private String customType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("StrategyIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyIds")
     private String strategyIds;
 
     private DescribeStrategyRequest(Builder builder) {
@@ -96,11 +101,14 @@ public class DescribeStrategyRequest extends Request {
         } 
 
         /**
-         * The type of the baseline check policy that you want to query. Valid values:
-         * <p>
+         * <p>The type of the baseline check policy that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>common</strong>: standard baseline check policy</li>
+         * <li><strong>custom</strong>: custom baseline check policy</li>
+         * </ul>
          * 
-         * *   **common**: standard baseline check policy
-         * *   **custom**: custom baseline check policy
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder customType(String customType) {
             this.putQueryParameter("CustomType", customType);
@@ -109,11 +117,14 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -122,7 +133,10 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.X.X</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -131,7 +145,10 @@ public class DescribeStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy that you want to query. Separate multiple IDs with commas (,).
+         * <p>The ID of the baseline check policy that you want to query. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8164248</p>
          */
         public Builder strategyIds(String strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);

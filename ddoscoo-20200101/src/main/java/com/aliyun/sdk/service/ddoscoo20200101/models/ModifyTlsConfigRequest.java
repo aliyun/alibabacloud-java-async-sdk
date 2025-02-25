@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTlsConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyTlsConfigRequest</p>
  */
 public class ModifyTlsConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyTlsConfigRequest(Builder builder) {
@@ -107,21 +112,28 @@ public class ModifyTlsConfigRequest extends Request {
         }
 
         /**
-         * The details of the TLS policy. The value is a JSON string that contains the following fields:
-         * <p>
+         * <p>The details of the TLS policy. The value is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>ssl_protocols</strong>: the version of TLS. This field is required. Data type: string. Valid values:</p>
+         * <ul>
+         * <li><strong>tls1.0</strong>: TLS 1.0 and later</li>
+         * <li><strong>tls1.1</strong>: TLS 1.1 and later</li>
+         * <li><strong>tls1.2</strong>: TLS 1.2 and later</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>ssl_ciphers</strong>: the type of the cipher suite. This field is required. Data type: string. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong>: all cipher suites, which include strong and weak cipher suites</li>
+         * <li><strong>improved</strong>: enhanced cipher suites</li>
+         * <li><strong>strong</strong>: strong cipher suites</li>
+         * <li><strong>default</strong>: default cipher suites, which include only strong cipher suites</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ssl_protocols**: the version of TLS. This field is required. Data type: string. Valid values:
-         * 
-         *     *   **tls1.0**: TLS 1.0 and later
-         *     *   **tls1.1**: TLS 1.1 and later
-         *     *   **tls1.2**: TLS 1.2 and later
-         * 
-         * *   **ssl_ciphers**: the type of the cipher suite. This field is required. Data type: string. Valid values:
-         * 
-         *     *   **all**: all cipher suites, which include strong and weak cipher suites
-         *     *   **improved**: enhanced cipher suites
-         *     *   **strong**: strong cipher suites
-         *     *   **default**: default cipher suites, which include only strong cipher suites
+         * <strong>example:</strong>
+         * <p>{&quot;ssl_protocols&quot;:&quot;tls1.0&quot;,&quot;ssl_ciphers&quot;:&quot;all&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -130,10 +142,14 @@ public class ModifyTlsConfigRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -142,7 +158,10 @@ public class ModifyTlsConfigRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

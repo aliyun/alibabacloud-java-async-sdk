@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMeterImsMpsAiUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMeterImsMpsAiUsageResponseBody</p>
  */
 public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMeterImsMpsAiUsageResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The usage statistics of IMS on AI processing of MPS.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMeterImsMpsAiUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMeterImsMpsAiUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Duration.
+             * <p>The usage duration, in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>644</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -130,7 +147,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656950400</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -138,7 +158,7 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The AI type. Valid values:</p>
              */
             public Builder type(String type) {
                 this.type = type;

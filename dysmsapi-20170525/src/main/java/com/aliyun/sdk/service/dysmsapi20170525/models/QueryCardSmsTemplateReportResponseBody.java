@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCardSmsTemplateReportResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCardSmsTemplateReportResponseBody</p>
  */
 public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCardSmsTemplateReportResponseBody(Builder builder) {
@@ -74,7 +79,14 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +102,10 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC89A90C-978F-46AC-B80D-54738371E7CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +113,14 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -111,9 +133,15 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCardSmsTemplateReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCardSmsTemplateReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("model")
-        private java.util.List < java.util.Map<String, ?>> model;
+        @com.aliyun.core.annotation.NameInMap("model")
+        private java.util.List<java.util.Map<String, ?>> model;
 
         private Data(Builder builder) {
             this.model = builder.model;
@@ -130,17 +158,17 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         /**
          * @return model
          */
-        public java.util.List < java.util.Map<String, ?>> getModel() {
+        public java.util.List<java.util.Map<String, ?>> getModel() {
             return this.model;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> model; 
+            private java.util.List<java.util.Map<String, ?>> model; 
 
             /**
-             * model.
+             * <p>The details of the data returned.</p>
              */
-            public Builder model(java.util.List < java.util.Map<String, ?>> model) {
+            public Builder model(java.util.List<java.util.Map<String, ?>> model) {
                 this.model = model;
                 return this;
             }

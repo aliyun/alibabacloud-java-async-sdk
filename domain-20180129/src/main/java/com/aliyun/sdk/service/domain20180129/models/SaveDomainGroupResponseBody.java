@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveDomainGroupResponseBody} extends {@link TeaModel}
  *
  * <p>SaveDomainGroupResponseBody</p>
  */
 public class SaveDomainGroupResponseBody extends TeaModel {
-    @NameInMap("BeingDeleted")
+    @com.aliyun.core.annotation.NameInMap("BeingDeleted")
     private Boolean beingDeleted;
 
-    @NameInMap("CreationDate")
+    @com.aliyun.core.annotation.NameInMap("CreationDate")
     private String creationDate;
 
-    @NameInMap("DomainGroupId")
+    @com.aliyun.core.annotation.NameInMap("DomainGroupId")
     private Long domainGroupId;
 
-    @NameInMap("DomainGroupName")
+    @com.aliyun.core.annotation.NameInMap("DomainGroupName")
     private String domainGroupName;
 
-    @NameInMap("DomainGroupStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainGroupStatus")
     private String domainGroupStatus;
 
-    @NameInMap("ModificationDate")
+    @com.aliyun.core.annotation.NameInMap("ModificationDate")
     private String modificationDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNumber")
+    @com.aliyun.core.annotation.NameInMap("TotalNumber")
     private Integer totalNumber;
 
     private SaveDomainGroupResponseBody(Builder builder) {

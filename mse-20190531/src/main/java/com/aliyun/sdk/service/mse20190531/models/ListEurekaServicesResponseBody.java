@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEurekaServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEurekaServicesResponseBody</p>
  */
 public class ListEurekaServicesResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListEurekaServicesResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -123,7 +128,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String httpCode; 
         private String message; 
@@ -134,15 +139,18 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the data.
+         * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +158,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +169,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request is successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +180,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +191,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +202,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +213,14 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +228,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -215,14 +244,20 @@ public class ListEurekaServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEurekaServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEurekaServicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("InstancesId")
-        private java.util.List < String > instancesId;
+        @com.aliyun.core.annotation.NameInMap("InstancesId")
+        private java.util.List<String> instancesId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpStatus")
+        @com.aliyun.core.annotation.NameInMap("UpStatus")
         private String upStatus;
 
         private Data(Builder builder) {
@@ -242,7 +277,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         /**
          * @return instancesId
          */
-        public java.util.List < String > getInstancesId() {
+        public java.util.List<String> getInstancesId() {
             return this.instancesId;
         }
 
@@ -261,20 +296,23 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > instancesId; 
+            private java.util.List<String> instancesId; 
             private String name; 
             private String upStatus; 
 
             /**
-             * The details of the instance.
+             * <p>The details of the instance.</p>
              */
-            public Builder instancesId(java.util.List < String > instancesId) {
+            public Builder instancesId(java.util.List<String> instancesId) {
                 this.instancesId = instancesId;
                 return this;
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTACTINFO</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -282,7 +320,10 @@ public class ListEurekaServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.
+             * <p>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/1</p>
              */
             public Builder upStatus(String upStatus) {
                 this.upStatus = upStatus;

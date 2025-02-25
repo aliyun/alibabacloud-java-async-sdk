@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
  */
 public class CreateAccountRequest extends Request {
-    @Query
-    @NameInMap("Account")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Query
-    @NameInMap("AccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountType;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DmlAuthSetting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DmlAuthSetting")
     private DmlAuthSetting dmlAuthSetting;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateAccountRequest(Builder builder) {
@@ -157,7 +162,10 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -166,7 +174,15 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>The type of the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>NormalAccount</strong>: standard account</li>
+         * <li><strong>SuperAccount</strong>: privileged account</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NormalAccount</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -175,7 +191,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-bp100p4q1g9z3****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -193,7 +212,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DmlAuthSetting.
+         * <p>The information about permissions.</p>
          */
         public Builder dmlAuthSetting(DmlAuthSetting dmlAuthSetting) {
             String dmlAuthSettingShrink = shrink(dmlAuthSetting, "DmlAuthSetting", "json");
@@ -203,7 +222,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4@</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -212,7 +234,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * Product.
+         * <p>The code of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clickhouse</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -221,7 +246,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,17 +264,23 @@ public class CreateAccountRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccountRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAccountRequest</p>
+     */
     public static class DmlAuthSetting extends TeaModel {
-        @NameInMap("AllowDatabases")
-        private java.util.List < String > allowDatabases;
+        @com.aliyun.core.annotation.NameInMap("AllowDatabases")
+        private java.util.List<String> allowDatabases;
 
-        @NameInMap("AllowDictionaries")
-        private java.util.List < String > allowDictionaries;
+        @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
+        private java.util.List<String> allowDictionaries;
 
-        @NameInMap("DdlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DdlAuthority")
         private Boolean ddlAuthority;
 
-        @NameInMap("DmlAuthority")
+        @com.aliyun.core.annotation.NameInMap("DmlAuthority")
         private Integer dmlAuthority;
 
         private DmlAuthSetting(Builder builder) {
@@ -267,14 +301,14 @@ public class CreateAccountRequest extends Request {
         /**
          * @return allowDatabases
          */
-        public java.util.List < String > getAllowDatabases() {
+        public java.util.List<String> getAllowDatabases() {
             return this.allowDatabases;
         }
 
         /**
          * @return allowDictionaries
          */
-        public java.util.List < String > getAllowDictionaries() {
+        public java.util.List<String> getAllowDictionaries() {
             return this.allowDictionaries;
         }
 
@@ -293,29 +327,36 @@ public class CreateAccountRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > allowDatabases; 
-            private java.util.List < String > allowDictionaries; 
+            private java.util.List<String> allowDatabases; 
+            private java.util.List<String> allowDictionaries; 
             private Boolean ddlAuthority; 
             private Integer dmlAuthority; 
 
             /**
-             * AllowDatabases.
+             * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>
              */
-            public Builder allowDatabases(java.util.List < String > allowDatabases) {
+            public Builder allowDatabases(java.util.List<String> allowDatabases) {
                 this.allowDatabases = allowDatabases;
                 return this;
             }
 
             /**
-             * AllowDictionaries.
+             * <p>The dictionaries on which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
              */
-            public Builder allowDictionaries(java.util.List < String > allowDictionaries) {
+            public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
                 this.allowDictionaries = allowDictionaries;
                 return this;
             }
 
             /**
-             * DdlAuthority.
+             * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
+             * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ddlAuthority(Boolean ddlAuthority) {
                 this.ddlAuthority = ddlAuthority;
@@ -323,7 +364,15 @@ public class CreateAccountRequest extends Request {
             }
 
             /**
-             * DmlAuthority.
+             * <p>Specifies whether to grant the DML permissions to the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
+             * <li><strong>1</strong>: The account only has the permissions to read data from the database.</li>
+             * <li><strong>2</strong>: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dmlAuthority(Integer dmlAuthority) {
                 this.dmlAuthority = dmlAuthority;

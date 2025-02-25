@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhysicalConnectionsResponseBody</p>
  */
 public class DescribePhysicalConnectionsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PhysicalConnectionSet")
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionSet")
     private PhysicalConnectionSet physicalConnectionSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePhysicalConnectionsResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of Express Connect circuits.
+         * <p>The list of Express Connect circuits.</p>
          */
         public Builder physicalConnectionSet(PhysicalConnectionSet physicalConnectionSet) {
             this.physicalConnectionSet = physicalConnectionSet;
@@ -110,7 +121,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E6D0EC4-7C91-53E2-9F65-64BF713114B0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned entries.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -170,10 +193,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,10 +205,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -198,9 +223,15 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class PhysicalConnectionTypeTags extends TeaModel {
-        @NameInMap("tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
 
         private PhysicalConnectionTypeTags(Builder builder) {
             this.tags = builder.tags;
@@ -217,17 +248,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -239,116 +270,125 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class PhysicalConnectionType extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("AccessPointType")
+        @com.aliyun.core.annotation.NameInMap("AccessPointType")
         private String accessPointType;
 
-        @NameInMap("AdDetailLocation")
+        @com.aliyun.core.annotation.NameInMap("AdDetailLocation")
         private String adDetailLocation;
 
-        @NameInMap("AdLocation")
+        @com.aliyun.core.annotation.NameInMap("AdLocation")
         private String adLocation;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExpectSpec")
+        @com.aliyun.core.annotation.NameInMap("ExpectSpec")
         private String expectSpec;
 
-        @NameInMap("HasReservationData")
+        @com.aliyun.core.annotation.NameInMap("HasReservationData")
         private String hasReservationData;
 
-        @NameInMap("LineOperator")
+        @com.aliyun.core.annotation.NameInMap("LineOperator")
         private String lineOperator;
 
-        @NameInMap("LoaStatus")
+        @com.aliyun.core.annotation.NameInMap("LoaStatus")
         private String loaStatus;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrderMode")
+        @com.aliyun.core.annotation.NameInMap("OrderMode")
         private String orderMode;
 
-        @NameInMap("ParentPhysicalConnectionAliUid")
+        @com.aliyun.core.annotation.NameInMap("ParentPhysicalConnectionAliUid")
         private Long parentPhysicalConnectionAliUid;
 
-        @NameInMap("ParentPhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ParentPhysicalConnectionId")
         private String parentPhysicalConnectionId;
 
-        @NameInMap("PeerLocation")
+        @com.aliyun.core.annotation.NameInMap("PeerLocation")
         private String peerLocation;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PortNumber")
+        @com.aliyun.core.annotation.NameInMap("PortNumber")
         private String portNumber;
 
-        @NameInMap("PortType")
+        @com.aliyun.core.annotation.NameInMap("PortType")
         private String portType;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("RedundantPhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("QosId")
+        private String qosId;
+
+        @com.aliyun.core.annotation.NameInMap("RedundantPhysicalConnectionId")
         private String redundantPhysicalConnectionId;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private PhysicalConnectionTypeTags tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VirtualPhysicalConnectionCount")
+        @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionCount")
         private Integer virtualPhysicalConnectionCount;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private String vlanId;
 
-        @NameInMap("VpconnStatus")
+        @com.aliyun.core.annotation.NameInMap("VpconnStatus")
         private String vpconnStatus;
 
         private PhysicalConnectionType(Builder builder) {
@@ -377,6 +417,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             this.portNumber = builder.portNumber;
             this.portType = builder.portType;
             this.productType = builder.productType;
+            this.qosId = builder.qosId;
             this.redundantPhysicalConnectionId = builder.redundantPhysicalConnectionId;
             this.reservationActiveTime = builder.reservationActiveTime;
             this.reservationInternetChargeType = builder.reservationInternetChargeType;
@@ -575,6 +616,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return qosId
+         */
+        public String getQosId() {
+            return this.qosId;
+        }
+
+        /**
          * @return redundantPhysicalConnectionId
          */
         public String getRedundantPhysicalConnectionId() {
@@ -684,6 +732,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String portNumber; 
             private String portType; 
             private String productType; 
+            private String qosId; 
             private String redundantPhysicalConnectionId; 
             private String reservationActiveTime; 
             private String reservationInternetChargeType; 
@@ -698,7 +747,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String vpconnStatus; 
 
             /**
-             * The ID of the access point.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-cn-hangzhou-finance-yh-E</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -706,7 +758,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the access point.
+             * <p>The type of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder accessPointType(String accessPointType) {
                 this.accessPointType = accessPointType;
@@ -714,7 +769,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the data center and rack.
+             * <p>The information about the data center and rack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Position 30, Server Rack JXX, Booth ET135ET135-XX-2, Room XX, Building 10, XX Road, XX Town, XX District, Hangzhou, Zhejiang Province</p>
              */
             public Builder adDetailLocation(String adDetailLocation) {
                 this.adDetailLocation = adDetailLocation;
@@ -722,7 +780,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The location of the access point.
+             * <p>The location of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number 10, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</p>
              */
             public Builder adLocation(String adLocation) {
                 this.adLocation = adLocation;
@@ -730,10 +791,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the Express Connect circuit.
-             * <p>
+             * <p>The maximum bandwidth of the Express Connect circuit.</p>
+             * <p>Unit: Mbit/s.</p>
              * 
-             * Unit: Gbit/s.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -741,12 +803,15 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Express Connect circuit. Valid values:
-             * <p>
+             * <p>The status of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: enabled</li>
+             * <li><strong>FinancialLocked</strong>: locked due to overdue payments</li>
+             * <li><strong>SecurityLocked</strong>: locked for security reasons</li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
-             * *   **SecurityLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -754,10 +819,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the Express Connect circuit.
-             * <p>
+             * <p>The billing method of the Express Connect circuit.</p>
+             * <p>If <strong>Prepaid</strong> is returned, it indicates that the Express Connect circuit is billed on a subscription basis.</p>
              * 
-             * If **Prepaid** is returned, it indicates that the Express Connect circuit is billed on a subscription basis.
+             * <strong>example:</strong>
+             * <p>Prepaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -765,7 +831,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
+             * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>longtel001</p>
              */
             public Builder circuitCode(String circuitCode) {
                 this.circuitCode = circuitCode;
@@ -773,7 +842,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Express Connect circuit was created.
+             * <p>The time when the Express Connect circuit was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-24T07:30:58Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -781,7 +853,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the Express Connect circuit.
+             * <p>The description of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desctest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -789,7 +864,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Express Connect circuit is enabled.
+             * <p>The time when the Express Connect circuit was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-24T07:33:18Z</p>
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -797,7 +875,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Express Connect circuit expires.
+             * <p>The time when the Express Connect circuit expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-24T16:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -805,10 +886,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.
-             * <p>
+             * <p>The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.</p>
+             * <p>Unit: <strong>M</strong> (Mbit/s) and <strong>G</strong> (Gbit/s).</p>
              * 
-             * **M** indicates Mbit/s and **G** indicates Gbit/s.
+             * <strong>example:</strong>
+             * <p>50M</p>
              */
             public Builder expectSpec(String expectSpec) {
                 this.expectSpec = expectSpec;
@@ -816,11 +898,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data about pending orders is returned. Valid values:
-             * <p>
+             * <p>Indicates whether the data about pending orders is returned. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -828,15 +913,18 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The connectivity provider of the Express Connect circuit. Valid values:
-             * <p>
+             * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>CT</strong>: China Telecom.</li>
+             * <li><strong>CU</strong>: China Unicom.</li>
+             * <li><strong>CM</strong>: China Mobile.</li>
+             * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
+             * <li><strong>Equinix</strong>: Equinix.</li>
+             * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+             * </ul>
              * 
-             * *   **CT**: China Telecom.
-             * *   **CU**: China Unicom.
-             * *   **CM**: China Mobile.
-             * *   **CO**: other connectivity providers in the Chinese mainland.
-             * *   **Equinix**: Equinix.
-             * *   **Other**: other connectivity providers outside the Chinese mainland.
+             * <strong>example:</strong>
+             * <p>CT</p>
              */
             public Builder lineOperator(String lineOperator) {
                 this.lineOperator = lineOperator;
@@ -844,16 +932,19 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the letter of authorization (LOA). Valid values:
-             * <p>
+             * <p>The status of the letter of authorization (LOA). Valid values:</p>
+             * <ul>
+             * <li><strong>Applying</strong>: The LOA is pending for approval.</li>
+             * <li><strong>Accept</strong>: The LOA is approved.</li>
+             * <li><strong>Available</strong>: The LOA is available.</li>
+             * <li><strong>Rejected</strong>: The LOA is rejected.</li>
+             * <li><strong>Completing</strong>: The Express Connect circuit is under construction.</li>
+             * <li><strong>Complete</strong>: The Express Connect circuit is installed.</li>
+             * <li><strong>Deleted</strong>: The LOA is deleted.</li>
+             * </ul>
              * 
-             * *   **Applying**
-             * *   **Accept**
-             * *   **Available**
-             * *   **Rejected**
-             * *   **Completing**
-             * *   **Complete**
-             * *   **Deleted**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder loaStatus(String loaStatus) {
                 this.loaStatus = loaStatus;
@@ -861,7 +952,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Express Connect circuit.
+             * <p>The name of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nametest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -869,11 +963,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The payer for the shared Express Connect circuit. Valid values:
-             * <p>
+             * <p>The payer for the hosted connection. Valid values:</p>
+             * <ul>
+             * <li><strong>PayByPhysicalConnectionOwner</strong>: The partner pays for the shared Express Connect circuit.</li>
+             * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: The tenant pays for the shared Express Connect circuit.</li>
+             * </ul>
              * 
-             * *   **PayByPhysicalConnectionOwner**: The partner pays for the shared Express Connect circuit.
-             * *   **PayByVirtualPhysicalConnectionOwner**: The tenant pays for the shared Express Connect circuit.
+             * <strong>example:</strong>
+             * <p>PayByPhysicalConnectionOwner</p>
              */
             public Builder orderMode(String orderMode) {
                 this.orderMode = orderMode;
@@ -881,7 +978,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the shared Express Connect circuit belongs.
+             * <p>The ID of the Alibaba Cloud account to which the parent Express Connect circuit belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>283117732402483989</p>
              */
             public Builder parentPhysicalConnectionAliUid(Long parentPhysicalConnectionAliUid) {
                 this.parentPhysicalConnectionAliUid = parentPhysicalConnectionAliUid;
@@ -889,7 +989,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Express Connect circuit that is used to create the hosted connection.
+             * <p>The ID of the parent Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1ciz7ekd2grn1as****</p>
              */
             public Builder parentPhysicalConnectionId(String parentPhysicalConnectionId) {
                 this.parentPhysicalConnectionId = parentPhysicalConnectionId;
@@ -897,7 +1000,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The geographical location of the data center.
+             * <p>The geographical location of the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</p>
              */
             public Builder peerLocation(String peerLocation) {
                 this.peerLocation = peerLocation;
@@ -905,7 +1011,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Express Connect circuit.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1ciz7ekd2grn1as****</p>
              */
             public Builder physicalConnectionId(String physicalConnectionId) {
                 this.physicalConnectionId = physicalConnectionId;
@@ -913,7 +1022,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the port on the access device.
+             * <p>The ID of the port on the access device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/1/1</p>
              */
             public Builder portNumber(String portNumber) {
                 this.portNumber = portNumber;
@@ -921,18 +1033,22 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The port type. Valid values:
-             * <p>
+             * <p>The port type of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+             * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
+             * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
+             * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+             * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
+             * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+             * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+             * </ul>
+             * <blockquote>
+             * <p>Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.</p>
+             * </blockquote>
              * 
-             * *   **100Base-T**: 100 Mbit/s copper Ethernet port
-             * *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
-             * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
-             * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-             * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
-             * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
-             * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
-             * 
-             * >  To create ports of 40GBase-LR and 100GBase-LR, you must first contact your account manager.
+             * <strong>example:</strong>
+             * <p>10GBase-LR</p>
              */
             public Builder portType(String portType) {
                 this.portType = portType;
@@ -940,11 +1056,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Express Connect circuit. Valid values:
-             * <p>
+             * <p>The type of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>VirtualPhysicalConnection</strong>: shared Express Connect circuit</li>
+             * <li><strong>PhysicalConnection</strong>: dedicated Express Connect circuit</li>
+             * </ul>
              * 
-             * *   **VirtualPhysicalConnection**: shared Express Connect circuit
-             * *   **PhysicalConnection**: dedicated Express Connect circuit
+             * <strong>example:</strong>
+             * <p>PhysicalConnection</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -952,7 +1071,21 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the redundant Express Connect circuit.
+             * <p>The ID of the QoS policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-bp10s3szn8rgnxuw7****</p>
+             */
+            public Builder qosId(String qosId) {
+                this.qosId = qosId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the standby Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-119mfjzm****</p>
              */
             public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
                 this.redundantPhysicalConnectionId = redundantPhysicalConnectionId;
@@ -960,7 +1093,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the pending order takes effect.
+             * <p>The time when the pending order takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-25T11:01:04Z</p>
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -968,10 +1104,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the pending order.
-             * <p>
+             * <p>The billing method of the pending order.</p>
+             * <p>If <strong>PayByBandwidth</strong> is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.</p>
              * 
-             * If **PayByBandwidth** is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.
+             * <strong>example:</strong>
+             * <p>PayByBandwidth</p>
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -979,10 +1116,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the pending order.
-             * <p>
+             * <p>The type of the pending order.</p>
+             * <p>If the value is <strong>RENEW</strong>, it indicates that the order is placed for service renewal.</p>
              * 
-             * If the value is set to **RENEW**, it indicates that the order is placed for service renewal.
+             * <strong>example:</strong>
+             * <p>RENEW</p>
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -990,7 +1128,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the ACL belongs.
+             * <p>The resource group ID to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmwu3k52prgdi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -998,10 +1139,11 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the Express Connect circuit.
-             * <p>
+             * <p>The specification of the Express Connect circuit.</p>
+             * <p>Unit: <strong>G</strong> (Gbit/s).</p>
              * 
-             * Unit: **G** (Gbit/s).
+             * <strong>example:</strong>
+             * <p>10G</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1009,20 +1151,23 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Express Connect circuit. Valid values:
-             * <p>
+             * <p>The status of the Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Initial</strong></li>
+             * <li><strong>Approved</strong></li>
+             * <li><strong>Allocating</strong></li>
+             * <li><strong>Allocated</strong></li>
+             * <li><strong>Confirmed</strong></li>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Rejected</strong></li>
+             * <li><strong>Canceled</strong></li>
+             * <li><strong>Allocation Failed</strong></li>
+             * <li><strong>Terminating</strong></li>
+             * <li><strong>Terminated</strong></li>
+             * </ul>
              * 
-             * *   **Initial**: The application is under review.
-             * *   **Approved**: The application is approved.
-             * *   **Allocating**: The system is allocating resources.
-             * *   **Allocated**: The Express Connect circuit is under construction.
-             * *   **Confirmed**: The Express Connect circuit is pending for user confirmation.
-             * *   **Enabled**: The Express Connect circuit is enabled.
-             * *   **Rejected**: The application is rejected.
-             * *   **Canceled**: The application is canceled.
-             * *   **Allocation Failed**: The system failed to allocate resources.
-             * *   **Terminating**: The Express Connect circuit is being disabled.
-             * *   **Terminated**: The Express Connect circuit is disabled.
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1030,7 +1175,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag list.
+             * <p>The tags that are added to the cluster.</p>
              */
             public Builder tags(PhysicalConnectionTypeTags tags) {
                 this.tags = tags;
@@ -1038,7 +1183,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource to which the Express Connect circuit is connected. Only **VPC** may be returned.
+             * <p>The type of resource to which the Express Connect circuit is connected. Only <strong>VPC</strong> may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1046,7 +1194,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of hosted connections that are established over the Express Connect circuit.
+             * <p>The number of Express Connect circuits that are established.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder virtualPhysicalConnectionCount(Integer virtualPhysicalConnectionCount) {
                 this.virtualPhysicalConnectionCount = virtualPhysicalConnectionCount;
@@ -1054,7 +1205,10 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The VLAN ID of the shared Express Connect circuit.
+             * <p>The VLAN ID of the shared Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder vlanId(String vlanId) {
                 this.vlanId = vlanId;
@@ -1062,12 +1216,15 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the hosted connection. Valid values:
-             * <p>
+             * <p>The status of the shared Express Connect circuit. Valid values:</p>
+             * <ul>
+             * <li><strong>Confirmed</strong></li>
+             * <li><strong>UnConfirmed</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
              * 
-             * *   **Confirmed**
-             * *   **UnConfirmed**
-             * *   **Deleted**
+             * <strong>example:</strong>
+             * <p>Confirmed</p>
              */
             public Builder vpconnStatus(String vpconnStatus) {
                 this.vpconnStatus = vpconnStatus;
@@ -1081,9 +1238,15 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class PhysicalConnectionSet extends TeaModel {
-        @NameInMap("PhysicalConnectionType")
-        private java.util.List < PhysicalConnectionType> physicalConnectionType;
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionType")
+        private java.util.List<PhysicalConnectionType> physicalConnectionType;
 
         private PhysicalConnectionSet(Builder builder) {
             this.physicalConnectionType = builder.physicalConnectionType;
@@ -1100,17 +1263,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * @return physicalConnectionType
          */
-        public java.util.List < PhysicalConnectionType> getPhysicalConnectionType() {
+        public java.util.List<PhysicalConnectionType> getPhysicalConnectionType() {
             return this.physicalConnectionType;
         }
 
         public static final class Builder {
-            private java.util.List < PhysicalConnectionType> physicalConnectionType; 
+            private java.util.List<PhysicalConnectionType> physicalConnectionType; 
 
             /**
              * PhysicalConnectionType.
              */
-            public Builder physicalConnectionType(java.util.List < PhysicalConnectionType> physicalConnectionType) {
+            public Builder physicalConnectionType(java.util.List<PhysicalConnectionType> physicalConnectionType) {
                 this.physicalConnectionType = physicalConnectionType;
                 return this;
             }

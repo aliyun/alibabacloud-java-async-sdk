@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BeeBotChatResponseBody} extends {@link TeaModel}
  *
  * <p>BeeBotChatResponseBody</p>
  */
 public class BeeBotChatResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BeeBotChatResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class BeeBotChatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Access denied for detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +97,10 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * If OK is returned, the request is successful.
+         * <p>The content of the text message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +108,7 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The list of the recommended knowledge. When AnswerType is set to Recommend, the list of the recommended knowledge is returned by the bot for this parameter.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +116,10 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>Indicates whether the answer is in plain text or rich text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +127,10 @@ public class BeeBotChatResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The passthrough parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,11 +143,17 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BeeBotChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotChatResponseBody</p>
+     */
     public static class RelatedKnowledges extends TeaModel {
-        @NameInMap("KnowledgeId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private String knowledgeId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private RelatedKnowledges(Builder builder) {
@@ -170,7 +188,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The ID of the related knowledge.
+             * <p>The ID of knowledge associated with knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>735899</p>
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -178,7 +199,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the related knowledge.
+             * <p>The title of related knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Withdrawal of housing provident fund.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -192,32 +216,38 @@ public class BeeBotChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BeeBotChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotChatResponseBody</p>
+     */
     public static class Knowledge extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("HitStatement")
+        @com.aliyun.core.annotation.NameInMap("HitStatement")
         private String hitStatement;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("RelatedKnowledges")
+        @com.aliyun.core.annotation.NameInMap("RelatedKnowledges")
         private java.util.List < RelatedKnowledges> relatedKnowledges;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Knowledge(Builder builder) {
@@ -315,7 +345,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The source of the answer.
+             * <p>Distinguish answer types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KnowledgeBase</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -323,7 +356,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the knowledge.
+             * <p>Knowledge category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>provident fund.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -331,7 +367,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the hit question.
+             * <p>Hit the content of the problem.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Provident fund withdrawal, please search for provident fund withdrawal on the homepage and submit the form for handling the matter.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -339,7 +378,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the answer is in plain text or rich text.
+             * <p>Indication of plain/rich text answers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PLAIN_TEXT</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -347,7 +389,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The hit text.
+             * <p>Hit statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>provident fund</p>
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -355,7 +400,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the hit question in the knowledge base.
+             * <p>The ID of the hit problem in the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>735898</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -363,7 +411,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the related knowledge.
+             * <p>Related knowledge list.</p>
              */
             public Builder relatedKnowledges(java.util.List < RelatedKnowledges> relatedKnowledges) {
                 this.relatedKnowledges = relatedKnowledges;
@@ -371,7 +419,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The summary to the hit question.
+             * <p>Introduction to hit problems.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Withdrawal of housing provident fund</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -379,7 +430,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the hit question.
+             * <p>Hit the title of the problem.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Withdrawal of housing provident fund.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -393,14 +447,20 @@ public class BeeBotChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BeeBotChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotChatResponseBody</p>
+     */
     public static class Recommends extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("KnowledgeId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private String knowledgeId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Recommends(Builder builder) {
@@ -444,7 +504,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The source of the recommended answer.
+             * <p>Clarify the identification of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KNOWLEDGE</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -452,7 +515,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recommended knowledge.
+             * <p>Clarify the knowledge ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4548</p>
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -460,7 +526,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the recommended knowledge. Valid values: the entity in graph-based question answering, the knowledge title in knowledge-based question answering, or the column value in table-based question answering.
+             * <p>Clarify the content, which may be the entities of graph Q&amp;A, the knowledge titles of knowledge Q&amp;A, or the column values of table Q&amp;A.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test plain text.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -474,17 +543,23 @@ public class BeeBotChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BeeBotChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotChatResponseBody</p>
+     */
     public static class Slots extends TeaModel {
-        @NameInMap("Hit")
+        @com.aliyun.core.annotation.NameInMap("Hit")
         private Boolean hit;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Slots(Builder builder) {
@@ -537,7 +612,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Indicates whether the slot is hit.
+             * <p>Whether it hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hit(Boolean hit) {
                 this.hit = hit;
@@ -545,7 +623,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check weather intentions. city</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -553,7 +634,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The original value.
+             * <p>Original value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -561,7 +645,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The specific value.
+             * <p>Specific values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -575,44 +662,50 @@ public class BeeBotChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BeeBotChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotChatResponseBody</p>
+     */
     public static class Text extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("DialogName")
+        @com.aliyun.core.annotation.NameInMap("DialogName")
         private String dialogName;
 
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
 
-        @NameInMap("ExternalFlags")
+        @com.aliyun.core.annotation.NameInMap("ExternalFlags")
         private java.util.Map < String, ? > externalFlags;
 
-        @NameInMap("HitStatement")
+        @com.aliyun.core.annotation.NameInMap("HitStatement")
         private String hitStatement;
 
-        @NameInMap("IntentName")
+        @com.aliyun.core.annotation.NameInMap("IntentName")
         private String intentName;
 
-        @NameInMap("MetaData")
+        @com.aliyun.core.annotation.NameInMap("MetaData")
         private String metaData;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Slots")
+        @com.aliyun.core.annotation.NameInMap("Slots")
         private java.util.List < Slots> slots;
 
-        @NameInMap("UserDefinedChatTitle")
+        @com.aliyun.core.annotation.NameInMap("UserDefinedChatTitle")
         private String userDefinedChatTitle;
 
         private Text(Builder builder) {
@@ -746,7 +839,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String userDefinedChatTitle; 
 
             /**
-             * The source of the answer.
+             * <p>Distinguish answer types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BotFramework</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -754,7 +850,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the text message.
+             * <p>The content of the text message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>May I ask where you want to check the weather?</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -762,7 +861,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the answer is in plain text or rich text.
+             * <p>Indication of plain/rich text answers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PLAIN_TEXT</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -770,7 +872,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dialog. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * <p>When AnswerSource is BotFramework, this field returns the name of the dialogue unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example: Checking Weather</p>
              */
             public Builder dialogName(String dialogName) {
                 this.dialogName = dialogName;
@@ -778,7 +883,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The passthrough parameters are returned.
+             * <p>This field returns transparent parameters.</p>
              */
             public Builder ext(java.util.Map < String, ? > ext) {
                 this.ext = ext;
@@ -786,7 +891,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * <p>When AnswerSource is BotFramework, this field returns a transparent parameter.</p>
              */
             public Builder externalFlags(java.util.Map < String, ? > externalFlags) {
                 this.externalFlags = externalFlags;
@@ -794,7 +899,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The hit text.
+             * <p>Hit statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check the weather.</p>
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -802,7 +910,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the intent. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * <p>When AnswerSource is BotFramework, this field returns the intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check weather intention.</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -810,7 +921,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * <p>Metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[[{&quot;columnName&quot;:&quot;name&quot;,&quot;stringValue&quot;:&quot;wangshanshan&quot;}]]</p>
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -818,7 +932,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * <p>When AnswerSource is BotFramework, this field returns the node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1410-c7a72a78.__city</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -826,7 +943,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.
+             * <p>When AnswerSource is BotFramework, this field returns the node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example: Checking Weather Check the weather and fill in the slots__ city</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -834,7 +954,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The list of slots.
+             * <p>Slot information list.</p>
              */
             public Builder slots(java.util.List < Slots> slots) {
                 this.slots = slots;
@@ -842,7 +962,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the chitchat.
+             * <p>Custom Chat Topic Title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>greet.</p>
              */
             public Builder userDefinedChatTitle(String userDefinedChatTitle) {
                 this.userDefinedChatTitle = userDefinedChatTitle;
@@ -856,20 +979,26 @@ public class BeeBotChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BeeBotChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotChatResponseBody</p>
+     */
     public static class Messages extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("AnswerType")
+        @com.aliyun.core.annotation.NameInMap("AnswerType")
         private String answerType;
 
-        @NameInMap("Knowledge")
+        @com.aliyun.core.annotation.NameInMap("Knowledge")
         private Knowledge knowledge;
 
-        @NameInMap("Recommends")
+        @com.aliyun.core.annotation.NameInMap("Recommends")
         private java.util.List < Recommends> recommends;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private Text text;
 
         private Messages(Builder builder) {
@@ -931,7 +1060,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             private Text text; 
 
             /**
-             * When the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.
+             * <p>When AnswerType is Recommended, this field indicates the source of the recommended answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KNOWLEDGE</p>
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -939,7 +1071,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the answer.
+             * <p>The type of this message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder answerType(String answerType) {
                 this.answerType = answerType;
@@ -947,7 +1082,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerType parameter is set to Knowledge, this parameter contains the Knowledge object returned by the bot.
+             * <p>When AnswerType is Knowledge, this field contains the Knowledge object returned by the robot.</p>
              */
             public Builder knowledge(Knowledge knowledge) {
                 this.knowledge = knowledge;
@@ -955,7 +1090,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The list of recommended knowledge. When the AnswerType parameter is set to Recommend, this parameter is returned.
+             * <p>When AnswerType is Recommended, this field contains a list of Recommendations returned by the robot.</p>
              */
             public Builder recommends(java.util.List < Recommends> recommends) {
                 this.recommends = recommends;
@@ -963,7 +1098,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * When the AnswerType parameter is set to Text, this parameter contains the Text object returned by the bot.
+             * <p>When AnswerType is Text, this field contains the Text object returned by the robot.</p>
              */
             public Builder text(Text text) {
                 this.text = text;
@@ -977,14 +1112,20 @@ public class BeeBotChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BeeBotChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>BeeBotChatResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
-        @NameInMap("Messages")
+        @com.aliyun.core.annotation.NameInMap("Messages")
         private java.util.List < Messages> messages;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
         private Data(Builder builder) {
@@ -1028,7 +1169,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             private String sessionId; 
 
             /**
-             * The ID of the response message.
+             * <p>The ID of the recommended knowledge.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ab6be8af-cee4-40c3-9919-2ac7461d7d98</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -1036,7 +1180,7 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The list of messages.
+             * <p>The source of the recommended answer. When AnswerType is set to Recommend, a value is returned for this parameter.</p>
              */
             public Builder messages(java.util.List < Messages> messages) {
                 this.messages = messages;
@@ -1044,7 +1188,10 @@ public class BeeBotChatResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session.
+             * <p>The source of the recommended answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

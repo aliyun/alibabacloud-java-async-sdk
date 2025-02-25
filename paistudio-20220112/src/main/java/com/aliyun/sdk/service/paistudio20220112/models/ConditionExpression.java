@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConditionExpression} extends {@link TeaModel}
  *
  * <p>ConditionExpression</p>
  */
 public class ConditionExpression extends TeaModel {
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @NameInMap("Operator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Operator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operator;
 
-    @NameInMap("Values")
-    @Validation(required = true)
-    private java.util.List < String > values;
+    @com.aliyun.core.annotation.NameInMap("Values")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> values;
 
     private ConditionExpression(Builder builder) {
         this.key = builder.key;
@@ -55,17 +60,20 @@ public class ConditionExpression extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
     public static final class Builder {
         private String key; 
         private String operator; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SupportedMachineTypes</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -73,7 +81,10 @@ public class ConditionExpression extends TeaModel {
         }
 
         /**
-         * Operator.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -81,9 +92,9 @@ public class ConditionExpression extends TeaModel {
         }
 
         /**
-         * Values.
+         * <p>This parameter is required.</p>
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

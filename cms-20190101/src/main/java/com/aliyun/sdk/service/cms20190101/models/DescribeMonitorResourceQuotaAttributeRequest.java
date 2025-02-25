@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorResourceQuotaAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeMonitorResourceQuotaAttributeRequest</p>
  */
 public class DescribeMonitorResourceQuotaAttributeRequest extends Request {
-    @Query
-    @NameInMap("ShowUsed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowUsed")
     private Boolean showUsed;
 
     private DescribeMonitorResourceQuotaAttributeRequest(Builder builder) {
@@ -54,11 +54,14 @@ public class DescribeMonitorResourceQuotaAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return information about used quotas. Valid values:
-         * <p>
+         * <p>Specifies whether to return information about used quotas. Valid values:</p>
+         * <ul>
+         * <li>true (default): yes</li>
+         * <li>false: no</li>
+         * </ul>
          * 
-         * *   true (default): yes
-         * *   false: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showUsed(Boolean showUsed) {
             this.putQueryParameter("ShowUsed", showUsed);

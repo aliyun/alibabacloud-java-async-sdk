@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaListRequest} extends {@link RequestModel}
  *
  * <p>QueryMediaListRequest</p>
  */
 public class QueryMediaListRequest extends Request {
-    @Query
-    @NameInMap("IncludeMediaInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeMediaInfo")
     private Boolean includeMediaInfo;
 
-    @Query
-    @NameInMap("IncludePlayList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludePlayList")
     private Boolean includePlayList;
 
-    @Query
-    @NameInMap("IncludeSnapshotList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeSnapshotList")
     private Boolean includeSnapshotList;
 
-    @Query
-    @NameInMap("IncludeSummaryList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeSummaryList")
     private Boolean includeSummaryList;
 
-    @Query
-    @NameInMap("MediaIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QueryMediaListRequest(Builder builder) {
@@ -167,7 +167,14 @@ public class QueryMediaListRequest extends Request {
         } 
 
         /**
-         * IncludeMediaInfo.
+         * <p>Specifies whether to include media information in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeMediaInfo(Boolean includeMediaInfo) {
             this.putQueryParameter("IncludeMediaInfo", includeMediaInfo);
@@ -176,7 +183,14 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * IncludePlayList.
+         * <p>Specifies whether to include playback information in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includePlayList(Boolean includePlayList) {
             this.putQueryParameter("IncludePlayList", includePlayList);
@@ -185,7 +199,14 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * IncludeSnapshotList.
+         * <p>Specifies whether to include snapshot information in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeSnapshotList(Boolean includeSnapshotList) {
             this.putQueryParameter("IncludeSnapshotList", includeSnapshotList);
@@ -194,7 +215,14 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * IncludeSummaryList.
+         * <p>Specifies whether to include summaries in the returned result.</p>
+         * <ul>
+         * <li>Valid values: true and false.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeSummaryList(Boolean includeSummaryList) {
             this.putQueryParameter("IncludeSummaryList", includeSummaryList);
@@ -203,7 +231,11 @@ public class QueryMediaListRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The IDs of the media files. To obtain the ID of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the required video and click Manage. The ID of the video is displayed on the Basics tab. Separate multiple IDs with commas (,). You can query up to 10 media files at a time.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e1cd21131a94525be55acf65888****,e26cfa29e784402388463f61dbec****</p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

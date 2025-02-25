@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeColumnSecLevelRequest} extends {@link RequestModel}
  *
  * <p>ChangeColumnSecLevelRequest</p>
  */
 public class ChangeColumnSecLevelRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ColumnName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColumnName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String columnName;
 
-    @Query
-    @NameInMap("DbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dbId;
 
-    @Query
-    @NameInMap("IsLogic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsLogic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isLogic;
 
-    @Query
-    @NameInMap("NewLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newLevel;
 
-    @Query
-    @NameInMap("SchemaName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schemaName;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private ChangeColumnSecLevelRequest(Builder builder) {
@@ -167,10 +172,14 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.
-         * <p>
+         * <p>The name of the field. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the field.</p>
+         * <blockquote>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/141870.html">ListColumns</a> operation to obtain the name of the field.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.
+         * <strong>example:</strong>
+         * <p>test_column</p>
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -179,10 +188,14 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to obtain the ID of the database.
-         * <p>
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID of the database.</p>
+         * <blockquote>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to obtain the ID of a physical database and the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to obtain the ID of a logical database.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can also call the [ListDatabases](~~141873~~) operation to obtain the ID of a physical database and the [ListLogicDatabases](~~141874~~) operation to obtain the ID of a logical database.
+         * <strong>example:</strong>
+         * <p>325</p>
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -191,11 +204,15 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. Valid values:
-         * <p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li>true: The database is a physical database.</li>
+         * <li>false: The database is a logical database.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The database is a physical database.
-         * *   false: The database is a logical database.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isLogic(Boolean isLogic) {
             this.putQueryParameter("IsLogic", isLogic);
@@ -204,12 +221,16 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * The new sensitivity level of the field that you want to specify. Valid values:
-         * <p>
+         * <p>The new sensitivity level of the field that you want to specify. Valid values:</p>
+         * <ul>
+         * <li>INNER: low sensitivity level</li>
+         * <li>SENSITIVE: medium sensitivity level</li>
+         * <li>CONFIDENTIAL: high sensitivity level</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   INNER: low sensitivity level
-         * *   SENSITIVE: medium sensitivity level
-         * *   CONFIDENTIAL: high sensitivity level
+         * <strong>example:</strong>
+         * <p>SENSITIVE</p>
          */
         public Builder newLevel(String newLevel) {
             this.putQueryParameter("NewLevel", newLevel);
@@ -218,11 +239,15 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the database.
-         * <p>
+         * <p>The name of the database. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the database.</p>
+         * <ul>
+         * <li>You can also call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the name of the database.</li>
+         * <li>You can also call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to obtain the name of a physical database and the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to obtain the name of a logical database.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   You can also call the [SearchDatabase](~~141876~~) operation to obtain the name of the database.
-         * *   You can also call the [ListDatabases](~~141873~~) operation to obtain the name of a physical database and the [ListLogicDatabases](~~141874~~) operation to obtain the name of a logical database.
+         * <strong>example:</strong>
+         * <p>test_schema</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -231,10 +256,14 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the table.
-         * <p>
+         * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the table.</p>
+         * <blockquote>
+         * <p>You can also call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the name of the table.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can also call the [ListTables](~~141878~~) operation to obtain the name of the table.
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -243,10 +272,13 @@ public class ChangeColumnSecLevelRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
-         * <p>
+         * <p>The ID of the tenant.</p>
+         * <blockquote>
+         * <p>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+         * </blockquote>
          * 
-         * > To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * <strong>example:</strong>
+         * <p>43253</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

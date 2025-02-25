@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspaceDataBackup} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspaceDataBackup</p>
  */
 public class GrafanaWorkspaceDataBackup extends TeaModel {
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Long gmtCreate;
 
-    @NameInMap("gmtModified")
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
     private Long gmtModified;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("processName")
+    @com.aliyun.core.annotation.NameInMap("processName")
     private String processName;
 
-    @NameInMap("processStatus")
+    @com.aliyun.core.annotation.NameInMap("processStatus")
     private String processStatus;
 
-    @NameInMap("subType")
+    @com.aliyun.core.annotation.NameInMap("subType")
     private String subType;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private GrafanaWorkspaceDataBackup(Builder builder) {

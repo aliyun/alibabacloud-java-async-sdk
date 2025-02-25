@@ -1,84 +1,101 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFlowlogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFlowlogsRequest</p>
  */
 public class DescribeFlowlogsRequest extends Request {
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FlowLogId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowLogId")
     private String flowLogId;
 
-    @Query
-    @NameInMap("FlowLogName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowLogName")
     private String flowLogName;
 
-    @Query
-    @NameInMap("LogStoreName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowLogVersion")
+    private String flowLogVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    private Integer interval;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogStoreName")
     private String logStoreName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+    private String transitRouterId;
 
     private DescribeFlowlogsRequest(Builder builder) {
         super(builder);
@@ -87,6 +104,8 @@ public class DescribeFlowlogsRequest extends Request {
         this.description = builder.description;
         this.flowLogId = builder.flowLogId;
         this.flowLogName = builder.flowLogName;
+        this.flowLogVersion = builder.flowLogVersion;
+        this.interval = builder.interval;
         this.logStoreName = builder.logStoreName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -99,6 +118,7 @@ public class DescribeFlowlogsRequest extends Request {
         this.status = builder.status;
         this.tag = builder.tag;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+        this.transitRouterId = builder.transitRouterId;
     }
 
     public static Builder builder() {
@@ -147,6 +167,20 @@ public class DescribeFlowlogsRequest extends Request {
      */
     public String getFlowLogName() {
         return this.flowLogName;
+    }
+
+    /**
+     * @return flowLogVersion
+     */
+    public String getFlowLogVersion() {
+        return this.flowLogVersion;
+    }
+
+    /**
+     * @return interval
+     */
+    public Integer getInterval() {
+        return this.interval;
     }
 
     /**
@@ -222,7 +256,7 @@ public class DescribeFlowlogsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -233,12 +267,21 @@ public class DescribeFlowlogsRequest extends Request {
         return this.transitRouterAttachmentId;
     }
 
+    /**
+     * @return transitRouterId
+     */
+    public String getTransitRouterId() {
+        return this.transitRouterId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFlowlogsRequest, Builder> {
         private String cenId; 
         private String clientToken; 
         private String description; 
         private String flowLogId; 
         private String flowLogName; 
+        private String flowLogVersion; 
+        private Integer interval; 
         private String logStoreName; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -249,8 +292,9 @@ public class DescribeFlowlogsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterAttachmentId; 
+        private String transitRouterId; 
 
         private Builder() {
             super();
@@ -263,6 +307,8 @@ public class DescribeFlowlogsRequest extends Request {
             this.description = request.description;
             this.flowLogId = request.flowLogId;
             this.flowLogName = request.flowLogName;
+            this.flowLogVersion = request.flowLogVersion;
+            this.interval = request.interval;
             this.logStoreName = request.logStoreName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -275,10 +321,14 @@ public class DescribeFlowlogsRequest extends Request {
             this.status = request.status;
             this.tag = request.tag;
             this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -287,12 +337,14 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -301,10 +353,11 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The description of the flow log.
-         * <p>
+         * <p>The description of the flow log.</p>
+         * <p>The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -313,7 +366,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The ID of the flow log.
+         * <p>The ID of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flowlog-m5evbtbpt****</p>
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -322,10 +378,11 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The name of the flow log.
-         * <p>
+         * <p>The name of the flow log.</p>
+         * <p>The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http:// or https://.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -334,10 +391,36 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The name of the Logstore where the flow log is stored.
-         * <p>
+         * <p>The flow log version.</p>
+         * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
          * 
-         * The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-). It must start or end with a lowercase letter or a digit.
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        public Builder flowLogVersion(String flowLogVersion) {
+            this.putQueryParameter("FlowLogVersion", flowLogVersion);
+            this.flowLogVersion = flowLogVersion;
+            return this;
+        }
+
+        /**
+         * <p>The time window for collecting log data. Unit: seconds Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        public Builder interval(Integer interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
+            return this;
+        }
+
+        /**
+         * <p>The name of the Logstore where the flow log is stored.</p>
+         * <p>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-). It must start or end with a lowercase letter or a digit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowLogStore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -364,7 +447,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -373,7 +459,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Minimum value: **1**. Default value: **20**.
+         * <p>The number of entries per page. Minimum value: <strong>1</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -382,10 +471,11 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The name of the project where the flow log is stored.
-         * <p>
+         * <p>The name of the project where the flow log is stored.</p>
+         * <p>The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). It must start or end with a lowercase letter or a digit.</p>
          * 
-         * The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). It must start or end with a lowercase letter or a digit.
+         * <strong>example:</strong>
+         * <p>FlowLogProject</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -394,10 +484,11 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the flow log is deployed.
-         * <p>
+         * <p>The ID of the region where the flow log is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -424,11 +515,14 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The status of the flow log. Valid values:
-         * <p>
+         * <p>The status of the flow log. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: The flow log is enabled.</li>
+         * <li><strong>Inactive</strong>: The flow log is disabled.</li>
+         * </ul>
          * 
-         * *   **Active**: The flow log is enabled.
-         * *   **Inactive**: The flow log is disabled.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -437,23 +531,36 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * <p>The information about the tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the network instance connection.
+         * <p>The ID of the network instance connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-qieks13jnt1cchy****</p>
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
             this.transitRouterAttachmentId = transitRouterAttachmentId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-uf654ttymmljlvh2x****</p>
+         */
+        public Builder transitRouterId(String transitRouterId) {
+            this.putQueryParameter("TransitRouterId", transitRouterId);
+            this.transitRouterId = transitRouterId;
             return this;
         }
 
@@ -464,11 +571,17 @@ public class DescribeFlowlogsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFlowlogsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeFlowlogsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -503,12 +616,12 @@ public class DescribeFlowlogsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -516,12 +629,12 @@ public class DescribeFlowlogsRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>The tag value can be 0 to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

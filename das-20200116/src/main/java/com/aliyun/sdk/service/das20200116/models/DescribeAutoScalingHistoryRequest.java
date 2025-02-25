@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoScalingHistoryRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoScalingHistoryRequest</p>
  */
 public class DescribeAutoScalingHistoryRequest extends Request {
-    @Query
-    @NameInMap("AutoScalingTaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoScalingTaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String autoScalingTaskType;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeAutoScalingHistoryRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class DescribeAutoScalingHistoryRequest extends Request {
         } 
 
         /**
-         * The type of the auto scaling task that you want to query. Set the value to **SPEC**, which indicates that you can query the history of only automatic performance scaling tasks.
+         * <p>The type of the auto scaling task that you want to query. Set the value to <strong>SPEC</strong>, which indicates that you can query the history of only automatic performance scaling tasks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPEC</p>
          */
         public Builder autoScalingTaskType(String autoScalingTaskType) {
             this.putQueryParameter("AutoScalingTaskType", autoScalingTaskType);
@@ -109,10 +118,14 @@ public class DescribeAutoScalingHistoryRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The end time must be later than the start time.
+         * <strong>example:</strong>
+         * <p>1676605305796</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,10 +134,14 @@ public class DescribeAutoScalingHistoryRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>Only ApsaraDB RDS for MySQL instances are supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > Only ApsaraDB RDS for MySQL instances are supported.
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,10 +150,14 @@ public class DescribeAutoScalingHistoryRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p>The maximum time range that can be specified is 45 days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The maximum time range that can be specified is 45 days.
+         * <strong>example:</strong>
+         * <p>1675833788056</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

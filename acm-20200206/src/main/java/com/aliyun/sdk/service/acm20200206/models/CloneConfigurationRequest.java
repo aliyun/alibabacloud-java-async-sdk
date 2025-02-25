@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CloneConfigurationRequest</p>
  */
 public class CloneConfigurationRequest extends Request {
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Body
-    @NameInMap("NamespaceFrom")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceFrom")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceFrom;
 
-    @Body
-    @NameInMap("NamespaceTo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceTo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceTo;
 
-    @Body
-    @NameInMap("Policy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policy;
 
     private CloneConfigurationRequest(Builder builder) {
@@ -91,12 +90,12 @@ public class CloneConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(CloneConfigurationRequest response) {
-            super(response);
-            this.data = response.data;
-            this.namespaceFrom = response.namespaceFrom;
-            this.namespaceTo = response.namespaceTo;
-            this.policy = response.policy;
+        private Builder(CloneConfigurationRequest request) {
+            super(request);
+            this.data = request.data;
+            this.namespaceFrom = request.namespaceFrom;
+            this.namespaceTo = request.namespaceTo;
+            this.policy = request.policy;
         } 
 
         /**

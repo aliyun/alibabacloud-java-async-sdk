@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableCpuResourceResponseBody</p>
  */
 public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableCpuResourceResponseBody(Builder builder) {
@@ -72,18 +71,26 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("MaxCpu")
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private String comment;
+
+        @com.aliyun.core.annotation.NameInMap("MaxCpu")
         private Long maxCpu;
 
-        @NameInMap("MinCpu")
+        @com.aliyun.core.annotation.NameInMap("MinCpu")
         private Long minCpu;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("ReviewCode")
+        private String reviewCode;
+
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Long unitNum;
 
         private Data(Builder builder) {
+            this.comment = builder.comment;
             this.maxCpu = builder.maxCpu;
             this.minCpu = builder.minCpu;
+            this.reviewCode = builder.reviewCode;
             this.unitNum = builder.unitNum;
         }
 
@@ -93,6 +100,13 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
         }
 
         /**
@@ -110,6 +124,13 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewCode
+         */
+        public String getReviewCode() {
+            return this.reviewCode;
+        }
+
+        /**
          * @return unitNum
          */
         public Long getUnitNum() {
@@ -117,9 +138,19 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String comment; 
             private Long maxCpu; 
             private Long minCpu; 
+            private String reviewCode; 
             private Long unitNum; 
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
 
             /**
              * MaxCpu.
@@ -134,6 +165,14 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
              */
             public Builder minCpu(Long minCpu) {
                 this.minCpu = minCpu;
+                return this;
+            }
+
+            /**
+             * ReviewCode.
+             */
+            public Builder reviewCode(String reviewCode) {
+                this.reviewCode = reviewCode;
                 return this;
             }
 

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RescaleApplicationRequest} extends {@link RequestModel}
  *
  * <p>RescaleApplicationRequest</p>
  */
 public class RescaleApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("RescaleLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleLevel")
     private String rescaleLevel;
 
-    @Query
-    @NameInMap("RescaleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rescaleType;
 
-    @Query
-    @NameInMap("ResourceSelector")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceSelector")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceSelector;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("ToAppVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToAppVersion")
     private String toAppVersion;
 
     private RescaleApplicationRequest(Builder builder) {
@@ -127,7 +132,11 @@ public class RescaleApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the application. You can query the application ID by calling the ListApplications operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>474bdef0-d149-4695-abfb-52912d9143f0</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -136,7 +145,15 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * RescaleLevel.
+         * <p>The level of resource scaling. The value must be of the enumerated data type. Valid values:</p>
+         * <ul>
+         * <li>AreaIspCode (default): scales resources based on the Internet service provider (ISP).</li>
+         * <li>RegionId: scales resources based on the edge node.</li>
+         * <li>InstanceId: scales resources based on the instance ID. Resource scale-out specifies resource hosting and scale-in specifies resource release.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RegionId</p>
          */
         public Builder rescaleLevel(String rescaleLevel) {
             this.putQueryParameter("RescaleLevel", rescaleLevel);
@@ -145,7 +162,15 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * RescaleType.
+         * <p>The scaling operation. The value must be of the enumerated data type. Valid values:</p>
+         * <ul>
+         * <li>Add: adds new resources.</li>
+         * <li>Del: releases resources.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add</p>
          */
         public Builder rescaleType(String rescaleType) {
             this.putQueryParameter("RescaleType", rescaleType);
@@ -154,7 +179,11 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * ResourceSelector.
+         * <p>The required resources. The value must be a JSON string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;regionCode&quot;: &quot;cn-wuxi-telecom_unicom_cmcc-3&quot;,    &quot;ispCode&quot;: &quot;telecom&quot;,    &quot;count&quot;: 2	},{    &quot;regionCode&quot;: &quot;cn-shanghai-cmcc&quot;,    &quot;count&quot;: 4	}]</p>
          */
         public Builder resourceSelector(String resourceSelector) {
             this.putQueryParameter("ResourceSelector", resourceSelector);
@@ -163,7 +192,10 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period for asynchronous scaling. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -172,7 +204,10 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * ToAppVersion.
+         * <p>The version number of the application deployment package. By default, the stable version number is used. This parameter takes effect only when you perform resource scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder toAppVersion(String toAppVersion) {
             this.putQueryParameter("ToAppVersion", toAppVersion);

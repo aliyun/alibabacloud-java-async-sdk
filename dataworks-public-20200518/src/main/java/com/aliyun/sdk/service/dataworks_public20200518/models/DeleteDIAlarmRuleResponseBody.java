@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDIAlarmRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDIAlarmRuleResponseBody</p>
  */
 public class DeleteDIAlarmRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteDIAlarmRuleResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DeleteDIAlarmRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

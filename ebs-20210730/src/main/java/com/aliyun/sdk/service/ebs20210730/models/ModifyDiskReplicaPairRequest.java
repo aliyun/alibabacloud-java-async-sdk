@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskReplicaPairRequest} extends {@link RequestModel}
  *
  * <p>ModifyDiskReplicaPairRequest</p>
  */
 public class ModifyDiskReplicaPairRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("PairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PairName")
     private String pairName;
 
-    @Query
-    @NameInMap("RPO")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RPO")
     private Long RPO;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicaPairId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaPairId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String replicaPairId;
 
     private ModifyDiskReplicaPairRequest(Builder builder) {
@@ -140,7 +145,13 @@ public class ModifyDiskReplicaPairRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * <p>The bandwidth value. Unit: Kbit/s.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -149,7 +160,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -158,7 +172,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The description of the replication pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -167,7 +184,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.
+         * <p>The name of the replication pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestReplicaPair</p>
          */
         public Builder pairName(String pairName) {
             this.putQueryParameter("PairName", pairName);
@@ -176,7 +196,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * RPO.
+         * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Valid value: 900.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -185,7 +208,11 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).
+         * <p>The region ID of the primary or secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,15 +221,11 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The bandwidth used to asynchronously replicate data between the primary and secondary disks. Unit: Kbit/s. Valid values:
-         * <p>
+         * <p>The ID of the replication pair.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   10240: equal to 10 Mbit/s
-         * *   20480: equal to 20 Mbit/s
-         * *   51200: equal to 50 Mbit/s
-         * *   102400: equal to 100 Mbit/s
-         * 
-         * Default value: 10240.
+         * <strong>example:</strong>
+         * <p>pair-cn-dsa****</p>
          */
         public Builder replicaPairId(String replicaPairId) {
             this.putQueryParameter("ReplicaPairId", replicaPairId);

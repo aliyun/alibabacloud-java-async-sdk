@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PriceInfo} extends {@link TeaModel}
  *
  * <p>PriceInfo</p>
  */
 public class PriceInfo extends TeaModel {
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("DiscountPrice")
+    @com.aliyun.core.annotation.NameInMap("DiscountPrice")
     private String discountPrice;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private String originalPrice;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("PromotionResults")
-    private java.util.List < PromotionInfo > promotionResults;
+    @com.aliyun.core.annotation.NameInMap("PromotionResults")
+    private java.util.List<PromotionInfo> promotionResults;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("SpotInstanceTypeOriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceTypeOriginalPrice")
     private String spotInstanceTypeOriginalPrice;
 
-    @NameInMap("SpotInstanceTypePrice")
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceTypePrice")
     private String spotInstanceTypePrice;
 
-    @NameInMap("SpotOriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("SpotOriginalPrice")
     private String spotOriginalPrice;
 
-    @NameInMap("SpotPrice")
+    @com.aliyun.core.annotation.NameInMap("SpotPrice")
     private String spotPrice;
 
-    @NameInMap("TaxPrice")
+    @com.aliyun.core.annotation.NameInMap("TaxPrice")
     private String taxPrice;
 
-    @NameInMap("TradePrice")
+    @com.aliyun.core.annotation.NameInMap("TradePrice")
     private String tradePrice;
 
     private PriceInfo(Builder builder) {
@@ -102,7 +107,7 @@ public class PriceInfo extends TeaModel {
     /**
      * @return promotionResults
      */
-    public java.util.List < PromotionInfo > getPromotionResults() {
+    public java.util.List<PromotionInfo> getPromotionResults() {
         return this.promotionResults;
     }
 
@@ -160,7 +165,7 @@ public class PriceInfo extends TeaModel {
         private String discountPrice; 
         private String originalPrice; 
         private String payType; 
-        private java.util.List < PromotionInfo > promotionResults; 
+        private java.util.List<PromotionInfo> promotionResults; 
         private String resourceType; 
         private String spotInstanceTypeOriginalPrice; 
         private String spotInstanceTypePrice; 
@@ -204,7 +209,7 @@ public class PriceInfo extends TeaModel {
         /**
          * PromotionResults.
          */
-        public Builder promotionResults(java.util.List < PromotionInfo > promotionResults) {
+        public Builder promotionResults(java.util.List<PromotionInfo> promotionResults) {
             this.promotionResults = promotionResults;
             return this;
         }

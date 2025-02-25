@@ -1,24 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQuotaRequest} extends {@link RequestModel}
  *
  * <p>GetQuotaRequest</p>
  */
 public class GetQuotaRequest extends Request {
-    @Path
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Verbose")
+    private Boolean verbose;
 
     private GetQuotaRequest(Builder builder) {
         super(builder);
         this.quotaId = builder.quotaId;
+        this.verbose = builder.verbose;
     }
 
     public static Builder builder() {
@@ -41,8 +51,16 @@ public class GetQuotaRequest extends Request {
         return this.quotaId;
     }
 
+    /**
+     * @return verbose
+     */
+    public Boolean getVerbose() {
+        return this.verbose;
+    }
+
     public static final class Builder extends Request.Builder<GetQuotaRequest, Builder> {
         private String quotaId; 
+        private Boolean verbose; 
 
         private Builder() {
             super();
@@ -51,6 +69,7 @@ public class GetQuotaRequest extends Request {
         private Builder(GetQuotaRequest request) {
             super(request);
             this.quotaId = request.quotaId;
+            this.verbose = request.verbose;
         } 
 
         /**
@@ -59,6 +78,15 @@ public class GetQuotaRequest extends Request {
         public Builder quotaId(String quotaId) {
             this.putPathParameter("QuotaId", quotaId);
             this.quotaId = quotaId;
+            return this;
+        }
+
+        /**
+         * Verbose.
+         */
+        public Builder verbose(Boolean verbose) {
+            this.putQueryParameter("Verbose", verbose);
+            this.verbose = verbose;
             return this;
         }
 

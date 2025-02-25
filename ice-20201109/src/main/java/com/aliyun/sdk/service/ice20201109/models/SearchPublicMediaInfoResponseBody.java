@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
  *
  * <p>SearchPublicMediaInfoResponseBody</p>
  */
 public class SearchPublicMediaInfoResponseBody extends TeaModel {
-    @NameInMap("PublicMediaInfos")
-    private java.util.List < PublicMediaInfos> publicMediaInfos;
+    @com.aliyun.core.annotation.NameInMap("PublicMediaInfos")
+    private java.util.List<PublicMediaInfos> publicMediaInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private SearchPublicMediaInfoResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     /**
      * @return publicMediaInfos
      */
-    public java.util.List < PublicMediaInfos> getPublicMediaInfos() {
+    public java.util.List<PublicMediaInfos> getPublicMediaInfos() {
         return this.publicMediaInfos;
     }
 
@@ -57,14 +62,14 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PublicMediaInfos> publicMediaInfos; 
+        private java.util.List<PublicMediaInfos> publicMediaInfos; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * PublicMediaInfos.
          */
-        public Builder publicMediaInfos(java.util.List < PublicMediaInfos> publicMediaInfos) {
+        public Builder publicMediaInfos(java.util.List<PublicMediaInfos> publicMediaInfos) {
             this.publicMediaInfos = publicMediaInfos;
             return this;
         }
@@ -91,11 +96,17 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class DynamicMetaData extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DynamicMetaData(Builder builder) {
@@ -152,50 +163,56 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class MediaBasicInfo extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletedTime")
+        @com.aliyun.core.annotation.NameInMap("DeletedTime")
         private String deletedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaTags")
+        @com.aliyun.core.annotation.NameInMap("MediaTags")
         private String mediaTags;
 
-        @NameInMap("MediaType")
+        @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SpriteImages")
+        @com.aliyun.core.annotation.NameInMap("SpriteImages")
         private String spriteImages;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaBasicInfo(Builder builder) {
@@ -395,7 +412,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>MediaId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -473,14 +493,20 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class MediaInfo extends TeaModel {
-        @NameInMap("DynamicMetaData")
+        @com.aliyun.core.annotation.NameInMap("DynamicMetaData")
         private DynamicMetaData dynamicMetaData;
 
-        @NameInMap("MediaBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaInfo(Builder builder) {
@@ -532,7 +558,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BasicInfo
+             * <p>BasicInfo</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -540,7 +566,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>MediaId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -554,17 +583,23 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchPublicMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchPublicMediaInfoResponseBody</p>
+     */
     public static class PublicMediaInfos extends TeaModel {
-        @NameInMap("Authorized")
+        @com.aliyun.core.annotation.NameInMap("Authorized")
         private Boolean authorized;
 
-        @NameInMap("Favorite")
+        @com.aliyun.core.annotation.NameInMap("Favorite")
         private Boolean favorite;
 
-        @NameInMap("MediaInfo")
+        @com.aliyun.core.annotation.NameInMap("MediaInfo")
         private MediaInfo mediaInfo;
 
-        @NameInMap("RemainingAuthTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingAuthTime")
         private String remainingAuthTime;
 
         private PublicMediaInfos(Builder builder) {

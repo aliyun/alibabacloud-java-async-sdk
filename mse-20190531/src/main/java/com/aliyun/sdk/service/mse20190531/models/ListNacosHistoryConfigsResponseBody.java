@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNacosHistoryConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNacosHistoryConfigsResponseBody</p>
  */
 public class ListNacosHistoryConfigsResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HistoryItems")
-    private java.util.List < HistoryItems> historyItems;
+    @com.aliyun.core.annotation.NameInMap("HistoryItems")
+    private java.util.List<HistoryItems> historyItems;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListNacosHistoryConfigsResponseBody(Builder builder) {
@@ -69,7 +74,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     /**
      * @return historyItems
      */
-    public java.util.List < HistoryItems> getHistoryItems() {
+    public java.util.List<HistoryItems> getHistoryItems() {
         return this.historyItems;
     }
 
@@ -124,7 +129,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String errorCode; 
-        private java.util.List < HistoryItems> historyItems; 
+        private java.util.List<HistoryItems> historyItems; 
         private String httpCode; 
         private String message; 
         private Integer pageNumber; 
@@ -134,7 +139,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,15 +150,18 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration items.
+         * <p>The configuration items.</p>
          */
-        public Builder historyItems(java.util.List < HistoryItems> historyItems) {
+        public Builder historyItems(java.util.List<HistoryItems> historyItems) {
             this.historyItems = historyItems;
             return this;
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +169,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +180,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +191,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +202,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53338ECA-F880-54D8-A9B3-5606355A1B89</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,11 +213,14 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +228,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -215,24 +244,33 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNacosHistoryConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNacosHistoryConfigsResponseBody</p>
+     */
     public static class HistoryItems extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
         private Long lastModifiedTime;
 
-        @NameInMap("OpType")
+        @com.aliyun.core.annotation.NameInMap("OpType")
         private String opType;
+
+        @com.aliyun.core.annotation.NameInMap("SrcUser")
+        private String srcUser;
 
         private HistoryItems(Builder builder) {
             this.appName = builder.appName;
@@ -241,6 +279,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             this.id = builder.id;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.opType = builder.opType;
+            this.srcUser = builder.srcUser;
         }
 
         public static Builder builder() {
@@ -293,6 +332,13 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             return this.opType;
         }
 
+        /**
+         * @return srcUser
+         */
+        public String getSrcUser() {
+            return this.srcUser;
+        }
+
         public static final class Builder {
             private String appName; 
             private String dataId; 
@@ -300,9 +346,13 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             private Long id; 
             private Long lastModifiedTime; 
             private String opType; 
+            private String srcUser; 
 
             /**
-             * The application tag.
+             * <p>The application tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gateway</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -310,7 +360,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data.
+             * <p>The ID of the data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.yaml</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -318,7 +371,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -326,7 +382,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23fdsf</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -334,7 +393,10 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the configuration was last modified.
+             * <p>The timestamp when the configuration was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16434400</p>
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -342,10 +404,21 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the configuration file.
+             * <p>The format of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yaml</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
+                return this;
+            }
+
+            /**
+             * SrcUser.
+             */
+            public Builder srcUser(String srcUser) {
+                this.srcUser = srcUser;
                 return this;
             }
 

@@ -87,7 +87,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteFlow").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteFlow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFlowResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -101,7 +101,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteScheduleResponse> deleteSchedule(DeleteScheduleRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSchedule").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSchedule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteScheduleResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -216,7 +216,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## [](#)Usage notes
-      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+      * In the old version of CloudFlow, the task step that ReportTaskFailed is used to call back `pattern: waitForCallback` indicates that the current task fails to be executed.
+      * In the new version of CloudFlow, the task step that ReportTaskFailed is used to call back `TaskMode: WaitForCustomCallback` indicates that the current task fails to be executed.
       *
      */
     @Override
@@ -235,7 +236,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## [](#)Usage notes
-      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+      * In the old version of CloudFlow, the task step that ReportTaskSucceeded is used to call back pattern: waitForCallback indicates that the current task is successfully executed.
+      * In the new version of CloudFlow, the task step that ReportTaskSucceeded is used to call back TaskMode: WaitForCustomCallback indicates that the current task is successfully executed.
       *
      */
     @Override
@@ -254,10 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## [](#)Usage notes
-      * *   The flow is created.
+      * *   The flow is created. A flow only in standard mode is supported.
       * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
       * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
-      * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+      * *   If the ongoing execution with the same name has ended (succeeded or failed), `ExecutionAlreadyExists` is returned.
       * *   If no execution with the same name exists, the system starts a new execution.
       *
      */
@@ -275,6 +277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Only flows of the express execution mode are supported.
+      *
+     */
     @Override
     public CompletableFuture<StartSyncExecutionResponse> startSyncExecution(StartSyncExecutionRequest request) {
         try {

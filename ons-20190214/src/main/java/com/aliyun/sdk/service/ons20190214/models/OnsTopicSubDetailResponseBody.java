@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OnsTopicSubDetailResponseBody} extends {@link TeaModel}
  *
  * <p>OnsTopicSubDetailResponseBody</p>
  */
 public class OnsTopicSubDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OnsTopicSubDetailResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,10 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87B6207F-2908-42B5-A134-84956DCA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OnsTopicSubDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicSubDetailResponseBody</p>
+     */
     public static class SubscriptionDataList extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("MessageModel")
+        @com.aliyun.core.annotation.NameInMap("MessageModel")
         private String messageModel;
 
-        @NameInMap("SubString")
+        @com.aliyun.core.annotation.NameInMap("SubString")
         private String subString;
 
         private SubscriptionDataList(Builder builder) {
@@ -122,7 +131,10 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             private String subString; 
 
             /**
-             * The ID of the consumer group.
+             * <p>The ID of the consumer group that subscribes to the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_test</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -130,13 +142,15 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption mode. Valid values:
-             * <p>
+             * <p>The consumption mode. Valid values:</p>
+             * <ul>
+             * <li><strong>CLUSTERING</strong>: the clustering consumption mode</li>
+             * <li><strong>BROADCASTING</strong>: the broadcasting consumption mode</li>
+             * </ul>
+             * <p>For more information about consumption modes, see <a href="https://help.aliyun.com/document_detail/43163.html">Clustering consumption and broadcasting consumption</a>.</p>
              * 
-             * *   **CLUSTERING**: the clustering consumption mode
-             * *   **BROADCASTING**: the broadcasting consumption mode
-             * 
-             * For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).
+             * <strong>example:</strong>
+             * <p>CLUSTERING</p>
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -144,7 +158,12 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expression based on which consumers in the consumer group subscribe to the topic.
+             * <p>The expression based on which consumers in the consumer group subscribe to the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder subString(String subString) {
                 this.subString = subString;
@@ -158,8 +177,14 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTopicSubDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicSubDetailResponseBody</p>
+     */
     public static class DataSubscriptionDataList extends TeaModel {
-        @NameInMap("SubscriptionDataList")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionDataList")
         private java.util.List < SubscriptionDataList> subscriptionDataList;
 
         private DataSubscriptionDataList(Builder builder) {
@@ -199,11 +224,17 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link OnsTopicSubDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>OnsTopicSubDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("SubscriptionDataList")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionDataList")
         private DataSubscriptionDataList subscriptionDataList;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private Data(Builder builder) {
@@ -238,7 +269,7 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The information about the online consumer groups that subscribe to the topic.
+             * <p>The information about the online consumer groups that subscribe to the topic.</p>
              */
             public Builder subscriptionDataList(DataSubscriptionDataList subscriptionDataList) {
                 this.subscriptionDataList = subscriptionDataList;
@@ -246,7 +277,10 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;

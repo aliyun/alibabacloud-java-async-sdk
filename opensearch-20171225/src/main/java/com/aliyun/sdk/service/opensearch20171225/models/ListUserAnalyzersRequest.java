@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserAnalyzersRequest</p>
  */
 public class ListUserAnalyzersRequest extends Request {
-    @Query
-    @NameInMap("pageNumber")
-    @Validation(maximum = 999999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 999999999)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(maximum = 999999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 999999999)
     private Integer pageSize;
 
     private ListUserAnalyzersRequest(Builder builder) {

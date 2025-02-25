@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateOpaStrategyNewRequest} extends {@link RequestModel}
  *
  * <p>UpdateOpaStrategyNewRequest</p>
  */
 public class UpdateOpaStrategyNewRequest extends Request {
-    @Query
-    @NameInMap("AlarmDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmDetail")
     private AlarmDetail alarmDetail;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImageName")
-    private java.util.List < String > imageName;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    private java.util.List<String> imageName;
 
-    @Query
-    @NameInMap("Label")
-    private java.util.List < String > label;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
+    private java.util.List<String> label;
 
-    @Query
-    @NameInMap("MaliciousImage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaliciousImage")
     private Boolean maliciousImage;
 
-    @Query
-    @NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
     private Integer ruleAction;
 
-    @Query
-    @NameInMap("Scopes")
-    private java.util.List < Scopes> scopes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scopes")
+    private java.util.List<Scopes> scopes;
 
-    @Query
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private Long strategyId;
 
-    @Query
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
-    @Query
-    @NameInMap("StrategyTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyTemplateId")
     private Long strategyTemplateId;
 
-    @Query
-    @NameInMap("UnScanedImage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnScanedImage")
     private Boolean unScanedImage;
 
-    @Query
-    @NameInMap("WhiteList")
-    private java.util.List < String > whiteList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhiteList")
+    private java.util.List<String> whiteList;
 
     private UpdateOpaStrategyNewRequest(Builder builder) {
         super(builder);
@@ -130,14 +135,14 @@ public class UpdateOpaStrategyNewRequest extends Request {
     /**
      * @return imageName
      */
-    public java.util.List < String > getImageName() {
+    public java.util.List<String> getImageName() {
         return this.imageName;
     }
 
     /**
      * @return label
      */
-    public java.util.List < String > getLabel() {
+    public java.util.List<String> getLabel() {
         return this.label;
     }
 
@@ -158,7 +163,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
     /**
      * @return scopes
      */
-    public java.util.List < Scopes> getScopes() {
+    public java.util.List<Scopes> getScopes() {
         return this.scopes;
     }
 
@@ -193,7 +198,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
     /**
      * @return whiteList
      */
-    public java.util.List < String > getWhiteList() {
+    public java.util.List<String> getWhiteList() {
         return this.whiteList;
     }
 
@@ -202,16 +207,16 @@ public class UpdateOpaStrategyNewRequest extends Request {
         private String clusterId; 
         private String clusterName; 
         private String description; 
-        private java.util.List < String > imageName; 
-        private java.util.List < String > label; 
+        private java.util.List<String> imageName; 
+        private java.util.List<String> label; 
         private Boolean maliciousImage; 
         private Integer ruleAction; 
-        private java.util.List < Scopes> scopes; 
+        private java.util.List<Scopes> scopes; 
         private Long strategyId; 
         private String strategyName; 
         private Long strategyTemplateId; 
         private Boolean unScanedImage; 
-        private java.util.List < String > whiteList; 
+        private java.util.List<String> whiteList; 
 
         private Builder() {
             super();
@@ -236,7 +241,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * The risks that you want to detect by using the rule on images.
+         * <p>The risks that you want to detect by using the rule.</p>
          */
         public Builder alarmDetail(AlarmDetail alarmDetail) {
             String alarmDetailShrink = shrink(alarmDetail, "AlarmDetail", "json");
@@ -246,10 +251,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.</p>
+         * </blockquote>
          * 
-         * > This parameter is deprecated. We recommend that you use the Scopes parameter to specify the clusters in which the rule takes effect.
+         * <strong>example:</strong>
+         * <p>c870ec78ecbcb41d2a35c679823ef****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -258,10 +266,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
-         * <p>
+         * <p>The cluster name.</p>
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
          * 
-         * > This parameter is deprecated.
+         * <strong>example:</strong>
+         * <p>docker-law</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -270,7 +281,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The description of the rule.
+         * <p>The rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4566</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -279,29 +293,32 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The names of the images in the rule.
+         * <p>The image names.</p>
          */
-        public Builder imageName(java.util.List < String > imageName) {
+        public Builder imageName(java.util.List<String> imageName) {
             this.putQueryParameter("ImageName", imageName);
             this.imageName = imageName;
             return this;
         }
 
         /**
-         * The tags that are added to the images in the rule.
+         * <p>The image tags.</p>
          */
-        public Builder label(java.util.List < String > label) {
+        public Builder label(java.util.List<String> label) {
             this.putQueryParameter("Label", label);
             this.label = label;
             return this;
         }
 
         /**
-         * Specifies whether the rule supports malicious Internet images. Valid values:
-         * <p>
+         * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder maliciousImage(Boolean maliciousImage) {
             this.putQueryParameter("MaliciousImage", maliciousImage);
@@ -310,12 +327,15 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The action that is performed when the rule is hit. Valid values:
-         * <p>
+         * <p>The action that is performed when the rule is hit. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: alert</li>
+         * <li><strong>2</strong>: block</li>
+         * <li><strong>3</strong>: allow</li>
+         * </ul>
          * 
-         * *   **1**: trigger alerts
-         * *   **2**: block
-         * *   **3**: allow
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleAction(Integer ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -324,19 +344,22 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The effective scope of the rule.
+         * <p>The application scope.</p>
          */
-        public Builder scopes(java.util.List < Scopes> scopes) {
+        public Builder scopes(java.util.List<Scopes> scopes) {
             this.putQueryParameter("Scopes", scopes);
             this.scopes = scopes;
             return this;
         }
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the \[ListOpaClusterStrategyNew]\(~~2623574~~) operation to query the IDs of rules.
+         * <strong>example:</strong>
+         * <p>1003</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -345,7 +368,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -354,10 +380,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The ID of the rule template.
-         * <p>
+         * <p>The ID of the rule template.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</p>
+         * </blockquote>
          * 
-         * >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the IDs of rule templates.
+         * <strong>example:</strong>
+         * <p>109</p>
          */
         public Builder strategyTemplateId(Long strategyTemplateId) {
             this.putQueryParameter("StrategyTemplateId", strategyTemplateId);
@@ -366,11 +395,14 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * Specifies whether the rule supports unscanned images. Valid values:
-         * <p>
+         * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder unScanedImage(Boolean unScanedImage) {
             this.putQueryParameter("UnScanedImage", unScanedImage);
@@ -379,9 +411,9 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The whitelist.
+         * <p>The whitelists.</p>
          */
-        public Builder whiteList(java.util.List < String > whiteList) {
+        public Builder whiteList(java.util.List<String> whiteList) {
             this.putQueryParameter("WhiteList", whiteList);
             this.whiteList = whiteList;
             return this;
@@ -394,11 +426,17 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Item(Builder builder) {
@@ -433,10 +471,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the baseline check item.
-             * <p>
+             * <p>The ID of the baseline check item.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the ID.</p>
+             * </blockquote>
              * 
-             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the IDs of check items.
+             * <strong>example:</strong>
+             * <p>hc.image.checklist.identify.hc_exploit_couchdb_linux.item</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -444,10 +485,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The name of the baseline check item.
-             * <p>
+             * <p>The name of the baseline check item.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2539883.html">GetOpaClusterBaseLineList</a> operation to query the name.</p>
+             * </blockquote>
              * 
-             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the names of check items.
+             * <strong>example:</strong>
+             * <p>passwd</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -461,12 +505,18 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
     public static class Baseline extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
-        @NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private java.util.List<String> riskLevel;
 
         private Baseline(Builder builder) {
             this.item = builder.item;
@@ -484,33 +534,33 @@ public class UpdateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<Item> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
-             * The baseline check items.
+             * <p>The baseline check items.</p>
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }
 
             /**
-             * The risk levels.
+             * <p>The risk levels.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -522,11 +572,163 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
-    public static class MaliciousFileItem extends TeaModel {
-        @NameInMap("Id")
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class BuildRiskItem extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private BuildRiskItem(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BuildRiskItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * <p>The ID of the image build risk.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The name of the image build risk.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public BuildRiskItem build() {
+                return new BuildRiskItem(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class BuildRisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<BuildRiskItem> item;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private java.util.List<String> riskLevel;
+
+        private BuildRisk(Builder builder) {
+            this.item = builder.item;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BuildRisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return item
+         */
+        public java.util.List<BuildRiskItem> getItem() {
+            return this.item;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public java.util.List<String> getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List<BuildRiskItem> item; 
+            private java.util.List<String> riskLevel; 
+
+            /**
+             * <p>The configuration of image build risk.</p>
+             */
+            public Builder item(java.util.List<BuildRiskItem> item) {
+                this.item = item;
+                return this;
+            }
+
+            /**
+             * <p>The risk levels.</p>
+             */
+            public Builder riskLevel(java.util.List<String> riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public BuildRisk build() {
+                return new BuildRisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class MaliciousFileItem extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private MaliciousFileItem(Builder builder) {
@@ -561,10 +763,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the malicious sample.
-             * <p>
+             * <p>The ID of the malicious sample.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the ID.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the IDs of malicious samples.
+             * <strong>example:</strong>
+             * <p>65201</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -572,10 +777,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The name of the malicious sample.
-             * <p>
+             * <p>The name of the malicious sample.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeMatchedMaliciousNames~~">DescribeMatchedMaliciousNames</a> operation to query the name.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the names of malicious samples.
+             * <strong>example:</strong>
+             * <p>abnormal binary file</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -589,12 +797,18 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
     public static class MaliciousFile extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < MaliciousFileItem> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<MaliciousFileItem> item;
 
-        @NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private java.util.List<String> riskLevel;
 
         private MaliciousFile(Builder builder) {
             this.item = builder.item;
@@ -612,33 +826,33 @@ public class UpdateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < MaliciousFileItem> getItem() {
+        public java.util.List<MaliciousFileItem> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < MaliciousFileItem> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<MaliciousFileItem> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
-             * The malicious samples.
+             * <p>The malicious samples.</p>
              */
-            public Builder item(java.util.List < MaliciousFileItem> item) {
+            public Builder item(java.util.List<MaliciousFileItem> item) {
                 this.item = item;
                 return this;
             }
 
             /**
-             * The risk levels.
+             * <p>The risk levels.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -650,11 +864,163 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
-    public static class VulItem extends TeaModel {
-        @NameInMap("Id")
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class SensitiveFileItem extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private SensitiveFileItem(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SensitiveFileItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * <p>The ID of the sensitive files.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The name of the sensitive files.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SensitiveFileItem build() {
+                return new SensitiveFileItem(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class SensitiveFile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<SensitiveFileItem> item;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private java.util.List<String> riskLevel;
+
+        private SensitiveFile(Builder builder) {
+            this.item = builder.item;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SensitiveFile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return item
+         */
+        public java.util.List<SensitiveFileItem> getItem() {
+            return this.item;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public java.util.List<String> getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List<SensitiveFileItem> item; 
+            private java.util.List<String> riskLevel; 
+
+            /**
+             * <p>The configuration of sensitive file.</p>
+             */
+            public Builder item(java.util.List<SensitiveFileItem> item) {
+                this.item = item;
+                return this;
+            }
+
+            /**
+             * <p>The risk levels.</p>
+             */
+            public Builder riskLevel(java.util.List<String> riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public SensitiveFile build() {
+                return new SensitiveFile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class VulItem extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private VulItem(Builder builder) {
@@ -689,10 +1055,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the vulnerability.
-             * <p>
+             * <p>The ID of the vulnerability.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the ID.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the IDs of vulnerabilities.
+             * <strong>example:</strong>
+             * <p>CVE-2023-36034</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -700,10 +1069,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The name of the vulnerability.
-             * <p>
+             * <p>The name of the vulnerability.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/471928.html">DescribeVulListPage</a> operation to query the name.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the names of vulnerabilities.
+             * <strong>example:</strong>
+             * <p>oval:com.redhat.rhsa:def:20227002</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -717,15 +1089,106 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
-    public static class Vul extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < VulItem> item;
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class RiskClass extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
 
-        @NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private RiskClass(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskClass create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * <p>The ID of the vulnerability types. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: system vulnerability</li>
+             * <li><strong>app</strong>: application vulnerability</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cve</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The name of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>system vulnerability</strong></li>
+             * <li><strong>application vulnerability</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system vulnerability</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public RiskClass build() {
+                return new RiskClass(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
+    public static class Vul extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<VulItem> item;
+
+        @com.aliyun.core.annotation.NameInMap("RiskClass")
+        private java.util.List<RiskClass> riskClass;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private java.util.List<String> riskLevel;
 
         private Vul(Builder builder) {
             this.item = builder.item;
+            this.riskClass = builder.riskClass;
             this.riskLevel = builder.riskLevel;
         }
 
@@ -740,33 +1203,49 @@ public class UpdateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < VulItem> getItem() {
+        public java.util.List<VulItem> getItem() {
             return this.item;
+        }
+
+        /**
+         * @return riskClass
+         */
+        public java.util.List<RiskClass> getRiskClass() {
+            return this.riskClass;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < VulItem> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<VulItem> item; 
+            private java.util.List<RiskClass> riskClass; 
+            private java.util.List<String> riskLevel; 
 
             /**
-             * The vulnerabilities.
+             * <p>The vulnerabilities.</p>
              */
-            public Builder item(java.util.List < VulItem> item) {
+            public Builder item(java.util.List<VulItem> item) {
                 this.item = item;
                 return this;
             }
 
             /**
-             * The risk levels.
+             * <p>Risk type of vulnerability.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskClass(java.util.List<RiskClass> riskClass) {
+                this.riskClass = riskClass;
+                return this;
+            }
+
+            /**
+             * <p>The risk levels.</p>
+             */
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -778,19 +1257,33 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
     public static class AlarmDetail extends TeaModel {
-        @NameInMap("Baseline")
+        @com.aliyun.core.annotation.NameInMap("Baseline")
         private Baseline baseline;
 
-        @NameInMap("MaliciousFile")
+        @com.aliyun.core.annotation.NameInMap("BuildRisk")
+        private BuildRisk buildRisk;
+
+        @com.aliyun.core.annotation.NameInMap("MaliciousFile")
         private MaliciousFile maliciousFile;
 
-        @NameInMap("Vul")
+        @com.aliyun.core.annotation.NameInMap("SensitiveFile")
+        private SensitiveFile sensitiveFile;
+
+        @com.aliyun.core.annotation.NameInMap("Vul")
         private Vul vul;
 
         private AlarmDetail(Builder builder) {
             this.baseline = builder.baseline;
+            this.buildRisk = builder.buildRisk;
             this.maliciousFile = builder.maliciousFile;
+            this.sensitiveFile = builder.sensitiveFile;
             this.vul = builder.vul;
         }
 
@@ -810,10 +1303,24 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
+         * @return buildRisk
+         */
+        public BuildRisk getBuildRisk() {
+            return this.buildRisk;
+        }
+
+        /**
          * @return maliciousFile
          */
         public MaliciousFile getMaliciousFile() {
             return this.maliciousFile;
+        }
+
+        /**
+         * @return sensitiveFile
+         */
+        public SensitiveFile getSensitiveFile() {
+            return this.sensitiveFile;
         }
 
         /**
@@ -825,11 +1332,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
         public static final class Builder {
             private Baseline baseline; 
+            private BuildRisk buildRisk; 
             private MaliciousFile maliciousFile; 
+            private SensitiveFile sensitiveFile; 
             private Vul vul; 
 
             /**
-             * The baseline risks.
+             * <p>The baseline risks.</p>
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -837,7 +1346,15 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The malicious sample risks.
+             * <p>The configuration of image build risk.</p>
+             */
+            public Builder buildRisk(BuildRisk buildRisk) {
+                this.buildRisk = buildRisk;
+                return this;
+            }
+
+            /**
+             * <p>The malicious sample risks.</p>
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -845,7 +1362,15 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The vulnerability risks.
+             * <p>The configuration of sensitive file.</p>
+             */
+            public Builder sensitiveFile(SensitiveFile sensitiveFile) {
+                this.sensitiveFile = sensitiveFile;
+                return this;
+            }
+
+            /**
+             * <p>The vulnerability risks.</p>
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -859,18 +1384,24 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateOpaStrategyNewRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateOpaStrategyNewRequest</p>
+     */
     public static class Scopes extends TeaModel {
-        @NameInMap("AckPolicyInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AckPolicyInstanceId")
         private String ackPolicyInstanceId;
 
-        @NameInMap("AllNamespace")
+        @com.aliyun.core.annotation.NameInMap("AllNamespace")
         private Integer allNamespace;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("NamespaceList")
-        private java.util.List < String > namespaceList;
+        @com.aliyun.core.annotation.NameInMap("NamespaceList")
+        private java.util.List<String> namespaceList;
 
         private Scopes(Builder builder) {
             this.ackPolicyInstanceId = builder.ackPolicyInstanceId;
@@ -911,7 +1442,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         /**
          * @return namespaceList
          */
-        public java.util.List < String > getNamespaceList() {
+        public java.util.List<String> getNamespaceList() {
             return this.namespaceList;
         }
 
@@ -919,13 +1450,16 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private String ackPolicyInstanceId; 
             private Integer allNamespace; 
             private String clusterId; 
-            private java.util.List < String > namespaceList; 
+            private java.util.List<String> namespaceList; 
 
             /**
-             * The instance ID of the rule in the cluster.
-             * <p>
+             * <p>The ID of the cluster node to which the rule is applied.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to query the ID of the cluster node to which the rule is applied.</p>
+             * </blockquote>
              * 
-             * >  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the instance IDs of rules.
+             * <strong>example:</strong>
+             * <p>ack-1</p>
              */
             public Builder ackPolicyInstanceId(String ackPolicyInstanceId) {
                 this.ackPolicyInstanceId = ackPolicyInstanceId;
@@ -933,11 +1467,14 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * Specifies whether to include all namespaces.
-             * <p>
+             * <p>Specifies whether all namespaces are included. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Not all namespaces are included.</li>
+             * <li><strong>1</strong>: All namespaces are included.</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -945,10 +1482,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The ID of the container cluster.
-             * <p>
+             * <p>The cluster ID.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+             * <strong>example:</strong>
+             * <p>cdcb56a931c**</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -956,12 +1496,12 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The namespaces.
-             * <p>
-             * 
-             * > This parameter is valid only when AllNamespace is set to 0.
+             * <p>The namespaces.</p>
+             * <blockquote>
+             * <p>This parameter is valid only when the AllNamespace parameter is set to 0.</p>
+             * </blockquote>
              */
-            public Builder namespaceList(java.util.List < String > namespaceList) {
+            public Builder namespaceList(java.util.List<String> namespaceList) {
                 this.namespaceList = namespaceList;
                 return this;
             }

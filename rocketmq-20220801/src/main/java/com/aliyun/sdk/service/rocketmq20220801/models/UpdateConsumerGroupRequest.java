@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConsumerGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateConsumerGroupRequest</p>
  */
 public class UpdateConsumerGroupRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("consumerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
-    @Body
-    @NameInMap("consumeRetryPolicy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("consumeRetryPolicy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ConsumeRetryPolicy consumeRetryPolicy;
 
-    @Body
-    @NameInMap("deliveryOrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryOrderType;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maxReceiveTps")
+    private Long maxReceiveTps;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
     private UpdateConsumerGroupRequest(Builder builder) {
@@ -42,6 +51,7 @@ public class UpdateConsumerGroupRequest extends Request {
         this.consumerGroupId = builder.consumerGroupId;
         this.consumeRetryPolicy = builder.consumeRetryPolicy;
         this.deliveryOrderType = builder.deliveryOrderType;
+        this.maxReceiveTps = builder.maxReceiveTps;
         this.remark = builder.remark;
     }
 
@@ -87,6 +97,13 @@ public class UpdateConsumerGroupRequest extends Request {
     }
 
     /**
+     * @return maxReceiveTps
+     */
+    public Long getMaxReceiveTps() {
+        return this.maxReceiveTps;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
@@ -98,6 +115,7 @@ public class UpdateConsumerGroupRequest extends Request {
         private String consumerGroupId; 
         private ConsumeRetryPolicy consumeRetryPolicy; 
         private String deliveryOrderType; 
+        private Long maxReceiveTps; 
         private String remark; 
 
         private Builder() {
@@ -110,11 +128,16 @@ public class UpdateConsumerGroupRequest extends Request {
             this.consumerGroupId = request.consumerGroupId;
             this.consumeRetryPolicy = request.consumeRetryPolicy;
             this.deliveryOrderType = request.deliveryOrderType;
+            this.maxReceiveTps = request.maxReceiveTps;
             this.remark = request.remark;
         } 
 
         /**
-         * The ID of the instance to which the consumer group belongs.
+         * <p>The ID of the instance to which the consumer group belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22on9****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -123,7 +146,11 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group.
+         * <p>The ID of the consumer group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -132,7 +159,8 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The new consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).
+         * <p>The new consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder consumeRetryPolicy(ConsumeRetryPolicy consumeRetryPolicy) {
             this.putBodyParameter("consumeRetryPolicy", consumeRetryPolicy);
@@ -141,13 +169,16 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The new message delivery order of the consumer group.
-         * <p>
+         * <p>The new message delivery order of the consumer group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Concurrently: concurrent delivery</li>
+         * <li>Orderly: ordered delivery</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   Concurrently: concurrent delivery
-         * *   Orderly: ordered delivery
+         * <strong>example:</strong>
+         * <p>Concurrently</p>
          */
         public Builder deliveryOrderType(String deliveryOrderType) {
             this.putBodyParameter("deliveryOrderType", deliveryOrderType);
@@ -156,7 +187,19 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * The new remarks on the consumer group.
+         * maxReceiveTps.
+         */
+        public Builder maxReceiveTps(Long maxReceiveTps) {
+            this.putBodyParameter("maxReceiveTps", maxReceiveTps);
+            this.maxReceiveTps = maxReceiveTps;
+            return this;
+        }
+
+        /**
+         * <p>The new remarks on the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the remark for test.</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -171,15 +214,21 @@ public class UpdateConsumerGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateConsumerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateConsumerGroupRequest</p>
+     */
     public static class ConsumeRetryPolicy extends TeaModel {
-        @NameInMap("deadLetterTargetTopic")
+        @com.aliyun.core.annotation.NameInMap("deadLetterTargetTopic")
         private String deadLetterTargetTopic;
 
-        @NameInMap("maxRetryTimes")
+        @com.aliyun.core.annotation.NameInMap("maxRetryTimes")
         private Integer maxRetryTimes;
 
-        @NameInMap("retryPolicy")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("retryPolicy")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String retryPolicy;
 
         private ConsumeRetryPolicy(Builder builder) {
@@ -223,10 +272,11 @@ public class UpdateConsumerGroupRequest extends Request {
             private String retryPolicy; 
 
             /**
-             * The dead-letter topic.
-             * <p>
+             * <p>The dead-letter topic.</p>
+             * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
              * 
-             * If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).
+             * <strong>example:</strong>
+             * <p>DLQ_mqtest</p>
              */
             public Builder deadLetterTargetTopic(String deadLetterTargetTopic) {
                 this.deadLetterTargetTopic = deadLetterTargetTopic;
@@ -234,7 +284,10 @@ public class UpdateConsumerGroupRequest extends Request {
             }
 
             /**
-             * The maximum number of retries.
+             * <p>The maximum number of retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxRetryTimes(Integer maxRetryTimes) {
                 this.maxRetryTimes = maxRetryTimes;
@@ -242,13 +295,16 @@ public class UpdateConsumerGroupRequest extends Request {
             }
 
             /**
-             * The retry policy. For more information, see [Message retry](~~440356~~).
-             * <p>
+             * <p>The retry policy. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>FixedRetryPolicy: Failed messages are retried at a fixed interval.</li>
+             * <li>DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values:
-             * 
-             * *   FixedRetryPolicy: Failed messages are retried at a fixed interval.
-             * *   DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.
+             * <strong>example:</strong>
+             * <p>DefaultRetryPolicy</p>
              */
             public Builder retryPolicy(String retryPolicy) {
                 this.retryPolicy = retryPolicy;

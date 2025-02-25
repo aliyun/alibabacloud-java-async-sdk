@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRemediationTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetRemediationTemplateRequest</p>
  */
 public class GetRemediationTemplateRequest extends Request {
-    @Query
-    @NameInMap("TemplateIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIdentifier")
     private String templateIdentifier;
 
     private GetRemediationTemplateRequest(Builder builder) {
@@ -54,10 +59,11 @@ public class GetRemediationTemplateRequest extends Request {
         } 
 
         /**
-         * The identifier of the automatic remediation template.
-         * <p>
+         * <p>The ID of the automatic remediation template.</p>
+         * <p>For more information about how to obtain the ID of a remediation template, see <a href="https://help.aliyun.com/document_detail/2337741.html">Compliance library</a>.</p>
          * 
-         * For more information about how to obtain the identifier of a remediation template, see [Compliance library](~~2337741~~).
+         * <strong>example:</strong>
+         * <p>ACS-ALB-BulkyEnableDeletionProtection</p>
          */
         public Builder templateIdentifier(String templateIdentifier) {
             this.putQueryParameter("TemplateIdentifier", templateIdentifier);

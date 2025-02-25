@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCdnUserConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCdnUserConfigsResponseBody</p>
  */
 public class DescribeCdnUserConfigsResponseBody extends TeaModel {
-    @NameInMap("Configs")
+    @com.aliyun.core.annotation.NameInMap("Configs")
     private java.util.List < Configs> configs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnUserConfigsResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The user configurations.
+         * <p>The user configurations.</p>
          */
         public Builder configs(java.util.List < Configs> configs) {
             this.configs = configs;
@@ -58,7 +58,10 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06D29681-B7CD-4034-A8CC-28AFFA213539</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCdnUserConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCdnUserConfigsResponseBody</p>
+     */
     public static class Configs extends TeaModel {
-        @NameInMap("ArgName")
+        @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
 
-        @NameInMap("ArgValue")
+        @com.aliyun.core.annotation.NameInMap("ArgValue")
         private String argValue;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
         private Configs(Builder builder) {
@@ -122,10 +131,11 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * The name of the configuration.
-             * <p>
+             * <p>The name of the configuration.</p>
+             * <p>The configuration is specified by enterprise users and public service sectors.</p>
              * 
-             * The configuration is specified by enterprise users and public service sectors.
+             * <strong>example:</strong>
+             * <p>allow_function</p>
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -133,16 +143,19 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration. Valid values:
-             * <p>
+             * <p>The value of the configuration. Valid values:</p>
+             * <ul>
+             * <li><strong>cc_rule</strong>: HTTP flood protection rules</li>
+             * <li><strong>ddos_dispatch</strong>: integration with Anti-DDoS</li>
+             * <li><strong>edge_safe</strong>: application security settings on POPs</li>
+             * <li><strong>blocked_regions</strong>: blocked regions</li>
+             * <li><strong>http_acl_policy</strong>: access control list (ACL) rules</li>
+             * <li><strong>bot_manager</strong>: bot traffic management</li>
+             * <li><strong>ip_reputation</strong>: IP reputation library</li>
+             * </ul>
              * 
-             * *   **cc_rule**: HTTP flood protection rules
-             * *   **ddos_dispatch**: integration with Anti-DDoS
-             * *   **edge_safe**: application security settings on POPs
-             * *   **blocked_regions**: blocked regions
-             * *   **http_acl_policy**: access control list (ACL) rules
-             * *   **bot_manager**: bot traffic management
-             * *   **ip_reputation**: IP reputation library
+             * <strong>example:</strong>
+             * <p>{&quot;dcdn_allow&quot;:[&quot;cc_rule&quot;,&quot;ddos_dispatch&quot;]}</p>
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -150,7 +163,10 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain_business_control</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;

@@ -1,42 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProvisionConfig} extends {@link TeaModel}
  *
  * <p>ProvisionConfig</p>
  */
 public class ProvisionConfig extends TeaModel {
-    @NameInMap("alwaysAllocateCPU")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateCPU")
     private Boolean alwaysAllocateCPU;
 
-    @NameInMap("current")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateGPU")
+    private Boolean alwaysAllocateGPU;
+
+    @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
-    @NameInMap("currentError")
+    @com.aliyun.core.annotation.NameInMap("currentError")
     private String currentError;
 
-    @NameInMap("functionArn")
+    @com.aliyun.core.annotation.NameInMap("defaultTarget")
+    private Long defaultTarget;
+
+    @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
-    @NameInMap("scheduledActions")
+    @com.aliyun.core.annotation.NameInMap("scheduledActions")
     private java.util.List < ScheduledAction > scheduledActions;
 
-    @NameInMap("target")
+    @com.aliyun.core.annotation.NameInMap("target")
     private Long target;
 
-    @NameInMap("targetTrackingPolicies")
+    @com.aliyun.core.annotation.NameInMap("targetTrackingPolicies")
     private java.util.List < TargetTrackingPolicy > targetTrackingPolicies;
 
     private ProvisionConfig(Builder builder) {
         this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
+        this.alwaysAllocateGPU = builder.alwaysAllocateGPU;
         this.current = builder.current;
         this.currentError = builder.currentError;
+        this.defaultTarget = builder.defaultTarget;
         this.functionArn = builder.functionArn;
         this.scheduledActions = builder.scheduledActions;
         this.target = builder.target;
@@ -59,6 +67,13 @@ public class ProvisionConfig extends TeaModel {
     }
 
     /**
+     * @return alwaysAllocateGPU
+     */
+    public Boolean getAlwaysAllocateGPU() {
+        return this.alwaysAllocateGPU;
+    }
+
+    /**
      * @return current
      */
     public Long getCurrent() {
@@ -70,6 +85,13 @@ public class ProvisionConfig extends TeaModel {
      */
     public String getCurrentError() {
         return this.currentError;
+    }
+
+    /**
+     * @return defaultTarget
+     */
+    public Long getDefaultTarget() {
+        return this.defaultTarget;
     }
 
     /**
@@ -102,8 +124,10 @@ public class ProvisionConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean alwaysAllocateCPU; 
+        private Boolean alwaysAllocateGPU; 
         private Long current; 
         private String currentError; 
+        private Long defaultTarget; 
         private String functionArn; 
         private java.util.List < ScheduledAction > scheduledActions; 
         private Long target; 
@@ -114,6 +138,14 @@ public class ProvisionConfig extends TeaModel {
          */
         public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
             this.alwaysAllocateCPU = alwaysAllocateCPU;
+            return this;
+        }
+
+        /**
+         * alwaysAllocateGPU.
+         */
+        public Builder alwaysAllocateGPU(Boolean alwaysAllocateGPU) {
+            this.alwaysAllocateGPU = alwaysAllocateGPU;
             return this;
         }
 
@@ -130,6 +162,14 @@ public class ProvisionConfig extends TeaModel {
          */
         public Builder currentError(String currentError) {
             this.currentError = currentError;
+            return this;
+        }
+
+        /**
+         * defaultTarget.
+         */
+        public Builder defaultTarget(Long defaultTarget) {
+            this.defaultTarget = defaultTarget;
             return this;
         }
 

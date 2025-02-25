@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WithdrawPublishedRouteEntriesRequest} extends {@link RequestModel}
  *
  * <p>WithdrawPublishedRouteEntriesRequest</p>
  */
 public class WithdrawPublishedRouteEntriesRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("ChildInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceId;
 
-    @Query
-    @NameInMap("ChildInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceRegionId;
 
-    @Query
-    @NameInMap("ChildInstanceRouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceRouteTableId;
 
-    @Query
-    @NameInMap("ChildInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceType;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private WithdrawPublishedRouteEntriesRequest(Builder builder) {
@@ -158,7 +163,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>The ID of the CEN instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-sxjfjkjfkjfiein****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -167,7 +176,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * <p>The ID of the attached network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-rj9gt5nll27onu7****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -176,7 +189,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * <p>The ID of the region where the attached network instance is created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -185,7 +202,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRouteTableId.
+         * <p>The ID of the route table of the attached network instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp174d1gje79u1g4t****</p>
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -194,7 +215,12 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * <p>The type of the attached network instance.</p>
+         * <p>Set the value to <strong>VPC</strong>, which indicates a virtual private cloud (VPC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -203,7 +229,11 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * <p>The destination CIDR block of the route that you want to withdraw.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.XX.XX.0/24</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);

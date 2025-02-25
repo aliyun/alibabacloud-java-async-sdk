@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDataSourceLogRequest</p>
  */
 public class DeleteDataSourceLogRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("DataSourceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceInstanceId;
 
-    @Body
-    @NameInMap("LogInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logInstanceId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DeleteDataSourceLogRequest(Builder builder) {
@@ -114,7 +113,7 @@ public class DeleteDataSourceLogRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the cloud account.
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -123,7 +122,12 @@ public class DeleteDataSourceLogRequest extends Request {
         }
 
         /**
-         * CloudCode.
+         * The code of the cloud service provider. Valid values:
+         * <p>
+         * 
+         * *   qcloud: Tencent Cloud
+         * *   aliyun: Alibaba Cloud
+         * *   hcloud: Huawei Cloud
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -132,7 +136,7 @@ public class DeleteDataSourceLogRequest extends Request {
         }
 
         /**
-         * DataSourceInstanceId.
+         * The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the [ListDataSourceLogs](https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854\&activeTabKey=api%7CListDataSourceLogs) operation to query the IDs of data sources.
          */
         public Builder dataSourceInstanceId(String dataSourceInstanceId) {
             this.putBodyParameter("DataSourceInstanceId", dataSourceInstanceId);
@@ -141,7 +145,7 @@ public class DeleteDataSourceLogRequest extends Request {
         }
 
         /**
-         * LogInstanceId.
+         * The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the [ListDataSourceLogs](https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854\&activeTabKey=api%7CListDataSourceLogs) operation to query the IDs of logs.
          */
         public Builder logInstanceId(String logInstanceId) {
             this.putBodyParameter("LogInstanceId", logInstanceId);
@@ -150,7 +154,11 @@ public class DeleteDataSourceLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

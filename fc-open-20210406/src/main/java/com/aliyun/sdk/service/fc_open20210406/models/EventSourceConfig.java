@@ -59,7 +59,7 @@ public class EventSourceConfig extends TeaModel {
         }
 
         /**
-         * eventSourceType
+         * eventSourceType.
          */
         public Builder eventSourceType(String eventSourceType) {
             this.eventSourceType = eventSourceType;

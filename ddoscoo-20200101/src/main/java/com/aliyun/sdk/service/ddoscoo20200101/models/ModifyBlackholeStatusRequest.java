@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBlackholeStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyBlackholeStatusRequest</p>
  */
 public class ModifyBlackholeStatusRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BlackholeStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlackholeStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blackholeStatus;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private ModifyBlackholeStatusRequest(Builder builder) {
@@ -93,7 +98,11 @@ public class ModifyBlackholeStatusRequest extends Request {
         }
 
         /**
-         * The action that you want to perform on the instance. Set the value to **undo**, which indicates that you want to deactivate blackhole filtering.
+         * <p>The action that you want to perform on the instance. Set the value to <strong>undo</strong>, which indicates that you want to deactivate blackhole filtering.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>undo</p>
          */
         public Builder blackholeStatus(String blackholeStatus) {
             this.putQueryParameter("BlackholeStatus", blackholeStatus);
@@ -102,10 +111,14 @@ public class ModifyBlackholeStatusRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

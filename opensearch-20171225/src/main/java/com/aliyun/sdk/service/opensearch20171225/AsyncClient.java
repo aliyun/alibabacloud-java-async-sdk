@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.opensearch20171225;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.opensearch20171225.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -41,10 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAppGroupResponse> createAppGroup(CreateAppGroupRequest request);
 
+    CompletableFuture<CreateAppGroupCredentialsResponse> createAppGroupCredentials(CreateAppGroupCredentialsRequest request);
+
     CompletableFuture<CreateFirstRankResponse> createFirstRank(CreateFirstRankRequest request);
 
     /**
-      * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
+      * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of a feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
       *
      */
     CompletableFuture<CreateFunctionInstanceResponse> createFunctionInstance(CreateFunctionInstanceRequest request);
@@ -65,11 +68,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSortScriptResponse> createSortScript(CreateSortScriptRequest request);
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=CreateUserAnalyzer\\&type=ROA\\&version=2017-12-25)
-      *
-     */
     CompletableFuture<CreateUserAnalyzerResponse> createUserAnalyzer(CreateUserAnalyzerRequest request);
 
     CompletableFuture<DeleteABTestExperimentResponse> deleteABTestExperiment(DeleteABTestExperimentRequest request);
@@ -158,7 +156,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   This operation allows you to query applications by application name, instance ID, and application type.
-      * *   This operation can sort the applications based on their creation time.
+      * *   This operation allows you to sort the applications based on their creation time.
       * *   This operation supports the parameters for paging.
       *
      */
@@ -236,8 +234,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PushUserAnalyzerEntriesResponse> pushUserAnalyzerEntries(PushUserAnalyzerEntriesRequest request);
 
-    CompletableFuture<RankPreviewQueryResponse> rankPreviewQuery(RankPreviewQueryRequest request);
-
     CompletableFuture<ReleaseSortScriptResponse> releaseSortScript(ReleaseSortScriptRequest request);
 
     CompletableFuture<RemoveAppResponse> removeApp(RemoveAppRequest request);
@@ -271,7 +267,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
-      * The ID of the request.
+      * You can call this operation to unbind a custom analyzer from an Elasticsearch instance.
       *
      */
     CompletableFuture<UnbindESUserAnalyzerResponse> unbindESUserAnalyzer(UnbindESUserAnalyzerRequest request);
@@ -294,6 +290,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateFunctionInstanceResponse> updateFunctionInstance(UpdateFunctionInstanceRequest request);
 
+    /**
+      * You can call this operation to update the information about resources by resource name. You can modify only the values of data and description.
+      *
+     */
     CompletableFuture<UpdateFunctionResourceResponse> updateFunctionResource(UpdateFunctionResourceRequest request);
 
     CompletableFuture<UpdateSearchStrategyResponse> updateSearchStrategy(UpdateSearchStrategyRequest request);

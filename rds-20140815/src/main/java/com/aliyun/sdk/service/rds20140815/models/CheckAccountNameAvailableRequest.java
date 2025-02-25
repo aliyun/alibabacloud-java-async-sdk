@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckAccountNameAvailableRequest} extends {@link RequestModel}
  *
  * <p>CheckAccountNameAvailableRequest</p>
  */
 public class CheckAccountNameAvailableRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private CheckAccountNameAvailableRequest(Builder builder) {
@@ -126,25 +131,31 @@ public class CheckAccountNameAvailableRequest extends Request {
         } 
 
         /**
-         * The username of the account.
-         * <p>
+         * <p>The username of the account.</p>
+         * <ul>
+         * <li><p>The value must be unique.</p>
+         * </li>
+         * <li><p>The value must start with a lowercase letter, and end with a lowercase letter or a digit.</p>
+         * </li>
+         * <li><p>The value can contain lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>The length of the value must meet the following requirements:</p>
+         * <ul>
+         * <li>If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.</li>
+         * <li>If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.</li>
+         * <li>If the instance runs SQL Server, the value must be 2 to 64 characters in length.</li>
+         * <li>If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.</li>
+         * <li>If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</li>
+         * <li>If the instance runs MariaDB, the value must be 2 to 16 characters in length.</li>
+         * </ul>
+         * </li>
+         * <li><p>For more information about invalid characters, see <a href="https://help.aliyun.com/document_detail/26317.html">Forbidden keywords table</a>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value must be unique.
-         * 
-         * *   The value must start with a lowercase letter, and end with a lowercase letter or a digit.
-         * 
-         * *   The value can contain lowercase letters, digits, and underscores (\_).
-         * 
-         * *   The length of the value must meet the following requirements:
-         * 
-         *     *   If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.
-         *     *   If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.
-         *     *   If the instance runs SQL Server, the value must be 2 to 64 characters in length.
-         *     *   If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.
-         *     *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.
-         *     *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.
-         * 
-         * *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).
+         * <strong>example:</strong>
+         * <p>DatabaseTest</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -153,7 +164,10 @@ public class CheckAccountNameAvailableRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +176,11 @@ public class CheckAccountNameAvailableRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

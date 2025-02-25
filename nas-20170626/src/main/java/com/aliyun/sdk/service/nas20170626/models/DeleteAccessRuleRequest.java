@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessRuleRequest</p>
  */
 public class DeleteAccessRuleRequest extends Request {
-    @Query
-    @NameInMap("AccessGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroupName;
 
-    @Query
-    @NameInMap("AccessRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessRuleId;
 
-    @Query
-    @NameInMap("FileSystemType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemType")
     private String fileSystemType;
 
     private DeleteAccessRuleRequest(Builder builder) {
@@ -76,15 +81,19 @@ public class DeleteAccessRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessRuleRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.accessRuleId = response.accessRuleId;
-            this.fileSystemType = response.fileSystemType;
+        private Builder(DeleteAccessRuleRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.accessRuleId = request.accessRuleId;
+            this.fileSystemType = request.fileSystemType;
         } 
 
         /**
-         * AccessGroupName.
+         * <p>The name of the permission group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -93,7 +102,11 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
-         * AccessRuleId.
+         * <p>The rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder accessRuleId(String accessRuleId) {
             this.putQueryParameter("AccessRuleId", accessRuleId);
@@ -102,7 +115,15 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * <p>The type of the file system.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard (default): General-purpose NAS file system</li>
+         * <li>extreme: Extreme NAS file system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

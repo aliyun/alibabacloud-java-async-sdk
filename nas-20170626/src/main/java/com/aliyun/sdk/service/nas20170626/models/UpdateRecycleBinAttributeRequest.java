@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRecycleBinAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateRecycleBinAttributeRequest</p>
  */
 public class UpdateRecycleBinAttributeRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("ReservedDays")
-    @Validation(required = true, maximum = 180, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedDays")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 180, minimum = 1)
     private Long reservedDays;
 
     private UpdateRecycleBinAttributeRequest(Builder builder) {
@@ -63,14 +68,18 @@ public class UpdateRecycleBinAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRecycleBinAttributeRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.reservedDays = response.reservedDays;
+        private Builder(UpdateRecycleBinAttributeRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.reservedDays = request.reservedDays;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ca404****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +88,13 @@ public class UpdateRecycleBinAttributeRequest extends Request {
         }
 
         /**
-         * ReservedDays.
+         * <p>The retention period of the files in the recycle bin. Unit: days.</p>
+         * <p>Valid values: 1 to 180.</p>
+         * <p>Default value: 3.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder reservedDays(Long reservedDays) {
             this.putQueryParameter("ReservedDays", reservedDays);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceNewConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceNewConnectionsResponseBody</p>
  */
 public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
-    @NameInMap("InstanceNewConnections")
+    @com.aliyun.core.annotation.NameInMap("InstanceNewConnections")
     private InstanceNewConnections instanceNewConnections;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceNewConnectionsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of new connections in the instance.
+         * <p>The list of new connections in the instance.</p>
          */
         public Builder instanceNewConnections(InstanceNewConnections instanceNewConnections) {
             this.instanceNewConnections = instanceNewConnections;
@@ -58,7 +63,10 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceNewConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceNewConnectionsResponseBody</p>
+     */
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ
+             * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-08T02:08:00Z</p>
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +135,10 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of new connections in the instance.
+             * <p>The number of new connections in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;
@@ -132,9 +152,15 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceNewConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceNewConnectionsResponseBody</p>
+     */
     public static class InstanceNewConnections extends TeaModel {
-        @NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
+        private java.util.List<MonitorItem> monitorItem;
 
         private InstanceNewConnections(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -151,17 +177,17 @@ public class DescribeInstanceNewConnectionsResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

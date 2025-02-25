@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetObjectScanEventResponseBody} extends {@link TeaModel}
  *
  * <p>GetObjectScanEventResponseBody</p>
  */
 public class GetObjectScanEventResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetObjectScanEventResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +79,29 @@ public class GetObjectScanEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetObjectScanEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetObjectScanEventResponseBody</p>
+     */
     public static class Details extends TeaModel {
-        @NameInMap("InfoType")
+        @com.aliyun.core.annotation.NameInMap("InfoType")
         private String infoType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDisplay")
+        @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueDisplay")
+        @com.aliyun.core.annotation.NameInMap("ValueDisplay")
         private String valueDisplay;
 
         private Details(Builder builder) {
@@ -158,7 +172,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * The type of the item.
+             * <p>The type of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>html</p>
              */
             public Builder infoType(String infoType) {
                 this.infoType = infoType;
@@ -166,7 +183,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the item.
+             * <p>The name of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DownloadUrl</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -174,7 +194,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the item.
+             * <p>The display name of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DownloadUrl</p>
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -182,7 +205,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the item.
+             * <p>The type of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>html</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -190,7 +216,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the item.
+             * <p>The value of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -198,7 +227,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The display value of the item.
+             * <p>The display value of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://****</p>
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -212,17 +244,23 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetObjectScanEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetObjectScanEventResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Details")
-        private java.util.List < Details> details;
+        @com.aliyun.core.annotation.NameInMap("Details")
+        private java.util.List<Details> details;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
         private Data(Builder builder) {
@@ -243,7 +281,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -269,21 +307,24 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String eventName; 
             private String fileName; 
             private String md5; 
 
             /**
-             * The details of the alert event.
+             * <p>The details of the alert event.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
 
             /**
-             * The name of the alert item.
+             * <p>The name of the alert item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebShell</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -291,7 +332,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object.
+             * <p>The name of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sca_2023****</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -299,7 +343,10 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the object.
+             * <p>The MD5 hash value of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0552c44e243abdea1729d4507bce****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;

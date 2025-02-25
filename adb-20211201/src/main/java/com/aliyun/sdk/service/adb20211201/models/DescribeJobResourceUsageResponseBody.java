@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobResourceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJobResourceUsageResponseBody</p>
  */
 public class DescribeJobResourceUsageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeJobResourceUsageResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +78,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The queried resource usage.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,7 +86,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,19 +102,33 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeJobResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResourceUsageResponseBody</p>
+     */
     public static class AcuUsageDetail extends TeaModel {
-        @NameInMap("ElasticAcuNumber")
+        @com.aliyun.core.annotation.NameInMap("ElasticAcuNumber")
         private Float elasticAcuNumber;
 
-        @NameInMap("ReservedAcuNumber")
+        @com.aliyun.core.annotation.NameInMap("ReservedAcuNumber")
         private Float reservedAcuNumber;
 
-        @NameInMap("TotalAcuNumber")
+        @com.aliyun.core.annotation.NameInMap("SpotAcuNumber")
+        private Float spotAcuNumber;
+
+        @com.aliyun.core.annotation.NameInMap("SpotAcuPercentage")
+        private Float spotAcuPercentage;
+
+        @com.aliyun.core.annotation.NameInMap("TotalAcuNumber")
         private Float totalAcuNumber;
 
         private AcuUsageDetail(Builder builder) {
             this.elasticAcuNumber = builder.elasticAcuNumber;
             this.reservedAcuNumber = builder.reservedAcuNumber;
+            this.spotAcuNumber = builder.spotAcuNumber;
+            this.spotAcuPercentage = builder.spotAcuPercentage;
             this.totalAcuNumber = builder.totalAcuNumber;
         }
 
@@ -130,6 +155,20 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return spotAcuNumber
+         */
+        public Float getSpotAcuNumber() {
+            return this.spotAcuNumber;
+        }
+
+        /**
+         * @return spotAcuPercentage
+         */
+        public Float getSpotAcuPercentage() {
+            return this.spotAcuPercentage;
+        }
+
+        /**
          * @return totalAcuNumber
          */
         public Float getTotalAcuNumber() {
@@ -139,10 +178,15 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public static final class Builder {
             private Float elasticAcuNumber; 
             private Float reservedAcuNumber; 
+            private Float spotAcuNumber; 
+            private Float spotAcuPercentage; 
             private Float totalAcuNumber; 
 
             /**
-             * ElasticAcuNumber.
+             * <p>The number of ACUs for the elastic resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder elasticAcuNumber(Float elasticAcuNumber) {
                 this.elasticAcuNumber = elasticAcuNumber;
@@ -150,7 +194,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedAcuNumber.
+             * <p>The number of ACUs for the reserved resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder reservedAcuNumber(Float reservedAcuNumber) {
                 this.reservedAcuNumber = reservedAcuNumber;
@@ -158,7 +205,32 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAcuNumber.
+             * <p>The number of spot ACUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
+             */
+            public Builder spotAcuNumber(Float spotAcuNumber) {
+                this.spotAcuNumber = spotAcuNumber;
+                return this;
+            }
+
+            /**
+             * <p>The percent of spot ACUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
+             */
+            public Builder spotAcuPercentage(Float spotAcuPercentage) {
+                this.spotAcuPercentage = spotAcuPercentage;
+                return this;
+            }
+
+            /**
+             * <p>The total number of ACUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32ACU</p>
              */
             public Builder totalAcuNumber(Float totalAcuNumber) {
                 this.totalAcuNumber = totalAcuNumber;
@@ -172,20 +244,26 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResourceUsageResponseBody</p>
+     */
     public static class JobAcuUsage extends TeaModel {
-        @NameInMap("AcuUsageDetail")
+        @com.aliyun.core.annotation.NameInMap("AcuUsageDetail")
         private AcuUsageDetail acuUsageDetail;
 
-        @NameInMap("JobEndTime")
+        @com.aliyun.core.annotation.NameInMap("JobEndTime")
         private String jobEndTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobStartTime")
+        @com.aliyun.core.annotation.NameInMap("JobStartTime")
         private String jobStartTime;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
         private JobAcuUsage(Builder builder) {
@@ -247,7 +325,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private String resourceGroupName; 
 
             /**
-             * AcuUsageDetail.
+             * <p>The ACU usage.</p>
              */
             public Builder acuUsageDetail(AcuUsageDetail acuUsageDetail) {
                 this.acuUsageDetail = acuUsageDetail;
@@ -255,7 +333,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobEndTime.
+             * <p>The end time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-23T16:00:00Z</p>
              */
             public Builder jobEndTime(String jobEndTime) {
                 this.jobEndTime = jobEndTime;
@@ -263,7 +344,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1592</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -271,7 +355,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobStartTime.
+             * <p>The start time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-22T16:00:00Z</p>
              */
             public Builder jobStartTime(String jobStartTime) {
                 this.jobStartTime = jobStartTime;
@@ -279,7 +366,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The name of the job resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job_default</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -293,17 +383,23 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobResourceUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("JobAcuUsage")
-        private java.util.List < JobAcuUsage> jobAcuUsage;
+        @com.aliyun.core.annotation.NameInMap("JobAcuUsage")
+        private java.util.List<JobAcuUsage> jobAcuUsage;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Data(Builder builder) {
@@ -338,7 +434,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         /**
          * @return jobAcuUsage
          */
-        public java.util.List < JobAcuUsage> getJobAcuUsage() {
+        public java.util.List<JobAcuUsage> getJobAcuUsage() {
             return this.jobAcuUsage;
         }
 
@@ -352,11 +448,14 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public static final class Builder {
             private String DBClusterId; 
             private String endTime; 
-            private java.util.List < JobAcuUsage> jobAcuUsage; 
+            private java.util.List<JobAcuUsage> jobAcuUsage; 
             private String startTime; 
 
             /**
-             * DBClusterId.
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-clusterxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -364,7 +463,10 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-23T16:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -372,15 +474,18 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobAcuUsage.
+             * <p>The AnalyticDB compute unit (ACU) usage of the job resource group.</p>
              */
-            public Builder jobAcuUsage(java.util.List < JobAcuUsage> jobAcuUsage) {
+            public Builder jobAcuUsage(java.util.List<JobAcuUsage> jobAcuUsage) {
                 this.jobAcuUsage = jobAcuUsage;
                 return this;
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-22T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

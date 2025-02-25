@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersByProdRequest</p>
  */
 public class ListUsersByProdRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SourceProdCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceProdCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceProdCode;
 
     private ListUsersByProdRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.sourceProdCode = builder.sourceProdCode;
     }
 
@@ -48,6 +57,20 @@ public class ListUsersByProdRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return sourceProdCode
      */
     public String getSourceProdCode() {
@@ -56,6 +79,8 @@ public class ListUsersByProdRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListUsersByProdRequest, Builder> {
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String sourceProdCode; 
 
         private Builder() {
@@ -65,11 +90,17 @@ public class ListUsersByProdRequest extends Request {
         private Builder(ListUsersByProdRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.sourceProdCode = request.sourceProdCode;
         } 
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -78,7 +109,25 @@ public class ListUsersByProdRequest extends Request {
         }
 
         /**
-         * SourceProdCode.
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
+            return this;
+        }
+
+        /**
+         * The code of the cloud service.
          */
         public Builder sourceProdCode(String sourceProdCode) {
             this.putBodyParameter("SourceProdCode", sourceProdCode);

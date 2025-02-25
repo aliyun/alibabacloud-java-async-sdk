@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcsResponseBody</p>
  */
 public class DescribeVpcsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Vpcs")
+    @com.aliyun.core.annotation.NameInMap("Vpcs")
     private Vpcs vpcs;
 
     private DescribeVpcsResponseBody(Builder builder) {
@@ -131,9 +136,15 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class UserCidrs extends TeaModel {
-        @NameInMap("UserCidr")
-        private java.util.List < String > userCidr;
+        @com.aliyun.core.annotation.NameInMap("UserCidr")
+        private java.util.List<String> userCidr;
 
         private UserCidrs(Builder builder) {
             this.userCidr = builder.userCidr;
@@ -150,17 +161,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return userCidr
          */
-        public java.util.List < String > getUserCidr() {
+        public java.util.List<String> getUserCidr() {
             return this.userCidr;
         }
 
         public static final class Builder {
-            private java.util.List < String > userCidr; 
+            private java.util.List<String> userCidr; 
 
             /**
              * UserCidr.
              */
-            public Builder userCidr(java.util.List < String > userCidr) {
+            public Builder userCidr(java.util.List<String> userCidr) {
                 this.userCidr = userCidr;
                 return this;
             }
@@ -172,9 +183,15 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
-        @NameInMap("VSwitchId")
-        private java.util.List < String > vSwitchId;
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private java.util.List<String> vSwitchId;
 
         private VSwitchIds(Builder builder) {
             this.vSwitchId = builder.vSwitchId;
@@ -191,17 +208,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return vSwitchId
          */
-        public java.util.List < String > getVSwitchId() {
+        public java.util.List<String> getVSwitchId() {
             return this.vSwitchId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vSwitchId; 
+            private java.util.List<String> vSwitchId; 
 
             /**
              * VSwitchId.
              */
-            public Builder vSwitchId(java.util.List < String > vSwitchId) {
+            public Builder vSwitchId(java.util.List<String> vSwitchId) {
                 this.vSwitchId = vSwitchId;
                 return this;
             }
@@ -213,38 +230,44 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Vpc extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserCidrs")
+        @com.aliyun.core.annotation.NameInMap("UserCidrs")
         private UserCidrs userCidrs;
 
-        @NameInMap("VRouterId")
+        @com.aliyun.core.annotation.NameInMap("VRouterId")
         private String vRouterId;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private VSwitchIds vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private Vpc(Builder builder) {
@@ -454,9 +477,15 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Vpcs extends TeaModel {
-        @NameInMap("Vpc")
-        private java.util.List < Vpc> vpc;
+        @com.aliyun.core.annotation.NameInMap("Vpc")
+        private java.util.List<Vpc> vpc;
 
         private Vpcs(Builder builder) {
             this.vpc = builder.vpc;
@@ -473,17 +502,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * @return vpc
          */
-        public java.util.List < Vpc> getVpc() {
+        public java.util.List<Vpc> getVpc() {
             return this.vpc;
         }
 
         public static final class Builder {
-            private java.util.List < Vpc> vpc; 
+            private java.util.List<Vpc> vpc; 
 
             /**
              * Vpc.
              */
-            public Builder vpc(java.util.List < Vpc> vpc) {
+            public Builder vpc(java.util.List<Vpc> vpc) {
                 this.vpc = vpc;
                 return this;
             }

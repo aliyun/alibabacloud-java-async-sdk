@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataExportDownloadURLResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataExportDownloadURLResponseBody</p>
  */
 public class GetDataExportDownloadURLResponseBody extends TeaModel {
-    @NameInMap("DownloadURLResult")
+    @com.aliyun.core.annotation.NameInMap("DownloadURLResult")
     private DownloadURLResult downloadURLResult;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataExportDownloadURLResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details about the download URL of the file that records the export results for the ticket.
+         * <p>The details about the download URL of the file that records the export results for the ticket.</p>
          */
         public Builder downloadURLResult(DownloadURLResult downloadURLResult) {
             this.downloadURLResult = downloadURLResult;
@@ -94,7 +99,10 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4BF24EA5-9013-4C85-AE68-6C23AF5E0097</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,14 +152,20 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataExportDownloadURLResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataExportDownloadURLResponseBody</p>
+     */
     public static class DownloadURLResult extends TeaModel {
-        @NameInMap("HasResult")
+        @com.aliyun.core.annotation.NameInMap("HasResult")
         private Boolean hasResult;
 
-        @NameInMap("TipMessage")
+        @com.aliyun.core.annotation.NameInMap("TipMessage")
         private String tipMessage;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private DownloadURLResult(Builder builder) {
@@ -186,11 +209,14 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             private String URL; 
 
             /**
-             * Indicates whether export results are available for download. Valid values:
-             * <p>
+             * <p>Indicates whether export results are available for download. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Export results are available for download.</li>
+             * <li><strong>false</strong>: No export results are available for download.</li>
+             * </ul>
              * 
-             * *   **true**: Export results are available for download.
-             * *   **false**: No export results are available for download.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasResult(Boolean hasResult) {
                 this.hasResult = hasResult;
@@ -198,7 +224,10 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * The message that indicates an exception.
+             * <p>The message that indicates an exception.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tip message</p>
              */
             public Builder tipMessage(String tipMessage) {
                 this.tipMessage = tipMessage;
@@ -206,7 +235,10 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL of the file that records the export results for the ticket.
+             * <p>The download URL of the file that records the export results for the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip">https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip</a></p>
              */
             public Builder URL(String URL) {
                 this.URL = URL;

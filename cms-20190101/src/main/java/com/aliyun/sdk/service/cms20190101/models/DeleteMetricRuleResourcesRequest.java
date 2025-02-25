@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetricRuleResourcesRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetricRuleResourcesRequest</p>
  */
 public class DeleteMetricRuleResourcesRequest extends Request {
-    @Query
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resources;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
     private DeleteMetricRuleResourcesRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class DeleteMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * The resources to be disassociated from the alert rule.
+         * <p>The resources that are associated with the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;instanceId&quot;:&quot;i-uf6hm9lnlzsarrc7****&quot;}]</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -79,7 +83,11 @@ public class DeleteMetricRuleResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule.
+         * <p>The ID of the alert rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rr-bp18017n6iolv****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLayer4RulePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLayer4RulePolicyResponseBody</p>
  */
 public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
-    @NameInMap("BackendPort")
+    @com.aliyun.core.annotation.NameInMap("BackendPort")
     private Integer backendPort;
 
-    @NameInMap("BakMode")
+    @com.aliyun.core.annotation.NameInMap("BakMode")
     private String bakMode;
 
-    @NameInMap("CurrentIndex")
+    @com.aliyun.core.annotation.NameInMap("CurrentIndex")
     private Integer currentIndex;
 
-    @NameInMap("ForwardProtocol")
+    @com.aliyun.core.annotation.NameInMap("ForwardProtocol")
     private String forwardProtocol;
 
-    @NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
     private Integer frontendPort;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("PriRealServers")
-    private java.util.List < PriRealServers> priRealServers;
+    @com.aliyun.core.annotation.NameInMap("PriRealServers")
+    private java.util.List<PriRealServers> priRealServers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecRealServers")
-    private java.util.List < SecRealServers> secRealServers;
+    @com.aliyun.core.annotation.NameInMap("SecRealServers")
+    private java.util.List<SecRealServers> secRealServers;
 
     private DescribeLayer4RulePolicyResponseBody(Builder builder) {
         this.backendPort = builder.backendPort;
@@ -104,7 +109,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     /**
      * @return priRealServers
      */
-    public java.util.List < PriRealServers> getPriRealServers() {
+    public java.util.List<PriRealServers> getPriRealServers() {
         return this.priRealServers;
     }
 
@@ -118,7 +123,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     /**
      * @return secRealServers
      */
-    public java.util.List < SecRealServers> getSecRealServers() {
+    public java.util.List<SecRealServers> getSecRealServers() {
         return this.secRealServers;
     }
 
@@ -129,12 +134,15 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         private String forwardProtocol; 
         private Integer frontendPort; 
         private String instanceId; 
-        private java.util.List < PriRealServers> priRealServers; 
+        private java.util.List<PriRealServers> priRealServers; 
         private String requestId; 
-        private java.util.List < SecRealServers> secRealServers; 
+        private java.util.List<SecRealServers> secRealServers; 
 
         /**
-         * The port of the origin server.
+         * <p>The port of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022</p>
          */
         public Builder backendPort(Integer backendPort) {
             this.backendPort = backendPort;
@@ -142,11 +150,14 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The mode that is used to forward service traffic. Valid values:
-         * <p>
+         * <p>The mode that is used to forward service traffic. Valid values:</p>
+         * <ul>
+         * <li>0: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the <a href="https://help.aliyun.com/document_detail/157482.html">CreateNetworkRules</a> operation to create a port forwarding rule.</li>
+         * <li>1: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the <a href="https://help.aliyun.com/document_detail/312684.html">ConfigLayer4RulePolicy</a> operation to configure IP addresses.</li>
+         * </ul>
          * 
-         * *   0: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the [CreateNetworkRules](~~157482~~) operation to create a port forwarding rule.
-         * *   1: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the [ConfigLayer4RulePolicy](~~312684~~) operation to configure IP addresses.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bakMode(String bakMode) {
             this.bakMode = bakMode;
@@ -154,11 +165,14 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The origin server that is used to receive service traffic. Valid values:
-         * <p>
+         * <p>The origin server that is used to receive service traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</li>
+         * <li><strong>2</strong>: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</li>
+         * </ul>
          * 
-         * *   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.
-         * *   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentIndex(Integer currentIndex) {
             this.currentIndex = currentIndex;
@@ -166,7 +180,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the protocol.
+         * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>udp</p>
          */
         public Builder forwardProtocol(String forwardProtocol) {
             this.forwardProtocol = forwardProtocol;
@@ -174,7 +191,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The forwarding port.
+         * <p>The forwarding port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020</p>
          */
         public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = frontendPort;
@@ -182,7 +202,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosDip-sg-4hr2b3l****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -190,15 +213,18 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the primary origin server, including the IP addresses, forwarding protocol, and forwarding port.
+         * <p>An array that consists of the information about the primary origin server, including the IP addresses, forwarding protocol, and forwarding port.</p>
          */
-        public Builder priRealServers(java.util.List < PriRealServers> priRealServers) {
+        public Builder priRealServers(java.util.List<PriRealServers> priRealServers) {
             this.priRealServers = priRealServers;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6E46CC51-36BE-1100-B14C-DAF8381B8F73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,9 +232,9 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the secondary origin server, including the IP addresses, forwarding protocol, and forwarding port.
+         * <p>An array that consists of the information about the secondary origin server, including the IP addresses, forwarding protocol, and forwarding port.</p>
          */
-        public Builder secRealServers(java.util.List < SecRealServers> secRealServers) {
+        public Builder secRealServers(java.util.List<SecRealServers> secRealServers) {
             this.secRealServers = secRealServers;
             return this;
         }
@@ -219,23 +245,29 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLayer4RulePolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RulePolicyResponseBody</p>
+     */
     public static class PriRealServers extends TeaModel {
-        @NameInMap("CurrentIndex")
+        @com.aliyun.core.annotation.NameInMap("CurrentIndex")
         private Integer currentIndex;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServer")
+        @com.aliyun.core.annotation.NameInMap("RealServer")
         private String realServer;
 
         private PriRealServers(Builder builder) {
@@ -306,11 +338,14 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             private String realServer; 
 
             /**
-             * The origin server that is used to receive service traffic. Valid values:
-             * <p>
+             * <p>The origin server that is used to receive service traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</li>
+             * <li><strong>2</strong>: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</li>
+             * </ul>
              * 
-             * *   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.
-             * *   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentIndex(Integer currentIndex) {
                 this.currentIndex = currentIndex;
@@ -318,7 +353,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.107.XX.XX</p>
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -326,7 +364,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding port.
+             * <p>The forwarding port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020</p>
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -334,7 +375,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosDip-sg-4hr2b3l****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +386,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol.
+             * <p>The type of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>udp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -350,7 +397,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the primary origin server.
+             * <p>The IP address of the primary origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.1</p>
              */
             public Builder realServer(String realServer) {
                 this.realServer = realServer;
@@ -364,23 +414,29 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLayer4RulePolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLayer4RulePolicyResponseBody</p>
+     */
     public static class SecRealServers extends TeaModel {
-        @NameInMap("CurrentIndex")
+        @com.aliyun.core.annotation.NameInMap("CurrentIndex")
         private Integer currentIndex;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServer")
+        @com.aliyun.core.annotation.NameInMap("RealServer")
         private String realServer;
 
         private SecRealServers(Builder builder) {
@@ -451,11 +507,14 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             private String realServer; 
 
             /**
-             * The origin server that is used to receive service traffic. Valid values:
-             * <p>
+             * <p>The origin server that is used to receive service traffic. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</li>
+             * <li><strong>2</strong>: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</li>
+             * </ul>
              * 
-             * *   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.
-             * *   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentIndex(Integer currentIndex) {
                 this.currentIndex = currentIndex;
@@ -463,7 +522,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.107.XX.XX</p>
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -471,7 +533,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The forwarding port.
+             * <p>The forwarding port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020</p>
              */
             public Builder frontendPort(Integer frontendPort) {
                 this.frontendPort = frontendPort;
@@ -479,7 +544,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddosDip-sg-4hr2b3l****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -487,7 +555,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol.
+             * <p>The type of the protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>udp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -495,7 +566,10 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the secondary origin server.
+             * <p>The IP address of the secondary origin server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.3</p>
              */
             public Builder realServer(String realServer) {
                 this.realServer = realServer;

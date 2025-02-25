@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLoadBalancerDeleteProtectionRequest} extends {@link RequestModel}
  *
  * <p>SetLoadBalancerDeleteProtectionRequest</p>
  */
 public class SetLoadBalancerDeleteProtectionRequest extends Request {
-    @Query
-    @NameInMap("DeleteProtection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteProtection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deleteProtection;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SetLoadBalancerDeleteProtectionRequest(Builder builder) {
@@ -141,10 +146,12 @@ public class SetLoadBalancerDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * Specify whether to enable or disable deletion protection for the SLB instance.
-         * <p>
+         * <p>Specify whether to enable or disable deletion protection for the SLB instance.</p>
+         * <p>Valid values: <strong>on and off</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **on and off**.
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder deleteProtection(String deleteProtection) {
             this.putQueryParameter("DeleteProtection", deleteProtection);
@@ -153,7 +160,11 @@ public class SetLoadBalancerDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08e*****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -180,10 +191,12 @@ public class SetLoadBalancerDeleteProtectionRequest extends Request {
         }
 
         /**
-         * The region where the SLB instance is deployed.
-         * <p>
+         * <p>The region where the SLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query region IDs.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

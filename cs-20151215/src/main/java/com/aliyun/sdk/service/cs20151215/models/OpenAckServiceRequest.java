@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenAckServiceRequest} extends {@link RequestModel}
  *
  * <p>OpenAckServiceRequest</p>
  */
 public class OpenAckServiceRequest extends Request {
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private OpenAckServiceRequest(Builder builder) {
@@ -54,12 +59,14 @@ public class OpenAckServiceRequest extends Request {
         } 
 
         /**
-         * The type of ACK service that you want to activate. Valid values:
-         * <p>
+         * <p>The type of service that you want to activate. Valid values:</p>
+         * <ul>
+         * <li><code>propayasgo</code>: ACK clusters (including ACK managed clusters and ACK dedicated clusters), ACK Serverless clusters, and registered clusters.</li>
+         * <li><code>edgepayasgo</code>: ACK Edge clusters.</li>
+         * </ul>
          * 
-         * *   `propayasgo`: ACK Pro
-         * *   `edgepayasgo`: ACK Edge
-         * *   `gspayasgo`: ACK for Alibaba Cloud Genomics Service (AGS)
+         * <strong>example:</strong>
+         * <p>propayasgo</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

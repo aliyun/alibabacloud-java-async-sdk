@@ -75,6 +75,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)QPS limit
+      * You can add a maximum of 10 quota items to a quota template at a time.
+      *
+     */
     @Override
     public CompletableFuture<CreateQuotaApplicationsForTemplateResponse> createQuotaApplicationsForTemplate(CreateQuotaApplicationsForTemplateRequest request) {
         try {
@@ -89,6 +94,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Prerequisites
+      * You must set the `ServiceStatus` parameter to `1`. This ensures that the quota template is enabled.
+      * You can call the [GetQuotaTemplateServiceStatus](~~450407~~) operation to query the status of a quota template. If the `ServiceStatus` parameter is set to `0` or `-1`, you must call the [ModifyQuotaTemplateServiceStatus](~~450406~~) operation to set the ServiceStatus parameter to `1`.
+      *
+     */
     @Override
     public CompletableFuture<CreateTemplateQuotaItemResponse> createTemplateQuotaItem(CreateTemplateQuotaItemRequest request) {
         try {
@@ -174,7 +185,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~171299~~).
+      * In this example, the operation is called to query the details of a quota alert whose ID is `78d7e436-4b25-4897-84b5-d7b656bb****`. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.
       *
      */
     @Override
@@ -204,6 +215,25 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetQuotaApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * ### [](#)Prerequisites
+      * Make sure that you have created an application for quota increase. For more information, see [CreateQuotaApplication](~~440566~~).
+      *
+     */
+    @Override
+    public CompletableFuture<GetQuotaApplicationApprovalResponse> getQuotaApplicationApproval(GetQuotaApplicationApprovalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetQuotaApplicationApproval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetQuotaApplicationApprovalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetQuotaApplicationApprovalResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -312,6 +342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The services in the query result are the same as the services listed in [Alibaba Cloud services that support Quota Center](~~182368~~).
+      *
+     */
     @Override
     public CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request) {
         try {
@@ -401,7 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * By default, the quota template is enabled.
+      * ### [](#)Prerequisites
+      * A resource directory is enabled. For more information, see [EnableResourceDirectory](~~604185~~).
+      * ### [](#)Usage notes
+      * If the `ServiceStatus` parameter is set to `0` or `-1`, you can call this operation to set the parameter to `1`. Then, you can call the [CreateTemplateQuotaItem](~~450615~~) operation to create a quota template.
       *
      */
     @Override
@@ -427,6 +464,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyTemplateQuotaItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * >  You can call this operation to enable the approval reminder feature for quota applications that support this feature. To check whether this feature is supported, you can view the value of `SupportReminder` in the GetQuotaApplicationApproval operation. If the value of SupportReminder is `true`, this feature is supported.
+      *
+     */
+    @Override
+    public CompletableFuture<RemindQuotaApplicationApprovalResponse> remindQuotaApplicationApproval(RemindQuotaApplicationApprovalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemindQuotaApplicationApproval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemindQuotaApplicationApprovalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemindQuotaApplicationApprovalResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

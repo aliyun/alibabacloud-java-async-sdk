@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUnhealthyHostAvailabilityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUnhealthyHostAvailabilityResponseBody</p>
  */
 public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("UnhealthyList")
+    @com.aliyun.core.annotation.NameInMap("UnhealthyList")
     private UnhealthyList unhealthyList;
 
     private DescribeUnhealthyHostAvailabilityResponseBody(Builder builder) {
@@ -86,10 +86,13 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         private UnhealthyList unhealthyList; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the call was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +100,10 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +111,10 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACBDBB40-DFB6-4F4C-8957-51FFB233969C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,11 +122,14 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -125,7 +137,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * The unhealthy instances that are detected by the specified availability monitoring tasks.
+         * <p>The unhealthy instances that are detected by the specified availability monitoring tasks.</p>
          */
         public Builder unhealthyList(UnhealthyList unhealthyList) {
             this.unhealthyList = unhealthyList;
@@ -138,8 +150,14 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUnhealthyHostAvailabilityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUnhealthyHostAvailabilityResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private InstanceList(Builder builder) {
@@ -179,11 +197,17 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUnhealthyHostAvailabilityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUnhealthyHostAvailabilityResponseBody</p>
+     */
     public static class NodeTaskInstance extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceList")
+        @com.aliyun.core.annotation.NameInMap("InstanceList")
         private InstanceList instanceList;
 
         private NodeTaskInstance(Builder builder) {
@@ -218,7 +242,10 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
             private InstanceList instanceList; 
 
             /**
-             * The ID of the availability monitoring task.
+             * <p>The ID of the availability monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -226,7 +253,7 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
             }
 
             /**
-             * The unhealthy instances that are detected by the availability monitoring task.
+             * <p>The unhealthy instances that are detected by the availability monitoring task.</p>
              */
             public Builder instanceList(InstanceList instanceList) {
                 this.instanceList = instanceList;
@@ -240,8 +267,14 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUnhealthyHostAvailabilityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUnhealthyHostAvailabilityResponseBody</p>
+     */
     public static class UnhealthyList extends TeaModel {
-        @NameInMap("NodeTaskInstance")
+        @com.aliyun.core.annotation.NameInMap("NodeTaskInstance")
         private java.util.List < NodeTaskInstance> nodeTaskInstance;
 
         private UnhealthyList(Builder builder) {

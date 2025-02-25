@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubaccountK8sClusterUserConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeSubaccountK8sClusterUserConfigRequest</p>
  */
 public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uid;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private Boolean privateIpAddress;
 
-    @Query
-    @NameInMap("TemporaryDurationMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemporaryDurationMinutes")
     private Long temporaryDurationMinutes;
 
     private DescribeSubaccountK8sClusterUserConfigRequest(Builder builder) {
@@ -98,7 +103,11 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5b5e80b0b64a4bf6939d2d8f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +116,11 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * The ID of the RAM user or RAM role whose cluster kubeconfig file that you want to obtain.
+         * <p>The ID of the RAM user or RAM role whose cluster kubeconfig file that you want to obtain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26562443851650****</p>
          */
         public Builder uid(String uid) {
             this.putPathParameter("Uid", uid);
@@ -116,13 +129,15 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the kubeconfig file used to connect to the cluster over the internal network. Valid values:
-         * <p>
+         * <p>Specifies whether to obtain the kubeconfig file used to connect to the cluster over the internal network. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Obtain the kubeconfig file used to connect to the cluster over the internal network.</li>
+         * <li><code>false</code>: Obtain the kubeconfig file used to connect to the cluster over the Internet.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
          * 
-         * *   `true`: Obtain the kubeconfig file used to connect to the cluster over the internal network.
-         * *   `false`: Obtain the kubeconfig file used to connect to the cluster over the Internet.
-         * 
-         * Default value: `false`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -131,12 +146,14 @@ public class DescribeSubaccountK8sClusterUserConfigRequest extends Request {
         }
 
         /**
-         * The validity period of the temporary kubeconfig file. Unit: minutes.
-         * <p>
+         * <p>The validity period of the temporary kubeconfig file. Unit: minutes.</p>
+         * <p>Valid values: 15 to 4320 (three days).</p>
+         * <blockquote>
+         * <p>If you leave this parameter empty, the system sets a longer validity period and returns the value in the expiration parameter of the response.</p>
+         * </blockquote>
          * 
-         * Valid values: 15 to 4320 (three days).
-         * 
-         * > If you leave this parameter empty, the system sets a longer validity period and returns the value in the expiration parameter of the response.
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder temporaryDurationMinutes(Long temporaryDurationMinutes) {
             this.putQueryParameter("TemporaryDurationMinutes", temporaryDurationMinutes);

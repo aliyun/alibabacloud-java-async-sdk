@@ -104,13 +104,13 @@ public class RemoveFaceDeviceFromDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveFaceDeviceFromDeviceGroupRequest response) {
-            super(response);
-            this.deviceGroupId = response.deviceGroupId;
-            this.deviceName = response.deviceName;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isolationId = response.isolationId;
-            this.productKey = response.productKey;
+        private Builder(RemoveFaceDeviceFromDeviceGroupRequest request) {
+            super(request);
+            this.deviceGroupId = request.deviceGroupId;
+            this.deviceName = request.deviceName;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isolationId = request.isolationId;
+            this.productKey = request.productKey;
         } 
 
         /**

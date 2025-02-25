@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveSourcesFromPrometheusGlobalViewRequest} extends {@link RequestModel}
  *
  * <p>RemoveSourcesFromPrometheusGlobalViewRequest</p>
  */
 public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
-    @Query
-    @NameInMap("GlobalViewClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalViewClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalViewClusterId;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SourceNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceNames;
 
     private RemoveSourcesFromPrometheusGlobalViewRequest(Builder builder) {
@@ -100,7 +105,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * GlobalViewClusterId.
+         * <p>The ID of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global-v2-cn-1478326682034601-vss8pd0i</p>
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -109,7 +118,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The name of the global aggregation instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zyGlobalView</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -118,7 +131,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +144,11 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * SourceNames.
+         * <p>The list of custom data sources. You can specify multiple data sources and separate them with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>localPrometheusClusterName,testCumterPrometheusName</p>
          */
         public Builder sourceNames(String sourceNames) {
             this.putQueryParameter("SourceNames", sourceNames);

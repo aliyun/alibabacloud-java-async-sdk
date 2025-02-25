@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCdsFileShareLinkResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCdsFileShareLinkResponseBody</p>
  */
 public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private CdsFileShareLinkModel data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ModifyCdsFileShareLinkResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.
+         * <p>The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The data information.
+         * <p>The data information.</p>
          */
         public Builder data(CdsFileShareLinkModel data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned. This parameter is not returned if the value of Code is success.
+         * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7E4322D-D679-5ACB-A909-490D2F0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,13 +132,26 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>The request status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true: The request is successful.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
-         * *   false
+         * <!-- -->
+         * </li>
+         * <li><p>false: The request fails.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

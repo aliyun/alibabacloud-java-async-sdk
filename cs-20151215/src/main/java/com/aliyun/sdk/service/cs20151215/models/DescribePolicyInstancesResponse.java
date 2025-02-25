@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyInstancesResponse} extends {@link TeaModel}
  *
  * <p>DescribePolicyInstancesResponse</p>
  */
 public class DescribePolicyInstancesResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < DescribePolicyInstancesResponseBody> body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<DescribePolicyInstancesResponseBody> body;
 
     private DescribePolicyInstancesResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class DescribePolicyInstancesResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class DescribePolicyInstancesResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribePolicyInstancesResponseBody> getBody() {
+    public java.util.List<DescribePolicyInstancesResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribePolicyInstancesResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribePolicyInstancesResponseBody> body);
+        Builder body(java.util.List<DescribePolicyInstancesResponseBody> body);
 
         @Override
         DescribePolicyInstancesResponse build();
@@ -77,9 +79,9 @@ public class DescribePolicyInstancesResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribePolicyInstancesResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribePolicyInstancesResponseBody> body; 
+        private java.util.List<DescribePolicyInstancesResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class DescribePolicyInstancesResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class DescribePolicyInstancesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribePolicyInstancesResponseBody> body) {
+        public Builder body(java.util.List<DescribePolicyInstancesResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -126,36 +128,62 @@ public class DescribePolicyInstancesResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePolicyInstancesResponse} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyInstancesResponse</p>
+     */
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
-        @NameInMap("ali_uid")
+        @com.aliyun.core.annotation.NameInMap("ali_uid")
         private String aliUid;
 
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("instance_name")
+        @com.aliyun.core.annotation.NameInMap("instance_name")
         private String instanceName;
 
-        @NameInMap("policy_name")
+        @com.aliyun.core.annotation.NameInMap("policy_name")
         private String policyName;
 
-        @NameInMap("policy_category")
+        @com.aliyun.core.annotation.NameInMap("policy_category")
         private String policyCategory;
 
-        @NameInMap("policy_description")
+        @com.aliyun.core.annotation.NameInMap("policy_description")
         private String policyDescription;
 
-        @NameInMap("policy_parameters")
+        @com.aliyun.core.annotation.NameInMap("policy_parameters")
         private String policyParameters;
 
-        @NameInMap("policy_severity")
+        @com.aliyun.core.annotation.NameInMap("policy_severity")
         private String policySeverity;
 
-        @NameInMap("policy_scope")
+        @com.aliyun.core.annotation.NameInMap("policy_scope")
         private String policyScope;
 
-        @NameInMap("policy_action")
+        @com.aliyun.core.annotation.NameInMap("policy_action")
         private String policyAction;
+
+        @com.aliyun.core.annotation.NameInMap("Created")
+        @Deprecated
+        private String created;
+
+        @com.aliyun.core.annotation.NameInMap("Updated")
+        @Deprecated
+        private String updated;
+
+        @com.aliyun.core.annotation.NameInMap("resource_id")
+        @Deprecated
+        private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("total_violations")
+        @Deprecated
+        private Long totalViolations;
+
+        @com.aliyun.core.annotation.NameInMap("is_deleted")
+        @Deprecated
+        private Long isDeleted;
 
         private DescribePolicyInstancesResponseBody(Builder builder) {
             this.aliUid = builder.aliUid;
@@ -168,6 +196,11 @@ public class DescribePolicyInstancesResponse extends Response {
             this.policySeverity = builder.policySeverity;
             this.policyScope = builder.policyScope;
             this.policyAction = builder.policyAction;
+            this.created = builder.created;
+            this.updated = builder.updated;
+            this.resourceId = builder.resourceId;
+            this.totalViolations = builder.totalViolations;
+            this.isDeleted = builder.isDeleted;
         }
 
         public static Builder builder() {
@@ -248,6 +281,41 @@ public class DescribePolicyInstancesResponse extends Response {
             return this.policyAction;
         }
 
+        /**
+         * @return created
+         */
+        public String getCreated() {
+            return this.created;
+        }
+
+        /**
+         * @return updated
+         */
+        public String getUpdated() {
+            return this.updated;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return totalViolations
+         */
+        public Long getTotalViolations() {
+            return this.totalViolations;
+        }
+
+        /**
+         * @return isDeleted
+         */
+        public Long getIsDeleted() {
+            return this.isDeleted;
+        }
+
         public static final class Builder {
             private String aliUid; 
             private String clusterId; 
@@ -259,9 +327,17 @@ public class DescribePolicyInstancesResponse extends Response {
             private String policySeverity; 
             private String policyScope; 
             private String policyAction; 
+            private String created; 
+            private String updated; 
+            private String resourceId; 
+            private Long totalViolations; 
+            private Long isDeleted; 
 
             /**
-             * The UID of the Alibaba Cloud account that is used to deploy the policy instance.
+             * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16298168****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -269,7 +345,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8155823d057948c69a****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -277,7 +356,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The name of the policy instance.
+             * <p>The name of the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no-env-var-secrets-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -285,7 +367,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKPSPCapabilities</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -293,7 +378,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The type of policy.
+             * <p>The type of policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-general</p>
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -301,7 +389,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The description of the policy template.
+             * <p>The description of the policy template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Restricts secrets used in pod envs</p>
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -309,7 +400,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The parameters of the policy instance.
+             * <p>The parameters of the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>
              */
             public Builder policyParameters(String policyParameters) {
                 this.policyParameters = policyParameters;
@@ -317,7 +411,10 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The severity level of the policy instance.
+             * <p>The severity level of the policy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder policySeverity(String policySeverity) {
                 this.policySeverity = policySeverity;
@@ -325,12 +422,14 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The applicable scope of the policy instance.
-             * <p>
+             * <p>The applicable scope of the policy instance.</p>
+             * <p>A value of * indicates all namespaces in the cluster. This is the default value.</p>
+             * <p>Multiple namespaces are separated by commas (,).</p>
              * 
-             * A value of \* indicates all namespaces in the cluster. This is the default value.
-             * 
-             * Multiple namespaces are separated by commas (,).
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder policyScope(String policyScope) {
                 this.policyScope = policyScope;
@@ -338,14 +437,72 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * The action of the policy. Valid values:
-             * <p>
+             * <p>The action of the policy. Valid values:</p>
+             * <ul>
+             * <li><code>deny</code>: Deployments that match the policy are denied.</li>
+             * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+             * </ul>
              * 
-             * *   `deny`: Deployments that match the policy are denied.
-             * *   `warn`: Alerts are generated for deployments that match the policy.
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
+                return this;
+            }
+
+            /**
+             * <p>Creation time (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29T18:09:12+08:00</p>
+             */
+            public Builder created(String created) {
+                this.created = created;
+                return this;
+            }
+
+            /**
+             * <p>Update time (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29T18:09:12+08:00</p>
+             */
+            public Builder updated(String updated) {
+                this.updated = updated;
+                return this;
+            }
+
+            /**
+             * <p>Resource ID (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456***</p>
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * <p>Violation count processing in the cluster (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder totalViolations(Long totalViolations) {
+                this.totalViolations = totalViolations;
+                return this;
+            }
+
+            /**
+             * <p>Deletion status (deprecated, do not use).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder isDeleted(Long isDeleted) {
+                this.isDeleted = isDeleted;
                 return this;
             }
 

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExternalAgentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExternalAgentResponseBody</p>
  */
 public class DescribeExternalAgentResponseBody extends TeaModel {
-    @NameInMap("config")
+    @com.aliyun.core.annotation.NameInMap("config")
     private String config;
 
     private DescribeExternalAgentResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class DescribeExternalAgentResponseBody extends TeaModel {
         private String config; 
 
         /**
-         * The agent configurations in the YAML format.
+         * <p>The agent configurations in the YAML format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: v1****</p>
          */
         public Builder config(String config) {
             this.config = config;

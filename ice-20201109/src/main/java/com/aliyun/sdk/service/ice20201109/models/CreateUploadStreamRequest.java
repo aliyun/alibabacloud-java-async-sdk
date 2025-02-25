@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUploadStreamRequest} extends {@link RequestModel}
  *
  * <p>CreateUploadStreamRequest</p>
  */
 public class CreateUploadStreamRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Definition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
-    @Query
-    @NameInMap("FileExtension")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileExtension")
     private String fileExtension;
 
-    @Query
-    @NameInMap("HDRType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HDRType")
     private String HDRType;
 
-    @Query
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private CreateUploadStreamRequest(Builder builder) {
@@ -133,7 +138,21 @@ public class CreateUploadStreamRequest extends Request {
         }
 
         /**
-         * Definition.
+         * <p>The quality of the media stream. Valid values:</p>
+         * <ul>
+         * <li>FD: low definition.</li>
+         * <li>LD: standard definition.</li>
+         * <li>SD: high definition.</li>
+         * <li>HD: ultra-high definition.</li>
+         * <li>OD: original quality.</li>
+         * <li>2K: 2K resolution.</li>
+         * <li>4K: 4K resolution.</li>
+         * <li>SQ: standard sound quality.</li>
+         * <li>HQ: high sound quality.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HD</p>
          */
         public Builder definition(String definition) {
             this.putQueryParameter("Definition", definition);
@@ -142,7 +161,10 @@ public class CreateUploadStreamRequest extends Request {
         }
 
         /**
-         * FileExtension.
+         * <p>The file name extension of the media stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MP4</p>
          */
         public Builder fileExtension(String fileExtension) {
             this.putQueryParameter("FileExtension", fileExtension);
@@ -151,7 +173,26 @@ public class CreateUploadStreamRequest extends Request {
         }
 
         /**
-         * HDRType.
+         * <p>The high dynamic range (HDR) format of the transcoded stream. Valid values:</p>
+         * <ul>
+         * <li>HDR</li>
+         * <li>HDR10</li>
+         * <li>HLG</li>
+         * <li>DolbyVision</li>
+         * <li>HDRVivid</li>
+         * <li>SDR+</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value is not case-sensitive,</p>
+         * </li>
+         * <li><p>You can leave this parameter empty for non-HDR streams.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HDR10</p>
          */
         public Builder HDRType(String HDRType) {
             this.putQueryParameter("HDRType", HDRType);
@@ -160,7 +201,10 @@ public class CreateUploadStreamRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -169,7 +213,10 @@ public class CreateUploadStreamRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://aliyundoc.com%22%7D">http://aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

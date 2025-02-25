@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PauseDataCorrectSQLJobRequest} extends {@link RequestModel}
  *
  * <p>PauseDataCorrectSQLJobRequest</p>
  */
 public class PauseDataCorrectSQLJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private Long jobId;
 
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long orderId;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private PauseDataCorrectSQLJobRequest(Builder builder) {
@@ -122,10 +127,13 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](~~208481~~) and [ListDBTaskSQLJob](~~207049~~) operations to obtain the value of this parameter.
-         * <p>
+         * <p>The ID of the SQL task. You can call the <a href="https://help.aliyun.com/document_detail/208481.html">GetDataCorrectTaskDetail</a> or <a href="https://help.aliyun.com/document_detail/207049.html">ListDBTaskSQLJob</a> operation to obtain the value of this parameter.</p>
+         * <blockquote>
+         * <p> If Type is set to SINGLE, you must pass in the value of JobId to confirm the ID of the SQL task that you want to pause.</p>
+         * </blockquote>
          * 
-         * >  If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.
+         * <strong>example:</strong>
+         * <p>43253</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -134,7 +142,11 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the data change ticket. You can call the [ListOrders](~~144643~~) operation to query the ID of the data change ticket.
+         * <p>The ID of the data change ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ID of the data change ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43253</p>
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -143,7 +155,10 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4325</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -152,11 +167,15 @@ public class PauseDataCorrectSQLJobRequest extends Request {
         }
 
         /**
-         * The type of the pause operation. Valid values:
-         * <p>
+         * <p>The type of the pause operation. Valid values:</p>
+         * <ul>
+         * <li>ALL: pauses all SQL tasks.</li>
+         * <li>SINGLE: pauses a single SQL task.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ALL: pauses all SQL tasks.
-         * *   SINGLE: pauses a single SQL task.
+         * <strong>example:</strong>
+         * <p>SINGLE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

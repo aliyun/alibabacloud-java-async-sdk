@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHoneypotResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHoneypotResponseBody</p>
  */
 public class CreateHoneypotResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateHoneypotResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the honeypot.
+         * <p>The information about the honeypot.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29874225-EAAC-5415-8501-32DD20FD29F6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class CreateHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,30 +175,36 @@ public class CreateHoneypotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHoneypotResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHoneypotResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ControlNodeName")
+        @com.aliyun.core.annotation.NameInMap("ControlNodeName")
         private String controlNodeName;
 
-        @NameInMap("HoneypotId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
 
-        @NameInMap("HoneypotImageDisplayName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotImageDisplayName")
         private String honeypotImageDisplayName;
 
-        @NameInMap("HoneypotImageName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotImageName")
         private String honeypotImageName;
 
-        @NameInMap("HoneypotName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotName")
         private String honeypotName;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("PresetId")
+        @com.aliyun.core.annotation.NameInMap("PresetId")
         private String presetId;
 
-        @NameInMap("State")
-        private java.util.List < String > state;
+        @com.aliyun.core.annotation.NameInMap("State")
+        private java.util.List<String> state;
 
         private Data(Builder builder) {
             this.controlNodeName = builder.controlNodeName;
@@ -251,7 +277,7 @@ public class CreateHoneypotResponseBody extends TeaModel {
         /**
          * @return state
          */
-        public java.util.List < String > getState() {
+        public java.util.List<String> getState() {
             return this.state;
         }
 
@@ -263,10 +289,13 @@ public class CreateHoneypotResponseBody extends TeaModel {
             private String honeypotName; 
             private String nodeId; 
             private String presetId; 
-            private java.util.List < String > state; 
+            private java.util.List<String> state; 
 
             /**
-             * The name of the management node.
+             * <p>The name of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>managerNodename</p>
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -274,7 +303,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot.
+             * <p>The ID of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9bf8cd373112263d4bc102fc5dba9d9f812ee05d4d35c487d330d52e937f****</p>
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -282,7 +314,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the honeypot image.
+             * <p>The display name of the honeypot image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HoneyDisplayName</p>
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -290,7 +325,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot image.
+             * <p>The name of the honeypot image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp_proxy</p>
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -298,7 +336,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The custom name of the honeypot.
+             * <p>The custom name of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruoyi</p>
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -306,7 +347,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * <p>The ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -314,7 +358,10 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom configuration for the honeypot.
+             * <p>The ID of the custom configuration for the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddh3731641137fe4b72b245346a2721d4b6tdgg3731641137fe4b72b245346a2721***</p>
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -322,9 +369,9 @@ public class CreateHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the status information about the honeypot.
+             * <p>An array that consists of the status information about the honeypot.</p>
              */
-            public Builder state(java.util.List < String > state) {
+            public Builder state(java.util.List<String> state) {
                 this.state = state;
                 return this;
             }

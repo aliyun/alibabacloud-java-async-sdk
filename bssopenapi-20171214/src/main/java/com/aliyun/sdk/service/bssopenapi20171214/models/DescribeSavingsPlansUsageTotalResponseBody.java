@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSavingsPlansUsageTotalResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSavingsPlansUsageTotalResponseBody</p>
  */
 public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSavingsPlansUsageTotalResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * <p>The return data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +148,17 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSavingsPlansUsageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansUsageTotalResponseBody</p>
+     */
     public static class PeriodCoverage extends TeaModel {
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private Float percentage;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
         private PeriodCoverage(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             private String period; 
 
             /**
-             * The usage.
+             * <p>The usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder percentage(Float percentage) {
                 this.percentage = percentage;
@@ -178,10 +204,11 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The period.
-             * <p>
+             * <p>The period.</p>
+             * <p>The value is in the format of yyyyMMddHH.</p>
              * 
-             * The value is in the format of yyyyMMddHH.
+             * <strong>example:</strong>
+             * <p>2021041500</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -195,17 +222,23 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSavingsPlansUsageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansUsageTotalResponseBody</p>
+     */
     public static class TotalUsage extends TeaModel {
-        @NameInMap("PoolValue")
+        @com.aliyun.core.annotation.NameInMap("PoolValue")
         private Float poolValue;
 
-        @NameInMap("PostpaidCost")
+        @com.aliyun.core.annotation.NameInMap("PostpaidCost")
         private Float postpaidCost;
 
-        @NameInMap("SavedCost")
+        @com.aliyun.core.annotation.NameInMap("SavedCost")
         private Float savedCost;
 
-        @NameInMap("UsagePercentage")
+        @com.aliyun.core.annotation.NameInMap("UsagePercentage")
         private Float usagePercentage;
 
         private TotalUsage(Builder builder) {
@@ -258,7 +291,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             private Float usagePercentage; 
 
             /**
-             * The total amount of the savings plan.
+             * <p>The total amount of the savings plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder poolValue(Float poolValue) {
                 this.poolValue = poolValue;
@@ -266,7 +302,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The pay-as-you-go cost.
+             * <p>The pay-as-you-go cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -274,7 +313,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The amount that is saved.
+             * <p>The amount that is saved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder savedCost(Float savedCost) {
                 this.savedCost = savedCost;
@@ -282,7 +324,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total usage.
+             * <p>The total usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -296,11 +341,17 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSavingsPlansUsageTotalResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansUsageTotalResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PeriodCoverage")
-        private java.util.List < PeriodCoverage> periodCoverage;
+        @com.aliyun.core.annotation.NameInMap("PeriodCoverage")
+        private java.util.List<PeriodCoverage> periodCoverage;
 
-        @NameInMap("TotalUsage")
+        @com.aliyun.core.annotation.NameInMap("TotalUsage")
         private TotalUsage totalUsage;
 
         private Data(Builder builder) {
@@ -319,7 +370,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         /**
          * @return periodCoverage
          */
-        public java.util.List < PeriodCoverage> getPeriodCoverage() {
+        public java.util.List<PeriodCoverage> getPeriodCoverage() {
             return this.periodCoverage;
         }
 
@@ -331,19 +382,19 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PeriodCoverage> periodCoverage; 
+            private java.util.List<PeriodCoverage> periodCoverage; 
             private TotalUsage totalUsage; 
 
             /**
-             * The usage in different periods.
+             * <p>The usage in different periods.</p>
              */
-            public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
+            public Builder periodCoverage(java.util.List<PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
                 return this;
             }
 
             /**
-             * The usage summary.
+             * <p>The usage summary.</p>
              */
             public Builder totalUsage(TotalUsage totalUsage) {
                 this.totalUsage = totalUsage;

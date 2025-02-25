@@ -1,103 +1,108 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageGroupedVulListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageGroupedVulListRequest</p>
  */
 public class DescribeImageGroupedVulListRequest extends Request {
-    @Query
-    @NameInMap("AliasName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("CveId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CveId")
     private String cveId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("ImageDigest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageDigest")
     private String imageDigest;
 
-    @Query
-    @NameInMap("ImageLayer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageLayer")
     private String imageLayer;
 
-    @Query
-    @NameInMap("ImageTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageTag")
     private String imageTag;
 
-    @Query
-    @NameInMap("IsLatest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsLatest")
     private Integer isLatest;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Necessity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Necessity")
     private String necessity;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PatchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchId")
     private Long patchId;
 
-    @Query
-    @NameInMap("RepoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoId")
     private String repoId;
 
-    @Query
-    @NameInMap("RepoInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoInstanceId")
     private String repoInstanceId;
 
-    @Query
-    @NameInMap("RepoName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoName")
     private String repoName;
 
-    @Query
-    @NameInMap("RepoNamespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoNamespace")
     private String repoNamespace;
 
-    @Query
-    @NameInMap("RepoRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepoRegionId")
     private String repoRegionId;
 
-    @Query
-    @NameInMap("ScanRange")
-    private java.util.List < String > scanRange;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRange")
+    private java.util.List<String> scanRange;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private String uuids;
 
     private DescribeImageGroupedVulListRequest(Builder builder) {
@@ -275,7 +280,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
     /**
      * @return scanRange
      */
-    public java.util.List < String > getScanRange() {
+    public java.util.List<String> getScanRange() {
         return this.scanRange;
     }
 
@@ -313,7 +318,7 @@ public class DescribeImageGroupedVulListRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
-        private java.util.List < String > scanRange; 
+        private java.util.List<String> scanRange; 
         private String type; 
         private String uuids; 
 
@@ -348,7 +353,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         } 
 
         /**
-         * The alias of the vulnerability.
+         * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>High severity vulnerability that affects org.eclipse.jetty:jetty-server</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -357,10 +365,13 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the ID of the container cluster.
+         * <strong>example:</strong>
+         * <p>c60b77fe62093480db6164a3c2fa5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -369,7 +380,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -378,7 +392,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
+         * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2017-15420</p>
          */
         public Builder cveId(String cveId) {
             this.putQueryParameter("CveId", cveId);
@@ -387,7 +404,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
+         * <p>The ID of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1311</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -396,7 +416,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The SHA-256 value of the image digest.
+         * <p>The SHA-256 value of the image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w213412341dfsfasdfafadfasfasf</p>
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -405,7 +428,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The layer of the image.
+         * <p>The layer of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b1f5b9420803ad0657cf21566e3e20acc08581e7f22991249ef3aa80b8b1c587</p>
          */
         public Builder imageLayer(String imageLayer) {
             this.putQueryParameter("ImageLayer", imageLayer);
@@ -414,7 +440,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The tag of the image.
+         * <p>The tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval</p>
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -423,11 +452,14 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:
-         * <p>
+         * <p>Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: does not query the vulnerabilities in the latest images.</li>
+         * <li><strong>1</strong>: queries the vulnerabilities in the latest images.</li>
+         * </ul>
          * 
-         * *   **0**: does not query the vulnerabilities in the latest images.
-         * *   **1**: queries the vulnerabilities in the latest images.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isLatest(Integer isLatest) {
             this.putQueryParameter("IsLatest", isLatest);
@@ -436,11 +468,14 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -449,7 +484,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The name of the vulnerability.
+         * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>debian:10:CVE-2019-9893</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -458,12 +496,15 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The priority to fix the vulnerability. Valid values:
-         * <p>
+         * <p>The priority to fix the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
+         * <li><strong>later</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
+         * <li><strong>nntf</strong>: low. You can ignore the vulnerability.</li>
+         * </ul>
          * 
-         * *   **asap**: high. You must fix the vulnerability at the earliest opportunity.
-         * *   **later**: medium. You can fix the vulnerability based on your business requirements.
-         * *   **nntf**: low. You can ignore the vulnerability.
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -472,7 +513,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -481,7 +525,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The ID of the patch that is used to fix the vulnerability.
+         * <p>The ID of the patch that is used to fix the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1341512412</p>
          */
         public Builder patchId(Long patchId) {
             this.putQueryParameter("PatchId", patchId);
@@ -490,7 +537,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
+         * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qew****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -499,7 +549,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The instance ID of the image repository.
+         * <p>The instance ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-qewqrqcsadf****</p>
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -508,7 +561,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libssh2</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -517,7 +573,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The namespace to which the image repository belongs.
+         * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libssh2</p>
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -526,7 +585,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The region ID of the image repository.
+         * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -535,20 +597,23 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * An array consisting of the types of the assets that you want to scan.
+         * <p>An array consisting of the types of the assets that you want to scan.</p>
          */
-        public Builder scanRange(java.util.List < String > scanRange) {
+        public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
             return this;
         }
 
         /**
-         * The type of the vulnerability that you want to query. Valid values:
-         * <p>
+         * <p>The type of the vulnerability that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: image system vulnerability</li>
+         * <li><strong>sca</strong>: image application vulnerability</li>
+         * </ul>
          * 
-         * *   **cve**: image system vulnerability
-         * *   **sca**: image application vulnerability
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -557,7 +622,10 @@ public class DescribeImageGroupedVulListRequest extends Request {
         }
 
         /**
-         * The UUID of the asset. Separate multiple UUIDs with commas (,).
+         * <p>The UUID of the asset. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid-13134124****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

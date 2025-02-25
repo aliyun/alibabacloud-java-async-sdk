@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStoragePlanRequest} extends {@link RequestModel}
  *
  * <p>CreateStoragePlanRequest</p>
  */
 public class CreateStoragePlanRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String period;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StorageClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageClass;
 
-    @Query
-    @NameInMap("StorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
 
-    @Query
-    @NameInMap("UsedTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String usedTime;
 
     private CreateStoragePlanRequest(Builder builder) {
@@ -170,7 +175,10 @@ public class CreateStoragePlanRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -197,11 +205,15 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration for the storage plan. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration for the storage plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong></li>
+         * <li><strong>Year</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Month**
-         * *   **Year**
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -228,7 +240,11 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000
+         * <p>The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder storageClass(String storageClass) {
             this.putQueryParameter("StorageClass", storageClass);
@@ -237,11 +253,15 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * The type of the storage plan. Valid values:
-         * <p>
+         * <p>The type of the storage plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Mainland</strong>: The storage plan is used inside the Chinese mainland.</li>
+         * <li><strong>Overseas</strong>: The storage plan is used outside the Chinese mainland.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Mainland**: The storage plan is used inside the Chinese mainland.
-         * *   **Overseas**: The storage plan is used outside the Chinese mainland.
+         * <strong>example:</strong>
+         * <p>Mainland</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -250,11 +270,15 @@ public class CreateStoragePlanRequest extends Request {
         }
 
         /**
-         * The subscription duration of the storage plan.
-         * <p>
+         * <p>The subscription duration of the storage plan.</p>
+         * <ul>
+         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value ranges from 1 to 9.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value can be 1, 2, 3, or 5.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If **Period** is set to **Month**, the value ranges from 1 to 9.
-         * *   If **Period** is set to **Year**, the value can be 1, 2, 3, or 5.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

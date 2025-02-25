@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeDiskRequest} extends {@link RequestModel}
  *
  * <p>ResizeDiskRequest</p>
  */
 public class ResizeDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("NewSize")
-    @Validation(required = true, maximum = 65536, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65536, minimum = 1)
     private Integer newSize;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private ResizeDiskRequest(Builder builder) {
@@ -177,10 +182,13 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The ID of the order.
-         * <p>
+         * <p>The ID of the order.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when you resize subscription disks.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned only when you resize subscription disks.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -189,11 +197,11 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The method that you want to use to resize the disk. Default value: offline. Valid values:
-         * <p>
+         * <p>The ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query available disk IDs.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   offline: resizes the disk offline. After you resize a disk offline, you must restart its associated instance by using the Elastic Compute Service (ECS) console or by calling the [RebootInstance](~~25502~~) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).
-         * *   online: resizes the disk online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance. Ultra disks, standard SSDs, and ESSDs can be resized online.
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -202,7 +210,58 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * 32768
+         * <p>The new disk capacity. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li><p>System disk:</p>
+         * <ul>
+         * <li><p>Basic disk (cloud): 20 to 500.</p>
+         * </li>
+         * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.</p>
+         * <ul>
+         * <li>PL0 ESSD: 1 to 2048.</li>
+         * <li>PL1 ESSD: 20 to 2048.</li>
+         * <li>PL2 ESSD: 461 to 2048.</li>
+         * <li>PL3 ESSD: 1261 to 2048.</li>
+         * </ul>
+         * </li>
+         * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 2048.</p>
+         * </li>
+         * <li><p>Other disk categories: 20 to 2048.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>Data disk:</p>
+         * <ul>
+         * <li><p>Ultra disk (cloud_efficiency): 20 to 32768.</p>
+         * </li>
+         * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
+         * </li>
+         * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <code>PerformanceLevel</code> value in the response.</p>
+         * <ul>
+         * <li>PL0 ESSD: 1 to 65536.</li>
+         * <li>PL1 ESSD: 20 to 65536.</li>
+         * <li>PL2 ESSD: 461 to 65536.</li>
+         * <li>PL3 ESSD: 1261 to 65536.</li>
+         * </ul>
+         * </li>
+         * <li><p>Basic disk (cloud): 5 to 2000.</p>
+         * </li>
+         * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.</p>
+         * </li>
+         * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
+         * </li>
+         * <li><p>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1900</p>
          */
         public Builder newSize(Integer newSize) {
             this.putQueryParameter("NewSize", newSize);
@@ -247,27 +306,14 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The new disk capacity. Unit: GiB. Valid values:
-         * <p>
+         * <p>The method that you want to use to resize the disk. Valid values:</p>
+         * <ul>
+         * <li>offline (default): resizes the disk offline. After you resize a disk offline, you must restart the associated instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the resizing operation to take effect. For information about how to restart an ECS instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>.</li>
+         * <li>online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the associated instance. You can resize ultra disks, standard SSDs, Enterprise SSDs (ESSDs), and elastic ephemeral disks online.</li>
+         * </ul>
          * 
-         * *   System disk: 20 to 500.
-         * 
-         * *   Data disk:
-         * 
-         *     *   Ultra disk (cloud_efficiency): 20 to 32768.
-         * 
-         *     *   Standard SSD (cloud_ssd): 20 to 32768.
-         * 
-         *     *   ESSD (cloud_essd): Valid values when the NewSize parameter is set to cloud_essd depend on the `PerformanceLevel` value. You can call the [DescribeDisks](~~25514~~) operation to query disk information and check the `PerformanceLevel` value in the response.
-         * 
-         *         *   Valid values when PerformanceLevel is set to PL0: 40 to 32768.
-         *         *   Valid values when PerformanceLevel is set to PL1: 20 to 32768.
-         *         *   Valid values when PerformanceLevel is set to PL2: 461 to 32768.
-         *         *   Valid values when PerformanceLevel is set to PL3: 1261 to 32768.
-         * 
-         *     *   Basic disk (cloud): 5 to 2000.
-         * 
-         * The new disk capacity must be greater than the original disk capacity.
+         * <strong>example:</strong>
+         * <p>offline</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

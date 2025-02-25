@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
  *
  * <p>DataSubImagesFigureInfoValue</p>
  */
 public class DataSubImagesFigureInfoValue extends TeaModel {
-    @NameInMap("FigureCount")
+    @com.aliyun.core.annotation.NameInMap("FigureCount")
     private Integer figureCount;
 
-    @NameInMap("FigureDetails")
+    @com.aliyun.core.annotation.NameInMap("FigureDetails")
     private java.util.List < FigureDetails> figureDetails;
 
     private DataSubImagesFigureInfoValue(Builder builder) {
@@ -71,11 +71,17 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesFigureInfoValue</p>
+     */
     public static class FigurePoints extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Integer y;
 
         private FigurePoints(Builder builder) {
@@ -132,17 +138,23 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesFigureInfoValue</p>
+     */
     public static class FigureRect extends TeaModel {
-        @NameInMap("CenterX")
+        @com.aliyun.core.annotation.NameInMap("CenterX")
         private Integer centerX;
 
-        @NameInMap("CenterY")
+        @com.aliyun.core.annotation.NameInMap("CenterY")
         private Integer centerY;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
         private FigureRect(Builder builder) {
@@ -233,20 +245,26 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DataSubImagesFigureInfoValue} extends {@link TeaModel}
+     *
+     * <p>DataSubImagesFigureInfoValue</p>
+     */
     public static class FigureDetails extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Object data;
 
-        @NameInMap("FigurePoints")
+        @com.aliyun.core.annotation.NameInMap("FigurePoints")
         private java.util.List < FigurePoints> figurePoints;
 
-        @NameInMap("FigureRect")
+        @com.aliyun.core.annotation.NameInMap("FigureRect")
         private FigureRect figureRect;
 
-        @NameInMap("FigureAngle")
+        @com.aliyun.core.annotation.NameInMap("FigureAngle")
         private Integer figureAngle;
 
         private FigureDetails(Builder builder) {

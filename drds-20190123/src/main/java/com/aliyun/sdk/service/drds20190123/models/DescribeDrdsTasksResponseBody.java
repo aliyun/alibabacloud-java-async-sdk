@@ -62,7 +62,7 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         private Tasks tasks; 
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +78,7 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * Indicates information about the tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -142,7 +142,7 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * Content.
+             * Indicates the content of a task.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -150,7 +150,7 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * Indicates the ID of the task.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -158,7 +158,7 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates the state of the task.
              */
             public Builder state(String state) {
                 this.state = state;

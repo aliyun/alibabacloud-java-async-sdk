@@ -1,71 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModelResponseBody} extends {@link TeaModel}
  *
  * <p>GetModelResponseBody</p>
  */
 public class GetModelResponseBody extends TeaModel {
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @NameInMap("LatestVersion")
+    @com.aliyun.core.annotation.NameInMap("LatestVersion")
     private ModelVersion latestVersion;
 
-    @NameInMap("ModelDescription")
+    @com.aliyun.core.annotation.NameInMap("ModelDescription")
     private String modelDescription;
 
-    @NameInMap("ModelDoc")
+    @com.aliyun.core.annotation.NameInMap("ModelDoc")
     private String modelDoc;
 
-    @NameInMap("ModelId")
+    @com.aliyun.core.annotation.NameInMap("ModelId")
     private String modelId;
 
-    @NameInMap("ModelName")
+    @com.aliyun.core.annotation.NameInMap("ModelName")
     private String modelName;
 
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.NameInMap("ModelType")
+    private String modelType;
+
+    @com.aliyun.core.annotation.NameInMap("OrderNumber")
+    private Long orderNumber;
+
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("Provider")
+    @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Task")
+    @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private GetModelResponseBody(Builder builder) {
         this.accessibility = builder.accessibility;
         this.domain = builder.domain;
+        this.extraInfo = builder.extraInfo;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.labels = builder.labels;
@@ -74,6 +84,8 @@ public class GetModelResponseBody extends TeaModel {
         this.modelDoc = builder.modelDoc;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
+        this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
         this.ownerId = builder.ownerId;
         this.provider = builder.provider;
@@ -103,6 +115,13 @@ public class GetModelResponseBody extends TeaModel {
      */
     public String getDomain() {
         return this.domain;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -162,6 +181,20 @@ public class GetModelResponseBody extends TeaModel {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
+     * @return orderNumber
+     */
+    public Long getOrderNumber() {
+        return this.orderNumber;
+    }
+
+    /**
      * @return origin
      */
     public String getOrigin() {
@@ -213,6 +246,7 @@ public class GetModelResponseBody extends TeaModel {
     public static final class Builder {
         private String accessibility; 
         private String domain; 
+        private java.util.Map < String, ? > extraInfo; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.List < Label > labels; 
@@ -221,6 +255,8 @@ public class GetModelResponseBody extends TeaModel {
         private String modelDoc; 
         private String modelId; 
         private String modelName; 
+        private String modelType; 
+        private Long orderNumber; 
         private String origin; 
         private String ownerId; 
         private String provider; 
@@ -242,6 +278,14 @@ public class GetModelResponseBody extends TeaModel {
          */
         public Builder domain(String domain) {
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.extraInfo = extraInfo;
             return this;
         }
 
@@ -306,6 +350,22 @@ public class GetModelResponseBody extends TeaModel {
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+
+        /**
+         * OrderNumber.
+         */
+        public Builder orderNumber(Long orderNumber) {
+            this.orderNumber = orderNumber;
             return this;
         }
 

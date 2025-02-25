@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSubscriptionPriceRequest} extends {@link RequestModel}
  *
  * <p>GetSubscriptionPriceRequest</p>
  */
 public class GetSubscriptionPriceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("ModuleList")
-    @Validation(required = true)
-    private java.util.List < ModuleList> moduleList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ModuleList> moduleList;
 
-    @Query
-    @NameInMap("OrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("Quantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
     private Integer quantity;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("ServicePeriodQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePeriodQuantity")
     private Integer servicePeriodQuantity;
 
-    @Query
-    @NameInMap("ServicePeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePeriodUnit")
     private String servicePeriodUnit;
 
-    @Query
-    @NameInMap("SubscriptionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionType;
 
     private GetSubscriptionPriceRequest(Builder builder) {
@@ -98,7 +103,7 @@ public class GetSubscriptionPriceRequest extends Request {
     /**
      * @return moduleList
      */
-    public java.util.List < ModuleList> getModuleList() {
+    public java.util.List<ModuleList> getModuleList() {
         return this.moduleList;
     }
 
@@ -167,7 +172,7 @@ public class GetSubscriptionPriceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetSubscriptionPriceRequest, Builder> {
         private String instanceId; 
-        private java.util.List < ModuleList> moduleList; 
+        private java.util.List<ModuleList> moduleList; 
         private String orderType; 
         private Long ownerId; 
         private String productCode; 
@@ -198,7 +203,10 @@ public class GetSubscriptionPriceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance for which the price is queried. This parameter is required if you upgrade an instance. You can specify this parameter to obtain the pre-upgrade configurations of the instance.
+         * <p>The ID of the instance for which the price is queried. This parameter is required if you upgrade an instance. You can specify this parameter to obtain the pre-upgrade configurations of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-khkjhxxxxxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,21 +215,26 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The information about the pricing module.
+         * <p>The information about the pricing module.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder moduleList(java.util.List < ModuleList> moduleList) {
+        public Builder moduleList(java.util.List<ModuleList> moduleList) {
             this.putQueryParameter("ModuleList", moduleList);
             this.moduleList = moduleList;
             return this;
         }
 
         /**
-         * The type of the order. Valid values:
-         * <p>
+         * <p>The type of the order. Valid values:</p>
+         * <ul>
+         * <li>NewOrder: purchases an instance of an Alibaba Cloud service.</li>
+         * <li>Renewal: renews an instance of an Alibaba Cloud service.</li>
+         * <li>Upgrade: upgrades an instance of an Alibaba Cloud service.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   NewOrder: purchases an instance of an Alibaba Cloud service.
-         * *   Renewal: renews an instance of an Alibaba Cloud service.
-         * *   Upgrade: upgrades an instance of an Alibaba Cloud service.
+         * <strong>example:</strong>
+         * <p>NewOrder</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -239,7 +252,11 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The code of the service. For more information about the service code, see **Codes of Alibaba Cloud Services**.
+         * <p>The code of the service. For more information about the service code, see <strong>Codes of Alibaba Cloud Services</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -248,7 +265,10 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The type of the service. Specify the parameter based on the pricing document of the specific service.
+         * <p>The type of the service. Specify the parameter based on the pricing document of the specific service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -257,7 +277,10 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The quantity.
+         * <p>The quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -266,7 +289,10 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -275,7 +301,10 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The service duration.
+         * <p>The service duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder servicePeriodQuantity(Integer servicePeriodQuantity) {
             this.putQueryParameter("ServicePeriodQuantity", servicePeriodQuantity);
@@ -284,11 +313,14 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The unit of the service duration. Valid values:
-         * <p>
+         * <p>The unit of the service duration. Valid values:</p>
+         * <ul>
+         * <li>Year</li>
+         * <li>Month</li>
+         * </ul>
          * 
-         * *   Year
-         * *   Month
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder servicePeriodUnit(String servicePeriodUnit) {
             this.putQueryParameter("ServicePeriodUnit", servicePeriodUnit);
@@ -297,7 +329,11 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * The billing method. Set the value to Subscription.
+         * <p>The billing method. Set the value to Subscription.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -312,19 +348,25 @@ public class GetSubscriptionPriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetSubscriptionPriceRequest} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionPriceRequest</p>
+     */
     public static class ModuleList extends TeaModel {
-        @NameInMap("Config")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Config")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String config;
 
-        @NameInMap("ModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String moduleCode;
 
-        @NameInMap("ModuleStatus")
+        @com.aliyun.core.annotation.NameInMap("ModuleStatus")
         private Integer moduleStatus;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private ModuleList(Builder builder) {
@@ -377,7 +419,11 @@ public class GetSubscriptionPriceRequest extends Request {
             private String tag; 
 
             /**
-             * The configurations of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.
+             * <p>The configurations of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PackageCode:version_1</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -385,7 +431,11 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * The identifier of the Nth pricing module.
+             * <p>The identifier of the Nth pricing module.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PackageCode</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -393,13 +443,15 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * The status of the pricing module. This parameter is required only if the order type is Upgrade. Valid values:
-             * <p>
+             * <p>The status of the pricing module. This parameter is required only if the order type is Upgrade. Valid values:</p>
+             * <ul>
+             * <li>1: adds one or more instances.</li>
+             * <li>2: modifies the configurations of an instance. In the upgrade scenario, if the configurations of the pricing module change, you must specify this value for the parameter.</li>
+             * </ul>
+             * <p>Default value: 1.</p>
              * 
-             * *   1: adds one or more instances.
-             * *   2: modifies the configurations of an instance. In the upgrade scenario, if the configurations of the pricing module change, you must specify this value for the parameter.
-             * 
-             * Default value: 1.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder moduleStatus(Integer moduleStatus) {
                 this.moduleStatus = moduleStatus;
@@ -407,7 +459,10 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * The tag of the specified resource. This parameter is required only if you upgrade or modify the configurations of an Alibaba Cloud service. For example, if you want to modify the configurations of a disk, you can use a tag to identify the ID of the disk.
+             * <p>The tag of the specified resource. This parameter is required only if you upgrade or modify the configurations of an Alibaba Cloud service. For example, if you want to modify the configurations of a disk, you can use a tag to identify the ID of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213213123</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationMembersRequest} extends {@link RequestModel}
  *
  * <p>ListOrganizationMembersRequest</p>
  */
 public class ListOrganizationMembersRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("containsExternInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("containsExternInfo")
     private Boolean containsExternInfo;
 
-    @Query
-    @NameInMap("externUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("externUid")
     private String externUid;
 
-    @Query
-    @NameInMap("joinTimeFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("joinTimeFrom")
     private Long joinTimeFrom;
 
-    @Query
-    @NameInMap("joinTimeTo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("joinTimeTo")
     private Long joinTimeTo;
 
-    @Query
-    @NameInMap("maxResults")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("organizationMemberName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationMemberName")
     private String organizationMemberName;
 
-    @Query
-    @NameInMap("provider")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("provider")
     private String provider;
 
-    @Query
-    @NameInMap("state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
     private ListOrganizationMembersRequest(Builder builder) {
@@ -182,7 +187,10 @@ public class ListOrganizationMembersRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66c0c9fffeb86b450c199fcd</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -191,7 +199,7 @@ public class ListOrganizationMembersRequest extends Request {
         }
 
         /**
-         * 返回信息中是否包含第三方信息，默认不包含。
+         * <p>返回信息中是否包含第三方信息，默认不包含。</p>
          */
         public Builder containsExternInfo(Boolean containsExternInfo) {
             this.putQueryParameter("containsExternInfo", containsExternInfo);

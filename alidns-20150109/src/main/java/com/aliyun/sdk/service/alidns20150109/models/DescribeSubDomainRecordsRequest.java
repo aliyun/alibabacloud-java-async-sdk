@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubDomainRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSubDomainRecordsRequest</p>
  */
 public class DescribeSubDomainRecordsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("SubDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subDomain;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private DescribeSubDomainRecordsRequest(Builder builder) {
@@ -154,7 +159,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -163,7 +171,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -172,7 +183,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The resolution line.
+         * <p>The DNS resolution line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -181,7 +195,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +207,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **500**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,14 +219,12 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The subdomain. For example, assume that the SubDomain parameter is set to a.www.example.com.
-         * <p>
+         * <p>If you set SubDomain to <code>a.www.example.com</code> and leave</p>
+         * <p>DomainName empty, the system returns the DNS records that contain the hostname <code>a.www</code> for the domain name example.com. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to <a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <code>a</code> for the domain name <a href="http://www.example.com">www.example.com</a>. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to a.<a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <code>@</code> for the domain name a.<a href="http://www.example.com">www.example.com</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If the DomainName parameter is empty, the DNS records of the subdomain whose domain name is example.com and hostname is "a.www" are queried.
-         * 
-         * If the DomainName parameter is set to www.example.com, the DNS records of the subdomain whose domain name is www.example.com and hostname is "a" are queried.
-         * 
-         * If the DomainName parameter is set to a.www.example.com, the DNS records of the subdomain whose domain name is a.www.example.com and hostname is "@" are queried.
+         * <strong>example:</strong>
+         * <p>a.<a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -215,10 +233,11 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The type of DNS records to query. If you do not specify this parameter, all types of DNS records corresponding to the subdomain are returned.
-         * <p>
+         * <p>The type of DNS records. If you do not specify this parameter, all types of DNS records for the subdomain name are returned.</p>
+         * <p>Valid values: <strong>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</strong>.</p>
          * 
-         * DNS record types include **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**. The value is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>MX</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -227,7 +246,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

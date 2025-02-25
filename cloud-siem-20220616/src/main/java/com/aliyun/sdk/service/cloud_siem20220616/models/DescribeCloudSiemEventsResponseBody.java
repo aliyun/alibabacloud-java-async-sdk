@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudSiemEventsResponseBody</p>
  */
 public class DescribeCloudSiemEventsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCloudSiemEventsResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,55 +216,58 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertNum")
+        @com.aliyun.core.annotation.NameInMap("AlertNum")
         private Integer alertNum;
 
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @NameInMap("AssetNum")
+        @com.aliyun.core.annotation.NameInMap("AssetNum")
         private Integer assetNum;
 
-        @NameInMap("AttCkLabels")
+        @com.aliyun.core.annotation.NameInMap("AttCkLabels")
         private java.util.List < String > attCkLabels;
 
-        @NameInMap("DataSources")
+        @com.aliyun.core.annotation.NameInMap("DataSources")
         private java.util.List < String > dataSources;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DescriptionEn")
+        @com.aliyun.core.annotation.NameInMap("DescriptionEn")
         private String descriptionEn;
 
-        @NameInMap("ExtContent")
+        @com.aliyun.core.annotation.NameInMap("ExtContent")
         private String extContent;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IncidentName")
+        @com.aliyun.core.annotation.NameInMap("IncidentName")
         private String incidentName;
 
-        @NameInMap("IncidentNameEn")
+        @com.aliyun.core.annotation.NameInMap("IncidentNameEn")
         private String incidentNameEn;
 
-        @NameInMap("IncidentUuid")
+        @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("ReferAccount")
+        private String referAccount;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
-        @NameInMap("ThreatScore")
+        @com.aliyun.core.annotation.NameInMap("ThreatScore")
         private Float threatScore;
 
         private ResponseData(Builder builder) {
@@ -282,6 +284,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             this.incidentName = builder.incidentName;
             this.incidentNameEn = builder.incidentNameEn;
             this.incidentUuid = builder.incidentUuid;
+            this.referAccount = builder.referAccount;
             this.remark = builder.remark;
             this.status = builder.status;
             this.threatLevel = builder.threatLevel;
@@ -388,6 +391,13 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return referAccount
+         */
+        public String getReferAccount() {
+            return this.referAccount;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -429,6 +439,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             private String incidentName; 
             private String incidentNameEn; 
             private String incidentUuid; 
+            private String referAccount; 
             private String remark; 
             private Integer status; 
             private String threatLevel; 
@@ -459,7 +470,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the ATT\&CK attack.
+             * The tags of the ATT\&CK techniques.
              */
             public Builder attCkLabels(java.util.List < String > attCkLabels) {
                 this.attCkLabels = attCkLabels;
@@ -539,6 +550,14 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
+             * the refer account info.
+             */
+            public Builder referAccount(String referAccount) {
+                this.referAccount = referAccount;
+                return this;
+            }
+
+            /**
              * The remarks of the event.
              */
             public Builder remark(String remark) {
@@ -550,10 +569,10 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
              * The status of the event. Valid values:
              * <p>
              * 
-             * *   0: unhandled
-             * *   1: handling
-             * *   5: handling failed
-             * *   10: handled
+             * *   0: unhandled.
+             * *   1: handling.
+             * *   5: handling failed.
+             * *   10: handled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -564,9 +583,9 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
              * The risk level. Valid values:
              * <p>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * *   serious: high.
+             * *   suspicious: medium.
+             * *   remind: low.
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -589,10 +608,10 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {

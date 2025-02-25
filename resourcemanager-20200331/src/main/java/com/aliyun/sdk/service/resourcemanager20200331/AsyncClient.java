@@ -104,7 +104,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceAccountResponse> createResourceAccount(CreateResourceAccountRequest request);
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~159973~~).
+      * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
       *
      */
     CompletableFuture<CreateResourceGroupResponse> createResourceGroup(CreateResourceGroupRequest request);
@@ -469,6 +469,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateAccountResponse> updateAccount(UpdateAccountRequest request);
 
+    /**
+      * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+      *
+     */
     CompletableFuture<UpdateAssociatedTransferSettingResponse> updateAssociatedTransferSetting(UpdateAssociatedTransferSettingRequest request);
 
     /**

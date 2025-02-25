@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParameterGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParameterGroupsResponseBody</p>
  */
 public class DescribeParameterGroupsResponseBody extends TeaModel {
-    @NameInMap("ParameterGroups")
+    @com.aliyun.core.annotation.NameInMap("ParameterGroups")
     private ParameterGroups parameterGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SignalForOptimizeParams")
+    @com.aliyun.core.annotation.NameInMap("SignalForOptimizeParams")
     private Boolean signalForOptimizeParams;
 
     private DescribeParameterGroupsResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         private Boolean signalForOptimizeParams; 
 
         /**
-         * The details of the parameter templates.
+         * <p>The details of the parameter templates.</p>
          */
         public Builder parameterGroups(ParameterGroups parameterGroups) {
             this.parameterGroups = parameterGroups;
@@ -70,7 +75,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4A23265-C5B6-42E1-98A0-EFA1EB42E723</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +86,17 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether parameter templates exist in the specified region. Valid values:
-         * <p>
-         * *   true
-         * *   false
-         * ><notice>This parameter is deprecated.></notice>
+         * <p>Indicates whether parameter templates exist in the specified region. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false<blockquote>
+         * <p>Notice: This parameter is deprecated.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder signalForOptimizeParams(Boolean signalForOptimizeParams) {
             this.signalForOptimizeParams = signalForOptimizeParams;
@@ -95,35 +109,41 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParameterGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupsResponseBody</p>
+     */
     public static class ParameterGroup extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Integer forceRestart;
 
-        @NameInMap("ParamCounts")
+        @com.aliyun.core.annotation.NameInMap("ParamCounts")
         private Integer paramCounts;
 
-        @NameInMap("ParameterGroupDesc")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
 
-        @NameInMap("ParameterGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
         private String parameterGroupId;
 
-        @NameInMap("ParameterGroupName")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
         private String parameterGroupName;
 
-        @NameInMap("ParameterGroupType")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupType")
         private Integer parameterGroupType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ParameterGroup(Builder builder) {
@@ -230,7 +250,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the parameter template was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the parameter template was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-21T01:48:39Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +261,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * <p>The database engine of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -246,7 +272,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -254,11 +283,14 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the restart of an instance is required for the parameter template to take effect. Valid values:
-             * <p>
+             * <p>Indicates whether the restart of an instance is required for the parameter template to take effect. Valid values:</p>
+             * <ul>
+             * <li>0: A restart is not required.</li>
+             * <li>1: A restart is required.</li>
+             * </ul>
              * 
-             * *   0: A restart is not required.
-             * *   1: A restart is required.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder forceRestart(Integer forceRestart) {
                 this.forceRestart = forceRestart;
@@ -266,7 +298,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of parameters in the parameter template.
+             * <p>The number of parameters in the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder paramCounts(Integer paramCounts) {
                 this.paramCounts = paramCounts;
@@ -274,12 +309,15 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter template. Valid values:
-             * <p>
+             * <p>The type of the parameter template. Valid values:</p>
+             * <ul>
+             * <li>0: the default parameter template.</li>
+             * <li>1: a custom parameter template.</li>
+             * <li>2: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</li>
+             * </ul>
              * 
-             * *   0: the default parameter template.
-             * *   1: a custom parameter template.
-             * *   2: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -287,7 +325,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parameter template.
+             * <p>The ID of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rpg-****</p>
              */
             public Builder parameterGroupId(String parameterGroupId) {
                 this.parameterGroupId = parameterGroupId;
@@ -295,7 +336,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter template.
+             * <p>The name of the parameter template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1234</p>
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -303,12 +347,15 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter template. Valid values:
-             * <p>
+             * <p>The type of the parameter template. Valid values:</p>
+             * <ul>
+             * <li>0: the default parameter template.</li>
+             * <li>1: a custom parameter template.</li>
+             * <li>2: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</li>
+             * </ul>
              * 
-             * *   0: the default parameter template.
-             * *   1: a custom parameter template.
-             * *   2: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parameterGroupType(Integer parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;
@@ -316,7 +363,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the parameter template was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the parameter template was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-21T02:21:35Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -330,9 +380,15 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeParameterGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParameterGroupsResponseBody</p>
+     */
     public static class ParameterGroups extends TeaModel {
-        @NameInMap("ParameterGroup")
-        private java.util.List < ParameterGroup> parameterGroup;
+        @com.aliyun.core.annotation.NameInMap("ParameterGroup")
+        private java.util.List<ParameterGroup> parameterGroup;
 
         private ParameterGroups(Builder builder) {
             this.parameterGroup = builder.parameterGroup;
@@ -349,17 +405,17 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * @return parameterGroup
          */
-        public java.util.List < ParameterGroup> getParameterGroup() {
+        public java.util.List<ParameterGroup> getParameterGroup() {
             return this.parameterGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ParameterGroup> parameterGroup; 
+            private java.util.List<ParameterGroup> parameterGroup; 
 
             /**
              * ParameterGroup.
              */
-            public Builder parameterGroup(java.util.List < ParameterGroup> parameterGroup) {
+            public Builder parameterGroup(java.util.List<ParameterGroup> parameterGroup) {
                 this.parameterGroup = parameterGroup;
                 return this;
             }

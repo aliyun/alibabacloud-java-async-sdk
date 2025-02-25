@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLDAPConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateLDAPConfigRequest</p>
  */
 public class CreateLDAPConfigRequest extends Request {
-    @Query
-    @NameInMap("BindDN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindDN")
     private String bindDN;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("SearchBase")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchBase")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String searchBase;
 
-    @Query
-    @NameInMap("URI")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("URI")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String URI;
 
     private CreateLDAPConfigRequest(Builder builder) {
@@ -90,16 +95,19 @@ public class CreateLDAPConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLDAPConfigRequest response) {
-            super(response);
-            this.bindDN = response.bindDN;
-            this.fileSystemId = response.fileSystemId;
-            this.searchBase = response.searchBase;
-            this.URI = response.URI;
+        private Builder(CreateLDAPConfigRequest request) {
+            super(request);
+            this.bindDN = request.bindDN;
+            this.fileSystemId = request.fileSystemId;
+            this.searchBase = request.searchBase;
+            this.URI = request.URI;
         } 
 
         /**
-         * BindDN.
+         * <p>An LDAP entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn=alibaba,dc=com</p>
          */
         public Builder bindDN(String bindDN) {
             this.putQueryParameter("BindDN", bindDN);
@@ -108,7 +116,11 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109c04****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -117,7 +129,11 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * SearchBase.
+         * <p>An LDAP search base.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc=example</p>
          */
         public Builder searchBase(String searchBase) {
             this.putQueryParameter("SearchBase", searchBase);
@@ -126,7 +142,11 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * URI.
+         * <p>An LDAP URI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ldap://ldap.example.example</p>
          */
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRouteRulesByAssignWhoIdRequest</p>
  */
 public class ListRouteRulesByAssignWhoIdRequest extends Request {
-    @Body
-    @NameInMap("assignWhoId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignWhoId")
     private Long assignWhoId;
 
-    @Body
-    @NameInMap("assignWhoType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignWhoType")
     private Long assignWhoType;
 
     private ListRouteRulesByAssignWhoIdRequest(Builder builder) {

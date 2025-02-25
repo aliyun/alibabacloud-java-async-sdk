@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ArmsConfig} extends {@link TeaModel}
  *
  * <p>ArmsConfig</p>
  */
 public class ArmsConfig extends TeaModel {
-    @NameInMap("agentVersion")
+    @com.aliyun.core.annotation.NameInMap("agentVersion")
     private String agentVersion;
 
-    @NameInMap("appId")
+    @com.aliyun.core.annotation.NameInMap("appId")
     private String appId;
 
-    @NameInMap("licenseKey")
+    @com.aliyun.core.annotation.NameInMap("licenseKey")
     private String licenseKey;
 
     private ArmsConfig(Builder builder) {

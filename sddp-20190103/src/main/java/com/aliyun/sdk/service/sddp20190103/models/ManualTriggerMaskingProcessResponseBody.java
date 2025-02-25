@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ManualTriggerMaskingProcessResponseBody} extends {@link TeaModel}
  *
  * <p>ManualTriggerMaskingProcessResponseBody</p>
  */
 public class ManualTriggerMaskingProcessResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ManualTriggerMaskingProcessResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class ManualTriggerMaskingProcessResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-4******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

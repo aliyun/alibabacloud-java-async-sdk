@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateGroupRequest</p>
  */
 public class UpdateGroupRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("avatarUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("avatarUrl")
     private String avatarUrl;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("path")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("path")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String path;
 
-    @Body
-    @NameInMap("pathWithNamespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pathWithNamespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pathWithNamespace;
 
-    @Body
-    @NameInMap("visibilityLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibilityLevel")
     private Integer visibilityLevel;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpdateGroupRequest(Builder builder) {
@@ -183,7 +188,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>codeup_group</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -192,7 +200,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>codeup_group</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("path", path);
@@ -201,7 +212,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * pathWithNamespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org/group/subgroup/here</p>
          */
         public Builder pathWithNamespace(String pathWithNamespace) {
             this.putBodyParameter("pathWithNamespace", pathWithNamespace);
@@ -219,7 +233,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e9903d8b3f1xxxxxf9286ef5</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

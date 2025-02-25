@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeEnvironmentFeatureRequest} extends {@link RequestModel}
  *
  * <p>UpgradeEnvironmentFeatureRequest</p>
  */
 public class UpgradeEnvironmentFeatureRequest extends Request {
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("FeatureName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureName;
 
-    @Query
-    @NameInMap("FeatureVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureVersion")
     private String featureVersion;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Values")
     private String values;
 
     private UpgradeEnvironmentFeatureRequest(Builder builder) {
@@ -126,7 +131,10 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * <p>The language. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -135,7 +143,11 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * EnvironmentId.
+         * <p>The environment ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -144,7 +156,11 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * FeatureName.
+         * <p>The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric-agent</p>
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -153,7 +169,10 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * FeatureVersion.
+         * <p>The version of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.17</p>
          */
         public Builder featureVersion(String featureVersion) {
             this.putQueryParameter("FeatureVersion", featureVersion);
@@ -162,7 +181,10 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +193,10 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Values.
+         * <p>Specifies whether to enable service discovery. For PodAnnotation, set the value to run or mini. For PodMonitor and ServiceMonitor, set the value to true or false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PodAnnotation&quot;:&quot;run&quot;}</p>
          */
         public Builder values(String values) {
             this.putQueryParameter("Values", values);

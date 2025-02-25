@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSensitiveColumnsDetailRequest} extends {@link RequestModel}
  *
  * <p>ListSensitiveColumnsDetailRequest</p>
  */
 public class ListSensitiveColumnsDetailRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ColumnName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColumnName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String columnName;
 
-    @Query
-    @NameInMap("DbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbId")
     private Long dbId;
 
-    @Query
-    @NameInMap("Logic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logic")
     private Boolean logic;
 
-    @Query
-    @NameInMap("SchemaName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schemaName;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private ListSensitiveColumnsDetailRequest(Builder builder) {
@@ -150,10 +155,14 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the field.
-         * <p>
+         * <p>The name of the field. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the field.</p>
+         * <blockquote>
+         * <p> You can also call the <a href="https://help.aliyun.com/document_detail/141870.html">ListColumns</a> operation to obtain the name of the field.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can also call the [ListColumns](~~141870~~) operation to obtain the name of the field.
+         * <strong>example:</strong>
+         * <p>ColumnName_test</p>
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -162,11 +171,14 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * The ID of the database. The database can be a physical database or a logical database.
-         * <p>
+         * <p>The ID of the database. The database can be a physical database or a logical database.</p>
+         * <ul>
+         * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * </ul>
          * 
-         * *   To obtain the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
-         * *   To obtain the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
+         * <strong>example:</strong>
+         * <p>1860****</p>
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -175,11 +187,14 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. Valid values:
-         * <p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
          * 
-         * *   **true**: The database is a logical database.
-         * *   **false**: The database is a physical database.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -188,11 +203,17 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the database.
-         * <p>
+         * <p>The name of the database. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the database.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can also call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the name of a physical database.</li>
+         * <li>You can also call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the name of a logical database.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > * You can also call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a physical database.
-         * > * You can also call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of a logical database.
+         * <strong>example:</strong>
+         * <p>SchemaName_test</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -201,10 +222,14 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the name of the table.
-         * <p>
+         * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the name of the table.</p>
+         * <blockquote>
+         * <p> You can also call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the name of the table.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can also call the [ListTables](~~141878~~) operation to obtain the name of the table.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -213,7 +238,10 @@ public class ListSensitiveColumnsDetailRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

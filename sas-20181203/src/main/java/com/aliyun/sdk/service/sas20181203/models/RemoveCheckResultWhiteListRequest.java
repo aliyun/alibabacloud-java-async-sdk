@@ -1,33 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveCheckResultWhiteListRequest} extends {@link RequestModel}
  *
  * <p>RemoveCheckResultWhiteListRequest</p>
  */
 public class RemoveCheckResultWhiteListRequest extends Request {
-    @Query
-    @NameInMap("CheckGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckGroupId")
     private String checkGroupId;
 
-    @Query
-    @NameInMap("CheckIds")
-    private java.util.List < Long > checkIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckIds")
+    private java.util.List<Long> checkIds;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    private Long ruleId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private RemoveCheckResultWhiteListRequest(Builder builder) {
         super(builder);
         this.checkGroupId = builder.checkGroupId;
         this.checkIds = builder.checkIds;
+        this.ruleId = builder.ruleId;
         this.type = builder.type;
     }
 
@@ -54,8 +64,15 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     /**
      * @return checkIds
      */
-    public java.util.List < Long > getCheckIds() {
+    public java.util.List<Long> getCheckIds() {
         return this.checkIds;
+    }
+
+    /**
+     * @return ruleId
+     */
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
     /**
@@ -67,7 +84,8 @@ public class RemoveCheckResultWhiteListRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveCheckResultWhiteListRequest, Builder> {
         private String checkGroupId; 
-        private java.util.List < Long > checkIds; 
+        private java.util.List<Long> checkIds; 
+        private Long ruleId; 
         private String type; 
 
         private Builder() {
@@ -78,11 +96,15 @@ public class RemoveCheckResultWhiteListRequest extends Request {
             super(request);
             this.checkGroupId = request.checkGroupId;
             this.checkIds = request.checkIds;
+            this.ruleId = request.ruleId;
             this.type = request.type;
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         public Builder checkGroupId(String checkGroupId) {
             this.putQueryParameter("CheckGroupId", checkGroupId);
@@ -91,16 +113,34 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * The IDs of check items.
+         * <p>The IDs of the check items.</p>
          */
-        public Builder checkIds(java.util.List < Long > checkIds) {
+        public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
             return this;
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>The ID of the whitelist rule.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of whitelist rules.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
+        public Builder ruleId(Long ruleId) {
+            this.putQueryParameter("RuleId", ruleId);
+            this.ruleId = ruleId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

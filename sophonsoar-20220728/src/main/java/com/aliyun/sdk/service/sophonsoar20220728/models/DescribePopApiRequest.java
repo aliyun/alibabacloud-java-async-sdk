@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePopApiRequest} extends {@link RequestModel}
  *
  * <p>DescribePopApiRequest</p>
  */
 public class DescribePopApiRequest extends Request {
-    @Query
-    @NameInMap("ApiName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiName;
 
-    @Query
-    @NameInMap("ApiVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiVersion;
 
-    @Query
-    @NameInMap("Env")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Env")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String env;
 
-    @Query
-    @NameInMap("PopCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PopCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String popCode;
 
     private DescribePopApiRequest(Builder builder) {
@@ -100,7 +100,11 @@ public class DescribePopApiRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * <p>The operation name of the Alibaba Cloud service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribeInstanceInfo</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -109,7 +113,14 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * ApiVersion.
+         * <p>The version number of the API.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the version number.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-01</p>
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
@@ -118,7 +129,11 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment in which the API operation parameter is used. Set the value to online.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -127,7 +142,14 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * PopCode.
+         * <p>The POP code of the Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sas</p>
          */
         public Builder popCode(String popCode) {
             this.putQueryParameter("PopCode", popCode);

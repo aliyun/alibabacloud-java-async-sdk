@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFCTriggerRequest} extends {@link RequestModel}
  *
  * <p>ListFCTriggerRequest</p>
  */
 public class ListFCTriggerRequest extends Request {
-    @Query
-    @NameInMap("EventMetaName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventMetaName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventMetaName;
 
-    @Query
-    @NameInMap("EventMetaVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventMetaVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventMetaVersion;
 
     private ListFCTriggerRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class ListFCTriggerRequest extends Request {
         } 
 
         /**
-         * The name of the event. You can specify only one name.
+         * <p>The name of the event. You can specify only one name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogFileCreated</p>
          */
         public Builder eventMetaName(String eventMetaName) {
             this.putQueryParameter("EventMetaName", eventMetaName);
@@ -79,7 +83,11 @@ public class ListFCTriggerRequest extends Request {
         }
 
         /**
-         * The version number of the event. You can specify only one version number.
+         * <p>The version number of the event. You can specify only one version number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder eventMetaVersion(String eventMetaVersion) {
             this.putQueryParameter("EventMetaVersion", eventMetaVersion);

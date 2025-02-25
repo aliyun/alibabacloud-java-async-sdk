@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlarmResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAlarmResponseBody</p>
  */
 public class DeleteAlarmResponseBody extends TeaModel {
-    @NameInMap("AlarmTaskId")
+    @com.aliyun.core.annotation.NameInMap("AlarmTaskId")
     private String alarmTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAlarmResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class DeleteAlarmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlarmTaskId.
+         * <p>The ID of the event-triggered task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.alarmTaskId = alarmTaskId;
@@ -58,7 +66,10 @@ public class DeleteAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF9BFEE-FE07-4627-B8FB-14326FB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

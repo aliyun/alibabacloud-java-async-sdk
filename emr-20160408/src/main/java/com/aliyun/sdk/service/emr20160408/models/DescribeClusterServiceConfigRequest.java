@@ -141,16 +141,16 @@ public class DescribeClusterServiceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterServiceConfigRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.configVersion = response.configVersion;
-            this.groupId = response.groupId;
-            this.hostInstanceId = response.hostInstanceId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
-            this.tagValue = response.tagValue;
+        private Builder(DescribeClusterServiceConfigRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.configVersion = request.configVersion;
+            this.groupId = request.groupId;
+            this.hostInstanceId = request.hostInstanceId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
+            this.tagValue = request.tagValue;
         } 
 
         /**

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlowLogRecordsResponseBody</p>
  */
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSlowLogRecordsResponseBody(Builder builder) {
@@ -110,7 +115,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The ID of cluster.
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -118,7 +126,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine.
+         * <p>Database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_mysql</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -126,7 +137,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about slow query logs.
+         * <p>List of slow log details.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -134,7 +145,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -142,7 +156,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>Number of records on this page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -150,7 +167,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +178,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of SQL statements.
+         * <p>Total number of SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -171,35 +194,44 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class SQLSlowRecord extends TeaModel {
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("ExecutionStartTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStartTime")
         private String executionStartTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("LockTimes")
+        @com.aliyun.core.annotation.NameInMap("LockTimes")
         private Long lockTimes;
 
-        @NameInMap("ParseRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ParseRowCounts")
         private Long parseRowCounts;
 
-        @NameInMap("QueryTimeMS")
+        @com.aliyun.core.annotation.NameInMap("QueryTimeMS")
         private Long queryTimeMS;
 
-        @NameInMap("QueryTimes")
+        @com.aliyun.core.annotation.NameInMap("QueryTimes")
         private Long queryTimes;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLHash")
+        private String SQLHash;
+
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
         private SQLSlowRecord(Builder builder) {
@@ -212,6 +244,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.queryTimeMS = builder.queryTimeMS;
             this.queryTimes = builder.queryTimes;
             this.returnRowCounts = builder.returnRowCounts;
+            this.SQLHash = builder.SQLHash;
             this.SQLText = builder.SQLText;
         }
 
@@ -287,6 +320,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return SQLHash
+         */
+        public String getSQLHash() {
+            return this.SQLHash;
+        }
+
+        /**
          * @return SQLText
          */
         public String getSQLText() {
@@ -303,10 +343,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Long queryTimeMS; 
             private Long queryTimes; 
             private Long returnRowCounts; 
+            private String SQLHash; 
             private String SQLText; 
 
             /**
-             * The name of the database.
+             * <p>Database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -314,7 +358,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>Node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-*****************</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -322,7 +369,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was executed. The time is in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+             * <p>Time when the SQL starts execution. The format is <code>YYYY-MM-DDThh:mmZ</code> (UTC time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-07T03:47Z</p>
              */
             public Builder executionStartTime(String executionStartTime) {
                 this.executionStartTime = executionStartTime;
@@ -330,7 +380,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client that is used to connect to the database.
+             * <p>Client address connecting to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb[testdb] @  [100.<strong>.</strong>.242]</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -338,7 +391,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time during which the SQL statement was locked. Unit: seconds.
+             * <p>SQL lock duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockTimes(Long lockTimes) {
                 this.lockTimes = lockTimes;
@@ -346,7 +402,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows parsed by the SQL statement.
+             * <p>Number of rows parsed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parseRowCounts(Long parseRowCounts) {
                 this.parseRowCounts = parseRowCounts;
@@ -354,7 +413,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time range for the query. Unit: milliseconds.
+             * <p>Query time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder queryTimeMS(Long queryTimeMS) {
                 this.queryTimeMS = queryTimeMS;
@@ -362,7 +424,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that was consumed to execute the SQL statement. Unit: seconds.
+             * <p>SQL execution duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder queryTimes(Long queryTimes) {
                 this.queryTimes = queryTimes;
@@ -370,7 +435,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned by the SQL statement.
+             * <p>Number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -378,7 +446,18 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that is executed in the query.
+             * <p>Unique identifier for the SQL statement in slow log statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U2FsdGVk****</p>
+             */
+            public Builder SQLHash(String SQLHash) {
+                this.SQLHash = SQLHash;
+                return this;
+            }
+
+            /**
+             * <p>Query statement.</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -392,9 +471,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSlowLogRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowLogRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("SQLSlowRecord")
-        private java.util.List < SQLSlowRecord> SQLSlowRecord;
+        @com.aliyun.core.annotation.NameInMap("SQLSlowRecord")
+        private java.util.List<SQLSlowRecord> SQLSlowRecord;
 
         private Items(Builder builder) {
             this.SQLSlowRecord = builder.SQLSlowRecord;
@@ -411,17 +496,17 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return SQLSlowRecord
          */
-        public java.util.List < SQLSlowRecord> getSQLSlowRecord() {
+        public java.util.List<SQLSlowRecord> getSQLSlowRecord() {
             return this.SQLSlowRecord;
         }
 
         public static final class Builder {
-            private java.util.List < SQLSlowRecord> SQLSlowRecord; 
+            private java.util.List<SQLSlowRecord> SQLSlowRecord; 
 
             /**
              * SQLSlowRecord.
              */
-            public Builder SQLSlowRecord(java.util.List < SQLSlowRecord> SQLSlowRecord) {
+            public Builder SQLSlowRecord(java.util.List<SQLSlowRecord> SQLSlowRecord) {
                 this.SQLSlowRecord = SQLSlowRecord;
                 return this;
             }

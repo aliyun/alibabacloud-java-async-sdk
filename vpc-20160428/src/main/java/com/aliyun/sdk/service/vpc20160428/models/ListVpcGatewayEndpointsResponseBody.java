@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcGatewayEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcGatewayEndpointsResponseBody</p>
  */
 public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
-    @NameInMap("Endpoints")
-    private java.util.List < Endpoints> endpoints;
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
+    private java.util.List<Endpoints> endpoints;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListVpcGatewayEndpointsResponseBody(Builder builder) {
@@ -46,7 +51,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     /**
      * @return endpoints
      */
-    public java.util.List < Endpoints> getEndpoints() {
+    public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
     }
 
@@ -79,22 +84,25 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Endpoints> endpoints; 
+        private java.util.List<Endpoints> endpoints; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The list of gateway endpoints.
+         * <p>The list of gateway endpoints.</p>
          */
-        public Builder endpoints(java.util.List < Endpoints> endpoints) {
+        public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +110,14 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +125,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AB1129F-32C1-5E4D-9E22-E4A859CA46EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,11 +152,17 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcGatewayEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcGatewayEndpointsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -174,7 +197,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N added to the resource.
+             * <p>The key of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +208,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * <p>The value of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -196,38 +225,44 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVpcGatewayEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcGatewayEndpointsResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("AssociatedRouteTables")
-        private java.util.List < String > associatedRouteTables;
+        @com.aliyun.core.annotation.NameInMap("AssociatedRouteTables")
+        private java.util.List<String> associatedRouteTables;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EndpointDescription")
+        @com.aliyun.core.annotation.NameInMap("EndpointDescription")
         private String endpointDescription;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("EndpointStatus")
+        @com.aliyun.core.annotation.NameInMap("EndpointStatus")
         private String endpointStatus;
 
-        @NameInMap("PolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PolicyDocument")
         private String policyDocument;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Endpoints(Builder builder) {
@@ -255,7 +290,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         /**
          * @return associatedRouteTables
          */
-        public java.util.List < String > getAssociatedRouteTables() {
+        public java.util.List<String> getAssociatedRouteTables() {
             return this.associatedRouteTables;
         }
 
@@ -318,7 +353,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -330,7 +365,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > associatedRouteTables; 
+            private java.util.List<String> associatedRouteTables; 
             private String creationTime; 
             private String endpointDescription; 
             private String endpointId; 
@@ -339,19 +374,22 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             private String policyDocument; 
             private String resourceGroupId; 
             private String serviceName; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
 
             /**
-             * The ID of the route table associated with the gateway endpoint.
+             * <p>The ID of the route table associated with the gateway endpoint.</p>
              */
-            public Builder associatedRouteTables(java.util.List < String > associatedRouteTables) {
+            public Builder associatedRouteTables(java.util.List<String> associatedRouteTables) {
                 this.associatedRouteTables = associatedRouteTables;
                 return this;
             }
 
             /**
-             * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08T08:43:04Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -359,7 +397,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the gateway endpoint.
+             * <p>The description of the gateway endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_description</p>
              */
             public Builder endpointDescription(String endpointDescription) {
                 this.endpointDescription = endpointDescription;
@@ -367,7 +408,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the gateway endpoint.
+             * <p>The ID of the gateway endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpce-bp1i1212ss2whuwyw****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -375,7 +419,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the gateway endpoint.
+             * <p>The name of the gateway endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -383,15 +430,18 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the gateway endpoint. Valid values:
-             * <p>
+             * <p>The status of the gateway endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * <li><strong>Associating</strong></li>
+             * <li><strong>Dissociating</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Created**
-             * *   **Modifying**
-             * *   **Associating**
-             * *   **Dissociating**
-             * *   **Deleting**
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder endpointStatus(String endpointStatus) {
                 this.endpointStatus = endpointStatus;
@@ -399,10 +449,11 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The access policy for the cloud service.
-             * <p>
+             * <p>The access policy for the cloud service.</p>
+             * <p>For more information about the syntax and structure of the access policy, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
              * 
-             * For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
+             * <strong>example:</strong>
+             * <p>{\n  &quot;Version&quot;: &quot;1&quot;,\n  &quot;Statement&quot;: [\n    {\n      &quot;Effect&quot;: &quot;Allow&quot;,\n      &quot;Action&quot;: &quot;<em>&quot;,\n      &quot;Principal&quot;: &quot;</em>&quot;,\n      &quot;Resource&quot;: &quot;*&quot;\n    }\n  ]\n}</p>
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -410,7 +461,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the gateway endpoint belongs.
+             * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxvfvazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -418,7 +472,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the endpoint service.
+             * <p>The name of the endpoint service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.cn-hangzhou.oss</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -426,15 +483,18 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag list.
+             * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
+             * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1gsk7h12ew7oegk****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

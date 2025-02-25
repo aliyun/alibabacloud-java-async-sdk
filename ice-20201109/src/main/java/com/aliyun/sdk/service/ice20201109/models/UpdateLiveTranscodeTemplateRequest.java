@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveTranscodeTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveTranscodeTemplateRequest</p>
  */
 public class UpdateLiveTranscodeTemplateRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
     private TemplateConfig templateConfig;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private UpdateLiveTranscodeTemplateRequest(Builder builder) {
@@ -83,7 +88,7 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The template name.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -92,7 +97,7 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         }
 
         /**
-         * TemplateConfig.
+         * <p>The configuration of the template.</p>
          */
         public Builder templateConfig(TemplateConfig templateConfig) {
             String templateConfigShrink = shrink(templateConfig, "TemplateConfig", "json");
@@ -102,7 +107,11 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID. To obtain the template ID, log on to the <a href="https://ims.console.aliyun.com/summary">Intelligent Media Services (IMS) console</a>, choose Real-time Media Processing &gt; Template Management, and then click the Transcoding tab. Alternatively, find the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/449217.html">CreateLiveTranscodeTemplate</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -117,20 +126,26 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeTemplateRequest</p>
+     */
     public static class AudioParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
         private AudioParams(Builder builder) {
@@ -192,7 +207,10 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             private String samplerate; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the output audio. Unit: Kbit/s. Valid values: 1 to 1000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -200,7 +218,10 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Channels.
+             * <p>The number of sound channels. Valid values: 1: mono 2: binaural</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -208,7 +229,10 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Codec.
+             * <p>The audio codec. Valid values: AAC MP3</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -216,7 +240,16 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The audio codec profile. Valid values when the Codec parameter is set to AAC:</p>
+             * <ul>
+             * <li>aac_low</li>
+             * <li>aac_he</li>
+             * <li>aac_he_v2</li>
+             * <li>aac_ld</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -224,7 +257,11 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Samplerate.
+             * <p>The audio sampling rate. Valid values: 22050 to 96000.</p>
+             * <p>Note If you set AudioProfile to aac_ld, the audio sampling rate cannot exceed 44100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -238,26 +275,32 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeTemplateRequest</p>
+     */
     public static class VideoParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private String gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private VideoParams(Builder builder) {
@@ -337,7 +380,10 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate of the output video. Unit: Kbit/s. Valid values: 1 to 6000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2500</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -345,7 +391,14 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Codec.
+             * <p>The encoding type. Valid values:</p>
+             * <ul>
+             * <li>H.264</li>
+             * <li>H.265</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -353,7 +406,10 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate of the output video. Unit: frames per second (FPS). Valid values: 1 to 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -361,7 +417,10 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Gop.
+             * <p>The group of pictures (GOP) of the output video. Unit: frame. Valid values: 1 to 3000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -369,7 +428,18 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Height.
+             * <p>The height of the output video. Valid values:</p>
+             * <ul>
+             * <li>Height ≥ 128</li>
+             * <li>max (Height,Width) ≤ 2560</li>
+             * <li>min（Height,Width）≤ 1440</li>
+             * </ul>
+             * <blockquote>
+             * <p> The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -377,7 +447,15 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Profile.
+             * <p>The video encoding profile. The profile determines how a video is encoded. In most cases, a greater value indicates better image quality and higher resource consumption. Valid values:</p>
+             * <ul>
+             * <li>1: baseline. This value is suitable for mobile devices.</li>
+             * <li>2: main. This value is suitable for standard-definition devices.</li>
+             * <li>3: high. This value is suitable for high-definition devices.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -385,7 +463,18 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * Width.
+             * <p>The width of the output video. Valid values:</p>
+             * <ul>
+             * <li>Width ≥ 128</li>
+             * <li>max (Height,Width) ≤ 2560</li>
+             * <li>min（Height,Width）≤ 1440</li>
+             * </ul>
+             * <blockquote>
+             * <p> The resolution of a video transcoded by using the H.265 Narrowband HD template cannot exceed 1,280 × 720 pixels.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -399,11 +488,17 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateLiveTranscodeTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLiveTranscodeTemplateRequest</p>
+     */
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("AudioParams")
+        @com.aliyun.core.annotation.NameInMap("AudioParams")
         private AudioParams audioParams;
 
-        @NameInMap("VideoParams")
+        @com.aliyun.core.annotation.NameInMap("VideoParams")
         private VideoParams videoParams;
 
         private TemplateConfig(Builder builder) {
@@ -438,7 +533,7 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             private VideoParams videoParams; 
 
             /**
-             * AudioParams.
+             * <p>The audio parameters.</p>
              */
             public Builder audioParams(AudioParams audioParams) {
                 this.audioParams = audioParams;
@@ -446,7 +541,7 @@ public class UpdateLiveTranscodeTemplateRequest extends Request {
             }
 
             /**
-             * VideoParams.
+             * <p>The video parameters.</p>
              */
             public Builder videoParams(VideoParams videoParams) {
                 this.videoParams = videoParams;

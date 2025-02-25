@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeductOutstandingBalanceRequest} extends {@link RequestModel}
  *
  * <p>DeductOutstandingBalanceRequest</p>
  */
 public class DeductOutstandingBalanceRequest extends Request {
-    @Query
-    @NameInMap("DeductAmount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeductAmount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deductAmount;
 
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long uid;
 
     private DeductOutstandingBalanceRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class DeductOutstandingBalanceRequest extends Request {
         } 
 
         /**
-         * DeductAmount.
+         * <p>The Deducted Credit to be offset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder deductAmount(String deductAmount) {
             this.putQueryParameter("DeductAmount", deductAmount);
@@ -79,7 +88,11 @@ public class DeductOutstandingBalanceRequest extends Request {
         }
 
         /**
-         * Uid.
+         * <p>Account UID of Distribution Customer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1133166938931507</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

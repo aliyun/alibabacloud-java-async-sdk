@@ -1,34 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddChatappPhoneNumberResponseBody} extends {@link TeaModel}
  *
  * <p>AddChatappPhoneNumberResponseBody</p>
  */
 public class AddChatappPhoneNumberResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
 
     private AddChatappPhoneNumberResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -67,14 +71,25 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>com.alicom.access.oxs.client.channel.aliyun.flow.AyFlowExecuteService</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://pop_access_slb_sgvpc/#vpc">http://pop_access_slb_sgvpc/#vpc</a></p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -82,7 +97,10 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +108,10 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>com.alicom.access.oxs.client.channel.aliyun.flow.dto.AyCommonApiRequest</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,10 +119,24 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>formData</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>13800000000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

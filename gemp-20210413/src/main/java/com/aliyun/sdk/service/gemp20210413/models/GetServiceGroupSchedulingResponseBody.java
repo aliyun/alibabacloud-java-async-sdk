@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceGroupSchedulingResponseBody</p>
  */
 public class GetServiceGroupSchedulingResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetServiceGroupSchedulingResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     } 
 
     public static class SchedulingUsers extends TeaModel {
-        @NameInMap("schedulingObjectType")
+        @com.aliyun.core.annotation.NameInMap("schedulingObjectType")
         private String schedulingObjectType;
 
-        @NameInMap("schedulingOrder")
+        @com.aliyun.core.annotation.NameInMap("schedulingOrder")
         private Integer schedulingOrder;
 
-        @NameInMap("schedulingUserId")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserId")
         private Long schedulingUserId;
 
-        @NameInMap("schedulingUserIdList")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserIdList")
         private java.util.List < Long > schedulingUserIdList;
 
-        @NameInMap("schedulingUserName")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserName")
         private String schedulingUserName;
 
         private SchedulingUsers(Builder builder) {
@@ -193,19 +192,19 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
     }
     public static class FastScheduling extends TeaModel {
-        @NameInMap("dutyPlan")
+        @com.aliyun.core.annotation.NameInMap("dutyPlan")
         private String dutyPlan;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("schedulingUsers")
+        @com.aliyun.core.annotation.NameInMap("schedulingUsers")
         private java.util.List < SchedulingUsers> schedulingUsers;
 
-        @NameInMap("singleDuration")
+        @com.aliyun.core.annotation.NameInMap("singleDuration")
         private Integer singleDuration;
 
-        @NameInMap("singleDurationUnit")
+        @com.aliyun.core.annotation.NameInMap("singleDurationUnit")
         private String singleDurationUnit;
 
         private FastScheduling(Builder builder) {
@@ -314,34 +313,34 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
     }
     public static class SchedulingFineShifts extends TeaModel {
-        @NameInMap("cycleOrder")
+        @com.aliyun.core.annotation.NameInMap("cycleOrder")
         private Long cycleOrder;
 
-        @NameInMap("schedulingEndTime")
+        @com.aliyun.core.annotation.NameInMap("schedulingEndTime")
         private String schedulingEndTime;
 
-        @NameInMap("schedulingObjectType")
+        @com.aliyun.core.annotation.NameInMap("schedulingObjectType")
         private String schedulingObjectType;
 
-        @NameInMap("schedulingOrder")
+        @com.aliyun.core.annotation.NameInMap("schedulingOrder")
         private Integer schedulingOrder;
 
-        @NameInMap("schedulingStartTime")
+        @com.aliyun.core.annotation.NameInMap("schedulingStartTime")
         private String schedulingStartTime;
 
-        @NameInMap("schedulingUserId")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserId")
         private Long schedulingUserId;
 
-        @NameInMap("schedulingUserIdList")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserIdList")
         private java.util.List < Long > schedulingUserIdList;
 
-        @NameInMap("schedulingUserName")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserName")
         private String schedulingUserName;
 
-        @NameInMap("shiftName")
+        @com.aliyun.core.annotation.NameInMap("shiftName")
         private String shiftName;
 
-        @NameInMap("skipOneDay")
+        @com.aliyun.core.annotation.NameInMap("skipOneDay")
         private Boolean skipOneDay;
 
         private SchedulingFineShifts(Builder builder) {
@@ -535,31 +534,31 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
     }
     public static class SchedulingTemplateFineShifts extends TeaModel {
-        @NameInMap("schedulingEndTime")
+        @com.aliyun.core.annotation.NameInMap("schedulingEndTime")
         private String schedulingEndTime;
 
-        @NameInMap("schedulingObjectType")
+        @com.aliyun.core.annotation.NameInMap("schedulingObjectType")
         private String schedulingObjectType;
 
-        @NameInMap("schedulingOrder")
+        @com.aliyun.core.annotation.NameInMap("schedulingOrder")
         private Long schedulingOrder;
 
-        @NameInMap("schedulingStartTime")
+        @com.aliyun.core.annotation.NameInMap("schedulingStartTime")
         private String schedulingStartTime;
 
-        @NameInMap("schedulingUserId")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserId")
         private String schedulingUserId;
 
-        @NameInMap("schedulingUserIdList")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserIdList")
         private java.util.List < Long > schedulingUserIdList;
 
-        @NameInMap("schedulingUserName")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserName")
         private String schedulingUserName;
 
-        @NameInMap("shiftName")
+        @com.aliyun.core.annotation.NameInMap("shiftName")
         private String shiftName;
 
-        @NameInMap("skipOneDay")
+        @com.aliyun.core.annotation.NameInMap("skipOneDay")
         private Boolean skipOneDay;
 
         private SchedulingTemplateFineShifts(Builder builder) {
@@ -736,22 +735,22 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
     }
     public static class FineScheduling extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("period")
+        @com.aliyun.core.annotation.NameInMap("period")
         private Integer period;
 
-        @NameInMap("periodUnit")
+        @com.aliyun.core.annotation.NameInMap("periodUnit")
         private String periodUnit;
 
-        @NameInMap("schedulingFineShifts")
+        @com.aliyun.core.annotation.NameInMap("schedulingFineShifts")
         private java.util.List < SchedulingFineShifts> schedulingFineShifts;
 
-        @NameInMap("schedulingTemplateFineShifts")
+        @com.aliyun.core.annotation.NameInMap("schedulingTemplateFineShifts")
         private java.util.List < SchedulingTemplateFineShifts> schedulingTemplateFineShifts;
 
-        @NameInMap("shiftType")
+        @com.aliyun.core.annotation.NameInMap("shiftType")
         private String shiftType;
 
         private FineScheduling(Builder builder) {
@@ -877,10 +876,10 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("userName")
+        @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
 
         private Users(Builder builder) {
@@ -938,19 +937,19 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("fastScheduling")
+        @com.aliyun.core.annotation.NameInMap("fastScheduling")
         private FastScheduling fastScheduling;
 
-        @NameInMap("fineScheduling")
+        @com.aliyun.core.annotation.NameInMap("fineScheduling")
         private FineScheduling fineScheduling;
 
-        @NameInMap("schedulingWay")
+        @com.aliyun.core.annotation.NameInMap("schedulingWay")
         private String schedulingWay;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("users")
+        @com.aliyun.core.annotation.NameInMap("users")
         private java.util.List < Users> users;
 
         private Data(Builder builder) {

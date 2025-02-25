@@ -1,120 +1,123 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Function} extends {@link TeaModel}
  *
  * <p>Function</p>
  */
 public class Function extends TeaModel {
-    @NameInMap("codeChecksum")
+    @com.aliyun.core.annotation.NameInMap("codeChecksum")
     private String codeChecksum;
 
-    @NameInMap("codeSize")
+    @com.aliyun.core.annotation.NameInMap("codeSize")
     private Long codeSize;
 
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Float cpu;
 
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("customContainerConfig")
+    @com.aliyun.core.annotation.NameInMap("customContainerConfig")
     private CustomContainerConfig customContainerConfig;
 
-    @NameInMap("customDNS")
+    @com.aliyun.core.annotation.NameInMap("customDNS")
     private CustomDNS customDNS;
 
-    @NameInMap("customRuntimeConfig")
+    @com.aliyun.core.annotation.NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("diskSize")
+    @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
-    @NameInMap("environmentVariables")
+    @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map < String, String > environmentVariables;
 
-    @NameInMap("functionArn")
+    @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
-    @NameInMap("functionId")
+    @com.aliyun.core.annotation.NameInMap("functionId")
     private String functionId;
 
-    @NameInMap("functionName")
+    @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
-    @NameInMap("gpuConfig")
+    @com.aliyun.core.annotation.NameInMap("gpuConfig")
     private GPUConfig gpuConfig;
 
-    @NameInMap("handler")
+    @com.aliyun.core.annotation.NameInMap("handler")
     private String handler;
 
-    @NameInMap("instanceConcurrency")
+    @com.aliyun.core.annotation.NameInMap("instanceConcurrency")
     private Integer instanceConcurrency;
 
-    @NameInMap("instanceLifecycleConfig")
+    @com.aliyun.core.annotation.NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
-    @NameInMap("internetAccess")
+    @com.aliyun.core.annotation.NameInMap("internetAccess")
     private Boolean internetAccess;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("lastUpdateStatus")
+    @com.aliyun.core.annotation.NameInMap("lastUpdateStatus")
     private String lastUpdateStatus;
 
-    @NameInMap("lastUpdateStatusReason")
+    @com.aliyun.core.annotation.NameInMap("lastUpdateStatusReason")
     private String lastUpdateStatusReason;
 
-    @NameInMap("lastUpdateStatusReasonCode")
+    @com.aliyun.core.annotation.NameInMap("lastUpdateStatusReasonCode")
     private String lastUpdateStatusReasonCode;
 
-    @NameInMap("layers")
+    @com.aliyun.core.annotation.NameInMap("layers")
     private java.util.List < FunctionLayer > layers;
 
-    @NameInMap("logConfig")
+    @com.aliyun.core.annotation.NameInMap("logConfig")
     private LogConfig logConfig;
 
-    @NameInMap("memorySize")
+    @com.aliyun.core.annotation.NameInMap("memorySize")
     private Integer memorySize;
 
-    @NameInMap("nasConfig")
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
-    @NameInMap("ossMountConfig")
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
-    @NameInMap("role")
+    @com.aliyun.core.annotation.NameInMap("role")
     private String role;
 
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("stateReason")
+    @com.aliyun.core.annotation.NameInMap("stateReason")
     private String stateReason;
 
-    @NameInMap("stateReasonCode")
+    @com.aliyun.core.annotation.NameInMap("stateReasonCode")
     private String stateReasonCode;
 
-    @NameInMap("timeout")
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List < Tag > tags;
+
+    @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
-    @NameInMap("tracingConfig")
+    @com.aliyun.core.annotation.NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
 
-    @NameInMap("vpcConfig")
+    @com.aliyun.core.annotation.NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
 
     private Function(Builder builder) {
@@ -150,6 +153,7 @@ public class Function extends TeaModel {
         this.state = builder.state;
         this.stateReason = builder.stateReason;
         this.stateReasonCode = builder.stateReasonCode;
+        this.tags = builder.tags;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
         this.vpcConfig = builder.vpcConfig;
@@ -388,6 +392,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tag > getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return timeout
      */
     public Integer getTimeout() {
@@ -441,6 +452,7 @@ public class Function extends TeaModel {
         private String state; 
         private String stateReason; 
         private String stateReasonCode; 
+        private java.util.List < Tag > tags; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
         private VPCConfig vpcConfig; 
@@ -698,6 +710,14 @@ public class Function extends TeaModel {
          */
         public Builder stateReasonCode(String stateReasonCode) {
             this.stateReasonCode = stateReasonCode;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List < Tag > tags) {
+            this.tags = tags;
             return this;
         }
 

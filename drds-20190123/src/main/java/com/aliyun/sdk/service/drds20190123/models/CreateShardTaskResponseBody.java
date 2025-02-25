@@ -62,7 +62,7 @@ public class CreateShardTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Task creation result
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class CreateShardTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateShardTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the operation.
          */
         public Builder success(Boolean success) {
             this.success = success;

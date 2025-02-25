@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPreCheckDatabaseRequest} extends {@link RequestModel}
  *
  * <p>QueryPreCheckDatabaseRequest</p>
  */
 public class QueryPreCheckDatabaseRequest extends Request {
-    @Query
-    @NameInMap("InstanceUuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceUuid")
     private String instanceUuid;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("UniRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uniRegionId;
 
     private QueryPreCheckDatabaseRequest(Builder builder) {
@@ -83,10 +88,13 @@ public class QueryPreCheckDatabaseRequest extends Request {
         } 
 
         /**
-         * The UUID of the agent that is used to back up the data of the database.
-         * <p>
+         * <p>The UUID of the agent that is used to back up the data of the database.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeUniBackupDatabase](~~DescribeUniBackupDatabase~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>ebc895506c6911ed800000163e0e****</p>
          */
         public Builder instanceUuid(String instanceUuid) {
             this.putQueryParameter("InstanceUuid", instanceUuid);
@@ -95,10 +103,13 @@ public class QueryPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * The ID of the database precheck task.
-         * <p>
+         * <p>The ID of the database precheck task.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to query the ID of the database precheck task.</p>
+         * </blockquote>
          * 
-         * > You can call the [StartPreCheckDatabase](~~StartPreCheckDatabase~~) operation to query the ID of the database precheck task.
+         * <strong>example:</strong>
+         * <p>t-000bc9nqwxsbyvod****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -107,7 +118,11 @@ public class QueryPreCheckDatabaseRequest extends Request {
         }
 
         /**
-         * The region ID of the server that hosts the database.
+         * <p>The region ID of the server that hosts the database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder uniRegionId(String uniRegionId) {
             this.putQueryParameter("UniRegionId", uniRegionId);

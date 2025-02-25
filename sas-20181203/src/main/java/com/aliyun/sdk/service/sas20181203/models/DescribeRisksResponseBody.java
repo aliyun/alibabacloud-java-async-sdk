@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRisksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRisksResponseBody</p>
  */
 public class DescribeRisksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Risks")
-    private java.util.List < Risks> risks;
+    @com.aliyun.core.annotation.NameInMap("Risks")
+    private java.util.List<Risks> risks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRisksResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeRisksResponseBody extends TeaModel {
     /**
      * @return risks
      */
-    public java.util.List < Risks> getRisks() {
+    public java.util.List<Risks> getRisks() {
         return this.risks;
     }
 
@@ -58,11 +63,14 @@ public class DescribeRisksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Risks> risks; 
+        private java.util.List<Risks> risks; 
         private Integer totalCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA54FE21-B006-5DFF-8D64-C4FFECDA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class DescribeRisksResponseBody extends TeaModel {
         }
 
         /**
-         * The baselines.
+         * <p>The baselines.</p>
          */
-        public Builder risks(java.util.List < Risks> risks) {
+        public Builder risks(java.util.List<Risks> risks) {
             this.risks = risks;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,26 +102,32 @@ public class DescribeRisksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRisksResponseBody</p>
+     */
     public static class Risks extends TeaModel {
-        @NameInMap("RiskDetail")
+        @com.aliyun.core.annotation.NameInMap("RiskDetail")
         private String riskDetail;
 
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
-        @NameInMap("RiskType")
+        @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
-        @NameInMap("SubRiskType")
+        @com.aliyun.core.annotation.NameInMap("SubRiskType")
         private String subRiskType;
 
-        @NameInMap("SubTypeAlias")
+        @com.aliyun.core.annotation.NameInMap("SubTypeAlias")
         private String subTypeAlias;
 
-        @NameInMap("TypeAlias")
+        @com.aliyun.core.annotation.NameInMap("TypeAlias")
         private String typeAlias;
 
         private Risks(Builder builder) {
@@ -190,7 +207,10 @@ public class DescribeRisksResponseBody extends TeaModel {
             private String typeAlias; 
 
             /**
-             * The description of the baseline.
+             * <p>The description of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ubuntu 14,Ubuntu 16 ,Ubuntu 18,Ubuntu 20 baseline based on Alibaba Cloud best security practices</p>
              */
             public Builder riskDetail(String riskDetail) {
                 this.riskDetail = riskDetail;
@@ -198,7 +218,10 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline ID.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54</p>
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -206,7 +229,10 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Standard - Ubuntu Security Baseline</p>
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -214,7 +240,10 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline type.
+             * <p>The name of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cis</p>
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
@@ -222,7 +251,10 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline subtype.
+             * <p>The name of the baseline subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_ubuntu</p>
              */
             public Builder subRiskType(String subRiskType) {
                 this.subRiskType = subRiskType;
@@ -230,7 +262,10 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the baseline subtype.
+             * <p>The display name of the baseline subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Standard - Ubuntu Security Baseline</p>
              */
             public Builder subTypeAlias(String subTypeAlias) {
                 this.subTypeAlias = subTypeAlias;
@@ -238,7 +273,10 @@ public class DescribeRisksResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the baseline type.
+             * <p>The display name of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Best security practices</p>
              */
             public Builder typeAlias(String typeAlias) {
                 this.typeAlias = typeAlias;

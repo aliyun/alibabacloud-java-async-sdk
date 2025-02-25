@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSparkCodeLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSparkCodeLogResponseBody</p>
  */
 public class DescribeSparkCodeLogResponseBody extends TeaModel {
-    @NameInMap("Log")
+    @com.aliyun.core.annotation.NameInMap("Log")
     private String log;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSparkCodeLogResponseBody(Builder builder) {
@@ -74,7 +79,26 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The content of the log.
+         * <p>The content of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <blockquote>
+         * <blockquote>
+         * <blockquote>
+         * <blockquote>
+         * <blockquote>
+         * <blockquote>
+         * <blockquote>
+         * <p>stdout:n++++++++++++++++++executing sql: MSCK REPAIR TABLE  <code>footprint_ethereum</code>.<code>dwd_eth_eth_txr_v2_di</code> n++n</p>
+         * </blockquote>
+         * </blockquote>
+         * </blockquote>
+         * </blockquote>
+         * </blockquote>
+         * </blockquote>
+         * </blockquote>
+         * </blockquote>
          */
         public Builder log(String log) {
             this.log = log;
@@ -82,11 +106,14 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request was successful, <strong>Success</strong> is returned.</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
          * 
-         * *   If the request was successful, **Success** is returned.
-         * *   If the request failed, an error message is returned.
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -94,7 +121,10 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CD65640-9963-5D60-929C-118F2C84070E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,11 +132,14 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

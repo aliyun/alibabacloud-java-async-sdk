@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelineIdsResponseBody</p>
  */
 public class ListPipelineIdsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListPipelineIdsResponseBody(Builder builder) {
@@ -71,17 +71,23 @@ public class ListPipelineIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelineIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineIdsResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("available")
+        @com.aliyun.core.annotation.NameInMap("available")
         private Boolean available;
 
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private String pipelineId;
 
         private Result(Builder builder) {

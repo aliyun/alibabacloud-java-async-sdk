@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateConfigurationRequest</p>
  */
 public class CreateConfigurationRequest extends Request {
-    @Body
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("DataId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataId;
 
-    @Body
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Body
-    @NameInMap("Group")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Group")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String group;
 
-    @Body
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Body
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateConfigurationRequest(Builder builder) {
@@ -144,16 +143,16 @@ public class CreateConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConfigurationRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.content = response.content;
-            this.dataId = response.dataId;
-            this.desc = response.desc;
-            this.group = response.group;
-            this.namespaceId = response.namespaceId;
-            this.tags = response.tags;
-            this.type = response.type;
+        private Builder(CreateConfigurationRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.content = request.content;
+            this.dataId = request.dataId;
+            this.desc = request.desc;
+            this.group = request.group;
+            this.namespaceId = request.namespaceId;
+            this.tags = request.tags;
+            this.type = request.type;
         } 
 
         /**

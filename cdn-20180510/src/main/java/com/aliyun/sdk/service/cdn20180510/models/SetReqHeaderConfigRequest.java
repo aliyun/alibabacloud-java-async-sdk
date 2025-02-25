@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetReqHeaderConfigRequest} extends {@link RequestModel}
  *
  * <p>SetReqHeaderConfigRequest</p>
  */
 public class SetReqHeaderConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
     private Long configId;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private SetReqHeaderConfigRequest(Builder builder) {
@@ -127,7 +127,10 @@ public class SetReqHeaderConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the configuration.
+         * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -136,7 +139,11 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. Separate multiple domain names with commas (,).
+         * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -145,7 +152,11 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * The name of the custom header.
+         * <p>The name of the custom header.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -172,7 +183,11 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * The value of the custom header.
+         * <p>The value of the custom header.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

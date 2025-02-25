@@ -1,67 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallCenListRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallCenListRequest</p>
  */
 public class DescribeVpcFirewallCenListRequest extends Request {
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @Query
-    @NameInMap("FirewallSwitchStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallSwitchStatus")
     private String firewallSwitchStatus;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("NetworkInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInstanceId")
     private String networkInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("RegionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
     private String regionNo;
 
-    @Query
-    @NameInMap("RouteMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteMode")
     private String routeMode;
 
-    @Query
-    @NameInMap("TransitRouterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterType")
     private String transitRouterType;
 
-    @Query
-    @NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
     private String vpcFirewallId;
 
-    @Query
-    @NameInMap("VpcFirewallName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallName")
     private String vpcFirewallName;
 
     private DescribeVpcFirewallCenListRequest(Builder builder) {
@@ -222,7 +227,10 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-x5jayxou71ad73****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -231,10 +239,11 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -243,15 +252,19 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The status of the VPC firewall. Valid values:
-         * <p>
+         * <p>The status of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>opened</strong>: The VPC firewall is enabled.</li>
+         * <li><strong>closed</strong>: The VPC firewall is disabled.</li>
+         * <li><strong>notconfigured</strong>: The VPC firewall is not configured.</li>
+         * <li><strong>configured</strong>: The VPC firewall is configured but is not enabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+         * </blockquote>
          * 
-         * *   **opened**: The VPC firewall is enabled.
-         * *   **closed**: The VPC firewall is disabled.
-         * *   **notconfigured**: The VPC firewall is not configured.
-         * *   **configured**: The VPC firewall is configured but is not enabled.
-         * 
-         * > If you do not specify this parameter, VPC firewalls in all states are queried.
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         public Builder firewallSwitchStatus(String firewallSwitchStatus) {
             this.putQueryParameter("FirewallSwitchStatus", firewallSwitchStatus);
@@ -260,11 +273,14 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The language of the content within the response. Valid values:
-         * <p>
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default)</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -273,7 +289,10 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The UID of the member that is managed by your Alibaba Cloud account. The member is also an Alibaba Cloud account.
+         * <p>The UID of the member that is managed by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>258039427902****</p>
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -282,7 +301,10 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbwbo90rq0anm6t****</p>
          */
         public Builder networkInstanceId(String networkInstanceId) {
             this.putQueryParameter("NetworkInstanceId", networkInstanceId);
@@ -300,10 +322,11 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 10. Maximum value: 50.</p>
          * 
-         * Default value: 10. Maximum value: 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -312,10 +335,13 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC.
-         * <p>
+         * <p>The region ID of the VPC.</p>
+         * <blockquote>
+         * <p>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about the regions, see [Supported regions](~~195657~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -324,13 +350,17 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The routing mode of the VPC firewall. Valid values:
-         * <p>
+         * <p>The routing mode of the VPC firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>auto</strong>: automatic mode</li>
+         * <li><strong>manual</strong>: manual mode</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+         * </blockquote>
          * 
-         * *   **auto**: automatic mode
-         * *   **manual**: manual mode
-         * 
-         * > If you do not specify this parameter, VPC firewalls in all routing modes are queried.
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder routeMode(String routeMode) {
             this.putQueryParameter("RouteMode", routeMode);
@@ -339,11 +369,14 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The type of the transit router. Valid values:
-         * <p>
+         * <p>The type of the transit router. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: Basic Edition transit router</li>
+         * <li><strong>Enterprise</strong>: Enterprise Edition transit router</li>
+         * </ul>
          * 
-         * *   **Basic**: Basic Edition transit router
-         * *   **Enterprise**: Enterprise Edition transit router
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder transitRouterType(String transitRouterType) {
             this.putQueryParameter("TransitRouterType", transitRouterType);
@@ -352,7 +385,10 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall.
+         * <p>The instance ID of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-m5e7dbc4y****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);
@@ -361,7 +397,10 @@ public class DescribeVpcFirewallCenListRequest extends Request {
         }
 
         /**
-         * The instance name of the VPC firewall.
+         * <p>The instance name of the VPC firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test firewall</p>
          */
         public Builder vpcFirewallName(String vpcFirewallName) {
             this.putQueryParameter("VpcFirewallName", vpcFirewallName);

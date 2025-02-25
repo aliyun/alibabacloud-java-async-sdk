@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListControlPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListControlPoliciesResponseBody</p>
  */
 public class ListControlPoliciesResponseBody extends TeaModel {
-    @NameInMap("ControlPolicies")
+    @com.aliyun.core.annotation.NameInMap("ControlPolicies")
     private ControlPolicies controlPolicies;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListControlPoliciesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information of the access control policies.
+         * <p>The information of the access control policies.</p>
          */
         public Builder controlPolicies(ControlPolicies controlPolicies) {
             this.controlPolicies = controlPolicies;
@@ -94,7 +99,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9424A34C-3471-45AD-B6AB-924BBDFE42F9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of access control policies.
+         * <p>The number of access control policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,29 +148,152 @@ public class ListControlPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListControlPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPoliciesResponseBody</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListControlPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPoliciesResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListControlPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPoliciesResponseBody</p>
+     */
     public static class ControlPolicy extends TeaModel {
-        @NameInMap("AttachmentCount")
+        @com.aliyun.core.annotation.NameInMap("AttachmentCount")
         private String attachmentCount;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EffectScope")
+        @com.aliyun.core.annotation.NameInMap("EffectScope")
         private String effectScope;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private ControlPolicy(Builder builder) {
@@ -164,6 +304,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             this.policyId = builder.policyId;
             this.policyName = builder.policyName;
             this.policyType = builder.policyType;
+            this.tags = builder.tags;
             this.updateDate = builder.updateDate;
         }
 
@@ -225,6 +366,13 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateDate
          */
         public String getUpdateDate() {
@@ -239,10 +387,14 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             private String policyId; 
             private String policyName; 
             private String policyType; 
+            private Tags tags; 
             private String updateDate; 
 
             /**
-             * The number of times that the access control policy is referenced.
+             * <p>The number of times that the access control policy is referenced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44</p>
              */
             public Builder attachmentCount(String attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -250,7 +402,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy was created.
+             * <p>The time when the access control policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-05T06:32:24Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -258,7 +413,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the access control policy.
+             * <p>The description of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System access control policy available for all operations on the cloud</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,11 +424,14 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The effective scope of the access control policy. Valid values:
-             * <p>
+             * <p>The effective scope of the access control policy. Valid values:</p>
+             * <ul>
+             * <li>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</li>
+             * <li>RAM: The access control policy is in effect only for RAM users and RAM roles.</li>
+             * </ul>
              * 
-             * *   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.
-             * *   RAM: The access control policy is in effect only for RAM users and RAM roles.
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder effectScope(String effectScope) {
                 this.effectScope = effectScope;
@@ -278,7 +439,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the access control policy.
+             * <p>The ID of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-FullAliyunAccess</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -286,7 +450,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access control policy.
+             * <p>The name of the access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FullAliyunAccess</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -294,11 +461,14 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the access control policy. Valid values:
-             * <p>
+             * <p>The type of the access control policy. Valid values:</p>
+             * <ul>
+             * <li>System: system access control policy</li>
+             * <li>Custom: custom access control policy</li>
+             * </ul>
              * 
-             * *   System: system access control policy
-             * *   Custom: custom access control policy
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -306,7 +476,18 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the access control policy was updated.
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The time when the access control policy was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-05T06:32:24Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -320,9 +501,15 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListControlPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPoliciesResponseBody</p>
+     */
     public static class ControlPolicies extends TeaModel {
-        @NameInMap("ControlPolicy")
-        private java.util.List < ControlPolicy> controlPolicy;
+        @com.aliyun.core.annotation.NameInMap("ControlPolicy")
+        private java.util.List<ControlPolicy> controlPolicy;
 
         private ControlPolicies(Builder builder) {
             this.controlPolicy = builder.controlPolicy;
@@ -339,17 +526,17 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         /**
          * @return controlPolicy
          */
-        public java.util.List < ControlPolicy> getControlPolicy() {
+        public java.util.List<ControlPolicy> getControlPolicy() {
             return this.controlPolicy;
         }
 
         public static final class Builder {
-            private java.util.List < ControlPolicy> controlPolicy; 
+            private java.util.List<ControlPolicy> controlPolicy; 
 
             /**
              * ControlPolicy.
              */
-            public Builder controlPolicy(java.util.List < ControlPolicy> controlPolicy) {
+            public Builder controlPolicy(java.util.List<ControlPolicy> controlPolicy) {
                 this.controlPolicy = controlPolicy;
                 return this;
             }

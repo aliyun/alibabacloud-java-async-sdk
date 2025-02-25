@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyContainerPluginRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyContainerPluginRuleResponseBody</p>
  */
 public class ModifyContainerPluginRuleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyContainerPluginRuleResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The defense rule against container escapes.
+         * <p>The defense rule against container escapes.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyContainerPluginRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyContainerPluginRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SwitchId")
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
         private Data(Builder builder) {
@@ -122,7 +136,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600640</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -130,7 +147,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test555</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -138,7 +158,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID.
+             * <p>The switch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-CONTAINER-RULE-SWITCH-TYPE_xxx</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

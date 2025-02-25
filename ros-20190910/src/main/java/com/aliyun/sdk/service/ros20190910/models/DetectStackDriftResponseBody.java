@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectStackDriftResponseBody} extends {@link TeaModel}
  *
  * <p>DetectStackDriftResponseBody</p>
  */
 public class DetectStackDriftResponseBody extends TeaModel {
-    @NameInMap("DriftDetectionId")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionId")
     private String driftDetectionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DetectStackDriftResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DetectStackDriftResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the drift detection.
+         * <p>The ID of the drift detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7044f0d-6f2e-4128-a307-4524ef88****</p>
          */
         public Builder driftDetectionId(String driftDetectionId) {
             this.driftDetectionId = driftDetectionId;
@@ -58,7 +61,10 @@ public class DetectStackDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

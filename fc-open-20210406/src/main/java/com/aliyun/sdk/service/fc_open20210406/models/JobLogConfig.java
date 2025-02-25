@@ -50,7 +50,7 @@ public class JobLogConfig extends TeaModel {
         private String project; 
 
         /**
-         * logstore
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -58,7 +58,7 @@ public class JobLogConfig extends TeaModel {
         }
 
         /**
-         * project
+         * project.
          */
         public Builder project(String project) {
             this.project = project;

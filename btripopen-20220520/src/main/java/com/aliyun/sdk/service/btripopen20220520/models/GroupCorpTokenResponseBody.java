@@ -1,30 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupCorpTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GroupCorpTokenResponseBody</p>
  */
 public class GroupCorpTokenResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("success")
+    private String success;
+
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private GroupCorpTokenResponseBody(Builder builder) {
@@ -32,6 +40,7 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
+        this.success = builder.success;
         this.traceId = builder.traceId;
     }
 
@@ -72,6 +81,13 @@ public class GroupCorpTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return success
+     */
+    public String getSuccess() {
+        return this.success;
+    }
+
+    /**
      * @return traceId
      */
     public String getTraceId() {
@@ -83,6 +99,7 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         private String message; 
         private Module module; 
         private String requestId; 
+        private String success; 
         private String traceId; 
 
         /**
@@ -110,7 +127,10 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +138,18 @@ public class GroupCorpTokenResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * success.
+         */
+        public Builder success(String success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f079e16603757182131635d866a</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -131,14 +162,20 @@ public class GroupCorpTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GroupCorpTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GroupCorpTokenResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("expire")
+        @com.aliyun.core.annotation.NameInMap("expire")
         private Long expire;
 
-        @NameInMap("start")
+        @com.aliyun.core.annotation.NameInMap("start")
         private Long start;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Module(Builder builder) {

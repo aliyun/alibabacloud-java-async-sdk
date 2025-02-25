@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20190315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachUserENIRequest} extends {@link RequestModel}
  *
  * <p>AttachUserENIRequest</p>
  */
 public class AttachUserENIRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessKeyId-copy")
+    private String accessKeyIdCopy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private AttachUserENIRequest(Builder builder) {
         super(builder);
+        this.accessKeyIdCopy = builder.accessKeyIdCopy;
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -53,6 +58,13 @@ public class AttachUserENIRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessKeyIdCopy
+     */
+    public String getAccessKeyIdCopy() {
+        return this.accessKeyIdCopy;
     }
 
     /**
@@ -91,6 +103,7 @@ public class AttachUserENIRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachUserENIRequest, Builder> {
+        private String accessKeyIdCopy; 
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -103,6 +116,7 @@ public class AttachUserENIRequest extends Request {
 
         private Builder(AttachUserENIRequest request) {
             super(request);
+            this.accessKeyIdCopy = request.accessKeyIdCopy;
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -111,10 +125,23 @@ public class AttachUserENIRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
-         * <p>
+         * AccessKeyId-copy.
+         */
+        public Builder accessKeyIdCopy(String accessKeyIdCopy) {
+            this.putQueryParameter("AccessKeyId-copy", accessKeyIdCopy);
+            this.accessKeyIdCopy = accessKeyIdCopy;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query cluster IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query cluster IDs.
+         * <strong>example:</strong>
+         * <p>am-bp11q28kvl688****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

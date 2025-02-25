@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignReviewerRequest} extends {@link RequestModel}
  *
  * <p>AssignReviewerRequest</p>
  */
 public class AssignReviewerRequest extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Query
-    @NameInMap("JsonStr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JsonStr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
     private AssignReviewerRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class AssignReviewerRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -78,7 +83,10 @@ public class AssignReviewerRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;assignmentList&quot;:[{&quot;taskId&quot;:&quot;1C21CF1E-2917-4236-A046-20E37B293B69&quot;,&quot;fileId&quot;:&quot;7981b466fd6a4c70a7065da159739a5b&quot;},{&quot;taskId&quot;:&quot;0111DDBC-5F10-47E0-B7D4-7175F47D626F&quot;,&quot;fileId&quot;:&quot;1814eeae3cff41e989e31ab547f07561&quot;}],&quot;assignments&quot;:[{&quot;reviewer&quot;:&quot;255746168704895558&quot;},{&quot;reviewer&quot;:&quot;268370362815185444&quot;}]}</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

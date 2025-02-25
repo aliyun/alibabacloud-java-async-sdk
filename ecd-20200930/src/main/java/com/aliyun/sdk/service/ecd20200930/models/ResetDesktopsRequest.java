@@ -1,50 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetDesktopsRequest} extends {@link RequestModel}
  *
  * <p>ResetDesktopsRequest</p>
  */
 public class ResetDesktopsRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("DesktopId")
-    private java.util.List < String > desktopId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
+    private java.util.List<String> desktopGroupIds;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    private java.util.List<String> desktopId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetScope")
+    private String resetScope;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resetType;
 
     private ResetDesktopsRequest(Builder builder) {
         super(builder);
         this.desktopGroupId = builder.desktopGroupId;
+        this.desktopGroupIds = builder.desktopGroupIds;
         this.desktopId = builder.desktopId;
         this.imageId = builder.imageId;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
+        this.resetScope = builder.resetScope;
         this.resetType = builder.resetType;
     }
 
@@ -69,9 +84,16 @@ public class ResetDesktopsRequest extends Request {
     }
 
     /**
+     * @return desktopGroupIds
+     */
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
+    /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -97,6 +119,13 @@ public class ResetDesktopsRequest extends Request {
     }
 
     /**
+     * @return resetScope
+     */
+    public String getResetScope() {
+        return this.resetScope;
+    }
+
+    /**
      * @return resetType
      */
     public String getResetType() {
@@ -105,10 +134,12 @@ public class ResetDesktopsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetDesktopsRequest, Builder> {
         private String desktopGroupId; 
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopGroupIds; 
+        private java.util.List<String> desktopId; 
         private String imageId; 
         private String payType; 
         private String regionId; 
+        private String resetScope; 
         private String resetType; 
 
         private Builder() {
@@ -118,15 +149,20 @@ public class ResetDesktopsRequest extends Request {
         private Builder(ResetDesktopsRequest request) {
             super(request);
             this.desktopGroupId = request.desktopGroupId;
+            this.desktopGroupIds = request.desktopGroupIds;
             this.desktopId = request.desktopId;
             this.imageId = request.imageId;
             this.payType = request.payType;
             this.regionId = request.regionId;
+            this.resetScope = request.resetScope;
             this.resetType = request.resetType;
         } 
 
         /**
-         * The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``
+         * <p>The ID of the cloud computer pool. If you specify the <code>DesktopId</code> parameter, ignore the <code>DesktopGroupId</code> parameter. If you do not specify the <code>DesktopId</code> parameter, specify the <code>DesktopGroupId</code> parameter in the call to request all IDs of the cloud computers in the specified pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-07if7qsxoxkb6****</p>
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -135,16 +171,28 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
+         * <p>The IDs of the cloud computer pools.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
+            this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
+            this.desktopGroupIds = desktopGroupIds;
+            return this;
+        }
+
+        /**
+         * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
+         */
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-4zfb6zj728hhr****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -153,10 +201,13 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The billing method.
-         * <p>
+         * <p>The billing method.</p>
+         * <blockquote>
+         * <p>This parameter is available only when you reset cloud computer pools. If you leave this parameter empty, all cloud computers in the specified cloud computer pool are reset, regardless of how the cloud computers are billed.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only when you reset desktop groups. If you leave this parameter empty, all cloud desktops in the specified desktop group are reset, regardless of how the cloud desktops are billed.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -165,7 +216,11 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +229,35 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The type of the disk that you want to reset.
+         * <p>The reset scope. You can configure this parameter to reset the image or cloud computer.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ALL (default): resets the image and cloud computer.</li>
+         * <li>IMAGE: resets only the image.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
+        public Builder resetScope(String resetScope) {
+            this.putQueryParameter("ResetScope", resetScope);
+            this.resetScope = resetScope;
+            return this;
+        }
+
+        /**
+         * <p>The disk reset type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: does not reset disks.</li>
+         * <li>1: resets only the system disk.</li>
+         * <li>2: resets only the user disk.</li>
+         * <li>3: resets the system disk and the user disk.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resetType(String resetType) {
             this.putQueryParameter("ResetType", resetType);

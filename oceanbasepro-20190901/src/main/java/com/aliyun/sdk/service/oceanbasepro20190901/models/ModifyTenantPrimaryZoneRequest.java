@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantPrimaryZoneRequest</p>
  */
 public class ModifyTenantPrimaryZoneRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("MasterIntranetAddressZone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MasterIntranetAddressZone")
     private String masterIntranetAddressZone;
 
-    @Body
-    @NameInMap("PrimaryZone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrimaryZone")
     private String primaryZone;
 
-    @Body
-    @NameInMap("TenantEndpointId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantEndpointDirectId")
+    private String tenantEndpointDirectId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantEndpointId")
     private String tenantEndpointId;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("UserVSwitchId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserDirectVSwitchId")
+    private String userDirectVSwitchId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVSwitchId")
     private String userVSwitchId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpcOwnerId")
+    private String userVpcOwnerId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
 
     private ModifyTenantPrimaryZoneRequest(Builder builder) {
         super(builder);
@@ -49,9 +63,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         this.instanceId = builder.instanceId;
         this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
         this.primaryZone = builder.primaryZone;
+        this.tenantEndpointDirectId = builder.tenantEndpointDirectId;
         this.tenantEndpointId = builder.tenantEndpointId;
         this.tenantId = builder.tenantId;
+        this.userDirectVSwitchId = builder.userDirectVSwitchId;
         this.userVSwitchId = builder.userVSwitchId;
+        this.userVpcOwnerId = builder.userVpcOwnerId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -96,6 +114,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     }
 
     /**
+     * @return tenantEndpointDirectId
+     */
+    public String getTenantEndpointDirectId() {
+        return this.tenantEndpointDirectId;
+    }
+
+    /**
      * @return tenantEndpointId
      */
     public String getTenantEndpointId() {
@@ -110,10 +135,31 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     }
 
     /**
+     * @return userDirectVSwitchId
+     */
+    public String getUserDirectVSwitchId() {
+        return this.userDirectVSwitchId;
+    }
+
+    /**
      * @return userVSwitchId
      */
     public String getUserVSwitchId() {
         return this.userVSwitchId;
+    }
+
+    /**
+     * @return userVpcOwnerId
+     */
+    public String getUserVpcOwnerId() {
+        return this.userVpcOwnerId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static final class Builder extends Request.Builder<ModifyTenantPrimaryZoneRequest, Builder> {
@@ -121,9 +167,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         private String instanceId; 
         private String masterIntranetAddressZone; 
         private String primaryZone; 
+        private String tenantEndpointDirectId; 
         private String tenantEndpointId; 
         private String tenantId; 
+        private String userDirectVSwitchId; 
         private String userVSwitchId; 
+        private String userVpcOwnerId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -135,9 +185,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
             this.instanceId = request.instanceId;
             this.masterIntranetAddressZone = request.masterIntranetAddressZone;
             this.primaryZone = request.primaryZone;
+            this.tenantEndpointDirectId = request.tenantEndpointDirectId;
             this.tenantEndpointId = request.tenantEndpointId;
             this.tenantId = request.tenantId;
+            this.userDirectVSwitchId = request.userDirectVSwitchId;
             this.userVSwitchId = request.userVSwitchId;
+            this.userVpcOwnerId = request.userVpcOwnerId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -186,6 +240,15 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
+         * TenantEndpointDirectId.
+         */
+        public Builder tenantEndpointDirectId(String tenantEndpointDirectId) {
+            this.putBodyParameter("TenantEndpointDirectId", tenantEndpointDirectId);
+            this.tenantEndpointDirectId = tenantEndpointDirectId;
+            return this;
+        }
+
+        /**
          * TenantEndpointId.
          */
         public Builder tenantEndpointId(String tenantEndpointId) {
@@ -204,11 +267,38 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
+         * UserDirectVSwitchId.
+         */
+        public Builder userDirectVSwitchId(String userDirectVSwitchId) {
+            this.putBodyParameter("UserDirectVSwitchId", userDirectVSwitchId);
+            this.userDirectVSwitchId = userDirectVSwitchId;
+            return this;
+        }
+
+        /**
          * The request ID.
          */
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);
             this.userVSwitchId = userVSwitchId;
+            return this;
+        }
+
+        /**
+         * UserVpcOwnerId.
+         */
+        public Builder userVpcOwnerId(String userVpcOwnerId) {
+            this.putBodyParameter("UserVpcOwnerId", userVpcOwnerId);
+            this.userVpcOwnerId = userVpcOwnerId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putBodyParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConsumerChannelResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConsumerChannelResponseBody</p>
  */
 public class DescribeConsumerChannelResponseBody extends TeaModel {
-    @NameInMap("ConsumerChannels")
-    private java.util.List < ConsumerChannels> consumerChannels;
+    @com.aliyun.core.annotation.NameInMap("ConsumerChannels")
+    private java.util.List<ConsumerChannels> consumerChannels;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeConsumerChannelResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
     /**
      * @return consumerChannels
      */
-    public java.util.List < ConsumerChannels> getConsumerChannels() {
+    public java.util.List<ConsumerChannels> getConsumerChannels() {
         return this.consumerChannels;
     }
 
@@ -123,7 +128,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConsumerChannels> consumerChannels; 
+        private java.util.List<ConsumerChannels> consumerChannels; 
         private String errCode; 
         private String errMessage; 
         private String httpStatusCode; 
@@ -134,15 +139,18 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * The details of the consumer groups.
+         * <p>The details of the consumer groups.</p>
          */
-        public Builder consumerChannels(java.util.List < ConsumerChannels> consumerChannels) {
+        public Builder consumerChannels(java.util.List<ConsumerChannels> consumerChannels) {
             this.consumerChannels = consumerChannels;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -150,7 +158,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -158,7 +169,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -166,7 +180,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +191,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of consumer groups that can be displayed on one page.
+         * <p>The maximum number of consumer groups that can be displayed on one page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -182,7 +202,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D66140B3-C747-42B6-8315-BAF6490E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +213,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -198,7 +224,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of consumer groups.
+         * <p>The total number of consumer groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -211,23 +240,29 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConsumerChannelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConsumerChannelResponseBody</p>
+     */
     public static class ConsumerChannels extends TeaModel {
-        @NameInMap("ConsumerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupId")
         private String consumerGroupId;
 
-        @NameInMap("ConsumerGroupName")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupName")
         private String consumerGroupName;
 
-        @NameInMap("ConsumerGroupUserName")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupUserName")
         private String consumerGroupUserName;
 
-        @NameInMap("ConsumptionCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionCheckpoint")
         private String consumptionCheckpoint;
 
-        @NameInMap("MessageDelay")
+        @com.aliyun.core.annotation.NameInMap("MessageDelay")
         private Long messageDelay;
 
-        @NameInMap("UnconsumedData")
+        @com.aliyun.core.annotation.NameInMap("UnconsumedData")
         private Long unconsumedData;
 
         private ConsumerChannels(Builder builder) {
@@ -298,7 +333,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             private Long unconsumedData; 
 
             /**
-             * The ID of the consumer group.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsor2y66j4219****</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -306,7 +344,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the consumer group.
+             * <p>The name of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>consumergrouptest</p>
              */
             public Builder consumerGroupName(String consumerGroupName) {
                 this.consumerGroupName = consumerGroupName;
@@ -314,7 +355,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the consumer group.
+             * <p>The username of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder consumerGroupUserName(String consumerGroupUserName) {
                 this.consumerGroupUserName = consumerGroupUserName;
@@ -322,7 +366,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.
+             * <p>The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-20T12:00:00Z</p>
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -330,12 +377,14 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The message latency, which is the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data tracked by the change tracking task. The value is a UNIX timestamp. Unit: seconds.
-             * <p>
+             * <p>The message latency, which is the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data tracked by the change tracking task. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>For example, the latest data in the source database is generated at 10:00. The change tracking task reads the data generated at 09:55, and the downstream client consumes the data generated at 09:30. In this case, the message latency is the UNIX timestamp difference between 09:55 and 09:30.</p>
+             * <blockquote>
+             * <p> If the return value of this parameter is <strong>-1</strong>, no client is connected to the consumer group.</p>
+             * </blockquote>
              * 
-             * For example, the latest data in the source database is generated at 10:00. The change tracking task reads the data generated at 09:55, and the downstream client consumes the data generated at 09:30. In this case, the message latency is the UNIX timestamp difference between 09:55 and 09:30.
-             * 
-             * >  If the return value of this parameter is **-1**, no client is connected to the consumer group.
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder messageDelay(Long messageDelay) {
                 this.messageDelay = messageDelay;
@@ -343,10 +392,13 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.
-             * <p>
+             * <p>The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.</p>
+             * <blockquote>
+             * <p> If the return value of this parameter is -1, no client is connected to the consumer group.</p>
+             * </blockquote>
              * 
-             * >  If the return value of this parameter is -1, no client is connected to the consumer group.
+             * <strong>example:</strong>
+             * <p>186600</p>
              */
             public Builder unconsumedData(Long unconsumedData) {
                 this.unconsumedData = unconsumedData;

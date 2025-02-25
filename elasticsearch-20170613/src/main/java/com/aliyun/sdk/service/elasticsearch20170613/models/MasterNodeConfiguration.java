@@ -1,31 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MasterNodeConfiguration} extends {@link TeaModel}
  *
  * <p>MasterNodeConfiguration</p>
  */
 public class MasterNodeConfiguration extends TeaModel {
-    @NameInMap("amount")
-    @Validation(required = true, maximum = 3, minimum = 3)
+    @com.aliyun.core.annotation.NameInMap("amount")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 3, minimum = 3)
     private Long amount;
 
-    @NameInMap("disk")
-    @Validation(required = true, maximum = 20, minimum = 20)
+    @com.aliyun.core.annotation.NameInMap("disk")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 20)
     private Long disk;
 
-    @NameInMap("diskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("diskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskType;
 
-    @NameInMap("spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
     private MasterNodeConfiguration(Builder builder) {
@@ -78,7 +78,7 @@ public class MasterNodeConfiguration extends TeaModel {
         private String spec; 
 
         /**
-         * amount.
+         * <p>This parameter is required.</p>
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -86,7 +86,7 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
-         * disk.
+         * <p>This parameter is required.</p>
          */
         public Builder disk(Long disk) {
             this.disk = disk;
@@ -94,7 +94,7 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
-         * diskType.
+         * <p>This parameter is required.</p>
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -102,7 +102,7 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

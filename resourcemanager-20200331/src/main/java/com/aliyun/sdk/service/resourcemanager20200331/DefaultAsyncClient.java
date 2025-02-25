@@ -317,7 +317,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~159973~~).
+      * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
       *
      */
     @Override
@@ -1570,6 +1570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+      *
+     */
     @Override
     public CompletableFuture<UpdateAssociatedTransferSettingResponse> updateAssociatedTransferSetting(UpdateAssociatedTransferSettingRequest request) {
         try {

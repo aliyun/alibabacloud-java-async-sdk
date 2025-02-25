@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomizedVoiceJobRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomizedVoiceJobRequest</p>
  */
 public class CreateCustomizedVoiceJobRequest extends Request {
-    @Query
-    @NameInMap("Gender")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Gender")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gender;
 
-    @Query
-    @NameInMap("Scenario")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scenario")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scenario;
 
-    @Query
-    @NameInMap("VoiceDesc")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceDesc")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String voiceDesc;
 
-    @Query
-    @NameInMap("VoiceId")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String voiceId;
 
-    @Query
-    @NameInMap("VoiceName")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceName")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String voiceName;
 
     private CreateCustomizedVoiceJobRequest(Builder builder) {
@@ -115,7 +120,15 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         } 
 
         /**
-         * Gender.
+         * <p>The gender. Valid values:</p>
+         * <ul>
+         * <li>female</li>
+         * <li>male</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>female</p>
          */
         public Builder gender(String gender) {
             this.putQueryParameter("Gender", gender);
@@ -124,7 +137,16 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * <p>The scenario. Valid values:</p>
+         * <ul>
+         * <li>story</li>
+         * <li>interaction</li>
+         * <li>navigation</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>story</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);
@@ -133,7 +155,10 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * VoiceDesc.
+         * <p>The voice description.</p>
+         * <ul>
+         * <li>The description can be up to 256 characters in length.</li>
+         * </ul>
          */
         public Builder voiceDesc(String voiceDesc) {
             this.putQueryParameter("VoiceDesc", voiceDesc);
@@ -142,7 +167,16 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * VoiceId.
+         * <p>The voice ID. It can be the English name or Chinese Pinyin of the voice.</p>
+         * <ul>
+         * <li>The value must be a unique ID that is not used by other custom voices.</li>
+         * <li>The ID can be up to 32 characters in length.</li>
+         * <li>Only letters and digits are supported.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);
@@ -151,7 +185,10 @@ public class CreateCustomizedVoiceJobRequest extends Request {
         }
 
         /**
-         * VoiceName.
+         * <p>The voice name.</p>
+         * <ul>
+         * <li>The name can be up to 32 characters in length.</li>
+         * </ul>
          */
         public Builder voiceName(String voiceName) {
             this.putQueryParameter("VoiceName", voiceName);

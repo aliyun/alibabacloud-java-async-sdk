@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpnGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVpnGatewayResponseBody</p>
  */
 public class CreateVpnGatewayResponseBody extends TeaModel {
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private CreateVpnGatewayResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         private String vpnGatewayId; 
 
         /**
-         * The name of the VPN gateway.
+         * <p>The name of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYVPN</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -82,10 +90,11 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
-         * <p>
+         * <p>The order ID.</p>
+         * <p>If automatic payment is disabled, you must manually complete the payment for the VPN gateway in the <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Alibaba Cloud Management console</a>.</p>
          * 
-         * If automatic payment is disabled, you must manually complete the payment for the VPN gateway in the [Alibaba Cloud Management console](https://usercenter2-intl.aliyun.com/billing/#/account/overview).
+         * <strong>example:</strong>
+         * <p>208240895400460</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -93,7 +102,10 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB2C156A-41F8-49CC-A756-D55AFC8BFD69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +113,10 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPN gateway.
+         * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-uf68lxhgr7ftbqr3p****</p>
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;

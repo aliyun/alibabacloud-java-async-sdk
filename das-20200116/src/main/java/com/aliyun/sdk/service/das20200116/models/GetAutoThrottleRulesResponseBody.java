@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutoThrottleRulesResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutoThrottleRulesResponseBody</p>
  */
 public class GetAutoThrottleRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAutoThrottleRulesResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7172BECE-588A-5961-8126-C216E16B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,38 +155,44 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutoThrottleRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoThrottleRulesResponseBody</p>
+     */
     public static class EnableAutoThrottleList extends TeaModel {
-        @NameInMap("AbnormalDuration")
+        @com.aliyun.core.annotation.NameInMap("AbnormalDuration")
         private Double abnormalDuration;
 
-        @NameInMap("ActiveSessions")
+        @com.aliyun.core.annotation.NameInMap("ActiveSessions")
         private Long activeSessions;
 
-        @NameInMap("AllowThrottleEndTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleEndTime")
         private String allowThrottleEndTime;
 
-        @NameInMap("AllowThrottleStartTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleStartTime")
         private String allowThrottleStartTime;
 
-        @NameInMap("AutoKillSession")
+        @com.aliyun.core.annotation.NameInMap("AutoKillSession")
         private Boolean autoKillSession;
 
-        @NameInMap("CpuSessionRelation")
+        @com.aliyun.core.annotation.NameInMap("CpuSessionRelation")
         private String cpuSessionRelation;
 
-        @NameInMap("CpuUsage")
+        @com.aliyun.core.annotation.NameInMap("CpuUsage")
         private Double cpuUsage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxThrottleTime")
+        @com.aliyun.core.annotation.NameInMap("MaxThrottleTime")
         private Double maxThrottleTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Visible")
+        @com.aliyun.core.annotation.NameInMap("Visible")
         private Boolean visible;
 
         private EnableAutoThrottleList(Builder builder) {
@@ -285,7 +308,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             private Boolean visible; 
 
             /**
-             * The maximum period of time during which an exception occurs when automatic SQL throttling is triggered. Unit: minutes.
+             * <p>The maximum period of time during which an exception occurs when automatic SQL throttling is triggered. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder abnormalDuration(Double abnormalDuration) {
                 this.abnormalDuration = abnormalDuration;
@@ -293,7 +319,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of active sessions.
+             * <p>The maximum number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder activeSessions(Long activeSessions) {
                 this.activeSessions = activeSessions;
@@ -301,7 +330,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the throttling window. The value of this parameter is in UTC.
+             * <p>The end time of the throttling window. The value of this parameter is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59Z</p>
              */
             public Builder allowThrottleEndTime(String allowThrottleEndTime) {
                 this.allowThrottleEndTime = allowThrottleEndTime;
@@ -309,7 +341,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the throttling window. The value of this parameter is in UTC.
+             * <p>The start time of the throttling window. The value of this parameter is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00Z</p>
              */
             public Builder allowThrottleStartTime(String allowThrottleStartTime) {
                 this.allowThrottleStartTime = allowThrottleStartTime;
@@ -317,13 +352,17 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether abnormal SQL statements in execution are terminated at a time. Valid values:
-             * <p>
+             * <p>Indicates whether abnormal SQL statements in execution are terminated at a time. Valid values:</p>
+             * <blockquote>
+             * <p>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * > Abnormal SQL statements use the same template as the SQL statements that need to be throttled.
-             * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoKillSession(Boolean autoKillSession) {
                 this.autoKillSession = autoKillSession;
@@ -331,11 +370,14 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:
-             * <p>
+             * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
+             * <ul>
+             * <li><strong>AND</strong></li>
+             * <li><strong>OR</strong></li>
+             * </ul>
              * 
-             * * **AND**
-             * * **OR**
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder cpuSessionRelation(String cpuSessionRelation) {
                 this.cpuSessionRelation = cpuSessionRelation;
@@ -343,7 +385,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization threshold.
+             * <p>The CPU utilization threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder cpuUsage(Double cpuUsage) {
                 this.cpuUsage = cpuUsage;
@@ -351,7 +396,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze8g2am97624****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -359,7 +407,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum throttling duration. Unit: minutes.
+             * <p>The maximum throttling duration. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxThrottleTime(Double maxThrottleTime) {
                 this.maxThrottleTime = maxThrottleTime;
@@ -367,7 +418,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the database instance.
+             * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -375,11 +429,14 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic SQL throttling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder visible(Boolean visible) {
                 this.visible = visible;
@@ -393,38 +450,44 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoThrottleRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoThrottleRulesResponseBody</p>
+     */
     public static class TurnOffAutoThrottleList extends TeaModel {
-        @NameInMap("AbnormalDuration")
+        @com.aliyun.core.annotation.NameInMap("AbnormalDuration")
         private Double abnormalDuration;
 
-        @NameInMap("ActiveSessions")
+        @com.aliyun.core.annotation.NameInMap("ActiveSessions")
         private Long activeSessions;
 
-        @NameInMap("AllowThrottleEndTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleEndTime")
         private String allowThrottleEndTime;
 
-        @NameInMap("AllowThrottleStartTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleStartTime")
         private String allowThrottleStartTime;
 
-        @NameInMap("AutoKillSession")
+        @com.aliyun.core.annotation.NameInMap("AutoKillSession")
         private Boolean autoKillSession;
 
-        @NameInMap("CpuSessionRelation")
+        @com.aliyun.core.annotation.NameInMap("CpuSessionRelation")
         private String cpuSessionRelation;
 
-        @NameInMap("CpuUsage")
+        @com.aliyun.core.annotation.NameInMap("CpuUsage")
         private Double cpuUsage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxThrottleTime")
+        @com.aliyun.core.annotation.NameInMap("MaxThrottleTime")
         private Double maxThrottleTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Visible")
+        @com.aliyun.core.annotation.NameInMap("Visible")
         private Boolean visible;
 
         private TurnOffAutoThrottleList(Builder builder) {
@@ -540,7 +603,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             private Boolean visible; 
 
             /**
-             * The maximum period of time during which the automatic SQL throttling feature is triggered. Unit: minutes.
+             * <p>The maximum period of time during which the automatic SQL throttling feature is triggered. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder abnormalDuration(Double abnormalDuration) {
                 this.abnormalDuration = abnormalDuration;
@@ -548,7 +614,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of active sessions.
+             * <p>The maximum number of active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder activeSessions(Long activeSessions) {
                 this.activeSessions = activeSessions;
@@ -556,7 +625,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the throttling window. The value of this parameter is in UTC.
+             * <p>The end time of the throttling window. The value of this parameter is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59Z</p>
              */
             public Builder allowThrottleEndTime(String allowThrottleEndTime) {
                 this.allowThrottleEndTime = allowThrottleEndTime;
@@ -564,7 +636,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the throttling window. The value of this parameter is in UTC.
+             * <p>The start time of the throttling window. The value of this parameter is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00Z</p>
              */
             public Builder allowThrottleStartTime(String allowThrottleStartTime) {
                 this.allowThrottleStartTime = allowThrottleStartTime;
@@ -572,13 +647,17 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether abnormal SQL statements in execution are terminated at a time. Valid values:
-             * <p>
+             * <p>Indicates whether abnormal SQL statements in execution are terminated at a time. Valid values:</p>
+             * <blockquote>
+             * <p>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * > Abnormal SQL statements use the same template as the SQL statements that need to be throttled.
-             * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoKillSession(Boolean autoKillSession) {
                 this.autoKillSession = autoKillSession;
@@ -586,11 +665,14 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:
-             * <p>
+             * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
+             * <ul>
+             * <li><strong>AND</strong></li>
+             * <li><strong>OR</strong></li>
+             * </ul>
              * 
-             * * **AND**
-             * * **OR**
+             * <strong>example:</strong>
+             * <p>OR</p>
              */
             public Builder cpuSessionRelation(String cpuSessionRelation) {
                 this.cpuSessionRelation = cpuSessionRelation;
@@ -598,7 +680,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization threshold.
+             * <p>The CPU utilization threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder cpuUsage(Double cpuUsage) {
                 this.cpuUsage = cpuUsage;
@@ -606,7 +691,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instance ID.
+             * <p>The database instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze9xrhze0709****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -614,7 +702,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum throttling duration. Unit: minutes.
+             * <p>The maximum throttling duration. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxThrottleTime(Double maxThrottleTime) {
                 this.maxThrottleTime = maxThrottleTime;
@@ -622,7 +713,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the database instance.
+             * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -630,11 +724,14 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic SQL throttling feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * * **true**
-             * * **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder visible(Boolean visible) {
                 this.visible = visible;
@@ -648,27 +745,33 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutoThrottleRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoThrottleRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EnableAutoThrottleCount")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoThrottleCount")
         private Long enableAutoThrottleCount;
 
-        @NameInMap("EnableAutoThrottleList")
-        private java.util.List < EnableAutoThrottleList> enableAutoThrottleList;
+        @com.aliyun.core.annotation.NameInMap("EnableAutoThrottleList")
+        private java.util.List<EnableAutoThrottleList> enableAutoThrottleList;
 
-        @NameInMap("NeverEnableAutoThrottleOrReleasedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoThrottleOrReleasedInstanceCount")
         private Long neverEnableAutoThrottleOrReleasedInstanceCount;
 
-        @NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")
-        private java.util.List < String > neverEnableAutoThrottleOrReleasedInstanceIdList;
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")
+        private java.util.List<String> neverEnableAutoThrottleOrReleasedInstanceIdList;
 
-        @NameInMap("TotalAutoThrottleRulesCount")
+        @com.aliyun.core.annotation.NameInMap("TotalAutoThrottleRulesCount")
         private Long totalAutoThrottleRulesCount;
 
-        @NameInMap("TurnOffAutoThrottleCount")
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoThrottleCount")
         private Long turnOffAutoThrottleCount;
 
-        @NameInMap("TurnOffAutoThrottleList")
-        private java.util.List < TurnOffAutoThrottleList> turnOffAutoThrottleList;
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoThrottleList")
+        private java.util.List<TurnOffAutoThrottleList> turnOffAutoThrottleList;
 
         private Data(Builder builder) {
             this.enableAutoThrottleCount = builder.enableAutoThrottleCount;
@@ -698,7 +801,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return enableAutoThrottleList
          */
-        public java.util.List < EnableAutoThrottleList> getEnableAutoThrottleList() {
+        public java.util.List<EnableAutoThrottleList> getEnableAutoThrottleList() {
             return this.enableAutoThrottleList;
         }
 
@@ -712,7 +815,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return neverEnableAutoThrottleOrReleasedInstanceIdList
          */
-        public java.util.List < String > getNeverEnableAutoThrottleOrReleasedInstanceIdList() {
+        public java.util.List<String> getNeverEnableAutoThrottleOrReleasedInstanceIdList() {
             return this.neverEnableAutoThrottleOrReleasedInstanceIdList;
         }
 
@@ -733,21 +836,24 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return turnOffAutoThrottleList
          */
-        public java.util.List < TurnOffAutoThrottleList> getTurnOffAutoThrottleList() {
+        public java.util.List<TurnOffAutoThrottleList> getTurnOffAutoThrottleList() {
             return this.turnOffAutoThrottleList;
         }
 
         public static final class Builder {
             private Long enableAutoThrottleCount; 
-            private java.util.List < EnableAutoThrottleList> enableAutoThrottleList; 
+            private java.util.List<EnableAutoThrottleList> enableAutoThrottleList; 
             private Long neverEnableAutoThrottleOrReleasedInstanceCount; 
-            private java.util.List < String > neverEnableAutoThrottleOrReleasedInstanceIdList; 
+            private java.util.List<String> neverEnableAutoThrottleOrReleasedInstanceIdList; 
             private Long totalAutoThrottleRulesCount; 
             private Long turnOffAutoThrottleCount; 
-            private java.util.List < TurnOffAutoThrottleList> turnOffAutoThrottleList; 
+            private java.util.List<TurnOffAutoThrottleList> turnOffAutoThrottleList; 
 
             /**
-             * The number of database instances for which the automatic SQL throttling feature is currently enabled.
+             * <p>The number of database instances for which the automatic SQL throttling feature is currently enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableAutoThrottleCount(Long enableAutoThrottleCount) {
                 this.enableAutoThrottleCount = enableAutoThrottleCount;
@@ -755,18 +861,21 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic SQL throttling feature is currently enabled.
+             * <p>The database instances for which the automatic SQL throttling feature is currently enabled.</p>
              */
-            public Builder enableAutoThrottleList(java.util.List < EnableAutoThrottleList> enableAutoThrottleList) {
+            public Builder enableAutoThrottleList(java.util.List<EnableAutoThrottleList> enableAutoThrottleList) {
                 this.enableAutoThrottleList = enableAutoThrottleList;
                 return this;
             }
 
             /**
-             * The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.
-             * <p>
+             * <p>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</p>
+             * <blockquote>
+             * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+             * </blockquote>
              * 
-             * >  If a database instance does not exist, the instance has been released or the specified instance ID is invalid.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder neverEnableAutoThrottleOrReleasedInstanceCount(Long neverEnableAutoThrottleOrReleasedInstanceCount) {
                 this.neverEnableAutoThrottleOrReleasedInstanceCount = neverEnableAutoThrottleOrReleasedInstanceCount;
@@ -774,18 +883,21 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.
-             * <p>
-             * 
-             * >  If a database instance does not exist, the instance has been released or the specified instance ID is invalid.
+             * <p>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</p>
+             * <blockquote>
+             * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+             * </blockquote>
              */
-            public Builder neverEnableAutoThrottleOrReleasedInstanceIdList(java.util.List < String > neverEnableAutoThrottleOrReleasedInstanceIdList) {
+            public Builder neverEnableAutoThrottleOrReleasedInstanceIdList(java.util.List<String> neverEnableAutoThrottleOrReleasedInstanceIdList) {
                 this.neverEnableAutoThrottleOrReleasedInstanceIdList = neverEnableAutoThrottleOrReleasedInstanceIdList;
                 return this;
             }
 
             /**
-             * The number of databases for which the automatic SQL throttling feature has been enabled.
+             * <p>The number of databases for which the automatic SQL throttling feature has been enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalAutoThrottleRulesCount(Long totalAutoThrottleRulesCount) {
                 this.totalAutoThrottleRulesCount = totalAutoThrottleRulesCount;
@@ -793,7 +905,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of database instances for which the automatic SQL throttling feature was once enabled but is currently disabled.
+             * <p>The number of database instances for which the automatic SQL throttling feature was once enabled but is currently disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder turnOffAutoThrottleCount(Long turnOffAutoThrottleCount) {
                 this.turnOffAutoThrottleCount = turnOffAutoThrottleCount;
@@ -801,9 +916,9 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic SQL throttling feature was once enabled but is currently disabled.
+             * <p>The database instances for which the automatic SQL throttling feature was once enabled but is currently disabled.</p>
              */
-            public Builder turnOffAutoThrottleList(java.util.List < TurnOffAutoThrottleList> turnOffAutoThrottleList) {
+            public Builder turnOffAutoThrottleList(java.util.List<TurnOffAutoThrottleList> turnOffAutoThrottleList) {
                 this.turnOffAutoThrottleList = turnOffAutoThrottleList;
                 return this;
             }

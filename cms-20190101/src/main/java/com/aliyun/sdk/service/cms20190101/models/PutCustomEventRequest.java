@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutCustomEventRequest} extends {@link RequestModel}
  *
  * <p>PutCustomEventRequest</p>
  */
 public class PutCustomEventRequest extends Request {
-    @Query
-    @NameInMap("EventInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < EventInfo> eventInfo;
 
     private PutCustomEventRequest(Builder builder) {
@@ -55,7 +55,8 @@ public class PutCustomEventRequest extends Request {
         } 
 
         /**
-         * EventInfo.
+         * <p>The event details.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder eventInfo(java.util.List < EventInfo> eventInfo) {
             this.putQueryParameter("EventInfo", eventInfo);
@@ -70,19 +71,25 @@ public class PutCustomEventRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PutCustomEventRequest} extends {@link TeaModel}
+     *
+     * <p>PutCustomEventRequest</p>
+     */
     public static class EventInfo extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("EventName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EventName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String eventName;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private EventInfo(Builder builder) {
@@ -135,7 +142,11 @@ public class PutCustomEventRequest extends Request {
             private String time; 
 
             /**
-             * The content of the custom event. Valid values of N: 1 to 50.
+             * <p>The event content. Valid values of N: 1 to 50.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IOException</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -143,7 +154,11 @@ public class PutCustomEventRequest extends Request {
             }
 
             /**
-             * The name of the custom event. Valid values of N: 1 to 50.
+             * <p>The event name. Valid values of N: 1 to 50.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myEvent</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -151,10 +166,11 @@ public class PutCustomEventRequest extends Request {
             }
 
             /**
-             * The ID of the application group. Valid values of N: 0 to 50.
-             * <p>
+             * <p>The ID of the application group. Valid values of N: 1 to 50.</p>
+             * <p>Default value: 0. This value indicates that the event to be reported does not belong to any application group.</p>
              * 
-             * Default value: 0. This value indicates that the custom event to be reported does not belong to any application group.
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -162,14 +178,15 @@ public class PutCustomEventRequest extends Request {
             }
 
             /**
-             * The time when the custom event occurred.
-             * <p>
+             * <p>The time when the event occurred.</p>
+             * <p>Format: <code>yyyyMMddTHHmmss.SSSZ</code>.</p>
+             * <p>Valid values of N: 1 to 50.</p>
+             * <blockquote>
+             * <p> You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</p>
+             * </blockquote>
              * 
-             * Format: `yyyyMMddTHHmmss.SSSZ`.
-             * 
-             * Valid values of N: 1 to 50.
-             * 
-             * >  You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>20171013T170923.456+0800</p>
              */
             public Builder time(String time) {
                 this.time = time;

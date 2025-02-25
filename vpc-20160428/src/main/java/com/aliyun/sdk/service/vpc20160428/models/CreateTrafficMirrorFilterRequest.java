@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTrafficMirrorFilterRequest} extends {@link RequestModel}
  *
  * <p>CreateTrafficMirrorFilterRequest</p>
  */
 public class CreateTrafficMirrorFilterRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EgressRules")
-    private java.util.List < EgressRules> egressRules;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EgressRules")
+    private java.util.List<EgressRules> egressRules;
 
-    @Query
-    @NameInMap("IngressRules")
-    private java.util.List < IngressRules> ingressRules;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressRules")
+    private java.util.List<IngressRules> ingressRules;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("TrafficMirrorFilterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterDescription")
     private String trafficMirrorFilterDescription;
 
-    @Query
-    @NameInMap("TrafficMirrorFilterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterName")
     private String trafficMirrorFilterName;
 
     private CreateTrafficMirrorFilterRequest(Builder builder) {
@@ -112,14 +117,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
     /**
      * @return egressRules
      */
-    public java.util.List < EgressRules> getEgressRules() {
+    public java.util.List<EgressRules> getEgressRules() {
         return this.egressRules;
     }
 
     /**
      * @return ingressRules
      */
-    public java.util.List < IngressRules> getIngressRules() {
+    public java.util.List<IngressRules> getIngressRules() {
         return this.ingressRules;
     }
 
@@ -168,7 +173,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -189,15 +194,15 @@ public class CreateTrafficMirrorFilterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTrafficMirrorFilterRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < EgressRules> egressRules; 
-        private java.util.List < IngressRules> ingressRules; 
+        private java.util.List<EgressRules> egressRules; 
+        private java.util.List<IngressRules> ingressRules; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String trafficMirrorFilterDescription; 
         private String trafficMirrorFilterName; 
 
@@ -223,12 +228,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -237,11 +244,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -250,18 +260,18 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * EgressRules.
+         * <p>The list of outbound rules.</p>
          */
-        public Builder egressRules(java.util.List < EgressRules> egressRules) {
+        public Builder egressRules(java.util.List<EgressRules> egressRules) {
             this.putQueryParameter("EgressRules", egressRules);
             this.egressRules = egressRules;
             return this;
         }
 
         /**
-         * IngressRules.
+         * <p>The list of inbound rules.</p>
          */
-        public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
+        public Builder ingressRules(java.util.List<IngressRules> ingressRules) {
             this.putQueryParameter("IngressRules", ingressRules);
             this.ingressRules = ingressRules;
             return this;
@@ -286,10 +296,12 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the mirrored traffic belongs.
-         * <p>
+         * <p>The ID of the region to which the mirrored traffic belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,7 +310,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the mirrored traffic belongs.
+         * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -325,19 +340,20 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tag of the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The description of the filter.
-         * <p>
+         * <p>The description of the filter.</p>
+         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>this is a filter.</p>
          */
         public Builder trafficMirrorFilterDescription(String trafficMirrorFilterDescription) {
             this.putQueryParameter("TrafficMirrorFilterDescription", trafficMirrorFilterDescription);
@@ -346,10 +362,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * The name of the filter.
-         * <p>
+         * <p>The name of the filter.</p>
+         * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder trafficMirrorFilterName(String trafficMirrorFilterName) {
             this.putQueryParameter("TrafficMirrorFilterName", trafficMirrorFilterName);
@@ -364,26 +381,32 @@ public class CreateTrafficMirrorFilterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTrafficMirrorFilterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTrafficMirrorFilterRequest</p>
+     */
     public static class EgressRules extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("DestinationPortRange")
+        @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
         private String sourceCidrBlock;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
         private EgressRules(Builder builder) {
@@ -463,11 +486,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String sourcePortRange; 
 
             /**
-             * The action of the outbound rule. Valid values:
-             * <p>
+             * <p>The action of the outbound rule. Valid values:</p>
+             * <ul>
+             * <li><strong>accept</strong>: collects network traffic.</li>
+             * <li><strong>drop</strong>: does not collect network traffic.</li>
+             * </ul>
              * 
-             * *   **accept**: collects network traffic.
-             * *   **drop**: does not collect network traffic.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -475,7 +501,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The destination CIDR block of the outbound traffic.
+             * <p>The destination CIDR block of the outbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -483,10 +512,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The destination port range of the outbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**. You cannot set this parameter to only **-1/-1**. The value -1/-1 specifies all ports.
-             * <p>
+             * <p>The destination port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>. The value -1/-1 specifies all ports.</p>
+             * <blockquote>
+             * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * </blockquote>
              * 
-             * >  If you set **EgressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
+             * <strong>example:</strong>
+             * <p>22/40</p>
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
@@ -494,10 +526,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The priority of the outbound rule. A smaller value indicates a higher priority.
-             * <p>
+             * <p>The priority of the outbound rule. A smaller value indicates a higher priority.</p>
+             * <p>The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 outbound rules for a filter.</p>
              * 
-             * The maximum value of **N** is **10**. You can configure up to 10 outbound rules for a filter.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -505,13 +538,16 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The protocol that is used by the outbound traffic to be mirrored. Valid values:
-             * <p>
+             * <p>The protocol that is used by the outbound traffic to be mirrored. Valid values:</p>
+             * <ul>
+             * <li><strong>ALL</strong>: all protocols</li>
+             * <li><strong>ICMP</strong>: ICMP</li>
+             * <li><strong>TCP</strong>: TCP</li>
+             * <li><strong>UDP</strong>: UDP</li>
+             * </ul>
              * 
-             * *   **ALL**: all protocols
-             * *   **ICMP**: ICMP
-             * *   **TCP**: TCP
-             * *   **UDP**: UDP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -519,7 +555,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The source CIDR block of the outbound traffic.
+             * <p>The source CIDR block of the outbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder sourceCidrBlock(String sourceCidrBlock) {
                 this.sourceCidrBlock = sourceCidrBlock;
@@ -527,10 +566,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The source port range of the outbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**. You cannot set this parameter to only **-1/-1**. The value -1/-1 specifies all ports.
-             * <p>
+             * <p>The source port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>. The value -1/-1 specifies all ports.</p>
+             * <blockquote>
+             * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * </blockquote>
              * 
-             * >  If you set **EgressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
+             * <strong>example:</strong>
+             * <p>22/40</p>
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -544,26 +586,32 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTrafficMirrorFilterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTrafficMirrorFilterRequest</p>
+     */
     public static class IngressRules extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("DestinationPortRange")
+        @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
         private String sourceCidrBlock;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
         private IngressRules(Builder builder) {
@@ -643,11 +691,14 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String sourcePortRange; 
 
             /**
-             * The action of the inbound rule. Valid values:
-             * <p>
+             * <p>The action of the inbound rule. Valid values:</p>
+             * <ul>
+             * <li><strong>accept</strong>: collects network traffic.</li>
+             * <li><strong>drop</strong>: does not collect network traffic.</li>
+             * </ul>
              * 
-             * *   **accept**: collects network traffic.
-             * *   **drop**: does not collect network traffic.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -655,7 +706,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The destination CIDR block of the inbound traffic.
+             * <p>The destination CIDR block of the inbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -663,10 +717,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The destination port range of the inbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**.
-             * <p>
+             * <p>The destination port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+             * <blockquote>
+             * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * </blockquote>
              * 
-             * >  If you set **IngressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
+             * <strong>example:</strong>
+             * <p>80/120</p>
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
@@ -674,10 +731,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The priority of the inbound rule. A smaller value indicates a higher priority.
-             * <p>
+             * <p>The priority of the inbound rule. A smaller value indicates a higher priority.</p>
+             * <p>The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 inbound rules for a filter.</p>
              * 
-             * The maximum value of **N** is **10**. You can configure up to 10 inbound rules for a filter.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -685,13 +743,16 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The protocol that is used by the inbound traffic to be mirrored. Valid values:
-             * <p>
+             * <p>The protocol that is used by the inbound traffic to be mirrored. Valid values:</p>
+             * <ul>
+             * <li><strong>ALL</strong>: all protocols</li>
+             * <li><strong>ICMP</strong>: ICMP</li>
+             * <li><strong>TCP</strong>: TCP</li>
+             * <li><strong>UDP</strong>: UDP</li>
+             * </ul>
              * 
-             * *   **ALL**: all protocols
-             * *   **ICMP**: ICMP
-             * *   **TCP**: TCP
-             * *   **UDP**: UDP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -699,7 +760,10 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The source CIDR block of the inbound traffic.
+             * <p>The source CIDR block of the inbound traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder sourceCidrBlock(String sourceCidrBlock) {
                 this.sourceCidrBlock = sourceCidrBlock;
@@ -707,10 +771,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The source port range of the inbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**.
-             * <p>
+             * <p>The source port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+             * <blockquote>
+             * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * </blockquote>
              * 
-             * >  If you set **IngressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.
+             * <strong>example:</strong>
+             * <p>80/120</p>
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -724,11 +791,17 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTrafficMirrorFilterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTrafficMirrorFilterRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -763,10 +836,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
-             * <p>
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * You can add up to 20 tags in each call.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -774,10 +848,11 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

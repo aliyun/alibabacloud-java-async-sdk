@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CustomFields")
-    private java.util.List < CustomFields> customFields;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFields")
+    private java.util.List<CustomFields> customFields;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String email;
 
-    @Query
-    @NameInMap("EmailVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean emailVerified;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("PhoneNumberVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean phoneNumberVerified;
 
-    @Query
-    @NameInMap("PhoneRegion")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneRegion")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneRegion;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String userId;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String username;
 
     private UpdateUserRequest(Builder builder) {
@@ -103,7 +108,7 @@ public class UpdateUserRequest extends Request {
     /**
      * @return customFields
      */
-    public java.util.List < CustomFields> getCustomFields() {
+    public java.util.List<CustomFields> getCustomFields() {
         return this.customFields;
     }
 
@@ -172,7 +177,7 @@ public class UpdateUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateUserRequest, Builder> {
         private String regionId; 
-        private java.util.List < CustomFields> customFields; 
+        private java.util.List<CustomFields> customFields; 
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
@@ -212,16 +217,19 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The custom extended fields.
+         * <p>The custom extended fields.</p>
          */
-        public Builder customFields(java.util.List < CustomFields> customFields) {
+        public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
             this.customFields = customFields;
             return this;
         }
 
         /**
-         * The display name of the account. The display name can be up to 64 characters in length.
+         * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -230,7 +238,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <p>The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:example@example.com">example@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -239,7 +250,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Specifies whether the email address is verified. This parameter must be specified if you specify Email. You can set this parameter to true if you have no special business requirements.
+         * <p>Specifies whether the email address is verified. This parameter must be specified if you specify Email. You can set this parameter to true if you have no special business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder emailVerified(Boolean emailVerified) {
             this.putQueryParameter("EmailVerified", emailVerified);
@@ -248,7 +262,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -257,7 +275,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The mobile number. The mobile number must be 6 to 15 digits in length.
+         * <p>The mobile number. The mobile number must be 6 to 15 digits in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156xxxxxxxxx</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -266,7 +287,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Specifies whether the mobile number is verified. This parameter must be specified if you specify PhoneNumber. You can set this parameter to true if you have no special business requirements.
+         * <p>Specifies whether the mobile number is verified. This parameter must be specified if you specify PhoneNumber. You can set this parameter to true if you have no special business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder phoneNumberVerified(Boolean phoneNumberVerified) {
             this.putQueryParameter("PhoneNumberVerified", phoneNumberVerified);
@@ -275,7 +299,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The area code of the mobile number. For example, the area code of a mobile number in the Chinese mainland is 86 without 00 or the plus sign (+). This parameter must be specified if you specify PhoneNumber.
+         * <p>The area code of the mobile number. For example, the area code of a mobile number in the Chinese mainland is 86 without 00 or the plus sign (+). This parameter must be specified if you specify PhoneNumber.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder phoneRegion(String phoneRegion) {
             this.putQueryParameter("PhoneRegion", phoneRegion);
@@ -284,7 +311,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The account ID.
+         * <p>The account ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -293,7 +324,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: \_ . @ -
+         * <p>The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: _ . @ -</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username_test</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -308,17 +342,23 @@ public class UpdateUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateUserRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateUserRequest</p>
+     */
     public static class CustomFields extends TeaModel {
-        @NameInMap("FieldName")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldName;
 
-        @NameInMap("FieldValue")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldValue;
 
-        @NameInMap("Operation")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("Operation")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String operation;
 
         private CustomFields(Builder builder) {
@@ -362,7 +402,10 @@ public class UpdateUserRequest extends Request {
             private String operation; 
 
             /**
-             * The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.
+             * <p>The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nick_name</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -370,7 +413,10 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * The value of the extended field. The value follows the limits on the properties of the extended field.
+             * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_value</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -378,12 +424,15 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * The operation type of the extended field. Valid values:
-             * <p>
+             * <p>The operation type of the extended field. Valid values:</p>
+             * <ul>
+             * <li>add: adds a value to the extended field of the account.</li>
+             * <li>replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.</li>
+             * <li>remove: removes a value from the extended field of the account.</li>
+             * </ul>
              * 
-             * *   add: adds a value to the extended field of the account.
-             * *   replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.
-             * *   remove: removes a value from the extended field of the account.
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;

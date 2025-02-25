@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,76 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCardResponseBody</p>
  */
 public class GetCardResponseBody extends TeaModel {
-    @NameInMap("APN")
+    @com.aliyun.core.annotation.NameInMap("APN")
     private String APN;
 
-    @NameInMap("ActivatedTime")
+    @com.aliyun.core.annotation.NameInMap("ActivatedTime")
     private String activatedTime;
 
-    @NameInMap("AlarmThreshold")
+    @com.aliyun.core.annotation.NameInMap("AlarmThreshold")
     private Long alarmThreshold;
 
-    @NameInMap("CloudConnectorId")
+    @com.aliyun.core.annotation.NameInMap("CloudConnectorId")
     private String cloudConnectorId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("ISP")
+    @com.aliyun.core.annotation.NameInMap("ISP")
     private String ISP;
 
-    @NameInMap("Iccid")
+    @com.aliyun.core.annotation.NameInMap("Iccid")
     private String iccid;
 
-    @NameInMap("Imei")
+    @com.aliyun.core.annotation.NameInMap("Imei")
     private String imei;
 
-    @NameInMap("Imsi")
+    @com.aliyun.core.annotation.NameInMap("Imsi")
     private String imsi;
 
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @NameInMap("LimitThreshold")
+    @com.aliyun.core.annotation.NameInMap("LimitThreshold")
     private Long limitThreshold;
 
-    @NameInMap("Lock")
+    @com.aliyun.core.annotation.NameInMap("Lock")
     private String lock;
 
-    @NameInMap("Msisdn")
+    @com.aliyun.core.annotation.NameInMap("Msisdn")
     private String msisdn;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NetType")
+    @com.aliyun.core.annotation.NameInMap("NetType")
     private String netType;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SimStatus")
+    @com.aliyun.core.annotation.NameInMap("SimStatus")
     private String simStatus;
 
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StopThreshold")
+    @com.aliyun.core.annotation.NameInMap("StopThreshold")
     private Long stopThreshold;
 
-    @NameInMap("UsageDataMonth")
+    @com.aliyun.core.annotation.NameInMap("UsageDataMonth")
     private Integer usageDataMonth;
 
-    @NameInMap("UsageDataTotal")
+    @com.aliyun.core.annotation.NameInMap("UsageDataTotal")
     private Long usageDataTotal;
 
-    @NameInMap("WirelessCloudConnectorId")
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
     private String wirelessCloudConnectorId;
 
     private GetCardResponseBody(Builder builder) {
@@ -442,7 +441,7 @@ public class GetCardResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

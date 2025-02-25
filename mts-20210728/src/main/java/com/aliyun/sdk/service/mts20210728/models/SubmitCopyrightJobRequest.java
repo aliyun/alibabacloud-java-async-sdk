@@ -210,7 +210,7 @@ public class SubmitCopyrightJobRequest extends Request {
         } 
 
         /**
-         * 任务结果回调url
+         * CallBack.
          */
         public Builder callBack(String callBack) {
             this.putBodyParameter("CallBack", callBack);
@@ -219,7 +219,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 水印信息描述
+         * Description.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -228,7 +228,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 输入的视频，oss三元组
+         * Input.
          */
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
@@ -237,7 +237,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 水印强度，取值1，2，3
+         * Level.
          */
         public Builder level(Long level) {
             this.putBodyParameter("Level", level);
@@ -246,7 +246,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 水印信息
+         * Message.
          */
         public Builder message(String message) {
             this.putBodyParameter("Message", message);
@@ -255,7 +255,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 输出的视频，oss三元组
+         * Output.
          */
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
@@ -264,7 +264,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 水印参数
+         * Params.
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -273,7 +273,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 水印起始时间(单位是秒)，不填写默认为0
+         * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -282,7 +282,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 水印结束时间(单位是秒)，不填默认为60000
+         * TotalTime.
          */
         public Builder totalTime(Long totalTime) {
             this.putBodyParameter("TotalTime", totalTime);
@@ -291,7 +291,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 外部url链接(Input和url二选一)
+         * Url.
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -300,7 +300,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 用户自定义数据
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);
@@ -309,7 +309,7 @@ public class SubmitCopyrightJobRequest extends Request {
         }
 
         /**
-         * 可见水印(必须是英文字符)
+         * VisibleMessage.
          */
         public Builder visibleMessage(String visibleMessage) {
             this.putBodyParameter("VisibleMessage", visibleMessage);

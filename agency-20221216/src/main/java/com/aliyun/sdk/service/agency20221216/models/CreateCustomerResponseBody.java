@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCustomerResponseBody</p>
  */
 public class CreateCustomerResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateCustomerResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Code indicating whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data indicating whether a customer was successfully created. If it&quot;s &quot;true&quot;, the Message contains CID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -102,7 +113,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Massage indicating whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9B725C7-3DBD-576B-AC91-F6F22AB99A77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Candidate Value: True/False, which indicates whether the current API call it self was successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

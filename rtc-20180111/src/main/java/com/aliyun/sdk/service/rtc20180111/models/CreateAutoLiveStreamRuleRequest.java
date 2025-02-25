@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAutoLiveStreamRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateAutoLiveStreamRuleRequest</p>
  */
 public class CreateAutoLiveStreamRuleRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("CallBack")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallBack")
     private String callBack;
 
-    @Query
-    @NameInMap("ChannelIdPrefixes")
-    private java.util.List < String > channelIdPrefixes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelIdPrefixes")
+    private java.util.List<String> channelIdPrefixes;
 
-    @Query
-    @NameInMap("ChannelIds")
-    private java.util.List < String > channelIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelIds")
+    private java.util.List<String> channelIds;
 
-    @Query
-    @NameInMap("MediaEncode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaEncode")
     private Integer mediaEncode;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playDomain;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
     private CreateAutoLiveStreamRuleRequest(Builder builder) {
@@ -88,14 +93,14 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
     /**
      * @return channelIdPrefixes
      */
-    public java.util.List < String > getChannelIdPrefixes() {
+    public java.util.List<String> getChannelIdPrefixes() {
         return this.channelIdPrefixes;
     }
 
     /**
      * @return channelIds
      */
-    public java.util.List < String > getChannelIds() {
+    public java.util.List<String> getChannelIds() {
         return this.channelIds;
     }
 
@@ -130,8 +135,8 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAutoLiveStreamRuleRequest, Builder> {
         private String appId; 
         private String callBack; 
-        private java.util.List < String > channelIdPrefixes; 
-        private java.util.List < String > channelIds; 
+        private java.util.List<String> channelIdPrefixes; 
+        private java.util.List<String> channelIds; 
         private Integer mediaEncode; 
         private Long ownerId; 
         private String playDomain; 
@@ -141,20 +146,23 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAutoLiveStreamRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.callBack = response.callBack;
-            this.channelIdPrefixes = response.channelIdPrefixes;
-            this.channelIds = response.channelIds;
-            this.mediaEncode = response.mediaEncode;
-            this.ownerId = response.ownerId;
-            this.playDomain = response.playDomain;
-            this.ruleName = response.ruleName;
+        private Builder(CreateAutoLiveStreamRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.callBack = request.callBack;
+            this.channelIdPrefixes = request.channelIdPrefixes;
+            this.channelIds = request.channelIds;
+            this.mediaEncode = request.mediaEncode;
+            this.ownerId = request.ownerId;
+            this.playDomain = request.playDomain;
+            this.ruleName = request.ruleName;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eo85****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -174,7 +182,7 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
         /**
          * ChannelIdPrefixes.
          */
-        public Builder channelIdPrefixes(java.util.List < String > channelIdPrefixes) {
+        public Builder channelIdPrefixes(java.util.List<String> channelIdPrefixes) {
             this.putQueryParameter("ChannelIdPrefixes", channelIdPrefixes);
             this.channelIdPrefixes = channelIdPrefixes;
             return this;
@@ -183,7 +191,7 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
         /**
          * ChannelIds.
          */
-        public Builder channelIds(java.util.List < String > channelIds) {
+        public Builder channelIds(java.util.List<String> channelIds) {
             this.putQueryParameter("ChannelIds", channelIds);
             this.channelIds = channelIds;
             return this;
@@ -208,7 +216,10 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
         }
 
         /**
-         * PlayDomain.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://${domain}/${app}/${stream}</p>
          */
         public Builder playDomain(String playDomain) {
             this.putQueryParameter("PlayDomain", playDomain);

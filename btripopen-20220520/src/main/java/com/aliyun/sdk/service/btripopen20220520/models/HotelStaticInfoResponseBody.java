@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
  *
  * <p>HotelStaticInfoResponseBody</p>
  */
 public class HotelStaticInfoResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelStaticInfoResponseBody(Builder builder) {
@@ -114,7 +119,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -151,38 +156,44 @@ public class HotelStaticInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class ExpandInfo extends TeaModel {
-        @NameInMap("check_in")
+        @com.aliyun.core.annotation.NameInMap("check_in")
         private String checkIn;
 
-        @NameInMap("check_out")
+        @com.aliyun.core.annotation.NameInMap("check_out")
         private String checkOut;
 
-        @NameInMap("decorate_time")
+        @com.aliyun.core.annotation.NameInMap("decorate_time")
         private String decorateTime;
 
-        @NameInMap("floors")
+        @com.aliyun.core.annotation.NameInMap("floors")
         private String floors;
 
-        @NameInMap("hotel_facilities")
-        private java.util.List < String > hotelFacilities;
+        @com.aliyun.core.annotation.NameInMap("hotel_facilities")
+        private java.util.List<String> hotelFacilities;
 
-        @NameInMap("hotel_type")
+        @com.aliyun.core.annotation.NameInMap("hotel_type")
         private Integer hotelType;
 
-        @NameInMap("opening_time")
+        @com.aliyun.core.annotation.NameInMap("opening_time")
         private String openingTime;
 
-        @NameInMap("room_facilities")
-        private java.util.List < String > roomFacilities;
+        @com.aliyun.core.annotation.NameInMap("room_facilities")
+        private java.util.List<String> roomFacilities;
 
-        @NameInMap("rooms")
+        @com.aliyun.core.annotation.NameInMap("rooms")
         private Integer rooms;
 
-        @NameInMap("service")
-        private java.util.List < String > service;
+        @com.aliyun.core.annotation.NameInMap("service")
+        private java.util.List<String> service;
 
-        @NameInMap("theme_tag")
+        @com.aliyun.core.annotation.NameInMap("theme_tag")
         private String themeTag;
 
         private ExpandInfo(Builder builder) {
@@ -238,7 +249,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return hotelFacilities
          */
-        public java.util.List < String > getHotelFacilities() {
+        public java.util.List<String> getHotelFacilities() {
             return this.hotelFacilities;
         }
 
@@ -259,7 +270,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return roomFacilities
          */
-        public java.util.List < String > getRoomFacilities() {
+        public java.util.List<String> getRoomFacilities() {
             return this.roomFacilities;
         }
 
@@ -273,7 +284,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return service
          */
-        public java.util.List < String > getService() {
+        public java.util.List<String> getService() {
             return this.service;
         }
 
@@ -289,12 +300,12 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String checkOut; 
             private String decorateTime; 
             private String floors; 
-            private java.util.List < String > hotelFacilities; 
+            private java.util.List<String> hotelFacilities; 
             private Integer hotelType; 
             private String openingTime; 
-            private java.util.List < String > roomFacilities; 
+            private java.util.List<String> roomFacilities; 
             private Integer rooms; 
-            private java.util.List < String > service; 
+            private java.util.List<String> service; 
             private String themeTag; 
 
             /**
@@ -332,7 +343,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * hotel_facilities.
              */
-            public Builder hotelFacilities(java.util.List < String > hotelFacilities) {
+            public Builder hotelFacilities(java.util.List<String> hotelFacilities) {
                 this.hotelFacilities = hotelFacilities;
                 return this;
             }
@@ -356,7 +367,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * room_facilities.
              */
-            public Builder roomFacilities(java.util.List < String > roomFacilities) {
+            public Builder roomFacilities(java.util.List<String> roomFacilities) {
                 this.roomFacilities = roomFacilities;
                 return this;
             }
@@ -372,7 +383,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * service.
              */
-            public Builder service(java.util.List < String > service) {
+            public Builder service(java.util.List<String> service) {
                 this.service = service;
                 return this;
             }
@@ -392,14 +403,20 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class Imageinfos extends TeaModel {
-        @NameInMap("desc")
+        @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private Integer tag;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Imageinfos(Builder builder) {
@@ -473,24 +490,38 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class BedInfos extends TeaModel {
-        @NameInMap("bed_desc")
+        @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
 
-        @NameInMap("bed_num")
+        @com.aliyun.core.annotation.NameInMap("bed_num")
         private Integer bedNum;
 
-        @NameInMap("bed_size")
+        @com.aliyun.core.annotation.NameInMap("bed_size")
         private String bedSize;
 
-        @NameInMap("bed_type")
+        @com.aliyun.core.annotation.NameInMap("bed_type")
         private String bedType;
+
+        @com.aliyun.core.annotation.NameInMap("length")
+        private String length;
+
+        @com.aliyun.core.annotation.NameInMap("width")
+        private String width;
 
         private BedInfos(Builder builder) {
             this.bedDesc = builder.bedDesc;
             this.bedNum = builder.bedNum;
             this.bedSize = builder.bedSize;
             this.bedType = builder.bedType;
+            this.length = builder.length;
+            this.width = builder.width;
         }
 
         public static Builder builder() {
@@ -529,11 +560,27 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             return this.bedType;
         }
 
+        /**
+         * @return length
+         */
+        public String getLength() {
+            return this.length;
+        }
+
+        /**
+         * @return width
+         */
+        public String getWidth() {
+            return this.width;
+        }
+
         public static final class Builder {
             private String bedDesc; 
             private Integer bedNum; 
             private String bedSize; 
             private String bedType; 
+            private String length; 
+            private String width; 
 
             /**
              * bed_desc.
@@ -567,6 +614,22 @@ public class HotelStaticInfoResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * length.
+             */
+            public Builder length(String length) {
+                this.length = length;
+                return this;
+            }
+
+            /**
+             * width.
+             */
+            public Builder width(String width) {
+                this.width = width;
+                return this;
+            }
+
             public BedInfos build() {
                 return new BedInfos(this);
             } 
@@ -574,62 +637,266 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
-    public static class RoomInfos extends TeaModel {
-        @NameInMap("bed_infos")
-        private java.util.List < BedInfos> bedInfos;
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
+    public static class BedInfoGroupList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bed_Infos")
+        private java.util.List<BedInfos> bedInfos;
 
-        @NameInMap("extra_bed")
+        private BedInfoGroupList(Builder builder) {
+            this.bedInfos = builder.bedInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BedInfoGroupList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedInfos
+         */
+        public java.util.List<BedInfos> getBedInfos() {
+            return this.bedInfos;
+        }
+
+        public static final class Builder {
+            private java.util.List<BedInfos> bedInfos; 
+
+            /**
+             * bed_Infos.
+             */
+            public Builder bedInfos(java.util.List<BedInfos> bedInfos) {
+                this.bedInfos = bedInfos;
+                return this;
+            }
+
+            public BedInfoGroupList build() {
+                return new BedInfoGroupList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
+    public static class RoomInfosBedInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bed_desc")
+        private String bedDesc;
+
+        @com.aliyun.core.annotation.NameInMap("bed_num")
+        private Integer bedNum;
+
+        @com.aliyun.core.annotation.NameInMap("bed_size")
+        private String bedSize;
+
+        @com.aliyun.core.annotation.NameInMap("bed_type")
+        private String bedType;
+
+        @com.aliyun.core.annotation.NameInMap("length")
+        private String length;
+
+        @com.aliyun.core.annotation.NameInMap("width")
+        private String width;
+
+        private RoomInfosBedInfos(Builder builder) {
+            this.bedDesc = builder.bedDesc;
+            this.bedNum = builder.bedNum;
+            this.bedSize = builder.bedSize;
+            this.bedType = builder.bedType;
+            this.length = builder.length;
+            this.width = builder.width;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RoomInfosBedInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedDesc
+         */
+        public String getBedDesc() {
+            return this.bedDesc;
+        }
+
+        /**
+         * @return bedNum
+         */
+        public Integer getBedNum() {
+            return this.bedNum;
+        }
+
+        /**
+         * @return bedSize
+         */
+        public String getBedSize() {
+            return this.bedSize;
+        }
+
+        /**
+         * @return bedType
+         */
+        public String getBedType() {
+            return this.bedType;
+        }
+
+        /**
+         * @return length
+         */
+        public String getLength() {
+            return this.length;
+        }
+
+        /**
+         * @return width
+         */
+        public String getWidth() {
+            return this.width;
+        }
+
+        public static final class Builder {
+            private String bedDesc; 
+            private Integer bedNum; 
+            private String bedSize; 
+            private String bedType; 
+            private String length; 
+            private String width; 
+
+            /**
+             * bed_desc.
+             */
+            public Builder bedDesc(String bedDesc) {
+                this.bedDesc = bedDesc;
+                return this;
+            }
+
+            /**
+             * bed_num.
+             */
+            public Builder bedNum(Integer bedNum) {
+                this.bedNum = bedNum;
+                return this;
+            }
+
+            /**
+             * bed_size.
+             */
+            public Builder bedSize(String bedSize) {
+                this.bedSize = bedSize;
+                return this;
+            }
+
+            /**
+             * bed_type.
+             */
+            public Builder bedType(String bedType) {
+                this.bedType = bedType;
+                return this;
+            }
+
+            /**
+             * length.
+             */
+            public Builder length(String length) {
+                this.length = length;
+                return this;
+            }
+
+            /**
+             * width.
+             */
+            public Builder width(String width) {
+                this.width = width;
+                return this;
+            }
+
+            public RoomInfosBedInfos build() {
+                return new RoomInfosBedInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
+    public static class RoomInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bed_info_group_list")
+        private java.util.List<BedInfoGroupList> bedInfoGroupList;
+
+        @com.aliyun.core.annotation.NameInMap("bed_infos")
+        private java.util.List<RoomInfosBedInfos> bedInfos;
+
+        @com.aliyun.core.annotation.NameInMap("extra_bed")
         private Integer extraBed;
 
-        @NameInMap("extra_bed_desc")
+        @com.aliyun.core.annotation.NameInMap("extra_bed_desc")
         private String extraBedDesc;
 
-        @NameInMap("floor")
+        @com.aliyun.core.annotation.NameInMap("floor")
         private String floor;
 
-        @NameInMap("internet_way")
+        @com.aliyun.core.annotation.NameInMap("internet_way")
         private String internetWay;
 
-        @NameInMap("max_occupancy")
+        @com.aliyun.core.annotation.NameInMap("max_occupancy")
         private Integer maxOccupancy;
 
-        @NameInMap("room_facilities")
+        @com.aliyun.core.annotation.NameInMap("room_facilities")
         private String roomFacilities;
 
-        @NameInMap("room_facility_list")
-        private java.util.List < String > roomFacilityList;
+        @com.aliyun.core.annotation.NameInMap("room_facility_list")
+        private java.util.List<String> roomFacilityList;
 
-        @NameInMap("room_id")
+        @com.aliyun.core.annotation.NameInMap("room_id")
         private String roomId;
 
-        @NameInMap("room_image")
+        @com.aliyun.core.annotation.NameInMap("room_image")
         private String roomImage;
 
-        @NameInMap("room_images")
-        private java.util.List < String > roomImages;
+        @com.aliyun.core.annotation.NameInMap("room_images")
+        private java.util.List<String> roomImages;
 
-        @NameInMap("room_name")
+        @com.aliyun.core.annotation.NameInMap("room_name")
         private String roomName;
 
-        @NameInMap("room_type")
+        @com.aliyun.core.annotation.NameInMap("room_type")
         private Integer roomType;
 
-        @NameInMap("roomarea")
+        @com.aliyun.core.annotation.NameInMap("roomarea")
         private String roomarea;
 
-        @NameInMap("rooms")
+        @com.aliyun.core.annotation.NameInMap("rooms")
         private Integer rooms;
 
-        @NameInMap("window")
+        @com.aliyun.core.annotation.NameInMap("window")
         private String window;
 
-        @NameInMap("window_bad")
+        @com.aliyun.core.annotation.NameInMap("window_bad")
         private String windowBad;
 
-        @NameInMap("window_view")
+        @com.aliyun.core.annotation.NameInMap("window_view")
         private String windowView;
 
         private RoomInfos(Builder builder) {
+            this.bedInfoGroupList = builder.bedInfoGroupList;
             this.bedInfos = builder.bedInfos;
             this.extraBed = builder.extraBed;
             this.extraBedDesc = builder.extraBedDesc;
@@ -659,9 +926,16 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return bedInfoGroupList
+         */
+        public java.util.List<BedInfoGroupList> getBedInfoGroupList() {
+            return this.bedInfoGroupList;
+        }
+
+        /**
          * @return bedInfos
          */
-        public java.util.List < BedInfos> getBedInfos() {
+        public java.util.List<RoomInfosBedInfos> getBedInfos() {
             return this.bedInfos;
         }
 
@@ -710,7 +984,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return roomFacilityList
          */
-        public java.util.List < String > getRoomFacilityList() {
+        public java.util.List<String> getRoomFacilityList() {
             return this.roomFacilityList;
         }
 
@@ -731,7 +1005,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return roomImages
          */
-        public java.util.List < String > getRoomImages() {
+        public java.util.List<String> getRoomImages() {
             return this.roomImages;
         }
 
@@ -785,17 +1059,18 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BedInfos> bedInfos; 
+            private java.util.List<BedInfoGroupList> bedInfoGroupList; 
+            private java.util.List<RoomInfosBedInfos> bedInfos; 
             private Integer extraBed; 
             private String extraBedDesc; 
             private String floor; 
             private String internetWay; 
             private Integer maxOccupancy; 
             private String roomFacilities; 
-            private java.util.List < String > roomFacilityList; 
+            private java.util.List<String> roomFacilityList; 
             private String roomId; 
             private String roomImage; 
-            private java.util.List < String > roomImages; 
+            private java.util.List<String> roomImages; 
             private String roomName; 
             private Integer roomType; 
             private String roomarea; 
@@ -805,9 +1080,17 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String windowView; 
 
             /**
+             * bed_info_group_list.
+             */
+            public Builder bedInfoGroupList(java.util.List<BedInfoGroupList> bedInfoGroupList) {
+                this.bedInfoGroupList = bedInfoGroupList;
+                return this;
+            }
+
+            /**
              * bed_infos.
              */
-            public Builder bedInfos(java.util.List < BedInfos> bedInfos) {
+            public Builder bedInfos(java.util.List<RoomInfosBedInfos> bedInfos) {
                 this.bedInfos = bedInfos;
                 return this;
             }
@@ -863,7 +1146,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * room_facility_list.
              */
-            public Builder roomFacilityList(java.util.List < String > roomFacilityList) {
+            public Builder roomFacilityList(java.util.List<String> roomFacilityList) {
                 this.roomFacilityList = roomFacilityList;
                 return this;
             }
@@ -887,7 +1170,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * room_images.
              */
-            public Builder roomImages(java.util.List < String > roomImages) {
+            public Builder roomImages(java.util.List<String> roomImages) {
                 this.roomImages = roomImages;
                 return this;
             }
@@ -955,107 +1238,113 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class HotelStaticInfos extends TeaModel {
-        @NameInMap("block_room_type_information")
-        private java.util.Map < String, String > blockRoomTypeInformation;
+        @com.aliyun.core.annotation.NameInMap("block_room_type_information")
+        private java.util.Map<String, String> blockRoomTypeInformation;
 
-        @NameInMap("brand")
+        @com.aliyun.core.annotation.NameInMap("brand")
         private String brand;
 
-        @NameInMap("brand_name")
+        @com.aliyun.core.annotation.NameInMap("brand_name")
         private String brandName;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("country")
+        @com.aliyun.core.annotation.NameInMap("country")
         private String country;
 
-        @NameInMap("country_code")
+        @com.aliyun.core.annotation.NameInMap("country_code")
         private String countryCode;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("district")
+        @com.aliyun.core.annotation.NameInMap("district")
         private String district;
 
-        @NameInMap("district_name")
+        @com.aliyun.core.annotation.NameInMap("district_name")
         private String districtName;
 
-        @NameInMap("expand_info")
+        @com.aliyun.core.annotation.NameInMap("expand_info")
         private ExpandInfo expandInfo;
 
-        @NameInMap("hotel_address")
+        @com.aliyun.core.annotation.NameInMap("hotel_address")
         private String hotelAddress;
 
-        @NameInMap("hotel_en_address")
+        @com.aliyun.core.annotation.NameInMap("hotel_en_address")
         private String hotelEnAddress;
 
-        @NameInMap("hotel_en_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_en_name")
         private String hotelEnName;
 
-        @NameInMap("hotel_id")
+        @com.aliyun.core.annotation.NameInMap("hotel_id")
         private String hotelId;
 
-        @NameInMap("hotel_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_name")
         private String hotelName;
 
-        @NameInMap("hotel_open_time")
+        @com.aliyun.core.annotation.NameInMap("hotel_open_time")
         private String hotelOpenTime;
 
-        @NameInMap("hotel_phones")
+        @com.aliyun.core.annotation.NameInMap("hotel_phones")
         private String hotelPhones;
 
-        @NameInMap("hotel_policies")
+        @com.aliyun.core.annotation.NameInMap("hotel_policies")
         private String hotelPolicies;
 
-        @NameInMap("hotelfax")
+        @com.aliyun.core.annotation.NameInMap("hotelfax")
         private String hotelfax;
 
-        @NameInMap("hotelpics")
+        @com.aliyun.core.annotation.NameInMap("hotelpics")
         private String hotelpics;
 
-        @NameInMap("imageinfos")
-        private java.util.List < Imageinfos> imageinfos;
+        @com.aliyun.core.annotation.NameInMap("imageinfos")
+        private java.util.List<Imageinfos> imageinfos;
 
-        @NameInMap("invoice_provider_method")
+        @com.aliyun.core.annotation.NameInMap("invoice_provider_method")
         private String invoiceProviderMethod;
 
-        @NameInMap("invoice_types")
-        private java.util.List < Integer > invoiceTypes;
+        @com.aliyun.core.annotation.NameInMap("invoice_types")
+        private java.util.List<Integer> invoiceTypes;
 
-        @NameInMap("location")
+        @com.aliyun.core.annotation.NameInMap("location")
         private String location;
 
-        @NameInMap("province")
+        @com.aliyun.core.annotation.NameInMap("province")
         private String province;
 
-        @NameInMap("province_name")
+        @com.aliyun.core.annotation.NameInMap("province_name")
         private String provinceName;
 
-        @NameInMap("rating_average")
+        @com.aliyun.core.annotation.NameInMap("rating_average")
         private String ratingAverage;
 
-        @NameInMap("room_infos")
-        private java.util.List < RoomInfos> roomInfos;
+        @com.aliyun.core.annotation.NameInMap("room_infos")
+        private java.util.List<RoomInfos> roomInfos;
 
-        @NameInMap("star")
+        @com.aliyun.core.annotation.NameInMap("star")
         private String star;
 
-        @NameInMap("star_rate")
+        @com.aliyun.core.annotation.NameInMap("star_rate")
         private String starRate;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("themes")
+        @com.aliyun.core.annotation.NameInMap("themes")
         private String themes;
 
-        @NameInMap("visa_reminding")
+        @com.aliyun.core.annotation.NameInMap("visa_reminding")
         private Boolean visaReminding;
 
         private HotelStaticInfos(Builder builder) {
@@ -1106,7 +1395,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return blockRoomTypeInformation
          */
-        public java.util.Map < String, String > getBlockRoomTypeInformation() {
+        public java.util.Map<String, String> getBlockRoomTypeInformation() {
             return this.blockRoomTypeInformation;
         }
 
@@ -1253,7 +1542,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return imageinfos
          */
-        public java.util.List < Imageinfos> getImageinfos() {
+        public java.util.List<Imageinfos> getImageinfos() {
             return this.imageinfos;
         }
 
@@ -1267,7 +1556,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return invoiceTypes
          */
-        public java.util.List < Integer > getInvoiceTypes() {
+        public java.util.List<Integer> getInvoiceTypes() {
             return this.invoiceTypes;
         }
 
@@ -1302,7 +1591,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return roomInfos
          */
-        public java.util.List < RoomInfos> getRoomInfos() {
+        public java.util.List<RoomInfos> getRoomInfos() {
             return this.roomInfos;
         }
 
@@ -1342,7 +1631,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > blockRoomTypeInformation; 
+            private java.util.Map<String, String> blockRoomTypeInformation; 
             private String brand; 
             private String brandName; 
             private String cityCode; 
@@ -1363,14 +1652,14 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String hotelPolicies; 
             private String hotelfax; 
             private String hotelpics; 
-            private java.util.List < Imageinfos> imageinfos; 
+            private java.util.List<Imageinfos> imageinfos; 
             private String invoiceProviderMethod; 
-            private java.util.List < Integer > invoiceTypes; 
+            private java.util.List<Integer> invoiceTypes; 
             private String location; 
             private String province; 
             private String provinceName; 
             private String ratingAverage; 
-            private java.util.List < RoomInfos> roomInfos; 
+            private java.util.List<RoomInfos> roomInfos; 
             private String star; 
             private String starRate; 
             private String status; 
@@ -1380,7 +1669,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * block_room_type_information.
              */
-            public Builder blockRoomTypeInformation(java.util.Map < String, String > blockRoomTypeInformation) {
+            public Builder blockRoomTypeInformation(java.util.Map<String, String> blockRoomTypeInformation) {
                 this.blockRoomTypeInformation = blockRoomTypeInformation;
                 return this;
             }
@@ -1548,7 +1837,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * imageinfos.
              */
-            public Builder imageinfos(java.util.List < Imageinfos> imageinfos) {
+            public Builder imageinfos(java.util.List<Imageinfos> imageinfos) {
                 this.imageinfos = imageinfos;
                 return this;
             }
@@ -1564,7 +1853,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * invoice_types.
              */
-            public Builder invoiceTypes(java.util.List < Integer > invoiceTypes) {
+            public Builder invoiceTypes(java.util.List<Integer> invoiceTypes) {
                 this.invoiceTypes = invoiceTypes;
                 return this;
             }
@@ -1604,7 +1893,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             /**
              * room_infos.
              */
-            public Builder roomInfos(java.util.List < RoomInfos> roomInfos) {
+            public Builder roomInfos(java.util.List<RoomInfos> roomInfos) {
                 this.roomInfos = roomInfos;
                 return this;
             }
@@ -1656,9 +1945,15 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotelStaticInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelStaticInfoResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("hotel_static_infos")
-        private java.util.List < HotelStaticInfos> hotelStaticInfos;
+        @com.aliyun.core.annotation.NameInMap("hotel_static_infos")
+        private java.util.List<HotelStaticInfos> hotelStaticInfos;
 
         private Module(Builder builder) {
             this.hotelStaticInfos = builder.hotelStaticInfos;
@@ -1675,17 +1970,17 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         /**
          * @return hotelStaticInfos
          */
-        public java.util.List < HotelStaticInfos> getHotelStaticInfos() {
+        public java.util.List<HotelStaticInfos> getHotelStaticInfos() {
             return this.hotelStaticInfos;
         }
 
         public static final class Builder {
-            private java.util.List < HotelStaticInfos> hotelStaticInfos; 
+            private java.util.List<HotelStaticInfos> hotelStaticInfos; 
 
             /**
              * hotel_static_infos.
              */
-            public Builder hotelStaticInfos(java.util.List < HotelStaticInfos> hotelStaticInfos) {
+            public Builder hotelStaticInfos(java.util.List<HotelStaticInfos> hotelStaticInfos) {
                 this.hotelStaticInfos = hotelStaticInfos;
                 return this;
             }

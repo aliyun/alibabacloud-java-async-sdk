@@ -1,57 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDocumentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDocumentResponseBody</p>
  */
 public class DescribeDocumentResponseBody extends TeaModel {
-    @NameInMap("DocsCount")
+    @com.aliyun.core.annotation.NameInMap("ChunkFileUrl")
+    private String chunkFileUrl;
+
+    @com.aliyun.core.annotation.NameInMap("DocsCount")
     private Integer docsCount;
 
-    @NameInMap("DocumentLoader")
+    @com.aliyun.core.annotation.NameInMap("DocumentLoader")
     private String documentLoader;
 
-    @NameInMap("FileExt")
+    @com.aliyun.core.annotation.NameInMap("FileExt")
     private String fileExt;
 
-    @NameInMap("FileMd5")
+    @com.aliyun.core.annotation.NameInMap("FileMd5")
     private String fileMd5;
 
-    @NameInMap("FileMtime")
+    @com.aliyun.core.annotation.NameInMap("FileMtime")
     private String fileMtime;
 
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @NameInMap("FileSize")
+    @com.aliyun.core.annotation.NameInMap("FileSize")
     private Long fileSize;
 
-    @NameInMap("FileVersion")
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
+    private String fileUrl;
+
+    @com.aliyun.core.annotation.NameInMap("FileVersion")
     private Integer fileVersion;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("PlainChunkFileUrl")
+    private String plainChunkFileUrl;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TextSplitter")
+    @com.aliyun.core.annotation.NameInMap("TextSplitter")
     private String textSplitter;
 
     private DescribeDocumentResponseBody(Builder builder) {
+        this.chunkFileUrl = builder.chunkFileUrl;
         this.docsCount = builder.docsCount;
         this.documentLoader = builder.documentLoader;
         this.fileExt = builder.fileExt;
@@ -59,8 +74,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         this.fileMtime = builder.fileMtime;
         this.fileName = builder.fileName;
         this.fileSize = builder.fileSize;
+        this.fileUrl = builder.fileUrl;
         this.fileVersion = builder.fileVersion;
         this.message = builder.message;
+        this.plainChunkFileUrl = builder.plainChunkFileUrl;
         this.requestId = builder.requestId;
         this.source = builder.source;
         this.status = builder.status;
@@ -73,6 +90,13 @@ public class DescribeDocumentResponseBody extends TeaModel {
 
     public static DescribeDocumentResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return chunkFileUrl
+     */
+    public String getChunkFileUrl() {
+        return this.chunkFileUrl;
     }
 
     /**
@@ -125,6 +149,13 @@ public class DescribeDocumentResponseBody extends TeaModel {
     }
 
     /**
+     * @return fileUrl
+     */
+    public String getFileUrl() {
+        return this.fileUrl;
+    }
+
+    /**
      * @return fileVersion
      */
     public Integer getFileVersion() {
@@ -136,6 +167,13 @@ public class DescribeDocumentResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return plainChunkFileUrl
+     */
+    public String getPlainChunkFileUrl() {
+        return this.plainChunkFileUrl;
     }
 
     /**
@@ -167,6 +205,7 @@ public class DescribeDocumentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String chunkFileUrl; 
         private Integer docsCount; 
         private String documentLoader; 
         private String fileExt; 
@@ -174,15 +213,31 @@ public class DescribeDocumentResponseBody extends TeaModel {
         private String fileMtime; 
         private String fileName; 
         private Long fileSize; 
+        private String fileUrl; 
         private Integer fileVersion; 
         private String message; 
+        private String plainChunkFileUrl; 
         private String requestId; 
         private String source; 
         private String status; 
         private String textSplitter; 
 
         /**
-         * DocsCount.
+         * <p>URL of the split file, valid for 2 hours. The file format is JSONL, with each line formatted as <code>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.xxx/music_chunk.jsonl">http://oss.xxx/music_chunk.jsonl</a></p>
+         */
+        public Builder chunkFileUrl(String chunkFileUrl) {
+            this.chunkFileUrl = chunkFileUrl;
+            return this;
+        }
+
+        /**
+         * <p>Number of documents after splitting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder docsCount(Integer docsCount) {
             this.docsCount = docsCount;
@@ -190,7 +245,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * DocumentLoader.
+         * <p>Name of the document loader.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RapidOCRPDFLoader</p>
          */
         public Builder documentLoader(String documentLoader) {
             this.documentLoader = documentLoader;
@@ -198,7 +256,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * FileExt.
+         * <p>File extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>txt</p>
          */
         public Builder fileExt(String fileExt) {
             this.fileExt = fileExt;
@@ -206,7 +267,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * FileMd5.
+         * <p>MD5 value of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b8078c9591413550f8963e37e24abcea</p>
          */
         public Builder fileMd5(String fileMd5) {
             this.fileMd5 = fileMd5;
@@ -214,7 +278,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * FileMtime.
+         * <p>The last modified time of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-01 10:01:01.123456</p>
          */
         public Builder fileMtime(String fileMtime) {
             this.fileMtime = fileMtime;
@@ -222,7 +289,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * FileName.
+         * <p>File name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>music.txt</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -230,7 +300,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * FileSize.
+         * <p>File size, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder fileSize(Long fileSize) {
             this.fileSize = fileSize;
@@ -238,7 +311,21 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * FileVersion.
+         * <p>Download URL of the document, valid for 2 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.xxx/music.txt">http://oss.xxx/music.txt</a></p>
+         */
+        public Builder fileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+
+        /**
+         * <p>Document version. This value increments by 1 each time the same document is updated and uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fileVersion(Integer fileVersion) {
             this.fileVersion = fileVersion;
@@ -246,7 +333,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Detailed information returned by the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -254,7 +344,21 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Download URL for the plain text (without metadata) after splitting, each line is a chunk, valid for 2 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.xxx/music_plain_chunk.txt">http://oss.xxx/music_plain_chunk.txt</a></p>
+         */
+        public Builder plainChunkFileUrl(String plainChunkFileUrl) {
+            this.plainChunkFileUrl = plainChunkFileUrl;
+            return this;
+        }
+
+        /**
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -262,7 +366,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>Source of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -270,7 +377,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>API execution status, with values as follows:</p>
+         * <ul>
+         * <li><strong>success</strong>: Execution succeeded.</li>
+         * <li><strong>fail</strong>: Execution failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -278,7 +392,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * TextSplitter.
+         * <p>Name of the text splitter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChineseRecursiveTextSplitter</p>
          */
         public Builder textSplitter(String textSplitter) {
             this.textSplitter = textSplitter;

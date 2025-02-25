@@ -1,46 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RedeployDedicatedHostRequest} extends {@link RequestModel}
  *
  * <p>RedeployDedicatedHostRequest</p>
  */
 public class RedeployDedicatedHostRequest extends Request {
-    @Query
-    @NameInMap("DedicatedHostId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedHostId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationType")
+    private String migrationType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private RedeployDedicatedHostRequest(Builder builder) {
         super(builder);
         this.dedicatedHostId = builder.dedicatedHostId;
+        this.migrationType = builder.migrationType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -66,6 +76,13 @@ public class RedeployDedicatedHostRequest extends Request {
      */
     public String getDedicatedHostId() {
         return this.dedicatedHostId;
+    }
+
+    /**
+     * @return migrationType
+     */
+    public String getMigrationType() {
+        return this.migrationType;
     }
 
     /**
@@ -105,6 +122,7 @@ public class RedeployDedicatedHostRequest extends Request {
 
     public static final class Builder extends Request.Builder<RedeployDedicatedHostRequest, Builder> {
         private String dedicatedHostId; 
+        private String migrationType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -118,6 +136,7 @@ public class RedeployDedicatedHostRequest extends Request {
         private Builder(RedeployDedicatedHostRequest request) {
             super(request);
             this.dedicatedHostId = request.dedicatedHostId;
+            this.migrationType = request.migrationType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -126,11 +145,24 @@ public class RedeployDedicatedHostRequest extends Request {
         } 
 
         /**
-         * The ID of the dedicated host.
+         * <p>The ID of the dedicated host.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp165p6xk2tlw61e****</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
             this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+
+        /**
+         * MigrationType.
+         */
+        public Builder migrationType(String migrationType) {
+            this.putQueryParameter("MigrationType", migrationType);
+            this.migrationType = migrationType;
             return this;
         }
 
@@ -153,7 +185,11 @@ public class RedeployDedicatedHostRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

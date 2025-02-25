@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwidthLimitationRequest} extends {@link RequestModel}
  *
  * <p>DescribeBandwidthLimitationRequest</p>
  */
 public class DescribeBandwidthLimitationRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
     private DescribeBandwidthLimitationRequest(Builder builder) {
@@ -205,16 +210,15 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The preemption policy for the preemptible or pay-as-you-go instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   NoSpot: The instance is a regular pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
-         * *   SpotAsPriceGo: The system automatically offers a bid, which is not higher than the pay-as-you-go price for the same instance type.
-         * 
-         * Default value: NoSpot.
-         * 
-         * >  This parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -223,14 +227,11 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * Specifies the operation for which to query the maximum public bandwidth. Valid values:
-         * <p>
+         * <p>The instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   Upgrade: upgrades the public bandwidth.
-         * *   Downgrade: downgrades the public bandwidth.
-         * *   Create: creates an ECS instance.
-         * 
-         * Default value: Create.
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -239,7 +240,16 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * 473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E
+         * <p>Specifies the operation for which to query the maximum public bandwidth. Valid values:</p>
+         * <ul>
+         * <li>Upgrade: upgrades the public bandwidth.</li>
+         * <li>Downgrade: downgrades the public bandwidth.</li>
+         * <li>Create: creates an ECS instance.</li>
+         * </ul>
+         * <p>Default value: Create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -266,7 +276,11 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * PrePaid
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -275,7 +289,13 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The resource ID.</p>
+         * <blockquote>
+         * <p> This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph***</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -302,10 +322,19 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
-         * <p>
+         * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
+         * <blockquote>
+         * <p> The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);

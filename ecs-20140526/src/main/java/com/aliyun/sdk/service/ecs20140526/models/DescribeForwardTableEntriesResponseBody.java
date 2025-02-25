@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeForwardTableEntriesResponseBody</p>
  */
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
-    @NameInMap("ForwardTableEntries")
+    @com.aliyun.core.annotation.NameInMap("ForwardTableEntries")
     private ForwardTableEntries forwardTableEntries;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeForwardTableEntriesResponseBody(Builder builder) {
@@ -131,29 +136,35 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeForwardTableEntriesResponseBody</p>
+     */
     public static class ForwardTableEntry extends TeaModel {
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
 
-        @NameInMap("ExternalPort")
+        @com.aliyun.core.annotation.NameInMap("ExternalPort")
         private String externalPort;
 
-        @NameInMap("ForwardEntryId")
+        @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
         private String forwardEntryId;
 
-        @NameInMap("ForwardTableId")
+        @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private String forwardTableId;
 
-        @NameInMap("InternalIp")
+        @com.aliyun.core.annotation.NameInMap("InternalIp")
         private String internalIp;
 
-        @NameInMap("InternalPort")
+        @com.aliyun.core.annotation.NameInMap("InternalPort")
         private String internalPort;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ForwardTableEntry(Builder builder) {
@@ -312,9 +323,15 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeForwardTableEntriesResponseBody</p>
+     */
     public static class ForwardTableEntries extends TeaModel {
-        @NameInMap("ForwardTableEntry")
-        private java.util.List < ForwardTableEntry> forwardTableEntry;
+        @com.aliyun.core.annotation.NameInMap("ForwardTableEntry")
+        private java.util.List<ForwardTableEntry> forwardTableEntry;
 
         private ForwardTableEntries(Builder builder) {
             this.forwardTableEntry = builder.forwardTableEntry;
@@ -331,17 +348,17 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * @return forwardTableEntry
          */
-        public java.util.List < ForwardTableEntry> getForwardTableEntry() {
+        public java.util.List<ForwardTableEntry> getForwardTableEntry() {
             return this.forwardTableEntry;
         }
 
         public static final class Builder {
-            private java.util.List < ForwardTableEntry> forwardTableEntry; 
+            private java.util.List<ForwardTableEntry> forwardTableEntry; 
 
             /**
              * ForwardTableEntry.
              */
-            public Builder forwardTableEntry(java.util.List < ForwardTableEntry> forwardTableEntry) {
+            public Builder forwardTableEntry(java.util.List<ForwardTableEntry> forwardTableEntry) {
                 this.forwardTableEntry = forwardTableEntry;
                 return this;
             }

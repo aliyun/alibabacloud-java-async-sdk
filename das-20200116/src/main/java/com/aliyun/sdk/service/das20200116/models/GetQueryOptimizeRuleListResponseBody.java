@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueryOptimizeRuleListResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueryOptimizeRuleListResponseBody</p>
  */
 public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetQueryOptimizeRuleListResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information.
+         * <p>The detailed information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -135,14 +152,20 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueryOptimizeRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeRuleListResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private List(Builder builder) {
@@ -186,7 +209,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the tag.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LARGE_ROWS_EXAMINED</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +220,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -202,7 +231,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the tag. **Predefined** is returned, which indicates that the tag is added by the system.
+             * <p>The type of the tag. <strong>Predefined</strong> is returned, which indicates that the tag is added by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Predefined</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -216,20 +248,26 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueryOptimizeRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueryOptimizeRuleListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -258,7 +296,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -285,13 +323,16 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String extra; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -299,15 +340,18 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about tags.
+             * <p>The information about tags.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -315,7 +359,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -323,7 +370,10 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;

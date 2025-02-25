@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetMediaInfoResponseBody</p>
  */
 public class GetMediaInfoResponseBody extends TeaModel {
-    @NameInMap("MediaInfo")
+    @com.aliyun.core.annotation.NameInMap("MediaInfo")
     private MediaInfo mediaInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaInfoResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaInfo.
+         * <p>The information about the media asset.</p>
          */
         public Builder mediaInfo(MediaInfo mediaInfo) {
             this.mediaInfo = mediaInfo;
@@ -58,7 +63,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FDE2411-DB8D-4A9A-875B-275798F14A5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,226 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     } 
 
-    public static class AiRoughData extends TeaModel {
-        @NameInMap("AiCategory")
-        private String aiCategory;
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
+    public static class Results extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private String data;
 
-        @NameInMap("AiJobId")
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Results(Builder builder) {
+            this.data = builder.data;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Results create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public String getData() {
+            return this.data;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String data; 
+            private String type; 
+
+            /**
+             * <p>The result data. The value is a JSON string. For information about the data structures of different data types&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-querysmarttagjob?spm=a2c4g.11186623.0.0.521d48b7KfapOL#api-detail-40">Description of the Results parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;autoChapters&quot;: [...]}</p>
+             */
+            public Builder data(String data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * <p>The tagging type. Valid values:</p>
+             * <ul>
+             * <li>NLP: natural language processing (NLP)-based tagging</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NLP</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Results build() {
+                return new Results(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
+    public static class StandardSmartTagJob extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiJobId")
         private String aiJobId;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("ResultUrl")
+        private String resultUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Results")
+        private java.util.List<Results> results;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private StandardSmartTagJob(Builder builder) {
+            this.aiJobId = builder.aiJobId;
+            this.resultUrl = builder.resultUrl;
+            this.results = builder.results;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StandardSmartTagJob create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aiJobId
+         */
+        public String getAiJobId() {
+            return this.aiJobId;
+        }
+
+        /**
+         * @return resultUrl
+         */
+        public String getResultUrl() {
+            return this.resultUrl;
+        }
+
+        /**
+         * @return results
+         */
+        public java.util.List<Results> getResults() {
+            return this.results;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String aiJobId; 
+            private String resultUrl; 
+            private java.util.List<Results> results; 
+            private String status; 
+
+            /**
+             * <p>The ID of the AI task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>483915d4f2cd8ac20b48fb04</strong></strong></p>
+             */
+            public Builder aiJobId(String aiJobId) {
+                this.aiJobId = aiJobId;
+                return this;
+            }
+
+            /**
+             * <p>The URL of the tagging result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xx.oss-cn-shanghai.aliyuncs.com/result2.txt">http://xx.oss-cn-shanghai.aliyuncs.com/result2.txt</a></p>
+             */
+            public Builder resultUrl(String resultUrl) {
+                this.resultUrl = resultUrl;
+                return this;
+            }
+
+            /**
+             * <p>The recognized tags.</p>
+             */
+            public Builder results(java.util.List<Results> results) {
+                this.results = results;
+                return this;
+            }
+
+            /**
+             * <p>The analysis status. Valid values:</p>
+             * <ul>
+             * <li>Analyzing</li>
+             * <li>AnalyzeSuccess</li>
+             * <li>AnalyzeFailed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyzing</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public StandardSmartTagJob build() {
+                return new StandardSmartTagJob(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
+    public static class AiRoughData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiCategory")
+        private String aiCategory;
+
+        @com.aliyun.core.annotation.NameInMap("AiJobId")
+        private String aiJobId;
+
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("SaveType")
+        @com.aliyun.core.annotation.NameInMap("SaveType")
         private String saveType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("StandardSmartTagJob")
+        private StandardSmartTagJob standardSmartTagJob;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AiRoughData(Builder builder) {
@@ -92,6 +306,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             this.aiJobId = builder.aiJobId;
             this.result = builder.result;
             this.saveType = builder.saveType;
+            this.standardSmartTagJob = builder.standardSmartTagJob;
             this.status = builder.status;
         }
 
@@ -132,6 +347,13 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return standardSmartTagJob
+         */
+        public StandardSmartTagJob getStandardSmartTagJob() {
+            return this.standardSmartTagJob;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -143,10 +365,20 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String aiJobId; 
             private String result; 
             private String saveType; 
+            private StandardSmartTagJob standardSmartTagJob; 
             private String status; 
 
             /**
-             * AiCategory.
+             * <p>The AI category. Valid values:</p>
+             * <ul>
+             * <li>Life</li>
+             * <li>Good-looking</li>
+             * <li>Cute pets</li>
+             * <li>News</li>
+             * <li>Ads</li>
+             * <li>Environmental resources</li>
+             * <li>Automobile</li>
+             * </ul>
              */
             public Builder aiCategory(String aiCategory) {
                 this.aiCategory = aiCategory;
@@ -154,7 +386,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AiJobId.
+             * <p>The ID of the AI task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>483915d4f2cd8ac20b48fb04</strong></strong></p>
              */
             public Builder aiJobId(String aiJobId) {
                 this.aiJobId = aiJobId;
@@ -162,7 +397,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The analysis result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://sample-bucket.cn-shanghai.aliyuncs.com/result.json">https://sample-bucket.cn-shanghai.aliyuncs.com/result.json</a></p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -170,7 +408,13 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SaveType.
+             * <p>The storage type. This parameter indicates the library in which the analysis data is stored. Valid values:</p>
+             * <ul>
+             * <li>TEXT: the text library.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder saveType(String saveType) {
                 this.saveType = saveType;
@@ -178,7 +422,29 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The information about the tagging job.</p>
+             */
+            public Builder standardSmartTagJob(StandardSmartTagJob standardSmartTagJob) {
+                this.standardSmartTagJob = standardSmartTagJob;
+                return this;
+            }
+
+            /**
+             * <p>The analysis status. Valid values:</p>
+             * <ul>
+             * <li>Analyzing</li>
+             * <li>AnalyzeSuccess</li>
+             * <li>AnalyzeFailed</li>
+             * <li>Saving</li>
+             * <li>SaveSuccess</li>
+             * <li>SaveFailed</li>
+             * <li>Deleting</li>
+             * <li>DeleteSuccess</li>
+             * <li>DeleteFailed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Analyzing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -192,59 +458,65 @@ public class GetMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
     public static class AudioStreamInfoList extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("ChannelLayout")
+        @com.aliyun.core.annotation.NameInMap("ChannelLayout")
         private String channelLayout;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("NumFrames")
+        @com.aliyun.core.annotation.NameInMap("NumFrames")
         private String numFrames;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("SampleFmt")
+        @com.aliyun.core.annotation.NameInMap("SampleFmt")
         private String sampleFmt;
 
-        @NameInMap("SampleRate")
+        @com.aliyun.core.annotation.NameInMap("SampleRate")
         private String sampleRate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
         private AudioStreamInfoList(Builder builder) {
@@ -423,7 +695,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String timebase; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.794</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -431,7 +706,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * <p>The output layout of sound channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stereo</p>
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -439,7 +717,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of sound channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -447,7 +728,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The full name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC (Advanced Audio Coding)</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -455,7 +739,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -463,7 +750,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The tag of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x6134706d</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -471,7 +761,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The tag string of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4a</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -479,7 +772,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The time base of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/24000</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -487,7 +783,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.200998</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -495,7 +794,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The audio frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -503,7 +805,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the audio track.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -511,7 +816,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>und</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -519,7 +827,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -527,7 +838,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -535,7 +849,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * <p>The sampling format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fltp</p>
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -543,7 +860,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SampleRate.
+             * <p>The sampling rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder sampleRate(String sampleRate) {
                 this.sampleRate = sampleRate;
@@ -551,7 +871,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -559,7 +882,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -573,44 +899,50 @@ public class GetMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
     public static class FileBasicInfo extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("FileStatus")
+        @com.aliyun.core.annotation.NameInMap("FileStatus")
         private String fileStatus;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private FileBasicInfo(Builder builder) {
@@ -744,7 +1076,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1132.68</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -752,7 +1087,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -760,7 +1098,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216.206667</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -768,7 +1109,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.mp4</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -776,7 +1120,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30611502</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -784,7 +1131,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileStatus.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder fileStatus(String fileStatus) {
                 this.fileStatus = fileStatus;
@@ -792,7 +1142,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -800,7 +1153,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The OSS URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -808,7 +1164,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -816,7 +1175,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -824,7 +1186,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -832,7 +1197,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -840,7 +1208,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -854,35 +1225,41 @@ public class GetMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
     public static class SubtitleStreamInfoList extends TeaModel {
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
         private SubtitleStreamInfoList(Builder builder) {
@@ -989,7 +1366,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String timebase; 
 
             /**
-             * CodecLongName.
+             * <p>The full name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubRip Text</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -997,7 +1377,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srt</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1005,7 +1388,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The tag of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1013,7 +1399,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The tag string of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1021,7 +1410,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The time base of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29.97</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1029,7 +1421,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1037,7 +1432,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the subtitle track.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1045,7 +1443,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>und</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1053,7 +1454,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1061,7 +1465,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1075,77 +1482,83 @@ public class GetMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
     public static class VideoStreamInfoList extends TeaModel {
-        @NameInMap("AvgFPS")
+        @com.aliyun.core.annotation.NameInMap("AvgFPS")
         private String avgFPS;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Dar")
+        @com.aliyun.core.annotation.NameInMap("Dar")
         private String dar;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("HasBFrames")
+        @com.aliyun.core.annotation.NameInMap("HasBFrames")
         private String hasBFrames;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Nb_frames")
+        @com.aliyun.core.annotation.NameInMap("Nb_frames")
         private String nbFrames;
 
-        @NameInMap("NumFrames")
+        @com.aliyun.core.annotation.NameInMap("NumFrames")
         private String numFrames;
 
-        @NameInMap("PixFmt")
+        @com.aliyun.core.annotation.NameInMap("PixFmt")
         private String pixFmt;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Rotate")
+        @com.aliyun.core.annotation.NameInMap("Rotate")
         private String rotate;
 
-        @NameInMap("Sar")
+        @com.aliyun.core.annotation.NameInMap("Sar")
         private String sar;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private VideoStreamInfoList(Builder builder) {
@@ -1378,7 +1791,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * AvgFPS.
+             * <p>The average video frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -1386,7 +1802,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001.594</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1394,7 +1813,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The full name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -1402,7 +1824,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1410,7 +1835,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The tag of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x0000</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1418,7 +1846,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The tag string of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0][0][0][0]</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1426,7 +1857,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The time base of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/48</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1434,7 +1868,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Dar.
+             * <p>The display aspect ratio (DAR).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -1442,7 +1879,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216.206706</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1450,7 +1890,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The video frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1458,7 +1901,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HasBFrames.
+             * <p>Indicates whether the video track contains bidirectional frames (B-frames).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -1466,7 +1912,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1474,7 +1923,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the video track.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1482,7 +1934,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>und</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1490,7 +1945,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The codec level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1498,7 +1956,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Nb_frames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5184</p>
              */
             public Builder nbFrames(String nbFrames) {
                 this.nbFrames = nbFrames;
@@ -1506,7 +1967,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5184</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -1514,7 +1978,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * <p>The pixel format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1522,7 +1989,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1530,7 +2000,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * <p>The rotation angle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -1538,7 +2011,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Sar.
+             * <p>The sample aspect ratio (SAR).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -1546,7 +2022,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.081706</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1554,7 +2033,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/12288</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1562,7 +2044,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1576,18 +2061,24 @@ public class GetMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
     public static class FileInfoList extends TeaModel {
-        @NameInMap("AudioStreamInfoList")
-        private java.util.List < AudioStreamInfoList> audioStreamInfoList;
+        @com.aliyun.core.annotation.NameInMap("AudioStreamInfoList")
+        private java.util.List<AudioStreamInfoList> audioStreamInfoList;
 
-        @NameInMap("FileBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("FileBasicInfo")
         private FileBasicInfo fileBasicInfo;
 
-        @NameInMap("SubtitleStreamInfoList")
-        private java.util.List < SubtitleStreamInfoList> subtitleStreamInfoList;
+        @com.aliyun.core.annotation.NameInMap("SubtitleStreamInfoList")
+        private java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList;
 
-        @NameInMap("VideoStreamInfoList")
-        private java.util.List < VideoStreamInfoList> videoStreamInfoList;
+        @com.aliyun.core.annotation.NameInMap("VideoStreamInfoList")
+        private java.util.List<VideoStreamInfoList> videoStreamInfoList;
 
         private FileInfoList(Builder builder) {
             this.audioStreamInfoList = builder.audioStreamInfoList;
@@ -1607,7 +2098,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         /**
          * @return audioStreamInfoList
          */
-        public java.util.List < AudioStreamInfoList> getAudioStreamInfoList() {
+        public java.util.List<AudioStreamInfoList> getAudioStreamInfoList() {
             return this.audioStreamInfoList;
         }
 
@@ -1621,33 +2112,33 @@ public class GetMediaInfoResponseBody extends TeaModel {
         /**
          * @return subtitleStreamInfoList
          */
-        public java.util.List < SubtitleStreamInfoList> getSubtitleStreamInfoList() {
+        public java.util.List<SubtitleStreamInfoList> getSubtitleStreamInfoList() {
             return this.subtitleStreamInfoList;
         }
 
         /**
          * @return videoStreamInfoList
          */
-        public java.util.List < VideoStreamInfoList> getVideoStreamInfoList() {
+        public java.util.List<VideoStreamInfoList> getVideoStreamInfoList() {
             return this.videoStreamInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < AudioStreamInfoList> audioStreamInfoList; 
+            private java.util.List<AudioStreamInfoList> audioStreamInfoList; 
             private FileBasicInfo fileBasicInfo; 
-            private java.util.List < SubtitleStreamInfoList> subtitleStreamInfoList; 
-            private java.util.List < VideoStreamInfoList> videoStreamInfoList; 
+            private java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList; 
+            private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
             /**
-             * AudioStreamInfoList.
+             * <p>The information about the audio tracks. A media asset may have multiple audio tracks.</p>
              */
-            public Builder audioStreamInfoList(java.util.List < AudioStreamInfoList> audioStreamInfoList) {
+            public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
                 return this;
             }
 
             /**
-             * FileBasicInfo.
+             * <p>The basic information about the file, including the duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -1655,17 +2146,17 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleStreamInfoList.
+             * <p>The information about the subtitle tracks. A media asset may have multiple subtitle tracks.</p>
              */
-            public Builder subtitleStreamInfoList(java.util.List < SubtitleStreamInfoList> subtitleStreamInfoList) {
+            public Builder subtitleStreamInfoList(java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList) {
                 this.subtitleStreamInfoList = subtitleStreamInfoList;
                 return this;
             }
 
             /**
-             * VideoStreamInfoList.
+             * <p>The information about the video tracks. A media asset may have multiple video tracks.</p>
              */
-            public Builder videoStreamInfoList(java.util.List < VideoStreamInfoList> videoStreamInfoList) {
+            public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
                 return this;
             }
@@ -1677,68 +2168,77 @@ public class GetMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
     public static class MediaBasicInfo extends TeaModel {
-        @NameInMap("Biz")
+        @com.aliyun.core.annotation.NameInMap("Biz")
         private String biz;
 
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletedTime")
+        @com.aliyun.core.annotation.NameInMap("DeletedTime")
         private String deletedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InputURL")
+        @com.aliyun.core.annotation.NameInMap("InputURL")
         private String inputURL;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaTags")
+        @com.aliyun.core.annotation.NameInMap("MediaTags")
         private String mediaTags;
 
-        @NameInMap("MediaType")
+        @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
+        private String snapshots;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SpriteImages")
+        @com.aliyun.core.annotation.NameInMap("SpriteImages")
         private String spriteImages;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UploadSource")
+        @com.aliyun.core.annotation.NameInMap("UploadSource")
         private String uploadSource;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaBasicInfo(Builder builder) {
@@ -1757,6 +2257,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             this.mediaType = builder.mediaType;
             this.modifiedTime = builder.modifiedTime;
             this.referenceId = builder.referenceId;
+            this.snapshots = builder.snapshots;
             this.source = builder.source;
             this.spriteImages = builder.spriteImages;
             this.status = builder.status;
@@ -1879,6 +2380,13 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshots
+         */
+        public String getSnapshots() {
+            return this.snapshots;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -1936,6 +2444,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String mediaType; 
             private String modifiedTime; 
             private String referenceId; 
+            private String snapshots; 
             private String source; 
             private String spriteImages; 
             private String status; 
@@ -1944,7 +2453,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Biz.
+             * <p>The service to which the media asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ICE</p>
              */
             public Builder biz(String biz) {
                 this.biz = biz;
@@ -1952,7 +2464,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessType.
+             * <p>The business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -1960,7 +2475,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CateId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3048</p>
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -1968,7 +2486,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cateName</p>
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -1976,7 +2497,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The category.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1984,7 +2505,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The URL of the thumbnail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -1992,7 +2516,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the media asset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2000,7 +2527,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DeletedTime.
+             * <p>The time when the media asset was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:15Z</p>
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -2008,7 +2538,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The content description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2016,7 +2546,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InputURL.
+             * <p>The input URL of the media asset in another service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
              */
             public Builder inputURL(String inputURL) {
                 this.inputURL = inputURL;
@@ -2024,7 +2557,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -2032,7 +2568,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags.</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -2040,7 +2576,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The type of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -2048,7 +2587,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the media asset was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2056,7 +2598,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReferenceId.
+             * <p>The custom ID. The ID can be 6 to 64 characters in length and can contain only letters, digits, hyphens (-), and underscores (_). The ID is unique among users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-1234</p>
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
@@ -2064,7 +2609,25 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00001.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00001.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken>&quot;,
+             *     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00002.jpg?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00002.jpg?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken>&quot;,
+             *     &quot;<a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00003.jpg?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/snapshot-00003.jpg?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken>&quot;
+             * ]</p>
+             */
+            public Builder snapshots(String snapshots) {
+                this.snapshots = snapshots;
+                return this;
+            }
+
+            /**
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2072,7 +2635,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteImages.
+             * <p>The sprite.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
              */
             public Builder spriteImages(String spriteImages) {
                 this.spriteImages = spriteImages;
@@ -2080,7 +2646,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2088,7 +2657,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2096,7 +2665,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UploadSource.
+             * <p>The upload source of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder uploadSource(String uploadSource) {
                 this.uploadSource = uploadSource;
@@ -2104,7 +2676,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userDataTest</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -2118,17 +2693,23 @@ public class GetMediaInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMediaInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaInfoResponseBody</p>
+     */
     public static class MediaInfo extends TeaModel {
-        @NameInMap("AiRoughData")
+        @com.aliyun.core.annotation.NameInMap("AiRoughData")
         private AiRoughData aiRoughData;
 
-        @NameInMap("FileInfoList")
-        private java.util.List < FileInfoList> fileInfoList;
+        @com.aliyun.core.annotation.NameInMap("FileInfoList")
+        private java.util.List<FileInfoList> fileInfoList;
 
-        @NameInMap("MediaBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaInfo(Builder builder) {
@@ -2156,7 +2737,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         /**
          * @return fileInfoList
          */
-        public java.util.List < FileInfoList> getFileInfoList() {
+        public java.util.List<FileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
@@ -2176,12 +2757,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private AiRoughData aiRoughData; 
-            private java.util.List < FileInfoList> fileInfoList; 
+            private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
             /**
-             * AiRoughData.
+             * <p>The original AI analysis data.</p>
              */
             public Builder aiRoughData(AiRoughData aiRoughData) {
                 this.aiRoughData = aiRoughData;
@@ -2189,15 +2770,15 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileInfoList.
+             * <p>The file information.</p>
              */
-            public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
+            public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
                 return this;
             }
 
             /**
-             * BasicInfo
+             * <p>The basic information about the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -2205,7 +2786,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId
+             * <p>The ID of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

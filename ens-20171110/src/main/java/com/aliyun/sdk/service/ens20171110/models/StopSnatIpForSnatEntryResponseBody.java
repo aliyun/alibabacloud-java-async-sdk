@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopSnatIpForSnatEntryResponseBody} extends {@link TeaModel}
  *
  * <p>StopSnatIpForSnatEntryResponseBody</p>
  */
 public class StopSnatIpForSnatEntryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StopSnatIpForSnatEntryResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class StopSnatIpForSnatEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A415CB9-7591-566F-924B-32709578756B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

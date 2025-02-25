@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIndexVersionRequest} extends {@link RequestModel}
  *
  * <p>DeleteIndexVersionRequest</p>
  */
 public class DeleteIndexVersionRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("indexName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("indexName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexName;
 
-    @Path
-    @NameInMap("versionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("versionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
     private DeleteIndexVersionRequest(Builder builder) {
@@ -85,7 +90,11 @@ public class DeleteIndexVersionRequest extends Request {
         } 
 
         /**
-         * WB01240825
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2rrogr01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +103,11 @@ public class DeleteIndexVersionRequest extends Request {
         }
 
         /**
-         * indexName.
+         * <p>The index name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>generation</p>
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -103,7 +116,11 @@ public class DeleteIndexVersionRequest extends Request {
         }
 
         /**
-         * versionName.
+         * <p>The name of the version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04@ha-cn-pl32rf0js04_shenzhen_test_01@sz_vpc_domain_1@api_test@index_config_v1</p>
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);

@@ -1,55 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOpEntitiesRequest} extends {@link RequestModel}
  *
  * <p>DescribeOpEntitiesRequest</p>
  */
 public class DescribeOpEntitiesRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpAction")
+    private Integer opAction;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OrderDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderDir")
     private String orderDir;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeOpEntitiesRequest(Builder builder) {
@@ -57,6 +61,7 @@ public class DescribeOpEntitiesRequest extends Request {
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.opAction = builder.opAction;
         this.orderBy = builder.orderBy;
         this.orderDir = builder.orderDir;
         this.pageSize = builder.pageSize;
@@ -97,6 +102,13 @@ public class DescribeOpEntitiesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return opAction
+     */
+    public Integer getOpAction() {
+        return this.opAction;
     }
 
     /**
@@ -145,6 +157,7 @@ public class DescribeOpEntitiesRequest extends Request {
         private Integer currentPage; 
         private Long endTime; 
         private String instanceId; 
+        private Integer opAction; 
         private String orderBy; 
         private String orderDir; 
         private Integer pageSize; 
@@ -161,6 +174,7 @@ public class DescribeOpEntitiesRequest extends Request {
             this.currentPage = request.currentPage;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.opAction = request.opAction;
             this.orderBy = request.orderBy;
             this.orderDir = request.orderDir;
             this.pageSize = request.pageSize;
@@ -170,7 +184,11 @@ public class DescribeOpEntitiesRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeOpEntities**.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -179,7 +197,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The details of the operation log.
+         * <p>The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640880000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +210,13 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The ID of the instance to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -197,11 +225,19 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The sort order of operation logs. Valid values:
-         * <p>
+         * OpAction.
+         */
+        public Builder opAction(Integer opAction) {
+            this.putQueryParameter("OpAction", opAction);
+            this.opAction = opAction;
+            return this;
+        }
+
+        /**
+         * <p>The sorting method of operation logs. Set the value to <strong>opdate</strong>, which indicates sorting based on the operation time.</p>
          * 
-         * *   **ASC**: the ascending order.
-         * *   **DESC**: the descending order.
+         * <strong>example:</strong>
+         * <p>opdate</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -210,10 +246,15 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
-         * <p>
+         * <p>The sort order of operation logs. Valid values:</p>
+         * <ul>
+         * <li><strong>ASC</strong>: the ascending order.</li>
+         * <li><strong>DESC</strong>: the descending order.</li>
+         * </ul>
+         * <p>Default value: <strong>DESC</strong>.</p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderDir(String orderDir) {
             this.putQueryParameter("OrderDir", orderDir);
@@ -222,7 +263,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The type of the operation object. The value is fixed as **1**, which indicates Anti-DDoS Origin instances.
+         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,10 +276,13 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that performs the operation.
-         * <p>
+         * <p>The ID of the region where the instance resides.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  If the value is **system**, the operation is performed by Anti-DDoS Origin.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,35 +291,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The details about the operation. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+         * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
          * 
-         * *   **entity**: the operation object. Data type: object. The fields that are included in the value of the **entity** parameter vary based on the value of the **OpAction** parameter. Take note of the following items:
-         * 
-         *     *   If the value of the **OpAction** parameter is **3**, the value of the **entity** parameter consists of the following field:
-         * 
-         *         *   **ips**: the public IP addresses that are protected by the Anti-DDoS Origin instance. Data type: array
-         * 
-         *     *   If the value of the **OpAction** parameter is **4**, the value of the **entity** parameter consists of the following field:
-         * 
-         *         *   **ips**: the public IP addresses that are no longer protected by the Anti-DDoS Origin instance. Data type: array.
-         * 
-         *     *   If the value of the **OpAction** parameter is **5**, the value of the **entity** parameter consists of the following fields:
-         * 
-         *         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
-         *         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
-         *         *   **opSource**: the source of the operation. The value is fixed as **1**, indicating that the operation is performed by Anti-DDoS Origin. Data type: integer.
-         * 
-         *     *   If the value of the **OpAction** parameter is **6**, the value of the **entity** parameter consists of the following field:
-         * 
-         *         *   **ips**: the public IP addresses for which to deactivate blackhole filtering. Data type: array.
-         * 
-         *     *   If the value of the **OpAction** parameter is **7**, the **entity** parameter is not returned.
-         * 
-         *     *   If the value of the **OpAction** parameter is **8**, the value of the **entity** parameter consists of the following fields:
-         * 
-         *         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
-         *         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -280,7 +304,11 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.
+         * <p>The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1609430400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

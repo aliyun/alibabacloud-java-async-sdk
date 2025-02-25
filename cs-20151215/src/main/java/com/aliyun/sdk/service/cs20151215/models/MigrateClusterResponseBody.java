@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MigrateClusterResponseBody} extends {@link TeaModel}
  *
  * <p>MigrateClusterResponseBody</p>
  */
 public class MigrateClusterResponseBody extends TeaModel {
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
-    @NameInMap("task_id")
+    @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
     private MigrateClusterResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class MigrateClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +78,10 @@ public class MigrateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class MigrateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-62ccd14aacb8db06ca00****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

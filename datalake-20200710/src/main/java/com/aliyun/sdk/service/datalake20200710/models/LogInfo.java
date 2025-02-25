@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LogInfo</p>
  */
 public class LogInfo extends TeaModel {
-    @NameInMap("BizTime")
+    @com.aliyun.core.annotation.NameInMap("BizTime")
     private String bizTime;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("LogContent")
+    @com.aliyun.core.annotation.NameInMap("LogContent")
     private String logContent;
 
-    @NameInMap("LogId")
+    @com.aliyun.core.annotation.NameInMap("LogId")
     private String logId;
 
-    @NameInMap("LogSummary")
+    @com.aliyun.core.annotation.NameInMap("LogSummary")
     private String logSummary;
 
-    @NameInMap("LogType")
+    @com.aliyun.core.annotation.NameInMap("LogType")
     private String logType;
 
     private LogInfo(Builder builder) {

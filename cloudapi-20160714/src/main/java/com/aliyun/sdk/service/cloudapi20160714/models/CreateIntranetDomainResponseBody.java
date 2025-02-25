@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIntranetDomainResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIntranetDomainResponseBody</p>
  */
 public class CreateIntranetDomainResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateIntranetDomainResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateIntranetDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.demo.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -58,7 +66,10 @@ public class CreateIntranetDomainResponseBody extends TeaModel {
         }
 
         /**
-         * auditing
+         * <p>auditing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20D942A5-EDC6-5DA3-93F9-257888399E22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

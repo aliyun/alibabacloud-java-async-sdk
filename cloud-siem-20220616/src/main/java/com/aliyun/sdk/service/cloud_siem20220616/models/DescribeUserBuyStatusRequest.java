@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserBuyStatusRequest</p>
  */
 public class DescribeUserBuyStatusRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SubUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubUserId")
     private Long subUserId;
 
     private DescribeUserBuyStatusRequest(Builder builder) {
@@ -68,7 +67,11 @@ public class DescribeUserBuyStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -77,7 +80,7 @@ public class DescribeUserBuyStatusRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

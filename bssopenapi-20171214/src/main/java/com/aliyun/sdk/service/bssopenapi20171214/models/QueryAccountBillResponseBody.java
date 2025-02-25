@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAccountBillResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAccountBillResponseBody</p>
  */
 public class QueryAccountBillResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAccountBillResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BFC23FE-A182-4D96-A1E4-7521B30B8E43</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,71 +148,77 @@ public class QueryAccountBillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAccountBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAccountBillResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("AdjustAmount")
+        @com.aliyun.core.annotation.NameInMap("AdjustAmount")
         private Float adjustAmount;
 
-        @NameInMap("BillAccountID")
+        @com.aliyun.core.annotation.NameInMap("BillAccountID")
         private String billAccountID;
 
-        @NameInMap("BillAccountName")
+        @com.aliyun.core.annotation.NameInMap("BillAccountName")
         private String billAccountName;
 
-        @NameInMap("BillingDate")
+        @com.aliyun.core.annotation.NameInMap("BillingDate")
         private String billingDate;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("CashAmount")
+        @com.aliyun.core.annotation.NameInMap("CashAmount")
         private Float cashAmount;
 
-        @NameInMap("CostUnit")
+        @com.aliyun.core.annotation.NameInMap("CostUnit")
         private String costUnit;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCashCoupons")
         private Float deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCoupons")
         private Float deductedByCoupons;
 
-        @NameInMap("DeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("DeductedByPrepaidCard")
         private Float deductedByPrepaidCard;
 
-        @NameInMap("InvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("InvoiceDiscount")
         private Float invoiceDiscount;
 
-        @NameInMap("OutstandingAmount")
+        @com.aliyun.core.annotation.NameInMap("OutstandingAmount")
         private Float outstandingAmount;
 
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("PaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("PaymentAmount")
         private Float paymentAmount;
 
-        @NameInMap("PipCode")
+        @com.aliyun.core.annotation.NameInMap("PipCode")
         private String pipCode;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private Float pretaxAmount;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private Float pretaxGrossAmount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
         private Item(Builder builder) {
@@ -410,7 +433,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             private String subscriptionType; 
 
             /**
-             * The amount deducted by using credit refunds.
+             * <p>The amount deducted by using credit refunds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -418,7 +444,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the bill belongs.
+             * <p>The ID of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1857xxxxx489</p>
              */
             public Builder billAccountID(String billAccountID) {
                 this.billAccountID = billAccountID;
@@ -426,7 +455,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account to which the bill belongs.
+             * <p>The name of the account to which the bill belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -434,7 +466,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing date.
+             * <p>The billing date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-01</p>
              */
             public Builder billingDate(String billingDate) {
                 this.billingDate = billingDate;
@@ -442,7 +477,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The business type.
+             * <p>The business type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trusteeship</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -450,7 +488,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid in cash. The amount that was deducted by using credit refunds is not included.
+             * <p>The amount paid in cash. The amount that was deducted by using credit refunds is not included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cashAmount(Float cashAmount) {
                 this.cashAmount = cashAmount;
@@ -458,7 +499,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The cost center.
+             * <p>The cost center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not allocated</p>
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -466,12 +510,15 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the currency. Valid values:
-             * <p>
+             * <p>The type of the currency. Valid values:</p>
+             * <ul>
+             * <li>CNY</li>
+             * <li>USD</li>
+             * <li>JPY</li>
+             * </ul>
              * 
-             * *   CNY
-             * *   USD
-             * *   JPY
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -479,7 +526,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted by using vouchers.
+             * <p>The amount deducted by using vouchers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -487,7 +537,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted by using coupons.
+             * <p>The amount deducted by using coupons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByCoupons(Float deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -495,7 +548,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount deducted by using prepaid cards.
+             * <p>The amount deducted by using prepaid cards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -503,7 +559,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The discount amount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -511,7 +570,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The unsettled amount or the amount settled with credits.
+             * <p>The unsettled amount or the amount settled with credits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outstandingAmount(Float outstandingAmount) {
                 this.outstandingAmount = outstandingAmount;
@@ -519,7 +581,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member.
+             * <p>The ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>325434254</p>
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -527,7 +592,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aligzncloudtest2</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -535,7 +603,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The amount paid in cash. The amount that was deducted by using credit refunds is included.
+             * <p>The amount paid in cash. The amount that was deducted by using credit refunds is included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -543,7 +614,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service. The service code is consistent with that displayed in User Center.
+             * <p>The code of the service. The service code is consistent with that displayed in User Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -551,7 +625,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax amount.
+             * <p>The pretax amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxAmount(Float pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -559,7 +636,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The pretax gross amount.
+             * <p>The pretax gross amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -567,10 +647,13 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
-             * <p>
+             * <p>The code of the service.</p>
+             * <blockquote>
+             * <p>A value is returned only if the <strong>IsGroupByProduct</strong> parameter is set to true.</p>
+             * </blockquote>
              * 
-             * >A value is returned only if the **IsGroupByProduct** parameter is set to true.
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -578,10 +661,13 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
-             * <p>
+             * <p>The name of the service.</p>
+             * <blockquote>
+             * <p>A value is returned only if the <strong>IsGroupByProduct</strong> parameter is set to true.</p>
+             * </blockquote>
              * 
-             * > A value is returned only if the **IsGroupByProduct** parameter is set to true.
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -589,13 +675,17 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>Subscription: the subscription billing method</li>
+             * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+             * </ul>
+             * <blockquote>
+             * <p>A value is returned only if the IsGroupByProduct parameter is set to true.</p>
+             * </blockquote>
              * 
-             * *   Subscription: the subscription billing method
-             * *   PayAsYouGo: the pay-as-you-go billing method
-             * 
-             * > A value is returned only if the IsGroupByProduct parameter is set to true.
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -609,9 +699,15 @@ public class QueryAccountBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAccountBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAccountBillResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
         private Items(Builder builder) {
             this.item = builder.item;
@@ -628,17 +724,17 @@ public class QueryAccountBillResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }
@@ -650,26 +746,32 @@ public class QueryAccountBillResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAccountBillResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAccountBillResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountID")
+        @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private Items items;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -749,7 +851,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The ID of your Alibaba Cloud account.
+             * <p>The ID of your Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1857xxxxx489</p>
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -757,7 +862,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account.
+             * <p>The name of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -765,7 +873,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The billing cycle. Format: YYYY-MM.
+             * <p>The billing cycle. Format: YYYY-MM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03</p>
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -773,7 +884,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the bills.
+             * <p>The details of the bills.</p>
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -781,7 +892,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -789,7 +903,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -797,7 +914,10 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksInTaskFlowResponseBody} extends {@link TeaModel}
  *
  * <p>ListTasksInTaskFlowResponseBody</p>
  */
 public class ListTasksInTaskFlowResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
     private ListTasksInTaskFlowResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         private Tasks tasks; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +102,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +113,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B36B063-6B7D-5595-9FCF-3844B7B7ACD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +124,14 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +139,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The tasks in the task flow.
+         * <p>The tasks in the task flow.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -135,29 +152,35 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTasksInTaskFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksInTaskFlowResponseBody</p>
+     */
     public static class Task extends TeaModel {
-        @NameInMap("GraphParam")
+        @com.aliyun.core.annotation.NameInMap("GraphParam")
         private String graphParam;
 
-        @NameInMap("NodeConfig")
+        @com.aliyun.core.annotation.NameInMap("NodeConfig")
         private String nodeConfig;
 
-        @NameInMap("NodeContent")
+        @com.aliyun.core.annotation.NameInMap("NodeContent")
         private String nodeContent;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeOutput")
+        @com.aliyun.core.annotation.NameInMap("NodeOutput")
         private String nodeOutput;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("TimeVariables")
+        @com.aliyun.core.annotation.NameInMap("TimeVariables")
         private String timeVariables;
 
         private Task(Builder builder) {
@@ -246,7 +269,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             private String timeVariables; 
 
             /**
-             * The position of the node on the Directed Acyclic Graph (DAG).
+             * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;x&quot;:435,&quot;y&quot;:192,&quot;layoutType&quot;:&quot;Horizontal&quot;}</p>
              */
             public Builder graphParam(String graphParam) {
                 this.graphParam = graphParam;
@@ -254,7 +280,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced configuration for the node.
+             * <p>The advanced configuration for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{     &quot;rerun&quot;:{    &quot;rerunEnable&quot;:true,      &quot;rerunCount&quot;:1,   &quot;rerunInterval&quot;:10 //  }}</p>
              */
             public Builder nodeConfig(String nodeConfig) {
                 this.nodeConfig = nodeConfig;
@@ -262,7 +291,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration for the node.
+             * <p>The configuration for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{     &quot;dbId&quot;:123***,  &quot;sql&quot;:&quot;&quot;,    &quot;dbType&quot;:&quot;polardb&quot; }</p>
              */
             public Builder nodeContent(String nodeContent) {
                 this.nodeContent = nodeContent;
@@ -270,7 +302,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92***</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -278,7 +313,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cross-Database Spark SQL-1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -286,7 +324,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The output variables for the task.
+             * <p>The output variables for the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{  &quot;outputs&quot;:[{ { &quot;row&quot;:0, &quot;column&quot;:-1,                  &quot;combiner&quot;:&quot;,&quot; }            &quot;extractMethod&quot;:&quot;{&quot;row&quot;:0,&quot;column&quot;:-1,&quot;combiner&quot;:&quot;,&quot;}&quot;,         &quot;variableName&quot;:&quot;var&quot;,    &quot;description&quot;:&quot;For demo&quot;} ] }</p>
              */
             public Builder nodeOutput(String nodeOutput) {
                 this.nodeOutput = nodeOutput;
@@ -294,7 +335,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).
+             * <p>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPARK_SQL</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -302,7 +346,10 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The time variables configured for the node.
+             * <p>The time variables configured for the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;variables&quot;:[{&quot;name&quot;:&quot;test1&quot;,&quot;pattern&quot;:&quot;yyyy-MM-dd</p>
              */
             public Builder timeVariables(String timeVariables) {
                 this.timeVariables = timeVariables;
@@ -316,9 +363,15 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTasksInTaskFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksInTaskFlowResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
-        private java.util.List < Task> task;
+        @com.aliyun.core.annotation.NameInMap("Task")
+        private java.util.List<Task> task;
 
         private Tasks(Builder builder) {
             this.task = builder.task;
@@ -335,17 +388,17 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
 
             /**
              * Task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }

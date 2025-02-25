@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataFlowsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataFlowsRequest</p>
  */
 public class DescribeDataFlowsRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private DescribeDataFlowsRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeDataFlowsRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -81,7 +86,7 @@ public class DescribeDataFlowsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDataFlowsRequest, Builder> {
         private String fileSystemId; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Long maxResults; 
         private String nextToken; 
 
@@ -89,16 +94,27 @@ public class DescribeDataFlowsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDataFlowsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.filters = response.filters;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(DescribeDataFlowsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.filters = request.filters;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015****.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bmcpfs-290w65p03ok64ya****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -107,16 +123,20 @@ public class DescribeDataFlowsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The filter that is used to query data flows.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results for each query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,7 +145,10 @@ public class DescribeDataFlowsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -140,11 +163,17 @@ public class DescribeDataFlowsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataFlowsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDataFlowsRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -179,7 +208,19 @@ public class DescribeDataFlowsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The filter name. Valid values:</p>
+             * <ul>
+             * <li>DataFlowIds: filters data flows by data flow ID.</li>
+             * <li>FsetIds: filters data flows by fileset ID.</li>
+             * <li>FileSystemPath: filters data flows based on the path of a fileset in a CPFS file system.</li>
+             * <li>SourceStorage: filters data flows based on the access path of the source storage.</li>
+             * <li>ThroughputList: filters data flows based on data flow throughput.</li>
+             * <li>Description: filters data flows based on the fileset description.</li>
+             * <li>Status: filters data flows based on data flow status.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FsetIds</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +228,20 @@ public class DescribeDataFlowsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The filter value. This parameter does not support wildcards.</p>
+             * <ul>
+             * <li>If Key is set to DataFlowIds, set Value to a data flow ID or a part of the data flow ID. You can specify a data flow ID or a group of data flow IDs. You can specify a maximum of 10 data flow IDs. Example: <code>df-194433a5be31****</code> or <code>df-194433a5be31****,df-184433a5be31****</code>.</li>
+             * <li>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <code>fset-1902718ea0ae****</code> or <code>fset-1902718ea0ae****,fset-1242718ea0ae****</code>.</li>
+             * <li>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value of the parameter must be 1 to 1,024 characters in length.</li>
+             * <li>If Key is set to SourceStorage, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</li>
+             * <li>If Key is set to ThroughputList, set Value to the data flow throughput. Combined query is supported.</li>
+             * <li>If Key is set to Description, set Value to a data flow description or a part of the data flow description.</li>
+             * <li>If Key is set to Status, set Value to the data flow status.</li>
+             * <li>If Key is set to SourceStoragePath, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FsetIds</p>
              */
             public Builder value(String value) {
                 this.value = value;

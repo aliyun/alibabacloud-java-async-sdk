@@ -1,57 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAutoScalingActivitiesRequest} extends {@link RequestModel}
  *
  * <p>ListAutoScalingActivitiesRequest</p>
  */
 public class ListAutoScalingActivitiesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ScalingActivityStates")
-    private java.util.List < String > scalingActivityStates;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityStates")
+    private java.util.List<String> scalingActivityStates;
 
-    @Query
-    @NameInMap("ScalingActivityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityType")
     private String scalingActivityType;
 
-    @Query
-    @NameInMap("ScalingRuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingPolicyType")
+    private String scalingPolicyType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
     private String scalingRuleName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private ListAutoScalingActivitiesRequest(Builder builder) {
@@ -64,6 +73,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         this.regionId = builder.regionId;
         this.scalingActivityStates = builder.scalingActivityStates;
         this.scalingActivityType = builder.scalingActivityType;
+        this.scalingPolicyType = builder.scalingPolicyType;
         this.scalingRuleName = builder.scalingRuleName;
         this.startTime = builder.startTime;
     }
@@ -126,7 +136,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
     /**
      * @return scalingActivityStates
      */
-    public java.util.List < String > getScalingActivityStates() {
+    public java.util.List<String> getScalingActivityStates() {
         return this.scalingActivityStates;
     }
 
@@ -135,6 +145,13 @@ public class ListAutoScalingActivitiesRequest extends Request {
      */
     public String getScalingActivityType() {
         return this.scalingActivityType;
+    }
+
+    /**
+     * @return scalingPolicyType
+     */
+    public String getScalingPolicyType() {
+        return this.scalingPolicyType;
     }
 
     /**
@@ -158,8 +175,9 @@ public class ListAutoScalingActivitiesRequest extends Request {
         private String nextToken; 
         private String nodeGroupId; 
         private String regionId; 
-        private java.util.List < String > scalingActivityStates; 
+        private java.util.List<String> scalingActivityStates; 
         private String scalingActivityType; 
+        private String scalingPolicyType; 
         private String scalingRuleName; 
         private Long startTime; 
 
@@ -177,12 +195,17 @@ public class ListAutoScalingActivitiesRequest extends Request {
             this.regionId = request.regionId;
             this.scalingActivityStates = request.scalingActivityStates;
             this.scalingActivityType = request.scalingActivityType;
+            this.scalingPolicyType = request.scalingPolicyType;
             this.scalingRuleName = request.scalingRuleName;
             this.startTime = request.startTime;
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -191,7 +214,10 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639718634819</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -200,7 +226,10 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -209,7 +238,10 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results.
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -218,7 +250,10 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The ID of the node group.
+         * <p>The ID of the node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -227,7 +262,11 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,20 +275,26 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The status of the scaling activity. Number of elements in the array: 1-20.
+         * <p>The status of the scaling activity. Number of elements in the array: 1-20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;REJECTED&quot;,&quot;SUCCESSFUL&quot;]</p>
          */
-        public Builder scalingActivityStates(java.util.List < String > scalingActivityStates) {
+        public Builder scalingActivityStates(java.util.List<String> scalingActivityStates) {
             this.putQueryParameter("ScalingActivityStates", scalingActivityStates);
             this.scalingActivityStates = scalingActivityStates;
             return this;
         }
 
         /**
-         * The type of the scaling activity. Valid values:
-         * <p>
+         * <p>The type of the scaling activity. Valid values:</p>
+         * <ul>
+         * <li>SCALE_OUT</li>
+         * <li>SCALE_IN</li>
+         * </ul>
          * 
-         * *   SCALE_OUT
-         * *   SCALE_IN
+         * <strong>example:</strong>
+         * <p>SCALE_IN</p>
          */
         public Builder scalingActivityType(String scalingActivityType) {
             this.putQueryParameter("ScalingActivityType", scalingActivityType);
@@ -258,7 +303,19 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The name of the scaling rule.
+         * ScalingPolicyType.
+         */
+        public Builder scalingPolicyType(String scalingPolicyType) {
+            this.putQueryParameter("ScalingPolicyType", scalingPolicyType);
+            this.scalingPolicyType = scalingPolicyType;
+            return this;
+        }
+
+        /**
+         * <p>The name of the scaling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scale-out-by-memroy</p>
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -267,7 +324,10 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714634819</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

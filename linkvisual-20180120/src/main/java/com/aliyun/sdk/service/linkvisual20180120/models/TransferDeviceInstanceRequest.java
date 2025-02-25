@@ -90,12 +90,12 @@ public class TransferDeviceInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(TransferDeviceInstanceRequest response) {
-            super(response);
-            this.deviceNameList = response.deviceNameList;
-            this.productKey = response.productKey;
-            this.sourceInstanceId = response.sourceInstanceId;
-            this.targetInstanceId = response.targetInstanceId;
+        private Builder(TransferDeviceInstanceRequest request) {
+            super(request);
+            this.deviceNameList = request.deviceNameList;
+            this.productKey = request.productKey;
+            this.sourceInstanceId = request.sourceInstanceId;
+            this.targetInstanceId = request.targetInstanceId;
         } 
 
         /**

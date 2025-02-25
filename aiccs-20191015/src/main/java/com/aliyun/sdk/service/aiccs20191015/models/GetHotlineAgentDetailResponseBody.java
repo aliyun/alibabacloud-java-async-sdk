@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineAgentDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotlineAgentDetailResponseBody</p>
  */
 public class GetHotlineAgentDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHotlineAgentDetailResponseBody(Builder builder) {
@@ -151,26 +156,32 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotlineAgentDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotlineAgentDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private Long agentId;
 
-        @NameInMap("AgentStatus")
+        @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private Integer agentStatus;
 
-        @NameInMap("AgentStatusCode")
+        @com.aliyun.core.annotation.NameInMap("AgentStatusCode")
         private String agentStatusCode;
 
-        @NameInMap("Assigned")
+        @com.aliyun.core.annotation.NameInMap("Assigned")
         private Boolean assigned;
 
-        @NameInMap("RestType")
+        @com.aliyun.core.annotation.NameInMap("RestType")
         private Integer restType;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
         private Data(Builder builder) {

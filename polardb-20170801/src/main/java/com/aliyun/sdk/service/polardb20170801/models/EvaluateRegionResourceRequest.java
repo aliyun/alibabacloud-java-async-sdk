@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluateRegionResourceRequest} extends {@link RequestModel}
  *
  * <p>EvaluateRegionResourceRequest</p>
  */
 public class EvaluateRegionResourceRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceConnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceConnType")
     private String DBInstanceConnType;
 
-    @Query
-    @NameInMap("DBNodeClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeClass;
 
-    @Query
-    @NameInMap("DBType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBType;
 
-    @Query
-    @NameInMap("DBVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBVersion;
 
-    @Query
-    @NameInMap("DispenseMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DispenseMode")
     private String dispenseMode;
 
-    @Query
-    @NameInMap("NeedMaxScaleLink")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedMaxScaleLink")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String needMaxScaleLink;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private EvaluateRegionResourceRequest(Builder builder) {
@@ -242,12 +247,15 @@ public class EvaluateRegionResourceRequest extends Request {
         } 
 
         /**
-         * The cluster link type. The backend randomly selects the default value. Valid values:
-         * <p>
+         * <p>The cluster link type. The backend randomly selects the default value. Valid values:</p>
+         * <ul>
+         * <li><strong>lvs</strong>: Linux virtual server.</li>
+         * <li><strong>proxy</strong>: proxy server.</li>
+         * <li><strong>dns</strong>: domain name system.</li>
+         * </ul>
          * 
-         * *   **lvs** :Linux virtual server
-         * *   **proxy**: proxy server
-         * *   **dns**: domain name system
+         * <strong>example:</strong>
+         * <p>lvs</p>
          */
         public Builder DBInstanceConnType(String DBInstanceConnType) {
             this.putQueryParameter("DBInstanceConnType", DBInstanceConnType);
@@ -256,12 +264,16 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * The specifications of the node. For information about node specifications, see the following topics:
-         * <p>
+         * <p>The specifications of the node. For information about node specifications, see the following topics:</p>
+         * <ul>
+         * <li>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></li>
+         * <li>PolarDB for Oracle: <a href="https://help.aliyun.com/document_detail/207921.html">Specifications of compute nodes</a></li>
+         * <li>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Specifications of compute nodes</a></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   PolarDB for MySQL: [Specifications of compute nodes](~~102542~~)
-         * *   PolarDB for Oracle: [Specifications of compute nodes](~~207921~~)
-         * *   PolarDB for PostgreSQL: [Specifications of compute nodes](~~209380~~)
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -270,12 +282,16 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * The type of the database engine. Valid values:
-         * <p>
+         * <p>The type of the database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **MySQL**
-         * *   **PostgreSQL**
-         * *   **Oracle**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -284,21 +300,28 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * The version of the database engine
-         * <p>
+         * <p>The version of the database engine</p>
+         * <ul>
+         * <li><p>Valid values for the MySQL database engine:</p>
+         * <ul>
+         * <li><strong>5.6</strong></li>
+         * <li><strong>5.7</strong></li>
+         * <li><strong>8.0</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values for the PostgreSQL database engine:</p>
+         * <ul>
+         * <li><strong>11</strong></li>
+         * <li><strong>14</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values for the MySQL database engine:
-         * 
-         *     *   **5.6**
-         *     *   **5.7**
-         *     *   **8.0**
-         * 
-         * *   Valid values for the PostgreSQL database engine:
-         * 
-         *     *   **11**
-         *     *   **14**
-         * 
-         * *   Valid value for the Oracle database engine: **11**
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -307,11 +330,14 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the zones in which the single-zone deployment method is supported. Default value: 0. Valid values:
-         * <p>
+         * <p>Specifies whether to return the zones in which the single-zone deployment method is supported. Default value: 0. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no value returned</li>
+         * <li><strong>1</strong>: returns the zones.</li>
+         * </ul>
          * 
-         * *   **0**: no value returned
-         * *   **1**: returns the zones.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dispenseMode(String dispenseMode) {
             this.putQueryParameter("DispenseMode", dispenseMode);
@@ -320,11 +346,15 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether Maxscale is created. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to create Maxscale. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needMaxScaleLink(String needMaxScaleLink) {
             this.putQueryParameter("NeedMaxScaleLink", needMaxScaleLink);
@@ -351,10 +381,14 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query available regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -363,7 +397,10 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -390,7 +427,10 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * The subdomain. It is the child domain of the top-level domain name or parent domain. For example, if the parent domain name is cn-beijing, its child domain can be cn-beijing-i-aliyun.
+         * <p>The subdomain. It is the child domain of the top-level domain name or parent domain. For example, if the parent domain name is cn-beijing, its child domain can be cn-beijing-i-aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-i-aliyun</p>
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -399,10 +439,14 @@ public class EvaluateRegionResourceRequest extends Request {
         }
 
         /**
-         * The zone ID.
-         * <p>
+         * <p>The zone ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available zones.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeRegions](~~98041~~) operation to query available zones.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDcdnKvStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetDcdnKvStatusResponseBody</p>
  */
 public class GetDcdnKvStatusResponseBody extends TeaModel {
-    @NameInMap("Complete")
+    @com.aliyun.core.annotation.NameInMap("Complete")
     private Boolean complete;
 
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private String expire;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDcdnKvStatusResponseBody(Builder builder) {
@@ -62,7 +62,14 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Complete.
+         * <p>Specifies whether the configured key has taken effect on all points of presence (POPs).</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder complete(Boolean complete) {
             this.complete = complete;
@@ -70,7 +77,10 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Expire.
+         * <p>The timeout period of the configured key. The value is an absolute timestamp, such as 2023-09-11T15:39:44+08:00. This parameter is not returned if the key is permanently stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-11T15:39:44+08:00</p>
          */
         public Builder expire(String expire) {
             this.expire = expire;
@@ -78,7 +88,10 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

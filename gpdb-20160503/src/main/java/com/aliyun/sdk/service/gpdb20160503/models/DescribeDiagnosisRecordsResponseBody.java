@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisRecordsResponseBody</p>
  */
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDiagnosisRecordsResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,21 +73,24 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.
+         * <p>The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -111,35 +125,41 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("QueryID")
+        @com.aliyun.core.annotation.NameInMap("QueryID")
         private String queryID;
 
-        @NameInMap("SQLStmt")
+        @com.aliyun.core.annotation.NameInMap("SQLStmt")
         private String SQLStmt;
 
-        @NameInMap("SQLTruncated")
+        @com.aliyun.core.annotation.NameInMap("SQLTruncated")
         private Boolean SQLTruncated;
 
-        @NameInMap("SQLTruncatedThreshold")
+        @com.aliyun.core.annotation.NameInMap("SQLTruncatedThreshold")
         private Integer SQLTruncatedThreshold;
 
-        @NameInMap("SessionID")
+        @com.aliyun.core.annotation.NameInMap("SessionID")
         private String sessionID;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Items(Builder builder) {
@@ -246,7 +266,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbtest</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -254,7 +277,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the query. Unit: seconds.
+             * <p>The execution duration of the query. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -262,7 +288,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the query. It is a unique identifier of the query.
+             * <p>The ID of the query. It is a unique identifier of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022042612465401000000012903151998970</p>
              */
             public Builder queryID(String queryID) {
                 this.queryID = queryID;
@@ -270,7 +299,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM t1,t2 WHERE t1.id=t2.id;</p>
              */
             public Builder SQLStmt(String SQLStmt) {
                 this.SQLStmt = SQLStmt;
@@ -278,11 +310,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL statement needs to be truncated. Valid values:
-             * <p>
+             * <p>Indicates whether the SQL statement needs to be truncated. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The SQL statement needs to be truncated.</li>
+             * <li><strong>false</strong>: The SQL statement does not need to be truncated.</li>
+             * </ul>
              * 
-             * *   **true**: The SQL statement needs to be truncated.
-             * *   **false**: The SQL statement does not need to be truncated.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder SQLTruncated(Boolean SQLTruncated) {
                 this.SQLTruncated = SQLTruncated;
@@ -290,7 +325,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.
+             * <p>The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder SQLTruncatedThreshold(Integer SQLTruncatedThreshold) {
                 this.SQLTruncatedThreshold = SQLTruncatedThreshold;
@@ -298,7 +336,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session that contains the query.
+             * <p>The ID of the session that contains the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder sessionID(String sessionID) {
                 this.sessionID = sessionID;
@@ -306,7 +347,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1651877940000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -314,11 +358,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the query. Valid values:
-             * <p>
+             * <p>The execution state of the query. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong>: The query is being executed.</li>
+             * <li><strong>finished</strong>: The query is complete.</li>
+             * </ul>
              * 
-             * *   **running**: The query is being executed.
-             * *   **finished**: The query is complete.
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -326,7 +373,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpguser</p>
              */
             public Builder user(String user) {
                 this.user = user;

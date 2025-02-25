@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>ImportKeyPairResponseBody</p>
  */
 public class ImportKeyPairResponseBody extends TeaModel {
-    @NameInMap("KeyPairFingerPrint")
+    @com.aliyun.core.annotation.NameInMap("KeyPairFingerPrint")
     private String keyPairFingerPrint;
 
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ImportKeyPairResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyPairFingerPrint.
+         * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdaf8ff7a756ef843814fc****</p>
          */
         public Builder keyPairFingerPrint(String keyPairFingerPrint) {
             this.keyPairFingerPrint = keyPairFingerPrint;
@@ -70,7 +78,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairName.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -78,7 +89,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

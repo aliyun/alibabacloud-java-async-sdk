@@ -62,7 +62,7 @@ public class Code extends TeaModel {
         private String zipFile; 
 
         /**
-         * 函数代码包的OSS bucket name
+         * ossBucketName.
          */
         public Builder ossBucketName(String ossBucketName) {
             this.ossBucketName = ossBucketName;
@@ -70,7 +70,7 @@ public class Code extends TeaModel {
         }
 
         /**
-         * 函数代码包的OSS对象名
+         * ossObjectName.
          */
         public Builder ossObjectName(String ossObjectName) {
             this.ossObjectName = ossObjectName;
@@ -78,7 +78,7 @@ public class Code extends TeaModel {
         }
 
         /**
-         * 直接在request body中上传code zip包的base64编码
+         * zipFile.
          */
         public Builder zipFile(String zipFile) {
             this.zipFile = zipFile;

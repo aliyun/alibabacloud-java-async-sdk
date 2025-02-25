@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCategoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateCategoryRequest</p>
  */
 public class UpdateCategoryRequest extends Request {
-    @Query
-    @NameInMap("CateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long cateId;
 
-    @Query
-    @NameInMap("CateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cateName;
 
     private UpdateCategoryRequest(Builder builder) {
@@ -70,7 +75,15 @@ public class UpdateCategoryRequest extends Request {
         } 
 
         /**
-         * The ID of the category.
+         * <p>The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. Choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong>. On the <strong>Audio and Video / Image Category</strong> or <strong>Short Video Material Category</strong> tab, view the category ID.</li>
+         * <li>Obtain the category ID from the response to the <a href="~~AddCategory~~">AddCategory</a> operation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10020****</p>
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -79,11 +92,15 @@ public class UpdateCategoryRequest extends Request {
         }
 
         /**
-         * The name of the category.
-         * <p>
+         * <p>The name of the category.</p>
+         * <ul>
+         * <li>The value can be up to 64 bytes in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The value can be up to 64 bytes in length.
-         * *   The string must be encoded in the UTF-8 format.
+         * <strong>example:</strong>
+         * <p>beauty</p>
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);

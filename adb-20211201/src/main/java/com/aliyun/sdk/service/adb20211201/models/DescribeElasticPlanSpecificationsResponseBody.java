@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticPlanSpecificationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticPlanSpecificationsResponseBody</p>
  */
 public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Specifications")
-    private java.util.List < String > specifications;
+    @com.aliyun.core.annotation.NameInMap("Specifications")
+    private java.util.List<String> specifications;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeElasticPlanSpecificationsResponseBody(Builder builder) {
@@ -67,7 +72,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
     /**
      * @return specifications
      */
-    public java.util.List < String > getSpecifications() {
+    public java.util.List<String> getSpecifications() {
         return this.specifications;
     }
 
@@ -82,11 +87,14 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < String > specifications; 
+        private java.util.List<String> specifications; 
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of resource specifications returned per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +113,10 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,15 +124,18 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The resource specifications that can be scaled.
+         * <p>The queried resource specifications.</p>
          */
-        public Builder specifications(java.util.List < String > specifications) {
+        public Builder specifications(java.util.List<String> specifications) {
             this.specifications = specifications;
             return this;
         }
 
         /**
-         * The number of resource specifications that can be scaled.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

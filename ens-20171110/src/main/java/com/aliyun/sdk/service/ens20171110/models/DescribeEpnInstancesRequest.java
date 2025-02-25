@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEpnInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeEpnInstancesRequest</p>
  */
 public class DescribeEpnInstancesRequest extends Request {
-    @Query
-    @NameInMap("EPNInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
     private String EPNInstanceId;
 
-    @Query
-    @NameInMap("EPNInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceName")
     private String EPNInstanceName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeEpnInstancesRequest(Builder builder) {
@@ -96,7 +101,10 @@ public class DescribeEpnInstancesRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-10</p>
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -105,7 +113,10 @@ public class DescribeEpnInstancesRequest extends Request {
         }
 
         /**
-         * EPNInstanceName.
+         * <p>The name of the EPN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testEPNInstanceName</p>
          */
         public Builder EPNInstanceName(String EPNInstanceName) {
             this.putQueryParameter("EPNInstanceName", EPNInstanceName);
@@ -114,7 +125,10 @@ public class DescribeEpnInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +137,10 @@ public class DescribeEpnInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

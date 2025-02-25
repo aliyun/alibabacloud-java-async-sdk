@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDirectoriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDirectoriesResponseBody</p>
  */
 public class DescribeDirectoriesResponseBody extends TeaModel {
-    @NameInMap("Directories")
-    private java.util.List < Directories> directories;
+    @com.aliyun.core.annotation.NameInMap("Directories")
+    private java.util.List<Directories> directories;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDirectoriesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     /**
      * @return directories
      */
-    public java.util.List < Directories> getDirectories() {
+    public java.util.List<Directories> getDirectories() {
         return this.directories;
     }
 
@@ -90,7 +95,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Directories> directories; 
+        private java.util.List<Directories> directories; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -100,7 +105,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * Directories.
          */
-        public Builder directories(java.util.List < Directories> directories) {
+        public Builder directories(java.util.List<Directories> directories) {
             this.directories = directories;
             return this;
         }
@@ -151,23 +156,29 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDirectoriesResponseBody</p>
+     */
     public static class Directories extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
         private Directories(Builder builder) {

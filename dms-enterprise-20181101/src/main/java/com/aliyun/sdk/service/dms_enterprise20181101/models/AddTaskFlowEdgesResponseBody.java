@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTaskFlowEdgesResponseBody} extends {@link TeaModel}
  *
  * <p>AddTaskFlowEdgesResponseBody</p>
  */
 public class AddTaskFlowEdgesResponseBody extends TeaModel {
-    @NameInMap("EdgeIds")
+    @com.aliyun.core.annotation.NameInMap("EdgeIds")
     private EdgeIds edgeIds;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddTaskFlowEdgesResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The list of task flow edge IDs.
+         * <p>The list of task flow edge IDs.</p>
          */
         public Builder edgeIds(EdgeIds edgeIds) {
             this.edgeIds = edgeIds;
@@ -94,7 +99,10 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +110,10 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -110,7 +121,10 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5EE2B9E-2F95-57FA-B284-CB441CEE49D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,9 +152,15 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddTaskFlowEdgesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddTaskFlowEdgesResponseBody</p>
+     */
     public static class EdgeIds extends TeaModel {
-        @NameInMap("EdgeId")
-        private java.util.List < Long > edgeId;
+        @com.aliyun.core.annotation.NameInMap("EdgeId")
+        private java.util.List<Long> edgeId;
 
         private EdgeIds(Builder builder) {
             this.edgeId = builder.edgeId;
@@ -154,17 +177,17 @@ public class AddTaskFlowEdgesResponseBody extends TeaModel {
         /**
          * @return edgeId
          */
-        public java.util.List < Long > getEdgeId() {
+        public java.util.List<Long> getEdgeId() {
             return this.edgeId;
         }
 
         public static final class Builder {
-            private java.util.List < Long > edgeId; 
+            private java.util.List<Long> edgeId; 
 
             /**
              * EdgeId.
              */
-            public Builder edgeId(java.util.List < Long > edgeId) {
+            public Builder edgeId(java.util.List<Long> edgeId) {
                 this.edgeId = edgeId;
                 return this;
             }

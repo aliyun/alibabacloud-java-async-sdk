@@ -62,10 +62,10 @@ public class UnassignUserRequest extends Request {
             super();
         } 
 
-        private Builder(UnassignUserRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.userId = response.userId;
+        private Builder(UnassignUserRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.userId = request.userId;
         } 
 
         /**

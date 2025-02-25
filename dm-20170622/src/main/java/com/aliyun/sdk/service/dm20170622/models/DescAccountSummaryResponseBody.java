@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,63 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescAccountSummaryResponseBody</p>
  */
 public class DescAccountSummaryResponseBody extends TeaModel {
-    @NameInMap("DailyQuota")
+    @com.aliyun.core.annotation.NameInMap("DailyQuota")
     private Integer dailyQuota;
 
-    @NameInMap("DayuStatus")
+    @com.aliyun.core.annotation.NameInMap("DailyRemainFreeQuota")
+    private String dailyRemainFreeQuota;
+
+    @com.aliyun.core.annotation.NameInMap("DayuStatus")
     private Integer dayuStatus;
 
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Integer domains;
 
-    @NameInMap("EnableTimes")
+    @com.aliyun.core.annotation.NameInMap("EnableTimes")
     private Integer enableTimes;
 
-    @NameInMap("MailAddresses")
+    @com.aliyun.core.annotation.NameInMap("MailAddresses")
     private Integer mailAddresses;
 
-    @NameInMap("MaxQuotaLevel")
+    @com.aliyun.core.annotation.NameInMap("MaxQuotaLevel")
     private Integer maxQuotaLevel;
 
-    @NameInMap("MonthQuota")
+    @com.aliyun.core.annotation.NameInMap("MonthQuota")
     private Integer monthQuota;
 
-    @NameInMap("QuotaLevel")
+    @com.aliyun.core.annotation.NameInMap("QuotaLevel")
     private Integer quotaLevel;
 
-    @NameInMap("Receivers")
+    @com.aliyun.core.annotation.NameInMap("Receivers")
     private Integer receivers;
 
-    @NameInMap("RemainFreeQuota")
+    @com.aliyun.core.annotation.NameInMap("RemainFreeQuota")
     private Integer remainFreeQuota;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmsRecord")
+    @com.aliyun.core.annotation.NameInMap("SmsRecord")
     private Integer smsRecord;
 
-    @NameInMap("SmsSign")
+    @com.aliyun.core.annotation.NameInMap("SmsSign")
     private Integer smsSign;
 
-    @NameInMap("SmsTemplates")
+    @com.aliyun.core.annotation.NameInMap("SmsTemplates")
     private Integer smsTemplates;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Integer tags;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private Integer templates;
 
-    @NameInMap("UserStatus")
+    @com.aliyun.core.annotation.NameInMap("UserStatus")
     private Integer userStatus;
 
     private DescAccountSummaryResponseBody(Builder builder) {
         this.dailyQuota = builder.dailyQuota;
+        this.dailyRemainFreeQuota = builder.dailyRemainFreeQuota;
         this.dayuStatus = builder.dayuStatus;
         this.domains = builder.domains;
         this.enableTimes = builder.enableTimes;
@@ -96,6 +99,13 @@ public class DescAccountSummaryResponseBody extends TeaModel {
      */
     public Integer getDailyQuota() {
         return this.dailyQuota;
+    }
+
+    /**
+     * @return dailyRemainFreeQuota
+     */
+    public String getDailyRemainFreeQuota() {
+        return this.dailyRemainFreeQuota;
     }
 
     /**
@@ -212,6 +222,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer dailyQuota; 
+        private String dailyRemainFreeQuota; 
         private Integer dayuStatus; 
         private Integer domains; 
         private Integer enableTimes; 
@@ -234,6 +245,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
          */
         public Builder dailyQuota(Integer dailyQuota) {
             this.dailyQuota = dailyQuota;
+            return this;
+        }
+
+        /**
+         * DailyRemainFreeQuota.
+         */
+        public Builder dailyRemainFreeQuota(String dailyRemainFreeQuota) {
+            this.dailyRemainFreeQuota = dailyRemainFreeQuota;
             return this;
         }
 

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOtaItemDetailRequest} extends {@link RequestModel}
  *
  * <p>FlightOtaItemDetailRequest</p>
  */
 public class FlightOtaItemDetailRequest extends Request {
-    @Query
-    @NameInMap("isv_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isvName;
 
-    @Query
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightOtaItemDetailRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class FlightOtaItemDetailRequest extends Request {
         } 
 
         /**
-         * isv_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cheshi</p>
          */
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
@@ -93,7 +101,10 @@ public class FlightOtaItemDetailRequest extends Request {
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68cdc6b37c87484c98b479b49306ffbb_0</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putQueryParameter("ota_item_id", otaItemId);

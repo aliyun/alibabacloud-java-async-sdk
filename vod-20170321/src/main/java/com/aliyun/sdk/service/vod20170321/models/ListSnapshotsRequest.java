@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>ListSnapshotsRequest</p>
  */
 public class ListSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("AuthTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthTimeout")
     private String authTimeout;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("SnapshotType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotType")
     private String snapshotType;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private ListSnapshotsRequest(Builder builder) {
@@ -111,12 +116,15 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
-         * The validity period of the snapshot URL. Unit: seconds. Default value: **3600**. Minimum value: **3600**.
-         * <p>
+         * <p>The validity period of the snapshot URL. Default value: <strong>3600</strong>. Minimum value: <strong>3600</strong>. Unit: seconds.</p>
+         * <ul>
+         * <li>This parameter takes effect only when you enable URL signing. For more information, see <a href="https://help.aliyun.com/document_detail/57007.html">Configure URL signing</a>.</li>
+         * <li>If you specify a value smaller than <strong>3,600 seconds</strong>, <strong>3600</strong> is used by default.</li>
+         * <li>If the snapshot URL is an Object Storage Service (OSS) URL, the maximum value for this parameter is <strong>2592000</strong> (30 days). This reduces risks on the origin.</li>
+         * </ul>
          * 
-         * *   This parameter only takes effect when [URL authentication](~~57007~~) is enabled.
-         * *   If the specified validity period is less than **3600** seconds, the default value is **3600**.
-         * *   If an Object Storage Service (OSS) URL is returned, the maximum validity period is limited to **2592000** seconds (30 days) to reduce security risks of the origin.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder authTimeout(String authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -125,7 +133,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of the page to turn. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -134,7 +145,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **100**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,14 +157,17 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of snapshots that are returned. Valid values:
-         * <p>
+         * <p>The type of snapshots to return. Valid values:</p>
+         * <ul>
+         * <li><strong>CoverSnapshot</strong>: thumbnail snapshot</li>
+         * <li><strong>NormalSnapshot</strong>: regular snapshot</li>
+         * <li><strong>SpriteSnapshot</strong>: sprite snapshot</li>
+         * <li><strong>SpriteOriginSnapshot</strong>: sprite source snapshot</li>
+         * <li><strong>WebVttSnapshot</strong>: WebVTT snapshot</li>
+         * </ul>
          * 
-         * *   **CoverSnapshot**: thumbnail snapshot
-         * *   **NormalSnapshot**: normal snapshot
-         * *   **SpriteSnapshot**: sprite snapshot
-         * *   **SpriteOriginSnapshot**: sprite source snapshot
-         * *   **WebVttSnapshot**: WebVTT snapshot
+         * <strong>example:</strong>
+         * <p>CoverSnapshot</p>
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -159,7 +176,16 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+         * <ul>
+         * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+         * <li>Obtain the video ID from the response to the <a href="~~CreateUploadVideo~~">CreateUploadVideo</a> operation that you call to obtain the upload URL and credential.</li>
+         * <li>Obtain the video ID from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation that you call to query videos.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d3e680e618708fbf2cae7cc931****</p>
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

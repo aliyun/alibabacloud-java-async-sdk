@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRefundOrderRequest} extends {@link RequestModel}
  *
  * <p>GetRefundOrderRequest</p>
  */
 public class GetRefundOrderRequest extends Request {
-    @Path
-    @NameInMap("disputeId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("disputeId")
     private String disputeId;
 
     private GetRefundOrderRequest(Builder builder) {

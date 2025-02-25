@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AbortAndRollbackChangeOrder  AbortAndRollbackChangeOrderRequest
+     * @return AbortAndRollbackChangeOrderResponse
+     */
     @Override
     public CompletableFuture<AbortAndRollbackChangeOrderResponse> abortAndRollbackChangeOrder(AbortAndRollbackChangeOrderRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AbortChangeOrder  AbortChangeOrderRequest
+     * @return AbortChangeOrderResponse
+     */
     @Override
     public CompletableFuture<AbortChangeOrderResponse> abortChangeOrder(AbortChangeOrderRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchStartApplications  BatchStartApplicationsRequest
+     * @return BatchStartApplicationsResponse
+     */
     @Override
     public CompletableFuture<BatchStartApplicationsResponse> batchStartApplications(BatchStartApplicationsRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchStopApplications  BatchStopApplicationsRequest
+     * @return BatchStopApplicationsResponse
+     */
     @Override
     public CompletableFuture<BatchStopApplicationsResponse> batchStopApplications(BatchStopApplicationsRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindSlb  BindSlbRequest
+     * @return BindSlbResponse
+     */
     @Override
     public CompletableFuture<BindSlbResponse> bindSlb(BindSlbRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfirmPipelineBatch  ConfirmPipelineBatchRequest
+     * @return ConfirmPipelineBatchResponse
+     */
     @Override
     public CompletableFuture<ConfirmPipelineBatchResponse> confirmPipelineBatch(ConfirmPipelineBatchRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApplication  CreateApplicationRequest
+     * @return CreateApplicationResponse
+     */
     @Override
     public CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request) {
         try {
@@ -138,12 +166,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The HTTP status code. Take note of the following rules:
-      * *   **2xx**: The call was successful.
-      * *   **3xx**: The call was redirected.
-      * *   **4xx**: The call failed.
-      * *   **5xx**: A server error occurred.
-      *
+     * <b>description</b> :
+     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateApplicationScalingRule  CreateApplicationScalingRuleRequest
+     * @return CreateApplicationScalingRuleResponse
      */
     @Override
     public CompletableFuture<CreateApplicationScalingRuleResponse> createApplicationScalingRule(CreateApplicationScalingRuleRequest request) {
@@ -159,6 +192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateConfigMap  CreateConfigMapRequest
+     * @return CreateConfigMapResponse
+     */
     @Override
     public CompletableFuture<CreateConfigMapResponse> createConfigMap(CreateConfigMapRequest request) {
         try {
@@ -174,8 +211,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can configure only one canary release rule for each application.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can configure only one canary release rule for each application.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateGreyTagRoute  CreateGreyTagRouteRequest
+     * @return CreateGreyTagRouteResponse
      */
     @Override
     public CompletableFuture<CreateGreyTagRouteResponse> createGreyTagRoute(CreateGreyTagRouteRequest request) {
@@ -191,6 +233,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateIngress  CreateIngressRequest
+     * @return CreateIngressResponse
+     */
     @Override
     public CompletableFuture<CreateIngressResponse> createIngress(CreateIngressRequest request) {
         try {
@@ -205,6 +251,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJob  CreateJobRequest
+     * @return CreateJobResponse
+     */
     @Override
     public CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request) {
         try {
@@ -219,6 +269,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
     @Override
     public CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request) {
         try {
@@ -233,6 +287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSecret  CreateSecretRequest
+     * @return CreateSecretResponse
+     */
     @Override
     public CompletableFuture<CreateSecretResponse> createSecret(CreateSecretRequest request) {
         try {
@@ -247,6 +305,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWebApplication  CreateWebApplicationRequest
+     * @return CreateWebApplicationResponse
+     */
+    @Override
+    public CompletableFuture<CreateWebApplicationResponse> createWebApplication(CreateWebApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWebApplication").setMethod(HttpMethod.POST).setPathRegex("/pop/v2/api/web/applications").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWebApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWebApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateWebCustomDomain  CreateWebCustomDomainRequest
+     * @return CreateWebCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<CreateWebCustomDomainResponse> createWebCustomDomain(CreateWebCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWebCustomDomain").setMethod(HttpMethod.POST).setPathRegex("/pop/v2/api/web/custom-domains").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWebCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWebCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     */
     @Override
     public CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request) {
         try {
@@ -261,6 +359,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteApplicationScalingRule  DeleteApplicationScalingRuleRequest
+     * @return DeleteApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteApplicationScalingRuleResponse> deleteApplicationScalingRule(DeleteApplicationScalingRuleRequest request) {
         try {
@@ -275,6 +377,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConfigMap  DeleteConfigMapRequest
+     * @return DeleteConfigMapResponse
+     */
     @Override
     public CompletableFuture<DeleteConfigMapResponse> deleteConfigMap(DeleteConfigMapRequest request) {
         try {
@@ -289,6 +395,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGreyTagRoute  DeleteGreyTagRouteRequest
+     * @return DeleteGreyTagRouteResponse
+     */
     @Override
     public CompletableFuture<DeleteGreyTagRouteResponse> deleteGreyTagRoute(DeleteGreyTagRouteRequest request) {
         try {
@@ -303,6 +413,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHistoryJob  DeleteHistoryJobRequest
+     * @return DeleteHistoryJobResponse
+     */
     @Override
     public CompletableFuture<DeleteHistoryJobResponse> deleteHistoryJob(DeleteHistoryJobRequest request) {
         try {
@@ -317,6 +431,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIngress  DeleteIngressRequest
+     * @return DeleteIngressResponse
+     */
     @Override
     public CompletableFuture<DeleteIngressResponse> deleteIngress(DeleteIngressRequest request) {
         try {
@@ -331,6 +449,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteJob  DeleteJobRequest
+     * @return DeleteJobResponse
+     */
     @Override
     public CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request) {
         try {
@@ -345,6 +467,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteNamespace  DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
+     */
     @Override
     public CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request) {
         try {
@@ -359,6 +485,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSecret  DeleteSecretRequest
+     * @return DeleteSecretResponse
+     */
     @Override
     public CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request) {
         try {
@@ -373,6 +503,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWebApplication  DeleteWebApplicationRequest
+     * @return DeleteWebApplicationResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWebApplicationResponse> deleteWebApplication(DeleteWebApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWebApplication").setMethod(HttpMethod.DELETE).setPathRegex("/pop/v2/api/web/applications/{ApplicationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWebApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWebApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteWebApplicationRevision  DeleteWebApplicationRevisionRequest
+     * @return DeleteWebApplicationRevisionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWebApplicationRevisionResponse> deleteWebApplicationRevision(DeleteWebApplicationRevisionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWebApplicationRevision").setMethod(HttpMethod.DELETE).setPathRegex("/pop/v2/api/web/application-revisions/{ApplicationId}/revisions/{RevisionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWebApplicationRevisionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWebApplicationRevisionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteWebCustomDomain  DeleteWebCustomDomainRequest
+     * @return DeleteWebCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWebCustomDomainResponse> deleteWebCustomDomain(DeleteWebCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWebCustomDomain").setMethod(HttpMethod.DELETE).setPathRegex("/pop/v2/api/web/custom-domains/{DomainName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWebCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWebCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeployApplication  DeployApplicationRequest
+     * @return DeployApplicationResponse
+     */
     @Override
     public CompletableFuture<DeployApplicationResponse> deployApplication(DeployApplicationRequest request) {
         try {
@@ -387,6 +575,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppServiceDetail  DescribeAppServiceDetailRequest
+     * @return DescribeAppServiceDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeAppServiceDetailResponse> describeAppServiceDetail(DescribeAppServiceDetailRequest request) {
         try {
@@ -401,6 +593,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationConfig  DescribeApplicationConfigRequest
+     * @return DescribeApplicationConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationConfigResponse> describeApplicationConfig(DescribeApplicationConfigRequest request) {
         try {
@@ -415,6 +611,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationGroups  DescribeApplicationGroupsRequest
+     * @return DescribeApplicationGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationGroupsResponse> describeApplicationGroups(DescribeApplicationGroupsRequest request) {
         try {
@@ -429,6 +629,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationImage  DescribeApplicationImageRequest
+     * @return DescribeApplicationImageResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationImageResponse> describeApplicationImage(DescribeApplicationImageRequest request) {
         try {
@@ -443,6 +647,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationInstances  DescribeApplicationInstancesRequest
+     * @return DescribeApplicationInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationInstancesResponse> describeApplicationInstances(DescribeApplicationInstancesRequest request) {
         try {
@@ -457,6 +665,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationScalingRule  DescribeApplicationScalingRuleRequest
+     * @return DescribeApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationScalingRuleResponse> describeApplicationScalingRule(DescribeApplicationScalingRuleRequest request) {
         try {
@@ -471,6 +683,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationScalingRules  DescribeApplicationScalingRulesRequest
+     * @return DescribeApplicationScalingRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationScalingRulesResponse> describeApplicationScalingRules(DescribeApplicationScalingRulesRequest request) {
         try {
@@ -485,6 +701,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationSlbs  DescribeApplicationSlbsRequest
+     * @return DescribeApplicationSlbsResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationSlbsResponse> describeApplicationSlbs(DescribeApplicationSlbsRequest request) {
         try {
@@ -499,6 +719,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeApplicationStatus  DescribeApplicationStatusRequest
+     * @return DescribeApplicationStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeApplicationStatusResponse> describeApplicationStatus(DescribeApplicationStatusRequest request) {
         try {
@@ -513,6 +737,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChangeOrder  DescribeChangeOrderRequest
+     * @return DescribeChangeOrderResponse
+     */
     @Override
     public CompletableFuture<DescribeChangeOrderResponse> describeChangeOrder(DescribeChangeOrderRequest request) {
         try {
@@ -527,6 +755,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeComponents  DescribeComponentsRequest
+     * @return DescribeComponentsResponse
+     */
     @Override
     public CompletableFuture<DescribeComponentsResponse> describeComponents(DescribeComponentsRequest request) {
         try {
@@ -541,6 +773,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeConfigMap  DescribeConfigMapRequest
+     * @return DescribeConfigMapResponse
+     */
     @Override
     public CompletableFuture<DescribeConfigMapResponse> describeConfigMap(DescribeConfigMapRequest request) {
         try {
@@ -555,6 +791,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeConfigurationPrice  DescribeConfigurationPriceRequest
+     * @return DescribeConfigurationPriceResponse
+     */
     @Override
     public CompletableFuture<DescribeConfigurationPriceResponse> describeConfigurationPrice(DescribeConfigurationPriceRequest request) {
         try {
@@ -569,6 +809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEdasContainers  DescribeEdasContainersRequest
+     * @return DescribeEdasContainersResponse
+     */
     @Override
     public CompletableFuture<DescribeEdasContainersResponse> describeEdasContainers(DescribeEdasContainersRequest request) {
         try {
@@ -583,6 +827,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGreyTagRoute  DescribeGreyTagRouteRequest
+     * @return DescribeGreyTagRouteResponse
+     */
     @Override
     public CompletableFuture<DescribeGreyTagRouteResponse> describeGreyTagRoute(DescribeGreyTagRouteRequest request) {
         try {
@@ -597,6 +845,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIngress  DescribeIngressRequest
+     * @return DescribeIngressResponse
+     */
     @Override
     public CompletableFuture<DescribeIngressResponse> describeIngress(DescribeIngressRequest request) {
         try {
@@ -611,6 +863,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceLog  DescribeInstanceLogRequest
+     * @return DescribeInstanceLogResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceLogResponse> describeInstanceLog(DescribeInstanceLogRequest request) {
         try {
@@ -625,6 +881,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceSpecifications  DescribeInstanceSpecificationsRequest
+     * @return DescribeInstanceSpecificationsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceSpecificationsResponse> describeInstanceSpecifications(DescribeInstanceSpecificationsRequest request) {
         try {
@@ -639,6 +899,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeJob  DescribeJobRequest
+     * @return DescribeJobResponse
+     */
     @Override
     public CompletableFuture<DescribeJobResponse> describeJob(DescribeJobRequest request) {
         try {
@@ -653,6 +917,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeJobHistory  DescribeJobHistoryRequest
+     * @return DescribeJobHistoryResponse
+     */
     @Override
     public CompletableFuture<DescribeJobHistoryResponse> describeJobHistory(DescribeJobHistoryRequest request) {
         try {
@@ -667,6 +935,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeJobStatus  DescribeJobStatusRequest
+     * @return DescribeJobStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeJobStatusResponse> describeJobStatus(DescribeJobStatusRequest request) {
         try {
@@ -681,6 +953,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNamespace  DescribeNamespaceRequest
+     * @return DescribeNamespaceResponse
+     */
     @Override
     public CompletableFuture<DescribeNamespaceResponse> describeNamespace(DescribeNamespaceRequest request) {
         try {
@@ -695,6 +971,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNamespaceList  DescribeNamespaceListRequest
+     * @return DescribeNamespaceListResponse
+     */
     @Override
     public CompletableFuture<DescribeNamespaceListResponse> describeNamespaceList(DescribeNamespaceListRequest request) {
         try {
@@ -709,6 +989,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNamespaceResources  DescribeNamespaceResourcesRequest
+     * @return DescribeNamespaceResourcesResponse
+     */
     @Override
     public CompletableFuture<DescribeNamespaceResourcesResponse> describeNamespaceResources(DescribeNamespaceResourcesRequest request) {
         try {
@@ -723,6 +1007,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNamespaces  DescribeNamespacesRequest
+     * @return DescribeNamespacesResponse
+     */
     @Override
     public CompletableFuture<DescribeNamespacesResponse> describeNamespaces(DescribeNamespacesRequest request) {
         try {
@@ -737,6 +1025,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePipeline  DescribePipelineRequest
+     * @return DescribePipelineResponse
+     */
     @Override
     public CompletableFuture<DescribePipelineResponse> describePipeline(DescribePipelineRequest request) {
         try {
@@ -751,6 +1043,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
@@ -765,6 +1061,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecret  DescribeSecretRequest
+     * @return DescribeSecretResponse
+     */
     @Override
     public CompletableFuture<DescribeSecretResponse> describeSecret(DescribeSecretRequest request) {
         try {
@@ -779,6 +1079,136 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebApplication  DescribeWebApplicationRequest
+     * @return DescribeWebApplicationResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebApplicationResponse> describeWebApplication(DescribeWebApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWebApplication").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/applications/{ApplicationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeWebApplicationResourceStatics  DescribeWebApplicationResourceStaticsRequest
+     * @return DescribeWebApplicationResourceStaticsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebApplicationResourceStaticsResponse> describeWebApplicationResourceStatics(DescribeWebApplicationResourceStaticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWebApplicationResourceStatics").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/applications-observability/{ApplicationId}/resource").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebApplicationResourceStaticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebApplicationResourceStaticsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeWebApplicationRevision  DescribeWebApplicationRevisionRequest
+     * @return DescribeWebApplicationRevisionResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebApplicationRevisionResponse> describeWebApplicationRevision(DescribeWebApplicationRevisionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWebApplicationRevision").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/application-revisions/{ApplicationId}/revisions/{RevisionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebApplicationRevisionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebApplicationRevisionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeWebApplicationScalingConfig  DescribeWebApplicationScalingConfigRequest
+     * @return DescribeWebApplicationScalingConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebApplicationScalingConfigResponse> describeWebApplicationScalingConfig(DescribeWebApplicationScalingConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWebApplicationScalingConfig").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/application-scaling/{ApplicationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebApplicationScalingConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebApplicationScalingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeWebApplicationTrafficConfig  DescribeWebApplicationTrafficConfigRequest
+     * @return DescribeWebApplicationTrafficConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebApplicationTrafficConfigResponse> describeWebApplicationTrafficConfig(DescribeWebApplicationTrafficConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWebApplicationTrafficConfig").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/application-traffic/{ApplicationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebApplicationTrafficConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebApplicationTrafficConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeWebCustomDomain  DescribeWebCustomDomainRequest
+     * @return DescribeWebCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebCustomDomainResponse> describeWebCustomDomain(DescribeWebCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWebCustomDomain").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/custom-domains/{DomainName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeWebInstanceLogs  DescribeWebInstanceLogsRequest
+     * @return DescribeWebInstanceLogsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWebInstanceLogsResponse> describeWebInstanceLogs(DescribeWebInstanceLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeWebInstanceLogs").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/applications-observability/{ApplicationId}/instances/{InstanceId}/logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWebInstanceLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWebInstanceLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableApplicationScalingRule  DisableApplicationScalingRuleRequest
+     * @return DisableApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<DisableApplicationScalingRuleResponse> disableApplicationScalingRule(DisableApplicationScalingRuleRequest request) {
         try {
@@ -793,6 +1223,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DowngradeApplicationApmService  DowngradeApplicationApmServiceRequest
+     * @return DowngradeApplicationApmServiceResponse
+     */
+    @Override
+    public CompletableFuture<DowngradeApplicationApmServiceResponse> downgradeApplicationApmService(DowngradeApplicationApmServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DowngradeApplicationApmService").setMethod(HttpMethod.DELETE).setPathRegex("/pop/v1/sam/app/applicationApmService").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DowngradeApplicationApmServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DowngradeApplicationApmServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableApplicationScalingRule  EnableApplicationScalingRuleRequest
+     * @return EnableApplicationScalingRuleResponse
+     */
     @Override
     public CompletableFuture<EnableApplicationScalingRuleResponse> enableApplicationScalingRule(EnableApplicationScalingRuleRequest request) {
         try {
@@ -807,6 +1259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecJob  ExecJobRequest
+     * @return ExecJobResponse
+     */
     @Override
     public CompletableFuture<ExecJobResponse> execJob(ExecJobRequest request) {
         try {
@@ -821,6 +1277,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplication  GetApplicationRequest
+     * @return GetApplicationResponse
+     */
+    @Override
+    public CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetApplication").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/sam/app/getApplication").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetArmsTopNMetric  GetArmsTopNMetricRequest
+     * @return GetArmsTopNMetricResponse
+     */
     @Override
     public CompletableFuture<GetArmsTopNMetricResponse> getArmsTopNMetric(GetArmsTopNMetricRequest request) {
         try {
@@ -835,6 +1313,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAvailabilityMetric  GetAvailabilityMetricRequest
+     * @return GetAvailabilityMetricResponse
+     */
     @Override
     public CompletableFuture<GetAvailabilityMetricResponse> getAvailabilityMetric(GetAvailabilityMetricRequest request) {
         try {
@@ -849,6 +1331,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetChangeOrderMetric  GetChangeOrderMetricRequest
+     * @return GetChangeOrderMetricResponse
+     */
     @Override
     public CompletableFuture<GetChangeOrderMetricResponse> getChangeOrderMetric(GetChangeOrderMetricRequest request) {
         try {
@@ -863,6 +1349,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetScaleAppMetric  GetScaleAppMetricRequest
+     * @return GetScaleAppMetricResponse
+     */
     @Override
     public CompletableFuture<GetScaleAppMetricResponse> getScaleAppMetric(GetScaleAppMetricRequest request) {
         try {
@@ -877,6 +1367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWarningEventMetric  GetWarningEventMetricRequest
+     * @return GetWarningEventMetricResponse
+     */
     @Override
     public CompletableFuture<GetWarningEventMetricResponse> getWarningEventMetric(GetWarningEventMetricRequest request) {
         try {
@@ -891,6 +1385,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWebshellToken  GetWebshellTokenRequest
+     * @return GetWebshellTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetWebshellTokenResponse> getWebshellToken(GetWebshellTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWebshellToken").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/sam/instance/webshellToken").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWebshellTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWebshellTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAppEvents  ListAppEventsRequest
+     * @return ListAppEventsResponse
+     */
     @Override
     public CompletableFuture<ListAppEventsResponse> listAppEvents(ListAppEventsRequest request) {
         try {
@@ -905,6 +1421,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAppServices  ListAppServicesRequest
+     * @return ListAppServicesResponse
+     */
+    @Override
+    public CompletableFuture<ListAppServicesResponse> listAppServices(ListAppServicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAppServices").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/sam/service/listAppServices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppServicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAppServicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAppServicesPage  ListAppServicesPageRequest
+     * @return ListAppServicesPageResponse
+     */
     @Override
     public CompletableFuture<ListAppServicesPageResponse> listAppServicesPage(ListAppServicesPageRequest request) {
         try {
@@ -919,6 +1457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAppVersions  ListAppVersionsRequest
+     * @return ListAppVersionsResponse
+     */
     @Override
     public CompletableFuture<ListAppVersionsResponse> listAppVersions(ListAppVersionsRequest request) {
         try {
@@ -933,6 +1475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplications  ListApplicationsRequest
+     * @return ListApplicationsResponse
+     */
     @Override
     public CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request) {
         try {
@@ -947,6 +1493,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListChangeOrders  ListChangeOrdersRequest
+     * @return ListChangeOrdersResponse
+     */
     @Override
     public CompletableFuture<ListChangeOrdersResponse> listChangeOrders(ListChangeOrdersRequest request) {
         try {
@@ -961,6 +1511,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListConsumedServices  ListConsumedServicesRequest
+     * @return ListConsumedServicesResponse
+     */
     @Override
     public CompletableFuture<ListConsumedServicesResponse> listConsumedServices(ListConsumedServicesRequest request) {
         try {
@@ -976,8 +1530,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can configure only one canary release rule for each application.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can configure only one canary release rule for each application.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ListGreyTagRoute  ListGreyTagRouteRequest
+     * @return ListGreyTagRouteResponse
      */
     @Override
     public CompletableFuture<ListGreyTagRouteResponse> listGreyTagRoute(ListGreyTagRouteRequest request) {
@@ -993,6 +1552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIngresses  ListIngressesRequest
+     * @return ListIngressesResponse
+     */
     @Override
     public CompletableFuture<ListIngressesResponse> listIngresses(ListIngressesRequest request) {
         try {
@@ -1007,6 +1570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
     @Override
     public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
         try {
@@ -1021,6 +1588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogConfigs  ListLogConfigsRequest
+     * @return ListLogConfigsResponse
+     */
     @Override
     public CompletableFuture<ListLogConfigsResponse> listLogConfigs(ListLogConfigsRequest request) {
         try {
@@ -1035,6 +1606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNamespaceChangeOrders  ListNamespaceChangeOrdersRequest
+     * @return ListNamespaceChangeOrdersResponse
+     */
     @Override
     public CompletableFuture<ListNamespaceChangeOrdersResponse> listNamespaceChangeOrders(ListNamespaceChangeOrdersRequest request) {
         try {
@@ -1049,6 +1624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListNamespacedConfigMaps  ListNamespacedConfigMapsRequest
+     * @return ListNamespacedConfigMapsResponse
+     */
     @Override
     public CompletableFuture<ListNamespacedConfigMapsResponse> listNamespacedConfigMaps(ListNamespacedConfigMapsRequest request) {
         try {
@@ -1063,6 +1642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublishedServices  ListPublishedServicesRequest
+     * @return ListPublishedServicesResponse
+     */
     @Override
     public CompletableFuture<ListPublishedServicesResponse> listPublishedServices(ListPublishedServicesRequest request) {
         try {
@@ -1077,6 +1660,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSecrets  ListSecretsRequest
+     * @return ListSecretsResponse
+     */
     @Override
     public CompletableFuture<ListSecretsResponse> listSecrets(ListSecretsRequest request) {
         try {
@@ -1091,6 +1678,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1106,8 +1697,85 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
-      *
+     * @param request the request parameters of ListWebApplicationInstances  ListWebApplicationInstancesRequest
+     * @return ListWebApplicationInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListWebApplicationInstancesResponse> listWebApplicationInstances(ListWebApplicationInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWebApplicationInstances").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/applications-observability/{ApplicationId}/instances").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWebApplicationInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWebApplicationInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWebApplicationRevisions  ListWebApplicationRevisionsRequest
+     * @return ListWebApplicationRevisionsResponse
+     */
+    @Override
+    public CompletableFuture<ListWebApplicationRevisionsResponse> listWebApplicationRevisions(ListWebApplicationRevisionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWebApplicationRevisions").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/application-revisions/{ApplicationId}/revisions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWebApplicationRevisionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWebApplicationRevisionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWebApplications  ListWebApplicationsRequest
+     * @return ListWebApplicationsResponse
+     */
+    @Override
+    public CompletableFuture<ListWebApplicationsResponse> listWebApplications(ListWebApplicationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWebApplications").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/applications").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWebApplicationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWebApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWebCustomDomains  ListWebCustomDomainsRequest
+     * @return ListWebCustomDomainsResponse
+     */
+    @Override
+    public CompletableFuture<ListWebCustomDomainsResponse> listWebCustomDomains(ListWebCustomDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWebCustomDomains").setMethod(HttpMethod.GET).setPathRegex("/pop/v2/api/web/custom-domains").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWebCustomDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWebCustomDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of OpenSaeService  OpenSaeServiceRequest
+     * @return OpenSaeServiceResponse
      */
     @Override
     public CompletableFuture<OpenSaeServiceResponse> openSaeService(OpenSaeServiceRequest request) {
@@ -1123,6 +1791,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublishWebApplicationRevision  PublishWebApplicationRevisionRequest
+     * @return PublishWebApplicationRevisionResponse
+     */
+    @Override
+    public CompletableFuture<PublishWebApplicationRevisionResponse> publishWebApplicationRevision(PublishWebApplicationRevisionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PublishWebApplicationRevision").setMethod(HttpMethod.POST).setPathRegex("/pop/v2/api/web/application-revisions/{ApplicationId}/revisions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PublishWebApplicationRevisionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PublishWebApplicationRevisionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryResourceStatics  QueryResourceStaticsRequest
+     * @return QueryResourceStaticsResponse
+     */
     @Override
     public CompletableFuture<QueryResourceStaticsResponse> queryResourceStatics(QueryResourceStaticsRequest request) {
         try {
@@ -1137,6 +1827,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReduceApplicationCapacityByInstanceIds  ReduceApplicationCapacityByInstanceIdsRequest
+     * @return ReduceApplicationCapacityByInstanceIdsResponse
+     */
     @Override
     public CompletableFuture<ReduceApplicationCapacityByInstanceIdsResponse> reduceApplicationCapacityByInstanceIds(ReduceApplicationCapacityByInstanceIdsRequest request) {
         try {
@@ -1151,6 +1845,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RescaleApplication  RescaleApplicationRequest
+     * @return RescaleApplicationResponse
+     */
     @Override
     public CompletableFuture<RescaleApplicationResponse> rescaleApplication(RescaleApplicationRequest request) {
         try {
@@ -1165,6 +1863,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RescaleApplicationVertically  RescaleApplicationVerticallyRequest
+     * @return RescaleApplicationVerticallyResponse
+     */
     @Override
     public CompletableFuture<RescaleApplicationVerticallyResponse> rescaleApplicationVertically(RescaleApplicationVerticallyRequest request) {
         try {
@@ -1179,6 +1881,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartApplication  RestartApplicationRequest
+     * @return RestartApplicationResponse
+     */
     @Override
     public CompletableFuture<RestartApplicationResponse> restartApplication(RestartApplicationRequest request) {
         try {
@@ -1193,6 +1899,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestartInstances  RestartInstancesRequest
+     * @return RestartInstancesResponse
+     */
     @Override
     public CompletableFuture<RestartInstancesResponse> restartInstances(RestartInstancesRequest request) {
         try {
@@ -1207,6 +1917,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RollbackApplication  RollbackApplicationRequest
+     * @return RollbackApplicationResponse
+     */
     @Override
     public CompletableFuture<RollbackApplicationResponse> rollbackApplication(RollbackApplicationRequest request) {
         try {
@@ -1221,6 +1935,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartApplication  StartApplicationRequest
+     * @return StartApplicationResponse
+     */
     @Override
     public CompletableFuture<StartApplicationResponse> startApplication(StartApplicationRequest request) {
         try {
@@ -1235,6 +1953,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartWebApplication  StartWebApplicationRequest
+     * @return StartWebApplicationResponse
+     */
+    @Override
+    public CompletableFuture<StartWebApplicationResponse> startWebApplication(StartWebApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartWebApplication").setMethod(HttpMethod.POST).setPathRegex("/pop/v2/api/web/application-ops/{ApplicationId}/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartWebApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartWebApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopApplication  StopApplicationRequest
+     * @return StopApplicationResponse
+     */
     @Override
     public CompletableFuture<StopApplicationResponse> stopApplication(StopApplicationRequest request) {
         try {
@@ -1249,6 +1989,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopWebApplication  StopWebApplicationRequest
+     * @return StopWebApplicationResponse
+     */
+    @Override
+    public CompletableFuture<StopWebApplicationResponse> stopWebApplication(StopWebApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopWebApplication").setMethod(HttpMethod.POST).setPathRegex("/pop/v2/api/web/application-ops/{ApplicationId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopWebApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopWebApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SuspendJob  SuspendJobRequest
+     * @return SuspendJobResponse
+     */
     @Override
     public CompletableFuture<SuspendJobResponse> suspendJob(SuspendJobRequest request) {
         try {
@@ -1263,6 +2025,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1277,6 +2043,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnbindSlb  UnbindSlbRequest
+     * @return UnbindSlbResponse
+     */
     @Override
     public CompletableFuture<UnbindSlbResponse> unbindSlb(UnbindSlbRequest request) {
         try {
@@ -1291,6 +2061,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1305,6 +2079,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAppSecurityGroup  UpdateAppSecurityGroupRequest
+     * @return UpdateAppSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateAppSecurityGroupResponse> updateAppSecurityGroup(UpdateAppSecurityGroupRequest request) {
         try {
@@ -1319,6 +2097,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApplicationDescription  UpdateApplicationDescriptionRequest
+     * @return UpdateApplicationDescriptionResponse
+     */
     @Override
     public CompletableFuture<UpdateApplicationDescriptionResponse> updateApplicationDescription(UpdateApplicationDescriptionRequest request) {
         try {
@@ -1334,9 +2116,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ##
-      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the whitelist.
-      *
+     * <b>description</b> :
+     * <h2></h2>
+     * <p>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</p>
+     * 
+     * @param request the request parameters of UpdateApplicationScalingRule  UpdateApplicationScalingRuleRequest
+     * @return UpdateApplicationScalingRuleResponse
      */
     @Override
     public CompletableFuture<UpdateApplicationScalingRuleResponse> updateApplicationScalingRule(UpdateApplicationScalingRuleRequest request) {
@@ -1352,6 +2137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateApplicationVswitches  UpdateApplicationVswitchesRequest
+     * @return UpdateApplicationVswitchesResponse
+     */
     @Override
     public CompletableFuture<UpdateApplicationVswitchesResponse> updateApplicationVswitches(UpdateApplicationVswitchesRequest request) {
         try {
@@ -1366,6 +2155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateConfigMap  UpdateConfigMapRequest
+     * @return UpdateConfigMapResponse
+     */
     @Override
     public CompletableFuture<UpdateConfigMapResponse> updateConfigMap(UpdateConfigMapRequest request) {
         try {
@@ -1380,6 +2173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGreyTagRoute  UpdateGreyTagRouteRequest
+     * @return UpdateGreyTagRouteResponse
+     */
     @Override
     public CompletableFuture<UpdateGreyTagRouteResponse> updateGreyTagRoute(UpdateGreyTagRouteRequest request) {
         try {
@@ -1394,6 +2191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIngress  UpdateIngressRequest
+     * @return UpdateIngressResponse
+     */
     @Override
     public CompletableFuture<UpdateIngressResponse> updateIngress(UpdateIngressRequest request) {
         try {
@@ -1408,6 +2209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateJob  UpdateJobRequest
+     * @return UpdateJobResponse
+     */
     @Override
     public CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request) {
         try {
@@ -1422,6 +2227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateNamespace  UpdateNamespaceRequest
+     * @return UpdateNamespaceResponse
+     */
     @Override
     public CompletableFuture<UpdateNamespaceResponse> updateNamespace(UpdateNamespaceRequest request) {
         try {
@@ -1436,6 +2245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateNamespaceVpc  UpdateNamespaceVpcRequest
+     * @return UpdateNamespaceVpcResponse
+     */
     @Override
     public CompletableFuture<UpdateNamespaceVpcResponse> updateNamespaceVpc(UpdateNamespaceVpcRequest request) {
         try {
@@ -1450,6 +2263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSecret  UpdateSecretRequest
+     * @return UpdateSecretResponse
+     */
     @Override
     public CompletableFuture<UpdateSecretResponse> updateSecret(UpdateSecretRequest request) {
         try {
@@ -1459,6 +2276,96 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSecretResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWebApplication  UpdateWebApplicationRequest
+     * @return UpdateWebApplicationResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWebApplicationResponse> updateWebApplication(UpdateWebApplicationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWebApplication").setMethod(HttpMethod.PUT).setPathRegex("/pop/v2/api/web/applications/{ApplicationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWebApplicationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWebApplicationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWebApplicationScalingConfig  UpdateWebApplicationScalingConfigRequest
+     * @return UpdateWebApplicationScalingConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWebApplicationScalingConfigResponse> updateWebApplicationScalingConfig(UpdateWebApplicationScalingConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWebApplicationScalingConfig").setMethod(HttpMethod.PUT).setPathRegex("/pop/v2/api/web/application-scaling/{ApplicationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWebApplicationScalingConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWebApplicationScalingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWebApplicationTrafficConfig  UpdateWebApplicationTrafficConfigRequest
+     * @return UpdateWebApplicationTrafficConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWebApplicationTrafficConfigResponse> updateWebApplicationTrafficConfig(UpdateWebApplicationTrafficConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWebApplicationTrafficConfig").setMethod(HttpMethod.PUT).setPathRegex("/pop/v2/api/web/application-traffic/{ApplicationId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWebApplicationTrafficConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWebApplicationTrafficConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWebCustomDomain  UpdateWebCustomDomainRequest
+     * @return UpdateWebCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWebCustomDomainResponse> updateWebCustomDomain(UpdateWebCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWebCustomDomain").setMethod(HttpMethod.PUT).setPathRegex("/pop/v2/api/web/custom-domains/{DomainName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWebCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWebCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpgradeApplicationApmService  UpgradeApplicationApmServiceRequest
+     * @return UpgradeApplicationApmServiceResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeApplicationApmServiceResponse> upgradeApplicationApmService(UpgradeApplicationApmServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeApplicationApmService").setMethod(HttpMethod.POST).setPathRegex("/pop/v1/sam/app/applicationApmService").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeApplicationApmServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeApplicationApmServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

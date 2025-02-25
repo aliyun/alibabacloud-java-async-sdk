@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNASFileSystemResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNASFileSystemResponseBody</p>
  */
 public class CreateNASFileSystemResponseBody extends TeaModel {
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @NameInMap("FileSystemName")
+    @com.aliyun.core.annotation.NameInMap("FileSystemName")
     private String fileSystemName;
 
-    @NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
     private String mountTargetDomain;
 
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNASFileSystemResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileSystemId.
+         * <p>ID of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -94,7 +102,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * FileSystemName.
+         * <p>Name of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNAS</p>
          */
         public Builder fileSystemName(String fileSystemName) {
             this.fileSystemName = fileSystemName;
@@ -102,7 +113,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * MountTargetDomain.
+         * <p>Mount point domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.mountTargetDomain = mountTargetDomain;
@@ -110,7 +124,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>Workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
@@ -118,7 +135,10 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

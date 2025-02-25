@@ -1,61 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDcdnDomainSSLCertificateRequest} extends {@link RequestModel}
  *
  * <p>SetDcdnDomainSSLCertificateRequest</p>
  */
 public class SetDcdnDomainSSLCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private Long certId;
 
-    @Query
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @Query
-    @NameInMap("CertRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertRegion")
     private String certRegion;
 
-    @Query
-    @NameInMap("CertType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertType")
     private String certType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Env")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Env")
     private String env;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SSLPri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPri")
     private String SSLPri;
 
-    @Query
-    @NameInMap("SSLProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLProtocol;
 
-    @Query
-    @NameInMap("SSLPub")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPub")
     private String SSLPub;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private SetDcdnDomainSSLCertificateRequest(Builder builder) {
@@ -196,7 +196,10 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate. This parameter takes effect only when **CertType** is set to **cas**.
+         * <p>The certificate ID. This parameter is required and valid only when <strong>CertType</strong> is set to <strong>cas</strong>. If you specify this parameter, an existing certificate is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8089870</p>
          */
         public Builder certId(Long certId) {
             this.putQueryParameter("CertId", certId);
@@ -205,7 +208,10 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * The name of the SSL certificate. You can specify only one certificate name.
+         * <p>The name of the new certificate. You can specify only one certificate name. This parameter is optional and valid only when <strong>CertType</strong> is set to <strong>upload</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -214,7 +220,10 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * The region of the SSL certificate. This parameter takes effect only when **CertType** is set to **cas**. Default value: **cn-hangzhou**. Valid values: **cn-hangzhou** and **ap-southeast-1**.
+         * <p>The region of the SSL certificate. This parameter takes effect only when <strong>CertType</strong> is set to <strong>cas</strong>. Default value: <strong>cn-hangzhou</strong>. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder certRegion(String certRegion) {
             this.putQueryParameter("CertRegion", certRegion);
@@ -223,11 +232,14 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * The type of the certificate. Valid values:
-         * <p>
+         * <p>The type of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>upload</strong>: a user-uploaded SSL certificate.</li>
+         * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+         * </ul>
          * 
-         * *   **upload**: a user-uploaded SSL certificate.
-         * *   **cas**: a certificate that is acquired through Certificate Management Service.
+         * <strong>example:</strong>
+         * <p>upload</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -236,7 +248,11 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * The domain name that is secured by the SSL certificate.
+         * <p>The domain name that is secured by the SSL certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -245,7 +261,10 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to <strong>staging</strong>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -263,7 +282,10 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * The private key. Specify the private key only if you want to enable the SSL certificate.
+         * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y****</p>
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -272,11 +294,15 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL certificate. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -285,7 +311,10 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.
+         * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

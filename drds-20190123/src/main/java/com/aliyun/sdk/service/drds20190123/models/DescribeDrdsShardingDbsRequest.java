@@ -102,17 +102,17 @@ public class DescribeDrdsShardingDbsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsShardingDbsRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.dbNamePattern = response.dbNamePattern;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeDrdsShardingDbsRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.dbNamePattern = request.dbNamePattern;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * DbName.
+         * The name of the database whose shards you want to query.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -121,7 +121,7 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * DbNamePattern.
+         * The matching pattern of the database name.
          */
         public Builder dbNamePattern(String dbNamePattern) {
             this.putQueryParameter("DbNamePattern", dbNamePattern);
@@ -130,7 +130,7 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance whose database shards you want to query.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -139,7 +139,7 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +148,7 @@ public class DescribeDrdsShardingDbsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of database shards returned on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

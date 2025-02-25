@@ -1,67 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStateConfigurationRequest} extends {@link RequestModel}
  *
  * <p>CreateStateConfigurationRequest</p>
  */
 public class CreateStateConfigurationRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConfigureMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigureMode")
     private String configureMode;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private String parameters;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ScheduleExpression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleExpression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleExpression;
 
-    @Query
-    @NameInMap("ScheduleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleType;
 
-    @Query
-    @NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, ?> tags;
 
-    @Query
-    @NameInMap("Targets")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Targets")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targets;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
     private CreateStateConfigurationRequest(Builder builder) {
@@ -152,7 +157,7 @@ public class CreateStateConfigurationRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -186,7 +191,7 @@ public class CreateStateConfigurationRequest extends Request {
         private String resourceGroupId; 
         private String scheduleExpression; 
         private String scheduleType; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String targets; 
         private String templateName; 
         private String templateVersion; 
@@ -212,7 +217,10 @@ public class CreateStateConfigurationRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DASKJJLKADS-AHKLJHJSAKL-AJK</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -221,7 +229,10 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The configuration mode. Valid values: ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.
+         * <p>The configuration mode. Valid values: ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApplyOnce</p>
          */
         public Builder configureMode(String configureMode) {
             this.putQueryParameter("ConfigureMode", configureMode);
@@ -230,7 +241,10 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The description of the desired-state configuration.
+         * <p>The description of the desired-state configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The region ID.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -239,7 +253,10 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The parameters.
+         * <p>The parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;policy&quot;: {       &quot;ACS:Application&quot;: {         &quot;Collection&quot;: &quot;Enabled&quot;       },       &quot;ACS:Network&quot;: {         &quot;Collection&quot;: &quot;Enabled&quot;       }     }   }</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -248,7 +265,10 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,7 +277,10 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -266,7 +289,11 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The schedule expression. The interval between two schedules must be a minimum of 30 minutes.
+         * <p>The schedule expression. The interval between two schedules must be a minimum of 30 minutes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the resource group.</p>
          */
         public Builder scheduleExpression(String scheduleExpression) {
             this.putQueryParameter("ScheduleExpression", scheduleExpression);
@@ -275,7 +302,11 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The schedule type. Set the value to rate.
+         * <p>The schedule type. Set the value to rate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate</p>
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("ScheduleType", scheduleType);
@@ -284,9 +315,12 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The tags to be added to the configuration.
+         * <p>The tags to be added to the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Key&quot;: &quot;oos&quot;, &quot;Value&quot;: &quot;inventory&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -294,7 +328,11 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The resources to be queried.
+         * <p>The resources to be queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;ResourceType&quot;: &quot;ALIYUN::ECS::Instance&quot;,     &quot;Filters&quot;: [       {         &quot;Type&quot;: &quot;All&quot;,         &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,         &quot;Parameters&quot;: {           &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,           &quot;Status&quot;: &quot;Running&quot;         }       }     ]   }</p>
          */
         public Builder targets(String targets) {
             this.putQueryParameter("Targets", targets);
@@ -303,7 +341,11 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * <p>The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-ECS-InventoryDataCollection</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -312,7 +354,10 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * The version number of the template. If you do not specify this parameter, the latest version of the template is used.
+         * <p>The version number of the template. If you do not specify this parameter, the latest version of the template is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

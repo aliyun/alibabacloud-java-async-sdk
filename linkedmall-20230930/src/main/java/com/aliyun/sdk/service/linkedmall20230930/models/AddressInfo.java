@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddressInfo} extends {@link TeaModel}
  *
  * <p>AddressInfo</p>
  */
 public class AddressInfo extends TeaModel {
-    @NameInMap("addressDetail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("addressDetail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addressDetail;
 
-    @NameInMap("addressId")
+    @com.aliyun.core.annotation.NameInMap("addressId")
     private Long addressId;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @NameInMap("receiver")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("receiver")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiver;
 
-    @NameInMap("receiverPhone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("receiverPhone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiverPhone;
 
-    @NameInMap("townDivisionCode")
+    @com.aliyun.core.annotation.NameInMap("townDivisionCode")
     private String townDivisionCode;
 
     private AddressInfo(Builder builder) {
@@ -101,7 +106,10 @@ public class AddressInfo extends TeaModel {
         private String townDivisionCode; 
 
         /**
-         * addressDetail.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>陕西省西安市新城区xxx大厦xx室</p>
          */
         public Builder addressDetail(String addressDetail) {
             this.addressDetail = addressDetail;
@@ -125,7 +133,10 @@ public class AddressInfo extends TeaModel {
         }
 
         /**
-         * receiver.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任先生</p>
          */
         public Builder receiver(String receiver) {
             this.receiver = receiver;
@@ -133,7 +144,10 @@ public class AddressInfo extends TeaModel {
         }
 
         /**
-         * receiverPhone.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182***5674</p>
          */
         public Builder receiverPhone(String receiverPhone) {
             this.receiverPhone = receiverPhone;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationAccessPointRequest</p>
  */
 public class UpdateApplicationAccessPointRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private String policies;
 
     private UpdateApplicationAccessPointRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class UpdateApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,7 +91,7 @@ public class UpdateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the AAP that you want to update.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +100,9 @@ public class UpdateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Policies.
+         * The permission policy that you want to update.
+         * <p>
+         * > You can associate up to three permission policies with each AAP.
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);

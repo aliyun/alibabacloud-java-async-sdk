@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceResponseBody</p>
  */
 public class ListDataSourceResponseBody extends TeaModel {
-    @NameInMap("Advice")
+    @com.aliyun.core.annotation.NameInMap("Advice")
     private String advice;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Cost")
+    @com.aliyun.core.annotation.NameInMap("Cost")
     private String cost;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorDetail")
+    @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private ErrorDetail errorDetail;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDataSourceResponseBody(Builder builder) {
@@ -252,79 +251,79 @@ public class ListDataSourceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private String cluster;
 
-        @NameInMap("ConnExtraAttributes")
+        @com.aliyun.core.annotation.NameInMap("ConnExtraAttributes")
         private Object connExtraAttributes;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OperatingSystem")
+        @com.aliyun.core.annotation.NameInMap("OperatingSystem")
         private String operatingSystem;
 
-        @NameInMap("OracleNlsLengthSemantics")
+        @com.aliyun.core.annotation.NameInMap("OracleNlsLengthSemantics")
         private String oracleNlsLengthSemantics;
 
-        @NameInMap("OracleSid")
+        @com.aliyun.core.annotation.NameInMap("OracleSid")
         private String oracleSid;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("PartnerId")
+        @com.aliyun.core.annotation.NameInMap("PartnerId")
         private String partnerId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceOwner")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwner")
         private String resourceOwner;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("Tenant")
+        @com.aliyun.core.annotation.NameInMap("Tenant")
         private String tenant;
 
-        @NameInMap("Timezone")
+        @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {
@@ -773,43 +772,43 @@ public class ListDataSourceResponseBody extends TeaModel {
 
     }
     public static class ErrorDetail extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ErrorDetail(Builder builder) {

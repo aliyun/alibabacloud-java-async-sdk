@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightModifyPayV2ResponseBody} extends {@link TeaModel}
  *
  * <p>FlightModifyPayV2ResponseBody</p>
  */
 public class FlightModifyPayV2ResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
-    private java.util.Map < String, ? > module;
+    @com.aliyun.core.annotation.NameInMap("module")
+    private java.util.Map<String, ?> module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightModifyPayV2ResponseBody(Builder builder) {
@@ -64,7 +69,7 @@ public class FlightModifyPayV2ResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.Map < String, ? > getModule() {
+    public java.util.Map<String, ?> getModule() {
         return this.module;
     }
 
@@ -92,7 +97,7 @@ public class FlightModifyPayV2ResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.Map < String, ? > module; 
+        private java.util.Map<String, ?> module; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -114,15 +119,18 @@ public class FlightModifyPayV2ResponseBody extends TeaModel {
         }
 
         /**
-         * module
+         * <p>module</p>
          */
-        public Builder module(java.util.Map < String, ? > module) {
+        public Builder module(java.util.Map<String, ?> module) {
             this.module = module;
             return this;
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +146,10 @@ public class FlightModifyPayV2ResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210bc59716837025964391120d3a5e</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

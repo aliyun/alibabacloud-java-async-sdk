@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddServiceSourceRequest} extends {@link RequestModel}
  *
  * <p>AddServiceSourceRequest</p>
  */
 public class AddServiceSourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("GroupList")
-    private java.util.List < String > groupList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupList")
+    private java.util.List<String> groupList;
 
-    @Query
-    @NameInMap("IngressOptionsRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressOptionsRequest")
     private IngressOptionsRequest ingressOptionsRequest;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PathList")
-    private java.util.List < String > pathList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathList")
+    private java.util.List<String> pathList;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("ToAuthorizeSecurityGroups")
-    private java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToAuthorizeSecurityGroups")
+    private java.util.List<ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private AddServiceSourceRequest(Builder builder) {
@@ -103,7 +108,7 @@ public class AddServiceSourceRequest extends Request {
     /**
      * @return groupList
      */
-    public java.util.List < String > getGroupList() {
+    public java.util.List<String> getGroupList() {
         return this.groupList;
     }
 
@@ -124,7 +129,7 @@ public class AddServiceSourceRequest extends Request {
     /**
      * @return pathList
      */
-    public java.util.List < String > getPathList() {
+    public java.util.List<String> getPathList() {
         return this.pathList;
     }
 
@@ -138,7 +143,7 @@ public class AddServiceSourceRequest extends Request {
     /**
      * @return toAuthorizeSecurityGroups
      */
-    public java.util.List < ToAuthorizeSecurityGroups> getToAuthorizeSecurityGroups() {
+    public java.util.List<ToAuthorizeSecurityGroups> getToAuthorizeSecurityGroups() {
         return this.toAuthorizeSecurityGroups;
     }
 
@@ -153,12 +158,12 @@ public class AddServiceSourceRequest extends Request {
         private String acceptLanguage; 
         private String address; 
         private String gatewayUniqueId; 
-        private java.util.List < String > groupList; 
+        private java.util.List<String> groupList; 
         private IngressOptionsRequest ingressOptionsRequest; 
         private String name; 
-        private java.util.List < String > pathList; 
+        private java.util.List<String> pathList; 
         private String source; 
-        private java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups; 
+        private java.util.List<ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups; 
         private String type; 
 
         private Builder() {
@@ -180,12 +185,15 @@ public class AddServiceSourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN (default): Chinese</li>
+         * <li>en-US: English</li>
+         * <li>ja: Japanese</li>
+         * </ul>
          * 
-         * *   zh-CN (default): Chinese
-         * *   en-US: English
-         * *   ja: Japanese
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -194,7 +202,10 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to monitor Ingress classes.
+         * <p>Specifies whether to monitor Ingress classes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9ad2a0717032427e920754e25b49e3b5</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -203,7 +214,10 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to update the Ingress status.
+         * <p>Specifies whether to update the Ingress status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-c70622ff52fe49beb29bea9a6f52****</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -212,9 +226,9 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The data structure.
+         * <p>The data structure.</p>
          */
-        public Builder groupList(java.util.List < String > groupList) {
+        public Builder groupList(java.util.List<String> groupList) {
             String groupListShrink = shrink(groupList, "GroupList", "json");
             this.putQueryParameter("GroupList", groupListShrink);
             this.groupList = groupList;
@@ -222,7 +236,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The list of service groups.
+         * <p>The list of service groups.</p>
          */
         public Builder ingressOptionsRequest(IngressOptionsRequest ingressOptionsRequest) {
             String ingressOptionsRequestShrink = shrink(ingressOptionsRequest, "IngressOptionsRequest", "json");
@@ -232,7 +246,10 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The namespace whose resources you want to monitor.
+         * <p>The namespace whose resources you want to monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>istio</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -241,9 +258,9 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
          */
-        public Builder pathList(java.util.List < String > pathList) {
+        public Builder pathList(java.util.List<String> pathList) {
             String pathListShrink = shrink(pathList, "PathList", "json");
             this.putQueryParameter("PathList", pathListShrink);
             this.pathList = pathList;
@@ -251,11 +268,14 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The service source.
-         * <p>
+         * <p>The service source.</p>
+         * <ul>
+         * <li>K8s: ACK cluster</li>
+         * <li>NACOS: MSE Nacos instance</li>
+         * </ul>
          * 
-         * *   K8s: ACK cluster
-         * *   NACOS: MSE Nacos instance
+         * <strong>example:</strong>
+         * <p>K8s,MSE</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -264,9 +284,9 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * ToAuthorizeSecurityGroups.
+         * <p>The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.</p>
          */
-        public Builder toAuthorizeSecurityGroups(java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
+        public Builder toAuthorizeSecurityGroups(java.util.List<ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
             String toAuthorizeSecurityGroupsShrink = shrink(toAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
             this.putQueryParameter("ToAuthorizeSecurityGroups", toAuthorizeSecurityGroupsShrink);
             this.toAuthorizeSecurityGroups = toAuthorizeSecurityGroups;
@@ -274,11 +294,14 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * The type of the service source.
-         * <p>
+         * <p>The type of the service source.</p>
+         * <ul>
+         * <li>K8s: Container Service for Kubernetes (ACK) cluster</li>
+         * <li>NACOS: Nacos instance</li>
+         * </ul>
          * 
-         * *   K8s: Container Service for Kubernetes (ACK) cluster
-         * *   NACOS: Nacos instance
+         * <strong>example:</strong>
+         * <p>The Ingress configuration.</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -293,17 +316,23 @@ public class AddServiceSourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddServiceSourceRequest} extends {@link TeaModel}
+     *
+     * <p>AddServiceSourceRequest</p>
+     */
     public static class IngressOptionsRequest extends TeaModel {
-        @NameInMap("EnableIngress")
+        @com.aliyun.core.annotation.NameInMap("EnableIngress")
         private Boolean enableIngress;
 
-        @NameInMap("EnableStatus")
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
         private Boolean enableStatus;
 
-        @NameInMap("IngressClass")
+        @com.aliyun.core.annotation.NameInMap("IngressClass")
         private String ingressClass;
 
-        @NameInMap("WatchNamespace")
+        @com.aliyun.core.annotation.NameInMap("WatchNamespace")
         private String watchNamespace;
 
         private IngressOptionsRequest(Builder builder) {
@@ -356,7 +385,10 @@ public class AddServiceSourceRequest extends Request {
             private String watchNamespace; 
 
             /**
-             * The group to which the service belongs.
+             * <p>The group to which the service belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIngress(Boolean enableIngress) {
                 this.enableIngress = enableIngress;
@@ -364,12 +396,15 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * The language of the response. Valid values:
-             * <p>
+             * <p>The language of the response. Valid values:</p>
+             * <ul>
+             * <li>zh-CN: Chinese. This is the default value.</li>
+             * <li>en-US: English.</li>
+             * <li>ja: Japanese.</li>
+             * </ul>
              * 
-             * *   zh-CN: Chinese. This is the default value.
-             * *   en-US: English.
-             * *   ja: Japanese.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableStatus(Boolean enableStatus) {
                 this.enableStatus = enableStatus;
@@ -377,7 +412,10 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * An array of service root paths.
+             * <p>An array of service root paths.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.test.xxx</p>
              */
             public Builder ingressClass(String ingressClass) {
                 this.ingressClass = ingressClass;
@@ -385,7 +423,10 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * The root path of the service.
+             * <p>The root path of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder watchNamespace(String watchNamespace) {
                 this.watchNamespace = watchNamespace;
@@ -399,14 +440,20 @@ public class AddServiceSourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddServiceSourceRequest} extends {@link TeaModel}
+     *
+     * <p>AddServiceSourceRequest</p>
+     */
     public static class ToAuthorizeSecurityGroups extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private ToAuthorizeSecurityGroups(Builder builder) {
@@ -450,7 +497,10 @@ public class AddServiceSourceRequest extends Request {
             private String securityGroupId; 
 
             /**
-             * Description.
+             * <p>The description of the authorization record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule for xxx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +508,10 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * PortRange.
+             * <p>The authorized port range of the security group. You can select multiple port ranges. Separate each port range with a comma (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080/8080,9000/10000</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -466,7 +519,10 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1acepclex0vmi1****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveRecordFilesRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveRecordFilesRequest</p>
  */
 public class DeleteLiveRecordFilesRequest extends Request {
-    @Query
-    @NameInMap("RecordIds")
-    @Validation(required = true)
-    private java.util.List < String > recordIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> recordIds;
 
-    @Query
-    @NameInMap("RemoveFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveFile")
     private Boolean removeFile;
 
     private DeleteLiveRecordFilesRequest(Builder builder) {
@@ -43,7 +48,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
     /**
      * @return recordIds
      */
-    public java.util.List < String > getRecordIds() {
+    public java.util.List<String> getRecordIds() {
         return this.recordIds;
     }
 
@@ -55,7 +60,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLiveRecordFilesRequest, Builder> {
-        private java.util.List < String > recordIds; 
+        private java.util.List<String> recordIds; 
         private Boolean removeFile; 
 
         private Builder() {
@@ -69,16 +74,20 @@ public class DeleteLiveRecordFilesRequest extends Request {
         } 
 
         /**
-         * RecordIds.
+         * <p>The collection of IDs of recording files.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder recordIds(java.util.List < String > recordIds) {
+        public Builder recordIds(java.util.List<String> recordIds) {
             this.putQueryParameter("RecordIds", recordIds);
             this.recordIds = recordIds;
             return this;
         }
 
         /**
-         * RemoveFile.
+         * <p>Specifies whether to delete the original files in OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder removeFile(Boolean removeFile) {
             this.putQueryParameter("RemoveFile", removeFile);

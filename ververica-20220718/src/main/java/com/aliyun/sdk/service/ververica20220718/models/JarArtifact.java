@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JarArtifact} extends {@link TeaModel}
  *
  * <p>JarArtifact</p>
  */
 public class JarArtifact extends TeaModel {
-    @NameInMap("additionalDependencies")
-    private java.util.List < String > additionalDependencies;
+    @com.aliyun.core.annotation.NameInMap("additionalDependencies")
+    private java.util.List<String> additionalDependencies;
 
-    @NameInMap("entryClass")
+    @com.aliyun.core.annotation.NameInMap("entryClass")
     private String entryClass;
 
-    @NameInMap("jarUri")
+    @com.aliyun.core.annotation.NameInMap("jarUri")
     private String jarUri;
 
-    @NameInMap("mainArgs")
+    @com.aliyun.core.annotation.NameInMap("mainArgs")
     private String mainArgs;
 
     private JarArtifact(Builder builder) {
@@ -42,7 +47,7 @@ public class JarArtifact extends TeaModel {
     /**
      * @return additionalDependencies
      */
-    public java.util.List < String > getAdditionalDependencies() {
+    public java.util.List<String> getAdditionalDependencies() {
         return this.additionalDependencies;
     }
 
@@ -68,7 +73,7 @@ public class JarArtifact extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > additionalDependencies; 
+        private java.util.List<String> additionalDependencies; 
         private String entryClass; 
         private String jarUri; 
         private String mainArgs; 
@@ -76,7 +81,7 @@ public class JarArtifact extends TeaModel {
         /**
          * additionalDependencies.
          */
-        public Builder additionalDependencies(java.util.List < String > additionalDependencies) {
+        public Builder additionalDependencies(java.util.List<String> additionalDependencies) {
             this.additionalDependencies = additionalDependencies;
             return this;
         }

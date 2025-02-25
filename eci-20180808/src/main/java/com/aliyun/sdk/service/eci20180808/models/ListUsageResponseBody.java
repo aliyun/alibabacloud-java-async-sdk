@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsageResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsageResponseBody</p>
  */
 public class ListUsageResponseBody extends TeaModel {
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.Map < String, ? > attributes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUsageResponseBody(Builder builder) {
@@ -50,17 +50,20 @@ public class ListUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the used amounts and upper limits of privileges and quotas that you have in the specified region. The information contains the following items:
-         * <p>
+         * <p>The information about the used amounts and upper limits of privileges and quotas that you have in the specified region. The information contains the following items:</p>
+         * <ul>
+         * <li>UsedCpu: the number of existing vCPUs.</li>
+         * <li>MaxCpu: the upper limit of vCPUs.</li>
+         * <li>MaxImageCacheCount: the upper limit of manually created image caches.</li>
+         * <li>UsedImageCacheCount: the number of existing image caches that are manually created.</li>
+         * <li>MaxAutoImageCacheCount: the upper limit of automatically created image caches.</li>
+         * <li>UsedAutoImageCacheCount: the number of existing image caches that are automatically created.</li>
+         * <li>MaxDataCacheCount: the upper limit of DataCaches.</li>
+         * <li>UsedDataCacheCount: the number of existing DataCaches.</li>
+         * </ul>
          * 
-         * *   UsedCpu: the number of existing vCPUs.
-         * *   MaxCpu: the upper limit of vCPUs.
-         * *   MaxImageCacheCount: the upper limit of manually created image caches.
-         * *   UsedImageCacheCount: the number of existing image caches that are manually created.
-         * *   MaxAutoImageCacheCount: the upper limit of automatically created image caches.
-         * *   UsedAutoImageCacheCount: the number of existing image caches that are automatically created.
-         * *   MaxDataCacheCount: the upper limit of DataCaches.
-         * *   UsedDataCacheCount: the number of existing DataCaches.
+         * <strong>example:</strong>
+         * <p>{&quot;UsedCpu&quot;: 11,&quot;MaxCpu&quot;: 1000,&quot;MaxImageCacheCount&quot;: 50,&quot;UsedImageCacheCount&quot;: 0}</p>
          */
         public Builder attributes(java.util.Map < String, ? > attributes) {
             this.attributes = attributes;
@@ -68,7 +71,10 @@ public class ListUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89164E78-FC82-4684-BE97-DCDD85D26546</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

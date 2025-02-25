@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TBAccountInfoQueryResponseBody} extends {@link TeaModel}
  *
  * <p>TBAccountInfoQueryResponseBody</p>
  */
 public class TBAccountInfoQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TBAccountInfoQueryResponseBody(Builder builder) {
@@ -151,11 +156,17 @@ public class TBAccountInfoQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TBAccountInfoQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>TBAccountInfoQueryResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("tb_account")
+        @com.aliyun.core.annotation.NameInMap("tb_account")
         private String tbAccount;
 
-        @NameInMap("tb_bond")
+        @com.aliyun.core.annotation.NameInMap("tb_bond")
         private Boolean tbBond;
 
         private Module(Builder builder) {

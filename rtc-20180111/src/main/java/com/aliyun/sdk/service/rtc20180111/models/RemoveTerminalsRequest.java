@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveTerminalsRequest} extends {@link RequestModel}
  *
  * <p>RemoveTerminalsRequest</p>
  */
 public class RemoveTerminalsRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("TerminalIds")
-    @Validation(required = true)
-    private java.util.List < String > terminalIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminalIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> terminalIds;
 
     private RemoveTerminalsRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class RemoveTerminalsRequest extends Request {
     /**
      * @return terminalIds
      */
-    public java.util.List < String > getTerminalIds() {
+    public java.util.List<String> getTerminalIds() {
         return this.terminalIds;
     }
 
@@ -84,22 +89,25 @@ public class RemoveTerminalsRequest extends Request {
         private String appId; 
         private String channelId; 
         private Long ownerId; 
-        private java.util.List < String > terminalIds; 
+        private java.util.List<String> terminalIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RemoveTerminalsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.ownerId = response.ownerId;
-            this.terminalIds = response.terminalIds;
+        private Builder(RemoveTerminalsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.ownerId = request.ownerId;
+            this.terminalIds = request.terminalIds;
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -108,7 +116,10 @@ public class RemoveTerminalsRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -126,9 +137,12 @@ public class RemoveTerminalsRequest extends Request {
         }
 
         /**
-         * TerminalIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1811xxxx</p>
          */
-        public Builder terminalIds(java.util.List < String > terminalIds) {
+        public Builder terminalIds(java.util.List<String> terminalIds) {
             this.putQueryParameter("TerminalIds", terminalIds);
             this.terminalIds = terminalIds;
             return this;

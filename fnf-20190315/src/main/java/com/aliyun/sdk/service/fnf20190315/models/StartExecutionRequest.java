@@ -29,17 +29,12 @@ public class StartExecutionRequest extends Request {
     @NameInMap("Input")
     private String input;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     private StartExecutionRequest(Builder builder) {
         super(builder);
         this.callbackFnFTaskToken = builder.callbackFnFTaskToken;
         this.executionName = builder.executionName;
         this.flowName = builder.flowName;
         this.input = builder.input;
-        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -83,19 +78,11 @@ public class StartExecutionRequest extends Request {
         return this.input;
     }
 
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static final class Builder extends Request.Builder<StartExecutionRequest, Builder> {
         private String callbackFnFTaskToken; 
         private String executionName; 
         private String flowName; 
         private String input; 
-        private String requestId; 
 
         private Builder() {
             super();
@@ -107,7 +94,6 @@ public class StartExecutionRequest extends Request {
             this.executionName = request.executionName;
             this.flowName = request.flowName;
             this.input = request.input;
-            this.requestId = request.requestId;
         } 
 
         /**
@@ -120,7 +106,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:
+         * The name of the execution. The execution name is unique within a workflow. Configure this parameter based on the following rules:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -135,7 +121,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * The name of the flow you want to start to execute. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * The name of the workflow to be executed. The name is unique within a region and cannot be modified after the workflow is created. Configure this parameter based on the following rules:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -155,15 +141,6 @@ public class StartExecutionRequest extends Request {
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
             this.input = input;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

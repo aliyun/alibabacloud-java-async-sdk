@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshTransitRouteTableAggregationRequest} extends {@link RequestModel}
  *
  * <p>RefreshTransitRouteTableAggregationRequest</p>
  */
 public class RefreshTransitRouteTableAggregationRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouteTableAggregationCidr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouteTableAggregationCidr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouteTableAggregationCidr;
 
-    @Query
-    @NameInMap("TransitRouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouteTableId;
 
     private RefreshTransitRouteTableAggregationRequest(Builder builder) {
@@ -185,7 +190,10 @@ public class RefreshTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * TransitRouteTableAggregationCidr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.53.0/24</p>
          */
         public Builder transitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
             this.putQueryParameter("TransitRouteTableAggregationCidr", transitRouteTableAggregationCidr);
@@ -194,7 +202,10 @@ public class RefreshTransitRouteTableAggregationRequest extends Request {
         }
 
         /**
-         * TransitRouteTableId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-iq8qgruq1ry8jc7vt****</p>
          */
         public Builder transitRouteTableId(String transitRouteTableId) {
             this.putQueryParameter("TransitRouteTableId", transitRouteTableId);

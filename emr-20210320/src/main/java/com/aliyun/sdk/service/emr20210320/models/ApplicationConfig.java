@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplicationConfig} extends {@link TeaModel}
  *
  * <p>ApplicationConfig</p>
  */
 public class ApplicationConfig extends TeaModel {
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @NameInMap("ConfigFileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ConfigFileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configFileName;
 
-    @NameInMap("ConfigItemKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configItemKey;
 
-    @NameInMap("ConfigItemValue")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
     private String configItemValue;
 
-    @NameInMap("ConfigScope")
+    @com.aliyun.core.annotation.NameInMap("ConfigScope")
     private String configScope;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
     private ApplicationConfig(Builder builder) {
@@ -113,7 +118,11 @@ public class ApplicationConfig extends TeaModel {
         private String nodeGroupName; 
 
         /**
-         * 应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。
+         * <p>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -121,7 +130,11 @@ public class ApplicationConfig extends TeaModel {
         }
 
         /**
-         * 应用配置文件名。
+         * <p>应用配置文件名。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs-site.xml</p>
          */
         public Builder configFileName(String configFileName) {
             this.configFileName = configFileName;
@@ -129,7 +142,11 @@ public class ApplicationConfig extends TeaModel {
         }
 
         /**
-         * 配置项键。
+         * <p>配置项键。</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfs.namenode.checkpoint.period</p>
          */
         public Builder configItemKey(String configItemKey) {
             this.configItemKey = configItemKey;
@@ -137,7 +154,10 @@ public class ApplicationConfig extends TeaModel {
         }
 
         /**
-         * 配置项值。
+         * <p>配置项值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600s</p>
          */
         public Builder configItemValue(String configItemValue) {
             this.configItemValue = configItemValue;
@@ -145,12 +165,15 @@ public class ApplicationConfig extends TeaModel {
         }
 
         /**
-         * 配置范围。取值范围：
-         * <p>
-         * - CLUSTER：集群级别。
-         * - NODE_GROUP：节点组级别。
+         * <p>配置范围。取值范围：</p>
+         * <ul>
+         * <li>CLUSTER：集群级别。</li>
+         * <li>NODE_GROUP：节点组级别。</li>
+         * </ul>
+         * <p>默认值：CLUSTER。</p>
          * 
-         * 默认值：CLUSTER。
+         * <strong>example:</strong>
+         * <p>NODE_GROUP</p>
          */
         public Builder configScope(String configScope) {
             this.configScope = configScope;
@@ -158,7 +181,10 @@ public class ApplicationConfig extends TeaModel {
         }
 
         /**
-         * 节点组ID。ConfigScope取值NODE_GROUP时，该参数生效。NodeGroupId参数优先级高于NodeGroupName。
+         * <p>节点组ID。ConfigScope取值NODE_GROUP时，该参数生效。NodeGroupId参数优先级高于NodeGroupName。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -166,7 +192,10 @@ public class ApplicationConfig extends TeaModel {
         }
 
         /**
-         * 节点组名称。ConfigScope取值NODE_GROUP时，且参数NodeGroupId为空时生效，该参数生效。
+         * <p>节点组名称。ConfigScope取值NODE_GROUP时，且参数NodeGroupId为空时生效，该参数生效。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>core-1</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;

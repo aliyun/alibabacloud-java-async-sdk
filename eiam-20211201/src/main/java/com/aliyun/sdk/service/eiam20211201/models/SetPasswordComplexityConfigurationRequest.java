@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordComplexityConfigurationRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordComplexityConfigurationRequest</p>
  */
 public class SetPasswordComplexityConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PasswordComplexityRules")
-    private java.util.List < PasswordComplexityRules> passwordComplexityRules;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordComplexityRules")
+    private java.util.List<PasswordComplexityRules> passwordComplexityRules;
 
-    @Query
-    @NameInMap("PasswordMinLength")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordMinLength")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private Integer passwordMinLength;
 
     private SetPasswordComplexityConfigurationRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     /**
      * @return passwordComplexityRules
      */
-    public java.util.List < PasswordComplexityRules> getPasswordComplexityRules() {
+    public java.util.List<PasswordComplexityRules> getPasswordComplexityRules() {
         return this.passwordComplexityRules;
     }
 
@@ -82,7 +87,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     public static final class Builder extends Request.Builder<SetPasswordComplexityConfigurationRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private java.util.List < PasswordComplexityRules> passwordComplexityRules; 
+        private java.util.List<PasswordComplexityRules> passwordComplexityRules; 
         private Integer passwordMinLength; 
 
         private Builder() {
@@ -107,7 +112,11 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,16 +125,20 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * The password complexity rules.
+         * <p>The password complexity rules.</p>
          */
-        public Builder passwordComplexityRules(java.util.List < PasswordComplexityRules> passwordComplexityRules) {
+        public Builder passwordComplexityRules(java.util.List<PasswordComplexityRules> passwordComplexityRules) {
             this.putQueryParameter("PasswordComplexityRules", passwordComplexityRules);
             this.passwordComplexityRules = passwordComplexityRules;
             return this;
         }
 
         /**
-         * The minimum number of characters in a password.
+         * <p>The minimum number of characters in a password.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder passwordMinLength(Integer passwordMinLength) {
             this.putQueryParameter("PasswordMinLength", passwordMinLength);
@@ -140,9 +153,15 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetPasswordComplexityConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>SetPasswordComplexityConfigurationRequest</p>
+     */
     public static class PasswordComplexityRules extends TeaModel {
-        @NameInMap("PasswordCheckType")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordCheckType")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordCheckType;
 
         private PasswordComplexityRules(Builder builder) {
@@ -168,17 +187,20 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
             private String passwordCheckType; 
 
             /**
-             * The type of the password check. Valid values:
-             * <p>
+             * <p>The type of the password check. Valid values:</p>
+             * <ul>
+             * <li>inclusion_upper_case: The password must contain uppercase letters.</li>
+             * <li>inclusion_lower_case: The password must contain lowercase letters.</li>
+             * <li>inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / &quot; ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</li>
+             * <li>inclusion_number: The password must contain digits.</li>
+             * <li>exclusion_username: The password cannot contain a username.</li>
+             * <li>exclusion_email: The password cannot contain an email prefix.</li>
+             * <li>exclusion_phone_number: The password cannot contain a mobile number.</li>
+             * <li>exclusion_display_name: The password cannot contain a display name.</li>
+             * </ul>
              * 
-             * *   inclusion_upper_case: The password must contain uppercase letters.
-             * *   inclusion_lower_case: The password must contain lowercase letters.
-             * *   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .
-             * *   inclusion_number: The password must contain digits.
-             * *   exclusion_username: The password cannot contain a username.
-             * *   exclusion_email: The password cannot contain an email prefix.
-             * *   exclusion_phone_number: The password cannot contain a mobile number.
-             * *   exclusion_display_name: The password cannot contain a display name.
+             * <strong>example:</strong>
+             * <p>inclusion_upper_case</p>
              */
             public Builder passwordCheckType(String passwordCheckType) {
                 this.passwordCheckType = passwordCheckType;

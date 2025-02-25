@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTriggerRequest} extends {@link RequestModel}
  *
  * <p>DescribeTriggerRequest</p>
  */
 public class DescribeTriggerRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("action")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("action")
     private String action;
 
     private DescribeTriggerRequest(Builder builder) {
@@ -113,7 +118,11 @@ public class DescribeTriggerRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -122,7 +131,11 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web-server</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -131,7 +144,11 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * The namespace to which the application belongs.
+         * <p>The namespace to which the application belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,15 +157,16 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * The type of trigger. Valid values:
-         * <p>
+         * <p>The type of trigger. Valid values:</p>
+         * <ul>
+         * <li><code>deployment</code>: performs actions on Deployments.</li>
+         * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+         * </ul>
+         * <p>Default value: <code>deployment</code>.</p>
+         * <p>If you do not set this parameter, triggers are not filtered by type.</p>
          * 
-         * *   `deployment`: performs actions on Deployments.
-         * *   `application`: performs actions on applications that are deployed in Application Center.
-         * 
-         * Default value: `deployment`.
-         * 
-         * If you do not set this parameter, triggers are not filtered by type.
+         * <strong>example:</strong>
+         * <p>deployment</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -157,12 +175,12 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * The action that the trigger performs. Set the value to redeploy.
-         * <p>
+         * <p>The action that the trigger performs. Set the value to redeploy.</p>
+         * <p><code>redeploy</code>: redeploys the resources specified by <code>project_id</code>.</p>
+         * <p>If you do not specify this parameter, triggers are not filtered by action.</p>
          * 
-         * `redeploy`: redeploys the resources specified by `project_id`.
-         * 
-         * If you do not specify this parameter, triggers are not filtered by action.
+         * <strong>example:</strong>
+         * <p>redeploy</p>
          */
         public Builder action(String action) {
             this.putQueryParameter("action", action);

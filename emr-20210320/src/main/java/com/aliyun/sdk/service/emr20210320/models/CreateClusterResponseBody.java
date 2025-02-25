@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateClusterResponseBody</p>
  */
 public class CreateClusterResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateClusterResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class CreateClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 集群ID。
+         * <p>The ID of cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac7f7***</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +78,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 操作ID。
+         * <p>The ID of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-13c37a77c505****</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -78,7 +89,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

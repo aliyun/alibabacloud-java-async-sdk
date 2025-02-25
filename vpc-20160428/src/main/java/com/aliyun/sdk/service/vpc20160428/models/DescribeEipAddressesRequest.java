@@ -1,114 +1,123 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipAddressesRequest} extends {@link RequestModel}
  *
  * <p>DescribeEipAddressesRequest</p>
  */
 public class DescribeEipAddressesRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private java.util.List<Filter> filter;
 
-    @Query
-    @NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
     private String allocationId;
 
-    @Query
-    @NameInMap("AssociatedInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociatedInstanceId")
     private String associatedInstanceId;
 
-    @Query
-    @NameInMap("AssociatedInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociatedInstanceType")
     private String associatedInstanceType;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EipAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipAddress")
     private String eipAddress;
 
-    @Query
-    @NameInMap("EipName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipName")
     private String eipName;
 
-    @Query
-    @NameInMap("ISP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ISP")
     private String ISP;
 
-    @Query
-    @NameInMap("IncludeReservationData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeReservationData")
     private Boolean includeReservationData;
 
-    @Query
-    @NameInMap("LockReason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LockReason")
     private String lockReason;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PublicIpAddressPoolId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolId")
     private String publicIpAddressPoolId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityProtectionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityProtectionEnabled")
     private Boolean securityProtectionEnabled;
 
-    @Query
-    @NameInMap("SegmentInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SegmentInstanceId")
     private String segmentInstanceId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeEipAddressesRequest(Builder builder) {
         super(builder);
@@ -134,6 +143,7 @@ public class DescribeEipAddressesRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityProtectionEnabled = builder.securityProtectionEnabled;
         this.segmentInstanceId = builder.segmentInstanceId;
+        this.serviceManaged = builder.serviceManaged;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -154,7 +164,7 @@ public class DescribeEipAddressesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -306,6 +316,13 @@ public class DescribeEipAddressesRequest extends Request {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -315,12 +332,12 @@ public class DescribeEipAddressesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeEipAddressesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String allocationId; 
         private String associatedInstanceId; 
         private String associatedInstanceType; 
@@ -342,8 +359,9 @@ public class DescribeEipAddressesRequest extends Request {
         private Long resourceOwnerId; 
         private Boolean securityProtectionEnabled; 
         private String segmentInstanceId; 
+        private Boolean serviceManaged; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -373,6 +391,7 @@ public class DescribeEipAddressesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityProtectionEnabled = request.securityProtectionEnabled;
             this.segmentInstanceId = request.segmentInstanceId;
+            this.serviceManaged = request.serviceManaged;
             this.status = request.status;
             this.tag = request.tag;
         } 
@@ -380,19 +399,21 @@ public class DescribeEipAddressesRequest extends Request {
         /**
          * Filter.
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * The ID of the EIP that you want to query.
-         * <p>
+         * <p>The ID of the EIP that you want to query.</p>
+         * <p>You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIP IDs for <strong>AllocationId</strong>, and specify up to 50 EIPs for <strong>EipAddress</strong>.</p>
+         * </blockquote>
          * 
-         * You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).
-         * 
-         * >  If both **EipAddress** and **AllocationId** are specified, you can specify up to 50 EIP IDs for **AllocationId**, and specify up to 50 EIPs for **EipAddress**.
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7ujxscd****</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -401,7 +422,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the instance associated with the EIP.
+         * <p>The ID of the instance associated with the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zebb08phyccdvf****</p>
          */
         public Builder associatedInstanceId(String associatedInstanceId) {
             this.putQueryParameter("AssociatedInstanceId", associatedInstanceId);
@@ -410,17 +434,21 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The type of the cloud resource with which you want to associate the EIP. Valid values:
-         * <p>
+         * <p>The type of the cloud resource with which you want to associate the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</li>
+         * <li><strong>SlbInstance</strong>: a CLB instance in a VPC.</li>
+         * <li><strong>Nat</strong>: a NAT gateway.</li>
+         * <li><strong>HaVip</strong>: an HAVIP.</li>
+         * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
+         * <li><strong>IpAddress</strong>: an IP address.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">Associate EIPs with and disassociate EIPs from cloud resources</a>.</p>
+         * </blockquote>
          * 
-         * *   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).
-         * *   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC.
-         * *   **Nat**: a NAT gateway.
-         * *   **HaVip**: a high-availability virtual IP address (HAVIP).
-         * *   **NetworkInterface**: a secondary elastic network interface (ENI).
-         * *   **IpAddress**: an IP address.
-         * 
-         * >  You can associate only one EIP with each ECS instance, SLB instance, HAVIP, or IP address. You can associate multiple EIPs with each NAT gateway. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [Associate EIPs with and disassociate EIPs from cloud resources](~~72125~~).
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -429,11 +457,14 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The billing method of the EIP. Valid values:
-         * <p>
+         * <p>The billing method of the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * </ul>
          * 
-         * *   **PostPaid**: pay-as-you-go.
-         * *   **PrePaid**: subscription.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -442,11 +473,14 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -455,12 +489,14 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The EIP that you want to query.
-         * <p>
+         * <p>The EIP that you want to query.</p>
+         * <p>You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
+         * <blockquote>
+         * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIPs for <strong>EipAddress</strong>, and specify up to 50 EIP IDs for <strong>AllocationId</strong>.</p>
+         * </blockquote>
          * 
-         * You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).
-         * 
-         * >  If both **EipAddress** and **AllocationId** are specified, you can specify up to 50 EIPs for **EipAddress**, and specify up to 50 EIP IDs for **AllocationId**.
+         * <strong>example:</strong>
+         * <p>47.75.XX.XX</p>
          */
         public Builder eipAddress(String eipAddress) {
             this.putQueryParameter("EipAddress", eipAddress);
@@ -469,10 +505,11 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The name of the EIP.
-         * <p>
+         * <p>The name of the EIP.</p>
+         * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>EIP-01</p>
          */
         public Builder eipName(String eipName) {
             this.putQueryParameter("EipName", eipName);
@@ -481,24 +518,25 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The line type. Valid values:
-         * <p>
+         * <p>The line type. Valid values:</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
+         * </ul>
+         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the <a href="https://help.aliyun.com/document_detail/32321.html">Line types</a> section of the &quot;What is EIP?&quot; topic.</p>
+         * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
          * 
-         * *   **BGP** (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
-         * 
-         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.
-         * 
-         * If you are allowed to use single-ISP bandwidth, you can also use one of the following values:
-         * 
-         * *   **ChinaTelecom**
-         * *   **ChinaUnicom**
-         * *   **ChinaMobile**
-         * *   **ChinaTelecom_L2**
-         * *   **ChinaUnicom_L2**
-         * *   **ChinaMobile_L2**
-         * 
-         * If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -507,11 +545,14 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return information about pending orders. Valid values:
-         * <p>
+         * <p>Specifies whether to return information about pending orders. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -520,11 +561,14 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The reason why the EIP is locked. Valid values:
-         * <p>
+         * <p>The reason why the EIP is locked. Valid values:</p>
+         * <ul>
+         * <li><strong>financial</strong>: The EIP is locked due to overdue payments.</li>
+         * <li><strong>security</strong>: The EIP is locked for security reasons.</li>
+         * </ul>
          * 
-         * *   **financial**: The EIP is locked due to overdue payments.
-         * *   **security**: The EIP is locked for security reasons.
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -551,7 +595,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -560,7 +607,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to **100**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: 1 to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -569,7 +619,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The IP address pool to which the EIP that you want to query belongs.
+         * <p>The IP address pool to which the EIP that you want to query belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-2vc0kxcedhquybdsz****</p>
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -578,10 +631,12 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The region ID of the EIP.
-         * <p>
+         * <p>The region ID of the EIP.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -590,7 +645,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the EIP belongs.
+         * <p>The ID of the resource group to which the EIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4pcdvf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -617,11 +675,14 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
-         * <p>
+         * <p>Specifies whether to activate Anti-DDoS Pro/Premium. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
@@ -630,7 +691,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the contiguous EIP group.
+         * <p>The ID of the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eipsg-t4nr90yik5oy38xdy****</p>
          */
         public Builder segmentInstanceId(String segmentInstanceId) {
             this.putQueryParameter("SegmentInstanceId", segmentInstanceId);
@@ -639,14 +703,26 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The state of the EIP. Valid values:
-         * <p>
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * <p>The state of the EIP. Valid values:</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Unassociating</strong></li>
+         * <li><strong>InUse</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Releasing</strong></li>
+         * </ul>
          * 
-         * *   **Associating**
-         * *   **Unassociating**
-         * *   **InUse**
-         * *   **Available**
-         * *   **Releasing**
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -655,9 +731,9 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The tags used to filter EIPs.
+         * <p>The tags used to filter EIPs.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -670,11 +746,17 @@ public class DescribeEipAddressesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEipAddressesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeEipAddressesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filter(Builder builder) {
@@ -709,7 +791,10 @@ public class DescribeEipAddressesRequest extends Request {
             private String value; 
 
             /**
-             * The filter key used to query resources. Set the value to **CreationStartTime**, which specifies the time when the system started to create the resource.
+             * <p>The filter key used to query resources. Set the value to <strong>CreationStartTime</strong>, which specifies the time when the system started to create the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreationStartTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -717,7 +802,10 @@ public class DescribeEipAddressesRequest extends Request {
             }
 
             /**
-             * The filter value used to query resources. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time must be in Coordinated Universal Time (UTC).
+             * <p>The filter value used to query resources. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01T01:00Z</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -731,11 +819,17 @@ public class DescribeEipAddressesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipAddressesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeEipAddressesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -770,10 +864,11 @@ public class DescribeEipAddressesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -781,10 +876,11 @@ public class DescribeEipAddressesRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

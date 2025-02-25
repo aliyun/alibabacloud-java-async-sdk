@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateInstancePublicConnectionResponseBody</p>
  */
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocateInstancePublicConnectionResponseBody(Builder builder) {
@@ -38,7 +38,10 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20C8341E-B5AD-4B24-BD82-D73241522ABF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

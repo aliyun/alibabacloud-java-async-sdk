@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportImageResponseBody} extends {@link TeaModel}
  *
  * <p>ExportImageResponseBody</p>
  */
 public class ExportImageResponseBody extends TeaModel {
-    @NameInMap("ExportedImageURL")
+    @com.aliyun.core.annotation.NameInMap("ExportedImageURL")
     private String exportedImageURL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ExportImageResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ExportImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExportedImageURL.
+         * <p>The URL that points to the exported image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.url">http://oss.url</a></p>
          */
         public Builder exportedImageURL(String exportedImageURL) {
             this.exportedImageURL = exportedImageURL;
@@ -58,7 +66,10 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43A426AD-3F2E-5DD9-9C08-D4DBDCA48D85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

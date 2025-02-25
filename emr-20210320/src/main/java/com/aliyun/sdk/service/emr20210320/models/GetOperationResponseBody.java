@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOperationResponseBody} extends {@link TeaModel}
  *
  * <p>GetOperationResponseBody</p>
  */
 public class GetOperationResponseBody extends TeaModel {
-    @NameInMap("Operation")
+    @com.aliyun.core.annotation.NameInMap("Operation")
     private Operation operation;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOperationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetOperationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The operation that is performed.
+         * <p>The operation that was performed.</p>
          */
         public Builder operation(Operation operation) {
             this.operation = operation;
@@ -58,7 +63,10 @@ public class GetOperationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3896A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBasicAccelerateIpResponseBody</p>
  */
 public class GetBasicAccelerateIpResponseBody extends TeaModel {
-    @NameInMap("AccelerateIpAddress")
+    @com.aliyun.core.annotation.NameInMap("AccelerateIpAddress")
     private String accelerateIpAddress;
 
-    @NameInMap("AccelerateIpId")
+    @com.aliyun.core.annotation.NameInMap("AccelerateIpId")
     private String accelerateIpId;
 
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("IpSetId")
+    @com.aliyun.core.annotation.NameInMap("IpSetId")
     private String ipSetId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private GetBasicAccelerateIpResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * The accelerated IP address.
+         * The accelerated IP address of the basic GA instance.
          */
         public Builder accelerateIpAddress(String accelerateIpAddress) {
             this.accelerateIpAddress = accelerateIpAddress;
@@ -130,7 +129,7 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,10 +143,10 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
          * *   **active**: The accelerated IP address is available.
          * *   **binding**: The accelerated IP address is being associated.
          * *   **bound**: The accelerated IP address is associated.
-         * *   **unbinding**: The basic GA instance is being disassociated.
-         * *   **deleting**: The accelerated IP address is being deleted.
+         * *   **unbinding**: The accelerated IP address is being disassociated.
+         * *   **deleting**: The GA instance is being deleted.
          * 
-         * >  This parameter is not returned when the queried accelerated IP address is being created.
+         * >  If the accelerated IP address is being created, this parameter is not returned.
          */
         public Builder state(String state) {
             this.state = state;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOptionValueForProjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetOptionValueForProjectResponseBody</p>
  */
 public class GetOptionValueForProjectResponseBody extends TeaModel {
-    @NameInMap("OptionValue")
+    @com.aliyun.core.annotation.NameInMap("OptionValue")
     private String optionValue;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOptionValueForProjectResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OptionValue.
+         * <p>The data returned In the example, cuNumber is a custom key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cuNumber&quot;:&quot;0&quot;}</p>
          */
         public Builder optionValue(String optionValue) {
             this.optionValue = optionValue;
@@ -58,7 +66,10 @@ public class GetOptionValueForProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The option settings. In the example, cuNumber is a custom key.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

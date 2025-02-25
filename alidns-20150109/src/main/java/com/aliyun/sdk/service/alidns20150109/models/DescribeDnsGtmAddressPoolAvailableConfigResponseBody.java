@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAddressPoolAvailableConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmAddressPoolAvailableConfigResponseBody</p>
  */
 public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("AttributeInfos")
+    @com.aliyun.core.annotation.NameInMap("AttributeInfos")
     private AttributeInfos attributeInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDnsGtmAddressPoolAvailableConfigResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * The supported source regions.
+         * <p>The supported source regions.</p>
          */
         public Builder attributeInfos(AttributeInfos attributeInfos) {
             this.attributeInfos = attributeInfos;
@@ -58,7 +63,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmAddressPoolAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAddressPoolAvailableConfigResponseBody</p>
+     */
     public static class AttributeInfo extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private AttributeInfo(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             private String lineName; 
 
             /**
-             * The parent line code of the source region.
+             * <p>The parent line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -154,7 +171,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The code of the source region group.
+             * <p>The code of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -162,7 +182,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The name of the request source group.
+             * <p>The name of the request source group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -170,7 +193,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The line code of the source region.
+             * <p>The line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -178,7 +204,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The line name of the source region.
+             * <p>The line name of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -192,9 +221,15 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAddressPoolAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAddressPoolAvailableConfigResponseBody</p>
+     */
     public static class AttributeInfos extends TeaModel {
-        @NameInMap("AttributeInfo")
-        private java.util.List < AttributeInfo> attributeInfo;
+        @com.aliyun.core.annotation.NameInMap("AttributeInfo")
+        private java.util.List<AttributeInfo> attributeInfo;
 
         private AttributeInfos(Builder builder) {
             this.attributeInfo = builder.attributeInfo;
@@ -211,17 +246,17 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         /**
          * @return attributeInfo
          */
-        public java.util.List < AttributeInfo> getAttributeInfo() {
+        public java.util.List<AttributeInfo> getAttributeInfo() {
             return this.attributeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AttributeInfo> attributeInfo; 
+            private java.util.List<AttributeInfo> attributeInfo; 
 
             /**
              * AttributeInfo.
              */
-            public Builder attributeInfo(java.util.List < AttributeInfo> attributeInfo) {
+            public Builder attributeInfo(java.util.List<AttributeInfo> attributeInfo) {
                 this.attributeInfo = attributeInfo;
                 return this;
             }

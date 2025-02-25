@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotAttackStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetHoneypotAttackStatisticsResponseBody</p>
  */
 public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHoneypotAttackStatisticsResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +114,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics.
+         * <p>The statistics.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +122,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +133,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FACC60A-3FE4-5F49-9184-50730C8B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +155,14 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,11 +175,17 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHoneypotAttackStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneypotAttackStatisticsResponseBody</p>
+     */
     public static class HoneypotAttackStatistics extends TeaModel {
-        @NameInMap("StatisticsCount")
+        @com.aliyun.core.annotation.NameInMap("StatisticsCount")
         private Integer statisticsCount;
 
-        @NameInMap("StatisticsValue")
+        @com.aliyun.core.annotation.NameInMap("StatisticsValue")
         private String statisticsValue;
 
         private HoneypotAttackStatistics(Builder builder) {
@@ -194,7 +220,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             private String statisticsValue; 
 
             /**
-             * The number of times the value is counted.
+             * <p>The number of times the value is counted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder statisticsCount(Integer statisticsCount) {
                 this.statisticsCount = statisticsCount;
@@ -202,7 +231,10 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical value.
+             * <p>The statistical value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112.168.1.**</p>
              */
             public Builder statisticsValue(String statisticsValue) {
                 this.statisticsValue = statisticsValue;
@@ -216,14 +248,20 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHoneypotAttackStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneypotAttackStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("HoneypotAttackStatistics")
-        private java.util.List < HoneypotAttackStatistics> honeypotAttackStatistics;
+        @com.aliyun.core.annotation.NameInMap("HoneypotAttackStatistics")
+        private java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics;
 
-        @NameInMap("StatisticsType")
+        @com.aliyun.core.annotation.NameInMap("StatisticsType")
         private String statisticsType;
 
         private Data(Builder builder) {
@@ -250,7 +288,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         /**
          * @return honeypotAttackStatistics
          */
-        public java.util.List < HoneypotAttackStatistics> getHoneypotAttackStatistics() {
+        public java.util.List<HoneypotAttackStatistics> getHoneypotAttackStatistics() {
             return this.honeypotAttackStatistics;
         }
 
@@ -263,11 +301,14 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer count; 
-            private java.util.List < HoneypotAttackStatistics> honeypotAttackStatistics; 
+            private java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics; 
             private String statisticsType; 
 
             /**
-             * The number of entries on the current page.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -275,21 +316,24 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics details.
+             * <p>The statistics details.</p>
              */
-            public Builder honeypotAttackStatistics(java.util.List < HoneypotAttackStatistics> honeypotAttackStatistics) {
+            public Builder honeypotAttackStatistics(java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics) {
                 this.honeypotAttackStatistics = honeypotAttackStatistics;
                 return this;
             }
 
             /**
-             * The type of the attack source statistics. Valid values:
-             * <p>
+             * <p>The type of the attack source statistics. Valid values:</p>
+             * <ul>
+             * <li><strong>TOP_ATTACKED_AGENT</strong>: the top five probes that are attacked the most frequently.</li>
+             * <li><strong>TOP_ATTACKED_IP</strong>: the top five IP addresses that are attacked the most frequently.</li>
+             * <li><strong>ATTACK_EVENT_TYPE</strong>: the type of the intrusion event.</li>
+             * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: the type of the attacked honeypot.</li>
+             * </ul>
              * 
-             * *   **TOP_ATTACKED_AGENT**: the top five probes that are attacked the most frequently.
-             * *   **TOP_ATTACKED_IP**: the top five IP addresses that are attacked the most frequently.
-             * *   **ATTACK_EVENT_TYPE**: the type of the intrusion event.
-             * *   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot.
+             * <strong>example:</strong>
+             * <p>TOP_ATTACKED_IP</p>
              */
             public Builder statisticsType(String statisticsType) {
                 this.statisticsType = statisticsType;

@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditZeroCreditShutdownRequest} extends {@link RequestModel}
  *
  * <p>EditZeroCreditShutdownRequest</p>
  */
 public class EditZeroCreditShutdownRequest extends Request {
-    @Query
-    @NameInMap("ShutdownPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShutdownPolicy")
     private String shutdownPolicy;
 
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
     private EditZeroCreditShutdownRequest(Builder builder) {
@@ -68,7 +73,18 @@ public class EditZeroCreditShutdownRequest extends Request {
         } 
 
         /**
-         * ShutdownPolicy.
+         * <p>UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shutdown Policy</br></p>
+         * <ul>
+         * <li><p>immediatelyStop, The instances of the specified End User&quot;s account will be shutdown immediately once EU triggered the Shutdown Policy.</br></p>
+         * </li>
+         * <li><p>delayStop, The instances of the specified End User&quot;s account will be shutdown later, even EU have triggered the Shutdown Policy.</br></p>
+         * </li>
+         * <li><p>noStop, The instances of the specified End User&quot;s account will not be shutdown, after EU have triggered the Shutdown Policy.</br></p>
+         * </li>
+         * </ul>
          */
         public Builder shutdownPolicy(String shutdownPolicy) {
             this.putQueryParameter("ShutdownPolicy", shutdownPolicy);
@@ -77,7 +93,10 @@ public class EditZeroCreditShutdownRequest extends Request {
         }
 
         /**
-         * uid
+         * <p>No Change History</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1263644979775567</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

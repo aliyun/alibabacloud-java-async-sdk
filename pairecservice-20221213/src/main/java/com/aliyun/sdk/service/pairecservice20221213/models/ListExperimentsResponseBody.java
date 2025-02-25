@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExperimentsResponseBody</p>
  */
 public class ListExperimentsResponseBody extends TeaModel {
-    @NameInMap("Experiments")
+    @com.aliyun.core.annotation.NameInMap("Experiments")
     private java.util.List < Experiments> experiments;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListExperimentsResponseBody(Builder builder) {
@@ -92,55 +91,55 @@ public class ListExperimentsResponseBody extends TeaModel {
     } 
 
     public static class Experiments extends TeaModel {
-        @NameInMap("AliasExperimentId")
+        @com.aliyun.core.annotation.NameInMap("AliasExperimentId")
         private String aliasExperimentId;
 
-        @NameInMap("Buckets")
+        @com.aliyun.core.annotation.NameInMap("Buckets")
         private String buckets;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("DebugCrowdId")
+        @com.aliyun.core.annotation.NameInMap("DebugCrowdId")
         private String debugCrowdId;
 
-        @NameInMap("DebugUsers")
+        @com.aliyun.core.annotation.NameInMap("DebugUsers")
         private String debugUsers;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExperimentGroupId")
+        @com.aliyun.core.annotation.NameInMap("ExperimentGroupId")
         private String experimentGroupId;
 
-        @NameInMap("ExperimentId")
+        @com.aliyun.core.annotation.NameInMap("ExperimentId")
         private String experimentId;
 
-        @NameInMap("FlowPercent")
+        @com.aliyun.core.annotation.NameInMap("FlowPercent")
         private Integer flowPercent;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("LaboratoryId")
+        @com.aliyun.core.annotation.NameInMap("LaboratoryId")
         private String laboratoryId;
 
-        @NameInMap("LayerId")
+        @com.aliyun.core.annotation.NameInMap("LayerId")
         private String layerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Experiments(Builder builder) {

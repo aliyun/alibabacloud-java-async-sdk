@@ -50,7 +50,7 @@ public class OSSTriggerKey extends TeaModel {
         private String suffix; 
 
         /**
-         * prefix
+         * prefix.
          */
         public Builder prefix(String prefix) {
             this.prefix = prefix;
@@ -58,7 +58,7 @@ public class OSSTriggerKey extends TeaModel {
         }
 
         /**
-         * suffix
+         * suffix.
          */
         public Builder suffix(String suffix) {
             this.suffix = suffix;

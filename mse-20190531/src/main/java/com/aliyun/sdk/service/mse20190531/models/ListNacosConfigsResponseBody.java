@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNacosConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListNacosConfigsResponseBody</p>
  */
 public class ListNacosConfigsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Configurations")
-    private java.util.List < Configurations> configurations;
+    @com.aliyun.core.annotation.NameInMap("Configurations")
+    private java.util.List<Configurations> configurations;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListNacosConfigsResponseBody(Builder builder) {
@@ -73,7 +78,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     /**
      * @return configurations
      */
-    public java.util.List < Configurations> getConfigurations() {
+    public java.util.List<Configurations> getConfigurations() {
         return this.configurations;
     }
 
@@ -135,7 +140,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Configurations> configurations; 
+        private java.util.List<Configurations> configurations; 
         private String errorCode; 
         private String httpCode; 
         private String message; 
@@ -146,7 +151,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -154,15 +162,18 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations.
+         * <p>The configurations.</p>
          */
-        public Builder configurations(java.util.List < Configurations> configurations) {
+        public Builder configurations(java.util.List<Configurations> configurations) {
             this.configurations = configurations;
             return this;
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-100-000</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -170,7 +181,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -178,7 +192,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request was successfully processed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +203,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -194,7 +214,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -202,7 +225,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4081087F-3429-5873-A1E7-D4B5479D0B84</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,11 +236,14 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +251,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned instances.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -235,17 +267,23 @@ public class ListNacosConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNacosConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNacosConfigsResponseBody</p>
+     */
     public static class Configurations extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Configurations(Builder builder) {
@@ -298,7 +336,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             private String id; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -306,7 +347,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * <p>The ID of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log.yaml</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -314,7 +358,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * <p>The ID of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -322,7 +369,10 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132****</p>
              */
             public Builder id(String id) {
                 this.id = id;

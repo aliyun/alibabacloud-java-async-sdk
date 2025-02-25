@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInviteStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetInviteStatusResponseBody</p>
  */
 public class GetInviteStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInviteStatusResponseBody(Builder builder) {
@@ -86,7 +91,13 @@ public class GetInviteStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Status Code. Error Code:</p>
+         * <ul>
+         * <li>3057 InviteId is empty</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +105,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +113,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,26 +151,32 @@ public class GetInviteStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInviteStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInviteStatusResponseBody</p>
+     */
     public static class InviteStatusList extends TeaModel {
-        @NameInMap("AssociationSuccessTime")
+        @com.aliyun.core.annotation.NameInMap("AssociationSuccessTime")
         private String associationSuccessTime;
 
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private Long cid;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubAccountType")
+        @com.aliyun.core.annotation.NameInMap("SubAccountType")
         private String subAccountType;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private Long uid;
 
         private InviteStatusList(Builder builder) {
@@ -230,7 +256,11 @@ public class GetInviteStatusResponseBody extends TeaModel {
             private Long uid; 
 
             /**
-             * AssociationSuccessTime.
+             * <p>The time that Distribution Customer successfully associated with Distributor.</br>
+             * This value will be empty if there is no existing association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-02-13</p>
              */
             public Builder associationSuccessTime(String associationSuccessTime) {
                 this.associationSuccessTime = associationSuccessTime;
@@ -238,7 +268,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Cid.
+             * <p>Distribution Customer&quot;s CID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123</p>
              */
             public Builder cid(Long cid) {
                 this.cid = cid;
@@ -246,7 +279,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time of email been sent out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-02-12</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -254,7 +290,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent organization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1093238769140523</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -262,7 +301,16 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Invitation Status:</p>
+             * <ul>
+             * <li>0 No visit on registration URL</li>
+             * <li>1 Successful Registration</li>
+             * <li>2 Unsuccessful Registration</li>
+             * <li>3 Registration URL have been visited, but no submitted sheet/ticket.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -270,7 +318,15 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SubAccountType.
+             * <p>Account Type:</p>
+             * <ul>
+             * <li>1 Agency&quot;s End User</li>
+             * <li>2 Reseller&quot;s End User</li>
+             * <li>5 T2 Reseller Partner</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subAccountType(String subAccountType) {
                 this.subAccountType = subAccountType;
@@ -278,7 +334,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>Distribution Customer&quot;s UID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123</p>
              */
             public Builder uid(Long uid) {
                 this.uid = uid;
@@ -292,17 +351,23 @@ public class GetInviteStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInviteStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInviteStatusResponseBody</p>
+     */
     public static class InviteStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("InviteStatusList")
+        @com.aliyun.core.annotation.NameInMap("InviteStatusList")
         private InviteStatusList inviteStatusList;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private InviteStatus(Builder builder) {
@@ -355,7 +420,14 @@ public class GetInviteStatusResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Code.
+             * <p>Result Code. Value Range:</p>
+             * <ul>
+             * <li>200 OK</li>
+             * <li>1109 system error</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -363,7 +435,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InviteStatusList.
+             * <p>List of Invitation Status result</p>
              */
             public Builder inviteStatusList(InviteStatusList inviteStatusList) {
                 this.inviteStatusList = inviteStatusList;
@@ -371,7 +443,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -379,7 +454,10 @@ public class GetInviteStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -393,9 +471,15 @@ public class GetInviteStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInviteStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInviteStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("InviteStatus")
-        private java.util.List < InviteStatus> inviteStatus;
+        @com.aliyun.core.annotation.NameInMap("InviteStatus")
+        private java.util.List<InviteStatus> inviteStatus;
 
         private Data(Builder builder) {
             this.inviteStatus = builder.inviteStatus;
@@ -412,17 +496,17 @@ public class GetInviteStatusResponseBody extends TeaModel {
         /**
          * @return inviteStatus
          */
-        public java.util.List < InviteStatus> getInviteStatus() {
+        public java.util.List<InviteStatus> getInviteStatus() {
             return this.inviteStatus;
         }
 
         public static final class Builder {
-            private java.util.List < InviteStatus> inviteStatus; 
+            private java.util.List<InviteStatus> inviteStatus; 
 
             /**
              * InviteStatus.
              */
-            public Builder inviteStatus(java.util.List < InviteStatus> inviteStatus) {
+            public Builder inviteStatus(java.util.List<InviteStatus> inviteStatus) {
                 this.inviteStatus = inviteStatus;
                 return this;
             }

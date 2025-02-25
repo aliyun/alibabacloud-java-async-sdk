@@ -38,7 +38,7 @@ public class AvailableAZ extends TeaModel {
         private String availableAZs; 
 
         /**
-         * az
+         * availableAZs.
          */
         public Builder availableAZs(String availableAZs) {
             this.availableAZs = availableAZs;

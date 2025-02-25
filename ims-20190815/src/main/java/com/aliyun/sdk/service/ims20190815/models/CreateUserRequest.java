@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("MobilePhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobilePhone")
     private String mobilePhone;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("UserPrincipalName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrincipalName;
 
     private CreateUserRequest(Builder builder) {
@@ -92,7 +97,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -108,7 +113,7 @@ public class CreateUserRequest extends Request {
         private String displayName; 
         private String email; 
         private String mobilePhone; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String userPrincipalName; 
 
         private Builder() {
@@ -126,10 +131,11 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * The description.
-         * <p>
+         * <p>The description.</p>
+         * <p>The description must be 1 to 128 characters in length.</p>
          * 
-         * The description must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>This is a cloud computing engineer.</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -138,10 +144,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The display name of the RAM user.
-         * <p>
+         * <p>The display name of the RAM user.</p>
+         * <p>The name must be 1 to 24 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 24 characters in length.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -150,10 +158,13 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The email address of the RAM user.
-         * <p>
+         * <p>The email address of the RAM user.</p>
+         * <blockquote>
+         * <p>This parameter is valid only on the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * > This parameter is valid only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -162,12 +173,14 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The mobile number of the RAM user.
-         * <p>
+         * <p>The mobile number of the RAM user.</p>
+         * <p>Format: Country code-Mobile phone number.</p>
+         * <blockquote>
+         * <p>This parameter is valid only on the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * Format: Country code-Mobile phone number.
-         * 
-         * > This parameter is valid only on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>86-1868888****</p>
          */
         public Builder mobilePhone(String mobilePhone) {
             this.putQueryParameter("MobilePhone", mobilePhone);
@@ -176,24 +189,22 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The tag value.
-         * <p>
-         * 
-         * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+         * <p>The tags. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The logon name of the RAM user.
-         * <p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
+         * <p>The name is in the format of <code>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</code>. <code>&lt;username&gt;</code> indicates the name of the RAM user. <code>&lt;AccountAlias&gt;.onaliyun.com</code> indicates the default domain name. For more information about how to query the default domain name, see <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a>.</p>
+         * <p>The value of <code>UserPrincipalName</code> must be <code>1 to 128</code> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <code>&lt;username&gt;</code> must be <code>1 to 64</code> characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name. For more information about how to obtain the default domain name, see [GetDefaultDomain](~~186720~~).
-         * 
-         * The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);
@@ -208,11 +219,17 @@ public class CreateUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -247,10 +264,11 @@ public class CreateUserRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
-             * <p>
+             * <p>The key of the tag.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,10 +276,11 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * The value of tag N.
-             * <p>
+             * <p>The value of the tag.</p>
+             * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder value(String value) {
                 this.value = value;

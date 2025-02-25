@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDisableFwSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>PutDisableFwSwitchResponseBody</p>
  */
 public class PutDisableFwSwitchResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutDisableFwSwitchResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class PutDisableFwSwitchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2841452-CB8D-4F7D-B247-38E1CF7334F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,30 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetEntityTagsRequest} extends {@link RequestModel}
  *
  * <p>SetEntityTagsRequest</p>
  */
 public class SetEntityTagsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("QualifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QualifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String qualifiedName;
 
-    @Body
-    @NameInMap("Tags")
-    private java.util.List < UserEntityTag > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<UserEntityTag> tags;
 
     private SetEntityTagsRequest(Builder builder) {
         super(builder);
@@ -63,14 +67,14 @@ public class SetEntityTagsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < UserEntityTag > getTags() {
+    public java.util.List<UserEntityTag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<SetEntityTagsRequest, Builder> {
         private String regionId; 
         private String qualifiedName; 
-        private java.util.List < UserEntityTag > tags; 
+        private java.util.List<UserEntityTag> tags; 
 
         private Builder() {
             super();
@@ -84,7 +88,7 @@ public class SetEntityTagsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -93,7 +97,11 @@ public class SetEntityTagsRequest extends Request {
         }
 
         /**
-         * QualifiedName.
+         * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.projectA.tableA</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);
@@ -102,9 +110,9 @@ public class SetEntityTagsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < UserEntityTag > tags) {
+        public Builder tags(java.util.List<UserEntityTag> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;

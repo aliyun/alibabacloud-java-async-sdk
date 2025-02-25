@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LogisticsDetail} extends {@link TeaModel}
  *
  * <p>LogisticsDetail</p>
  */
 public class LogisticsDetail extends TeaModel {
-    @NameInMap("ocurrTimeStr")
+    @com.aliyun.core.annotation.NameInMap("ocurrTimeStr")
     private String ocurrTimeStr;
 
-    @NameInMap("standerdDesc")
+    @com.aliyun.core.annotation.NameInMap("standerdDesc")
     private String standerdDesc;
 
     private LogisticsDetail(Builder builder) {

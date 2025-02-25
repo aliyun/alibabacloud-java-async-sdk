@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRequestDiagnosisPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetRequestDiagnosisPageResponseBody</p>
  */
 public class GetRequestDiagnosisPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetRequestDiagnosisPageResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800FBAF5-A539-5B97-A09E-C63AB2F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,38 +155,44 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRequestDiagnosisPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRequestDiagnosisPageResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
-        @NameInMap("dbSchema")
+        @com.aliyun.core.annotation.NameInMap("dbSchema")
         private String dbSchema;
 
-        @NameInMap("engine")
+        @com.aliyun.core.annotation.NameInMap("engine")
         private String engine;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("messageId")
+        @com.aliyun.core.annotation.NameInMap("messageId")
         private String messageId;
 
-        @NameInMap("param")
+        @com.aliyun.core.annotation.NameInMap("param")
         private String param;
 
-        @NameInMap("result")
+        @com.aliyun.core.annotation.NameInMap("result")
         private String result;
 
-        @NameInMap("sqlId")
+        @com.aliyun.core.annotation.NameInMap("sqlId")
         private String sqlId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private Integer state;
 
-        @NameInMap("uuid")
+        @com.aliyun.core.annotation.NameInMap("uuid")
         private String uuid;
 
         private List(Builder builder) {
@@ -285,7 +308,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2093****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -293,7 +319,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>das</p>
              */
             public Builder dbSchema(String dbSchema) {
                 this.dbSchema = dbSchema;
@@ -301,15 +330,18 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine. Valid values:
-             * <p>
+             * <p>The database engine. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong></li>
+             * <li><strong>PostgreSQL</strong></li>
+             * <li><strong>SQLServer</strong></li>
+             * <li><strong>PolarDBMySQL</strong></li>
+             * <li><strong>PolarDBOracle</strong></li>
+             * <li><strong>MongoDB</strong></li>
+             * </ul>
              * 
-             * * **MySQL**
-             * * **PostgreSQL**
-             * * **SQLServer**
-             * * **PolarDBMySQL**
-             * * **PolarDBOracle**
-             * * **MongoDB**
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -317,7 +349,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL diagnostics task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the SQL diagnostics task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1633071840000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -325,7 +360,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL diagnostics task was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the SQL diagnostics task was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1633071850000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -333,7 +371,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the diagnostics task.
+             * <p>The unique ID of the diagnostics task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61820b594664275c4429****</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -341,7 +382,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * Additional information.
+             * <p>Additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;:&quot;&quot;}</p>
              */
             public Builder param(String param) {
                 this.param = param;
@@ -349,39 +393,61 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the SQL diagnostics task. The result includes the following information:
-             * <p>
+             * <p>The result of the SQL diagnostics task. The result includes the following information:</p>
+             * <ul>
+             * <li><p><strong>endTime</strong>: the end time of the SQL diagnostics task.</p>
+             * </li>
+             * <li><p><strong>errorCode</strong>: indicates whether the SQL diagnostics task is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>0001</strong>: The SQL diagnostics task is complete.</li>
+             * <li><strong>0003</strong>: The SQL diagnostics task failed.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>errorMessage</strong>: the error message.</p>
+             * </li>
+             * <li><p><strong>estimateCost</strong>: the estimated cost.</p>
+             * <ul>
+             * <li><strong>cpu</strong>: the estimated CPU utilization of the index.</li>
+             * <li><strong>io</strong>: the estimated I/O usage of the index.</li>
+             * <li><strong>rows</strong>: the estimated values of the rows returned for the index.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>improvement</strong>: the performance improvement ratio.</p>
+             * </li>
+             * <li><p><strong>indexAdvices</strong>: the index recommendations, which include the following information:</p>
+             * <ul>
+             * <li><strong>columns</strong>: the index columns.</li>
+             * <li><strong>ddlAddIndex</strong>: the DDL statement for the index.</li>
+             * <li><strong>indexName</strong>: the name of the index.</li>
+             * <li><strong>schemaName</strong>: the name of the database.</li>
+             * <li><strong>tableName</strong>: the name of the table.</li>
+             * <li><strong>unique</strong>: indicates whether the index is unique.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>ip</strong>: the IP address of the instance.</p>
+             * </li>
+             * <li><p><strong>messageId</strong>: the ID of the diagnostics task.</p>
+             * </li>
+             * <li><p><strong>port</strong>: the port used to connect to the instance.</p>
+             * </li>
+             * <li><p><strong>sqlTag</strong>: the SQL tag.</p>
+             * </li>
+             * <li><p><strong>startTime</strong>: the start time of the SQL diagnostics task.</p>
+             * </li>
+             * <li><p><strong>success</strong>: indicates whether the request was successful.</p>
+             * </li>
+             * <li><p><strong>support</strong>: indicates whether the SQL statement can be diagnosed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The SQL statement can be diagnosed.</li>
+             * <li><strong>false</strong>: The SQL statement cannot be diagnosed.</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>tuningAdvices</strong>: the SQL rewrite suggestions.</p>
+             * </li>
+             * </ul>
              * 
-             * * **endTime**: the end time of the SQL diagnostics task.
-             * * **errorCode**: indicates whether the SQL diagnostics task is complete. Valid values:
-             *   * **0001**: The SQL diagnostics task is complete.
-             *   * **0003**: The SQL diagnostics task failed.
-             * 
-             * * **errorMessage**: the error message.
-             * * **estimateCost**: the estimated cost.
-             *   * **cpu**: the estimated CPU utilization of the index.
-             *   * **io**: the estimated I/O usage of the index.
-             *   * **rows**: the estimated values of the rows returned for the index.
-             * * **improvement**: the performance improvement ratio.
-             * * **indexAdvices**: the index recommendations, which include the following information:
-             *   * **columns**: the index columns.
-             *   * **ddlAddIndex**: the DDL statement for the index.
-             *   * **indexName**: the name of the index.
-             *   * **schemaName**: the name of the database.
-             *   * **tableName**: the name of the table.
-             *   * **unique**: indicates whether the index is unique.
-             * 
-             * * **ip**: the IP address of the instance.
-             * * **messageId**: the ID of the diagnostics task.
-             * * **port**: the port used to connect to the instance.
-             * * **sqlTag**: the SQL tag.
-             * * **startTime**: the start time of the SQL diagnostics task.
-             * * **success**: indicates whether the request was successful.
-             * * **support**: indicates whether the SQL statement can be diagnosed. Valid values:
-             *   * **true**: The SQL statement can be diagnosed.
-             *   * **false**: The SQL statement cannot be diagnosed.
-             * 
-             * * **tuningAdvices**: the SQL rewrite suggestions.
+             * <strong>example:</strong>
+             * <p>{ &quot;endTime&quot;:1636354256000, &quot;errorCode&quot;:&quot;0001&quot;, &quot;errorMessage&quot;:&quot;TFX Successful&quot;, &quot;estimateCost&quot;:{ &quot;cpu&quot;:1.7878745150389268, &quot;io&quot;:9.948402604746128, &quot;rows&quot;:8.889372575194633 }, &quot;improvement&quot;:12933.97, &quot;indexAdvices&quot;:[ { &quot;columns&quot;:[ &quot;work_no&quot; ], &quot;ddlAddIndex&quot;:&quot;ALTER TABLE <code>test</code>.<code>work_order</code> ADD INDEX <code>idx_workno</code> (<code>work_no</code>)&quot;, &quot;indexName&quot;:&quot;idx_workno&quot;, &quot;schemaName&quot;:&quot;test&quot;, &quot;tableName&quot;:&quot;work_order&quot;, &quot;unique&quot;:false } ], &quot;ip&quot;:&quot;<strong><strong>.mysql.rds.aliyuncs.com&quot;, &quot;messageId&quot;:&quot;6188c8cb2f1365b16aee</strong></strong>&quot;, &quot;port&quot;:3306, &quot;sqlTag&quot;:&quot;{&quot;PRED_EQUAL&quot;:&quot;Y&quot;,&quot;CNT_QB&quot;:&quot;1&quot;,&quot;CNT_TB&quot;:&quot;1&quot;}&quot;, &quot;startTime&quot;:1636354252000, &quot;success&quot;:true, &quot;support&quot;:true, &quot;tuningAdvices&quot;:[ ] }</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -389,7 +455,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL template ID.
+             * <p>The SQL template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c95dae3afef77be06572612df9b****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -397,18 +466,22 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the diagnostics task. Valid values:
-             * <p>
+             * <p>The status of the diagnostics task. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: The diagnostics task is in progress.</p>
+             * </li>
+             * <li><p><strong>1</strong>: A diagnostics error occurred.</p>
+             * </li>
+             * <li><p><strong>2</strong>: The diagnostics task is complete.</p>
+             * </li>
+             * <li><p><strong>3</strong>: An SQL error occurred.</p>
+             * </li>
+             * <li><p><strong>4</strong>: An engine error occurred.</p>
+             * </li>
+             * </ul>
              * 
-             * * **0**: The diagnostics task is in progress.
-             * 
-             * * **1**: A diagnostics error occurred.
-             * 
-             * * **2**: The diagnostics task is complete.
-             * 
-             * * **3**: An SQL error occurred.
-             * 
-             * * **4**: An engine error occurred.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -416,7 +489,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the diagnostics instance.
+             * <p>The unique ID of the diagnostics instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdm_51fe9bc19ec413f4d530431af87a****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -430,20 +506,26 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRequestDiagnosisPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRequestDiagnosisPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("extra")
+        @com.aliyun.core.annotation.NameInMap("extra")
         private String extra;
 
-        @NameInMap("list")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("list")
+        private java.util.List<List> list;
 
-        @NameInMap("pageNo")
+        @com.aliyun.core.annotation.NameInMap("pageNo")
         private Long pageNo;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Long pageSize;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Long total;
 
         private Data(Builder builder) {
@@ -472,7 +554,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -499,13 +581,16 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String extra; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
 
             /**
-             * Additional information.
+             * <p>Additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;:&quot;&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -513,15 +598,18 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL diagnostics records returned.
+             * <p>The SQL diagnostics records returned.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * The page number. The value must be a positive integer. Default value: 1.
+             * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -529,7 +617,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. The value must be a positive integer. Default value: 10.
+             * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -537,7 +628,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;

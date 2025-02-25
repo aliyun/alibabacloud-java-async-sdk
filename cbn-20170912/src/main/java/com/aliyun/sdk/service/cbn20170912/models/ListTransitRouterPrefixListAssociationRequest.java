@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTransitRouterPrefixListAssociationRequest} extends {@link RequestModel}
  *
  * <p>ListTransitRouterPrefixListAssociationRequest</p>
  */
 public class ListTransitRouterPrefixListAssociationRequest extends Request {
-    @Query
-    @NameInMap("NextHop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHop")
     private String nextHop;
 
-    @Query
-    @NameInMap("NextHopInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopInstanceId")
     private String nextHopInstanceId;
 
-    @Query
-    @NameInMap("NextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopType")
     private String nextHopType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("OwnerUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerUid")
     private Long ownerUid;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PrefixListId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListId")
     private String prefixListId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("TransitRouterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterId;
 
-    @Query
-    @NameInMap("TransitRouterTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterTableId")
     private String transitRouterTableId;
 
     private ListTransitRouterPrefixListAssociationRequest(Builder builder) {
@@ -252,10 +257,13 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         } 
 
         /**
-         * The ID of the next hop.
-         * <p>
+         * <p>The ID of the next hop.</p>
+         * <blockquote>
+         * <p>Set the value to <strong>BlackHole</strong> if you want to query the prefix list that generates blackhole routes.</p>
+         * </blockquote>
          * 
-         * > Set the value to **BlackHole** if you want to query the prefix list that generates blackhole routes.
+         * <strong>example:</strong>
+         * <p>tr-attach-flbq507rg2ckrj****</p>
          */
         public Builder nextHop(String nextHop) {
             this.putQueryParameter("NextHop", nextHop);
@@ -264,7 +272,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The ID of the network instance associated with the next hop connection.
+         * <p>The ID of the network instance associated with the next hop connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-6eh7fp9hdqa2wv85t****</p>
          */
         public Builder nextHopInstanceId(String nextHopInstanceId) {
             this.putQueryParameter("NextHopInstanceId", nextHopInstanceId);
@@ -273,13 +284,16 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The type of the next hop. Valid values:
-         * <p>
+         * <p>The type of the next hop. Valid values:</p>
+         * <ul>
+         * <li><strong>BlackHole</strong>: The prefix list that generates blackhole routes.</li>
+         * <li><strong>VPC</strong>: The prefix list whose next hop is a virtual private cloud (VPC) connection.</li>
+         * <li><strong>VBR</strong>: The prefix list whose next hop is a virtual border router (VBR) connection.</li>
+         * <li><strong>TR</strong>: The prefix list whose next hop is an inter-region connection on the transit router.</li>
+         * </ul>
          * 
-         * *   **BlackHole**: The prefix list that generates blackhole routes.
-         * *   **VPC**: The prefix list whose next hop is a virtual private cloud (VPC) connection.
-         * *   **VBR**: The prefix list whose next hop is a virtual border router (VBR) connection.
-         * *   **TR**: The prefix list whose next hop is an inter-region connection on the transit router.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -306,7 +320,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the prefix list belongs.
+         * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -315,7 +332,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -324,7 +344,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -333,7 +356,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The ID of the prefix list.
+         * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-6ehtn5kqxgeyy08fi****</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -342,10 +368,12 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
-         * <p>
+         * <p>The ID of the region where the transit router is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -372,11 +400,14 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The status of the prefix list. Valid values:
-         * <p>
+         * <p>The status of the prefix list. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Updating</strong></li>
+         * </ul>
          * 
-         * *   **Active**
-         * *   **Updating**
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -385,7 +416,11 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The ID of the transit router.
+         * <p>The ID of the transit router.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-6ehx7q2jze8ch5ji0****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -394,7 +429,10 @@ public class ListTransitRouterPrefixListAssociationRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the transit router.
+         * <p>The ID of the route table of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-6ehgc262hr170qgyc****</p>
          */
         public Builder transitRouterTableId(String transitRouterTableId) {
             this.putQueryParameter("TransitRouterTableId", transitRouterTableId);

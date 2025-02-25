@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTranscodeTemplateGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ListTranscodeTemplateGroupResponseBody</p>
  */
 public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeTemplateGroupList")
-    private java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList;
+    @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupList")
+    private java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList;
 
     private ListTranscodeTemplateGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
     /**
      * @return transcodeTemplateGroupList
      */
-    public java.util.List < TranscodeTemplateGroupList> getTranscodeTemplateGroupList() {
+    public java.util.List<TranscodeTemplateGroupList> getTranscodeTemplateGroupList() {
         return this.transcodeTemplateGroupList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList; 
+        private java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The transcoding template groups.
+         * <p>The transcoding template groups.</p>
          */
-        public Builder transcodeTemplateGroupList(java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList) {
+        public Builder transcodeTemplateGroupList(java.util.List<TranscodeTemplateGroupList> transcodeTemplateGroupList) {
             this.transcodeTemplateGroupList = transcodeTemplateGroupList;
             return this;
         }
@@ -71,26 +79,32 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTranscodeTemplateGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTranscodeTemplateGroupResponseBody</p>
+     */
     public static class TranscodeTemplateGroupList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
 
-        @NameInMap("Locked")
+        @com.aliyun.core.annotation.NameInMap("Locked")
         private String locked;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TranscodeTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
         private String transcodeTemplateGroupId;
 
         private TranscodeTemplateGroupList(Builder builder) {
@@ -170,7 +184,10 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             private String transcodeTemplateGroupId; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app-****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -178,7 +195,10 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the template group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-05T10:20:09Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -186,11 +206,14 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template group is the default one. Valid values:
-             * <p>
+             * <p>Indicates whether the template group is the default one. Valid values:</p>
+             * <ul>
+             * <li><strong>Default</strong>: The template group is the default one.</li>
+             * <li><strong>NotDefault</strong>: The template group is not the default one.</li>
+             * </ul>
              * 
-             * *   **Default**: The template group is the default one.
-             * *   **NotDefault**: The template group is not the default one.
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -198,11 +221,14 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The lock status of the transcoding template group. Valid values:
-             * <p>
+             * <p>The lock status of the transcoding template group. Valid values:</p>
+             * <ul>
+             * <li><strong>Disabled</strong>: The template group is not locked.</li>
+             * <li><strong>Enabled</strong>: The template group is locked.</li>
+             * </ul>
              * 
-             * *   **Disabled**: The template group is not locked.
-             * *   **Enabled**: The template group is locked.
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder locked(String locked) {
                 this.locked = locked;
@@ -210,7 +236,10 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template group was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the template group was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-05T10:22:09Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -218,7 +247,10 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template group.
+             * <p>The name of the template group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -226,7 +258,10 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template group.
+             * <p>The ID of the transcoding template group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17a9889fc66852*****d791c886700932</p>
              */
             public Builder transcodeTemplateGroupId(String transcodeTemplateGroupId) {
                 this.transcodeTemplateGroupId = transcodeTemplateGroupId;

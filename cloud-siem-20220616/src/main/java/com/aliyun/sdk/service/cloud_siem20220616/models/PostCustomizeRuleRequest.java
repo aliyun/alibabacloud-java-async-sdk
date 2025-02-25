@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,95 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostCustomizeRuleRequest</p>
  */
 public class PostCustomizeRuleRequest extends Request {
-    @Body
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private String alertType;
 
-    @Body
-    @NameInMap("AlertTypeMds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertTypeMds")
     private String alertTypeMds;
 
-    @Body
-    @NameInMap("EventTransferExt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AttCk")
+    private String attCk;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventTransferExt")
     private String eventTransferExt;
 
-    @Body
-    @NameInMap("EventTransferSwitch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventTransferSwitch")
     private Integer eventTransferSwitch;
 
-    @Body
-    @NameInMap("EventTransferType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventTransferType")
     private String eventTransferType;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("LogSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogSource")
     private String logSource;
 
-    @Body
-    @NameInMap("LogSourceMds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogSourceMds")
     private String logSourceMds;
 
-    @Body
-    @NameInMap("LogType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogType")
     private String logType;
 
-    @Body
-    @NameInMap("LogTypeMds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogTypeMds")
     private String logTypeMds;
 
-    @Body
-    @NameInMap("QueryCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryCycle")
     private String queryCycle;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RuleCondition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleCondition")
     private String ruleCondition;
 
-    @Body
-    @NameInMap("RuleDesc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleDesc")
     private String ruleDesc;
 
-    @Body
-    @NameInMap("RuleGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleGroup")
     private String ruleGroup;
 
-    @Body
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Body
-    @NameInMap("RuleThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleThreshold")
     private String ruleThreshold;
 
-    @Body
-    @NameInMap("ThreatLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThreatLevel")
     private String threatLevel;
 
     private PostCustomizeRuleRequest(Builder builder) {
         super(builder);
         this.alertType = builder.alertType;
         this.alertTypeMds = builder.alertTypeMds;
+        this.attCk = builder.attCk;
         this.eventTransferExt = builder.eventTransferExt;
         this.eventTransferSwitch = builder.eventTransferSwitch;
         this.eventTransferType = builder.eventTransferType;
@@ -98,6 +110,8 @@ public class PostCustomizeRuleRequest extends Request {
         this.logTypeMds = builder.logTypeMds;
         this.queryCycle = builder.queryCycle;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleCondition = builder.ruleCondition;
         this.ruleDesc = builder.ruleDesc;
         this.ruleGroup = builder.ruleGroup;
@@ -131,6 +145,13 @@ public class PostCustomizeRuleRequest extends Request {
      */
     public String getAlertTypeMds() {
         return this.alertTypeMds;
+    }
+
+    /**
+     * @return attCk
+     */
+    public String getAttCk() {
+        return this.attCk;
     }
 
     /**
@@ -204,6 +225,20 @@ public class PostCustomizeRuleRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return ruleCondition
      */
     public String getRuleCondition() {
@@ -248,6 +283,7 @@ public class PostCustomizeRuleRequest extends Request {
     public static final class Builder extends Request.Builder<PostCustomizeRuleRequest, Builder> {
         private String alertType; 
         private String alertTypeMds; 
+        private String attCk; 
         private String eventTransferExt; 
         private Integer eventTransferSwitch; 
         private String eventTransferType; 
@@ -258,6 +294,8 @@ public class PostCustomizeRuleRequest extends Request {
         private String logTypeMds; 
         private String queryCycle; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleCondition; 
         private String ruleDesc; 
         private String ruleGroup; 
@@ -273,6 +311,7 @@ public class PostCustomizeRuleRequest extends Request {
             super(request);
             this.alertType = request.alertType;
             this.alertTypeMds = request.alertTypeMds;
+            this.attCk = request.attCk;
             this.eventTransferExt = request.eventTransferExt;
             this.eventTransferSwitch = request.eventTransferSwitch;
             this.eventTransferType = request.eventTransferType;
@@ -283,6 +322,8 @@ public class PostCustomizeRuleRequest extends Request {
             this.logTypeMds = request.logTypeMds;
             this.queryCycle = request.queryCycle;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleCondition = request.ruleCondition;
             this.ruleDesc = request.ruleDesc;
             this.ruleGroup = request.ruleGroup;
@@ -306,6 +347,15 @@ public class PostCustomizeRuleRequest extends Request {
         public Builder alertTypeMds(String alertTypeMds) {
             this.putBodyParameter("AlertTypeMds", alertTypeMds);
             this.alertTypeMds = alertTypeMds;
+            return this;
+        }
+
+        /**
+         * att&ck.
+         */
+        public Builder attCk(String attCk) {
+            this.putBodyParameter("AttCk", attCk);
+            this.attCk = attCk;
             return this;
         }
 
@@ -409,6 +459,27 @@ public class PostCustomizeRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the account that you switch from the management account.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

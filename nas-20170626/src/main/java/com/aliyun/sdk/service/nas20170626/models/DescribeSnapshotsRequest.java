@@ -1,49 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotsRequest</p>
  */
 public class DescribeSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @Query
-    @NameInMap("FileSystemType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemType")
     private String fileSystemType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SnapshotIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotIds")
     private String snapshotIds;
 
-    @Query
-    @NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
     private String snapshotName;
 
-    @Query
-    @NameInMap("SnapshotType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotType")
     private String snapshotType;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeSnapshotsRequest(Builder builder) {
@@ -141,20 +145,23 @@ public class DescribeSnapshotsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSnapshotsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.snapshotIds = response.snapshotIds;
-            this.snapshotName = response.snapshotName;
-            this.snapshotType = response.snapshotType;
-            this.status = response.status;
+        private Builder(DescribeSnapshotsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.snapshotIds = request.snapshotIds;
+            this.snapshotName = request.snapshotName;
+            this.snapshotType = request.snapshotType;
+            this.status = request.status;
         } 
 
         /**
-         * FileSystemId.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-22f****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -163,7 +170,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * <p>The type of the file system.</p>
+         * <p>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme</p>
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -172,7 +183,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +196,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +210,11 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotIds.
+         * <p>The snapshot IDs.</p>
+         * <p>You can specify a maximum of 100 snapshot IDs. You must separate snapshot IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-extreme-67pxwk9aevrkr****,s-extreme-snapsho****,s-extreme-6tmsbas6ljhwh****</p>
          */
         public Builder snapshotIds(String snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
@@ -199,7 +223,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * <p>The snapshot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -208,7 +235,16 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotType.
+         * <p>The type of the snapshot.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>auto: auto snapshot</li>
+         * <li>user: manual snapshot</li>
+         * <li>all (default): all snapshot types</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -217,7 +253,17 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the snapshot.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>progressing: The snapshot is being created.</li>
+         * <li>accomplished: The snapshot is created.</li>
+         * <li>failed: The snapshot fails to be created.</li>
+         * <li>all (default): all snapshot states.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

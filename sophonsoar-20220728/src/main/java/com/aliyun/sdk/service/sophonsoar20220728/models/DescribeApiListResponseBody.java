@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApiListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApiListResponseBody</p>
  */
 public class DescribeApiListResponseBody extends TeaModel {
-    @NameInMap("ApiList")
+    @com.aliyun.core.annotation.NameInMap("ApiList")
     private java.util.List < ApiList> apiList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApiListResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class DescribeApiListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApiList.
+         * <p>The information about the service.</p>
          */
         public Builder apiList(java.util.List < ApiList> apiList) {
             this.apiList = apiList;
@@ -58,7 +58,10 @@ public class DescribeApiListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A15D31E-B38B-5F7F-8DC0-1C74408875AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +74,20 @@ public class DescribeApiListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApiListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApiListResponseBody</p>
+     */
     public static class ApiList extends TeaModel {
-        @NameInMap("DocUrl")
+        @com.aliyun.core.annotation.NameInMap("DocUrl")
         private String docUrl;
 
-        @NameInMap("PopCode")
+        @com.aliyun.core.annotation.NameInMap("PopCode")
         private String popCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private ApiList(Builder builder) {
@@ -122,7 +131,10 @@ public class DescribeApiListResponseBody extends TeaModel {
             private String productName; 
 
             /**
-             * DocUrl.
+             * <p>The link to the API references of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxx">https://xxxxx</a></p>
              */
             public Builder docUrl(String docUrl) {
                 this.docUrl = docUrl;
@@ -130,7 +142,10 @@ public class DescribeApiListResponseBody extends TeaModel {
             }
 
             /**
-             * PopCode.
+             * <p>The POP code of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sas</p>
              */
             public Builder popCode(String popCode) {
                 this.popCode = popCode;
@@ -138,7 +153,10 @@ public class DescribeApiListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>The name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud Security Center</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;

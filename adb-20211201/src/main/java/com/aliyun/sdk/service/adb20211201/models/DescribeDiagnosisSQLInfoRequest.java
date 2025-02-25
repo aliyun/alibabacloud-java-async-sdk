@@ -1,47 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisSQLInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosisSQLInfoRequest</p>
  */
 public class DescribeDiagnosisSQLInfoRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Lang")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ProcessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessId")
     private String processId;
 
-    @Query
-    @NameInMap("ProcessRcHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessRcHost")
     private String processRcHost;
 
-    @Query
-    @NameInMap("ProcessStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessStartTime")
     private Long processStartTime;
 
-    @Query
-    @NameInMap("ProcessState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessState")
     private String processState;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDiagnosisSQLInfoRequest(Builder builder) {
@@ -142,7 +145,14 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp1r053byu48p</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -151,7 +161,16 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of file titles and error messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -160,7 +179,13 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * <p>The query ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL cluster, including the query ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021070216432217201616806503453</p>
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -169,7 +194,13 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessRcHost.
+         * <p>The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the IP address and port number of the frontend node.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>192.45.<em><strong>.</strong></em>:3145</p>
          */
         public Builder processRcHost(String processRcHost) {
             this.putQueryParameter("ProcessRcHost", processRcHost);
@@ -178,7 +209,13 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessStartTime.
+         * <p>The execution start time of the SQL statement. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL cluster, including the execution start time of the SQL statement.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1625215402000</p>
          */
         public Builder processStartTime(Long processStartTime) {
             this.putQueryParameter("ProcessStartTime", processStartTime);
@@ -187,7 +224,18 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessState.
+         * <p>The status of the SQL statement. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL cluster, including the status of the SQL statement.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder processState(String processState) {
             this.putQueryParameter("ProcessState", processState);
@@ -196,7 +244,14 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

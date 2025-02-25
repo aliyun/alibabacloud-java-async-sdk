@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIPv6TranslatorAclListsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIPv6TranslatorAclListsResponseBody</p>
  */
 public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
-    @NameInMap("Ipv6TranslatorAcls")
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorAcls")
     private Ipv6TranslatorAcls ipv6TranslatorAcls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIPv6TranslatorAclListsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of network ACLs.
+         * <p>The list of network ACLs.</p>
          */
         public Builder ipv6TranslatorAcls(Ipv6TranslatorAcls ipv6TranslatorAcls) {
             this.ipv6TranslatorAcls = ipv6TranslatorAcls;
@@ -94,7 +99,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,11 +148,17 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIPv6TranslatorAclListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIPv6TranslatorAclListsResponseBody</p>
+     */
     public static class IPv6TranslatorAcl extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclName")
+        @com.aliyun.core.annotation.NameInMap("AclName")
         private String aclName;
 
         private IPv6TranslatorAcl(Builder builder) {
@@ -170,7 +193,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
             private String aclName; 
 
             /**
-             * The ACL ID.
+             * <p>The ACL ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv6transacl-bp1de2****</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -178,7 +204,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
             }
 
             /**
-             * The ACL name.
+             * <p>The ACL name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl1</p>
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -192,9 +221,15 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIPv6TranslatorAclListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIPv6TranslatorAclListsResponseBody</p>
+     */
     public static class Ipv6TranslatorAcls extends TeaModel {
-        @NameInMap("IPv6TranslatorAcl")
-        private java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl;
+        @com.aliyun.core.annotation.NameInMap("IPv6TranslatorAcl")
+        private java.util.List<IPv6TranslatorAcl> iPv6TranslatorAcl;
 
         private Ipv6TranslatorAcls(Builder builder) {
             this.iPv6TranslatorAcl = builder.iPv6TranslatorAcl;
@@ -211,17 +246,17 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         /**
          * @return iPv6TranslatorAcl
          */
-        public java.util.List < IPv6TranslatorAcl> getIPv6TranslatorAcl() {
+        public java.util.List<IPv6TranslatorAcl> getIPv6TranslatorAcl() {
             return this.iPv6TranslatorAcl;
         }
 
         public static final class Builder {
-            private java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl; 
+            private java.util.List<IPv6TranslatorAcl> iPv6TranslatorAcl; 
 
             /**
              * IPv6TranslatorAcl.
              */
-            public Builder iPv6TranslatorAcl(java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl) {
+            public Builder iPv6TranslatorAcl(java.util.List<IPv6TranslatorAcl> iPv6TranslatorAcl) {
                 this.iPv6TranslatorAcl = iPv6TranslatorAcl;
                 return this;
             }

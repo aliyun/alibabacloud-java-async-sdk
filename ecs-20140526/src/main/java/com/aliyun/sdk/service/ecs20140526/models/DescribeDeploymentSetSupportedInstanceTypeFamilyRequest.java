@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentSetSupportedInstanceTypeFamilyRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeploymentSetSupportedInstanceTypeFamilyRequest</p>
  */
 public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Strategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Strategy")
     private String strategy;
 
     private DescribeDeploymentSetSupportedInstanceTypeFamilyRequest(Builder builder) {
@@ -166,7 +171,11 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,14 +202,16 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * The deployment strategy. Valid values:
-         * <p>
+         * <p>The deployment strategy. Valid values:</p>
+         * <ul>
+         * <li>Availability: high availability strategy</li>
+         * <li>AvailabilityGroup: high availability group strategy</li>
+         * <li>LowLatency: low latency strategy</li>
+         * </ul>
+         * <p>Default value: Availability.</p>
          * 
-         * *   Availability: high availability strategy.
-         * *   AvailabilityGroup: high availability group strategy.
-         * *   LowLatency: low latency strategy.
-         * 
-         * Default value: Availability.
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

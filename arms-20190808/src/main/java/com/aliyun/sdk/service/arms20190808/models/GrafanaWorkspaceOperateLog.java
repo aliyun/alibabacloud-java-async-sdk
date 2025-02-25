@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrafanaWorkspaceOperateLog} extends {@link TeaModel}
  *
  * <p>GrafanaWorkspaceOperateLog</p>
  */
 public class GrafanaWorkspaceOperateLog extends TeaModel {
-    @NameInMap("date")
+    @com.aliyun.core.annotation.NameInMap("date")
     private Float date;
 
-    @NameInMap("detail")
+    @com.aliyun.core.annotation.NameInMap("detail")
     private String detail;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("operatorId")
+    @com.aliyun.core.annotation.NameInMap("operatorId")
     private String operatorId;
 
     private GrafanaWorkspaceOperateLog(Builder builder) {

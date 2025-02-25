@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckFixDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCheckFixDetailsRequest</p>
  */
 public class DescribeCheckFixDetailsRequest extends Request {
-    @Query
-    @NameInMap("CheckIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckIds")
     private String checkIds;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RiskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskId")
     private Long riskId;
 
     private DescribeCheckFixDetailsRequest(Builder builder) {
@@ -82,10 +87,13 @@ public class DescribeCheckFixDetailsRequest extends Request {
         } 
 
         /**
-         * The ID of the risk item.
-         * <p>
+         * <p>The ID of the risk item.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the IDs of risk items.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the IDs of risk items.
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -94,11 +102,14 @@ public class DescribeCheckFixDetailsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,10 +118,13 @@ public class DescribeCheckFixDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the baseline.
-         * <p>
+         * <p>The ID of the baseline.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
+         * <strong>example:</strong>
+         * <p>51</p>
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);

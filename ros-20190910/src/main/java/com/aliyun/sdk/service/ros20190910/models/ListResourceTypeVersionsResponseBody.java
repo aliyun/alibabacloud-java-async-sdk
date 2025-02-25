@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypeVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceTypeVersionsResponseBody</p>
  */
 public class ListResourceTypeVersionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceTypeVersions")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypeVersions")
     private java.util.List < ResourceTypeVersions> resourceTypeVersions;
 
     private ListResourceTypeVersionsResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         private java.util.List < ResourceTypeVersions> resourceTypeVersions; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The versions of the resource types.
+         * <p>The versions of the resource types.</p>
          */
         public Builder resourceTypeVersions(java.util.List < ResourceTypeVersions> resourceTypeVersions) {
             this.resourceTypeVersions = resourceTypeVersions;
@@ -71,29 +74,35 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceTypeVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypeVersionsResponseBody</p>
+     */
     public static class ResourceTypeVersions extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("IsDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("IsDefaultVersion")
         private Boolean isDefaultVersion;
 
-        @NameInMap("Provider")
+        @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private ResourceTypeVersions(Builder builder) {
@@ -182,7 +191,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
+             * <p>The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-24T08:25:21</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -190,7 +202,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the version.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>It is a demo.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -198,7 +213,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The entity type. Only Module may be returned.
+             * <p>The entity type. Only Module may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Module</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -206,11 +224,14 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the version is the default version. Valid values:
-             * <p>
+             * <p>Indicates whether the version is the default version. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -218,11 +239,14 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the resource type. Valid values:
-             * <p>
+             * <p>The provider of the resource type. Valid values:</p>
+             * <ul>
+             * <li>ROS: ROS</li>
+             * <li>Self: yourself</li>
+             * </ul>
              * 
-             * *   ROS: ROS
-             * *   Self: yourself
+             * <strong>example:</strong>
+             * <p>ROS</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -230,7 +254,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -238,7 +265,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the version was updated. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
+             * <p>The time when the version was updated. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-24T08:25:21</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -246,7 +276,10 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version ID.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

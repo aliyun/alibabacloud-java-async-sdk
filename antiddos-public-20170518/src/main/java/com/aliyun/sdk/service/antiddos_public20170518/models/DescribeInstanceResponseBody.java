@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private InstanceList instanceList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * InstanceList.
+         * An array that consists of the details of the asset.
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -70,7 +69,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of the assets.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -92,37 +91,37 @@ public class DescribeInstanceResponseBody extends TeaModel {
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("BlackholeThreshold")
+        @com.aliyun.core.annotation.NameInMap("BlackholeThreshold")
         private Integer blackholeThreshold;
 
-        @NameInMap("DefenseBpsThreshold")
+        @com.aliyun.core.annotation.NameInMap("DefenseBpsThreshold")
         private Integer defenseBpsThreshold;
 
-        @NameInMap("DefensePpsThreshold")
+        @com.aliyun.core.annotation.NameInMap("DefensePpsThreshold")
         private Integer defensePpsThreshold;
 
-        @NameInMap("ElasticThreshold")
+        @com.aliyun.core.annotation.NameInMap("ElasticThreshold")
         private Integer elasticThreshold;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceIp")
+        @com.aliyun.core.annotation.NameInMap("InstanceIp")
         private String instanceIp;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("IsBgppack")
+        @com.aliyun.core.annotation.NameInMap("IsBgppack")
         private Boolean isBgppack;
 
         private Instance(Builder builder) {
@@ -238,7 +237,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean isBgppack; 
 
             /**
-             * BlackholeThreshold.
+             * The basic protection threshold for the asset. Unit: Mbit/s.
              */
             public Builder blackholeThreshold(Integer blackholeThreshold) {
                 this.blackholeThreshold = blackholeThreshold;
@@ -246,7 +245,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseBpsThreshold.
+             * The traffic scrubbing threshold for the asset. Unit: Mbit/s.
              */
             public Builder defenseBpsThreshold(Integer defenseBpsThreshold) {
                 this.defenseBpsThreshold = defenseBpsThreshold;
@@ -254,7 +253,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DefensePpsThreshold.
+             * The packet scrubbing threshold for the asset. Unit: packets per second (pps).
              */
             public Builder defensePpsThreshold(Integer defensePpsThreshold) {
                 this.defensePpsThreshold = defensePpsThreshold;
@@ -262,7 +261,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticThreshold.
+             * The burstable protection threshold for the asset. Unit: Mbit/s.
              */
             public Builder elasticThreshold(Integer elasticThreshold) {
                 this.elasticThreshold = elasticThreshold;
@@ -270,7 +269,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -278,7 +277,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIp.
+             * The IP address of the asset.
              */
             public Builder instanceIp(String instanceIp) {
                 this.instanceIp = instanceIp;
@@ -286,7 +285,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -294,7 +293,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The DDoS mitigation status of the asset. Valid values:
+             * <p>
+             * 
+             * *   **mitigating**: indicates that traffic scrubbing is triggered for the asset.
+             * *   **blackholed**: indicates that blackhole filtering is triggered for the asset.
+             * *   **normal**: indicates that the instance is normal.
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -302,7 +306,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   **ecs**: ECS instance
+             * *   **slb**: SLB instance
+             * *   **eip**: EIP
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -310,7 +319,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * The IP protocol that is supported by the asset. Valid values:
+             * <p>
+             * 
+             * *   **v4**: IPv4
+             * *   **v6**: IPv6
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -318,7 +331,11 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IsBgppack.
+             * Indicates whether the asset is associated with an Anti-DDoS Origin Basic instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder isBgppack(Boolean isBgppack) {
                 this.isBgppack = isBgppack;
@@ -333,7 +350,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class InstanceList extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private InstanceList(Builder builder) {

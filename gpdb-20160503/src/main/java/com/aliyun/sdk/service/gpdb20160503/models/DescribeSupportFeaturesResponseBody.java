@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSupportFeaturesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSupportFeaturesResponseBody</p>
  */
 public class DescribeSupportFeaturesResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportFeatureList")
+    @com.aliyun.core.annotation.NameInMap("SupportFeatureList")
     private String supportFeatureList;
 
     private DescribeSupportFeaturesResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
         private String supportFeatureList; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +78,10 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63E5BE60-91FF-57F1-B873-7F1EB734B93D_2724</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +89,14 @@ public class DescribeSupportFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * The features supported by the instance. Valid values:
-         * <p>
+         * <p>The features supported by the instance. Valid values:</p>
+         * <ul>
+         * <li>sample_data: sample dataset. For more information, see <a href="https://help.aliyun.com/document_detail/452278.html">Sample dataset</a>.</li>
+         * <li>diagnose_and_optimize: diagnostics and optimization. For more information, see <a href="https://help.aliyun.com/document_detail/323453.html">Diagnostics and optimization</a>.</li>
+         * </ul>
          * 
-         * *   sample_data: sample dataset. For more information, see [Sample dataset](~~452278~~).
-         * *   diagnose_and_optimize: diagnostics and optimization. For more information, see [Diagnostics and optimization](~~323453~~).
+         * <strong>example:</strong>
+         * <p>[ &quot;sample_data&quot;, &quot;diagnose_and_optimize&quot; ]</p>
          */
         public Builder supportFeatureList(String supportFeatureList) {
             this.supportFeatureList = supportFeatureList;

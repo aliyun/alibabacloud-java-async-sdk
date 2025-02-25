@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVodAIDataResponseBody</p>
  */
 public class DescribeVodAIDataResponseBody extends TeaModel {
-    @NameInMap("AIData")
+    @com.aliyun.core.annotation.NameInMap("AIData")
     private AIData AIData;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodAIDataResponseBody(Builder builder) {
@@ -62,7 +67,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on video AI.
+         * <p>The statistics on video AI.</p>
          */
         public Builder AIData(AIData AIData) {
             this.AIData = AIData;
@@ -70,11 +75,14 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         }
 
         /**
-         * The time granularity at which the data was queried. Valid values:
-         * <p>
+         * <p>The time granularity at which the data was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>hour</strong></li>
+         * <li><strong>day</strong></li>
+         * </ul>
          * 
-         * *   **hour**
-         * *   **day**
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -82,7 +90,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,11 +106,17 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class DataItem extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataItem(Builder builder) {
@@ -134,12 +151,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The type of video AI. Valid values:
-             * <p>
+             * <p>The type of video AI. Valid values:</p>
+             * <ul>
+             * <li><strong>AIVideoCensor</strong>: automated review</li>
+             * <li><strong>AIVideoFPShot</strong>: media fingerprinting</li>
+             * <li><strong>AIVideoTag</strong>: smart tagging</li>
+             * </ul>
              * 
-             * *   **AIVideoCensor**: automated review
-             * *   **AIVideoFPShot**: media fingerprinting
-             * *   **AIVideoTag**: smart tagging
+             * <strong>example:</strong>
+             * <p>AIVideoCensor</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -147,7 +167,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             }
 
             /**
-             * The processing duration. Unit: seconds.
+             * <p>The processing duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -161,9 +184,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DataItem")
-        private java.util.List < DataItem> dataItem;
+        @com.aliyun.core.annotation.NameInMap("DataItem")
+        private java.util.List<DataItem> dataItem;
 
         private Data(Builder builder) {
             this.dataItem = builder.dataItem;
@@ -180,17 +209,17 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         /**
          * @return dataItem
          */
-        public java.util.List < DataItem> getDataItem() {
+        public java.util.List<DataItem> getDataItem() {
             return this.dataItem;
         }
 
         public static final class Builder {
-            private java.util.List < DataItem> dataItem; 
+            private java.util.List<DataItem> dataItem; 
 
             /**
              * DataItem.
              */
-            public Builder dataItem(java.util.List < DataItem> dataItem) {
+            public Builder dataItem(java.util.List<DataItem> dataItem) {
                 this.dataItem = dataItem;
                 return this;
             }
@@ -202,11 +231,17 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class AIDataItem extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private AIDataItem(Builder builder) {
@@ -241,7 +276,7 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The statistics on video AI of each type.
+             * <p>The statistics on video AI of each type.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -249,7 +284,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-01T13:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -263,9 +301,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVodAIDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVodAIDataResponseBody</p>
+     */
     public static class AIData extends TeaModel {
-        @NameInMap("AIDataItem")
-        private java.util.List < AIDataItem> AIDataItem;
+        @com.aliyun.core.annotation.NameInMap("AIDataItem")
+        private java.util.List<AIDataItem> AIDataItem;
 
         private AIData(Builder builder) {
             this.AIDataItem = builder.AIDataItem;
@@ -282,17 +326,17 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         /**
          * @return AIDataItem
          */
-        public java.util.List < AIDataItem> getAIDataItem() {
+        public java.util.List<AIDataItem> getAIDataItem() {
             return this.AIDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < AIDataItem> AIDataItem; 
+            private java.util.List<AIDataItem> AIDataItem; 
 
             /**
              * AIDataItem.
              */
-            public Builder AIDataItem(java.util.List < AIDataItem> AIDataItem) {
+            public Builder AIDataItem(java.util.List<AIDataItem> AIDataItem) {
                 this.AIDataItem = AIDataItem;
                 return this;
             }

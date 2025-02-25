@@ -1,51 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateEventBridgeIntegrationRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateEventBridgeIntegrationRequest</p>
  */
 public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
-    @Body
-    @NameInMap("AccessKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
     private String accessKey;
 
-    @Body
-    @NameInMap("AccessSecret")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessSecret")
     private String accessSecret;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @Body
-    @NameInMap("EventBusName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventBusName")
     private String eventBusName;
 
-    @Body
-    @NameInMap("EventBusRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventBusRegionId")
     private String eventBusRegionId;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
     private CreateOrUpdateEventBridgeIntegrationRequest(Builder builder) {
@@ -166,7 +172,10 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         } 
 
         /**
-         * The AccessKey ID that is used to connect to EventBridge.
+         * <p>The AccessKey ID that is used to connect to EventBridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc******************</p>
          */
         public Builder accessKey(String accessKey) {
             this.putBodyParameter("AccessKey", accessKey);
@@ -175,7 +184,10 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The AccessKey secret that is used to connect to EventBridge.
+         * <p>The AccessKey secret that is used to connect to EventBridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc******************</p>
          */
         public Builder accessSecret(String accessSecret) {
             this.putBodyParameter("AccessSecret", accessSecret);
@@ -184,7 +196,10 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The description of the EventBridge integration.
+         * <p>The description of the EventBridge integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -193,7 +208,10 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The public endpoint of EventBridge.
+         * <p>The public endpoint of EventBridge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxxx">http://xxxxx</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -202,7 +220,10 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The name of the event bus.
+         * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventBus_Test</p>
          */
         public Builder eventBusName(String eventBusName) {
             this.putBodyParameter("EventBusName", eventBusName);
@@ -211,7 +232,10 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The region ID of the event bus.
+         * <p>The region ID of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder eventBusRegionId(String eventBusRegionId) {
             this.putBodyParameter("EventBusRegionId", eventBusRegionId);
@@ -220,11 +244,14 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The ID of the EventBridge integration.
-         * <p>
+         * <p>The ID of the EventBridge integration.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, an EventBridge integration is created.</li>
+         * <li>If you specify this parameter, the specified EventBridge integration is modified.</li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, an EventBridge integration is created.
-         * *   If you specify this parameter, the specified EventBridge integration is modified.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -233,7 +260,11 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The name of the EventBridge integration.
+         * <p>The name of the EventBridge integration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventBridge_Test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -242,7 +273,10 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
         }
 
         /**
-         * The event source.
+         * <p>The event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);

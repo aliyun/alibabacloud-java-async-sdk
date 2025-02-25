@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
  *
  * <p>BatchAddFeishuUsersResponseBody</p>
  */
 public class BatchAddFeishuUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchAddFeishuUsersResponseBody(Builder builder) {
@@ -91,14 +96,20 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchAddFeishuUsersResponseBody</p>
+     */
     public static class FailInfos extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CodeDesc")
+        @com.aliyun.core.annotation.NameInMap("CodeDesc")
         private String codeDesc;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
         private FailInfos(Builder builder) {
@@ -172,9 +183,15 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchAddFeishuUsersResponseBody</p>
+     */
     public static class FailResults extends TeaModel {
-        @NameInMap("FailInfos")
-        private java.util.List < FailInfos> failInfos;
+        @com.aliyun.core.annotation.NameInMap("FailInfos")
+        private java.util.List<FailInfos> failInfos;
 
         private FailResults(Builder builder) {
             this.failInfos = builder.failInfos;
@@ -191,17 +208,17 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         /**
          * @return failInfos
          */
-        public java.util.List < FailInfos> getFailInfos() {
+        public java.util.List<FailInfos> getFailInfos() {
             return this.failInfos;
         }
 
         public static final class Builder {
-            private java.util.List < FailInfos> failInfos; 
+            private java.util.List<FailInfos> failInfos; 
 
             /**
              * FailInfos.
              */
-            public Builder failInfos(java.util.List < FailInfos> failInfos) {
+            public Builder failInfos(java.util.List<FailInfos> failInfos) {
                 this.failInfos = failInfos;
                 return this;
             }
@@ -213,14 +230,20 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchAddFeishuUsersResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("FailResults")
-        private java.util.List < FailResults> failResults;
+        @com.aliyun.core.annotation.NameInMap("FailResults")
+        private java.util.List<FailResults> failResults;
 
-        @NameInMap("OkCount")
+        @com.aliyun.core.annotation.NameInMap("OkCount")
         private Integer okCount;
 
         private Result(Builder builder) {
@@ -247,7 +270,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         /**
          * @return failResults
          */
-        public java.util.List < FailResults> getFailResults() {
+        public java.util.List<FailResults> getFailResults() {
             return this.failResults;
         }
 
@@ -260,7 +283,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer failCount; 
-            private java.util.List < FailResults> failResults; 
+            private java.util.List<FailResults> failResults; 
             private Integer okCount; 
 
             /**
@@ -274,7 +297,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
             /**
              * FailResults.
              */
-            public Builder failResults(java.util.List < FailResults> failResults) {
+            public Builder failResults(java.util.List<FailResults> failResults) {
                 this.failResults = failResults;
                 return this;
             }

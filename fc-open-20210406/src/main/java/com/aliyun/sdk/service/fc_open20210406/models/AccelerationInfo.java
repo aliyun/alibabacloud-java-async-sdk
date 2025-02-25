@@ -38,7 +38,7 @@ public class AccelerationInfo extends TeaModel {
         private String status; 
 
         /**
-         * 镜像加速状态，取值 Preparing 或 Ready
+         * status.
          */
         public Builder status(String status) {
             this.status = status;

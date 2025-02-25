@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePlaybookReleasesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePlaybookReleasesResponseBody</p>
  */
 public class DescribePlaybookReleasesResponseBody extends TeaModel {
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybookReleasesResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -70,7 +70,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * <p>The information about the playbook version.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -78,7 +78,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3DFBE11C-6EB6-5166-92D6-3397796AFE1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,14 +94,20 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePlaybookReleasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybookReleasesResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Page(Builder builder) {
@@ -142,7 +151,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -150,7 +162,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +173,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -172,23 +190,29 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePlaybookReleasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePlaybookReleasesResponseBody</p>
+     */
     public static class Records extends TeaModel {
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("TaskflowMd5")
+        @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
         private String taskflowMd5;
 
         private Records(Builder builder) {
@@ -259,7 +283,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             private String taskflowMd5; 
 
             /**
-             * Creator.
+             * <p>The ID of the Alibaba Cloud account that is used to publish the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>145xxxx985</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -267,7 +294,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the layer version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a new version</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -275,7 +305,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the version was created. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1655277397000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -283,7 +316,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the version was modified. The value is a 13-digit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1691460804000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -291,7 +327,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80xxx</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -299,7 +338,10 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowMd5.
+             * <p>The MD5 value configured for the published version of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be0a4ef084dd174abe47xxxxx</p>
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;

@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProductResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProductResponseBody</p>
  */
 public class DescribeProductResponseBody extends TeaModel {
-    @NameInMap("AuditFailMsg")
+    @com.aliyun.core.annotation.NameInMap("AuditFailMsg")
     private String auditFailMsg;
 
-    @NameInMap("AuditStatus")
+    @com.aliyun.core.annotation.NameInMap("AuditStatus")
     private String auditStatus;
 
-    @NameInMap("AuditTime")
+    @com.aliyun.core.annotation.NameInMap("AuditTime")
     private Long auditTime;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("FrontCategoryId")
+    @com.aliyun.core.annotation.NameInMap("FrontCategoryId")
     private Long frontCategoryId;
 
-    @NameInMap("GmtCreated")
+    @com.aliyun.core.annotation.NameInMap("GmtCreated")
     private Long gmtCreated;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private Long gmtModified;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PicUrl")
+    @com.aliyun.core.annotation.NameInMap("PicUrl")
     private String picUrl;
 
-    @NameInMap("ProductExtras")
+    @com.aliyun.core.annotation.NameInMap("ProductExtras")
     private ProductExtras productExtras;
 
-    @NameInMap("ProductSkus")
+    @com.aliyun.core.annotation.NameInMap("ProductSkus")
     private ProductSkus productSkus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Score")
+    @com.aliyun.core.annotation.NameInMap("Score")
     private Float score;
 
-    @NameInMap("ShopInfo")
+    @com.aliyun.core.annotation.NameInMap("ShopInfo")
     private ShopInfo shopInfo;
 
-    @NameInMap("ShortDescription")
+    @com.aliyun.core.annotation.NameInMap("ShortDescription")
     private String shortDescription;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupplierPk")
+    @com.aliyun.core.annotation.NameInMap("SupplierPk")
     private Long supplierPk;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UseCount")
+    @com.aliyun.core.annotation.NameInMap("UseCount")
     private Long useCount;
 
     private DescribeProductResponseBody(Builder builder) {
@@ -431,20 +436,26 @@ public class DescribeProductResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductExtra extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private String values;
 
         private ProductExtra(Builder builder) {
@@ -552,9 +563,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductExtras extends TeaModel {
-        @NameInMap("ProductExtra")
-        private java.util.List < ProductExtra> productExtra;
+        @com.aliyun.core.annotation.NameInMap("ProductExtra")
+        private java.util.List<ProductExtra> productExtra;
 
         private ProductExtras(Builder builder) {
             this.productExtra = builder.productExtra;
@@ -571,17 +588,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return productExtra
          */
-        public java.util.List < ProductExtra> getProductExtra() {
+        public java.util.List<ProductExtra> getProductExtra() {
             return this.productExtra;
         }
 
         public static final class Builder {
-            private java.util.List < ProductExtra> productExtra; 
+            private java.util.List<ProductExtra> productExtra; 
 
             /**
              * ProductExtra.
              */
-            public Builder productExtra(java.util.List < ProductExtra> productExtra) {
+            public Builder productExtra(java.util.List<ProductExtra> productExtra) {
                 this.productExtra = productExtra;
                 return this;
             }
@@ -593,26 +610,32 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class PropertyValue extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private String min;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private String step;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PropertyValue(Builder builder) {
@@ -754,9 +777,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class PropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
-        private java.util.List < PropertyValue> propertyValue;
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
+        private java.util.List<PropertyValue> propertyValue;
 
         private PropertyValues(Builder builder) {
             this.propertyValue = builder.propertyValue;
@@ -773,17 +802,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return propertyValue
          */
-        public java.util.List < PropertyValue> getPropertyValue() {
+        public java.util.List<PropertyValue> getPropertyValue() {
             return this.propertyValue;
         }
 
         public static final class Builder {
-            private java.util.List < PropertyValue> propertyValue; 
+            private java.util.List<PropertyValue> propertyValue; 
 
             /**
              * PropertyValue.
              */
-            public Builder propertyValue(java.util.List < PropertyValue> propertyValue) {
+            public Builder propertyValue(java.util.List<PropertyValue> propertyValue) {
                 this.propertyValue = propertyValue;
                 return this;
             }
@@ -795,20 +824,26 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Property extends TeaModel {
-        @NameInMap("DisplayUnit")
+        @com.aliyun.core.annotation.NameInMap("DisplayUnit")
         private String displayUnit;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PropertyValues")
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
         private PropertyValues propertyValues;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
         private Property(Builder builder) {
@@ -916,9 +951,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Properties extends TeaModel {
-        @NameInMap("Property")
-        private java.util.List < Property> property;
+        @com.aliyun.core.annotation.NameInMap("Property")
+        private java.util.List<Property> property;
 
         private Properties(Builder builder) {
             this.property = builder.property;
@@ -935,17 +976,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.List < Property> getProperty() {
+        public java.util.List<Property> getProperty() {
             return this.property;
         }
 
         public static final class Builder {
-            private java.util.List < Property> property; 
+            private java.util.List<Property> property; 
 
             /**
              * Property.
              */
-            public Builder property(java.util.List < Property> property) {
+            public Builder property(java.util.List<Property> property) {
                 this.property = property;
                 return this;
             }
@@ -957,17 +998,23 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Module extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
         private Module(Builder builder) {
@@ -1058,9 +1105,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Modules extends TeaModel {
-        @NameInMap("Module")
-        private java.util.List < Module> module;
+        @com.aliyun.core.annotation.NameInMap("Module")
+        private java.util.List<Module> module;
 
         private Modules(Builder builder) {
             this.module = builder.module;
@@ -1077,17 +1130,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return module
          */
-        public java.util.List < Module> getModule() {
+        public java.util.List<Module> getModule() {
             return this.module;
         }
 
         public static final class Builder {
-            private java.util.List < Module> module; 
+            private java.util.List<Module> module; 
 
             /**
              * Module.
              */
-            public Builder module(java.util.List < Module> module) {
+            public Builder module(java.util.List<Module> module) {
                 this.module = module;
                 return this;
             }
@@ -1099,11 +1152,17 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class OrderPeriod extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PeriodType")
+        @com.aliyun.core.annotation.NameInMap("PeriodType")
         private String periodType;
 
         private OrderPeriod(Builder builder) {
@@ -1160,9 +1219,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class OrderPeriods extends TeaModel {
-        @NameInMap("OrderPeriod")
-        private java.util.List < OrderPeriod> orderPeriod;
+        @com.aliyun.core.annotation.NameInMap("OrderPeriod")
+        private java.util.List<OrderPeriod> orderPeriod;
 
         private OrderPeriods(Builder builder) {
             this.orderPeriod = builder.orderPeriod;
@@ -1179,17 +1244,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return orderPeriod
          */
-        public java.util.List < OrderPeriod> getOrderPeriod() {
+        public java.util.List<OrderPeriod> getOrderPeriod() {
             return this.orderPeriod;
         }
 
         public static final class Builder {
-            private java.util.List < OrderPeriod> orderPeriod; 
+            private java.util.List<OrderPeriod> orderPeriod; 
 
             /**
              * OrderPeriod.
              */
-            public Builder orderPeriod(java.util.List < OrderPeriod> orderPeriod) {
+            public Builder orderPeriod(java.util.List<OrderPeriod> orderPeriod) {
                 this.orderPeriod = orderPeriod;
                 return this;
             }
@@ -1201,26 +1266,32 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductSku extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Constraints")
+        @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
 
-        @NameInMap("Hidden")
+        @com.aliyun.core.annotation.NameInMap("Hidden")
         private Boolean hidden;
 
-        @NameInMap("Modules")
+        @com.aliyun.core.annotation.NameInMap("Modules")
         private Modules modules;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrderPeriods")
+        @com.aliyun.core.annotation.NameInMap("OrderPeriods")
         private OrderPeriods orderPeriods;
 
         private ProductSku(Builder builder) {
@@ -1362,9 +1433,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ProductSkus extends TeaModel {
-        @NameInMap("ProductSku")
-        private java.util.List < ProductSku> productSku;
+        @com.aliyun.core.annotation.NameInMap("ProductSku")
+        private java.util.List<ProductSku> productSku;
 
         private ProductSkus(Builder builder) {
             this.productSku = builder.productSku;
@@ -1381,17 +1458,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return productSku
          */
-        public java.util.List < ProductSku> getProductSku() {
+        public java.util.List<ProductSku> getProductSku() {
             return this.productSku;
         }
 
         public static final class Builder {
-            private java.util.List < ProductSku> productSku; 
+            private java.util.List<ProductSku> productSku; 
 
             /**
              * ProductSku.
              */
-            public Builder productSku(java.util.List < ProductSku> productSku) {
+            public Builder productSku(java.util.List<ProductSku> productSku) {
                 this.productSku = productSku;
                 return this;
             }
@@ -1403,9 +1480,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class Telephones extends TeaModel {
-        @NameInMap("Telephone")
-        private java.util.List < String > telephone;
+        @com.aliyun.core.annotation.NameInMap("Telephone")
+        private java.util.List<String> telephone;
 
         private Telephones(Builder builder) {
             this.telephone = builder.telephone;
@@ -1422,17 +1505,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return telephone
          */
-        public java.util.List < String > getTelephone() {
+        public java.util.List<String> getTelephone() {
             return this.telephone;
         }
 
         public static final class Builder {
-            private java.util.List < String > telephone; 
+            private java.util.List<String> telephone; 
 
             /**
              * Telephone.
              */
-            public Builder telephone(java.util.List < String > telephone) {
+            public Builder telephone(java.util.List<String> telephone) {
                 this.telephone = telephone;
                 return this;
             }
@@ -1444,11 +1527,17 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class WangWang extends TeaModel {
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private WangWang(Builder builder) {
@@ -1505,9 +1594,15 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class WangWangs extends TeaModel {
-        @NameInMap("WangWang")
-        private java.util.List < WangWang> wangWang;
+        @com.aliyun.core.annotation.NameInMap("WangWang")
+        private java.util.List<WangWang> wangWang;
 
         private WangWangs(Builder builder) {
             this.wangWang = builder.wangWang;
@@ -1524,17 +1619,17 @@ public class DescribeProductResponseBody extends TeaModel {
         /**
          * @return wangWang
          */
-        public java.util.List < WangWang> getWangWang() {
+        public java.util.List<WangWang> getWangWang() {
             return this.wangWang;
         }
 
         public static final class Builder {
-            private java.util.List < WangWang> wangWang; 
+            private java.util.List<WangWang> wangWang; 
 
             /**
              * WangWang.
              */
-            public Builder wangWang(java.util.List < WangWang> wangWang) {
+            public Builder wangWang(java.util.List<WangWang> wangWang) {
                 this.wangWang = wangWang;
                 return this;
             }
@@ -1546,20 +1641,26 @@ public class DescribeProductResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProductResponseBody</p>
+     */
     public static class ShopInfo extends TeaModel {
-        @NameInMap("Emails")
+        @com.aliyun.core.annotation.NameInMap("Emails")
         private String emails;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Telephones")
+        @com.aliyun.core.annotation.NameInMap("Telephones")
         private Telephones telephones;
 
-        @NameInMap("WangWangs")
+        @com.aliyun.core.annotation.NameInMap("WangWangs")
         private WangWangs wangWangs;
 
         private ShopInfo(Builder builder) {

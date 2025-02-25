@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopMoveRequest} extends {@link RequestModel}
  *
  * <p>StopMoveRequest</p>
  */
 public class StopMoveRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Pan")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pan")
     private Boolean pan;
 
-    @Query
-    @NameInMap("Tilt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tilt")
     private Boolean tilt;
 
-    @Query
-    @NameInMap("Zoom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zoom")
     private Boolean zoom;
 
     private StopMoveRequest(Builder builder) {
@@ -101,17 +106,20 @@ public class StopMoveRequest extends Request {
             super();
         } 
 
-        private Builder(StopMoveRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.pan = response.pan;
-            this.tilt = response.tilt;
-            this.zoom = response.zoom;
+        private Builder(StopMoveRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.pan = request.pan;
+            this.tilt = request.tilt;
+            this.zoom = request.zoom;
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

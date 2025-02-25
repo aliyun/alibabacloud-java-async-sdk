@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RetryAgentlessTaskResponseBody} extends {@link TeaModel}
  *
  * <p>RetryAgentlessTaskResponseBody</p>
  */
 public class RetryAgentlessTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RetryAgentlessTaskResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class RetryAgentlessTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

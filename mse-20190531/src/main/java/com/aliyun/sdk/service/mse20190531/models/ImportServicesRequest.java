@@ -1,47 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportServicesRequest} extends {@link RequestModel}
  *
  * <p>ImportServicesRequest</p>
  */
 public class ImportServicesRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("FcAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FcAlias")
     private String fcAlias;
 
-    @Query
-    @NameInMap("FcServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FcServiceName")
     private String fcServiceName;
 
-    @Query
-    @NameInMap("FcVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FcVersion")
     private String fcVersion;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("ServiceList")
-    private java.util.List < ServiceList> serviceList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceList")
+    private java.util.List<ServiceList> serviceList;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    private Long sourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("TlsSetting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsSetting")
     private String tlsSetting;
 
     private ImportServicesRequest(Builder builder) {
@@ -52,6 +61,7 @@ public class ImportServicesRequest extends Request {
         this.fcVersion = builder.fcVersion;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.serviceList = builder.serviceList;
+        this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
         this.tlsSetting = builder.tlsSetting;
     }
@@ -107,8 +117,15 @@ public class ImportServicesRequest extends Request {
     /**
      * @return serviceList
      */
-    public java.util.List < ServiceList> getServiceList() {
+    public java.util.List<ServiceList> getServiceList() {
         return this.serviceList;
+    }
+
+    /**
+     * @return sourceId
+     */
+    public Long getSourceId() {
+        return this.sourceId;
     }
 
     /**
@@ -131,7 +148,8 @@ public class ImportServicesRequest extends Request {
         private String fcServiceName; 
         private String fcVersion; 
         private String gatewayUniqueId; 
-        private java.util.List < ServiceList> serviceList; 
+        private java.util.List<ServiceList> serviceList; 
+        private Long sourceId; 
         private String sourceType; 
         private String tlsSetting; 
 
@@ -147,16 +165,20 @@ public class ImportServicesRequest extends Request {
             this.fcVersion = request.fcVersion;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.serviceList = request.serviceList;
+            this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
             this.tlsSetting = request.tlsSetting;
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -192,7 +214,10 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-77e1153db6e14c0a8b1fae20bcb89ca5</p>
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -201,9 +226,12 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The information about services.
+         * <p>The information about services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DNS</p>
          */
-        public Builder serviceList(java.util.List < ServiceList> serviceList) {
+        public Builder serviceList(java.util.List<ServiceList> serviceList) {
             String serviceListShrink = shrink(serviceList, "ServiceList", "json");
             this.putQueryParameter("ServiceList", serviceListShrink);
             this.serviceList = serviceList;
@@ -211,13 +239,25 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The service source. Valid values:
-         * <p>
+         * SourceId.
+         */
+        public Builder sourceId(Long sourceId) {
+            this.putQueryParameter("SourceId", sourceId);
+            this.sourceId = sourceId;
+            return this;
+        }
+
+        /**
+         * <p>The service source. Valid values:</p>
+         * <ul>
+         * <li>MSE: MSE Nacos instance</li>
+         * <li>K8s: ACK cluster</li>
+         * <li>VIP: fixed address</li>
+         * <li>DNS: DNS domain</li>
+         * </ul>
          * 
-         * *   MSE: MSE Nacos instance
-         * *   K8s: ACK cluster
-         * *   VIP: fixed address
-         * *   DNS: DNS domain
+         * <strong>example:</strong>
+         * <p>DNS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -226,14 +266,22 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * The Transport Layer Security (TLS) settings. Valid values:
-         * <p>
+         * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
+         * <ul>
+         * <li>mode: TLS mode</li>
+         * <li>certId: certificate ID</li>
+         * <li>caCertId: CA certificate ID</li>
+         * <li>caCertContent: CA certificate public key</li>
+         * <li>sni: service name identification</li>
+         * </ul>
          * 
-         * *   mode: TLS mode
-         * *   certId: certificate ID
-         * *   caCertId: CA certificate ID
-         * *   caCertContent: CA certificate public key
-         * *   sni: service name identification
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;mode&quot;: &quot;MUTUAL&quot;,
+         *       &quot;certId&quot;: &quot;1*****-cn-hangzhou&quot;,
+         *       &quot;caCertContent&quot;: &quot;123&quot;,
+         *       &quot;sni&quot;: &quot;ceshi&quot;
+         * }</p>
          */
         public Builder tlsSetting(String tlsSetting) {
             this.putQueryParameter("TlsSetting", tlsSetting);
@@ -248,26 +296,36 @@ public class ImportServicesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ImportServicesRequest} extends {@link TeaModel}
+     *
+     * <p>ImportServicesRequest</p>
+     */
     public static class ServiceList extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("DnsServerList")
+        private java.util.List<String> dnsServerList;
+
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Ips")
-        private java.util.List < String > ips;
+        @com.aliyun.core.annotation.NameInMap("Ips")
+        private java.util.List<String> ips;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Long servicePort;
 
-        @NameInMap("ServiceProtocol")
+        @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
         private ServiceList(Builder builder) {
+            this.dnsServerList = builder.dnsServerList;
             this.groupName = builder.groupName;
             this.ips = builder.ips;
             this.name = builder.name;
@@ -285,6 +343,13 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
+         * @return dnsServerList
+         */
+        public java.util.List<String> getDnsServerList() {
+            return this.dnsServerList;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
@@ -294,7 +359,7 @@ public class ImportServicesRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -327,15 +392,27 @@ public class ImportServicesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<String> dnsServerList; 
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String name; 
             private String namespace; 
             private Long servicePort; 
             private String serviceProtocol; 
 
             /**
-             * The group.
+             * DnsServerList.
+             */
+            public Builder dnsServerList(java.util.List<String> dnsServerList) {
+                this.dnsServerList = dnsServerList;
+                return this;
+            }
+
+            /**
+             * <p>The group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -343,15 +420,18 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The IP addresses of the service.
+             * <p>The IP addresses of the service.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +439,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -367,7 +450,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The port of the service.
+             * <p>The port of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder servicePort(Long servicePort) {
                 this.servicePort = servicePort;
@@ -375,7 +461,10 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * The protocol of the service.
+             * <p>The protocol of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GRPC, HTTP</p>
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;

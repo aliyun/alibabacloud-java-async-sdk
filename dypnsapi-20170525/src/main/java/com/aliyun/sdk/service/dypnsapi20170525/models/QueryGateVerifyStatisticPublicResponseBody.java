@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGateVerifyStatisticPublicResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGateVerifyStatisticPublicResponseBody</p>
  */
 public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryGateVerifyStatisticPublicResponseBody(Builder builder) {
@@ -74,7 +74,14 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>If OK is returned, the request is successful.</li>
+         * <li>For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/85198.html">API response codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +89,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the calls of Phone Number Verification Service, including the total calls, the successful calls, failed calls, unknown calls, and daily calls within the statistical date range.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +97,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +108,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8906582E-6722</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,17 +124,23 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryGateVerifyStatisticPublicResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGateVerifyStatisticPublicResponseBody</p>
+     */
     public static class DayStatistic extends TeaModel {
-        @NameInMap("StatisticDateStr")
+        @com.aliyun.core.annotation.NameInMap("StatisticDateStr")
         private String statisticDateStr;
 
-        @NameInMap("TotalFail")
+        @com.aliyun.core.annotation.NameInMap("TotalFail")
         private Long totalFail;
 
-        @NameInMap("TotalSuccess")
+        @com.aliyun.core.annotation.NameInMap("TotalSuccess")
         private Long totalSuccess;
 
-        @NameInMap("TotalUnknown")
+        @com.aliyun.core.annotation.NameInMap("TotalUnknown")
         private Long totalUnknown;
 
         private DayStatistic(Builder builder) {
@@ -174,7 +193,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             private Long totalUnknown; 
 
             /**
-             * StatisticDateStr.
+             * <p>The date. This field is accurate to the day. The value of this field is in the YYYYMMDD format. Example: 20220103.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20220103</p>
              */
             public Builder statisticDateStr(String statisticDateStr) {
                 this.statisticDateStr = statisticDateStr;
@@ -182,7 +204,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFail.
+             * <p>The failed calls on the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalFail(Long totalFail) {
                 this.totalFail = totalFail;
@@ -190,7 +215,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSuccess.
+             * <p>The successful calls on the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalSuccess(Long totalSuccess) {
                 this.totalSuccess = totalSuccess;
@@ -198,7 +226,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUnknown.
+             * <p>The unknown calls on the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalUnknown(Long totalUnknown) {
                 this.totalUnknown = totalUnknown;
@@ -212,20 +243,26 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryGateVerifyStatisticPublicResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGateVerifyStatisticPublicResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DayStatistic")
+        @com.aliyun.core.annotation.NameInMap("DayStatistic")
         private java.util.List < DayStatistic> dayStatistic;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("TotalFail")
+        @com.aliyun.core.annotation.NameInMap("TotalFail")
         private Long totalFail;
 
-        @NameInMap("TotalSuccess")
+        @com.aliyun.core.annotation.NameInMap("TotalSuccess")
         private Long totalSuccess;
 
-        @NameInMap("TotalUnknown")
+        @com.aliyun.core.annotation.NameInMap("TotalUnknown")
         private Long totalUnknown;
 
         private Data(Builder builder) {
@@ -287,7 +324,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             private Long totalUnknown; 
 
             /**
-             * DayStatistic.
+             * <p>The information about the daily calls.</p>
              */
             public Builder dayStatistic(java.util.List < DayStatistic> dayStatistic) {
                 this.dayStatistic = dayStatistic;
@@ -295,7 +332,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -303,7 +343,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFail.
+             * <p>The failed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalFail(Long totalFail) {
                 this.totalFail = totalFail;
@@ -311,7 +354,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSuccess.
+             * <p>The successful calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalSuccess(Long totalSuccess) {
                 this.totalSuccess = totalSuccess;
@@ -319,7 +365,10 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUnknown.
+             * <p>The unknown calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalUnknown(Long totalUnknown) {
                 this.totalUnknown = totalUnknown;

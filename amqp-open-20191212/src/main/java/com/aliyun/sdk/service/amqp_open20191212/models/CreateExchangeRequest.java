@@ -1,55 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExchangeRequest} extends {@link RequestModel}
  *
  * <p>CreateExchangeRequest</p>
  */
 public class CreateExchangeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlternateExchange")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlternateExchange")
     private String alternateExchange;
 
-    @Body
-    @NameInMap("AutoDeleteState")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoDeleteState")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean autoDeleteState;
 
-    @Body
-    @NameInMap("ExchangeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExchangeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String exchangeName;
 
-    @Body
-    @NameInMap("ExchangeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExchangeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String exchangeType;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Internal")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Internal")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean internal;
 
-    @Body
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("XDelayedType")
+    private String xDelayedType;
 
     private CreateExchangeRequest(Builder builder) {
         super(builder);
@@ -61,6 +69,7 @@ public class CreateExchangeRequest extends Request {
         this.instanceId = builder.instanceId;
         this.internal = builder.internal;
         this.virtualHost = builder.virtualHost;
+        this.xDelayedType = builder.xDelayedType;
     }
 
     public static Builder builder() {
@@ -132,6 +141,13 @@ public class CreateExchangeRequest extends Request {
         return this.virtualHost;
     }
 
+    /**
+     * @return xDelayedType
+     */
+    public String getXDelayedType() {
+        return this.xDelayedType;
+    }
+
     public static final class Builder extends Request.Builder<CreateExchangeRequest, Builder> {
         private String regionId; 
         private String alternateExchange; 
@@ -141,6 +157,7 @@ public class CreateExchangeRequest extends Request {
         private String instanceId; 
         private Boolean internal; 
         private String virtualHost; 
+        private String xDelayedType; 
 
         private Builder() {
             super();
@@ -156,10 +173,11 @@ public class CreateExchangeRequest extends Request {
             this.instanceId = request.instanceId;
             this.internal = request.internal;
             this.virtualHost = request.virtualHost;
+            this.xDelayedType = request.xDelayedType;
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -168,7 +186,10 @@ public class CreateExchangeRequest extends Request {
         }
 
         /**
-         * AlternateExchange.
+         * <p>The alternate exchange. An alternate exchange is used to receive messages that fail to be routed to queues from the current exchange.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoAE</p>
          */
         public Builder alternateExchange(String alternateExchange) {
             this.putBodyParameter("AlternateExchange", alternateExchange);
@@ -177,7 +198,15 @@ public class CreateExchangeRequest extends Request {
         }
 
         /**
-         * AutoDeleteState.
+         * <p>Specifies whether to automatically delete the exchange. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: If the last queue that is bound to the exchange is unbound, the exchange is automatically deleted.</li>
+         * <li><strong>false</strong>: If the last queue that is bound to the exchange is unbound, the exchange is not automatically deleted.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoDeleteState(Boolean autoDeleteState) {
             this.putBodyParameter("AutoDeleteState", autoDeleteState);
@@ -186,7 +215,15 @@ public class CreateExchangeRequest extends Request {
         }
 
         /**
-         * ExchangeName.
+         * <p>The name of the exchange that you want to create. The exchange name must meet the following conventions:</p>
+         * <ul>
+         * <li>The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</li>
+         * <li>After the exchange is created, you cannot change its name. If you want to change its name, delete the exchange and create another exchange.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoExchange</p>
          */
         public Builder exchangeName(String exchangeName) {
             this.putBodyParameter("ExchangeName", exchangeName);
@@ -195,7 +232,18 @@ public class CreateExchangeRequest extends Request {
         }
 
         /**
-         * ExchangeType.
+         * <p>The exchange type. Valid values:</p>
+         * <ul>
+         * <li><strong>DIRECT</strong>: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.</li>
+         * <li><strong>TOPIC</strong>: This type of exchange is similar to direct exchanges. An exchange of this type routes a message to one or more queues based on the results of the fuzzy match or multi-condition match between the routing key of the message and the binding keys of the current exchange.</li>
+         * <li><strong>FANOUT</strong>: An exchange of this type routes all received messages to all queues bound to this exchange. You can use a fanout exchange to broadcast messages.</li>
+         * <li><strong>HEADERS</strong>: This type of exchange is similar to direct exchanges. The only difference is that a headers exchange routes messages based on the headers attributes instead of routing keys. When you bind a headers exchange to a queue, you must configure binding attributes in the key-value format for the binding. When you send a message to a headers exchange, you must configure the headers attributes in the key-value format for the message. After a headers exchange receives a message, the exchange routes the message based on the matching results between the headers attributes of the message and the binding attributes of the bound queues.</li>
+         * <li><strong>X-CONSISTENT-HASH</strong>: An exchange of this type allows you to perform hash calculations on routing keys or header values and use consistent hashing to route a message to different queues.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECT</p>
          */
         public Builder exchangeType(String exchangeType) {
             this.putBodyParameter("ExchangeType", exchangeType);
@@ -204,7 +252,11 @@ public class CreateExchangeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the ApsaraMQ for RabbitMQ for which you want to create an exchange.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-v0h1kb9nu***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -213,7 +265,15 @@ public class CreateExchangeRequest extends Request {
         }
 
         /**
-         * Internal.
+         * <p>Specifies whether the exchange is an internal exchange. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder internal(Boolean internal) {
             this.putBodyParameter("Internal", internal);
@@ -222,11 +282,24 @@ public class CreateExchangeRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * <p>The name of the vhost to which the exchange that you want to create belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);
             this.virtualHost = virtualHost;
+            return this;
+        }
+
+        /**
+         * XDelayedType.
+         */
+        public Builder xDelayedType(String xDelayedType) {
+            this.putBodyParameter("XDelayedType", xDelayedType);
+            this.xDelayedType = xDelayedType;
             return this;
         }
 

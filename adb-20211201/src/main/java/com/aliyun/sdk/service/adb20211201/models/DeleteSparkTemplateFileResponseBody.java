@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSparkTemplateFileResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSparkTemplateFileResponseBody</p>
  */
 public class DeleteSparkTemplateFileResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSparkTemplateFileResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The deletion result.
+         * <p>The deletion result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3A9594F-1D40-4472-A96C-8FB8AA20D38C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +79,14 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteSparkTemplateFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSparkTemplateFileResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Succeeded")
+        @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Boolean succeeded;
 
         private Data(Builder builder) {
@@ -98,11 +112,14 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
             private Boolean succeeded; 
 
             /**
-             * Indicates whether the template file is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the template file is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**: The template file is deleted.
-             * *   **false**: The template file fails to be deleted.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;

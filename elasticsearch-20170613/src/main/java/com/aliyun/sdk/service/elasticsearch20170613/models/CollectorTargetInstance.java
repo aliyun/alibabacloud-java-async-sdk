@@ -1,46 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CollectorTargetInstance} extends {@link TeaModel}
  *
  * <p>CollectorTargetInstance</p>
  */
 public class CollectorTargetInstance extends TeaModel {
-    @NameInMap("configType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("configType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configType;
 
-    @NameInMap("enableMonitoring")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("enableMonitoring")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableMonitoring;
 
-    @NameInMap("hosts")
+    @com.aliyun.core.annotation.NameInMap("hosts")
     private java.util.List < String > hosts;
 
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @NameInMap("instanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("instanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @NameInMap("password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @NameInMap("protocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("protocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
-    @NameInMap("userName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("userName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
     private CollectorTargetInstance(Builder builder) {
@@ -129,7 +129,10 @@ public class CollectorTargetInstance extends TeaModel {
         private String userName; 
 
         /**
-         * configType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collectorTargetInstance</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -137,7 +140,10 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * enableMonitoring.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableMonitoring(Boolean enableMonitoring) {
             this.enableMonitoring = enableMonitoring;
@@ -153,7 +159,10 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-ks8x****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -161,7 +170,10 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * instanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -169,7 +181,10 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * password.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -177,7 +192,10 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -185,7 +203,10 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

@@ -1,132 +1,137 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApiRequest} extends {@link RequestModel}
  *
  * <p>ModifyApiRequest</p>
  */
 public class ModifyApiRequest extends Request {
-    @Query
-    @NameInMap("AllowSignatureMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowSignatureMethod")
     private String allowSignatureMethod;
 
-    @Query
-    @NameInMap("ApiId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiId;
 
-    @Query
-    @NameInMap("ApiName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiName;
 
-    @Query
-    @NameInMap("AppCodeAuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCodeAuthType")
     private String appCodeAuthType;
 
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("BackendEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendEnable")
     private Boolean backendEnable;
 
-    @Query
-    @NameInMap("BackendId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendId")
     private String backendId;
 
-    @Query
-    @NameInMap("ConstantParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConstantParameters")
     private String constantParameters;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DisableInternet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableInternet")
     private Boolean disableInternet;
 
-    @Query
-    @NameInMap("ErrorCodeSamples")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ErrorCodeSamples")
     private String errorCodeSamples;
 
-    @Query
-    @NameInMap("FailResultSample")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FailResultSample")
     private String failResultSample;
 
-    @Query
-    @NameInMap("ForceNonceCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceNonceCheck")
     private Boolean forceNonceCheck;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("OpenIdConnectConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenIdConnectConfig")
     private String openIdConnectConfig;
 
-    @Query
-    @NameInMap("RequestConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestConfig;
 
-    @Query
-    @NameInMap("RequestParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestParameters")
     private String requestParameters;
 
-    @Query
-    @NameInMap("ResultBodyModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultBodyModel")
     private String resultBodyModel;
 
-    @Query
-    @NameInMap("ResultDescriptions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResultDescriptions")
     private String resultDescriptions;
 
-    @Query
-    @NameInMap("ResultSample")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResultSample")
     private String resultSample;
 
-    @Query
-    @NameInMap("ResultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultType")
     private String resultType;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("ServiceConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceConfig;
 
-    @Query
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
-    @Query
-    @NameInMap("ServiceParametersMap")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParametersMap")
     private String serviceParametersMap;
 
-    @Query
-    @NameInMap("SystemParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemParameters")
     private String systemParameters;
 
-    @Query
-    @NameInMap("Visibility")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String visibility;
 
-    @Query
-    @NameInMap("WebSocketApiType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebSocketApiType")
     private String webSocketApiType;
 
     private ModifyApiRequest(Builder builder) {
@@ -437,13 +442,16 @@ public class ModifyApiRequest extends Request {
         } 
 
         /**
-         * The type of the two-way communication API. Valid values:
-         * <p>
+         * <p>The type of the two-way communication API. Valid values:</p>
+         * <ul>
+         * <li><strong>COMMON</strong>: general APIs</li>
+         * <li><strong>REGISTER</strong>: registered APIs</li>
+         * <li><strong>UNREGISTER</strong>: unregistered APIs</li>
+         * <li><strong>NOTIFY</strong>: downstream notification</li>
+         * </ul>
          * 
-         * *   **COMMON**: general APIs
-         * *   **REGISTER**: registered APIs
-         * *   **UNREGISTER**: unregistered APIs
-         * *   **NOTIFY**: downstream notification
+         * <strong>example:</strong>
+         * <p>HmacSHA256</p>
          */
         public Builder allowSignatureMethod(String allowSignatureMethod) {
             this.putQueryParameter("AllowSignatureMethod", allowSignatureMethod);
@@ -452,7 +460,11 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * <p>The ID of the API.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8afff6c8c4c6447abb035812e4d66b65</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -461,7 +473,11 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (\_).
+         * <p>The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiName</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -470,7 +486,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The ID of the backend service.
+         * <p>The ID of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         public Builder appCodeAuthType(String appCodeAuthType) {
             this.putQueryParameter("AppCodeAuthType", appCodeAuthType);
@@ -479,7 +498,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The configuration items of API requests sent by the consumer to API Gateway.
+         * <p>The configuration items of API requests sent by the consumer to API Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -488,7 +510,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * Configuration Mode
+         * <p>Configuration Mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder backendEnable(Boolean backendEnable) {
             this.putQueryParameter("BackendEnable", backendEnable);
@@ -497,7 +522,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable backend services.
+         * <p>Specifies whether to enable backend services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d105f80a8f340408bd34954d4e4ff22</p>
          */
         public Builder backendId(String backendId) {
             this.putQueryParameter("BackendId", backendId);
@@ -506,16 +534,19 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The parameters of API requests sent by API Gateway to the backend service.
+         * ConstantParameters.
          */
         public Builder constantParameters(String constantParameters) {
-            this.putQueryParameter("ConstantParameters", constantParameters);
+            this.putBodyParameter("ConstantParameters", constantParameters);
             this.constantParameters = constantParameters;
             return this;
         }
 
         /**
-         * The description of the API. The description can be up to 180 characters in length.
+         * <p>The description of the API. The description can be up to 180 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Api description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -524,13 +555,16 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The AppCode authentication type supported. Valid values:
-         * <p>
+         * <p>The AppCode authentication type supported. Valid values:</p>
+         * <ul>
+         * <li>DEFAULT: supported after being made available in Alibaba Cloud Marketplace</li>
+         * <li>DISABLE: not supported</li>
+         * <li>HEADER : supported only in the Header parameter</li>
+         * <li>HEADER_QUERY: supported in the Header or Query parameter</li>
+         * </ul>
          * 
-         * *   DEFAULT: supported after being made available in Alibaba Cloud Marketplace
-         * *   DISABLE: not supported
-         * *   HEADER : supported only in the Header parameter
-         * *   HEADER_QUERY: supported in the Header or Query parameter
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableInternet(Boolean disableInternet) {
             this.putQueryParameter("DisableInternet", disableInternet);
@@ -539,29 +573,34 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The returned description of the API.
+         * ErrorCodeSamples.
          */
         public Builder errorCodeSamples(String errorCodeSamples) {
-            this.putQueryParameter("ErrorCodeSamples", errorCodeSamples);
+            this.putBodyParameter("ErrorCodeSamples", errorCodeSamples);
             this.errorCodeSamples = errorCodeSamples;
             return this;
         }
 
         /**
-         * The sample error codes returned by the backend service.
+         * FailResultSample.
          */
         public Builder failResultSample(String failResultSample) {
-            this.putQueryParameter("FailResultSample", failResultSample);
+            this.putBodyParameter("FailResultSample", failResultSample);
             this.failResultSample = failResultSample;
             return this;
         }
 
         /**
-         * *   Specifies whether to set DisableInternet to **true** to limit API calls to within the VPC.
-         * <p>
-         * *   If you set DisableInternet to **false**, the limit if lifted.
+         * <ul>
+         * <li>Specifies whether to set DisableInternet to <strong>true</strong> to limit API calls to within the VPC.</li>
+         * <li>If you set DisableInternet to <strong>false</strong>, the limit if lifted.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not set this parameter, the original value is used.</p>
+         * </blockquote>
          * 
-         * >  If you do not set this parameter, the original value is used.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceNonceCheck(Boolean forceNonceCheck) {
             this.putQueryParameter("ForceNonceCheck", forceNonceCheck);
@@ -570,7 +609,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>927d50c0f2e54b359919923d908bb015</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -579,11 +621,14 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The client-side request signature method of the API. Valid values:
-         * <p>
+         * <p>The client-side request signature method of the API. Valid values:</p>
+         * <ul>
+         * <li>HmacSHA256</li>
+         * <li>HmacSHA1,HmacSHA256</li>
+         * </ul>
          * 
-         * *   HmacSHA256
-         * *   HmacSHA1,HmacSHA256
+         * <strong>example:</strong>
+         * <p>{&quot;OpenIdApiType&quot;:&quot;IDTOKEN&quot;,&quot;PublicKey&quot;:&quot;lzlj1573&quot;,&quot;IdTokenParamName&quot;:&quot;&quot;,&quot;PublicKeyId&quot;:&quot;lzljorders&quot;}</p>
          */
         public Builder openIdConnectConfig(String openIdConnectConfig) {
             this.putQueryParameter("OpenIdConnectConfig", openIdConnectConfig);
@@ -592,7 +637,11 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The configuration items of API requests sent by API Gateway to the backend service.
+         * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RequestProtocol&quot;:&quot;HTTP&quot;,&quot;RequestHttpMethod&quot;:&quot;GET&quot;,&quot;RequestPath&quot;:&quot;/v3/getUserTest/[userId]&quot;,&quot;BodyFormat&quot;:&quot;FORM&quot;,&quot;PostBodyDescription&quot;:&quot;&quot;}</p>
          */
         public Builder requestConfig(String requestConfig) {
             this.putQueryParameter("RequestConfig", requestConfig);
@@ -601,18 +650,22 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * System parameter
+         * RequestParameters.
          */
         public Builder requestParameters(String requestParameters) {
-            this.putQueryParameter("RequestParameters", requestParameters);
+            this.putBodyParameter("RequestParameters", requestParameters);
             this.requestParameters = requestParameters;
             return this;
         }
 
         /**
-         * *   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.
-         * <p>
-         * *   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.
+         * <ul>
+         * <li>Specifies whether to set <strong>ForceNonceCheck</strong> to <strong>true</strong> to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</li>
+         * <li>If you set <strong>ForceNonceCheck</strong> to <strong>false</strong>, the check is not performed. If you do not set this parameter, the original value is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder resultBodyModel(String resultBodyModel) {
             this.putQueryParameter("ResultBodyModel", resultBodyModel);
@@ -621,25 +674,28 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The configuration items of the third-party OpenID Connect authentication method.
+         * ResultDescriptions.
          */
         public Builder resultDescriptions(String resultDescriptions) {
-            this.putQueryParameter("ResultDescriptions", resultDescriptions);
+            this.putBodyParameter("ResultDescriptions", resultDescriptions);
             this.resultDescriptions = resultDescriptions;
             return this;
         }
 
         /**
-         * The sample error response from the backend service.
+         * ResultSample.
          */
         public Builder resultSample(String resultSample) {
-            this.putQueryParameter("ResultSample", resultSample);
+            this.putBodyParameter("ResultSample", resultSample);
             this.resultSample = resultSample;
             return this;
         }
 
         /**
-         * The sample response from the backend service.
+         * <p>The sample response from the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTML</p>
          */
         public Builder resultType(String resultType) {
             this.putQueryParameter("ResultType", resultType);
@@ -657,7 +713,11 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The parameters of API requests sent by the consumer to API Gateway.
+         * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ServiceProtocol&quot;:&quot;HTTP&quot;,&quot;ServiceHttpMethod&quot;:&quot;GET&quot;,&quot;ServiceAddress&quot;:&quot;<a href="http://www.customerdomain.com%22,%22ServiceTimeout%22:%221000%22,%22ServicePath%22:%22/v3/getUserTest/%5BuserId%5D%22%7D">http://www.customerdomain.com&quot;,&quot;ServiceTimeout&quot;:&quot;1000&quot;,&quot;ServicePath&quot;:&quot;/v3/getUserTest/[userId]&quot;}</a></p>
          */
         public Builder serviceConfig(String serviceConfig) {
             this.putQueryParameter("ServiceConfig", serviceConfig);
@@ -666,38 +726,42 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
+         * ServiceParameters.
          */
         public Builder serviceParameters(String serviceParameters) {
-            this.putQueryParameter("ServiceParameters", serviceParameters);
+            this.putBodyParameter("ServiceParameters", serviceParameters);
             this.serviceParameters = serviceParameters;
             return this;
         }
 
         /**
-         * The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. This value is used only to generate documents. It does not affect the returned results.
+         * ServiceParametersMap.
          */
         public Builder serviceParametersMap(String serviceParametersMap) {
-            this.putQueryParameter("ServiceParametersMap", serviceParametersMap);
+            this.putBodyParameter("ServiceParametersMap", serviceParametersMap);
             this.serviceParametersMap = serviceParametersMap;
             return this;
         }
 
         /**
-         * Constant parameter
+         * SystemParameters.
          */
         public Builder systemParameters(String systemParameters) {
-            this.putQueryParameter("SystemParameters", systemParameters);
+            this.putBodyParameter("SystemParameters", systemParameters);
             this.systemParameters = systemParameters;
             return this;
         }
 
         /**
-         * Specifies whether the API is public. Valid values:
-         * <p>
+         * <p>Specifies whether the API is public. Valid values:</p>
+         * <ul>
+         * <li><strong>PUBLIC</strong>: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</li>
+         * <li><strong>PRIVATE</strong>: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
-         * *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -706,7 +770,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The returned description of the API.
+         * <p>The returned description of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.putQueryParameter("WebSocketApiType", webSocketApiType);

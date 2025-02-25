@@ -1,44 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpdateDashboardRequest} extends {@link RequestModel}
  *
  * <p>UpdateDashboardRequest</p>
  */
 public class UpdateDashboardRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @Body
-    @NameInMap("dashboardName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dashboardName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dashboardName;
 
-    @Body
-    @NameInMap("attribute")
-    private java.util.Map < String, String > attribute;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("attribute")
+    private java.util.Map<String, String> attribute;
 
-    @Body
-    @NameInMap("charts")
-    @Validation(required = true)
-    private java.util.List < Chart > charts;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("charts")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Chart> charts;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("displayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("displayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
     private UpdateDashboardRequest(Builder builder) {
@@ -81,14 +85,14 @@ public class UpdateDashboardRequest extends Request {
     /**
      * @return attribute
      */
-    public java.util.Map < String, String > getAttribute() {
+    public java.util.Map<String, String> getAttribute() {
         return this.attribute;
     }
 
     /**
      * @return charts
      */
-    public java.util.List < Chart > getCharts() {
+    public java.util.List<Chart> getCharts() {
         return this.charts;
     }
 
@@ -109,8 +113,8 @@ public class UpdateDashboardRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDashboardRequest, Builder> {
         private String project; 
         private String dashboardName; 
-        private java.util.Map < String, String > attribute; 
-        private java.util.List < Chart > charts; 
+        private java.util.Map<String, String> attribute; 
+        private java.util.List<Chart> charts; 
         private String description; 
         private String displayName; 
 
@@ -129,7 +133,11 @@ public class UpdateDashboardRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -138,7 +146,11 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * dashboardName.
+         * <p>The name of the dashboard.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashboard-1609294922657-434834</p>
          */
         public Builder dashboardName(String dashboardName) {
             this.putPathParameter("dashboardName", dashboardName);
@@ -148,25 +160,29 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * attribute.
+         * <p>The attribute values of the dashboard.</p>
          */
-        public Builder attribute(java.util.Map < String, String > attribute) {
+        public Builder attribute(java.util.Map<String, String> attribute) {
             this.putBodyParameter("attribute", attribute);
             this.attribute = attribute;
             return this;
         }
 
         /**
-         * charts.
+         * <p>The charts on the dashboard.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder charts(java.util.List < Chart > charts) {
+        public Builder charts(java.util.List<Chart> charts) {
             this.putBodyParameter("charts", charts);
             this.charts = charts;
             return this;
         }
 
         /**
-         * description.
+         * <p>The description of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test dashboard.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -175,7 +191,11 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the dashboard.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Method pv</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);

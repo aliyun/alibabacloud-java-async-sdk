@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAutonomousNotifyEventsInRangeResponseBody} extends {@link TeaModel}
  *
  * <p>GetAutonomousNotifyEventsInRangeResponseBody</p>
  */
 public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetAutonomousNotifyEventsInRangeResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information, including the error codes and the number of entries that are returned.
+         * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,10 +110,13 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,9 +155,15 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAutonomousNotifyEventsInRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutonomousNotifyEventsInRangeResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("T")
-        private java.util.List < String > t;
+        @com.aliyun.core.annotation.NameInMap("T")
+        private java.util.List<String> t;
 
         private List(Builder builder) {
             this.t = builder.t;
@@ -157,17 +180,17 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         /**
          * @return t
          */
-        public java.util.List < String > getT() {
+        public java.util.List<String> getT() {
             return this.t;
         }
 
         public static final class Builder {
-            private java.util.List < String > t; 
+            private java.util.List<String> t; 
 
             /**
              * T.
              */
-            public Builder t(java.util.List < String > t) {
+            public Builder t(java.util.List<String> t) {
                 this.t = t;
                 return this;
             }
@@ -179,20 +202,26 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAutonomousNotifyEventsInRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutonomousNotifyEventsInRangeResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -254,7 +283,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The reserved parameter.
+             * <p>The reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -262,7 +294,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information, including the error codes and the number of entries that are returned.
+             * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -270,7 +302,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -278,7 +313,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -286,7 +324,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PositionStructBody</p>
  */
 public class PositionStructBody extends TeaModel {
-    @NameInMap("ErrorCount")
+    @com.aliyun.core.annotation.NameInMap("ErrorCount")
     private String errorCount;
 
-    @NameInMap("Height")
+    @com.aliyun.core.annotation.NameInMap("Height")
     private String height;
 
-    @NameInMap("Index")
+    @com.aliyun.core.annotation.NameInMap("Index")
     private String index;
 
-    @NameInMap("LastError")
+    @com.aliyun.core.annotation.NameInMap("LastError")
     private String lastError;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private PositionStructBody(Builder builder) {

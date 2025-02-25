@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMetaCollectionEntityRequest} extends {@link RequestModel}
  *
  * <p>DeleteMetaCollectionEntityRequest</p>
  */
 public class DeleteMetaCollectionEntityRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CollectionQualifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectionQualifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collectionQualifiedName;
 
-    @Query
-    @NameInMap("EntityQualifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityQualifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entityQualifiedName;
 
     private DeleteMetaCollectionEntityRequest(Builder builder) {
@@ -93,7 +98,11 @@ public class DeleteMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
+         * <p>The unique identifier of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album.12345</p>
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -102,7 +111,11 @@ public class DeleteMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The unique identifier of the entity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute.projectA.tableB</p>
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);

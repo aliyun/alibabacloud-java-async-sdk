@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectStackGroupDriftResponseBody} extends {@link TeaModel}
  *
  * <p>DetectStackGroupDriftResponseBody</p>
  */
 public class DetectStackGroupDriftResponseBody extends TeaModel {
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DetectStackGroupDriftResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DetectStackGroupDriftResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the operation.
+         * <p>The ID of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -58,7 +61,10 @@ public class DetectStackGroupDriftResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

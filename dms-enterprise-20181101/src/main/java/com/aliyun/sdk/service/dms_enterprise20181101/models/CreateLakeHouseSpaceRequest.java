@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLakeHouseSpaceRequest} extends {@link RequestModel}
  *
  * <p>CreateLakeHouseSpaceRequest</p>
  */
 public class CreateLakeHouseSpaceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DevDbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DevDbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String devDbId;
 
-    @Query
-    @NameInMap("DwDbType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DwDbType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dwDbType;
 
-    @Query
-    @NameInMap("Mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mode;
 
-    @Query
-    @NameInMap("ProdDbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProdDbId")
     private String prodDbId;
 
-    @Query
-    @NameInMap("SpaceConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpaceConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceConfig;
 
-    @Query
-    @NameInMap("SpaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceName;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateLakeHouseSpaceRequest(Builder builder) {
@@ -181,7 +186,10 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The description of the workspace.
+         * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -190,7 +198,11 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The ID of the development database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
+         * <p>The ID of the development database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2435****</p>
          */
         public Builder devDbId(String devDbId) {
             this.putQueryParameter("DevDbId", devDbId);
@@ -199,11 +211,15 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The type of the database. Valid values:
-         * <p>
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>14</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>18</strong>: AnalyticDB for PostgreSQL</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **14**: AnalyticDB for MySQL
-         * *   **18**: AnalyticDB for PostgreSQL
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder dwDbType(String dwDbType) {
             this.putQueryParameter("DwDbType", dwDbType);
@@ -212,11 +228,15 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The mode in which the workspace runs. Valid values:
-         * <p>
+         * <p>The mode in which the workspace runs. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: basic mode. This mode is unavailable.</li>
+         * <li><strong>1</strong>: standard mode.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: basic mode. This mode is unavailable.
-         * *   **1**: standard mode.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -225,7 +245,10 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The ID of the production database. You can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the ID.
+         * <p>The ID of the production database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2442****</p>
          */
         public Builder prodDbId(String prodDbId) {
             this.putQueryParameter("ProdDbId", prodDbId);
@@ -234,11 +257,15 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The configuration of the workspace. Valid values:
-         * <p>
+         * <p>The configuration of the workspace. Valid values:</p>
+         * <ul>
+         * <li><strong>skipManualRunCheck</strong>: No security rule check is required in the trial run phase.</li>
+         * <li><strong>skipPublishApprove</strong>: No approval is required for publishing and O&amp;M.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **skipManualRunCheck**: No security rule check is required in the trial run phase.
-         * *   **skipPublishApprove**: No approval is required for publishing and O\&M.
+         * <strong>example:</strong>
+         * <p>{&quot;skipManualRunCheck&quot;:true,&quot;skipPublishApprove&quot;:true}</p>
          */
         public Builder spaceConfig(String spaceConfig) {
             this.putQueryParameter("SpaceConfig", spaceConfig);
@@ -247,7 +274,11 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The name of the workspace.
+         * <p>The name of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_space</p>
          */
         public Builder spaceName(String spaceName) {
             this.putQueryParameter("SpaceName", spaceName);
@@ -256,7 +287,10 @@ public class CreateLakeHouseSpaceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
+         * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

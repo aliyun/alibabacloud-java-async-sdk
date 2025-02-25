@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListByUserGroupIdRequest} extends {@link RequestModel}
  *
  * <p>ListByUserGroupIdRequest</p>
  */
 public class ListByUserGroupIdRequest extends Request {
-    @Query
-    @NameInMap("UserGroupIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupIds;
 
     private ListByUserGroupIdRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class ListByUserGroupIdRequest extends Request {
         } 
 
         /**
-         * The ID of the user group that you want to query. Separate multiple user groups with commas (,).
+         * <p>The ID of the user group that you want to query. Separate multiple user groups with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34fe-<em><strong>-6dcb,84q9-</strong></em>*-4a274</p>
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);

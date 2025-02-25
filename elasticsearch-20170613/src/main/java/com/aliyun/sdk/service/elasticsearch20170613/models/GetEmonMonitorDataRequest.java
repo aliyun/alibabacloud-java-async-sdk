@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmonMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>GetEmonMonitorDataRequest</p>
  */
 public class GetEmonMonitorDataRequest extends Request {
-    @Path
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
     private GetEmonMonitorDataRequest(Builder builder) {
@@ -69,7 +69,10 @@ public class GetEmonMonitorDataRequest extends Request {
         } 
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-185320276651****</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("ProjectId", projectId);

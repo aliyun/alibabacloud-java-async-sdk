@@ -1,40 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IntlFlightOtaItemDetailRequest} extends {@link RequestModel}
  *
  * <p>IntlFlightOtaItemDetailRequest</p>
  */
 public class IntlFlightOtaItemDetailRequest extends Request {
-    @Path
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private IntlFlightOtaItemDetailRequest(Builder builder) {
@@ -43,6 +52,7 @@ public class IntlFlightOtaItemDetailRequest extends Request {
         this.btripUserId = builder.btripUserId;
         this.buyerName = builder.buyerName;
         this.isvName = builder.isvName;
+        this.language = builder.language;
         this.supplierCode = builder.supplierCode;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
@@ -89,6 +99,13 @@ public class IntlFlightOtaItemDetailRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return supplierCode
      */
     public String getSupplierCode() {
@@ -107,6 +124,7 @@ public class IntlFlightOtaItemDetailRequest extends Request {
         private String btripUserId; 
         private String buyerName; 
         private String isvName; 
+        private String language; 
         private String supplierCode; 
         private String xAcsBtripCorpToken; 
 
@@ -120,12 +138,16 @@ public class IntlFlightOtaItemDetailRequest extends Request {
             this.btripUserId = request.btripUserId;
             this.buyerName = request.buyerName;
             this.isvName = request.isvName;
+            this.language = request.language;
             this.supplierCode = request.supplierCode;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d01eb358456b4ba38eb4d8f1499186da_0</p>
          */
         public Builder otaItemId(String otaItemId) {
             this.putPathParameter("ota_item_id", otaItemId);
@@ -157,6 +179,15 @@ public class IntlFlightOtaItemDetailRequest extends Request {
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
             this.isvName = isvName;
+            return this;
+        }
+
+        /**
+         * language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("language", language);
+            this.language = language;
             return this;
         }
 

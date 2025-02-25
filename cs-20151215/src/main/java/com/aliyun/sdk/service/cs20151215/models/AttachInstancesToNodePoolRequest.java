@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachInstancesToNodePoolRequest} extends {@link RequestModel}
  *
  * <p>AttachInstancesToNodePoolRequest</p>
  */
 public class AttachInstancesToNodePoolRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("NodepoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("NodepoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Body
-    @NameInMap("format_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk")
     private Boolean formatDisk;
 
-    @Body
-    @NameInMap("instances")
-    private java.util.List < String > instances;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instances")
+    private java.util.List<String> instances;
 
-    @Body
-    @NameInMap("keep_instance_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep_instance_name")
     private Boolean keepInstanceName;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
     private AttachInstancesToNodePoolRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < String > getInstances() {
+    public java.util.List<String> getInstances() {
         return this.instances;
     }
 
@@ -107,7 +112,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean formatDisk; 
-        private java.util.List < String > instances; 
+        private java.util.List<String> instances; 
         private Boolean keepInstanceName; 
         private String password; 
 
@@ -126,7 +131,11 @@ public class AttachInstancesToNodePoolRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -135,7 +144,11 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * The node pool ID.
+         * <p>The node pool ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np31da1b38983f4511b490fc62108a****</p>
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -144,20 +157,23 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to store container data and images on data disks. Valid values:
-         * <p>
+         * <p>Specifies whether to store container data and images on data disks. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: stores container data and images on data disks.</li>
+         * <li><code>false</code>: does not store container data or images on data disks.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * <p>How to mount a data disk:</p>
+         * <ul>
+         * <li>If the ECS instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.</li>
+         * <li>If no data disk is attached to the ECS instances, the system does not purchase a new data disk.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you choose to store container data and images on a data disk and the data disk is already mounted to the ECS instance, the existing data on the data disk will be cleared. You can back up the disk to avoid data loss.</p>
+         * </blockquote>
          * 
-         * *   `true`: stores container data and images on data disks.
-         * *   `false`: does not store container data or images on data disks.
-         * 
-         * Default value: `false`.
-         * 
-         * How to mount a data disk:
-         * 
-         * *   If the ECS instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.
-         * *   If no data disk is attached to the ECS instances, the system does not purchase a new data disk.
-         * 
-         * > If you choose to store container data and images on a data disk and the data disk is already mounted to the ECS instance, the existing data on the data disk will be cleared. You can back up the disk to avoid data loss.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -166,22 +182,24 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * The IDs of the instances to be added.
+         * <p>The IDs of the instances to be added.</p>
          */
-        public Builder instances(java.util.List < String > instances) {
+        public Builder instances(java.util.List<String> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
             return this;
         }
 
         /**
-         * Specifies whether to retain the instance name. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the instance name. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: retains the instance name.</li>
+         * <li><code>false</code>: does not retain the instance name.</li>
+         * </ul>
+         * <p>Default value: <code>true</code>.</p>
          * 
-         * *   `true`: retains the instance name.
-         * *   `false`: does not retain the instance name.
-         * 
-         * Default value: `true`.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -190,7 +208,10 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * The SSH password that is used to log on to the instance.
+         * <p>The SSH password that is used to log on to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello1234</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);

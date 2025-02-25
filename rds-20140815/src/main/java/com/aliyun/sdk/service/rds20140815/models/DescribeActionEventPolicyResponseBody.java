@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActionEventPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActionEventPolicyResponseBody</p>
  */
 public class DescribeActionEventPolicyResponseBody extends TeaModel {
-    @NameInMap("EnableEventLog")
+    @com.aliyun.core.annotation.NameInMap("EnableEventLog")
     private String enableEventLog;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeActionEventPolicyResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the event history feature is enabled.
+         * <p>Indicates whether the event history feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableEventLog(String enableEventLog) {
             this.enableEventLog = enableEventLog;
@@ -70,7 +78,10 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +89,10 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CCECD3CD-AB2D-4F6D-BEDE-47BC90A398D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRegistrationPoliciesForUserGroupRequest} extends {@link RequestModel}
  *
  * <p>ListRegistrationPoliciesForUserGroupRequest</p>
  */
 public class ListRegistrationPoliciesForUserGroupRequest extends Request {
-    @Query
-    @NameInMap("UserGroupIds")
-    @Validation(required = true)
-    private java.util.List < String > userGroupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> userGroupIds;
 
     private ListRegistrationPoliciesForUserGroupRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class ListRegistrationPoliciesForUserGroupRequest extends Request {
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
     public static final class Builder extends Request.Builder<ListRegistrationPoliciesForUserGroupRequest, Builder> {
-        private java.util.List < String > userGroupIds; 
+        private java.util.List<String> userGroupIds; 
 
         private Builder() {
             super();
@@ -55,9 +60,9 @@ public class ListRegistrationPoliciesForUserGroupRequest extends Request {
         } 
 
         /**
-         * UserGroupIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;

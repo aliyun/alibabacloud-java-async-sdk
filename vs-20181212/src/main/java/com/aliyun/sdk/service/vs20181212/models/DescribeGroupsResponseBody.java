@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupsResponseBody</p>
  */
 public class DescribeGroupsResponseBody extends TeaModel {
-    @NameInMap("Groups")
-    private java.util.List < Groups> groups;
+    @com.aliyun.core.annotation.NameInMap("Groups")
+    private java.util.List<Groups> groups;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeGroupsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < Groups> getGroups() {
+    public java.util.List<Groups> getGroups() {
         return this.groups;
     }
 
@@ -90,7 +95,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Groups> groups; 
+        private java.util.List<Groups> groups; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -100,7 +105,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         /**
          * Groups.
          */
-        public Builder groups(java.util.List < Groups> groups) {
+        public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
             return this;
         }
@@ -151,17 +156,23 @@ public class DescribeGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupsResponseBody</p>
+     */
     public static class Stats extends TeaModel {
-        @NameInMap("DeviceNum")
+        @com.aliyun.core.annotation.NameInMap("DeviceNum")
         private Long deviceNum;
 
-        @NameInMap("IedNum")
+        @com.aliyun.core.annotation.NameInMap("IedNum")
         private Long iedNum;
 
-        @NameInMap("IpcNum")
+        @com.aliyun.core.annotation.NameInMap("IpcNum")
         private Long ipcNum;
 
-        @NameInMap("PlatformNum")
+        @com.aliyun.core.annotation.NameInMap("PlatformNum")
         private Long platformNum;
 
         private Stats(Builder builder) {
@@ -252,68 +263,74 @@ public class DescribeGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
-        @NameInMap("AliasId")
+        @com.aliyun.core.annotation.NameInMap("AliasId")
         private String aliasId;
 
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private String app;
 
-        @NameInMap("Callback")
+        @com.aliyun.core.annotation.NameInMap("Callback")
         private String callback;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("GbId")
+        @com.aliyun.core.annotation.NameInMap("GbId")
         private String gbId;
 
-        @NameInMap("GbIp")
+        @com.aliyun.core.annotation.NameInMap("GbIp")
         private String gbIp;
 
-        @NameInMap("GbPort")
+        @com.aliyun.core.annotation.NameInMap("GbPort")
         private Long gbPort;
 
-        @NameInMap("GbTcpPorts")
-        private java.util.List < String > gbTcpPorts;
+        @com.aliyun.core.annotation.NameInMap("GbTcpPorts")
+        private java.util.List<String> gbTcpPorts;
 
-        @NameInMap("GbUdpPorts")
-        private java.util.List < String > gbUdpPorts;
+        @com.aliyun.core.annotation.NameInMap("GbUdpPorts")
+        private java.util.List<String> gbUdpPorts;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InProtocol")
+        @com.aliyun.core.annotation.NameInMap("InProtocol")
         private String inProtocol;
 
-        @NameInMap("LazyPull")
+        @com.aliyun.core.annotation.NameInMap("LazyPull")
         private Boolean lazyPull;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OutProtocol")
+        @com.aliyun.core.annotation.NameInMap("OutProtocol")
         private String outProtocol;
 
-        @NameInMap("PlayDomain")
+        @com.aliyun.core.annotation.NameInMap("PlayDomain")
         private String playDomain;
 
-        @NameInMap("PushDomain")
+        @com.aliyun.core.annotation.NameInMap("PushDomain")
         private String pushDomain;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Stats")
+        @com.aliyun.core.annotation.NameInMap("Stats")
         private Stats stats;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Groups(Builder builder) {
@@ -414,14 +431,14 @@ public class DescribeGroupsResponseBody extends TeaModel {
         /**
          * @return gbTcpPorts
          */
-        public java.util.List < String > getGbTcpPorts() {
+        public java.util.List<String> getGbTcpPorts() {
             return this.gbTcpPorts;
         }
 
         /**
          * @return gbUdpPorts
          */
-        public java.util.List < String > getGbUdpPorts() {
+        public java.util.List<String> getGbUdpPorts() {
             return this.gbUdpPorts;
         }
 
@@ -505,8 +522,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
             private String gbId; 
             private String gbIp; 
             private Long gbPort; 
-            private java.util.List < String > gbTcpPorts; 
-            private java.util.List < String > gbUdpPorts; 
+            private java.util.List<String> gbTcpPorts; 
+            private java.util.List<String> gbUdpPorts; 
             private String id; 
             private String inProtocol; 
             private Boolean lazyPull; 
@@ -593,7 +610,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             /**
              * GbTcpPorts.
              */
-            public Builder gbTcpPorts(java.util.List < String > gbTcpPorts) {
+            public Builder gbTcpPorts(java.util.List<String> gbTcpPorts) {
                 this.gbTcpPorts = gbTcpPorts;
                 return this;
             }
@@ -601,7 +618,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
             /**
              * GbUdpPorts.
              */
-            public Builder gbUdpPorts(java.util.List < String > gbUdpPorts) {
+            public Builder gbUdpPorts(java.util.List<String> gbUdpPorts) {
                 this.gbUdpPorts = gbUdpPorts;
                 return this;
             }

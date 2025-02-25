@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNodesResponseBody</p>
  */
 public class ListNodesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Nodes")
-    private java.util.List < Node > nodes;
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<Node> nodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListNodesResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Node > getNodes() {
+    public java.util.List<Node> getNodes() {
         return this.nodes;
     }
 
@@ -81,12 +86,15 @@ public class ListNodesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Node > nodes; 
+        private java.util.List<Node> nodes; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The position at which the next read starts. If null is returned, the data has been read.
+         * <p>The position at which the next read starts. If null is returned, the data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,15 +113,18 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about nodes.
+         * <p>Details about nodes.</p>
          */
-        public Builder nodes(java.util.List < Node > nodes) {
+        public Builder nodes(java.util.List<Node> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records in this request.
+         * <p>The total number of records in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

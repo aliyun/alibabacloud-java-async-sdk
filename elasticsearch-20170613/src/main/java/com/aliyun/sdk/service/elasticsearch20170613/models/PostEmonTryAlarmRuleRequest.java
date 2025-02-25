@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PostEmonTryAlarmRuleRequest} extends {@link RequestModel}
  *
  * <p>PostEmonTryAlarmRuleRequest</p>
  */
 public class PostEmonTryAlarmRuleRequest extends Request {
-    @Path
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Path
-    @NameInMap("AlarmGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("AlarmGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alarmGroupId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
     private PostEmonTryAlarmRuleRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         } 
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-133071096032****</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("ProjectId", projectId);
@@ -93,7 +96,10 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         }
 
         /**
-         * AlarmGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder alarmGroupId(String alarmGroupId) {
             this.putPathParameter("AlarmGroupId", alarmGroupId);

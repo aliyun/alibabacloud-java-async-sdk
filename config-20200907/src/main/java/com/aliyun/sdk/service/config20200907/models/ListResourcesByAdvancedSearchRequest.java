@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesByAdvancedSearchRequest} extends {@link RequestModel}
  *
  * <p>ListResourcesByAdvancedSearchRequest</p>
  */
 public class ListResourcesByAdvancedSearchRequest extends Request {
-    @Query
-    @NameInMap("Sql")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sql")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sql;
 
     private ListResourcesByAdvancedSearchRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class ListResourcesByAdvancedSearchRequest extends Request {
         } 
 
         /**
-         * The SQL statement.
+         * <p>The SQL query statement.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT ResourceId, ResourceName WHERE Tags.Kvpair=&quot;business:online&quot;</p>
          */
         public Builder sql(String sql) {
             this.putQueryParameter("Sql", sql);

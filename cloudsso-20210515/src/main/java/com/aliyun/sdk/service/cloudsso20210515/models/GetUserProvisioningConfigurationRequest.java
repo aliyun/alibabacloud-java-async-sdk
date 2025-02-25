@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserProvisioningConfigurationRequest} extends {@link RequestModel}
  *
  * <p>GetUserProvisioningConfigurationRequest</p>
  */
 public class GetUserProvisioningConfigurationRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
     private GetUserProvisioningConfigurationRequest(Builder builder) {
@@ -54,7 +54,10 @@ public class GetUserProvisioningConfigurationRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

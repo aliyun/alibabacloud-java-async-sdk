@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMediaRequest} extends {@link RequestModel}
  *
  * <p>SearchMediaRequest</p>
  */
 public class SearchMediaRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("EntityId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityId")
     private String entityId;
 
-    @Query
-    @NameInMap("Match")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Match")
     private String match;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ScrollToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScrollToken")
     private String scrollToken;
 
-    @Query
-    @NameInMap("SearchLibName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchLibName")
     private String searchLibName;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private SearchMediaRequest(Builder builder) {
@@ -161,7 +166,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>The ID of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d3bf1e35a1e42b5ab338d701efa7603</p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -170,7 +178,8 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * Match.
+         * <p>The filter conditions. For more information about the parameter syntax
+         * &lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocols</a>.</p>
          */
         public Builder match(String match) {
             this.putQueryParameter("Match", match);
@@ -179,7 +188,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -188,7 +200,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +212,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * ScrollToken.
+         * <p>The pagination identifier. The value can be up to 32 characters in length. The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter condition are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search: If you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter. If the value of the PageNo parameter exceeds 200, we recommend that you set this parameter to optimize search performance. You can only page backward. You can page a maximum of 1,000 entries in an operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8C4F642184DBDA5D93907A70AAE****</p>
          */
         public Builder scrollToken(String scrollToken) {
             this.putQueryParameter("ScrollToken", scrollToken);
@@ -206,7 +224,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * <p>The search library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-1</p>
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -215,7 +236,10 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field and order. Separate multiple parameters with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utcCreate:Desc, utcModified:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

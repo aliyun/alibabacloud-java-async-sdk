@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientCertificateRequest} extends {@link RequestModel}
  *
  * <p>DescribeClientCertificateRequest</p>
  */
 public class DescribeClientCertificateRequest extends Request {
-    @Query
-    @NameInMap("Identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
     private DescribeClientCertificateRequest(Builder builder) {
@@ -55,7 +60,14 @@ public class DescribeClientCertificateRequest extends Request {
         } 
 
         /**
-         * The SHA-256 fingerprint of the certificate.
+         * <p>The unique identifier of the client certificate or the server certificate that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d3b95700998e47afc4d95f886579****</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRuleStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRuleStatusResponseBody</p>
  */
 public class ModifyRuleStatusResponseBody extends TeaModel {
-    @NameInMap("FailedIds")
+    @com.aliyun.core.annotation.NameInMap("FailedIds")
     private String failedIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyRuleStatusResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailedIds.
+         * <p>The IDs of sensitive data detection rules whose status failed to be changed. Multiple IDs are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder failedIds(String failedIds) {
             this.failedIds = failedIds;
@@ -58,7 +66,10 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

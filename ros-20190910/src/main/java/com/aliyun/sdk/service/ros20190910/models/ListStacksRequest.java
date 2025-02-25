@@ -1,68 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStacksRequest} extends {@link RequestModel}
  *
  * <p>ListStacksRequest</p>
  */
 public class ListStacksRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ParentStackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentStackId")
     private String parentStackId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ShowNestedStack")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowNestedStack")
     private Boolean showNestedStack;
 
-    @Query
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @Query
-    @NameInMap("StackIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackIds")
     private java.util.List < String > stackIds;
 
-    @Query
-    @NameInMap("StackName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackName")
     private java.util.List < String > stackName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private java.util.List < String > status;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ListStacksRequest(Builder builder) {
@@ -223,7 +223,10 @@ public class ListStacksRequest extends Request {
         } 
 
         /**
-         * 按创建时间查询，创建时间区间的终止点。按照[ISO 8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-01T15:16:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -232,12 +235,12 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -246,12 +249,12 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -260,7 +263,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The ID of the parent stack.
+         * <p>The ID of the parent stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder parentStackId(String parentStackId) {
             this.putQueryParameter("ParentStackId", parentStackId);
@@ -269,7 +275,11 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,9 +288,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.\
-         * <p>
-         * For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.
+         * <p>The ID of the resource group.<br>For more information about resource groups, see the &quot;Resource Group&quot; section of the <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -289,13 +300,17 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * Specifies whether to return nested stacks. Valid values:
-         * <p>
+         * <p>Specifies whether to return nested stacks. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you specify ParentStackId, you must set ShowNestedStack to true.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false (default)
-         * 
-         * > If you specify ParentStackId, you must set ShowNestedStack to true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder showNestedStack(Boolean showNestedStack) {
             this.putQueryParameter("ShowNestedStack", showNestedStack);
@@ -304,7 +319,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The stack ID. You can specify this parameter to query only the stack ID. If you want to query the detailed information about the stack, call the GetStack operation.
+         * <p>The stack ID. You can specify this parameter to query only the stack ID. If you want to query the detailed information about the stack, call the GetStack operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -313,7 +331,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The IDs of the stacks.
+         * <p>The IDs of the stacks.</p>
          */
         public Builder stackIds(java.util.List < String > stackIds) {
             this.putQueryParameter("StackIds", stackIds);
@@ -322,7 +340,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The names of the stacks.
+         * <p>The names of the stacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStack</p>
          */
         public Builder stackName(java.util.List < String > stackName) {
             this.putQueryParameter("StackName", stackName);
@@ -331,7 +352,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * 按创建时间查询，创建时间区间的起始点。按照[ISO 8601](~~25696~~)标准表示，并需要使用UTC +0时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-01T15:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -340,7 +364,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The status of the stack.
+         * <p>The status of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_COMPLETE</p>
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
@@ -349,7 +376,7 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * The tags of the stack.
+         * <p>The tags of the stack.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -364,11 +391,17 @@ public class ListStacksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListStacksRequest} extends {@link TeaModel}
+     *
+     * <p>ListStacksRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -403,9 +436,10 @@ public class ListStacksRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.\
-             * <p>
-             * Valid values of N: 1 to 20.
+             * <p>The key of tag N.<br>Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usage</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -413,9 +447,10 @@ public class ListStacksRequest extends Request {
             }
 
             /**
-             * The value of tag N.\
-             * <p>
-             * Valid values of N: 1 to 20.
+             * <p>The value of tag N.<br>Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

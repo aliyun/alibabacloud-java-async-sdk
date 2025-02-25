@@ -1,78 +1,83 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommonBandwidthPackageRequest} extends {@link RequestModel}
  *
  * <p>CreateCommonBandwidthPackageRequest</p>
  */
 public class CreateCommonBandwidthPackageRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ISP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ISP")
     private String ISP;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Ratio")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ratio")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer ratio;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityProtectionTypes")
-    private java.util.List < String > securityProtectionTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
+    private java.util.List<String> securityProtectionTypes;
 
-    @Query
-    @NameInMap("Zone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
     private CreateCommonBandwidthPackageRequest(Builder builder) {
@@ -201,7 +206,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
     /**
      * @return securityProtectionTypes
      */
-    public java.util.List < String > getSecurityProtectionTypes() {
+    public java.util.List<String> getSecurityProtectionTypes() {
         return this.securityProtectionTypes;
     }
 
@@ -226,7 +231,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > securityProtectionTypes; 
+        private java.util.List<String> securityProtectionTypes; 
         private String zone; 
 
         private Builder() {
@@ -253,10 +258,12 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1** to **1000**. Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -265,12 +272,14 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the **client token**. The value of **RequestId** is different for each API request.
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-001****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -279,10 +288,11 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The description of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The description of the Internet Shared Bandwidth instance.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -291,22 +301,24 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The line type. Valid values:
-         * <p>
+         * <p>The line type. Valid values:</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default) All regions support BGP (Multi-ISP).</li>
+         * <li><strong>BGP_PRO</strong> BGP (Multi-ISP) Pro lines are available in the China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+         * </ul>
+         * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
          * 
-         * *   **BGP**: BGP (Multi-ISP) All regions support BGP (Multi-ISP).
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok).
-         * 
-         * If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
-         * 
-         * *   **ChinaTelecom**
-         * *   **ChinaUnicom**
-         * *   **ChinaMobile**
-         * *   **ChinaTelecom_L2**
-         * *   **ChinaUnicom_L2**
-         * *   **ChinaMobile_L2**
-         * 
-         * If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -315,7 +327,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The billing method of the Internet Shared Bandwidth instance. Valid values: **PayByTraffic**: pay-by-data-transfer
+         * <p>The billing method of the Internet Shared Bandwidth instance. Set the value to <strong>PayByTraffic</strong>, which specifies the pay-by-data-transfer billing method.</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -324,10 +336,11 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The name of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The name of the Internet Shared Bandwidth instance.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The name must be 2 to 128 characters in length and start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -354,10 +367,13 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The percentage of the minimum bandwidth commitment. Set the parameter to **20**.
-         * <p>
+         * <p>The percentage of the minimum bandwidth commitment. Set the parameter to <strong>20</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is available only on the Alibaba Cloud China site.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported only on the Alibaba Cloud China site.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ratio(Integer ratio) {
             this.putQueryParameter("Ratio", ratio);
@@ -366,10 +382,12 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The region ID of the Internet Shared Bandwidth instance.
-         * <p>
+         * <p>The region ID of the Internet Shared Bandwidth instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -378,7 +396,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -405,22 +426,19 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The editions of Anti-DDoS.
-         * <p>
-         * 
-         * *   If you do not specify this parameter, Anti-DDoS Origin Basic is used.
-         * *   If you set the parameter to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.
-         * 
-         * You can specify up to 10 editions of Anti-DDoS.
+         * SecurityProtectionTypes.
          */
-        public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
+        public Builder securityProtectionTypes(java.util.List<String> securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
             this.securityProtectionTypes = securityProtectionTypes;
             return this;
         }
 
         /**
-         * The zone of the Internet Shared Bandwidth instance. This parameter must be specified when you create an Internet Shared Bandwidth instance for a cloud box.
+         * <p>The zone of the Internet Shared Bandwidth instance. This parameter is required if you create an Internet Shared Bandwidth instance for a cloud box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1-lzdvn-cb</p>
          */
         public Builder zone(String zone) {
             this.putQueryParameter("Zone", zone);

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileProtectEventStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateFileProtectEventStatusResponseBody</p>
  */
 public class UpdateFileProtectEventStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateFileProtectEventStatusResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class UpdateFileProtectEventStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

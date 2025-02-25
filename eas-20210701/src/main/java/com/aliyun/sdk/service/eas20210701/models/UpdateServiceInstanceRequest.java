@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceInstanceRequest</p>
  */
 public class UpdateServiceInstanceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Path
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("Isolate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Isolate")
     private Boolean isolate;
 
     private UpdateServiceInstanceRequest(Builder builder) {
@@ -99,7 +104,11 @@ public class UpdateServiceInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -108,7 +117,11 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -117,7 +130,11 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo-69xxxx4f4-5w9r9</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);
@@ -126,7 +143,14 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Isolate.
+         * <p>Specifies whether to isolate the service instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isolate(Boolean isolate) {
             this.putBodyParameter("Isolate", isolate);

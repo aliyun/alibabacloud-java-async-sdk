@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMcubeMiniAppResponseBody</p>
  */
 public class DeleteMcubeMiniAppResponseBody extends TeaModel {
-    @NameInMap("DeleteMiniResult")
+    @com.aliyun.core.annotation.NameInMap("DeleteMiniResult")
     private DeleteMiniResult deleteMiniResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private DeleteMcubeMiniAppResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DeleteMcubeMiniAppResponseBody extends TeaModel {
     } 
 
     public static class DeleteMiniResult extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private DeleteMiniResult(Builder builder) {

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDIJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDIJobsResponseBody</p>
  */
 public class ListDIJobsResponseBody extends TeaModel {
-    @NameInMap("DIJobPaging")
+    @com.aliyun.core.annotation.NameInMap("DIJobPaging")
     private DIJobPaging DIJobPaging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDIJobsResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DIJobPaging.
+         * <p>The pagination information.</p>
          */
         public Builder DIJobPaging(DIJobPaging DIJobPaging) {
             this.DIJobPaging = DIJobPaging;
@@ -58,7 +63,10 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7263E4AC-9D2E-5B29-B8AF-7C5012E92A41</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +79,32 @@ public class ListDIJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDIJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDIJobsResponseBody</p>
+     */
     public static class DIJobs extends TeaModel {
-        @NameInMap("DIJobId")
+        @com.aliyun.core.annotation.NameInMap("DIJobId")
         private Long DIJobId;
 
-        @NameInMap("DestinationDataSourceType")
+        @com.aliyun.core.annotation.NameInMap("DestinationDataSourceType")
         private String destinationDataSourceType;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("MigrationType")
+        @com.aliyun.core.annotation.NameInMap("MigrationType")
         private String migrationType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("SourceDataSourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
         private String sourceDataSourceType;
 
         private DIJobs(Builder builder) {
@@ -170,7 +184,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             private String sourceDataSourceType; 
 
             /**
-             * DIJobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16626</p>
              */
             public Builder DIJobId(Long DIJobId) {
                 this.DIJobId = DIJobId;
@@ -178,7 +195,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationDataSourceType.
+             * <p>The type of the destination. The value Hologres is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hologres</p>
              */
             public Builder destinationDataSourceType(String destinationDataSourceType) {
                 this.destinationDataSourceType = destinationDataSourceType;
@@ -186,7 +206,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_to_holo_sync_8772</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -194,7 +217,18 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Finished</li>
+             * <li>Initialized</li>
+             * <li>Stopped</li>
+             * <li>Failed</li>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -202,7 +236,15 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationType.
+             * <p>The synchronization type. Valid values:</p>
+             * <ul>
+             * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+             * <li>RealtimeIncremental: real-time incremental synchronization</li>
+             * <li>Full: one-time full synchronization</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Full</p>
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
@@ -210,7 +252,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1967</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -218,7 +263,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDataSourceType.
+             * <p>The type of the source. The value MySQL is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder sourceDataSourceType(String sourceDataSourceType) {
                 this.sourceDataSourceType = sourceDataSourceType;
@@ -232,17 +280,23 @@ public class ListDIJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDIJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDIJobsResponseBody</p>
+     */
     public static class DIJobPaging extends TeaModel {
-        @NameInMap("DIJobs")
-        private java.util.List < DIJobs> DIJobs;
+        @com.aliyun.core.annotation.NameInMap("DIJobs")
+        private java.util.List<DIJobs> DIJobs;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DIJobPaging(Builder builder) {
@@ -263,7 +317,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         /**
          * @return DIJobs
          */
-        public java.util.List < DIJobs> getDIJobs() {
+        public java.util.List<DIJobs> getDIJobs() {
             return this.DIJobs;
         }
 
@@ -289,21 +343,24 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DIJobs> DIJobs; 
+            private java.util.List<DIJobs> DIJobs; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * DIJobs.
+             * <p>The list of tasks.</p>
              */
-            public Builder DIJobs(java.util.List < DIJobs> DIJobs) {
+            public Builder DIJobs(java.util.List<DIJobs> DIJobs) {
                 this.DIJobs = DIJobs;
                 return this;
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -311,7 +368,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -319,7 +379,10 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -62,7 +62,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * InstanceAccounts.
+         * Indicates the information about the instance accounts.
          */
         public Builder instanceAccounts(InstanceAccounts instanceAccounts) {
             this.instanceAccounts = instanceAccounts;
@@ -70,7 +70,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             private String privilege; 
 
             /**
-             * DbName.
+             * Indicates the name of a database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -138,7 +138,13 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Privilege.
+             * Indicates the permissions that an account is granted on the database. Valid values:
+             * <p>
+             * 
+             * *   **R**: The account is granted the permissions that are required to read the data of the database.
+             * *   **W**: The account is granted the permissions that are required to write data to the database.
+             * *   **DDL**: The account is granted the permissions that are required to perform DDL operations on the database.
+             * *   **DML**: The account is granted the permissions that are required to perform DML operations on the database.
              */
             public Builder privilege(String privilege) {
                 this.privilege = privilege;
@@ -268,7 +274,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             private String host; 
 
             /**
-             * AccountName.
+             * Indicates the username of an instance account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -276,7 +282,11 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * Indicates the type of an instance account. Valid values:
+             * <p>
+             * 
+             * *   **0**: The instance account is a privileged account.
+             * *   **1**: The instance account is a standard account.
              */
             public Builder accountType(Integer accountType) {
                 this.accountType = accountType;
@@ -284,7 +294,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DbPrivileges.
+             * Indicates the information about the permissions of an account on a database.
              */
             public Builder dbPrivileges(DbPrivileges dbPrivileges) {
                 this.dbPrivileges = dbPrivileges;
@@ -292,7 +302,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Indicates the description of an account. By default, if 0 is the value of the AccountType parameter, **Created by DRDS** is returned as the value of the Description parameter. If 1 is the value of the AccountType parameter, an empty string is returned as the value of the Description parameter. You can modify the description of an account on the Accounts page in the PolarDB-X console.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -300,7 +310,7 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * Indicates an IP address that is allowed to access the database. The value **%** indicates that each IP address is allowed to access the database. \</note>
              */
             public Builder host(String host) {
                 this.host = host;

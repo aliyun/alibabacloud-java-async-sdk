@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrganizationMemberResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrganizationMemberResponseBody</p>
  */
 public class GetOrganizationMemberResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("member")
+    @com.aliyun.core.annotation.NameInMap("member")
     private Member member;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetOrganizationMemberResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOrganizationMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrganizationMemberResponseBody</p>
+     */
     public static class Identities extends TeaModel {
-        @NameInMap("externUid")
+        @com.aliyun.core.annotation.NameInMap("externUid")
         private String externUid;
 
-        @NameInMap("provider")
+        @com.aliyun.core.annotation.NameInMap("provider")
         private String provider;
 
         private Identities(Builder builder) {
@@ -192,47 +203,53 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOrganizationMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrganizationMemberResponseBody</p>
+     */
     public static class Member extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private Long birthday;
 
-        @NameInMap("deptLists")
-        private java.util.List < String > deptLists;
+        @com.aliyun.core.annotation.NameInMap("deptLists")
+        private java.util.List<String> deptLists;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("hiredDate")
+        @com.aliyun.core.annotation.NameInMap("hiredDate")
         private Long hiredDate;
 
-        @NameInMap("identities")
+        @com.aliyun.core.annotation.NameInMap("identities")
         private Identities identities;
 
-        @NameInMap("jobNumber")
+        @com.aliyun.core.annotation.NameInMap("jobNumber")
         private String jobNumber;
 
-        @NameInMap("joinTime")
+        @com.aliyun.core.annotation.NameInMap("joinTime")
         private Long joinTime;
 
-        @NameInMap("lastVisitTime")
+        @com.aliyun.core.annotation.NameInMap("lastVisitTime")
         private Long lastVisitTime;
 
-        @NameInMap("mobile")
+        @com.aliyun.core.annotation.NameInMap("mobile")
         private String mobile;
 
-        @NameInMap("organizationMemberName")
+        @com.aliyun.core.annotation.NameInMap("organizationMemberName")
         private String organizationMemberName;
 
-        @NameInMap("organizationRoleId")
+        @com.aliyun.core.annotation.NameInMap("organizationRoleId")
         private String organizationRoleId;
 
-        @NameInMap("organizationRoleName")
+        @com.aliyun.core.annotation.NameInMap("organizationRoleName")
         private String organizationRoleName;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Member(Builder builder) {
@@ -277,7 +294,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         /**
          * @return deptLists
          */
-        public java.util.List < String > getDeptLists() {
+        public java.util.List<String> getDeptLists() {
             return this.deptLists;
         }
 
@@ -361,7 +378,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private Long birthday; 
-            private java.util.List < String > deptLists; 
+            private java.util.List<String> deptLists; 
             private String email; 
             private Long hiredDate; 
             private Identities identities; 
@@ -393,7 +410,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             /**
              * deptLists.
              */
-            public Builder deptLists(java.util.List < String > deptLists) {
+            public Builder deptLists(java.util.List<String> deptLists) {
                 this.deptLists = deptLists;
                 return this;
             }

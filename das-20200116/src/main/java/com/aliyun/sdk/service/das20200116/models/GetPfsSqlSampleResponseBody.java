@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPfsSqlSampleResponseBody} extends {@link TeaModel}
  *
  * <p>GetPfsSqlSampleResponseBody</p>
  */
 public class GetPfsSqlSampleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPfsSqlSampleResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,16 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,18 +102,21 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The queried SQL sample data.
+         * <p>The SQL sample data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +124,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CB97BC4-6479-55D0-B9D0-EA925AFE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +135,14 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,101 +155,107 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPfsSqlSampleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPfsSqlSampleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreateTmpDiskTables")
+        @com.aliyun.core.annotation.NameInMap("CreateTmpDiskTables")
         private Integer createTmpDiskTables;
 
-        @NameInMap("CreateTmpTables")
+        @com.aliyun.core.annotation.NameInMap("CreateTmpTables")
         private Integer createTmpTables;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private String db;
 
-        @NameInMap("EndEventId")
+        @com.aliyun.core.annotation.NameInMap("EndEventId")
         private Integer endEventId;
 
-        @NameInMap("Errors")
+        @com.aliyun.core.annotation.NameInMap("Errors")
         private Integer errors;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Integer eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Latency")
+        @com.aliyun.core.annotation.NameInMap("Latency")
         private Double latency;
 
-        @NameInMap("LockLatency")
+        @com.aliyun.core.annotation.NameInMap("LockLatency")
         private Double lockLatency;
 
-        @NameInMap("LogicId")
+        @com.aliyun.core.annotation.NameInMap("LogicId")
         private String logicId;
 
-        @NameInMap("NoGoodIndexUsed")
+        @com.aliyun.core.annotation.NameInMap("NoGoodIndexUsed")
         private Integer noGoodIndexUsed;
 
-        @NameInMap("NoIndexUsed")
+        @com.aliyun.core.annotation.NameInMap("NoIndexUsed")
         private Integer noIndexUsed;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("RowsAffected")
+        @com.aliyun.core.annotation.NameInMap("RowsAffected")
         private Integer rowsAffected;
 
-        @NameInMap("RowsExamined")
+        @com.aliyun.core.annotation.NameInMap("RowsExamined")
         private Integer rowsExamined;
 
-        @NameInMap("RowsSent")
+        @com.aliyun.core.annotation.NameInMap("RowsSent")
         private Integer rowsSent;
 
-        @NameInMap("SelectFullJoin")
+        @com.aliyun.core.annotation.NameInMap("SelectFullJoin")
         private Integer selectFullJoin;
 
-        @NameInMap("SelectFullRangeJoin")
+        @com.aliyun.core.annotation.NameInMap("SelectFullRangeJoin")
         private Integer selectFullRangeJoin;
 
-        @NameInMap("SelectRange")
+        @com.aliyun.core.annotation.NameInMap("SelectRange")
         private Integer selectRange;
 
-        @NameInMap("SelectRangeCheck")
+        @com.aliyun.core.annotation.NameInMap("SelectRangeCheck")
         private Integer selectRangeCheck;
 
-        @NameInMap("SelectScan")
+        @com.aliyun.core.annotation.NameInMap("SelectScan")
         private Integer selectScan;
 
-        @NameInMap("SortMergePasses")
+        @com.aliyun.core.annotation.NameInMap("SortMergePasses")
         private Integer sortMergePasses;
 
-        @NameInMap("SortRange")
+        @com.aliyun.core.annotation.NameInMap("SortRange")
         private Integer sortRange;
 
-        @NameInMap("SortRows")
+        @com.aliyun.core.annotation.NameInMap("SortRows")
         private Integer sortRows;
 
-        @NameInMap("SortScan")
+        @com.aliyun.core.annotation.NameInMap("SortScan")
         private Integer sortScan;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("ThreadId")
+        @com.aliyun.core.annotation.NameInMap("ThreadId")
         private Integer threadId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Warnings")
+        @com.aliyun.core.annotation.NameInMap("Warnings")
         private Integer warnings;
 
         private Data(Builder builder) {
@@ -537,7 +560,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             private Integer warnings; 
 
             /**
-             * The number of internal on-disk temporary tables that were created when the SQL statement was executed.
+             * <p>The number of internal on-disk temporary tables that were created when the SQL statement was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder createTmpDiskTables(Integer createTmpDiskTables) {
                 this.createTmpDiskTables = createTmpDiskTables;
@@ -545,7 +571,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of internal temporary tables that were created when the SQL statement was executed.
+             * <p>The number of internal temporary tables that were created when the SQL statement was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder createTmpTables(Integer createTmpTables) {
                 this.createTmpTables = createTmpTables;
@@ -553,7 +582,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDB</p>
              */
             public Builder db(String db) {
                 this.db = db;
@@ -561,7 +593,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The end ID of the event. By default, the value of this parameter is NULL when the event starts and is changed to the event ID when the event ends.
+             * <p>The end ID of the event. By default, the value of this parameter is NULL when the event starts and is changed to the event ID when the event ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder endEventId(Integer endEventId) {
                 this.endEventId = endEventId;
@@ -569,7 +604,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of errors returned for the SQL statement.
+             * <p>The number of errors returned for the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errors(Integer errors) {
                 this.errors = errors;
@@ -577,7 +615,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63735293</p>
              */
             public Builder eventId(Integer eventId) {
                 this.eventId = eventId;
@@ -585,7 +626,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>statement/sql/select</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -593,7 +637,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1jdv45i7l6****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -601,7 +648,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration. Unit: millisecond.
+             * <p>The execution duration. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.199</p>
              */
             public Builder latency(Double latency) {
                 this.latency = latency;
@@ -609,7 +659,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The lock wait duration. Unit: millisecond.
+             * <p>The lock wait duration. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.09</p>
              */
             public Builder lockLatency(Double lockLatency) {
                 this.lockLatency = lockLatency;
@@ -617,7 +670,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The logical database ID.
+             * <p>The ID of the logical database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder logicId(String logicId) {
                 this.logicId = logicId;
@@ -625,11 +681,14 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:
-             * <p>
+             * <p>Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes.</li>
+             * <li><strong>0</strong>: no.</li>
+             * </ul>
              * 
-             * * **1:** yes.
-             * * **0:** no.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noGoodIndexUsed(Integer noGoodIndexUsed) {
                 this.noGoodIndexUsed = noGoodIndexUsed;
@@ -637,11 +696,14 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether table scans were performed when indexes were not used. Valid values:
-             * <p>
+             * <p>Indicates whether table scans were performed when indexes were not used. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes.</li>
+             * <li><strong>0</strong>: no.</li>
+             * </ul>
              * 
-             * * **1:** yes.
-             * * **0:** no.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder noIndexUsed(Integer noIndexUsed) {
                 this.noIndexUsed = noIndexUsed;
@@ -649,10 +711,13 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
-             * <p>
+             * <p>The node ID.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -660,7 +725,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows affected by the SQL statement.
+             * <p>The number of rows affected by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsAffected(Integer rowsAffected) {
                 this.rowsAffected = rowsAffected;
@@ -668,7 +736,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows scanned by the SQL statement.
+             * <p>The number of rows scanned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048576</p>
              */
             public Builder rowsExamined(Integer rowsExamined) {
                 this.rowsExamined = rowsExamined;
@@ -676,7 +747,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned by the SQL statement.
+             * <p>The number of rows returned by the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rowsSent(Integer rowsSent) {
                 this.rowsSent = rowsSent;
@@ -684,10 +758,13 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of joins that are used to perform table scans without using indexes.
-             * <p>
+             * <p>The number of joins that are used to perform table scans without using indexes.</p>
+             * <blockquote>
+             * <p>: This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</p>
+             * </blockquote>
              * 
-             * > This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectFullJoin(Integer selectFullJoin) {
                 this.selectFullJoin = selectFullJoin;
@@ -695,7 +772,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of joins that used ranges on referenced tables.
+             * <p>The number of joins that used ranges on referenced tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectFullRangeJoin(Integer selectFullRangeJoin) {
                 this.selectFullRangeJoin = selectFullRangeJoin;
@@ -703,7 +783,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of joins that used ranges on the first table.
+             * <p>The number of joins that used ranges on the first table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectRange(Integer selectRange) {
                 this.selectRange = selectRange;
@@ -711,10 +794,13 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of joins that did not have key values. The keys and values were checked for each row of data.
-             * <p>
+             * <p>The number of joins that did not have key values. The keys and values were checked for each row of data.</p>
+             * <blockquote>
+             * <p>: This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.</p>
+             * </blockquote>
              * 
-             * >  This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectRangeCheck(Integer selectRangeCheck) {
                 this.selectRangeCheck = selectRangeCheck;
@@ -722,7 +808,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scans.
+             * <p>The number of scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selectScan(Integer selectScan) {
                 this.selectScan = selectScan;
@@ -730,7 +819,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of merges that the sorting algorithm must perform.
+             * <p>The number of merges that the sorting algorithm must perform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sortMergePasses(Integer sortMergePasses) {
                 this.sortMergePasses = sortMergePasses;
@@ -738,7 +830,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times the data was sorted by using ranges.
+             * <p>The number of times the data was sorted by using ranges.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sortRange(Integer sortRange) {
                 this.sortRange = sortRange;
@@ -746,7 +841,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sorted rows.
+             * <p>The number of sorted rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sortRows(Integer sortRows) {
                 this.sortRows = sortRows;
@@ -754,7 +852,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of sorts that were performed during table scans.
+             * <p>The number of sorts that were performed during table scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sortScan(Integer sortScan) {
                 this.sortScan = sortScan;
@@ -762,7 +863,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL sample.
+             * <p>The sample SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from xxxx where ****</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -770,7 +874,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL ID.
+             * <p>The SQL statement ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>651b56fe9418d48edb8fdf0980ec****</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -778,7 +885,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The thread ID.
+             * <p>The thread ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81751940</p>
              */
             public Builder threadId(Integer threadId) {
                 this.threadId = threadId;
@@ -786,7 +896,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660100753556</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -794,7 +907,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196278346919****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -802,7 +918,10 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of warnings returned for the SQL statement.
+             * <p>The number of warnings returned for the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder warnings(Integer warnings) {
                 this.warnings = warnings;

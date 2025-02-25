@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIntegrationResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateIntegrationResponseBody</p>
  */
 public class UpdateIntegrationResponseBody extends TeaModel {
-    @NameInMap("Integration")
+    @com.aliyun.core.annotation.NameInMap("Integration")
     private Integration integration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateIntegrationResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Information about the alert integration.
+         * <p>The Information about the alert integration.</p>
          */
         public Builder integration(Integration integration) {
             this.integration = integration;
@@ -58,7 +63,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,53 +79,59 @@ public class UpdateIntegrationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateIntegrationResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateIntegrationResponseBody</p>
+     */
     public static class Integration extends TeaModel {
-        @NameInMap("ApiEndpoint")
+        @com.aliyun.core.annotation.NameInMap("ApiEndpoint")
         private String apiEndpoint;
 
-        @NameInMap("AutoRecover")
+        @com.aliyun.core.annotation.NameInMap("AutoRecover")
         private Boolean autoRecover;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DuplicateKey")
+        @com.aliyun.core.annotation.NameInMap("DuplicateKey")
         private String duplicateKey;
 
-        @NameInMap("ExtendedFieldRedefineRules")
-        private java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules;
+        @com.aliyun.core.annotation.NameInMap("ExtendedFieldRedefineRules")
+        private java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules;
 
-        @NameInMap("FieldRedefineRules")
-        private java.util.List < java.util.Map<String, ?>> fieldRedefineRules;
+        @com.aliyun.core.annotation.NameInMap("FieldRedefineRules")
+        private java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
-        @NameInMap("InitiativeRecoverField")
+        @com.aliyun.core.annotation.NameInMap("InitiativeRecoverField")
         private String initiativeRecoverField;
 
-        @NameInMap("InitiativeRecoverValue")
+        @com.aliyun.core.annotation.NameInMap("InitiativeRecoverValue")
         private String initiativeRecoverValue;
 
-        @NameInMap("IntegrationId")
+        @com.aliyun.core.annotation.NameInMap("IntegrationId")
         private Long integrationId;
 
-        @NameInMap("IntegrationName")
+        @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
 
-        @NameInMap("IntegrationProductType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
         private String integrationProductType;
 
-        @NameInMap("Liveness")
+        @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
 
-        @NameInMap("RecoverTime")
+        @com.aliyun.core.annotation.NameInMap("RecoverTime")
         private Long recoverTime;
 
-        @NameInMap("ShortToken")
+        @com.aliyun.core.annotation.NameInMap("ShortToken")
         private String shortToken;
 
-        @NameInMap("Stat")
-        private java.util.List < Long > stat;
+        @com.aliyun.core.annotation.NameInMap("Stat")
+        private java.util.List<Long> stat;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Boolean state;
 
         private Integration(Builder builder) {
@@ -178,14 +192,14 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         /**
          * @return extendedFieldRedefineRules
          */
-        public java.util.List < java.util.Map<String, ?>> getExtendedFieldRedefineRules() {
+        public java.util.List<java.util.Map<String, ?>> getExtendedFieldRedefineRules() {
             return this.extendedFieldRedefineRules;
         }
 
         /**
          * @return fieldRedefineRules
          */
-        public java.util.List < java.util.Map<String, ?>> getFieldRedefineRules() {
+        public java.util.List<java.util.Map<String, ?>> getFieldRedefineRules() {
             return this.fieldRedefineRules;
         }
 
@@ -248,7 +262,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         /**
          * @return stat
          */
-        public java.util.List < Long > getStat() {
+        public java.util.List<Long> getStat() {
             return this.stat;
         }
 
@@ -264,8 +278,8 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             private Boolean autoRecover; 
             private String description; 
             private String duplicateKey; 
-            private java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules; 
-            private java.util.List < java.util.Map<String, ?>> fieldRedefineRules; 
+            private java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules; 
+            private java.util.List<java.util.Map<String, ?>> fieldRedefineRules; 
             private String initiativeRecoverField; 
             private String initiativeRecoverValue; 
             private Long integrationId; 
@@ -274,11 +288,14 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             private String liveness; 
             private Long recoverTime; 
             private String shortToken; 
-            private java.util.List < Long > stat; 
+            private java.util.List<Long> stat; 
             private Boolean state; 
 
             /**
-             * The endpoint of the alert integration.
+             * <p>The endpoint of the alert integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN">https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN</a>******</p>
              */
             public Builder apiEndpoint(String apiEndpoint) {
                 this.apiEndpoint = apiEndpoint;
@@ -286,11 +303,14 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether alert events are automatically cleared. Valid values:
-             * <p>
+             * <p>Indicates whether alert events are automatically cleared. Valid values:</p>
+             * <ul>
+             * <li>true (default)</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true (default)
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRecover(Boolean autoRecover) {
                 this.autoRecover = autoRecover;
@@ -298,7 +318,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert integration.
+             * <p>The description of the alert integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +329,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The fields whose values are deduplicated.
+             * <p>The fields whose values are deduplicated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LABEL.dimensions::LABEL.ruleId</p>
              */
             public Builder duplicateKey(String duplicateKey) {
                 this.duplicateKey = duplicateKey;
@@ -314,26 +340,29 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The extended mapped fields of the alert source.
+             * <p>The extended mapped fields of the alert source.</p>
              */
-            public Builder extendedFieldRedefineRules(java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules) {
+            public Builder extendedFieldRedefineRules(java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules) {
                 this.extendedFieldRedefineRules = extendedFieldRedefineRules;
                 return this;
             }
 
             /**
-             * The predefined mapped fields of the alert source.
+             * <p>The predefined mapped fields of the alert source.</p>
              */
-            public Builder fieldRedefineRules(java.util.List < java.util.Map<String, ?>> fieldRedefineRules) {
+            public Builder fieldRedefineRules(java.util.List<java.util.Map<String, ?>> fieldRedefineRules) {
                 this.fieldRedefineRules = fieldRedefineRules;
                 return this;
             }
 
             /**
-             * The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
-             * <p>
+             * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+             * <blockquote>
+             * <p>Only Log Service supports this parameter.</p>
+             * </blockquote>
              * 
-             * > Only Log Service supports this parameter.
+             * <strong>example:</strong>
+             * <p>$.status</p>
              */
             public Builder initiativeRecoverField(String initiativeRecoverField) {
                 this.initiativeRecoverField = initiativeRecoverField;
@@ -341,10 +370,13 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.
-             * <p>
+             * <p>The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+             * <blockquote>
+             * <p>Only Log Service supports this parameter.</p>
+             * </blockquote>
              * 
-             * > Only Log Service supports this parameter.
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder initiativeRecoverValue(String initiativeRecoverValue) {
                 this.initiativeRecoverValue = initiativeRecoverValue;
@@ -352,7 +384,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert integration.
+             * <p>The ID of the alert integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder integrationId(Long integrationId) {
                 this.integrationId = integrationId;
@@ -360,7 +395,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert integration.
+             * <p>The name of the alert integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudMonitor integration</p>
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -368,11 +406,14 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The service of the alert integration. Valid values:
-             * <p>
+             * <p>The service of the alert integration. Valid values:</p>
+             * <ul>
+             * <li>CLOUD_MONITOR: CloudMonitor</li>
+             * <li>LOG_SERVICE: Log Service</li>
+             * </ul>
              * 
-             * *   CLOUD_MONITOR: CloudMonitor
-             * *   LOG_SERVICE: Log Service
+             * <strong>example:</strong>
+             * <p>CLOUD_MONITOR</p>
              */
             public Builder integrationProductType(String integrationProductType) {
                 this.integrationProductType = integrationProductType;
@@ -380,7 +421,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The activity of the alert integration
+             * <p>The activity of the alert integration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ready</p>
              */
             public Builder liveness(String liveness) {
                 this.liveness = liveness;
@@ -388,7 +432,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when alert events are automatically cleared. Unit: seconds. Default value: 300.
+             * <p>The time when alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder recoverTime(Long recoverTime) {
                 this.recoverTime = recoverTime;
@@ -396,7 +443,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication token of the alert integration.
+             * <p>The authentication token of the alert integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ymQBN******</p>
              */
             public Builder shortToken(String shortToken) {
                 this.shortToken = shortToken;
@@ -404,19 +454,22 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alert events and the number of abnormal alert events in the last hour.
+             * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
              */
-            public Builder stat(java.util.List < Long > stat) {
+            public Builder stat(java.util.List<Long> stat) {
                 this.stat = stat;
                 return this;
             }
 
             /**
-             * Indicates whether the alert integration is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the alert integration is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder state(Boolean state) {
                 this.state = state;

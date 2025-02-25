@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordPolicyRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordPolicyRequest</p>
  */
 public class SetPasswordPolicyRequest extends Request {
-    @Query
-    @NameInMap("HardExpire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HardExpire")
     private Boolean hardExpire;
 
-    @Query
-    @NameInMap("MaxLoginAttemps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
     private Integer maxLoginAttemps;
 
-    @Query
-    @NameInMap("MaxPasswordAge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
     private Integer maxPasswordAge;
 
-    @Query
-    @NameInMap("MinimumPasswordDifferentCharacter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPasswordDifferentCharacter")
     private Integer minimumPasswordDifferentCharacter;
 
-    @Query
-    @NameInMap("MinimumPasswordLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPasswordLength")
     private Integer minimumPasswordLength;
 
-    @Query
-    @NameInMap("PasswordNotContainUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordNotContainUserName")
     private Boolean passwordNotContainUserName;
 
-    @Query
-    @NameInMap("PasswordReusePrevention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
     private Integer passwordReusePrevention;
 
-    @Query
-    @NameInMap("RequireLowercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireLowercaseCharacters")
     private Boolean requireLowercaseCharacters;
 
-    @Query
-    @NameInMap("RequireNumbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireNumbers")
     private Boolean requireNumbers;
 
-    @Query
-    @NameInMap("RequireSymbols")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireSymbols")
     private Boolean requireSymbols;
 
-    @Query
-    @NameInMap("RequireUppercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireUppercaseCharacters")
     private Boolean requireUppercaseCharacters;
 
     private SetPasswordPolicyRequest(Builder builder) {
@@ -194,11 +199,14 @@ public class SetPasswordPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to disable logon after the password expires. Valid values:
-         * <p>
+         * <p>Specifies whether to disable logon after the password expires. Valid values:</p>
+         * <ul>
+         * <li>true: After the password expires, you cannot use the password to log on to the console. You can log on to the console only after you reset the password by using your Alibaba Cloud account or as a RAM user that has administrative rights.</li>
+         * <li>false: After the password expires, you can change the password to log on to the console. This is the default value.</li>
+         * </ul>
          * 
-         * *   true: After the password expires, you cannot use the password to log on to the console. You can log on to the console only after you reset the password by using your Alibaba Cloud account or as a RAM user that has administrative rights.
-         * *   false: After the password expires, you can change the password to log on to the console. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hardExpire(Boolean hardExpire) {
             this.putQueryParameter("HardExpire", hardExpire);
@@ -207,12 +215,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The maximum number of password retries. If you enter the wrong passwords for the specified consecutive times, the account is locked for one hour.
-         * <p>
+         * <p>The maximum number of password retries. If you enter the wrong passwords for the specified consecutive times, the account is locked for one hour.</p>
+         * <p>Valid values: 0 to 32.</p>
+         * <p>The default value is 0, which indicates that the password retries are not limited.</p>
          * 
-         * Valid values: 0 to 32.
-         * 
-         * The default value is 0, which indicates that the password retries are not limited.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxLoginAttemps(Integer maxLoginAttemps) {
             this.putQueryParameter("MaxLoginAttemps", maxLoginAttemps);
@@ -221,12 +229,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The validity period of the password.
-         * <p>
+         * <p>The validity period of the password.</p>
+         * <p>Valid values: 0 to 1095. Unit: days.</p>
+         * <p>The default value is 0, which indicates that the password never expires.</p>
          * 
-         * Valid values: 0 to 1095. Unit: days.
-         * 
-         * The default value is 0, which indicates that the password never expires.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxPasswordAge(Integer maxPasswordAge) {
             this.putQueryParameter("MaxPasswordAge", maxPasswordAge);
@@ -235,12 +243,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The minimum number of unique characters in the password.
-         * <p>
+         * <p>The minimum number of unique characters in the password.</p>
+         * <p>Valid values: 0 to 8.</p>
+         * <p>The default value is 0, which indicates that no limits are imposed on the number of unique characters in a password.</p>
          * 
-         * Valid values: 0 to 8.
-         * 
-         * The default value is 0, which indicates that no limits are imposed on the number of unique characters in a password.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minimumPasswordDifferentCharacter(Integer minimumPasswordDifferentCharacter) {
             this.putQueryParameter("MinimumPasswordDifferentCharacter", minimumPasswordDifferentCharacter);
@@ -249,10 +257,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The minimum number of characters in the password.
-         * <p>
+         * <p>The minimum number of characters in the password.</p>
+         * <p>Valid values: 8 to 32. Default value: 8.</p>
          * 
-         * Valid values: 8 to 32. Default value: 8.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder minimumPasswordLength(Integer minimumPasswordLength) {
             this.putQueryParameter("MinimumPasswordLength", minimumPasswordLength);
@@ -261,11 +270,14 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to exclude the username from the password. Valid values:
-         * <p>
+         * <p>Specifies whether to exclude the username from the password. Valid values:</p>
+         * <ul>
+         * <li>true: A password cannot contain the username.</li>
+         * <li>false: A password can contain the username. This is the default value.</li>
+         * </ul>
          * 
-         * *   true: A password cannot contain the username.
-         * *   false: A password can contain the username. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder passwordNotContainUserName(Boolean passwordNotContainUserName) {
             this.putQueryParameter("PasswordNotContainUserName", passwordNotContainUserName);
@@ -274,12 +286,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The policy for password history check.
-         * <p>
+         * <p>The policy for password history check.</p>
+         * <p>The previous N passwords cannot be reused. Valid values of N: 0 to 24.</p>
+         * <p>The default value is 0, which indicates that RAM users can reuse previous passwords.</p>
          * 
-         * The previous N passwords cannot be reused. Valid values of N: 0 to 24.
-         * 
-         * The default value is 0, which indicates that RAM users can reuse previous passwords.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder passwordReusePrevention(Integer passwordReusePrevention) {
             this.putQueryParameter("PasswordReusePrevention", passwordReusePrevention);
@@ -288,11 +300,14 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the password must contain lowercase letters. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether the password must contain lowercase letters. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
             this.putQueryParameter("RequireLowercaseCharacters", requireLowercaseCharacters);
@@ -301,11 +316,14 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the password must contain digits. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether the password must contain digits. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requireNumbers(Boolean requireNumbers) {
             this.putQueryParameter("RequireNumbers", requireNumbers);
@@ -314,11 +332,14 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the password must contain special characters. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether the password must contain special characters. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requireSymbols(Boolean requireSymbols) {
             this.putQueryParameter("RequireSymbols", requireSymbols);
@@ -327,11 +348,14 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether the password must contain uppercase letters. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether the password must contain uppercase letters. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
             this.putQueryParameter("RequireUppercaseCharacters", requireUppercaseCharacters);

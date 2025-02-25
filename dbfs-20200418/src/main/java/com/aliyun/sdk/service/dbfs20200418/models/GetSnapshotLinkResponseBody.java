@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbfs20200418.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSnapshotLinkResponseBody} extends {@link TeaModel}
  *
  * <p>GetSnapshotLinkResponseBody</p>
  */
 public class GetSnapshotLinkResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSnapshotLinkResponseBody(Builder builder) {
@@ -71,8 +71,14 @@ public class GetSnapshotLinkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSnapshotLinkResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSnapshotLinkResponseBody</p>
+     */
     public static class EcsList extends TeaModel {
-        @NameInMap("EcsId")
+        @com.aliyun.core.annotation.NameInMap("EcsId")
         private String ecsId;
 
         private EcsList(Builder builder) {
@@ -112,32 +118,38 @@ public class GetSnapshotLinkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSnapshotLinkResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSnapshotLinkResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("EcsList")
+        @com.aliyun.core.annotation.NameInMap("EcsList")
         private java.util.List < EcsList> ecsList;
 
-        @NameInMap("FsId")
+        @com.aliyun.core.annotation.NameInMap("FsId")
         private String fsId;
 
-        @NameInMap("FsName")
+        @com.aliyun.core.annotation.NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("LinkId")
+        @com.aliyun.core.annotation.NameInMap("LinkId")
         private String linkId;
 
-        @NameInMap("SnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private Integer snapshotCount;
 
-        @NameInMap("SourceSize")
+        @com.aliyun.core.annotation.NameInMap("SourceSize")
         private Integer sourceSize;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private Data(Builder builder) {

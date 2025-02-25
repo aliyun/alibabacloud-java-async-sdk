@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigAppResponseBody} extends {@link TeaModel}
  *
  * <p>ConfigAppResponseBody</p>
  */
 public class ConfigAppResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ConfigAppResponseBody(Builder builder) {
@@ -50,7 +55,19 @@ public class ConfigAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of turning on or off the main switch of the ARMS agent or the main switch status of the ARMS agent. Indicates whether the request was successful. Valid values: success failed The main switch status of the ARMS agent. Valid values: true false
+         * <p>The result of turning on or off the main switch of the agent or the main switch status of the agent. Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>failed</li>
+         * </ul>
+         * <p>The main switch status of the agent. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>abc@def success\nghi@jkl success\n</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +75,10 @@ public class ConfigAppResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AF921B-8187-489F-9913-43C808B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

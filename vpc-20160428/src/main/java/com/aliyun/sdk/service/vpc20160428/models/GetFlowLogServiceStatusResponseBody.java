@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowLogServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetFlowLogServiceStatusResponseBody</p>
  */
 public class GetFlowLogServiceStatusResponseBody extends TeaModel {
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFlowLogServiceStatusResponseBody(Builder builder) {
@@ -50,11 +55,14 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the flow log feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the flow log feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to enable the flow log feature.</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no You can call the [OpenFlowLogService](~~449637~~) operation to enable the flow log feature.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -62,7 +70,10 @@ public class GetFlowLogServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-06F83A1B457</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

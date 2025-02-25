@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBNodePerformanceResponseBody</p>
  */
 public class DescribeDBNodePerformanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PerformanceKeys")
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBNodePerformanceResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class PerformanceItemValue extends TeaModel {
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PerformanceItemValue(Builder builder) {
@@ -192,9 +203,15 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class Points extends TeaModel {
-        @NameInMap("PerformanceItemValue")
-        private java.util.List < PerformanceItemValue> performanceItemValue;
+        @com.aliyun.core.annotation.NameInMap("PerformanceItemValue")
+        private java.util.List<PerformanceItemValue> performanceItemValue;
 
         private Points(Builder builder) {
             this.performanceItemValue = builder.performanceItemValue;
@@ -211,17 +228,17 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         /**
          * @return performanceItemValue
          */
-        public java.util.List < PerformanceItemValue> getPerformanceItemValue() {
+        public java.util.List<PerformanceItemValue> getPerformanceItemValue() {
             return this.performanceItemValue;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceItemValue> performanceItemValue; 
+            private java.util.List<PerformanceItemValue> performanceItemValue; 
 
             /**
              * PerformanceItemValue.
              */
-            public Builder performanceItemValue(java.util.List < PerformanceItemValue> performanceItemValue) {
+            public Builder performanceItemValue(java.util.List<PerformanceItemValue> performanceItemValue) {
                 this.performanceItemValue = performanceItemValue;
                 return this;
             }
@@ -233,17 +250,23 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class PerformanceItem extends TeaModel {
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("Measurement")
+        @com.aliyun.core.annotation.NameInMap("Measurement")
         private String measurement;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Points points;
 
         private PerformanceItem(Builder builder) {
@@ -334,9 +357,15 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBNodePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBNodePerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("PerformanceItem")
-        private java.util.List < PerformanceItem> performanceItem;
+        @com.aliyun.core.annotation.NameInMap("PerformanceItem")
+        private java.util.List<PerformanceItem> performanceItem;
 
         private PerformanceKeys(Builder builder) {
             this.performanceItem = builder.performanceItem;
@@ -353,17 +382,17 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         /**
          * @return performanceItem
          */
-        public java.util.List < PerformanceItem> getPerformanceItem() {
+        public java.util.List<PerformanceItem> getPerformanceItem() {
             return this.performanceItem;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceItem> performanceItem; 
+            private java.util.List<PerformanceItem> performanceItem; 
 
             /**
              * PerformanceItem.
              */
-            public Builder performanceItem(java.util.List < PerformanceItem> performanceItem) {
+            public Builder performanceItem(java.util.List<PerformanceItem> performanceItem) {
                 this.performanceItem = performanceItem;
                 return this;
             }

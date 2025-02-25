@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAsynJobsRequest} extends {@link RequestModel}
  *
  * <p>ListAsynJobsRequest</p>
  */
 public class ListAsynJobsRequest extends Request {
-    @Query
-    @NameInMap("ApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
     private String apiName;
 
-    @Query
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("JobIds")
-    private java.util.List < String > jobIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
+    private java.util.List<String> jobIds;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    private java.util.List<String> resourceIds;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private ListAsynJobsRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class ListAsynJobsRequest extends Request {
     /**
      * @return jobIds
      */
-    public java.util.List < String > getJobIds() {
+    public java.util.List<String> getJobIds() {
         return this.jobIds;
     }
 
@@ -114,7 +119,7 @@ public class ListAsynJobsRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -129,10 +134,10 @@ public class ListAsynJobsRequest extends Request {
         private String apiName; 
         private Long beginTime; 
         private Long endTime; 
-        private java.util.List < String > jobIds; 
+        private java.util.List<String> jobIds; 
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
 
         private Builder() {
@@ -152,7 +157,10 @@ public class ListAsynJobsRequest extends Request {
         } 
 
         /**
-         * The name of the operation.
+         * <p>The name of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateLoadBalancer</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -161,7 +169,11 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * The start time of the task. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The timestamp that indicates the start time of the task. Unit: milliseconds.</p>
+         * <p>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-03T17:22Z</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -170,7 +182,11 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * The end time of the task. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * <p>The timestamp that indicates the end time of the task. Unit: milliseconds.</p>
+         * <p>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-04T17:22Z</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,16 +195,19 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * The asynchronous task IDs.
+         * <p>The asynchronous task IDs.</p>
          */
-        public Builder jobIds(java.util.List < String > jobIds) {
+        public Builder jobIds(java.util.List<String> jobIds) {
             this.putQueryParameter("JobIds", jobIds);
             this.jobIds = jobIds;
             return this;
         }
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -197,11 +216,14 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -210,24 +232,27 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
         }
 
         /**
-         * The type of the associated resource. Valid values:
-         * <p>
+         * <p>The type of the associated resource. Valid values:</p>
+         * <ul>
+         * <li><strong>loadbalancer</strong>: an Application Load Balancer (ALB) instance</li>
+         * <li><strong>listener</strong>: a listener</li>
+         * <li><strong>rule</strong>: a forwarding rule</li>
+         * <li><strong>acl</strong>: an access control list (ACL)</li>
+         * <li><strong>securitypolicy</strong>: a security policy</li>
+         * <li><strong>servergroup</strong>: a server group</li>
+         * </ul>
          * 
-         * *   **loadbalancer**: an Application Load Balancer (ALB) instance
-         * *   **listener**: a listener
-         * *   **rule**: a forwarding rule
-         * *   **acl**: an access control list (ACL)
-         * *   **securitypolicy**: a security policy
-         * *   **servergroup**: a server group
+         * <strong>example:</strong>
+         * <p>acl</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

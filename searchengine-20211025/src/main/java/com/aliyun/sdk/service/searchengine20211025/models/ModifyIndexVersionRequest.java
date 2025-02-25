@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIndexVersionRequest} extends {@link RequestModel}
  *
  * <p>ModifyIndexVersionRequest</p>
  */
 public class ModifyIndexVersionRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("clusterName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("clusterName")
     private String clusterName;
 
-    @Body
-    @NameInMap("body")
-    private java.util.List < ModifyIndexVersionRequestBody> body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<ModifyIndexVersionRequestBody> body;
 
     private ModifyIndexVersionRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class ModifyIndexVersionRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < ModifyIndexVersionRequestBody> getBody() {
+    public java.util.List<ModifyIndexVersionRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<ModifyIndexVersionRequest, Builder> {
         private String instanceId; 
         private String clusterName; 
-        private java.util.List < ModifyIndexVersionRequestBody> body; 
+        private java.util.List<ModifyIndexVersionRequestBody> body; 
 
         private Builder() {
             super();
@@ -83,7 +88,11 @@ public class ModifyIndexVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2j2off06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +101,10 @@ public class ModifyIndexVersionRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_2</p>
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);
@@ -101,9 +113,12 @@ public class ModifyIndexVersionRequest extends Request {
         }
 
         /**
-         * The keyword used to search for a version. Fuzzy match is supported.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder body(java.util.List < ModifyIndexVersionRequestBody> body) {
+        public Builder body(java.util.List<ModifyIndexVersionRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
@@ -116,14 +131,20 @@ public class ModifyIndexVersionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyIndexVersionRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyIndexVersionRequest</p>
+     */
     public static class ModifyIndexVersionRequestBody extends TeaModel {
-        @NameInMap("buildDeployId")
+        @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private String buildDeployId;
 
-        @NameInMap("indexName")
+        @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private ModifyIndexVersionRequestBody(Builder builder) {
@@ -167,7 +188,10 @@ public class ModifyIndexVersionRequest extends Request {
             private String version; 
 
             /**
-             * The ID of the index deployed in offline mode.
+             * <p>The deployment ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>277</p>
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -175,7 +199,10 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * The name of the index.
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main_index</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -183,7 +210,10 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * The version of the index.
+             * <p>The index version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

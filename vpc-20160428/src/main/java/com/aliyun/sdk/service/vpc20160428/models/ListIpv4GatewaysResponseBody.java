@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpv4GatewaysResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpv4GatewaysResponseBody</p>
  */
 public class ListIpv4GatewaysResponseBody extends TeaModel {
-    @NameInMap("Ipv4GatewayModels")
-    private java.util.List < Ipv4GatewayModels> ipv4GatewayModels;
+    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayModels")
+    private java.util.List<Ipv4GatewayModels> ipv4GatewayModels;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListIpv4GatewaysResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     /**
      * @return ipv4GatewayModels
      */
-    public java.util.List < Ipv4GatewayModels> getIpv4GatewayModels() {
+    public java.util.List<Ipv4GatewayModels> getIpv4GatewayModels() {
         return this.ipv4GatewayModels;
     }
 
@@ -68,25 +73,28 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Ipv4GatewayModels> ipv4GatewayModels; 
+        private java.util.List<Ipv4GatewayModels> ipv4GatewayModels; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
 
         /**
-         * The list of IPv4 gateways.
+         * <p>The list of IPv4 gateways.</p>
          */
-        public Builder ipv4GatewayModels(java.util.List < Ipv4GatewayModels> ipv4GatewayModels) {
+        public Builder ipv4GatewayModels(java.util.List<Ipv4GatewayModels> ipv4GatewayModels) {
             this.ipv4GatewayModels = ipv4GatewayModels;
             return this;
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -94,7 +102,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D265800-E306-529C-8418-84B0A1D201DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +113,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -115,11 +129,17 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpv4GatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpv4GatewaysResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -154,7 +174,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +185,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -176,35 +202,41 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIpv4GatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpv4GatewaysResponseBody</p>
+     */
     public static class Ipv4GatewayModels extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("Ipv4GatewayDescription")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayDescription")
         private String ipv4GatewayDescription;
 
-        @NameInMap("Ipv4GatewayId")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayId")
         private String ipv4GatewayId;
 
-        @NameInMap("Ipv4GatewayName")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayName")
         private String ipv4GatewayName;
 
-        @NameInMap("Ipv4GatewayRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayRouteTableId")
         private String ipv4GatewayRouteTableId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Ipv4GatewayModels(Builder builder) {
@@ -287,7 +319,7 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -307,15 +339,18 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             private String ipv4GatewayRouteTableId; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
 
             /**
-             * Indicates whether the IPv4 gateway is activated. Valid values:
-             * <p>
+             * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -323,7 +358,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the IPv4 gateway was created.
+             * <p>The time when the IPv4 gateway was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-02T07:07:35Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -331,7 +369,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the IPv4 gateway.
+             * <p>The description of the IPv4 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
                 this.ipv4GatewayDescription = ipv4GatewayDescription;
@@ -339,7 +380,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPv4 gateway.
+             * <p>The ID of the IPv4 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
              */
             public Builder ipv4GatewayId(String ipv4GatewayId) {
                 this.ipv4GatewayId = ipv4GatewayId;
@@ -347,7 +391,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IPv4 gateway.
+             * <p>The name of the IPv4 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder ipv4GatewayName(String ipv4GatewayName) {
                 this.ipv4GatewayName = ipv4GatewayName;
@@ -355,7 +402,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table associated with the IPv4 gateway.
+             * <p>The ID of the route table associated with the IPv4 gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-5ts0ohchwkp3dydt2****</p>
              */
             public Builder ipv4GatewayRouteTableId(String ipv4GatewayRouteTableId) {
                 this.ipv4GatewayRouteTableId = ipv4GatewayRouteTableId;
@@ -363,7 +413,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the IPv4 gateway belongs.
+             * <p>The ID of the resource group to which the IPv4 gateway belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4ph****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -371,14 +424,17 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IPv4 gateway. Valid values:
-             * <p>
+             * <p>The status of the IPv4 gateway. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
              * 
-             * *   **Creating**
-             * *   **Created**
-             * *   **Modifying**
-             * *   **Deleting**
-             * *   **Deleted**
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -386,15 +442,18 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags that are added to the resource group.
+             * <p>The list of tags that are added to the resource group.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The ID of the VPC with which the IPv4 gateways are associated.
+             * <p>The ID of the VPC with which the IPv4 gateways are associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-5tsrxlw7dv074gci4****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

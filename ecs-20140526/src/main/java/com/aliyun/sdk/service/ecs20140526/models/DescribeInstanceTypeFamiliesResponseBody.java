@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTypeFamiliesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTypeFamiliesResponseBody</p>
  */
 public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
-    @NameInMap("InstanceTypeFamilies")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
     private InstanceTypeFamilies instanceTypeFamilies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTypeFamiliesResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about instance families.
+         * <p>The instance families.</p>
          */
         public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -58,7 +63,10 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceTypeFamiliesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypeFamiliesResponseBody</p>
+     */
     public static class InstanceTypeFamily extends TeaModel {
-        @NameInMap("Generation")
+        @com.aliyun.core.annotation.NameInMap("Generation")
         private String generation;
 
-        @NameInMap("InstanceTypeFamilyId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilyId")
         private String instanceTypeFamilyId;
 
         private InstanceTypeFamily(Builder builder) {
@@ -110,7 +124,10 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             private String instanceTypeFamilyId; 
 
             /**
-             * The generation of the instance family.
+             * <p>The series of the instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-5</p>
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -118,7 +135,10 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance family.
+             * <p>The ID of the instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6</p>
              */
             public Builder instanceTypeFamilyId(String instanceTypeFamilyId) {
                 this.instanceTypeFamilyId = instanceTypeFamilyId;
@@ -132,9 +152,15 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTypeFamiliesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypeFamiliesResponseBody</p>
+     */
     public static class InstanceTypeFamilies extends TeaModel {
-        @NameInMap("InstanceTypeFamily")
-        private java.util.List < InstanceTypeFamily> instanceTypeFamily;
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
+        private java.util.List<InstanceTypeFamily> instanceTypeFamily;
 
         private InstanceTypeFamilies(Builder builder) {
             this.instanceTypeFamily = builder.instanceTypeFamily;
@@ -151,17 +177,17 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         /**
          * @return instanceTypeFamily
          */
-        public java.util.List < InstanceTypeFamily> getInstanceTypeFamily() {
+        public java.util.List<InstanceTypeFamily> getInstanceTypeFamily() {
             return this.instanceTypeFamily;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceTypeFamily> instanceTypeFamily; 
+            private java.util.List<InstanceTypeFamily> instanceTypeFamily; 
 
             /**
              * InstanceTypeFamily.
              */
-            public Builder instanceTypeFamily(java.util.List < InstanceTypeFamily> instanceTypeFamily) {
+            public Builder instanceTypeFamily(java.util.List<InstanceTypeFamily> instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
                 return this;
             }

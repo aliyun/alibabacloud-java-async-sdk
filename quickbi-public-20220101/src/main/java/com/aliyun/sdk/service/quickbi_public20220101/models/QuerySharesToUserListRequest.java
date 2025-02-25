@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySharesToUserListRequest} extends {@link RequestModel}
  *
  * <p>QuerySharesToUserListRequest</p>
  */
 public class QuerySharesToUserListRequest extends Request {
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private QuerySharesToUserListRequest(Builder builder) {
@@ -55,7 +60,11 @@ public class QuerySharesToUserListRequest extends Request {
         } 
 
         /**
-         * The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
+         * <p>The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e53<strong><strong>5ba4b679ee22e2a2927</strong></strong></p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

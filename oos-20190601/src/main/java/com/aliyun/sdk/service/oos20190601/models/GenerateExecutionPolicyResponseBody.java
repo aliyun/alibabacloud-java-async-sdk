@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateExecutionPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateExecutionPolicyResponseBody</p>
  */
 public class GenerateExecutionPolicyResponseBody extends TeaModel {
-    @NameInMap("MissingPolicy")
+    @com.aliyun.core.annotation.NameInMap("MissingPolicy")
     private String missingPolicy;
 
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateExecutionPolicyResponseBody(Builder builder) {
@@ -62,7 +67,10 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The policies that are missing.
+         * <p>The policies that are missing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Action&quot;: [&quot;ecs:DescribeInvocationResults&quot;, &quot;ecs:DescribeInstances&quot;, &quot;ecs:RunCommand&quot;, &quot;ecs:DescribeInvocations&quot;], &quot;ServiceName&quot;: &quot;ecs&quot;, &quot;Resources&quot;: &quot;*&quot;}]</p>
          */
         public Builder missingPolicy(String missingPolicy) {
             this.missingPolicy = missingPolicy;
@@ -70,7 +78,10 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The RAM policy.
+         * <p>The RAM policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -78,7 +89,10 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

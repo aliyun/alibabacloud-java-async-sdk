@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveRecycleBinTableResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private RemoveRecycleBinTableResponseBody body;
 
     private RemoveRecycleBinTableResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class RemoveRecycleBinTableResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public RemoveRecycleBinTableResponseBody getBody() {
@@ -52,6 +61,8 @@ public class RemoveRecycleBinTableResponse extends Response {
     public interface Builder extends Response.Builder<RemoveRecycleBinTableResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(RemoveRecycleBinTableResponseBody body);
 
@@ -64,6 +75,7 @@ public class RemoveRecycleBinTableResponse extends Response {
             extends Response.BuilderImpl<RemoveRecycleBinTableResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private RemoveRecycleBinTableResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class RemoveRecycleBinTableResponse extends Response {
         private BuilderImpl(RemoveRecycleBinTableResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class RemoveRecycleBinTableResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

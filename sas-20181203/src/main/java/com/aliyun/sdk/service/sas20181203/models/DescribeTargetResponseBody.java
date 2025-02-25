@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTargetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTargetResponseBody</p>
  */
 public class DescribeTargetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Targets")
-    private java.util.List < Targets> targets;
+    @com.aliyun.core.annotation.NameInMap("Targets")
+    private java.util.List<Targets> targets;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTargetResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeTargetResponseBody extends TeaModel {
     /**
      * @return targets
      */
-    public java.util.List < Targets> getTargets() {
+    public java.util.List<Targets> getTargets() {
         return this.targets;
     }
 
@@ -58,11 +63,14 @@ public class DescribeTargetResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Targets> targets; 
+        private java.util.List<Targets> targets; 
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +78,18 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the server.
+         * <p>The information about the server.</p>
          */
-        public Builder targets(java.util.List < Targets> targets) {
+        public Builder targets(java.util.List<Targets> targets) {
             this.targets = targets;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,14 +102,20 @@ public class DescribeTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTargetResponseBody</p>
+     */
     public static class Targets extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Targets(Builder builder) {
@@ -142,7 +159,10 @@ public class DescribeTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The flag that is added to the server. This parameter can be empty.
+             * <p>The flag that is added to the server. This parameter can be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>del</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -150,7 +170,10 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server or the ID of the server group.
+             * <p>The UUID of the server or the ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5c5f0169-3527-40a2-b5ff-0bc1db8f****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -158,11 +181,14 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li><strong>uuid</strong>: a server</li>
+             * <li><strong>groupId</strong>: a server group</li>
+             * </ul>
              * 
-             * *   **uuid**: a server
-             * *   **groupId**: a server group
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

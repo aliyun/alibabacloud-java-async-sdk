@@ -1,59 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDatasetsRequest} extends {@link RequestModel}
  *
  * <p>ListDatasetsRequest</p>
  */
 public class ListDatasetsRequest extends Request {
-    @Query
-    @NameInMap("DataSourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceTypes")
     private String dataSourceTypes;
 
-    @Query
-    @NameInMap("DataTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataTypes")
     private String dataTypes;
 
-    @Query
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Properties")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Properties")
     private String properties;
 
-    @Query
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Provider")
+    private String provider;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDatasetId")
+    private String sourceDatasetId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Query
-    @NameInMap("SourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceTypes")
     private String sourceTypes;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListDatasetsRequest(Builder builder) {
@@ -66,6 +74,8 @@ public class ListDatasetsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.properties = builder.properties;
+        this.provider = builder.provider;
+        this.sourceDatasetId = builder.sourceDatasetId;
         this.sourceId = builder.sourceId;
         this.sourceTypes = builder.sourceTypes;
         this.workspaceId = builder.workspaceId;
@@ -141,6 +151,20 @@ public class ListDatasetsRequest extends Request {
     }
 
     /**
+     * @return provider
+     */
+    public String getProvider() {
+        return this.provider;
+    }
+
+    /**
+     * @return sourceDatasetId
+     */
+    public String getSourceDatasetId() {
+        return this.sourceDatasetId;
+    }
+
+    /**
      * @return sourceId
      */
     public String getSourceId() {
@@ -170,6 +194,8 @@ public class ListDatasetsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String properties; 
+        private String provider; 
+        private String sourceDatasetId; 
         private String sourceId; 
         private String sourceTypes; 
         private String workspaceId; 
@@ -188,6 +214,8 @@ public class ListDatasetsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.properties = request.properties;
+            this.provider = request.provider;
+            this.sourceDatasetId = request.sourceDatasetId;
             this.sourceId = request.sourceId;
             this.sourceTypes = request.sourceTypes;
             this.workspaceId = request.workspaceId;
@@ -262,6 +290,24 @@ public class ListDatasetsRequest extends Request {
         public Builder properties(String properties) {
             this.putQueryParameter("Properties", properties);
             this.properties = properties;
+            return this;
+        }
+
+        /**
+         * Provider.
+         */
+        public Builder provider(String provider) {
+            this.putQueryParameter("Provider", provider);
+            this.provider = provider;
+            return this;
+        }
+
+        /**
+         * SourceDatasetId.
+         */
+        public Builder sourceDatasetId(String sourceDatasetId) {
+            this.putQueryParameter("SourceDatasetId", sourceDatasetId);
+            this.sourceDatasetId = sourceDatasetId;
             return this;
         }
 

@@ -1,38 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupsResponseBody</p>
  */
 public class DescribeBackupsResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
-    @NameInMap("Backups")
+    @com.aliyun.core.annotation.NameInMap("Backups")
     private Backups backups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("FreeSize")
+    private Long freeSize;
+
+    @com.aliyun.core.annotation.NameInMap("FullStorageSize")
+    private Long fullStorageSize;
+
+    @com.aliyun.core.annotation.NameInMap("LogStorageSize")
+    private Long logStorageSize;
+
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBackupsResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.backups = builder.backups;
+        this.freeSize = builder.freeSize;
+        this.fullStorageSize = builder.fullStorageSize;
+        this.logStorageSize = builder.logStorageSize;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -59,6 +71,27 @@ public class DescribeBackupsResponseBody extends TeaModel {
      */
     public Backups getBackups() {
         return this.backups;
+    }
+
+    /**
+     * @return freeSize
+     */
+    public Long getFreeSize() {
+        return this.freeSize;
+    }
+
+    /**
+     * @return fullStorageSize
+     */
+    public Long getFullStorageSize() {
+        return this.fullStorageSize;
+    }
+
+    /**
+     * @return logStorageSize
+     */
+    public Long getLogStorageSize() {
+        return this.logStorageSize;
     }
 
     /**
@@ -92,13 +125,16 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public static final class Builder {
         private AccessDeniedDetail accessDeniedDetail; 
         private Backups backups; 
+        private Long freeSize; 
+        private Long fullStorageSize; 
+        private Long logStorageSize; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The following parameters are no longer used. Ignore the parameters.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,7 +142,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the backup files.
+         * <p>Details of the backup files.</p>
          */
         public Builder backups(Backups backups) {
             this.backups = backups;
@@ -114,7 +150,49 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>This parameter does not take effect. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
+        public Builder freeSize(Long freeSize) {
+            this.freeSize = freeSize;
+            return this;
+        }
+
+        /**
+         * <p>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</p>
+         * <blockquote>
+         * <p> The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid full backups of the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        public Builder fullStorageSize(Long fullStorageSize) {
+            this.fullStorageSize = fullStorageSize;
+            return this;
+        }
+
+        /**
+         * <p>The size of the log backup file of the instance. Unit: bytes. This value is valid only when flashback is enabled.</p>
+         * <blockquote>
+         * <p> The value of this parameter is independent of the number and size of the returned backup sets. Instead, it reflects the total size of all valid log backups of the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
+        public Builder logStorageSize(Long logStorageSize) {
+            this.logStorageSize = logStorageSize;
+            return this;
+        }
+
+        /**
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +200,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +211,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963C20F0-7CE1-4591-AAF3-6F3CD1CE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +222,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of backup files that were returned.
+         * <p>The total number of backup files that were returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -151,26 +238,32 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class AccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
         private String authAction;
 
-        @NameInMap("AuthPrincipalDisplayName")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
         private String authPrincipalDisplayName;
 
-        @NameInMap("AuthPrincipalOwnerId")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
         private String authPrincipalOwnerId;
 
-        @NameInMap("AuthPrincipalType")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
         private String authPrincipalType;
 
-        @NameInMap("EncodedDiagnosticMessage")
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
         private String encodedDiagnosticMessage;
 
-        @NameInMap("NoPermissionType")
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
         private String noPermissionType;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private AccessDeniedDetail(Builder builder) {
@@ -250,7 +343,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * AuthAction.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -258,7 +354,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -266,7 +365,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -274,7 +376,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -282,7 +387,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -290,7 +398,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -298,7 +409,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>This parameter is no longer used. Ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -312,48 +426,57 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class Backup extends TeaModel {
-        @NameInMap("BackupDBNames")
+        @com.aliyun.core.annotation.NameInMap("BackupDBNames")
         private String backupDBNames;
 
-        @NameInMap("BackupDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupDownloadURL")
         private String backupDownloadURL;
 
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupId")
-        private Integer backupId;
+        @com.aliyun.core.annotation.NameInMap("BackupId")
+        private Long backupId;
 
-        @NameInMap("BackupIntranetDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupIntranetDownloadURL")
         private String backupIntranetDownloadURL;
 
-        @NameInMap("BackupJobID")
-        private Integer backupJobID;
+        @com.aliyun.core.annotation.NameInMap("BackupJobID")
+        private Long backupJobID;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private Long backupSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("NodeInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceId")
         private String nodeInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("RecoverConfigMode")
+        private String recoverConfigMode;
 
         private Backup(Builder builder) {
             this.backupDBNames = builder.backupDBNames;
@@ -370,6 +493,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupType = builder.backupType;
             this.engineVersion = builder.engineVersion;
             this.nodeInstanceId = builder.nodeInstanceId;
+            this.recoverConfigMode = builder.recoverConfigMode;
         }
 
         public static Builder builder() {
@@ -404,7 +528,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backupId
          */
-        public Integer getBackupId() {
+        public Long getBackupId() {
             return this.backupId;
         }
 
@@ -418,7 +542,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backupJobID
          */
-        public Integer getBackupJobID() {
+        public Long getBackupJobID() {
             return this.backupJobID;
         }
 
@@ -478,13 +602,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.nodeInstanceId;
         }
 
+        /**
+         * @return recoverConfigMode
+         */
+        public String getRecoverConfigMode() {
+            return this.recoverConfigMode;
+        }
+
         public static final class Builder {
             private String backupDBNames; 
             private String backupDownloadURL; 
             private String backupEndTime; 
-            private Integer backupId; 
+            private Long backupId; 
             private String backupIntranetDownloadURL; 
-            private Integer backupJobID; 
+            private Long backupJobID; 
             private String backupMethod; 
             private String backupMode; 
             private Long backupSize; 
@@ -493,9 +624,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupType; 
             private String engineVersion; 
             private String nodeInstanceId; 
+            private String recoverConfigMode; 
 
             /**
-             * The databases that are backed up. Default value: **all**, which indicates that all databases are backed up.
+             * <p>The names of the databases that are backed up. The default value is <strong>all</strong>, which indicates that all databases are backed up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder backupDBNames(String backupDBNames) {
                 this.backupDBNames = backupDBNames;
@@ -503,7 +638,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The public download URL of the backup file.
+             * <p>The public download URL of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://rdsbak-hk45-v2.oss-cn-hongkong.aliyuncs.com/">https://rdsbak-hk45-v2.oss-cn-hongkong.aliyuncs.com/</a>********</p>
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -511,7 +649,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the backup.
+             * <p>The end time of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-14T05:31:13Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -519,18 +660,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup file.
+             * <p>The ID of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165*****50</p>
              */
-            public Builder backupId(Integer backupId) {
+            public Builder backupId(Long backupId) {
                 this.backupId = backupId;
                 return this;
             }
 
             /**
-             * The internal download URL of the backup file.
-             * <p>
+             * <p>The internal download URL of the backup file.</p>
+             * <blockquote>
+             * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
+             * </blockquote>
              * 
-             * >  You can download the backup file by using this URL from the Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance and ApsaraDB for Redis instance must reside in the classic network or the same virtual private cloud (VPC) within the same region.
+             * <strong>example:</strong>
+             * <p><a href="https://rdsbak-hk45-v2.oss-cn-hongkong.aliyuncs.com/">https://rdsbak-hk45-v2.oss-cn-hongkong.aliyuncs.com/</a>********</p>
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -538,19 +685,25 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup task.
+             * <p>The ID of the backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24340</p>
              */
-            public Builder backupJobID(Integer backupJobID) {
+            public Builder backupJobID(Long backupJobID) {
                 this.backupJobID = backupJobID;
                 return this;
             }
 
             /**
-             * The backup method. Valid values:
-             * <p>
+             * <p>The backup method. Valid values:</p>
+             * <ul>
+             * <li><strong>Logical</strong></li>
+             * <li><strong>Physical</strong></li>
+             * </ul>
              * 
-             * *   **Logical**
-             * *   **Physical**
+             * <strong>example:</strong>
+             * <p>Physical</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -558,11 +711,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup mode. Valid values:
-             * <p>
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Automated</strong></li>
+             * <li><strong>Manual</strong></li>
+             * </ul>
              * 
-             * *   **Automated**
-             * *   **Manual**
+             * <strong>example:</strong>
+             * <p>Automated</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -570,7 +726,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the backup file.
+             * <p>The size of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -578,7 +737,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the backup.
+             * <p>The start time of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-14T05:28:50Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -586,11 +748,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the backup task. Valid values:
-             * <p>
+             * <p>The status of the backup. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * *   **Success**: The task is successful.
-             * *   **Failed**: The task failed.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -598,11 +763,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup type of the backup file. Valid values:
-             * <p>
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>FullBackup</strong></li>
+             * <li><strong>IncrementalBackup</strong></li>
+             * </ul>
              * 
-             * *   **FullBackup**
-             * *   **IncrementalBackup**
+             * <strong>example:</strong>
+             * <p>FullBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -610,7 +778,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The major engine version of the instance.
+             * <p>The engine version (major version) of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -618,13 +789,27 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
-             * <p>
+             * <p>The node ID.</p>
+             * <blockquote>
+             * <p> If the instance uses the standard architecture, this parameter returns the instance ID.</p>
+             * </blockquote>
              * 
-             * >  If a standard instance is used, the instance ID is returned.
+             * <strong>example:</strong>
+             * <p>r-bp10noxlhcoim2****-db-1</p>
              */
             public Builder nodeInstanceId(String nodeInstanceId) {
                 this.nodeInstanceId = nodeInstanceId;
+                return this;
+            }
+
+            /**
+             * <p>If the backup includes account information, kernel parameters and whitelist details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;whitelist&quot;:true,&quot;config&quot;:true,&quot;account&quot;:true}</p>
+             */
+            public Builder recoverConfigMode(String recoverConfigMode) {
+                this.recoverConfigMode = recoverConfigMode;
                 return this;
             }
 
@@ -635,8 +820,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class Backups extends TeaModel {
-        @NameInMap("Backup")
+        @com.aliyun.core.annotation.NameInMap("Backup")
         private java.util.List < Backup> backup;
 
         private Backups(Builder builder) {

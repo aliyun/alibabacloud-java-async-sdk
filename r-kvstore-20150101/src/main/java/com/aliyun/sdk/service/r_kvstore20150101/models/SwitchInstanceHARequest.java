@@ -1,56 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchInstanceHARequest} extends {@link RequestModel}
  *
  * <p>SwitchInstanceHARequest</p>
  */
 public class SwitchInstanceHARequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SwitchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
     private Integer switchMode;
 
-    @Query
-    @NameInMap("SwitchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchType")
     private String switchType;
 
     private SwitchInstanceHARequest(Builder builder) {
@@ -190,7 +190,11 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,10 +203,13 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * The ID of the data shard. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). `all` indicates that all data shards are specified.
-         * <p>
+         * <p>The ID of the data shard. You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). <code>all</code> indicates that all data shards are specified.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only for read/write splitting and cluster instances.</p>
+         * </blockquote>
          * 
-         * > This parameter is available and required only for read/write splitting and cluster instances.
+         * <strong>example:</strong>
+         * <p>56<strong><strong>19,56</strong></strong>20</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -256,13 +263,17 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * The time when to perform the switchover. Default value: 0. Valid values:
-         * <p>
+         * <p>The time when to perform the switchover. Default value: 0. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: immediately performs the switchover.</li>
+         * <li><strong>1</strong>: performs the switchover during the maintenance window.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+         * </blockquote>
          * 
-         * *   **0**: immediately performs the switchover.
-         * *   **1**: performs the switchover during the maintenance window.
-         * 
-         * > You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchMode(Integer switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);
@@ -271,13 +282,17 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * The switching mode. Valid values:
-         * <p>
+         * <p>The switching mode. Valid values:</p>
+         * <ul>
+         * <li><strong>AvailablePriority</strong>: prioritizes the availability and performs a switchover immediately without considering the latency of data synchronization between the master and replica nodes. This may cause data loss.</li>
+         * <li><strong>ReliabilityPriority</strong>: prioritizes the reliability and performs a switchover after no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause a switchover failure in scenarios that involve a large volume of data writes and persistent latency of data synchronization.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.</p>
+         * </blockquote>
          * 
-         * *   **AvailablePriority**: prioritizes the availability and performs a switchover immediately without considering the latency of data synchronization between the master and replica nodes. This may cause data loss.
-         * *   **ReliabilityPriority**: prioritizes the reliability and performs a switchover after no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause a switchover failure in scenarios that involve a large volume of data writes and persistent latency of data synchronization.
-         * 
-         * > You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.
+         * <strong>example:</strong>
+         * <p>AvailablePriority</p>
          */
         public Builder switchType(String switchType) {
             this.putQueryParameter("SwitchType", switchType);

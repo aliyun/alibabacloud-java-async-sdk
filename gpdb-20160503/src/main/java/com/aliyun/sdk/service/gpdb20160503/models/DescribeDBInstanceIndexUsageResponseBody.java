@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIndexUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceIndexUsageResponseBody</p>
  */
 public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstanceIndexUsageResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -68,21 +73,24 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The time when the table was last deleted, inserted, or updated.
+         * <p>The queried index usage.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -90,7 +98,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -111,35 +125,41 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceIndexUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceIndexUsageResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("IndexDef")
+        @com.aliyun.core.annotation.NameInMap("IndexDef")
         private String indexDef;
 
-        @NameInMap("IndexName")
+        @com.aliyun.core.annotation.NameInMap("IndexName")
         private String indexName;
 
-        @NameInMap("IndexScanTimes")
-        private Integer indexScanTimes;
+        @com.aliyun.core.annotation.NameInMap("IndexScanTimes")
+        private Long indexScanTimes;
 
-        @NameInMap("IndexSize")
+        @com.aliyun.core.annotation.NameInMap("IndexSize")
         private String indexSize;
 
-        @NameInMap("IsPartitionTable")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionTable")
         private Boolean isPartitionTable;
 
-        @NameInMap("ParentTableName")
+        @com.aliyun.core.annotation.NameInMap("ParentTableName")
         private String parentTableName;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TimeLastUpdated")
+        @com.aliyun.core.annotation.NameInMap("TimeLastUpdated")
         private String timeLastUpdated;
 
         private Items(Builder builder) {
@@ -187,7 +207,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         /**
          * @return indexScanTimes
          */
-        public Integer getIndexScanTimes() {
+        public Long getIndexScanTimes() {
             return this.indexScanTimes;
         }
 
@@ -237,7 +257,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             private String databaseName; 
             private String indexDef; 
             private String indexName; 
-            private Integer indexScanTimes; 
+            private Long indexScanTimes; 
             private String indexSize; 
             private Boolean isPartitionTable; 
             private String parentTableName; 
@@ -246,7 +266,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             private String timeLastUpdated; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbtest</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -254,7 +277,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the index.
+             * <p>The definition of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE INDEX idx1 ON schema1.tab1_ptr_2010</p>
              */
             public Builder indexDef(String indexDef) {
                 this.indexDef = indexDef;
@@ -262,7 +288,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index.
+             * <p>The name of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idx1</p>
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -270,15 +299,21 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of index scans.
+             * <p>The number of index scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
-            public Builder indexScanTimes(Integer indexScanTimes) {
+            public Builder indexScanTimes(Long indexScanTimes) {
                 this.indexScanTimes = indexScanTimes;
                 return this;
             }
 
             /**
-             * The size of the index. Unit: bytes.
+             * <p>The size of the index. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder indexSize(String indexSize) {
                 this.indexSize = indexSize;
@@ -286,11 +321,14 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is a partitioned table. Valid values:
-             * <p>
+             * <p>Indicates whether the table is a partitioned table. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The table is a partitioned table.</li>
+             * <li><strong>false</strong>: The table is not a partitioned table.</li>
+             * </ul>
              * 
-             * *   **true**: The table is a partitioned table.
-             * *   **false**: The table is not a partitioned table.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPartitionTable(Boolean isPartitionTable) {
                 this.isPartitionTable = isPartitionTable;
@@ -298,7 +336,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parent table.
+             * <p>The name of the parent table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tab1</p>
              */
             public Builder parentTableName(String parentTableName) {
                 this.parentTableName = parentTableName;
@@ -306,7 +347,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the schema.
+             * <p>The name of the schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema1</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -314,7 +358,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tab1_ptr_2010</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -322,7 +369,10 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the table was last deleted, inserted, or updated.
+             * <p>The time when the table was last deleted, inserted, or updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-08T20:00:00Z</p>
              */
             public Builder timeLastUpdated(String timeLastUpdated) {
                 this.timeLastUpdated = timeLastUpdated;

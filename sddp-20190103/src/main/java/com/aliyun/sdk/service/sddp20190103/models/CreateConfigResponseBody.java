@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConfigResponseBody} extends {@link TeaModel}
  *
  * <p>CreateConfigResponseBody</p>
  */
 public class CreateConfigResponseBody extends TeaModel {
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateConfigResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the common alert configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12300</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -58,7 +66,10 @@ public class CreateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208B016D-4CB9-4A85-96A5-0B8ED1EBF271</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

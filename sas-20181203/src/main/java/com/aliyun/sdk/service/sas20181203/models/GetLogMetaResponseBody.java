@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLogMetaResponseBody} extends {@link TeaModel}
  *
  * <p>GetLogMetaResponseBody</p>
  */
 public class GetLogMetaResponseBody extends TeaModel {
-    @NameInMap("LogMeta")
+    @com.aliyun.core.annotation.NameInMap("LogMeta")
     private LogMeta logMeta;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLogMetaResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetLogMetaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data of a data shipping task.
+         * <p>The data of a data shipping task.</p>
          */
         public Builder logMeta(LogMeta logMeta) {
             this.logMeta = logMeta;
@@ -58,7 +63,10 @@ public class GetLogMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class GetLogMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLogMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLogMetaResponseBody</p>
+     */
     public static class LogMeta extends TeaModel {
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private LogMeta(Builder builder) {
@@ -122,7 +136,10 @@ public class GetLogMetaResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the dedicated Logstore in which logs are stored.
+             * <p>The name of the dedicated Logstore in which logs are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis-log-login</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -130,7 +147,10 @@ public class GetLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service project.
+             * <p>The Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-log</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -138,11 +158,14 @@ public class GetLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of a data shipping task of a log. Valid values:
-             * <p>
+             * <p>The status of a data shipping task of a log. Valid values:</p>
+             * <ul>
+             * <li><strong>enabled</strong></li>
+             * <li><strong>disabled</strong></li>
+             * </ul>
              * 
-             * *   **enabled**
-             * *   **disabled**
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

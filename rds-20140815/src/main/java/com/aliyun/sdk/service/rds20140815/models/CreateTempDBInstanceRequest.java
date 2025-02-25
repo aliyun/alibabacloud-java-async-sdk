@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTempDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateTempDBInstanceRequest</p>
  */
 public class CreateTempDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
-    private Integer backupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    private Long backupId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
     private CreateTempDBInstanceRequest(Builder builder) {
@@ -73,7 +78,7 @@ public class CreateTempDBInstanceRequest extends Request {
     /**
      * @return backupId
      */
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.backupId;
     }
 
@@ -127,7 +132,7 @@ public class CreateTempDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTempDBInstanceRequest, Builder> {
-        private Integer backupId; 
+        private Long backupId; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -153,19 +158,26 @@ public class CreateTempDBInstanceRequest extends Request {
         } 
 
         /**
-         * The backup set ID. You can call the DescribeBackups operation to query the backup set ID.
-         * <p>
+         * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
+         * <strong>example:</strong>
+         * <p>603******</p>
          */
-        public Builder backupId(Integer backupId) {
+        public Builder backupId(Long backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
             return this;
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,7 +204,10 @@ public class CreateTempDBInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -219,11 +234,16 @@ public class CreateTempDBInstanceRequest extends Request {
         }
 
         /**
-         * The specified point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The specified point in time within the backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The time can be set to a point in time within the last seven days and must be more than 30 minutes earlier than the current time. The default time zone is UTC.</li>
+         * <li>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   The time can be set to a point in time within the last seven days and must be more than 30 minutes earlier than the current time. The default time zone is UTC.
-         * > *   You must specify at least one of the **BackupId** and **RestoreTime** parameters.
+         * <strong>example:</strong>
+         * <p>2011-06-11T16:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

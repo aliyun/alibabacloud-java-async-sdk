@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupUserSaveRequest} extends {@link RequestModel}
  *
  * <p>GroupUserSaveRequest</p>
  */
 public class GroupUserSaveRequest extends Request {
-    @Body
-    @NameInMap("base_city_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("base_city_code")
     private String baseCityCode;
 
-    @Body
-    @NameInMap("birthday")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("birthday")
     private String birthday;
 
-    @Body
-    @NameInMap("cert_list")
-    private java.util.List < CertList> certList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cert_list")
+    private java.util.List<CertList> certList;
 
-    @Body
-    @NameInMap("gender")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gender")
     private String gender;
 
-    @Body
-    @NameInMap("job_no")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("job_no")
     private String jobNo;
 
-    @Body
-    @NameInMap("phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
-    @Body
-    @NameInMap("real_name_en")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("real_name_en")
     private String realNameEn;
 
-    @Body
-    @NameInMap("sub_corp_id_list")
-    @Validation(required = true)
-    private java.util.List < SubCorpIdList> subCorpIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<SubCorpIdList> subCorpIdList;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("user_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private GroupUserSaveRequest(Builder builder) {
@@ -104,7 +109,7 @@ public class GroupUserSaveRequest extends Request {
     /**
      * @return certList
      */
-    public java.util.List < CertList> getCertList() {
+    public java.util.List<CertList> getCertList() {
         return this.certList;
     }
 
@@ -139,7 +144,7 @@ public class GroupUserSaveRequest extends Request {
     /**
      * @return subCorpIdList
      */
-    public java.util.List < SubCorpIdList> getSubCorpIdList() {
+    public java.util.List<SubCorpIdList> getSubCorpIdList() {
         return this.subCorpIdList;
     }
 
@@ -167,12 +172,12 @@ public class GroupUserSaveRequest extends Request {
     public static final class Builder extends Request.Builder<GroupUserSaveRequest, Builder> {
         private String baseCityCode; 
         private String birthday; 
-        private java.util.List < CertList> certList; 
+        private java.util.List<CertList> certList; 
         private String gender; 
         private String jobNo; 
         private String phone; 
         private String realNameEn; 
-        private java.util.List < SubCorpIdList> subCorpIdList; 
+        private java.util.List<SubCorpIdList> subCorpIdList; 
         private String userId; 
         private String userName; 
         private String xAcsBtripCorpToken; 
@@ -217,7 +222,7 @@ public class GroupUserSaveRequest extends Request {
         /**
          * cert_list.
          */
-        public Builder certList(java.util.List < CertList> certList) {
+        public Builder certList(java.util.List<CertList> certList) {
             String certListShrink = shrink(certList, "cert_list", "json");
             this.putBodyParameter("cert_list", certListShrink);
             this.certList = certList;
@@ -261,9 +266,9 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * sub_corp_id_list.
+         * <p>This parameter is required.</p>
          */
-        public Builder subCorpIdList(java.util.List < SubCorpIdList> subCorpIdList) {
+        public Builder subCorpIdList(java.util.List<SubCorpIdList> subCorpIdList) {
             String subCorpIdListShrink = shrink(subCorpIdList, "sub_corp_id_list", "json");
             this.putBodyParameter("sub_corp_id_list", subCorpIdListShrink);
             this.subCorpIdList = subCorpIdList;
@@ -271,7 +276,10 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -280,7 +288,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         /**
-         * user_name.
+         * <p>This parameter is required.</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);
@@ -304,20 +312,26 @@ public class GroupUserSaveRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GroupUserSaveRequest} extends {@link TeaModel}
+     *
+     * <p>GroupUserSaveRequest</p>
+     */
     public static class CertList extends TeaModel {
-        @NameInMap("cert_expired_time")
+        @com.aliyun.core.annotation.NameInMap("cert_expired_time")
         private String certExpiredTime;
 
-        @NameInMap("cert_nation")
+        @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
 
-        @NameInMap("cert_no")
+        @com.aliyun.core.annotation.NameInMap("cert_no")
         private String certNo;
 
-        @NameInMap("cert_type")
+        @com.aliyun.core.annotation.NameInMap("cert_type")
         private Integer certType;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
         private CertList(Builder builder) {
@@ -425,25 +439,31 @@ public class GroupUserSaveRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GroupUserSaveRequest} extends {@link TeaModel}
+     *
+     * <p>GroupUserSaveRequest</p>
+     */
     public static class SubCorpIdList extends TeaModel {
-        @NameInMap("depart_ids")
-        private java.util.List < String > departIds;
+        @com.aliyun.core.annotation.NameInMap("depart_ids")
+        private java.util.List<String> departIds;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("leave_status")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("leave_status")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer leaveStatus;
 
-        @NameInMap("manager_user_id")
+        @com.aliyun.core.annotation.NameInMap("manager_user_id")
         private String managerUserId;
 
-        @NameInMap("position_level")
+        @com.aliyun.core.annotation.NameInMap("position_level")
         private String positionLevel;
 
-        @NameInMap("sub_corp_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("sub_corp_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String subCorpId;
 
         private SubCorpIdList(Builder builder) {
@@ -466,7 +486,7 @@ public class GroupUserSaveRequest extends Request {
         /**
          * @return departIds
          */
-        public java.util.List < String > getDepartIds() {
+        public java.util.List<String> getDepartIds() {
             return this.departIds;
         }
 
@@ -506,7 +526,7 @@ public class GroupUserSaveRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > departIds; 
+            private java.util.List<String> departIds; 
             private String email; 
             private Integer leaveStatus; 
             private String managerUserId; 
@@ -516,7 +536,7 @@ public class GroupUserSaveRequest extends Request {
             /**
              * depart_ids.
              */
-            public Builder departIds(java.util.List < String > departIds) {
+            public Builder departIds(java.util.List<String> departIds) {
                 this.departIds = departIds;
                 return this;
             }
@@ -530,7 +550,10 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * leave_status.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder leaveStatus(Integer leaveStatus) {
                 this.leaveStatus = leaveStatus;
@@ -554,7 +577,10 @@ public class GroupUserSaveRequest extends Request {
             }
 
             /**
-             * sub_corp_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>btrip123</p>
              */
             public Builder subCorpId(String subCorpId) {
                 this.subCorpId = subCorpId;

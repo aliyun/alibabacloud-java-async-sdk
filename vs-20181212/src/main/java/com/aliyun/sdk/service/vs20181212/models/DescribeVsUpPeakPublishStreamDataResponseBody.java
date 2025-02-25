@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsUpPeakPublishStreamDataResponseBody</p>
  */
 public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
-    @NameInMap("DescribeVsUpPeakPublishStreamDatas")
+    @com.aliyun.core.annotation.NameInMap("DescribeVsUpPeakPublishStreamDatas")
     private DescribeVsUpPeakPublishStreamDatas describeVsUpPeakPublishStreamDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsUpPeakPublishStreamDataResponseBody(Builder builder) {
@@ -71,20 +76,26 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsUpPeakPublishStreamDataResponseBody</p>
+     */
     public static class DescribeVsUpPeakPublishStreamData extends TeaModel {
-        @NameInMap("BandWidth")
+        @com.aliyun.core.annotation.NameInMap("BandWidth")
         private String bandWidth;
 
-        @NameInMap("PeakTime")
+        @com.aliyun.core.annotation.NameInMap("PeakTime")
         private String peakTime;
 
-        @NameInMap("PublishStreamNum")
+        @com.aliyun.core.annotation.NameInMap("PublishStreamNum")
         private Integer publishStreamNum;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private String queryTime;
 
-        @NameInMap("StatName")
+        @com.aliyun.core.annotation.NameInMap("StatName")
         private String statName;
 
         private DescribeVsUpPeakPublishStreamData(Builder builder) {
@@ -192,9 +203,15 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsUpPeakPublishStreamDataResponseBody</p>
+     */
     public static class DescribeVsUpPeakPublishStreamDatas extends TeaModel {
-        @NameInMap("DescribeVsUpPeakPublishStreamData")
-        private java.util.List < DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData;
+        @com.aliyun.core.annotation.NameInMap("DescribeVsUpPeakPublishStreamData")
+        private java.util.List<DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData;
 
         private DescribeVsUpPeakPublishStreamDatas(Builder builder) {
             this.describeVsUpPeakPublishStreamData = builder.describeVsUpPeakPublishStreamData;
@@ -211,17 +228,17 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         /**
          * @return describeVsUpPeakPublishStreamData
          */
-        public java.util.List < DescribeVsUpPeakPublishStreamData> getDescribeVsUpPeakPublishStreamData() {
+        public java.util.List<DescribeVsUpPeakPublishStreamData> getDescribeVsUpPeakPublishStreamData() {
             return this.describeVsUpPeakPublishStreamData;
         }
 
         public static final class Builder {
-            private java.util.List < DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData; 
+            private java.util.List<DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData; 
 
             /**
              * DescribeVsUpPeakPublishStreamData.
              */
-            public Builder describeVsUpPeakPublishStreamData(java.util.List < DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData) {
+            public Builder describeVsUpPeakPublishStreamData(java.util.List<DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData) {
                 this.describeVsUpPeakPublishStreamData = describeVsUpPeakPublishStreamData;
                 return this;
             }

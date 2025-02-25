@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePackagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePackagesResponseBody</p>
  */
 public class DescribePackagesResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePackagesResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class DescribePackagesResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,13 +85,16 @@ public class DescribePackagesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +102,18 @@ public class DescribePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>An array that consists of the information about the packages.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,35 +148,41 @@ public class DescribePackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePackagesResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("Sensitive")
+        @com.aliyun.core.annotation.NameInMap("Sensitive")
         private Boolean sensitive;
 
-        @NameInMap("SensitiveCount")
+        @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Items(Builder builder) {
@@ -266,7 +289,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CreationTime.
+             * <p>The point in time when the MaxCompute package was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536751124000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -274,7 +300,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -282,7 +311,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance to which the package belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223453332</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -290,7 +322,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gxdata</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -298,7 +333,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account of the user that owns the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cou-2221</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -306,7 +344,17 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The sensitivity level of the package. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+             * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+             * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+             * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+             * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -314,7 +362,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The name of the sensitivity level for the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Highest sensitivity level</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -322,7 +373,14 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * <p>Indicates whether the package contains sensitive data. Valid values:</p>
+             * <ul>
+             * <li>true: yes</li>
+             * <li>false: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -330,7 +388,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveCount.
+             * <p>The total volume of sensitive data in the package. For example, the value can be the total number of sensitive tables in the MaxCompute package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder sensitiveCount(Integer sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -338,7 +399,10 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total volume of data in the package. For example, the value can be the total number of tables in the MaxCompute package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>321</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectsResponseBody</p>
  */
 public class ListProjectsResponseBody extends TeaModel {
-    @NameInMap("Projects")
-    private java.util.List < Projects> projects;
+    @com.aliyun.core.annotation.NameInMap("Projects")
+    private java.util.List<Projects> projects;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListProjectsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListProjectsResponseBody extends TeaModel {
     /**
      * @return projects
      */
-    public java.util.List < Projects> getProjects() {
+    public java.util.List<Projects> getProjects() {
         return this.projects;
     }
 
@@ -57,14 +62,14 @@ public class ListProjectsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Projects> projects; 
+        private java.util.List<Projects> projects; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Projects.
          */
-        public Builder projects(java.util.List < Projects> projects) {
+        public Builder projects(java.util.List<Projects> projects) {
             this.projects = projects;
             return this;
         }
@@ -91,53 +96,59 @@ public class ListProjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class Projects extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FeatureEntityCount")
+        @com.aliyun.core.annotation.NameInMap("FeatureEntityCount")
         private Integer featureEntityCount;
 
-        @NameInMap("FeatureViewCount")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewCount")
         private Integer featureViewCount;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("ModelCount")
+        @com.aliyun.core.annotation.NameInMap("ModelCount")
         private Integer modelCount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OfflineDatasourceId")
+        @com.aliyun.core.annotation.NameInMap("OfflineDatasourceId")
         private String offlineDatasourceId;
 
-        @NameInMap("OfflineDatasourceName")
+        @com.aliyun.core.annotation.NameInMap("OfflineDatasourceName")
         private String offlineDatasourceName;
 
-        @NameInMap("OfflineDatasourceType")
+        @com.aliyun.core.annotation.NameInMap("OfflineDatasourceType")
         private String offlineDatasourceType;
 
-        @NameInMap("OfflineLifecycle")
+        @com.aliyun.core.annotation.NameInMap("OfflineLifecycle")
         private Integer offlineLifecycle;
 
-        @NameInMap("OnlineDatasourceId")
+        @com.aliyun.core.annotation.NameInMap("OnlineDatasourceId")
         private String onlineDatasourceId;
 
-        @NameInMap("OnlineDatasourceName")
+        @com.aliyun.core.annotation.NameInMap("OnlineDatasourceName")
         private String onlineDatasourceName;
 
-        @NameInMap("OnlineDatasourceType")
+        @com.aliyun.core.annotation.NameInMap("OnlineDatasourceType")
         private String onlineDatasourceType;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
         private Projects(Builder builder) {

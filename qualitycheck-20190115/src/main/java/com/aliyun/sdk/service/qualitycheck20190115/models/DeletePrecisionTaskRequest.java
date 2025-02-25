@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePrecisionTaskRequest} extends {@link RequestModel}
  *
  * <p>DeletePrecisionTaskRequest</p>
  */
 public class DeletePrecisionTaskRequest extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Query
-    @NameInMap("JsonStr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JsonStr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
     private DeletePrecisionTaskRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class DeletePrecisionTaskRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * <p>baseMeAgentId</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
@@ -78,7 +83,10 @@ public class DeletePrecisionTaskRequest extends Request {
         }
 
         /**
-         * JsonStr.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;taskId&quot;: &quot;7C1DEF5F-2C18-4D36-99C6*******&quot;}&quot;</p>
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

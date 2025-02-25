@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WorkitemAttachmentCreateRequest} extends {@link RequestModel}
  *
  * <p>WorkitemAttachmentCreateRequest</p>
  */
 public class WorkitemAttachmentCreateRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("workitemIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemIdentifier;
 
-    @Body
-    @NameInMap("fileKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fileKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileKey;
 
-    @Body
-    @NameInMap("originalFilename")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("originalFilename")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String originalFilename;
 
     private WorkitemAttachmentCreateRequest(Builder builder) {
@@ -100,7 +105,10 @@ public class WorkitemAttachmentCreateRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -109,7 +117,10 @@ public class WorkitemAttachmentCreateRequest extends Request {
         }
 
         /**
-         * workitemIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234455454355</p>
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putPathParameter("workitemIdentifier", workitemIdentifier);
@@ -118,7 +129,10 @@ public class WorkitemAttachmentCreateRequest extends Request {
         }
 
         /**
-         * fileKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1106473328927498/1106473328927498/5ec071g0e5ij85fche8cddchje.xlsx</p>
          */
         public Builder fileKey(String fileKey) {
             this.putBodyParameter("fileKey", fileKey);
@@ -127,7 +141,10 @@ public class WorkitemAttachmentCreateRequest extends Request {
         }
 
         /**
-         * originalFilename.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.tgz</p>
          */
         public Builder originalFilename(String originalFilename) {
             this.putBodyParameter("originalFilename", originalFilename);

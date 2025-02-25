@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInterceptionTargetDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetInterceptionTargetDetailResponseBody</p>
  */
 public class GetInterceptionTargetDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleTarget")
+    @com.aliyun.core.annotation.NameInMap("RuleTarget")
     private RuleTarget ruleTarget;
 
     private GetInterceptionTargetDetailResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         private RuleTarget ruleTarget; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the network object.
+         * <p>The information about the network object.</p>
          */
         public Builder ruleTarget(RuleTarget ruleTarget) {
             this.ruleTarget = ruleTarget;
@@ -71,32 +79,38 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInterceptionTargetDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterceptionTargetDetailResponseBody</p>
+     */
     public static class RuleTarget extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ImageList")
-        private java.util.List < String > imageList;
+        @com.aliyun.core.annotation.NameInMap("ImageList")
+        private java.util.List<String> imageList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("TagList")
-        private java.util.List < String > tagList;
+        @com.aliyun.core.annotation.NameInMap("TagList")
+        private java.util.List<String> tagList;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private RuleTarget(Builder builder) {
@@ -143,7 +157,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         /**
          * @return imageList
          */
-        public java.util.List < String > getImageList() {
+        public java.util.List<String> getImageList() {
             return this.imageList;
         }
 
@@ -157,7 +171,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < String > getTagList() {
+        public java.util.List<String> getTagList() {
             return this.tagList;
         }
 
@@ -186,15 +200,18 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             private String appName; 
             private String clusterId; 
             private String clusterName; 
-            private java.util.List < String > imageList; 
+            private java.util.List<String> imageList; 
             private String namespace; 
-            private java.util.List < String > tagList; 
+            private java.util.List<String> tagList; 
             private Long targetId; 
             private String targetName; 
             private String targetType; 
 
             /**
-             * The name of the application to which the network object belongs.
+             * <p>The name of the application to which the network object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>netperf-client</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -202,7 +219,10 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container cluster.
+             * <p>The ID of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca6e6594def8d4be8b2795fd12c32****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -210,7 +230,10 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container cluster.
+             * <p>The name of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-test-cnnf</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -218,15 +241,18 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the images of the network object.
+             * <p>An array that consists of the images of the network object.</p>
              */
-            public Builder imageList(java.util.List < String > imageList) {
+            public Builder imageList(java.util.List<String> imageList) {
                 this.imageList = imageList;
                 return this;
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secondary</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -234,15 +260,18 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the labels specified for the network object.
+             * <p>An array that consists of the labels specified for the network object.</p>
              */
-            public Builder tagList(java.util.List < String > tagList) {
+            public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;
                 return this;
             }
 
             /**
-             * The ID of the network object.
+             * <p>The ID of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400723</p>
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -250,7 +279,10 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network object.
+             * <p>The name of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>destination-test-obj-Na3cF</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -258,10 +290,13 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object. Valid values:
-             * <p>
+             * <p>The type of the network object. Valid values:</p>
+             * <ul>
+             * <li><strong>IMAGE</strong>: image</li>
+             * </ul>
              * 
-             * *   **IMAGE**: image
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

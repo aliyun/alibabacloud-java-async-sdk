@@ -55,7 +55,7 @@ public class GetAutoScaleConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The interval between two consecutive rounds of scale-out. Unit: minutes. Valid values: 2 to 10.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

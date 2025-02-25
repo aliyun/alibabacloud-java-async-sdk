@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSkillGroupServiceCapabilityRequest} extends {@link RequestModel}
  *
  * <p>GetSkillGroupServiceCapabilityRequest</p>
  */
 public class GetSkillGroupServiceCapabilityRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DepIds")
-    private java.util.List < Long > depIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepIds")
+    private java.util.List<Long> depIds;
 
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private Long endDate;
 
-    @Query
-    @NameInMap("ExistDepartmentGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistDepartmentGrouping")
     private Boolean existDepartmentGrouping;
 
-    @Query
-    @NameInMap("ExistSkillGroupGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistSkillGroupGrouping")
     private Boolean existSkillGroupGrouping;
 
-    @Query
-    @NameInMap("GroupIds")
-    private java.util.List < Long > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<Long> groupIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private Long startDate;
 
     private GetSkillGroupServiceCapabilityRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
     /**
      * @return depIds
      */
-    public java.util.List < Long > getDepIds() {
+    public java.util.List<Long> getDepIds() {
         return this.depIds;
     }
 
@@ -113,7 +118,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < Long > getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
@@ -140,11 +145,11 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetSkillGroupServiceCapabilityRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < Long > depIds; 
+        private java.util.List<Long> depIds; 
         private Long endDate; 
         private Boolean existDepartmentGrouping; 
         private Boolean existSkillGroupGrouping; 
-        private java.util.List < Long > groupIds; 
+        private java.util.List<Long> groupIds; 
         private String instanceId; 
         private Integer pageSize; 
         private Long startDate; 
@@ -167,7 +172,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         } 
 
         /**
-         * 当前页（默认为1）
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -176,9 +181,9 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * 部门id列表
+         * DepIds.
          */
-        public Builder depIds(java.util.List < Long > depIds) {
+        public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
             this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
@@ -186,7 +191,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * 结束日期时间戳（毫秒）
+         * EndDate.
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -195,7 +200,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * 是否根据部门分组
+         * ExistDepartmentGrouping.
          */
         public Builder existDepartmentGrouping(Boolean existDepartmentGrouping) {
             this.putQueryParameter("ExistDepartmentGrouping", existDepartmentGrouping);
@@ -204,7 +209,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * 是否根据技能组分组
+         * ExistSkillGroupGrouping.
          */
         public Builder existSkillGroupGrouping(Boolean existSkillGroupGrouping) {
             this.putQueryParameter("ExistSkillGroupGrouping", existSkillGroupGrouping);
@@ -213,9 +218,9 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * 技能组id列表
+         * GroupIds.
          */
-        public Builder groupIds(java.util.List < Long > groupIds) {
+        public Builder groupIds(java.util.List<Long> groupIds) {
             String groupIdsShrink = shrink(groupIds, "GroupIds", "simple");
             this.putQueryParameter("GroupIds", groupIdsShrink);
             this.groupIds = groupIds;
@@ -223,7 +228,10 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * AICCS实例ID，在智能联络中心控制台上可以看到
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -232,7 +240,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * 每页大小（默认为10)
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,7 +249,7 @@ public class GetSkillGroupServiceCapabilityRequest extends Request {
         }
 
         /**
-         * 开始日期时间戳（毫秒）
+         * StartDate.
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);

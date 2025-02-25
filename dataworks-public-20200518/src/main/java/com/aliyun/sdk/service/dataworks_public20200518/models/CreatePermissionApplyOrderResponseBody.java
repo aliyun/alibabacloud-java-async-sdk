@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePermissionApplyOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePermissionApplyOrderResponseBody</p>
  */
 public class CreatePermissionApplyOrderResponseBody extends TeaModel {
-    @NameInMap("FlowId")
-    private java.util.List < String > flowId;
+    @com.aliyun.core.annotation.NameInMap("FlowId")
+    private java.util.List<String> flowId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePermissionApplyOrderResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
     /**
      * @return flowId
      */
-    public java.util.List < String > getFlowId() {
+    public java.util.List<String> getFlowId() {
         return this.flowId;
     }
 
@@ -46,19 +51,22 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > flowId; 
+        private java.util.List<String> flowId; 
         private String requestId; 
 
         /**
-         * The ID of the request order. If you request permissions on multiple objects but each object has a different request approver, one request order is generated for each object and is sent to the related approver. In this case, an array is returned.
+         * <p>The request order ID.</p>
          */
-        public Builder flowId(java.util.List < String > flowId) {
+        public Builder flowId(java.util.List<String> flowId) {
             this.flowId = flowId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

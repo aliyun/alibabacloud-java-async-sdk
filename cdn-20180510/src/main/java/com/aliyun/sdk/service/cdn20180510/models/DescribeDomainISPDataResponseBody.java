@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainISPDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainISPDataResponseBody</p>
  */
 public class DescribeDomainISPDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private Value value;
 
     private DescribeDomainISPDataResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         private Value value; 
 
         /**
-         * The time interval. Unit: seconds.
+         * <p>The time interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +120,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +131,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE81639B-DAC1-4C76-AB72-F34B836837D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that was queried.
+         * <p>The beginning of the time range that was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-29T05:33:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +153,7 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         }
 
         /**
-         * The access statistics by ISP.
+         * <p>The access statistics by ISP.</p>
          */
         public Builder value(Value value) {
             this.value = value;
@@ -151,41 +166,47 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainISPDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainISPDataResponseBody</p>
+     */
     public static class ISPProportionData extends TeaModel {
-        @NameInMap("AvgObjectSize")
+        @com.aliyun.core.annotation.NameInMap("AvgObjectSize")
         private String avgObjectSize;
 
-        @NameInMap("AvgResponseRate")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseRate")
         private String avgResponseRate;
 
-        @NameInMap("AvgResponseTime")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseTime")
         private String avgResponseTime;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private String bps;
 
-        @NameInMap("BytesProportion")
+        @com.aliyun.core.annotation.NameInMap("BytesProportion")
         private String bytesProportion;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("IspEname")
+        @com.aliyun.core.annotation.NameInMap("IspEname")
         private String ispEname;
 
-        @NameInMap("Proportion")
+        @com.aliyun.core.annotation.NameInMap("Proportion")
         private String proportion;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private String qps;
 
-        @NameInMap("ReqErrRate")
+        @com.aliyun.core.annotation.NameInMap("ReqErrRate")
         private String reqErrRate;
 
-        @NameInMap("TotalBytes")
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private String totalBytes;
 
-        @NameInMap("TotalQuery")
+        @com.aliyun.core.annotation.NameInMap("TotalQuery")
         private String totalQuery;
 
         private ISPProportionData(Builder builder) {
@@ -310,7 +331,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             private String totalQuery; 
 
             /**
-             * The average response size. Unit: bytes.
+             * <p>The average response size. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7081884.7</p>
              */
             public Builder avgObjectSize(String avgObjectSize) {
                 this.avgObjectSize = avgObjectSize;
@@ -318,7 +342,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average response speed. Unit: byte/ms.
+             * <p>The average response speed. Unit: byte/ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88.92594866772144</p>
              */
             public Builder avgResponseRate(String avgResponseRate) {
                 this.avgResponseRate = avgResponseRate;
@@ -326,7 +353,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average response time. Unit: milliseconds.
+             * <p>The average response time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79638.0</p>
              */
             public Builder avgResponseTime(String avgResponseTime) {
                 this.avgResponseTime = avgResponseTime;
@@ -334,7 +364,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth.
+             * <p>The bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1311.4601296296296</p>
              */
             public Builder bps(String bps) {
                 this.bps = bps;
@@ -342,7 +375,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of network traffic.
+             * <p>The proportion of network traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.012220518530445479</p>
              */
             public Builder bytesProportion(String bytesProportion) {
                 this.bytesProportion = bytesProportion;
@@ -350,7 +386,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the ISP.
+             * <p>The information about the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -358,7 +397,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ISP.
+             * <p>The name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba</p>
              */
             public Builder ispEname(String ispEname) {
                 this.ispEname = ispEname;
@@ -366,7 +408,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of the HTTP status code.
+             * <p>The proportion of the HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.004509176173513099</p>
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -374,7 +419,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The QPS.
+             * <p>The QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.3148148148148147E-5</p>
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -382,7 +430,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The request error rate.
+             * <p>The request error rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder reqErrRate(String reqErrRate) {
                 this.reqErrRate = reqErrRate;
@@ -390,7 +441,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total volume of traffic.
+             * <p>The total volume of traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7081884</p>
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;
@@ -398,7 +452,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalQuery(String totalQuery) {
                 this.totalQuery = totalQuery;
@@ -412,8 +469,14 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainISPDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainISPDataResponseBody</p>
+     */
     public static class Value extends TeaModel {
-        @NameInMap("ISPProportionData")
+        @com.aliyun.core.annotation.NameInMap("ISPProportionData")
         private java.util.List < ISPProportionData> ISPProportionData;
 
         private Value(Builder builder) {

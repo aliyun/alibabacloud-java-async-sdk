@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
  *
  * <p>ListHistoricalAgentReportResponseBody</p>
  */
 public class ListHistoricalAgentReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListHistoricalAgentReportResponseBody(Builder builder) {
@@ -131,53 +136,59 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class Back2Back extends TeaModel {
-        @NameInMap("AgentHandleRate")
+        @com.aliyun.core.annotation.NameInMap("AgentHandleRate")
         private String agentHandleRate;
 
-        @NameInMap("AnswerRate")
+        @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private String answerRate;
 
-        @NameInMap("AverageCustomerRingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageCustomerRingTime")
         private String averageCustomerRingTime;
 
-        @NameInMap("AverageRingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageRingTime")
         private String averageRingTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private String averageTalkTime;
 
-        @NameInMap("CallsAgentHandled")
+        @com.aliyun.core.annotation.NameInMap("CallsAgentHandled")
         private String callsAgentHandled;
 
-        @NameInMap("CallsAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private String callsAnswered;
 
-        @NameInMap("CallsCustomerAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsCustomerAnswered")
         private String callsCustomerAnswered;
 
-        @NameInMap("CallsDialed")
+        @com.aliyun.core.annotation.NameInMap("CallsDialed")
         private String callsDialed;
 
-        @NameInMap("CustomerAnswerRate")
+        @com.aliyun.core.annotation.NameInMap("CustomerAnswerRate")
         private String customerAnswerRate;
 
-        @NameInMap("MaxCustomerRingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxCustomerRingTime")
         private String maxCustomerRingTime;
 
-        @NameInMap("MaxRingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRingTime")
         private String maxRingTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private String maxTalkTime;
 
-        @NameInMap("TotalCustomerRingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalCustomerRingTime")
         private String totalCustomerRingTime;
 
-        @NameInMap("TotalRingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalRingTime")
         private String totalRingTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private String totalTalkTime;
 
         private Back2Back(Builder builder) {
@@ -472,11 +483,17 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class AccessChannelTypeDetails extends TeaModel {
-        @NameInMap("AccessChannelType")
+        @com.aliyun.core.annotation.NameInMap("AccessChannelType")
         private String accessChannelType;
 
-        @NameInMap("CallsOffered")
+        @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
 
         private AccessChannelTypeDetails(Builder builder) {
@@ -533,101 +550,107 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class Inbound extends TeaModel {
-        @NameInMap("AccessChannelTypeDetails")
-        private java.util.List < AccessChannelTypeDetails> accessChannelTypeDetails;
+        @com.aliyun.core.annotation.NameInMap("AccessChannelTypeDetails")
+        private java.util.List<AccessChannelTypeDetails> accessChannelTypeDetails;
 
-        @NameInMap("AverageFirstResponseTime")
+        @com.aliyun.core.annotation.NameInMap("AverageFirstResponseTime")
         private Float averageFirstResponseTime;
 
-        @NameInMap("AverageHoldTime")
+        @com.aliyun.core.annotation.NameInMap("AverageHoldTime")
         private Float averageHoldTime;
 
-        @NameInMap("AverageResponseTime")
+        @com.aliyun.core.annotation.NameInMap("AverageResponseTime")
         private Float averageResponseTime;
 
-        @NameInMap("AverageRingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageRingTime")
         private Float averageRingTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Float averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Float averageWorkTime;
 
-        @NameInMap("CallsAttendedTransferIn")
+        @com.aliyun.core.annotation.NameInMap("CallsAttendedTransferIn")
         private Long callsAttendedTransferIn;
 
-        @NameInMap("CallsAttendedTransferOut")
+        @com.aliyun.core.annotation.NameInMap("CallsAttendedTransferOut")
         private Long callsAttendedTransferOut;
 
-        @NameInMap("CallsBlindTransferIn")
+        @com.aliyun.core.annotation.NameInMap("CallsBlindTransferIn")
         private Long callsBlindTransferIn;
 
-        @NameInMap("CallsBlindTransferOut")
+        @com.aliyun.core.annotation.NameInMap("CallsBlindTransferOut")
         private Long callsBlindTransferOut;
 
-        @NameInMap("CallsHandled")
+        @com.aliyun.core.annotation.NameInMap("CallsHandled")
         private Long callsHandled;
 
-        @NameInMap("CallsHold")
+        @com.aliyun.core.annotation.NameInMap("CallsHold")
         private Long callsHold;
 
-        @NameInMap("CallsOffered")
+        @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
 
-        @NameInMap("CallsRinged")
+        @com.aliyun.core.annotation.NameInMap("CallsRinged")
         private Long callsRinged;
 
-        @NameInMap("HandleRate")
+        @com.aliyun.core.annotation.NameInMap("HandleRate")
         private Float handleRate;
 
-        @NameInMap("MaxHoldTime")
+        @com.aliyun.core.annotation.NameInMap("MaxHoldTime")
         private Long maxHoldTime;
 
-        @NameInMap("MaxRingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRingTime")
         private Long maxRingTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionRate")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionRate")
         private Float satisfactionRate;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("ServiceLevel15")
+        @com.aliyun.core.annotation.NameInMap("ServiceLevel15")
         private Float serviceLevel15;
 
-        @NameInMap("TotalHoldTime")
+        @com.aliyun.core.annotation.NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
-        @NameInMap("TotalMessagesSent")
+        @com.aliyun.core.annotation.NameInMap("TotalMessagesSent")
         private Long totalMessagesSent;
 
-        @NameInMap("TotalMessagesSentByAgent")
+        @com.aliyun.core.annotation.NameInMap("TotalMessagesSentByAgent")
         private Long totalMessagesSentByAgent;
 
-        @NameInMap("TotalMessagesSentByCustomer")
+        @com.aliyun.core.annotation.NameInMap("TotalMessagesSentByCustomer")
         private String totalMessagesSentByCustomer;
 
-        @NameInMap("TotalRingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalRingTime")
         private Long totalRingTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Inbound(Builder builder) {
@@ -676,7 +699,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         /**
          * @return accessChannelTypeDetails
          */
-        public java.util.List < AccessChannelTypeDetails> getAccessChannelTypeDetails() {
+        public java.util.List<AccessChannelTypeDetails> getAccessChannelTypeDetails() {
             return this.accessChannelTypeDetails;
         }
 
@@ -898,7 +921,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AccessChannelTypeDetails> accessChannelTypeDetails; 
+            private java.util.List<AccessChannelTypeDetails> accessChannelTypeDetails; 
             private Float averageFirstResponseTime; 
             private Float averageHoldTime; 
             private Float averageResponseTime; 
@@ -934,7 +957,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             /**
              * AccessChannelTypeDetails.
              */
-            public Builder accessChannelTypeDetails(java.util.List < AccessChannelTypeDetails> accessChannelTypeDetails) {
+            public Builder accessChannelTypeDetails(java.util.List<AccessChannelTypeDetails> accessChannelTypeDetails) {
                 this.accessChannelTypeDetails = accessChannelTypeDetails;
                 return this;
             }
@@ -1194,29 +1217,35 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class Internal extends TeaModel {
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Float averageTalkTime;
 
-        @NameInMap("CallsAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
 
-        @NameInMap("CallsDialed")
+        @com.aliyun.core.annotation.NameInMap("CallsDialed")
         private Long callsDialed;
 
-        @NameInMap("CallsHandled")
+        @com.aliyun.core.annotation.NameInMap("CallsHandled")
         private Long callsHandled;
 
-        @NameInMap("CallsOffered")
+        @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
 
-        @NameInMap("CallsTalked")
+        @com.aliyun.core.annotation.NameInMap("CallsTalked")
         private Long callsTalked;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
         private Internal(Builder builder) {
@@ -1375,89 +1404,95 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class Outbound extends TeaModel {
-        @NameInMap("AnswerRate")
+        @com.aliyun.core.annotation.NameInMap("AnswerRate")
         private Float answerRate;
 
-        @NameInMap("AverageDialingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageDialingTime")
         private Float averageDialingTime;
 
-        @NameInMap("AverageHoldTime")
+        @com.aliyun.core.annotation.NameInMap("AverageHoldTime")
         private Float averageHoldTime;
 
-        @NameInMap("AverageRingTime")
+        @com.aliyun.core.annotation.NameInMap("AverageRingTime")
         private Float averageRingTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Float averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Float averageWorkTime;
 
-        @NameInMap("CallsAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
 
-        @NameInMap("CallsAttendedTransferIn")
+        @com.aliyun.core.annotation.NameInMap("CallsAttendedTransferIn")
         private Long callsAttendedTransferIn;
 
-        @NameInMap("CallsAttendedTransferOut")
+        @com.aliyun.core.annotation.NameInMap("CallsAttendedTransferOut")
         private Long callsAttendedTransferOut;
 
-        @NameInMap("CallsBlindTransferIn")
+        @com.aliyun.core.annotation.NameInMap("CallsBlindTransferIn")
         private Long callsBlindTransferIn;
 
-        @NameInMap("CallsBlindTransferOut")
+        @com.aliyun.core.annotation.NameInMap("CallsBlindTransferOut")
         private Long callsBlindTransferOut;
 
-        @NameInMap("CallsDialed")
+        @com.aliyun.core.annotation.NameInMap("CallsDialed")
         private Long callsDialed;
 
-        @NameInMap("CallsHold")
+        @com.aliyun.core.annotation.NameInMap("CallsHold")
         private Long callsHold;
 
-        @NameInMap("CallsRinged")
+        @com.aliyun.core.annotation.NameInMap("CallsRinged")
         private Long callsRinged;
 
-        @NameInMap("MaxDialingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxDialingTime")
         private Long maxDialingTime;
 
-        @NameInMap("MaxHoldTime")
+        @com.aliyun.core.annotation.NameInMap("MaxHoldTime")
         private Long maxHoldTime;
 
-        @NameInMap("MaxRingTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRingTime")
         private Long maxRingTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionRate")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionRate")
         private Float satisfactionRate;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("TotalDialingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalDialingTime")
         private Long totalDialingTime;
 
-        @NameInMap("TotalHoldTime")
+        @com.aliyun.core.annotation.NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
-        @NameInMap("TotalRingTime")
+        @com.aliyun.core.annotation.NameInMap("TotalRingTime")
         private Long totalRingTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Outbound(Builder builder) {
@@ -1956,14 +1991,20 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class BreakCodeDetailList extends TeaModel {
-        @NameInMap("BreakCode")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
         private BreakCodeDetailList(Builder builder) {
@@ -2037,107 +2078,113 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class Overall extends TeaModel {
-        @NameInMap("AverageBreakTime")
+        @com.aliyun.core.annotation.NameInMap("AverageBreakTime")
         private Float averageBreakTime;
 
-        @NameInMap("AverageHoldTime")
+        @com.aliyun.core.annotation.NameInMap("AverageHoldTime")
         private Float averageHoldTime;
 
-        @NameInMap("AverageReadyTime")
+        @com.aliyun.core.annotation.NameInMap("AverageReadyTime")
         private Float averageReadyTime;
 
-        @NameInMap("AverageTalkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageTalkTime")
         private Float averageTalkTime;
 
-        @NameInMap("AverageWorkTime")
+        @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Float averageWorkTime;
 
-        @NameInMap("BreakCodeDetailList")
-        private java.util.List < BreakCodeDetailList> breakCodeDetailList;
+        @com.aliyun.core.annotation.NameInMap("BreakCodeDetailList")
+        private java.util.List<BreakCodeDetailList> breakCodeDetailList;
 
-        @NameInMap("FirstCheckInTime")
+        @com.aliyun.core.annotation.NameInMap("FirstCheckInTime")
         private Long firstCheckInTime;
 
-        @NameInMap("LastCheckOutTime")
+        @com.aliyun.core.annotation.NameInMap("LastCheckOutTime")
         private Long lastCheckOutTime;
 
-        @NameInMap("MaxBreakTime")
+        @com.aliyun.core.annotation.NameInMap("MaxBreakTime")
         private Long maxBreakTime;
 
-        @NameInMap("MaxHoldTime")
+        @com.aliyun.core.annotation.NameInMap("MaxHoldTime")
         private Long maxHoldTime;
 
-        @NameInMap("MaxReadyTime")
+        @com.aliyun.core.annotation.NameInMap("MaxReadyTime")
         private Long maxReadyTime;
 
-        @NameInMap("MaxTalkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
-        @NameInMap("MaxWorkTime")
+        @com.aliyun.core.annotation.NameInMap("MaxWorkTime")
         private Long maxWorkTime;
 
-        @NameInMap("OccupancyRate")
+        @com.aliyun.core.annotation.NameInMap("OccupancyRate")
         private Float occupancyRate;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Float satisfactionIndex;
 
-        @NameInMap("SatisfactionRate")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionRate")
         private Float satisfactionRate;
 
-        @NameInMap("SatisfactionSurveysOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysOffered")
         private Long satisfactionSurveysOffered;
 
-        @NameInMap("SatisfactionSurveysResponded")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
-        @NameInMap("TotalBreakTime")
+        @com.aliyun.core.annotation.NameInMap("TotalBreakTime")
         private Long totalBreakTime;
 
-        @NameInMap("TotalCalls")
+        @com.aliyun.core.annotation.NameInMap("TotalCalls")
         private Long totalCalls;
 
-        @NameInMap("TotalHoldTime")
+        @com.aliyun.core.annotation.NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
-        @NameInMap("TotalLoggedInTime")
+        @com.aliyun.core.annotation.NameInMap("TotalLoggedInTime")
         private Long totalLoggedInTime;
 
-        @NameInMap("TotalOffSiteLoggedInTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOffSiteLoggedInTime")
         private Long totalOffSiteLoggedInTime;
 
-        @NameInMap("TotalOffSiteOnlineTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOffSiteOnlineTime")
         private Long totalOffSiteOnlineTime;
 
-        @NameInMap("TotalOfficePhoneLoggedInTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOfficePhoneLoggedInTime")
         private Long totalOfficePhoneLoggedInTime;
 
-        @NameInMap("TotalOfficePhoneOnlineTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOfficePhoneOnlineTime")
         private Long totalOfficePhoneOnlineTime;
 
-        @NameInMap("TotalOnSiteLoggedInTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOnSiteLoggedInTime")
         private Long totalOnSiteLoggedInTime;
 
-        @NameInMap("TotalOnSiteOnlineTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOnSiteOnlineTime")
         private Long totalOnSiteOnlineTime;
 
-        @NameInMap("TotalOutboundScenarioLoggedInTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOutboundScenarioLoggedInTime")
         private Long totalOutboundScenarioLoggedInTime;
 
-        @NameInMap("TotalOutboundScenarioReadyTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOutboundScenarioReadyTime")
         private Long totalOutboundScenarioReadyTime;
 
-        @NameInMap("TotalOutboundScenarioTime")
+        @com.aliyun.core.annotation.NameInMap("TotalOutboundScenarioTime")
         private Long totalOutboundScenarioTime;
 
-        @NameInMap("TotalReadyTime")
+        @com.aliyun.core.annotation.NameInMap("TotalReadyTime")
         private Long totalReadyTime;
 
-        @NameInMap("TotalTalkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTalkTime")
         private Long totalTalkTime;
 
-        @NameInMap("TotalWorkTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWorkTime")
         private Long totalWorkTime;
 
         private Overall(Builder builder) {
@@ -2223,7 +2270,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         /**
          * @return breakCodeDetailList
          */
-        public java.util.List < BreakCodeDetailList> getBreakCodeDetailList() {
+        public java.util.List<BreakCodeDetailList> getBreakCodeDetailList() {
             return this.breakCodeDetailList;
         }
 
@@ -2429,7 +2476,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             private Float averageReadyTime; 
             private Float averageTalkTime; 
             private Float averageWorkTime; 
-            private java.util.List < BreakCodeDetailList> breakCodeDetailList; 
+            private java.util.List<BreakCodeDetailList> breakCodeDetailList; 
             private Long firstCheckInTime; 
             private Long lastCheckOutTime; 
             private Long maxBreakTime; 
@@ -2502,7 +2549,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             /**
              * BreakCodeDetailList.
              */
-            public Builder breakCodeDetailList(java.util.List < BreakCodeDetailList> breakCodeDetailList) {
+            public Builder breakCodeDetailList(java.util.List<BreakCodeDetailList> breakCodeDetailList) {
                 this.breakCodeDetailList = breakCodeDetailList;
                 return this;
             }
@@ -2738,35 +2785,41 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("Back2Back")
+        @com.aliyun.core.annotation.NameInMap("Back2Back")
         private Back2Back back2Back;
 
-        @NameInMap("DisplayId")
+        @com.aliyun.core.annotation.NameInMap("DisplayId")
         private String displayId;
 
-        @NameInMap("Inbound")
+        @com.aliyun.core.annotation.NameInMap("Inbound")
         private Inbound inbound;
 
-        @NameInMap("Internal")
+        @com.aliyun.core.annotation.NameInMap("Internal")
         private Internal internal;
 
-        @NameInMap("Outbound")
+        @com.aliyun.core.annotation.NameInMap("Outbound")
         private Outbound outbound;
 
-        @NameInMap("Overall")
+        @com.aliyun.core.annotation.NameInMap("Overall")
         private Overall overall;
 
-        @NameInMap("SkillGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
         private String skillGroupIds;
 
-        @NameInMap("SkillGroupNames")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNames")
         private String skillGroupNames;
 
         private List(Builder builder) {
@@ -2959,17 +3012,23 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHistoricalAgentReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHistoricalAgentReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -2990,7 +3049,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -3016,7 +3075,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -3024,7 +3083,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

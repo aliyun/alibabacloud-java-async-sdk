@@ -111,7 +111,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         } 
 
         /**
-         * It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -120,7 +120,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -129,7 +129,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * The details of returned data.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -138,7 +138,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * The latest version of Function Compute API.
+         * The maximum number of results to return. Default value: 20. Maximum value: 100. The number of returned configurations is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -147,7 +147,7 @@ public class ListStatefulAsyncInvocationFunctionsRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.
+         * The starting position of the query. If this parameter is left empty, the query starts from the beginning. You do not need to specify this parameter in the first call. The tokens for subsequent queries are obtained from previous returned results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

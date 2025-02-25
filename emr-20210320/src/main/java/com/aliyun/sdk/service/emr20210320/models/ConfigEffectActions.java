@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigEffectActions} extends {@link TeaModel}
  *
  * <p>ConfigEffectActions</p>
  */
 public class ConfigEffectActions extends TeaModel {
-    @NameInMap("ConfigEffectAction")
+    @com.aliyun.core.annotation.NameInMap("ConfigEffectAction")
     private String configEffectAction;
 
-    @NameInMap("ConfigFiles")
-    private java.util.List < String > configFiles;
+    @com.aliyun.core.annotation.NameInMap("ConfigFiles")
+    private java.util.List<String> configFiles;
 
     private ConfigEffectActions(Builder builder) {
         this.configEffectAction = builder.configEffectAction;
@@ -41,16 +46,19 @@ public class ConfigEffectActions extends TeaModel {
     /**
      * @return configFiles
      */
-    public java.util.List < String > getConfigFiles() {
+    public java.util.List<String> getConfigFiles() {
         return this.configFiles;
     }
 
     public static final class Builder {
         private String configEffectAction; 
-        private java.util.List < String > configFiles; 
+        private java.util.List<String> configFiles; 
 
         /**
-         * 配置生效动作。
+         * <p>配置生效动作。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>restart</p>
          */
         public Builder configEffectAction(String configEffectAction) {
             this.configEffectAction = configEffectAction;
@@ -58,9 +66,12 @@ public class ConfigEffectActions extends TeaModel {
         }
 
         /**
-         * 配置生效配置文件。
+         * <p>配置生效配置文件。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
-        public Builder configFiles(java.util.List < String > configFiles) {
+        public Builder configFiles(java.util.List<String> configFiles) {
             this.configFiles = configFiles;
             return this;
         }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKeyPairsResponseBody</p>
  */
 public class DescribeKeyPairsResponseBody extends TeaModel {
-    @NameInMap("KeyPairs")
+    @com.aliyun.core.annotation.NameInMap("KeyPairs")
     private KeyPairs keyPairs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeKeyPairsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * KeyPairs.
+         * <p>Details about the key pairs.</p>
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -94,7 +99,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37B52F33-6879-49D0-A39B-22966B01449E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of key pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,19 +148,29 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class KeyPair extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("KeyPairFingerPrint")
+        @com.aliyun.core.annotation.NameInMap("KeyPairFingerPrint")
         private String keyPairFingerPrint;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairId")
+        private String keyPairId;
+
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
         private KeyPair(Builder builder) {
             this.creationTime = builder.creationTime;
             this.keyPairFingerPrint = builder.keyPairFingerPrint;
+            this.keyPairId = builder.keyPairId;
             this.keyPairName = builder.keyPairName;
         }
 
@@ -170,6 +197,13 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
+         * @return keyPairId
+         */
+        public String getKeyPairId() {
+            return this.keyPairId;
+        }
+
+        /**
          * @return keyPairName
          */
         public String getKeyPairName() {
@@ -179,10 +213,14 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         public static final class Builder {
             private String creationTime; 
             private String keyPairFingerPrint; 
+            private String keyPairId; 
             private String keyPairName; 
 
             /**
-             * CreationTime.
+             * <p>The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-26T15:38:27Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -190,7 +228,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairFingerPrint.
+             * <p>The fingerprint of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fdaf8ff7a756ef843814fc****</p>
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -198,7 +239,21 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * <p>The ID of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh-50cynkq42sgj4ej1tn78t4***</p>
+             */
+            public Builder keyPairId(String keyPairId) {
+                this.keyPairId = keyPairId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the SSH key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKeyPairName</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -212,9 +267,15 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class KeyPairs extends TeaModel {
-        @NameInMap("KeyPair")
-        private java.util.List < KeyPair> keyPair;
+        @com.aliyun.core.annotation.NameInMap("KeyPair")
+        private java.util.List<KeyPair> keyPair;
 
         private KeyPairs(Builder builder) {
             this.keyPair = builder.keyPair;
@@ -231,17 +292,17 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         /**
          * @return keyPair
          */
-        public java.util.List < KeyPair> getKeyPair() {
+        public java.util.List<KeyPair> getKeyPair() {
             return this.keyPair;
         }
 
         public static final class Builder {
-            private java.util.List < KeyPair> keyPair; 
+            private java.util.List<KeyPair> keyPair; 
 
             /**
              * KeyPair.
              */
-            public Builder keyPair(java.util.List < KeyPair> keyPair) {
+            public Builder keyPair(java.util.List<KeyPair> keyPair) {
                 this.keyPair = keyPair;
                 return this;
             }

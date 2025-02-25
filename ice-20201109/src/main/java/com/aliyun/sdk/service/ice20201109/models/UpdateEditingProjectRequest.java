@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEditingProjectRequest} extends {@link RequestModel}
  *
  * <p>UpdateEditingProjectRequest</p>
  */
 public class UpdateEditingProjectRequest extends Request {
-    @Query
-    @NameInMap("BusinessStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessStatus")
     private String businessStatus;
 
-    @Query
-    @NameInMap("ClipsParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClipsParam")
     private String clipsParam;
 
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Body
-    @NameInMap("Timeline")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeline")
     private String timeline;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private UpdateEditingProjectRequest(Builder builder) {
@@ -153,7 +158,14 @@ public class UpdateEditingProjectRequest extends Request {
         } 
 
         /**
-         * BusinessStatus.
+         * <p>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</p>
+         * <ul>
+         * <li>Reserving</li>
+         * <li>ReservationCanceled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserving</p>
          */
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
@@ -162,7 +174,7 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * ClipsParam.
+         * <p>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified.</p>
          */
         public Builder clipsParam(String clipsParam) {
             this.putQueryParameter("ClipsParam", clipsParam);
@@ -171,7 +183,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * CoverURL.
+         * <p>The thumbnail URL of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong><strong>.com/6AB4D0E1E1C7446888</strong></strong>.png</p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -180,7 +195,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline001desciption</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -189,7 +207,11 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the online editing project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>4ee4b97e27b525142a6b2</strong></strong></p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -198,7 +220,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID. This parameter is used to quickly build a timeline with ease. Note: Only one of ProjectId, Timeline, and TemplateId can be specified. If TemplateId is specified, ClipsParam must also be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -216,7 +241,10 @@ public class UpdateEditingProjectRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

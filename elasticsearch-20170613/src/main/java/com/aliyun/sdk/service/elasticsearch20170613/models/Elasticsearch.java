@@ -1,180 +1,180 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Elasticsearch} extends {@link TeaModel}
  *
  * <p>Elasticsearch</p>
  */
 public class Elasticsearch extends TeaModel {
-    @NameInMap("advancedDedicateMaster")
+    @com.aliyun.core.annotation.NameInMap("advancedDedicateMaster")
     private Boolean advancedDedicateMaster;
 
-    @NameInMap("advancedSetting")
+    @com.aliyun.core.annotation.NameInMap("advancedSetting")
     private AdvancedSetting advancedSetting;
 
-    @NameInMap("aliwsDicts")
+    @com.aliyun.core.annotation.NameInMap("aliwsDicts")
     private java.util.List < DictInfo > aliwsDicts;
 
-    @NameInMap("clientNodeConfiguration")
+    @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
     private ClientNodeConfiguration clientNodeConfiguration;
 
-    @NameInMap("createdAt")
+    @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
-    @NameInMap("dataNode")
+    @com.aliyun.core.annotation.NameInMap("dataNode")
     private Boolean dataNode;
 
-    @NameInMap("dedicateMaster")
+    @com.aliyun.core.annotation.NameInMap("dedicateMaster")
     private Boolean dedicateMaster;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("dictList")
+    @com.aliyun.core.annotation.NameInMap("dictList")
     private java.util.List < DictInfo > dictList;
 
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
-    @NameInMap("elasticDataNodeConfiguration")
+    @com.aliyun.core.annotation.NameInMap("elasticDataNodeConfiguration")
     private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
-    @NameInMap("enableKibanaPrivateNetwork")
+    @com.aliyun.core.annotation.NameInMap("enableKibanaPrivateNetwork")
     private Boolean enableKibanaPrivateNetwork;
 
-    @NameInMap("enableKibanaPublicNetwork")
+    @com.aliyun.core.annotation.NameInMap("enableKibanaPublicNetwork")
     private Boolean enableKibanaPublicNetwork;
 
-    @NameInMap("enablePublic")
+    @com.aliyun.core.annotation.NameInMap("enablePublic")
     private Boolean enablePublic;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @NameInMap("esConfig")
+    @com.aliyun.core.annotation.NameInMap("esConfig")
     private java.util.Map < String, String > esConfig;
 
-    @NameInMap("esIPWhitelist")
+    @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
     private java.util.List < String > esIPWhitelist;
 
-    @NameInMap("esVersion")
+    @com.aliyun.core.annotation.NameInMap("esVersion")
     private String esVersion;
 
-    @NameInMap("extendConfigs")
+    @com.aliyun.core.annotation.NameInMap("extendConfigs")
     private java.util.List < java.util.Map<String, ?>> extendConfigs;
 
-    @NameInMap("haveClientNode")
+    @com.aliyun.core.annotation.NameInMap("haveClientNode")
     private Boolean haveClientNode;
 
-    @NameInMap("haveElasticDataNode")
+    @com.aliyun.core.annotation.NameInMap("haveElasticDataNode")
     private Boolean haveElasticDataNode;
 
-    @NameInMap("haveKibana")
+    @com.aliyun.core.annotation.NameInMap("haveKibana")
     private Boolean haveKibana;
 
-    @NameInMap("ikHotDicts")
+    @com.aliyun.core.annotation.NameInMap("ikHotDicts")
     private java.util.List < DictInfo > ikHotDicts;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("kibanaConfiguration")
+    @com.aliyun.core.annotation.NameInMap("kibanaConfiguration")
     private KibanaNodeConfiguration kibanaConfiguration;
 
-    @NameInMap("kibanaDomain")
+    @com.aliyun.core.annotation.NameInMap("kibanaDomain")
     private String kibanaDomain;
 
-    @NameInMap("kibanaIPWhitelist")
+    @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
     private java.util.List < String > kibanaIPWhitelist;
 
-    @NameInMap("kibanaPort")
+    @com.aliyun.core.annotation.NameInMap("kibanaPort")
     private Long kibanaPort;
 
-    @NameInMap("kibanaPrivateDomain")
+    @com.aliyun.core.annotation.NameInMap("kibanaPrivateDomain")
     private String kibanaPrivateDomain;
 
-    @NameInMap("kibanaPrivateIPWhitelist")
+    @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
     private java.util.List < String > kibanaPrivateIPWhitelist;
 
-    @NameInMap("kibanaPrivatePort")
+    @com.aliyun.core.annotation.NameInMap("kibanaPrivatePort")
     private Long kibanaPrivatePort;
 
-    @NameInMap("kibanaProtocol")
+    @com.aliyun.core.annotation.NameInMap("kibanaProtocol")
     private String kibanaProtocol;
 
-    @NameInMap("masterConfiguration")
+    @com.aliyun.core.annotation.NameInMap("masterConfiguration")
     private MasterNodeConfiguration masterConfiguration;
 
-    @NameInMap("networkConfig")
+    @com.aliyun.core.annotation.NameInMap("networkConfig")
     private NetworkConfig networkConfig;
 
-    @NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
     private Long nodeAmount;
 
-    @NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
     private NodeSpec nodeSpec;
 
-    @NameInMap("paymentType")
+    @com.aliyun.core.annotation.NameInMap("paymentType")
     private String paymentType;
 
-    @NameInMap("port")
+    @com.aliyun.core.annotation.NameInMap("port")
     private Long port;
 
-    @NameInMap("privateNetworkIpWhiteList")
+    @com.aliyun.core.annotation.NameInMap("privateNetworkIpWhiteList")
     private java.util.List < String > privateNetworkIpWhiteList;
 
-    @NameInMap("productType")
+    @com.aliyun.core.annotation.NameInMap("productType")
     private String productType;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("publicDomain")
+    @com.aliyun.core.annotation.NameInMap("publicDomain")
     private String publicDomain;
 
-    @NameInMap("publicIpWhitelist")
+    @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
     private java.util.List < String > publicIpWhitelist;
 
-    @NameInMap("publicPort")
+    @com.aliyun.core.annotation.NameInMap("publicPort")
     private Long publicPort;
 
-    @NameInMap("readWritePolicy")
+    @com.aliyun.core.annotation.NameInMap("readWritePolicy")
     private ReadWritePolicy readWritePolicy;
 
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("serviceVpc")
+    @com.aliyun.core.annotation.NameInMap("serviceVpc")
     private Boolean serviceVpc;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("synonymsDicts")
+    @com.aliyun.core.annotation.NameInMap("synonymsDicts")
     private java.util.List < DictInfo > synonymsDicts;
 
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tag > tags;
 
-    @NameInMap("updatedAt")
+    @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
-    @NameInMap("warmNode")
+    @com.aliyun.core.annotation.NameInMap("warmNode")
     private Boolean warmNode;
 
-    @NameInMap("warmNodeConfiguration")
+    @com.aliyun.core.annotation.NameInMap("warmNodeConfiguration")
     private WarmNodeConfiguration warmNodeConfiguration;
 
-    @NameInMap("zoneCount")
+    @com.aliyun.core.annotation.NameInMap("zoneCount")
     private Long zoneCount;
 
-    @NameInMap("zoneInfos")
+    @com.aliyun.core.annotation.NameInMap("zoneInfos")
     private java.util.List < ZoneInfo > zoneInfos;
 
     private Elasticsearch(Builder builder) {
@@ -1131,8 +1131,14 @@ public class Elasticsearch extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Elasticsearch} extends {@link TeaModel}
+     *
+     * <p>Elasticsearch</p>
+     */
     public static class AdvancedSetting extends TeaModel {
-        @NameInMap("gcName")
+        @com.aliyun.core.annotation.NameInMap("gcName")
         private String gcName;
 
         private AdvancedSetting(Builder builder) {

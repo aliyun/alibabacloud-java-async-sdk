@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetSuccessInstanceTrendResponseBody</p>
  */
 public class GetSuccessInstanceTrendResponseBody extends TeaModel {
-    @NameInMap("InstanceStatusTrend")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatusTrend")
     private InstanceStatusTrend instanceStatusTrend;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSuccessInstanceTrendResponseBody(Builder builder) {
@@ -50,7 +55,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceStatusTrend.
+         * <p>The trend of statistics on the instance status in different time periods.</p>
          */
         public Builder instanceStatusTrend(InstanceStatusTrend instanceStatusTrend) {
             this.instanceStatusTrend = instanceStatusTrend;
@@ -58,7 +63,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527ab****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +79,17 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class AvgTrend extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private String timePoint;
 
         private AvgTrend(Builder builder) {
@@ -110,7 +124,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +135,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00</p>
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -132,11 +152,17 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class TodayTrend extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private String timePoint;
 
         private TodayTrend(Builder builder) {
@@ -171,7 +197,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -179,7 +208,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00</p>
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -193,11 +225,17 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class YesterdayTrend extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private String timePoint;
 
         private YesterdayTrend(Builder builder) {
@@ -232,7 +270,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -240,7 +281,10 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01:00</p>
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -254,15 +298,21 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSuccessInstanceTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSuccessInstanceTrendResponseBody</p>
+     */
     public static class InstanceStatusTrend extends TeaModel {
-        @NameInMap("AvgTrend")
-        private java.util.List < AvgTrend> avgTrend;
+        @com.aliyun.core.annotation.NameInMap("AvgTrend")
+        private java.util.List<AvgTrend> avgTrend;
 
-        @NameInMap("TodayTrend")
-        private java.util.List < TodayTrend> todayTrend;
+        @com.aliyun.core.annotation.NameInMap("TodayTrend")
+        private java.util.List<TodayTrend> todayTrend;
 
-        @NameInMap("YesterdayTrend")
-        private java.util.List < YesterdayTrend> yesterdayTrend;
+        @com.aliyun.core.annotation.NameInMap("YesterdayTrend")
+        private java.util.List<YesterdayTrend> yesterdayTrend;
 
         private InstanceStatusTrend(Builder builder) {
             this.avgTrend = builder.avgTrend;
@@ -281,49 +331,49 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         /**
          * @return avgTrend
          */
-        public java.util.List < AvgTrend> getAvgTrend() {
+        public java.util.List<AvgTrend> getAvgTrend() {
             return this.avgTrend;
         }
 
         /**
          * @return todayTrend
          */
-        public java.util.List < TodayTrend> getTodayTrend() {
+        public java.util.List<TodayTrend> getTodayTrend() {
             return this.todayTrend;
         }
 
         /**
          * @return yesterdayTrend
          */
-        public java.util.List < YesterdayTrend> getYesterdayTrend() {
+        public java.util.List<YesterdayTrend> getYesterdayTrend() {
             return this.yesterdayTrend;
         }
 
         public static final class Builder {
-            private java.util.List < AvgTrend> avgTrend; 
-            private java.util.List < TodayTrend> todayTrend; 
-            private java.util.List < YesterdayTrend> yesterdayTrend; 
+            private java.util.List<AvgTrend> avgTrend; 
+            private java.util.List<TodayTrend> todayTrend; 
+            private java.util.List<YesterdayTrend> yesterdayTrend; 
 
             /**
-             * AvgTrend.
+             * <p>The average trend.</p>
              */
-            public Builder avgTrend(java.util.List < AvgTrend> avgTrend) {
+            public Builder avgTrend(java.util.List<AvgTrend> avgTrend) {
                 this.avgTrend = avgTrend;
                 return this;
             }
 
             /**
-             * TodayTrend.
+             * <p>The trend on the current day.</p>
              */
-            public Builder todayTrend(java.util.List < TodayTrend> todayTrend) {
+            public Builder todayTrend(java.util.List<TodayTrend> todayTrend) {
                 this.todayTrend = todayTrend;
                 return this;
             }
 
             /**
-             * YesterdayTrend.
+             * <p>The trend on the previous day.</p>
              */
-            public Builder yesterdayTrend(java.util.List < YesterdayTrend> yesterdayTrend) {
+            public Builder yesterdayTrend(java.util.List<YesterdayTrend> yesterdayTrend) {
                 this.yesterdayTrend = yesterdayTrend;
                 return this;
             }

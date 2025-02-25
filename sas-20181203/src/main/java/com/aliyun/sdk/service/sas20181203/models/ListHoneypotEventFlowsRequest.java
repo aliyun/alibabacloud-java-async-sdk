@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotEventFlowsRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotEventFlowsRequest</p>
  */
 public class ListHoneypotEventFlowsRequest extends Request {
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Body
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @Body
-    @NameInMap("SecurityEventId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityEventId")
     private Long securityEventId;
 
     private ListHoneypotEventFlowsRequest(Builder builder) {
@@ -124,70 +129,55 @@ public class ListHoneypotEventFlowsRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
-            this.putBodyParameter("CurrentPage", currentPage);
+            this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
             return this;
         }
 
         /**
-         * The status of the event. Valid values:
-         * <p>
-         * 
-         * *   **y**: handled
-         * *   **n**: unhandled
-         * *   **a**: all statuses
+         * Dealed.
          */
         public Builder dealed(String dealed) {
-            this.putBodyParameter("Dealed", dealed);
+            this.putQueryParameter("Dealed", dealed);
             this.dealed = dealed;
             return this;
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * Lang.
          */
         public Builder lang(String lang) {
-            this.putBodyParameter("Lang", lang);
+            this.putQueryParameter("Lang", lang);
             this.lang = lang;
             return this;
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
-         * 
-         * >  We recommend that you do not leave this parameter empty.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
-            this.putBodyParameter("PageSize", pageSize);
+            this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
-            this.putBodyParameter("RequestId", requestId);
+            this.putQueryParameter("RequestId", requestId);
             this.requestId = requestId;
             return this;
         }
 
         /**
-         * The ID of the alert event. The ID of the management account of the ListHoneypotEvents resource directory.
-         * <p>
-         * 
-         * >  You can call the [ListHoneypotEvents](~~ListHoneypotEvents~~) operation to query the IDs of alert events.
+         * SecurityEventId.
          */
         public Builder securityEventId(Long securityEventId) {
-            this.putBodyParameter("SecurityEventId", securityEventId);
+            this.putQueryParameter("SecurityEventId", securityEventId);
             this.securityEventId = securityEventId;
             return this;
         }

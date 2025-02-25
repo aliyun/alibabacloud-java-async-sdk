@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhitelistTemplateLinkedInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhitelistTemplateLinkedInstanceResponseBody</p>
  */
 public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeWhitelistTemplateLinkedInstanceResponseBody(Builder builder) {
@@ -98,14 +103,17 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         private Boolean success; 
 
         /**
-         * The response code returned. Valid values:
-         * <p>
+         * <p>The response code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>401</strong>: identity authentication failed</li>
+         * <li><strong>404</strong>: request page not found</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **401**: identity authentication failed
-         * *   **404**: request page not found
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -113,7 +121,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,12 +129,15 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * The HTTP status code returned. Valid values:
-         * <p>
+         * <p>The HTTP status code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: success</li>
+         * <li><strong>400</strong>: client error</li>
+         * <li><strong>500</strong>: server error</li>
+         * </ul>
          * 
-         * *   **200**: success
-         * *   **400**: client error
-         * *   **500**: server error
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +145,10 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,10 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,11 +167,14 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -167,11 +187,17 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWhitelistTemplateLinkedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhitelistTemplateLinkedInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("InsName")
-        private java.util.List < String > insName;
+        @com.aliyun.core.annotation.NameInMap("InsName")
+        private java.util.List<String> insName;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
         private Data(Builder builder) {
@@ -190,7 +216,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         /**
          * @return insName
          */
-        public java.util.List < String > getInsName() {
+        public java.util.List<String> getInsName() {
             return this.insName;
         }
 
@@ -202,19 +228,22 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         public static final class Builder {
-            private java.util.List < String > insName; 
+            private java.util.List<String> insName; 
             private Integer templateId; 
 
             /**
-             * The information about the instance.
+             * <p>The information about the instance.</p>
              */
-            public Builder insName(java.util.List < String > insName) {
+            public Builder insName(java.util.List<String> insName) {
                 this.insName = insName;
                 return this;
             }
 
             /**
-             * The ID of the whitelist template.
+             * <p>The ID of the whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>412</p>
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;

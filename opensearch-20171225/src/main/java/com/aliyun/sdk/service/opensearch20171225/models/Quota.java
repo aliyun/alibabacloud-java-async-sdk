@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Quota</p>
  */
 public class Quota extends TeaModel {
-    @NameInMap("computeResource")
+    @com.aliyun.core.annotation.NameInMap("computeResource")
     private Integer computeResource;
 
-    @NameInMap("docSize")
+    @com.aliyun.core.annotation.NameInMap("docSize")
     private Integer docSize;
 
-    @NameInMap("orderType")
+    @com.aliyun.core.annotation.NameInMap("orderType")
     private String orderType;
 
-    @NameInMap("spec")
+    @com.aliyun.core.annotation.NameInMap("spec")
     private String spec;
 
     private Quota(Builder builder) {

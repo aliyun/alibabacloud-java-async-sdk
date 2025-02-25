@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutDcdnKvNamespaceRequest} extends {@link RequestModel}
  *
  * <p>PutDcdnKvNamespaceRequest</p>
  */
 public class PutDcdnKvNamespaceRequest extends Request {
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024)
     private String description;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private PutDcdnKvNamespaceRequest(Builder builder) {
@@ -70,7 +70,11 @@ public class PutDcdnKvNamespaceRequest extends Request {
         } 
 
         /**
-         * The description of the namespace.
+         * <p>The description of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the first namespace</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -79,7 +83,11 @@ public class PutDcdnKvNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (\_).
+         * <p>The name of the namespace. The name can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);

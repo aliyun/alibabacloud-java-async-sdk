@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotAttackStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetHoneypotAttackStatisticsRequest</p>
  */
 public class GetHoneypotAttackStatisticsRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTimeStamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeStamp")
     private Long endTimeStamp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevelList")
+    private java.util.List<String> riskLevelList;
 
-    @Query
-    @NameInMap("SrcIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcIp;
 
-    @Query
-    @NameInMap("StartTimeStamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimeStamp")
     private Long startTimeStamp;
 
-    @Query
-    @NameInMap("StatisticsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatisticsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statisticsType;
 
     private GetHoneypotAttackStatisticsRequest(Builder builder) {
@@ -102,7 +107,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -132,7 +137,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         private Long endTimeStamp; 
         private String lang; 
         private Integer pageSize; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
         private Long startTimeStamp; 
         private String statisticsType; 
@@ -154,7 +159,10 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         } 
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -163,7 +171,10 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * The end time. The value is a UNIX timestamp.
+         * <p>The end time. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675058931215</p>
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -172,11 +183,14 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -185,7 +199,10 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,16 +211,20 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * The risk levels.
+         * <p>The risk levels.</p>
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;
         }
 
         /**
-         * The source IP address of the attack.
+         * <p>The source IP address of the attack.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.92.139.**</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -212,7 +233,10 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * The start time. The value is a UNIX timestamp.
+         * <p>The start time. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681624877761</p>
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);
@@ -221,13 +245,17 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the attack source statistics. Valid values:
-         * <p>
+         * <p>The type of the attack source statistics. Valid values:</p>
+         * <ul>
+         * <li><strong>TOP_ATTACKED_AGENT</strong>: the top 5 probes that are attacked the most frequently</li>
+         * <li><strong>TOP_ATTACKED_IP</strong>: the top 5 IP addresses that are attacked the most frequently</li>
+         * <li><strong>ATTACK_EVENT_TYPE</strong>: the type of the intrusion event</li>
+         * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: the type of the attacked honeypot</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **TOP_ATTACKED_AGENT**: the top 5 probes that are attacked the most frequently
-         * *   **TOP_ATTACKED_IP**: the top 5 IP addresses that are attacked the most frequently
-         * *   **ATTACK_EVENT_TYPE**: the type of the intrusion event
-         * *   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot
+         * <strong>example:</strong>
+         * <p>TOP_ATTACKED_IP</p>
          */
         public Builder statisticsType(String statisticsType) {
             this.putQueryParameter("StatisticsType", statisticsType);

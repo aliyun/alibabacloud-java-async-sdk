@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EntityDeleteRequest} extends {@link RequestModel}
  *
  * <p>EntityDeleteRequest</p>
  */
 public class EntityDeleteRequest extends Request {
-    @Query
-    @NameInMap("del_all")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("del_all")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean delAll;
 
-    @Body
-    @NameInMap("entity_d_o_list")
-    private java.util.List < EntityDOList> entityDOList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("entity_d_o_list")
+    private java.util.List<EntityDOList> entityDOList;
 
-    @Query
-    @NameInMap("thirdpart_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("thirdpart_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdpartId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private EntityDeleteRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class EntityDeleteRequest extends Request {
     /**
      * @return entityDOList
      */
-    public java.util.List < EntityDOList> getEntityDOList() {
+    public java.util.List<EntityDOList> getEntityDOList() {
         return this.entityDOList;
     }
 
@@ -81,7 +86,7 @@ public class EntityDeleteRequest extends Request {
 
     public static final class Builder extends Request.Builder<EntityDeleteRequest, Builder> {
         private Boolean delAll; 
-        private java.util.List < EntityDOList> entityDOList; 
+        private java.util.List<EntityDOList> entityDOList; 
         private String thirdpartId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -98,7 +103,10 @@ public class EntityDeleteRequest extends Request {
         } 
 
         /**
-         * del_all.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder delAll(Boolean delAll) {
             this.putQueryParameter("del_all", delAll);
@@ -109,7 +117,7 @@ public class EntityDeleteRequest extends Request {
         /**
          * entity_d_o_list.
          */
-        public Builder entityDOList(java.util.List < EntityDOList> entityDOList) {
+        public Builder entityDOList(java.util.List<EntityDOList> entityDOList) {
             String entityDOListShrink = shrink(entityDOList, "entity_d_o_list", "json");
             this.putBodyParameter("entity_d_o_list", entityDOListShrink);
             this.entityDOList = entityDOList;
@@ -117,7 +125,10 @@ public class EntityDeleteRequest extends Request {
         }
 
         /**
-         * thirdpart_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder thirdpartId(String thirdpartId) {
             this.putQueryParameter("thirdpart_id", thirdpartId);
@@ -141,13 +152,19 @@ public class EntityDeleteRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EntityDeleteRequest} extends {@link TeaModel}
+     *
+     * <p>EntityDeleteRequest</p>
+     */
     public static class EntityDOList extends TeaModel {
-        @NameInMap("entity_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityId;
 
-        @NameInMap("entity_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityType;
 
         private EntityDOList(Builder builder) {
@@ -182,7 +199,10 @@ public class EntityDeleteRequest extends Request {
             private String entityType; 
 
             /**
-             * entity_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -190,7 +210,10 @@ public class EntityDeleteRequest extends Request {
             }
 
             /**
-             * entity_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;

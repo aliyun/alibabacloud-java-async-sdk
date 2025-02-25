@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSolutionRequest} extends {@link RequestModel}
  *
  * <p>CreateSolutionRequest</p>
  */
 public class CreateSolutionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("ContentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
     private Integer contentType;
 
-    @Query
-    @NameInMap("KnowledgeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KnowledgeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long knowledgeId;
 
-    @Query
-    @NameInMap("PerspectiveCodes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerspectiveCodes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > perspectiveCodes;
 
     private CreateSolutionRequest(Builder builder) {
@@ -145,7 +145,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -163,7 +163,10 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * KnowledgeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001905617</p>
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putQueryParameter("KnowledgeId", knowledgeId);
@@ -172,7 +175,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * PerspectiveCodes.
+         * <p>This parameter is required.</p>
          */
         public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
             this.putQueryParameter("PerspectiveCodes", perspectiveCodes);

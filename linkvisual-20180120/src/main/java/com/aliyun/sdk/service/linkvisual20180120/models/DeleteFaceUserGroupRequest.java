@@ -63,10 +63,10 @@ public class DeleteFaceUserGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFaceUserGroupRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.userGroupId = response.userGroupId;
+        private Builder(DeleteFaceUserGroupRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.userGroupId = request.userGroupId;
         } 
 
         /**

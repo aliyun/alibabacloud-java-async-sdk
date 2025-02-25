@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertNodeGroupParam} extends {@link TeaModel}
  *
  * <p>ConvertNodeGroupParam</p>
  */
 public class ConvertNodeGroupParam extends TeaModel {
-    @NameInMap("NodeGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeGroupId;
 
-    @NameInMap("PaymentDuration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String paymentType;
 
     private ConvertNodeGroupParam(Builder builder) {
@@ -77,7 +82,7 @@ public class ConvertNodeGroupParam extends TeaModel {
         private String paymentType; 
 
         /**
-         * NodeGroupId.
+         * <p>This parameter is required.</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -85,7 +90,7 @@ public class ConvertNodeGroupParam extends TeaModel {
         }
 
         /**
-         * PaymentDuration.
+         * <p>This parameter is required.</p>
          */
         public Builder paymentDuration(Long paymentDuration) {
             this.paymentDuration = paymentDuration;
@@ -101,7 +106,7 @@ public class ConvertNodeGroupParam extends TeaModel {
         }
 
         /**
-         * PaymentType.
+         * <p>This parameter is required.</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;

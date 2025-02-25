@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeUserPermissionRequest} extends {@link RequestModel}
  *
  * <p>RevokeUserPermissionRequest</p>
  */
 public class RevokeUserPermissionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbId")
     private String dbId;
 
-    @Query
-    @NameInMap("DsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dsType;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
-    @Query
-    @NameInMap("Logic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logic")
     private Boolean logic;
 
-    @Query
-    @NameInMap("PermTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permTypes;
 
-    @Query
-    @NameInMap("TableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableId")
     private String tableId;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("UserAccessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAccessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userAccessId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private RevokeUserPermissionRequest(Builder builder) {
@@ -207,11 +212,14 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the database. The database can be a physical database or a logical database.
-         * <p>
+         * <p>The database ID. The database can be a physical database or a logical database.</p>
+         * <ul>
+         * <li>To query the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * <li>To query the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * </ul>
          * 
-         * *   To query the ID of a physical database, call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation.
-         * *   To query the ID of a logical database, call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation.
+         * <strong>example:</strong>
+         * <p>1860****</p>
          */
         public Builder dbId(String dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -220,14 +228,18 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The object type on which the permission you want to revoke from the user. Valid values:
-         * <p>
+         * <p>The type of the object on which you want to revoke permissions from a user. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: instances.</li>
+         * <li><strong>DATABASE</strong>: physical databases.</li>
+         * <li><strong>LOGIC_DATABASE</strong>: logical databases.</li>
+         * <li><strong>TABLE</strong>: physical tables.</li>
+         * <li><strong>LOGIC_TABLE</strong>: logical tables.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **INSTANCE**: database instances
-         * *   **DATABASE**: physical databases
-         * *   **LOGIC_DATABASE**: logical databases
-         * *   **TABLE**: physical tables
-         * *   **LOGIC_TABLE**: logical tables
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
          */
         public Builder dsType(String dsType) {
             this.putQueryParameter("DsType", dsType);
@@ -236,7 +248,10 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the database instance. You must specify this parameter when you revoke a permission from the database instance. You can call the [ListInstances](~~141936~~) or [GetInstance](~~141567~~) operation to query the database instance ID.
+         * <p>The database instance ID. You must specify this parameter if you revoke a permission from the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174****</p>
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -245,14 +260,22 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * Specifies whether the database is a logical database. Valid values:
-         * <p>
+         * <p>Specifies whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the database is a logical database, set this parameter to <strong>true</strong>.</p>
+         * </li>
+         * <li><p>If the database is a physical database, set this parameter to <strong>false</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * * **true**: The database is a logical database.
-         * * **false**: The database is a physical database.
-         * 
-         * > * If the database is a logical database, set this parameter to **true**.
-         * > * If the database is a physical database, set this parameter to **false**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logic(Boolean logic) {
             this.putQueryParameter("Logic", logic);
@@ -261,12 +284,18 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The type of the permission. Valid values:
-         * <p>
+         * <p>The type of the permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>QUERY</strong>: query permissions.</li>
+         * <li><strong>EXPORT</strong>: export permissions.</li>
+         * <li><strong>CORRECT</strong>: change permissions.</li>
+         * <li><strong>LOGIN</strong>: logon permissions.</li>
+         * <li><strong>PERF</strong>: query permissions on the performance details of an instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **QUERY**: the data query permission
-         * *   **EXPORT**: the data export permission
-         * *   **CORRECT**: the data change permission
+         * <strong>example:</strong>
+         * <p>CORRECT</p>
          */
         public Builder permTypes(String permTypes) {
             this.putQueryParameter("PermTypes", permTypes);
@@ -275,7 +304,10 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the table. You must specify this parameter when you revoke a permission from the table. You can call the [ListTables](~~141878~~) operation to query the table ID.
+         * <p>The table ID. You must specify this parameter if you revoke a permission from the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13****</p>
          */
         public Builder tableId(String tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -284,7 +316,10 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The name of the table. You can call the [ListTables](~~141878~~) operation to query the table name.
+         * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -293,7 +328,10 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.
+         * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -302,7 +340,11 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the permission. You can call the [ListUserPermission](~~146957~~) operation to query the permission ID.
+         * <p>The permission ID. You can call the <a href="https://help.aliyun.com/document_detail/146957.html">ListUserPermission</a> operation to query the permission ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>774****</p>
          */
         public Builder userAccessId(String userAccessId) {
             this.putQueryParameter("UserAccessId", userAccessId);
@@ -311,7 +353,11 @@ public class RevokeUserPermissionRequest extends Request {
         }
 
         /**
-         * The ID of the user. You can call the [ListUsers](~~141938~~) or [GetUser](~~147098~~) operation to query the user ID.
+         * <p>The user ID. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to query the ID of the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

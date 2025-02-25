@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferPayTypeResponseBody} extends {@link TeaModel}
  *
  * <p>TransferPayTypeResponseBody</p>
  */
 public class TransferPayTypeResponseBody extends TeaModel {
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private TransferPayTypeResponseBody(Builder builder) {
@@ -158,11 +163,14 @@ public class TransferPayTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The billing method of the DTS instance. Valid values:
-         * <p>
+         * <p>The billing method of the DTS instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -170,7 +178,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The error code. This parameter will be removed in the future.
+         * <p>The error code. This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -178,7 +189,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DTS task.
+         * <p>The ID of the DTS task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>o4nh3g7jg56****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -186,10 +200,13 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -197,12 +214,16 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the subscription instance. The value is a UNIX timestamp.
-         * <p>
+         * <p>The expiration time of the subscription instance. The value is a UNIX timestamp.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If the DTS instance is a pay-as-you-go instance, the value of this parameter is empty.</li>
+         * <li>You can use a search engine to obtain a UNIX timestamp converter.</li>
+         * </ul>
          * 
-         * > 
-         * *   If the DTS instance is a pay-as-you-go instance, the value of this parameter is empty.
-         * *   You can use a search engine to obtain a UNIX timestamp converter.
+         * <strong>example:</strong>
+         * <p>1614916318</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -210,7 +231,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -218,7 +242,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -226,7 +253,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -234,7 +264,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DTS instance.
+         * <p>The ID of the DTS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtso4nh3g7jg56****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -242,7 +275,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>601B6F25-21E7-4484-99D5-3EF2625C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,11 +286,14 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
          * 
-         * *   **true**: The call was successful.
-         * *   **false**: The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

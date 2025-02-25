@@ -1,45 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVSwitchCidrReservationRequest} extends {@link RequestModel}
  *
  * <p>DeleteVSwitchCidrReservationRequest</p>
  */
 public class DeleteVSwitchCidrReservationRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VSwitchCidrReservationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchCidrReservationId;
 
     private DeleteVSwitchCidrReservationRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -59,6 +74,20 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -104,6 +133,8 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteVSwitchCidrReservationRequest, Builder> {
+        private String clientToken; 
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -117,6 +148,8 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
 
         private Builder(DeleteVSwitchCidrReservationRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -124,6 +157,24 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.vSwitchCidrReservationId = request.vSwitchCidrReservationId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -144,10 +195,12 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
         }
 
         /**
-         * The ID of the region where the vSwitch is deployed.
-         * <p>
+         * <p>The ID of the region where the vSwitch is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +227,11 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
         }
 
         /**
-         * The ID of the reserved CIDR block.
+         * <p>The ID of the reserved CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcr-bp1m12saqteraw3rp****</p>
          */
         public Builder vSwitchCidrReservationId(String vSwitchCidrReservationId) {
             this.putQueryParameter("VSwitchCidrReservationId", vSwitchCidrReservationId);

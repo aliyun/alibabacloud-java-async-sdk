@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DiscardEditingContactFlowRequest} extends {@link RequestModel}
  *
  * <p>DiscardEditingContactFlowRequest</p>
  */
 public class DiscardEditingContactFlowRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowId;
 
-    @Query
-    @NameInMap("DraftId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DraftId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String draftId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DiscardEditingContactFlowRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class DiscardEditingContactFlowRequest extends Request {
         } 
 
         /**
-         * ContactFlowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ff4e021-fd63-4572-ad8c-10ed69972965</p>
          */
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
@@ -94,7 +102,10 @@ public class DiscardEditingContactFlowRequest extends Request {
         }
 
         /**
-         * DraftId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0aa493d6-58eb-4290-9ba2-e1c2c615b46b</p>
          */
         public Builder draftId(String draftId) {
             this.putQueryParameter("DraftId", draftId);
@@ -103,7 +114,10 @@ public class DiscardEditingContactFlowRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

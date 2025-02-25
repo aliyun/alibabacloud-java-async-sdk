@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMdsMiniConfigResponseBody</p>
  */
 public class GetMdsMiniConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultContent")
+    @com.aliyun.core.annotation.NameInMap("ResultContent")
     private ResultContent resultContent;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private GetMdsMiniConfigResponseBody(Builder builder) {
@@ -112,34 +111,34 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
     } 
 
     public static class ApiConfigList extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("ConfigStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigStatus")
         private Long configStatus;
 
-        @NameInMap("ConfigType")
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
         private String configType;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private ApiConfigList(Builder builder) {
@@ -333,34 +332,34 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     }
     public static class PrivilegeSwitch extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("ConfigStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigStatus")
         private Long configStatus;
 
-        @NameInMap("ConfigType")
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
         private String configType;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private PrivilegeSwitch(Builder builder) {
@@ -554,34 +553,34 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     }
     public static class ServerDomainConfigList extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("ConfigStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigStatus")
         private Long configStatus;
 
-        @NameInMap("ConfigType")
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
         private String configType;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private ServerDomainConfigList(Builder builder) {
@@ -775,34 +774,34 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     }
     public static class WebviewDomainConfigList extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("ConfigStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigStatus")
         private Long configStatus;
 
-        @NameInMap("ConfigType")
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
         private String configType;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private WebviewDomainConfigList(Builder builder) {
@@ -996,28 +995,28 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("ApiConfigList")
+        @com.aliyun.core.annotation.NameInMap("ApiConfigList")
         private java.util.List < ApiConfigList> apiConfigList;
 
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("EnableServerDomainCount")
+        @com.aliyun.core.annotation.NameInMap("EnableServerDomainCount")
         private String enableServerDomainCount;
 
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
-        @NameInMap("PrivilegeSwitch")
+        @com.aliyun.core.annotation.NameInMap("PrivilegeSwitch")
         private PrivilegeSwitch privilegeSwitch;
 
-        @NameInMap("ServerDomainConfigList")
+        @com.aliyun.core.annotation.NameInMap("ServerDomainConfigList")
         private java.util.List < ServerDomainConfigList> serverDomainConfigList;
 
-        @NameInMap("WebviewDomainConfigList")
+        @com.aliyun.core.annotation.NameInMap("WebviewDomainConfigList")
         private java.util.List < WebviewDomainConfigList> webviewDomainConfigList;
 
         private Content(Builder builder) {
@@ -1177,16 +1176,16 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
@@ -1278,10 +1277,10 @@ public class GetMdsMiniConfigResponseBody extends TeaModel {
 
     }
     public static class ResultContent extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
         private ResultContent(Builder builder) {

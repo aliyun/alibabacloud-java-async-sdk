@@ -97,11 +97,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
-      * You can call this operation to cancel the subscription to only one type of bill at a time.
-      * After the subscription to a type of bill is canceled, bills of this type are no longer pushed to the specified Object Storage Service (OSS) bucket.
-      * **This topic is published only on the international site (alibabacloud.com).
-      *
+     * @param request the request parameters of CancelCoupon  CancelCouponRequest
+     * @return CancelCouponResponse
+     */
+    @Override
+    public CompletableFuture<CancelCouponResponse> cancelCoupon(CancelCouponRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelCoupon").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelCouponResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelCouponResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
+     * You can call this operation to cancel the subscription to only one type of bill at a time.
+     * After the subscription to a type of bill is canceled, bills of this type are no longer pushed to the specified Object Storage Service (OSS) bucket.
+     * **This topic is published only on the international site (alibabacloud.com).</p>
+     * 
+     * @param request the request parameters of CancelSubscriptionBill  CancelSubscriptionBillRequest
+     * @return CancelSubscriptionBillResponse
      */
     @Override
     public CompletableFuture<CancelSubscriptionBillResponse> cancelSubscriptionBill(CancelSubscriptionBillRequest request) {
@@ -117,6 +138,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CouponApprovalStatusList  CouponApprovalStatusListRequest
+     * @return CouponApprovalStatusListResponse
+     */
+    @Override
+    public CompletableFuture<CouponApprovalStatusListResponse> couponApprovalStatusList(CouponApprovalStatusListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CouponApprovalStatusList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CouponApprovalStatusListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CouponApprovalStatusListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateCouponTemplate  CreateCouponTemplateRequest
+     * @return CreateCouponTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateCouponTemplateResponse> createCouponTemplate(CreateCouponTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCouponTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCouponTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCouponTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateCustomer  CreateCustomerRequest
+     * @return CreateCustomerResponse
+     */
     @Override
     public CompletableFuture<CreateCustomerResponse> createCustomer(CreateCustomerRequest request) {
         try {
@@ -131,6 +192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CustomerQuotaRecordList  CustomerQuotaRecordListRequest
+     * @return CustomerQuotaRecordListResponse
+     */
     @Override
     public CompletableFuture<CustomerQuotaRecordListResponse> customerQuotaRecordList(CustomerQuotaRecordListRequest request) {
         try {
@@ -145,6 +210,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Note that sometimes you may find that the customer\&quot;s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\&quot;s usage. This phenomenon occurs because a refund is generated while the customer\&quot;s credit is full, thereby triggered additional increasing on the customer\&quot;s credit.
+     * For example, if the customer\&quot;s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.</p>
+     * 
+     * @param request the request parameters of DeductOutstandingBalance  DeductOutstandingBalanceRequest
+     * @return DeductOutstandingBalanceResponse
+     */
     @Override
     public CompletableFuture<DeductOutstandingBalanceResponse> deductOutstandingBalance(DeductOutstandingBalanceRequest request) {
         try {
@@ -159,6 +232,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCouponTemplate  DeleteCouponTemplateRequest
+     * @return DeleteCouponTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCouponTemplateResponse> deleteCouponTemplate(DeleteCouponTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCouponTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCouponTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCouponTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * @param request the request parameters of EditEndUserStatus  EditEndUserStatusRequest
+     * @return EditEndUserStatusResponse
+     */
     @Override
     public CompletableFuture<EditEndUserStatusResponse> editEndUserStatus(EditEndUserStatusRequest request) {
         try {
@@ -173,6 +272,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * @param request the request parameters of EditNewBuyStatus  EditNewBuyStatusRequest
+     * @return EditNewBuyStatusResponse
+     */
     @Override
     public CompletableFuture<EditNewBuyStatusResponse> editNewBuyStatus(EditNewBuyStatusRequest request) {
         try {
@@ -187,6 +294,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+     * **This content is only published on the international site. **</p>
+     * 
+     * @param request the request parameters of EditZeroCreditShutdown  EditZeroCreditShutdownRequest
+     * @return EditZeroCreditShutdownResponse
+     */
     @Override
     public CompletableFuture<EditZeroCreditShutdownResponse> editZeroCreditShutdown(EditZeroCreditShutdownRequest request) {
         try {
@@ -201,6 +316,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * 
+     * @param request the request parameters of ExportCustomerQuotaRecord  ExportCustomerQuotaRecordRequest
+     * @return ExportCustomerQuotaRecordResponse
+     */
     @Override
     public CompletableFuture<ExportCustomerQuotaRecordResponse> exportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request) {
         try {
@@ -215,6 +337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountInfo  GetAccountInfoRequest
+     * @return GetAccountInfoResponse
+     */
     @Override
     public CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request) {
         try {
@@ -229,6 +355,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCouponTemplateDetail  GetCouponTemplateDetailRequest
+     * @return GetCouponTemplateDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetCouponTemplateDetailResponse> getCouponTemplateDetail(GetCouponTemplateDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCouponTemplateDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCouponTemplateDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCouponTemplateDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCoupondeductProductCode  GetCoupondeductProductCodeRequest
+     * @return GetCoupondeductProductCodeResponse
+     */
+    @Override
+    public CompletableFuture<GetCoupondeductProductCodeResponse> getCoupondeductProductCode(GetCoupondeductProductCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCoupondeductProductCode").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCoupondeductProductCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCoupondeductProductCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCreditInfo  GetCreditInfoRequest
+     * @return GetCreditInfoResponse
+     */
     @Override
     public CompletableFuture<GetCreditInfoResponse> getCreditInfo(GetCreditInfoRequest request) {
         try {
@@ -243,6 +409,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomerOrders  GetCustomerOrdersRequest
+     * @return GetCustomerOrdersResponse
+     */
+    @Override
+    public CompletableFuture<GetCustomerOrdersResponse> getCustomerOrders(GetCustomerOrdersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCustomerOrders").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCustomerOrdersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCustomerOrdersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDailyBill  GetDailyBillRequest
+     * @return GetDailyBillResponse
+     */
     @Override
     public CompletableFuture<GetDailyBillResponse> getDailyBill(GetDailyBillRequest request) {
         try {
@@ -257,6 +445,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInviteStatus  GetInviteStatusRequest
+     * @return GetInviteStatusResponse
+     */
     @Override
     public CompletableFuture<GetInviteStatusResponse> getInviteStatus(GetInviteStatusRequest request) {
         try {
@@ -271,6 +463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMonthlyBill  GetMonthlyBillRequest
+     * @return GetMonthlyBillResponse
+     */
     @Override
     public CompletableFuture<GetMonthlyBillResponse> getMonthlyBill(GetMonthlyBillRequest request) {
         try {
@@ -285,6 +481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUnassociatedCustomer  GetUnassociatedCustomerRequest
+     * @return GetUnassociatedCustomerResponse
+     */
     @Override
     public CompletableFuture<GetUnassociatedCustomerResponse> getUnassociatedCustomer(GetUnassociatedCustomerRequest request) {
         try {
@@ -299,6 +499,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>The current API request rate for the Cloud Product has not been disclosed.</p>
+     * 
+     * @param request the request parameters of InviteSubAccount  InviteSubAccountRequest
+     * @return InviteSubAccountResponse
+     */
     @Override
     public CompletableFuture<InviteSubAccountResponse> inviteSubAccount(InviteSubAccountRequest request) {
         try {
@@ -313,6 +520,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IssueCouponForCustomer  IssueCouponForCustomerRequest
+     * @return IssueCouponForCustomerResponse
+     */
+    @Override
+    public CompletableFuture<IssueCouponForCustomerResponse> issueCouponForCustomer(IssueCouponForCustomerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("IssueCouponForCustomer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IssueCouponForCustomerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IssueCouponForCustomerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The current API request rate for cloud products has not been disclosed.</p>
+     * 
+     * @param request the request parameters of ListCountries  ListCountriesRequest
+     * @return ListCountriesResponse
+     */
     @Override
     public CompletableFuture<ListCountriesResponse> listCountries(ListCountriesRequest request) {
         try {
@@ -327,6 +559,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCouponUsage  ListCouponUsageRequest
+     * @return ListCouponUsageResponse
+     */
+    @Override
+    public CompletableFuture<ListCouponUsageResponse> listCouponUsage(ListCouponUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCouponUsage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCouponUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCouponUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Caller must be a Partner from International Site, either Distribution or Reseller will do.</p>
+     * 
+     * @param request the request parameters of QuotaListExportPaged  QuotaListExportPagedRequest
+     * @return QuotaListExportPagedResponse
+     */
     @Override
     public CompletableFuture<QuotaListExportPagedResponse> quotaListExportPaged(QuotaListExportPagedRequest request) {
         try {
@@ -341,6 +598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResendEmail  ResendEmailRequest
+     * @return ResendEmailResponse
+     */
     @Override
     public CompletableFuture<ResendEmailResponse> resendEmail(ResendEmailRequest request) {
         try {
@@ -355,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetAccountInfo  SetAccountInfoRequest
+     * @return SetAccountInfoResponse
+     */
     @Override
     public CompletableFuture<SetAccountInfoResponse> setAccountInfo(SetAccountInfoRequest request) {
         try {
@@ -369,6 +634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetCreditLine  SetCreditLineRequest
+     * @return SetCreditLineResponse
+     */
     @Override
     public CompletableFuture<SetCreditLineResponse> setCreditLine(SetCreditLineRequest request) {
         try {
@@ -383,6 +652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetWarningThreshold  SetWarningThresholdRequest
+     * @return SetWarningThresholdResponse
+     */
     @Override
     public CompletableFuture<SetWarningThresholdResponse> setWarningThreshold(SetWarningThresholdRequest request) {
         try {
@@ -398,33 +671,37 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
-      * *   You can call this operation to subscribe to only one type of bill at a time.
-      * *   After the subscription to a type of bill is generated, the bill for the previous day is pushed on a daily basis from the next day. On the fifth day of each month, the full-data bill for the previous month is pushed.
-      * *   A daily bill may be delayed. The delayed bill is pushed the next day after it is generated. The delayed bill may contain the bill data that is delayed until the previous day. We recommend that you query the full-data bill for the previous month at the beginning of each month.
-      * *   Your account must be granted the [AliyunConsumeDump2OSSRole](https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D) permission.
-      * *   The following file name formats are supported for bills:
-      * ```
-      * BillingItemDetailForBillingPeriod
-      *   
-      * File name format of a daily bill: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01. 
-      *   
-      * File name format of a monthly full-data bill: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01. 
-      * InstanceDetailForBillingPeriod
-      *  
-      *  File name format of a daily bill: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01. 
-      *   
-      * File name format of a monthly full-data bill: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01. 
-      * BillingItemDetailMonthly
-      *   
-      * File name format of a daily bill: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-      * InstanceDetailMonthly
-      *   
-      * File name format of a daily bill: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
-      * The fileNo field exists only when the number of bill rows reaches the maximum rows in a single bill file and the bill is split into multiple files.
-      * ```
-      * **This topic is published only on the international site (alibabacloud.com).
-      *
+     * <b>description</b> :
+     * <p>  Make sure that you are a distributor of the Alibaba Cloud international ecosystem.</p>
+     * <ul>
+     * <li>You can call this operation to subscribe to only one type of bill at a time.</li>
+     * <li>After the subscription to a type of bill is generated, the bill for the previous day is pushed on a daily basis from the next day. On the fifth day of each month, the full-data bill for the previous month is pushed.</li>
+     * <li>A daily bill may be delayed. The delayed bill is pushed the next day after it is generated. The delayed bill may contain the bill data that is delayed until the previous day. We recommend that you query the full-data bill for the previous month at the beginning of each month.</li>
+     * <li>Your account must be granted the <a href="https://ram.console.aliyun.com/?spm=api-workbench.API%20Document.0.0.68c71e0fhmTSJp#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunConsumeDump2OSSRole%22,%20%22TemplateId%22:%20%22Dump2OSSRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fusercenter2.aliyun.com%22,%20%22Service%22:%20%22Consume%22%7D">AliyunConsumeDump2OSSRole</a> permission.</li>
+     * <li>The following file name formats are supported for bills:</li>
+     * </ul>
+     * <pre><code>BillingItemDetailForBillingPeriod
+     *   
+     * File name format of a daily bill: UID_PartnerBillingItemDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_BillingItemDetail_20190310_0001_01. 
+     *   
+     * File name format of a monthly full-data bill: UID_PartnerBillingItemDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetail_201903_0001_01. 
+     * InstanceDetailForBillingPeriod
+     *  
+     *  File name format of a daily bill: UID_PartnerInstanceDetail_YYYYMMDD_SquenceNo_fileNo. Example: 169**_InstanceDetail_20190310_0001_01. 
+     *   
+     * File name format of a monthly full-data bill: UID_PartnerInstanceDetail_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetail_201903_1999-0001_01. 
+     * BillingItemDetailMonthly
+     *   
+     * File name format of a daily bill: UID_PartnerBillingItemDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_BillingItemDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
+     * InstanceDetailMonthly
+     *   
+     * File name format of a daily bill: UID_PartnerInstanceDetailMonthly_YYYYMM_SquenceNo_fileNo. Example: 169**_InstanceDetailMonthly_201903_0001_01. This bill contains the bill data that is generated from the beginning of the current month to the fifth day of the next month. 
+     * The fileNo field exists only when the number of bill rows reaches the maximum rows in a single bill file and the bill is split into multiple files.
+     * </code></pre>
+     * <p>**This topic is published only on the international site (alibabacloud.com).</p>
+     * 
+     * @param request the request parameters of SubscriptionBill  SubscriptionBillRequest
+     * @return SubscriptionBillResponse
      */
     @Override
     public CompletableFuture<SubscriptionBillResponse> subscriptionBill(SubscriptionBillRequest request) {

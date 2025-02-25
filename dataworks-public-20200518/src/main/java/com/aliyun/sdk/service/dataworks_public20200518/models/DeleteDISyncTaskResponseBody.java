@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDISyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDISyncTaskResponseBody</p>
  */
 public class DeleteDISyncTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteDISyncTaskResponseBody(Builder builder) {
@@ -62,11 +67,7 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the synchronization node in Data Integration is deleted. Valid values:
-         * <p>
-         * 
-         * *   success: The synchronization node in Data Integration is deleted.
-         * *   fail: The synchronization node in Data Integration failed to be deleted. You can troubleshoot the issue based on the failure reason.
+         * <p>The deletion result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -74,7 +75,10 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned after you called the DeleteDISyncTask operation.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc1411515937635973****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +86,14 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,11 +106,17 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteDISyncTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -134,7 +151,10 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The reason why the synchronization task fails to be deleted. If the synchronization task is deleted, the value null is returned for this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileId:[100] is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -142,10 +162,14 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the synchronization node in Data Integration failed to be deleted.
-             * <p>
+             * <p>Indicates whether the synchronization task is deleted. Valid values:</p>
+             * <ul>
+             * <li>success: The synchronization task is deleted.</li>
+             * <li>fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.</li>
+             * </ul>
              * 
-             * If the synchronization node in Data Integration is deleted, the value null is returned.
+             * <strong>example:</strong>
+             * <p>fail</p>
              */
             public Builder status(String status) {
                 this.status = status;

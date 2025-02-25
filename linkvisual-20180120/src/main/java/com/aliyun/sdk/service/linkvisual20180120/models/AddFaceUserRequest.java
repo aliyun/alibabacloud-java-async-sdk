@@ -103,13 +103,13 @@ public class AddFaceUserRequest extends Request {
             super();
         } 
 
-        private Builder(AddFaceUserRequest response) {
-            super(response);
-            this.customUserId = response.customUserId;
-            this.facePicUrl = response.facePicUrl;
-            this.isolationId = response.isolationId;
-            this.name = response.name;
-            this.params = response.params;
+        private Builder(AddFaceUserRequest request) {
+            super(request);
+            this.customUserId = request.customUserId;
+            this.facePicUrl = request.facePicUrl;
+            this.isolationId = request.isolationId;
+            this.name = request.name;
+            this.params = request.params;
         } 
 
         /**

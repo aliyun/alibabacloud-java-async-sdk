@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ons20190214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("All")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
     private Boolean all;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
     private java.util.List < String > tagKey;
 
     private UntagResourcesRequest(Builder builder) {
@@ -112,7 +112,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags that are attached to the specified resource. This parameter takes effect only when the **TagKey.N** parameter is not configured. Default value: **false**.
+         * <p>Specifies whether to remove all tags that are attached to the specified resource. This parameter takes effect only if the <strong>TagKey</strong> parameter is empty. Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,7 +124,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * This parameter is required when you detach tags from a topic or a group.
+         * <p>This parameter is required when you detach tags from a topic or a group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_188077086902****_BX4jvZZG</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +136,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TopicA</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,12 +149,16 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resources from which you want to detach tags. Valid values:
-         * <p>
+         * <p>The type of the resource from which you want to detach tags. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong></li>
+         * <li><strong>TOPIC</strong></li>
+         * <li><strong>GROUP</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **INSTANCE**
-         * *   **TOPIC**
-         * *   **GROUP**
+         * <strong>example:</strong>
+         * <p>TOPIC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -153,7 +167,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource.
+         * <p>The tag keys of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CartService</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlightOtaSearchRequest} extends {@link RequestModel}
  *
  * <p>FlightOtaSearchRequest</p>
  */
 public class FlightOtaSearchRequest extends Request {
-    @Query
-    @NameInMap("airline_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("airline_code")
     private String airlineCode;
 
-    @Query
-    @NameInMap("arr_city_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arrCityCode;
 
-    @Query
-    @NameInMap("cabin_class")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cabin_class")
     private String cabinClass;
 
-    @Query
-    @NameInMap("carrier_flight_no")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("carrier_flight_no")
     private String carrierFlightNo;
 
-    @Query
-    @NameInMap("dep_city_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depCityCode;
 
-    @Query
-    @NameInMap("dep_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depDate;
 
-    @Query
-    @NameInMap("flight_no")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("flight_no")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flightNo;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightOtaSearchRequest(Builder builder) {
@@ -165,7 +170,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * arr_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         public Builder arrCityCode(String arrCityCode) {
             this.putQueryParameter("arr_city_code", arrCityCode);
@@ -192,7 +200,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * dep_city_code.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         public Builder depCityCode(String depCityCode) {
             this.putQueryParameter("dep_city_code", depCityCode);
@@ -201,7 +212,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * dep_date.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-15 19:30:00</p>
          */
         public Builder depDate(String depDate) {
             this.putQueryParameter("dep_date", depDate);
@@ -210,7 +224,10 @@ public class FlightOtaSearchRequest extends Request {
         }
 
         /**
-         * flight_no.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA2323</p>
          */
         public Builder flightNo(String flightNo) {
             this.putQueryParameter("flight_no", flightNo);

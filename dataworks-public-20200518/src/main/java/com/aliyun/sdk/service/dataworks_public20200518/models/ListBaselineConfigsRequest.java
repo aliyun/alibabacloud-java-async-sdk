@@ -1,55 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselineConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListBaselineConfigsRequest</p>
  */
 public class ListBaselineConfigsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BaselineTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineTypes")
     private String baselineTypes;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("SearchText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchText")
     private String searchText;
 
-    @Body
-    @NameInMap("Useflag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Useflag")
     private Boolean useflag;
 
     private ListBaselineConfigsRequest(Builder builder) {
@@ -170,7 +174,7 @@ public class ListBaselineConfigsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -179,7 +183,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The type of the baseline. Valid values: DAILY and HOURLY. A value of DAILY indicates that the baseline is a day-level baseline. A value of HOURLY indicates that the baseline is an hour-level baseline. Separate multiple baseline types with commas (,).
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple baseline types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY,HOURLY</p>
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -188,7 +195,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the baseline owner.
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -197,7 +207,11 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
+         * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -206,7 +220,11 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -215,7 +233,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).
+         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}. Separate multiple priorities with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,3,5,7,8</p>
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -224,7 +245,11 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace. You can call the ListProjects operation to query the ID.
+         * <p>The workspace ID. You can call the ListProjects operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -233,7 +258,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The keyword in the baseline name used to search for the baseline.
+         * <p>The keyword in the baseline name, which is used to search for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name search keywords</p>
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
@@ -242,7 +270,10 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the baseline. Valid values: true and false.
+         * <p>Specifies whether to enable the baseline. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useflag(Boolean useflag) {
             this.putBodyParameter("Useflag", useflag);

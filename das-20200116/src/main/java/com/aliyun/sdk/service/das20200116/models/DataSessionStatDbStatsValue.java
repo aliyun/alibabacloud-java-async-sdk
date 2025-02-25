@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSessionStatDbStatsValue} extends {@link TeaModel}
  *
  * <p>DataSessionStatDbStatsValue</p>
  */
 public class DataSessionStatDbStatsValue extends TeaModel {
-    @NameInMap("ActiveCount")
+    @com.aliyun.core.annotation.NameInMap("ActiveCount")
     private Long activeCount;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DataSessionStatDbStatsValue(Builder builder) {
@@ -50,7 +55,10 @@ public class DataSessionStatDbStatsValue extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of active namespaces.
+         * <p>The number of active namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder activeCount(Long activeCount) {
             this.activeCount = activeCount;
@@ -58,7 +66,10 @@ public class DataSessionStatDbStatsValue extends TeaModel {
         }
 
         /**
-         * The total number of namespaces.
+         * <p>The total number of namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

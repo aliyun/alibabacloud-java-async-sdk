@@ -1,151 +1,176 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyModifyRequest} extends {@link RequestModel}
  *
  * <p>ApplyModifyRequest</p>
  */
 public class ApplyModifyRequest extends Request {
-    @Body
-    @NameInMap("budget")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("budget")
     private Long budget;
 
-    @Body
-    @NameInMap("budget_merge")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("budget_merge")
     private Integer budgetMerge;
 
-    @Body
-    @NameInMap("car_rule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("car_rule")
     private CarRule carRule;
 
-    @Body
-    @NameInMap("corp_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_name")
     private String corpName;
 
-    @Body
-    @NameInMap("depart_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("default_standard")
+    private DefaultStandard defaultStandard;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("depart_id")
     private String departId;
 
-    @Body
-    @NameInMap("depart_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("depart_name")
     private String departName;
 
-    @Body
-    @NameInMap("extend_field")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extend_field")
     private String extendField;
 
-    @Body
-    @NameInMap("external_traveler_list")
-    private java.util.List < ExternalTravelerList> externalTravelerList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("external_traveler_list")
+    private java.util.List<ExternalTravelerList> externalTravelerList;
 
-    @Body
-    @NameInMap("external_traveler_standard")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("external_traveler_standard")
     private ExternalTravelerStandard externalTravelerStandard;
 
-    @Body
-    @NameInMap("flight_budget")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("flight_budget")
     private Long flightBudget;
 
-    @Body
-    @NameInMap("hotel_budget")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("hotel_budget")
     private Long hotelBudget;
 
-    @Body
-    @NameInMap("hotel_share")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("hotel_share")
     private HotelShare hotelShare;
 
-    @Body
-    @NameInMap("itinerary_list")
-    private java.util.List < ItineraryList> itineraryList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("intl_flight_budget")
+    private Long intlFlightBudget;
 
-    @Body
-    @NameInMap("itinerary_rule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("intl_hotel_budget")
+    private Long intlHotelBudget;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("itinerary_list")
+    private java.util.List<ItineraryList> itineraryList;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("itinerary_rule")
     private Integer itineraryRule;
 
-    @Body
-    @NameInMap("itinerary_set_list")
-    private java.util.List < ItinerarySetList> itinerarySetList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("itinerary_set_list")
+    private java.util.List<ItinerarySetList> itinerarySetList;
 
-    @Body
-    @NameInMap("limit_traveler")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("limit_traveler")
     private Integer limitTraveler;
 
-    @Body
-    @NameInMap("status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("payment_department_id")
+    private String paymentDepartmentId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("payment_department_name")
+    private String paymentDepartmentName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @Body
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Body
-    @NameInMap("thirdpart_apply_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdpartApplyId;
 
-    @Body
-    @NameInMap("thirdpart_business_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thirdpart_business_id")
     private String thirdpartBusinessId;
 
-    @Body
-    @NameInMap("thirdpart_depart_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thirdpart_depart_id")
     private String thirdpartDepartId;
 
-    @Body
-    @NameInMap("together_book_rule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("together_book_rule")
     private Integer togetherBookRule;
 
-    @Body
-    @NameInMap("train_budget")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("train_budget")
     private Long trainBudget;
 
-    @Body
-    @NameInMap("traveler_list")
-    private java.util.List < TravelerList> travelerList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("traveler_list")
+    private java.util.List<TravelerList> travelerList;
 
-    @Body
-    @NameInMap("traveler_standard")
-    private java.util.List < TravelerStandard> travelerStandard;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("traveler_standard")
+    private java.util.List<TravelerStandard> travelerStandard;
 
-    @Body
-    @NameInMap("trip_cause")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trip_cause")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tripCause;
 
-    @Body
-    @NameInMap("trip_day")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trip_day")
     private Integer tripDay;
 
-    @Body
-    @NameInMap("trip_title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trip_title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tripTitle;
 
-    @Body
-    @NameInMap("union_no")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("union_no")
     private String unionNo;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("user_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_name")
     private String userName;
 
-    @Body
-    @NameInMap("vehicle_budget")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vehicle_budget")
     private Long vehicleBudget;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ApplyModifyRequest(Builder builder) {
@@ -154,6 +179,7 @@ public class ApplyModifyRequest extends Request {
         this.budgetMerge = builder.budgetMerge;
         this.carRule = builder.carRule;
         this.corpName = builder.corpName;
+        this.defaultStandard = builder.defaultStandard;
         this.departId = builder.departId;
         this.departName = builder.departName;
         this.extendField = builder.extendField;
@@ -162,10 +188,14 @@ public class ApplyModifyRequest extends Request {
         this.flightBudget = builder.flightBudget;
         this.hotelBudget = builder.hotelBudget;
         this.hotelShare = builder.hotelShare;
+        this.intlFlightBudget = builder.intlFlightBudget;
+        this.intlHotelBudget = builder.intlHotelBudget;
         this.itineraryList = builder.itineraryList;
         this.itineraryRule = builder.itineraryRule;
         this.itinerarySetList = builder.itinerarySetList;
         this.limitTraveler = builder.limitTraveler;
+        this.paymentDepartmentId = builder.paymentDepartmentId;
+        this.paymentDepartmentName = builder.paymentDepartmentName;
         this.status = builder.status;
         this.subCorpId = builder.subCorpId;
         this.thirdpartApplyId = builder.thirdpartApplyId;
@@ -227,6 +257,13 @@ public class ApplyModifyRequest extends Request {
     }
 
     /**
+     * @return defaultStandard
+     */
+    public DefaultStandard getDefaultStandard() {
+        return this.defaultStandard;
+    }
+
+    /**
      * @return departId
      */
     public String getDepartId() {
@@ -250,7 +287,7 @@ public class ApplyModifyRequest extends Request {
     /**
      * @return externalTravelerList
      */
-    public java.util.List < ExternalTravelerList> getExternalTravelerList() {
+    public java.util.List<ExternalTravelerList> getExternalTravelerList() {
         return this.externalTravelerList;
     }
 
@@ -283,9 +320,23 @@ public class ApplyModifyRequest extends Request {
     }
 
     /**
+     * @return intlFlightBudget
+     */
+    public Long getIntlFlightBudget() {
+        return this.intlFlightBudget;
+    }
+
+    /**
+     * @return intlHotelBudget
+     */
+    public Long getIntlHotelBudget() {
+        return this.intlHotelBudget;
+    }
+
+    /**
      * @return itineraryList
      */
-    public java.util.List < ItineraryList> getItineraryList() {
+    public java.util.List<ItineraryList> getItineraryList() {
         return this.itineraryList;
     }
 
@@ -299,7 +350,7 @@ public class ApplyModifyRequest extends Request {
     /**
      * @return itinerarySetList
      */
-    public java.util.List < ItinerarySetList> getItinerarySetList() {
+    public java.util.List<ItinerarySetList> getItinerarySetList() {
         return this.itinerarySetList;
     }
 
@@ -308,6 +359,20 @@ public class ApplyModifyRequest extends Request {
      */
     public Integer getLimitTraveler() {
         return this.limitTraveler;
+    }
+
+    /**
+     * @return paymentDepartmentId
+     */
+    public String getPaymentDepartmentId() {
+        return this.paymentDepartmentId;
+    }
+
+    /**
+     * @return paymentDepartmentName
+     */
+    public String getPaymentDepartmentName() {
+        return this.paymentDepartmentName;
     }
 
     /**
@@ -362,14 +427,14 @@ public class ApplyModifyRequest extends Request {
     /**
      * @return travelerList
      */
-    public java.util.List < TravelerList> getTravelerList() {
+    public java.util.List<TravelerList> getTravelerList() {
         return this.travelerList;
     }
 
     /**
      * @return travelerStandard
      */
-    public java.util.List < TravelerStandard> getTravelerStandard() {
+    public java.util.List<TravelerStandard> getTravelerStandard() {
         return this.travelerStandard;
     }
 
@@ -434,18 +499,23 @@ public class ApplyModifyRequest extends Request {
         private Integer budgetMerge; 
         private CarRule carRule; 
         private String corpName; 
+        private DefaultStandard defaultStandard; 
         private String departId; 
         private String departName; 
         private String extendField; 
-        private java.util.List < ExternalTravelerList> externalTravelerList; 
+        private java.util.List<ExternalTravelerList> externalTravelerList; 
         private ExternalTravelerStandard externalTravelerStandard; 
         private Long flightBudget; 
         private Long hotelBudget; 
         private HotelShare hotelShare; 
-        private java.util.List < ItineraryList> itineraryList; 
+        private Long intlFlightBudget; 
+        private Long intlHotelBudget; 
+        private java.util.List<ItineraryList> itineraryList; 
         private Integer itineraryRule; 
-        private java.util.List < ItinerarySetList> itinerarySetList; 
+        private java.util.List<ItinerarySetList> itinerarySetList; 
         private Integer limitTraveler; 
+        private String paymentDepartmentId; 
+        private String paymentDepartmentName; 
         private Integer status; 
         private String subCorpId; 
         private String thirdpartApplyId; 
@@ -453,8 +523,8 @@ public class ApplyModifyRequest extends Request {
         private String thirdpartDepartId; 
         private Integer togetherBookRule; 
         private Long trainBudget; 
-        private java.util.List < TravelerList> travelerList; 
-        private java.util.List < TravelerStandard> travelerStandard; 
+        private java.util.List<TravelerList> travelerList; 
+        private java.util.List<TravelerStandard> travelerStandard; 
         private String tripCause; 
         private Integer tripDay; 
         private String tripTitle; 
@@ -474,6 +544,7 @@ public class ApplyModifyRequest extends Request {
             this.budgetMerge = request.budgetMerge;
             this.carRule = request.carRule;
             this.corpName = request.corpName;
+            this.defaultStandard = request.defaultStandard;
             this.departId = request.departId;
             this.departName = request.departName;
             this.extendField = request.extendField;
@@ -482,10 +553,14 @@ public class ApplyModifyRequest extends Request {
             this.flightBudget = request.flightBudget;
             this.hotelBudget = request.hotelBudget;
             this.hotelShare = request.hotelShare;
+            this.intlFlightBudget = request.intlFlightBudget;
+            this.intlHotelBudget = request.intlHotelBudget;
             this.itineraryList = request.itineraryList;
             this.itineraryRule = request.itineraryRule;
             this.itinerarySetList = request.itinerarySetList;
             this.limitTraveler = request.limitTraveler;
+            this.paymentDepartmentId = request.paymentDepartmentId;
+            this.paymentDepartmentName = request.paymentDepartmentName;
             this.status = request.status;
             this.subCorpId = request.subCorpId;
             this.thirdpartApplyId = request.thirdpartApplyId;
@@ -543,6 +618,16 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * default_standard.
+         */
+        public Builder defaultStandard(DefaultStandard defaultStandard) {
+            String defaultStandardShrink = shrink(defaultStandard, "default_standard", "json");
+            this.putBodyParameter("default_standard", defaultStandardShrink);
+            this.defaultStandard = defaultStandard;
+            return this;
+        }
+
+        /**
          * depart_id.
          */
         public Builder departId(String departId) {
@@ -561,7 +646,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * 可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账
+         * <p>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cost_center&quot;:&quot;成本中心&quot;}</p>
          */
         public Builder extendField(String extendField) {
             this.putBodyParameter("extend_field", extendField);
@@ -572,7 +660,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * external_traveler_list.
          */
-        public Builder externalTravelerList(java.util.List < ExternalTravelerList> externalTravelerList) {
+        public Builder externalTravelerList(java.util.List<ExternalTravelerList> externalTravelerList) {
             String externalTravelerListShrink = shrink(externalTravelerList, "external_traveler_list", "json");
             this.putBodyParameter("external_traveler_list", externalTravelerListShrink);
             this.externalTravelerList = externalTravelerList;
@@ -618,9 +706,27 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * intl_flight_budget.
+         */
+        public Builder intlFlightBudget(Long intlFlightBudget) {
+            this.putBodyParameter("intl_flight_budget", intlFlightBudget);
+            this.intlFlightBudget = intlFlightBudget;
+            return this;
+        }
+
+        /**
+         * intl_hotel_budget.
+         */
+        public Builder intlHotelBudget(Long intlHotelBudget) {
+            this.putBodyParameter("intl_hotel_budget", intlHotelBudget);
+            this.intlHotelBudget = intlHotelBudget;
+            return this;
+        }
+
+        /**
          * itinerary_list.
          */
-        public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
+        public Builder itineraryList(java.util.List<ItineraryList> itineraryList) {
             String itineraryListShrink = shrink(itineraryList, "itinerary_list", "json");
             this.putBodyParameter("itinerary_list", itineraryListShrink);
             this.itineraryList = itineraryList;
@@ -639,7 +745,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * itinerary_set_list.
          */
-        public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
+        public Builder itinerarySetList(java.util.List<ItinerarySetList> itinerarySetList) {
             String itinerarySetListShrink = shrink(itinerarySetList, "itinerary_set_list", "json");
             this.putBodyParameter("itinerary_set_list", itinerarySetListShrink);
             this.itinerarySetList = itinerarySetList;
@@ -656,6 +762,24 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * payment_department_id.
+         */
+        public Builder paymentDepartmentId(String paymentDepartmentId) {
+            this.putBodyParameter("payment_department_id", paymentDepartmentId);
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+
+        /**
+         * payment_department_name.
+         */
+        public Builder paymentDepartmentName(String paymentDepartmentName) {
+            this.putBodyParameter("payment_department_name", paymentDepartmentName);
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+
+        /**
          * status.
          */
         public Builder status(Integer status) {
@@ -665,7 +789,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * 子企业Id
+         * <p>子企业Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>btrip123</p>
          */
         public Builder subCorpId(String subCorpId) {
             this.putBodyParameter("sub_corp_id", subCorpId);
@@ -674,7 +801,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * thirdpart_apply_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0001A1100000007EX08O</p>
          */
         public Builder thirdpartApplyId(String thirdpartApplyId) {
             this.putBodyParameter("thirdpart_apply_id", thirdpartApplyId);
@@ -721,7 +851,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * traveler_list.
          */
-        public Builder travelerList(java.util.List < TravelerList> travelerList) {
+        public Builder travelerList(java.util.List<TravelerList> travelerList) {
             String travelerListShrink = shrink(travelerList, "traveler_list", "json");
             this.putBodyParameter("traveler_list", travelerListShrink);
             this.travelerList = travelerList;
@@ -731,7 +861,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * traveler_standard.
          */
-        public Builder travelerStandard(java.util.List < TravelerStandard> travelerStandard) {
+        public Builder travelerStandard(java.util.List<TravelerStandard> travelerStandard) {
             String travelerStandardShrink = shrink(travelerStandard, "traveler_standard", "json");
             this.putBodyParameter("traveler_standard", travelerStandardShrink);
             this.travelerStandard = travelerStandard;
@@ -739,7 +869,7 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * trip_cause.
+         * <p>This parameter is required.</p>
          */
         public Builder tripCause(String tripCause) {
             this.putBodyParameter("trip_cause", tripCause);
@@ -757,7 +887,7 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * trip_title.
+         * <p>This parameter is required.</p>
          */
         public Builder tripTitle(String tripTitle) {
             this.putBodyParameter("trip_title", tripTitle);
@@ -775,7 +905,10 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thirdpart12138</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -817,11 +950,17 @@ public class ApplyModifyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class CarRule extends TeaModel {
-        @NameInMap("scenario_template_id")
+        @com.aliyun.core.annotation.NameInMap("scenario_template_id")
         private String scenarioTemplateId;
 
-        @NameInMap("scenario_template_name")
+        @com.aliyun.core.annotation.NameInMap("scenario_template_name")
         private String scenarioTemplateName;
 
         private CarRule(Builder builder) {
@@ -878,55 +1017,20 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
-    public static class ExternalTravelerList extends TeaModel {
-        @NameInMap("user_name")
-        private String userName;
-
-        private ExternalTravelerList(Builder builder) {
-            this.userName = builder.userName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ExternalTravelerList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return userName
-         */
-        public String getUserName() {
-            return this.userName;
-        }
-
-        public static final class Builder {
-            private String userName; 
-
-            /**
-             * user_name.
-             */
-            public Builder userName(String userName) {
-                this.userName = userName;
-                return this;
-            }
-
-            public ExternalTravelerList build() {
-                return new ExternalTravelerList(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class HotelCitys extends TeaModel {
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("fee")
+        @com.aliyun.core.annotation.NameInMap("fee")
         private Long fee;
 
         private HotelCitys(Builder builder) {
@@ -1000,29 +1104,908 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
-    public static class ExternalTravelerStandard extends TeaModel {
-        @NameInMap("business_discount")
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class HotelIntlCitys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        private String cityCode;
+
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        private String cityName;
+
+        @com.aliyun.core.annotation.NameInMap("fee")
+        private Long fee;
+
+        private HotelIntlCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HotelIntlCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public HotelIntlCitys build() {
+                return new HotelIntlCitys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class DefaultStandard extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
 
-        @NameInMap("economy_discount")
+        @com.aliyun.core.annotation.NameInMap("economy_discount")
         private Integer economyDiscount;
 
-        @NameInMap("first_discount")
+        @com.aliyun.core.annotation.NameInMap("first_discount")
         private Integer firstDiscount;
 
-        @NameInMap("flight_cabins")
+        @com.aliyun.core.annotation.NameInMap("flight_cabins")
         private String flightCabins;
 
-        @NameInMap("hotel_citys")
-        private java.util.List < HotelCitys> hotelCitys;
+        @com.aliyun.core.annotation.NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
 
-        @NameInMap("premium_economy_discount")
+        @com.aliyun.core.annotation.NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_citys")
+        private java.util.List<HotelCitys> hotelCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
+        private java.util.List<HotelIntlCitys> hotelIntlCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("premium_economy_discount")
         private Integer premiumEconomyDiscount;
 
-        @NameInMap("reserve_type")
+        @com.aliyun.core.annotation.NameInMap("reserve_type")
         private Integer reserveType;
 
-        @NameInMap("train_seats")
+        @com.aliyun.core.annotation.NameInMap("train_rule_code")
+        private Long trainRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("train_seats")
+        private String trainSeats;
+
+        private DefaultStandard(Builder builder) {
+            this.businessDiscount = builder.businessDiscount;
+            this.economyDiscount = builder.economyDiscount;
+            this.firstDiscount = builder.firstDiscount;
+            this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
+            this.hotelCitys = builder.hotelCitys;
+            this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
+            this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
+            this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
+            this.trainSeats = builder.trainSeats;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DefaultStandard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return businessDiscount
+         */
+        public Integer getBusinessDiscount() {
+            return this.businessDiscount;
+        }
+
+        /**
+         * @return economyDiscount
+         */
+        public Integer getEconomyDiscount() {
+            return this.economyDiscount;
+        }
+
+        /**
+         * @return firstDiscount
+         */
+        public Integer getFirstDiscount() {
+            return this.firstDiscount;
+        }
+
+        /**
+         * @return flightCabins
+         */
+        public String getFlightCabins() {
+            return this.flightCabins;
+        }
+
+        /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
+         * @return hotelCitys
+         */
+        public java.util.List<HotelCitys> getHotelCitys() {
+            return this.hotelCitys;
+        }
+
+        /**
+         * @return hotelIntlCitys
+         */
+        public java.util.List<HotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
+        }
+
+        /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
+        }
+
+        /**
+         * @return premiumEconomyDiscount
+         */
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
+        }
+
+        /**
+         * @return reserveType
+         */
+        public Integer getReserveType() {
+            return this.reserveType;
+        }
+
+        /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
+        }
+
+        /**
+         * @return trainSeats
+         */
+        public String getTrainSeats() {
+            return this.trainSeats;
+        }
+
+        public static final class Builder {
+            private Integer businessDiscount; 
+            private Integer economyDiscount; 
+            private Integer firstDiscount; 
+            private String flightCabins; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
+            private java.util.List<HotelCitys> hotelCitys; 
+            private java.util.List<HotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
+            private Integer premiumEconomyDiscount; 
+            private Integer reserveType; 
+            private Long trainRuleCode; 
+            private String trainSeats; 
+
+            /**
+             * business_discount.
+             */
+            public Builder businessDiscount(Integer businessDiscount) {
+                this.businessDiscount = businessDiscount;
+                return this;
+            }
+
+            /**
+             * economy_discount.
+             */
+            public Builder economyDiscount(Integer economyDiscount) {
+                this.economyDiscount = economyDiscount;
+                return this;
+            }
+
+            /**
+             * first_discount.
+             */
+            public Builder firstDiscount(Integer firstDiscount) {
+                this.firstDiscount = firstDiscount;
+                return this;
+            }
+
+            /**
+             * flight_cabins.
+             */
+            public Builder flightCabins(String flightCabins) {
+                this.flightCabins = flightCabins;
+                return this;
+            }
+
+            /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_citys.
+             */
+            public Builder hotelCitys(java.util.List<HotelCitys> hotelCitys) {
+                this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_citys.
+             */
+            public Builder hotelIntlCitys(java.util.List<HotelIntlCitys> hotelIntlCitys) {
+                this.hotelIntlCitys = hotelIntlCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
+                return this;
+            }
+
+            /**
+             * premium_economy_discount.
+             */
+            public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
+                this.premiumEconomyDiscount = premiumEconomyDiscount;
+                return this;
+            }
+
+            /**
+             * reserve_type.
+             */
+            public Builder reserveType(Integer reserveType) {
+                this.reserveType = reserveType;
+                return this;
+            }
+
+            /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
+                return this;
+            }
+
+            /**
+             * train_seats.
+             */
+            public Builder trainSeats(String trainSeats) {
+                this.trainSeats = trainSeats;
+                return this;
+            }
+
+            public DefaultStandard build() {
+                return new DefaultStandard(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class ExternalTravelerList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
+        private Long costCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("external_user_id")
+        private String externalUserId;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_id")
+        private Long invoiceId;
+
+        @com.aliyun.core.annotation.NameInMap("payment_department_id")
+        private String paymentDepartmentId;
+
+        @com.aliyun.core.annotation.NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
+        @com.aliyun.core.annotation.NameInMap("project_code")
+        private String projectCode;
+
+        @com.aliyun.core.annotation.NameInMap("project_title")
+        private String projectTitle;
+
+        @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
+        private String thirdPartInvoiceId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
+        private String thirdpartCostCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_depart_id")
+        private String thirdpartDepartId;
+
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        private String userName;
+
+        @com.aliyun.core.annotation.NameInMap("user_name_en")
+        private String userNameEn;
+
+        private ExternalTravelerList(Builder builder) {
+            this.attribute = builder.attribute;
+            this.costCenterId = builder.costCenterId;
+            this.externalUserId = builder.externalUserId;
+            this.invoiceId = builder.invoiceId;
+            this.paymentDepartmentId = builder.paymentDepartmentId;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
+            this.projectCode = builder.projectCode;
+            this.projectTitle = builder.projectTitle;
+            this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
+            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
+            this.thirdpartDepartId = builder.thirdpartDepartId;
+            this.userName = builder.userName;
+            this.userNameEn = builder.userNameEn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExternalTravelerList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return costCenterId
+         */
+        public Long getCostCenterId() {
+            return this.costCenterId;
+        }
+
+        /**
+         * @return externalUserId
+         */
+        public String getExternalUserId() {
+            return this.externalUserId;
+        }
+
+        /**
+         * @return invoiceId
+         */
+        public Long getInvoiceId() {
+            return this.invoiceId;
+        }
+
+        /**
+         * @return paymentDepartmentId
+         */
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectTitle
+         */
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        /**
+         * @return thirdPartInvoiceId
+         */
+        public String getThirdPartInvoiceId() {
+            return this.thirdPartInvoiceId;
+        }
+
+        /**
+         * @return thirdpartCostCenterId
+         */
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        /**
+         * @return thirdpartDepartId
+         */
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        /**
+         * @return userNameEn
+         */
+        public String getUserNameEn() {
+            return this.userNameEn;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+            private Long costCenterId; 
+            private String externalUserId; 
+            private Long invoiceId; 
+            private String paymentDepartmentId; 
+            private String paymentDepartmentName; 
+            private String projectCode; 
+            private String projectTitle; 
+            private String thirdPartInvoiceId; 
+            private String thirdpartCostCenterId; 
+            private String thirdpartDepartId; 
+            private String userName; 
+            private String userNameEn; 
+
+            /**
+             * attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * cost_center_id.
+             */
+            public Builder costCenterId(Long costCenterId) {
+                this.costCenterId = costCenterId;
+                return this;
+            }
+
+            /**
+             * external_user_id.
+             */
+            public Builder externalUserId(String externalUserId) {
+                this.externalUserId = externalUserId;
+                return this;
+            }
+
+            /**
+             * invoice_id.
+             */
+            public Builder invoiceId(Long invoiceId) {
+                this.invoiceId = invoiceId;
+                return this;
+            }
+
+            /**
+             * payment_department_id.
+             */
+            public Builder paymentDepartmentId(String paymentDepartmentId) {
+                this.paymentDepartmentId = paymentDepartmentId;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
+                return this;
+            }
+
+            /**
+             * project_code.
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * project_title.
+             */
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * third_part_invoice_id.
+             */
+            public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
+                this.thirdPartInvoiceId = thirdPartInvoiceId;
+                return this;
+            }
+
+            /**
+             * thirdpart_cost_center_id.
+             */
+            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
+                this.thirdpartCostCenterId = thirdpartCostCenterId;
+                return this;
+            }
+
+            /**
+             * thirdpart_depart_id.
+             */
+            public Builder thirdpartDepartId(String thirdpartDepartId) {
+                this.thirdpartDepartId = thirdpartDepartId;
+                return this;
+            }
+
+            /**
+             * user_name.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            /**
+             * user_name_en.
+             */
+            public Builder userNameEn(String userNameEn) {
+                this.userNameEn = userNameEn;
+                return this;
+            }
+
+            public ExternalTravelerList build() {
+                return new ExternalTravelerList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class ExternalTravelerStandardHotelCitys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        private String cityCode;
+
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        private String cityName;
+
+        @com.aliyun.core.annotation.NameInMap("fee")
+        private Long fee;
+
+        private ExternalTravelerStandardHotelCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExternalTravelerStandardHotelCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public ExternalTravelerStandardHotelCitys build() {
+                return new ExternalTravelerStandardHotelCitys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class ExternalTravelerStandardHotelIntlCitys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        private String cityCode;
+
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        private String cityName;
+
+        @com.aliyun.core.annotation.NameInMap("fee")
+        private Long fee;
+
+        private ExternalTravelerStandardHotelIntlCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExternalTravelerStandardHotelIntlCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public ExternalTravelerStandardHotelIntlCitys build() {
+                return new ExternalTravelerStandardHotelIntlCitys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class ExternalTravelerStandard extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("business_discount")
+        private Integer businessDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("economy_discount")
+        private Integer economyDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("first_discount")
+        private Integer firstDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("flight_cabins")
+        private String flightCabins;
+
+        @com.aliyun.core.annotation.NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_citys")
+        private java.util.List<ExternalTravelerStandardHotelCitys> hotelCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
+        private java.util.List<ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("premium_economy_discount")
+        private Integer premiumEconomyDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("reserve_type")
+        private Integer reserveType;
+
+        @com.aliyun.core.annotation.NameInMap("train_rule_code")
+        private Long trainRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("train_seats")
         private String trainSeats;
 
         private ExternalTravelerStandard(Builder builder) {
@@ -1030,9 +2013,15 @@ public class ApplyModifyRequest extends Request {
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
             this.hotelCitys = builder.hotelCitys;
+            this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
             this.trainSeats = builder.trainSeats;
         }
 
@@ -1073,10 +2062,45 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
          * @return hotelCitys
          */
-        public java.util.List < HotelCitys> getHotelCitys() {
+        public java.util.List<ExternalTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        /**
+         * @return hotelIntlCitys
+         */
+        public java.util.List<ExternalTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
+        }
+
+        /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
         }
 
         /**
@@ -1094,6 +2118,13 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
+        }
+
+        /**
          * @return trainSeats
          */
         public String getTrainSeats() {
@@ -1105,9 +2136,15 @@ public class ApplyModifyRequest extends Request {
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
-            private java.util.List < HotelCitys> hotelCitys; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
+            private java.util.List<ExternalTravelerStandardHotelCitys> hotelCitys; 
+            private java.util.List<ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
+            private Long trainRuleCode; 
             private String trainSeats; 
 
             /**
@@ -1143,15 +2180,58 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
              * hotel_citys.
              */
-            public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
+            public Builder hotelCitys(java.util.List<ExternalTravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
                 return this;
             }
 
             /**
-             * 超级经济舱折扣。1到10的整数
+             * hotel_intl_citys.
+             */
+            public Builder hotelIntlCitys(java.util.List<ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys) {
+                this.hotelIntlCitys = hotelIntlCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
+                return this;
+            }
+
+            /**
+             * <p>超级经济舱折扣。1到10的整数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
                 this.premiumEconomyDiscount = premiumEconomyDiscount;
@@ -1163,6 +2243,14 @@ public class ApplyModifyRequest extends Request {
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
+                return this;
+            }
+
+            /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
                 return this;
             }
 
@@ -1181,11 +2269,17 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class HotelShare extends TeaModel {
-        @NameInMap("param")
+        @com.aliyun.core.annotation.NameInMap("param")
         private String param;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private HotelShare(Builder builder) {
@@ -1242,8 +2336,14 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItineraryTravelStandard extends TeaModel {
-        @NameInMap("hotel_available_nights_per_day")
+        @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
 
         private ItineraryTravelStandard(Builder builder) {
@@ -1283,72 +2383,85 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItineraryList extends TeaModel {
-        @NameInMap("arr_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCity;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrDate;
 
-        @NameInMap("cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
-        @NameInMap("dep_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCity;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depDate;
 
-        @NameInMap("invoice_id")
+        @com.aliyun.core.annotation.NameInMap("invoice_id")
         private Long invoiceId;
 
-        @NameInMap("itinerary_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String itineraryId;
 
-        @NameInMap("itinerary_travel_standard")
+        @com.aliyun.core.annotation.NameInMap("itinerary_travel_standard")
         private ItineraryTravelStandard itineraryTravelStandard;
 
-        @NameInMap("need_hotel")
+        @com.aliyun.core.annotation.NameInMap("need_hotel")
         private Boolean needHotel;
 
-        @NameInMap("need_traffic")
+        @com.aliyun.core.annotation.NameInMap("need_traffic")
         private Boolean needTraffic;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("third_part_invoice_id")
+        @com.aliyun.core.annotation.NameInMap("province_travel_city_adcodes")
+        private java.util.List<String> provinceTravelCityAdcodes;
+
+        @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
         private String thirdPartInvoiceId;
 
-        @NameInMap("thirdpart_cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
         private String thirdpartCostCenterId;
 
-        @NameInMap("traffic_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("traffic_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer trafficType;
 
-        @NameInMap("trip_way")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("trip_way")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer tripWay;
 
         private ItineraryList(Builder builder) {
             this.arrCity = builder.arrCity;
             this.arrCityCode = builder.arrCityCode;
             this.arrDate = builder.arrDate;
+            this.attribute = builder.attribute;
             this.costCenterId = builder.costCenterId;
             this.depCity = builder.depCity;
             this.depCityCode = builder.depCityCode;
@@ -1360,6 +2473,7 @@ public class ApplyModifyRequest extends Request {
             this.needTraffic = builder.needTraffic;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.provinceTravelCityAdcodes = builder.provinceTravelCityAdcodes;
             this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
             this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
             this.trafficType = builder.trafficType;
@@ -1393,6 +2507,13 @@ public class ApplyModifyRequest extends Request {
          */
         public String getArrDate() {
             return this.arrDate;
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
         }
 
         /**
@@ -1473,6 +2594,13 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return provinceTravelCityAdcodes
+         */
+        public java.util.List<String> getProvinceTravelCityAdcodes() {
+            return this.provinceTravelCityAdcodes;
+        }
+
+        /**
          * @return thirdPartInvoiceId
          */
         public String getThirdPartInvoiceId() {
@@ -1504,6 +2632,7 @@ public class ApplyModifyRequest extends Request {
             private String arrCity; 
             private String arrCityCode; 
             private String arrDate; 
+            private String attribute; 
             private Long costCenterId; 
             private String depCity; 
             private String depCityCode; 
@@ -1515,13 +2644,14 @@ public class ApplyModifyRequest extends Request {
             private Boolean needTraffic; 
             private String projectCode; 
             private String projectTitle; 
+            private java.util.List<String> provinceTravelCityAdcodes; 
             private String thirdPartInvoiceId; 
             private String thirdpartCostCenterId; 
             private Integer trafficType; 
             private Integer tripWay; 
 
             /**
-             * arr_city.
+             * <p>This parameter is required.</p>
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
@@ -1537,10 +2667,21 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * arr_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
+                return this;
+            }
+
+            /**
+             * attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
                 return this;
             }
 
@@ -1553,7 +2694,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * dep_city.
+             * <p>This parameter is required.</p>
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
@@ -1569,7 +2710,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -1585,7 +2729,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * itinerary_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000131</p>
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -1633,6 +2780,14 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
+             * province_travel_city_adcodes.
+             */
+            public Builder provinceTravelCityAdcodes(java.util.List<String> provinceTravelCityAdcodes) {
+                this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
+                return this;
+            }
+
+            /**
              * third_part_invoice_id.
              */
             public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
@@ -1649,7 +2804,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * traffic_type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder trafficType(Integer trafficType) {
                 this.trafficType = trafficType;
@@ -1657,7 +2815,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * trip_way.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tripWay(Integer tripWay) {
                 this.tripWay = tripWay;
@@ -1671,8 +2832,14 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItinerarySetListItineraryTravelStandard extends TeaModel {
-        @NameInMap("hotel_available_nights_per_day")
+        @com.aliyun.core.annotation.NameInMap("hotel_available_nights_per_day")
         private Integer hotelAvailableNightsPerDay;
 
         private ItinerarySetListItineraryTravelStandard(Builder builder) {
@@ -1712,48 +2879,61 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class ItinerarySetList extends TeaModel {
-        @NameInMap("arr_date")
+        @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
 
-        @NameInMap("city_code_set")
+        @com.aliyun.core.annotation.NameInMap("attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("city_code_set")
         private String cityCodeSet;
 
-        @NameInMap("city_set")
+        @com.aliyun.core.annotation.NameInMap("city_set")
         private String citySet;
 
-        @NameInMap("cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
-        @NameInMap("dep_date")
+        @com.aliyun.core.annotation.NameInMap("dep_date")
         private String depDate;
 
-        @NameInMap("invoice_id")
+        @com.aliyun.core.annotation.NameInMap("invoice_id")
         private Long invoiceId;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("itinerary_travel_standard")
+        @com.aliyun.core.annotation.NameInMap("itinerary_travel_standard")
         private ItinerarySetListItineraryTravelStandard itineraryTravelStandard;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("third_part_invoice_id")
+        @com.aliyun.core.annotation.NameInMap("province_travel_city_adcodes")
+        private java.util.List<String> provinceTravelCityAdcodes;
+
+        @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
         private String thirdPartInvoiceId;
 
-        @NameInMap("thirdpart_cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
         private String thirdpartCostCenterId;
 
-        @NameInMap("traffic_type")
+        @com.aliyun.core.annotation.NameInMap("traffic_type")
         private Integer trafficType;
 
         private ItinerarySetList(Builder builder) {
             this.arrDate = builder.arrDate;
+            this.attribute = builder.attribute;
             this.cityCodeSet = builder.cityCodeSet;
             this.citySet = builder.citySet;
             this.costCenterId = builder.costCenterId;
@@ -1763,6 +2943,7 @@ public class ApplyModifyRequest extends Request {
             this.itineraryTravelStandard = builder.itineraryTravelStandard;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.provinceTravelCityAdcodes = builder.provinceTravelCityAdcodes;
             this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
             this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
             this.trafficType = builder.trafficType;
@@ -1781,6 +2962,13 @@ public class ApplyModifyRequest extends Request {
          */
         public String getArrDate() {
             return this.arrDate;
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
         }
 
         /**
@@ -1847,6 +3035,13 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return provinceTravelCityAdcodes
+         */
+        public java.util.List<String> getProvinceTravelCityAdcodes() {
+            return this.provinceTravelCityAdcodes;
+        }
+
+        /**
          * @return thirdPartInvoiceId
          */
         public String getThirdPartInvoiceId() {
@@ -1869,6 +3064,7 @@ public class ApplyModifyRequest extends Request {
 
         public static final class Builder {
             private String arrDate; 
+            private String attribute; 
             private String cityCodeSet; 
             private String citySet; 
             private Long costCenterId; 
@@ -1878,15 +3074,27 @@ public class ApplyModifyRequest extends Request {
             private ItinerarySetListItineraryTravelStandard itineraryTravelStandard; 
             private String projectCode; 
             private String projectTitle; 
+            private java.util.List<String> provinceTravelCityAdcodes; 
             private String thirdPartInvoiceId; 
             private String thirdpartCostCenterId; 
             private Integer trafficType; 
 
             /**
-             * arr_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder arrDate(String arrDate) {
                 this.arrDate = arrDate;
+                return this;
+            }
+
+            /**
+             * attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
                 return this;
             }
 
@@ -1915,7 +3123,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * dep_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-12 00:00:00</p>
              */
             public Builder depDate(String depDate) {
                 this.depDate = depDate;
@@ -1931,7 +3142,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * itinerary_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000131</p>
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
@@ -1943,6 +3157,268 @@ public class ApplyModifyRequest extends Request {
              */
             public Builder itineraryTravelStandard(ItinerarySetListItineraryTravelStandard itineraryTravelStandard) {
                 this.itineraryTravelStandard = itineraryTravelStandard;
+                return this;
+            }
+
+            /**
+             * project_code.
+             */
+            public Builder projectCode(String projectCode) {
+                this.projectCode = projectCode;
+                return this;
+            }
+
+            /**
+             * project_title.
+             */
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * province_travel_city_adcodes.
+             */
+            public Builder provinceTravelCityAdcodes(java.util.List<String> provinceTravelCityAdcodes) {
+                this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
+                return this;
+            }
+
+            /**
+             * third_part_invoice_id.
+             */
+            public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
+                this.thirdPartInvoiceId = thirdPartInvoiceId;
+                return this;
+            }
+
+            /**
+             * thirdpart_cost_center_id.
+             */
+            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
+                this.thirdpartCostCenterId = thirdpartCostCenterId;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder trafficType(Integer trafficType) {
+                this.trafficType = trafficType;
+                return this;
+            }
+
+            public ItinerarySetList build() {
+                return new ItinerarySetList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class TravelerList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
+        private Long costCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_id")
+        private Long invoiceId;
+
+        @com.aliyun.core.annotation.NameInMap("payment_department_id")
+        private String paymentDepartmentId;
+
+        @com.aliyun.core.annotation.NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
+        @com.aliyun.core.annotation.NameInMap("project_code")
+        private String projectCode;
+
+        @com.aliyun.core.annotation.NameInMap("project_title")
+        private String projectTitle;
+
+        @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
+        private String thirdPartInvoiceId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
+        private String thirdpartCostCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_depart_id")
+        private String thirdpartDepartId;
+
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        private String userName;
+
+        private TravelerList(Builder builder) {
+            this.attribute = builder.attribute;
+            this.costCenterId = builder.costCenterId;
+            this.invoiceId = builder.invoiceId;
+            this.paymentDepartmentId = builder.paymentDepartmentId;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
+            this.projectCode = builder.projectCode;
+            this.projectTitle = builder.projectTitle;
+            this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
+            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
+            this.thirdpartDepartId = builder.thirdpartDepartId;
+            this.userId = builder.userId;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TravelerList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return costCenterId
+         */
+        public Long getCostCenterId() {
+            return this.costCenterId;
+        }
+
+        /**
+         * @return invoiceId
+         */
+        public Long getInvoiceId() {
+            return this.invoiceId;
+        }
+
+        /**
+         * @return paymentDepartmentId
+         */
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        /**
+         * @return projectCode
+         */
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        /**
+         * @return projectTitle
+         */
+        public String getProjectTitle() {
+            return this.projectTitle;
+        }
+
+        /**
+         * @return thirdPartInvoiceId
+         */
+        public String getThirdPartInvoiceId() {
+            return this.thirdPartInvoiceId;
+        }
+
+        /**
+         * @return thirdpartCostCenterId
+         */
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        /**
+         * @return thirdpartDepartId
+         */
+        public String getThirdpartDepartId() {
+            return this.thirdpartDepartId;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+            private Long costCenterId; 
+            private Long invoiceId; 
+            private String paymentDepartmentId; 
+            private String paymentDepartmentName; 
+            private String projectCode; 
+            private String projectTitle; 
+            private String thirdPartInvoiceId; 
+            private String thirdpartCostCenterId; 
+            private String thirdpartDepartId; 
+            private String userId; 
+            private String userName; 
+
+            /**
+             * attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * cost_center_id.
+             */
+            public Builder costCenterId(Long costCenterId) {
+                this.costCenterId = costCenterId;
+                return this;
+            }
+
+            /**
+             * invoice_id.
+             */
+            public Builder invoiceId(Long invoiceId) {
+                this.invoiceId = invoiceId;
+                return this;
+            }
+
+            /**
+             * payment_department_id.
+             */
+            public Builder paymentDepartmentId(String paymentDepartmentId) {
+                this.paymentDepartmentId = paymentDepartmentId;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
                 return this;
             }
 
@@ -1979,60 +3455,18 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * traffic_type.
+             * thirdpart_depart_id.
              */
-            public Builder trafficType(Integer trafficType) {
-                this.trafficType = trafficType;
+            public Builder thirdpartDepartId(String thirdpartDepartId) {
+                this.thirdpartDepartId = thirdpartDepartId;
                 return this;
             }
 
-            public ItinerarySetList build() {
-                return new ItinerarySetList(this);
-            } 
-
-        } 
-
-    }
-    public static class TravelerList extends TeaModel {
-        @NameInMap("user_id")
-        private String userId;
-
-        @NameInMap("user_name")
-        private String userName;
-
-        private TravelerList(Builder builder) {
-            this.userId = builder.userId;
-            this.userName = builder.userName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TravelerList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return userId
-         */
-        public String getUserId() {
-            return this.userId;
-        }
-
-        /**
-         * @return userName
-         */
-        public String getUserName() {
-            return this.userName;
-        }
-
-        public static final class Builder {
-            private String userId; 
-            private String userName; 
-
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thirdpart12138</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -2054,13 +3488,19 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class CarCitySet extends TeaModel {
-        @NameInMap("city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityCode;
 
-        @NameInMap("city_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityName;
 
         private CarCitySet(Builder builder) {
@@ -2095,7 +3535,7 @@ public class ApplyModifyRequest extends Request {
             private String cityName; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -2103,7 +3543,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -2117,14 +3557,20 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class TravelerStandardHotelCitys extends TeaModel {
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("fee")
+        @com.aliyun.core.annotation.NameInMap("fee")
         private Long fee;
 
         private TravelerStandardHotelCitys(Builder builder) {
@@ -2168,7 +3614,7 @@ public class ApplyModifyRequest extends Request {
             private Long fee; 
 
             /**
-             * city_code.
+             * <p>This parameter is required.</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -2176,7 +3622,7 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * city_name.
+             * <p>This parameter is required.</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -2198,35 +3644,146 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
+    public static class TravelerStandardHotelIntlCitys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        private String cityCode;
+
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        private String cityName;
+
+        @com.aliyun.core.annotation.NameInMap("fee")
+        private Long fee;
+
+        private TravelerStandardHotelIntlCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TravelerStandardHotelIntlCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public TravelerStandardHotelIntlCitys build() {
+                return new TravelerStandardHotelIntlCitys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyModifyRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyModifyRequest</p>
+     */
     public static class TravelerStandard extends TeaModel {
-        @NameInMap("business_discount")
+        @com.aliyun.core.annotation.NameInMap("business_discount")
         private Integer businessDiscount;
 
-        @NameInMap("car_city_set")
-        private java.util.List < CarCitySet> carCitySet;
+        @com.aliyun.core.annotation.NameInMap("car_city_set")
+        private java.util.List<CarCitySet> carCitySet;
 
-        @NameInMap("economy_discount")
+        @com.aliyun.core.annotation.NameInMap("economy_discount")
         private Integer economyDiscount;
 
-        @NameInMap("first_discount")
+        @com.aliyun.core.annotation.NameInMap("first_discount")
         private Integer firstDiscount;
 
-        @NameInMap("flight_cabins")
+        @com.aliyun.core.annotation.NameInMap("flight_cabins")
         private String flightCabins;
 
-        @NameInMap("hotel_citys")
-        private java.util.List < TravelerStandardHotelCitys> hotelCitys;
+        @com.aliyun.core.annotation.NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
 
-        @NameInMap("premium_economy_discount")
+        @com.aliyun.core.annotation.NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_citys")
+        private java.util.List<TravelerStandardHotelCitys> hotelCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
+        private java.util.List<TravelerStandardHotelIntlCitys> hotelIntlCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("premium_economy_discount")
         private Integer premiumEconomyDiscount;
 
-        @NameInMap("reserve_type")
+        @com.aliyun.core.annotation.NameInMap("reserve_type")
         private Integer reserveType;
 
-        @NameInMap("train_seats")
+        @com.aliyun.core.annotation.NameInMap("train_rule_code")
+        private Long trainRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("train_seats")
         private String trainSeats;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private TravelerStandard(Builder builder) {
@@ -2235,9 +3792,15 @@ public class ApplyModifyRequest extends Request {
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
             this.hotelCitys = builder.hotelCitys;
+            this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
             this.trainSeats = builder.trainSeats;
             this.userId = builder.userId;
         }
@@ -2260,7 +3823,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return carCitySet
          */
-        public java.util.List < CarCitySet> getCarCitySet() {
+        public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
         }
 
@@ -2286,10 +3849,45 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
          * @return hotelCitys
          */
-        public java.util.List < TravelerStandardHotelCitys> getHotelCitys() {
+        public java.util.List<TravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        /**
+         * @return hotelIntlCitys
+         */
+        public java.util.List<TravelerStandardHotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
+        }
+
+        /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
         }
 
         /**
@@ -2304,6 +3902,13 @@ public class ApplyModifyRequest extends Request {
          */
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
         }
 
         /**
@@ -2322,13 +3927,19 @@ public class ApplyModifyRequest extends Request {
 
         public static final class Builder {
             private Integer businessDiscount; 
-            private java.util.List < CarCitySet> carCitySet; 
+            private java.util.List<CarCitySet> carCitySet; 
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
-            private java.util.List < TravelerStandardHotelCitys> hotelCitys; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
+            private java.util.List<TravelerStandardHotelCitys> hotelCitys; 
+            private java.util.List<TravelerStandardHotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
+            private Long trainRuleCode; 
             private String trainSeats; 
             private String userId; 
 
@@ -2343,7 +3954,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * car_city_set.
              */
-            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+            public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
                 return this;
             }
@@ -2373,15 +3984,58 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
              * hotel_citys.
              */
-            public Builder hotelCitys(java.util.List < TravelerStandardHotelCitys> hotelCitys) {
+            public Builder hotelCitys(java.util.List<TravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
                 return this;
             }
 
             /**
-             * 超级经济舱折扣。1到10的整数
+             * hotel_intl_citys.
+             */
+            public Builder hotelIntlCitys(java.util.List<TravelerStandardHotelIntlCitys> hotelIntlCitys) {
+                this.hotelIntlCitys = hotelIntlCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
+                return this;
+            }
+
+            /**
+             * <p>超级经济舱折扣。1到10的整数</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
                 this.premiumEconomyDiscount = premiumEconomyDiscount;
@@ -2397,6 +4051,14 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
+                return this;
+            }
+
+            /**
              * train_seats.
              */
             public Builder trainSeats(String trainSeats) {
@@ -2405,7 +4067,10 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
-             * user_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thirdpart12138</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

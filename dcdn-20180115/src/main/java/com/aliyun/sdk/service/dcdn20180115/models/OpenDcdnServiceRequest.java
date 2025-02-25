@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenDcdnServiceRequest} extends {@link RequestModel}
  *
  * <p>OpenDcdnServiceRequest</p>
  */
 public class OpenDcdnServiceRequest extends Request {
-    @Query
-    @NameInMap("BillType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("WebsocketBillType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebsocketBillType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String websocketBillType;
 
     private OpenDcdnServiceRequest(Builder builder) {
@@ -98,11 +98,15 @@ public class OpenDcdnServiceRequest extends Request {
         } 
 
         /**
-         * The metering method of DCDN. Valid values:
-         * <p>
+         * <p>The metering method of DCDN. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay-by-traffic</li>
+         * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PayByTraffic**: pay-by-traffic
-         * *   **PayByBandwidth**: pay-by-bandwidth
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);
@@ -129,11 +133,15 @@ public class OpenDcdnServiceRequest extends Request {
         }
 
         /**
-         * The metering method of WebSocket. Valid values:
-         * <p>
+         * <p>The metering method of WebSocket. Valid values:</p>
+         * <ul>
+         * <li><strong>websockettraffic</strong>: pay-by-data-transfer</li>
+         * <li><strong>websocketbps</strong>: pay-by-bandwidth</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **websockettraffic**: pay-by-data-transfer
-         * *   **websocketbps**: pay-by-bandwidth
+         * <strong>example:</strong>
+         * <p>websockettraffic</p>
          */
         public Builder websocketBillType(String websocketBillType) {
             this.putQueryParameter("WebsocketBillType", websocketBillType);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsCertificateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsCertificateListResponseBody</p>
  */
 public class DescribeVsCertificateListResponseBody extends TeaModel {
-    @NameInMap("CertificateListModel")
+    @com.aliyun.core.annotation.NameInMap("CertificateListModel")
     private CertificateListModel certificateListModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsCertificateListResponseBody(Builder builder) {
@@ -71,23 +76,29 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsCertificateListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("Fingerprint")
+        @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
         private CertList(Builder builder) {
@@ -212,11 +223,17 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsCertificateListResponseBody</p>
+     */
     public static class CertificateListModel extends TeaModel {
-        @NameInMap("CertList")
-        private java.util.List < CertList> certList;
+        @com.aliyun.core.annotation.NameInMap("CertList")
+        private java.util.List<CertList> certList;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private CertificateListModel(Builder builder) {
@@ -235,7 +252,7 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         /**
          * @return certList
          */
-        public java.util.List < CertList> getCertList() {
+        public java.util.List<CertList> getCertList() {
             return this.certList;
         }
 
@@ -247,13 +264,13 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CertList> certList; 
+            private java.util.List<CertList> certList; 
             private Integer count; 
 
             /**
              * CertList.
              */
-            public Builder certList(java.util.List < CertList> certList) {
+            public Builder certList(java.util.List<CertList> certList) {
                 this.certList = certList;
                 return this;
             }

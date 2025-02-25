@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserAnalyzerEntriesResponseBody</p>
  */
 public class ListUserAnalyzerEntriesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.Map < String, ? > result;
 
     private ListUserAnalyzerEntriesResponseBody(Builder builder) {
@@ -58,7 +57,7 @@ public class ListUserAnalyzerEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The entries of the custom analyzer. For more information, see UserAnalyzerEntry.
+         * The entries of the custom analyzer. For more information, see [UserAnalyzerEntry](https://www.alibabacloud.com/help/en/open-search/industry-algorithm-edition/useranalyzerentry).
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

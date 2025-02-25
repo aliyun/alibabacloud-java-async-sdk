@@ -1,34 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigL7RsPolicyRequest} extends {@link RequestModel}
  *
  * <p>ConfigL7RsPolicyRequest</p>
  */
 public class ConfigL7RsPolicyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("Policy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policy;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpstreamRetry")
+    private Integer upstreamRetry;
 
     private ConfigL7RsPolicyRequest(Builder builder) {
         super(builder);
@@ -36,6 +45,7 @@ public class ConfigL7RsPolicyRequest extends Request {
         this.domain = builder.domain;
         this.policy = builder.policy;
         this.resourceGroupId = builder.resourceGroupId;
+        this.upstreamRetry = builder.upstreamRetry;
     }
 
     public static Builder builder() {
@@ -79,11 +89,19 @@ public class ConfigL7RsPolicyRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return upstreamRetry
+     */
+    public Integer getUpstreamRetry() {
+        return this.upstreamRetry;
+    }
+
     public static final class Builder extends Request.Builder<ConfigL7RsPolicyRequest, Builder> {
         private String regionId; 
         private String domain; 
         private String policy; 
         private String resourceGroupId; 
+        private Integer upstreamRetry; 
 
         private Builder() {
             super();
@@ -95,6 +113,7 @@ public class ConfigL7RsPolicyRequest extends Request {
             this.domain = request.domain;
             this.policy = request.policy;
             this.resourceGroupId = request.resourceGroupId;
+            this.upstreamRetry = request.upstreamRetry;
         } 
 
         /**
@@ -107,10 +126,14 @@ public class ConfigL7RsPolicyRequest extends Request {
         }
 
         /**
-         * The domain name of the website.
-         * <p>
+         * <p>The domain name of the website.</p>
+         * <blockquote>
+         * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query the domain names for which forwarding rules are configured.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query the domain names for which forwarding rules are configured.
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -119,22 +142,37 @@ public class ConfigL7RsPolicyRequest extends Request {
         }
 
         /**
-         * The back-to-origin policy. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
-         * <p>
+         * <p>The back-to-origin policy. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>ProxyMode</strong>: The load balancing algorithm for back-to-origin traffic. This field is required and must be a string. Valid values:</p>
+         * <ul>
+         * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect requests from the same IP address to the same origin server.</li>
+         * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn. If you use this algorithm, you can specify a weight for each server based on server performance.</li>
+         * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from the instance to origin servers based on the intelligent DNS resolution feature.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Attributes</strong>: the parameters for back-to-origin processing. This field is optional and must be a JSON array. Each element in the array contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>RealServer</strong>: the address of the origin server. This field is optional and must be a string.</p>
+         * </li>
+         * <li><p><strong>Attribute</strong>: the parameter for back-to-origin processing. This field is optional and must be a JSON object. Valid values:</p>
+         * <ul>
+         * <li><strong>Weight</strong>: the weight of the server. This field is optional and must be an integer. This field takes effect only when <strong>ProxyMode</strong> is set to <strong>rr</strong>. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>. An origin server with a higher weight receives more requests.</li>
+         * <li><strong>ConnectTimeout</strong>: the timeout period for new connections. This field is optional and must be an integer. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: seconds. Default value: <strong>5</strong>.</li>
+         * <li><strong>FailTimeout</strong>: the period after which a connection is considered to have failed. This field is optional and must be an integer. Valid values: <strong>1</strong> to <strong>3600</strong>. Unit: seconds. Default value: <strong>10</strong>.</li>
+         * <li><strong>MaxFails</strong>: the maximum number of failures allowed. This field is related to health checks. This field is optional and must be an integer. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: seconds. Default value: <strong>3</strong>.</li>
+         * <li><strong>Mode</strong>: the primary/secondary attribute flag. This parameter is optional and must be a string. Valid values: <strong>active</strong> (primary) and <strong>backup</strong> (secondary).</li>
+         * <li><strong>ReadTimeout</strong>: the read timeout period. This field is optional and must be an integer. Valid values: <strong>10</strong> to <strong>300</strong>. Unit: seconds. Default value: <strong>120</strong>.</li>
+         * <li><strong>SendTimeout</strong>: the write timeout period. This field is optional and must be an integer. Valid values: <strong>10</strong> to <strong>300</strong>. Unit: seconds. Default value: <strong>120</strong>.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ProxyMode**: The load balancing algorithm for back-to-origin traffic. This field is required and must be a string. Valid values:
-         * 
-         *     *   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.
-         *     *   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn. If you use this algorithm, you can specify a weight for each server based on server performance.
-         *     *   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.
-         * 
-         * *   **Attributes**: the parameters for back-to-origin. This field is optional and must be a JSON array. Each element in the array contains the following fields:
-         * 
-         *     *   **RealServer**: the address of the origin server. This field is optional and must be a string.
-         * 
-         *     *   **Attribute**: the parameter for back-to-origin. This field is optional and must be a JSON object. The value contains the following field:
-         * 
-         *         *   **Weight**: the weight of the server. This field is optional and must be an integer. This field takes effect only when **ProxyMode** is set to **rr**. Valid values: **1** to **100**. Default value: **100**. An origin server with a higher weight receives more requests.
+         * <strong>example:</strong>
+         * <p>{&quot;ProxyMode&quot;:&quot;rr&quot;,&quot;Attributes&quot;:[{&quot;RealServer&quot;:&quot;1.<em><strong>.</strong></em>.1&quot;,&quot;Attribute&quot;:{&quot;Weight&quot;:100}},{&quot;RealServer&quot;:&quot;2.<em><strong>.</strong></em>.2&quot;,&quot;Attribute&quot;:{&quot;Weight&quot;:100}}]}</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -143,14 +181,31 @@ public class ConfigL7RsPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+         * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
          * 
-         * For more information about resource groups, see [Create a resource group](~~94485~~).
+         * <strong>example:</strong>
+         * <p>rg-acfm2pz25js****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The retry switch. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: on</li>
+         * <li><strong>0</strong>: off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder upstreamRetry(Integer upstreamRetry) {
+            this.putQueryParameter("UpstreamRetry", upstreamRetry);
+            this.upstreamRetry = upstreamRetry;
             return this;
         }
 

@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("AbilityType")
+    @com.aliyun.core.annotation.NameInMap("AbilityType")
     private String abilityType;
 
-    @NameInMap("ApplicableOperations")
-    private java.util.List < String > applicableOperations;
+    @com.aliyun.core.annotation.NameInMap("ApplicableOperations")
+    private java.util.List<String> applicableOperations;
 
-    @NameInMap("Concurrency")
+    @com.aliyun.core.annotation.NameInMap("Concurrency")
     private Long concurrency;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private Long modifyTime;
 
-    @NameInMap("ModifyUserName")
+    @com.aliyun.core.annotation.NameInMap("ModifyUserName")
     private String modifyUserName;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NluServiceParamsJson")
+    @com.aliyun.core.annotation.NameInMap("NluServiceParamsJson")
     private String nluServiceParamsJson;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UnionInstanceId")
+    @com.aliyun.core.annotation.NameInMap("UnionInstanceId")
     private String unionInstanceId;
 
-    @NameInMap("UnionSource")
+    @com.aliyun.core.annotation.NameInMap("UnionSource")
     private String unionSource;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -85,7 +90,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     /**
      * @return applicableOperations
      */
-    public java.util.List < String > getApplicableOperations() {
+    public java.util.List<String> getApplicableOperations() {
         return this.applicableOperations;
     }
 
@@ -168,7 +173,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String abilityType; 
-        private java.util.List < String > applicableOperations; 
+        private java.util.List<String> applicableOperations; 
         private Long concurrency; 
         private String description; 
         private String instanceId; 
@@ -192,7 +197,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * ApplicableOperations.
          */
-        public Builder applicableOperations(java.util.List < String > applicableOperations) {
+        public Builder applicableOperations(java.util.List<String> applicableOperations) {
             this.applicableOperations = applicableOperations;
             return this;
         }

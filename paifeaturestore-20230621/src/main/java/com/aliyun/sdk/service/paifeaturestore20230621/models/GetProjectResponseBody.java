@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetProjectResponseBody</p>
  */
 public class GetProjectResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("FeatureEntityCount")
+    @com.aliyun.core.annotation.NameInMap("FeatureEntityCount")
     private Integer featureEntityCount;
 
-    @NameInMap("FeatureViewCount")
+    @com.aliyun.core.annotation.NameInMap("FeatureViewCount")
     private Integer featureViewCount;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("ModelCount")
+    @com.aliyun.core.annotation.NameInMap("ModelCount")
     private Integer modelCount;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OfflineDatasourceId")
+    @com.aliyun.core.annotation.NameInMap("OfflineDatasourceId")
     private String offlineDatasourceId;
 
-    @NameInMap("OfflineDatasourceName")
+    @com.aliyun.core.annotation.NameInMap("OfflineDatasourceName")
     private String offlineDatasourceName;
 
-    @NameInMap("OfflineDatasourceType")
+    @com.aliyun.core.annotation.NameInMap("OfflineDatasourceType")
     private String offlineDatasourceType;
 
-    @NameInMap("OfflineLifecycle")
+    @com.aliyun.core.annotation.NameInMap("OfflineLifecycle")
     private Integer offlineLifecycle;
 
-    @NameInMap("OnlineDatasourceId")
+    @com.aliyun.core.annotation.NameInMap("OnlineDatasourceId")
     private String onlineDatasourceId;
 
-    @NameInMap("OnlineDatasourceName")
+    @com.aliyun.core.annotation.NameInMap("OnlineDatasourceName")
     private String onlineDatasourceName;
 
-    @NameInMap("OnlineDatasourceType")
+    @com.aliyun.core.annotation.NameInMap("OnlineDatasourceType")
     private String onlineDatasourceType;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetProjectResponseBody(Builder builder) {

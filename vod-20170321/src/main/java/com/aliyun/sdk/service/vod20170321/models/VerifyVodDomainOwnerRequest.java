@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyVodDomainOwnerRequest} extends {@link RequestModel}
  *
  * <p>VerifyVodDomainOwnerRequest</p>
  */
 public class VerifyVodDomainOwnerRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("VerifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifyType;
 
     private VerifyVodDomainOwnerRequest(Builder builder) {
@@ -84,7 +89,11 @@ public class VerifyVodDomainOwnerRequest extends Request {
         } 
 
         /**
-         * The domain name of which you want to verify the ownership. You can specify only one domain name in each call.
+         * <p>The domain name of which you want to verify the ownership. You can specify only one domain name in each call.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -102,7 +111,15 @@ public class VerifyVodDomainOwnerRequest extends Request {
         }
 
         /**
-         * The DNS verification method that is used to verify the ownership of the specified domain name.
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>dnsCheck</strong>: uses a Domain Name System (DNS) record</li>
+         * <li><strong>fileCheck</strong>: uses a verification file</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dnsCheck</p>
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

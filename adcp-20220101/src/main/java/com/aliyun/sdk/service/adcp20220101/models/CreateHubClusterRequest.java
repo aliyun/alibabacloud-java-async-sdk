@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHubClusterRequest</p>
  */
 public class CreateHubClusterRequest extends Request {
-    @Body
-    @NameInMap("ApiServerPublicEip")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiServerPublicEip")
     private Boolean apiServerPublicEip;
 
-    @Body
-    @NameInMap("ArgoServerEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ArgoServerEnabled")
     private Boolean argoServerEnabled;
 
-    @Body
-    @NameInMap("AuditLogEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuditLogEnabled")
     private Boolean auditLogEnabled;
 
-    @Body
-    @NameInMap("IsEnterpriseSecurityGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsEnterpriseSecurityGroup")
     private Boolean isEnterpriseSecurityGroup;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("PriceLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PriceLimit")
     private String priceLimit;
 
-    @Body
-    @NameInMap("Profile")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Profile")
     private String profile;
 
-    @Body
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("VSwitches")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
+    private String resourceGroupID;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag > tag;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitches;
 
-    @Body
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Body
-    @NameInMap("WorkflowScheduleMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkflowScheduleMode")
     private String workflowScheduleMode;
 
     private CreateHubClusterRequest(Builder builder) {
@@ -69,6 +76,8 @@ public class CreateHubClusterRequest extends Request {
         this.priceLimit = builder.priceLimit;
         this.profile = builder.profile;
         this.regionId = builder.regionId;
+        this.resourceGroupID = builder.resourceGroupID;
+        this.tag = builder.tag;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
         this.workflowScheduleMode = builder.workflowScheduleMode;
@@ -144,6 +153,20 @@ public class CreateHubClusterRequest extends Request {
     }
 
     /**
+     * @return resourceGroupID
+     */
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag > getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitches
      */
     public String getVSwitches() {
@@ -173,6 +196,8 @@ public class CreateHubClusterRequest extends Request {
         private String priceLimit; 
         private String profile; 
         private String regionId; 
+        private String resourceGroupID; 
+        private java.util.List < Tag > tag; 
         private String vSwitches; 
         private String vpcId; 
         private String workflowScheduleMode; 
@@ -191,6 +216,8 @@ public class CreateHubClusterRequest extends Request {
             this.priceLimit = request.priceLimit;
             this.profile = request.profile;
             this.regionId = request.regionId;
+            this.resourceGroupID = request.resourceGroupID;
+            this.tag = request.tag;
             this.vSwitches = request.vSwitches;
             this.vpcId = request.vpcId;
             this.workflowScheduleMode = request.workflowScheduleMode;
@@ -210,7 +237,11 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * ArgoServerEnabled.
+         * Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder argoServerEnabled(Boolean argoServerEnabled) {
             this.putBodyParameter("ArgoServerEnabled", argoServerEnabled);
@@ -250,7 +281,7 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * PriceLimit.
+         * The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.
          */
         public Builder priceLimit(String priceLimit) {
             this.putBodyParameter("PriceLimit", priceLimit);
@@ -283,6 +314,28 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
+         * The Resource Group ID.
+         */
+        public Builder resourceGroupID(String resourceGroupID) {
+            this.putBodyParameter("ResourceGroupID", resourceGroupID);
+            this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
+         */
+        public Builder tag(java.util.List < Tag > tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * The ID of the vSwitch.
          */
         public Builder vSwitches(String vSwitches) {
@@ -301,7 +354,11 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * WorkflowScheduleMode.
+         * The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   cost-optimized: cost-prioritized scheduling mode.
+         * *   stock-optimized: inventory-prioritized scheduling mode.
          */
         public Builder workflowScheduleMode(String workflowScheduleMode) {
             this.putBodyParameter("WorkflowScheduleMode", workflowScheduleMode);

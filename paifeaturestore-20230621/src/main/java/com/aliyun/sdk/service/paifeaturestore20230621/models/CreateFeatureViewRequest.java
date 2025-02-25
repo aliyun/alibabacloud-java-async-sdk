@@ -1,78 +1,87 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFeatureViewRequest} extends {@link RequestModel}
  *
  * <p>CreateFeatureViewRequest</p>
  */
 public class CreateFeatureViewRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Body
-    @NameInMap("FeatureEntityId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureEntityId")
     private String featureEntityId;
 
-    @Body
-    @NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    private java.util.List<Fields> fields;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("RegisterDatasourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegisterDatasourceId")
     private String registerDatasourceId;
 
-    @Body
-    @NameInMap("RegisterTable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegisterTable")
     private String registerTable;
 
-    @Body
-    @NameInMap("SyncOnlineTable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SyncOnlineTable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean syncOnlineTable;
 
-    @Body
-    @NameInMap("TTL")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TTL")
     private Integer TTL;
 
-    @Body
-    @NameInMap("Tags")
-    private java.util.List < String > tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<String> tags;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Body
-    @NameInMap("WriteMethod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WriteMethod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String writeMethod;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WriteToFeatureDB")
+    private Boolean writeToFeatureDB;
 
     private CreateFeatureViewRequest(Builder builder) {
         super(builder);
@@ -90,6 +99,7 @@ public class CreateFeatureViewRequest extends Request {
         this.tags = builder.tags;
         this.type = builder.type;
         this.writeMethod = builder.writeMethod;
+        this.writeToFeatureDB = builder.writeToFeatureDB;
     }
 
     public static Builder builder() {
@@ -136,7 +146,7 @@ public class CreateFeatureViewRequest extends Request {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -185,7 +195,7 @@ public class CreateFeatureViewRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -203,21 +213,29 @@ public class CreateFeatureViewRequest extends Request {
         return this.writeMethod;
     }
 
+    /**
+     * @return writeToFeatureDB
+     */
+    public Boolean getWriteToFeatureDB() {
+        return this.writeToFeatureDB;
+    }
+
     public static final class Builder extends Request.Builder<CreateFeatureViewRequest, Builder> {
         private String instanceId; 
         private String regionId; 
         private String config; 
         private String featureEntityId; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String name; 
         private String projectId; 
         private String registerDatasourceId; 
         private String registerTable; 
         private Boolean syncOnlineTable; 
         private Integer TTL; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String type; 
         private String writeMethod; 
+        private Boolean writeToFeatureDB; 
 
         private Builder() {
             super();
@@ -239,10 +257,14 @@ public class CreateFeatureViewRequest extends Request {
             this.tags = request.tags;
             this.type = request.type;
             this.writeMethod = request.writeMethod;
+            this.writeToFeatureDB = request.writeToFeatureDB;
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fs-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -280,14 +302,17 @@ public class CreateFeatureViewRequest extends Request {
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("Fields", fields);
             this.fields = fields;
             return this;
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FeatureView1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -296,7 +321,10 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -323,7 +351,10 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * SyncOnlineTable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder syncOnlineTable(Boolean syncOnlineTable) {
             this.putBodyParameter("SyncOnlineTable", syncOnlineTable);
@@ -343,14 +374,17 @@ public class CreateFeatureViewRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.putBodyParameter("Tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Batch</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -359,11 +393,23 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         /**
-         * WriteMethod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder writeMethod(String writeMethod) {
             this.putBodyParameter("WriteMethod", writeMethod);
             this.writeMethod = writeMethod;
+            return this;
+        }
+
+        /**
+         * WriteToFeatureDB.
+         */
+        public Builder writeToFeatureDB(Boolean writeToFeatureDB) {
+            this.putBodyParameter("WriteToFeatureDB", writeToFeatureDB);
+            this.writeToFeatureDB = writeToFeatureDB;
             return this;
         }
 
@@ -374,14 +420,20 @@ public class CreateFeatureViewRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFeatureViewRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFeatureViewRequest</p>
+     */
     public static class Fields extends TeaModel {
-        @NameInMap("Attributes")
-        private java.util.List < String > attributes;
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private java.util.List<String> attributes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {
@@ -401,7 +453,7 @@ public class CreateFeatureViewRequest extends Request {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -420,20 +472,23 @@ public class CreateFeatureViewRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private String name; 
             private String type; 
 
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FeatureView1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -441,7 +496,10 @@ public class CreateFeatureViewRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Batch</p>
              */
             public Builder type(String type) {
                 this.type = type;

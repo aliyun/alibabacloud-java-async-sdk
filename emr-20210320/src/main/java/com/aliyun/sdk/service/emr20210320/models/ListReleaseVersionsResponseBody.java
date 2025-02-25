@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListReleaseVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListReleaseVersionsResponseBody</p>
  */
 public class ListReleaseVersionsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("ReleaseVersions")
-    private java.util.List < ReleaseVersions> releaseVersions;
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersions")
+    private java.util.List<ReleaseVersions> releaseVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListReleaseVersionsResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     /**
      * @return releaseVersions
      */
-    public java.util.List < ReleaseVersions> getReleaseVersions() {
+    public java.util.List<ReleaseVersions> getReleaseVersions() {
         return this.releaseVersions;
     }
 
@@ -81,12 +86,15 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < ReleaseVersions> releaseVersions; 
+        private java.util.List<ReleaseVersions> releaseVersions; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The maximum number of entries returned.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Returns the location of the data that was read.
+         * <p>Returns the location of the data that was read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,15 +113,18 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ReleaseVersions.
+         * <p>The major EMR versions.</p>
          */
-        public Builder releaseVersions(java.util.List < ReleaseVersions> releaseVersions) {
+        public Builder releaseVersions(java.util.List<ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,14 +148,20 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListReleaseVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListReleaseVersionsResponseBody</p>
+     */
     public static class ReleaseVersions extends TeaModel {
-        @NameInMap("IaasType")
+        @com.aliyun.core.annotation.NameInMap("IaasType")
         private String iaasType;
 
-        @NameInMap("ReleaseVersion")
+        @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
         private String releaseVersion;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
         private ReleaseVersions(Builder builder) {
@@ -182,10 +205,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private String series; 
 
             /**
-             * IaaS类型。取值范围：
-             * <p>
-             * - ECS：基于ECS构建。
-             * - K8S：基于K8S构建。
+             * <p>The IaaS type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder iaasType(String iaasType) {
                 this.iaasType = iaasType;
@@ -193,7 +216,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * EMR发行版。
+             * <p>The EMR version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EMR-5.3.0</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -201,7 +227,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * 版本序列。
+             * <p>The version series.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EMR-6.X</p>
              */
             public Builder series(String series) {
                 this.series = series;

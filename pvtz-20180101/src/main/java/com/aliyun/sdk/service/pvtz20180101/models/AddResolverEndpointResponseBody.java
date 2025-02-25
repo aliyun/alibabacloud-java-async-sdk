@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddResolverEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>AddResolverEndpointResponseBody</p>
  */
 public class AddResolverEndpointResponseBody extends TeaModel {
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddResolverEndpointResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class AddResolverEndpointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EndpointId.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0**</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -58,7 +61,10 @@ public class AddResolverEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32436208-E1AF-4DAB-B3B8-24F5F25B0950</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

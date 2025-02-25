@@ -1,38 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssObjectsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssObjectsResponseBody</p>
  */
 public class DescribeOssObjectsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
-    private java.util.List < Items> items;
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("Marker")
+    private String marker;
+
+    @com.aliyun.core.annotation.NameInMap("NextMarker")
+    private String nextMarker;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
+
+    @com.aliyun.core.annotation.NameInMap("Truncated")
+    private Boolean truncated;
 
     private DescribeOssObjectsResponseBody(Builder builder) {
         this.currentPage = builder.currentPage;
         this.items = builder.items;
+        this.marker = builder.marker;
+        this.nextMarker = builder.nextMarker;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
+        this.truncated = builder.truncated;
     }
 
     public static Builder builder() {
@@ -53,8 +70,22 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
+    }
+
+    /**
+     * @return marker
+     */
+    public String getMarker() {
+        return this.marker;
+    }
+
+    /**
+     * @return nextMarker
+     */
+    public String getNextMarker() {
+        return this.nextMarker;
     }
 
     /**
@@ -78,15 +109,28 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    /**
+     * @return truncated
+     */
+    public Boolean getTruncated() {
+        return this.truncated;
+    }
+
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
+        private String marker; 
+        private String nextMarker; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+        private Boolean truncated; 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,15 +138,43 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The OSS objects.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
+        public Builder marker(String marker) {
+            this.marker = marker;
+            return this;
+        }
+
+        /**
+         * <p>The ID value from which the next page of results starts.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the <code>Truncated</code> parameter is set to <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1754786235714378752</p>
+         */
+        public Builder nextMarker(String nextMarker) {
+            this.nextMarker = nextMarker;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +182,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,10 +193,28 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder truncated(Boolean truncated) {
+            this.truncated = truncated;
             return this;
         }
 
@@ -131,14 +224,20 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOssObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectsResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
         private RuleList(Builder builder) {
@@ -182,7 +281,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private Long riskLevelId; 
 
             /**
-             * Count.
+             * <p>The number of times that the rule is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -190,7 +292,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The search keyword. Fuzzy match is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID card</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +303,17 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+             * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+             * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+             * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+             * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -212,56 +327,74 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeOssObjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssObjectsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Long category;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileCategoryCode")
+        private Long fileCategoryCode;
+
+        @com.aliyun.core.annotation.NameInMap("FileCategoryName")
+        private String fileCategoryName;
+
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
+        private Long lastModifiedTime;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
-        @NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        @com.aliyun.core.annotation.NameInMap("RuleList")
+        private java.util.List<RuleList> ruleList;
 
-        @NameInMap("SensitiveCount")
+        @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private Items(Builder builder) {
             this.bucketName = builder.bucketName;
             this.category = builder.category;
             this.categoryName = builder.categoryName;
+            this.fileCategoryCode = builder.fileCategoryCode;
+            this.fileCategoryName = builder.fileCategoryName;
             this.fileId = builder.fileId;
             this.id = builder.id;
             this.instanceId = builder.instanceId;
+            this.lastModifiedTime = builder.lastModifiedTime;
             this.name = builder.name;
             this.regionId = builder.regionId;
             this.riskLevelId = builder.riskLevelId;
@@ -302,6 +435,20 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileCategoryCode
+         */
+        public Long getFileCategoryCode() {
+            return this.fileCategoryCode;
+        }
+
+        /**
+         * @return fileCategoryName
+         */
+        public String getFileCategoryName() {
+            return this.fileCategoryName;
+        }
+
+        /**
          * @return fileId
          */
         public String getFileId() {
@@ -320,6 +467,13 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
          */
         public Long getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return lastModifiedTime
+         */
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
         }
 
         /**
@@ -360,7 +514,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -382,20 +536,26 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private String bucketName; 
             private Long category; 
             private String categoryName; 
+            private Long fileCategoryCode; 
+            private String fileCategoryName; 
             private String fileId; 
             private String id; 
             private Long instanceId; 
+            private Long lastModifiedTime; 
             private String name; 
             private String regionId; 
             private Long riskLevelId; 
             private String riskLevelName; 
             private Integer ruleCount; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private Integer sensitiveCount; 
             private Long size; 
 
             /**
-             * BucketName.
+             * <p>The name of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-duplicate-***</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -403,7 +563,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The type of the OSS object. Valid values include <strong>900001</strong>, <strong>800015</strong>, or <strong>800005</strong>, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900001</p>
              */
             public Builder category(Long category) {
                 this.category = category;
@@ -411,7 +574,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The name of the file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MP4 file</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -419,7 +585,32 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The code of the file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder fileCategoryCode(Long fileCategoryCode) {
+                this.fileCategoryCode = fileCategoryCode;
+                return this;
+            }
+
+            /**
+             * <p>The name of the file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text file</p>
+             */
+            public Builder fileCategoryName(String fileCategoryName) {
+                this.fileCategoryName = fileCategoryName;
+                return this;
+            }
+
+            /**
+             * <p>The file ID of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file-22***</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -427,7 +618,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17383</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -435,7 +629,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance to which the OSS object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1232122</p>
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -443,7 +640,21 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The time when the file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536751124000</p>
+             */
+            public Builder lastModifiedTime(Long lastModifiedTime) {
+                this.lastModifiedTime = lastModifiedTime;
+                return this;
+            }
+
+            /**
+             * <p>The name of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obj_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -451,7 +662,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-***</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -459,7 +673,17 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+             * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+             * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+             * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+             * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -467,7 +691,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * <p>The name of the sensitivity level for the OSS object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Medium sensitivity level</p>
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -475,7 +702,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The number of rules that are hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -483,15 +713,18 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * <p>The rules.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
 
             /**
-             * SensitiveCount.
+             * <p>The number of fields that are hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder sensitiveCount(Integer sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -499,7 +732,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Long size) {
                 this.size = size;

@@ -1,31 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKeyPairRequest} extends {@link RequestModel}
  *
  * <p>CreateKeyPairRequest</p>
  */
 public class CreateKeyPairRequest extends Request {
-    @Query
-    @NameInMap("KeyPairName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyPairName;
-
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
 
     private CreateKeyPairRequest(Builder builder) {
         super(builder);
         this.keyPairName = builder.keyPairName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +47,8 @@ public class CreateKeyPairRequest extends Request {
         return this.keyPairName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<CreateKeyPairRequest, Builder> {
         private String keyPairName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +57,22 @@ public class CreateKeyPairRequest extends Request {
         private Builder(CreateKeyPairRequest request) {
             super(request);
             this.keyPairName = request.keyPairName;
-            this.version = request.version;
         } 
 
         /**
-         * KeyPairName.
+         * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

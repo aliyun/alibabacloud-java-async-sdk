@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link LogContent} extends {@link TeaModel}
  *
  * <p>LogContent</p>
  */
 public class LogContent extends TeaModel {
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private LogContent(Builder builder) {
@@ -52,7 +57,10 @@ public class LogContent extends TeaModel {
         private String value; 
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-test</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -60,7 +68,10 @@ public class LogContent extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-test</p>
          */
         public Builder value(String value) {
             this.value = value;

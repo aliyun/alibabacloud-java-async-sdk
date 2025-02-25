@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterNodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterNodeResponseBody</p>
  */
 public class DescribeDBClusterNodeResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    @com.aliyun.core.annotation.NameInMap("Nodes")
+    private java.util.List<Nodes> nodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterNodeResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -58,11 +63,14 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,15 +78,18 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the node.
+         * <p>The name of the node.</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87E44B48-B306-4AD3-A63B-C8**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,8 +102,14 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNodeResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Nodes(Builder builder) {
@@ -118,7 +135,10 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master-10*******</p>
              */
             public Builder name(String name) {
                 this.name = name;

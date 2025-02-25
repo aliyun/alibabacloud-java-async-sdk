@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkitemFieldRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkitemFieldRequest</p>
  */
 public class UpdateWorkitemFieldRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("updateWorkitemPropertyRequest")
-    @Validation(required = true)
-    private java.util.List < UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("updateWorkitemPropertyRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest;
 
-    @Body
-    @NameInMap("workitemIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemIdentifier;
 
     private UpdateWorkitemFieldRequest(Builder builder) {
@@ -57,7 +62,7 @@ public class UpdateWorkitemFieldRequest extends Request {
     /**
      * @return updateWorkitemPropertyRequest
      */
-    public java.util.List < UpdateWorkitemPropertyRequest> getUpdateWorkitemPropertyRequest() {
+    public java.util.List<UpdateWorkitemPropertyRequest> getUpdateWorkitemPropertyRequest() {
         return this.updateWorkitemPropertyRequest;
     }
 
@@ -70,7 +75,7 @@ public class UpdateWorkitemFieldRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateWorkitemFieldRequest, Builder> {
         private String organizationId; 
-        private java.util.List < UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest; 
+        private java.util.List<UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest; 
         private String workitemIdentifier; 
 
         private Builder() {
@@ -85,7 +90,10 @@ public class UpdateWorkitemFieldRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60ee8a814690c27532d412f8</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -94,16 +102,19 @@ public class UpdateWorkitemFieldRequest extends Request {
         }
 
         /**
-         * updateWorkitemPropertyRequest.
+         * <p>This parameter is required.</p>
          */
-        public Builder updateWorkitemPropertyRequest(java.util.List < UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest) {
+        public Builder updateWorkitemPropertyRequest(java.util.List<UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest) {
             this.putBodyParameter("updateWorkitemPropertyRequest", updateWorkitemPropertyRequest);
             this.updateWorkitemPropertyRequest = updateWorkitemPropertyRequest;
             return this;
         }
 
         /**
-         * workitemIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);
@@ -118,13 +129,19 @@ public class UpdateWorkitemFieldRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateWorkitemFieldRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateWorkitemFieldRequest</p>
+     */
     public static class UpdateWorkitemPropertyRequest extends TeaModel {
-        @NameInMap("fieldIdentifier")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fieldIdentifier;
 
-        @NameInMap("fieldValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("fieldValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fieldValue;
 
         private UpdateWorkitemPropertyRequest(Builder builder) {
@@ -159,7 +176,10 @@ public class UpdateWorkitemFieldRequest extends Request {
             private String fieldValue; 
 
             /**
-             * fieldIdentifier.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder fieldIdentifier(String fieldIdentifier) {
                 this.fieldIdentifier = fieldIdentifier;
@@ -167,7 +187,7 @@ public class UpdateWorkitemFieldRequest extends Request {
             }
 
             /**
-             * fieldValue.
+             * <p>This parameter is required.</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

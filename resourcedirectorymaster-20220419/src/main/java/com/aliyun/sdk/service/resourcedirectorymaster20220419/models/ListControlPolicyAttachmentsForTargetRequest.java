@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListControlPolicyAttachmentsForTargetRequest} extends {@link RequestModel}
  *
  * <p>ListControlPolicyAttachmentsForTargetRequest</p>
  */
 public class ListControlPolicyAttachmentsForTargetRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("TargetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetId;
 
     private ListControlPolicyAttachmentsForTargetRequest(Builder builder) {
@@ -69,14 +74,18 @@ public class ListControlPolicyAttachmentsForTargetRequest extends Request {
         } 
 
         /**
-         * The language in which you want to return the descriptions of the access control policies. Valid values:
-         * <p>
+         * <p>The language in which you want to return the descriptions of the access control policies. Valid values:</p>
+         * <ul>
+         * <li>zh-CN (default value): Chinese</li>
+         * <li>en: English</li>
+         * <li>ja: Japanese</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is valid only for system access control policies.</p>
+         * </blockquote>
          * 
-         * *   zh-CN (default value): Chinese
-         * *   en: English
-         * *   ja: Japanese
-         * 
-         * > This parameter is valid only for system access control policies.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -85,12 +94,16 @@ public class ListControlPolicyAttachmentsForTargetRequest extends Request {
         }
 
         /**
-         * The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:
-         * <p>
+         * <p>The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:</p>
+         * <ul>
+         * <li>Root folder</li>
+         * <li>Subfolders of the Root folder</li>
+         * <li>Members</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Root folder
-         * *   Subfolders of the Root folder
-         * *   Members
+         * <strong>example:</strong>
+         * <p>fd-ZDNPiT****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

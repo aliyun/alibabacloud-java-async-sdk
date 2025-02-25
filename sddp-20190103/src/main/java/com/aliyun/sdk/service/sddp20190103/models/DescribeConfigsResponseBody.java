@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConfigsResponseBody</p>
  */
 public class DescribeConfigsResponseBody extends TeaModel {
-    @NameInMap("ConfigList")
-    private java.util.List < ConfigList> configList;
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
+    private java.util.List<ConfigList> configList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeConfigsResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
     /**
      * @return configList
      */
-    public java.util.List < ConfigList> getConfigList() {
+    public java.util.List<ConfigList> getConfigList() {
         return this.configList;
     }
 
@@ -46,19 +51,22 @@ public class DescribeConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConfigList> configList; 
+        private java.util.List<ConfigList> configList; 
         private String requestId; 
 
         /**
-         * ConfigList.
+         * <p>An array that consists of common configuration items for alerts.</p>
          */
-        public Builder configList(java.util.List < ConfigList> configList) {
+        public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +79,26 @@ public class DescribeConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigsResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ConfigList(Builder builder) {
@@ -146,7 +160,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Code.
+             * <p>The code of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -154,7 +171,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The description of the default value for the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The volume of logs of a specific type that are generated on the current day is less than 30% of the average volume of logs generated in the previous 10 days.</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -162,7 +182,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anomalous log output</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +193,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2133</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -178,7 +204,10 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the common configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder value(String value) {
                 this.value = value;

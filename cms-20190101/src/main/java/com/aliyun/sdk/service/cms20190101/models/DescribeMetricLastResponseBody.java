@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricLastResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricLastResponseBody</p>
  */
 public class DescribeMetricLastResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datapoints")
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
     private String datapoints;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMetricLastResponseBody(Builder builder) {
@@ -110,10 +110,13 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
-         * <p>
+         * <p>The HTTP status code.</p>
+         * <blockquote>
+         * <p> The status code 200 indicates that the request was successful.</p>
+         * </blockquote>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +124,10 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring data.
+         * <p>The monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;timestamp&quot;:1548777660000,&quot;userId&quot;:&quot;123456789876****&quot;,&quot;instanceId&quot;:&quot;i-abcdefgh12****&quot;,&quot;Minimum&quot;:93.1,&quot;Average&quot;:99.52,&quot;Maximum&quot;:100}]</p>
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -129,7 +135,10 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -137,7 +146,10 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -145,10 +157,11 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The time interval.
-         * <p>
+         * <p>The time interval.</p>
+         * <p>Unit: seconds.</p>
          * 
-         * Unit: seconds.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.period = period;
@@ -156,7 +169,10 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>021472A6-25E3-4094-8D00-BA4B6A5486C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,11 +180,14 @@ public class DescribeMetricLastResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

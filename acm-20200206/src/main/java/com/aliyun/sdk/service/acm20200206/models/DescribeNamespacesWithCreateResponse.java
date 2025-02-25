@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNamespacesWithCreateResponse</p>
  */
 public class DescribeNamespacesWithCreateResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private DescribeNamespacesWithCreateResponseBody body;
 
     private DescribeNamespacesWithCreateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class DescribeNamespacesWithCreateResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeNamespacesWithCreateResponseBody getBody() {
@@ -52,6 +60,8 @@ public class DescribeNamespacesWithCreateResponse extends Response {
     public interface Builder extends Response.Builder<DescribeNamespacesWithCreateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeNamespacesWithCreateResponseBody body);
 
@@ -64,6 +74,7 @@ public class DescribeNamespacesWithCreateResponse extends Response {
             extends Response.BuilderImpl<DescribeNamespacesWithCreateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeNamespacesWithCreateResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class DescribeNamespacesWithCreateResponse extends Response {
         private BuilderImpl(DescribeNamespacesWithCreateResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class DescribeNamespacesWithCreateResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

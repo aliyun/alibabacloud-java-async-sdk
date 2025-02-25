@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTableMetasResponseBody</p>
  */
 public class ListTableMetasResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TableMetas")
+    @com.aliyun.core.annotation.NameInMap("TableMetas")
     private java.util.List < TableMetas> tableMetas;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListTableMetasResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListTableMetasResponseBody extends TeaModel {
     } 
 
     public static class Fields extends TeaModel {
-        @NameInMap("IsDimensionField")
+        @com.aliyun.core.annotation.NameInMap("IsDimensionField")
         private Boolean isDimensionField;
 
-        @NameInMap("Meaning")
+        @com.aliyun.core.annotation.NameInMap("Meaning")
         private String meaning;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {
@@ -193,47 +192,51 @@ public class ListTableMetasResponseBody extends TeaModel {
 
     }
     public static class TableMetas extends TeaModel {
-        @NameInMap("CanDelete")
+        @com.aliyun.core.annotation.NameInMap("CanDelete")
         private Boolean canDelete;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Fields")
+        @com.aliyun.core.annotation.NameInMap("Fields")
         private java.util.List < Fields> fields;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtImportedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtImportedTime")
         private String gmtImportedTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("TableMetaId")
+        @com.aliyun.core.annotation.NameInMap("TableMetaId")
         private String tableMetaId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private TableMetas(Builder builder) {
             this.canDelete = builder.canDelete;
+            this.config = builder.config;
             this.description = builder.description;
             this.fields = builder.fields;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -261,6 +264,13 @@ public class ListTableMetasResponseBody extends TeaModel {
          */
         public Boolean getCanDelete() {
             return this.canDelete;
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -349,6 +359,7 @@ public class ListTableMetasResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canDelete; 
+            private String config; 
             private String description; 
             private java.util.List < Fields> fields; 
             private String gmtCreateTime; 
@@ -367,6 +378,14 @@ public class ListTableMetasResponseBody extends TeaModel {
              */
             public Builder canDelete(Boolean canDelete) {
                 this.canDelete = canDelete;
+                return this;
+            }
+
+            /**
+             * Config.
+             */
+            public Builder config(String config) {
+                this.config = config;
                 return this;
             }
 

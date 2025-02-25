@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterDataInformationResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterDataInformationResponseBody</p>
  */
 public class GetClusterDataInformationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetClusterDataInformationResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * <p>The return results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,20 +74,26 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterDataInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterDataInformationResponseBody</p>
+     */
     public static class MetaInfo extends TeaModel {
-        @NameInMap("fields")
+        @com.aliyun.core.annotation.NameInMap("fields")
         private java.util.List < String > fields;
 
-        @NameInMap("indices")
+        @com.aliyun.core.annotation.NameInMap("indices")
         private java.util.List < String > indices;
 
-        @NameInMap("mapping")
+        @com.aliyun.core.annotation.NameInMap("mapping")
         private String mapping;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
-        @NameInMap("typeName")
+        @com.aliyun.core.annotation.NameInMap("typeName")
         private java.util.List < String > typeName;
 
         private MetaInfo(Builder builder) {
@@ -146,7 +155,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             private java.util.List < String > typeName; 
 
             /**
-             * The fields in the Mapping for the index.
+             * <p>The fields in the Mapping for the index.</p>
              */
             public Builder fields(java.util.List < String > fields) {
                 this.fields = fields;
@@ -154,7 +163,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * The index list of the cluster.
+             * <p>The index list of the cluster.</p>
              */
             public Builder indices(java.util.List < String > indices) {
                 this.indices = indices;
@@ -162,7 +171,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * The Mapping configuration of the cluster.
+             * <p>The Mapping configuration of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;_doc&quot;:{&quot;properties&quot;:{&quot;user&quot;:{&quot;properties&quot;:{&quot;last&quot;:{&quot;type&quot;:&quot;text&quot;,...}}}}}}</p>
              */
             public Builder mapping(String mapping) {
                 this.mapping = mapping;
@@ -170,7 +182,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * The Settings of the cluster.
+             * <p>The Settings of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\n  &quot;index&quot;: {\n    &quot;replication&quot;: {\n}.....}}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -178,7 +193,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies the type of the index.
+             * <p>Specifies the type of the index.</p>
              */
             public Builder typeName(java.util.List < String > typeName) {
                 this.typeName = typeName;
@@ -192,11 +207,17 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClusterDataInformationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterDataInformationResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("connectable")
+        @com.aliyun.core.annotation.NameInMap("connectable")
         private Boolean connectable;
 
-        @NameInMap("metaInfo")
+        @com.aliyun.core.annotation.NameInMap("metaInfo")
         private MetaInfo metaInfo;
 
         private Result(Builder builder) {
@@ -231,7 +252,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             private MetaInfo metaInfo; 
 
             /**
-             * Whether it is connectable.
+             * <p>Whether it is connectable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder connectable(Boolean connectable) {
                 this.connectable = connectable;
@@ -239,7 +263,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the cluster.
+             * <p>The metadata of the cluster.</p>
              */
             public Builder metaInfo(MetaInfo metaInfo) {
                 this.metaInfo = metaInfo;

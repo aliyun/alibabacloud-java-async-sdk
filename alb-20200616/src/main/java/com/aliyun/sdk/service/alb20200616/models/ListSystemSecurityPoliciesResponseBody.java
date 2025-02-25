@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemSecurityPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemSecurityPoliciesResponseBody</p>
  */
 public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPolicies")
-    private java.util.List < SecurityPolicies> securityPolicies;
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
+    private java.util.List<SecurityPolicies> securityPolicies;
 
     private ListSystemSecurityPoliciesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
     /**
      * @return securityPolicies
      */
-    public java.util.List < SecurityPolicies> getSecurityPolicies() {
+    public java.util.List<SecurityPolicies> getSecurityPolicies() {
         return this.securityPolicies;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityPolicies> securityPolicies; 
+        private java.util.List<SecurityPolicies> securityPolicies; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The security policies.
+         * <p>The security policies.</p>
          */
-        public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
+        public Builder securityPolicies(java.util.List<SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
             return this;
         }
@@ -71,15 +79,21 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemSecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemSecurityPoliciesResponseBody</p>
+     */
     public static class SecurityPolicies extends TeaModel {
-        @NameInMap("Ciphers")
-        private java.util.List < String > ciphers;
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
+        private java.util.List<String> ciphers;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("TLSVersions")
-        private java.util.List < String > TLSVersions;
+        @com.aliyun.core.annotation.NameInMap("TLSVersions")
+        private java.util.List<String> TLSVersions;
 
         private SecurityPolicies(Builder builder) {
             this.ciphers = builder.ciphers;
@@ -98,7 +112,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return ciphers
          */
-        public java.util.List < String > getCiphers() {
+        public java.util.List<String> getCiphers() {
             return this.ciphers;
         }
 
@@ -112,25 +126,28 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return TLSVersions
          */
-        public java.util.List < String > getTLSVersions() {
+        public java.util.List<String> getTLSVersions() {
             return this.TLSVersions;
         }
 
         public static final class Builder {
-            private java.util.List < String > ciphers; 
+            private java.util.List<String> ciphers; 
             private String securityPolicyId; 
-            private java.util.List < String > TLSVersions; 
+            private java.util.List<String> TLSVersions; 
 
             /**
-             * The supported encryption algorithms.
+             * <p>The supported cipher suite.</p>
              */
-            public Builder ciphers(java.util.List < String > ciphers) {
+            public Builder ciphers(java.util.List<String> ciphers) {
                 this.ciphers = ciphers;
                 return this;
             }
 
             /**
-             * The ID of the security policy.
+             * <p>The ID of the security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spy-n0kn923****</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -138,9 +155,9 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The TLS versions that are supported.
+             * <p>The supported TLS protocol versions.</p>
              */
-            public Builder TLSVersions(java.util.List < String > TLSVersions) {
+            public Builder TLSVersions(java.util.List<String> TLSVersions) {
                 this.TLSVersions = TLSVersions;
                 return this;
             }

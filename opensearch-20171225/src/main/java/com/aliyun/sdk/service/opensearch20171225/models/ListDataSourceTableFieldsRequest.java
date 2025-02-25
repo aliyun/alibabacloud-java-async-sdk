@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceTableFieldsRequest</p>
  */
 public class ListDataSourceTableFieldsRequest extends Request {
-    @Path
-    @NameInMap("dataSourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("dataSourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceType;
 
-    @Query
-    @NameInMap("params")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("params")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String params;
 
-    @Query
-    @NameInMap("rawType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rawType")
     private Boolean rawType;
 
     private ListDataSourceTableFieldsRequest(Builder builder) {
@@ -118,7 +117,7 @@ public class ListDataSourceTableFieldsRequest extends Request {
         }
 
         /**
-         * Whether to return the original field type of the data source
+         * Specifies whether to return the original field types of the data source.
          */
         public Builder rawType(Boolean rawType) {
             this.putQueryParameter("rawType", rawType);

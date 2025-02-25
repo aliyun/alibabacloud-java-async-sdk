@@ -1,30 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDtsJobsRequest} extends {@link RequestModel}
  *
  * <p>StartDtsJobsRequest</p>
  */
 public class StartDtsJobsRequest extends Request {
-    @Query
-    @NameInMap("DtsJobIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dtsJobIds;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
 
     private StartDtsJobsRequest(Builder builder) {
         super(builder);
         this.dtsJobIds = builder.dtsJobIds;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -54,9 +69,25 @@ public class StartDtsJobsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<StartDtsJobsRequest, Builder> {
         private String dtsJobIds; 
         private String regionId; 
+        private String resourceGroupId; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -66,15 +97,22 @@ public class StartDtsJobsRequest extends Request {
             super(request);
             this.dtsJobIds = request.dtsJobIds;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
-         * The ID of the data migration or data synchronization task.
-         * <p>
+         * <p>The ID of the data migration or data synchronization task.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>For multiple tasks, separate them with commas (<strong>,</strong>).</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * *   For multiple tasks, separate them with commas (**,**).
-         * *   You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <strong>example:</strong>
+         * <p>l5o11f9029c****</p>
          */
         public Builder dtsJobIds(String dtsJobIds) {
             this.putQueryParameter("DtsJobIds", dtsJobIds);
@@ -83,11 +121,41 @@ public class StartDtsJobsRequest extends Request {
         }
 
         /**
-         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Resource GroupId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <ul>
+         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

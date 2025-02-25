@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordPolicyRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordPolicyRequest</p>
  */
 public class SetPasswordPolicyRequest extends Request {
-    @Query
-    @NameInMap("HardExpiry")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HardExpiry")
     private Boolean hardExpiry;
 
-    @Query
-    @NameInMap("MaxLoginAttemps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
     private Integer maxLoginAttemps;
 
-    @Query
-    @NameInMap("MaxPasswordAge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
     private Integer maxPasswordAge;
 
-    @Query
-    @NameInMap("MinimumPasswordLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPasswordLength")
     private Integer minimumPasswordLength;
 
-    @Query
-    @NameInMap("PasswordReusePrevention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
     private Integer passwordReusePrevention;
 
-    @Query
-    @NameInMap("RequireLowercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireLowercaseCharacters")
     private Boolean requireLowercaseCharacters;
 
-    @Query
-    @NameInMap("RequireNumbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireNumbers")
     private Boolean requireNumbers;
 
-    @Query
-    @NameInMap("RequireSymbols")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireSymbols")
     private Boolean requireSymbols;
 
-    @Query
-    @NameInMap("RequireUppercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireUppercaseCharacters")
     private Boolean requireUppercaseCharacters;
 
     private SetPasswordPolicyRequest(Builder builder) {
@@ -152,21 +157,29 @@ public class SetPasswordPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(SetPasswordPolicyRequest response) {
-            super(response);
-            this.hardExpiry = response.hardExpiry;
-            this.maxLoginAttemps = response.maxLoginAttemps;
-            this.maxPasswordAge = response.maxPasswordAge;
-            this.minimumPasswordLength = response.minimumPasswordLength;
-            this.passwordReusePrevention = response.passwordReusePrevention;
-            this.requireLowercaseCharacters = response.requireLowercaseCharacters;
-            this.requireNumbers = response.requireNumbers;
-            this.requireSymbols = response.requireSymbols;
-            this.requireUppercaseCharacters = response.requireUppercaseCharacters;
+        private Builder(SetPasswordPolicyRequest request) {
+            super(request);
+            this.hardExpiry = request.hardExpiry;
+            this.maxLoginAttemps = request.maxLoginAttemps;
+            this.maxPasswordAge = request.maxPasswordAge;
+            this.minimumPasswordLength = request.minimumPasswordLength;
+            this.passwordReusePrevention = request.passwordReusePrevention;
+            this.requireLowercaseCharacters = request.requireLowercaseCharacters;
+            this.requireNumbers = request.requireNumbers;
+            this.requireSymbols = request.requireSymbols;
+            this.requireUppercaseCharacters = request.requireUppercaseCharacters;
         } 
 
         /**
-         * HardExpiry.
+         * <p>Specifies whether a password will expire.</p>
+         * <p>Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>. If you leave this parameter unspecified, the default value false is used.</p>
+         * <ul>
+         * <li>If you set this parameter to <code>true</code>, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.</li>
+         * <li>If you set this parameter to <code>false</code>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hardExpiry(Boolean hardExpiry) {
             this.putQueryParameter("HardExpiry", hardExpiry);
@@ -175,7 +188,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxLoginAttemps.
+         * <p>The maximum number of permitted logon attempts within one hour. The number of logon attempts is reset to zero if a RAM user changes the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxLoginAttemps(Integer maxLoginAttemps) {
             this.putQueryParameter("MaxLoginAttemps", maxLoginAttemps);
@@ -184,7 +200,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxPasswordAge.
+         * <p>The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxPasswordAge(Integer maxPasswordAge) {
             this.putQueryParameter("MaxPasswordAge", maxPasswordAge);
@@ -193,7 +212,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MinimumPasswordLength.
+         * <p>The minimum required number of characters in a password.</p>
+         * <p>Valid values: 8 to 32. Default value: 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder minimumPasswordLength(Integer minimumPasswordLength) {
             this.putQueryParameter("MinimumPasswordLength", minimumPasswordLength);
@@ -202,7 +225,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * PasswordReusePrevention.
+         * <p>The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder passwordReusePrevention(Integer passwordReusePrevention) {
             this.putQueryParameter("PasswordReusePrevention", passwordReusePrevention);
@@ -211,7 +237,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireLowercaseCharacters.
+         * <p>Specifies whether a password must contain one or more lowercase letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
             this.putQueryParameter("RequireLowercaseCharacters", requireLowercaseCharacters);
@@ -220,7 +249,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireNumbers.
+         * <p>Specifies whether a password must contain one or more digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireNumbers(Boolean requireNumbers) {
             this.putQueryParameter("RequireNumbers", requireNumbers);
@@ -229,7 +261,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireSymbols.
+         * <p>Specifies whether a password must contain one or more special characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireSymbols(Boolean requireSymbols) {
             this.putQueryParameter("RequireSymbols", requireSymbols);
@@ -238,7 +273,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireUppercaseCharacters.
+         * <p>Specifies whether a password must contain one or more uppercase letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
             this.putQueryParameter("RequireUppercaseCharacters", requireUppercaseCharacters);

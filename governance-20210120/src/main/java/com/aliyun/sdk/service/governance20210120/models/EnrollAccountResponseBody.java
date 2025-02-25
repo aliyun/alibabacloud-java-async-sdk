@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnrollAccountResponseBody} extends {@link TeaModel}
  *
  * <p>EnrollAccountResponseBody</p>
  */
 public class EnrollAccountResponseBody extends TeaModel {
-    @NameInMap("AccountUid")
+    @com.aliyun.core.annotation.NameInMap("AccountUid")
     private Long accountUid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EnrollAccountResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class EnrollAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 注册账号ID
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>143165363236****</p>
          */
         public Builder accountUid(Long accountUid) {
             this.accountUid = accountUid;
@@ -58,7 +61,10 @@ public class EnrollAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7071E5FA-515E-5F53-B335-B87D619C6A66</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

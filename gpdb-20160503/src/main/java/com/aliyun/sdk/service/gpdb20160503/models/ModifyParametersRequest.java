@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParametersRequest} extends {@link RequestModel}
  *
  * <p>ModifyParametersRequest</p>
  */
 public class ModifyParametersRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("ForceRestartInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceRestartInstance")
     private Boolean forceRestartInstance;
 
-    @Query
-    @NameInMap("Parameters")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parameters;
 
     private ModifyParametersRequest(Builder builder) {
@@ -84,10 +89,14 @@ public class ModifyParametersRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -96,11 +105,14 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly restart the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcibly restart the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceRestartInstance(Boolean forceRestartInstance) {
             this.putQueryParameter("ForceRestartInstance", forceRestartInstance);
@@ -109,10 +121,12 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The name and value of the parameter to be modified. Specify the parameter in the `<Parameter name>:<Parameter value>` format.
-         * <p>
+         * <p>The name and value of the parameter to be modified. Specify the parameter in the <code>&lt;Parameter name&gt;:&lt;Parameter value&gt;</code> format.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/208310.html">DescribeParameters</a> operation to query the parameters that can be modified.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeParameters](~~208310~~) operation to query the parameters that can be modified.
+         * <strong>example:</strong>
+         * <p>{&quot;statement_timeout&quot;:&quot;11800010&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);

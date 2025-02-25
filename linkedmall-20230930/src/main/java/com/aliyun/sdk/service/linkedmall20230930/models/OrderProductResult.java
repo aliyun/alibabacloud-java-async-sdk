@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OrderProductResult} extends {@link TeaModel}
  *
  * <p>OrderProductResult</p>
  */
 public class OrderProductResult extends TeaModel {
-    @NameInMap("canSell")
+    @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
-    @NameInMap("features")
-    private java.util.Map < String, ? > features;
+    @com.aliyun.core.annotation.NameInMap("features")
+    private java.util.Map<String, ?> features;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("price")
+    @com.aliyun.core.annotation.NameInMap("price")
     private Long price;
 
-    @NameInMap("productId")
+    @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
-    @NameInMap("productPicUrl")
+    @com.aliyun.core.annotation.NameInMap("productPicUrl")
     private String productPicUrl;
 
-    @NameInMap("productTitle")
+    @com.aliyun.core.annotation.NameInMap("productTitle")
     private String productTitle;
 
-    @NameInMap("purchaserId")
+    @com.aliyun.core.annotation.NameInMap("purchaserId")
     private String purchaserId;
 
-    @NameInMap("quantity")
+    @com.aliyun.core.annotation.NameInMap("quantity")
     private Integer quantity;
 
-    @NameInMap("skuId")
+    @com.aliyun.core.annotation.NameInMap("skuId")
     private String skuId;
 
-    @NameInMap("skuTitle")
+    @com.aliyun.core.annotation.NameInMap("skuTitle")
     private String skuTitle;
 
     private OrderProductResult(Builder builder) {
@@ -77,7 +82,7 @@ public class OrderProductResult extends TeaModel {
     /**
      * @return features
      */
-    public java.util.Map < String, ? > getFeatures() {
+    public java.util.Map<String, ?> getFeatures() {
         return this.features;
     }
 
@@ -146,7 +151,7 @@ public class OrderProductResult extends TeaModel {
 
     public static final class Builder {
         private Boolean canSell; 
-        private java.util.Map < String, ? > features; 
+        private java.util.Map<String, ?> features; 
         private String message; 
         private Long price; 
         private String productId; 
@@ -168,7 +173,7 @@ public class OrderProductResult extends TeaModel {
         /**
          * features.
          */
-        public Builder features(java.util.Map < String, ? > features) {
+        public Builder features(java.util.Map<String, ?> features) {
             this.features = features;
             return this;
         }

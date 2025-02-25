@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAddressBookRequest} extends {@link RequestModel}
  *
  * <p>DescribeAddressBookRequest</p>
  */
 public class DescribeAddressBookRequest extends Request {
-    @Query
-    @NameInMap("ContainPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainPort")
     private String containPort;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @Query
-    @NameInMap("GroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
     private String groupType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
     private DescribeAddressBookRequest(Builder builder) {
@@ -124,7 +129,10 @@ public class DescribeAddressBookRequest extends Request {
         } 
 
         /**
-         * The port that is included in the address book. This parameter takes effect only when the **GroupType** parameter is set to **port**.
+         * <p>The port that is included in the address book. This parameter takes effect only when the <strong>GroupType</strong> parameter is set to <strong>port</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder containPort(String containPort) {
             this.putQueryParameter("ContainPort", containPort);
@@ -133,10 +141,11 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -145,17 +154,22 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * The type of the address book. Valid values:
-         * <p>
+         * <p>The type of the address book. Valid values:</p>
+         * <ul>
+         * <li><strong>ip</strong>: IP address book</li>
+         * <li><strong>domain</strong>: domain address book</li>
+         * <li><strong>port</strong>: port address book</li>
+         * <li><strong>tag</strong>: Elastic Compute Service (ECS) tag-based address book</li>
+         * <li><strong>allCloud</strong>: cloud service address book</li>
+         * <li><strong>threat</strong>: threat intelligence address book</li>
+         * <li><strong>ipv6</strong>: IPv6 address book<blockquote>
+         * <p> If you do not specify a type, the domain address books and ECS tag-based address books are queried.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * * **ip**: IP address book
-         * * **domain**: domain address book
-         * * **port**: port address book
-         * * **tag**: Elastic Compute Service (ECS) tag-based address book
-         * * **allCloud**: cloud service address book
-         * * **threat**: threat intelligence address book
-         * 
-         * > If you do not specify a type, the domain address books and ECS tag-based address books are queried.
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -164,11 +178,14 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * The language of the content within the request. Valid values:
-         * <p>
+         * <p>The language of the content within the request. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * * **zh**: Chinese (default)
-         * * **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -177,10 +194,11 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Default value: 10. Maximum value: 50.</p>
          * 
-         * Default value: 10. Maximum value: 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,7 +207,10 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * The query condition that is used to search for the address book.
+         * <p>The query condition that is used to search for the address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);

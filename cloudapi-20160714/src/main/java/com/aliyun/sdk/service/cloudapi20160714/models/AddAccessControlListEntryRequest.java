@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAccessControlListEntryRequest} extends {@link RequestModel}
  *
  * <p>AddAccessControlListEntryRequest</p>
  */
 public class AddAccessControlListEntryRequest extends Request {
-    @Query
-    @NameInMap("AclEntrys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclEntrys")
     private String aclEntrys;
 
-    @Query
-    @NameInMap("AclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private AddAccessControlListEntryRequest(Builder builder) {
@@ -83,7 +88,17 @@ public class AddAccessControlListEntryRequest extends Request {
         } 
 
         /**
-         * AclEntrys.
+         * <p>The ACL settings.</p>
+         * <ul>
+         * <li>entry: the entries that you want to add to the ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).</li>
+         * <li>comment: the description of the ACL.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can add at most 50 IP addresses or CIDR blocks to an ACL in each call. If the IP address or CIDR block that you want to add to an ACL already exists, the IP address or CIDR block is not added. The entries that you add must be CIDR blocks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;entry&quot;: &quot;192.168.1.0/24&quot;, &quot;comment&quot;: &quot;test&quot;}]</p>
          */
         public Builder aclEntrys(String aclEntrys) {
             this.putQueryParameter("AclEntrys", aclEntrys);
@@ -92,7 +107,11 @@ public class AddAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * AclId.
+         * <p>The ID of the access control list (ACL).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1ohqkonqybecf4llbrc</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

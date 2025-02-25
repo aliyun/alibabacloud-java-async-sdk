@@ -1,129 +1,135 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiskRequest} extends {@link RequestModel}
  *
  * <p>CreateDiskRequest</p>
  */
 public class CreateDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AdvancedFeatures")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdvancedFeatures")
     private String advancedFeatures;
 
-    @Query
-    @NameInMap("Arn")
-    private java.util.List < Arn> arn;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
+    private java.util.List<Arn> arn;
 
-    @Query
-    @NameInMap("BurstingEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
     private Boolean burstingEnabled;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DiskCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskCategory")
     private String diskCategory;
 
-    @Query
-    @NameInMap("DiskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskName")
     private String diskName;
 
-    @Query
-    @NameInMap("EncryptAlgorithm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
     private String encryptAlgorithm;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("MultiAttach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAttach")
     private String multiAttach;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
     private String performanceLevel;
 
-    @Query
-    @NameInMap("ProvisionedIops")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
     private Long provisionedIops;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Size")
-    @Validation(maximum = 65536, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
+    @com.aliyun.core.annotation.Validation(maximum = 65536, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Query
-    @NameInMap("StorageClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageClusterId")
     private String storageClusterId;
 
-    @Query
-    @NameInMap("StorageSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSetId")
     private String storageSetId;
 
-    @Query
-    @NameInMap("StorageSetPartitionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
     private Integer storageSetPartitionNumber;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateDiskRequest(Builder builder) {
@@ -188,7 +194,7 @@ public class CreateDiskRequest extends Request {
     /**
      * @return arn
      */
-    public java.util.List < Arn> getArn() {
+    public java.util.List<Arn> getArn() {
         return this.arn;
     }
 
@@ -356,7 +362,7 @@ public class CreateDiskRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -370,7 +376,7 @@ public class CreateDiskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDiskRequest, Builder> {
         private String sourceRegionId; 
         private String advancedFeatures; 
-        private java.util.List < Arn> arn; 
+        private java.util.List<Arn> arn; 
         private Boolean burstingEnabled; 
         private String clientToken; 
         private String description; 
@@ -394,7 +400,7 @@ public class CreateDiskRequest extends Request {
         private String storageClusterId; 
         private String storageSetId; 
         private Integer storageSetPartitionNumber; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -443,7 +449,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder advancedFeatures(String advancedFeatures) {
             this.putQueryParameter("AdvancedFeatures", advancedFeatures);
@@ -452,16 +461,28 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          */
-        public Builder arn(java.util.List < Arn> arn) {
+        public Builder arn(java.util.List<Arn> arn) {
             this.putQueryParameter("Arn", arn);
             this.arn = arn;
             return this;
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -470,7 +491,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -479,10 +503,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The description of the disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-         * <p>
+         * <p>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>This parameter is left empty by default.</p>
          * 
-         * This parameter is left empty by default.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -491,15 +516,22 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The category of the disk. Valid values:
-         * <p>
+         * <p>The category of the data disk. Valid values:</p>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * <li>cloud_essd_entry: ESSD Entry disk</li>
+         * <li>cloud_regional_disk_auto: Regional ESSD</li>
+         * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
+         * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
+         * </ul>
+         * <p>Default value: cloud.</p>
          * 
-         * *   cloud: basic disk
-         * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: standard SSD
-         * *   cloud_essd: ESSD
-         * 
-         * Default value: cloud.
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -508,10 +540,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The disk name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * <p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is left empty by default.</p>
          * 
-         * This parameter is left empty by default.
+         * <strong>example:</strong>
+         * <p>testDiskName</p>
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -520,7 +553,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder encryptAlgorithm(String encryptAlgorithm) {
             this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
@@ -529,13 +565,15 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the disk. Valid values:
-         * <p>
+         * <p>Specifies whether to encrypt the disk. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -544,13 +582,15 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the created subscription disk is automatically attached.
-         * <p>
+         * <p>The ID of the subscription instance to which to attach the subscription disk.</p>
+         * <ul>
+         * <li>If you specify an instance ID, the following parameters are ignored: ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId.</li>
+         * <li>You cannot specify both ZoneId and InstanceId in a request.</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that a pay-as-you-go disk is created in the region and zone specified by RegionId and ZoneId.</p>
          * 
-         * *   After you specify the instance ID, ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId are ignored.
-         * *   You cannot specify ZoneId and InstanceId at the same time.
-         * 
-         * This parameter is empty by default. This indicates that a pay-as-you-go disk is created. The RegionId and ZoneId parameters specify where the disk resides.
+         * <strong>example:</strong>
+         * <p>i-bp18pnlg1ds9rky4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -559,7 +599,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key that you want to use for the disk.
+         * <p>The ID of the Key Management Service (KMS) key that is used for the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -568,15 +611,18 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the multi-attach feature for the disk. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the multi-attach feature for the disk. Valid values:</p>
+         * <ul>
+         * <li>Disabled</li>
+         * <li>Enabled Set the value to <code>Enabled</code> only for ESSDs.</li>
+         * </ul>
+         * <p>Default value: Disabled.</p>
+         * <blockquote>
+         * <p> Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When <code>MultiAttach</code> is set to Enabled, you cannot specify <code>InstanceId</code>. You can call the <a href="https://help.aliyun.com/document_detail/25515.html">AttachDisk</a> operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.</p>
+         * </blockquote>
          * 
-         * *   Disabled.
-         * *   Enabled. Set the value to `Enabled` only for ESSDs.
-         * 
-         * Default value: Disabled.
-         * 
-         * > Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When `MultiAttach` is set to Enabled, you cannot specify `InstanceId`. You can call the [AttachDisk](~~25515~~) operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder multiAttach(String multiAttach) {
             this.putQueryParameter("MultiAttach", multiAttach);
@@ -603,17 +649,18 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The performance level of the ESSD. Valid values:
-         * <p>
+         * <p>The performance level of the disk if the disk is an ESSD. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>Default value: PL1.</p>
+         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * 
-         * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-         * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-         * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-         * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-         * 
-         * Default value: PL1.
-         * 
-         * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -622,7 +669,14 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+         * <blockquote>
+         * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>40000</p>
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -631,7 +685,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region in which to create the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -640,7 +698,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the disk.
+         * <p>The ID of the resource group to which to add the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -667,26 +728,41 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The size of the disk. Unit: GiB. This parameter is required. Valid values:
-         * <p>
+         * <p>The size of the data disk. Unit: GiB. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li><p>Valid values when DiskCategory is set to cloud: 5 to 2000.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to cloud_efficiency: 20 to 32768.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to cloud_ssd: 20 to 32768.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to cloud_essd: vary based on the <code>PerformanceLevel</code> value.</p>
+         * <ul>
+         * <li>Valid values when PerformanceLevel is set to PL0: 1 to 65536.</li>
+         * <li>Valid values when PerformanceLevel is set to PL1: 20 to 65536.</li>
+         * <li>Valid values when PerformanceLevel is set to PL2: 461 to 65536.</li>
+         * <li>Valid values when PerformanceLevel is set to PL3: 1261 to 65536.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to cloud_auto: 1 to 65536.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to cloud_essd_entry: 10 to 32768.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to cloud_regional_disk_auto: 10 to 65536.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to elastic_ephemeral_disk_standard: 64 to 8192.</p>
+         * </li>
+         * <li><p>Valid values when DiskCategory is set to elastic_ephemeral_disk_premium: 64 to 8192.</p>
+         * </li>
+         * </ul>
+         * <p>If you specify <code>SnapshotId</code>, the following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
+         * <ul>
+         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the size of the snapshot.</li>
+         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
+         * </ul>
          * 
-         * *   Valid values when DiskCategory is set to cloud: 5 to 2,000
-         * 
-         * *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32,768
-         * 
-         * *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768
-         * 
-         * *   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.
-         * 
-         *     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768
-         *     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768
-         *     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768
-         *     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768
-         * 
-         * If the `SnapshotId` parameter is specified, the following limits apply to the `SnapshotId` and `Size` parameters:
-         * 
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -695,13 +771,16 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
-         * <p>
+         * <p>The ID of the snapshot to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.</p>
+         * <p>The following limits apply to <code>SnapshotId</code> and <code>Size</code>:</p>
+         * <ul>
+         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the specified snapshot size.</li>
+         * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
+         * <li>You cannot create elastic ephemeral disks from snapshots.</li>
+         * </ul>
          * 
-         * The following limits apply to the `SnapshotId` and `Size` parameters:
-         * 
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -710,10 +789,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
-         * <p>
+         * <p>The ID of the dedicated block storage cluster in which to create the disk. To create a disk in a specific dedicated block storage cluster, you must specify this parameter.</p>
+         * <blockquote>
+         * <p> You can specify the storage set-related parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) or the dedicated block storage cluster-related parameter (<code>StorageClusterId</code>), but not both. If you specify a storage set-related parameter and a dedicated block storage cluster-related parameter in a request, the request fails.</p>
+         * </blockquote>
          * 
-         * > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time.
+         * <strong>example:</strong>
+         * <p>dbsc-j5e1sf2vaf5he8m2****</p>
          */
         public Builder storageClusterId(String storageClusterId) {
             this.putQueryParameter("StorageClusterId", storageClusterId);
@@ -722,10 +804,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the storage set.
-         * <p>
+         * <p>The ID of the storage set.</p>
+         * <blockquote>
+         * <p>You cannot specify storage set-related parameters (<code>StorageSetId</code> and <code>StorageSetPartitionNumber</code>) and the dedicated block storage cluster-related parameter (<code>StorageClusterId</code>) at the same time. Otherwise, the operation cannot be called.</p>
+         * </blockquote>
          * 
-         * > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time.
+         * <strong>example:</strong>
+         * <p>ss-bp67acfmxazb4p****</p>
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -734,10 +819,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.
-         * <p>
+         * <p>The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a>operation.</p>
+         * <p>Default value: 2.</p>
          * 
-         * Default value: 2.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.putQueryParameter("StorageSetPartitionNumber", storageSetPartitionNumber);
@@ -746,20 +832,26 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The tags to add to the disk.
+         * <p>The tags to add to the disk.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the zone in which to create the pay-as-you-go disk.
-         * <p>
+         * <p>The ID of the zone in which to create the pay-as-you-go disk.</p>
+         * <ul>
+         * <li>If you do not specify InstanceId, you must specify ZoneId.</li>
+         * <li>You cannot specify both ZoneId and InstanceId in the same request.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You do not need to specify this parameter if you set DiskCategory to <code>cloud_regional_disk_auto</code> to create a Regional ESSD.</p>
+         * </blockquote>
          * 
-         * *   If you do not specify InstanceId, you must specify ZoneId.
-         * *   You cannot specify ZoneId and InstanceId at the same time.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -774,14 +866,20 @@ public class CreateDiskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDiskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDiskRequest</p>
+     */
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -825,7 +923,12 @@ public class CreateDiskRequest extends Request {
             private String rolearn; 
 
             /**
-             * This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000000</p>
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -833,7 +936,12 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -841,7 +949,12 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -855,11 +968,17 @@ public class CreateDiskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateDiskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDiskRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -894,7 +1013,10 @@ public class CreateDiskRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <p>The key of tag N to add to the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -902,7 +1024,10 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+             * <p>The value of tag N to add to the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

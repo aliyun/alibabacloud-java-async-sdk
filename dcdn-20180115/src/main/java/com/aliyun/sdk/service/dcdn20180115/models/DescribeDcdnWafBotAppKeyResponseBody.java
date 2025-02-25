@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDcdnWafBotAppKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDcdnWafBotAppKeyResponseBody</p>
  */
 public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafBotAppKeyResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppKey.
+         * <p>The SDK authentication key for the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>examp1eapp_key_xxxiuMWTX4Gw</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -58,7 +61,10 @@ public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2542B96-B535-5BF9-8EEE-1CF11B20CCA8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

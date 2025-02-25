@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dypnsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySendDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySendDetailsResponseBody</p>
  */
 public class QuerySendDetailsResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private java.util.List < Model> model;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QuerySendDetailsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,7 +109,11 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <p>If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.419277.0.i11">Error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +132,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * <p>The returned data.</p>
          */
         public Builder model(java.util.List < Model> model) {
             this.model = model;
@@ -130,7 +140,14 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +155,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -151,29 +171,35 @@ public class QuerySendDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySendDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySendDetailsResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ErrCode")
+        @com.aliyun.core.annotation.NameInMap("ErrCode")
         private String errCode;
 
-        @NameInMap("OutId")
+        @com.aliyun.core.annotation.NameInMap("OutId")
         private String outId;
 
-        @NameInMap("PhoneNum")
+        @com.aliyun.core.annotation.NameInMap("PhoneNum")
         private String phoneNum;
 
-        @NameInMap("ReceiveDate")
+        @com.aliyun.core.annotation.NameInMap("ReceiveDate")
         private String receiveDate;
 
-        @NameInMap("SendDate")
+        @com.aliyun.core.annotation.NameInMap("SendDate")
         private String sendDate;
 
-        @NameInMap("SendStatus")
+        @com.aliyun.core.annotation.NameInMap("SendStatus")
         private Long sendStatus;
 
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
         private Model(Builder builder) {
@@ -262,7 +288,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             private String templateCode; 
 
             /**
-             * Content.
+             * <p>The content of the text message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203160</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -270,7 +299,14 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrCode.
+             * <p>The status code returned by the carrier.</p>
+             * <ul>
+             * <li>If the text message was delivered, &quot;DELIVERED&quot; is returned.</li>
+             * <li>If the text message failed to be sent, see <a href="https://help.aliyun.com/document_detail/101347.html?spm=a2c4g.419277.0.i8">Error codes</a> for more information.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DELIVERED</p>
              */
             public Builder errCode(String errCode) {
                 this.errCode = errCode;
@@ -278,7 +314,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * OutId.
+             * <p>The extension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12131231</p>
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -286,7 +325,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNum.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder phoneNum(String phoneNum) {
                 this.phoneNum = phoneNum;
@@ -294,7 +336,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiveDate.
+             * <p>The date and time when the text message was received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-08 16:44:13</p>
              */
             public Builder receiveDate(String receiveDate) {
                 this.receiveDate = receiveDate;
@@ -302,7 +347,11 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SendDate.
+             * <p>The date when the text message was sent. You can query text messages that were sent within the last 30 days.</p>
+             * <p>The date is in the yyyyMMdd format. Example: 20181225.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-08 16:44:13</p>
              */
             public Builder sendDate(String sendDate) {
                 this.sendDate = sendDate;
@@ -310,7 +359,15 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SendStatus.
+             * <p>The delivery status of the text message.</p>
+             * <ul>
+             * <li>1: A delivery receipt is to be sent.</li>
+             * <li>2: The text message failed to be sent.</li>
+             * <li>3: The text message was sent.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sendStatus(Long sendStatus) {
                 this.sendStatus = sendStatus;
@@ -318,7 +375,14 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * <p>The code of the text message template.</p>
+             * <p>Log on to the SMS console. In the left-side navigation pane, click <strong>Go China</strong> or <strong>Go Globe</strong>. You can view the text message template code in the <strong>Template Code</strong> column on the <strong>Message Templates</strong> tab.</p>
+             * <blockquote>
+             * <p> The text message templates must be created on the Go Globe page and approved.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS_12231****</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;

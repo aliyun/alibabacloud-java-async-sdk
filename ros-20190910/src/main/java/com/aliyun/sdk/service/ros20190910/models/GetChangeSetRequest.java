@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetChangeSetRequest} extends {@link RequestModel}
  *
  * <p>GetChangeSetRequest</p>
  */
 public class GetChangeSetRequest extends Request {
-    @Query
-    @NameInMap("ChangeSetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeSetId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ShowTemplate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowTemplate")
     private Boolean showTemplate;
 
     private GetChangeSetRequest(Builder builder) {
@@ -84,7 +84,11 @@ public class GetChangeSetRequest extends Request {
         } 
 
         /**
-         * The ID of the change set.
+         * <p>The ID of the change set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4c11658d-bd47-4dd0-ba64-727edc62****</p>
          */
         public Builder changeSetId(String changeSetId) {
             this.putQueryParameter("ChangeSetId", changeSetId);
@@ -93,7 +97,11 @@ public class GetChangeSetRequest extends Request {
         }
 
         /**
-         * The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * <p>The region ID of the change set. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,11 +110,14 @@ public class GetChangeSetRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the template. Valid values:
-         * <p>
+         * <p>Specifies whether to obtain the template. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showTemplate(Boolean showTemplate) {
             this.putQueryParameter("ShowTemplate", showTemplate);

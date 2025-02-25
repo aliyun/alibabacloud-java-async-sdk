@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomRoutingEndpointTrafficPoliciesResponseBody</p>
  */
 public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private java.util.List < Policies> policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListCustomRoutingEndpointTrafficPoliciesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -193,13 +192,13 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -270,7 +269,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
              * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
              * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
              * 
-             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
+             * >  This parameter is returned only if the value of **Action** is **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -281,8 +280,8 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
              * Indicates whether the specified actions are managed. Valid values:
              * <p>
              * 
-             * *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
-             * *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
+             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -297,34 +296,34 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PortRanges> portRanges;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceManagedInfos")
+        @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
         private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
         private Policies(Builder builder) {
@@ -431,7 +430,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
 
             /**
-             * The ID of the GA instance with which the endpoint is associated.
+             * The ID of the GA instance to which the endpoint belongs.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -439,7 +438,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The IP address of the traffic destination.
+             * The IP addresses of the traffic policies.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -455,7 +454,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the endpoint to which the traffic destination belongs.
+             * The ID of the endpoint to which the traffic policy belongs.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -463,7 +462,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the custom routing listener with which the endpoint is associated.
+             * The ID of the custom routing listener to which the endpoint belongs.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -471,7 +470,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The traffic policy ID.
+             * The ID of the traffic policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -487,10 +486,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the service that manages the GA instance.
+             * The ID of the service that manages the instance.
              * <p>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+             * >  This parameter is returned only if the value of **ServiceManaged** is **true**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -498,7 +497,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * Indicates whether the GA instance is managed. Valid values:
+             * Indicates whether the instance is managed. Valid values:
              * <p>
              * 
              * *   **true**: The GA instance is managed.
@@ -510,12 +509,11 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The actions that you can perform on the managed instance.
+             * The actions that users can perform on the managed instance.
              * <p>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-             * 
-             * *   You can perform only specific actions on a managed instance.
+             * > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
+             * >*   Users can perform only specific actions on a managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;

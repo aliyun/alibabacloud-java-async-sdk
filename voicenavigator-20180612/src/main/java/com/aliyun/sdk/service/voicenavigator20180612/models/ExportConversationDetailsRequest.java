@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportConversationDetailsRequest} extends {@link RequestModel}
  *
  * <p>ExportConversationDetailsRequest</p>
  */
 public class ExportConversationDetailsRequest extends Request {
-    @Query
-    @NameInMap("BeginTimeLeftRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTimeLeftRange")
     private Long beginTimeLeftRange;
 
-    @Query
-    @NameInMap("BeginTimeRightRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTimeRightRange")
     private Long beginTimeRightRange;
 
-    @Query
-    @NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
     private String callingNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Options")
-    private java.util.List < String > options;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private java.util.List<String> options;
 
-    @Query
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Integer result;
 
-    @Query
-    @NameInMap("RoundsLeftRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoundsLeftRange")
     private Integer roundsLeftRange;
 
-    @Query
-    @NameInMap("RoundsRightRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoundsRightRange")
     private Integer roundsRightRange;
 
     private ExportConversationDetailsRequest(Builder builder) {
@@ -101,7 +106,7 @@ public class ExportConversationDetailsRequest extends Request {
     /**
      * @return options
      */
-    public java.util.List < String > getOptions() {
+    public java.util.List<String> getOptions() {
         return this.options;
     }
 
@@ -131,7 +136,7 @@ public class ExportConversationDetailsRequest extends Request {
         private Long beginTimeRightRange; 
         private String callingNumber; 
         private String instanceId; 
-        private java.util.List < String > options; 
+        private java.util.List<String> options; 
         private Integer result; 
         private Integer roundsLeftRange; 
         private Integer roundsRightRange; 
@@ -180,7 +185,10 @@ public class ExportConversationDetailsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c01a99f-1b72-4f75-a8bd-3875766bd19d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +199,7 @@ public class ExportConversationDetailsRequest extends Request {
         /**
          * Options.
          */
-        public Builder options(java.util.List < String > options) {
+        public Builder options(java.util.List<String> options) {
             this.putQueryParameter("Options", options);
             this.options = options;
             return this;

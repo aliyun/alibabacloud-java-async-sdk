@@ -1,61 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClusterSummary} extends {@link TeaModel}
  *
  * <p>ClusterSummary</p>
  */
 public class ClusterSummary extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("ClusterState")
+    @com.aliyun.core.annotation.NameInMap("ClusterState")
     private String clusterState;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("EmrDefaultRole")
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.NameInMap("EmrDefaultRole")
     private String emrDefaultRole;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("ReadyTime")
+    @com.aliyun.core.annotation.NameInMap("ReadyTime")
     private Long readyTime;
 
-    @NameInMap("ReleaseVersion")
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
     private String releaseVersion;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("StateChangeReason")
+    @com.aliyun.core.annotation.NameInMap("StateChangeReason")
     private ClusterStateChangeReason stateChangeReason;
 
-    @NameInMap("Status")
-    private String status;
-
-    @NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tag> tags;
 
     private ClusterSummary(Builder builder) {
         this.clusterId = builder.clusterId;
@@ -63,6 +71,8 @@ public class ClusterSummary extends TeaModel {
         this.clusterState = builder.clusterState;
         this.clusterType = builder.clusterType;
         this.createTime = builder.createTime;
+        this.deletionProtection = builder.deletionProtection;
+        this.description = builder.description;
         this.emrDefaultRole = builder.emrDefaultRole;
         this.endTime = builder.endTime;
         this.expireTime = builder.expireTime;
@@ -71,7 +81,6 @@ public class ClusterSummary extends TeaModel {
         this.releaseVersion = builder.releaseVersion;
         this.resourceGroupId = builder.resourceGroupId;
         this.stateChangeReason = builder.stateChangeReason;
-        this.status = builder.status;
         this.tags = builder.tags;
     }
 
@@ -116,6 +125,20 @@ public class ClusterSummary extends TeaModel {
      */
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -175,16 +198,9 @@ public class ClusterSummary extends TeaModel {
     }
 
     /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -194,6 +210,8 @@ public class ClusterSummary extends TeaModel {
         private String clusterState; 
         private String clusterType; 
         private Long createTime; 
+        private Boolean deletionProtection; 
+        private String description; 
         private String emrDefaultRole; 
         private Long endTime; 
         private Long expireTime; 
@@ -202,11 +220,13 @@ public class ClusterSummary extends TeaModel {
         private String releaseVersion; 
         private String resourceGroupId; 
         private ClusterStateChangeReason stateChangeReason; 
-        private String status; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         /**
-         * 集群ID。
+         * <p>集群ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -214,7 +234,10 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 集群名称。
+         * <p>集群名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emrtest</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -222,16 +245,20 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 集群状态。取值范围：
-         * <p>
-         * - STARTING：启动中。
-         * - START_FAILED：启动失败。
-         * - BOOTSTRAPPING：引导操作初始化。
-         * - RUNNING：运行中。
-         * - TERMINATING：终止中。
-         * - TERMINATED：已终止。
-         * - TERMINATED_WITH_ERRORS：发生异常导致终止。
-         * - TERMINATE_FAILED：终止失败。
+         * <p>集群状态。取值范围：</p>
+         * <ul>
+         * <li>STARTING：启动中。</li>
+         * <li>START_FAILED：启动失败。</li>
+         * <li>BOOTSTRAPPING：引导操作初始化。</li>
+         * <li>RUNNING：运行中。</li>
+         * <li>TERMINATING：终止中。</li>
+         * <li>TERMINATED：已终止。</li>
+         * <li>TERMINATED_WITH_ERRORS：发生异常导致终止。</li>
+         * <li>TERMINATE_FAILED：终止失败。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder clusterState(String clusterState) {
             this.clusterState = clusterState;
@@ -239,12 +266,16 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 集群类型。取值范围：
-         * <p>
-         * - DATALAKE：新版数据湖。
-         * - OLAP：数据分析。
-         * - DATAFLOW：实时数据流。
-         * - DATASERVING：数据服务。
+         * <p>集群类型。取值范围：</p>
+         * <ul>
+         * <li>DATALAKE：新版数据湖。</li>
+         * <li>OLAP：数据分析。</li>
+         * <li>DATAFLOW：实时数据流。</li>
+         * <li>DATASERVING：数据服务。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -252,7 +283,10 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 创建时间。
+         * <p>创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -260,7 +294,23 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * EMR服务角色。
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>EMR服务角色。</p>
          */
         public Builder emrDefaultRole(String emrDefaultRole) {
             this.emrDefaultRole = emrDefaultRole;
@@ -268,7 +318,10 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 删除时间。
+         * <p>删除时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -276,7 +329,10 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 过期时间。
+         * <p>过期时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -284,10 +340,14 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 付费类型。取值范围：
-         * <p>
-         * - PayAsYouGo：后付费。
-         * - Subscription：预付费。
+         * <p>付费类型。取值范围：</p>
+         * <ul>
+         * <li>PayAsYouGo：后付费。</li>
+         * <li>Subscription：预付费。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -295,7 +355,10 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 可用时间。
+         * <p>可用时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592837465784</p>
          */
         public Builder readyTime(Long readyTime) {
             this.readyTime = readyTime;
@@ -303,7 +366,10 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * EMR发行版。
+         * <p>EMR发行版。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.8.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = releaseVersion;
@@ -311,7 +377,10 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 资源组ID。
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzabjyop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -319,7 +388,7 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 失败原因。
+         * <p>失败原因。</p>
          */
         public Builder stateChangeReason(ClusterStateChangeReason stateChangeReason) {
             this.stateChangeReason = stateChangeReason;
@@ -327,26 +396,9 @@ public class ClusterSummary extends TeaModel {
         }
 
         /**
-         * 集群状态。取值范围：
-         * <p>
-         * - STARTING：启动中。
-         * - START_FAILED：启动失败。
-         * - BOOTSTRAPPING：引导操作初始化。
-         * - RUNNING：运行中。
-         * - TERMINATING：终止中。
-         * - TERMINATED：已终止。
-         * - TERMINATED_WITH_ERRORS：发生异常导致终止。
-         * - TERMINATE_FAILED：终止失败。
+         * <p>标签列表。</p>
          */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * 标签列表。
-         */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }

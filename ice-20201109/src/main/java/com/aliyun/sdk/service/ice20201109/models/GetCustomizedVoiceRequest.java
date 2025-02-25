@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomizedVoiceRequest} extends {@link RequestModel}
  *
  * <p>GetCustomizedVoiceRequest</p>
  */
 public class GetCustomizedVoiceRequest extends Request {
-    @Query
-    @NameInMap("VoiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceId")
     private String voiceId;
 
     private GetCustomizedVoiceRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetCustomizedVoiceRequest extends Request {
         } 
 
         /**
-         * VoiceId.
+         * <p>The voice ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
          */
         public Builder voiceId(String voiceId) {
             this.putQueryParameter("VoiceId", voiceId);

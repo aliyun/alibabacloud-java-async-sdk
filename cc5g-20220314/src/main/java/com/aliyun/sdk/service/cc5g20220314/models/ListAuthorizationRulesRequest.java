@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAuthorizationRulesRequest</p>
  */
 public class ListAuthorizationRulesRequest extends Request {
-    @Query
-    @NameInMap("AuthorizationRuleIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizationRuleIds")
     private java.util.List < String > authorizationRuleIds;
 
-    @Query
-    @NameInMap("Destination")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Destination")
     private String destination;
 
-    @Query
-    @NameInMap("DestinationPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationPort")
     private String destinationPort;
 
-    @Query
-    @NameInMap("DestinationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationType")
     private String destinationType;
 
-    @Query
-    @NameInMap("Dns")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dns")
     private Boolean dns;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("Names")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Names")
     private java.util.List < String > names;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("Statuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statuses")
     private java.util.List < String > statuses;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("WirelessCloudConnectorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wirelessCloudConnectorId;
 
     private ListAuthorizationRulesRequest(Builder builder) {

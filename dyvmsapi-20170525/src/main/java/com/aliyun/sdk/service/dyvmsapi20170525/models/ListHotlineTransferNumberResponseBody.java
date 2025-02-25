@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotlineTransferNumberResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotlineTransferNumberResponseBody</p>
  */
 public class ListHotlineTransferNumberResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListHotlineTransferNumberResponseBody(Builder builder) {
@@ -74,7 +74,14 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/112502.html">API error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +89,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The information about the registered phone number.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +97,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +108,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6086693B-2250-17CE-A41F-06259AB6DB1B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,23 +124,29 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotlineTransferNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotlineTransferNumberResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("HotlineNumber")
+        @com.aliyun.core.annotation.NameInMap("HotlineNumber")
         private String hotlineNumber;
 
-        @NameInMap("IdentityCard")
+        @com.aliyun.core.annotation.NameInMap("IdentityCard")
         private String identityCard;
 
-        @NameInMap("NumberOwnerName")
+        @com.aliyun.core.annotation.NameInMap("NumberOwnerName")
         private String numberOwnerName;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("QualificationId")
+        @com.aliyun.core.annotation.NameInMap("QualificationId")
         private String qualificationId;
 
-        @NameInMap("ResUniqueCode")
+        @com.aliyun.core.annotation.NameInMap("ResUniqueCode")
         private String resUniqueCode;
 
         private Values(Builder builder) {
@@ -198,7 +217,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             private String resUniqueCode; 
 
             /**
-             * HotlineNumber.
+             * <p>The China 400 number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400****</p>
              */
             public Builder hotlineNumber(String hotlineNumber) {
                 this.hotlineNumber = hotlineNumber;
@@ -206,7 +228,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityCard.
+             * <p>The ID card number of the number owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500***4119</p>
              */
             public Builder identityCard(String identityCard) {
                 this.identityCard = identityCard;
@@ -214,7 +239,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * NumberOwnerName.
+             * <p>The real name of the number owner or the company name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A***</p>
              */
             public Builder numberOwnerName(String numberOwnerName) {
                 this.numberOwnerName = numberOwnerName;
@@ -222,7 +250,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The registered phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1580000****</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -230,7 +261,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * QualificationId.
+             * <p>The qualification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100***</p>
              */
             public Builder qualificationId(String qualificationId) {
                 this.qualificationId = qualificationId;
@@ -238,7 +272,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * ResUniqueCode.
+             * <p>The resource code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1***</p>
              */
             public Builder resUniqueCode(String resUniqueCode) {
                 this.resUniqueCode = resUniqueCode;
@@ -252,17 +289,23 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotlineTransferNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotlineTransferNumberResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < Values> values;
 
         private Data(Builder builder) {
@@ -315,7 +358,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * PageNo.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -323,7 +369,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -331,7 +380,10 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -339,7 +391,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The phone numbers.</p>
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

@@ -1,51 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDesktopSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyDesktopSpecRequest</p>
  */
 public class ModifyDesktopSpecRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
-    @Query
-    @NameInMap("DesktopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopType;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RootDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
+    private java.util.List<ResourceSpecs> resourceSpecs;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer rootDiskSizeGib;
 
-    @Query
-    @NameInMap("UserDiskPerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskPerformanceLevel")
     private String userDiskPerformanceLevel;
 
-    @Query
-    @NameInMap("UserDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 65536)
     private Integer userDiskSizeGib;
 
     private ModifyDesktopSpecRequest(Builder builder) {
@@ -55,6 +68,8 @@ public class ModifyDesktopSpecRequest extends Request {
         this.desktopType = builder.desktopType;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.resourceSpecs = builder.resourceSpecs;
+        this.resourceType = builder.resourceType;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
         this.userDiskPerformanceLevel = builder.userDiskPerformanceLevel;
         this.userDiskSizeGib = builder.userDiskSizeGib;
@@ -109,6 +124,20 @@ public class ModifyDesktopSpecRequest extends Request {
     }
 
     /**
+     * @return resourceSpecs
+     */
+    public java.util.List<ResourceSpecs> getResourceSpecs() {
+        return this.resourceSpecs;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return rootDiskSizeGib
      */
     public Integer getRootDiskSizeGib() {
@@ -135,6 +164,8 @@ public class ModifyDesktopSpecRequest extends Request {
         private String desktopType; 
         private String promotionId; 
         private String regionId; 
+        private java.util.List<ResourceSpecs> resourceSpecs; 
+        private String resourceType; 
         private Integer rootDiskSizeGib; 
         private String userDiskPerformanceLevel; 
         private Integer userDiskSizeGib; 
@@ -150,19 +181,36 @@ public class ModifyDesktopSpecRequest extends Request {
             this.desktopType = request.desktopType;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.resourceSpecs = request.resourceSpecs;
+            this.resourceType = request.resourceType;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
             this.userDiskPerformanceLevel = request.userDiskPerformanceLevel;
             this.userDiskSizeGib = request.userDiskSizeGib;
         } 
 
         /**
-         * Specifies whether to automatically complete the payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Default value: true. Valid values:</p>
+         * <ul>
+         * <li><p>true: enables the auto-payment feature.</p>
+         * <!-- -->
          * 
-         * *   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.
-         * *   `false`: does not automatically complete the payment. In this case, an order is generated, but no payment is made. You can log on to the EDS console and complete the payment based on the order ID on the **Orders** page.
+         * <!-- -->
          * 
-         * Default value: `true`.
+         * <p>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, an exception occurs on your order.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <p>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -171,7 +219,10 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop.
+         * <p>The ID of a cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-4543qyik164a4****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -180,7 +231,11 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The new cloud desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported cloud desktop types.
+         * <p>The destination instance type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.general.2c8g</p>
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -189,7 +244,10 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The ID of the sales promotion.
+         * <p>The ID of the promotional activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500033080110596</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -198,7 +256,11 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,7 +269,28 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.
+         * ResourceSpecs.
+         */
+        public Builder resourceSpecs(java.util.List<ResourceSpecs> resourceSpecs) {
+            this.putQueryParameter("ResourceSpecs", resourceSpecs);
+            this.resourceSpecs = resourceSpecs;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * <p>The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
@@ -216,15 +299,40 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The performance level (PL) of the data disk. Valid values:
-         * <p>
+         * <p>The performance level (PL) of the data disk. Default value: PL0.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PL1</p>
+         * <!-- -->
          * 
-         * *   PL0
-         * *   PL1
-         * *   PL2
-         * *   PL3
+         * <!-- -->
          * 
-         * Default value: PL0.
+         * <!-- -->
+         * </li>
+         * <li><p>PL0</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PL3</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PL2</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
             this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
@@ -233,11 +341,14 @@ public class ModifyDesktopSpecRequest extends Request {
         }
 
         /**
-         * The size of the new data disk. Unit: GiB.
-         * <p>
+         * <p>The destination data disk size. Unit: GiB.</p>
+         * <ul>
+         * <li>The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.</li>
+         * <li>The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.</li>
+         * </ul>
          * 
-         * *   The data disk size of a non-Graphics cloud desktop can be within the range of 20 to 1,020 GiB. The value must be a multiple of 10.
-         * *   The data disk size of the Graphics cloud desktop can be within the range of 40 to 1,020 GiB. The value must be a multiple of 10.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder userDiskSizeGib(Integer userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);
@@ -252,4 +363,104 @@ public class ModifyDesktopSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDesktopSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDesktopSpecRequest</p>
+     */
+    public static class ResourceSpecs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
+        private String desktopId;
+
+        @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
+        private Integer rootDiskSizeGib;
+
+        @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
+        private Integer userDiskSizeGib;
+
+        private ResourceSpecs(Builder builder) {
+            this.desktopId = builder.desktopId;
+            this.rootDiskSizeGib = builder.rootDiskSizeGib;
+            this.userDiskSizeGib = builder.userDiskSizeGib;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceSpecs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desktopId
+         */
+        public String getDesktopId() {
+            return this.desktopId;
+        }
+
+        /**
+         * @return rootDiskSizeGib
+         */
+        public Integer getRootDiskSizeGib() {
+            return this.rootDiskSizeGib;
+        }
+
+        /**
+         * @return userDiskSizeGib
+         */
+        public Integer getUserDiskSizeGib() {
+            return this.userDiskSizeGib;
+        }
+
+        public static final class Builder {
+            private String desktopId; 
+            private Integer rootDiskSizeGib; 
+            private Integer userDiskSizeGib; 
+
+            /**
+             * <p>The ID of a cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-4543qyik164a4****</p>
+             */
+            public Builder desktopId(String desktopId) {
+                this.desktopId = desktopId;
+                return this;
+            }
+
+            /**
+             * <p>The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
+             */
+            public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
+                this.rootDiskSizeGib = rootDiskSizeGib;
+                return this;
+            }
+
+            /**
+             * <p>The destination data disk size. Unit: GiB.</p>
+             * <ul>
+             * <li>The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.</li>
+             * <li>The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder userDiskSizeGib(Integer userDiskSizeGib) {
+                this.userDiskSizeGib = userDiskSizeGib;
+                return this;
+            }
+
+            public ResourceSpecs build() {
+                return new ResourceSpecs(this);
+            } 
+
+        } 
+
+    }
 }

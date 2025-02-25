@@ -157,17 +157,17 @@ public class CreateResourcePoolRequest extends Request {
             super();
         } 
 
-        private Builder(CreateResourcePoolRequest response) {
-            super(response);
-            this.active = response.active;
-            this.clusterId = response.clusterId;
-            this.config = response.config;
-            this.name = response.name;
-            this.note = response.note;
-            this.poolType = response.poolType;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.yarnSiteConfig = response.yarnSiteConfig;
+        private Builder(CreateResourcePoolRequest request) {
+            super(request);
+            this.active = request.active;
+            this.clusterId = request.clusterId;
+            this.config = request.config;
+            this.name = request.name;
+            this.note = request.note;
+            this.poolType = request.poolType;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.yarnSiteConfig = request.yarnSiteConfig;
         } 
 
         /**

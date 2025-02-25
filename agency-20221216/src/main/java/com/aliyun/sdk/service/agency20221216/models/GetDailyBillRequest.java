@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDailyBillRequest} extends {@link RequestModel}
  *
  * <p>GetDailyBillRequest</p>
  */
 public class GetDailyBillRequest extends Request {
-    @Query
-    @NameInMap("BillOwner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillOwner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billOwner;
 
-    @Query
-    @NameInMap("BillType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billType;
 
-    @Query
-    @NameInMap("Date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String date;
 
     private GetDailyBillRequest(Builder builder) {
@@ -85,7 +90,13 @@ public class GetDailyBillRequest extends Request {
         } 
 
         /**
-         * BillOwner.
+         * <p>Bill Owner type. Value Range:</br>
+         * 1: Master account</br>
+         * 2: Sub account</br></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder billOwner(String billOwner) {
             this.putQueryParameter("BillOwner", billOwner);
@@ -94,7 +105,17 @@ public class GetDailyBillRequest extends Request {
         }
 
         /**
-         * BillType.
+         * <p>BillType. Value Range:</br></p>
+         * <ul>
+         * <li>DailyOrder(Deprecated)</li>
+         * <li>DailyBill (Deprecated)</li>
+         * <li>DailyInstanceBill (Deprecated)</li>
+         * <li>DailyInstanceBillV2</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DailyInstanceBillV2</p>
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);
@@ -103,7 +124,11 @@ public class GetDailyBillRequest extends Request {
         }
 
         /**
-         * Billing date. Format YYYY-MM-DD
+         * <p>Billing date. Format YYYY-MM-DD</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-24</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);

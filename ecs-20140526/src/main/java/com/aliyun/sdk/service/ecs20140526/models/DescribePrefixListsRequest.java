@@ -1,61 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrefixListsRequest} extends {@link RequestModel}
  *
  * <p>DescribePrefixListsRequest</p>
  */
 public class DescribePrefixListsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AddressFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressFamily")
     private String addressFamily;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrefixListId")
-    private java.util.List < String > prefixListId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListId")
+    private java.util.List<String> prefixListId;
 
-    @Query
-    @NameInMap("PrefixListName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListName")
     private String prefixListName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribePrefixListsRequest(Builder builder) {
@@ -131,7 +136,7 @@ public class DescribePrefixListsRequest extends Request {
     /**
      * @return prefixListId
      */
-    public java.util.List < String > getPrefixListId() {
+    public java.util.List<String> getPrefixListId() {
         return this.prefixListId;
     }
 
@@ -170,7 +175,7 @@ public class DescribePrefixListsRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > prefixListId; 
+        private java.util.List<String> prefixListId; 
         private String prefixListName; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -205,13 +210,15 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The IP address family of the prefix list. Valid values:
-         * <p>
+         * <p>The IP address family. Valid values:</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that all prefix lists are queried.</p>
          * 
-         * *   IPv4
-         * *   IPv6
-         * 
-         * This parameter is empty by default, which indicates that all prefix lists are queried.
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressFamily(String addressFamily) {
             this.putQueryParameter("AddressFamily", addressFamily);
@@ -220,12 +227,12 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -234,7 +241,10 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. Set the value to the <code>NextToken</code> value returned in the last call to this operation. Leave this parameter empty the first time you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -261,16 +271,22 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The IDs of prefix list.
+         * <p>The IDs of prefix lists. Valid values of N: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
-        public Builder prefixListId(java.util.List < String > prefixListId) {
+        public Builder prefixListId(java.util.List<String> prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
             this.prefixListId = prefixListId;
             return this;
         }
 
         /**
-         * The name of the prefix list.
+         * <p>The name of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrefixListNameSample</p>
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -279,7 +295,11 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

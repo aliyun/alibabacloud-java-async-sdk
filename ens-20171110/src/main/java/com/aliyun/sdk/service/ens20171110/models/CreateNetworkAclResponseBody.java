@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkAclResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNetworkAclResponseBody</p>
  */
 public class CreateNetworkAclResponseBody extends TeaModel {
-    @NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNetworkAclResponseBody(Builder builder) {
@@ -50,7 +55,10 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkAclId.
+         * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-5p1fg655nh68xyz9i****</p>
          */
         public Builder networkAclId(String networkAclId) {
             this.networkAclId = networkAclId;
@@ -58,7 +66,10 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

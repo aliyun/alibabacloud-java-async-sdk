@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageEventOperationResponseBody} extends {@link TeaModel}
  *
  * <p>GetImageEventOperationResponseBody</p>
  */
 public class GetImageEventOperationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetImageEventOperationResponseBody(Builder builder) {
@@ -86,7 +91,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5861EE3E-F0B3-48B8-A5DC-A5080BFB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +132,14 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,27 +152,39 @@ public class GetImageEventOperationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetImageEventOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageEventOperationResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private String conditions;
 
-        @NameInMap("EventKey")
+        @com.aliyun.core.annotation.NameInMap("EventKey")
         private String eventKey;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OperationCode")
+        @com.aliyun.core.annotation.NameInMap("Note")
+        private String note;
+
+        @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
 
-        @NameInMap("Scenarios")
+        @com.aliyun.core.annotation.NameInMap("Scenarios")
         private String scenarios;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
 
         private Data(Builder builder) {
             this.conditions = builder.conditions;
@@ -163,8 +192,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             this.eventName = builder.eventName;
             this.eventType = builder.eventType;
             this.id = builder.id;
+            this.note = builder.note;
             this.operationCode = builder.operationCode;
             this.scenarios = builder.scenarios;
+            this.source = builder.source;
         }
 
         public static Builder builder() {
@@ -211,6 +242,13 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
+         * @return note
+         */
+        public String getNote() {
+            return this.note;
+        }
+
+        /**
          * @return operationCode
          */
         public String getOperationCode() {
@@ -224,22 +262,34 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             return this.scenarios;
         }
 
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
         public static final class Builder {
             private String conditions; 
             private String eventKey; 
             private String eventName; 
             private String eventType; 
             private Long id; 
+            private String note; 
             private String operationCode; 
             private String scenarios; 
+            private String source; 
 
             /**
-             * The rule conditions. The value is in the JSON format. Valid values of keys:
-             * <p>
+             * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+             * <ul>
+             * <li><strong>condition</strong>: the matching condition.</li>
+             * <li><strong>type</strong>: the matching type.</li>
+             * <li><strong>value</strong>: the matching value.</li>
+             * </ul>
              * 
-             * *   **condition**: the matching condition.
-             * *   **type**: the matching type.
-             * *   **value**: the matching value.
+             * <strong>example:</strong>
+             * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e783e&quot;}]</p>
              */
             public Builder conditions(String conditions) {
                 this.conditions = conditions;
@@ -247,7 +297,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword of the alert item.
+             * <p>The keyword of the alert item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PEM</p>
              */
             public Builder eventKey(String eventKey) {
                 this.eventKey = eventKey;
@@ -255,7 +308,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert item.
+             * <p>The name of the alert item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PEM</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -263,10 +319,13 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type. Valid values:
-             * <p>
+             * <p>The alert type. Valid values:</p>
+             * <ul>
+             * <li><strong>sensitiveFile</strong></li>
+             * </ul>
              * 
-             * *   **sensitiveFile**
+             * <strong>example:</strong>
+             * <p>sensitiveFile</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -274,7 +333,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the alert handling rule.
+             * <p>The primary key of the alert handling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443496</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -282,10 +344,24 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The operation code. Valid values:
-             * <p>
+             * <p>The remarks.</p>
              * 
-             * *   **whitelist**: added to the whitelist.
+             * <strong>example:</strong>
+             * <p>No warning.</p>
+             */
+            public Builder note(String note) {
+                this.note = note;
+                return this;
+            }
+
+            /**
+             * <p>The operation code. Valid values:</p>
+             * <ul>
+             * <li><strong>whitelist</strong>: added to the whitelist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>whitelist</p>
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -293,14 +369,32 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
-             * The application scope of the rule. The value is in the JSON format. Valid values of keys:
-             * <p>
+             * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+             * <ul>
+             * <li><strong>type</strong></li>
+             * <li><strong>value</strong></li>
+             * </ul>
              * 
-             * *   **type**
-             * *   **value**
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;
+                return this;
+            }
+
+            /**
+             * <p>The source of the whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: image</li>
+             * <li><strong>agentless</strong>: agentless detection</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>agentless</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

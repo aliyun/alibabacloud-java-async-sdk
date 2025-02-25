@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupDepartSaveRequest} extends {@link RequestModel}
  *
  * <p>GroupDepartSaveRequest</p>
  */
 public class GroupDepartSaveRequest extends Request {
-    @Body
-    @NameInMap("dept_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dept_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deptName;
 
-    @Body
-    @NameInMap("manager_ids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("manager_ids")
     private String managerIds;
 
-    @Body
-    @NameInMap("outer_dept_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outer_dept_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerDeptId;
 
-    @Body
-    @NameInMap("outer_dept_pid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outer_dept_pid")
     private String outerDeptPid;
 
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("sub_corp_id_list")
-    private java.util.List < String > subCorpIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id_list")
+    private java.util.List<String> subCorpIdList;
 
-    @Body
-    @NameInMap("sync_group")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sync_group")
     private Boolean syncGroup;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private GroupDepartSaveRequest(Builder builder) {
@@ -110,7 +115,7 @@ public class GroupDepartSaveRequest extends Request {
     /**
      * @return subCorpIdList
      */
-    public java.util.List < String > getSubCorpIdList() {
+    public java.util.List<String> getSubCorpIdList() {
         return this.subCorpIdList;
     }
 
@@ -134,7 +139,7 @@ public class GroupDepartSaveRequest extends Request {
         private String outerDeptId; 
         private String outerDeptPid; 
         private Integer status; 
-        private java.util.List < String > subCorpIdList; 
+        private java.util.List<String> subCorpIdList; 
         private Boolean syncGroup; 
         private String xAcsBtripCorpToken; 
 
@@ -155,7 +160,7 @@ public class GroupDepartSaveRequest extends Request {
         } 
 
         /**
-         * dept_name.
+         * <p>This parameter is required.</p>
          */
         public Builder deptName(String deptName) {
             this.putBodyParameter("dept_name", deptName);
@@ -173,7 +178,10 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * outer_dept_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         public Builder outerDeptId(String outerDeptId) {
             this.putBodyParameter("outer_dept_id", outerDeptId);
@@ -191,7 +199,10 @@ public class GroupDepartSaveRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);
@@ -202,7 +213,7 @@ public class GroupDepartSaveRequest extends Request {
         /**
          * sub_corp_id_list.
          */
-        public Builder subCorpIdList(java.util.List < String > subCorpIdList) {
+        public Builder subCorpIdList(java.util.List<String> subCorpIdList) {
             String subCorpIdListShrink = shrink(subCorpIdList, "sub_corp_id_list", "json");
             this.putBodyParameter("sub_corp_id_list", subCorpIdListShrink);
             this.subCorpIdList = subCorpIdList;

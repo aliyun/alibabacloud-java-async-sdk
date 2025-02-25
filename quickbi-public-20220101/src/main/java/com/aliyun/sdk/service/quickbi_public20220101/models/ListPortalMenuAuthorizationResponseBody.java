@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPortalMenuAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>ListPortalMenuAuthorizationResponseBody</p>
  */
 public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
-    private java.util.List < Result> result;
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private java.util.List<Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListPortalMenuAuthorizationResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,11 +63,14 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,19 +78,22 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The list of authorization details of the portal menu.
+         * <p>The list of authorization details of the portal menu.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -95,11 +106,17 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPortalMenuAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPortalMenuAuthorizationResponseBody</p>
+     */
     public static class Receivers extends TeaModel {
-        @NameInMap("ReceiverId")
+        @com.aliyun.core.annotation.NameInMap("ReceiverId")
         private String receiverId;
 
-        @NameInMap("ReceiverType")
+        @com.aliyun.core.annotation.NameInMap("ReceiverType")
         private Integer receiverType;
 
         private Receivers(Builder builder) {
@@ -134,7 +151,10 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             private Integer receiverType; 
 
             /**
-             * The ID of the authorization object.
+             * <p>The ID of the authorization object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121344444790****</p>
              */
             public Builder receiverId(String receiverId) {
                 this.receiverId = receiverId;
@@ -142,11 +162,14 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the authorization object. Valid values:
-             * <p>
+             * <p>The type of the authorization object. Valid values:</p>
+             * <ul>
+             * <li>0: user</li>
+             * <li>1: user group</li>
+             * </ul>
              * 
-             * *   0: user
-             * *   1: user group
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder receiverType(Integer receiverType) {
                 this.receiverType = receiverType;
@@ -160,14 +183,20 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPortalMenuAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPortalMenuAuthorizationResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("MenuId")
+        @com.aliyun.core.annotation.NameInMap("MenuId")
         private String menuId;
 
-        @NameInMap("Receivers")
-        private java.util.List < Receivers> receivers;
+        @com.aliyun.core.annotation.NameInMap("Receivers")
+        private java.util.List<Receivers> receivers;
 
-        @NameInMap("ShowOnlyWithAccess")
+        @com.aliyun.core.annotation.NameInMap("ShowOnlyWithAccess")
         private Boolean showOnlyWithAccess;
 
         private Result(Builder builder) {
@@ -194,7 +223,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         /**
          * @return receivers
          */
-        public java.util.List < Receivers> getReceivers() {
+        public java.util.List<Receivers> getReceivers() {
             return this.receivers;
         }
 
@@ -207,11 +236,14 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String menuId; 
-            private java.util.List < Receivers> receivers; 
+            private java.util.List<Receivers> receivers; 
             private Boolean showOnlyWithAccess; 
 
             /**
-             * The menu ID of the BI portal leaf node.
+             * <p>The menu ID of the BI portal leaf node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54kqgoa****</p>
              */
             public Builder menuId(String menuId) {
                 this.menuId = menuId;
@@ -219,19 +251,22 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the object to which the menu is authorized.
+             * <p>The details of the object to which the menu is authorized.</p>
              */
-            public Builder receivers(java.util.List < Receivers> receivers) {
+            public Builder receivers(java.util.List<Receivers> receivers) {
                 this.receivers = receivers;
                 return this;
             }
 
             /**
-             * Whether only authorization is visible. Valid values:
-             * <p>
+             * <p>Whether only authorization is visible. Valid values:</p>
+             * <ul>
+             * <li>true: Only the authorization is visible.</li>
+             * <li>false: Both are visible.</li>
+             * </ul>
              * 
-             * *   true: Only the authorization is visible.
-             * *   false: Both are visible.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder showOnlyWithAccess(Boolean showOnlyWithAccess) {
                 this.showOnlyWithAccess = showOnlyWithAccess;

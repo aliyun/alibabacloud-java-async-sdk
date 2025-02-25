@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainTopAttackListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainTopAttackListResponseBody</p>
  */
 public class DescribeDomainTopAttackListResponseBody extends TeaModel {
-    @NameInMap("AttackList")
-    private java.util.List < AttackList> attackList;
+    @com.aliyun.core.annotation.NameInMap("AttackList")
+    private java.util.List<AttackList> attackList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainTopAttackListResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     /**
      * @return attackList
      */
-    public java.util.List < AttackList> getAttackList() {
+    public java.util.List<AttackList> getAttackList() {
         return this.attackList;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AttackList> attackList; 
+        private java.util.List<AttackList> attackList; 
         private String requestId; 
 
         /**
-         * The peak QPS of the website.
+         * <p>The peak QPS of the website.</p>
          */
-        public Builder attackList(java.util.List < AttackList> attackList) {
+        public Builder attackList(java.util.List<AttackList> attackList) {
             this.attackList = attackList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +79,20 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainTopAttackListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainTopAttackListResponseBody</p>
+     */
     public static class AttackList extends TeaModel {
-        @NameInMap("Attack")
+        @com.aliyun.core.annotation.NameInMap("Attack")
         private Long attack;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
         private AttackList(Builder builder) {
@@ -122,7 +136,10 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             private String domain; 
 
             /**
-             * The attack QPS. Unit: QPS
+             * <p>The attack QPS. Unit: QPS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attack(Long attack) {
                 this.attack = attack;
@@ -130,7 +147,10 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of all QPS, which includes normal and attack QPS. Unit: QPS.
+             * <p>The number of all QPS, which includes normal and attack QPS. Unit: QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>294</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -138,7 +158,10 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the website.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;

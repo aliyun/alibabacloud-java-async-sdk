@@ -1,77 +1,82 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNodeBatchRequest} extends {@link RequestModel}
  *
  * <p>CreateNodeBatchRequest</p>
  */
 public class CreateNodeBatchRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPassword")
     private String accountPassword;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("BusinessInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("FromApp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromApp")
     private String fromApp;
 
-    @Query
-    @NameInMap("NodesInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodesInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodesInfo;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ShardDirect")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardDirect")
     private Boolean shardDirect;
 
     private CreateNodeBatchRequest(Builder builder) {
@@ -261,7 +266,22 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * <p>The username of the account. The username must meet the following requirements:</p>
+         * <ul>
+         * <li>The username starts with a lowercase letter. </li>
+         * <li>The username contains lowercase letters, digits, and underscores (_). </li>
+         * <li>The username is 4 to 16 characters in length.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Keywords cannot be used as account usernames. </li>
+         * <li>The permissions of this account are fixed at read-only. </li>
+         * <li>The username and password are required to be set only when you apply for an endpoint for the shard node for the first time.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -270,7 +290,18 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * <p>The password of the account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. </li>
+         * <li>These special characters include ! @ # $ % ^ &amp; * ( ) _ + - = </li>
+         * <li>The password is 8 to 32 characters in length. <blockquote>
+         * <p>The account password of the shard node cannot be reset.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123+abc</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -279,7 +310,14 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account. </li>
+         * <li><strong>false</strong>: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Orders</strong>. On the Orders page, find the order and complete the payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -288,7 +326,10 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * <p>The business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -297,7 +338,10 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * The ID of the added mongos or shard node.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -306,7 +350,14 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
+         * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -315,7 +366,11 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The ID of the instance for which you want to add nodes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp18b0934e70****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -324,7 +379,14 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * FromApp.
+         * <p>The source of the request. Valid values:</p>
+         * <ul>
+         * <li><strong>OpenApi</strong>: ApsaraDB for MongoDB API </li>
+         * <li><strong>mongo_buy</strong>: ApsaraDB for MongoDB console</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenApi</p>
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -333,7 +395,14 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * NodesInfo.
+         * <p>The specifications of the mongos or shard node that you want to add. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. </p>
+         * <blockquote>
+         * <p>Up to 32 mongos or shard nodes are supported for each sharded cluster instance.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Shards&quot;:[{&quot;DBInstanceClass&quot;:&quot;mdb.shard.4x.large.d&quot;,&quot;Storage&quot;:20}]}</p>
          */
         public Builder nodesInfo(String nodesInfo) {
             this.putQueryParameter("NodesInfo", nodesInfo);
@@ -378,7 +447,14 @@ public class CreateNodeBatchRequest extends Request {
         }
 
         /**
-         * ShardDirect.
+         * <p>Specifies whether to apply for an endpoint for the shard node. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: applies for an endpoint for the shard node. </li>
+         * <li><strong>false</strong>: does not apply for an endpoint for the shard node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder shardDirect(Boolean shardDirect) {
             this.putQueryParameter("ShardDirect", shardDirect);

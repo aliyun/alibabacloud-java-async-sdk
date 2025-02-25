@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAccessStrategiesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
  */
 public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Strategies")
+    @com.aliyun.core.annotation.NameInMap("Strategies")
     private Strategies strategies;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDnsGtmAccessStrategiesResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +114,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +125,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CCC9971-CEC9-4132-824B-4AE611C07623</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * The access policies.
+         * <p>The access policies.</p>
          */
         public Builder strategies(Strategies strategies) {
             this.strategies = strategies;
@@ -130,7 +144,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned on all pages.
+         * <p>The total number of entries returned on all pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +155,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -151,17 +171,23 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
+     */
     public static class EffectiveAddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EffectiveAddrPool(Builder builder) {
@@ -214,7 +240,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The number of addresses in the address pool.
+             * <p>The number of addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -222,7 +251,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -230,7 +262,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the address pool.
+             * <p>The weight of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -238,7 +273,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -252,9 +290,15 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
+     */
     public static class EffectiveAddrPools extends TeaModel {
-        @NameInMap("EffectiveAddrPool")
-        private java.util.List < EffectiveAddrPool> effectiveAddrPool;
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPool")
+        private java.util.List<EffectiveAddrPool> effectiveAddrPool;
 
         private EffectiveAddrPools(Builder builder) {
             this.effectiveAddrPool = builder.effectiveAddrPool;
@@ -271,17 +315,17 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         /**
          * @return effectiveAddrPool
          */
-        public java.util.List < EffectiveAddrPool> getEffectiveAddrPool() {
+        public java.util.List<EffectiveAddrPool> getEffectiveAddrPool() {
             return this.effectiveAddrPool;
         }
 
         public static final class Builder {
-            private java.util.List < EffectiveAddrPool> effectiveAddrPool; 
+            private java.util.List<EffectiveAddrPool> effectiveAddrPool; 
 
             /**
              * EffectiveAddrPool.
              */
-            public Builder effectiveAddrPool(java.util.List < EffectiveAddrPool> effectiveAddrPool) {
+            public Builder effectiveAddrPool(java.util.List<EffectiveAddrPool> effectiveAddrPool) {
                 this.effectiveAddrPool = effectiveAddrPool;
                 return this;
             }
@@ -293,17 +337,23 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
+     */
     public static class Line extends TeaModel {
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private Line(Builder builder) {
@@ -356,7 +406,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The code of the source region group.
+             * <p>The code of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -364,7 +417,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source region group.
+             * <p>The name of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -372,7 +428,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The line code of the source region.
+             * <p>The line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -380,7 +439,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The line name of the source region.
+             * <p>The line name of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -394,9 +456,15 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
+     */
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
-        private java.util.List < Line> line;
+        @com.aliyun.core.annotation.NameInMap("Line")
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -413,17 +481,17 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }
@@ -435,32 +503,38 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
+     */
     public static class Strategy extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("EffectiveAddrPoolGroupType")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPoolGroupType")
         private String effectiveAddrPoolGroupType;
 
-        @NameInMap("EffectiveAddrPoolType")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPoolType")
         private String effectiveAddrPoolType;
 
-        @NameInMap("EffectiveAddrPools")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPools")
         private EffectiveAddrPools effectiveAddrPools;
 
-        @NameInMap("EffectiveLbaStrategy")
+        @com.aliyun.core.annotation.NameInMap("EffectiveLbaStrategy")
         private String effectiveLbaStrategy;
 
-        @NameInMap("Lines")
+        @com.aliyun.core.annotation.NameInMap("Lines")
         private Lines lines;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private String strategyId;
 
-        @NameInMap("StrategyName")
+        @com.aliyun.core.annotation.NameInMap("StrategyName")
         private String strategyName;
 
         private Strategy(Builder builder) {
@@ -558,7 +632,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             private String strategyName; 
 
             /**
-             * The time when the access policy was created.
+             * <p>The time when the access policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-08-09T00:10Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -566,7 +643,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the access policy was created.
+             * <p>The timestamp that indicates when the access policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1533773400000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -574,11 +654,14 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the active address pool group. Valid values:
-             * <p>
+             * <p>The type of the active address pool group. Valid values:</p>
+             * <ul>
+             * <li>DEFAULT: the primary address pool group</li>
+             * <li>FAILOVER: the secondary address pool group</li>
+             * </ul>
              * 
-             * *   DEFAULT: the primary address pool group
-             * *   FAILOVER: the secondary address pool group
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder effectiveAddrPoolGroupType(String effectiveAddrPoolGroupType) {
                 this.effectiveAddrPoolGroupType = effectiveAddrPoolGroupType;
@@ -586,12 +669,15 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the active address pools. Valid values:
-             * <p>
+             * <p>The type of the active address pools. Valid values:</p>
+             * <ul>
+             * <li>IPV4</li>
+             * <li>IPV6</li>
+             * <li>DOMAIN</li>
+             * </ul>
              * 
-             * *   IPV4
-             * *   IPV6
-             * *   DOMAIN
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder effectiveAddrPoolType(String effectiveAddrPoolType) {
                 this.effectiveAddrPoolType = effectiveAddrPoolType;
@@ -599,7 +685,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The active address pool groups.
+             * <p>The active address pool groups.</p>
              */
             public Builder effectiveAddrPools(EffectiveAddrPools effectiveAddrPools) {
                 this.effectiveAddrPools = effectiveAddrPools;
@@ -607,11 +693,14 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The load balancing policy of the active address pool group. Data is returned when StrategyMode is set to GEO. Valid values: 
-             * <p>
+             * <p>The load balancing policy of the active address pool group. Data is returned when StrategyMode is set to GEO. Valid values: </p>
+             * <ul>
+             * <li>ALL_RR: returns all addresses.</li>
+             * <li>RATIO: returns addresses by weight.</li>
+             * </ul>
              * 
-             * - ALL_RR: returns all addresses.
-             * - RATIO: returns addresses by weight.
+             * <strong>example:</strong>
+             * <p>all_rr</p>
              */
             public Builder effectiveLbaStrategy(String effectiveLbaStrategy) {
                 this.effectiveLbaStrategy = effectiveLbaStrategy;
@@ -619,7 +708,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The source regions. Data is returned when StrategyMode is set to GEO. Valid values:
+             * <p>The source regions. Data is returned when StrategyMode is set to GEO. Valid values:</p>
              */
             public Builder lines(Lines lines) {
                 this.lines = lines;
@@ -627,7 +716,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the access policy.
+             * <p>The ID of the access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategyid1</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -635,7 +727,10 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access policy.
+             * <p>The name of the access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategname1</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -649,9 +744,15 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
+     */
     public static class Strategies extends TeaModel {
-        @NameInMap("Strategy")
-        private java.util.List < Strategy> strategy;
+        @com.aliyun.core.annotation.NameInMap("Strategy")
+        private java.util.List<Strategy> strategy;
 
         private Strategies(Builder builder) {
             this.strategy = builder.strategy;
@@ -668,17 +769,17 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
         /**
          * @return strategy
          */
-        public java.util.List < Strategy> getStrategy() {
+        public java.util.List<Strategy> getStrategy() {
             return this.strategy;
         }
 
         public static final class Builder {
-            private java.util.List < Strategy> strategy; 
+            private java.util.List<Strategy> strategy; 
 
             /**
              * Strategy.
              */
-            public Builder strategy(java.util.List < Strategy> strategy) {
+            public Builder strategy(java.util.List<Strategy> strategy) {
                 this.strategy = strategy;
                 return this;
             }

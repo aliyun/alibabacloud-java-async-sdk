@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceTypesRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceTypesRequest</p>
  */
 public class ListInstanceTypesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("DeployMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("IsModification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsModification")
     private Boolean isModification;
 
-    @Query
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @Query
-    @NameInMap("NodeGroupType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroupType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeGroupType;
 
-    @Query
-    @NameInMap("PaymentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String paymentType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReleaseVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
     private String releaseVersion;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private ListInstanceTypesRequest(Builder builder) {
@@ -199,7 +204,10 @@ public class ListInstanceTypesRequest extends Request {
         } 
 
         /**
-         * 集群ID，仅升配场景使用。
+         * <p>The ID of cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -208,14 +216,11 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 创建的EMR集群类型。取值范围：
-         * <p>
-         * - DATALAKE：新版数据湖。
-         * - OLAP：数据分析。
-         * - DATAFLOW：实时数据流。
-         * - DATASERVING：数据服务。
-         * - CUSTOM：自定义集群。
-         * - HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。
+         * <p>Cluster type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATALAKE</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -224,12 +229,10 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 集群中的应用部署模式。取值范围：
-         * <p>
-         * - NORMAL：非高可用部署。集群1个MASTER节点。
-         * - HA：高可用部署。高可用部署要求至少3个MASTER节点。
+         * <p>Deployment mode.</p>
          * 
-         * 默认值：NORMAL。
+         * <strong>example:</strong>
+         * <p>HA</p>
          */
         public Builder deployMode(String deployMode) {
             this.putQueryParameter("DeployMode", deployMode);
@@ -238,7 +241,10 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 机型
+         * <p>Instance Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -247,7 +253,10 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 是否变配。
+         * <p>Whether to change the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isModification(Boolean isModification) {
             this.putQueryParameter("IsModification", isModification);
@@ -256,7 +265,10 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 节点组ID。
+         * <p>Node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G-F06C4B47966A****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -265,11 +277,11 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 节点组类型。取值范围：
-         * <p>
-         * - MASTER：管理类型节点组。
-         * - CORE：存储类型节点组。
-         * - TASK：计算类型节点组。
+         * <p>Node group type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CORE</p>
          */
         public Builder nodeGroupType(String nodeGroupType) {
             this.putQueryParameter("NodeGroupType", nodeGroupType);
@@ -278,12 +290,11 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 集群的付费类型。取值范围：
-         * <p>
-         * - PayAsYouGo：后付费。
-         * - Subscription：预付费。
+         * <p>Payment type.</p>
+         * <p>This parameter is required.</p>
          * 
-         * 默认值：PayAsYouGo。
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -292,7 +303,11 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * <p>The ID of the region in which you want to create the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -301,7 +316,10 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * EMR发行版。
+         * <p>EMR distribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.8.0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putQueryParameter("ReleaseVersion", releaseVersion);
@@ -310,7 +328,11 @@ public class ListInstanceTypesRequest extends Request {
         }
 
         /**
-         * 可用区ID。
+         * <p>Availability Zone ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTranscriptionPhrasesRequest} extends {@link RequestModel}
  *
  * <p>UpdateTranscriptionPhrasesRequest</p>
  */
 public class UpdateTranscriptionPhrasesRequest extends Request {
-    @Path
-    @NameInMap("PhraseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("PhraseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phraseId;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(maxLength = 250, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 250, minLength = 1)
     private String description;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 50, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 1)
     private String name;
 
-    @Body
-    @NameInMap("WordWeights")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WordWeights")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wordWeights;
 
     private UpdateTranscriptionPhrasesRequest(Builder builder) {
@@ -100,7 +105,10 @@ public class UpdateTranscriptionPhrasesRequest extends Request {
         } 
 
         /**
-         * PhraseId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a93b91141c0f422fa114af203f8b****</p>
          */
         public Builder phraseId(String phraseId) {
             this.putPathParameter("PhraseId", phraseId);
@@ -118,7 +126,10 @@ public class UpdateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fruit_phrase</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -127,7 +138,10 @@ public class UpdateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
-         * WordWeights.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;苹果&quot;:3,&quot;西瓜&quot;:3}</p>
          */
         public Builder wordWeights(String wordWeights) {
             this.putBodyParameter("WordWeights", wordWeights);

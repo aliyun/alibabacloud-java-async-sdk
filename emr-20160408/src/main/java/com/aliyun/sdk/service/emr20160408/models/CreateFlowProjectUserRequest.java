@@ -77,11 +77,11 @@ public class CreateFlowProjectUserRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowProjectUserRequest response) {
-            super(response);
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.user = response.user;
+        private Builder(CreateFlowProjectUserRequest request) {
+            super(request);
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.user = request.user;
         } 
 
         /**

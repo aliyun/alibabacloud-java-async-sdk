@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Member} extends {@link TeaModel}
  *
  * <p>Member</p>
  */
 public class Member extends TeaModel {
-    @NameInMap("MemberId")
+    @com.aliyun.core.annotation.NameInMap("MemberId")
     private String memberId;
 
-    @NameInMap("MemberType")
+    @com.aliyun.core.annotation.NameInMap("MemberType")
     private String memberType;
 
     private Member(Builder builder) {

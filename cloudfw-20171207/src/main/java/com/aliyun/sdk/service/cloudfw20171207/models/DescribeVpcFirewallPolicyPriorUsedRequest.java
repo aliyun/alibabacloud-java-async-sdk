@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcFirewallPolicyPriorUsedRequest} extends {@link RequestModel}
  *
  * <p>DescribeVpcFirewallPolicyPriorUsedRequest</p>
  */
 public class DescribeVpcFirewallPolicyPriorUsedRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("VpcFirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallId;
 
     private DescribeVpcFirewallPolicyPriorUsedRequest(Builder builder) {
@@ -69,13 +74,15 @@ public class DescribeVpcFirewallPolicyPriorUsedRequest extends Request {
         } 
 
         /**
-         * The natural language of the request and response. 
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default)</li>
+         * <li><strong>en</strong></li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * - **zh**: Chinese (default)
-         * - **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -84,17 +91,19 @@ public class DescribeVpcFirewallPolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The ID of the policy group to which the access control policy belongs. You can call the DescribeVpcFirewallAclGroupList operation to query the ID.  
-         * <p>
+         * <p>The ID of the access control policy group. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
+         * <ul>
+         * <li><p>If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
+         * <p>Example: cen-ervw0g12b5jbw****.</p>
+         * </li>
+         * <li><p>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall.</p>
+         * <p>Example: vfw-a42bbb7b887148c9****.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * - If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.  
-         * 
-         * Example: cen-ervw0g12b5jbw****
-         * - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.  
-         * 
-         * Example: vfw-a42bbb7b887148c9****
+         * <strong>example:</strong>
+         * <p>vfw-a42bbb7b887148c9****</p>
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

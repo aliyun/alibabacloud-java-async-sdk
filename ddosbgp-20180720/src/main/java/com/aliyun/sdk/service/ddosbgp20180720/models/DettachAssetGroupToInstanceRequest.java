@@ -1,41 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DettachAssetGroupToInstanceRequest} extends {@link RequestModel}
  *
  * <p>DettachAssetGroupToInstanceRequest</p>
  */
 public class DettachAssetGroupToInstanceRequest extends Request {
-    @Query
-    @NameInMap("AssetGroupList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetGroupList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AssetGroupList> assetGroupList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
 
     private DettachAssetGroupToInstanceRequest(Builder builder) {
         super(builder);
         this.assetGroupList = builder.assetGroupList;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -72,18 +67,10 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<DettachAssetGroupToInstanceRequest, Builder> {
         private java.util.List < AssetGroupList> assetGroupList; 
         private String instanceId; 
         private String regionId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -94,11 +81,11 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             this.assetGroupList = request.assetGroupList;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * AssetGroupList.
+         * <p>The information about the asset that you want to dissociate.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
             String assetGroupListShrink = shrink(assetGroupList, "AssetGroupList", "json");
@@ -108,7 +95,14 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,20 +111,17 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 
@@ -141,17 +132,23 @@ public class DettachAssetGroupToInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DettachAssetGroupToInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>DettachAssetGroupToInstanceRequest</p>
+     */
     public static class AssetGroupList extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private AssetGroupList(Builder builder) {
@@ -195,7 +192,11 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             private String type; 
 
             /**
-             * Name.
+             * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_v2_public_cn-lbj382l****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -203,7 +204,11 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>The region ID of the asset.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -211,7 +216,15 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>waf</strong>: WAF instance</li>
+             * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf</p>
              */
             public Builder type(String type) {
                 this.type = type;
